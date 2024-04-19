@@ -1,0 +1,31 @@
+.table-bordered {
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+}
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid black;
+    padding: 5px;
+}
+.table-bordered th.no-border,
+.table-bordered td.no-border {
+    border: none;
+}
+.table-bordered th {
+    text-align: center;
+}
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.flex-between span {
+    flex: 1;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}

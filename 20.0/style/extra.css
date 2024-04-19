@@ -1,0 +1,37 @@
+.table-bordered {
+    border-collapse: collapse;
+    /*width: 50%;*/
+    margin: auto;
+    font-size: .64rem;
+}
+.table-bordered th,
+.table-bordered td {
+    border: 1px light gray;
+    padding: 5px;
+}
+.table-bordered th.no-border,
+.table-bordered td.no-border {
+    border: none;
+}
+.table-bordered th {
+    text-align: center;
+}
+.table-bordered td.rowspan,
+.table-bordered th.rowspan {
+    vertical-align: middle;
+}
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+.flex-between span {
+    flex: 1;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+
+
