@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,16 @@
 
 <h1 class="heading"><span class="name">BtnPix</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/button/">Button</a> <a href="../../objects/menu/">Menu</a> <a href="../../objects/menuitem/">MenuItem</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/button/">Button</a></td>
+<td><a href="../../objects/menu/">Menu</a></td>
+<td><a href="../../objects/menuitem/">MenuItem</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This property is used to customise the appearance of a <a href="../../objects/button/">Button</a>, <a href="../../objects/menu/">Menu</a> or <a href="../../objects/menuitem/">MenuItem</a>. It specifies the names of or refs to up to 3 <a href="../../objects/bitmap/">Bitmap</a> objects to be used to display the object under different circumstances. In general, BtnPix is a 3-element vector of character vectors or refs. However, if it defines a single <a href="../../objects/bitmap/">Bitmap</a>, it may be a single ref, a simple character scalar or vector, or an enclosed character vector.</p>
 <p>The first <a href="../../objects/bitmap/">Bitmap</a> is displayed when the object is shown in its normal state. For a <a href="../../objects/button/">Button</a>, this is when its <a href="../state/">State</a> is 0. The second <a href="../../objects/bitmap/">Bitmap</a> is used for a <a href="../../objects/menu/">Menu</a> or <a href="../../objects/menuitem/">MenuItem</a>, when the object is selected (highlighted), or for a <a href="../../objects/button/">Button</a> when its <a href="../state/">State</a> is 1. The third <a href="../../objects/bitmap/">Bitmap</a> is used when the object is disabled by having its <a href="../active/">Active</a> property set to 0.</p>

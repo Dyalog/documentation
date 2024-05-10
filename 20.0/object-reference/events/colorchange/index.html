@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,26 +71305,31 @@
 
 <h1 class="heading"><span class="name">ColorChange</span><span class="command">Event 430</span></h1>
 
-<p>Applies To: <a href="../../objects/colorbutton/">ColorButton</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/colorbutton/">ColorButton</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported by a <a href="../../objects/colorbutton/">ColorButton</a> object when the user chooses a colour from the colour selection drop-down.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 3-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td>'ColorChange' or 430</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>New Colour</td>
 <td>3-element integer vector</td>
 </tr>

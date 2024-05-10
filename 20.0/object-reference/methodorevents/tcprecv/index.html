@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,14 @@
 
 <h1 class="heading"><span class="name">TCPRecv</span><span class="command">Event 373</span></h1>
 
-<p>Applies To: <a href="../../objects/tcpsocket/">TCPSocket</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/tcpsocket/">TCPSocket</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when data is received by a <a href="../../objects/tcpsocket/">TCPSocket</a> object.</p>
 <p>You may not disable or nullify the operation by setting the action code for
@@ -71338,31 +71345,29 @@ event artificially using <code>⎕NQ</code>.</p>
 or supplied as the right argument to your callback function, is a 5-element
 vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'TCPRecv'</code> or 373</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Data</td>
 <td>the data received</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>IP address</td>
 <td>character vector</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Port number</td>
 <td>integer</td>
 </tr>

@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,7 +71305,14 @@
 
 <h1 class="heading"><span class="name">PreCreate</span><span class="command">Event 534</span></h1>
 
-<p>Applies To: <a href="../../objects/activexcontrol/">ActiveXControl</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/activexcontrol/">ActiveXControl</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when an instance of an <a href="../../objects/activexcontrol/">ActiveXControl</a> is created. The PreCreate event is generated at the point the <em>instance</em> is made.</p>
 <p>An ActiveXControl also generates a <a href="../../methodorevents/create/">Create</a> event, which occurs <em>after</em> the PreCreate event at the point when the host application requires the instance to appear visually.</p>
@@ -71313,16 +71320,14 @@
 <p>This event is reported for information alone. You may not disable or nullify the event by setting the action code for the event to <code>¯1</code> or by returning 0 from a callback function.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 4-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'PreCreate'</code> or 534</td>
 </tr>

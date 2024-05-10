@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,12 +71327,22 @@
 
 <h1 class="heading"><span class="name">ScrollOpposite</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/tabcontrol/">TabControl</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/tabcontrol/">TabControl</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The ScrollOpposite property specifies that unneeded tabs scroll to the opposite side of a <a href="../../objects/tabcontrol/">TabControl</a>, when a tab is selected.</p>
 <p>ScrollOpposite is a single number with the value 0 (normal scrolling) or 1 (scrolling to the opposite side); the default is 0.</p>
 <p>The picture below illustrates a <a href="../../objects/tabcontrol/">TabControl</a> with ScrollOpposite set to 1, after the user has clicked <em>Third Tab</em>.</p>
-<p><img alt="tab10" src="../../img/tab10.gif" /></p>
+<figure id="_figure-1">
+<img alt="tab10" src="../../img/tab10.gif" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>Setting ScrollOpposite to 1 implies that <a href="../multiline/">MultiLine</a> is also 1. If you set ScrollOpposite to 1 in a <code>⎕WC</code> statement, the <a href="../multiline/">MultiLine</a> property will automatically be set to 1, even if you try to set <a href="../multiline/">MultiLine</a> to 0 in the same statement. If you subsequently change <a href="../multiline/">MultiLine</a> back to 0 using <code>⎕WS</code>, this will work, but the effect is not useful and it is not supported.</p>
 
 

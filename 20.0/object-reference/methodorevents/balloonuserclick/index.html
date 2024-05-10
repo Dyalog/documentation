@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,21 +71327,26 @@
 
 <h1 class="heading"><span class="name">BalloonUserClick</span><span class="command">Event 864</span></h1>
 
-<p>Applies To: <a href="../../objects/systrayitem/">SysTrayItem</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/systrayitem/">SysTrayItem</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported by an <a href="../../objects/systrayitem/">SysTrayItem</a> object when a BalloonTip is dismissed because the user clicked the mouse in the body of the BalloonTip. It is not reported when the user clicks the <em>close</em> (X) button.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 2-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'BalloonUserClick'</code> or 864</td>
 </tr>

@@ -32823,7 +32823,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71575,7 +71575,10 @@
 <p>The <code>aplservice</code> workspace contains the class <code>SysLog</code> which can be used to log events to the Windows Event Log.  These events can be accessed programmatically or viewed using the Windows Event Viewer found in the Windows Administrative Tools.</p>
 <h3 id="windows-event-log-concepts">Windows Event Log Concepts</h3>
 <p>Every message logged in the Windows Event Log has a named source.  Frequently this source will be the name of the application which generates the message.  Windows has multiple event log files.  By default, messages will be logged in the Application log file found in the Windows Logs section of the Windows Event Viewer.  Alternatively, you can create a custom log located in the Applications and Services Logs section in the Windows Event Viewer as shown by the "mylog" entry in the screenshot below.  Multiple applications can use the same source and multiple sources can write to the same log file, but a given source may only write to a single log file.</p>
-<p><img alt="windows event viewer" src="../img/windows-event-viewer.png" /></p>
+<figure id="_figure-1">
+<img alt="windows event viewer" src="../img/windows-event-viewer.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <h3 id="using-syslog-in-your-application">Using SysLog in Your Application</h3>
 <p>Before deploying your Dyalog APL application as a service, you should:</p>
 <ol>
@@ -71588,7 +71591,13 @@
 <h3 id="syslog-usage">SysLog Usage</h3>
 <p><code>SysLog</code> implements an interface to a subset of the functionality of Microsoft's System.Diagnostics.EventLog class.  Some of <code>SysLog</code>'s methods, namely  <code>CreateEventSource</code>, <code>DeleteEventSource</code> and <code>DeleteLog</code>, require you to run Dyalog <strong>as an administrator</strong> to be fully functional.</p>
 <p>All of the methods in <code>SysLog</code> with the exception of <code>Write</code> are shared methods meaning you do not have to create an instance of <code>SysLog</code> in order to execute them.</p>
-<p>SysLog.CreateEventSource sourcename {logname}</p>
+<table>
+<tbody>
+<tr>
+<td><code>SysLog.CreateEventSource sourcename {logname}</code></td>
+</tr>
+</tbody>
+</table>
 <h4 id="purpose">Purpose</h4>
 <p>Creates a new Windows Event Log source and optionally specifies or creates a Windows Event Log for the source.</p>
 <table>
@@ -71600,86 +71609,110 @@
 </thead>
 <tbody>
 <tr>
-<td>sourcename</td>
+<td><code>sourcename</code></td>
 <td>character vector source name that does not already exist</td>
 </tr>
 <tr>
-<td>{logname}</td>
+<td><code>{logname}</code></td>
 <td>optional character vector log name with which to associate the source name. If not supplied, the source will be associated with the Windows Logs/Application log.  If there is no log named <code>logname</code> , it will be created.</td>
 </tr>
 </tbody>
 </table>
-<p>{level} SysLog.WriteLog sourcename message</p>
+<table>
+<tbody>
+<tr>
+<td><code>{level} SysLog.WriteLog sourcename message</code></td>
+</tr>
+</tbody>
+</table>
 <h4 id="purpose_1">Purpose</h4>
 <p>Writes a message to the Windows Event Log associated with <code>sourcename</code>, optionally specifying a severity level.</p>
 <table>
 <thead>
 <tr>
 <th>Argument</th>
-<th>Description</th>
+<th colspan="7">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>sourcename</td>
-<td>character vector source name of an existing source</td>
+<td><code>sourcename</code></td>
+<td colspan="7">character vector source name of an existing source</td>
 </tr>
 <tr>
-<td>message</td>
-<td>character vector message to write to the log</td>
+<td><code>message</code></td>
+<td colspan="7">character vector message to write to the log</td>
 </tr>
 <tr>
-<td>{level}</td>
+<td><code>{level}</code></td>
 <td>optional singleton indicating the severity level of the message; defaults to informational if <code>level</code> is not specified: <code>1</code> , <code>'E'</code> or <code>'e'</code> may be used for error messages <code>2</code> , <code>'W'</code> or <code>'w'</code> may be used for warning messages <code>3</code> , <code>'I'</code> or <code>'i'</code> may be used for informational messages</td>
-</tr>
-<tr>
 <td><code>1</code> , <code>'E'</code> or <code>'e'</code></td>
 <td>may be used for error messages</td>
-</tr>
-<tr>
 <td><code>2</code> , <code>'W'</code> or <code>'w'</code></td>
 <td>may be used for warning messages</td>
-</tr>
-<tr>
 <td><code>3</code> , <code>'I'</code> or <code>'i'</code></td>
 <td>may be used for informational messages</td>
 </tr>
+<tr>
+<td><code>1</code> , <code>'E'</code> or <code>'e'</code></td>
+<td colspan="7">may be used for error messages</td>
+</tr>
+<tr>
+<td><code>2</code> , <code>'W'</code> or <code>'w'</code></td>
+<td colspan="7">may be used for warning messages</td>
+</tr>
+<tr>
+<td><code>3</code> , <code>'I'</code> or <code>'i'</code></td>
+<td colspan="7">may be used for informational messages</td>
+</tr>
 </tbody>
 </table>
-<p>{level} instance.Write message</p>
+<table>
+<tbody>
+<tr>
+<td><code>{level} instance.Write message</code></td>
+</tr>
+</tbody>
+</table>
 <h4 id="purpose_2">Purpose</h4>
 <p>Writes a message to the Windows Event Log associated with source name specified for the <code>SysLog</code> instance, optionally specifying a severity level.</p>
 <table>
 <thead>
 <tr>
 <th>Argument</th>
-<th>Description</th>
+<th colspan="7">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>sourcename</td>
-<td>character vector source name of an existing source</td>
+<td><code>sourcename</code></td>
+<td colspan="7">character vector source name of an existing source</td>
 </tr>
 <tr>
-<td>message</td>
-<td>character vector message to write to the log</td>
+<td><code>message</code></td>
+<td colspan="7">character vector message to write to the log</td>
 </tr>
 <tr>
-<td>{level}</td>
+<td><code>{level}</code></td>
 <td>optional singleton indicating the severity level of the message; defaults to informational if <code>level</code> is not specified: <code>1</code> , <code>'E'</code> or <code>'e'</code> may be used for error messages <code>2</code> , <code>'W'</code> or <code>'w'</code> may be used for warning messages <code>3</code> , <code>'I'</code> or <code>'i'</code> may be used for informational messages</td>
+<td><code>1</code> , <code>'E'</code> or <code>'e'</code></td>
+<td>may be used for error messages</td>
+<td><code>2</code> , <code>'W'</code> or <code>'w'</code></td>
+<td>may be used for warning messages</td>
+<td><code>3</code> , <code>'I'</code> or <code>'i'</code></td>
+<td>may be used for informational messages</td>
 </tr>
 <tr>
 <td><code>1</code> , <code>'E'</code> or <code>'e'</code></td>
-<td>may be used for error messages</td>
+<td colspan="7">may be used for error messages</td>
 </tr>
 <tr>
 <td><code>2</code> , <code>'W'</code> or <code>'w'</code></td>
-<td>may be used for warning messages</td>
+<td colspan="7">may be used for warning messages</td>
 </tr>
 <tr>
 <td><code>3</code> , <code>'I'</code> or <code>'i'</code></td>
-<td>may be used for informational messages</td>
+<td colspan="7">may be used for informational messages</td>
 </tr>
 </tbody>
 </table>
@@ -71687,7 +71720,13 @@
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">logger</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">SysLog</span><span class="w"> </span><span class="s1">&#39;mysource&#39;</span>
 <span class="w">      </span><span class="m">1</span><span class="w"> </span><span class="nv">logger</span><span class="na">.</span><span class="nv">Write</span><span class="w"> </span><span class="s1">&#39;The sky is falling!&#39;</span>
 </code></pre></div>
-<p>Boolean←SysLog.LogExists logname</p>
+<table>
+<tbody>
+<tr>
+<td><code>Boolean←SysLog.LogExists logname</code></td>
+</tr>
+</tbody>
+</table>
 <h4 id="purpose_3">Purpose</h4>
 <p>Returns 1 if a Windows Event Log named <code>logname</code> exists, 0 otherwise.</p>
 <table>
@@ -71699,12 +71738,18 @@
 </thead>
 <tbody>
 <tr>
-<td>logname</td>
+<td><code>logname</code></td>
 <td>character vector Windows Event Log log name</td>
 </tr>
 </tbody>
 </table>
-<p>Boolean←SysLog.EventSourceExists sourcename</p>
+<table>
+<tbody>
+<tr>
+<td><code>Boolean←SysLog.EventSourceExists sourcename</code></td>
+</tr>
+</tbody>
+</table>
 <h4 id="purpose_4">Purpose</h4>
 <p>Returns 1 if a Windows Event Log source named <code>sourcename</code> exists, 0 otherwise.</p>
 <table>
@@ -71716,12 +71761,18 @@
 </thead>
 <tbody>
 <tr>
-<td>sourcename</td>
+<td><code>sourcename</code></td>
 <td>character vector Windows Event Log source name</td>
 </tr>
 </tbody>
 </table>
-<p>logname←LogNameFromSourceName sourcename</p>
+<table>
+<tbody>
+<tr>
+<td><code>logname←LogNameFromSourceName sourcename</code></td>
+</tr>
+</tbody>
+</table>
 <h4 id="purpose_5">Purpose</h4>
 <p>Returns the Windows Event Log log name associated with the source named <code>sourcename</code>.</p>
 <table>
@@ -71733,16 +71784,22 @@
 </thead>
 <tbody>
 <tr>
-<td>sourcename</td>
+<td><code>sourcename</code></td>
 <td>character vector Windows Event Log source name</td>
 </tr>
 <tr>
-<td>logname</td>
+<td><code>logname</code></td>
 <td>character vector Windows Event Log log name</td>
 </tr>
 </tbody>
 </table>
-<p>DeleteEventSource sourcename</p>
+<table>
+<tbody>
+<tr>
+<td><code>DeleteEventSource sourcename</code></td>
+</tr>
+</tbody>
+</table>
 <h4 id="purpose_6">Purpose</h4>
 <p>Deletes the Windows Event Log source named <code>sourcename</code>.</p>
 <table>
@@ -71754,12 +71811,18 @@
 </thead>
 <tbody>
 <tr>
-<td>sourcename</td>
+<td><code>sourcename</code></td>
 <td>character vector Windows Event Log source name</td>
 </tr>
 </tbody>
 </table>
-<p>DeleteLog logname</p>
+<table>
+<tbody>
+<tr>
+<td><code>DeleteLog logname</code></td>
+</tr>
+</tbody>
+</table>
 <h4 id="purpose_7">Purpose</h4>
 <p>Deletes the Windows Event Log log named <code>logname</code>.</p>
 <table>
@@ -71771,7 +71834,7 @@
 </thead>
 <tbody>
 <tr>
-<td>logname</td>
+<td><code>logname</code></td>
 <td>character vector Windows Event Log log name</td>
 </tr>
 </tbody>

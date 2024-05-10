@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,17 @@
 
 <h1 class="heading"><span class="name">ClassID</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/activexcontrol/">ActiveXControl</a> <a href="../../objects/ocxclass/">OCXClass</a> <a href="../../objects/oleclient/">OLEClient</a> <a href="../../objects/oleserver/">OLEServer</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/activexcontrol/">ActiveXControl</a></td>
+<td><a href="../../objects/ocxclass/">OCXClass</a></td>
+<td><a href="../../objects/oleclient/">OLEClient</a></td>
+<td><a href="../../objects/oleserver/">OLEServer</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The ClassID property specifies the class identifier (usually abbreviated to CLSID) of an APL object that is used to represent a COM object. The CLSID is a globally unique identifier (<a href="../../miscellaneous/globally-unique-identifier-guid/">GUID</a>) that uniquely identifies the object.</p>
 <p>When you create or recreate an ActiveXControl or <a href="../../objects/oleserver/">OLEServer</a> using <code>⎕WC</code>, you may specify ClassID. This allows you to re-use a value that was previously allocated to that control by the system. However, you should not specify any other value because that value could be allocated now or in the future to another object <em>on any other computer in the world</em>. Otherwise, a new ClassID is automatically allocated by the system.</p>

@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,27 +71327,32 @@
 
 <h1 class="heading"><span class="name">MDIDeactivate</span><span class="command">Event 43</span></h1>
 
-<p>Applies To: <a href="../../objects/subform/">SubForm</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/subform/">SubForm</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This event is generated when the user activates a different <a href="../../objects/subform/">SubForm</a> that is the child of an <a href="../../objects/mdiclient/">MDIClient</a>, thereby de-activating the current one which causes this event. This occurs when the user clicks the left mouse button in another <a href="../../objects/subform/">SubForm</a> or selects it from the menu nominated for this purpose (see <a href="../../properties/mdimenu/">MDIMenu</a> property). You may also call MDIDeactivate as a method.</p>
 <p>Note that this event is reported after the action has taken place and cannot be disabled by returning 0 from a callback function or by setting its action code to <code>¯1</code>.</p>
 <p>The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, or supplied as the right argument to your callback function, is a 3-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'MDIDeactivate'</code> or 43</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Object name</td>
 <td>character vector</td>
 </tr>

@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,28 +71305,89 @@
 
 <h1 class="heading"><span class="name">Encoding</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/tcpsocket/">TCPSocket</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/tcpsocket/">TCPSocket</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The Encoding property is a character vector that specifies how character data
 are encoded or translated.</p>
 <p>The possible values are <code>'None'</code>,
 <code>'UTF-8'</code>, <code>'Classic'</code>, or <code>'Unicode'</code>, depending upon the value of the <a href="../style/">Style</a> property.</p>
 <p>Unicode Edition</p>
-<p>| Style | Encoding | Description |
-| --- | ---  |
-| 'Raw' | 'None' | Not applicable. Only integer data may be transmitted/received. |
-| 'Char' | 'None' | Transmission is limited to characters with Unicode code points in the         range 0-255. Attempting to transmit (or receive) a character outside         this range will cause <code>DOMAIN ERROR</code> . |
-| 'UTF-8' | Characters are transmitted/received using the UTF-8 encoding scheme. |
-| 'APL' | 'Classic' | Characters are transmitted/received as indices of <code>⎕AV</code> ,         and translated according to the current value of <code>⎕AVU</code> .         An attempt to transmit or receive a characters not present in <code>⎕AVU</code> will cause <code>TRANSLATION ERROR</code> |
-| 'Unicode' | Characters are transmitted/received <em>as is</em> (as Unicode code         points). |</p>
+<table>
+<thead>
+<tr>
+<th>Style</th>
+<th>Encoding</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>'Raw'</code></td>
+<td>'None'</td>
+<td>Not applicable. Only integer data may be transmitted/received.</td>
+</tr>
+<tr>
+<td><code>'Char'</code></td>
+<td>'None'</td>
+<td>Transmission is limited to characters with Unicode code points in the         range 0-255. Attempting to transmit (or receive) a character outside         this range will cause <code>DOMAIN ERROR</code> .</td>
+</tr>
+<tr>
+<td><code>'UTF-8'</code></td>
+<td colspan="2">Characters are transmitted/received using the UTF-8 encoding scheme.</td>
+</tr>
+<tr>
+<td><code>'APL'</code></td>
+<td>'Classic'</td>
+<td>Characters are transmitted/received as indices of <code>⎕AV</code> ,         and translated according to the current value of <code>⎕AVU</code> .         An attempt to transmit or receive a characters not present in <code>⎕AVU</code> will cause <code>TRANSLATION ERROR</code></td>
+</tr>
+<tr>
+<td><code>'Unicode'</code></td>
+<td colspan="2">Characters are transmitted/received <em>as is</em> (as Unicode code         points).</td>
+</tr>
+</tbody>
+</table>
 <p>Classic Edition</p>
-<p>| Style | Encoding | Description |
-| --- | ---  |
-| 'Raw' | 'None' | Not applicable. Only integer data may be transmitted/received. |
-| 'Char' | 'None' | Characters (which are represented internally as indices of <code>⎕AV</code> ) are         translated to and from ASCII using the Output Translate Table win.dot. |
-| 'UTF-8' | Characters are converted to/from Unicode using <code>⎕AVU</code> and transmitted/received using the UTF-8 encoding scheme. An attempt to         transmit or receive a characters not present in <code>⎕AVU</code> will cause <code>TRANSLATION ERROR</code> . |
-| 'Raw' | 'Classic' | Characters are transmitted/received as indices of <code>⎕AV</code> . |
-| 'Unicode' | Characters are converted to/from Unicode using <code>⎕AVU</code> and transmitted/received as Unicode code points. An attempt to transmit         or receive a characters not present in <code>⎕AVU</code> will cause <code>TRANSLATION ERROR</code> . |</p>
+<table>
+<thead>
+<tr>
+<th>Style</th>
+<th>Encoding</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>'Raw'</code></td>
+<td>'None'</td>
+<td>Not applicable. Only integer data may be transmitted/received.</td>
+</tr>
+<tr>
+<td><code>'Char'</code></td>
+<td>'None'</td>
+<td>Characters (which are represented internally as indices of <code>⎕AV</code> ) are         translated to and from ASCII using the Output Translate Table win.dot.</td>
+</tr>
+<tr>
+<td><code>'UTF-8'</code></td>
+<td colspan="2">Characters are converted to/from Unicode using <code>⎕AVU</code> and transmitted/received using the UTF-8 encoding scheme. An attempt to         transmit or receive a characters not present in <code>⎕AVU</code> will cause <code>TRANSLATION ERROR</code> .</td>
+</tr>
+<tr>
+<td><code>'Raw'</code></td>
+<td>'Classic'</td>
+<td>Characters are transmitted/received as indices of <code>⎕AV</code> .</td>
+</tr>
+<tr>
+<td><code>'Unicode'</code></td>
+<td colspan="2">Characters are converted to/from Unicode using <code>⎕AVU</code> and transmitted/received as Unicode code points. An attempt to transmit         or receive a characters not present in <code>⎕AVU</code> will cause <code>TRANSLATION ERROR</code> .</td>
+</tr>
+</tbody>
+</table>
 <p>The default value of Encoding depends upon the value of <a href="../style/">Style</a> as indicated.  Default values are highlighted thus.  in the above tables.</p>
 <p>An attempt to set the value of Encoding to a value not valid for the current <a href="../style/">Style</a>,
 as implied by the above tables, will cause <code>DOMAIN ERROR</code>.</p>

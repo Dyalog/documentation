@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71485,12 +71485,21 @@
 <p>This APLScript code defines a namespace called <code>APLClasses</code>. This simply acts as a container and is there to establish a .NET namespace of the same name within the resulting .NET assembly. Within <code>APLClasses</code> is defined a .NET class called <code>Primitives</code> whose base class is <code>System.Object</code>. This class has a single public method named <code>IndexGen</code>, which takes a parameter called <code>number</code> whose data type is <code>Int32</code>, and returns an array of <code>Int32</code> as its result.</p>
 <p><code>aplclasses6.apl</code> is compiled to a .NET Assembly using the APLScript compiler with the <code>/t:library</code>  flag. For details, see the file <code>aplclasses6\framework\build.bat</code>.</p>
 <p>Using VS, open the solution file <code>d:\aplclasses\aplclasses6\Framework\project.sln</code> and view <code>aplclasses6.dll</code>.</p>
-<p><img alt="aplclasses6_1" src="../../img/aplclasses6-1.png" /></p>
+<figure id="_figure-1">
+<img alt="aplclasses6_1" src="../../img/aplclasses6-1.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>This shows that <code>aplclasses6.dll</code> contains a .NET namespace called APLClasses, which in turn contains the Primitives class. Primitives has a single method named IndexGen() which takes a number (an int).</p>
 <p>Next, Display the c# program <code>program.cs</code>. This is the same program as in Example1.</p>
-<p><img alt="aplclasses6_2" src="../../img/aplclasses6-2.png" /></p>
+<figure id="_figure-2">
+<img alt="aplclasses6_2" src="../../img/aplclasses6-2.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <p>Now click <em>Debug/Start Without debugging</em> (or press Ctrl+F5) to run the program. The results are shown in a console window.</p>
-<p><img alt="aplclasses6_3" src="../../img/aplclasses6-3.png" /></p>
+<figure id="_figure-3">
+<img alt="aplclasses6_3" src="../../img/aplclasses6-3.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <p>This .NET Class can also be called from APL just like any other. For example:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CLEAR</span>
 <span class="nv">clear</span><span class="w"> </span><span class="nv">ws</span>
@@ -71549,12 +71558,21 @@
 <span class="bp">:</span><span class="nv">EndNamespace</span>
 </code></pre></div></p>
 <p>Using VS, open the solution file <code>d:\aplclasses\aplclasses7\Framework\project.sln</code> and view <code>aplclasses7.dll</code>.</p>
-<p><img alt="aplclasses7_1" src="../../img/aplclasses7-1.png" /></p>
+<figure id="_figure-4">
+<img alt="aplclasses7_1" src="../../img/aplclasses7-1.png" />
+<figcaption><span>Figure&nbsp;4</span></figcaption>
+</figure>
 <p>This shows that <code>aplclasses7.dll</code> contains a .NET namespace called APLClasses, which in turn contains the Primitives class. Primitives has a single method named IndexGen() which takes a number (an int) and a property named IndexOrigin.</p>
 <p>Next, Display the c# program <code>program.cs</code>. Notice that the main program calls a subroutine iota twice to calculate <code>⍸5</code> in origin 0 and 1.</p>
-<p><img alt="aplclasses7_2" src="../../img/aplclasses7-2.png" /></p>
+<figure id="_figure-5">
+<img alt="aplclasses7_2" src="../../img/aplclasses7-2.png" />
+<figcaption><span>Figure&nbsp;5</span></figcaption>
+</figure>
 <p>Now click <em>Debug/Start Without debugging</em> (or press Ctrl+F5) to run the program. The results are shown in a console window.</p>
-<p><img alt="aplclasses7_3" src="../../img/aplclasses7-3.png" /></p>
+<figure id="_figure-6">
+<img alt="aplclasses7_3" src="../../img/aplclasses7-3.png" />
+<figcaption><span>Figure&nbsp;6</span></figcaption>
+</figure>
 <p>This .NET Class can also be called from APL just like any other. For example:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CLEAR</span>
 <span class="nv">clear</span><span class="w"> </span><span class="nv">ws</span>

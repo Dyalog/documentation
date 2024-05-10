@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,8 +71327,25 @@
 
 <h1 class="heading"><span class="name">FileBox</span><span class="command">Object</span></h1>
 
-<p><a href="../../parentlists/filebox/">Parents</a> <a href="../../childlists/filebox/">Children</a> <a href="../../proplists/filebox/">Properties</a> <a href="../../methodlists/filebox/">Methods</a> <a href="../../eventlists/filebox/">Events</a></p>
-<p>Purpose: Prompts user to select a file.</p>
+<table>
+<tbody>
+<tr>
+<td><a href="../../parentlists/filebox/">Parents</a></td>
+<td><a href="../../childlists/filebox/">Children</a></td>
+<td><a href="../../proplists/filebox/">Properties</a></td>
+<td><a href="../../methodlists/filebox/">Methods</a></td>
+<td><a href="../../eventlists/filebox/">Events</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>Purpose:</td>
+<td>Prompts user to select a file.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The FileBox object implements the standard Windows FileSelection Dialog Box. This is a "modal" object. When you create a FileBox with <a href="../../../language-reference-guide/system-functions/wc"><code>⎕WC</code></a>, it is initially invisible and the user cannot interact with it. To use it, you must execute <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> with the name of the FileBox as its right argument. This causes the FileBox to be displayed. During the "local" <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> the user may interact <strong>only</strong> with the FileBox, or with other applications. When the user terminates the operation (by pressing the "Save", "Open", or "Cancel" Buttons, or by closing the window) the "local" <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> terminates, and the FileBox disappears.</p>
 <p>When the "local" <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> is terminated, the FileBox generates either an <a href="../../methodorevents/fileboxok/">FileBoxOK</a>(71) or <a href="../../methodorevents/fileboxcancel/">FileBoxCancel</a>(72) event. The former is generated when the user presses the "Save" or "Open" button; the latter when the user presses the "Cancel" button or closes the FileBox.</p>

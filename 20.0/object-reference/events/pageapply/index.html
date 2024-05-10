@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,22 +71305,27 @@
 
 <h1 class="heading"><span class="name">PageApply</span><span class="command">Event 350</span></h1>
 
-<p>Applies To: <a href="../../objects/propertypage/">PropertyPage</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/propertypage/">PropertyPage</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user clicks the Apply button in a <a href="../../objects/propertysheet/">PropertySheet</a>. Note however, that the event is actually reported by each of its <a href="../../objects/propertypage/">PropertyPage</a> objects whose Changed property is currently 1, i.e. the event is reported by each of the pages that the user has changed.</p>
 <p>The default processing for this event is to set the Changed property of the <a href="../../objects/propertypage/">PropertyPage</a> to 0. If you disable the event or return a 0 from a callback function, the Changed property is not reset. Note that the Apply button in a <a href="../../objects/propertysheet/">PropertySheet</a> is active if the value of the Changed property of <em>any</em> of the <a href="../../objects/propertypage/">PropertyPage</a> objects is 1.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 2-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'PageApply'</code> or 350</td>
 </tr>

@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71581,7 +71581,10 @@
 <p>The Session MenuBar  (<code>⎕SE.mb</code>) contains a set of menus as follows. Note that, unless specified, the screen-shots are taken using Unicode Edition and the  keyboard short-cuts will be different in Classic Edition.</p>
 <h3 id="the-file-menu">The File Menu</h3>
 <p>The <em>File</em> menu (<code>⎕SE.mb.file</code>) provides a means to execute those APL System Commands that are concerned with the active and saved workspaces. The contents of a typical File menu and the operations they perform are illustrated below.</p>
-<p><img alt="session file menu" src="../img/session-file-menu.png" /></p>
+<figure id="_figure-1">
+<img alt="session file menu" src="../img/session-file-menu.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>File Menu Operations</p>
 <table>
 <thead>
@@ -71614,65 +71617,74 @@
 </tr>
 <tr>
 <td>Save As</td>
-<td>[WSSaveas]</td>
+<td><code>[WSSaveas]</code></td>
 <td>Prompts for a workspace file name, then saves it</td>
 </tr>
 <tr>
 <td>Export</td>
-<td>[Makeexe]</td>
+<td><code>[Makeexe]</code></td>
 <td>Creates a bound executable, an OLE Server, an ActiveX Control, or a .NET Assembly. See <a href="../../windows-installation-and-configuration-guide/creating-executables">Creating Executables and COM Servers</a> .</td>
 </tr>
 <tr>
 <td>Export to Memory</td>
-<td>[MakeMemory Assembly]</td>
+<td><code>[MakeMemoryAssembly]</code></td>
 <td>Creates an <em>in-memory</em> .NET Assembly</td>
 </tr>
 <tr>
 <td>Close AppDomain</td>
-<td>[CloseAppDomain]</td>
+<td><code>[CloseAppDomain]</code></td>
 <td>Closes .NET App Domain</td>
 </tr>
 <tr>
 <td>Drop</td>
-<td>[WSDrop]</td>
+<td><code>[WSDrop]</code></td>
 <td>Prompts for a workspace file name, then erases it</td>
 </tr>
 <tr>
 <td>Edit Text File</td>
-<td>[EditTextFile]</td>
+<td><code>[EditTextFile]</code></td>
 <td>Displays the <em>Open Source File dialog</em> to select a file to exit.</td>
 </tr>
 <tr>
 <td>Print</td>
-<td>[PrintFnsInNS]</td>
+<td><code>[PrintFnsInNS]</code></td>
 <td>Prints functions and operators in current namespace</td>
 </tr>
 <tr>
 <td>Print Setup</td>
-<td>[PrintSetup]</td>
+<td><code>[PrintSetup]</code></td>
 <td>Invokes the print set-up dialog box</td>
 </tr>
 <tr>
 <td>Continue</td>
-<td>[Continue]</td>
+<td><code>[Continue]</code></td>
 <td>Saves the active workspace in CONTINUE.DWS and exits APL</td>
 </tr>
 <tr>
 <td>Exit</td>
-<td>[Off]</td>
+<td><code>[Off]</code></td>
 <td>Exits APL</td>
 </tr>
 </tbody>
 </table>
 <h3 id="edit-text-file">Edit Text File</h3>
 <p>The Edit Text File menu item allows you to edit a Dyalog script file (.dyalog) or an arbitrary text file. The system prompts you to choose the file as shown below:</p>
-<p><img alt="open source file" src="../img/open-source-file.png" /></p>
+<figure id="_figure-2">
+<img alt="open source file" src="../img/open-source-file.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <p>The file is then displayed in the Editor, allowing you to change it and save it. See <a href="../editing-scripts-and-text-files/">Editing Scripts and Text Files</a>.</p>
 <h3 id="the-edit-menu">The Edit Menu</h3>
 <p>The <em>Edit</em> menu (<code>⎕SE.mb.edit</code>) provides a means to recall previously entered input lines for re-execution and for copying text to and from the clipboard.</p>
-<p><img alt="session edit menu unicode" src="../img/session-edit-menu-unicode.png" /></p>
+<figure id="_figure-3">
+<img alt="session edit menu unicode" src="../img/session-edit-menu-unicode.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <p>Unicode Edition</p>
-<p><img alt="session edit menu classic" src="../img/session-edit-menu-classic.png" /></p>
+<figure id="_figure-4">
+<img alt="session edit menu classic" src="../img/session-edit-menu-classic.png" />
+<figcaption><span>Figure&nbsp;4</span></figcaption>
+</figure>
 <p>Classic Edition</p>
 <p>Edit menu operations</p>
 <table>
@@ -71686,54 +71698,57 @@
 <tbody>
 <tr>
 <td>Back</td>
-<td>[Undo]</td>
+<td><code>[Undo]</code></td>
 <td>Displays the previous input line. Repeated use of this command cycles back through the input history.</td>
 </tr>
 <tr>
 <td>Forward</td>
-<td>[Redo]</td>
+<td><code>[Redo]</code></td>
 <td>Displays the next input line. Repeated use of this command cycles forward through the input history.</td>
 </tr>
 <tr>
 <td>Cut</td>
-<td>[Delete]</td>
+<td><code>[Delete]</code></td>
 <td>Cuts the selected text to the clipboard</td>
 </tr>
 <tr>
 <td>Copy</td>
-<td>[Copy]</td>
+<td><code>[Copy]</code></td>
 <td>Copies the selection to the clipboard</td>
 </tr>
 <tr>
 <td>Paste</td>
-<td>[Paste]</td>
+<td><code>[Paste]</code></td>
 <td>Pastes the text contents of the clipboard into the session log at the current location. The new lines are <em>marked</em> and may be executed by pressing Enter.</td>
 </tr>
 <tr>
 <td>Paste Unicode</td>
-<td>[PasteUnicode]</td>
+<td><code>[PasteUnicode]</code></td>
 <td>Same as <em>Paste</em> , but gets the Unicode text from the clipboard and converts to <code>⎕AV</code> . <strong>Classic Edition only</strong></td>
 </tr>
 <tr>
 <td>Paste Non-Unicode</td>
-<td>[PasteAnsi]</td>
+<td><code>[PasteAnsi]</code></td>
 <td>Same as <em>Paste</em> , but gets the ANSI text from the clipboard and converts to <code>⎕AV</code> . <strong>Classic Edition only</strong></td>
 </tr>
 <tr>
 <td>Find</td>
-<td>[Find]</td>
+<td><code>[Find]</code></td>
 <td>Displays the <em>Find</em> dialog box</td>
 </tr>
 <tr>
 <td>Replace</td>
-<td>[Replace]</td>
+<td><code>[Replace]</code></td>
 <td>Displays the <em>Find/Replace</em> dialog box</td>
 </tr>
 </tbody>
 </table>
 <h3 id="the-view-menu">The View Menu</h3>
 <p>The <em>View</em> menu (<code>⎕SE.mb.view</code>) toggles the visibility of the Session Toolbar, StatusBar, and Language Bar.</p>
-<p><img alt="session view menu" src="../img/session-view-menu.png" /></p>
+<figure id="_figure-5">
+<img alt="session view menu" src="../img/session-view-menu.png" />
+<figcaption><span>Figure&nbsp;5</span></figcaption>
+</figure>
 <p>View menu operations</p>
 <table>
 <thead>
@@ -71746,24 +71761,27 @@
 <tbody>
 <tr>
 <td>Toolbar</td>
-<td></td>
+<td>&nbsp;</td>
 <td>Shows/Hides Session toolbars</td>
 </tr>
 <tr>
 <td>Statusbar</td>
-<td></td>
+<td>&nbsp;</td>
 <td>Shows/Hides Session statusbars</td>
 </tr>
 <tr>
 <td>LanguageBar</td>
-<td></td>
+<td>&nbsp;</td>
 <td>Shows/Hides Language Bar</td>
 </tr>
 </tbody>
 </table>
 <h3 id="the-window-menu">The Window Menu</h3>
 <p>This contains a single action (<code>⎕SE.mb.windows</code>) which is to close all of the Edit and Trace windows and the Status window.</p>
-<p><img alt="session windows menu" src="../img/session-windows-menu.png" /></p>
+<figure id="_figure-6">
+<img alt="session windows menu" src="../img/session-windows-menu.png" />
+<figcaption><span>Figure&nbsp;6</span></figcaption>
+</figure>
 <p>Window menu operations</p>
 <table>
 <thead>
@@ -71776,7 +71794,7 @@
 <tbody>
 <tr>
 <td>Close all Windows</td>
-<td>[CloseAll]</td>
+<td><code>[CloseAll]</code></td>
 <td>Closes all Edit and Trace windows</td>
 </tr>
 </tbody>
@@ -71785,7 +71803,10 @@
 <p>In addition, the <em>Window</em> menu will contain options to switch the focus to any subsidiary windows that are docked in the Session as illustrated above.</p>
 <h3 id="the-session-menu">The Session Menu</h3>
 <p>The <em>Session</em> menu (<code>⎕SE.mb.session</code>) provides access to the system operations that allow you to load a session (<code>⎕SE</code>) from a session file and to save your current session (<code>⎕SE</code>) to a session file. If you use these facilities rarely, you may wish to move them to (say) the <em>Options</em> menu or even dispense with them entirely.</p>
-<p><img alt="session session menu" src="../img/session-session-menu.png" /></p>
+<figure id="_figure-7">
+<img alt="session session menu" src="../img/session-session-menu.png" />
+<figcaption><span>Figure&nbsp;7</span></figcaption>
+</figure>
 <p>Session menu operations</p>
 <table>
 <thead>
@@ -71798,24 +71819,27 @@
 <tbody>
 <tr>
 <td>Open</td>
-<td>[SELoad]</td>
+<td><code>[SELoad]</code></td>
 <td>Prompts for a session file name, then loads the session from it, replacing the current one. Sets the File property of <code>⎕SE</code> to the name of the file from which the session was loaded.</td>
 </tr>
 <tr>
 <td>Save</td>
-<td>[SESave]</td>
+<td><code>[SESave]</code></td>
 <td>Saves the current session (as defined by <code>⎕SE</code> ) to the session file specified by the File property of <code>⎕SE</code></td>
 </tr>
 <tr>
 <td>Save As</td>
-<td>[SESaveAs]</td>
+<td><code>[SESaveAs]</code></td>
 <td>Prompts for a session file name, then saves the current session (as defined by <code>⎕SE</code> ) in it. Resets the File property of <code>⎕SE</code> .</td>
 </tr>
 </tbody>
 </table>
 <h3 id="the-log-menu">The Log Menu</h3>
 <p>The <em>Log</em> menu (<code>⎕SE.mb.log</code>) provides access to the system operations that manipulate Session log files.</p>
-<p><img alt="session log menu" src="../img/session-log-menu.png" /></p>
+<figure id="_figure-8">
+<img alt="session log menu" src="../img/session-log-menu.png" />
+<figcaption><span>Figure&nbsp;8</span></figcaption>
+</figure>
 <p>Log menu operations</p>
 <table>
 <thead>
@@ -71828,34 +71852,37 @@
 <tbody>
 <tr>
 <td>Clear</td>
-<td>[NewLog]</td>
+<td><code>[NewLog]</code></td>
 <td>Prompts for confirmation, then empties the current Session log</td>
 </tr>
 <tr>
 <td>Open</td>
-<td>[OpenLog]</td>
+<td><code>[OpenLog]</code></td>
 <td>Prompts for a Session log file, then loads it into memory, replacing the current Session log</td>
 </tr>
 <tr>
 <td>Save</td>
-<td>[SaveLog]</td>
+<td><code>[SaveLog]</code></td>
 <td>Saves the current Session log in the current log file, replacing its previous contents</td>
 </tr>
 <tr>
 <td>Save As</td>
-<td>[SaveLogAs]</td>
+<td><code>[SaveLogAs]</code></td>
 <td>Prompts for a file name, then saves the current Session log in it</td>
 </tr>
 <tr>
 <td>Print</td>
-<td>[PrintLog]</td>
+<td><code>[PrintLog]</code></td>
 <td>Prints the contents of the Session log</td>
 </tr>
 </tbody>
 </table>
 <h3 id="the-action-menu">The Action Menu</h3>
 <p>The <em>Action</em> menu (<code>⎕SE.mb.action</code>) may be used to perform a variety of operations on the <em>current object</em> or the <em>current line</em>. The current object is the object whose name contains the cursor. The current line is that line that contains the cursor. The <em>Edit</em>, <em>Copy Object</em>, <em>Paste Object</em> and <em>Print Object</em> items operate on the current object. For example, if the name <code>SALES</code> appears in the session and the cursor is placed somewhere within it, <code>SALES</code> is the current object and will be copied to the clipboard by selecting <em>Copy object</em> or opened up for editing by selecting <em>Edit</em>.</p>
-<p><img alt="session action menu" src="../img/session-action-menu.png" /></p>
+<figure id="_figure-9">
+<img alt="session action menu" src="../img/session-action-menu.png" />
+<figcaption><span>Figure&nbsp;9</span></figcaption>
+</figure>
 <p>Action menu operations</p>
 <table>
 <thead>
@@ -71868,54 +71895,61 @@
 <tbody>
 <tr>
 <td>Edit</td>
-<td>[Edit]</td>
+<td><code>[Edit]</code></td>
 <td>Edit the current object</td>
 </tr>
 <tr>
 <td>Trace</td>
-<td>[Trace]</td>
+<td><code>[Trace]</code></td>
 <td>Executes the current line under the control of the Tracer</td>
 </tr>
 <tr>
 <td>Execute</td>
-<td>[Execute]</td>
+<td><code>[Execute]</code></td>
 <td>Executes the current line</td>
 </tr>
 <tr>
 <td>Copy Object</td>
-<td>[ObjCopy]</td>
+<td><code>[ObjCopy]</code></td>
 <td>Copies the contents of the current object to the clipboard</td>
 </tr>
 <tr>
 <td>Paste Object</td>
-<td>[ObjPaste]</td>
+<td><code>[ObjPaste]</code></td>
 <td>Pastes the contents of the clipboard into the current object, replacing its previous value</td>
 </tr>
 <tr>
 <td>Print Object</td>
-<td>[ObjPrint]</td>
+<td><code>[ObjPrint]</code></td>
 <td>Prints the current object. Note that if the object is being edited, the version of the object displayed in the edit window is printed.</td>
 </tr>
 <tr>
 <td>Clear Stops</td>
-<td>[ClearTSM]</td>
+<td><code>[ClearTSM]</code></td>
 <td>Clears all <code>⎕STOP</code> , <code>⎕MONITOR</code> and <code>⎕TRACE</code> settings</td>
 </tr>
 <tr>
 <td>Interrupt</td>
-<td>[Interrupt]</td>
+<td><code>[Interrupt]</code></td>
 <td>Generates a weak interrupt</td>
 </tr>
 <tr>
 <td>Reset</td>
-<td>[Reset]</td>
+<td><code>[Reset]</code></td>
 <td>Performs <code>)RESET</code></td>
 </tr>
 </tbody>
 </table>
 <h3 id="the-options-menu">The Options Menu</h3>
 <p>The <em>Options</em> menu (<code>⎕SE.mb.options</code>) provides configuration options.</p>
-<p><img alt="session options menu" src="../img/session-options-menu.png" /> <img alt="session object syntax menu" src="../img/session-object-syntax-menu.png" /></p>
+<table>
+<tbody>
+<tr>
+<td><img alt="session options menu" src="../img/session-options-menu.png" /></td>
+<td><img alt="session object syntax menu" src="../img/session-object-syntax-menu.png" /></td>
+</tr>
+</tbody>
+</table>
 <p>Options menu operations</p>
 <table>
 <thead>
@@ -71928,37 +71962,37 @@
 <tbody>
 <tr>
 <td>Expose GUI Properties</td>
-<td>[ExposeGUI]</td>
+<td><code>[ExposeGUI]</code></td>
 <td>Exposes the names of properties, methods and events in GUI objects</td>
 </tr>
 <tr>
 <td>Expose Root Properties</td>
-<td>[ExposeRoot]</td>
+<td><code>[ExposeRoot]</code></td>
 <td>Exposes the names of the properties, methods and events of the Root object</td>
 </tr>
 <tr>
 <td>Expose Session Properties</td>
-<td>[ExposeSession]</td>
+<td><code>[ExposeSession]</code></td>
 <td>Exposes the names of the properties, methods and events of <code>⎕SE</code></td>
 </tr>
 <tr>
 <td>Line Numbers</td>
-<td>[LineNumbers]</td>
+<td><code>[LineNumbers]</code></td>
 <td>Toggle the display of line numbers in edit and trace windows on/off</td>
 </tr>
 <tr>
 <td>Disable traps in session</td>
-<td>[DisableTrapsAtSuspension]</td>
+<td><code>[DisableTrapsAtSuspension]</code></td>
 <td>Disables the error trapping mechanism used by <code>:Trap</code> and <code>⎕TRAP</code> . This can be useful in debugging applications.</td>
 </tr>
 <tr>
 <td>Configure</td>
-<td>[Configure]</td>
+<td><code>[Configure]</code></td>
 <td>Displays the <em>Configuration</em> dialog box</td>
 </tr>
 <tr>
 <td>Colours</td>
-<td>[ChooseColors]</td>
+<td><code>[ChooseColors]</code></td>
 <td>Displays the <em>Colours Selection</em> dialog box</td>
 </tr>
 </tbody>
@@ -71967,7 +72001,10 @@
 <p>The default values of these items are defined by the parameters <strong>default_wx</strong>, <strong>PropertyExposeRoot</strong> and <strong>PropertyExposeSE</strong> which may be set using the <em>Object Syntax</em> tab of the <em>Configuration</em> dialog.</p>
 <h3 id="the-tools-menu">The Tools Menu</h3>
 <p>The <em>Tools</em> menu (<code>⎕SE.mb.tools</code>) provides access to various session tools and dialog boxes.</p>
-<p><img alt="session tools menu" src="../img/session-tools-menu.png" /></p>
+<figure id="_figure-10">
+<img alt="session tools menu" src="../img/session-tools-menu.png" />
+<figcaption><span>Figure&nbsp;10</span></figcaption>
+</figure>
 <p>Tools Menu Operations</p>
 <table>
 <thead>
@@ -71980,39 +72017,42 @@
 <tbody>
 <tr>
 <td>Explorer</td>
-<td>[Explorer]</td>
+<td><code>[Explorer]</code></td>
 <td>Displays the <em>Workspace Explorer</em> tool</td>
 </tr>
 <tr>
 <td>Search</td>
-<td>[WSSearch]</td>
+<td><code>[WSSearch]</code></td>
 <td>Displays the <em>Workspace Search</em> tool</td>
 </tr>
 <tr>
 <td>Status</td>
-<td>[Status]</td>
+<td><code>[Status]</code></td>
 <td>Displays or hides the <em>Status</em> window</td>
 </tr>
 <tr>
 <td>AutoStatus</td>
-<td>[AutoStatus]</td>
+<td><code>[AutoStatus]</code></td>
 <td>Toggle; if checked, causes the <em>Status</em> window to be displayed when a new message is generated for it</td>
 </tr>
 <tr>
 <td>Event Viewer</td>
-<td>[EventViewer]</td>
+<td><code>[EventViewer]</code></td>
 <td>Displays or hides the <em>Event Viewer</em></td>
 </tr>
 <tr>
 <td>Properties</td>
-<td>[ObjProps]</td>
+<td><code>[ObjProps]</code></td>
 <td>Displays a property sheet for the current object</td>
 </tr>
 </tbody>
 </table>
 <h3 id="the-threads-menu">The Threads Menu</h3>
 <p>The <em>Threads</em> menu (<code>⎕SE.mb.threads</code>) provides access to various session tools and dialog boxes.</p>
-<p><img alt="session threads menu" src="../img/session-threads-menu.png" /></p>
+<figure id="_figure-11">
+<img alt="session threads menu" src="../img/session-threads-menu.png" />
+<figcaption><span>Figure&nbsp;11</span></figcaption>
+</figure>
 <p>Threads Menu Operations</p>
 <table>
 <thead>
@@ -72025,49 +72065,52 @@
 <tbody>
 <tr>
 <td>Show Threads</td>
-<td>[Threads]</td>
+<td><code>[Threads]</code></td>
 <td>Displays the <em>Threads Tool</em></td>
 </tr>
 <tr>
 <td>Show Stack</td>
-<td>[Stack]</td>
+<td><code>[Stack]</code></td>
 <td>Displays the <em>SI Stack</em> window</td>
 </tr>
 <tr>
 <td>Show Token Pool</td>
-<td>[TokenPool]</td>
+<td><code>[TokenPool]</code></td>
 <td>Displays the <em>Token Pool</em> window</td>
 </tr>
 <tr>
 <td>Auto Refresh</td>
-<td>[ThreadsAutoRefresh]</td>
+<td><code>[ThreadsAutoRefresh]</code></td>
 <td>Refreshes the <em>Threads Tool</em> on every thread switch</td>
 </tr>
 <tr>
 <td>Pause on Error</td>
-<td>[ThreadsPauseOnError]</td>
+<td><code>[ThreadsPauseOnError]</code></td>
 <td>Pauses all threads on error</td>
 </tr>
 <tr>
 <td>Pause all Threads</td>
-<td>[ThreadsPauseAll]</td>
+<td><code>[ThreadsPauseAll]</code></td>
 <td>Pauses all threads</td>
 </tr>
 <tr>
 <td>Resume all Threads</td>
-<td>[ThreadsResumeAll]</td>
+<td><code>[ThreadsResumeAll]</code></td>
 <td>Resumes all threads</td>
 </tr>
 <tr>
 <td>Restart all Threads</td>
-<td>[ThreadsRestartAll]</td>
+<td><code>[ThreadsRestartAll]</code></td>
 <td>Restarts all threads</td>
 </tr>
 </tbody>
 </table>
 <h3 id="the-help-menu">The Help Menu</h3>
 <p>The <em>Help</em> menu (<code>⎕SE.mb.help</code>) provides access to the help system which is packaged as a single <em>Microsoft HTML Help</em> compiled help file named <code>help\dyalog.chm.</code></p>
-<p><img alt="session help menu" src="../img/session-help-menu.png" /></p>
+<figure id="_figure-12">
+<img alt="session help menu" src="../img/session-help-menu.png" />
+<figcaption><span>Figure&nbsp;12</span></figcaption>
+</figure>
 <p>Help menu operations</p>
 <table>
 <thead>
@@ -72080,57 +72123,57 @@
 <tbody>
 <tr>
 <td>Getting Started</td>
-<td>[GettingStarted]</td>
+<td><code>[GettingStarted]</code></td>
 <td>Opens your web browser on the <code>getting-started</code> page on the Dyalog web site</td>
 </tr>
 <tr>
 <td>Dyalog Help</td>
-<td>[WelcomeHelp]</td>
+<td><code>[WelcomeHelp]</code></td>
 <td>Opens <code>help\dyalog.chm</code> , starting at the Welcome page</td>
 </tr>
 <tr>
 <td>Language Elements</td>
-<td>[LangHelp]</td>
+<td><code>[LangHelp]</code></td>
 <td>Opens <code>help\dyalog.chm</code> , starting at the first topic in the Language Reference section</td>
 </tr>
 <tr>
 <td>GUI Overview</td>
-<td>[GuiHelp]</td>
+<td><code>[GuiHelp]</code></td>
 <td>Opens <code>help\dyalog.chm</code> , starting at the first topic in the Object Reference section</td>
 </tr>
 <tr>
 <td>Documentation Centre</td>
-<td>[DocCenter]</td>
+<td><code>[DocCenter]</code></td>
 <td>Opens your web browser on <code>help\index.html</code> which displays an index to the on-line PDF documentation and selected internet links</td>
 </tr>
 <tr>
 <td>Dyalog Web Site</td>
-<td>[DyalogWeb]</td>
+<td><code>[DyalogWeb]</code></td>
 <td>Opens your web browser on the Dyalog home page</td>
 </tr>
 <tr>
 <td>Email Dyalog</td>
-<td>[DyalogEmail]</td>
+<td><code>[DyalogEmail]</code></td>
 <td>Opens your email client and creates a new message to Dyalog Support</td>
 </tr>
 <tr>
 <td>Latest Enhancements</td>
-<td>[RelNotes]</td>
+<td><code>[RelNotes]</code></td>
 <td>Opens <code>help\dyalog.chm</code> , starting at the first topic in the Version 20.0 Release Notes section. Previous Release Notes are also included for your convenience.</td>
 </tr>
 <tr>
 <td>Read Me</td>
-<td>[ReadMe]</td>
+<td><code>[ReadMe]</code></td>
 <td>Opens <code>help\dyalog_readme.htm</code> in your default web browser. Note that setup_readme.htm is also included in this directory</td>
 </tr>
 <tr>
 <td>Third Party Licences</td>
-<td>[LicenceHelp]</td>
+<td><code>[LicenceHelp]</code></td>
 <td>Opens <code>help\dyalog.chm</code> , starting at the first topic in the Licences for third-party components</td>
 </tr>
 <tr>
 <td>About</td>
-<td>[About]</td>
+<td><code>[About]</code></td>
 <td>Displays an <em>About</em> dialog box</td>
 </tr>
 </tbody>

@@ -32749,7 +32749,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71421,7 +71421,7 @@
 <h1 class="heading"><span class="name">Copy Workspace</span><span class="command">)COPY {ws {nms}}</span></h1>
 
 <p>This command brings all or selected global objects <code>nms</code> from a stored workspace (or session file) with the given name.  A stored workspace is one which has previously been saved with the system command <code>)SAVE</code> or the system function <code>⎕SAVE</code>.</p>
-<p>See Workspaces<a href="../../../programming-reference-guide/introduction/workspaces">Programmer's Guide: "Workspaces</a> for the rules for specifying a workspace name.</p>
+<p>See <a href="../../../programming-reference-guide/introduction/workspaces">Programmer's Guide: "Workspaces"</a> for the rules for specifying a workspace name.</p>
 <p>If the list of names is excluded, all defined objects (including namespaces) are copied.</p>
 <p>If the workspace name identifies a valid, readable workspace, the system reports the workspace name, "<code>saved</code>" and the date and time when the workspace was last saved.</p>
 <p><strong>Examples</strong></p>
@@ -71436,7 +71436,7 @@
 <p>You may copy an object from a namespace by specifying its full pathname.  The object will be copied to the current namespace in the active workspace, losing its original parent and gaining a new one in the process.  You may only copy a GUI object into a namespace that is a suitable parent for that object.  For example, you could only copy a Group object from a saved workspace if the current namespace in the active workspace is itself a Form, SubForm or Group.</p>
 <p>If the workspace name identifies a file that is not a workspace, the system reports <code>bad ws</code>.</p>
 <p>If the source workspace is too large to be loaded, the system reports <code>ws too large</code>.</p>
-<p>When copying data between Classic and Unicode Editions, <code>)COPY</code> will fail with <code>TRANSLATION ERROR</code> if <em>any</em> object in the source workspace fails conversion between Unicode and <code>⎕AV</code> indices, whether or not that object is specified by <code>nms</code>. See <a href="../../system-functions/avu/">Atomic Vector - Unicode:</a> for further details.</p>
+<p>When copying data between Classic and Unicode Editions, <code>)COPY</code> will fail with <code>TRANSLATION ERROR</code> if <em>any</em> object in the source workspace fails conversion between Unicode and <code>⎕AV</code> indices, whether or not that object is specified by <code>nms</code>. See <a href="../../system-functions/avu/">"Atomic Vector - Unicode: "</a> for further details.</p>
 <p>If "<code>ws</code>" is omitted, the file open dialog box is displayed and all objects copied from the selected workspace.</p>
 <p>If the list of names is included, the names of system variables may also be included and copied into the active workspace.  The global referents will be copied.</p>
 <p>If an object is not found in the stored workspace, the system reports <code>not found</code> followed by the name of the object.</p>

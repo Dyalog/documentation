@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,14 +71327,29 @@
 
 <h1 class="heading"><span class="name">Undo</span><span class="command">Method 170</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This method is used to undo the previous change in a <a href="../../objects/grid/">Grid</a> object.</p>
 <p>The <a href="../../objects/grid/">Grid</a> object maintains a buffer of the most recent 8 changes made by the user since the <a href="../../properties/values/">Values</a> property was last set by <a href="../../../language-reference-guide/system-functions/wc"><code>⎕WC</code></a> or <a href="../../../language-reference-guide/system-functions/ws"><code>⎕WS</code></a>.</p>
 <p>Your application can restore these changes one by one by calling the Undo method on the <a href="../../objects/grid/">Grid</a>. The Undo method restores the most recent change made by the user and removes that change from the undo stack.</p>
 <p>It is therefore not possible to "undo an undo".</p>
 <p>The argument to Undo is <code>⍬</code>, or a single item as follows :</p>
-<p>[1] Number of changes integer</p>
+<table>
+<tbody>
+<tr>
+<td><code>[1]</code></td>
+<td>Number of changes</td>
+<td>integer</td>
+</tr>
+</tbody>
+</table>
 <p>If called with an argument of <code>⍬</code>, the default value for the <em>Number of changes</em> is 1. This restores the most recent change.</p>
 
 

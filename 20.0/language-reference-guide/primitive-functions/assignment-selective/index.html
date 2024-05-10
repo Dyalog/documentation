@@ -32740,7 +32740,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71402,17 +71402,15 @@
 
 <h1 class="heading"><span class="name">Assignment (Selective)</span><span class="command">(EXP X)←Y</span></h1>
 
-<p><code>X</code> is the <em>name</em> of a variable in the workspace, possibly modified by the indexing function <code>(EXP X[I])←Y</code>, see <a href="../assignment-indexed/">Assignment (Indexed)</a>.  <code>EXP</code> is an expression that <strong>selects</strong> elements of <code>X</code>.  <code>Y</code> is an array expression. The result of the expression <code>Y</code> is allocated to the elements of <code>X</code> selected by <code>EXP</code>. Note that <code>X</code> may refer to a single name only.</p>
+<p><code>X</code> is the <em>name</em> of a variable in the workspace, possibly modified by the indexing function <code>(EXP X[I])←Y</code>, see <a href="../assignment-indexed/">"Assignment (Indexed)"</a>.  <code>EXP</code> is an expression that <strong>selects</strong> elements of <code>X</code>.  <code>Y</code> is an array expression. The result of the expression <code>Y</code> is allocated to the elements of <code>X</code> selected by <code>EXP</code>. Note that <code>X</code> may refer to a single name only.</p>
 <p>The following functions may appear in the selection expression. Where appropriate these functions may be used with axis <code>[]</code> and with the Each operator <code>¨</code>.</p>
 <p>Functions for Selective Assignment</p>
 <table>
-<thead>
-<tr>
-<th>↑</th>
-<th>Take</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>↑</td>
+<td>Take</td>
+</tr>
 <tr>
 <td>↓</td>
 <td>Drop</td>

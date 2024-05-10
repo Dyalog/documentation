@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,11 +71305,26 @@
 
 <h1 class="heading"><span class="name">SetZoomLevel</span><span class="command">Method</span></h1>
 
-<p>Applies To: <a href="../../objects/htmlrenderer/">HTMLRenderer</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/htmlrenderer/">HTMLRenderer</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>Sets the CEF ZoomLevel. The default (unzoomed) level is 0. Setting a positive value will increase the zoom, whereas setting a negative will decrease the zoom. The zoom scale is not linear; rather the effective scaling is approximately 1.2*level, so, setting the ZoomLevel to 1 will result in an approximate 20% size increase. ZoomLevel affects all instances of HTMLRenderer windows; it is not possible to have different ZoomLevels for individual windows.</p>
 <p>The argument to SetZoomLevel is a single numeric value:</p>
-<p>[1] ZoomLevel Numeric</p>
+<table>
+<tbody>
+<tr>
+<td><code>[1]</code></td>
+<td>ZoomLevel</td>
+<td>Numeric</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Examples</strong></p>
 <p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">hr</span><span class="w"> </span><span class="nv">Zoom</span><span class="w"> </span><span class="nv">level</span><span class="sr">;</span><span class="nv">lb</span><span class="sr">;</span><span class="nv">in</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">hr</span><span class="na">.</span><span class="nv">SetZoomLevel</span><span class="w"> </span><span class="nv">level</span>
@@ -71323,16 +71338,28 @@
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">hr</span><span class="na">.</span><span class="nf">⎕WC</span><span class="s1">&#39;HTMLRenderer&#39;</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Caption&#39;</span><span class="w"> </span><span class="s1">&#39;ZoomLevel Method&#39;</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">hr</span><span class="w"> </span><span class="nv">Zoom</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div></p>
-<p><img alt="zoomlevel 0" src="../../img/zoomlevel-0.png" /></p>
+<figure id="_figure-1">
+<img alt="zoomlevel 0" src="../../img/zoomlevel-0.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">hr</span><span class="w"> </span><span class="nv">Zoom</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
-<p><img alt="zoomlevel 1" src="../../img/zoomlevel-1.png" /></p>
+<figure id="_figure-2">
+<img alt="zoomlevel 1" src="../../img/zoomlevel-1.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">hr</span><span class="w"> </span><span class="nv">Zoom</span><span class="w"> </span><span class="m">2</span>
 </code></pre></div>
-<p><img alt="zoomlevel 2" src="../../img/zoomlevel-2.png" /></p>
+<figure id="_figure-3">
+<img alt="zoomlevel 2" src="../../img/zoomlevel-2.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">hr</span><span class="w"> </span><span class="nv">Zoom</span><span class="w"> </span><span class="m">¯1</span>
 </code></pre></div>
-<p><img alt="zoomlevel neg1" src="../../img/zoomlevel-neg1.png" /></p>
+<figure id="_figure-4">
+<img alt="zoomlevel neg1" src="../../img/zoomlevel-neg1.png" />
+<figcaption><span>Figure&nbsp;4</span></figcaption>
+</figure>
 
 
 

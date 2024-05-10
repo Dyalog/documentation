@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,29 +71305,34 @@
 
 <h1 class="heading"><span class="name">PrintRange</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/printer/">Printer</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/printer/">Printer</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The PrintRange property specifies the range of pages to be printed.</p>
 <p>PrintRange may be an empty character vector (the default), or <code>'All'</code>, either of which will cause all pages to be printed.</p>
 <p>Alternatively, PrintRange may be a 3 or 4-element nested array whose items are:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th><code>'Pages'</code></th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td><code>'Pages'</code></td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Start page (integer)</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>End page (integer)</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Maximum number of pages (integer)</td>
 </tr>
 </tbody>

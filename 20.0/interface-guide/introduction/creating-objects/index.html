@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71440,7 +71440,10 @@
 <p>The following statement creates a Form called <code>'f1'</code> with the title "A Default Form" and with default size, position, etc.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;f1&#39;</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">&#39;Form&#39;</span><span class="w"> </span><span class="s1">&#39;A Default Form&#39;</span>
 </code></pre></div></p>
-<p><img alt="default form" src="../../img/default-form.png" /></p>
+<figure id="_figure-1">
+<img alt="default form" src="../../img/default-form.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <h3 id="naming-objects">Naming Objects</h3>
 <p>Objects are created in a hierarchy. The Form we have just created is a "top-level" object to which we can attach other child objects, like buttons, scrollbars and so forth. You can create any number of top-level objects like this, up to a limit imposed by MS-Windows and your system configuration.</p>
 <p>For reasons which will become apparent later, there is a single Root object whose name is <code>'.'</code> (dot) or <code>'#'</code>. It acts a bit like the root directory in a Windows system file structure, and is the implied parent of all the top-level objects you create.</p>
@@ -71464,7 +71467,10 @@
 <span class="s1">&#39;accounts.type.BUDGET&#39;</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">&#39;Button&#39;</span><span class="w"> </span><span class="s1">&#39;BUDGET&#39;</span><span class="w"> </span><span class="p">(</span><span class="m">45</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
 <span class="s1">&#39;accounts.type.ACTUAL&#39;</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">&#39;Button&#39;</span><span class="w"> </span><span class="s1">&#39;ACTUAL&#39;</span><span class="w"> </span><span class="p">(</span><span class="m">70</span><span class="w"> </span><span class="m">32</span><span class="p">)</span>
 </code></pre></div></p>
-<p><img alt="accounts" src="../../img/accounts.png" /></p>
+<figure id="_figure-2">
+<img alt="accounts" src="../../img/accounts.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <p>Schematically, this object structure looks as follows:
 <div class="highlight"><pre><span></span><code><span class="w">                            </span><span class="nv">__ACTUAL</span>
 <span class="w">        </span><span class="na">.</span><span class="nv">___accounts___type___BUDGET</span>

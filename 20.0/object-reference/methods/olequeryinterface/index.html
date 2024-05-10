@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,12 +71305,28 @@
 
 <h1 class="heading"><span class="name">OLEQueryInterface</span><span class="command">Method 543</span></h1>
 
-<p>Applies To: <a href="../../objects/activexcontainer/">ActiveXContainer</a> <a href="../../objects/oleclient/">OLEClient</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/activexcontainer/">ActiveXContainer</a></td>
+<td><a href="../../objects/oleclient/">OLEClient</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This method is used to obtain the methods and properties associated with a particular <em>interface</em> that is provided by a COM object. An interface is simply a pointer to a table of methods (not properties) that are exported by an object.</p>
 <p>Note that methods and properties exported using the standard IDispatch interface are established automatically when the object is created. OLEQueryInterface is required only to support alternative or additional interfaces that the object may implement.</p>
 <p>The argument to OLEQueryInterface is a single item as follows:</p>
-<p>[1] Interface name character vector</p>
+<table>
+<tbody>
+<tr>
+<td><code>[1]</code></td>
+<td>Interface name</td>
+<td>character vector</td>
+</tr>
+</tbody>
+</table>
 <p>The result is a namespace.</p>
 <p>It is normal, although not strictly required, that the new namespace be a child of the one for which the method is run.</p>
 <p>Note that if the object does not support a type library, the new namespace will be empty and you will have to establish functions corresponding to the methods exported by the interface using <a href="../../methodorevents/setmethodinfo/">SetMethodInfo</a>.</p>

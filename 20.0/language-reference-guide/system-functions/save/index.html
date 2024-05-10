@@ -32693,7 +32693,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71331,7 +71331,7 @@
 
 <p><code>Y</code> must be a simple character scalar or vector that identifies a  full or relative path name to the file in which the workspace will be written.</p>
 <p>Unless the path specified by <code>Y</code> is a full pathname, it is taken to be relative to the current working directory which may be obtained by the expression: <code>⊃1 ⎕NPARTS ''</code>.</p>
-<p>See Workspaces<a href="../../../programming-reference-guide/introduction/workspaces">Programmer's Guide: "Workspaces</a> for the rules for specifying a workspace name.</p>
+<p>See <a href="../../../programming-reference-guide/introduction/workspaces">Programmer's Guide: "Workspaces"</a> for the rules for specifying a workspace name.</p>
 <p>The active workspace is saved with the  file name specified by  <code>Y</code>, whether or not a workspace file of that name already exists.</p>
 <p>A <code>DOMAIN ERROR</code> is reported if the name in <code>Y</code> :</p>
 <ul>
@@ -71343,7 +71343,7 @@
 <p>The shy result <code>R</code> is a simple Boolean scalar 1. However, when the  workspace is subsequently loaded using <code>⎕LOAD</code> and execution restarts, the result is 0, as described below.</p>
 <p>The optional left argument <code>X</code> is either 0 or 1. If <code>X</code> is omitted or 1, the saved version of the workspace has execution suspended at the point of exit from the <code>⎕SAVE</code> function.  If the saved workspace is subsequently loaded by <code>⎕LOAD</code>, execution is resumed, and the value 0 is returned if the result is used or assigned, or otherwise the result is suppressed. In this case, the latent expression value (<code>⎕LX</code>) is ignored.</p>
 <p>If <code>X</code> is 0, the workspace is saved without any state indicator in effect. The effect is the same as if you first executed <code>)RESET</code> and then <code>)SAVE</code>. In this case, when the workspace is subsequently loaded, the value of the latent expression (<code>⎕LX</code>) is honoured if applicable.</p>
-<p>As is the case for <code>)SAVE</code> (see <a href="../../system-commands/save/">Save Workspace:</a>), monadic <code>⎕SAVE</code> will fail and issue <code>DOMAIN ERROR</code> if any threads (other than the root thread 0) are running or if there are any Edit or Trace windows open. However, neither of these restrictions apply if the left argument <code>X</code> is 0.</p>
+<p>As is the case for <code>)SAVE</code> (see <a href="../../system-commands/save/">"Save Workspace: "</a>), monadic <code>⎕SAVE</code> will fail and issue <code>DOMAIN ERROR</code> if any threads (other than the root thread 0) are running or if there are any Edit or Trace windows open. However, neither of these restrictions apply if the left argument <code>X</code> is 0.</p>
 <p>Note that the values of all system variables (including <code>⎕SM</code>) and all GUI objects are saved.</p>
 <p><strong>Example</strong></p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="o">⊃</span><span class="s1">&#39;SAVED&#39;</span><span class="w"> </span><span class="s1">&#39;ACTIVE&#39;</span><span class="w"> </span><span class="sr">[</span><span class="nf">⎕IO</span><span class="o">+</span><span class="nf">⎕SAVE</span><span class="s1">&#39;TEMP&#39;</span><span class="sr">]</span><span class="p">)</span><span class="o">,</span><span class="s1">&#39; WS&#39;</span>

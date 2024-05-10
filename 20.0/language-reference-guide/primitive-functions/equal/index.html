@@ -32693,7 +32693,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71336,7 +71336,10 @@
 <p>If <code>X</code> and <code>Y</code> are numeric, then <code>R</code> is 1 if <code>X</code> and <code>Y</code> are within comparison tolerance of each other.</p>
 <p>For real numbers <code>X</code> and <code>Y</code>, <code>X</code> is considered equal to <code>Y</code> if <code>(|X-Y)</code> is not greater than <code>⎕CT×(|X)⌈|Y</code>.</p>
 <p>For complex numbers <code>X=Y</code> is 1 if the magnitude of <code>X-Y</code> does not exceed <code>⎕CT</code> times the larger of the magnitudes of <code>X</code> and <code>Y</code>; geometrically, <code>X=Y</code> if the number smaller in magnitude lies on or within a circle centred on the one with larger magnitude, having radius <code>⎕CT</code> times the larger magnitude.</p>
-<p><img alt="comparison" src="../../img/comparison.png" /></p>
+<figure id="_figure-1">
+<img alt="comparison" src="../../img/comparison.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p><strong>Examples</strong></p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">3</span><span class="o">=</span><span class="m">3.1</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">¯2</span><span class="w"> </span><span class="m">¯3</span>
 <span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>

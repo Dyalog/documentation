@@ -32727,7 +32727,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71436,9 +71436,15 @@
 </table>
 <p>The following example illustrates how you can package the supplied workspace <code>calc.dws</code> as an executable. Before making the executable, it is essential to set up the latent expression to run the program using <code>⎕LX</code> as shown. Notice that in this case it is not necessary to execute <code>⎕OFF</code>; the <code>calc.exe</code> program will terminate normally when the user closes the calculator window and the system returns to Session input.</p>
 <p>In this example, the supplied workspace <code>calc.dws</code> is first saved to a directory to which the user has write access and, just to make certain, the Dyalog program is run as Administrator.</p>
-<p><img alt="creating executables 1" src="../img/creating-executables-1.png" /></p>
+<figure id="_figure-1">
+<img alt="creating executables 1" src="../img/creating-executables-1.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>Then, when you select <em>Export…</em> from the <em>File</em> menu, the following dialog box is displayed.</p>
-<p><img alt="creating executables 2" src="../img/creating-executables-2.png" /></p>
+<figure id="_figure-2">
+<img alt="creating executables 2" src="../img/creating-executables-2.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <p>The <em>Save as Type</em> option has been set to <em>Standalone Executable (includes interpreter exe)</em> which means that a single .exe will be created containing the Dyalog APL executable and the CALC workspace.</p>
 <p>The <em>Runtime application</em> checkbox is checked, indicating that <code>calc.exe</code> is to incorporate the runtime version of Dyalog APL.</p>
 <p>As this is a GUI application, the <em>Console application</em> checkbox is left unset.</p>
@@ -71446,9 +71452,15 @@
 <p>The <em>Command Line</em> box allows you to enter parameters and values that are to be passed to your executable when it is invoked.</p>
 <h3 id="version-information">Version Information</h3>
 <p>You may embed version information into your .exe by clicking the <em>Version</em> button and then completing the <em>Version Information</em> dialog box that is illustrated below.</p>
-<p><img alt="creating executables 3" src="../img/creating-executables-3.png" /></p>
+<figure id="_figure-3">
+<img alt="creating executables 3" src="../img/creating-executables-3.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <p>On clicking <em>Save</em>, the following message box is displayed to confirm success.</p>
-<p><img alt="creating executables 4" src="../img/creating-executables-4.png" /></p>
+<figure id="_figure-4">
+<img alt="creating executables 4" src="../img/creating-executables-4.png" />
+<figcaption><span>Figure&nbsp;4</span></figcaption>
+</figure>
 
 
 

@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71409,8 +71409,14 @@
 <p>In principle, we could define 7 more different versions of the method, taking 3, 4, 5 etc. numeric parameters. Instead, this method is defined more generally, to take a single parameter that is a 1-dimemsional array (vector) of numbers, and to return a result of type <code>Array</code>. In practice we might use this version alone, but for a C# programmer, this is harder to use than the two other specific cases.</p>
 <p>Notice also that all function use the same descriptive name, &lt;<code>IndexGen</code>&gt;.</p>
 <p>Load <code>aplclasses5.dws</code> and export <code>aplclasses5.dll</code> as before.</p>
-<p><img alt="aplclasses5_1" src="../../img/aplclasses5-1.png" /></p>
-<p><img alt="aplclasses5_2" src="../../img/aplclasses5-2.png" /></p>
+<figure id="_figure-1">
+<img alt="aplclasses5_1" src="../../img/aplclasses5-1.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
+<figure id="_figure-2">
+<img alt="aplclasses5_2" src="../../img/aplclasses5-2.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <h3 id="programcs">program.cs</h3>
 <p><code>samples\APLClasses\aplfns5.cs</code>contains code to invoke the three different variants of <code>IndexGen</code>, in the new <code>aplclasses.dll</code>. Notice that it uses a local sub-routine <code>PrintArray()</code>.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">using</span><span class="w"> </span><span class="nv">System</span><span class="sr">;</span>
@@ -71457,9 +71463,15 @@
 <span class="w">            </span><span class="kt">}</span>
 </code></pre></div></p>
 <p>Using VS, open the solution file <code>d:\aplclasses\aplclasses2\Framework\project.sln</code> and view <code>program.cs</code>.</p>
-<p><img alt="aplclasses5_3" src="../../img/aplclasses5-3.png" /></p>
+<figure id="_figure-3">
+<img alt="aplclasses5_3" src="../../img/aplclasses5-3.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <p>Click <em>Debug/Start Without debugging</em> (or press Ctrl+F5) to run the program. The results are shown in a console window.</p>
-<p><img alt="aplclasses5_4" src="../../img/aplclasses5-4.png" /></p>
+<figure id="_figure-4">
+<img alt="aplclasses5_4" src="../../img/aplclasses5-4.png" />
+<figcaption><span>Figure&nbsp;4</span></figcaption>
+</figure>
 <p>It is possible for a function to have several <code>:Signature</code> statements. Given that our three functions perform exactly the same operation, it might have made more sense to use a single function:
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">IndexGen1</span><span class="w"> </span><span class="nv">N</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">public</span>

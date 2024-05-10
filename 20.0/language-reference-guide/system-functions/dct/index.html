@@ -32693,7 +32693,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71332,7 +71332,7 @@
 <p>The value of <code>⎕DCT</code> determines the precision with which two numbers are judged to be equal when the value of <code>⎕FR</code> is 1287. If <code>⎕FR</code> is 645, the system uses <code>⎕CT</code>.</p>
 <p><code>⎕DCT</code> may be assigned any value in the range from <code>0</code> to <code>2*¯32</code> (about <code>2.3283064365386962890625E¯10</code>). A value of <code>0</code> ensures exact comparison. The value in a clear workspace is <code>1E¯28</code>. <code>⎕DCT</code> has Namespace scope.</p>
 <p><code>⎕CT</code> and <code>⎕DCT</code> are implicit arguments of the monadic primitive functions Ceiling (<code>⌈</code>), Floor (<code>⌊</code>) and Unique (<code>∪</code>), and of the dyadic functions Equal (<code>=</code>), Excluding (<code>~</code>), Find (<code>⍷</code>), Greater (<code>&gt;</code>), Greater or Equal (<code>≥</code>), Greatest Common Divisor (<code>∨</code>), Index of (<code>⍳</code>), Intersection (<code>∩</code>), Less (<code>&lt;</code>), Less or Equal (<code>≤</code>), Lowest Common Multiple (<code>∧</code>), Match (<code>≡</code>), Membership (<code>∊</code>), Not Match (<code>≢</code>), Not Equal (<code>≠</code>), Residue (<code>|</code>) and Union (<code>∪</code>), as well as <code>⎕FMT</code> O-format.</p>
-<p>For further information, see <a href="../ct/">Comparison Tolerance:</a>.</p>
+<p>For further information, see <a href="../ct/">"Comparison Tolerance: "</a>.</p>
 <p><strong>Examples</strong></p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕DCT</span><span class="kd">←</span><span class="m">1E¯10</span>
 <span class="w">      </span><span class="m">1.00000000001</span><span class="w"> </span><span class="m">1.0000001</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>

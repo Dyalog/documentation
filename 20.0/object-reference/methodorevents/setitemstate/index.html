@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,21 +71327,27 @@
 
 <h1 class="heading"><span class="name">SetItemState</span><span class="command">Method 307</span></h1>
 
-<p>Applies To: <a href="../../objects/listview/">ListView</a> <a href="../../objects/treeview/">TreeView</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/listview/">ListView</a></td>
+<td><a href="../../objects/treeview/">TreeView</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This method is used to set the status of a particular item in a <a href="../../objects/listview/">ListView</a> or <a href="../../objects/treeview/">TreeView</a> object.</p>
 <p>The argument to SetItemState is a 2-element array as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Item number</th>
-<th>Integer. The index of the item concerned.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Item number</td>
+<td>Integer. The index of the item concerned.</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Status</td>
 <td>Integer</td>
 </tr>
@@ -71349,13 +71355,11 @@
 </table>
 <p>The status of an item is calculated as the sum of one or more of the following state codes:</p>
 <table>
-<thead>
-<tr>
-<th><code>¯1</code></th>
-<th>Error (most likely the Item number is invalid)</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td><code>¯1</code></td>
+<td>Error (most likely the Item number is invalid)</td>
+</tr>
 <tr>
 <td>1</td>
 <td>Item has the focus</td>
@@ -71382,7 +71386,7 @@
 </tr>
 <tr>
 <td>4096</td>
-<td>Item is checked. See <a href="../../properties/checkboxes/">CheckBoxes</a></td>
+<td>Item is checked. See <a href="../../properties/checkboxes/">"CheckBoxes"</a></td>
 </tr>
 </tbody>
 </table>

@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,21 +71305,26 @@
 
 <h1 class="heading"><span class="name">PageCancel</span><span class="command">Event 351</span></h1>
 
-<p>Applies To: <a href="../../objects/propertypage/">PropertyPage</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/propertypage/">PropertyPage</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user presses the Cancel button in a <a href="../../objects/propertysheet/">PropertySheet</a> object and is reported by the current <a href="../../objects/propertypage/">PropertyPage</a>. This event is reported for information only and may not be disabled by a callback function. However, the operation will also generate a Close event reported by the <a href="../../objects/propertysheet/">PropertySheet</a> itself that may be disabled by a callback.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 2-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'PageCancel'</code> or 351</td>
 </tr>

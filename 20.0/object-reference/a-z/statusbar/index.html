@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,8 +71305,25 @@
 
 <h1 class="heading"><span class="name">StatusBar</span><span class="command">Object</span></h1>
 
-<p><a href="../../parentlists/statusbar/">Parents</a> <a href="../../childlists/statusbar/">Children</a> <a href="../../proplists/statusbar/">Properties</a> <a href="../../methodlists/statusbar/">Methods</a> <a href="../../eventlists/statusbar/">Events</a></p>
-<p>Purpose: This object is used to manage <a href="../statusfield/">StatusField</a> objects which display  information for the user.</p>
+<table>
+<tbody>
+<tr>
+<td><a href="../../parentlists/statusbar/">Parents</a></td>
+<td><a href="../../childlists/statusbar/">Children</a></td>
+<td><a href="../../proplists/statusbar/">Properties</a></td>
+<td><a href="../../methodlists/statusbar/">Methods</a></td>
+<td><a href="../../eventlists/statusbar/">Events</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>Purpose:</td>
+<td>This object is used to manage <a href="../statusfield/">StatusField</a> objects which display  information for the user.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The StatusBar is a container object that manages <a href="../statusfield/">StatusField</a>s. <a href="../statusfield/">StatusField</a> objects display textual information and are typically used for help messages and for monitoring the status of an application. They can also be used to automatically report the status of the Caps Lock, Num Lock, Scroll Lock, and Insert keys.</p>
 <div class="highlight"><pre><span></span><code><span class="s1">&#39;TEST&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Form&#39;</span><span class="w"> </span><span class="s1">&#39;StatusBar&#39;</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;EdgeStyle&#39;</span><span class="w"> </span><span class="s1">&#39;Default&#39;</span><span class="p">)</span><span class="w"> </span>
@@ -71315,7 +71332,10 @@
 <span class="s1">&#39;TEST.SB.S2&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;StatusField&#39;</span><span class="w"> </span><span class="s1">&#39;Field2:&#39;</span><span class="w"> </span><span class="s1">&#39;text2&#39;</span>
 <span class="s1">&#39;TEST.SB.S3&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;StatusField&#39;</span><span class="w"> </span><span class="s1">&#39;Field3:&#39;</span><span class="w"> </span><span class="s1">&#39;text3&#39;</span>
 </code></pre></div>
-<p><img alt="sb_example" src="../../img/sb-example.png" /></p>
+<figure id="_figure-1">
+<img alt="sb_example" src="../../img/sb-example.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>The <a href="../../properties/align/">Align</a> property determines to which side of the parent <a href="../form/">Form</a> or <a href="../subform/">SubForm</a> the StatusBar is attached. By default, a StatusBar is positioned along the lower edge of the <a href="../form/">Form</a> (<a href="../../properties/align/">Align </a><code>'Bottom')</code>.  Using the <a href="../../properties/align/">Align</a>, <a href="../../properties/posn/">Posn</a> and <a href="../../properties/size/">Size</a> properties you may create StatusBars in different positions and with differing sizes if you wish. Notice that the <a href="../../properties/align/">Align</a> property controls how the StatusBar reacts to its parent <a href="../form/">Form</a> being resized. If <a href="../../properties/align/">Align</a> is <code>'Top'</code> or <code>'Bottom'</code>, the StatusBar remains fixed in height but stretches and shrinks sideways with the <a href="../form/">Form</a>. If <a href="../../properties/align/">Align</a> is <code>'Left'</code> or <code>'Right'</code>, the StatusBar remains fixed in width and stretches and shrinks vertically with the <a href="../form/">Form</a>.</p>
 <p>By default a StatusBar has a Button Face colour background and the value of its <a href="../../properties/edgestyle/">EdgeStyle</a> property is <code>'Default'</code>. This gives it the appearance shown above.</p>
 <p>Unless you specify the position and size of its children, a StatusBar automatically manages their geometry. The first <a href="../statusfield/">StatusField</a> is positioned just inside its top left corner. If <a href="../../properties/align/">Align</a> is <code>'Top'</code> or <code>'Bottom'</code>, the next <a href="../statusfield/">StatusField</a> is positioned alongside the first but with a small gap between them. Subsequent <a href="../statusfield/">StatusField</a>s are added in a similar fashion. If <a href="../../properties/align/">Align</a> is <code>'Left'</code> or <code>'Right'</code>, the second and subsequent <a href="../statusfield/">StatusField</a>s are added below the first with a similar gap between them. In either case you can position and size the <a href="../statusfield/">StatusField</a>s explicitly if you wish.</p>

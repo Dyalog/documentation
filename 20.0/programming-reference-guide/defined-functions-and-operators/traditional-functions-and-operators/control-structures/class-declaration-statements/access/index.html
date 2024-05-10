@@ -32749,7 +32749,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71434,30 +71434,30 @@
 </thead>
 <tbody>
 <tr>
-<td>Private&#124;Public</td>
+<td><code>Private|Public</code></td>
 <td>Specifies whether or not the (nested) Class, Property or Method is accessible from outside the Class or an Instance of the Class. The default is <code>Private</code> .</td>
 </tr>
 <tr>
-<td>Instance&#124;Shared</td>
+<td><code>Instance|Shared</code></td>
 <td>For a Field, specifies if there is a separate value of the Field in each Instance of the Class, or if there is only a single value that is shared between all Instances. For a Property or Method, specifies whether the code associated with the Property or Method runs in the Class or Instance.</td>
 </tr>
 <tr>
-<td>WebMethod</td>
+<td><code>WebMethod</code></td>
 <td>Applies only to a Method and specifies that the method is exported as a web method. This applies only to a Class that implements a Web Service.</td>
 </tr>
 <tr>
-<td>Overridable</td>
+<td><code>Overridable</code></td>
 <td>Applies only to an Instance Method and specifies that the Method may be overridden by a Method in a higher Class. See below.</td>
 </tr>
 <tr>
-<td>Override</td>
+<td><code>Override</code></td>
 <td>Applies only to an Instance Method and specifies that the Method overrides the corresponding Overridable Method defined in the Base Class. See below.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="overridableoverride">Overridable/Override</h3>
 <p>Normally, a Method defined in a higher Class replaces a Method of the same name that is defined in its Base Class, but only for calls made from above or within the higher Class itself (or an Instance of the higher Class). The base method remains available <em>in the Base Class</em> and is invoked by a reference to it <em>from within the Base Class</em>.</p>
-<p>However, a Method declared as being <code>Overridable</code> is replaced in situ (i.e. within its own Class) by a Method of the same name in a higher Class if that Method is itself declared with the <code>Override</code> keyword. For further information, see <a href="../../../../../object-oriented-programming/class-members/methods/superceding-base-class-methods/">Superseding Base Class Methods</a>.</p>
+<p>However, a Method declared as being <code>Overridable</code> is replaced in situ (i.e. within its own Class) by a Method of the same name in a higher Class if that Method is itself declared with the <code>Override</code> keyword. For further information, see <a href="../../../../../object-oriented-programming/class-members/methods/superceding-base-class-methods/">"Superseding Base Class Methods"</a>.</p>
 <h3 id="nested-classes">Nested Classes</h3>
 <p>The <code>:Access</code> statement is also used to control the visibility of one Class that is defined within another (a nested Class). A Nested Class may be either <code>Private</code> or <code>Public</code>. Note that the <code>:Access</code> Statement must precede the definition of any Class contents.</p>
 <p>A <code>Public</code> Nested Class is visible from outside its containing Class and may be used directly in its own right, whereas a <code>Private</code> Nested Class is not and may only be used by code inside the containing Class.</p>

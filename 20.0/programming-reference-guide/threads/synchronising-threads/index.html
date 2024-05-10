@@ -32685,7 +32685,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71328,27 +71328,25 @@
 <p>The token pool may contain up to 2*31 tokens; they do not have to be unique neither in terms of their types nor of their values.</p>
 <p>The following system functions are used to manage the token pool:</p>
 <table>
-<thead>
-<tr>
-<th>⎕TALLOC</th>
-<th>Allocates ranges of tokens.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>⎕TPUT</td>
+<td><code>⎕TALLOC</code></td>
+<td>Allocates ranges of tokens.</td>
+</tr>
+<tr>
+<td><code>⎕TPUT</code></td>
 <td>Puts tokens into the pool.</td>
 </tr>
 <tr>
-<td>⎕TGET</td>
+<td><code>⎕TGET</code></td>
 <td>If necessary waits for, and then retrieves some tokens from the pool.</td>
 </tr>
 <tr>
-<td>⎕TPOOL</td>
+<td><code>⎕TPOOL</code></td>
 <td>Reports the types of tokens in the pool</td>
 </tr>
 <tr>
-<td>⎕TREQ</td>
+<td><code>⎕TREQ</code></td>
 <td>Reports the token requests from specific threads</td>
 </tr>
 </tbody>

@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71368,9 +71368,15 @@
 </code></pre></div></p>
 <p>is that the <code>DropDownList</code> WebControl has an <code>Items</code> property that is a collection of <code>ListItem</code> objects. The collection implements an <code>Add</code> function that takes a <code>String</code> Argument that can be used to add an item to the list.</p>
 <p>Notice that the name of the object <code>list</code> is defined by the <code>id="list"</code> attribute of the <code>DropDownList</code> control that is defined in the page layout section of the page.</p>
-<p><img alt="intro3_1" src="../../img/intro3-1.png" /></p>
+<figure id="_figure-1">
+<img alt="intro3_1" src="../../img/intro3-1.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>In this example, the page is processed by a POST back caused by pressing the <code>Submit</code> button. As it stands, changing the selection in the <code>list</code> object does not cause the text in the <code>out</code> object to be changed; you have to press the <code>Submit</code> button first.</p>
-<p><img alt="intro3_2" src="../../img/intro3-2.png" /></p>
+<figure id="_figure-2">
+<img alt="intro3_2" src="../../img/intro3-2.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <p>However, you can make this happen automatically by adding the following attributes to the <code>list</code> object (see <code>intro4.aspx</code>):</p>
 <p>AutoPostback="true"</p>
 <p>OnSelectedIndexChanged="Select"/&gt;</p>

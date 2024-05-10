@@ -32848,7 +32848,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71542,65 +71542,61 @@
 <p>Note that the <code>i</code><sup>th</sup> interval starts at  <code>X[i]</code>, then includes all subsequent values up to but not including <code>X[i+1]</code>.</p>
 <p>For example, if <code>X</code> is  <code>(1 3 5)</code> it defines 4 intervals numbered 0 to 3 as follows.</p>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>less than 1</th>
-<th>&lt;1</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>0</td>
+<td>less than 1</td>
+<td><code>&lt;1</code></td>
+</tr>
 <tr>
 <td>1</td>
 <td>between 1 and 3</td>
-<td>(≥1)∧(&lt;3)</td>
+<td><code>(≥1)∧(&lt;3)</code></td>
 </tr>
 <tr>
 <td>2</td>
 <td>between 3 and 5</td>
-<td>(≥3)∧(&lt;5)</td>
+<td><code>(≥3)∧(&lt;5)</code></td>
 </tr>
 <tr>
 <td>3</td>
 <td>greater than or equal to 5</td>
-<td>≥5</td>
+<td><code>≥5</code></td>
 </tr>
 </tbody>
 </table>
 <p>If <code>X</code> is <code>'AEIOU'</code> it defines 6 intervals numbered 0 to 5 as follows:</p>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>before A</th>
-<th>⎕UCS 0,⍳64</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>0</td>
+<td>before A</td>
+<td><code>⎕UCS 0,⍳64</code></td>
+</tr>
 <tr>
 <td>1</td>
 <td>between A and E</td>
-<td>ABCD</td>
+<td><code>ABCD</code></td>
 </tr>
 <tr>
 <td>2</td>
 <td>between E and I</td>
-<td>EFGH</td>
+<td><code>EFGH</code></td>
 </tr>
 <tr>
 <td>3</td>
 <td>between I and O</td>
-<td>IJKLMN</td>
+<td><code>IJKLMN</code></td>
 </tr>
 <tr>
 <td>4</td>
 <td>between O and U</td>
-<td>OPQREST</td>
+<td><code>OPQREST</code></td>
 </tr>
 <tr>
 <td>5</td>
 <td>U and after</td>
-<td>UVWXYZ...</td>
+<td><code>UVWXYZ...</code></td>
 </tr>
 </tbody>
 </table>

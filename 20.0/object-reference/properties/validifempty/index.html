@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,16 @@
 
 <h1 class="heading"><span class="name">ValidIfEmpty</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/buttonedit/">ButtonEdit</a> <a href="../../objects/edit/">Edit</a> <a href="../../objects/spinner/">Spinner</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/buttonedit/">ButtonEdit</a></td>
+<td><a href="../../objects/edit/">Edit</a></td>
+<td><a href="../../objects/spinner/">Spinner</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This property applies to an <a href="../../objects/edit/">Edit</a> object with <a href="../style/">Style</a> Single and specifies whether or not an empty field is considered to be valid. It also applies to a <a href="../../objects/spinner/">Spinner</a>. Its value is either 0 (an empty field is not valid) or 1 (an empty field is valid. If the <a href="../fieldtype/">FieldType</a> is Numeric, LongNumeric, Currency, Date or Time, the default value for ValidIfEmpty is 0. Otherwise, its default value is 1.</p>
 <p>If ValidIfEmpty is 0 and the user attempts to <em>leave</em> the <a href="../../objects/edit/">Edit</a> object by shifting the input focus to another control, or by selecting a <a href="../../objects/button/">Button</a> or <a href="../../objects/menuitem/">MenuItem</a>, the <a href="../../objects/edit/">Edit</a> object will generate a <a href="../../methodorevents/badvalue/">BadValue</a> event. The <a href="../text/">Text</a> property will reflect the appearance of the field and be empty, but the <a href="../value/">Value</a> property will not be changed.</p>

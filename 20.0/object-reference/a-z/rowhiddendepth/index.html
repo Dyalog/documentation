@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,7 +71305,14 @@
 
 <h1 class="heading"><span class="name">RowHiddenDepth</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The RowHiddenDepth property is read-only and identifies which rows of a Grid are currently hidden.</p>
 <p>RowHiddenDepth is an integer vector with the same number of elements as there are rows in the Grid. The values in RowHiddenDepth indicate the current depth of the row in the visible hierarchy; i.e. number of nodes that must be opened to display it. The value 0 means that the corresponding row is visible. The value 1 means that 1 node must be opened to display it; 2 means 2 nodes, and so forth.</p>
@@ -71316,16 +71323,21 @@
 <span class="w">       </span><span class="vg">⎕</span><span class="kd">←</span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">RowTreeDepth</span><span class="kd">←</span><span class="m">10</span><span class="o">⍴</span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span>
 <span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w">           </span>
 </code></pre></div>
-<p><img alt="rowhiddendepth0" src="../../img/rowhiddendepth0.png" /></p>
+<figure id="_figure-1">
+<img alt="rowhiddendepth0" src="../../img/rowhiddendepth0.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>With all nodes closed, RowHiddenDepth is the same as RowTreeDepth.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">RowHiddenDepth</span>
 <span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div></p>
 <p>The next picture shows the Grid after the user has opened nodes 5,6 and 9.</p>
-<p><img alt="rowhiddendepth1" src="../../img/rowhiddendepth1.png" />
+<figure id="_figure-2">
+<img alt="rowhiddendepth1" src="../../img/rowhiddendepth1.png" />
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">RowHiddenDepth</span>
 <span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
-</code></pre></div></p>
+</code></pre></div><figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 
 
 

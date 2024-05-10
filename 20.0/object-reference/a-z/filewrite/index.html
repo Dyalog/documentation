@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,7 +71305,18 @@
 
 <h1 class="heading"><span class="name">FileWrite</span><span class="command">Method 91</span></h1>
 
-<p>Applies To: <a href="../../objects/bitmap/">Bitmap</a> <a href="../../objects/cursor/">Cursor</a> <a href="../../objects/icon/">Icon</a> <a href="../../objects/metafile/">Metafile</a> <a href="../../objects/richedit/">RichEdit</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/bitmap/">Bitmap</a></td>
+<td><a href="../../objects/cursor/">Cursor</a></td>
+<td><a href="../../objects/icon/">Icon</a></td>
+<td><a href="../../objects/metafile/">Metafile</a></td>
+<td><a href="../../objects/richedit/">RichEdit</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This method causes the object to be written to the file named in its <a href="../../properties/file/">File</a> property. For the Bitmap and Icon objects this method will write a file of type .BMP and .ICO to a file with the appropriate extension. If <a href="../../properties/file/">File</a> specifies any other extension, the method will fail with a <code>DOMAIN ERROR</code>:
 <div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span><span class="bp">:</span><span class="w"> </span><span class="nv">This</span><span class="w"> </span><span class="nv">object</span><span class="w"> </span><span class="nv">cannot</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">this</span><span class="w"> </span><span class="nv">type</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">file</span><span class="na">.</span>

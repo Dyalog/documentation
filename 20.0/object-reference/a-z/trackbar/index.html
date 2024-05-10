@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,11 +71305,31 @@
 
 <h1 class="heading"><span class="name">TrackBar</span><span class="command">Object</span></h1>
 
-<p><a href="../../parentlists/trackbar/">Parents</a> <a href="../../childlists/trackbar/">Children</a> <a href="../../proplists/trackbar/">Properties</a> <a href="../../methodlists/trackbar/">Methods</a> <a href="../../eventlists/trackbar/">Events</a></p>
-<p>Purpose: The TrackBar object is a slider control that allows the user to enter a value by positioning a pointer (thumb) on a scale.</p>
+<table>
+<tbody>
+<tr>
+<td><a href="../../parentlists/trackbar/">Parents</a></td>
+<td><a href="../../childlists/trackbar/">Children</a></td>
+<td><a href="../../proplists/trackbar/">Properties</a></td>
+<td><a href="../../methodlists/trackbar/">Methods</a></td>
+<td><a href="../../eventlists/trackbar/">Events</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>Purpose:</td>
+<td>The TrackBar object is a slider control that allows the user to enter a value by positioning a pointer (thumb) on a scale.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The TrackBar object consists of a window which contains a slider bar, a thumb, and a set of tick marks. The slider in a TrackBar moves in increments that you specify when you create it. For example, if you specify that the TrackBar should have a range of five, the slider can only occupy six positions: a position at the left side of the TrackBar and one position for each increment in the range. Typically, each of these positions is identified by a tick mark. TrackBars can have either a vertical or horizontal orientation. They can have tick marks on either side, both sides, or neither. A selection of different TrackBars is illustrated below.</p>
-<p><img alt="track1" src="../../img/track1.gif" /></p>
+<figure id="_figure-1">
+<img alt="track1" src="../../img/track1.gif" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>The position and size of the container window are defined by the <a href="../../properties/posn/">Posn</a> and <a href="../../properties/size/">Size</a> properties. Its appearance is defined by the <a href="../../properties/edgestyle/">EdgeStyle</a>, <a href="../../properties/border/">Border</a> and <a href="../../properties/bcol/">BCol</a> properties. The defaults are <code>('EdgeStyle' 'None')</code>, <code>('Border' 0)</code> and <code>('BCol' 0)</code>. The default background colour <code>('BCol' 0)</code> obtains either the standard Window Background colour, or grey to match the colour of the parent object if it has a 3-dimensional appearance.</p>
 <p>The orientation of a TrackBar is determined by the <a href="../../properties/hscroll/">HScroll</a> and <a href="../../properties/vscroll/">VScroll</a> properties. A horizontal TrackBar is obtained by setting <a href="../../properties/hscroll/">HScroll</a> to <code>¯1</code> and <a href="../../properties/vscroll/">VScroll</a> to 0. This is the default. A vertical TrackBar is obtained by setting <a href="../../properties/vscroll/">VScroll</a> to <code>¯1</code> and <a href="../../properties/hscroll/">HScroll</a> to 0.</p>
 <p><a href="../../properties/vscroll/">VScroll</a> and <a href="../../properties/hscroll/">HScroll</a> may only be set when the object is created and may not subsequently be changed.</p>

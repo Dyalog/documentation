@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,14 @@
 
 <h1 class="heading"><span class="name">CellTypes</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This property specifies the type of each cell in a <a href="../../objects/grid/">Grid</a> object. It is a matrix whose elements are origin-1 indices into other property arrays (<a href="../fcol/">FCol</a>, <a href="../bcol/">BCol</a>, <a href="../cellfonts/">CellFonts</a> and <a href="../input/">Input</a>).</p>
 <p>For example, if CellTypes[1;1] is 3, the first cell in the <a href="../../objects/grid/">Grid</a> is displayed using the foreground colour specified by the 3rd element of <a href="../fcol/">FCol</a>, the background colour specified by the 3rd element of <a href="../bcol/">BCol</a>, and so forth. Note however that scalar property arrays are extended if necessary. Therefore if you require 5 different foreground colours but only one background colour, <a href="../bcol/">BCol</a> need specify only a single colour.</p>

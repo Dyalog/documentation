@@ -32776,7 +32776,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71434,23 +71434,21 @@
 <p>By default, for each file in <code>Y</code> the path must exist and the base name must not exist (see <a href="../nparts/">File Name Parts</a>), otherwise an error is signalled.</p>
 <p>The optional left argument <code>X</code> is the numeric scalar 0, 1, 2 or 3 which amends this behaviour as shown in the following table. If omitted, it is assumed to be 0.</p>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>Default behaviour.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>1</td>
+<td><code>0</code></td>
+<td>Default behaviour.</td>
+</tr>
+<tr>
+<td><code>1</code></td>
 <td>No action is taken if a directory specified by <code>Y</code> already exists. The return value may be used to determine whether a new directory was created or not.</td>
 </tr>
 <tr>
-<td>2</td>
+<td><code>2</code></td>
 <td>Any part of the <em>paths</em> specified in <code>Y</code> which does not already exist will be created in preparation of creating the corresponding directory.</td>
 </tr>
 <tr>
-<td>3</td>
+<td><code>3</code></td>
 <td>Combination of 1 and 2.</td>
 </tr>
 </tbody>

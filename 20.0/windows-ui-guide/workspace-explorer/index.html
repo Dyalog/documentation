@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71544,18 +71544,19 @@
 
 <p>The Explorer tool is a modeless dialog box that may be toggled on and off by the system action <code>[Explorer]</code>. In a default Session, this is attached to a MenuItem in the <em>Tools</em> menu and a Button on the session toolbar.</p>
 <p>The Explorer contains two sub-windows. The one on the left displays the namespace structure of your workspace using a TreeView. The right-hand window is a ListView that displays the contents of the namespace that is selected in the TreeView.</p>
-<p><img alt="workspace explorer 1" src="../img/workspace-explorer-1.png" /></p>
+<figure id="_figure-1">
+<img alt="workspace explorer 1" src="../img/workspace-explorer-1.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>The Explorer is closely modelled on the <em>Windows Explorer</em> in Windows and the facilities it provides are very similar. For Windows users, the operation of this tool is probably self-explanatory. However, other users may find the following discussion useful.</p>
 <h3 id="exploring-the-workspace">Exploring the Workspace</h3>
 <p>The TreeView displays the structure of your workspace. Initially it shows the root and Session namespaces <code>#</code> and <code>⎕SE</code>. The icon for <code>#</code> is open indicating that its contents are those that appear in the ListView. You can expand or collapse the TreeView of the workspace structure by clicking on the mini-buttons (labelled + and -) or by double-clicking the icons. A single click on a namespace icon opens it and causes its contents to be displayed in the ListView. Another way to open a namespace is to double-click its icon in the ListView. Only one namespace can be open at a time. The icons used in the display are described below.</p>
 <table>
-<thead>
-<tr>
-<th><img alt="ws explorer class icon" src="../img/ws-explorer-class-icon.png" /></th>
-<th>Class</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td><img alt="ws explorer class icon" src="../img/ws-explorer-class-icon.png" /></td>
+<td>Class</td>
+</tr>
 <tr>
 <td><img alt="ws explorer closed namespace icon" src="../img/ws-explorer-closed-namespace-icon.png" /></td>
 <td>Namespace</td>
@@ -71593,13 +71594,11 @@
 <h3 id="viewing-and-arranging-objects">Viewing and Arranging Objects</h3>
 <p>The ListView displays the contents of a namespace in one of four different ways namely <em>Large Icons</em> view, <em>Small Icons</em> view, <em>List Icons</em> view or <em>Details</em> view. You can switch between views using the <em>View</em> menu or the tool buttons that are provided. In the first three views, the system displays the name of the object together with an icon that identifies its type. In <em>Details</em> view, the system displays several columns of additional information. You may resize the column widths by dragging or double-clicking the lines in the header. To hide a column, drag its width to the far left. The additional columns are:</p>
 <table>
-<thead>
-<tr>
-<th>Location</th>
-<th>This is the namespace containing the object. By definition, this is the same for all of the objects shown in the ListView and is normally hidden.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Location</td>
+<td>This is the namespace containing the object. By definition, this is the same for all of the objects shown in the ListView and is normally hidden.</td>
+</tr>
 <tr>
 <td>Type</td>
 <td>Type of object.</td>
@@ -71637,20 +71636,24 @@
 <p>You can open up an edit window for a function or variable by double-clicking its icon, or by selecting it and choosing <em>Edit</em> from the <em>Edit</em> menu or from the popup menu. You may rename an object by clicking its name (as opposed to its icon) and then editing this text. You may also select the object and choose <em>Rename</em> from the <em>Edit</em> menu or from the popup menu. Note that when you rename an object, the original name is discarded. Unlike changing a function name in the editor, this is not a copy operation.</p>
 <h3 id="using-the-explorer-as-an-editor">Using the Explorer as an Editor</h3>
 <p>If you open the <em>Fns/Ops</em> item, the names of the functions and operators in the namespace are displayed below it alphabetically in the left (tree view) pane. When you select one of these names, the function itself is opened in the right (list view) pane.</p>
-<p><img alt="ws explorer as editor" src="../img/ws-explorer-as-editor.png" /></p>
+<figure id="_figure-2">
+<img alt="ws explorer as editor" src="../img/ws-explorer-as-editor.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <p>You may use this feature to quickly cycle through the functions (or variables) in a namespace, pressing cursor up and cursor down in the left (tree view) pane to move from one to another.</p>
 <p>You may also edit the function directly in the right (list view) pane before moving on to another.</p>
 <h3 id="the-file-menu">The File Menu</h3>
-<p><img alt="ws explorer file menu" src="../img/ws-explorer-file-menu.png" /></p>
+<figure id="_figure-3">
+<img alt="ws explorer file menu" src="../img/ws-explorer-file-menu.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <p>The <em>File</em> menu, illustrated above, provides the following actions. All but <em>Print setup</em>  and <em>Close</em> act on the object or objects that are currently selected in the ListView.</p>
 <table>
-<thead>
-<tr>
-<th>Print</th>
-<th>Prints the object(s). Note that if an object is open in the editor, the version shown in the edit window is printed.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Print</td>
+<td>Prints the object(s). Note that if an object is open in the editor, the version shown in the edit window is printed.</td>
+</tr>
 <tr>
 <td>Print setup</td>
 <td>Displays the Print Configuration dialog box.</td>
@@ -71675,28 +71678,24 @@
 </table>
 <h3 id="the-edit-menu">The Edit Menu</h3>
 <table>
-<thead>
-<tr>
-<th><img alt="ws explorer edit menu" src="../img/ws-explorer-edit-menu.png" /></th>
-<th></th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td></td>
+<td><img alt="ws explorer edit menu" src="../img/ws-explorer-edit-menu.png" /></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
 <td><img alt="ws explorer edit select menu" src="../img/ws-explorer-edit-select-menu.png" /></td>
 </tr>
 </tbody>
 </table>
 <p>The <em>Edit</em> menu, illustrated above, provides the following actions. The <em>Edit</em>, <em>Copy</em> and <em>Move</em> operations act on the object or objects that are currently selected in the ListView.</p>
 <table>
-<thead>
-<tr>
-<th>Edit</th>
-<th>Opens an edit window for each of the objects selected.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Edit</td>
+<td>Opens an edit window for each of the objects selected.</td>
+</tr>
 <tr>
 <td>Copy</td>
 <td>Prompts for a namespace and copies the object(s) there.</td>
@@ -71728,16 +71727,17 @@
 </tbody>
 </table>
 <h3 id="the-options-menu">The Options Menu</h3>
-<p><img alt="ws explorer options menu" src="../img/ws-explorer-options-menu.png" /></p>
+<figure id="_figure-4">
+<img alt="ws explorer options menu" src="../img/ws-explorer-options-menu.png" />
+<figcaption><span>Figure&nbsp;4</span></figcaption>
+</figure>
 <p>The Options menu, illustrated above, provides the following actions.</p>
 <table>
-<thead>
-<tr>
-<th>Toolbar</th>
-<th>Displays or hides the Explorer toolbar.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Toolbar</td>
+<td>Displays or hides the Explorer toolbar.</td>
+</tr>
 <tr>
 <td>Toolbar Captions</td>
 <td>Displays or hides the button captions on the Explorer toolbar.</td>
@@ -71766,17 +71766,17 @@
 </table>
 <p>If <em>Auto Refresh</em> is checked the Explorer is updated every time APL returns to desk-calculator mode. This means that it is always in step with the active workspace. If you have a large number of objects displayed in the Explorer, the update may take a few seconds and you may wish to prevent this by un-checking this menu item  If you do so, the Explorer must be explicitly updated by selecting the <em>Refresh Now</em> action.</p>
 <h3 id="the-view-menu">The View Menu</h3>
-<p><img alt="ws explorer view menu" src="../img/ws-explorer-view-menu.png" />
-<img alt="ws explorer view columns menu" src="../img/ws-explorer-view-columns-menu.png" /></p>
+<figure id="_figure-5">
+<img alt="ws explorer view menu" src="../img/ws-explorer-view-menu.png" />
+<figcaption><span>Figure&nbsp;5</span></figcaption>
+</figure>
 <p>The View menu, illustrated above, provides the following actions.</p>
 <table>
-<thead>
-<tr>
-<th>Columns</th>
-<th>Allows you to select which columns you wish to display.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Columns</td>
+<td>Allows you to select which columns you wish to display.</td>
+</tr>
 <tr>
 <td>Large Icons</td>
 <td>Selects <em>Large Icons</em> view in the ListView.</td>
@@ -71813,16 +71813,17 @@
 </table>
 <p>.</p>
 <h3 id="the-tools-menu">The Tools Menu</h3>
-<p><img alt="ws explorer tools menu" src="../img/ws-explorer-tools-menu.png" /></p>
+<figure id="_figure-6">
+<img alt="ws explorer tools menu" src="../img/ws-explorer-tools-menu.png" />
+<figcaption><span>Figure&nbsp;6</span></figcaption>
+</figure>
 <p>The <em>Tools</em> menu, illustrated above, provides the following actions.</p>
 <table>
-<thead>
-<tr>
-<th>Find</th>
-<th>Displays the Find Objects Tool</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Find</td>
+<td>Displays the Find Objects Tool</td>
+</tr>
 <tr>
 <td>Go to</td>
 <td>Prompts for a namespace and then opens that namespace in the TreeView, displaying its contents in the ListView</td>

@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,11 +71305,28 @@
 
 <h1 class="heading"><span class="name">IDNToDate</span><span class="command">Method 263</span></h1>
 
-<p>Applies To: <a href="../../objects/calendar/">Calendar</a> <a href="../../objects/datetimepicker/">DateTimePicker</a> <a href="../../objects/root/">Root</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/calendar/">Calendar</a></td>
+<td><a href="../../objects/datetimepicker/">DateTimePicker</a></td>
+<td><a href="../../objects/root/">Root</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This method is used to convert a date from an <a href="../../miscellaneous/international-day-number/">IDN</a> into <code>⎕TS</code> format (year, month, day). The corresponding day of the week is also obtained.</p>
 <p>The argument to IDNToDate is a single item as follows:</p>
-<p>[1] IDN Integer</p>
+<table>
+<tbody>
+<tr>
+<td><code>[1]</code></td>
+<td>IDN</td>
+<td>Integer</td>
+</tr>
+</tbody>
+</table>
 <p>The result is a 4-element integer vector containing the year, month, day, and weekday corresponding to the IDN that was specified.</p>
 <p>The value of the 4<sup>th</sup> element, weekday, is an integer in the range 0-6 that specifies on which day of the week the specified date falls (0=Monday).</p>
 <p><strong>Example</strong></p>

@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,7 +71305,15 @@
 
 <h1 class="heading"><span class="name">ShowDropDown</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/colorbutton/">ColorButton</a> <a href="../../objects/toolcontrol/">ToolControl</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/colorbutton/">ColorButton</a></td>
+<td><a href="../../objects/toolcontrol/">ToolControl</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The ShowDropDown property specifies whether or not a drop-down menu symbol is drawn in a <a href="../../objects/colorbutton/">ColorButton</a> or alongside <a href="../../objects/toolbutton/">ToolButton</a> objects which have <a href="../style/">Style </a><code>'DropDown'</code>.</p>
 <p>ShowDropDown is a single number with the value 0 (drop-downs captions are not shown) or 1 (drop-downs <strong>are</strong> shown); the default is 1.</p>
@@ -71313,7 +71321,10 @@
 <p>If the ShowDropDown property of the parent <a href="../../objects/toolcontrol/">ToolControl</a> is 0, clicking the <a href="../../objects/toolbutton/">ToolButton</a> causes the popup menu to appear. In this case, the <a href="../../objects/toolbutton/">ToolButton</a> itself does not itself generate a Select event; you must rely on the user selecting a MenuItem to specify a particular action.</p>
 <p>If the ShowDropDown  property of the parent <a href="../../objects/toolcontrol/">ToolControl</a> is 1, clicking the dropdown button causes the popup menu to appear; clicking the <a href="../../objects/toolbutton/">ToolButton</a> itself generates a Select event, but does not display the popup menu.</p>
 <p>The following picture illustrates a <a href="../../objects/toolcontrol/">ToolControl</a> with ShowDropDown set to 1:</p>
-<p><img alt="tool9" src="../../img/tool9.gif" /></p>
+<figure id="_figure-1">
+<img alt="tool9" src="../../img/tool9.gif" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 
 
 

@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71651,7 +71651,10 @@
 <span class="w">  </span><span class="nt">&lt;/DockPanel&gt;</span>
 <span class="nt">&lt;/Window&gt;</span>
 </code></pre></div></p>
-<p><img alt="wpf_example1" src="../../../img/wpf-example1.png" /></p>
+<figure id="_figure-1">
+<img alt="wpf_example1" src="../../../img/wpf-example1.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>The window defined by this XAML is illustrated in the screen image shown above. Let us examine the XAML, component by component.</p>
 <h2 id="parent-and-child-controls">Parent and Child Controls</h2>
 <p>First, notice how the structure of the GUI is defined by enclosing the child components inside the opening and closing tags of its parent. So:
@@ -71706,7 +71709,10 @@
 <span class="w">        </span><span class="o">&lt;</span><span class="na">/</span><span class="nv">MenuItem</span><span class="o">&gt;</span>
 <span class="w">    </span><span class="o">&lt;</span><span class="na">/</span><span class="nv">Menu</span><span class="o">&gt;</span>
 </code></pre></div>
-<p><img alt="wpf_example2" src="../../../img/wpf-example2.png" /></p>
+<figure id="_figure-2">
+<img alt="wpf_example2" src="../../../img/wpf-example2.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <p>The above extract from the XAML defines a Menu. Setting Dock to "Top" causes the Menu as a whole to be docked, so that it appears like a menubar, along the top of the DockPanel. The Menu contains a single MenuItem labelled <em>Scale</em> which itself contains two sub-items labelled <em>Fahrenheit</em> and <em>Centigrade</em> respectively. The IsCheckable property specifies whether or not the user can check the MenuItem, and the IsChecked property sets and reports its checked state. The underscore characters (e.g. as in "_Scale") identify the following character as a keyboard shortcut.</p>
 <h2 id="the-grid">The Grid</h2>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="o">&lt;</span><span class="nv">Grid</span><span class="w"> </span><span class="nv">Width</span><span class="o">=</span><span class="s2">&quot;230&quot;</span><span class="w"> </span><span class="nv">Margin</span><span class="o">=</span><span class="s2">&quot;40,10,10,10&quot;</span><span class="o">&gt;</span>
@@ -71847,16 +71853,14 @@ Interface Guide: </p>
 </code></pre></div></p>
 <p>The callbacks <code>F2C</code> and <code>C2F</code>, one of which at a time is attached to the Scroll event of the ScrollBar object are shown below. The argument <code>Msg</code> contains two items, namely:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>a ref to the ScrollBar object</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>a ref to the ScrollBar object</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Object</td>
 <td>a ref to an object of type System.Windows.Controls.Primitives.ScrollEventArgs</td>
 </tr>

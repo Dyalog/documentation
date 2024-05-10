@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,38 +71327,43 @@
 
 <h1 class="heading"><span class="name">LoadEnd</span><span class="command">Event 836</span></h1>
 
-<p>Applies To: <a href="../../objects/htmlrenderer/">HTMLRenderer</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/htmlrenderer/">HTMLRenderer</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>A LoadEnd event is raised when a particular frame has finished loading. Multiple frames may be loading at the same time. Sub-frames may start or continue to load even after the main frame has finished loading.</p>
 <p>A common technique is to wait for the main frame to finish loading before further interaction with the HTMLRenderer instance. In this case, you should set up an event handler on the LoadEnd event and check the 4th element which indicates if the loaded frame is the main frame.</p>
 <p>You may use the <a href="../../properties/isloading/">IsLoading</a> property to check if the HTMLRenderer is still loading.</p>
 <p>The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, or supplied as the right argument to your callback function, is a 5-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'LoadEnd'</code> or 836</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>url</td>
 <td>The URL of the loaded frame</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Flag</td>
 <td>1 if the loaded frame is the "main" frame, 0 otherwise</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Code</td>
 <td>The HTTP status code as a result of loading the frame</td>
 </tr>

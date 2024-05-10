@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,7 +71305,15 @@
 
 <h1 class="heading"><span class="name">Rows</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/combo/">Combo</a> <a href="../../objects/comboex/">ComboEx</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/combo/">Combo</a></td>
+<td><a href="../../objects/comboex/">ComboEx</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>For <a href="../../objects/combo/">Combo</a> objects with <a href="../style/">Style</a><code>'Drop'</code> or <code>'DropEdit'</code> this property determines the number of rows displayed in the drop-down listbox when it is displayed. Note that the height of the edit field of a <a href="../../objects/combo/">Combo</a> of this type is dependent only upon the size of the font in use, and cannot otherwise be changed.</p>
 <p>Rows is a "read-only" property for a <a href="../../objects/combo/">Combo</a> with <a href="../style/">Style </a><code>'Simple'</code> and an attempt to set it in a <a href="../../objects/combo/">Combo</a> of this type with <a href="../../../language-reference-guide/system-functions/wc"><code>⎕WC</code></a> or <a href="../../../language-reference-guide/system-functions/ws"><code>⎕WS</code></a> will generate a <code>NONCE ERROR</code>. Instead, the overall height of a Simple <a href="../../objects/combo/">Combo</a> is determined by the first element of the <a href="../size/">Size</a> property.</p>

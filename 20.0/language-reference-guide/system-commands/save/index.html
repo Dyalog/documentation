@@ -32687,7 +32687,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71323,39 +71323,37 @@
 
 <h1 class="heading"><span class="name">Save Workspace</span><span class="command">)SAVE {-force} {ws}</span></h1>
 
-<p>This command compacts (see <a href="../../system-functions/wa/">Workspace Available:</a> for details) and saves the active workspace.</p>
+<p>This command compacts (see <a href="../../system-functions/wa/">"Workspace Available: "</a> for details) and saves the active workspace.</p>
 <p>If specified, <code>ws</code> is a full or relative path name to the file in which the workspace will be written. If <code>ws</code> is omitted, it defaults to <code>⎕WSID</code>. Unless the path specified by <code>ws</code> or <code>⎕WSID</code> is a full pathname, it is taken to be relative to the current working directory which may be obtained by the expression: <code>⊃1 ⎕NPARTS ''</code>.</p>
 <p>If  <code>ws</code> specifies a file name other than that implied by  <code>⎕WSID</code>, the specified file must not already exist unless the <strong>force</strong> parameter is specified.. If <code>ws</code> is omitted or resolves to the same file as  <code>⎕WSID</code>, an existing stored workspace with the same name will be replaced.</p>
-<p>See Workspaces<a href="../../../programming-reference-guide/introduction/workspaces">Programmer's Guide: "Workspaces</a> for the rules for specifying a workspace name.</p>
+<p>See <a href="../../../programming-reference-guide/introduction/workspaces">Programmer's Guide: "Workspaces"</a> for the rules for specifying a workspace name.</p>
 <p>If an extension is not specified, an extension is added according to the <a href="../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters"><strong>WSEXT</strong> parameter</a>..</p>
 <p>A workspace may not be saved if any threads (other than the root thread 0) are running or if there are any Edit or Trace windows open. Otherwise, the workspace is saved with its state of execution intact, however certain operations may be performed before it is saved. For further information, see <a href="../../the-i-beam-operator/set-workspace-save-options/">Set Workspace Save Options</a>.</p>
 <p><code>)SAVE</code> may fail with one of the following error messages:</p>
 <table>
-<thead>
-<tr>
-<th>unacceptable char</th>
-<th>The given workspace name was ill-formed</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>not saved this ws is WSID</td>
+<td><code>unacceptable char</code></td>
+<td>The given workspace name was ill-formed</td>
+</tr>
+<tr>
+<td><code>not saved this ws is WSID</code></td>
 <td>An attempt was made to change the name of the workspace for the save, and the renamed workspace already existed. This error can be overridden by specifying <strong>-force</strong> .</td>
 </tr>
 <tr>
-<td>not saved this ws is CLEAR WS</td>
+<td><code>not saved this ws is CLEAR WS</code></td>
 <td>The active workspace was <code>CLEAR WS</code> and no attempt was made to change the name.</td>
 </tr>
 <tr>
-<td>Can't save - file could not be created.</td>
+<td><code>Can't save - file could not be created.</code></td>
 <td>The workspace name supplied did not represent a valid file name for the current Operating System.</td>
 </tr>
 <tr>
-<td>cannot create</td>
+<td><code>cannot create</code></td>
 <td>The user does not have access to create the file OR the workspace name conflicts with an existing non-workspace file.</td>
 </tr>
 <tr>
-<td>cannot save with windows open</td>
+<td><code>cannot save with windows open</code></td>
 <td>A workspace may not be saved if trace or edit windows are open.</td>
 </tr>
 </tbody>

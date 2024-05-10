@@ -32674,7 +32674,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71376,122 +71376,105 @@
 <tbody>
 <tr>
 <td>Direction</td>
-<td>&lt;</td>
+<td><code>&lt;</code></td>
 <td>Pointer to array <em>input</em> to DLL function.</td>
 </tr>
 <tr>
-<td>&gt;</td>
-<td>Pointer to array <em>output</em> from DLL function</td>
-<td></td>
+<td><code>&gt;</code></td>
+<td colspan="2">Pointer to array <em>output</em> from DLL function</td>
 </tr>
 <tr>
-<td>=</td>
-<td>Pointer to input/output array.</td>
-<td></td>
+<td><code>=</code></td>
+<td colspan="2">Pointer to input/output array.</td>
 </tr>
 <tr>
 <td>Special</td>
-<td>0</td>
+<td><code>0</code></td>
 <td>Null-terminated string.</td>
 </tr>
 <tr>
-<td>#</td>
-<td>Byte-counted string</td>
-<td></td>
+<td><code>#</code></td>
+<td colspan="2">Byte-counted string</td>
 </tr>
 <tr>
 <td>Type</td>
-<td>I</td>
+<td><code>I</code></td>
 <td>int</td>
 </tr>
 <tr>
-<td>U</td>
-<td>unsigned int</td>
-<td></td>
+<td><code>U</code></td>
+<td colspan="2">unsigned int</td>
 </tr>
 <tr>
-<td>C</td>
-<td>char</td>
-<td></td>
+<td><code>C</code></td>
+<td colspan="2">char</td>
 </tr>
 <tr>
-<td>T</td>
-<td>char <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td></td>
+<td><code>T</code></td>
+<td colspan="2">char <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
 </tr>
 <tr>
-<td>F</td>
-<td>float</td>
-<td></td>
+<td><code>F</code></td>
+<td colspan="2">float</td>
 </tr>
 <tr>
-<td>D</td>
-<td>decimal</td>
-<td></td>
+<td><code>D</code></td>
+<td colspan="2">decimal</td>
 </tr>
 <tr>
-<td>J</td>
-<td>complex</td>
-<td></td>
+<td><code>J</code></td>
+<td colspan="2">complex</td>
 </tr>
 <tr>
-<td>P</td>
-<td>uintptr-t <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
-<td></td>
+<td><code>P</code></td>
+<td colspan="2">uintptr-t <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
 </tr>
 <tr>
-<td>A</td>
-<td>APL array</td>
-<td></td>
+<td><code>A</code></td>
+<td colspan="2">APL array</td>
 </tr>
 <tr>
-<td>Z</td>
-<td>APL array with header (as passed to a TCP/IP socket)</td>
-<td></td>
+<td><code>Z</code></td>
+<td colspan="2">APL array with header (as passed to a TCP/IP socket)</td>
 </tr>
 <tr>
 <td>Width</td>
-<td>1</td>
+<td><code>1</code></td>
 <td>1-byte</td>
 </tr>
 <tr>
-<td>2</td>
-<td>2-byte</td>
-<td></td>
+<td><code>2</code></td>
+<td colspan="2">2-byte</td>
 </tr>
 <tr>
-<td>4</td>
-<td>4-byte</td>
-<td></td>
+<td><code>4</code></td>
+<td colspan="2">4-byte</td>
 </tr>
 <tr>
-<td>8</td>
-<td>8-byte</td>
-<td></td>
+<td><code>8</code></td>
+<td colspan="2">8-byte</td>
 </tr>
 <tr>
-<td>16</td>
-<td>16-byte (128-bit)</td>
-<td></td>
+<td><code>16</code></td>
+<td colspan="2">16-byte (128-bit)</td>
 </tr>
 <tr>
 <td>Array</td>
-<td>[n]</td>
+<td><code>[n]</code></td>
 <td>Array of length <em>n</em> elements</td>
 </tr>
 <tr>
-<td>[]</td>
-<td>Array, length determined at call-time</td>
-<td></td>
+<td><code>[]</code></td>
+<td colspan="2">Array, length determined at call-time</td>
 </tr>
 <tr>
 <td>Structure</td>
-<td>{...}</td>
+<td><code>{...}</code></td>
 <td>Structure.</td>
 </tr>
 <tr>
 <td>Count</td>
-<td>[int]</td>
+<td><code>[int]</code></td>
 <td>Rather than explicitly declaring multiple adjacent occurrences of the same the count option may be used</td>
 </tr>
 </tbody>
@@ -71509,13 +71492,11 @@
 <p>In C, when an address is passed, the corresponding value can be used as either an <em>input</em> or an <em>output</em> variable. An output variable means that the C function overwrites values at the supplied address. Because APL is a call-by-value language, and doesn't have pointer types, we accommodate this mechanism by distinguishing output variables, and having them returned explicitly as part of the result of the call.</p>
 <p>This means that where the C function indicates a <em>pointer type</em>, we must code this as starting with one of the characters: <code>&lt;</code>, <code>&gt;</code> or <code>=</code>.</p>
 <table>
-<thead>
-<tr>
-<th>&lt;</th>
-<th>indicates that the address of the argument will be used by C as an input variable and values at the address will <em>not</em> be over-written.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>&lt;</td>
+<td>indicates that the address of the argument will be used by C as an input variable and values at the address will <em>not</em> be over-written.</td>
+</tr>
 <tr>
 <td>&gt;</td>
 <td>indicates that C will use the address as an output variable. In this case, APL must allocate an output array over which C can write values. After the call, this array will be included in the nested result of the call to the external function.</td>
@@ -71528,13 +71509,11 @@
 </table>
 <p><strong>Examples</strong></p>
 <table>
-<thead>
-<tr>
-<th>&lt;I2</th>
-<th>Pointer to 2-byte integer - <em>input</em> to external function</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>&lt;I2</td>
+<td>Pointer to 2-byte integer - <em>input</em> to external function</td>
+</tr>
 <tr>
 <td>&gt;C</td>
 <td>Pointer to character <em>output</em> from external function.</td>
@@ -71565,62 +71544,62 @@
 </thead>
 <tbody>
 <tr>
-<td>I</td>
+<td><code>I</code></td>
 <td>Integer</td>
 <td>The value is interpreted as a 2s complement signed integer</td>
 </tr>
 <tr>
-<td>U</td>
+<td><code>U</code></td>
 <td>Unsigned integer</td>
 <td>The value is interpreted as an unsigned integer</td>
 </tr>
 <tr>
-<td>C</td>
+<td><code>C</code></td>
 <td>Character</td>
 <td>The value is interpreted as a character. In the Unicode Edition, the value maps directly onto a Unicode code point. In the Classic Edition, the value is interpreted as an index into <code>⎕AV</code> . This means that <code>⎕AV</code> <em>positions</em> map onto corresponding ANSI <em>positions</em> . For example, with <code>⎕IO=0</code> : <code>⎕AV[35] = 's'</code> , maps to <code>ANSI[35] = '</code></td>
 </tr>
 <tr>
-<td>T</td>
+<td><code>T</code></td>
 <td>Translated character</td>
 <td>The value is interpreted as a character. In the Unicode Edition, the value maps directly onto a Unicode code point. In the Classic Edition, the value is <em>translated</em> using standard Dyalog <code>⎕AV</code> to ANSI translation. This means that <code>⎕AV</code> <em>characters</em> map onto corresponding ANSI <em>characters</em> . For example, with <code>⎕IO=0</code> : <code>⎕AV[35] = 's'</code> maps to <code>ANSI[115] = 's'</code></td>
 </tr>
 <tr>
-<td>UTF</td>
+<td><code>UTF</code></td>
 <td>Unicode encoded</td>
 <td><code>&gt;0UTF8[]</code> will translate to a UTF-8 encoded string <code>&lt;0UTF16[]</code> will translate from a UTF-16LE encoded string</td>
 </tr>
 <tr>
-<td>F</td>
+<td><code>F</code></td>
 <td>Float</td>
 <td>The value is interpreted as an IEEE 754-2008 binary64 floating point number</td>
 </tr>
 <tr>
-<td>D</td>
+<td><code>D</code></td>
 <td>Decimal</td>
 <td>The value is interpreted as an IEEE 754-2008 decimal128 floating point number (DPD format on AIX, BID format on other platforms)</td>
 </tr>
 <tr>
-<td>J</td>
+<td><code>J</code></td>
 <td>Complex</td>
-<td></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
-<td>P</td>
+<td><code>P</code></td>
 <td>uintptr-t</td>
 <td>This is equivalent to U4 on 32-bit versions and U8 on 64-bit versions</td>
 </tr>
 <tr>
-<td>∇</td>
+<td><code>∇</code></td>
 <td>Function pointer</td>
 <td>This allows the passing of an APL function for the function to call</td>
 </tr>
 <tr>
-<td>A</td>
+<td><code>A</code></td>
 <td>APL array</td>
 <td>This is the same format as is used to transmit APL arrays to an Auxiliary Processor (AP)</td>
 </tr>
 <tr>
-<td>Z</td>
+<td><code>Z</code></td>
 <td>APL array with header</td>
 <td>This is the same format as is used to transmit APL arrays over TCP/IP Sockets</td>
 </tr>
@@ -71629,13 +71608,11 @@
 <h1 id="width">Width</h1>
 <p>The type specifier may be followed by the width of the value in bytes. For example:</p>
 <table>
-<thead>
-<tr>
-<th>I4</th>
-<th>4-byte signed integer.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>I4</td>
+<td>4-byte signed integer.</td>
+</tr>
 <tr>
 <td>U2</td>
 <td>2-byte unsigned integer.</td>
@@ -71664,64 +71641,64 @@
 </thead>
 <tbody>
 <tr>
-<td>I</td>
+<td><code>I</code></td>
 <td>1, 2, 4, 8</td>
 <td>4</td>
 </tr>
 <tr>
-<td>U</td>
+<td><code>U</code></td>
 <td>1, 2, 4, 8</td>
 <td>4</td>
 </tr>
 <tr>
-<td>C</td>
+<td><code>C</code></td>
 <td>1,2,4</td>
 <td>1</td>
 </tr>
 <tr>
-<td>T</td>
+<td><code>T</code></td>
 <td>1,2,4</td>
 <td>wide character(see below)</td>
 </tr>
 <tr>
-<td>UTF</td>
+<td><code>UTF</code></td>
 <td>8,16</td>
 <td>none</td>
 </tr>
 <tr>
-<td>F</td>
+<td><code>F</code></td>
 <td>4, 8</td>
 <td>8</td>
 </tr>
 <tr>
-<td>D</td>
+<td><code>D</code></td>
 <td>16</td>
 <td>16</td>
 </tr>
 <tr>
-<td>J</td>
+<td><code>J</code></td>
 <td>16</td>
 <td>16</td>
 </tr>
 <tr>
-<td>P</td>
+<td><code>P</code></td>
 <td>Not applicable</td>
-<td></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
-<td>∇</td>
+<td><code>∇</code></td>
 <td>Not applicable</td>
-<td></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
-<td>A</td>
+<td><code>A</code></td>
 <td>Not applicable</td>
-<td></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
-<td>Z</td>
+<td><code>Z</code></td>
 <td>Not applicable</td>
-<td></td>
+<td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -71729,13 +71706,11 @@
 <p>Note that 32-bit versions can support 64-bit integer <em>arguments</em>, but not 64-bit integer <em>results</em>.</p>
 <p><strong>Examples</strong></p>
 <table>
-<thead>
-<tr>
-<th>I2</th>
-<th>16-bit integer</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>I2</td>
+<td>16-bit integer</td>
+</tr>
 <tr>
 <td>&lt;I4</td>
 <td>Pointer to input 4-byte integer</td>
@@ -71757,13 +71732,11 @@
 </code></pre></div></p>
 <p>could be coded as:</p>
 <table>
-<thead>
-<tr>
-<th>I[10]</th>
-<th>vector of 10 ints.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>I[10]</td>
+<td>vector of 10 ints.</td>
+</tr>
 <tr>
 <td>U U[]</td>
 <td>unsigned integer followed by an array of unsigned integers.</td>
@@ -71894,40 +71867,40 @@
 </thead>
 <tbody>
 <tr>
-<td>mydll&#124;fn1</td>
-<td>0</td>
-<td></td>
-<td>0</td>
+<td><code>mydll|fn1</code></td>
+<td><code>0</code></td>
+<td>&nbsp;</td>
+<td><code>0</code></td>
 </tr>
 <tr>
-<td>mydll&#124;fn2 &lt;0T</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
+<td><code>mydll|fn2 &lt;0T</code></td>
+<td><code>0</code></td>
+<td><code>0</code></td>
+<td><code>0</code></td>
 </tr>
 <tr>
-<td>mydll&#124;fn3 =0T &lt;0T</td>
-<td>0</td>
-<td>1 0</td>
-<td>1</td>
+<td><code>mydll|fn3 =0T &lt;0T</code></td>
+<td><code>0</code></td>
+<td><code>1 0</code></td>
+<td><code>1</code></td>
 </tr>
 <tr>
-<td>I4 mydll&#124;fn4</td>
-<td>1</td>
-<td></td>
-<td>1</td>
+<td><code>I4 mydll|fn4</code></td>
+<td><code>1</code></td>
+<td>&nbsp;</td>
+<td><code>1</code></td>
 </tr>
 <tr>
-<td>I4 mydll&#124;fn5 F8</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
+<td><code>I4 mydll|fn5 F8</code></td>
+<td><code>1</code></td>
+<td><code>0</code></td>
+<td><code>1</code></td>
 </tr>
 <tr>
-<td>I4 mydll&#124;fn6 &gt;I4[] &lt;0T</td>
-<td>1</td>
-<td>1 0</td>
-<td>2</td>
+<td><code>I4 mydll|fn6 &gt;I4[] &lt;0T</code></td>
+<td><code>1</code></td>
+<td><code>1 0</code></td>
+<td><code>2</code></td>
 </tr>
 </tbody>
 </table>
@@ -71968,127 +71941,127 @@
 <tbody>
 <tr>
 <td>HWND</td>
-<td>P</td>
+<td><code>P</code></td>
 </tr>
 <tr>
 <td>HANDLE</td>
-<td>P</td>
+<td><code>P</code></td>
 </tr>
 <tr>
 <td>GLOBALHANDLE</td>
-<td>P</td>
+<td><code>P</code></td>
 </tr>
 <tr>
 <td>LOCALHANDLE</td>
-<td>P</td>
+<td><code>P</code></td>
 </tr>
 <tr>
 <td>DWORD</td>
-<td>U4</td>
+<td><code>U4</code></td>
 </tr>
 <tr>
 <td>WORD</td>
-<td>U2</td>
+<td><code>U2</code></td>
 </tr>
 <tr>
 <td>BYTE</td>
-<td>U1</td>
+<td><code>U1</code></td>
 </tr>
 <tr>
 <td>LPSTR</td>
-<td><code>=0T[]</code> (note 1)</td>
+<td><code>=0T[] (note 1)</code></td>
 </tr>
 <tr>
 <td>LPCSTR</td>
-<td><code>&lt;0T[]</code> (note 2)</td>
+<td><code>&lt;0T[] (note 2)</code></td>
 </tr>
 <tr>
 <td>WPARAM</td>
-<td>U (note 3)</td>
+<td><code>U (note 3)</code></td>
 </tr>
 <tr>
 <td>LPARAM</td>
-<td>U4 (note 3)</td>
+<td><code>U4 (note 3)</code></td>
 </tr>
 <tr>
 <td>LRESULT</td>
-<td>I4</td>
+<td><code>I4</code></td>
 </tr>
 <tr>
 <td>BOOL</td>
-<td>I</td>
+<td><code>I</code></td>
 </tr>
 <tr>
 <td>UINT</td>
-<td>U</td>
+<td><code>U</code></td>
 </tr>
 <tr>
 <td>ULONG</td>
-<td>U4</td>
+<td><code>U4</code></td>
 </tr>
 <tr>
 <td>ATOM</td>
-<td>U2</td>
+<td><code>U2</code></td>
 </tr>
 <tr>
 <td>HDC</td>
-<td>P</td>
+<td><code>P</code></td>
 </tr>
 <tr>
 <td>HBITMAP</td>
-<td>P</td>
+<td><code>P</code></td>
 </tr>
 <tr>
 <td>HBRUSH</td>
-<td>P</td>
+<td><code>P</code></td>
 </tr>
 <tr>
 <td>HFONT</td>
-<td>P</td>
+<td><code>P</code></td>
 </tr>
 <tr>
 <td>HICON</td>
-<td>P</td>
+<td><code>P</code></td>
 </tr>
 <tr>
 <td>HMENU</td>
-<td>P</td>
+<td><code>P</code></td>
 </tr>
 <tr>
 <td>HPALETTE</td>
-<td>P</td>
+<td><code>P</code></td>
 </tr>
 <tr>
 <td>HMETAFILE</td>
-<td>P</td>
+<td><code>P</code></td>
 </tr>
 <tr>
 <td>HMODULE</td>
-<td>P</td>
+<td><code>P</code></td>
 </tr>
 <tr>
 <td>HINSTANCE</td>
-<td>P</td>
+<td><code>P</code></td>
 </tr>
 <tr>
 <td>COLORREF</td>
-<td>{U1[4]}</td>
+<td><code>{U1[4]}</code></td>
 </tr>
 <tr>
 <td>POINT</td>
-<td>{I I}</td>
+<td><code>{I I}</code></td>
 </tr>
 <tr>
 <td>POINTS</td>
-<td>{I2 I2}</td>
+<td><code>{I2 I2}</code></td>
 </tr>
 <tr>
 <td>RECT</td>
-<td>{I I I I}</td>
+<td><code>{I I I I}</code></td>
 </tr>
 <tr>
 <td>CHAR</td>
-<td><code>T</code> or <code>C</code></td>
+<td><code>T or C</code></td>
 </tr>
 </tbody>
 </table>

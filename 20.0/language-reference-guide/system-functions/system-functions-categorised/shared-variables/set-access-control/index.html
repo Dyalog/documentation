@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71310,23 +71310,21 @@
 <p><code>X</code> may be a 4-element Boolean vector which specifies the access control to be applied to all of the shared variables named in <code>Y</code>.  Alternatively, <code>X</code> may be a 4-column Boolean matrix whose rows specify the access control for the corresponding name in <code>Y</code>.  <code>X</code> may also be a scalar or a 1-element vector.  If so, it treated as if it were a 4-element vector with the same value in each element.</p>
 <p>Each shared variable has a current access control vector which is a 4-element Boolean vector.  A 1 in each of the four positions has the following impact :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>You cannot <strong>set</strong> a new value for the shared variable until after an intervening use or set by your partner.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>You cannot <strong>set</strong> a new value for the shared variable until after an intervening use or set by your partner.</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Your partner cannot <strong>set</strong> a new value for the shared variable until after an intervening use or set by you.</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>You cannot <strong>use</strong> the value of the shared variable until after an intervening set by your partner.</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Your partner cannot <strong>use</strong> the value of the shared variable until after an intervening set by you.</td>
 </tr>
 </tbody>

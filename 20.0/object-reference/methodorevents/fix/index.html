@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,7 +71305,14 @@
 
 <h1 class="heading"><span class="name">Fix</span><span class="command">Event 820</span></h1>
 
-<p>Applies To: <a href="../../../windows-ui-guide/the-session-object/session-object">Editor</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../../windows-ui-guide/the-session-object/session-object">Editor</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user attempts to fix an object from the Editor window. It is reported immediately, before the user's action is processed in any way by the Editor.</p>
 <p>The default action is to check whether the object has changed. If not, no further action takes place. If the object has changed, the system validates the contents of the Edit window, and either displays an error dialog or fixes a new version of the object in the workspace. If the user action was to fix and exit (EP), the Edit window is closed unless the validation failed.</p>
@@ -71313,41 +71320,39 @@
 <p>You may not generate the event using <code>⎕NQ</code>, or call it as a method.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 7-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref to the Editor object</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref to the Editor object</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'Fix'</code> or 820</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Contents</td>
 <td>the contents of the Edit window, as a vector of character vectors</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Space</td>
 <td>ref to the namespace in which the object will be fixed</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Old Name</td>
 <td>a character vector containing the original name of the object when it was opened by the Editor</td>
 </tr>
 <tr>
-<td>[6]</td>
+<td><code>[6]</code></td>
 <td>New Name</td>
 <td>a character vector containing the  new name of the object. This is empty if the object is a variable.</td>
 </tr>
 <tr>
-<td>[7]</td>
+<td><code>[7]</code></td>
 <td>File Name</td>
 <td>a character vector containing the name of the file (if any) associated with the object.</td>
 </tr>

@@ -32674,7 +32674,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71329,23 +71329,21 @@
 
 <p>This monadic function reads data from a native file. <code>Y</code> is a 3- or 4-element integer vector whose elements are as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>negative tie number,</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>negative tie number,</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>conversion code (see below),</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>count. If this value is <code>¯1</code> , all of the elements defined by <code>Y[2]</code> are read from the position specified by <code>Y[4]</code> to the end of the file. This may result in the last few bytes in the file being ignored if they do not form a complete element.</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>start byte, counting from 0. If this value omitted or is <code>¯1</code> , data is read starting from the current position in the file (initially <code>0</code> ).</td>
 </tr>
 </tbody>

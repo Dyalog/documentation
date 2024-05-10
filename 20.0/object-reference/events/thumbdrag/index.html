@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,26 +71305,32 @@
 
 <h1 class="heading"><span class="name">ThumbDrag</span><span class="command">Event 440</span></h1>
 
-<p>Applies To: <a href="../../objects/scroll/">Scroll</a> <a href="../../objects/trackbar/">TrackBar</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/scroll/">Scroll</a></td>
+<td><a href="../../objects/trackbar/">TrackBar</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is generated when the user drags the thumb in a <a href="../../objects/trackbar/">TrackBar</a> object. The event is reported <em>after</em> the value of the Thumb property has been updated and is reported continuously as the thumb is dragged. You may not disable this event or alter its effect with a callback function.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 3-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'ThumbDrag'</code> or 440</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Thumb value</td>
 <td>Integer. The new value of the Thumb property resulting from the user dragging the thumb.</td>
 </tr>

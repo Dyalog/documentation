@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,14 @@
 
 <h1 class="heading"><span class="name">CharSet</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/font/">Font</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/font/">Font</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>CharSet is an integer that specifies the character encoding of the <a href="../../objects/font/">Font</a> object.</p>
 <p><strong>This property applies to the Classic Edition only. In the Unicode Edition,
@@ -71393,7 +71400,8 @@ same character code is displayed as the Greek µ.</p>
 <p>The following example illustrates how the character string <code>'ôï
 üíïìá ìïõ Ýéíáé Ðåôå'</code> appears differently
 according to the value of CharSet.</p>
-<p><img alt="charset" src="../../img/charset.gif" />
+<figure id="_figure-1">
+<img alt="charset" src="../../img/charset.gif" />
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;F&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;FORM&#39;</span><span class="w"> </span><span class="s1">&#39;CharSet Property&#39;</span><span class="p">(</span><span class="s1">&#39;Size&#39;</span><span class="w"> </span><span class="m">300</span><span class="w"> </span><span class="m">400</span><span class="p">)(</span><span class="s1">&#39;Coord&#39;</span><span class="w"> </span><span class="s1">&#39;Pixel&#39;</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">Coord</span><span class="kd">←</span><span class="s1">&#39;Prop&#39;</span>
 
@@ -71406,7 +71414,8 @@ according to the value of CharSet.</p>
 <span class="w">      </span><span class="s1">&#39;F.E1&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Edit&#39;</span><span class="nv">STRING</span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="no">⍬</span><span class="w"> </span><span class="m">80</span><span class="p">)(</span><span class="s1">&#39;Font&#39;</span><span class="w"> </span><span class="s1">&#39;F.F1&#39;</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">&#39;F.E2&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Edit&#39;</span><span class="nv">STRING</span><span class="p">(</span><span class="m">40</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="no">⍬</span><span class="w"> </span><span class="m">80</span><span class="p">)(</span><span class="s1">&#39;Font&#39;</span><span class="w"> </span><span class="s1">&#39;F.F2&#39;</span><span class="p">)(</span><span class="s1">&#39;Translate&#39;</span><span class="w"> </span><span class="s1">&#39;ANSI&#39;</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">&#39;F.E3&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Edit&#39;</span><span class="nv">STRING</span><span class="p">(</span><span class="m">70</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="no">⍬</span><span class="w"> </span><span class="m">80</span><span class="p">)(</span><span class="s1">&#39;Font&#39;</span><span class="w"> </span><span class="s1">&#39;F.F3&#39;</span><span class="p">)(</span><span class="s1">&#39;Translate&#39;</span><span class="w"> </span><span class="s1">&#39;ANSI&#39;</span><span class="p">)</span>
-</code></pre></div></p>
+</code></pre></div><figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>Note that setting Translate to 'ANSI' means that characters entered into the
 Edit fields using a corresponding  National Language keyboard (Greek and
 Arabic) will appear in that language as intended</p>

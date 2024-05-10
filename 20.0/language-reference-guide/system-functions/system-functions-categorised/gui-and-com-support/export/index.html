@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71316,13 +71316,11 @@
 <p>The result <code>R</code> is a vector that reports the export type of the functions and operators named in <code>Y</code>.  When used dyadically to set export type, the result is shy.</p>
 <p>When the path mechanism locates a referenced function (or operator) in the list of namespaces in the <code>⎕PATH</code> system variable, it examines the function's export type:</p>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>This instance of the function is ignored and the search is resumed at the next namespace in the <code>⎕PATH</code> list.  Type-0 is typically used for functions residing in a utility namespace which are not themselves utilities, for example the private sub-function of a utility function.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>0</td>
+<td>This instance of the function is ignored and the search is resumed at the next namespace in the <code>⎕PATH</code> list.  Type-0 is typically used for functions residing in a utility namespace which are not themselves utilities, for example the private sub-function of a utility function.</td>
+</tr>
 <tr>
 <td>1</td>
 <td>This instance of the function is executed in the namespace in which it was found and the search terminated.  The effect is exactly as if the function had been referenced by its full path name.</td>

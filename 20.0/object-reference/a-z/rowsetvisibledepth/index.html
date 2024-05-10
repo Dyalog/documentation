@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,11 +71305,26 @@
 
 <h1 class="heading"><span class="name">RowSetVisibleDepth</span><span class="command">Method 173</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This method is used to set the maximum visible depth of data in rows of a <a href="../../objects/grid/">Grid</a>.</p>
 <p>The argument to RowSetVisibleDepth is a numeric scalar as follows</p>
-<p>[1] Depth integer</p>
+<table>
+<tbody>
+<tr>
+<td><code>[1]</code></td>
+<td>Depth</td>
+<td>integer</td>
+</tr>
+</tbody>
+</table>
 <p>All rows in the grid that have a value of <a href="../../properties/rowtreedepth/">RowTreeDepth</a> less than or equal to <em>Depth</em> are expanded. Rows with a value of <a href="../../properties/rowtreedepth/">RowTreeDepth</a> greater than <em>Depth</em> are collapsed.</p>
 <p>Note:<a href="../../methodorevents/expanding/"> Expanding</a> and <a href="../../methodorevents/retracting/">Retracting</a> events are not generated when this method is called.</p>
 <p><strong>Examples</strong></p>
@@ -71317,13 +71332,21 @@
 <span class="w">      </span><span class="s1">&#39;F.G&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Grid&#39;</span><span class="p">(</span><span class="m">30</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="m">2</span><span class="na">/</span><span class="o">⍳</span><span class="m">30</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">RowTreeDepth</span><span class="kd">←</span><span class="m">30</span><span class="o">⍴</span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">2</span>
 </code></pre></div>
-<p><img alt="gridtree1" src="../../img/gridtree1.gif" />
+<figure id="_figure-1">
+<img alt="gridtree1" src="../../img/gridtree1.gif" />
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">RowSetVisibleDepth</span><span class="w"> </span><span class="m">1</span>
-</code></pre></div></p>
-<p><img alt="gridtree12" src="../../img/gridtree12.gif" /></p>
+</code></pre></div><figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
+<figure id="_figure-2">
+<img alt="gridtree12" src="../../img/gridtree12.gif" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">RowSetVisibleDepth</span><span class="w"> </span><span class="m">99</span>
 </code></pre></div>
-<p><img alt="gridtree13" src="../../img/gridtree13.gif" /></p>
+<figure id="_figure-3">
+<img alt="gridtree13" src="../../img/gridtree13.gif" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 
 
 

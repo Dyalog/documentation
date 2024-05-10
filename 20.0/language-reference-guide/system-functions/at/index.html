@@ -32794,7 +32794,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71462,18 +71462,16 @@
 <p>If <code>X</code> is omitted, <code>R</code> is a 4-element vector or a 4 column matrix with the same number of rows as names in <code>Y</code> containing the following attribute information:</p>
 <p><code>R[1]</code> or <code>R[;1]</code>: Each item is a 3-element integer vector representing the function header syntax:</p>
 <table>
-<thead>
-<tr>
-<th>1</th>
-<th>Function result</th>
-<th>0 if the function has no result 1 if the function has an explicit result <code>¯1</code> if the function has a shy result</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>1</td>
+<td>Function result</td>
+<td>0 if the function has no result 1 if the function has an explicit result <code>¯1</code> if the function has a shy result</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Function valence</td>
-<td>0 if the object is a niladic function or not a function 1 if the object is a monadic function 2 if the object is a dyadic function <code>¯2</code> if the object is an ambivalent                 function</td>
+<td>0 if the object is a niladic function or not a function 1 if the object is a monadic function 2 if the object is a dyadic function <code>¯2</code> if the object is an ambivalent              function</td>
 </tr>
 <tr>
 <td>3</td>
@@ -71492,23 +71490,21 @@
 <p><code>R[2]</code> or <code>R[;2]</code>: Each item is the (<code>⎕TS</code> form) timestamp of the time the function was last fixed.</p>
 <p><code>R[3]</code> or <code>R[;3]</code>: Each item is an integer reporting the current <code>⎕LOCK</code> state of the function:</p>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>Not locked</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>1</td>
+<td><code>0</code></td>
+<td>Not locked</td>
+</tr>
+<tr>
+<td><code>1</code></td>
 <td>Cannot display function</td>
 </tr>
 <tr>
-<td>2</td>
+<td><code>2</code></td>
 <td>Cannot suspend function</td>
 </tr>
 <tr>
-<td>3</td>
+<td><code>3</code></td>
 <td>Cannot display or suspend</td>
 </tr>
 </tbody>
@@ -71549,14 +71545,12 @@
 <p>The number of elements or columns in <code>R</code> and their meaning depends upon the value of <code>X</code> which may be 1, 2, 3 or 4.</p>
 <p>If <code>X</code> is 1, <code>R</code> specifies <em>valences</em> and contains 3 elements (or columns) whose meaning is as follows:</p>
 <table>
-<thead>
-<tr>
-<th>1</th>
-<th>Explicit result</th>
-<th>1 if the object has an explicit result or is a variable 0 otherwise</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>1</td>
+<td>Explicit result</td>
+<td>1 if the object has an explicit result or is a variable 0 otherwise</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Function valence</td>
@@ -71571,13 +71565,11 @@
 </table>
 <p>If <code>X</code> is 2, <code>R</code> specifies <em>fix times</em> (the time the object was last updated) for functions and operators named in <code>Y</code>. The time is reported as 7 integer elements (or columns) whose meaning is as follows. The fix time reported for names in <code>Y</code> which are not defined functions or operators is 0.</p>
 <table>
-<thead>
-<tr>
-<th>1</th>
-<th>Year</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>1</td>
+<td>Year</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Month</td>
@@ -71606,14 +71598,12 @@
 </table>
 <p>If <code>X</code> is 3, <code>R</code> specifies <em>execution properties</em> and contains 4 elements (or columns) whose meaning is as follows:</p>
 <table>
-<thead>
-<tr>
-<th>1</th>
-<th>Displayable</th>
-<th>0 if the object is displayable 1 if the object is not displayable</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>1</td>
+<td>Displayable</td>
+<td>0 if the object is displayable 1 if the object is not displayable</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Suspendable</td>
@@ -71626,7 +71616,7 @@
 </tr>
 <tr>
 <td>4</td>
-<td></td>
+<td>&nbsp;</td>
 <td>(always 0)</td>
 </tr>
 </tbody>

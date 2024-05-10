@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71454,8 +71454,25 @@
 
 <h1 class="heading"><span class="name">PropertyPage</span><span class="command">Object</span></h1>
 
-<p><a href="../../parentlists/propertypage/">Parents</a> <a href="../../childlists/propertypage/">Children</a> <a href="../../proplists/propertypage/">Properties</a> <a href="../../methodlists/propertypage/">Methods</a> <a href="../../eventlists/propertypage/">Events</a></p>
-<p>Purpose: The PropertyPage object represents a single page in a PropertySheet.</p>
+<table>
+<tbody>
+<tr>
+<td><a href="../../parentlists/propertypage/">Parents</a></td>
+<td><a href="../../childlists/propertypage/">Children</a></td>
+<td><a href="../../proplists/propertypage/">Properties</a></td>
+<td><a href="../../methodlists/propertypage/">Methods</a></td>
+<td><a href="../../eventlists/propertypage/">Events</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>Purpose:</td>
+<td>The PropertyPage object represents a single page in a PropertySheet.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The PropertyPage object represents a single page within a <a href="../propertysheet/">PropertySheet</a>.</p>
 <p>The Posn and Size properties are read-only properties determined by the parent <a href="../propertysheet/">PropertySheet</a> and may not be changed using <code>⎕WC</code> or <code>⎕WS</code>.</p>
@@ -71464,7 +71481,10 @@
 <p>If the user presses the Cancel button, the current PropertyPage generates a <a href="../../methodorevents/pagecancel/">PageCancel</a> event. This is followed by a Close event which is reported by the parent PropertySheet.</p>
 <p>Other properties and behaviour depend upon the Style of the parent PropertySheet which may be <code>'Standard'</code> or <code>'Wizard'</code></p>
 <h4 id="standard-behaviour">Standard Behaviour</h4>
-<p><img alt="ps1" src="../../img/ps1.gif" /></p>
+<figure id="_figure-1">
+<img alt="ps1" src="../../img/ps1.gif" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>In a <em>Standard</em> PropertySheet, the Caption property of each PropertyPage specifies the text that is written in its tab.</p>
 <p>PropertyPage objects owned by a Standard <a href="../propertysheet/">PropertySheet</a> generate <a href="../../methodorevents/pagecancel/">PageCancel</a>, <a href="../../methodorevents/pageapply/">PageApply</a> and <a href="../../methodorevents/pagehelp/">PageHelp</a> events. These events are all caused by the user  pressing the corresponding button in the parent <a href="../propertysheet/">PropertySheet</a>.</p>
 <p>Conventionally, the Apply button is initially inactive. When the user changes an item on any of the PropertyPages, the Apply button immediately becomes active. When the user clicks the Apply button, the application responds (normally by changing the appropriate properties) and then the Apply button becomes inactive once again. This process is controlled as follows.</p>
@@ -71473,7 +71493,10 @@
 <p>When the user clicks the Apply button, each of the PropertyPages whose Changed flag is currently set to 1 generates a <a href="../../methodorevents/pageapply/">PageApply</a> event. The default processing for this event is to generate a <a href="../../methodorevents/pagechanged/">PageChanged</a> event with the parameter 0. This is turn resets the Changed property of the PropertyPage to 0. Once all of the Changed flags have been reset, the Apply button becomes inactive. If you return 0 from a callback on any of  the <a href="../../methodorevents/pagechanged/">PageChanged</a> events, the Changed property for the corresponding PropertyPage remains 1 and the Apply button remains active.</p>
 <p>You may control the value of the Changed property using <code>⎕WS</code> or by calling <a href="../../methodorevents/pagechanged/">PageChanged</a> as a method. In all cases, the Apply button is active if the value of Changed on any PropertyPage is 1, and inactive otherwise.</p>
 <h4 id="wizard-behaviour">Wizard Behaviour</h4>
-<p><img alt="ps2" src="../../img/ps2.gif" /></p>
+<figure id="_figure-2">
+<img alt="ps2" src="../../img/ps2.gif" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <p>If the PropertyPage is owned by a <em>Wizard</em> <a href="../propertysheet/">PropertySheet</a>, its Caption property specifies the text that appears in the title bar of the <a href="../propertysheet/">PropertySheet</a> window when the PropertyPage is the current page. Note that a Wizard <a href="../propertysheet/">PropertySheet</a> ignores its own Caption property.</p>
 <p>There are effectively 3 page changing buttons on a Wizard <a href="../propertysheet/">PropertySheet</a>, named Back, Next and Finish. The Next and Finish buttons actually occupy the same position and are mutually exclusive. The captions on the buttons are language-dependent.</p>
 <p>Conventionally, the buttons change according to which of the PropertyPages is currently displayed. If the first one is displayed, the Next button is active but the Back button is inactive. When a middle page is displayed, both the Next and Back buttons are active. When the last page is displayed, the caption on the Next button changes to Finish. However, in some applications, the Back button may be disabled to prevent the user returning to a previous page.</p>

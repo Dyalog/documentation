@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,12 +71305,28 @@
 
 <h1 class="heading"><span class="name">GetMethodInfo</span><span class="command">Method 552</span></h1>
 
-<p>Applies To: <a href="../../objects/ocxclass/">OCXClass</a> <a href="../../objects/oleclient/">OLEClient</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/ocxclass/">OCXClass</a></td>
+<td><a href="../../objects/oleclient/">OLEClient</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This method is used to obtain information about a particular method or set of methods supported by a COM object.</p>
 <p>For each method supported by a COM object the author will have registered a help message or description of the method (this is in fact optional), the data type of its result (if it has a result), and the name and data type of each of the parameters that must be supplied when you invoke it. The GetMethodInfo method returns this information.</p>
 <p>The argument to GetMethodInfo is a single item as follows:</p>
-<p>[1] Method name(s) see below</p>
+<table>
+<tbody>
+<tr>
+<td><code>[1]</code></td>
+<td>Method name(s)</td>
+<td>see below</td>
+</tr>
+</tbody>
+</table>
 <p><em>Method name(s)</em> is a simple character vector or a vector of character vectors specifying one or more names of methods supported by the object.</p>
 <p>The result is a nested vector with one element per method name. Each element of this vector is itself a vector of 2-element character vectors. For each method, the first item describes the help message or description (if any) registered for the method and the data type of its result. Note that if the event does not produce a result, the data type of the result is reported as <code>'VT_VOID'</code>. Each of the remaining elements contains a parameter name and its corresponding data type.</p>
 <p><strong>Example</strong></p>

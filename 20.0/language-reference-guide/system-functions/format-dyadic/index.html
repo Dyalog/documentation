@@ -32848,7 +32848,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71542,39 +71542,37 @@
 <p><code>R</code> has the same number of rows as the longest column (or implied column) in <code>Y</code>, and the number of columns is determined from the format specification.</p>
 <p>The <strong>format specification</strong> consists of a series of control phrases, with adjacent phrases separated by a single comma, selected from the following:</p>
 <table>
-<thead>
-<tr>
-<th>rAw</th>
-<th>Alphanumeric format</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>rEw.s</td>
+<td><code>rAw</code></td>
+<td>Alphanumeric format</td>
+</tr>
+<tr>
+<td><code>rEw.s</code></td>
 <td>Scaled format</td>
 </tr>
 <tr>
-<td>rqFw.d</td>
+<td><code>rqFw.d</code></td>
 <td>Decimal format</td>
 </tr>
 <tr>
-<td>rqG⍞pattern⍞</td>
+<td><code>rqG⍞pattern⍞</code></td>
 <td>Pattern</td>
 </tr>
 <tr>
-<td>rqIw</td>
+<td><code>rqIw</code></td>
 <td>Integer format</td>
 </tr>
 <tr>
-<td>Tn</td>
+<td><code>Tn</code></td>
 <td>Absolute tabulation</td>
 </tr>
 <tr>
-<td>Xn</td>
+<td><code>Xn</code></td>
 <td>Relative tabulation</td>
 </tr>
 <tr>
-<td>⍞t⍞</td>
+<td><code>⍞t⍞</code></td>
 <td>Text insertion</td>
 </tr>
 </tbody>
@@ -71582,13 +71580,11 @@
 <p>(Alternative surrounding pairs for Pattern or Text insertion are   <code>&lt; &gt;, ⊂ ⊃, ⎕ ⎕</code>  or <code>¨ ¨</code>.)</p>
 <h5 id="where">where</h5>
 <table>
-<thead>
-<tr>
-<th>r</th>
-<th>is an optional repetition factor indicating that the format phrase is to be applied to r columns of <code>Y</code></th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>r</td>
+<td>is an optional repetition factor indicating that the format phrase is to be applied to r columns of <code>Y</code></td>
+</tr>
 <tr>
 <td>q</td>
 <td>is an optional usage of qualifiers or affixtures from those described below.</td>
@@ -71621,13 +71617,11 @@
 </table>
 <h5 id="qualifiers-q-are-as-follows">Qualifiers q are as follows</h5>
 <table>
-<thead>
-<tr>
-<th>B</th>
-<th>leaves the field blank if the result would otherwise be zero.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>B</td>
+<td>leaves the field blank if the result would otherwise be zero.</td>
+</tr>
 <tr>
 <td>C</td>
 <td>inserts commas between triads of digits starting from the rightmost digit of the integer part of the result.</td>
@@ -71660,13 +71654,11 @@
 </table>
 <h5 id="affixtures-are-as-follows">Affixtures are as follows</h5>
 <table>
-<thead>
-<tr>
-<th>M⍞t⍞</th>
-<th>prefixes negative results with the text t instead of the negative sign.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>M⍞t⍞</td>
+<td>prefixes negative results with the text t instead of the negative sign.</td>
+</tr>
 <tr>
 <td>N⍞t⍞</td>
 <td>post-fixes negative results with the text <code>t</code></td>
@@ -71796,13 +71788,11 @@
 <p>The O format qualifier replaces a specific numeric value with a text string and may be used in conjunction with the E, F, I and G format phrases.</p>
 <p>An O-qualifier consists of the letter "O" followed by the optional numeric value which is to be substituted (if omitted, the default is 0) and then the text string within pairs of symbols such as "<code>&lt;&gt;</code>". For example:</p>
 <table>
-<thead>
-<tr>
-<th>O - qualifier</th>
-<th>Description</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>O - qualifier</td>
+<td>Description</td>
+</tr>
 <tr>
 <td>O<nil></td>
 <td>Replaces the value 0 with the text "nil"</td>

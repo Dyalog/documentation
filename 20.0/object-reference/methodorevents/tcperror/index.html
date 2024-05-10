@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,32 +71327,37 @@
 
 <h1 class="heading"><span class="name">TCPError</span><span class="command">Event 370</span></h1>
 
-<p>Applies To: <a href="../../objects/tcpsocket/">TCPSocket</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/tcpsocket/">TCPSocket</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This event is generated when a fatal TCP/IP error occurs and is reported by a <a href="../../objects/tcpsocket/">TCPSocket</a> object.</p>
 <p>The default processing for this event is to display a message box containing details of the TCP/IP error. You may disable the display of this message box by setting the action code for the event to <code>¯1</code> or by returning 0 from a callback function attached to it.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 3-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'TCPError'</code> or 370</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Error code</td>
 <td>a number</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Error text</td>
 <td>a character vector</td>
 </tr>

@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71323,7 +71323,10 @@
 
 <p>COM methods and properties frequently return null values for which there is no direct equivalent in the APL language. Instead, the system constant <code>⎕NULL</code> is used to represent a null value.</p>
 <p>The following spreadsheet contains a number of empty cells.</p>
-<p><img alt="ole client null values example" src="../../img/ole-client-null-values-example.png" /></p>
+<figure id="_figure-1">
+<img alt="ole client null values example" src="../../img/ole-client-null-values-example.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>Using the Excel.Application COM object, the contents of the spreadsheet can be obtained as follows:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;EX&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;OLEClient&#39;</span><span class="w"> </span><span class="s1">&#39;Excel.Application&#39;</span>
 <span class="w">      </span><span class="nv">WB</span><span class="kd">←</span><span class="nv">EX</span><span class="na">.</span><span class="nv">Workbooks</span><span class="na">.</span><span class="nv">Open</span><span class="w"> </span><span class="s1">&#39;simple.xls&#39;</span>

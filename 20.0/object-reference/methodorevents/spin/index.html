@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,31 +71327,37 @@
 
 <h1 class="heading"><span class="name">Spin</span><span class="command">Event 420</span></h1>
 
-<p>Applies To: <a href="../../objects/spinner/">Spinner</a> <a href="../../objects/updown/">UpDown</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/spinner/">Spinner</a></td>
+<td><a href="../../objects/updown/">UpDown</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is generated when the user clicks one of the spin buttons in a <a href="../../objects/spinner/">Spinner</a> object. The event is reported <em>before</em> the value of the Thumb property has been updated. You may disable the operation of the spin buttons by disabling this event. You may selectively prevent the user selecting a particular value by returning 0 from a callback function. You may also return a modified event message as a result in order to set the Thumb property to a different value.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 4-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'Spin'</code> or 420</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Thumb value</td>
 <td>Integer. The new value of the Thumb property resulting from the user pressing one of the spin buttons.</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Adjustment</td>
 <td>Integer. The amount by which the new value of the Thumb differs from its previous value.</td>
 </tr>

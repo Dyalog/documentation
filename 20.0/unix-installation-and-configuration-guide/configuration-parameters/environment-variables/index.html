@@ -32729,7 +32729,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71524,7 +71524,7 @@ is used.</p>
 </tr>
 <tr>
 <td>DYALOGSTART_X</td>
-<td>Specifies whether the <code>Run</code> function is executed during                   Session startup</td>
+<td>Specifies whether the <code>Run</code> function is executed during                  Session startup</td>
 </tr>
 <tr>
 <td>DYALOG_GUTTER_ENABLE</td>
@@ -71540,7 +71540,7 @@ is used.</p>
 </tr>
 <tr>
 <td>LOG_FILE LOG_FILE_INUSE LOG_SIZE</td>
-<td>These three variables determine the name of the session log file (default ~/.dyalog/session_log_<DyalogMajor><DyalogMinor><U&#124;C><bits>_<em>.dlf, for example, ~/.dyalog/session_log_190U64_</em>.dlf), whether a log file is created or not, and the size of the log file in KB. Be aware: the session log file is not interchangeable between the different editions and widths of APL; in a mixed environment it is strongly recommended to use a different log file for each version.</td>
+<td>These three variables determine the name of the session log file (default ~/.dyalog/session_log_<DyalogMajor><DyalogMinor>&lt;U</td>
 </tr>
 <tr>
 <td>PFKEY_SIZE</td>
@@ -71558,13 +71558,11 @@ is used.</p>
 </code></pre></div></p>
 <p>Table E4: Miscellaneous Variables used by non-GUI Dyalog APL</p>
 <table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Notes</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Variable</td>
+<td>Notes</td>
+</tr>
 <tr>
 <td>APL_TEXTINAPLCORE</td>
 <td>If set with the value 1 the "Interesting Information" section is included in an aplcore file. Otherwise this section is omitted. By default the interpreter has this set to 0; it is the default APL script which sets it to 1.</td>
@@ -71590,13 +71588,11 @@ is used.</p>
 <p>These are the remaining variables listed in the <em>Dyalog for Microsoft Windows Installation and Configuration Guide</em> which are effective in the non-GUI UNIX versions of Dyalog APL</p>
 <p>Table E5: Editor-related environment variables</p>
 <table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Notes</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Variable</td>
+<td>Notes</td>
+</tr>
 <tr>
 <td>EDITOR_COLUMNS_*</td>
 <td>See <a href="configuring-the-editor.md">Configuring the Editor</a>. Can be one of EDITOR_COLUMNS_CHARACTER_ARRAY EDITOR_COLUMNS_CLASS EDITOR_COLUMNS_FUNCTION EDITOR_COLUMNS_NAMESPACE EDITOR_COLUMNS_NUMERIC_ARRAY</td>
@@ -71609,13 +71605,11 @@ is used.</p>
 </table>
 <p>Table E6:Tracer-related environment variables</p>
 <table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Notes</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Variable</td>
+<td>Notes</td>
+</tr>
 <tr>
 <td>TRACE_ON_ERROR</td>
 <td>With this is set to 1 (the default) the tracer is opened if an untrapped error occurs.</td>
@@ -71624,13 +71618,11 @@ is used.</p>
 </table>
 <p>Table E7:RIDE-related environment variables</p>
 <table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Notes</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Variable</td>
+<td>Notes</td>
+</tr>
 <tr>
 <td>RIDE_INIT</td>
 <td>Enables and configures RIDE; see the <em>RIDE User Guide</em> for more information.</td>
@@ -71639,20 +71631,18 @@ is used.</p>
 </table>
 <p>Table E8: SALT and user commands related environment variables</p>
 <table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Notes</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Variable</td>
+<td>Notes</td>
+</tr>
 <tr>
 <td>SESSION_FILE</td>
 <td>Specifies the location of the file containing ⎕SE . The default value is $DYALOG/default.dse</td>
 </tr>
 <tr>
 <td>UCMDCACHEFILE</td>
-<td>Specifies the location of the user command cache file. Defaults to <code>"UserCommand{UcmdMajor}{UcmdMinor}.{DyalogMajor}{DyalogMinor}{U&amp;#124;C}{bits}.cache"</code> e.g. <code>UserCommand25.182U64.cache</code> in the <code>dyalog</code> directory.</td>
+<td>Specifies the location of the user command cache file. Defaults to <code>"UserCommand{UcmdMajor}{UcmdMinor}.{DyalogMajor}{DyalogMinor}{U|C}{bits}.cache"</code> e.g. <code>UserCommand25.182U64.cache</code> in the <code>dyalog</code> directory.</td>
 </tr>
 </tbody>
 </table>

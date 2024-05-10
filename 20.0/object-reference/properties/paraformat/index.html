@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,35 +71327,40 @@
 
 <h1 class="heading"><span class="name">ParaFormat</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/richedit/">RichEdit</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/richedit/">RichEdit</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The ParaFormat property describes the current paragraph format or the paragraph format of the currently selected text in a <a href="../../objects/richedit/">RichEdit</a> object. It is a 6-element nested array structured as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>A character vector that specifies the text alignment. This may be <code>'Left'</code> (the default), <code>'Right'</code> or <code>'Centre'</code></th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>A character vector that specifies the text alignment. This may be <code>'Left'</code> (the default), <code>'Right'</code> or <code>'Centre'</code></td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>The size of the indentation of the first line in the paragraph measured from the left margin in <a href="../../miscellaneous/twips/">Twips</a> .</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>The size of the horizontal offset of the start of the second and subsequent lines. This is measured in <a href="../../miscellaneous/twips/">Twips</a> relative to the first line indentation specified in element [2].</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>The size of the right indentation measured in <a href="../../miscellaneous/twips/">Twips</a> from the right margin.</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>An integer value specifying the bullet/numbering option. 0 mean no numbering, 1 means bullets.</td>
 </tr>
 <tr>
-<td>[6]</td>
+<td><code>[6]</code></td>
 <td>An integer vector specifying the size of any tab stops measured in <a href="../../miscellaneous/twips/">Twips</a> from the left margin and specified in ascending order.</td>
 </tr>
 </tbody>

@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,21 +71327,76 @@
 
 <h1 class="heading"><span class="name">CharFormat</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/richedit/">RichEdit</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/richedit/">RichEdit</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The CharFormat property describes or applies formatting to the currently selected text in a <a href="../../objects/richedit/">RichEdit</a> object. If the selection is empty, it reports or specifies the default character formatting for the object. It is a 5-element nested array structured as follows:</p>
-<p>| [1] | A vector of character vectors which describes the text attributes and is comprised of the following keywords: 'Autocolour' default colour (Windows text colour) 'Bold' bold text 'Italic' bold text 'Underline' underlined 'StrikeOut' line through text 'Protected' protected (read-only) text | 'Autocolour' | default colour (Windows text colour) | 'Bold' | bold text | 'Italic' | bold text | 'Underline' | underlined | 'StrikeOut' | line through text | 'Protected' | protected (read-only) text |
-| --- | ---  |
-| 'Autocolour' | default colour (Windows text colour) |
-| 'Bold' | bold text |
-| 'Italic' | bold text |
-| 'Underline' | underlined |
-| 'StrikeOut' | line through text |
-| 'Protected' | protected (read-only) text |
-| [2] | A character vector that specifies the face name of the font used to draw the text |
-| [3] | Character height in <a href="../../miscellaneous/twips/">Twips</a> . |
-| [4] | Text colour. A single integer or an enclosed vector of 3 RGB values. The default is 0 which implies the standard Windows text colour. |
-| [5] | Integer specifying the vertical offset of the character from the base line in <a href="../../miscellaneous/twips/">Twips</a> . This is used to specify superscript (positive offset) and subscript (negative offset) symbols. The default value is 0. |</p>
+<table>
+<tbody>
+<tr>
+<td><code>[1]</code></td>
+<td>A vector of character vectors which describes the text attributes and is comprised of the following keywords: 'Autocolour' default colour (Windows text colour) 'Bold' bold text 'Italic' bold text 'Underline' underlined 'StrikeOut' line through text 'Protected' protected (read-only) text</td>
+<td>'Autocolour'</td>
+<td>default colour (Windows text colour)</td>
+<td>'Bold'</td>
+<td>bold text</td>
+<td>'Italic'</td>
+<td>bold text</td>
+<td>'Underline'</td>
+<td>underlined</td>
+<td>'StrikeOut'</td>
+<td>line through text</td>
+<td>'Protected'</td>
+<td>protected (read-only) text</td>
+</tr>
+<tr>
+<td>'Autocolour'</td>
+<td colspan="13">default colour (Windows text colour)</td>
+</tr>
+<tr>
+<td>'Bold'</td>
+<td colspan="13">bold text</td>
+</tr>
+<tr>
+<td>'Italic'</td>
+<td colspan="13">bold text</td>
+</tr>
+<tr>
+<td>'Underline'</td>
+<td colspan="13">underlined</td>
+</tr>
+<tr>
+<td>'StrikeOut'</td>
+<td colspan="13">line through text</td>
+</tr>
+<tr>
+<td>'Protected'</td>
+<td colspan="13">protected (read-only) text</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
+<td colspan="13">A character vector that specifies the face name of the font used to draw the text</td>
+</tr>
+<tr>
+<td><code>[3]</code></td>
+<td colspan="13">Character height in <a href="../../miscellaneous/twips/">Twips</a> .</td>
+</tr>
+<tr>
+<td><code>[4]</code></td>
+<td colspan="13">Text colour. A single integer or an enclosed vector of 3 RGB values. The default is 0 which implies the standard Windows text colour.</td>
+</tr>
+<tr>
+<td><code>[5]</code></td>
+<td colspan="13">Integer specifying the vertical offset of the character from the base line in <a href="../../miscellaneous/twips/">Twips</a> . This is used to specify superscript (positive offset) and subscript (negative offset) symbols. The default value is 0.</td>
+</tr>
+</tbody>
+</table>
 <p>When you set the character format using <code>⎕WC</code> or <code>⎕WS</code> the following rules apply:</p>
 <p>If you just want to set a single text attribute (element 1) you may specify a simple vector, for example <code>(⎕WS 'CharFormat' 'Protected')</code> is valid and will add the protected text attribute to the current set of text attributes.</p>
 <p>To unset a text attribute (element 1) you must insert the tilde (~) character before the name of the attribute. For example, the expression <code>(⎕WS 'CharFormat' '~Bold')</code> will turn the bold text attribute off.</p>

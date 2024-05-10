@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,26 +71305,26 @@
 
 <h1 class="heading"><span class="name"> :Trap Statement</span></h1>
 
-<div class="highlight"><pre><span></span><code><span class="w"> </span>
-<span class="w">       </span><span class="o">|</span>
-<span class="w">       </span><span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">ecode</span><span class="o">&gt;</span>
-<span class="w">       </span><span class="o">|</span>
-<span class="w">       </span><span class="nv">code</span>
-<span class="w">       </span><span class="o">|</span>
-<span class="w">       </span><span class="o">|&lt;------------------------------------</span><span class="na">.</span>
-<span class="w">       </span><span class="o">|</span><span class="w">                                     </span><span class="o">|</span>
-<span class="w">       </span><span class="na">.</span><span class="o">-------</span><span class="na">.</span><span class="o">-------</span><span class="na">.</span><span class="w">                     </span><span class="o">|</span>
-<span class="w">       </span><span class="o">|</span><span class="w">       </span><span class="o">|</span><span class="w">       </span><span class="o">|</span><span class="w">                     </span><span class="o">|</span>
-<span class="w">       </span><span class="o">|</span><span class="w">       </span><span class="bp">:</span><span class="nv">Else</span><span class="w">   </span><span class="bp">:</span><span class="nv">Case</span><span class="sr">[</span><span class="nv">List</span><span class="sr">]</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">ecode</span><span class="o">&gt;</span><span class="w">   </span><span class="o">|</span>
-<span class="w">       </span><span class="o">|</span><span class="w">       </span><span class="o">|</span><span class="w">       </span><span class="o">|</span><span class="w">                     </span><span class="o">|</span>
-<span class="w">       </span><span class="o">|</span><span class="w">       </span><span class="o">|</span><span class="w">       </span><span class="o">|</span><span class="w">                     </span><span class="o">|</span>
-<span class="w">       </span><span class="o">|</span><span class="w">       </span><span class="o">|</span><span class="w">       </span><span class="o">|</span><span class="w">                     </span><span class="o">|</span>
-<span class="w">       </span><span class="o">|</span><span class="w">       </span><span class="nv">code</span><span class="w">    </span><span class="nv">code</span><span class="w">                  </span><span class="o">|</span>
-<span class="w">       </span><span class="o">|</span><span class="w">       </span><span class="o">|</span><span class="w">       </span><span class="o">|</span><span class="w">                     </span><span class="o">|</span>
-<span class="w">       </span><span class="o">|&lt;------</span><span class="s1">&#39;       `---------------------&#39;</span>
-<span class="w">       </span><span class="o">|</span>
-<span class="w">       </span><span class="bp">:</span><span class="nv">End</span><span class="sr">[</span><span class="nv">Trap</span><span class="sr">]</span>
-<span class="w">       </span><span class="o">|</span>
+<div class="highlight"><pre><span></span><code> 
+       |
+       :Trap &lt;ecode&gt;
+       |
+       code
+       |
+       |&lt;------------------------------------.
+       |                                     |
+       .-------.-------.                     |
+       |       |       |                     |
+       |       :Else   :Case[List] &lt;ecode&gt;   |
+       |       |       |                     |
+       |       |       |                     |
+       |       |       |                     |
+       |       code    code                  |
+       |       |       |                     |
+       |&lt;------&#39;       `---------------------&#39;
+       |
+       :End[Trap]
+       |
 </code></pre></div>
 <p>Where <code>ecode</code> is a scalar or vector of <code>⎕TRAP</code> event codes.</p>
 <p>Note that within the <code>:Trap</code> control structure, <code>:Case</code> is used for a single event code and <code>:CaseList</code> for a vector of event codes.</p>

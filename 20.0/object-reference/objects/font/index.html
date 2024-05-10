@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,19 +71327,34 @@
 
 <h1 class="heading"><span class="name">Font</span><span class="command">Object</span></h1>
 
-<p><a href="../../parentlists/font/">Parents</a> <a href="../../childlists/font/">Children</a> <a href="../../proplists/font/">Properties</a> <a href="../../methodlists/font/">Methods</a> <a href="../../eventlists/font/">Events</a></p>
-<p>Purpose: Loads a font resource</p>
+<table>
+<tbody>
+<tr>
+<td><a href="../../parentlists/font/">Parents</a></td>
+<td><a href="../../childlists/font/">Children</a></td>
+<td><a href="../../proplists/font/">Properties</a></td>
+<td><a href="../../methodlists/font/">Methods</a></td>
+<td><a href="../../eventlists/font/">Events</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>Purpose:</td>
+<td>Loads a font resource</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This object loads a Windows font into memory ready for use by another object.</p>
 <p>The characteristics of the font are specified by its properties as follows :</p>
 <table>
-<thead>
-<tr>
-<th><a href="../../properties/pname/">PName</a></th>
-<th>A character vector containing the name of the font face.       The default is <code>'System'</code> . Note that       case is ignored when you specify the name, although it will be returned       correctly by <a href="../../../language-reference-guide/system-functions/wg"><code>⎕WG</code></a> .</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td><a href="../../properties/pname/">PName</a></td>
+<td>A character vector containing the name of the font face.       The default is <code>'System'</code> . Note that       case is ignored when you specify the name, although it will be returned       correctly by <a href="../../../language-reference-guide/system-functions/wg"><code>⎕WG</code></a> .</td>
+</tr>
 <tr>
 <td><a href="../../properties/size/">Size</a></td>
 <td>An integer that specifies the character height of the font in pixels.</td>
@@ -71371,9 +71386,7 @@
 </tbody>
 </table>
 <p>The <a href="../../properties/coord/">Coord</a> property may be set to  <code>'Pixel'</code>, <code>'ScaledPixel'</code> or <code>'RealPixel'</code> when the object is created, but <a href="../../properties/coord/">Coord</a> may not subsequently be changed.</p>
-<p>If Coord is <code>'Pixel'</code>, it is interpreted as either <code>'RealPixel'</code> or <code>'ScaledPixel'</code> according to the value of the <strong>Dyalog_Pixel_Type</strong> parameter, which is either ScaledPixel or RealPixel. See 
-Installation &amp; Configuration Guide: </p>
-<p>Dyalog_Pixel_Type parameter<a href="../../../windows-installation-and-configuration-guide/configuration-parameters/dyalog-pixel-type">Dyalog_Pixel_Type</a>.</p>
+<p>If Coord is <code>'Pixel'</code>, it is interpreted as either <code>'RealPixel'</code> or <code>'ScaledPixel'</code> according to the value of the <strong>Dyalog_Pixel_Type</strong> parameter, which is either ScaledPixel or RealPixel. See <a href="../../../windows-installation-and-configuration-guide/configuration-parameters/dyalog-pixel-type">Dyalog_Pixel_Type</a>.</p>
 <p><strong>If this parameter is not specified, the default is RealPixel. So by default, when you set Coord to Pixel, it will be treated as RealPixel.</strong></p>
 <p>If you are using <code>'ScaledPixel'</code>, this means that your fonts will also be scaled up automatically, as well as the sizes of the controls in which they are used.</p>
 <p>When you ask Windows to allocate a font, you may specify as many or as few of these properties as you wish. Windows actually supplies the font that most closely matches the attributes you have specified. The matching rules it uses are complex, and may be found in the appropriate Windows documentation.</p>

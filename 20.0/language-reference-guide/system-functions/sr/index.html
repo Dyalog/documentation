@@ -32866,7 +32866,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71567,7 +71567,7 @@
 <p><code>⎕SR</code> is a system function that allows the user to edit or otherwise interact with the form defined by <code>⎕SM</code>.</p>
 <p>In versions of Dyalog APL that support asynchronous terminals, if the current screen is the SESSION screen, <code>⎕SR</code> immediately switches to the USER SCREEN and displays the form defined by <code>⎕SM</code>.</p>
 <p>In Dyalog APL/X, <code>⎕SR</code> causes the input cursor to be positioned in the USER window.  During execution of <code>⎕SR</code>, only the USER Window defined by <code>⎕SM</code> will accept input and respond to the keyboard or mouse.  The SESSION and any EDIT and TRACE Windows that may appear on the display are dormant.</p>
-<p>In versions of Dyalog APL with GUI support, a single SM object may be defined.  This object defines the size and position of the <code>⎕SM</code> window, and allows <code>⎕SM</code> to be used in conjunctions with other GUI components.  In these versions, <code>⎕SR</code> acts as a superset of <code>⎕DQ</code> (see <a href="../dq/">Dequeue Events:</a>) but additionally controls the character-based user interface defined by <code>⎕SM</code>.</p>
+<p>In versions of Dyalog APL with GUI support, a single SM object may be defined.  This object defines the size and position of the <code>⎕SM</code> window, and allows <code>⎕SM</code> to be used in conjunctions with other GUI components.  In these versions, <code>⎕SR</code> acts as a superset of <code>⎕DQ</code> (see <a href="../dq/">"Dequeue Events: "</a>) but additionally controls the character-based user interface defined by <code>⎕SM</code>.</p>
 <p><code>Y</code> is an integer vector that specifies the fields which the user may visit.  In versions with GUI support, <code>Y</code> may additionally contain the names of GUI objects with which the user may also interact.</p>
 <p>If specified, <code>X</code> may be an enclosed vector of character vectors defining <code>EXIT_KEYS</code> or a 2-element nested vector defining <code>EXIT_KEYS</code> and the <code>INITIAL_CONTEXT</code>.</p>
 <p>The result <code>R</code> is the <code>EXIT_CONTEXT</code>.</p>
@@ -71617,7 +71617,7 @@
 <tr>
 <td>4</td>
 <td>Initial Keystroke</td>
-<td>''</td>
+<td><code>''</code></td>
 </tr>
 <tr>
 <td>5</td>

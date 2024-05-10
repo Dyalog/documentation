@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,14 @@
 
 <h1 class="heading"><span class="name">Depth</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/treeview/">TreeView</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/treeview/">TreeView</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The Depth property specifies the structure of the items in a <a href="../../objects/treeview/">TreeView</a> object. It is either a scalar 0 or an integer vector of the same length as the Items property.</p>
 <p>A value of 0 indicates that the corresponding item is a top-level item. A value of 1 indicates that the corresponding item is a child of the most recent item whose Depth is 0; a value of 2 indicates that the corresponding item is a child of the most recent item whose Depth is 1, and so forth.</p>
@@ -71426,7 +71433,10 @@
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;F&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;FORM&#39;</span><span class="w"> </span><span class="s1">&#39;International Airports&#39;</span><span class="w">                   </span>
 <span class="w">      </span><span class="s1">&#39;F.TV&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;TreeView&#39;</span><span class="nv">AIRPORTS</span><span class="p">(</span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="m">100</span><span class="w"> </span><span class="m">100</span><span class="p">)(</span><span class="s1">&#39;Depth&#39;</span><span class="nv">DEPTH</span><span class="p">)</span>
 </code></pre></div>
-<p><img alt="tv1" src="../../img/tv1.gif" /></p>
+<figure id="_figure-1">
+<img alt="tv1" src="../../img/tv1.gif" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 
 
 

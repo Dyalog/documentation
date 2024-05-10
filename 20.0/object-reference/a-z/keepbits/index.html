@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,7 +71305,16 @@
 
 <h1 class="heading"><span class="name">KeepBits</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/bitmap/">Bitmap</a> <a href="../../objects/cursor/">Cursor</a> <a href="../../objects/icon/">Icon</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/bitmap/">Bitmap</a></td>
+<td><a href="../../objects/cursor/">Cursor</a></td>
+<td><a href="../../objects/icon/">Icon</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This property is be used to control the way that <a href="../../objects/bitmap/">Bitmap</a>, <a href="../../objects/cursor/">Cursor</a> and <a href="../../objects/icon/">Icon</a> objects are stored in the workspace.</p>
 <p>When you create a <a href="../../objects/bitmap/">Bitmap</a>, <a href="../../objects/icon/">Icon</a> or <a href="../../objects/cursor/">Cursor</a> using <code>⎕WC</code>, APL asks Windows to allocate a corresponding bitmap, icon or cursor <em>resource</em>. This resource is allocated in Windows memory. If APL were to hold the values of the <em>image properties</em> (<a href="../cbits/">CBits</a>, <a href="../bits/">Bits</a> and <a href="../cmap/">CMap</a> for a <a href="../../objects/bitmap/">Bitmap</a>; <a href="../bits/">Bits</a>, <a href="../cmap/">CMap</a> and <a href="../mask/">Mask</a> for <a href="../../objects/cursor/">Cursor</a> and <a href="../../objects/icon/">Icon</a> objects) internally in the workspace, this data would be duplicated. For large bitmaps this would have a serious impact on memory utilisation and may affect performance. The KeepBits property is provided to allow you to control whether or not APL retains the values of the <em>image properties</em> in the workspace, so that you can choose a strategy to suit your configuration and requirements. KeepBits may take the value 0 or 1.</p>

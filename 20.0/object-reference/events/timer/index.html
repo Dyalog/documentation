@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,20 +71305,25 @@
 
 <h1 class="heading"><span class="name">Timer</span><span class="command">Event 140</span></h1>
 
-<p>Applies To: <a href="../../objects/timer/">Timer</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/timer/">Timer</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This event is generated at regular intervals by a <a href="../../objects/timer/">Timer</a> object and is typically used to fire a callback function to perform a task repeatedly. Returning a 0 from a callback function attached to a Timer event has no effect. The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, or supplied as the right argument to your callback function, is a 2 element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'Timer'</code> or 140</td>
 </tr>

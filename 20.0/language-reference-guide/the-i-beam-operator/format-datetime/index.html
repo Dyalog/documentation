@@ -32810,7 +32810,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71544,53 +71544,280 @@
 
 <h1 class="heading"><span class="name">Format Date-time</span><span class="command">R←X(1200⌶)Y</span></h1>
 
-<p><code>Y</code> is a numeric array of any shape, where every element contains a Dyalog Date Number that represents a date between 1 January 0001 and 31 December 9999 in the Proleptic Gregorian Calendar.</p>
-<p><code>X</code> is a character scalar or vector specifying a pattern with which  the elements in <code>Y</code> should be formatted.</p>
+<p><code>Y</code> is a numeric array of any shape, where every element contains a Dyalog Date Number that represents a date between 1
+January 0001 and 31 December 9999 in the <a href="https://en.wikipedia.org/wiki/Proleptic_Gregorian_calendar">Proleptic Gregorian Calendar</a>.</p>
+<p><code>X</code> is a character scalar or vector specifying a pattern with which the elements in <code>Y</code> should be formatted.</p>
 <p><code>R</code> is an array of the same shape as <code>Y</code>, whose elements are enclosed character vectors.</p>
-<h4 id="formatting-pattern-in-x">Formatting Pattern in <code>X</code></h4>
-<p>The formatting pattern allows a time number to be converted to a highly user-configurable, plain text format. When a time number is formatted, elements in the result are copies of the format pattern with format sequences replaced by the elements they represent.</p>
-<p>The format sequences are intended to be visually reminiscent of the generated text. They use alphabetic characters easily associated with the substitution (e.g. <code>D</code>, <code>M</code> and <code>Y</code> for Day, Month and Year respectively) repeated one or more times to indicate format. As noted below, some sequences allow the first character to be replaced by a <code>_</code>, or the casing to be altered.</p>
-<p>| Format letter | Length | Meaning | Variations | Example |
-| --- | --- | --- | ---  |
-| Y ear | YY | Without century | YY | 19 |
-| YYYY | With century | YYYY | 2019 |
-| M onth | M | 1 or 2 digit numeric | M | 3 |
-| MM | 2 character numeric | MM _M | 03 3 |
-| MMM | Abbreviated name | MMM Mmm mmm _mm <sup>1Natural sentence case may be specified for M (month name) and d (day name) only, and causes the text to be substituted in the case which is natural for the language; some languages (e.g. English) always capitalise the first letter of day and month names whereas others (e.g. French) do not.</sup> | MAR Mar mar Mar |
-| MMMM | Full name | MMMM Mmmm mmmm _mmm <sup>1Natural sentence case may be specified for M (month name) and d (day name) only, and causes the text to be substituted in the case which is natural for the language; some languages (e.g. English) always capitalise the first letter of day and month names whereas others (e.g. French) do not.</sup> | MARCH March march March |
-| D ay of month | D | 1 or 2 digit numeric | D | 4 |
-| DD | 2 character numeric | DD _D | 04 4 |
-| h ours | h | 1 or 2 digit numeric | h | 8 |
-| hh | 2 character numeric | hh _h | 08 8 |
-| m inutes | m | 1 or 2 digit numeric | m | 5 |
-| mm | 2 character numeric | mm _m | 05 5 |
-| s econds | s | 1 or 2 digit numeric | s | 0 |
-| ss | 2 character numeric | ss _s | 00 0 |
-| f ractional seconds | f | 1 digit precision | f | 5 |
-| ff | 2 digit precision | ff | 55 |
-| fff | 3 digit precision | fff | 555 |
-| ffff | 4 digit precision | ffff | 5555 |
-| fffff | 5 digit precision | fffff | 55555 |
-| ffffff | 6 digit precision | ffffff | 555555 |
-| d ay of week | d | Numeric (1-7) | d | 1 |
-| ddd | Abbreviated name | DDD Ddd ddd _dd <sup>1Natural sentence case may be specified for M (month name) and d (day name) only, and causes the text to be substituted in the case which is natural for the language; some languages (e.g. English) always capitalise the first letter of day and month names whereas others (e.g. French) do not.</sup> | MON Mon mon Mon |
-| dddd | Full name | DDDD Dddd dddd _ddd <sup>1Natural sentence case may be specified for M (month name) and d (day name) only, and causes the text to be substituted in the case which is natural for the language; some languages (e.g. English) always capitalise the first letter of day and month names whereas others (e.g. French) do not.</sup> | MONDAY Monday monday Monday |
-| ISO w eek number | w | 1 or 2 digit numeric | w | 10 |
-| ww | 2 character numeric | ww _w | 10 10 |
-| year of ISO W eek number <sup>2                   Dates at the start of the year may be in the final week of the previous year, and dates at the end of the year may be in the first week of the following year.</sup> | WW | Without century | WW | 19 |
-| WWWW | With century | WWWW | 2019 |
-| day of y ear | y | 1 to 3 digit numeric | y | 63 |
-| yy | 3 character numeric | yy _y | 063 63 |
-| O rdinal indicator <sup>3                     An ordinal indicator is a character or group of characters following a numeral, such as (in English) the suffixes -st, -nd, -rd, -th as in 1st, 2nd, 3rd, 4th.</sup> for day of month | O | Short | O o | T t |
-| OO | Full | OO Oo oo | TH Th th |
-| hours in t welve hour clock | t | 1 or 2 digit numeric | t | 8 |
-| tt | 2 character numeric | tt _t | 08 |
-| AM/ P M Indicator | P | Short | P p | A a |
-| PP | Full | PP pp | AM am |</p>
-<p>The upper and lower case letters, underscore <code>_</code>, dollar <code>$</code> and percent <code>%</code> are all reserved for introducing format sequences, even though not all currently have meaning. The remaining, non-reserved, characters are copied to the result unchanged, thus the format string <code>hh:mm</code> represents the hour of the day and minute of the hour with a colon between (e.g. <code>12:00</code>). All characters or sequences of characters may be delimited by <code>"</code> or <code>'</code> at any point in the format string to prevent them being interpreted as a part of a format sequence, and, within these delimiters, two adjacent delimiter characters produce a single delimiter.</p>
-<p>Note: The characters <code>AaaaBbbb</code> consist of two adjacent format sequences because there is a sequence of As followed by a sequence of Bs. The characters <code>AaaaAaaa</code> consist of one format sequence because it only contains <code>A</code>s. It can  be separated into two format sequences by insering an empty <code>"</code> or <code>'</code> - delimited string, e.g. <code>Aaaa""Aaaa</code>.</p>
-<h4 id="language">Language</h4>
-<p>Unless overridden, English is used for text substitutions. Different languages may be selected using the Language variant option and/or the use of language specifiers within the format pattern. In either case, the language is specified as either a two letter ISO 639-1 language code in lower case (e.g. en) or as a five character language with an additional underscore and two character region in upper case (e.g. en_GB). Within the format pattern, <strong>xx</strong> (where xx is the two or five character specifier) will switch the language of the subsequent generated text. Dictionaries for the following languages are built in:</p>
+<h2 id="formatting-pattern-in-x">Formatting Pattern in <code>X</code></h2>
+<p>The formatting pattern allows a time number to be converted to a highly user-configurable, plain text format. When a
+time number is formatted, elements in the result are copies of the format pattern with format sequences replaced by the
+elements they represent.</p>
+<p>The format sequences are intended to be visually reminiscent of the generated text. They use alphabetic characters
+easily associated with the substitution (e.g. <code>D</code>, <code>M</code> and <code>Y</code> for Day, Month and Year respectively) repeated one or
+more times to indicate format. As noted below, some sequences allow the first character to be replaced by a <code>_</code>, or the casing to be altered.</p>
+<table>
+    <thead>
+        <tr>
+            <th class="text-left">letter</th>
+            <th class="text-left">Length</th>
+            <th class="text-left">Meaning</th>
+            <th class="text-left">Variations</th>
+            <th class="text-left">Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2" style="vertical-align: middle;">
+                <ins>Y</ins>ear</td>
+            <td class="Dyalog">YY</td>
+            <td>Without century</td>
+            <td class="Dyalog">YY</td>
+            <td class="Dyalog">19</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">YYYY</td>
+            <td>With century</td>
+            <td class="Dyalog">YYYY</td>
+            <td class="Dyalog">2019</td>
+        </tr>
+        <tr>
+            <td rowspan="4" style="vertical-align: middle;">
+                <ins>M</ins>onth</td>
+            <td class="Dyalog">M</td>
+            <td>1 or 2 digit numeric</td>
+            <td class="Dyalog">M</td>
+            <td class="Dyalog">3</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">MM</td>
+            <td>2 character numeric</td>
+            <td class="Dyalog">MM<br />_M</td>
+            <td class="Dyalog">03<br />3</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">MMM</td>
+            <td>Abbreviated name</td>
+            <td class="Dyalog">MMM<br />Mmm<br />mmm<br />_mm<sup><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+            <td class="Dyalog">MAR<br />Mar<br />mar<br />Mar</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">MMMM </td>
+            <td>Full name </td>
+            <td class="Dyalog">MMMM<br />Mmmm<br />mmmm<br />_mmm<sup><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+            <td class="Dyalog">MARCH<br />March<br />march<br />March</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="vertical-align: middle;">
+                <ins>D</ins>ay of month</td>
+            <td class="Dyalog">D</td>
+            <td>1 or 2 digit numeric</td>
+            <td class="Dyalog">D</td>
+            <td class="Dyalog">4</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">DD</td>
+            <td>2 character numeric</td>
+            <td class="Dyalog">DD<br />_D</td>
+            <td class="Dyalog">04<br />4</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="vertical-align: middle;">
+                <ins>h</ins>ours</td>
+            <td class="Dyalog">h</td>
+            <td>1 or 2 digit numeric</td>
+            <td class="Dyalog">h</td>
+            <td class="Dyalog">8</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">hh</td>
+            <td>2 character numeric</td>
+            <td class="Dyalog">hh<br />_h</td>
+            <td class="Dyalog">08<br />8</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="vertical-align: middle;">
+                <ins>m</ins>inutes</td>
+            <td class="Dyalog">m </td>
+            <td>1 or 2 digit numeric</td>
+            <td class="Dyalog">m</td>
+            <td class="Dyalog">5</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">mm</td>
+            <td>2 character numeric</td>
+            <td class="Dyalog">mm<br />_m</td>
+            <td class="Dyalog">05<br />5</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="vertical-align: middle;">
+                <ins>s</ins>econds</td>
+            <td class="Dyalog">s</td>
+            <td>1 or 2 digit numeric </td>
+            <td class="Dyalog">s</td>
+            <td class="Dyalog">0</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">ss </td>
+            <td>2 character numeric </td>
+            <td class="Dyalog">ss<br />_s</td>
+            <td class="Dyalog">00<br />0</td>
+        </tr>
+        <tr>
+            <td rowspan="6" style="vertical-align: middle;">
+                <ins>f</ins>ractional seconds</td>
+            <td class="Dyalog">f</td>
+            <td>1 digit precision</td>
+            <td class="Dyalog">f</td>
+            <td class="Dyalog">5</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">ff</td>
+            <td>2 digit precision</td>
+            <td class="Dyalog">ff</td>
+            <td class="Dyalog">55</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">fff</td>
+            <td>3 digit precision</td>
+            <td class="Dyalog">fff</td>
+            <td class="Dyalog">555</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">ffff</td>
+            <td>4 digit precision</td>
+            <td class="Dyalog">ffff</td>
+            <td class="Dyalog">5555</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">fffff</td>
+            <td>5 digit precision</td>
+            <td class="Dyalog">fffff</td>
+            <td class="Dyalog">55555</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">ffffff</td>
+            <td>6 digit precision</td>
+            <td class="Dyalog">ffffff</td>
+            <td class="Dyalog">555555</td>
+        </tr>
+        <tr>
+            <td rowspan="3" style="vertical-align: middle;">
+                <ins>d</ins>ay of week</td>
+            <td class="Dyalog">d </td>
+            <td>Numeric (1-7)</td>
+            <td class="Dyalog">d</td>
+            <td class="Dyalog">1</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">ddd</td>
+            <td>Abbreviated name</td>
+            <td class="Dyalog">DDD<br />Ddd<br />ddd<br />_dd<sup><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+            <td class="Dyalog">MON<br />Mon<br />mon<br />Mon</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">dddd</td>
+            <td>Full name</td>
+            <td class="Dyalog">DDDD<br />Dddd<br />dddd<br />_ddd<sup><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+            <td class="Dyalog">MONDAY<br />Monday<br />monday<br />Monday</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="vertical-align: middle;">ISO <ins>w</ins>eek number</td>
+            <td class="Dyalog">w</td>
+            <td>1 or 2 digit numeric</td>
+            <td class="Dyalog">w</td>
+            <td class="Dyalog">10</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">ww</td>
+            <td>2 character numeric</td>
+            <td class="Dyalog">ww<br />_w</td>
+            <td class="Dyalog">10<br />10</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="vertical-align: middle;">year of ISO<br /><ins>W</ins>eek<br />number<sup><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+            <td class="Dyalog">WW</td>
+            <td>Without century</td>
+            <td class="Dyalog">WW</td>
+            <td class="Dyalog">19</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">WWWW</td>
+            <td>With century</td>
+            <td class="Dyalog">WWWW</td>
+            <td class="Dyalog">2019</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="vertical-align: middle;">day of <ins>y</ins>ear</td>
+            <td class="Dyalog">y</td>
+            <td>1 to 3 digit numeric</td>
+            <td class="Dyalog">y</td>
+            <td class="Dyalog">63</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">yy</td>
+            <td>3 character numeric</td>
+            <td class="Dyalog">yy<br />_y</td>
+            <td class="Dyalog">063<br />63</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="vertical-align: middle;">
+                <ins>O</ins>rdinal indicator<sup><a class="footnote-ref" href="#fn:3">3</a></sup><br />for day of month</td>
+            <td class="Dyalog">O</td>
+            <td>Short</td>
+            <td class="Dyalog">O<br />o</td>
+            <td class="Dyalog">T<br />t</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">OO</td>
+            <td>Full</td>
+            <td class="Dyalog">OO<br />Oo<br />oo</td>
+            <td class="Dyalog">TH<br />Th<br />th</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="vertical-align: middle;">hours in <ins>t</ins>welve<br />hour clock</td>
+            <td class="Dyalog">t</td>
+            <td>1 or 2 digit numeric</td>
+            <td class="Dyalog">t</td>
+            <td class="Dyalog">8</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">tt</td>
+            <td>2 character numeric</td>
+            <td class="Dyalog">tt<br />_t</td>
+            <td class="Dyalog">08<br /></td>
+        </tr>
+        <tr>
+            <td rowspan="2">AM/<ins>P</ins>M Indicator</td>
+            <td class="Dyalog">P</td>
+            <td>Short</td>
+            <td class="Dyalog">P<br />p</td>
+            <td class="Dyalog">A<br />a</td>
+        </tr>
+        <tr>
+            <td class="Dyalog">PP</td>
+            <td>Full</td>
+            <td class="Dyalog">PP<br />pp</td>
+            <td class="Dyalog">AM<br />am<br /></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>The upper and lower case letters, underscore <code>_</code>, dollar <code>$</code> and percent <code>%</code> are all reserved for introducing format
+sequences, even though not all currently have meaning. The remaining, non-reserved, characters are copied to the result
+unchanged, thus the format string <code>hh:mm</code> represents the hour of the day and minute of the hour with a colon between (
+e.g. <code>12:00</code>). All characters or sequences of characters may be delimited by <code>"</code> or <code>'</code> at any point in the format
+string to prevent them being interpreted as a part of a format sequence, and, within these delimiters, two adjacent
+delimiter characters produce a single delimiter.</p>
+<p>Note: The characters <code>AaaaBbbb</code> consist of two adjacent format sequences because there is a sequence of As followed by a
+sequence of Bs. The characters <code>AaaaAaaa</code> consist of one format sequence because it only contains <code>A</code>s. It can be
+separated into two format sequences by insering an empty <code>"</code> or <code>'</code> - delimited string, e.g. <code>Aaaa""Aaaa</code>.</p>
+<h2 id="language">Language</h2>
+<p>Unless overridden, English is used for text substitutions. Different languages may be selected using the Language
+variant option and/or the use of language specifiers within the format pattern. In either case, the language is
+specified as either a two letter ISO 639-1 language code in lower case (e.g. en) or as a five character language with an
+additional underscore and two character region in upper case (e.g. en_GB). Within the format pattern, <strong>xx</strong> (where xx
+is the two or five character specifier) will switch the language of the subsequent generated text. Dictionaries for the
+following languages are built in:</p>
 <table>
 <thead>
 <tr>
@@ -71669,9 +71896,12 @@
 </tr>
 </tbody>
 </table>
-<h4 id="predefined-patterns">Predefined patterns</h4>
-<p>Any pattern can contain (in part or in whole) a named predefined pattern, which allows common date and time formats to be specified in abbreviated form. Predefined patterns may be specified on a per-language basis, allowing patterns to be tailored for the selected language.</p>
-<p>Predefined patterns are included in a pattern using <code>%</code> delimiters. For example, <code>%ISO%</code> includes the named predefined pattern <code>ISO</code>.</p>
+<h2 id="predefined-patterns">Predefined patterns</h2>
+<p>Any pattern can contain (in part or in whole) a named predefined pattern, which allows common date and time formats to
+be specified in abbreviated form. Predefined patterns may be specified on a per-language basis, allowing patterns to be
+tailored for the selected language.</p>
+<p>Predefined patterns are included in a pattern using <code>%</code> delimiters. For example, <code>%ISO%</code> includes the named predefined
+pattern <code>ISO</code>.</p>
 <p>The following global predefined pattern is built in:</p>
 <table>
 <thead>
@@ -71682,20 +71912,22 @@
 </thead>
 <tbody>
 <tr>
-<td>ISO <sup>1</sup></td>
+<td>ISO <sup><a class="footnote-ref" href="#fn:4">4</a></sup></td>
 <td>YYYY-MM-DD"T"hh:mm:ss</td>
 </tr>
 </tbody>
 </table>
-<ol>
-<li>An ISO 8601 extended format calendar date and time with no time zone designator.</li>
-</ol>
 <p>This list may be expanded in future.</p>
-<p>Additional predefined patterns may be defined using the Dictionary variant option. Predefined patterns must not contain references to other predefined patterns.</p>
-<h4 id="variant-options">Variant Options</h4>
-<p>The Language variant option specifies the language used for formatting datetimes and defaults to <code>'en'</code> (English). The option value is a two or five character name (e.g. <code>'en'</code> or <code>'en_GB'</code>). The setting may be explicitly overridden in the format pattern.</p>
-<p>The Dictionary variant option specifies a namespace which contains additional or replacement names for the months etc. and/or predefined patterns, for languages and language regions.</p>
-<p>At the top level there may be zero or more sub-namespaces with two or five character names, according to the rules for language and language regions. Within each of these, month names etc. are defined as follows:</p>
+<p>Additional predefined patterns may be defined using the Dictionary variant option. Predefined patterns must not contain
+references to other predefined patterns.</p>
+<h2 id="variant-options">Variant Options</h2>
+<p>The Language variant option specifies the language used for formatting datetimes and defaults to <code>'en'</code> (English). The
+option value is a two or five character name (e.g. <code>'en'</code> or <code>'en_GB'</code>). The setting may be explicitly overridden in the
+format pattern.</p>
+<p>The Dictionary variant option specifies a namespace which contains additional or replacement names for the months etc.
+and/or predefined patterns, for languages and language regions.</p>
+<p>At the top level there may be zero or more sub-namespaces with two or five character names, according to the rules for
+language and language regions. Within each of these, month names etc. are defined as follows:</p>
 <table>
 <thead>
 <tr>
@@ -71730,11 +71962,16 @@
 </tr>
 </tbody>
 </table>
-<p>Also at the top level of the dictionary namespace there may be a sub-namespace named Patterns and within this further sub-namespaces named <code>Global</code> and/or two or five character language names, containing definitions of predefined patterns. Predefined patterns are defined in the same way as the formatting pattern except that they may not contain references to other predefined patterns.</p>
+<p>Also at the top level of the dictionary namespace there may be a sub-namespace named Patterns and within this further
+sub-namespaces named <code>Global</code> and/or two or five character language names, containing definitions of predefined
+patterns. Predefined patterns are defined in the same way as the formatting pattern except that they may not contain
+references to other predefined patterns.</p>
 <p>If the namespace contains a definition which is supplied built into the interpreter, it replaces the built-in one.</p>
-<p>If a dictionary is incomplete (e.g. is missing one of the expected named items, or one of the named items contains too few elements) an error is signalled only if the missing content would actually be needed.</p>
-<h4 id="example-dictionary">Example dictionary</h4>
-<p>The following creates a dictionary defined by the namespace <code>dict</code> using JSON text. See the formatting examples below for uses of this dictionary.
+<p>If a dictionary is incomplete (e.g. is missing one of the expected named items, or one of the named items contains too
+few elements) an error is signalled only if the missing content would actually be needed.</p>
+<h2 id="example-dictionary">Example dictionary</h2>
+<p>The following creates a dictionary defined by the namespace <code>dict</code> using JSON text. See the formatting examples below
+for uses of this dictionary.</p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">dict_json</span>
 <span class="kt">{</span>
 <span class="w">  </span><span class="s2">&quot;Patterns&quot;</span><span class="bp">:</span><span class="w"> </span><span class="kt">{</span>
@@ -71784,20 +72021,27 @@
 <span class="w">  </span><span class="kt">}</span>
 <span class="kt">}</span>
 <span class="w">      </span><span class="nv">dict</span><span class="kd">←</span><span class="nf">⎕JSON</span><span class="w"> </span><span class="nv">dict_json</span>
-</code></pre></div></p>
-<h4 id="note-the-following">Note the following</h4>
+</code></pre></div>
+<h2 id="note-the-following">Note the following</h2>
 <ul>
-<li>In the example, the predefined pattern <code>ISOweek</code> is defined globally and is not redefined. It therefore has the same value for all languages. Similarly, <code>DateCompact</code> has the same value for all languages, but although the definition is global, it contains the pattern <code>MMM</code> and this will be substituted with the month name in the selected language.</li>
-<li>The predefined patterns <code>DateVerbose</code> is defined globally, and redefined for languages <code>fr</code> and <code>en_US</code>. The global definition will be used when any language other than <code>fr</code> and <code>en_US</code> is selected. If there was not global definition it would only be defined for <code>fr</code>, all regional variations of <code>fr</code>, and <code>en_US</code>.</li>
-<li>There is no explicit definition of patterns or names for language region <code>en_GB</code>. If this language is selected the definitions for <code>en</code> will be used.</li>
-<li>There is an explicit definition for <code>ShortMonthNames</code> for language region <code>en_US</code>. If this language is selected the definition of <code>ShortMonthNames</code> is as defined, and as for <code>en</code> for other names. As <code>en</code> is not defined in the dictionary, the built-in defaults are used.</li>
+<li>In the example, the predefined pattern <code>ISOweek</code> is defined globally and is not redefined. It therefore has the same
+  value for all languages. Similarly, <code>DateCompact</code> has the same value for all languages, but although the definition is
+  global, it contains the pattern <code>MMM</code> and this will be substituted with the month name in the selected language.</li>
+<li>The predefined patterns <code>DateVerbose</code> is defined globally, and redefined for languages <code>fr</code> and <code>en_US</code>. The global
+  definition will be used when any language other than <code>fr</code> and <code>en_US</code> is selected. If there was not global definition
+  it would only be defined for <code>fr</code>, all regional variations of <code>fr</code>, and <code>en_US</code>.</li>
+<li>There is no explicit definition of patterns or names for language region <code>en_GB</code>. If this language is selected the
+  definitions for <code>en</code> will be used.</li>
+<li>There is an explicit definition for <code>ShortMonthNames</code> for language region <code>en_US</code>. If this language is selected the
+  definition of <code>ShortMonthNames</code> is as defined, and as for <code>en</code> for other names. As <code>en</code> is not defined in the
+  dictionary, the built-in defaults are used.</li>
 </ul>
-<p>In the following examples:
+<p>In the following examples:</p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">tn</span><span class="kd">←</span><span class="m">1</span><span class="w"> </span><span class="nf">⎕DT</span><span class="w"> </span><span class="o">⊂</span><span class="m">2019</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="m">56</span>
 <span class="w">      </span><span class="nv">tn</span>
 <span class="m">43508.42843</span>
-</code></pre></div></p>
-<h4 id="english">English</h4>
+</code></pre></div>
+<h2 id="english">English</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;Dddd, DDoo Mmmm YYYY; hh:mm:ss&#39;</span><span class="w"> </span><span class="p">(</span><span class="m">1200</span><span class="na">⌶</span><span class="p">)</span><span class="w"> </span><span class="nv">tn</span>
 <span class="w"> </span><span class="nv">Wednesday</span><span class="o">,</span><span class="w"> </span><span class="m">13</span><span class="nv">th</span><span class="w"> </span><span class="nv">February</span><span class="w"> </span><span class="m">2019</span><span class="sr">;</span><span class="w"> </span><span class="m">10</span><span class="bp">:</span><span class="m">16</span><span class="bp">:</span><span class="m">56</span>
 
@@ -71810,12 +72054,12 @@
 <span class="w">      </span><span class="s1">&#39;%DateVerbose%&#39;</span><span class="p">(</span><span class="m">1200</span><span class="na">⌶⍠</span><span class="s1">&#39;Dictionary&#39;</span><span class="nv">dict</span><span class="p">)</span><span class="w"> </span><span class="nv">tn</span>
 <span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">date</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="nv">Feb</span><span class="w"> </span><span class="m">2019</span>
 </code></pre></div>
-<h4 id="english-us">English (US)</h4>
+<h2 id="english-us">English (US)</h2>
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nv">fmt</span><span class="kd">←</span><span class="s1">&#39;%DateVerbose%&#39;</span>
 <span class="w">     </span><span class="nv">fmt</span><span class="w"> </span><span class="p">(</span><span class="m">1200</span><span class="na">⌶⍠</span><span class="p">(</span><span class="s1">&#39;Dictionary&#39;</span><span class="nv">dict</span><span class="p">)(</span><span class="s1">&#39;Language&#39;</span><span class="w"> </span><span class="s1">&#39;en_US&#39;</span><span class="p">))</span><span class="nv">tn</span>
 <span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">date</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">Feb</span><span class="na">.</span><span class="w"> </span><span class="m">13</span><span class="o">,</span><span class="w"> </span><span class="m">2019</span><span class="w"> </span>
 </code></pre></div>
-<h4 id="danish">Danish</h4>
+<h2 id="danish">Danish</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;__da__Dddd, DDoo mmmm YYYY; hh:mm:ss&#39;</span><span class="w"> </span><span class="p">(</span><span class="m">1200</span><span class="na">⌶</span><span class="p">)</span><span class="w"> </span><span class="nv">tn</span>
 <span class="w"> </span><span class="nv">Onsdag</span><span class="o">,</span><span class="w"> </span><span class="m">13</span><span class="na">.</span><span class="w"> </span><span class="nv">februar</span><span class="w"> </span><span class="m">2019</span><span class="sr">;</span><span class="w"> </span><span class="m">10</span><span class="bp">:</span><span class="m">16</span><span class="bp">:</span><span class="m">56</span>
 
@@ -71823,7 +72067,7 @@
 <span class="w">      </span><span class="nv">fmt</span><span class="p">(</span><span class="m">1200</span><span class="na">⌶⍠</span><span class="s1">&#39;Language&#39;</span><span class="w"> </span><span class="s1">&#39;da&#39;</span><span class="p">)</span><span class="w"> </span><span class="nv">tn</span>
 <span class="w"> </span><span class="nv">Onsdag</span><span class="o">,</span><span class="w"> </span><span class="m">13</span><span class="na">.</span><span class="w"> </span><span class="nv">februar</span><span class="w"> </span><span class="m">2019</span><span class="sr">;</span><span class="w"> </span><span class="m">10</span><span class="bp">:</span><span class="m">16</span><span class="bp">:</span><span class="m">56</span><span class="w"> </span>
 </code></pre></div>
-<h4 id="welsh-using-the-dictionary-defined-above">Welsh (using the dictionary defined above)</h4>
+<h2 id="welsh-using-the-dictionary-defined-above">Welsh (using the dictionary defined above)</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">fmt</span><span class="kd">←</span><span class="s1">&#39;__cy__Dddd, DDoo mmmm YYYY; hh:mm:ss&#39;</span><span class="w"> </span>
 <span class="w">      </span><span class="nv">fmt</span><span class="w"> </span><span class="p">(</span><span class="m">1200</span><span class="na">⌶⍠</span><span class="s1">&#39;Dictionary&#39;</span><span class="w"> </span><span class="nv">dict</span><span class="p">)</span><span class="w"> </span><span class="nv">tn</span>
 <span class="w"> </span><span class="nv">Dydd</span><span class="w"> </span><span class="nv">Mercher</span><span class="o">,</span><span class="w"> </span><span class="m">13</span><span class="nv">eg</span><span class="w"> </span><span class="nv">chwefror</span><span class="w"> </span><span class="m">2019</span><span class="sr">;</span><span class="w"> </span><span class="m">10</span><span class="bp">:</span><span class="m">16</span><span class="bp">:</span><span class="m">56</span><span class="w"> </span>
@@ -71832,6 +72076,25 @@
 <span class="w">      </span><span class="s1">&#39;__cy__%DateVerbose%&#39;</span><span class="w"> </span><span class="p">(</span><span class="m">1200</span><span class="na">⌶⍠</span><span class="s1">&#39;Dictionary&#39;</span><span class="w"> </span><span class="nv">dict</span><span class="p">)</span><span class="w"> </span><span class="nv">tn</span>
 <span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">date</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="nv">Chw</span><span class="w"> </span><span class="m">2019</span>
 </code></pre></div>
+<div class="footnote" id="fn:1">
+<hr />
+<sup>1</sup>Natural sentence case may be specified for M (month name) and d (day name) only, and causes the text to be substituted in the case which is natural for the language; some languages (e.g. English) always capitalise the first letter of day and month names whereas others (e.g. French) do not.
+</div>
+
+<p>
+<div class="footnote" id="fn:2">
+<sup>2</sup>Dates at the start of the year may be in the final week of the previous year, and dates at the end of the year may be in the first week of the following year.
+</div>
+
+<p>
+<div class="footnote" id="fn:3">
+<sup>3</sup>An ordinal indicator is a character or group of characters following a numeral, such as (in English) the suffixes -st, -nd, -rd, -th as in 1st, 2nd, 3rd, 4th.
+</div>
+
+<p>
+<div class="footnote" id="fn:4">
+<sup>4</sup>An ISO 8601 extended format calendar date and time with no time zone designator.
+</div>
 
 
 

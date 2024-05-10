@@ -32693,7 +32693,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71334,19 +71334,19 @@
 <table>
 <thead>
 <tr>
-<th></th>
+<th>&nbsp;</th>
 <th>Entered in a Statement in a Defined Function</th>
 <th>Entered in Immediate Execution Mode</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>→LINE</td>
+<td><code>→LINE</code></td>
 <td>Continue with the specific line</td>
 <td>Restart execution at the specific line of the most recently suspended function</td>
 </tr>
 <tr>
-<td>→⍳0</td>
+<td><code>→⍳0</code></td>
 <td>Continue with the next expression</td>
 <td>No effect</td>
 </tr>
@@ -71386,39 +71386,39 @@
 </thead>
 <tbody>
 <tr>
-<td>→TEST/L1</td>
+<td><code>→TEST/L1</code></td>
 <td>Branches to label <code>L1</code> if <code>TEST</code> results in 1 but not if <code>TEST</code> results in 0.</td>
 </tr>
 <tr>
-<td>→TEST⍴L1</td>
+<td><code>→TEST⍴L1</code></td>
 <td>Similar to above.</td>
 </tr>
 <tr>
-<td>→TEST↑L1</td>
+<td><code>→TEST↑L1</code></td>
 <td>Similar to above.</td>
 </tr>
 <tr>
-<td>→L1⍴⍨TEST</td>
+<td><code>→L1⍴⍨TEST</code></td>
 <td>Similar to above.</td>
 </tr>
 <tr>
-<td>→L1⌈⍳TEST</td>
+<td><code>→L1⌈⍳TEST</code></td>
 <td>Similar to above but only if <code>⎕IO←→1</code> .</td>
 </tr>
 <tr>
-<td>→L1×⍳TEST</td>
+<td><code>→L1×⍳TEST</code></td>
 <td>Similar to above but only if <code>⎕IO←→1</code> .</td>
 </tr>
 <tr>
-<td>→(L1,L2,L3)[N]</td>
+<td><code>→(L1,L2,L3)[N]</code></td>
 <td>Unconditional branch to a selected label.</td>
 </tr>
 <tr>
-<td>→(T1,T2,T3)/L1,L2,L3</td>
+<td><code>→(T1,T2,T3)/L1,L2,L3</code></td>
 <td>Branches to the first selected label dependent on tests <code>T1</code> , <code>T2</code> , <code>T3</code> . If all tests result in 0, there is no branch.</td>
 </tr>
 <tr>
-<td>→N⌽L1,L2,L3</td>
+<td><code>→N⌽L1,L2,L3</code></td>
 <td>Unconditional branch to the first label after rotation.</td>
 </tr>
 </tbody>

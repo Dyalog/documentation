@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,41 +71305,46 @@
 
 <h1 class="heading"><span class="name">WebSocketUpgrade</span><span class="command">Event 841</span></h1>
 
-<p>Applies To: <a href="../../objects/htmlrenderer/">HTMLRenderer</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/htmlrenderer/">HTMLRenderer</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This event is reported when the client component of an <a href="../../objects/htmlrenderer/">HTMLRenderer</a> object opens a WebSocket and the requested URL matches a pattern specified by the <a href="../../properties/interceptedurls/">InterceptedURLs</a> property. If there is no match, the connection request is processed as an external request by the <a href="https://en.wikipedia.org/wiki/Chromium_Embedded_Framework">Chromium Embedded Framework (CEF).</a></p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 6-element vector as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'WebSocketUpgrade'</code> or 841</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>ID</td>
 <td>Character vector containing the ID of the WebSocket</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>URL</td>
 <td>The requested URL of the WebSocket</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Headers</td>
 <td>ASCII including CRLF</td>
 </tr>
 <tr>
-<td>[6]</td>
+<td><code>[6]</code></td>
 <td>Type</td>
 <td>Character vector <code>'auto'</code> or <code>'manual'</code></td>
 </tr>

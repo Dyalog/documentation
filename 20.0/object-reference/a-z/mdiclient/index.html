@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,8 +71305,25 @@
 
 <h1 class="heading"><span class="name">MDIClient</span><span class="command">Object</span></h1>
 
-<p><a href="../../parentlists/mdiclient/">Parents</a> <a href="../../childlists/mdiclient/">Children</a> <a href="../../proplists/mdiclient/">Properties</a> <a href="../../methodlists/mdiclient/">Methods</a> <a href="../../eventlists/mdiclient/">Events</a></p>
-<p>Purpose: Implements Multiple Document Interface (MDI) behaviour.</p>
+<table>
+<tbody>
+<tr>
+<td><a href="../../parentlists/mdiclient/">Parents</a></td>
+<td><a href="../../childlists/mdiclient/">Children</a></td>
+<td><a href="../../proplists/mdiclient/">Properties</a></td>
+<td><a href="../../methodlists/mdiclient/">Methods</a></td>
+<td><a href="../../eventlists/mdiclient/">Events</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>Purpose:</td>
+<td>Implements Multiple Document Interface (MDI) behaviour.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The multiple-document interface (MDI) is a document-oriented interface that is commonly used by word-processors, spreadsheets and other applications that deal with <em>documents</em>. An MDI application allows the user to display multiple documents at the same time, with each document displayed in its own window.</p>
 <p>The MDIClient object is a container object that effectively specifies the client area within the parent <a href="../form/">Form</a> in which the <a href="../subform/">SubForm</a> are displayed. The MDIClient object also imposes special MDI behaviour which is quite different from that where a <a href="../subform/">SubForm</a> is simply the child of another <a href="../form/">Form</a>.</p>
@@ -71316,13 +71333,11 @@
 <p>The <a href="../../properties/mdiactive/">MDIActive</a> and <a href="../../properties/mdiactiveobject/">MDIActiveObject</a> properties contain the name of and a ref to the <a href="../subform/">SubForm</a> that currently has the focus. You may set these properties as well as query them.</p>
 <p>You can call methods which cause the MDIClient to organise its child <a href="../subform/">SubForm</a>s in some way. These methods are as follows:</p>
 <table>
-<thead>
-<tr>
-<th><a href="../../methodorevents/mdicascade/">MDICascade</a></th>
-<th>Causes the MDIClient to organise its child Forms in an overlapping manner.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td><a href="../../methodorevents/mdicascade/">MDICascade</a></td>
+<td>Causes the MDIClient to organise its child Forms in an overlapping manner.</td>
+</tr>
 <tr>
 <td><a href="../../methodorevents/mditile/">MDITile</a></td>
 <td>Causes the MDIClient to arrange its child Forms as a row or column.</td>

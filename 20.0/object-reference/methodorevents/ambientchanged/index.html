@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,32 +71327,38 @@
 
 <h1 class="heading"><span class="name">AmbientChanged</span><span class="command">Event 533</span></h1>
 
-<p>Applies To: <a href="../../objects/activexcontainer/">ActiveXContainer</a> <a href="../../objects/activexcontrol/">ActiveXControl</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/activexcontainer/">ActiveXContainer</a></td>
+<td><a href="../../objects/activexcontrol/">ActiveXControl</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when any of the ambient properties change in an application hosting an <a href="../../objects/activexcontrol/">ActiveXControl</a> object. The new values of the ambient properties are available from the <a href="../../properties/fontobj/">FontObj</a>, <a href="../../properties/fcol/">BCol</a> and <a href="../../properties/bcol/">FCol</a> properties of the <a href="../../objects/activexcontainer/">ActiveXContainer</a>.</p>
 <p>This event is reported for information alone. You may not disable or nullify the event by setting the action code for the event to <code>¯1</code> or by returning 0 from a callback function.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 4-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'AmbientChanged'</code> or 533</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Property code</td>
 <td>integer</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Description</td>
 <td>character vector</td>
 </tr>
@@ -71369,22 +71375,22 @@
 </thead>
 <tbody>
 <tr>
-<td>¯701</td>
+<td><code>¯701</code></td>
 <td>DISPID_AMBIENT_BACKCOLOR</td>
 <td>BCol has changed</td>
 </tr>
 <tr>
-<td>¯703</td>
+<td><code>¯703</code></td>
 <td>DISPID_AMBIENT_FORECOLOR</td>
 <td>FCol has changed</td>
 </tr>
 <tr>
-<td>¯705</td>
+<td><code>¯705</code></td>
 <td>DISPID_AMBIENT_FONT</td>
 <td>Font has changed</td>
 </tr>
 <tr>
-<td>¯1</td>
+<td><code>¯1</code></td>
 <td>DISPID_AMBIENT_UNKNOWN</td>
 <td>Unknown</td>
 </tr>

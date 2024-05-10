@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,21 +71327,26 @@
 
 <h1 class="heading"><span class="name">TCPSendPicture</span><span class="command">Method 380</span></h1>
 
-<p>Applies To: <a href="../../objects/tcpsocket/">TCPSocket</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/tcpsocket/">TCPSocket</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This method is used to transmit a picture represented by a <a href="../../objects/bitmap/">Bitmap</a> object to a TCP/IP socket. The picture may be transmitted in GIF or in PNG format.</p>
 <p>The argument to TCPSendPicture is a 1 or 2-element array as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Bitmap name</th>
-<th>character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Bitmap name</td>
+<td>character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Picture format</td>
 <td>character vector, <code>'GIF'</code> or <code>'PNG'</code></td>
 </tr>

@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71332,16 +71332,14 @@
 <p>This method is used to display the standard Windows font selection dialog box.</p>
 <p>The argument to ChooseFont is <code>⍬</code> or a 1 or 2-element array as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Printer name</th>
-<th>character scalar or vector.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Printer name</td>
+<td>character scalar or vector.</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Modify flag</td>
 <td>0 or 1.</td>
 </tr>
@@ -71351,39 +71349,37 @@
 <p>The dialog box is initialised with the properties of the <a href="../../objects/font/">Font</a> object specified in the first element of the event message.</p>
 <p>When the user presses the "OK" button, the "Cancel" button or closes the dialog box, ChooseFont terminates. Its result is either 0 (user pressed "Cancel") or a 2-element vector. In the latter case, the first element is an 8-element array that describes the selected font as described below, and the second element is a 3-element RGB colour vector.</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Face name of selected font (character vector)</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Face name of selected font (character vector)</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Character height in pixels (integer)</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Fixed width or not (Boolean)</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Italic or not (Boolean)</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Underline or not (Boolean)</td>
 </tr>
 <tr>
-<td>[6]</td>
+<td><code>[6]</code></td>
 <td>Weight (integer)</td>
 </tr>
 <tr>
-<td>[7]</td>
+<td><code>[7]</code></td>
 <td>Angle of rotation (integer)</td>
 </tr>
 <tr>
-<td>[8]</td>
+<td><code>[8]</code></td>
 <td>Character set (see <a href="../../properties/charset/">CharSet</a> )</td>
 </tr>
 </tbody>

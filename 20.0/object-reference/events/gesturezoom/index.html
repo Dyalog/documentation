@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71310,31 +71310,29 @@
 <p>This event is reported when the user touches  two fingers on an object and moves them apart or towards each other.</p>
 <p>The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, or supplied as the right argument to your callback function, is a 5-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'GestureZoom'</code> or 493</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Flags</td>
 <td>integer which reports the state of the gesture</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Location</td>
 <td>2-element integer vector containing the y and x-position respectively of the centre point of the zoom (the point midway between the two fingers). These are reported in pixel coordinates relative to the origin (top-left corner) of the object reporting the event.</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Distance</td>
 <td>2-element integer vector containing the high and low parts (words) of a 64-bit integer that indicates the distance between the two fingers.</td>
 </tr>
@@ -71342,26 +71340,24 @@
 </table>
 <p>The Flags parameter [3] which reports the state of the Gesture, is an integer with the value 0, 1 (<em>GF_BEGIN</em>),or 4 (<em>GF_END</em>) with the following meanings:</p>
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td></td>
+<td>Name</td>
+<td>Value</td>
+<td>Description</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
 <td>0</td>
 <td>A gesture is in progress</td>
 </tr>
 <tr>
-<td>GF_BEGIN</td>
+<td><code>GF_BEGIN</code></td>
 <td>1</td>
 <td>A gesture is starting.</td>
 </tr>
 <tr>
-<td>GF_END</td>
+<td><code>GF_END</code></td>
 <td>4</td>
 <td>A gesture has finished.</td>
 </tr>
@@ -71369,9 +71365,7 @@
 </table>
 <p>When the user first touches two fingers on an object and begins to move them apart or towards each other, the object generates a GestureZoom event with a <code>Flags</code> parameter of 1 (<code>GF_BEGIN</code>). As the user continues to moves the fingers apart or towards each other, the object generates a series of GestureZoom events with a <code>Flags</code> parameter of 0.  When the user lifts one or both fingers away, the object generates it generates a final GestureZoom event, with a <code>Flags</code> parameter of 4 (<code>GF_END</code>).</p>
 <p>No other event will be reported between the start and end of a series of GestureZoom events.</p>
-<p>The associated callback is run <strong>immediately</strong> while the windows notification is still on the stack. See 
-Interface Guide: </p>
-<p>High-Priority Callback Functions<a href="../../../interface-guide/introduction/high-priority-callbacks">High-Priority Callback Functions</a>.</p>
+<p>The associated callback is run <strong>immediately</strong> while the windows notification is still on the stack. See <a href="../../../interface-guide/introduction/high-priority-callbacks">High-Priority Callback Functions</a>.</p>
 <p>Returning zero from the callback disables any default handling by the operating system.</p>
 
 

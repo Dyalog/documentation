@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71329,9 +71329,7 @@ value of its <a href="../size/">Size</a> property gives you the
 resolution of your screen. Note that pixels are numbered from 0
 to (Size -1).</p>
 <p>If Coord is <code>'ScaledPixel'</code>  the number of pixels specified for <a href="../posn/">Posn</a>, <a href="../size/">Size</a>,  and other such properties will be automatically scaled by Dyalog APL according to the user's chosen display scaling factor. So if you specify an Edit object to be 80 pixels wide and 20 pixels high, and the user's scaling factor is 150%, Dyalog will automatically draw it 120 pixels wide and 30 pixels high. Dyalog will also de-scale coordinate values reported by <code>⎕WG</code> and  event messages.</p>
-<p>If Coord is <code>'Pixel'</code>, it is interpreted as either <code>'RealPixel'</code> or <code>'ScaledPixel'</code> according to the value of the <strong>Dyalog_Pixel_Type</strong> parameter, which is either ScaledPixel or RealPixel. See 
-Installation &amp; Configuration Guide: </p>
-<p>Dyalog_Pixel_Type parameter<a href="../../../windows-installation-and-configuration-guide/configuration-parameters/dyalog-pixel-type">Dyalog_Pixel_Type</a>.</p>
+<p>If Coord is <code>'Pixel'</code>, it is interpreted as either <code>'RealPixel'</code> or <code>'ScaledPixel'</code> according to the value of the <strong>Dyalog_Pixel_Type</strong> parameter, which is either ScaledPixel or RealPixel. See <a href="../../../windows-installation-and-configuration-guide/configuration-parameters/dyalog-pixel-type">Dyalog_Pixel_Type</a>.</p>
 <p><strong>If this parameter is not specified, the default is RealPixel. So by default, when you set Coord to Pixel, it will be treated as RealPixel.</strong></p>
 <p>If Coord is <code>'User'</code>, the origin and
 scale of the co-ordinate system are defined by the values of the <a href="../yrange/">YRange</a> and <a href="../xrange/">XRange</a> properties <strong>of the parent

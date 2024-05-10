@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,26 +71327,32 @@
 
 <h1 class="heading"><span class="name">GetTypeInfo</span><span class="command">Method 553</span></h1>
 
-<p>Applies To: <a href="../../objects/ocxclass/">OCXClass</a> <a href="../../objects/oleclient/">OLEClient</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/ocxclass/">OCXClass</a></td>
+<td><a href="../../objects/oleclient/">OLEClient</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This method is used to obtain information about a type list supported by a COM object.</p>
 <p>The argument to GetTypeInfo is a single item as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Type List name(s)</th>
-<th>see below</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Type List name(s)</td>
+<td>see below</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Value</td>
 <td>(usually) numeric</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Description</td>
 <td>character vector</td>
 </tr>
@@ -71355,21 +71361,19 @@
 <p><em>Type List name(s)</em> is a simple character vector or a vector of character vectors specifying one or more names of type lists supported by the object.</p>
 <p>The result is a nested vector with one element per <a href="../../properties/typelist/">Type List</a>. Each element of this vector is itself a 3-element vector of character vectors made up as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Name of Constant</th>
-<th>character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Name of Constant</td>
+<td>character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Value</td>
 <td>(usually) numeric</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Description</td>
 <td>character vector</td>
 </tr>

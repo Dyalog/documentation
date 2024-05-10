@@ -32740,7 +32740,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71411,7 +71411,7 @@
 <li><code>r</code> specifies the rank of the right argument cells when <code>f</code> is applied dyadically</li>
 </ul>
 <p>If <code>B</code> is a two item vector <code>q r</code>, it is implicitly extended to <code>r q r</code>. If  <code>B</code> has a single item <code>r</code>, it is implicitly extended to <code>r r r</code>.</p>
-<p>If an item <code>k</code> of <code>B</code> is zero or positive it selects k-cells of the corresponding argument. If it is negative, it selects (r+k)-cells where <code>r</code> is the rank of the corresponding argument. A value of <code>¯1</code> selects major cells.  For further information, see <a href="../../../programming-reference-guide/introduction/arrays/cells-and-subarrays">Cells and Sub-arrays</a>.</p>
+<p>If an item <code>k</code> of <code>B</code> is zero or positive it selects k-cells of the corresponding argument. If it is negative, it selects (r+k)-cells where <code>r</code> is the rank of the corresponding argument. A value of <code>¯1</code> selects major cells.  For further information, see <a href="../../../programming-reference-guide/introduction/arrays/cells-and-subarrays">"Cells and Sub-arrays"</a>.</p>
 <p>If <code>X</code> is omitted, <code>f</code> may be any monadic function that returns a result. <code>Y</code> may be any array. The Rank operator <code>⍤</code> applies function <code>f</code> successively to the sub-arrays in <code>Y</code> specified by <code>p</code> (i.e. the first item of <code>B</code>, as specified or implicitly extended).</p>
 <p>If <code>X</code> is specified, it may be any array and <code>f</code> may be any dyadic function that returns a result. <code>Y</code> may be any array. In this case, the Rank operator applies function <code>f</code> successively between the sub-arrays in <code>X</code> specified by <code>q</code> and the sub-arrays in <code>Y</code> specified by <code>r</code>.</p>
 <p>The sub-arrays of <code>R</code> are the results of the individual applications of <code>f</code>. If these results differ in rank or shape, they are extended to a common rank and shape in the manner of Mix. See <a href="../../primitive-functions/mix/">Mix</a>.</p>

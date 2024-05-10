@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,26 +71305,33 @@
 
 <h1 class="heading"><span class="name">BadValue</span><span class="command">Event 180</span></h1>
 
-<p>Applies To: <a href="../../objects/buttonedit/">ButtonEdit</a> <a href="../../objects/edit/">Edit</a> <a href="../../objects/spinner/">Spinner</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/buttonedit/">ButtonEdit</a></td>
+<td><a href="../../objects/edit/">Edit</a></td>
+<td><a href="../../objects/spinner/">Spinner</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported by an <a href="../../objects/edit/">Edit</a> or <a href="../../objects/spinner/">Spinner</a> object  when the user enters invalid data into the object and then switches focus to another control or to another application.  Data is invalid if it conflicts with the <a href="../../properties/fieldtype/">FieldType</a> property, or for a <a href="../../objects/spinner/">Spinner</a> if it is outside the range specified by the <a href="../../properties/limits/">Limits</a> property.</p>
 <p>The default action of the event is to sound the bell (beep). You can disable this action by returning 0 from a callback function or by setting its action code to <code>¯1</code>. Note that in neither case is the <a href="../../properties/value/">Value</a> property of the object updated. The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, or supplied as the right argument to your callback function, is a 3-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'BadValue'</code> or 180</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Object name</td>
 <td>character vector</td>
 </tr>

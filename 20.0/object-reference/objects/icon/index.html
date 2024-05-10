@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,8 +71327,25 @@
 
 <h1 class="heading"><span class="name">Icon</span><span class="command">Object</span></h1>
 
-<p><a href="../../parentlists/icon/">Parents</a> <a href="../../childlists/icon/">Children</a> <a href="../../proplists/icon/">Properties</a> <a href="../../methodlists/icon/">Methods</a> <a href="../../eventlists/icon/">Events</a></p>
-<p>Purpose: This object defines an icon.</p>
+<table>
+<tbody>
+<tr>
+<td><a href="../../parentlists/icon/">Parents</a></td>
+<td><a href="../../childlists/icon/">Children</a></td>
+<td><a href="../../proplists/icon/">Properties</a></td>
+<td><a href="../../methodlists/icon/">Methods</a></td>
+<td><a href="../../eventlists/icon/">Events</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>Purpose:</td>
+<td>This object defines an icon.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The <a href="../../properties/file/">File</a> property specifies the name of an icon  file (.ICO. .GIF or .PNG), or the name of a DLL or EXE file and the identity of the icon within it.</p>
 <p>The Style property identifies the size of the icon and must be <code>'Large'</code> or <code>'Small'</code>. The former specifies a 32x32 icon and is the default; the latter specifies a 16x16 icon. The size of the icon is not embedded within the icon data, so it is <strong>essential</strong> to specify Style correctly. Note that a single file may contain both sizes of an icon. Style is only relevant when loading an Icon from file.</p>
@@ -71338,15 +71355,13 @@
 <p><a href="../../properties/cbits/">CBits</a> is a rank-2 numeric array whose dimensions represent the rows and columns of pixels in the Icon. The values in <a href="../../properties/cbits/">CBits</a> represent the colour and of each pixel and also its transparency.</p>
 <p><a href="../../properties/bits/">Bits</a> is an integer matrix whose elements define the colours of each pixel in the icon in terms of their (0-origin) indices into <a href="../../properties/cmap/">CMap</a>. When the icon is displayed on the screen, the way in which these colours combine with those currently displayed on the screen (the background) is specified by <a href="../../properties/mask/">Mask</a>. This is a Boolean matrix of the same size as <a href="../../properties/bits/">Bits</a>. The following table shows how the colour of each resulting pixel is determined.</p>
 <table>
-<thead>
-<tr>
-<th>Bits</th>
-<th>Colour</th>
-<th>0</th>
-<th>Colour</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Bits</td>
+<td>Colour</td>
+<td>0</td>
+<td>Colour</td>
+</tr>
 <tr>
 <td>Mask</td>
 <td>0</td>

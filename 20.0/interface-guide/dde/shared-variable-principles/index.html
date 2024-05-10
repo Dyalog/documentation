@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71459,27 +71459,27 @@
 <tbody>
 <tr>
 <td>123 ⎕SVO 'X'</td>
-<td></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>1</td>
-<td></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
-<td></td>
+<td>&nbsp;</td>
 <td>345 ⎕SVO 'X'</td>
 </tr>
 <tr>
-<td></td>
+<td>&nbsp;</td>
 <td>2</td>
 </tr>
 <tr>
 <td>⎕SVO 'X'</td>
-<td></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>2</td>
-<td></td>
+<td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -71492,23 +71492,21 @@
 </code></pre></div>
 <p>The state vector will have one of the following values:</p>
 <table>
-<thead>
-<tr>
-<th>0 0 0 0</th>
-<th>The variable is not shared</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>0 0 1 1</td>
+<td><code>0 0 0 0</code></td>
+<td>The variable is not shared</td>
+</tr>
+<tr>
+<td><code>0 0 1 1</code></td>
 <td>Both partners know the current value</td>
 </tr>
 <tr>
-<td>1 0 1 0</td>
+<td><code>1 0 1 0</code></td>
 <td>You have set the value, but your partner has yet to use it.</td>
 </tr>
 <tr>
-<td>0 1 0 1</td>
+<td><code>0 1 0 1</code></td>
 <td>Your partner has set the variable but you have not yet used it.</td>
 </tr>
 </tbody>
@@ -71522,23 +71520,21 @@
 </code></pre></div>
 <p>The access control vector is a 4-element Boolean vector whose elements specify access control as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>1 means that you cannot set the variable until your partner has used it.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>1 means that you cannot set the variable until your partner has used it.</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>1 means that your partner cannot set the variable until you have used it.</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>1 means that you cannot use the variable until your partner has set it.</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>1 means that your partner cannot use the variable until you have set it.</td>
 </tr>
 </tbody>

@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,36 +71327,42 @@
 
 <h1 class="heading"><span class="name">GetTipText</span><span class="command">Event 325</span></h1>
 
-<p>Applies To: <a href="../../objects/listview/">ListView</a> <a href="../../objects/treeview/">TreeView</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/listview/">ListView</a></td>
+<td><a href="../../objects/treeview/">TreeView</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported by a <a href="../../objects/treeview/">TreeView</a> or <a href="../../objects/listview/">ListView</a> object just before it displays a tip for a specific row.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 5-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'GetTipText'</code> or 325</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Item index</td>
 <td>Integer ( <code>⎕IO</code> dependent)</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>SubItem index</td>
 <td>Integer ( <code>⎕IO</code> dependent, currently always equal to <code>⎕IO</code> )</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>TipText</td>
 <td>The text to be displayed.</td>
 </tr>
@@ -71365,9 +71371,7 @@
 <p>Modifying and returning the 5<sup>th</sup> element of the argument to the callback function allows the application to change the displayed tip.</p>
 <p>The text can be set to a character array of rank 2 or less.</p>
 <p>The default processing for the event is to display the default tip (if there is one).</p>
-<p>The associated callback is run <strong>immediately</strong> while the windows notification is still on the stack. See 
-Interface Guide: </p>
-<p>High-Priority Callback Functions<a href="../../../interface-guide/introduction/high-priority-callbacks">High-Priority Callback Functions</a>.</p>
+<p>The associated callback is run <strong>immediately</strong> while the windows notification is still on the stack. See <a href="../../../interface-guide/introduction/high-priority-callbacks">High-Priority Callback Functions</a>.</p>
 
 
 

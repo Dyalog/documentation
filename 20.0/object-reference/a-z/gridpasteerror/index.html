@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,7 +71305,14 @@
 
 <h1 class="heading"><span class="name">GridPasteError</span><span class="command">Event 194</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user presses Shift+Insert and
 there is data in the clipboard, but the system is unable to paste the data into
@@ -71318,41 +71325,39 @@ Setting the action code of this event to <code>¯1</code>, or returning a 0 from
 or supplied as the right argument to your callback function, is a 6-element
 vector as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'GridPasteError'</code> or 194</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Values</td>
 <td>Contents of the clipboard.</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>CellSet flags</td>
 <td>Boolean array indicating which elements of the clipboard data are         empty.</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Start</td>
 <td>2-element integer vector containing the row, column address of the top         left cell in the selected block. If there is no selection, this is the         address of the current cell (CurCell).</td>
 </tr>
 <tr>
-<td>[6]</td>
+<td><code>[6]</code></td>
 <td>End</td>
 <td>2-element integer vector containing the row, column address of the         bottom right cell in the selected block. If there is no selection, this         is the address of the bottom right cell of the block starting at the         current cell that will be overwritten</td>
 </tr>
 <tr>
-<td>[7]</td>
+<td><code>[7]</code></td>
 <td>Error Number</td>
 <td><code>4 (RANK ERROR)</code> or <code>5         (LENGTH ERROR)</code></td>
 </tr>

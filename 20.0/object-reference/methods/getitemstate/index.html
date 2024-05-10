@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,21 +71305,35 @@
 
 <h1 class="heading"><span class="name">GetItemState</span><span class="command">Method 306</span></h1>
 
-<p>Applies To: <a href="../../objects/listview/">ListView</a> <a href="../../objects/treeview/">TreeView</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/listview/">ListView</a></td>
+<td><a href="../../objects/treeview/">TreeView</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This method is used to obtain the status of a particular item in a <a href="../../objects/listview/">ListView</a> or <a href="../../objects/treeview/">TreeView</a> object.</p>
 <p>The argument for GetItemState is a single item as follows:</p>
-<p>[1] Item number Integer</p>
+<table>
+<tbody>
+<tr>
+<td><code>[1]</code></td>
+<td>Item number</td>
+<td>Integer</td>
+</tr>
+</tbody>
+</table>
 <p><em>Item number</em> is the index of the item concerned. Be aware that this is index origin dependent.</p>
 <p>The result indicates the state of the item as the sum of one or more of the following codes:</p>
 <table>
-<thead>
-<tr>
-<th><code>¯1</code></th>
-<th>Error (most likely the Item number is invalid)</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td><code>¯1</code></td>
+<td>Error (most likely the Item number is invalid)</td>
+</tr>
 <tr>
 <td>1</td>
 <td>Item has the focus</td>
@@ -71346,7 +71360,7 @@
 </tr>
 <tr>
 <td>4096</td>
-<td>Item is checked. See <a href="../../properties/checkboxes/">CheckBoxes</a></td>
+<td>Item is checked. See <a href="../../properties/checkboxes/">"CheckBoxes"</a></td>
 </tr>
 </tbody>
 </table>

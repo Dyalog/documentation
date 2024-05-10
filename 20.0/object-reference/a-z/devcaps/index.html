@@ -32674,7 +32674,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,14 +71327,38 @@
 
 <h1 class="heading"><span class="name">DevCaps</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/printer/">Printer</a> <a href="../../objects/root/">Root</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/printer/">Printer</a></td>
+<td><a href="../../objects/root/">Root</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This property reports the device capabilities of the screen or printer. It is a 4-element nested vector as follows:</p>
-<p>| [1] | Height and Width:2-element numeric vector of device in pixels |
-| --- | --- | ---  |
-| [2] | Height and Width:2-element numeric vector of device in mm |
-| [3] | Number of colours or <code>¯1</code> |
-| [4] | Windows scaling factor as a percentage (100=no scaling). This value is the same as reported in the Display section of the Windows Control Panel |  |</p>
+<table>
+<tbody>
+<tr>
+<td><code>[1]</code></td>
+<td colspan="2">Height and Width:2-element numeric vector of device in pixels</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
+<td colspan="2">Height and Width:2-element numeric vector of device in mm</td>
+</tr>
+<tr>
+<td><code>[3]</code></td>
+<td colspan="2">Number of colours or <code>¯1</code></td>
+</tr>
+<tr>
+<td><code>[4]</code></td>
+<td>Windows scaling factor as a percentage (100=no scaling). This value is the same as reported in the Display section of the Windows Control Panel</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <p>This property is useful if you want to make objects of a specific physical size. For example, to draw a 10mm square in a <a href="../../objects/form/">Form </a><code>'F'</code>                  at (5,5):
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Size</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">10</span><span class="o">×</span><span class="w"> </span><span class="o">⊃÷</span><span class="na">/</span><span class="m">2</span><span class="o">↑</span><span class="s1">&#39;.&#39;</span><span class="w"> </span><span class="nf">⎕WG</span><span class="w"> </span><span class="s1">&#39;DevCaps&#39;</span>
 <span class="w">      </span><span class="s1">&#39;F.R&#39;</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">&#39;Rect&#39;</span><span class="w"> </span><span class="p">(</span><span class="m">5</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="nv">Size</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Coord&#39;</span><span class="w"> </span><span class="s1">&#39;Pixel&#39;</span><span class="p">)</span>

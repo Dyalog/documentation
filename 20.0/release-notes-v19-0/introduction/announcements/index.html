@@ -32810,7 +32810,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71554,11 +71554,6 @@
 <h3 id="hash-and-lookup-tables">Hash and Lookup Tables</h3>
 <p>In the next major version of Dyalog the performance of the set functions will be improved. The new code will involve increasing the amount of workspace allocated to the internal tables used by these functions. These tables are described using  the terms <em>hash table</em> and <em>lookup table</em>. The latter refers to internal tables that do not require hashing.</p>
 <p>For more information, see <a href="../../../programming-reference-guide/introduction/search-functions-and-hash">Search Functions and Hash Tables</a> and <a href="../../../language-reference-guide/the-i-beam-operator/hash-array">Hash Array</a>.</p>
-<p>For more information, see 
-Programming Reference Guide: </p>
-<p>Search Functions and Hash Tables and 
-Language Reference Guide: </p>
-<p>Hash Array.</p>
 <p>The proposed size increase may potentially cause <code>WS FULL</code> errors or may change the frequency of workspace compactions.</p>
 <p>To allow the user to evaluate the effect of this future change on their applications, two new I-beam functions have been provided. These functions increase the space allocated to the internal tables for the sole purpose of testing these potential effects. The new I-beams may affect performance either directly or by triggering a change of algorithm, but should not be used for that sole purpose since performance degradation in some cases cannot be excluded. See <a href="../../language-reference-changes/hash-table-size/">Hash Table Size</a> and <a href="../../language-reference-changes/lookup-table-size/">Lookup Table Size</a>.</p>
 <p>When the next major release is published, it is anticipated that few, if any users will notice negative effects from changing the internal table sizes. Rather, they will benefit from the improved performance that will result.</p>

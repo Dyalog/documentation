@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,14 @@
 
 <h1 class="heading"><span class="name">ResizeCols</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This property determines whether or not the user may resize columns in the <a href="../../objects/grid/">Grid</a>. It is a Boolean scalar or vector with one element per column. A value of 1 indicates that the corresponding column is resizable by the user. A value of  0 means that the corresponding column may not be resized by the user.</p>
 <p>If a column is resizable, the cursor changes to a double headed arrow when the mouse pointer is placed over the right-hand border of the column title. The user may resize the column by dragging this border. The user may also resize a column by double-clicking over its right-hand border. This causes the column to be resized to fit the data and the width of the column is automatically adjusted to display the widest value in any of its cells. Either operation generates a <a href="../../methodorevents/setcolsize/">SetColSize</a> event.</p>

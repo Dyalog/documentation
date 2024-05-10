@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,21 +71327,26 @@
 
 <h1 class="heading"><span class="name">PageBack</span><span class="command">Event 353</span></h1>
 
-<p>Applies To: <a href="../../objects/propertypage/">PropertyPage</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/propertypage/">PropertyPage</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user switches from one <a href="../../objects/propertypage/">PropertyPage</a> to another in a Wizard <a href="../../objects/propertysheet/">PropertySheet</a> object by clicking its Back button. This event is reported by the old page <em>after</em> the page change has occurred and the page change may not be disabled by a callback function.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 2-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'PageBack'</code> or 353</td>
 </tr>

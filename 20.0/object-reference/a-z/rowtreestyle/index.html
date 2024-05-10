@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,50 +71305,70 @@
 
 <h1 class="heading"><span class="name">RowTreeStyle</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>RowTreeStyle specifies the visible attributes of the tree displayed in the Row titles of a <a href="../../objects/grid/">Grid</a>.</p>
 <p>The value of the RowTreeStyle property is a character vector chosen from the following :</p>
 <table>
-<thead>
-<tr>
-<th>'LinesOnly'</th>
-<th>Only the lines of the tree structure are drawn.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>'ImagesOnly'</td>
+<td><code>'LinesOnly'</code></td>
+<td>Only the lines of the tree structure are drawn.</td>
+</tr>
+<tr>
+<td><code>'ImagesOnly'</code></td>
 <td>Only the images of nodes with children are drawn.</td>
 </tr>
 <tr>
-<td>'ImagesAndLines'</td>
+<td><code>'ImagesAndLines'</code></td>
 <td>Both lines and images for nodes with children are drawn.</td>
 </tr>
 <tr>
-<td>'AllImagesOnly'</td>
+<td><code>'AllImagesOnly'</code></td>
 <td>Images for all nodes are drawn.</td>
 </tr>
 <tr>
-<td>'AllImagesAndLines'</td>
+<td><code>'AllImagesAndLines'</code></td>
 <td>Both lines and images for all nodes are drawn.</td>
 </tr>
 </tbody>
 </table>
 <p>The default value, <code>'ImagesAndLines'</code>, is illustrated in the first picture below. Other values are displayed in subsequent pictures.</p>
-<p><img alt="gridtree3" src="../../img/gridtree3.gif" /></p>
+<figure id="_figure-1">
+<img alt="gridtree3" src="../../img/gridtree3.gif" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <div class="highlight"><pre><span></span><code><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">RowTreeStyle</span><span class="kd">←</span><span class="s1">&#39;LinesOnly&#39;</span>
 </code></pre></div>
-<p><img alt="gridtree4" src="../../img/gridtree4.gif" /></p>
+<figure id="_figure-2">
+<img alt="gridtree4" src="../../img/gridtree4.gif" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <div class="highlight"><pre><span></span><code><span class="nv">f</span><span class="na">.</span><span class="nv">g</span><span class="na">.</span><span class="nv">RowTreeStyle</span><span class="kd">←</span><span class="s1">&#39;ImagesOnly&#39;</span>
 </code></pre></div>
-<p><img alt="gridtree5" src="../../img/gridtree5.gif" /></p>
+<figure id="_figure-3">
+<img alt="gridtree5" src="../../img/gridtree5.gif" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <div class="highlight"><pre><span></span><code><span class="nv">f</span><span class="na">.</span><span class="nv">g</span><span class="na">.</span><span class="nv">RowTreeStyle</span><span class="kd">←</span><span class="s1">&#39;AllImagesOnly&#39;</span>
 </code></pre></div>
-<p><img alt="gridtree6" src="../../img/gridtree6.gif" /></p>
+<figure id="_figure-4">
+<img alt="gridtree6" src="../../img/gridtree6.gif" />
+<figcaption><span>Figure&nbsp;4</span></figcaption>
+</figure>
 <div class="highlight"><pre><span></span><code><span class="nv">f</span><span class="na">.</span><span class="nv">g</span><span class="na">.</span><span class="nv">RowTreeStyle</span><span class="kd">←</span><span class="s1">&#39;AllImagesAndLines&#39;</span>
 </code></pre></div>
-<p><img alt="gridtree7" src="../../img/gridtree7.gif" /></p>
+<figure id="_figure-5">
+<img alt="gridtree7" src="../../img/gridtree7.gif" />
+<figcaption><span>Figure&nbsp;5</span></figcaption>
+</figure>
 
 
 

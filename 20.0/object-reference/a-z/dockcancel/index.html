@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,30 +71305,37 @@
 
 <h1 class="heading"><span class="name">DockCancel</span><span class="command">Event 485</span></h1>
 
-<p>Applies To: <a href="../../objects/coolband/">CoolBand</a> <a href="../../objects/coolbar/">CoolBar</a> <a href="../../objects/form/">Form</a> <a href="../../objects/subform/">SubForm</a> <a href="../../objects/toolcontrol/">ToolControl</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/coolband/">CoolBand</a></td>
+<td><a href="../../objects/coolbar/">CoolBar</a></td>
+<td><a href="../../objects/form/">Form</a></td>
+<td><a href="../../objects/subform/">SubForm</a></td>
+<td><a href="../../objects/toolcontrol/">ToolControl</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported by a client object when the user aborts a docking operation by pressing Escape.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 2-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'DockCancel'</code> or 485</td>
 </tr>
 </tbody>
 </table>
 <p>This event is reported for information only and cannot be cancelled or inhibited in any way.</p>
-<p>The associated callback is run <strong>immediately</strong> while the windows notification is still on the stack. See 
-Interface Guide: </p>
-<p>High-Priority Callback Functions<a href="../../../interface-guide/introduction/high-priority-callbacks">High-Priority Callback Functions</a>.</p>
+<p>The associated callback is run <strong>immediately</strong> while the windows notification is still on the stack. See <a href="../../../interface-guide/introduction/high-priority-callbacks">High-Priority Callback Functions</a>.</p>
 
 
 

@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,21 +71305,26 @@
 
 <h1 class="heading"><span class="name">Idle</span><span class="command">Event 130</span></h1>
 
-<p>Applies To: <a href="../../objects/root/">Root</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/root/">Root</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is generated whenever APL looks to see if there is an event on the queue and finds it empty. Its purpose is to allow an application to perform some background processing when the user is not doing anything. It is unwise to use this event directly from the Session as it will occur repeatedly and may lock you out.</p>
 <p>The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, or supplied as the right argument to your callback function is a 2-element vector as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'Idle'</code> or 130</td>
 </tr>

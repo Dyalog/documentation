@@ -32674,7 +32674,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71361,30 +71361,26 @@
 <p><code>⎕NCREATE</code> may be applied using the  Variant operator with the options Unique and IfExists. There is no primary option.</p>
 <h4 id="unique-option-boolean">Unique Option (Boolean)</h4>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>the file named by <code>X</code> will be created</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>0</td>
+<td>the file named by <code>X</code> will be created</td>
+</tr>
+<tr>
+<td><code>1</code></td>
 <td>a uniquely named file will be created by extending the base name (see <a href="../nparts/">File Name Parts</a> ) with random characters. If a unique name cannot be created then an error will be signalled. The actual name of the file can be determined from <code>⎕NNAMES</code> or <code>⎕NINFO</code> .</td>
 </tr>
 </tbody>
 </table>
 <h4 id="ifexists-option-character-vector">IfExists Option (character vector)</h4>
 <table>
-<thead>
-<tr>
-<th>Error</th>
-<th><code>⎕NCREATE</code> will generate a <code>FILE NAME ERROR</code> if the file already exists</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>Replace</td>
+<td>Error</td>
+<td><code>⎕NCREATE</code> will generate a <code>FILE NAME ERROR</code> if the file already exists</td>
+</tr>
+<tr>
+<td><code>Replace</code></td>
 <td><code>⎕NCREATE</code> will replace an existing file with an empty one of the same name.</td>
 </tr>
 </tbody>

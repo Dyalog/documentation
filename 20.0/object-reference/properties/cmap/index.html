@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,17 @@
 
 <h1 class="heading"><span class="name">CMap</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/bitmap/">Bitmap</a> <a href="../../objects/clipboard/">Clipboard</a> <a href="../../objects/cursor/">Cursor</a> <a href="../../objects/icon/">Icon</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/bitmap/">Bitmap</a></td>
+<td><a href="../../objects/clipboard/">Clipboard</a></td>
+<td><a href="../../objects/cursor/">Cursor</a></td>
+<td><a href="../../objects/icon/">Icon</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This property defines the table of colours (the colour map) used by a <a href="../../objects/bitmap/">Bitmap</a> or <a href="../../objects/icon/">Icon</a> object or by a bitmap stored in the Windows clipboard. Its value is a 3-column integer matrix of numbers in the range 0-255. Each row represents a separate colour which is indexed (0-origin) by values in the <a href="../bits/">Bits</a> property. The 3 columns refer to the intensities of the red, green and blue components of colour respectively.</p>
 <p>Please note that <a href="../bits/">Bits</a> and CMap may <strong>only</strong> be used to represent an image with a colour palette of <strong>256 colours or less</strong>. If the colour palette is larger, the values of <a href="../bits/">Bits</a> and CMap reported by <code>⎕WG</code> will be (0 0). For a high-colour image, use <a href="../cbits/">CBits</a> instead.</p>
@@ -71338,9 +71348,7 @@
 <thead>
 <tr>
 <th>Bits[]</th>
-<th>CMap</th>
-<th>CMap</th>
-<th>CMap</th>
+<th colspan="3">CMap</th>
 <th>Colour</th>
 </tr>
 </thead>

@@ -32674,7 +32674,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71336,8 +71336,24 @@
 
 <h1 class="heading"><span class="name">Root</span><span class="command">Object</span></h1>
 
-<p><a href="../../childlists/root/">Children</a> <a href="../../proplists/root/">Properties</a> <a href="../../methodlists/root/">Methods</a> <a href="../../eventlists/root/">Events</a></p>
-<p>Purpose: This is an invisible "system" object that acts as the parent of all other objects.</p>
+<table>
+<tbody>
+<tr>
+<td><a href="../../childlists/root/">Children</a></td>
+<td><a href="../../proplists/root/">Properties</a></td>
+<td><a href="../../methodlists/root/">Methods</a></td>
+<td><a href="../../eventlists/root/">Events</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>Purpose:</td>
+<td>This is an invisible "system" object that acts as the parent of all other objects.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>There is a single Root object called <code>'.'</code> which is always present. It cannot be created using <a href="../../../language-reference-guide/system-functions/wc"><code>⎕WC</code></a> nor can it be destroyed.</p>
 <p>The <a href="../../properties/caption/">Caption</a> and <a href="../../properties/iconobj/">IconObj</a> properties of <code>'.'</code> are used to identify a Dyalog APL/W application as distinct from the APL Session. The <a href="../../properties/caption/">Caption</a> property specifies the application name that is displayed when you cycle through running applications using Alt+Tab and by the Windows Task List. The <a href="../../properties/iconobj/">IconObj</a> property specifies the name of an <a href="../icon/">Icon</a> object that is displayed alongside the application name in the box displayed by Alt+Tab. For these to take effect, your application must have at least one visible and active <a href="../form/">Form</a>.</p>

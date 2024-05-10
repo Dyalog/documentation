@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,7 +71305,14 @@
 
 <h1 class="heading"><span class="name">GetDayStates</span><span class="command">Event 266</span></h1>
 
-<p>Applies To: <a href="../../objects/calendar/">Calendar</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/calendar/">Calendar</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when a <a href="../../objects/calendar/">Calendar</a> object requires the APL program to provide <em>day state</em> information for the range of dates it is about to display.</p>
 <p>The <a href="../../objects/calendar/">Calendar</a> object displays day numbers using either the normal or the bold font attribute. However, it does not store this information beyond the month or months currently displayed.</p>
@@ -71315,31 +71322,29 @@
 <p>You may not disable or nullify the operation that caused GetDayStates to fire by setting the action code for the event to <code>¯1</code> or by returning 0 from a callback function.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 5-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'GetDayStates'</code> or 266</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>First Date</td>
 <td>an integer (IDN)</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Last Date</td>
 <td>an integer (IDN)</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Bold Dates</td>
 <td>an integer vector of IDNs.</td>
 </tr>

@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,52 +71305,57 @@
 
 <h1 class="heading"><span class="name">CellSelect</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The <a href="../../objects/grid/">Grid</a> supports the selection of a contiguous block of cells by the user, using the mouse and/or the keyboard. The ability to select a range of cells is determined by the CellSelect property.</p>
 <p>CellSelect may be a character vector or a vector of character vectors comprising the following:</p>
 <table>
-<thead>
-<tr>
-<th>'Rows'</th>
-<th>User may select an entire row by clicking on a row title and may select multiple rows by dragging the mouse over contiguous row titles.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>'MultiRows'</td>
+<td><code>'Rows'</code></td>
+<td>User may select an entire row by clicking on a row title and may select multiple rows by dragging the mouse over contiguous row titles.</td>
+</tr>
+<tr>
+<td><code>'MultiRows'</code></td>
 <td>Same as <code>'Rows'</code> , but user may additionally select several non-contiguous rows and blocks of rows using the Ctrl key.</td>
 </tr>
 <tr>
-<td>'Columns'</td>
+<td><code>'Columns'</code></td>
 <td>User may select an entire column by clicking on a column title and may select multiple columns by dragging the mouse over contiguous column titles.</td>
 </tr>
 <tr>
-<td>'MultiColumns'</td>
+<td><code>'MultiColumns'</code></td>
 <td>Same as <code>'Columns'</code> , but user may additionally select several non-contiguous columns and blocks of columns using the Ctrl key.</td>
 </tr>
 <tr>
-<td>'Partial'</td>
+<td><code>'Partial'</code></td>
 <td>User may select any rectangular block of cells by either dragging the mouse or using Shift+cursor keys.</td>
 </tr>
 <tr>
-<td>'MultiPartial'</td>
+<td><code>'MultiPartial'</code></td>
 <td>Same as <code>'Partial'</code> , but user may additionally select multiple rectangular blocks of cells using the Ctrl key.</td>
 </tr>
 <tr>
-<td>'Whole'</td>
+<td><code>'Whole'</code></td>
 <td>User may select the entire <a href="../../objects/grid/">Grid</a> by clicking in the space to the left of the column titles and above the row titles.</td>
 </tr>
 <tr>
-<td>'Any'</td>
+<td><code>'Any'</code></td>
 <td>Same as ( <code>'Rows'</code> <code>'Columns'</code> <code>'Partial'</code> <code>'Whole'</code> ). This is the default.</td>
 </tr>
 <tr>
-<td>'Multi'</td>
+<td><code>'Multi'</code></td>
 <td>Same as ( <code>'MultiRows'</code> <code>'MultiColumns'</code> <code>'MultiPartial'</code> <code>'Whole'</code> ).</td>
 </tr>
 <tr>
-<td>'None'</td>
+<td><code>'None'</code></td>
 <td>User may not select any cells in the <a href="../../objects/grid/">Grid</a> .</td>
 </tr>
 </tbody>

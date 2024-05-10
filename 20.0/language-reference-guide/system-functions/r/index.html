@@ -33526,7 +33526,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -72705,13 +72705,11 @@
 <p>The above may be qualified so that matching text is folded, or mapped to upper- or lower-case, by using the <strong>f</strong>, <strong>u</strong>, and <strong>l</strong> modifiers respectively; the effect is as if the text was processed by <code>⎕C</code>. See <a href="../c/">Case Convert</a>.</p>
 <p>Character sequences beginning with the backslash place the modifier after the backslash; character sequences with no leading backslash add both a backslash and the modifier to the start of the sequence, for example:</p>
 <table>
-<thead>
-<tr>
-<th>\u&amp;</th>
-<th>acts as a placeholder for the entire portion of text which matched, folded to upper case</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>\u&amp;</td>
+<td>acts as a placeholder for the entire portion of text which matched, folded to upper case</td>
+</tr>
 <tr>
 <td>\l0</td>
 <td>equivalent to \l&amp;</td>
@@ -72722,13 +72720,11 @@
 <h4 id="transformation-codes">Transformation codes</h4>
 <p>The transformation codes are a numeric scalar or vector. Transformation codes may only be used with <code>⎕S</code>. For each match in the input document, a numeric scalar or vector of the same shape as the transformation codes is created, with the codes replaced with values as follows:</p>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>The offset from the start of the line (line mode) or document (document mode or mixed mode) of the start of the match.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>0</td>
+<td>The offset from the start of the line (line mode) or document (document mode or mixed mode) of the start of the match.</td>
+</tr>
 <tr>
 <td>1</td>
 <td>The length of the match.</td>
@@ -72746,47 +72742,45 @@
 <h4 id="transformation-function">Transformation Function</h4>
 <p>The transformation function is called for each match within the input document.  The function is monadic and is passed a namespace, containing the following variables:</p>
 <table>
-<thead>
-<tr>
-<th>Block</th>
-<th>The entire line (line mode) or document (document mode or mixed mode) in which the match was found.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>BlockNum</td>
+<td><code>Block</code></td>
+<td>The entire line (line mode) or document (document mode or mixed mode) in which the match was found.</td>
+</tr>
+<tr>
+<td><code>BlockNum</code></td>
 <td>With line mode, the block (line) number in the source document of the start of the match. The value is origin zero. With document mode or mixed mode the entire document is contained within one block and this value is always zero.</td>
 </tr>
 <tr>
-<td>Pattern</td>
+<td><code>Pattern</code></td>
 <td>The search pattern which matched.</td>
 </tr>
 <tr>
-<td>PatternNum</td>
+<td><code>PatternNum</code></td>
 <td>The index-zero pattern number which matched.</td>
 </tr>
 <tr>
-<td>Match</td>
+<td><code>Match</code></td>
 <td>The text within Block which matched Pattern.</td>
 </tr>
 <tr>
-<td>Offsets</td>
+<td><code>Offsets</code></td>
 <td>A vector of one or more offsets relative to the start of Block. The first value is the offset of the entire match; any and all additional values are the offsets of the portions of the text which matched the subpatterns, in the order of the subpatterns within Pattern. <code>¯1</code> indicates no match, see below.</td>
 </tr>
 <tr>
-<td>Lengths</td>
+<td><code>Lengths</code></td>
 <td>A vector of one or more lengths, corresponding to each value in Offset. <code>¯1</code> indicates no match, see below.</td>
 </tr>
 <tr>
-<td>Names</td>
+<td><code>Names</code></td>
 <td>A vector of one or more character vectors corresponding to each of the values in Offsets, specifying the names given to the subpatterns within Pattern. The first entry (corresponding to the match) and all subpatterns with no name are included as length zero character vectors.</td>
 </tr>
 <tr>
-<td>ReplaceMode</td>
+<td><code>ReplaceMode</code></td>
 <td>A Boolean indicating whether the function was called by <code>⎕R</code> (value 1) or <code>⎕S</code> (value 0).</td>
 </tr>
 <tr>
-<td>TextOnly</td>
+<td><code>TextOnly</code></td>
 <td>A Boolean indicating whether the return value from the function must be a character vector (value 1) or any value (value 0).</td>
 </tr>
 </tbody>
@@ -72818,13 +72812,11 @@
 <h4 id="ic-option">IC Option</h4>
 <p>When set, case is ignored in searches.</p>
 <table>
-<thead>
-<tr>
-<th>1</th>
-<th>Matches are not case sensitive.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td><code>1</code></td>
+<td>Matches are not case sensitive.</td>
+</tr>
 <tr>
 <td>0</td>
 <td>Matches are case sensitive.</td>
@@ -72840,19 +72832,17 @@
 <h4 id="mode-option">Mode Option</h4>
 <p>Specifies whether the input document is interpreted in <strong>line</strong> mode, <strong>document</strong> mode or <strong>mixed</strong> mode.</p>
 <table>
-<thead>
-<tr>
-<th>L</th>
-<th>When line mode is set, the input document is split into separate lines (discarding the line ending characters themselves), and each line is processed separately. This means that the ML option applies per line, and the '^' and '$' anchors match the start and end respectively of each line. Because the document is split, searches can never match across multiple lines, nor can searches for line ending characters ever succeed. Setting line mode can result in significantly reduced memory requirements compared with the other modes.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>D</td>
+<td>L</td>
+<td>When line mode is set, the input document is split into separate lines (discarding the line ending characters themselves), and each line is processed separately. This means that the ML option applies per line, and the '^' and '$' anchors match the start and end respectively of each line. Because the document is split, searches can never match across multiple lines, nor can searches for line ending characters ever succeed. Setting line mode can result in significantly reduced memory requirements compared with the other modes.</td>
+</tr>
+<tr>
+<td><code>D</code></td>
 <td>When document mode is set, the entire input document is processed as a single block. The ML option applies to this entire block, and the '^' and '$' anchors match the start and end respectively of the block - not the lines within it. Searches can match across lines, and can match line ending characters.</td>
 </tr>
 <tr>
-<td>M</td>
+<td><code>M</code></td>
 <td>When mixed mode is set, the '^' and '$' anchors match the start and end respectively of each line, as if line mode is set, but in all other respects behaviour is as if document mode is set - the entire input document is processed in a single block.</td>
 </tr>
 </tbody>
@@ -72870,15 +72860,13 @@
 <h4 id="dotall-option">DotAll Option</h4>
 <p>Specifies whether the dot ('.') character in search patterns matches line ending characters.</p>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>The '.' character in search patterns matches most characters, but not line endings.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>0</td>
+<td>The '.' character in search patterns matches most characters, but not line endings.</td>
+</tr>
+<tr>
+<td><code>1</code></td>
 <td>The '.' character in search patterns matches all characters.</td>
 </tr>
 </tbody>
@@ -72893,13 +72881,11 @@
 <h4 id="eol-option">EOL Option</h4>
 <p>Sets the line ending character which is implicitly present between character vectors, when the input document is a vector of character vectors.</p>
 <table>
-<thead>
-<tr>
-<th>CR</th>
-<th>Carriage Return (U+000D)</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>CR</td>
+<td>Carriage Return (U+000D)</td>
+</tr>
 <tr>
 <td>LF</td>
 <td>Line Feed (U+000A)</td>
@@ -72939,13 +72925,11 @@
 <h4 id="neol-option">NEOL Option</h4>
 <p>Specifies whether explicit line ending sequences in the input document are normalised by replacing them with the character specified using the EOL option.</p>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>Line endings are not normalised.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>0</td>
+<td>Line endings are not normalised.</td>
+</tr>
 <tr>
 <td>1</td>
 <td>Line endings are normalised.</td>
@@ -72961,13 +72945,11 @@
 <h4 id="ml-option">ML Option</h4>
 <p>Sets a limit to the number of processed pattern matches per line (line mode) or document (document mode and mixed mode).</p>
 <table>
-<thead>
-<tr>
-<th>Positive value n</th>
-<th>Sets the limit to the first n matches.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Positive value n</td>
+<td>Sets the limit to the first n matches.</td>
+</tr>
 <tr>
 <td>0</td>
 <td>Sets no limit.</td>
@@ -72989,13 +72971,11 @@
 <h4 id="greedy-option">Greedy Option</h4>
 <p>Controls whether patterns are "greedy" (and match the maximum input possible) or are not (and match the minimum). Within the pattern itself it is possible to specify greediness for individual elements of the pattern; this option sets the default.</p>
 <table>
-<thead>
-<tr>
-<th>1</th>
-<th>Greedy by default.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>1</td>
+<td>Greedy by default.</td>
+</tr>
 <tr>
 <td>0</td>
 <td>Not greedy by default.</td>
@@ -73011,13 +72991,11 @@
 <h4 id="om-option">OM Option</h4>
 <p>Specifies whether matches may overlap.</p>
 <table>
-<thead>
-<tr>
-<th>1</th>
-<th>Searching continues for all patterns and then from the character following the <em>start</em> of the match, thus permitting overlapping matches.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>1</td>
+<td>Searching continues for all patterns and then from the character following the <em>start</em> of the match, thus permitting overlapping matches.</td>
+</tr>
 <tr>
 <td>0</td>
 <td>Searching continues from the character following the <em>end</em> of the match.</td>
@@ -73039,13 +73017,11 @@
 </ul>
 <p>When the stream is read from its start, and the start of the stream contains a recognised Byte Order Mark (BOM), the encoding is taken as that specified by the BOM and this option is ignored. Otherwise, the encoding is assumed to be as specified by this option.</p>
 <table>
-<thead>
-<tr>
-<th>UTF-8</th>
-<th>The stream is processed as UTF-8 data. Note that ASCII is a subset of UTF-8, so this default is also suitable for ASCII data.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>UTF-8</td>
+<td>The stream is processed as UTF-8 data. Note that ASCII is a subset of UTF-8, so this default is also suitable for ASCII data.</td>
+</tr>
 <tr>
 <td>UTF-16</td>
 <td>The stream is processed as UTF16 little-endian data on little-ended systems, or as UTF16 big-endian data on big-endian systems.</td>
@@ -73092,13 +73068,11 @@
 <li>a 256-element numeric vector that maps each possible byte value (0-255) to a  Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value may appear in the table more than once.</li>
 </ul>
 <table>
-<thead>
-<tr>
-<th>Implied</th>
-<th>If input came from a stream then the encoding format is the same as the input stream, otherwise UTF-8</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Implied</td>
+<td>If input came from a stream then the encoding format is the same as the input stream, otherwise UTF-8</td>
+</tr>
 <tr>
 <td>UTF-8</td>
 <td>The data is written in UTF-8 format.</td>
@@ -73147,13 +73121,11 @@
 <h4 id="resulttext-option">ResultText Option</h4>
 <p>For <code>⎕R</code>, this option determines the format of the result.</p>
 <table>
-<thead>
-<tr>
-<th>Implied</th>
-<th>The output will either be a <strong>character vector</strong> or <strong>a vector of character vectors</strong> , dependent on the input document type</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Implied</td>
+<td>The output will either be a <strong>character vector</strong> or <strong>a vector of character vectors</strong> , dependent on the input document type</td>
+</tr>
 <tr>
 <td>Simple</td>
 <td>The output will be a <strong>character vector</strong> . Any and all line endings in the output will be represented by line ending characters within the character vector.</td>
@@ -73175,13 +73147,11 @@
 <p>This affects the way PCRE that processes \B, \b, \D, \d, \S, \s,  \W,
 \w,  and  some  of  the POSIX character classes.</p>
 <table>
-<thead>
-<tr>
-<th>1</th>
-<th>Unicode  properties are  used to classify characters.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>1</td>
+<td>Unicode  properties are  used to classify characters.</td>
+</tr>
 <tr>
 <td>0</td>
 <td>Only ASCII characters are recognized.</td>
@@ -73203,13 +73173,11 @@
 <h4 id="regex-option">Regex Option</h4>
 <p>This option may be used to disable regular expression matching which is enabled by default. It is a singleton Boolean value that applies to both search and transformation patterns, or a 2-element vector of Boolean values that applies to them separately.</p>
 <table>
-<thead>
-<tr>
-<th>1</th>
-<th>Regular expression matching is applied.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>1</td>
+<td>Regular expression matching is applied.</td>
+</tr>
 <tr>
 <td>0</td>
 <td>regular expression matching is disabled.</td>
@@ -73333,9 +73301,16 @@
 </ul>
 <p>The currency conversion requires the use of a function. Note the nested use of <code>⎕R</code>.</p>
 <p>Input file:</p>
-<p><code>01/03/1980,Widgets,DEM 10.20</code> <code>02/04/1980,Bolts,DEM 61.75</code> <code>17/06/1980,Nuts; special rate DEM 17.00,DEM 17.00</code> <code>18/07/1980,Hammer,DEM 1.25</code></p>
+<table>
+<tbody>
+<tr>
+<td><code>01/03/1980,Widgets,DEM 10.20</code> <code>02/04/1980,Bolts,DEM 61.75</code> <code>17/06/1980,Nuts; special rate DEM 17.00,DEM 17.00</code> <code>18/07/1980,Hammer,DEM 1.25</code></td>
+</tr>
+</tbody>
+</table>
 <p>Output file:</p>
-<p><code>1980-03-01,Widgets,€ 5.21</code> <code>1980-04-02,Bolts,€ 31.57</code> <code>1980-06-17,Nuts; special rate DEM 17.00,€ 8.69</code> <code>1980-07-18,Hammer,€ 0.63</code>
+<p>|----------------------------------------------------------------------------------------------------------------------------------|
+|<code>1980-03-01,Widgets,€ 5.21</code> <code>1980-04-02,Bolts,€ 31.57</code> <code>1980-06-17,Nuts; special rate DEM 17.00,€ 8.69</code> <code>1980-07-18,Hammer,€ 0.63</code>|
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">ret</span><span class="kd">←</span><span class="nv">f</span><span class="w"> </span><span class="nv">a</span><span class="sr">;</span><span class="nv">d</span><span class="sr">;</span><span class="nv">m</span><span class="sr">;</span><span class="nv">y</span><span class="sr">;</span><span class="nv">v</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕IO</span><span class="kd">←</span><span class="m">0</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">Select</span><span class="w"> </span><span class="nv">a</span><span class="na">.</span><span class="nv">PatternNum</span>

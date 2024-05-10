@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,41 +71327,47 @@
 
 <h1 class="heading"><span class="name">ItemDblClick</span><span class="command">Event 342</span></h1>
 
-<p>Applies To: <a href="../../objects/listview/">ListView</a> <a href="../../objects/treeview/">TreeView</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/listview/">ListView</a></td>
+<td><a href="../../objects/treeview/">TreeView</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user double-clicks a mouse button when the mouse pointer is over an item in a <a href="../../objects/listview/">ListView</a> or  <a href="../../objects/treeview/">TreeView</a> object. This event is reported for information only and may not be controlled in any way using a callback function. Generating the event with <code>⎕NQ</code>, or calling it as a method, has no effect.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 6-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'ItemDblClick'</code> or 342</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Item number</td>
 <td>Integer. The index of the item.</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Mouse button</td>
 <td>Integer.</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Shift state</td>
 <td>Integer. Sum of 1=shift key, 2=Ctrl key, 4=Alt key</td>
 </tr>
 <tr>
-<td>[6]</td>
+<td><code>[6]</code></td>
 <td>Position</td>
 <td>Integer. Indicates the position of the mouse-pointer within the item. It is either 2 (over the icon), 4 (over the label), 8 (over the line), or 16 (over the symbol).</td>
 </tr>

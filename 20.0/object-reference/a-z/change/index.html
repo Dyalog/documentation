@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,7 +71305,18 @@
 
 <h1 class="heading"><span class="name">Change</span><span class="command">Event 36</span></h1>
 
-<p>Applies To: <a href="../../objects/buttonedit/">ButtonEdit</a> <a href="../../objects/combo/">Combo</a> <a href="../../objects/edit/">Edit</a> <a href="../../objects/richedit/">RichEdit</a> <a href="../../objects/spinner/">Spinner</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/buttonedit/">ButtonEdit</a></td>
+<td><a href="../../objects/combo/">Combo</a></td>
+<td><a href="../../objects/edit/">Edit</a></td>
+<td><a href="../../objects/richedit/">RichEdit</a></td>
+<td><a href="../../objects/spinner/">Spinner</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user alters the text in a <a href="../../objects/combo/">Combo</a> or <a href="../../objects/edit/">Edit</a> object (by typing). The event is not applicable for a <a href="../../objects/combo/">Combo</a> with <a href="../../properties/style/">Style</a><code>'Drop'</code> because this <a href="../../properties/style/">Style</a> does not allow the user to alter data. The Change event is not reported repeatedly as the user edits the data. Instead, it is reported when the user indicates that he has finished with the field by :</p>
 <ol>
@@ -71315,21 +71326,19 @@
 <p>The purpose of the Change event is to allow the application to validate data which has been newly entered to the field, before proceeding with another action. It is for this reason that the event is fired not just when the input focus changes, but also when the user takes some action that could cause the application to do something else.</p>
 <p>The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, or supplied as the right argument to your callback function, is a 3-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'Change'</code> or 36</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Object name</td>
 <td>character vector (name of object that is to receive the focus or generate an event)</td>
 </tr>

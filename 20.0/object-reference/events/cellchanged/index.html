@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,37 +71305,42 @@
 
 <h1 class="heading"><span class="name">CellChanged</span><span class="command">Event 164</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported after the user has changed the contents of a cell in a <a href="../../objects/grid/">Grid</a> object and then moved to another cell or to another control outside the <a href="../../objects/grid/">Grid</a>. The purpose of this event is to give the application the opportunity to perform calculations, and perhaps to update other cells in the <a href="../../objects/grid/">Grid</a> as a result of the change.</p>
 <p>Note that this event is reported <strong>after</strong> the change has taken place, and after the <a href="../../properties/values/">Values</a> property has been updated. Furthermore, neither setting the event action code to <code>¯1</code> nor returning 0 from a callback function has any effect. If you wish to <em>validate</em> the new data you should use the <a href="../../methodorevents/cellchange/">CellChange</a> (150) event instead.</p>
 <p>The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, or supplied as the right argument to your callback function, is an 5-element vector as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'CellChanged'</code> or 164</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Cell row</td>
 <td>integer</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Cell column</td>
 <td>integer</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>New data</td>
 <td>number or character array</td>
 </tr>

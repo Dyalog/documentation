@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71489,7 +71489,10 @@
 <li>Calling it directly via <code>⎕NA</code></li>
 </ul>
 <p>The Array Editor draws data using a format that is similar to the output of the <code>DISPLAY</code> function. For example:</p>
-<p><img alt="array editor" src="../img/array-editor.png" /></p>
+<figure id="_figure-1">
+<img alt="array editor" src="../img/array-editor.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <h3 id="documentation">Documentation</h3>
 <p>Full documentation for the Array Editor, including a list of the keystrokes it uses, is available from the Help menu in the Array Editor's window.</p>
 <h3 id="supported-arrays">Supported Arrays</h3>
@@ -71513,7 +71516,9 @@
 </ul>
 <h3 id="implementation">Implementation</h3>
 <p>The Array Editor is implemented by a DLL named <code>dlaedit.dll</code> (32-bit) or      <code>dlaedit64.dll</code> (64-bit).</p>
-<p>The DLL exports two functions:  <code>DyalogEditArray</code> and <code>DyalogEditArrayTitle</code>. The latter is used when you click  the <img alt="edit numbers icon" src="../img/edit-numbers-icon.png" /> icon in the Session toolbar (via the APL function <code>⎕SE.NumEd.numed</code>)  and by the user command <code>]array.edit</code></p>
+<figure id="_figure-2">
+<img alt="edit numbers icon" src="../img/edit-numbers-icon.png" /> icon in the Session toolbar (via the APL function <figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <h3 id="calling-the-array-editor-directly">Calling the Array Editor Directly</h3>
 <p>If you wish to use the Array Editor directly, you may do so as follows using <code>⎕NA</code><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
 <p>For both <code>DyalogEditArray</code> and <code>DyalogEditArrayTitle</code> the first argument is the array to be edited, while the second argument is a place holder and should always be 0</p>

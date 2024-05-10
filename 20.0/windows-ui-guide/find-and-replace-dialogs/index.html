@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71399,15 +71399,16 @@
 <h1 class="heading"><span class="name"> Find and Replace Dialogs</span></h1>
 
 <p>The <em>Find</em> and <em>Find/Replace</em> dialog boxes are used to locate and modify text in an Edit window.</p>
-<p><img alt="find replace dialog" src="../img/find-replace-dialog.png" /></p>
+<figure id="_figure-1">
+<img alt="find replace dialog" src="../img/find-replace-dialog.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <table>
-<thead>
-<tr>
-<th>Search For</th>
-<th>Enter the text string that you want to find. Note that the text from the last 10 searches is available from the drop-down list. If appropriate, the search text is copied from the Find Objects tool. This makes it easy to first search for functions containing a particular string, and then to locate the same string in the functions.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Search For</td>
+<td>Enter the text string that you want to find. Note that the text from the last 10 searches is available from the drop-down list. If appropriate, the search text is copied from the Find Objects tool. This makes it easy to first search for functions containing a particular string, and then to locate the same string in the functions.</td>
+</tr>
 <tr>
 <td>Replace With</td>
 <td>Enter the text string that you want to use as a replacement. Note that the text from the last 10 replacements is available from the drop-down list.</td>
@@ -71442,9 +71443,7 @@
 <p>Find and Replace work on the concept of a <em>current search string</em> and a <em>current replace string</em> which are entered using the <em>Find</em> and <em>Find/Replace</em> Dialog boxes. These boxes also contain buttons for performing search/replace operations.</p>
 <p>Suppose that you want to search through a function for references to the string "Adam". It is probably best to work from the start of the function, so first position the cursor there (by pressing Ctrl+Home). Then select <em>Find</em> from the <em>Edit</em> menu. The <em>Find</em> Dialog box will appear on your screen with the input cursor positioned in the edit box awaiting your input. Type "Adam" and click the <em>Find Next</em> button (or press Return), and the cursor will locate the first occurrence. Clicking <em>Find Next</em> again will locate the second occurrence. You can change the direction of the search by selecting <em>Up</em> instead of <em>Down</em>. You could search another function for "Adam" by opening a new Edit window for it and clicking <em>Find Next</em>. You do not have to redefine the search string.</p>
 <p>Now let us suppose that you wish to replace all occurrences of "Adam" with "Amanda". First select <em>Replace</em> from the <em>Edit</em> menu. This will cause the <em>Find Dialog</em> box to be replaced by the <em>Find/Replace</em> Dialog box. Enter the string "Amanda" into the box labelled <em>Replace</em> With, then click <em>Replace All</em>. All occurrences of "Adam" in the current Edit window are changed to "Amanda". To repeat the same global change in another function, simply open an edit window and click <em>Replace All</em> again. If instead you only want to change particular instances of "Adam" to "Amanda" you may use <em>Find Next</em> to locate the ones you want, and then <em>Replace</em> to make each individual alteration.</p>
-<p>Text searches are performed using PCRE. If the <em>Use Regular Expressions</em> box is checked, the full range of regular expressions provided by PCRE are available for use. See <a href="../../language-reference-guide/pcre-specifications/pcre-regular-expression-syntax-summary">PCRE Regular Expression Syntax Summary</a>
-Language Reference Guide: </p>
-<p>Appendix A.</p>
+<p>Text searches are performed using PCRE. If the <em>Use Regular Expressions</em> box is checked, the full range of regular expressions provided by PCRE are available for use. See <a href="../../language-reference-guide/pcre-specifications/pcre-regular-expression-syntax-summary">PCRE Regular Expression Syntax Summary</a>.</p>
 <h3 id="saving-and-quitting">Saving and Quitting</h3>
 <p>To save the function and terminate the edit, press Esc (EP) or select Exit from the <em>File</em> menu. The new version of the function replaces the previous one (if any) and the edit window is destroyed.</p>
 <p>Alternatively, you can select <em>Fix</em> from the <em>File</em> menu. This fixes the new version of the function in the workspace, but leaves the edit window open. Note that the history is also retained, so you can subsequently undo some changes and fix the function again.</p>

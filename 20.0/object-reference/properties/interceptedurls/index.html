@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,14 @@
 
 <h1 class="heading"><span class="name">InterceptedURLs</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/htmlrenderer/">HTMLRenderer</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/htmlrenderer/">HTMLRenderer</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The InterceptedURLs property is a 2-column matrix that specifies whether the <a href="../../objects/htmlrenderer/">HTMLRenderer</a> will attempt to satisfy a request for a resource from the workspace or, via the CEF, from the internet. If directed to the workspace, the request will trigger an <a href="../../methodorevents/httprequest/">HTTPRequest</a> event if the protocol is <code>http</code>, or a <a href="../../methodorevents/websocketupgrade/">WebSocketUpgrade</a> event if the protocol is <code>ws</code>.</p>
 <p>The first column is a wild-carded character scalar or vector containing a pattern to match. The second column is numeric indicating whether or not the <a href="../../objects/htmlrenderer/">HTMLRenderer</a> should trigger an event as shown in the table below. InterceptedURLs may contain any number of rows.</p>

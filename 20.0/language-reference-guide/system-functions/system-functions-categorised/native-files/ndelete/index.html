@@ -32674,7 +32674,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71349,23 +71349,21 @@
 <p><code>Y</code> is a character vector or scalar containing a single file or directory name, or a vector of character vectors containing zero or more file or directory names. Names must conform to the naming rules of the host Operating System.</p>
 <p>The optional left argument <code>X</code> is a numeric scalar; valid values are  shown in the following table. If omitted, its default value is 0.</p>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>Each file or directory with the given name must exist.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>1</td>
+<td><code>0</code></td>
+<td>Each file or directory with the given name must exist.</td>
+</tr>
+<tr>
+<td><code>1</code></td>
 <td>If the file or directory with the given name does not exist then no action is taken. The result <code>R</code> may be used to determine whether the file or directory was deleted or not.</td>
 </tr>
 <tr>
-<td>2</td>
+<td><code>2</code></td>
 <td>If a name identifies a non-empty directory it, and all its contents, are to be deleted.</td>
 </tr>
 <tr>
-<td>3</td>
+<td><code>3</code></td>
 <td>Combination of 1 and 2.</td>
 </tr>
 </tbody>
@@ -71375,15 +71373,13 @@
 <p><code>⎕NDELETE</code> may be applied using the  Variant operator with the Wildcard option.</p>
 <h4 id="wildcard-option-boolean">Wildcard Option (Boolean)</h4>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>The name or names in <code>Y</code> identifies a specific file name.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>0</td>
+<td>The name or names in <code>Y</code> identifies a specific file name.</td>
+</tr>
+<tr>
+<td><code>1</code></td>
 <td>The name or names in <code>Y</code> that specify the <em>base name</em> and <em>extension</em> (see <a href="../../../nparts/">NParts</a> ), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.</td>
 </tr>
 </tbody>

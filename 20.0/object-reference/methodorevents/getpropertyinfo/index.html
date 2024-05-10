@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,12 +71327,28 @@
 
 <h1 class="heading"><span class="name">GetPropertyInfo</span><span class="command">Method 550</span></h1>
 
-<p>Applies To: <a href="../../objects/ocxclass/">OCXClass</a> <a href="../../objects/oleclient/">OLEClient</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/ocxclass/">OCXClass</a></td>
+<td><a href="../../objects/oleclient/">OLEClient</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This method is used to obtain information about a particular property or set of properties supported by a COM object.</p>
 <p>For each property supported by a COM object, the author will have registered the property name, its data type, and an optional help message or description of the property. GetPropertyInfo returns this information.</p>
 <p>The argument to GetPropertyInfo is a single item as follows:</p>
-<p>[1] Property name(s) see below</p>
+<table>
+<tbody>
+<tr>
+<td><code>[1]</code></td>
+<td>Property name(s)</td>
+<td>see below</td>
+</tr>
+</tbody>
+</table>
 <p><em>Property name(s)</em> is a simple character vector or a vector of character vectors specifying one or more names of properties supported by the object.</p>
 <p>The result is a nested vector with one element per property name. Each element of this vector is itself a 2-element vector of character vectors containing the data type and help message for the corresponding property.</p>
 <p><strong>Example</strong></p>

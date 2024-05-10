@@ -32687,7 +32687,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71328,8 +71328,8 @@
 <p>Note that it is also <em>essential</em> to define the Constructor to be <em>Public</em>, with a <code>:Access Public</code> statement, because like all Class members, Constructors default to being <em>Private</em>. Private Constructors currently have no use or purpose, but it is intended that they will be supported in a future release of Dyalog APL.</p>
 <p>A Constructor function may be niladic or monadic and must not return a result.</p>
 <p>A Class may specify any number of different Constructors of which one (and only one) may be niladic. This is also referred to as the <em>default</em> Constructor.</p>
-<p>There may be any number of monadic Constructors, but each must have a differently defined argument list which specifies the number of items expected in the Constructor argument. See <a href="../constructor-overloading/">Constructor Overloading</a> for details.</p>
-<p>The only way a Constructor function should be invoked is by <code>⎕NEW</code>. See <a href="../base-constructors/">Base Constructors</a> for further details. If you attempt to call a Constructor function  from outside its Class, it will cause a <code>SYNTAX ERROR</code>. A Constructor function should not call another Constructor function within the same Class, although it will not generate an error. This would cause the Base Constructor to be called twice, with unpredictable consequences.</p>
+<p>There may be any number of monadic Constructors, but each must have a differently defined argument list which specifies the number of items expected in the Constructor argument. See <a href="../constructor-overloading/">"Constructor Overloading"</a> for details.</p>
+<p>The only way a Constructor function should be invoked is by <code>⎕NEW</code>. See <a href="../base-constructors/">"Base Constructors"</a> for further details. If you attempt to call a Constructor function  from outside its Class, it will cause a <code>SYNTAX ERROR</code>. A Constructor function should not call another Constructor function within the same Class, although it will not generate an error. This would cause the Base Constructor to be called twice, with unpredictable consequences.</p>
 <p>When <code>⎕NEW</code> is executed <em>with a 2-item argument,</em> the appropriate monadic Constructor is called with the second item of the <code>⎕NEW</code> argument.</p>
 <p>The niladic (default) Constructor is called when <code>⎕NEW</code> is executed with a 1-item argument, a Class reference alone, or whenever APL needs to create a <a href="../../../introduction/arrays/prototypes-and-fill-items/">fill item</a> for the Class.</p>
 <p>Note that <code>⎕NEW</code> first creates a new instance of the specified Class, and then executes the Constructor inside the instance.</p>

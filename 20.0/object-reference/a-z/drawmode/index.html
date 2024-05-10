@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,7 +71305,19 @@
 
 <h1 class="heading"><span class="name">DrawMode</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/circle/">Circle</a> <a href="../../objects/ellipse/">Ellipse</a> <a href="../../objects/marker/">Marker</a> <a href="../../objects/poly/">Poly</a> <a href="../../objects/rect/">Rect</a> <a href="../../objects/text/">Text</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/circle/">Circle</a></td>
+<td><a href="../../objects/ellipse/">Ellipse</a></td>
+<td><a href="../../objects/marker/">Marker</a></td>
+<td><a href="../../objects/poly/">Poly</a></td>
+<td><a href="../../objects/rect/">Rect</a></td>
+<td><a href="../../objects/text/">Text</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The DrawMode property provides direct control over the low-level drawing operation performed by graphical objects.</p>
 <p>The DrawMode property specifies the current foreground mix mode. The Windows GDI uses the foreground mix mode to combine pens and interiors of filled objects with the colours already on the screen. The foreground mix mode defines how colours from the brush or pen and the colours in the existing image are to be combined.</p>
@@ -71323,82 +71335,82 @@
 <tbody>
 <tr>
 <td>1</td>
-<td>R2_BLACK</td>
+<td><code>R2_BLACK</code></td>
 <td>Pixel is always 0.</td>
 </tr>
 <tr>
 <td>2</td>
-<td>R2_NOTMERGEPEN</td>
+<td><code>R2_NOTMERGEPEN</code></td>
 <td>Pixel is the inverse of the R2_MERGEPEN colour.</td>
 </tr>
 <tr>
 <td>3</td>
-<td>R2_MASKNOTPEN</td>
+<td><code>R2_MASKNOTPEN</code></td>
 <td>Pixel is a combination of the colours common to both the screen and the inverse of the pen.</td>
 </tr>
 <tr>
 <td>4</td>
-<td>R2_NOTCOPYPEN</td>
+<td><code>R2_NOTCOPYPEN</code></td>
 <td>Pixel is the inverse of the pen colour.</td>
 </tr>
 <tr>
 <td>5</td>
-<td>R2_MASKPENNOT</td>
+<td><code>R2_MASKPENNOT</code></td>
 <td>Pixel is a combination of the colours common to both the pen and the inverse of the screen.</td>
 </tr>
 <tr>
 <td>6</td>
-<td>R2_NOT</td>
+<td><code>R2_NOT</code></td>
 <td>Pixel is the inverse of the screen colour.</td>
 </tr>
 <tr>
 <td>7</td>
-<td>R2_XORPEN</td>
+<td><code>R2_XORPEN</code></td>
 <td>Pixel is a combination of the colours in the pen and in the screen, but not in both.</td>
 </tr>
 <tr>
 <td>8</td>
-<td>R2_NOTMASKPEN</td>
+<td><code>R2_NOTMASKPEN</code></td>
 <td>Pixel is the inverse of the R2_MASKPEN colour.</td>
 </tr>
 <tr>
 <td>9</td>
-<td>R2_MASKPEN</td>
+<td><code>R2_MASKPEN</code></td>
 <td>Pixel is a combination of the colours common to both the pen and the screen.</td>
 </tr>
 <tr>
 <td>10</td>
-<td>R2_NOTXORPEN</td>
+<td><code>R2_NOTXORPEN</code></td>
 <td>Pixel is the inverse of the R2_XORPEN colour.</td>
 </tr>
 <tr>
 <td>11</td>
-<td>R2_NOP</td>
+<td><code>R2_NOP</code></td>
 <td>Pixel remains unchanged.</td>
 </tr>
 <tr>
 <td>12</td>
-<td>R2_MERGENOTPEN</td>
+<td><code>R2_MERGENOTPEN</code></td>
 <td>Pixel is a combination of the screen colour and the inverse of the pen colour.</td>
 </tr>
 <tr>
 <td>13</td>
-<td>R2_COPYPEN</td>
+<td><code>R2_COPYPEN</code></td>
 <td>Pixel is the pen colour.</td>
 </tr>
 <tr>
 <td>14</td>
-<td>R2_MERGEPENNOT</td>
+<td><code>R2_MERGEPENNOT</code></td>
 <td>Pixel is a combination of the pen colour and the inverse of the screen colour.</td>
 </tr>
 <tr>
 <td>15</td>
-<td>R2_MERGEPEN</td>
+<td><code>R2_MERGEPEN</code></td>
 <td>Pixel is a combination of the pen colour and the screen colour.</td>
 </tr>
 <tr>
 <td>16</td>
-<td>R2_WHITE</td>
+<td><code>R2_WHITE</code></td>
 <td>Pixel is always 1.</td>
 </tr>
 </tbody>

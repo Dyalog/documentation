@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,15 @@
 
 <h1 class="heading"><span class="name">Expanding</span><span class="command">Event 302</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a> <a href="../../objects/treeview/">TreeView</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+<td><a href="../../objects/treeview/">TreeView</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported by a <a href="../../objects/grid/">Grid</a> or a <a href="../../objects/treeview/">TreeView</a> object just before it is about to expand to show additional rows or children of the current item.</p>
 <p>In a Grid, this occurs when the user clicks the picture or tree line in the row title.</p>
@@ -71336,21 +71344,19 @@
 <p>You may disable the expand operation by setting the action code for the event to <code>¯1</code>. You may also prevent the expand from occurring by returning 0 from a callback function. You may expand an object dynamically under program control by calling Expanding as a method.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 3-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'Expanding'</code> or 302</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Item number</td>
 <td>Integer. The index of the row or item.</td>
 </tr>

@@ -1,6 +1,6 @@
 .table-bordered {
     border-collapse: collapse;
-    width: 50%;
+    width: 85%;
     margin: auto;
 }
 .table-bordered th,
@@ -28,4 +28,8 @@
 }
 .text-right {
     text-align: right;
+}
+
+.shaded {
+  background-color: rgb(220, 220, 220); /* Light grey background */
 }

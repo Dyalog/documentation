@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71310,23 +71310,21 @@
 <p>If <code>Y</code> specifies a single name, the result <code>R</code> is a 4-element vector indicating its current state.  If <code>Y</code> specifies more than one name, <code>R</code> is a matrix whose rows indicate the current state of the variable specified by the corresponding row in <code>Y</code>.</p>
 <p>There are four possible shared variable states:</p>
 <table>
-<thead>
-<tr>
-<th>0 0 1 1</th>
-<th>means that you and your partner are both aware of the current value, and neither has since reset it.  This is also the initial value of the state when the link is first established.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>1 0 1 0</td>
+<td><code>0 0 1 1</code></td>
+<td>means that you and your partner are both aware of the current value, and neither has since reset it.  This is also the initial value of the state when the link is first established.</td>
+</tr>
+<tr>
+<td><code>1 0 1 0</code></td>
 <td>means that you have reset the shared variable and your partner has not yet used it.  This state can only occur if both partners are APL workspaces.</td>
 </tr>
 <tr>
-<td>0 1 0 1</td>
+<td><code>0 1 0 1</code></td>
 <td>means that your partner has reset the shared variable but that you have not yet used it.</td>
 </tr>
 <tr>
-<td>0 0 0 0</td>
+<td><code>0 0 0 0</code></td>
 <td>the name is not that of a shared variable</td>
 </tr>
 </tbody>

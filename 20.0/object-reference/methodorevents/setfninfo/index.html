@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71481,7 +71481,15 @@
 
 <h1 class="heading"><span class="name">SetFnInfo</span><span class="command">Method 545</span></h1>
 
-<p>Applies To: <a href="../../objects/activexcontrol/">ActiveXControl</a> <a href="../../objects/oleserver/">OLEServer</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/activexcontrol/">ActiveXControl</a></td>
+<td><a href="../../objects/oleserver/">OLEServer</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This method is used to describe an APL function that is to be exported as a method, a Property Get Function, or a Property Put Function of an <a href="../../objects/activexcontrol/">ActiveXControl</a> or <a href="../../objects/oleserver/">OLEServer</a> object.</p>
 <p>An exported function must be a niladic or monadic defined function (dfns and derived functions are not allowed) and may optionally return a result. Ambivalent functions (functions with optional left argument) are allowed, but will be called monadically by the host application.</p>
@@ -71489,36 +71497,34 @@
 <p>A function exported by SetFnInfo will be called by a host application with the number of parameters that SetFnInfo has described. The argument received when the function is called by a host application, will be a nested vector of this length.</p>
 <p>The argument to SetFnInfo is a 2, 3, 4, 5 or 6-element array as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Function name</th>
-<th>character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Function name</td>
+<td>character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Function info</td>
 <td>nested array (see below)</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Help ID</td>
 <td>integer</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Function type</td>
 <td>integer</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Property name</td>
 <td>character vector</td>
 </tr>
 <tr>
-<td>[6]</td>
+<td><code>[6]</code></td>
 <td>DISPID</td>
 <td>integer. See <a href="../../miscellaneous/dispid/">DISPID (Dispatch ID)</a></td>
 </tr>
@@ -71548,13 +71554,11 @@
 <h4 id="function-type">Function type</h4>
 <p>This specifies the type of function being exported. This is an integer with one of the following values:</p>
 <table>
-<thead>
-<tr>
-<th>1</th>
-<th>Function is a method</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>1</td>
+<td>Function is a method</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Function is a property get function</td>

@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71325,7 +71325,10 @@
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">SCR</span><span class="kd">←</span><span class="s1">&#39;Scroll&#39;</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Range&#39;</span><span class="w"> </span><span class="m">101</span><span class="p">)(</span><span class="s1">&#39;Event&#39;</span><span class="w"> </span><span class="s1">&#39;Scroll&#39;</span><span class="w"> </span><span class="s1">&#39;C2F&#39;</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">&#39;TEMP.S&#39;</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="nv">SCR</span>
 </code></pre></div></p>
-<p><img alt="temperature converter 9" src="../../img/temperature-converter-9.png" /></p>
+<figure id="_figure-1">
+<img alt="temperature converter 9" src="../../img/temperature-converter-9.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>The range of a scrollbar goes from 1 to the value of the Range property. Setting Range to 101 will give us a range of 1-101. You will see in a moment why we need to do this. The Scroll event will be generated whenever the user moves the scrollbar. We have associated it with the callback function <code>'C2F'</code> which we will define as follows:
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">C2F</span><span class="w"> </span><span class="nv">MSG</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Callback for Centigrade input via scrollbar</span>
@@ -71335,7 +71338,10 @@
 </code></pre></div></p>
 <p>The Event message <code>MSG</code> contains information about the Scroll event. Its 4th element contains the requested thumb position. As we want to go from 0 at the top, to 100 at the bottom, we need to subtract this value from 101. This is done in line 2 of the function. <code>C2F[3]</code> calculates the corresponding Fahrenheit value.</p>
 <p>Try moving the scrollbar and see what happens...</p>
-<p><img alt="temperature converter 10" src="../../img/temperature-converter-10.png" /></p>
+<figure id="_figure-2">
+<img alt="temperature converter 10" src="../../img/temperature-converter-10.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 
 
 

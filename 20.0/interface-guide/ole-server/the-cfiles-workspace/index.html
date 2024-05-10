@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71623,9 +71623,18 @@
 <span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">mycfiles</span><span class="na">.</span><span class="nv">dws</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="nv">Wed</span><span class="w"> </span><span class="nv">Jun</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">13</span><span class="bp">:</span><span class="m">53</span><span class="bp">:</span><span class="m">56</span><span class="w"> </span><span class="m">2016</span>
 </code></pre></div></p>
 <p>Then select <em>Export</em> from the Session <em>File</em> menu and create either an in-process or out-of-process OLE Server.</p>
-<p><img alt="cfiles create bound file" src="../../img/cfiles-create-bound-file.png" /></p>
-<p><img alt="cfiles create bound file status" src="../../img/cfiles-create-bound-file-status.png" /></p>
-<p><img alt="cfiles create bound file ok" src="../../img/cfiles-create-bound-file-ok.png" /></p>
+<figure id="_figure-1">
+<img alt="cfiles create bound file" src="../../img/cfiles-create-bound-file.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
+<figure id="_figure-2">
+<img alt="cfiles create bound file status" src="../../img/cfiles-create-bound-file-status.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
+<figure id="_figure-3">
+<img alt="cfiles create bound file ok" src="../../img/cfiles-create-bound-file-ok.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <h3 id="the-getfile-function">The GetFile Function</h3>
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">GetFile</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">r</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="s1">&#39;.&#39;</span><span class="w"> </span><span class="s1">&#39;GetEnvironment&#39;</span><span class="w"> </span><span class="s1">&#39;DYALOG&#39;</span>
@@ -71633,7 +71642,10 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p><code>GetFile</code> simply returns the full pathname of the <code>test.dcf</code> component file.</p>
-<p><img alt="cfiles getfile properties" src="../../img/cfiles-getfile-properties.png" /></p>
+<figure id="_figure-4">
+<img alt="cfiles getfile properties" src="../../img/cfiles-getfile-properties.png" />
+<figcaption><span>Figure&nbsp;4</span></figcaption>
+</figure>
 <h3 id="the-openfile-function">The OpenFile Function</h3>
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FILE</span><span class="kd">←</span><span class="nv">OpenFile</span><span class="w"> </span><span class="nv">NAME</span><span class="sr">;</span><span class="nv">F</span><span class="sr">;</span><span class="nv">TIE</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Makes a new File object</span>
@@ -71651,7 +71663,10 @@
 <p><code>OpenFile[6]</code>creates an instance of the <code>File</code> namespace using <code>⎕OR</code> and returns it as the result.</p>
 <p>Note that there is a separate instance of <code>File</code> for every file opened by every OLE Client that is connected. Each knows its own <code>TieNumber</code> and <code>Name</code>.</p>
 <p>The COM Properties dialog box for <code>OpenFile</code> is shown below. The function is declared to take a single parameter called <em>FileName</em> whose data type is VT_BSTR (a string). The result of the function is of data type VT_DISPATCH. This data type is used to represent an object.</p>
-<p><img alt="cfiles openfile properties" src="../../img/cfiles-openfile-properties.png" /></p>
+<figure id="_figure-5">
+<img alt="cfiles openfile properties" src="../../img/cfiles-openfile-properties.png" />
+<figcaption><span>Figure&nbsp;5</span></figcaption>
+</figure>
 <h3 id="the-fsize-function">The FSIZE Function</h3>
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">FSIZE</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="nf">⎕FSIZE</span><span class="w"> </span><span class="nv">TieNumber</span>
@@ -71659,7 +71674,10 @@
 </code></pre></div>
 <p><code>FSIZE</code> returns the result of  <code>⎕FSIZE</code> for the file associated with the current instance of the File namespace.</p>
 <p>The COM Properties dialog box for <code>FSIZE</code> is shown below. The function is declared to take no parameters. The result of the function is of data type VT_VARIANT. This data type is used to represent an arbitrary APL array.</p>
-<p><img alt="cfiles fsize properties" src="../../img/cfiles-fsize-properties.png" /></p>
+<figure id="_figure-6">
+<img alt="cfiles fsize properties" src="../../img/cfiles-fsize-properties.png" />
+<figcaption><span>Figure&nbsp;6</span></figcaption>
+</figure>
 <h3 id="the-fread-function">The FREAD Function</h3>
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">FREAD</span><span class="w"> </span><span class="nv">N</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="nf">⎕FREAD</span><span class="w"> </span><span class="nv">TieNumber</span><span class="o">,</span><span class="nv">N</span>
@@ -71667,7 +71685,10 @@
 </code></pre></div>
 <p><code>FREAD</code> returns the value in the specified component read from the file associated with the current instance of the File namespace.</p>
 <p>The COM Properties dialog box for <code>FREAD</code> is shown below. The function is declared to take a single parameter called <em>Component</em> whose data type is VT_I4 (an integer). The result of the function is of data type VT_VARIANT. This data type is used to represent an arbitrary APL array.</p>
-<p><img alt="cfiles fread properties" src="../../img/cfiles-fread-properties.png" /></p>
+<figure id="_figure-7">
+<img alt="cfiles fread properties" src="../../img/cfiles-fread-properties.png" />
+<figcaption><span>Figure&nbsp;7</span></figcaption>
+</figure>
 <h3 id="the-fappend-function">The FAPPEND Function</h3>
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">FAPPEND</span><span class="w"> </span><span class="nv">DATA</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="nv">DATA</span><span class="w"> </span><span class="nf">⎕FAPPEND</span><span class="w"> </span><span class="nv">TieNumber</span>
@@ -71675,7 +71696,10 @@
 </code></pre></div>
 <p><code>FAPPEND</code> appends a component onto of the file associated with the current instance of the File namespace.</p>
 <p>The COM Properties dialog box for <code>FAPPEND</code> is shown below. The function is declared to take a single parameter called <em>Data</em> whose data type is VT_VARIANT. This data type is used to represent an arbitrary APL array. The result of the function is of data type VT_I4 (an integer).</p>
-<p><img alt="cfiles fappend properties" src="../../img/cfiles-fappend-properties.png" /></p>
+<figure id="_figure-8">
+<img alt="cfiles fappend properties" src="../../img/cfiles-fappend-properties.png" />
+<figcaption><span>Figure&nbsp;8</span></figcaption>
+</figure>
 <h3 id="the-freplace-function">The FREPLACE Function</h3>
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FREPLACE</span><span class="w"> </span><span class="nv">ID</span><span class="sr">;</span><span class="nv">I</span><span class="sr">;</span><span class="nv">DATA</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">I</span><span class="w"> </span><span class="nv">DATA</span><span class="kd">←</span><span class="nv">ID</span>
@@ -71684,19 +71708,37 @@
 </code></pre></div>
 <p><code>FREPLACE</code> replaces the specified component of the file associated with the current instance of the File namespace.</p>
 <p>The COM Properties dialog box for <code>FREPLACE</code> is shown below. The function is declared to take two parameters. The first is called <em>Component</em> and is of data type VT_I4 (integer). The second parameter is called <em>Data</em> and is of data type VT_VARIANT. This data type is used to represent an arbitrary APL array. The result of the function is of data type VT_VOID, which means that the function does not return a result.</p>
-<p><img alt="cfiles freplace properties" src="../../img/cfiles-freplace-properties.png" /></p>
+<figure id="_figure-9">
+<img alt="cfiles freplace properties" src="../../img/cfiles-freplace-properties.png" />
+<figcaption><span>Figure&nbsp;9</span></figcaption>
+</figure>
 <h3 id="using-cfiles-from-excel">Using CFiles from Excel</h3>
 <p>Start Excel and load the spreadsheet <code>cfiles.xlsm</code> from the Dyalog APL sub-directory <code>samples\ole</code>.</p>
 <p>Please note that to simplify the Excel code, only components containing matrices (such as those contained in samples\ole\test.dcf) are handled. Components containing scalars, vectors, higher-rank arrays and complex nested arrays are not supported.</p>
-<p><img alt="cfiles excel example 1" src="../../img/cfiles-excel-example-1.png" /></p>
+<figure id="_figure-10">
+<img alt="cfiles excel example 1" src="../../img/cfiles-excel-example-1.png" />
+<figcaption><span>Figure&nbsp;10</span></figcaption>
+</figure>
 <p>Depending upon your configuration settings, it is likely that the macros in cfiles.xlsm are disabled when the spreadsheet is loaded, as shown above. If so, click the <em>Options</em> button and enable them. The security warning is then removed as shown below.</p>
-<p><img alt="cfiles excel example 2" src="../../img/cfiles-excel-example-2.png" /></p>
+<figure id="_figure-11">
+<img alt="cfiles excel example 2" src="../../img/cfiles-excel-example-2.png" />
+<figcaption><span>Figure&nbsp;11</span></figcaption>
+</figure>
 <p>The next step is to enter the name of your component file. A sample file named <code>test.dcf</code> is provided in the <code>samples\ole</code> sub-directory. To get the pathname of this sample file, click <em>Get File Name</em>. The result is shown below:</p>
-<p><img alt="cfiles excel example 3" src="../../img/cfiles-excel-example-3.png" /></p>
+<figure id="_figure-12">
+<img alt="cfiles excel example 3" src="../../img/cfiles-excel-example-3.png" />
+<figcaption><span>Figure&nbsp;12</span></figcaption>
+</figure>
 <p>The next step is to open the file by clicking the <em>Open</em> button. This runs the FOpen procedure. Note that if this step is critical; otherwise any attempt to read or write to the file will fail. When the file is opened, the size of the file is displayed as shown below.</p>
-<p><img alt="cfiles excel example 4" src="../../img/cfiles-excel-example-4.png" /></p>
+<figure id="_figure-13">
+<img alt="cfiles excel example 4" src="../../img/cfiles-excel-example-4.png" />
+<figcaption><span>Figure&nbsp;13</span></figcaption>
+</figure>
 <p>Finally, to read a component, enter the component number, move the input focus to a different cell, and then and click <em>Read</em>. This runs the FRead procedure.</p>
-<p><img alt="cfiles excel example 5" src="../../img/cfiles-excel-example-5.png" /></p>
+<figure id="_figure-14">
+<img alt="cfiles excel example 5" src="../../img/cfiles-excel-example-5.png" />
+<figcaption><span>Figure&nbsp;14</span></figcaption>
+</figure>
 <p>To replace a component, first enter the component number. Then type some data elsewhere on the spreadsheet and select it. Now click <em>Replace</em>. This runs the FReplace procedure.</p>
 <p>To append a component, enter some data elsewhere on the spreadsheet and select it. Now click <em>Append</em>. This runs the FAppend procedure.</p>
 <h3 id="the-fopen-procedure">The FOpen Procedure</h3>

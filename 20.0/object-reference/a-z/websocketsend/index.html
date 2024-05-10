@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,30 +71305,35 @@
 
 <h1 class="heading"><span class="name">WebSocketSend</span><span class="command">Method 847</span></h1>
 
-<p>Applies To: <a href="../../objects/htmlrenderer/">HTMLRenderer</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/htmlrenderer/">HTMLRenderer</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This method is used to send data to a WebSocket. The argument to WebSocketSend is a 2, 3 or 4-element vector as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>ID</th>
-<th>Character vector containing the ID of the WebSocket</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>ID</td>
+<td>Character vector containing the ID of the WebSocket</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Data</td>
 <td>Character or integer vector. Integers must be in the range ¯128 to 255.</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>FIN</td>
 <td>Boolean. 1 indicates that this is the last chunk; 0 that there is more to come.  This is not currently supported by the CEF and should be set to 1.</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>OpCode</td>
 <td>Integer. 1 means UTF-8 data, 2 means binary data. Should be 0 if FIN is 0.</td>
 </tr>

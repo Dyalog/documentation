@@ -32674,7 +32674,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71461,15 +71461,13 @@
 <p><code>⎕NMOVE</code> may be applied using the  Variant operator with the options Wildcard (the Principal option), IfExists, RenameOnly and ProcessCallback.</p>
 <h4 id="wildcard-option-boolean">Wildcard Option (Boolean)</h4>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>The name or names in <code>Y</code> identifies a specific file name.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>0</td>
+<td>The name or names in <code>Y</code> identifies a specific file name.</td>
+</tr>
+<tr>
+<td><code>1</code></td>
 <td>The name or names in <code>Y</code> that specify the <em>base name</em> and <em>extension</em> (see <a href="../../../nparts/">NParts</a> ), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.</td>
 </tr>
 </tbody>
@@ -71490,7 +71488,7 @@
 <td>Existing files will not be overwritten and an error will be signalled.</td>
 </tr>
 <tr>
-<td>'Skip'</td>
+<td><code>'Skip'</code></td>
 <td>Existing files will not be overwritten but the corresponding copy operation will be skipped (ignored).</td>
 </tr>
 </tbody>
@@ -71503,15 +71501,13 @@
 <h4 id="renameonly-option-boolean">RenameOnly Option (Boolean)</h4>
 <p>The RenameOnly option  determines what happens when it is not possible to rename the source.</p>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>The source will be copied and the original deleted</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>0</td>
+<td>The source will be copied and the original deleted</td>
+</tr>
+<tr>
+<td><code>1</code></td>
 <td>The move will fail</td>
 </tr>
 </tbody>
@@ -71616,36 +71612,32 @@
 <p>If you use both options, the callback will be invoked when <em>both</em> apply, so if you set <code>Skip</code> to 10 and <code>Delay</code> to 5000, the callback will be invoked after at least 10 files have been processed and at least 5 seconds have elapsed since the previous invocation of the callback.</p>
 <p>The value of the ProgressCallback variant option may be:</p>
 <table>
-<thead>
-<tr>
-<th>fn</th>
-<th>The name of the callback function.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>fn data</td>
+<td><code>fn</code></td>
+<td>The name of the callback function.</td>
+</tr>
+<tr>
+<td><code>fn data</code></td>
 <td>The name of the callback function, and an array or namespace which is to be passed to the callback in its left argument.</td>
 </tr>
 </tbody>
 </table>
 <p>The right argument given to the callback function is a 3-element vector:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Function</th>
-<th>Character vector which identifies the function that caused the callback to be executed; either <code>'⎕NCOPY'</code> or <code>'⎕NMOVE'.</code></th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Function</td>
+<td>Character vector which identifies the function that caused the callback to be executed; either <code>'⎕NCOPY'</code> or <code>'⎕NMOVE'.</code></td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td>Character vector describing the event that lead to the callback being executed. See below.</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Info</td>
 <td>Reference to a namespace containing information about the event. See below.</td>
 </tr>
@@ -71654,23 +71646,21 @@
 <h4 id="event">Event</h4>
 <p>Event is a character vector which indicates the stage of the copy or move operation..</p>
 <table>
-<thead>
-<tr>
-<th>'Start'</th>
-<th>Reported by the first invocation of the callback which occurs before any files are scanned or processed. This may be used to set the parameters that control the operation. See <strong>Options</strong> .</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>'Scan'</td>
+<td><code>'Start'</code></td>
+<td>Reported by the first invocation of the callback which occurs before any files are scanned or processed. This may be used to set the parameters that control the operation. See <strong>Options</strong> .</td>
+</tr>
+<tr>
+<td><code>'Scan'</code></td>
 <td>Indicates that the system function is in the initial phase of scanning the files in order to calculate <code>Limit</code> . See <strong>ScanFirst</strong> .</td>
 </tr>
 <tr>
-<td>'Progress'</td>
+<td><code>'Progress'</code></td>
 <td>Indicates that the system function is at the main stage of the operation and is moving or copying the files.</td>
 </tr>
 <tr>
-<td>'Done'</td>
+<td><code>'Done'</code></td>
 <td>Indicates that all files have been processed.</td>
 </tr>
 </tbody>
@@ -71679,27 +71669,25 @@
 <h4 id="info">Info</h4>
 <p>Info is a ref to a namespace that contains information about the event. This namespace persists for the duration of the execution of the system function and contains the following fields:</p>
 <table>
-<thead>
-<tr>
-<th>Progress</th>
-<th>A number between <code>0</code> and <code>Limit</code> . When the event code is <code>'Start'</code> , <code>Progress</code> is <code>0</code> . Every time a file or directory is processed, <code>Progress</code> is increased by 1. Finally when the  event code is <code>'Done'</code> , <code>Progress</code> will be equal to <code>Limit</code> .</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>Limit</td>
+<td><code>Progress</code></td>
+<td>A number between <code>0</code> and <code>Limit</code> . When the event code is <code>'Start'</code> , <code>Progress</code> is <code>0</code> . Every time a file or directory is processed, <code>Progress</code> is increased by 1. Finally when the  event code is <code>'Done'</code> , <code>Progress</code> will be equal to <code>Limit</code> .</td>
+</tr>
+<tr>
+<td><code>Limit</code></td>
 <td>The maximum value of <code>Progress</code> . This value might change during the file operation if it doesn't do a full discovery first (the <code>ScanFirst</code> option is 0), or if the file structure changes between the scan and the copy/move.</td>
 </tr>
 <tr>
-<td>Last</td>
+<td><code>Last</code></td>
 <td>A vector of file names which have been processed since the last invocation of the callback function. The user can specify the maximum length of this vector by setting the <code>LastFileCount</code> option. The names in this list are the source names, and not the destination names. The <code>Last</code> vector is always empty when the event is <code>'Start'</code> , and it is cleared when going from the <code>'Scan'</code> phase to the <code>'Progress'</code> phase, to avoid any confusion.</td>
 </tr>
 <tr>
-<td>Data</td>
+<td><code>Data</code></td>
 <td>A field that is reserved for the user to store data which persists between invocations of the callback. It could for example be used to keep a sequence number, to count the number of times the callback had been run.</td>
 </tr>
 <tr>
-<td>Options</td>
+<td><code>Options</code></td>
 <td>This is a namespace which contains the information that controls the future execution of the callback. The options persist between the calls to the callback, so there is no need to set them again unless they should be changed. The fields and their default values are described below.</td>
 </tr>
 </tbody>
@@ -71716,22 +71704,22 @@
 </thead>
 <tbody>
 <tr>
-<td>ScanFirst</td>
+<td><code>ScanFirst</code></td>
 <td>1</td>
 <td>Specifies if the file operation should do a "scan pass" before moving/copying the files. This stage just enumerates  the files to determine how many there are. This will ensure <code>Limit</code> has a realistic value when the actual processing of the files happens. The overhead is small in comparision with the time it takes to process the files. The <code>ScanFirst</code> field is only inspected right after the first invocation of the callback function, with the event code <code>'Start'</code> .</td>
 </tr>
 <tr>
-<td>Delay</td>
+<td><code>Delay</code></td>
 <td>0</td>
 <td>Specifies the number of milliseconds to wait, until the callback will be called again. If all file operations finish before this time, the callback function is called anyway, with the event code <code>'Done'</code> . If a slow file operation is happening (such as copying a big file), the actual delay before the callback is invoked might be longer than the value of <code>Delay</code> .</td>
 </tr>
 <tr>
-<td>Skip</td>
+<td><code>Skip</code></td>
 <td>0</td>
 <td>Specifies a number of files to skip between invocations of the callback function. If you are only interested in getting a callback for each 10th file, you should set this option to 9 for example.</td>
 </tr>
 <tr>
-<td>LastFileCount</td>
+<td><code>LastFileCount</code></td>
 <td>1</td>
 <td>An integer, specifying the maximum number of the latest filenames to be stored in the <code>Last</code> field. The default is to only store the last file processed, but if <code>Delay</code> or <code>Skip</code> are non-zero, multiple files could have been processed between calls to the callback function. A value of 5 for example, will make sure that the 5 last files processed before calling the callback, will have their names in the <code>Last</code> field. The <code>Last</code> field might have fewer elements than <code>LastFileCount</code> , if the number of files processed since the last call is less than <code>LastFileCount</code> . The special value <code>¯1</code> indicates that the <code>Last</code> field should contain <strong>all</strong> the last files since the last call (no limit).</td>
 </tr>

@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,7 +71305,14 @@
 
 <h1 class="heading"><span class="name">DDE</span><span class="command">Event 50</span></h1>
 
-<p>Applies To: <a href="../../objects/root/">Root</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/root/">Root</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, a DDE event is generated whenever a DDE message is received by Dyalog APL. This will occur whenever a server notifies APL that the value of a shared variable has changed, and whenever a client application requests data from APL. If you have several shared variables, you can determine which of them has changed or whose value has been requested using <code>⎕SVS</code>.</p>
 <p>This event <strong>only</strong> applies to the <a href="../../objects/root/">Root</a> object ".", so to enable it you must execute one of the following statements :
@@ -71316,16 +71323,14 @@
 <p>The first statement would cause <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> to terminate on receipt of a DDE event. The second would cause it to call "<code>fn</code>" each time. The third would do likewise but the value in "<code>larg</code>" would be supplied as its left argument.</p>
 <p>The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, or supplied as the right argument to your callback function is a 2-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'DDE'</code> or 50</td>
 </tr>

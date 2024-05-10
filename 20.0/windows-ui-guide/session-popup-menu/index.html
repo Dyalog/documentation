@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71320,7 +71320,10 @@
 <h1 class="heading"><span class="name"> Session Pop-Up Menu</span></h1>
 
 <p>The Session popup menu (<code>⎕SE.popup</code>) is displayed by clicking the right mouse button anywhere in the Session or Editor window.</p>
-<p><img alt="session popup menu" src="../img/session-popup-menu.png" /></p>
+<figure id="_figure-1">
+<img alt="session popup menu" src="../img/session-popup-menu.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>If the mouse pointer is over a visible object name, the popup menu allows you to edit, print, delete it or view its properties. Note that the name of the pop-up menu is specified by the Popup property of <code>⎕SE</code>.</p>
 <p>Session popup menu operations</p>
 <table>
@@ -71334,127 +71337,127 @@
 <tbody>
 <tr>
 <td>Edit</td>
-<td>[Edit]</td>
+<td><code>[Edit]</code></td>
 <td>Edits the current object</td>
 </tr>
 <tr>
 <td>Chart Wizard</td>
-<td>⎕SE.Dyalog.Chart. DoChart</td>
+<td><code>⎕SE.Dyalog.Chart.DoChart</code></td>
 <td>Opens Chart Wizard on current object</td>
 </tr>
 <tr>
 <td>Print</td>
-<td>[ObjPrint]</td>
+<td><code>[ObjPrint]</code></td>
 <td>Prints the current object. Note that if the object is being edited, the version of the object displayed in the edit window is printed.</td>
 </tr>
 <tr>
 <td>Delete</td>
-<td>[ObjDelete]</td>
+<td><code>[ObjDelete]</code></td>
 <td>Erases the current object</td>
 </tr>
 <tr>
 <td>Properties</td>
-<td>[GUIHelp]</td>
+<td><code>[GUIHelp]</code></td>
 <td>Displays the <em>Object Properties</em> dialog box for the current object</td>
 </tr>
 <tr>
 <td>Help</td>
-<td>[Help]</td>
+<td><code>[Help]</code></td>
 <td>Displays the help topic associated with the current object or the APL symbol under the cursor</td>
 </tr>
 <tr>
 <td>Select All</td>
-<td>[selectall]</td>
+<td><code>[selectall]</code></td>
 <td>Selects all text (Editor only)</td>
 </tr>
 <tr>
 <td>Cut</td>
-<td>[Cut]</td>
+<td><code>[Cut]</code></td>
 <td>Deletes selected text</td>
 </tr>
 <tr>
 <td>Copy</td>
-<td>[Copy]</td>
+<td><code>[Copy]</code></td>
 <td>Copies the selection to the clipboard</td>
 </tr>
 <tr>
 <td>Paste</td>
-<td>[Paste]</td>
+<td><code>[Paste]</code></td>
 <td>Pastes the text contents of the clipboard into the session log at the current location. The new lines are <em>marked</em> and may be executed by pressing Enter.</td>
 </tr>
 <tr>
 <td>Paste Unicode</td>
-<td>[PasteUnicode]</td>
+<td><code>[PasteUnicode]</code></td>
 <td>Same as <em>Paste</em> , but gets the Unicode text from the clipboard and converts to <code>⎕AV</code></td>
 </tr>
 <tr>
 <td>Paste Non-Unicode</td>
-<td>[PasteAnsi]</td>
+<td><code>[PasteAnsi]</code></td>
 <td>Same as <em>Paste</em> , but gets the ANSI text from the clipboard and converts to <code>⎕AV</code></td>
 </tr>
 <tr>
 <td>Copy Object</td>
-<td>[ObjCopy]</td>
+<td><code>[ObjCopy]</code></td>
 <td>Copies the contents of the current object to the clipboard</td>
 </tr>
 <tr>
 <td>Paste Object</td>
-<td>[ObjPaste]</td>
+<td><code>[ObjPaste]</code></td>
 <td>Pastes the contents of the clipboard into the current object</td>
 </tr>
 <tr>
 <td>Line Numbers</td>
-<td>[LineNumbers]</td>
+<td><code>[LineNumbers]</code></td>
 <td>Toggles line numbers on/off</td>
 </tr>
 <tr>
 <td>Align Comments</td>
-<td>[AlignComments]</td>
+<td><code>[AlignComments]</code></td>
 <td>Aligns Comments to current column</td>
 </tr>
 <tr>
 <td>Explorer</td>
-<td>[Explorer]</td>
+<td><code>[Explorer]</code></td>
 <td>Displays the <em>Workspace Explorer</em></td>
 </tr>
 <tr>
 <td>Search</td>
-<td>[WSSearch]</td>
+<td><code>[WSSearch]</code></td>
 <td>Displays the <em>Find Objects</em> tool</td>
 </tr>
 <tr>
 <td>Event Viewer</td>
-<td>[EventViewer]</td>
+<td><code>[EventViewer]</code></td>
 <td>Displays the <em>Event Viewer</em></td>
 </tr>
 <tr>
 <td>Threads</td>
-<td>[Threads]</td>
+<td><code>[Threads]</code></td>
 <td>Displays the <em>Threads Tool</em></td>
 </tr>
 <tr>
 <td>Status</td>
-<td>[Status]</td>
+<td><code>[Status]</code></td>
 <td>Displays the <em>Status</em> window</td>
 </tr>
 <tr>
 <td>Colours</td>
-<td>[ChooseColors]</td>
+<td><code>[ChooseColors]</code></td>
 <td>Displays the <em>Colour Selection</em> dialog</td>
 </tr>
 <tr>
 <td>Interrupt</td>
-<td>[Interrupt]</td>
+<td><code>[Interrupt]</code></td>
 <td>Generates a weak interrupt</td>
 </tr>
 <tr>
 <td>Open link</td>
-<td>[OpenLink]</td>
+<td><code>[OpenLink]</code></td>
 <td>Opens the URL or link using the appropriate program. Unicode Edition only.</td>
 </tr>
 <tr>
 <td>Copy link to clipboard</td>
-<td>[CopyLink]</td>
+<td><code>[CopyLink]</code></td>
 <td>Copies the URL or link to the Windows Clipboard.  Unicode Edition only.</td>
 </tr>
 </tbody>

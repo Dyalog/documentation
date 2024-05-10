@@ -32674,7 +32674,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71665,8 +71665,7 @@
 <table>
 <thead>
 <tr>
-<th>Converting from XML</th>
-<th>Converting from XML</th>
+<th colspan="2">Converting from XML</th>
 </tr>
 </thead>
 <tbody>
@@ -71675,31 +71674,30 @@
 <td>All leading and trailing whitespace sequences are removed; remaining whitespace sequences are replaced by a single space character</td>
 </tr>
 <tr>
-<td>Trim (trim)</td>
+<td><code>Trim(trim)</code></td>
 <td>All leading and trailing whitespace sequences are removed; all remaining white space sequences are handled as preserve</td>
 </tr>
 <tr>
-<td>Preserve (preserve)</td>
-<td>Whitespace is preserved as given except that line endings are represented by Linefeed               ( <code>⎕UCS 10</code> )</td>
+<td><code>Preserve(preserve)</code></td>
+<td>Whitespace is preserved as given except that line endings are represented by Linefeed                 ( <code>⎕UCS 10</code> )</td>
 </tr>
 <tr>
-<td>Converting to XML</td>
-<td>Converting to XML</td>
+<td colspan="2">Converting to XML</td>
 </tr>
 <tr>
 <td>Strip (strip)</td>
 <td>All leading and trailing whitespace sequences are removed; remaining whitespace sequences within the data are replaced by a single space character. XML is generated with formatting and indentation to show the data structure</td>
 </tr>
 <tr>
-<td>Trim (trim)</td>
+<td><code>Trim(trim)</code></td>
 <td>Synonymous with <code>strip</code></td>
 </tr>
 <tr>
-<td>Preserve (preserve)</td>
-<td>White space in the data is preserved as given, except that line endings are represented by Linefeed                 ( <code>⎕UCS 10</code> ). XML is generated with no formatting and indentation other than that which is contained within the data</td>
+<td><code>Preserve(preserve)</code></td>
+<td>White space in the data is preserved as given, except that line endings are represented by Linefeed               ( <code>⎕UCS 10</code> ). XML is generated with no formatting and indentation other than that which is contained within the data</td>
 </tr>
 <tr>
-<td><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="nv">eg</span>
+<td colspan="2"><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="nv">eg</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">───────────────────┐</span>
 <span class="err">│</span><span class="o">&lt;</span><span class="nv">xml</span><span class="o">&gt;</span><span class="w">               </span><span class="err">│</span>
 <span class="err">│</span><span class="w">  </span><span class="o">&lt;</span><span class="nv">a</span><span class="o">&gt;</span><span class="w">               </span><span class="err">│</span>
@@ -71713,10 +71711,9 @@
 <span class="err">│</span><span class="o">&lt;</span><span class="na">/</span><span class="nv">xml</span><span class="o">&gt;</span><span class="w">              </span><span class="err">│</span>
 <span class="err">└────────────────────┘</span>
 </code></pre></div></td>
-<td></td>
 </tr>
 <tr>
-<td><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕XML</span><span class="na">⍠</span><span class="s1">&#39;Whitespace&#39;</span><span class="w"> </span><span class="s1">&#39;Strip&#39;</span><span class="p">)</span><span class="nv">eg</span>
+<td colspan="2"><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕XML</span><span class="na">⍠</span><span class="s1">&#39;Whitespace&#39;</span><span class="w"> </span><span class="s1">&#39;Strip&#39;</span><span class="p">)</span><span class="nv">eg</span>
 <span class="w">      </span><span class="c1">⍝      &#39;whitespace&#39; &#39;strip&#39; ⎕XML eg</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">────────────────────────────────────────┐</span>
 <span class="o">↓</span><span class="w">   </span><span class="err">┌</span><span class="kd">→</span><span class="err">──┐</span><span class="w"> </span><span class="err">┌</span><span class="o">⊖</span><span class="err">┐</span><span class="w">           </span><span class="err">┌</span><span class="kd">→</span><span class="err">────────┐</span><span class="w">       </span><span class="err">│</span>
@@ -71751,10 +71748,9 @@
 <span class="err">│</span><span class="w">                       </span><span class="err">└</span><span class="o">∊</span><span class="err">────────────┘</span><span class="w">   </span><span class="err">│</span>
 <span class="err">└</span><span class="o">∊</span><span class="err">────────────────────────────────────────┘</span>
 </code></pre></div></td>
-<td></td>
 </tr>
 <tr>
-<td><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕XML</span><span class="na">⍠</span><span class="s1">&#39;Whitespace&#39;</span><span class="w"> </span><span class="s1">&#39;Preserve&#39;</span><span class="p">)</span><span class="nv">eg</span>
+<td colspan="2"><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕XML</span><span class="na">⍠</span><span class="s1">&#39;Whitespace&#39;</span><span class="w"> </span><span class="s1">&#39;Preserve&#39;</span><span class="p">)</span><span class="nv">eg</span>
 <span class="w">      </span><span class="c1">⍝         &#39;whitespace&#39; &#39;preserve&#39; ⎕XML eg</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">──────────────────────────────────────┐</span>
 <span class="o">↓</span><span class="w">   </span><span class="err">┌</span><span class="kd">→</span><span class="err">──┐</span><span class="w"> </span><span class="err">┌</span><span class="o">⊖</span><span class="err">┐</span><span class="w">         </span><span class="err">┌</span><span class="kd">→</span><span class="err">────────┐</span><span class="w">       </span><span class="err">│</span>
@@ -71806,7 +71802,6 @@
 <span class="err">│</span><span class="w">                     </span><span class="err">└</span><span class="o">∊</span><span class="err">────────┘</span><span class="w">       </span><span class="err">│</span>
 <span class="err">└</span><span class="o">∊</span><span class="err">──────────────────────────────────────┘</span>
 </code></pre></div></td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -71815,8 +71810,7 @@
 <table>
 <thead>
 <tr>
-<th>Converting from XML</th>
-<th>Converting from XML</th>
+<th colspan="2">Converting from XML</th>
 </tr>
 </thead>
 <tbody>
@@ -71825,11 +71819,11 @@
 <td>Markup data is not included in the output array</td>
 </tr>
 <tr>
-<td>Preserve (preserve)</td>
+<td><code>Preserve(preserve)</code></td>
 <td>Markup text appears in the output array, without the leading '&lt;' and trailing '&gt;' in the tag (2 <sup>nd</sup> ) column</td>
 </tr>
 <tr>
-<td><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="nv">eg</span>
+<td colspan="2"><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="nv">eg</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">───────────────────┐</span>
 <span class="err">│</span><span class="o">&lt;</span><span class="nv">xml</span><span class="o">&gt;</span><span class="w">               </span><span class="err">│</span>
 <span class="err">│</span><span class="w">  </span><span class="o">&lt;</span><span class="nv">a</span><span class="o">&gt;</span><span class="w">               </span><span class="err">│</span>
@@ -71843,10 +71837,9 @@
 <span class="err">│</span><span class="o">&lt;</span><span class="na">/</span><span class="nv">xml</span><span class="o">&gt;</span><span class="w">              </span><span class="err">│</span>
 <span class="err">└────────────────────┘</span>
 </code></pre></div></td>
-<td></td>
 </tr>
 <tr>
-<td><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕XML</span><span class="na">⍠</span><span class="s1">&#39;Markup&#39;</span><span class="w"> </span><span class="s1">&#39;Strip&#39;</span><span class="p">)</span><span class="nv">eg</span>
+<td colspan="2"><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕XML</span><span class="na">⍠</span><span class="s1">&#39;Markup&#39;</span><span class="w"> </span><span class="s1">&#39;Strip&#39;</span><span class="p">)</span><span class="nv">eg</span>
 <span class="w">      </span><span class="c1">⍝      &#39;markup&#39; &#39;strip&#39; ⎕XML eg</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">────────────────────────────────────────┐</span>
 <span class="o">↓</span><span class="w">   </span><span class="err">┌</span><span class="kd">→</span><span class="err">──┐</span><span class="w"> </span><span class="err">┌</span><span class="o">⊖</span><span class="err">┐</span><span class="w">           </span><span class="err">┌</span><span class="kd">→</span><span class="err">────────┐</span><span class="w">       </span><span class="err">│</span>
@@ -71881,10 +71874,9 @@
 <span class="err">│</span><span class="w">                       </span><span class="err">└</span><span class="o">∊</span><span class="err">────────────┘</span><span class="w">   </span><span class="err">│</span>
 <span class="err">└</span><span class="o">∊</span><span class="err">────────────────────────────────────────┘</span>
 </code></pre></div></td>
-<td></td>
 </tr>
 <tr>
-<td><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕XML</span><span class="na">⍠</span><span class="s1">&#39;Markup&#39;</span><span class="w"> </span><span class="s1">&#39;Preserve&#39;</span><span class="p">)</span><span class="nv">eg</span>
+<td colspan="2"><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕XML</span><span class="na">⍠</span><span class="s1">&#39;Markup&#39;</span><span class="w"> </span><span class="s1">&#39;Preserve&#39;</span><span class="p">)</span><span class="nv">eg</span>
 <span class="w">      </span><span class="c1">⍝         &#39;markup&#39; &#39;preserve&#39; ⎕XML eg</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">──────────────────────────────────────────────┐</span>
 <span class="o">↓</span><span class="w">   </span><span class="err">┌</span><span class="kd">→</span><span class="err">──┐</span><span class="w">            </span><span class="err">┌</span><span class="o">⊖</span><span class="err">┐</span><span class="w">     </span><span class="err">┌</span><span class="kd">→</span><span class="err">────────┐</span><span class="w">        </span><span class="err">│</span>
@@ -71929,7 +71921,6 @@
 <span class="err">│</span><span class="w">                            </span><span class="err">└</span><span class="o">∊</span><span class="err">────────────┘</span><span class="w">    </span><span class="err">│</span>
 <span class="err">└</span><span class="o">∊</span><span class="err">──────────────────────────────────────────────┘</span>
 </code></pre></div></td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -71938,8 +71929,7 @@
 <table>
 <thead>
 <tr>
-<th>Converting from XML</th>
-<th>Converting from XML</th>
+<th colspan="2">Converting from XML</th>
 </tr>
 </thead>
 <tbody>
@@ -71948,19 +71938,18 @@
 <td>The reference is replaced by a single '?' character</td>
 </tr>
 <tr>
-<td>Preserve (preserve)</td>
+<td><code>Preserve(preserve)</code></td>
 <td>The reference is included in the output data as given, but with the leading '&amp;' replaced by Esc ( <code>⎕UCS 27</code> )</td>
 </tr>
 <tr>
-<td>Converting to XML</td>
-<td>Converting to XML</td>
+<td colspan="2">Converting to XML</td>
 </tr>
 <tr>
 <td>Replace (replace)</td>
 <td>Esc ( <code>⎕UCS 27</code> ) is preserved</td>
 </tr>
 <tr>
-<td>Preserve (preserve)</td>
+<td><code>Preserve(preserve)</code></td>
 <td>Esc ( <code>⎕UCS 27</code> ) is replaced by '&amp;'</td>
 </tr>
 </tbody>

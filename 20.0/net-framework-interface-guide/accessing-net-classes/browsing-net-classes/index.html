@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71325,18 +71325,33 @@
 <p>As a convenience, the Dyalog APL Workspace Explorer has been extended to perform a similar task as <code>ILDASM</code> so that you can gain access to the information within the context of the APL environment.</p>
 <p>The information that describes .NET classes, which is known as its <em>Metadata</em>, is part of the definition of the class and is stored with it. This Metadata corresponds to Type Information in COM, which is typically stored in a separate Type Library.</p>
 <p>To gain information about one or more .NET Classes, open the Workspace Explorer, right click the <em>Metadata</em> folder, and choose <em>Load</em>.</p>
-<p><img alt="browsing net classes 1" src="../../img/browsing-net-classes-1.png" /></p>
+<figure id="_figure-1">
+<img alt="browsing net classes 1" src="../../img/browsing-net-classes-1.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>This brings up the <em>Browse .NET Assembly</em> dialog box as shown below. Navigate to the .NET assembly of your choice, and click <em>Open</em>.</p>
-<p><img alt="browsing net classes 2" src="../../img/browsing-net-classes-2.png" /></p>
+<figure id="_figure-2">
+<img alt="browsing net classes 2" src="../../img/browsing-net-classes-2.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <p>The .NET Classes provided with the .NET Framework are typically located in <code>C:\WINDOWS\Microsoft.NET\Framework64\V4.0.30319</code> (on a 64-bit computer). The last named folder is the Version number.</p>
 <p>The most commonly used classes of the .NET Namespace System are stored in this directory in an Assembly named <code>mscorlib.dll</code>, along with a number of other fundamental .NET Namespaces.</p>
 <p>The result of opening this Assembly is illustrated in the following screen shot. The somewhat complex tree structure that is shown in the Workspace Explorer merely reflects the structure of the Metadata itself.</p>
-<p><img alt="browsing net classes 3" src="../../img/browsing-net-classes-3.png" /></p>
+<figure id="_figure-3">
+<img alt="browsing net classes 3" src="../../img/browsing-net-classes-3.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <p>Opening the <em>System/ Classes</em> sub-folder causes the Explorer to display the list of classes contained in the .NET Namespace <em>System</em> as shown in the picture below.</p>
-<p><img alt="browsing net classes 4" src="../../img/browsing-net-classes-4.png" /></p>
+<figure id="_figure-4">
+<img alt="browsing net classes 4" src="../../img/browsing-net-classes-4.png" />
+<figcaption><span>Figure&nbsp;4</span></figcaption>
+</figure>
 <p>The <em>Constructors</em> folder shows you the list of all of the valid constructors and their parameter sets with which you may create a new instance of the Class by calling <code>New</code>. The constructors are those named <em>.ctor</em>; you may ignore the one named <em>.cctor</em>, (the class constructor) and any labelled as <em>Private</em>.</p>
 <p>For example, you can deduce that <code>DateTime.New</code> may be called with three numeric (<code>Int32</code>) parameters, or six numeric (<code>Int32</code>) parameters, and so forth. There are in fact seven different ways that you can create an instance of a <code>DateTime</code>.</p>
-<p><img alt="browsing net classes 5" src="../../img/browsing-net-classes-5.png" /></p>
+<figure id="_figure-5">
+<img alt="browsing net classes 5" src="../../img/browsing-net-classes-5.png" />
+<figcaption><span>Figure&nbsp;5</span></figcaption>
+</figure>
 <p>For example, the following statement may be used to create a new instance of <code>DateTime</code> (09:30 in the morning on 30<sup>th</sup> April 2001):
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mydt</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">2001</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
 <span class="w"> </span>
@@ -71344,7 +71359,10 @@
 <span class="m">30</span><span class="na">/</span><span class="m">04</span><span class="na">/</span><span class="m">2001</span><span class="w"> </span><span class="m">09</span><span class="bp">:</span><span class="m">30</span><span class="bp">:</span><span class="m">00</span>
 </code></pre></div></p>
 <p>The <em>Properties</em> folder provides a list of the properties supported by the Class. It shows the name of the property followed by its data type. For example, the <code>DayOfYear</code> property is defined to be of type <code>Int32</code>.</p>
-<p><img alt="browsing net classes 6" src="../../img/browsing-net-classes-6.png" /></p>
+<figure id="_figure-6">
+<img alt="browsing net classes 6" src="../../img/browsing-net-classes-6.png" />
+<figcaption><span>Figure&nbsp;6</span></figcaption>
+</figure>
 <p>You can query a property by direct reference:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mydt</span><span class="na">.</span><span class="nv">DayOfWeek</span>
 <span class="nv">Monday</span>
@@ -71359,9 +71377,15 @@
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mydt</span><span class="na">.</span><span class="nv">IsLeapYear</span><span class="w"> </span><span class="m">2000</span>
 <span class="m">1</span>
 </code></pre></div></p>
-<p><img alt="browsing net classes 7" src="../../img/browsing-net-classes-7.png" /></p>
+<figure id="_figure-7">
+<img alt="browsing net classes 7" src="../../img/browsing-net-classes-7.png" />
+<figcaption><span>Figure&nbsp;7</span></figcaption>
+</figure>
 <p>Many of the reported objects are listed as <em>Private</em>, which means they are inaccessible to users of the class – you are not able to call them or inspect their value. For more information about classes, see  Object Oriented Programming<a href="../../../programming-reference-guide/object-oriented-programming/introducing-classes/introducing-classes">Introducing Classes</a>.</p>
-<p><img alt="browsing net classes 8" src="../../img/browsing-net-classes-8.png" /></p>
+<figure id="_figure-8">
+<img alt="browsing net classes 8" src="../../img/browsing-net-classes-8.png" />
+<figcaption><span>Figure&nbsp;8</span></figcaption>
+</figure>
 <div class="footnote">
 <hr />
 <ol>

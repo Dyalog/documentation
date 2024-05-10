@@ -32821,7 +32821,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71628,39 +71628,39 @@
 </thead>
 <tbody>
 <tr>
-<td>∇</td>
+<td><code>∇</code></td>
 <td>Closes definition mode</td>
 </tr>
 <tr>
-<td>[⎕]</td>
+<td><code>[⎕]</code></td>
 <td>Displays the entire operation</td>
 </tr>
 <tr>
-<td>[⎕n]</td>
+<td><code>[⎕n]</code></td>
 <td>Displays the operation starting at line n</td>
 </tr>
 <tr>
-<td>[n⎕]</td>
+<td><code>[n⎕]</code></td>
 <td>Displays only line n</td>
 </tr>
 <tr>
-<td>[∆n]</td>
+<td><code>[∆n]</code></td>
 <td>Deletes line n</td>
 </tr>
 <tr>
-<td>[n∆m]</td>
+<td><code>[n∆m]</code></td>
 <td>Deletes m lines starting at line n</td>
 </tr>
 <tr>
-<td>[n]</td>
+<td><code>[n]</code></td>
 <td>Prompts for input at line n</td>
 </tr>
 <tr>
-<td>[n]s</td>
+<td><code>[n]s</code></td>
 <td>Replaces or inserts a statement at line n</td>
 </tr>
 <tr>
-<td>[n⎕m]</td>
+<td><code>[n⎕m]</code></td>
 <td>Edits line n placing the cursor at character position m where an Edit Control Symbol performs a specific action.</td>
 </tr>
 </tbody>
@@ -71688,13 +71688,11 @@
 <h2 id="edit">Edit</h2>
 <p>The editing directive <code>[n⎕m]</code>, where <code>n</code> is a line number and <code>m</code> is an integer number, causes line number <code>n</code> to be displayed and the cursor placed beneath the <code th="th">m</code> character on a new line for editing.  The response is taken to be edit control symbols selected from:</p>
 <table>
-<thead>
-<tr>
-<th><code>/</code></th>
-<th>to delete the character immediately above the symbol.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td><code>/</code></td>
+<td>to delete the character immediately above the symbol.</td>
+</tr>
 <tr>
 <td>1 to 9</td>
 <td>to insert from 1 to 9 spaces immediately prior to the character above the digit.</td>

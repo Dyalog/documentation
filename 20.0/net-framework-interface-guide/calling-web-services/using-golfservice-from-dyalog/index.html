@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71337,7 +71337,10 @@
 <span class="sr">[</span><span class="m">8</span><span class="sr">]</span><span class="w">    </span><span class="nv">COURSECODES</span><span class="w"> </span><span class="nv">COURSES</span><span class="kd">←</span><span class="o">↓⍉↑</span><span class="nv">GS</span><span class="na">.</span><span class="nv">GetCourses</span><span class="na">.</span><span class="p">(</span><span class="nv">Code</span><span class="w"> </span><span class="nv">Name</span><span class="p">)</span>
 </code></pre></div></p>
 <p>The following screen shot illustrates the user interface provided by <code>GOLF</code>. In this example, the user has typed the names of two golfers (one rather more famous than the other - at least in APL circles) and then presses the <em>Book it!</em> button.</p>
-<p><img alt="golfservice_1" src="../../img/golfservice-1.png" /></p>
+<figure id="_figure-1">
+<img alt="golfservice_1" src="../../img/golfservice-1.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>This action fires the <code>BOOK</code> callback function which is shown below.
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">BOOK</span><span class="sr">;</span><span class="nv">CCODE</span><span class="sr">;</span><span class="nv">YMD</span><span class="sr">;</span><span class="nv">HOUR</span><span class="sr">;</span><span class="nv">MINUTES</span><span class="sr">;</span><span class="nv">FLAG</span><span class="sr">;</span><span class="nv">NAMES</span><span class="sr">;</span><span class="nv">BOOKING</span><span class="sr">;</span><span class="nv">M</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">CCODE</span><span class="kd">←</span><span class="o">⊃</span><span class="nv">F</span><span class="na">.</span><span class="nv">COURSE</span><span class="na">.</span><span class="nv">SelItems</span><span class="na">/</span><span class="nv">COURSECODES</span>
@@ -71364,7 +71367,10 @@
 </code></pre></div></p>
 <p>Line[6] calls the <code>MakeBooking</code> method of the <code>GS</code> object, passing it the data entered by the user. The result, a <code>Booking</code> object, is assigned to <code>BOOKING</code>. Line[8] checks its <code>OK</code> field to tell whether or not the reservation was successful. If so, lines[9-11] display the message box illustrated below.</p>
 <p>Notice how the various fields are extracted and notice how the <code>ToLongDateString</code> and <code>ToShortTime String</code> methods are employed.</p>
-<p><img alt="golfservice_2" src="../../img/golfservice-2.png" /></p>
+<figure id="_figure-2">
+<img alt="golfservice_2" src="../../img/golfservice-2.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <p>Pressing the <em>Starting Sheet</em> button runs the <code>SS</code> callback listed below.
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">SS</span><span class="sr">;</span><span class="nv">CCODE</span><span class="sr">;</span><span class="nv">YMD</span><span class="sr">;</span><span class="nv">M</span><span class="sr">;</span><span class="nv">SHEET</span><span class="sr">;</span><span class="nv">OK</span><span class="sr">;</span><span class="nv">COURSE</span><span class="sr">;</span><span class="nv">TEETIME</span><span class="sr">;</span><span class="nv">S</span><span class="sr">;</span><span class="nv">DATA</span><span class="sr">;</span><span class="nv">N</span>
 <span class="w">        </span><span class="sr">;</span><span class="nv">TIMES</span>
@@ -71395,7 +71401,10 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div></p>
 <p>Line[3] calls the <code>GetStartingSheet</code> method of the <code>GS</code> object. The result, a <code>StartingSheet</code> object, is assigned to <code>SHEET</code>. Line[4] checks its <code>OK</code> field to see if the call succeeded. If so, lines[5-12] display the result in a Grid, which is illustrated below.</p>
-<p><img alt="golfservice_3" src="../../img/golfservice-3.png" /></p>
+<figure id="_figure-3">
+<img alt="golfservice_3" src="../../img/golfservice-3.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 
 
 

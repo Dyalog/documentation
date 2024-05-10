@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,37 +71327,43 @@
 
 <h1 class="heading"><span class="name">SetColSize</span><span class="command">Event 176</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a> <a href="../../objects/listview/">ListView</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+<td><a href="../../objects/listview/">ListView</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user changes the width of a column in a <a href="../../objects/grid/">Grid</a> or <a href="../../objects/listview/">ListView</a> object, or changes the width of the row titles in a <a href="../../objects/grid/">Grid</a>. This may be done by dragging a border with the mouse or by double-clicking over a border. In the former case, the default action is to adjust the width of the appropriate column or the width of the row title area to the size selected by the user. In the latter case, the default action is to adjust the width to the maximum required to display all the data.</p>
 <p>In either case, you can disable the default action by setting the event action code to <code>¯1</code> or you can selectively prevent a particular resize operation from taking place by returning 0 from a callback function.</p>
 <p>The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, or supplied as the right argument to your callback function, is a 5-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'SetColSize'</code> or 176</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Column number</td>
 <td>Integer. This is sensitive to the index origin, <code>⎕IO</code> , but is <code>¯1</code> if the user has resized the row titles in a Grid.</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Width</td>
 <td>Integer containing the value of the (new)column width. This is <code>¯3</code> if the user has double-clicked to request automatic width adjustment.</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Undo flag</td>
 <td>0 or 1</td>
 </tr>

@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,18 @@
 
 <h1 class="heading"><span class="name">Changed</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/buttonedit/">ButtonEdit</a> <a href="../../objects/edit/">Edit</a> <a href="../../objects/propertypage/">PropertyPage</a> <a href="../../objects/richedit/">RichEdit</a> <a href="../../objects/spinner/">Spinner</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/buttonedit/">ButtonEdit</a></td>
+<td><a href="../../objects/edit/">Edit</a></td>
+<td><a href="../../objects/propertypage/">PropertyPage</a></td>
+<td><a href="../../objects/richedit/">RichEdit</a></td>
+<td><a href="../../objects/spinner/">Spinner</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The Changed property, in conjunction with the Change event, provides the means to control the validation of an object after the user has finished interacting with it.</p>
 <p>Initially, the value of the Changed property of an object is set to 0. When the user gives the focus to the object and causes either the Text or (in the case of a <a href="../../objects/spinner/">Spinner</a>) the Thumb property to be altered, the Changed property is immediately set to 1. When the object loses the input focus and the value of the Changed property is 1, the object generates a Change event. The value of the Changed property is then determined as follows:</p>

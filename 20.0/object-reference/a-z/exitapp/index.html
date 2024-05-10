@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,7 +71305,14 @@
 
 <h1 class="heading"><span class="name">ExitApp</span><span class="command">Event 132</span></h1>
 
-<p>Applies To: <a href="../../objects/root/">Root</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/root/">Root</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user attempts to terminate a Dyalog APL/W application from the Windows Task List.</p>
 <p>The Windows Task list displays the names of all running applications. The name displayed for a Dyalog APL/W application is defined by the <a href="../../properties/caption/">Caption</a> property of the system object <code>Root</code>. If you fail to define this property, there will be no entry for the application in the Task List.</p>
@@ -71313,16 +71320,14 @@
 <p>Note that this event only provides for termination via the Windows Task List. See also the <a href="../../methodorevents/exitwindows/">ExitWindows</a> event.</p>
 <p>The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, or supplied as the right argument to your callback function, is a 2-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'ExitApp'</code> or 132</td>
 </tr>

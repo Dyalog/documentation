@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,52 +71305,57 @@
 
 <h1 class="heading"><span class="name">CellError</span><span class="command">Event 157</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user inserts invalid data into the <a href="../../objects/edit/">Edit</a> object associated with a cell in a <a href="../../objects/grid/">Grid</a> object and then attempts to move to another cell or to another control outside the <a href="../../objects/grid/">Grid</a>. It is also reported if the user selects a <a href="../../objects/menuitem/">MenuItem</a>.</p>
 <p>The default action for the CellError event is to sound the bell (beep). This action can be disabled by returning 0 from the attached callback function. Whatever the result of the callback, the user will be prevented from moving to another cell in the <a href="../../objects/grid/">Grid</a> and the <a href="../../properties/curcell/">CurCell</a> and <a href="../../properties/values/">Values</a> properties will remain unchanged. The user is not prevented from switching to any other control or to another application. However, if and when the user returns to the <a href="../../objects/grid/">Grid</a>, the current cell (<a href="../../properties/curcell/">CurCell</a>) remains the invalid one and the user may not select a different one until the invalid data in the cell has been corrected. If you wish to allow the user to move to another cell without correcting the data, you may do so by generating a <a href="../../methodorevents/cellmove/">CellMove</a> event explicitly. However, the <a href="../../properties/values/">Values</a> property will remain unchanged and the invalid contents of the <a href="../../objects/edit/">Edit</a> object will simply be discarded.</p>
 <p>The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> or supplied as the right argument to your callback function, is an 8-element vector as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'CellError'</code> or 157</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Cell row</td>
 <td>integer</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Cell column</td>
 <td>integer</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Invalid data</td>
 <td>character vector</td>
 </tr>
 <tr>
-<td>[6]</td>
+<td><code>[6]</code></td>
 <td>Object name</td>
 <td>character vector (name of object to which the user has transferred focus)</td>
 </tr>
 <tr>
-<td>[7]</td>
+<td><code>[7]</code></td>
 <td>New cell (row)</td>
 <td>integer</td>
 </tr>
 <tr>
-<td>[8]</td>
+<td><code>[8]</code></td>
 <td>New cell (column)</td>
 <td>integer</td>
 </tr>

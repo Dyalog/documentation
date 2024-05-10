@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,22 +71305,73 @@
 
 <h1 class="heading"><span class="name">CEFVersion</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/htmlrenderer/">HTMLRenderer</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/htmlrenderer/">HTMLRenderer</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>CEFVersion is a read-only property that reports the version of the <a href="https://en.wikipedia.org/wiki/Chromium_Embedded_Framework">Chromium Embedded Framework (CEF)</a> that is being used. This information is primarily used for debugging and support.</p>
 <p>It is a 10-element vector containing the following:</p>
-<p>| Index | Description |
-| --- | --- | ---  |
-| [1] | Formatted CEF release number. This is the primary identifier for a version of CEF. |
-| [2] | CEF major version. |
-| [3] | Commit number. |
-| [4] | Chromium version number. |
-| [5] | Chromium version number. |  |
-| [6] | Chromium version number. |  |
-| [7] | Chromium version number. |  |
-| [8] | GIT Hashes |  |
-| [9] | GIT Hashes |  |
-| [10] | GIT Hashes |  |</p>
+<table>
+<thead>
+<tr>
+<th>Index</th>
+<th colspan="2">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[1]</code></td>
+<td colspan="2">Formatted CEF release number. This is the primary identifier for a version of CEF.</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
+<td colspan="2">CEF major version.</td>
+</tr>
+<tr>
+<td><code>[3]</code></td>
+<td colspan="2">Commit number.</td>
+</tr>
+<tr>
+<td><code>[4]</code></td>
+<td colspan="2">Chromium version number.</td>
+</tr>
+<tr>
+<td><code>[5]</code></td>
+<td>Chromium version number.</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><code>[6]</code></td>
+<td>Chromium version number.</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><code>[7]</code></td>
+<td>Chromium version number.</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><code>[8]</code></td>
+<td>GIT Hashes</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><code>[9]</code></td>
+<td>GIT Hashes</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><code>[10]</code></td>
+<td>GIT Hashes</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 
 
 

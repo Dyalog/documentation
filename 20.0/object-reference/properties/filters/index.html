@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,14 @@
 
 <h1 class="heading"><span class="name">Filters</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/filebox/">FileBox</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/filebox/">FileBox</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The Filters property is a nested scalar or vector containing a list of filters. Each filter is a 2-element vector of character vectors which contain a file type mask and a file type description respectively. The file type descriptions appear in a drop-down combo box labelled "List Files of Type". When the user selects one of these, the currently selected directory is searched for files which match the corresponding mask. The default value of Filters is an empty vector. This gives a file type mask of "<em>.</em>" and a file type description of "All Files (<em>.</em>)". Hence an empty vector is equivalent to <code>(⊂'*.*' 'All Files (*.*)')</code>.</p>
 

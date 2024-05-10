@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71683,14 +71683,23 @@
 <p>The simplest way to obtain further information about an OLE property, method or event is to display its Property Sheet.</p>
 <p>To do this, change space to the namespace that represents the object, type the name (or place the cursor over the name) of the property, method or event in question, press the right mouse button and select Properties from the context menu.</p>
 <p>The information displayed for the OpenDatabase method that is provided by the DAO.DBEngine OLE object is shown below.</p>
-<p><img alt="ole client opendatabase properties" src="../../img/ole-client-opendatabase-properties.png" /></p>
+<figure id="_figure-1">
+<img alt="ole client opendatabase properties" src="../../img/ole-client-opendatabase-properties.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <h3 id="using-the-workspace-explorer">Using the Workspace Explorer</h3>
 <p>You can also obtain information using the Workspace Explorer.</p>
 <p>If you have created an instance of an object, you can navigate to it using the Explorer and then browse its Events, Methods and Properties. The picture below illustrates the effect of browsing the object <code>DB</code> that is connected to DAO.DBEngine.120.</p>
-<p><img alt="ole client opendatabase explorer" src="../../img/ole-client-opendatabase-explorer.png" /></p>
+<figure id="_figure-2">
+<img alt="ole client opendatabase explorer" src="../../img/ole-client-opendatabase-explorer.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <p>To obtain detailed information about a specific property, event, or method, just open the appropriate folder and select the name you want. The details will be displayed in the list view pane.</p>
 <p>The same information can be obtained by browsing the <em>Loaded Libraries</em> folder. This folder will be displayed if the <em>View/Type Libraries</em> menu item is checked and the appropriate library has been loaded. The library will be loaded if you have ever created an instance of the object in this workspace. Alternatively, you may navigate to the information using the <em>Registered Library</em> folder.</p>
-<p><img alt="ole client opendatabase loaded libraries" src="../../img/ole-client-opendatabase-loaded-libraries.png" /></p>
+<figure id="_figure-3">
+<img alt="ole client opendatabase loaded libraries" src="../../img/ole-client-opendatabase-loaded-libraries.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <h3 id="getpropertyinfo-method">GetPropertyInfo Method</h3>
 <p>You can also obtain information about the properties exposed by a COM object, using the GetPropertyInfo method. Note that this is a Dyalog APL method, added to the object, and not a native method provided by the object itself.</p>
 <p>For example, the DAO.DBEngine OLE object exposes a property called Version. You can discover the meaning of the Version property as follows:

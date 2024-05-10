@@ -32674,7 +32674,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71370,7 +71370,7 @@
 <h1 class="heading"><span class="name">File Check and Repair</span><span class="command">R←{X} ⎕FCHK Y</span></h1>
 
 <p><code>⎕FCHK</code> validates and repairs component files, and validates files associated with external variables, following an abnormal termination of the APL process or operating system.</p>
-<p><code>Y</code> must be a simple character scalar or vector which specifies the name of the file to be exclusively checked or repaired. For component files, the file must be named in accordance with the operating system's conventions, and may be a relative or absolute pathname. The file must exist and must not be tied. If no file extension is supplied, the set of extensions specified by the  <strong>CFEXT</strong> parameter are tried one after another until the file is found or the set of extensions is exhausted. See CFEXT Parameter<a href="../../../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters"> CFEXT</a>.</p>
+<p><code>Y</code> must be a simple character scalar or vector which specifies the name of the file to be exclusively checked or repaired. For component files, the file must be named in accordance with the operating system's conventions, and may be a relative or absolute pathname. The file must exist and must not be tied. If no file extension is supplied, the set of extensions specified by the  <strong>CFEXT</strong> parameter are tried one after another until the file is found or the set of extensions is exhausted. See <a href="../../../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters"> CFEXT</a>.</p>
 <p>For files associated with external variables, any filename extension must be specified even if <code>⎕XT</code> would not require it. The file must exist and must not currently be associated with an external variable.</p>
 <p>Options for <code>⎕FCHK</code> are specified using the Variant operator <code>⍠</code> or by the optional left argument <code>X</code>. The former is recommended but the older mechanism using the left argument is still supported.</p>
 <p>In either case, the default behaviour is as follows:</p>
@@ -71380,19 +71380,17 @@
 </ol>
 <p>The result <code>R</code> is a vector of the numbers of missing or damaged components. <code>R</code> may include non-positive numbers of "pseudo components" that indicate damage to parts of the file other than in specific components:</p>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>ACCESS MATRIX.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>¯1</td>
+<td><code>0</code></td>
+<td>ACCESS MATRIX.</td>
+</tr>
+<tr>
+<td><code>¯1</code></td>
 <td>Free-block tree.</td>
 </tr>
 <tr>
-<td>¯2</td>
+<td><code>¯2</code></td>
 <td>Component index tree.</td>
 </tr>
 </tbody>
@@ -71408,45 +71406,39 @@
 <p><em>Rebuild</em> causes the <em>file indices</em> to be discarded and rebuilt. <em>Repair</em> only takes place on files which have been checked and found to be damaged. It involves a rebuild, but that only takes place if it is needed. Note that Repair and Force only apply if Task is <code>'Scan'</code>.</p>
 <h5 id="task">Task</h5>
 <table>
-<thead>
-<tr>
-<th>Scan</th>
-<th>causes the file to be checked and optionally repaired (see <code>'Repair'</code> below)</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>Rebuild</td>
+<td>Scan</td>
+<td>causes the file to be checked and optionally repaired (see <code>'Repair'</code> below)</td>
+</tr>
+<tr>
+<td><code>Rebuild</code></td>
 <td>causes the file to be unconditionally rebuilt</td>
 </tr>
 </tbody>
 </table>
 <h5 id="repair-principle-option">Repair (principle option)</h5>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>do not repair</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>0</td>
+<td>do not repair</td>
+</tr>
+<tr>
+<td><code>1</code></td>
 <td>causes the file to be repaired if damage is found</td>
 </tr>
 </tbody>
 </table>
 <h5 id="force">Force</h5>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>do not validate the file if it appears to have been properly closed</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>0</td>
+<td>do not validate the file if it appears to have been properly closed</td>
+</tr>
+<tr>
+<td><code>1</code></td>
 <td>validate the file even if it appears to have been properly closed</td>
 </tr>
 </tbody>
@@ -71475,7 +71467,7 @@
 </ul>
 <p>Following a <em>check</em> of the file, a non-null result indicates that the file is damaged.</p>
 <p>Following a <em>repair</em> of the file, the result indicates those components that could not be recovered. Un-recovered components will give a <code>FILE COMPONENT DAMAGED</code> error if read but may be replaced without error.</p>
-<p>Repair can recover only check-summed components from the file, i.e. only those components that were written with the checksum option enabled (see <a href="../fprops/">File Properties:</a>).</p>
+<p>Repair can recover only check-summed components from the file, i.e. only those components that were written with the checksum option enabled (see <a href="../fprops/">"File Properties: "</a>).</p>
 <p>Following an operating system crash, repair may result in one or more individual components being rolled back to a previous version or not recovered at all, unless Journaling levels 2 or 3 were also set when these components were written.</p>
 
 

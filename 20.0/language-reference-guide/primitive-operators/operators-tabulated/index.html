@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71306,137 +71306,131 @@
 <h1 class="heading"><span class="name"> Primitive Operators</span></h1>
 
 <table>
-<thead>
-<tr>
-<th><a href="../each-with-monadic-operand/">Each</a></th>
-<th>f¨Y</th>
-<th>apply monadic <code>f</code> to elements of <code>Y</code></th>
-</tr>
-</thead>
 <tbody>
 <tr>
+<td><a href="../each-with-monadic-operand/">Each</a></td>
+<td><code>f¨Y</code></td>
+<td>apply monadic <code>f</code> to elements of <code>Y</code></td>
+</tr>
+<tr>
 <td><a href="../each-with-dyadic-operand/">Dyadic Each</a></td>
-<td>Xf¨Y</td>
+<td><code>Xf¨Y</code></td>
 <td>apply dyadic <code>f</code> to corresponding elements of <code>X</code> and <code>Y</code></td>
 </tr>
 <tr>
 <td><a href="../rank/">Rank</a></td>
-<td>f(⍤k)Y</td>
+<td><code>f(⍤k)Y</code></td>
 <td>apply monadic <code>f</code> to k-cells of <code>Y</code></td>
 </tr>
 <tr>
 <td><a href="../rank/">Dyadic Rank</a></td>
-<td>Xf(⍤kx ky)Y</td>
+<td><code>Xf(⍤kx ky)Y</code></td>
 <td>dyadic <code>f</code> placed between kx-cells of <code>X</code> and  ky-cells of <code>Y</code></td>
 </tr>
 <tr>
 <td><a href="../power-operator/">Power</a></td>
-<td>X(f⍣g)Y</td>
+<td><code>X(f⍣g)Y</code></td>
 <td>apply monadic or dyadic <code>f</code> repeatedly to <code>Y</code></td>
 </tr>
 <tr>
 <td><a href="../reduce/">Reduce</a></td>
-<td>f/Y</td>
+<td><code>f/Y</code></td>
 <td>dyadic <code>f</code> placed between each sub-array along (last) axis of <code>Y</code></td>
 </tr>
 <tr>
 <td><a href="../reduce-first/">Reduce First</a></td>
-<td>f⌿Y</td>
+<td><code>f⌿Y</code></td>
 <td>dyadic <code>f</code> placed between each sub-array along (first) axis of <code>Y</code></td>
 </tr>
 <tr>
 <td><a href="../reduce-n-wise/">N-Wise Reduce</a></td>
-<td>Xf/Y</td>
+<td><code>Xf/Y</code></td>
 <td>dyadic <code>f</code> placed between items of sub-vectors of length <code>X</code> of <code>Y</code></td>
 </tr>
 <tr>
 <td><a href="../scan/">Scan</a></td>
-<td>f\Y</td>
+<td><code>f\Y</code></td>
 <td>successive reductions along (last) axis of <code>Y</code></td>
 </tr>
 <tr>
 <td><a href="../scan-first/">Scan First</a></td>
-<td>f⍀Y</td>
+<td><code>f⍀Y</code></td>
 <td>successive reductions along (first) axis of <code>Y</code></td>
 </tr>
 <tr>
 <td><a href="../commute/">Commute</a></td>
-<td>{X}f⍨Y</td>
+<td><code>{X}f⍨Y</code></td>
 <td>commute arguments of dyadic <code>f</code></td>
 </tr>
 <tr>
 <td><a href="../constant/">Constant</a></td>
-<td>{X}A⍨Y</td>
+<td><code>{X}A⍨Y</code></td>
 <td>gives result <code>A</code></td>
 </tr>
 <tr>
 <td><a href="../atop/">Atop</a></td>
-<td>f⍤gY</td>
+<td><code>f⍤gY</code></td>
 <td>gives result <code>f g Y</code></td>
 </tr>
 <tr>
-<td>Xf⍤gY</td>
-<td>gives result <code>X (f g) Y</code></td>
-<td></td>
+<td><code>Xf⍤gY</code></td>
+<td colspan="2">gives result <code>X (f g) Y</code></td>
 </tr>
 <tr>
 <td><a href="../over/">Over</a></td>
-<td>f⍥gY</td>
+<td><code>f⍥gY</code></td>
 <td>gives result <code>f g Y</code></td>
 </tr>
 <tr>
-<td>Xf⍥gY</td>
-<td>gives result <code>(g X) f g Y</code></td>
-<td></td>
+<td><code>Xf⍥gY</code></td>
+<td colspan="2">gives result <code>(g X) f g Y</code></td>
 </tr>
 <tr>
 <td><a href="../beside/">Beside</a></td>
-<td>f∘gY</td>
+<td><code>f∘gY</code></td>
 <td>gives result <code>f g Y</code></td>
 </tr>
 <tr>
-<td>Xf∘gY</td>
-<td>gives result <code>X f g Y</code></td>
-<td></td>
+<td><code>Xf∘gY</code></td>
+<td colspan="2">gives result <code>X f g Y</code></td>
 </tr>
 <tr>
 <td><a href="../bind/">Bind</a></td>
-<td>I∘gY</td>
+<td><code>I∘gY</code></td>
 <td>gives result <code>I g Y</code></td>
 </tr>
 <tr>
-<td>f∘kY</td>
-<td>gives result <code>⍵ f Y</code></td>
-<td></td>
+<td><code>f∘kY</code></td>
+<td colspan="2">gives result <code>⍵ f Y</code></td>
 </tr>
 <tr>
 <td><a href="../inner-product/">Inner Product</a></td>
-<td>Xf.gY</td>
+<td><code>Xf.gY</code></td>
 <td>apply <code>f</code> and <code>g</code> like <code>+</code> and <code>×</code> in matrix multiplication</td>
 </tr>
 <tr>
 <td><a href="../outer-product/">Outer Product</a></td>
-<td>X∘.gY</td>
+<td><code>X∘.gY</code></td>
 <td>apply dyadic <code>g</code> to all combinations of elements from <code>X</code> and <code>Y</code></td>
 </tr>
 <tr>
 <td><a href="../key/">Key</a></td>
-<td>f⌸Y</td>
+<td><code>f⌸Y</code></td>
 <td>dyadic <code>f</code> placed between unique major-cells of <code>Y</code> and the collected corresponding major-cells of <code>⍳≢Y</code></td>
 </tr>
 <tr>
 <td><a href="../key/">Dyadic Key</a></td>
-<td>Xf⌸Y</td>
+<td><code>Xf⌸Y</code></td>
 <td>dyadic <code>f</code> placed between unique major-cells of <code>X</code> and the collected corresponding major-cells of <code>Y</code></td>
 </tr>
 <tr>
 <td><a href="../spawn/">Spawn</a></td>
-<td>Xf&amp;Y</td>
+<td><code>Xf&amp;Y</code></td>
 <td>start a new thread with f applied to its argument(s)</td>
 </tr>
 <tr>
 <td><a href="../i-beam/">I-Beam</a></td>
-<td>{f}(X⌶)Y</td>
+<td><code>{f}(X⌶)Y</code></td>
 <td>provides a range of system-related services</td>
 </tr>
 </tbody>

@@ -32812,7 +32812,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71496,17 +71496,17 @@
 </thead>
 <tbody>
 <tr>
-<td>0</td>
+<td><code>0</code></td>
 <td>data is written to new file</td>
 <td>error signalled, file is unchanged</td>
 </tr>
 <tr>
-<td>1</td>
+<td><code>1</code></td>
 <td>data is written to new file</td>
 <td>file is overwritten</td>
 </tr>
 <tr>
-<td>2</td>
+<td><code>2</code></td>
 <td>data is written to new file</td>
 <td>data is appended to file</td>
 </tr>
@@ -71547,23 +71547,21 @@
 <h4 id="neol-option">NEOL Option</h4>
 <p>The NEOL variant option specifies how embedded line separators are treated.</p>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>embedded line separator characters are preserved as is,and a <code>newline</code> is added to the last line if required.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td><code>0</code></td>
+<td>embedded line separator characters are preserved as is,and a <code>newline</code> is added to the last line if required.</td>
+</tr>
 <tr>
 <td>1</td>
 <td>every embedded LF is replaced by <code>newline</code></td>
 </tr>
 <tr>
-<td>2</td>
+<td><code>2</code></td>
 <td>every embedded line separator character is replaced by <code>newline</code></td>
 </tr>
 <tr>
-<td>¯1</td>
+<td><code>¯1</code></td>
 <td>same as 0 except that a <code>newline</code> is not added to the last line</td>
 </tr>
 </tbody>

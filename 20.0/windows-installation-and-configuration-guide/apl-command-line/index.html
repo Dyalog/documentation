@@ -32727,7 +32727,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71386,16 +71386,20 @@
 <p>dyalog [ options ] [ debug ] [ ws ] [param] [param] [param]...</p>
 <p>where:</p>
 <p><strong>[dyalog]</strong></p>
-<p>Is the location of the Dyalog executable. Usually this is the full pathname, surrounded by double quotes.</p>
+<table>
+<tbody>
+<tr>
+<td>Is the location of the Dyalog executable. Usually this is the full pathname, surrounded by double quotes.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>[options]</strong></p>
 <table>
-<thead>
-<tr>
-<th>-x</th>
-<th>Disables the execution of the <code>⎕LX</code> expression and the derived expression when code is loaded from a source code file or directory.  This applies only at start-up and does not apply to workspaces or source files that are loaded subsequently. See <a href="../../language-reference-guide/system-functions/lx">Latent Expression </a> and <a href="../configuration-parameters/load/">Load</a></th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>-x</td>
+<td>Disables the execution of the <code>⎕LX</code> expression and the derived expression when code is loaded from a source code file or directory.  This applies only at start-up and does not apply to workspaces or source files that are loaded subsequently. See <a href="../../language-reference-guide/system-functions/lx">Latent Expression </a> and <a href="../configuration-parameters/load/">Load</a></td>
+</tr>
 <tr>
 <td>-a</td>
 <td>Start in USER mode.</td>
@@ -71432,13 +71436,11 @@
 </table>
 <p><strong>[debug]</strong></p>
 <table>
-<thead>
-<tr>
-<th>-Dc</th>
-<th>Check workspace integrity after every callback function.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>-Dc</td>
+<td>Check workspace integrity after every callback function.</td>
+</tr>
 <tr>
 <td>-Dw</td>
 <td>Check workspace integrity on return to session input.</td>
@@ -71454,9 +71456,21 @@
 </tbody>
 </table>
 <p><strong>[ws]</strong></p>
-<p>The name of a Dyalog APL workspace to be loaded. Unless specified, on Windows the file extension .DWS is assumed.</p>
+<table>
+<tbody>
+<tr>
+<td>The name of a Dyalog APL workspace to be loaded. Unless specified, on Windows the file extension .DWS is assumed.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>[param]</strong></p>
-<p>A parameter name followed by an equals sign ( <code>=</code> ) and a value. The parameter name may be one of the standard APL parameters (see <a href="configuration-parameters.md">Configuration Parameters</a> ) or a name and value of your own choosing (see GetEnvironment Method <a href="../../object-reference/methodorevents/getenvironment">GetEnvironment</a> ) . If the parameter is in a registry sub-folder (see <a href="../registry-subfolders/">Registry Sub-Folders</a> ), its name must be preceded by the name of the sub-folder, followed by a backslash ( <code>\</code> ) or underscore ( <code>_</code> ).</p>
+<table>
+<tbody>
+<tr>
+<td>A parameter name followed by an equals sign ( <code>=</code> ) and a value. The parameter name may be one of the standard APL parameters (see <a href="configuration-parameters.md">Configuration Parameters</a> ) or a name and value of your own choosing (see <a href="../../object-reference/methodorevents/getenvironment">GetEnvironment</a> ) . If the parameter is in a registry sub-folder (see <a href="../registry-subfolders/">Registry Sub-Folders</a> ), its name must be preceded by the name of the sub-folder, followed by a backslash ( <code>\</code> ) or underscore ( <code>_</code> ).</td>
+</tr>
+</tbody>
+</table>
 <p>Note that instead of  a loading a workspace specified by the <strong>ws</strong> option, APL can be instructed to load a program from a script file. For further information, see <a href="../configuration-parameters/load/">Load</a>.</p>
 <p><strong>Examples</strong></p>
 <p>Start APL using the configuration file <code>myconfig.dcfg</code>:

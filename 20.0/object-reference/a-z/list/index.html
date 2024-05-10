@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,8 +71305,25 @@
 
 <h1 class="heading"><span class="name">List</span><span class="command">Object</span></h1>
 
-<p><a href="../../parentlists/list/">Parents</a> <a href="../../childlists/list/">Children</a> <a href="../../proplists/list/">Properties</a> <a href="../../methodlists/list/">Methods</a> <a href="../../eventlists/list/">Events</a></p>
-<p>Purpose: Allows the user to select one or more items from a list.</p>
+<table>
+<tbody>
+<tr>
+<td><a href="../../parentlists/list/">Parents</a></td>
+<td><a href="../../childlists/list/">Children</a></td>
+<td><a href="../../proplists/list/">Properties</a></td>
+<td><a href="../../methodlists/list/">Methods</a></td>
+<td><a href="../../eventlists/list/">Events</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>Purpose:</td>
+<td>Allows the user to select one or more items from a list.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The <a href="../../properties/items/">Items</a> property is either a vector of character vectors or a character matrix, and determines the items in the List.</p>
 <p>The size and position of the area used to display the list is defined by <a href="../../properties/size/">Size</a> and <a href="../../properties/posn/">Posn</a>. If <a href="../../properties/size/">Size</a> is not chosen to represent an exact number of lines of text, the bottom line of text may be clipped.</p>
@@ -71316,19 +71333,17 @@
 <p>The <a href="../../properties/selitems/">SelItems</a> property is a Boolean vector with one element per element or row in <a href="../../properties/items/">Items</a> and indicates which (if any) of the items is currently selected (and highlighted).</p>
 <p>The <a href="../../properties/vscroll/">VScroll</a> property determines whether or not the list has a scrollbar. Its possible values are :</p>
 <table>
-<thead>
-<tr>
-<th>¯2</th>
-<th>scrollbar if required</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>¯1</td>
+<td><code>¯2</code></td>
 <td>scrollbar if required</td>
 </tr>
 <tr>
-<td>0</td>
+<td><code>¯1</code></td>
+<td>scrollbar if required</td>
+</tr>
+<tr>
+<td><code>0</code></td>
 <td>no scrollbar</td>
 </tr>
 </tbody>

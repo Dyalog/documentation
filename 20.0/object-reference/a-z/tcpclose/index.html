@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,22 +71305,27 @@
 
 <h1 class="heading"><span class="name">TCPClose</span><span class="command">Event 374</span></h1>
 
-<p>Applies To: <a href="../../objects/tcpsocket/">TCPSocket</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/tcpsocket/">TCPSocket</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the remote end of a TCP/IP connection breaks the connection.</p>
 <p>You may not disable or nullify the operation by setting the action code for the event to <code>¯1</code> or by returning 0 from a callback function. You may also not call TCPClose as a method or generate this event artificially using <code>⎕NQ</code>.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 2-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'TCPClose'</code> or 374</td>
 </tr>

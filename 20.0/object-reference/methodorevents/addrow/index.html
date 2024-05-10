@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,14 @@
 
 <h1 class="heading"><span class="name">AddRow</span><span class="command">Event 152</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported by the <a href="../../objects/grid/">Grid</a> object if the user presses the Cursor Down key, and the current cell (<a href="../../properties/curcell/">CurCell</a>)
 is within the last row on the <a href="../../objects/grid/">Grid</a>. The default
@@ -71338,21 +71345,19 @@ a new row will not be appended to the <a href="../../objects/grid/">Grid</a>.</p
 or supplied as the right argument to your callback function, is a 3 element
 vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'AddRow'</code> or 152</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Row number</td>
 <td>number of the new row (integer)</td>
 </tr>
@@ -71360,41 +71365,39 @@ vector as follows :</p>
 </table>
 <p>An application may insert a new row into a <a href="../../objects/grid/">Grid</a> by calling AddRow as a method. The argument is a 1 to 7-element array as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Row number</th>
-<th>integer</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Row number</td>
+<td>integer</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Row title</td>
 <td>character vector or matrix</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Row height</td>
 <td>integer</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Undo flag</td>
 <td>0 or 1</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Resize flag</td>
 <td>0 or 1</td>
 </tr>
 <tr>
-<td>[6]</td>
+<td><code>[6]</code></td>
 <td>Title colour</td>
 <td>negative integer or 3-element RGB vector</td>
 </tr>
 <tr>
-<td>[7]</td>
+<td><code>[7]</code></td>
 <td>Line type</td>
 <td>integer</td>
 </tr>

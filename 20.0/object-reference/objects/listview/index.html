@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,8 +71327,25 @@
 
 <h1 class="heading"><span class="name">ListView</span><span class="command">Object</span></h1>
 
-<p><a href="../../parentlists/listview/">Parents</a> <a href="../../childlists/listview/">Children</a> <a href="../../proplists/listview/">Properties</a> <a href="../../methodlists/listview/">Methods</a> <a href="../../eventlists/listview/">Events</a></p>
-<p>Purpose: The ListView object displays a collection of items.</p>
+<table>
+<tbody>
+<tr>
+<td><a href="../../parentlists/listview/">Parents</a></td>
+<td><a href="../../childlists/listview/">Children</a></td>
+<td><a href="../../proplists/listview/">Properties</a></td>
+<td><a href="../../methodlists/listview/">Methods</a></td>
+<td><a href="../../eventlists/listview/">Events</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>Purpose:</td>
+<td>The ListView object displays a collection of items.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The ListView object is a window that displays a collection of items, each
 item consisting of an icon and a label. The ListView provides several ways of
@@ -71348,8 +71365,14 @@ When View is <code>'Icon'</code> or <code>'SmallIcon'</code>,
 the items are arranged <em>row-wise</em> with large or small icons as appropriate.
 When View is set to <code>'List'</code>, the items are
 arranged <em>column-wise</em> using small icons. Examples of <code>'Icon'</code> and <code>'List'</code> views are illustrated below.</p>
-<p><img alt="listview_icon" src="../../img/listview-icon.png" /></p>
-<p><img alt="listview_list" src="../../img/listview-list.png" /></p>
+<figure id="_figure-1">
+<img alt="listview_icon" src="../../img/listview-icon.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
+<figure id="_figure-2">
+<img alt="listview_list" src="../../img/listview-list.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <p>When View is set to <code>'Report'</code>, the items
 are displayed in a single column using small icons but with the matrix specified
 by <a href="../../properties/reportinfo/">ReportInfo</a> displayed alongside. In
@@ -71365,7 +71388,10 @@ not subsequently be changed by <code>⎕WS</code>.</p>
 <p>In <code>'Report'</code> View, columns may be
 resized by the user dragging the bars between the titles, or under program
 control using the SetColSize event. A <code>'Report'</code> view example is illustrated below.</p>
-<p><img alt="listview_report" src="../../img/listview-report.png" /></p>
+<figure id="_figure-3">
+<img alt="listview_report" src="../../img/listview-report.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <p>The <a href="../../properties/dragitems/">DragItems</a> property is Boolean and
 specifies whether or not the user may drag an item from one position to another.
 Its default value is 1 (dragging is enabled).</p>
@@ -71387,7 +71413,10 @@ when View is <code>'Report'</code>. Its default value
 is 0.</p>
 <p>In <code>'Report'</code> View, the <a href="../../properties/reportimageindex/">ReportImageIndex</a> property specify images to be displayed alongside each item, and overrides the images specified by <a href="../../properties/imagelistobj/">ImageListObj</a>. The <a href="../../properties/headerimagelist/">HeaderImageList</a> and <a href="../../properties/headerimageindex/">HeaderImageIndex</a>  properties specify images to be displayed alongside each column title.</p>
 <p>The following example illustrates the use of these properties.</p>
-<p><img alt="listview_weather" src="../../img/listview-weather.png" /></p>
+<figure id="_figure-4">
+<img alt="listview_weather" src="../../img/listview-weather.png" />
+<figcaption><span>Figure&nbsp;4</span></figcaption>
+</figure>
 <p>The <a href="../../properties/reportbcol/">ReportBCol</a> property specifies each item's background colour.</p>
 <p>The <a href="../../properties/fullrowselect/">FullRowSelect</a> property is
 Boolean and specifies whether or not the entire row is highlighted to indicate
@@ -71396,7 +71425,10 @@ Its default value is 0.</p>
 <p>The <a href="../../properties/itemgroups/">ItemGroups</a> and <a href="../../properties/itemgroupmetrics/">ItemGroupMetrics</a> properties allow you to display items in groups as illustrated below.</p>
 <p>**Note that this feature only applies if Native Look and Feel </p>
 <p>is enabled.**</p>
-<p><img alt="lvsg1" src="../../img/lvsg1.gif" /></p>
+<figure id="_figure-5">
+<img alt="lvsg1" src="../../img/lvsg1.gif" />
+<figcaption><span>Figure&nbsp;5</span></figcaption>
+</figure>
 
 
 

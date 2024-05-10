@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71438,7 +71438,10 @@
 
 <p>The <code>TemperatureConverterCtl1</code> control is an example of a <em>compositional</em> control, i.e. a server-side custom control that is composed of other standard controls.</p>
 <p>In this example, The <code>TemperatureConverterCtl1</code> control gathers together two textboxes and two push buttons into a single component as illustrated below. Type a number into the <em>Centigrade</em> box, click the <em>Centigrade To Fahrenheit</em> button, and the control converts accordingly. If you click the <em>Fahrenheit To Centigrade</em> button, the reverse conversion is performed.</p>
-<p><img alt="temperatureconverterctl1" src="../../img/temperatureconverterctl1.png" /></p>
+<figure id="_figure-1">
+<img alt="temperatureconverterctl1" src="../../img/temperatureconverterctl1.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>The <code>TemperatureConverterCtl1</code> control  <em>contains</em> other standard controls as <em>child controls</em>. A control that acts as a container must implement an interface called <code>INamingContainer</code>.</p>
 <p>This interface does not in fact require any methods; it merely acts as a marker. So the <code>:Class</code> statement specifies that it provides this interface:
 <div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">TemperatureConverterCtl1</span><span class="bp">:</span><span class="w"> </span><span class="nv">Control</span><span class="o">,</span>
@@ -71473,9 +71476,9 @@
 <span class="sr">[</span><span class="m">24</span><span class="sr">]</span><span class="w">   </span><span class="nv">Controls</span><span class="na">.</span><span class="nv">Add</span><span class="w"> </span><span class="nv">C2FButton</span>
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div></p>
-<p>Line[4] creates an instance of a <code>LiteralControl</code> (a label) containing the text "Fahrenheit" with an HTML tag "<h3>". <code>Controls</code> is a property of the <code>Control</code> class (from which <code>TemperatureConverterCtl1</code> inherits) that returns a <code>ControlCollection</code> object This has an <code>Add</code> method whose job is to add the specified control to the list of child controls managed by the object.</p>
+<p>Line[4] creates an instance of a <code>LiteralControl</code> (a label) containing the text "Fahrenheit" with an HTML tag "&lt;h3&gt;". <code>Controls</code> is a property of the <code>Control</code> class (from which <code>TemperatureConverterCtl1</code> inherits) that returns a <code>ControlCollection</code> object This has an <code>Add</code> method whose job is to add the specified control to the list of child controls managed by the object.</p>
 <p>Lines[5-6] create a <code>TextBox</code> child control containing the text "0", and Line[7] adds it to the child control list.</p>
-<p>Line[8] adds a second <code>LiteralControl</code> to terminate the "<H3>" tag.</p>
+<p>Line[8] adds a second <code>LiteralControl</code> to terminate the "&lt;h3&gt;" tag.</p>
 <p>Lines [10-14] do the same for Centigrade.</p>
 <p>Lines[16-17] create a <code>Button</code> control labelled "Fahrenheit To Centigrade". Line[18] associates the callback function <code>F2CConvertBtn_Click</code> with the button's <code>onClick</code> event. Note that it is necessary to assign the <code>⎕OR</code> of the function rather than its name. Line[19] adds the button to the list of child controls.</p>
 <p>Lines[21-24] create a Centigrade button in the same way.</p>

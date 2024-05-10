@@ -32687,7 +32687,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71326,7 +71326,7 @@
 <p>The <a href="../diarystuff-example-namespace/">DiaryStuff</a> example illustrates the manner in which classes may be defined and used in a Namespace script.</p>
 <p><a href="../diarystuff-example-namespace/">DiaryStuff</a> defines two Classes named <code>Diary</code> and <code>DiaryEntry</code>.</p>
 <p><code>Diary</code> contains a (private) Field named <code>entries</code>, which is simply a vector of instances of <code>DiaryEntry</code>. These are 2-element vectors containing a .NET DateTime object and a description.</p>
-<p>The <code>entries</code> Field is initialised to an empty vector of <code>DiaryEntry</code> instances which causes the invocation of the default constructor <code>DiaryEntry.Make0</code> when <code>Diary</code> is fixed. See <a href="../../constructors/empty-arrays-of-instances-why/">Empty Arrays of Instances: Why ?</a> for further explanation.</p>
+<p>The <code>entries</code> Field is initialised to an empty vector of <code>DiaryEntry</code> instances which causes the invocation of the default constructor <code>DiaryEntry.Make0</code> when <code>Diary</code> is fixed. See <a href="../../constructors/empty-arrays-of-instances-why/">"Empty Arrays of Instances: Why ?"</a> for further explanation.</p>
 <p>The <code>entries</code> Field is referenced through the <code>Entry</code> Property, which is defined as the <a href="../../class-members/properties/default-property/">Default Property</a>. This allows individual entries to be referenced and changed using indexing on a <code>Diary</code> Instance.</p>
 <p>Note that <code>DiaryEntry</code> is defined in the script first (before <code>Diary</code>) because it is referenced by the initialisation of the <code>Diaries.entries</code> Field</p>
 <p>Create a new instance of <code>Diary</code>.

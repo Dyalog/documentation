@@ -32731,7 +32731,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71387,10 +71387,10 @@
 <p>This command brings all or selected global objects from a stored workspace with the given name provided that there is no existing global usage of the name in the active workspace.  A stored workspace is one which has previously been saved with the system command <code>)SAVE</code> or the system function <code>⎕SAVE</code>.</p>
 <p><code>)PCOPY</code> does not copy <code>⎕SM</code>.  This restriction may be removed in a later release.</p>
 <p>If the workspace name is not valid or does not exist or if access to the workspace is not authorised, the system reports "<code>ws not found</code>".  If the workspace name identifies a file that is not a workspace, or is a workspace with an invalid version number (one that is greater than the version of the current APL) the system reports "<code>bad ws</code>".</p>
-<p>See Workspaces<a href="../../../programming-reference-guide/introduction/workspaces">Programmer's Guide: "Workspaces</a> for the rules for specifying a workspace name.</p>
+<p>See <a href="../../../programming-reference-guide/introduction/workspaces">Programmer's Guide: "Workspaces"</a> for the rules for specifying a workspace name.</p>
 <p>If the workspace name is the name of a valid, readable workspace, the system reports the workspace name, "<code>saved</code>", and the date and time that the workspace was last saved.</p>
 <p>If the list of names is excluded, all global defined objects (functions and variables) are copied.  If an object is not found in the stored workspace, the system reports "<code>not found</code>" followed by the name of the object. If an object cannot be copied into the active workspace because there is an existing referent, the system reports "<code>not copied</code>" followed by the name of the object.</p>
-<p>For further information, see <a href="../../system-functions/cy/">Copy Workspace:</a>.</p>
+<p>For further information, see <a href="../../system-functions/cy/">"Copy Workspace: "</a>.</p>
 <p><strong>Examples</strong></p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">PCOPY</span><span class="w"> </span><span class="nv">WS</span><span class="na">/</span><span class="nv">UTILITY</span>
 <span class="nv">WS</span><span class="na">/</span><span class="nv">UTILITY</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="nv">Mon</span><span class="w"> </span><span class="nv">Nov</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">13</span><span class="bp">:</span><span class="m">11</span><span class="bp">:</span><span class="m">19</span><span class="w"> </span><span class="m">1993</span>

@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,11 +71305,26 @@
 
 <h1 class="heading"><span class="name">DeleteTypeLib</span><span class="command">Method 521</span></h1>
 
-<p>Applies To: <a href="../../objects/root/">Root</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/root/">Root</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The DeleteTypeLib method removes a loaded Type Library from the workspace.</p>
 <p>The argument to DeleteTypeLib is as follows:</p>
-<p>[1] TypeLib character vector</p>
+<table>
+<tbody>
+<tr>
+<td><code>[1]</code></td>
+<td>TypeLib</td>
+<td>character vector</td>
+</tr>
+</tbody>
+</table>
 <p>The Type Library may be identified by its name or by its class id.</p>
 <p>The result is 0, 1 or <code>¯1</code>.</p>
 <p>If successful, the specified Type Library, and all dependent Type Libraries not referenced by any other currently loaded Type Libraries, are removed from the active workspace. The result is 1.</p>

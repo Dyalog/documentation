@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,57 +71327,62 @@
 
 <h1 class="heading"><span class="name">GridDropSel</span><span class="command">Event 195</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user drag/drops a selected block of cells in the <a href="../../objects/grid/">Grid</a>. The default action is that the contents of the selected cells replace the values in the block of cells onto which they are dropped and this block now becomes selected.</p>
 <p>You may disable the drag/drop facility entirely by setting the action code of the event to <code>¯1</code>. You may also disable an individual drag/drop operation by returning 0 from a callback function.</p>
 <p>The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, or supplied as the right argument to your callback function, is a 6-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'GridDropSel'</code> or 195</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Start</td>
 <td>2-element integer vector containing the row, column address of the top left cell in the selected block</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Size</td>
 <td>2-element integer vector containing  the number of rows and columns in the selected block</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Target</td>
 <td>2-element integer vector containing the row/column address of the top left cell onto which the selected block is being dropped</td>
 </tr>
 <tr>
-<td>[6]</td>
+<td><code>[6]</code></td>
 <td>Shift State</td>
 <td>sum of shift key codes (number) 1 = Shift key        is down 2 = Ctrl key is down</td>
 </tr>
 <tr>
-<td>[7]</td>
+<td><code>[7]</code></td>
 <td>Undo flag</td>
 <td>0 or 1</td>
 </tr>
 <tr>
-<td>[8]</td>
+<td><code>[8]</code></td>
 <td>Values</td>
 <td>Matrix containing the values of the selected block of cells. This is the data that will replace the values in the target cells.</td>
 </tr>
 <tr>
-<td>[9]</td>
+<td><code>[9]</code></td>
 <td>CellSet flags</td>
 <td>Boolean Matrix containing the values of the <a href="../../properties/cellset/">CellSet</a> property for the selected block of cells. This will replace the values of the <a href="../../properties/cellset/">CellSet</a> property of the target cells.</td>
 </tr>

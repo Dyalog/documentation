@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,46 +71327,52 @@
 
 <h1 class="heading"><span class="name">FontList</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/printer/">Printer</a> <a href="../../objects/root/">Root</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/printer/">Printer</a></td>
+<td><a href="../../objects/root/">Root</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The FontList property is a read-only property (you cannot set its value) that
 provides a list of available fonts.</p>
 <p>Its value is a vector (1 per font) of 8-element character vectors, each of
 which is as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Face name (character vector)</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Face name (character vector)</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Character height in "points" (integer)</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Fixed width or not (Boolean)</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Italic or not (Boolean)</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Underline or not (Boolean)</td>
 </tr>
 <tr>
-<td>[6]</td>
+<td><code>[6]</code></td>
 <td>Weight (integer)</td>
 </tr>
 <tr>
-<td>[7]</td>
+<td><code>[7]</code></td>
 <td>Angle of rotation (integer)</td>
 </tr>
 <tr>
-<td>[8]</td>
+<td><code>[8]</code></td>
 <td>Character set (see <a href="../charset/">CharSet</a> )</td>
 </tr>
 </tbody>

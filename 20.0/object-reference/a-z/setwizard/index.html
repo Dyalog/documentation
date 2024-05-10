@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,41 +71305,46 @@
 
 <h1 class="heading"><span class="name">SetWizard</span><span class="command">Event 365</span></h1>
 
-<p>Applies To: <a href="../../objects/propertysheet/">PropertySheet</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/propertysheet/">PropertySheet</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user has clicked the Next or Back button in a <a href="../../objects/propertysheet/">PropertySheet</a> with Style <code>'Wizard'</code>. This action also generates PageNext (or PageBack) and PageDeactivate and PageActivate events. The SetWizard event is the final event to be reported as a result of this action, and is the only one that is affected by the result of a callback function. The event message reports the active/inactive state of the 3 page changing buttons (Back, Next and Finish) that should result from the action. Note that the Next and Finish buttons occupy the same position and are mutually exclusive.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 5-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'SetWizard'</code> or 365</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Active state Back</td>
 <td>0 or 1</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Active state Next</td>
 <td>0 or 1</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Active state Finish</td>
 <td>0 or 1</td>
 </tr>
 <tr>
-<td>[6]</td>
+<td><code>[6]</code></td>
 <td>Finish caption</td>
 <td>character vector</td>
 </tr>

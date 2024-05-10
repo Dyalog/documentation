@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,8 +71305,23 @@
 
 <h1 class="heading"><span class="name">NetControl</span><span class="command">Object</span></h1>
 
-<p><a href="../../parentlists/netcontrol/">Parents</a> <a href="../../childlists/netcontrol/">Children</a> <a href="../../proplists/netcontrol/">Properties</a></p>
-<p>Purpose: The NetControl object provides the means to instantiate a .NET control         in the Dyalog GUI.</p>
+<table>
+<tbody>
+<tr>
+<td><a href="../../parentlists/netcontrol/">Parents</a></td>
+<td><a href="../../childlists/netcontrol/">Children</a></td>
+<td><a href="../../proplists/netcontrol/">Properties</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>Purpose:</td>
+<td>The NetControl object provides the means to instantiate a .NET control         in the Dyalog GUI.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>In principle, you may use the NetControl to embed any class that derives from System.Windows.Forms.Control (from system.windows.forms.dll), including derived classes written in Dyalog APL.</p>
 <p>To load a particular .NET control, the appropriate .NET Assembly must be specified in <code>⎕USING</code>; otherwise the expression will cause a <code>LIMIT ERROR</code>. For example, to load one of the standard .NET controls:
@@ -71376,7 +71391,10 @@
 <span class="w">       </span><span class="nv">wds</span><span class="o">,</span><span class="kd">←</span><span class="s1">&#39;ακομα&#39;</span><span class="w"> </span><span class="s1">&#39;kai&#39;</span><span class="w"> </span><span class="s1">&#39;τα&#39;</span><span class="w"> </span><span class="s1">&#39;Ελληνικα&#39;</span>
 <span class="w">       </span><span class="nv">f</span><span class="na">.</span><span class="nv">g</span><span class="na">.</span><span class="nv">Values</span><span class="kd">←</span><span class="m">5</span><span class="w"> </span><span class="m">5</span><span class="o">⍴</span><span class="nv">wds</span>
 </code></pre></div></p>
-<p><img alt="netcontrol3" src="../../img/netcontrol3.jpg" /></p>
+<figure id="_figure-1">
+<img alt="netcontrol3" src="../../img/netcontrol3.jpg" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>Implementation note: The instance of the .NET control is actually placed inside an instance of the .NET class System.Windows.Forms.ContainerControl. This ContainerControl is then embedded in the Dyalog parent, such as a
 <a href="../form/">Form</a>. This "extra level" should have no effect on how the control is used or on how it behaves.</p>
 

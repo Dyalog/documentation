@@ -32693,7 +32693,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71329,7 +71329,7 @@
 
 <h1 class="heading"><span class="name">Start Windows Auxiliary Processor</span><span class="command">{R}←X ⎕CMD Y</span></h1>
 
-<p>Used dyadically, <code>⎕CMD</code> starts an Auxiliary Processor.  The effect, as far as the APL workspace is concerned, is identical under both Windows and UNIX, although the method of implementation differs.  <code>⎕CMD</code> is a synonym of <code>⎕SH</code>.  Either function may be used in either environment (Windows or UNIX) with exactly the same effect.  <code>⎕CMD</code> is probably more natural for the Windows user.  This section describes the behaviour of <code>⎕CMD</code> and <code>⎕SH</code> under Windows.  See <a href="../start-unix-auxiliary-processor/">Examples</a> for a discussion of the behaviour of these system functions under UNIX.</p>
+<p>Used dyadically, <code>⎕CMD</code> starts an Auxiliary Processor.  The effect, as far as the APL workspace is concerned, is identical under both Windows and UNIX, although the method of implementation differs.  <code>⎕CMD</code> is a synonym of <code>⎕SH</code>.  Either function may be used in either environment (Windows or UNIX) with exactly the same effect.  <code>⎕CMD</code> is probably more natural for the Windows user.  This section describes the behaviour of <code>⎕CMD</code> and <code>⎕SH</code> under Windows.  See <a href="../start-unix-auxiliary-processor/">"Examples"</a> for a discussion of the behaviour of these system functions under UNIX.</p>
 <p><code>X</code> must be a simple character vector containing the name (or pathname) of a Dyalog APL Auxiliary Processor (AP). Although it is possible for users to create their own APs, Dyalog recommends that user write their own DLLs/shared libraries instead.</p>
 <p><code>Y</code> may be a simple character scalar or vector, or a vector of character vectors.  Under Windows the contents of <code>Y</code> are ignored.</p>
 <p><code>⎕CMD</code> loads the Auxiliary Processor into memory.  If no other APs are currently running, <code>⎕CMD</code> also allocates an area of memory for communication between APL and its APs.</p>

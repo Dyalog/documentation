@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,32 +71305,37 @@
 
 <h1 class="heading"><span class="name">InputMode</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This property determines editing behaviour and the action of the cursor movement keys when the user changes the contents of a Grid using a <em>floating</em><a href="../../objects/edit/"> Edit</a> or DropEdit <a href="../../objects/combo/">Combo</a> control.</p>
 <p>InputMode is a character vector with one of the following values:</p>
 <table>
-<thead>
-<tr>
-<th>'Scroll'</th>
-<th>The cursor keys move around the Grid; the user may switch to <em>InCell</em> mode</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>'InCell'</td>
+<td><code>'Scroll'</code></td>
+<td>The cursor keys move around the Grid; the user may switch to <em>InCell</em> mode</td>
+</tr>
+<tr>
+<td><code>'InCell'</code></td>
 <td>The cursor keys move within the Input object; the mode reverts to <em>Scroll</em> when the user selects a new cell</td>
 </tr>
 <tr>
-<td>'AlwaysScroll'</td>
+<td><code>'AlwaysScroll'</code></td>
 <td>The cursor keys move around the Grid; the user may not switch to <em>InCell</em> mode</td>
 </tr>
 <tr>
-<td>'AlwaysInCell'</td>
+<td><code>'AlwaysInCell'</code></td>
 <td>The cursor keys move within the Input object, even when the user moves to a new cell</td>
 </tr>
 <tr>
-<td>'AutoEdit'</td>
+<td><code>'AutoEdit'</code></td>
 <td>See below</td>
 </tr>
 </tbody>

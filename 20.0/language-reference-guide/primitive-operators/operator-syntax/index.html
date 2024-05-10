@@ -32747,7 +32747,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71419,7 +71419,7 @@
 <h1 class="heading"><span class="name"> Operator Syntax</span></h1>
 
 <p>Operators take one or two operands.  An operator with one operand is monadic.  The operand of a monadic operator is to the left of the operator.  An operator with two operands is dyadic.  Both operands are required for a dyadic operator.</p>
-<p>Operators have long scope to the left.  That is, the left operand is the longest function or array expression to its left (see <a href="../../../programming-reference-guide/introduction/operators">Programmer's Guide: "Operators</a>).  A dyadic operator has short scope on the right.  Right scope may be extended by the use of parentheses.</p>
+<p>Operators have long scope to the left.  That is, the left operand is the longest function or array expression to its left (see <a href="../../../programming-reference-guide/introduction/operators">Programmer's Guide: "Operators"</a>).  A dyadic operator has short scope on the right.  Right scope may be extended by the use of parentheses.</p>
 <p>An operand may be an array, a primitive function, a system function, a defined function or a derived function.  An array may be the result of an array expression.</p>
 <p>An operator with its operand(s) forms a derived function.  The derived function may be monadic or dyadic and it may or may not return an explicit result.</p>
 <p><strong>Examples</strong></p>
@@ -71473,7 +71473,10 @@
 </code></pre></div>
 <h3 id="function-composition">Function Composition</h3>
 <p>Function composition refers to the "gluing" together of two functions using a dyadic operator such that the functions are applied to the argument(s) as normal, but in a particular pattern specific to the operator that is being used. The term function composition comes from traditional mathematics where it is used for a function <code>h(x)=f(g(x))</code> when written as  <code>h(x)=(f∘g)(x)</code> APL generalises this idea to dyadic functions, allowing various patterns of application in addition to the simple application of one monadic function to the result of another monadic function. The three main patterns, represented by Atop, Beside, and Over can be visualised as follows:</p>
-<p><img alt="compositions" src="../../img/compositions.png" /></p>
+<figure id="_figure-1">
+<img alt="compositions" src="../../img/compositions.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>When any of these are applied monadically, the dotted branch falls away, and they are all equivalent to each other and to <code>h(x)=(f∘g)(x)</code> of traditional mathematics.</p>
 
 

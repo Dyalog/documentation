@@ -32747,7 +32747,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71514,13 +71514,11 @@
 <p>The second way of trapping errors is to use the system variable: <code>⎕TRAP</code>.</p>
 <p><code>⎕TRAP</code>, can be assigned a nested vector of <strong>trap specifications</strong>. Each trap specification is itself a nested vector, of length 3, with each element defined as:</p>
 <table>
-<thead>
-<tr>
-<th>list of error numbers</th>
-<th>The error numbers we are interested in.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>list of error numbers</td>
+<td>The error numbers we are interested in.</td>
+</tr>
 <tr>
 <td>action code</td>
 <td>Either <code>'E'</code> (Execute) or <code>'C'</code> (Cut Back). There are others, but they are seldom used.</td>

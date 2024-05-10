@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71417,7 +71417,10 @@
 <h1 class="heading"><span class="name"> The Threads Tool</span></h1>
 
 <p>The Threads Tool is used to monitor and debug multi-threaded applications. To display the Threads Tool, select <em>Show Threads Tool</em> from the <em>Session Threads</em> menu, or <em>Threads</em> from the Session pop-up menu.</p>
-<p><img alt="threads tool" src="../img/threads-tool.png" /></p>
+<figure id="_figure-1">
+<img alt="threads tool" src="../img/threads-tool.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>The above picture illustrates a situation using the <code>lift.dws</code> workspace after executing the function <code>RUN</code>. The <em>Pause on Error</em> option was enabled and a Stop was set on <code>RUN[63]</code>. When <code>RUN</code> suspended at this point, all other threads (1-8) were automatically Paused. Note that all other threads happen to be Paused in the middle of calls to system functions</p>
 <p>The columns of the Threads Tool display the following information.</p>
 <table>
@@ -71492,27 +71495,27 @@
 <td>About to be terminated</td>
 </tr>
 <tr>
-<td>:Hold</td>
+<td><code>:Hold</code></td>
 <td>Waiting for a <code>:Hold</code> token</td>
 </tr>
 <tr>
-<td>:EndHold</td>
+<td><code>:EndHold</code></td>
 <td>Waiting for a <code>:Hold</code> token</td>
 </tr>
 <tr>
-<td>⎕DL</td>
+<td><code>⎕DL</code></td>
 <td>Executing <code>⎕DL</code></td>
 </tr>
 <tr>
-<td>⎕DQ</td>
+<td><code>⎕DQ</code></td>
 <td>Executing <code>⎕DQ</code></td>
 </tr>
 <tr>
-<td>⎕NA</td>
+<td><code>⎕NA</code></td>
 <td>Waiting for a DLL <code>(⎕NA</code> ) call to return.</td>
 </tr>
 <tr>
-<td>⎕TGET</td>
+<td><code>⎕TGET</code></td>
 <td>Executing <code>⎕TGET</code> , waiting for a token</td>
 </tr>
 <tr>
@@ -71520,7 +71523,7 @@
 <td>Executing <code>⎕TGET</code> , having got a token</td>
 </tr>
 <tr>
-<td>⎕TSYNC</td>
+<td><code>⎕TSYNC</code></td>
 <td>Waiting for another thread to terminate</td>
 </tr>
 <tr>
@@ -71536,15 +71539,16 @@
 <h3 id="pausednormal">Paused/Normal</h3>
 <p>In addition to the thread state as described above, a thread may be <em>Paused</em> or <em>Normal</em> as shown in the <em>Flags</em> column. A <em>Paused</em> thread is one that has temporarily been removed from the list of threads that are being scheduled by the thread scheduler. A <em>Paused</em> thread is effectively frozen.</p>
 <h3 id="threads-tool-pop-up-menu">Threads Tool Pop-Up Menu</h3>
-<p><img alt="threads tool menu" src="../img/threads-tool-menu.png" /></p>
+<figure id="_figure-2">
+<img alt="threads tool menu" src="../img/threads-tool-menu.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <table>
-<thead>
-<tr>
-<th>Switch to</th>
-<th>Selecting this item causes APL to attempt to suspend (if necessary) and switch to the selected thread, connecting it to the Session and Debugger windows.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Switch to</td>
+<td>Selecting this item causes APL to attempt to suspend (if necessary) and switch to the selected thread, connecting it to the Session and Debugger windows.</td>
+</tr>
 <tr>
 <td>Interrupt</td>
 <td>Causes a (STRONG) interrupt in the selected thread the next time it is scheduled, essentially it allows you to target an interrupt at a specific thread.</td>

@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71323,43 +71323,43 @@
 </thead>
 <tbody>
 <tr>
-<td>UTF-8</td>
+<td><code>UTF-8</code></td>
 <td>The data is encoded as UTF-8 format.</td>
 </tr>
 <tr>
-<td>UTF-16LE</td>
+<td><code>UTF-16LE</code></td>
 <td>The data is encoded as UTF-16 little-endian format.</td>
 </tr>
 <tr>
-<td>UTF-16BE</td>
+<td><code>UTF-16BE</code></td>
 <td>The data is encoded as UTF-16 big-endian format.</td>
 </tr>
 <tr>
-<td>UTF-16</td>
+<td><code>UTF-16</code></td>
 <td>The data is encoded as UTF-16 with the endianness of the host system (currently BE on AIX platforms, LE on all others).</td>
 </tr>
 <tr>
-<td>UTF-32LE</td>
+<td><code>UTF-32LE</code></td>
 <td>The data is encoded as UTF-32 little-endian format.</td>
 </tr>
 <tr>
-<td>UTF-32BE</td>
+<td><code>UTF-32BE</code></td>
 <td>The data is encoded as UTF-32 big-endian format.</td>
 </tr>
 <tr>
-<td>UTF-32</td>
+<td><code>UTF-32</code></td>
 <td>The data is encoded as UTF-32 with the endianness of the host system (currently BE on AIX platforms, LE on all others).</td>
 </tr>
 <tr>
-<td>ASCII</td>
+<td><code>ASCII</code></td>
 <td>The data is encoded as 7-bit ASCII format.</td>
 </tr>
 <tr>
-<td>Windows-1252</td>
+<td><code>Windows-1252</code></td>
 <td>The data is encoded as 8-bit Windows-1252 format.</td>
 </tr>
 <tr>
-<td>ANSI</td>
+<td><code>ANSI</code></td>
 <td>ANSI is a synonym of Windows-1252.</td>
 </tr>
 </tbody>
@@ -71368,19 +71368,17 @@
 <p>Whether or not <code>X</code> is specified, if the start of the file contains a recognised   Byte Order Mark (BOM), the file is decoded according to the BOM. Otherwise, if <code>X</code> is specified the file is decoded according to the value of <code>X</code>. Otherwise, the file is examined to try to decide its encoding and is decoded accordingly.</p>
 <p>The result <code>R</code> is a 3-element vector comprising <code>(content) (encoding) (newline)</code>  where:</p>
 <table>
-<thead>
-<tr>
-<th>content</th>
-<th>A simple character vector, or a vector of character vectors, according to the value of <code>flags</code> .</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>encoding</td>
+<td><code>content</code></td>
+<td>A simple character vector, or a vector of character vectors, according to the value of <code>flags</code> .</td>
+</tr>
+<tr>
+<td><code>encoding</code></td>
 <td>The encoding that was actually used to read the file. If this is a UTF format, it will always include the appropriate endianness (except for UTF-8 to which endianness doesn't apply) and a -BOM or -NOBOM suffix to indicate whether or not a BOM is actually present in the file. For example, UTF-16LE-BOM. If <code>X</code> specified a user-defined encoding as a 256-element numeric vector, <code>encoding</code> will be that same vector.</td>
 </tr>
 <tr>
-<td>newline</td>
+<td><code>newline</code></td>
 <td>Determined by the first occurrence in the file of one of the newline characters identified in the line separator table, or <code>⍬</code> if no such line separator is found.</td>
 </tr>
 </tbody>
@@ -71399,53 +71397,49 @@
 </thead>
 <tbody>
 <tr>
-<td>newline characters</td>
-<td>newline characters</td>
-<td>newline characters</td>
+<td colspan="3">newline characters</td>
 </tr>
 <tr>
 <td>13</td>
-<td>CR</td>
+<td><code>CR</code></td>
 <td>Carriage Return (U+000D)</td>
 </tr>
 <tr>
 <td>10</td>
-<td>LF</td>
+<td><code>LF</code></td>
 <td>Line Feed (U+000A)</td>
 </tr>
 <tr>
 <td>13 10</td>
-<td>CRLF</td>
+<td><code>CRLF</code></td>
 <td>Carriage Return followed by Line Feed</td>
 </tr>
 <tr>
 <td>133</td>
-<td>NEL</td>
+<td><code>NEL</code></td>
 <td>New Line (U+0085)</td>
 </tr>
 <tr>
-<td>other line separator characters</td>
-<td>other line separator characters</td>
-<td>other line separator characters</td>
+<td colspan="3">other line separator characters</td>
 </tr>
 <tr>
 <td>11</td>
-<td>VT</td>
+<td><code>VT</code></td>
 <td>Vertical Tab (U+000B)</td>
 </tr>
 <tr>
 <td>12</td>
-<td>FF</td>
+<td><code>FF</code></td>
 <td>Form Feed (U+000C)</td>
 </tr>
 <tr>
 <td>8232</td>
-<td>LS</td>
+<td><code>LS</code></td>
 <td>Line Separator (U+2028)</td>
 </tr>
 <tr>
 <td>8233</td>
-<td>PS</td>
+<td><code>PS</code></td>
 <td>Paragraph Separator (U+2029)</td>
 </tr>
 </tbody>

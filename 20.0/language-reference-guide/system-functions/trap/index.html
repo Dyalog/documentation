@@ -32693,7 +32693,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71341,26 +71341,24 @@
 <p>The ACTION code identifies the nature of the action to be taken when an associated event occurs.  Permitted codes are interpreted as follows:</p>
 <p>Trappable Event Codes</p>
 <table>
-<thead>
-<tr>
-<th>C</th>
-<th>Cutback</th>
-<th>The state indicator is 'cut back' to the environment in which the <code>⎕TRAP</code> is locally defined (or to immediate execution level).  The APL expression in element 3 of the same <code>⎕TRAP</code> item is then executed.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>E</td>
+<td><code>C</code></td>
+<td>Cutback</td>
+<td>The state indicator is 'cut back' to the environment in which the <code>⎕TRAP</code> is locally defined (or to immediate execution level).  The APL expression in element 3 of the same <code>⎕TRAP</code> item is then executed.</td>
+</tr>
+<tr>
+<td><code>E</code></td>
 <td>Execute</td>
 <td>The APL expression in element 3 of the same <code>⎕TRAP</code> item is executed in the environment in which the event occurred.</td>
 </tr>
 <tr>
-<td>N</td>
+<td><code>N</code></td>
 <td>Next</td>
 <td>The event is excluded from the current <code>⎕TRAP</code> definition.  The search will continue through further localised definitions of <code>⎕TRAP</code> .</td>
 </tr>
 <tr>
-<td>S</td>
+<td><code>S</code></td>
 <td>Stop</td>
 <td>Stops the search and causes the normal APL action to be taken in the environment in which the event occurred.</td>
 </tr>
@@ -71375,248 +71373,248 @@
 </thead>
 <tbody>
 <tr>
-<td>0</td>
-<td><strong>Any event</strong> in range 1-999</td>
+<td><code>0</code></td>
+<td><code>Any event in range 1-999</code></td>
 </tr>
 <tr>
-<td>1</td>
-<td>WS FULL</td>
+<td><code>1</code></td>
+<td><code>WS FULL</code></td>
 </tr>
 <tr>
-<td>2</td>
-<td>SYNTAX ERROR</td>
+<td><code>2</code></td>
+<td><code>SYNTAX ERROR</code></td>
 </tr>
 <tr>
-<td>3</td>
-<td>INDEX ERROR</td>
+<td><code>3</code></td>
+<td><code>INDEX ERROR</code></td>
 </tr>
 <tr>
-<td>4</td>
-<td>RANK ERROR</td>
+<td><code>4</code></td>
+<td><code>RANK ERROR</code></td>
 </tr>
 <tr>
-<td>5</td>
-<td>LENGTH ERROR</td>
+<td><code>5</code></td>
+<td><code>LENGTH ERROR</code></td>
 </tr>
 <tr>
-<td>6</td>
-<td>VALUE ERROR</td>
+<td><code>6</code></td>
+<td><code>VALUE ERROR</code></td>
 </tr>
 <tr>
-<td>7</td>
-<td>FORMAT ERROR</td>
+<td><code>7</code></td>
+<td><code>FORMAT ERROR</code></td>
 </tr>
 <tr>
-<td>10</td>
-<td>LIMIT ERROR</td>
+<td><code>10</code></td>
+<td><code>LIMIT ERROR</code></td>
 </tr>
 <tr>
-<td>11</td>
-<td>DOMAIN ERROR</td>
+<td><code>11</code></td>
+<td><code>DOMAIN ERROR</code></td>
 </tr>
 <tr>
-<td>12</td>
-<td>HOLD ERROR</td>
+<td><code>12</code></td>
+<td><code>HOLD ERROR</code></td>
 </tr>
 <tr>
-<td>16</td>
-<td>NONCE ERROR</td>
+<td><code>16</code></td>
+<td><code>NONCE ERROR</code></td>
 </tr>
 <tr>
-<td>18</td>
-<td>FILE TIE ERROR</td>
+<td><code>18</code></td>
+<td><code>FILE TIE ERROR</code></td>
 </tr>
 <tr>
-<td>19</td>
-<td>FILE ACCESS ERROR</td>
+<td><code>19</code></td>
+<td><code>FILE ACCESS ERROR</code></td>
 </tr>
 <tr>
-<td>20</td>
-<td>FILE INDEX ERROR</td>
+<td><code>20</code></td>
+<td><code>FILE INDEX ERROR</code></td>
 </tr>
 <tr>
-<td>21</td>
-<td>FILE FULL</td>
+<td><code>21</code></td>
+<td><code>FILE FULL</code></td>
 </tr>
 <tr>
-<td>22</td>
-<td>FILE NAME ERROR</td>
+<td><code>22</code></td>
+<td><code>FILE NAME ERROR</code></td>
 </tr>
 <tr>
-<td>23</td>
-<td>FILE DAMAGED</td>
+<td><code>23</code></td>
+<td><code>FILE DAMAGED</code></td>
 </tr>
 <tr>
-<td>24</td>
-<td>FILE TIED</td>
+<td><code>24</code></td>
+<td><code>FILE TIED</code></td>
 </tr>
 <tr>
-<td>25</td>
-<td>FILE TIED REMOTELY</td>
+<td><code>25</code></td>
+<td><code>FILE TIED REMOTELY</code></td>
 </tr>
 <tr>
-<td>26</td>
-<td>FILE SYSTEM ERROR</td>
+<td><code>26</code></td>
+<td><code>FILE SYSTEM ERROR</code></td>
 </tr>
 <tr>
-<td>28</td>
-<td>FILE SYSTEM NOT AVAILABLE</td>
+<td><code>28</code></td>
+<td><code>FILE SYSTEM NOT AVAILABLE</code></td>
 </tr>
 <tr>
-<td>30</td>
-<td>FILE SYSTEM TIES USED UP</td>
+<td><code>30</code></td>
+<td><code>FILE SYSTEM TIES USED UP</code></td>
 </tr>
 <tr>
-<td>31</td>
-<td>FILE TIE QUOTA USED UP</td>
+<td><code>31</code></td>
+<td><code>FILE TIE QUOTA USED UP</code></td>
 </tr>
 <tr>
-<td>32</td>
-<td>FILE NAME QUOTA USED UP</td>
+<td><code>32</code></td>
+<td><code>FILE NAME QUOTA USED UP</code></td>
 </tr>
 <tr>
-<td>34</td>
-<td>FILE SYSTEM NO SPACE</td>
+<td><code>34</code></td>
+<td><code>FILE SYSTEM NO SPACE</code></td>
 </tr>
 <tr>
-<td>35</td>
-<td>FILE ACCESS ERROR - CONVERTING FILE</td>
+<td><code>35</code></td>
+<td><code>FILE ACCESS ERROR - CONVERTING FILE</code></td>
 </tr>
 <tr>
-<td>38</td>
-<td>FILE COMPONENT DAMAGED</td>
+<td><code>38</code></td>
+<td><code>FILE COMPONENT DAMAGED</code></td>
 </tr>
 <tr>
-<td>52</td>
-<td>FIELD CONTENTS RANK ERROR</td>
+<td><code>52</code></td>
+<td><code>FIELD CONTENTS RANK ERROR</code></td>
 </tr>
 <tr>
-<td>53</td>
-<td>FIELD CONTENTS TOO MANY COLUMNS</td>
+<td><code>53</code></td>
+<td><code>FIELD CONTENTS TOO MANY COLUMNS</code></td>
 </tr>
 <tr>
-<td>54</td>
-<td>FIELD POSITION ERROR</td>
+<td><code>54</code></td>
+<td><code>FIELD POSITION ERROR</code></td>
 </tr>
 <tr>
-<td>55</td>
-<td>FIELD SIZE ERROR</td>
+<td><code>55</code></td>
+<td><code>FIELD SIZE ERROR</code></td>
 </tr>
 <tr>
-<td>56</td>
-<td>FIELD CONTENTS/TYPE MISMATCH</td>
+<td><code>56</code></td>
+<td><code>FIELD CONTENTS/TYPE MISMATCH</code></td>
 </tr>
 <tr>
-<td>57</td>
-<td>FIELD TYPE/BEHAVIOUR UNRECOGNISED</td>
+<td><code>57</code></td>
+<td><code>FIELD TYPE/BEHAVIOUR UNRECOGNISED</code></td>
 </tr>
 <tr>
-<td>58</td>
-<td>FIELD ATTRIBUTES RANK ERROR</td>
+<td><code>58</code></td>
+<td><code>FIELD ATTRIBUTES RANK ERROR</code></td>
 </tr>
 <tr>
-<td>59</td>
-<td>FIELD ATTRIBUTES LENGTH ERROR</td>
+<td><code>59</code></td>
+<td><code>FIELD ATTRIBUTES LENGTH ERROR</code></td>
 </tr>
 <tr>
-<td>60</td>
-<td>FULL-SCREEN ERROR</td>
+<td><code>60</code></td>
+<td><code>FULL-SCREEN ERROR</code></td>
 </tr>
 <tr>
-<td>61</td>
-<td>KEY CODE UNRECOGNISED</td>
+<td><code>61</code></td>
+<td><code>KEY CODE UNRECOGNISED</code></td>
 </tr>
 <tr>
-<td>62</td>
-<td>KEY CODE RANK ERROR</td>
+<td><code>62</code></td>
+<td><code>KEY CODE RANK ERROR</code></td>
 </tr>
 <tr>
-<td>63</td>
-<td>KEY CODE TYPE ERROR</td>
+<td><code>63</code></td>
+<td><code>KEY CODE TYPE ERROR</code></td>
 </tr>
 <tr>
-<td>70</td>
-<td>FORMAT FILE ACCESS ERROR</td>
+<td><code>70</code></td>
+<td><code>FORMAT FILE ACCESS ERROR</code></td>
 </tr>
 <tr>
-<td>71</td>
-<td>FORMAT FILE ERROR</td>
+<td><code>71</code></td>
+<td><code>FORMAT FILE ERROR</code></td>
 </tr>
 <tr>
-<td>72</td>
-<td>NO PIPES</td>
+<td><code>72</code></td>
+<td><code>NO PIPES</code></td>
 </tr>
 <tr>
-<td>76</td>
-<td>PROCESSOR TABLE FULL</td>
+<td><code>76</code></td>
+<td><code>PROCESSOR TABLE FULL</code></td>
 </tr>
 <tr>
-<td>84</td>
-<td>TRAP ERROR</td>
+<td><code>84</code></td>
+<td><code>TRAP ERROR</code></td>
 </tr>
 <tr>
-<td>90</td>
-<td>EXCEPTION</td>
+<td><code>90</code></td>
+<td><code>EXCEPTION</code></td>
 </tr>
 <tr>
-<td>92</td>
-<td>TRANSLATION ERROR</td>
+<td><code>92</code></td>
+<td><code>TRANSLATION ERROR</code></td>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
-<td>200-499</td>
-<td>Reserved for distributed auxiliary processors</td>
+<td><code>200-499</code></td>
+<td><code>Reserved for distributed auxiliary processors</code></td>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
-<td>500-999</td>
-<td>User-defined events</td>
+<td><code>500-999</code></td>
+<td><code>User-defined events</code></td>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
-<td>1000</td>
-<td><strong>Any event</strong> in range 1001-1008</td>
+<td><code>1000</code></td>
+<td><code>Any event in range 1001-1008</code></td>
 </tr>
 <tr>
-<td>1001</td>
-<td>Stop vector</td>
+<td><code>1001</code></td>
+<td><code>Stop vector</code></td>
 </tr>
 <tr>
-<td>1002</td>
-<td>Weak interrupt</td>
+<td><code>1002</code></td>
+<td><code>Weak interrupt</code></td>
 </tr>
 <tr>
-<td>1003</td>
-<td>INTERRUPT</td>
+<td><code>1003</code></td>
+<td><code>INTERRUPT</code></td>
 </tr>
 <tr>
-<td>1005</td>
-<td>EOF INTERRUPT</td>
+<td><code>1005</code></td>
+<td><code>EOF INTERRUPT</code></td>
 </tr>
 <tr>
-<td>1006</td>
-<td>TIMEOUT</td>
+<td><code>1006</code></td>
+<td><code>TIMEOUT</code></td>
 </tr>
 <tr>
-<td>1007</td>
-<td>RESIZE (Dyalog APL/X, Dyalog APL/W)</td>
+<td><code>1007</code></td>
+<td><code>RESIZE (Dyalog APL/X, Dyalog APL/W)</code></td>
 </tr>
 <tr>
-<td>1008</td>
-<td>DEADLOCK</td>
+<td><code>1008</code></td>
+<td><code>DEADLOCK</code></td>
 </tr>
 </tbody>
 </table>
-<p>See <a href="../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/trap">Programmer's Guide: "Trap Statement</a> for an alternative 'control structured' error trapping mechanism.</p>
+<p>See <a href="../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/trap">Programmer's Guide: "Trap Statement"</a> for an alternative 'control structured' error trapping mechanism.</p>
 <p><strong>Examples</strong></p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="o">⊂</span><span class="p">(</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;E&#39;</span><span class="w"> </span><span class="s1">&#39;ERROR&#39;</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="o">⍴</span><span class="nf">⎕TRAP</span>
 <span class="m">1</span>

@@ -32674,7 +32674,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71486,31 +71486,31 @@
 </thead>
 <tbody>
 <tr>
-<td timer="timer">{state}←⎕PROFILE 'start'</td>
+<td><code>{state}←⎕PROFILE 'start' {timer}</code></td>
 <td>Turn profiling on using the specified timer or resume if profiling was stopped</td>
 </tr>
 <tr>
-<td>{state}←⎕PROFILE 'stop'</td>
+<td><code>{state}←⎕PROFILE 'stop'</code></td>
 <td>Suspend the collection of profiling data</td>
 </tr>
 <tr>
-<td>{state}←⎕PROFILE 'clear'</td>
+<td><code>{state}←⎕PROFILE 'clear'</code></td>
 <td>Turn profiling off, if active, and discard any collected profiling data</td>
 </tr>
 <tr>
-<td>{state}←⎕PROFILE 'calibrate'</td>
+<td><code>{state}←⎕PROFILE 'calibrate'</code></td>
 <td>Calibrate the profiling timer</td>
 </tr>
 <tr>
-<td>state←⎕PROFILE 'state'</td>
+<td><code>state←⎕PROFILE 'state'</code></td>
 <td>Query profiling state</td>
 </tr>
 <tr>
-<td>data←⎕PROFILE 'data'</td>
+<td><code>data←⎕PROFILE 'data'</code></td>
 <td>Retrieve profiling data in flat form</td>
 </tr>
 <tr>
-<td>data←⎕PROFILE 'tree'</td>
+<td><code>data←⎕PROFILE 'tree'</code></td>
 <td>Retrieve profiling data in tree form</td>
 </tr>
 </tbody>
@@ -71522,13 +71522,11 @@
 </ul>
 <p>For most actions, the result of <code>⎕PROFILE</code> is its current state and contains:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>character vector indicating the <code>⎕PROFILE</code> state having one of the values <code>'active'</code> or <code>'inactive'</code></th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>[1]</td>
+<td>character vector indicating the <code>⎕PROFILE</code> state having one of the values <code>'active'</code> or <code>'inactive'</code></td>
+</tr>
 <tr>
 <td>[2]</td>
 <td>character vector indicating the timer being used having one of the values <code>'CPU'</code> or <code>'elapsed'</code></td>
@@ -71580,13 +71578,11 @@
 <h4 id="datax-profile-data">data←{X} ⎕PROFILE 'data'</h4>
 <p>Retrieves the collected profiling data. If the optional left argument <code>X</code> is omitted, the result is a matrix with the following columns:</p>
 <table>
-<thead>
-<tr>
-<th>[;1]</th>
-<th>function name</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>[;1]</td>
+<td>function name</td>
+</tr>
 <tr>
 <td>[;2]</td>
 <td>function line number or <code>⍬</code> for a whole function entry</td>
@@ -71624,13 +71620,11 @@
 <h4 id="datax-profile-tree">data←{X} ⎕PROFILE 'tree'</h4>
 <p>Retrieve the collected profiling data in tree format:</p>
 <table>
-<thead>
-<tr>
-<th>[;1]</th>
-<th>depth level</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>[;1]</td>
+<td>depth level</td>
+</tr>
 <tr>
 <td>[;2]</td>
 <td>function name</td>

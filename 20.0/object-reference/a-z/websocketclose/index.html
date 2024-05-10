@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,36 +71305,41 @@
 
 <h1 class="heading"><span class="name">WebSocketClose</span><span class="command">Event 843</span></h1>
 
-<p>Applies To: <a href="../../objects/htmlrenderer/">HTMLRenderer</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/htmlrenderer/">HTMLRenderer</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This event is triggered when the <a href="../../objects/htmlrenderer/">HTMLRenderer</a> client closes the WebSocket.  It is for notification only.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 5-element vector as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'WebSocketClose'</code> or 843</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>ID</td>
 <td>Character vector containing the ID of the WebSocket</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Status Code</td>
 <td>Integer. 1000 indicates normal closure. See <a href="https://www.iana.org/assignments/websocket/websocket.xml#close-code-number">https://www.iana.org/assignments/websocket/websocket.xml#close-code-number</a> .</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Reason</td>
 <td>Character vector, maximum length 123 bytes.</td>
 </tr>

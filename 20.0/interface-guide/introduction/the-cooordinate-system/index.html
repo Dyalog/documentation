@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71324,35 +71324,33 @@
 <p>Each object has a Coord property that determines the units in which its Posn and Size properties are expressed. For full details, see <a href="../../../object-reference/properties/coord">Coord</a>.</p>
 <p>Coord may be set to one of the following values :</p>
 <table>
-<thead>
-<tr>
-<th>'Inherit'</th>
-<th>this means that the object assumes the same co-ordinate system as its parent. This is the default for all objects except the Root object.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>'Prop'</td>
+<td><code>'Inherit'</code></td>
+<td>this means that the object assumes the same co-ordinate system as its parent. This is the default for all objects except the Root object.</td>
+</tr>
+<tr>
+<td><code>'Prop'</code></td>
 <td>the position and size of the object are expressed as a percentage of the dimensions of its parent.</td>
 </tr>
 <tr>
-<td>'Pixel'</td>
+<td><code>'Pixel'</code></td>
 <td>The position and size of the object are expressed in pixels, which are interpreted as either <code>'ScaledPixel'</code> or <code>'RealPixel'</code> according to the value of the DYALOG_PIXEL_TYPE parameter.</td>
 </tr>
 <tr>
-<td>'ScaledPixel'</td>
+<td><code>'ScaledPixel'</code></td>
 <td>The position and size of the object are expressed in pixels but these metrics are scaled according to the user's chosen scaling factor.</td>
 </tr>
 <tr>
-<td>'RealPixel'</td>
+<td><code>'RealPixel'</code></td>
 <td>The position and size of the object are expressed in pixels.</td>
 </tr>
 <tr>
-<td>'User'</td>
+<td><code>'User'</code></td>
 <td>the position and size of the object are expressed in units defined by the YRange and XRange properties of the object's parent.</td>
 </tr>
 <tr>
-<td>'Cell'</td>
+<td><code>'Cell'</code></td>
 <td>the position and size of the object are expressed in cell coordinates (applies only to Grid and its graphical children).</td>
 </tr>
 </tbody>

@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,21 +71327,26 @@
 
 <h1 class="heading"><span class="name">ColSorted</span><span class="command">Method 174</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This method is used to specify that an image is to be displayed in a <a href="../../objects/grid/">Grid</a> column title to indicate the column has been sorted.</p>
 <p>The argument to ColSorted is a 2-element array as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Column number</th>
-<th>Integer.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Column number</td>
+<td>Integer.</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Sorted state</td>
 <td>Integer. -1 = Sorted Down 0 = Unsorted 1 = Sorted Up</td>
 </tr>
@@ -71355,16 +71360,25 @@
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">ColTitles</span><span class="kd">←</span><span class="s1">&#39;Country&#39;</span><span class="w"> </span><span class="s1">&#39;Population&#39;</span><span class="w"> </span><span class="s1">&#39;Area&#39;</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">TitleWidth</span><span class="kd">←</span><span class="m">0</span>
 </code></pre></div>
-<p><img alt="colsorted0" src="../../img/colsorted0.png" /></p>
+<figure id="_figure-1">
+<img alt="colsorted0" src="../../img/colsorted0.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">Values</span><span class="kd">←</span><span class="p">(</span><span class="nv">Values</span><span class="sr">[</span><span class="o">⍋</span><span class="nv">Values</span><span class="sr">[;</span><span class="m">2</span><span class="sr">];]</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">ColSorted</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
-<p><img alt="colsorted1" src="../../img/colsorted1.png" /></p>
+<figure id="_figure-2">
+<img alt="colsorted1" src="../../img/colsorted1.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="p">(</span><span class="nv">Values</span><span class="kd">←</span><span class="nv">Values</span><span class="sr">[</span><span class="o">⍒↑</span><span class="nv">Values</span><span class="sr">[;</span><span class="m">1</span><span class="sr">];]</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">ColSorted</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">0</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">ColSorted</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">¯1</span>
 </code></pre></div>
-<p><img alt="colsorted2" src="../../img/colsorted2.png" /></p>
+<figure id="_figure-3">
+<img alt="colsorted2" src="../../img/colsorted2.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 
 
 

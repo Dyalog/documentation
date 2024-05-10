@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,46 +71327,51 @@
 
 <h1 class="heading"><span class="name">SetItemPosition</span><span class="command">Event 322</span></h1>
 
-<p>Applies To: <a href="../../objects/listview/">ListView</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/listview/">ListView</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user drag-drops an item within a <a href="../../objects/listview/">ListView</a> object. This operation may be disabled by returning 0 from a callback function.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 7-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'SetItemPosition'</code> or 322</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Item number</td>
 <td>Integer. The index of the item.</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Y-position</td>
 <td>Integer. New y-position of the item.</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>X-position</td>
 <td>Integer. New x-position of the item.</td>
 </tr>
 <tr>
-<td>[6]</td>
+<td><code>[6]</code></td>
 <td>Button number</td>
 <td>Integer. The mouse button used to perform the drag.</td>
 </tr>
 <tr>
-<td>[7]</td>
+<td><code>[7]</code></td>
 <td>Shift State</td>
 <td>Integer: Sum of shift key codes (number) 1 =        Shift key is down 2 = Ctrl key is down 4 =    Alt key is down</td>
 </tr>

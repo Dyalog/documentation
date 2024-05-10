@@ -32685,7 +32685,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71321,7 +71321,7 @@
 
 <h1 class="heading"><span class="name">Specify Workspace Available</span><span class="command">R←2002⌶Y</span></h1>
 
-<p>This function is identical to the system function <code>⎕WA</code> except that it provides the means to specify the amount of memory <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>  that is <em>committed</em> for the workspace rather than have it assigned by the internal algorithm. Committed memory is memory that is allocated to a specific process and thereby reduces the amount of memory available for other applications. See also <a href="../../../windows-installation-and-configuration-guide/workspace-management">Workspace Management</a>Workspace Management.</p>
+<p>This function is identical to the system function <code>⎕WA</code> except that it provides the means to specify the amount of memory <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>  that is <em>committed</em> for the workspace rather than have it assigned by the internal algorithm. Committed memory is memory that is allocated to a specific process and thereby reduces the amount of memory available for other applications. See also <a href="../../../windows-installation-and-configuration-guide/workspace-management">Workspace Management</a>.</p>
 <p>Like <code>⎕WA</code>,  <code>2002⌶</code> compacts the workspace so that it occupies the minimum number of bytes possible, adds an <em>extra amount</em>, and then de-commits all the remaining memory that it is currently using, allowing it to be allocated by the operating system for use by other applications.</p>
 <p>The argument <code>Y</code> is an integer which specifies the size, in bytes, of this <em>extra amount</em>.</p>
 <p>The purpose of the <em>extra amount</em> is to reduce the likelihood that APL will immediately have to ask the operating system to re-commit memory that it has just de-committed, something that would have a deleterious effect on performance. At the same time, if the <em>extra amount</em> were to be excessively large, APL could  starve other applications of memory which itself could reduce the effective performance of the system. Whereas <code>⎕WA</code> calculates the size of the <em>extra amount</em> using a simple internal algorithm,  <code>2002⌶</code> uses a value specified by the programmer.</p>

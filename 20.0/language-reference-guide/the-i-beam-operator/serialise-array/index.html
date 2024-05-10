@@ -32685,7 +32685,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71321,7 +71321,8 @@
 
 <h1 class="heading"><span class="name">Serialise/Deserialise Array</span><span class="command">R←X(220⌶)Y</span></h1>
 
-<p>In this section, the term <em>sint_vector</em> is used to refer to a simple integer vector whose items are all in the range <code>¯128</code> to <code>127</code> i.e. they are type 83.</p>
+<p>In this section, the term <em>sint_vector</em> is used to refer to a simple integer vector whose items are all in the range <code>¯128</code> to <code>127</code> i.e. they are type 83. 
+ For further information see <a href="../../system-functions/data-representation-monadic/">Data Representation (Monadic)</a>.</p>
 <p>It is expected that in many cases this I-Beam functionality will be used in conjunction with <code>219⌶</code> - Compress/Decompress vector of short integers. It would also be possible to encrypt the serialised form and write to a file (either component or native), and reverse the process at a later date.</p>
 <p><code>X</code> is a scalar which can take the value 0 or 1.</p>
 <p>When <code>X</code> is 1, <code>Y</code> can be any array. The result <code>R</code> is the serialised form of the array, presented as a <em>sint_vector</em>.</p>

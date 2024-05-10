@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,26 +71327,32 @@
 
 <h1 class="heading"><span class="name">SetMethodInfo</span><span class="command">Method 556</span></h1>
 
-<p>Applies To: <a href="../../objects/ocxclass/">OCXClass</a> <a href="../../objects/oleclient/">OLEClient</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/ocxclass/">OCXClass</a></td>
+<td><a href="../../objects/oleclient/">OLEClient</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This method is used to redefine the arguments or data types associated with a method that is exported by a COM object. SetMethodInfo is used to override the information provided by the object's Type Library.</p>
 <p>The argument to SetMethodInfo is a 2 or 3-element array as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Method name</th>
-<th>character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Method name</td>
+<td>character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Method info</td>
 <td>nested vector (see below)</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Method index</td>
 <td>integer</td>
 </tr>

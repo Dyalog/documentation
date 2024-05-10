@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,46 +71305,51 @@
 
 <h1 class="heading"><span class="name">SelectCertificate</span><span class="command">Event 848</span></h1>
 
-<p>Applies To: <a href="../../objects/htmlrenderer/">HTMLRenderer</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/htmlrenderer/">HTMLRenderer</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This event is triggered when <a href="../../objects/htmlrenderer/">HTMLRenderer</a> requests a resource from a server that requires a certificate.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 7-element vector as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'SelectCertificate'</code> or 848</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Index</td>
 <td>Integer (see below)</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Addr</td>
 <td>Host address</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Port</td>
 <td>Host port</td>
 </tr>
 <tr>
-<td>[6]</td>
-<td></td>
+<td><code>[6]</code></td>
+<td>&nbsp;</td>
 <td><code>'is proxy'</code></td>
 </tr>
 <tr>
-<td>[7]</td>
+<td><code>[7]</code></td>
 <td>Certificates</td>
 <td>See below</td>
 </tr>
@@ -71360,19 +71365,19 @@
 </thead>
 <tbody>
 <tr>
-<td>DER</td>
+<td><code>DER</code></td>
 <td>Distinguished Encoding Rules. Character Vector.</td>
 </tr>
 <tr>
-<td>Subject</td>
+<td><code>Subject</code></td>
 <td>Namespace (see below)</td>
 </tr>
 <tr>
-<td>Issuer</td>
+<td><code>Issuer</code></td>
 <td>Namespace (see below)</td>
 </tr>
 <tr>
-<td>SerialNumber</td>
+<td><code>SerialNumber</code></td>
 <td>Integer</td>
 </tr>
 </tbody>
@@ -71387,15 +71392,15 @@
 </thead>
 <tbody>
 <tr>
-<td>CommonName</td>
+<td><code>CommonName</code></td>
 <td>Character vector</td>
 </tr>
 <tr>
-<td>CountryName</td>
+<td><code>CountryName</code></td>
 <td>Character vector</td>
 </tr>
 <tr>
-<td>DisplayName</td>
+<td><code>DisplayName</code></td>
 <td>Character vector</td>
 </tr>
 </tbody>

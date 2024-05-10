@@ -32747,7 +32747,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71427,28 +71427,24 @@
 <p>The result <code>R</code> depends upon the value of the  Variant option Invert. This the primary option with a default value of 0.</p>
 <h4 id="invert-option-boolean">Invert Option (Boolean)</h4>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>The result <code>R</code> is a matrix with the same shape as the DataTable referenced by <code>⊃Y</code> .</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>0</td>
+<td>The result <code>R</code> is a matrix with the same shape as the DataTable referenced by <code>⊃Y</code> .</td>
+</tr>
+<tr>
+<td><code>1</code></td>
 <td>The result <code>R</code> is vector whose length is the same as the number of columns in the DataTable referenced by <code>⊃Y</code> .</td>
 </tr>
 </tbody>
 </table>
 <p>The optional left argument <code>X</code> is a numeric vector with the same length as the number of columns in the result in the DataTable referenced by <code>⊃Y</code>:</p>
 <table>
-<thead>
-<tr>
-<th>1</th>
-<th>Specifies that the corresponding column of the result  should be converted to a string using the <code>ToString</code> method of the data type of column in question.</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>1</td>
+<td>Specifies that the corresponding column of the result  should be converted to a string using the <code>ToString</code> method of the data type of column in question.</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Specifies that numbers of type System.Int64 in the corresponding column of the result  should be converted to DECFs (NOT into .NET objects, which is the default)</td>

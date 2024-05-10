@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,31 +71327,36 @@
 
 <h1 class="heading"><span class="name">RTFPrint</span><span class="command">Method 461</span></h1>
 
-<p>Applies To: <a href="../../objects/richedit/">RichEdit</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/richedit/">RichEdit</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This method is used to print the contents (<a href="../../properties/rtftext/">RTFText</a>) of a <a href="../../objects/richedit/">RichEdit</a> object.</p>
 <p>The argument to RTFPrint is <code>⍬</code>, or a 1 to 4-element array as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Printer name</th>
-<th>Optional - character vector (see below)</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Printer name</td>
+<td>Optional - character vector (see below)</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Print range</td>
 <td>Optional - (see below)</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Number of copies</td>
 <td>Optional - Integer.</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Collate</td>
 <td>Optional - 0 or 1</td>
 </tr>
@@ -71360,23 +71365,21 @@
 <p><em>Printer name</em> may be the name of an existing Printer object, or the (Windows) name of an installed printer. If you use the latter, the document will be spooled immediately. An empty vector implies the default printer.</p>
 <p><em>Print range</em> may be a simple character vector containing <code>'All'</code>, <code>'Pages'</code>, or <code>'Selection'</code>. Alternatively, it may be a 3 or 4-element nested vector containing:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th><code>'All'</code> , <code>'Pages'</code> , or <code>'Selection'</code></th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td><code>'All'</code> , <code>'Pages'</code> , or <code>'Selection'</code></td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Start page (integer)</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>End page (integer)</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Maximum pages (ignored)</td>
 </tr>
 </tbody>

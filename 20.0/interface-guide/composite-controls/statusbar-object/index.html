@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71391,7 +71391,10 @@
 <span class="s1">&#39;TEST.SB.S2&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;StatusField&#39;</span><span class="w"> </span><span class="s1">&#39;Field2:&#39;</span><span class="w"> </span><span class="s1">&#39;text2&#39;</span>
 <span class="s1">&#39;TEST.SB.S3&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;StatusField&#39;</span><span class="w"> </span><span class="s1">&#39;Field3:&#39;</span><span class="w"> </span><span class="s1">&#39;text3&#39;</span>
 </code></pre></div></p>
-<p><img alt="statusbar_simple" src="../../img/statusbar-simple.png" /></p>
+<figure id="_figure-1">
+<img alt="statusbar_simple" src="../../img/statusbar-simple.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>A Default StatusBar</p>
 <p>The following example illustrates a scrolling StatusBar. The fourth StatusField extends beyond the right edge of the StatusBar and, because HScroll is <code>¯2</code>, a mini scrollbar appears.
 <div class="highlight"><pre><span></span><code><span class="s1">&#39;TEST&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Form&#39;</span><span class="w"> </span><span class="s1">&#39;Scrolling StatusBar&#39;</span>
@@ -71404,7 +71407,10 @@
 <span class="s1">&#39;TEST.SB.S3&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;StatusField&#39;</span><span class="w"> </span><span class="s1">&#39;Field3:&#39;</span><span class="w"> </span><span class="s1">&#39;text3&#39;</span>
 <span class="s1">&#39;TEST.SB.S4&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;StatusField&#39;</span><span class="w"> </span><span class="s1">&#39;Field4:&#39;</span><span class="w"> </span><span class="s1">&#39;text4&#39;</span>
 </code></pre></div></p>
-<p><img alt="statusbar_scrolling" src="../../img/statusbar-scrolling.png" /></p>
+<figure id="_figure-2">
+<img alt="statusbar_scrolling" src="../../img/statusbar-scrolling.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <p>A Scrolling StatusBar</p>
 <p>As an alternative to single-row scrolling StatusBar, you can have a multi-line one. Indeed, this is the default if you omit to specify HScroll. However, you do have to explicitly set the height of the StatusBar to accommodate the second row.
 <div class="highlight"><pre><span></span><code><span class="s1">&#39;TEST&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Form&#39;</span><span class="w"> </span><span class="s1">&#39;Multi Line StatusBar&#39;</span>
@@ -71415,7 +71421,10 @@
 <span class="s1">&#39;TEST.SB.S3&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;StatusField&#39;</span><span class="w"> </span><span class="s1">&#39;Field3:&#39;</span><span class="w"> </span><span class="s1">&#39;text3&#39;</span>
 <span class="s1">&#39;TEST.SB.S4&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;StatusField&#39;</span><span class="w"> </span><span class="s1">&#39;Field4:&#39;</span><span class="w"> </span><span class="s1">&#39;text4&#39;</span>
 </code></pre></div></p>
-<p><img alt="statusbar_multiline" src="../../img/statusbar-multiline.png" /></p>
+<figure id="_figure-3">
+<img alt="statusbar_multiline" src="../../img/statusbar-multiline.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <p>A Multi-line StatusBar</p>
 <h3 id="using-statusfields">Using StatusFields</h3>
 <p>There are basically three ways of using StatusFields. Firstly, you can display information in them directly from your program by setting their Caption and/or Text properties. For example, if you are executing a lengthy calculation, you may wish to display the word "Calculating ..." as the Caption of a StatusField and, as the calculations proceed, display (say) "Phase 1" followed in due course by "Phase 2", and so forth. You can also use StatusFields to display application messages, including warning and error messages, where the use of a MsgBox is inappropriate.</p>
@@ -71464,7 +71473,10 @@
 
 <span class="s1">&#39;F.L&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;List&#39;</span><span class="nv">WINES</span><span class="p">(</span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="nv">F</span><span class="na">.</span><span class="nv">Size</span><span class="o">×</span><span class="m">0.8</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="s1">&#39;Hint&#39;</span><span class="w"> </span><span class="s1">&#39;Choose a Wine&#39;</span><span class="p">)</span>
 </code></pre></div></p>
-<p><img alt="statusbar_wines" src="../../img/statusbar-wines.png" /></p>
+<figure id="_figure-4">
+<img alt="statusbar_wines" src="../../img/statusbar-wines.png" />
+<figcaption><span>Figure&nbsp;4</span></figcaption>
+</figure>
 
 
 

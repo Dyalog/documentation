@@ -32758,7 +32758,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71439,7 +71439,7 @@
 <h1 class="heading"><span class="name">Assignment (Indexed)</span><span class="command">{R}←X[I]←Y</span></h1>
 
 <p>Indexed Assignment is the Assignment function modified by the Indexing function.  The phrase <code>[I]←</code> is treated as the function for descriptive purposes.</p>
-<p><code>Y</code> may be any array.  <code>X</code> may be the <em>name</em> of any array or a selection from a named array <code>(EXP X)[I]←Y</code>, see <a href="../assignment-selective/">Assignment (Selective)</a>.  <code>I</code> must be a valid index specification.  The shape of <code>Y</code> must conform with the shape (implied) of the indexed structure defined by <code>I</code>.  If <code>Y</code> is a scalar or a 1-element vector it will be extended to conform.  A side effect of Indexed Assignment is to change the value of the indexed elements of <code>X</code>.</p>
+<p><code>Y</code> may be any array.  <code>X</code> may be the <em>name</em> of any array or a selection from a named array <code>(EXP X)[I]←Y</code>, see <a href="../assignment-selective/">"Assignment (Selective)"</a>.  <code>I</code> must be a valid index specification.  The shape of <code>Y</code> must conform with the shape (implied) of the indexed structure defined by <code>I</code>.  If <code>Y</code> is a scalar or a 1-element vector it will be extended to conform.  A side effect of Indexed Assignment is to change the value of the indexed elements of <code>X</code>.</p>
 <p><code>R</code> is the value of <code>Y</code>.  If the result is not explicitly assigned or used it is suppressed.</p>
 <p><code>⎕IO</code> is an implicit argument of Indexed Assignment.</p>
 <p>Three forms of indexing are permitted.</p>

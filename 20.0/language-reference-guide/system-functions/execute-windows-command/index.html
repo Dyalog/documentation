@@ -32896,7 +32896,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71609,7 +71609,7 @@
 
 <h1 class="heading"><span class="name">Execute Windows Command</span><span class="command">{R}←⎕CMD Y</span></h1>
 
-<p><code>⎕CMD</code> executes the Windows Command Processor or UNIX shell or starts another Windows application program.  <code>⎕CMD</code> is a synonym of <code>⎕SH</code>.  Either system function may be used in either environment (Windows or UNIX) with exactly the same effect.  <code>⎕CMD</code> is probably more natural for the Windows user.  This section describes the behaviour of <code>⎕CMD</code> and <code>⎕SH</code> under Windows. See <a href="../execute-unix-command/">Execute (UNIX) Command:</a> for a discussion of the behaviour of these system functions under UNIX.</p>
+<p><code>⎕CMD</code> executes the Windows Command Processor or UNIX shell or starts another Windows application program.  <code>⎕CMD</code> is a synonym of <code>⎕SH</code>.  Either system function may be used in either environment (Windows or UNIX) with exactly the same effect.  <code>⎕CMD</code> is probably more natural for the Windows user.  This section describes the behaviour of <code>⎕CMD</code> and <code>⎕SH</code> under Windows. See <a href="../execute-unix-command/">"Execute (UNIX) Command: "</a> for a discussion of the behaviour of these system functions under UNIX.</p>
 <p>The system commands <a href="../../system-commands/sh/"><code>)SH</code></a> and <a href="../../system-commands/cmd/"><code>)CMD</code></a> provide similar facilities. For further information, see <a href="../../system-commands/sh/">Execute (UNIX) Command: </a> and <a href="../../system-commands/cmd/">Example</a>.</p>
 <h4 id="executing-the-windows-command-processor">Executing the Windows Command Processor</h4>
 <p>If <code>Y</code> is a simple character vector, <code>⎕CMD</code> invokes the Windows Command Processor (normally <code>cmd.exe</code>) and passes the command specified by character vector <code>Y</code> to it for execution. The term command means here an instruction recognised by the Command Processor, or the pathname of a program (with optional parameters) to be executed by it. In either case, APL waits for the command to finish and then returns the result <code>R</code>,  a vector of character vectors containing its result. Each element in <code>R</code> corresponds to a line of output produced by the command.</p>
@@ -71667,19 +71667,17 @@
 <p>Before execution, the argument is prefixed and postfixed with strings defined by the APL parameters CMD_PREFIX and CMD_POSTFIX.  The former specifies the name of your command processor and any parameters that it requires.  The latter specifies a string which may be required.  If CMD_PREFIX is not defined, it defaults to the name defined by the environment variable COMSPEC followed by  "/c".  If COMSPEC is not defined, it defaults to <code>cmd.exe</code>.  If CMD_POSTFIX is not defined, it defaults to an empty vector.</p>
 <p><code>⎕CMD</code> treats certain characters as having special meaning as follows:</p>
 <table>
-<thead>
-<tr>
-<th>#</th>
-<th>marks the start of a trailing comment,</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>;</td>
+<td><code>#</code></td>
+<td>marks the start of a trailing comment,</td>
+</tr>
+<tr>
+<td><code>;</code></td>
 <td>divides the command into sub-commands,</td>
 </tr>
 <tr>
-<td>&gt;</td>
+<td><code>&gt;</code></td>
 <td>if found within the last sub-command, causes <code>⎕CMD</code> to use a visible window.</td>
 </tr>
 </tbody>
@@ -71700,27 +71698,25 @@
 <p>Note that <code>Y[1]</code> may contain the complete command line, including any suitable parameters for starting the program.  If Windows fails to find the executable program, <code>⎕CMD</code> will fail and report <code>FILE ERROR 2</code>.</p>
 <p><code>Y[2]</code> specifies the window parameter and may be one of the following.  If not, a <code>DOMAIN ERROR</code> is reported.</p>
 <table>
-<thead>
-<tr>
-<th>'Normal' ''</th>
-<th>Application is started in a normal window, which is given the input focus</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>'Unfocused'</td>
+<td><code>'Normal'''</code></td>
+<td>Application is started in a normal window, which is given the input focus</td>
+</tr>
+<tr>
+<td><code>'Unfocused'</code></td>
 <td>Application is started in a normal window, which is NOT given the input focus</td>
 </tr>
 <tr>
-<td>'Hidden'</td>
+<td><code>'Hidden'</code></td>
 <td>Application is run in an invisible window</td>
 </tr>
 <tr>
-<td>'Minimized' 'Minimised'</td>
+<td><code>'Minimized''Minimised'</code></td>
 <td>Application is started as an icon which is NOT given the input focus</td>
 </tr>
 <tr>
-<td>'Maximized' 'Maximised'</td>
+<td><code>'Maximized''Maximised'</code></td>
 <td>Application is started maximized (full screen) and is given the input focus</td>
 </tr>
 </tbody>

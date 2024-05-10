@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71328,16 +71328,17 @@
 <span class="w"> </span><span class="s1">&#39;F.G&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Grid&#39;</span><span class="p">(</span><span class="o">?</span><span class="m">10</span><span class="w"> </span><span class="m">10</span><span class="o">⍴</span><span class="m">100</span><span class="p">)(</span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="nv">F</span><span class="na">.</span><span class="nv">Size</span><span class="p">(</span><span class="s1">&#39;CellWidths&#39;</span><span class="w"> </span><span class="m">40</span><span class="p">)</span>
 <span class="w"> </span><span class="s1">&#39;F.G.L&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Rect&#39;</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)(</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="p">)(</span><span class="s1">&#39;LWidth&#39;</span><span class="w"> </span><span class="m">4</span><span class="p">)(</span><span class="s1">&#39;Coord&#39;</span><span class="w"> </span><span class="s1">&#39;Cell&#39;</span><span class="p">)</span>
 </code></pre></div></p>
-<p><img alt="grid graphics 1" src="../../img/grid-graphics-1.png" /></p>
+<figure id="_figure-1">
+<img alt="grid graphics 1" src="../../img/grid-graphics-1.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>The OnTop property of the graphical object controls how it is drawn relative to the grid lines and cell text. For graphical objects created as a child of a Grid, OnTop may be 0, 1 or 2.</p>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>Graphical object is drawn behind grid lines and cell text</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>0</td>
+<td>Graphical object is drawn behind grid lines and cell text</td>
+</tr>
 <tr>
 <td>1</td>
 <td>Graphical object is drawn on top of grid lines but behind cell text</td>
@@ -71357,13 +71358,22 @@
 
 <span class="w"> </span><span class="s1">&#39;F.G.I&#39;</span><span class="nf">⎕WS</span><span class="p">(</span><span class="s1">&#39;Picture&#39;</span><span class="w"> </span><span class="s1">&#39;F.M&#39;</span><span class="p">)(</span><span class="s1">&#39;OnTop&#39;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
 </code></pre></div></p>
-<p><img alt="grid graphics 2" src="../../img/grid-graphics-2.png" /></p>
+<figure id="_figure-2">
+<img alt="grid graphics 2" src="../../img/grid-graphics-2.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">I</span><span class="na">.</span><span class="nv">OnTop</span><span class="kd">←</span><span class="m">1</span>
 </code></pre></div>
-<p><img alt="grid graphics 3" src="../../img/grid-graphics-3.png" /></p>
+<figure id="_figure-3">
+<img alt="grid graphics 3" src="../../img/grid-graphics-3.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">I</span><span class="na">.</span><span class="nv">OnTop</span><span class="kd">←</span><span class="m">2</span>
 </code></pre></div>
-<p><img alt="grid graphics 4" src="../../img/grid-graphics-4.png" /></p>
+<figure id="_figure-4">
+<img alt="grid graphics 4" src="../../img/grid-graphics-4.png" />
+<figcaption><span>Figure&nbsp;4</span></figcaption>
+</figure>
 
 
 

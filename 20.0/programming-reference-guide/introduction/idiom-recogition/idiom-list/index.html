@@ -32731,7 +32731,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71396,34 +71396,34 @@
 </thead>
 <tbody>
 <tr>
-<td>C</td>
+<td><code>C</code></td>
 <td>Character</td>
-<td>S</td>
+<td><code>S</code></td>
 <td>Scalar or 1-item vector</td>
 </tr>
 <tr>
-<td>B</td>
+<td><code>B</code></td>
 <td>Boolean</td>
-<td>V</td>
+<td><code>V</code></td>
 <td>Vector</td>
 </tr>
 <tr>
-<td>N</td>
+<td><code>N</code></td>
 <td>Numeric</td>
-<td>M</td>
+<td><code>M</code></td>
 <td>Matrix</td>
 </tr>
 <tr>
-<td>P</td>
+<td><code>P</code></td>
 <td>Nested</td>
-<td>A</td>
+<td><code>A</code></td>
 <td>Array of any rank</td>
 </tr>
 <tr>
-<td>X</td>
+<td><code>X</code></td>
 <td>any type</td>
-<td></td>
-<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -71437,223 +71437,223 @@
 </thead>
 <tbody>
 <tr>
-<td>⍴⍴XA</td>
+<td><code>⍴⍴XA</code></td>
 <td>The rank of <code>XA</code> as a 1-element vector</td>
 </tr>
 <tr>
-<td>≢⍴XA</td>
+<td><code>≢⍴XA</code></td>
 <td>The rank of <code>XA</code> as a scalar</td>
 </tr>
 <tr>
-<td>BV/⍳NS</td>
+<td><code>BV/⍳NS</code></td>
 <td>The subset of <code>NS</code> corresponding to the 1s in <code>BV</code></td>
 </tr>
 <tr>
-<td>BV/⍳⍴XV</td>
+<td><code>BV/⍳⍴XV</code></td>
 <td>The positions in <code>XV</code> corresponding to the 1s in <code>BV</code></td>
 </tr>
 <tr>
-<td>NA⊃¨⊂XV</td>
+<td><code>NA⊃¨⊂XV</code></td>
 <td>The subset of <code>XV</code> in the index positions defined by <code>NA</code> (equivalent to <code>XV[NA]</code> )</td>
 </tr>
 <tr>
-<td>XA1{}XA2</td>
+<td><code>XA1{}XA2</code></td>
 <td><code>XA1</code> and <code>XA2</code> are ignored (no result produced)</td>
 </tr>
 <tr>
-<td>XA1{⍺}XA2</td>
+<td><code>XA1{⍺}XA2</code></td>
 <td><code>XA1</code> ( <code>XA2</code> is ignored)</td>
 </tr>
 <tr>
-<td>XA1{⍵}XA2</td>
+<td><code>XA1{⍵}XA2</code></td>
 <td><code>XA2</code> ( <code>XA1</code> is ignored)</td>
 </tr>
 <tr>
-<td>XA1{⍺ ⍵}XA2</td>
+<td><code>XA1{⍺ ⍵}XA2</code></td>
 <td><code>XA1</code> and <code>XA2</code> as a two item vector <code>(XA1 XA2)</code></td>
 </tr>
 <tr>
-<td>{0}XA</td>
+<td><code>{0}XA</code></td>
 <td>0 irrespective of <code>XA</code></td>
 </tr>
 <tr>
-<td>{0}¨XA</td>
+<td><code>{0}¨XA</code></td>
 <td>0 corresponding to each item of <code>XA</code></td>
 </tr>
 <tr>
-<td>,/PV</td>
+<td><code>,/PV</code></td>
 <td>The enclose of the items of <code>PV</code> (which must be of depth 2) catenated along their last axes</td>
 </tr>
 <tr>
-<td>⍪/PV</td>
+<td><code>⍪/PV</code></td>
 <td>The enclose of the items of <code>PV</code> (which must be of depth 2) catenated along their first axes</td>
 </tr>
 <tr>
-<td>⊃⌽XA</td>
+<td><code>⊃⌽XA</code></td>
 <td>The item in the top right of <code>XA</code> ( <code>⎕ML&lt;2</code> )</td>
 </tr>
 <tr>
-<td>↑⌽XA</td>
+<td><code>↑⌽XA</code></td>
 <td>The item in the top right of <code>XA</code> ( <code>⎕ML≥2</code> )</td>
 </tr>
 <tr>
-<td>⊃⌽,XA</td>
+<td><code>⊃⌽,XA</code></td>
 <td>The item in the bottom right of <code>XA</code> ( <code>⎕ML&lt;2</code> )</td>
 </tr>
 <tr>
-<td>↑⌽,A</td>
+<td><code>↑⌽,A</code></td>
 <td>The item in the bottom right of <code>XA</code> ( <code>⎕ML≥2</code> )</td>
 </tr>
 <tr>
-<td>0=⍴XV</td>
+<td><code>0=⍴XV</code></td>
 <td>1 if <code>XV</code> has a shape of zero, 0 otherwise</td>
 </tr>
 <tr>
-<td>0=⍴⍴XA</td>
+<td><code>0=⍴⍴XA</code></td>
 <td>1 if <code>XA</code> has a rank of zero (scalar), 0 otherwise</td>
 </tr>
 <tr>
-<td>0=≡XA</td>
+<td><code>0=≡XA</code></td>
 <td>1 if <code>XA</code> has a depth of zero (simple scalar), 0 otherwise</td>
 </tr>
 <tr>
-<td>XM1{(↓⍺)⍳↓⍵}XM2</td>
+<td><code>XM1{(↓⍺)⍳↓⍵}XM2</code></td>
 <td>A simple vector comprising as many items as there are rows in <code>XM2</code> , where each item is the number of the first row in <code>XM1</code> that matches each row in <code>XM2</code> . See note below.</td>
 </tr>
 <tr>
-<td>↓⍉↑PV</td>
+<td><code>↓⍉↑PV</code></td>
 <td>A nested vector comprising vectors that each correspond to a position in the original vectors of <code>PV</code> – the first vector contains the first item from each vector in <code>PV</code> , padded to be the same length as the largest vector, and so on ( <code>⎕ML&lt;2</code> )</td>
 </tr>
 <tr>
-<td>↓⍉⊃PV</td>
+<td><code>↓⍉⊃PV</code></td>
 <td>A nested vector comprising vectors that each correspond to a position in the original vectors of <code>PV</code> – the first vector contains the first item from each vector in <code>PV</code> , padded to be the same length as the largest vector, and so on ( <code>⎕ML≥2</code> )</td>
 </tr>
 <tr>
-<td>^\' '=CA</td>
+<td><code>^\' '=CA</code></td>
 <td>A Boolean mask indicating the leading blank spaces in each row of <code>CA</code></td>
 </tr>
 <tr>
-<td>+/^\' '=CA</td>
+<td><code>+/^\' '=CA</code></td>
 <td>The number of leading blank spaces in each row of <code>CA</code></td>
 </tr>
 <tr>
-<td>+/^\BA</td>
+<td><code>+/^\BA</code></td>
 <td>The number of leading 1s in each row of <code>BA</code></td>
 </tr>
 <tr>
-<td>{(∨\' '≠⍵)/⍵}CV</td>
+<td><code>{(∨\' '≠⍵)/⍵}CV</code></td>
 <td><code>CV</code> without any leading blank spaces</td>
 </tr>
 <tr>
-<td>{(+/^\' '=⍵)↓⍵}CV</td>
+<td><code>{(+/^\' '=⍵)↓⍵}CV</code></td>
 <td><code>CV</code> without any leading blank spaces</td>
 </tr>
 <tr>
-<td>~∘' '¨↓CA</td>
+<td><code>~∘' '¨↓CA</code></td>
 <td>A nested vector comprising simple character vectors constructed from the rows of <code>CA</code> (which must be of depth 1) with all blank spaces removed</td>
 </tr>
 <tr>
-<td>{(+/∨\' '≠⌽⍵)↑¨↓⍵}CA</td>
+<td><code>{(+/∨\' '≠⌽⍵)↑¨↓⍵}CA</code></td>
 <td>A nested vector comprising simple character vectors constructed from the rows of <code>CA</code> (which must be of depth 1) with trailing blank spaces removed</td>
 </tr>
 <tr>
-<td>⊃∘⍴¨XA</td>
+<td><code>⊃∘⍴¨XA</code></td>
 <td>The length of the first axis of each item in <code>XA</code> ( <code>⎕ML&lt;2</code> )</td>
 </tr>
 <tr>
-<td>↑∘⍴¨XA</td>
+<td><code>↑∘⍴¨XA</code></td>
 <td>The length of the first axis of each item in <code>XA</code> ( <code>⎕ML≥2</code> )</td>
 </tr>
 <tr>
-<td>XA1,←XA2</td>
+<td><code>XA1,←XA2</code></td>
 <td><code>XA1</code> redefined to be <code>XA1</code> with <code>XA2</code> catenated along its last axis</td>
 </tr>
 <tr>
-<td>XA1⍪←XA2</td>
+<td><code>XA1⍪←XA2</code></td>
 <td><code>XA1</code> redefined to be <code>XA1</code> with <code>XA2</code> catenated along its first axis</td>
 </tr>
 <tr>
-<td>{(⊂⍋⍵)⌷⍵}XA</td>
+<td><code>{(⊂⍋⍵)⌷⍵}XA</code></td>
 <td><code>XA</code> sorted into ascending order</td>
 </tr>
 <tr>
-<td>{(⊂⍒⍵)⌷⍵}XA</td>
+<td><code>{(⊂⍒⍵)⌷⍵}XA</code></td>
 <td><code>XA</code> sorted into descending order</td>
 </tr>
 <tr>
-<td>{⍵[⍋⍵]}XV</td>
+<td><code>{⍵[⍋⍵]}XV</code></td>
 <td><code>XV</code> sorted into ascending order</td>
 </tr>
 <tr>
-<td>{⍵[⍒⍵]}XV</td>
+<td><code>{⍵[⍒⍵]}XV</code></td>
 <td><code>XV</code> sorted into descending order</td>
 </tr>
 <tr>
-<td>{⍵[⍋⍵;]}XM</td>
+<td><code>{⍵[⍋⍵;]}XM</code></td>
 <td><code>XM</code> with the rows sorted into ascending</td>
 </tr>
 <tr>
-<td>{⍵[⍒⍵;]}XM</td>
+<td><code>{⍵[⍒⍵;]}XM</code></td>
 <td><code>XM</code> with the rows sorted into descending order</td>
 </tr>
 <tr>
-<td>1=≡XA</td>
+<td><code>1=≡XA</code></td>
 <td>1 if <code>XA</code> has a depth of 1 (simple array), 0 otherwise</td>
 </tr>
 <tr>
-<td>1=≡,XA</td>
+<td><code>1=≡,XA</code></td>
 <td>1 if <code>XA</code> has a depth of 0 or 1 (simple scalar, vector, etc.), 0 otherwise</td>
 </tr>
 <tr>
-<td>0∊⍴XA</td>
+<td><code>0∊⍴XA</code></td>
 <td>1 if <code>XA</code> is empty, 0 otherwise</td>
 </tr>
 <tr>
-<td>~0∊⍴XA</td>
+<td><code>~0∊⍴XA</code></td>
 <td>1 if <code>XA</code> is not empty, 0 otherwise</td>
 </tr>
 <tr>
-<td>⊣⌿XA</td>
+<td><code>⊣⌿XA</code></td>
 <td>The first sub-array along the first axis of <code>XA</code></td>
 </tr>
 <tr>
-<td>⊣/XA</td>
+<td><code>⊣/XA</code></td>
 <td>The first sub-array along the last axis of <code>XA</code></td>
 </tr>
 <tr>
-<td>⊢⌿XA</td>
+<td><code>⊢⌿XA</code></td>
 <td>The last sub-array along the first axis of <code>XA</code></td>
 </tr>
 <tr>
-<td>⊢/XA</td>
+<td><code>⊢/XA</code></td>
 <td>The last sub-array along the last axis of <code>XA</code></td>
 </tr>
 <tr>
-<td>*○NA</td>
+<td><code>*○NA</code></td>
 <td>Euler's idiom (accurate when <code>NA</code> is a multiple of <code>0J0.5)</code></td>
 </tr>
 <tr>
-<td>0=⊃⍴XA</td>
+<td><code>0=⊃⍴XA</code></td>
 <td>1 if <code>XA</code> has an empty first dimension, 0 otherwise ( <code>⎕ML&lt;2</code> )</td>
 </tr>
 <tr>
-<td>0≠⊃⍴XA</td>
+<td><code>0≠⊃⍴XA</code></td>
 <td>1 if <code>XA</code> does not have an empty first dimension, 0 otherwise ( <code>⎕ML&lt;2</code> )</td>
 </tr>
 <tr>
-<td>⎕AV⍳CA</td>
+<td><code>⎕AV⍳CA</code></td>
 <td>Classic version only: The character numbers (atomic vector index) corresponding to the characters in <code>CA</code></td>
 </tr>
 <tr>
-<td>⌊0.5+NA</td>
+<td><code>⌊0.5+NA</code></td>
 <td>Round to nearest integer</td>
 </tr>
 <tr>
-<td>XA↓⍨←NS</td>
+<td><code>XA↓⍨←NS</code></td>
 <td>This idiom applies only when <code>NS</code> is negative, when it removes the last <code>-NS</code> items from <code>XA</code> along its leading axis. See note below.</td>
 </tr>
 <tr>
-<td _="(⊂⍒⍵)⌷⍵">{(⊂⍋⍵)⌷⍵}</td>
+<td><code>{(⊂⍋⍵)⌷⍵}{(⊂⍒⍵)⌷⍵}</code></td>
 <td>These idioms provide the fastest way to sort  arrays of any rank</td>
 </tr>
 </tbody>
@@ -71706,38 +71706,34 @@
 </code></pre></div></p>
 <p><code>⊢⌿XA</code>, <code>⊢/XA</code>, <code>⊣⌿XA</code>, and <code>⊣/XA</code> return the first/last rank <code>(0⌈¯1+⍴⍴A)</code> sub-array along the first/last axis of <code>XA</code>. For example, if <code>V</code> is a vector, then:</p>
 <table>
-<thead>
-<tr>
-<th>⊣/V</th>
-<th>First item of vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>⊢/V</td>
+<td><code>⊣/V</code></td>
+<td>First item of vector</td>
+</tr>
+<tr>
+<td><code>⊢/V</code></td>
 <td>Last item of vector</td>
 </tr>
 </tbody>
 </table>
 <p>Similarly, if <code>M</code> is a matrix, then:</p>
 <table>
-<thead>
-<tr>
-<th>⊣⌿M</th>
-<th>First row of matrix</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>⊣/M</td>
+<td><code>⊣⌿M</code></td>
+<td>First row of matrix</td>
+</tr>
+<tr>
+<td><code>⊣/M</code></td>
 <td>First column of matrix</td>
 </tr>
 <tr>
-<td>⊢⌿M</td>
+<td><code>⊢⌿M</code></td>
 <td>Last row of matrix</td>
 </tr>
 <tr>
-<td>⊢/M</td>
+<td><code>⊢/M</code></td>
 <td>Last column of matrix</td>
 </tr>
 </tbody>

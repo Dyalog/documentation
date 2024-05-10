@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,34 +71327,43 @@
 
 <h1 class="heading"><span class="name">FieldType</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/buttonedit/">ButtonEdit</a> <a href="../../objects/datetimepicker/">DateTimePicker</a> <a href="../../objects/edit/">Edit</a> <a href="../../objects/label/">Label</a> <a href="../../objects/spinner/">Spinner</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/buttonedit/">ButtonEdit</a></td>
+<td><a href="../../objects/datetimepicker/">DateTimePicker</a></td>
+<td><a href="../../objects/edit/">Edit</a></td>
+<td><a href="../../objects/label/">Label</a></td>
+<td><a href="../../objects/spinner/">Spinner</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The FieldType property controls data conversion, formatting and validation.</p>
 <p>For <a href="../../objects/edit/">Edit</a>, <a href="../../objects/label/">Label</a> and <a href="../../objects/spinner/">Spinner</a> objects, FieldType controls how the <a href="../value/">Value</a> property of these objects is interpreted.</p>
 <p>FieldType is a character vector. If it is empty (the default), the <a href="../../objects/text/">Text</a> or <a href="../../objects/label/">Label</a> object is a standard text object with no special formatting or, in the case of an <a href="../../objects/edit/">Edit</a>, no input validation. For a <a href="../../objects/datetimepicker/">DateTimePicker</a>, an empty FieldType implies the default which is <code>'Date'</code>.</p>
 <p>For a <a href="../../objects/datetimepicker/">DateTimePicker</a>, FieldType may be one of the following:</p>
 <table>
-<thead>
-<tr>
-<th>'Date'</th>
-<th>Uses Windows "short date" format</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>'DateCentury'</td>
+<td><code>'Date'</code></td>
+<td>Uses Windows "short date" format</td>
+</tr>
+<tr>
+<td><code>'DateCentury'</code></td>
 <td>Uses Windows "short date" format but with a 4-digit year regardless of user preference</td>
 </tr>
 <tr>
-<td>'LongDate'</td>
+<td><code>'LongDate'</code></td>
 <td>Uses Windows "long date" format</td>
 </tr>
 <tr>
-<td>'Time'</td>
+<td><code>'Time'</code></td>
 <td>Uses Windows time format</td>
 </tr>
 <tr>
-<td>'Custom'</td>
+<td><code>'Custom'</code></td>
 <td>Uses a special format defined by the CustomFormat property</td>
 </tr>
 </tbody>
@@ -71362,35 +71371,33 @@
 <p>The value of the date or time is represented by the <a href="../datetime/">DateTime</a> property. Note that all validation is performed by the object itself, and it is impossible to enter an invalid value.</p>
 <p>For an <a href="../../objects/edit/">Edit</a>, <a href="../../objects/label/">Label</a> and <a href="../../objects/spinner/">Spinner</a>, if FieldType is defined, the contents of the object are defined by its <a href="../value/">Value</a> property, which is a number, rather than by its <a href="../text/">Text</a> property, and special formatting and validation rules are applied. FieldType may be one of the following :</p>
 <table>
-<thead>
-<tr>
-<th>'Numeric'</th>
-<th>Simple numeric formatting and validation</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>'LongNumeric'</td>
+<td><code>'Numeric'</code></td>
+<td>Simple numeric formatting and validation</td>
+</tr>
+<tr>
+<td><code>'LongNumeric'</code></td>
 <td>Uses Windows number format</td>
 </tr>
 <tr>
-<td>'Date'</td>
+<td><code>'Date'</code></td>
 <td>Uses Windows "short date" format</td>
 </tr>
 <tr>
-<td>'LongDate'</td>
+<td><code>'LongDate'</code></td>
 <td>Uses Windows "long date" format</td>
 </tr>
 <tr>
-<td>'Currency'</td>
+<td><code>'Currency'</code></td>
 <td>Uses Windows currency format</td>
 </tr>
 <tr>
-<td>'Time'</td>
+<td><code>'Time'</code></td>
 <td>Uses Windows time format</td>
 </tr>
 <tr>
-<td>'Char'</td>
+<td><code>'Char'</code></td>
 <td>No validation, forces <a href="../value/">Value</a> to be a character vector</td>
 </tr>
 </tbody>

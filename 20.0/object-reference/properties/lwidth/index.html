@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,17 @@
 
 <h1 class="heading"><span class="name">LWidth</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/circle/">Circle</a> <a href="../../objects/ellipse/">Ellipse</a> <a href="../../objects/poly/">Poly</a> <a href="../../objects/rect/">Rect</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/circle/">Circle</a></td>
+<td><a href="../../objects/ellipse/">Ellipse</a></td>
+<td><a href="../../objects/poly/">Poly</a></td>
+<td><a href="../../objects/rect/">Rect</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This property determines the width of line used to draw a graphics object. A positive value specifies the line width in pixels. A negative value specifies line width in units of the co-ordinate system defined for the object in the x direction. If the object contains more than one component, LWidth may be a vector.</p>
 <p>In versions of Dyalog APL prior to 13.2 revision 19489, if LWidth specified a line width greater than 1 pixel, a solid line was drawn in the colour specified by the FCol Property, regardless of the value of <a href="../lstyle/">LStyle</a>. From that revision onwards, if the value of LWidth is greater than 1  then the value of LStyle is honoured, but only the FCol of the line is honoured - the BCol is still ignored.</p>

@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,8 +71305,25 @@
 
 <h1 class="heading"><span class="name">MenuItem</span><span class="command">Object</span></h1>
 
-<p><a href="../../parentlists/menuitem/">Parents</a> <a href="../../childlists/menuitem/">Children</a> <a href="../../proplists/menuitem/">Properties</a> <a href="../../methodlists/menuitem/">Methods</a> <a href="../../eventlists/menuitem/">Events</a></p>
-<p>Purpose: This object allows the user to initiate an action or to select an option from a menu.</p>
+<table>
+<tbody>
+<tr>
+<td><a href="../../parentlists/menuitem/">Parents</a></td>
+<td><a href="../../childlists/menuitem/">Children</a></td>
+<td><a href="../../proplists/menuitem/">Properties</a></td>
+<td><a href="../../methodlists/menuitem/">Methods</a></td>
+<td><a href="../../eventlists/menuitem/">Events</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>Purpose:</td>
+<td>This object allows the user to initiate an action or to select an option from a menu.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The <a href="../../properties/caption/">Caption</a> property determines the text string that is displayed in its parent as the menu option. The size of a MenuItem is determined by the size of its <a href="../../properties/caption/">Caption</a>, or by the size of the largest object (<a href="../menu/">Menu</a>, MenuItem or <a href="../separator/">Separator</a>) with the same parent. The position of the MenuItem is normally determined by the order in which it is created in relation to other objects with the same parent. However, you can use the <a href="../../properties/posn/">Posn</a> property to <strong>insert</strong> a new MenuItem into an existing structure. For example, having defined three MenuItem objects as children of a <a href="../menu/">Menu</a>, you can insert a fourth one between the first and the second by specifying its <a href="../../properties/posn/">Posn</a> to be 2. Note that the value of <a href="../../properties/posn/">Posn</a> for the MenuItems that were previously second and third will then be reset to 3 and 4 respectively.</p>
 <p>The <a href="../../properties/style/">Style</a> property may be <code>'Check'</code> (the default) or <code>'Radio'</code>. <a href="../../properties/style/">Style</a> determines the type of graphic displayed alongside the Caption if the MenuItem is <em>checked</em>.</p>

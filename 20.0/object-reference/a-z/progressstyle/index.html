@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,21 +71305,38 @@
 
 <h1 class="heading"><span class="name">ProgressStyle</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/progressbar/">ProgressBar</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/progressbar/">ProgressBar</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The ProgressStyle property specifies the appearance of a <a href="../../objects/progressbar/">ProgressBar</a> control.</p>
 <p>ProgressStyle is a character vector that may be <code>'Normal'</code>, <code>'Smooth'</code> or <code>'Marquee'</code>. Its value is effective only when the object is created with <code>⎕WC</code>. Changing ProgressStyle with <code>⎕WS</code> has no effect on the appearance or behaviour of the <a href="../../objects/progressbar/">ProgressBar</a>.</p>
 <p>If ProgressStyle is <code>'Normal'</code>, the highlight in the centre of the <a href="../../objects/progressbar/">ProgressBar</a> is displayed as a broken bar. This is the default.</p>
 <p>If ProgressStyle is <code>'Smooth'</code>, the highlight in the centre of the <a href="../../objects/progressbar/">ProgressBar</a> is displayed as a solid block of colour. This style only applies if <em>Windows Classic Theme</em> is in use. If not, it will be as if  <code>'Normal'</code> were specified.</p>
 <p>If ProgressStyle is <code>'Marquee'</code>,  the highlight in the centre of the <a href="../../objects/progressbar/">ProgressBar</a> is displayed as a broken bar that moves continuously from left to right. The speed is controlled by the <a href="../interval/">Interval</a> Property which determines the frequency in milliseconds with which the highlight is redrawn, each time further along the <a href="../../objects/progressbar/">ProgressBar</a>. The special value of <code>¯1</code> causes the animation to stop.</p>
-<p><strong>Note that this feature only applies if  is enabled.</strong>
+<p>**Note that this feature only applies if Native Look and Feel </p>
+<p>is enabled.**
  If not,  <code>'Marquee'</code> will produce the same behaviour as <code>'Normal'</code>.</p>
 <p>The pictures below illustrate the appearance of the different values of ProgressStyle.</p>
-<p><img alt="progressstyle normal" src="../../img/progressstyle-normal.png" /></p>
+<figure id="_figure-1">
+<img alt="progressstyle normal" src="../../img/progressstyle-normal.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>ProgressStyle Normal (the default)</p>
-<p><img alt="progressstyle smooth" src="../../img/progressstyle-smooth.png" /></p>
+<figure id="_figure-2">
+<img alt="progressstyle smooth" src="../../img/progressstyle-smooth.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <p>ProgressStyle Smooth (Windows Classic Theme only)</p>
-<p><img alt="progressstyle marquee" src="../../img/progressstyle-marquee.png" /></p>
+<figure id="_figure-3">
+<img alt="progressstyle marquee" src="../../img/progressstyle-marquee.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <p>ProgressStyle Marquee (requires Native Look and Feel)</p>
 
 

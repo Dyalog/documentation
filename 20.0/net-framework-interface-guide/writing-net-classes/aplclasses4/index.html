@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71424,8 +71424,14 @@
 <span class="w">     </span><span class="bp">∇</span><span class="w">   </span>
 </code></pre></div></p>
 <p>Load <code>aplclasses4.dws</code> and export a new version of <code>aplclasses.dll</code> as before.</p>
-<p><img alt="aplclasses4_1" src="../../img/aplclasses4-1.png" /></p>
-<p><img alt="aplclasses4_2" src="../../img/aplclasses4-2.png" /></p>
+<figure id="_figure-1">
+<img alt="aplclasses4_1" src="../../img/aplclasses4-1.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
+<figure id="_figure-2">
+<img alt="aplclasses4_2" src="../../img/aplclasses4-2.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <h3 id="programcs">program.cs</h3>
 <p><code>aplclasses4\Framework\program.cs</code> contains code to invoke the two different constructor functions <code>CTOR1</code> and <code>CTOR2</code> :
 <div class="highlight"><pre><span></span><code><span class="nv">using</span><span class="w"> </span><span class="nv">System</span><span class="sr">;</span>
@@ -71449,9 +71455,15 @@
 <p>Here the code creates two instances of the Primitives class named <code>apl10</code> and <code>apl03</code>. The first is created with a constructor parameter of <code>(1)</code>; the second with a constructor parameter of <code>(0,3)</code>.</p>
 <p>The C# compiler matches the first call with <code>CTOR1</code>, because <code>CTOR1</code> is defined to accept a single <code>Int32</code> parameter. The second call is matched to <code>CTOR2</code> because <code>CTOR2</code> is defined to accept two <code>Int32</code> parameters.</p>
 <p>Using VS, open the solution file <code>d:\aplclasses\aplclasses4\Framework\project.sln</code> and view <code>program.cs</code>.</p>
-<p><img alt="aplclasses4_3" src="../../img/aplclasses4-3.png" /></p>
+<figure id="_figure-3">
+<img alt="aplclasses4_3" src="../../img/aplclasses4-3.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <p>Click <em>Debug/Start Without debugging</em> (or press Ctrl+F5) to run the program. The results are shown in a console window.</p>
-<p><img alt="aplclasses4_4" src="../../img/aplclasses4-4.png" /></p>
+<figure id="_figure-4">
+<img alt="aplclasses4_4" src="../../img/aplclasses4-4.png" />
+<figcaption><span>Figure&nbsp;4</span></figcaption>
+</figure>
 
 
 

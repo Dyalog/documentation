@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,42 +71327,47 @@
 
 <h1 class="heading"><span class="name">WebSocketReceive</span><span class="command">Event 842</span></h1>
 
-<p>Applies To: <a href="../../objects/htmlrenderer/">HTMLRenderer</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/htmlrenderer/">HTMLRenderer</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This event is triggered when data is received over a WebSocket. This event is reported for information only. The result (if any) of a callback function will be ignored.</p>
 <p>Note that the WebSocket protocol provides for the possibility for the data to be sent in chunks, causing a succession of WebSocketReceive events. The FIN bit of the last chunk will be 1. The CEF does not currently implement "chunking", so FIN will always be 1.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 6-element vector as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'WebSocketReceive'</code> or 842</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>ID</td>
 <td>Character vector containing the ID of the WebSocket</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Data</td>
 <td>Character or integer vector.</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>FIN</td>
 <td>Boolean. 1 indicates that this is the last chunk; 0 that there is more to come.</td>
 </tr>
 <tr>
-<td>[6]</td>
+<td><code>[6]</code></td>
 <td>Datatype</td>
 <td>1 = character, 2 - numeric values in the range ¯128 to 127.</td>
 </tr>

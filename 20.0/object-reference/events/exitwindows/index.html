@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,34 +71305,37 @@
 
 <h1 class="heading"><span class="name">ExitWindows</span><span class="command">Event 131</span></h1>
 
-<p>Applies To: <a href="../../objects/root/">Root</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/root/">Root</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user attempts to terminate the Windows Operating System. When this is done, Windows gives all running applications the opportunity to prevent it. Typically, an application that has unsaved changes will display a dialog box warning the user of this situation and offering the opportunity to cancel the termination. The default action for this event is to allow Windows to close. You can prevent this by returning a zero from a callback function. You can also prevent the user from closing Windows down by disabling the event altogether. This is achieved by setting its action code to <code>¯</code>1. In most cases this is less preferable than the callback method as it does not allow you to inform the user as to why Windows won't terminate.</p>
 <p>The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, or supplied as the right argument to your callback function, is a 2-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'ExitWindows'</code> or 131</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Flag</td>
 <td>0 or 1</td>
 </tr>
 </tbody>
 </table>
-<p>The associated callback is run <strong>immediately</strong> while the windows notification is still on the stack. See 
-Interface Guide: </p>
-<p>High-Priority Callback Functions<a href="../../../interface-guide/introduction/high-priority-callbacks">High-Priority Callback Functions</a>.</p>
+<p>The associated callback is run <strong>immediately</strong> while the windows notification is still on the stack. See <a href="../../../interface-guide/introduction/high-priority-callbacks">High-Priority Callback Functions</a>.</p>
 
 
 

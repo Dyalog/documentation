@@ -32858,7 +32858,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71833,16 +71833,14 @@
 <p>There are two types of event; ElementChanged and CellsChanged. The CellsChanged event applies only to a data bound matrix; the ElementChanged event applies to all other types of binding.</p>
 <p>The event message  supplied as the right argument to your callback function, is a 2-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>EventArgs</td>
 <td>ref</td>
 </tr>
@@ -71851,42 +71849,38 @@
 <p>EventArgs is an instance of the internal class <code>Dyalog.Data.ElementChangedEventArgs</code> or <code>Dyalog.Data.CellsChangedEventArgs</code> whose fields are described below:</p>
 <p><code>Dyalog.Data.ElementChangedEventArgs</code> fields</p>
 <table>
-<thead>
-<tr>
-<th>Indices</th>
-<th>An indication of which member has changed. Typically this will either be <code>¯1</code> to indicate that the indices are unavailable or a scalar value indicating (origin 0), which element of an array has been modified or added.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>Name</td>
+<td><code>Indices</code></td>
+<td>An indication of which member has changed. Typically this will either be <code>¯1</code> to indicate that the indices are unavailable or a scalar value indicating (origin 0), which element of an array has been modified or added.</td>
+</tr>
+<tr>
+<td><code>Name</code></td>
 <td>The name of the variable that has been modified. This is especially useful when the datasource corresponds to a namespace.</td>
 </tr>
 <tr>
-<td>Path</td>
+<td><code>Path</code></td>
 <td>A path used to locate the variable that has been modified. This is especially useful when the datasource corresponds to a deeply nested namespace, where the value changed is an element of an array inside a namespace which is itself an element of an array within the datasource.</td>
 </tr>
 </tbody>
 </table>
 <p><code>Dyalog.Data.CellsChangedEventArgs</code> fields</p>
 <table>
-<thead>
-<tr>
-<th>Path</th>
-<th>Identifies the cell or row that was changed. See below.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>SourceName</td>
+<td><code>Path</code></td>
+<td>Identifies the cell or row that was changed. See below.</td>
+</tr>
+<tr>
+<td><code>SourceName</code></td>
 <td>The name of the matrix that was specified as the right argument to <code>2015⌶</code> .</td>
 </tr>
 <tr>
-<td>Reason</td>
+<td><code>Reason</code></td>
 <td>A character vector that describes what in the matrix has changed is <code>'RowDeleted'</code> , <code>'CellChanged'</code> or <code>'RowInserted'</code></td>
 </tr>
 <tr>
-<td>Value</td>
+<td><code>Value</code></td>
 <td>The new value in the cell or <code>⎕NULL</code></td>
 </tr>
 </tbody>

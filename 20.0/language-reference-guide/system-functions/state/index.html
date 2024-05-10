@@ -32693,7 +32693,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71331,23 +71331,21 @@
 
 <p><code>Y</code> must be a simple character scalar or vector which is taken to be the name of an APL object or a system variable. The result returned is a nested vector of 4 elements as described below. <code>⎕STATE</code> supplies information about shadowed or localised objects that is otherwise unobtainable.</p>
 <table>
-<thead>
-<tr>
-<th>1⊃R</th>
-<th>Boolean vector, element set to 1 if and only if this level shadows <code>Y</code> . Note: <code>(⍴1⊃R)=⍴⎕LC</code></th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>2⊃R</td>
+<td><code>1⊃R</code></td>
+<td>Boolean vector, element set to 1 if and only if this level shadows <code>Y</code> . Note: <code>(⍴1⊃R)=⍴⎕LC</code></td>
+</tr>
+<tr>
+<td><code>2⊃R</code></td>
 <td>Numeric vector giving the stack state of this name as it entered this level. Note: <code>(⍴2⊃R)=⍴⎕LC</code> 0=not on stack 1=suspended 2=pendent (may also be suspended) 3=active (may also be pendent or suspended)</td>
 </tr>
 <tr>
-<td>3⊃R</td>
+<td><code>3⊃R</code></td>
 <td>Numeric vector giving the name classification of <code>Y</code> as it entered this level. Note: <code>(⍴3⊃R)=+/1⊃R</code></td>
 </tr>
 <tr>
-<td>4⊃R</td>
+<td><code>4⊃R</code></td>
 <td>Vector giving the contents of <code>Y</code> before it was shadowed at this level. Note: <code>(⍴4⊃R)=+/0≠3⊃R</code></td>
 </tr>
 </tbody>

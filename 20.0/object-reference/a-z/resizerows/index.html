@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,7 +71305,14 @@
 
 <h1 class="heading"><span class="name">ResizeRows</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This property determines whether or not the user may resize rows in the <a href="../../objects/grid/">Grid</a>. It is a Boolean scalar or vector with one element per column. A value of 1 indicates that the corresponding row is resizable by the user. A value of  0 means that the corresponding row may not be resized by the user.</p>
 <p>If a row is resizable, the cursor changes to a double headed arrow when the mouse pointer is placed over the lower border of the row title. The user may change the height of the row by dragging this border up and down. The user may also resize a row by double-clicking over its bottom border. This causes the row to be resized to fit the data and the height of the row is automatically adjusted to display the tallest value in any of its cells. Either operation generates a <a href="../../methodorevents/setrowsize/">SetRowSize</a> event.</p>

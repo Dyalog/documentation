@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,27 +71305,33 @@
 
 <h1 class="heading"><span class="name">BeginEditLabel</span><span class="command">Event 300</span></h1>
 
-<p>Applies To: <a href="../../objects/listview/">ListView</a> <a href="../../objects/treeview/">TreeView</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/listview/">ListView</a></td>
+<td><a href="../../objects/treeview/">TreeView</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user clicks on an item in a <a href="../../objects/listview/">ListView</a> or <a href="../../objects/treeview/">TreeView</a> object that has the focus, and signals the start of an edit operation. The default processing for the event is to display a pop-up edit box around the item and to permit the user to change its text.</p>
 <p>You may disable the operation by setting the action code for the event to <code>¯1</code>. You may prevent a particular item from being edited by returning 0 from a callback function. You may also initiate the edit operation by calling BeginEditLabel as a method.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 3-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'BeginEditLabel'</code> or 300</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Item number</td>
 <td>Integer. The index of the item.</td>
 </tr>

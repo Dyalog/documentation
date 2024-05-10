@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,18 @@
 
 <h1 class="heading"><span class="name">FormatString</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/buttonedit/">ButtonEdit</a> <a href="../../objects/edit/">Edit</a> <a href="../../objects/grid/">Grid</a> <a href="../../objects/label/">Label</a> <a href="../../objects/spinner/">Spinner</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/buttonedit/">ButtonEdit</a></td>
+<td><a href="../../objects/edit/">Edit</a></td>
+<td><a href="../../objects/grid/">Grid</a></td>
+<td><a href="../../objects/label/">Label</a></td>
+<td><a href="../../objects/spinner/">Spinner</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The FormatString property specifies one or more <code>⎕FMT</code> format specifications to be used to format data in an Grid or single-line Edit. When applied to a Grid, it is either a simple character vector that specifies the format specification for the entire Grid, or a vector of character vectors. If it is a vector, its elements are mapped to individual cells via the CellTypes property. When applied to an Edit object, FormatString must be a simple character vector.</p>
 <p>APL derives the text to be displayed in a cell by calling <code>⎕FMT</code> with a left argument of the corresponding element of FormatString and a right argument of the cell value. If the format specification is invalid, the text displayed is blank.</p>
@@ -71338,7 +71349,10 @@
 <span class="w">      </span><span class="s1">&#39;F.G&#39;</span><span class="nf">⎕WS</span><span class="s1">&#39;FormatString&#39;</span><span class="w"> </span><span class="s1">&#39;M&lt;(&gt;N&lt;)&gt;F12.3&#39;</span>
 <span class="w">      </span><span class="s1">&#39;F.G&#39;</span><span class="nf">⎕WS</span><span class="s1">&#39;AlignChar&#39;</span><span class="w"> </span><span class="s1">&#39;.&#39;</span>
 </code></pre></div></p>
-<p><img alt="gridfmt" src="../../img/gridfmt.gif" /></p>
+<figure id="_figure-1">
+<img alt="gridfmt" src="../../img/gridfmt.gif" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 
 
 

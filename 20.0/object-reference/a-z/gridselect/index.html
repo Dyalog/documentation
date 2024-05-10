@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,31 +71305,36 @@
 
 <h1 class="heading"><span class="name">GridSelect</span><span class="command">Event 165</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user performs or cancels the selection of a block of cells in a <a href="../../objects/grid/">Grid</a> object. This event is reported after the selection has changed. Setting its action code to <code>¯1</code> has no effect and the result of a callback function cannot be used to alter the selection that has been made. You may however control the user's ability to make selections using the <a href="../../properties/cellselect/">CellSelect</a> property.</p>
 <p>The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, or supplied as the right argument to your callback function, is a 4-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'GridSelect'</code> or 165</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Start</td>
 <td>2-element integer vector or matrix containing the row, column address(es) of the top left cell(s) in the selected block(s)</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>End</td>
 <td>2-element integer vector or matrix containing the row, column address(es) of the bottom right cell(s) in the selected block</td>
 </tr>

@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,14 @@
 
 <h1 class="heading"><span class="name">RowTreeDepth</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The RowTreeDepth property specifies the structure of the rows in a <a href="../../objects/grid/">Grid</a> object. It is either a scalar 0 or an integer vector of the same length as the number of rows in the <a href="../../objects/grid/">Grid</a>. RowTreeDepth is similar to the <a href="../depth/">Depth</a> property of the <a href="../../objects/treeview/">TreeView</a> object.</p>
 <p>A value of 0 indicates that the corresponding row is a top-level row. A value of 1 indicates that the corresponding row is a child of the most recent row whose RowTreeDepth is 0; a value of 2 indicates that the corresponding row is a child of the most recent row whose RowTreeDepth is 1, and so forth.</p>
@@ -71338,9 +71345,15 @@
 <span class="w">      </span><span class="s1">&#39;F.G&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Grid&#39;</span><span class="p">(</span><span class="m">30</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="m">2</span><span class="na">/</span><span class="o">⍳</span><span class="m">30</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">RowTreeDepth</span><span class="kd">←</span><span class="m">30</span><span class="o">⍴</span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">2</span>
 </code></pre></div>
-<p><img alt="gridtree1" src="../../img/gridtree1.gif" /></p>
+<figure id="_figure-1">
+<img alt="gridtree1" src="../../img/gridtree1.gif" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>The user can interact with the tree images to expand and contract rows of the <a href="../../objects/grid/">Grid</a>.</p>
-<p><img alt="gridtree2" src="../../img/gridtree2.gif" /></p>
+<figure id="_figure-2">
+<img alt="gridtree2" src="../../img/gridtree2.gif" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 
 
 

@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,12 +71327,27 @@
 
 <h1 class="heading"><span class="name">GetBuildID</span><span class="command">Method 992</span></h1>
 
-<p>Applies To: <a href="../../objects/root/">Root</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/root/">Root</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This method is used to obtain the Build ID of a Dyalog executable or the checksum of a file.</p>
 <p>The argument to GetBuildID is <code>⍬</code> or a
 single item as follows:</p>
-<p>[1] File name character vector</p>
+<table>
+<tbody>
+<tr>
+<td><code>[1]</code></td>
+<td>File name</td>
+<td>character vector</td>
+</tr>
+</tbody>
+</table>
 <p>The (shy) result is an 8-element character vector of hexadecimal digits that
 represents the Build ID.</p>
 <p>If the argument is <code>⍬</code>, the build id is

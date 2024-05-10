@@ -33022,7 +33022,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71815,23 +71815,21 @@
 <p><code>R←⎕CSV Y</code></p>
 <p><code>Y</code> is an array that specifies just the source of the CSV data (see below) or a 1,2,3 or 4-element vector containing:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Source of CSV Data</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Source of CSV Data</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Description of the CSV data</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Column Types</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Header Row Indicator</td>
 </tr>
 </tbody>
@@ -71854,31 +71852,29 @@
 <p><em>Column Types</em></p>
 <p>This is a scalar numeric code or vector of numeric codes that specifies the field types from the list below. If <em>Column Types</em> is zilde or omitted, the default is 1 (all fields are character).</p>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>The field is ignored.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>1</td>
+<td><code>0</code></td>
+<td>The field is ignored.</td>
+</tr>
+<tr>
+<td><code>1</code></td>
 <td>The field contains character data.</td>
 </tr>
 <tr>
-<td>2</td>
+<td><code>2</code></td>
 <td>The field is to be interpreted as being numeric. Empty cells and cells which cannot be converted to numeric values are not tolerated and cause an error to be signalled.</td>
 </tr>
 <tr>
-<td>3</td>
+<td><code>3</code></td>
 <td>The field is to be interpreted as being numeric but invalid numeric values are tolerated. Empty fields and fields which cannot be converted to numeric values are replaced with the  Fill variant option (default 0).</td>
 </tr>
 <tr>
-<td>4</td>
+<td><code>4</code></td>
 <td>The field is to be interpreted numeric data but invalid numeric data is tolerated. Empty fields and fields which cannot be converted to numeric values are returned instead as character data; this type is disallowed when variant option Invert is set to 1.</td>
 </tr>
 <tr>
-<td>5</td>
+<td><code>5</code></td>
 <td>The field is to be interpreted as being numeric but empty fields are tolerated and are replaced with the Fill variant option (default 0). Non-empty cells which cannot be converted to numeric values are not tolerated and cause an error to be signalled.</td>
 </tr>
 </tbody>
@@ -71900,62 +71896,62 @@
 <tr>
 <td>Invert</td>
 <td>0, 1 or 2 (see below)</td>
-<td>0</td>
+<td><code>0</code></td>
 </tr>
 <tr>
 <td>Separator</td>
 <td>The field separator, any single character. If Widths  is other than <code>⍬</code> , Separator is ignored.</td>
-<td>','</td>
+<td><code>','</code></td>
 </tr>
 <tr>
 <td>Widths</td>
 <td>A vector of numeric values describing the width (in  characters) of the corresponding columns in the CSV source, or <code>⍬</code> for variable width delimited fields</td>
-<td>⍬</td>
+<td><code>⍬</code></td>
 </tr>
 <tr>
 <td>Decimal</td>
 <td>The decimal mark in numeric fields - one of <code>'.'</code> or <code>','</code></td>
-<td>'.'</td>
+<td><code>'.'</code></td>
 </tr>
 <tr>
 <td>Thousands</td>
 <td>The thousands separator in numeric fields, which may be  specified as an empty character vector (meaning no separator is defined) or a  character scalar</td>
-<td>''</td>
+<td><code>''</code></td>
 </tr>
 <tr>
 <td>Trim</td>
 <td>A Boolean specifying whether undelimited/unescaped  whitespace is trimmed at the beginning and end of fields</td>
-<td>1</td>
+<td><code>1</code></td>
 </tr>
 <tr>
 <td>Ragged</td>
 <td>A Boolean specifying whether records with varying numbers  of fields are allowed; see notes below</td>
-<td>0</td>
+<td><code>0</code></td>
 </tr>
 <tr>
 <td>Fill</td>
 <td>The numeric value substituted for invalid numeric data in  columns of type 3</td>
-<td>0</td>
+<td><code>0</code></td>
 </tr>
 <tr>
 <td>Records</td>
 <td>The maximum number of records to process or 0 for no limit. This applies only to a file specified by a tie number.</td>
-<td>0</td>
+<td><code>0</code></td>
 </tr>
 <tr>
 <td>QuoteChar</td>
 <td>The field quote character (delimiter), which may be specified as an empty character vector (meaning none is defined) or a character scalar</td>
-<td>"</td>
+<td><code>"</code></td>
 </tr>
 <tr>
 <td>EscapeChar</td>
 <td>The escape character, which may be specified as an empty character vector (meaning none is defined) or a character scalar</td>
-<td>''</td>
+<td><code>''</code></td>
 </tr>
 <tr>
 <td>DoubleQuote</td>
 <td>A Boolean which indicates whether (1) or not (0) a quote character within a quoted field is represented by two consecutive quote characters</td>
-<td>1</td>
+<td><code>1</code></td>
 </tr>
 </tbody>
 </table>
@@ -71964,19 +71960,17 @@
 <h4 id="invert-option">Invert Option</h4>
 <p>This option specifies how the CSV data should be returned as follows:</p>
 <table>
-<thead>
-<tr>
-<th>0</th>
-<th>A table (a matrix whose elements are character vectors or scalars or numbers).</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>0</td>
+<td>A table (a matrix whose elements are character vectors or scalars or numbers).</td>
+</tr>
+<tr>
+<td><code>1</code></td>
 <td>A vector, each of whose items contain field (column) values. Character field values are character matrices; numeric field values are numeric vectors.</td>
 </tr>
 <tr>
-<td>2</td>
+<td><code>2</code></td>
 <td>A vector, each of whose items contain field (column) values. Character field values are vectors of character vectors; numeric field values are numeric vectors.</td>
 </tr>
 </tbody>
@@ -71994,7 +71988,8 @@
 <li><code>R[2]</code> is a vector of character vectors containing the header record.</li>
 </ul>
 <p><strong>Examples</strong></p>
-<p><img alt="csv_excel" src="../../img/csv-excel.png" />
+<figure id="_figure-1">
+<img alt="csv_excel" src="../../img/csv-excel.png" />
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊃</span><span class="nf">⎕NGET</span><span class="w"> </span><span class="nv">CSVFile</span><span class="kd">←</span><span class="s1">&#39;c:\Dyalog16.0\sales.csv&#39;</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">───────────────────────────────────────────────┐</span>
 <span class="err">│</span><span class="nv">Product</span><span class="o">,</span><span class="nv">Sales</span><span class="w">                                   </span><span class="err">│</span>
@@ -72069,7 +72064,8 @@
 <span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">└───────┘</span><span class="w"> </span><span class="err">└───────┘</span><span class="w"> </span><span class="err">└────────┘</span><span class="w"> </span><span class="err">│</span><span class="w">                </span><span class="err">│</span>
 <span class="err">│</span><span class="w"> </span><span class="err">└</span><span class="o">∊</span><span class="err">───────────────────────────────┘</span><span class="w">                </span><span class="err">│</span>
 <span class="err">└</span><span class="o">∊</span><span class="err">──────────────────────────────────────────────────┘</span>
-</code></pre></div></p>
+</code></pre></div><figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <h4 id="notes">Notes</h4>
 <ul>
 <li>When <code>Y</code> specifies just the source of the CSV data, it does not need to be enclosed or ravelled to create a 1-element vector.</li>
@@ -72106,15 +72102,13 @@
 </ul>
 <p><code>Y</code> is a 1 or 2-element vector containing:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Destination of CSV Data (see below)</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Destination of CSV Data (see below)</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Description of the CSV data (see below)</td>
 </tr>
 </tbody>
@@ -72146,32 +72140,32 @@
 <tr>
 <td>IfExists</td>
 <td>a character vector <code>'Error'</code> or <code>'Replace'</code> which specifies, when creating a named file  which already exists, whether to overwrite it ( <code>'Replace'</code> ) or signal an error ( <code>'Error'</code> )</td>
-<td>'Error'</td>
+<td><code>'Error'</code></td>
 </tr>
 <tr>
 <td>Separator</td>
 <td>the field separator, any single character. If Widths is other than <code>⍬</code> , Separator is ignored.</td>
-<td>','</td>
+<td><code>','</code></td>
 </tr>
 <tr>
 <td>Widths</td>
 <td>a vector of numeric values describing the width (in  characters) of the corresponding columns in the CSV source, or <code>⍬</code> for variable width delimited fields</td>
-<td>⍬</td>
+<td><code>⍬</code></td>
 </tr>
 <tr>
 <td>Decimal</td>
 <td>the decimal mark in numeric fields - one of <code>'.'</code> or <code>','</code></td>
-<td>'.'</td>
+<td><code>'.'</code></td>
 </tr>
 <tr>
 <td>Thousands</td>
 <td>the thousands separator in numeric fields, which may be  specified as an empty character vector (meaning no separator is defined) or a  character scalar</td>
-<td>''</td>
+<td><code>''</code></td>
 </tr>
 <tr>
 <td>Trim</td>
 <td>a Boolean specifying whether whitespace is trimmed at the  beginning and end of character fields</td>
-<td>1</td>
+<td><code>1</code></td>
 </tr>
 <tr>
 <td>LineEnding</td>
@@ -72181,17 +72175,17 @@
 <tr>
 <td>QuoteChar</td>
 <td>The field quote character (delimiter), which may be specified as an empty character vector (meaning none is defined) or a character scalar</td>
-<td>"</td>
+<td><code>"</code></td>
 </tr>
 <tr>
 <td>EscapeChar</td>
 <td>The escape character, which may be specified as an empty character vector (meaning none is defined) or a character scalar</td>
-<td>''</td>
+<td><code>''</code></td>
 </tr>
 <tr>
 <td>DoubleQuote</td>
 <td>A Boolean which indicates whether (1) or not (0) a quote character within a quoted field is represented by two consecutive quote characters</td>
-<td>1</td>
+<td><code>1</code></td>
 </tr>
 </tbody>
 </table>
@@ -72252,7 +72246,10 @@
 
 <span class="m">80</span><span class="w"> </span>
 </code></pre></div></p>
-<p><img alt="csv_excel1" src="../../img/csv-excel1.png" /></p>
+<figure id="_figure-2">
+<img alt="csv_excel1" src="../../img/csv-excel1.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <h4 id="notes_1">Notes</h4>
 <ul>
 <li>When <code>Y</code> contains only the destination of the CSV data (i.e. omits the description in its second element) it does not have to be enclosed to form a single element vector.</li>

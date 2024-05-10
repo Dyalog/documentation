@@ -32693,7 +32693,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71334,7 +71334,7 @@
 <p>Each object named in <code>X</code> (or implied) is copied from the workspace identified by <code>Y</code> to become the active object referenced by that name in the active workspace if the object can be copied.  A copied label is re-defined to be a variable of numeric type.  If the name of the copied object has an active referent in the active workspace, the name is disassociated from its value and the copied object becomes the active referent to that name.  In particular, a function in the state indicator which is disassociated may be executed whilst it remains in the state indicator, but it ceases to exist for other purposes, such as editing.</p>
 <p>The shy result <code>R</code> is <code>0⍴⊂''</code>.</p>
 <p>You may copy an object from a namespace by specifying its full pathname.  The object will be copied to the current namespace in the active workspace, losing its original parent and gaining a new one in the process.  You may only copy a GUI object into a namespace that is a suitable parent for that object.  For example, you could only copy a Group object from a saved workspace if the current namespace in the active workspace is itself a Form, SubForm or Group.</p>
-<p>See <a href="../../system-commands/copy/">Copy Workspace:</a> for further information and, in particular, the manner in which dependent and referenced objects are copied, and copying objects from Session (.dse) files.</p>
+<p>See <a href="../../system-commands/copy/">"Copy Workspace: "</a> for further information and, in particular, the manner in which dependent and referenced objects are copied, and copying objects from Session (.dse) files.</p>
 <p>A <code>DOMAIN ERROR</code> is reported in any of the following cases:</p>
 <ul>
 <li><code>Y</code> is ill-formed, or is not the name of a workspace with access authorised for the active user account.</li>
@@ -71342,7 +71342,7 @@
 <li>An object named in <code>X</code> does not exist as an active object in workspace named in <code>Y</code>.</li>
 </ul>
 <p>An object being copied has the same name as an active label.</p>
-<p>When copying data between Classic and Unicode Editions, <code>⎕</code>CY will fail and a <code>TRANSLATION ERROR</code> will be reported if <em>any</em> object in workspace <code>Y</code> fails conversion between Unicode and <code>⎕AV</code> indices, whether or not that object is specified by <code>X</code>. See <a href="../avu/">Note</a> for further details.</p>
+<p>When copying data between Classic and Unicode Editions, <code>⎕</code>CY will fail and a <code>TRANSLATION ERROR</code> will be reported if <em>any</em> object in workspace <code>Y</code> fails conversion between Unicode and <code>⎕AV</code> indices, whether or not that object is specified by <code>X</code>. See <a href="../avu/">"Note"</a> for further details.</p>
 <p>A <code>WS FULL</code> is reported if the active workspace becomes full during the copying process.</p>
 <p><strong>Example</strong></p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕VR</span><span class="s1">&#39;FOO&#39;</span>

@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,7 +71305,14 @@
 
 <h1 class="heading"><span class="name">ColTitleDepth</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>ColTitleDepth specifies the structure of a set of hierarchical column titles.
 It is an integer vector with the same length as the <a href="../coltitles/">ColTitles</a> property. A value of 0 indicates that the corresponding element of <a href="../coltitles/">ColTitles</a> is a top-level title. A value of 1 indicates that the corresponding title is a
@@ -71328,7 +71335,10 @@ whose ColTitleDepth is 1, and so forth. For example:
 
 <span class="w">      </span><span class="s1">&#39;F.G&#39;</span><span class="nf">⎕WS</span><span class="p">(</span><span class="s1">&#39;ColTitles&#39;</span><span class="nv">CT</span><span class="p">)(</span><span class="s1">&#39;ColTitleDepth&#39;</span><span class="nv">CD</span><span class="p">)</span><span class="w">  </span>
 </code></pre></div></p>
-<p><img alt="gridct" src="../../img/gridct.gif" /></p>
+<figure id="_figure-1">
+<img alt="gridct" src="../../img/gridct.gif" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>Note that the <a href="../../methodorevents/lockcolumns/">LockColumns</a> method is
 not supported in combination with hierarchical column titles.</p>
 

@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71427,7 +71427,14 @@
 
 <h1 class="heading"><span class="name">OverflowChar</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The OverflowChar property specifies the character to be displayed in place of the digits when a numeric value cannot be displayed in its entirety in a Grid cell.</p>
 <p>If the value of OverflowChar is an empty vector (the default) the data in a numeric cell is simply clipped if it is too wide to fit in the cell.</p>
@@ -71439,9 +71446,15 @@
 <span class="w">   </span><span class="s1">&#39;F.G&#39;</span><span class="nf">⎕WS</span><span class="s1">&#39;CellWidths&#39;</span><span class="w"> </span><span class="m">65</span><span class="w">                               </span>
 <span class="w">   </span><span class="s1">&#39;F.G&#39;</span><span class="nf">⎕WS</span><span class="s1">&#39;OverflowChar&#39;</span><span class="w"> </span><span class="s1">&#39;#&#39;</span><span class="w">                            </span>
 </code></pre></div>
-<p><img alt="gridovfl" src="../../img/gridovfl.gif" /></p>
+<figure id="_figure-1">
+<img alt="gridovfl" src="../../img/gridovfl.gif" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>The same Grid without OverflowChar being defined appears as follows. Notice how the numbers have been truncated</p>
-<p><img alt="gridovno" src="../../img/gridovno.gif" /></p>
+<figure id="_figure-2">
+<img alt="gridovno" src="../../img/gridovno.gif" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 
 
 

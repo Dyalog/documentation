@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,28 +71327,33 @@
 
 <h1 class="heading"><span class="name">PageChanged</span><span class="command">Event 356</span></h1>
 
-<p>Applies To: <a href="../../objects/propertypage/">PropertyPage</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/propertypage/">PropertyPage</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the <a href="../../properties/changed/">Changed</a> property of a <a href="../../objects/propertypage/">PropertyPage</a> is altered by user action. It is <em>not</em> reported if you reset the <a href="../../properties/changed/">Changed</a> property using <code>⎕WS</code>.</p>
 <p>The <a href="../../properties/changed/">Changed</a> property is reset by two separate user actions. It is set to 1 when the user alters any of the controls on the <a href="../../objects/propertypage/">PropertyPage</a>. It is reset to 0 when the user clicks the Apply button, although this action may be disabled by a callback function on the <a href="../pageapply/">PageApply</a> event.</p>
 <p>The PageChanged event is reported for information only and may not itself be disabled or affected by a callback function.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 3-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'PageChanged'</code> or 356</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Changed value</td>
 <td>New value for the <a href="../../properties/changed/">Changed</a> property (0 or 1).</td>
 </tr>

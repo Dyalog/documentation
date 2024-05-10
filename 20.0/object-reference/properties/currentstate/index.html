@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,14 @@
 
 <h1 class="heading"><span class="name">CurrentState</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/tcpsocket/">TCPSocket</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/tcpsocket/">TCPSocket</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The CurrentState property is a read-only property that reports the current state of a <a href="../../objects/tcpsocket/">TCPSocket</a> object. Its possible values and their means are as follows:</p>
 <table>
@@ -71339,31 +71346,31 @@
 </thead>
 <tbody>
 <tr>
-<td>'Open'</td>
+<td><code>'Open'</code></td>
 <td>a client socket that is not yet connected or a UDP socket</td>
 </tr>
 <tr>
-<td>'Bound'</td>
+<td><code>'Bound'</code></td>
 <td>a server socket that has been bound</td>
 </tr>
 <tr>
-<td>'Listening'</td>
+<td><code>'Listening'</code></td>
 <td>a server socket to which a client has not yet connected</td>
 </tr>
 <tr>
-<td>'Connected'</td>
+<td><code>'Connected'</code></td>
 <td>a client or server socket that is connected</td>
 </tr>
 <tr>
-<td>'IHaveClosed'</td>
+<td><code>'IHaveClosed'</code></td>
 <td>a temporary state on the way to Closed</td>
 </tr>
 <tr>
-<td>'PartnerHasClosed'</td>
+<td><code>'PartnerHasClosed'</code></td>
 <td>a temporary state on the way to Closed</td>
 </tr>
 <tr>
-<td>'Closed'</td>
+<td><code>'Closed'</code></td>
 <td>a socket that has been closed by both client and server</td>
 </tr>
 </tbody>

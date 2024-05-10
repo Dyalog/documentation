@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71407,15 +71407,24 @@
 <p>Note that, when the class is fixed, APL will try to find the .NET data types you have specified for the result and for the parameters. If one or more of the data types are not recognised as available .NET Types, you will be informed in the status window and APL will refuse to fix the class. If you see such a warning you have either entered an incorrect data type name, or you have not set <code>:Using</code> correctly, or some other syntax problem has been detected (for example the function is missing a terminating <code>∇</code>. In the previous example, the only data type used is <code>System.Int32</code>. Since we have set <code>:Using System,</code> the name <code>Int32</code> is found in the right place and all is well.</p>
 <p>It should be noted that in the previous release of Dyalog APL the statements :<code>Returns</code> and :<code>ParameterList</code> were used instead of :<code>Signature</code>. They are still accepted for backwards compatibility but are considered deprecated. Their syntax will not be documented here but a list can be found in Appendix A.</p>
 <p>Now you are ready to create the assembly. This is done by selecting <em>Export…</em> from the Session <em>File</em> menu. This displays the following dialog box.</p>
-<p><img alt="aplclasses1_1" src="../../img/aplclasses1-1.png" /></p>
+<figure id="_figure-1">
+<img alt="aplclasses1_1" src="../../img/aplclasses1-1.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>This gives you the opportunity to change the name or path of the assembly.  The <em>Runtime application</em> checkbox allows you to choose to which if the two versions of the Dyalog APL dynamic link library the assembly will be bound. In this tutorial we will use the Development version. The <em>Isolation Mode</em> Combo box allows you to choose which Isolation Mode you require.</p>
 <ul>
 <li>Browse to the <code>Framework\bin</code> sub-diectory.</li>
 <li>Clear the <em>Runtime application</em> checkbox</li>
 </ul>
-<p><img alt="aplclasses1_1a" src="../../img/aplclasses1-1a.png" /></p>
+<figure id="_figure-2">
+<img alt="aplclasses1_1a" src="../../img/aplclasses1-1a.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <p>Finally, click <em>Save</em>. APL now makes the assembly and, as it does so, displays information in the Status window as shown below. If any errors occur during this process, the Status window will inform you.</p>
-<p><img alt="aplclasses1_2" src="../../img/aplclasses1-2.png" /></p>
+<figure id="_figure-3">
+<img alt="aplclasses1_2" src="../../img/aplclasses1-2.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <h3 id="programcs">program.cs</h3>
 <p>The following C# source, called <code>aplclasses1Framework\program.cs</code>, will be used to call our Dyalog.NET Class.</p>
 <p>The <code>using</code> statements specify the names of .NET namespaces to be searched for unqualified class names.</p>
@@ -71434,9 +71443,15 @@
 <span class="w">          </span><span class="kt">}</span>
 </code></pre></div></p>
 <p>Using VS, open the solution file <code>d:\aplclasses\aplclasses1\Framework\project.sln</code> and view <code>program.cs</code>.</p>
-<p><img alt="aplclasses1_3" src="../../img/aplclasses1-3.png" /></p>
+<figure id="_figure-4">
+<img alt="aplclasses1_3" src="../../img/aplclasses1-3.png" />
+<figcaption><span>Figure&nbsp;4</span></figcaption>
+</figure>
 <p>Now click <em>Debug/Start Without debugging</em> (or press Ctrl+F5) to run the program. The results are shown in a console window.</p>
-<p><img alt="aplclasses1_4" src="../../img/aplclasses1-4.png" /></p>
+<figure id="_figure-5">
+<img alt="aplclasses1_4" src="../../img/aplclasses1-4.png" />
+<figcaption><span>Figure&nbsp;5</span></figcaption>
+</figure>
 <div class="footnote">
 <hr />
 <ol>

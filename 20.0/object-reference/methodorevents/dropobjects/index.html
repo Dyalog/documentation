@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71332,31 +71332,29 @@
 <p>If enabled, this event is reported when the user drags an object icon or a set of object icons from the <em>Explorer Tool</em> or <em>Find Objects Tool</em> (which are part of the Dyalog APL Session) and drops them onto the object. The system takes no action other than to report the event. You can use this event to extend drag-drop functionality in your Session. For example, you could perform an operation by drag-dropping an APL object icon onto a Button in the Session toolbar.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 4-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'DropObjects'</code> or 455</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Objects</td>
 <td>Vector of character vectors containing the object names.</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Item number</td>
 <td>Integer. The index of the item within the object onto which the file(s) was dropped. Applies only to objects that have an <a href="../../properties/items/">Items</a> property such as List, <a href="../../objects/listview/">ListView</a> and <a href="../../objects/treeview/">TreeView</a> . Otherwise this value is -1.</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Shift state</td>
 <td>Integer. Sum of 1=Shift key, 2=Ctrl key, 4=Alt key</td>
 </tr>

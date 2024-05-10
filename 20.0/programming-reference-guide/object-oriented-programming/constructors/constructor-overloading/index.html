@@ -32687,7 +32687,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71323,10 +71323,10 @@
 
 <h1 class="heading"><span class="name"> Constructor Overloading</span></h1>
 
-<p>NameList header syntax is used to define different versions of a Constructor each with a different number of parameters, referred to as its <em>signature</em>. See <a href="../../../defined-functions-and-operators/traditional-functions-and-operators/namelists/">Namelists</a> for details. The <a href="../constructor-overload-example-class/">Clover Class</a> illustrates this principle.</p>
+<p>NameList header syntax is used to define different versions of a Constructor each with a different number of parameters, referred to as its <em>signature</em>. See <a href="../../../defined-functions-and-operators/traditional-functions-and-operators/namelists/"> "Namelists"</a> for details. The <a href="../constructor-overload-example-class/">Clover Class</a> illustrates this principle.</p>
 <p>In deciding which Constructor to call, APL matches the shape of the Constructor argument with the signature of each of the Constructors that are defined. If a constructor with the same number of arguments exists (remembering that 0 arguments will match a niladic Constructor), it is called. If there is no exact match, and there is a Constructor with a general signature (an un-parenthesised right argument), it is called. If no suitable constructor is found, a <code>LENGTH ERROR</code> is reported.</p>
 <p>There may be one and only one constructor with a particular signature.</p>
-<p>The only way a Constructor function should be invoked is by <code>⎕NEW</code>. See <a href="../base-constructors/">Base Constructors</a> for further details. If you attempt to call a Constructor function  from outside its Class, it will cause a <code>SYNTAX ERROR</code>. A Constructor function should not call another Constructor function within the same Class, although it will not generate an error. This would cause the Base Constructor to be called twice, with unpredictable consequences.</p>
+<p>The only way a Constructor function should be invoked is by <code>⎕NEW</code>. See <a href="../base-constructors/">"Base Constructors"</a> for further details. If you attempt to call a Constructor function  from outside its Class, it will cause a <code>SYNTAX ERROR</code>. A Constructor function should not call another Constructor function within the same Class, although it will not generate an error. This would cause the Base Constructor to be called twice, with unpredictable consequences.</p>
 <p>In the <a href="../constructor-overload-example-class/">Clover Class</a> example Class, the following Constructors are defined:</p>
 <table>
 <thead>
@@ -71337,23 +71337,23 @@
 </thead>
 <tbody>
 <tr>
-<td>Make1</td>
+<td><code>Make1</code></td>
 <td>1-item vector</td>
 </tr>
 <tr>
-<td>Make2</td>
+<td><code>Make2</code></td>
 <td>2-item vector</td>
 </tr>
 <tr>
-<td>Make3</td>
+<td><code>Make3</code></td>
 <td>3-item vector</td>
 </tr>
 <tr>
-<td>Make0</td>
+<td><code>Make0</code></td>
 <td>No argument</td>
 </tr>
 <tr>
-<td>MakeAny</td>
+<td><code>MakeAny</code></td>
 <td>Any array accepted</td>
 </tr>
 </tbody>

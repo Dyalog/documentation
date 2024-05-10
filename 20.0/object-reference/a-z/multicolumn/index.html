@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,14 +71305,24 @@
 
 <h1 class="heading"><span class="name">MultiColumn</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/list/">List</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/list/">List</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>MultiColumn is Boolean and specifies whether or not a List object displays its items in a single column (0, the default) or in multiple columns (1). MultiColumn may only be set by <code>⎕WC</code> and cannot be changed using <code>⎕WS</code> after the object has been created. Note that a MultiColumn List will use the minimum number of columns that are required to make the items fit within it and will reconfigure itself automatically when resized.</p>
 <p>The following example illustrates its use.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;F&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Form&#39;</span><span class="w"> </span><span class="s1">&#39;MultiColumn List&#39;</span><span class="p">(</span><span class="s1">&#39;Size&#39;</span><span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="m">32</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">&#39;F.L&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;LIST&#39;</span><span class="w"> </span><span class="nv">AIRPORTS</span><span class="w"> </span><span class="p">(</span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="m">100</span><span class="w"> </span><span class="m">100</span><span class="p">)(</span><span class="s1">&#39;MultiColumn&#39;</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 </code></pre></div></p>
-<p><img alt="multicol" src="../../img/multicol.gif" /></p>
+<figure id="_figure-1">
+<img alt="multicol" src="../../img/multicol.gif" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 
 
 

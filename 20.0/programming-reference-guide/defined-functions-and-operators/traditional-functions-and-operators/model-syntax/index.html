@@ -32749,7 +32749,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71437,87 +71437,83 @@
 <tbody>
 <tr>
 <td>None</td>
-<td>f</td>
-<td>f Y</td>
-<td>X f Y</td>
-<td>{X} f Y</td>
+<td><code>f</code></td>
+<td><code>f Y</code></td>
+<td><code>X f Y</code></td>
+<td><code>{X} f Y</code></td>
 </tr>
 <tr>
 <td>Explicit</td>
-<td>R←f</td>
-<td>R←f Y</td>
-<td>R←X f Y</td>
-<td>R←{X} f Y</td>
+<td><code>R←f</code></td>
+<td><code>R←f Y</code></td>
+<td><code>R←X f Y</code></td>
+<td><code>R←{X} f Y</code></td>
 </tr>
 <tr>
 <td>Suppressed</td>
-<td>{R}←f</td>
-<td>{R}←f Y</td>
-<td>{R}←X f Y</td>
-<td>{R}←{X} f Y</td>
+<td><code>{R}←f</code></td>
+<td><code>{R}←f Y</code></td>
+<td><code>{R}←X f Y</code></td>
+<td><code>{R}←{X} f Y</code></td>
 </tr>
 </tbody>
 </table>
-<p>Note: the right argument <code>Y</code> and/or the result <code>R</code> may be represented by a single name, or as a blank-delimited list of names surrounded by parentheses. For further details, see <a href="../namelists/">Namelists</a>.</p>
+<p>Note: the right argument <code>Y</code> and/or the result <code>R</code> may be represented by a single name, or as a blank-delimited list of names surrounded by parentheses. For further details, see <a href="../namelists/">"Namelists"</a>.</p>
 <h2 id="derived-functions-produced-by-monadic-operator">Derived Functions produced by Monadic Operator</h2>
 <table>
-<thead>
-<tr>
-<th>Result</th>
-<th>Monadic</th>
-<th>Dyadic</th>
-<th>Ambivalent</th>
-</tr>
-</thead>
 <tbody>
 <tr>
+<td>Result</td>
+<td>Monadic</td>
+<td>Dyadic</td>
+<td>Ambivalent</td>
+</tr>
+<tr>
 <td>None</td>
-<td>(A op)Y</td>
-<td>X(A op)Y</td>
-<td>{X}(A op)Y</td>
+<td><code>(A op)Y</code></td>
+<td><code>X(A op)Y</code></td>
+<td><code>{X}(A op)Y</code></td>
 </tr>
 <tr>
 <td>Explicit</td>
-<td>R←(A op)Y</td>
-<td>R←X(A op)Y</td>
-<td>R←{X}(A op)Y</td>
+<td><code>R←(A op)Y</code></td>
+<td><code>R←X(A op)Y</code></td>
+<td><code>R←{X}(A op)Y</code></td>
 </tr>
 <tr>
 <td>Suppressed</td>
-<td>{R}←(A op)Y</td>
-<td>{R}←X(A op)Y</td>
-<td>{R}←{X}(A op)Y</td>
+<td><code>{R}←(A op)Y</code></td>
+<td><code>{R}←X(A op)Y</code></td>
+<td><code>{R}←{X}(A op)Y</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="derived-functions-produced-by-dyadic-operator">Derived Functions produced by Dyadic Operator</h2>
 <table>
-<thead>
-<tr>
-<th>Result</th>
-<th>Monadic</th>
-<th>Dyadic</th>
-<th>Ambivalent</th>
-</tr>
-</thead>
 <tbody>
 <tr>
+<td>Result</td>
+<td>Monadic</td>
+<td>Dyadic</td>
+<td>Ambivalent</td>
+</tr>
+<tr>
 <td>None</td>
-<td>(A op B)Y</td>
-<td>X(A op B)Y</td>
-<td>{X}(A op B)Y</td>
+<td><code>(A op B)Y</code></td>
+<td><code>X(A op B)Y</code></td>
+<td><code>{X}(A op B)Y</code></td>
 </tr>
 <tr>
 <td>Explicit</td>
-<td>R←(A op B)Y</td>
-<td>R←X(A op B)Y</td>
-<td>R←{X}(A op B)Y</td>
+<td><code>R←(A op B)Y</code></td>
+<td><code>R←X(A op B)Y</code></td>
+<td><code>R←{X}(A op B)Y</code></td>
 </tr>
 <tr>
 <td>Suppressed</td>
-<td>{R}←(A op B)Y</td>
-<td>{R}←X(A op B)Y</td>
-<td>{R}←{X}(A op B)Y</td>
+<td><code>{R}←(A op B)Y</code></td>
+<td><code>{R}←X(A op B)Y</code></td>
+<td><code>{R}←{X}(A op B)Y</code></td>
 </tr>
 </tbody>
 </table>

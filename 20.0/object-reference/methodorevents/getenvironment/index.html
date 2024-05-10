@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,11 +71327,26 @@
 
 <h1 class="heading"><span class="name">GetEnvironment</span><span class="command">Method 510</span></h1>
 
-<p>Applies To: <a href="../../objects/root/">Root</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/root/">Root</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This method is used to obtain information about one or more parameters that were specified in the Dyalog command line, your Windows registry, or defined as environment variables. If a value is defined in several places (for example, MAXWS in the command line overriding MAXWS in the registry), GetEnvironment follows exactly the same logic as is used by Dyalog APL itself and so obtains the same value.</p>
 <p>The argument to GetEnvironment is a single item as follows:</p>
-<p>[1] Parameter name(s) see below</p>
+<table>
+<tbody>
+<tr>
+<td><code>[1]</code></td>
+<td>Parameter name(s)</td>
+<td>see below</td>
+</tr>
+</tbody>
+</table>
 <p><em>Parameter names</em> is simple character vector or vector of character vectors specifying one or more parameters.</p>
 <p>The result is a simple character vector or a vector of character vectors.</p>
 <p><strong>Examples</strong></p>

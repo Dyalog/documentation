@@ -8,7 +8,7 @@
     line-height: 1.2em !important;
 }
 
-code, .command {
+code, .command, .Dyalog {
     font-family: APL;
 }
 
@@ -29,12 +29,12 @@ code, .command {
     --md-primary-fg-color: #ED7F00;
     --md-primary-fg-color--dark: #563336;
     --md-default-bg-color: #F8F8F8;
+    --md-code-hl-number-color: #797979;
 }
 
 /* Reduce vertical table spacing, and put in a faint cell border */
 table {
     border-collapse: collapse;
-    width: 100%;
 }
 
 th, td {

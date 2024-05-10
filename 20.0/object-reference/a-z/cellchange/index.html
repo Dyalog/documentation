@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,53 +71305,58 @@
 
 <h1 class="heading"><span class="name">CellChange</span><span class="command">Event 150</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user changes the contents of a cell in a <a href="../../objects/grid/">Grid</a> object and then attempts to move to another cell or to another control outside the <a href="../../objects/grid/">Grid</a>.</p>
 <p>The purpose of this event is to give the application the opportunity to perform additional validation before the update occurs (and to prevent it if necessary) or to update other cells in the <a href="../../objects/grid/">Grid</a> as a result of the change.</p>
 <p>The default action for the CellChange event is to update the appropriate element of the <a href="../../properties/values/">Values</a> property with the new data. This action can be disabled by returning 0 from the attached callback function. Notice however, that the user is not prevented from moving away from the cell. If you are using this event to perform additional validation and you require the user to correct the data before moving away, you may force the user back to the cell in question using the  <a href="../../methodorevents/cellmove/">CellMove</a> method.</p>
 <p>The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, or supplied as the right argument to your callback function, is an 8-element vector as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'CellChange'</code> or 150</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Cell row</td>
 <td>integer</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Cell column</td>
 <td>integer</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>New data</td>
 <td>number or character array</td>
 </tr>
 <tr>
-<td>[6]</td>
+<td><code>[6]</code></td>
 <td>Object name</td>
 <td>character vector (name of object to which the user has transferred focus)</td>
 </tr>
 <tr>
-<td>[7]</td>
+<td><code>[7]</code></td>
 <td>New cell (row)</td>
 <td>integer</td>
 </tr>
 <tr>
-<td>[8]</td>
+<td><code>[8]</code></td>
 <td>New cell (column)</td>
 <td>integer</td>
 </tr>

@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,7 +71305,14 @@
 
 <h1 class="heading"><span class="name">Yield</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/root/">Root</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/root/">Root</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This property determines how frequently Dyalog checks the windows message queue. The message queue contains the underlying Windows messages for User interface events, such as mouse clicks, timers, and so on. Dyalog needs to check for the existence of these messages in order to pass them on to any GUI windows that may exist. In addition the windows message queue is used to handle interrupts and to implement the session window.</p>
 <p>The value of Yield is an integer expressed in 1/1000's of a second. Its default value is 200. Yield defines the period of time allowed to elapse between the execution of successive lines of APL code before APL yields to Windows by requesting a message from the Windows queue. If Yield is set to zero APL does not explicitly yield.</p>

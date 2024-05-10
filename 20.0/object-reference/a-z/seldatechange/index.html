@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,32 +71305,37 @@
 
 <h1 class="heading"><span class="name">SelDateChange</span><span class="command">Event 265</span></h1>
 
-<p>Applies To: <a href="../../objects/calendar/">Calendar</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/calendar/">Calendar</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user changes the date, or range of dates, that is selected in a <a href="../../objects/calendar/">Calendar</a> object. This event is also reported when the <a href="../../objects/calendar/">Calendar</a> object is scrolled and the selection changes automatically to another month.</p>
 <p>This event is reported for information alone. You may not disable or nullify the event by setting the action code for the event to <code>¯1</code> or by returning 0 from a callback function.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 4-element vector as follows :</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Object</th>
-<th>ref or character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Object</td>
+<td>ref or character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Event</td>
 <td><code>'SelDateChange'</code> or 265</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>First Date</td>
 <td>an integer (IDN)</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>Last Date</td>
 <td>an integer (IDN)</td>
 </tr>

@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,28 +71305,33 @@
 
 <h1 class="heading"><span class="name">ItemGroupMetrics</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/listview/">ListView</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/listview/">ListView</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This property is used to specify colours and spacing elements for a <a href="../../objects/listview/">ListView</a> that is displaying its Items in groupings (see <a href="../itemgroups/">ItemGroups</a>).</p>
 <p>**Note that this feature only applies if Native Look and Feel </p>
 <p>is enabled.**</p>
 <p>ItemGroupMetrics is a 3-item nested vector as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Text Colours</th>
-<th>2-element vector of 3 element RGB values that specifies the colour of        the group caption and group footer respectively.</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Text Colours</td>
+<td>2-element vector of 3 element RGB values that specifies the colour of        the group caption and group footer respectively.</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Spacing</td>
 <td>4-element integer vector that specifies the top, left, bottom and        right spacing around each grouping in pixels</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Border</td>
 <td>Colours4-element vector of 3 element RGB values that specifies the        colours for the top, left, bottom and right borders (not yet      implemented).</td>
 </tr>
@@ -71335,7 +71340,10 @@
 <p>The following expression, coupled with the code shown in the SetGroups example, causes the items to be displayed as shown below.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">L</span><span class="na">.</span><span class="nv">ItemGroupMetrics</span><span class="sr">[</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="sr">]</span><span class="kd">←</span><span class="p">(</span><span class="m">2</span><span class="o">⍴⊂</span><span class="m">255</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="m">10</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
 </code></pre></div></p>
-<p><img alt="lvsg2" src="../../img/lvsg2.gif" /></p>
+<figure id="_figure-1">
+<img alt="lvsg2" src="../../img/lvsg2.gif" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 
 
 

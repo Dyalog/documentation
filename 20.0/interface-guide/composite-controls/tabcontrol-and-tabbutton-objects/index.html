@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71515,14 +71515,26 @@
 <span class="s1">&#39;F.TC.S2&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;SubForm&#39;</span><span class="p">(</span><span class="s1">&#39;TabObj&#39;</span><span class="w"> </span><span class="s1">&#39;F.TC.T2&#39;</span><span class="p">)</span>
 <span class="s1">&#39;F.TC.S3&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;SubForm&#39;</span><span class="p">(</span><span class="s1">&#39;TabObj&#39;</span><span class="w"> </span><span class="s1">&#39;F.TC.T3&#39;</span><span class="p">)</span>
 </code></pre></div></p>
-<p><img alt="tabcontrol_default" src="../../img/tabcontrol-default.png" /></p>
+<figure id="_figure-1">
+<img alt="tabcontrol_default" src="../../img/tabcontrol-default.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <h3 id="style-flatseparators-and-hottrack-properties">Style, FlatSeparators and HotTrack Properties</h3>
 <p>The Style property determines the overall appearance of the tabs or buttons in a TabControl and may be <code>'Tabs'</code> (the default), <code>'Buttons'</code> or <code>'FlatButtons'</code>.</p>
 <p>A TabControl object with Style <code>'Buttons'</code> or <code>'FlatButtons'</code> may be used in a similar way (i.e. to display a set of alternative pages), although buttons in this type of TabControl are more normally used to execute commands. For this reason, these styles of TabControl are borderless.</p>
-<p><img alt="tabcontrol_style_buttons" src="../../img/tabcontrol-style-buttons.png" /></p>
-<p><img alt="tabcontrol_style_flatbuttons" src="../../img/tabcontrol-style-flatbuttons.png" /></p>
+<figure id="_figure-2">
+<img alt="tabcontrol_style_buttons" src="../../img/tabcontrol-style-buttons.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
+<figure id="_figure-3">
+<img alt="tabcontrol_style_flatbuttons" src="../../img/tabcontrol-style-flatbuttons.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <p>If Style is <code>'FlatButtons'</code>, the FlatSeparators property specifies whether or not separators are drawn between the buttons. The following example illustrates the effect of setting FlatSeparators to 1.</p>
-<p><img alt="tabcontrol_style_flatbuttons_flatseparators" src="../../img/tabcontrol-style-flatbuttons-flatseparators.png" /></p>
+<figure id="_figure-4">
+<img alt="tabcontrol_style_flatbuttons_flatseparators" src="../../img/tabcontrol-style-flatbuttons-flatseparators.png" />
+<figcaption><span>Figure&nbsp;4</span></figcaption>
+</figure>
 <p>The HotTrack property specifies whether or not the tabs or buttons in a TabControl object (which are represented by TabButton objects), are automatically highlighted by the mouse pointer.</p>
 <h3 id="the-align-property">The Align Property</h3>
 <p>The Align property specifies along which of the 4 edges of the TabControl the tabs or buttons are arranged. Align also controls the relative positioning of the picture and Caption within each TabButton. Align may be Top (the default), Bottom, Left or Right.</p>
@@ -71545,17 +71557,32 @@
 <span class="s1">&#39;F.S2&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;SubForm&#39;</span><span class="p">(</span><span class="s1">&#39;TabObj&#39;</span><span class="w"> </span><span class="s1">&#39;F.TC.T2&#39;</span><span class="p">)</span>
 <span class="s1">&#39;F.S3&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;SubForm&#39;</span><span class="p">(</span><span class="s1">&#39;TabObj&#39;</span><span class="w"> </span><span class="s1">&#39;F.TC.T3&#39;</span><span class="p">)</span>
 </code></pre></div></p>
-<p><img alt="tabcontrol_align_bottom" src="../../img/tabcontrol-align-bottom.png" /></p>
+<figure id="_figure-5">
+<img alt="tabcontrol_align_bottom" src="../../img/tabcontrol-align-bottom.png" />
+<figcaption><span>Figure&nbsp;5</span></figcaption>
+</figure>
 <p>If Align is <code>'Left'</code> or <code>'Right'</code>, the tabs or buttons are arranged top-to-bottom along the left or right edge of the TabControl as shown below.</p>
-<p><img alt="tabcontrol_align_left" src="../../img/tabcontrol-align-left.png" /></p>
+<figure id="_figure-6">
+<img alt="tabcontrol_align_left" src="../../img/tabcontrol-align-left.png" />
+<figcaption><span>Figure&nbsp;6</span></figcaption>
+</figure>
 <h3 id="the-multiline-property">The MultiLine Property</h3>
 <p>The MultiLine property of a TabControl determines whether or not your tabs or buttons will be arranged in multiple flights or multiple rows/columns.</p>
 <p>The default value of MultiLine is 0, in which case, if you have more tabs or buttons than will fit in the space provided, the TabControl displays an UpDown control to permit the user to scroll them.</p>
-<p><img alt="tabcontrol_multiline_default" src="../../img/tabcontrol-multiline-default.png" /></p>
+<figure id="_figure-7">
+<img alt="tabcontrol_multiline_default" src="../../img/tabcontrol-multiline-default.png" />
+<figcaption><span>Figure&nbsp;7</span></figcaption>
+</figure>
 <p>If MultiLine is set to 1, the tabs are displayed in multiple flights.</p>
-<p><img alt="tabcontrol_multiline_tabs" src="../../img/tabcontrol-multiline-tabs.png" /></p>
+<figure id="_figure-8">
+<img alt="tabcontrol_multiline_tabs" src="../../img/tabcontrol-multiline-tabs.png" />
+<figcaption><span>Figure&nbsp;8</span></figcaption>
+</figure>
 <p>If the TabControl has Style <code>'Buttons'</code> and MultiLine is set to 1, the buttons are displayed in multiple rows.</p>
-<p><img alt="tabcontrol_multiline_buttons" src="../../img/tabcontrol-multiline-buttons.png" /></p>
+<figure id="_figure-9">
+<img alt="tabcontrol_multiline_buttons" src="../../img/tabcontrol-multiline-buttons.png" />
+<figcaption><span>Figure&nbsp;9</span></figcaption>
+</figure>
 <h3 id="the-scrollopposite-property">The ScrollOpposite Property</h3>
 <p>The ScrollOpposite property specifies that unneeded tabs scroll to the opposite side of a TabControl, when a tab is selected. This only applies when MultiLine is 1.</p>
 <p>The following example illustrates a TabControl with ScrollOpposite set to 1, after the user has clicked <em>Third Tab</em>. Notice that, in this example, the SubForms have been created as children of the TabControl. This is necessary to ensure that they are managed correctly in this case.</p>
@@ -71574,7 +71601,10 @@
 <span class="s1">&#39;F.TC.T3&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;TabButton&#39;</span><span class="w"> </span><span class="s1">&#39;Third Tab&#39;</span><span class="p">(</span><span class="s1">&#39;ImageIndex&#39;</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
 <span class="s1">&#39;F.TC.T4&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;TabButton&#39;</span><span class="w"> </span><span class="s1">&#39;Fourth Tab&#39;</span><span class="p">(</span><span class="s1">&#39;ImageIndex&#39;</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 </code></pre></div>
-<p><img alt="tabcontrol_multiline_scrollopposite" src="../../img/tabcontrol-multiline-scrollopposite.png" /></p>
+<figure id="_figure-10">
+<img alt="tabcontrol_multiline_scrollopposite" src="../../img/tabcontrol-multiline-scrollopposite.png" />
+<figcaption><span>Figure&nbsp;10</span></figcaption>
+</figure>
 <p>If MultiLine is 1, the way that multiple flights of tabs or rows/columns of buttons are displayed is further defined by the Justify property which may be <code>'Right'</code> (the default) or <code>'None'</code>.</p>
 <h3 id="the-justify-property">The Justify Property</h3>
 <p>If Justify is <code>'Right'</code> (which is the default), the TabControl increases the width of each tab, if necessary, so that each row of tabs fills the entire width of the tab control. Otherwise, if Justify is empty or <code>'None'</code>, the rows are ragged as shown below.
@@ -71590,9 +71620,15 @@
 <span class="s1">&#39;F.TC.T3&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;TabButton&#39;</span><span class="w"> </span><span class="s1">&#39;Third Tab&#39;</span><span class="p">(</span><span class="s1">&#39;ImageIndex&#39;</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
 <span class="s1">&#39;F.TC.T4&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;TabButton&#39;</span><span class="w"> </span><span class="s1">&#39;Fourth Tab&#39;</span><span class="p">(</span><span class="s1">&#39;ImageIndex&#39;</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 </code></pre></div></p>
-<p><img alt="tabcontrol_multiline_tabs_justify_none" src="../../img/tabcontrol-multiline-tabs-justify-none.png" /></p>
+<figure id="_figure-11">
+<img alt="tabcontrol_multiline_tabs_justify_none" src="../../img/tabcontrol-multiline-tabs-justify-none.png" />
+<figcaption><span>Figure&nbsp;11</span></figcaption>
+</figure>
 <p>The next picture illustrates the effect of Justify <code>'None'</code> on a TabControl with Style <code>'Buttons'</code>.</p>
-<p><img alt="tabcontrol_multiline_buttons_justify_none" src="../../img/tabcontrol-multiline-buttons-justify-none.png" /></p>
+<figure id="_figure-12">
+<img alt="tabcontrol_multiline_buttons_justify_none" src="../../img/tabcontrol-multiline-buttons-justify-none.png" />
+<figcaption><span>Figure&nbsp;12</span></figcaption>
+</figure>
 <h3 id="the-tabsize-and-tabjustify-properties">The TabSize and TabJustify Properties</h3>
 <p>By default, the size of the tabs may vary from one row to another. Fixed size tabs may be obtained by setting the TabSize property.</p>
 <p>If fixed size tabs are in effect, the positions at which the picture and Caption are drawn within each TabButton is controlled by the TabJustify property which may be <code>'Centre'</code>(the default), <code>'Edge'</code>, or <code>'IconEdge'</code>.
@@ -71609,16 +71645,25 @@
 <span class="s1">&#39;F.TC.T2&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;TabButton&#39;</span><span class="w"> </span><span class="s1">&#39;Two&#39;</span><span class="p">(</span><span class="s1">&#39;ImageIndex&#39;</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
 <span class="s1">&#39;F.TC.T3&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;TabButton&#39;</span><span class="w"> </span><span class="s1">&#39;Three&#39;</span><span class="p">(</span><span class="s1">&#39;ImageIndex&#39;</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span>
 </code></pre></div></p>
-<p><img alt="tabcontrol_tabjustify_centre" src="../../img/tabcontrol-tabjustify-centre.png" /></p>
+<figure id="_figure-13">
+<img alt="tabcontrol_tabjustify_centre" src="../../img/tabcontrol-tabjustify-centre.png" />
+<figcaption><span>Figure&nbsp;13</span></figcaption>
+</figure>
 <p>If TabJustify is set to <code>'Edge'</code> then the picture and text on the TabButton are justified along the side defined by the Align property (default <code>'Top'</code>).
 <div class="highlight"><pre><span></span><code><span class="s1">&#39;F&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Form&#39;</span><span class="w"> </span><span class="s1">&#39;TabControl: TabJustify Edge&#39;</span><span class="p">(</span><span class="s1">&#39;Size&#39;</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">40</span><span class="p">)</span>
 <span class="s1">&#39;F.TC&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;TabControl&#39;</span><span class="p">(</span><span class="s1">&#39;Style&#39;</span><span class="w"> </span><span class="s1">&#39;Buttons&#39;</span><span class="p">)</span>
 <span class="w">                     </span><span class="p">(</span><span class="s1">&#39;TabJustify&#39;</span><span class="w"> </span><span class="s1">&#39;Edge&#39;</span><span class="p">)(</span><span class="s1">&#39;TabSize&#39;</span><span class="no">⍬</span><span class="w"> </span><span class="m">30</span><span class="p">)</span><span class="w">   </span>
 </code></pre></div></p>
 <p>etc.</p>
-<p><img alt="tabcontrol_tabjustify_edge" src="../../img/tabcontrol-tabjustify-edge.png" /></p>
+<figure id="_figure-14">
+<img alt="tabcontrol_tabjustify_edge" src="../../img/tabcontrol-tabjustify-edge.png" />
+<figcaption><span>Figure&nbsp;14</span></figcaption>
+</figure>
 <p>If, instead, the TabJustify property is set to <code>'IconEdge'</code> then the text is centred and only the icons are justified.</p>
-<p><img alt="tabcontrol_tabjustify_iconedge" src="../../img/tabcontrol-tabjustify-iconedge.png" /></p>
+<figure id="_figure-15">
+<img alt="tabcontrol_tabjustify_iconedge" src="../../img/tabcontrol-tabjustify-iconedge.png" />
+<figcaption><span>Figure&nbsp;15</span></figcaption>
+</figure>
 <h3 id="the-tabfocus-property">The TabFocus Property</h3>
 <p>The TabFocus property specifies the focus behaviour for the TabControl object.</p>
 <p>TabFocus is a character vector that may be <code>'Normal'</code> (the default), <code>'Never'</code> or <code>'ButtonDown'</code>.</p>

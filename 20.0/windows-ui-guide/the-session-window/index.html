@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71399,7 +71399,10 @@
 <h1 class="heading"><span class="name"> The Session Window</span></h1>
 
 <p>The primary purpose of the session window is to provide a scrolling area within which you may enter APL expressions and view results. This area is described as the <em>session log</em>. Normally, the session window will have a menu bar at the top with a tool bar below it. At the bottom of the session window is a status bar. However, these components of the session may be extensively customised and, although this chapter describes a typical session layout, your own session may look distinctly different. A typical Session is illustrated below.</p>
-<p><img alt="session window" src="../img/session-window.png" /></p>
+<figure id="_figure-1">
+<img alt="session window" src="../img/session-window.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>A typical Session window</p>
 <h3 id="window-management">Window Management</h3>
 <p>When you start APL, the session is loaded from the file specified by the <strong>session_file</strong> parameter. The position and size of the session window are defined by the Posn and Size properties of the Session object <code>⎕SE</code>, which will be as they were when the session file was last saved.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
@@ -71410,27 +71413,43 @@
 <h3 id="docking">Docking</h3>
 <p>Nearly all of the windows used in the Dyalog APL IDE may be docked in the Session window or be stand-alone floating windows. When windows are docked in the Session, the Session window is split into resizable panes, separated by splitters. The following example, using the Status window, illustrates the principles involved. (The use of the Status window is described later in this Chapter.)</p>
 <p>To start with, the Status window is hidden. You may display it by selecting the <em>Status</em> menu item from the <em>Tools</em> menu. It initially appears as a floating (undocked) window as shown below.</p>
-<p><img alt="session docking 1" src="../img/session-docking-1.png" /></p>
+<figure id="_figure-2">
+<img alt="session docking 1" src="../img/session-docking-1.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <p>If you press the left mouse button down over the Status window title bar, and drag it, you will find that when the mouse pointer is close to an edge of the Session window, the drag rectangle indicates a docking zone as shown below. This indicates the space that the window will occupy if you now release the mouse button to dock it.</p>
-<p><img alt="session docking 2" src="../img/session-docking-2.png" /></p>
+<figure id="_figure-3">
+<img alt="session docking 2" src="../img/session-docking-2.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <p>The next picture shows the result of the docking operation. The Session window is now split into 2 panes, with the Status window in the upper pane and the Session log window in the lower pane. You can resize the panes by dragging with the mouse.</p>
 <p>You will notice that a docked window has a title bar (in this case, the caption is <em>Status</em>) and 3 buttons which are used to <em>Minimise</em>, <em>Maximise</em> and <em>Close</em> the docked window.</p>
-<p><img alt="session docking 3" src="../img/session-docking-3.png" /></p>
+<figure id="_figure-4">
+<img alt="session docking 3" src="../img/session-docking-3.png" />
+<figcaption><span>Figure&nbsp;4</span></figcaption>
+</figure>
 <p>The next picture shows the result of minimising the Status window pane. All that remains of it is its title bar. The Minimise button has changed to a Restore button, which is used to restore the pane to its original size.</p>
-<p><img alt="session docking 4" src="../img/session-docking-4.png" /></p>
+<figure id="_figure-5">
+<img alt="session docking 4" src="../img/session-docking-4.png" />
+<figcaption><span>Figure&nbsp;5</span></figcaption>
+</figure>
 <p>You can pick up a docked window and then re-dock it along a different edge of the Session as illustrated below.</p>
-<p><img alt="session docking 5" src="../img/session-docking-5.png" /></p>
+<figure id="_figure-6">
+<img alt="session docking 5" src="../img/session-docking-5.png" />
+<figcaption><span>Figure&nbsp;6</span></figcaption>
+</figure>
 <p>Docking the Status window along the left edge of the Session causes the Session window to be split into two vertical panes. Notice how the title bar is now drawn vertically.</p>
-<p><img alt="session docking 6" src="../img/session-docking-6.png" /></p>
+<figure id="_figure-7">
+<img alt="session docking 6" src="../img/session-docking-6.png" />
+<figcaption><span>Figure&nbsp;7</span></figcaption>
+</figure>
 <p>If you click the right mouse button over any window, its context menu is displayed. If the window is dockable, the context menu contains the following options:</p>
 <table>
-<thead>
-<tr>
-<th>Undock</th>
-<th>Undocks the docked window. The window is displayed at whatever position and size it occupied prior to being docked</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Undock</td>
+<td>Undocks the docked window. The window is displayed at whatever position and size it occupied prior to being docked</td>
+</tr>
 <tr>
 <td>Hide Caption</td>
 <td>Hides the title bar of the docked window</td>
@@ -71442,7 +71461,10 @@
 </tbody>
 </table>
 <p>The last picture shows the effect of using Hide Caption to remove the title bar. In this state, you can resize the pane with the mouse, but the Minimise, Maximise and Close buttons are not available. However, you can restore the object's title bar using its context menu.</p>
-<p><img alt="session docking 7" src="../img/session-docking-7.png" /></p>
+<figure id="_figure-8">
+<img alt="session docking 7" src="../img/session-docking-7.png" />
+<figcaption><span>Figure&nbsp;8</span></figcaption>
+</figure>
 <div class="footnote">
 <hr />
 <ol>

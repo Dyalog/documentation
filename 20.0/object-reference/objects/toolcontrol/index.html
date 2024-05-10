@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,8 +71327,25 @@
 
 <h1 class="heading"><span class="name">ToolControl</span><span class="command">Object</span></h1>
 
-<p><a href="../../parentlists/toolcontrol/">Parents</a> <a href="../../childlists/toolcontrol/">Children</a> <a href="../../proplists/toolcontrol/">Properties</a> <a href="../../methodlists/toolcontrol/">Methods</a> <a href="../../eventlists/toolcontrol/">Events</a></p>
-<p>Purpose: The ToolControl object provides a standard Windows ToolBar.</p>
+<table>
+<tbody>
+<tr>
+<td><a href="../../parentlists/toolcontrol/">Parents</a></td>
+<td><a href="../../childlists/toolcontrol/">Children</a></td>
+<td><a href="../../proplists/toolcontrol/">Properties</a></td>
+<td><a href="../../methodlists/toolcontrol/">Methods</a></td>
+<td><a href="../../eventlists/toolcontrol/">Events</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>Purpose:</td>
+<td>The ToolControl object provides a standard Windows ToolBar.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The ToolControl object provides an interface to the native Windows ToolBar control and supersedes the Dyalog APL <a href="../toolbar/">ToolBar</a> object.</p>
 <p>The tools on a ToolControl are normally represented by <a href="../toolbutton/">ToolButton</a> objects, but the ToolControl may also act as a parent for other objects, including a <a href="../menubar/">MenuBar</a> (see below).</p>
@@ -71346,16 +71363,25 @@
 <span class="s1">&#39;F.TB.B2&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;ToolButton&#39;</span><span class="w"> </span><span class="s1">&#39;Open&#39;</span><span class="p">(</span><span class="s1">&#39;ImageIndex&#39;</span><span class="w"> </span><span class="m">8</span><span class="p">)</span>
 <span class="s1">&#39;F.TB.B3&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;ToolButton&#39;</span><span class="w"> </span><span class="s1">&#39;Save&#39;</span><span class="p">(</span><span class="s1">&#39;ImageIndex&#39;</span><span class="w"> </span><span class="m">9</span><span class="p">)</span>
 </code></pre></div></p>
-<p><img alt="tool1" src="../../img/tool1.gif" /></p>
-<p><img alt="tool2" src="../../img/tool2.gif" />
+<figure id="_figure-1">
+<img alt="tool1" src="../../img/tool1.gif" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
+<figure id="_figure-2">
+<img alt="tool2" src="../../img/tool2.gif" />
 <div class="highlight"><pre><span></span><code><span class="s1">&#39;F.TB&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;ToolControl&#39;</span><span class="p">(</span><span class="s1">&#39;Style&#39;</span><span class="w"> </span><span class="s1">&#39;Buttons&#39;</span><span class="p">)</span>
-</code></pre></div></p>
-<p><img alt="tool3" src="../../img/tool3.gif" />
+</code></pre></div><figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
+<figure id="_figure-3">
+<img alt="tool3" src="../../img/tool3.gif" />
 <div class="highlight"><pre><span></span><code><span class="s1">&#39;F.TB&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;ToolControl&#39;</span><span class="p">(</span><span class="s1">&#39;Style&#39;</span><span class="w"> </span><span class="s1">&#39;FlatList&#39;</span><span class="p">)</span>
-</code></pre></div></p>
-<p><img alt="tool4" src="../../img/tool4.gif" />
+</code></pre></div><figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
+<figure id="_figure-4">
+<img alt="tool4" src="../../img/tool4.gif" />
 <div class="highlight"><pre><span></span><code><span class="s1">&#39;F.TB&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;ToolControl&#39;</span><span class="p">(</span><span class="s1">&#39;Style&#39;</span><span class="w"> </span><span class="s1">&#39;List&#39;</span><span class="p">)</span>
-</code></pre></div></p>
+</code></pre></div><figcaption><span>Figure&nbsp;4</span></figcaption>
+</figure>
 <p>The presence or absence of a recessed line drawn above, below, to the left of, or to the right of the ToolControl is controlled by the <a href="../../properties/divider/">Divider</a> property whose default is 1 (show divider).</p>
 <p>The <a href="../../properties/multiline/">MultiLine</a> property specifies whether or not <a href="../toolbutton/">ToolButtons</a> (and other controls) are arranged in several rows (or columns) when there are more than will otherwise fit. If <a href="../../properties/multiline/">MultiLine</a> is 0 (the default), the ToolControl object clips its children and the user must resize it to bring more objects into view.
 <div class="highlight"><pre><span></span><code><span class="s1">&#39;F&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Form&#39;</span><span class="w"> </span><span class="s1">&#39;ToolControl: MultiLine 0&#39;</span><span class="p">(</span><span class="s1">&#39;Size&#39;</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">36</span><span class="p">)</span>
@@ -71372,10 +71398,15 @@
 <span class="s1">&#39;F.TB.B5&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;ToolButton&#39;</span><span class="w"> </span><span class="s1">&#39;Redo&#39;</span><span class="p">(</span><span class="s1">&#39;ImageIndex&#39;</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
 <span class="s1">&#39;F.TB.B6&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;ToolButton&#39;</span><span class="w"> </span><span class="s1">&#39;Delete&#39;</span><span class="p">(</span><span class="s1">&#39;ImageIndex&#39;</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
 </code></pre></div></p>
-<p><img alt="tool6" src="../../img/tool6.gif" /></p>
-<p><img alt="tool7" src="../../img/tool7.gif" />
+<figure id="_figure-5">
+<img alt="tool6" src="../../img/tool6.gif" />
+<figcaption><span>Figure&nbsp;5</span></figcaption>
+</figure>
+<figure id="_figure-6">
+<img alt="tool7" src="../../img/tool7.gif" />
 <div class="highlight"><pre><span></span><code><span class="s1">&#39;F.TB&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;ToolControl&#39;</span><span class="p">(</span><span class="s1">&#39;MultiLine&#39;</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="s1">&#39;Style&#39;</span><span class="w"> </span><span class="s1">&#39;List&#39;</span><span class="p">)</span>
-</code></pre></div></p>
+</code></pre></div><figcaption><span>Figure&nbsp;6</span></figcaption>
+</figure>
 <p>The <a href="../../properties/transparent/">Transparent</a> property specifies whether or not the ToolControl is transparent. If so, the visual effect is as if the <a href="../toolbutton/">ToolButtons</a> (and other controls) were drawn directly on the parent Form as illustrated below:
 <div class="highlight"><pre><span></span><code><span class="s1">&#39;F&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Form&#39;</span><span class="w"> </span><span class="s1">&#39;ToolControl: Transparent 1)&#39;</span><span class="p">(</span><span class="s1">&#39;Size&#39;</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">40</span><span class="p">)</span>
 <span class="s1">&#39;F.BM&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Bitmap&#39;</span><span class="w"> </span><span class="s1">&#39;C:\WINDOWS\WINLOGO&#39;</span>
@@ -71390,7 +71421,10 @@
 <span class="s1">&#39;F.TB.B2&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;ToolButton&#39;</span><span class="w"> </span><span class="s1">&#39;Open&#39;</span><span class="p">(</span><span class="s1">&#39;ImageIndex&#39;</span><span class="w"> </span><span class="m">8</span><span class="p">)</span>
 <span class="s1">&#39;F.TB.B3&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;ToolButton&#39;</span><span class="w"> </span><span class="s1">&#39;Save&#39;</span><span class="p">(</span><span class="s1">&#39;ImageIndex&#39;</span><span class="w"> </span><span class="m">9</span><span class="p">)</span>
 </code></pre></div></p>
-<p><img alt="tool8" src="../../img/tool8.gif" /></p>
+<figure id="_figure-7">
+<img alt="tool8" src="../../img/tool8.gif" />
+<figcaption><span>Figure&nbsp;7</span></figcaption>
+</figure>
 <p>The <a href="../../properties/showcaptions/">ShowCaptions</a> property specifies whether or not the captions of <a href="../toolbutton/">ToolButton</a> objects are drawn. Its default value is 1 (draw captions). <a href="../toolbutton/">ToolButtons</a> drawn without captions occupy much less space and <a href="../../properties/showcaptions/">ShowCaptions</a> provides a quick way to turn captions on/off for user customisation.</p>
 <p>The <a href="../../properties/showdropdown/">ShowDropDown</a> property specifies whether or not a drop-down menu symbol is drawn alongside <a href="../toolbutton/">ToolButtons</a> which have <a href="../../properties/style/">Style </a><code>'DropDown'</code>. <a href="../../properties/showdropdown/">ShowDropDown</a> also affects the behaviour of such <a href="../toolbutton/">ToolButton</a> objects when clicked.</p>
 <p>The <a href="../../properties/buttonsacceptfocus/">ButtonsAcceptFocus</a> property determines how the ToolControl responds to the Tab and cursor movement keys.</p>
@@ -71414,7 +71448,10 @@
 
 <span class="bp">:</span><span class="nv">EndWith</span>
 </code></pre></div></p>
-<p><img alt="tool10" src="../../img/tool10.gif" /></p>
+<figure id="_figure-8">
+<img alt="tool10" src="../../img/tool10.gif" />
+<figcaption><span>Figure&nbsp;8</span></figcaption>
+</figure>
 
 
 

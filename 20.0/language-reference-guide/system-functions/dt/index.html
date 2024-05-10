@@ -32694,7 +32694,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71339,34 +71339,209 @@
 <h1 class="heading"><span class="name"> Time Numbers</span></h1>
 
 <p>If a value in <code>X</code> is positive it indicates that a time number type is expected in <code>Y</code> or generated in <code>R</code>, as follows. Note that the last column indicated whether (Yes) or not (No) negative numbers are allowed.</p>
-<p>| Group | Code | Description | Category | Date and time <sup>1In the Proleptic Gregorian Calendar</sup> represented by 0 (Epoch) | Negative values allowed? <sup>8No date-time may represent a date earlier than ¯4713-01-01 00:00.</sup> |
-| --- | --- | --- | --- | ---  |
-| Dyalog APL | 1 | Dyalog Date Number | Day count with fractional part | 1899-12-31 00:00 | Yes |
-| 2 | Dyalog component file time | Tick count 1÷60s ticks <sup>2There are the same number of ticks per day regardless of leap seconds.</sup> | 1970-01-01 00:00 | Yes |
-| Other languages | 10 | J (J nanosecond time) | Tick count <sup>3Generated as DECF values regardless of the setting of ⎕FR due to their magnitude.</sup> 1ns ticks <sup>2There are the same number of ticks per day regardless of leap seconds.</sup> | 2000-01-01 00:00 | Yes |
-| 11 | Shakti K7 | Tick count 1ms ticks <sup>2There are the same number of ticks per day regardless of leap seconds.</sup> | 2024-01-01 00:00 | Yes |
-| 12 | JavaScript / D / Q | Tick count 1ms ticks <sup>2There are the same number of ticks per day regardless of leap seconds.</sup> | 1970-01-01 00:00 | Yes |
-| 13 | R (R chron format) | Day count with fractional part | 1970-01-01 00:00 | Yes |
-| 14 | Shakti K9 | Tick count 1ms ticks <sup>2There are the same number of ticks per day regardless of leap seconds.</sup> | 2001-01-01 00:00 | Yes |
-| UNIX | 20 | Unix time | Tick count 1s ticks <sup>2There are the same number of ticks per day regardless of leap seconds.</sup> | 1970-01-01 00:00 | Yes |
-| Microsoft | 30 | Microsoft DOS date/time | Encoded broken-down time 2s resolution | N/A | No |
-| 31 | Microsoft Win32 FILETIME | Tick count <sup>3Generated as DECF values regardless of the setting of ⎕FR due to their magnitude.</sup> 100ns ticks | 1601-01-01 00:00 | No |
-| 32 | Microsoft CLR DateTime (.NET)(Ticks property thereof) | Tick count <sup>3Generated as DECF values regardless of the setting of ⎕FR due to their magnitude.</sup> 100ns ticks | 0001-01-01 00:00 | No |
-| 33 | Microsoft OLE Automation Date(also known as Variant Time) | Day count with fractional part | 1899-12-30 00:00 | Yes <sup>8For negative numbers, the integral part counts backward from 1899-12-30 and the fractional part counts forward from the date so reached.</sup> |
-| Application | 40 | Excel (1900 Date System) <sup>4Excel supports two time number conventions. On Windows the 1900 Date System is the default and on macOS the 1904 Date System is the default. Both systems can use either convention and the convention in use is stored in the worksheet so that the platforms interoperate.</sup> / Lotus 1-2-3 | Day count with fractional part <sup>5Count includes the invalid date 1900-02-29.</sup> | 1899-12-31 00:00 <sup>6Microsoft Excel converts day 0 to the invalid date 1900-01-00.</sup> | No |
-| 41 | Excel (1904 Date System) <sup>4Excel supports two time number conventions. On Windows the 1900 Date System is the default and on macOS the 1904 Date System is the default. Both systems can use either convention and the convention in use is stored in the worksheet so that the platforms interoperate.</sup> | Day count with fractional part | 1904-01-01 00:00 | No |
-| 42 | Stata statistics package | Tick count 1ms ticks <sup>2There are the same number of ticks per day regardless of leap seconds.</sup> | 1960-01-01 00:00 | Yes |
-| 43 | SPSS statistics package | Tick count 1s ticks <sup>2There are the same number of ticks per day regardless of leap seconds.</sup> | 1582-10-14 00:00 | No |
-| 44 | SAS | Tick count 1s ticks <sup>2There are the same number of ticks per day regardless of leap seconds.</sup> | 1960-01-01 00:00 | Yes |
-| Julian Date and variants | 50 | Julian Date | Day count with fractional part | ¯4717-11-24 12:00 | No |
-| 51 | J (J dayno) | Day count with fractional part | 1800-01-01 00:00 | No |
-| 52 | Reduced Julian Date | Day count with fractional part | 1858-11-16 12:00 | Yes |
-| 53 | Modified Julian Date | Day count with fractional part | 1858-11-17 00:00 | Yes |
-| 54 | Dublin Julian Date | Day count with fractional part | 1899-12-31 12:00 | Yes |
-| 55 | CNES Julian Date | Day count with fractional part | 1950-01-01 00:00 | Yes |
-| 56 | CCSDS Julian Date | Day count with fractional part | 1958-01-01 00:00 | Yes |
-| Decimal encoded <sup>9Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020/01/23 (year/month/day) is encoded as 20200123, and 13:17:56 (hour:minute:second) is encoded as 131756. The date must be between 1 January 0001 and 31 December 9999 in the Proleptic Gregorian Calendar.</sup> | 60 | Floating-point decimal encoded format Digits take the form yyyymmdd.hhmmss | Encoded broken-down time 1s resolution | N/A | No |
-| 61 | Integer decimal encoded format Digits take the form yyyymmddhhmmss(J digit time) | Encoded broken-down time 1s resolution | N/A | No |</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Code</th>
+<th>Description</th>
+<th>Category</th>
+<th>Date and time <sup>1In the Proleptic Gregorian Calendar</sup> represented by 0 (Epoch)</th>
+<th>Negative values allowed? <sup>8No date-time may represent a date earlier than ¯4713-01-01 00:00.</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dyalog APL</td>
+<td>1</td>
+<td>Dyalog Date Number</td>
+<td>Day count with fractional part</td>
+<td>1899-12-31 00:00</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dyalog component file time</td>
+<td>Tick count 1÷60s ticks <sup>2There are the same number of ticks per day regardless of leap seconds.</sup></td>
+<td>1970-01-01 00:00</td>
+<td colspan="2">Yes</td>
+</tr>
+<tr>
+<td>Other languages</td>
+<td>10</td>
+<td>J (J nanosecond time)</td>
+<td>Tick count <sup>3Generated as DECF values regardless of the setting of ⎕FR due to their magnitude.</sup> 1ns ticks <sup>2There are the same number of ticks per day regardless of leap seconds.</sup></td>
+<td>2000-01-01 00:00</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Shakti K7</td>
+<td>Tick count 1ms ticks <sup>2There are the same number of ticks per day regardless of leap seconds.</sup></td>
+<td>2024-01-01 00:00</td>
+<td colspan="2">Yes</td>
+</tr>
+<tr>
+<td>12</td>
+<td>JavaScript / D / Q</td>
+<td>Tick count 1ms ticks <sup>2There are the same number of ticks per day regardless of leap seconds.</sup></td>
+<td>1970-01-01 00:00</td>
+<td colspan="2">Yes</td>
+</tr>
+<tr>
+<td>13</td>
+<td>R (R chron format)</td>
+<td>Day count with fractional part</td>
+<td>1970-01-01 00:00</td>
+<td colspan="2">Yes</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Shakti K9</td>
+<td>Tick count 1ms ticks <sup>2There are the same number of ticks per day regardless of leap seconds.</sup></td>
+<td>2001-01-01 00:00</td>
+<td colspan="2">Yes</td>
+</tr>
+<tr>
+<td>UNIX</td>
+<td>20</td>
+<td>Unix time</td>
+<td>Tick count 1s ticks <sup>2There are the same number of ticks per day regardless of leap seconds.</sup></td>
+<td>1970-01-01 00:00</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Microsoft</td>
+<td>30</td>
+<td>Microsoft DOS date/time</td>
+<td>Encoded broken-down time 2s resolution</td>
+<td>N/A</td>
+<td>No</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Microsoft Win32 FILETIME</td>
+<td>Tick count <sup>3Generated as DECF values regardless of the setting of ⎕FR due to their magnitude.</sup> 100ns ticks</td>
+<td>1601-01-01 00:00</td>
+<td colspan="2">No</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Microsoft CLR DateTime (.NET)(Ticks property thereof)</td>
+<td>Tick count <sup>3Generated as DECF values regardless of the setting of ⎕FR due to their magnitude.</sup> 100ns ticks</td>
+<td>0001-01-01 00:00</td>
+<td colspan="2">No</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Microsoft OLE Automation Date(also known as Variant Time)</td>
+<td>Day count with fractional part</td>
+<td>1899-12-30 00:00</td>
+<td colspan="2">Yes <sup>8For negative numbers, the integral part counts backward from 1899-12-30 and the fractional part counts forward from the date so reached.</sup></td>
+</tr>
+<tr>
+<td>Application</td>
+<td>40</td>
+<td>Excel (1900 Date System) <sup>4Excel supports two time number conventions. On Windows the 1900 Date System is the default and on macOS the 1904 Date System is the default. Both systems can use either convention and the convention in use is stored in the worksheet so that the platforms interoperate.</sup> / Lotus 1-2-3</td>
+<td>Day count with fractional part <sup>5Count includes the invalid date 1900-02-29.</sup></td>
+<td>1899-12-31 00:00 <sup>6Microsoft Excel converts day 0 to the invalid date 1900-01-00.</sup></td>
+<td>No</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Excel (1904 Date System) <sup>4Excel supports two time number conventions. On Windows the 1900 Date System is the default and on macOS the 1904 Date System is the default. Both systems can use either convention and the convention in use is stored in the worksheet so that the platforms interoperate.</sup></td>
+<td>Day count with fractional part</td>
+<td>1904-01-01 00:00</td>
+<td colspan="2">No</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Stata statistics package</td>
+<td>Tick count 1ms ticks <sup>2There are the same number of ticks per day regardless of leap seconds.</sup></td>
+<td>1960-01-01 00:00</td>
+<td colspan="2">Yes</td>
+</tr>
+<tr>
+<td>43</td>
+<td>SPSS statistics package</td>
+<td>Tick count 1s ticks <sup>2There are the same number of ticks per day regardless of leap seconds.</sup></td>
+<td>1582-10-14 00:00</td>
+<td colspan="2">No</td>
+</tr>
+<tr>
+<td>44</td>
+<td>SAS</td>
+<td>Tick count 1s ticks <sup>2There are the same number of ticks per day regardless of leap seconds.</sup></td>
+<td>1960-01-01 00:00</td>
+<td colspan="2">Yes</td>
+</tr>
+<tr>
+<td>Julian Date and variants</td>
+<td>50</td>
+<td>Julian Date</td>
+<td>Day count with fractional part</td>
+<td>¯4717-11-24 12:00</td>
+<td>No</td>
+</tr>
+<tr>
+<td>51</td>
+<td>J (J dayno)</td>
+<td>Day count with fractional part</td>
+<td>1800-01-01 00:00</td>
+<td colspan="2">No</td>
+</tr>
+<tr>
+<td>52</td>
+<td>Reduced Julian Date</td>
+<td>Day count with fractional part</td>
+<td>1858-11-16 12:00</td>
+<td colspan="2">Yes</td>
+</tr>
+<tr>
+<td>53</td>
+<td>Modified Julian Date</td>
+<td>Day count with fractional part</td>
+<td>1858-11-17 00:00</td>
+<td colspan="2">Yes</td>
+</tr>
+<tr>
+<td>54</td>
+<td>Dublin Julian Date</td>
+<td>Day count with fractional part</td>
+<td>1899-12-31 12:00</td>
+<td colspan="2">Yes</td>
+</tr>
+<tr>
+<td>55</td>
+<td>CNES Julian Date</td>
+<td>Day count with fractional part</td>
+<td>1950-01-01 00:00</td>
+<td colspan="2">Yes</td>
+</tr>
+<tr>
+<td>56</td>
+<td>CCSDS Julian Date</td>
+<td>Day count with fractional part</td>
+<td>1958-01-01 00:00</td>
+<td colspan="2">Yes</td>
+</tr>
+<tr>
+<td>Decimal encoded <sup>9Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020/01/23 (year/month/day) is encoded as 20200123, and 13:17:56 (hour:minute:second) is encoded as 131756. The date must be between 1 January 0001 and 31 December 9999 in the Proleptic Gregorian Calendar.</sup></td>
+<td>60</td>
+<td>Floating-point decimal encoded format Digits take the form yyyymmdd.hhmmss</td>
+<td>Encoded broken-down time 1s resolution</td>
+<td>N/A</td>
+<td>No</td>
+</tr>
+<tr>
+<td>61</td>
+<td>Integer decimal encoded format Digits take the form yyyymmddhhmmss(J digit time)</td>
+<td>Encoded broken-down time 1s resolution</td>
+<td>N/A</td>
+<td colspan="2">No</td>
+</tr>
+</tbody>
+</table>
 <h1 id="time-stamps">Time Stamps</h1>
 <h1 id="military-time-zone-characters">Military time zone characters</h1>
 <p>Any element in <code>Y</code> may be specified as a military time zone character and is implicitly replaced by the current time in the time zone they represent. The time zones are as follows:</p>

@@ -32776,7 +32776,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71442,20 +71442,18 @@
 <p>If you map a file with read-only access you may modify the corresponding array in the workspace, however your changes are not written back to the file.</p>
 <p>If <code>X</code> is specified, it defines the type and shape to be associated with <em>raw</em> data on file. <code>X</code> must be an integer scalar or vector. The first item of <code>X</code> specifies the data type and must be one of the following values:</p>
 <table>
-<thead>
-<tr>
-<th>Classic Edition</th>
-<th>11, 82, 83, 163, 323 or 645</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>Classic Edition</td>
+<td>11, 82, 83, 163, 323 or 645</td>
+</tr>
 <tr>
 <td>Unicode Edition</td>
 <td>11, 80, 83, 160, 163, 320, 323 or 645</td>
 </tr>
 </tbody>
 </table>
-<p>The values are more fully explained in <a href="../data-representation-monadic/">Data Representation (Monadic)</a>.</p>
+<p>The values are more fully explained in <a href="../data-representation-monadic/">"Data Representation (Monadic)"</a>.</p>
 <p>Following items determine the shape of the mapped array. A value of <code>¯1</code> on any (but normally the first) axis in the shape is replaced by the system to mean: read as many complete records from the file as possible. Only one axis may be specified in this way. Note that if    <code>X</code> is a singleton, the data on the file is mapped as a scalar and only the first value on the file is accessible.</p>
 <p>If no left argument is given, file is assumed to contain a simple APL array, complete with header information (type, rank, shape, etc.). Such mapped files may only be updated by changing the associated array using indexed/pick assignment: <code>var[a]←b</code>, the new values must be of the same type as the originals.</p>
 <p>Note that a <em>raw</em> mapped file may be updated <em>only</em> if its <em>file offset</em> is 0. Note also that Windows does not support mapped files of zero length.</p>

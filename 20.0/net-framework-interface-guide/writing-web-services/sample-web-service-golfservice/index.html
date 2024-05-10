@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71868,25 +71868,43 @@
 </code></pre></div></p>
 <p><code>GolfService</code> will be compiled and ASP.NET will fabricate a page about it for the browser to display as shown below.</p>
 <p>The three methods exposed by <code>GolfService</code> are listed.</p>
-<p><img alt="golfservice1" src="../../img/golfservice1.png" /></p>
+<figure id="_figure-1">
+<img alt="golfservice1" src="../../img/golfservice1.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>Invoking the <code>GetCourses</code> method generates the following output.</p>
 <p>Notice that the data type of the result is <code>ArrayOfGolfCourse</code>, and the data type of each element of the result is <code>GolfCourse</code>. Furthermore, the public fields defined for the <code>GolfCourse</code> object are clearly named.</p>
 <p>All this information is derived from the declarations in the <code>Golf.asmx</code> script.</p>
 <p>As supplied, the <code>GolfData</code> component file contains only 3 golf courses as shown below.</p>
-<p><img alt="golfservice2" src="../../img/golfservice2.png" /></p>
+<figure id="_figure-2">
+<img alt="golfservice2" src="../../img/golfservice2.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <p>ASP.NET generates a Form containing fields that allow the user to invoke the <code>MakeBookings</code> method as shown below.</p>
 <p>Notice the way a <code>DateTime</code> value is specified. Note too that the <code>GimmeNearest</code> parameter is <code>Boolean</code>, so you must enter <code>"True"</code>" or <code>"False"</code>. If you enter 0 or 1, it will cause an error and the application will refuse to try to call <code>MakeBookings</code> because you have specified the wrong type for a parameter.</p>
 <p>When you try this yourself, remember to enter a date that is within the next 30 days, and a time between 07:00 and 15:00. Alternatively, you may wish to experiment with invalid data to check the error handling.</p>
-<p><img alt="golfservice3" src="../../img/golfservice3.png" /></p>
+<figure id="_figure-3">
+<img alt="golfservice3" src="../../img/golfservice3.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 <p>The result of invoking <code>MakeBooking</code> with this data is shown below.</p>
 <p>Notice how all the information about the <code>Booking</code> object structure, including the structure of the sub-objects, is provided.</p>
-<p><img alt="golfservice4" src="../../img/golfservice4.png" /></p>
+<figure id="_figure-4">
+<img alt="golfservice4" src="../../img/golfservice4.png" />
+<figcaption><span>Figure&nbsp;4</span></figcaption>
+</figure>
 <p>The following picture shows data suitable for invoking the <code>GetStartingSheet</code> method.</p>
 <p>If you try this for yourself, choose a course and date on which you have made at least one successful booking.</p>
-<p><img alt="golfservice5" src="../../img/golfservice5.png" /></p>
+<figure id="_figure-5">
+<img alt="golfservice5" src="../../img/golfservice5.png" />
+<figcaption><span>Figure&nbsp;5</span></figcaption>
+</figure>
 <p>Finally, the result of the <code>GetStartingSheet</code> function is illustrated below.</p>
 <p>The output clearly shows that the result, a <code>StartingSheet</code> object, contains an array of <code>Slot</code> objects, each of which contains a <code>Time</code> field and a <code>Players</code> field.</p>
-<p><img alt="golfservice6" src="../../img/golfservice6.png" /></p>
+<figure id="_figure-6">
+<img alt="golfservice6" src="../../img/golfservice6.png" />
+<figcaption><span>Figure&nbsp;6</span></figcaption>
+</figure>
 <h4 id="using-golfservice-from-c">Using GolfService from C</h4>
 <p>The <code>csharp</code> sub-directory in <code>samples\asp.net\golf</code> contains sample files for accessing the <code>GolfService</code> Web Service from C#. The C# source code in <code>Golf.cs</code> is shown below.
 <div class="highlight"><pre><span></span><code><span class="nv">using</span><span class="w"> </span><span class="nv">System</span><span class="sr">;</span>

@@ -32674,7 +32674,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71339,7 +71339,7 @@
 <div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">Private</span><span class="o">|</span><span class="nv">Public</span><span class="o">&gt;&lt;</span><span class="nv">Instance</span><span class="o">|</span><span class="nv">Shared</span><span class="o">&gt;</span>
 <span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">WebMethod</span><span class="o">&gt;</span>
 </code></pre></div>
-<p>The <code>:Access</code> statement is used to specify characteristics for functions  that represent Methods in classes (see <a href="../../../../object-oriented-programming/class-members/methods/methods/">Methods</a>). It is also applicable to Classes and Properties.</p>
+<p>The <code>:Access</code> statement is used to specify characteristics for functions  that represent Methods in classes (see <a href="../../../../object-oriented-programming/class-members/methods/methods/">"Methods"</a>). It is also applicable to Classes and Properties.</p>
 <table>
 <thead>
 <tr>
@@ -71349,30 +71349,30 @@
 </thead>
 <tbody>
 <tr>
-<td>Private&#124;Public</td>
+<td><code>Private|Public</code></td>
 <td>Specifies whether or not the method is accessible from outside the Class or an Instance of the Class. The default is <code>Private</code> .</td>
 </tr>
 <tr>
-<td>Instance&#124;Shared</td>
+<td><code>Instance|Shared</code></td>
 <td>Specifies whether the method runs in the Class or Instance. The default is <code>Instance</code> .</td>
 </tr>
 <tr>
-<td>WebMethod</td>
+<td><code>WebMethod</code></td>
 <td>Specifies that the method is exported as a web method. This applies only to a Class that implements a Web Service.</td>
 </tr>
 <tr>
-<td>Overridable</td>
+<td><code>Overridable</code></td>
 <td>Applies only to an Instance Method and specifies that the Method may be overridden by a Method in a higher Class. See below.</td>
 </tr>
 <tr>
-<td>Override</td>
+<td><code>Override</code></td>
 <td>Applies only to an Instance Method and specifies that the Method overrides the corresponding Overridable Method defined in the Base Class. See below</td>
 </tr>
 </tbody>
 </table>
 <h4 id="overridableoverride">Overridable/Override</h4>
 <p>Normally, a Method defined in a higher Class replaces a Method of the same name that is defined in its Base Class, but only for calls made from above or within the higher Class itself (or an Instance of the higher Class). The base method remains available <em>in the Base Class</em> and is invoked by a reference to it <em>from within the Base Class</em>.</p>
-<p>However, a Method declared as being <code>Overridable</code> is replaced in-situ (i.e. within its own Class) by a Method of the same name in a higher Class if that Method is itself declared with the <code>Override</code> keyword. For further information, see <a href="../../../../object-oriented-programming/class-members/methods/superceding-base-class-methods/">Superseding Base Class Methods</a>.</p>
+<p>However, a Method declared as being <code>Overridable</code> is replaced in-situ (i.e. within its own Class) by a Method of the same name in a higher Class if that Method is itself declared with the <code>Override</code> keyword. For further information, see <a href="../../../../object-oriented-programming/class-members/methods/superceding-base-class-methods/">"Superseding Base Class Methods"</a>.</p>
 <h4 id="webmethod">WebMethod</h4>
 <p>Note that <code>:Access WebMethod</code> is equivalent to:
 <div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>

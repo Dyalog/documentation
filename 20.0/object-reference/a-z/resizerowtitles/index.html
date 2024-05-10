@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,7 +71305,14 @@
 
 <h1 class="heading"><span class="name">ResizeRowTitles</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/grid/">Grid</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/grid/">Grid</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This property determines whether or not the user may alter the width of the row titles in the <a href="../../objects/grid/">Grid</a>. It is either 1, which indicates that the width of the row titles is adjustable by the user, or 0 which means that it is not.</p>
 <p>If the width of the row titles is adjustable, the cursor changes to a double headed arrow when the mouse pointer is placed over the left-hand border of the first column title. The user may resize the row titles by dragging this border. The user may also resize the row titles by double-clicking over this border. This causes the row titles to be resized to fit the data and the width of the row titles is automatically adjusted to display the longest string in any of its rows. Either operation generates a <a href="../../methodorevents/setcolsize/">SetColSize</a> event. The value of the column number reported by the event is <code>¯1</code>.</p>

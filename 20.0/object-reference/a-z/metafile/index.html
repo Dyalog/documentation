@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,8 +71305,25 @@
 
 <h1 class="heading"><span class="name">Metafile</span><span class="command">Object</span></h1>
 
-<p><a href="../../parentlists/metafile/">Parents</a> <a href="../../childlists/metafile/">Children</a> <a href="../../proplists/metafile/">Properties</a> <a href="../../methodlists/metafile/">Methods</a> <a href="../../eventlists/metafile/">Events</a></p>
-<p>Purpose: This object represents a picture in Windows Metafile format.</p>
+<table>
+<tbody>
+<tr>
+<td><a href="../../parentlists/metafile/">Parents</a></td>
+<td><a href="../../childlists/metafile/">Children</a></td>
+<td><a href="../../proplists/metafile/">Properties</a></td>
+<td><a href="../../methodlists/metafile/">Methods</a></td>
+<td><a href="../../eventlists/metafile/">Events</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>Purpose:</td>
+<td>This object represents a picture in Windows Metafile format.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The Windows Metafile is a mechanism for representing a picture in terms of a collection of graphical components. Windows Metafiles are distributed in special files (.WMF) from which they are loaded into memory for use by an application. Once loaded a Metafile is a Windows "resource" that can be used in a variety of ways. The Metafile object represents this resource.</p>
 <p>The <a href="../../properties/file/">File</a> property specifies the name of a .WMF file from which the Metafile is to be loaded or to which it is to be saved. If you specify <a href="../../properties/file/">File</a> with <a href="../../../language-reference-guide/system-functions/wc"><code>⎕WC</code></a> the Metafile object is loaded from it. If you specify <a href="../../properties/file/">File</a> with <a href="../../../language-reference-guide/system-functions/ws"><code>⎕WS</code></a> no action takes place until you instruct the Metafile object to re-initialise itself from the file or to save itself to the file. These operations are performed using the <a href="../../methodorevents/fileread/">FileRead</a> and <a href="../../methodorevents/filewrite/">FileWrite</a> methods. If you omit the <a href="../../properties/file/">File</a> property in the argument to <a href="../../../language-reference-guide/system-functions/wc"><code>⎕WC</code></a> or if you specify a null vector, the Metafile object is initially empty. The following example loads the picture defined by the GOLF.WMF Metafile that is distributed with Microsoft Office.

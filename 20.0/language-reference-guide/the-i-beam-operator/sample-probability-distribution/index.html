@@ -32685,7 +32685,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71342,103 +71342,103 @@
 </thead>
 <tbody>
 <tr>
-<td>'Uniform'</td>
+<td><code>'Uniform'</code></td>
 <td>a</td>
 <td>b</td>
 <td>a &lt; b ; A numeric interval. Example: 1.0 7.6</td>
 </tr>
 <tr>
-<td>'Beta'</td>
+<td><code>'Beta'</code></td>
 <td>a</td>
 <td>b</td>
 <td>a &gt; 0  AND b &gt; 0</td>
 </tr>
 <tr>
-<td>'Bernoulli'</td>
+<td><code>'Bernoulli'</code></td>
 <td>probability</td>
-<td></td>
+<td>&nbsp;</td>
 <td>probability ≥ 0 AND probability ≤ 1</td>
 </tr>
 <tr>
-<td>'Binomial'</td>
+<td><code>'Binomial'</code></td>
 <td>trials</td>
 <td>probability</td>
 <td>trials is an integer ≥ 0;  probability ≥ 0 AND probability ≤ 1</td>
 </tr>
 <tr>
-<td>'Cauchy'</td>
+<td><code>'Cauchy'</code></td>
 <td>location</td>
 <td>scale</td>
 <td>location unrestricted; scale &gt; 0</td>
 </tr>
 <tr>
-<td>'Chi Squared'</td>
+<td><code>'Chi Squared'</code></td>
 <td>degree of freedom</td>
-<td></td>
+<td>&nbsp;</td>
 <td>degree of freedom ≥ 0</td>
 </tr>
 <tr>
-<td>'Exponential'</td>
+<td><code>'Exponential'</code></td>
 <td>rate</td>
-<td></td>
+<td>&nbsp;</td>
 <td>rate  ≥ 0</td>
 </tr>
 <tr>
-<td>'F'</td>
+<td><code>'F'</code></td>
 <td>a</td>
 <td>b</td>
 <td>a ≥  eps AND b ≥ eps; where eps is smallest non-zero positive float number</td>
 </tr>
 <tr>
-<td>'Gamma'</td>
+<td><code>'Gamma'</code></td>
 <td>a</td>
 <td>b</td>
 <td>a ≥ 0 AND b ≥eps; where eps is smallest non-zero positive float number</td>
 </tr>
 <tr>
-<td>'Inverse Gamma'</td>
+<td><code>'Inverse Gamma'</code></td>
 <td>a</td>
 <td>b</td>
 <td>a ≥ 0 AND b ≥ 0</td>
 </tr>
 <tr>
-<td>'Laplace'</td>
+<td><code>'Laplace'</code></td>
 <td>location</td>
 <td>scale</td>
 <td>location unrestricted; scale ≥ 0</td>
 </tr>
 <tr>
-<td>'Logistic'</td>
+<td><code>'Logistic'</code></td>
 <td>location</td>
 <td>scale</td>
 <td>location unrestricted; scale ≥ 0</td>
 </tr>
 <tr>
-<td>'Log Normal'</td>
+<td><code>'Log Normal'</code></td>
 <td>location</td>
 <td>scale</td>
 <td>location unrestricted; scale ≥ 0</td>
 </tr>
 <tr>
-<td>'Normal'</td>
+<td><code>'Normal'</code></td>
 <td>location</td>
 <td>scale</td>
 <td>location unrestricted; scale ≥ 0</td>
 </tr>
 <tr>
-<td>'Poisson'</td>
+<td><code>'Poisson'</code></td>
 <td>rate</td>
-<td></td>
+<td>&nbsp;</td>
 <td>rate ≥ 0</td>
 </tr>
 <tr>
-<td>'Student T'</td>
+<td><code>'Student T'</code></td>
 <td>degree of freedom</td>
-<td></td>
+<td>&nbsp;</td>
 <td>degree of freedom ≥eps where eps is smallest non-zero positive float number</td>
 </tr>
 <tr>
-<td>'Weibull'</td>
+<td><code>'Weibull'</code></td>
 <td>a</td>
 <td>b</td>
 <td>a ≥  eps AND b ≥ eps ; eps is smallest non-zero positive float number</td>
@@ -71460,8 +71460,13 @@
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">rv</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="p">(</span><span class="m">16808</span><span class="na">⌶</span><span class="p">)</span><span class="s1">&#39;Beta&#39;</span><span class="w"> </span><span class="m">100000</span>
 <span class="w">      </span><span class="nv">bc</span><span class="kd">←</span><span class="m">1000</span><span class="w"> </span><span class="nv">BucketCounts</span><span class="w"> </span><span class="nv">rv</span>
 </code></pre></div></p>
-<p>Using the Chart Wizard <img alt="sharpplot icon" src="../img/sharpplot-icon.png" /> we can plot <code>(⊂2)⌷⍉bc</code> against <code>(⊂1)⌷⍉bc</code> to get the graph:</p>
-<p><img alt="beta distribution" src="../../img/beta-distribution.png" /></p>
+<figure id="_figure-1">
+<img alt="sharpplot icon" src="../img/sharpplot-icon.png" /> we can plot <figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
+<figure id="_figure-2">
+<img alt="beta distribution" src="../../img/beta-distribution.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 
 
 

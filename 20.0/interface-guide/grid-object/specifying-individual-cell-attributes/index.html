@@ -32678,7 +32678,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71430,7 +71430,10 @@
 <span class="w"> </span><span class="s1">&#39;F.G&#39;</span><span class="nf">⎕WS</span><span class="s1">&#39;CellTypes&#39;</span><span class="p">(</span><span class="m">1</span><span class="o">+</span><span class="nv">DATA</span><span class="o">&gt;</span><span class="m">150</span><span class="p">)</span>
 <span class="w"> </span><span class="s1">&#39;F.G&#39;</span><span class="nf">⎕WS</span><span class="s1">&#39;BCol&#39;</span><span class="p">(</span><span class="m">192</span><span class="w"> </span><span class="m">192</span><span class="w"> </span><span class="m">192</span><span class="p">)(</span><span class="m">128</span><span class="w"> </span><span class="m">128</span><span class="w"> </span><span class="m">128</span><span class="p">)</span>
 </code></pre></div></p>
-<p><img alt="grid example1" src="../../img/grid-example1.png" /></p>
+<figure id="_figure-1">
+<img alt="grid example1" src="../../img/grid-example1.png" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p><code>CellTypes[]</code> is either 1 or 2, according to whether the value in the corresponding cell is 150 or less. So the cells whose value is 150 or less use <code>BCol[1]</code> which is <code>255 255 255</code> (white) whereas those cells whose value is <code>&gt;150</code> use <code>BCol[2]</code> which is <code>192 192 192</code> (grey).</p>
 <h3 id="example-2">Example 2</h3>
 <p>Continuing on from the first example, suppose that in addition, you want to show values that exceed 200 with a white background, but using a bold font. Now you have 3 types of cell; white background with normal font, grey background with normal font, and white background with bold font. This can be done as follows:
@@ -71442,7 +71445,10 @@
 <span class="w"> </span><span class="s1">&#39;Bold&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Font&#39;</span><span class="w"> </span><span class="s1">&#39;Arial&#39;</span><span class="w"> </span><span class="m">16</span><span class="p">(</span><span class="s1">&#39;Weight&#39;</span><span class="w"> </span><span class="m">1000</span><span class="p">)</span>
 <span class="w"> </span><span class="s1">&#39;F.G&#39;</span><span class="nf">⎕WS</span><span class="s1">&#39;CellFonts&#39;</span><span class="w"> </span><span class="s1">&#39;Normal&#39;</span><span class="w"> </span><span class="s1">&#39;Normal&#39;</span><span class="w"> </span><span class="s1">&#39;Bold&#39;</span>
 </code></pre></div></p>
-<p><img alt="grid example2" src="../../img/grid-example2.png" /></p>
+<figure id="_figure-2">
+<img alt="grid example2" src="../../img/grid-example2.png" />
+<figcaption><span>Figure&nbsp;2</span></figcaption>
+</figure>
 <p>In this example, there are three different sets of attributes, selected according to where the value in <code>CellTypes[]</code> is 1, 2 or 3.</p>
 <ol>
 <li>Normal font + white background <code>(255 255 255)</code></li>
@@ -71476,7 +71482,10 @@
 <span class="w"> </span><span class="nv">FONTS</span><span class="kd">←</span><span class="p">(</span><span class="m">3</span><span class="o">⍴⊂</span><span class="s1">&#39;Normal&#39;</span><span class="p">)</span><span class="o">,⊂</span><span class="s1">&#39;Bold&#39;</span>
 <span class="w"> </span><span class="s1">&#39;F.G&#39;</span><span class="nf">⎕WS</span><span class="s1">&#39;CellFonts&#39;</span><span class="nv">FONTS</span>
 </code></pre></div>
-<p><img alt="grid example3" src="../../img/grid-example3.png" /></p>
+<figure id="_figure-3">
+<img alt="grid example3" src="../../img/grid-example3.png" />
+<figcaption><span>Figure&nbsp;3</span></figcaption>
+</figure>
 
 
 

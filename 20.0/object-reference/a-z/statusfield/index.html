@@ -32669,7 +32669,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71305,21 +71305,36 @@
 
 <h1 class="heading"><span class="name">StatusField</span><span class="command">Object</span></h1>
 
-<p><a href="../../parentlists/statusfield/">Parents</a> <a href="../../childlists/statusfield/">Children</a> <a href="../../proplists/statusfield/">Properties</a> <a href="../../methodlists/statusfield/">Methods</a> <a href="../../eventlists/statusfield/">Events</a></p>
-<p>Purpose: This object is used to display information for the user.</p>
+<table>
+<tbody>
+<tr>
+<td><a href="../../parentlists/statusfield/">Parents</a></td>
+<td><a href="../../childlists/statusfield/">Children</a></td>
+<td><a href="../../proplists/statusfield/">Properties</a></td>
+<td><a href="../../methodlists/statusfield/">Methods</a></td>
+<td><a href="../../eventlists/statusfield/">Events</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>Purpose:</td>
+<td>This object is used to display information for the user.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>The StatusField object provides an area for displaying context sensitive help messages, keyboard status, and other application dependent information.</p>
 <p>By default a StatusField is a recessed rectangle in which information is displayed. It has a <a href="../../properties/caption/">Caption</a> and a <a href="../../properties/text/">Text</a> property, which by default are empty, but either or both of which can be used to present information. The <a href="../../properties/caption/">Caption</a> is left justified in the field and the <a href="../../properties/text/">Text</a> is displayed immediately to its right. Typically, you would use the <a href="../../properties/caption/">Caption</a> property as a title to describe the information that the StatusField displays, and the <a href="../../properties/text/">Text</a> property to show its current value. However, you are not obliged to use both of them and you can achieve most effects with just one.</p>
 <p>Note that when the StatusField is used to display hints it is its <a href="../../properties/text/">Text</a> property that is used.</p>
 <p>A StatusField may be used to monitor the status of the keyboard and this is controlled by its <a href="../../properties/style/">Style</a> property. The default value for <a href="../../properties/style/">Style</a> is an empty vector. However, you can set it to monitor various keyboard states as follows :</p>
 <table>
-<thead>
-<tr>
-<th>CapsLock</th>
-<th>Monitors state of Caps Lock key</th>
-</tr>
-</thead>
 <tbody>
+<tr>
+<td>CapsLock</td>
+<td>Monitors state of Caps Lock key</td>
+</tr>
 <tr>
 <td>ScrollLock</td>
 <td>Monitors state of Scroll Lock key</td>

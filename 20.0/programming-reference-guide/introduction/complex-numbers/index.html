@@ -32756,7 +32756,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71483,38 +71483,36 @@
 <h3 id="circular-functions">Circular functions</h3>
 <p>The basic set of circular functions <code>X○Y</code> cater for complex values in <code>Y</code>, while the following extended functions provide specific features for complex arguments. Note that <code>a</code> and <code>b</code> are the real and imaginary parts of <code>Y</code> respectively and θ is the phase of <code>Y</code>..</p>
 <table>
-<thead>
-<tr>
-<th>(-X) ○ Y</th>
-<th>X</th>
-<th>X ○ Y</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>-8○Y</td>
-<td>8</td>
-<td>(-1+Y<em>2)</em>0.5</td>
+<td><code>(-X) ○ Y</code></td>
+<td><code>X</code></td>
+<td><code>X ○ Y</code></td>
 </tr>
 <tr>
-<td>Y</td>
-<td>9</td>
-<td>a</td>
+<td><code>-8○Y</code></td>
+<td><code>8</code></td>
+<td><code>(-1+Y*2)*0.5</code></td>
 </tr>
 <tr>
-<td>+Y</td>
-<td>10</td>
-<td>&#124;Y</td>
+<td><code>Y</code></td>
+<td><code>9</code></td>
+<td><code>a</code></td>
 </tr>
 <tr>
-<td>Y×0J1</td>
-<td>11</td>
-<td>b</td>
+<td><code>+Y</code></td>
+<td><code>10</code></td>
+<td><code>|Y</code></td>
 </tr>
 <tr>
-<td>*Y×0J1</td>
-<td>12</td>
-<td>θ</td>
+<td><code>Y×0J1</code></td>
+<td><code>11</code></td>
+<td><code>b</code></td>
+</tr>
+<tr>
+<td><code>*Y×0J1</code></td>
+<td><code>12</code></td>
+<td><code>θ</code></td>
 </tr>
 </tbody>
 </table>
@@ -71528,12 +71526,14 @@
 </code></pre></div></p>
 <h3 id="comparison">Comparison</h3>
 <p>In comparing two complex numbers <code>X</code> and <code>Y,</code> <code>X=Y</code> is 1 if the magnitude of <code>X-Y</code> does not exceed <code>⎕CT</code> times the larger of the magnitudes of <code>X</code> and <code>Y</code>; geometrically, <code>X=Y</code> if the number smaller in magnitude lies on or within a circle centred on the one with larger magnitude, having radius <code>⎕CT</code> times the larger magnitude.</p>
-<p><img alt="comparison" src="../../img/comparison.png" /> As with real values, complex values sufficiently close to Boolean or integral values are accepted by functions which require Boolean or integral values. For example:
+<figure id="_figure-1">
+<img alt="comparison" src="../../img/comparison.png" /> As with real values, complex values sufficiently close to Boolean or integral values are accepted by functions which require Boolean or integral values. For example:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">2j1e¯14</span><span class="w"> </span><span class="o">⍴</span><span class="w"> </span><span class="m">12</span>
 <span class="m">12</span><span class="w"> </span><span class="m">12</span>
 <span class="w">      </span><span class="m">0</span><span class="w"> </span><span class="o">⍱</span><span class="w"> </span><span class="m">1j1e¯15</span>
 <span class="m">0</span>
-</code></pre></div></p>
+</code></pre></div><figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>Note that Dyalog APL always stores complex numbers as a pair of 64-bit binary floating-point numbers, regardless of the setting of <code>⎕FR</code>. Comparisons between complex numbers and decimal floating-point numbers will require conversion of the decimal number to binary to allow the comparison. When <code>⎕FR=1287</code>, comparisons are always subject to <code>⎕DCT</code>, not <code>⎕CT</code> - regardless of the data type used to represent a number.</p>
 <p>This only really comes into play when determining whether the imaginary part of a complex number is so small that it can be considered to be on the real line. However, Dyalog recommends that you do not mix the use of complex and decimal numbers in the same component of an application.</p>
 

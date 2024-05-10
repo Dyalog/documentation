@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,38 +71327,43 @@
 
 <h1 class="heading"><span class="name">ItemGroups</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/listview/">ListView</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/listview/">ListView</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This property specifies item groupings for a <a href="../../objects/listview/">ListView</a> object.</p>
 <p>**Note that this feature only applies if Native Look and Feel </p>
 <p>is enabled.**</p>
 <p>ItemGroups is a nested scalar or nested vector each of whose elements specifies a grouping. Each grouping is a 5-element vector as follows:</p>
 <table>
-<thead>
-<tr>
-<th>[1]</th>
-<th>Group caption</th>
-<th>character vector</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td>[2]</td>
+<td><code>[1]</code></td>
+<td>Group caption</td>
+<td>character vector</td>
+</tr>
+<tr>
+<td><code>[2]</code></td>
 <td>Item index</td>
 <td>Vector of indices to the Items property that specifies which Items are in this grouping.</td>
 </tr>
 <tr>
-<td>[3]</td>
+<td><code>[3]</code></td>
 <td>Caption alignment</td>
 <td>an integer: 1 = left aligned caption (the default) 2 = centre        aligned caption 4 = right-aligned caption</td>
 </tr>
 <tr>
-<td>[4]</td>
+<td><code>[4]</code></td>
 <td>State</td>
 <td>Integer (not yet implemented)</td>
 </tr>
 <tr>
-<td>[5]</td>
+<td><code>[5]</code></td>
 <td>Footer text</td>
 <td>character vector (not yet implemented)</td>
 </tr>
@@ -71378,7 +71383,10 @@
 <span class="w">      </span><span class="nv">GROUPS</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">&#39;Rest of the World&#39;</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">L</span><span class="na">.</span><span class="nv">ItemGroups</span><span class="kd">←</span><span class="nv">GROUPS</span>
 </code></pre></div></p>
-<p><img alt="lvsg1" src="../../img/lvsg1.gif" /></p>
+<figure id="_figure-1">
+<img alt="lvsg1" src="../../img/lvsg1.gif" />
+<figcaption><span>Figure&nbsp;1</span></figcaption>
+</figure>
 <p>You can control the appearance of the groupings using the <a href="../itemgroupmetrics/">ItemGroupMetrics</a> property.</p>
 
 

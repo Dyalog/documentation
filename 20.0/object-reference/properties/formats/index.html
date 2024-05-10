@@ -32673,7 +32673,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix A - PCRE Regular Expression Details
+    PCRE Regular Expression Details
   </span>
   
 
@@ -71327,7 +71327,14 @@
 
 <h1 class="heading"><span class="name">Formats</span><span class="command">Property</span></h1>
 
-<p>Applies To: <a href="../../objects/clipboard/">Clipboard</a></p>
+<table>
+<tbody>
+<tr>
+<td>Applies To:</td>
+<td><a href="../../objects/clipboard/">Clipboard</a></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Description</strong></p>
 <p>This is a "read-only" property that identifies the formats in which data is currently available in the clipboard. It is a vector of character vectors containing the names of the corresponding <a href="../../objects/clipboard/">Clipboard</a> properties for which data may be obtained using <a href="../../../language-reference-guide/system-functions/wg"><code>⎕WG</code></a>. In the following example data was copied to the Windows clipboard from Microsoft Excel. This product stores data in CF_Text and the older device-dependent CF_Bitmap formats. The latter excludes colour map information, so <a href="../cmap/">CMap</a> is not available.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;CL&#39;</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">&#39;Clipboard&#39;</span>
