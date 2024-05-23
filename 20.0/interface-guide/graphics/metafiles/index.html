@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68023,7 +68023,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68044,7 +68044,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68065,7 +68065,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68086,7 +68086,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70130,7 +70130,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70151,7 +70151,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70172,7 +70172,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70193,7 +70193,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71175,7 +71175,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71196,7 +71196,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71217,7 +71217,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71280,7 +71280,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71301,7 +71301,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71322,7 +71322,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71398,10 +71398,10 @@
                   
 
 
-<h1 class="heading"><span class="name"> Metafiles</span></h1>
+<h1> Metafiles</h1>
 
 <p>A Windows metafile is a mechanism for representing a picture as a collection of graphics commands. Once a metafile has been created, the picture that it represents can be drawn repeatedly from it. Metafiles are device-independent, so the picture can be reproduced on different devices. Unlike bitmaps, metafiles can be scaled accurately and are therefore particularly useful for passing graphical information between different applications. Note that some other applications only support <em>placeable</em> metafiles. See RealSize property for details.</p>
-<h3 id="creating-a-metafile-object">Creating a Metafile Object</h3>
+<h2 id="creating-a-metafile-object">Creating a Metafile Object</h2>
 <p>In Dyalog APL, a Windows metafile is represented by the Metafile object. This is created in much the same way as a Bitmap object. That is, you can either make a Metafile object from an existing .WMF file, or you can create an empty one and then draw onto it using Poly, Text and other graphical objects. For example, to create a Metafile object called <code>Ducky</code> from the <code>AN00015_.wmf</code> metafile that comes with a certain version of Microsoft Office, you can execute the following:
 <div class="highlight"><pre><span></span><code><span class="w">   </span><span class="nv">Dir</span><span class="kd">←</span><span class="s1">&#39;C:\Program Files\Microsoft Office\root\CLIPART\PUB60COR\&#39;</span>
 <span class="w">   </span><span class="s1">&#39;Ducky&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Metafile&#39;</span><span class="p">(</span><span class="nv">Dir</span><span class="o">,</span><span class="s1">&#39;AN00015_.wmf&#39;</span><span class="p">)</span>
@@ -71412,7 +71412,7 @@
 <span class="w">     </span><span class="s1">&#39;fnt&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Font&#39;</span><span class="w"> </span><span class="s1">&#39;Arial&#39;</span><span class="w"> </span><span class="m">72</span>
 <span class="w">     </span><span class="s1">&#39;METADUCK.&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Text&#39;</span><span class="w"> </span><span class="s1">&#39;Quack&#39;</span><span class="p">(</span><span class="m">45</span><span class="w"> </span><span class="m">60</span><span class="p">)(</span><span class="s1">&#39;FontObj&#39;</span><span class="w"> </span><span class="s1">&#39;fnt&#39;</span><span class="p">)</span>
 </code></pre></div></p>
-<h3 id="drawing-a-metafile-object">Drawing a Metafile Object</h3>
+<h2 id="drawing-a-metafile-object">Drawing a Metafile Object</h2>
 <p>A Metafile object is drawn by specifying either the object itself or its name as the Picture property of another object. This causes the Metafile to be drawn in that object and scaled to fit exactly within its boundaries.</p>
 <p>The following statement creates a Form containing the Metafile object  <code>Ducky</code>.
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="s1">&#39;F1&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Form&#39;</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Size&#39;</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">30</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Picture&#39;</span><span class="w"> </span><span class="nv">Ducky</span><span class="p">)</span>

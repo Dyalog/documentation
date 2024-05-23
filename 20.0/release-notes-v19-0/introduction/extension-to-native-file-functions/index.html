@@ -6250,7 +6250,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7907,7 +7907,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8902,7 +8902,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8923,7 +8923,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10258,7 +10258,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10279,7 +10279,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10300,7 +10300,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10321,7 +10321,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10342,7 +10342,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10363,7 +10363,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10384,7 +10384,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10413,7 +10413,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10481,7 +10481,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68050,7 +68050,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68071,7 +68071,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68092,7 +68092,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68113,7 +68113,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70157,7 +70157,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70178,7 +70178,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70199,7 +70199,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70220,7 +70220,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71202,7 +71202,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71223,7 +71223,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71244,7 +71244,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71307,7 +71307,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71328,7 +71328,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71349,7 +71349,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71452,11 +71452,11 @@
                   
 
 
-<h1 class="heading"><span class="name"> Extension to Native File Functions</span></h1>
+<h1> Extension to Native File Functions</h1>
 
 <p><code>⎕NMOVE</code> and <code>⎕NCOPY</code> now provide a feature to run an APL function as a callback during processing. This is implemented by the ProgressCallback Variant option.</p>
-<h3 id="progresscallback-option">ProgressCallback Option</h3>
-<h3 id="overview">Overview</h3>
+<h2 id="progresscallback-option">ProgressCallback Option</h2>
+<h2 id="overview">Overview</h2>
 <p>If this option is enabled, the system function invokes an APL callback function as the file operation (move or copy) proceeds. A system object is used to communicate between the system function and the callback. The file operation has 4 distinct stages:</p>
 <ol>
 <li>The start of the operation. The callback is invoked before any files are scanned or processed. This gives the application the opportunity to set parameters that control the frequency of callbacks during the operation itself.</li>
@@ -71501,7 +71501,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="event">Event</h3>
+<h2 id="event">Event</h2>
 <p>Event is a character vector which indicates the stage of the copy or move operation..</p>
 <table>
 <tbody>
@@ -71524,7 +71524,7 @@
 </tbody>
 </table>
 <p>Note that there will always be at least 2 invocations of the callback, to indicate the start and end of the operation.</p>
-<h3 id="info">Info</h3>
+<h2 id="info">Info</h2>
 <p>Info is a ref to a namespace that contains information about the event. This namespace persists for the duration of the execution of the system function and contains the following fields:</p>
 <table>
 <tbody>
@@ -71550,7 +71550,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="options">Options</h3>
+<h2 id="options">Options</h2>
 <p>This is a namespace which contains options that control future invocations of the callback. The options persist between these invocations, so there is no need to set them again unless they should be changed. The fields and their default values are:</p>
 <table>
 <thead>

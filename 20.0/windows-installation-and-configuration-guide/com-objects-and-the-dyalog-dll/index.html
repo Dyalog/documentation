@@ -6248,7 +6248,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7905,7 +7905,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8900,7 +8900,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8921,7 +8921,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10256,7 +10256,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10277,7 +10277,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10298,7 +10298,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10319,7 +10319,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10340,7 +10340,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10361,7 +10361,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10382,7 +10382,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10411,7 +10411,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10479,7 +10479,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68048,7 +68048,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68069,7 +68069,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68090,7 +68090,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68111,7 +68111,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70155,7 +70155,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70176,7 +70176,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70197,7 +70197,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70218,7 +70218,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71200,7 +71200,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71221,7 +71221,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71242,7 +71242,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71305,7 +71305,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71326,7 +71326,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71347,7 +71347,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71450,18 +71450,18 @@
                   
 
 
-<h1 class="heading"><span class="name"> COM Objects and the Dyalog APL DLL</span></h1>
+<h1> COM Objects and the Dyalog APL DLL</h1>
 
-<h3 id="introduction">Introduction</h3>
+<h2 id="introduction">Introduction</h2>
 <p>Each different implementation of Dyalog contains two versions of the Dyalog APL Dynamic Link Library, a development version (Development DLL) and a run-time version (Run-Time DLL). For further details, see <a href="../files-and-directories/">Files</a>.</p>
 <p>In the remainder of this section, the term <em>Dyalog APL DLL</em> is used to refer to any one of these DLLs. The term <em>COM object</em> is used to refer to a Dyalog APL in-process OLE Server (OLEServer object) or a Dyalog APL ActiveX Control (ActiveXControl object).</p>
 <p>The Dyalog APL DLL is used to host COM objects and .NET objects written in Dyalog APL. Although this section describes how it operates with COM objects, much of this also applies when it hosts .NET objects. Further information is provided in the <em>.NET Interface Guide</em>.</p>
-<h3 id="classes-instances-and-namespace-cloning">Classes, Instances and Namespace Cloning</h3>
+<h2 id="classes-instances-and-namespace-cloning">Classes, Instances and Namespace Cloning</h2>
 <p>A COM object, whether written in Dyalog APL or not, represents a class. When a host application loads a COM object, it actually creates an instance of that class.</p>
 <p>When a host application creates an instance of a Dyalog APL COM object, the corresponding OLEServer or ActiveXControl namespace is cloned. If the host creates a second instance, the original namespace is cloned a second time.</p>
 <p>Cloned OLEServer and ActiveXControl namespaces are created in almost exactly the same way as those that you can make yourself using <code>⎕OR</code> and <code>⎕WC</code> except that they do not have separate names. In fact, each clone believes itself to be the one and only original OLEServer or ActiveXControl namespace, with the same name, and is completely unaware of the existence of other clones.</p>
 <p>Notice that cloning does not initially replicate all the objects within the OLEServer or ActiveXControl namespace. Instead, the objects inside the cloned namespaces are actually represented by pointers to the original objects in the original namespace. Only when an object is changed does any information get replicated. Typically, the only objects likely to differ from one instance to another are variables, so only one copy of the functions will exist in the workspace. This design enables many instances of a Dyalog APL COM object to exist without overloading the workspace.</p>
-<h3 id="workspace-management">Workspace Management</h3>
+<h2 id="workspace-management">Workspace Management</h2>
 <p>By default, the Dyalog APL DLL does not use a fixed maximum workspace size, but automatically increases the size of its active workspace as required. If you write a run-away COM object, or if there is insufficient computer memory available to load a new control, it is left to the host application or to Windows itself to deal with the situation.</p>
 <p>Nevertheless, it is possible to specify a value for <strong>maxws</strong> for the application in which the Dyalog APL DLL is embedded. This is achieved by defining a Registry key named:
 <div class="highlight"><pre><span></span><code><span class="nv">HKLM</span><span class="na">\</span><span class="nv">Software</span><span class="na">\</span><span class="nv">Dyalog</span><span class="na">\</span><span class="nv">Embedded</span><span class="na">\</span><span class="o">&lt;</span><span class="nv">appname</span><span class="o">&gt;</span>
@@ -71482,10 +71482,10 @@
 <li>Dyalog APL COM objects must not rely on variables or utility functions that were present in the root workspace when they were saved. These functions and variables will <em>not</em> be there when the object is run by the Dyalog APL DLL.</li>
 <li>A Dyalog APL COM object may <em>create</em> and subsequently <em>use</em> functions and variables in the root workspace, but if two different COM objects were to adopt the same policy, there is a danger that they would interfere with one another. The same is true for <code>⎕SE</code>.</li>
 </ol>
-<h3 id="multiple-com-objects-in-a-single-workspace">Multiple COM Objects in a Single Workspace</h3>
+<h2 id="multiple-com-objects-in-a-single-workspace">Multiple COM Objects in a Single Workspace</h2>
 <p>If your workspace contains several OLEServer or ActiveXControl objects which have the same ultimate parent namespace, the Dyalog APL DLL will copy them all into the active workspace at the time when the first one is instanced. If the host application requests a second COM object that is already in the workspace, the namespace tree is not copied again.</p>
 <p>If the workspace contains several OLEServer or ActiveXControl objects which have different ultimate parents, their namespace trees will be copied in separately.</p>
-<h3 id="parameters">Parameters</h3>
+<h2 id="parameters">Parameters</h2>
 <p>With the exception of <strong>maxws</strong> (see above) the Dyalog APL DLL does not read parameters from the registry, command-line or environment variables. This means that all such parameters will have their default values.</p>
 
 

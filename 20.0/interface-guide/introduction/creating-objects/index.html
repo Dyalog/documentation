@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68041,7 +68041,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68062,7 +68062,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68083,7 +68083,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68104,7 +68104,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70148,7 +70148,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70169,7 +70169,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70190,7 +70190,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70211,7 +70211,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71193,7 +71193,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71214,7 +71214,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71235,7 +71235,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71298,7 +71298,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71319,7 +71319,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71340,7 +71340,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71434,7 +71434,7 @@
                   
 
 
-<h1 class="heading"><span class="name"> Creating Objects</span></h1>
+<h1> Creating Objects</h1>
 
 <p>You create objects using <code>⎕WC</code>. Its left argument is a character vector that specifies the name of the object to be created. Its right argument specifies the object's Type and various other properties. Its (shy) result is the full pathname of the newly created object.</p>
 <p>The following statement creates a Form called <code>'f1'</code> with the title "A Default Form" and with default size, position, etc.
@@ -71444,7 +71444,7 @@
 <img alt="default form" src="../../img/default-form.png" />
 <figcaption><span>Figure&nbsp;1</span></figcaption>
 </figure>
-<h3 id="naming-objects">Naming Objects</h3>
+<h2 id="naming-objects">Naming Objects</h2>
 <p>Objects are created in a hierarchy. The Form we have just created is a "top-level" object to which we can attach other child objects, like buttons, scrollbars and so forth. You can create any number of top-level objects like this, up to a limit imposed by MS-Windows and your system configuration.</p>
 <p>For reasons which will become apparent later, there is a single Root object whose name is <code>'.'</code> (dot) or <code>'#'</code>. It acts a bit like the root directory in a Windows system file structure, and is the implied parent of all the top-level objects you create.</p>
 <p>When you create a top-level object, you don't actually have to specify that it is a child of the Root; this is implied. For any other object, you specify its position in the hierarchy by including the names of its "parent", "grand-parent", and so forth in its name.</p>
@@ -71455,11 +71455,11 @@
 <p>Complete object names must be unique, although you could use the same sub-name for two objects that have different parents. For example, it would be valid to have <code>'form1.btn1'</code> and <code>'form2.btn1'</code>.</p>
 <p>Apart from the "." separator, names may include any of the characters A-Z, a-z, and 0-9. They <strong>are</strong> case-sensitive, so <code>'Form1'</code> is not the same name as <code>'form1'</code>.</p>
 <p>For graphical objects, it is permissible to omit the last part of the name, although the parent name must be specified followed by a "." (dot). Further information is given later in this chapter.</p>
-<h3 id="specifying-properties">Specifying Properties</h3>
+<h2 id="specifying-properties">Specifying Properties</h2>
 <p>The right argument of <code>⎕WC</code> is a list of properties for the object being created. Apart from trivial cases, it is always a nested vector. The first item in the list must specify the object's Type. Other properties take default values and need not always be defined. Properties are discussed more fully in the next section.</p>
-<h3 id="saving-objects">Saving Objects</h3>
+<h2 id="saving-objects">Saving Objects</h2>
 <p>GUI Objects are <em>namespaces</em> with nameclass 9.2. Like any other namespace they are saved in the workspace when it is saved and rebuilt when the workspace is re-loaded. The expression <code>)OBJECTS</code> or <code>⎕NL 9.2</code> may be used to report their names. Like other namespaces, GUI objects may be copied from a saved workspace using <code>)COPY</code> or <code>⎕CY</code>.</p>
-<h3 id="the-object-hierarchy">The Object Hierarchy</h3>
+<h2 id="the-object-hierarchy">The Object Hierarchy</h2>
 <p>This example illustrates how an object hierarchy is defined. The following statements create a Form called <code>'accounts'</code> which contains a Group called <code>'type'</code> and some Buttons called <code>'PLAN'</code>, <code>'BUDGET'</code> and <code>'ACTUAL'</code>. The embedded spaces in these statements are intended only to improve clarity. The numbers refer to the object's position within its parent. This will be discussed in detail later.
 <div class="highlight"><pre><span></span><code><span class="s1">&#39;accounts&#39;</span><span class="w">             </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">&#39;Form&#39;</span><span class="w"> </span><span class="s1">&#39;Accounts&#39;</span>
 <span class="s1">&#39;accounts.type&#39;</span><span class="w">        </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">&#39;Group&#39;</span><span class="w"> </span><span class="s1">&#39;Account Type&#39;</span>

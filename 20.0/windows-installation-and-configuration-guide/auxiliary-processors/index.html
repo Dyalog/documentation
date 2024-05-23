@@ -6239,7 +6239,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7896,7 +7896,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8891,7 +8891,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8912,7 +8912,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10247,7 +10247,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10268,7 +10268,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10289,7 +10289,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10310,7 +10310,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10331,7 +10331,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10352,7 +10352,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10373,7 +10373,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10402,7 +10402,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10470,7 +10470,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68039,7 +68039,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68060,7 +68060,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68081,7 +68081,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68102,7 +68102,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70146,7 +70146,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70167,7 +70167,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70188,7 +70188,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70209,7 +70209,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71191,7 +71191,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71212,7 +71212,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71233,7 +71233,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71296,7 +71296,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71317,7 +71317,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71338,7 +71338,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71432,20 +71432,20 @@
                   
 
 
-<h1 class="heading"><span class="name"> Auxiliary Processors</span></h1>
+<h1> Auxiliary Processors</h1>
 
-<h3 id="introduction">Introduction</h3>
+<h2 id="introduction">Introduction</h2>
 <p>Auxiliary Processors (APs) are non-APL programs which provide Dyalog APL users with additional facilities. They run under the control of Dyalog APL.</p>
 <p>Typically, APs are used where speed of execution is critical, for utility libraries, or as interfaces to other products. APs may be written in any compiled language, although C is preferred and is directly supported.</p>
 <p>Dyalog would recommend that rather than creating APs, customers should now create DLLs (Dynamic Shared Libraries)/shared libraries. If very high performance is required, customers should consider DWA (Direct Workspace Access); contact support@dyalog.com for more information about DWA, including pre-requisite training courses.</p>
-<h3 id="starting-an-ap">Starting an AP</h3>
+<h2 id="starting-an-ap">Starting an AP</h2>
 <p>An Auxiliary Processor is invoked using the dyadic form of <code>⎕CMD</code>. The left argument to <code>⎕CMD</code> is the name of the program to be executed; the value of the <strong>WSPATH</strong> parameter is used to find the named file. In Dyalog APL/W, the right argument to <code>⎕CMD</code> is ignored.
 <div class="highlight"><pre><span></span><code><span class="w">        </span><span class="s1">&#39;xutils&#39;</span><span class="w"> </span><span class="nf">⎕CMD</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
 </code></pre></div></p>
 <p>On locating the specified program, Dyalog APL starts the AP and initialises a memory segment for communication between the workspace and the AP. This communication segment allows data to be passed from the workspace to the other process, and for results to be passed back. The AP then sends APL some information about its external functions (names, code numbers and calling syntax), which APL enters in the symbol table. APL then continues processing while the AP waits for instructions.</p>
-<h3 id="using-the-ap">Using the AP</h3>
+<h2 id="using-the-ap">Using the AP</h2>
 <p>Once established, an AP is used by making a reference to one of its external functions. An external function behaves as if it was a locked defined function, but it is in effect an entry point to the AP. When an external function is referenced, APL transmits a code number to the AP, followed by any arguments. The AP then takes over and performs the desired processing before posting the result back.</p>
-<h3 id="terminating-the-ap">Terminating the AP</h3>
+<h2 id="terminating-the-ap">Terminating the AP</h2>
 <p>An AP is terminated when all the last of its external functions is expunged from the active workspace. This could occur with the use of <code>)CLEAR</code>, <code>)LOAD</code>, <code>)ERASE</code>, <code>⎕EX</code>, <code>)OFF</code>, <code>)CONTINUE</code> or <code>⎕OFF</code>.</p>
 <p><strong>Example</strong></p>
 <p>Start an Auxiliary Processor called <code>EXAMPLE</code>. This fixes two external functions called <code>DATE_TO_IDN</code> and <code>IDN_TO_DATE</code> which deal with the conversion of International Day Numbers to Julian Dates.

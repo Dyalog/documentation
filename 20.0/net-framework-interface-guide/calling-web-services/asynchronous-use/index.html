@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -67963,7 +67963,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -67984,7 +67984,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68005,7 +68005,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68026,7 +68026,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70072,7 +70072,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70093,7 +70093,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70114,7 +70114,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70135,7 +70135,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71166,7 +71166,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71187,7 +71187,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71208,7 +71208,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71271,7 +71271,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71292,7 +71292,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71313,7 +71313,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71380,7 +71380,7 @@
                   
 
 
-<h1 class="heading"><span class="name"> Asynchronous Use</span></h1>
+<h1> Asynchronous Use</h1>
 
 <p>Web Services provide both synchronous (client calls the function and waits for a result) and asynchronous operation.</p>
 <p>Each method is exposed as a function with the same name (the synchronous version) together with a pair of functions with that name prefixed with <code>Begin</code> and <code>End</code> respectively.</p>
@@ -71408,7 +71408,7 @@
 <span class="w">      </span><span class="nv">LN</span><span class="na">.</span><span class="nv">EndCalcPayments</span><span class="w"> </span><span class="nv">A2</span>
 <span class="nv">LoanResult</span>
 </code></pre></div></p>
-<h3 id="using-a-callback">Using a callback</h3>
+<h2 id="using-a-callback">Using a callback</h2>
 <p>The simple approach described above is not always practical. If it can take a significant amount of time for the web service to respond, you may prefer to have the system notify you, via a callback function, when the result from the method is available.</p>
 <p>The example function <code>TestAsyncLoan</code> in the workspace <code>samples\asp.net\webservices\webservices.dws</code> illustrates how you can do this. It is somewhat artificial, but hopefully explains the mechanism that is involved.</p>
 <p><code>TestAsyncLoan</code> itself is just a convenience function that calls <code>AsyncLoan</code> with suitable arguments. <code>TestAsyncLoan</code> takes an argument of 1 or 0 that determines whether or not a Proxy class for <code>LoanService</code> is to be built.

@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68032,7 +68032,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68053,7 +68053,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68074,7 +68074,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68095,7 +68095,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70139,7 +70139,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70160,7 +70160,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70181,7 +70181,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70202,7 +70202,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71184,7 +71184,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71205,7 +71205,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71226,7 +71226,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71289,7 +71289,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71310,7 +71310,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71331,7 +71331,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71416,10 +71416,10 @@
                   
 
 
-<h1 class="heading"><span class="name"> Using OLE Objects without Type Information</span></h1>
+<h1> Using OLE Objects without Type Information</h1>
 
 <p>Even if an OLE Object fails to provide Type Information, either using early or late binding, you will still be able to access its methods and properties using a secondary form of late binding  or SetMethodInfo and SetPropertyInfo as follows.</p>
-<h3 id="secondary-late-binding">Secondary Late Binding<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></h3>
+<h2 id="secondary-late-binding">Secondary Late Binding<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></h2>
 <p>If you refer to a name inside the OLEClient namespace that would otherwise generate a <code>VALUE ERROR</code>, and there is no Type information available for that name, APL asks the COM object if it has a member (method or property) of that name.</p>
 <p>The mechanism permits APL to determine only that the member is exported; it says nothing about its type (method or property) nor its syntax. If the response from the COM object is positive, APL therefore makes the most general assumption possible, namely:</p>
 <ul>
@@ -71429,10 +71429,10 @@
 <li>That the method returns a result.</li>
 </ul>
 <p>This means that if you know, from its documentation or another source, that a COM object provides a certain Method or Property, you may therefore access that member by simply calling a function of that name in the OLEClient namespace. Note that any parameters you pass will be returned in the result, because APL assumes that all parameters are input/output. Furthermore, APL will be unable to check the validity of the parameters you specify because it does not know what data types are expected.</p>
-<h3 id="setmethodinfo-and-setpropertyinfo">SetMethodInfo and SetPropertyInfo</h3>
+<h2 id="setmethodinfo-and-setpropertyinfo">SetMethodInfo and SetPropertyInfo</h2>
 <p>The SetMethodInfo and SetPropertyInfo methods provide a mechanism for you to precisely specify the missing Type Information for the methods and properties that you wish to use. See <em>Object Reference</em> for further details.</p>
 <p>Note that whether you use late binding or SetMethodInfo/SetPropertyInfo, any sub-object namespaces that you create by invoking the methods and properties in the top-level object, will also have no visible methods and properties. Therefore, if the Type Information is missing, Late Binding or SetMethodInfo and SetPropertyInfo must be used to access all the methods and properties that you wish to use, wherever they occur in the object hierarchy.</p>
-<h3 id="events">Events</h3>
+<h2 id="events">Events</h2>
 <p>When type library information is available, Dyalog APL automatically connects the appropriate event sinks and establishes the EventList property for the object when it is created. However, if the COM object does not declare its event sinks in a type library, or if the LateBind property were set to 1, it is necessary to connect to them manually. To support these cases, the following methods are used. These apply to top-level COM objects and to the namespaces associated with any other COM objects exposed by them.</p>
 <table>
 <thead>

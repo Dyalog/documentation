@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68115,7 +68115,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68136,7 +68136,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68157,7 +68157,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68178,7 +68178,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70222,7 +70222,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70243,7 +70243,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70264,7 +70264,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70285,7 +70285,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71267,7 +71267,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71288,7 +71288,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71309,7 +71309,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71372,7 +71372,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71393,7 +71393,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71414,7 +71414,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71508,14 +71508,14 @@
                   
 
 
-<h1 class="heading"><span class="name">Native File Create</span><span class="command">{R}←X ⎕NCREATE Y</span></h1>
+<h1 class="heading"><span class="name">Native File Create</span> <span class="command">{R}←X ⎕NCREATE Y</span></h1>
 
 <p>This function creates a new file. Under Windows the file is opened with mode 66 (see <a href="../ntie/">Native File Tie</a>). Under non-Windows operating systems the current umask will specify the file permissions. The name of the new file is specified by the left argument <code>X</code> which must be a simple character vector or scalar containing a valid pathname for the file.</p>
 <p><code>Y</code> is 0 or a negative integer value that specifies an (unused) tie number by which the file may subsequently be referred. If <code>Y</code> is 0, the system allocates the first (closest to zero) available tie number which is returned as the result.</p>
 <p>The shy result of <code>⎕NCREATE</code> is the tie number of the new file.</p>
-<h4 id="variant-options">Variant Options</h4>
+<h2 id="variant-options">Variant Options</h2>
 <p><code>⎕NCREATE</code> may be applied using the  Variant operator with the options Unique and IfExists. There is no primary option.</p>
-<h4 id="unique-option-boolean">Unique Option (Boolean)</h4>
+<h2 id="unique-option-boolean">Unique Option (Boolean)</h2>
 <table>
 <tbody>
 <tr>
@@ -71528,7 +71528,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="ifexists-option-character-vector">IfExists Option (character vector)</h4>
+<h2 id="ifexists-option-character-vector">IfExists Option (character vector)</h2>
 <table>
 <tbody>
 <tr>
@@ -71560,7 +71560,7 @@
 <span class="m">¯1</span><span class="w"> </span><span class="nv">myfile</span><span class="w">      </span>
 <span class="m">¯2</span><span class="w"> </span><span class="nv">myfile52c36z</span>
 </code></pre></div></p>
-<h4 id="notes">Notes</h4>
+<h2 id="notes">Notes</h2>
 <ul>
 <li>Setting IfExists to <code>Replace</code> has no effect when Unique is 1, because the file cannot already exist.</li>
 <li>The IfExists option does not affect the operation of <em>slippery ties</em>.</li>

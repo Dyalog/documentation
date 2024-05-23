@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68059,7 +68059,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68080,7 +68080,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68101,7 +68101,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68122,7 +68122,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70166,7 +70166,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70187,7 +70187,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70208,7 +70208,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70229,7 +70229,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71211,7 +71211,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71232,7 +71232,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71253,7 +71253,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71316,7 +71316,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71337,7 +71337,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71358,7 +71358,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71470,10 +71470,10 @@
                   
 
 
-<h1 class="heading"><span class="name"> Methods</span></h1>
+<h1> Methods</h1>
 
 <p>When you create an instance of a COM object, the methods and the properties are directly accessible from the corresponding namespace.</p>
-<h3 id="calling-methods">Calling Methods</h3>
+<h2 id="calling-methods">Calling Methods</h2>
 <p>You invoke a method in an OLE object as if it were an APL function in your workspace.</p>
 <p>If a method takes no parameters, you must invoke it as if it were niladic.</p>
 <p>If a method takes parameters, you must call it as if it were monadic. Each element of its argument corresponds to each of the method's parameters.</p>
@@ -71483,11 +71483,11 @@
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nv">OpenDatabase</span><span class="w"> </span><span class="s1">&#39;c:\example.mdb&#39;</span><span class="w"> </span><span class="c1">⍝only if ⎕WX is 0 or 1</span>
 <span class="w">     </span><span class="nv">OpenDatabase</span><span class="w"> </span><span class="o">⊂</span><span class="s1">&#39;c:\example.mdb&#39;</span><span class="c1">⍝any value of ⎕WX</span>
 </code></pre></div></p>
-<h3 id="arrays-and-pointers">Arrays and Pointers</h3>
+<h2 id="arrays-and-pointers">Arrays and Pointers</h2>
 <p>Many parameters to OLE methods are specified by pointers. If, for example, the parameter type is VT_BSTR, it means that the calling routine must supply a pointer to (i.e. the address of) a character string.</p>
 <p>Similarly, if the parameter type is defined to be VT_VARIANT, it means that the parameter is the address of an arbitrary array (the VT_VARIANT data type actually maps nicely onto a Dyalog APL nested array).</p>
 <p>The rule is that if a pointer is required, APL will provide it automatically; you do not have to do so. Instead, all you do is supply the value.</p>
-<h3 id="optional-parameters">Optional Parameters</h3>
+<h2 id="optional-parameters">Optional Parameters</h2>
 <p>Methods are often defined to have optional parameters. For example the parameters defined for the OpenDatabase method provided by the DAO.DBEngine OLE object are:
 <div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nv">Name</span><span class="w">         </span><span class="nv">VT_BSTR</span><span class="w">     </span>
 <span class="w"> </span><span class="sr">[</span><span class="nv">Exclusive</span><span class="sr">]</span><span class="w">  </span><span class="nv">VT_VARIANT</span><span class="w">  </span>
@@ -71503,12 +71503,12 @@
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Idle</span><span class="w"> </span><span class="no">⍬</span>
 </code></pre></div></p>
 <p>Note that you cannot therefore call a function in an <em>APL</em> server with a single argument that is an empty numeric vector.</p>
-<h3 id="output-parameters">Output Parameters</h3>
+<h2 id="output-parameters">Output Parameters</h2>
 <p>You may encounter parameters whose data type is defined explicitly as a pointer to something else, for example VT_PTR to VT_UI4 specifies a pointer to an unsigned 4-byte integer.</p>
 <p>In these cases, it usually means that the calling routine is expected to pass an address into which the OLE method will place a value.</p>
 <p>When you invoke the method you must use data of the type pointed to.</p>
 <p>The result of the method is then a vector containing the result defined for the method, followed by the (new) values of the output parameters. This is similar to the mechanism used by <code>⎕NA</code>.</p>
-<h3 id="named-parameters">Named Parameters</h3>
+<h2 id="named-parameters">Named Parameters</h2>
 <p>Visual Basic syntax allows you to specify parameters by position or by name; rather like <code>⎕WC</code> and <code>⎕WS</code>. For example the parameters defined for the OpenDatabase method provided by the DAO.DBEngine OLE object are:
 <div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nv">Name</span><span class="w">         </span><span class="nv">VT_BSTR</span><span class="w">     </span>
 <span class="w"> </span><span class="sr">[</span><span class="nv">Exclusive</span><span class="sr">]</span><span class="w">  </span><span class="nv">VT_VARIANT</span><span class="w">  </span>
@@ -71523,7 +71523,7 @@
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">OpenDatabase</span><span class="p">(</span><span class="s1">&#39;Name&#39;</span><span class="w"> </span><span class="s1">&#39;c:\example.mdb&#39;</span><span class="p">)(</span><span class="s1">&#39;ReadOnly&#39;</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 </code></pre></div></p>
 <p>Note that you may only use named parameters if they are supported by the method. Many methods do not allow them.</p>
-<h3 id="methods-that-return-objects">Methods that return Objects</h3>
+<h2 id="methods-that-return-objects">Methods that return Objects</h2>
 <p>Object hierarchies in OLE are not static, but are created dynamically by calling methods that return objects as their result.</p>
 <p>If the data type of the result of a method is a pre-defined object type, or VT_DISPATCH or VT_COCLASS, or VT_PTR to VT_DISPATCH or VT_PTR to VT_COCLASS, the result returned to APL is a <em>namespace</em>. If the result is assigned to a name, the value associated with that name becomes a <em>namespace reference</em>. For example, GetMethodInfo tells us that the syntax for the OpenDatabase method provided by the OLE object DAO.DBEngine is as follows:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="w"> </span><span class="nv">DB</span><span class="na">.</span><span class="nv">GetMethodInfo</span><span class="w"> </span><span class="s1">&#39;OpenDatabase&#39;</span>

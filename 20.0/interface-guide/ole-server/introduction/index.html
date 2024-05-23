@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68050,7 +68050,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68071,7 +68071,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68092,7 +68092,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68113,7 +68113,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70157,7 +70157,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70178,7 +70178,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70199,7 +70199,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70220,7 +70220,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71202,7 +71202,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71223,7 +71223,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71244,7 +71244,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71307,7 +71307,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71328,7 +71328,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71349,7 +71349,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71452,16 +71452,16 @@
                   
 
 
-<h1 class="heading"><span class="name"> Introduction</span></h1>
+<h1> Introduction</h1>
 
 <p>This chapter describes how you can write an OLE Automation Server in Dyalog APL.</p>
 <p>OLE objects are represented in Dyalog APL by namespaces. There is a direct correspondence between the object model and Dyalog APL namespace technology, a correspondence that is thoroughly exploited in the implementation of OLE Automation.</p>
 <p>An OLE object is simply a collection of methods (code that performs tasks) and properties (data that affects behaviour). An object corresponds directly to a Dyalog APL namespace which contains functions that do things and variables that affect things. Furthermore, OLE objects are hierarchical in nature; objects may contain sub-objects just as namespaces may contain sub-namespaces. To complete the picture, an OLE Server is an application that provides (exposes) one or more OLE objects. Thus an OLE Server corresponds directly to a workspace that contains one or more namespaces.</p>
 <p>However, when you access an OLE object, you do so by creating an instance of its class and you may work with several instances at the same time. Furthermore, several applications may access the same OLE object at the same time, each with its own set of instances. Each instance inherits its methods (functions) and the initial values of its properties from the class. However, different property values will soon be established in different instances so they must be maintained separately.</p>
 <p>Dyalog APL/W includes the capability for a namespace to spawn instances of itself. Initially, a new instance is simply a pointer to the original namespace (not a copy), but as soon as anything in it is changed, the new value is recorded separately. Thus instance namespaces will typically share functions but maintain separate sets of data.</p>
-<h3 id="out-of-process-and-in-process-ole-servers">Out-of-Process and In-Process OLE Servers</h3>
+<h2 id="out-of-process-and-in-process-ole-servers">Out-of-Process and In-Process OLE Servers</h2>
 <p>Dyalog APL allows you to create both out-of-process OLE Servers and in-process OLE Servers. An out-of-process OLE Server runs as a completely separate Windows program that communicates with one or more client programs. An in-process OLE Server is implemented as a Dynamic Link Library (DLL) that is loaded into the client process and becomes part of its address space.</p>
-<h3 id="writing-an-apl-ole-server">Writing an APL OLE Server</h3>
+<h2 id="writing-an-apl-ole-server">Writing an APL OLE Server</h2>
 <p>The following steps are required to create an OLE Automation Server in Dyalog APL/W:</p>
 <ol>
 <li>
@@ -71473,10 +71473,10 @@
 <li>For each of the functions and variables that you wish to expose as methods and properties of your object, you must declare the data types of their parameters and results. You can do this manually, using the COM Properties tab of the Object Properties dialog box, or by invoking the SetFnInfo and SetVarInfo methods. Note that non-exported functions and variables, sub-namespaces and defined operators may be used internally, but are not available directly to an OLE Automation client. It is also possible to generate events from an OLEServer. The mechanism is the same as for an ActiveXControl and is described in the next chapter.</li>
 <li>Select Export from the Session File menu and choose in-process or out-of-process COM Server as you prefer.</li>
 </ol>
-<h3 id="deploying-an-apl-ole-server">Deploying an APL OLE Server</h3>
+<h2 id="deploying-an-apl-ole-server">Deploying an APL OLE Server</h2>
 <p>An in-process Dyalog COM Server uses  the dynamic-link library version of the Dyalog interpreter  which must be present in the same directory as your .dll, so you must copy the appropriate version there. You may use either the Development DLL or the Run-Time DLL. If you choose to use the Development DLL, you will also need to copy the DyaRes DLL which it uses.</p>
 <p>An out-of-process Dyalog COM Server consists of your workspace and the associated type library (.tlb) file which is created when you export it. The workspace requires the  Development EXE or the  Run-Time EXE, which must be in the same directory as your workspace and type library file.</p>
-<h3 id="rules-for-exported-functions">Rules for Exported Functions</h3>
+<h2 id="rules-for-exported-functions">Rules for Exported Functions</h2>
 <p>There are certain fundamental differences between OLE syntax and APL syntax.</p>
 <p>For example, OLE methods may take any number of arguments whereas APL is confined to two; a left and a right.</p>
 <p>Secondly, some of the arguments or even all of the arguments to an OLE method may be optional. You cannot however call a monadic APL function with no arguments; in APL there is a clear distinction between niladic functions and functions that take an argument.</p>
@@ -71490,7 +71490,7 @@
 </ol>
 <p>The main advantage of an in-process OLE Server is that communication between the client application and the OLE Server is fast. Communication between clients and out-of-process OLE Servers has to go through a separate OLE layer in Windows that incurs a certain overhead. Another advantage is that in-process OLE Servers are simpler to administer and simpler to install.</p>
 <p>The main disadvantages of in-process OLE Servers is that there can only be one client per server and they do not support DCOM directly.</p>
-<h3 id="classid-typelibid-and-other-properties">ClassID, TypeLibID and other properties</h3>
+<h2 id="classid-typelibid-and-other-properties">ClassID, TypeLibID and other properties</h2>
 <p>Windows COM objects are identified using a system of Globally Unique Identifiers (GUIDs). When you create an OLEServer object using <code>⎕WC</code>, APL creates a number of GUIDs and allocates them to the OLE Server. One of these is a Class Identifier (often abbreviated to CLSID) that will uniquely identify your OLE object. This is stored in the ClassID property of the OLEServer. Another GUID identifies the Dispatch interface of the object but is not available via a property.</p>
 <p>An out-of-process COM server requires a separate Type Library file. This is a binary file that describes the methods (functions) and properties (variables) exposed by the OLEServer namespace(s) in the workspace. The Type Library is identified by a GUID and by its file name. The file name (which is constructed from the workspace name with a .TLB extension) is stored in the TypeLibFile property of the OLEServer namespace. The GUID is generated when it is first needed and is stored in the TypeLibFileID property of the OLEServer namespace. Note that if the workspace contains several OLEServer objects, their TypeLibFile and TypelLibID properties all have the same values.</p>
 

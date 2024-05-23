@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68175,7 +68175,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68196,7 +68196,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68217,7 +68217,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68238,7 +68238,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70282,7 +70282,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70303,7 +70303,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70324,7 +70324,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70345,7 +70345,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71327,7 +71327,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71348,7 +71348,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71369,7 +71369,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71432,7 +71432,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71453,7 +71453,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71474,7 +71474,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71598,13 +71598,13 @@
                   
 
 
-<h1 class="heading"><span class="name">Class</span><span class="command">R←{X}⎕CLASS Y</span></h1>
+<h1 class="heading"><span class="name">Class</span> <span class="command">R←{X}⎕CLASS Y</span></h1>
 
-<h4 id="monadic-case">Monadic Case</h4>
+<h2 id="monadic-case">Monadic Case</h2>
 <p>Monadic <code>⎕CLASS</code> returns a list of references to Classes and Interfaces that specifies the class hierarchy for the Class or Instance specified by <code>Y</code>.</p>
 <p><code>Y</code> must be a reference to a Class or to an Instance of a Class.</p>
 <p><code>R</code> is a vector of vectors whose items represent nodes in the Class hierarchy of <code>Y</code>. Each item of <code>R</code> is a vector whose first item is a Class reference and whose subsequent items (if any) are references to the Interfaces supported by that Class.</p>
-<h4 id="example-1">Example 1</h4>
+<h2 id="example-1">Example 1</h2>
 <p>This example illustrates a simple inheritance tree or Class hierarchy. There are 3 Classes, namely:
 <div class="highlight"><pre><span></span><code><span class="nv">Animal</span>
 <span class="w">    </span><span class="nv">Bird</span><span class="w"> </span><span class="p">(</span><span class="nv">derived</span><span class="w"> </span><span class="nv">from</span><span class="w"> </span><span class="nv">Animal</span><span class="p">)</span>
@@ -71632,17 +71632,17 @@
 <span class="w">      </span><span class="nf">⎕CLASS</span><span class="na">¨</span><span class="w"> </span><span class="nv">Parrot</span><span class="w"> </span><span class="nv">Animal</span>
 <span class="w">   </span><span class="c1">#.Parrot    #.Bird    #.Animal      #.Animal</span>
 </code></pre></div></p>
-<h5 id="example-2">Example 2</h5>
+<h3 id="example-2">Example 2</h3>
 <p>The Penguin Class example (see<a href="../../../programming-reference-guide/object-oriented-programming/interfaces/interface-example">Programmer's Guide: "Penguin Class Example"</a>) illustrates the use of Interfaces.</p>
 <p>In this case, the <code>Penguin</code> Class derives from <code>Animal</code> (as above) but additionally supports the <code>BirdBehaviour</code> and <code>FishBehaviour</code> Interfaces, thereby inheriting members from both.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Pingo</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Penguin</span>
 <span class="w">      </span><span class="nf">⎕CLASS</span><span class="w"> </span><span class="nv">Pingo</span>
 <span class="w">  </span><span class="c1">#.Penguin  #.FishBehaviour  #.BirdBehaviour    #.Animal</span>
 </code></pre></div></p>
-<h4 id="dyadic-case">Dyadic Case</h4>
+<h2 id="dyadic-case">Dyadic Case</h2>
 <p>If <code>X</code> is specified, <code>Y</code> must be a reference to an Instance of a Class and <code>X</code> is a reference to an Interface that is supported by Instance <code>Y</code> or to a Class upon which Instance <code>Y</code> is based.</p>
 <p>In this case, <code>R</code> is a reference to the implementation of Interface <code>X</code> by Instance <code>Y</code>, or to the implementation of (Base) Class <code>X</code> by Instance <code>Y</code>, and is used as a <em>cast</em> in order to access members of <code>Y</code> that correspond to members of Interface of (Base) Class <code>X</code>.</p>
-<h5 id="example-1_1">Example 1</h5>
+<h4 id="example-1_1">Example 1</h4>
 <p>Once again, the Penguin Class example (see<a href="../../../programming-reference-guide/object-oriented-programming/interfaces/interface-example">Programmer's Guide: "Penguin Class Example"</a>) is used to illustrate the use of Interfaces.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Pingo</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Penguin</span>
 <span class="w">      </span><span class="nf">⎕CLASS</span><span class="w"> </span><span class="nv">Pingo</span>
@@ -71657,7 +71657,7 @@
 <span class="w">      </span><span class="p">(</span><span class="nv">BirdBehaviour</span><span class="w"> </span><span class="nf">⎕CLASS</span><span class="w"> </span><span class="nv">Pingo</span><span class="p">)</span><span class="na">.</span><span class="nv">Sing</span>
 <span class="nv">Croak</span><span class="o">,</span><span class="w"> </span><span class="nv">Croak</span><span class="o">!</span><span class="w">           </span>
 </code></pre></div></p>
-<h5 id="example-2_1">Example 2</h5>
+<h4 id="example-2_1">Example 2</h4>
 <p>This example illustrates the use of dyadic <code>⎕CLASS</code> to cast an Instance to a lower Class and thereby access a member in the lower Class that has been superseded by another Class higher in the tree.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Polly</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DomesticParrot</span>
 <span class="w">      </span><span class="nv">Polly</span><span class="na">.</span><span class="nv">Speak</span>

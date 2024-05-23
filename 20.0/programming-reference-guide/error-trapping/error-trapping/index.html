@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7822,7 +7822,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8817,7 +8817,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8838,7 +8838,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10173,7 +10173,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10194,7 +10194,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10215,7 +10215,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10236,7 +10236,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10257,7 +10257,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10278,7 +10278,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10299,7 +10299,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10328,7 +10328,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10396,7 +10396,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68032,7 +68032,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68053,7 +68053,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68074,7 +68074,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68095,7 +68095,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70139,7 +70139,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70160,7 +70160,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70181,7 +70181,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70202,7 +70202,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71184,7 +71184,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71205,7 +71205,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71226,7 +71226,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71289,7 +71289,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71310,7 +71310,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71331,7 +71331,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71416,7 +71416,7 @@
                   
 
 
-<h1 class="heading"><span class="name"> Error Trapping Concepts</span></h1>
+<h1> Error Trapping Concepts</h1>
 
 <p>The purpose of this section is to show some of the ways in which the ideas of error trapping can be used to great effect to change the flow of control in a system.</p>
 <p>First, we must have an idea of what is meant by error trapping. We are all used to entering some duff APL code, and seeing a (sometimes) rather obscure, esoteric error message echoed back:
@@ -71428,7 +71428,7 @@
 <p>This message is ideal for the APL programmer, but not so for the end user. We need a way to bypass the default action of APL, so that we can take an action of our own, thereby offering the end user a more meaningful message.</p>
 <p>Every error message reported by Dyalog APL has a corresponding error number (for a list of error codes and message, see <code>⎕TRAP</code>, Language Reference). Many of these error numbers plus messages are common across all versions of APL. We can see that the code for <code>DOMAIN ERROR</code> is 11, whilst <code>LENGTH ERROR</code> has code 5.</p>
 <p>Dyalog APL provides two distinct but related mechanisms for the trapping and control of errors. The first is based on the control structure <code>:Trap ... :EndTrap</code>, and the second, on the system variable <code>⎕TRAP</code>. The control structure is easier to administer and so is recommended for normal use, while the system variable provides slightly finer control and may be necessary for specialist applications.</p>
-<h3 id="last-error-number-and-diagnostic-message">Last Error number and Diagnostic Message</h3>
+<h2 id="last-error-number-and-diagnostic-message">Last Error number and Diagnostic Message</h2>
 <p>Dyalog APL keeps a note of the last error that occurred, and provides this information through system functions: <code>⎕EN</code>, <code>⎕EM</code> and <code>⎕DM</code>.
 <div class="highlight"><pre><span></span><code><span class="w">         </span><span class="m">10</span><span class="o">÷</span><span class="m">0</span>
 <span class="w">   </span><span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span>
@@ -71461,7 +71461,7 @@
 <span class="w">         </span><span class="m">10</span><span class="o">÷</span><span class="m">0</span>
 <span class="w">        </span><span class="err">^</span>
 </code></pre></div></p>
-<h3 id="error-trapping-control-structure">Error Trapping Control Structure</h3>
+<h2 id="error-trapping-control-structure">Error Trapping Control Structure</h2>
 <p>You can embed a number of lines of code in a <code>:Trap</code> control structure within a defined function.
 <div class="highlight"><pre><span></span><code><span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="na">...</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="m">0</span>
@@ -71510,7 +71510,7 @@
 <span class="w">   </span><span class="sr">[</span><span class="m">9</span><span class="sr">]</span><span class="w">       </span><span class="s1">&#39;Unexpected Error&#39;</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">10</span><span class="sr">]</span><span class="w">  </span><span class="bp">:</span><span class="nv">EndTrap</span>
 </code></pre></div></p>
-<h3 id="trap-system-variable-trap">Trap System Variable: <code>⎕TRAP</code></h3>
+<h2 id="trap-system-variable-trap">Trap System Variable: <code>⎕TRAP</code></h2>
 <p>The second way of trapping errors is to use the system variable: <code>⎕TRAP</code>.</p>
 <p><code>⎕TRAP</code>, can be assigned a nested vector of <strong>trap specifications</strong>. Each trap specification is itself a nested vector, of length 3, with each element defined as:</p>
 <table>

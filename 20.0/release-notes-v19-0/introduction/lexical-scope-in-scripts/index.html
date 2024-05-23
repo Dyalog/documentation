@@ -6232,7 +6232,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7889,7 +7889,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8884,7 +8884,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8905,7 +8905,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10240,7 +10240,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10261,7 +10261,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10282,7 +10282,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10303,7 +10303,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10324,7 +10324,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10345,7 +10345,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10366,7 +10366,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10395,7 +10395,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10463,7 +10463,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68032,7 +68032,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68053,7 +68053,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68074,7 +68074,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68095,7 +68095,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70139,7 +70139,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70160,7 +70160,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70181,7 +70181,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70202,7 +70202,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71184,7 +71184,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71205,7 +71205,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71226,7 +71226,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71289,7 +71289,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71310,7 +71310,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71331,7 +71331,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71416,11 +71416,11 @@
                   
 
 
-<h1 class="heading"><span class="name"> Lexical Scope in Scripts</span></h1>
+<h1> Lexical Scope in Scripts</h1>
 
-<h3 id="historical-note">Historical Note</h3>
+<h2 id="historical-note">Historical Note</h2>
 <p>Lexical scope in scripts has been part of Dyalog since the implementation of Object Oriented Programming in Version 11.0, and is only partially documented.  See <a href="../../../programming-reference-guide/object-oriented-programming/namespace-scripts/namespace-scripts">Namespace Scripts</a>. This section provides additional explanation and extends the discussion to Classes.</p>
-<h3 id="introduction">Introduction</h3>
+<h2 id="introduction">Introduction</h2>
 <p>Objects (Namespaces and Classes) that are defined using scripts, either in the workspace or in script files, may include nested objects (sub-namespaces and sub-classes). If so, Dyalog applies a form of lexical scope to all these objects to allow them to reference one another. Dyalog otherwise uses dynamic scope  – see <a href="https://en.wikipedia.org/wiki/Scope_(computer_science)">https://en.wikipedia.org/wiki/Scope_(computer_science</a><a href="https://en.wikipedia.org/wiki/Scope_(computer_science)">)</a>.</p>
 <p>This feature makes it possible to implement a class structure, in which members of the class tree may access one another, and it provides a way for classes to share data stored in a namespace.</p>
 <p>When Dyalog fixes nested classes and namespaces in a script, references between parent and child objects are inserted to allow them to reference one another, preventing what would otherwise be <code>VALUE ERROR</code>. For example:
@@ -71492,7 +71492,7 @@
 <span class="nv">Andy</span><span class="w"> </span><span class="nv">cannot</span><span class="w"> </span><span class="nv">see</span><span class="w"> </span><span class="nv">NameAsField</span>
 <span class="nv">Andy</span><span class="w"> </span><span class="nv">cannot</span><span class="w"> </span><span class="nv">see</span><span class="w"> </span><span class="nv">NameAsVariable</span>
 </code></pre></div></p>
-<h3 id="variant-options-for-fix">Variant Options for <code>⎕FIX</code></h3>
+<h2 id="variant-options-for-fix">Variant Options for <code>⎕FIX</code></h2>
 <p>Despite the essential benefits of lexical scope, there are circumstances in which it is undesirable and <code>⎕FIX</code>  provides fine control over the insertion of references. See <a href="../../language-reference-changes/fix/">InjectReferences Option</a>.</p>
 <p>Note that the ability to control lexical scope in this way applies only to <code>⎕FIX</code>. When a nested script is fixed by the Editor, the default lexical scope (InClasses) is applied. If, after fixing a script from the Editor, you wish to apply a different option (All or None) it is necessary to re-fix the script using <code>⎕FIX 62 ATX 'name'</code>.</p>
 

@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68059,7 +68059,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68080,7 +68080,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68101,7 +68101,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68122,7 +68122,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70166,7 +70166,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70187,7 +70187,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70208,7 +70208,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70229,7 +70229,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71211,7 +71211,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71232,7 +71232,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71253,7 +71253,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71316,7 +71316,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71337,7 +71337,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71358,7 +71358,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71470,7 +71470,7 @@
                   
 
 
-<h1 class="heading"><span class="name"> The LOAN Workspace</span></h1>
+<h1> The LOAN Workspace</h1>
 
 <p><code>LOAN.DWS</code> contains a single namespace called <code>Loan</code> which is used to calculate monthly repayments on a loan. As supplied, LOAN is a pure APL workspace. You will have to turn it into an OLE Server, and declare a method and a property, before you can use it.</p>
 <p>The <code>Loan</code> namespace contains a single function <code>CalcPayments</code> and a variable <code>PeriodType</code>.</p>
@@ -71484,7 +71484,7 @@
 </ol>
 <p><code>CalcPayments</code> also uses the "global" variable <code>PeriodType</code> which specifies whether the periods (above) are years or months.  This is done solely to illustrate how another application can manipulate an APL object via its variables (properties) as well as by calling its functions (methods).</p>
 <p><code>CalcPayments</code> returns a matrix.  The first row contains the period numbers (from min to max).  The first column contains the interest rates (from min to max in steps of 0.5%). Other elements contain the monthly repayments for the corresponding number of periods and interest rates.</p>
-<h3 id="using-calcpayments">Using CalcPayments</h3>
+<h2 id="using-calcpayments">Using CalcPayments</h2>
 <p>The following session transcript illustrates how the <code>CalcPayments</code> function is used.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">LOAN</span>
 <span class="nv">C</span><span class="bp">:</span><span class="na">\...\</span><span class="nv">samples</span><span class="na">\</span><span class="nv">ole</span><span class="na">\</span><span class="nv">loan</span><span class="na">.</span><span class="nv">dws</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="na">...</span>
@@ -71508,7 +71508,7 @@
 <span class="m">5.5</span><span class="w"> </span><span class="m">301.959018</span><span class="w">  </span><span class="m">232.5647523</span><span class="w"> </span><span class="m">191.0116217</span>
 <span class="m">6</span><span class="w">   </span><span class="m">304.2193745</span><span class="w"> </span><span class="m">234.8502905</span><span class="w"> </span><span class="m">193.3280153</span>
 </code></pre></div></p>
-<h3 id="the-calcpayments-function">The CalcPayments Function</h3>
+<h2 id="the-calcpayments-function">The CalcPayments Function</h2>
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">PAYMENTS</span><span class="kd">←</span><span class="nv">CalcPayments</span><span class="w"> </span><span class="nv">X</span><span class="sr">;</span><span class="nv">LoanAmt</span><span class="sr">;</span><span class="nv">LenMax</span><span class="sr">;</span><span class="nv">LenMin</span><span class="sr">;</span><span class="nv">IntrMax</span><span class="sr">;</span>
 <span class="w">                </span><span class="nv">IntrMin</span><span class="sr">;</span><span class="nv">PERIODS</span><span class="sr">;</span><span class="nv">INTEREST</span><span class="sr">;</span><span class="nv">NI</span><span class="sr">;</span><span class="nv">NM</span><span class="sr">;</span><span class="nv">PER</span><span class="sr">;</span><span class="nv">INT</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Calculates loan repayments</span>
@@ -71536,7 +71536,7 @@
 <span class="sr">[</span><span class="m">23</span><span class="sr">]</span><span class="w">   </span><span class="nv">PAYMENTS</span><span class="kd">←</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="nv">INT</span><span class="p">)</span><span class="o">,</span><span class="nv">PAYMENTS</span>
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
-<h3 id="registering-loan-as-an-ole-server">Registering Loan as an OLE Server</h3>
+<h2 id="registering-loan-as-an-ole-server">Registering Loan as an OLE Server</h2>
 <p>To use this example, you <strong>must</strong> first</p>
 <ol>
 <li>Convert the <code>Loan</code> namespace into an OLEServer object.</li>
@@ -71593,7 +71593,7 @@
 <img alt="loan create bound file ok" src="../../img/loan-create-bound-file-ok.png" />
 <figcaption><span>Figure&nbsp;5</span></figcaption>
 </figure>
-<h3 id="using-loan-from-excel">Using Loan from Excel</h3>
+<h2 id="using-loan-from-excel">Using Loan from Excel</h2>
 <p>Start Excel and load the spreadsheet Loan.xlsm from the Dyalog APL sub-directory <code>samples\ole</code>.</p>
 <p>The <em>Payments</em> button fires a simple macro that uses the APL dyalog.Loan object to perform repayment calculations. To run the example enter data into the cells as shown below, then click <em>Payments</em>. When you do so, Excel runs the Calc macro and this causes OLE to initialise the dyalog.Loan OLE Server</p>
 <p>The Calc macro actually calculates the repayments matrix by calling the CalcPayments method in the dyalog.Loan object; i.e. it runs the <code>CalcPayments</code> function in the <code>Loan</code> namespace.</p>
@@ -71601,7 +71601,7 @@
 <img alt="loan excel example" src="../../img/loan-excel-example.png" />
 <figcaption><span>Figure&nbsp;6</span></figcaption>
 </figure>
-<h3 id="how-it-works">How it Works</h3>
+<h2 id="how-it-works">How it Works</h2>
 <div class="highlight"><pre><span></span><code><span class="nv">Sub</span><span class="w"> </span><span class="nv">Calc</span><span class="p">()</span>
 <span class="w">    </span><span class="nv">Dim</span><span class="w"> </span><span class="nv">APLLoan</span><span class="w"> </span><span class="nv">As</span><span class="w"> </span><span class="nv">Object</span>
 <span class="w">    </span><span class="nv">Dim</span><span class="w"> </span><span class="nv">Payments</span><span class="w"> </span><span class="nv">As</span><span class="w"> </span><span class="nv">Variant</span>
@@ -71642,7 +71642,7 @@
 <p>calls the APL function <code>CalcPayments</code> and receives the result.</p>
 <p>In Excel terms, this statement invokes the CalcPayments method of the APLLoan object.  In practice, it calls the <code>CalcPayments</code> APL function with the specified argument and puts the result in the local variable Payments. Note that the conversion between the result of the function (a Dyalog APL floating-point matrix) and the corresponding Excel data type is performed automatically for you.</p>
 <p>Notice that the APLLoan variable is local to the Calc macro. This means that the dyalog.Loan object is loaded every time that Calc is run and is unloaded when it terminates.</p>
-<h3 id="using-loan-from-dyalog-apl">Using Loan from Dyalog APL</h3>
+<h2 id="using-loan-from-dyalog-apl">Using Loan from Dyalog APL</h2>
 <p>It is of course possible to use Dyalog APL as both an OLE Automation client and an OLE Automation Server.</p>
 <p>To use the dyalog.Loan object, start Dyalog APL and then enter the following expressions in the Session window.</p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;LN&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;OLEClient&#39;</span><span class="w"> </span><span class="s1">&#39;dyalog.Loan&#39;</span>

@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -67963,7 +67963,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -67984,7 +67984,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68005,7 +68005,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68026,7 +68026,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70157,7 +70157,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70178,7 +70178,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70199,7 +70199,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70220,7 +70220,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71202,7 +71202,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71223,7 +71223,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71244,7 +71244,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71307,7 +71307,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71328,7 +71328,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71349,7 +71349,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71452,7 +71452,7 @@
                   
 
 
-<h1 class="heading"><span class="name"> Using .NET Classes</span></h1>
+<h1> Using .NET Classes</h1>
 
 <p>To create a Dyalog APL object as an instance of a .NET class, you use the <code>⎕NEW</code> system function. The <code>⎕NEW</code> system function is monadic. It takes a 1 or 2-element argument, the first element being a <em>class</em>.</p>
 <p>If the argument is a scalar or a 1-element vector, an instance of the class is created using the <em>constructor</em> that takes NO argument.</p>
@@ -71481,11 +71481,11 @@
 </code></pre></div></p>
 <p>The above statement assumes that you have defined <code>⎕USING</code> correctly; there must be a reference to <code>System.Windows.Forms.dll</code>, and a namespace prefix which allows the name <code>Button</code> to be recognised as <code>System.Windows.Forms.Button</code>.</p>
 <p>The mechanism by which APL associates the class name with a class in a .NET namespace is described below.</p>
-<h3 id="constructors-and-overloading">Constructors and Overloading</h3>
+<h2 id="constructors-and-overloading">Constructors and Overloading</h2>
 <p>Each .NET Class has one or more <em>constructor</em> methods. A constructor is a method which is called to initialise an instance of the Class. Typically, a Class will support several constructor methods - each with a different set of parameters. For example, <code>System.DateTime</code> supports a constructor that takes three <code>Int32</code> parameters (year, month, day), another that takes six <code>Int32</code> parameters (year, month, day, hour, minute, second), and so forth. These different constructor methods are not distinguished by having different names but by the different sets of parameters they accept.</p>
 <p>This concept, which is known as <em>overloading</em>, may seem somewhat alien to the APL programmer. After all, we are used to defining functions that accept a whole range of different arguments. However, type checking, which is fundamental to the .NET Framework, requires that a method is called with the correct number of parameters, and that each parameter is of a predefined type. Overloading solves this issue.</p>
 <p>When you create an instance of a class in C#, you do so using the <code>new</code> operator. This is automatically mapped to the appropriate constructor method by matching the parameters you supply to the various forms of the constructor. A similar mechanism is implemented in Dyalog APL using the <code>⎕NEW</code> system function.</p>
-<h3 id="how-the-new-system-function-is-implemented">How the <code>⎕NEW</code> System Function is implemented</h3>
+<h2 id="how-the-new-system-function-is-implemented">How the <code>⎕NEW</code> System Function is implemented</h2>
 <p>When APL executes an expression such as:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mydt</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">2008</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
 </code></pre></div></p>
@@ -71494,13 +71494,13 @@
 <p>Subsequent references to that symbol (in this case <code>DateTime</code>) are resolved directly and do not involve any assembly searching.</p>
 <p>If you use <code>⎕NEW</code> with only a class as argument, APL will attempt to call the version of its constructor that is defined to take no arguments. If no such version of the constructor exists, the call will fail with a <code>LENGTH ERROR</code>.</p>
 <p>Otherwise, if you use <code>⎕NEW</code> with a class as argument and a second element, APL will call the version of the constructor whose parameters match the second element you have supplied to <code>⎕NEW</code>. If no such version of the constructor exists, the call will fail with a <code>LENGTH ERROR</code>.</p>
-<h3 id="notes">Notes</h3>
+<h2 id="notes">Notes</h2>
 <ul>
 <li>The value of <code>⎕USING</code> is only used when an object is instantiated. Changing the value of <code>⎕USING</code> has no effect on objects that have already been instantiated in the active workspace.</li>
 <li>When a workspace containing .Net objects is saved, the names of the Net objects are saved with it but they are not automatically re-instantiated when the workspace is loaded or copied. A reference to such an orphaned object will report <code>(NULL)</code>. </li>
 <li>Some functionality might work with .NET Framework or .NET but not both, for example, SharpPlot requires the .NET Framework and does not work with .NET itself.</li>
 </ul>
-<h3 id="displaying-a-net-object">Displaying a .NET Object</h3>
+<h2 id="displaying-a-net-object">Displaying a .NET Object</h2>
 <p>When you display a reference to a .NET object, APL calls the object's <code>ToString</code> method and displays the result. All objects provide a <code>ToString</code> method because all objects ultimately inherit from the .NET class <code>System.Object</code>. Many .NET classes will provide their own <code>ToString</code> that overrides the one inherited from <code>System.Object</code>, and return a useful description or identifier for the object in question. <code>ToString</code> usually supports a range of calling parameters, but APL always calls the version of <code>ToString</code> that is defined to take no calling parameters. Monadic format (<code>⍕</code>) and monadic <code>⎕FMT</code> have been extended to provide the same result, and provides a quick shorthand method to call <code>ToString</code> in this way. The default <code>ToString</code> supplied by <code>System.Object</code> returns the name of the object's Type. This can be changed using the system function <code>⎕DF</code>. For example,
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nv">z</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="nf">⎕TS</span>
 <span class="w">     </span><span class="nv">z</span><span class="na">.</span><span class="p">(</span><span class="nf">⎕DF</span><span class="p">(</span><span class="o">⍕</span><span class="nv">DayOfWeek</span><span class="p">)</span><span class="o">,,</span><span class="s1">&#39;G&lt; 99:99&gt;&#39;</span><span class="nf">⎕FMT</span><span class="w"> </span><span class="m">100</span><span class="o">⊥</span><span class="nv">Hour</span><span class="w"> </span><span class="nv">Minute</span><span class="p">)</span>
@@ -71508,7 +71508,7 @@
 <span class="nv">Saturday</span><span class="w"> </span><span class="m">09</span><span class="bp">:</span><span class="m">17</span>
 </code></pre></div></p>
 <p>Note that if you want to check the type of an object, this can be obtained using the <code>GetType</code> method, which is supported by all .NET objects.</p>
-<h3 id="disposing-of-net-objects">Disposing of .NET Objects</h3>
+<h2 id="disposing-of-net-objects">Disposing of .NET Objects</h2>
 <p>.NET objects are managed by the .NET Common Language Runtime (CLR). The CLR allocates memory for an object when it is created, and de-allocates this memory when it is no longer required.</p>
 <p>When the (last) reference from Dyalog APL to a .NET object is expunged by <code>⎕EX</code> or by localisation, the system marks the object as unused, leaving it to the CLR to de-allocate the memory that it had previously allocated to it, when appropriate. Note that even though Dyalog has de-referenced the APL name, the object could potentially still be referenced by another .NET class.</p>
 <p>De-allocated memory may not actually be re-used immediately and may indeed never be re-used,  depending upon the algorithms used by the CLR garbage disposal.</p>

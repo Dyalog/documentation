@@ -6241,7 +6241,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7898,7 +7898,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8893,7 +8893,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8914,7 +8914,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10249,7 +10249,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10270,7 +10270,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10291,7 +10291,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10312,7 +10312,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10333,7 +10333,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10354,7 +10354,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10375,7 +10375,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10404,7 +10404,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10472,7 +10472,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68041,7 +68041,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68062,7 +68062,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68083,7 +68083,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68104,7 +68104,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70148,7 +70148,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70169,7 +70169,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70190,7 +70190,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70211,7 +70211,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71193,7 +71193,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71214,7 +71214,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71235,7 +71235,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71298,7 +71298,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71319,7 +71319,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71340,7 +71340,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71434,9 +71434,9 @@
                   
 
 
-<h1 class="heading"><span class="name"> Configuration Parameters</span></h1>
+<h1> Configuration Parameters</h1>
 
-<h3 id="introduction">Introduction</h3>
+<h2 id="introduction">Introduction</h2>
 <p>Dyalog APL is customised using a set of <strong>configuration parameters</strong>. These may be defined  in a number of ways, which take precedence as follows:</p>
 <ul>
 <li>Command-line settings</li>
@@ -71451,19 +71451,19 @@
 <p>Although for clarity parameter names are given here in mixed case, they are case-independent under Windows. Under UNIX and Linux, if Dyalog parameters are specified as environment variables they must be named entirely in upper-case.</p>
 <p>Note that the value of a parameter obtained by the GetEnvironment method (see <a href="../../../object-reference/methodorevents/getenvironment">GetEnvironment</a>) uses exactly the same set of rules.</p>
 <p>The following section details those parameters that are implemented by Registry Values in the top-level folder identified by <strong>IniFile</strong>. Values that are implemented in sub-folders are <em>mainly</em> internal and are not described in detail here. However, any Value that is maintained via a configuration dialog box will be named and described in the documentation for that dialog box in The APL Environment.</p>
-<h3 id="specifying-size-related-parameters">Specifying Size-related Parameters</h3>
+<h2 id="specifying-size-related-parameters">Specifying Size-related Parameters</h2>
 <p>Several of the configuration parameters define sizes.</p>
 <p>The value of the parameter must consist of an integer value, optionally followed immediately by a single character which denotes the units to be used. If the value contains no character the units are assumed to be KiB.</p>
 <p>Valid values for units are:</p>
 <p>K(KiB), M(MiB), G(GiB), T(TiB), P(PiB) and E(EiB).</p>
 <p>Specifying an invalid value will prevent Dyalog APL from starting.</p>
-<h3 id="changing-parameter-values-in-the-registry">Changing parameter values in the Registry</h3>
+<h2 id="changing-parameter-values-in-the-registry">Changing parameter values in the Registry</h2>
 <p>You can change parameters in the Registry in one of two ways:</p>
 <ul>
 <li>Using the Configuration dialog box that is obtained by selecting <em>Configure</em> from the <em>Options</em> menu on the Dyalog APL/W session. See <a href="../the-apl-environment/configuration-dialog.md">"The Configuration Dialog Box"</a> for details.</li>
 <li>By directly editing the Windows Registry using <code>REGEDIT.EXE</code> or <code>REGEDIT32.EXE</code>. This is necessary for parameters that are not editable via the Configuration dialog box.</li>
 </ul>
-<h3 id="configuration-parameters">Configuration Parameters</h3>
+<h2 id="configuration-parameters">Configuration Parameters</h2>
 <table>
 <tbody>
 <tr>

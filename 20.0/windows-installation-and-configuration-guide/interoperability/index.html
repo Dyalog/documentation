@@ -6320,7 +6320,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7977,7 +7977,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8972,7 +8972,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8993,7 +8993,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10328,7 +10328,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10349,7 +10349,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10370,7 +10370,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10391,7 +10391,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10412,7 +10412,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10433,7 +10433,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10454,7 +10454,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10483,7 +10483,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10551,7 +10551,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68120,7 +68120,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68141,7 +68141,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68162,7 +68162,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68183,7 +68183,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70227,7 +70227,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70248,7 +70248,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70269,7 +70269,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70290,7 +70290,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71272,7 +71272,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71293,7 +71293,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71314,7 +71314,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71377,7 +71377,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71398,7 +71398,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71419,7 +71419,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71594,38 +71594,38 @@
                   
 
 
-<h1 class="heading"><span class="name"> Interoperability</span></h1>
+<h1> Interoperability</h1>
 
-<h3 id="introduction">Introduction</h3>
+<h2 id="introduction">Introduction</h2>
 <p>Workspaces and component files are stored on disk in a binary format (illegible to text editors). This format differs between machine architectures and among versions of Dyalog. For example, a file component written by a PC may well have an internal format that is different from one written by a UNIX machine. Similarly, a workspace saved from Dyalog Version 20.0 will differ internally from one saved by a previous version of Dyalog APL.</p>
 <p>It is convenient for versions of Dyalog APL running on different platforms to be able to
 <em>interoperate</em> by sharing workspaces and component files. From Version 11.0, component files and workspaces can generally be shared between Dyalog interpreters running on different platforms. However, this is not always possible and the following sections describe limitations in interoperability:</p>
-<h3 id="code-and-ors">Code and <code>⎕OR</code>s</h3>
+<h2 id="code-and-ors">Code and <code>⎕OR</code>s</h2>
 <p>Code that is saved in workspaces, or embedded within <code>⎕OR</code>s stored in component files, can only be read by the Dyalog version which saved them and later versions of the interpreter. In the case of workspaces, a load (or copy) into an older version would fail with the message:
 <div class="highlight"><pre><span></span><code><span class="nv">this</span><span class="w"> </span><span class="nv">WS</span><span class="w"> </span><span class="nv">requires</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">later</span><span class="w"> </span><span class="nv">version</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">interpreter</span><span class="na">.</span>
 </code></pre></div></p>
 <p>Every time a  <code>⎕OR</code> 
 object is read by a version later than that which created it, time may be spent in converting the internal representation into the latest form.  Dyalog recommends that  <code>⎕OR</code>s should not be used as a mechanism for sharing code or objects between different versions of APL.</p>
-<h3 id="ordinary-arrays">"Ordinary" Arrays</h3>
+<h2 id="ordinary-arrays">"Ordinary" Arrays</h2>
 <p>With the exception of the Unicode restrictions described in the following paragraphs, Dyalog APL provides interoperability for arrays that only contain (nested) character and numeric data. Such arrays can be stored in component files - or transmitted using
 <code>TCPSocket</code> objects and Conga connections, and shared between all versions and across all platforms.</p>
 <p>Full cross-platform interoperability of component files is only available for large-span component files.</p>
-<h3 id="null-items-null-and-compressed-components">Null Items (<code>⎕NULL</code>) and Compressed Components</h3>
+<h2 id="null-items-null-and-compressed-components">Null Items (<code>⎕NULL</code>) and Compressed Components</h2>
 <p><code>⎕NULL</code>s and components from compressed component files that were created in Version 18.0 and later can be brought into Versions 16.0, 17.0 and 17.1 provided that the  interpreters have been patched to  revision 38151 or higher.  Attempts to bring <code>⎕NULL</code> or compressed component into earlier versions of Dyalog APL or lower revisions of the aforementioned versions will fail with:
 <div class="highlight"><pre><span></span><code><span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span><span class="bp">:</span><span class="w"> </span><span class="nv">Array</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">from</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">later</span><span class="w"> </span><span class="nv">version</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">APL</span><span class="na">.</span>
 </code></pre></div></p>
-<h3 id="object-representations-or">Object Representations (<code>⎕OR</code>)</h3>
+<h2 id="object-representations-or">Object Representations (<code>⎕OR</code>)</h2>
 <p>An attempt to <code>⎕FREAD</code> a component containing a <code>⎕OR</code> that was created by a later version of Dyalog APL will generate <code>DOMAIN ERROR: Array is from a later version of APL</code>. This also applies to APL objects passed via Conga or TCPSockets, or objects that have been serialised using <code>220⌶</code>.</p>
-<h3 id="32-vs-64-bit-component-files">32 vs. 64-bit Component Files</h3>
+<h2 id="32-vs-64-bit-component-files">32 vs. 64-bit Component Files</h2>
 <p>It is no longer possible to <em>create</em> or write to small-span (32-bit) files; however it is still currently possible to <em>read</em> from small span files. Setting the second item of the right argument of <code>⎕FCREATE</code> to anything other than 64 will generate a <code>DOMAIN ERROR</code>.</p>
 <p>Note that <em>small-span</em> (32-bit-addressing) component files cannot contain Unicode data. Unicode editions of Dyalog APL can only write character data which would be readable by a Classic
 edition (consisting of elements of <code>⎕AV</code>).</p>
-<h3 id="external-variables">External Variables</h3>
+<h2 id="external-variables">External Variables</h2>
 <p>External variables are subject to the same restrictions as small-span component files regarding Unicode data. External variables are unlikely to be developed further; Dyalog recommends that applications which use them should switch to using mapped files or traditional component files. Please contact Dyalog if you need further advice on this topic.</p>
-<h3 id="32-vs-64-bit-interpreters">32 vs. 64-bit Interpreters</h3>
+<h2 id="32-vs-64-bit-interpreters">32 vs. 64-bit Interpreters</h2>
 <p>There is complete interoperability between 32- and 64-bit interpreters, except that 32-bit interpreters are unable to work with arrays or workspaces greater than 2GB in size.</p>
 <p>Note however that under Windows a 32-bit version of Dyalog APL may only access 32-bit DLLs, and a 64-bit version of Dyalog APL may only access 64-bit DLLs. This is a Windows restriction.</p>
-<h3 id="unicode-vs-classic-editions">Unicode vs. Classic Editions</h3>
+<h2 id="unicode-vs-classic-editions">Unicode vs. Classic Editions</h2>
 <p>Two editions are available on some platforms. Unicode editions work with the entire Unicode character set. Classic editions (which are only available to commercial and enterprise users for legacy applications) are limited to the 256 characters defined in the atomic vector, <code>⎕AV</code>.</p>
 <p>Component files have a Unicode property. When this is enabled, all characters will be written as Unicode data to the file. The Unicode property is always off for small-span (32-bit addressing) files, as these cannot contain Unicode data. For large-span (64-bit addressing) component files, the Unicode property is set <em>on</em> by Unicode Editions and <em>off</em> by Classic Editions,  by default. The Unicode property can subsequently be toggled on and off using
 <code>⎕FPROPS</code>.</p>
@@ -71642,14 +71642,14 @@ edition (consisting of elements of <code>⎕AV</code>).</p>
         Key, 
         Stencil and 
         Over operators respectively are available only in the Unicode edition. In the Classic edition, these symbols are replaced by <code>⎕U2286</code>, <code>⎕U2378</code>, <code>⎕U2364</code>, <code>⎕U2360</code>, <code>⎕U2338</code>, <code>⎕U233a</code> and <code>⎕U2365</code> respectively. In both Unicode and Classic editions Variant may be represented by <code>⎕OPT</code>.</p>
-<h3 id="very-large-array-components">Very large array components</h3>
+<h2 id="very-large-array-components">Very large array components</h2>
 <p>An attempt to read
 a component greater than 2GB in 32-bit interpreters will result in a <code>WS FULL</code>.</p>
-<h3 id="tcpsockets-and-conga">TCPSockets and Conga</h3>
+<h2 id="tcpsockets-and-conga">TCPSockets and Conga</h2>
 <p>TCPSockets and Conga can be used to communicate between differing versions of Dyalog APL and are subject to similar limitations to those described above for component files.</p>
-<h3 id="auxiliary-processors">Auxiliary Processors</h3>
+<h2 id="auxiliary-processors">Auxiliary Processors</h2>
 <p>A Dyalog APL process is restricted to starting an AP of exactly the same architecture from the same operating system. In other words, the AP must share the same word-width and byte-ordering as its interpreter process.</p>
-<h3 id="session-files">Session Files</h3>
+<h2 id="session-files">Session Files</h2>
 <p>Session (.dse) files can only be used on the platform on which they were created and
 saved. Under Microsoft Windows, Session files may only be used by the  architecture (32-bit-or 64-bit) of the Version of Dyalog that saved them.</p>
 

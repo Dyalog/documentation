@@ -38,3 +38,7 @@
   background-color: rgb(220, 220, 220); /* Light grey background */
 }
 
+.md-typeset code {
+	word-break: normal !important;
+    overflow-wrap: break-word !important;
+}

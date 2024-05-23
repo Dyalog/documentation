@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68041,7 +68041,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68062,7 +68062,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68083,7 +68083,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68104,7 +68104,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70148,7 +70148,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70169,7 +70169,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70190,7 +70190,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70211,7 +70211,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71193,7 +71193,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71214,7 +71214,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71235,7 +71235,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71298,7 +71298,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71319,7 +71319,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71340,7 +71340,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71434,7 +71434,7 @@
                   
 
 
-<h1 class="heading"><span class="name"> State and Access Control</span></h1>
+<h1> State and Access Control</h1>
 
 <p>Earlier, we have seen how shared variable state and access controls are used to ensure effective communication between two APL tasks. How do these concepts apply in the DDE environment when APL is using shared variables to communicate via DDE with both other APL workspaces, and with non-APL applications?</p>
 <p>The initial state of a shared variable on the completion of sharing depends upon whether your variable is a server or a client. If it is a server, the initial state vector is (1 0 1 0) which means that you have set (and know) the value, but your partner has yet to use it. If the variable is acting as a client, the initial state vector is (0 1 0 1). This implies that your partner has set the value but you have yet to use it.</p>
@@ -71782,22 +71782,22 @@
 <li>If the DDE link is instead a <strong>hot</strong> link, your partner's <code>⎕SVC</code> is initially (1 0 0 1).</li>
 </ul>
 <p>This works in practice as follows:</p>
-<h4 id="server-apl-client-apl">Server = APL, Client = APL</h4>
+<h2 id="server-apl-client-apl">Server = APL, Client = APL</h2>
 <p>You made a general offer which has been accepted by another APL workspace, e.g.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;DDE:&#39;</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">&#39;DATA&#39;</span>
 </code></pre></div></p>
 <p>Two APL tasks always use a warm DDE link. Therefore, initially, both <code>⎕SVC</code>s are (0 0 0 0). Control is (optionally) imposed by both partners subsequently setting <code>⎕SVC</code>.</p>
-<h4 id="server-apl-client-another-application">Server = APL, Client = another application</h4>
+<h2 id="server-apl-client-another-application">Server = APL, Client = another application</h2>
 <p>You made a general offer which has been accepted by another application, e.g.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;DDE:&#39;</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">&#39;DATA&#39;</span>
 </code></pre></div></p>
 <p>The client application establishes the strength of the link (warm or hot). If it is a warm link, the initial value of the client's <code>⎕SVC</code> is (0 0 0 0) and, as the client has no means to change it itself, control may only be imposed by the server APL task. If the client establishes a hot link, its initial <code>⎕SVC</code> is (1 0 0 1). As it has no means to change it, and as the APL server task cannot (by definition) change it, the client's <code>⎕SVC</code> retains this setting for the duration of the conversation. (1 0 0 1) means that both partners are inhibited from setting the value of the shared variable twice in a row without an intervening use (or set) by the other. Given that the other application has requested a hot link (give me the value every time it changes) it is reasonable to assume that the application does not want to miss any values and will happily accept new data every time it is changed.</p>
-<h4 id="server-another-application-client-apl">Server = another application, Client = APL</h4>
+<h2 id="server-another-application-client-apl">Server = another application, Client = APL</h2>
 <p>You made a <strong>specific offer</strong> to another application, e.g.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;DDE:EXCEL|SHEET1&#39;</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">&#39;DATA R1C1:R3C4&#39;</span>
 </code></pre></div></p>
 <p>In this case, APL as the client will request a warm DDE link. If the server fails to agree to this request, APL will ask for the current data value and, whether or not the server responds, will not establish a permanent link. Thus the only possibility for a permanent connection is a warm link. This in turn means that the server's <code>⎕SVC</code> will be (0 0 0 0). Furthermore, as the server has no means to change it, it's <code>⎕SVC</code> will remain (0 0 0 0) for the duration of the conversation. Control is therefore imposed solely by APL.</p>
-<h3 id="terminating-a-conversation">Terminating a Conversation</h3>
+<h1 id="terminating-a-conversation">Terminating a Conversation</h1>
 <p>A DDE conversation is terminated by "un-sharing" the variable. This can be done explicitly using <code>⎕EX</code> or <code>⎕SVR</code>. It is also done automatically when you exit a function in which a shared variable is localised.</p>
 
 

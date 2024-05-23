@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7828,7 +7828,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8897,7 +8897,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8918,7 +8918,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10253,7 +10253,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10274,7 +10274,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10295,7 +10295,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10316,7 +10316,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10337,7 +10337,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10358,7 +10358,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10379,7 +10379,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10408,7 +10408,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10476,7 +10476,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68045,7 +68045,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68066,7 +68066,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68087,7 +68087,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68108,7 +68108,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70152,7 +70152,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70173,7 +70173,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70194,7 +70194,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70215,7 +70215,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71197,7 +71197,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71218,7 +71218,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71239,7 +71239,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71302,7 +71302,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71323,7 +71323,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71344,7 +71344,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71438,7 +71438,7 @@
                   
 
 
-<h1 class="heading"><span class="name">Disposable Statement</span><span class="command">:Disposable</span></h1>
+<h1 class="heading"><span class="name">Disposable Statement</span> <span class="command">:Disposable</span></h1>
 
 <p><a href="../disposable-statement-definition/">Formal Definition</a></p>
 <p>The Dyalog interface to .NET involves the creation and removal of .NET objects. Many such objects are <em>managed</em> in that the .NET Common Language RunTime (CLR)  automatically releases the memory allocated to the object when that object is no longer used. However, it is not possible to predict when the CLR garbage collection will occur. Furthermore, the garbage collector has no knowledge of <em>unmanaged</em> resources such as window handles, or open files and streams.</p>
@@ -71447,21 +71447,21 @@
 <p>When the block is exited, any .NET objects in <code>array</code> that implement IDisposable will have IDisposable.Dispose called on them.</p>
 <p>Note that exit includes normal exit as the code drops through <code>:EndDisposable</code>, or if an error occurs and is trapped, or if branch (<code>→</code>) is used to exit the block, or anything else.</p>
 <p>See also:  .Disposing of .NET Objects.</p>
-<h4 id="example-normal-exit">Example (Normal Exit)</h4>
+<h2 id="example-normal-exit">Example (Normal Exit)</h2>
 <div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Disposable</span><span class="w"> </span><span class="nv">f</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Font</span>
 <span class="na">.</span>
 <span class="na">.</span>
 <span class="bp">:</span><span class="nv">EndDisposable</span>
 </code></pre></div>
 <p>In the above example, when the <code>:EndDisposable</code> statement is reached, the system disposes of the Font object <code>f</code> (and all the resources associated with it) by calling <code>(IDisposable)f.Dispose()</code>. A subsequent reference to <code>f</code> would generate <code>VALUE ERROR</code>.</p>
-<h4 id="example-normal-exit_1">Example (Normal Exit)</h4>
+<h2 id="example-normal-exit_1">Example (Normal Exit)</h2>
 <div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Disposable</span><span class="w"> </span><span class="nv">fonts</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="na">¨</span><span class="nv">Font</span><span class="w"> </span><span class="nv">Font</span>
 <span class="na">.</span>
 <span class="na">.</span>
 <span class="bp">:</span><span class="nv">EndDisposable</span>
 </code></pre></div>
 <p>In the above example, Dispose() is called on <strong>each</strong> of the Font objects in <code>fonts</code> during the processing of <code>:EndDisposable</code>.</p>
-<h4 id="example-branch-exit">Example (Branch Exit)</h4>
+<h2 id="example-branch-exit">Example (Branch Exit)</h2>
 <div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Disposable</span><span class="w"> </span><span class="nv">fonts</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="na">¨</span><span class="nv">Font</span><span class="w"> </span><span class="nv">Font</span>
 <span class="na">.</span>
 <span class="kd">→</span><span class="m">0</span>
@@ -71469,7 +71469,7 @@
 <span class="bp">:</span><span class="nv">EndDisposable</span>
 </code></pre></div>
 <p>In this example, Dispose() is called on  the Font objects in <code>fonts</code> during the processing of the branch statement <code>→0</code>.</p>
-<h4 id="example-trapexit">Example (TrapExit)</h4>
+<h2 id="example-trapexit">Example (TrapExit)</h2>
 <div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">trap</span><span class="w"> </span><span class="m">0</span>
 
 <span class="w">   </span><span class="bp">:</span><span class="nv">Disposable</span><span class="w"> </span><span class="nv">fonts</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="na">¨</span><span class="nv">Font</span><span class="w"> </span><span class="nv">Font</span>

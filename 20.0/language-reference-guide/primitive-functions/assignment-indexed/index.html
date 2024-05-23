@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68043,7 +68043,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68064,7 +68064,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68085,7 +68085,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68106,7 +68106,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70150,7 +70150,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70171,7 +70171,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70192,7 +70192,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70213,7 +70213,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71195,7 +71195,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71216,7 +71216,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71237,7 +71237,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71300,7 +71300,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71321,7 +71321,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71342,7 +71342,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71436,14 +71436,14 @@
                   
 
 
-<h1 class="heading"><span class="name">Assignment (Indexed)</span><span class="command">{R}←X[I]←Y</span></h1>
+<h1 class="heading"><span class="name">Assignment (Indexed)</span> <span class="command">{R}←X[I]←Y</span></h1>
 
 <p>Indexed Assignment is the Assignment function modified by the Indexing function.  The phrase <code>[I]←</code> is treated as the function for descriptive purposes.</p>
 <p><code>Y</code> may be any array.  <code>X</code> may be the <em>name</em> of any array or a selection from a named array <code>(EXP X)[I]←Y</code>, see <a href="../assignment-selective/">"Assignment (Selective)"</a>.  <code>I</code> must be a valid index specification.  The shape of <code>Y</code> must conform with the shape (implied) of the indexed structure defined by <code>I</code>.  If <code>Y</code> is a scalar or a 1-element vector it will be extended to conform.  A side effect of Indexed Assignment is to change the value of the indexed elements of <code>X</code>.</p>
 <p><code>R</code> is the value of <code>Y</code>.  If the result is not explicitly assigned or used it is suppressed.</p>
 <p><code>⎕IO</code> is an implicit argument of Indexed Assignment.</p>
 <p>Three forms of indexing are permitted.</p>
-<h4 id="simple-indexed-assignment">Simple Indexed Assignment</h4>
+<h2 id="simple-indexed-assignment">Simple Indexed Assignment</h2>
 <p>For vector <code>X</code>, <code>I</code> is a simple integer array whose items are from the set <code>⍳⍴R</code>.  Elements of <code>X</code> identified by index positions <code>I</code> are replaced by corresponding elements of <code>Y</code>.</p>
 <p><strong>Examples</strong></p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="nv">A</span><span class="kd">←</span><span class="o">⍳</span><span class="m">5</span>
@@ -71497,7 +71497,7 @@
 <span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
 <span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div></p>
-<h4 id="choose-indexed-assignment">Choose Indexed Assignment</h4>
+<h2 id="choose-indexed-assignment">Choose Indexed Assignment</h2>
 <p>The index specification <code>I</code> is a non-simple integer array. Each item identifies a single element of <code>X</code> by a set of indices with one element per axis of <code>X</code> in row-major order.</p>
 <p><strong>Examples</strong></p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">C</span>
@@ -71541,7 +71541,7 @@
 <span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">99</span>
 <span class="m">21</span><span class="w">  </span><span class="m">2</span><span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="m">99</span>
 </code></pre></div></p>
-<h4 id="reach-indexed-assignment">Reach Indexed Assignment</h4>
+<h2 id="reach-indexed-assignment">Reach Indexed Assignment</h2>
 <p>The index specification <code>I</code> is a non-simple integer array, each of whose items reach down to a nested element of <code>X</code>.  The items of an item of <code>I</code> are simple vectors (or scalars) forming sets of indices that index arrays at successive levels of <code>X</code> starting at the top-most level.  A set of indices has one element per axis at the respective level of nesting of <code>X</code> in row-major order.</p>
 <p><strong>Examples</strong></p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">D</span><span class="kd">←</span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">6</span><span class="p">)(</span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="s1">&#39;SMITH&#39;</span><span class="w"> </span><span class="s1">&#39;JONES&#39;</span><span class="w"> </span><span class="s1">&#39;SAM&#39;</span><span class="w"> </span><span class="s1">&#39;BILL&#39;</span><span class="p">)</span>
@@ -71578,7 +71578,7 @@
 <span class="w">      </span><span class="nv">A</span>
 <span class="m">1</span>
 </code></pre></div></p>
-<h4 id="combined-indexed-and-selective-assignment">Combined Indexed and Selective Assignment</h4>
+<h2 id="combined-indexed-and-selective-assignment">Combined Indexed and Selective Assignment</h2>
 <p>Instead of <code>X</code> being a name, it may be a selection from a named array, and the statement is of the form <code>(EXP X)[I]←Y</code>.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MAT</span><span class="kd">←</span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="s1">&#39;Hello&#39;</span><span class="w"> </span><span class="s1">&#39;World&#39;</span>
 <span class="w">      </span><span class="p">(</span><span class="m">2</span><span class="o">↑</span><span class="na">¨</span><span class="nv">MAT</span><span class="p">)</span><span class="sr">[</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="sr">;]</span><span class="kd">←</span><span class="s1">&#39;#&#39;</span>

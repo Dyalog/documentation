@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68099,7 +68099,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68120,7 +68120,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68141,7 +68141,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68162,7 +68162,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70206,7 +70206,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70227,7 +70227,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70248,7 +70248,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70269,7 +70269,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71251,7 +71251,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71272,7 +71272,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71293,7 +71293,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71356,7 +71356,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71377,7 +71377,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71398,7 +71398,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71552,42 +71552,42 @@
                   
 
 
-<h1 class="heading"><span class="name"> Session Manager</span></h1>
+<h1> Session Manager</h1>
 
 <p>The Dyalog APL/W session is fully configurable. Not only can you change the appearance of the menus, tool bars and status bars, but you can add new objects of your choice and attach your own APL functions and expressions to them. Functions and variables can be stored in the session <em>namespace</em>. This is <em>independent</em> of the active workspace; so there is no conflict with workspace names, and your utilities remain permanently accessible for the duration of the session. Finally, you may set up different session configurations for different purposes which can be saved and loaded as required.</p>
 <p>The session window is defined by an object called <code>⎕SE</code>. This is very similar to a Form object, but has certain special properties. The menu bar, tool bar and status bars on the session window are in fact MenuBar, ToolControl and StatusBar objects owned by <code>⎕SE</code>. All of the other components such as menu items and tool buttons are also standard GUI objects. You may use <code>⎕WC</code> to create new session objects and you may use <code>⎕WS</code> to change the properties of existing ones. <code>⎕WG</code> and <code>⎕WN</code> may also be used with <code>⎕SE</code> and its children.</p>
 <p>Components of the session that perform actions (MenuItem and Button objects) do so because their Event properties are defined to execute system operations or APL expressions. System operations comprise a pre-defined set of actions that can be performed by Dyalog APL/W. These are coded as keywords within square brackets. For example, the system operation <code>[WSClear]</code> produces a <code>clear ws</code>, after first displaying a dialog box for confirmation. You may customise your session by adding or deleting objects and by attaching system operations or APL expressions to them.</p>
 <p>Like any other object, <code>⎕SE</code> is a namespace that may contain functions and variables. Furthermore, <code>⎕SE</code> is independent of the active workspace and is unaffected by <code>)LOAD</code> and <code>)CLEAR</code>. It is therefore sensible to store commonly used utilities, particularly those utilities that are invoked by events on session objects, in <code>⎕SE</code> itself, rather than in each of your application workspaces.</p>
 <p>The possibility of configuring your APL session so extensively leads to the requirement to have different sessions for different purposes. To meet this need, sessions are stored in special files with a .DSE (Dyalog Session) extension. The default session (i.e. the one loaded when you start APL) is specified by the <strong>session_file</strong> parameter. You may customise this session and then save it over the default one or in a separate file. You can load a new session from file at any stage without affecting your active workspace.</p>
-<h3 id="positioning-the-cursor">Positioning the Cursor</h3>
+<h2 id="positioning-the-cursor">Positioning the Cursor</h2>
 <p>The cursor may be positioned within the current APL window by moving the mouse pointer to the desired location and then clicking the Left Button. The APL cursor will then move to the character under the pointer.</p>
-<h3 id="selection">Selection</h3>
+<h2 id="selection">Selection</h2>
 <p>Dragging the mouse selects the text from the point where the mouse button is depressed to the point where the button is released. When you select multiple lines, the use of the left mouse button always selects text from the start of the line. A contiguous block of text can be selected by dragging with the right mouse button.</p>
 <p>Double-clicking the left mouse button to the left of a line selects the whole line, including the end-of-line character.</p>
-<h3 id="scrolling">Scrolling</h3>
+<h2 id="scrolling">Scrolling</h2>
 <p>Data can be scrolled in a window using the mouse in conjunction with the scrollbar.</p>
-<h3 id="invoking-the-editor">Invoking the Editor</h3>
+<h2 id="invoking-the-editor">Invoking the Editor</h2>
 <p>The Editor can be invoked by placing the mouse pointer over the name of an editable object and double-clicking the left button on the mouse. If you double-click on the empty Input Line it acts as "Naked Edit" and opens an edit window for the suspended function (if any) on the APL stack. For further details, see <a href="../editor/">"Invoking the Editor"</a>. See also "Installation and Configuration Guide: DoubleClickEdit".</p>
-<h3 id="the-current-object">The Current Object</h3>
+<h2 id="the-current-object">The Current Object</h2>
 <p>If you position the input cursor over the name of an object in the session window, that object becomes the current object. This name is stored in the CurObj property of the Session object and may be used by an application or a utility program. This means that you can click the mouse over a name and then select a menu item or click a button that executes code that accesses the name.</p>
-<h3 id="the-session-pop-up-menu">The Session Pop-up Menu</h3>
+<h2 id="the-session-pop-up-menu">The Session Pop-up Menu</h2>
 <p>Clicking the right mouse button brings up the Session pop-up menu. This is described later in this chapter.</p>
-<h3 id="drag-and-drop-editing">Drag-and-Drop Editing</h3>
+<h2 id="drag-and-drop-editing">Drag-and-Drop Editing</h2>
 <p>Drag-and-Drop editing is the easiest way to move or copy a selection a short distance within an edit window or between edit windows.</p>
-<h4 id="to-move-text-using-drag-and-drop-editing">To <em>move</em> text using drag-and-drop editing</h4>
+<h3 id="to-move-text-using-drag-and-drop-editing">To <em>move</em> text using drag-and-drop editing</h3>
 <ol>
 <li>Select the text you want to move.</li>
 <li>Point to the selected text and then press and hold down the left mouse button. When the drag-and-drop pointer appears, drag the cursor to a new location.</li>
 <li>Release the mouse button to drop the text into place.</li>
 </ol>
-<h4 id="to-copy-text-using-drag-and-drop-editing">To <em>copy</em> text using drag-and-drop editing</h4>
+<h3 id="to-copy-text-using-drag-and-drop-editing">To <em>copy</em> text using drag-and-drop editing</h3>
 <ol>
 <li>Select the text you want to move.</li>
 <li>Hold down the Ctrl key, point to the selected text and then press and hold down the left mouse button. When the drag-and-drop pointer appears, drag the cursor to a new location.</li>
 <li>Release the mouse button to drop the text into place.</li>
 </ol>
 <p>If you drag-and-drop text within the Session window, the text is copied and not moved whether or not you use the Ctrl key.</p>
-<h3 id="interrupts">Interrupts</h3>
+<h2 id="interrupts">Interrupts</h2>
 <p>To generate an interrupt, click on the Dyalog APL icon in the Windows System Tray; then choose <em>Weak Interrupt</em> or <em>Strong Interrupt</em>. To close the menu, click <em>Cancel</em>. Alternatively, to generate a weak interrupt, press Ctrl+Break, or select <em>Interrupt</em> from the <em>Action</em> menu on the Session Window.</p>
 
 

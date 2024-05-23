@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68043,7 +68043,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68064,7 +68064,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68085,7 +68085,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68106,7 +68106,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70150,7 +70150,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70171,7 +70171,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70192,7 +70192,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70213,7 +70213,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71195,7 +71195,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71216,7 +71216,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71237,7 +71237,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71300,7 +71300,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71321,7 +71321,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71342,7 +71342,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71436,7 +71436,7 @@
                   
 
 
-<h1 class="heading"><span class="name">At</span><span class="command">R←{X}(f@g)Y</span></h1>
+<h1 class="heading"><span class="name">At</span> <span class="command">R←{X}(f@g)Y</span></h1>
 
 <p>This operator substitutes selected items in <code>Y</code> with new values or applies a function to modify selected items in <code>Y</code>.</p>
 <p>The right operand <code>g</code>  identifies which items of array <code>Y</code> are to be substituted or modified. It is either:</p>
@@ -71450,7 +71450,7 @@
 <li>or a function to be applied to those items, the result of which is used to replace them. If this function is dyadic, its left argument is the array <code>X</code>. Note that the function is applied to the sub-array of <code>Y</code> selected by <code>g</code> <em>as a whole</em> and not to each item separately.</li>
 </ul>
 <p>The result <code>R</code> is the same as <code>Y</code> but with the items specified by <code>g</code> substituted or modified by <code>f</code>.</p>
-<h4 id="examples-array-array">Examples (array @ array)</h4>
+<h2 id="examples-array-array">Examples (array @ array)</h2>
 <p>Replace the 2nd and 4th items of <code>⍳5</code>:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="na">@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="o">⍳</span><span class="m">5</span><span class="w">   </span><span class="c1">⍝ [^1]</span>
 <span class="m">1</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">5</span>
@@ -71504,7 +71504,7 @@
 <span class="err">│└───┴─┘│└───┴─┘│└───┴─┘│</span>
 <span class="err">└───────┴───────┴───────┘</span>
 </code></pre></div></p>
-<h4 id="examples-function-array">Examples (function @ array)</h4>
+<h2 id="examples-function-array">Examples (function @ array)</h2>
 <p>Replace the 2nd and 4th items of <code>⍳5</code> with their reciprocals:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">÷</span><span class="na">@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">⍳</span><span class="m">5</span>
 <span class="m">1</span><span class="w"> </span><span class="m">0.5</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">0.25</span><span class="w"> </span><span class="m">5</span>
@@ -71530,7 +71530,7 @@
 <span class="w"> </span><span class="m">7</span><span class="w">  </span><span class="m">8</span><span class="w">  </span><span class="m">9</span>
 <span class="m">10</span><span class="w"> </span><span class="m">21</span><span class="w"> </span><span class="m">33</span>
 </code></pre></div></p>
-<h4 id="examples-array-function">Examples (array @ function)</h4>
+<h2 id="examples-array-function">Examples (array @ function)</h2>
 <p>Replace odd elements with 0:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">0</span><span class="na">@</span><span class="p">(</span><span class="m">2</span><span class="na">∘</span><span class="o">|</span><span class="p">)</span><span class="o">⍳</span><span class="m">5</span>
 <span class="m">0</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">0</span>
@@ -71548,7 +71548,7 @@
 <span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">11</span><span class="w">  </span><span class="nv">d</span>
 <span class="m">13</span><span class="w"> </span><span class="m">14</span><span class="w">  </span><span class="nv">e</span><span class="w"> </span><span class="m">16</span>
 </code></pre></div></p>
-<h4 id="examples-function-function">Examples (function @ function)</h4>
+<h2 id="examples-function-function">Examples (function @ function)</h2>
 <p>Replace odd elements with their reciprocals:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">÷</span><span class="na">@</span><span class="p">(</span><span class="m">2</span><span class="na">∘</span><span class="o">|</span><span class="p">)</span><span class="o">⍳</span><span class="m">5</span>
 <span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">0.3333333333</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">0.2</span>

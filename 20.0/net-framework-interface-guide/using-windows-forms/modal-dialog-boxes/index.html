@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -67963,7 +67963,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -67984,7 +67984,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68005,7 +68005,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68026,7 +68026,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70130,7 +70130,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70151,7 +70151,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70172,7 +70172,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70193,7 +70193,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71175,7 +71175,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71196,7 +71196,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71217,7 +71217,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71280,7 +71280,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71301,7 +71301,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71322,7 +71322,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71398,12 +71398,12 @@
                   
 
 
-<h1 class="heading"><span class="name"> Modal Dialog Boxes</span></h1>
+<h1> Modal Dialog Boxes</h1>
 
 <p>Dialog Boxes are displayed modally to prevent the user from performing tasks outside of the dialog box.</p>
 <p>To create a modal dialog box, you create a <code>Form</code>, set its <code>BorderStyle</code> property to <code>FixedDialog</code>, set its <code>ControlBox</code>, <code>MinimizeBox</code> and <code>MaximizeBox</code> properties to false, and display it using <code>ShowDialog</code>.</p>
 <p>A modal dialog box has a <code>DialogResult</code> property that is set when the <code>Form</code> is closed, or when the user presses OK or Cancel. The value of this property is returned by the <code>ShowDialog</code> method, so the simplest way to handle user actions is to check the result of <code>ShowDialog</code> and proceed accordingly. Example 1 illustrates a simple modal dialog box.</p>
-<h3 id="example-1">Example 1</h3>
+<h2 id="example-1">Example 1</h2>
 <p>Function <code>EG1</code> illustrates how to create and use a simple modal dialog box. Much of the function is self-explanatory, but the following points are noteworthy.</p>
 <p><code>EG1[1-2]</code> set <code>⎕USING</code> to include the .NET Namespaces <code>System.Windows.Forms</code> and <code>System.Drawing</code>.</p>
 <p><code>EG1[6,8,9]</code> create a <code>Form</code> and two <code>Button</code> objects. As yet, they are unconnected. The constructor for both classes is defined to take no arguments, so the <code>⎕NEW</code> system function is only called with a class argument.</p>
@@ -71494,7 +71494,7 @@
 <div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">52</span><span class="sr">]</span><span class="w">   </span><span class="nv">form1</span><span class="na">.</span><span class="nv">Visible</span><span class="kd">←</span><span class="m">1</span>
 <span class="sr">[</span><span class="m">53</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">While</span><span class="w"> </span><span class="nv">form1</span><span class="na">.</span><span class="nv">Visible</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="bp">:</span><span class="nv">endwhile</span>
 </code></pre></div></p>
-<h3 id="example-2">Example 2</h3>
+<h2 id="example-2">Example 2</h2>
 <p>Functions <code>EG2</code> and <code>EG2A</code> illustrate how the Each operator (<code>¨</code>) and the extended namespace reference syntax in Dyalog APL may be used to produce more succinct, and no less readable, code.
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">EG2</span><span class="sr">;</span><span class="nv">form1</span><span class="sr">;</span><span class="nv">label1</span><span class="sr">;</span><span class="nv">textBox1</span><span class="sr">;</span><span class="nv">true</span><span class="sr">;</span><span class="nv">false</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">Z</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="o">,⊂</span><span class="s1">&#39;System.Windows.Forms,</span>

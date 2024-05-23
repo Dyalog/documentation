@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68050,7 +68050,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68071,7 +68071,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68092,7 +68092,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68113,7 +68113,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70157,7 +70157,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70178,7 +70178,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70199,7 +70199,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70220,7 +70220,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71202,7 +71202,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71223,7 +71223,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71244,7 +71244,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71307,7 +71307,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71328,7 +71328,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71349,7 +71349,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71452,28 +71452,28 @@
                   
 
 
-<h1 class="heading"><span class="name"> Displaying and Editing Values in Grid Cells</span></h1>
+<h1> Displaying and Editing Values in Grid Cells</h1>
 
 <p>The Grid can display the value in a cell directly (as illustrated by <a href="../chapter-heading/">The components of the Grid object </a>) or indirectly via an <em>associated object</em>. You do not (as you might first expect) define input and validation characteristics for the cells directly, instead you do so <em>indirectly</em> through associated objects. Objects are associated with Grid cells by the Input property. If a cell has an associated object, its value is displayed and edited using that object. Several types of object may be associated with Grid cells, including Edit, Label, Button (Push, Radio and Check), and Combo objects. You can use a single associated object for the entire Grid, or you can associate different objects with individual cells.</p>
 <p>Edit and Label objects impose formatting on the cells with which they are associated according to the values of their FieldType and Decimal properties (for numbers, dates and time) and their Justify property (for text). In addition, Label objects protect cells (because a Label has no input mechanism), while Edit objects impose input validation. If you use an Edit object with a FieldType of Numeric, the user may only enter numbers into the corresponding cells of the Grid. For both Edit and Label objects, the FieldType and Decimals properties of the object are used to format the data displayed in the corresponding cells of the Grid. For example, if the FieldType property of the associated object is Date, the numeric elements in Values will be displayed as dates.</p>
 <p>Numeric cells may also be formatted using the FormatString property which applies <code>⎕FMT</code> format specifications to the data. The AlignChar property permits formatted data to be aligned in a column. For example, you can specify that numbers in a column are aligned on their decimal points.</p>
 <p>Combo objects can be used to allow the user to select a cell value from a set of alternatives. Radio and Check Buttons may be used to display and edit Boolean values.</p>
 <p>Associated Edit, Label and Combo objects may be <em>external</em> to the Grid (for example, you can have the user type values into a companion edit field) or they may be <em>internal</em>. Internal objects (which are implemented as children of the Grid) float from cell to cell and allow the data to be changed <em>in-situ</em>. Button, Spinner and TrackBar objects may only be internal.</p>
-<h3 id="using-a-floating-edit-field">Using a Floating Edit Field</h3>
+<h2 id="using-a-floating-edit-field">Using a Floating Edit Field</h2>
 <p>If the Edit object specified by Input is owned by (i.e. is a child of) the Grid itself, the Edit object <em>floats</em> from cell to cell as the user moves around the Grid. For example, if the user clicks on the cell addressed by row 4, column 3, the Edit object is automatically moved to that location and the data in that cell is copied into it ready for editing. When the user moves the focus away from this cell, the data in the Edit object is copied back into it (and into the corresponding element of the Values property) before the Edit object is moved away to the new cell location. This mechanism provides <em>in-situ</em> editing. Continuing the example illustrated by <a href="../chapter-heading/">The components of the Grid object </a>, in-situ editing could be achieved as follows:</p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;Test.G.ED&#39;</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">&#39;Edit&#39;</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;FieldType&#39;</span><span class="w"> </span><span class="s1">&#39;Numeric&#39;</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">&#39;Test.G&#39;</span><span class="w">    </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">&#39;Input&#39;</span><span class="w"> </span><span class="s1">&#39;Test.G.ED&#39;</span>
 </code></pre></div>
 <p>In-situ editing provides two input modes; Scroll and InCell. In Scroll mode the cursor keys move from one cell to another. In InCell mode, the cursor keys move the cursor a character at a time within the cell; to switch to a new cell, the user must press the Tab key or use the mouse. The InputMode property allows you to control the input mode directly or to allow the user to switch from one to another. In the latter case, the user does so by pressing a key defined by the InputModeKey property or by double-clicking the left mouse button.</p>
-<h3 id="using-a-fixed-edit-field">Using a Fixed Edit Field</h3>
+<h2 id="using-a-fixed-edit-field">Using a Fixed Edit Field</h2>
 <p>A different style of editing may be provided by specifying the name of an external Edit object that you have created. This can be any Edit object you wish to use; it need not even be owned by the same Form as the Grid. In this case, the Edit object remains stationary  (wherever you have positioned it), but as the user moves the focus from cell to cell, the cell contents are copied into it and made available for editing. The current cell is identified by a thick border. When the user shifts the focus, the data is copied out from the Edit object into the corresponding cell before data in the newly selected one is copied in. Continuing the example illustrated by <a href="../chapter-heading/">The components of the Grid object </a>, external editing could be achieved as follows:</p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;Test.ED&#39;</span><span class="w">   </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">&#39;Edit&#39;</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;FieldType&#39;</span><span class="w"> </span><span class="s1">&#39;Numeric&#39;</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">&#39;Test.G&#39;</span><span class="w">    </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">&#39;Input&#39;</span><span class="w"> </span><span class="s1">&#39;Test.ED&#39;</span>
 </code></pre></div>
-<h3 id="using-label-objects">Using Label Objects</h3>
+<h2 id="using-label-objects">Using Label Objects</h2>
 <p>If Input specifies a Label object, it too may either be a child of the Grid or an external Label. A Label is useful to format cell data (through its FieldType property) and to protect cells from being changed</p>
 <p>If the Label is a child of the Grid, it floats from cell to cell in the same way as a floating Edit object. However, unlike the situation with other objects, the row and column titles are not indented to help identify the current cell. If the Label is borderless (which is the default) and has the same font and colour characteristics of the cells themselves, the user will receive no visual feedback when a corresponding cell is addressed, even though the current cell (reflected by the CurCell property) does in fact change. Therefore, if you want to protect the data by using a Label <em>and</em> you want the user to be able to identify the current cell, you should give the Label a border, a special colour scheme or a special font.</p>
-<h3 id="using-combo-objects">Using Combo Objects</h3>
+<h2 id="using-combo-objects">Using Combo Objects</h2>
 <p>A Combo object is used to present a list of choices for a cell. Although you <em>may</em> use an external Combo, internal Combos are more suitable for most applications. If different cells have different sets of choices, you can create several Combo objects, each with its own set of Items and associate different cells with different Combos through the CellTypes property. Alternatively, you can use a single Combo and change Items dynamically from a callback on the CellMove event. In all cases, the value in the cell corresponds to the Text property of the Combo.</p>
 <p>If you use a floating Combo, the appearance of the non-current cells depends upon the value of the ShowInput property. If ShowInput is 0 (the default), the non-current cells are drawn in the standard way as if there were no associated input object. If ShowInput is 1, the non-current cells are given the <em>appearance</em> of a Combo, although the system does not actually use Combos to do so. Furthermore, there is a subtle difference in behaviour. If ShowInput is 0, the user must click twice to change a value; once to position the Combo on the new cell and again to drop its list box. If ShowInput is 1, the user may drop the list box with a single click on the cell.</p>
 <p>Note that ShowInput may be a scalar that applies to the whole Grid, or a vector whose elements applies to different cells through the CellType property.</p>
@@ -71512,7 +71512,7 @@
 <img alt="grid employee database showinput 1" src="../../img/grid-employee-database-showinput-1.png" />
 <figcaption><span>Figure&nbsp;2</span></figcaption>
 </figure>
-<h3 id="using-radio-and-check-button-objects">Using Radio and Check Button Objects</h3>
+<h2 id="using-radio-and-check-button-objects">Using Radio and Check Button Objects</h2>
 <p>Radio and Check Buttons behave in a similar way to Combo objects except that they may only be used internally. The value in the cell associated with the Button must be 0 or 1 and corresponds to the Button's State property. The value is toggled by clicking the Button.</p>
 <p>If ShowInput is 0, the user must click twice to change a value; once to position the (floating) Button on the cell, and a second time to toggle its state. If ShowInput is 1, the user may change cell values directly with a single click. Note that this may be undesirable in certain applications because the user cannot click on a cell without changing its value.</p>
 <p>By default, the value of the EdgeStyle property for a Radio or Check Button which is created as the child of a Grid is <code>'None'</code>, so you must set EdgeStyle explicitly to <code>'Plinth'</code> if a 3-dimensional appearance is required.</p>

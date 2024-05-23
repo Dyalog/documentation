@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68068,7 +68068,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68089,7 +68089,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68110,7 +68110,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68131,7 +68131,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70175,7 +70175,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70196,7 +70196,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70217,7 +70217,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70238,7 +70238,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71220,7 +71220,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71241,7 +71241,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71262,7 +71262,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71325,7 +71325,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71346,7 +71346,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71367,7 +71367,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71488,20 +71488,20 @@
                   
 
 
-<h1 class="heading"><span class="name"> Controlling User Input</span></h1>
+<h1> Controlling User Input</h1>
 
 <p>The Grid object is designed to allow you to implement simple applications with very little programming effort. You merely present the data to be edited by setting the Values property and then get it back again once the user has signalled completion. The validation imposed by the associated Edit object(s) will prevent the user from entering invalid data and your program can leave the user interaction to be managed entirely by APL. However, for more sophisticated applications, the Grid triggers events which allow your program to respond dynamically to user actions.</p>
-<h3 id="moving-from-cell-to-cell">Moving from Cell to Cell</h3>
+<h2 id="moving-from-cell-to-cell">Moving from Cell to Cell</h2>
 <p>When the user moves from one cell to another, the Grid generates a CellMove event. This reports the co-ordinates (row and column) of the newly selected cell. The CellMove event serves two purposes. Firstly, it allows you to take some special action when the user selects a particular cell. For example, you could display a Combo or List object to let the user choose a new value from a pre-defined set, then copy the selected value into the cell. Secondly, the CellMove event provides the means for you to position the user in a particular cell under program control, using <code>⎕NQ</code>.</p>
-<h3 id="changing-standard-validation-behaviour">Changing Standard Validation Behaviour</h3>
+<h2 id="changing-standard-validation-behaviour">Changing Standard Validation Behaviour</h2>
 <p>Input validation is provided by the Edit object associated with a cell. By default, the built-in validation will prevent the user from leaving the cell should the data in that cell be invalid. For example, if the FieldType is <code>'Date'</code> and the user enters 29th February and a non-leap year, APL will beep and not allow the user to leave the cell until a valid date has been entered  If you wish instead to take some other action, for example display a message box, you should use the CellError event. This event is generated immediately the user attempts to move to another cell when the data in the current cell is invalid. The event is also generated if the user selects a MenuItem, presses a Button or otherwise changes the focus away from the current cell.</p>
 <p>The CellError event reports the row and column number of the current cell, the (invalid) text string in that cell, the name of the object to which the user has transferred attention or the co-ordinates of the new cell selected. The default action of the event is to beep, so to disable the beep your callback function should return a 0. If you wish to allow the user to move to a different cell, you must do so explicitly by generating a CellMove event using <code>⎕NQ</code> or by returning a CellMove event as the result of the callback.</p>
-<h3 id="reacting-to-changes">Reacting to Changes</h3>
+<h2 id="reacting-to-changes">Reacting to Changes</h2>
 <p>If enabled, the Grid object generates a CellChange event whenever the user alters data in a cell and then attempts to move to another cell or otherwise shifts the focus away from the current cell. This allows you to perform additional validation or to trigger calculations when the user changes a value. The CellChange event reports the co-ordinates of the current cell and the new value, together with information about the newly selected cell or the external object to which the focus has changed.</p>
 <p>The default action of the CellChange event is to replace the current value of the cell with the new one. If you wish to prevent this happening, your callback function must return a 0. If in addition you wish the focus to remain on the current cell, you must do this explicitly by using the CellMove event to reposition the current cell back to the one the user has attempted to leave.</p>
-<h3 id="restoring-user-changes">Restoring User Changes</h3>
+<h2 id="restoring-user-changes">Restoring User Changes</h2>
 <p>The Grid object supports an Undo method which causes the last change made by the user to be reversed. This method can only be invoked under program control using <code>⎕NQ</code> and cannot be directly generated by the user. If you want to provide an <em>undo</em> facility, it is recommended that you attach a suitable callback function to a MenuItem or a Button. To perform an undo operation, the callback function should then generate an Undo event for the Grid object.</p>
-<h3 id="updating-cell-data">Updating Cell Data</h3>
+<h2 id="updating-cell-data">Updating Cell Data</h2>
 <p>You can change the entire contents of the Grid by resetting its Values property with <code>⎕WS</code>. However, this will causes the entire Grid to be redrawn and is not to be recommended if you only want to change one cell or just a few cells.</p>
 <p>You can change the value in a particular cell by using <code>⎕NQ</code> to send a CellChange event to the Grid. For example, if you want to alter the value in row 2 column 3 of the Grid object called <code>Test.G</code> to 42, you simply execute the following statement :
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">&#39;Test.G&#39;</span><span class="w"> </span><span class="s1">&#39;CellChange&#39;</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">42</span>
@@ -71509,11 +71509,11 @@
 <p>To update an entire row or column of data you can use the RowChange and ColChange events. For example, to change all 12 columns of row 500 to the 12-element vector <code>TOTAL</code>, you could execute :
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">&#39;Test.G&#39;</span><span class="w"> </span><span class="s1">&#39;RowChange&#39;</span><span class="w"> </span><span class="m">500</span><span class="w"> </span><span class="nv">TOTAL</span>
 </code></pre></div></p>
-<h3 id="deleting-rows-and-columns">Deleting Rows and Columns</h3>
+<h2 id="deleting-rows-and-columns">Deleting Rows and Columns</h2>
 <p>You can delete a row or column by using <code>⎕NQ</code> to send a DelRow or DelCol message to the Grid object. For example, the following statement deletes the 123rd row from the Grid object <code>Test.G</code>. Note that if you have specified it, the corresponding element of RowTitles is removed too.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">&#39;Test.G&#39;</span><span class="w"> </span><span class="s1">&#39;DelRow&#39;</span><span class="w"> </span><span class="m">123</span>
 </code></pre></div></p>
-<h3 id="inserting-rows-and-columns">Inserting Rows and Columns</h3>
+<h2 id="inserting-rows-and-columns">Inserting Rows and Columns</h2>
 <p>You can insert or add a row or column using the AddRow or AddCol method. You must specify the following information.</p>
 <table>
 <tbody>

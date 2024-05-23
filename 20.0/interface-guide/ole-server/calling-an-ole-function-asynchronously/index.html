@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68032,7 +68032,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68053,7 +68053,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68074,7 +68074,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68095,7 +68095,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70139,7 +70139,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70160,7 +70160,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70181,7 +70181,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70202,7 +70202,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71184,7 +71184,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71205,7 +71205,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71226,7 +71226,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71289,7 +71289,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71310,7 +71310,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71331,7 +71331,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71416,14 +71416,14 @@
                   
 
 
-<h1 class="heading"><span class="name"> Calling an OLE Function Asynchronously</span></h1>
+<h1> Calling an OLE Function Asynchronously</h1>
 
-<h3 id="introduction">Introduction</h3>
+<h2 id="introduction">Introduction</h2>
 <p>Functions exported by an OLEServer are executed (by the underlying OLE technology) in a <em>synchronous</em> manner. This means that the OLE client must wait for the function to complete before it can continue processing.</p>
 <p>In certain cases the client may not be interested in a result from a function and it may be desirable for client not to have to wait. For example, if a function updates files or performs a printing task, it would be nice for the client application to continue while the server performs this task in background, or indeed (using DCOM) on another computer.</p>
 <p>For an <em>out-of-process</em> OLE Server, this can be achieved by having the function that is called directly by the client <em>post</em> an event (using <code>⎕NQ</code>) onto the event queue and then return. When the function terminates, APL will take the next event from the queue and take the appropriate action. If the event has an associated callback function, APL will invoke it. Note that this happens immediately <em>after</em> the original function has terminated and a result (if any) has been returned to the client. This means that the APL OLEServer continues processing at the same time as the client application.</p>
 <p>Note however that while the OLEServer is processing, further OLE requests will be queued. For example, if the client were to call the same function again immediately, the function would not be invoked until the original processing has finished and the client would therefore wait (note that OLE itself will actually time-out after a certain period). Nevertheless, this technique is an effective way to offload batch processing tasks to a second (background) APL process or to one running on a different computer.</p>
-<h3 id="the-oleasync-workspace">The OLEASYNC Workspace</h3>
+<h2 id="the-oleasync-workspace">The OLEASYNC Workspace</h2>
 <p>The OLEASYNC workspace illustrates this technique. It contains a single namespace called <code>Async</code> which exports 2 functions (methods), <code>PRINT</code> and <code>ASYNC</code> and two variables (properties) <code>ERRCODE</code> and <code>COPIES</code>.</p>
 <p>The first function, <code>PRINT</code>, prints a specified number of test pages <em>in the background</em>. <code>PRINT</code> does not actually do any printing. All it does is to associate a second function <code>PRINT_CB</code> as a callback on a user-defined event 3001 (the choice of 3001 is purely arbitrary). It then posts an event 3001 onto the queue and returns 0 as its result.</p>
 <p>The function also illustrates the use of <code>:Trap</code>. Should either of the statements on lines <code>[3]</code> and <code>[4]</code> fail, the function terminates cleanly and returns <code>⎕DM</code> instead.
@@ -71495,7 +71495,7 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div></p>
 <p>Note that the number of copies to be printed is defined by the (global) variable <code>COPIES</code> whose default value is 1. This is done only to illustrate that <code>LPR</code> called via <code>DO</code> runs in the correct instance of the OLEServer (using <em>your</em> value of <code>COPIES</code>) as opposed to in the master OLEServer namespace itself.</p>
-<h3 id="testing-dyalogasync">Testing dyalog.Async</h3>
+<h2 id="testing-dyalogasync">Testing dyalog.Async</h2>
 <p>Load OLEASYNC and then register dyalog.Async as an OLE object by doing the following:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Async</span><span class="na">.</span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">&#39;OLEServer&#39;</span>
 <span class="w">      </span><span class="s1">&#39;Async&#39;</span><span class="nf">⎕WS</span><span class="s1">&#39;ExportedFns&#39;</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;PRINT&#39;</span><span class="w"> </span><span class="s1">&#39;ASYNC&#39;</span><span class="p">)</span>

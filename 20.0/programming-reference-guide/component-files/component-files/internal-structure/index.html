@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7822,7 +7822,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8817,7 +8817,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8838,7 +8838,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10173,7 +10173,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10194,7 +10194,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10215,7 +10215,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10236,7 +10236,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10257,7 +10257,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10278,7 +10278,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10299,7 +10299,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10328,7 +10328,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10396,7 +10396,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68049,7 +68049,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68070,7 +68070,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68091,7 +68091,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68112,7 +68112,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70156,7 +70156,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70177,7 +70177,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70198,7 +70198,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70219,7 +70219,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71201,7 +71201,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71222,7 +71222,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71243,7 +71243,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71306,7 +71306,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71327,7 +71327,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71348,7 +71348,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71448,7 +71448,7 @@
                   
 
 
-<h1 class="heading"><span class="name"> Internal Structure</span></h1>
+<h1> Internal Structure</h1>
 
 <p>If you are going to make a lot of use of APL files in your systems, it is useful for you to have a rough idea of how Dyalog APL organises and manages the disk area used by such files.</p>
 <p>The internal structure of external variables and component files is the same, and the examples given below apply to both.</p>
@@ -71507,7 +71507,7 @@
 </code></pre></div></p>
 <p>You can see that if you are continually updating your file with larger data objects, then the file structure can become fragmented. At any one time, the disk area occupied by your file will be greater than the area necessary to hold your data. However, free areas are constantly being reused, so that the amount of unused space in the file will seldom exceed 30%.</p>
 <p>Whenever you issue a monadic <code>⎕FRESIZE</code> command on a component file, Dyalog APL COMPACTS the file; that is, it restructures it by reordering the components and by amalgamating the free areas at the end of the file. It then truncates the file and releases the disk space back to the operating system (note that some versions of UNIX do not allow the space to be released). For a large file with many components, this process may take a significant time.</p>
-<h3 id="error-conditions">Error Conditions</h3>
+<h2 id="error-conditions">Error Conditions</h2>
 <div class="highlight"><pre><span></span><code><span class="nv">FILE</span><span class="w"> </span><span class="nv">SYSTEM</span><span class="w"> </span><span class="nv">NOT</span><span class="w"> </span><span class="nv">AVAILABLE</span>
 </code></pre></div>
 <p>A <code>FILE SYSTEM NOT AVAILABLE</code> (Error code 28) error will be generated if the operating system returns an unexpected error when attempting to get a lock on a component file. In Windows environments this may indicate that <em>opportunistic locks</em> (aka <em>oplocks</em>) are in use; they should be disabled if Dyalog components files are being used.
@@ -71517,10 +71517,10 @@
 <div class="highlight"><pre><span></span><code><span class="nv">FILE</span><span class="w"> </span><span class="nv">TIED</span><span class="w"> </span>
 </code></pre></div></p>
 <p>A <code>FILE TIED</code> error is reported if you attempt to tie a file which another user has exclusively tied.</p>
-<h3 id="limitations">Limitations</h3>
-<h4 id="file-tie-quota">File Tie Quota</h4>
+<h2 id="limitations">Limitations</h2>
+<h3 id="file-tie-quota">File Tie Quota</h3>
 <p>The File Tie Quota is the maximum number of files that a user may tie concurrently. Dyalog APL itself allows a maximum of 1024 under UNIX and 512 under Windows, although in either case your installation may impose a lower limit. When an attempt is made to exceed this limit, the report <code>FILE TIE QUOTA</code> (Error code 31) is given. This error will also be generated if an attempt is made to exceed the maximum number of open files that is imposed by the operating system.</p>
-<h4 id="file-name-quota">File Name Quota</h4>
+<h3 id="file-name-quota">File Name Quota</h3>
 <p>Dyalog APL records the names of each user's tied files in a buffer of 40960 bytes. When this buffer is full, the report <code>FILE NAME QUOTA USED UP</code> (Error code 32) will be given. This is only likely to occur if long pathnames are used to identify files.</p>
 
 

@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68059,7 +68059,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68080,7 +68080,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68101,7 +68101,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68122,7 +68122,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70166,7 +70166,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70187,7 +70187,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70208,7 +70208,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70229,7 +70229,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71211,7 +71211,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71232,7 +71232,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71253,7 +71253,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71316,7 +71316,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71337,7 +71337,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71358,7 +71358,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71470,9 +71470,9 @@
                   
 
 
-<h1 class="heading"><span class="name"> User Interaction & Events</span></h1>
+<h1> User Interaction & Events</h1>
 
-<h3 id="giving-control-to-the-user">Giving Control to the User</h3>
+<h2 id="giving-control-to-the-user">Giving Control to the User</h2>
 <p>As we have seen, <code>⎕WC</code> and <code>⎕WS</code> are used to build up the definition of the user-interface as a hierarchy of <strong>objects</strong> with <strong>properties</strong>. Notice that the interface is defined not only in terms of its appearance and general behaviour, but also by specification of the Event property, in terms of how it reacts to user actions.</p>
 <p>Once you have defined your interface, you are ready to give control to the user. This is simply done by calling <code>⎕DQ</code>. Alternatively, you may use the Wait method (if appropriate) which is identical to <code>⎕DQ</code> in its operation.</p>
 <p><code>⎕DQ</code> performs several tasks. Firstly, it displays all objects that have been created but not yet drawn. When you create objects, Dyalog APL/W automatically buffers the output so as to avoid unpleasant flashing on the screen. Output is flushed when APL requires input (at the 6-space prompt) and by <code>⎕DQ</code>. Thus if you write a function that creates a Form containing a set of controls, nothing is drawn until, later on in the function, you call <code>⎕DQ</code>. At this point the Form and its contents are displayed in a single screen update, which is visually more pleasing than if they were drawn one by one. A second task for <code>⎕DQ</code> is to cause the system to wait for user events. Objects that you create are immediately active and capable of generating events. During development and testing, you can immediately use them without an explicit <em>wait</em>. However, unless your application uses the <strong>Session</strong> in conjunction with GUI objects you must call <code>⎕DQ</code> to cause the application to wait for user input. In a run-time application, <code>⎕DQ</code> is <strong>essential</strong>.</p>
@@ -71480,14 +71480,14 @@
 <p>In general, <code>⎕DQ</code> first updates the screen with any pending changes, then hands control to the user and waits for an event. If its argument is <code>#</code>, <code>'#'</code>, or <code>'.'</code>, <code>⎕DQ</code> processes events for all active objects, i.e. for those objects and their children whose Active property is 1. If the right argument specifies one or more top-level objects (such as Form, PropertySheet), <code>⎕DQ</code> processes events for all of these objects and their children, and (if the current thread is thread 0) for the Root object, but ignores any others, even though they may be currently active.</p>
 <p>If the right argument specifies a single modal object, <code>⎕DQ</code> activates the object, handles user-interaction with it, and then deactivates it when the user has finished. An event is generated according to the manner in which the user terminated.</p>
 <p>Events are managed by both the Operating System and by <code>⎕DQ</code> using a <strong>queue</strong>. A detailed understanding of how the queue works is not absolutely necessary, and you may skip the following explanation. However, if you are planning to develop major applications using the GUI, please continue.</p>
-<h3 id="the-event-queue">The Event Queue</h3>
+<h2 id="the-event-queue">The Event Queue</h2>
 <p>There are in fact two separate queues, one maintained by Windows and one internal to APL. The Windows queue is used to capture all events that APL needs to process. These include events for your GUI objects as well as other events concerned with APL's own Session Window, Edit Windows, etc. At various points during execution, APL reads events from the Windows queue and either processes them immediately or, if they are events concerned with objects you have defined with <code>⎕WC</code>, APL places them on its own internal queue. It is this queue to which <code>⎕DQ</code> looks for its next event.</p>
 <p>When <code>⎕DQ</code> receives an event, it can either ignore it, process it internally, execute a string, call a callback function, or terminate according to the action you have defined for that event. The way you define different actions is described in detail later in this Chapter.</p>
 <p>If you have disabled a particular event by setting its action code to <code>¯1</code>, <code>⎕DQ</code> simply ignores it. For example, if you set the action code of a KeyPress event to <code>¯</code>1, keystrokes in that object will be ignored. If you have told <code>⎕DQ</code> to process an event normally (the default action code of 0) <code>⎕DQ</code> performs the default processing for the event in question. For example, the default processing for a KeyPress event in an Edit object is to display the character and move the input cursor.</p>
 <p>If you have associated a string or a callback function with a particular event in a particular object, <code>⎕DQ</code> executes the string or invokes the callback function for you. During the execution of the string or the callback function, the user may cause other events. If so, these are added to APL's internal queue but they are not acted upon immediately. When the execution of the string or the callback function terminates, control returns to <code>⎕DQ</code> which once more looks to the internal queue. If another event has been added while the callback function was running, this is read and acted upon. If not, <code>⎕DQ</code> looks to the Windows queue and waits for the next event to occur.</p>
 <p>If you have associated an <strong>asynchronous</strong> callback function with an event (by appending the character "&amp;" to the name of the function), <code>⎕DQ</code> starts the callback function in a new thread and is then immediately ready to process the next event; <code>⎕DQ</code> does not wait for an asynchronous callback function to complete.</p>
 <p>If <code>⎕DQ</code> reads an event with an associated action code of 1, it terminates and returns the <strong>event message</strong> which was generated by the event, as a result. The normal processing for the event is not actioned. During the time between <code>⎕DQ</code> terminating and you calling it again, events are discarded. Events are only stored up in the queue if <code>⎕DQ</code> is active (i.e. there is a <code>⎕DQ</code> in the state indicator). It is therefore usually better to process events using callback functions.</p>
-<h3 id="assignment-and-reference-to-the-event-property">Assignment and reference to the Event Property</h3>
+<h2 id="assignment-and-reference-to-the-event-property">Assignment and reference to the Event Property</h2>
 <p>There are a number of special considerations when using assignment and reference to the Event property.</p>
 <p>You can set the action for a single event by prefixing the Event name by "on". For example, to set the action of a MouseUp event on a Form <code>F</code> to execute the callback function <code>FOO</code>:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">onMouseUp</span><span class="kd">←</span><span class="s1">&#39;UP&#39;</span>
@@ -71540,7 +71540,7 @@
 <span class="o">|</span><span class="w"> </span><span class="s1">&#39;∊--------&#39;</span><span class="w"> </span><span class="o">|</span>
 <span class="na">.</span><span class="o">∊------------</span><span class="na">.</span>
 </code></pre></div></p>
-<h3 id="callback-functions">Callback Functions</h3>
+<h2 id="callback-functions">Callback Functions</h2>
 <p>By setting the action code to 1 for all the events you are interested in, you could write the control loop in your application as:
 <div class="highlight"><pre><span></span><code><span class="w">   </span><span class="nv">Loop</span><span class="bp">:</span><span class="w">  </span><span class="nv">Event</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="nf">⎕DQ</span><span class="w"> </span><span class="s1">&#39;system&#39;</span>
 <span class="w">          </span><span class="nv">test</span><span class="w"> </span><span class="nv">Event</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w"> </span><span class="p">(</span><span class="nv">object</span><span class="w"> </span><span class="nv">name</span><span class="p">)</span>
@@ -71563,7 +71563,7 @@
 <p>A callback function is otherwise no different from any other function that you can define. Indeed there is nothing to prevent you from calling one explicitly in your code. For example, a callback function that is invoked automatically could call a second callback function directly, perhaps to simulate another event.</p>
 <p>By default, a callback function is run synchronously. This means that <code>⎕DQ</code> waits for it to return a result before attempting to process any other events. Events that are generated by Windows while the callback function is running are simply queued.</p>
 <p>Alternatively, you may specify that a callback function is to be run <strong>asynchronously</strong>. In this case, <code>⎕DQ</code> starts the function in a new thread, but instead of waiting for it to complete, proceeds immediately to the next event in the queue. See Asynchronous Callbacks for further information.</p>
-<h3 id="modifying-or-inhibiting-the-default-processing">Modifying or Inhibiting the Default Processing</h3>
+<h2 id="modifying-or-inhibiting-the-default-processing">Modifying or Inhibiting the Default Processing</h2>
 <p>It is often desirable to inhibit the normal processing of an event, and it is occasionally useful to substitute some other action for the default. One way of inhibiting an event is to set its action code to <code>¯1</code>. However this mechanism is non-selective and is not always applicable. You can use it for example to ignore <strong>all</strong> keystrokes, but not to ignore particular ones.</p>
 <p>Synchronous callback functions provide an additional mechanism which allows you to selectively inhibit default processing of an event. The mechanism also allows you to modify the event in order to achieve a different effect.</p>
 <p>For example, you can use a callback function to ignore a <strong>particular</strong> keystroke or set of keystrokes, or even to replace the original keystroke with a different one. Similarly, you can use a callback function to selectively ignore a LostFocus event to prevent the user from leaving an input field if the data in the field is invalid. Callback functions therefore give you much finer control over event processing. The mechanism uses the result returned by the callback function and operates as follows.</p>
@@ -71577,7 +71577,7 @@
 </ul>
 <p>Note that asynchronous callback functions may not be used to modify or inhibit the default processing because their results are ignored.</p>
 <p>See also: <a href="../high-priority-callbacks/">High-Priority Callback Functions</a>.</p>
-<h3 id="generating-events-using-nq">Generating Events using <code>⎕NQ</code></h3>
+<h2 id="generating-events-using-nq">Generating Events using <code>⎕NQ</code></h2>
 <p>The <code>⎕NQ</code> system function is used to generate events under program control and has several uses.</p>
 <p>Firstly, it can be used to do something automatically for the user. For example, the following expression gives the input focus to the object <code>Form1.ED1.</code>
 <div class="highlight"><pre><span></span><code><span class="w">        </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="nv">Form1</span><span class="na">.</span><span class="nv">ED1</span><span class="w"> </span><span class="s1">&#39;GotFocus&#39;</span>

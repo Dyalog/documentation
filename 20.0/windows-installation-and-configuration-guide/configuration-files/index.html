@@ -6293,7 +6293,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7950,7 +7950,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8945,7 +8945,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8966,7 +8966,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10301,7 +10301,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10322,7 +10322,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10343,7 +10343,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10364,7 +10364,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10385,7 +10385,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10406,7 +10406,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10427,7 +10427,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10456,7 +10456,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10524,7 +10524,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68093,7 +68093,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68114,7 +68114,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68135,7 +68135,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68156,7 +68156,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70200,7 +70200,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70221,7 +70221,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70242,7 +70242,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70263,7 +70263,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71245,7 +71245,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71266,7 +71266,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71287,7 +71287,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71350,7 +71350,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71371,7 +71371,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71392,7 +71392,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71540,9 +71540,9 @@
                   
 
 
-<h1 class="heading"><span class="name"> Configuration Files</span></h1>
+<h1> Configuration Files</h1>
 
-<h3 id="introduction">Introduction</h3>
+<h2 id="introduction">Introduction</h2>
 <p>A configuration file is an optional text file containing configuration parameters and their values. It may cascade, i.e. it can extend (inherit) configuration values from other configuration files, and supplement and/or override them.</p>
 <p>Configuration files use JSON5 (a superset of standard JSON) syntax, as described below. These files are portable across all systems supported by Dyalog.</p>
 <p>Although it is possible to include user credentials such as login details or passwords in configuration files, Dyalog very strongly recommends against doing this even if the credentials are encrypted as this should be considered to be a very significant security risk.</p>
@@ -71552,16 +71552,16 @@
 <li>An application configuration file which contains configuration values associated with a specific application</li>
 <li>A user configuration file which defines configuration values for the current, and possibly only, user of the system.</li>
 </ol>
-<h3 id="application-configuration-file">Application Configuration File</h3>
+<h2 id="application-configuration-file">Application Configuration File</h2>
 <p>When Dyalog starts, it derives the name of the application configuration file as follows:</p>
 <ul>
 <li>The name in the configuration parameter <strong>ConfigFile</strong> if it is set, otherwise</li>
 <li>The name of the workspace or script loaded at start-up using the <strong>Load</strong> parameter, with the extension replaced by <code>.dcfg</code>, if that file exists, otherwise</li>
 <li>Nothing.</li>
 </ul>
-<h3 id="user-configuration-file">User Configuration File</h3>
+<h2 id="user-configuration-file">User Configuration File</h2>
 <p>The name of the user configuration file is specified by the <strong>UserConfigFile</strong>  parameter. Under Windows, this parameter is not set by default but may be defined by the user.</p>
-<h3 id="precedence">Precedence</h3>
+<h2 id="precedence">Precedence</h2>
 <p>Configuration files supplement existing methods of defining  parameters. The following precedence table shows the order of precedence when a setting is defined in multiple places:</p>
 <ul>
 <li>Command-line settings override</li>
@@ -71571,9 +71571,9 @@
 <li>Settings in the registry (Windows only), which override</li>
 <li>Built-in defaults</li>
 </ul>
-<h3 id="configuration-files-and-the-configuration-dialog">Configuration Files and The Configuration Dialog</h3>
+<h2 id="configuration-files-and-the-configuration-dialog">Configuration Files and The Configuration Dialog</h2>
 <p>The Configuration Dialog reflects the values of parameters stored in the Windows Registry and ignores overriding values defined on the command-line, in configuration files or in environment variables. If the user changes parameters using the Configuration Dialog, the new values are recorded in the Registry, but remain overridden by those that take precedence.</p>
-<h3 id="configuration-file-structure">Configuration File Structure</h3>
+<h2 id="configuration-file-structure">Configuration File Structure</h2>
 <p>Configuration files define configuration parameters using JSON5. A JSON object contains data in the form of key/value pairs and other JSON objects. The keys are strings and the values are the JSON types. Keys and values are separated by colon. Each entry (key/value pair) is separated by comma.</p>
 <p>The top-level object defines an optional key named <strong>Extend</strong> and an optional object named <strong>Settings</strong>.</p>
 <p><strong>Extend</strong> is a string value containing the name of a configuration file to import. The extended (imported) file may in turn extend another configuration file. Configuration values from the imported file(s) may be overridden by redefining them. The file name is implicitly relative to the name of the file which imports it. Any file name extension must be explicitly specified.</p>
@@ -71597,7 +71597,7 @@
 <span class="err">└────────────────┴───────────────────────┘</span>
 </code></pre></div>
 <p>A warning will be given if names  are redefined in the same configuration file; the second and subsequent definitions will be discarded.</p>
-<h3 id="file-names">File Names</h3>
+<h2 id="file-names">File Names</h2>
 <p>Pathnames specified in configuration files should be specified using portable forward slashes "/" rather than back-slashes "\" as the latter are used as escape characters by JSON.</p>
 <p><code>WSPATH: ["c:/Dyalog18.0"]</code> or  <code>WSPATH: ["c:\\Dyalog18.0"]</code> specifies the file <code>c:\Dyalog18.0</code>.</p>
 <p>whereas,</p>
@@ -71617,12 +71617,12 @@
 <span class="w">  </span><span class="kt">}</span>
 <span class="kt">}</span>
 </code></pre></div>
-<h3 id="arrays">Arrays</h3>
+<h2 id="arrays">Arrays</h2>
 <p>An array may be used to define file paths etc. For example,
 <div class="highlight"><pre><span></span><code><span class="nv">WSPATH</span><span class="bp">:</span><span class="w"> </span><span class="sr">[</span><span class="s2">&quot;/dir1&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;/dir2&quot;</span><span class="sr">]</span>
 </code></pre></div></p>
 <p>The only parameters which may be defined as arrays are <strong>WSPATH</strong>, <strong>WSEXT</strong> and <strong>CFEXT</strong>.</p>
-<h3 id="references-to-other-configuration-parameters">References to other Configuration Parameters</h3>
+<h2 id="references-to-other-configuration-parameters">References to other Configuration Parameters</h2>
 <p>Configuration parameters which are string values may include references to other configuration parameters (regardless of where they are defined) using square bracket delimiters. For example:
 <div class="highlight"><pre><span></span><code><span class="nv">MySetting</span><span class="bp">:</span><span class="w"> </span><span class="s2">&quot;[DYALOG]/MyFile&quot;</span>
 </code></pre></div></p>
@@ -71636,7 +71636,7 @@
 <li>If the referenced configuration parameter is not defined then no substitution will take place; the reference, including square bracket delimiters, will remain in place.</li>
 <li>To include square brackets in a string, prefix the '[' with a '\' character.</li>
 </ul>
-<h3 id="nested-structures">Nested Structures</h3>
+<h2 id="nested-structures">Nested Structures</h2>
 <p>Some parameters are stored in sub-folders in the Windows Registry. Currently, all such parameters used by Dyalog APL itself relate to the Windows IDE, but you can create your own application-specific structures..</p>
 <p>The Configuration file supports this structure by defining an object that corresponds to a Registry sub-folder. For example:
 <div class="highlight"><pre><span></span><code><span class="nv">Captions</span><span class="bp">:</span><span class="w"> </span><span class="kt">{</span>

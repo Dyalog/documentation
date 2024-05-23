@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -67963,7 +67963,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -67984,7 +67984,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68005,7 +68005,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68026,7 +68026,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70148,7 +70148,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70169,7 +70169,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70190,7 +70190,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70211,7 +70211,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71193,7 +71193,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71214,7 +71214,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71235,7 +71235,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71298,7 +71298,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71319,7 +71319,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71340,7 +71340,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71434,10 +71434,10 @@
                   
 
 
-<h1 class="heading"><span class="name"> Non-Modal Forms</span></h1>
+<h1> Non-Modal Forms</h1>
 
 <p>Non-modal Forms are displayed using the <code>Run</code> method of the <code>System.Windows.Forms.Application</code> object. This method is designed to be called once, and only once, during the life of an application and this poses problems during APL development. Fortunately, it turns out that, in practice, the restriction is that <code>Application.Run</code> may only be run once on a single system thread. However, it may be run successively on different system threads. During development, you may therefore test a function that calls <code>Application.Run</code>, by running it on a new APL thread using Spawn (<code>&amp;</code>). See Chapter 13 for further details.</p>
-<h3 id="datagrid-examples">DataGrid Examples</h3>
+<h2 id="datagrid-examples">DataGrid Examples</h2>
 <p>Three functions in the <code>samples\winforms\winforms.dws</code> workspace provide examples of non-modal Forms. These examples also illustrate the use of the WinForms.DataGrid class.</p>
 <p>Function <code>Grid1</code> is an APL translation of the example given in the help file for the DataGrid class in the .NET SDK Beta1. The original code has been slightly modified to work with the current version of the SDK.</p>
 <p>Function <code>Grid2</code> is an APL translation of the example given in the help file for the DataGrid class in the .NET SDK Beta2.</p>
@@ -71446,11 +71446,11 @@
 <span class="nv">QuickStart</span><span class="na">\</span><span class="nv">winforms</span><span class="na">\</span><span class="nv">samples</span><span class="na">\</span><span class="nv">Data</span><span class="na">\</span><span class="nv">Grid</span><span class="na">\</span><span class="nv">vb</span><span class="na">\</span><span class="nv">Grid</span><span class="na">.</span><span class="nv">vb</span>
 </code></pre></div></p>
 <p>This example uses Microsoft SQL Server 2000 to extract sample data from the sample NorthWind database. To run this example, you must have SQL Server running and you must modify function <code>Grid_Load</code> to specify the name of your server.</p>
-<h3 id="gdiplus-workspace">GDIPLUS Workspace</h3>
+<h2 id="gdiplus-workspace">GDIPLUS Workspace</h2>
 <p>The <code>samples\winforms\gdiplus.dws</code> workspace contains a sample that demonstrates the use of non-rectangular Forms. It is a direct translation into APL from a C# sample (WinForms-Graphics-GDIPlusShape) that was distributed on the Visual Studio .NET Beta 2 Resource CD.</p>
-<h3 id="tetris-workspace">TETRIS Workspace</h3>
+<h2 id="tetris-workspace">TETRIS Workspace</h2>
 <p>The <code>samples\winforms\tetris.dws</code> workspace contains a sample that demonstrates the use of graphics. It is a direct translation into APL from a C# sample (WinForms-Graphics-Tetris) that was distributed on the Visual Studio .NET Beta 2 Resource CD.</p>
-<h3 id="webservices-workspace">WEBSERVICES Workspace</h3>
+<h2 id="webservices-workspace">WEBSERVICES Workspace</h2>
 <p>An example of a non-modal Form is provided by the <code>WFGOLF</code> function in the <code>samples\asp.net\webservices\webservices.dws</code> workspace. This function performs exactly the same task as the <code>GOLF</code> function in the same workspace, but it uses Windows.Forms instead of the built-in Dyalog GUI.</p>
 <p><code>WFGOLF</code>, and its callback functions <code>WFBOOK</code> and <code>WFSS</code> perform exactly the same task, with almost identical dialog box appearance, of <code>GOLF</code> and its callbacks <code>BOOK</code> and <code>SS</code> that are described in Chapter 7.</p>
 <p>Note that when you run <code>WFGOLF</code> or <code>GOLF</code> for the first time, you must supply an argument of 1 to force the creation of the proxy class for the <code>GolfService</code> web service.</p>

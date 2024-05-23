@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68032,7 +68032,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68053,7 +68053,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68074,7 +68074,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68095,7 +68095,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70139,7 +70139,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70160,7 +70160,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70181,7 +70181,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70202,7 +70202,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71184,7 +71184,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71205,7 +71205,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71226,7 +71226,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71289,7 +71289,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71310,7 +71310,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71331,7 +71331,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71416,17 +71416,17 @@
                   
 
 
-<h1 class="heading"><span class="name"> In-process OLE Servers</span></h1>
+<h1> In-process OLE Servers</h1>
 
-<h3 id="exporting">Exporting</h3>
+<h2 id="exporting">Exporting</h2>
 <p>When you use File/Export to create an <em>in-process</em> OLE Server, the following steps are performed.</p>
 <p>APL first saves your workspace to a <em>temporary</em> file. Then it creates a <em>temporary</em> Type Library File that describes each of the OLEServer objects in the workspace. Next, it creates a Dynamic Link Library (DLL) file (whose name defaults to the name of your workspace but with a .DLL extension) by merging  the workspace saved in the temporary file with the file dllstub.dll. Finally, it registers your OLE Server by updating the Windows Registry. Your OLE Server DLL is self-contained and is independent of your workspace. The temporary files are then deleted.</p>
-<h3 id="execution">Execution</h3>
+<h2 id="execution">Execution</h2>
 <p>In-process OLEServers are hosted (executed) by the Dyalog APL DLL. If you export your OLE Server with <em>Runtime application</em> checked, it will be bound with the run-time version, If this checkbox is cleared, your OLE Server will be bound by the development version.</p>
 <p>If an in-process OLE Server, that is bound with the run-time Dyalog APL DLL generates an untrapped error, an OLE Automation error will be reported.</p>
 <p>If an in-process OLE Server, that is bound with the development Dyalog APL DLL generates an untrapped error, the APL Session will appear and you can use it to debug the problem and continue. Note that at this point, the development DLL will load your Session file so that all of your session tools are available during debugging. If your Session file runs any initialisation code that references external files, remember that this code will be executed in the current working directory of the host process.</p>
 <p>For further details, see Dyalog for Microsoft Windows Installation and Configuration Guide.</p>
-<h3 id="registering-and-unregistering-in-process-ole-servers">Registering and Unregistering In-Process OLE Servers</h3>
+<h2 id="registering-and-unregistering-in-process-ole-servers">Registering and Unregistering In-Process OLE Servers</h2>
 <p>During development, an in-process OLE Server is automatically registered when you create it using <em>File/Export</em>.</p>
 <p>The Windows utility regsvr32.exe should be used to register an <em>in-process</em> OLE Server independently, or to install a runtime in-process OLE Server on a target computer. For example:</p>
 <div class="highlight"><pre><span></span><code><span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">WINDOWS</span><span class="na">\</span><span class="nv">System32</span><span class="o">&gt;</span><span class="nv">regsvr32</span><span class="w"> </span><span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">mysvr</span><span class="na">.</span><span class="nv">dll</span>

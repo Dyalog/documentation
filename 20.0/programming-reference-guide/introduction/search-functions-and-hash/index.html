@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7880,7 +7880,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8875,7 +8875,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8896,7 +8896,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10231,7 +10231,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10252,7 +10252,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10273,7 +10273,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10294,7 +10294,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10315,7 +10315,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10336,7 +10336,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10357,7 +10357,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10386,7 +10386,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10454,7 +10454,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68023,7 +68023,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68044,7 +68044,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68065,7 +68065,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68086,7 +68086,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70130,7 +70130,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70151,7 +70151,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70172,7 +70172,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70193,7 +70193,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71175,7 +71175,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71196,7 +71196,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71217,7 +71217,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71280,7 +71280,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71301,7 +71301,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71322,7 +71322,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71398,7 +71398,7 @@
                   
 
 
-<h1 class="heading"><span class="name"> Search Functions and Hash Tables</span></h1>
+<h1> Search Functions and Hash Tables</h1>
 
 <p>Primitive dyadic <em>search</em> functions, such as <code>⍳</code> (index of) and <code>∊</code> (membership) have a <em>principal</em> argument in which items of the other <em>subject</em> argument are located.</p>
 <p>In the case of <code>⍳</code>, the principal argument is the one on the left and in the case of <code>∊</code>, it is the one on the right. The following table shows the principal (P) and subject (s) arguments for each of the functions.</p>
@@ -71438,7 +71438,7 @@
 <p>Building a <em>hash table</em> for the principal argument takes a significant time but is rewarded by a considerably quicker search for each item in the subject. Unfortunately, the hash table is discarded each time the function completes and must be reconstructed for a subsequent call (even if its principal argument is identical to that in the previous one).</p>
 <p>For optimal performance of <em>repeated</em> search operations, the hash table may be retained between calls, by binding the function with its principal argument using the primitive <code>∘</code> (compose) operator. The retained hash table is then used directly whenever this monadic derived function is applied to a subject argument.</p>
 <p>Notice that retaining the hash table pays off only on a second or subsequent application of the derived function. This usually occurs in one of two ways: either the derived function is named for later (and repeated) use, as in the first example below or it is applied repeatedly as the operand of a primitive or defined operator, as in the second example.</p>
-<h3 id="example-naming-a-derived-function">Example: naming a derived function.</h3>
+<h2 id="example-naming-a-derived-function">Example: naming a derived function.</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">words</span><span class="kd">←</span><span class="s1">&#39;red&#39;</span><span class="w"> </span><span class="s1">&#39;ylo&#39;</span><span class="w"> </span><span class="s1">&#39;grn&#39;</span><span class="w"> </span><span class="s1">&#39;brn&#39;</span><span class="w"> </span><span class="s1">&#39;blu&#39;</span><span class="w"> </span><span class="s1">&#39;pnk&#39;</span><span class="w"> </span><span class="s1">&#39;blk&#39;</span>
 
 <span class="w">      </span><span class="nv">find</span><span class="kd">←</span><span class="nv">words</span><span class="na">∘</span><span class="o">⍳</span><span class="w">                 </span><span class="c1">⍝ monadic find function</span>
@@ -71447,7 +71447,7 @@
 <span class="w">      </span><span class="nv">find</span><span class="s1">&#39;grn&#39;</span><span class="w"> </span><span class="s1">&#39;brn&#39;</span><span class="w"> </span><span class="s1">&#39;ylo&#39;</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="w">  </span><span class="c1">⍝ fast find</span>
 <span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
-<h3 id="example-repeated-application-by-each-operator">Example: repeated application by (<code>¨</code>) each operator.</h3>
+<h2 id="example-repeated-application-by-each-operator">Example: repeated application by (<code>¨</code>) each operator.</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">∊</span><span class="na">∘</span><span class="nf">⎕A</span><span class="na">¨</span><span class="s1">&#39;This&#39;</span><span class="w"> </span><span class="s1">&#39;And&#39;</span><span class="w"> </span><span class="s1">&#39;That&#39;</span>
 <span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>

@@ -30,6 +30,11 @@
     text-align: right;
 }
 
+.md-typeset code {
+	word-break: normal !important;
+    overflow-wrap: break-word !important;
+}
+
 .shaded {
   background-color: rgb(220, 220, 220); /* Light grey background */
 }

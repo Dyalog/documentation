@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68066,7 +68066,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68087,7 +68087,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68108,7 +68108,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68129,7 +68129,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70173,7 +70173,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70194,7 +70194,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70215,7 +70215,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70236,7 +70236,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71218,7 +71218,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71239,7 +71239,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71260,7 +71260,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71323,7 +71323,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71344,7 +71344,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71365,7 +71365,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71486,21 +71486,21 @@
                   
 
 
-<h1 class="heading"><span class="name"> Entering and Executing Expressions</span></h1>
+<h1> Entering and Executing Expressions</h1>
 
-<h3 id="introduction">Introduction</h3>
+<h2 id="introduction">Introduction</h2>
 <p>The session contains the <em>input line</em> and the <em>session log</em>. The input line is the last line in the session, and is (normally) the line into which you type an expression to be evaluated.</p>
 <p>The session log is a history of previously entered expressions and the results they produced.</p>
 <p>If you are using a log file, the Session log is loaded into memory when APL is started from the file specified by the <strong>log_file</strong> parameter. When you close your APL session, the Session log is written back out to the log file, replacing its previous contents.</p>
 <p>In general you type an expression into the input line, then press Enter (ER) to run it. After execution, the expression and any displayed results become part of the session log.</p>
 <p>You can move around in the session using the scrollbar, the cursor keys, and the PgUp and PgDn keys. In addition, Ctrl+Home (UL) moves the cursor to the beginning of the top-line in the Log and Ctrl+End (DL) moves the cursor to the end of the last (i.e. the <em>current</em>) line in the session log. Home (LL) and End (RL) move the cursor to the beginning and end respectively of the line containing the cursor.</p>
-<h3 id="deleting-lines">Deleting Lines</h3>
+<h2 id="deleting-lines">Deleting Lines</h2>
 <p>You may delete one or more lines from the Session using the DK command (Ctrl+Delete). This action removes the current line or the selected block of lines  from the Session window and from the Session log. The removal is permanent and you will be prompted to confirm:</p>
 <figure id="_figure-1">
 <img alt="modify session log" src="../img/modify-session-log.png" />
 <figcaption><span>Figure&nbsp;1</span></figcaption>
 </figure>
-<h3 id="auto-complete">Auto Complete</h3>
+<h2 id="auto-complete">Auto Complete</h2>
 <p>As you start to enter characters in an APL expression, the <em>Auto Complete</em> suggestions pop-up window (AC for short) offers you a choice based upon the characters you have already entered and the current context.</p>
 <p>For example, if you enter a <code>⎕</code>, AC displays a list of all the system functions and variables. If you then enter the character <code>r</code>, the list shrinks to those system functions and variables beginning with the letter r, namely <code>⎕refs</code>, <code>⎕rl</code>, <code>⎕rsi</code>, and <code>⎕rtl</code>. Instead of entering the remaining characters, you may select the appropriate choice in the AC list. This is done by pressing the right cursor key.</p>
 <p>If you begin to enter a name, AC will display a list of namespaces, variables, functions, operators that are defined in the current namespace. If you are editing a function, AC will also include names that are localised in the function header.</p>
@@ -71508,18 +71508,18 @@
 <p>As an additional refinement, AC remembers a certain number of previous auto complete operations, and uses this information to highlight the most recent choice you made.</p>
 <p>For example, suppose that you enter the two characters <code>)c</code>. AC offers you <code>)clear</code> thru' <code>)cs</code>, and you choose <code>)cs</code> from the list. The next time you enter the two characters <code>)c</code>, AC displays the same list of choices, but this time <code>)cs</code> is pre-selected.</p>
 <p>You can disable or customise Auto Completion from the <em>Auto Complete</em> page in the Configuration dialog box which is described later in this chapter.</p>
-<h3 id="executing-an-expression">Executing an Expression</h3>
+<h2 id="executing-an-expression">Executing an Expression</h2>
 <p>To execute an expression, you type it into the input line, then press Enter (ER). Alternatively, you can select <em>Execute</em> from the <em>Action</em> menu. Following execution, the expression and any displayed results become part of the session log.</p>
 <p>Instead of entering a new expression in the input line, you can move back through the session log and re-execute a previous expression (or line of a result) by simply pointing at it with the cursor and pressing Enter. Alternatively, you can <em>select Execute</em> from the <em>Action</em> menu. You may alter the line before executing it. If you do so, it will be displayed using colour 249 (Red on White), the same as that used for the input line. When you press Enter the new line is copied to the input line prior to being executed. The original line is restored and redisplayed in the normal session log colour 250 (Black on White).</p>
 <p>An alternative way to retrieve a previously entered expression is to use Ctrl+Shift+Bksp (BK) and Ctrl+Shift+Enter (FD). These commands cycle backwards and forwards through the <em>input history</em>, successively copying previously entered expressions over the current line. When you reach the expression you want, simply press Enter to re-run it. These operations may also be performed from the <em>Edit</em> menu in the session window.</p>
-<h3 id="executing-several-expressions">Executing Several Expressions</h3>
+<h2 id="executing-several-expressions">Executing Several Expressions</h2>
 <p>You can execute several expressions, by changing more than one line in the session log before pressing Enter. Each line that you change will be displayed using colour 249 (Red on White). When you press Enter, these <em>marked</em> lines are copied down and executed in the order they appear in the log.</p>
 <p>Note that you don't actually have to <em>change</em> a line to mark it for re-execution; you can mark it by overtyping a character with the same character, or by deleting a leading space for instance.</p>
 <p>It is also possible to execute a contiguous block of lines. To do this, you must first select the lines (by dragging the mouse or using the keyboard) and then copy them into the clipboard using Shift+Delete (CT) or Ctrl+Insert (CP). You then paste them back into the session using Shift+Insert (PT). Lines pasted into the session are always marked (Red on White) and will therefore be executed when you press Enter. To execute lines from an edit window, you use a similar procedure. First select the lines you want to execute, then cut or copy the selection to the clipboard. Then move to the session window and paste them in, then press Enter to execute them.</p>
-<h3 id="session-print-width-pw">Session Print Width (PW)</h3>
+<h2 id="session-print-width-pw">Session Print Width (PW)</h2>
 <p>Throughout its history, APL has used a system variable <code>⎕PW</code> to specify the width of the user's terminal or screen. Session output that is longer than <code>⎕PW</code> is automatically wrapped and split into multiple lines on the display. This feature of APL was designed in the days of hard-copy terminals and has become less relevant in modern Windows environments.</p>
 <p>Dyalog APL continues to support the traditional use of <code>⎕PW</code>, but also provides an alternative option to have the system wrap Session output according to the width of the Session Window. This behaviour may be selected by checking the Auto PW checkbox in the Session tab of the Configuration dialog box.</p>
-<h3 id="using-findreplace-in-the-session">Using Find/Replace in the Session</h3>
+<h2 id="using-findreplace-in-the-session">Using Find/Replace in the Session</h2>
 <p>The search and replace facilities work not just in the Editor as you would expect, but also in the Session. For example, if you have just entered a series of expressions involving a variable called <code>SALES</code> and you want to perform the same calculations using <code>NEWSALES</code>, the following commands will achieve it:</p>
 <p>Enter <code>SALES</code> in the <em>Find</em> box, and <code>NEWSALES</code> in the <em>Replace</em> box. Now click the <em>Replace All</em> button. You will see all occurrences of <code>SALES</code> change to <code>NEWSALES</code>. Furthermore, each changed line in the session becomes marked (Red on White). Now click on the session and press Enter (or select <em>Execute</em> from the <em>Action</em> menu).</p>
 <p>Once displayed, the <em>Find</em> or <em>Find/Replace</em> dialog box remains on the screen until it is either closed or replaced by the other. This is particularly convenient if the same operations are to be performed over and over again, and/or in several windows. <em>Find</em> and <em>Find/Replace</em> operations are effective in the window that previously had the focus.</p>

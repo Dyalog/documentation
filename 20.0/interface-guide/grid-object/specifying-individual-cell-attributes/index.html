@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68032,7 +68032,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68053,7 +68053,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68074,7 +68074,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68095,7 +68095,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70139,7 +70139,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70160,7 +70160,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70181,7 +70181,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70202,7 +70202,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71184,7 +71184,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71205,7 +71205,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71226,7 +71226,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71289,7 +71289,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71310,7 +71310,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71331,7 +71331,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71416,13 +71416,13 @@
                   
 
 
-<h1 class="heading"><span class="name"> Specifying Individual Cell Attributes</span></h1>
+<h1> Specifying Individual Cell Attributes</h1>
 
 <p>The FCol, BCol, CellFonts and Input properties can be used to specify attributes of individual cells. One possible design would be for these properties to be matrices like the Values property, each of whose elements corresponded to a cell in the Grid. However, although conceptually simple, this design was considered to be wasteful in terms of workspace, especially as it is unlikely that every cell will require a totally individual set of attributes. Instead, FCol, BCol, CellFonts and Input either specify a single attribute to be applied to all cells, or they specify a vector of attributes which are indexed through the CellTypes property. This design is slightly more complex to use, but minimises the workspace needed to represent cell information.</p>
 <p>CellTypes is an integer matrix of the same size as Values. Each number in CellTypes defines the <em>type</em> of the corresponding cell, where <em>type</em> means a particular set of cell attributes defined by the BCol, FCol, CellFonts and Input properties.</p>
 <p>If an element of CellTypes is 0 or 1, the corresponding cell is displayed using the <em>normal</em> value of each of the FCol, BCol, CellFonts and Input properties. The normal value is either the value defined by its first element or, if the property has not been specified, its default value.</p>
 <p>If an element of CellTypes is greater than 1, the corresponding element of each of the FCol, BCol, CellFonts and Input properties is used. However, if a particular property applies to all cells, you need only specify one value; there is no need to repeat it. This mechanism is perhaps best explained by using examples.</p>
-<h3 id="example-1">Example 1</h3>
+<h2 id="example-1">Example 1</h2>
 <p>Suppose that you want to use a Grid to display a numeric matrix <code>DATA</code> and you want to show elements whose value exceeds 150 with a  grey background. Effectively, there are 2 different types of cell; normal white ones and dark grey ones. This can be achieved as follows:
 <div class="highlight"><pre><span></span><code><span class="nv">DATA</span><span class="kd">←</span><span class="o">?</span><span class="m">12</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="m">300</span>
 <span class="w"> </span><span class="s1">&#39;F&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Form&#39;</span><span class="w"> </span><span class="s1">&#39;Example 1&#39;</span>
@@ -71435,7 +71435,7 @@
 <figcaption><span>Figure&nbsp;1</span></figcaption>
 </figure>
 <p><code>CellTypes[]</code> is either 1 or 2, according to whether the value in the corresponding cell is 150 or less. So the cells whose value is 150 or less use <code>BCol[1]</code> which is <code>255 255 255</code> (white) whereas those cells whose value is <code>&gt;150</code> use <code>BCol[2]</code> which is <code>192 192 192</code> (grey).</p>
-<h3 id="example-2">Example 2</h3>
+<h2 id="example-2">Example 2</h2>
 <p>Continuing on from the first example, suppose that in addition, you want to show values that exceed 200 with a white background, but using a bold font. Now you have 3 types of cell; white background with normal font, grey background with normal font, and white background with bold font. This can be done as follows:
 <div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nv">CT</span><span class="kd">←</span><span class="p">(</span><span class="nv">DATA</span><span class="o">&gt;</span><span class="m">200</span><span class="p">)</span><span class="o">+</span><span class="m">1</span><span class="o">+</span><span class="nv">DATA</span><span class="o">&gt;</span><span class="m">100</span>
 <span class="w"> </span><span class="s1">&#39;F.G&#39;</span><span class="nf">⎕WS</span><span class="s1">&#39;CellTypes&#39;</span><span class="nv">CT</span>
@@ -71461,7 +71461,7 @@
 <li>between 100 and 200 use <code>CellFonts[2]</code> and <code>BCol[2]</code></li>
 <li>between 100 and 200 use <code>CellFonts[3]</code> and <code>BCol[3]</code></li>
 </ul>
-<h3 id="example-3">Example 3</h3>
+<h2 id="example-3">Example 3</h2>
 <p>This is a more complex example that introduces different uses of the Input property to handle numeric and date cells. Suppose that you wish to display the names, date of birth, and salaries of some people. The user may edit the salary and date of birth, but not the name. Salaries in excess of $19,999 are to be shown in bold</p>
 <p>This means that we need 4 types of cell; the "names" cells, the "date of birth" cells, the cells containing salaries below $20,000 and those cells containing $20,000 or more. The Input property must specify 3 different objects; a Label for the protected "names" cells, an Edit object for the "date" cells, and a different Edit object for the salaries. The CellFonts property must specify the two different fonts required; normal and bold.</p>
 <div class="highlight"><pre><span></span><code><span class="w"> </span><span class="s1">&#39;F&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Form&#39;</span><span class="w"> </span><span class="s1">&#39;Example 3&#39;</span>

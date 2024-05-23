@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68113,7 +68113,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68134,7 +68134,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68155,7 +68155,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68176,7 +68176,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70220,7 +70220,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70241,7 +70241,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70262,7 +70262,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70283,7 +70283,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71265,7 +71265,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71286,7 +71286,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71307,7 +71307,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71370,7 +71370,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71391,7 +71391,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71412,7 +71412,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71578,7 +71578,7 @@
                   
 
 
-<h1 class="heading"><span class="name"> The cfiles Workspace</span></h1>
+<h1> The cfiles Workspace</h1>
 
 <p><code>cfiles.dws</code> contains a single OLEServer namespace called <code>CFiles</code> which implements a basic object-oriented interface to Dyalog APL component files.</p>
 <p>This example allows an OLE Client, such as Excel, to read and write APL component files. It is deliberately over-simplified but illustrates how an object hierarchy may be implemented.</p>
@@ -71589,7 +71589,7 @@
 <p>To open a component file, an OLE Client calls <code>OpenFile</code> with the name of the file as its argument. This function opens the file and returns, not a file tie number as you might expect, but an instance of the <code>File</code> namespace which is associated with the file. As far as the client is concerned, this is a subsidiary OLE object of type <code>dyalog.File</code>.</p>
 <p>To perform file operations, the client invokes the <code>FREAD</code>, <code>FREPLACE</code>, <code>FAPPEND</code> and <code>FSIZE</code> methods (functions) of the File object.</p>
 <p>A more sophisticated example might expose each component as a subsidiary object too.</p>
-<h3 id="registering-cfiles-as-an-ole-server">Registering CFiles as an OLE Server</h3>
+<h2 id="registering-cfiles-as-an-ole-server">Registering CFiles as an OLE Server</h2>
 <p>In order to explore the use of an APL OLE Server using the cfiles workspace as an example, you must register the CFiles object on your system.</p>
 <p><strong>On Windows 7 or later, you must start Dyalog APL with Administrator privileges (right-click the desktop icon and choose Run as administrator). This is necessary to register an OLE server.</strong></p>
 <p><code>)LOAD</code> the <code>cfiles</code> workspace from the <code>samples\ole</code> sub-directory
@@ -71635,7 +71635,7 @@
 <img alt="cfiles create bound file ok" src="../../img/cfiles-create-bound-file-ok.png" />
 <figcaption><span>Figure&nbsp;3</span></figcaption>
 </figure>
-<h3 id="the-getfile-function">The GetFile Function</h3>
+<h2 id="the-getfile-function">The GetFile Function</h2>
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">GetFile</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">r</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="s1">&#39;.&#39;</span><span class="w"> </span><span class="s1">&#39;GetEnvironment&#39;</span><span class="w"> </span><span class="s1">&#39;DYALOG&#39;</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">r</span><span class="o">,</span><span class="kd">←</span><span class="s1">&#39;\samples\ole\test.dcf&#39;</span>
@@ -71646,7 +71646,7 @@
 <img alt="cfiles getfile properties" src="../../img/cfiles-getfile-properties.png" />
 <figcaption><span>Figure&nbsp;4</span></figcaption>
 </figure>
-<h3 id="the-openfile-function">The OpenFile Function</h3>
+<h2 id="the-openfile-function">The OpenFile Function</h2>
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FILE</span><span class="kd">←</span><span class="nv">OpenFile</span><span class="w"> </span><span class="nv">NAME</span><span class="sr">;</span><span class="nv">F</span><span class="sr">;</span><span class="nv">TIE</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Makes a new File object</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">TIE</span><span class="kd">←</span><span class="m">1</span><span class="o">+⌈</span><span class="na">/</span><span class="m">0</span><span class="o">,</span><span class="nf">⎕FNUMS</span>
@@ -71667,7 +71667,7 @@
 <img alt="cfiles openfile properties" src="../../img/cfiles-openfile-properties.png" />
 <figcaption><span>Figure&nbsp;5</span></figcaption>
 </figure>
-<h3 id="the-fsize-function">The FSIZE Function</h3>
+<h2 id="the-fsize-function">The FSIZE Function</h2>
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">FSIZE</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="nf">⎕FSIZE</span><span class="w"> </span><span class="nv">TieNumber</span>
 <span class="w">     </span><span class="bp">∇</span>
@@ -71678,7 +71678,7 @@
 <img alt="cfiles fsize properties" src="../../img/cfiles-fsize-properties.png" />
 <figcaption><span>Figure&nbsp;6</span></figcaption>
 </figure>
-<h3 id="the-fread-function">The FREAD Function</h3>
+<h2 id="the-fread-function">The FREAD Function</h2>
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">FREAD</span><span class="w"> </span><span class="nv">N</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="nf">⎕FREAD</span><span class="w"> </span><span class="nv">TieNumber</span><span class="o">,</span><span class="nv">N</span>
 <span class="w">     </span><span class="bp">∇</span>
@@ -71689,7 +71689,7 @@
 <img alt="cfiles fread properties" src="../../img/cfiles-fread-properties.png" />
 <figcaption><span>Figure&nbsp;7</span></figcaption>
 </figure>
-<h3 id="the-fappend-function">The FAPPEND Function</h3>
+<h2 id="the-fappend-function">The FAPPEND Function</h2>
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">FAPPEND</span><span class="w"> </span><span class="nv">DATA</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="nv">DATA</span><span class="w"> </span><span class="nf">⎕FAPPEND</span><span class="w"> </span><span class="nv">TieNumber</span>
 <span class="w">     </span><span class="bp">∇</span>
@@ -71700,7 +71700,7 @@
 <img alt="cfiles fappend properties" src="../../img/cfiles-fappend-properties.png" />
 <figcaption><span>Figure&nbsp;8</span></figcaption>
 </figure>
-<h3 id="the-freplace-function">The FREPLACE Function</h3>
+<h2 id="the-freplace-function">The FREPLACE Function</h2>
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FREPLACE</span><span class="w"> </span><span class="nv">ID</span><span class="sr">;</span><span class="nv">I</span><span class="sr">;</span><span class="nv">DATA</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">I</span><span class="w"> </span><span class="nv">DATA</span><span class="kd">←</span><span class="nv">ID</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">DATA</span><span class="w"> </span><span class="nf">⎕FREPLACE</span><span class="w"> </span><span class="nv">TieNumber</span><span class="o">,</span><span class="nv">I</span>
@@ -71712,7 +71712,7 @@
 <img alt="cfiles freplace properties" src="../../img/cfiles-freplace-properties.png" />
 <figcaption><span>Figure&nbsp;9</span></figcaption>
 </figure>
-<h3 id="using-cfiles-from-excel">Using CFiles from Excel</h3>
+<h2 id="using-cfiles-from-excel">Using CFiles from Excel</h2>
 <p>Start Excel and load the spreadsheet <code>cfiles.xlsm</code> from the Dyalog APL sub-directory <code>samples\ole</code>.</p>
 <p>Please note that to simplify the Excel code, only components containing matrices (such as those contained in samples\ole\test.dcf) are handled. Components containing scalars, vectors, higher-rank arrays and complex nested arrays are not supported.</p>
 <figure id="_figure-10">
@@ -71741,7 +71741,7 @@
 </figure>
 <p>To replace a component, first enter the component number. Then type some data elsewhere on the spreadsheet and select it. Now click <em>Replace</em>. This runs the FReplace procedure.</p>
 <p>To append a component, enter some data elsewhere on the spreadsheet and select it. Now click <em>Append</em>. This runs the FAppend procedure.</p>
-<h3 id="the-fopen-procedure">The FOpen Procedure</h3>
+<h2 id="the-fopen-procedure">The FOpen Procedure</h2>
 <div class="highlight"><pre><span></span><code><span class="nv">Public</span><span class="w"> </span><span class="nv">CF</span><span class="w"> </span><span class="nv">As</span><span class="w"> </span><span class="nv">Object</span>
 <span class="nv">Public</span><span class="w"> </span><span class="nv">File</span><span class="w"> </span><span class="nv">As</span><span class="w"> </span><span class="nv">Object</span>
 <span class="w"> </span>
@@ -71767,7 +71767,7 @@
 <div class="highlight"><pre><span></span><code><span class="nv">Set</span><span class="w"> </span><span class="nv">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">CF</span><span class="na">.</span><span class="nv">OpenFile</span><span class="p">(</span><span class="nv">f</span><span class="p">)</span>
 </code></pre></div></p>
 <p>calls the OpenFile function and stores the result (which is an object) in the global variable File.</p>
-<h3 id="the-fread-procedure">The FRead Procedure</h3>
+<h2 id="the-fread-procedure">The FRead Procedure</h2>
 <div class="highlight"><pre><span></span><code><span class="nv">Sub</span><span class="w"> </span><span class="nv">FRead</span><span class="p">()</span>
 <span class="w">    </span><span class="nv">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Cells</span><span class="p">(</span><span class="m">4</span><span class="o">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="na">.</span><span class="nv">Value</span>
 <span class="w">    </span><span class="nv">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">File</span><span class="na">.</span><span class="nv">FREAD</span><span class="p">(</span><span class="nv">c</span><span class="p">)</span>
@@ -71787,7 +71787,7 @@
 </code></pre></div></p>
 <p>calls the <code>FREAD</code> function in the instance of the <code>File</code> namespace that is connected to the (global) Excel variable File. The result is stored in the variable Data.</p>
 <p>The remaining statements copy the data from Data into the spreadsheet.</p>
-<h3 id="the-freplace-procedure">The FReplace Procedure</h3>
+<h2 id="the-freplace-procedure">The FReplace Procedure</h2>
 <div class="highlight"><pre><span></span><code><span class="nv">Sub</span><span class="w"> </span><span class="nv">FReplace</span><span class="p">()</span>
 <span class="w">    </span><span class="nv">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Cells</span><span class="p">(</span><span class="m">4</span><span class="o">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="na">.</span><span class="nv">Value</span>
 <span class="w">    </span><span class="nv">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Selection</span><span class="na">.</span><span class="nv">Value</span>
@@ -71807,7 +71807,7 @@
 <div class="highlight"><pre><span></span><code><span class="nv">Call</span><span class="w"> </span><span class="nv">File</span><span class="na">.</span><span class="nv">FReplace</span><span class="p">(</span><span class="nv">c</span><span class="o">,</span><span class="w"> </span><span class="nv">Data</span><span class="p">)</span>
 </code></pre></div></p>
 <p>calls the <code>FREPLACE</code> function in the instance of the <code>File</code> namespace that is connected to the (global) Excel variable File.</p>
-<h3 id="the-fappend-procedure">The FAppend Procedure</h3>
+<h2 id="the-fappend-procedure">The FAppend Procedure</h2>
 <div class="highlight"><pre><span></span><code><span class="nv">Sub</span><span class="w"> </span><span class="nv">FAppend</span><span class="p">()</span>
 <span class="w">    </span><span class="nv">Dim</span><span class="w"> </span><span class="nv">Rslt</span><span class="w"> </span><span class="nv">As</span><span class="w"> </span><span class="nv">Variant</span>
 <span class="w">    </span><span class="nv">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Selection</span><span class="na">.</span><span class="nv">Value</span>

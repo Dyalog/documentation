@@ -6308,7 +6308,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7965,7 +7965,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8960,7 +8960,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8981,7 +8981,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10316,7 +10316,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10337,7 +10337,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10358,7 +10358,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10379,7 +10379,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10400,7 +10400,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10421,7 +10421,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10442,7 +10442,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10471,7 +10471,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10539,7 +10539,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68108,7 +68108,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68129,7 +68129,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68150,7 +68150,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68171,7 +68171,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70215,7 +70215,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70236,7 +70236,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70257,7 +70257,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70278,7 +70278,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71260,7 +71260,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71281,7 +71281,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71302,7 +71302,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71365,7 +71365,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71386,7 +71386,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71407,7 +71407,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71570,16 +71570,16 @@
                   
 
 
-<h1 class="heading"><span class="name"> APLService Logging Events</span></h1>
+<h1> APLService Logging Events</h1>
 
 <p>The <code>aplservice</code> workspace contains the class <code>SysLog</code> which can be used to log events to the Windows Event Log.  These events can be accessed programmatically or viewed using the Windows Event Viewer found in the Windows Administrative Tools.</p>
-<h3 id="windows-event-log-concepts">Windows Event Log Concepts</h3>
+<h2 id="windows-event-log-concepts">Windows Event Log Concepts</h2>
 <p>Every message logged in the Windows Event Log has a named source.  Frequently this source will be the name of the application which generates the message.  Windows has multiple event log files.  By default, messages will be logged in the Application log file found in the Windows Logs section of the Windows Event Viewer.  Alternatively, you can create a custom log located in the Applications and Services Logs section in the Windows Event Viewer as shown by the "mylog" entry in the screenshot below.  Multiple applications can use the same source and multiple sources can write to the same log file, but a given source may only write to a single log file.</p>
 <figure id="_figure-1">
 <img alt="windows event viewer" src="../img/windows-event-viewer.png" />
 <figcaption><span>Figure&nbsp;1</span></figcaption>
 </figure>
-<h3 id="using-syslog-in-your-application">Using SysLog in Your Application</h3>
+<h2 id="using-syslog-in-your-application">Using SysLog in Your Application</h2>
 <p>Before deploying your Dyalog APL application as a service, you should:</p>
 <ol>
 <li>Consider what events or messages the application should log and their severity level. <code>SysLog</code> allows you to specify severity levels of Error, Warning, and Informational.</li>
@@ -71588,7 +71588,7 @@
 <li>You may use the <code>SysLog.WriteLog</code> method.  <code>SysLog.WriteLog</code> will verify that the log source exists and then write your message.  This has the advantage of being standalone and can be called whenever you desire</li>
 <li>You may create an instance of the <code>SysLog</code> class and use the <code>Write</code> method.  This has the advantage of not incurring the overhead of verifying the existence of the log source each time a log message is written</li>
 </ol>
-<h3 id="syslog-usage">SysLog Usage</h3>
+<h2 id="syslog-usage">SysLog Usage</h2>
 <p><code>SysLog</code> implements an interface to a subset of the functionality of Microsoft's System.Diagnostics.EventLog class.  Some of <code>SysLog</code>'s methods, namely  <code>CreateEventSource</code>, <code>DeleteEventSource</code> and <code>DeleteLog</code>, require you to run Dyalog <strong>as an administrator</strong> to be fully functional.</p>
 <p>All of the methods in <code>SysLog</code> with the exception of <code>Write</code> are shared methods meaning you do not have to create an instance of <code>SysLog</code> in order to execute them.</p>
 <table>
@@ -71598,7 +71598,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="purpose">Purpose</h4>
+<h3 id="purpose">Purpose</h3>
 <p>Creates a new Windows Event Log source and optionally specifies or creates a Windows Event Log for the source.</p>
 <table>
 <thead>
@@ -71625,7 +71625,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="purpose_1">Purpose</h4>
+<h3 id="purpose_1">Purpose</h3>
 <p>Writes a message to the Windows Event Log associated with <code>sourcename</code>, optionally specifying a severity level.</p>
 <table>
 <thead>
@@ -71674,7 +71674,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="purpose_2">Purpose</h4>
+<h3 id="purpose_2">Purpose</h3>
 <p>Writes a message to the Windows Event Log associated with source name specified for the <code>SysLog</code> instance, optionally specifying a severity level.</p>
 <table>
 <thead>
@@ -71727,7 +71727,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="purpose_3">Purpose</h4>
+<h3 id="purpose_3">Purpose</h3>
 <p>Returns 1 if a Windows Event Log named <code>logname</code> exists, 0 otherwise.</p>
 <table>
 <thead>
@@ -71750,7 +71750,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="purpose_4">Purpose</h4>
+<h3 id="purpose_4">Purpose</h3>
 <p>Returns 1 if a Windows Event Log source named <code>sourcename</code> exists, 0 otherwise.</p>
 <table>
 <thead>
@@ -71773,7 +71773,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="purpose_5">Purpose</h4>
+<h3 id="purpose_5">Purpose</h3>
 <p>Returns the Windows Event Log log name associated with the source named <code>sourcename</code>.</p>
 <table>
 <thead>
@@ -71800,7 +71800,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="purpose_6">Purpose</h4>
+<h3 id="purpose_6">Purpose</h3>
 <p>Deletes the Windows Event Log source named <code>sourcename</code>.</p>
 <table>
 <thead>
@@ -71823,7 +71823,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="purpose_7">Purpose</h4>
+<h3 id="purpose_7">Purpose</h3>
 <p>Deletes the Windows Event Log log named <code>logname</code>.</p>
 <table>
 <thead>

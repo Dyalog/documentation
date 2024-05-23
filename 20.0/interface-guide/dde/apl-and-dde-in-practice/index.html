@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68068,7 +68068,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68089,7 +68089,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68110,7 +68110,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68131,7 +68131,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70175,7 +70175,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70196,7 +70196,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70217,7 +70217,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70238,7 +70238,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71220,7 +71220,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71241,7 +71241,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71262,7 +71262,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71325,7 +71325,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71346,7 +71346,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71367,7 +71367,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71488,13 +71488,13 @@
                   
 
 
-<h1 class="heading"><span class="name"> APL and DDE in Practice</span></h1>
+<h1> APL and DDE in Practice</h1>
 
 <p>The interface between Dyalog APL/W and DDE is provided by Shared Variables which are implemented as closely as possible in accordance with the APL Standard. There are however some conflicts between Shared Variables and the way in which DDE works. These impose certain restrictions.</p>
 <p>The APL Shared Variable concept is based upon the <em>peer-to-peer</em> communications model where each partner has equal rights and equal control. DDE however is based upon the <em>client-server</em> model whereby data (normally) flows from server to the client at the client's request. This in turn has two major implications. Firstly, a client must <strong>initiate</strong> a DDE conversation. A server may only respond to a request from a client for a connection; it may not itself start a conversation. Secondly a server cannot specify to which client it wishes to communicate. In terms of the APL standard, this means that if a shared variable is to act as a server it must be made the subject of a <em>general offer</em>. A shared variable that is to act as a client must be the subject of a <em>specific offer</em> Furthermore, as in any DDE conversation there must be one server and one client, it means that two APL workspaces can share variables only if one makes a general offer and one makes a specific offer.</p>
 <p>An APL application registers itself as a potential server, or initiates a DDE conversation as a client, by making a Shared Variable offer using <code>⎕SVO</code>. The offer is either a general offer, which corresponds to a DDE server, or a specific offer which is a client.</p>
 <p>Note that, as mentioned in the introduction, DDE does not preclude two-way data transfer, despite its insistence on a client-server relationship. Thus the establishment of a shared variable as a server or as a client does not force the data transfer to be one-way. The choice of whether APL is to act as a server or as client may in practice be determined by convenience.</p>
-<h3 id="apl-as-the-client">APL as the Client</h3>
+<h2 id="apl-as-the-client">APL as the Client</h2>
 <p>To initiate a DDE conversation with a server, you use <code>⎕SVO</code> as follows:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;DDE:appln|topic&#39;</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">&#39;var item&#39;</span>
 </code></pre></div></p>
@@ -71526,31 +71526,31 @@
 <p>Note that the result of <code>⎕SVO</code> is the <em>degree of coupling</em>. This has the value 2 if the connection is complete (the server has responded) and 1 if it has not. In practice it is a little more complicated than this, because the result actually depends upon the type of DDE link that has been established.</p>
 <p>In principle, the type of link is determined by the client. However, because the server may refuse to accept a particular type of link, it can actually be a result of <em>negotiation</em> between the two applications.</p>
 <p>When the shared variable is offered as a client, APL <strong>always</strong> requests a warm link from the server. If the server refuses a warm link, APL instead requests the current value of the data item (a cold link), and, if the server responds, APL stores the value in the variable. In either case, the degree of coupling is set to 2 if the connection was successful.</p>
-<h3 id="executing-commands-in-the-server">Executing Commands in the Server</h3>
+<h2 id="executing-commands-in-the-server">Executing Commands in the Server</h2>
 <p>As mentioned in the Introduction, it is possible for a client to instruct a server to execute a command by sending it a DDE_EXECUTE message. This is intended to allow the client to condition the environment in which the server is operating and not (as one might first expect) to execute a command which directly returns a result. In fact the only response from a server to a DDE_EXECUTE message is a positive or negative acknowledgement, the meaning of which is application dependent.</p>
 <p>You can establish a shared variable as a channel for sending DDE_EXECUTE messages by assigning it a surrogate name of <code>'⍎'</code>, the APL execute symbol. After sharing, you send commands to the server as DDE_EXECUTE messages by assigning them, as character vectors, to the shared variable. Following each such assignment, the value of the shared variable is reset to 1 if the server responded with a positive acknowledgement, or 0 if it responded with a negative acknowledgement. This should be interpreted with reference to the server application documentation. Note that most applications require that commands are surrounded by square brackets but several commands may be sent at a time. The following examples use Microsoft Excel Version 2.0 as the server :</p>
-<h3 id="establish-a-link-to-excels-system-topic">Establish a link to Excel's SYSTEM topic</h3>
+<h2 id="establish-a-link-to-excels-system-topic">Establish a link to Excel's SYSTEM topic</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;DDE:EXCEL|SYSTEM&#39;</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">&#39;X ⍎&#39;</span>
 <span class="m">2</span>
 </code></pre></div>
-<h3 id="instruct-excel-to-open-a-spreadsheet-file">Instruct EXCEL to open a spreadsheet file</h3>
+<h2 id="instruct-excel-to-open-a-spreadsheet-file">Instruct EXCEL to open a spreadsheet file</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">X</span><span class="kd">←</span><span class="s1">&#39;[OPEN(c:\mydir\mysheet.xls)]&#39;</span>
 <span class="w">      </span><span class="nv">X</span>
 <span class="m">1</span>
 </code></pre></div>
-<h3 id="instruct-excel-to-select-a-range-of-cells">Instruct EXCEL to select a range of cells</h3>
+<h2 id="instruct-excel-to-select-a-range-of-cells">Instruct EXCEL to select a range of cells</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">X</span><span class="kd">←</span><span class="s1">&#39;[SELECT(&quot;R1C1:R5C10&quot;)]&#39;</span>
 <span class="w">      </span><span class="nv">X</span>
 <span class="m">1</span>
 </code></pre></div>
-<h3 id="carry-out-two-commands-in-one-call">Carry out two commands in one call</h3>
+<h2 id="carry-out-two-commands-in-one-call">Carry out two commands in one call</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">CMD1</span><span class="kd">←</span><span class="s1">&#39;[OPEN(c:\mydir\mysheet.xls)]&#39;</span>
 <span class="w">      </span><span class="nv">CMD2</span><span class="kd">←</span><span class="s1">&#39;[SELECT(&quot;R1C1:R5C10&quot;)]&#39;</span>
 <span class="w">      </span><span class="nv">X</span><span class="kd">←</span><span class="nv">CMD1</span><span class="o">,</span><span class="nv">CMD2</span>
 <span class="w">      </span><span class="nv">X</span>
 <span class="m">1</span>
 </code></pre></div>
-<h3 id="apl-as-the-server">APL as the Server</h3>
+<h2 id="apl-as-the-server">APL as the Server</h2>
 <p>A DDE conversation is initiated by a client, and not by a server. If you wish to act as a server, it is therefore necessary to register this fact with the APL interpreter so that it will subsequently respond to a client on your behalf. This is done by making a <em>general</em> <em>offer</em> using <code>⎕SVO</code> as follows:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;DDE:&#39;</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">&#39;var item&#39;</span>
 </code></pre></div></p>

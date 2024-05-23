@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68079,7 +68079,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68100,7 +68100,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68121,7 +68121,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68142,7 +68142,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70186,7 +70186,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70207,7 +70207,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70228,7 +70228,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70249,7 +70249,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71231,7 +71231,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71252,7 +71252,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71273,7 +71273,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71336,7 +71336,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71357,7 +71357,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71378,7 +71378,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71454,7 +71454,7 @@
                   
 
 
-<h1 class="heading"><span class="name">Native File Tie</span><span class="command">{R}←X ⎕NTIE Y</span></h1>
+<h1 class="heading"><span class="name">Native File Tie</span> <span class="command">{R}←X ⎕NTIE Y</span></h1>
 
 <p><code>⎕NTIE</code> opens a native file.</p>
 <p><code>X</code> is a simple character vector or scalar containing a valid pathname for an existing native file.</p>
@@ -71504,7 +71504,7 @@
 </table>
 <p>On UNIX systems, the second column has no meaning and only the first code (<code>16|mode</code>) is passed to the <code>open(2)</code> call as the access parameter. See include file <code>fcntl.h</code> for details. See also <a href="../nlock/">Native File Lock</a> which is not platform dependent.</p>
 <p><code>R</code> is the tie number by which the file may subsequently be referred. If <code>Y[1]</code> is a negative integer, then <code>R</code> is a shy result; if <code>Y[1]</code> is 0, <code>R</code> is an explicit result.</p>
-<h4 id="automatic-tie-number-allocation">Automatic Tie Number Allocation</h4>
+<h2 id="automatic-tie-number-allocation">Automatic Tie Number Allocation</h2>
 <p>A tie number of 0 as argument to a create or tie operation, allocates, and returns as an explicit result, the first (closest to zero) available tie number. This allows you to simplify code. For example:</p>
 <p>from:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">tie</span><span class="kd">←</span><span class="m">¯1</span><span class="o">+⌊</span><span class="na">/</span><span class="m">0</span><span class="o">,</span><span class="nf">⎕NNUMS</span><span class="w">    </span><span class="c1">⍝ With next available number,</span>
@@ -71519,7 +71519,7 @@
 <span class="w">    </span><span class="bp">⍵</span><span class="w"> </span><span class="nf">⎕ntie</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="bp">⍺</span><span class="w">         </span><span class="c1">⍝ return new tie no.</span>
 <span class="kt">}</span>
 </code></pre></div>
-<h4 id="note">Note</h4>
+<h2 id="note">Note</h2>
 <p>If the native file is already tied, executing <code>⎕NTIE</code> with the same or a different tie number simply re-ties it with the same or the new tie number. Re-tying a file with a tie number of 0, re-ties it with the same tie number. This feature may be used to re--tie the file using a different mode.</p>
 <div class="footnote">
 <hr />

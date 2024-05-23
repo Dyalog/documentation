@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68032,7 +68032,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68053,7 +68053,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68074,7 +68074,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68095,7 +68095,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70139,7 +70139,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70160,7 +70160,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70181,7 +70181,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70202,7 +70202,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71184,7 +71184,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71205,7 +71205,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71226,7 +71226,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71289,7 +71289,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71310,7 +71310,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71331,7 +71331,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71416,7 +71416,7 @@
                   
 
 
-<h1 class="heading"><span class="name">Read DataTable</span><span class="command">R←{X}2011⌶Y</span></h1>
+<h1 class="heading"><span class="name">Read DataTable</span> <span class="command">R←{X}2011⌶Y</span></h1>
 
 <p>This function performs a <em>block read</em> from an instance of the ADO.NET object System.Data.DataTable. This object may only be read using an explicit row-wise loop, which is slow at the APL level. <code>2011⌶</code> implements an <em>internal</em> row-wise loop which is much faster on large arrays. Furthermore, the function handles NULL values and the conversion of .NET datatypes to the appropriate internal APL form in a more efficient manner than can otherwise be achieved. These 3 factors together mean that the function provides a significant improvement in performance compared to calling the row-wise programming interface directly at the APL level.</p>
 <p><code>Y</code> is a scalar or a 1 or 2-item array containing:</p>
@@ -71425,7 +71425,7 @@
 <li>An optional vector which specifies the values to which a System.DBNull should be mapped in the corresponding columns of the result </li>
 </ol>
 <p>The result <code>R</code> depends upon the value of the  Variant option Invert. This the primary option with a default value of 0.</p>
-<h4 id="invert-option-boolean">Invert Option (Boolean)</h4>
+<h2 id="invert-option-boolean">Invert Option (Boolean)</h2>
 <table>
 <tbody>
 <tr>
@@ -71514,7 +71514,7 @@
 <span class="err">│</span><span class="nv">Two</span><span class="err">│</span><span class="m">2</span><span class="err">│</span><span class="m">6402</span><span class="err">│</span>
 <span class="err">└───┴─┴────┘</span>
 </code></pre></div></p>
-<h4 id="handling-nulls">Handling Nulls</h4>
+<h2 id="handling-nulls">Handling Nulls</h2>
 <p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">2010</span><span class="na">⌶</span><span class="nv">dt</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="nf">⎕NULL</span><span class="p">)</span><span class="w"> </span><span class="c1">⍝ Add a row of nulls</span>
 <span class="w">      </span><span class="vg">⎕</span><span class="kd">←</span><span class="nv">out</span><span class="kd">←</span><span class="m">2011</span><span class="na">⌶</span><span class="w"> </span><span class="nv">dt</span><span class="w"> </span>
 <span class="err">┌───┬──┬──────┐</span>
@@ -71536,7 +71536,7 @@
 <span class="err">│</span><span class="nv">this</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">null</span><span class="err">│</span><span class="nv">this</span><span class="w"> </span><span class="nv">too</span><span class="err">│</span><span class="nv">and</span><span class="w"> </span><span class="nv">this</span><span class="err">│</span>
 <span class="err">└────────────┴────────┴────────┘</span>
 </code></pre></div></p>
-<h4 id="performance-considerations">Performance Considerations</h4>
+<h2 id="performance-considerations">Performance Considerations</h2>
 <p>First for comparison is shown the type of code that is required to read a DataTable by looping:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">t</span><span class="kd">←</span><span class="m">3</span><span class="o">⊃</span><span class="nf">⎕AI</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">data1</span><span class="kd">←</span><span class="o">↑</span><span class="p">(</span><span class="o">⌷</span><span class="nv">dt</span><span class="na">.</span><span class="nv">Rows</span><span class="p">)</span><span class="na">.</span><span class="nv">ItemArray</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="p">(</span><span class="m">3</span><span class="o">⊃</span><span class="nf">⎕AI</span><span class="p">)</span><span class="o">-</span><span class="nv">t</span>
 <span class="m">191</span>

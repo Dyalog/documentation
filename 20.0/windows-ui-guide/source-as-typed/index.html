@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68021,7 +68021,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68042,7 +68042,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68063,7 +68063,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68084,7 +68084,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70128,7 +70128,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70149,7 +70149,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70170,7 +70170,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70191,7 +70191,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71173,7 +71173,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71194,7 +71194,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71215,7 +71215,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71278,7 +71278,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71299,7 +71299,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71320,7 +71320,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71396,13 +71396,13 @@
                   
 
 
-<h1 class="heading"><span class="name"> Source as Typed</span></h1>
+<h1> Source as Typed</h1>
 
-<h3 id="historical-introduction">Historical Introduction</h3>
+<h2 id="historical-introduction">Historical Introduction</h2>
 <p>When an object containing executable code such as a function, operator, class, or namespace is defined in a workspace either by an editor or by the system function <code>⎕FX</code>, the object is tokenised into an internal form. Historically, this was the only form of the object, and both the editor and system functions like <code>⎕CR</code>, <code>⎕VR</code>, <code>⎕NR</code> reconstitute the source code from the internal form. This reconstituted source lacks extraneous white space and the precise numerical formatting that the user originally entered, for example.</p>
 <p>When classes and scripted namespaces were introduced, the source code was stored in text form for these objects, as it was typed, in addition to the tokens which were still used at runtime. The function <code>⎕SRC</code> was added to return this text, and a new function <code>⎕FIX</code> was added to define objects that also have source code.</p>
 <p>Subsequently, <code>⎕FIX</code> was extended to allow the definition of functions and operators which include source code, as well as the use of source files outside the workspace to store the source code of an object. However, unless a function or operator was defined using an external file, the editor continued to only store the tokenised form in the workspace, in order to save space.</p>
-<h3 id="current-behaviour">Current Behaviour</h3>
+<h2 id="current-behaviour">Current Behaviour</h2>
 <p>From version 19.0 onwards, the default is that the editor stores source code <em>as it was typed in by the user</em> for <strong>all</strong> objects, in addition to the tokenised form. When an object is defined from an external source file using <code>⎕FIX</code>, a copy of the source is also retained in the workspace.</p>
 <p>In order to maintain backwards compatibility with applications that rely on the canonical representation returned by <code>⎕CR</code>, <code>⎕VR</code> , <code>⎕NR</code>, these functions continue to reconstitute the source from tokens; and <code>⎕FX</code> continues to only store the tokenised form. If you wish to access the source as typed, you should use <code>⎕SRC</code>, or <code>60 ⎕ATX</code>, and you should use <code>⎕FIX</code>, to define not only namespaces and classes but functions and operators as well.</p>
 <p>When the user opens an object in the Editor, the saved source code is presented if it exists. If the object was defined from a file and the source held in the workspace differs from the contents of the file, the user will be asked to decide whether to use the file or break the link and use the source in the workspace. If no source code is available, it is reconstituted from the internal form.</p>

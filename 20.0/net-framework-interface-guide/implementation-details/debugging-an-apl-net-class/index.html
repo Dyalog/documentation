@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -67963,7 +67963,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -67984,7 +67984,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68005,7 +68005,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68026,7 +68026,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70072,7 +70072,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70093,7 +70093,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70114,7 +70114,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70135,7 +70135,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71184,7 +71184,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71205,7 +71205,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71226,7 +71226,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71289,7 +71289,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71310,7 +71310,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71331,7 +71331,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71416,18 +71416,18 @@
                   
 
 
-<h1 class="heading"><span class="name"> Debugging an APL.NET Class</span></h1>
+<h1> Debugging an APL.NET Class</h1>
 
 <p>All DYALOG.NET objects are executed by the Dyalog DLL. The full development version of the Dyalog DLL contains all of the development and debug facilities of the APL Session, including the Editors and Tracer. The run-time version contains no debugging facilities at all. The choice of which version of the Dyalog DLL is used is made when the assembly is exported from APL using the <em>File|Export</em> menu, or compiled using <code>dyalogc.exe</code>.</p>
 <p>If an APL .NET object that is bound to the full development version generates an untrapped APL error (such as a <code>VALUE ERROR</code>) <strong>and</strong> the client application is configured so that it is allowed to interact with the desktop, the APL code will suspend and the APL Session window will be displayed. Otherwise, it will throw an exception.</p>
 <p>If an APL .NET object that is bound to the run-time version of the Dyalog DLL generates an untrapped APL error it will throw an exception.</p>
-<h3 id="specifying-the-dll">Specifying the DLL</h3>
+<h2 id="specifying-the-dll">Specifying the DLL</h2>
 <p>There are a number of different ways that you choose to which of the two versions of the Dyalog DLL your DYALOG.NET class will be bound. Note that the appropriate DLL must be available when the class is subsequently invoked. If the DLL to which the APL .NET class is bound is not present, it will throw an exception.</p>
 <p>If you build a .NET class from a workspace using the <em>File/Export</em> menu item, you use the <em>Runtime application</em> checkbox. If <em>Runtime application</em> is unchecked, the .NET Class will be bound to the full development version. If <em>Runtime application</em> is checked, the .NET Class will be bound to the run-time version.</p>
 <p>If you build a .NET class using the APLScript compiler, it will by default be bound to the full development version. If you specify the <code>/runtime</code> flag, it will be bound to the run-time version.</p>
 <p>If your APL .NET class is a Web Page or a Web Service, you specify to which of the two DLLs it will be bound using the <em>Debug</em> attribute. This is specified in the opening declaration statement in the <code>.aspx</code>, <code>.asax</code> or <code>.asmx</code> file. If the statement specifies <code>"Debug=true"</code>, the Web Page or Web Service will be bound to the full development version. If it specifies <code>"Debug=false"</code>, the Web Page or Web Service will be bound to the run-time version.</p>
 <p>If you omit the <code>Debug=</code> attribute in your Web page, the value will be determined from the various .NET <code>config</code> files on your computer.</p>
-<h3 id="forcing-a-suspension">Forcing a suspension</h3>
+<h2 id="forcing-a-suspension">Forcing a suspension</h2>
 <p>If an APL error occurs in an APL .NET object, a suspension will occur and the Session will be available for debugging. But what if you want to force this to happen so that you can Trace your code and see what is happening?</p>
 <p>If your APL class is built directly from a workspace, you can force a suspension by setting stops in your code before using <em>Export</em> to build the DLL. If your class is a Web Page or Web Service where the code is contained in a workspace using the <em>workspace behind</em> technique (See Chapter 8), you can set stops in this workspace before you <code>)SAVE</code> it.</p>
 <p>If your APL class is defined entirely in a Web Page, Web Service, or an APLScript file, the only way to set a break point is to insert a line that sets a stop explicitly using <code>⎕STOP</code>. It is essential that this line appears after the definition of the function in the script. For example, to set a stop in the <code>Intro\intro1.aspx</code> example discussed in Chapter 8, the script section could be as follows:
@@ -71447,7 +71447,7 @@
 <p>As an alternative, you can always insert a deliberate error into your code!</p>
 <p>Finally, you can usually force a suspension by generating a Weak Interrupt. This is done from the pop-up menu on the APL icon in the System Tray that is associated with the full development version of the Dyalog DLL. Note that selecting Weak Interrupt from this menu will not have an immediate effect, but it sets a flag that will cause Dyalog APL to suspend when it next executes a line of APL code. You will need to activate your object in some way, e.g. by calling a method, for this to occur. Note that this technique may not work if the Dyalog DLL is busy because a thread switch automatically resets the Weak Interrupt flag. In these circumstances, try again.</p>
 <p>The run-time version of the Dyalog DLL does not display an icon in the System Tray.</p>
-<h3 id="using-the-session-editor-and-tracer">Using the Session, Editor and Tracer</h3>
+<h2 id="using-the-session-editor-and-tracer">Using the Session, Editor and Tracer</h2>
 <p>When an DYALOG.NET object suspends execution, all other active APL .NET objects bound to the full development version of the Dyalog DLL that are currently being executed by the same client application will also suspend. Furthermore, all the classes currently being hosted by the Dyalog DLL are visible to the APL developer whether active (an instance is currently being executed) or not. Note that if a client application, such as ASP.NET, is also hosting APL .NET objects bound to the <em>runtime</em> version of the Dyalog DLL, these objects will be hosted in a separate workspace attached to the run-time version of the Dyalog DLL and will not be visible to the developer.</p>
 <p>Debugging a running DYALOG.NET object is substantially the same process as debugging a stand-alone multi-threaded APL application. However, there are some important things to remember.</p>
 <p>Firstly, the namespace structure above your APL class should be treated as being inviolate. There is nothing to prevent you from deleting namespaces, renaming namespaces, or creating new ones in the workspace. However, you do so at your peril!</p>

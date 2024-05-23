@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7822,7 +7822,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8817,7 +8817,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8838,7 +8838,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10173,7 +10173,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10194,7 +10194,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10215,7 +10215,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10236,7 +10236,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10257,7 +10257,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10278,7 +10278,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10299,7 +10299,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10328,7 +10328,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10396,7 +10396,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68113,7 +68113,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68134,7 +68134,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68155,7 +68155,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68176,7 +68176,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70220,7 +70220,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70241,7 +70241,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70262,7 +70262,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70283,7 +70283,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71265,7 +71265,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71286,7 +71286,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71307,7 +71307,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71370,7 +71370,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71391,7 +71391,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71412,7 +71412,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71578,16 +71578,16 @@
                   
 
 
-<h1 class="heading"><span class="name"> System Errors</span></h1>
+<h1> System Errors</h1>
 
-<h3 id="introduction">Introduction</h3>
+<h2 id="introduction">Introduction</h2>
 <p>Dyalog APL will generate a system error and (normally) terminate in one of two circumstances:</p>
 <ul>
 <li>As a result of the failure of a workspace integrity check</li>
 <li>As a result of a System Exception</li>
 </ul>
 <p>On Windows, if the <strong>DYALOG_NOPOPUPS</strong> parameter is 0 (the default), it will display the System Error dialog box (see <strong>System Error Dialog Box</strong>). This is suppressed if <strong>DYALOG_NOPOPUPS</strong> is 1.</p>
-<h3 id="aplcore-file">aplcore file</h3>
+<h2 id="aplcore-file">aplcore file</h2>
 <p>When a system error occurs, APL normally saves an <em>aplcore</em> file which may be sent to Dyalog for diagnosis. The name and location of the <em>aplcore</em> file may be specified by the <a href="../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters"><strong>AplCoreName</strong></a> parameter. If this parameter is not specified, the <em>aplcore</em> file is named <code>aplcore</code> and is saved in the current working directory.</p>
 <p>Normally a new <em>aplcore</em> will replace a file of the same name. However, if <a href="../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters"><strong>AplCoreName</strong></a> contains an asterisk (*), the system will create a new file,  replacing the asterisk with a number incremented from the largest numbered file present.</p>
 <p>The number of <em>aplcore</em> files retained by the system is specified by the <a href="../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters"><strong>MaxAplCores</strong></a> parameter. If <a href="../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters"><strong>MaxAplCores</strong></a> is 0, the system will not save an <em>aplcore</em>. However, under Windows, if <strong>DYALOG_NOPOPUPS</strong> is 0, and the user checks the <em>Create an aplcore file</em> checkbox when the <em>System Error</em> dialog box is displayed, an <em>aplcore</em> will be saved regardless of the value of <a href="../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters"><strong>MaxAplCores</strong></a>. See <strong>System Error Dialog Box</strong>.</p>
@@ -71597,12 +71597,12 @@
 <p>Under UNIX, this interesting information section can be extracted from the <em>aplcore</em> as follows:</p>
 <p><code>sed -n '/======== Interesting Information/,$p' aplcore</code></p>
 <p>To prevent this information from being written to the <em>aplcore</em> file, the <a href="../../../windows-installation-and-configuration-guide/configuration-parameters/apl-textinaplcore"><strong>APL_TextInAplCore</strong></a> parameter should be set to 0.</p>
-<h3 id="workspace-integrity">Workspace Integrity</h3>
+<h2 id="workspace-integrity">Workspace Integrity</h2>
 <p>When you <code>)SAVE</code> your workspace, Dyalog APL first performs a workspace integrity check. If it detects any discrepancy or violation in the internal structure of your workspace, APL does not overwrite your existing workspace on disk. Instead, it displays the System Error dialog box and saves the workspace, together with diagnostic information, in an <em>aplcore</em> file before terminating.</p>
 <p>A System Error code is displayed in the dialog box and should be reported to Dyalog for diagnosis. This information also appears in the Interesting Information section of the <em>aplcore</em> file.</p>
 <p>Note that the internal error that caused the discrepancy could have occurred at any time prior to the execution of <code>)SAVE</code> and it may not be possible for Dyalog to identify the cause from this <em>aplcore</em> file.</p>
 <p>If APL is started in debug mode with the <strong>-Dc</strong>, <strong>-Dw</strong> or <strong>-DW</strong> flags, the Workspace Integrity check is performed more frequently, and it is more likely that the resulting <em>aplcore</em> file will contain information that will allow the problem to be identified and corrected. It is also possible to enable or alter the debugging level from within APL using the SetDFlags method; Dyalog support will direct the use of this feature when necessary.</p>
-<h3 id="system-exceptions">System Exceptions</h3>
+<h2 id="system-exceptions">System Exceptions</h2>
 <p>Non-specific System Errors are the result of Operating System exceptions that can occur due to a fault in Dyalog APL itself, an error in a Windows or other DLL, or even as a result of a hardware fault. The following system exceptions are separately identified.</p>
 <table>
 <thead>
@@ -71645,11 +71645,11 @@
 </tr>
 </tbody>
 </table>
-<h3 id="recovering-data-from-aplcore-files">Recovering Data from aplcore files</h3>
+<h2 id="recovering-data-from-aplcore-files">Recovering Data from aplcore files</h2>
 <p>Objects may often (but not always) be recovered from <em>aplcore</em> using <code>)COPY</code> or <code>⎕CY</code>. Note that  if the <em>aplcore</em> contains a workspace with more than one instance of the same name on the stack, <code>⎕CY</code> copies the most local object whereas <code>)COPY</code> copies the global one.</p>
 <p>Be aware that in many cases an attempt to <code>)COPY</code> from or <code>)LOAD</code> an <em>aplcore</em> is likely to result in a further syserror; this may result in the original <em>aplcore</em> being overwritten, thus losing the contents of that file. It is therefore worth while taking a copy of the <em>aplcore</em> before attempting to <code>)COPY</code> from it. Attempting to copy specific items is more likely to be successful than copying the entire workspace from the aplcore.</p>
 <p>Note that in previous versions under Windows because (by default) the <em>aplcore</em> file has no extension, it was necessary to explicitly add a dot, or APL would attempt to find the non-existent file <code>aplcore.dws</code>. This is no longer true in version 14.1 onwards.</p>
-<h3 id="reporting-errors-to-dyalog">Reporting Errors to Dyalog</h3>
+<h2 id="reporting-errors-to-dyalog">Reporting Errors to Dyalog</h2>
 <p>If APL crashes and saves an <em>aplcore</em> file, please email the following information to support@dyalog.com:</p>
 <ol>
 <li>a brief description of the circumstances surrounding the error</li>
@@ -71657,7 +71657,7 @@
 <li>a compressed form of the <em>aplcore</em> file itself</li>
 </ol>
 <p>If the problem is reproducible, i.e. can be easily repeated, please also send the appropriate description, workspace, and other files required to do so.</p>
-<h3 id="system-error-dialog-box">System Error Dialog Box</h3>
+<h2 id="system-error-dialog-box">System Error Dialog Box</h2>
 <p>The System Error Dialog illustrated below was produced by deliberately inducing a system exception in the DLL function <code>memcpy()</code>. The functions used were:
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">foo</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">goo</span>
@@ -71679,7 +71679,7 @@
 <img alt="syserror" src="../img/syserror.png" />
 <figcaption><span>Figure&nbsp;1</span></figcaption>
 </figure>
-<h3 id="options">Options</h3>
+<h2 id="options">Options</h2>
 <table>
 <thead>
 <tr>
@@ -71710,14 +71710,14 @@
 </tr>
 </tbody>
 </table>
-<h3 id="create-a-process-dump-file">Create a process dump file</h3>
+<h2 id="create-a-process-dump-file">Create a process dump file</h2>
 <p>Under Windows the <em>Create a process dump file</em> option creates a user-mode process dump file , also known as a minidump file, called <code>dyalog.dmp</code> in the current directory. This file allows post-mortem debugging of a crash in the interpreter or a loaded DLL. It contains much more debug information than a normal <em>aplcore</em> (and is much larger than an <em>aplcore</em>) and can be sent to Dyalog Limited (zip it first please). Alternatively the file can be loaded into <em>Visual Studio .NET</em> to do your own debugging.</p>
-<h3 id="debugging-your-own-dlls">Debugging your own DLLs</h3>
+<h2 id="debugging-your-own-dlls">Debugging your own DLLs</h2>
 <p>If you are using Visual Studio, the following procedure should be used to debug your own DLLs when an appropriate Dyalog APL System Error occurs.</p>
 <p>Ensure that the <em>Pass Exception</em> box is checked, then click on <em>Dismiss</em> to close the <em>System Error</em> dialog box.</p>
 <p>The system exception dialog box appears. Click on <em>Debug</em> to start the process in the Visual Studio debugger.</p>
 <p>After debugging, the System Exception dialog box appears again. Click on <em>Don't send</em> to terminate Windows' exception handling.</p>
-<h3 id="erroronexternalexception-parameter">ErrorOnExternalException Parameter</h3>
+<h2 id="erroronexternalexception-parameter">ErrorOnExternalException Parameter</h2>
 <p>This parameter allows you to prevent APL from taking the actions described above when an exception caused by an external DLL occurs. The following example illustrates what happens when the functions above are run, but with the <a href="../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters"><strong>ErrorOnExternalException</strong></a> parameter set to 1.
 <div class="highlight"><pre><span></span><code><span class="w">   </span><span class="vg">⎕</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="s1">&#39;.&#39;</span><span class="w"> </span><span class="s1">&#39;GetEnvironment&#39;</span><span class="w"> </span><span class="s1">&#39;ErrorOnExternalException&#39;</span>
 <span class="m">1</span>
@@ -71734,7 +71734,7 @@
 <span class="nv">foo</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span>
 </code></pre></div></p>
 <p>Note: Dyalog recommends that enabling <a href="../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters"><strong>ErrorOnExternalException</strong></a> should only be done while developing or debugging an application; ignoring such errors may result in corruption in the workspace which could result to unexpected errors later in the application.</p>
-<h3 id="what-should-i-do-if-dyalog-hangs">What should I do if Dyalog hangs?</h3>
+<h2 id="what-should-i-do-if-dyalog-hangs">What should I do if Dyalog hangs?</h2>
 <p>If Dyalog for Windows hangs, you should generate a process dump file and send it to Dyalog Support, along with your Build ID.</p>
 <p>To do this:</p>
 <ol>

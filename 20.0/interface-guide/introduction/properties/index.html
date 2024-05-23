@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68050,7 +68050,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68071,7 +68071,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68092,7 +68092,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68113,7 +68113,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70157,7 +70157,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70178,7 +70178,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70199,7 +70199,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70220,7 +70220,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71202,7 +71202,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71223,7 +71223,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71244,7 +71244,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71307,7 +71307,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71328,7 +71328,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71349,7 +71349,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71452,13 +71452,13 @@
                   
 
 
-<h1 class="heading"><span class="name"> Properties</span></h1>
+<h1> Properties</h1>
 
 <p>Properties may be set using the system functions <code>⎕WC</code> and <code>⎕WS</code> and their values may be retrieved using <code>⎕WG</code>.</p>
 <p>If the system variable <code>⎕WX</code> is set to 1, properties may be set using assignment and referenced by name as if they were variables. This is generally faster and more convenient than using <code>⎕WS</code> and <code>⎕WG</code>.</p>
 <p>Certain properties, in particular the Type property, can only be set using <code>⎕WC</code>. There is no obvious rule that determines whether or not a property can only be set by <code>⎕WC</code>; it is a consequence of the Windows API.</p>
 <p>However, any property that can be set by <code>⎕WS</code> can be set using assignment and the values of all properties can be retrieved by direct reference or using <code>⎕WG</code>.</p>
-<h3 id="setting-properties-with-assignment">Setting Properties with Assignment</h3>
+<h2 id="setting-properties-with-assignment">Setting Properties with Assignment</h2>
 <p>You may set the value of a property using the assignment arrow <code>←</code>. For example:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;F&#39;</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">&#39;Form&#39;</span>
 </code></pre></div></p>
@@ -71488,7 +71488,7 @@
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">caption</span><span class="kd">←</span><span class="s1">&#39;Hello World&#39;</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">CAPTION</span><span class="kd">←</span><span class="s1">&#39;Hello World&#39;</span>
 </code></pre></div></p>
-<h3 id="retrieving-property-values-by-reference">Retrieving property values by reference</h3>
+<h2 id="retrieving-property-values-by-reference">Retrieving property values by reference</h2>
 <p>You may obtain the value of a property as if it were a variable, by simply referring to the property name. For example:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">Caption</span><span class="kd">←</span><span class="s1">&#39;Hello World&#39;</span>
 
@@ -71511,7 +71511,7 @@
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">Fixed</span>
 <span class="m">1</span>
 </code></pre></div></p>
-<h3 id="setting-properties-with-wc">Setting Properties with <code>⎕WC</code></h3>
+<h2 id="setting-properties-with-wc">Setting Properties with <code>⎕WC</code></h2>
 <p>Properties may also be set by the right argument of <code>⎕WC</code>. In these cases, they may be specified in one of two ways; either by their position in the argument, or by a keyword followed by a value. The keyword is a character vector containing the <strong>name</strong> of the property. Its value may be any appropriate array. Property names and value keywords are not case sensitive; thus <code>'Form'</code> could be spelled <code>'form'</code>, <code>'FORM'</code>, or even <code>'fOrM'</code></p>
 <p>The Type property, which specifies the type of the object, applies to <strong>all</strong> objects and is <strong>mandatory</strong>. It is therefore the first to be specified in the right argument to <code>⎕WC</code>, and is normally specified without the Type keyword. The value associated with the Type property is a character vector.</p>
 <p>With the exception of Type, all other properties have default values and need only be specified if you want to override the defaults. For example, the following statements would give you a default Button in a default Group in a default Form:
@@ -71529,7 +71529,7 @@
 <span class="w">   </span><span class="s1">&#39;form&#39;</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">&#39;Form&#39;</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Posn&#39;</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m">60</span><span class="w"> </span><span class="m">40</span><span class="p">)</span>
 <span class="w">   </span><span class="s1">&#39;form&#39;</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">&#39;Form&#39;</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Posn&#39;</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m">60</span><span class="w"> </span><span class="m">40</span><span class="p">)</span>
 </code></pre></div></p>
-<h3 id="changing-property-values-with-ws">Changing Property Values with <code>⎕WS</code></h3>
+<h2 id="changing-property-values-with-ws">Changing Property Values with <code>⎕WS</code></h2>
 <p>Once you have created an object using <code>⎕WC</code>, you are free to alter most of its properties using <code>⎕WS</code>. However in general, those properties that define the overall structure of an object's window cannot be altered using <code>⎕WS</code>. Such <em>immutable</em> properties include Type and (for some objects) Style. Note that if you find that you do need to alter one of these properties dynamically, it is a simple matter to recreate the object with <code>⎕WC</code>.</p>
 <p>The syntax for <code>⎕WS</code> is identical to that of <code>⎕WC</code>. The following examples illustrate how the properties of a Button can be altered dynamically. Note that you can use <code>⎕WS</code> in a callback function to change the properties of any object, including the one that generated the event.</p>
 <p>Create "OK" button at (10,10) that calls <code>FOO</code> when pressed
@@ -71545,7 +71545,7 @@
 <p>If the first element <strong>is</strong> a property name, the remainder of the nested array is taken to be the value of the corresponding property. For convenience, considerable latitude is allowed in how the structure of the property value is specified.</p>
 <p>After assigning the value, the parser resets its internal pointer to the property following the one named. Thus in the third and fourth examples on the preceding page, omitting the Size keyword is acceptable, because Size is the next property after Posn.</p>
 <p>In the reference section for each object, you will find the list of properties applicable to that object, given in the order in which they are to be specified. This information is also reported by the PropList property, which applies to all objects. The list of properties may also be obtained by executing the system command <code>)PROPS</code> in an object's namespace.</p>
-<h3 id="the-event-property">The Event Property</h3>
+<h2 id="the-event-property">The Event Property</h2>
 <p>Of the many different properties supported, the Event property is rather special. Most of the other properties determine an object's appearance and general behaviour. The Event property, however, specifies how the application <strong>reacts to the user</strong>. Furthermore, unlike most other properties, it takes not a single value, but a set of values, each of which determines the action to be taken when a particular <strong>event</strong> occurs. In simple terms, an <em>event</em> is something that the user can do. For example, pressing a mouse button, pressing a key, selecting an item from a menu, are all examples of <em>events</em>.</p>
 <p>Like any other property, the Event property may be set by assignment or using <code>⎕WC</code> and <code>⎕WS</code>. Using assignment, you can specify settings for the entire set of events, or you can set individual events one by one.</p>
 <p>Each type of event has a <em>name</em> and a <em>number</em>. Although you may identify an event either by its name or by its number, the use of its name is generally preferable. The exception to this is user-defined events which may only be specified by number.</p>

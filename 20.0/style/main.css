@@ -26,7 +26,7 @@ code, .command, .Dyalog {
 
 /* Custom colors */
 :root {
-    --md-primary-fg-color: #ED7F00;
+    --md-primary-fg-color: #FF6A13;
     --md-primary-fg-color--dark: #563336;
     --md-default-bg-color: #F8F8F8;
     --md-code-hl-number-color: #797979;
@@ -48,7 +48,7 @@ th, td {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ED7F00;
+    background-color: #FF6A13;
     padding: 5px 10px; /* Adjusted padding for less vertical whitespace */
     border-radius: 5px; /* Rounded corners */
     font-size: 0.9em;

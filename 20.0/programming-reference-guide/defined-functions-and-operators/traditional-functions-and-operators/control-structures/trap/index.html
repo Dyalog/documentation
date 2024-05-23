@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7828,7 +7828,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8870,7 +8870,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8891,7 +8891,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10226,7 +10226,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10247,7 +10247,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10268,7 +10268,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10289,7 +10289,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10310,7 +10310,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10331,7 +10331,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10352,7 +10352,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10381,7 +10381,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10449,7 +10449,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68018,7 +68018,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68039,7 +68039,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68060,7 +68060,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68081,7 +68081,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70125,7 +70125,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70146,7 +70146,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70167,7 +70167,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70188,7 +70188,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71170,7 +71170,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71191,7 +71191,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71212,7 +71212,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71275,7 +71275,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71296,7 +71296,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71317,7 +71317,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71384,12 +71384,12 @@
                   
 
 
-<h1 class="heading"><span class="name">Trap Statement</span><span class="command">:Trap ecode</span></h1>
+<h1 class="heading"><span class="name">Trap Statement</span> <span class="command">:Trap ecode</span></h1>
 
 <p><a href="../trap-statement-definition/">Formal Definition</a></p>
 <p><code>:Trap</code> is an error trapping mechanism that can be used in conjunction with, or as an alternative to, the <code>⎕TRAP</code> system variable. It is equivalent to APL2's <code>⎕EA</code>, except that the code to be executed is not restricted to a single expression and is not contained within quotes (and so is slightly more efficient).</p>
 <p><code>ecode</code> is an integer scalar or vector containing the list of event codes which are to be <em>handled</em> during execution of the segment of code between the <code>:Trap</code> and <code>:End[Trap]</code> statements. Note that event codes 0 and 1000 are wild cards that means <em>any</em> event code in a given range. See <a href="../../../../error-messages/apl-errors/">APL Error Messages</a>.</p>
-<h5 id="operation">Operation</h5>
+<h2 id="operation">Operation</h2>
 <p>The segment of code immediately following the <code>:Trap</code> keyword is executed. On completion of this segment, if no error occurs, control passes to the code following <code>:End[Trap]</code>.</p>
 <p>If an error occurs which is not specified by <code>ecode</code>, it is processed by outer <code>:Trap</code>s,   <code>⎕TRAP</code>s, or by the default system processing in the normal fashion.</p>
 <p>If an error occurs, whose event code matches <code>ecode:</code></p>

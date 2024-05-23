@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68091,7 +68091,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68112,7 +68112,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68133,7 +68133,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68154,7 +68154,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70198,7 +70198,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70219,7 +70219,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70240,7 +70240,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70261,7 +70261,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71243,7 +71243,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71264,7 +71264,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71285,7 +71285,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71348,7 +71348,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71369,7 +71369,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71390,7 +71390,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71472,7 +71472,7 @@
                   
 
 
-<h1 class="heading"><span class="name">Native File Lock</span><span class="command">{R}←X ⎕NLOCK Y</span></h1>
+<h1 class="heading"><span class="name">Native File Lock</span> <span class="command">{R}←X ⎕NLOCK Y</span></h1>
 
 <p>This function assists the controlled update of shared native files by locking a range of bytes.</p>
 <p>Locking enables controlled update of native files by co-operating users. A process requesting a lock on a region of a file will be <em>blocked</em> until that region becomes available. A <em>write-lock</em> is exclusive, whereas a <em>read-lock</em> is shared. In other words, any byte in a file may be in one of only three states:</p>
@@ -71517,14 +71517,14 @@
 <p>The left argument may have a second optional item that specifies a <em>timeout</em> value. If a lock has not been acquired within this number of seconds, the acquisition is abandoned and a <code>TIMEOUT</code> error reported.
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="m">2</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="nf">⎕nlock</span><span class="w"> </span><span class="m">¯1</span><span class="w">      </span><span class="c1">⍝ wait up to 10 seconds for lock.</span>
 </code></pre></div></p>
-<h4 id="notes">Notes</h4>
+<h2 id="notes">Notes</h2>
 <ul>
 <li>There is no <em>per-byte</em> cost associated with region locking. It takes the same time to lock/unlock a region, irrespective of that region's size.</li>
 <li>Different file servers implement locks in slightly different ways. For example on some systems, locks are <em>advisory</em>. This means that a write lock on a region precludes other locks intersecting that region, but doesn't stop reads or writes across the region. On the other hand, <em>mandatory</em> locks block both other locks <em>and</em> read/write operations. <code>⎕NLOCK</code> will just pass the server's functionality along to the APL programmer without trying to standardise it across different systems.</li>
 <li>All locks on a file will be removed by <code>⎕NUNTIE</code>.</li>
 <li>Blocked locking requests can be freed by a strong interrupt. Under Windows, this operation is performed from the Dyalog APL pop-up menu in the system tray.</li>
 </ul>
-<h5 id="errors">Errors</h5>
+<h3 id="errors">Errors</h3>
 <ul>
 <li>In this release, an attempt to unlock a region that contains bytes that have not been locked results in a <code>DOMAIN ERROR</code>.</li>
 <li>A <code>LIMIT ERROR</code> results if the operating system lock daemon has insufficient resources to honour the locking request.</li>

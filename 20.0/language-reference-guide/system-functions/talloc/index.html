@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68043,7 +68043,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68064,7 +68064,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68085,7 +68085,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68106,7 +68106,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70150,7 +70150,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70171,7 +70171,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70192,7 +70192,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70213,7 +70213,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71195,7 +71195,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71216,7 +71216,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71237,7 +71237,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71300,7 +71300,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71321,7 +71321,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71342,7 +71342,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71436,23 +71436,23 @@
                   
 
 
-<h1 class="heading"><span class="name">Allocate Token Range</span><span class="command">{R}←{X} ⎕TALLOC Y</span></h1>
+<h1 class="heading"><span class="name">Allocate Token Range</span> <span class="command">{R}←{X} ⎕TALLOC Y</span></h1>
 
 <p><code>Y</code> is either a single integer or a 2-element vector. The first (or only) item in <code>Y</code> is 0, 1, 2 or ¯1 and indicates the type of operation to perform. If it is 1, then the optional second item is a character vector.</p>
 <p>The optional left argument  <code>X</code> identifies an existing allocated range of token numbers <code>n</code>. <code>X</code> must be a scalar greater than or equal to <code>n</code>, but must be less than <code>n+1</code>.</p>
-<h4 id="allocation-first-element-of-y-is-1">Allocation (First element of <code>Y</code> is 1)</h4>
+<h2 id="allocation-first-element-of-y-is-1">Allocation (First element of <code>Y</code> is 1)</h2>
 <p>If the first element of <code>Y</code> is 1,  the result <code>R</code> is a positive integer that identifies a range of numbers that may be used as token types for <code>⎕TPUT</code> and <code>⎕TGET</code>. That range is defined as the set of floating-point numbers between <code>R</code> and <code>R+1</code> (but not the integer end-points). Negated values of these number may also be used.</p>
 <p>In this case, the optional <code>Y[2]</code> is an arbitrary character vector that serves as a description for the allocated range of tokens.</p>
-<h4 id="de-allocation-y-is-1">De-allocation (<code>Y</code> is <code>¯1</code>)</h4>
+<h2 id="de-allocation-y-is-1">De-allocation (<code>Y</code> is <code>¯1</code>)</h2>
 <p>If <code>Y</code> is <code>¯1</code>, <code>⎕TALLOC</code> releases a previously allocated range of tokens identified by the left-argument <code>X</code>. The result <code>R</code> is a shy <code>⍬</code>.</p>
 <p>To succeed, this range must have previously been allocated, not freed by de-allocation, and must be inactive, i.e. its tokens must not currently be  in the token pool or in use by a <code>⎕TGET</code>. If not, <code>⎕TALLOC</code> will signal a <code>DOMAIN ERROR</code>.</p>
 <p>A de-allocated range becomes free for subsequent re-allocation by <code>⎕TALLOC</code>.</p>
-<h4 id="querying-a-description-y-is-0">Querying a description (<code>Y</code> is 0)</h4>
+<h2 id="querying-a-description-y-is-0">Querying a description (<code>Y</code> is 0)</h2>
 <p><code>Y</code> is 0, <code>⎕TALLOC</code> returns a non-shy result <code>R</code> containing the description for a currently allocated range of tokens identified by the left-argument <code>X</code>.</p>
 <p>If <code>X</code> does not represent a currently allocated range, <code>⎕TALLOC</code> will signal a <code>DOMAIN ERROR</code>.</p>
 <p>If <code>X</code> is omitted, the result <code>R</code> is a vector of 2-element vectors identifying the range and description of all currently allocated ranges.</p>
 <p>Descriptions that were not defined are returned as empty character vectors.</p>
-<h4 id="querying-the-token-pool-y-is-2">Querying  the Token Pool (<code>Y</code> is 2)</h4>
+<h2 id="querying-the-token-pool-y-is-2">Querying  the Token Pool (<code>Y</code> is 2)</h2>
 <p><code>Y</code> is 2, <code>⎕TALLOC</code> returns a non-shy result <code>R</code> containing the list of tokens in the token pool that fall in the range specified by the left-argument <code>X</code>.</p>
 <p><strong>Examples</strong></p>
 <div class="highlight"><pre><span></span><code><span class="w">       </span><span class="vg">⎕</span><span class="kd">←</span><span class="nv">trg</span><span class="kd">←</span><span class="nf">⎕TALLOC</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="s1">&#39;cats&#39;</span>

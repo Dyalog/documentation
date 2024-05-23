@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -67963,7 +67963,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -67984,7 +67984,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68005,7 +68005,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68026,7 +68026,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70148,7 +70148,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70169,7 +70169,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70190,7 +70190,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70211,7 +70211,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71193,7 +71193,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71214,7 +71214,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71235,7 +71235,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71298,7 +71298,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71319,7 +71319,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71340,7 +71340,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71434,7 +71434,7 @@
                   
 
 
-<h1 class="heading"><span class="name"> Creating .NET Classes with APLScript</span></h1>
+<h1> Creating .NET Classes with APLScript</h1>
 
 <p>It is possible to define and use new .NET classes within an <code>APLScript</code>.</p>
 <p>A class is defined by <code>:Class</code> and <code>:EndClass</code> statements. The methods provided by the class are defined as function bodies enclosed within these statements. Please see the Language Reference for a complete discussion of writing classes in Dyalog APL. This chapter will only provide a brief introduction to the subject, aimed specifically at APLScript.</p>
@@ -71448,7 +71448,7 @@
 <p>A class specified in this way will automatically support the methods, properties and events that it inherits from its Base Class, together with any new public methods that you care to specify.</p>
 <p>However, the new class only inherits a default constructor (which is called with no parameters) and does not inherit all of the other private constructors from its Base Class. You can define a method to be a constructor using the :<code>Implements Constructor</code> declarative comment. Constructor overloading is supported and you may define any number of different constructor functions in this way, but they must have unique parameter sets for the system to distinguish between them.</p>
 <p>You can create and use instances of a class by using the <code>⎕NEW</code> system function in statements elsewhere in the <code>APLScript</code>.</p>
-<h3 id="exporting-functions-as-web-methods">Exporting Functions as Web Methods</h3>
+<h2 id="exporting-functions-as-web-methods">Exporting Functions as Web Methods</h2>
 <p>Within a <code>:Class</code> definition block, you may define private functions and public functions. A public function is one that is exposed as a method and may be called by a client that creates an instance of your class. Public functions must have a section of <em>declaration</em> statements. Other functions are purely internal to the class and are not directly accessible by a client application.</p>
 <p>The declaration statements for public functions perform the same task for an <code>APLScript</code> that is performed using the .NET Properties dialog box, or by executing SetMethodInfo in the Dyalog APL Session, prior to creating a .NET assembly. The following declaration statements may be used.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
@@ -71465,7 +71465,7 @@
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">result</span><span class="kd">←</span><span class="nv">fn</span><span class="w"> </span><span class="nv">type1</span><span class="w"> </span><span class="nv">Name1</span><span class="o">,</span><span class="w"> </span><span class="nv">type2</span><span class="w"> </span><span class="nv">Name2</span><span class="o">,</span><span class="na">..</span>
 </code></pre></div>
 <p>Declares the result of the method to have a given data type, if any. It also declares parameters to the method to have given data types and names. <code>Namex</code> is optional and may be any well-formed name that identifies the parameter. This name will appear in the metadata and is made available to a client application as information. It is therefore sensible to choose meaningful names. The names you allocate to parameters have no other meaning and are not associated with the names of local variables that you may choose to receive them. However, it is not a bad idea to use the same local names as the public names of your parameters.</p>
-<h3 id="a-net-class-example">A .NET Class example</h3>
+<h2 id="a-net-class-example">A .NET Class example</h2>
 <p>The following APLScript illustrates how you may create a .NET Class using APLScript. The example class is the same as <em>Example 1</em> in Chapter 5. The APLScript code, saved in the file <code>samples\aplclasses\aplclasses6.apl</code>, is as follows:
 <div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">APLClasses</span>
 
@@ -71510,7 +71510,7 @@
 <span class="w">      </span><span class="nv">APL</span><span class="na">.</span><span class="nv">IndexGen</span><span class="w"> </span><span class="m">10</span>
 <span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="m">10</span>
 </code></pre></div></p>
-<h3 id="defining-properties">Defining Properties</h3>
+<h2 id="defining-properties">Defining Properties</h2>
 <p>Properties are defined by <code>:Property</code> and <code>:EndProperty</code> statements. A property pertains to the class in which it is defined.
 <div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Property</span><span class="w"> </span><span class="nv">Name</span>
 <span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">C</span><span class="kd">←</span><span class="nv">get</span>
@@ -71588,7 +71588,7 @@
 <span class="w">      </span><span class="nv">APL</span><span class="na">.</span><span class="nv">IndexGen</span><span class="w"> </span><span class="m">10</span>
 <span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="m">9</span>
 </code></pre></div></p>
-<h3 id="indexers">Indexers</h3>
+<h2 id="indexers">Indexers</h2>
 <p>An <em>indexer</em> is a property of a class that enables an instance of that class (an object) to be indexed in the same way as an array, if the host language supports this feature. Languages that support object indexing include C# and Visual Basic. Dyalog APL does also allow indexing to be used on objects. This means that you can define an APL class that exports an indexer and you can use the indexer from C#, Visual Basic or Dyalog APL.</p>
 <p>Indexers are defined in the same way as properties, between <code>:Property Default</code> and <code>:EndProperty</code> statements. There may be only one indexer defined for a class.</p>
 <p>Note: the <code>:Property Default</code> statement in Dyalog APL is closely modelled on the indexer feature in C# and employs similar syntax. If you use <code>ILDASM</code> to browse a .NET class containing an indexer, you will see the indexer as the <em>default property</em> of that class, which is how it is actually implemented.</p>

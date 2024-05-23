@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68241,7 +68241,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68262,7 +68262,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68283,7 +68283,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68304,7 +68304,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70348,7 +70348,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70369,7 +70369,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70390,7 +70390,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70411,7 +70411,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71393,7 +71393,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71414,7 +71414,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71435,7 +71435,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71498,7 +71498,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71519,7 +71519,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71540,7 +71540,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71697,7 +71697,7 @@
                   
 
 
-<h1 class="heading"><span class="name">Fix Script</span><span class="command">{R}←{X}⎕FIX Y</span></h1>
+<h1 class="heading"><span class="name">Fix Script</span> <span class="command">{R}←{X}⎕FIX Y</span></h1>
 
 <p><code>⎕FIX</code> establishes Namespaces, Classes, Interfaces and functions from the script specified by <code>Y</code> in the workspace.</p>
 <p>In this section, the term <em>namespace</em> covers scripted Namespaces, Classes and Interfaces.</p>
@@ -71713,12 +71713,12 @@
 <li>Derived and assigned functions may be specified only within namespaces.</li>
 </ul>
 <p>In this case,  the shy result <code>R</code> is a vector of character vectors, containing the names of all of the objects that have been established in the workspace; the order of the names in <code>R</code> is not defined. Currently <code>2 ⎕FIX</code> is not certain to be an atomic operation, although this might change in future versions.</p>
-<h4 id="example-1">Example 1</h4>
+<h2 id="example-1">Example 1</h2>
 <p>In the first example, the Class specified by <code>Y</code> is <em>named</em> (<code>MyClass</code>) but the result of <code>⎕FIX</code> is discarded. The end-result is that <code>MyClass</code> is established in the workspace as a Class.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="vg">⎕</span><span class="kd">←</span><span class="nf">⎕FIX</span><span class="w"> </span><span class="s1">&#39;:Class MyClass&#39;</span><span class="w"> </span><span class="s1">&#39;:EndClass&#39;</span>
 <span class="c1">#.MyClass</span>
 </code></pre></div></p>
-<h4 id="example-2">Example 2</h4>
+<h2 id="example-2">Example 2</h2>
 <p>In the second example, the Class specified by <code>Y</code> is <em>named</em> (<code>MyClass</code>) and the result of <code>⎕FIX</code> is assigned to a different name (<code>MYREF</code>). The end-result is that a Class named <code>MyClass</code> is established in the workspace, and <code>MYREF</code> is a reference to it.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MYREF</span><span class="kd">←</span><span class="nf">⎕FIX</span><span class="w"> </span><span class="s1">&#39;:Class MyClass&#39;</span><span class="w"> </span><span class="s1">&#39;:EndClass&#39;</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">CLASSES</span>
@@ -71730,7 +71730,7 @@
 <span class="w">      </span><span class="nv">MYREF</span><span class="o">≡</span><span class="nv">MyClass</span>
 <span class="m">1</span>
 </code></pre></div></p>
-<h4 id="example-3">Example 3</h4>
+<h2 id="example-3">Example 3</h2>
 <p>In the third example, the left-argument of <code>0</code> causes the named Class <code>MyClass</code> to be visible only via the reference to it (<code>MYREF</code>). It is there, but hidden.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MYREF</span><span class="kd">←</span><span class="m">0</span><span class="w"> </span><span class="nf">⎕FIX</span><span class="w"> </span><span class="s1">&#39;:Class MyClass&#39;</span><span class="w"> </span><span class="s1">&#39;:EndClass&#39;</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">CLASSES</span>
@@ -71738,7 +71738,7 @@
 <span class="w">      </span><span class="nv">MYREF</span>
 <span class="c1">#.MyClass</span>
 </code></pre></div></p>
-<h4 id="example-4">Example 4</h4>
+<h2 id="example-4">Example 4</h2>
 <p>The fourth example illustrates the use of un-named Classes.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">src</span><span class="kd">←</span><span class="s1">&#39;:Class&#39;</span><span class="w"> </span><span class="s1">&#39;∇Make n&#39;</span>
 <span class="w">      </span><span class="nv">src</span><span class="o">,</span><span class="kd">←</span><span class="s1">&#39;Access Public&#39;</span><span class="w"> </span><span class="s1">&#39;Implements Constructor&#39;</span>
@@ -71750,7 +71750,7 @@
 <span class="w">      </span><span class="nv">MYINST</span>
 <span class="nv">Pete</span>
 </code></pre></div></p>
-<h4 id="example-5">Example 5</h4>
+<h2 id="example-5">Example 5</h2>
 <p>In the final example, the left argument of <code>2</code> allows a script containing multiple objects to be fixed:</p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">src</span><span class="kd">←</span><span class="s1">&#39;:Namespace andys&#39;</span><span class="w"> </span><span class="s1">&#39;∇foo&#39;</span><span class="w"> </span><span class="s1">&#39;2&#39;</span><span class="w"> </span><span class="s1">&#39;∇&#39;</span>
 <span class="w">      </span><span class="nv">src</span><span class="o">,</span><span class="kd">←</span><span class="s1">&#39;:EndNamespace&#39;</span><span class="w"> </span><span class="s1">&#39;dfn←{⍺ ⍵}&#39;</span><span class="w"> </span><span class="s1">&#39;∇r←tfn&#39;</span>
@@ -71760,16 +71760,16 @@
 <span class="w"> </span><span class="nv">c1</span><span class="w">  </span><span class="nv">tfn</span><span class="w">  </span><span class="nv">dfn</span><span class="w">  </span><span class="nv">andys</span><span class="w"> </span>
 <span class="m">4</span>
 </code></pre></div>
-<h4 id="restriction">Restriction</h4>
+<h2 id="restriction">Restriction</h2>
 <p><code>⎕FIX</code> is unable to fix a namespace from <code>Y</code> when <code>Y</code> specifies a multi-line dfn which is preceded by a <code>⋄</code> (diamond separator).
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕FIX</span><span class="s1">&#39;:Namespace iaK&#39;</span><span class="w"> </span><span class="s1">&#39;a←1 ⋄ adfn←{&#39;</span><span class="w"> </span><span class="s1">&#39;⍵&#39;</span><span class="w"> </span><span class="s1">&#39; }&#39;</span><span class="w"> </span><span class="s1">&#39;:EndNamespace&#39;</span>
 <span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span><span class="bp">:</span><span class="w"> </span><span class="nv">There</span><span class="w"> </span><span class="nv">were</span><span class="w"> </span><span class="nv">errors</span><span class="w"> </span><span class="nv">processing</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">script</span>
 <span class="w">      </span><span class="nf">⎕FIX</span><span class="s1">&#39;:Namespace iaK&#39;</span><span class="w"> </span><span class="s1">&#39;a←1 ⋄ adfn←{&#39;</span><span class="w"> </span><span class="s1">&#39;⍵&#39;</span><span class="w"> </span><span class="s1">&#39; }&#39;</span><span class="w"> </span><span class="s1">&#39;:EndNamespace&#39;</span>
 <span class="w">      </span><span class="o">∧</span>
 </code></pre></div></p>
-<h4 id="variant-options">Variant Options</h4>
+<h2 id="variant-options">Variant Options</h2>
 <p><code>⎕FIX</code> may be applied using the  Variant operator with the options Quiet, FixWithErrors,  AllowLateBinding and InjectReferences. These options apply only to namespaces and classes specified by the script. There is no principal option.</p>
-<h4 id="quiet-option">Quiet Option</h4>
+<h2 id="quiet-option">Quiet Option</h2>
 <table>
 <tbody>
 <tr>
@@ -71782,7 +71782,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="fixwitherrors-option">FixWithErrors Option</h4>
+<h2 id="fixwitherrors-option">FixWithErrors Option</h2>
 <table>
 <tbody>
 <tr>
@@ -71799,7 +71799,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="allowlatebinding-option">AllowLateBinding Option</h4>
+<h2 id="allowlatebinding-option">AllowLateBinding Option</h2>
 <table>
 <tbody>
 <tr>
@@ -71812,7 +71812,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="injectreferences-option">InjectReferences Option</h4>
+<h2 id="injectreferences-option">InjectReferences Option</h2>
 <table>
 <tbody>
 <tr>

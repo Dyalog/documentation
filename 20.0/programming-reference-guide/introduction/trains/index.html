@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7943,7 +7943,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8938,7 +8938,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8959,7 +8959,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10294,7 +10294,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10315,7 +10315,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10336,7 +10336,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10357,7 +10357,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10378,7 +10378,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10399,7 +10399,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10420,7 +10420,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10449,7 +10449,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10517,7 +10517,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68086,7 +68086,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68107,7 +68107,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68128,7 +68128,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68149,7 +68149,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70193,7 +70193,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70214,7 +70214,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70235,7 +70235,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70256,7 +70256,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71238,7 +71238,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71259,7 +71259,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71280,7 +71280,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71343,7 +71343,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71364,7 +71364,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71385,7 +71385,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71524,9 +71524,9 @@
                   
 
 
-<h1 class="heading"><span class="name"> Function Trains</span></h1>
+<h1> Function Trains</h1>
 
-<h3 id="introduction">Introduction</h3>
+<h2 id="introduction">Introduction</h2>
 <p>A <em>Train</em> is a derived function constructed from a sequence of 2 or 3 functions, or from an array followed by two functions, which bind together to form a function.</p>
 <p>Note that the right-most item  of a function train (which is by definition a function) must be isolated from anything to its right, otherwise it will be bound to that rather than to the items to its left. This is done using parentheses.</p>
 <p>For example, the following expression  comprises a function train <code>-,÷</code> that is separated from its argument 2 by parentheses:
@@ -71548,14 +71548,14 @@
 <span class="m">¯0.5</span>
 </code></pre></div></li>
 </ol>
-<h3 id="forks-and-atops">Forks and Atops</h3>
+<h2 id="forks-and-atops">Forks and Atops</h2>
 <p>The following trains are currently supported where <code>f</code>, <code>g</code> and <code>h</code> are functions and <code>A</code> is an array:
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">f</span><span class="w"> </span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span>
 <span class="w">      </span><span class="nv">A</span><span class="w"> </span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span>
 <span class="w">        </span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span>
 </code></pre></div></p>
 <p>The 3-item trains <code>(f g h)</code> and <code>(A g h)</code> are termed <em>forks</em> while the 2-item train <code>(g h)</code> is termed an <em>atop</em>. To distinguish the two styles of <em>fork</em>, we can use the terms <em>fgh-fork</em> or <em>Agh-fork</em>.</p>
-<h3 id="trains-as-functions">Trains as Functions</h3>
+<h2 id="trains-as-functions">Trains as Functions</h2>
 <p>A train is syntactically equivalent to a function and so, in common with any other function, may be:</p>
 <ul>
 <li>named using assignment</li>
@@ -71572,13 +71572,13 @@
 <span class="w">     </span><span class="p">(</span><span class="nv">A</span><span class="w"> </span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span><span class="p">)</span><span class="bp">⍵</span><span class="w"> </span><span class="kd">←→</span><span class="w">    </span><span class="nv">A</span><span class="w">    </span><span class="nv">g</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="nv">h</span><span class="w"> </span><span class="bp">⍵</span><span class="p">)</span><span class="w">   </span><span class="c1">⍝ monadic (Agh) fork</span>
 <span class="w">     </span><span class="p">(</span><span class="w">  </span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span><span class="p">)</span><span class="bp">⍵</span><span class="w"> </span><span class="kd">←→</span><span class="w">         </span><span class="nv">g</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="nv">h</span><span class="w"> </span><span class="bp">⍵</span><span class="p">)</span><span class="w">   </span><span class="c1">⍝ monadic       atop</span>
 </code></pre></div></p>
-<h3 id="identifying-a-train">Identifying a Train</h3>
+<h2 id="identifying-a-train">Identifying a Train</h2>
 <p>For a sequence to be interpreted as a train it must be separated from the argument to which it is applied. This can be done using parentheses or by naming the derived function.</p>
-<h3 id="example-fork-negation-of-catenated-with-reciprocal">Example - fork: negation of catenated with reciprocal</h3>
+<h2 id="example-fork-negation-of-catenated-with-reciprocal">Example - fork: negation of catenated with reciprocal</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="o">-,÷</span><span class="p">)</span><span class="m">5</span><span class="w">         </span>
 <span class="m">¯5</span><span class="w"> </span><span class="m">0.2</span>
 </code></pre></div>
-<h3 id="example-named-fork">Example - named fork</h3>
+<h2 id="example-named-fork">Example - named fork</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">negrec</span><span class="kd">←</span><span class="o">-,÷</span><span class="w"> </span>
 <span class="w">      </span><span class="nv">negrec</span><span class="w"> </span><span class="m">5</span>
 <span class="w"> </span><span class="m">¯5</span><span class="w"> </span><span class="m">0.2</span>
@@ -71588,7 +71588,7 @@
 <span class="m">¯0.2</span>
 </code></pre></div></p>
 <p>means the negation of the ravel of the reciprocal of 5.</p>
-<h3 id="idiom-recognition">Idiom Recognition</h3>
+<h2 id="idiom-recognition">Idiom Recognition</h2>
 <p>Function trains lend themselves to idiom recognition, a technique used to optimise the performance of certain expressions.</p>
 <p><strong>Example</strong></p>
 <p>An expression to find the first position in a random integer vector <code>X</code> of a number greater than 999000 is:
@@ -71600,7 +71600,7 @@
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">X</span><span class="w"> </span><span class="p">(</span><span class="o">⍳</span><span class="na">∘</span><span class="m">1</span><span class="w"> </span><span class="o">≥</span><span class="p">)</span><span class="w"> </span><span class="m">999000</span>
 <span class="m">1704</span>
 </code></pre></div></p>
-<h3 id="trains-of-trains">Trains of Trains</h3>
+<h2 id="trains-of-trains">Trains of Trains</h2>
 <p>As a train resolves to a function, a sequences of more than 3 functions represents a train of trains. Function sequences longer than 3 are bound in threes, starting from the right:
 <div class="highlight"><pre><span></span><code><span class="na">...</span><span class="w"> </span><span class="nv">fu</span><span class="w"> </span><span class="nv">fv</span><span class="w"> </span><span class="nv">fw</span><span class="w"> </span><span class="nv">fx</span><span class="w"> </span><span class="nv">fy</span><span class="w"> </span><span class="nv">fz</span><span class="w"> </span><span class="kd">→</span><span class="w"> </span><span class="na">...</span><span class="w"> </span><span class="nv">fu</span><span class="w"> </span><span class="p">(</span><span class="nv">fv</span><span class="w"> </span><span class="nv">fw</span><span class="w"> </span><span class="p">(</span><span class="nv">fx</span><span class="w"> </span><span class="nv">fy</span><span class="w"> </span><span class="nv">fz</span><span class="p">))</span>
 </code></pre></div></p>
@@ -71645,7 +71645,7 @@
 <span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="o">,</span><span class="w"> </span><span class="err">┌─┼─┐</span>
 <span class="w">        </span><span class="o">×</span><span class="w"> </span><span class="o">,</span><span class="w"> </span><span class="o">÷</span>
 </code></pre></div></p>
-<h3 id="binding-strengths">Binding Strengths</h3>
+<h2 id="binding-strengths">Binding Strengths</h2>
 <p>The binding strength between the items of a train is less than that of operand-operator binding. In other words, operators bind first with their function (or array) operands to form derived functions, which may then participate as items in a train.</p>
 <p><strong>Example</strong></p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="na">⌿</span><span class="w"> </span><span class="o">÷</span><span class="w"> </span><span class="o">≢</span><span class="w">            </span><span class="c1">⍝ fork for mean value</span>

@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68061,7 +68061,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68082,7 +68082,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68103,7 +68103,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68124,7 +68124,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70168,7 +70168,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70189,7 +70189,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70210,7 +70210,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70231,7 +70231,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71213,7 +71213,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71234,7 +71234,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71255,7 +71255,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71318,7 +71318,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71339,7 +71339,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71360,7 +71360,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71472,13 +71472,13 @@
                   
 
 
-<h1 class="heading"><span class="name">Assignment</span><span class="command">X←Y</span></h1>
+<h1 class="heading"><span class="name">Assignment</span> <span class="command">X←Y</span></h1>
 
 <p>Assignment  allocates the result of the expression <code>Y</code> to the <em>name</em> or <em>names</em> in <code>X</code>.</p>
 <p>If <code>Y</code> is an array expression, <code>X</code> must contain one or more names which are variables, system variables, or are undefined. Following assignment, the name(s) in <code>X</code> become variable(s) with value(s) taken from the result of the expression <code>Y</code>.</p>
 <p>If <code>X</code> contains a single name, the variable assumes the value of <code>Y</code>. If <code>X</code> contains multiple names then <code>Y</code> can be a single-item array of any rank (including a scalar) or  a vector. If <code>Y</code> is a single-item array, the scalar value <code>⊃Y</code> is assigned to all names in <code>X</code>. Otherwise, each element of <code>Y</code> is assigned to the corresponding name in <code>X</code>.  Although not mandatory, Dyalog recommends that the names in <code>X</code> are enclosed in parentheses to reduce potential ambiguity in assignment statements.</p>
 <p>The assignment arrow (or specification arrow) is often read as 'Is' or 'Gets'.</p>
-<h4 id="examples-of-single-assignment">Examples of single assignment</h4>
+<h2 id="examples-of-single-assignment">Examples of single assignment</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="m">2.3</span>
 <span class="w">      </span><span class="nv">A</span>
 <span class="m">2.3</span>
@@ -71487,7 +71487,7 @@
 <span class="w">      </span><span class="nv">A</span>
 <span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span>
 </code></pre></div>
-<h4 id="examples-of-multiple-assignment-using-parentheses">Examples of multiple assignment using parentheses</h4>
+<h2 id="examples-of-multiple-assignment-using-parentheses">Examples of multiple assignment using parentheses</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">A</span><span class="w"> </span><span class="nv">B</span><span class="p">)</span><span class="kd">←</span><span class="m">2</span>
 <span class="w">      </span><span class="nv">A</span>
 <span class="m">2</span>
@@ -71502,7 +71502,7 @@
 <span class="w">      </span><span class="nv">Q</span>
 <span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span>
 </code></pre></div>
-<h4 id="example-of-multiple-assignment-without-parentheses">Example of multiple assignment without parentheses</h4>
+<h2 id="example-of-multiple-assignment-without-parentheses">Example of multiple assignment without parentheses</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">year</span><span class="w"> </span><span class="nv">month</span><span class="w"> </span><span class="nv">day</span><span class="kd">←</span><span class="m">2017</span><span class="w"> </span><span class="m">05</span><span class="w"> </span><span class="m">24</span>
 <span class="w">      </span><span class="nv">day</span>
 <span class="m">24</span>
@@ -71517,7 +71517,7 @@
 <span class="w">      </span><span class="nv">I</span><span class="o">,</span><span class="nv">J</span><span class="o">,</span><span class="nv">K</span>
 <span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div></p>
-<h4 id="function-assignment">Function Assignment</h4>
+<h2 id="function-assignment">Function Assignment</h2>
 <p>If <code>Y</code> is a function expression, <code>X</code> must be a single name which is either undefined, or is the name of an existing function or defined operator. <code>X</code> may not be the name of a system function, or a primitive symbol.</p>
 <p><strong>Examples</strong></p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">PLUS</span><span class="kd">←</span><span class="o">+</span>
@@ -71530,7 +71530,7 @@
 
 <span class="w">      </span><span class="nv">MEAN</span><span class="kd">←</span><span class="kt">{</span><span class="p">(</span><span class="o">+</span><span class="na">/</span><span class="bp">⍵</span><span class="p">)</span><span class="o">÷⍴</span><span class="bp">⍵</span><span class="kt">}</span>
 </code></pre></div>
-<h4 id="namespace-reference-assignment">Namespace Reference Assignment</h4>
+<h2 id="namespace-reference-assignment">Namespace Reference Assignment</h2>
 <p>If an expression evaluates to a namespace reference, or <em>ref</em>, you may assign it to a name. A name assigned to a simple scalar <em>ref</em>, has name class 9, whereas one assigned to an <em>array</em> containing <em>refs</em> has name class 2.
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">&#39;f1&#39;</span><span class="nf">⎕WC</span><span class="s1">&#39;Form&#39;</span>
 <span class="w">      </span><span class="s1">&#39;ns1&#39;</span><span class="w"> </span><span class="nf">⎕NS</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
@@ -71548,7 +71548,7 @@
 <span class="w">      </span><span class="nf">⎕NC</span><span class="w"> </span><span class="s1">&#39;F2&#39;</span>
 <span class="m">9</span>
 </code></pre></div></p>
-<h4 id="re-assignment">Re-Assignment</h4>
+<h2 id="re-assignment">Re-Assignment</h2>
 <p>A name that already exists may be assigned a new value if the assignment will not alter its name class, or will change it from 2 to 9 or vice versa. The table of permitted re-assignments is as follows:</p>
 <table>
 <thead>

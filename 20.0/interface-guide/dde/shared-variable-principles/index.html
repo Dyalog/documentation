@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68041,7 +68041,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68062,7 +68062,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68083,7 +68083,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68104,7 +68104,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70148,7 +70148,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70169,7 +70169,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70190,7 +70190,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70211,7 +70211,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71193,7 +71193,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71214,7 +71214,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71235,7 +71235,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71298,7 +71298,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71319,7 +71319,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71340,7 +71340,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71434,14 +71434,14 @@
                   
 
 
-<h1 class="heading"><span class="name"> Shared Variable Principles</span></h1>
+<h1> Shared Variable Principles</h1>
 
 <p>Shared Variables are part of the APL standard, although strictly speaking as an optional facility. They provide a comprehensive mechanism for communicating between two APL workspaces, or between APL and a co-operating non-APL application. Despite some conflicts between Shared Variable concepts and DDE, this standard APL mechanism has overriding advantages as the basis for a DDE interface. The main benefit is that Shared Variables provide a <strong>general</strong> basis for developing communications using a variety of protocols, of which DDE is but a single example. Dyalog APL communications are not therefore designed for and limited to DDE, but can be extended to other protocols which are appropriate in different environments.</p>
 <p>Most mainframe APL users will already be familiar with Shared Variables and will need no introduction to their concepts. New APL users, or those whose experience has been only of PC-based interpreters, may find the following introduction helpful.</p>
-<h3 id="introduction">Introduction</h3>
+<h2 id="introduction">Introduction</h2>
 <p>It is easiest to consider Shared Variables between two APL workspaces. A Shared Variable is simply a variable that is common to and visible in two workspaces. Once a variable is shared, its value is the same in both workspaces. Communication is achieved by one workspace assigning a new value to the variable and then the other workspace referencing it. Although there is no explicit <strong>send</strong> or <strong>receive</strong>, it is perhaps easier to think of things in this way. When you assign a value to a shared variable, you are in effect transmitting it to your partner. When you reference a shared variable, you are in fact receiving it from your partner.</p>
 <p>This discussion of shared variables will refer to the terms <strong>set</strong> and <strong>use</strong>. The term <strong>set</strong> means to assign a (new) value to a variable, i.e. its name appears to the left of an assignment arrow. The term <strong>use</strong> means to refer to the value of a variable, i.e. its name appears to the right of an assignment arrow.</p>
-<h3 id="sharing-a-variable">Sharing a Variable</h3>
+<h2 id="sharing-a-variable">Sharing a Variable</h2>
 <p>Variables are shared using the system function <code>⎕SVO</code>. This is a dyadic function whose right argument specifies the name (or a matrix of names) of the variable, and whose left argument identifies the partner with whom the variable is to be shared. In mainframe APL, you identify the partner by its processor id. For example, the following statement means that you offer to share the variable <code>X</code> with processor 123.</p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">123</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">&#39;X&#39;</span>
 </code></pre></div>
@@ -71484,7 +71484,7 @@
 </tbody>
 </table>
 <p>In this example, both partners specified exactly whom they wished to share with. These are termed <strong>specific offers</strong>. It is also possible to make a <strong>general offer</strong>, which means that you offer to share a particular variable with <strong>anyone</strong>. Coupling can be established by any other processor that offers to share the same variable with you, but notice that the other processor must make a <strong>specific offer</strong> to couple with your general one. The rule is in fact, that sharing may be established by matching a specific offer with another specific offer, or by matching a specific offer with a general offer. Two general offers cannot establish a connection.</p>
-<h3 id="the-state-vector">The State Vector</h3>
+<h2 id="the-state-vector">The State Vector</h2>
 <p>One of the interesting things about Shared Variables, is that both APL workspaces are equal partners. Either of them is allowed to change the value of a shared variable, thus communication is two way. In any communication of this sort, it is essential to have a mechanism to keep things in step. If not, it is possible for one partner to miss something or to receive the same message twice. In some applications this doesn't matter. For example, if one APL workspace is simply monitoring the current value of a particular currency, it does not matter that a second workspace doesn't see all of the fluctuations as they occur. It is important only that the latest value can be referenced when it is needed. Contrast this with a trading application in which the trading workspace registers each transaction with a second workspace which monitors and stores the transactions on a database. Clearly in this case it is essential that each and every transaction is properly communicated and recorded.</p>
 <p>Synchronisation is provided by two system functions, <code>⎕SVS</code> and <code>⎕SVC</code>. <code>⎕SVS</code> reports the current value of a shared variable's <strong>State Vector</strong>. This provides information concerning the state of the variable from each partner's point of view. The second function, <code>⎕SVC</code>, allows you and your partner to specify interlocking that enforces the level of synchronisation required by your application.</p>
 <p>Each shared variable has a <strong>state vector</strong> which indicates which partner has set a value of which the other is still ignorant, and which partner is aware of the current value. The current state of a shared variable is reported by the monadic system function <code>⎕SVS</code>. Its argument is the name of the shared variable. Its result is a 4-element Boolean vector which specifies the current state vector, i.e.</p>
@@ -71512,7 +71512,7 @@
 </tbody>
 </table>
 <p>It may not be immediately apparent as to how the information provided by <code>⎕SVS</code> can be used. The answer, as we will see later, is that communications generates <strong>events</strong>. That is to say, when your partner sets a shared variable to a new value or references a value that you have set, an event is generated telling you that something has happened. <code>⎕SVS</code> is then used to determine what has happened (set or use) and, if you have several variables shared, which one of the variables has in some way changed state. A shared variable state change is thus the trigger that forces some kind of action out of the other process.</p>
-<h3 id="access-control">Access Control</h3>
+<h2 id="access-control">Access Control</h2>
 <p><code>⎕SVS</code> is not sufficient on its own to synchronise data transfer. For example, what if the two partners both set the shared variable to a different value at <strong>exactly</strong> the same point in time ?  This is the role of <code>⎕SVC</code> which actually assures data integrity (if required) by imposing access controls. Its purpose is to synchronise the order in which two applications <strong>set</strong> and <strong>use</strong> the value of a shared variable.</p>
 <p>In simple terms, <code>⎕SVC</code> allows an application to inhibit its partner from setting a new value before it has read the current one, and/or to inhibit its partner from using a variable again before it has been reset.</p>
 <p><code>⎕SVC</code> is a dyadic system function. Its right argument specifies the name of the shared variable; its left argument the access control vector, i.e.</p>

@@ -6163,7 +6163,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕NA` under UNIX
+    `⎕NA` under UNIX
   </span>
   
 
@@ -7820,7 +7820,7 @@
         
   
   <span class="md-ellipsis">
-    Control structures summary
+    Introduction
   </span>
   
 
@@ -8815,7 +8815,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: Why ?
+    Empty Arrays of Instances: Why ?
   </span>
   
 
@@ -8836,7 +8836,7 @@
         
   
   <span class="md-ellipsis">
-     Empty Arrays of Instances: How?
+    Empty Arrays of Instances: How?
   </span>
   
 
@@ -10171,7 +10171,7 @@
         
   
   <span class="md-ellipsis">
-     :Interface Statement
+    :Interface Statement
   </span>
   
 
@@ -10192,7 +10192,7 @@
         
   
   <span class="md-ellipsis">
-     :Namespace Statement
+    :Namespace Statement
   </span>
   
 
@@ -10213,7 +10213,7 @@
         
   
   <span class="md-ellipsis">
-     :Class Statement
+    :Class Statement
   </span>
   
 
@@ -10234,7 +10234,7 @@
         
   
   <span class="md-ellipsis">
-     :Using Statement
+    :Using Statement
   </span>
   
 
@@ -10255,7 +10255,7 @@
         
   
   <span class="md-ellipsis">
-     :Attribute Statement
+    :Attribute Statement
   </span>
   
 
@@ -10276,7 +10276,7 @@
         
   
   <span class="md-ellipsis">
-     :Access Statement
+    :Access Statement
   </span>
   
 
@@ -10297,7 +10297,7 @@
         
   
   <span class="md-ellipsis">
-     :Implements Statement
+    :Implements Statement
   </span>
   
 
@@ -10326,7 +10326,7 @@
         
   
   <span class="md-ellipsis">
-     :Field Statement
+    :Field Statement
   </span>
   
 
@@ -10394,7 +10394,7 @@
         
   
   <span class="md-ellipsis">
-     :Property Section
+    :Property Section
   </span>
   
 
@@ -68079,7 +68079,7 @@
         
   
   <span class="md-ellipsis">
-     Example: Communication Between APLs
+    Example: Communication Between APLs
   </span>
   
 
@@ -68100,7 +68100,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Server
+    Example : Excel as the Server
   </span>
   
 
@@ -68121,7 +68121,7 @@
         
   
   <span class="md-ellipsis">
-     Example : Excel as the Client
+    Example : Excel as the Client
   </span>
   
 
@@ -68142,7 +68142,7 @@
         
   
   <span class="md-ellipsis">
-     Example : APL as Compute Server for Excel
+    Example : APL as Compute Server for Excel
   </span>
   
 
@@ -70186,7 +70186,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG1
+    Sample Web Service: EG1
   </span>
   
 
@@ -70207,7 +70207,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: LoanService
+    Sample Web Service: LoanService
   </span>
   
 
@@ -70228,7 +70228,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: GolfService
+    Sample Web Service: GolfService
   </span>
   
 
@@ -70249,7 +70249,7 @@
         
   
   <span class="md-ellipsis">
-     Sample Web Service: EG2
+    Sample Web Service: EG2
   </span>
   
 
@@ -71231,7 +71231,7 @@
         
   
   <span class="md-ellipsis">
-     File permissions and `⎕FSTAC`
+    File permissions and `⎕FSTAC`
   </span>
   
 
@@ -71252,7 +71252,7 @@
         
   
   <span class="md-ellipsis">
-     `⎕SH`, exit codes and stderr
+    `⎕SH`, exit codes and stderr
   </span>
   
 
@@ -71273,7 +71273,7 @@
         
   
   <span class="md-ellipsis">
-     Signals and `⎕TRAP`, `4007⌶`
+    Signals and `⎕TRAP`, `4007⌶`
   </span>
   
 
@@ -71336,7 +71336,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
+    Appendix A: Table of keycodes and keystrokes using a terminal emulator under Linux GUIs
   </span>
   
 
@@ -71357,7 +71357,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix B: Table of keycodes and keystrokes for PuTTY
+    Appendix B: Table of keycodes and keystrokes for PuTTY
   </span>
   
 
@@ -71378,7 +71378,7 @@
         
   
   <span class="md-ellipsis">
-     Appendix C: Unused keycodes
+    Appendix C: Unused keycodes
   </span>
   
 
@@ -71454,11 +71454,11 @@
                   
 
 
-<h1 class="heading"><span class="name">Attributes</span><span class="command">R←{X} ⎕AT Y</span></h1>
+<h1 class="heading"><span class="name">Attributes</span> <span class="command">R←{X} ⎕AT Y</span></h1>
 
 <p><code>Y</code> can be a simple character scalar, vector or matrix, or a vector of character vectors representing the names of 0 or more defined functions or operators. Used dyadically, this function closely emulates the APL2 implementation. Used monadically, it returns information that is more appropriate for Dyalog APL.</p>
 <p><code>Y</code> specifies one or more names. If <code>Y</code> specifies a single name as a character scalar, a character vector, or as a scalar enclosed character vector, the result <code>R</code> is a vector. If <code>Y</code> specifies one or more names as a character matrix or as a vector of character vectors <code>R</code> is a matrix with one row per name in <code>Y</code>.</p>
-<h4 id="monadic-use">Monadic Use</h4>
+<h2 id="monadic-use">Monadic Use</h2>
 <p>If <code>X</code> is omitted, <code>R</code> is a 4-element vector or a 4 column matrix with the same number of rows as names in <code>Y</code> containing the following attribute information:</p>
 <p><code>R[1]</code> or <code>R[;1]</code>: Each item is a 3-element integer vector representing the function header syntax:</p>
 <table>
@@ -71540,7 +71540,7 @@
 <span class="o">|</span><span class="w"> </span><span class="s1">&#39;~-----&#39;</span><span class="w">  </span><span class="s1">&#39;~-------------------&#39;</span><span class="w">   </span><span class="s1">&#39;------&#39;</span><span class="w"> </span><span class="o">|</span>
 <span class="s1">&#39;∊--------------------------------------------&#39;</span>
 </code></pre></div></p>
-<h4 id="dyadic-use">Dyadic Use</h4>
+<h2 id="dyadic-use">Dyadic Use</h2>
 <p>The dyadic form of <code>⎕AT</code> emulates APL2. It returns the same rank and shape result containing information that matches the APL2 implementation as closely as possible.</p>
 <p>The number of elements or columns in <code>R</code> and their meaning depends upon the value of <code>X</code> which may be 1, 2, 3 or 4.</p>
 <p>If <code>X</code> is 1, <code>R</code> specifies <em>valences</em> and contains 3 elements (or columns) whose meaning is as follows:</p>
