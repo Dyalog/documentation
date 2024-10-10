@@ -740,8 +740,6 @@
       
         
       
-        
-      
     
     
     
@@ -845,27 +843,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1379,7 +1356,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16941,6 +16918,8 @@
       
         
       
+        
+      
     
     
     
@@ -18734,6 +18713,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64103,7 +64103,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71322,7 +71322,7 @@
 <p>This property defines the table of colours (the colour map) used by a <a href="../../objects/bitmap/">Bitmap</a> or <a href="../../objects/icon/">Icon</a> object or by a bitmap stored in the Windows clipboard. Its value is a 3-column integer matrix of numbers in the range 0-255. Each row represents a separate colour which is indexed (0-origin) by values in the <a href="../bits/">Bits</a> property. The 3 columns refer to the intensities of the red, green and blue components of colour respectively.</p>
 <p>Please note that <a href="../bits/">Bits</a> and CMap may <strong>only</strong> be used to represent an image with a colour palette of <strong>256 colours or less</strong>. If the colour palette is larger, the values of <a href="../bits/">Bits</a> and CMap reported by <code>⎕WG</code> will be (0 0). For a high-colour image, use <a href="../cbits/">CBits</a> instead.</p>
 <p>When you create a <a href="../../objects/bitmap/">Bitmap</a> or <a href="../../objects/icon/">Icon</a> by specifying <a href="../bits/">Bits</a> and CMap, the actual colours you obtain are not necessarily those that you specified. This is partly due to hardware restrictions and partly due to the way in which Windows manages colours. Firstly, your display adapter and driver limit the number of pure colours that can be displayed at any one time and therefore define a maximum size for the colour map. For example, on a <strong>standard</strong> VGA you are limited to 16 different pure colours (additional ones are provided by <strong>dithering</strong>).</p>
-<p>Secondly, Windows reserves a certain number of colours in the colour map for its own use. When an application requests a new colour (i.e. one that is not already installed in the colour map), MS-Windows either assigns it to a spare entry, or allocates the <strong>closest match</strong> if the colour map is full. The value of <a href="../bits/">Bits</a> and CMap after <a href="../../../language-reference-guide/system-functions/wc"><code>⎕WC</code></a> reflect the actual colours allocated and may bear little resemblance to the values you assigned to these properties initially.</p>
+<p>Secondly, Windows reserves a certain number of colours in the colour map for its own use. When an application requests a new colour (that is, one that is not already installed in the colour map), MS-Windows either assigns it to a spare entry, or allocates the <strong>closest match</strong> if the colour map is full. The value of <a href="../bits/">Bits</a> and CMap after <a href="../../../language-reference-guide/system-functions/wc"><code>⎕WC</code></a> reflect the actual colours allocated and may bear little resemblance to the values you assigned to these properties initially.</p>
 <p>Note that if you are running 16 colours, MS-Windows reserves all 16 entries in the colour map for its own use. This means that on a 16-colour system, you <strong>cannot</strong> use any colours other than the default ones reserved by MS-Windows. In practice, the "standard" 16-colour CMap is shown in the following table.</p>
 <table>
 <thead>

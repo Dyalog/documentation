@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64114,7 +64114,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71609,7 +71609,7 @@
 <p>The third way to invoke the Tracer is to have the system do it automatically for you whenever an error occurs. This is achieved by setting the Show trace stack on error option in the <em>Trace/Edit</em> tab of the <em>Configuration</em> dialog (<strong>Trace_on_error</strong> parameter). When an error occurs, the system will automatically deploy the Tracer. Note that this means that when an error occurs, the Trace window will then receive the input focus and not the Session window.</p>
 <h2 id="tracer-options">Tracer Options</h2>
 <p>From Version 10.1 onwards, the Tracer is designed to be docked in the Session window.</p>
-<p>In previous versions of Dyalog APL, the Tracer was implemented as a stack of separate windows (one per function on the calling stack) or as a single, but still separate, window.</p>
+<p>In previous versions of Dyalog, the Tracer was implemented as a stack of separate windows (one per function on the calling stack) or as a single, but still separate, window.</p>
 <p>You can disable the standard behaviour by selecting <em>Classic Dyalog mode</em> from the <em>Trace/Edit</em> tab of the <em>Configuration</em> dialog box.</p>
 <p>If you do so, you may then choose to have the Tracer operate in multiple windows or in a single window.</p>
 <p>These alternatives are discussed later in this Chapter.</p>
@@ -71816,7 +71816,7 @@
 <figure id="_figure-6"><img alt="trace tools reset icon" src="../img/trace-tools-reset-icon.png"><figcaption>Figure 6: trace tools reset icon</figcaption></figure></p>
 <p>You can clear all break-points by pressing the above button in the Trace Tools window. This in fact resets <code>⎕STOP</code> for all functions in the workspace.</p>
 <h2 id="the-classic-mode-tracer">The Classic mode Tracer</h2>
-<p>If you select <em>Classic Dyalog mode</em> from the <em>Trace/Edit</em> tab in the <em>Configuration</em> dialog box, the Tracer behaves in the same way as in Dyalog APL Version 8.2. However, the Tracer is not dockable in the Session.</p>
+<p>If you select <em>Classic Dyalog mode</em> from the <em>Trace/Edit</em> tab in the <em>Configuration</em> dialog box, the Tracer behaves in the same way as in Dyalog version 8.2. However, the Tracer is not dockable in the Session.</p>
 <p>If you select the Classic mode Tracer, you may choose between multiple trace windows or a single trace window using the <em>Single Trace Window</em> option.</p>
 <h2 id="multiple-trace-windows">Multiple Trace Windows</h2>
 <p>The following behaviour is obtained by <strong>deselecting</strong> the <em>Single Trace Window</em> option.</p>
@@ -71825,7 +71825,7 @@
 <li>When you press Ctrl+Enter or click the <em>Trace</em> button on a line that calls another function, a new trace window appears on top of the stack and displays the newly called function.</li>
 <li>When a function exits, its trace window disappears and the focus moves to the previous trace window. When the last function in a traced suspension exits, the last trace window disappears.</li>
 <li>If you click the <em>Quit this function</em> button in the <em>Trace Tools</em> window, or press Escape, or close the trace window by clicking on its [X] button or typing Alt-F4, the top trace window disappears and the focus moves to the previous trace window</li>
-<li>If you close any of the trace windows further down the stack, the stack will be cut back to the corresponding point, i.e. to the line of code that called the function whose trace window you closed.</li>
+<li>If you close any of the trace windows further down the stack, the stack will be cut back to the corresponding point, that is, to the line of code that called the function whose trace window you closed.</li>
 <li>The <rm> button removes all the trace windows and resumes execution. The same is achieved by the expression <code>→⎕LC</code>. The <cs> button also continues execution, but leaves the trace windows displayed and allows you to watch their progress.</cs></rm></li>
 <li>If you minimise any of the trace windows, the entire stack is minimised to a single icon, from which it may be restored.</li>
 <li>If you drag any Trace window with the mouse and at the same time press Ctrl+Shift, the entire set of Trace windows is dragged.</li>

@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../set-aplcore-parameters/">
+        <link rel="prev" href="../talloc/">
       
       
         <link rel="next" href="../enable-compression-of-large-components/">
@@ -753,8 +753,6 @@
       
         
       
-        
-      
     
     
     
@@ -858,27 +856,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1448,7 +1425,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -17010,6 +16987,8 @@
       
         
       
+        
+      
     
     
     
@@ -18803,6 +18782,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64172,7 +64172,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71447,11 +71447,11 @@
 </tr>
 <tr>
 <td>13</td>
-<td>Current workspace allocation, i.e. the amount of memory that is actually being used.</td>
+<td>Current workspace allocation, that is, the amount of memory that is actually being used.</td>
 </tr>
 <tr>
 <td>14</td>
-<td>Workspace allocation high-water mark, i.e. the maximum amount of memory that has been allocated since the workspace was loaded or since this count was reset.</td>
+<td>Workspace allocation high-water mark, that is, the maximum amount of memory that has been allocated since the workspace was loaded or since this count was reset.</td>
 </tr>
 <tr>
 <td>15</td>
@@ -71467,7 +71467,7 @@
 </tr>
 <tr>
 <td>20</td>
-<td>The requested size of the <code>WS Full Buffer</code> , i.e. the amount of workspace requested for handling <code>WS FULL</code> errors.</td>
+<td>The requested size of the <code>WS Full Buffer</code> , that is, the amount of workspace requested for handling <code>WS FULL</code> errors.</td>
 </tr>
 <tr>
 <td>21</td>
@@ -71578,7 +71578,7 @@
 <h2 id="ws-full-handling">WS Full Handling</h2>
 <p>Potentially, a <code>WS FULL</code> error represents a terminal condition that would prevent a program from continuing because the process has, quite literally, run out of memory.</p>
 <p>To alleviate the problem,. Dyalog reserves a special <em>WS Full Buffer</em> for handling <code>WS FULL</code> errors. The default size of this buffer is <code>(1MB)⌊(0.01×⎕WA)</code>.</p>
-<p>In simple terms, when a <code>WS FULL</code> error occurs that triggers a handler, i.e. an expression executed via <code>⎕TRAP</code> or <code>:Trap</code>,  the reserved workspace in the <em>WS Full Buffer</em> is released to provide additional memory space for that expression to execute. When the expression terminates, the system removes the memory that it had previously released, reserving it once more for another potential <code>WS FULL</code>.</p>
+<p>In simple terms, when a <code>WS FULL</code> error occurs that triggers a handler, that is, an expression executed via <code>⎕TRAP</code> or <code>:Trap</code>,  the reserved workspace in the <em>WS Full Buffer</em> is released to provide additional memory space for that expression to execute. When the expression terminates, the system removes the memory that it had previously released, reserving it once more for another potential <code>WS FULL</code>.</p>
 <p>Note that until a <code>WS FULL</code> handler starts, the memory allocated to the <em>WS Full Buffer</em> is unavailable and inaccessible for any other purpose, thereby reducing the amount of active workspace available (<code>⎕WA</code>).</p>
 <p>Further considerations are:</p>
 <ul>

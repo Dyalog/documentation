@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16945,6 +16922,8 @@
       
         
       
+        
+      
     
     
     
@@ -18738,6 +18717,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64107,7 +64107,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71376,7 +71376,7 @@
 <p>So when the user presses the button, the browser sends back a POST statement, with the contents of the Form, including the value of the HIDDEN field, requesting the browser to load <code>intro1.aspx</code>.</p>
 <p>In the server, ASP.NET reloads the page and processes it again. In fact, because of the stateless nature of HTTP, the server does not know that it is reprocessing the same page, except that it is being executed by a POST command with the hidden data embedded in the Form that it put there the first time around. This is the mechanism by which ASP.NET <em>remembers</em> the state of a page from one invocation to another.</p>
 <p>This time, because a POST back is loading the page, and because the <code>Pressme</code> button caused the POST, ASP.NET executes the function associated with its <code>onClick</code> attribute, namely the <code>APLScript</code> function <code>Reverse</code>.</p>
-<p>When it is called, the argument supplied to Reverse contains two items. The first of these is an object that represents the control that generated the <code>onClick</code> event; the second is an object that represents the event itself. In fact, <code>Reverse</code> and its argument are very similar to a standard Dyalog APL callback function.</p>
+<p>When it is called, the argument supplied to Reverse contains two items. The first of these is an object that represents the control that generated the <code>onClick</code> event; the second is an object that represents the event itself. In fact, <code>Reverse</code> and its argument are very similar to a standard Dyalog callback function.</p>
 <div class="highlight"><pre><span></span><code><span class="bp">∇</span><span class="nv">Reverse</span><span class="w"> </span><span class="nv">args</span>
 <span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">public</span>
 <span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">Reverse</span><span class="w"> </span><span class="nv">Object</span><span class="o">,</span><span class="nv">EventArgs</span>

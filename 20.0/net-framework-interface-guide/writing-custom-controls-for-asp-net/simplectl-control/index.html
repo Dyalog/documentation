@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64112,7 +64112,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71406,9 +71406,9 @@
 <p>The <code>Render</code> function <strong>supercedes</strong> (see <a href="../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class-declaration-statements/access">:Access Statement</a>) the <code>Render</code> method that <code>SimpleCtl</code> has inherited from its base class, <code>System.Web.UI.Control</code>.</p>
 <p>The <code>Render</code> method defined by the <code>System.Web.UI.Control</code> base class is <code>void</code> and takes a parameter of type <code>HtmlTextWriter</code>. When the <code>SimpleCtl</code> control is referenced in a Web Page, ASP.NET creates an instance of it and calls its <code>Render</code> method because it is a <code>Control</code> and is expected to have one. Moreover, ASP.NET supplies an object of type <code>HtmlTextWriter</code> as its parameter. You do not need to worry where this object came from, or what it actually represents. You need only know that an <code>HtmlTextWriter</code> provides a method called <code>WriteLine</code> that may be used to output a text string to the browser. The mechanics of how this actually happens are handled by the <code>HtmlTextWriter</code> object itself.</p>
 <p>In APL terms, the argument to our <code>Render</code> function, <code>output</code>, will be a namespace reference, and the function can simply call its <code>WriteLine</code> method with a character vector argument. This argument can contain any valid HTML string and defines the appearance of the <code>SimpleCtl</code> control.</p>
-<p>Using the <code>:Signature</code> statement, the <code>Render</code> function is defined to have the same syntax as the method it overrides, i.e. it does not return a result  <code>void</code> and takes a single parameter of type <code>HtmlTextWriter</code>. Note that to successfully replace the base class method, the <code>Render</code> function must have exactly this <em>:Signature</em>.</p>
+<p>Using the <code>:Signature</code> statement, the <code>Render</code> function is defined to have the same syntax as the method it overrides, that is, it does not return a result  <code>void</code> and takes a single parameter of type <code>HtmlTextWriter</code>. Note that to successfully replace the base class method, the <code>Render</code> function must have exactly this <em>:Signature</em>.</p>
 <h2 id="using-simplectl">Using SimpleCtl</h2>
-<p>Our <code>SimpleCtl</code> control may now be included in any .NET Web Page from which <code>temp.dll</code> is accessible. The file <code>samples\asp.net\temp\Simple.aspx</code> is simply an example. The fact that this control is written in Dyalog APL is immaterial.
+<p>Our <code>SimpleCtl</code> control may now be included in any .NET Web Page from which <code>temp.dll</code> is accessible. The file <code>samples\asp.net\temp\Simple.aspx</code> is simply an example. The fact that this control is written in Dyalog is immaterial.
 </p><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="err">%</span><span class="na">@</span><span class="w"> </span><span class="nv">Register</span><span class="w"> </span><span class="nv">TagPrefix</span><span class="o">=</span><span class="s2">"Dyalog"</span>
 <span class="w">             </span><span class="nv">Namespace</span><span class="o">=</span><span class="s2">"DyalogSamples"</span><span class="w"> </span><span class="nv">Assembly</span><span class="o">=</span><span class="s2">"temp"</span><span class="w"> </span><span class="err">%</span><span class="o">&gt;</span>
 

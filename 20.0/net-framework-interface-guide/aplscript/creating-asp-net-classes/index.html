@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64112,7 +64112,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71420,7 +71420,7 @@
 
 <h1> Creating ASP.NET Classes with APLScript</h1>
 
-<p>As mentioned previously, the original purpose of APLScript was to provide the ability to write ASP.NET Web Pages and Web Services in Dyalog APL. Both these applications are based upon script files.</p>
+<p>As mentioned previously, the original purpose of APLScript was to provide the ability to write ASP.NET Web Pages and Web Services in Dyalog. Both these applications are based upon script files.</p>
 <h2 id="web-page-layout">Web Page Layout</h2>
 <p>An ASP.NET Web Page typically consists of a mixture of HTML and code written in a scripting language. The script code is separated from the HTML by being embedded within <script> and </script> tags and normally appears in the </p>  section of the page. Only one block of script is allowed in a page. The script block normally consists of a collection of functions, which are invoked by some event on the page, or on an element of the page.
 <p><code>APLScript</code> code starts with a statement:
@@ -71448,9 +71448,9 @@
 <p>The first time ASP.NET processes a script file, it first performs a compilation process whose output is a .NET assembly. ASP.NET then calls the code in this assembly to generate the HTML (for a Web Page) or to run a method (for a Web Service).</p>
 <p>ASP.NET associates the compiled assembly with the script file, and only recompiles it if/when it has changed.</p>
 <p>ASP.NET does not itself compile a script; it delegates this task to a specialised compiler that is associated with the language declared in the script. This association is made either in the application's web.config file or in the global <code>machine.config</code> file. Dyalog Installs a default web.config file which includes these settings in the <code>samples\asp.net</code> folder.</p>
-<p>The <code>APLScript</code> compiler is itself written in Dyalog APL.</p>
+<p>The <code>APLScript</code> compiler is itself written in Dyalog.</p>
 <p>Although the compilation process takes some time, it is typically only performed once, so the performance of an <code>APLScript</code> Web Service or Web Page is not compromised. Once it has been compiled, ASP.NET redirects all subsequent requests for an <code>APLScript</code> to its compiled assembly.</p>
-<p>Please note that the use of the word <em>compile</em> in this process does not imply that your APL code is actually compiled into Microsoft Intermediate Language (MSIL). Although the process does in fact generate <em>some</em> MSIL, your APL code will still be interpreted by the Dyalog APL DLL engine at run-time. The word <em>compile</em> is used only to be consistent with the messages displayed by ASP.NET when it first processes the script.</p>
+<p>Please note that the use of the word <em>compile</em> in this process does not imply that your APL code is actually compiled into Microsoft Intermediate Language (MSIL). Although the process does in fact generate <em>some</em> MSIL, your APL code will still be interpreted by the Dyalog DLL engine at run-time. The word <em>compile</em> is used only to be consistent with the messages displayed by ASP.NET when it first processes the script.</p>
 
 
 

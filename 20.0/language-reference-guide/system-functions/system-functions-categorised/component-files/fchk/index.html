@@ -745,8 +745,6 @@
       
         
       
-        
-      
     
     
     
@@ -850,27 +848,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1384,7 +1361,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16946,6 +16923,8 @@
       
         
       
+        
+      
     
     
     
@@ -18739,6 +18718,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64108,7 +64108,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71377,7 +71377,7 @@
 <p>Options for <code>⎕FCHK</code> are specified using the Variant operator <code>⍠</code> or by the optional left argument <code>X</code>. The former is recommended but the older mechanism using the left argument is still supported.</p>
 <p>In either case, the default behaviour is as follows:</p>
 <ol>
-<li>If the file appears to have been cleanly untied previously, return <code>⍬</code>, i.e. report that the file is good.</li>
+<li>If the file appears to have been cleanly untied previously, return <code>⍬</code>, that is, report that the file is good.</li>
 <li>Otherwise, validate the file and return the appropriate result. If the file is corrupt, no attempt is made to repair it.</li>
 </ol>
 <p>The result <code>R</code> is a vector of the numbers of missing or damaged components. <code>R</code> may include non-positive numbers of "pseudo components" that indicate damage to parts of the file other than in specific components:</p>
@@ -71470,7 +71470,7 @@
 </ul>
 <p>Following a <em>check</em> of the file, a non-null result indicates that the file is damaged.</p>
 <p>Following a <em>repair</em> of the file, the result indicates those components that could not be recovered. Un-recovered components will give a <code>FILE COMPONENT DAMAGED</code> error if read but may be replaced without error.</p>
-<p>Repair can recover only check-summed components from the file, i.e. only those components that were written with the checksum option enabled (see <a href="../fprops/">"File Properties: "</a>).</p>
+<p>Repair can recover only check-summed components from the file, that is, only those components that were written with the checksum option enabled (see <a href="../fprops/">"File Properties: "</a>).</p>
 <p>Following an operating system crash, repair may result in one or more individual components being rolled back to a previous version or not recovered at all, unless Journaling levels 2 or 3 were also set when these components were written.</p>
 
 

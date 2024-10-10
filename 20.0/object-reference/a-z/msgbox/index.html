@@ -740,8 +740,6 @@
       
         
       
-        
-      
     
     
     
@@ -845,27 +843,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1379,7 +1356,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16941,6 +16918,8 @@
       
         
       
+        
+      
     
     
     
@@ -18734,6 +18713,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64103,7 +64103,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71399,7 +71399,7 @@
 </tr>
 </tbody>
 </table>
-<p>The <a href="../../properties/default/">Default</a> property may be used to determine which of the buttons is the "default" button, i.e. the one which initially has the focus and is "selected" when the user presses the Enter key. It has the value 1, 2 or 3. If <a href="../../properties/default/">Default</a> is not specified, the first button is the "default" button. Note that if the user switches focus to another button and presses Enter, this action selects the button with the focus.</p>
+<p>The <a href="../../properties/default/">Default</a> property may be used to determine which of the buttons is the "default" button, that is, the one which initially has the focus and is "selected" when the user presses the Enter key. It has the value 1, 2 or 3. If <a href="../../properties/default/">Default</a> is not specified, the first button is the "default" button. Note that if the user switches focus to another button and presses Enter, this action selects the button with the focus.</p>
 <p>Like a pop-up (floating) <a href="../menu/">Menu</a>, the MsgBox object is unusual in that it is strictly modal. It is created by <a href="../../../language-reference-guide/system-functions/wc"><code>⎕WC</code></a> in the normal way, but at that stage is invisible and inactive. It is activated ONLY when <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> is called with the name of the MsgBox as the argument. When this is done, the MsgBox object pops up and is activated. Because there is no other object specified in the argument to <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, all other objects are de-activated. The only thing that the user can do (within the APL application) is to press one of the buttons in the MsgBox. When this happens, the MsgBox automatically pops down, the callback function (if any) is fired, and then <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> terminates.</p>
 <p>Notice that the position and size of the MsgBox are determined by Windows and are fixed, although the MsgBox may be moved by the user after it has been displayed.</p>
 <p>The MsgBox object generates one of three events; <a href="../../methodorevents/msgbtn1/">MsgBtn1</a> (61), <a href="../../methodorevents/msgbtn2/">MsgBtn2</a> (62), or <a href="../../methodorevents/msgbtn3/">MsgBtn3</a> (63) depending upon which button is pressed.

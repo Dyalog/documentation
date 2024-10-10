@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64112,7 +64112,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71627,7 +71627,7 @@
 <span class="w">                            </span><span class="nv">Int32</span><span class="w"> </span><span class="nv">day</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="specifying-overloads-and-casts">Specifying Overloads and Casts</h2>
-<p>If a .NET function is overloaded in terms of the types of arguments it accepts, Dyalog APL chooses which overload to call depending upon the data types of the arguments passed to it. For example, if a .NET function <code>foo()</code> is declared to take a single argument either of type <code>int</code> or of type <code>double</code> APL would call the first version if you called it with an integer value and the second version if you called it with a non-integer value.</p>
+<p>If a .NET function is overloaded in terms of the types of arguments it accepts, Dyalog chooses which overload to call depending upon the data types of the arguments passed to it. For example, if a .NET function <code>foo()</code> is declared to take a single argument either of type <code>int</code> or of type <code>double</code> APL would call the first version if you called it with an integer value and the second version if you called it with a non-integer value.</p>
 <p>In some circumstances it may be desirable to override this mechanism and explicitly specify which overload to use.</p>
 <p>A second requirement is to be able to specify to what .NET types APL should coerce arrays before calling a .NET function. For example, if a parameter to a .NET function is declared as type <code>System.Object</code>, it might be necessary to force the APL argument to be cast to a particular  <em>type</em> of <code>Object</code> before the function is called.</p>
 <p>Both these requirements are met by calling the function via the Variant operator <code>⍠</code>. There are two options, <strong>OverloadTypes</strong> (the Principle Option) and <strong>CastToTypes</strong>. Each option takes an array of refs to .NET types, the same length as the number of parameters to the function.</p>
@@ -71658,7 +71658,7 @@
 </code></pre></div>
 <p>Note that in the niladic case, an enclosed empty vector is used to represent a null reference to a .NET type.</p>
 <h2 id="casttotypes-example">CastToTypes Example</h2>
-<p>The .NET function <code>Array.SetValue()</code> sets the value of a specified element (or elements) of an array. The first argument, the new value, is declared as <code>System.Object</code>, but the value supplied must correspond to the type of the <code>Array</code> in question. APL has no means to know what this is and will therefore pass the value <em>as is</em>, i.e. in whatever internal format it happens to be at the time. For example:
+<p>The .NET function <code>Array.SetValue()</code> sets the value of a specified element (or elements) of an array. The first argument, the new value, is declared as <code>System.Object</code>, but the value supplied must correspond to the type of the <code>Array</code> in question. APL has no means to know what this is and will therefore pass the value <em>as is</em>, that is, in whatever internal format it happens to be at the time. For example:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
 
 <span class="w">      </span><span class="c1">⍝ create a Boolean  array with 2 elements</span>

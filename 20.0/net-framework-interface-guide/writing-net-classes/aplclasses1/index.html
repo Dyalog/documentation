@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64112,7 +64112,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71407,10 +71407,10 @@
 </code></pre></div>
 <p>that is: The type of the result returned by the function - followed by arrow - if any, the exported name (it can be different from the APL function name but it must be provided), and, if any arguments are to be supplied, their types and optional names, each type-name pair separated from the next by a comma. In the example above the function returns an array of 32-bit integers and takes a single integer as its argument. For further details, see <a href="../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/signature">Signature Statement</a>.</p>
 <p>Note that, when the class is fixed, APL will try to find the .NET data types you have specified for the result and for the parameters. If one or more of the data types are not recognised as available .NET Types, you will be informed in the status window and APL will refuse to fix the class. If you see such a warning you have either entered an incorrect data type name, or you have not set <code>:Using</code> correctly, or some other syntax problem has been detected (for example the function is missing a terminating <code>∇</code>. In the previous example, the only data type used is <code>System.Int32</code>. Since we have set <code>:Using System,</code> the name <code>Int32</code> is found in the right place and all is well.</p>
-<p>It should be noted that in the previous release of Dyalog APL the statements :<code>Returns</code> and :<code>ParameterList</code> were used instead of :<code>Signature</code>. They are still accepted for backwards compatibility but are considered deprecated. Their syntax will not be documented here but a list can be found in Appendix A.</p>
+<p>It should be noted that in the previous release of Dyalog the statements :<code>Returns</code> and :<code>ParameterList</code> were used instead of :<code>Signature</code>. They are still accepted for backwards compatibility but are considered deprecated. Their syntax will not be documented here but a list can be found in Appendix A.</p>
 <p>Now you are ready to create the assembly. This is done by selecting <em>Export…</em> from the Session <em>File</em> menu. This displays the following dialog box.</p>
 <p><figure id="_figure-1"><img alt="aplclasses1_1" src="../../img/aplclasses1-1.png"><figcaption>Figure 1: aplclasses1_1</figcaption></figure></p>
-<p>This gives you the opportunity to change the name or path of the assembly.  The <em>Runtime application</em> checkbox allows you to choose to which if the two versions of the Dyalog APL dynamic link library the assembly will be bound. In this tutorial we will use the Development version. The <em>Isolation Mode</em> Combo box allows you to choose which Isolation Mode you require.</p>
+<p>This gives you the opportunity to change the name or path of the assembly.  The <em>Runtime application</em> checkbox allows you to choose to which if the two versions of the Dyalog dynamic link library the assembly will be bound. In this tutorial we will use the Development version. The <em>Isolation Mode</em> Combo box allows you to choose which Isolation Mode you require.</p>
 <ul>
 <li>Browse to the <code>Framework\bin</code> sub-diectory.</li>
 <li>Clear the <em>Runtime application</em> checkbox</li>

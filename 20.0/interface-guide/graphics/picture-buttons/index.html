@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64112,7 +64112,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71421,7 +71421,7 @@
 <p>Note that if you use the Picture property on Radio or Check buttons, the buttons assume pushbutton appearance although their radio/check behaviour is unaffected.</p>
 <h2 id="using-the-btnpix-property">Using the BtnPix Property</h2>
 <p>You can obtain <strong>complete</strong> control over the appearance of a Button by using the BtnPix property; however this entails more work on your part.</p>
-<p>BtnPix allows you to associate three bitmaps with a Button, i.e.</p>
+<p>BtnPix allows you to associate three bitmaps with a Button, that is:</p>
 <ul>
 <li>one for when the Button is in its normal state</li>
 <li>one for when it is pressed/selected</li>
@@ -71430,7 +71430,7 @@
 <p>For example, if you have created three Bitmap objects called <code>UP</code>, <code>DOWN</code> and <code>DEAD</code>, you define the Button as follows:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F.B'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Button'</span><span class="w"> </span><span class="p">(</span><span class="s1">'BtnPix'</span><span class="w"> </span><span class="nv">UP</span><span class="w"> </span><span class="nv">DOWN</span><span class="w"> </span><span class="nv">DEAD</span><span class="p">)</span>
 </code></pre></div>
-<p>APL subsequently displays one of the three Bitmap objects according to the state of the Button; i.e. <code>UP</code> for its normal state (State 0), <code>DOWN</code> for its pressed/selected state (State 1) or <code>DEAD</code> when it is inactive (Active 0).</p>
+<p>APL subsequently displays one of the three Bitmap objects according to the state of the Button; that is, <code>UP</code> for its normal state (State 0), <code>DOWN</code> for its pressed/selected state (State 1) or <code>DEAD</code> when it is inactive (Active 0).</p>
 <p>The BtnPix property requires that you use Bitmap objects; it doesn't work for Icons. This is because icons are normally at least partly <strong>transparent</strong>. However, it is very easy to convert an icon file to a Bitmap object. First you create an Icon object from the icon (.ICO) file. Next you read the icon's pattern definition (Bits property) and colour map (CMap property) into the workspace. Then finally, you create a Bitmap from these two arrays.</p>
 <p>The following example illustrates how you can make a Button from  icons supplied with Windows.</p>
 <p>Load an icon:

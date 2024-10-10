@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16947,6 +16924,8 @@
       
         
       
+        
+      
     
     
     
@@ -18740,6 +18719,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64127,7 +64127,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71333,12 +71333,13 @@
 
 <p><code>Y</code> must be a simple character scalar, or vector which is taken to be the name of a defined function or operator in the active workspace. <code>⎕LOCK</code> does not apply to dfns or derived functions.</p>
 <p>The active referent to the name in the workspace is locked.  Stop, trace and monitor settings, established by the <code>⎕STOP</code>, <code>⎕TRACE</code> and <code>⎕MONITOR</code> functions, are cancelled.</p>
-<p>The optional left argument <code>X</code> specifies to what extent the function code is hidden. <code>X</code> may be 1, 2 or 3 (the default) with the following meaning:</p>
-<ol>
-<li>The object may not be displayed and you may not obtain its character form using <code>⎕CR</code>, <code>⎕VR</code> or <code>⎕NR</code>.</li>
-<li>If an error or exception occurs that would normally cause a suspension of execution within the locked function or operator, the state indicator is cut back to the statement that called it and the suspension is triggered there instead.</li>
-<li>Both 1 and 2 apply. You can neither display the locked object nor suspend execution within it.</li>
-</ol>
+<p>The optional left argument <code>X</code> specifies to what extent the function code is hidden. <code>X</code> can be <code>0</code>, <code>1</code>, <code>2</code>, or <code>3</code> (the default) with the following meaning:</p>
+<ul>
+<li><code>0</code>: The argument is well-formed, but could not be locked (for example, it is a dfn).</li>
+<li><code>1</code>: The object may not be displayed and you may not obtain its character form using <code>⎕CR</code>, <code>⎕VR</code> or <code>⎕NR</code>.</li>
+<li><code>2</code>: If an error or exception occurs that would normally cause a suspension of execution within the locked function or operator, the state indicator is cut back to the statement that called it and the suspension is triggered there instead.</li>
+<li><code>3</code>: Both 1 and 2 apply. You can neither display the locked object nor suspend execution within it.</li>
+</ul>
 <p>Locks are additive, so that
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕LOCK</span><span class="s1">'FOO'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nf">⎕LOCK</span><span class="s1">'FOO'</span><span class="w">     </span>
 </code></pre></div>

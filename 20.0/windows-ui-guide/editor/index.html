@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64114,7 +64114,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -72102,7 +72102,7 @@
 <p>In addition, there is a general <em>point-and-edit</em> facility which works in edit and trace windows too. Simply position the input cursor over a name and double-click the left mouse button. Alternatively, you can press Shift+Enter or select <em>Edit</em> from the <em>File</em> menu. The name can appear in the Session, in an Edit window, or in a Trace window; the effect is the same. Note that, in the Session, typing a name and pressing Shift+Enter is actually a special case of <em>point-and-edit</em>. Note also that a <em>naked edit</em> can be invoked by double-clicking the left mouse button in the empty input line.</p>
 <p>The type of a new object defaults to function/operator unless the object is shadowed, in which case it defaults to a variable (vector of character vectors). You can however specify the type of a new object explicitly using <code>)ED</code> or <code>⎕ED</code>. For example, typing "<code>)ED ∊LIST -MAT</code>" in a <code>CLEAR WS</code> would create Edit windows for a vector of character vectors named <code>LIST</code> and a character matrix called <code>MAT</code>. See <code>)ED</code> or <code>⎕ED</code> for details.</p>
 <p>If the name is not already being edited, it is assigned a new edit window. If you edit a name which is already being edited, the system <em>focuses</em> on the existing edit window rather than opening a new one. Edit windows are displayed using the colour combination associated with the type of the object being edited.</p>
-<p>If the name is followed by a line-number in square brackets, e.g. <code>MyFn[1000]</code>, the Editor will position the cursor on the specified line. This applies to alll methods of invoking the Editor, except <code>⎕ED</code>. There must not be a space between the last character of the name and the "[".</p>
+<p>If the name is followed by a line-number in square brackets, for example, <code>MyFn[1000]</code>, the Editor will position the cursor on the specified line. This applies to alll methods of invoking the Editor, except <code>⎕ED</code>. There must not be a space between the last character of the name and the "[".</p>
 <h2 id="window-management-standard">Window Management (Standard)</h2>
 <p>Unless <em>Classic Dyalog mode</em> is selected (<em>Options/Configure/Trace/Edit</em>), the Editor is a Multiple Document Interface (MDI) window that may be a stand-alone window, or be docked in the Session window. Each of the objects being edited is displayed in a separate sub-window. Individual edit windows are managed using standard MDI facilities.</p>
 <p><figure id="_figure-2"><img alt="editor 2" src="../img/editor-2.png"><figcaption>Figure 2: editor 2</figcaption></figure></p>
@@ -72133,7 +72133,7 @@
 <h3 id="closing-an-edit-window">Closing an edit window</h3>
 <p>Closing an edit window from its System Menu has the same effect as choosing Exit from the <em>File</em> Menu; namely that it fixes the object in the workspace and then closes the edit window.</p>
 <h3 id="minimising-an-edit-window">Minimising an edit window</h3>
-<p>Minimising an edit window causes it to be displayed as a Dyalog APL <em>Edit</em> icon, with the name of the object underneath. The edit window can be restored in the normal way, or by an attempt to re-edit the same name.</p>
+<p>Minimising an edit window causes it to be displayed as a Dyalog <em>Edit</em> icon, with the name of the object underneath. The edit window can be restored in the normal way, or by an attempt to re-edit the same name.</p>
 <h2 id="selecting-text">Selecting Text</h2>
 <p>You may select text in an Editor window by clicking the left or right mouse button over any character, dragging out a highlighed area, and then releasing the mouse button. When using the left button, moving up or down one line extends the selection from the beginning of that line, so the selection may be ragged. The right button selects a rectangularr box.</p>
 <h3 id="editor-toolbar">Editor ToolBar</h3>
@@ -72563,7 +72563,7 @@
 <p>If the keyboard is in <em>Insert</em> mode, pressing Enter at the end of a line opens you a new blank line under the current one and positions the cursor there ready for input. You can also open a new blank line by pressing Ctrl+Shift+Insert (OP).</p>
 <p>If the cursor is at the end of the last line in the function, pressing Enter adds another line even if the keyboard is in Replace mode.</p>
 <h6 id="indenting-text">Indenting Text</h6>
-<p>Dyalog APL allows you to insert leading spaces in lines of a function and (unless the <strong>AutoFormat</strong> parameter is set) preserves these spaces between editing sessions. Embedded spaces are however discarded. You can enter spaces using the space bar or the Tab key. Pressing Tab inserts spaces up to the next tab stop corresponding to the value of the <strong>TabStops</strong> parameter. If the <strong>AutoIndent</strong> parameter is set, new lines are automatically indented the same amount as the preceding line.</p>
+<p>Dyalog allows you to insert leading spaces in lines of a function and (unless the <strong>AutoFormat</strong> parameter is set) preserves these spaces between editing sessions. Embedded spaces are however discarded. You can enter spaces using the space bar or the Tab key. Pressing Tab inserts spaces up to the next tab stop corresponding to the value of the <strong>TabStops</strong> parameter. If the <strong>AutoIndent</strong> parameter is set, new lines are automatically indented the same amount as the preceding line.</p>
 <h6 id="reformatting">Reformatting</h6>
 <p>The RD command (which by default is mapped to Keypad-Slash) reformats a function according to your <strong>AutoFormat</strong> and <strong>TabStops</strong> settings. See <a href="configuration-dialog.md"> Trace/Edit Tab</a>.</p>
 <h6 id="deleting-lines">Deleting Lines</h6>
@@ -72599,7 +72599,7 @@
 <h6 id="aligning-comments">Aligning Comments</h6>
 <p>When you press the <ac> key, or select Align Comments in the Editor's context menu, the alignment of the comments in every line in the function will be changed so that the left-most comment (Lamp) symbol is in the same column as the cursor, except that:</ac></p>
 <ul>
-<li>Comment symbols that are preceded only by white space, i.e. comments in lines that contain no code, are ignored and are not adjusted in any way.</li>
+<li>Comment symbols that are preceded only by white space, that is, comments in lines that contain no code, are ignored and are not adjusted in any way.</li>
 <li>Comment symbols that lie between the first column and the first tab stop will remain in or be moved to the first column. For information on setting tab stops, see </li>
 </ul>
 <p>Installation &amp; Configuration Guide:</p>

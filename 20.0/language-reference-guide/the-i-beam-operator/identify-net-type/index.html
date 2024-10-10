@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16947,6 +16924,8 @@
       
         
       
+        
+      
     
     
     
@@ -18740,6 +18719,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64119,7 +64119,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71324,7 +71324,7 @@
 <h1 class="heading"><span class="name">Identify .NET Type</span> <span class="command">R←2017⌶Y</span></h1>
 
 <p><strong>.NET Framework only</strong></p>
-<p>Returns the .NET Type of a named .NET class that is loaded in the current AppDomain. Note that System.Type.GetType requires the fully qualified name, i.e. prefixed by the assembly name, whereas (<code>2017⌶</code>) does not.</p>
+<p>Returns the .NET Type of a named .NET class that is loaded in the current AppDomain. Note that System.Type.GetType requires the fully qualified name, that is, prefixed by the assembly name, whereas (<code>2017⌶</code>) does not.</p>
 <p><code>Y</code> is a character string containing the name of a .NET object. Unless the fully qualified name is given, the namespaces in the current AppDomain are searched in the order they are specified by  <code>⎕USING</code> or <code>:Using</code>.</p>
 <p>If the object is identified in the current AppDomain, the result <code>R</code> is its Type. If not, the function generates <code>DOMAIN ERROR</code>.</p>
 <h2 class="example">Example</h2>

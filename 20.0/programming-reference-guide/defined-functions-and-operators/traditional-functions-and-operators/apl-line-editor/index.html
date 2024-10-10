@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -17105,6 +17082,8 @@
       
         
       
+        
+      
     
     
     
@@ -18898,6 +18877,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64267,7 +64267,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71617,7 +71617,7 @@
 <span class="nv">defn</span><span class="w"> </span><span class="nv">error</span>
 </code></pre></div>
 <h2 id="listing-defined-operation">Listing Defined Operation</h2>
-<p>The <code>∇</code> symbol followed by the name of a defined operation and then by a closing <code>∇</code>, causes the display of the named operation.  Omitting the function name causes the suspended operation (i.e. the one at the top of the state indicator) to be displayed and opened for editing.</p>
+<p>The <code>∇</code> symbol followed by the name of a defined operation and then by a closing <code>∇</code>, causes the display of the named operation.  Omitting the function name causes the suspended operation (that is, the one at the top of the state indicator) to be displayed and opened for editing.</p>
 <h4 class="example">Example</h4>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="nv">FOO</span><span class="bp">∇</span>
 <span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">FOO</span>
@@ -71634,7 +71634,7 @@
 </code></pre></div>
 <h2 id="editing-active-defined-operation">Editing Active Defined Operation</h2>
 <p>Definition mode is entered by typing <code>∇</code> followed optionally by a name and editing directive.</p>
-<p>The <code>∇</code> symbol on its own causes the suspended operation (i.e.  the one at the top of the state indicator) to be displayed.  The editor then prompts for a statement or editing directive with a line-number one greater than the highest line-number in the function.  If the state indicator is empty, the system reports <code>defn error</code> and definition mode is not entered.</p>
+<p>The <code>∇</code> symbol on its own causes the suspended operation (that is,  the one at the top of the state indicator) to be displayed.  The editor then prompts for a statement or editing directive with a line-number one greater than the highest line-number in the function.  If the state indicator is empty, the system reports <code>defn error</code> and definition mode is not entered.</p>
 <p>The <code>∇</code> symbol followed by the name of an active defined operation causes the display of the named operation.  The editor then prompts for input as described above.  If the name given is not the name of an active referent in the workspace, the opening request is taken to be the creation of a new operation as described in paragraph 1.  If the name refers to a pendent operation, the editor issues the message <code>warning pendent operation</code> prior to displaying the operation.  If the name refers to a locked operation, the system reports defn error and definition mode is not entered.</p>
 <p>The <code>∇</code> symbol followed by the name of an active defined operation and an editing directive causes the operation to be opened for editing and the editing directive actioned.  If the editing directive is invalid, it is ignored by the editor which then prompts with a line-number one greater than the highest line-number in the operation.  If the name refers to a pendent operation, the editor issues the message  <code>warning pendent operation</code> prior to actioning the editing directive.  If the name refers to a locked operation, the system reports <code>defn error</code> and definition mode is not entered.</p>
 <p>On successful completion of editing, the defined operation becomes the active definition in the workspace which may replace an existing version of the function.  Monitors, and stop and trace vectors are removed.</p>

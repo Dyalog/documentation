@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16945,6 +16922,8 @@
       
         
       
+        
+      
     
     
     
@@ -18738,6 +18717,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64125,7 +64125,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71338,7 +71338,7 @@
 </tbody>
 </table>
 <p><strong>Description</strong></p>
-<p>This property identifies which cells in a <a href="../../objects/grid/">Grid</a> are <em>set</em> (i.e. have values) and which are empty. Its purpose is to allow large numeric matrices containing blank cells to be displayed and edited efficiently.</p>
+<p>This property identifies which cells in a <a href="../../objects/grid/">Grid</a> are <em>set</em> (that is, have values) and which are empty. Its purpose is to allow large numeric matrices containing blank cells to be displayed and edited efficiently.</p>
 <p>The CellSet property is a Boolean matrix with the same shape as the <a href="../values/">Values</a> property. If an element of CellSet is 0, the cell is defined to be empty. Empty cells are displayed as blank and the cell contents by the <a href="../values/">Values</a> property are ignored.</p>
 <p>A more direct way to handle empty cells is to set  the corresponding elements of <a href="../values/">Values</a> to empty vectors. However, if <a href="../values/">Values</a> is otherwise entirely numeric, this makes the array nested when it would otherwise be simple. For large numeric matrices, this penalty can be severe. For example, a 100x100 array of 2-byte integer values occupies about 20Kb of workspace. Setting one or more elements of the array to an empty vector increases its size to 200Kb. However, because it is Boolean, the size of the CellSet property for a 100x100 array is only 1.27Kb and represents a significant space saving.</p>
 <p>Note that if the <a href="../values/">Values</a> property contains text and is therefore nested anyway, the CellSet property is not helpful in conserving workspace, although it may still be useful to separate empty cells from real data.</p>

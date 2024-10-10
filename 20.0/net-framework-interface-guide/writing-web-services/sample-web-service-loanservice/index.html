@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64112,7 +64112,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71437,7 +71437,7 @@
 </code></pre></div>
 <p>The <code>:Class</code> statement starts the definition of a new class and specifies its name. The <code>:EndClass</code> statement terminates it definition.</p>
 <p>The three <code>:Field</code> declaration statements specify the names and data types of three public fields. The <code>Public</code> attributes are necessary to make the fields visible to methods within the <code>LoanService</code> class as a whole, as well as to external clients.</p>
-<p>The <code>Periods</code> field is defined to be an array of integers; the <code>InterestRates</code> field an array of <code>Double</code>. Both these arrays are 1-dimensional, i.e. vectors. These will contain the numbers of years, and the different interest rates, to which the repayments matrix applies.</p>
+<p>The <code>Periods</code> field is defined to be an array of integers; the <code>InterestRates</code> field an array of <code>Double</code>. Both these arrays are 1-dimensional, that is, vectors. These will contain the numbers of years, and the different interest rates, to which the repayments matrix applies.</p>
 <p>Notice however that <code>Payments</code> is also defined to be 1-dimensional when in fact it is, more naturally, a 2-dimesional matrix. The reason for this is that, currently, Web Services do not support multi-dimensional arrays. This is a .NET restriction and not a Dyalog restriction.</p>
 <p><code>CalcPayments[13]</code> gets a new instance of the <code>LoanResult</code> class by doing <code>⎕New LoanResult</code>. It then assigns values to each of the three fields in lines <code>[14]</code>, <code>[15]</code> and <code>[18]</code>.</p>
 <h2 id="testing-loanservice-from-a-browser">Testing LoanService from a Browser</h2>

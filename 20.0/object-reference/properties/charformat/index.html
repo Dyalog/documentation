@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16945,6 +16922,8 @@
       
         
       
+        
+      
     
     
     
@@ -18738,6 +18717,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64125,7 +64125,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71403,7 +71403,7 @@
 <p>If you just want to set a single text attribute (element 1) you may specify a simple vector, for example <code>(⎕WS 'CharFormat' 'Protected')</code> is valid and will add the protected text attribute to the current set of text attributes.</p>
 <p>To unset a text attribute (element 1) you must insert the tilde (~) character before the name of the attribute. For example, the expression <code>(⎕WS 'CharFormat' '~Bold')</code> will turn the bold text attribute off.</p>
 <p>You need only specify the number of elements required, but you must insert proper values for the elements you wish to remain unaltered. However, you may use <code>''</code> in the first element to leave the text attributes unchanged.</p>
-<p>If there is no text selected, CharFormat specifies the <em>default</em> character format, i.e. the format that will be used to draw the next (and subsequent) characters that the user enters. If there <em>is</em> text selected it specifies the format of the selected block of text. If the format is not strictly homogeneous, <code>⎕WG</code> may report the format of the first character in the selected block, or, if the block contains characters which use completely different fonts, the result of <code>(⎕WG 'CharFormat')</code> will be empty.</p>
+<p>If there is no text selected, CharFormat specifies the <em>default</em> character format, that is, the format that will be used to draw the next (and subsequent) characters that the user enters. If there <em>is</em> text selected it specifies the format of the selected block of text. If the format is not strictly homogeneous, <code>⎕WG</code> may report the format of the first character in the selected block, or, if the block contains characters which use completely different fonts, the result of <code>(⎕WG 'CharFormat')</code> will be empty.</p>
 <p><code>(⎕WS 'CharFormat' ...)</code> will set the format of the currently selected block of text. To set the format of an arbitrary block of text you must select it first using <code>(⎕WS 'SelText' ...)</code>.</p>
 
 

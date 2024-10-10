@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16952,6 +16929,8 @@
       
         
       
+        
+      
     
     
     
@@ -18745,6 +18724,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64300,7 +64300,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71583,7 +71583,7 @@
 <h2 id="fields">FIELDS</h2>
 <p>If an element of <code>Y</code> is an integer scalar, it specifies a field as the index of a row in <code>⎕SM</code> (if <code>⎕SM</code> is a vector it is regarded as having 1 row).</p>
 <p>If an element of <code>Y</code> is an integer vector, it specifies a sub-field.  The first element in <code>Y</code> specifies the top-level field as above.  The next element is used to index a row in the form defined by <code>⊃⎕SM[Y[1];1]</code> and so forth.</p>
-<p>If an element of <code>Y</code> is a character scalar or vector, it specifies the name of a top-level GUI object with which the user may also interact.  Such an object must be a "top-level" object, i.e. the <code>Root</code> object ('<code>.'</code>) or a <code>Form</code> or pop-up <code>Menu</code>.  This feature is implemented ONLY in versions of Dyalog APL with GUI support.</p>
+<p>If an element of <code>Y</code> is a character scalar or vector, it specifies the name of a top-level GUI object with which the user may also interact.  Such an object must be a "top-level" object, that is, the <code>Root</code> object ('<code>.'</code>) or a <code>Form</code> or pop-up <code>Menu</code>.  This feature is implemented ONLY in versions of Dyalog APL with GUI support.</p>
 <h2 id="exit_keys">EXIT_KEYS</h2>
 <p>Each element of <code>EXIT_KEYS</code> is a 2-character code from the Input Translate Table for the keyboard.  If the user presses one of these keys, <code>⎕SR</code> will terminate and return a result.</p>
 <p>If <code>EXIT_KEYS</code> is not specified, it defaults to:

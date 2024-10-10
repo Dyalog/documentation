@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16945,6 +16922,8 @@
       
         
       
+        
+      
     
     
     
@@ -18738,6 +18717,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64107,7 +64107,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71325,13 +71325,13 @@
 
 <p>Although shared variables have been implemented as closely to the APL standard as is possible, certain restrictions are imposed by the nature of DDE itself.</p>
 <p>The server cannot make an offer to a specific client. Instead, it must broadcast a "general" offer, which could be accepted by any client. Indeed neither the client nor the server can specifically identify the other task.</p>
-<p>Dyalog APL supports Excel "Fast Table Format" for communications with Excel (and with any other application that supports this format). This imposes the following restrictions :</p>
+<p>Dyalog supports Excel "Fast Table Format" for communications with Microsoft Excel (and with any other application that supports this format). This imposes the following restrictions :</p>
 <ul>
 <li>The maximum number of numbers that you can send to Excel is 8191. Any attempt to send more will result in a LENGTH ERROR. This is because APL currently tries to send all the data in a single block. Larger amounts of data can be received from Excel, because Excel will send several blocks if required. The restriction may be lifted in due course.</li>
 <li>The maximum length of a character vector (which represents a string within a cell) is 255.</li>
 </ul>
-<p>A client APL program can only use indexed assignment to change the value of a shared variable if it already knows the up-to-date value of the variable, i.e. if its <code>⎕SVS</code> is 0 0 1 1 or 1 0 1 0. An attempt to use indexed assignment on a variable whose <code>⎕SVS</code> is 0 1 0 1 will cause a NONCE error.</p>
-<p>Consider Excel as a server and APL as client with several warm links to an Excel spreadsheet e.g.:
+<p>A client APL program can only use indexed assignment to change the value of a shared variable if it already knows the up-to-date value of the variable, that is, if its <code>⎕SVS</code> is 0 0 1 1 or 1 0 1 0. An attempt to use indexed assignment on a variable whose <code>⎕SVS</code> is 0 1 0 1 will cause a NONCE error.</p>
+<p>Consider Excel as a server and APL as client with several warm links to an Excel spreadsheet. For example:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'DDE:EXCEL|SHEET1'</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'X R1C1'</span>
 <span class="w">      </span><span class="s1">'DDE:EXCEL|SHEET1'</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'Y R2C2'</span>
 <span class="w">      </span><span class="s1">'DDE:EXCEL|SHEET1'</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'Z R3C3'</span>

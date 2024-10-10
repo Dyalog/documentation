@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16952,6 +16929,8 @@
       
         
       
+        
+      
     
     
     
@@ -18745,6 +18724,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64972,7 +64972,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -72815,7 +72815,7 @@
 <p>The passed namespace exists over the lifetime of <code>⎕R</code> or <code>⎕S</code>; the function may therefore preserve state by creating variables in the namespace.</p>
 <p>The function may itself call <code>⎕R</code> or <code>⎕S</code>.</p>
 <p>There may be only one transformation function, regardless of the number of search patterns.</p>
-<p>The locations of the match within Block and subpatterns within Match are given as offsets rather than positions, i.e. the values are the number of characters preceding the data, and are not affected by the Index Origin.</p>
+<p>The locations of the match within Block and subpatterns within Match are given as offsets rather than positions, that is, the values are the number of characters preceding the data, and are not affected by the Index Origin.</p>
 <p>The value of <code>¯1</code> may appear in both the Offsets and Fields items (in corresponding positions). They indicate that the subpattern to which they refer did not appear in the match at all.</p>
 <h2 class="example">Example</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="kt">{}</span><span class="p">(</span><span class="s1">'(A)|(B)'</span><span class="nf">⎕R</span><span class="kt">{</span><span class="vg">⎕</span><span class="kd">←</span><span class="bp">⍵</span><span class="na">.</span><span class="p">(</span><span class="nv">Offsets</span><span class="w"> </span><span class="nv">Lengths</span><span class="p">)⋄</span><span class="s1">'x'</span><span class="kt">}</span><span class="p">)</span><span class="s1">'ABC'</span>
@@ -73080,7 +73080,7 @@
 </tr>
 </tbody>
 </table>
-<p>For compatibility with the OutEnc option, the above UTF formats may be qualified with -BOM (e.g. UTF-8-BOM) or -NOBOM. For input streams, the qualified and unqualified options are equivalent.</p>
+<p>For compatibility with the OutEnc option, the above UTF formats may be qualified with -BOM (for example, UTF-8-BOM) or -NOBOM. For input streams, the qualified and unqualified options are equivalent.</p>
 <h2 id="outenc-option">OutEnc Option</h2>
 <p>When the output is written to a stream, this option specifies how the data is to be encoded.  It is either:</p>
 <ul>
@@ -73135,7 +73135,7 @@
 </tr>
 </tbody>
 </table>
-<p>The above UTF formats may be qualified with -BOM (e.g. UTF-8-BOM) to specify that a Byte Order Mark should be written at the start of the stream or, -NOBOM that it should not. For files, this is ignored if the file already contains any data.  If the -BOM or -NOBOM suffix is omitted, UTF-8 defaults to UTF-8-NOBOM, while the other UTF formats default to -BOM.</p>
+<p>The above UTF formats may be qualified with -BOM (for example, UTF-8-BOM) to specify that a Byte Order Mark should be written at the start of the stream or, -NOBOM that it should not. For files, this is ignored if the file already contains any data.  If the -BOM or -NOBOM suffix is omitted, UTF-8 defaults to UTF-8-NOBOM, while the other UTF formats default to -BOM.</p>
 <h2 id="enc-option">Enc Option</h2>
 <p>This option sets both InEnc and OutEnc simultaneously, with the same given value. Any option value accepted by those options except Implied may be given.</p>
 <h2 id="resulttext-option">ResultText Option</h2>

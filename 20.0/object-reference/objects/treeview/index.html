@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16945,6 +16922,8 @@
       
         
       
+        
+      
     
     
     
@@ -18738,6 +18717,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64125,7 +64125,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71355,8 +71355,8 @@
 <p><a href="../../properties/imagelistobj/">ImageListObj</a> specifies the name of a single <a href="../imagelist/">ImageList</a> object that contains one or more bitmaps</p>
 <p><a href="../../properties/imageindex/">ImageIndex</a> and <a href="../../properties/selimageindex/">SelImageIndex</a> are <code>⎕IO</code> sensitive scalars, or vectors with the same length as the number of items in the object. The value in the ith element specifies the image for the ith item and is an index into the corresponding <a href="../imagelist/">ImageList</a> object. <a href="../../properties/imageindex/">ImageIndex</a> specifies the image displayed when an item is <em>not selected</em>, <a href="../../properties/selimageindex/">SelImageIndex</a> specifies the image displayed when an item is <em>selected</em>.</p>
 <p>If <a href="../../properties/imagelistobj/">ImageListObj</a> is specified, but ImageIndex is empty or not specified, the first bitmap in the <a href="../imagelist/">ImageList</a> is drawn alongside every item. If an element of <a href="../../properties/imageindex/">ImageIndex</a> or <a href="../../properties/selimageindex/">SelImageIndex</a> specifies a value that does not correspond to a bitmap in the <a href="../imagelist/">ImageList</a>, no picture is drawn.</p>
-<p>The structure of the items (i.e. the parent/child relationships of the items) is defined by the <a href="../../properties/depth/">Depth</a> property. This is either a scalar 0 (the default) which means that all items are <em>root</em> items, or it is a numeric vector of the same length as Items. Non-zero values in <a href="../../properties/depth/">Depth</a> indicate child items.</p>
-<p>The <a href="../../properties/haslines/">HasLines</a> property is 0, 1 or 2 and determines whether or not lines are drawn that link child items to their corresponding parent item. If <a href="../../properties/haslines/">HasLines</a> is 0, no lines are drawn. If <a href="../../properties/haslines/">HasLines</a> is 1, lines are drawn at all except the top level, i.e. the object does not link items at the root of the hierarchy. The default value for <a href="../../properties/haslines/">HasLines</a> is 2 which provides lines at all levels including the root.</p>
+<p>The structure of the items (that is, the parent/child relationships of the items) is defined by the <a href="../../properties/depth/">Depth</a> property. This is either a scalar 0 (the default) which means that all items are <em>root</em> items, or it is a numeric vector of the same length as Items. Non-zero values in <a href="../../properties/depth/">Depth</a> indicate child items.</p>
+<p>The <a href="../../properties/haslines/">HasLines</a> property is 0, 1 or 2 and determines whether or not lines are drawn that link child items to their corresponding parent item. If <a href="../../properties/haslines/">HasLines</a> is 0, no lines are drawn. If <a href="../../properties/haslines/">HasLines</a> is 1, lines are drawn at all except the top level, that is, the object does not link items at the root of the hierarchy. The default value for <a href="../../properties/haslines/">HasLines</a> is 2 which provides lines at all levels including the root.</p>
 <p>The <a href="../../properties/hasbuttons/">HasButtons</a> property determines whether or not the TreeView object has a button to the left side of each parent item. It is Boolean with a default value of 1. The user can click the button to expand or collapse the child items as an alternative to double-clicking the parent item. Note that by itself, setting <a href="../../properties/hasbuttons/">HasButtons</a> to 1 does not add buttons to items at the root of the hierarchy. To achieve this you must also set <a href="../../properties/haslines/">HasLines</a> to 2.</p>
 <p>The <a href="../../properties/checkboxes/">CheckBoxes</a> property specifies whether or not check boxes are displayed alongside items in a TreeView.</p>
 <p>The <a href="../../properties/fullrowselect/">FullRowSelect</a> property specifies whether just the item itself, or the entire row of the TreeView, is highlighted when an item is selected. <a href="../../properties/fullrowselect/">FullRowSelect</a> should not be used if <a href="../../properties/haslines/">HasLines</a> is 1 or 2</p>

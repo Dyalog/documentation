@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64248,7 +64248,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71560,7 +71560,7 @@
 <p>The session window is defined by an object called <code>⎕SE</code>. This is very similar to a Form object, but has certain special properties. The menu bar, tool bar and status bars on the session window are in fact MenuBar, ToolControl and StatusBar objects owned by <code>⎕SE</code>. All of the other components such as menu items and tool buttons are also standard GUI objects. You may use <code>⎕WC</code> to create new session objects and you may use <code>⎕WS</code> to change the properties of existing ones. <code>⎕WG</code> and <code>⎕WN</code> may also be used with <code>⎕SE</code> and its children.</p>
 <p>Components of the session that perform actions (MenuItem and Button objects) do so because their Event properties are defined to execute system operations or APL expressions. System operations comprise a pre-defined set of actions that can be performed by Dyalog APL/W. These are coded as keywords within square brackets. For example, the system operation <code>[WSClear]</code> produces a <code>clear ws</code>, after first displaying a dialog box for confirmation. You may customise your session by adding or deleting objects and by attaching system operations or APL expressions to them.</p>
 <p>Like any other object, <code>⎕SE</code> is a namespace that may contain functions and variables. Furthermore, <code>⎕SE</code> is independent of the active workspace and is unaffected by <code>)LOAD</code> and <code>)CLEAR</code>. It is therefore sensible to store commonly used utilities, particularly those utilities that are invoked by events on session objects, in <code>⎕SE</code> itself, rather than in each of your application workspaces.</p>
-<p>The possibility of configuring your APL session so extensively leads to the requirement to have different sessions for different purposes. To meet this need, sessions are stored in special files with a .DSE (Dyalog Session) extension. The default session (i.e. the one loaded when you start APL) is specified by the <strong>session_file</strong> parameter. You may customise this session and then save it over the default one or in a separate file. You can load a new session from file at any stage without affecting your active workspace.</p>
+<p>The possibility of configuring your APL session so extensively leads to the requirement to have different sessions for different purposes. To meet this need, sessions are stored in special files with a .DSE (Dyalog Session) extension. The default session (that is, the one loaded when you start APL) is specified by the <strong>session_file</strong> parameter. You may customise this session and then save it over the default one or in a separate file. You can load a new session from file at any stage without affecting your active workspace.</p>
 <h2 id="positioning-the-cursor">Positioning the Cursor</h2>
 <p>The cursor may be positioned within the current APL window by moving the mouse pointer to the desired location and then clicking the Left Button. The APL cursor will then move to the character under the pointer.</p>
 <h2 id="selection">Selection</h2>
@@ -71590,7 +71590,7 @@
 </ol>
 <p>If you drag-and-drop text within the Session window, the text is copied and not moved whether or not you use the Ctrl key.</p>
 <h2 id="interrupts">Interrupts</h2>
-<p>To generate an interrupt, click on the Dyalog APL icon in the Windows System Tray; then choose <em>Weak Interrupt</em> or <em>Strong Interrupt</em>. To close the menu, click <em>Cancel</em>. Alternatively, to generate a weak interrupt, press Ctrl+Break, or select <em>Interrupt</em> from the <em>Action</em> menu on the Session Window.</p>
+<p>To generate an interrupt, click on the Dyalog icon in the Windows System Tray; then choose <em>Weak Interrupt</em> or <em>Strong Interrupt</em>. To close the menu, click <em>Cancel</em>. Alternatively, to generate a weak interrupt, press Ctrl+Break, or select <em>Interrupt</em> from the <em>Action</em> menu on the Session Window.</p>
 
 
 

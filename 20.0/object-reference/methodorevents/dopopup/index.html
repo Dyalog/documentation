@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64226,7 +64226,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71467,7 +71467,7 @@
 <p><strong>Description</strong></p>
 <p>This event is triggered when the <a href="../../objects/htmlrenderer/">HTMLRenderer</a> client attempts to open a new window. This could be fired by an HTML <a> tag with the target attribute set to open a URL in a new window or by a JavaScript <code>window.open()</code> call. Note that this does not apply to JavaScript Popup Boxes.</a></p>
 <p>By default the HTMLRenderer ignores a request for a new window, but if  the DoPoup event, is enabled, it provides the information needed to process the request in the workspace.</p>
-<p>The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, or supplied as the right argument to your callback function, is a 4-element vector as follows:</p>
+<p>The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, or supplied as the right argument to your callback function, is a 5-element vector as follows:</p>
 <table>
 <tbody>
 <tr>
@@ -71489,6 +71489,11 @@
 <td><code>[4]</code></td>
 <td>Attributes</td>
 <td>requested window attributes (see below)</td>
+</tr>
+<tr>
+<td><code>[5]</code></td>
+<td>Framename</td>
+<td>character vector framename</td>
 </tr>
 </tbody>
 </table>

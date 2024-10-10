@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16959,6 +16936,8 @@
       
         
       
+        
+      
     
     
     
@@ -18752,6 +18731,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64121,7 +64121,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71330,7 +71330,7 @@
 <p>If an array contains a reference to a namespace or object that is not internal to the array itself, this presents a problem, which is resolved as follows:</p>
 <ol>
 <li>If the reference is a direct reference to Root (<code>#</code>) or to <code>⎕SE</code>, it is serialised as a reference to that symbol, but the contents of <code>#</code> or <code>⎕SE</code> are not included. When the array is de-serialised, this results in a reference to the Root (<code>#</code>) or <code>⎕SE</code> in the current workspace. The newly reconstituted array is not strictly identical to the original because the contents of <code>#</code> or <code>⎕SE</code> may be different.</li>
-<li>If the reference is to an arbitrary external namespace or object, a copy of that object is included but its path is discarded. When the array is de-serialised, the copy is reconstituted as a sibling (i.e. as a child of the same parent as the de-serialised array). In this case the contents of the external namespace or object are preserved, but not its path. The newly reconstituted array is not strictly identical to the original because the path to the external reference has changed.</li>
+<li>If the reference is to an arbitrary external namespace or object, a copy of that object is included but its path is discarded. When the array is de-serialised, the copy is reconstituted as a sibling (that is, as a child of the same parent as the de-serialised array). In this case the contents of the external namespace or object are preserved, but not its path. The newly reconstituted array is not strictly identical to the original because the path to the external reference has changed.</li>
 <li>If however, the external namespace or object itself contains an external reference, the operation fails with <code>DOMAIN ERROR</code>.</li>
 </ol>
 <p>The following example uses <code>220⌶</code> but applies equally to an array serialised by, for example <code>⎕FAPPEND</code>.</p>

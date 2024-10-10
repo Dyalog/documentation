@@ -745,8 +745,6 @@
       
         
       
-        
-      
     
     
     
@@ -850,27 +848,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1384,7 +1361,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16946,6 +16923,8 @@
       
         
       
+        
+      
     
     
     
@@ -18739,6 +18718,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64108,7 +64108,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71424,7 +71424,7 @@
 <p>The first approach is a hierarchical one using SubForms. This example shows how you can create a Form containing three resizable Edit objects.</p>
 <p>First, you create an Edit, a SubForm, and a Splitter as children of the <em>Form</em>, using the Splitter to divide the Form into two panes, one for the Edit and the other for the SubForm. Next, you create two Edit objects and a Splitter as children of the <em>SubForm</em>, using the second Splitter to divide the SubForm into two. You can continue with this approach to any reasonable depth. <a href="../../examples/splitter-example-3/"> See Splitter: Example 3.</a></p>
 <p>Notice that, by default, when the first Splitter is shifted to the left, both panes in the SubForm expand equally.</p>
-<p>The second approach is to create multiple Splitters <em>at the same level</em>, i.e. owned by the same parent. <a href="../../examples/splitter-example-4/"> See Splitter: Example 4.</a></p>
+<p>The second approach is to create multiple Splitters <em>at the same level</em>, that is, owned by the same parent. <a href="../../examples/splitter-example-4/"> See Splitter: Example 4.</a></p>
 <p>In this case, the third Edit object <code>F.E3</code> is unaffected by movement of the leftmost Splitter <code>F.S1</code>. Note also, that the first Splitter <code>F.S1</code> may not be dragged further right than the second Splitter <code>F.S2</code>.</p>
 <p>Using the non-hierarchical approach, horizontal and vertical Splitters may be combined in interesting ways. This can also be achieved using nested SubForms, but at the expense of a complex object hierarchy.<a href="../../examples/splitter-example-5/"> See Splitter: Example 5.</a></p>
 <p>Notice that in this example, with the exception of the last Splitter <code>F.S4</code>, it is necessary only to specify the <a href="../../properties/splitobj1/">SplitObj1</a> property for each of the Splitters. The reason is that the first four Splitters only manage one object <em>directly</em>. For example, the object to the right of <code>F.S1</code> is in fact a horizontal Splitter <code>F.S2</code>. Dragging <code>F.S1</code> changes the length of <code>F.S2</code> which in turn changes the width of <code>F.E2</code>. and <code>F.E3</code>.</p>

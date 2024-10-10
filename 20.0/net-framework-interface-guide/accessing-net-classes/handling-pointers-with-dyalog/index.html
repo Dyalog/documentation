@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16945,6 +16922,8 @@
       
         
       
+        
+      
     
     
     
@@ -18738,6 +18717,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64107,7 +64107,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71325,7 +71325,7 @@
 
 <p>Certain .NET methods take parameters that are pointers.</p>
 <p>An example is the <code>DivRem</code> method that is provided by the <code>System.Math</code> class. This method performs an integer division, returning the quotient as its result, and the remainder in an address specified as a pointer by the calling program.</p>
-<p>APL does not have a mechanism for dealing with pointers, so Dyalog provides a .NET class for this purpose. This is the <code>Dyalog.ByRef</code> class, which is a provided by an Assembly that is loaded automatically by the Dyalog APL program.</p>
+<p>APL does not have a mechanism for dealing with pointers, so Dyalog provides a .NET class for this purpose. This is the <code>Dyalog.ByRef</code> class, which is a provided by an Assembly that is loaded automatically by the Dyalog program.</p>
 <p>Firstly, to gain access to the Dyalog .NET Namespace, it must be specified by <code>⎕USING</code>. Note that you need not specify the Assembly (DLL) from which it is obtained (the  Bridge DLL), because (like <code>mscorlib.dll</code>) it is automatically loaded by when APL starts.
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span><span class="w"> </span><span class="s1">'Dyalog'</span>
 </code></pre></div>

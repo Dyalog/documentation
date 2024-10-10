@@ -745,8 +745,6 @@
       
         
       
-        
-      
     
     
     
@@ -850,27 +848,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1384,7 +1361,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16946,6 +16923,8 @@
       
         
       
+        
+      
     
     
     
@@ -18739,6 +18718,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64108,7 +64108,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71366,7 +71366,7 @@
 <p>If <code>⎕ED</code> is called from the Session, it opens Edit windows for the object(s) named in <code>Y</code> and returns a null result.  The cursor is positioned in the first of the Edit windows opened by <code>⎕ED</code>, but may be moved to the Session or to any other window which is currently open.  The effect is almost identical to using <code>)ED</code>.</p>
 <p>If <code>⎕ED</code> is called from a defined function or operator, its behaviour is different. On asynchronous terminals, the Edit windows are automatically displayed in "full-screen" mode (ZOOMED). In all implementations, the user is restricted to those windows named in <code>Y</code>. The user may not skip to the Session even though the Session may be visible.</p>
 <p><code>⎕ED</code> terminates and returns a result ONLY when the user explicitly closes all the windows for the named objects. In this case the result contains the names of any objects which have been newly (re)fixed in the workspace as a result of the <code>⎕ED</code>, and has the same structure as <code>Y</code>.</p>
-<p>Objects named in <code>Y</code> that cannot be edited are silently ignored. Objects qualified with a namespace path are (e.g. <code>a.b.c.foo</code>) are silently ignored if the namespace does not exist.</p>
+<p>Objects named in <code>Y</code> that cannot be edited are silently ignored. Objects qualified with a namespace path are (for example, <code>a.b.c.foo</code>) are silently ignored if the namespace does not exist.</p>
 <h2 id="variants-of-edit-object">Variants of Edit Object</h2>
 <p>The behaviour of <code>⎕ED</code> may be modified using the variant operator <code>⍠</code> with the following options:</p>
 <ul>
@@ -71403,9 +71403,10 @@
 </table>
 <p>There is no Principal Option.</p>
 <h2 class="example">Examples</h2>
-
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="m">3</span><span class="w"> </span><span class="m">11</span><span class="o">⍴</span><span class="s1">'Hello World'</span>
+</code></pre></div>
 <p>In the first example, <code>⎕ED</code> will display the contents of <code>A</code> as an editable character array which the user may change. The user can double-click on <em>Hello</em> to open an edit window on an object named <code>Hello</code> (which will be a new function if <code>Hello</code> is currently undefined). Furthermore, the user can enter any arbitrary name and double-click to edit it. This may be undesirable in an application.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="m">3</span><span class="w"> </span><span class="m">11</span><span class="o">⍴</span><span class="s1">'Hello World'</span>
+</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕ED</span><span class="w"> </span><span class="nv">A</span>
 </code></pre></div>
 <p>In the second example, the Edit window will display the contents of <code>A</code> as a ReadOnly Character array. The user can still open a new edit by double-clicking <em>Hello</em> or <em>World</em> but nothing else.
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕ED</span><span class="w"> </span><span class="na">⍠</span><span class="w"> </span><span class="s1">'ReadOnly'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="s1">'A'</span>

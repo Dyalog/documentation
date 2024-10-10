@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64114,7 +64114,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71495,7 +71495,7 @@
 <p>The session log is a history of previously entered expressions and the results they produced.</p>
 <p>If you are using a log file, the Session log is loaded into memory when APL is started from the file specified by the <strong>log_file</strong> parameter. When you close your APL session, the Session log is written back out to the log file, replacing its previous contents.</p>
 <p>In general you type an expression into the input line, then press Enter (ER) to run it. After execution, the expression and any displayed results become part of the session log.</p>
-<p>You can move around in the session using the scrollbar, the cursor keys, and the PgUp and PgDn keys. In addition, Ctrl+Home (UL) moves the cursor to the beginning of the top-line in the Log and Ctrl+End (DL) moves the cursor to the end of the last (i.e. the <em>current</em>) line in the session log. Home (LL) and End (RL) move the cursor to the beginning and end respectively of the line containing the cursor.</p>
+<p>You can move around in the session using the scrollbar, the cursor keys, and the PgUp and PgDn keys. In addition, Ctrl+Home (UL) moves the cursor to the beginning of the top-line in the Log and Ctrl+End (DL) moves the cursor to the end of the last (that is, the <em>current</em>) line in the session log. Home (LL) and End (RL) move the cursor to the beginning and end respectively of the line containing the cursor.</p>
 <h2 id="deleting-lines">Deleting Lines</h2>
 <p>You may delete one or more lines from the Session using the DK command (Ctrl+Delete). This action removes the current line or the selected block of lines  from the Session window and from the Session log. The removal is permanent and you will be prompted to confirm:</p>
 <p><figure id="_figure-1"><img alt="modify session log" src="../img/modify-session-log.png"><figcaption>Figure 1: modify session log</figcaption></figure></p>
@@ -71517,7 +71517,7 @@
 <p>It is also possible to execute a contiguous block of lines. To do this, you must first select the lines (by dragging the mouse or using the keyboard) and then copy them into the clipboard using Shift+Delete (CT) or Ctrl+Insert (CP). You then paste them back into the session using Shift+Insert (PT). Lines pasted into the session are always marked (Red on White) and will therefore be executed when you press Enter. To execute lines from an edit window, you use a similar procedure. First select the lines you want to execute, then cut or copy the selection to the clipboard. Then move to the session window and paste them in, then press Enter to execute them.</p>
 <h2 id="session-print-width-pw">Session Print Width (PW)</h2>
 <p>Throughout its history, APL has used a system variable <code>⎕PW</code> to specify the width of the user's terminal or screen. Session output that is longer than <code>⎕PW</code> is automatically wrapped and split into multiple lines on the display. This feature of APL was designed in the days of hard-copy terminals and has become less relevant in modern Windows environments.</p>
-<p>Dyalog APL continues to support the traditional use of <code>⎕PW</code>, but also provides an alternative option to have the system wrap Session output according to the width of the Session Window. This behaviour may be selected by checking the Auto PW checkbox in the Session tab of the Configuration dialog box.</p>
+<p>Dyalog continues to support the traditional use of <code>⎕PW</code>, but also provides an alternative option to have the system wrap Session output according to the width of the Session Window. This behaviour may be selected by checking the Auto PW checkbox in the Session tab of the Configuration dialog box.</p>
 <h2 id="using-findreplace-in-the-session">Using Find/Replace in the Session</h2>
 <p>The search and replace facilities work not just in the Editor as you would expect, but also in the Session. For example, if you have just entered a series of expressions involving a variable called <code>SALES</code> and you want to perform the same calculations using <code>NEWSALES</code>, the following commands will achieve it:</p>
 <p>Enter <code>SALES</code> in the <em>Find</em> box, and <code>NEWSALES</code> in the <em>Replace</em> box. Now click the <em>Replace All</em> button. You will see all occurrences of <code>SALES</code> change to <code>NEWSALES</code>. Furthermore, each changed line in the session becomes marked (Red on White). Now click on the session and press Enter (or select <em>Execute</em> from the <em>Action</em> menu).</p>

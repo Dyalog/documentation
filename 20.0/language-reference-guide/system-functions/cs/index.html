@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16952,6 +16929,8 @@
       
         
       
+        
+      
     
     
     
@@ -18745,6 +18724,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64210,7 +64210,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71435,7 +71435,7 @@
 <p>If specified, <code>X</code> is a simple character scalar, vector, matrix or a nested vector of character vectors identifying zero or more workspace objects to be <em>exported</em> into the namespace <code>Y</code>.</p>
 <p>The identifiers in <code>X</code> and <code>Y</code> may be simple names or compound names separated by <code>'.'</code> and including the names of the special namespaces <code>'⎕SE'</code>, <code>'#'</code>, and <code>'##'</code>.</p>
 <p>The result <code>R</code> is the full name (starting <code>#.</code>) of the space in which the function or operator was executing prior to the <code>⎕CS</code>.</p>
-<p><code>⎕CS</code> changes the space in which the current function or operator is running to the namespace <code>Y</code> and returns the original space, in which the function was previously running, as a shy result.  <strong>After the</strong> <code>⎕CS</code>, references to <em>global</em> names (with the exception of those specified in <code>X</code>) are taken to be references to <em>global</em> names in <code>Y</code>.  References to <em>local</em> names (i.e. those local to the current function or operator) are, with the exception of those with name class 9, unaffected. Local names with name class  9 are however no longer visible.</p>
+<p><code>⎕CS</code> changes the space in which the current function or operator is running to the namespace <code>Y</code> and returns the original space, in which the function was previously running, as a shy result.  <strong>After the</strong> <code>⎕CS</code>, references to <em>global</em> names (with the exception of those specified in <code>X</code>) are taken to be references to <em>global</em> names in <code>Y</code>.  References to <em>local</em> names (that is, those local to the current function or operator) are, with the exception of those with name class 9, unaffected. Local names with name class  9 are however no longer visible.</p>
 <p>When the function or operator terminates, the calling function resumes execution in its original space.</p>
 <p>The names listed in <code>X</code> are temporarily <em>exported</em> to the namespace <code>Y</code>.  If objects with the same name exist in <code>Y</code>, these objects are effectively <em>shadowed</em> and are inaccessible. Note that Dyadic <code>⎕CS</code> may be used only if there is a traditional function in the state indicator (stack). Otherwise there would be no way to retract the export. In this case (for example in a clear workspace) <code>DOMAIN ERROR</code> is reported.</p>
 <p>Note that calling <code>⎕CS</code> with an empty argument <code>Y</code> obtains the namespace in which a function is currently executing.</p>
@@ -71481,7 +71481,7 @@
 <span class="w">    </span><span class="bp">∇</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">CAPT</span><span class="kd">←</span><span class="nv">INST</span><span class="w"> </span><span class="nv">FMT</span><span class="w"> </span><span class="nv">TOTL</span><span class="w">      </span><span class="c1">⍝ Format button caption.</span>
-<span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="nv">CAPT</span><span class="kd">←</span><span class="p">(</span><span class="o">⍕</span><span class="nv">INST</span><span class="p">)</span><span class="o">,</span><span class="s1">'/'</span><span class="o">,⍕</span><span class="nv">TOTL</span><span class="w">  </span><span class="c1">⍝ E.g. 40/100.</span>
+<span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="nv">CAPT</span><span class="kd">←</span><span class="p">(</span><span class="o">⍕</span><span class="nv">INST</span><span class="p">)</span><span class="o">,</span><span class="s1">'/'</span><span class="o">,⍕</span><span class="nv">TOTL</span><span class="w">  </span><span class="c1">⍝ For example, 40/100.</span>
 <span class="w">    </span><span class="bp">∇</span>
 </code></pre></div>
 <h2 class="example">Example</h2>

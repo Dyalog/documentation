@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16945,6 +16922,8 @@
       
         
       
+        
+      
     
     
     
@@ -18738,6 +18717,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64125,7 +64125,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71333,8 +71333,8 @@
 <p><strong>Description</strong></p>
 <p>For most objects to which it applies, this property determines whether or not a horizontal scrollbar is provided.</p>
 <p><strong>HScroll may only be set when the object is created with ⎕WC and may not subsequently be changed with ⎕WS or assignment.</strong></p>
-<p>When applied to a <a href="../../objects/combo/">Combo</a>, or to an <a href="../../objects/edit/">Edit</a> object with <a href="../style/">Style </a><code>'Single'</code> (i.e. a single-line edit field), the value 0 inhibits scrolling, and prevents the user from entering more data when the field is full. If instead it has the value <code>¯2</code>, the field is scrollable, and the length of data that may be entered is not limited by the length of the field.</p>
-<p>When applied to an <a href="../../objects/edit/">Edit</a> object with <a href="../style/">Style </a><code>'Multi'</code> (i.e. a multi-line text box), the value 0 inhibits scrolling, and causes individual lines to be "word-wrapped". The values <code>¯2</code> and <code>¯1</code> enable sideways scrolling, and permit individual lines to exceed the width of the object. The value <code>¯1</code> means that a horizontal scrollbar is provided.</p>
+<p>When applied to a <a href="../../objects/combo/">Combo</a>, or to an <a href="../../objects/edit/">Edit</a> object with <a href="../style/">Style </a><code>'Single'</code> (that is, a single-line edit field), the value 0 inhibits scrolling, and prevents the user from entering more data when the field is full. If instead it has the value <code>¯2</code>, the field is scrollable, and the length of data that may be entered is not limited by the length of the field.</p>
+<p>When applied to an <a href="../../objects/edit/">Edit</a> object with <a href="../style/">Style </a><code>'Multi'</code> (that is, a multi-line text box), the value 0 inhibits scrolling, and causes individual lines to be "word-wrapped". The values <code>¯2</code> and <code>¯1</code> enable sideways scrolling, and permit individual lines to exceed the width of the object. The value <code>¯1</code> means that a horizontal scrollbar is provided.</p>
 <p>For a <a href="../../objects/scroll/">Scroll</a> object, the scrollbar is horizontal if HScroll is <code>¯1</code> and vertical if HScroll is 0. For a <a href="../../objects/form/">Form</a>, a horizontal scrollbar is provided if HScroll is set to <code>¯1</code>. The default value is 0 (no scrollbar).</p>
 <p>For a <a href="../../objects/statusbar/">StatusBar</a>, <a href="../../objects/tabbar/">TabBar</a> or <a href="../../objects/toolbar/">ToolBar</a> with <a href="../align/">Align</a> set to Top or Bottom, HScroll determines whether or not a horizontal scrollbar is provided and how the object positions its children. If HScroll is 0 (the default) the object organises its children in multiple rows and does not provide a scrollbar. If HScroll is <code>¯1</code> or <code>¯2</code>, the object organises its children in a single row and provides a mini scrollbar to allow those positioned beyond the right edge of the object to be scrolled into view. If HScroll is <code>¯1</code>, the scrollbar is always shown. If HScroll is <code>¯2</code>, it is only shown when needed.</p>
 <p>For a <a href="../../objects/grid/">Grid</a>, HScroll may be <code>0</code> (no horizontal scrollbar), <code>¯1</code> (scrollbar is displayed when required), <code>¯2</code> (same as <code>¯1</code>) or <code>¯3</code> (scrollbar is always displayed).</p>

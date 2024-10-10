@@ -740,8 +740,6 @@
       
         
       
-        
-      
     
     
     
@@ -845,27 +843,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1379,7 +1356,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16941,6 +16918,8 @@
       
         
       
+        
+      
     
     
     
@@ -18734,6 +18713,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64103,7 +64103,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71309,7 +71309,7 @@
 
 <p><strong>Applies To</strong></p>
 <p><strong>Description</strong></p>
-<p>This property has been replaced by the <a href="../../methodorevents/gettextsize/">GetTextSize</a> method, which should be used instead. TextSize is retained only for compatibility with previous versions of Dyalog APL.</p>
+<p>This property has been replaced by the <a href="../../methodorevents/gettextsize/">GetTextSize</a> method, which should be used instead. TextSize is retained only for compatibility with previous versions of Dyalog.</p>
 <p>TextSize is a "read-only" property that reports the size of the bounding rectangle of a text item in a given font. The result is given in the co-ordinate system of the object in question. This property is useful for positioning <a href="../../objects/text/">Text</a> objects.</p>
 <p>When you query TextSize you give the text item in whose size you are interested and, optionally, the name of a <a href="../../objects/font/">Font</a> object. The text item may be a simple scalar, a vector or a matrix. If the <a href="../../objects/font/">Font</a> is omitted, the result is given using the current font for the object in question. When you query TextSize on its own, you must enclose the argument to <a href="../../../language-reference-guide/system-functions/wg"><code>⎕WG</code></a>. This is because APL would otherwise not be able to distinguish between the text string and font name associated with <code>'TextSize'</code> and other properties with the same name as these items.</p>
 <h2 class="example">Examples</h2>

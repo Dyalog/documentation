@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16945,6 +16922,8 @@
       
         
       
+        
+      
     
     
     
@@ -18738,6 +18717,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64107,7 +64107,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71323,10 +71323,10 @@
 
 <h1> Global.asax, Application and Session Objects</h1>
 
-<p>When a Web Service runs, it has access to the Application and Session objects. These are objects provided by ASP.NET through which you can manage the execution of the Web Service. ASP.NET creates an Application object when it first starts the Application, i.e. when any client requests any Web Service or Web Page stored in the same IIS Virtual Directory. It also creates a Session object for each client process.</p>
+<p>When a Web Service runs, it has access to the Application and Session objects. These are objects provided by ASP.NET through which you can manage the execution of the Web Service. ASP.NET creates an Application object when it first starts the Application, that is, when any client requests any Web Service or Web Page stored in the same IIS Virtual Directory. It also creates a Session object for each client process.</p>
 <p>When the first request comes in for an ASP.NET application, ASP.NET checks for an optional file named <code>global.asax</code>, and if it is there it compiles it. The application's <code>global.asax</code> instance is then used to apply application events.</p>
 <p><code>global.asax</code> typically defines callback functions to be executed on the various <code>Application</code> and <code>Session</code> events, such as <code>Application_Start</code>, <code>Application_End</code>, <code>Session_Start</code>, <code>Session_End</code> and so forth.</p>
-<p>Dyalog APL allows you to use APL functions in the <code>global.asax</code> script. This allows you to initialise your APL application when it is first invoked, and to close it down cleanly when it is terminated.</p>
+<p>Dyalog allows you to use APL functions in the <code>global.asax</code> script. This allows you to initialise your APL application when it is first invoked, and to close it down cleanly when it is terminated.</p>
 <p>For example, you can use <code>global.asax</code> to tie a component file on start-up, and untie it on termination.</p>
 
 

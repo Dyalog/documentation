@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64112,7 +64112,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71387,7 +71387,7 @@
 <p>Web Services provide both synchronous (client calls the function and waits for a result) and asynchronous operation.</p>
 <p>Each method is exposed as a function with the same name (the synchronous version) together with a pair of functions with that name prefixed with <code>Begin</code> and <code>End</code> respectively.</p>
 <p>The <code>Beginxxx</code> functions take two additional parameters; a delegate class that represents a callback function and a state parameter.</p>
-<p>To initiate the call, you execute the <code>Beginxxx</code> method using the standard parameters followed by two objects. The first is an object of type <code>System.AsyncCallback</code> that represents an asynchronous callback, i.e. a callback to be invoked when the asynchronous call is complete. The second is an object which is used to supply extra information. We will see how callbacks are used later in this section. If you are not using a callback, these items should be null object references. You can specify a reference to a null object using the expression <code>(⎕NS'')</code>. For example, using the <code>LoanService</code> sample as above:
+<p>To initiate the call, you execute the <code>Beginxxx</code> method using the standard parameters followed by two objects. The first is an object of type <code>System.AsyncCallback</code> that represents an asynchronous callback, that is, a callback to be invoked when the asynchronous call is complete. The second is an object which is used to supply extra information. We will see how callbacks are used later in this section. If you are not using a callback, these items should be null object references. You can specify a reference to a null object using the expression <code>(⎕NS'')</code>. For example, using the <code>LoanService</code> sample as above:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="nv">LN</span><span class="na">.</span><span class="nv">BeginCalcPayments</span><span class="w"> </span><span class="m">10000</span><span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">12</span>
 <span class="w">                             </span><span class="m">9</span><span class="p">(</span><span class="nf">⎕NS</span><span class="s1">''</span><span class="p">)(</span><span class="nf">⎕NS</span><span class="s1">''</span><span class="p">)</span>
 </code></pre></div>

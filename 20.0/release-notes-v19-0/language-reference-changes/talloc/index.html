@@ -12,7 +12,7 @@
         <link rel="prev" href="../fix/">
       
       
-        <link rel="next" href="../set-aplcore-parameters/">
+        <link rel="next" href="../memory-manager-statistics/">
       
       
       <link rel="icon" href="../../../img/favicon-32.png">
@@ -753,8 +753,6 @@
       
         
       
-        
-      
     
     
     
@@ -936,27 +934,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1466,7 +1443,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -17028,6 +17005,8 @@
       
         
       
+        
+      
     
     
     
@@ -18821,6 +18800,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64190,7 +64190,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71445,7 +71445,7 @@
 <p>In this case, the optional <code>Y[2]</code> is an arbitrary character vector that serves as a description for the allocated range of tokens.</p>
 <h2 id="de-allocation-y-is-1">De-allocation (<code>Y</code> is <code>¯1</code>)</h2>
 <p>If <code>Y</code> is <code>¯1</code>, <code>⎕TALLOC</code> releases a previously allocated range of tokens identified by the left-argument <code>X</code>. The result <code>R</code> is a shy <code>⍬</code>.</p>
-<p>To succeed, this range must have previously been allocated, not freed by de-allocation, and must be inactive, i.e. its tokens must not currently be  in the token pool or in use by a <code>⎕TGET</code>. If not, <code>⎕TALLOC</code> will signal a <code>DOMAIN ERROR</code>.</p>
+<p>To succeed, this range must have previously been allocated, not freed by de-allocation, and must be inactive, that is, its tokens must not currently be  in the token pool or in use by a <code>⎕TGET</code>. If not, <code>⎕TALLOC</code> will signal a <code>DOMAIN ERROR</code>.</p>
 <p>A de-allocated range becomes free for subsequent re-allocation by <code>⎕TALLOC</code>.</p>
 <h2 id="querying-a-description-y-is-0">Querying a description (<code>Y</code> is 0)</h2>
 <p><code>Y</code> is 0, <code>⎕TALLOC</code> returns a non-shy result <code>R</code> containing the description for a currently allocated range of tokens identified by the left-argument <code>X</code>.</p>

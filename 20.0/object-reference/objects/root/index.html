@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64226,7 +64226,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71480,7 +71480,7 @@
 <p>For the Root object, the value of <a href="../../properties/posn/">Posn</a> is (0,0). The value of <a href="../../properties/size/">Size</a> is either (100,100) if <a href="../../properties/coord/">Coord</a> is <code>'Prop'</code>, or the size of the screen in pixels if <a href="../../properties/coord/">Coord</a> is <code>'Pixel'</code>. <a href="../../properties/xrange/">XRange</a> and <a href="../../properties/yrange/">YRange</a> both have the value (0,100). The <a href="../../properties/devcaps/">DevCaps</a> property reports the physical size of the screen in terms of both pixels and millimetres. It also reports the number of colours available.</p>
 <p>The <a href="../../properties/fontlist/">FontList</a> property provides a list of all the character fonts that are available. The <a href="../../properties/printlist/">PrintList</a> property provides a list of all the installed printers. These properties are <em>read-only</em> and may not be changed using <a href="../../../language-reference-guide/system-functions/ws"><code>⎕WS</code></a></p>
 <p>As the default value of <a href="../../properties/coord/">Coord</a> is <code>'Inherit'</code> for all other objects, the value of <a href="../../properties/coord/">Coord</a> for <code>'.'</code> defines the default co-ordinate system. It may be either <code>'Prop'</code> (the default) or <code>'Pixel'</code>. <code>'Inherit'</code> and <code>'User'</code> are not allowed.</p>
-<p>The <a href="../../properties/cursorobj/">CursorObj</a> property is used to define a cursor for the application as a whole. Its default value is an empty character vector. If it is set to any value other than <code>''</code> or 0, the selected cursor overrides the <a href="../../properties/cursorobj/">CursorObj</a> values for all other objects. If you want to indicate that the application is "busy", you can therefore set the <a href="../../properties/cursorobj/">CursorObj</a> property on <code>'.'</code> to an hourglass for the duration of the operation, e.g.
+<p>The <a href="../../properties/cursorobj/">CursorObj</a> property is used to define a cursor for the application as a whole. Its default value is an empty character vector. If it is set to any value other than <code>''</code> or 0, the selected cursor overrides the <a href="../../properties/cursorobj/">CursorObj</a> values for all other objects. If you want to indicate that the application is "busy", you can therefore set the <a href="../../properties/cursorobj/">CursorObj</a> property on <code>'.'</code> to an hourglass for the duration of the operation. For example:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'.'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'CursorObj'</span><span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="c1">⍝ Set cursor to an hourglass</span>
 </code></pre></div>
 <p>[lengthy process...]

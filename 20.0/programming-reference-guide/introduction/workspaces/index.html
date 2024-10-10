@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16957,6 +16934,8 @@
       
         
       
+        
+      
     
     
     
@@ -18750,6 +18729,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64119,7 +64119,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71326,7 +71326,7 @@
 <p>APL expressions are evaluated within a workspace. The workspace may contain objects, namely classes, namespaces, operators, functions and variables defined by the user. APL expressions may include references to primitive operators, functions and variables provided by APL. These objects do not reside in the workspace, but space is required for the actual process of evaluation to accommodate temporary data. During execution, APL records the state of execution through the STATE INDICATOR which is dynamically maintained until the process is complete. Space is also required to identify objects in the workspace in the SYMBOL TABLE. Maintenance of the symbol table is entirely dynamic. It grows and contracts according to the current workspace contents.</p>
 <p>Workspaces may be explicitly saved with an identifying name. The workspace may subsequently be loaded, or objects may be selectively copied from a saved workspace into the current workspace.</p>
 <p>Workspaces are stored in files whose names must conform to operating system conventions. When a workspace name is specified without a file suffix, these are added or implied. For further information, see <a href="../../../windows-installation-and-configuration-guide/configuration-parameters/wsext">WSEXT</a>.</p>
-<p>If the name of the file in which the workspace is saved contains spaces, the ws argument for the system functions <code>)SAVE</code>, <code>)COPY</code>, <code>)PCOPY</code>, <code>)LOAD</code>, <code>)XLOAD</code> and <code>)DROP</code> should be surrounded by two double-quote (") characters. To include a " character in the file name, you must specify two adjoining double-quotes (i.e. """"). Note however that Windows does not allow double-quotes in file names, so this effectively applies only to non-Windows systems.</p>
+<p>If the name of the file in which the workspace is saved contains spaces, the ws argument for the system functions <code>)SAVE</code>, <code>)COPY</code>, <code>)PCOPY</code>, <code>)LOAD</code>, <code>)XLOAD</code> and <code>)DROP</code> should be surrounded by two double-quote (") characters. To include a " character in the file name, you must specify two adjoining double-quotes (that is, """"). Note however that Windows does not allow double-quotes in file names, so this effectively applies only to non-Windows systems.</p>
 <h2 class="example">Examples</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SAVE</span><span class="w"> </span><span class="nv">Pete</span><span class="err">'</span><span class="nv">s</span><span class="w"> </span><span class="nv">work</span>
 <span class="nv">unacceptable</span><span class="w"> </span><span class="nv">char</span>

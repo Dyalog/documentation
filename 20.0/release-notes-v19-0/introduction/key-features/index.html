@@ -870,8 +870,6 @@
       
         
       
-        
-      
     
     
     
@@ -975,27 +973,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1509,7 +1486,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -17071,6 +17048,8 @@
       
         
       
+        
+      
     
     
     
@@ -18864,6 +18843,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64233,7 +64233,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71550,7 +71550,7 @@
 <li>An option is provided to control the implementation of lexical scope in Namespace and Class scripts. This extension applies only to <code>⎕FIX</code>; scripts fixed using the editor are unaffected by this change. See <a href="../lexical-scope-in-scripts/">Lexical Scope in Scripts</a> and <a href="../../language-reference-changes/fix/">Fix Script</a>.</li>
 <li>An option is provided to control whether or not source code is retained in the workspace exactly as it was typed. This is now the default. See <a href="../source-as-typed/">Source as Typed</a>, <a href="../../language-reference-changes/discard-source-code/">Discard Source Information</a> and <a href="../../language-reference-changes/discard-source-information/">Discard Source Information</a>.</li>
 <li>Support is added for LZ4 <em>frames</em> which allows the LZ4 compression library to handle data &gt; 2GB in size. Previously, extremely large file components could not be compressed because the LZ4 library could not process them and they were written uncompressed. Now, these large components will (in the absence of any other reason) be compressed as well. However, such components will be unreadable by previous Versions. <code>3012⌶</code> allows the user to specify that LZ4 frames should not be used for component compression, for when interoperability is required. See <a href="../../language-reference-changes/enable-compression-of-large-components/">Enable Compression of Large Components</a>. <code>219⌶</code> has been extended to allow arrays &gt;2GB to be compressed.</li>
-<li>There is a new I-beam function to set the parameters for generating aplcore files dynamically. See <a href="../../language-reference-changes/set-aplcore-parameters/">Set aplcore Parameters</a>.</li>
+<li>There is a new I-beam function to set the parameters for generating aplcore files dynamically. See <a href="../../../language-reference-guide/the-i-beam-operator/set-aplcore-parameters">Set aplcore Parameters</a>.</li>
 <li><code>⎕FHOLD</code> now accepts an optional left argument to specify a time-out. See <a href="../../language-reference-changes/fhold/">File Hold</a>.</li>
 <li>The right argument to <code>⎕SIGNAL</code> may include 1006 (<code>TIMEOUT</code> error).</li>
 </ul>
@@ -71604,19 +71604,19 @@
 </tr>
 <tr>
 <td>{PRODUCT}</td>
-<td>e.g. Dyalog APL/W</td>
+<td>for example, Dyalog APL/W</td>
 </tr>
 <tr>
 <td>{VER_A}</td>
-<td>e.g. 19</td>
+<td>for example, 19</td>
 </tr>
 <tr>
 <td>{VER_B}</td>
-<td>e.g. 0</td>
+<td>for example, 0</td>
 </tr>
 <tr>
 <td>{VER_C}</td>
-<td>e.g. 47586 (SVN revision)</td>
+<td>for example, 47586 (SVN revision)</td>
 </tr>
 <tr>
 <td>{PID}</td>

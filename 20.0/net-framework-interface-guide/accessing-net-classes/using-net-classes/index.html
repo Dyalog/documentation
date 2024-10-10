@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64112,7 +64112,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71456,7 +71456,7 @@
 
 <h1> Using .NET Classes</h1>
 
-<p>To create a Dyalog APL object as an instance of a .NET class, you use the <code>⎕NEW</code> system function. The <code>⎕NEW</code> system function is monadic. It takes a 1 or 2-element argument, the first element being a <em>class</em>.</p>
+<p>To create a Dyalog object as an instance of a .NET class, you use the <code>⎕NEW</code> system function. The <code>⎕NEW</code> system function is monadic. It takes a 1 or 2-element argument, the first element being a <em>class</em>.</p>
 <p>If the argument is a scalar or a 1-element vector, an instance of the class is created using the <em>constructor</em> that takes NO argument.</p>
 <p>If the argument is a 2-element vector, an instance of the class is created using the <em>constructor</em> whose argument matches the disclosed second element.</p>
 <p>For example, to create a <code>DateTime</code> object whose value is the 30<sup>th</sup> April 2008:
@@ -71478,7 +71478,7 @@
 <span class="w"> </span>
 <span class="w">      </span><span class="nv">mydt</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">System</span><span class="na">.</span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">2008</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
 </code></pre></div>
-<p>When creating an instance of the <code>DateTime</code> class, you are required to provide an argument with two elements: (the class and the <em>constructor argument</em>, in our case a 3-element vector representing the date). Many classes provide a default constructor which takes no arguments. From Dyalog APL, the <em>default constructor</em> is called by calling <code>⎕NEW</code> with only a reference to the class in the argument. For example, to obtain a default <code>Button</code> object, we only need to write:
+<p>When creating an instance of the <code>DateTime</code> class, you are required to provide an argument with two elements: (the class and the <em>constructor argument</em>, in our case a 3-element vector representing the date). Many classes provide a default constructor which takes no arguments. From Dyalog, the <em>default constructor</em> is called by calling <code>⎕NEW</code> with only a reference to the class in the argument. For example, to obtain a default <code>Button</code> object, we only need to write:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mybtn</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Button</span>
 </code></pre></div>
 <p>The above statement assumes that you have defined <code>⎕USING</code> correctly; there must be a reference to <code>System.Windows.Forms.dll</code>, and a namespace prefix which allows the name <code>Button</code> to be recognised as <code>System.Windows.Forms.Button</code>.</p>
@@ -71486,13 +71486,13 @@
 <h2 id="constructors-and-overloading">Constructors and Overloading</h2>
 <p>Each .NET Class has one or more <em>constructor</em> methods. A constructor is a method which is called to initialise an instance of the Class. Typically, a Class will support several constructor methods - each with a different set of parameters. For example, <code>System.DateTime</code> supports a constructor that takes three <code>Int32</code> parameters (year, month, day), another that takes six <code>Int32</code> parameters (year, month, day, hour, minute, second), and so forth. These different constructor methods are not distinguished by having different names but by the different sets of parameters they accept.</p>
 <p>This concept, which is known as <em>overloading</em>, may seem somewhat alien to the APL programmer. After all, we are used to defining functions that accept a whole range of different arguments. However, type checking, which is fundamental to the .NET Framework, requires that a method is called with the correct number of parameters, and that each parameter is of a predefined type. Overloading solves this issue.</p>
-<p>When you create an instance of a class in C#, you do so using the <code>new</code> operator. This is automatically mapped to the appropriate constructor method by matching the parameters you supply to the various forms of the constructor. A similar mechanism is implemented in Dyalog APL using the <code>⎕NEW</code> system function.</p>
+<p>When you create an instance of a class in C#, you do so using the <code>new</code> operator. This is automatically mapped to the appropriate constructor method by matching the parameters you supply to the various forms of the constructor. A similar mechanism is implemented in Dyalog using the <code>⎕NEW</code> system function.</p>
 <h2 id="how-the-new-system-function-is-implemented">How the <code>⎕NEW</code> System Function is implemented</h2>
 <p>When APL executes an expression such as:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mydt</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">2008</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
 </code></pre></div>
 <p>the following logic is used to resolve the reference to <code>DateTime</code> correctly.</p>
-<p>The first time that APL encounters a reference to a non-existent name (i.e. a name that would otherwise generate a <code>VALUE ERROR</code>), it searches the .NET namespaces/assemblies specified by <code>⎕USING</code> for a .NET class of that name. If found, the name (in this case <code>DateTime</code>) is recorded in the APL symbol table with a name class of 9.6 and is associated with the corresponding .NET namespace. If not, <code>VALUE ERROR</code> is reported as usual. Note that this search ONLY takes place if <code>⎕USING</code> has been assigned a value.</p>
+<p>The first time that APL encounters a reference to a non-existent name (that is, a name that would otherwise generate a <code>VALUE ERROR</code>), it searches the .NET namespaces/assemblies specified by <code>⎕USING</code> for a .NET class of that name. If found, the name (in this case <code>DateTime</code>) is recorded in the APL symbol table with a name class of 9.6 and is associated with the corresponding .NET namespace. If not, <code>VALUE ERROR</code> is reported as usual. Note that this search ONLY takes place if <code>⎕USING</code> has been assigned a value.</p>
 <p>Subsequent references to that symbol (in this case <code>DateTime</code>) are resolved directly and do not involve any assembly searching.</p>
 <p>If you use <code>⎕NEW</code> with only a class as argument, APL will attempt to call the version of its constructor that is defined to take no arguments. If no such version of the constructor exists, the call will fail with a <code>LENGTH ERROR</code>.</p>
 <p>Otherwise, if you use <code>⎕NEW</code> with a class as argument and a second element, APL will call the version of the constructor whose parameters match the second element you have supplied to <code>⎕NEW</code>. If no such version of the constructor exists, the call will fail with a <code>LENGTH ERROR</code>.</p>
@@ -71512,11 +71512,11 @@
 <p>Note that if you want to check the type of an object, this can be obtained using the <code>GetType</code> method, which is supported by all .NET objects.</p>
 <h2 id="disposing-of-net-objects">Disposing of .NET Objects</h2>
 <p>.NET objects are managed by the .NET Common Language Runtime (CLR). The CLR allocates memory for an object when it is created, and de-allocates this memory when it is no longer required.</p>
-<p>When the (last) reference from Dyalog APL to a .NET object is expunged by <code>⎕EX</code> or by localisation, the system marks the object as unused, leaving it to the CLR to de-allocate the memory that it had previously allocated to it, when appropriate. Note that even though Dyalog has de-referenced the APL name, the object could potentially still be referenced by another .NET class.</p>
+<p>When the (last) reference from Dyalog to a .NET object is expunged by <code>⎕EX</code> or by localisation, the system marks the object as unused, leaving it to the CLR to de-allocate the memory that it had previously allocated to it, when appropriate. Note that even though Dyalog has de-referenced the APL name, the object could potentially still be referenced by another .NET class.</p>
 <p>De-allocated memory may not actually be re-used immediately and may indeed never be re-used,  depending upon the algorithms used by the CLR garbage disposal.</p>
 <p>Furthermore, a .NET object may allocate unmanaged resources (such as window handles) which are not automatically released by the CLR.</p>
 <p>To allow the programmer to control the freeing of resources associated with .NET objects in a standard way, objects implement the IDisposable interface which provides a Dispose() method. The C# language provides a <code>using</code> control structure that automates the freeing of resources. Crucially, it does so however the flow of execution exits the control structure, even as a result of error handling. This obviates the need for the programmer to call Dispose() explicitly wherever it may be required.</p>
-<p>This programming convenience is provide in Dyalog APL by the <code>:Disposable ... :EndDisposable</code> control structure. For further information, see   Disposable Statement.</p>
+<p>This programming convenience is provide in Dyalog by the <code>:Disposable ... :EndDisposable</code> control structure. For further information, see   Disposable Statement.</p>
 
 
 

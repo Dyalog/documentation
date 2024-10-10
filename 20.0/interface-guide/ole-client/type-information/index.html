@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64112,7 +64112,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71630,7 +71630,7 @@
 <p>Dyalog APL also uses the Type Information to validate the arguments you supply to methods (both the number and the data types) and the values you assign to properties. For example, if a method is defined to take an argument VT_I4, Dyalog APL will issue a <code>DOMAIN ERROR</code> if you invoke the method with a character argument. Internally, Dyalog APL also uses the Type Information to convert between APL arrays and OLE data types.</p>
 <p>The operation to read the Type Information may take several seconds, possibly minutes, and the Type information may occupy a considerable amount of workspace. Nevertheless, the availability of the Type information in the active workspace greatly assists development and optimises run-time performance.</p>
 <h2 id="late-binding">Late Binding</h2>
-<p>In some circumstances it may  be desirable  to avoid the process of reading the Type information in its entirety (known as <em>early binding</em>), and instead use a different approach whereby Type information is obtained only when it is needed, i.e. when a particular property, method or event is referenced. This is called <em>late binding</em> and is specified by setting the LateBind property of the OLEClient object to 1 when you create it. When this scheme is used, APL only reads the Type information for properties and methods that are actually used, although the benefit of having all the Type information held in the workspace is lost.</p>
+<p>In some circumstances it may  be desirable  to avoid the process of reading the Type information in its entirety (known as <em>early binding</em>), and instead use a different approach whereby Type information is obtained only when it is needed, that is, when a particular property, method or event is referenced. This is called <em>late binding</em> and is specified by setting the LateBind property of the OLEClient object to 1 when you create it. When this scheme is used, APL only reads the Type information for properties and methods that are actually used, although the benefit of having all the Type information held in the workspace is lost.</p>
 <h2 id="missing-type-information">Missing Type Information</h2>
 <p>Not all COM objects provide Type information, or do so in non-standard ways.</p>
 <p>In these cases, if LateBind is set to 0, APL will fail to obtain any Type information, the OLEClient object will be created without it and its associated namespace will be empty. If LateBind is set to 1, the alternative mechanism using late binding will probably not work either.</p>
@@ -71748,7 +71748,7 @@
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">INFO</span><span class="kd">←</span><span class="o">⊂</span><span class="nv">f</span><span class="na">.</span><span class="nv">wmp</span><span class="na">.</span><span class="nv">GetEventInfo</span><span class="s1">'MouseDown'</span>
 <span class="m">5</span>
 </code></pre></div>
-<p>The first element contains a description of the event and the data type of its result (few events generate results, so this is usually VT_VOID), i.e.
+<p>The first element contains a description of the event and the data type of its result (few events generate results, so this is usually VT_VOID), that is:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊃</span><span class="nv">INFO</span>
 <span class="nv">Sent</span><span class="w"> </span><span class="nv">when</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">mouse</span><span class="w"> </span><span class="nv">button</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">pressed</span><span class="w">  </span><span class="nv">VT_VOID</span><span class="w"> </span>
 </code></pre></div>

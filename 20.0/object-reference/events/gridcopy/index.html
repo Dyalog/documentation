@@ -740,8 +740,6 @@
       
         
       
-        
-      
     
     
     
@@ -845,27 +843,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1379,7 +1356,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16941,6 +16918,8 @@
       
         
       
+        
+      
     
     
     
@@ -18734,6 +18713,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64103,7 +64103,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71353,7 +71353,7 @@
 <p>To copy a specific block of cells to the clipboard whether or not they are selected, you must specify the Start and End parameters. For example, the following expression will copy the 3x3 block of cells in the top-left of the Grid (<code>⎕IO</code> is 1) to the clipboard:
 </p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nv">Gridname</span><span class="na">.</span><span class="nv">GridCopy</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m">3</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
 </code></pre></div>
-<p>If you omit these parameters, the currently selected block of cells will be copied to the clipboard. If no cells are selected, the entire contents of the Grid will be copied. i.e.
+<p>If you omit these parameters, the currently selected block of cells will be copied to the clipboard. If no cells are selected, the entire contents of the Grid will be copied. That is:
 </p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nv">Gridname</span><span class="na">.</span><span class="nv">GridCopy</span><span class="w"> </span><span class="no">⍬</span>
 </code></pre></div>
 <p>The data copied to the clipboard is registered in Dyalog (APL internal), Wk3 (Lotus), XlTable (Excel) and tab/new-line delimited text formats.</p>

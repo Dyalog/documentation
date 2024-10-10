@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -17052,6 +17029,8 @@
       
         
       
+        
+      
     
     
     
@@ -18943,6 +18922,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64312,7 +64312,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71589,7 +71589,7 @@
 <p>If <code>⎕ML≥2</code>, Mix is represented by the symbol: <code>⊃</code>.</p>
 <p><code>Y</code> may be any array whose items may be uniform in rank and shape, or differ in rank and shape. If the items of <code>Y</code> are non-uniform, they are extended prior to the application of the function as follows:</p>
 <ol>
-<li>If the items of <code>Y</code> have different ranks, each item is extended in rank to that of the greatest rank by padding with leading 1s. </li>
+<li>If the items of <code>Y</code> have different ranks, each item is extended in rank to that of the greatest rank by padding its shape with leading 1s. </li>
 <li>If the items of <code>Y</code> have different shapes, each is padded with the corresponding prototype to a shape that represents the greatest length along each axis of all items in <code>Y</code>.</li>
 </ol>
 <p>For the purposes of the following narrative,  <code>y</code> represents the virtual item in <code>Y</code> with the greatest rank and shape, with which all other items are extended to conform.</p>
@@ -71602,19 +71602,19 @@
 </ol>
 <p>If <code>K</code> is absent, the axes of <code>y</code> appear as the last axes of the result.</p>
 <h2 id="simple-vector-examples">Simple Vector Examples</h2>
-<p>In this example, the shape of <code>Y</code> is 3, and the shape of  <code>y</code> is 2. So the shape of the result will be a permutation of 2 and 3, i.e. in this simple example, either <code>(2 3)</code> or <code>(3 2</code>).</p>
+<p>In this example, the shape of <code>Y</code> is 3, and the shape of  <code>y</code> is 2. So the shape of the result will be a permutation of 2 and 3, that is, in this simple example, either <code>(2 3)</code> or <code>(3 2</code>).</p>
 <p>If <code>K</code> is omitted, the shape of the result is <code>(⍴Y),⍴y</code>.
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)(</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="p">)(</span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
 <span class="m">1</span><span class="w"> </span><span class="m">2</span>
 <span class="m">3</span><span class="w"> </span><span class="m">4</span>
 <span class="m">5</span><span class="w"> </span><span class="m">6</span>
 </code></pre></div>
-<p>If <code>K</code> is between 0 and 1, the shape of the result is <code>(⍴y),⍴Y</code> because <code>(⍴y)</code> is inserted between the 0<sup>th</sup> and the 1<sup>st</sup> axis of the result, i.e. at the beginning.
+<p>If <code>K</code> is between 0 and 1, the shape of the result is <code>(⍴y),⍴Y</code> because <code>(⍴y)</code> is inserted between the 0<sup>th</sup> and the 1<sup>st</sup> axis of the result, that is, at the beginning.
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="sr">[</span><span class="m">.5</span><span class="sr">]</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)(</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="p">)(</span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
 <span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">5</span>
 <span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">6</span>
 </code></pre></div>
-<p>If <code>K</code> is between 1 and 2, the shape of the result is <code>(⍴Y),⍴y</code> because <code>(⍴y)</code> is inserted between the 1<sup>st</sup> and 2<sup>nd</sup> axis of the result, i.e. at the end. This is the same as the case when <code>K</code> is omitted.
+<p>If <code>K</code> is between 1 and 2, the shape of the result is <code>(⍴Y),⍴y</code> because <code>(⍴y)</code> is inserted between the 1<sup>st</sup> and 2<sup>nd</sup> axis of the result, that is, at the end. This is the same as the case when <code>K</code> is omitted.
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="sr">[</span><span class="m">1.5</span><span class="sr">]</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)(</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="p">)(</span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
 <span class="m">1</span><span class="w"> </span><span class="m">2</span>
 <span class="m">3</span><span class="w"> </span><span class="m">4</span>

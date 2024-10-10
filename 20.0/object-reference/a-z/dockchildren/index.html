@@ -740,8 +740,6 @@
       
         
       
-        
-      
     
     
     
@@ -845,27 +843,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1379,7 +1356,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16941,6 +16918,8 @@
       
         
       
+        
+      
     
     
     
@@ -18734,6 +18713,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64103,7 +64103,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71319,7 +71319,7 @@
 </table>
 <p><strong>Description</strong></p>
 <p>The DockChildren property specifies the names of client objects that may be docked in a host object.</p>
-<p>DockChildren may be a single ref or simple character scalar or vector, or a vector of refs or character vectors. Each item represents an object that may be docked. Notice that if you use a name, you must specify the simple name of the object, excluding any part of its full pathname that refers to a parent; i.e. the specified names must not contain any leading pathname information.</p>
+<p>DockChildren may be a single ref or simple character scalar or vector, or a vector of refs or character vectors. Each item represents an object that may be docked. Notice that if you use a name, you must specify the simple name of the object, excluding any part of its full pathname that refers to a parent; that is, the specified names must not contain any leading pathname information.</p>
 <p>If the name of, or ref to, a <a href="../dockable/">dockable</a> object occurs in the DockChildren property, the host object will generate DockMove events when the client is dragged over it, and will generate a DockAccept event when a docking operation takes place.</p>
 <p>If the name of, or ref to, the client object is not present in its DockChildren property, the object will not respond in any way as the client is dragged over it.</p>
 <p>The following example shows the creation of 3 dockable forms, all of which are dockable in a host form called h1.</p>

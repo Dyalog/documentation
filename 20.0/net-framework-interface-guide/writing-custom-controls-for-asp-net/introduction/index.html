@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16945,6 +16922,8 @@
       
         
       
+        
+      
     
     
     
@@ -18738,6 +18717,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64107,7 +64107,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71327,7 +71327,7 @@
 <p>This chapter describes how you can go about building custom server-side controls, for deployment in ASP.NET Web Pages.</p>
 <p>A custom control is simply a .NET class that inherits from the <code>Control</code> class in the .NET Namespace <code>System.Web.UI</code>, or inherits from a higher class that is itself based upon the <code>Control</code> class. Like any other .NET class, a custom control is implemented in an assembly, physically as a DLL file. This chapter explores three different ways to implement a custom control.</p>
 <p>The <code>Control</code> class provides a <code>Render</code> method whose job is to generate the HTML that defines appearance of the control. The first example, the <code>SimpleCtl</code> control, overrides the <code>Render</code> method to display a simple string "Hello World" in the browser.</p>
-<p>The <code>TemperatureConverterCtl1</code> control is an example of a compositional control, i.e. one that is composed of other standard controls packaged with special functionality. The <code>TemperatureConverterCtl2</code> control, uses the basic approach of the <code>SimpleCtl</code> control, but provides the same functionality as <code>TemperatureConverterCtl1</code>. The <code>TemperatureConverterCtl3</code> control illustrates how to generate events for the hosting page to catch and process.</p>
+<p>The <code>TemperatureConverterCtl1</code> control is an example of a compositional control, that is, one that is composed of other standard controls packaged with special functionality. The <code>TemperatureConverterCtl2</code> control, uses the basic approach of the <code>SimpleCtl</code> control, but provides the same functionality as <code>TemperatureConverterCtl1</code>. The <code>TemperatureConverterCtl3</code> control illustrates how to generate events for the hosting page to catch and process.</p>
 <p>These examples, which are based upon a series of articles called <em>Advanced ASP.NET Server-Side Controls</em> by George Shepherd that appeared in the <em>msdn magazine</em> (October 2000, January 2001 and March 2001 issues), are implemented as Dyalog classes in a namespace called <code>DyalogSamples</code> in the workspace <code>samples\asp.net\temp\bin\temp.dws.</code> The corresponding .NET Assembly <code>samples\asp.net\temp\bin\temp.dll</code> was generated from this workspace.
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="s2">"C:\Program Files (x86)\Dyalog\Dyalog APL 15.0 Unicode\Samples\asp.net\temp\bin\temp.dws"</span>
 </code></pre></div>

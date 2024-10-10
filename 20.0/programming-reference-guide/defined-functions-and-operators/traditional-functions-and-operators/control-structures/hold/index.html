@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -17005,6 +16982,8 @@
       
         
       
+        
+      
     
     
     
@@ -18798,6 +18777,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64167,7 +64167,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71390,7 +71390,7 @@
 
 <p><a class="noprint" href="../hold-statement-definition/">Formal Definition</a></p>
 <p>Whenever more than one thread tries to access the same piece of data or shared resource at the same time, you need some type of synchronisation to control access to that data. This is provided by <code>:Hold</code>.</p>
-<p><code>:Hold</code> provides a mechanism to control thread entry into a critical section of code. <code>tkns</code> must be a simple character vector or scalar, or a vector of character vectors. <code>tkns</code> represents a set of "tokens", all of which must be acquired before the thread can continue into the control structure. <code>:Hold</code> is analogous to the component file system <code>⎕FHOLD</code> which is used to synchronise access between <strong>processes</strong>. See also <a href="../../../../../language-reference-guide/system-functions/fhold">File Hold</a>.</p>
+<p><code>:Hold</code> provides a mechanism to control thread entry into a critical section of code. <code>tkns</code> must be a simple character vector or scalar, or a vector of character vectors. <code>tkns</code> represents a set of "tokens", all of which must be acquired before the thread can continue into the control structure. <code>:Hold</code> is analogous to the component file system <code>⎕FHOLD</code> which is used to synchronise access between <strong>processes</strong>. See also <a href="../../../../../release-notes-v19-0/language-reference-changes/fhold">File Hold</a>.</p>
 <p>Within the whole active workspace, a token with a particular value may be held only once. If the hold succeeds, the current thread <em>acquires</em> the tokens and execution continues with the first phrase in the control structure. On exit from the structure, the tokens are released for use by other threads. If the hold fails, because one or more of the tokens is already in use:</p>
 <ol>
 <li>If there is no <code>:Else</code> clause in the control structure, execution of the thread is blocked until the requested tokens become available.</li>

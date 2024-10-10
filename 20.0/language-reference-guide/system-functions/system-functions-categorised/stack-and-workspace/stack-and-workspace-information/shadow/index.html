@@ -740,8 +740,6 @@
       
         
       
-        
-      
     
     
     
@@ -845,27 +843,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1379,7 +1356,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16941,6 +16918,8 @@
       
         
       
+        
+      
     
     
     
@@ -18734,6 +18713,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64103,7 +64103,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71307,7 +71307,7 @@
 
 <h1 class="heading"><span class="name">Shadow Name</span> <span class="command">{R}←⎕SHADOW Y</span></h1>
 
-<p><code>Y</code> must be a simple character scalar, vector or matrix or a vector of nested scalar  of character vectors identifying one or more APL names.  For a simple vector <code>Y</code>, names are separated by one or more blanks.  For a matrix <code>Y</code>, each row is taken to be a single name.</p>
+<p><code>Y</code> must be a simple character scalar, vector, or matrix, or a nested vector of character vectors or scalar characters, identifying one or more APL names.  For a simple vector <code>Y</code>, names are separated by one or more blanks.  For a matrix <code>Y</code>, each row is taken to be a single name.</p>
 <p>Each valid name in <code>Y</code> is shadowed in the most recently invoked defined function or operator, as though it were included in the list of local names in the function or operator header.  The class of the name becomes 0 (undefined).  The name ceases to be shadowed when execution of the shadowing function or operator is completed.  Shadow has no effect when the state indicator is empty.</p>
 <p>The shy result <code>R</code> is a Boolean vector of 1s with the same length as the number of names in <code>Y</code>.</p>
 <p>If a name is ill-formed, or if it is the name of a system constant or system function, <code>DOMAIN ERROR</code> is reported.</p>

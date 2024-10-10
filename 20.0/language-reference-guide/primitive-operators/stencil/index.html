@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16952,6 +16929,8 @@
       
         
       
+        
+      
     
     
     
@@ -18745,6 +18724,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64183,7 +64183,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71424,7 +71424,7 @@
 
 <p><strong>Classic Edition:</strong>  the symbol <code>⌺</code> is not available in Classic Edition, and the Stencil operator is instead represented by <code>⎕U233A</code>.</p>
 <p>Stencil is used in image processing, artificial neural networks, computational fluid dynamics, cellular automata, and many other fields of application. The computation is sometimes referred to as tessellation, moving window, or <a href="https://en.wikipedia.org/wiki/Stencil_code">stencil code</a>. This operator applies the left operand function <code>f</code> to a series of (possibly overlapping) rectangles in the array <code>Y</code>.</p>
-<p>In general, the right operand <code>g</code> is a 2- row matrix of positive non-zero integers with up to <code>⍴⍴Y</code> columns. The first row contains the rectangle sizes, the second row the <em>movements</em> i.e. how much to move the rectangle in each step. If <code>g</code> is a scalar or vector it specifies the rectangle size and the movement defaults to 1.</p>
+<p>In general, the right operand <code>g</code> is a 2- row matrix of positive non-zero integers with up to <code>⍴⍴Y</code> columns. The first row contains the rectangle sizes, the second row the <em>movements</em> that is, how much to move the rectangle in each step. If <code>g</code> is a scalar or vector it specifies the rectangle size and the movement defaults to 1.</p>
 <p>The predominant case uses a rectangle size which is odd and a movement of 1.</p>
 <p>Rectangles are <em>centred</em> on successive elements of <code>Y</code> and (unless the rectangle size is 1), padded with fill elements.</p>
 <p>The first rectangle is centred on the first element of <code>Y</code> preceded by the appropriate number of fill elements. Subsequent rectangles are centred on subsequent elements of <code>Y</code> according to the size of the movement, and padded before or after as appropriate. When the movement is 1, each element of <code>Y</code> in its turn is the middle of a rectangle.</p>

@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -17267,6 +17244,8 @@
       
         
       
+        
+      
     
     
     
@@ -19060,6 +19039,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64429,7 +64429,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71918,11 +71918,11 @@
 <p>A <strong>component file</strong> is a data file maintained by Dyalog APL. It contains a series of APL arrays known as <strong>components</strong> which are accessed by reference to their relative position or <strong>component number</strong> within the file. Component files are just like other data files and there are no special restrictions imposed on names or sizes.</p>
 <p>A set of system functions is supplied to perform a range of file operations. These provide facilities to create or delete files, and to read and write components. Facilities are also provided for multi-user access, including the capability to determine who may do what, and file locking for concurrent updates.</p>
 <h2 id="tying-and-untying-files">Tying and Untying Files</h2>
-<p>To access an existing component file it must be <strong>tied</strong>, i.e. opened for use. The tie may be <strong>exclusive</strong> (single-user access) or <strong>shared</strong> (multi-user access). A file is <strong>untied</strong>, i.e. closed, using <code>⎕FUNTIE</code> or on terminating Dyalog APL. File ties survive <code>)LOAD</code>, <code>⎕LOAD</code> and <code>)CLEAR</code> operations.</p>
+<p>To access an existing component file it must be <strong>tied</strong>, that is, opened for use. The tie may be <strong>exclusive</strong> (single-user access) or <strong>shared</strong> (multi-user access). A file is <strong>untied</strong>, that is, closed, using <code>⎕FUNTIE</code> or on terminating Dyalog APL. File ties survive <code>)LOAD</code>, <code>⎕LOAD</code> and <code>)CLEAR</code> operations.</p>
 <h2 id="tie-numbers">Tie Numbers</h2>
 <p>A file is tied by associating a <strong>file name</strong> with a <strong>tie number</strong>. Tie numbers are integers in the range 1 - 2147483647 and, you can supply one explicitly, or have the interpreter allocate the next available one by specifying 0. The system functions which tie files return the tie number as a "shy" result.</p>
 <h2 id="creating-and-removing-files">Creating and Removing Files</h2>
-<p>A component file is created using <code>⎕FCREATE</code> which automatically ties the file for exclusive use. A newly created file is empty, i.e. contains 0 components. A file is removed with <code>⎕FERASE</code>, although it must be exclusively tied to do so.</p>
+<p>A component file is created using <code>⎕FCREATE</code> which automatically ties the file for exclusive use. A newly created file is empty, that is, contains 0 components. A file is removed with <code>⎕FERASE</code>, although it must be exclusively tied to do so.</p>
 <h2 id="adding-and-removing-components">Adding and Removing Components</h2>
 <p>Components are added to a file using <code>⎕FAPPEND</code> and removed using <code>⎕FDROP</code>. Component numbers are allocated consecutively starting at 1. Thus a new component added by <code>⎕FAPPEND</code> is given a component number which is one greater than that of the last component in the file. Components may be removed from the beginning or end of the file, but not from the middle. Component numbers are therefore contiguous.</p>
 <h2 id="reading-and-writing-components">Reading and Writing Components</h2>
@@ -71930,7 +71930,7 @@
 <h2 id="component-information">Component Information</h2>
 <p>In addition to the data held in a component, the user ID that wrote it and the time at which it was written is also recorded.</p>
 <h2 id="multi-user-access">Multi-User Access</h2>
-<p><code>⎕FSTIE</code> ties a file for <strong>shared</strong> (i.e. multi-user) access. This kind of access would be appropriate for a multi-user UNIX system, a network of single user PCs, or multiple APL tasks under Microsoft Windows.</p>
+<p><code>⎕FSTIE</code> ties a file for <strong>shared</strong> (that is, multi-user) access. This kind of access would be appropriate for a multi-user UNIX system, a network of single user PCs, or multiple APL tasks under Microsoft Windows.</p>
 <p><code>⎕FHOLD</code> provides the means for the user to temporarily prevent other co-operating users from accessing one or more files. This is necessary to allow a single logical update involving more than one component, and perhaps more than one file, to be completed without interference from another user. <code>⎕FHOLD</code> is applicable to External Variables as well as Component Files</p>
 <h2 id="file-access-control">File Access Control</h2>
 <p>There are two levels of file access control. As a regular file, the operating system read/write controls for owner and other users apply. In addition, Dyalog manages its own access controls using the <strong>access matrix</strong>. This is an integer matrix with 3 columns and any number of rows. Column 1 contains user numbers, column 2 an encoding of permitted file operations, and column 3 passnumbers. Each row specifies which file operations may be performed by which user(s) with which passnumber. A value of 0 in column 1 specifies all users. A value of <code>¯1</code> in column 2 specifies all file operations. A value of 0 in column 3 specifies no passnumber. If any row of the access matrix contains <code>(0 ¯1 0)</code> it specifies that all users may perform all file operations with no passnumber.</p>

@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16945,6 +16922,8 @@
       
         
       
+        
+      
     
     
     
@@ -18738,6 +18717,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64107,7 +64107,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71323,7 +71323,7 @@
 
 <h1> Menus in MDI Applications</h1>
 
-<p>A feature of MDI behaviour is that SubForms do not display menu bars. However, if you create a MenuBar object for a SubForm, that object will be displayed as the menu bar of the parent Form whenever the SubForm has the focus. If there are no SubForms or if the SubForm with the focus does not own a MenuBar, the MenuBar of the parent Form is displayed. This mechanism provides one way of achieving the desired effect, namely that the menu bar displayed is appropriate for the type of document represented by the SubForm that has the focus. However, if you have a  large number of SubForms of the same type (i.e. which share the same menu bar) you must defined identical MenuBar objects for all of them.</p>
+<p>A feature of MDI behaviour is that SubForms do not display menu bars. However, if you create a MenuBar object for a SubForm, that object will be displayed as the menu bar of the parent Form whenever the SubForm has the focus. If there are no SubForms or if the SubForm with the focus does not own a MenuBar, the MenuBar of the parent Form is displayed. This mechanism provides one way of achieving the desired effect, namely that the menu bar displayed is appropriate for the type of document represented by the SubForm that has the focus. However, if you have a  large number of SubForms of the same type (that is, which share the same menu bar) you must defined identical MenuBar objects for all of them.</p>
 <p>An alternative approach is to define separate MenuBar objects as children of the parent Form, only one of which is visible. Then you simply attach a callback function to the GotFocus event for each SubForm that makes the appropriate MenuBar visible. This approach means that you need only define MenuBar objects for each different <em>type</em> of SubForm, rather than for every one.</p>
 <p>It is possible to mix these techniques, so that the MenuBar displayed is either the result of your callback function making it visible, or because a SubForm has its own MenuBar object defined and received the focus.</p>
 <p>Note that when the user maximises a SubForm, its system menu button and restore button are displayed in the parent Form's menu bar. It is therefore essential that you ensure that your application provides such a menu bar at all times. Otherwise, when your user maximises a SubForm there is no way to reverse it.</p>

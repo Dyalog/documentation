@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16945,6 +16922,8 @@
       
         
       
+        
+      
     
     
     
@@ -18738,6 +18717,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64125,7 +64125,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71342,8 +71342,8 @@
 <p>RunMode is a character vector and may be <code>'MultiUse'</code> (the default),  <code>'SingleUse'</code> or <code>'RunningObject'</code>.</p>
 <p>If RunMode is <code>'MultiUse'</code>, OLE will load a single copy of Dyalog APL and the appropriate workspace into memory. All OLE client processes will communicate with the same Dyalog APL session.</p>
 <p>Note that in this case, each OLE client is actually connected to a separate <em>instance</em> of the corresponding APL namespace. That is to say, each client will appear to have its own private copy of the namespace. However, the individual functions and variables in the namespace are not physically copied until they are changed. This means that, in general, OLE clients will share APL functions but have private copies of the namespace variables. However, please remember that global objects in the workspace or in other namespaces are not <em>instanced</em> and will effectively be shared by all clients although they are not directly accessible to them.</p>
-<p>If RunMode is <code>'SingleUse'</code>, OLE will load a separate copy of Dyalog APL and a separate copy of the appropriate workspace into memory for each OLE client. Each OLE client operates directly on the namespace associated with the object and not an <em>instance</em> of it.</p>
-<p>If RunMode is <code>'RunningObject'</code>, OLE will load a single copy of Dyalog APL and the appropriate workspace into memory. All OLE client processes will communicate with the same Dyalog APL session and indeed with the same namespace. The namespace is not <em>instanced</em> and all objects, including exported variables, are shared by all clients.</p>
+<p>If RunMode is <code>'SingleUse'</code>, OLE will load a separate copy of Dyalog and a separate copy of the appropriate workspace into memory for each OLE client. Each OLE client operates directly on the namespace associated with the object and not an <em>instance</em> of it.</p>
+<p>If RunMode is <code>'RunningObject'</code>, OLE will load a single copy of Dyalog and the appropriate workspace into memory. All OLE client processes will communicate with the same Dyalog session and indeed with the same namespace. The namespace is not <em>instanced</em> and all objects, including exported variables, are shared by all clients.</p>
 
 
 

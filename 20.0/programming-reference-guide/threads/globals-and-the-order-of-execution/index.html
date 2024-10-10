@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -17001,6 +16978,8 @@
       
         
       
+        
+      
     
     
     
@@ -18794,6 +18773,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64163,7 +64163,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71384,7 +71384,7 @@
 
 <h1> Globals and the Order of Execution</h1>
 
-<p>It is important to recognise that any reference or assignment to a global or semi-global object (including GUI objects) is <strong>inherently dangerous</strong> (i.e. a source of programming error) if more than one thread is running. Worse still, programming errors of this sort may not become apparent during testing because they are dependent upon random timing differences. Consider the following example:</p>
+<p>It is important to recognise that any reference or assignment to a global or semi-global object (including GUI objects) is <strong>inherently dangerous</strong> (that is, a source of programming error) if more than one thread is running. Worse still, programming errors of this sort may not become apparent during testing because they are dependent upon random timing differences. Consider the following example:</p>
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">BUG</span><span class="sr">;</span><span class="nv">SEMI_GLOBAL</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">SEMI_GLOBAL</span><span class="kd">←</span><span class="m">0</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">FOO</span><span class="na">&amp;</span><span class="w"> </span><span class="m">1</span>
@@ -71414,10 +71414,10 @@
 </code></pre></div>
 <p>This is because APL may switch from one thread to another between any two lines in a defined function. In practice, because APL gives each thread a significant time-slice, it is likely to execute many lines, maybe even hundreds of lines, in one thread before switching to another. However, you must not rely on this; <strong>thread-switching may occur at any time between lines in a defined function</strong>.</p>
 <p>Secondly, consider the possibility that APL switches from the <code>FOO</code> thread to the <code>GOO</code> thread after <code>FOO[1]</code>. If this happens, the value of <code>SEMI_GLOBAL</code> passed to <code>DO_SOMETHING</code> will be 1 and not 0. Here is another source of error.</p>
-<p>In fact, in this case, there are two ways to resolve the problem. To ensure that the value of <code>SEMI_GLOBAL</code> remains the same from <code>FOO[1]</code> to <code>FOO[2]</code>, you may use diamonds instead of separate statements, e.g.
+<p>In  this case, there are two ways to resolve the problem. To ensure that the value of <code>SEMI_GLOBAL</code> remains the same from <code>FOO[1]</code> to <code>FOO[2]</code>, you can use diamonds instead of separate statements. For example:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="nv">SEMI_GLOBAL</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">DO_SOMETHING</span><span class="w"> </span><span class="nv">SEMI_GLOBAL</span>
 </code></pre></div>
-<p>Even better, although less efficient, you may use <code>:Hold</code> to synchronise access to the variable, for example:
+<p>Even better, although less efficient, you can use <code>:Hold</code> to synchronise access to the variable. For example:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FOO</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">Hold</span><span class="w"> </span><span class="s1">'SEMI_GLOBAL'</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">        </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="nv">SEMI_GLOBAL</span><span class="o">=</span><span class="m">0</span>

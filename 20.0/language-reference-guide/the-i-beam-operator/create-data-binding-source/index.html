@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16952,6 +16929,8 @@
       
         
       
+        
+      
     
     
     
@@ -18745,6 +18724,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64304,7 +64304,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71733,18 +71733,18 @@
 </code></pre></div>
 <p>In this example, the binding type of the variable <code>itemsSource</code> will be System.Collection, suitable for binding to the ItemSource property of an ItemsControl.</p>
 <h3 id="binding-a-numeric-vector">Binding a Numeric Vector</h3>
-<p>By default, a numeric vector is bound in the same way as a vector of character vectors, i.e. as a System.Collection, suitable for binding to the ItemSource property of an ItemsControl.
+<p>By default, a numeric vector is bound in the same way as a vector of character vectors, that is, as a System.Collection, suitable for binding to the ItemSource property of an ItemsControl.
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'yearsSource'</span>
 <span class="w">      </span><span class="nv">yearsSource</span><span class="kd">←</span><span class="m">2000</span><span class="o">+⍳</span><span class="m">20</span>
 <span class="w">      </span><span class="nv">bindSource</span><span class="kd">←</span><span class="m">2015</span><span class="na">⌶</span><span class="s1">'yearsSource'</span>
 </code></pre></div>
-<p>In principle, a numeric vector may alternatively be bound to a WPF property that requires a 1-dimensional numeric array, by specifying the appropriate data type (e.g. Int32, Double) for the array as the left argument. For example:
+<p>In principle, a numeric vector may alternatively be bound to a WPF property that requires a 1-dimensional numeric array, by specifying the appropriate data type (for example, Int32, Double) for the array as the left argument. For example:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'arraySource'</span>
 <span class="w">      </span><span class="nv">arraySource</span><span class="kd">←</span><span class="m">42</span><span class="w"> </span><span class="m">24</span>
 <span class="w">      </span><span class="nv">bindSource</span><span class="kd">←</span><span class="nv">Int32</span><span class="w"> </span><span class="p">(</span><span class="m">2015</span><span class="na">⌶</span><span class="p">)</span><span class="s1">'arraySource'</span>
 </code></pre></div>
 <h3 id="binding-a-vector-of-net-objects">Binding a Vector of .NET Objects</h3>
-<p>A vector of .NET objects is bound in the same way as a vector of character vectors, i.e. as a System.Collection, suitable for binding to the ItemSource property of an ItemsControl.
+<p>A vector of .NET objects is bound in the same way as a vector of character vectors, that is, as a System.Collection, suitable for binding to the ItemSource property of an ItemsControl.
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="nv">Easter</span>
 <span class="m">2015</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">12</span>
 <span class="m">2016</span><span class="w"> </span><span class="m">5</span><span class="w">  </span><span class="m">1</span>

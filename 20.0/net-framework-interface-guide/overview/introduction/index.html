@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64112,7 +64112,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71438,27 +71438,27 @@
 
 <h1> Introduction</h1>
 
-<p>This manual describes the Dyalog APL interface to the Microsoft .NET Framework. This document does not attempt to explain the features of the .NET Framework, except in terms of their APL interfaces. For information concerning the .NET Framework, see the documentation, articles and help files, which are available from Microsoft and other sources.</p>
+<p>This manual describes the Dyalog interface to the Microsoft .NET Framework. This document does not attempt to explain the features of the .NET Framework, except in terms of their APL interfaces. For information concerning the .NET Framework, see the documentation, articles and help files, which are available from Microsoft and other sources.</p>
 <p>The .NET interface features include:</p>
 <ul>
-<li>The ability to create and use objects that are instances of .NET Classes</li>
-<li>The ability to define new .NET Classes in Dyalog APL that can then be used from other .NET languages such as C# and VB.NET.</li>
-<li>The ability to write Web Services in Dyalog APL.</li>
-<li>The ability to write ASP.NET web pages in Dyalog APL</li>
+<li>the ability to create and use objects that are instances of .NET Classes.</li>
+<li>the ability to define new .NET Classes in Dyalog that can then be used from other .NET languages such as C# and VB.NET.</li>
+<li>the ability to write Web Services in Dyalog.</li>
+<li>the ability to write ASP.NET web pages in Dyalog.</li>
 </ul>
 <h2 id="net-classes">.NET Classes</h2>
 <p>The .NET Framework defines a so-called Common Type System. This provides a set of data types, permitted values, and permitted operations. All cooperating languages are supposed to use these types so that operations and values can be checked (by the Common Language Runtime) at run time. The .NET Framework provides its own built-in class library that provides all the primitive data types, together with higher-level classes that perform useful operations.</p>
-<p>Dyalog APL allows you to create and use instances of .NET Classes, thereby gaining access to a huge amount of component technology that is provided by the .NET Framework.</p>
-<p>It is also possible to create Class Libraries (Assemblies) in Dyalog APL. This allows you to export APL technology packaged as .NET Classes, which can then be used from other .NET programming languages such as C# and Visual Basic.</p>
-<p>The ability to create and use classes in Dyalog APL also provides you with the possibility to design APL applications built in terms of APL (and non-APL) components. Such an approach can provide benefits in terms of reliability, software management and re-usage, and maintenance.</p>
+<p>Dyalog allows you to create and use instances of .NET Classes, thereby gaining access to a huge amount of component technology that is provided by the .NET Framework.</p>
+<p>It is also possible to create Class Libraries (Assemblies) in Dyalog. This allows you to export APL technology packaged as .NET Classes, which can then be used from other .NET programming languages such as C# and Visual Basic.</p>
+<p>The ability to create and use classes in Dyalog also provides you with the possibility to design APL applications built in terms of APL (and non-APL) components. Such an approach can provide benefits in terms of reliability, software management and re-usage, and maintenance.</p>
 <h2 id="gui-programming-with-systemwindowsforms">GUI Programming with System.Windows.Forms</h2>
-<p>One of the most important .NET class libraries is called <code>System.Windows.Forms</code>, which is designed to support traditional Windows GUI programming. Visual Studio .NET, which is used to develop GUI applications in Visual Basic and C#, produces code that uses <code>System.Windows.Forms</code>. Dyalog APL allows you to use <code>System.Windows.Forms</code>, instead of (and in some cases, in conjunction with) the built-in Dyalog APL GUI objects such as the Dyalog APL Grid, to program the Graphical User Interface.</p>
+<p>One of the most important .NET class libraries is called <code>System.Windows.Forms</code>, which is designed to support traditional Windows GUI programming. Visual Studio .NET, which is used to develop GUI applications in Visual Basic and C#, produces code that uses <code>System.Windows.Forms</code>. Dyalog allows you to use <code>System.Windows.Forms</code>, instead of (and in some cases, in conjunction with) the built-in Dyalog GUI objects such as the Dyalog Grid, to program the Graphical User Interface.</p>
 <h2 id="web-services">Web Services</h2>
 <p>Web Services are programmable components that can be called by different applications. Web Services have the same goal as COM, but are technically platform independent and use HTTP as the communications protocol with an application. A Web Service can be used either internally by a single application or exposed externally over the Internet for use by any number of applications.</p>
 <h2 id="aspnet-and-webforms">ASP.NET and WebForms</h2>
 <p>ASP.NET is a new version of Microsoft Active Server Page technology that makes it easier to develop and deploy dynamic Web applications. To supplement ASP.NET, there are some important new .NET class libraries, including WebForms which allow you to build browser-based user interfaces using the same object-oriented mechanism as you use <code>Windows.Forms</code> for the Windows GUI. The use of these component libraries replaces basic HTML programming.</p>
-<p>ASP.NET pages are server-side scripts, that are usually written in C# or Visual Basic. However, you can also employ Dyalog APL directly as a scripting language (<em>APLScript</em>) to write ASP.NET web pages. In addition, you can call Dyalog APL workspaces directly from ASP.NET pages, and write custom server-side controls that can be incorporated into ASP.NET pages.</p>
-<p>These features give you a wide range of possibilities for using Dyalog APL to build browser-based applications for the Internet, or for your corporate Intranet.</p>
+<p>ASP.NET pages are server-side scripts, that are usually written in C# or Visual Basic. However, you can also employ Dyalog directly as a scripting language (<em>APLScript</em>) to write ASP.NET web pages. In addition, you can call Dyalog workspaces directly from ASP.NET pages, and write custom server-side controls that can be incorporated into ASP.NET pages.</p>
+<p>These features give you a wide range of possibilities for using Dyalog to build browser-based applications for the Internet, or for your corporate Intranet.</p>
 
 
 

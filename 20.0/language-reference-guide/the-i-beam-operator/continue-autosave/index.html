@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16947,6 +16924,8 @@
       
         
       
+        
+      
     
     
     
@@ -18740,6 +18719,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64119,7 +64119,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71323,7 +71323,8 @@
 
 <h1 class="heading"><span class="name">Continue Autosave</span> <span class="command">{R}←2704⌶Y</span></h1>
 
-<p>This function enables or disables the automatic saving of a <code>CONTINUE</code> workspace when Dyalog exits. By default this is disabled when Dyalog starts and must be explicitly enabled using this function.</p>
+<p>This function enables or disables the automatic saving of a <code>CONTINUE</code> workspace when Dyalog exits under certain circumstances.</p>
+<p>By default this is disabled when Dyalog starts and must be explicitly enabled using this function.</p>
 <p><code>Y</code> is an integer defined as follows:</p>
 <table>
 <thead>
@@ -71346,8 +71347,7 @@
 <p>The shy result <code>R</code> is the previous value of this setting.</p>
 <p>Circumstances when Dyalog automatically saves a <code>CONTINUE</code> workspace include:</p>
 <ul>
-<li>a run-time violation. This is most frequently caused by an untrapped APL error which causes Dyalog to return to session-input mode (i.e. an application programming fault).</li>
-<li>a hang-up signal.</li>
+<li>a run-time violation. This is most frequently caused by an untrapped APL error which causes Dyalog to return to session-input mode (that is, an application programming fault), and APL was started with the "+q" command line option or input and output were redirected at the command line.</li>
 </ul>
 
 

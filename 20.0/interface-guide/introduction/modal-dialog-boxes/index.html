@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64112,7 +64112,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71385,7 +71385,7 @@
 <h1> Modal Dialog Boxes</h1>
 
 <p>Up to now, it has been assumed that your user has constant access to all of the interface features and controls that you have provided. The user is in charge; your application merely responds to his requests.</p>
-<p>Although this is generally considered desirable, there are times when a particular operation must be allowed to complete before anything else can be done. For example, an unexpected error may occur and the user must decide upon the next course of action (e.g. Continue, Restart, Quit). In these situations, a <em>modal</em> dialog box is required. A modal dialog box is one to which the user must respond before the application will continue. While the modal dialog box is in operation, interaction with all other objects is inhibited.</p>
+<p>Although this is generally considered desirable, there are times when a particular operation must be allowed to complete before anything else can be done. For example, an unexpected error may occur and the user must decide upon the next course of action (for example,  Continue, Restart, Quit). In these situations, a <em>modal</em> dialog box is required. A modal dialog box is one to which the user must respond before the application will continue. While the modal dialog box is in operation, interaction with all other objects is inhibited.</p>
 <p>A modal dialog box is simply achieved by calling <code>⎕DQ</code> with just the name of the corresponding Form in its argument. This can be done from within a callback function or indeed from any point in an application. To make the local <code>⎕DQ</code> terminate, you may specify an action code of 1 for an event. Alternatively, if you wish to make exclusive use of callback functions to process events, you can cause the <code>⎕DQ</code> to terminate by erasing the Form from a callback function.</p>
 <p>For example, suppose that you want the user to close the dialog box by clicking an "OK" button. You would specify the Event property for the Button as:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'Select'</span><span class="w"> </span><span class="s1">'EXIT'</span><span class="p">)</span>

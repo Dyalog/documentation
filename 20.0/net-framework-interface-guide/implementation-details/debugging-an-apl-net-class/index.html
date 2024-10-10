@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64112,7 +64112,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71447,7 +71447,7 @@
 <span class="o">&lt;</span><span class="na">/</span><span class="nv">script</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>As an alternative, you can always insert a deliberate error into your code!</p>
-<p>Finally, you can usually force a suspension by generating a Weak Interrupt. This is done from the pop-up menu on the APL icon in the System Tray that is associated with the full development version of the Dyalog DLL. Note that selecting Weak Interrupt from this menu will not have an immediate effect, but it sets a flag that will cause Dyalog APL to suspend when it next executes a line of APL code. You will need to activate your object in some way, e.g. by calling a method, for this to occur. Note that this technique may not work if the Dyalog DLL is busy because a thread switch automatically resets the Weak Interrupt flag. In these circumstances, try again.</p>
+<p>Finally, you can usually force a suspension by generating a Weak Interrupt. This is done from the pop-up menu on the APL icon in the System Tray that is associated with the full development version of the Dyalog DLL. Note that selecting Weak Interrupt from this menu will not have an immediate effect, but it sets a flag that will cause Dyalog APL to suspend when it next executes a line of APL code. You will need to activate your object in some way, for example, by calling a method, for this to occur. Note that this technique may not work if the Dyalog DLL is busy because a thread switch automatically resets the Weak Interrupt flag. In these circumstances, try again.</p>
 <p>The run-time version of the Dyalog DLL does not display an icon in the System Tray.</p>
 <h2 id="using-the-session-editor-and-tracer">Using the Session, Editor and Tracer</h2>
 <p>When an DYALOG.NET object suspends execution, all other active APL .NET objects bound to the full development version of the Dyalog DLL that are currently being executed by the same client application will also suspend. Furthermore, all the classes currently being hosted by the Dyalog DLL are visible to the APL developer whether active (an instance is currently being executed) or not. Note that if a client application, such as ASP.NET, is also hosting APL .NET objects bound to the <em>runtime</em> version of the Dyalog DLL, these objects will be hosted in a separate workspace attached to the run-time version of the Dyalog DLL and will not be visible to the developer.</p>

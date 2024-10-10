@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64112,7 +64112,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71486,7 +71486,7 @@
 <span class="w">     </span><span class="nv">OpenDatabase</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'c:\example.mdb'</span><span class="c1">⍝any value of ⎕WX</span>
 </code></pre></div>
 <h2 id="arrays-and-pointers">Arrays and Pointers</h2>
-<p>Many parameters to OLE methods are specified by pointers. If, for example, the parameter type is VT_BSTR, it means that the calling routine must supply a pointer to (i.e. the address of) a character string.</p>
+<p>Many parameters to OLE methods are specified by pointers. If, for example, the parameter type is VT_BSTR, it means that the calling routine must supply a pointer to (that is, the address of) a character string.</p>
 <p>Similarly, if the parameter type is defined to be VT_VARIANT, it means that the parameter is the address of an arbitrary array (the VT_VARIANT data type actually maps nicely onto a Dyalog APL nested array).</p>
 <p>The rule is that if a pointer is required, APL will provide it automatically; you do not have to do so. Instead, all you do is supply the value.</p>
 <h2 id="optional-parameters">Optional Parameters</h2>

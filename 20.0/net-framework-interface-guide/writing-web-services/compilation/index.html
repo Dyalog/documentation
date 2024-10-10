@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16945,6 +16922,8 @@
       
         
       
+        
+      
     
     
     
@@ -18738,6 +18717,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64107,7 +64107,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71323,8 +71323,8 @@
 
 <h1> Compilation</h1>
 
-<p>When the Web Service, specified by the <code>.asmx</code> file, is called <strong>for the first time</strong>, ASP.NET invokes the appropriate language compiler (in this case, the Dyalog APL Script compiler) whose job is to produce an Assembly that defines and describes a class. When the Web Service is used subsequently, the request is satisfied by creating and using an instance of the class. However, ASP.NET detects if the <code>.asmx</code> script has been modified, and recompiles it in this case.</p>
-<p>The Dyalog APL Script compiler creates a <code>DLL</code> containing a workspace, which itself contains the Web Service class. The class contains all the functions, which are defined within the script, together with any variables that were established by expressions in the script. A single function comprises all the statements enclosed within a pair of del (<code>∇</code>) symbols.</p>
+<p>When the Web Service, specified by the <code>.asmx</code> file, is called <strong>for the first time</strong>, ASP.NET invokes the appropriate language compiler (in this case, the Dyalog Script compiler) whose job is to produce an Assembly that defines and describes a class. When the Web Service is used subsequently, the request is satisfied by creating and using an instance of the class. However, ASP.NET detects if the <code>.asmx</code> script has been modified, and recompiles it in this case.</p>
+<p>The Dyalog Script compiler creates a <code>DLL</code> containing a workspace, which itself contains the Web Service class. The class contains all the functions, which are defined within the script, together with any variables that were established by expressions in the script. A single function comprises all the statements enclosed within a pair of del (<code>∇</code>) symbols.</p>
 <p>For example, the following script would define a class, instances of which would run using <code>⎕ML←2</code>, containing a single function <code>FOO</code> and a variable <code>X</code>.
 </p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">MyClass</span>
 <span class="w">   </span><span class="nf">⎕ML</span><span class="kd">←</span><span class="m">2</span>

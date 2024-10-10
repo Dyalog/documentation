@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16952,6 +16929,8 @@
       
         
       
+        
+      
     
     
     
@@ -18745,6 +18724,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64294,7 +64294,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71656,7 +71656,7 @@
 </ul>
 <h2 id="compression-option">Compression Option</h2>
 <p>Components are compressed using the <em>LZ4</em> compressor which delivers a medium level of compression, but is considered to be very fast compared to other algorithms.</p>
-<p>Compression is intended to deliver a performance gain reading and writing large components on fast computers with slow (e.g. network) file access. Conversely, on a slow computer with fast file access compression may actually reduce read/write performance. For this reason it is optional at the component level.</p>
+<p>Compression is intended to deliver a performance gain reading and writing large components on fast computers with slow (for example, network) file access. Conversely, on a slow computer with fast file access compression may actually reduce read/write performance. For this reason it is optional at the component level.</p>
 <p>The default for the <code>'Z'</code> property is 0 which means no compression; 1 means compression. When written, components are compressed or not according to the current value of the <code>'Z'</code> property. Changing this property does not change any components already in the file.</p>
 <p>A component file may therefore contain a mixture of normal and compressed components. Note that only the data in file components are compressed, the file access matrix and other header information is not compressed.</p>
 <p>When read, compressed components are decompressed regardless of the value of the <code>'Z'</code> property.</p>

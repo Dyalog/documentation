@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16957,6 +16934,8 @@
       
         
       
+        
+      
     
     
     
@@ -18750,6 +18729,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64119,7 +64119,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71328,7 +71328,7 @@
 </code></pre></div>
 <p>If no <code>path</code> is specified, the path is taken to be relative to the current script file or, if in a workspace script, the current working directory. Note that a leading <code>'./'</code> or <code>'.\'</code> in <code>path</code> is not  allowed, to avoid any potential confusion with "current directory".</p>
 <p><code>:Require</code> is a directive to the Editor (more specifically, to the internal mechanism that fixes a script as an object in the workspace) and can appear in any script containing APL code, but <strong>must</strong> precede all code in the script. <code>:Require</code> is thus not valid within a function, class, namespace or any other definition.</p>
-<p>The prefix <code>file://</code>  allows for the possibility of a future extension of <code>http://</code> and <code>ftp://</code>.</p>
+<p>The prefix <code>file://</code>  allows for the possibility of a future extension of <code>https://</code> and <code>ftp://</code>.</p>
 <p>In version 20.0 <code>⍝!:require</code> is a synonym for <code>:Require</code>.  This allows the user to create scripts which can be used in multiple versions of Dyalog; in 14.1 and earlier SALT parses <code>⍝!:require</code> statements and loads the appropriate files, in 20.0 it is the interpreter loads the file named in <code>⍝!:require</code> statements.   Dyalog intends to remove support for the <code>⍝!:require</code> statement from the interpreter in a future version. Note that unlike <code>:Require</code>, <code>⍝!:require</code> can appear within code.</p>
 
 

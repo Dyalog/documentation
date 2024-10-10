@@ -740,8 +740,6 @@
       
         
       
-        
-      
     
     
     
@@ -845,27 +843,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1379,7 +1356,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16941,6 +16918,8 @@
       
         
       
+        
+      
     
     
     
@@ -18734,6 +18713,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64103,7 +64103,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71316,7 +71316,7 @@
 </tbody>
 </table>
 <p><strong>Description</strong></p>
-<p>If enabled, this event is reported when the user clicks the Apply button in a <a href="../../objects/propertysheet/">PropertySheet</a>. Note however, that the event is actually reported by each of its <a href="../../objects/propertypage/">PropertyPage</a> objects whose Changed property is currently 1, i.e. the event is reported by each of the pages that the user has changed.</p>
+<p>If enabled, this event is reported when the user clicks the Apply button in a <a href="../../objects/propertysheet/">PropertySheet</a>. Note however, that the event is actually reported by each of its <a href="../../objects/propertypage/">PropertyPage</a> objects whose Changed property is currently 1, that is, the event is reported by each of the pages that the user has changed.</p>
 <p>The default processing for this event is to set the Changed property of the <a href="../../objects/propertypage/">PropertyPage</a> to 0. If you disable the event or return a 0 from a callback function, the Changed property is not reset. Note that the Apply button in a <a href="../../objects/propertysheet/">PropertySheet</a> is active if the value of the Changed property of <em>any</em> of the <a href="../../objects/propertypage/">PropertyPage</a> objects is 1.</p>
 <p>The event message reported as the result of <code>⎕DQ</code>, or supplied as the right argument to your callback function, is a 2-element vector as follows :</p>
 <table>

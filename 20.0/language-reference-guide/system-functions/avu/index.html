@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16952,6 +16929,8 @@
       
         
       
+        
+      
     
     
     
@@ -18745,6 +18724,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64246,7 +64246,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71519,7 +71519,7 @@
 </code></pre></div>
 <h2 id="rules-for-conversion-on-import">Rules for Conversion on Import</h2>
 <p>When the Unicode Edition imports APL objects from a non-Unicode source, function comments and character data of type 82 are converted to Unicode. When the Classic Edition imports APL objects from a Unicode source, this translation is performed in reverse.</p>
-<p>If the objects are imported from a Version 12.0 (or later) workspace (i.e. from a workspace that contains its own value of <code>⎕AVU</code>) the value of <code>#.⎕AVU</code> (the value of <code>⎕AVU</code> in the root) in the <em>source</em> workspace is used. Otherwise, such as when APL objects are imported from a pre-Version 12 workspace, from a component file, or from a TCP socket, the local value of <code>⎕AVU</code> in the <em>target</em> workspace is used.</p>
+<p>If the objects are imported from a Version 12.0 (or later) workspace (that is, from a workspace that contains its own value of <code>⎕AVU</code>) the value of <code>#.⎕AVU</code> (the value of <code>⎕AVU</code> in the root) in the <em>source</em> workspace is used. Otherwise, such as when APL objects are imported from a pre-Version 12 workspace, from a component file, or from a TCP socket, the local value of <code>⎕AVU</code> in the <em>target</em> workspace is used.</p>
 <h2 id="rules-for-conversion-on-export">Rules for Conversion on Export</h2>
 <p>When the Unicode Edition exports APL objects to a non-Unicode destination, such as a non-Unicode Component File or non-Unicode TCPSocket Object, function comments (in <code>⎕OR</code>s) and character data of type 82 are converted to <code>⎕AV</code> indices using the local value of <code>⎕AVU</code>.</p>
 <p>When the Classic Edition exports APL objects to a Unicode destination, such as a Unicode Component File or Unicode TCPSocket Object, function comments (in <code>⎕OR</code>s) and character data of type 82 are converted to Unicode using the local value of <code>⎕AVU</code>.</p>

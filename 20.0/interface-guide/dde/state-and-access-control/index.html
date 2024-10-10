@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64112,7 +64112,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71785,17 +71785,17 @@
 </ul>
 <p>This works in practice as follows:</p>
 <h2 id="server-apl-client-apl">Server = APL, Client = APL</h2>
-<p>You made a general offer which has been accepted by another APL workspace, e.g.
+<p>You made a general offer which has been accepted by another APL workspace. For example:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'DDE:'</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'DATA'</span>
 </code></pre></div>
 <p>Two APL tasks always use a warm DDE link. Therefore, initially, both <code>⎕SVC</code>s are (0 0 0 0). Control is (optionally) imposed by both partners subsequently setting <code>⎕SVC</code>.</p>
 <h2 id="server-apl-client-another-application">Server = APL, Client = another application</h2>
-<p>You made a general offer which has been accepted by another application, e.g.
+<p>You made a general offer which has been accepted by another application. For example:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'DDE:'</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'DATA'</span>
 </code></pre></div>
 <p>The client application establishes the strength of the link (warm or hot). If it is a warm link, the initial value of the client's <code>⎕SVC</code> is (0 0 0 0) and, as the client has no means to change it itself, control may only be imposed by the server APL task. If the client establishes a hot link, its initial <code>⎕SVC</code> is (1 0 0 1). As it has no means to change it, and as the APL server task cannot (by definition) change it, the client's <code>⎕SVC</code> retains this setting for the duration of the conversation. (1 0 0 1) means that both partners are inhibited from setting the value of the shared variable twice in a row without an intervening use (or set) by the other. Given that the other application has requested a hot link (give me the value every time it changes) it is reasonable to assume that the application does not want to miss any values and will happily accept new data every time it is changed.</p>
 <h2 id="server-another-application-client-apl">Server = another application, Client = APL</h2>
-<p>You made a <strong>specific offer</strong> to another application, e.g.
+<p>You made a <strong>specific offer</strong> to another application. For example:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'DDE:EXCEL|SHEET1'</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'DATA R1C1:R3C4'</span>
 </code></pre></div>
 <p>In this case, APL as the client will request a warm DDE link. If the server fails to agree to this request, APL will ask for the current data value and, whether or not the server responds, will not establish a permanent link. Thus the only possibility for a permanent connection is a warm link. This in turn means that the server's <code>⎕SVC</code> will be (0 0 0 0). Furthermore, as the server has no means to change it, it's <code>⎕SVC</code> will remain (0 0 0 0) for the duration of the conversation. Control is therefore imposed solely by APL.</p>

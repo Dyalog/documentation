@@ -740,8 +740,6 @@
       
         
       
-        
-      
     
     
     
@@ -845,27 +843,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1379,7 +1356,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16941,6 +16918,8 @@
       
         
       
+        
+      
     
     
     
@@ -18734,6 +18713,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64103,7 +64103,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71321,7 +71321,7 @@
 <p>The CBits property represents the pixels that make up a picture..</p>
 <p>CBits provides an alternative representation to that provided by the <a href="../bits/">Bits</a> and <a href="../cmap/">CMap</a> properties which apply only to images with 256 colours or under. CBits may be used to represent both low-colour and high-colour images.</p>
 <p>CBits is a rank-2 numeric array whose dimensions represent the rows and columns of pixels in the image. The values in CBits represent the colour of each pixel and (for an <a href="../../objects/icon/">Icon</a>) its transparency.</p>
-<p>For a <a href="../../objects/bitmap/">Bitmap</a>, the colour value of each pixel is obtained by encoding the red, green and blue components, i.e.
+<p>For a <a href="../../objects/bitmap/">Bitmap</a>, the colour value of each pixel is obtained by encoding the red, green and blue components, that is:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">PIXEL</span><span class="kd">←</span><span class="m">256</span><span class="o">⊥</span><span class="nv">RED</span><span class="w"> </span><span class="nv">GREEN</span><span class="w"> </span><span class="nv">BLUE</span>
 </code></pre></div>
 <p>where <code>RED</code>, <code>GREEN</code> and <code>BLUE</code> are numbers in the range 0-255.</p>

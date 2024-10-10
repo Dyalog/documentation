@@ -745,8 +745,6 @@
       
         
       
-        
-      
     
     
     
@@ -850,27 +848,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1384,7 +1361,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16946,6 +16923,8 @@
       
         
       
+        
+      
     
     
     
@@ -18739,6 +18718,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64108,7 +64108,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71373,7 +71373,7 @@
 <p>The <a href="../../properties/align/">Align</a> property, which applies only to single-line Edit objects, specifies the vertical alignment of the text. It may be <code>'None'</code> (the default), <code>'Centre'</code> or <code>'Center'</code>. <a href="../../properties/align/">Align</a> may only be set when the object is created and may not subsequently be changed.</p>
 <p>If <a href="../../properties/fieldtype/">FieldType</a> is <code>'Char'</code> the <a href="../../properties/value/">Value</a> of the field is forced to be a character vector, even if the contents defined by its <a href="../../properties/text/">Text</a> property is entirely numeric.</p>
 <p>If <a href="../../properties/fieldtype/">FieldType</a> is <code>'Numeric'</code>, <code>'LongNumeric'</code>, <code>'Currency'</code>, <code>'Date'</code>, <code>'LongDate'</code>, or <code>'Time'</code> the <a href="../../properties/value/">Value</a> contains a number. For fields of these types, basic validation is provided during user input. The field is revalidated when the user attempts to "leave" it and at this point the object will generate a <a href="../../methodorevents/badvalue/">BadValue</a> event if its contents are inconsistent with its <a href="../../properties/fieldtype/">FieldType</a>.</p>
-<p>Note that when an Edit object is used as the <a href="../../properties/input/">Input</a> property of a <a href="../grid/">Grid</a>, it is the <a href="../../properties/value/">Value</a> of the Edit object (and not its <a href="../../properties/text/">Text</a> property) that is used to update the <a href="../../properties/values/">Values</a> property (i.e. the contents of) the <a href="../grid/">Grid</a> when the user moves away from the cell.</p>
+<p>Note that when an Edit object is used as the <a href="../../properties/input/">Input</a> property of a <a href="../grid/">Grid</a>, it is the <a href="../../properties/value/">Value</a> of the Edit object (and not its <a href="../../properties/text/">Text</a> property) that is used to update the <a href="../../properties/values/">Values</a> property (that is, the contents of) the <a href="../grid/">Grid</a> when the user moves away from the cell.</p>
 <p>The <a href="../../properties/maxlength/">MaxLength</a> property defines the maximum number of characters that the user may enter into the object.</p>
 <p>The <a href="../../properties/validifempty/">ValidIfEmpty</a> property may be 0 (the default) or 1 and specifies whether or not the Edit field is deemed to be valid if it is empty.</p>
 <p>The <a href="../../properties/password/">Password</a> property specifies the character that is displayed in response to the user typing a character. Normally, <a href="../../properties/password/">Password</a> is empty (the default) and the object displays the character that was entered. However, if you set <a href="../../properties/password/">Password</a> to (say) an asterisk (*) this symbol will be displayed instead of the characters the user has entered. Note however that the <a href="../../properties/text/">Text</a> and <a href="../../properties/value/">Value</a> properties will reflect what the user typed.</p>

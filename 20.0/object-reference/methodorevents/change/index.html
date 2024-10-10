@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16945,6 +16922,8 @@
       
         
       
+        
+      
     
     
     
@@ -18738,6 +18717,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64125,7 +64125,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71371,7 +71371,7 @@
 <p>If the focus is transferred to an external application, the third element is an empty vector.</p>
 <p>The default processing for this event is to allow the focus to change (if applicable) and to reset the internal flag that indicates that the data in the field has changed.</p>
 <p>If you disable the event by setting the "action" code to <code>¯1</code>, or inhibit it by returning 0 from a callback, the focus change (if applicable) is allowed to proceed, but the internal flag is not reset. If you wish to prevent the focus change you must explicitly reset the focus back onto the object that generated the event.</p>
-<p>If the event was generated because the user switched to another application, and you return a 0 from your callback (because the data was not valid), the flag marking the <a href="../../objects/combo/">Combo</a> or <a href="../../objects/edit/">Edit</a> as having been changed remains set. If the user returns to your application by re-focusing on the same <a href="../../objects/combo/">Combo</a> or <a href="../../objects/edit/">Edit</a>, nothing happens immediately, but because the field is marked as changed (the flag was not reset) you will get another Change event when he leaves it. However, if the user returns to your application in some other way, e.g. by focusing on another object or by selecting a <a href="../../objects/menuitem/">MenuItem</a>, a second Change event will be generated immediately.</p>
+<p>If the event was generated because the user switched to another application, and you return a 0 from your callback (because the data was not valid), the flag marking the <a href="../../objects/combo/">Combo</a> or <a href="../../objects/edit/">Edit</a> as having been changed remains set. If the user returns to your application by re-focusing on the same <a href="../../objects/combo/">Combo</a> or <a href="../../objects/edit/">Edit</a>, nothing happens immediately, but because the field is marked as changed (the flag was not reset) you will get another Change event when he leaves it. However, if the user returns to your application in some other way, for example, by focusing on another object or by selecting a <a href="../../objects/menuitem/">MenuItem</a>, a second Change event will be generated immediately.</p>
 <p>The following function illustrates how Change events can be processed. The <code>Check</code> function referred to in line[4] is assumed to return 1 if the data is valid and 0 if not.
 </p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="w">   </span><span class="nv">R</span><span class="kd">←</span><span class="nv">VALIDATE</span><span class="w"> </span><span class="nv">Msg</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">  </span><span class="c1">⍝ Validates field contents after Change event</span>

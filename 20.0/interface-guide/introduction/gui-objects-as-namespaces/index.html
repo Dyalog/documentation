@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64112,7 +64112,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71456,7 +71456,7 @@
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">UP</span><span class="na">.</span><span class="nv">onSelect</span><span class="kd">←</span><span class="s1">'CHANGE'</span><span class="w"> </span><span class="m">1</span>
 <span class="w">      </span><span class="nv">DOWN</span><span class="na">.</span><span class="nv">onSelect</span><span class="kd">←</span><span class="s1">'CHANGE'</span><span class="w"> </span><span class="m">¯1</span>
 </code></pre></div>
-<p>Notice that because you were in the <code>F1.CH</code> namespace when you made this association, the event will fire the function <code>CHANGE</code> in the <code>F1.CH</code> namespace and, furthermore, it will execute it within that namespace. Hence the names referenced by the function are the local names, i.e. the variable <code>COUNT</code> and the Label <code>CTR</code>, within that namespace.</p>
+<p>Notice that because you were in the <code>F1.CH</code> namespace when you made this association, the event will fire the function <code>CHANGE</code> in the <code>F1.CH</code> namespace and, furthermore, it will execute it within that namespace. Hence the names referenced by the function are the local names, that is, the variable <code>COUNT</code> and the Label <code>CTR</code>, within that namespace.</p>
 <p>So if you now switch back to the outer workspace
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span>
 <span class="c1">#</span>

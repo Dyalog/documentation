@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16952,6 +16929,8 @@
       
         
       
+        
+      
     
     
     
@@ -18745,6 +18724,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64136,7 +64136,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71953,8 +71953,8 @@
 <p>The function when called can then decode the pointer arguments appropriately using a <code>⎕NA</code> of <code>MEMCPY()</code>.</p>
 <h3 id="ansi-unicode-versions-of-library-calls">ANSI /Unicode Versions of Library Calls</h3>
 <p>Under Windows, most library functions that take character arguments, or return character results have two forms: one Unicode (Wide) and one ANSI. For example, a function such as <code>MessageBox()</code>, has two forms <code>MessageBoxA()</code> and <code>MessageBoxW()</code>. The <code>A</code> stands for ANSI (1-byte) characters, and the <code>W</code> for wide (2-byte Unicode) characters.</p>
-<p>It is essential that you associate the form of the library function that is appropriate for the Dyalog Edition you are using, i.e. <code>MessageBoxA()</code> for the Classic Edition, but <code>MessageBoxW()</code> for the Unicode Edition.</p>
-<p>Whilst this is convenient it is not complete. It is adequate for character arrays that consist of characters from UCS-2 (i.e. those that will fit in an array with a <code>⎕DR</code> of 80 or 160). If a more complete support is required then the W form of the function would be required and explicit use of UTF16 specified.</p>
+<p>It is essential that you associate the form of the library function that is appropriate for the Dyalog Edition you are using, that is, <code>MessageBoxA()</code> for the Classic Edition, but <code>MessageBoxW()</code> for the Unicode Edition.</p>
+<p>Whilst this is convenient it is not complete. It is adequate for character arrays that consist of characters from UCS-2 (that is, those that will fit in an array with a <code>⎕DR</code> of 80 or 160). If a more complete support is required then the W form of the function would be required and explicit use of UTF16 specified.</p>
 <p>To simplify writing portable code for both Editions, you may specify the character <code>*</code> instead of <code>A</code> or <code>W</code> at the end of a function name. This will be replaced by <code>A</code> in the Classic Edition and <code>W</code> in the Unicode Edition.</p>
 <p>The default name of the associated function (if no left argument is given to <code>⎕NA</code>), will be without the trailing letter (<code>MessageBox</code>).</p>
 <h3 id="type-definitions">Type Definitions</h3>
@@ -72272,7 +72272,7 @@ You should consult the documentation for the specific function that you intend t
 <li>Finally, notice that although we reserved space for 255 elements, the result reflects the length of the actual text (19).</li>
 </ol>
 <p>An alternative way of coding and using this function is to treat the second argument as an input/output array.</p>
-<p>e.g.
+<p>For example:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'I User32|GetWindowText* P =0T I'</span>
 <span class="w"> </span>
 <span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="nv">GetWindowText</span><span class="w"> </span><span class="nv">HNDL</span><span class="w"> </span><span class="p">(</span><span class="m">255</span><span class="o">⍴</span><span class="s1">' '</span><span class="p">)</span><span class="w"> </span><span class="m">255</span>

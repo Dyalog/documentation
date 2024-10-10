@@ -740,8 +740,6 @@
       
         
       
-        
-      
     
     
     
@@ -845,27 +843,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1379,7 +1356,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16941,6 +16918,8 @@
       
         
       
+        
+      
     
     
     
@@ -18734,6 +18713,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64103,7 +64103,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71309,7 +71309,7 @@
 
 <p><code>Y</code> may be any non-negative integer array. <code>R</code> has the same shape as <code>Y</code> at each depth.</p>
 <p>For each positive element of <code>Y</code> the corresponding element of <code>R</code> is an integer, pseudo-randomly selected from the integers <code>⍳Y</code> with each integer in this population having an equal chance of being selected.</p>
-<p>For each zero element of <code>Y</code>, the corresponding element of <code>R</code> is a pseudo-random floating-point value in the range 0 - 1, but excluding 0 and 1, i.e. <code>(0&lt;R[I]&lt;1)</code>.</p>
+<p>For each zero element of <code>Y</code>, the corresponding element of <code>R</code> is a pseudo-random floating-point value in the range 0 - 1, but excluding 0 and 1, that is, <code>(0&lt;R[I]&lt;1)</code>.</p>
 <p><code>⎕IO</code> and <code>⎕RL</code> are implicit arguments of Roll. A side effect of Roll is to change the value of <code>⎕RL</code>.</p>
 <p>Note that different random number generators are available; see <code>⎕RL</code> for more information.</p>
 <h2 class="example">Examples</h2>

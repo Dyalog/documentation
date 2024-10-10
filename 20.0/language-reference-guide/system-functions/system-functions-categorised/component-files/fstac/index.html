@@ -745,8 +745,6 @@
       
         
       
-        
-      
     
     
     
@@ -850,27 +848,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1384,7 +1361,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16946,6 +16923,8 @@
       
         
       
+        
+      
     
     
     
@@ -18739,6 +18718,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64108,7 +64108,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71331,7 +71331,7 @@
 
 <h2 id="access-code-8192">Access code 8192</h2>
 <p><code>Y</code> must be a simple integer scalar or 1 or 2 element vector containing the file tie number followed by an optional passnumber. If the passnumber is omitted it is assumed to be zero.</p>
-<p><code>X</code> must be a valid access matrix, i.e. a 3-column integer matrix with any number of rows.  The function sets access control for a set of specific users (1<sup>st</sup> column) and file operations (2<sup>nd</sup> column) with specified passnumbers ( 3<sup>rd</sup> column). Note that a 0 in the 1<sup>st</sup> column specifies <strong>all</strong> users, a <code>¯1</code> in the 2<sup>nd</sup> column specifies <strong>all</strong> file operations, and a <code>0</code> in the 3<sup>rd</sup> column specifies that <strong>no</strong> passnumber is required. For further details, see <a href="../../../../../programming-reference-guide/component-files/component-files/component-files">File Access Control</a>.</p>
+<p><code>X</code> must be a valid access matrix, that is, a 3-column integer matrix with any number of rows.  The function sets access control for a set of specific users (1<sup>st</sup> column) and file operations (2<sup>nd</sup> column) with specified passnumbers ( 3<sup>rd</sup> column). Note that a 0 in the 1<sup>st</sup> column specifies <strong>all</strong> users, a <code>¯1</code> in the 2<sup>nd</sup> column specifies <strong>all</strong> file operations, and a <code>0</code> in the 3<sup>rd</sup> column specifies that <strong>no</strong> passnumber is required. For further details, see <a href="../../../../../programming-reference-guide/component-files/component-files/component-files">File Access Control</a>.</p>
 <p>The shy result of <code>⎕FSTAC</code> is the tie number of the file.</p>
 <h1 class="example">Examples</h1>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'SALES'</span><span class="w"> </span><span class="nf">⎕FCREATE</span><span class="w"> </span><span class="m">1</span>

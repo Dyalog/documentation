@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16945,6 +16922,8 @@
       
         
       
+        
+      
     
     
     
@@ -18738,6 +18717,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64107,7 +64107,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71324,7 +71324,7 @@
 <h1> Drawing Graphics on a Grid</h1>
 
 <p>You may draw graphics on a Grid by creating graphical objects (Circle, Ellipse, Image, Marker, Poly, Rect and text) as <em>children</em> of the Grid.</p>
-<p>For the Grid (but only for the Grid) the Coord property may be set to <code>'Cell'</code> as an alternative to <code>'Prop'</code>, <code>'Pixel'</code> or <code>'User'</code>. This allows you to easily position graphical objects relative to individual cells or ranges of cells. The origin of the Grid (0,0) is deemed to be the top left corner of the data  (i.e. the area inside the row and column titles). In Cell co-ordinates, the value (1,1) is therefore the bottom right corner of the first cell. Regardless of the coordinate system, graphical objects scroll with the data.</p>
+<p>For the Grid (but only for the Grid) the Coord property may be set to <code>'Cell'</code> as an alternative to <code>'Prop'</code>, <code>'Pixel'</code> or <code>'User'</code>. This allows you to easily position graphical objects relative to individual cells or ranges of cells. The origin of the Grid (0,0) is deemed to be the top left corner of the data  (that is, the area inside the row and column titles). In Cell co-ordinates, the value (1,1) is therefore the bottom right corner of the first cell. Regardless of the coordinate system, graphical objects scroll with the data.</p>
 <p>The following example illustrates how to draw a box around the cells in rows 2 to 4 and columns 3 to 6.
 </p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Graphics on a Grid'</span><span class="p">(</span><span class="s1">'Coord'</span><span class="w"> </span><span class="s1">'Pixel'</span><span class="p">)</span>
 <span class="w"> </span><span class="s1">'F.G'</span><span class="nf">⎕WC</span><span class="s1">'Grid'</span><span class="p">(</span><span class="o">?</span><span class="m">10</span><span class="w"> </span><span class="m">10</span><span class="o">⍴</span><span class="m">100</span><span class="p">)(</span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="nv">F</span><span class="na">.</span><span class="nv">Size</span><span class="p">(</span><span class="s1">'CellWidths'</span><span class="w"> </span><span class="m">40</span><span class="p">)</span>

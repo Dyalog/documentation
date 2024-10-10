@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64112,7 +64112,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71421,8 +71421,8 @@
 <h1> Threading</h1>
 
 <p>The .NET Framework is inherently a multi-threaded environment. For example, ASP.NET runs its own thread pool from which it allocates system threads to its clients. Calls from ASP.NET into APL Web Pages and Web Services will typically be made from different system threads. This means that APL will receive calls from .NET while it is processing a previous call. The situation is further complicated when you write an APL Web Page that calls an APL Web Service, both of which may be hosted by a single Dyalog DLL inside ASP.NET. In these circumstances, ASP.NET may well allocate different system threads to the .NET calls, which are made into the two separate APL objects. Although in the first example (multiple clients) APL could theoretically impose its own queuing mechanism for incoming calls, it cannot do so in the second case without causing a deadlock situation.</p>
-<p>It is important to remember that whether running as DYALOG.EXE, or as the Dyalog DLL, the Dyalog APL interpreter executes in a <em>single system thread</em>. However, APL does provide the ability to run several APL threads at the same time. If you are unfamiliar with APL threads, see <em>Language Reference, Chapter 1</em> for an introduction to this topic.</p>
-<p>To resolve this situation, Dyalog APL automatically allocates APL threads to .NET system threads and maintains a thread synchronisation table so that calls on the same system thread are routed to the same APL thread, and vice versa. This is important because a GUI object (cf. <code>System.Winforms</code>) is owned by the system thread that created it and can only be accessed by that thread.</p>
+<p>It is important to remember that whether running as DYALOG.EXE, or as the Dyalog DLL, the Dyalog interpreter executes in a <em>single system thread</em>. However, APL does provide the ability to run several APL threads at the same time. If you are unfamiliar with APL threads, see <em>Language Reference, Chapter 1</em> for an introduction to this topic.</p>
+<p>To resolve this situation, Dyalog automatically allocates APL threads to .NET system threads and maintains a thread synchronisation table so that calls on the same system thread are routed to the same APL thread, and vice versa. This is important because a GUI object (cf. <code>System.Winforms</code>) is owned by the system thread that created it and can only be accessed by that thread.</p>
 <p>The way that system threads are allocated to APL threads differs between the case where APL is running as the primary executable (DYALOG.EXE) or as a DLL hosted by another program. The latter is actually the simpler of the two and will be considered first.</p>
 <h2 id="dyalog-dll-threading">DYALOG DLL Threading</h2>
 <p>In this case, all calls into the Dyalog DLL are initiated by Microsoft .NET.</p>
@@ -71431,11 +71431,11 @@
 <p>Notice that under normal circumstances, APL thread 0 is never used in the Dyalog DLL. It is only ever used if, during debugging, the APL programmer explicitly changes to thread 0 by executing <code>)TID 0</code> and then runs an expression.</p>
 <p>Periodically, APL checks the existence of all of the system threads in the internal thread table, and removes those entries that are no longer running. This prevents the situation arising that all APL threads are in use.</p>
 <h2 id="dyalogexe-threading">DYALOG.EXE Threading</h2>
-<p>In these cases, all calls to Microsoft .NET are initiated by Dyalog APL. However, these calls may well result in calls being made back from .NET into APL.</p>
+<p>In these cases, all calls to Microsoft .NET are initiated by Dyalog. However, these calls may well result in calls being made back from .NET into APL.</p>
 <p>When you make a .NET call from APL thread 0, the .NET call is run on <strong>the same system thread</strong> that is running APL itself.</p>
 <p>When you make a .NET call from any other APL thread, the .NET call is run on a different system thread. Once again, the correspondence between the APL thread number and the associated system thread is maintained (for the duration of the APL thread) so that there are no thread/GUI ownership problems. Furthermore, APL callbacks invoked by .NET calls back into APL will automatically be routed to the appropriate APL thread. Notice that, unlike a call to a DLL via <code>⎕NA</code>, there is no way to control whether or not the system uses a different system thread for a .NET call. It will always do so if called from an APL thread other than APL thread 0.</p>
 <h2 id="thread-switching">Thread Switching</h2>
-<p>Dyalog APL will potentially <em>thread switch</em>, i.e. switch execution from one APL thread to another, at the start of any line of APL code. In addition, Dyalog APL will potentially thread switch when a .NET method is called or when a .NET property is referenced or assigned a value. If the .NET call accesses a relatively slow device, such as a disk or the internet,  this feature can improve overall throughput by allowing other APL code while a .NET call is waiting. On a multi-processor computer, APL may truly execute in parallel with the .NET code.</p>
+<p>Dyalog will potentially <em>thread switch</em>, that is, switch execution from one APL thread to another, at the start of any line of APL code. In addition, Dyalog will potentially thread switch when a .NET method is called or when a .NET property is referenced or assigned a value. If the .NET call accesses a relatively slow device, such as a disk or the internet,  this feature can improve overall throughput by allowing other APL code while a .NET call is waiting. On a multi-processor computer, APL may truly execute in parallel with the .NET code.</p>
 <p>Note that when running DYALOG.EXE, .NET calls made from APL thread 0 will prevent any switching between APL threads. This is because the .NET code is being executed in the same system thread as APL itself. If you want to use APL multi-threading in conjunction with .NET calls, it is therefore advisable to perform all of the .NET calls from threads other than APL thread 0.</p>
 
 

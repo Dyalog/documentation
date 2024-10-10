@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16947,6 +16924,8 @@
       
         
       
+        
+      
     
     
     
@@ -18740,6 +18719,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64121,7 +64121,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71325,7 +71325,7 @@
 
 <h1 class="heading"><span class="name">Edit Object</span> <span class="command">)ED nms</span></h1>
 
-<p><code>)ED</code> invokes the Dyalog APL editor and opens an Edit window for each of the objects specified in <code>nms</code>.</p>
+<p><code>)ED</code> invokes the Dyalog editor and opens an Edit window for each of the objects specified in <code>nms</code>.</p>
 <p>If a name includes the slash character  ("\" or "/") it is taken to be the name of a file. See <a href="../../../windows-ui-guide/editing-scripts-and-text-files">Editing Scripts and Text Files</a>.</p>
 <p>If a name is followed by a line number specified in square brackets, the Editor positions the cursor in the corresponding line. There must not be a space between the last character of the name and the "[".</p>
 <p>If a name specifies a new symbol it is taken to be a function or operator.  However, if a name is localised in a suspended function or operator but is otherwise undefined, it is assumed to be a vector of character vectors.</p>
@@ -71370,7 +71370,7 @@
 
 <span class="w">      </span><span class="p">)</span><span class="nv">ED</span><span class="w"> </span><span class="bp">∇</span><span class="nv">FOO</span><span class="w"> </span><span class="o">-</span><span class="nv">MAT</span><span class="w"> </span><span class="o">∊</span><span class="nv">VECVEC</span>
 </code></pre></div>
-<p>Objects specified in <code>nms</code> that cannot be edited are silently ignored. Objects qualified with a namespace path  (e.g. <code>a.b.c.foo</code>) are silently ignored if the namespace does not exist.</p>
+<p>Objects specified in <code>nms</code> that cannot be edited are silently ignored. Objects qualified with a namespace path  (for example, <code>a.b.c.foo</code>) are silently ignored if the namespace does not exist.</p>
 
 
 

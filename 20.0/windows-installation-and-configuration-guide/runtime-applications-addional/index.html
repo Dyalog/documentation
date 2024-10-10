@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1390,7 +1367,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -17140,6 +17117,8 @@
       
         
       
+        
+      
     
     
     
@@ -18933,6 +18912,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64302,7 +64302,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71665,7 +71665,7 @@
 <h1> Run-Time Applications Additonal Considerations</h1>
 
 <h2 id="accessing-your-application-using-ride">Accessing your Application using RIDE</h2>
-<p>If you wish to access your run-time application remotely using the RIDE, you must  put a copy of the appropriate Conga DLLs (see <a href="../files-and-directories/">Files</a>) in the same directory as your .EXE or workspace. This is different from previous versions of Dyalog which had separate RIDE DLLs.</p>
+<p>If you wish to access your run-time application remotely using the RIDE, you must  put a copy of the appropriate Conga DLLs (see <a href="../files-and-directories/">Files</a>) in the same directory as your .EXE or workspace.</p>
 <h2 id="additional-files-for-syncfusion">Additional Files for Syncfusion</h2>
 <p>Under a licensing agreement with Syncfusion, Dyalog includes the Syncfusion library of WPF controls. These may be used by Dyalog APL users to develop applications, and may be distributed with Dyalog APL run-time applications.</p>
 <p>The Syncfusion libraries comprise a set of .NET assemblies which are supplied in the <em>Syncfusion/4.6</em> sub-directory of the main Dyalog APL installation directory (for example: <em>c:\Program Files\Dyalog\Dyalog APL-64 19.0 Unicode\Syncfusion\4.6</em>.</p>
@@ -71689,7 +71689,7 @@
 <p>This DLL is used by some of the functions provided in the <code>QUADNA.DWS</code> workspace. If you include any of these in your application this DLL must be installed in the user's Windows directory or be on the user's path.</p>
 <h2 id="universal-c-runtime-dlls">Universal C Runtime DLLs</h2>
 <p>Under Windows, many of the Dyalog APL run-time components (.EXE and .DLL) are linked dynamically with the Microsoft Universal C Runtime library (the UCRT) which is supplied and installed as part of the normal Dyalog development installation.</p>
-<p>At execution time it is important that the Dyalog runtime components bind with a version of the UCRT that is compatible with (i.e. the same as or newer than) the one with which they were built.</p>
+<p>At execution time it is important that the Dyalog runtime components bind with a version of the UCRT that is compatible with (that is, the same as or newer than) the one with which they were built.</p>
 <h3 id="windows-10">Windows 10</h3>
 <p>If the end-user of the Dyalog application is known to be running Windows 10, the Dyalog application will pick up the system-wide UCRT which is part of Windows 10. There is therefore no need to include the UCRT with a Dyalog run-time application.</p>
 <h3 id="other-versions-of-windows">Other Versions of Windows</h3>

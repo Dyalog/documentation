@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64112,7 +64112,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71479,7 +71479,7 @@
 <p>Once you have defined your interface, you are ready to give control to the user. This is simply done by calling <code>⎕DQ</code>. Alternatively, you may use the Wait method (if appropriate) which is identical to <code>⎕DQ</code> in its operation.</p>
 <p><code>⎕DQ</code> performs several tasks. Firstly, it displays all objects that have been created but not yet drawn. When you create objects, Dyalog APL/W automatically buffers the output so as to avoid unpleasant flashing on the screen. Output is flushed when APL requires input (at the 6-space prompt) and by <code>⎕DQ</code>. Thus if you write a function that creates a Form containing a set of controls, nothing is drawn until, later on in the function, you call <code>⎕DQ</code>. At this point the Form and its contents are displayed in a single screen update, which is visually more pleasing than if they were drawn one by one. A second task for <code>⎕DQ</code> is to cause the system to wait for user events. Objects that you create are immediately active and capable of generating events. During development and testing, you can immediately use them without an explicit <em>wait</em>. However, unless your application uses the <strong>Session</strong> in conjunction with GUI objects you must call <code>⎕DQ</code> to cause the application to wait for user input. In a run-time application, <code>⎕DQ</code> is <strong>essential</strong>.</p>
 <p>The argument to <code>⎕DQ</code> specifies the objects with which the user may interact. Objects may be specified by name or by reference. If the argument is <code>#</code>, <code>'#'</code> or <code>'.'</code>, the user may interact with <strong>all</strong> active objects owned by the current thread <strong>and</strong> with any new objects which are created in callback functions. If not, the argument should specify refs to or names of  one or more top-level objects such as Form, PropertySheet, Clipboard, or a single modal object such as FileBox, Locator, MsgBox or Menu. All specified objects must be owned by the current thread.</p>
-<p>In general, <code>⎕DQ</code> first updates the screen with any pending changes, then hands control to the user and waits for an event. If its argument is <code>#</code>, <code>'#'</code>, or <code>'.'</code>, <code>⎕DQ</code> processes events for all active objects, i.e. for those objects and their children whose Active property is 1. If the right argument specifies one or more top-level objects (such as Form, PropertySheet), <code>⎕DQ</code> processes events for all of these objects and their children, and (if the current thread is thread 0) for the Root object, but ignores any others, even though they may be currently active.</p>
+<p>In general, <code>⎕DQ</code> first updates the screen with any pending changes, then hands control to the user and waits for an event. If its argument is <code>#</code>, <code>'#'</code>, or <code>'.'</code>, <code>⎕DQ</code> processes events for all active objects, that is, for those objects and their children whose Active property is 1. If the right argument specifies one or more top-level objects (such as Form, PropertySheet), <code>⎕DQ</code> processes events for all of these objects and their children, and (if the current thread is thread 0) for the Root object, but ignores any others, even though they may be currently active.</p>
 <p>If the right argument specifies a single modal object, <code>⎕DQ</code> activates the object, handles user-interaction with it, and then deactivates it when the user has finished. An event is generated according to the manner in which the user terminated.</p>
 <p>Events are managed by both the Operating System and by <code>⎕DQ</code> using a <strong>queue</strong>. A detailed understanding of how the queue works is not absolutely necessary, and you may skip the following explanation. However, if you are planning to develop major applications using the GUI, please continue.</p>
 <h2 id="the-event-queue">The Event Queue</h2>
@@ -71488,7 +71488,7 @@
 <p>If you have disabled a particular event by setting its action code to <code>¯1</code>, <code>⎕DQ</code> simply ignores it. For example, if you set the action code of a KeyPress event to <code>¯</code>1, keystrokes in that object will be ignored. If you have told <code>⎕DQ</code> to process an event normally (the default action code of 0) <code>⎕DQ</code> performs the default processing for the event in question. For example, the default processing for a KeyPress event in an Edit object is to display the character and move the input cursor.</p>
 <p>If you have associated a string or a callback function with a particular event in a particular object, <code>⎕DQ</code> executes the string or invokes the callback function for you. During the execution of the string or the callback function, the user may cause other events. If so, these are added to APL's internal queue but they are not acted upon immediately. When the execution of the string or the callback function terminates, control returns to <code>⎕DQ</code> which once more looks to the internal queue. If another event has been added while the callback function was running, this is read and acted upon. If not, <code>⎕DQ</code> looks to the Windows queue and waits for the next event to occur.</p>
 <p>If you have associated an <strong>asynchronous</strong> callback function with an event (by appending the character "&amp;" to the name of the function), <code>⎕DQ</code> starts the callback function in a new thread and is then immediately ready to process the next event; <code>⎕DQ</code> does not wait for an asynchronous callback function to complete.</p>
-<p>If <code>⎕DQ</code> reads an event with an associated action code of 1, it terminates and returns the <strong>event message</strong> which was generated by the event, as a result. The normal processing for the event is not actioned. During the time between <code>⎕DQ</code> terminating and you calling it again, events are discarded. Events are only stored up in the queue if <code>⎕DQ</code> is active (i.e. there is a <code>⎕DQ</code> in the state indicator). It is therefore usually better to process events using callback functions.</p>
+<p>If <code>⎕DQ</code> reads an event with an associated action code of 1, it terminates and returns the <strong>event message</strong> which was generated by the event, as a result. The normal processing for the event is not actioned. During the time between <code>⎕DQ</code> terminating and you calling it again, events are discarded. Events are only stored up in the queue if <code>⎕DQ</code> is active (that is, there is a <code>⎕DQ</code> in the state indicator). It is therefore usually better to process events using callback functions.</p>
 <h2 id="assignment-and-reference-to-the-event-property">Assignment and reference to the Event Property</h2>
 <p>There are a number of special considerations when using assignment and reference to the Event property.</p>
 <p>You can set the action for a single event by prefixing the Event name by "on". For example, to set the action of a MouseUp event on a Form <code>F</code> to execute the callback function <code>FOO</code>:
@@ -71502,7 +71502,7 @@
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">Event</span>
 <span class="w">  </span><span class="nv">onMouseDown</span><span class="w">  </span><span class="c1">#.DOWN  42   onMouseUp  #.UP  </span>
 </code></pre></div>
-<p>If you set the Event property using assignment, all the event actions are redefined, i.e. previous event settings are lost. For example:
+<p>If you set the Event property using assignment, all the event actions are redefined, that is, previous event settings are lost. For example:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="p">(</span><span class="nv">onMouseUp</span><span class="w"> </span><span class="nv">onMouseDown</span><span class="p">)</span><span class="kd">←</span><span class="s1">'UP'</span><span class="w"> </span><span class="p">(</span><span class="s1">'DOWN'</span><span class="w"> </span><span class="m">42</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">Event</span>
 <span class="w">  </span><span class="nv">onMouseDown</span><span class="w">  </span><span class="c1">#.DOWN  42   onMouseUp  #.UP  </span>
@@ -71561,7 +71561,7 @@
 <span class="nf">⎕DQ</span>
 <span class="na">...</span>
 </code></pre></div>
-<p>A callback function may be defined with any syntax, i.e. it may be dyadic, monadic, or niladic. If it is monadic or dyadic, <code>⎕DQ</code> calls it with the event message as its right argument. If the function is dyadic, its left argument will contain the value of the array that was associated with the event.</p>
+<p>A callback function may be defined with any syntax, that is, it may be dyadic, monadic, or niladic. If it is monadic or dyadic, <code>⎕DQ</code> calls it with the event message as its right argument. If the function is dyadic, its left argument will contain the value of the array that was associated with the event.</p>
 <p>A callback function is otherwise no different from any other function that you can define. Indeed there is nothing to prevent you from calling one explicitly in your code. For example, a callback function that is invoked automatically could call a second callback function directly, perhaps to simulate another event.</p>
 <p>By default, a callback function is run synchronously. This means that <code>⎕DQ</code> waits for it to return a result before attempting to process any other events. Events that are generated by Windows while the callback function is running are simply queued.</p>
 <p>Alternatively, you may specify that a callback function is to be run <strong>asynchronously</strong>. In this case, <code>⎕DQ</code> starts the function in a new thread, but instead of waiting for it to complete, proceeds immediately to the next event in the queue. See Asynchronous Callbacks for further information.</p>

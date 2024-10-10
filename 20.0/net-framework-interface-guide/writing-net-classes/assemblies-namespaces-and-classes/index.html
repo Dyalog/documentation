@@ -744,8 +744,6 @@
       
         
       
-        
-      
     
     
     
@@ -849,27 +847,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1383,7 +1360,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16945,6 +16922,8 @@
       
         
       
+        
+      
     
     
     
@@ -18738,6 +18717,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64107,7 +64107,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71323,12 +71323,12 @@
 
 <h1> Assemblies, Namespaces and Classes</h1>
 
-<p>To create a .NET class in Dyalog APL, you simply create a standard APL Class and export the workspace as a <em>Microsoft .NET Assembly (</em>.dll)*.</p>
+<p>To create a .NET class in Dyalog, you simply create a standard APL Class and export the workspace as a <em>Microsoft .NET Assembly (</em>.dll)*.</p>
 <p>.NET Classes are organised in .NET Namespaces. If you wrap your Class (or Classes) within an APL namespace, the name of that namespace will be used to identify the name of the corresponding .NET Namespace in your Assembly.</p>
 <p>If a Class is to be based upon a specific .NET Class, the name of that .NET Class must be specified as the Base Class in the <code>:Class</code> statement, and the <code>:Using</code> statements must correctly locate the base class. If not, the Class is assumed to be based upon System.Object. If you use any .NET Types within your Class, you must ensure that these too are located by :Using.</p>
 <p>Once you have defined the functionality of your .NET classes, you are ready to save them in an assembly. This is simply achieved by selecting <em>Export</em> from the Session <em>File</em> menu.</p>
 <p>You will be prompted to specify the directory and name of the assembly (DLL) and it will then be created and saved. Your .NET class is now ready for use by any .NET development environment, including APL itself.</p>
-<p>When a Dyalog .NET class is invoked by a host application, it automatically loads the Dyalog DLL, the developer/debug or run-time dynamic link library version of Dyalog APL. You decide which of these DLLs is to be used according to the setting of the <em>Runtime application</em> checkbox in the <em>Create bound file</em> dialog box. Note however that the Dyalog .NET class, and all the Dyalog DLLs on which it depends, reside in the same directory as the host program.</p>
+<p>When a Dyalog .NET class is invoked by a host application, it automatically loads the Dyalog DLL, the developer/debug or run-time dynamic link library version of Dyalog. You decide which of these DLLs is to be used according to the setting of the <em>Runtime application</em> checkbox in the <em>Create bound file</em> dialog box. Note however that the Dyalog .NET class, and all the Dyalog DLLs on which it depends, reside in the same directory as the host program.</p>
 <p>Note that if you wish to include a Dyalog .NET class in a Visual Studio application it is recommended that you add the  Bridge DLL as a reference in a  Visual Studio .NET project.</p>
 <p>If you want to repeat the most recent export after making changes to the class, you can click on the icon to the right of the save icon on the WS button bar at the top of the session.  Note that the workspace itself is not saved when you do an export, so if you want the export options to be remembered you must <code>)SAVE</code> the workspace <em>after</em> you have exported it.</p>
 

@@ -745,8 +745,6 @@
       
         
       
-        
-      
     
     
     
@@ -850,27 +848,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1384,7 +1361,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16946,6 +16923,8 @@
       
         
       
+        
+      
     
     
     
@@ -18739,6 +18718,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64108,7 +64108,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71472,13 +71472,6 @@
 <p>Otherwise if the seed <code>⎕RL[1]</code> is set to a value other than <code>⍬</code>:</p>
 <ul>
 <li>using <em>RNG0</em>, <code>⎕RL[1]</code> is an integer which  represents the <em>seed</em> for the next random number in the sequence.</li>
-<li>using <em>RNG1</em>, the system internally retains a block of 312 64-bit numbers which are used one by one to generate the results of roll and deal. When the first block of 312 have been used up, the system generates a second block. In this case, <code>⎕RL[1]</code> is an integer vector of 32-bit numbers of length 625 (the first is an index into the block of 312) which represents the internal state of the random number generator. This means that, as with <em>RNG0</em>, you may save the value of  <code>⎕RL</code> in a variable and reassign it later.</li>
-<li>
-<p>Using <em>RNG2</em>, the seed is purely internal and <code>⎕RL[1]</code> is always zilde.</p>
-</li>
-<li>
-<p>using <em>RNG0</em>, <code>⎕RL[1]</code> is an integer which  represents the <em>seed</em> for the next random number in the sequence.</p>
-</li>
 <li>using <em>RNG1</em>, the system internally retains a block of 312 64-bit numbers which are used one by one to generate the results of roll and deal. When the first block of 312 have been used up, the system generates a second block. In this case, <code>⎕RL[1]</code> is an integer vector of 32-bit numbers of length 625 (the first is an index into the block of 312) which represents the internal state of the random number generator. This means that, as with <em>RNG0</em>, you may save the value of  <code>⎕RL</code> in a variable and reassign it later.</li>
 <li>Using <em>RNG2</em>, the seed is purely internal and <code>⎕RL[1]</code> is always zilde.</li>
 </ul>

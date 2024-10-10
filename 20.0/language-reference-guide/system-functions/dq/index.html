@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16952,6 +16929,8 @@
       
         
       
+        
+      
     
     
     
@@ -18745,6 +18724,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64318,7 +64318,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71611,7 +71611,7 @@
 </code></pre></div>
 <p>These are treated as follows:</p>
 <h2 id="action-0-the-default">Action = 0 (the default)</h2>
-<p><code>⎕DQ</code> performs "standard" processing appropriate to the object and type of event.  For example, the standard processing for a KeyPress event in an Edit object is to action the key press, i.e. to echo the character on the screen.</p>
+<p><code>⎕DQ</code> performs "standard" processing appropriate to the object and type of event.  For example, the standard processing for a KeyPress event in an Edit object is to action the key press, that is, to echo the character on the screen.</p>
 <h2 id="action-1">Action = <code>¯</code>1</h2>
 <p>This disables the event.  The "standard" processing appropriate to the object and type of event is <strong>not</strong> performed, or in some cases is reversed.  For example, if the "action code" for a KeyPress event (22) is set to <code>¯1</code>,  <code>⎕DQ</code> simply ignores all keystrokes for the object in question.</p>
 <h2 id="action-1_1">Action = 1</h2>
@@ -71627,7 +71627,7 @@
 <p><code>⎕DQ</code> terminates, returning the shy result <code>R</code>, in one of four instances.</p>
 <p>Firstly, <code>⎕DQ</code> terminates when an event occurs whose "action code" is 1.  In this case, its result is a nested vector containing the <strong>event message</strong> associated with the event.  The structure of an event message varies according to the event type (see <em>Object Reference</em>).  However, an event message has at least two elements of which the first is a ref to the object or a character vector containing the name of the object, and the second is a character vector or numeric code which identifies the event type.</p>
 <p><code>⎕DQ</code> also terminates if all of the objects named in <code>Y</code> have been deleted.  In this case, the result is an empty character vector.  Objects are deleted either using <code>⎕EX</code>, or on exit from a defined function or operator if the names are localised in the header, or on closing a form using the system menu.</p>
-<p>Thirdly, <code>⎕DQ</code> terminates if the object named in its right argument is a special <em>modal</em> object, such as a <code>MsgBox</code>, <code>FileBox</code> or <code>Locator</code>, and the user has finished interacting with the object (e.g. by pressing an "OK" button).  The return value of <code>⎕DQ</code> in this case depends on the action code of the event.</p>
+<p>Thirdly, <code>⎕DQ</code> terminates if the object named in its right argument is a special <em>modal</em> object, such as a <code>MsgBox</code>, <code>FileBox</code> or <code>Locator</code>, and the user has finished interacting with the object (for example, by pressing an "OK" button).  The return value of <code>⎕DQ</code> in this case depends on the action code of the event.</p>
 <p>Finally, <code>⎕DQ</code> terminates with a <code>VALUE ERROR</code> if it attempts to execute a callback function that is undefined.</p>
 
 

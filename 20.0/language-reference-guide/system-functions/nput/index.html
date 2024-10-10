@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16952,6 +16929,8 @@
       
         
       
+        
+      
     
     
     
@@ -18745,6 +18724,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64246,7 +64246,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71487,7 +71487,7 @@
 
 <p>This function writes character data to a text file. See also <a href="../nget/">Read Text File</a>.</p>
 <p><code>Y</code> is either a simple character vector or scalar containing the name of the file to be written, or a 2-item vector whose first item is the file name and whose second is an integer scalar specifying <code>flags</code> for the operation.</p>
-<p>If <code>flags</code> is 0 (the default value if omitted) the file will not be overwritten if it already exists and <code>⎕NPUT</code> will signal an error. If <code>flags</code> is 1 the file will be overwritten. If flags is 2 the file will be appended to; i.e.</p>
+<p>If <code>flags</code> is 0 (the default value if omitted) the file will not be overwritten if it already exists and <code>⎕NPUT</code> will signal an error. If <code>flags</code> is 1 the file will be overwritten. If flags is 2 the file will be appended to. That is:</p>
 <table>
 <thead>
 <tr>
@@ -71518,7 +71518,7 @@
 <p><code>content</code> is either a vector of character vectors, each of which represents a line in the file to be written, or a simple character vector.</p>
 <p>If specified, <code>encoding</code> is either:</p>
 <ul>
-<li>a character vector from the first column in the table <a href="../nget/">File Encodings</a>.  If <code>encoding</code> specifies a UTF format, it may be qualified with -BOM  (e.g. UTF-8-BOM), which causes a Byte Order Mark (BOM) to be written at the beginning of the file or -NOBOM which does not. If the -BOM or -NOBOM suffix is omitted, UTF-8 defaults to UTF-8-NOBOM, while the other UTF formats default to -BOM.</li>
+<li>a character vector from the first column in the table <a href="../nget/">File Encodings</a>.  If <code>encoding</code> specifies a UTF format, it may be qualified with -BOM  (for example, UTF-8-BOM), which causes a Byte Order Mark (BOM) to be written at the beginning of the file or -NOBOM which does not. If the -BOM or -NOBOM suffix is omitted, UTF-8 defaults to UTF-8-NOBOM, while the other UTF formats default to -BOM.</li>
 <li>a 256-element numeric vector that maps each possible byte value (0-255) to a  Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value may appear in the table more than once.</li>
 </ul>
 <p>If  omitted, <code>encoding</code> defaults to UTF-8-NOBOM.</p>

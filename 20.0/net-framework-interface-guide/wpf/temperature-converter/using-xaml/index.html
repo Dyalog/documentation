@@ -749,8 +749,6 @@
       
         
       
-        
-      
     
     
     
@@ -854,27 +852,6 @@
   
   <span class="md-ellipsis">
     Allocate Token Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../release-notes-v19-0/language-reference-changes/set-aplcore-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set aplcore Parameters
   </span>
   
 
@@ -1388,7 +1365,7 @@
         
   
   <span class="md-ellipsis">
-    Interoperability
+    Interoperability and Compatibility
   </span>
   
 
@@ -16950,6 +16927,8 @@
       
         
       
+        
+      
     
     
     
@@ -18743,6 +18722,27 @@
   
   <span class="md-ellipsis">
     Replicate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../language-reference-guide/primitive-functions/replicate-first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicate First
   </span>
   
 
@@ -64112,7 +64112,7 @@
         
   
   <span class="md-ellipsis">
-    Unified Edition Keyboard
+    Unicode Edition Keyboard
   </span>
   
 
@@ -71687,7 +71687,7 @@
 ...
 <span class="nt">&lt;/Window&gt;</span>
 </code></pre></div>
-<p>This extract of XAML defines a Window control; a top-level window that is equivalent to a Dyalog APL GUI Form.</p>
+<p>This extract of XAML defines a Window control; a top-level window that is equivalent to a Dyalog GUI Form.</p>
 <p>The <em>xmlns</em> attributes define the XML namespaces (effectively the vocabulary of the xml scheme) and are mandatory in an XAML document.</p>
 <p>The name of the TextBox is <em>Temp</em>, and its caption is <em>WFP Temperature Converter</em>. The SizeToContent property is set to "WidthandHeight", which causes the TextBox to automatically size itself to fit its content in both horizontal and vertical directions.</p>
 <h2 id="the-dockpanel">The DockPanel</h2>
@@ -71709,7 +71709,7 @@
 <span class="w">    </span><span class="o">&lt;</span><span class="na">/</span><span class="nv">Menu</span><span class="o">&gt;</span>
 </code></pre></div>
 <p><figure id="_figure-2"><img alt="wpf_example2" src="../../../img/wpf-example2.png"><figcaption>Figure 2: wpf_example2</figcaption></figure></p>
-<p>The above extract from the XAML defines a Menu. Setting Dock to "Top" causes the Menu as a whole to be docked, so that it appears like a menubar, along the top of the DockPanel. The Menu contains a single MenuItem labelled <em>Scale</em> which itself contains two sub-items labelled <em>Fahrenheit</em> and <em>Centigrade</em> respectively. The IsCheckable property specifies whether or not the user can check the MenuItem, and the IsChecked property sets and reports its checked state. The underscore characters (e.g. as in "_Scale") identify the following character as a keyboard shortcut.</p>
+<p>The above extract from the XAML defines a Menu. Setting Dock to "Top" causes the Menu as a whole to be docked, so that it appears like a menubar, along the top of the DockPanel. The Menu contains a single MenuItem labelled <em>Scale</em> which itself contains two sub-items labelled <em>Fahrenheit</em> and <em>Centigrade</em> respectively. The IsCheckable property specifies whether or not the user can check the MenuItem, and the IsChecked property sets and reports its checked state. The underscore characters (for example, as in "_Scale") identify the following character as a keyboard shortcut.</p>
 <h2 id="the-grid">The Grid</h2>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="o">&lt;</span><span class="nv">Grid</span><span class="w"> </span><span class="nv">Width</span><span class="o">=</span><span class="s2">"230"</span><span class="w"> </span><span class="nv">Margin</span><span class="o">=</span><span class="s2">"40,10,10,10"</span><span class="o">&gt;</span>
 <span class="w">    </span><span class="na">...</span>
@@ -71724,7 +71724,7 @@
 <span class="w">        </span><span class="o">&lt;</span><span class="nv">RowDefinition</span><span class="w"> </span><span class="nv">Height</span><span class="o">=</span><span class="s2">"Auto"</span><span class="na">/</span><span class="o">&gt;</span>
 <span class="w">      </span><span class="o">&lt;</span><span class="na">/</span><span class="nv">Grid</span><span class="na">.</span><span class="nv">RowDefinitions</span><span class="o">&gt;</span><span class="w"> </span>
 </code></pre></div>
-<p>Similarly, there are 3 columns. The first column (which will contain labels) takes its width from its content, i.e. it will be just wide enough to display the longest label. The other columns   for the edit boxes and buttons are specified to be 80px and 60px wide respectively. In this case, the content (TextBox and Button objects) will take their widths from that of the column.
+<p>Similarly, there are 3 columns. The first column (which will contain labels) takes its width from its content, that is, it will be just wide enough to display the longest label. The other columns   for the edit boxes and buttons are specified to be 80px and 60px wide respectively. In this case, the content (TextBox and Button objects) will take their widths from that of the column.
 </p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="o">&lt;</span><span class="nv">Grid</span><span class="na">.</span><span class="nv">ColumnDefinitions</span><span class="o">&gt;</span>
 <span class="w">        </span><span class="o">&lt;</span><span class="nv">ColumnDefinition</span><span class="w"> </span><span class="nv">Width</span><span class="o">=</span><span class="s2">"Auto"</span><span class="na">/</span><span class="o">&gt;</span>
 <span class="w">        </span><span class="o">&lt;</span><span class="nv">ColumnDefinition</span><span class="w"> </span><span class="nv">Width</span><span class="o">=</span><span class="s2">"80"</span><span class="na">/</span><span class="o">&gt;</span>
@@ -71816,7 +71816,7 @@
 <p>Finally the code displays the Window and hands it over to the user by calling the ShowDialog method of the top-level Window.
 </p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">21</span><span class="sr">]</span><span class="w">   </span><span class="nv">sink</span><span class="kd">←</span><span class="nv">win</span><span class="na">.</span><span class="nv">ShowDialog</span>
 </code></pre></div>
-<p>ShowDialog displays the Window <em>modally</em>; i.e. until it is closed, the user may interact only with that Window. It is equivalent to <code>⎕DQ win</code> or <code>win.Wait</code> in the Dyalog built-in GUI.</p>
+<p>ShowDialog displays the Window <em>modally</em>; that is, until it is closed, the user may interact only with that Window. It is equivalent to <code>⎕DQ win</code> or <code>win.Wait</code> in the Dyalog built-in GUI.</p>
 <h2 id="the-callback-functions">The CallBack Functions</h2>
 <p>The callback functions are named as they are in the basic Dyalog GUI example and are remarkably similar. See 
 Interface Guide: </p>
@@ -71902,7 +71902,7 @@ Interface Guide: </p>
 <hr>
 <ol>
 <li id="fn:1">
-<p>A ScrollBar is not the ideal choice of control for this type of user interation, but this example is designed to look and behave like the original Dyalog GUI example, which was written for the original version of Dyalog APL for Windows. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+<p>A ScrollBar is not the ideal choice of control for this type of user interation, but this example is designed to look and behave like the original Dyalog GUI example, which was written for the original version of Dyalog  for Microsoft Windows. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 </ol>
 </div>
