@@ -1349,7 +1349,7 @@
         
   
   <span class="md-ellipsis">
-    File Associations
+    File Extensions
   </span>
   
 
@@ -2222,7 +2222,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CancelKey1
+    CancelKey1
   </span>
   
 
@@ -2243,7 +2243,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CancelKey2
+    CancelKey2
   </span>
   
 
@@ -2264,7 +2264,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/Cols
+    Cols
   </span>
   
 
@@ -2285,7 +2285,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CommonKey1
+    CommonKey1
   </span>
   
 
@@ -2306,7 +2306,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CompleteKey1
+    CompleteKey1
   </span>
   
 
@@ -2327,7 +2327,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CompleteKey2
+    CompleteKey2
   </span>
   
 
@@ -2348,7 +2348,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/Enabled
+    Enabled
   </span>
   
 
@@ -2369,7 +2369,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/History
+    History
   </span>
   
 
@@ -2390,7 +2390,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/HistorySize
+    HistorySize
   </span>
   
 
@@ -2411,7 +2411,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/PrefixSize
+    PrefixSize
   </span>
   
 
@@ -2432,7 +2432,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/Rows
+    Rows
   </span>
   
 
@@ -2453,7 +2453,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/ShowFiles
+    ShowFiles
   </span>
   
 
@@ -71331,7 +71331,7 @@
   
 
 
-<h1> The APL Command Line</h1>
+<h1 class="heading"><span class="name">The APL Command Line</span></h1>
 
 <p>The command line for Dyalog APL is described below; the command line for non-Windows versions of Dyalog APL is very similar and is also documented in <em>Dyalog for UNIX UI Guide: Starting APL</em>.</p>
 <p>Usually the command line is specified in the Target: field of the APL shortcut. The full pathname to the Dyalog executable is usually surrounded by double quotes as it contains spaces.</p>
@@ -71339,19 +71339,13 @@
 <p>dyalog [ options ] [ debug ] [ ws ] [param] [param] [param]...</p>
 <p>where:</p>
 <p><strong>[dyalog]</strong></p>
-<table>
-<tbody>
-<tr>
-<td>Is the location of the Dyalog executable. Usually this is the full pathname, surrounded by double quotes.</td>
-</tr>
-</tbody>
-</table>
+<p>Is the location of the Dyalog executable. Usually this is the full pathname, surrounded by double quotes.</p>
 <p><strong>[options]</strong></p>
 <table>
 <tbody>
 <tr>
 <td>-x</td>
-<td>Disables the execution of the <code>⎕LX</code> expression and the derived expression when code is loaded from a source code file or directory.  This applies only at start-up and does not apply to workspaces or source files that are loaded subsequently. See <a href="../../language-reference-guide/system-functions/lx">Latent Expression </a> and <a href="../configuration-parameters/load/">Load</a></td>
+<td>Disables the execution of the <code>⎕LX</code> expression and the derived expression when code is loaded from a source code file or directory.  This applies only at start-up and does not apply to workspaces or source files that are loaded subsequently. See <a href="../../language-reference-guide/system-functions/lx">Latent Expression</a> and <a href="../configuration-parameters/load/">Load</a></td>
 </tr>
 <tr>
 <td>-a</td>
@@ -71375,7 +71369,7 @@
 </tr>
 <tr>
 <td>+q</td>
-<td>Quit APL on error. In earlier versions of Dyalog, quitting on error saved a workspace with the reserved name CONTINUE; this behaviour can be re-enabled using <code>2704⌶</code> . See <a href="../../language-reference-guide/the-i-beam-operator/continue-autosave">Continue Autosave</a> .</td>
+<td>Quit APL on error. In earlier versions of Dyalog, quitting on error saved a workspace with the reserved name CONTINUE; this behaviour can be re-enabled using <code>2704⌶</code>. See <a href="../../language-reference-guide/the-i-beam-operator/continue-autosave">Continue Autosave</a> .</td>
 </tr>
 <tr>
 <td>-c</td>
@@ -71409,23 +71403,14 @@
 </tbody>
 </table>
 <p><strong>[ws]</strong></p>
-<table>
-<tbody>
-<tr>
-<td>The name of a Dyalog APL workspace to be loaded. Unless specified, on Windows the file extension .DWS is assumed.</td>
-</tr>
-</tbody>
-</table>
+<p>The name of a Dyalog APL workspace to be loaded. Unless specified, on Windows the file extension .DWS is assumed.</p>
 <p><strong>[param]</strong></p>
-<table>
-<tbody>
-<tr>
-<td>A parameter name followed by an equals sign ( <code>=</code> ) and a value. The parameter name may be one of the standard APL parameters (see <a href="configuration-parameters.md">Configuration Parameters</a> ) or a name and value of your own choosing (see <a href="../../object-reference/methodorevents/getenvironment">GetEnvironment</a> ) . If the parameter is in a registry sub-folder (see <a href="../registry-subfolders/">Registry Sub-Folders</a> ), its name must be preceded by the name of the sub-folder, followed by a backslash ( <code>\</code> ) or underscore ( <code>_</code> ).</td>
-</tr>
-</tbody>
-</table>
-<p>Note that instead of  a loading a workspace specified by the <strong>ws</strong> option, APL can be instructed to load a program from a script file. For further information, see <a href="../configuration-parameters/load/">Load</a>.</p>
-<h3 class="example">Examples</h3>
+<p>A parameter name followed by an equals sign (<code>=</code>) and a value. The parameter name may be one of the standard APL parameters (see <a href="configuration-parameters.md">Configuration Parameters</a> ) or a name and value of your own choosing (see <a href="../../object-reference/methodorevents/getenvironment">GetEnvironment</a> ) . If the parameter is in a registry sub-folder (see <a href="../registry-subfolders/">Registry Sub-Folders</a> ), its name must be preceded by the name of the sub-folder, followed by a backslash (<code>\</code>) or underscore (<code>_</code>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Instead of  a loading a workspace specified by the <strong>ws</strong> option, APL can be instructed to load a program from a script file. For further information, see <a href="../configuration-parameters/load/">Load</a>.</p>
+</div>
+<h2 class="example">Examples</h2>
 
 <p>Start APL using the configuration file <code>myconfig.dcfg</code>:
 </p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="s2">"c:\program files\…\dyalog.exe"</span><span class="w"> </span><span class="nv">ConfigFile</span><span class="o">=</span><span class="s2">"myconfig.dcfg"</span>

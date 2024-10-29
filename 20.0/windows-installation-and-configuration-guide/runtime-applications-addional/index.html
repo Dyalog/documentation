@@ -1349,7 +1349,7 @@
         
   
   <span class="md-ellipsis">
-    File Associations
+    File Extensions
   </span>
   
 
@@ -2175,7 +2175,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CancelKey1
+    CancelKey1
   </span>
   
 
@@ -2196,7 +2196,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CancelKey2
+    CancelKey2
   </span>
   
 
@@ -2217,7 +2217,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/Cols
+    Cols
   </span>
   
 
@@ -2238,7 +2238,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CommonKey1
+    CommonKey1
   </span>
   
 
@@ -2259,7 +2259,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CompleteKey1
+    CompleteKey1
   </span>
   
 
@@ -2280,7 +2280,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CompleteKey2
+    CompleteKey2
   </span>
   
 
@@ -2301,7 +2301,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/Enabled
+    Enabled
   </span>
   
 
@@ -2322,7 +2322,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/History
+    History
   </span>
   
 
@@ -2343,7 +2343,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/HistorySize
+    HistorySize
   </span>
   
 
@@ -2364,7 +2364,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/PrefixSize
+    PrefixSize
   </span>
   
 
@@ -2385,7 +2385,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/Rows
+    Rows
   </span>
   
 
@@ -2406,7 +2406,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/ShowFiles
+    ShowFiles
   </span>
   
 
@@ -5224,7 +5224,7 @@
         <li class="md-nav__item">
   <a href="#accessing-your-application-using-ride" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing your Application using RIDE
+      Accessing your Application using Ride
     </span>
   </a>
   
@@ -5349,8 +5349,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Either">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#or" class="md-nav__link">
@@ -5358,11 +5357,6 @@
       Or
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -71448,7 +71442,7 @@
         <li class="md-nav__item">
   <a href="#accessing-your-application-using-ride" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing your Application using RIDE
+      Accessing your Application using Ride
     </span>
   </a>
   
@@ -71573,8 +71567,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Either">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#or" class="md-nav__link">
@@ -71582,11 +71575,6 @@
       Or
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -71613,10 +71601,10 @@
   
 
 
-<h1> Run-Time Applications Additonal Considerations</h1>
+<h1 class="heading"><span class="name">Run-Time Applications Additonal Considerations</span></h1>
 
-<h2 id="accessing-your-application-using-ride">Accessing your Application using RIDE</h2>
-<p>If you wish to access your run-time application remotely using the RIDE, you must  put a copy of the appropriate Conga DLLs (see <a href="../files-and-directories/">Files</a>) in the same directory as your .EXE or workspace.</p>
+<h2 id="accessing-your-application-using-ride">Accessing your Application using Ride</h2>
+<p>If you wish to access your run-time application remotely using Ride, you must  put a copy of the appropriate Conga DLLs (see <a href="../files-and-directories/">Files</a>) in the same directory as your .EXE or workspace.</p>
 <h2 id="additional-files-for-syncfusion">Additional Files for Syncfusion</h2>
 <p>Under a licensing agreement with Syncfusion, Dyalog includes the Syncfusion library of WPF controls. These may be used by Dyalog APL users to develop applications, and may be distributed with Dyalog APL run-time applications.</p>
 <p>The Syncfusion libraries comprise a set of .NET assemblies which are supplied in the <em>Syncfusion/4.6</em> sub-directory of the main Dyalog APL installation directory (for example: <em>c:\Program Files\Dyalog\Dyalog APL-64 19.0 Unicode\Syncfusion\4.6</em>.</p>
@@ -71654,15 +71642,11 @@
 <p>Install the Dyalog development package (ideally onto a separate system just for this purpose) without administrator rights. This will perform an App-local installation of Dyalog itself. Then copy the UCRT files into your installation package. These files are:</p>
 <ul>
 <li>those beginning with <code>api-ms*</code></li>
-<li>
-<p><code>ucrtbase.dll</code></p>
-</li>
-<li>
-<p><code>vcruntime140.dll</code></p>
-</li>
+<li><code>ucrtbase.dll</code></li>
+<li><code>vcruntime140.dll</code></li>
 </ul>
-<h4 id="or">Or</h4>
-<p>Download and install the Windows 10 SDK from:<a href="https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk">https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk</a>, and follow the instructions in the link below.<a href="https://blogs.msdn.microsoft.com/vcblog/2015/03/03/introducing-the-universal-crt">https://blogs.msdn.microsoft.com/vcblog/2015/03/03/introducing-the-universal-crt</a></p>
+<h3 id="or">Or</h3>
+<p>Download and install the Windows 10 SDK from: <a href="https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk">https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk</a>, and follow the instructions in the link below. <a href="https://blogs.msdn.microsoft.com/vcblog/2015/03/03/introducing-the-universal-crt">https://blogs.msdn.microsoft.com/vcblog/2015/03/03/introducing-the-universal-crt</a></p>
 <p>Finally, modify your installer to add these files to the same folder as your Dyalog run-time application.</p>
 
 

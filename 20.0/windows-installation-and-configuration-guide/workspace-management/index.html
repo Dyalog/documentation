@@ -1349,7 +1349,7 @@
         
   
   <span class="md-ellipsis">
-    File Associations
+    File Extensions
   </span>
   
 
@@ -2175,7 +2175,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CancelKey1
+    CancelKey1
   </span>
   
 
@@ -2196,7 +2196,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CancelKey2
+    CancelKey2
   </span>
   
 
@@ -2217,7 +2217,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/Cols
+    Cols
   </span>
   
 
@@ -2238,7 +2238,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CommonKey1
+    CommonKey1
   </span>
   
 
@@ -2259,7 +2259,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CompleteKey1
+    CompleteKey1
   </span>
   
 
@@ -2280,7 +2280,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CompleteKey2
+    CompleteKey2
   </span>
   
 
@@ -2301,7 +2301,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/Enabled
+    Enabled
   </span>
   
 
@@ -2322,7 +2322,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/History
+    History
   </span>
   
 
@@ -2343,7 +2343,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/HistorySize
+    HistorySize
   </span>
   
 
@@ -2364,7 +2364,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/PrefixSize
+    PrefixSize
   </span>
   
 
@@ -2385,7 +2385,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/Rows
+    Rows
   </span>
   
 
@@ -2406,7 +2406,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/ShowFiles
+    ShowFiles
   </span>
   
 
@@ -71331,7 +71331,7 @@
   
 
 
-<h1> Workspace Management</h1>
+<h1 class="heading"><span class="name">Workspace Management</span></h1>
 
 <h2 id="workspace-size-and-compaction">Workspace Size and Compaction</h2>
 <p>The <em>maximum</em> amount of memory allocated to a Dyalog APL workspace is defined by the <strong>maxws</strong> parameter (on non-Windows platforms this is defined by the environment variable MAXWS).</p>
@@ -71355,8 +71355,7 @@
 <p>However, in contrast to the above, <em>any spare workspace above the workspace delta is returned to the Operating System</em>. On a Windows system, you can see the process size changing by using Task Manager.</p>
 <p>The system function <code>⎕WA</code> may therefore be used judiciously (workspace reorganisation takes time) to reduce the process size after a particularly memory-hungry operation.</p>
 <p>Note that in Dyalog APL, the SYMBOL TABLE is entirely dynamic and grows and shrinks in size automatically. There is no <code>SYMBOL TABLE FULL</code> condition.</p>
-<p>Additional functions for managing the memory used by the workspace are described in   <a href="../../language-reference-guide/the-i-beam-operator/memory-manager-statistics">Memory Manager Statistics:</a> and
-                                                                                             <a href="../../language-reference-guide/the-i-beam-operator/specify-workspace-available">Specify Workspace Available:</a>.</p>
+<p>Additional functions for managing the memory used by the workspace are described in <a href="../../language-reference-guide/the-i-beam-operator/memory-manager-statistics">Memory Manager Statistics</a> and <a href="../../language-reference-guide/the-i-beam-operator/specify-workspace-available">Specify Workspace Available</a>.</p>
 
 
 

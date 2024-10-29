@@ -1347,7 +1347,7 @@
         
   
   <span class="md-ellipsis">
-    File Associations
+    File Extensions
   </span>
   
 
@@ -2173,7 +2173,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CancelKey1
+    CancelKey1
   </span>
   
 
@@ -2194,7 +2194,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CancelKey2
+    CancelKey2
   </span>
   
 
@@ -2215,7 +2215,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/Cols
+    Cols
   </span>
   
 
@@ -2236,7 +2236,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CommonKey1
+    CommonKey1
   </span>
   
 
@@ -2257,7 +2257,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CompleteKey1
+    CompleteKey1
   </span>
   
 
@@ -2278,7 +2278,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CompleteKey2
+    CompleteKey2
   </span>
   
 
@@ -2299,7 +2299,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/Enabled
+    Enabled
   </span>
   
 
@@ -2320,7 +2320,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/History
+    History
   </span>
   
 
@@ -2341,7 +2341,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/HistorySize
+    HistorySize
   </span>
   
 
@@ -2362,7 +2362,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/PrefixSize
+    PrefixSize
   </span>
   
 
@@ -2383,7 +2383,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/Rows
+    Rows
   </span>
   
 
@@ -2404,7 +2404,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/ShowFiles
+    ShowFiles
   </span>
   
 
@@ -71369,7 +71369,7 @@
   
 
 
-<h1> Specifying Individual Cell Attributes</h1>
+<h1 class="heading"><span class="name">Specifying Individual Cell Attributes</span></h1>
 
 <p>The FCol, BCol, CellFonts and Input properties can be used to specify attributes of individual cells. One possible design would be for these properties to be matrices like the Values property, each of whose elements corresponded to a cell in the Grid. However, although conceptually simple, this design was considered to be wasteful in terms of workspace, especially as it is unlikely that every cell will require a totally individual set of attributes. Instead, FCol, BCol, CellFonts and Input either specify a single attribute to be applied to all cells, or they specify a vector of attributes which are indexed through the CellTypes property. This design is slightly more complex to use, but minimises the workspace needed to represent cell information.</p>
 <p>CellTypes is an integer matrix of the same size as Values. Each number in CellTypes defines the <em>type</em> of the corresponding cell, where <em>type</em> means a particular set of cell attributes defined by the BCol, FCol, CellFonts and Input properties.</p>

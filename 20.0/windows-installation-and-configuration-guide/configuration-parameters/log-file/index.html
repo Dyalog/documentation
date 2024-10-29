@@ -1344,7 +1344,7 @@
         
   
   <span class="md-ellipsis">
-    File Associations
+    File Extensions
   </span>
   
 
@@ -2172,7 +2172,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CancelKey1
+    CancelKey1
   </span>
   
 
@@ -2193,7 +2193,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CancelKey2
+    CancelKey2
   </span>
   
 
@@ -2214,7 +2214,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/Cols
+    Cols
   </span>
   
 
@@ -2235,7 +2235,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CommonKey1
+    CommonKey1
   </span>
   
 
@@ -2256,7 +2256,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CompleteKey1
+    CompleteKey1
   </span>
   
 
@@ -2277,7 +2277,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CompleteKey2
+    CompleteKey2
   </span>
   
 
@@ -2298,7 +2298,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/Enabled
+    Enabled
   </span>
   
 
@@ -2319,7 +2319,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/History
+    History
   </span>
   
 
@@ -2340,7 +2340,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/HistorySize
+    HistorySize
   </span>
   
 
@@ -2361,7 +2361,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/PrefixSize
+    PrefixSize
   </span>
   
 
@@ -2382,7 +2382,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/Rows
+    Rows
   </span>
   
 
@@ -2403,7 +2403,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/ShowFiles
+    ShowFiles
   </span>
   
 
@@ -71272,7 +71272,7 @@
   
 
 
-<h1> Log_File</h1>
+<h1 class="heading"><span class="name">Log_File</span></h1>
 
 <p>This parameter specifies the pathname to the Session log file; it can be absolute or relative to the working directory.</p>
 <p>The Session log file is not interchangeable between different versions/editions/widths of Dyalog – this means that opening a new instance of Dyalog will overwrite any contents of the Session log file populated by an already‑running instance. However, if the LOG_FILE parameter contains a '<code>*</code>' (for example,  <code>JD.*.dlf</code> ) then at start-up Dyalog will attempt to open, and then <strong>lock</strong>, a file where the '<code>*</code>' has been replaced with an increasing integer value (starting with 000, so <code>JD.000.dlf</code>, <code>JD.001.dlf</code> etc). If said file cannot be opened and locked, the value will be incremented. The process will fail, and no log will be used if the extension number would exceed 999.</p>

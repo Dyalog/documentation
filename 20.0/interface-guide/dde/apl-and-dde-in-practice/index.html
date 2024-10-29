@@ -1347,7 +1347,7 @@
         
   
   <span class="md-ellipsis">
-    File Associations
+    File Extensions
   </span>
   
 
@@ -2173,7 +2173,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CancelKey1
+    CancelKey1
   </span>
   
 
@@ -2194,7 +2194,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CancelKey2
+    CancelKey2
   </span>
   
 
@@ -2215,7 +2215,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/Cols
+    Cols
   </span>
   
 
@@ -2236,7 +2236,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CommonKey1
+    CommonKey1
   </span>
   
 
@@ -2257,7 +2257,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CompleteKey1
+    CompleteKey1
   </span>
   
 
@@ -2278,7 +2278,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/CompleteKey2
+    CompleteKey2
   </span>
   
 
@@ -2299,7 +2299,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/Enabled
+    Enabled
   </span>
   
 
@@ -2320,7 +2320,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/History
+    History
   </span>
   
 
@@ -2341,7 +2341,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/HistorySize
+    HistorySize
   </span>
   
 
@@ -2362,7 +2362,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/PrefixSize
+    PrefixSize
   </span>
   
 
@@ -2383,7 +2383,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/Rows
+    Rows
   </span>
   
 
@@ -2404,7 +2404,7 @@
         
   
   <span class="md-ellipsis">
-    AutoComplete/ShowFiles
+    ShowFiles
   </span>
   
 
@@ -71441,7 +71441,7 @@
   
 
 
-<h1> APL and DDE in Practice</h1>
+<h1 class="heading"><span class="name">APL and DDE in Practice</span></h1>
 
 <p>The interface between Dyalog APL/W and DDE is provided by Shared Variables which are implemented as closely as possible in accordance with the APL Standard. There are however some conflicts between Shared Variables and the way in which DDE works. These impose certain restrictions.</p>
 <p>The APL Shared Variable concept is based upon the <em>peer-to-peer</em> communications model where each partner has equal rights and equal control. DDE however is based upon the <em>client-server</em> model whereby data (normally) flows from server to the client at the client's request. This in turn has two major implications. Firstly, a client must <strong>initiate</strong> a DDE conversation. A server may only respond to a request from a client for a connection; it may not itself start a conversation. Secondly a server cannot specify to which client it wishes to communicate. In terms of the APL standard, this means that if a shared variable is to act as a server it must be made the subject of a <em>general offer</em>. A shared variable that is to act as a client must be the subject of a <em>specific offer</em> Furthermore, as in any DDE conversation there must be one server and one client, it means that two APL workspaces can share variables only if one makes a general offer and one makes a specific offer.</p>
