@@ -14157,7 +14157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../primitive-functions/negative/" class="md-nav__link">
+      <a href="../../primitive-functions/negative/#negative" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -14178,7 +14178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../primitive-functions/direction/" class="md-nav__link">
+      <a href="../../primitive-functions/direction/#direction" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -16027,8 +16027,6 @@
         
       
         
-          
-        
       
         
       
@@ -16062,24 +16060,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_12" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../primitive-functions/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5_2_12" id="__nav_5_2_12_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Non-Scalar Selector Functions
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_2_12" id="__nav_5_2_12_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_12">
@@ -16151,6 +16141,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -16719,8 +16728,6 @@
         
       
         
-          
-        
       
         
       
@@ -16866,24 +16873,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_14" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../primitive-functions/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5_2_14" id="__nav_5_2_14_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Primitive Functions (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_2_14" id="__nav_5_2_14_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_14_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_14">
@@ -17816,6 +17815,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/squad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -20677,7 +20695,7 @@
         
   
   <span class="md-ellipsis">
-    Format Date-time
+    Format Datetime
   </span>
   
 
@@ -20916,7 +20934,7 @@
         
   
   <span class="md-ellipsis">
-    Identify NET Type
+    Identify .NET Type
   </span>
   
 
@@ -21273,7 +21291,7 @@
         
   
   <span class="md-ellipsis">
-    Send Text to RIDE-embedded Browser
+    Send Text to Ride-embedded Browser
   </span>
   
 
@@ -21294,7 +21312,7 @@
         
   
   <span class="md-ellipsis">
-    Connected to the RIDE
+    Connected to Ride
   </span>
   
 
@@ -21315,7 +21333,7 @@
         
   
   <span class="md-ellipsis">
-    Manage RIDE
+    Manage Ride
   </span>
   
 
@@ -21693,7 +21711,7 @@
         
   
   <span class="md-ellipsis">
-    RIDE and Experimental Features-related I-Beams
+    Ride and Experimental Features-related I-Beams
   </span>
   
 
@@ -21763,7 +21781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../system-functions/summary-tables/introduction/" class="md-nav__link">
+      <a href="../../system-functions/introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -28466,7 +28484,7 @@
         
   
   <span class="md-ellipsis">
-    Date-time
+    Datetime
   </span>
   
 
@@ -71256,7 +71274,10 @@
 
 <h1 class="heading"><span class="name">Create .NET Delegate</span> <span class="command">R←2016⌶Y</span></h1>
 
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>.NET Framework only</strong></p>
+</div>
 <p>.NET methods (and properties) may specify a parameter to be a <em>delegate</em>. A delegate is a place holder for a function, normally with a particular signature and result type, that should be  supplied when the method is called. Sometimes the signature of a .NET method that takes a delegate as a parameter does not provide enough information for Dyalog to determine automatically what type of  delegate is required. <code>2016⌶</code> allows you to specify the type so that Dyalog can perform the necessary conversion(s) at run-time.</p>
 <p><code>Y</code> is a 2-element array. The first element is a .NET type that inherits from the abstract .NET Class System.Delegate. The second item is either the name of or the <code>⎕OR</code> of an APL function which is to be invoked via a .NET method or property.</p>
 <p>The result <code>R</code> is a ref to an instance of a .NET type specified by the first element of <code>Y</code>, which internally is associated with the function identified by the second element of <code>Y</code>.</p>

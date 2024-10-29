@@ -14162,7 +14162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../primitive-functions/negative/" class="md-nav__link">
+      <a href="../../primitive-functions/negative/#negative" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -14183,7 +14183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../primitive-functions/direction/" class="md-nav__link">
+      <a href="../../primitive-functions/direction/#direction" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -16032,8 +16032,6 @@
         
       
         
-          
-        
       
         
       
@@ -16067,24 +16065,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_12" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../primitive-functions/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5_2_12" id="__nav_5_2_12_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Non-Scalar Selector Functions
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_2_12" id="__nav_5_2_12_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_12">
@@ -16156,6 +16146,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -16724,8 +16733,6 @@
         
       
         
-          
-        
       
         
       
@@ -16871,24 +16878,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_14" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../primitive-functions/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5_2_14" id="__nav_5_2_14_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Primitive Functions (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_2_14" id="__nav_5_2_14_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_14_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_14">
@@ -17821,6 +17820,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/squad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -20680,7 +20698,7 @@
         
   
   <span class="md-ellipsis">
-    Format Date-time
+    Format Datetime
   </span>
   
 
@@ -20911,7 +20929,7 @@
         
   
   <span class="md-ellipsis">
-    Identify NET Type
+    Identify .NET Type
   </span>
   
 
@@ -21268,7 +21286,7 @@
         
   
   <span class="md-ellipsis">
-    Send Text to RIDE-embedded Browser
+    Send Text to Ride-embedded Browser
   </span>
   
 
@@ -21289,7 +21307,7 @@
         
   
   <span class="md-ellipsis">
-    Connected to the RIDE
+    Connected to Ride
   </span>
   
 
@@ -21310,7 +21328,7 @@
         
   
   <span class="md-ellipsis">
-    Manage RIDE
+    Manage Ride
   </span>
   
 
@@ -21688,7 +21706,7 @@
         
   
   <span class="md-ellipsis">
-    RIDE and Experimental Features-related I-Beams
+    Ride and Experimental Features-related I-Beams
   </span>
   
 
@@ -21758,7 +21776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../system-functions/summary-tables/introduction/" class="md-nav__link">
+      <a href="../../system-functions/introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -28461,7 +28479,7 @@
         
   
   <span class="md-ellipsis">
-    Date-time
+    Datetime
   </span>
   
 
@@ -71371,8 +71389,8 @@
 <p>You may copy an object from a namespace by specifying its full pathname.  The object will be copied to the current namespace in the active workspace, losing its original parent and gaining a new one in the process.  You may only copy a GUI object into a namespace that is a suitable parent for that object.  For example, you could only copy a Group object from a saved workspace if the current namespace in the active workspace is itself a Form, SubForm or Group.</p>
 <p>If the workspace name identifies a file that is not a workspace, the system reports <code>bad ws</code>.</p>
 <p>If the source workspace is too large to be loaded, the system reports <code>ws too large</code>.</p>
-<p>When copying data between Classic and Unicode Editions, <code>)COPY</code> will fail with <code>TRANSLATION ERROR</code> if <em>any</em> object in the source workspace fails conversion between Unicode and <code>⎕AV</code> indices, whether or not that object is specified by <code>nms</code>. See <a href="../../system-functions/avu/">"Atomic Vector - Unicode: "</a> for further details.</p>
-<p>If "<code>ws</code>" is omitted, the file open dialog box is displayed and all objects copied from the selected workspace.</p>
+<p>When copying data between Classic and Unicode Editions, <code>)COPY</code> will fail with <code>TRANSLATION ERROR</code> if <em>any</em> object in the source workspace fails conversion between Unicode and <code>⎕AV</code> indices, whether or not that object is specified by <code>nms</code>. See <a href="../../system-functions/avu/">Atomic Vector - Unicode</a> for further details.</p>
+<p>If <code>ws</code> is omitted, the file open dialog box is displayed and all objects copied from the selected workspace.</p>
 <p>If the list of names is included, the names of system variables may also be included and copied into the active workspace.  The global referents will be copied.</p>
 <p>If an object is not found in the stored workspace, the system reports <code>not found</code> followed by the name of the object.</p>
 <h2 id="dependent-objects">Dependent Objects</h2>
@@ -71428,8 +71446,8 @@
 <h2 id="copying-objects-from-session-files">Copying Objects from Session Files</h2>
 <p>You may also copy objects from session (.dse) files, although with certain restrictions.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">        </span><span class="p">)</span><span class="nv">copy</span><span class="w"> </span><span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Users</span><span class="na">\</span><span class="nv">Pete</span><span class="na">\</span><span class="nv">Desktop</span><span class="na">\</span><span class="nv">pete</span><span class="na">.</span><span class="nv">dse</span><span class="w"> </span><span class="nf">⎕SE</span><span class="na">.</span><span class="nv">UCMD</span>
-<span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Users</span><span class="na">\</span><span class="nv">Pete</span><span class="na">\</span><span class="nv">Desktop</span><span class="na">\</span><span class="nv">pete</span><span class="na">.</span><span class="nv">dse</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="nv">Wed</span><span class="w"> </span><span class="nv">Oct</span><span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="na">...</span>
+<div class="highlight"><pre><span></span><code>        )copy C:\Users\Pete\Desktop\pete.dse ⎕SE.UCMD
+C:\Users\Pete\Desktop\pete.dse saved Wed Oct 14 ...
 </code></pre></div>
 <ul>
 <li>You can copy a function or variable from any namespace under a saved <code>⎕SE</code>, no matter what your current namespace is.</li>
@@ -71439,23 +71457,23 @@
 <h2 class="example">Examples</h2>
 
 <p>In the following example, the <em>not copied</em> cases occur because the current namespace is not an appropriate parent for the object in question.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="c1">#</span>
-<span class="c1">#</span>
-<span class="w">      </span><span class="p">)</span><span class="nv">copy</span><span class="w"> </span><span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Users</span><span class="na">\...\</span><span class="nv">pete</span><span class="na">.</span><span class="nv">dse</span><span class="w"> </span><span class="nf">⎕SE</span><span class="na">.</span><span class="nv">Dyalog</span><span class="na">.</span><span class="nv">Callbacks</span>
-<span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Users</span><span class="na">\...\</span><span class="nv">pete</span><span class="na">.</span><span class="nv">dse</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="nv">Wed</span><span class="w"> </span><span class="nv">Oct</span><span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">15</span><span class="bp">:</span><span class="m">31</span><span class="bp">:</span><span class="m">14</span><span class="w"> </span><span class="m">2015</span>
+</p><div class="highlight"><pre><span></span><code>      )CS #
+#
+      )copy C:\Users\...\pete.dse ⎕SE.Dyalog.Callbacks
+C:\Users\...\pete.dse saved Wed Oct 14 15:31:14 2015
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">       </span><span class="p">)</span><span class="nv">copy</span><span class="w"> </span><span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Users</span><span class="na">\...\</span><span class="nv">pete</span><span class="na">.</span><span class="nv">dse</span><span class="w"> </span><span class="nf">⎕SE</span><span class="na">.</span><span class="nv">cbbot</span>
-<span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Users</span><span class="na">\...\</span><span class="nv">pete</span><span class="na">.</span><span class="nv">dse</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="nv">Wed</span><span class="w"> </span><span class="nv">Oct</span><span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">15</span><span class="bp">:</span><span class="m">31</span><span class="bp">:</span><span class="m">14</span><span class="w"> </span><span class="m">2015</span>
-<span class="nv">not</span><span class="w"> </span><span class="nv">copied</span><span class="w"> </span><span class="nv">cbbot</span>
+<div class="highlight"><pre><span></span><code>       )copy C:\Users\...\pete.dse ⎕SE.cbbot
+C:\Users\...\pete.dse saved Wed Oct 14 15:31:14 2015
+not copied cbbot
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">       </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nf">⎕SE</span>
-<span class="nf">⎕SE</span>
-<span class="w">      </span><span class="p">)</span><span class="nv">copy</span><span class="w"> </span><span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Users</span><span class="na">\...\</span><span class="nv">pete</span><span class="na">.</span><span class="nv">dse</span><span class="w"> </span><span class="nf">⎕SE</span><span class="na">.</span><span class="nv">cbbot</span>
-<span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Users</span><span class="na">\...\</span><span class="nv">pete</span><span class="na">.</span><span class="nv">dse</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="nv">Wed</span><span class="w"> </span><span class="nv">Oct</span><span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">15</span><span class="bp">:</span><span class="m">31</span><span class="bp">:</span><span class="m">14</span><span class="w"> </span><span class="m">2015</span>
+<div class="highlight"><pre><span></span><code>       )CS ⎕SE
+⎕SE
+      )copy C:\Users\...\pete.dse ⎕SE.cbbot
+C:\Users\...\pete.dse saved Wed Oct 14 15:31:14 2015
 
-<span class="w">      </span><span class="p">)</span><span class="nv">copy</span><span class="w"> </span><span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Users</span><span class="na">\...\</span><span class="nv">pete</span><span class="na">.</span><span class="nv">dse</span><span class="w"> </span><span class="nf">⎕SE</span><span class="na">.</span><span class="nv">cbbot</span><span class="na">.</span><span class="nv">bandsb1</span>
-<span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Users</span><span class="na">\...\</span><span class="nv">pete</span><span class="na">.</span><span class="nv">dse</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="nv">Wed</span><span class="w"> </span><span class="nv">Oct</span><span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">15</span><span class="bp">:</span><span class="m">31</span><span class="bp">:</span><span class="m">14</span><span class="w"> </span><span class="m">2015</span>
-<span class="nv">not</span><span class="w"> </span><span class="nv">copied</span><span class="w"> </span><span class="nv">bandsb1</span>
+      )copy C:\Users\...\pete.dse ⎕SE.cbbot.bandsb1
+C:\Users\...\pete.dse saved Wed Oct 14 15:31:14 2015
+not copied bandsb1
 </code></pre></div>
 
 

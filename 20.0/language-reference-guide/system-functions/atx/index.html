@@ -14157,7 +14157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../primitive-functions/negative/" class="md-nav__link">
+      <a href="../../primitive-functions/negative/#negative" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -14178,7 +14178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../primitive-functions/direction/" class="md-nav__link">
+      <a href="../../primitive-functions/direction/#direction" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -16027,8 +16027,6 @@
         
       
         
-          
-        
       
         
       
@@ -16062,24 +16060,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_12" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../primitive-functions/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5_2_12" id="__nav_5_2_12_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Non-Scalar Selector Functions
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_2_12" id="__nav_5_2_12_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_12">
@@ -16151,6 +16141,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -16719,8 +16728,6 @@
         
       
         
-          
-        
       
         
       
@@ -16866,24 +16873,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_14" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../primitive-functions/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5_2_14" id="__nav_5_2_14_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Primitive Functions (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_2_14" id="__nav_5_2_14_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_14_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_14">
@@ -17816,6 +17815,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/squad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -20675,7 +20693,7 @@
         
   
   <span class="md-ellipsis">
-    Format Date-time
+    Format Datetime
   </span>
   
 
@@ -20906,7 +20924,7 @@
         
   
   <span class="md-ellipsis">
-    Identify NET Type
+    Identify .NET Type
   </span>
   
 
@@ -21263,7 +21281,7 @@
         
   
   <span class="md-ellipsis">
-    Send Text to RIDE-embedded Browser
+    Send Text to Ride-embedded Browser
   </span>
   
 
@@ -21284,7 +21302,7 @@
         
   
   <span class="md-ellipsis">
-    Connected to the RIDE
+    Connected to Ride
   </span>
   
 
@@ -21305,7 +21323,7 @@
         
   
   <span class="md-ellipsis">
-    Manage RIDE
+    Manage Ride
   </span>
   
 
@@ -21683,7 +21701,7 @@
         
   
   <span class="md-ellipsis">
-    RIDE and Experimental Features-related I-Beams
+    Ride and Experimental Features-related I-Beams
   </span>
   
 
@@ -21755,7 +21773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../summary-tables/introduction/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -28468,7 +28486,7 @@
         
   
   <span class="md-ellipsis">
-    Date-time
+    Datetime
   </span>
   
 
@@ -71259,7 +71277,10 @@
 <h1 class="heading"><span class="name">Extended Attributes</span> <span class="command">R←X ⎕ATX Y</span></h1>
 
 <p>This function provides information about a name in a workspace, including its usage, history, restrictions, role and origin.</p>
-<p>Note: To retrieve this information for an unnamed value, wrap <code>⎕ATX</code> in a dfn and use the name <code>⍵</code>, for example <code>{60⎕ATX'⍵'}</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To retrieve this information for an unnamed value, wrap <code>⎕ATX</code> in a dfn and use the name <code>⍵</code>, for example <code>{60⎕ATX'⍵'}</code></p>
+</div>
 <p><code>Y</code> can be a simple character scalar, a simple or enclosed character vector, or a vector of character scalars and vectors  (as least one must be a character vector) of the name(s) for which information is required.</p>
 <p><code>X</code> can be a scalar or a vector indicating the information required:</p>
 <table>
@@ -71269,7 +71290,6 @@
 <th><code>X</code></th>
 <th>Meaning</th>
 <th>Default</th>
-<th> </th>
 </tr>
 </thead>
 <tbody>
@@ -71278,166 +71298,141 @@
 <td>0</td>
 <td>Name</td>
 <td><code>''</code></td>
-<td> </td>
 </tr>
 <tr>
-<td>Syntax</td>
+<td rowspan="3">Syntax</td>
 <td>10</td>
 <td>Function result ( <code>0</code> : none or not a function, <code>1</code> : explicit, <code>¯1</code> : shy)</td>
 <td><code>0</code></td>
-<td> </td>
 </tr>
 <tr>
 <td>11</td>
 <td>Function valence ( <code>0</code> : niladic, <code>1</code> : monadic, <code>2</code> : dyadic, <code>¯2</code> : ambivalent)</td>
 <td><code>0</code></td>
-<td colspan="2"> </td>
 </tr>
 <tr>
 <td>12</td>
 <td>Operator valence: ( <code>0</code> : not an operator, <code>1</code> : monadic, <code>2</code> : dyadic)</td>
 <td><code>0</code></td>
-<td colspan="2"> </td>
 </tr>
 <tr>
-<td>Last edit</td>
+<td rowspan="4">Last edit</td>
 <td>20</td>
 <td>Author of last edit</td>
 <td><code>''</code></td>
-<td> </td>
 </tr>
 <tr>
 <td>21</td>
 <td>Number of days passed between 1899-12-31 at 00:00 UTC and last edit (includes fractional days)</td>
 <td><code>0</code></td>
-<td colspan="2"> </td>
 </tr>
 <tr>
 <td>22</td>
 <td>Local timestamp at last edit (format is the 7-item vector described by <code>⎕TS</code> . See <a href="../ts/">Timestamp</a> )</td>
 <td><code>⍬</code></td>
-<td colspan="2"> </td>
 </tr>
 <tr>
 <td>23</td>
 <td>Number of bytes required for storage without sharing</td>
 <td><code>0</code></td>
-<td colspan="2"> </td>
 </tr>
 <tr>
-<td>Restrictions</td>
+<td rowspan="3">Restrictions</td>
 <td>30</td>
 <td>Source can be displayed</td>
 <td><code>¯1</code></td>
-<td> </td>
 </tr>
 <tr>
 <td>31</td>
 <td>Execution can be suspended mid-execution</td>
 <td><code>¯1</code></td>
-<td colspan="2"> </td>
 </tr>
 <tr>
 <td>32</td>
 <td>Responds to weak interrupt</td>
 <td><code>¯1</code></td>
-<td colspan="2"> </td>
 </tr>
 <tr>
-<td>Class*</td>
+<td rowspan="3">Class<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
 <td>40</td>
 <td>Syntactic supra-class ( <code>¯1</code> : invalid name, <code>0</code> : undefined, <code>1</code> : label, <code>2</code> : variable, <code>3</code> : function, <code>4</code> : operator, <code>8</code> : event, <code>9</code> : object)</td>
 <td><code>¯1</code></td>
-<td> </td>
 </tr>
 <tr>
 <td>41</td>
 <td>Syntactic sub-class ( <code>0</code> : none, <code>1</code> : traditional/plain, <code>2</code> : field/dynamic/instance, <code>3</code> : property/derived/primitive, <code>4</code> : class, <code>5</code> : interface, <code>6</code> : external, <code>7</code> : external interface)</td>
 <td><code>0</code></td>
-<td colspan="2"> </td>
 </tr>
 <tr>
 <td>42</td>
 <td>Full syntactic class (sum of supra- and sub-class)</td>
 <td><code>¯1</code></td>
-<td colspan="2"> </td>
 </tr>
 <tr>
-<td>Source</td>
+<td rowspan="6">Source</td>
 <td>50</td>
 <td>File name</td>
 <td><code>''</code></td>
-<td> </td>
 </tr>
 <tr>
 <td>51</td>
 <td>File encoding</td>
 <td><code>''</code></td>
-<td colspan="2"> </td>
 </tr>
 <tr>
 <td>52</td>
 <td>File checksum</td>
 <td><code>''</code></td>
-<td colspan="2"> </td>
 </tr>
 <tr>
 <td>53</td>
 <td>File line separators ( <code>13</code> : Carriage Return, <code>10</code> : Line Feed, <code>13 10</code> : Carriage Return followed by Line Feed, <code>133</code> : New Line, <code>11</code> : Vertical Tab, <code>12</code> : Form Feed, <code>8232</code> : Line Separator, <code>8233</code> : Paragraph Separator)</td>
 <td><code>⍬</code></td>
-<td colspan="2"> </td>
 </tr>
 <tr>
 <td>54</td>
 <td>Definition's offset from top</td>
 <td><code>0</code></td>
-<td colspan="2"> </td>
 </tr>
 <tr>
 <td>55</td>
 <td>Number of lines in definition</td>
 <td><code>0</code></td>
-<td colspan="2"> </td>
 </tr>
 <tr>
-<td>Definition</td>
+<td rowspan="3">Definition</td>
 <td>60</td>
 <td>Verbatim source (as typed)</td>
 <td><code>0⍴⊂''</code></td>
-<td> </td>
 </tr>
 <tr>
 <td>61</td>
 <td>Normalised source (with AUTOFORMAT=1 and TABSTOPS=4)</td>
 <td><code>0⍴⊂''</code></td>
-<td colspan="2"> </td>
 </tr>
 <tr>
 <td>62</td>
 <td>Most precise available source (verbatim with fallback to normalised)</td>
 <td><code>0⍴⊂''</code></td>
-<td colspan="2"> </td>
 </tr>
 </tbody>
 </table>
-<ul>
-<li>Names in the Class group that can return <code>¯1</code> (meaning "invalid name") might return a different value in future versions of Dyalog, including values that are not currently possible and ones that deviate from the current <code>⎕NC</code> values.</li>
-</ul>
 <p><code>R</code> depends on the combination of <code>X</code> and <code>Y</code>:</p>
 <table>
 <thead>
 <tr>
-<th colspan="2"></th>
+<th colspan="2"> </th>
 <th colspan="2"><code>X</code></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td colspan="2"> </td>
 <td>Scalar</td>
-<td colspan="3">Vector</td>
+<td>Vector</td>
 </tr>
 <tr>
-<td><code>Y</code></td>
+<td rowspan="3" valign="middle"><code>Y</code></td>
 <td>Simple character scalar/vector</td>
 <td>Requested value (not enclosed)</td>
 <td>Vector of requested values</td>
@@ -71445,12 +71440,12 @@
 <tr>
 <td>Enclosed character vector</td>
 <td>Requested value (enclosed)</td>
-<td colspan="2">Scalar containing vector of requested values</td>
+<td>Scalar containing vector of requested values</td>
 </tr>
 <tr>
 <td>Vector of character scalars/vectors</td>
 <td>Vector of requested values</td>
-<td colspan="2">Outer shape from <code>⍴⍺</code> , inner shape from <code>⍴⍵</code></td>
+<td>Outer shape from <code>⍴⍺</code> , inner shape from <code>⍴⍵</code></td>
 </tr>
 </tbody>
 </table>
@@ -71497,6 +71492,14 @@
 <span class="err">│└────────────┴─────────────┘│└────────────┘│</span>
 <span class="err">└────────────────────────────┴──────────────┘</span>
 </code></pre></div>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Names in the Class group that can return <code>¯1</code> (meaning "invalid name") might return a different value in future versions of Dyalog, including values that are not currently possible and ones that deviate from the current <code>⎕NC</code> values. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+</ol>
+</div>
 
 
 

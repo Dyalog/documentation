@@ -14162,7 +14162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../primitive-functions/negative/" class="md-nav__link">
+      <a href="../../primitive-functions/negative/#negative" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -14183,7 +14183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../primitive-functions/direction/" class="md-nav__link">
+      <a href="../../primitive-functions/direction/#direction" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -16032,8 +16032,6 @@
         
       
         
-          
-        
       
         
       
@@ -16067,24 +16065,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_12" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../primitive-functions/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5_2_12" id="__nav_5_2_12_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Non-Scalar Selector Functions
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_2_12" id="__nav_5_2_12_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_12">
@@ -16156,6 +16146,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -16724,8 +16733,6 @@
         
       
         
-          
-        
       
         
       
@@ -16871,24 +16878,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_14" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../primitive-functions/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5_2_14" id="__nav_5_2_14_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Primitive Functions (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_2_14" id="__nav_5_2_14_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_14_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_14">
@@ -17821,6 +17820,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/squad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -20682,7 +20700,7 @@
         
   
   <span class="md-ellipsis">
-    Format Date-time
+    Format Datetime
   </span>
   
 
@@ -20978,7 +20996,7 @@
         
   
   <span class="md-ellipsis">
-    Identify NET Type
+    Identify .NET Type
   </span>
   
 
@@ -21335,7 +21353,7 @@
         
   
   <span class="md-ellipsis">
-    Send Text to RIDE-embedded Browser
+    Send Text to Ride-embedded Browser
   </span>
   
 
@@ -21356,7 +21374,7 @@
         
   
   <span class="md-ellipsis">
-    Connected to the RIDE
+    Connected to Ride
   </span>
   
 
@@ -21377,7 +21395,7 @@
         
   
   <span class="md-ellipsis">
-    Manage RIDE
+    Manage Ride
   </span>
   
 
@@ -21755,7 +21773,7 @@
         
   
   <span class="md-ellipsis">
-    RIDE and Experimental Features-related I-Beams
+    Ride and Experimental Features-related I-Beams
   </span>
   
 
@@ -21825,7 +21843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../system-functions/summary-tables/introduction/" class="md-nav__link">
+      <a href="../../system-functions/introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -28528,7 +28546,7 @@
         
   
   <span class="md-ellipsis">
-    Date-time
+    Datetime
   </span>
   
 
@@ -71353,11 +71371,15 @@
 
 <h1 class="heading"><span class="name">Read DataTable</span> <span class="command">R←{X}2011⌶Y</span></h1>
 
-<p>This function performs a <em>block read</em> from an instance of the ADO.NET object System.Data.DataTable. This object may only be read using an explicit row-wise loop, which is slow at the APL level. <code>2011⌶</code> implements an <em>internal</em> row-wise loop which is much faster on large arrays. Furthermore, the function handles NULL values and the conversion of .NET datatypes to the appropriate internal APL form in a more efficient manner than can otherwise be achieved. These 3 factors together mean that the function provides a significant improvement in performance compared to calling the row-wise programming interface directly at the APL level.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>.NET Framework only</strong></p>
+</div>
+<p>This function performs a <em>block read</em> from an instance of the ADO.NET object System.Data.DataTable. This object may only be read using an explicit row-wise loop, which is slow at the APL level. <code>2011⌶</code> implements an <em>internal</em> row-wise loop which is much faster on large arrays. Furthermore, the function handles NULL values and the conversion of .NET data types to the appropriate internal APL form in a more efficient manner than can otherwise be achieved. These 3 factors together mean that the function provides a significant improvement in performance compared to calling the row-wise programming interface directly at the APL level.</p>
 <p><code>Y</code> is a scalar or a 1 or 2-item array containing:</p>
 <ol>
-<li>A reference to an instance of System.Data.DataTable.</li>
-<li>An optional vector which specifies the values to which a System.DBNull should be mapped in the corresponding columns of the result </li>
+<li>A reference to an instance of <code>System.Data.DataTable</code>.</li>
+<li>An optional vector which specifies the values to which a <code>System.DBNull</code> should be mapped in the corresponding columns of the result </li>
 </ol>
 <p>The result <code>R</code> depends upon the value of the  Variant option Invert. This the primary option with a default value of 0.</p>
 <h2 id="invert-option-boolean">Invert Option (Boolean)</h2>
@@ -71365,11 +71387,11 @@
 <tbody>
 <tr>
 <td>0</td>
-<td>The result <code>R</code> is a matrix with the same shape as the DataTable referenced by <code>⊃Y</code> .</td>
+<td>The result <code>R</code> is a matrix with the same shape as the DataTable referenced by <code>⊃Y</code>.</td>
 </tr>
 <tr>
 <td><code>1</code></td>
-<td>The result <code>R</code> is vector whose length is the same as the number of columns in the DataTable referenced by <code>⊃Y</code> .</td>
+<td>The result <code>R</code> is vector whose length is the same as the number of columns in the DataTable referenced by <code>⊃Y</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -71378,15 +71400,15 @@
 <tbody>
 <tr>
 <td>1</td>
-<td>Specifies that the corresponding column of the result  should be converted to a string using the <code>ToString</code> method of the data type of column in question.</td>
+<td>Specifies that the corresponding column of the result should be converted to a string using the <code>ToString</code> method of the data type of column in question.</td>
 </tr>
 <tr>
 <td>2</td>
-<td>Specifies that numbers of type System.Int64 in the corresponding column of the result  should be converted to DECFs (NOT into .NET objects, which is the default)</td>
+<td>Specifies that numbers of type <code>System.Int64</code> in the corresponding column of the result should be converted to DECFs (NOT into .NET objects, which is the default)</td>
 </tr>
 <tr>
 <td>4</td>
-<td>Specifies that if the type of the corresponding column is System.String the entire column should be returned as a character matrix rather than a vector of character vectors. Any nulls will be replaced with a row of spaces. This applies only when <strong>Invert</strong> is 1.</td>
+<td>Specifies that if the type of the corresponding column is <code>System.String</code> the entire column should be returned as a character matrix rather than a vector of character vectors. Any nulls will be replaced with a row of spaces. This applies only when <strong>Invert</strong> is 1.</td>
 </tr>
 <tr>
 <td>5</td>

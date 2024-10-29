@@ -14157,7 +14157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../primitive-functions/negative/" class="md-nav__link">
+      <a href="../../primitive-functions/negative/#negative" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -14178,7 +14178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../primitive-functions/direction/" class="md-nav__link">
+      <a href="../../primitive-functions/direction/#direction" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -16027,8 +16027,6 @@
         
       
         
-          
-        
       
         
       
@@ -16062,24 +16060,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_12" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../primitive-functions/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5_2_12" id="__nav_5_2_12_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Non-Scalar Selector Functions
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_2_12" id="__nav_5_2_12_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_12">
@@ -16151,6 +16141,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -16719,8 +16728,6 @@
         
       
         
-          
-        
       
         
       
@@ -16866,24 +16873,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_14" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../primitive-functions/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5_2_14" id="__nav_5_2_14_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Primitive Functions (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_2_14" id="__nav_5_2_14_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_14_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_14">
@@ -17816,6 +17815,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/squad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -20677,7 +20695,7 @@
         
   
   <span class="md-ellipsis">
-    Format Date-time
+    Format Datetime
   </span>
   
 
@@ -20908,7 +20926,7 @@
         
   
   <span class="md-ellipsis">
-    Identify NET Type
+    Identify .NET Type
   </span>
   
 
@@ -21265,7 +21283,7 @@
         
   
   <span class="md-ellipsis">
-    Send Text to RIDE-embedded Browser
+    Send Text to Ride-embedded Browser
   </span>
   
 
@@ -21286,7 +21304,7 @@
         
   
   <span class="md-ellipsis">
-    Connected to the RIDE
+    Connected to Ride
   </span>
   
 
@@ -21307,7 +21325,7 @@
         
   
   <span class="md-ellipsis">
-    Manage RIDE
+    Manage Ride
   </span>
   
 
@@ -21693,7 +21711,7 @@
         
   
   <span class="md-ellipsis">
-    RIDE and Experimental Features-related I-Beams
+    Ride and Experimental Features-related I-Beams
   </span>
   
 
@@ -21763,7 +21781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../system-functions/summary-tables/introduction/" class="md-nav__link">
+      <a href="../../system-functions/introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -28466,7 +28484,7 @@
         
   
   <span class="md-ellipsis">
-    Date-time
+    Datetime
   </span>
   
 
@@ -71256,7 +71274,10 @@
 
 <h1 class="heading"><span class="name">Reap Forked Tasks</span> <span class="command">R←4002⌶Y</span></h1>
 
-<p>This applies to AIX only.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>AIX only</strong></p>
+</div>
 <p>Under UNIX, when a child process terminates, it signals to its parent that it has terminated and waits for the parent to acknowledge that signal. <code>4002⌶</code> is the mechanism to allow the APL programmer to issue such acknowledgements.</p>
 <p><code>Y</code> must be a simple empty vector but is ignored.</p>
 <p>The result <code>R</code> is a matrix containing the list of the newly-terminated processes which have been terminated as a result of receiving the acknowledgement, along with information about each of those processes as described below.</p>
@@ -71265,24 +71286,24 @@
 <p><code>R[;3]</code> is <code>¯1</code> if the child process terminated as the result of a signal, otherwise it is the exit code of the child process</p>
 <p>The remaining 15 columns are the contents of the <code>rusage</code> structure returned by the underlying <code>wait3()</code> system call. Note that the two timevalstructs are each returned as a floating point number.</p>
 <p>The current <code>rusage</code> structure contains:
-</p><div class="highlight"><pre><span></span><code><span class="nv">struct</span><span class="w"> </span><span class="nv">rusage</span><span class="w"> </span><span class="kt">{</span>
-<span class="w">    </span><span class="nv">struct</span><span class="w"> </span><span class="nv">timeval</span><span class="w"> </span><span class="nv">ru_utime</span><span class="sr">;</span><span class="w"> </span><span class="na">/</span><span class="o">*</span><span class="w"> </span><span class="nv">user</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="nv">used</span><span class="w"> </span><span class="o">*</span><span class="na">/</span>
-<span class="w">    </span><span class="nv">struct</span><span class="w"> </span><span class="nv">timeval</span><span class="w"> </span><span class="nv">ru_stime</span><span class="sr">;</span><span class="w"> </span><span class="na">/</span><span class="o">*</span><span class="w"> </span><span class="nv">system</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="nv">used</span><span class="w"> </span><span class="o">*</span><span class="na">/</span>
-<span class="w">    </span><span class="nv">long</span><span class="w">   </span><span class="nv">ru_maxrss</span><span class="sr">;</span><span class="w">        </span><span class="na">/</span><span class="o">*</span><span class="w"> </span><span class="nv">maximum</span><span class="w"> </span><span class="nv">resident</span><span class="w"> </span><span class="nv">set</span><span class="w"> </span><span class="nv">size</span><span class="w"> </span><span class="o">*</span><span class="na">/</span>
-<span class="w">    </span><span class="nv">long</span><span class="w">   </span><span class="nv">ru_ixrss</span><span class="sr">;</span><span class="w">         </span><span class="na">/</span><span class="o">*</span><span class="w"> </span><span class="nv">integral</span><span class="w"> </span><span class="nv">shared</span><span class="w"> </span><span class="nv">memory</span><span class="w"> </span><span class="nv">size</span><span class="w"> </span><span class="o">*</span><span class="na">/</span>
-<span class="w">    </span><span class="nv">long</span><span class="w">   </span><span class="nv">ru_idrss</span><span class="sr">;</span><span class="w">         </span><span class="na">/</span><span class="o">*</span><span class="w"> </span><span class="nv">integral</span><span class="w"> </span><span class="nv">unshared</span><span class="w"> </span><span class="nv">data</span><span class="w"> </span><span class="nv">size</span><span class="w"> </span><span class="o">*</span><span class="na">/</span>
-<span class="w">    </span><span class="nv">long</span><span class="w">   </span><span class="nv">ru_isrss</span><span class="sr">;</span><span class="w">         </span><span class="na">/</span><span class="o">*</span><span class="w"> </span><span class="nv">integral</span><span class="w"> </span><span class="nv">unshared</span><span class="w"> </span><span class="nv">stack</span><span class="w"> </span><span class="nv">size</span><span class="w"> </span><span class="o">*</span><span class="na">/</span>
-<span class="w">    </span><span class="nv">long</span><span class="w">   </span><span class="nv">ru_minflt</span><span class="sr">;</span><span class="w">        </span><span class="na">/</span><span class="o">*</span><span class="w"> </span><span class="nv">page</span><span class="w"> </span><span class="nv">reclaims</span><span class="w"> </span><span class="o">*</span><span class="na">/</span>
-<span class="w">    </span><span class="nv">long</span><span class="w">   </span><span class="nv">ru_majflt</span><span class="sr">;</span><span class="w">        </span><span class="na">/</span><span class="o">*</span><span class="w"> </span><span class="nv">page</span><span class="w"> </span><span class="nv">faults</span><span class="w"> </span><span class="o">*</span><span class="na">/</span>
-<span class="w">    </span><span class="nv">long</span><span class="w">   </span><span class="nv">ru_nswap</span><span class="sr">;</span><span class="w">         </span><span class="na">/</span><span class="o">*</span><span class="w"> </span><span class="nv">swaps</span><span class="w"> </span><span class="o">*</span><span class="na">/</span>
-<span class="w">    </span><span class="nv">long</span><span class="w">   </span><span class="nv">ru_inblock</span><span class="sr">;</span><span class="w">       </span><span class="na">/</span><span class="o">*</span><span class="w"> </span><span class="nv">block</span><span class="w"> </span><span class="nv">input</span><span class="w"> </span><span class="nv">operations</span><span class="w"> </span><span class="o">*</span><span class="na">/</span>
-<span class="w">    </span><span class="nv">long</span><span class="w">   </span><span class="nv">ru_oublock</span><span class="sr">;</span><span class="w">       </span><span class="na">/</span><span class="o">*</span><span class="w"> </span><span class="nv">block</span><span class="w"> </span><span class="nv">output</span><span class="w"> </span><span class="nv">operations</span><span class="w"> </span><span class="o">*</span><span class="na">/</span>
-<span class="w">    </span><span class="nv">long</span><span class="w">   </span><span class="nv">ru_msgsnd</span><span class="sr">;</span><span class="w">        </span><span class="na">/</span><span class="o">*</span><span class="w"> </span><span class="nv">messages</span><span class="w"> </span><span class="nv">sent</span><span class="w"> </span><span class="o">*</span><span class="na">/</span>
-<span class="w">    </span><span class="nv">long</span><span class="w">   </span><span class="nv">ru_msgrcv</span><span class="sr">;</span><span class="w">        </span><span class="na">/</span><span class="o">*</span><span class="w"> </span><span class="nv">messages</span><span class="w"> </span><span class="nv">received</span><span class="w"> </span><span class="o">*</span><span class="na">/</span>
-<span class="w">    </span><span class="nv">long</span><span class="w">   </span><span class="nv">ru_nsignals</span><span class="sr">;</span><span class="w">      </span><span class="na">/</span><span class="o">*</span><span class="w"> </span><span class="nv">signals</span><span class="w"> </span><span class="nv">received</span><span class="w"> </span><span class="o">*</span><span class="na">/</span>
-<span class="w">    </span><span class="nv">long</span><span class="w">   </span><span class="nv">ru_nvcsw</span><span class="sr">;</span><span class="w">         </span><span class="na">/</span><span class="o">*</span><span class="w"> </span><span class="nv">voluntary</span><span class="w"> </span><span class="nv">context</span><span class="w"> </span><span class="nv">switches</span><span class="w"> </span><span class="o">*</span><span class="na">/</span>
-<span class="w">    </span><span class="nv">long</span><span class="w">   </span><span class="nv">ru_nivcsw</span><span class="sr">;</span><span class="w">        </span><span class="na">/</span><span class="o">*</span><span class="w"> </span><span class="nv">involuntary</span><span class="w"> </span><span class="nv">context</span><span class="w"> </span><span class="nv">switches</span><span class="w"> </span><span class="o">*</span><span class="na">/</span>
-<span class="kt">}</span><span class="sr">;</span>
+</p><div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">rusage</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">timeval</span><span class="w"> </span><span class="n">ru_utime</span><span class="p">;</span><span class="w"> </span><span class="cm">/* user time used */</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">timeval</span><span class="w"> </span><span class="n">ru_stime</span><span class="p">;</span><span class="w"> </span><span class="cm">/* system time used */</span>
+<span class="w">    </span><span class="kt">long</span><span class="w">   </span><span class="n">ru_maxrss</span><span class="p">;</span><span class="w">        </span><span class="cm">/* maximum resident set size */</span>
+<span class="w">    </span><span class="kt">long</span><span class="w">   </span><span class="n">ru_ixrss</span><span class="p">;</span><span class="w">         </span><span class="cm">/* integral shared memory size */</span>
+<span class="w">    </span><span class="kt">long</span><span class="w">   </span><span class="n">ru_idrss</span><span class="p">;</span><span class="w">         </span><span class="cm">/* integral unshared data size */</span>
+<span class="w">    </span><span class="kt">long</span><span class="w">   </span><span class="n">ru_isrss</span><span class="p">;</span><span class="w">         </span><span class="cm">/* integral unshared stack size */</span>
+<span class="w">    </span><span class="kt">long</span><span class="w">   </span><span class="n">ru_minflt</span><span class="p">;</span><span class="w">        </span><span class="cm">/* page reclaims */</span>
+<span class="w">    </span><span class="kt">long</span><span class="w">   </span><span class="n">ru_majflt</span><span class="p">;</span><span class="w">        </span><span class="cm">/* page faults */</span>
+<span class="w">    </span><span class="kt">long</span><span class="w">   </span><span class="n">ru_nswap</span><span class="p">;</span><span class="w">         </span><span class="cm">/* swaps */</span>
+<span class="w">    </span><span class="kt">long</span><span class="w">   </span><span class="n">ru_inblock</span><span class="p">;</span><span class="w">       </span><span class="cm">/* block input operations */</span>
+<span class="w">    </span><span class="kt">long</span><span class="w">   </span><span class="n">ru_oublock</span><span class="p">;</span><span class="w">       </span><span class="cm">/* block output operations */</span>
+<span class="w">    </span><span class="kt">long</span><span class="w">   </span><span class="n">ru_msgsnd</span><span class="p">;</span><span class="w">        </span><span class="cm">/* messages sent */</span>
+<span class="w">    </span><span class="kt">long</span><span class="w">   </span><span class="n">ru_msgrcv</span><span class="p">;</span><span class="w">        </span><span class="cm">/* messages received */</span>
+<span class="w">    </span><span class="kt">long</span><span class="w">   </span><span class="n">ru_nsignals</span><span class="p">;</span><span class="w">      </span><span class="cm">/* signals received */</span>
+<span class="w">    </span><span class="kt">long</span><span class="w">   </span><span class="n">ru_nvcsw</span><span class="p">;</span><span class="w">         </span><span class="cm">/* voluntary context switches */</span>
+<span class="w">    </span><span class="kt">long</span><span class="w">   </span><span class="n">ru_nivcsw</span><span class="p">;</span><span class="w">        </span><span class="cm">/* involuntary context switches */</span>
+<span class="p">};</span>
 </code></pre></div>
 <p><code>4002⌶</code> may return the PID of an abnormally terminated Auxiliary Processor; APL code should check that the list of processes that have been reaped is a superset of the list of processes that have been started.</p>
 <h2 class="example">Example</h2>

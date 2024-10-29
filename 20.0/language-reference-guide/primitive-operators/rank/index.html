@@ -14162,7 +14162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../primitive-functions/negative/" class="md-nav__link">
+      <a href="../../primitive-functions/negative/#negative" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -14183,7 +14183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../primitive-functions/direction/" class="md-nav__link">
+      <a href="../../primitive-functions/direction/#direction" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -16032,8 +16032,6 @@
         
       
         
-          
-        
       
         
       
@@ -16067,24 +16065,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_12" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../primitive-functions/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5_2_12" id="__nav_5_2_12_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Non-Scalar Selector Functions
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_2_12" id="__nav_5_2_12_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_12">
@@ -16156,6 +16146,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -16724,8 +16733,6 @@
         
       
         
-          
-        
       
         
       
@@ -16871,24 +16878,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_14" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../primitive-functions/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5_2_14" id="__nav_5_2_14_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Primitive Functions (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_2_14" id="__nav_5_2_14_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_14_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_14">
@@ -17821,6 +17820,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/squad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -20740,7 +20758,7 @@
         
   
   <span class="md-ellipsis">
-    Format Date-time
+    Format Datetime
   </span>
   
 
@@ -20971,7 +20989,7 @@
         
   
   <span class="md-ellipsis">
-    Identify NET Type
+    Identify .NET Type
   </span>
   
 
@@ -21328,7 +21346,7 @@
         
   
   <span class="md-ellipsis">
-    Send Text to RIDE-embedded Browser
+    Send Text to Ride-embedded Browser
   </span>
   
 
@@ -21349,7 +21367,7 @@
         
   
   <span class="md-ellipsis">
-    Connected to the RIDE
+    Connected to Ride
   </span>
   
 
@@ -21370,7 +21388,7 @@
         
   
   <span class="md-ellipsis">
-    Manage RIDE
+    Manage Ride
   </span>
   
 
@@ -21748,7 +21766,7 @@
         
   
   <span class="md-ellipsis">
-    RIDE and Experimental Features-related I-Beams
+    Ride and Experimental Features-related I-Beams
   </span>
   
 
@@ -21818,7 +21836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../system-functions/summary-tables/introduction/" class="md-nav__link">
+      <a href="../../system-functions/introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -28521,7 +28539,7 @@
         
   
   <span class="md-ellipsis">
-    Date-time
+    Datetime
   </span>
   
 
@@ -71337,7 +71355,10 @@
 
 <h1 class="heading"><span class="name">Rank</span> <span class="command">R←{X}(f⍤B)Y</span></h1>
 
-<p><strong>Classic Edition:</strong>  the symbol <code>⍤</code> is not available in Classic Edition, and the Rank operator is instead represented by <code>⎕U2364</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Classic Edition</p>
+<p>The symbol <code>⍤</code> is not available in Classic Edition, and the Rank operator is instead represented by <code>⎕U2364</code>.</p>
+</div>
 <p>The Rank operator <code>⍤</code> applies monadic function <code>f</code> successively to sub-arrays of <code>Y</code>, or dyadic function <code>f</code> between sub-arrays of <code>X</code> and <code>Y</code>. Sub-arrays are selected by right operand <code>B</code>.</p>
 <p><code>B</code> is a numeric scalar or vector of up to three items, specifying the ranks of the cells to which <code>f</code> should be applied. The most general form is a three item vector <code>p q r</code>, where:</p>
 <ul>
@@ -71346,7 +71367,7 @@
 <li><code>r</code> specifies the rank of the right argument cells when <code>f</code> is applied dyadically</li>
 </ul>
 <p>If <code>B</code> is a two item vector <code>q r</code>, it is implicitly extended to <code>r q r</code>. If  <code>B</code> has a single item <code>r</code>, it is implicitly extended to <code>r r r</code>.</p>
-<p>If an item <code>k</code> of <code>B</code> is zero or positive it selects k-cells of the corresponding argument. If it is negative, it selects (r+k)-cells where <code>r</code> is the rank of the corresponding argument. A value of <code>¯1</code> selects major cells.  For further information, see <a href="../../../programming-reference-guide/introduction/arrays/cells-and-subarrays">"Cells and Sub-arrays"</a>.</p>
+<p>If an item <code>k</code> of <code>B</code> is zero or positive it selects k-cells of the corresponding argument. If it is negative, it selects (r+k)-cells where <code>r</code> is the rank of the corresponding argument. A value of <code>¯1</code> selects major cells.  For further information, see <a href="../../../programming-reference-guide/introduction/arrays/cells-and-subarrays">Cells and Sub-arrays</a>.</p>
 <p>If <code>X</code> is omitted, <code>f</code> may be any monadic function that returns a result. <code>Y</code> may be any array. The Rank operator <code>⍤</code> applies function <code>f</code> successively to the sub-arrays in <code>Y</code> specified by <code>p</code> (that is, the first item of <code>B</code>, as specified or implicitly extended).</p>
 <p>If <code>X</code> is specified, it may be any array and <code>f</code> may be any dyadic function that returns a result. <code>Y</code> may be any array. In this case, the Rank operator applies function <code>f</code> successively between the sub-arrays in <code>X</code> specified by <code>q</code> and the sub-arrays in <code>Y</code> specified by <code>r</code>.</p>
 <p>The sub-arrays of <code>R</code> are the results of the individual applications of <code>f</code>. If these results differ in rank or shape, they are extended to a common rank and shape in the manner of Mix. See <a href="../../primitive-functions/mix/">Mix</a>.</p>

@@ -14159,7 +14159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../negative/" class="md-nav__link">
+      <a href="../negative/#negative" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -14180,7 +14180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../direction/" class="md-nav__link">
+      <a href="../direction/#direction" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -16029,8 +16029,6 @@
         
       
         
-          
-        
       
         
       
@@ -16064,24 +16062,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_12" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5_2_12" id="__nav_5_2_12_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Non-Scalar Selector Functions
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_2_12" id="__nav_5_2_12_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_12">
@@ -16153,6 +16143,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -16723,8 +16732,6 @@
         
       
         
-          
-        
       
         
       
@@ -16870,24 +16877,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_14" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5_2_14" id="__nav_5_2_14_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Primitive Functions (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_2_14" id="__nav_5_2_14_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_14_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2_14">
@@ -17828,6 +17827,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../squad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -20687,7 +20705,7 @@
         
   
   <span class="md-ellipsis">
-    Format Date-time
+    Format Datetime
   </span>
   
 
@@ -20918,7 +20936,7 @@
         
   
   <span class="md-ellipsis">
-    Identify NET Type
+    Identify .NET Type
   </span>
   
 
@@ -21275,7 +21293,7 @@
         
   
   <span class="md-ellipsis">
-    Send Text to RIDE-embedded Browser
+    Send Text to Ride-embedded Browser
   </span>
   
 
@@ -21296,7 +21314,7 @@
         
   
   <span class="md-ellipsis">
-    Connected to the RIDE
+    Connected to Ride
   </span>
   
 
@@ -21317,7 +21335,7 @@
         
   
   <span class="md-ellipsis">
-    Manage RIDE
+    Manage Ride
   </span>
   
 
@@ -21695,7 +21713,7 @@
         
   
   <span class="md-ellipsis">
-    RIDE and Experimental Features-related I-Beams
+    Ride and Experimental Features-related I-Beams
   </span>
   
 
@@ -21765,7 +21783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../system-functions/summary-tables/introduction/" class="md-nav__link">
+      <a href="../../system-functions/introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -28468,7 +28486,7 @@
         
   
   <span class="md-ellipsis">
-    Date-time
+    Datetime
   </span>
   
 
@@ -71280,8 +71298,20 @@
 </thead>
 <tbody>
 <tr>
-<td><code>apl abc ABA</code></td>
-<td><code>apl ab ac Aa Ac</code></td>
+<td><code>abc</code></td>
+<td><code>ab</code></td>
+</tr>
+<tr>
+<td><code>ABA</code></td>
+<td><code>ac</code></td>
+</tr>
+<tr>
+<td> </td>
+<td><code>Aa</code></td>
+</tr>
+<tr>
+<td> </td>
+<td><code>Ac</code></td>
 </tr>
 </tbody>
 </table>
@@ -71296,9 +71326,24 @@
 </thead>
 <tbody>
 <tr>
-<td><code>apl ab ac Aa Ac</code></td>
-<td><code>apl 1 2 1 3 1 1 1 3</code></td>
-<td><code>apl 3 =1   &lt;-duplicate ordering with 4 =1   &lt;-respect to last axis.</code></td>
+<td><code>ab</code></td>
+<td><code>1 2</code></td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td><code>ac</code></td>
+<td><code>1 3</code></td>
+<td>=1   &lt;-duplicate ordering with</td>
+</tr>
+<tr>
+<td><code>Aa</code></td>
+<td><code>1 1</code></td>
+<td><code>4</code></td>
+</tr>
+<tr>
+<td><code>Ac</code></td>
+<td><code>1 3</code></td>
+<td>=1   &lt;-respect to last axis.</td>
 </tr>
 </tbody>
 </table>
@@ -71313,23 +71358,28 @@
 </thead>
 <tbody>
 <tr>
-<td><code>apl  ac Ac</code></td>
-<td><code>apl 1 1 2 1</code></td>
-<td><code>apl 2 1</code></td>
+<td><code>ac</code></td>
+<td><code>1 1</code></td>
+<td><code>2</code></td>
+</tr>
+<tr>
+<td><code>Ac</code></td>
+<td><code>2 1</code></td>
+<td><code>1</code></td>
 </tr>
 </tbody>
 </table>
 <p>So the final row ordering is:
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="nv">ab</span><span class="w">              </span><span class="m">3</span>
-<span class="w">        </span><span class="nv">ac</span><span class="w">              </span><span class="m">2</span>
-<span class="w">        </span><span class="nv">Aa</span><span class="w">              </span><span class="m">4</span>
-<span class="w">        </span><span class="nv">Ac</span><span class="w">              </span><span class="m">1</span>
+</p><div class="highlight"><pre><span></span><code>        ab              3
+        ac              2
+        Aa              4
+        Ac              1
 </code></pre></div>
 <p>That is, the order of rows is 4 2 1 3 which corresponds to a descending row sort of:
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="nv">Ac</span><span class="w">              </span><span class="m">1</span>
-<span class="w">        </span><span class="nv">ac</span><span class="w">              </span><span class="m">2</span>
-<span class="w">        </span><span class="nv">ab</span><span class="w">              </span><span class="m">3</span>
-<span class="w">        </span><span class="nv">Aa</span><span class="w">              </span><span class="m">4</span>
+</p><div class="highlight"><pre><span></span><code>        Ac              1
+        ac              2
+        ab              3
+        Aa              4
 </code></pre></div>
 <h2 class="example">Examples</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">S1</span>
@@ -71346,17 +71396,17 @@
 <span class="w"> </span><span class="nv">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
 </code></pre></div>
 <p>The following results are tabulated for comparison:
-</p><div class="highlight"><pre><span></span><code><span class="nv">X</span><span class="w">       </span><span class="nv">X</span><span class="sr">[</span><span class="nv">S1</span><span class="o">⍒</span><span class="nv">X</span><span class="sr">;]</span><span class="w">    </span><span class="nv">X</span><span class="sr">[</span><span class="nv">S2</span><span class="o">⍒</span><span class="nv">X</span><span class="sr">;]</span><span class="w">    </span><span class="nv">X</span><span class="sr">[</span><span class="nv">S3</span><span class="o">⍒</span><span class="nv">X</span><span class="sr">;]</span><span class="w">    </span><span class="nv">X</span><span class="sr">[</span><span class="nv">S4</span><span class="o">⍒</span><span class="nv">X</span><span class="sr">;]</span>
-<span class="nv">FIRsT</span><span class="w">     </span><span class="nv">TAPE</span><span class="w">        </span><span class="nv">rAT</span><span class="w">         </span><span class="nv">TAPE</span><span class="w">        </span><span class="nv">TAPE</span>
-<span class="nv">TAP</span><span class="w">       </span><span class="nv">TAP</span><span class="w">         </span><span class="nv">fIRST</span><span class="w">       </span><span class="nv">TAP</span><span class="w">         </span><span class="nv">TAP</span>
-<span class="nv">RATE</span><span class="w">      </span><span class="nv">RATE</span><span class="w">        </span><span class="nv">TAPE</span><span class="w">        </span><span class="nv">rAT</span><span class="w">         </span><span class="nv">RATE</span>
-<span class="nv">FiRST</span><span class="w">     </span><span class="nv">rAT</span><span class="w">         </span><span class="nv">TAP</span><span class="w">         </span><span class="nv">RATE</span><span class="w">        </span><span class="nv">rAT</span>
-<span class="nv">FIRST</span><span class="w">     </span><span class="nv">RAT</span><span class="w">         </span><span class="nv">RATE</span><span class="w">        </span><span class="nv">RAT</span><span class="w">         </span><span class="nv">RAT</span>
-<span class="nv">rAT</span><span class="w">       </span><span class="nv">MAT</span><span class="w">         </span><span class="nv">RAT</span><span class="w">         </span><span class="nv">MAT</span><span class="w">         </span><span class="nv">MAT</span>
-<span class="nv">fIRST</span><span class="w">     </span><span class="nv">fIRST</span><span class="w">       </span><span class="nv">MAT</span><span class="w">         </span><span class="nv">fIRST</span><span class="w">       </span><span class="nv">FIRsT</span>
-<span class="nv">TAPE</span><span class="w">      </span><span class="nv">FiRST</span><span class="w">       </span><span class="nv">FiRST</span><span class="w">       </span><span class="nv">FiRST</span><span class="w">       </span><span class="nv">FiRST</span>
-<span class="nv">MAT</span><span class="w">       </span><span class="nv">FIRsT</span><span class="w">       </span><span class="nv">FIRsT</span><span class="w">       </span><span class="nv">FIRsT</span><span class="w">       </span><span class="nv">FIRST</span>
-<span class="nv">RAT</span><span class="w">       </span><span class="nv">FIRST</span><span class="w">       </span><span class="nv">FIRST</span><span class="w">       </span><span class="nv">FIRST</span><span class="w">       </span><span class="nv">fIRST</span>
+</p><div class="highlight"><pre><span></span><code>X       X[S1⍒X;]    X[S2⍒X;]    X[S3⍒X;]    X[S4⍒X;]
+FIRsT     TAPE        rAT         TAPE        TAPE
+TAP       TAP         fIRST       TAP         TAP
+RATE      RATE        TAPE        rAT         RATE
+FiRST     rAT         TAP         RATE        rAT
+FIRST     RAT         RATE        RAT         RAT
+rAT       MAT         RAT         MAT         MAT
+fIRST     fIRST       MAT         fIRST       FIRsT
+TAPE      FiRST       FiRST       FiRST       FiRST
+MAT       FIRsT       FIRsT       FIRsT       FIRST
+RAT       FIRST       FIRST       FIRST       fIRST
 </code></pre></div>
 <p><code>⎕IO</code> is an implicit argument of Grade Down.</p>
 

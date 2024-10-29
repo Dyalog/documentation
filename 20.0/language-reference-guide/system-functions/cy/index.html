@@ -14157,7 +14157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../primitive-functions/negative/" class="md-nav__link">
+      <a href="../../primitive-functions/negative/#negative" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -14178,7 +14178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../primitive-functions/direction/" class="md-nav__link">
+      <a href="../../primitive-functions/direction/#direction" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -16027,8 +16027,6 @@
         
       
         
-          
-        
       
         
       
@@ -16062,24 +16060,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_12" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../primitive-functions/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5_2_12" id="__nav_5_2_12_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Non-Scalar Selector Functions
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_2_12" id="__nav_5_2_12_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_12">
@@ -16151,6 +16141,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -16719,8 +16728,6 @@
         
       
         
-          
-        
       
         
       
@@ -16866,24 +16873,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_14" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../primitive-functions/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_5_2_14" id="__nav_5_2_14_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Primitive Functions (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_2_14" id="__nav_5_2_14_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_14_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_14">
@@ -17816,6 +17815,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-functions/squad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -20675,7 +20693,7 @@
         
   
   <span class="md-ellipsis">
-    Format Date-time
+    Format Datetime
   </span>
   
 
@@ -20906,7 +20924,7 @@
         
   
   <span class="md-ellipsis">
-    Identify NET Type
+    Identify .NET Type
   </span>
   
 
@@ -21263,7 +21281,7 @@
         
   
   <span class="md-ellipsis">
-    Send Text to RIDE-embedded Browser
+    Send Text to Ride-embedded Browser
   </span>
   
 
@@ -21284,7 +21302,7 @@
         
   
   <span class="md-ellipsis">
-    Connected to the RIDE
+    Connected to Ride
   </span>
   
 
@@ -21305,7 +21323,7 @@
         
   
   <span class="md-ellipsis">
-    Manage RIDE
+    Manage Ride
   </span>
   
 
@@ -21683,7 +21701,7 @@
         
   
   <span class="md-ellipsis">
-    RIDE and Experimental Features-related I-Beams
+    Ride and Experimental Features-related I-Beams
   </span>
   
 
@@ -21755,7 +21773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../summary-tables/introduction/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -28474,7 +28492,7 @@
         
   
   <span class="md-ellipsis">
-    Date-time
+    Datetime
   </span>
   
 
@@ -71269,7 +71287,7 @@
 <p>Each object named in <code>X</code> (or implied) is copied from the workspace identified by <code>Y</code> to become the active object referenced by that name in the active workspace if the object can be copied.  A copied label is re-defined to be a variable of numeric type.  If the name of the copied object has an active referent in the active workspace, the name is disassociated from its value and the copied object becomes the active referent to that name.  In particular, a function in the state indicator which is disassociated may be executed whilst it remains in the state indicator, but it ceases to exist for other purposes, such as editing.</p>
 <p>The shy result <code>R</code> is <code>0⍴⊂''</code>.</p>
 <p>You may copy an object from a namespace by specifying its full pathname.  The object will be copied to the current namespace in the active workspace, losing its original parent and gaining a new one in the process.  You may only copy a GUI object into a namespace that is a suitable parent for that object.  For example, you could only copy a Group object from a saved workspace if the current namespace in the active workspace is itself a Form, SubForm or Group.</p>
-<p>See <a href="../../system-commands/copy/">"Copy Workspace: "</a> for further information and, in particular, the manner in which dependent and referenced objects are copied, and copying objects from Session (.dse) files.</p>
+<p>See <a href="../../system-commands/copy/">Copy Workspace</a> for further information and, in particular, the manner in which dependent and referenced objects are copied, and copying objects from Session (.dse) files.</p>
 <p>A <code>DOMAIN ERROR</code> is reported in any of the following cases:</p>
 <ul>
 <li><code>Y</code> is ill-formed, or is not the name of a workspace with access authorised for the active user account.</li>
@@ -71277,7 +71295,7 @@
 <li>An object named in <code>X</code> does not exist as an active object in workspace named in <code>Y</code>.</li>
 </ul>
 <p>An object being copied has the same name as an active label.</p>
-<p>When copying data between Classic and Unicode Editions, <code>⎕</code>CY will fail and a <code>TRANSLATION ERROR</code> will be reported if <em>any</em> object in workspace <code>Y</code> fails conversion between Unicode and <code>⎕AV</code> indices, whether or not that object is specified by <code>X</code>. See <a href="../avu/">"Note"</a> for further details.</p>
+<p>When copying data between Classic and Unicode Editions, <code>⎕CY</code> will fail and a <code>TRANSLATION ERROR</code> will be reported if <em>any</em> object in workspace <code>Y</code> fails conversion between Unicode and <code>⎕AV</code> indices, whether or not that object is specified by <code>X</code>. See <a href="../avu/#note">Note</a> for further details.</p>
 <p>A <code>WS FULL</code> is reported if the active workspace becomes full during the copying process.</p>
 <h2 class="example">Example</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕VR</span><span class="s1">'FOO'</span>
