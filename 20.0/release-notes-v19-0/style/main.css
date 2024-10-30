@@ -1,0 +1,106 @@
+@font-face {
+    font-family: APL;
+    src: local("APL385 Unicode"), url("../assets/apl385.ttf");
+}
+
+.language-APL {
+    font-family: APL !important;
+    line-height: 1.2em !important;
+}
+
+code, .command, .Dyalog {
+    font-family: APL;
+}
+
+.md-logo>img {
+    width: 7rem !important;
+    height: 1.2rem !important;
+}
+
+@media screen and (max-width: 76.1875em) {
+    .md-logo>img {
+        width: 10rem !important;
+        height: 1.8rem !important;
+    }
+}
+
+/* Custom colors */
+:root {
+    --md-primary-fg-color: #FF6A13;
+    --md-primary-fg-color--dark: #563336;
+    --md-default-bg-color: #F8F8F8;
+}
+
+/* Reduce vertical table spacing, and put in a faint cell border */
+table {
+    border-collapse: collapse;
+    /*width: 100%;*/
+}
+
+th, td {
+    border: 1px solid #eee;
+    padding: 4px !important;
+    text-align: left;
+}
+
+/* Style the heading container for the Language Reference */
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF6A13;
+    padding: 5px 10px; /* Adjusted padding for less vertical whitespace */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 0.9em;
+}
+
+/* Style the left-aligned name */
+.name {
+    flex-grow: 1;
+    /* Take up available space */
+    color: white;
+}
+
+/* Style the right-aligned command */
+.command {
+    text-align: right;
+    color: white;
+    font-family: APL;
+}
+
+/* Compress lists a bit vertcially */
+li {
+    margin-bottom: 0px !important;
+}
+
+/* Code copy only input (see CONTRIBUTING.md) */
+pre+pre>button,
+pre+hr {
+    display: none !important;
+}
+
+pre>code {
+    padding-bottom: 1em !important;
+}
+
+hr+pre>button {
+    top: -0.2em !important;
+}
+
+pre+pre,
+hr+pre {
+    margin-top: -1.8em !important;
+}
+
+pre+pre>code,
+hr+pre>code {
+    padding-top: 0.2em !important;
+}
+
+/* Custom colors */
+:root {
+    --md-primary-fg-color: #FF6A13;
+    --md-primary-fg-color--dark: #563336;
+    --md-default-bg-color: #F8F8F8;
+    --md-code-hl-number-color: #797979;
+}
