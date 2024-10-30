@@ -4,18 +4,21 @@
 }
 
 :root {
-  --md-text-font: "Be Vietnam Pro"; 
+  --md-text-font: "Be Vietnam Pro";
+}
+
+.example-block {
+    page-break-inside: avoid;
 }
 
 .table-bordered {
     border-collapse: collapse;
-    width: 85%; 
+    width: 85%;
     margin: auto;
-    font-size: .64rem;
 }
 .table-bordered th,
 .table-bordered td {
-    border: 1px light gray;
+    border: 1px solid black;
     padding: 5px;
 }
 .table-bordered th.no-border,
@@ -25,13 +28,10 @@
 .table-bordered th {
     text-align: center;
 }
-.table-bordered td.rowspan,
-.table-bordered th.rowspan {
-    vertical-align: middle;
-}
 .flex-between {
     display: flex;
     justify-content: space-between;
+    padding: 0 10px;
 }
 .flex-between span {
     flex: 1;
@@ -43,11 +43,11 @@
     text-align: right;
 }
 
-.shaded {
-  background-color: rgb(220, 220, 220); /* Light grey background */
-}
-
 .md-typeset code {
 	word-break: normal !important;
     overflow-wrap: break-word !important;
+}
+
+.shaded {
+  background-color: rgb(220, 220, 220); /* Light grey background */
 }
