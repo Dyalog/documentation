@@ -71331,7 +71331,7 @@
   
 
 
-<h1 class="heading"><span class="name">`⎕SH`, exit codes and stderr</span></h1>
+<h1 class="heading"><span class="name"><span class="command">⎕SH</span>, exit codes and stderr</span></h1>
 
 <p>Note that <code>⎕SH</code> calls /bin/sh; this cannot be altered.</p>
 <p>If the command, or command pipe issued using <code>⎕SH</code> exits with a non-zero exit code, then <code>⎕SH</code> will terminate with a <code>DOMAIN ERROR</code>, and all output from the command will be lost. To avoid this, add an exit 0 to the end of the command string, and the <code>DOMAIN ERROR</code> will be suppressed. However, this technique does require that some other method is used to determine that the command pipe failed.
