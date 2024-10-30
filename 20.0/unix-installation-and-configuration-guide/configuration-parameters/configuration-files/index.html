@@ -71425,7 +71425,7 @@
 <li>An application configuration file – this contains configuration values associated with a specific application. This is created by the user and should be saved at the same level as the application. It can either be given the same name as the workspace/script that is loaded when the application starts (but with the extension <em>.dcfg</em>) or the name should be stored in the CONFIGFILE parameter.</li>
 </ul>
 <p>An additional configuration file called <em>$HOME/.dyalog/dyalog.dcfg</em> is also created the first time any version of Dyalog is run. This can be edited to include configuration parameter values that should always be applied irrespective of Dyalog version so that they do not have to be redefined in multiple version-specific user configuration files.</p>
-<p>Prior to Dyalog version 18.0, configuration parameters could be specified as environment variables and set in the <em><span class="arithmatex">\(HOME/.dyalog/dyalog.config* script. This is no longer referenced, and any settings that should be retained must be re-entered in the appropriate *\)</span>HOME/.dyalog/dyalog.<version-specific>.dcfg</version-specific></em> configuration file.</p>
+<p>Prior to Dyalog version 18.0, configuration parameters could be specified as environment variables and set in the <em>$HOME/.dyalog/dyalog.config</em> script. This is no longer referenced, and any settings that should be retained must be re-entered in the appropriate <em>$HOME/.dyalog/dyalog.<version-specific>.dcfg</version-specific></em> configuration file.</p>
 <h2 id="configuration-file-structure">Configuration File Structure</h2>
 <p>Configuration files define configuration parameters using JSON5. A JSON object contains data in the form of key/value pairs and other JSON objects. The keys are strings and the values are the JSON types. A key and its value are seperated by a colon (<code>:</code>) character. Entries (key/value pairs) are separated by comma (<code>,</code>) characters.</p>
 <p>The top-level object defines an optional key called <code>Extend</code> and an optional object called <code>Settings</code>:</p>
@@ -71443,27 +71443,27 @@
 <p>To include literal square brackets in a string, prefix them with a <code>\</code> character.</p>
 <h2 id="nested-structures">Nested Structures</h2>
 <p>Configuration files support nested parameter structures by defining an object that corresponds to the structure. For example:
-</p><div class="highlight"><pre><span></span><code><span class="nv">Captions</span><span class="bp">:</span><span class="w"> </span><span class="kt">{</span>
-<span class="w">    </span><span class="nv">Session</span><span class="bp">:</span><span class="w"> </span><span class="s2">"My Dyalog Session"</span>
-<span class="w">    </span><span class="nv">Status</span><span class="bp">:</span><span class="w"> </span><span class="s2">"My Status window"</span>
-<span class="kt">}</span>
+</p><div class="highlight"><pre><span></span><code>Captions: {
+    Session: "My Dyalog Session"
+    Status: "My Status window"
+}
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'.'</span><span class="w"> </span><span class="s1">'GetEnvironment'</span><span class="w"> </span><span class="s1">'Captions\Session'</span>
 <span class="nv">My</span><span class="w"> </span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">Session</span>
 </code></pre></div>
 <h2 id="example-configuration-file-content">Example Configuration File Content</h2>
-<div class="highlight"><pre><span></span><code><span class="kt">{</span>
-<span class="w">   </span><span class="nv">Extend</span><span class="bp">:</span><span class="w"> </span><span class="s2">"my_default_configuration.dcfg"</span><span class="o">,</span>
-<span class="w">   </span><span class="nv">Settings</span><span class="bp">:</span><span class="w"> </span><span class="kt">{</span>
-<span class="w">   </span><span class="na">//</span><span class="w"> </span><span class="nv">maximum</span><span class="w"> </span><span class="nv">workspace</span>
-<span class="w">   </span><span class="nv">MAXWS</span><span class="bp">:</span><span class="w"> </span><span class="s2">"2GB"</span><span class="o">,</span>
-<span class="w">   </span><span class="nv">WSPATH</span><span class="bp">:</span><span class="w"> </span><span class="sr">[</span><span class="s2">"/dir1"</span><span class="o">,</span><span class="w"> </span><span class="s2">"/dir2"</span><span class="o">,</span><span class="w"> </span><span class="s2">""</span><span class="sr">]</span><span class="o">,</span>
-<span class="w">   </span><span class="nv">UserOption</span><span class="bp">:</span><span class="w"> </span><span class="m">123</span><span class="o">,</span>
-<span class="w">   </span><span class="nv">ROOTDIR</span><span class="bp">:</span><span class="w"> </span><span class="s2">"/my/root/directory"</span><span class="o">,</span>
-<span class="w">   </span><span class="na">//</span><span class="w"> </span><span class="nv">references</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">other</span><span class="w"> </span><span class="nv">configuration</span><span class="w"> </span><span class="nv">parameters</span>
-<span class="w">   </span><span class="nv">FNAME</span><span class="bp">:</span><span class="w"> </span><span class="s2">"[rootdir]/filename"</span><span class="o">,</span>
-<span class="w">   </span><span class="kt">}</span>
-<span class="kt">}</span>
+<div class="highlight"><pre><span></span><code>{
+   Extend: "my_default_configuration.dcfg",
+   Settings: {
+   // maximum workspace
+   MAXWS: "2GB",
+   WSPATH: ["/dir1", "/dir2", ""],
+   UserOption: 123,
+   ROOTDIR: "/my/root/directory",
+   // references to other configuration parameters
+   FNAME: "[rootdir]/filename",
+   }
+}
 </code></pre></div>
 
 

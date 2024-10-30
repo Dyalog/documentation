@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#system-shared-libraries" class="md-skip">
           Skip to content
         </a>
       
@@ -6208,15 +6208,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#system-shared-libraries" class="md-nav__link">
     <span class="md-ellipsis">
       System Shared Libraries
@@ -6247,10 +6238,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Example 1">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#example-2" class="md-nav__link">
     <span class="md-ellipsis">
       Example 2
@@ -6258,8 +6248,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#geterrno" class="md-nav__link">
     <span class="md-ellipsis">
       geterrno
@@ -6267,18 +6257,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#shared-libraries-and-apl-threads" class="md-nav__link">
     <span class="md-ellipsis">
       Shared libraries and APL threads
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -71371,15 +71356,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#system-shared-libraries" class="md-nav__link">
     <span class="md-ellipsis">
       System Shared Libraries
@@ -71410,10 +71386,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Example 1">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#example-2" class="md-nav__link">
     <span class="md-ellipsis">
       Example 2
@@ -71421,8 +71396,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#geterrno" class="md-nav__link">
     <span class="md-ellipsis">
       geterrno
@@ -71430,18 +71405,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#shared-libraries-and-apl-threads" class="md-nav__link">
     <span class="md-ellipsis">
       Shared libraries and APL threads
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -71463,9 +71433,8 @@
   
 
 
-<h1 class="heading"><span class="name">`⎕NA` under UNIX</span></h1>
+<h1 class="heading"><span class="name"><span class="command">⎕NA</span> under UNIX</span></h1>
 
-<h2 id="introduction">Introduction</h2>
 <p><code>⎕NA</code> is fully supported under UNIX; the Conga communications package for example is a shared library on all platforms.</p>
 <p><code>⎕NA</code> supports user-written shared libraries and also system-supplied shared libraries. Dyalog APL under UNIX is supplied with a shared library, dyalog32.so or dyalog64.so which contains the same functions as the DLLs which are described in the <code>⎕NA</code> documentation in the <em>Dyalog Language Reference Guide</em>. Additionally, the function <code>getlasterror</code> is included; this returns the error code at the point when the called function failed (which may be different from its value at the point where a previous error occurred).</p>
 <p>It is necessary to specify the complete name of the file containing the shared library, no extension is added by Dyalog APL.</p>
@@ -71498,7 +71467,7 @@
 <p>The APL code to instantiate this function is
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕na</span><span class="w"> </span><span class="s1">'I4 '</span><span class="o">,</span><span class="nv">sharedlib</span><span class="o">,</span><span class="s1">'|getpid'</span>
 </code></pre></div>
-<h3 id="example-2">Example 2</h3>
+<h2 id="example-2">Example 2</h2>
 <p>This is a slightly more complex example, which uses the STRNCPY function in the Dyalog-supplied shared library to retrieve the value of a variable which is referenced by a pointer, returned from the system library function:</p>
 <p>getenv()returns a pointer to the value of the environment variable which is the argument of the function. It is defined to be</p>
 <p>char <em>getenv(const char </em>name)
@@ -71512,16 +71481,19 @@
 <span class="w">      </span><span class="bp">∇</span>
 
 <span class="w">      </span><span class="nv">GetEnv</span><span class="s1">'MAXWS'</span>
-<span class="m">4</span><span class="nv">G</span>
+<span class="m">4</span><span class="nv">G</span><span class="w">  </span>
 </code></pre></div>
-<p>Note: the call to STRNCPY has been defined to return a vector of integers so that the result can be passed directly to <code>⎕UCS</code>.</p>
-<h3 id="geterrno">geterrno</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The call to STRNCPY has been defined to return a vector of integers so that the result can be passed directly to <code>⎕UCS</code>.</p>
+</div>
+<h2 id="geterrno">geterrno</h2>
 <p>The dyalog shared libary under UNIX includes the function <code>geterrno</code>. This returns the current value of errno; be aware that it may not have the same value as at the point when the error was raised. To use this function:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕na</span><span class="w"> </span><span class="s1">'I '</span><span class="o">,</span><span class="nv">dyalib</span><span class="o">,</span><span class="s1">'|geterrno'</span>
 <span class="w">      </span><span class="nv">geterrno</span>
 <span class="m">5</span>
 </code></pre></div>
-<h3 id="shared-libraries-and-apl-threads">Shared libraries and APL threads</h3>
+<h2 id="shared-libraries-and-apl-threads">Shared libraries and APL threads</h2>
 <p>Any shared library function must mask out all signals for  new threads which it creates. Failure to do so will result in a catastrophic failure of APL's signal handling.</p>
 
 

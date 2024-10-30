@@ -6191,8 +6191,17 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Miscellaneous
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -6203,6 +6212,34 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#status-window-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Status window output
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -71260,8 +71297,23 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#status-window-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Status window output
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -71282,13 +71334,13 @@
 <h1 class="heading"><span class="name">Session logfile</span></h1>
 
 <p>By default the session logfile is called default.dlf. By default this file is created as ~/.dyalog/default.dlf on Linux, AIX and macOS, and in ~/.config/dyalog/default.dlf on the Pi. This can be overridden by setting the environment variable <strong>LOGFILE</strong>.</p>
-<h1 id="status-window-output">Status window output</h1>
+<h2 id="status-window-output">Status window output</h2>
 <p>By default under UNIX what would appear in the status window in the GUI versions appears in the same terminal window as the APL session, but the text is not part of the session. If such text appears, the APL session can be redrawn using the SR command, thus removing the status window text.</p>
 <p>It is possible to redirect the status window output; to do so select an unused stream number as the stream have the status window output appear on, and then redirect that stream. Note that it will be necessary to associate a valid output translate table (usually apltrans/file) with that stream.</p>
 <p>Example:
-</p><div class="highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="nv">export</span><span class="w"> </span><span class="nv">APLSTATUSFD</span><span class="o">=</span><span class="m">9</span>
-<span class="err">$</span><span class="w"> </span><span class="nv">export</span><span class="w"> </span><span class="nv">APLT9</span><span class="o">=</span><span class="nv">file</span>
-<span class="err">$</span><span class="w"> </span><span class="nv">mapl</span><span class="w"> </span><span class="m">9</span><span class="o">&gt;</span><span class="na">/</span><span class="nv">dev</span><span class="na">/</span><span class="nv">null</span>
+</p><div class="highlight"><pre><span></span><code>$ export APLSTATUSFD=9
+$ export APLT9=file
+$ mapl 9&gt;/dev/null
 </code></pre></div>
 <p>More useful may be to redirect the status window output into a file, and in another terminal window run <code>tail -f</code> on that file.</p>
 

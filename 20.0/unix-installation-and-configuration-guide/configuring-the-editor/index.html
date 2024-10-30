@@ -71273,46 +71273,46 @@
 <h1 class="heading"><span class="name">Configuring the Editor</span></h1>
 
 <p>The editor in non-GUI versions of Dyalog APL can be considered to have 5 separate functional columns.  Below is the contents of the editor window, which shows the namespace ns, which has two traditional-style functions and one dfn.  The statement <code>5 ⎕STOP 'ns.fn1'</code> has been run too:
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="w">         </span><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">ns</span>
-<span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">  </span><span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="w">   </span><span class="err">├</span><span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">fn1</span><span class="w"> </span><span class="nv">a</span>
-<span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">  </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="err">├</span><span class="w">      </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="nv">a</span><span class="o">=</span><span class="m">1</span>
-<span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">  </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="err">│</span><span class="w">          </span><span class="nv">r</span><span class="kd">←</span><span class="m">1</span>
-<span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w">  </span><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">   </span><span class="err">│</span><span class="w">      </span><span class="bp">:</span><span class="nv">Else</span>
-<span class="sr">[</span><span class="m">5</span><span class="sr">]</span><span class="w">  </span><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w">   </span><span class="err">├</span><span class="w">          </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="nv">today</span><span class="o">≡</span><span class="s1">'Friday'</span>
-<span class="sr">[</span><span class="m">6</span><span class="sr">]</span><span class="w">  </span><span class="sr">[</span><span class="m">5</span><span class="sr">]</span><span class="w">  </span><span class="o">○</span><span class="err">│</span><span class="w">              </span><span class="nv">r</span><span class="kd">←</span><span class="m">2</span>
-<span class="sr">[</span><span class="m">7</span><span class="sr">]</span><span class="w">  </span><span class="sr">[</span><span class="m">6</span><span class="sr">]</span><span class="w">   </span><span class="err">├</span><span class="w">          </span><span class="bp">:</span><span class="nv">EndIf</span>
-<span class="sr">[</span><span class="m">8</span><span class="sr">]</span><span class="w">  </span><span class="sr">[</span><span class="m">7</span><span class="sr">]</span><span class="w">   </span><span class="err">├</span><span class="w">      </span><span class="bp">:</span><span class="nv">EndIf</span>
-<span class="sr">[</span><span class="m">9</span><span class="sr">]</span><span class="w">  </span><span class="sr">[</span><span class="m">8</span><span class="sr">]</span><span class="w">   </span><span class="err">├</span><span class="w">    </span><span class="bp">∇</span>
-<span class="sr">[</span><span class="m">10</span><span class="sr">]</span>
-<span class="sr">[</span><span class="m">11</span><span class="sr">]</span><span class="w"> </span><span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="w">        </span><span class="nv">dfn</span><span class="kd">←</span><span class="kt">{</span><span class="bp">⍺</span><span class="o">+</span><span class="bp">⍵</span><span class="kt">}</span>
-<span class="sr">[</span><span class="m">12</span><span class="sr">]</span>
-<span class="sr">[</span><span class="m">13</span><span class="sr">]</span><span class="w"> </span><span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="w">   </span><span class="err">├</span><span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">a</span><span class="w"> </span><span class="nv">fn2</span><span class="w"> </span><span class="nv">w</span>
-<span class="sr">[</span><span class="m">14</span><span class="sr">]</span><span class="w"> </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="err">│</span><span class="w">      </span><span class="nv">r</span><span class="kd">←</span><span class="nv">a</span><span class="o">+</span><span class="nv">w</span>
-<span class="sr">[</span><span class="m">15</span><span class="sr">]</span><span class="w"> </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="err">├</span><span class="w">    </span><span class="bp">∇</span>
-<span class="sr">[</span><span class="m">16</span><span class="sr">]</span><span class="w">        </span><span class="bp">:</span><span class="nv">EndNamespace</span>
+</p><div class="highlight"><pre><span></span><code>[0]         :Namespace ns
+[1]  [0]   ├    ∇ r←fn1 a
+[2]  [1]   ├      :If a=1
+[3]  [2]   │          r←1
+[4]  [3]   │      :Else
+[5]  [4]   ├          :If today≡'Friday'
+[6]  [5]  ○│              r←2
+[7]  [6]   ├          :EndIf
+[8]  [7]   ├      :EndIf
+[9]  [8]   ├    ∇
+[10]
+[11] [0]        dfn←{⍺+⍵}
+[12]
+[13] [0]   ├    ∇ r←a fn2 w
+[14] [1]   │      r←a+w
+[15] [2]   ├    ∇
+[16]        :EndNamespace
 </code></pre></div>
 <p>This is formed of 5 separate columns:
-</p><div class="highlight"><pre><span></span><code><span class="err">┌────┬───┬───┬──┬────────────────────────────┐</span>
-<span class="err">│</span><span class="nv">C1</span><span class="w">  </span><span class="err">│</span><span class="nv">C2</span><span class="w"> </span><span class="err">│</span><span class="nv">C3</span><span class="w"> </span><span class="err">│</span><span class="nv">C4</span><span class="err">│</span><span class="nv">C5</span><span class="w">                          </span><span class="err">│</span>
-<span class="err">├────┼───┼───┼──┼────────────────────────────┤</span>
-<span class="err">│</span><span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="w"> </span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">ns</span><span class="w">               </span><span class="err">│</span>
-<span class="err">│</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w"> </span><span class="err">│</span><span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="err">│</span><span class="w">   </span><span class="err">│├</span><span class="w"> </span><span class="err">│</span><span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">fn1</span><span class="w"> </span><span class="nv">a</span><span class="w">               </span><span class="err">│</span>
-<span class="err">│</span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w"> </span><span class="err">│</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="err">│</span><span class="w">   </span><span class="err">│├</span><span class="w"> </span><span class="err">│</span><span class="w">      </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="nv">a</span><span class="o">=</span><span class="m">1</span><span class="w">               </span><span class="err">│</span>
-<span class="err">│</span><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w"> </span><span class="err">│</span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="err">│</span><span class="w">   </span><span class="err">││</span><span class="w"> </span><span class="err">│</span><span class="w">          </span><span class="nv">r</span><span class="kd">←</span><span class="m">1</span><span class="w">               </span><span class="err">│</span>
-<span class="err">│</span><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w"> </span><span class="err">│</span><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="err">│</span><span class="w">   </span><span class="err">││</span><span class="w"> </span><span class="err">│</span><span class="w">      </span><span class="bp">:</span><span class="nv">Else</span><span class="w">                 </span><span class="err">│</span>
-<span class="err">│</span><span class="sr">[</span><span class="m">5</span><span class="sr">]</span><span class="w"> </span><span class="err">│</span><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="err">│</span><span class="w">   </span><span class="err">│├</span><span class="w"> </span><span class="err">│</span><span class="w">          </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="nv">today</span><span class="o">≡</span><span class="s1">'Friday'</span><span class="err">│</span>
-<span class="err">│</span><span class="sr">[</span><span class="m">6</span><span class="sr">]</span><span class="w"> </span><span class="err">│</span><span class="sr">[</span><span class="m">5</span><span class="sr">]</span><span class="err">│</span><span class="w">  </span><span class="o">○</span><span class="err">││</span><span class="w"> </span><span class="err">│</span><span class="w">              </span><span class="nv">r</span><span class="kd">←</span><span class="m">2</span><span class="w">           </span><span class="err">│</span>
-<span class="err">│</span><span class="sr">[</span><span class="m">7</span><span class="sr">]</span><span class="w"> </span><span class="err">│</span><span class="sr">[</span><span class="m">6</span><span class="sr">]</span><span class="err">│</span><span class="w">   </span><span class="err">│├</span><span class="w"> </span><span class="err">│</span><span class="w">          </span><span class="bp">:</span><span class="nv">EndIf</span><span class="w">            </span><span class="err">│</span>
-<span class="err">│</span><span class="sr">[</span><span class="m">8</span><span class="sr">]</span><span class="w"> </span><span class="err">│</span><span class="sr">[</span><span class="m">7</span><span class="sr">]</span><span class="err">│</span><span class="w">   </span><span class="err">│├</span><span class="w"> </span><span class="err">│</span><span class="w">      </span><span class="bp">:</span><span class="nv">EndIf</span><span class="w">                </span><span class="err">│</span>
-<span class="err">│</span><span class="sr">[</span><span class="m">9</span><span class="sr">]</span><span class="w"> </span><span class="err">│</span><span class="sr">[</span><span class="m">8</span><span class="sr">]</span><span class="err">│</span><span class="w">   </span><span class="err">│├</span><span class="w"> </span><span class="err">│</span><span class="w">    </span><span class="bp">∇</span><span class="w">                       </span><span class="err">│</span>
-<span class="err">│</span><span class="sr">[</span><span class="m">10</span><span class="sr">]</span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">                            </span><span class="err">│</span>
-<span class="err">│</span><span class="sr">[</span><span class="m">11</span><span class="sr">]</span><span class="err">│</span><span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">    </span><span class="nv">dfn</span><span class="kd">←</span><span class="kt">{</span><span class="bp">⍺</span><span class="o">+</span><span class="bp">⍵</span><span class="kt">}</span><span class="w">               </span><span class="err">│</span>
-<span class="err">│</span><span class="sr">[</span><span class="m">12</span><span class="sr">]</span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">                            </span><span class="err">│</span>
-<span class="err">│</span><span class="sr">[</span><span class="m">13</span><span class="sr">]</span><span class="err">│</span><span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="err">│</span><span class="w">   </span><span class="err">│├</span><span class="w"> </span><span class="err">│</span><span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">a</span><span class="w"> </span><span class="nv">fn2</span><span class="w"> </span><span class="nv">w</span><span class="w">             </span><span class="err">│</span>
-<span class="err">│</span><span class="sr">[</span><span class="m">14</span><span class="sr">]</span><span class="err">│</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="err">│</span><span class="w">   </span><span class="err">││</span><span class="w"> </span><span class="err">│</span><span class="w">      </span><span class="nv">r</span><span class="kd">←</span><span class="nv">a</span><span class="o">+</span><span class="nv">w</span><span class="w">                 </span><span class="err">│</span>
-<span class="err">│</span><span class="sr">[</span><span class="m">15</span><span class="sr">]</span><span class="err">│</span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="err">│</span><span class="w">   </span><span class="err">│├</span><span class="w"> </span><span class="err">│</span><span class="w">    </span><span class="bp">∇</span><span class="w">                       </span><span class="err">│</span>
-<span class="err">│</span><span class="sr">[</span><span class="m">16</span><span class="sr">]</span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="bp">:</span><span class="nv">EndNamespace</span><span class="w">               </span><span class="err">│</span>
-<span class="err">└────┴───┴───┴──┴────────────────────────────┘</span>
+</p><div class="highlight"><pre><span></span><code>┌────┬───┬───┬──┬────────────────────────────┐
+│C1  │C2 │C3 │C4│C5                          │
+├────┼───┼───┼──┼────────────────────────────┤
+│[0] │   │   │  │:Namespace ns               │
+│[1] │[0]│   │├ │    ∇ r←fn1 a               │
+│[2] │[1]│   │├ │      :If a=1               │
+│[3] │[2]│   ││ │          r←1               │
+│[4] │[3]│   ││ │      :Else                 │
+│[5] │[4]│   │├ │          :If today≡'Friday'│
+│[6] │[5]│  ○││ │              r←2           │
+│[7] │[6]│   │├ │          :EndIf            │
+│[8] │[7]│   │├ │      :EndIf                │
+│[9] │[8]│   │├ │    ∇                       │
+│[10]│   │   │  │                            │
+│[11]│[0]│   │  │    dfn←{⍺+⍵}               │
+│[12]│   │   │  │                            │
+│[13]│[0]│   │├ │    ∇ r←a fn2 w             │
+│[14]│[1]│   ││ │      r←a+w                 │
+│[15]│[2]│   │├ │    ∇                       │
+│[16]│   │   │  │:EndNamespace               │
+└────┴───┴───┴──┴────────────────────────────┘
 </code></pre></div>
 <table>
 <thead>
@@ -71356,28 +71356,42 @@
 <p>EDITOR_COLUMNS_NAMESPACE=94 shows all columns (the first example in this section)</p>
 <p>Various values for EDITOR_COLUMNS_FUNCTION</p>
 <table>
-<tbody>
-<tr>
-<td>Value</td>
-<td>Editor window appearance</td>
-</tr>
-<tr>
-<td>0</td>
-<td><code>apl  fn1 a  :If a=1      b←2  :EndIf</code></td>
-</tr>
-<tr>
-<td>22</td>
-<td><code>apl  [0]   fn1 a [1]   :If a=1 [2] ○     b←2 [3]   :EndIf</code></td>
-</tr>
-<tr>
-<td>26</td>
-<td><code>apl     fn1 a  ├ :If a=1 ○│     b←2  ├ :EndIf</code></td>
-</tr>
-<tr>
-<td>40</td>
-<td><code>apl  [0]    fn1 a [1]  ├ :If a=1 [2] ○│     b←2 [3]  ├ :EndIf</code></td>
-</tr>
-</tbody>
+        <thead>
+            <tr>
+                <th>Value</th>
+                <th>Editor window appearance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td><pre>fn1 a
+:If a=1
+    b←2
+:EndIf</pre></td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td><pre>[0] fn1 a
+[1] :If a=1
+[2] ○   b←2
+[3] :EndIf</pre></td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td><pre>   fn1 a
+ ├ :If a=1
+○│     b←2
+ ├ :EndIf</pre></td>
+            </tr>
+            <tr>
+                <td>40</td>
+                <td><pre>[0]    fn1 a
+[1]  ├ :If a=1
+[2] ○│     b←2
+[3]  ├ :EndIf</pre></td>
+            </tr>
+        </tbody>
 </table>
 
 
