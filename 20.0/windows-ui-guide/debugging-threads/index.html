@@ -71250,14 +71250,14 @@
 <h1 class="heading"><span class="name">Debugging Threads</span></h1>
 
 <p>The Debugger  provides a tabbed interface that allows you to easily switch between suspended threads for debugging purposes. To keep things simple for non-threaded applications, Tabs are only displayed if there is a thread suspended that is other than Thread 0. The following picture shows the Debugger open on a multi-threaded application (LIFT.DWS) when only Thread 0 is suspended. This has been achieved by setting a stop on <code>RUN[63]</code></p>
-<p><figure id="_figure-1"><img alt="debugging threads 1" src="../img/debugging-threads-1.png"><figcaption>Figure 1: debugging threads 1</figcaption></figure></p>
+<p><img alt="" src="../img/debugging-threads-1.png"></p>
 <p>In the next picture, the user has chosen to display the <em>Threads Tool</em> and then dock it between the Session and Debugger windows. Note that only one thread, thread 0 (<code>Run</code>) is suspended. All the other threads are <em>Paused</em> (because <em>Pause on Error</em> is enabled).</p>
-<p><figure id="_figure-2"><img alt="debugging threads 2" src="../img/debugging-threads-2.png"><figcaption>Figure 2: debugging threads 2</figcaption></figure></p>
+<p><img alt="" src="../img/debugging-threads-2.png"></p>
 <p>The user then uses the context menu to <em>Switch To</em> Thread 14 (whose name is <code>Lady 14</code>) which was Paused on <code>PERSON[7]</code> in the middle of a <code>⎕TGET</code>. The act of switching to this thread caused it to be suspended at the beginning of its current line <code>PERSON[7]</code> and the Debugger now displays two Tabs to represent the two suspended threads. Note that both the thread id and the thread name are displayed on the Tabs.</p>
 <p>Note also that the Session window is connected to the thread indicated by the selected Tab. In this case, typing <code>MYFLOOR</code> into the Session window displays the value of the local variable <code>MYFLOOR</code> in Thread 14 (<code>Lady 14</code>).</p>
-<p><figure id="_figure-3"><img alt="debugging threads 3" src="../img/debugging-threads-3.png"><figcaption>Figure 3: debugging threads 3</figcaption></figure></p>
+<p><img alt="" src="../img/debugging-threads-3.png"></p>
 <p>You can use the Tabs to switch between the suspended threads, so clicking the Tab labelled <code>0:Run</code> causes the display to change to the picture shown below. The Session is now connected to Thread 0 (<code>Run</code>), so the value of <code>⎕LC</code> is 63.</p>
-<p><figure id="_figure-4"><img alt="debugging threads 4" src="../img/debugging-threads-4.png"><figcaption>Figure 4: debugging threads 4</figcaption></figure></p>
+<p><img alt="" src="../img/debugging-threads-4.png"></p>
 
 
 

@@ -71312,12 +71312,12 @@
 
 <p>Within the Development Environment, different colours are used to identify different types of information. These colours are normally defined by registry entries and may be changed using the Colour Configuration dialog box as described later in this chapter.</p>
 <p>In the Classic Edition, colours may alternatively be defined in the Output Translate Table (normally WIN.DOT). This table recognises up to 256 foreground and 256 background colours which are referenced by colour indices 0-255. These colour indices are mapped to physical colours in terms of their Red, Green and Blue intensities (also 0-255). Foreground and background colours are specified independently as Cnnn or Bnnn. For example, the following entry in the Output Translate Table defines colour 250 to be red on magenta.
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="nv">C250</span><span class="bp">:</span><span class="w"> </span><span class="m">255</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w">   </span><span class="o">+</span><span class="w"> </span><span class="nv">Red</span><span class="w"> </span><span class="nv">foreground</span>
-<span class="w">   </span><span class="nv">B250</span><span class="bp">:</span><span class="w"> </span><span class="m">255</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">255</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">Magenta</span><span class="w"> </span><span class="nv">background</span>
+</p><div class="highlight"><pre><span></span><code>   C250: 255 0 0   + Red foreground
+   B250: 255 0 255 + Magenta background
 </code></pre></div>
 <p>The first table below shows the colours used for different session components. The second table shows how different colours are used to identify different types of data in edit windows.</p>
-<table id="_table-1">
-<caption style="caption-side:bottom">Table 1: Default Colour Scheme - Session</caption><thead>
+<table id="default-colour-scheme-session">
+<caption style="caption-side:bottom">Table 1: Default Colour Scheme - Session </caption><thead>
 <tr>
 <th>Colour</th>
 <th>Used for</th>
@@ -71352,8 +71352,8 @@
 </tr>
 </tbody>
 </table>
-<table id="_table-2">
-<caption style="caption-side:bottom">Table 2: Default Colour Scheme Edit windows</caption><thead>
+<table id="default-colour-scheme-edit-windows">
+<caption style="caption-side:bottom">Table 2: Default Colour Scheme Edit windows </caption><thead>
 <tr>
 <th>Colour</th>
 <th>Array Type</th>

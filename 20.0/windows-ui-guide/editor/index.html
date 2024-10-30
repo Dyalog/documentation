@@ -64701,8 +64701,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The Edit Menu">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#the-syntax-menu" class="md-nav__link">
@@ -64755,7 +64754,12 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-the-editor" class="md-nav__link">
     <span class="md-ellipsis">
       Using the Editor
@@ -64882,11 +64886,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#white-space-in-source-code" class="md-nav__link">
     <span class="md-ellipsis">
@@ -64894,8 +64893,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="White Space in Source Code">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#outlining" class="md-nav__link">
@@ -64930,16 +64928,6 @@
       Sections within Scripts
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -71757,8 +71745,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The Edit Menu">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#the-syntax-menu" class="md-nav__link">
@@ -71811,7 +71798,12 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-the-editor" class="md-nav__link">
     <span class="md-ellipsis">
       Using the Editor
@@ -71938,11 +71930,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#white-space-in-source-code" class="md-nav__link">
     <span class="md-ellipsis">
@@ -71950,8 +71937,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="White Space in Source Code">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#outlining" class="md-nav__link">
@@ -71993,16 +71979,6 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
@@ -72026,24 +72002,24 @@
 
 <h2 id="invoking-the-editor">Invoking the Editor</h2>
 <p>The editor may be invoked in several ways. From the session, you can use the system command <code>)ED</code> or the system function <code>⎕ED</code>, specifying the names(s) of the object(s) to be edited. You can also type the name of the object and then press Shift+Enter (ED), click the <em>Edit</em> tool on the tool bar, or select <em>Edit</em> from the <em>Action</em> menu. If you invoke the editor when the cursor is positioned on the empty input line, with a suspended function in the state indicator, the editor is invoked on the suspended function and the cursor is positioned on the line at which it is suspended. This is termed <em>naked edit</em>. These ways of invoking the editor apply only in the session window</p>
-<p><figure id="_figure-1"><img alt="editor 1" src="../img/editor-1.png"><figcaption>Figure 1: editor 1</figcaption></figure></p>
+<p><img alt="" src="../img/editor-1.png"></p>
 <p>In addition, there is a general <em>point-and-edit</em> facility which works in edit and trace windows too. Simply position the input cursor over a name and double-click the left mouse button. Alternatively, you can press Shift+Enter or select <em>Edit</em> from the <em>File</em> menu. The name can appear in the Session, in an Edit window, or in a Trace window; the effect is the same. Note that, in the Session, typing a name and pressing Shift+Enter is actually a special case of <em>point-and-edit</em>. Note also that a <em>naked edit</em> can be invoked by double-clicking the left mouse button in the empty input line.</p>
 <p>The type of a new object defaults to function/operator unless the object is shadowed, in which case it defaults to a variable (vector of character vectors). You can however specify the type of a new object explicitly using <code>)ED</code> or <code>⎕ED</code>. For example, typing "<code>)ED ∊LIST -MAT</code>" in a <code>CLEAR WS</code> would create Edit windows for a vector of character vectors named <code>LIST</code> and a character matrix called <code>MAT</code>. See <code>)ED</code> or <code>⎕ED</code> for details.</p>
 <p>If the name is not already being edited, it is assigned a new edit window. If you edit a name which is already being edited, the system <em>focuses</em> on the existing edit window rather than opening a new one. Edit windows are displayed using the colour combination associated with the type of the object being edited.</p>
 <p>If the name is followed by a line-number in square brackets, for example, <code>MyFn[1000]</code>, the Editor will position the cursor on the specified line. This applies to alll methods of invoking the Editor, except <code>⎕ED</code>. There must not be a space between the last character of the name and the "[".</p>
 <h2 id="window-management-standard">Window Management (Standard)</h2>
 <p>Unless <em>Classic Dyalog mode</em> is selected (<em>Options/Configure/Trace/Edit</em>), the Editor is a Multiple Document Interface (MDI) window that may be a stand-alone window, or be docked in the Session window. Each of the objects being edited is displayed in a separate sub-window. Individual edit windows are managed using standard MDI facilities.</p>
-<p><figure id="_figure-2"><img alt="editor 2" src="../img/editor-2.png"><figcaption>Figure 2: editor 2</figcaption></figure></p>
+<p><img alt="" src="../img/editor-2.png"></p>
 <p>The first edit sub-window window is created at the position specified by the <strong>edit_first_y</strong> and <strong>edit_first_x</strong> parameters which  are specified in terms of the size of a character in the current font relative to the top-left corner of the main Editor window. Subsequent ones are staggered according to the values of the <strong>edit_offset_y</strong> and <strong>edit_offset_x</strong> parameters.</p>
 <p>The initial size of an edit window is specified by the <strong>edit_rows</strong> and <strong>edit_cols</strong> parameters.</p>
 <p>Note that the blue triangles indicate that the line of text is longer than can be displayed in the current Edit window.</p>
 <p>By default, the Session has the Editor docked along the right edge of the Session window. When you edit a function, the Editor window automatically springs into view as illustrated below.</p>
-<p><figure id="_figure-3"><img alt="editor 3" src="../img/editor-3.png"><figcaption>Figure 3: editor 3</figcaption></figure></p>
-<p><figure id="_figure-4"><img alt="editor 4" src="../img/editor-4.png"><figcaption>Figure 4: editor 4</figcaption></figure></p>
+<p><img alt="" src="../img/editor-3.png"></p>
+<p><img alt="" src="../img/editor-4.png"></p>
 <p>You can resize the Editor pane to view more or less of the Session itself, by dragging its title bar.</p>
 <p>Using the buttons in the title bar, you can instantly maximise the Editor pane to allow you to concentrate on editing, or minimise it to reveal the entire Session. In either case, the restore button quickly restores the 2-pane layout.</p>
 <p>The picture below shows the effect of maximising the Editor. The <code>BUILD_SESSION</code> edit window is itself maximised within the Editor too.</p>
-<p><figure id="_figure-5"><img alt="editor 5" src="../img/editor-5.png"><figcaption>Figure 5: editor 5</figcaption></figure></p>
+<p><img alt="" src="../img/editor-5.png"></p>
 <p>Note that when the Editor has the focus, the Editor menubar is displayed in place of the Session menubar.</p>
 <h2 id="window-management-classic-dyalog-mode">Window Management (Classic Dyalog mode)</h2>
 <p>If <em>Classic Dyalog mode</em> is selected (<em>Options/Configure/Trace/Edit</em>) each Edit window is a top-level window created as a child of the Session window. This means that normally Edit windows appear on top of the Session. However, if the <strong>SessionOnTop</strong> parameter is set, the Session window, when given the focus, will appear on top of Edit windows.</p>
@@ -72053,9 +72029,9 @@
 <li>If not, the first edit window is created at the position specified by the <strong>edit_first_y</strong> and <strong>edit_first_x</strong> parameters which  are specified in terms of the size of a character in the current font relative to the top-left corner of the screen.</li>
 </ul>
 <p>The initial size of an edit window is specified by the <strong>edit_rows</strong> and <strong>edit_cols</strong> parameters.</p>
-<p><figure id="_figure-6"><img alt="editor 6" src="../img/editor-6.png"><figcaption>Figure 6: editor 6</figcaption></figure></p>
+<p><img alt="" src="../img/editor-6.png"></p>
 <p>Subsequent ones are staggered according to the values of the <strong>edit_offset_y</strong> and <strong>edit_offset_x</strong> parameters.</p>
-<p><figure id="_figure-7"><img alt="editor 7" src="../img/editor-7.png"><figcaption>Figure 7: editor 7</figcaption></figure></p>
+<p><img alt="" src="../img/editor-7.png"></p>
 <h3 id="moving-around-an-edit-window">Moving around an edit window</h3>
 <p>You can move around in the edit window using the scrollbar, the cursor keys, and the PgUp and PgDn keys. In addition, Ctrl+Home (UL) moves the cursor to the beginning of the top-line in the object and Ctrl+End moves the cursor to the end of the last line in the object. Home (LL) and End (RL) move the cursor to the beginning and end respectively of the line containing the cursor.</p>
 <h3 id="closing-an-edit-window">Closing an edit window</h3>
@@ -72065,7 +72041,7 @@
 <h2 id="selecting-text">Selecting Text</h2>
 <p>You may select text in an Editor window by clicking the left or right mouse button over any character, dragging out a highlighed area, and then releasing the mouse button. When using the left button, moving up or down one line extends the selection from the beginning of that line, so the selection may be ragged. The right button selects a rectangularr box.</p>
 <h3 id="editor-toolbar">Editor ToolBar</h3>
-<p><figure id="_figure-8"><img alt="editor toolbar" src="../img/editor-toolbar.png"><figcaption>Figure 8: editor toolbar</figcaption></figure></p>
+<p><img alt="" src="../img/editor-toolbar.png"></p>
 <p>In the table below, the first image shows the appearance of the toolbutton with Native Look and Feel enabled; the second with it disabled.</p>
 <table>
 <thead>
@@ -72076,73 +72052,73 @@
 </thead>
 <tbody>
 <tr>
-<td><img alt="trace_theme-14-00" src="../img/trace-theme-14-00.png"> <img alt="editor line numbers icon" src="../img/editor-line-numbers-icon.png"> Toggle line numbers</td>
+<td><img alt="" src="../img/trace-theme-14-00.png"> <img alt="" src="../img/editor-line-numbers-icon.png"> Toggle line numbers</td>
 <td>Toggles Line numbers on/off</td>
 </tr>
 <tr>
-<td><img alt="editor toggle treeview icon" src="../img/editor-toggle-treeview-icon.png"> <img alt="editor toggle treeview icon" src="../img/nlf-disabled/editor-toggle-treeview-icon.png"> Toggle tree view</td>
+<td><img alt="" src="../img/editor-toggle-treeview-icon.png"> <img alt="" src="../img/nlf-disabled/editor-toggle-treeview-icon.png"> Toggle tree view</td>
 <td>Toggles the treeview on/off. See <strong>Editing Classes</strong> .</td>
 </tr>
 <tr>
-<td><img alt="editor previous location icon" src="../img/editor-previous-location-icon.png"> <img alt="editor previous location icon" src="../img/nlf-disabled/editor-previous-location-icon.png"> Previous Location</td>
+<td><img alt="" src="../img/editor-previous-location-icon.png"> <img alt="" src="../img/nlf-disabled/editor-previous-location-icon.png"> Previous Location</td>
 <td>Certain operations (such as selecting an item in the treeview)  reposition the caret in the Editor window. This button moves the caret back to its previous location.</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-12-00" src="../img/trace-theme-12-00.png"> <img alt="editor comment icon" src="../img/editor-comment-icon.png"> Comment selected text</td>
+<td><img alt="" src="../img/trace-theme-12-00.png"> <img alt="" src="../img/editor-comment-icon.png"> Comment selected text</td>
 <td>Inserts a comment symbol to the left of the selection in each of the selected lines.</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-13-00" src="../img/trace-theme-13-00.png"> <img alt="editor uncomment icon" src="../img/editor-uncomment-icon.png"> Uncomment selected text</td>
+<td><img alt="" src="../img/trace-theme-13-00.png"> <img alt="" src="../img/editor-uncomment-icon.png"> Uncomment selected text</td>
 <td>Removes the comment symbol (if present) from the left-most column of the selection in each of the selected lines.</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-02-00" src="../img/trace-theme-02-00.png"> <img alt="editor save icon" src="../img/editor-save-icon.png"> Save changes and return</td>
+<td><img alt="" src="../img/trace-theme-02-00.png"> <img alt="" src="../img/editor-save-icon.png"> Save changes and return</td>
 <td>Saves changes and closes the current edit window</td>
 </tr>
 <tr>
-<td><img alt="editor search icon" src="../img/editor-search-icon.png"> <img alt="editor search icon" src="../img/nlf-disabled/editor-search-icon.png"> Search Box</td>
+<td><img alt="" src="../img/editor-search-icon.png"> <img alt="" src="../img/nlf-disabled/editor-search-icon.png"> Search Box</td>
 <td>Enter search text and click one of the following two buttons</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-16-00" src="../img/trace-theme-16-00.png"> <img alt="editor next match icon" src="../img/editor-next-match-icon.png"> Search for Next Match</td>
+<td><img alt="" src="../img/trace-theme-16-00.png"> <img alt="" src="../img/editor-next-match-icon.png"> Search for Next Match</td>
 <td>Locates the next occurrence of the search text</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-15-00" src="../img/trace-theme-15-00.png"> <img alt="editor previous match icon" src="../img/editor-previous-match-icon.png"> Search for Previous Match</td>
+<td><img alt="" src="../img/trace-theme-15-00.png"> <img alt="" src="../img/editor-previous-match-icon.png"> Search for Previous Match</td>
 <td>Locates the previous occurrence of the search</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-17-00" src="../img/trace-theme-17-00.png"> <img alt="editor search hidden text icon" src="../img/editor-search-hidden-text-icon.png"> Search hidden text</td>
+<td><img alt="" src="../img/trace-theme-17-00.png"> <img alt="" src="../img/editor-search-hidden-text-icon.png"> Search hidden text</td>
 <td>Determines whether or not the search examines collapsed blocks</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-21-00" src="../img/trace-theme-21-00.png"> <img alt="editor match case icon" src="../img/editor-match-case-icon.png"> Match case</td>
+<td><img alt="" src="../img/trace-theme-21-00.png"> <img alt="" src="../img/editor-match-case-icon.png"> Match case</td>
 <td>Specifies whether or not the search is case-sensitive</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-22-00" src="../img/trace-theme-22-00.png"> <img alt="editor match whole word icon" src="../img/editor-match-whole-word-icon.png"> Match whole word</td>
+<td><img alt="" src="../img/trace-theme-22-00.png"> <img alt="" src="../img/editor-match-whole-word-icon.png"> Match whole word</td>
 <td>Specifies whether or not the search matches a whole word</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-23-00" src="../img/trace-theme-23-00.png"> <img alt="editor use regular expressions icon" src="../img/editor-use-regular-expressions-icon.png"> Use Regular Expressions</td>
+<td><img alt="" src="../img/trace-theme-23-00.png"> <img alt="" src="../img/editor-use-regular-expressions-icon.png"> Use Regular Expressions</td>
 <td>Specifies whether or not the search uses PCRE regular expressions</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-18-00" src="../img/trace-theme-18-00.png"> <img alt="editor refactor method icon" src="../img/editor-refactor-method-icon.png"> Refactor text as method</td>
+<td><img alt="" src="../img/trace-theme-18-00.png"> <img alt="" src="../img/editor-refactor-method-icon.png"> Refactor text as method</td>
 <td>Inserts a Method template for the selected name</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-19-00" src="../img/trace-theme-19-00.png"> <img alt="editor refactor field icon" src="../img/editor-refactor-field-icon.png"> Refactor text as field</td>
+<td><img alt="" src="../img/trace-theme-19-00.png"> <img alt="" src="../img/editor-refactor-field-icon.png"> Refactor text as field</td>
 <td>Inserts a Field template for the selected name</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-20-00" src="../img/trace-theme-20-00.png"> <img alt="editor refactor property icon" src="../img/editor-refactor-property-icon.png"> Refactor text as property</td>
+<td><img alt="" src="../img/trace-theme-20-00.png"> <img alt="" src="../img/editor-refactor-property-icon.png"> Refactor text as property</td>
 <td>Inserts a Property template for the selected name</td>
 </tr>
 </tbody>
 </table>
 <h3 id="the-file-menu">The File Menu</h3>
-<p><figure id="_figure-9"><img alt="editor file menu" src="../img/editor-file-menu.png"><figcaption>Figure 9: editor file menu</figcaption></figure></p>
+<p><img alt="" src="../img/editor-file-menu.png"></p>
 <p>The <em>File</em> menu illustrated above is displayed when editing a simple object and provides the following options.</p>
 <table>
 <thead>
@@ -72207,7 +72183,7 @@
 </tbody>
 </table>
 <h3 id="the-file-menu-editing-a-script">The File Menu (editing a script)</h3>
-<p><figure id="_figure-10"><img alt="editor file menu class" src="../img/editor-file-menu-class.png"><figcaption>Figure 10: editor file menu class</figcaption></figure></p>
+<p><img alt="" src="../img/editor-file-menu-class.png"></p>
 <table>
 <tbody>
 <tr>
@@ -72238,7 +72214,7 @@
 <p>In addition, the Configuration Dialog (see <a href="configuration-dialog.md">Fixing Scripts</a>) allows you to define  the behaviour of the keystrokes <ep> and <s1> for both the suspended case and the non-suspended case. This association will be displayed against the appropriate action according to the state of the script you are editing.</s1></ep></p>
 <h3 id="the-edit-menu">The Edit Menu</h3>
 <p>The <em>Edit</em> menu provides a means to execute those commands that are concerned with editing text. The Edit menu and the actions it provides are described below.</p>
-<p><figure id="_figure-11"><img alt="editor edit menu" src="../img/editor-edit-menu.png"><figcaption>Figure 11: editor edit menu</figcaption></figure></p>
+<p><img alt="" src="../img/editor-edit-menu.png"></p>
 <table>
 <thead>
 <tr>
@@ -72331,8 +72307,8 @@
 </table>
 <p>The <em>Find</em> and <em>Replace</em> items are used to display the <em>Find</em> dialog box and the <em>Find/Replace</em> dialog box respectively. These boxes are used to perform search and replace operations and are described later in this Chapter.</p>
 <p>Once displayed, each of the two dialog boxes remains on the screen until it is either closed or replaced by the other. This is convenient if the same operations are to be performed over and over again, and/or in several windows. <em>Find</em> and <em>Find/Replace</em> operations are effective in the window that previously had the focus.</p>
-<h4 id="the-syntax-menu">The Syntax Menu</h4>
-<p><figure id="_figure-12"><img alt="editor syntax menu" src="../img/editor-syntax-menu.png"><figcaption>Figure 12: editor syntax menu</figcaption></figure></p>
+<h3 id="the-syntax-menu">The Syntax Menu</h3>
+<p><img alt="" src="../img/editor-syntax-menu.png"></p>
 <p>The <em>Syntax</em> menu illustrated above provides options to specify  how the data displayed in the Editor window is to be syntax coloured. For workspace objects, the default is <em>APL</em> for functions and operators, and <em>Nothing</em> for variables.</p>
 <table>
 <thead>
@@ -72360,9 +72336,9 @@
 </tr>
 </tbody>
 </table>
-<h4 id="the-window-menu">The Window Menu</h4>
+<h3 id="the-window-menu">The Window Menu</h3>
 <p>The <em>Window</em> menu provides a means to control the display of the various edit windows. The <em>Window</em> menu and the actions it provides are described below.</p>
-<p><figure id="_figure-13"><img alt="editor window menu" src="../img/editor-window-menu.png"><figcaption>Figure 13: editor window menu</figcaption></figure></p>
+<p><img alt="" src="../img/editor-window-menu.png"></p>
 <table>
 <thead>
 <tr>
@@ -72397,8 +72373,8 @@
 </tr>
 </tbody>
 </table>
-<h4 id="the-refactor-menu">The Refactor Menu</h4>
-<p><figure id="_figure-14"><img alt="editor refactor menu" src="../img/editor-refactor-menu.png"><figcaption>Figure 14: editor refactor menu</figcaption></figure></p>
+<h3 id="the-refactor-menu">The Refactor Menu</h3>
+<p><img alt="" src="../img/editor-refactor-menu.png"></p>
 <p>The <em>Refactor</em> menu illustrated above applies only when editing a Class and provides the following options. In each case, the user must highlight a name in the Edit window, and then select one of these options to insert the appropriate template for that name into the body of the Class.</p>
 <table>
 <thead>
@@ -72422,8 +72398,8 @@
 </tr>
 </tbody>
 </table>
-<h4 id="the-view-menu">The View Menu</h4>
-<p><figure id="_figure-15"><img alt="editor view menu" src="../img/editor-view-menu.png"><figcaption>Figure 15: editor view menu</figcaption></figure></p>
+<h3 id="the-view-menu">The View Menu</h3>
+<p><img alt="" src="../img/editor-view-menu.png"></p>
 <p>The <em>View</em> menu, illustrated above, provides the following actions.</p>
 <table>
 <thead>
@@ -72479,24 +72455,24 @@
 </tr>
 </tbody>
 </table>
-<h5 id="function-line-numbers">Function Line Numbers</h5>
+<h4 id="function-line-numbers">Function Line Numbers</h4>
 <p>The <em>Function Line Numbers</em> option in the Editor menu provides an additional level of line-numbering. If selected, line numbers are displayed <em>independently</em> on each individual function (or operator) in the Class. This option is only enabled when you are editing a Class, Namespace script or Interface, and is disabled for all other types of object.</p>
 <p>Note that function line-numbering and general line-numbering are independent options and it is possible to have the entire Class numbered (from [0] to the number of lines in the Class) in addition to having line-numbering on each individual function.</p>
-<h4 id="using-the-editor">Using the Editor</h4>
-<h6 id="creating-a-new-function">Creating a New Function</h6>
+<h2 id="using-the-editor">Using the Editor</h2>
+<h3 id="creating-a-new-function">Creating a New Function</h3>
 <p>Type the name of your function and invoke the editor. To do this you may press Shift+Enter, or select <em>Edit</em> from the <em>Action</em> menu, or double-click the left button on your mouse, or click the <em>Edit</em> tool in the tool bar. A new window will appear on the screen with the name you have chosen displayed in the top border. The name is also inserted in the function header and the cursor positioned to the right. The new window is automatically given the input focus.</p>
-<h6 id="line-numbers-onoff">Line-Numbers on/off</h6>
+<h3 id="line-numbers-onoff">Line-Numbers on/off</h3>
 <p>Try changing the line numbers setting by clicking on the <em>Line Numbers</em> option in the <em>Options</em> menu. Note that line-numbering on/off is effective for <strong>all</strong> edit windows.</p>
-<h6 id="adding-lines">Adding Lines</h6>
+<h3 id="adding-lines">Adding Lines</h3>
 <p>If the keyboard is in <em>Insert</em> mode, pressing Enter at the end of a line opens you a new blank line under the current one and positions the cursor there ready for input. You can also open a new blank line by pressing Ctrl+Shift+Insert (OP).</p>
 <p>If the cursor is at the end of the last line in the function, pressing Enter adds another line even if the keyboard is in Replace mode.</p>
-<h6 id="indenting-text">Indenting Text</h6>
+<h3 id="indenting-text">Indenting Text</h3>
 <p>Dyalog allows you to insert leading spaces in lines of a function and (unless the <strong>AutoFormat</strong> parameter is set) preserves these spaces between editing sessions. Embedded spaces are however discarded. You can enter spaces using the space bar or the Tab key. Pressing Tab inserts spaces up to the next tab stop corresponding to the value of the <strong>TabStops</strong> parameter. If the <strong>AutoIndent</strong> parameter is set, new lines are automatically indented the same amount as the preceding line.</p>
-<h6 id="reformatting">Reformatting</h6>
+<h3 id="reformatting">Reformatting</h3>
 <p>The RD command (which by default is mapped to Keypad-Slash) reformats a function according to your <strong>AutoFormat</strong> and <strong>TabStops</strong> settings. See <a href="configuration-dialog.md"> Trace/Edit Tab</a>.</p>
-<h6 id="deleting-lines">Deleting Lines</h6>
+<h3 id="deleting-lines">Deleting Lines</h3>
 <p>To delete a block of lines, select them by dragging the mouse or using the keyboard and then press Delete or select <em>Clear</em> from the <em>Edit</em> menu. A quick way to delete the current line without selecting it first is to press Ctrl+Delete (DK) or select <em>Delete Line</em> from the <em>Edit</em> menu.</p>
-<h6 id="copying-lines">Copying Lines</h6>
+<h3 id="copying-lines">Copying Lines</h3>
 <p>Select the lines you wish to copy by dragging the mouse or using the keyboard. Then press Ctrl+Insert or select <em>Copy</em> from the <em>Edit</em> menu. This action copies the selection to the clipboard. Now position the input cursor where you wish to make the copy and press Shift+Insert, or select <em>Paste</em> from the <em>Edit</em> menu. You can also use this method to duplicate a ragged block of text.</p>
 <p>To copy text using drag-and-drop editing:</p>
 <ol>
@@ -72504,7 +72480,7 @@
 <li>Hold down the Ctrl key, point to the selected text and then press and hold down the left mouse button. When the drag-and-drop pointer appears, drag the cursor to a new location.</li>
 <li>Release the mouse button to drop the text into place.</li>
 </ol>
-<h6 id="moving-lines">Moving Lines</h6>
+<h3 id="moving-lines">Moving Lines</h3>
 <p>Select the lines you wish to copy by dragging the mouse or using the keyboard. Then press Shift+Delete or select <em>Cut</em> from the Edit menu. This action copies the selection to the clipboard and removes it. Now position the input cursor at the new location and press Shift+Insert, or select <em>Past</em>e from the Edit menu. You can also use this method to move a <em>ragged</em> block of text.</p>
 <p>To move text using drag-and-drop editing:</p>
 <ol>
@@ -72512,19 +72488,19 @@
 <li>Point to the selected text and then press and hold down the left mouse button. When the drag-and-drop pointer appears, drag the cursor to a new location.</li>
 <li>Release the mouse button to drop the text into place.</li>
 </ol>
-<h6 id="joining-and-splitting-lines">Joining and Splitting Lines</h6>
+<h3 id="joining-and-splitting-lines">Joining and Splitting Lines</h3>
 <p>To join a line to the previous one: select Insert mode; position the cursor on the first character in the line; press Bksp.</p>
 <p>To split a line: select Insert mode; position the cursor at the place you want it split; press Return.</p>
-<h6 id="toggling-localisation">Toggling Localisation</h6>
+<h3 id="toggling-localisation">Toggling Localisation</h3>
 <p>The TL command (which by default is mapped to Ctrl+Up) toggles the localisation of the name under the cursor. If the name is currently global, pressing Ctrl+Up causes the name to be added to the list of locals in the function header. If the name is already localised, pressing Ctrl+Alt+l removes it from the header.</p>
-<h6 id="matching-occurences">Matching Occurences</h6>
+<h3 id="matching-occurences">Matching Occurences</h3>
 <p>When you position the caret over a name, control word, or simple text or to the right of a parenthesis, bracket, or brace, matching occurrences are identified (by a thin box). In particular :</p>
 <ul>
 <li>matching occurrences of the word under the caret (except the actual instance under the caret)</li>
 <li>matching parentheses, brackets and braces</li>
 <li>all control words associated with the one under the caret. For example, if the caret is on <code>:If</code>, then nested <code>:AndIf</code>, <code>:OrIf</code>, <code>:Else</code> and the final <code>:Endif</code> are identified.</li>
 </ul>
-<h6 id="aligning-comments">Aligning Comments</h6>
+<h3 id="aligning-comments">Aligning Comments</h3>
 <p>When you press the <ac> key, or select Align Comments in the Editor's context menu, the alignment of the comments in every line in the function will be changed so that the left-most comment (Lamp) symbol is in the same column as the cursor, except that:</ac></p>
 <ul>
 <li>Comment symbols that are preceded only by white space, that is, comments in lines that contain no code, are ignored and are not adjusted in any way.</li>
@@ -72537,60 +72513,60 @@
 <p>Note that there is no keystroke associated with this command by default; the user must define one. See 
 Installation &amp; Configuration Guide: </p>
 <p>Configuration Dialog (Keyboard Shortcuts Tab).</p>
-<h6 id="stop-trace-and-monitor-controls">Stop, Trace and Monitor Controls</h6>
+<h3 id="stop-trace-and-monitor-controls">Stop, Trace and Monitor Controls</h3>
 <p>If any of the <em>Stop</em>, <em>Trace</em>, and <em>Monitor</em> options of the <em>View</em> menu are set, the Editor displays  an area to the left of the function body containing up to 3 columns. If a function line is enabled by <code>⎕TRACE</code>,<code>⎕STOP</code> or <code>⎕MONITOR</code> the corresponding column displays a yellow circle (trace), red circle (stop) or clock symbol (monitor).</p>
-<p><figure id="_figure-16"><img alt="trace edit monitor" src="../img/trace-edit-monitor.png"><figcaption>Figure 16: trace edit monitor</figcaption></figure></p>
+<p><img alt="" src="../img/trace-edit-monitor.png"></p>
 <p>When you move the mouse-pointer over this area, the pointer displays the appropriate symbol and you can toggle the corresponding setting on and off by clicking the mouse.</p>
-<h4 id="white-space-in-source-code">White Space in Source Code</h4>
+<h3 id="white-space-in-source-code">White Space in Source Code</h3>
 <p>Settings that impact the automatic reformatting of code can cause changes to whitespace – this can be interpreted as changes to the source code. This means that:</p>
 <ul>
 <li>opening a scripted object in the Edit window can cause the source of that object to change (when closing an Edit window, you might be prompted to save a function even though you have not made any changes to it).</li>
 <li>viewing an object can change its file timestamp; source code management systems can subsequently report changes due to the changed file timestamp.</li>
 <li>source code changes resulting from reformatting will be evident in the results of system functions such as <code>⎕AT</code>, <code>⎕SRC</code>, <code>⎕CR</code>, <code>⎕VR</code> and <code>⎕NR</code>.</li>
 </ul>
-<h6 id="outlining">Outlining</h6>
+<h3 id="outlining">Outlining</h3>
 <p>When you are editing a function, outlining identifies the blocks of code within control structures, and allows you to collapse and expand these blocks so that you can focus your attention on particular parts of the code</p>
 <p>The picture below shows the result of opening the function <code>⎕SE.cbtop.TB_POPUP</code>.
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">ed</span><span class="w"> </span><span class="nf">⎕SE</span><span class="na">.</span><span class="nv">cbtop</span><span class="na">.</span><span class="nv">TB_POPUP</span>
 </code></pre></div>
-<p><figure id="_figure-17"><img alt="editor outlining 1" src="../img/editor-outlining-1.png"><figcaption>Figure 17: editor outlining 1</figcaption></figure></p>
+<p><img alt="" src="../img/editor-outlining-1.png"></p>
 <p>Notice that the various control structure blocks are delineated by a treeview diagram.</p>
 <ul>
 <li>When you hover the mouse pointer over one of the boxes that mark the start of a block, the line marking the extent of that block becomes highlighted, as shown above.</li>
-<li>If you click on a <img alt="editor outlining collapse icon" src="../img/editor-outlining-collapse-icon.png"> box, the corresponding section collapses, so that only the first line of the block is displayed, as shown below.</li>
-<li>If you click on a  <img alt="editor outlining expand icon" src="../img/editor-outlining-expand-icon.png"> box, the corresponding section is expanded.</li>
+<li>If you click on a <img alt="" src="../img/editor-outlining-collapse-icon.png"> box, the corresponding section collapses, so that only the first line of the block is displayed, as shown below.</li>
+<li>If you click on a  <img alt="" src="../img/editor-outlining-expand-icon.png"> box, the corresponding section is expanded.</li>
 </ul>
-<p><figure id="_figure-18"><img alt="editor outlining 2" src="../img/editor-outlining-2.png"><figcaption>Figure 18: editor outlining 2</figcaption></figure></p>
-<h6 id="sections">Sections</h6>
+<p><img alt="" src="../img/editor-outlining-2.png"></p>
+<h3 id="sections">Sections</h3>
 <p>Functions and scripted objects (classes, namespaces etc.) can be subdivided into Sections with <code>:Section</code> and <code>:EndSection</code> statements. Both statements may be followed by an optional and arbitrary name or description. The purpose is to split the function up into sections that you can open and close in the Editor, thereby aiding readability and code management. Sections have no effect on the execution of the code, but must follow the nesting rules of other control structures.</p>
 <p>The following picture illustrates the use of sections in a function called <code>DumpWindow</code>. The function is divided into 5 sections named <code>Comments, Init</code>, <code>NAs, MakeBitmap</code> and <code>CopyToClipBoard</code>.</p>
 <p>The first picture shows the function with all sections closed.</p>
-<p><figure id="_figure-19"><img alt="editor sections 1" src="../img/editor-sections-1.png"><figcaption>Figure 19: editor sections 1</figcaption></figure></p>
+<p><img alt="" src="../img/editor-sections-1.png"></p>
 <p>The next picture shows the effect of opening the <em>Comments</em> section. Notice how this is delineated by the statements:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Section</span><span class="w"> </span><span class="nv">Comments</span>
 <span class="w">      </span><span class="na">...</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">EndSection</span><span class="w"> </span><span class="nv">Comments</span>
 </code></pre></div>
-<p><figure id="_figure-20"><img alt="editor sections 2" src="../img/editor-sections-2.png"><figcaption>Figure 20: editor sections 2</figcaption></figure></p>
+<p><img alt="" src="../img/editor-sections-2.png"></p>
 <p>And with the <code>Init</code> section opened too:</p>
-<p><figure id="_figure-21"><img alt="editor sections 3" src="../img/editor-sections-3.png"><figcaption>Figure 21: editor sections 3</figcaption></figure></p>
+<p><img alt="" src="../img/editor-sections-3.png"></p>
 <p>Finally, with all the sections opened:</p>
-<p><figure id="_figure-22"><img alt="editor sections 4" src="../img/editor-sections-4.png"><figcaption>Figure 22: editor sections 4</figcaption></figure></p>
-<h6 id="editing-classes">Editing Classes</h6>
+<p><img alt="" src="../img/editor-sections-4.png"></p>
+<h3 id="editing-classes">Editing Classes</h3>
 <p>The picture below shows the result of opening the <code>ComponentFile</code> class. Notice how each function is delineated separately and that each function is individually line-numbered.
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">ed</span><span class="w"> </span><span class="nv">ComponentFile</span>
 </code></pre></div>
-<p><figure id="_figure-23"><img alt="editor classes 1" src="../img/editor-classes-1.png"><figcaption>Figure 23: editor classes 1</figcaption></figure></p>
+<p><img alt="" src="../img/editor-classes-1.png"></p>
 <p>The outlining feature really comes into its own when editing classes because you can collapse and expand whole functions. The picture below shows the effect of collapsing all but the <code>Append</code> method.</p>
-<p><figure id="_figure-24"><img alt="editor classes 2" src="../img/editor-classes-2.png"><figcaption>Figure 24: editor classes 2</figcaption></figure></p>
+<p><img alt="" src="../img/editor-classes-2.png"></p>
 <p>When you edit a class, a separate treeview is optionally displayed in the left pane to make it easy to navigate within the class. When you click on a name in the treeview, the editor automatically scrolls the appropriate section into view (if necessary) and positions the edit cursor at its start. The picture below illustrates the result of opening the <code>[Methods]</code> section and then clicking on <em>Rename</em>.</p>
-<p><figure id="_figure-25"><img alt="editor classes 3" src="../img/editor-classes-3.png"><figcaption>Figure 25: editor classes 3</figcaption></figure></p>
-<h6 id="sections-within-scripts">Sections within Scripts</h6>
+<p><img alt="" src="../img/editor-classes-3.png"></p>
+<h3 id="sections-within-scripts">Sections within Scripts</h3>
 <p>Scripts can also be subdivided into Sections using <code>:Section</code> and <code>:EndSection</code> statements. As with single functions, the purpose is only to split the script up into sections that you can open and close in the Editor. Sections have no effect on the execution of the code.</p>
 <p>The following picture illustrates a Class named <code>actuarial</code> which, for editing purposes, has been sub-divided into five separate Sections named <code>Main</code>, <code>MenuHandlers</code>, <code>Validation</code>, <code>Utilities</code> and <code>OldCode</code>. In this picture, all the Sections are closed.</p>
-<p><figure id="_figure-26"><img alt="editor classes 4" src="../img/editor-classes-4.png"><figcaption>Figure 26: editor classes 4</figcaption></figure></p>
+<p><img alt="" src="../img/editor-classes-4.png"></p>
 <p>The next picture shows the effect of opening just the <code>Main</code> section.</p>
-<p><figure id="_figure-27"><img alt="editor classes 5" src="../img/editor-classes-5.png"><figcaption>Figure 27: editor classes 5</figcaption></figure></p>
+<p><img alt="" src="../img/editor-classes-5.png"></p>
 <p>Notice that this section is delimited by the two statements:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Section</span><span class="w"> </span><span class="nv">Main</span>
 <span class="w">      </span><span class="na">...</span>
@@ -72602,7 +72578,7 @@ Installation &amp; Configuration Guide: </p>
 <span class="w">      </span><span class="na">...</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">EndSection</span><span class="w"> </span><span class="nv">Validation</span>
 </code></pre></div>
-<p><figure id="_figure-28"><img alt="editor classes 6" src="../img/editor-classes-6.png"><figcaption>Figure 28: editor classes 6</figcaption></figure></p>
+<p><img alt="" src="../img/editor-classes-6.png"></p>
 
 
 

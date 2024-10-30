@@ -71430,14 +71430,14 @@
 <li>Browse the loaded Metadata, viewing information about classes, methods, properties and so forth.</li>
 </ul>
 <p>If the <em>Type Libraries</em> option is enabled, the <em>Workspace Explorer</em> displays a folder labelled <em>TypeLibs</em> which, when opened, displays two others labelled <em>Loaded Libraries</em> and <em>Registered Libraries</em> as shown below.</p>
-<p><figure id="_figure-1"><img alt="browsing type libraries" src="../img/browsing-type-libraries.png"><figcaption>Figure 1: browsing type libraries</figcaption></figure></p>
+<p><img alt="" src="../img/browsing-type-libraries.png"></p>
 <h2 id="browsing-registered-libraries">Browsing Registered Libraries</h2>
 <p>If you open the Registered Libraries folder, the <em>Workspace Explorer</em> will display in the tree view pane the names of all the Type Libraries associated with the COM Server objects that are installed on your computer.</p>
 <p>If you select one of these Library names, some summary information is displayed in the list view pane.</p>
 <p>For example, the result of selecting the Microsoft Excel 16.0 Object Library is illustrated below.</p>
-<p><figure id="_figure-2"><img alt="browsing registered libraries 1" src="../img/browsing-registered-libraries-1.png"><figcaption>Figure 2: browsing registered libraries 1</figcaption></figure></p>
+<p><img alt="" src="../img/browsing-registered-libraries-1.png"></p>
 <p>If instead, you select the Registered Libraries folder itself, the list of Registered Type Libraries is displayed in the list view pane</p>
-<p><figure id="_figure-3"><img alt="browsing registered libraries 2" src="../img/browsing-registered-libraries-2.png"><figcaption>Figure 3: browsing registered libraries 2</figcaption></figure></p>
+<p><img alt="" src="../img/browsing-registered-libraries-2.png"></p>
 <h2 id="loading-a-type-library">Loading a Type Library</h2>
 <p>You can load a library shown in the tree view pane by selecting <em>Load</em> from its context menu.</p>
 <p>In either case, a message box will appear asking you to confirm. The operation to load a Type Library may take a few moments to complete.</p>
@@ -71446,26 +71446,26 @@
 <h2 id="browsing-loaded-libraries">Browsing Loaded Libraries</h2>
 <p>If you have already loaded any Type Libraries into the workspace, using the Workspace Explorer or as a result of creating one or more OLEClient objects, you can select and open the Loaded Libraries folder.</p>
 <p>The picture below illustrates the effect of having loaded the Microsoft Excel 16.0 Object Library.</p>
-<p><figure id="_figure-4"><img alt="browsing loaded libraries 1" src="../img/browsing-loaded-libraries-1.png"><figcaption>Figure 4: browsing loaded libraries 1</figcaption></figure></p>
+<p><img alt="" src="../img/browsing-loaded-libraries-1.png"></p>
 <p>Notice that any external references to other libraries causes these to be brought in too.</p>
 <p>If you select a loaded Type Library, summary information is displayed in the list view pane.</p>
 <p>If you open a loaded Type Library, four sub-folders appear named <em>Object CoClasses</em>, <em>Objects</em>, <em>Enums</em> and <em>Event Sets</em> respectively.</p>
 <h2 id="object-coclasses">Object CoClasses</h2>
 <p>A Type Library describes a number of <em>objects</em>. Typically, all of the objects have properties and methods, but only some of them, perhaps just a few, generate events. Objects which generate events are represented by <em>CoClasses</em>, each of which has a pointer to the object itself and a pointer to an event set.</p>
 <p>For example, the Microsoft Excel 16.0 Object Library contains seven CoClasses named <em>Application</em>, <em>Chart</em>, <em>Global</em> etc as shown below.</p>
-<p><figure id="_figure-5"><img alt="browsing loaded libraries 2" src="../img/browsing-loaded-libraries-2.png"><figcaption>Figure 5: browsing loaded libraries 2</figcaption></figure></p>
+<p><img alt="" src="../img/browsing-loaded-libraries-2.png"></p>
 <p>Opening the Application folder you can see that the <em>Application</em> CoClass comprises the <em>_Application</em> object coupled with the <em>AppEvents</em> event set as shown below.</p>
-<p><figure id="_figure-6"><img alt="browsing loaded libraries 3" src="../img/browsing-loaded-libraries-3.png"><figcaption>Figure 6: browsing loaded libraries 3</figcaption></figure></p>
+<p><img alt="" src="../img/browsing-loaded-libraries-3.png"></p>
 <p>The specific methods, properties and events supported by the CoClass object can be examined by opening the appropriate sub-folder. The same information for these and other objects is also accessible from the <em>Objects</em> and <em>Event Sets</em> folders as discussed below.</p>
 <h2 id="objects">Objects</h2>
 <p>The <em>Objects</em> folder contains several sub-folders each of which represents a named object defined in the library.</p>
 <p>Each object folder contains two sub-folders named Methods and Properties. Selecting one of these causes the list of Methods or Properties to be displayed in the list view pane. The picture below shows the Methods exposed by the Microsoft Excel 16.0 Range object.</p>
-<p><figure id="_figure-7"><img alt="browsing loaded libraries 4" src="../img/browsing-loaded-libraries-4.png"><figcaption>Figure 7: browsing loaded libraries 4</figcaption></figure></p>
+<p><img alt="" src="../img/browsing-loaded-libraries-4.png"></p>
 <p>If you open the <em>Methods</em> or <em>Properties</em> subfolder, you can display more detailed information about individual Methods and Properties. For example, the following picture shows information about the <em>SaveAs</em> method exposed by the Microsoft Excel 16.0 Worksheet object.</p>
-<p><figure id="_figure-8"><img alt="browsing loaded libraries 5" src="../img/browsing-loaded-libraries-5.png"><figcaption>Figure 8: browsing loaded libraries 5</figcaption></figure></p>
+<p><img alt="" src="../img/browsing-loaded-libraries-5.png"></p>
 <p>This tells you that the <em>SaveAs</em> method takes up to 10 parameters of which the first, Filename, is mandatory and is of data type VT_BSTR (a character string). Note that [in] indicates that the parameter is an <em>input</em> parameter.</p>
 <p>Incidentally, the optional Fileformat parameter is an example of a parameter whose value must be one of a list of Enumerated Constants. Even without looking at the documentation, the possible values can be deduced by browsing the <em>Enums</em> folder, with the results shown below.</p>
-<p><figure id="_figure-9"><img alt="browsing loaded libraries 6" src="../img/browsing-loaded-libraries-6.png"><figcaption>Figure 9: browsing loaded libraries 6</figcaption></figure></p>
+<p><img alt="" src="../img/browsing-loaded-libraries-6.png"></p>
 <p>You can therefore deduce that the following expression, executed in the namespace associated with the currently active worksheet, will save the sheet in comma-separated format (CSV) in a file called mysheet.csv:
 </p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nv">SaveAs</span><span class="w"> </span><span class="s1">'MYSHEET.CSV'</span><span class="w"> </span><span class="nv">xlCSV</span>
 </code></pre></div>
@@ -71475,12 +71475,12 @@
 <h2 id="event-sets">Event Sets</h2>
 <p>The <em>Event Sets</em> folder contains several sub-folders each of which represents a named set of events generated by the objects defined in the library.</p>
 <p>If you open one of these event sets, the names of the events it contains are displayed in the tree view pane. If you then select one of the events, its details are displayed in the list view pane as shown below.</p>
-<p><figure id="_figure-10"><img alt="browsing loaded libraries 7" src="../img/browsing-loaded-libraries-7.png"><figcaption>Figure 10: browsing loaded libraries 7</figcaption></figure></p>
+<p><img alt="" src="../img/browsing-loaded-libraries-7.png"></p>
 <p>This example shows that when it fires, the SheetActivate event invokes your callback function with a single argument named <em>Sh</em> whose datatype is VT_DISPATCH (in practice, a Worksheet object).</p>
 <h2 id="enums">Enums</h2>
 <p>The <em>Enums</em> folder will typically contain several sub-folders each of which represents a named set of enumerated constants.</p>
 <p>If you select one of these sets, the names and values of the constants it contains are displayed in the list view pane as shown below.</p>
-<p><figure id="_figure-11"><img alt="browsing loaded libraries 8" src="../img/browsing-loaded-libraries-8.png"><figcaption>Figure 11: browsing loaded libraries 8</figcaption></figure></p>
+<p><img alt="" src="../img/browsing-loaded-libraries-8.png"></p>
 
 
 

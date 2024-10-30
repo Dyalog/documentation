@@ -71424,14 +71424,14 @@
 
 <h1 class="heading"><span class="name">Array Editor</span></h1>
 
-<p>The Array Editor<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>  allows you to edit arbitrary arrays. It is invoked by either:</p>
+<p>The Array Editor<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> allows you to edit arbitrary arrays. It is invoked by either:</p>
 <ul>
-<li>Clicking the <img alt="edit numbers icon" src="../img/edit-numbers-icon.png"> icon in the Session toolbar when the mouse pointer is over the name of a suitable variable.</li>
+<li>Clicking the <img alt="" src="../img/edit-numbers-icon.png"> icon in the Session toolbar when the mouse pointer is over the name of a suitable variable.</li>
 <li>Calling the user command <code>]array.edit</code>, specifying the name of a suitable variable as its argument.</li>
 <li>Calling it directly via <code>⎕NA</code></li>
 </ul>
 <p>The Array Editor draws data using a format that is similar to the output of the <code>DISPLAY</code> function. For example:</p>
-<p><figure id="_figure-1"><img alt="array editor" src="../img/array-editor.png"><figcaption>Figure 1: array editor</figcaption></figure></p>
+<p><img alt="" src="../img/array-editor.png"></p>
 <h2 id="documentation">Documentation</h2>
 <p>Full documentation for the Array Editor, including a list of the keystrokes it uses, is available from the Help menu in the Array Editor's window.</p>
 <h2 id="supported-arrays">Supported Arrays</h2>
@@ -71454,14 +71454,14 @@
 <li>Negative numbers must be represented using high minus signs. For example, <code>¯3</code> not <code>-3</code>.</li>
 </ul>
 <h3 id="implementation">Implementation</h3>
-<p>The Array Editor is implemented by a DLL named <code>dlaedit.dll</code> (32-bit) or      <code>dlaedit64.dll</code> (64-bit).</p>
-<p>The DLL exports two functions:  <code>DyalogEditArray</code> and <code>DyalogEditArrayTitle</code>. The latter is used when you click  the <img alt="edit numbers icon" src="../img/edit-numbers-icon.png"> icon in the Session toolbar (via the APL function <code>⎕SE.NumEd.numed</code>)  and by the user command <code>]array.edit</code></p>
+<p>The Array Editor is implemented by a DLL named <code>dlaedit.dll</code> (32-bit) or <code>dlaedit64.dll</code> (64-bit).</p>
+<p>The DLL exports two functions:  <code>DyalogEditArray</code> and <code>DyalogEditArrayTitle</code>. The latter is used when you click  the <img alt="" src="../img/edit-numbers-icon.png"> icon in the Session toolbar (via the APL function <code>⎕SE.NumEd.numed</code>)  and by the user command <code>]array.edit</code></p>
 <h3 id="calling-the-array-editor-directly">Calling the Array Editor Directly</h3>
 <p>If you wish to use the Array Editor directly, you may do so as follows using <code>⎕NA</code><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
 <p>For both <code>DyalogEditArray</code> and <code>DyalogEditArrayTitle</code> the first argument is the array to be edited, while the second argument is a place holder and should always be 0</p>
 <p>For <code>DyalogEditArrayTitle</code> the 3rd argument is a character vector whose contents are displayed in the caption of the array editor window.</p>
 <p>The result is the newly altered array.</p>
-<h4 class="example">Examples</h4>
+<h3 class="example">Examples</h3>
 <div class="highlight"><pre><span></span><code><span class="nf">⎕NA</span><span class="s1">'dlaedit.dll|DyalogEditArray &lt;pp &gt;pp'</span><span class="w">              </span><span class="c1">⍝ 32-bit</span>
 <span class="nf">⎕NA</span><span class="s1">'dlaedit.dll|DyalogEditArrayTitle &lt;pp &gt;pp &lt;0C2[]'</span><span class="w">  </span><span class="c1">⍝ 32-bit</span>
 
@@ -71478,7 +71478,7 @@
 <p>Array Editor Version 1 Release 1 © Copyright davidliebtag.com 2012, 2015 <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 <li id="fn:2">
-<p>Note that these are not standard ⎕NA calls, but rather use an extension to ⎕NA , called Direct Workspace Access . Dyalog does not intend to make this feature generally available at present: if you are interested in this feature please contact sales@dyalog.com. <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+<p>Note that these are not standard ⎕NA calls, but rather use an extension to ⎕NA, called Direct Workspace Access. Dyalog does not intend to make this feature generally available at present: if you are interested in this feature please contact sales@dyalog.com. <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
 </ol>
 </div>

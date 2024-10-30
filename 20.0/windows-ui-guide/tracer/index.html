@@ -71544,7 +71544,7 @@
 <h2 id="the-trace-window">The Trace Window</h2>
 <p>The Tracer is implemented as a single dockable window that displays the function that is currently being executed. There are two subsidiary information windows which are also fully dockable. The first of these (<em>SIStack</em>) displays the current function calling stack; the second (<em>Threads</em>) displays a list of running threads.</p>
 <p>In the default Session files, the Tracer is docked along the bottom edge of the Session window. When you invoke the Tracer, it springs up as illustrated below. In this example, the function being traced is <code>⎕SE.UCMD</code>, which is invoked by typing a user-command, in this case <code>]display</code>.</p>
-<p><figure id="_figure-1"><img alt="tracer 1" src="../img/tracer-1.png"><figcaption>Figure 1: tracer 1</figcaption></figure></p>
+<p><img alt="" src="../img/tracer-1.png"></p>
 <p>In the default layout, the <em>SIstack</em> window is displayed alongside the main Tracer window, although this can be hidden or made to appear as a separate floating window, as required.</p>
 <h2 id="trace-tools">Trace Tools</h2>
 <p>The Tracer may be controlled from the keyboard, or by using the <em>Trace Tools</em> which are arranged along the title bar of the Debugger window. Note that the button names are solely for reference purposes in the description that follows.</p>
@@ -71560,161 +71560,143 @@
 </thead>
 <tbody>
 <tr>
-<td><img alt="trace_theme-04-00" src="../img/trace-theme-04-00.png"></td>
-<td><img alt="trace tools exec icon" src="../img/trace-tools-exec-icon.png"></td>
+<td><img alt="" src="../img/trace-tools-exec-icon.png"></td>
 <td>Exec</td>
 <td>ER</td>
 <td>Enter</td>
-<td>Execute expression</td>
+<td colspan="2">Execute expression</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-05-00" src="../img/trace-theme-05-00.png"></td>
-<td><img alt="trace tools trace icon" src="../img/trace-tools-trace-icon.png"></td>
+<td><img alt="" src="../img/trace-tools-trace-icon.png"></td>
 <td>Trace</td>
 <td>TC</td>
 <td>Ctrl+Enter</td>
-<td>Trace expression</td>
+<td colspan="2">Trace expression</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-00-00" src="../img/trace-theme-00-00.png"></td>
-<td><img alt="trace tools back icon" src="../img/trace-tools-back-icon.png"></td>
+<td><img alt="" src="../img/trace-tools-back-icon.png"></td>
 <td>Back</td>
 <td>BK</td>
 <td>Ctrl+Shift+Bksp</td>
-<td>Go back one line</td>
+<td colspan="2">Go back one line</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-01-00" src="../img/trace-theme-01-00.png"></td>
-<td><img alt="trace tools fwd icon" src="../img/trace-tools-fwd-icon.png"></td>
+<td><img alt="" src="../img/trace-tools-fwd-icon.png"></td>
 <td>Fwd</td>
 <td>FD</td>
 <td>Ctrl+Shift+Enter</td>
-<td>Skip current line</td>
+<td colspan="2">Skip current line</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-06-00" src="../img/trace-theme-06-00.png"></td>
-<td><img alt="trace tools continue icon" src="../img/trace-tools-continue-icon.png"></td>
+<td><img alt="" src="../img/trace-tools-continue-icon.png"></td>
 <td>Continue</td>
 <td>BH</td>
 <td> </td>
-<td>Stop on next line of calling function</td>
+<td colspan="2">Stop on next line of calling function</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-07-00" src="../img/trace-theme-07-00.png"></td>
-<td><img alt="trace tools restart icon" src="../img/trace-tools-restart-icon.png"></td>
+<td><img alt="" src="../img/trace-tools-restart-icon.png"></td>
 <td>Restart</td>
 <td>RM</td>
 <td><code>→⎕LC</code></td>
-<td>Continue execution of this thread</td>
+<td colspan="2">Continue execution of this thread</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-10-00" src="../img/trace-theme-10-00.png"></td>
-<td><img alt="trace tools resart all threads icon" src="../img/trace-tools-resart-all-threads-icon.png"></td>
+<td><img alt="" src="../img/trace-tools-resart-all-threads-icon.png"></td>
 <td>Restart all</td>
 <td> </td>
 <td> </td>
-<td>Continue execution of all threads</td>
+<td colspan="2">Continue execution of all threads</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-03-00" src="../img/trace-theme-03-00.png"></td>
-<td><img alt="trace tools edit icon" src="../img/trace-tools-edit-icon.png"></td>
+<td><img alt="" src="../img/trace-tools-edit-icon.png"></td>
 <td>Edit</td>
 <td>ED</td>
 <td>Shift+Enter</td>
-<td>Edit name</td>
+<td colspan="2">Edit name</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-02-00" src="../img/trace-theme-02-00.png"></td>
-<td><img alt="trace tools exit icon" src="../img/trace-tools-exit-icon.png"></td>
+<td><img alt="" src="../img/trace-tools-exit-icon.png"></td>
 <td>Exit</td>
 <td>EP</td>
 <td>Esc</td>
-<td>Quit this function</td>
+<td colspan="2">Quit this function</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-08-00" src="../img/trace-theme-08-00.png"></td>
-<td><img alt="trace tools intr icon" src="../img/trace-tools-intr-icon.png"></td>
+<td><img alt="" src="../img/trace-tools-intr-icon.png"></td>
 <td>Intr</td>
 <td> </td>
 <td>Ctrl+Pause</td>
-<td>Interrupt</td>
+<td colspan="2">Interrupt</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-09-00" src="../img/trace-theme-09-00.png"></td>
-<td><img alt="trace tools reset icon" src="../img/trace-tools-reset-icon.png"></td>
+<td><img alt="" src="../img/trace-tools-reset-icon.png"></td>
 <td>Reset</td>
 <td>CB</td>
 <td> </td>
-<td>Clear trace/stop/monitor for this object</td>
+<td colspan="2">Clear trace/stop/monitor for this object</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-14-00" src="../img/trace-theme-14-00.png"></td>
-<td><img alt="editor line numbers icon" src="../img/editor-line-numbers-icon.png"></td>
+<td><img alt="" src="../img/editor-line-numbers-icon.png"></td>
 <td> </td>
 <td>LN</td>
 <td> </td>
-<td>Toggle line numbers</td>
+<td colspan="2">Toggle line numbers</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-16-00" src="../img/trace-theme-16-00.png"></td>
-<td><img alt="editor next match icon" src="../img/editor-next-match-icon.png"></td>
+<td><img alt="" src="../img/editor-next-match-icon.png"></td>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>Search for next match</td>
+<td colspan="2">Search for next match</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-15-00" src="../img/trace-theme-15-00.png"></td>
-<td><img alt="editor previous match icon" src="../img/editor-previous-match-icon.png"></td>
+<td><img alt="" src="../img/editor-previous-match-icon.png"></td>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>Search for previous match</td>
+<td colspan="2">Search for previous match</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-17-00" src="../img/trace-theme-17-00.png"></td>
-<td><img alt="editor search hidden text icon" src="../img/editor-search-hidden-text-icon.png"></td>
+<td><img alt="" src="../img/editor-search-hidden-text-icon.png"></td>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>Search hidden text</td>
+<td colspan="2">Search hidden text</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-21-00" src="../img/trace-theme-21-00.png"></td>
-<td><img alt="editor match case icon" src="../img/editor-match-case-icon.png"></td>
+<td><img alt="" src="../img/editor-match-case-icon.png"></td>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>Match case</td>
+<td colspan="2">Match case</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-22-00" src="../img/trace-theme-22-00.png"></td>
-<td><img alt="editor match whole word icon" src="../img/editor-match-whole-word-icon.png"></td>
+<td><img alt="" src="../img/editor-match-whole-word-icon.png"></td>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>Match whole word</td>
+<td colspan="2">Match whole word</td>
 </tr>
 <tr>
-<td><img alt="trace_theme-23-00" src="../img/trace-theme-23-00.png"></td>
-<td><img alt="editor use regular expressions icon" src="../img/editor-use-regular-expressions-icon.png"></td>
+<td><img alt="" src="../img/editor-use-regular-expressions-icon.png"></td>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>Use Regular Expressions</td>
+<td colspan="2">Use Regular Expressions</td>
 </tr>
 </tbody>
 </table>
 <p>Using the Trace Tools, you can <strong>single-step</strong> through the function or operator by clicking the <em>Exec</em> and/or <em>Trace</em> buttons. If you click <em>Exec</em> the current line of the function or operator is executed and the system halts at the next line. If you click <em>Trace</em>, the current line is executed but any defined functions or operators referenced on that line are themselves traced. After execution of the line the system again halts at the next one. Using the keyboard, the same effect can be achieved by pressing Enter or Ctrl+Enter.</p>
 <p>The illustration below shows the state of execution having clicked <em>Exec</em> 16 times to reach <code>⎕SE.UCMD[17]</code>.</p>
-<p><figure id="_figure-2"><img alt="tracer 2" src="../img/tracer-2.png"><figcaption>Figure 2: tracer 2</figcaption></figure></p>
+<p><img alt="" src="../img/tracer-2.png"></p>
 <p>Execution Reached <code>⎕SE.UCMD[35]</code></p>
 <p>The next illustration shows the result of clicking <em>Trace</em> at this point. This caused the system to trace into <code>⎕SE.SaltUtils.Spice</code>, the function called from <code>⎕SE.UCMD[35]</code>.</p>
 <p>Notice how each function call on the stack is represented by an item in the <em>SIstack</em> window.</p>
-<p><figure id="_figure-3"><img alt="tracer 3" src="../img/tracer-3.png"><figcaption>Figure 3: tracer 3</figcaption></figure></p>
+<p><img alt="" src="../img/tracer-3.png"></p>
 <p>Execution Reached <code>⎕SE.SALTUtils.Spice[1]</code></p>
 <p>The illustration below shows the state of execution having traced deeper into the system.</p>
-<p><figure id="_figure-4"><img alt="tracer 4" src="../img/tracer-4.png"><figcaption>Figure 4: tracer 4</figcaption></figure></p>
+<p><img alt="" src="../img/tracer-4.png"></p>
 <p>Execution reached four levels deep</p>
 <p>At this stage, the state indicator is as follows:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SI</span>
@@ -71737,11 +71719,11 @@
 <p>It is possible to skip from the Tracer to the Session and then re-invoke the Tracer on a different expression.</p>
 <h2 id="setting-break-points">Setting Break-Points</h2>
 <p>Break-points are defined by <code>⎕STOP</code> and may be toggled on and off in an Edit or Trace window by clicking in the appropriate column. The example below illustrates a function with a <code>⎕STOP</code> break-point set on line <code>[5]</code>.</p>
-<p><figure id="_figure-5"><img alt="tracer 5" src="../img/tracer-5.png"><figcaption>Figure 5: tracer 5</figcaption></figure></p>
+<p><img alt="" src="../img/tracer-5.png"></p>
 <p><code>⎕STOP</code> break-points set or cleared in an Edit window are not established until the function is fixed. <code>⎕STOP</code> break-points set or cleared in a Trace window are established immediately.</p>
 <h2 id="clearing-all-break-points">Clearing All Break-Points</h2>
-<p><img alt="trace_theme-09-00" src="../img/trace-theme-09-00.png">
-<figure id="_figure-6"><img alt="trace tools reset icon" src="../img/trace-tools-reset-icon.png"><figcaption>Figure 6: trace tools reset icon</figcaption></figure></p>
+<p><img alt="" src="../img/trace-theme-09-00.png">
+<img alt="" src="../img/trace-tools-reset-icon.png"></p>
 <p>You can clear all break-points by pressing the above button in the Trace Tools window. This in fact resets <code>⎕STOP</code> for all functions in the workspace.</p>
 <h2 id="the-classic-mode-tracer">The Classic mode Tracer</h2>
 <p>If you select <em>Classic Dyalog mode</em> from the <em>Trace/Edit</em> tab in the <em>Configuration</em> dialog box, the Tracer behaves in the same way as in Dyalog version 8.2. However, the Tracer is not dockable in the Session.</p>
