@@ -34979,8 +34979,6 @@
         
       
         
-          
-        
       
         
       
@@ -35364,24 +35362,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38666,6 +38656,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49094,8 +49103,6 @@
         
       
         
-          
-        
       
         
       
@@ -49803,24 +49810,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56575,6 +56574,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71357,19 +71375,19 @@
 
 <h1 class="heading"><span class="name">Configure</span> <span class="command">Event 31</span></h1>
 
-<p><strong>Applies To</strong></p>
+<p><a href="../../methodoreventapplies/configure/"><strong>Applies To</strong></a></p>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is generated when the configuration of an object
 (position and/or size) is about to change.</p>
-<p>For a <a href="../../objects/form/">Form</a>, the event is generated when the <a href="../../objects/form/">Form</a> is resized or moved by the user.</p>
+<p>For a <a href="../../objects/form/">Form</a>, the event is generated when the <a href="../../objects/form/">Form</a> is resized or moved by the user.</p>
 <p>For any object other than a <a href="../../objects/form/">Form</a>, it can
-occur in one of two ways. Firstly, whenever a <a href="../../objects/form/">Form</a> is resized, the system (by default) re-arranges its children so as to maintain
+occur in one of two ways. Firstly, whenever a <a href="../../objects/form/">Form</a> is resized, the system (by default) re-arranges its children so as to maintain
 their relative position and size. This generates a Configure event (if enabled)
 for each one of them.</p>
 <p>Secondly, it can occur as a result of the user resizing the object directly.
-This facility is enabled by setting the object's <a href="../../properties/sizeable/">Sizeable</a> property to 1.</p>
+This facility is enabled by setting the object's <a href="../../properties/sizeable/">Sizeable</a> property to 1.</p>
 <p>Note that a Configure event is <strong>not</strong> reported when an object is moved
-using "drag &amp; drop". See <a href="../../properties/dragable/">Dragable</a> (property) and <a href="../dragdrop/">DragDrop</a> (event) for details
+using "drag &amp; drop". See <a href="../../properties/dragable/">Dragable</a> (property) and <a href="../dragdrop/">DragDrop</a> (event) for details
 of this operation.</p>
 <p>The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>,
 or supplied as the right argument to your callback function, is a 6-element

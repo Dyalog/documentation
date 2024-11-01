@@ -34980,8 +34980,6 @@
         
       
         
-          
-        
       
         
       
@@ -35365,24 +35363,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56484,6 +56483,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,25 +71275,8 @@
 
 <h1 class="heading"><span class="name">Spinner</span> <span class="command">Object</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td><a href="../../parentlists/spinner/">Parents</a></td>
-<td><a href="../../childlists/spinner/">Children</a></td>
-<td><a href="../../proplists/spinner/">Properties</a></td>
-<td><a href="../../methodlists/spinner/">Methods</a></td>
-<td><a href="../../eventlists/spinner/">Events</a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr>
-<td>Purpose:</td>
-<td>The Spinner object allows the user to enter a value, using an <a href="../updown/">UpDown</a> object to adjust it as required.</td>
-</tr>
-</tbody>
-</table>
+<p><a href="../../parentlists/spinner/">Parents</a>, <a href="../../childlists/spinner/">Children</a>, <a href="../../proplists/spinner/">Properties</a>, <a href="../../methodlists/spinner/">Methods</a>, <a href="../../eventlists/spinner/">Events</a></p>
+<p><strong>Purpose:</strong> The Spinner object allows the user to enter a value, using an <a href="../updown/">UpDown</a> object to adjust it as required.</p>
 <p><strong>Description</strong></p>
 <p>The Spinner object is a special Dyalog APL composite object that consists of an edit field and a pair of spin buttons. The user may enter a value by typing in the edit field and may adjust the value with the spin buttons. The Spinner may cycle through a pre-defined set of values specified by the <a href="../../properties/items/">Items</a> property or through a range of values specified by the <a href="../../properties/limits/">Limits</a> property. The <a href="../../properties/fieldtype/">FieldType</a> property supports all of the standard data types, that is, Char, Numeric, LongNumeric, Currency, Date, LongDate, and Time.</p>
 <p>The <a href="../../properties/limits/">Limits</a> property is a 2-element numeric vector that specifies the minimum and maximum value of the object. The <a href="../../properties/step/">Step</a> property specifies the amount by which the value is incremented or decremented by the spin buttons. The current value in the object is defined by the <a href="../../properties/thumb/">Thumb</a> and <a href="../../properties/value/">Value</a> properties, which are usually identical. If <a href="../../properties/readonly/">ReadOnly</a> is 0, the user may type a value into the edit field which will be validated and converted according to the <a href="../../properties/fieldtype/">FieldType</a>. In this case, the <a href="../../properties/value/">Value</a> and the <a href="../../properties/thumb/">Thumb</a> properties may be different.</p>

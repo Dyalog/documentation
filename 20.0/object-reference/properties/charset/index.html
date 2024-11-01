@@ -34974,8 +34974,6 @@
         
       
         
-          
-        
       
         
       
@@ -35359,24 +35357,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56492,6 +56491,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,16 +71275,9 @@
 
 <h1 class="heading"><span class="name">CharSet</span> <span class="command">Property</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td>Applies To:</td>
-<td><a href="../../objects/font/">Font</a></td>
-</tr>
-</tbody>
-</table>
+<p><strong>Applies To:</strong> <a href="../../objects/font/">Font</a></p>
 <p><strong>Description</strong></p>
-<p>CharSet is an integer that specifies the character encoding of the <a href="../../objects/font/">Font</a> object.</p>
+<p>CharSet is an integer that specifies the character encoding of the <a href="../../objects/font/">Font</a> object.</p>
 <p><strong>This property applies to the Classic Edition only. In the Unicode Edition,
 its value typically has no effect.</strong></p>
 <p>The following table illustrates some of the character set encodings supported
@@ -71330,7 +71341,7 @@ same character code is displayed as the Greek µ.</p>
 <p>The following example illustrates how the character string <code>'ôï
 üíïìá ìïõ Ýéíáé Ðåôå'</code> appears differently
 according to the value of CharSet.</p>
-<p><img alt="charset" src="../../img/charset.gif">
+<p><img alt="" src="../../img/charset.gif">
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'FORM'</span><span class="w"> </span><span class="s1">'CharSet Property'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">300</span><span class="w"> </span><span class="m">400</span><span class="p">)(</span><span class="s1">'Coord'</span><span class="w"> </span><span class="s1">'Pixel'</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">Coord</span><span class="kd">←</span><span class="s1">'Prop'</span>
 
@@ -71344,9 +71355,10 @@ according to the value of CharSet.</p>
 <span class="w">      </span><span class="s1">'F.E2'</span><span class="nf">⎕WC</span><span class="s1">'Edit'</span><span class="nv">STRING</span><span class="p">(</span><span class="m">40</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="no">⍬</span><span class="w"> </span><span class="m">80</span><span class="p">)(</span><span class="s1">'Font'</span><span class="w"> </span><span class="s1">'F.F2'</span><span class="p">)(</span><span class="s1">'Translate'</span><span class="w"> </span><span class="s1">'ANSI'</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">'F.E3'</span><span class="nf">⎕WC</span><span class="s1">'Edit'</span><span class="nv">STRING</span><span class="p">(</span><span class="m">70</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="no">⍬</span><span class="w"> </span><span class="m">80</span><span class="p">)(</span><span class="s1">'Font'</span><span class="w"> </span><span class="s1">'F.F3'</span><span class="p">)(</span><span class="s1">'Translate'</span><span class="w"> </span><span class="s1">'ANSI'</span><span class="p">)</span>
 </code></pre></div>
-<p>Note that setting Translate to 'ANSI' means that characters entered into the
-Edit fields using a corresponding  National Language keyboard (Greek and
-Arabic) will appear in that language as intended</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Setting Translate to 'ANSI' means that characters entered into the Edit fields using a corresponding  National Language keyboard (Greek and Arabic) will appear in that language as intended.</p>
+</div>
 
 
 

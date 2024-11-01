@@ -34980,8 +34980,6 @@
         
       
         
-          
-        
       
         
       
@@ -35365,24 +35363,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56492,6 +56491,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,33 +71275,16 @@
 
 <h1 class="heading"><span class="name">Calendar</span> <span class="command">Object</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td><a href="../../parentlists/calendar/">Parents</a></td>
-<td><a href="../../childlists/calendar/">Children</a></td>
-<td><a href="../../proplists/calendar/">Properties</a></td>
-<td><a href="../../methodlists/calendar/">Methods</a></td>
-<td><a href="../../eventlists/calendar/">Events</a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr>
-<td>Purpose:</td>
-<td>The Calendar object provides an interface to the Month Calendar Control</td>
-</tr>
-</tbody>
-</table>
+<p><a href="../../parentlists/calendar/">Parents</a>, <a href="../../childlists/calendar/">Children</a>, <a href="../../proplists/calendar/">Properties</a>, <a href="../../methodlists/calendar/">Methods</a>, <a href="../../eventlists/calendar/">Events</a></p>
+<p><strong>Purpose:</strong> The Calendar object provides an interface to the Month Calendar Control</p>
 <p><strong>Description</strong></p>
 <p>The Calendar object displays a calendar and allows the user to select a date or range of dates. The following illustration shows a default Calendar object.</p>
-<p><figure id="_figure-1"><img alt="cal1" src="../../img/cal1.gif"><figcaption>Figure 1: cal1</figcaption></figure></p>
+<p><img alt="" src="../../img/cal1.gif"></p>
 <p>The Calendar object will display as many full months as it can fit into the area specified by its Size property as shown below. The minimum size required to encompass a single month may be obtained using the <a href="../../methodorevents/getminsize/">GetMinSize</a> method.
 </p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Example 2'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">50</span><span class="p">)</span>
 <span class="s1">'F.C'</span><span class="nf">⎕WC</span><span class="s1">'Calendar'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="m">100</span><span class="p">)</span>
 </code></pre></div>
-<p><figure id="_figure-2"><img alt="cal2" src="../../img/cal2.gif"><figcaption>Figure 2: cal2</figcaption></figure></p>
+<p><img alt="" src="../../img/cal2.gif"></p>
 <p>The <a href="../../properties/today/">Today</a> property is an <a href="../../miscellaneous/international-day-number/">IDN</a> that specifies the current day. Its default value is today's date, that is, the local date set on your computer.</p>
 <p>The <a href="../../properties/circletoday/">CircleToday</a> property is either 0 or 1 (the default) and specifies whether or not the Today date is circled when the Calendar object is showing the corresponding month.</p>
 <p>The <a href="../../properties/hastoday/">HasToday</a> property is either 0 or 1 (the default) and specifies whether or not the Today date is displayed (using the Windows short date format) in the bottom left of the Calendar object.</p>
@@ -71292,7 +71293,7 @@
 </p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Example 3'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
 <span class="s1">'F.C'</span><span class="nf">⎕WC</span><span class="s1">'Calendar'</span><span class="p">(</span><span class="s1">'CircleToday'</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="s1">'HasToday'</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="s1">'WeekNumbers'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 </code></pre></div>
-<p><figure id="_figure-3"><img alt="cal3" src="../../img/cal3.gif"><figcaption>Figure 3: cal3</figcaption></figure></p>
+<p><img alt="" src="../../img/cal3.gif"></p>
 <p>The <a href="../../properties/firstday/">FirstDay</a> property is an integer whose value is in the range 0-6. <a href="../../properties/firstday/">FirstDay</a> specifies the day that is considered to be the first day of the week and which appears first in the Calendar. The default value for <a href="../../properties/firstday/">FirstDay</a> depends upon your International Settings.</p>
 <p>The <a href="../../properties/mindate/">MinDate</a> and <a href="../../properties/maxdate/">MaxDate</a> properties are integers that specify the minimum and maximum <a href="../../miscellaneous/international-day-number/">IDN</a> values that the user may display and select in the Calendar object. By default these properties specify the entire range of dates that the Windows Month Calendar control can provide.</p>
 <p>The <a href="../../properties/monthdelta/">MonthDelta</a> property specifies the number of months by which the Calendar object scrolls when the user clicks its scroll buttons. The default is empty (zilde) which implies the number of months currently shown.</p>

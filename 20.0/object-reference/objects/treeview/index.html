@@ -34980,8 +34980,6 @@
         
       
         
-          
-        
       
         
       
@@ -35365,24 +35363,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56484,6 +56483,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,30 +71275,13 @@
 
 <h1 class="heading"><span class="name">TreeView</span> <span class="command">Object</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td><a href="../../parentlists/treeview/">Parents</a></td>
-<td><a href="../../childlists/treeview/">Children</a></td>
-<td><a href="../../proplists/treeview/">Properties</a></td>
-<td><a href="../../methodlists/treeview/">Methods</a></td>
-<td><a href="../../eventlists/treeview/">Events</a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr>
-<td>Purpose:</td>
-<td>The TreeView object displays a hierarchical list of items.</td>
-</tr>
-</tbody>
-</table>
+<p><a href="../../parentlists/treeview/">Parents</a>, <a href="../../childlists/treeview/">Children</a>, <a href="../../proplists/treeview/">Properties</a>, <a href="../../methodlists/treeview/">Methods</a>, <a href="../../eventlists/treeview/">Events</a></p>
+<p><strong>Purpose:</strong> The TreeView object displays a hierarchical list of items.</p>
 <p><strong>Description</strong></p>
 <p>A TreeView object displays a hierarchical list of items, such as the headings in a document, the entries in an index, or the files and directories on a disk. Each item consists of a label and an optional bitmapped image, and each item can have a list of sub-items associated with it. By clicking an item, the user can expand and collapse the associated list of sub-items.</p>
 <p>The contents of a TreeView object are defined by the <a href="../../properties/items/">Items</a> property; a vector of character vectors that specifies the item labels.</p>
 <p>The <a href="../../properties/imagelistobj/">ImageListObj</a>, <a href="../../properties/imageindex/">ImageIndex</a> and <a href="../../properties/selimageindex/">SelImageIndex</a> properties define bitmapped images corresponding to each item. The bitmapped images are drawn to the left of the item labels.</p>
-<p><a href="../../properties/imagelistobj/">ImageListObj</a> specifies the name of a single <a href="../imagelist/">ImageList</a> object that contains one or more bitmaps</p>
+<p><a href="../../properties/imagelistobj/">ImageListObj</a> specifies the name of a single <a href="../imagelist/">ImageList</a> object that contains one or more bitmaps.</p>
 <p><a href="../../properties/imageindex/">ImageIndex</a> and <a href="../../properties/selimageindex/">SelImageIndex</a> are <code>⎕IO</code> sensitive scalars, or vectors with the same length as the number of items in the object. The value in the ith element specifies the image for the ith item and is an index into the corresponding <a href="../imagelist/">ImageList</a> object. <a href="../../properties/imageindex/">ImageIndex</a> specifies the image displayed when an item is <em>not selected</em>, <a href="../../properties/selimageindex/">SelImageIndex</a> specifies the image displayed when an item is <em>selected</em>.</p>
 <p>If <a href="../../properties/imagelistobj/">ImageListObj</a> is specified, but ImageIndex is empty or not specified, the first bitmap in the <a href="../imagelist/">ImageList</a> is drawn alongside every item. If an element of <a href="../../properties/imageindex/">ImageIndex</a> or <a href="../../properties/selimageindex/">SelImageIndex</a> specifies a value that does not correspond to a bitmap in the <a href="../imagelist/">ImageList</a>, no picture is drawn.</p>
 <p>The structure of the items (that is, the parent/child relationships of the items) is defined by the <a href="../../properties/depth/">Depth</a> property. This is either a scalar 0 (the default) which means that all items are <em>root</em> items, or it is a numeric vector of the same length as Items. Non-zero values in <a href="../../properties/depth/">Depth</a> indicate child items.</p>
@@ -71291,8 +71292,11 @@
 <p>When the user presses the left mouse button over an item, the object generates an <a href="../../methodorevents/itemdown/">ItemDown</a> event. This is followed by an <a href="../../methodorevents/itemup/">ItemUp</a> event when the mouse button is released. The object also generates an <a href="../../methodorevents/itemdblclick/">ItemDblClick</a> event when the left mouse is double-clicked over an item. If all three events are enabled, they are reported in the order <a href="../../methodorevents/itemdown/">ItemDown</a>, <a href="../../methodorevents/itemdblclick/">ItemDblClick</a>, <a href="../../methodorevents/itemup/">ItemUp</a>.</p>
 <p>When a parent item is in its retracted state (its children are not visible) it can be expanded to show its children by the user double-clicking its label or by clicking over its button or tree lines. An <a href="../../methodorevents/expanding/">Expanding</a> event is reported immediately before the children are shown. Similarly, when a parent item is in its expanded state, it can be retracted to hide its children when a <a href="../../methodorevents/retracting/">Retracting</a> event is reported. You can use the <a href="../../methodorevents/expanding/">Expanding</a> event to define new children for the object just before they are shown. You can also control the actions of these events using callback functions.</p>
 <p>The <a href="../../properties/editlabels/">EditLabels</a> is a Boolean property (default 0) that determines whether or not the user may edit the labels which are specified by the Items property.</p>
-<p>The <a href="../../properties/selitems/">SelItems</a> property is a Boolean vector that indicates which of the items is currently selected and has the focus. If more items are visible than can fit within the object, a scrollbar is automatically provided. The <a href="../../properties/">Index</a> property is a <code>⎕IO</code> sensitive integer that reports the index number of the first item displayed in the object and changes as the items are scrolled.</p>
-<p><strong>Warning:</strong> Due to the limitations of the Win32 TreeView object, it is necessary to query the state of each item in a TreeView in order to obtain the value of the <a href="../../properties/selitems/">SelItems</a> property, making it a comparatively slow operation if there are a lot of <a href="../../properties/items/">Items</a>.</p>
+<p>The <a href="../../properties/selitems/">SelItems</a> property is a Boolean vector that indicates which of the items is currently selected and has the focus. If more items are visible than can fit within the object, a scrollbar is automatically provided. The <a href="../../properties/index-property/">Index</a> property is a <code>⎕IO</code> sensitive integer that reports the index number of the first item displayed in the object and changes as the items are scrolled.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Due to the limitations of the Win32 TreeView object, it is necessary to query the state of each item in a TreeView in order to obtain the value of the <a href="../../properties/selitems/">SelItems</a> property, making it a comparatively slow operation if there are a lot of <a href="../../properties/items/">Items</a>.</p>
+</div>
 
 
 

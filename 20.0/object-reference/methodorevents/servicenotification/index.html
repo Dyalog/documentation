@@ -34974,8 +34974,6 @@
         
       
         
-          
-        
       
         
       
@@ -35359,24 +35357,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38661,6 +38651,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56484,6 +56483,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,14 +71275,7 @@
 
 <h1 class="heading"><span class="name">ServiceNotification</span> <span class="command">Event 94</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td>Applies To:</td>
-<td><a href="../../objects/root/">Root</a></td>
-</tr>
-</tbody>
-</table>
+<p><strong>Applies To:</strong> <a href="../../objects/root/">Root</a></p>
 <p><strong>Description</strong></p>
 <p>This event is generated in an APL service whenever the Windows Service Control Manager (SCM) requests a change of state. See <a href="../../../windows-installation-and-configuration-guide/apl-application-as-a-service">APL Application as a Service</a>.</p>
 <p>The event message reported as the result of <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>, or supplied as the right argument to your callback function, is a 4-element vector as follows :</p>
@@ -71294,8 +71305,8 @@
 </table>
 <p>For further details, see the on-line documentation for <code>SERVICE_STATE</code> and the function <code>HashDefine</code> in the sample workspace <code>aplservice</code>.</p>
 <p>The state of a Windows service is determined by the user and the Windows Service Control Manager (SCM).</p>
-<p>When the SCM requests a change of state, the APL interpreter responds by setting its state to the corresponding <em>pending</em> level (SERVICE_STOPPED_PENDING, SERVICE_RUNNING_PENDING or SERVICE_PAUSED_PENDING) and then generates a <a href="./">ServiceNotification</a> event.</p>
-<p>It is the responsibility of the APL service to process this event, perform the appropriate application tasks, and then respond (to the SCM) by calling the <a href="../setservicestate/">SetServiceState</a> method to confirm that the service has reached the desired state.</p>
+<p>When the SCM requests a change of state, the APL interpreter responds by setting its state to the corresponding <em>pending</em> level (SERVICE_STOPPED_PENDING, SERVICE_RUNNING_PENDING or SERVICE_PAUSED_PENDING) and then generates a <a href="./">ServiceNotification</a> event.</p>
+<p>It is the responsibility of the APL service to process this event, perform the appropriate application tasks, and then respond (to the SCM) by calling the <a href="../setservicestate/">SetServiceState</a> method to confirm that the service has reached the desired state.</p>
 
 
 

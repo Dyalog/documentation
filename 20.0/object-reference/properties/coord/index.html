@@ -34974,8 +34974,6 @@
         
       
         
-          
-        
       
         
       
@@ -35359,24 +35357,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56492,6 +56491,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,7 +71275,7 @@
 
 <h1 class="heading"><span class="name">Coord</span> <span class="command">Property</span></h1>
 
-<p><strong>Applies To</strong></p>
+<p><a href="../../propertyapplies/coord/"><strong>Applies To</strong></a></p>
 <p><strong>Description</strong></p>
 <p>This property defines an object's co-ordinate system. It is a character
 string with one of the following values; <code>'Inherit'</code>,
@@ -71266,16 +71284,16 @@ string with one of the following values; <code>'Inherit'</code>,
 <p>If Coord is <code>'Inherit'</code>, the co-ordinate
 system for the object is <strong>inherited</strong> from its parent. Note that the default
 value of Coord for the system object <code>'.'</code> is <code>'Prop'</code>, so by default all objects
-created by <a href="../../../language-reference-guide/system-functions/wc"><code>⎕WC</code></a> inherit <code>'Prop'</code>.</p>
+created by <a href="../../../language-reference-guide/system-functions/wc"><code>⎕WC</code></a> inherit <code>'Prop'</code>.</p>
 <p>If Coord is <code>'Prop'</code>, the origin of the
 object's parent is deemed to be at its top left interior corner, and the scale
-along its x- and y-axes is 100. The object's position and size (<a href="../posn/">Posn</a> and <a href="../size/">Size</a> properties) are therefore specified
+along its x- and y-axes is 100. The object's position and size (<a href="../posn/">Posn</a> and <a href="../size/">Size</a> properties) are therefore specified
 and reported as a percentage of the dimensions of the parent object, or, for a <a href="../../objects/form/">Form</a>,
 of the screen.</p>
 <p>If Coord is <code>'RealPixel'</code>, the origin of the
 object's parent is deemed to be at its top left interior corner, and the scale
 along its x- and y-axes is measured in physical pixel units. The object's position
-and size (<a href="../posn/">Posn</a> and <a href="../size/">Size</a> properties) are therefore reported and set in physical pixel units. If you set
+and size (<a href="../posn/">Posn</a> and <a href="../size/">Size</a> properties) are therefore reported and set in physical pixel units. If you set
 Coord on the system object to <code>'Pixel'</code>, the
 value of its <a href="../size/">Size</a> property gives you the
 resolution of your screen. Note that pixels are numbered from 0
@@ -71284,15 +71302,15 @@ to (Size -1).</p>
 <p>If Coord is <code>'Pixel'</code>, it is interpreted as either <code>'RealPixel'</code> or <code>'ScaledPixel'</code> according to the value of the <strong>Dyalog_Pixel_Type</strong> parameter, which is either ScaledPixel or RealPixel. See <a href="../../../windows-installation-and-configuration-guide/configuration-parameters/dyalog-pixel-type">Dyalog_Pixel_Type</a>.</p>
 <p><strong>If this parameter is not specified, the default is RealPixel. So by default, when you set Coord to Pixel, it will be treated as RealPixel.</strong></p>
 <p>If Coord is <code>'User'</code>, the origin and
-scale of the co-ordinate system are defined by the values of the <a href="../yrange/">YRange</a> and <a href="../xrange/">XRange</a> properties <strong>of the parent
+scale of the co-ordinate system are defined by the values of the <a href="../yrange/">YRange</a> and <a href="../xrange/">XRange</a> properties <strong>of the parent
 object</strong>. Each of these is a 2-element numeric vector whose elements define
 the co-ordinates of top left and bottom right interior corners of the (parent)
 object respectively.</p>
 <p>Note that if Coord is <code>'User'</code> and you
-change the values of <a href="../yrange/">YRange</a> and/or <a href="../xrange/">XRange</a> of the parent, the object (and all its siblings with Coord <code>'User'</code>)
+change the values of <a href="../yrange/">YRange</a> and/or <a href="../xrange/">XRange</a> of the parent, the object (and all its siblings with Coord <code>'User'</code>)
 are redrawn (and clipped) according to the new origin and scale defined for the
-parent. The values of their <a href="../posn/">Posn</a>, <a href="../size/">Size</a> and <a href="../points/">Points</a> properties are unaffected.
-Changing <a href="../range/">YRange</a> and/or <a href="../range/">XRange</a> therefore provides a convenient and efficient means to "<strong>pan and zoom</strong>".</p>
+parent. The values of their <a href="../posn/">Posn</a>, <a href="../size/">Size</a> and <a href="../points/">Points</a> properties are unaffected.
+Changing <a href="../range/">YRange</a> and/or <a href="../range/">XRange</a> therefore provides a convenient and efficient means to "<strong>pan and zoom</strong>".</p>
 <p>The Coord property for graphic objects created as  children of a Grid may
 also be set to Cell. Apart from being easier to compute, a graphic drawn using
 cell coordinates will expand and contract when the grid rows and columns are
@@ -71303,13 +71321,13 @@ resized.</p>
 down and along from the top-left corner of the parent <a href="../../objects/form/">Form</a> T.
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'T.B1'</span><span class="nf">⎕WC</span><span class="s1">'Button'</span><span class="w"> </span><span class="s1">'OK'</span><span class="p">(</span><span class="m">5</span><span class="w"> </span><span class="m">5</span><span class="p">)(</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="p">)(</span><span class="s1">'Coord'</span><span class="w"> </span><span class="s1">'Pixel'</span><span class="p">)</span>
 </code></pre></div>
-<p>If you set Coord to <code>'RealPixel'</code> in the <a href="../../objects/root/">Root</a> object <code>'.'</code>, then query its <a href="../size/">Size</a>,
+<p>If you set Coord to <code>'RealPixel'</code> in the <a href="../../objects/root/">Root</a> object <code>'.'</code>, then query its <a href="../size/">Size</a>,
 you get the dimensions of the screen in pixels, that is:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'.'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Coord'</span><span class="w"> </span><span class="s1">'RealPixel'</span>
 <span class="w">      </span><span class="s1">'.'</span><span class="w"> </span><span class="nf">⎕WG</span><span class="w"> </span><span class="s1">'Size'</span>
 <span class="m">480</span><span class="w"> </span><span class="m">640</span>
 </code></pre></div>
-<p>If you set Coord to <code>'ScaledPixel'</code> in the <a href="../../objects/root/">Root</a> object <code>'.'</code>, then query its <a href="../size/">Size</a>,
+<p>If you set Coord to <code>'ScaledPixel'</code> in the <a href="../../objects/root/">Root</a> object <code>'.'</code>, then query its <a href="../size/">Size</a>,
 you get the virtual resolution of the screen, that is:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'.'</span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Coord'</span><span class="w"> </span><span class="s1">'ScaledPixel'</span>
 <span class="w">      </span><span class="s1">'.'</span><span class="nf">⎕WG</span><span class="s1">'Size'</span>

@@ -34974,8 +34974,6 @@
         
       
         
-          
-        
       
         
       
@@ -35359,24 +35357,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38661,6 +38651,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56484,6 +56483,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,12 +71275,15 @@
 
 <h1 class="heading"><span class="name">KeepOnClose</span> <span class="command">Property</span></h1>
 
-<p><strong>Applies To</strong></p>
+<p><a href="../../propertyapplies/keeponclose/"><strong>Applies To</strong></a></p>
 <p><strong>Description</strong></p>
 <p>This property is either 0 or 1 and determines how the object is treated when its parent Form (or, in the case of a Form, the Form itself) is closed by the user, receives a Close event from <code>⎕NQ</code>, or when Close is called as a method.</p>
-<p>If <code>KeepOnClose</code> is 1 (for the object itself <strong>and</strong> for all its parents) when its parent Form is closed, the object changes from being a GUI object to a pure namespace. For example, the Type of a Button will change from <code>'Button'</code> to <code>'Namespace'</code>. Effectively, the GUI component of the object is discarded but its Namespace component (and any variables, functions, operators and other namespaces that it contains) remains intact. Monadic <code>⎕WC</code> may subsequently be used to re-attach the GUI component to the object. All child GUI objects are treated in the same way.</p>
+<p>If <code>KeepOnClose</code> is 1 (for the object itself <strong>and</strong> for all its parents) when its parent Form is closed, the object changes from being a GUI object to a pure namespace. For example, the Type of a Button will change from <code>'Button'</code> to <code>'Namespace'</code>. Effectively, the GUI component of the object is discarded but its Namespace component (and any variables, functions, operators and other namespaces that it contains) remains intact. Monadic <code>⎕WC</code> may subsequently be used to re-attach the GUI component to the object. All child GUI objects are treated in the same way.</p>
 <p>Note that the default value of <code>KeepOnClose</code> depends upon the way in which a GUI object was created with <code>⎕WC</code>. If a GUI object is created by dyadic <code>⎕WC</code>, KeepOnClose defaults to 0. If a GUI object is attached by monadic <code>⎕WC</code>, its KeepOnClose property defaults to 1.</p>
-<p><strong>Note</strong>: the use of <code>KeepOnClose</code> is deprecated; Dyalog may at some point remove this Property or disable its functionality.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The use of <code>KeepOnClose</code> is deprecated; Dyalog may at some point remove this Property or disable its functionality.</p>
+</div>
 
 
 

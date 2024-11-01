@@ -34974,8 +34974,6 @@
         
       
         
-          
-        
       
         
       
@@ -35359,24 +35357,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38661,6 +38651,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56484,6 +56483,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,16 +71275,9 @@
 
 <h1 class="heading"><span class="name">TargetState</span> <span class="command">Property</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td>Applies To:</td>
-<td><a href="../../objects/tcpsocket/">TCPSocket</a></td>
-</tr>
-</tbody>
-</table>
+<p><strong>Applies To:</strong> <a href="../../objects/tcpsocket/">TCPSocket</a></p>
 <p><strong>Description</strong></p>
-<p>The TargetState property reflects the intended final state of a <a href="../../objects/tcpsocket/">TCPSocket</a> object. Its possible values are as follows:</p>
+<p>The TargetState property reflects the intended final state of a <a href="../../objects/tcpsocket/">TCPSocket</a> object. Its possible values are as follows:</p>
 <table>
 <tbody>
 <tr>
@@ -71287,22 +71298,17 @@
 </tr>
 </tbody>
 </table>
-<p>Setting TargetState to Closed is the recommended way to close a socket. It
-informs APL that you want the socket to be closed, but only when it is safe to
-do so. When all the data has been sent, the <a href="../../objects/tcpsocket/">TCPSocket</a> will generate a <a href="../../methodorevents/tcpclose/">TCPClose</a> event which, unless
-a callback function decides otherwise, will cause the <a href="../../objects/tcpsocket/">TCPSocket</a> object to disappear.</p>
+<p>Setting TargetState to Closed is the recommended way to close a socket. It informs APL that you want the socket to be closed, but only when it is safe to
+do so. When all the data has been sent, the <a href="../../objects/tcpsocket/">TCPSocket</a> will generate a <a href="../../methodorevents/tcpclose/">TCPClose</a> event which, unless a callback function decides otherwise, will cause the <a href="../../objects/tcpsocket/">TCPSocket</a> object to disappear.</p>
 <p>To control socket closure, you may execute the following steps:</p>
 <ol>
 <li>Set TargetState to Closed</li>
-<li><strong>Either:</strong></li>
-</ol>
-<p>continue processing <strong>or</strong>
-wait (using <code>⎕DQ</code>) for the <a href="../../objects/tcpsocket/">TCPSocket</a>   to disappear <strong>or</strong>
-wait (using <code>⎕DQ</code>) for the <a href="../../methodorevents/tcpclose/">TCPClose</a>   event</p>
-<ol>
+<li><strong>Either:</strong><ol>
 <li>continue processing <strong>or</strong></li>
-<li>wait (using <code>⎕DQ</code>) for the <a href="../../objects/tcpsocket/">TCPSocket</a>   to disappear <strong>or</strong></li>
-<li>wait (using <code>⎕DQ</code>) for the <a href="../../methodorevents/tcpclose/">TCPClose</a>   event</li>
+<li>wait (using <code>⎕DQ</code>) for the <a href="../../objects/tcpsocket/">TCPSocket</a> to disappear <strong>or</strong></li>
+<li>wait (using <code>⎕DQ</code>) for the <a href="../../methodorevents/tcpclose/">TCPClose</a> event</li>
+</ol>
+</li>
 </ol>
 
 

@@ -35033,8 +35033,6 @@
         
       
         
-          
-        
       
         
       
@@ -35418,24 +35416,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38720,6 +38710,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49103,8 +49112,6 @@
         
       
         
-          
-        
       
         
       
@@ -49812,24 +49819,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56537,6 +56536,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71384,24 +71402,8 @@
 
 <h1 class="heading"><span class="name">Root</span> <span class="command">Object</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td><a href="../../childlists/root/">Children</a></td>
-<td><a href="../../proplists/root/">Properties</a></td>
-<td><a href="../../methodlists/root/">Methods</a></td>
-<td><a href="../../eventlists/root/">Events</a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr>
-<td>Purpose:</td>
-<td>This is an invisible "system" object that acts as the parent of all other objects.</td>
-</tr>
-</tbody>
-</table>
+<p><a href="../../childlists/root/">Children</a>, <a href="../../proplists/root/">Properties</a>, <a href="../../methodlists/root/">Methods</a>, <a href="../../eventlists/root/">Events</a></p>
+<p><strong>Purpose:</strong> This is an invisible "system" object that acts as the parent of all other objects.</p>
 <p><strong>Description</strong></p>
 <p>There is a single Root object called <code>'.'</code> which is always present. It cannot be created using <a href="../../../language-reference-guide/system-functions/wc"><code>⎕WC</code></a> nor can it be destroyed.</p>
 <p>The <a href="../../properties/caption/">Caption</a> and <a href="../../properties/iconobj/">IconObj</a> properties of <code>'.'</code> are used to identify a Dyalog APL/W application as distinct from the APL Session. The <a href="../../properties/caption/">Caption</a> property specifies the application name that is displayed when you cycle through running applications using Alt+Tab and by the Windows Task List. The <a href="../../properties/iconobj/">IconObj</a> property specifies the name of an <a href="../icon/">Icon</a> object that is displayed alongside the application name in the box displayed by Alt+Tab. For these to take effect, your application must have at least one visible and active <a href="../form/">Form</a>.</p>
@@ -71429,11 +71431,11 @@
 <li>This flag may be changed dynamically using the <em>Options/Object Syntax/Expose Root Properties</em> menu item on the Session or using <code>2401⌶</code>.  If the workspace is subsequently saved, the current value of the flag is saved with it.</li>
 <li>The value of the flag in a <code>CLEAR WS</code> is determined by the <strong>PropertyExposeRoot</strong> parameter. Under Windows, this parameter is associated with the <em>Expose properties of Root</em> checkbox on the <em>Object Syntax</em> Tab of the <em>Configuration</em> dialog box. When you change the value of this checkbox and close the <em>Configuration</em> dialog by clicking <em>OK</em>, the value of the <strong>PropertyExposeRoot</strong> parameter is immediately updated in the user's section of the Registry. However, the value of the flag <em>in the current workspace</em> is not changed. The <strong>PropertyExposeRoot</strong> parameter only defines the value of the flag in a <code>CLEAR WS</code>, so if you subsequently type <code>)CLEAR</code>, the current value of the parameter in the Registry determines whether or not Root members are exposed and sets the flag in the workspace accordingly.</li>
 </ol>
-<p>For further information, see <a href="../../../windows-ui-guide/session-menubar">The Options Menu</a>, <a href="../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters"> PropertyExposeRoot</a>, and <a href="../../../language-reference-guide/the-i-beam-operator/expose-root-properties">Expose Root Properties</a>.</p>
+<p>For further information, see <a href="../../../windows-ui-guide/session-menubar">The Options Menu</a>, <a href="../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters"> PropertyExposeRoot</a>, and <a href="../../../language-reference-guide/the-i-beam-operator/expose-root-properties">Expose Root Properties</a>.</p>
 <h2 id="notes">Notes</h2>
 <ol>
 <li>When Root members are exposed, the first reference or assignment to a member, associates that name (with a nameclass of <code>¯2.6</code> or <code>¯3.6</code>) with that member. If, having referenced a member in this way, you subsequently hide Root members using <code>(2401⌶0)</code>, that name remains connected to that member and the member remains exposed. This association may however be removed by erasing the name.</li>
-<li>If Root members are not exposed, you are free to define an APL object with the same name as one of the members. If you subsequently expose Root members using <code>(2401⌶1)</code>, the name remains associated with the APL object and not with a member of Root. If you then erase the name and re-reference or re-assign it, the name will be associated with the corresponding member.</li>
+<li>If Root members are not exposed, you are free to define an APL object with the same name as one of the members. If you subsequently expose Root members using <code>(2401⌶1)</code>, the name remains associated with the APL object and not with a member of Root. If you then erase the name and re-reference or re-assign it, the name will be associated with the corresponding member.</li>
 </ol>
 
 

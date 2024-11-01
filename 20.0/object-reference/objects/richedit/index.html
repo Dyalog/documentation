@@ -34980,8 +34980,6 @@
         
       
         
-          
-        
       
         
       
@@ -35365,24 +35363,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56484,6 +56483,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,31 +71275,14 @@
 
 <h1 class="heading"><span class="name">RichEdit</span> <span class="command">Object</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td><a href="../../parentlists/richedit/">Parents</a></td>
-<td><a href="../../childlists/richedit/">Children</a></td>
-<td><a href="../../proplists/richedit/">Properties</a></td>
-<td><a href="../../methodlists/richedit/">Methods</a></td>
-<td><a href="../../eventlists/richedit/">Events</a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr>
-<td>Purpose:</td>
-<td>The RichEdit object is a multi-line text editor that provides a wide range of word-processing capabilities.</td>
-</tr>
-</tbody>
-</table>
+<p><a href="../../parentlists/richedit/">Parents</a>, <a href="../../childlists/richedit/">Children</a>, <a href="../../proplists/richedit/">Properties</a>, <a href="../../methodlists/richedit/">Methods</a>, <a href="../../eventlists/richedit/">Events</a></p>
+<p><strong>Purpose:</strong> The RichEdit object is a multi-line text editor that provides a wide range of word-processing capabilities.</p>
 <p><strong>Description</strong></p>
 <p>A RichEdit object is a window in which the user can enter and edit text. The text can be assigned character and paragraph formatting. It is implemented using the Microsoft Windows RichEdit Version 1.0 control, although  embedded OLE objects are not supported.</p>
 <p>The RichEdit object provides a programming interface for formatting text. However, your application must implement any user interface components necessary to make formatting operations available to the user. For example, your program can set the colour and font of a particular block of text, but the RichEdit itself provides no facilities for the user to do this directly. It is up to you to provide these.</p>
 <p>The <a href="../../properties/file/">File</a> property specifies the name of a file associated with the object. Data in the file is assumed to be in rich text format, and the default extension for the file is .RTF. You can read the file into the object by calling <a href="../../methodorevents/fileread/">FileRead</a> and you can write the contents to the file by calling <a href="../../methodorevents/filewrite/">FileWrite</a>. You can also print the contents of the object by calling <a href="../../methodorevents/rtfprint/">RTFPrint</a>.</p>
 <p>The <a href="../../properties/text/">Text</a> property may be used to set or retrieve the text of the RichEdit, but ignores formatting information. <a href="../../properties/text/">Text</a> may set using a simple character vector, a simple matrix, or a vector of vectors. If  <a href="../../properties/text/">Text</a> is specified by a matrix or by a vector of vectors, "new-line" characters are automatically added at the end of each line in the RichEdit control.</p>
-<p>The user may insert a "new-line" character in the text by pressing Ctrl-Enter. If <a href="../../properties/text/">Text</a> was set by a matrix, it is returned as a matrix. Otherwise it is returned as a vector of vectors. "New-line" characters are not returned. If <a href="../../properties/text/">Text</a> was not specified  by <a href="../../../language-reference-guide/system-functions/wc"><code>⎕WC</code></a> or  <a href="../../../language-reference-guide/system-functions/ws"><code>⎕WS</code> </a>it is returned  an empty matrix (<code>1 0⍴''</code>).</p>
+<p>The user may insert a "new-line" character in the text by pressing Ctrl-Enter. If <a href="../../properties/text/">Text</a> was set by a matrix, it is returned as a matrix. Otherwise it is returned as a vector of vectors. "New-line" characters are not returned. If <a href="../../properties/text/">Text</a> was not specified  by <a href="../../../language-reference-guide/system-functions/wc"><code>⎕WC</code></a> or  <a href="../../../language-reference-guide/system-functions/ws"><code>⎕WS</code> </a>it is returned  an empty matrix (<code>1 0⍴''</code>).</p>
 <p>The <a href="../../properties/rtftext/">RTFText</a> property  may be used to set or retrieve the contents of the RichEdit, including text and formatting.</p>
 <p>The <a href="../../properties/pagewidth/">PageWidth</a> property defines the width of the text within the object. Text entered into the object is automatically wrapped according to <a href="../../properties/pagewidth/">PageWidth</a>. This property also defines the width when the text is printed.</p>
 <p>You can set the default character format or the format of a particular block of text using the <a href="../../properties/charformat/">CharFormat</a> property. If there is no selection, setting <a href="../../properties/charformat/">CharFormat</a> defines the default character format that applies at the current insertion position and establishes the appearance of all of the text (font, colour, size etc.) that the user subsequently enters here. If there <em>is</em> a selection, setting <a href="../../properties/charformat/">CharFormat</a> sets the character format for the selected block of text.</p>

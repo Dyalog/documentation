@@ -34980,8 +34980,6 @@
         
       
         
-          
-        
       
         
       
@@ -35365,24 +35363,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56484,6 +56483,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,25 +71275,8 @@
 
 <h1 class="heading"><span class="name">SubForm</span> <span class="command">Object</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td><a href="../../parentlists/subform/">Parents</a></td>
-<td><a href="../../childlists/subform/">Children</a></td>
-<td><a href="../../proplists/subform/">Properties</a></td>
-<td><a href="../../methodlists/subform/">Methods</a></td>
-<td><a href="../../eventlists/subform/">Events</a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr>
-<td>Purpose:</td>
-<td>This object represents a window that is owned by and constrained         within another <a href="../form/">Form</a> or an <a href="../mdiclient/">MDIClient</a> .</td>
-</tr>
-</tbody>
-</table>
+<p><a href="../../parentlists/subform/">Parents</a>, <a href="../../childlists/subform/">Children</a>, <a href="../../proplists/subform/">Properties</a>, <a href="../../methodlists/subform/">Methods</a>, <a href="../../eventlists/subform/">Events</a></p>
+<p><strong>Purpose:</strong> This object represents a window that is owned by and constrained         within another <a href="../form/">Form</a> or an <a href="../mdiclient/">MDIClient</a> .</p>
 <p><strong>Description</strong></p>
 <p>If the SubForm is the child of a <a href="../form/">Form</a>, it is
 by default a simple featureless window that occupies the entire client area
@@ -71284,7 +71285,7 @@ and <a href="../tabbar/">TabBar</a>s) of its parent.</p>
 <p>The properties
 that control its appearance, including <a href="../../properties/sizeable/">Sizeable</a>,
 <a href="../../properties/moveable/">Moveable</a>, <a href="../../properties/sysmenu/">SysMenu</a>,
-<a href="../../properties/border/">Border</a>, <a href="../../properties/maxbutton/">MaxButton</a> and <a href="../../properties/minbutton/">MinButton</a>, all default to 0. The <a href="../../properties/edgestyle/">EdgeStyle</a> property also defaults to <code>'None'</code>, so the
+<a href="../../properties/border/">Border</a>, <a href="../../properties/maxbutton/">MaxButton</a> and <a href="../../properties/minbutton/">MinButton</a>, all default to 0. The <a href="../../properties/edgestyle/">EdgeStyle</a> property also defaults to <code>'None'</code>, so the
 background of the SubForm defaults to the Window Background colour.</p>
 <p>If the SubForm is the child of an <a href="../mdiclient/">MDIClient</a>,
 its default appearance is the same as for a top-level <a href="../form/">Form</a>.
@@ -71293,10 +71294,10 @@ centre of its parent object.</p>
 <p>The <a href="../../properties/posn/">Posn</a> property specifies the location of
 the <strong>internal</strong> top-left corner of the SubForm relative to its parent. If
 the SubForm has a title bar, border, or a 3-dimensional shadow, you must allow
-sufficient space for these components. Similarly, the <a href="../../properties/size/">Size</a> property specifies the internal size of the SubForm excluding the title bar and
+sufficient space for these components. Similarly, the <a href="../../properties/size/">Size</a> property specifies the internal size of the SubForm excluding the title bar and
 border.</p>
 <p>A SubForm is constrained so that it cannot be moved outside its parent. In
-all other respects it behaves in a similar manner to a <a href="../form/">Form</a> object. See <a href="../form/">Form</a> object and the descriptions of
+all other respects it behaves in a similar manner to a <a href="../form/">Form</a> object. See <a href="../form/">Form</a> object and the descriptions of
 its properties for further details.</p>
 
 

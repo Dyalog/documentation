@@ -34980,8 +34980,6 @@
         
       
         
-          
-        
       
         
       
@@ -35365,24 +35363,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56484,6 +56483,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,25 +71275,8 @@
 
 <h1 class="heading"><span class="name">TabControl</span> <span class="command">Object</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td><a href="../../parentlists/tabcontrol/">Parents</a></td>
-<td><a href="../../childlists/tabcontrol/">Children</a></td>
-<td><a href="../../proplists/tabcontrol/">Properties</a></td>
-<td><a href="../../methodlists/tabcontrol/">Methods</a></td>
-<td><a href="../../eventlists/tabcontrol/">Events</a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr>
-<td>Purpose:</td>
-<td>The TabControl object provides access to the native Windows tab         control.</td>
-</tr>
-</tbody>
-</table>
+<p><a href="../../parentlists/tabcontrol/">Parents</a>, <a href="../../childlists/tabcontrol/">Children</a>, <a href="../../proplists/tabcontrol/">Properties</a>, <a href="../../methodlists/tabcontrol/">Methods</a>, <a href="../../eventlists/tabcontrol/">Events</a></p>
+<p><strong>Purpose:</strong> The TabControl object provides access to the native Windows tab         control.</p>
 <p><strong>Description</strong></p>
 <p>The standard tab control is analogous to a set of dividers in a notebook and
 allows you to define a set of <em>pages</em> that occupy the same area of a window
@@ -71283,21 +71284,21 @@ or dialog box. Each page consists of a set of information or a group of controls
 that the application displays when the user selects the corresponding tab.</p>
 <p>A special type of tab control displays tabs that look like buttons. For
 example, the Windows taskbar is such a tab control.</p>
-<p>The overall appearance of the TabControl is determined by the <a href="../../properties/style/">Style</a> property which may be <code>'Tabs'</code> (the
+<p>The overall appearance of the TabControl is determined by the <a href="../../properties/style/">Style</a> property which may be <code>'Tabs'</code> (the
 default), <code>'Buttons'</code> or <code>'FlatButtons'</code>.</p>
-<p>Individual tabs or buttons are represented by <a href="../tabbutton/">TabButton</a> objects which should be created as children of the TabControl object. Optional
-captions and pictures are specified by the <a href="../../properties/caption/">Caption</a> and <a href="../../properties/imageindex/">ImageIndex</a> properties of the
+<p>Individual tabs or buttons are represented by <a href="../tabbutton/">TabButton</a> objects which should be created as children of the TabControl object. Optional
+captions and pictures are specified by the <a href="../../properties/caption/">Caption</a> and <a href="../../properties/imageindex/">ImageIndex</a> properties of the
 individual <a href="../tabbutton/">TabButton</a> objects themselves.
 Otherwise, the appearance of the tabs or buttons is determined by properties of
 the TabControl itself.</p>
 <p>To implement a multiple page tabbed dialog <a href="../../examples/tabcontrol-example-1/">(see Example 1)</a>, you should create a <a href="../form/">Form</a>, then a
 TabControl with Style <code>'Tabs'</code> as a child of
-the <a href="../form/">Form</a>. Next, create one or more pairs of <a href="../tabbutton/">TabButton</a> and <a href="../subform/">SubForm</a> objects as children of the
+the <a href="../form/">Form</a>. Next, create one or more pairs of <a href="../tabbutton/">TabButton</a> and <a href="../subform/">SubForm</a> objects as children of the
 TabControl. You associate each <a href="../subform/">SubForm</a> with a
-particular tab by setting its <a href="../../properties/tabobj/">TabObj</a> property to the name of, or ref to, the associated <a href="../tabbutton/">TabButton</a> object. Making the <a href="../subform/">SubForms</a> children of the
+particular tab by setting its <a href="../../properties/tabobj/">TabObj</a> property to the name of, or ref to, the associated <a href="../tabbutton/">TabButton</a> object. Making the <a href="../subform/">SubForms</a> children of the
 TabControl ensures that, by default, they will automatically be resized
-correctly. You may alternatively create your <a href="../subform/">SubForms</a> as children of the main <a href="../form/">Form</a> and establish
-appropriate resize behaviour using their <a href="../../properties/attach/">Attach</a> property.</p>
+correctly. You may alternatively create your <a href="../subform/">SubForms</a> as children of the main <a href="../form/">Form</a> and establish
+appropriate resize behaviour using their <a href="../../properties/attach/">Attach</a> property.</p>
 <p>A TabControl object with <a href="../../properties/style/">Style</a> <code>'Buttons'</code> <a href="../../examples/tabcontrol-example-2/">(Example 2)</a> or <code>'FlatButtons'</code><a href="../../examples/tabcontrol-example-3/"> (Example 3)</a> may be used in a similar
 way (that is, to display a set of alternative pages), although buttons in this type
 of TabControl are more normally used to execute commands. For this reason, these
@@ -71311,7 +71312,7 @@ separators).</p>
 effect of setting <a href="../../properties/flatseparators/">FlatSeparators</a> to
 1.</p>
 <p>The <a href="../../properties/align/">Align</a> property specifies along which
-of the 4 edges of the TabControl the tabs or buttons are arranged. <a href="../../properties/align/">Align</a> also controls the relative positioning of the picture and Caption within each
+of the 4 edges of the TabControl the tabs or buttons are arranged. <a href="../../properties/align/">Align</a> also controls the relative positioning of the picture and Caption within each
 TabButton. <a href="../../properties/align/">Align</a> may be Top (the default),
 Bottom, Left or Right.</p>
 <p>If <a href="../../properties/align/">Align</a> is <code>'Top'</code> or <code>'Bottom'</code><a href="../../examples/tabcontrol-example-4/"> (Example
@@ -71338,7 +71339,7 @@ displayed in multiple flights <a href="../../examples/tabcontrol-example-8/">(Ex
 9)</a>.</p>
 <p>The <a href="../../properties/scrollopposite/">ScrollOpposite</a> property
 specifies that unneeded tabs scroll to the opposite side of a TabControl, when a
-tab is selected. Setting <a href="../../properties/scrollopposite/">ScrollOpposite</a> to 1 forces <a href="../../properties/multiline/">MultiLine</a> to 1 also.</p>
+tab is selected. Setting <a href="../../properties/scrollopposite/">ScrollOpposite</a> to 1 forces <a href="../../properties/multiline/">MultiLine</a> to 1 also.</p>
 <p><a href="../../examples/tabcontrol-example-10/">Example 10</a> illustrates a
 TabControl with <a href="../../properties/scrollopposite/">ScrollOpposite</a> set
 to 1, after the user has clicked <em>Third Tab</em>. Notice that, in this example,
@@ -71351,11 +71352,11 @@ defined by the Justify property which may be <code>'Right'</code> (the default) 
 necessary, so that each row of tabs fills the entire width of the tab control.
 Otherwise, if <a href="../../properties/justify/">Justify</a> is empty or <code>'None'</code>,
 the rows are ragged.</p>
-<p>See <a href="../../examples/tabcontrol-example-11/">Example 11</a> (for tabs) and <a href="../../examples/tabcontrol-example-12/">Example 12</a> (for
+<p>See <a href="../../examples/tabcontrol-example-11/">Example 11</a> (for tabs) and <a href="../../examples/tabcontrol-example-12/">Example 12</a> (for
 buttons).</p>
 <p>By default, the size of the tabs may vary from one to another. Fixed size
-tabs may be obtained by setting the <a href="../../properties/tabsize/">TabSize</a> property.</p>
-<p>To obtain fixed sized tabs with <a href="../../properties/multiline/">MultiLine</a> set to 1, you must however also set Justify to <code>'None'</code>.</p>
+tabs may be obtained by setting the <a href="../../properties/tabsize/">TabSize</a> property.</p>
+<p>To obtain fixed sized tabs with <a href="../../properties/multiline/">MultiLine</a> set to 1, you must however also set Justify to <code>'None'</code>.</p>
 <p>If fixed size tabs are in effect, the positions at which the picture and
 Caption are drawn within each <a href="../tabbutton/">TabButton</a> is
 controlled by the <a href="../../properties/tabjustify/">TabJustify</a> property
@@ -71363,17 +71364,17 @@ which may be <code>'Centre'</code>, <code>'Edge'</code>,
 or <code>'IconEdge'</code>.</p>
 <p><a href="../../examples/tabcontrol-example-13/">Example
 13</a> illustrates these different settings.</p>
-<p>The font used to draw the captions in the <a href="../tabbutton/">TabButton</a> objects is determined by the <a href="../../properties/fontobj/">FontObj</a> property of the TabControl.</p>
+<p>The font used to draw the captions in the <a href="../tabbutton/">TabButton</a> objects is determined by the <a href="../../properties/fontobj/">FontObj</a> property of the TabControl.</p>
 <p>You cannot specify the foreground or background colours of the tabs/buttons,
 nor can you use different fonts in different tabs/buttons. The orientation of
 the Caption text is always determined by the value of the Align property of the
 TabControl.</p>
 <p>The <a href="../../properties/tabobj/">TabObj</a> property is read-only and
-reports the name of, or ref to, the <a href="../tabbutton/">TabButton</a> that is currently selected.</p>
+reports the name of, or ref to, the <a href="../tabbutton/">TabButton</a> that is currently selected.</p>
 <p>The <a href="../../properties/multiselect/">MultiSelect</a> property specifies
 whether or not the user can select more than one button in a TabControl at the
 same time, by holding down the Ctrl key when clicking. The default is 0 (only
-one button may be selected). <a href="../../properties/multiselect/">MultiSelect</a> is ignored if Style is <code>'Tabs'</code>.</p>
+one button may be selected). <a href="../../properties/multiselect/">MultiSelect</a> is ignored if Style is <code>'Tabs'</code>.</p>
 <p>The <a href="../../properties/tabfocus/">TabFocus</a> property specifies the
 focus behaviour for the TabControl object and may be <code>'Normal'</code> (the
 default), <code>'Never'</code> or <code>'ButtonDown'</code>.</p>

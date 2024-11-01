@@ -34974,8 +34974,6 @@
         
       
         
-          
-        
       
         
       
@@ -35359,24 +35357,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38661,6 +38651,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56484,6 +56483,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,33 +71275,17 @@
 
 <h1 class="heading"><span class="name">MDITile</span> <span class="command">Method 111</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td>Applies To:</td>
-<td><a href="../../objects/mdiclient/">MDIClient</a></td>
-</tr>
-</tbody>
-</table>
+<p><strong>Applies To:</strong> <a href="../../objects/mdiclient/">MDIClient</a></p>
 <p><strong>Description</strong></p>
-<p>This method causes the <a href="../../objects/mdiclient/">MDIClient</a> object
-to organise its child <a href="../../objects/form/">Form</a>s as a row or column.
-To permit the user to carry out this action, it is recommended that a suitable
-callback function or expression is attached to a <a href="../../objects/menuitem/">MenuItem</a> or <a href="../../objects/button/">Button</a>. The callback function or expression
-should then call the MDITile method.</p>
-<p>Note that because there are restrictions concerning the minimum height and
-width of a window, MS-Windows does not necessarily respond as requested. If the <a href="../../objects/mdiclient/">MDIClient</a> is itself of insufficient size, or if it contains a large number of child <a href="../../objects/form/">Form</a>s,
-Windows may choose to tile the <a href="../../objects/form/">Form</a>s in a row
-when a column was specified or vice versa. It may also choose to ignore the
-event entirely.</p>
-<p>The argument to MDITile is <code>⍬</code>, or
-a single item as follows:</p>
+<p>This method causes the <a href="../../objects/mdiclient/">MDIClient</a> object to organise its child <a href="../../objects/form/">Form</a>s as a row or column. To permit the user to carry out this action, it is recommended that a suitable callback function or expression is attached to a <a href="../../objects/menuitem/">MenuItem</a> or <a href="../../objects/button/">Button</a>. The callback function or expression should then call the MDITile method.</p>
+<p>Note that because there are restrictions concerning the minimum height and width of a window, MS-Windows does not necessarily respond as requested. If the <a href="../../objects/mdiclient/">MDIClient</a> is itself of insufficient size, or if it contains a large number of child <a href="../../objects/form/">Form</a>s, Windows may choose to tile the <a href="../../objects/form/">Form</a>s in a row when a column was specified or vice versa. It may also choose to ignore the event entirely.</p>
+<p>The argument to MDITile is <code>⍬</code>, or a single item as follows:</p>
 <table>
 <tbody>
 <tr>
 <td><code>[1]</code></td>
 <td>Tile Mode</td>
-<td>0 (vertical) 1 (horizontal)</td>
+<td>0 (vertical)<br>1 (horizontal)</td>
 </tr>
 </tbody>
 </table>

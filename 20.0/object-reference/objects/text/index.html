@@ -34980,8 +34980,6 @@
         
       
         
-          
-        
       
         
       
@@ -35365,24 +35363,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56484,6 +56483,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,33 +71275,12 @@
 
 <h1 class="heading"><span class="name">Text</span> <span class="command">Object</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td><a href="../../parentlists/text/">Parents</a></td>
-<td><a href="../../childlists/text/">Children</a></td>
-<td><a href="../../proplists/text/">Properties</a></td>
-<td><a href="../../methodlists/text/">Methods</a></td>
-<td><a href="../../eventlists/text/">Events</a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr>
-<td>Purpose:</td>
-<td>Writes text.</td>
-</tr>
-</tbody>
-</table>
+<p><a href="../../parentlists/text/">Parents</a>, <a href="../../childlists/text/">Children</a>, <a href="../../proplists/text/">Properties</a>, <a href="../../methodlists/text/">Methods</a>, <a href="../../eventlists/text/">Events</a></p>
+<p><strong>Purpose:</strong> Writes text.</p>
 <p><strong>Description</strong></p>
-<p>The Text object is used to write arbitrary text. It can be used in a <a href="../form/">Form</a>,
-<a href="../subform/">SubForm</a> or <a href="../group/">Group</a> instead of a <a href="../label/">Label</a>. The main difference is that
-a <a href="../label/">Label</a> is implemented as a true window object
-(thus consuming Windows resources). A Text object is not a window and consumes
-no MS-Windows resources. However, a <a href="../label/">Label</a> supports <a href="../../methodorevents/dragdrop/">DragDrop</a> events and has various
+<p>The Text object is used to write arbitrary text. It can be used in a <a href="../form/">Form</a>, <a href="../subform/">SubForm</a> or <a href="../group/">Group</a> instead of a <a href="../label/">Label</a>. The main difference is that a <a href="../label/">Label</a> is implemented as a true window object (thus consuming Windows resources). A Text object is not a window and consumes no MS-Windows resources. However, a <a href="../label/">Label</a> supports <a href="../../methodorevents/dragdrop/">DragDrop</a> events and has various
 useful properties that are not shared by the Text object.</p>
-<p>The contents of the Text object are defined by its <a href="../../properties/text/">Text</a> property. This is a character array containing one of the following :</p>
+<p>The contents of the Text object are defined by its <a href="../../properties/text/">Text</a> property. This is a character array containing one of the following :</p>
 <ul>
 <li>a simple scalar</li>
 <li>an enclosed vector or matrix (also a scalar)</li>
@@ -71291,8 +71288,7 @@ useful properties that are not shared by the Text object.</p>
 <li>a simple matrix</li>
 <li>a vector of enclosed vectors or matrices</li>
 </ul>
-<p><a href="../../properties/points/">Points</a> is either a simple 2-column matrix
-of (y,x) co-ordinates, or a 2-element vector of y-coordinates and x-coordinates
+<p><a href="../../properties/points/">Points</a> is either a simple 2-column matrix of (y,x) co-ordinates, or a 2-element vector of y-coordinates and x-coordinates
 respectively.</p>
 <p>There are two distinct cases:</p>
 <ol>
@@ -71301,49 +71297,33 @@ this case, Text may be a single scalar character, a simple vector, or a matrix
 containing a block of text. The result is that the character, string, or matrix
 is written at the specified point.</li>
 <li><a href="../../properties/points/">Points</a> specifies more than one
-    point. There are three possibilities:If Text is a scalar, its contents are written at each of the points in <a href="../../properties/points/">Points</a>.
-    This means that by enclosing a vector or matrix, you can draw a string or
-    block of text at several locations.If Text is a vector, each element of Text is written at the
-    corresponding position in <a href="../../properties/points/">Points</a>.If Text is a matrix, each row of Text is written at the corresponding
-    position in <a href="../../properties/points/">Points</a>.</li>
-<li>If Text is a scalar, its contents are written at each of the points in <a href="../../properties/points/">Points</a>.
-    This means that by enclosing a vector or matrix, you can draw a string or
-    block of text at several locations.</li>
-<li>If Text is a vector, each element of Text is written at the
-    corresponding position in <a href="../../properties/points/">Points</a>.</li>
-<li>If Text is a matrix, each row of Text is written at the corresponding
-    position in <a href="../../properties/points/">Points</a>.</li>
+    point. There are three possibilities:<ol>
+<li>If Text is a scalar, its contents are written at each of the points in <a href="../../properties/points/">Points</a>. This means that by enclosing a vector or matrix, you can draw a string or block of text at several locations.</li>
+<li>If Text is a vector, each element of Text is written at the corresponding position in <a href="../../properties/points/">Points</a>.</li>
+<li>If Text is a matrix, each row of Text is written at the corresponding position in <a href="../../properties/points/">Points</a>.</li>
+</ol>
+</li>
 </ol>
 <p><a href="../../properties/fontobj/">FontObj</a> specifies a <strong>single</strong> font
-to be used to write the Text. See a description of the <a href="../../properties/fontobj/">FontObj</a> property for details.</p>
-<p><a href="../../properties/fcol/">FCol</a> specifies the colour of the Text. For
-a single text item, FCol may be a single number which specifies one of the
-standard MS-Windows colours, or a simple 3-element numeric vector of RGB colour
-intensities. If more than one text item is involved, <a href="../../properties/fcol/">FCol</a> may be a vector which specifies the colour for each item separately. If so, its
-length must be the same as the number of points specified by <a href="../../properties/points/">Points</a>.</p>
-<p><a href="../../properties/bcol/">BCol</a> specifies the background colour of the
-text, that is, the colour for the part of the character cell that is blank. It is
+to be used to write the Text. See a description of the <a href="../../properties/fontobj/">FontObj</a> property for details.</p>
+<p><a href="../../properties/fcol/">FCol</a> specifies the colour of the Text. For a single text item, FCol may be a single number which specifies one of the
+standard MS-Windows colours, or a simple 3-element numeric vector of RGB colour intensities. If more than one text item is involved, <a href="../../properties/fcol/">FCol</a> may be a vector which specifies the colour for each item separately. If so, its length must be the same as the number of points specified by <a href="../../properties/points/">Points</a>.</p>
+<p><a href="../../properties/bcol/">BCol</a> specifies the background colour of the text, that is, the colour for the part of the character cell that is blank. It is
 defined in the same way as <a href="../../properties/fcol/">FCol</a>.</p>
-<p><a href="../../properties/halign/">HAlign</a> and <a href="../../properties/valign/">VAlign</a> specify the horizontal and vertical alignment of the text respectively. They may
-each be numeric scalars or vectors with the same length as the number of points
-specified in <a href="../../properties/points/">Points</a>. See <a href="../../properties/halign/">HAlign</a> and <a href="../../properties/valign/">VAlign</a> for details.</p>
-<p>When one or more of <a href="../../properties/fcol/">FCol</a>, <a href="../../properties/bcol/">BCol</a>,
-<a href="../../properties/halign/">HAlign</a> and <a href="../../properties/valign/">VAlign</a> are vectors, the different components of Text are drawn using the corresponding
-colours and alignments.</p>
-<p>The value of the <a href="../../properties/dragable/">Dragable</a> property
-specifies whether or not the Text object can be dragged by the user. The value
-of the <a href="../../properties/autoconf/">AutoConf</a> property determines
-whether or not the Text object is repositioned when its parent is resized.</p>
+<p><a href="../../properties/halign/">HAlign</a> and <a href="../../properties/valign/">VAlign</a> specify the horizontal and vertical alignment of the text respectively. They may each be numeric scalars or vectors with the same length as the number of points specified in <a href="../../properties/points/">Points</a>. See <a href="../../properties/halign/">HAlign</a> and <a href="../../properties/valign/">VAlign</a> for details.</p>
+<p>When one or more of <a href="../../properties/fcol/">FCol</a>, <a href="../../properties/bcol/">BCol</a>, <a href="../../properties/halign/">HAlign</a> and <a href="../../properties/valign/">VAlign</a> are vectors, the different components of Text are drawn using the corresponding colours and alignments.</p>
+<p>The value of the <a href="../../properties/dragable/">Dragable</a> property specifies whether or not the Text object can be dragged by the user. The value
+of the <a href="../../properties/autoconf/">AutoConf</a> property determines whether or not the Text object is repositioned when its parent is resized.</p>
 <h2 class="example">Examples</h2>
 
 <p>Write <code>'A'</code> at (10,20)
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'g.t1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="s1">'A'</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="p">)</span>
 </code></pre></div>
-<p>Write <code>'h'</code> at (10,20) in red
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'g.t1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="s1">'h'</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'FCol'</span><span class="w"> </span><span class="m">255</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+Write <code>'h'</code> at (10,20) in red
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'g.t1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="s1">'h'</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'FCol'</span><span class="w"> </span><span class="m">255</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
 </code></pre></div>
-<p>Write <code>'Hello'</code> at (10,20)
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'g.t1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="s1">'Hello'</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="p">)</span>
+Write <code>'Hello'</code> at (10,20)
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'g.t1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="s1">'Hello'</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="nv">Write</span><span class="w"> </span><span class="s1">'THIS IS A</span>
 <span class="s1">       BLOCK OF</span>
@@ -71352,20 +71332,20 @@ whether or not the Text object is repositioned when its parent is resized.</p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">BLK</span><span class="kd">←</span><span class="m">3</span><span class="w"> </span><span class="m">9</span><span class="o">⍴</span><span class="s1">'THIS IS A BLOCK OF TEXT     '</span>
 <span class="w">      </span><span class="s1">'g.t1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="nv">BLK</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="p">)</span>
 </code></pre></div>
-<p>Write <code>'A'</code> at (10,20) and at (30,40)
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'g.t1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="s1">'A'</span><span class="w"> </span><span class="p">((</span><span class="m">10</span><span class="w"> </span><span class="m">30</span><span class="p">)(</span><span class="m">20</span><span class="w"> </span><span class="m">40</span><span class="p">))</span>
+Write <code>'A'</code> at (10,20) and at (30,40)
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'g.t1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="s1">'A'</span><span class="w"> </span><span class="p">((</span><span class="m">10</span><span class="w"> </span><span class="m">30</span><span class="p">)(</span><span class="m">20</span><span class="w"> </span><span class="m">40</span><span class="p">))</span>
 </code></pre></div>
-<p>Write a red <code>'+'</code> at (10,20) and a green <code>'+'</code> at (20 40)
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'g.t1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="s1">'+'</span><span class="w"> </span><span class="p">((</span><span class="m">10</span><span class="w"> </span><span class="m">30</span><span class="p">)(</span><span class="m">20</span><span class="w"> </span><span class="m">40</span><span class="p">))(</span><span class="s1">'FCol'</span><span class="w"> </span><span class="p">(</span><span class="m">255</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="m">0</span><span class="w"> </span><span class="m">255</span><span class="w"> </span><span class="m">0</span><span class="p">))</span>
+Write a red <code>'+'</code> at (10,20) and a green <code>'+'</code> at (20 40)
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'g.t1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="s1">'+'</span><span class="w"> </span><span class="p">((</span><span class="m">10</span><span class="w"> </span><span class="m">30</span><span class="p">)(</span><span class="m">20</span><span class="w"> </span><span class="m">40</span><span class="p">))(</span><span class="s1">'FCol'</span><span class="w"> </span><span class="p">(</span><span class="m">255</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="m">0</span><span class="w"> </span><span class="m">255</span><span class="w"> </span><span class="m">0</span><span class="p">))</span>
 </code></pre></div>
-<p>Write <code>'Hello'</code> at (10,20) and at (30,40)
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'g.t1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="p">(</span><span class="o">⊂</span><span class="s1">'Hello'</span><span class="p">)</span><span class="w"> </span><span class="p">((</span><span class="m">10</span><span class="w"> </span><span class="m">30</span><span class="p">)(</span><span class="m">20</span><span class="w"> </span><span class="m">40</span><span class="p">))</span>
+Write <code>'Hello'</code> at (10,20) and at (30,40)
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'g.t1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="p">(</span><span class="o">⊂</span><span class="s1">'Hello'</span><span class="p">)</span><span class="w"> </span><span class="p">((</span><span class="m">10</span><span class="w"> </span><span class="m">30</span><span class="p">)(</span><span class="m">20</span><span class="w"> </span><span class="m">40</span><span class="p">))</span>
 </code></pre></div>
-<p>Write <code>'A'</code> at (10,20) and <code>'B'</code> at (30,40)
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'g.t1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="s1">'AB'</span><span class="w"> </span><span class="p">((</span><span class="m">10</span><span class="w"> </span><span class="m">30</span><span class="p">)(</span><span class="m">20</span><span class="w"> </span><span class="m">40</span><span class="p">))</span>
+Write <code>'A'</code> at (10,20) and <code>'B'</code> at (30,40)
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'g.t1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="s1">'AB'</span><span class="w"> </span><span class="p">((</span><span class="m">10</span><span class="w"> </span><span class="m">30</span><span class="p">)(</span><span class="m">20</span><span class="w"> </span><span class="m">40</span><span class="p">))</span>
 </code></pre></div>
-<p>Write <code>'Hello'</code> at (10,20) and <code>'World'</code> at (30,40)
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'g.t1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="p">(</span><span class="s1">'Hello'</span><span class="w"> </span><span class="s1">'World'</span><span class="p">)((</span><span class="m">10</span><span class="w"> </span><span class="m">30</span><span class="p">)(</span><span class="m">20</span><span class="w"> </span><span class="m">40</span><span class="p">))</span>
+Write <code>'Hello'</code> at (10,20) and <code>'World'</code> at (30,40)
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'g.t1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="p">(</span><span class="s1">'Hello'</span><span class="w"> </span><span class="s1">'World'</span><span class="p">)((</span><span class="m">10</span><span class="w"> </span><span class="m">30</span><span class="p">)(</span><span class="m">20</span><span class="w"> </span><span class="m">40</span><span class="p">))</span>
 </code></pre></div>
 
 

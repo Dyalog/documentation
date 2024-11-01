@@ -34980,8 +34980,6 @@
         
       
         
-          
-        
       
         
       
@@ -35365,24 +35363,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56492,6 +56491,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,27 +71275,10 @@
 
 <h1 class="heading"><span class="name">HTMLRenderer</span> <span class="command">Object</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td><a href="../../parentlists/htmlrenderer/">Parents</a></td>
-<td><a href="../../childlists/htmlrenderer/">Children</a></td>
-<td><a href="../../proplists/htmlrenderer/">Properties</a></td>
-<td><a href="../../methodlists/htmlrenderer/">Methods</a></td>
-<td><a href="../../eventlists/htmlrenderer/">Events</a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr>
-<td>Purpose:</td>
-<td>The HTMLRenderer Object is a cross-platform mechanism for producing Graphical User Interfaces (GUI), based on HyperText Markup Language (HTML).</td>
-</tr>
-</tbody>
-</table>
+<p><a href="../../parentlists/htmlrenderer/">Parents</a>, <a href="../../childlists/htmlrenderer/">Children</a>, <a href="../../proplists/htmlrenderer/">Properties</a>, <a href="../../methodlists/htmlrenderer/">Methods</a>, <a href="../../eventlists/htmlrenderer/">Events</a></p>
+<p><strong>Purpose:</strong> The HTMLRenderer Object is a cross-platform mechanism for producing Graphical User Interfaces (GUI), based on HyperText Markup Language (HTML).</p>
 <p><strong>Description</strong></p>
-<p>The HTMLRenderer object renders HTML in a window on the screen. It may appear as a top-level window, similar to a Form, or be displayed within another GUI object according to the value of the Boolean <a href="../../properties/aschild/">AsChild</a> property which must be specified when the HTMLRenderer is created. Several HTMLRenderer objects may co-exist in the Dyalog application.</p>
+<p>The HTMLRenderer object renders HTML in a window on the screen. It may appear as a top-level window, similar to a Form, or be displayed within another GUI object according to the value of the Boolean <a href="../../properties/aschild/">AsChild</a> property which must be specified when the HTMLRenderer is created. Several HTMLRenderer objects may co-exist in the Dyalog application.</p>
 <p>The HTMLRenderer is supported on the following platforms:</p>
 <ul>
 <li>Windows</li>
@@ -71285,12 +71286,12 @@
 <li>Linux </li>
 </ul>
 <p>It is not supported on the Raspberry Pi</p>
-<p>The HTMLRenderer is implemented using the  <a href="https://en.wikipedia.org/wiki/Chromium_Embedded_Framework">Chromium Embedded Framework (CEF).</a> Note that if the  <strong>ENABLE_CEF parameter</strong> is set to 0 (its default value is 1) the CEF is disabled and an attempt to create an HTMLRenderer object will fail with an error message.</p>
+<p>The HTMLRenderer is implemented using the  <a href="https://en.wikipedia.org/wiki/Chromium_Embedded_Framework">Chromium Embedded Framework (CEF).</a> Note that if the  <strong>ENABLE_CEF parameter</strong> is set to 0 (its default value is 1) the CEF is disabled and an attempt to create an HTMLRenderer object will fail with an error message.</p>
 <p>The HTMLRenderer object can be considered as two components; a client implemented using CEF and an internal server which implements an interface from the APL workspace to the client.  The client may communicate with both the internal server and external servers on the web. Thus it can combine and display information from external and internal feeds.</p>
 <p>Internal and external communications are distinguished primarily by the <a href="../../properties/interceptedurls/">InterceptedURLs</a> property which specifies which requests from the HTMLRenderer client component are to he handled by the internal server component and which are to be serviced by the internet. The default value of <a href="../../properties/interceptedurls/">InterceptedURLs</a> has been chosen so that in most cases it can be ignored.</p>
-<p>The  HTMLRenderer object supports both the HTTP protocol and the WebSocket (WS) protocol.</p>
-<p>Using the HTTP protocol, the client requests a resource, such as  a style-sheet, an image, or a complete web page, which the server then delivers. All communication is initiated by the client and involves the creating, use, and closing of a TCP/IP socket.</p>
-<p>Using WS protocol,  the client asks the server for a permanent communications channel (this is done by <em>upgrading</em> the TCP/IP socket to a WebSocket) which may subsequently be used for  messages initiated by either the client or the server.</p>
+<p>The  HTMLRenderer object supports both the HTTP protocol and the WebSocket (WS) protocol.</p>
+<p>Using the HTTP protocol, the client requests a resource, such as  a style-sheet, an image, or a complete web page, which the server then delivers. All communication is initiated by the client and involves the creating, use, and closing of a TCP/IP socket.</p>
+<p>Using WS protocol,  the client asks the server for a permanent communications channel (this is done by <em>upgrading</em> the TCP/IP socket to a WebSocket) which may subsequently be used for  messages initiated by either the client or the server.</p>
 <p>The internal server component of the HTMLRenderer is implemented by functions in the workspace.</p>
 <p>HTTP protocol communications are handled by  callback functions on the <a href="../../methodorevents/httprequest/">HTTPRequest</a> event.</p>
 <p>WS protocol communications are handled:</p>
@@ -71299,12 +71300,12 @@
 <li>by a callback on the <a href="../../methodorevents/websocketreceive/">WebSocketReceive</a> event</li>
 <li>and by calling the <a href="../../methodorevents/websocketsend/">WebSocketSend</a> method.</li>
 </ul>
-<p>The HTMLRenderer may be initialised by setting its <a href="../../properties/html/">HTML</a> property to a character vector representing a base HTML document. This will typically contain references to other documents,  such as JavaScript and CSS files which contain code that can influence the way the base HTML is rendered, image files in a variety of formats, and of course hyperlinks to other pages.</p>
+<p>The HTMLRenderer may be initialised by setting its <a href="../../properties/html/">HTML</a> property to a character vector representing a base HTML document. This will typically contain references to other documents,  such as JavaScript and CSS files which contain code that can influence the way the base HTML is rendered, image files in a variety of formats, and of course hyperlinks to other pages.</p>
 <p>If the HTML contains references to other documents, the CEF will retrieve each one by making an HTTP request. Requests with URLs that match a triggering pattern in the <a href="../../properties/interceptedurls/">InterceptedURLs</a> property will generate an <a href="../../methodorevents/httprequest/">HTTPRequest</a> event on the HTMLRenderer, which can be directed to a callback function.</p>
 <p>Requests with URLs that do not match a pattern in <a href="../../properties/interceptedurls/">InterceptedURLs</a>, or that match a pattern with a 0 in the second column, will be handled by the CEF.</p>
 <p>Requests handled by the CEF push the request out to the network to be serviced by an external web server and require that the system has an active internet connection.</p>
 <p>An alternative is to initialise the HTMLRenderer by setting its <a href="../../properties/url/">URL</a> property. This is typically  used to display external content , rather than content delivered from the workspace.</p>
-<p>If neither <a href="../../properties/html/">HTML</a> nor <a href="../../properties/url/">URL</a> is set when the HTMLRenderer is created, it will generate an <a href="../../methodorevents/httprequest/">HTTPRequest</a> event with a requested url of <code>http://dyalog_root</code>.</p>
+<p>If neither <a href="../../properties/html/">HTML</a> nor <a href="../../properties/url/">URL</a> is set when the HTMLRenderer is created, it will generate an <a href="../../methodorevents/httprequest/">HTTPRequest</a> event with a requested url of <code>http://dyalog_root</code>.</p>
 <p>When the HTMLRenderer is displayed in its own window, the  window caption is set by an assignment to its <a href="../../properties/caption/">Caption</a> property. The window caption may subsequently change  when content is displayed  (typically  by the title tag in the html). The <a href="../../properties/caption/">Caption</a> property reports the current window caption.</p>
 <h2 class="example">Example</h2>
 <p></p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Example</span><span class="sr">;</span><span class="nv">enc</span><span class="sr">;</span><span class="nv">Q</span><span class="sr">;</span><span class="nv">U</span><span class="sr">;</span><span class="nv">tw</span>
@@ -71334,7 +71335,7 @@
 
 <span class="w">     </span><span class="nv">HTMLTable</span><span class="kd">←</span><span class="kt">{</span><span class="s1">'table border="1"'</span><span class="nv">enc</span><span class="o">∊</span><span class="p">(</span><span class="o">⊂</span><span class="s1">'tr'</span><span class="p">)</span><span class="nv">enc</span><span class="na">∘</span><span class="o">∊</span><span class="na">¨</span><span class="o">↓</span><span class="p">(</span><span class="o">⊂</span><span class="s1">'td'</span><span class="p">)</span><span class="nv">enc</span><span class="na">¨</span><span class="bp">⍵</span><span class="kt">}</span>
 </code></pre></div>
-<p><figure id="_figure-1"><img alt="htmlrenderer1" src="../../img/htmlrenderer1.png"><figcaption>Figure 1: htmlrenderer1</figcaption></figure></p>
+<p><img alt="" src="../../img/htmlrenderer1.png"></p>
 
 
 

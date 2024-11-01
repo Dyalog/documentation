@@ -34974,8 +34974,6 @@
         
       
         
-          
-        
       
         
       
@@ -35359,24 +35357,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38661,6 +38651,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56484,6 +56483,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,17 +71275,10 @@
 
 <h1 class="heading"><span class="name">LockColumns</span> <span class="command">Method 227</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td>Applies To:</td>
-<td><a href="../../objects/grid/">Grid</a></td>
-</tr>
-</tbody>
-</table>
+<p><strong>Applies To:</strong> <a href="../../objects/grid/">Grid</a></p>
 <p><strong>Description</strong></p>
-<p>This method is used to lock one or more columns of a <a href="../../objects/grid/">Grid</a> object. However, LockColumns is not supported in combination with hierarchical
-column titles as specified by the <a href="../../properties/coltitledepth/">ColTitleDepth</a> property.</p>
+<p>This method is used to lock one or more columns of a <a href="../../objects/grid/">Grid</a> object. However, LockColumns is not supported in combination with hierarchical
+column titles as specified by the <a href="../../properties/coltitledepth/">ColTitleDepth</a> property.</p>
 <p>The argument to LockColumns is a 1 or 2-element vector as follows.</p>
 <table>
 <tbody>
@@ -71322,13 +71333,13 @@ cursor moves into the locked column.</p>
 position <em>in the data</em> and not the physical position of the column as
 displayed in the <a href="../../objects/grid/">Grid</a><em>.</em> The physical
 column in the <a href="../../objects/grid/">Grid</a> depends upon the value of the
-<a href="../../properties/">Index</a> property at the time it was locked.</p>
+<a href="../../properties/index-property/">Index</a> property at the time it was locked.</p>
 <p>If <code>C</code> is the value specified for where a
 given column is to be locked, the value of the physical column <code>P</code> at which it will be displayed in the Grid named <code>GRID</code> is:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">P</span><span class="kd">←</span><span class="nv">C</span><span class="o">-</span><span class="p">(</span><span class="m">2</span><span class="o">⊃</span><span class="nv">GRID</span><span class="w"> </span><span class="nf">⎕WG</span><span class="w"> </span><span class="s1">'Index'</span><span class="p">)</span><span class="o">-</span><span class="nf">⎕IO</span>
 </code></pre></div>
 <p>Furthermore, the position of a locked column given by the result of the
-LockColumns method changes (with the <a href="../../properties/">Index</a> property) as the <a href="../../objects/grid/">Grid</a> is scrolled.</p>
+LockColumns method changes (with the <a href="../../properties/index-property/">Index</a> property) as the <a href="../../objects/grid/">Grid</a> is scrolled.</p>
 
 
 

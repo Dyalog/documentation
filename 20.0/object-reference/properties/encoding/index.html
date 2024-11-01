@@ -34974,8 +34974,6 @@
         
       
         
-          
-        
       
         
       
@@ -35359,24 +35357,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56492,6 +56491,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,19 +71275,12 @@
 
 <h1 class="heading"><span class="name">Encoding</span> <span class="command">Property</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td>Applies To:</td>
-<td><a href="../../objects/tcpsocket/">TCPSocket</a></td>
-</tr>
-</tbody>
-</table>
+<p><strong>Applies To:</strong> <a href="../../objects/tcpsocket/">TCPSocket</a></p>
 <p><strong>Description</strong></p>
 <p>The Encoding property is a character vector that specifies how character data
 are encoded or translated.</p>
 <p>The possible values are <code>'None'</code>,
-<code>'UTF-8'</code>, <code>'Classic'</code>, or <code>'Unicode'</code>, depending upon the value of the <a href="../style/">Style</a> property.</p>
+<code>'UTF-8'</code>, <code>'Classic'</code>, or <code>'Unicode'</code>, depending upon the value of the <a href="../style/">Style</a> property.</p>
 <table id="_table-1">
 <caption style="caption-side:bottom">Table 1: Unicode Edition</caption><thead>
 <tr>
@@ -71281,26 +71292,26 @@ are encoded or translated.</p>
 <tbody>
 <tr>
 <td><code>'Raw'</code></td>
-<td>'None'</td>
+<td class="shaded">'None'</td>
 <td>Not applicable. Only integer data may be transmitted/received.</td>
 </tr>
 <tr>
-<td><code>'Char'</code></td>
-<td>'None'</td>
-<td>Transmission is limited to characters with Unicode code points in the         range 0-255. Attempting to transmit (or receive) a character outside         this range will cause <code>DOMAIN ERROR</code> .</td>
+<td rowspan="2"><code>'Char'</code></td>
+<td class="shaded">'None'</td>
+<td>Transmission is limited to characters with Unicode code points in the range 0-255. Attempting to transmit (or receive) a character outside this range will cause <code>DOMAIN ERROR</code>.</td>
 </tr>
 <tr>
 <td><code>'UTF-8'</code></td>
-<td colspan="2">Characters are transmitted/received using the UTF-8 encoding scheme.</td>
+<td>Characters are transmitted/received using the UTF-8 encoding scheme.</td>
 </tr>
 <tr>
-<td><code>'APL'</code></td>
-<td>'Classic'</td>
-<td>Characters are transmitted/received as indices of <code>⎕AV</code> ,         and translated according to the current value of <code>⎕AVU</code> .         An attempt to transmit or receive a characters not present in <code>⎕AVU</code> will cause <code>TRANSLATION ERROR</code></td>
+<td rowspan="2"><code>'APL'</code></td>
+<td class="shaded">'Classic'</td>
+<td>Characters are transmitted/received as indices of <code>⎕AV</code>, and translated according to the current value of <code>⎕AVU</code> . An attempt to transmit or receive a characters not present in <code>⎕AVU</code> will cause <code>TRANSLATION ERROR</code></td>
 </tr>
 <tr>
 <td><code>'Unicode'</code></td>
-<td colspan="2">Characters are transmitted/received <em>as is</em> (as Unicode code         points).</td>
+<td>Characters are transmitted/received <em>as is</em> (as Unicode code points).</td>
 </tr>
 </tbody>
 </table>
@@ -71315,33 +71326,33 @@ are encoded or translated.</p>
 <tbody>
 <tr>
 <td><code>'Raw'</code></td>
-<td>'None'</td>
+<td class="shaded">'None'</td>
 <td>Not applicable. Only integer data may be transmitted/received.</td>
 </tr>
 <tr>
-<td><code>'Char'</code></td>
-<td>'None'</td>
-<td>Characters (which are represented internally as indices of <code>⎕AV</code> ) are         translated to and from ASCII using the Output Translate Table win.dot.</td>
+<td rowspan="2"><code>'Char'</code></td>
+<td class="shaded">'None'</td>
+<td>Characters (which are represented internally as indices of <code>⎕AV</code>) are translated to and from ASCII using the Output Translate Table win.dot.</td>
 </tr>
 <tr>
 <td><code>'UTF-8'</code></td>
-<td colspan="2">Characters are converted to/from Unicode using <code>⎕AVU</code> and transmitted/received using the UTF-8 encoding scheme. An attempt to         transmit or receive a characters not present in <code>⎕AVU</code> will cause <code>TRANSLATION ERROR</code> .</td>
+<td>Characters are converted to/from Unicode using <code>⎕AVU</code> and transmitted/received using the UTF-8 encoding scheme. An attempt to transmit or receive a characters not present in <code>⎕AVU</code> will cause <code>TRANSLATION ERROR</code>.</td>
 </tr>
 <tr>
-<td><code>'Raw'</code></td>
-<td>'Classic'</td>
-<td>Characters are transmitted/received as indices of <code>⎕AV</code> .</td>
+<td rowspan="2"><code>'Raw'</code></td>
+<td class="shaded">'Classic'</td>
+<td>Characters are transmitted/received as indices of <code>⎕AV</code>.</td>
 </tr>
 <tr>
 <td><code>'Unicode'</code></td>
-<td colspan="2">Characters are converted to/from Unicode using <code>⎕AVU</code> and transmitted/received as Unicode code points. An attempt to transmit         or receive a characters not present in <code>⎕AVU</code> will cause <code>TRANSLATION ERROR</code> .</td>
+<td>Characters are converted to/from Unicode using <code>⎕AVU</code> and transmitted/received as Unicode code points. An attempt to transmit or receive a characters not present in <code>⎕AVU</code> will cause <code>TRANSLATION ERROR</code>.</td>
 </tr>
 </tbody>
 </table>
-<p>The default value of Encoding depends upon the value of <a href="../style/">Style</a> as indicated.  Default values are highlighted thus.  in the above tables.</p>
+<p>The default value of Encoding depends upon the value of <a href="../style/">Style</a> as indicated. Default values are highlighted <span class="shaded">thus</span> in the above tables.</p>
 <p>An attempt to set the value of Encoding to a value not valid for the current <a href="../style/">Style</a>,
 as implied by the above tables, will cause <code>DOMAIN ERROR</code>.</p>
-<p>If you change the value of the <a href="../style/">Style</a> property, the value of Encoding will remain unchanged if it is valid for the new
+<p>If you change the value of the <a href="../style/">Style</a> property, the value of Encoding will remain unchanged if it is valid for the new
 Style. Otherwise it will revert to the default value for the new value of <a href="../style/">Style</a>.
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'s0'</span><span class="nf">⎕WC</span><span class="s1">'TCPSocket'</span><span class="w"> </span><span class="p">(</span><span class="s1">'LocalPort'</span><span class="w"> </span><span class="m">2001</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">s0</span><span class="na">.</span><span class="p">(</span><span class="nv">Style</span><span class="w"> </span><span class="nv">Encoding</span><span class="p">)</span>

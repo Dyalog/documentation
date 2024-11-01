@@ -34974,8 +34974,6 @@
         
       
         
-          
-        
       
         
       
@@ -35359,24 +35357,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38661,6 +38651,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56484,6 +56483,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,21 +71275,14 @@
 
 <h1 class="heading"><span class="name">Input</span> <span class="command">Property</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td>Applies To:</td>
-<td><a href="../../objects/grid/">Grid</a></td>
-</tr>
-</tbody>
-</table>
+<p><strong>Applies To:</strong> <a href="../../objects/grid/">Grid</a></p>
 <p><strong>Description</strong></p>
 <p>This property specifies objects to be associated with cells in a Grid.</p>
 <p>These
 objects may be of type <a href="../../objects/button/">Button</a>, <a href="../../objects/colorbutton/">ColorButton</a>,
 <a href="../../objects/combo/">Combo</a>, <a href="../../objects/edit/">Edit</a>, <a href="../../objects/label/">Label</a>,
 <a href="../../objects/spinner/">Spinner</a> or <a href="../../objects/trackbar/">TrackBar</a>.
-In addition, the Input property may specify instances of <a href="../../objects/ocxclass/">OCXClass</a> objects (ActiveX controls) and <a href="../../objects/nettype/">NetType</a> objects (.NET classes).</p>
+In addition, the Input property may specify instances of <a href="../../objects/ocxclass/">OCXClass</a> objects (ActiveX controls) and <a href="../../objects/nettype/">NetType</a> objects (.NET classes).</p>
 <p>The Input property is either a single ref or a simple character scalar or
 vector, or a vector of character vectors or refs. If it specifies a single
 object, this will be associated with <em>all</em> of the cells in the <a href="../../objects/grid/">Grid</a>.
@@ -71280,7 +71291,7 @@ the <a href="../celltypes/">CellTypes</a> property.</p>
 <p>When a cell becomes the current cell, its value (defined by the appropriate
 element of the <a href="../values/">Values</a> property) defines the
 value of a <em>corresponding property</em> of the associated object The
-property that corresponds to the value in the cell, depends upon the <a href="../type/">Type</a> of the associated object as shown in the following table:</p>
+property that corresponds to the value in the cell, depends upon the <a href="../type/">Type</a> of the associated object as shown in the following table:</p>
 <table>
 <thead>
 <tr>
@@ -71337,34 +71348,34 @@ creating the associated object as a <em>child</em> of the <a href="../../objects
 <p>If the associated object is an <a href="../../objects/edit/">Edit</a> or <a href="../../objects/combo/">Combo</a>,
 the user may change the <a href="../text/">Text</a> property of the
 object by typing, or, in the case of a <a href="../../objects/combo/">Combo</a>,
-by selecting an item from a list. The new value of the <a href="../text/">Text</a> property is then used to update the value in the cell (defined by the <a href="../values/">Values</a> property of the <a href="../../objects/grid/">Grid</a>) when the user moves on. If
+by selecting an item from a list. The new value of the <a href="../text/">Text</a> property is then used to update the value in the cell (defined by the <a href="../values/">Values</a> property of the <a href="../../objects/grid/">Grid</a>) when the user moves on. If
 the associated object is a radio button, the value in the cell (0 or 1) is
 reflected by the <a href="../state/">State</a> property of the <a href="../../objects/button/">Button</a>.
 The user may click the <a href="../../objects/button/">Button</a> on and off,
 changing its <a href="../state/">State</a> and thereby the
 corresponding value in the cell.</p>
 <p>If the associated object is a <a href="../../objects/colorbutton/">ColorButton</a>,
-the corresponding elements of the <a href="../values/">Values</a> property contain 3-element integer vectors which specify the RGB colour values.</p>
-<p>If the associated object is an instance of an <a href="../../objects/ocxclass/">OCXClass</a> object (ActiveX control) or a <a href="../../objects/nettype/">NetType</a> object
+the corresponding elements of the <a href="../values/">Values</a> property contain 3-element integer vectors which specify the RGB colour values.</p>
+<p>If the associated object is an instance of an <a href="../../objects/ocxclass/">OCXClass</a> object (ActiveX control) or a <a href="../../objects/nettype/">NetType</a> object
 (.NET class), the Grid uses the <em>default</em> property of the external object
-if it has one. Alternatively, the <a href="../inputproperties/">InputProperties</a> property is used to specify which property (or properties) of the external
+if it has one. Alternatively, the <a href="../inputproperties/">InputProperties</a> property is used to specify which property (or properties) of the external
 object are to be mapped to elements of <a href="../values/">Values</a>.
-If more than one property is specified, elements of <a href="../values/">Values</a> are vectors.</p>
+If more than one property is specified, elements of <a href="../values/">Values</a> are vectors.</p>
 <p>If there is no object associated with a cell, or if its associated object is
-a <a href="../../objects/label/">Label</a> or a <a href="../../objects/button/">Button</a> with <a href="../style/">Style</a> Push, the cell is protected and
+a <a href="../../objects/label/">Label</a> or a <a href="../../objects/button/">Button</a> with <a href="../style/">Style</a> Push, the cell is protected and
 may not be changed by the user. When the current cell is thus protected, the
 corresponding row and column titles are not indented as they are when the cell
 may be edited.</p>
 <p>If the associated object is a numeric <a href="../../objects/edit/">Edit</a> or
-<a href="../../objects/label/">Label</a> (<a href="../fieldtype/">FieldType</a> Numeric, LongNumeric, Currency, Date, LongDate or Time) the contents of the cell
+<a href="../../objects/label/">Label</a> (<a href="../fieldtype/">FieldType</a> Numeric, LongNumeric, Currency, Date, LongDate or Time) the contents of the cell
 are formatted accordingly, even when it is not the current cell. Thus a cell
-associated with a <a href="../../objects/label/">Label</a> with <a href="../fieldtype/">FieldType</a> Date, always displays as a date.</p>
+associated with a <a href="../../objects/label/">Label</a> with <a href="../fieldtype/">FieldType</a> Date, always displays as a date.</p>
 <p>If the associated object is a <a href="../../objects/combo/">Combo</a> or <a href="../../objects/button/">Button</a>,
 the appearance of a non-current cell is defined by the corresponding element of
 the <a href="../showinput/">ShowInput</a> property.</p>
 <p>The following example illustrates the use of different types of object
-specified by the Input and <a href="../showinput/">ShowInput</a> properties:</p>
-<p><figure id="_figure-1"><img alt="input" src="../../img/input.gif"><figcaption>Figure 1: input</figcaption></figure></p>
+specified by the Input and <a href="../showinput/">ShowInput</a> properties:</p>
+<p><img alt="" src="../../img/input.gif"></p>
 
 
 

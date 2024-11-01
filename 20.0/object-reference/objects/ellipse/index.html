@@ -35033,8 +35033,6 @@
         
       
         
-          
-        
       
         
       
@@ -35418,24 +35416,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38720,6 +38710,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49103,8 +49112,6 @@
         
       
         
-          
-        
       
         
       
@@ -49812,24 +49819,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56593,6 +56592,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71384,30 +71402,13 @@
 
 <h1 class="heading"><span class="name">Ellipse</span> <span class="command">Object</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td><a href="../../parentlists/ellipse/">Parents</a></td>
-<td><a href="../../childlists/ellipse/">Children</a></td>
-<td><a href="../../proplists/ellipse/">Properties</a></td>
-<td><a href="../../methodlists/ellipse/">Methods</a></td>
-<td><a href="../../eventlists/ellipse/">Events</a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr>
-<td>Purpose:</td>
-<td>A Graphical object to draw ellipses, arcs, and pie-slices.</td>
-</tr>
-</tbody>
-</table>
+<p><a href="../../parentlists/ellipse/">Parents</a>, <a href="../../childlists/ellipse/">Children</a>, <a href="../../proplists/ellipse/">Properties</a>, <a href="../../methodlists/ellipse/">Methods</a>, <a href="../../eventlists/ellipse/">Events</a></p>
+<p><strong>Purpose:</strong> A Graphical object to draw ellipses, arcs, and pie-slices.</p>
 <p><strong>Description</strong></p>
-<p>This object duplicates much of the functionality of the <a href="../circle/">Circle</a> object, but differs in two major respects. Firstly, ellipses, circles, and arcs
+<p>This object duplicates much of the functionality of the <a href="../circle/">Circle</a> object, but differs in two major respects. Firstly, ellipses, circles, and arcs
 are specified in terms of their <strong>bounding rectangles</strong>, rather than in terms
 of their centre(s) and radii. Secondly, the Ellipse object behaves like any
-other (rectangular) object when it is resized by its parent. The <a href="../circle/">Circle</a> object behaves differently in that when resized by its parent, it maintains a
+other (rectangular) object when it is resized by its parent. The <a href="../circle/">Circle</a> object behaves differently in that when resized by its parent, it maintains a
 constant ratio between its <strong>physical</strong> height and width.</p>
 <p>The <a href="../../properties/points/">Points</a> property specifies one or more
 sets of co-ordinates which define the position(s) of one or more bounding
@@ -71415,8 +71416,8 @@ rectangles. The position is defined to be the position of the corner that is <st
 <p>The <a href="../../properties/size/">Size</a> property specifies the height and
 width of each bounding rectangle, measuring away from the origin. To obtain a
 perfect circle, you must take the <strong>aspect ratio</strong> of the device into
-account. This is available from the <a href="../../properties/devcaps/">DevCaps</a> property of the <a href="../root/">Root</a> and <a href="../printer/">Printer</a> objects. Alternatively you can use the <a href="../circle/">Circle</a> object.</p>
-<p>The <a href="../../properties/start/">Start</a> and/or <a href="../../properties/end/">End</a> properties are used to draw partial ellipses and circles. They specify start and
+account. This is available from the <a href="../../properties/devcaps/">DevCaps</a> property of the <a href="../root/">Root</a> and <a href="../printer/">Printer</a> objects. Alternatively you can use the <a href="../circle/">Circle</a> object.</p>
+<p>The <a href="../../properties/start/">Start</a> and/or <a href="../../properties/end/">End</a> properties are used to draw partial ellipses and circles. They specify start and
 end angles respectively, measuring from the x-axis at the centre of the bounding
 rectangle in a counter-clockwise direction and are expressed in radians. The
 type of arc is controlled by <a href="../../properties/arcmode/">ArcMode</a> as
@@ -71443,25 +71444,25 @@ follows:</p>
 </tr>
 </tbody>
 </table>
-<p><a href="../../properties/lstyle/">LStyle</a> and <a href="../../properties/lwidth/">LWidth</a> define the style and width of the lines used to draw the boundaries of the
-ellipse(s), circle(s) or arc(s). <a href="../../properties/fcol/">FCol</a> and <a href="../../properties/bcol/">BCol</a> determine the colour of the lines.</p>
+<p><a href="../../properties/lstyle/">LStyle</a> and <a href="../../properties/lwidth/">LWidth</a> define the style and width of the lines used to draw the boundaries of the
+ellipse(s), circle(s) or arc(s). <a href="../../properties/fcol/">FCol</a> and <a href="../../properties/bcol/">BCol</a> determine the colour of the lines.</p>
 <p><a href="../../properties/fstyle/">FStyle</a> specifies whether or not the
-ellipse(s), circle(s) or arc(s) are filled, and if so, how. For a solid fill (<a href="../../properties/fstyle/">FStyle</a> 0), <a href="../../properties/fillcol/">FillCol</a> defines the fill colour used.
-For a pattern fill (<a href="../../properties/fstyle/">FStyle</a> 1-6) <a href="../../properties/fillcol/">FillCol</a> defines the colour of the hatch lines and <a href="../../properties/bcol/">BCol</a> the colour of the spaces between them.</p>
+ellipse(s), circle(s) or arc(s) are filled, and if so, how. For a solid fill (<a href="../../properties/fstyle/">FStyle</a> 0), <a href="../../properties/fillcol/">FillCol</a> defines the fill colour used.
+For a pattern fill (<a href="../../properties/fstyle/">FStyle</a> 1-6) <a href="../../properties/fillcol/">FillCol</a> defines the colour of the hatch lines and <a href="../../properties/bcol/">BCol</a> the colour of the spaces between them.</p>
 <p>The value of <a href="../../properties/dragable/">Dragable</a> determines
-whether or not the object can be dragged. The value of <a href="../../properties/autoconf/">AutoConf</a> determines whether or not the Ellipse object is resized when its parent is
+whether or not the object can be dragged. The value of <a href="../../properties/autoconf/">AutoConf</a> determines whether or not the Ellipse object is resized when its parent is
 resized.</p>
 <p>The structure of the property values is best considered separately for single
 and multiple ellipses, circles or arcs.</p>
 <h2 id="single-ellipse-circle-or-arc">Single Ellipse, Circle or Arc</h2>
-<p>For a single ellipse, circle or arc, <a href="../../properties/points/">Points</a> is a 2-element vector which specifies the y-coordinate and x-coordinate of the
+<p>For a single ellipse, circle or arc, <a href="../../properties/points/">Points</a> is a 2-element vector which specifies the y-coordinate and x-coordinate of the
 top-left corner of the bounding rectangle.</p>
 <p><a href="../../properties/size/">Size</a> is also a simple 2-element vector
 whose elements specify the height and width of the bounding rectangle.</p>
-<p><a href="../../properties/lstyle/">LStyle</a> and <a href="../../properties/lwidth/">LWidth</a> are both simple scalar numbers.</p>
+<p><a href="../../properties/lstyle/">LStyle</a> and <a href="../../properties/lwidth/">LWidth</a> are both simple scalar numbers.</p>
 <p><a href="../../properties/fstyle/">FStyle</a> is either a single number
-specifying a standard fill pattern, or the name of a <a href="../bitmap/">Bitmap</a> object which is to be used to fill the ellipse, circle or arc.</p>
-<p><a href="../../properties/fcol/">FCol</a>, <a href="../../properties/bcol/">BCol</a> and <a href="../../properties/fillcol/">FillCol</a> are each either single numbers
+specifying a standard fill pattern, or the name of a <a href="../bitmap/">Bitmap</a> object which is to be used to fill the ellipse, circle or arc.</p>
+<p><a href="../../properties/fcol/">FCol</a>, <a href="../../properties/bcol/">BCol</a> and <a href="../../properties/fillcol/">FillCol</a> are each either single numbers
 representing standard colours, or 3-element vectors which specify colours
 explicitly in terms of their RGB values.</p>
 <h2 class="example">Examples</h2>
@@ -71488,7 +71489,7 @@ the upper right quadrant (0 to 90 degrees):
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F.E1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Ellipse'</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">5</span><span class="p">)(</span><span class="m">30</span><span class="w"> </span><span class="m">50</span><span class="p">)(</span><span class="s1">'Start'</span><span class="p">(</span><span class="o">○</span><span class="m">0.25</span><span class="p">))(</span><span class="s1">'End'</span><span class="p">(</span><span class="o">○</span><span class="m">0.75</span><span class="p">))(</span><span class="s1">'ArcMode'</span><span class="w"> </span><span class="m">2</span><span class="p">)(</span><span class="s1">'FCol'</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">255</span><span class="p">)(</span><span class="s1">'FStyle'</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="s1">'FillCol'</span><span class="w"> </span><span class="m">255</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="multiple-ellipses-circles-or-arcs">Multiple Ellipses, Circles or Arcs</h2>
-<p>To draw a set of ellipses, circles, or arcs with a single name, <a href="../../properties/points/">Points</a> may be a simple 2-element vector (specifying the location of all the bounding
+<p>To draw a set of ellipses, circles, or arcs with a single name, <a href="../../properties/points/">Points</a> may be a simple 2-element vector (specifying the location of all the bounding
 rectangles), <strong>or</strong> a 2-column matrix whose first column specifies their
 y-coordinates and whose second column specifies their x-coordinates, <strong>or</strong> a
 2-element nested vector whose first element specifies their y-coordinate(s) and
@@ -71498,27 +71499,27 @@ vector (applying to all the bounding rectangles), <strong>or</strong> a 2-column
 whose first column specifies their heights and whose second column specifies
 their widths, <strong>or</strong> a 2-element nested vector whose first element specifies
 their height(s) and whose second element specifies their width(s).</p>
-<p>If specified, <a href="../../properties/start/">Start</a> and/or <a href="../../properties/end/">End</a> define arcs in terms of the angles made by drawing a line from the centre of the
+<p>If specified, <a href="../../properties/start/">Start</a> and/or <a href="../../properties/end/">End</a> define arcs in terms of the angles made by drawing a line from the centre of the
 bounding box to the two ends of the arc. Both properties may be simple scalars,
 or vectors containing one element per arc drawn.</p>
 <p>If <a href="../../properties/start/">Start</a> is specified, but not <a href="../../properties/end/">End</a>,
 end angles default to <code>(¯1↓+\Start),○2</code>.
 If <a href="../../properties/end/">End</a> is specified, but not <a href="../../properties/start/">Start</a>,
 start angles default to <code>0,¯1↓+\End</code></p>
-<p>This means that you can draw a pie-chart using either <a href="../../properties/start/">Start</a> or <a href="../../properties/end/">End</a> angles; you do not have to specify both.</p>
-<p><a href="../../properties/arcmode/">ArcMode</a>, <a href="../../properties/lstyle/">LStyle</a> and <a href="../../properties/lwidth/">LWidth</a> may each be simple scalar values
+<p>This means that you can draw a pie-chart using either <a href="../../properties/start/">Start</a> or <a href="../../properties/end/">End</a> angles; you do not have to specify both.</p>
+<p><a href="../../properties/arcmode/">ArcMode</a>, <a href="../../properties/lstyle/">LStyle</a> and <a href="../../properties/lwidth/">LWidth</a> may each be simple scalar values
 (applying to all the ellipses, circles or arcs) or simple vectors whose elements
 refer to each of the corresponding ellipses, circles or arcs in turn.</p>
 <p><a href="../../properties/fstyle/">FStyle</a> may be a simple scalar numeric or
 a simple character vector (<a href="../bitmap/">Bitmap</a> name)
 applying to all rectangles, or a vector whose elements refer to each of the
 corresponding ellipses, circles or arcs in turn.</p>
-<p>Similarly, <a href="../../properties/fcol/">FCol</a>, <a href="../../properties/bcol/">BCol</a> and <a href="../../properties/fillcol/">FillCol</a> may each be single numbers or a
+<p>Similarly, <a href="../../properties/fcol/">FCol</a>, <a href="../../properties/bcol/">BCol</a> and <a href="../../properties/fillcol/">FillCol</a> may each be single numbers or a
 single (enclosed) 3-element vector applying to all the rectangles.
 Alternatively, these properties may contain vectors whose elements refer to each
 of the rectangles in turn. If so, their elements may be single numbers or nested
 RGB triplets, or a combination of the two.</p>
-<p>The <a href="../../properties/coord/">Coord</a>, <a href="../../properties/dragable/">Dragable</a> and <a href="../../properties/data/">Data</a> properties are specified for the
+<p>The <a href="../../properties/coord/">Coord</a>, <a href="../../properties/dragable/">Dragable</a> and <a href="../../properties/data/">Data</a> properties are specified for the
 object as a whole, and may not be allocated different values for each individual
 ellipse, circle or arc that is drawn.</p>
 <h2 class="example">Examples</h2>

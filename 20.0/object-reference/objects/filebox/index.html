@@ -34980,8 +34980,6 @@
         
       
         
-          
-        
       
         
       
@@ -35365,24 +35363,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56492,6 +56491,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,25 +71275,8 @@
 
 <h1 class="heading"><span class="name">FileBox</span> <span class="command">Object</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td><a href="../../parentlists/filebox/">Parents</a></td>
-<td><a href="../../childlists/filebox/">Children</a></td>
-<td><a href="../../proplists/filebox/">Properties</a></td>
-<td><a href="../../methodlists/filebox/">Methods</a></td>
-<td><a href="../../eventlists/filebox/">Events</a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr>
-<td>Purpose:</td>
-<td>Prompts user to select a file.</td>
-</tr>
-</tbody>
-</table>
+<p><a href="../../parentlists/filebox/">Parents</a>, <a href="../../childlists/filebox/">Children</a>, <a href="../../proplists/filebox/">Properties</a>, <a href="../../methodlists/filebox/">Methods</a>, <a href="../../eventlists/filebox/">Events</a></p>
+<p><strong>Purpose:</strong> Prompts user to select a file.</p>
 <p><strong>Description</strong></p>
 <p>The FileBox object implements the standard Windows FileSelection Dialog Box. This is a "modal" object. When you create a FileBox with <a href="../../../language-reference-guide/system-functions/wc"><code>⎕WC</code></a>, it is initially invisible and the user cannot interact with it. To use it, you must execute <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> with the name of the FileBox as its right argument. This causes the FileBox to be displayed. During the "local" <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> the user may interact <strong>only</strong> with the FileBox, or with other applications. When the user terminates the operation (by pressing the "Save", "Open", or "Cancel" Buttons, or by closing the window) the "local" <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> terminates, and the FileBox disappears.</p>
 <p>When the "local" <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> is terminated, the FileBox generates either an <a href="../../methodorevents/fileboxok/">FileBoxOK</a>(71) or <a href="../../methodorevents/fileboxcancel/">FileBoxCancel</a>(72) event. The former is generated when the user presses the "Save" or "Open" button; the latter when the user presses the "Cancel" button or closes the FileBox.</p>
@@ -71287,9 +71288,9 @@
 </code></pre></div>
 <p>The <a href="../../properties/style/">Style</a> property specifies whether the user may choose a single file name (<code>'Single'</code>  which is the default) or several file names (<code>'Multi')</code>.</p>
 <p>The <a href="../../properties/filters/">Filters</a> property is a nested scalar or vector containing a list of filters. Each filter is a 2-element vector of character vectors which contain a file type mask and a file type description respectively. The file type descriptions appear in a drop-down combo box labelled "List File of Type". When the user selects one of these, the currently selected directory is searched for files which match the corresponding mask. The default value of <a href="../../properties/filters/">Filters</a> is an empty vector. This gives a file type mask of "<em>.</em>" and a file type description of "All Files (<em>.</em>)". Hence an empty vector is equivalent to <code>(⊂'*.*' 'All Files (*.*)').</code></p>
-<p>The <a href="../../properties/">Index</a> property determines which of the filters is initially selected. Its default value is <code>⎕IO</code>.</p>
-<p>Note that when <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> terminates with <a href="../../methodorevents/fileboxok/">FileBoxOK</a>, the <a href="../../properties/file/">File</a>, <a href="../../properties/directory/">Directory</a>, and <a href="../../properties/">Index</a> properties are updated to reflect the contents of the fields within the FileBox.</p>
-<p>The operating system imposes limits on both the length of the name of the file, and on the total path length. In version 20.0attempting to set the <code>File</code> or <code>Directory</code> Properties to too long a name will generate a DOMAIN ERROR, while attempting to use too long a File name within the FileBox will result in the appearence of an error MessageBox.</p>
+<p>The <a href="../../properties/index-property/">Index</a> property determines which of the filters is initially selected. Its default value is <code>⎕IO</code>.</p>
+<p>Note that when <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> terminates with <a href="../../methodorevents/fileboxok/">FileBoxOK</a>, the <a href="../../properties/file/">File</a>, <a href="../../properties/directory/">Directory</a>, and <a href="../../properties/index-property/">Index</a> properties are updated to reflect the contents of the fields within the FileBox.</p>
+<p>The operating system imposes limits on both the length of the name of the file, and on the total path length. In version 20.0attempting to set the <code>File</code> or <code>Directory</code> Properties to too long a name will generate a DOMAIN ERROR, while attempting to use too long a File name within the FileBox will result in the appearence of an error MessageBox.</p>
 
 
 

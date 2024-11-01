@@ -34980,8 +34980,6 @@
         
       
         
-          
-        
       
         
       
@@ -35365,24 +35363,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56484,6 +56483,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,32 +71275,15 @@
 
 <h1 class="heading"><span class="name">Locator</span> <span class="command">Object</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td><a href="../../parentlists/locator/">Parents</a></td>
-<td><a href="../../childlists/locator/">Children</a></td>
-<td><a href="../../proplists/locator/">Properties</a></td>
-<td><a href="../../methodlists/locator/">Methods</a></td>
-<td><a href="../../eventlists/locator/">Events</a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr>
-<td>Purpose:</td>
-<td>Allows the user to input a point, ellipse, line or rectangle.</td>
-</tr>
-</tbody>
-</table>
+<p><a href="../../parentlists/locator/">Parents</a>, <a href="../../childlists/locator/">Children</a>, <a href="../../proplists/locator/">Properties</a>, <a href="../../methodlists/locator/">Methods</a>, <a href="../../eventlists/locator/">Events</a></p>
+<p><strong>Purpose:</strong> Allows the user to input a point, ellipse, line or rectangle.</p>
 <p><strong>Description</strong></p>
 <p>This object is used to obtain graphical input from the user. Like a pop-up
 menu or a <a href="../msgbox/">MsgBox</a>, the Locator is a <em>modal</em> object whose interaction with the user is initiated by a "local" <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>.</p>
 <p>This is terminated when the user releases a mouse button or presses any key
 other than a cursor movement key, Shift, Ctrl or Alt. It is usual to initiate
-the <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> for the Locator from within a callback function attached to a <a href="../../methodorevents/mousedown/">MouseDown</a> (1) <a href="../../properties/event/">Event</a>.</p>
-<p>When the "local" <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> is terminated, a <a href="../../methodorevents/locator/">Locator</a> (80) <a href="../../properties/event/">Event</a> is generated. The associated event message contains the new position and size of
+the <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> for the Locator from within a callback function attached to a <a href="../../methodorevents/mousedown/">MouseDown</a> (1) <a href="../../properties/event/">Event</a>.</p>
+<p>When the "local" <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> is terminated, a <a href="../../methodorevents/locator/">Locator</a> (80) <a href="../../properties/event/">Event</a> is generated. The associated event message contains the new position and size of
 the Locator, together with how the event was generated (keystroke or mouse
 button). To obtain the Locator's new position or size, you <strong>must</strong> enable
 the event by setting its "action" code to 1, or to the name of a
@@ -71293,12 +71294,12 @@ the type of locator displayed. It may be <code>'Point'</code>,
 or <code>'Ellipse'</code>. The default value is <code>'Rect'</code>.
 The value of the <a href="../../properties/sizeable/">Sizeable</a> property is 0 or
 1 and determines whether or not "rubberbanding" is enabled. Its
-default value is 1 which turns "rubberbanding" on. The <a href="../../properties/size/">Size</a> property determines the initial size of the Locator when displayed by <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>.
+default value is 1 which turns "rubberbanding" on. The <a href="../../properties/size/">Size</a> property determines the initial size of the Locator when displayed by <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a>.
 Its default value is (0,0).</p>
 <p>If <a href="../../properties/style/">Style</a> is <code>'Rect'</code> the Locator displays a rectangle. One corner of the rectangle is positioned at <a href="../../properties/posn/">Posn</a>.
 The diagonally opposite corner is positioned at (<a href="../../properties/posn/">Posn</a>+<a href="../../properties/size/">Size</a>).
 If <a href="../../properties/sizeable/">Sizeable</a> is 0, the entire rectangle is
-dragged as the mouse is moved. If <a href="../../properties/sizeable/">Sizeable</a> is 1, the</p>
+dragged as the mouse is moved. If <a href="../../properties/sizeable/">Sizeable</a> is 1, the</p>
 <p>corner initially defined by (<a href="../../properties/posn/">Posn</a>+<a href="../../properties/size/">Size</a>)
 is dragged (rubberbanding the rectangle) as the mouse is moved. The rectangle
 disappears when the operation is terminated. The new position or size of the
@@ -71308,25 +71309,25 @@ message.</p>
 ellipse is positioned at <a href="../../properties/posn/">Posn</a>. The diagonally
 opposite corner is positioned at (<a href="../../properties/posn/">Posn</a>+<a href="../../properties/size/">Size</a>).
 If <a href="../../properties/sizeable/">Sizeable</a> is 0, the entire ellipse is
-dragged as the mouse is moved. If <a href="../../properties/sizeable/">Sizeable</a> is 1, the corner of the bounding rectangle initially defined by (<a href="../../properties/posn/">Posn</a>+<a href="../../properties/size/">Size</a>)
+dragged as the mouse is moved. If <a href="../../properties/sizeable/">Sizeable</a> is 1, the corner of the bounding rectangle initially defined by (<a href="../../properties/posn/">Posn</a>+<a href="../../properties/size/">Size</a>)
 is dragged (rubberbanding the ellipse) as the mouse is moved. The ellipse
 disappears when the operation is terminated. The new position or size of the
-bounding rectangle of the ellipse is reported in the <a href="../../methodorevents/locator/">Locator</a> event message.</p>
-<p>If <a href="../../properties/style/">Style</a> is <code>'Line'</code> the Locator displays a line drawn between the points defined by <a href="../../properties/posn/">Posn</a> and <a href="../../properties/posn/">Posn</a>+<a href="../../properties/size/">Size</a>.
+bounding rectangle of the ellipse is reported in the <a href="../../methodorevents/locator/">Locator</a> event message.</p>
+<p>If <a href="../../properties/style/">Style</a> is <code>'Line'</code> the Locator displays a line drawn between the points defined by <a href="../../properties/posn/">Posn</a> and <a href="../../properties/posn/">Posn</a>+<a href="../../properties/size/">Size</a>.
 If <a href="../../properties/sizeable/">Sizeable</a> is 0, the line is dragged with
-the cursor as the mouse is moved. If <a href="../../properties/sizeable/">Sizeable</a> is 1, the end of the line initially defined by <a href="../../properties/posn/">Posn</a>+<a href="../../properties/size/">Size</a> is dragged (rubberbanding the line) as the mouse is moved. The line disappears
+the cursor as the mouse is moved. If <a href="../../properties/sizeable/">Sizeable</a> is 1, the end of the line initially defined by <a href="../../properties/posn/">Posn</a>+<a href="../../properties/size/">Size</a> is dragged (rubberbanding the line) as the mouse is moved. The line disappears
 when the operation is terminated. The new position or size of the line is
 reported in the <a href="../../methodorevents/locator/">Locator</a> event message.</p>
 <p>If <code>'Style'</code> is <code>'Point'</code>,
-the values of <a href="../../properties/sizeable/">Sizeable</a> and <a href="../../properties/size/">Size</a> are ignored. During the <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> no visible feedback (other than the cursor) is provided as the user moves the
-mouse. When the <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> terminates, the new position of the Locator is reported in the <a href="../../methodorevents/locator/">Locator</a> event message.</p>
+the values of <a href="../../properties/sizeable/">Sizeable</a> and <a href="../../properties/size/">Size</a> are ignored. During the <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> no visible feedback (other than the cursor) is provided as the user moves the
+mouse. When the <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> terminates, the new position of the Locator is reported in the <a href="../../methodorevents/locator/">Locator</a> event message.</p>
 <p>The <a href="../../properties/step/">Step</a> property is a 2-element integer vector (default value 1 1) that
 specifies the increments (in pixels) by which the size or position of the
 Locator changes in the Y and X directions respectively as the user moves the
 Locator.</p>
-<p>The Locator is normally initiated from a <a href="../../methodorevents/mousedown/">MouseDown</a> (1) event, and it is natural to place it at the current cursor position.
+<p>The Locator is normally initiated from a <a href="../../methodorevents/mousedown/">MouseDown</a> (1) event, and it is natural to place it at the current cursor position.
 However, if you are using rubberbanding, you will normally want to have the
-cursor appear at the end or corner of the Locator that moves. If you start with a non-zero sized Locator, you must set <a href="../../properties/posn/">Posn</a> (which defines the <strong>fixed</strong> end or corner) to the current cursor position
+cursor appear at the end or corner of the Locator that moves. If you start with a non-zero sized Locator, you must set <a href="../../properties/posn/">Posn</a> (which defines the <strong>fixed</strong> end or corner) to the current cursor position
 minus <a href="../../properties/size/">Size</a> to achieve this effect.</p>
 
 

@@ -34980,8 +34980,6 @@
         
       
         
-          
-        
       
         
       
@@ -35365,24 +35363,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56492,6 +56491,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,25 +71275,8 @@
 
 <h1 class="heading"><span class="name">BrowseBox</span> <span class="command">Object</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td><a href="../../parentlists/browsebox/">Parents</a></td>
-<td><a href="../../childlists/browsebox/">Children</a></td>
-<td><a href="../../proplists/browsebox/">Properties</a></td>
-<td><a href="../../methodlists/browsebox/">Methods</a></td>
-<td><a href="../../eventlists/browsebox/">Events</a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr>
-<td>Purpose:</td>
-<td>The BrowseBox object allows the user to browse for and select a folder         or other resource.</td>
-</tr>
-</tbody>
-</table>
+<p><a href="../../parentlists/browsebox/">Parents</a>, <a href="../../childlists/browsebox/">Children</a>, <a href="../../proplists/browsebox/">Properties</a>, <a href="../../methodlists/browsebox/">Methods</a>, <a href="../../eventlists/browsebox/">Events</a></p>
+<p><strong>Purpose:</strong> The BrowseBox object allows the user to browse for and select a folder         or other resource.</p>
 <p><strong>Description</strong></p>
 <p>The BrowseBox object is a dialog box that allows the user to browse for and
             select a folder (directory) or other resource.</p>
@@ -71294,7 +71295,7 @@ is 0.</p>
 <p>A BrowseBox may only be used by the execution of a modal <code>⎕DQ</code>.
 The action code for the FileBoxOK and FileBoxCancel events must be set to 1 so
 that the appropriate result is returned by the modal <code>⎕DQ</code>.</p>
-<p>After the user has pressed OK or Cancel, the <a href="../../properties/target/">Target</a> property contains the name of the chosen folder or other resource.</p>
+<p>After the user has pressed OK or Cancel, the <a href="../../properties/target/">Target</a> property contains the name of the chosen folder or other resource.</p>
 <h2 class="example">Example</h2>
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">DIR</span><span class="kd">←</span><span class="kt">{</span><span class="nv">START_DIR</span><span class="kt">}</span><span class="nv">GetDir</span><span class="w"> </span><span class="nv">CAPTION</span><span class="sr">;</span><span class="nv">BB</span><span class="sr">;</span><span class="nv">MSG</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="c1">⍝ Ask user for a Directory name</span>

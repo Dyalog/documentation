@@ -34980,8 +34980,6 @@
         
       
         
-          
-        
       
         
       
@@ -35365,24 +35363,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56484,6 +56483,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,41 +71275,24 @@
 
 <h1 class="heading"><span class="name">TCPSocket</span> <span class="command">Object</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td><a href="../../parentlists/tcpsocket/">Parents</a></td>
-<td><a href="../../childlists/tcpsocket/">Children</a></td>
-<td><a href="../../proplists/tcpsocket/">Properties</a></td>
-<td><a href="../../methodlists/tcpsocket/">Methods</a></td>
-<td><a href="../../eventlists/tcpsocket/">Events</a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr>
-<td>Purpose:</td>
-<td>The TCPSocket object provides an interface to TCP/IP.</td>
-</tr>
-</tbody>
-</table>
+<p><a href="../../parentlists/tcpsocket/">Parents</a>, <a href="../../childlists/tcpsocket/">Children</a>, <a href="../../proplists/tcpsocket/">Properties</a>, <a href="../../methodlists/tcpsocket/">Methods</a>, <a href="../../eventlists/tcpsocket/">Events</a></p>
+<p><strong>Purpose:</strong> The TCPSocket object provides an interface to TCP/IP.</p>
 <p><strong>Description</strong></p>
 <p>The TCPSocket object provides an event-driven mechanism to communicate with
-other programs (including Dyalog APL) via TCP sockets. Dyalog recommends that Conga is used in preference to TCPSockets in new applications.</p>
+other programs (including Dyalog APL) via TCP sockets. Dyalog recommends that Conga is used in preference to TCPSockets in new applications.</p>
 <p>The <a href="../../properties/sockettype/">SocketType</a> property is a
 character vector that specifies the type of the TCP/IP socket. This is either '<code>Stream'</code> (the
-default), or <code>'UDP'</code>. <a href="../../properties/sockettype/">SocketType</a> must be defined when the object is created and cannot be set or changed using <code>⎕WS</code>.</p>
+default), or <code>'UDP'</code>. <a href="../../properties/sockettype/">SocketType</a> must be defined when the object is created and cannot be set or changed using <code>⎕WS</code>.</p>
 <p>The Style property is a character vector that specifies the type of data
 transmitted or received by the socket; it may be <code>'Char'</code>,
 <code>'Raw'</code>, or <code>'APL'</code>.
-The value <code>'APL'</code> is valid only if the <a href="../../properties/sockettype/">SocketType</a> is '<code>Stream'</code>.</p>
+The value <code>'APL'</code> is valid only if the <a href="../../properties/sockettype/">SocketType</a> is '<code>Stream'</code>.</p>
 <p>The <a href="../../properties/encoding/">Encoding</a> property is a character
 vector that specifies how character data are encoded or translated. The possible
 values are <code>'None'</code>, <code>'UTF-8'</code>, <code>'Classic'</code>
 or <code>'Unicode'</code>, depending upon the value of the Style
 property.</p>
-<p><a href="../../properties/localaddr/">LocalAddr</a> and <a href="../../properties/localport/">LocalPort</a> properties identify your end of the connection; <a href="../../properties/remoteaddr/">RemoteAddr</a> and <a href="../../properties/remoteport/">RemotePort</a> identify the other end of
+<p><a href="../../properties/localaddr/">LocalAddr</a> and <a href="../../properties/localport/">LocalPort</a> properties identify your end of the connection; <a href="../../properties/remoteaddr/">RemoteAddr</a> and <a href="../../properties/remoteport/">RemotePort</a> identify the other end of
 the connection. The values of the two sets of properties are clearly
 symmetrical; your <a href="../../properties/localaddr/">LocalAddr</a> is your
 partner's <a href="../../properties/remoteaddr/">RemoteAddr</a>, and there are
@@ -71299,7 +71300,7 @@ strict rules concerning which of them you and your partner may set. See the
 individual descriptions of these properties for details.</p>
 <p>The <a href="../../properties/socketnumber/">SocketNumber</a> property is the
 Window handle of the socket attached to the TCPSocket object and is generally a
-read-only property. The only time that <a href="../../properties/socketnumber/">SocketNumber</a> may be specified is when a server replicates (clones) a listening socket to
+read-only property. The only time that <a href="../../properties/socketnumber/">SocketNumber</a> may be specified is when a server replicates (clones) a listening socket to
 which a client has just connected.</p>
 
 

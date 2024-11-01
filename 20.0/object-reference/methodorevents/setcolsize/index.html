@@ -34974,8 +34974,6 @@
         
       
         
-          
-        
       
         
       
@@ -35359,24 +35357,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38661,6 +38651,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56484,6 +56483,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,15 +71275,7 @@
 
 <h1 class="heading"><span class="name">SetColSize</span> <span class="command">Event 176</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td>Applies To:</td>
-<td><a href="../../objects/grid/">Grid</a></td>
-<td><a href="../../objects/listview/">ListView</a></td>
-</tr>
-</tbody>
-</table>
+<p><strong>Applies To:</strong> <a href="../../objects/grid/">Grid</a>, <a href="../../objects/listview/">ListView</a></p>
 <p><strong>Description</strong></p>
 <p>If enabled, this event is reported when the user changes the width of a column in a <a href="../../objects/grid/">Grid</a> or <a href="../../objects/listview/">ListView</a> object, or changes the width of the row titles in a <a href="../../objects/grid/">Grid</a>. This may be done by dragging a border with the mouse or by double-clicking over a border. In the former case, the default action is to adjust the width of the appropriate column or the width of the row title area to the size selected by the user. In the latter case, the default action is to adjust the width to the maximum required to display all the data.</p>
 <p>In either case, you can disable the default action by setting the event action code to <code>¯1</code> or you can selectively prevent a particular resize operation from taking place by returning 0 from a callback function.</p>
@@ -71284,7 +71294,7 @@
 </tr>
 <tr>
 <td><code>[3]</code></td>
-<td>Column number</td>
+<td>Column number</td>
 <td>Integer. This is sensitive to the index origin, <code>⎕IO</code> , but is <code>¯1</code> if the user has resized the row titles in a Grid.</td>
 </tr>
 <tr>
@@ -71294,7 +71304,7 @@
 </tr>
 <tr>
 <td><code>[5]</code></td>
-<td>Undo flag</td>
+<td>Undo flag</td>
 <td>0 or 1</td>
 </tr>
 </tbody>

@@ -34974,8 +34974,6 @@
         
       
         
-          
-        
       
         
       
@@ -35359,24 +35357,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56492,6 +56491,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,25 +71275,15 @@
 
 <h1 class="heading"><span class="name">CMap</span> <span class="command">Property</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td>Applies To:</td>
-<td><a href="../../objects/bitmap/">Bitmap</a></td>
-<td><a href="../../objects/clipboard/">Clipboard</a></td>
-<td><a href="../../objects/cursor/">Cursor</a></td>
-<td><a href="../../objects/icon/">Icon</a></td>
-</tr>
-</tbody>
-</table>
+<p><strong>Applies To:</strong> <a href="../../objects/bitmap/">Bitmap</a>, <a href="../../objects/clipboard/">Clipboard</a>, <a href="../../objects/cursor/">Cursor</a>, <a href="../../objects/icon/">Icon</a></p>
 <p><strong>Description</strong></p>
 <p>This property defines the table of colours (the colour map) used by a <a href="../../objects/bitmap/">Bitmap</a> or <a href="../../objects/icon/">Icon</a> object or by a bitmap stored in the Windows clipboard. Its value is a 3-column integer matrix of numbers in the range 0-255. Each row represents a separate colour which is indexed (0-origin) by values in the <a href="../bits/">Bits</a> property. The 3 columns refer to the intensities of the red, green and blue components of colour respectively.</p>
 <p>Please note that <a href="../bits/">Bits</a> and CMap may <strong>only</strong> be used to represent an image with a colour palette of <strong>256 colours or less</strong>. If the colour palette is larger, the values of <a href="../bits/">Bits</a> and CMap reported by <code>⎕WG</code> will be (0 0). For a high-colour image, use <a href="../cbits/">CBits</a> instead.</p>
 <p>When you create a <a href="../../objects/bitmap/">Bitmap</a> or <a href="../../objects/icon/">Icon</a> by specifying <a href="../bits/">Bits</a> and CMap, the actual colours you obtain are not necessarily those that you specified. This is partly due to hardware restrictions and partly due to the way in which Windows manages colours. Firstly, your display adapter and driver limit the number of pure colours that can be displayed at any one time and therefore define a maximum size for the colour map. For example, on a <strong>standard</strong> VGA you are limited to 16 different pure colours (additional ones are provided by <strong>dithering</strong>).</p>
 <p>Secondly, Windows reserves a certain number of colours in the colour map for its own use. When an application requests a new colour (that is, one that is not already installed in the colour map), MS-Windows either assigns it to a spare entry, or allocates the <strong>closest match</strong> if the colour map is full. The value of <a href="../bits/">Bits</a> and CMap after <a href="../../../language-reference-guide/system-functions/wc"><code>⎕WC</code></a> reflect the actual colours allocated and may bear little resemblance to the values you assigned to these properties initially.</p>
 <p>Note that if you are running 16 colours, MS-Windows reserves all 16 entries in the colour map for its own use. This means that on a 16-colour system, you <strong>cannot</strong> use any colours other than the default ones reserved by MS-Windows. In practice, the "standard" 16-colour CMap is shown in the following table.</p>
-<table>
-<thead>
+<table id="default-16-colour-cmap">
+<caption style="caption-side:bottom">Table 1: The default 16-colour CMap </caption><thead>
 <tr>
 <th>Bits[]</th>
 <th colspan="3">CMap</th>

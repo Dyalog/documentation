@@ -34980,8 +34980,6 @@
         
       
         
-          
-        
       
         
       
@@ -35365,24 +35363,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56484,6 +56483,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,25 +71275,8 @@
 
 <h1 class="heading"><span class="name">StatusBar</span> <span class="command">Object</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td><a href="../../parentlists/statusbar/">Parents</a></td>
-<td><a href="../../childlists/statusbar/">Children</a></td>
-<td><a href="../../proplists/statusbar/">Properties</a></td>
-<td><a href="../../methodlists/statusbar/">Methods</a></td>
-<td><a href="../../eventlists/statusbar/">Events</a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr>
-<td>Purpose:</td>
-<td>This object is used to manage <a href="../statusfield/">StatusField</a> objects which display  information for the user.</td>
-</tr>
-</tbody>
-</table>
+<p><a href="../../parentlists/statusbar/">Parents</a>, <a href="../../childlists/statusbar/">Children</a>, <a href="../../proplists/statusbar/">Properties</a>, <a href="../../methodlists/statusbar/">Methods</a>, <a href="../../eventlists/statusbar/">Events</a></p>
+<p><strong>Purpose:</strong> This object is used to manage <a href="../statusfield/">StatusField</a> objects which display  information for the user.</p>
 <p><strong>Description</strong></p>
 <p>The StatusBar is a container object that manages <a href="../statusfield/">StatusField</a>s. <a href="../statusfield/">StatusField</a> objects display textual information and are typically used for help messages and for monitoring the status of an application. They can also be used to automatically report the status of the Caps Lock, Num Lock, Scroll Lock, and Insert keys.</p>
 <div class="highlight"><pre><span></span><code><span class="s1">'TEST'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'StatusBar'</span><span class="w"> </span><span class="p">(</span><span class="s1">'EdgeStyle'</span><span class="w"> </span><span class="s1">'Default'</span><span class="p">)</span><span class="w"> </span>
@@ -71284,7 +71285,7 @@
 <span class="s1">'TEST.SB.S2'</span><span class="nf">⎕WC</span><span class="s1">'StatusField'</span><span class="w"> </span><span class="s1">'Field2:'</span><span class="w"> </span><span class="s1">'text2'</span>
 <span class="s1">'TEST.SB.S3'</span><span class="nf">⎕WC</span><span class="s1">'StatusField'</span><span class="w"> </span><span class="s1">'Field3:'</span><span class="w"> </span><span class="s1">'text3'</span>
 </code></pre></div>
-<p><figure id="_figure-1"><img alt="sb_example" src="../../img/sb-example.png"><figcaption>Figure 1: sb_example</figcaption></figure></p>
+<p><img alt="" src="../../img/sb-example.png"></p>
 <p>The <a href="../../properties/align/">Align</a> property determines to which side of the parent <a href="../form/">Form</a> or <a href="../subform/">SubForm</a> the StatusBar is attached. By default, a StatusBar is positioned along the lower edge of the <a href="../form/">Form</a> (<a href="../../properties/align/">Align </a><code>'Bottom')</code>.  Using the <a href="../../properties/align/">Align</a>, <a href="../../properties/posn/">Posn</a> and <a href="../../properties/size/">Size</a> properties you may create StatusBars in different positions and with differing sizes if you wish. Notice that the <a href="../../properties/align/">Align</a> property controls how the StatusBar reacts to its parent <a href="../form/">Form</a> being resized. If <a href="../../properties/align/">Align</a> is <code>'Top'</code> or <code>'Bottom'</code>, the StatusBar remains fixed in height but stretches and shrinks sideways with the <a href="../form/">Form</a>. If <a href="../../properties/align/">Align</a> is <code>'Left'</code> or <code>'Right'</code>, the StatusBar remains fixed in width and stretches and shrinks vertically with the <a href="../form/">Form</a>.</p>
 <p>By default a StatusBar has a Button Face colour background and the value of its <a href="../../properties/edgestyle/">EdgeStyle</a> property is <code>'Default'</code>. This gives it the appearance shown above.</p>
 <p>Unless you specify the position and size of its children, a StatusBar automatically manages their geometry. The first <a href="../statusfield/">StatusField</a> is positioned just inside its top left corner. If <a href="../../properties/align/">Align</a> is <code>'Top'</code> or <code>'Bottom'</code>, the next <a href="../statusfield/">StatusField</a> is positioned alongside the first but with a small gap between them. Subsequent <a href="../statusfield/">StatusField</a>s are added in a similar fashion. If <a href="../../properties/align/">Align</a> is <code>'Left'</code> or <code>'Right'</code>, the second and subsequent <a href="../statusfield/">StatusField</a>s are added below the first with a similar gap between them. In either case you can position and size the <a href="../statusfield/">StatusField</a>s explicitly if you wish.</p>

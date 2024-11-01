@@ -34980,8 +34980,6 @@
         
       
         
-          
-        
       
         
       
@@ -35365,24 +35363,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56484,6 +56483,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,93 +71275,44 @@
 
 <h1 class="heading"><span class="name">ListView</span> <span class="command">Object</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td><a href="../../parentlists/listview/">Parents</a></td>
-<td><a href="../../childlists/listview/">Children</a></td>
-<td><a href="../../proplists/listview/">Properties</a></td>
-<td><a href="../../methodlists/listview/">Methods</a></td>
-<td><a href="../../eventlists/listview/">Events</a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr>
-<td>Purpose:</td>
-<td>The ListView object displays a collection of items.</td>
-</tr>
-</tbody>
-</table>
+<p><a href="../../parentlists/listview/">Parents</a>, <a href="../../childlists/listview/">Children</a>, <a href="../../proplists/listview/">Properties</a>, <a href="../../methodlists/listview/">Methods</a>, <a href="../../eventlists/listview/">Events</a></p>
+<p><strong>Purpose:</strong> The ListView object displays a collection of items.</p>
 <p><strong>Description</strong></p>
-<p>The ListView object is a window that displays a collection of items, each
-item consisting of an icon and a label. The ListView provides several ways of
-arranging items and displaying individual items. For example, additional
-information about each item can be displayed in columns to the right of the icon
-and label. An example of the use of a ListView object is the "My Computer"
-Windows utility.</p>
-<p>The Items property is a vector of character vectors that specifies the labels
-for the items displayed by the ListView. The <a href="../../properties/imagelistobj/">ImageListObj</a> property specifies the names of two <a href="../imagelist/">ImageList</a> objects that define two sets of icons; a large icon (32x32 pixel) set and a
-small icon (16x16 pixel) set. Alternatively, <a href="../../properties/imagelistobj/">ImageListObj</a> may be empty (no icons
-displayed) or contain just the name of a single large icon <a href="../imagelist/">ImageList</a>.</p>
-<p>The <a href="../../properties/view/">View</a> property contains a character
-vector that determines how the items are displayed. It may have one of the
-following values; <code>'Icon'</code> (the default), <code>'SmallIcon'</code>,
-<code>'List'</code> or <code>'Report'</code>.
-When View is <code>'Icon'</code> or <code>'SmallIcon'</code>,
-the items are arranged <em>row-wise</em> with large or small icons as appropriate.
-When View is set to <code>'List'</code>, the items are
-arranged <em>column-wise</em> using small icons. Examples of <code>'Icon'</code> and <code>'List'</code> views are illustrated below.</p>
-<p><figure id="_figure-1"><img alt="listview_icon" src="../../img/listview-icon.png"><figcaption>Figure 1: listview_icon</figcaption></figure></p>
-<p><figure id="_figure-2"><img alt="listview_list" src="../../img/listview-list.png"><figcaption>Figure 2: listview_list</figcaption></figure></p>
-<p>When View is set to <code>'Report'</code>, the items
-are displayed in a single column using small icons but with the matrix specified
-by <a href="../../properties/reportinfo/">ReportInfo</a> displayed alongside. In
-this format, the Boolean <a href="../../properties/header/">Header</a> property
-determines whether or not the object also provides column headings. Its default
-value is 1. The column headings themselves are specified by the ColTitles
-property. Their alignment (and the alignment of the data in the columns beneath
-them) is defined by the <a href="../../properties/coltitlealign/">ColTitleAlign</a> property.</p>
-<p>The appearance of the column titles is further controlled by the <a href="../../properties/coltitle3d/">ColTitle3D</a> property. This is a Boolean value (default 1) which specifies whether or not the
-column titles have a 3-dimensional (plinth) appearance. <a href="../../properties/header/">Header</a> and <a href="../../properties/coltitle3d/">ColTitle3D</a> may only be set when the
-object is created using <code>⎕WC</code> and may
-not subsequently be changed by <code>⎕WS</code>.</p>
-<p>In <code>'Report'</code> View, columns may be
-resized by the user dragging the bars between the titles, or under program
-control using the SetColSize event. A <code>'Report'</code> view example is illustrated below.</p>
-<p><figure id="_figure-3"><img alt="listview_report" src="../../img/listview-report.png"><figcaption>Figure 3: listview_report</figcaption></figure></p>
-<p>The <a href="../../properties/dragitems/">DragItems</a> property is Boolean and
-specifies whether or not the user may drag an item from one position to another.
-Its default value is 1 (dragging is enabled).</p>
-<p>The <a href="../../properties/autoarrange/">AutoArrange</a> property is Boolean
-and specifies whether or not the items are automatically re-arranged whenever an
-item is repositioned by the user or moved under program control. Its default
-value is 0.</p>
-<p>The <a href="../../properties/editlabels/">EditLabels</a> is a Boolean property
-(default 0) that determines whether or not the user may edit the labels which
+<p>The ListView object is a window that displays a collection of items, each item consisting of an icon and a label. The ListView provides several ways of
+arranging items and displaying individual items. For example, additional information about each item can be displayed in columns to the right of the icon
+and label. An example of the use of a ListView object is the "My Computer" Windows utility.</p>
+<p>The Items property is a vector of character vectors that specifies the labels for the items displayed by the ListView. The <a href="../../properties/imagelistobj/">ImageListObj</a> property specifies the names of two <a href="../imagelist/">ImageList</a> objects that define two sets of icons; a large icon (32x32 pixel) set and a
+small icon (16x16 pixel) set. Alternatively, <a href="../../properties/imagelistobj/">ImageListObj</a> may be empty (no icons displayed) or contain just the name of a single large icon <a href="../imagelist/">ImageList</a>.</p>
+<p>The <a href="../../properties/view/">View</a> property contains a character vector that determines how the items are displayed. It may have one of the
+following values; <code>'Icon'</code> (the default), <code>'SmallIcon'</code>, <code>'List'</code> or <code>'Report'</code>. When View is <code>'Icon'</code> or <code>'SmallIcon'</code>, the items are arranged <em>row-wise</em> with large or small icons as appropriate. When View is set to <code>'List'</code>, the items are arranged <em>column-wise</em> using small icons. Examples of <code>'Icon'</code> and <code>'List'</code> views are illustrated below.</p>
+<p><img alt="" src="../../img/listview-icon.png"></p>
+<p><img alt="" src="../../img/listview-list.png"></p>
+<p>When View is set to <code>'Report'</code>, the items are displayed in a single column using small icons but with the matrix specified by <a href="../../properties/reportinfo/">ReportInfo</a> displayed alongside. In this format, the Boolean <a href="../../properties/header/">Header</a> property determines whether or not the object also provides column headings. Its default value is 1. The column headings themselves are specified by the ColTitles property. Their alignment (and the alignment of the data in the columns beneath them) is defined by the <a href="../../properties/coltitlealign/">ColTitleAlign</a> property.</p>
+<p>The appearance of the column titles is further controlled by the <a href="../../properties/coltitle3d/">ColTitle3D</a> property. This is a Boolean value (default 1) which specifies whether or not the column titles have a 3-dimensional (plinth) appearance. <a href="../../properties/header/">Header</a> and <a href="../../properties/coltitle3d/">ColTitle3D</a> may only be set when the object is created using <code>⎕WC</code> and may not subsequently be changed by <code>⎕WS</code>.</p>
+<p>In <code>'Report'</code> View, columns may be resized by the user dragging the bars between the titles, or under program control using the SetColSize event. A <code>'Report'</code> view example is illustrated below.</p>
+<p><img alt="" src="../../img/listview-report.png"></p>
+<p>The <a href="../../properties/dragitems/">DragItems</a> property is Boolean and specifies whether or not the user may drag an item from one position to another. Its default value is 1 (dragging is enabled).</p>
+<p>The <a href="../../properties/autoarrange/">AutoArrange</a> property is Boolean and specifies whether or not the items are automatically re-arranged whenever an
+item is repositioned by the user or moved under program control. Its default value is 0.</p>
+<p>The <a href="../../properties/editlabels/">EditLabels</a> is a Boolean property (default 0) that determines whether or not the user may edit the labels which
 are specified by the Items property.</p>
-<p>The <a href="../../properties/style/">Style</a> property may be <code>'Single'</code>,
-which specifies that only one item may be selected at a time, or <code>'Multi'</code> which permits multiple selections to be made. The default is <code>'Multi'</code>.</p>
-<p>The <a href="../../properties/checkboxes/">CheckBoxes</a> property is Boolean
-and specifies whether or not check boxes are drawn to the left of items. Its
+<p>The <a href="../../properties/style/">Style</a> property may be <code>'Single'</code>, which specifies that only one item may be selected at a time, or <code>'Multi'</code> which permits multiple selections to be made. The default is <code>'Multi'</code>.</p>
+<p>The <a href="../../properties/checkboxes/">CheckBoxes</a> property is Boolean and specifies whether or not check boxes are drawn to the left of items. Its
 default value is 0.</p>
-<p>The <a href="../../properties/gridlines/">GridLines</a> property is Boolean and
-specifies whether or not grid lines are drawn between items. This applies only
-when View is <code>'Report'</code>. Its default value
-is 0.</p>
+<p>The <a href="../../properties/gridlines/">GridLines</a> property is Boolean and specifies whether or not grid lines are drawn between items. This applies only
+when View is <code>'Report'</code>. Its default value is 0.</p>
 <p>In <code>'Report'</code> View, the <a href="../../properties/reportimageindex/">ReportImageIndex</a> property specify images to be displayed alongside each item, and overrides the images specified by <a href="../../properties/imagelistobj/">ImageListObj</a>. The <a href="../../properties/headerimagelist/">HeaderImageList</a> and <a href="../../properties/headerimageindex/">HeaderImageIndex</a>  properties specify images to be displayed alongside each column title.</p>
 <p>The following example illustrates the use of these properties.</p>
-<p><figure id="_figure-4"><img alt="listview_weather" src="../../img/listview-weather.png"><figcaption>Figure 4: listview_weather</figcaption></figure></p>
+<p><img alt="" src="../../img/listview-weather.png"></p>
 <p>The <a href="../../properties/reportbcol/">ReportBCol</a> property specifies each item's background colour.</p>
-<p>The <a href="../../properties/fullrowselect/">FullRowSelect</a> property is
-Boolean and specifies whether or not the entire row is highlighted to indicate
-selected items. This applies only when View is <code>'Report'</code>.
-Its default value is 0.</p>
-<p>The <a href="../../properties/itemgroups/">ItemGroups</a> and <a href="../../properties/itemgroupmetrics/">ItemGroupMetrics</a> properties allow you to display items in groups as illustrated below.</p>
-<p>**Note that this feature only applies if Native Look and Feel </p>
-<p>is enabled.**</p>
-<p><figure id="_figure-5"><img alt="lvsg1" src="../../img/lvsg1.gif"><figcaption>Figure 5: lvsg1</figcaption></figure></p>
+<p>The <a href="../../properties/fullrowselect/">FullRowSelect</a> property is Boolean and specifies whether or not the entire row is highlighted to indicate
+selected items. This applies only when View is <code>'Report'</code>. Its default value is 0.</p>
+<p>The <a href="../../properties/itemgroups/">ItemGroups</a> and <a href="../../properties/itemgroupmetrics/">ItemGroupMetrics</a> properties allow you to display items in groups as illustrated below.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature only applies if <a href="../../miscellaneous/windows-xp-look-and-feel/">Native Look and Feel</a> is enabled.</p>
+</div>
+<p><img alt="" src="../../img/lvsg1.gif"></p>
 
 
 

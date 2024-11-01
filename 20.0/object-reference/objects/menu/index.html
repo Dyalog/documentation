@@ -34980,8 +34980,6 @@
         
       
         
-          
-        
       
         
       
@@ -35365,24 +35363,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Properties
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
@@ -38667,6 +38657,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -49050,8 +49059,6 @@
         
       
         
-          
-        
       
         
       
@@ -49759,24 +49766,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../properties/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     (A-Z)
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_6">
@@ -56484,6 +56483,25 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/index-property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -71257,25 +71275,8 @@
 
 <h1 class="heading"><span class="name">Menu</span> <span class="command">Object</span></h1>
 
-<table>
-<tbody>
-<tr>
-<td><a href="../../parentlists/menu/">Parents</a></td>
-<td><a href="../../childlists/menu/">Children</a></td>
-<td><a href="../../proplists/menu/">Properties</a></td>
-<td><a href="../../methodlists/menu/">Methods</a></td>
-<td><a href="../../eventlists/menu/">Events</a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<tbody>
-<tr>
-<td>Purpose:</td>
-<td>This is a pop-up object which allows the user to initiate an action or         to select an option using a "menu".</td>
-</tr>
-</tbody>
-</table>
+<p><a href="../../parentlists/menu/">Parents</a>, <a href="../../childlists/menu/">Children</a>, <a href="../../proplists/menu/">Properties</a>, <a href="../../methodlists/menu/">Methods</a>, <a href="../../eventlists/menu/">Events</a></p>
+<p><strong>Purpose:</strong> This is a pop-up object which allows the user to initiate an action or         to select an option using a "menu".</p>
 <p><strong>Description</strong></p>
 <p>For a Menu that is owned by a <a href="../menubar/">MenuBar</a> or
 another Menu, the <a href="../../properties/caption/">Caption</a> property
@@ -71283,17 +71284,17 @@ determines the text string that is displayed as the "choice". The Menu
 is then popped up by the user clicking on this text. It is automatically popped
 down when the user chooses an option (by selecting a <a href="../menuitem/">MenuItem</a>)
 or cancels the operation (by clicking elsewhere).</p>
-<p>If a Menu belongs to a <a href="../form/">Form</a>, <a href="../subform/">SubForm</a> or is a top-level object, it must be popped up by the application. This is
-commonly done in response to a <a href="../../methodorevents/mousedown/">MouseDown</a> event. A Menu is popped-up by calling <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> with only the name of the Menu as its argument. The user may therefore not
+<p>If a Menu belongs to a <a href="../form/">Form</a>, <a href="../subform/">SubForm</a> or is a top-level object, it must be popped up by the application. This is
+commonly done in response to a <a href="../../methodorevents/mousedown/">MouseDown</a> event. A Menu is popped-up by calling <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> with only the name of the Menu as its argument. The user may therefore not
 interact with any other object until a selection is made or until the operation
 is cancelled. When either occurs, the Menu is automatically popped down and
-de-activated, and its <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> terminates.</p>
-<p>The Menu object does not have a <a href="../../properties/size/">Size</a> property. Instead, its size is determined automatically by its contents.</p>
+de-activated, and its <a href="../../../language-reference-guide/system-functions/dq"><code>⎕DQ</code></a> terminates.</p>
+<p>The Menu object does not have a <a href="../../properties/size/">Size</a> property. Instead, its size is determined automatically by its contents.</p>
 <p>If a Menu is owned by a <a href="../menubar/">MenuBar</a> or by
 another Menu, its position within its parent is also calculated automatically,
-dependent on the order in which other related objects are established. The <a href="../../properties/posn/">Posn</a> property may however be used to <strong>insert</strong> a new Menu into an existing
+dependent on the order in which other related objects are established. The <a href="../../properties/posn/">Posn</a> property may however be used to <strong>insert</strong> a new Menu into an existing
 structure. For example, having defined three Menu objects as children of a <a href="../menubar/">MenuBar</a>,
-you can insert a fourth one between the first and the second by specifying its <a href="../../properties/posn/">Posn</a> to be 2. Note that the value of <a href="../../properties/posn/">Posn</a> for the
+you can insert a fourth one between the first and the second by specifying its <a href="../../properties/posn/">Posn</a> to be 2. Note that the value of <a href="../../properties/posn/">Posn</a> for the
 Menus that were previously second and third will then be reset to 3 and 4
 respectively.</p>
 <p>If a Menu is a child of a <a href="../menubar/">MenuBar</a> which is
@@ -71308,9 +71309,9 @@ names of, or refs to, three <a href="../bitmap/">Bitmap</a> objects.
 The first <a href="../bitmap/">Bitmap</a> is displayed when the Menu
 does not have the focus (normal), the second when it does have the focus
 (highlighted). The third <a href="../bitmap/">Bitmap</a> is displayed
-when the Menu is made inactive (<a href="../../properties/active/">Active</a> property is 0). If <a href="../../properties/caption/">Caption</a> is also defined,
+when the Menu is made inactive (<a href="../../properties/active/">Active</a> property is 0). If <a href="../../properties/caption/">Caption</a> is also defined,
 it is displayed <strong>on top of</strong> the bitmaps.</p>
-<p>If the Menu is a submenu (owned by a Menu), you may set its <a href="../../properties/edgestyle/">EdgeStyle</a> property to <code>'Plinth'</code>. This causes the Menu
+<p>If the Menu is a submenu (owned by a Menu), you may set its <a href="../../properties/edgestyle/">EdgeStyle</a> property to <code>'Plinth'</code>. This causes the Menu
 to take on an appearance that is similar to a pushbutton and be raised when not
 selected and recessed when selected. Note that to enable 3-dimensional
 appearance, you must set <a href="../../properties/edgestyle/">EdgeStyle</a> to
