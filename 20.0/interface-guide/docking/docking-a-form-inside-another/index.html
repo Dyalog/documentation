@@ -67915,7 +67915,7 @@
         
   
   <span class="md-ellipsis">
-    Example Communication Between APLs
+    Communication Between APLs
   </span>
   
 
@@ -67936,7 +67936,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Server
+    Excel as the Server
   </span>
   
 
@@ -67957,7 +67957,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Client
+    Excel as the Client
   </span>
   
 
@@ -67978,7 +67978,7 @@
         
   
   <span class="md-ellipsis">
-    Example APL as Compute Server for Excel
+    APL as Compute Server for Excel
   </span>
   
 
@@ -71273,32 +71273,32 @@
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Host'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Host'</span>
 <span class="w">      </span><span class="nv">Host</span><span class="na">.</span><span class="nv">DockChildren</span><span class="kd">←</span><span class="s1">'Client'</span>
 </code></pre></div>
-<p><figure id="_figure-1"><img alt="docking_form_host 0" src="../../img/docking-form-host-0.png"><figcaption>Figure 1: docking_form_host 0</figcaption></figure></p>
+<p><img alt="" src="../../img/docking-form-host-0.png"></p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Client'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Client'</span>
 <span class="w">      </span><span class="nv">Client</span><span class="na">.</span><span class="nv">Dockable</span><span class="kd">←</span><span class="s1">'Always'</span>
 </code></pre></div>
-<p><figure id="_figure-2"><img alt="docking_form_client 0" src="../../img/docking-form-client-0.png"><figcaption>Figure 2: docking_form_client 0</figcaption></figure></p>
+<p><img alt="" src="../../img/docking-form-client-0.png"></p>
 <p>Notice that a dockable Form is indistinguishable in appearance between any other top-level Form except that it has additional items in its pop-up context (right mouse button) menu as shown.</p>
 <p>The following picture shows the effect of dragging the <code>Client</code> Form to the top edge of the <code>Host</code>, just before the mouse button is released.</p>
-<p><figure id="_figure-3"><img alt="docking_form_host 1" src="../../img/docking-form-host-1.png"><figcaption>Figure 3: docking_form_host 1</figcaption></figure></p>
+<p><img alt="" src="../../img/docking-form-host-1.png"></p>
 <p>The next picture shows the result after docking. The <code>Client</code> Form has become a SubForm (white is the default background colour for a SubForm) called <code>Host.Client</code>.</p>
-<p><figure id="_figure-4"><img alt="docking_form_host 2" src="../../img/docking-form-host-2.png"><figcaption>Figure 4: docking_form_host 2</figcaption></figure></p>
+<p><img alt="" src="../../img/docking-form-host-2.png"></p>
 <p>The third picture illustrates the effect of docking the <code>Client</code> on the left-hand edge.</p>
-<p><figure id="_figure-5"><img alt="docking_form_host 3" src="../../img/docking-form-host-3.png"><figcaption>Figure 5: docking_form_host 3</figcaption></figure></p>
+<p><img alt="" src="../../img/docking-form-host-3.png"></p>
 <p>The following picture shows the <code>Client</code> Form docked as a SubForm along the right edge of the <code>Host</code> Form.</p>
-<p><figure id="_figure-6"><img alt="docking_form_host 4" src="../../img/docking-form-host-4.png"><figcaption>Figure 6: docking_form_host 4</figcaption></figure></p>
+<p><img alt="" src="../../img/docking-form-host-4.png"></p>
 <p>It is also possible to dock a Form into an already docked Form.
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Client2'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Second Client'</span>
 <span class="w">      </span><span class="nv">Client2</span><span class="na">.</span><span class="nv">Dockable</span><span class="kd">←</span><span class="s1">'Always'</span>
 </code></pre></div>
-<p><figure id="_figure-7"><img alt="docking_form_client 1" src="../../img/docking-form-client-1.png"><figcaption>Figure 7: docking_form_client 1</figcaption></figure></p>
+<p><img alt="" src="../../img/docking-form-client-1.png"></p>
 <p>which we can make dockable in both the <code>Host</code> Form and the <code>Host.Client</code> SubForm:
 </p><div class="highlight"><pre><span></span><code><span class="nv">Host</span><span class="na">.</span><span class="nv">DockChildren</span><span class="w"> </span><span class="nv">Host</span><span class="na">.</span><span class="nv">Client</span><span class="na">.</span><span class="nv">DockChildren</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'Client2'</span>
 </code></pre></div>
 <p>The next picture shows <code>Client2</code> about to be docked in the <code>Client</code> SubForm:</p>
-<p><figure id="_figure-8"><img alt="docking_form_host 5" src="../../img/docking-form-host-5.png"><figcaption>Figure 8: docking_form_host 5</figcaption></figure></p>
+<p><img alt="" src="../../img/docking-form-host-5.png"></p>
 <p>And finally, after it has been docked.</p>
-<p><figure id="_figure-9"><img alt="docking_form_host 6" src="../../img/docking-form-host-6.png"><figcaption>Figure 9: docking_form_host 6</figcaption></figure></p>
+<p><img alt="" src="../../img/docking-form-host-6.png"></p>
 
 
 

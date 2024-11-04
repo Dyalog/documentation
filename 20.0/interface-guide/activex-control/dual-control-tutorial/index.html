@@ -68058,7 +68058,7 @@
         
   
   <span class="md-ellipsis">
-    Example Communication Between APLs
+    Communication Between APLs
   </span>
   
 
@@ -68079,7 +68079,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Server
+    Excel as the Server
   </span>
   
 
@@ -68100,7 +68100,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Client
+    Excel as the Client
   </span>
   
 
@@ -68121,7 +68121,7 @@
         
   
   <span class="md-ellipsis">
-    Example APL as Compute Server for Excel
+    APL as Compute Server for Excel
   </span>
   
 
@@ -71531,7 +71531,7 @@
 <p>The ActiveX control we will use in this example is deliberately an extremely simple one; so that the intricacies of the control itself do not get in the way of the principles involved. In practice, there are actually very few restrictions concerning the complexity of the ActiveX control, and it is perfectly possible to package complete multiple-window Dyalog APL applications in this way.</p>
 <p>Your ActiveX control will be called a <em>Dyalog Dual Control</em> and is based on the Dyalog APL TrackBar object.</p>
 <p>The Dual control allows the user to enter a number using a slider, whilst displaying its value in two different units. For example, you could use it to enter a temperature value which is displayed in both Centigrade and Fahrenheit units. Equally, the same control could be used to enter a measurement of length which is concurrently displayed in centimetres and inches.</p>
-<p><figure id="_figure-1"><img alt="dual overview" src="../../img/dual-overview.png"><figcaption>Figure 1: dual overview</figcaption></figure></p>
+<p><img alt="" src="../../img/dual-overview.png"></p>
 <h2 id="methods">Methods</h2>
 <p>None (the Dual control provides no methods.)</p>
 <h2 id="properties">Properties</h2>
@@ -71684,8 +71684,8 @@
 </code></pre></div>
 <p>Save the workspace (<code>c:\MyWS\Dual.dws</code>).</p>
 <p>From the Session <em>File</em> menu, select <em>Export</em>, choose where you want to save your OCX, and then click Save. It is a good idea to clear the <em>Runtime application</em> checkbox so that you can debug the control if anything goes wrong.</p>
-<p><figure id="_figure-2"><img alt="dual export" src="../../img/dual-export.png"><figcaption>Figure 2: dual export</figcaption></figure></p>
-<p><figure id="_figure-3"><img alt="dual export 1" src="../../img/dual-export-1.png"><figcaption>Figure 3: dual export 1</figcaption></figure></p>
+<p><img alt="" src="../../img/dual-export.png"></p>
+<p><img alt="" src="../../img/dual-export-1.png"></p>
 <h2 id="testing-the-dual-control">Testing the Dual Control</h2>
 <p>This section describes how you can test and exercise the Dual control using any appropriate version of Microsoft Visual Studio, such as Microsoft Visual Studio Community 2015, and  language (e.g. Visual Basic) of your choice. This tool is henceforth referred to herein as VB.</p>
 <ul>
@@ -71777,23 +71777,23 @@
 <p>The <code>Get</code> functions need no explanation; they simply return the value of the corresponding variable. The <code>Set</code> functions assign a new value to the corresponding variable and update the control accordingly. <code>SetValue1</code> does this by enqueuing a Scroll event to the Slider, which in turn invokes the <code>ChangeValue</code> callback.</p>
 <p>Display the <em>Object Properties</em> dialog box for the function <code>GetCaption1</code>. (Hint: use the Workspace Explorer).</p>
 <p>Select the <em>COM Properties</em> tab. As you have not yet defined any OLE attributes, the default display is as follows:</p>
-<p><figure id="_figure-4"><img alt="dual getcaption1 a" src="../../img/dual-getcaption1-a.png"><figcaption>Figure 4: dual getcaption1 a</figcaption></figure></p>
+<p><img alt="" src="../../img/dual-getcaption1-a.png"></p>
 <p>Check the <em>Exported</em> option button.</p>
 <p>Change the data type for the <em>Result</em> to VT_BSTR (a text string).</p>
 <p>Check the <em>Prop Get</em> radio button to indicate that this is a <em>Property Get</em> function and enter the name of the property (<code>Caption1</code>) to which it applies.</p>
 <p>Note that it is not necessary for the property name referenced by the <em>Get</em> and <em>Put</em> functions to correspond to a variable name, although in this case it does.</p>
 <p>The final <em>COM Properties</em> dialog box for <code>GetCaption1</code> should appear as follows. Click <em>OK</em> to save your changes.</p>
-<p><figure id="_figure-5"><img alt="dual getcaption1 b" src="../../img/dual-getcaption1-b.png"><figcaption>Figure 5: dual getcaption1 b</figcaption></figure></p>
+<p><img alt="" src="../../img/dual-getcaption1-b.png"></p>
 <p>Now do the same for the <code>SetCaption1</code> function. This function takes an argument which it expects to be a character vector. It must therefore be defined as having a single parameter of data type VT_BSTR; the parameter name is unimportant. However, you must ensure that the <em>Optional</em> button is unchecked.</p>
 <p>In APL terms, the function does not return a result. However, in OLE terms the result is defined to be of type VT_VOID. Alternatively, you may just leave this field empty.</p>
 <p>The OLE properties for <code>SetCaption1</code> should appear as follows:</p>
-<p><figure id="_figure-6"><img alt="dual setcaption1" src="../../img/dual-setcaption1.png"><figcaption>Figure 6: dual setcaption1</figcaption></figure></p>
+<p><img alt="" src="../../img/dual-setcaption1.png"></p>
 <p>An alternative way to define the syntax for exported functions is to use the <em>COM Functions</em> tab in the Properties dialog box for the ActiveXControl object itself. (Hint: using the Workspace Explorer, open <code>F</code> so that its contents, <code>Dual</code>, are displayed in the right-hand list, select <code>Dual</code>, then click <em>Props</em>).</p>
 <p>The <em>COM Functions</em> tab should appear as follows:</p>
-<p><figure id="_figure-7"><img alt="dual com functions a" src="../../img/dual-com-functions-a.png"><figcaption>Figure 7: dual com functions a</figcaption></figure></p>
+<p><img alt="" src="../../img/dual-com-functions-a.png"></p>
 <p>The right-hand Combo box allows you to view and edit their syntax for the exported functions you have already defined. The left-hand Combo box displays the list of other non-exported functions that are defined in the ActiveXControl.</p>
 <p>Select <code>GetCaption2</code> from the left-hand Combo box, and then click <em>Add</em>. The dialog box will change to display the default syntax for <code>GetCaption2</code>. Alter the <em>Result</em> data type to VT_BSTR, select <em>Prop Get</em>, and enter the name of the property, <code>Caption2</code>, so that the dialog box appears as follows:</p>
-<p><figure id="_figure-8"><img alt="dual com functions b" src="../../img/dual-com-functions-b.png"><figcaption>Figure 8: dual com functions b</figcaption></figure></p>
+<p><img alt="" src="../../img/dual-com-functions-b.png"></p>
 <p>The third way to define the syntax for exported functions is to use the SetFnInfo method of the ActiveXControl object. This allows you to export functions using APL code, which in some circumstances may be more convenient than filling in dialog boxes.</p>
 <p>The SetFnInfo method requires the name of the function, its syntax, a help id, a code which specifies its type (0 = method, 2 = property get, 4 = property put) and, if appropriate, the name of the property to which it applies, that is
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">SetFnInfo</span><span class="w"> </span><span class="nv">fn</span><span class="w"> </span><span class="nv">syntax</span><span class="w"> </span><span class="nv">helpid</span><span class="w"> </span><span class="nv">type</span><span class="w"> </span><span class="nv">property</span>
@@ -71908,7 +71908,7 @@
 <span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">Dual</span><span class="na">.</span><span class="nv">dws</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="nv">Mon</span><span class="w"> </span><span class="nv">Aug</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">14</span><span class="bp">:</span><span class="m">52</span><span class="bp">:</span><span class="m">14</span><span class="w"> </span><span class="m">2016</span>
 </code></pre></div>
 <p>Then, re-export the workspace, updating your <code>.ocx</code> file with all the new information.</p>
-<p><figure id="_figure-9"><img alt="dual export 2" src="../../img/dual-export-2.png"><figcaption>Figure 9: dual export 2</figcaption></figure></p>
+<p><img alt="" src="../../img/dual-export-2.png"></p>
 <h2 id="setting-properties-from-vb">Setting Properties from VB</h2>
 <p>Start VB and create a new Windows Forms Application Project.</p>
 <p>If the Dyalog Dual Control is not already in the Toolbox, click the right mouse button in the General section of the Toolbox window and select  <em>Choose Items ...</em> from the pop-up menu. In the <em>Choose Toolbox Items</em> dialog box, click the <em>COM Components</em> tab.</p>
@@ -71935,7 +71935,7 @@
 </table>
 
 <p>Double-click the left mouse button over your Form (<em>Form1</em>). This will bring up the code editor dialog box. Edit the <code>Form1_Load()</code> subroutine, entering the program statements shown below. This code will be run when VB starts your application and loads the Form <em>Form1</em>. It illustrates how you can change the properties of your Dyalog APL ActiveX control dynamically.</p>
-<p><figure id="_figure-10"><img alt="dual form1_load 1" src="../../img/dual-form1-load-1.png"><figcaption>Figure 10: dual form1_load 1</figcaption></figure></p>
+<p><img alt="" src="../../img/dual-form1-load-1.png"></p>
 <p>Now test your application by clicking <em>Start Debugging</em>. When you have finished, click  <em>Stop Debugging</em>.</p>
 <p>Close but <strong>do not</strong> save the project. This is necessary to allow you to rebuild the Dual ActiveX control which is (currently) loaded in your VB application. Otherwise, Dyalog will be unable to overwrite the <code>.ocx</code> file.</p>
 <h2 id="defining-and-exporting-events">Defining and Exporting Events</h2>
@@ -71952,13 +71952,13 @@
 <p>Click the right mouse button over the <em>Result</em> row and select <em>Insert</em></p>
 <p>In the column labelled <em>Param Name</em> enter  <code>Value1</code>, then change the <em>Type</em> to VT_I4 and the <em>Modifier</em> to VT_PTR. This defines a parameter named <code>Value1</code> that supplies a pointer to an integer. The fact that it is a <em>pointer</em> means that the (integer) parameter may be modified by the host application.</p>
 <p>The final appearance of this dialog box should be as follows:</p>
-<p><figure id="_figure-11"><img alt="dual com events" src="../../img/dual-com-events.png"><figcaption>Figure 11: dual com events</figcaption></figure></p>
+<p><img alt="" src="../../img/dual-com-events.png"></p>
 <p>Click <em>OK</em>, change back to the root space, and save the workspace.
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="c1">#</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">SAVE</span>
 </code></pre></div>
 <p>Select <em>File/Export</em> and rebuild your <code>.ocx</code> file.</p>
-<p><figure id="_figure-12"><img alt="dual com events 1" src="../../img/dual-com-events-1.png"><figcaption>Figure 12: dual com events 1</figcaption></figure></p>
+<p><img alt="" src="../../img/dual-com-events-1.png"></p>
 <h2 id="using-events-from-vb">Using Events from VB</h2>
 <p>Back in VB, create a new Windows Application Project.</p>
 <p>Check that the <em>Dyalog DUAL Control</em> tool is available in the ToolBox.</p>
@@ -71969,20 +71969,20 @@
 </ul>
 <p>Click on the <em>Dyalog DUAL Control</em> tool and drag it onto your Form. An instance of the Dual control will appear.</p>
 <p>Select the label tool and add a label object (<em>Label1</em>) to the Form. Select its Font property and change it to 14-point bold.</p>
-<p><figure id="_figure-13"><img alt="dual com events 2" src="../../img/dual-com-events-2.png"><figcaption>Figure 13: dual com events 2</figcaption></figure></p>
+<p><img alt="" src="../../img/dual-com-events-2.png"></p>
 <p>View the code window and choose the object AxDual1 and its only event ChangeValue1. Enter a line of code to set the Caption property of the Label object Label1 to the String equivalent of the event parameter Value1.</p>
 <p>Enter the following code, and then close the code window, that is
 </p><div class="highlight"><pre><span></span><code><span class="nv">Label1</span><span class="na">.</span><span class="nv">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Str</span><span class="p">(</span><span class="nv">e</span><span class="na">.</span><span class="nv">Value1</span><span class="p">)</span>
 </code></pre></div>
-<p><figure id="_figure-14"><img alt="dual com events 3" src="../../img/dual-com-events-3.png"><figcaption>Figure 14: dual com events 3</figcaption></figure></p>
+<p><img alt="" src="../../img/dual-com-events-3.png"></p>
 <p>Start the application using <em>Start Debugging</em>. Exercise the Dual control and observe that VB updates the Label1 control in response to the ChangeValue1 events. When you have finished, select <em>Stop Debugging</em>.</p>
-<p><figure id="_figure-15"><img alt="dual com events 4" src="../../img/dual-com-events-4.png"><figcaption>Figure 15: dual com events 4</figcaption></figure></p>
+<p><img alt="" src="../../img/dual-com-events-4.png"></p>
 <p>In the code window, add the following line of code to the <code>AxDual1_ChangeValue</code> subroutine:
 </p><div class="highlight"><pre><span></span><code><span class="nv">e</span><span class="na">.</span><span class="nv">Value1</span><span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="nv">e</span><span class="na">.</span><span class="nv">Value1</span><span class="na">\</span><span class="m">2</span><span class="p">)</span>
 </code></pre></div>
-<p><figure id="_figure-16"><img alt="dual com events 5" src="../../img/dual-com-events-5.png"><figcaption>Figure 16: dual com events 5</figcaption></figure></p>
+<p><img alt="" src="../../img/dual-com-events-5.png"></p>
 <p>Start the application using <em>Start Debugging</em>. Exercise the Dual control and observe that now the slider moves in increments of 2. When you have finished, select <em>Stop Debugging</em></p>
-<p><figure id="_figure-17"><img alt="dual com events 6" src="../../img/dual-com-events-6.png"><figcaption>Figure 17: dual com events 6</figcaption></figure></p>
+<p><img alt="" src="../../img/dual-com-events-6.png"></p>
 
 
 

@@ -68022,7 +68022,7 @@
         
   
   <span class="md-ellipsis">
-    Example Communication Between APLs
+    Communication Between APLs
   </span>
   
 
@@ -68043,7 +68043,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Server
+    Excel as the Server
   </span>
   
 
@@ -68064,7 +68064,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Client
+    Excel as the Client
   </span>
   
 
@@ -68085,7 +68085,7 @@
         
   
   <span class="md-ellipsis">
-    Example APL as Compute Server for Excel
+    APL as Compute Server for Excel
   </span>
   
 
@@ -71482,19 +71482,19 @@
 <span class="w">    </span><span class="s1">'TB.B5'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Redo'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
 <span class="bp">:</span><span class="nv">EndWith</span>
 </code></pre></div>
-<p><figure id="_figure-1"><img alt="coolbar_toolcontrols" src="../../img/coolbar-toolcontrols.png"><figcaption>Figure 1: coolbar_toolcontrols</figcaption></figure></p>
+<p><img alt="" src="../../img/coolbar-toolcontrols.png"></p>
 <p>The user may move band 2 into row 1 by dragging the gripper bar:</p>
-<p><figure id="_figure-2"><img alt="coolbar_toolcontrols1" src="../../img/coolbar-toolcontrols1.png"><figcaption>Figure 2: coolbar_toolcontrols1</figcaption></figure></p>
+<p><img alt="" src="../../img/coolbar-toolcontrols1.png"></p>
 <h2 id="coolbar-fixedorder-property">CoolBar: FixedOrder Property</h2>
 <p>FixedOrder is a property of the CoolBar and specifies whether or not the CoolBar displays CoolBands in the same order. If FixedOrder is 1, the user may move bands which have gripper bars to different rows, but the band order is static. The default is 0.</p>
 <h2 id="coolband-grippermode-property">CoolBand: GripperMode Property</h2>
 <p>GripperMode is a property of a CoolBand and specifies whether or not the CoolBand has a gripper bar which is used to reposition and resize the CoolBand within its parent CoolBar. GripperMode is a character vector with the value <code>'Always'</code> (the default), <code>'Never'</code> or <code>'Auto'</code>. If GripperMode is <code>'Always'</code>, the CoolBand displays a gripper bar even if it is the only CoolBand in the CoolBar. If GripperMode is <code>'Never'</code>, the CoolBand does not have a gripper bar and may not be directly repositioned or resized by the user. If GripperMode is <code>'Auto'</code>, the CoolBand displays a gripper bar only if there are other CoolBands in the same CoolBar.</p>
 <p>The next picture shows the second CoolBand maximised.</p>
-<p><figure id="_figure-3"><img alt="coolbar_toolcontrols3" src="../../img/coolbar-toolcontrols3.png"><figcaption>Figure 3: coolbar_toolcontrols3</figcaption></figure></p>
+<p><img alt="" src="../../img/coolbar-toolcontrols3.png"></p>
 <h2 id="coolbar-dblclicktoggle-property">CoolBar: DblClickToggle Property</h2>
 <p>If it has a gripper bar, the user may maximise one of the bands in a row, causing the other bands to be minimised. The action required to do this is defined by the DblClickToggle property which is a property of the CoolBar.</p>
 <p>If DblClickToggle is 0 (the default), the user must single-click the gripper bar. If DblClickToggle is 1, the user must double-click the gripper bar. These actions toggle a child CoolBand between its maximised and minimised state. The following picture shows the first CoolBand maximised.</p>
-<p><figure id="_figure-4"><img alt="coolbar_toolcontrols2" src="../../img/coolbar-toolcontrols2.png"><figcaption>Figure 4: coolbar_toolcontrols2</figcaption></figure></p>
+<p><img alt="" src="../../img/coolbar-toolcontrols2.png"></p>
 <h2 id="coolbar-variableheightbandborders-properties">CoolBar: VariableHeight/BandBorders Properties</h2>
 <p>These two properties affect the appearance of the CoolBar.</p>
 <p>The VariableHeight property specifies whether or not the CoolBar displays bands in different rows at the minimum required height (the default), or all the same height.</p>
@@ -71515,17 +71515,17 @@
 <span class="s1">    '</span><span class="nv">E2</span><span class="s1">'⎕WC'</span><span class="nv">Edit</span><span class="s1">'(3 5⍴'</span><span class="nv">Edit2</span><span class="s1">')('</span><span class="nv">Style</span><span class="s1">' '</span><span class="nv">Multi</span><span class="err">'</span><span class="p">)</span>
 <span class="bp">:</span><span class="nv">EndWith</span>
 </code></pre></div>
-<p><figure id="_figure-5"><img alt="coolbar_simplecontrols0" src="../../img/coolbar-simplecontrols0.png"><figcaption>Figure 5: coolbar_simplecontrols0</figcaption></figure></p>
+<p><img alt="" src="../../img/coolbar-simplecontrols0.png"></p>
 <p>If the CoolBands are arranged in the same row, the height of the row expands to accommodate the largest one as shown below.</p>
-<p><figure id="_figure-6"><img alt="coolbar_simplecontrols1" src="../../img/coolbar-simplecontrols1.png"><figcaption>Figure 6: coolbar_simplecontrols1</figcaption></figure></p>
+<p><img alt="" src="../../img/coolbar-simplecontrols1.png"></p>
 <p>The picture below illustrates the effect of setting VariableHeight to 0.</p>
-<p><figure id="_figure-7"><img alt="coolbar_simplecontrols2" src="../../img/coolbar-simplecontrols2.png"><figcaption>Figure 7: coolbar_simplecontrols2</figcaption></figure></p>
+<p><img alt="" src="../../img/coolbar-simplecontrols2.png"></p>
 <p>The picture below shows the effect on appearance of setting BandBorders to 1.</p>
-<p><figure id="_figure-8"><img alt="coolbar_simplecontrols3" src="../../img/coolbar-simplecontrols3.png"><figcaption>Figure 8: coolbar_simplecontrols3</figcaption></figure></p>
+<p><img alt="" src="../../img/coolbar-simplecontrols3.png"></p>
 <h2 id="coolband-childedge-property">CoolBand: ChildEdge Property</h2>
 <p>ChildEdge is a property of a CoolBand and specifies whether or not the CoolBand leaves space above and below the object that it contains.</p>
 <p>If the ChildEdge property of each CoolBand had been set to 1 in the above example, then the result would show wider borders between each band.</p>
-<p><figure id="_figure-9"><img alt="coolband_childedge" src="../../img/coolband-childedge.png"><figcaption>Figure 9: coolband_childedge</figcaption></figure></p>
+<p><img alt="" src="../../img/coolband-childedge.png"></p>
 <h2 id="coolband-caption-and-imageindex-properties">CoolBand: Caption and ImageIndex Properties</h2>
 <p>The Caption and ImageIndex properties of a CoolBand are used to display an optional text string and picture in the CoolBand.</p>
 <p>The picture is defined by an image in an ImageList object whose name is referenced by the ImageListObj property of the parent CoolBar. The following example illustrates how this is done.</p>
@@ -71554,9 +71554,9 @@
 <span class="w"> </span><span class="s1">'TB.B5'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Redo'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
 <span class="bp">:</span><span class="nv">EndWith</span>
 </code></pre></div>
-<p><figure id="_figure-10"><img alt="coolband_caption_imageindex0" src="../../img/coolband-caption-imageindex0.png"><figcaption>Figure 10: coolband_caption_imageindex0</figcaption></figure></p>
+<p><img alt="" src="../../img/coolband-caption-imageindex0.png"></p>
 <p>Note that the Caption and image are displayed when the CoolBand is minimised as shown below:</p>
-<p><figure id="_figure-11"><img alt="coolband_caption_imageindex1" src="../../img/coolband-caption-imageindex1.png"><figcaption>Figure 11: coolband_caption_imageindex1</figcaption></figure></p>
+<p><img alt="" src="../../img/coolband-caption-imageindex1.png"></p>
 <h2 id="coolband-size-posn-newline-index-properties">CoolBand: Size, Posn, NewLine, Index Properties</h2>
 <p>The Size property of a CoolBand is partially read-only and may only be used to specify its width; because the height of a CoolBand is determined by its contents. Furthermore, the Size property may only be specified when the CoolBand is created using <code>⎕WC</code>.</p>
 <p>The position of a Cool Band within a CoolBar is determined by its Index and NewLine properties, and by the position and size of preceding CoolBand objects in the same CoolBar. The Posn property is read-only.</p>
@@ -71586,7 +71586,7 @@
 <span class="w">    </span><span class="s1">'S.C1'</span><span class="nf">⎕WC</span><span class="s1">'Combo'</span><span class="p">(</span><span class="s1">'One'</span><span class="w"> </span><span class="s1">'Two'</span><span class="p">)</span><span class="s1">''</span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">70</span><span class="p">)(</span><span class="no">⍬</span><span class="w"> </span><span class="m">60</span><span class="p">)</span>
 <span class="bp">:</span><span class="nv">EndWith</span>
 </code></pre></div>
-<p><figure id="_figure-12"><img alt="coolbar_subforms" src="../../img/coolbar-subforms.png"><figcaption>Figure 12: coolbar_subforms</figcaption></figure></p>
+<p><img alt="" src="../../img/coolbar-subforms.png"></p>
 
 
 

@@ -67968,7 +67968,7 @@
         
   
   <span class="md-ellipsis">
-    Example Communication Between APLs
+    Communication Between APLs
   </span>
   
 
@@ -67989,7 +67989,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Server
+    Excel as the Server
   </span>
   
 
@@ -68010,7 +68010,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Client
+    Excel as the Client
   </span>
   
 
@@ -68031,7 +68031,7 @@
         
   
   <span class="md-ellipsis">
-    Example APL as Compute Server for Excel
+    APL as Compute Server for Excel
   </span>
   
 
@@ -71409,7 +71409,7 @@
 </code></pre></div>
 <p>and click on the buttons...</p>
 <p>The result will appear approximately as shown below</p>
-<p><figure id="_figure-1"><img alt="gui objects as namespaces" src="../../img/gui-objects-as-namespaces.png"><figcaption>Figure 1: gui objects as namespaces</figcaption></figure></p>
+<p><img alt="" src="../../img/gui-objects-as-namespaces.png"></p>
 <h2 id="attaching-gui-objects-to-namespaces">Attaching GUI Objects to Namespaces</h2>
 <p>Monadic <code>⎕WC</code> is used to <em>attach</em> a GUI component to an existing object. The existing object must be a pure namespace or an appropriate GUI object (one that can legitimately be placed at that point in the object hierarchy). The operation may be performed by changing space to the object or by running <code>⎕WC</code> <em>inside</em> the object using the <em>dot</em> syntax. For example, the following statements are equivalent.
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">F</span>
@@ -71478,7 +71478,7 @@
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">F</span><span class="na">.</span><span class="nv">Caption</span><span class="w"> </span><span class="nv">F</span><span class="na">.</span><span class="nv">F</span><span class="na">.</span><span class="nv">Posn</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'ForeGround'</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">60</span><span class="p">)</span>
 </code></pre></div>
 <p>The result is illustrated below.</p>
-<p><figure id="_figure-2"><img alt="cloning example" src="../../img/cloning-example.png"><figcaption>Figure 2: cloning example</figcaption></figure></p>
+<p><img alt="" src="../../img/cloning-example.png"></p>
 <p>Note that when a namespace is cloned in this way, the objects (functions, variables and other namespaces) within it are not necessarily duplicated. Instead, the objects in cloned namespaces are in effect just pointers to the original objects. However, if you subsequently change the clone, or the original object to which it refers, the two are de-coupled and a second <em>copy</em> ensues. This mechanism makes it possible to create large numbers of <em>instances</em> of a single <em>class</em> namespace without consuming an excessive amount of workspace.</p>
 
 

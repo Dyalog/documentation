@@ -67915,7 +67915,7 @@
         
   
   <span class="md-ellipsis">
-    Example Communication Between APLs
+    Communication Between APLs
   </span>
   
 
@@ -67936,7 +67936,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Server
+    Excel as the Server
   </span>
   
 
@@ -67957,7 +67957,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Client
+    Excel as the Client
   </span>
   
 
@@ -67978,7 +67978,7 @@
         
   
   <span class="md-ellipsis">
-    Example APL as Compute Server for Excel
+    APL as Compute Server for Excel
   </span>
   
 
@@ -71278,7 +71278,7 @@
 <p>Then you can use the Bitmap to fill the background of a Form by:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="p">(</span><span class="s1">'Picture'</span><span class="w"> </span><span class="nv">CARS</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">50</span><span class="p">)</span>
 </code></pre></div>
-<p><figure id="_figure-1"><img alt="cars" src="../../img/cars.png"><figcaption>Figure 1: cars</figcaption></figure></p>
+<p><img alt="" src="../../img/cars.png"></p>
 <p>The "1" in the expression specifies that the Bitmap is to be used to "tile" the background of the Form. The result is shown in the illustration below. You can also position the Bitmap in the top-left (0) or centre (3) of the Form, or even have the Bitmap scaled automatically (2) to fit exactly in the Form. These settings are useful for displaying pictures. You can explore these facilities using the <code>BMVIEW</code> function in the UTIL workspace.</p>
 <p>Instead of creating Bitmap and Icon objects from file, you can define them using APL arrays. These arrays specify the individual pixels that make up the picture or shape of the object in question.</p>
 <p>There are two ways to define a Bitmap object from APL arrays. The first method, which is limited to colour palettes of 16 or 256 colours is to supply two arrays; one containing the colour indices for every pixel in the bitmap, and one containing the colour map. The colour map specifies the colours (in terms of their red, green and blue components) corresponding to the indices in the first array. For example, the following expressions create a 32 x 32 Bitmap from the arrays <code>PIX</code> and <code>CM</code>:

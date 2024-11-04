@@ -67986,7 +67986,7 @@
         
   
   <span class="md-ellipsis">
-    Example Communication Between APLs
+    Communication Between APLs
   </span>
   
 
@@ -68007,7 +68007,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Server
+    Excel as the Server
   </span>
   
 
@@ -68028,7 +68028,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Client
+    Excel as the Client
   </span>
   
 
@@ -68049,7 +68049,7 @@
         
   
   <span class="md-ellipsis">
-    Example APL as Compute Server for Excel
+    APL as Compute Server for Excel
   </span>
   
 
@@ -71391,335 +71391,339 @@
 <p>When an assignment is made to a shared variable, APL sends a DATA message to the second process. When it receives back an ACK message, APL infers that this means that the partner has <strong>used</strong> the variable. When APL receives a DATA message from the other process it infers that the partner has <strong>set</strong> the variable. However, it only responds with an ACK message when the new value of the variable is referenced by the workspace.</p>
 <p>Let's see what this means if two APL workspaces are involved.</p>
 <table>
-<thead>
-<tr>
-<th>Server Workspace</th>
-<th>Client Workspace</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>Make general offer</td>
-<td> </td>
-</tr>
-<tr>
-<td><code>X←42</code></td>
-<td> </td>
-</tr>
-<tr>
-<td><code>'DDE:' ⎕SVO 'X'</code></td>
-<td> </td>
-</tr>
-<tr>
-<td><code>1</code></td>
-<td> </td>
-</tr>
-<tr>
-<td><code>⎕SVS 'X'</code></td>
-<td> </td>
-</tr>
-<tr>
-<td><code>0 0 0 0 ⍝ No partner</code></td>
-<td> </td>
-</tr>
-<tr>
-<td><code>⎕SVC 'X'</code></td>
-<td> </td>
-</tr>
-<tr>
-<td><code>0 0 0 0 ⍝ No access ctl</code></td>
-<td> </td>
-</tr>
-<tr>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td> </td>
-<td>Make specific offer</td>
-</tr>
-<tr>
-<td> </td>
-<td><code>'DDE:DYALOG|SERVER'⎕SVO'X'</code></td>
-</tr>
-<tr>
-<td> </td>
-<td>&lt;--- initiate ---</td>
-</tr>
-<tr>
-<td>ack ---&gt;</td>
-<td> </td>
-</tr>
-<tr>
-<td> </td>
-<td>&lt;--- please advise on change</td>
-</tr>
-<tr>
-<td>ack ---&gt;</td>
-<td> </td>
-</tr>
-<tr>
-<td> </td>
-<td><code>2  ⍝ Offer accepted</code></td>
-</tr>
-<tr>
-<td><code>⎕SVS 'X'</code></td>
-<td><code>⎕SVS 'X'</code></td>
-</tr>
-<tr>
-<td><code>1 0 1 0⍝ I know, not he</code></td>
-<td><code>0 1 0 1⍝ He knows, I don't</code></td>
-</tr>
-<tr>
-<td> </td>
-<td>Client requests data</td>
-</tr>
-<tr>
-<td> </td>
-<td><code>Y ← X</code></td>
-</tr>
-<tr>
-<td> </td>
-<td>&lt;--- req ---</td>
-</tr>
-<tr>
-<td>--- data (42) ---&gt;</td>
-<td> </td>
-</tr>
-<tr>
-<td> </td>
-<td>&lt;--- ack ---</td>
-</tr>
-<tr>
-<td><code>⎕SVS 'X'</code></td>
-<td><code>⎕SVS 'X'</code></td>
-</tr>
-<tr>
-<td><code>0 0 1 1⍝ We both know</code></td>
-<td><code>0 0 1 1⍝ We both know</code></td>
-</tr>
-<tr>
-<td>Server changes data</td>
-<td> </td>
-</tr>
-<tr>
-<td><code>X ← 20</code></td>
-<td> </td>
-</tr>
-<tr>
-<td>--- data has changed --&gt;</td>
-<td> </td>
-</tr>
-<tr>
-<td> </td>
-<td>&lt;--- ack ---</td>
-</tr>
-<tr>
-<td><code>⎕SVS 'X'</code></td>
-<td><code>⎕SVS 'X'</code></td>
-</tr>
-<tr>
-<td><code>1 0 1 0⍝ I know, not he</code></td>
-<td><code>0 1 0 1⍝ He knows, I don't</code></td>
-</tr>
-<tr>
-<td> </td>
-<td>Client requests data</td>
-</tr>
-<tr>
-<td> </td>
-<td><code>Y ← X</code></td>
-</tr>
-<tr>
-<td> </td>
-<td>&lt;--- req ---</td>
-</tr>
-<tr>
-<td>--- data (20) ---&gt;</td>
-<td> </td>
-</tr>
-<tr>
-<td> </td>
-<td>&lt;--- ack ---</td>
-</tr>
-<tr>
-<td><code>⎕SVS 'X'</code></td>
-<td><code>⎕SVS 'X'</code></td>
-</tr>
-<tr>
-<td><code>0 0 1 1⍝ We both know</code></td>
-<td><code>0 0 1 1⍝ We both know</code></td>
-</tr>
-</tbody>
+    <col>
+    <col>
+    <tr>
+        <th>Server Workspace</th>
+        <th>Client Workspace</th>
+    </tr>
+    <tr>
+        <th> </th>
+        <th> </th>
+    </tr>
+    <tr>
+        <td class="shaded"><strong>Make general offer</strong></td>
+        <td class="shaded"> </td>
+    </tr>
+    <tr>
+        <td>      X←42</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>      'DDE:' ⎕SVO 'X'</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>      ⎕SVS 'X'</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>0 0 0 0 ⍝ No partner</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>      ⎕SVC 'X'</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>0 0 0 0 ⍝ No access ctl</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <th> </th>
+        <th> </th>
+    </tr>
+    <tr>
+        <td class="shaded"> </td>
+        <td class="shaded"><strong>Make specific offer</strong></td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>'DDE:DYALOG|SERVER'⎕SVO'X'</td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>&lt;--- initiate ---</td>
+    </tr>
+    <tr>
+        <td>ack ---&gt;</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>&lt;--- please advise on change </td>
+    </tr>
+    <tr>
+        <td>ack ---&gt;</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>2  ⍝ Offer accepted</td>
+    </tr>
+    <tr>
+        <td>      ⎕SVS 'X'</td>
+        <td>      ⎕SVS 'X'</td>
+    </tr>
+    <tr>
+        <td>1 0 1 0⍝ I know, not he </td>
+        <td>0 1 0 1⍝ He knows, I don't</td>
+    </tr>
+    <tr>
+        <td class="shaded"> </td>
+        <td class="shaded"><strong>Client requests data</strong></td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>      Y ← X</td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>&lt;--- req ---</td>
+    </tr>
+    <tr>
+        <td>--- data (42) ---&gt;</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>&lt;--- ack ---</td>
+    </tr>
+    <tr>
+        <td>      ⎕SVS 'X'</td>
+        <td>      ⎕SVS 'X'</td>
+    </tr>
+    <tr>
+        <td>0 0 1 1⍝ We both know</td>
+        <td>0 0 1 1⍝ We both know</td>
+    </tr>
+    <tr>
+        <td class="shaded"><strong>Server changes data</strong></td>
+        <td class="shaded"> </td>
+    </tr>
+    <tr>
+        <td>      X ← 20</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>--- data has changed --&gt;</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>&lt;--- ack ---</td>
+    </tr>
+    <tr>
+        <td>      ⎕SVS 'X'</td>
+        <td>      ⎕SVS 'X'</td>
+    </tr>
+    <tr>
+        <td>1 0 1 0 ⍝ I know, not he</td>
+        <td>0 1 0 1 ⍝ He knows, I don't</td>
+    </tr>
+    <tr>
+        <td class="shaded"> </td>
+        <td class="shaded"><strong>Client requests data</strong></td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>      Y ← X</td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>&lt;--- req ---</td>
+    </tr>
+    <tr>
+        <td>--- data (20) ---&gt;</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>&lt;--- ack ---</td>
+    </tr>
+    <tr>
+        <td>      ⎕SVS 'X'</td>
+        <td>      ⎕SVS 'X'</td>
+    </tr>
+    <tr>
+        <td>0 0 1 1  ⍝ We both know</td>
+        <td>0 0 1 1  ⍝ We both know</td>
+    </tr>
 </table>
+
 <p>As you can see, this has the desired effect, namely that an APL workspace sets the value of a shared variable by assignment to it and <strong>uses</strong> it by reference to it. The mechanism of using the DATA and ACK messages to imply <strong>set</strong> and <strong>use</strong> also works with non-APL applications which do not (in general) support these concepts.</p>
 <p>Access control between two APL workspaces is imposed by each workspace acting independently. Whenever either workspace changes its <code>⎕SVC</code>, the information is transmitted to the other. Thus both workspaces maintain their own copy of the <strong>effective</strong> access control vector upon which to base decisions.</p>
-<table>
-<thead>
-<tr>
-<th>Server Workspace</th>
-<th>Client Workspace</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>No access control</td>
-<td>No access control</td>
-</tr>
-<tr>
-<td><code>⎕SVC 'X'</code></td>
-<td><code>⎕SVC 'X'</code></td>
-</tr>
-<tr>
-<td><code>0 0 0 0 ⍝ No access ctl</code></td>
-<td><code>0 0 0 0 ⍝ No access ctl</code></td>
-</tr>
-<tr>
-<td> </td>
-<td>Client makes multiple requests for data</td>
-</tr>
-<tr>
-<td> </td>
-<td><code>Y←X</code></td>
-</tr>
-<tr>
-<td> </td>
-<td><code>Y←X</code></td>
-</tr>
-<tr>
-<td>Server can set several times</td>
-<td> </td>
-</tr>
-<tr>
-<td><code>X←30</code></td>
-<td> </td>
-</tr>
-<tr>
-<td><code>X←40</code></td>
-<td> </td>
-</tr>
-<tr>
-<td>Set access control</td>
-<td> </td>
-</tr>
-<tr>
-<td><code>1 0 0 1 ⎕SVC 'X'</code></td>
-<td> </td>
-</tr>
-<tr>
-<td><code>--- change in ⎕SVC --&gt;</code></td>
-<td> </td>
-</tr>
-<tr>
-<td><code>⎕SVC 'X'</code></td>
-<td><code>⎕SVC 'X'</code></td>
-</tr>
-<tr>
-<td><code>apl 1 0 0 1⍝ I cannot set          until he has          used; he cannot          use untilI          have set</code></td>
-<td><code>apl 0 1 1 0⍝ He cannot set          until I have          used. I cannot          use until he          has set</code></td>
-</tr>
-<tr>
-<td> </td>
-<td>Client requests data</td>
-</tr>
-<tr>
-<td> </td>
-<td><code>Y ← X</code></td>
-</tr>
-<tr>
-<td> </td>
-<td><code>&lt;--- req ---</code></td>
-</tr>
-<tr>
-<td> </td>
-<td>(hangs waiting for data)</td>
-</tr>
-<tr>
-<td>Server changes data</td>
-<td> </td>
-</tr>
-<tr>
-<td><code>X ← 30</code></td>
-<td> </td>
-</tr>
-<tr>
-<td>--- data (30) ---&gt;</td>
-<td> </td>
-</tr>
-<tr>
-<td> </td>
-<td>&lt;--- ack ---</td>
-</tr>
-<tr>
-<td> </td>
-<td><code>Y⍝ data received</code></td>
-</tr>
-<tr>
-<td> </td>
-<td><code>30</code></td>
-</tr>
-<tr>
-<td>Server changes data</td>
-<td> </td>
-</tr>
-<tr>
-<td><code>X ← 40</code></td>
-<td> </td>
-</tr>
-<tr>
-<td>--- data has changed ---&gt;</td>
-<td> </td>
-</tr>
-<tr>
-<td> </td>
-<td>&lt;--- ack ---</td>
-</tr>
-<tr>
-<td>Server tries to change data again</td>
-<td> </td>
-</tr>
-<tr>
-<td><code>X ← 50</code></td>
-<td> </td>
-</tr>
-<tr>
-<td>--- data has changed ---&gt;</td>
-<td> </td>
-</tr>
-<tr>
-<td>(assignment hangs waiting for ack)</td>
-<td> </td>
-</tr>
-<tr>
-<td> </td>
-<td><code>Y ← X⍝ use data</code></td>
-</tr>
-<tr>
-<td> </td>
-<td>&lt;--- req ---</td>
-</tr>
-<tr>
-<td><code>--- data (40) ---&gt;</code></td>
-<td> </td>
-</tr>
-<tr>
-<td> </td>
-<td>&lt;--- ack ---</td>
-</tr>
-<tr>
-<td><code>X⍝ assignment done</code></td>
-<td><code>Y⍝ data received</code></td>
-</tr>
-<tr>
-<td><code>50</code></td>
-<td><code>40</code></td>
-</tr>
-</tbody>
+<table class="Long">
+    <col>
+    <col>
+    <tr>
+        <th><strong>Server Workspace</strong></th>
+        <th><strong>Client Workspace</strong></th>
+    </tr>
+    <tr>
+        <td class="shaded"><strong>No access control</strong></td>
+        <td class="shaded"><strong>No access control</strong></td>
+    </tr>
+    <tr>
+        <td>      ⎕SVC 'X'</td>
+        <td>      ⎕SVC 'X'</td>
+    </tr>
+    <tr>
+        <td>0 0 0 0 ⍝ No access ctl</td>
+        <td>0 0 0 0 ⍝ No access ctl</td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>Client makes multiple requests for data</td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>       Y←X</td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>       Y←X</td>
+    </tr>
+    <tr>
+        <td>Server can set several times</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>      X←30</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>      X←40</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td class="shaded"><strong>Set access control</strong></td>
+        <td class="shaded"> </td>
+    </tr>
+    <tr>
+        <td>      1 0 0 1 ⎕SVC 'X'</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>--- change in ⎕SVC --&gt;</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>      ⎕SVC 'X'</td>
+        <td>      ⎕SVC 'X'</td>
+    </tr>
+    <tr>
+        <td><pre>1 0 0 1 ⍝ I cannot set
+    until he has used; he cannot
+    use until I have set</pre>
+        </td>
+        <td><pre>0 1 1 0 ⍝ He cannot set
+    until I have used. 
+    I cannot use until he has set</pre>
+        </td>
+    </tr>
+    <tr>
+        <td class="shaded"> </td>
+        <td class="shaded"><strong>Client requests data</strong></td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>      Y ← X</td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>&lt;--- req ---</td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>(hangs waiting for data)</td>
+    </tr>
+    <tr>
+        <td class="shaded"><strong>Server changes data</strong></td>
+        <td class="shaded"> </td>
+    </tr>
+    <tr>
+        <td>      X ← 30</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>--- data (30) ---&gt;</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>&lt;--- ack ---</td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>      Y  ⍝ data received</td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>30</td>
+    </tr>
+    <tr>
+        <td class="shaded"><strong>Server changes data</strong></td>
+        <td class="shaded"> </td>
+    </tr>
+    <tr>
+        <td>      X ← 40</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>--- data has changed ---&gt;</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>&lt;--- ack ---</td>
+    </tr>
+    <tr>
+        <td>Server tries to change data again</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>      X ← 50</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>--- data has changed ---&gt;</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>(assignment hangs waiting for ack)</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>      Y ← X ⍝ use data</td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>&lt;--- req ---</td>
+    </tr>
+    <tr>
+        <td>--- data (40) ---&gt;</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td>&lt;--- ack ---</td>
+    </tr>
+    <tr>
+        <td>      X  ⍝ assignment done</td>
+        <td>      Y  ⍝ data received</td>
+    </tr>
+    <tr>
+        <td>50</td>
+        <td>40</td>
+    </tr>
 </table>
+
 <p>Where the second process is a non-APL application, the effective access control vector is maintained only by the APL task and access control can only be imposed by APL. At first sight, it may seem impossible for APL to affect another application in this way, and indeed there are severe limitations in what APL can achieve. Nevertheless, effective access control is possible in the case when it is desirable to inhibit the partner from <strong>setting</strong> the value twice without an intervening <strong>use</strong> by the APL task.</p>
 <p>This is simply achieved by withholding the ACK message. Thus if APL receives a DATA message from its partner at a time when a <strong>set</strong> by the partner is inhibited, APL registers the new value but withholds the acknowledgement. Only when the inhibitor is removed will APL respond with an ACK. (Users with DDESPY will observe that this is actually implemented by APL re-transmitting the DATA message to itself when the inhibitor is removed).</p>
 <p>Assuming that the second application waits for the acknowledgement before proceeding, this will cause the desired synchronisation. Naturally, this cannot be entirely guaranteed because APL has no <strong>direct</strong> control over a non-APL program. Indeed, when an application transmits a DATA message, it can include a flag to indicate that an acknowledgement is neither expected nor required. In these circumstances, APL is powerless to impose any access control.</p>
@@ -71745,7 +71749,7 @@
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'DDE:EXCEL|SHEET1'</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'DATA R1C1:R3C4'</span>
 </code></pre></div>
 <p>In this case, APL as the client will request a warm DDE link. If the server fails to agree to this request, APL will ask for the current data value and, whether or not the server responds, will not establish a permanent link. Thus the only possibility for a permanent connection is a warm link. This in turn means that the server's <code>⎕SVC</code> will be (0 0 0 0). Furthermore, as the server has no means to change it, it's <code>⎕SVC</code> will remain (0 0 0 0) for the duration of the conversation. Control is therefore imposed solely by APL.</p>
-<h1 id="terminating-a-conversation">Terminating a Conversation</h1>
+<h2 id="terminating-a-conversation">Terminating a Conversation</h2>
 <p>A DDE conversation is terminated by "un-sharing" the variable. This can be done explicitly using <code>⎕EX</code> or <code>⎕SVR</code>. It is also done automatically when you exit a function in which a shared variable is localised.</p>
 
 

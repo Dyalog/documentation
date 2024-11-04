@@ -67986,7 +67986,7 @@
         
   
   <span class="md-ellipsis">
-    Example Communication Between APLs
+    Communication Between APLs
   </span>
   
 
@@ -68007,7 +68007,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Server
+    Excel as the Server
   </span>
   
 
@@ -68028,7 +68028,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Client
+    Excel as the Client
   </span>
   
 
@@ -68049,7 +68049,7 @@
         
   
   <span class="md-ellipsis">
-    Example APL as Compute Server for Excel
+    APL as Compute Server for Excel
   </span>
   
 
@@ -71388,7 +71388,7 @@
 <p>The following statement creates a Form called <code>'f1'</code> with the title "A Default Form" and with default size, position, etc.
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'f1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'A Default Form'</span>
 </code></pre></div>
-<p><figure id="_figure-1"><img alt="default form" src="../../img/default-form.png"><figcaption>Figure 1: default form</figcaption></figure></p>
+<p><img alt="" src="../../img/default-form.png"></p>
 <h2 id="naming-objects">Naming Objects</h2>
 <p>Objects are created in a hierarchy. The Form we have just created is a "top-level" object to which we can attach other child objects, like buttons, scrollbars and so forth. You can create any number of top-level objects like this, up to a limit imposed by MS-Windows and your system configuration.</p>
 <p>For reasons which will become apparent later, there is a single Root object whose name is <code>'.'</code> (dot) or <code>'#'</code>. It acts a bit like the root directory in a Windows system file structure, and is the implied parent of all the top-level objects you create.</p>
@@ -71412,11 +71412,11 @@
 <span class="s1">'accounts.type.BUDGET'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Button'</span><span class="w"> </span><span class="s1">'BUDGET'</span><span class="w"> </span><span class="p">(</span><span class="m">45</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
 <span class="s1">'accounts.type.ACTUAL'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Button'</span><span class="w"> </span><span class="s1">'ACTUAL'</span><span class="w"> </span><span class="p">(</span><span class="m">70</span><span class="w"> </span><span class="m">32</span><span class="p">)</span>
 </code></pre></div>
-<p><figure id="_figure-2"><img alt="accounts" src="../../img/accounts.png"><figcaption>Figure 2: accounts</figcaption></figure></p>
+<p><img alt="" src="../../img/accounts.png"></p>
 <p>Schematically, this object structure looks as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">                            </span><span class="nv">__ACTUAL</span>
-<span class="w">        </span><span class="na">.</span><span class="nv">___accounts___type___BUDGET</span>
-<span class="w">                            </span><span class="nv">__PLAN</span>
+</p><div class="highlight"><pre><span></span><code>                            __ACTUAL
+        .___accounts___type___BUDGET
+                            __PLAN
 </code></pre></div>
 
 

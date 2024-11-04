@@ -68049,7 +68049,7 @@
         
   
   <span class="md-ellipsis">
-    Example Communication Between APLs
+    Communication Between APLs
   </span>
   
 
@@ -68070,7 +68070,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Server
+    Excel as the Server
   </span>
   
 
@@ -68091,7 +68091,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Client
+    Excel as the Client
   </span>
   
 
@@ -68112,7 +68112,7 @@
         
   
   <span class="md-ellipsis">
-    Example APL as Compute Server for Excel
+    APL as Compute Server for Excel
   </span>
   
 
@@ -71516,26 +71516,26 @@
 <h2 id="standard-bitmap-resources">Standard Bitmap Resources</h2>
 <p>Typically, you will want your ToolControls to provide standard Windows buttons and the easiest way to achieve this is to utilise the standard Windows bitmaps that are contained in COMCTL32.DLL. There are three main sets of bitmaps, each of which is provided in two sizes, small (16x16) and large (24 x 24).</p>
 <p>Resource number 120 (<code>IDB_STD_SMALL_COLOR</code>) and 121 (<code>IDB_STD_LARGE_COLOR</code>) contain the following set of assorted bitmap images.</p>
-<p><figure id="_figure-1"><img alt="idb_std_bitmaps" src="../../img/idb-std-bitmaps.bmp"><figcaption>Figure 1: idb_std_bitmaps</figcaption></figure></p>
+<p><img alt="" src="../../img/idb-std-bitmaps.bmp"></p>
 <p>Resource number 124 (<code>IDB_VIEW_SMALL_COLOR</code>) and 125 (<code>IDB_VIEW_LARGE_COLOR</code>) contain a set of bitmaps relating to different views of information. These are used, for example in the Windows Explorer tool bar</p>
-<p><figure id="_figure-2"><img alt="idb_view_bitmaps" src="../../img/idb-view-bitmaps.bmp"><figcaption>Figure 2: idb_view_bitmaps</figcaption></figure></p>
+<p><img alt="" src="../../img/idb-view-bitmaps.bmp"></p>
 <p>Resource number 130 (IDB_HIST_SMALL_COLOR) and 131 (IDB_HIST_LARGE_COLOR) contain another useful set of bitmaps</p>
-<p><figure id="_figure-3"><img alt="idb_hist_bitmaps" src="../../img/idb-hist-bitmaps.bmp"><figcaption>Figure 3: idb_hist_bitmaps</figcaption></figure></p>
+<p><img alt="" src="../../img/idb-hist-bitmaps.bmp"></p>
 <p>COMCTL32.DLL also contains individual bitmaps in resources 132-134.</p>
 <h2 id="dyalog-bitmap-resources">Dyalog Bitmap Resources</h2>
 <p>Another three sets of useful bitmaps are to be found in the DyaRes DLL file. These bitmaps are used in the Dyalog APL/W Session tool buttons. Note that if you include these bitmaps in a run-time application, you will have to ship DyaRes DLL with it.</p>
 <p>The <em>normal</em> set of bitmaps associated with the Session buttons may be created using the statement:</p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'bm'</span><span class="nf">⎕wc</span><span class="s1">'Bitmap'</span><span class="w"> </span><span class="p">(</span><span class="s1">'dyares180_64.dll'</span><span class="w"> </span><span class="s1">'tb_normal'</span><span class="p">)</span>
 </code></pre></div>
-<p><figure id="_figure-4"><img alt="tb_normal bitmaps" src="../../img/tb-normal-bitmaps.bmp"><figcaption>Figure 4: tb_normal bitmaps</figcaption></figure></p>
+<p><img alt="" src="../../img/tb-normal-bitmaps.bmp"></p>
 <p>The bitmaps used when the buttons are <em>highlighted</em> may be created using the statement.
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'bm'</span><span class="nf">⎕wc</span><span class="s1">'Bitmap'</span><span class="w"> </span><span class="p">(</span><span class="s1">'dyares180_64.dll'</span><span class="w"> </span><span class="s1">'tb_hot'</span><span class="p">)</span>
 </code></pre></div>
-<p><figure id="_figure-5"><img alt="tb_hot bitmaps" src="../../img/tb-hot-bitmaps.bmp"><figcaption>Figure 5: tb_hot bitmaps</figcaption></figure></p>
+<p><img alt="" src="../../img/tb-hot-bitmaps.bmp"></p>
 <p>The bitmaps used when the buttons are <em>inactive</em> may be created using the statement
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'bm'</span><span class="nf">⎕wc</span><span class="s1">'Bitmap'</span><span class="w"> </span><span class="p">(</span><span class="s1">'dyares180_64.dll'</span><span class="w"> </span><span class="s1">'tb_inactive'</span><span class="p">)</span>
 </code></pre></div>
-<p><figure id="_figure-6"><img alt="tb_inactive bitmaps" src="../../img/tb-inactive-bitmaps.bmp"><figcaption>Figure 6: tb_inactive bitmaps</figcaption></figure></p>
+<p><img alt="" src="../../img/tb-inactive-bitmaps.bmp"></p>
 <p>Note that in the Dyalog Session, if Native Look and Feel is enabled, these bitmaps are overridden by a single set of images designed to operate with the user's chosen theme and Visual Styles. For further information, see <a href="../../introduction/native-look-and-feel/">Native Look and Feel</a>.</p>
 <h2 id="creating-imagelists-for-toolbuttons">Creating ImageLists for ToolButtons</h2>
 <p>You may use up to three ImageList objects to represent ToolButton images. These will be used to specify the pictures of the ToolButton objects in their normal, highlighted (sometimes termed hot) and inactive states respectively.</p>
@@ -71553,17 +71553,17 @@
 <span class="s1">'F.TB.B2'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Open'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">8</span><span class="p">)</span>
 <span class="s1">'F.TB.B3'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Save'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">9</span><span class="p">)</span>
 </code></pre></div>
-<p><figure id="_figure-7"><img alt="toolcontrol style flatbuttons" src="../../img/toolcontrol-style-flatbuttons.png"><figcaption>Figure 7: toolcontrol style flatbuttons</figcaption></figure></p>
+<p><img alt="" src="../../img/toolcontrol-style-flatbuttons.png"></p>
 <h2 id="the-style-property">The Style Property</h2>
 <p>The overall appearance of the ToolButton objects displayed by the ToolControl is defined by the Style property of the ToolControl itself, rather than by properties of individual ToolButtons.</p>
 <p>Note that the Style property may only be set when the ToolControl is created using <code>⎕WC</code> and may not subsequently be changed using <code>⎕WS</code>.</p>
 <p>Style may be <code>'FlatButtons'</code>, <code>'Buttons'</code>, <code>'List'</code> or <code>'FlatList'</code>. The default Style is of a ToolControl is <code>'FlatButtons'</code>, as is the first example above. The following examples illustrate the other three styles:</p>
-<p><figure id="_figure-8"><img alt="toolcontrol style buttons" src="../../img/toolcontrol-style-buttons.png"><figcaption>Figure 8: toolcontrol style buttons</figcaption></figure></p>
-<p><figure id="_figure-9"><img alt="toolcontrol style list" src="../../img/toolcontrol-style-list.png"><figcaption>Figure 9: toolcontrol style list</figcaption></figure></p>
-<p><figure id="_figure-10"><img alt="toolcontrol style flatlist" src="../../img/toolcontrol-style-flatlist.png"><figcaption>Figure 10: toolcontrol style flatlist</figcaption></figure></p>
+<p><img alt="" src="../../img/toolcontrol-style-buttons.png"></p>
+<p><img alt="" src="../../img/toolcontrol-style-list.png"></p>
+<p><img alt="" src="../../img/toolcontrol-style-flatlist.png"></p>
 <h2 id="the-divider-property">The Divider Property</h2>
 <p>You will notice that, in the above examples, there is a thin groove drawn above the ToolControl. The presence or absence of this groove is controlled by the Divider property whose default is 1. The following picture illustrates the effect of setting Divider to 0.</p>
-<p><figure id="_figure-11"><img alt="toolcontrol no divider" src="../../img/toolcontrol-no-divider.png"><figcaption>Figure 11: toolcontrol no divider</figcaption></figure></p>
+<p><img alt="" src="../../img/toolcontrol-no-divider.png"></p>
 <h2 id="the-multiline-property">The MultiLine Property</h2>
 <p>The MultiLine property specifies whether or not ToolButtons (and other child controls) are arranged in several rows (or columns) when there are more than would otherwise fit.</p>
 <p>If MultiLine is 0 (the default), the ToolControl object <em>clips</em> its children and the user must resize the Form to bring more objects into view.</p>
@@ -71582,9 +71582,9 @@
 <span class="s1">'F.TB.B5'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Redo'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
 <span class="s1">'F.TB.B6'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Delete'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
 </code></pre></div>
-<p><figure id="_figure-12"><img alt="toolcontrol multiline 0" src="../../img/toolcontrol-multiline-0.png"><figcaption>Figure 12: toolcontrol multiline 0</figcaption></figure></p>
+<p><img alt="" src="../../img/toolcontrol-multiline-0.png"></p>
 <p>If we set MultiLine to 1, the ToolButtons are instead displayed in several rows:</p>
-<p><figure id="_figure-13"><img alt="toolcontrol multiline 1" src="../../img/toolcontrol-multiline-1.png"><figcaption>Figure 13: toolcontrol multiline 1</figcaption></figure></p>
+<p><img alt="" src="../../img/toolcontrol-multiline-1.png"></p>
 <h2 id="the-transparent-property">The Transparent Property</h2>
 <p>The Transparent property (default 0) specifies whether or not the ToolControl is transparent. Note that Transparent must be set when the object is created using <code>⎕WC</code> and may not subsequently be changed using <code>⎕WS</code>.</p>
 <p>If a ToolControl is created with Transparent set to 1, the visual effect is as if the ToolButtons (and other controls) were drawn directly on the parent Form as shown below.
@@ -71602,7 +71602,7 @@
 <span class="s1">'F.TB.B2'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Open'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">8</span><span class="p">)</span>
 <span class="s1">'F.TB.B3'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Save'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">9</span><span class="p">)</span>
 </code></pre></div>
-<p><figure id="_figure-14"><img alt="toolcontrol transparent" src="../../img/toolcontrol-transparent.png"><figcaption>Figure 14: toolcontrol transparent</figcaption></figure></p>
+<p><img alt="" src="../../img/toolcontrol-transparent.png"></p>
 <h2 id="radio-buttons-check-buttons-and-separators">Radio buttons, Check buttons and Separators</h2>
 <p>The Style property of a ToolButton may be <code>'Push'</code>, <code>'Check'</code>, <code>'Radio'</code>, <code>'Separator'</code> or <code>'DropDown'</code>.</p>
 <p><em>Push</em> buttons (the default) are used to generate actions and pop in and out when clicked.</p>
@@ -71628,9 +71628,9 @@
 <span class="s1">'F.TB.B6'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Size'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">6</span><span class="p">)(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Radio'</span><span class="p">)</span>
 <span class="s1">'F.TB.B7'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Date'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">7</span><span class="p">)(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Radio'</span><span class="p">)</span>
 </code></pre></div>
-<p><figure id="_figure-15"><img alt="toolcontrol radio buttons" src="../../img/toolcontrol-radio-buttons.png"><figcaption>Figure 15: toolcontrol radio buttons</figcaption></figure></p>
+<p><img alt="" src="../../img/toolcontrol-radio-buttons.png"></p>
 <p>Notice that the appearance of the Separator ToolButton is less obvious when the ToolControl Style is Buttons or List, but the radio grouping effect is the same:</p>
-<p><figure id="_figure-16"><img alt="toolcontrol list radio buttons" src="../../img/toolcontrol-list-radio-buttons.png"><figcaption>Figure 16: toolcontrol list radio buttons</figcaption></figure></p>
+<p><img alt="" src="../../img/toolcontrol-list-radio-buttons.png"></p>
 <h2 id="drop-down-buttons">Drop-Down buttons</h2>
 <p>It is possible to define ToolButtons that display a drop-down menu from which the user may choose an option. This is done by creating a ToolButton with Style <code>'DropDown'</code>.</p>
 <p>A ToolButton with Style <code>'DropDown'</code> has an associated popup Menu object which is named by its Popup property. There are two cases to consider.</p>
@@ -71654,7 +71654,7 @@
 <span class="s1">'F.TB.B1'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'File'</span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'DropDown'</span><span class="p">)(</span><span class="s1">'Popup'</span><span class="w"> </span><span class="s1">'F.FMENU'</span><span class="p">)</span>
 <span class="s1">'F.TB.B2'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Edit'</span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'DropDown'</span><span class="p">)(</span><span class="s1">'Popup'</span><span class="w"> </span><span class="s1">'F.EMENU'</span><span class="p">)</span>
 </code></pre></div>
-<p><figure id="_figure-17"><img alt="toolcontrol dropdown buttons" src="../../img/toolcontrol-dropdown-buttons.png"><figcaption>Figure 17: toolcontrol dropdown buttons</figcaption></figure></p>
+<p><img alt="" src="../../img/toolcontrol-dropdown-buttons.png"></p>
 <h2 id="a-menubar-as-the-child-of-a-toolcontrol">A MenuBar as the child of a ToolControl</h2>
 <p>As a special case, the ToolControl may contain a MenuBar as its <strong>only</strong> child. In this case, Dyalog APL/W causes the menu items to be drawn as buttons, even under Windows 95.</p>
 <p>Although nothing is done to prevent it, the use of other objects in a ToolControl containing a MenuBar, is not supported.
@@ -71676,12 +71676,12 @@
 
 <span class="bp">:</span><span class="nv">EndWith</span>
 </code></pre></div>
-<p><figure id="_figure-18"><img alt="toolcontrol menubar" src="../../img/toolcontrol-menubar.png"><figcaption>Figure 18: toolcontrol menubar</figcaption></figure></p>
+<p><img alt="" src="../../img/toolcontrol-menubar.png"></p>
 <h2 id="providing-user-customisation">Providing User Customisation</h2>
 <p>It is common to allow the user to switch the appearance of a ToolControl dynamically. This may be done using a pop-up menu. In addition to providing a choice of styles, the user may switch the text captions on and off.</p>
 <p>The ShowCaptions property specifies whether or not the captions of ToolButton objects are drawn. Its default value is 1 (draw captions).</p>
 <p>ToolButtons drawn without captions occupy much less space and ShowCaptions provides a quick way to turn captions on/off for user customisation.</p>
-<p><figure id="_figure-19"><img alt="toolcontrol user options" src="../../img/toolcontrol-user-options.png"><figcaption>Figure 19: toolcontrol user options</figcaption></figure></p>
+<p><img alt="" src="../../img/toolcontrol-user-options.png"></p>
 <p>The following functions illustrate how this was achieved.
 </p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Example</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: User Options'</span>

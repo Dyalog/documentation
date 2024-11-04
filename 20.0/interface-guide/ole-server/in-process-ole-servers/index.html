@@ -67977,7 +67977,7 @@
         
   
   <span class="md-ellipsis">
-    Example Communication Between APLs
+    Communication Between APLs
   </span>
   
 
@@ -67998,7 +67998,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Server
+    Excel as the Server
   </span>
   
 
@@ -68019,7 +68019,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Client
+    Excel as the Client
   </span>
   
 
@@ -68040,7 +68040,7 @@
         
   
   <span class="md-ellipsis">
-    Example APL as Compute Server for Excel
+    APL as Compute Server for Excel
   </span>
   
 
@@ -71377,10 +71377,10 @@
 <h2 id="registering-and-unregistering-in-process-ole-servers">Registering and Unregistering In-Process OLE Servers</h2>
 <p>During development, an in-process OLE Server is automatically registered when you create it using <em>File/Export</em>.</p>
 <p>The Windows utility regsvr32.exe should be used to register an <em>in-process</em> OLE Server independently, or to install a runtime in-process OLE Server on a target computer. For example:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">WINDOWS</span><span class="na">\</span><span class="nv">System32</span><span class="o">&gt;</span><span class="nv">regsvr32</span><span class="w"> </span><span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">mysvr</span><span class="na">.</span><span class="nv">dll</span>
+<div class="highlight"><pre><span></span><code>C:\WINDOWS\System32&gt;regsvr32 c:\MyWS\mysvr.dll
 </code></pre></div>
 <p>regsvr32 should also be used (with the <em>/u</em> flag) to unregister an in-process OLE Server. For example:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">WINDOWS</span><span class="na">\</span><span class="nv">System32</span><span class="o">&gt;</span><span class="nv">regsvr32</span><span class="w"> </span><span class="na">/</span><span class="nv">u</span><span class="w"> </span><span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">mysvr</span><span class="na">.</span><span class="nv">dll</span>
+<div class="highlight"><pre><span></span><code>C:\WINDOWS\System32&gt;regsvr32 /u c:\MyWS\mysvr.dll
 </code></pre></div>
 <p>Note that in both cases, regsvr32 actually starts the OLE Server. This in turn loads the appropriate Dyalog APL DLL. If you are using the development DLL, note that if your session start-up code fails for any reason, the regsvr32 process will hang and have to be terminated using the Task Manager.</p>
 

@@ -67915,7 +67915,7 @@
         
   
   <span class="md-ellipsis">
-    Example Communication Between APLs
+    Communication Between APLs
   </span>
   
 
@@ -67936,7 +67936,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Server
+    Excel as the Server
   </span>
   
 
@@ -67957,7 +67957,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Client
+    Excel as the Client
   </span>
   
 
@@ -67978,7 +67978,7 @@
         
   
   <span class="md-ellipsis">
-    Example APL as Compute Server for Excel
+    APL as Compute Server for Excel
   </span>
   
 
@@ -71298,9 +71298,9 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>The picture below shows the initial appearance of the <code>Host</code> Form and its ToolControl.</p>
-<p><figure id="_figure-1"><img alt="docking_toolcontrol 0" src="../../img/docking-toolcontrol-0.png"><figcaption>Figure 1: docking_toolcontrol 0</figcaption></figure></p>
+<p><img alt="" src="../../img/docking-toolcontrol-0.png"></p>
 <p>Because the ToolControl is dockable, the user may pick it up and drag it out of its parent Form as shown below.</p>
-<p><figure id="_figure-2"><img alt="docking_toolcontrol 1" src="../../img/docking-toolcontrol-1.png"><figcaption>Figure 2: docking_toolcontrol 1</figcaption></figure></p>
+<p><img alt="" src="../../img/docking-toolcontrol-1.png"></p>
 <p>When the user drops the ToolControl outside the <code>Host</code> Form, it (the ToolControl) generates a DockRequest event which is attached to the <code>UNDOCK</code> callback function. This function, creates a new Form called <code>Floater</code>, makes a copy of the ToolControl as a child of <code>Floater</code>, and then expunges the original ToolControl from the <code>Host</code> Form. The function, and the results of the operation, are shown below. The following points should be noted.</p>
 <ul>
 <li>The <code>UNDOCK</code> callback returns 0 to prevent APL from taking any further action (the default action after a successful DockRequest is to generate a DockAccept event, which in this case is undesirable).</li>
@@ -71322,8 +71322,8 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div></li>
 </ul>
-<p><figure id="_figure-3"><img alt="docking_toolcontrol 2" src="../../img/docking-toolcontrol-2.png"><figcaption>Figure 3: docking_toolcontrol 2</figcaption></figure></p>
-<p><figure id="_figure-4"><img alt="docking_toolcontrol 3" src="../../img/docking-toolcontrol-3.png"><figcaption>Figure 4: docking_toolcontrol 3</figcaption></figure></p>
+<p><img alt="" src="../../img/docking-toolcontrol-2.png"></p>
+<p><img alt="" src="../../img/docking-toolcontrol-3.png"></p>
 <p>The user may dock the ToolControl back into Host by dragging the <code>Floater</code> Form into it.</p>
 <p>The <code>DOCKMOVE</code> callback function, shown below, prevents the ToolControl (represented by its parent <code>Floater</code>) from being docked anywhere except along the top edge.
 </p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">DOCKMOVE</span><span class="w"> </span><span class="nv">MSG</span>
@@ -71332,7 +71332,7 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>The picture below illustrates the moment just before the user releases the mouse button to dock Floater back into Host.</p>
-<p><figure id="_figure-5"><img alt="docking_toolcontrol 4" src="../../img/docking-toolcontrol-4.png"><figcaption>Figure 5: docking_toolcontrol 4</figcaption></figure></p>
+<p><img alt="" src="../../img/docking-toolcontrol-4.png"></p>
 <p>At this point, the <code>Host</code> Form generates a DockAccept event and the callback function <code>DOCK</code> is invoked. This function recreates the ToolControl as a child of <code>Host</code> (making it dockable once more), and then expunges the <code>Floater</code> Form.
 </p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">DOCK</span><span class="w"> </span><span class="nv">MSG</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="m">0</span>
@@ -71344,7 +71344,7 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>Once again, the result of the callback function is 0 to tell APL that you have dealt with the situation and it is to take no further action.</p>
-<p><figure id="_figure-6"><img alt="docking_toolcontrol 0" src="../../img/docking-toolcontrol-0.png"><figcaption>Figure 6: docking_toolcontrol 0</figcaption></figure></p>
+<p><img alt="" src="../../img/docking-toolcontrol-0.png"></p>
 
 
 

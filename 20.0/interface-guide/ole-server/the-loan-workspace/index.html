@@ -68004,7 +68004,7 @@
         
   
   <span class="md-ellipsis">
-    Example Communication Between APLs
+    Communication Between APLs
   </span>
   
 
@@ -68025,7 +68025,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Server
+    Excel as the Server
   </span>
   
 
@@ -68046,7 +68046,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Client
+    Excel as the Client
   </span>
   
 
@@ -68067,7 +68067,7 @@
         
   
   <span class="md-ellipsis">
-    Example APL as Compute Server for Excel
+    APL as Compute Server for Excel
   </span>
   
 
@@ -71510,11 +71510,11 @@
 <span class="nv">PeriodType</span><span class="w">  </span>
 </code></pre></div>
 <p>Right-click over the name <code>CalcPayments</code> and select <em>Properties</em> from the pop-up menu. This brings up the <em>Properties</em> dialog box for <code>Loan.CalcPayments</code>. Click on the <em>COM Properties</em> tab, check the <em>Exported</em> box and then fill in the names and data types of its  parameters as illustrated below.</p>
-<p><figure id="_figure-1"><img alt="loan calcpayments properties" src="../../img/loan-calcpayments-properties.png"><figcaption>Figure 1: loan calcpayments properties</figcaption></figure></p>
+<p><img alt="" src="../../img/loan-calcpayments-properties.png"></p>
 <p>The picture above shows the COM properties that are required to export function <code>CalcPayments</code> as a method. The function is declared to require 5 parameters of type VT_I4 (integers) and return a result of type VT_ARRAY of VT_R8 (an array of floating-point numbers).</p>
 <p>The names you choose for the parameters will be visible in an object browser and certain other programming environments.</p>
 <p>Do the same for the <code>PeriodType</code> variable so that it is exported as a  property.</p>
-<p><figure id="_figure-2"><img alt="loan periodtype properties" src="../../img/loan-periodtype-properties.png"><figcaption>Figure 2: loan periodtype properties</figcaption></figure></p>
+<p><img alt="" src="../../img/loan-periodtype-properties.png"></p>
 <p>The picture above shows the COM properties to export variable <code>PeriodType</code> as a property. The property is declared to be of type VT_I4 (integer).</p>
 <p>Rename and save the workspace to avoid overwriting the original:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">WSID</span><span class="w"> </span><span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">myloan</span>
@@ -71523,14 +71523,14 @@
 <span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">myloan</span><span class="na">.</span><span class="nv">dws</span><span class="w"> </span><span class="nv">saved</span><span class="na">...</span>
 </code></pre></div>
 <p>Finally, to create your OLE Server, choose <em>Export</em> from the Session <em>File</em> menu and complete the <em>Create bound file</em> dialog box as shown below. In this case, the OLE Server is created as an in-process server, bound to the development version of the Dyalog APL DLL (because the <em>Runtime application</em> checkbox is cleared)</p>
-<p><figure id="_figure-3"><img alt="loan create bound file" src="../../img/loan-create-bound-file.png"><figcaption>Figure 3: loan create bound file</figcaption></figure></p>
-<p><figure id="_figure-4"><img alt="loan create bound file status" src="../../img/loan-create-bound-file-status.png"><figcaption>Figure 4: loan create bound file status</figcaption></figure></p>
-<p><figure id="_figure-5"><img alt="loan create bound file ok" src="../../img/loan-create-bound-file-ok.png"><figcaption>Figure 5: loan create bound file ok</figcaption></figure></p>
+<p><img alt="" src="../../img/loan-create-bound-file.png"></p>
+<p><img alt="" src="../../img/loan-create-bound-file-status.png"></p>
+<p><img alt="" src="../../img/loan-create-bound-file-ok.png"></p>
 <h2 id="using-loan-from-excel">Using Loan from Excel</h2>
 <p>Start Excel and load the spreadsheet Loan.xlsm from the Dyalog APL sub-directory <code>samples\ole</code>.</p>
 <p>The <em>Payments</em> button fires a simple macro that uses the APL dyalog.Loan object to perform repayment calculations. To run the example enter data into the cells as shown below, then click <em>Payments</em>. When you do so, Excel runs the Calc macro and this causes OLE to initialise the dyalog.Loan OLE Server</p>
 <p>The Calc macro actually calculates the repayments matrix by calling the CalcPayments method in the dyalog.Loan object; that is, it runs the <code>CalcPayments</code> function in the <code>Loan</code> namespace.</p>
-<p><figure id="_figure-6"><img alt="loan excel example" src="../../img/loan-excel-example.png"><figcaption>Figure 6: loan excel example</figcaption></figure></p>
+<p><img alt="" src="../../img/loan-excel-example.png"></p>
 <h2 id="how-it-works">How it Works</h2>
 <div class="highlight"><pre><span></span><code><span class="nv">Sub</span><span class="w"> </span><span class="nv">Calc</span><span class="p">()</span>
 <span class="w">    </span><span class="nv">Dim</span><span class="w"> </span><span class="nv">APLLoan</span><span class="w"> </span><span class="nv">As</span><span class="w"> </span><span class="nv">Object</span>

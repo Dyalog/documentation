@@ -67977,7 +67977,7 @@
         
   
   <span class="md-ellipsis">
-    Example Communication Between APLs
+    Communication Between APLs
   </span>
   
 
@@ -67998,7 +67998,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Server
+    Excel as the Server
   </span>
   
 
@@ -68019,7 +68019,7 @@
         
   
   <span class="md-ellipsis">
-    Example Excel as the Client
+    Excel as the Client
   </span>
   
 
@@ -68040,7 +68040,7 @@
         
   
   <span class="md-ellipsis">
-    Example APL as Compute Server for Excel
+    APL as Compute Server for Excel
   </span>
   
 
@@ -71372,7 +71372,7 @@
 <p>The tree structure is specified by the RowTreeDepth property.  This is either a scalar 0 or an integer vector of the same length as the number of rows in the grid. RowTreeDepth is similar to the Depth property of the TreeView object.</p>
 <p>Each element of RowTreeDepth specifies the depth of the corresponding row of the Grid. A value of 0 indicates that the row is a top-level row. A value of 1 indicates that the corresponding row is a child of the most recent row whose RowTreeDepth is 0; a value of 2 indicates that the corresponding row is a child of the most recent row whose RowTreeDepth is 1, and so forth.</p>
 <p>The picture below illustrates the initial appearance of a Grid with TreeView behaviour. Notice that at first only the top-level rows are displayed.</p>
-<p><figure id="_figure-1"><img alt="grid treeview 1" src="../../img/grid-treeview-1.png"><figcaption>Figure 1: grid treeview 1</figcaption></figure></p>
+<p><img alt="" src="../../img/grid-treeview-1.png"></p>
 <p>The tree structure is defined on <code>TreeGrid[26]</code>. In this example, the Grid has top-level rows (RowTreeDepth of 0) that contain annual totals. The second-tier rows (RowTreeDepth of 1), contain quarterly totals, while the third-tier rows (RowTreeDepth of 2) contain monthly figures.
 </p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">TreeGrid</span><span class="sr">;</span><span class="nv">SIZE</span><span class="sr">;</span><span class="nv">YR</span><span class="sr">;</span><span class="nv">YRS</span><span class="sr">;</span><span class="nv">DATA</span><span class="sr">;</span><span class="nv">MDATA</span><span class="sr">;</span><span class="nv">QDATA</span><span class="sr">;</span><span class="nv">YDATA</span><span class="sr">;</span><span class="nv">IX</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">SIZE</span><span class="kd">←</span><span class="m">126</span><span class="w"> </span><span class="m">381</span>
@@ -71408,14 +71408,14 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>When the user clicks on one of the nodes indicated by a "+" symbol, the Grid automatically expands to display the rows at the next level below that node. At the same time, an Expanding event is generated. In the next picture, the user has clicked on the <em>2001</em> node and, below that, the <em>Q3</em> node.</p>
-<p><figure id="_figure-2"><img alt="grid treeview 2" src="../../img/grid-treeview-2.png"><figcaption>Figure 2: grid treeview 2</figcaption></figure></p>
+<p><img alt="" src="../../img/grid-treeview-2.png"></p>
 <h2 id="rowsetvisibledepth-method">RowSetVisibleDepth Method</h2>
 <p>The Grid provides a RowSetVisibleDepth method that provides <em>tier-level</em> control over which rows are displayed.</p>
 <p>The value of its argument is an integer that specifies the depth of rows to be displayed. The Grid displays all rows whose RowTreeDepth values are less than or equal to this value. In the example, this method is called by items on the <em>View</em> menu.</p>
 <p>The next picture shows how the Grid is displayed after choosing <em>Expand Years</em> from the <em>View</em> menu. Notice that, as specified by <code>TreeGrid[6]</code> this menu item simply executes the RowSetVisibleDepth method with an argument of 1.</p>
-<p><figure id="_figure-3"><img alt="grid treeview 3" src="../../img/grid-treeview-3.png"><figcaption>Figure 3: grid treeview 3</figcaption></figure></p>
+<p><img alt="" src="../../img/grid-treeview-3.png"></p>
 <p>Similarly, the <em>Expand All item</em>  executes RowSetVisibleDepth 2, as specified by <code>TreeGrid[7]</code> and this causes the Grid to display all rows up to and including RowTreeDepth of 2 as shown below.</p>
-<p><figure id="_figure-4"><img alt="grid treeview 4" src="../../img/grid-treeview-4.png"><figcaption>Figure 4: grid treeview 4</figcaption></figure></p>
+<p><img alt="" src="../../img/grid-treeview-4.png"></p>
 <p>Note that the <em>Collapse All</em> item executes RowSetVisibleDepth 0, which causes only the top-level rows to be displayed.</p>
 <p>You may open specific nodes by invoking the Expanding event as a method.</p>
 <p>Fine control over the appearance of the tree is provided through the RowTreeImages and RowTreeStyle properties. See Object Reference for further details.</p>
