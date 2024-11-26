@@ -67999,7 +67999,7 @@
         
   
   <span class="md-ellipsis">
-    Restrictions Limitations
+    Restrictions and Limitations
   </span>
   
 
@@ -71271,7 +71271,7 @@
 
 <p>This parameter specifies component file filename extensions.</p>
 <p>CFEXT is a string that specifies a colon-separated list of one or more extensions, including any period (".") which separates the extension from its basename.</p>
-<p>If undefined, CFEXT defaults to <code>.dcf:</code> on Windows and OS X, and <code>.dcf:.DCF:</code> on all other platforms.</p>
+<p>If undefined, CFEXT defaults to <code>.dcf:</code> on Windows and macOS, and <code>.dcf:.DCF:</code> on all other platforms.</p>
 <p>In the Windows case, this means that <code>'myfile'⎕FTIE 0</code> will search first for a file named <code>myfile.dcf</code> , and then for a file named <code>myfile</code> (with no extension). As file names are not case-sensitive under Windows, this will find <code>myfile.DCF</code> or <code>MyFile.Dcf</code> and so forth. If none are found with this extension, it will load <code>myfile</code> , <code>MyFile</code> , <code>MYFILE</code> etc.</p>
 <p>In the second (non-Windows) case note that <code>'myfile'⎕FTIE 0</code> will search first for a file named <code>myfile</code> , then <code>myfile.dcf</code> , then <code>myfile.DCF</code> .</p>
 

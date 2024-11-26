@@ -67999,7 +67999,7 @@
         
   
   <span class="md-ellipsis">
-    Restrictions Limitations
+    Restrictions and Limitations
   </span>
   
 
@@ -71271,7 +71271,7 @@
 
 <p>This parameter specifies workspace filename extensions. It complements the <strong>WSPATH</strong> parameter in that together they determine the file search order to satisfy <code>)LOAD</code> or <code>)COPY</code>; it also specifies the filename extension to add on <code>)SAVE</code> or <code>)CONTINUE</code> if none is explicitly provided.</p>
 <p>WSEXT is a string that specifies a colon-separated list of one or more extensions, including any period (".") which separates the extension from its basename.</p>
-<p>If undefined, WSEXT defaults to <code>.dws:</code> on Windows and OS X, and <code>:.dws:.DWS</code> on all other platforms.</p>
+<p>If undefined, WSEXT defaults to <code>.dws:</code> on Windows and macOS, and <code>:.dws:.DWS</code> on all other platforms.</p>
 <p>In the Windows case, this means that <code>)LOAD myws</code> will search first for a file named <code>myws.dws</code> , and then for a file named <code>myws</code> (with no extension). As file names are not case-sensitive under Windows, this will find <code>myws.DWS</code> or <code>MyWs.Dws</code> and so forth. If none are found with this extension, it will load <code>myws</code> , <code>MyWs</code> , <code>MYWS</code> etc.</p>
 <p>In the second (non-Windows) case note that <code>)LOAD myws</code> will search first for a file named <code>myws</code> , then <code>myws.dws</code> , then <code>myws.DWS</code>.</p>
 <p>When <code>)SAVE</code> and <code>⎕SAVE</code> is used without specifying a file extension, the first extension defined by WSEXT is applied to complete the file name. The default is therefore <code>.dws</code> in all cases.</p>
