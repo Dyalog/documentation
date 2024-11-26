@@ -68,6 +68,11 @@ th, td {
     font-family: APL;
 }
 
+.right {
+    text-align: right;
+    color: white;
+}
+
 /* Compress lists a bit vertcially */
 li {
     margin-bottom: 0px !important;
