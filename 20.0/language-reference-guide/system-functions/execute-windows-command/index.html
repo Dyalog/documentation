@@ -20237,6 +20237,8 @@
       
         
       
+        
+      
     
     
     
@@ -20272,7 +20274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../primitive-operators/i-beam/" class="md-nav__link">
+      <a href="../../the-i-beam-operator/i-beam/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -21574,6 +21576,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../the-i-beam-operator/shell-process-control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shell Process Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../the-i-beam-operator/singular-value-decomposition/" class="md-nav__link">
         
   
@@ -22749,6 +22772,8 @@
       
         
       
+        
+      
     
     
     
@@ -23173,6 +23198,27 @@
   
   <span class="md-ellipsis">
     Start UNIX Auxiliary Processor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Execute External Program
   </span>
   
 
@@ -27818,6 +27864,8 @@
       
         
       
+        
+      
     
     
     
@@ -30834,6 +30882,27 @@
   
   <span class="md-ellipsis">
     Shadow Name
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Execute external program
   </span>
   
 
@@ -71577,6 +71646,7 @@
 
 <p><code>⎕CMD</code> executes the Windows Command Processor or UNIX shell or starts another Windows application program.  <code>⎕CMD</code> is a synonym of <code>⎕SH</code>.  Either system function may be used in either environment (Windows or UNIX) with exactly the same effect.  <code>⎕CMD</code> is probably more natural for the Windows user.  This section describes the behaviour of <code>⎕CMD</code> and <code>⎕SH</code> under Windows. See <a href="../execute-unix-command/">"Execute (UNIX) Command: "</a> for a discussion of the behaviour of these system functions under UNIX.</p>
 <p>The system commands <a href="../../system-commands/sh/"><code>)SH</code></a> and <a href="../../system-commands/cmd/"><code>)CMD</code></a> provide similar facilities. For further information, see <a href="../../system-commands/sh/">Execute (UNIX) Command: </a> and <a href="../../system-commands/cmd/">Example</a>.</p>
+<p>See also <a href="../shell/"><code>⎕SHELL</code></a>.</p>
 <h2 id="executing-the-windows-command-processor">Executing the Windows Command Processor</h2>
 <p>If <code>Y</code> is a simple character vector, <code>⎕CMD</code> invokes the Windows Command Processor (normally <code>cmd.exe</code>) and passes the command specified by character vector <code>Y</code> to it for execution. The term command means here an instruction recognised by the Command Processor, or the pathname of a program (with optional parameters) to be executed by it. In either case, APL waits for the command to finish and then returns the result <code>R</code>,  a vector of character vectors containing its result. Each element in <code>R</code> corresponds to a line of output produced by the command.</p>
 <h2 class="example">Example</h2>
