@@ -71344,7 +71344,7 @@
 
 <span class="w">      </span><span class="o">⊢</span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕STOP</span><span class="s1">'FOO'</span>
 </code></pre></div>
-<p>The effect of <code>⎕STOP</code> when a function or operator is invoked is to suspend execution at the beginning of any line in the function or operator on which a stop control is placed immediately before that line is executed, and immediately before exiting from the function or operator if a stop control of 0 is set.  Execution may be resumed by a branch expression.  A stop control interrupt (1001) may also be trapped - see <a href="trap.md">"Trap Event: "</a>.</p>
+<p>The effect of <code>⎕STOP</code> when a function or operator is invoked is to suspend execution at the beginning of any line in the function or operator on which a stop control is placed immediately before that line is executed, and immediately before exiting from the function or operator if a stop control of 0 is set.  Execution may be resumed by a branch expression.  A stop control interrupt (1001) may also be trapped - see <a href="trap.md">Trap Event</a>.</p>
 <h2 class="example">Example</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕FX</span><span class="s1">'R←FOO'</span><span class="w"> </span><span class="s1">'R←10'</span>
 

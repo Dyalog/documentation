@@ -71340,7 +71340,7 @@
 
 <h1 class="heading"><span class="name">Save Workspace</span> <span class="command">)SAVE {-force} {ws}</span></h1>
 
-<p>This command compacts (see <a href="../../system-functions/wa/">"Workspace Available: "</a> for details) and saves the active workspace.</p>
+<p>This command compacts (see <a href="../../system-functions/wa/">Workspace Available</a> for details) and saves the active workspace.</p>
 <p>If specified, <code>ws</code> is a full or relative path name to the file in which the workspace will be written. If <code>ws</code> is omitted, it defaults to <code>⎕WSID</code>. Unless the path specified by <code>ws</code> or <code>⎕WSID</code> is a full pathname, it is taken to be relative to the current working directory which may be obtained by the expression: <code>⊃1 ⎕NPARTS ''</code>.</p>
 <p>If  <code>ws</code> specifies a file name other than that implied by  <code>⎕WSID</code>, the specified file must not already exist unless the <strong>force</strong> parameter is specified.. If <code>ws</code> is omitted or resolves to the same file as  <code>⎕WSID</code>, an existing stored workspace with the same name will be replaced.</p>
 <p>See <a href="../../../programming-reference-guide/introduction/workspaces">Programmer's Guide: "Workspaces"</a> for the rules for specifying a workspace name.</p>
