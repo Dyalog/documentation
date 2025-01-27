@@ -1,0 +1,52 @@
+site_name: Token by Token Tracing
+theme:
+  favicon: img/favicon-32.png
+  logo: img/dyalog-white.svg
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.path
+    - navigation.indexes
+  name: material
+  font:
+    text: Be Vietnam Pro
+extra_css:
+  - style/main.css
+  - style/extra.css
+  - style/admonition-ucmdhelp.css
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+plugins:
+  - privacy
+  - search
+  - macros
+  - site-urls
+  - caption:
+      table:
+        enable: true
+        start_index: 1
+        increment_index: 1
+        position: bottom
+extra:
+  version_maj: 20
+  version_majmin: 20.0
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+  - abbr
+  - footnotes
+  - md_in_html
+  - markdown_tables_extended
+  - toc:
+      title: On this page
+nav:
+  - Introduction: index.md
+  - The TBT Interface: anatomy.md
+  - Tracing Diamonds: diamonds.md
