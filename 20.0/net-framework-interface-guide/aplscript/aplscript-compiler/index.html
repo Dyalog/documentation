@@ -68925,8 +68925,6 @@
       
         
       
-        
-      
     
     
     
@@ -68954,27 +68952,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69050,7 +69027,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70863,7 +70840,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71349,12 +71326,12 @@
 </thead>
 <tbody>
 <tr>
-<td>32-Bit</td>
+<td><strong>32-Bit</strong></td>
 <td><code>dyalogc_unicode.exe</code></td>
 <td><code>dyalogc.exe</code></td>
 </tr>
 <tr>
-<td>64-Bit</td>
+<td><strong>64-Bit</strong></td>
 <td><code>dyalogc64_unicode.exe</code></td>
 <td><code>dyalogc64.exe</code></td>
 </tr>
@@ -71368,55 +71345,55 @@
 <li>Compile a Dyalog workspace (.dws) into a native Microsoft Windows executable program, with the same characteristics and advantages described above.</li>
 </ul>
 <p>The Script is designed to be run from a command prompt. If in the 64-bit Unicode Edition change to the appropriate directory and type <code>dyalogc64_unicode /?</code> (to query its usage) the following output is displayed:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">Program</span><span class="w"> </span><span class="nv">Files</span><span class="na">\</span><span class="nv">Dyalog</span><span class="na">\</span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">APL</span><span class="o">-</span><span class="m">64</span><span class="w"> </span><span class="m">18.0</span><span class="w"> </span><span class="nv">Unicode</span><span class="o">&gt;</span><span class="nv">dyalogc64_unicode</span><span class="w"> </span><span class="na">/</span><span class="o">?</span>
-<span class="nv">Dyalog</span><span class="w"> </span><span class="nv">APLScript</span><span class="w"> </span><span class="nv">compiler</span><span class="w"> </span><span class="m">64</span><span class="w"> </span><span class="nv">bit</span><span class="na">.</span><span class="w"> </span><span class="nv">Unicode</span><span class="w"> </span><span class="nv">Mode</span><span class="na">.</span><span class="w"> </span><span class="nv">Version</span><span class="w"> </span><span class="m">18.0.38524.0</span>
-<span class="nv">Copyright</span><span class="w"> </span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">Ltd</span><span class="w"> </span><span class="m">2000</span><span class="o">-</span><span class="m">2020</span>
+<div class="highlight"><pre><span></span><code>c:\Program Files\Dyalog\Dyalog APL-64 18.0 Unicode&gt;dyalogc64_unicode /?
+Dyalog APLScript compiler 64 bit. Unicode Mode. Version 18.0.38524.0
+Copyright Dyalog Ltd 2000-2020
 
-<span class="nv">dyalogc</span><span class="na">.</span><span class="nv">exe</span><span class="w"> </span><span class="nv">command</span><span class="w"> </span><span class="nv">line</span><span class="w"> </span><span class="nv">options</span><span class="bp">:</span>
+dyalogc.exe command line options:
 
-<span class="na">/</span><span class="o">?</span><span class="w">                </span><span class="nv">Usage</span>
-<span class="na">/</span><span class="nv">r</span><span class="bp">:</span><span class="nv">file</span><span class="w">           </span><span class="nv">Add</span><span class="w"> </span><span class="nv">reference</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">assembly</span>
-<span class="na">/</span><span class="nv">o</span><span class="sr">[</span><span class="nv">ut</span><span class="sr">]</span><span class="bp">:</span><span class="nv">file</span><span class="w">       </span><span class="nv">Output</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="nv">name</span>
-<span class="na">/</span><span class="nv">res</span><span class="bp">:</span><span class="nv">file</span><span class="w">         </span><span class="nv">Add</span><span class="w"> </span><span class="nv">resource</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">output</span><span class="w"> </span><span class="nv">file</span>
-<span class="na">/</span><span class="nv">icon</span><span class="bp">:</span><span class="nv">file</span><span class="w">        </span><span class="nv">File</span><span class="w"> </span><span class="nv">containing</span><span class="w"> </span><span class="nv">main</span><span class="w"> </span><span class="nv">program</span><span class="w"> </span><span class="nv">icon</span>
-<span class="na">/</span><span class="nv">q</span><span class="w">                </span><span class="nv">Operate</span><span class="w"> </span><span class="nv">quietly</span>
-<span class="na">/</span><span class="nv">v</span><span class="w">                </span><span class="nv">Verbose</span>
-<span class="na">/</span><span class="nv">s</span><span class="w">                </span><span class="nv">Treat</span><span class="w"> </span><span class="nv">warnings</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="nv">errors</span>
-<span class="na">/</span><span class="nv">nonet</span><span class="w">            </span><span class="nv">Creates</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">binary</span><span class="w"> </span><span class="nv">that</span><span class="w"> </span><span class="nv">does</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">use</span><span class="w"> </span><span class="nv">Microsoft</span><span class="w"> </span><span class="na">.</span><span class="nv">Net</span>
-<span class="na">/</span><span class="nv">runtime</span><span class="w">          </span><span class="nv">Build</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">non</span><span class="o">-</span><span class="nv">debuggable</span><span class="w"> </span><span class="nv">binary</span>
-<span class="na">/</span><span class="nv">lx</span><span class="bp">:</span><span class="nv">expression</span><span class="w">    </span><span class="nv">Specify</span><span class="w"> </span><span class="nv">entry</span><span class="w"> </span><span class="nv">point</span><span class="w"> </span><span class="p">(</span><span class="nv">Latent</span><span class="w"> </span><span class="nv">Expression</span><span class="p">)</span>
-<span class="na">/</span><span class="nv">t</span><span class="bp">:</span><span class="nv">library</span><span class="w">        </span><span class="nv">Build</span><span class="w"> </span><span class="na">.</span><span class="nv">Net</span><span class="w"> </span><span class="nv">library</span><span class="w"> </span><span class="p">(</span><span class="na">.</span><span class="nv">dll</span><span class="p">)</span>
-<span class="na">/</span><span class="nv">t</span><span class="bp">:</span><span class="nv">nativeexe</span><span class="w">      </span><span class="nv">Build</span><span class="w"> </span><span class="nv">native</span><span class="w"> </span><span class="nv">executable</span><span class="w"> </span><span class="p">(</span><span class="na">.</span><span class="nv">exe</span><span class="p">)</span><span class="na">.</span><span class="w"> </span><span class="nv">Default</span>
-<span class="na">/</span><span class="nv">t</span><span class="bp">:</span><span class="nv">workspace</span><span class="w">      </span><span class="nv">Build</span><span class="w"> </span><span class="nv">dyalog</span><span class="w"> </span><span class="nv">workspace</span><span class="w"> </span><span class="p">(</span><span class="na">.</span><span class="nv">dws</span><span class="p">)</span>
-<span class="na">/</span><span class="nv">nomessages</span><span class="w">       </span><span class="nv">Process</span><span class="w"> </span><span class="nv">does</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">use</span><span class="w"> </span><span class="nv">windows</span><span class="w"> </span><span class="nv">messages</span><span class="na">.</span><span class="w"> </span><span class="nv">Use</span><span class="w"> </span><span class="nv">when</span><span class="w"> </span><span class="nv">creating</span>
-<span class="w">                  </span><span class="nv">a</span><span class="w"> </span><span class="nv">process</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">run</span><span class="w"> </span><span class="nv">under</span><span class="w"> </span><span class="nv">IIS</span>
-<span class="na">/</span><span class="nv">console</span><span class="w">          </span><span class="nv">Creates</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">console</span><span class="w"> </span><span class="nv">application</span>
-<span class="na">/</span><span class="nv">c</span><span class="w">                </span><span class="nv">Creates</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">console</span><span class="w"> </span><span class="nv">application</span>
-<span class="na">/</span><span class="nv">multihost</span><span class="w">        </span><span class="nv">Support</span><span class="w"> </span><span class="nv">multi</span><span class="o">-</span><span class="nv">hosted</span><span class="w"> </span><span class="nv">interpreters</span>
-<span class="na">/</span><span class="nv">unicode</span><span class="w">          </span><span class="nv">Creates</span><span class="w"> </span><span class="nv">an</span><span class="w"> </span><span class="nv">application</span><span class="w"> </span><span class="nv">that</span><span class="w"> </span><span class="nv">runs</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">Unicode</span><span class="w"> </span><span class="nv">intepreter</span>
-<span class="na">/</span><span class="nv">wx</span><span class="bp">:</span><span class="sr">[</span><span class="m">0</span><span class="o">|</span><span class="m">1</span><span class="o">|</span><span class="m">3</span><span class="sr">]</span><span class="w">       </span><span class="nv">Sets</span><span class="w"> </span><span class="nf">⎕WX</span><span class="w"> </span><span class="nv">for</span><span class="w"> </span><span class="nv">default</span><span class="w"> </span><span class="nv">code</span>
-<span class="na">/</span><span class="nv">a</span><span class="bp">:</span><span class="nv">file</span><span class="w">           </span><span class="nv">Specifies</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">JSON</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="nv">containing</span><span class="w"> </span><span class="nv">attributes</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">attached</span>
-<span class="w">       </span><span class="nv">to</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">binary</span>
-<span class="na">/</span><span class="nv">i</span><span class="bp">:</span><span class="nv">Process</span><span class="w">        </span><span class="nv">Set</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">isolation</span><span class="w"> </span><span class="nv">mode</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="na">.</span><span class="nv">NET</span><span class="w"> </span><span class="nv">Assembly</span>
-<span class="na">/</span><span class="nv">i</span><span class="bp">:</span><span class="nv">Assembly</span><span class="w">       </span><span class="nv">Set</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">isolation</span><span class="w"> </span><span class="nv">mode</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="na">.</span><span class="nv">NET</span><span class="w"> </span><span class="nv">Assembly</span>
-<span class="na">/</span><span class="nv">i</span><span class="bp">:</span><span class="nv">AppDomain</span><span class="w">      </span><span class="nv">Set</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">isolation</span><span class="w"> </span><span class="nv">mode</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="na">.</span><span class="nv">NET</span><span class="w"> </span><span class="nv">Assembly</span>
-<span class="na">/</span><span class="nv">i</span><span class="bp">:</span><span class="nv">Local</span><span class="w">          </span><span class="nv">Set</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">isolation</span><span class="w"> </span><span class="nv">mode</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="na">.</span><span class="nv">NET</span><span class="w"> </span><span class="nv">Assembly</span>
+/?                Usage
+/r:file           Add reference to assembly
+/o[ut]:file       Output file name
+/res:file         Add resource to output file
+/icon:file        File containing main program icon
+/q                Operate quietly
+/v                Verbose
+/s                Treat warnings as errors
+/nonet            Creates a binary that does not use Microsoft .Net
+/runtime          Build a non-debuggable binary
+/lx:expression    Specify entry point (Latent Expression)
+/t:library        Build .Net library (.dll)
+/t:nativeexe      Build native executable (.exe). Default
+/t:workspace      Build dyalog workspace (.dws)
+/nomessages       Process does not use windows messages. Use when creating
+                  a process to run under IIS
+/console          Creates a console application
+/c                Creates a console application
+/multihost        Support multi-hosted interpreters
+/unicode          Creates an application that runs in a Unicode intepreter
+/wx:[0|1|3]       Sets ⎕WX for default code
+/a:file           Specifies a JSON file containing attributes to be attached
+       to the binary
+/i:Process        Set the isolation mode of a .NET Assembly
+/i:Assembly       Set the isolation mode of a .NET Assembly
+/i:AppDomain      Set the isolation mode of a .NET Assembly
+/i:Local          Set the isolation mode of a .NET Assembly
 </code></pre></div>
 <p>Note that the isolation mode specified by the <code>/i</code> option overrides the setting in <code>web.config</code>. See <a href="../../implementation-details/asp-net-configuration-file/">DyalogIsolationMode</a>.</p>
 <p>The <code>/a</code> option is used to specify the name of a JSON file that contains assembly info. For example:
-</p><div class="highlight"><pre><span></span><code><span class="nv">dyalogc64_unicode</span><span class="na">.</span><span class="nv">exe</span><span class="w"> </span><span class="na">/</span><span class="nv">t</span><span class="bp">:</span><span class="nv">library</span><span class="w"> </span><span class="nv">j</span><span class="bp">:</span><span class="na">/</span><span class="nv">ws</span><span class="na">/</span><span class="nv">attributetest</span><span class="na">.</span><span class="nv">dws</span><span class="w"> </span><span class="na">/</span><span class="nv">a</span><span class="bp">:</span><span class="nv">c</span><span class="bp">:</span><span class="na">/</span><span class="nv">tmp</span><span class="na">/</span><span class="nv">atts</span><span class="na">.</span><span class="nv">json</span>
+</p><div class="highlight"><pre><span></span><code>dyalogc64_unicode.exe /t:library j:/ws/attributetest.dws /a:c:/tmp/atts.json
 </code></pre></div>
 <p>where <code>c:/tmp/atts.json</code> contains:
-</p><div class="highlight"><pre><span></span><code><span class="kt">{</span>
-<span class="s2">"AssemblyVersion"</span><span class="bp">:</span><span class="s2">"1.2.2.2"</span><span class="o">,</span>
-<span class="s2">"AssemblyFileVersion"</span><span class="bp">:</span><span class="s2">"2.1.1.4"</span><span class="o">,</span>
-<span class="s2">"AssemblyProduct"</span><span class="bp">:</span><span class="s2">"My Application"</span><span class="o">,</span>
-<span class="s2">"AssemblyCompany"</span><span class="bp">:</span><span class="s2">"My Company"</span><span class="o">,</span>
-<span class="s2">"AssemblyCopyright"</span><span class="bp">:</span><span class="s2">"Copyright 2020"</span><span class="o">,</span>
-<span class="s2">"AssemblyDescription"</span><span class="bp">:</span><span class="s2">"Provides a text description for an assembly."</span><span class="o">,</span>
-<span class="s2">"AssemblyTitle"</span><span class="bp">:</span><span class="s2">"My Assembly Title"</span><span class="o">,</span>
-<span class="s2">"AssemblyTrademark"</span><span class="bp">:</span><span class="s2">"Your Legal Trademarks"</span><span class="o">,</span>
-<span class="kt">}</span>
+</p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">   </span><span class="nt">"AssemblyVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.2.2.2"</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">"AssemblyFileVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.1.1.4"</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">"AssemblyProduct"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Application"</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">"AssemblyCompany"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Company"</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">"AssemblyCopyright"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Copyright 2020"</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">"AssemblyDescription"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Provides a text description for an assembly."</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">"AssemblyTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Assembly Title"</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">"AssemblyTrademark"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Your Legal Trademarks"</span>
+<span class="p">}</span>
 </code></pre></div>
 
 

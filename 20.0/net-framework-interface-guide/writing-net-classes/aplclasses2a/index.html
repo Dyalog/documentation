@@ -68925,8 +68925,6 @@
       
         
       
-        
-      
     
     
     
@@ -68954,27 +68952,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69050,7 +69027,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70863,7 +70840,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71340,19 +71317,19 @@
 
 <p>In Example 2, the argument to <code>CTOR</code>, the constructor for the <code>Primitives</code> class, was defined to be <code>Int32</code>. This means that the .NET Framework will allow a client to specify <em>any</em> integer when it creates an instance of the <code>Primitives</code> class. What happens if the client uses a parameter of 2? Clearly this is going to cause an APL <code>DOMAIN ERROR</code> when used to set <code>⎕IO</code>.</p>
 <p>To investigate this case, change the line of code in <code>program.cs</code> that creates an instance of the Primitives class, passing the argument 2, like this:
-</p><div class="highlight"><pre><span></span><code><span class="w">                  </span><span class="nv">Primitives</span><span class="w"> </span><span class="nv">apl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">new</span><span class="w"> </span><span class="nv">Primitives</span><span class="p">(</span><span class="m">2</span><span class="p">)</span><span class="sr">;</span>
+</p><div class="highlight"><pre><span></span><code><span class="n">Primitives</span><span class="w"> </span><span class="n">apl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Primitives</span><span class="p">(</span><span class="m">2</span><span class="p">);</span>
 </code></pre></div>
-<p><figure id="_figure-1"><img alt="aplclasses2a_1" src="../../img/aplclasses2a-1.png"><figcaption>Figure 1: aplclasses2a_1</figcaption></figure></p>
-<p>Then click <em>Debug/Start Without debugging</em> (or press Ctrl+F5) to run the program.</p>
+<p><img alt="" src="../../img/aplclasses2a-1.png"></p>
+<p>Then click <em>Debug/Start Without debugging</em> (or press <kbd>Ctrl</kbd>+<kbd>F5</kbd>) to run the program.</p>
 <p>… as we have built the Dyalog .NET class to use the <em>Development DLL</em>, the APL Session appears, and the Tracer can be used to debug the problem. You can see that the constructor <code>CTOR</code> has stopped with a <code>DOMAIN ERROR</code>. Meanwhile, the C# program is still waiting for the call (to create an instance of <code>Primitives</code>) to finish.</p>
-<p><figure id="_figure-2"><img alt="aplclasses2a_2" src="../../img/aplclasses2a-2.png"><figcaption>Figure 2: aplclasses2a_2</figcaption></figure></p>
+<p><img alt="" src="../../img/aplclasses2a-2.png"></p>
 <p>Notice that in Dyalog, the <code>)SI</code> System Command  provides information about the entire calling stack, including the .NET function calls that are involved. Notice too that the <code>CTOR</code> function, the constructor for this APL .NET class, is running here in APL thread 1, which is associated with the system thread 30732.</p>
 <p>In this case, debugging is simple, and you can simply type:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">IO</span><span class="kd">←</span><span class="m">1</span>
 <span class="w">      </span><span class="kd">→</span><span class="nf">⎕LC</span>
 </code></pre></div>
 <p>Now, the <code>CTOR</code> function completes, the program continues and the output is displayed.</p>
-<p><figure id="_figure-3"><img alt="aplclasses2a_3" src="../../img/aplclasses2a-3.png"><figcaption>Figure 3: aplclasses2a_3</figcaption></figure></p>
+<p><img alt="" src="../../img/aplclasses2a-3.png"></p>
 
 
 

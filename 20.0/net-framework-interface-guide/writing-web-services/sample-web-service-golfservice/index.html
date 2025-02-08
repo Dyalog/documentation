@@ -68930,8 +68930,6 @@
       
         
       
-        
-      
     
     
     
@@ -68959,27 +68957,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69055,7 +69032,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70994,7 +70971,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71885,25 +71862,25 @@
 </code></pre></div>
 <p><code>GolfService</code> will be compiled and ASP.NET will fabricate a page about it for the browser to display as shown below.</p>
 <p>The three methods exposed by <code>GolfService</code> are listed.</p>
-<p><figure id="_figure-1"><img alt="golfservice1" src="../../img/golfservice1.png"><figcaption>Figure 1: golfservice1</figcaption></figure></p>
+<p><img alt="" src="../../img/golfservice1.png"></p>
 <p>Invoking the <code>GetCourses</code> method generates the following output.</p>
 <p>Notice that the data type of the result is <code>ArrayOfGolfCourse</code>, and the data type of each element of the result is <code>GolfCourse</code>. Furthermore, the public fields defined for the <code>GolfCourse</code> object are clearly named.</p>
 <p>All this information is derived from the declarations in the <code>Golf.asmx</code> script.</p>
 <p>As supplied, the <code>GolfData</code> component file contains only 3 golf courses as shown below.</p>
-<p><figure id="_figure-2"><img alt="golfservice2" src="../../img/golfservice2.png"><figcaption>Figure 2: golfservice2</figcaption></figure></p>
+<p><img alt="" src="../../img/golfservice2.png"></p>
 <p>ASP.NET generates a Form containing fields that allow the user to invoke the <code>MakeBookings</code> method as shown below.</p>
 <p>Notice the way a <code>DateTime</code> value is specified. Note too that the <code>GimmeNearest</code> parameter is <code>Boolean</code>, so you must enter <code>"True"</code>" or <code>"False"</code>. If you enter 0 or 1, it will cause an error and the application will refuse to try to call <code>MakeBookings</code> because you have specified the wrong type for a parameter.</p>
 <p>When you try this yourself, remember to enter a date that is within the next 30 days, and a time between 07:00 and 15:00. Alternatively, you may wish to experiment with invalid data to check the error handling.</p>
-<p><figure id="_figure-3"><img alt="golfservice3" src="../../img/golfservice3.png"><figcaption>Figure 3: golfservice3</figcaption></figure></p>
+<p><img alt="" src="../../img/golfservice3.png"></p>
 <p>The result of invoking <code>MakeBooking</code> with this data is shown below.</p>
 <p>Notice how all the information about the <code>Booking</code> object structure, including the structure of the sub-objects, is provided.</p>
-<p><figure id="_figure-4"><img alt="golfservice4" src="../../img/golfservice4.png"><figcaption>Figure 4: golfservice4</figcaption></figure></p>
+<p><img alt="" src="../../img/golfservice4.png"></p>
 <p>The following picture shows data suitable for invoking the <code>GetStartingSheet</code> method.</p>
 <p>If you try this for yourself, choose a course and date on which you have made at least one successful booking.</p>
-<p><figure id="_figure-5"><img alt="golfservice5" src="../../img/golfservice5.png"><figcaption>Figure 5: golfservice5</figcaption></figure></p>
+<p><img alt="" src="../../img/golfservice5.png"></p>
 <p>Finally, the result of the <code>GetStartingSheet</code> function is illustrated below.</p>
 <p>The output clearly shows that the result, a <code>StartingSheet</code> object, contains an array of <code>Slot</code> objects, each of which contains a <code>Time</code> field and a <code>Players</code> field.</p>
-<p><figure id="_figure-6"><img alt="golfservice6" src="../../img/golfservice6.png"><figcaption>Figure 6: golfservice6</figcaption></figure></p>
+<p><img alt="" src="../../img/golfservice6.png"></p>
 <h3 id="using-golfservice-from-c">Using GolfService from C</h3>
 <p>The <code>csharp</code> sub-directory in <code>samples\asp.net\golf</code> contains sample files for accessing the <code>GolfService</code> Web Service from C#. The C# source code in <code>Golf.cs</code> is shown below.
 </p><div class="highlight"><pre><span></span><code><span class="nv">using</span><span class="w"> </span><span class="nv">System</span><span class="sr">;</span>

@@ -68930,8 +68930,6 @@
       
         
       
-        
-      
     
     
     
@@ -68959,27 +68957,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69055,7 +69032,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70934,7 +70911,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71455,7 +71432,7 @@
 
 <p>The <code>TemperatureConverterCtl1</code> control is an example of a <em>compositional</em> control, that is, a server-side custom control that is composed of other standard controls.</p>
 <p>In this example, The <code>TemperatureConverterCtl1</code> control gathers together two textboxes and two push buttons into a single component as illustrated below. Type a number into the <em>Centigrade</em> box, click the <em>Centigrade To Fahrenheit</em> button, and the control converts accordingly. If you click the <em>Fahrenheit To Centigrade</em> button, the reverse conversion is performed.</p>
-<p><figure id="_figure-1"><img alt="temperatureconverterctl1" src="../../img/temperatureconverterctl1.png"><figcaption>Figure 1: temperatureconverterctl1</figcaption></figure></p>
+<p><img alt="" src="../../img/temperatureconverterctl1.png"></p>
 <p>The <code>TemperatureConverterCtl1</code> control  <em>contains</em> other standard controls as <em>child controls</em>. A control that acts as a container must implement an interface called <code>INamingContainer</code>.</p>
 <p>This interface does not in fact require any methods; it merely acts as a marker. So the <code>:Class</code> statement specifies that it provides this interface:
 </p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">TemperatureConverterCtl1</span><span class="bp">:</span><span class="w"> </span><span class="nv">Control</span><span class="o">,</span>
@@ -71540,37 +71517,37 @@
 <p>The <code>F2CconvertBtn_Click</code> callback function converts from Fahrenheit to Centigrade. Note that the functions <code>C2F</code> and <code>F2C</code> are internal functions that are private to the control, and it is therefore not necessary to define public interfaces for them.</p>
 <h2 id="using-the-control-on-the-page">Using the Control on the Page</h2>
 <p>The text of the script file <code>samples\temp\temp1.aspx</code> is shown below. There is really no difference between this example and the <code>simple.aspx</code> described earlier.
-</p><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="err">%</span><span class="na">@</span><span class="w"> </span><span class="nv">Register</span><span class="w"> </span><span class="nv">TagPrefix</span><span class="o">=</span><span class="s2">"Dyalog"</span><span class="w"> </span><span class="nv">Namespace</span><span class="o">=</span><span class="s2">"DyalogSamples"</span><span class="w"> </span>
-<span class="w">                                </span><span class="nv">Assembly</span><span class="o">=</span><span class="s2">"TEMP"</span><span class="err">%</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">html</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">body</span><span class="w"> </span><span class="nv">bgcolor</span><span class="o">=</span><span class="s2">"yellow"</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">br</span><span class="o">&gt;&lt;</span><span class="nv">br</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">center</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">h2</span><span class="o">&gt;&lt;</span><span class="nv">font</span><span class="w"> </span><span class="nv">face</span><span class="o">=</span><span class="s2">"Verdana"</span><span class="w"> </span><span class="nv">color</span><span class="o">=</span><span class="s2">"black"</span><span class="o">&gt;</span><span class="nv">Temperature</span><span class="w"> </span><span class="nv">Control</span><span class="o">&lt;</span><span class="na">/</span><span class="nv">font</span><span class="o">&gt;&lt;</span><span class="na">/</span><span class="nv">h2</span><span class="o">&gt;</span>
+</p><div class="highlight"><pre><span></span><code><span class="err">&lt;</span>%@<span class="w"> </span>Register<span class="w"> </span>TagPrefix="Dyalog"<span class="w"> </span>Namespace="DyalogSamples"<span class="w"> </span>
+<span class="w">                                </span>Assembly="TEMP"%&gt;
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body</span><span class="w"> </span><span class="na">bgcolor=</span><span class="s">"yellow"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;br&gt;&lt;br&gt;</span>
+<span class="nt">&lt;center&gt;</span>
+<span class="nt">&lt;h2&gt;&lt;font</span><span class="w"> </span><span class="na">face=</span><span class="s">"Verdana"</span><span class="w"> </span><span class="na">color=</span><span class="s">"black"</span><span class="nt">&gt;</span>Temperature<span class="w"> </span>Control<span class="nt">&lt;/font&gt;&lt;/h2&gt;</span>
 
-<span class="o">&lt;</span><span class="nv">form</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="nv">server</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">Dyalog</span><span class="bp">:</span><span class="nv">TemperatureConverterCtl1</span><span class="w"> </span><span class="nv">id</span><span class="o">=</span><span class="nv">TempCvtCtl1</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="nv">server</span><span class="na">/</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">form</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">center</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">body</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">html</span><span class="o">&gt;</span>
+<span class="nt">&lt;form</span><span class="w"> </span><span class="na">runat=</span><span class="s">server</span><span class="nt">&gt;</span>
+<span class="nt">&lt;Dyalog:TemperatureConverterCtl1</span><span class="w"> </span><span class="na">id=</span><span class="s">TempCvtCtl1</span><span class="w"> </span><span class="na">runat=</span><span class="s">server/</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+<span class="nt">&lt;/center&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
 </code></pre></div>
 <p>The HTML generated by the control at run-time is shown below. Notice that in place of the server-side control declaration in <code>temp1.aspx</code>, there are two edit controls with numerical values in them, and two push buttons to submit data entered on the form to the server.
-</p><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nv">html</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">body</span><span class="w"> </span><span class="nv">bgcolor</span><span class="o">=</span><span class="s2">"yellow"</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">br</span><span class="o">&gt;&lt;</span><span class="nv">br</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">center</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">h2</span><span class="o">&gt;&lt;</span><span class="nv">font</span><span class="w"> </span><span class="nv">face</span><span class="o">=</span><span class="s2">"Verdana"</span><span class="w"> </span><span class="nv">color</span><span class="o">=</span><span class="s2">"black"</span><span class="o">&gt;</span><span class="nv">Temperature</span><span class="w"> </span><span class="nv">Control</span><span class="o">&lt;</span><span class="na">/</span><span class="nv">font</span><span class="o">&gt;&lt;</span><span class="na">/</span><span class="nv">h2</span><span class="o">&gt;</span>
+</p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">bgcolor</span><span class="o">=</span><span class="s">"yellow"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">font</span> <span class="na">face</span><span class="o">=</span><span class="s">"Verdana"</span> <span class="na">color</span><span class="o">=</span><span class="s">"black"</span><span class="p">&gt;</span>Temperature Control<span class="p">&lt;/</span><span class="nt">font</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 
-<span class="o">&lt;</span><span class="nv">form</span><span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">"ctrl1"</span><span class="w"> </span><span class="nv">method</span><span class="o">=</span><span class="s2">"post"</span><span class="w"> </span><span class="nv">action</span><span class="o">=</span><span class="s2">"temp1.aspx"</span><span class="w"> </span><span class="nv">id</span><span class="o">=</span><span class="s2">"ctrl1"</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">input</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s2">"hidden"</span><span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">"__VIEWSTATE"</span><span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="s2">"YTB6MTc3MzAxNzYxNF9fX3g=03f01d88"</span><span class="w"> </span><span class="na">/</span><span class="o">&gt;</span>
+<span class="p">&lt;</span><span class="nt">form</span> <span class="na">name</span><span class="o">=</span><span class="s">"ctrl1"</span> <span class="na">method</span><span class="o">=</span><span class="s">"post"</span> <span class="na">action</span><span class="o">=</span><span class="s">"temp1.aspx"</span> <span class="na">id</span><span class="o">=</span><span class="s">"ctrl1"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"hidden"</span> <span class="na">name</span><span class="o">=</span><span class="s">"__VIEWSTATE"</span> <span class="na">value</span><span class="o">=</span><span class="s">"YTB6MTc3MzAxNzYxNF9fX3g=03f01d88"</span> <span class="p">/&gt;</span>
 
-<span class="o">&lt;</span><span class="nv">h2</span><span class="o">&gt;</span><span class="nv">Fahrenheit</span><span class="bp">:</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">input</span><span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">"TempCvtCtl1:ctrl1"</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s2">"text"</span><span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="s2">"32"</span><span class="w"> </span><span class="na">/</span><span class="o">&gt;&lt;</span><span class="na">/</span><span class="nv">h2</span><span class="o">&gt;&lt;</span><span class="nv">h2</span><span class="o">&gt;</span><span class="nv">Centigrade</span><span class="bp">:</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">input</span><span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">"TempCvtCtl1:ctrl4"</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s2">"text"</span><span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="s2">"0"</span><span class="w"> </span><span class="na">/</span><span class="o">&gt;&lt;</span><span class="na">/</span><span class="nv">h2</span><span class="o">&gt;&lt;</span><span class="nv">input</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s2">"submit"</span><span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">"TempCvtCtl1:ctrl6"</span><span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="s2">"Fahrenheit To Centigrade"</span><span class="w"> </span><span class="na">/</span><span class="o">&gt;&lt;</span><span class="nv">input</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s2">"submit"</span><span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">"TempCvtCtl1:ctrl7"</span><span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="s2">"Centigrade To Fahrenheit"</span><span class="w"> </span><span class="na">/</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">form</span><span class="o">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Fahrenheit: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">"TempCvtCtl1:ctrl1"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">value</span><span class="o">=</span><span class="s">"32"</span> <span class="p">/&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Centigrade: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">"TempCvtCtl1:ctrl4"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">value</span><span class="o">=</span><span class="s">"0"</span> <span class="p">/&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">name</span><span class="o">=</span><span class="s">"TempCvtCtl1:ctrl6"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Fahrenheit To Centigrade"</span> <span class="p">/&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">name</span><span class="o">=</span><span class="s">"TempCvtCtl1:ctrl7"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Centigrade To Fahrenheit"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">center</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">body</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">html</span><span class="o">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 
 

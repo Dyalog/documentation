@@ -68925,8 +68925,6 @@
       
         
       
-        
-      
     
     
     
@@ -68954,27 +68952,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69050,7 +69027,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70863,7 +70840,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71340,29 +71317,29 @@
 
 <p>The first web page example is <code>tutorial/intro1.aspx</code>, which is listed below. This page displays a button whose text is reversed each time you press it.</p>
 <p>Note that the example is intended to be run in the framework of the tutorial and contains two lines of code (shown in italic) that refer to this framework and should be ignored.
-</p><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="err">%</span><span class="na">@</span><span class="nv">Register</span><span class="w"> </span><span class="nv">TagPrefix</span><span class="o">=</span><span class="s2">"tutorial"</span><span class="w"> </span><span class="nv">Namespace</span><span class="o">=</span><span class="s2">"Tutorial"</span><span class="w"> </span><span class="nv">Assembly</span><span class="o">=</span><span class="s2">"tutorial"</span><span class="w"> </span><span class="err">%</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">script</span><span class="w"> </span><span class="nv">language</span><span class="o">=</span><span class="s2">"Dyalog"</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="s2">"server"</span><span class="o">&gt;</span>
+</p><div class="highlight"><pre><span></span><code>&lt;%@Register TagPrefix="tutorial" Namespace="Tutorial" Assembly="tutorial" %&gt;
+&lt;script language="Dyalog" runat="server"&gt;
 
-<span class="bp">∇</span><span class="nv">Reverse</span><span class="w"> </span><span class="nv">args</span>
-<span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">public</span>
-<span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">Reverse</span><span class="w"> </span><span class="nv">Object</span><span class="o">,</span><span class="nv">EventArgs</span>
-<span class="p">(</span><span class="o">⊃</span><span class="nv">args</span><span class="p">)</span><span class="na">.</span><span class="nv">Text</span><span class="kd">←</span><span class="o">⌽</span><span class="p">(</span><span class="o">⊃</span><span class="nv">args</span><span class="p">)</span><span class="na">.</span><span class="nv">Text</span>
-<span class="bp">∇</span>
+∇Reverse args
+:Access public
+:Signature Reverse Object,EventArgs
+(⊃args).Text←⌽(⊃args).Text
+∇
 
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">script</span><span class="o">&gt;</span>
+&lt;/script&gt;
 
-<span class="o">&lt;</span><span class="nv">html</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">body</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">Form</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="nv">server</span><span class="o">&gt;</span>
-<span class="w">      </span><span class="o">&lt;</span><span class="nv">asp</span><span class="bp">:</span><span class="nv">Button</span><span class="w"> </span><span class="nv">id</span><span class="o">=</span><span class="s2">"Pressme"</span><span class="w"> </span>
-<span class="w">      </span><span class="nv">Text</span><span class="o">=</span><span class="s2">"Press Me"</span>
-<span class="w">      </span><span class="nv">runat</span><span class="o">=</span><span class="s2">"server"</span>
-<span class="w">      </span><span class="nv">OnClick</span><span class="o">=</span><span class="s2">"Reverse"</span><span class="w"> </span>
-<span class="w">      </span><span class="na">/</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">form</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">tutorial</span><span class="bp">:</span><span class="nv">index</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="s2">"server"</span><span class="na">/</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">body</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">html</span><span class="o">&gt;</span>
+&lt;html&gt;
+&lt;body&gt;
+&lt;Form runat=server&gt;
+      &lt;asp:Button id="Pressme" 
+      Text="Press Me"
+      runat="server"
+      OnClick="Reverse" 
+      /&gt;
+&lt;/form&gt;
+&lt;tutorial:index runat="server"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre></div>
 <p>In this example, the page language is defined in the <code>&lt;script&gt;</code> section to be <code>"Dyalog"</code>. This in turn is mapped to the <code>APLScript</code> compiler via information in the application's web.config file or the global IIS configuration file, <code>machine.config</code>.</p>
 <p>The page layout is described in the section between the <code>&lt;html&gt;</code> and <code>&lt;/html&gt;</code> tags. This page contains a Form in which there is a Button labelled (initially) "Press Me"</p>
@@ -71371,19 +71348,19 @@
 <p>When you add <code>runat="server"</code> to a Form, ASP.NET automatically adds other attributes that cause the values of its controls to be POSTed back to the same page. In addition, ASP.NET adds a HIDDEN control to the form and stores state information in it. This means that when the page is reloaded into the browser the state and contents of some or all of its controls can be maintained, without the need for you to write additional code.</p>
 <p>The <code>asp:</code> prefix for the Button, identifies the control as a <em>special</em> ASP.NET intrinsic control. These are fully-fledged .NET Classes in the .NET Namespace <code>System.Web.UI.WebControls</code> that expose properties corresponding to the standard attributes that are available for the equivalent HTML element. You manipulate the control as an object, while it, at runtime, emits HTML that is inserted into the page.</p>
 <p>At this point, it is instructive to study what happens when the page is first loaded and the appearance of the page is illustrated below.</p>
-<p><figure id="_figure-1"><img alt="intro1_1" src="../../img/intro1-1.png"><figcaption>Figure 1: intro1_1</figcaption></figure></p>
+<p><img alt="" src="../../img/intro1-1.png"></p>
 <p>The HTML that is transmitted to the browser is:
-</p><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nv">html</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">body</span><span class="o">&gt;</span>
-<span class="w">    </span><span class="o">&lt;</span><span class="nv">form</span><span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">"ctrl1"</span><span class="w"> </span><span class="nv">method</span><span class="o">=</span><span class="s2">"post"</span><span class="w"> </span><span class="nv">action</span><span class="o">=</span><span class="s2">"intro1.aspx"</span><span class="w"> </span><span class="nv">id</span><span class="o">=</span><span class="s2">"ctrl1"</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">input</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s2">"hidden"</span><span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">"__VIEWSTATE"</span>
-<span class="nv">value</span><span class="o">=</span><span class="s2">"YTB6NTQ3ODg0MjcyX19feA==5725bd57"</span><span class="w"> </span><span class="na">/</span><span class="o">&gt;</span>
+</p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">form</span> <span class="na">name</span><span class="o">=</span><span class="s">"ctrl1"</span> <span class="na">method</span><span class="o">=</span><span class="s">"post"</span> <span class="na">action</span><span class="o">=</span><span class="s">"intro1.aspx"</span> <span class="na">id</span><span class="o">=</span><span class="s">"ctrl1"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"hidden"</span> <span class="na">name</span><span class="o">=</span><span class="s">"__VIEWSTATE"</span>
+<span class="na">value</span><span class="o">=</span><span class="s">"YTB6NTQ3ODg0MjcyX19feA==5725bd57"</span> <span class="p">/&gt;</span>
 
-<span class="w">        </span><span class="o">&lt;</span><span class="nv">input</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s2">"submit"</span><span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">"Pressme"</span><span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="s2">"Press Me"</span>
-<span class="nv">id</span><span class="o">=</span><span class="s2">"Pressme"</span><span class="w"> </span><span class="na">/</span><span class="o">&gt;</span>
-<span class="w">    </span><span class="o">&lt;</span><span class="na">/</span><span class="nv">form</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">body</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">html</span><span class="o">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">name</span><span class="o">=</span><span class="s">"Pressme"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Press Me"</span>
+<span class="na">id</span><span class="o">=</span><span class="s">"Pressme"</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Firstly, notice that, as expected, the contents of the <code>&lt;script&gt;</code> section are not present. Secondly, because the Form and Button are intrinsic controls, ASP.NET has added certain attributes to the HTML that were not specified in the source code.</p>
 <p>The Button now has the added attribute <code>input type="submit"</code>, which means that pressing the Button causes the contents of the Form to be transmitted back to the sever.</p>
@@ -71400,7 +71377,7 @@
 </code></pre></div>
 <p>The code in the <code>Reverse</code> function is simple. The expression (<code>⊃args</code>) is a namespace reference (ref) to the Button, and (<code>⊃args</code>).Text refers to its Text property whose value is reversed. Note that <code>Reverse</code> could just as easily refer to the Button by name, and use <code>Pressme.Text</code> instead.</p>
 <p>After pressing the button, the page is redisplayed as shown below:</p>
-<p><figure id="_figure-2"><img alt="intro1_2" src="../../img/intro1-2.png"><figcaption>Figure 2: intro1_2</figcaption></figure></p>
+<p><img alt="" src="../../img/intro1-2.png"></p>
 <p>This time, the HTML generated by <code>intro1.aspx</code> is:
 </p><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nv">html</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="nv">body</span><span class="o">&gt;</span>

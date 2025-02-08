@@ -68930,8 +68930,6 @@
       
         
       
-        
-      
     
     
     
@@ -68959,27 +68957,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69055,7 +69032,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70925,7 +70902,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71448,18 +71425,18 @@
 <p>If an APL error occurs in an APL .NET object, a suspension will occur and the Session will be available for debugging. But what if you want to force this to happen so that you can Trace your code and see what is happening?</p>
 <p>If your APL class is built directly from a workspace, you can force a suspension by setting stops in your code before using <em>Export</em> to build the DLL. If your class is a Web Page or Web Service where the code is contained in a workspace using the <em>workspace behind</em> technique (See Chapter 8), you can set stops in this workspace before you <code>)SAVE</code> it.</p>
 <p>If your APL class is defined entirely in a Web Page, Web Service, or an APLScript file, the only way to set a break point is to insert a line that sets a stop explicitly using <code>⎕STOP</code>. It is essential that this line appears after the definition of the function in the script. For example, to set a stop in the <code>Intro\intro1.aspx</code> example discussed in Chapter 8, the script section could be as follows:
-</p><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nv">script</span><span class="w"> </span><span class="nv">language</span><span class="o">=</span><span class="s2">"dyalog"</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="s2">"server"</span><span class="o">&gt;</span>
+</p><div class="highlight"><pre><span></span><code><span class="nt">&lt;script</span><span class="w"> </span><span class="na">language=</span><span class="s">"dyalog"</span><span class="w"> </span><span class="na">runat=</span><span class="s">"server"</span><span class="nt">&gt;</span>
 
-<span class="bp">∇</span><span class="nv">Rotate</span><span class="w"> </span><span class="nv">args</span>
-<span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
-<span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">Reverse</span><span class="w"> </span><span class="nv">Object</span><span class="o">,</span><span class="nv">EventArgs</span>
+∇Rotate<span class="w"> </span>args
+:Access<span class="w"> </span>Public
+:Signature<span class="w"> </span>Reverse<span class="w"> </span>Object,EventArgs
 
-<span class="p">(</span><span class="o">⊃</span><span class="nv">args</span><span class="p">)</span><span class="na">.</span><span class="nv">Text</span><span class="kd">←</span><span class="o">⌽</span><span class="nv">Pressme</span><span class="na">.</span><span class="nv">Text</span>
-<span class="bp">∇</span>
+(⊃args).Text←⌽Pressme.Text
+∇
 
-<span class="m">3</span><span class="w"> </span><span class="nf">⎕STOP</span><span class="w"> </span><span class="s1">'Rotate'</span>
+3<span class="w"> </span>⎕STOP<span class="w"> </span>'Rotate'
 
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">script</span><span class="o">&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
 </code></pre></div>
 <p>As an alternative, you can always insert a deliberate error into your code!</p>
 <p>Finally, you can usually force a suspension by generating a Weak Interrupt. This is done from the pop-up menu on the APL icon in the System Tray that is associated with the full development version of the Dyalog DLL. Note that selecting Weak Interrupt from this menu will not have an immediate effect, but it sets a flag that will cause Dyalog APL to suspend when it next executes a line of APL code. You will need to activate your object in some way, for example, by calling a method, for this to occur. Note that this technique may not work if the Dyalog DLL is busy because a thread switch automatically resets the Weak Interrupt flag. In these circumstances, try again.</p>

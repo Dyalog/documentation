@@ -69,11 +69,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#example-1" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -68687,17 +68682,6 @@
       
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Modal Dialog Boxes
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -68707,43 +68691,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#example-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example 1
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example 2
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -68988,8 +68935,6 @@
       
         
       
-        
-      
     
     
     
@@ -69017,27 +68962,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69113,7 +69037,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70916,7 +70840,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71373,32 +71297,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#example-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example 1
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example 2
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -71420,7 +71318,8 @@
 <p>Dialog Boxes are displayed modally to prevent the user from performing tasks outside of the dialog box.</p>
 <p>To create a modal dialog box, you create a <code>Form</code>, set its <code>BorderStyle</code> property to <code>FixedDialog</code>, set its <code>ControlBox</code>, <code>MinimizeBox</code> and <code>MaximizeBox</code> properties to false, and display it using <code>ShowDialog</code>.</p>
 <p>A modal dialog box has a <code>DialogResult</code> property that is set when the <code>Form</code> is closed, or when the user presses OK or Cancel. The value of this property is returned by the <code>ShowDialog</code> method, so the simplest way to handle user actions is to check the result of <code>ShowDialog</code> and proceed accordingly. Example 1 illustrates a simple modal dialog box.</p>
-<h2 id="example-1">Example 1</h2>
+<h2 class="example">Example 1</h2>
+
 <p>Function <code>EG1</code> illustrates how to create and use a simple modal dialog box. Much of the function is self-explanatory, but the following points are noteworthy.</p>
 <p><code>EG1[1-2]</code> set <code>⎕USING</code> to include the .NET Namespaces <code>System.Windows.Forms</code> and <code>System.Drawing</code>.</p>
 <p><code>EG1[6,8,9]</code> create a <code>Form</code> and two <code>Button</code> objects. As yet, they are unconnected. The constructor for both classes is defined to take no arguments, so the <code>⎕NEW</code> system function is only called with a class argument.</p>
@@ -71507,11 +71406,15 @@
 <span class="sr">[</span><span class="m">58</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">EndIf</span>
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
-<p><strong>Warning:</strong> The use of modal forms in .NET can lead to problematic situations while debugging. As the control is passed to .NET the APL interpreter cannot regain control in the event of an unforeseen error. It is advisable to change the code to something like the following until the code is fully tested:
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">52</span><span class="sr">]</span><span class="w">   </span><span class="nv">form1</span><span class="na">.</span><span class="nv">Visible</span><span class="kd">←</span><span class="m">1</span>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The use of modal forms in .NET can lead to problematic situations while debugging. As the control is passed to .NET the APL interpreter cannot regain control in the event of an unforeseen error. It is advisable to change the code to something like the following until the code is fully tested:
+ </p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">52</span><span class="sr">]</span><span class="w">   </span><span class="nv">form1</span><span class="na">.</span><span class="nv">Visible</span><span class="kd">←</span><span class="m">1</span>
 <span class="sr">[</span><span class="m">53</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">While</span><span class="w"> </span><span class="nv">form1</span><span class="na">.</span><span class="nv">Visible</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="bp">:</span><span class="nv">endwhile</span>
 </code></pre></div>
-<h2 id="example-2">Example 2</h2>
+</div>
+<h2 class="example">Example 2</h2>
+
 <p>Functions <code>EG2</code> and <code>EG2A</code> illustrate how the Each operator (<code>¨</code>) and the extended namespace reference syntax in Dyalog may be used to produce more succinct, and no less readable, code.
 </p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">EG2</span><span class="sr">;</span><span class="nv">form1</span><span class="sr">;</span><span class="nv">label1</span><span class="sr">;</span><span class="nv">textBox1</span><span class="sr">;</span><span class="nv">true</span><span class="sr">;</span><span class="nv">false</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">Z</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="o">,⊂</span><span class="s1">'System.Windows.Forms,</span>

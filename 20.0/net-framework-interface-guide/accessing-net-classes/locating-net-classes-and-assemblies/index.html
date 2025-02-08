@@ -68935,8 +68935,6 @@
       
         
       
-        
-      
     
     
     
@@ -68964,27 +68962,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69060,7 +69037,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70863,7 +70840,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71351,7 +71328,8 @@
 <p><code>⎕USING</code> is a vector of character vectors each element of which contains 1 or 2 comma-delimited strings. The first string specifies the name of a .NET namespace; the second specifies the <em>pathname</em> of an assembly file. This may be a full pathname or a relative one, but must include the file extension (<code>.dll</code>). If just the file name is specified, it is assumed to be located in the standard  .NET Framework directory that was specified when the .NET Framework was installed (for example, <code>C:\Windows\Microsoft.NET\Framework64\v4.0.30319</code>)</p>
 <p>It is convenient to treat .NET namespaces and assemblies in pairs. For example:
 </p><div class="highlight"><pre><span></span><code><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System,mscorlib.dll'</span>
-<span class="w">  </span><span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'System.Windows.Forms,System.Windows.Forms.dll'</span><span class="w">  </span><span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'System.Drawing,System.Drawing.dll'</span>
+<span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'System.Windows.Forms,System.Windows.Forms.dll'</span>
+<span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'System.Drawing,System.Drawing.dll'</span>
 </code></pre></div>
 <p>Note that because Dyalog APL automatically loads <code>mscorlib.dll</code> (which contains the most commonly used classes in the <code>System</code> Namespace), it is not actually necessary to specify it explicitly in <code>⎕USING</code>.</p>
 <p><code>⎕USING</code> has Namespace scope, that is, each Dyalog namespace, class or instance has its own value of <code>⎕USING</code> that is initially inherited from its parent space but which may be separately modified. <code>⎕USING</code> may also be localised in a function header, so that different functions can declare different search paths for .NET namespaces/assemblies.</p>

@@ -68934,8 +68934,6 @@
       
         
       
-        
-      
     
     
     
@@ -68963,27 +68961,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69124,7 +69101,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70927,7 +70904,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71438,7 +71415,7 @@
 <h1 class="heading"><span class="name">Example 2</span></h1>
 
 <p>This example illustrates the use of the optional left argument to <code>2015⌶</code> to specify the data type used to export the value of the bound variable.</p>
-<p><figure id="_figure-1"><img alt="data binding text xaml 1" src="../../../img/data-binding-text-xaml-1.png"><figcaption>Figure 1: data binding text xaml 1</figcaption></figure></p>
+<p><img alt="" src="../../../img/data-binding-text-xaml-1.png"></p>
 <h2 id="the-xaml">The XAML</h2>
 <p>The XAML shown below,  describes the same Window containing a TextBox as before.
 </p><div class="highlight"><pre><span></span><code><span class="nt">&lt;Window</span>
@@ -71453,7 +71430,7 @@
 <span class="nt">&lt;/Window&gt;</span>
 </code></pre></div>
 <p>This time, the data binding expression is:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">FontSize</span><span class="o">=</span><span class="s2">"{Binding sizeSource,Mode=OneWay}"</span><span class="na">/</span><span class="o">&gt;</span>
+</p><div class="highlight"><pre><span></span><code><span class="w">      </span>FontSize="{Binding<span class="w"> </span>sizeSource,Mode=OneWay}"/&gt;
 </code></pre></div>
 <p>This specifies that the FontSize property of the TextBox is bound to a value in the Binding Source (which has yet to be defined) whose path is <code>sizeSource</code>. The binding mode is set to <code>OneWay</code> which means that the FontSize property depends on the data value but not vice versa. Were the FontSize to change for any external reason (which is admittedly unlikely in the case of FontSize), it would not alter the value in <code>sizeSource</code> to which it is bound.</p>
 <h2 id="the-apl-code">The APL Code</h2>
@@ -71480,12 +71457,12 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">FontSize</span><span class="w"> </span><span class="m">12</span>
 </code></pre></div>
-<p><img alt="data binding fontsize xaml 1" src="../../../img/data-binding-fontsize-xaml-1.png">
+<p><img alt="" src="../../../img/data-binding-fontsize-xaml-1.png">
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">sizeSource</span>
 <span class="m">12</span>
 <span class="w">      </span><span class="nv">sizeSource</span><span class="kd">←</span><span class="m">30</span>
 </code></pre></div>
-<p><figure id="_figure-2"><img alt="data binding fontsize xaml 2" src="../../../img/data-binding-fontsize-xaml-2.png"><figcaption>Figure 2: data binding fontsize xaml 2</figcaption></figure></p>
+<p><img alt="" src="../../../img/data-binding-fontsize-xaml-2.png"></p>
 
 
 

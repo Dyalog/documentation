@@ -68930,8 +68930,6 @@
       
         
       
-        
-      
     
     
     
@@ -68959,27 +68957,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69055,7 +69032,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70943,7 +70920,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71583,61 +71560,61 @@
 <p>Finally, the page framework calls the <code>OnPreRender</code> and <code>Render</code> functions again, which generate new HTML for the browser.</p>
 <h2 id="using-the-control-on-a-page">Using the Control on a Page</h2>
 <p>So long as it has access to this <code>DLL</code>, our custom control may be accessed from any ASP.NET Web Page, and a simple example is shown below.
-</p><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="err">%</span><span class="na">@</span><span class="w"> </span><span class="nv">Register</span><span class="w"> </span><span class="nv">TagPrefix</span><span class="o">=</span><span class="s2">"Dyalog"</span><span class="w"> </span><span class="nv">Namespace</span><span class="o">=</span><span class="s2">"DyalogSamples"</span>
-<span class="w">                                </span><span class="nv">Assembly</span><span class="o">=</span><span class="s2">"TEMP"</span><span class="w"> </span><span class="err">%</span><span class="o">&gt;</span>
+</p><div class="highlight"><pre><span></span><code><span class="err">&lt;</span>%@<span class="w"> </span>Register<span class="w"> </span>TagPrefix="Dyalog"<span class="w"> </span>Namespace="DyalogSamples"
+<span class="w">                                </span>Assembly="TEMP"<span class="w"> </span>%&gt;
 
-<span class="o">&lt;</span><span class="nv">html</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">body</span><span class="w"> </span><span class="nv">bgcolor</span><span class="o">=</span><span class="s2">"yellow"</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">center</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">h2</span><span class="o">&gt;&lt;</span><span class="nv">font</span><span class="w"> </span><span class="nv">face</span><span class="o">=</span><span class="s2">"Verdana"</span><span class="w"> </span><span class="nv">color</span><span class="o">=</span><span class="s2">"black"</span><span class="o">&gt;</span>
-<span class="nv">Temperature</span><span class="w"> </span><span class="nv">Control</span><span class="o">&lt;</span><span class="na">/</span><span class="nv">font</span><span class="o">&gt;&lt;</span><span class="na">/</span><span class="nv">h3</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">h3</span><span class="o">&gt;&lt;</span><span class="nv">font</span><span class="w"> </span><span class="nv">face</span><span class="o">=</span><span class="s2">"Verdana"</span><span class="w"> </span><span class="nv">color</span><span class="o">=</span><span class="s2">"black"</span><span class="o">&gt;</span>
-<span class="nv">Server</span><span class="o">-</span><span class="nv">Side</span><span class="w"> </span><span class="nv">Noncompositional</span><span class="w"> </span><span class="nv">control</span><span class="o">&lt;</span><span class="na">/</span><span class="nv">font</span><span class="o">&gt;&lt;</span><span class="na">/</span><span class="nv">h4</span><span class="o">&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body</span><span class="w"> </span><span class="na">bgcolor=</span><span class="s">"yellow"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;center&gt;</span>
+<span class="nt">&lt;h2&gt;&lt;font</span><span class="w"> </span><span class="na">face=</span><span class="s">"Verdana"</span><span class="w"> </span><span class="na">color=</span><span class="s">"black"</span><span class="nt">&gt;</span>
+Temperature<span class="w"> </span>Control<span class="nt">&lt;/font&gt;&lt;/h3&gt;</span>
+<span class="nt">&lt;h3&gt;&lt;font</span><span class="w"> </span><span class="na">face=</span><span class="s">"Verdana"</span><span class="w"> </span><span class="na">color=</span><span class="s">"black"</span><span class="nt">&gt;</span>
+Server-Side<span class="w"> </span>Noncompositional<span class="w"> </span>control<span class="nt">&lt;/font&gt;&lt;/h4&gt;</span>
 
-<span class="o">&lt;</span><span class="nv">form</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="nv">server</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">Dyalog</span><span class="bp">:</span><span class="nv">TemperatureConverterCtl2</span><span class="w"> </span><span class="nv">id</span><span class="o">=</span><span class="nv">TempCvtCtl2</span><span class="w"> </span>
-<span class="nv">runat</span><span class="o">=</span><span class="nv">server</span><span class="na">/</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">form</span><span class="o">&gt;</span>
+<span class="nt">&lt;form</span><span class="w"> </span><span class="na">runat=</span><span class="s">server</span><span class="nt">&gt;</span>
+<span class="nt">&lt;Dyalog:TemperatureConverterCtl2</span><span class="w"> </span><span class="na">id=</span><span class="s">TempCvtCtl2</span><span class="w"> </span>
+<span class="na">runat=</span><span class="s">server/</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
 
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">center</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">body</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">html</span><span class="o">&gt;</span>
+<span class="nt">&lt;/center&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
 </code></pre></div>
 <p>The HTML that is generated by the control is illustrated below. Notice the presence of a JavaScript function named <code>__doPostBack</code>. This is generated by the <code>RegisterPostBackScript</code> method called from the <code>OnPreRender</code> function. The code that wires the buttons to this function was generated by the <code>GetPostBackEventReference</code> method called from the <code>Render</code> function.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nv">html</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">body</span><span class="w"> </span><span class="nv">bgcolor</span><span class="o">=</span><span class="s2">"yellow"</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">center</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">h2</span><span class="o">&gt;&lt;</span><span class="nv">font</span><span class="w"> </span><span class="nv">face</span><span class="o">=</span><span class="s2">"Verdana"</span><span class="w"> </span><span class="nv">color</span><span class="o">=</span><span class="s2">"black"</span><span class="o">&gt;</span><span class="nv">Temperature</span><span class="w"> </span><span class="nv">Control</span><span class="o">&lt;</span><span class="na">/</span><span class="nv">font</span><span class="o">&gt;&lt;</span><span class="na">/</span><span class="nv">h2</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">h4</span><span class="o">&gt;&lt;</span><span class="nv">font</span><span class="w"> </span><span class="nv">face</span><span class="o">=</span><span class="s2">"Verdana"</span><span class="w"> </span><span class="nv">color</span><span class="o">=</span><span class="s2">"black"</span><span class="o">&gt;</span><span class="nv">Server</span><span class="o">-</span><span class="nv">Side</span><span class="w"> </span><span class="nv">Noncompositional</span><span class="w"> </span><span class="nv">control</span><span class="o">&lt;</span><span class="na">/</span><span class="nv">font</span><span class="o">&gt;&lt;</span><span class="na">/</span><span class="nv">h4</span><span class="o">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">bgcolor</span><span class="o">=</span><span class="s">"yellow"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">font</span> <span class="na">face</span><span class="o">=</span><span class="s">"Verdana"</span> <span class="na">color</span><span class="o">=</span><span class="s">"black"</span><span class="p">&gt;</span>Temperature Control<span class="p">&lt;/</span><span class="nt">font</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;&lt;</span><span class="nt">font</span> <span class="na">face</span><span class="o">=</span><span class="s">"Verdana"</span> <span class="na">color</span><span class="o">=</span><span class="s">"black"</span><span class="p">&gt;</span>Server-Side Noncompositional control<span class="p">&lt;/</span><span class="nt">font</span><span class="p">&gt;&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
 
 
-<span class="o">&lt;</span><span class="nv">form</span><span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">"ctrl1"</span><span class="w"> </span><span class="nv">method</span><span class="o">=</span><span class="s2">"post"</span><span class="w"> </span><span class="nv">action</span><span class="o">=</span><span class="s2">"temp2.aspx"</span><span class="w"> </span><span class="nv">id</span><span class="o">=</span><span class="s2">"ctrl1"</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">input</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s2">"hidden"</span><span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">"__EVENTTARGET"</span><span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="s2">""</span><span class="w"> </span><span class="na">/</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">input</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s2">"hidden"</span><span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">"__EVENTARGUMENT"</span><span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="s2">""</span><span class="w"> </span><span class="na">/</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">input</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s2">"hidden"</span><span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">"__VIEWSTATE"</span><span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="s2">"YTB6MTc3MzAxNzYxM19fX3g=9cfcfa5c"</span><span class="w"> </span><span class="na">/</span><span class="o">&gt;</span>
+<span class="p">&lt;</span><span class="nt">form</span> <span class="na">name</span><span class="o">=</span><span class="s">"ctrl1"</span> <span class="na">method</span><span class="o">=</span><span class="s">"post"</span> <span class="na">action</span><span class="o">=</span><span class="s">"temp2.aspx"</span> <span class="na">id</span><span class="o">=</span><span class="s">"ctrl1"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"hidden"</span> <span class="na">name</span><span class="o">=</span><span class="s">"__EVENTTARGET"</span> <span class="na">value</span><span class="o">=</span><span class="s">""</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"hidden"</span> <span class="na">name</span><span class="o">=</span><span class="s">"__EVENTARGUMENT"</span> <span class="na">value</span><span class="o">=</span><span class="s">""</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"hidden"</span> <span class="na">name</span><span class="o">=</span><span class="s">"__VIEWSTATE"</span> <span class="na">value</span><span class="o">=</span><span class="s">"YTB6MTc3MzAxNzYxM19fX3g=9cfcfa5c"</span> <span class="p">/&gt;</span>
 
-<span class="o">&lt;</span><span class="nv">script</span><span class="w"> </span><span class="nv">language</span><span class="o">=</span><span class="s2">"javascript"</span><span class="o">&gt;</span>
-<span class="o">&lt;!--</span>
-<span class="w">    </span><span class="nv">function</span><span class="w"> </span><span class="nv">__doPostBack</span><span class="p">(</span><span class="nv">eventTarget</span><span class="o">,</span><span class="w"> </span><span class="nv">eventArgument</span><span class="p">)</span><span class="w"> </span><span class="kt">{</span>
-<span class="w">        </span><span class="nv">var</span><span class="w"> </span><span class="nv">theform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">document</span><span class="na">.</span><span class="nv">ctrl1</span>
-<span class="w">        </span><span class="nv">theform</span><span class="na">.</span><span class="nv">__EVENTTARGET</span><span class="na">.</span><span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">eventTarget</span>
-<span class="w">        </span><span class="nv">theform</span><span class="na">.</span><span class="nv">__EVENTARGUMENT</span><span class="na">.</span><span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">eventArgument</span>
-<span class="w">        </span><span class="nv">theform</span><span class="na">.</span><span class="nv">submit</span><span class="p">()</span>
-<span class="w">    </span><span class="kt">}</span>
-<span class="na">//</span><span class="w"> </span><span class="o">--&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">script</span><span class="o">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
+<span class="c">&lt;!--</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">__doPostBack</span><span class="p">(</span><span class="nx">eventTarget</span><span class="p">,</span><span class="w"> </span><span class="nx">eventArgument</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">theform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">ctrl1</span>
+<span class="w">        </span><span class="nx">theform</span><span class="p">.</span><span class="nx">__EVENTTARGET</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">eventTarget</span>
+<span class="w">        </span><span class="nx">theform</span><span class="p">.</span><span class="nx">__EVENTARGUMENT</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">eventArgument</span>
+<span class="w">        </span><span class="nx">theform</span><span class="p">.</span><span class="nx">submit</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="c1">// --&gt;</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
-<span class="o">&lt;</span><span class="nv">h2</span><span class="o">&gt;</span><span class="nv">Fahrenheit</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">input</span><span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="nv">TempCvtCtl2</span><span class="w"> </span><span class="nv">id</span><span class="o">=</span><span class="nv">FahrenheitValue</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="nv">text</span><span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="m">0</span><span class="o">&gt;&lt;</span><span class="na">/</span><span class="nv">h2</span><span class="o">&gt;&lt;</span><span class="nv">h2</span><span class="o">&gt;</span><span class="nv">Centigrade</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">input</span><span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="nv">TempCvtCtl2</span><span class="w"> </span><span class="nv">id</span><span class="o">=</span><span class="nv">CentigradeValueKey</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="nv">text</span><span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="m">0</span><span class="o">&gt;&lt;</span><span class="na">/</span><span class="nv">h2</span><span class="o">&gt;&lt;</span><span class="nv">input</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="nv">button</span><span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="nv">FahrenheitToCentigrade</span><span class="w">  </span><span class="nv">onClick</span><span class="o">=</span><span class="s2">"jscript:__doPostBack('TempCvtCtl2','FahrenheitToCentigrade')"</span><span class="o">&gt;&lt;</span><span class="nv">input</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="nv">button</span><span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="nv">CentigradeToFahrenheit</span><span class="w">  </span><span class="nv">onClick</span><span class="o">=</span><span class="s2">"jscript:__doPostBack('TempCvtCtl2','CentigradeToFahrenheit')"</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">br</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">br</span><span class="o">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Fahrenheit <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">TempCvtCtl2</span> <span class="na">id</span><span class="o">=</span><span class="s">FahrenheitValue</span> <span class="na">type</span><span class="o">=</span><span class="s">text</span> <span class="na">value</span><span class="o">=</span><span class="s">0</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Centigrade <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">TempCvtCtl2</span> <span class="na">id</span><span class="o">=</span><span class="s">CentigradeValueKey</span> <span class="na">type</span><span class="o">=</span><span class="s">text</span> <span class="na">value</span><span class="o">=</span><span class="s">0</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">button</span> <span class="na">value</span><span class="o">=</span><span class="s">FahrenheitToCentigrade</span>  <span class="na">onClick</span><span class="o">=</span><span class="s">"jscript:__doPostBack('TempCvtCtl2','FahrenheitToCentigrade')"</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">button</span> <span class="na">value</span><span class="o">=</span><span class="s">CentigradeToFahrenheit</span>  <span class="na">onClick</span><span class="o">=</span><span class="s">"jscript:__doPostBack('TempCvtCtl2','CentigradeToFahrenheit')"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
 
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">form</span><span class="o">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">center</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">body</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">html</span><span class="o">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<p><figure id="_figure-1"><img alt="temperatureconverterctl2" src="../../img/temperatureconverterctl2.png"><figcaption>Figure 1: temperatureconverterctl2</figcaption></figure></p>
+<p><img alt="" src="../../img/temperatureconverterctl2.png"></p>
 
 
 

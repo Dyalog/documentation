@@ -68934,8 +68934,6 @@
       
         
       
-        
-      
     
     
     
@@ -68963,27 +68961,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69059,7 +69036,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70936,7 +70913,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71457,7 +71434,7 @@
 
 <p>This example illustrates data binding using a matrix and is practically identical to Example 7 except that it uses a matrix instead of a vector of namespaces.</p>
 <p>Each row in the WPF DataGrid control is represented by an object, and each column as a property of that object. Each row in the DataGrid is bound to an object in the data source, and each column in the data grid is bound to a property of the data object.</p>
-<p><figure id="_figure-1"><img alt="data binding datagrid1" src="../../../img/data-binding-datagrid1.png"><figcaption>Figure 1: data binding datagrid1</figcaption></figure></p>
+<p><img alt="" src="../../../img/data-binding-datagrid1.png"></p>
 <h2 id="the-xaml">The XAML</h2>
 <p>The XAML shown below,  describes a Window containing a DockPanel, inside which is a DataGrid. The XAML is identical to the XAML in Example 7, except for the window caption.
 </p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nt">&lt;Window</span>
@@ -71507,11 +71484,11 @@
 <span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">DataBinding</span><span class="na">.</span><span class="nv">DataGridMatrix</span>
 <span class="w">      </span><span class="nv">Grid</span>
 </code></pre></div>
-<p><figure id="_figure-2"><img alt="data binding datagrid1" src="../../../img/data-binding-datagrid1.png"><figcaption>Figure 2: data binding datagrid1</figcaption></figure></p>
+<p><img alt="" src="../../../img/data-binding-datagrid1.png"></p>
 <p>Let's round the prices to the nearest $5.
 </p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nv">winelist</span><span class="sr">[;</span><span class="m">2</span><span class="sr">]</span><span class="kd">←</span><span class="m">5</span><span class="o">×⌊</span><span class="m">0.5</span><span class="o">+</span><span class="nv">winelist</span><span class="sr">[;</span><span class="m">2</span><span class="sr">]</span><span class="o">÷</span><span class="m">5</span>
 </code></pre></div>
-<p><figure id="_figure-3"><img alt="data binding datagrid2" src="../../../img/data-binding-datagrid2.png"><figcaption>Figure 3: data binding datagrid2</figcaption></figure></p>
+<p><img alt="" src="../../../img/data-binding-datagrid2.png"></p>
 <h2 id="using-code">Using Code</h2>
 <p>The same result can be achieved using code instead of XAML as illustrated by the function <code>GridCodeNoFmt</code>. The function is so-named because this code is insufficient to display the second column in currency format.
 </p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">GridCodeNoFmt</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">MySource</span><span class="sr">;</span><span class="nv">win</span><span class="sr">;</span><span class="nv">info</span><span class="sr">;</span><span class="nv">fmt</span>
@@ -71535,7 +71512,7 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>This is because by default the DataGrid generates its columns automatically with default formatting.</p>
-<p><figure id="_figure-4"><img alt="data binding datagrid3" src="../../../img/data-binding-datagrid3.png"><figcaption>Figure 4: data binding datagrid3</figcaption></figure></p>
+<p><img alt="" src="../../../img/data-binding-datagrid3.png"></p>
 <p>In order to apply special formatting to one or more columns, it is necessary to set the AutoGenerateColumns property to 0, and to generate the columns programmatically as is shown in the second version of the function, <code>GridCode</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">GridCode</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">MySource</span><span class="sr">;</span><span class="nv">win</span><span class="sr">;</span><span class="nv">info</span><span class="sr">;</span><span class="nv">fmt</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
@@ -71568,7 +71545,7 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>In this version of the function, lines <code>[19-25]</code> create the two columns <code>Name</code> and <code>Price</code>, applying currency format to the <code>Price</code> column.</p>
-<p><figure id="_figure-5"><img alt="data binding datagrid4" src="../../../img/data-binding-datagrid4.png"><figcaption>Figure 5: data binding datagrid4</figcaption></figure></p>
+<p><img alt="" src="../../../img/data-binding-datagrid4.png"></p>
 
 
 

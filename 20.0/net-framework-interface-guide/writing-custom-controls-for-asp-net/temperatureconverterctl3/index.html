@@ -68930,8 +68930,6 @@
       
         
       
-        
-      
     
     
     
@@ -68959,27 +68957,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69055,7 +69032,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70907,7 +70884,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71477,48 +71454,48 @@
 <p>It is then up to the page that is hosting the control to respond to the event in whatever way it deems appropriate.</p>
 <h2 id="hosting-the-control-on-a-page">Hosting the Control on a Page</h2>
 <p>The following example illustrates an ASP.NET web page that hosts the TemperatureConverterCtl3 custom control and responds to its Export event. The page uses a <script> written in APL, but it could just as easily be written in VB.NET.
-<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="err">%</span><span class="na">@</span><span class="w"> </span><span class="nv">Register</span><span class="w"> </span><span class="nv">TagPrefix</span><span class="o">=</span><span class="s2">&quot;Dyalog&quot;</span><span class="w"> </span><span class="nv">Namespace</span><span class="o">=</span><span class="s2">&quot;DyalogSamples&quot;</span>
-<span class="w">                                </span><span class="nv">Assembly</span><span class="o">=</span><span class="s2">&quot;TEMP&quot;</span><span class="err">%</span><span class="o">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="err">&lt;</span>%@<span class="w"> </span>Register<span class="w"> </span>TagPrefix=&quot;Dyalog&quot;<span class="w"> </span>Namespace=&quot;DyalogSamples&quot;
+<span class="w">                                </span>Assembly=&quot;TEMP&quot;%&gt;
 
-<span class="o">&lt;</span><span class="nv">script</span><span class="w"> </span><span class="nv">language</span><span class="o">=</span><span class="s2">&quot;Dyalog&quot;</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="s2">&quot;server&quot;</span><span class="o">&gt;</span>
-<span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">ExportCB</span><span class="w"> </span><span class="nv">args</span><span class="sr">;</span><span class="nv">sender</span><span class="sr">;</span><span class="nv">e</span>
-<span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">sender</span><span class="w"> </span><span class="nv">e</span><span class="kd">←</span><span class="nv">args</span>
-<span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="p">(</span><span class="nv">Flab</span><span class="w"> </span><span class="nv">Clab</span><span class="p">)</span><span class="na">.</span><span class="nv">Text</span><span class="kd">←</span><span class="o">⍕</span><span class="na">¨</span><span class="nv">e</span><span class="na">.</span><span class="p">(</span><span class="nv">Fahrenheit</span><span class="w"> </span><span class="nv">Centigrade</span><span class="p">)</span>
-<span class="w">     </span><span class="bp">∇</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">script</span><span class="o">&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">language=</span><span class="s">&quot;Dyalog&quot;</span><span class="w"> </span><span class="na">runat=</span><span class="s">&quot;server&quot;</span><span class="nt">&gt;</span>
+<span class="w">     </span>∇<span class="w"> </span>ExportCB<span class="w"> </span>args;sender;e
+[1]<span class="w">    </span>sender<span class="w"> </span>e←args
+[2]<span class="w">    </span>(Flab<span class="w"> </span>Clab).Text←⍕¨e.(Fahrenheit<span class="w"> </span>Centigrade)
+<span class="w">     </span>∇
+<span class="nt">&lt;/script&gt;</span>
 
-<span class="o">&lt;</span><span class="nv">html</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">body</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">center</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">h2</span><span class="o">&gt;&lt;</span><span class="nv">font</span><span class="w"> </span><span class="nv">face</span><span class="o">=</span><span class="s2">&quot;Verdana&quot;</span><span class="o">&gt;</span><span class="nv">Temperature</span><span class="w"> </span><span class="nv">Control</span>
-<span class="w">    </span><span class="o">&lt;</span><span class="na">/</span><span class="nv">font</span><span class="o">&gt;&lt;</span><span class="na">/</span><span class="nv">h3</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">h3</span><span class="o">&gt;&lt;</span><span class="nv">font</span><span class="w"> </span><span class="nv">face</span><span class="o">=</span><span class="s2">&quot;Verdana&quot;</span><span class="o">&gt;</span><span class="nv">Generating</span><span class="w"> </span><span class="nv">Events</span>
-<span class="w">    </span><span class="o">&lt;</span><span class="na">/</span><span class="nv">font</span><span class="o">&gt;&lt;</span><span class="na">/</span><span class="nv">h4</span><span class="o">&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;center&gt;</span>
+<span class="nt">&lt;h2&gt;&lt;font</span><span class="w"> </span><span class="na">face=</span><span class="s">&quot;Verdana&quot;</span><span class="nt">&gt;</span>Temperature<span class="w"> </span>Control
+<span class="w">    </span><span class="nt">&lt;/font&gt;&lt;/h3&gt;</span>
+<span class="nt">&lt;h3&gt;&lt;font</span><span class="w"> </span><span class="na">face=</span><span class="s">&quot;Verdana&quot;</span><span class="nt">&gt;</span>Generating<span class="w"> </span>Events
+<span class="w">    </span><span class="nt">&lt;/font&gt;&lt;/h4&gt;</span>
 
-<span class="o">&lt;</span><span class="nv">form</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="nv">server</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">Dyalog</span><span class="bp">:</span><span class="nv">TemperatureConverterCtl3</span><span class="w"> </span><span class="nv">id</span><span class="o">=</span><span class="s2">&quot;TempcvtCtl3&quot;</span>
-<span class="w">        </span><span class="nv">onExport</span><span class="o">=</span><span class="s2">&quot;ExportCB&quot;</span>
-<span class="nv">runat</span><span class="o">=</span><span class="nv">server</span><span class="na">/</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">form</span><span class="o">&gt;</span>
+<span class="nt">&lt;form</span><span class="w"> </span><span class="na">runat=</span><span class="s">server</span><span class="nt">&gt;</span>
+<span class="nt">&lt;Dyalog:TemperatureConverterCtl3</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;TempcvtCtl3&quot;</span>
+<span class="w">        </span><span class="na">onExport=</span><span class="s">&quot;ExportCB&quot;</span>
+<span class="na">runat=</span><span class="s">server/</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
 
-<span class="o">&lt;</span><span class="nv">p</span><span class="o">&gt;</span><span class="nv">Exported</span><span class="w"> </span><span class="nv">values</span><span class="w"> </span><span class="nv">are</span><span class="bp">:</span><span class="o">&lt;</span><span class="na">/</span><span class="nv">p</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">table</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">tr</span><span class="o">&gt;&lt;</span><span class="nv">td</span><span class="o">&gt;</span><span class="nv">Fahrenheit</span><span class="bp">:</span><span class="o">&lt;</span><span class="na">/</span><span class="nv">td</span><span class="o">&gt;</span>
-<span class="w">    </span><span class="o">&lt;</span><span class="nv">td</span><span class="o">&gt;&lt;</span><span class="nv">asp</span><span class="bp">:</span><span class="nv">Label</span><span class="w"> </span><span class="nv">id</span><span class="o">=</span><span class="s2">&quot;Flab&quot;</span><span class="w"> </span><span class="nv">Text</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="s2">&quot;server&quot;</span><span class="o">&gt;</span>
-<span class="w">        </span><span class="o">&lt;</span><span class="na">/</span><span class="nv">asp</span><span class="bp">:</span><span class="nv">Label</span><span class="o">&gt;&lt;</span><span class="na">/</span><span class="nv">td</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">tr</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">tr</span><span class="o">&gt;&lt;</span><span class="nv">td</span><span class="o">&gt;</span><span class="nv">Centigrade</span><span class="bp">:</span><span class="o">&lt;</span><span class="na">/</span><span class="nv">td</span><span class="o">&gt;</span>
-<span class="w">    </span><span class="o">&lt;</span><span class="nv">td</span><span class="o">&gt;&lt;</span><span class="nv">asp</span><span class="bp">:</span><span class="nv">Label</span><span class="w"> </span><span class="nv">id</span><span class="o">=</span><span class="s2">&quot;Clab&quot;</span><span class="w"> </span><span class="nv">Text</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="s2">&quot;server&quot;</span><span class="o">&gt;</span>
-<span class="w">        </span><span class="o">&lt;</span><span class="na">/</span><span class="nv">asp</span><span class="bp">:</span><span class="nv">Label</span><span class="o">&gt;&lt;</span><span class="na">/</span><span class="nv">td</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">tr</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">table</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">center</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">body</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">html</span><span class="o">&gt;</span>
+<span class="nt">&lt;p&gt;</span>Exported<span class="w"> </span>values<span class="w"> </span>are:<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;table&gt;</span>
+<span class="nt">&lt;tr&gt;&lt;td&gt;</span>Fahrenheit:<span class="nt">&lt;/td&gt;</span>
+<span class="w">    </span><span class="nt">&lt;td&gt;&lt;asp:Label</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Flab&quot;</span><span class="w"> </span><span class="na">Text=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">runat=</span><span class="s">&quot;server&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/asp:Label&gt;&lt;/td&gt;</span>
+<span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;tr&gt;&lt;td&gt;</span>Centigrade:<span class="nt">&lt;/td&gt;</span>
+<span class="w">    </span><span class="nt">&lt;td&gt;&lt;asp:Label</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Clab&quot;</span><span class="w"> </span><span class="na">Text=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">runat=</span><span class="s">&quot;server&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/asp:Label&gt;&lt;/td&gt;</span>
+<span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/center&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
 </code></pre></div></p>
 <p>In this example, the host page associates a callback function <code>ExportCB</code> with the <em>Export</em> event  The ExportCB callback function  is defined within the <script></script> section of the page. It simply sets the Text property of two Label controls to display the parameters reported by the event.</p>
 <p>The picture below illustrates what happens when you run the page. Notice that the user can independently convert values between the two temperature scales and export these values from the control, to the host page, by pressing the Export button.</p>
-<p><figure id="_figure-1"><img alt="temperatureconverterctl3" src="../../img/temperatureconverterctl3.png"><figcaption>Figure 1: temperatureconverterctl3</figcaption></figure></p>
+<p><img alt="" src="../../img/temperatureconverterctl3.png"></p>
 
 
 

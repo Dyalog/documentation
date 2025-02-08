@@ -68925,8 +68925,6 @@
       
         
       
-        
-      
     
     
     
@@ -68954,27 +68952,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69050,7 +69027,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70863,7 +70840,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71344,16 +71321,16 @@
 <p>The <code>Control</code> class provides a <code>Render</code> method whose job is to generate the HTML that defines appearance of the control. The first example, the <code>SimpleCtl</code> control, overrides the <code>Render</code> method to display a simple string "Hello World" in the browser.</p>
 <p>The <code>TemperatureConverterCtl1</code> control is an example of a compositional control, that is, one that is composed of other standard controls packaged with special functionality. The <code>TemperatureConverterCtl2</code> control, uses the basic approach of the <code>SimpleCtl</code> control, but provides the same functionality as <code>TemperatureConverterCtl1</code>. The <code>TemperatureConverterCtl3</code> control illustrates how to generate events for the hosting page to catch and process.</p>
 <p>These examples, which are based upon a series of articles called <em>Advanced ASP.NET Server-Side Controls</em> by George Shepherd that appeared in the <em>msdn magazine</em> (October 2000, January 2001 and March 2001 issues), are implemented as Dyalog classes in a namespace called <code>DyalogSamples</code> in the workspace <code>samples\asp.net\temp\bin\temp.dws.</code> The corresponding .NET Assembly <code>samples\asp.net\temp\bin\temp.dll</code> was generated from this workspace.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="s2">"C:\Program Files (x86)\Dyalog\Dyalog APL 15.0 Unicode\Samples\asp.net\temp\bin\temp.dws"</span>
+</p><div class="highlight"><pre><span></span><code>      )LOAD "C:\Program Files (x86)\Dyalog\Dyalog APL 15.0 Unicode\Samples\asp.net\temp\bin\temp.dws"
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Program</span><span class="w"> </span><span class="nv">Files</span><span class="w"> </span><span class="p">(</span><span class="nv">x86</span><span class="p">)</span><span class="na">\</span><span class="nv">Dyalog</span><span class="na">\</span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">APL</span><span class="w"> </span><span class="m">15.0</span><span class="w"> </span><span class="nv">Unicode</span><span class="na">\</span><span class="nv">Samples</span><span class="na">\</span><span class="nv">asp</span><span class="na">.</span><span class="nv">net</span><span class="na">\</span><span class="nv">temp</span><span class="na">\</span><span class="nv">bin</span><span class="na">\</span><span class="nv">temp</span><span class="na">.</span><span class="nv">dws</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="nv">Tue</span><span class="w"> </span><span class="nv">Nov</span><span class="w"> </span><span class="m">22</span><span class="w"> </span><span class="m">15</span><span class="bp">:</span><span class="m">04</span><span class="bp">:</span><span class="m">11</span><span class="w"> </span><span class="m">2016</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">obs</span>
-<span class="nv">DyalogSamples</span>
-<span class="w">      </span><span class="p">)</span><span class="nv">cs</span><span class="w"> </span><span class="nv">DyalogSamples</span>
-<span class="c1">#.DyalogSamples</span>
-<span class="w">      </span><span class="p">)</span><span class="nv">Classes</span>
-<span class="nv">SimpleCtl</span><span class="w">       </span><span class="nv">TemperatureConverterCtl1</span><span class="w">        </span><span class="nv">TemperatureConverterCtl2</span><span class="w">        </span><span class="nv">TemperatureConverterCtl3</span>
+<div class="highlight"><pre><span></span><code>      )obs
+DyalogSamples
+      )cs DyalogSamples
+#.DyalogSamples
+      )Classes
+SimpleCtl       TemperatureConverterCtl1        TemperatureConverterCtl2        TemperatureConverterCtl3
 </code></pre></div>
 
 

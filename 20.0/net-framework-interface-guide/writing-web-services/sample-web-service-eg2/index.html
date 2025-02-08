@@ -68930,8 +68930,6 @@
       
         
       
-        
-      
     
     
     
@@ -68959,27 +68957,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69055,7 +69032,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70907,7 +70884,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71402,7 +71379,7 @@
 <p>In all the previous examples, we have relied upon ASP.NET to compile the <code>APLScript</code> into a .NET class prior to running it. This sample illustrates how you can make a .NET class yourself.</p>
 <p>For this example, the Web Service script, which is supplied in the file s<code>amples\asp.net\webservices\eg2.asmx</code> (mapped via an IIS Virtual Directory to the URL <code>http://localhost/dyalog.net/webservices/eg2.asmx)</code>is reduced to a single statement that merely invokes the pre-defined class called <code>APLServices.Example</code>.</p>
 <p>The entire file, viewed in <code>Notepad</code>, is shown below.</p>
-<p><figure id="_figure-1"><img alt="eg2_1" src="../../img/eg2-1.png"><figcaption>Figure 1: eg2_1</figcaption></figure></p>
+<p><img alt="" src="../../img/eg2-1.png"></p>
 <p>Given this instruction, ASP.NET will locate the <code>APLServices.Example</code> Web Service by searching the <code>bin</code> sub-directory for assemblies. Therefore, to make this work, we have only to create a .NET assembly in <code>samples\asp.net\aplservices\bin</code>. The assembly should contain a .NET Namespace named <code>APLServices</code>, which in turn defines a class named <code>Example</code>.</p>
 <p>The procedure for creating .NET classes and assemblies in Dyalog APL was discussed in <a href="../writing-net-classes/chapter-heading.md">Writing .NET Classes in Dyalog APL</a>. Making a WebService class is done in exactly the same way.</p>
 <p>Note that the sub-directory <code>samples\asp.net\aplservices\bin</code> already contains copies of the dependent Dyalog DLLs that are required to execute the code.</p>
@@ -71431,18 +71408,18 @@
 </p><div class="highlight"><pre><span></span><code><span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Program</span><span class="w"> </span><span class="nv">Files</span><span class="na">\</span><span class="nv">Dyalog</span><span class="na">\</span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">APL</span><span class="w"> </span><span class="m">15.0</span><span class="w"> </span><span class="nv">Unicode</span><span class="na">\</span><span class="nv">Samples</span><span class="na">\</span><span class="nv">asp</span><span class="na">.</span><span class="nv">net</span><span class="na">\</span><span class="nv">webservices</span><span class="na">\</span><span class="nv">bin</span><span class="na">\</span><span class="nv">eg2</span><span class="na">.</span><span class="nv">dws</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="nv">Mon</span><span class="w"> </span><span class="nv">Sep</span><span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">15</span><span class="bp">:</span><span class="m">31</span><span class="bp">:</span><span class="m">56</span><span class="w"> </span><span class="m">2016</span>
 </code></pre></div>
 <p>Select the <em>Export…</em> item from the Session <em>File</em> menu, and save the assembly as <code>eg2.dll</code> in the same directory, that is, <code>samples\asp.net\webservices\bin</code>.</p>
-<p><figure id="_figure-2"><img alt="eg2_2" src="../../img/eg2-2.png"><figcaption>Figure 2: eg2_2</figcaption></figure></p>
+<p><img alt="" src="../../img/eg2-2.png"></p>
 <p>When you click <em>Save</em>, the Status Window displays the following information to confirm that the assembly has been created correctly.</p>
-<p><figure id="_figure-3"><img alt="eg2_3" src="../../img/eg2-3.png"><figcaption>Figure 3: eg2_3</figcaption></figure></p>
+<p><img alt="" src="../../img/eg2-3.png"></p>
 <h2 id="testing-eg2-from-a-browser">Testing EG2 from a Browser</h2>
 <p>If you point your browser at the URL:
 </p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nv">http</span><span class="bp">:</span><span class="na">//</span><span class="nv">localhost</span><span class="na">/</span><span class="nv">dyalog</span><span class="na">.</span><span class="nv">net</span><span class="m">.15.0</span><span class="na">.</span><span class="nv">unicode</span><span class="m">.32</span><span class="na">/</span><span class="nv">webservices</span><span class="na">/</span><span class="nv">eg2</span><span class="na">.</span><span class="nv">asmx</span>
 </code></pre></div>
 <p>ASP.NET will fabricate a page about it for the browser to display as shown below.</p>
 <p>The <code>Add</code> method exposed by <code>APLServices.Example</code> is shown, together with a Form from which you can invoke it.</p>
-<p><figure id="_figure-4"><img alt="eg2_4" src="../../img/eg2-4.png"><figcaption>Figure 4: eg2_4</figcaption></figure></p>
+<p><img alt="" src="../../img/eg2-4.png"></p>
 <p>If you enter the numbers 123 and 456 in the fields provided, then press <em>Invoke</em>, the method will be called and the result displayed as shown below.</p>
-<p><figure id="_figure-5"><img alt="eg2_5" src="../../img/eg2-5.png"><figcaption>Figure 5: eg2_5</figcaption></figure></p>
+<p><img alt="" src="../../img/eg2-5.png"></p>
 
 
 

@@ -68925,8 +68925,6 @@
       
         
       
-        
-      
     
     
     
@@ -68954,27 +68952,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69050,7 +69027,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70863,7 +70840,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71344,12 +71321,12 @@
 <p>Note that in the manufactured namespace names, characters that would be invalid symbols in a namespace name are replaced by underscores.</p>
 <p>The following picture shows the namespace tree that exists in the Dyalog DLL workspace when the first example (see <a href="../../writing-net-classes/aplclasses1/">Example 1</a>) in the chapter Writing .Net Classes is executed under Visual Studio. However, to cause the suspension, an error has been introduced in the method  <code>IndexGen</code>.</p>
 <p>In this case, there is a single AppDomain involved whose name, <code>DyApp_vshost_exe</code> is specified by .NET. APL has made a corresponding namespace called <code>AppDomain_DyApp_vshost_exe</code>. Next, there is a namespace associated with the Assembly <code>aplclasses</code>, named <code>Assembly_aplclasses</code>. Beneath this is a namespace called <code>APLClasses</code> associated with the .NET Namespace of the same name. Finally, there is the APL Class called <code>Primitives</code> .</p>
-<p><figure id="_figure-1"><img alt="workspace structure1" src="../../img/workspace-structure1.png"><figcaption>Figure 1: workspace structure1</figcaption></figure></p>
+<p><img alt="" src="../../img/workspace-structure1.png"></p>
 <p>Notice that the state indicator displays the entire .NET calling structure, and not just the APL stack. In this case, the state indicator shows that <code>IndexGen</code> was called from <code>MainClass.Main</code>, which combines the class and method names specified in <code>aplfns.cs</code>. Note that .NET calls are slightly indented.</p>
 <p>Notice too that <code>IndexGen</code> has been started on APL thread 1 which, in this case, is associated with system thread 8752. If the client application were to call <code>IndexGen</code> on multiple system threads, this would be reflected by multiple APL threads in the workspace. This topic is discussed in further detail below.</p>
 <p>The possibility for the client to execute code in several instances of an object at the same time requires that each executing instance is separated from all the others. Each instance will be created as an <strong>unnamed</strong> object in the workspace, within the relevant appdomain and assembly namespaces.</p>
 <p>The picture below shows the workspace structure when the assembly was generated with isolation mode set to <em>Each assembly has its own workspace</em>. In this case, the AppDomain and Assembly structure is not created above the classes  in the workspace, so the workspace structure is somewhat simpler:</p>
-<p><figure id="_figure-2"><img alt="workspace structure2" src="../../img/workspace-structure2.png"><figcaption>Figure 2: workspace structure2</figcaption></figure></p>
+<p><img alt="" src="../../img/workspace-structure2.png"></p>
 
 
 

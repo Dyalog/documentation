@@ -68925,8 +68925,6 @@
       
         
       
-        
-      
     
     
     
@@ -68954,27 +68952,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69050,7 +69027,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70863,7 +70840,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71340,34 +71317,34 @@
 
 <p>It is often desirable to separate the code content of a page completely from the HTML and other text, layout or graphical information by placing it in a separate file. In ASP.NET parlance, this technique is known as <em>code behind</em>.</p>
 <p>The <code>intro5.aspx</code> example illustrates this technique.
-</p><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="err">%</span><span class="na">@</span><span class="nv">Page</span><span class="w"> </span><span class="nv">Language</span><span class="o">=</span><span class="s2">"Dyalog"</span>
-<span class="w">    </span><span class="nv">Inherits</span><span class="o">=</span><span class="s2">"FruitSelection"</span>
-<span class="w">    </span><span class="nv">src</span><span class="o">=</span><span class="s2">"fruit.apl"</span><span class="w"> </span><span class="err">%</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="err">%</span><span class="na">@</span><span class="nv">Register</span><span class="w"> </span><span class="nv">TagPrefix</span><span class="o">=</span><span class="s2">"tutorial"</span><span class="w"> </span><span class="nv">Namespace</span><span class="o">=</span><span class="s2">"Tutorial"</span><span class="w"> </span><span class="nv">Assembly</span><span class="o">=</span><span class="s2">"tutorial"</span><span class="w"> </span><span class="err">%</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">html</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">head</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">title</span><span class="o">&gt;</span><span class="nv">Code</span><span class="w"> </span><span class="nv">behind</span><span class="bp">:</span><span class="w"> </span><span class="nv">separating</span><span class="w"> </span><span class="nv">your</span><span class="w"> </span><span class="nv">code</span><span class="w"> </span><span class="nv">from</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">page</span><span class="w"> </span><span class="nv">layout</span><span class="o">&lt;</span><span class="na">/</span><span class="nv">title</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">link</span><span class="w"> </span><span class="nv">rel</span><span class="o">=</span><span class="s2">"stylesheet"</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s2">"text/css"</span><span class="w"> </span><span class="nv">href</span><span class="o">=</span><span class="s2">"apl.css"</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">head</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">body</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">h1</span><span class="o">&gt;</span><span class="nv">intro5</span><span class="bp">:</span><span class="w"> </span><span class="nv">Code</span><span class="w"> </span><span class="nv">Behind</span><span class="o">&lt;</span><span class="na">/</span><span class="nv">h1</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">p</span><span class="o">&gt;</span><span class="nv">This</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="nv">illustrates</span><span class="w"> </span><span class="nv">how</span><span class="w"> </span><span class="nv">you</span><span class="w"> </span><span class="nv">can</span><span class="w"> </span><span class="nv">separate</span><span class="w"> </span><span class="nv">your</span><span class="w"> </span><span class="nv">code</span><span class="w"> </span><span class="nv">from</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">page</span><span class="w"> </span><span class="nv">layout</span><span class="na">.</span><span class="o">&lt;</span><span class="na">/</span><span class="nv">p</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">form</span><span class="w">  </span><span class="nv">runat</span><span class="o">=</span><span class="s2">"server"</span><span class="w"> </span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">asp</span><span class="bp">:</span><span class="nv">DropDownList</span><span class="w"> </span><span class="nv">id</span><span class="o">=</span><span class="s2">"list"</span>
-<span class="w">    </span><span class="nv">runat</span><span class="o">=</span><span class="s2">"server"</span>
-<span class="w">    </span><span class="nv">autopostback</span><span class="o">=</span><span class="s2">"true"</span>
-<span class="w">    </span><span class="nv">OnSelectedIndexChanged</span><span class="o">=</span><span class="s2">"Select"</span><span class="na">/</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">p</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">asp</span><span class="bp">:</span><span class="nv">Label</span><span class="w"> </span><span class="nv">id</span><span class="o">=</span><span class="s2">"out"</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="s2">"server"</span><span class="w"> </span><span class="na">/</span><span class="o">&gt;&lt;</span><span class="na">/</span><span class="nv">p</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">form</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">body</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">tutorial</span><span class="bp">:</span><span class="nv">index</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="s2">"server"</span><span class="na">/</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">html</span><span class="o">&gt;</span>
+</p><div class="highlight"><pre><span></span><code>&lt;%@Page Language="Dyalog"
+    Inherits="FruitSelection"
+    src="fruit.apl" %&gt;
+&lt;%@Register TagPrefix="tutorial" Namespace="Tutorial" Assembly="tutorial" %&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Code behind: separating your code from the page layout&lt;/title&gt;
+&lt;link rel="stylesheet" type="text/css" href="apl.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;intro5: Code Behind&lt;/h1&gt;
+&lt;p&gt;This example illustrates how you can separate your code from the page layout.&lt;/p&gt;
+&lt;form  runat="server" &gt;
+&lt;asp:DropDownList id="list"
+    runat="server"
+    autopostback="true"
+    OnSelectedIndexChanged="Select"/&gt;
+&lt;p&gt;
+&lt;asp:Label id="out" runat="server" /&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;tutorial:index runat="server"/&gt;
+&lt;/html&gt;
 </code></pre></div>
 <p>The statement
-</p><div class="highlight"><pre><span></span><code><span class="err">%</span><span class="na">@</span><span class="nv">Page</span><span class="w"> </span><span class="nv">Language</span><span class="o">=</span><span class="s2">"Dyalog"</span><span class="w"> </span><span class="nv">Inherits</span><span class="o">=</span><span class="s2">"FruitSelection"</span><span class="w"> </span><span class="nv">src</span><span class="o">=</span><span class="s2">"fruit.apl"</span><span class="w"> </span><span class="err">%</span><span class="o">&gt;</span>
+</p><div class="highlight"><pre><span></span><code>%@Page Language="Dyalog" Inherits="FruitSelection" src="fruit.apl" %&gt;
 </code></pre></div>
-<p>says that this page, when compiled, should inherit from a class called <code>FruitSelection</code>. Furthermore, the <code>FruitSelection</code> class is written in the "Dyalog" language, and its source code resides in a file called <code>fruit.apl</code>. <code>FruitSelection</code> is effectively the <em>base class</em> for the <code>.aspx</code> page.</p>
+says that this page, when compiled, should inherit from a class called <code>FruitSelection</code>. Furthermore, the <code>FruitSelection</code> class is written in the "Dyalog" language, and its source code resides in a file called <code>fruit.apl</code>. <code>FruitSelection</code> is effectively the <em>base class</em> for the <code>.aspx</code> page.
 <p>In this case, <code>fruit.apl</code> is simply another text file containing the <code>APLScript</code> code and is shown below.</p>
 <div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">FruitSelection</span><span class="bp">:</span><span class="w"> </span><span class="nv">System</span><span class="na">.</span><span class="nv">Web</span><span class="na">.</span><span class="nv">UI</span><span class="na">.</span><span class="nv">Page</span>
 <span class="bp">:</span><span class="nv">Using</span><span class="w"> </span><span class="nv">System</span>
@@ -71391,8 +71368,8 @@
 <p>The first thing to notice is that the file requires <code>:Class</code> and <code>:EndClass</code> statements. These are required to tell the <code>APLScript</code> compiler the name of the class being defined, and the name of its base class. When the source code is in a <code>.aspx</code> file, this information is provided automatically by the <code>APLScript</code> compiler.</p>
 <p>The name of the class, in this case <code>FruitSelection</code>, must be the same name as is referenced in the <code>.aspx</code> web page file itself (<code>intro5.aspx</code>). The base class must be <code>System.Web.UI.Page</code></p>
 <p>The body of the script is just the same as the script section from the previous example. Only the names of the fruit have been changed so that it is clear which example is being executed.</p>
-<p><figure id="_figure-1"><img alt="intro5_1" src="../../img/intro5-1.png"><figcaption>Figure 1: intro5_1</figcaption></figure></p>
-<p><figure id="_figure-2"><img alt="intro5_2" src="../../img/intro5-2.png"><figcaption>Figure 2: intro5_2</figcaption></figure></p>
+<p><img alt="" src="../../img/intro5-1.png"></p>
+<p><img alt="" src="../../img/intro5-2.png"></p>
 
 
 

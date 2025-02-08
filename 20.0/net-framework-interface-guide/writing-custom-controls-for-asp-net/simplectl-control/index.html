@@ -68930,8 +68930,6 @@
       
         
       
-        
-      
     
     
     
@@ -68959,27 +68957,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69055,7 +69032,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70907,7 +70884,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71424,17 +71401,17 @@
 <p>Using the <code>:Signature</code> statement, the <code>Render</code> function is defined to have the same syntax as the method it overrides, that is, it does not return a result  <code>void</code> and takes a single parameter of type <code>HtmlTextWriter</code>. Note that to successfully replace the base class method, the <code>Render</code> function must have exactly this <em>:Signature</em>.</p>
 <h2 id="using-simplectl">Using SimpleCtl</h2>
 <p>Our <code>SimpleCtl</code> control may now be included in any .NET Web Page from which <code>temp.dll</code> is accessible. The file <code>samples\asp.net\temp\Simple.aspx</code> is simply an example. The fact that this control is written in Dyalog is immaterial.
-</p><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="err">%</span><span class="na">@</span><span class="w"> </span><span class="nv">Register</span><span class="w"> </span><span class="nv">TagPrefix</span><span class="o">=</span><span class="s2">"Dyalog"</span>
-<span class="w">             </span><span class="nv">Namespace</span><span class="o">=</span><span class="s2">"DyalogSamples"</span><span class="w"> </span><span class="nv">Assembly</span><span class="o">=</span><span class="s2">"temp"</span><span class="w"> </span><span class="err">%</span><span class="o">&gt;</span>
+</p><div class="highlight"><pre><span></span><code><span class="err">&lt;</span>%@<span class="w"> </span>Register<span class="w"> </span>TagPrefix="Dyalog"
+<span class="w">             </span>Namespace="DyalogSamples"<span class="w"> </span>Assembly="temp"<span class="w"> </span>%&gt;
 
-<span class="o">&lt;</span><span class="nv">html</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">body</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">Dyalog</span><span class="bp">:</span><span class="nv">SimpleCtl</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="nv">server</span><span class="na">/</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">body</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">html</span><span class="o">&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;Dyalog:SimpleCtl</span><span class="w"> </span><span class="na">runat=</span><span class="s">server/</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
 </code></pre></div>
 <p>The first line of the script specifies that any controls referenced later in the script that are prefixed by <code>Dyalog:</code>, refer to custom controls in the .NET Namespace called <code>DyalogSamples</code> which is located in the Assembly <code>temp.dll</code> in the <code>bin</code> subdirectory.</p>
-<p><figure id="_figure-1"><img alt="simplectl3" src="../../img/simplectl3.png"><figcaption>Figure 1: simplectl3</figcaption></figure></p>
+<p><img alt="" src="../../img/simplectl3.png"></p>
 
 
 

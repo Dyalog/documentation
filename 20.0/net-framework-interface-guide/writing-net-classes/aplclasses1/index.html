@@ -68930,8 +68930,6 @@
       
         
       
-        
-      
     
     
     
@@ -68959,27 +68957,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69055,7 +69032,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70907,7 +70884,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71403,8 +71380,12 @@
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">load</span><span class="w"> </span><span class="nv">D</span><span class="bp">:</span><span class="na">\</span><span class="nv">aplclasses</span><span class="na">\</span><span class="nv">aplclasses1</span><span class="na">\</span><span class="nv">aplclasses1</span><span class="na">.</span><span class="nv">dws</span>
 <span class="nv">D</span><span class="bp">:</span><span class="na">\</span><span class="nv">aplclasses</span><span class="na">\</span><span class="nv">aplclasses1</span><span class="na">\</span><span class="nv">aplclasses1</span><span class="na">.</span><span class="nv">dws</span><span class="w"> </span><span class="c1">⍝ saved ...</span>
 
-<span class="w">      </span><span class="p">)</span><span class="nv">ed</span><span class="w"> </span><span class="o">○</span><span class="nv">APLClasses</span><span class="na">.</span><span class="nv">Primitives</span><span class="sr">[</span><span class="err">^</span><span class="m">1</span><span class="sr">]</span>
+<span class="w">      </span><span class="p">)</span><span class="nv">ed</span><span class="w"> </span><span class="o">○</span><span class="nv">APLClasses</span><span class="na">.</span><span class="nv">Primitives</span>
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The character before the name <code>APLClasses.Primitives</code>, <code>○</code>, is typically obtained with <kbd>Ctrl</kbd>-<kbd>O</kbd>. It is used to tell the editor to edit a class.</p>
+</div>
 <div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Primitives</span>
 <span class="bp">:</span><span class="nv">Using</span><span class="w"> </span><span class="nv">System</span>
 <span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">IndexGen</span><span class="w"> </span><span class="nv">n</span>
@@ -71417,51 +71398,43 @@
 <p><code>Primitives</code> contains one public method/function named <code>IndexGen</code>.</p>
 <p>The public characteristics for the exported method are included in the definition of the class and its functions. Those are specified in the <code>:Signature</code> statement.</p>
 <p>Its syntax is:
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="sr">[</span><span class="nv">return</span><span class="w"> </span><span class="nv">type</span><span class="kd">←</span><span class="sr">]</span><span class="w"> </span><span class="nv">fnname</span><span class="w"> </span><span class="sr">[</span><span class="nv">arg1type</span><span class="w"> </span><span class="sr">[</span><span class="nv">arg1name</span><span class="sr">]</span>
-<span class="w">                                 </span><span class="sr">[</span><span class="o">,</span><span class="nv">argNtype</span><span class="w"> </span><span class="sr">[</span><span class="nv">argNname</span><span class="sr">]]</span><span class="o">*</span><span class="sr">]</span>
+</p><div class="highlight"><pre><span></span><code>:Signature [return type←] fnname [arg1type [arg1name]
+                                 [,argNtype [argNname]]*]
 </code></pre></div>
 <p>that is: The type of the result returned by the function - followed by arrow - if any, the exported name (it can be different from the APL function name but it must be provided), and, if any arguments are to be supplied, their types and optional names, each type-name pair separated from the next by a comma. In the example above the function returns an array of 32-bit integers and takes a single integer as its argument. For further details, see <a href="../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/signature">Signature Statement</a>.</p>
 <p>Note that, when the class is fixed, APL will try to find the .NET data types you have specified for the result and for the parameters. If one or more of the data types are not recognised as available .NET Types, you will be informed in the status window and APL will refuse to fix the class. If you see such a warning you have either entered an incorrect data type name, or you have not set <code>:Using</code> correctly, or some other syntax problem has been detected (for example the function is missing a terminating <code>∇</code>. In the previous example, the only data type used is <code>System.Int32</code>. Since we have set <code>:Using System,</code> the name <code>Int32</code> is found in the right place and all is well.</p>
 <p>It should be noted that in the previous release of Dyalog the statements :<code>Returns</code> and :<code>ParameterList</code> were used instead of :<code>Signature</code>. They are still accepted for backwards compatibility but are considered deprecated. Their syntax will not be documented here but a list can be found in Appendix A.</p>
 <p>Now you are ready to create the assembly. This is done by selecting <em>Export…</em> from the Session <em>File</em> menu. This displays the following dialog box.</p>
-<p><figure id="_figure-1"><img alt="aplclasses1_1" src="../../img/aplclasses1-1.png"><figcaption>Figure 1: aplclasses1_1</figcaption></figure></p>
+<p><img alt="" src="../../img/aplclasses1-1.png"></p>
 <p>This gives you the opportunity to change the name or path of the assembly.  The <em>Runtime application</em> checkbox allows you to choose to which if the two versions of the Dyalog dynamic link library the assembly will be bound. In this tutorial we will use the Development version. The <em>Isolation Mode</em> Combo box allows you to choose which Isolation Mode you require.</p>
 <ul>
 <li>Browse to the <code>Framework\bin</code> sub-diectory.</li>
 <li>Clear the <em>Runtime application</em> checkbox</li>
 </ul>
-<p><figure id="_figure-2"><img alt="aplclasses1_1a" src="../../img/aplclasses1-1a.png"><figcaption>Figure 2: aplclasses1_1a</figcaption></figure></p>
+<p><img alt="" src="../../img/aplclasses1-1a.png"></p>
 <p>Finally, click <em>Save</em>. APL now makes the assembly and, as it does so, displays information in the Status window as shown below. If any errors occur during this process, the Status window will inform you.</p>
-<p><figure id="_figure-3"><img alt="aplclasses1_2" src="../../img/aplclasses1-2.png"><figcaption>Figure 3: aplclasses1_2</figcaption></figure></p>
+<p><img alt="" src="../../img/aplclasses1-2.png"></p>
 <h2 id="programcs">program.cs</h2>
 <p>The following C# source, called <code>aplclasses1Framework\program.cs</code>, will be used to call our Dyalog.NET Class.</p>
 <p>The <code>using</code> statements specify the names of .NET namespaces to be searched for unqualified class names.</p>
 <p>The program creates an object named <code>apl</code> of type <code>Primitives</code> by calling the <code>new</code> operator on that class. Then it calls the <code>IndexGen</code> method with a parameter of 10.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">using</span><span class="w"> </span><span class="nv">System</span><span class="sr">;</span>
-<span class="w">      </span><span class="nv">using</span><span class="w"> </span><span class="nv">APLClasses</span><span class="sr">;</span>
-<span class="w">      </span><span class="nv">public</span><span class="w"> </span><span class="nv">class</span><span class="w"> </span><span class="nv">MainClass</span>
-<span class="w">          </span><span class="kt">{</span>
-<span class="w">          </span><span class="nv">public</span><span class="w"> </span><span class="nv">static</span><span class="w"> </span><span class="nv">void</span><span class="w"> </span><span class="nv">Main</span><span class="p">()</span>
-<span class="w">              </span><span class="kt">{</span>
-<span class="w">                  </span><span class="nv">Primitives</span><span class="w"> </span><span class="nv">apl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">new</span><span class="w"> </span><span class="nv">Primitives</span><span class="p">()</span><span class="sr">;</span>
-<span class="w">                  </span><span class="nv">int</span><span class="sr">[]</span><span class="w"> </span><span class="nv">rslt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">apl</span><span class="na">.</span><span class="nv">IndexGen</span><span class="p">(</span><span class="m">10</span><span class="p">)</span><span class="sr">;</span>
-<span class="w">                  </span><span class="nv">for</span><span class="w"> </span><span class="p">(</span><span class="nv">int</span><span class="w"> </span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="sr">;</span><span class="nv">i</span><span class="o">&lt;</span><span class="nv">rslt</span><span class="na">.</span><span class="nv">Length</span><span class="sr">;</span><span class="nv">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">                  </span><span class="nv">Console</span><span class="na">.</span><span class="nv">WriteLine</span><span class="p">(</span><span class="nv">rslt</span><span class="sr">[</span><span class="nv">i</span><span class="sr">]</span><span class="p">)</span><span class="sr">;</span>
-<span class="w">              </span><span class="kt">}</span>
-<span class="w">          </span><span class="kt">}</span>
+</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="nn">APLClasses</span><span class="p">;</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MainClass</span>
+<span class="w">          </span><span class="p">{</span>
+<span class="w">          </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+<span class="w">              </span><span class="p">{</span>
+<span class="w">                  </span><span class="n">Primitives</span><span class="w"> </span><span class="n">apl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Primitives</span><span class="p">();</span>
+<span class="w">                  </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">rslt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apl</span><span class="p">.</span><span class="n">IndexGen</span><span class="p">(</span><span class="m">10</span><span class="p">);</span>
+<span class="w">                  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">rslt</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">                  </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">rslt</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">              </span><span class="p">}</span>
+<span class="w">          </span><span class="p">}</span>
 </code></pre></div>
 <p>Using VS, open the solution file <code>d:\aplclasses\aplclasses1\Framework\project.sln</code> and view <code>program.cs</code>.</p>
-<p><figure id="_figure-4"><img alt="aplclasses1_3" src="../../img/aplclasses1-3.png"><figcaption>Figure 4: aplclasses1_3</figcaption></figure></p>
-<p>Now click <em>Debug/Start Without debugging</em> (or press Ctrl+F5) to run the program. The results are shown in a console window.</p>
-<p><figure id="_figure-5"><img alt="aplclasses1_4" src="../../img/aplclasses1-4.png"><figcaption>Figure 5: aplclasses1_4</figcaption></figure></p>
-<div class="footnote">
-<hr>
-<ol>
-<li id="fn:1">
-<p>The character before the name APLClasses.Primitives , ○ , is typically obtained with Ctrl-O. It is used to tell the editor to edit a class <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
-</li>
-</ol>
-</div>
+<p><img alt="" src="../../img/aplclasses1-3.png"></p>
+<p>Now click <em>Debug/Start Without debugging</em> (or press <kbd>Ctrl</kbd>+<kbd>F5</kbd>) to run the program. The results are shown in a console window.</p>
+<p><img alt="" src="../../img/aplclasses1-4.png"></p>
 
 
 

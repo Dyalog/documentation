@@ -68934,8 +68934,6 @@
       
         
       
-        
-      
     
     
     
@@ -68963,27 +68961,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69059,7 +69036,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70927,7 +70904,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71499,7 +71476,7 @@
 <h2 id="testing-the-data-binding">Testing the Data Binding</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">FilteredList</span>
 </code></pre></div>
-<p><figure id="_figure-1"><img alt="data binding filteredlist 1" src="../../../img/data-binding-filteredlist-1.png"><figcaption>Figure 1: data binding filteredlist 1</figcaption></figure></p>
+<p><img alt="" src="../../../img/data-binding-filteredlist-1.png"></p>
 <p>If the user types a single character, in this case "e", into the TextBox, this fires a TextChanged event which in turn fires the callback function shown below:
 </p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FilteredList_TextChanged</span><span class="w"> </span><span class="nv">a</span><span class="sr">;</span><span class="nv">hits</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">hits</span><span class="kd">←</span><span class="p">(</span><span class="o">⊂</span><span class="nv">MySource</span><span class="na">.</span><span class="nv">Filter</span><span class="p">)</span><span class="kt">{</span><span class="o">∨</span><span class="na">/</span><span class="bp">⍺</span><span class="o">⍷</span><span class="bp">⍵</span><span class="kt">}</span><span class="na">¨</span><span class="nv">DyalogNames</span>
@@ -71507,9 +71484,9 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>When the callback runs, the variable <code>MySource.Filter</code>, which is bound to the Text property of the TextBox, will contain "e". The function calculates a mask <code>hits</code> which identifies which members of the variable <code>DyalogNames</code>  contain this string. It then assigns that subset to the variable <code>MySource.FilteredList</code>. This is bound to the ItemsSource property of the right-hand ListBox, so the result is as follows:</p>
-<p><figure id="_figure-2"><img alt="data binding filteredlist 2" src="../../../img/data-binding-filteredlist-2.png"><figcaption>Figure 2: data binding filteredlist 2</figcaption></figure></p>
+<p><img alt="" src="../../../img/data-binding-filteredlist-2.png"></p>
 <p>Similarly, typing "er" into the TextBox reduces the number of hits as shown below:</p>
-<p><figure id="_figure-3"><img alt="data binding filteredlist 3" src="../../../img/data-binding-filteredlist-3.png"><figcaption>Figure 3: data binding filteredlist 3</figcaption></figure></p>
+<p><img alt="" src="../../../img/data-binding-filteredlist-3.png"></p>
 
 
 

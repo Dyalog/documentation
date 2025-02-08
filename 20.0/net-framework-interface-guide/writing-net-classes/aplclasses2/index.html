@@ -68930,8 +68930,6 @@
       
         
       
-        
-      
     
     
     
@@ -68959,27 +68957,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69055,7 +69032,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70907,7 +70884,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71424,31 +71401,31 @@
 </code></pre></div>
 <p>This version of <code>Primitives</code> contains a <em>constructor</em> function called <code>CTOR</code> that simply sets <code>⎕IO</code> to the value of its argument. The name of this function is purely arbitrary.</p>
 <p>Using this version,  build a new .NET Assembly using <em>File/Export</em><em>…</em> as before. Remember that  the <em>Build runtime assembly</em> checkbox is unchecked.</p>
-<p><figure id="_figure-1"><img alt="aplclasses2_1" src="../../img/aplclasses2-1.png"><figcaption>Figure 1: aplclasses2_1</figcaption></figure></p>
-<p><figure id="_figure-2"><img alt="aplclasses2_2" src="../../img/aplclasses2-2.png"><figcaption>Figure 2: aplclasses2_2</figcaption></figure></p>
+<p><img alt="" src="../../img/aplclasses2-1.png"></p>
+<p><img alt="" src="../../img/aplclasses2-2.png"></p>
 <h2 id="programcs">program.cs</h2>
 <p>The following C# source, called <code>aplclasses2\Framework\program.cs</code>, will be used to call the new version of our Dyalog.NET class.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">using</span><span class="w"> </span><span class="nv">System</span><span class="sr">;</span>
-<span class="w">      </span><span class="nv">using</span><span class="w"> </span><span class="nv">APLClasses</span><span class="sr">;</span>
-<span class="w">      </span><span class="nv">public</span><span class="w"> </span><span class="nv">class</span><span class="w"> </span><span class="nv">MainClass</span>
-<span class="w">            </span><span class="kt">{</span>
-<span class="w">            </span><span class="nv">public</span><span class="w"> </span><span class="nv">static</span><span class="w"> </span><span class="nv">void</span><span class="w"> </span><span class="nv">Main</span><span class="p">()</span>
-<span class="w">                  </span><span class="kt">{</span>
-<span class="w">                  </span><span class="nv">Primitives</span><span class="w"> </span><span class="nv">apl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">new</span><span class="w"> </span><span class="nv">Primitives</span><span class="p">(</span><span class="m">0</span><span class="p">)</span><span class="sr">;</span>
-<span class="w">                  </span><span class="nv">int</span><span class="sr">[]</span><span class="w"> </span><span class="nv">rslt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">apl</span><span class="na">.</span><span class="nv">IndexGen</span><span class="p">(</span><span class="m">10</span><span class="p">)</span><span class="sr">;</span>
+</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="nn">APLClasses</span><span class="p">;</span>
+<span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MainClass</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">            </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                  </span><span class="n">Primitives</span><span class="w"> </span><span class="n">apl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Primitives</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+<span class="w">                  </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">rslt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apl</span><span class="p">.</span><span class="n">IndexGen</span><span class="p">(</span><span class="m">10</span><span class="p">);</span>
 
-<span class="w">                  </span><span class="nv">for</span><span class="w"> </span><span class="p">(</span><span class="nv">int</span><span class="w"> </span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="sr">;</span><span class="nv">i</span><span class="o">&lt;</span><span class="nv">rslt</span><span class="na">.</span><span class="nv">Length</span><span class="sr">;</span><span class="nv">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">                  </span><span class="nv">Console</span><span class="na">.</span><span class="nv">WriteLine</span><span class="p">(</span><span class="nv">rslt</span><span class="sr">[</span><span class="nv">i</span><span class="sr">]</span><span class="p">)</span><span class="sr">;</span>
-<span class="w">                  </span><span class="kt">}</span>
-<span class="w">            </span><span class="kt">}</span>
+<span class="w">                  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">rslt</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">                  </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">rslt</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">                  </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
 </code></pre></div>
 <p>The program is the same as in the previous example, except that the code that creates an instance of the <code>Primitives</code> class is simply changed to specify an argument; in this case 0.
-</p><div class="highlight"><pre><span></span><code><span class="nv">Primitives</span><span class="w"> </span><span class="nv">apl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">new</span><span class="w"> </span><span class="nv">Primitives</span><span class="p">(</span><span class="m">0</span><span class="p">)</span><span class="sr">;</span>
+</p><div class="highlight"><pre><span></span><code><span class="n">Primitives</span><span class="w"> </span><span class="n">apl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Primitives</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
 </code></pre></div>
 <p>Using VS, open the solution file <code>d:\aplclasses\aplclasses2\Framework\project.sln</code> and view <code>program.cs</code>.</p>
-<p><figure id="_figure-3"><img alt="aplclasses2_3" src="../../img/aplclasses2-3.png"><figcaption>Figure 3: aplclasses2_3</figcaption></figure></p>
-<p>Then click <em>Debug/Start Without debugging</em> (or press Ctrl+F5) to run the program. The results are shown in a console window.</p>
-<p><figure id="_figure-4"><img alt="aplclasses2_4" src="../../img/aplclasses2-4.png"><figcaption>Figure 4: aplclasses2_4</figcaption></figure></p>
+<p><img alt="" src="../../img/aplclasses2-3.png"></p>
+<p>Then click <em>Debug/Start Without debugging</em> (or press <kbd>Ctrl</kbd>+<kbd>F5</kbd>) to run the program. The results are shown in a console window.</p>
+<p><img alt="" src="../../img/aplclasses2-4.png"></p>
 
 
 

@@ -68930,8 +68930,6 @@
       
         
       
-        
-      
     
     
     
@@ -68959,27 +68957,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69055,7 +69032,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70925,7 +70902,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71447,8 +71424,8 @@
 <span class="bp">:</span><span class="nv">EndNamespace</span>
 </code></pre></div>
 <p>This example, which is saved in the file <code>eg1.apl</code>, is compiled to a Windows executable (<code>.exe</code>) using <code>dyalogc.exe</code> and run from the same command window as shown below. Notice that it is essential to surround the code with <code>:Namespace / :EndNamespace</code> statements and to define a <code>⎕LX</code> either in the APLScript itself, or as a parameter to the <code>dyalogc</code> command.</p>
-<p><figure id="_figure-1"><img alt="aplscript1" src="../../img/aplscript1.png"><figcaption>Figure 1: aplscript1</figcaption></figure></p>
-<p><figure id="_figure-2"><img alt="aplscript2" src="../../img/aplscript2.png"><figcaption>Figure 2: aplscript2</figcaption></figure></p>
+<p><img alt="" src="../../img/aplscript1.png"></p>
+<p><img alt="" src="../../img/aplscript2.png"></p>
 <p>You can associate the <code>.exe</code> with a desktop icon, and it will run stand-alone, without a Command Prompt window. Furthermore, any default APL output that would normally be displayed in the session window will simply be ignored.</p>
 <h2 id="a-simple-console-example">A simple console example</h2>
 <p>The following APLScript illustrates the simplest possible application that displays the text "Hello World".</p>
@@ -71461,7 +71438,7 @@
 <span class="bp">:</span><span class="nv">EndNamespace</span>
 </code></pre></div>
 <p>Once more, it is essential to surround the code with <code>:Namespace/:EndNamespace</code> statements and to define a <code>⎕LX</code> either in the APLScript itself, or as a parameter to the <code>dyalogc</code> command.</p>
-<p><figure id="_figure-3"><img alt="aplscript3" src="../../img/aplscript3.png"><figcaption>Figure 3: aplscript3</figcaption></figure></p>
+<p><img alt="" src="../../img/aplscript3.png"></p>
 <h2 id="defining-namespaces">Defining Namespaces</h2>
 <p>Namespaces are specified in an APLScript using the <code>:Namespace</code> and :<code>EndNamespace</code> statements. Although you may use <code>⎕NS</code> and <code>⎕CS</code> within functions inside an APLScript, you should not use these system functions outside function bodies. Note that such use is not <em>prevented</em>, but that the results will be unpredictable.
 </p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">Name</span>
@@ -71498,7 +71475,7 @@
 <p>This somewhat contrived example illustrates how a namespace is defined inside another namespace using <code>:NameSpace</code> and <code>:EndNamespace</code> statements. The namespace <code>NS</code> contains a single function called <code>START</code>, which is called from the main function <code>RUN</code>.</p>
 <p>Notice that <code>⎕</code>PATH is defined <em>dynamically</em> in function RUN. If it were defined outside a function in a static statement in the script (say, after the statement that sets <code>⎕</code>LX), it would not be honoured when the application was run.</p>
 <p>This program is shown, compiled and run as a console application, below.</p>
-<p><figure id="_figure-4"><img alt="aplscript4" src="../../img/aplscript4.png"><figcaption>Figure 4: aplscript4</figcaption></figure></p>
+<p><img alt="" src="../../img/aplscript4.png"></p>
 
 
 

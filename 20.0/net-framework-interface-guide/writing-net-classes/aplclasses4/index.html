@@ -68930,8 +68930,6 @@
       
         
       
-        
-      
     
     
     
@@ -68959,27 +68957,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69055,7 +69032,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70907,7 +70884,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71441,34 +71418,34 @@
 <span class="w">     </span><span class="bp">∇</span><span class="w">   </span>
 </code></pre></div>
 <p>Load <code>aplclasses4.dws</code> and export a new version of <code>aplclasses.dll</code> as before.</p>
-<p><figure id="_figure-1"><img alt="aplclasses4_1" src="../../img/aplclasses4-1.png"><figcaption>Figure 1: aplclasses4_1</figcaption></figure></p>
-<p><figure id="_figure-2"><img alt="aplclasses4_2" src="../../img/aplclasses4-2.png"><figcaption>Figure 2: aplclasses4_2</figcaption></figure></p>
+<p><img alt="" src="../../img/aplclasses4-1.png"></p>
+<p><img alt="" src="../../img/aplclasses4-2.png"></p>
 <h2 id="programcs">program.cs</h2>
 <p><code>aplclasses4\Framework\program.cs</code> contains code to invoke the two different constructor functions <code>CTOR1</code> and <code>CTOR2</code> :
-</p><div class="highlight"><pre><span></span><code><span class="nv">using</span><span class="w"> </span><span class="nv">System</span><span class="sr">;</span>
-<span class="nv">using</span><span class="w"> </span><span class="nv">APLClasses</span><span class="sr">;</span>
-<span class="nv">public</span><span class="w"> </span><span class="nv">class</span><span class="w"> </span><span class="nv">MainClass</span>
-<span class="w">    </span><span class="kt">{</span>
-<span class="w">    </span><span class="nv">public</span><span class="w"> </span><span class="nv">static</span><span class="w"> </span><span class="nv">void</span><span class="w"> </span><span class="nv">Main</span><span class="p">()</span>
-<span class="w">        </span><span class="kt">{</span>
-<span class="w">        </span><span class="nv">Primitives</span><span class="w"> </span><span class="nv">apl10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">new</span><span class="w"> </span><span class="nv">Primitives</span><span class="p">(</span><span class="m">1</span><span class="p">)</span><span class="sr">;</span>
-<span class="w">        </span><span class="nv">int</span><span class="sr">[]</span><span class="w"> </span><span class="nv">rslt10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">apl10</span><span class="na">.</span><span class="nv">GetIOML</span><span class="p">()</span><span class="sr">;</span>
-<span class="w">        </span><span class="nv">for</span><span class="w"> </span><span class="p">(</span><span class="nv">int</span><span class="w"> </span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="sr">;</span><span class="nv">i</span><span class="o">&lt;</span><span class="nv">rslt10</span><span class="na">.</span><span class="nv">Length</span><span class="sr">;</span><span class="nv">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">            </span><span class="nv">Console</span><span class="na">.</span><span class="nv">WriteLine</span><span class="p">(</span><span class="nv">rslt10</span><span class="sr">[</span><span class="nv">i</span><span class="sr">]</span><span class="p">)</span><span class="sr">;</span>
+</p><div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">APLClasses</span><span class="p">;</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MainClass</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Primitives</span><span class="w"> </span><span class="n">apl10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Primitives</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">rslt10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apl10</span><span class="p">.</span><span class="n">GetIOML</span><span class="p">();</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">rslt10</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">rslt10</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
 
-<span class="w">        </span><span class="nv">Primitives</span><span class="w"> </span><span class="nv">apl03</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">new</span><span class="w"> </span><span class="nv">Primitives</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">3</span><span class="p">)</span><span class="sr">;</span>
-<span class="w">        </span><span class="nv">int</span><span class="sr">[]</span><span class="w"> </span><span class="nv">rslt03</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">apl03</span><span class="na">.</span><span class="nv">GetIOML</span><span class="p">()</span><span class="sr">;</span>
-<span class="w">        </span><span class="nv">for</span><span class="w"> </span><span class="p">(</span><span class="nv">int</span><span class="w"> </span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="sr">;</span><span class="nv">i</span><span class="o">&lt;</span><span class="nv">rslt03</span><span class="na">.</span><span class="nv">Length</span><span class="sr">;</span><span class="nv">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">            </span><span class="nv">Console</span><span class="na">.</span><span class="nv">WriteLine</span><span class="p">(</span><span class="nv">rslt03</span><span class="sr">[</span><span class="nv">i</span><span class="sr">]</span><span class="p">)</span><span class="sr">;</span>
-<span class="w">        </span><span class="kt">}</span>
-<span class="w">    </span><span class="kt">}</span>
+<span class="w">        </span><span class="n">Primitives</span><span class="w"> </span><span class="n">apl03</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Primitives</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">3</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">rslt03</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apl03</span><span class="p">.</span><span class="n">GetIOML</span><span class="p">();</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">rslt03</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">rslt03</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 </code></pre></div>
 <p>Here the code creates two instances of the Primitives class named <code>apl10</code> and <code>apl03</code>. The first is created with a constructor parameter of <code>(1)</code>; the second with a constructor parameter of <code>(0,3)</code>.</p>
 <p>The C# compiler matches the first call with <code>CTOR1</code>, because <code>CTOR1</code> is defined to accept a single <code>Int32</code> parameter. The second call is matched to <code>CTOR2</code> because <code>CTOR2</code> is defined to accept two <code>Int32</code> parameters.</p>
 <p>Using VS, open the solution file <code>d:\aplclasses\aplclasses4\Framework\project.sln</code> and view <code>program.cs</code>.</p>
-<p><figure id="_figure-3"><img alt="aplclasses4_3" src="../../img/aplclasses4-3.png"><figcaption>Figure 3: aplclasses4_3</figcaption></figure></p>
-<p>Click <em>Debug/Start Without debugging</em> (or press Ctrl+F5) to run the program. The results are shown in a console window.</p>
-<p><figure id="_figure-4"><img alt="aplclasses4_4" src="../../img/aplclasses4-4.png"><figcaption>Figure 4: aplclasses4_4</figcaption></figure></p>
+<p><img alt="" src="../../img/aplclasses4-3.png"></p>
+<p>Click <em>Debug/Start Without debugging</em> (or press <kbd>Ctrl</kbd>+<kbd>F5</kbd>) to run the program. The results are shown in a console window.</p>
+<p><img alt="" src="../../img/aplclasses4-4.png"></p>
 
 
 

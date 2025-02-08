@@ -68998,15 +68998,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#note" class="md-nav__link">
-    <span class="md-ellipsis">
-      Note
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#the-code-to-display-the-xaml" class="md-nav__link">
     <span class="md-ellipsis">
       The Code to display the XAML
@@ -69089,8 +69080,6 @@
       
         
       
-        
-      
     
     
     
@@ -69118,27 +69107,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69214,7 +69182,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -71017,7 +70985,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71571,15 +71539,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#note" class="md-nav__link">
-    <span class="md-ellipsis">
-      Note
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#the-code-to-display-the-xaml" class="md-nav__link">
     <span class="md-ellipsis">
       The Code to display the XAML
@@ -71668,7 +71627,7 @@
 <span class="w">  </span><span class="nt">&lt;/DockPanel&gt;</span>
 <span class="nt">&lt;/Window&gt;</span>
 </code></pre></div>
-<p><figure id="_figure-1"><img alt="wpf_example1" src="../../../img/wpf-example1.png"><figcaption>Figure 1: wpf_example1</figcaption></figure></p>
+<p><img alt="" src="../../../img/wpf-example1.png"></p>
 <p>The window defined by this XAML is illustrated in the screen image shown above. Let us examine the XAML, component by component.</p>
 <h2 id="parent-and-child-controls">Parent and Child Controls</h2>
 <p>First, notice how the structure of the GUI is defined by enclosing the child components inside the opening and closing tags of its parent. So:
@@ -71723,7 +71682,7 @@
 <span class="w">        </span><span class="o">&lt;</span><span class="na">/</span><span class="nv">MenuItem</span><span class="o">&gt;</span>
 <span class="w">    </span><span class="o">&lt;</span><span class="na">/</span><span class="nv">Menu</span><span class="o">&gt;</span>
 </code></pre></div>
-<p><figure id="_figure-2"><img alt="wpf_example2" src="../../../img/wpf-example2.png"><figcaption>Figure 2: wpf_example2</figcaption></figure></p>
+<p><img alt="" src="../../../img/wpf-example2.png"></p>
 <p>The above extract from the XAML defines a Menu. Setting Dock to "Top" causes the Menu as a whole to be docked, so that it appears like a menubar, along the top of the DockPanel. The Menu contains a single MenuItem labelled <em>Scale</em> which itself contains two sub-items labelled <em>Fahrenheit</em> and <em>Centigrade</em> respectively. The IsCheckable property specifies whether or not the user can check the MenuItem, and the IsChecked property sets and reports its checked state. The underscore characters (for example, as in "_Scale") identify the following character as a keyboard shortcut.</p>
 <h2 id="the-grid">The Grid</h2>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="o">&lt;</span><span class="nv">Grid</span><span class="w"> </span><span class="nv">Width</span><span class="o">=</span><span class="s2">"230"</span><span class="w"> </span><span class="nv">Margin</span><span class="o">=</span><span class="s2">"40,10,10,10"</span><span class="o">&gt;</span>
@@ -71776,8 +71735,10 @@
 <p>This XAML snippet defines a ScrollBar named <em>scrTemp</em>.</p>
 <p>Setting DockPanel.Dock to "Right" means that it will be docked (aligned) on the right edge of the DockPanel. It will be a vertical scrollbar, have a fixed width of 20px and a default height. The range of the ScrollBar is defined by its Minimum and Maximum properties which are set so that the ScrollBar will specify a value in Fahrenheit.</p>
 <p>Note that in order to cause the ScrollBar to be docked (aligned) along the right edge of the DockPanel it is necessary to set LastChildFill to "False" (for the DockPanel) and Dock to "Right" (for the ScrollBar), because the value of LastChildFill (default "True") overrides the Dock value of the last defined child of the DockPanel.</p>
-<h2 id="note">Note</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>The XAML that defines this user-interface is at the same time both simple and complex. It is simple because (in this case) it is readily understood. It is complex because in order to write it, the user-interface designer must understand precisely how the  various controls and their properties behave and work together. For these details, you should refer to the appropriate documentation and check out the large number of examples published on the internet.</p>
+</div>
 <h2 id="the-code-to-display-the-xaml">The Code to display the XAML</h2>
 <p>The function <code>TempConverter</code> shown below contains the code needed to display and operate the user interface whose layout is defined by the XAML described above.
 </p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">TempConverter</span><span class="sr">;</span><span class="nv">str</span><span class="sr">;</span><span class="nv">xml</span><span class="sr">;</span><span class="nv">win</span><span class="sr">;</span><span class="nv">txtFahrenheit</span><span class="sr">;</span><span class="nv">txtCentigrade</span><span class="sr">;</span><span class="nv">mnuFahrenheit</span><span class="sr">;</span><span class="nv">mnuCentigrade</span><span class="sr">;</span><span class="nv">btnF2C</span><span class="sr">;</span><span class="nv">btnC2F</span><span class="sr">;</span><span class="nv">btnQuit</span><span class="sr">;</span><span class="nv">scrTemp</span><span class="sr">;</span><span class="nv">sink</span>
@@ -71828,10 +71789,10 @@
 <span class="sr">[</span><span class="m">19</span><span class="sr">]</span><span class="w">   </span><span class="p">(</span><span class="nv">btnQuit</span><span class="kd">←</span><span class="nv">win</span><span class="na">.</span><span class="nv">FindName</span><span class="o">⊂</span><span class="s1">'btnQuit'</span><span class="p">)</span><span class="na">.</span><span class="nv">onClick</span><span class="kd">←</span><span class="s1">'Quit'</span>
 <span class="sr">[</span><span class="m">20</span><span class="sr">]</span><span class="w">   </span><span class="p">(</span><span class="nv">scrTemp</span><span class="kd">←</span><span class="nv">win</span><span class="na">.</span><span class="nv">FindName</span><span class="o">⊂</span><span class="s1">'scrTemp'</span><span class="p">)</span><span class="na">.</span><span class="nv">onScroll</span><span class="kd">←</span><span class="s1">'F2C'</span>
 </code></pre></div>
-<p>Finally the code displays the Window and hands it over to the user by calling the ShowDialog method of the top-level Window.
+<p>Finally the code displays the Window and hands it over to the user by calling the <code>ShowDialog</code> method of the top-level Window.
 </p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">21</span><span class="sr">]</span><span class="w">   </span><span class="nv">sink</span><span class="kd">←</span><span class="nv">win</span><span class="na">.</span><span class="nv">ShowDialog</span>
 </code></pre></div>
-<p>ShowDialog displays the Window <em>modally</em>; that is, until it is closed, the user may interact only with that Window. It is equivalent to <code>⎕DQ win</code> or <code>win.Wait</code> in the Dyalog built-in GUI.</p>
+<p><code>ShowDialog</code> displays the Window <em>modally</em>; that is, until it is closed, the user may interact only with that Window. It is equivalent to <code>⎕DQ win</code> or <code>win.Wait</code> in the Dyalog built-in GUI.</p>
 <h2 id="the-callback-functions">The CallBack Functions</h2>
 <p>The callback functions are named as they are in the basic Dyalog GUI example and are remarkably similar. See 
 Interface Guide: </p>

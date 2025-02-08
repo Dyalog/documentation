@@ -68925,8 +68925,6 @@
       
         
       
-        
-      
     
     
     
@@ -68954,27 +68952,6 @@
             Data Binding
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../wpf/data-binding/data-binding-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -69050,7 +69027,7 @@
         
   
   <span class="md-ellipsis">
-    Text and Fontsize using XAML
+    Text and FontSize using XAML
   </span>
   
 
@@ -70863,7 +70840,7 @@
         
   
   <span class="md-ellipsis">
-    The web.config file
+    ASP.NET Configuration
   </span>
   
 
@@ -71339,44 +71316,44 @@
 <h1 class="heading"><span class="name">The Page_Load Event</span></h1>
 
 <p><code>Intro3.aspx</code> illustrates how you can dynamically initialise the contents of a Web Page using the Page_Load event. This example also introduces another type of Web Control, the <code>DropDownList</code> object.
-</p><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="err">%</span><span class="na">@</span><span class="nv">Register</span><span class="w"> </span><span class="nv">TagPrefix</span><span class="o">=</span><span class="s2">"tutorial"</span><span class="w"> </span><span class="nv">Namespace</span><span class="o">=</span><span class="s2">"Tutorial"</span><span class="w"> </span><span class="nv">Assembly</span><span class="o">=</span><span class="s2">"tutorial"</span><span class="w"> </span><span class="err">%</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">script</span><span class="w"> </span><span class="nv">language</span><span class="o">=</span><span class="s2">"Dyalog"</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="s2">"server"</span><span class="o">&gt;</span>
+</p><div class="highlight"><pre><span></span><code>&lt;%@Register TagPrefix="tutorial" Namespace="Tutorial" Assembly="tutorial" %&gt;
+&lt;script language="Dyalog" runat="server"&gt;
 
-<span class="bp">∇</span><span class="nv">Page_Load</span><span class="w"> </span>
-<span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
-<span class="nv">list</span><span class="na">.</span><span class="nv">Items</span><span class="na">.</span><span class="nv">Add</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'Apples'</span>
-<span class="nv">list</span><span class="na">.</span><span class="nv">Items</span><span class="na">.</span><span class="nv">Add</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'Oranges'</span>
-<span class="nv">list</span><span class="na">.</span><span class="nv">Items</span><span class="na">.</span><span class="nv">Add</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'Bananas'</span>
-<span class="bp">∇</span>
+∇Page_Load 
+:Access Public
+list.Items.Add ⊂'Apples'
+list.Items.Add ⊂'Oranges'
+list.Items.Add ⊂'Bananas'
+∇
 
-<span class="bp">∇</span><span class="nv">Select</span><span class="w"> </span><span class="p">(</span><span class="nv">obj</span><span class="w"> </span><span class="nv">ev</span><span class="p">)</span>
-<span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
-<span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">Select</span><span class="w"> </span><span class="nv">Object</span><span class="w"> </span><span class="nv">obj</span><span class="o">,</span><span class="w"> </span><span class="nv">EventArgs</span><span class="w"> </span><span class="nv">ev</span>
-<span class="nv">out</span><span class="na">.</span><span class="nv">Text</span><span class="kd">←</span><span class="s1">'You selected '</span><span class="o">,</span><span class="nv">list</span><span class="na">.</span><span class="nv">SelectedItem</span><span class="na">.</span><span class="nv">Text</span>
-<span class="bp">∇</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">script</span><span class="o">&gt;</span>
+∇Select (obj ev)
+:Access Public
+:Signature Select Object obj, EventArgs ev
+out.Text←'You selected ',list.SelectedItem.Text
+∇
+&lt;/script&gt;
 
-<span class="o">&lt;</span><span class="nv">html</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">head</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">title</span><span class="o">&gt;</span><span class="nv">Initialising</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">contents</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">Page</span><span class="w"> </span><span class="nv">using</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">Page_Load</span><span class="w"> </span><span class="nv">method</span><span class="o">&lt;</span><span class="na">/</span><span class="nv">title</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">link</span><span class="w"> </span><span class="nv">rel</span><span class="o">=</span><span class="s2">"stylesheet"</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s2">"text/css"</span><span class="w"> </span><span class="nv">href</span><span class="o">=</span><span class="s2">"apl.css"</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">head</span><span class="o">&gt;</span>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Initialising the contents of the Page using the Page_Load method&lt;/title&gt;
+&lt;link rel="stylesheet" type="text/css" href="apl.css"&gt;
+&lt;/head&gt;
 
-<span class="o">&lt;</span><span class="nv">body</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">h1</span><span class="o">&gt;</span><span class="nv">intro3</span><span class="bp">:</span><span class="w"> </span><span class="nv">The</span><span class="w"> </span><span class="nv">Page_Load</span><span class="w"> </span><span class="nv">method</span><span class="o">&lt;</span><span class="na">/</span><span class="nv">h1</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">form</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="s2">"server"</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">asp</span><span class="bp">:</span><span class="nv">DropDownList</span><span class="w"> </span><span class="nv">id</span><span class="o">=</span><span class="s2">"list"</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="s2">"server"</span><span class="na">/</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">p</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">asp</span><span class="bp">:</span><span class="nv">Label</span><span class="w"> </span><span class="nv">id</span><span class="o">=</span><span class="s2">"out"</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="s2">"server"</span><span class="w"> </span><span class="na">/</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">p</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">asp</span><span class="bp">:</span><span class="nv">Button</span><span class="w"> </span><span class="nv">id</span><span class="o">=</span><span class="s2">"btn"</span><span class="w"> </span>
-<span class="w">    </span><span class="nv">Text</span><span class="o">=</span><span class="s2">"Submit"</span>
-<span class="w">    </span><span class="nv">runat</span><span class="o">=</span><span class="s2">"server"</span>
-<span class="w">    </span><span class="nv">OnClick</span><span class="o">=</span><span class="s2">"Select"</span><span class="na">/</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">form</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nv">tutorial</span><span class="bp">:</span><span class="nv">index</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="s2">"server"</span><span class="na">/</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">body</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="na">/</span><span class="nv">html</span><span class="o">&gt;</span>
+&lt;body&gt;
+&lt;h1&gt;intro3: The Page_Load method&lt;/h1&gt;
+&lt;form runat="server"&gt;
+&lt;asp:DropDownList id="list" runat="server"/&gt;
+&lt;p&gt;
+&lt;asp:Label id="out" runat="server" /&gt;
+&lt;/p&gt;
+&lt;asp:Button id="btn" 
+    Text="Submit"
+    runat="server"
+    OnClick="Select"/&gt;
+&lt;/form&gt;
+&lt;tutorial:index runat="server"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre></div>
 <p>When an ASP.NET web page is loaded, it generates a <code>Page_Load</code> event. You can use this event to perform initialisation simply by defining a public function called <code>Page_Load</code> in your <code>APLScript</code>. This function will automatically be called every time the page is loaded. The <code>Page_Load</code> function should be niladic.</p>
 <p>Note that, if the page employs the technique illustrated in <code>Intro1.aspx</code>, whereby the page is continually POSTed back to itself by user interaction, your <code>Page_Load</code> function will be run every time the page is loaded and you may not wish to repeat the initialisation every time. Fortunately, you can distinguish between the initial load, and a subsequent load caused by the post back, using the <code>IsPostBack</code> property. This property is inherited from the <code>System.Web.UI.Page</code> class, which is the base class for any <code>.aspx</code> page.</p>
@@ -71385,12 +71362,13 @@
 </code></pre></div>
 <p>is that the <code>DropDownList</code> WebControl has an <code>Items</code> property that is a collection of <code>ListItem</code> objects. The collection implements an <code>Add</code> function that takes a <code>String</code> Argument that can be used to add an item to the list.</p>
 <p>Notice that the name of the object <code>list</code> is defined by the <code>id="list"</code> attribute of the <code>DropDownList</code> control that is defined in the page layout section of the page.</p>
-<p><figure id="_figure-1"><img alt="intro3_1" src="../../img/intro3-1.png"><figcaption>Figure 1: intro3_1</figcaption></figure></p>
+<p><img alt="" src="../../img/intro3-1.png"></p>
 <p>In this example, the page is processed by a POST back caused by pressing the <code>Submit</code> button. As it stands, changing the selection in the <code>list</code> object does not cause the text in the <code>out</code> object to be changed; you have to press the <code>Submit</code> button first.</p>
-<p><figure id="_figure-2"><img alt="intro3_2" src="../../img/intro3-2.png"><figcaption>Figure 2: intro3_2</figcaption></figure></p>
+<p><img alt="" src="../../img/intro3-2.png"></p>
 <p>However, you can make this happen automatically by adding the following attributes to the <code>list</code> object (see <code>intro4.aspx</code>):</p>
-<p>AutoPostback="true"</p>
-<p>OnSelectedIndexChanged="Select"/&gt;</p>
+<div class="highlight"><pre><span></span><code>AutoPostback="true"
+OnSelectedIndexChanged="Select"/&gt;
+</code></pre></div>
 <p><code>AutoPostback</code> causes the object to generate HTML that will provoke a post back whenever the selection is changed. When it does so, the <code>OnSelectedIndexChanged</code> event will be generated in the server-side script which in turn will call <code>Select</code>, which in turn will cause the text in the out object to change.</p>
 <p>Note that this technique, which can be used with most of the ASP.NET controls including CheckBox, RadioButton and TextBox controls, relies on a round trip to the server every time the value of the control changes. It will not perform well except on a fast connection to a lightly loaded server.</p>
 
