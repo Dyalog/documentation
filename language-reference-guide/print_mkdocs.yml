@@ -201,6 +201,9 @@ nav:
       - I-Beam: primitive-operators/i-beam.md
       - The I-Beam Operator:
           - Inverted Table Index Of: the-i-beam-operator/inverted-table-index-of.md
+          - Deprecated Features: the-i-beam-operator/deprecated-features.md
+          - Deprecated APL Code: the-i-beam-operator/deprecated-apl-code.md
+          - Log File for Deprecations: the-i-beam-operator/log-file-for-deprecations.md
           - Execute Expression: the-i-beam-operator/execute-expression.md
           - Overwrite Free Pockets: the-i-beam-operator/overwrite-free-pockets.md
           - Canonical Representation: the-i-beam-operator/canonical-representation.md
