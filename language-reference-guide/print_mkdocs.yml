@@ -48,7 +48,7 @@ markdown_extensions:
       title: On this page
 nav:
   - Key to Notation: primitive-functions/key-to-notation.md
-  - 'Chapter 4: Primitive Functions':
+  - Primitive Functions:
       - Introduction: primitive-functions/chapter-4.md
       - Scalar Functions: primitive-functions/scalar-functions.md
       - Mixed Functions: primitive-functions/mixed-functions.md
@@ -166,12 +166,12 @@ nav:
           - Where: primitive-functions/where.md
           - Without: primitive-functions/without.md
           - Zilde: primitive-functions/zilde.md
-  - 'Chapter 5: Primitive Operators':
+  - Primitive Operators:
       - Introduction: primitive-operators/chapter-5.md
       - Operator Syntax: primitive-operators/operator-syntax.md
       - Operators Summarised: primitive-operators/operators-summarised.md
       - Operators A Z: primitive-operators/operators-a-z.md
-      - Priimitive Operators (A-Z):
+      - Primitive Operators (A-Z):
           - Assignment Modified: primitive-operators/assignment-modified.md
           - Assignment Indexed Modified: primitive-operators/assignment-indexed-modified.md
           - Assignment Selective Modified: primitive-operators/assignment-selective-modified.md
@@ -205,6 +205,9 @@ nav:
       - I-Beam: primitive-operators/i-beam.md
       - The I-Beam Operator:
           - Inverted Table Index Of: the-i-beam-operator/inverted-table-index-of.md
+          - Deprecated Features: the-i-beam-operator/deprecated-features.md
+          - Deprecated APL Code: the-i-beam-operator/deprecated-apl-code.md
+          - Log File for Deprecations: the-i-beam-operator/log-file-for-deprecations.md
           - Execute Expression: the-i-beam-operator/execute-expression.md
           - Overwrite Free Pockets: the-i-beam-operator/overwrite-free-pockets.md
           - Canonical Representation: the-i-beam-operator/canonical-representation.md
@@ -272,7 +275,7 @@ nav:
           - Sample Probability Distribution: the-i-beam-operator/sample-probability-distribution.md
           - Line Count: the-i-beam-operator/line-count.md
           - RIDE and Experimental Features-related I-Beams: the-i-beam-operator/supplementary-i-beam-functions.md
-  - 'Chapter 6: System Functions and Variables':
+  - System Functions and Variables:
       - Introduction: system-functions/introduction.md
       - System Functions (A-Z): system-functions/system-functions-and-variables-print.md
       - System Functions Categorised: system-functions/system-functions-categorised.md
@@ -464,7 +467,7 @@ nav:
           - Extended State Indicator: system-functions/xsi.md
           - Set External Variable: system-functions/set-external-variable.md
           - Query External Variable: system-functions/query-external-variable.md
-  - 'Chapter 7: System Commands':
+  - System Commands:
       - Introduction: system-commands/introduction.md
       - System Commands (A-Z):
           - List Classes: system-commands/classes.md
