@@ -14160,7 +14160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../language-reference-guide/primitive-functions/negative/#negative" class="md-nav__link">
+      <a href="../../../language-reference-guide/primitive-functions/negative/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -14181,7 +14181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../language-reference-guide/primitive-functions/direction/#direction" class="md-nav__link">
+      <a href="../../../language-reference-guide/primitive-functions/direction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -16151,7 +16151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../language-reference-guide/primitive-functions/index.md" class="md-nav__link">
+      <a href="../../../language-reference-guide/primitive-functions/indexing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -16323,7 +16323,7 @@
         
   
   <span class="md-ellipsis">
-    Dyadic Grade Down 
+    Dyadic Grade Down
   </span>
   
 
@@ -64709,16 +64709,77 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../tracer/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_34" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tracer/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     The Tracer
   </span>
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_34" id="__nav_7_34_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_34_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_34">
+            <span class="md-nav__icon md-icon"></span>
+            The Tracer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tracer/trace-primitives/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trace Primitives
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -71713,13 +71774,17 @@
 <td>{BITS}</td>
 <td>"32" or "64"</td>
 </tr>
+<tr>
+<td>{TID}</td>
+<td>current thread</td>
+</tr>
 </tbody>
 </table>
-<h3 class="example">Example</h3>
+<h2 class="example">Example</h2>
 <div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nf">⎕SE</span><span class="na">.</span><span class="nv">Caption</span><span class="kd">←</span><span class="s1">'Pete: {WSID} {Product} {VER_A}.{VER_B}'</span>
 </code></pre></div>
 <p>The Session caption in a <code>CLEAR WS</code> will change to:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nv">Pete</span><span class="bp">:</span><span class="w"> </span><span class="nv">CLEAR</span><span class="w"> </span><span class="nv">WS</span><span class="w"> </span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">APL</span><span class="na">/</span><span class="nv">W</span><span class="o">-</span><span class="m">64</span><span class="w"> </span><span class="m">19.0</span>
+</p><div class="highlight"><pre><span></span><code>     Pete: CLEAR WS Dyalog APL/W-64 19.0
 </code></pre></div>
 <p>Note that Caption returns the codified string used to set it.
 </p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nf">⎕SE</span><span class="na">.</span><span class="nv">Caption</span>
