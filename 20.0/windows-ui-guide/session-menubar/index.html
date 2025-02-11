@@ -64448,15 +64448,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#edit-text-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Edit Text File
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#the-edit-menu" class="md-nav__link">
     <span class="md-ellipsis">
       The Edit Menu
@@ -71524,15 +71515,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#edit-text-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Edit Text File
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#the-edit-menu" class="md-nav__link">
     <span class="md-ellipsis">
       The Edit Menu
@@ -71665,22 +71647,22 @@
 <tbody>
 <tr>
 <td>New</td>
-<td>[WSClear]</td>
+<td><code>[WSClear]</code></td>
 <td>Prompts for confirmation, then clears the workspace</td>
 </tr>
 <tr>
 <td>Open</td>
-<td>[WSLoad]</td>
+<td><code>[WSLoad]</code></td>
 <td>Prompts for a workspace file name, then loads it</td>
 </tr>
 <tr>
 <td>Copy</td>
-<td>[WSCopy]</td>
+<td><code>[WSCopy]</code></td>
 <td>Prompts for a workspace file name, then copies it</td>
 </tr>
 <tr>
 <td>Save</td>
-<td>[WSSave]</td>
+<td><code>[WSSave]</code></td>
 <td>Saves the active workspace</td>
 </tr>
 <tr>
@@ -71691,7 +71673,7 @@
 <tr>
 <td>Export</td>
 <td><code>[Makeexe]</code></td>
-<td>Creates a bound executable, an OLE Server, an ActiveX Control, or a .NET Assembly. See <a href="../../windows-installation-and-configuration-guide/creating-executables">Creating Executables and COM Servers</a> .</td>
+<td>Creates a bound executable, an OLE Server, an ActiveX Control, or a .NET Assembly. See <a href="../../windows-installation-and-configuration-guide/creating-executables">Creating Executables and COM Servers</a></td>
 </tr>
 <tr>
 <td>Export to Memory</td>
@@ -71711,7 +71693,7 @@
 <tr>
 <td>Edit Text File</td>
 <td><code>[EditTextFile]</code></td>
-<td>Displays the <em>Open Source File dialog</em> to select a file to exit.</td>
+<td>Displays the <em>Open Source File</em> dialog to select Dyalog script file (<em>.dyalog</em>) or an arbitrary text file to open in the Editor. See <a href="../editing-scripts-and-text-files/">Editing Scripts and Text Files</a></td>
 </tr>
 <tr>
 <td>Print</td>
@@ -71735,8 +71717,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="edit-text-file">Edit Text File</h2>
-<p>The Edit Text File menu item allows you to edit a Dyalog script file (.dyalog) or an arbitrary text file. The system prompts you to choose the file, which is then displayed in the Editor, allowing you to change it and save it. See <a href="../editing-scripts-and-text-files/">Editing Scripts and Text Files</a>.</p>
 <h2 id="the-edit-menu">The Edit Menu</h2>
 <p>The <em>Edit</em> menu (<code>⎕SE.mb.edit</code>) provides a means to recall previously entered input lines for re-execution and for copying text to and from the clipboard.</p>
 <table id="edit-menu-operations">
@@ -71751,12 +71731,12 @@
 <tr>
 <td>Back</td>
 <td><code>[Undo]</code></td>
-<td>Displays the previous input line. Repeated use of this command cycles back through the input history.</td>
+<td>Displays the previous input line. Repeated use of this command cycles back through the input history</td>
 </tr>
 <tr>
 <td>Forward</td>
 <td><code>[Redo]</code></td>
-<td>Displays the next input line. Repeated use of this command cycles forward through the input history.</td>
+<td>Displays the next input line. Repeated use of this command cycles forward through the input history</td>
 </tr>
 <tr>
 <td>Cut</td>
@@ -71771,7 +71751,7 @@
 <tr>
 <td>Paste</td>
 <td><code>[Paste]</code></td>
-<td>Pastes the text contents of the clipboard into the session log at the current location. The new lines are <em>marked</em> and may be executed by pressing Enter.</td>
+<td>Pastes the text contents of the clipboard into the session log at the current location. The new lines are <em>marked</em> and may be executed by pressing Enter</td>
 </tr>
 <tr>
 <td>Paste Unicode</td>
@@ -71857,7 +71837,7 @@
 <tr>
 <td>Open</td>
 <td><code>[SELoad]</code></td>
-<td>Prompts for a session file name, then loads the session from it, replacing the current one. Sets the File property of <code>⎕SE</code> to the name of the file from which the session was loaded.</td>
+<td>Prompts for a session file name, then loads the session from it, replacing the current one. Sets the File property of <code>⎕SE</code> to the name of the file from which the session was loaded</td>
 </tr>
 <tr>
 <td>Save</td>
@@ -71867,7 +71847,7 @@
 <tr>
 <td>Save As</td>
 <td><code>[SESaveAs]</code></td>
-<td>Prompts for a session file name, then saves the current session (as defined by <code>⎕SE</code> ) in it. Resets the File property of <code>⎕SE</code> .</td>
+<td>Prompts for a session file name, then saves the current session (as defined by <code>⎕SE</code> ) in it. Resets the File property of <code>⎕SE</code></td>
 </tr>
 </tbody>
 </table>
@@ -71948,7 +71928,7 @@
 <tr>
 <td>Print Object</td>
 <td><code>[ObjPrint]</code></td>
-<td>Prints the current object. Note that if the object is being edited, the version of the object displayed in the edit window is printed.</td>
+<td>Prints the current object. Note that if the object is being edited, the version of the object displayed in the edit window is printed</td>
 </tr>
 <tr>
 <td>Clear Stops</td>
@@ -72001,7 +71981,7 @@
 <tr>
 <td>Disable traps in session</td>
 <td><code>[DisableTrapsAtSuspension]</code></td>
-<td>Disables the error trapping mechanism used by <code>:Trap</code> and <code>⎕TRAP</code> . This can be useful in debugging applications.</td>
+<td>Disables the error trapping mechanism used by <code>:Trap</code> and <code>⎕TRAP</code>. This can be useful in debugging applications</td>
 </tr>
 <tr>
 <td>Configure</td>
