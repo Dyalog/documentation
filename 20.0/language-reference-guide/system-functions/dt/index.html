@@ -71595,12 +71595,27 @@
 
 <h1 class="heading"><span class="name">Date-time</span> <span class="command">R←X ⎕DT Y</span></h1>
 
+<p>This function validates date-times or converts date-times between one format and another.</p>
+<p>A date-time is a date and time of day represented by a <em>timestamp</em>, a <em>time number</em> or a <em>military time-zone character</em>.</p>
+<ul>
+<li>A <em>timestamp</em> is a date-time expressed as a multiple element numeric vector, of which there are several different sorts (principally <code>⎕TS</code> format).</li>
+<li>A <em>time number</em> is a date-time expressed as a scalar numeric value, of which there are several different sorts.</li>
+<li>A <em>military time zone character</em> is a scalar character that represents the current date-time ("now") in a particular time zone. For example, <code>'A'</code> represents the current date-time (UTC) + 1 hour.</li>
+</ul>
 <p><code>Y</code> is an array of any shape whose elements contain a timestamp, time number or military time zone character, in any combination.</p>
 <p><code>X</code> may be a single integer value or a 2-element integer vector.</p>
-<p>When <code>X</code> is a 2-element integer vector, <code>X[1]</code> is a date-time code that explicitly specifies the date-time representation of the numeric elements in <code>Y</code>. <code>X[2]</code> is  either 0 or a date-time code listed in the tables below. 0 specifies that the elements of <code>Y</code> are to be validated. A non-zero value specifies the date-time representation to which the elements of <code>Y</code> are to be converted.</p>
+<p>When <code>X</code> is a single integer value, it must be either 0 or a date-time code listed in the tables below. 0 specifies that the elements of <code>Y</code> are to be validated. A non-zero value specifies the date-time representation to which the elements of <code>Y</code> are to be converted. In this case, the numeric elements of <code>Y</code> are interpreted as follows:</p>
+<ul>
+<li>scalars are assumed to be time numbers of type Dyalog Date Number (code 1)</li>
+<li>vectors are assumed to be <code>⎕TS</code> timestamps (code ¯1)</li>
+</ul>
+<p>When <code>X</code> is a 2-element integer vector, <code>X[1]</code> is a date-time code that explicitly specifies the date-time representation of the numeric elements in <code>Y</code>. <code>X[2]</code> is either 0 or a date-time code listed in the tables below. 0 specifies that the elements of <code>Y</code> are to be validated. A non-zero value specifies the date-time representation to which the elements of <code>Y</code> are to be converted.</p>
 <p>Character scalars in <code>Y</code> are always interpreted as meaning "now".</p>
 <p><code>R</code> is an array of the same shape as <code>Y</code>, where each element is either a timestamp, time number or Boolean value as determined by the second or only element in <code>X</code>.</p>
-<p>Note: time numbers in <code>R</code> may be of type DECF even if <code>⎕FR</code> is 645 if their magnitude can be too great to store precisely in a double. See the table below for the type numbers where this is so.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Time numbers in <code>R</code> may be of type DECF even if <code>⎕FR</code> is 645 if their magnitude can be too great to store precisely in a double. See the table below for the type numbers where this is so.</p>
+</div>
 <h2 id="time-numbers">Time Numbers</h2>
 <p>If a value in <code>X</code> is positive it indicates that a time number type is expected in <code>Y</code> or generated in <code>R</code>, as follows. Note that the last column indicated whether (Yes) or not (No) negative numbers are allowed.</p>
 <table>
@@ -71611,7 +71626,7 @@
 <th>Description</th>
 <th>Category</th>
 <th>Date and time<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> represented by 0 (Epoch)</th>
-<th>Negative values allowed?<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">7</a></sup></th>
+<th>Negative values allowed?<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup></th>
 </tr>
 </thead>
 <tbody>
@@ -71626,29 +71641,29 @@
 <tr>
 <td>2</td>
 <td>Dyalog component file time</td>
-<td>Tick count 1÷60s ticks<sup id="fnref10:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>Tick count 1÷60s ticks<sup id="fnref16:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
 <td>1970-01-01 00:00</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td rowspan="5">Other languages</td>
+<td rowspan="8">Other languages</td>
 <td>10</td>
 <td>J (J nanosecond time)</td>
-<td>Tick count<sup id="fnref3:3"><a class="footnote-ref" href="#fn:3">3</a></sup> 1ns ticks <sup id="fnref9:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>Tick count<sup id="fnref3:3"><a class="footnote-ref" href="#fn:3">3</a></sup> 1ns ticks <sup id="fnref15:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
 <td>2000-01-01 00:00</td>
 <td>Yes</td>
 </tr>
 <tr>
 <td>11</td>
 <td>Shakti K7</td>
-<td>Tick count 1ms ticks <sup id="fnref8:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>Tick count 1ms ticks<sup id="fnref14:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
 <td>2024-01-01 00:00</td>
 <td>Yes</td>
 </tr>
 <tr>
 <td>12</td>
-<td>JavaScript / D / Q</td>
-<td>Tick count 1ms ticks <sup id="fnref7:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>JavaScript / D / Q / Go UnixMilli</td>
+<td>Tick count 1ms ticks<sup id="fnref13:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
 <td>1970-01-01 00:00</td>
 <td>Yes</td>
 </tr>
@@ -71662,20 +71677,55 @@
 <tr>
 <td>14</td>
 <td>Shakti K9</td>
-<td>Tick count 1ms ticks <sup id="fnref6:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>Tick count 1ms ticks<sup id="fnref12:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
 <td>2001-01-01 00:00</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td>UNIX</td>
-<td>20</td>
-<td>Unix time</td>
-<td>Tick count 1s ticks <sup id="fnref5:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>15</td>
+<td>Go UnixMicro</td>
+<td>Tick count 1µs ticks<sup id="fnref11:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
 <td>1970-01-01 00:00</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td rowspan="4">Microsoft</td>
+<td>16</td>
+<td>Go UnixNano</td>
+<td>Tick count 1ns ticks<sup id="fnref10:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>1970-01-01 00:00</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>17</td>
+<td>APL+Win and APL64 workspace timestamp</td>
+<td>Tick count 1μs ticks<sup id="fnref9:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>1900-01-01 00:00</td>
+<td>No</td>
+</tr>
+<tr>
+<td rowspan="3">UNIX</td>
+<td>20</td>
+<td>Unix time</td>
+<td>Tick count 1s ticks<sup id="fnref8:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>1970-01-01 00:00</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Apollo NCS UUID</td>
+<td>Tick count 4µs ticks<sup id="fnref7:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>1980-01-01 00:00</td>
+<td>No</td>
+</tr>
+<tr>
+<td>22</td>
+<td>OSF DCE UUID</td>
+<td>Tick count 1ns ticks<sup id="fnref6:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>1582-10-15 00:00</td>
+<td>No</td>
+</tr>
+<tr>
+<td rowspan="4">Microsoft Windows</td>
 <td>30</td>
 <td>Microsoft DOS date/time</td>
 <td>Encoded broken-down time 2s resolution</td>
@@ -71685,7 +71735,7 @@
 <tr>
 <td>31</td>
 <td>Microsoft Win32 FILETIME</td>
-<td>Tick count <sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup> 100ns ticks</td>
+<td>Tick count<sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup> 100ns ticks</td>
 <td>1601-01-01 00:00</td>
 <td>No</td>
 </tr>
@@ -71701,7 +71751,7 @@
 <td>Microsoft OLE Automation Date(also known as Variant Time)</td>
 <td>Day count with fractional part</td>
 <td>1899-12-30 00:00</td>
-<td>Yes <sup id="fnref:10"><a class="footnote-ref" href="#fn:10">9</a></sup></td>
+<td>Yes <sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup></td>
 </tr>
 <tr>
 <td rowspan="5">Application</td>
@@ -71721,21 +71771,21 @@
 <tr>
 <td>42</td>
 <td>Stata statistics package</td>
-<td>Tick count 1ms ticks<sup id="fnref4:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>Tick count 1ms ticks<sup id="fnref5:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
 <td>1960-01-01 00:00</td>
 <td>Yes</td>
 </tr>
 <tr>
 <td>43</td>
 <td>SPSS statistics package</td>
-<td>Tick count 1s ticks<sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>Tick count 1s ticks<sup id="fnref4:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
 <td>1582-10-14 00:00</td>
 <td>No</td>
 </tr>
 <tr>
 <td>44</td>
 <td>SAS</td>
-<td>Tick count 1s ticks<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>Tick count 1s ticks<sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
 <td>1960-01-01 00:00</td>
 <td>Yes</td>
 </tr>
@@ -71790,7 +71840,7 @@
 <td>Yes</td>
 </tr>
 <tr>
-<td rowspan="2">Decimal encoded<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">8</a></sup></td>
+<td rowspan="2">Decimal encoded<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup></td>
 <td>60</td>
 <td>Floating-point decimal encoded format Digits take the form yyyymmdd.hhmmss</td>
 <td>Encoded broken-down time 1s resolution</td>
@@ -71802,6 +71852,14 @@
 <td>Integer decimal encoded format Digits take the form yyyymmddhhmmss(J digit time)</td>
 <td>Encoded broken-down time 1s resolution</td>
 <td>N/A</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Misc. Operating Systems</td>
+<td>70</td>
+<td>AmigaOS</td>
+<td>Tick count 1ms ticks<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>1978-01-01 00:00</td>
 <td>No</td>
 </tr>
 <tr>
@@ -71818,8 +71876,8 @@
 <th>Code</th>
 <th>Description</th>
 <th>Max elements</th>
-<th>Element contents<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">10</a></sup></th>
-<th>Elided element implicit values (in Y)<sup id="fnref:13"><a class="footnote-ref" href="#fn:13">12</a></sup></th>
+<th>Element contents<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup></th>
+<th>Elided element implicit values (in Y)<sup id="fnref:13"><a class="footnote-ref" href="#fn:13">13</a></sup></th>
 </tr>
 </thead>
 <tbody>
@@ -72021,7 +72079,10 @@
 </tr>
 </tbody>
 </table>
-<p>Note that the resolutions of system clocks vary by platform.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The resolutions of system clocks vary by platform.</p>
+</div>
 <h2 id="examples">Examples</h2>
 <h3 class="example" id="timestamp-to-time-number-conversion">Timestamp to time number conversion</h3>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">¯1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕DT</span><span class="w"> </span><span class="o">⊂</span><span class="nf">⎕TS</span>
@@ -72090,7 +72151,7 @@
 <p>In the Proleptic Gregorian Calendar. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 <li id="fn:2">
-<p>There are the same number of ticks per day regardless of leap seconds. <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref4:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref5:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref6:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref7:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref8:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref9:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref10:2" title="Jump back to footnote 2 in the text">↩</a></p>
+<p>There are the same number of ticks per day regardless of leap seconds. <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref4:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref5:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref6:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref7:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref8:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref9:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref10:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref11:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref12:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref13:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref14:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref15:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref16:2" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
 <li id="fn:3">
 <p>Generated as DECF values regardless of the setting of ⎕FR due to their magnitude. <a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">↩</a><a class="footnote-backref" href="#fnref3:3" title="Jump back to footnote 3 in the text">↩</a></p>
@@ -72104,23 +72165,26 @@
 <li id="fn:6">
 <p>Microsoft Excel converts day 0 to the invalid date 1900-01-00. <a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">↩</a></p>
 </li>
+<li id="fn:7">
+<p>For negative numbers, the integral part counts backward from 1899-12-30 and the fractional part counts forward from  the date so reached. <a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">↩</a></p>
+</li>
 <li id="fn:8">
-<p>No date-time may represent a date earlier than ¯4713-01-01 00:00. <a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 7 in the text">↩</a></p>
+<p>No date-time may represent a date earlier than ¯4713-01-01 00:00. <a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">↩</a></p>
 </li>
 <li id="fn:9">
-<p>Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020/01/23 (year/month/day) is encoded as 20200123, and 13:17:56 (hour:minute:second) is encoded as 131756. The date must be between 1 January 0001 and 31 December 9999 in the Proleptic Gregorian Calendar. <a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 8 in the text">↩</a></p>
+<p>Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020/01/23 (year/month/day) is encoded as 20200123, and 13:17:56 (hour:minute:second) is encoded as 131756. The date must be between 1 January 0001 and 31 December 9999 in the Proleptic Gregorian Calendar. <a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">↩</a></p>
 </li>
 <li id="fn:10">
-<p>For negative numbers, the integral part counts backward from 1899-12-30 and the fractional part counts forward from the date so reached. <a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 9 in the text">↩</a></p>
+<p>For negative numbers, the integral part counts backward from 1899-12-30 and the fractional part counts forward from the date so reached. <a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">↩</a></p>
 </li>
 <li id="fn:11">
-<p>All dates must be between 1 January 0001 and 28 February 4000 in the Proleptic Gregorian Calendar. <a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 10 in the text">↩</a></p>
+<p>All dates must be between 1 January 0001 and 28 February 4000 in the Proleptic Gregorian Calendar. <a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">↩</a></p>
 </li>
-<li id="fn:">
-<p>Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020/01/23 (year/month/day) is encoded as 20200123, and 13:17:56 (hour:minute:second) is encoded as 131756. <a class="footnote-backref" href="#fnref:" title="Jump back to footnote 11 in the text">↩</a></p>
+<li id="fn:12">
+<p>Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020/01/23 (year/month/day) is encoded as 20200123, and 13:17:56 (hour:minute:second) is encoded as 131756. <a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 12 in the text">↩</a></p>
 </li>
 <li id="fn:13">
-<p>If a timestamp has fewer than the maximum number of elements, the remaining elements take the default values shown. <a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 12 in the text">↩</a></p>
+<p>If a timestamp has fewer than the maximum number of elements, the remaining elements take the default values shown. <a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 13 in the text">↩</a></p>
 </li>
 </ol>
 </div>
