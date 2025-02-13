@@ -16,4 +16,4 @@ RUN pip install \
 WORKDIR /docs
 
 # Default command to run MkDocs server
-CMD ["mkdocs", "serve", "--dev-addr=0.0.0.0:8000"]
+CMD ["mkdocs", "serve", "--dev-addr=0.0.0.0:8000", "--dirty"]
