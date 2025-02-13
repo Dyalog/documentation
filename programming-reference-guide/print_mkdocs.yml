@@ -270,7 +270,8 @@ nav:
           - Global Triggers: triggers/global-triggers.md
           - Trigger Fields (in Classes): object-oriented-programming/class-members/fields/trigger-fields.md
   - APL Files:
-      - Component FIles:
+      - Native Files: native-files.md
+      - Component Files:
           - Component Files: component-files/component-files/component-files.md
           - Programming Techniques: component-files/component-files/programming-techniques.md
           - File Design: component-files/component-files/file-design.md

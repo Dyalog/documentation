@@ -63,6 +63,14 @@ If the Wildcard option is enabled,  zero or more files and/or directories may ma
 
 When using the Wildcard option, matching of names is done case insensitively on Windows and macOS, and case sensitively on other platforms. The names '.' and '..' are excluded from any matches. The order in which the names match is not defined.
 
+## ProgressCallback Option
+
+The `ProgressCallback` option is described in the [programming reference guide](../../../programming-reference-guide/native-files/#progress-callbacks). The details specific to `⎕NINFO` are listed below.
+
+* The first element of the right argument to the callback function is the character vector `⎕NINFO`.
+* The third element of the right argument (the information namespace) contains an extra field named `Info`, which is a vector with the same length as the `Last` field; one item per item being processed. The elements of the `Info` vector contains the information requested by the `⎕NINFO` call.
+* The scan phase is relatively more expensive in `⎕NINFO` callbacks compared to `⎕NCOPY` callbacks. If the value of the `Limit` field is not required to be accurate, the user may consider disabling the scan phase.
+
 ## Note
 
 On non-Windows platforms, file names are exposed by the Operating System using UTF-8 encoding which Dyalog translates internally to characters.
