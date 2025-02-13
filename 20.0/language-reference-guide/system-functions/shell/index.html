@@ -71885,7 +71885,7 @@ The shell being used can be changed using the <a href="#Shell"><code>Shell</code
 <span class="o">-</span><span class="nv">a</span><span class="o">----</span><span class="w">        </span><span class="m">26</span><span class="o">-</span><span class="m">11</span><span class="o">-</span><span class="m">2024</span><span class="w">     </span><span class="m">14</span><span class="bp">:</span><span class="m">11</span><span class="w">             </span><span class="m">12</span><span class="w"> </span><span class="nv">test</span><span class="na">.</span><span class="nv">apls</span>
 </code></pre></div>
 <h3 id="direct-execution">Direct Execution</h3>
-<p>When <code>Y</code> is a vector of character vectors or an enclosed character vector, the first element of the array is treated as a program name, and the rest as individual arguments. The program is executed directly, without invoking the system's shell first. The program name can be an absolute path, a relative path, or the name of an executable in the current search path (operating-system specific). When the program is specified as a relative path, the name is resolved relative to the working directory, which can be set with the <a href="#WorkingDir"><code>WorkingDir</code></a> variant.</p>
+<p>When <code>Y</code> is a vector of character vectors or an enclosed character vector, the first element of the array is treated as a program name, and the rest as individual arguments. The program is executed directly, without invoking the system's shell first. The program name can be an absolute path, a relative path, or the name of an executable in the current search path (operating-system specific). When the program is specified as a relative path, the name is resolved relative to the working directory, which can be set with the <a href="#workingdir"><code>WorkingDir</code></a> variant.</p>
 <h2 id="return-value">Return Value</h2>
 <p>The result is a five element nested vector:
 </p><div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nv">StreamData</span><span class="w"> </span><span class="nv">StreamIds</span><span class="w"> </span><span class="nv">ExitCode</span><span class="w"> </span><span class="nv">ExitReason</span><span class="w"> </span><span class="nv">Pid</span><span class="p">)</span><span class="kd">←</span><span class="nv">R</span>
@@ -71928,8 +71928,8 @@ The shell being used can be changed using the <a href="#Shell"><code>Shell</code
 </tr>
 </tbody>
 </table>
-<p><code>⎕SHELL</code> provides great flexibility in what the streams should point to, by using the <a href="#Output"><code>Output</code></a> and <a href="#Input"><code>Input</code></a> variants. By default, the two output streams, 1 and 2, are configured such that the output produced on standard error is redirected to standard output and effectively merged together, and then turned into an APL array representing the lines of text.</p>
-<p>The StreamData and StreamIds vectors have the same length. The StreamIds are always sorted in ascending order. Each index describes one collected output stream; StreamIds contains the integer stream IDs, and the elements of StreamData depend on how the output is collected (see the <a href="#Output"><code>Output</code></a> variant).</p>
+<p><code>⎕SHELL</code> provides great flexibility in what the streams should point to, by using the <a href="#output"><code>Output</code></a> and <a href="#input"><code>Input</code></a> variants. By default, the two output streams, 1 and 2, are configured such that the output produced on standard error is redirected to standard output and effectively merged together, and then turned into an APL array representing the lines of text.</p>
+<p>The StreamData and StreamIds vectors have the same length. The StreamIds are always sorted in ascending order. Each index describes one collected output stream; StreamIds contains the integer stream IDs, and the elements of StreamData depend on how the output is collected (see the <a href="#output"><code>Output</code></a> variant).</p>
 <p>By default, <code>⊃⊃⎕SHELL cmd</code> returns a vector of character vectors representing the lines of the collected output text from the child process (both standard output and standard error).</p>
 <h3 id="exit-reasons">Exit Reasons</h3>
 <p>The  reasons why a call to <code>⎕SHELL</code> ends are described in the table below. <code>ExitReason</code> is an integer that describes the overall reason, and <code>ExitCode</code> provides additional information.</p>
@@ -71954,7 +71954,7 @@ The shell being used can be changed using the <a href="#Shell"><code>Shell</code
 </tr>
 <tr>
 <td>2</td>
-<td><code>⎕SHELL</code> timed out before the child process exited (see the <a href="#Timeout"><code>Timeout</code></a> option).</td>
+<td><code>⎕SHELL</code> timed out before the child process exited (see the <a href="#timeout"><code>Timeout</code></a> option).</td>
 <td>The constant <code>¯1006</code>.</td>
 </tr>
 <tr>
@@ -71968,9 +71968,9 @@ The shell being used can be changed using the <a href="#Shell"><code>Shell</code
 <p class="admonition-title">Dyalog on Microsoft Windows</p>
 <p><code>ExitReason</code> cannot be 1 on Microsoft Windows.</p>
 </div>
-<p>Returning the exit code (instead of <code>⎕SHELL</code> producing some trappable error) makes it possible to access the other parts of the result, such as the error messages that were printed on the standard error stream. However, it is possible to turn non-successful exits into trappable errors using the <a href="#ExitCheck"><code>ExitCheck</code></a> variant.</p>
+<p>Returning the exit code (instead of <code>⎕SHELL</code> producing some trappable error) makes it possible to access the other parts of the result, such as the error messages that were printed on the standard error stream. However, it is possible to turn non-successful exits into trappable errors using the <a href="#exitcheck"><code>ExitCheck</code></a> variant.</p>
 <p>When the <code>ExitReason</code> is 2 or 3, the child process had not stopped running before <code>⎕SHELL</code> stopped, which means it might still be running, and require some appropriate cleanup (see <a href="../../the-i-beam-operator/shell-process-control">8373⌶</a>).
-In practice, the child process often closes shortly after without the need for intervention, either due to the default signal being sent to it on non-Windows platforms (see the <a href="#Signal"><code>Signal</code></a> option), or because the connected streams are closed on the <code>⎕SHELL</code> end.</p>
+In practice, the child process often closes shortly after without the need for intervention, either due to the default signal being sent to it on non-Windows platforms (see the <a href="#signal"><code>Signal</code></a> option), or because the connected streams are closed on the <code>⎕SHELL</code> end.</p>
 <h2 id="thread-switching">Thread Switching</h2>
 <p><code>⎕SHELL</code> is a thread switch point, which means the interpreter will run other APL threads while a long-running <code>⎕SHELL</code> call is in progress.</p>
 <p>When an APL thread running <code>⎕SHELL</code> is terminated by <a href="../tkill/"><code>⎕TKILL</code></a> or <a href="../../system-commands/reset/"><code>)RESET</code></a>, the child process might be left running, as if <code>⎕SHELL</code> was interrupted.</p>
@@ -72148,7 +72148,7 @@ In practice, the child process often closes shortly after without the need for i
 <p>The <code>InheritEnv</code> variant option specifies whether the set of environment variables from the interpreter should be inherited by the child process. The value must be a Boolean scalar.</p>
 <p>The default is <code>1</code>.</p>
 <h3 id="env">Env</h3>
-<p>The <code>Env</code> variant option specifies any additional environment variables and their values. If an environment variable that already exists in the set of inherited variables (see <a href="#InheritEnv"><code>InheritEnv</code></a>) is specified here, the value from <code>Env</code> takes precedence. The option value must be one of the following:</p>
+<p>The <code>Env</code> variant option specifies any additional environment variables and their values. If an environment variable that already exists in the set of inherited variables (see <a href="#inheritenv"><code>InheritEnv</code></a>) is specified here, the value from <code>Env</code> takes precedence. The option value must be one of the following:</p>
 <ul>
 <li>a two-column matrix.</li>
 <li>a two-element vector.</li>
