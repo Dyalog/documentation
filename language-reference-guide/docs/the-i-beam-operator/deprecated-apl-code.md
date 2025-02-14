@@ -1,6 +1,6 @@
 <h1 class="heading"><span class="name">Deprecated APL Code</span> <span class="command">{R}←{X}14⌶Y</span></h1>
 
-Indicates that deprecated APL code is being used so that it will be logged. For an overview of deprecated features see  [Deprecated features](../../../../programming-reference-guide/deprecated-features) within the Programming Reference Guide.
+Indicates that deprecated APL code is being used so that it will be logged. Code within workspaces and samples supplied by Dyalog may be seen to include this I-Beam for this purpose. For an overview of deprecated features see  [Deprecated features](../../../../programming-reference-guide/deprecated-features) within the Programming Reference Guide.
 
 `Y` is the description of the feature which will appear in the log entry - either a character vector containing appropriate text, or ⍬ for a generic message.
 
@@ -18,7 +18,7 @@ The shy result `R` is a Boolean value which indicates whether logging of `'User'
       13⌶'User'
       1 my_obsolete_fn 2
 3
-      (⎕JSON⍠('Dialect' 'JSON5')('Compact' 0))⍣¨2⊃⎕NGET'deprecated.txt' 1
+      (⎕JSON⍠('Dialect' 'JSON5')('Compact' 0))⍣2¨⊃⎕NGET'deprecated.txt' 1
 {
   ExtraInfo: "",
   Feature: "Use of deprecated application code",

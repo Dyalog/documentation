@@ -2,7 +2,7 @@
 
 Controls which deprecated features are logged when used. For an overview of deprecated features see [Deprecated features](../../../../programming-reference-guide/deprecated-features) within the Programming Reference Guide.
 
-`Y` is a character vector, or a vector of character vectors, each containing the name of a deprecated feature or one of the additional names defined in the table below. Subsequent uses of the selected deprecated features will be logged.
+`Y` is a character vector, or a vector of character vectors, each containing the name of a deprecated feature, or one of the names defined in the table below. Subsequent uses of the selected deprecated features will be logged.
 
 The result `R` is a vector of zero or more names, per the table below.
 
@@ -14,7 +14,7 @@ The result `R` is a vector of zero or more names, per the table below.
 |`'Enabled'`    |List all features for which logging is enabled            |_                                                      _|
 |`'List'`       |List names all deprecated features                        |Names of all deprecated features (non-shy)              |
 
-The list of deprecated features varies with each version of Dyalog and are listed in the [Release Notes](xxxLINKxxx).
+The list of deprecated Feature names varies with each version of Dyalog and is listed in the [Release Notes](xxxLINKxxx). The feature name `'User'` is always defined and enables logging of APL workspaces and samples which identify themselves as deprecated using [`14⌶`](deprecated-apl-code.md), and the workspaces and samples supplied by Dyalog which do that are also listed there.
 
 !!! Note
     The log file must also be configured using [109⌶](log-file-for-deprecations.md).

@@ -46,7 +46,7 @@ and check that no errors occurred when writing to the logfile:
 └─┴┘
 ```
 
-If the result of `109⌶` does not have a 0 in the first element, an error occurred and the second element will include a description of what it was.
+If the result of [`109⌶`](../../../language-reference-guide/the-i-beam-operator/log-file-for-deprecations)does not have a 0 in the first element, an error occurred and the second element will include a description of what it was.
 
 Entries written to the logfile will be lines of complete JSON5 text. They can be simply examined using `]open` or by loading the file into an editor, or they may be read and reformatted using `⎕NGET` and `⎕JSON`, for example:
 
