@@ -22,7 +22,6 @@ plugins:
   - privacy
   - search
   - macros
-  - site-urls
   - caption:
       table:
         enable: true
@@ -80,7 +79,9 @@ nav:
   - Find and Replace Dialogs: find-and-replace-dialogs.md
   - Editing Scripts and Text Files: editing-scripts-and-text-files.md
   - Source as Typed: source-as-typed.md
-  - The Tracer: tracer.md
+  - The Tracer: 
+      - tracer/index.md
+      - Trace Primitives: tracer/trace-primitives.md
   - The Threads Tool: threads-tool.md
   - Debugging Threads: debugging-threads.md
   - The Event Viewer: event-viewer.md

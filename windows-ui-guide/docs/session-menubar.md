@@ -1,61 +1,43 @@
 <h1 class="heading"><span class="name">The Session MenuBar</span></h1>
 
-The Session MenuBar  (`⎕SE.mb`) contains a set of menus as follows. Note that, unless specified, the screen-shots are taken using Unicode Edition and the keyboard short-cuts will be different in Classic Edition.
+The Session MenuBar  (`⎕SE.mb`) contains a set of menus as follows. Note that, unless specified, the descriptions refer to the Unicode Edition and the keyboard short-cuts will be different in Classic Edition.
 
 ## The File Menu
 
 The *File* menu (`⎕SE.mb.file`) provides a means to execute those APL System Commands that are concerned with the active and saved workspaces. The contents of a typical File menu and the operations they perform are illustrated below.
 
-![](img/session-file-menu.png)
-
 Table: File Menu Operations { #file-menu-operations }
 
 |Item|Action|Description|
 |---|---|---|
-|New|[WSClear]|Prompts for confirmation, then clears the workspace|
-|Open|[WSLoad]|Prompts for a workspace file name, then loads it|
-|Copy|[WSCopy]|Prompts for a workspace file name, then copies it|
-|Save|[WSSave]|Saves the active workspace|
+|New|`[WSClear]`|Prompts for confirmation, then clears the workspace|
+|Open|`[WSLoad]`|Prompts for a workspace file name, then loads it|
+|Copy|`[WSCopy]`|Prompts for a workspace file name, then copies it|
+|Save|`[WSSave]`|Saves the active workspace|
 |Save As|`[WSSaveas]`|Prompts for a workspace file name, then saves it|
-|Export|`[Makeexe]`|Creates a bound executable, an OLE Server, an ActiveX Control, or a .NET Assembly. See [Creating Executables and COM Servers](../../windows-installation-and-configuration-guide/creating-executables) .|
+|Export|`[Makeexe]`|Creates a bound executable, an OLE Server, an ActiveX Control, or a .NET Assembly. See [Creating Executables and COM Servers](../../windows-installation-and-configuration-guide/creating-executables)|
 |Export to Memory|`[MakeMemoryAssembly]`|Creates an *in-memory* .NET Assembly|
 |Close AppDomain|`[CloseAppDomain]`|Closes .NET App Domain|
 |Drop|`[WSDrop]`|Prompts for a workspace file name, then erases it|
-|Edit Text File|`[EditTextFile]`|Displays the *Open Source File dialog* to select a file to exit.|
+|Edit Text File|`[EditTextFile]`|Displays the *Open Source File* dialog to select Dyalog script file (*.dyalog*) or an arbitrary text file to open in the Editor. See [Editing Scripts and Text Files](editing-scripts-and-text-files.md)|
 |Print|`[PrintFnsInNS]`|Prints functions and operators in current namespace|
 |Print Setup|`[PrintSetup]`|Invokes the print set-up dialog box|
 |Continue|`[Continue]`|Saves the active workspace in CONTINUE.DWS and exits APL|
 |Exit|`[Off]`|Exits APL|
 
-## Edit Text File
-
-The Edit Text File menu item allows you to edit a Dyalog script file (.dyalog) or an arbitrary text file. The system prompts you to choose the file as shown below:
-
-![](img/open-source-file.png)
-
-The file is then displayed in the Editor, allowing you to change it and save it. See [Editing Scripts and Text Files](editing-scripts-and-text-files.md).
-
 ## The Edit Menu
 
 The *Edit* menu (`⎕SE.mb.edit`) provides a means to recall previously entered input lines for re-execution and for copying text to and from the clipboard.
-
-![](img/session-edit-menu-unicode.png)
-
-**Unicode Edition**
-
-![](img/session-edit-menu-classic.png)
-
-**Classic Edition**
 
 Table: Edit menu operations { #edit-menu-operations }
 
 |Item             |Action          |Description                                                                               |
 |-----------------|----------------|------------------------------------------------------------------------------------------|
-|Back             |`[Undo]`        |Displays the previous input line. Repeated use of this command cycles back through the input history.|
-|Forward          |`[Redo]`        |Displays the next input line. Repeated use of this command cycles forward through the input history.|
+|Back             |`[Undo]`        |Displays the previous input line. Repeated use of this command cycles back through the input history|
+|Forward          |`[Redo]`        |Displays the next input line. Repeated use of this command cycles forward through the input history|
 |Cut              |`[Delete]`      |Cuts the selected text to the clipboard|
 |Copy             |`[Copy]`        |Copies the selection to the clipboard|
-|Paste            |`[Paste]`       |Pastes the text contents of the clipboard into the session log at the current location. The new lines are *marked* and may be executed by pressing Enter.|
+|Paste            |`[Paste]`       |Pastes the text contents of the clipboard into the session log at the current location. The new lines are *marked* and may be executed by pressing Enter|
 |Paste Unicode    |`[PasteUnicode]`|Same as *Paste* , but gets the Unicode text from the clipboard and converts to `⎕AV` . **Classic Edition only**|
 |Paste Non-Unicode|`[PasteAnsi]`   |Same as *Paste* , but gets the ANSI text from the clipboard and converts to `⎕AV` . **Classic Edition only**|
 |Find             |`[Find]`        |Displays the *Find* dialog|
@@ -65,21 +47,17 @@ Table: Edit menu operations { #edit-menu-operations }
 
 The *View* menu (`⎕SE.mb.view`) toggles the visibility of the Session Toolbar, StatusBar, and Language Bar.
 
-![](img/session-view-menu.png)
-
 Table: View menu operations { #view-menu-operations }
 
-|Item       |Action|Description                   |
-|-----------|------|------------------------------|
-|Toolbar    |&nbsp;|Shows/Hides Session toolbars  |
-|Statusbar  |&nbsp;|Shows/Hides Session statusbars|
-|LanguageBar|&nbsp;|Shows/Hides Language Bar      |
+|Item       |Action|Description                    |
+|-----------|------|-------------------------------|
+|Toolbar    |&nbsp;|Shows/Hides Session toolbars   |
+|Statusbar  |&nbsp;|Shows/Hides Session status bars|
+|LanguageBar|&nbsp;|Shows/Hides Language Bar       |
 
 ## The Window Menu
 
 This contains a single action (`⎕SE.mb.windows`) which is to close all of the Edit and Trace windows and the Status window.
-
-![](img/session-windows-menu.png)
 
 Table: Window menu operations { #window-menu-operations }
 
@@ -95,21 +73,17 @@ In addition, the *Window* menu will contain options to switch the focus to any s
 
 The *Session* menu (`⎕SE.mb.session`) provides access to the system operations that allow you to load a session (`⎕SE`) from a session file and to save your current session (`⎕SE`) to a session file. If you use these facilities rarely, you may wish to move them to (say) the *Options* menu or even dispense with them entirely.
 
-![](img/session-session-menu.png)
-
 Table: Session menu operations { #session-menu-operations }
 
 |Item|Action|Description|
 |---|---|---|
-|Open|`[SELoad]`|Prompts for a session file name, then loads the session from it, replacing the current one. Sets the File property of `⎕SE` to the name of the file from which the session was loaded.|
+|Open|`[SELoad]`|Prompts for a session file name, then loads the session from it, replacing the current one. Sets the File property of `⎕SE` to the name of the file from which the session was loaded|
 |Save|`[SESave]`|Saves the current session (as defined by `⎕SE` ) to the session file specified by the File property of `⎕SE`|
-|Save As|`[SESaveAs]`|Prompts for a session file name, then saves the current session (as defined by `⎕SE` ) in it. Resets the File property of `⎕SE` .|
+|Save As|`[SESaveAs]`|Prompts for a session file name, then saves the current session (as defined by `⎕SE` ) in it. Resets the File property of `⎕SE`|
 
 ## The Log Menu
 
 The *Log* menu (`⎕SE.mb.log`) provides access to the system operations that manipulate Session log files.
-
-![](img/session-log-menu.png)
 
 Table: Log menu operations { #log-menu-operations }
 
@@ -125,8 +99,6 @@ Table: Log menu operations { #log-menu-operations }
 
 The *Action* menu (`⎕SE.mb.action`) may be used to perform a variety of operations on the *current object* or the *current line*. The current object is the object whose name contains the cursor. The current line is that line that contains the cursor. The *Edit*, *Copy Object*, *Paste Object* and *Print Object* items operate on the current object. For example, if the name `SALES` appears in the session and the cursor is placed somewhere within it, `SALES` is the current object and will be copied to the clipboard by selecting *Copy object* or opened up for editing by selecting *Edit*.
 
-![](img/session-action-menu.png)
-
 Table: Action menu operations { #actions-menu-operations }
 
 |Item        |Action       |Description                                                                                                                           |
@@ -136,7 +108,7 @@ Table: Action menu operations { #actions-menu-operations }
 |Execute     |`[Execute]`  |Executes the current line                                                                                                             |
 |Copy Object |`[ObjCopy]`  |Copies the contents of the current object to the clipboard                                                                            |
 |Paste Object|`[ObjPaste]` |Pastes the contents of the clipboard into the current object, replacing its previous value                                            |
-|Print Object|`[ObjPrint]` |Prints the current object. Note that if the object is being edited, the version of the object displayed in the edit window is printed.|
+|Print Object|`[ObjPrint]` |Prints the current object. Note that if the object is being edited, the version of the object displayed in the edit window is printed |
 |Clear Stops |`[ClearTSM]` |Clears all `⎕STOP` , `⎕MONITOR` and `⎕TRACE` settings                                                                                 |
 |Interrupt   |`[Interrupt]`|Generates a weak interrupt                                                                                                            |
 |Reset       |`[Reset]`    |Performs `)RESET`                                                                                                                     |
@@ -144,9 +116,6 @@ Table: Action menu operations { #actions-menu-operations }
 ## The Options Menu
 
 The *Options* menu (`⎕SE.mb.options`) provides configuration options.
-
-|-----------------------------------------------------|-----------------------------------------------------------------|
-|![](img/session-options-menu.png)|![](img/session-object-syntax-menu.png)|
 
 Table: Options menu operations { #options-menu-operations }
 
@@ -156,7 +125,7 @@ Table: Options menu operations { #options-menu-operations }
 |Expose Root Properties   |`[ExposeRoot]`              |Exposes the names of the properties, methods and events of the Root object                                       |
 |Expose Session Properties|`[ExposeSession]`           |Exposes the names of the properties, methods and events of `⎕SE`                                                 |
 |Line Numbers             |`[LineNumbers]`             |Toggle the display of line numbers in edit and trace windows on/off                                              |
-|Disable traps in session |`[DisableTrapsAtSuspension]`|Disables the error trapping mechanism used by `:Trap` and `⎕TRAP` . This can be useful in debugging applications.|
+|Disable traps in session |`[DisableTrapsAtSuspension]`|Disables the error trapping mechanism used by `:Trap` and `⎕TRAP`. This can be useful in debugging applications  |
 |Configure                |`[Configure]`               |Displays the *Configuration* dialog box                                                                          |
 |Colours                  |`[ChooseColors]`            |Displays the *Colours Selection* dialog box                                                                      |
 
@@ -167,8 +136,6 @@ The default values of these items are defined by the parameters **default_wx**, 
 ## The Tools Menu
 
 The *Tools* menu (`⎕SE.mb.tools`) provides access to various session tools and dialog boxes.
-
-![](img/session-tools-menu.png)
 
 Table: Tools Menu Operations { #tools-menu-operations }
 
@@ -185,8 +152,6 @@ Table: Tools Menu Operations { #tools-menu-operations }
 
 The *Threads* menu (`⎕SE.mb.threads`) provides access to various session tools and dialog boxes.
 
-![](img/session-threads-menu.png)
-
 Table: Threads Menu Operations { #threads-menu-operations }
 
 |Item               |Action                 |Description                                        |
@@ -200,11 +165,21 @@ Table: Threads Menu Operations { #threads-menu-operations }
 |Resume all Threads |`[ThreadsResumeAll]`   |Resumes all threads                                |
 |Restart all Threads|`[ThreadsRestartAll]`  |Restarts all threads                               |
 
+## The Debugger Menu
+
+The *Debugger* menu (`⎕SE.mb.layout`) provides layout options for the Debugger.
+
+Table: Debugger Menu Operations { #debugger-layout-menu-operations }
+
+|Item           |Action             |Description                                        |
+|---------------|-------------------|---------------------------------------------------|
+|Floating       |APL callback       |Detaches the Debugger window                       |
+|Bottom         |APL callback       |Docks the Debugger at the bottom (default)         |
+|Left           |APL callback       |Docks the Debugger to the left                     |
+
 ## The Help Menu
 
 The *Help* menu (`⎕SE.mb.help`) provides access to the help system which is packaged as a single *Microsoft HTML Help* compiled help file named `help\dyalog.chm.`
-
-![](img/session-help-menu.png)
 
 Table: Help menu operations { #help-menu-operations }
 

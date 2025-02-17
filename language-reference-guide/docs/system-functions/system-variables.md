@@ -1,8 +1,8 @@
 <h1 class="heading"><span class="name">System Variables</span></h1>
 
-System variables retain information used by the system in some way. Many system variables affect the behaviour of primitive functions and operators to which they act as *implicit arguments* For further information, see [System Settings](system-settings.md).
+System variables retain information used by the system in some way. Many system variables affect the behaviour of primitive functions and operators to which they act as *implicit arguments*.
 
-System variables may be localised by inclusion in the header line of a defined function or in the argument list of the system function `⎕SHADOW`. When a system variable is localised, it retains its previous value until it is assigned a new one. This feature is known as "pass-through localisation".  The exception to this rule is `⎕TRAP`.
+System variables may be localised by inclusion in the header line of a defined function or in the argument list of the system function `⎕SHADOW`. When a system variable is localised, it retains its previous value until it is assigned a new one. This feature is known as "pass-through localisation". The exception to this rule is `⎕TRAP`.
 
 A system variable can never be undefined. Default values are assigned to all system variables in a clear workspace.
 

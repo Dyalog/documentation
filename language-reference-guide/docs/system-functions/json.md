@@ -295,7 +295,7 @@ See also: [JSON_Name_Mangling](json-name-manglling.md).
     └─┴──────┴───┴─┘
 
           1 (⎕JSON⍠ 'Format' 'M')M
-    DOMAIN ERROR: Value does not match the specified type in row 3
+    DOMAIN ERROR: JSON export: value does not match the specified type in row 3 (⎕IO=1)
           1(⎕JSON⍠'Format' 'M')M
             ∧
     ```

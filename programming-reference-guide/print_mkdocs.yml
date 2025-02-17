@@ -107,15 +107,15 @@ nav:
               defined-functions-and-operators/traditional-functions-and-operators/locked-functions-operators.md
           - Function Declaration Statements:
               - Introduction: 
-                  defined-functions-and-operators/traditional-functions-and-operators/control-structures/function-declaration-statements/function-declaration-statements-introduction.md
+                  defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/function-declaration-statements-introduction.md
               - Access Statement: 
-                  defined-functions-and-operators/traditional-functions-and-operators/control-structures/function-declaration-statements/access.md
+                  defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/access.md
               - Attribute Statement: 
-                  defined-functions-and-operators/traditional-functions-and-operators/control-structures/function-declaration-statements/attribute.md
+                  defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/attribute.md
               - Implements Statement: 
-                  defined-functions-and-operators/traditional-functions-and-operators/control-structures/implements.md
+                  defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/implements.md
               - Signature Statement: 
-                  defined-functions-and-operators/traditional-functions-and-operators/control-structures/signature.md
+                  defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/signature.md
           - Control Structures:
               - Introduction: 
                   defined-functions-and-operators/traditional-functions-and-operators/control-structures/control-structures-summary.md
@@ -271,20 +271,21 @@ nav:
           - Global Triggers: triggers/global-triggers.md
           - Trigger Fields (in Classes): object-oriented-programming/class-members/fields/trigger-fields.md
   - APL Files:
-      - Component FIles:
-          - Component Files: component-files/component-files/component-files.md
-          - Programming Techniques: component-files/component-files/programming-techniques.md
-          - File Design: component-files/component-files/file-design.md
-          - Internal Structure: component-files/component-files/internal-structure.md
-          - The Effect of Buffering: component-files/component-files/the-effect-of-buffering.md
-          - Integrity and Security: component-files/component-files/integrity-and-security.md
+      - Component Files:
+          - Introduction: component-files/introduction.md
+          - Component Files: component-files/component-files.md
+          - Programming Techniques: component-files/programming-techniques.md
+          - File Design: component-files/file-design.md
+          - Internal Structure: component-files/internal-structure.md
+          - The Effect of Buffering: component-files/the-effect-of-buffering.md
+          - Integrity and Security: component-files/integrity-and-security.md
   - Error Trapping:
-      - Standard Error Action: error-messages/standard-error-action.md
+      - Standard Error Action: error-trapping/standard-error-action.md
       - Error Trapping: error-trapping/error-trapping.md
       - Error Trapping Examples: error-trapping/error-trapping-examples.md
       - Signalling Events: error-trapping/signalling-events.md
       - Handling Unexpected Errors: error-trapping/handling-unexpected-errors.md
-  - ' Error Messages':
+  - Error Messages:
       - Error Messages:
           - Introduction: error-messages/error-messages.md
           - APL Error Messages Table: error-messages/apl-errors.md
@@ -385,9 +386,8 @@ nav:
               - FILE ERROR 30 Read only file: error-messages/file-error-30-read-only-file.md
           - System Errors: error-messages/system-errors.md
   - APLMon:
-      - aplmon:
-          - Introduction: aplmon/aplmon/introduction.md
-          - Using APLMON: aplmon/aplmon/using-aplmon.md
-          - APLMON output: aplmon/aplmon/aplmon-output.md
-          - Special syntax: aplmon/aplmon/special-syntax.md
-          - Notes: aplmon/aplmon/notes.md
+    - Introduction: aplmon/introduction.md
+    - Using APLMON: aplmon/using-aplmon.md
+    - APLMON output: aplmon/aplmon-output.md
+    - Special syntax: aplmon/special-syntax.md
+    - Notes: aplmon/notes.md

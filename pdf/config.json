@@ -1,0 +1,57 @@
+{
+    "documents": {
+        "language-reference-guide": {
+            "title": "Dyalog APL Language",
+            "subtitle": "Reference Guide",
+            "filename": "Dyalog APL Language Reference Guide.pdf"
+        },
+        "dotnet-interface": {
+            "title": "Dyalog for Microsoft Windows",
+            "subtitle": ".NET Framework Interface Guide",
+            "filename": "Dyalog for Microsoft Windows .NET Framework Interface Guide.pdf"
+        },
+        "interface-guide": {
+            "title": "Dyalog for Microsoft Windows",
+            "subtitle": "Interfaces Guide",
+            "filename": "Dyalog for Microsoft Windows Interface Guide.pdf"
+        },
+        "object-reference": {
+            "title": "Dyalog for Microsoft Windows",
+            "subtitle": "Object Reference Guide",
+            "filename": "Dyalog for Microsoft Windows Object Reference Guide.pdf"
+        },
+        "programming-reference-guide": {
+            "title": "Dyalog Programming",
+            "subtitle": "Reference Guide",
+            "filename": "Dyalog Programming Reference Guide.pdf"
+        },
+        "unix-installation-and-configuration-guide": {
+            "title": "Dyalog for UNIX",
+            "subtitle": "Installation and Configuration Guide",
+            "filename": "Dyalog for UNIX Installation and Configuration Guide.pdf"
+        },
+        "unix-user-guide": {
+            "title": "Dyalog for UNIX",
+            "subtitle": "UI Guide",
+            "filename": "Dyalog for UNIX UI Guide.pdf"
+        },
+        "windows-installation-and-configuration-guide": {
+            "title": "Dyalog for Microsoft Windows",
+            "subtitle": "Installation and Configuration Guide",
+            "filename": "Dyalog for Microsoft Windows Installation and Configuration Guide.pdf"
+        },
+        "windows-ui-guide": {
+            "title": "Dyalog for Microsoft Windows",
+            "subtitle": "UI Guide",
+            "filename": "Dyalog for Microsoft Windows UI Guide.pdf"
+        }
+    },
+    "settings": {
+        "disable_toc": false,
+        "disable_link_rewriting": false,
+        "disable_syntax_highlighting": false,
+        "disable_section_numbers": false,
+        "screen": false,
+        "html_only": false
+    }
+}

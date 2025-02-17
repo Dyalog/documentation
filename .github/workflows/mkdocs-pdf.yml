@@ -1,0 +1,157 @@
+name: Convert MkDocs to PDF
+
+on:
+  workflow_dispatch:
+
+jobs:
+  convert-docs:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Required for git info
+
+    - name: Get Git Info
+      id: git-info
+      run: |
+        BRANCH=$(git rev-parse --abbrev-ref HEAD)
+        HASH=$(git rev-parse --short HEAD)
+        echo "GIT_INFO=${BRANCH}:${HASH}" >> $GITHUB_OUTPUT
+        echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          libcairo2-dev \
+          libpango1.0-dev \
+          libgdk-pixbuf2.0-dev \
+          libffi-dev \
+          shared-mime-info \
+          fonts-liberation \
+          fonts-dejavu
+
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install \
+          mkdocs \
+          mkdocs-material \
+          weasyprint \
+          beautifulsoup4 \
+          markdown \
+          ruamel.yaml \
+          pymdown-extensions \
+          markdown-tables-extended
+
+    - name: Prepare directories
+      run: |
+        # Ensure output directory exists with proper permissions
+        mkdir -p pdf/output
+        chmod 755 pdf/output
+        
+        # List directory structure for debugging
+        echo "Directory structure:"
+        ls -la pdf/
+
+    - name: Convert MkDocs to PDF
+      env:
+        GIT_INFO: ${{ steps.git-info.outputs.GIT_INFO }}
+        BUILD_DATE: ${{ steps.git-info.outputs.DATE }}
+      working-directory: ${{ github.workspace }}
+      run: |
+        # Verify required files and directories exist
+        [ -f "pdf/mkdocs2pdf.py" ] || { echo "pdf/mkdocs2pdf.py not found"; exit 1; }
+        [ -f "mkdocs.yml" ] || { echo "mkdocs.yml not found in repository root"; exit 1; }
+        [ -d "pdf/assets" ] || { echo "pdf/assets directory not found"; exit 1; }
+        [ -f "pdf/config.json" ] || { echo "Error: pdf/config.json not found"; exit 1; }
+        chmod +x pdf/mkdocs2pdf.py
+
+        # Run the conversion script
+        python pdf/mkdocs2pdf.py \
+          --mkdocs-yml mkdocs.yml \
+          --config pdf/config.json \
+          --project-dir pdf/output \
+          --assets-dir pdf/assets
+
+    - name: Install yq
+      run: |
+        sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+        sudo chmod +x /usr/local/bin/yq
+
+    - name: Get Version Info
+      id: version
+      run: |
+        # Get X.Y from mkdocs.yml
+        VERSION_XY=$(yq '.extra.version_majmin' mkdocs.yml)
+        # Get commit count for Z
+        COMMIT_COUNT=$(git rev-list --count HEAD)
+        # Construct full version
+        echo "VERSION=v${VERSION_XY}.${COMMIT_COUNT}" >> $GITHUB_OUTPUT
+        echo "Constructed version: v${VERSION_XY}.${COMMIT_COUNT}"
+
+    - name: Manage Draft Releases
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        # Configuration
+        MAX_DRAFTS=5  # Keep this many most recent drafts
+        
+        # Function to get next available tag
+        get_available_tag() {
+          local base_tag=$1
+          local tag=$base_tag
+          local suffix=""
+          local letter="a"
+          
+          while gh release view "$tag" &>/dev/null; do
+            echo "Tag $tag exists, trying next suffix..."
+            tag="${base_tag}${letter}"
+            # Increment letter (a -> b -> c etc)
+            letter=$(echo "$letter" | tr "a-y" "b-z")
+          done
+          
+          echo "$tag"
+        }
+        
+        # Clean up old draft releases
+        echo "Cleaning up old draft releases..."
+        # Get list of draft releases, using JSON output filtered by jq
+        DRAFTS=$(gh release list --json tagName,isDraft,createdAt \
+          --jq '.[] | select(.isDraft==true) | [.tagName,.createdAt] | @tsv' \
+          | sort -k2 | awk '{print $1}')
+        
+        # Count total drafts
+        DRAFT_COUNT=$(echo "$DRAFTS" | grep -c "^" || true)
+        
+        if [ $DRAFT_COUNT -gt $MAX_DRAFTS ]; then
+          # Calculate how many to delete
+          TO_DELETE=$((DRAFT_COUNT - MAX_DRAFTS + 1))  # +1 because we're about to create a new one
+          echo "Found $DRAFT_COUNT drafts, deleting $TO_DELETE oldest..."
+          
+          # Delete oldest drafts
+          echo "$DRAFTS" | head -n $TO_DELETE | while read -r tag; do
+            echo "Deleting draft release $tag..."
+            gh release delete "$tag" --yes
+          done
+        fi
+        
+        # Create release using version
+        BASE_TAG="${{ steps.version.outputs.VERSION }}"
+        RELEASE_TAG=$(get_available_tag "$BASE_TAG")
+        RELEASE_NAME="Documentation PDFs $RELEASE_TAG"
+        
+        echo "Creating new draft release: $RELEASE_TAG"
+        
+        # Create a draft release with current syntax
+        gh release create "$RELEASE_TAG" \
+          pdf/output/*.pdf \
+          --draft \
+          --title "$RELEASE_NAME" \
+          --notes "Documentation PDFs generated from ${{ steps.git-info.outputs.GIT_INFO }}"

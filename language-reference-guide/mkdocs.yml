@@ -57,8 +57,8 @@ nav:
       - Mixed Functions: primitive-functions/mixed-functions.md
       - Notes: primitive-functions/notes.md
       - Scalar Monadic Functions:
-          - Negative: primitive-functions/negative/#negative
-          - Direction (Signum): primitive-functions/direction/#direction
+          - Negative: primitive-functions/negative.md
+          - Direction (Signum): primitive-functions/direction.md
           - Reciprocal: primitive-functions/reciprocal.md
           - Magnitude: primitive-functions/magnitude.md
           - Floor: primitive-functions/floor.md
@@ -138,7 +138,7 @@ nav:
           - Index Generator: primitive-functions/index-generator.md
           - Grade Up: primitive-functions/grade-up-monadic.md
           - Grade Down: primitive-functions/grade-down-monadic.md
-          - Index: primitive-functions/index.md
+          - Index: primitive-functions/indexing.md
           - Index with Axes: primitive-functions/index-with-axes.md
           - Index Of: primitive-functions/index-of.md
           - Interval Index: primitive-functions/interval-index.md
@@ -146,7 +146,7 @@ nav:
           - Membership: primitive-functions/membership.md
           - Find: primitive-functions/find.md
           - Dyadic Grade Up: primitive-functions/grade-up-dyadic.md
-          - 'Dyadic Grade Down ': primitive-functions/grade-down-dyadic.md
+          - Dyadic Grade Down: primitive-functions/grade-down-dyadic.md
           - Deal: primitive-functions/deal.md
           - Match: primitive-functions/match.md
           - Not Match: primitive-functions/not-match.md

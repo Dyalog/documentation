@@ -100,16 +100,15 @@ The Caption property of the Session may be set dynamically to a character vector
 |{PID}     |process ID (decimal)                 |
 |{CHARS}   |"Classic" or "Unicode"               |
 |{BITS}    |"32" or "64"                         |
+|{TID}     |current thread                       |
 
-Table: Session Caption Fields
-
-<h3 class="example">Example</h3>
+<h2 class="example">Example</h2>
 ```apl
      ⎕SE.Caption←'Pete: {WSID} {Product} {VER_A}.{VER_B}'
 ```
 
 The Session caption in a `CLEAR WS` will change to:
-```apl
+```other
      Pete: CLEAR WS Dyalog APL/W-64 19.0
 ```
 
@@ -117,5 +116,4 @@ Note that Caption returns the codified string used to set it.
 ```apl
      ⎕SE.Caption
 Pete: {WSID} {Product} {VER_A}.{VER_B}
-
 ```

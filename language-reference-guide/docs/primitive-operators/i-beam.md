@@ -88,7 +88,6 @@ The column labelled *O/S* indicates if a function applies only on Windows (W), o
 |`7162` |[JSON Translate Name](../the-i-beam-operator/json-translate-name.md)                                       |&nbsp;|
 |`8373` |[Shell Process Control](../the-i-beam-operator/shell-process-control.md)
 |`8415` |[Singular Value Decomposition](../the-i-beam-operator/singular-value-decomposition.md)                     |&nbsp;|
-|`8674` |[Externalise Array](../the-i-beam-operator/externalise-array.md)                                           |&nbsp;|
 |`9468` |[Hash Table Size](../the-i-beam-operator/hash-table-size.md)                                               |&nbsp;|
 |`9469` |[Lookup Table Size](../the-i-beam-operator/lookup-table-size.md)                                           |&nbsp;|
 |`16808`|[Sample Probability Distribution](../the-i-beam-operator/sample-probability-distribution.md)               |&nbsp;|

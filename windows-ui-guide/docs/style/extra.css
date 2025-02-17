@@ -63,3 +63,12 @@
 .md-content code {
     padding: 0;
 }
+
+.toolbar-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-image: url('/img/trace-theme-sprite-16.png');
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}

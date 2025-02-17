@@ -32,7 +32,7 @@ d-----        26-11-2024     12:56                ullu
 
 ### Direct Execution
 
-When `Y` is a vector of character vectors or an enclosed character vector, the first element of the array is treated as a program name, and the rest as individual arguments. The program is executed directly, without invoking the system's shell first. The program name can be an absolute path, a relative path, or the name of an executable in the current search path (operating-system specific). When the program is specified as a relative path, the name is resolved relative to the working directory, which can be set with the [`WorkingDir`](#WorkingDir) variant.
+When `Y` is a vector of character vectors or an enclosed character vector, the first element of the array is treated as a program name, and the rest as individual arguments. The program is executed directly, without invoking the system's shell first. The program name can be an absolute path, a relative path, or the name of an executable in the current search path (operating-system specific). When the program is specified as a relative path, the name is resolved relative to the working directory, which can be set with the [`WorkingDir`](#workingdir) variant.
 
 ## Return Value
 
@@ -57,9 +57,9 @@ A stream is a connection between the process and some resource, such as a file, 
 | 1 | Standard output | Output | Used to print regular output data. |
 | 2 | Standard error | Output | Used to print error messages or other information that is not part of the main output. |
 
-`⎕SHELL` provides great flexibility in what the streams should point to, by using the [`Output`](#Output) and [`Input`](#Input) variants. By default, the two output streams, 1 and 2, are configured such that the output produced on standard error is redirected to standard output and effectively merged together, and then turned into an APL array representing the lines of text.
+`⎕SHELL` provides great flexibility in what the streams should point to, by using the [`Output`](#output) and [`Input`](#input) variants. By default, the two output streams, 1 and 2, are configured such that the output produced on standard error is redirected to standard output and effectively merged together, and then turned into an APL array representing the lines of text.
 
-The StreamData and StreamIds vectors have the same length. The StreamIds are always sorted in ascending order. Each index describes one collected output stream; StreamIds contains the integer stream IDs, and the elements of StreamData depend on how the output is collected (see the [`Output`](#Output) variant).
+The StreamData and StreamIds vectors have the same length. The StreamIds are always sorted in ascending order. Each index describes one collected output stream; StreamIds contains the integer stream IDs, and the elements of StreamData depend on how the output is collected (see the [`Output`](#output) variant).
 
 By default, `⊃⊃⎕SHELL cmd` returns a vector of character vectors representing the lines of the collected output text from the child process (both standard output and standard error).
 
@@ -71,16 +71,16 @@ The  reasons why a call to `⎕SHELL` ends are described in the table below. `Ex
 | --- | --- | --- |
 | 0 | The child process finished and exited normally. | The non-negative exit code. |
 | 1 | The child process was terminated by a signal. | The negated signal number that caused the termination. |
-| 2 | `⎕SHELL` timed out before the child process exited (see the [`Timeout`](#Timeout) option). | The constant `¯1006`. |
+| 2 | `⎕SHELL` timed out before the child process exited (see the [`Timeout`](#timeout) option). | The constant `¯1006`. |
 | 3 | `⎕SHELL` was interrupted by a weak interrupt in the IDE. | The constant `¯1002`. |
 
 !!! windows "Dyalog on Microsoft Windows"
     `ExitReason` cannot be 1 on Microsoft Windows.
 
-Returning the exit code (instead of `⎕SHELL` producing some trappable error) makes it possible to access the other parts of the result, such as the error messages that were printed on the standard error stream. However, it is possible to turn non-successful exits into trappable errors using the [`ExitCheck`](#ExitCheck) variant.
+Returning the exit code (instead of `⎕SHELL` producing some trappable error) makes it possible to access the other parts of the result, such as the error messages that were printed on the standard error stream. However, it is possible to turn non-successful exits into trappable errors using the [`ExitCheck`](#exitcheck) variant.
 
 When the `ExitReason` is 2 or 3, the child process had not stopped running before `⎕SHELL` stopped, which means it might still be running, and require some appropriate cleanup (see [8373⌶](../../the-i-beam-operator/shell-process-control)).
-In practice, the child process often closes shortly after without the need for intervention, either due to the default signal being sent to it on non-Windows platforms (see the [`Signal`](#Signal) option), or because the connected streams are closed on the `⎕SHELL` end.
+In practice, the child process often closes shortly after without the need for intervention, either due to the default signal being sent to it on non-Windows platforms (see the [`Signal`](#signal) option), or because the connected streams are closed on the `⎕SHELL` end.
 
 ## Thread Switching
 `⎕SHELL` is a thread switch point, which means the interpreter will run other APL threads while a long-running `⎕SHELL` call is in progress.
@@ -182,7 +182,7 @@ The `InheritEnv` variant option specifies whether the set of environment variabl
 The default is `1`.
 
 ### Env
-The `Env` variant option specifies any additional environment variables and their values. If an environment variable that already exists in the set of inherited variables (see [`InheritEnv`](#InheritEnv)) is specified here, the value from `Env` takes precedence. The option value must be one of the following:
+The `Env` variant option specifies any additional environment variables and their values. If an environment variable that already exists in the set of inherited variables (see [`InheritEnv`](#inheritenv)) is specified here, the value from `Env` takes precedence. The option value must be one of the following:
 
 - a two-column matrix.
 - a two-element vector.
