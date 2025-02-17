@@ -71612,10 +71612,7 @@
 <p>When <code>X</code> is a 2-element integer vector, <code>X[1]</code> is a date-time code that explicitly specifies the date-time representation of the numeric elements in <code>Y</code>. <code>X[2]</code> is either 0 or a date-time code listed in the tables below. 0 specifies that the elements of <code>Y</code> are to be validated. A non-zero value specifies the date-time representation to which the elements of <code>Y</code> are to be converted.</p>
 <p>Character scalars in <code>Y</code> are always interpreted as meaning "now".</p>
 <p><code>R</code> is an array of the same shape as <code>Y</code>, where each element is either a timestamp, time number or Boolean value as determined by the second or only element in <code>X</code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
 <p>Time numbers in <code>R</code> may be of type DECF even if <code>⎕FR</code> is 645 if their magnitude can be too great to store precisely in a double. See the table below for the type numbers where this is so.</p>
-</div>
 <h2 id="time-numbers">Time Numbers</h2>
 <p>If a value in <code>X</code> is positive it indicates that a time number type is expected in <code>Y</code> or generated in <code>R</code>, as follows. Note that the last column indicated whether (Yes) or not (No) negative numbers are allowed.</p>
 <table>
@@ -72079,10 +72076,7 @@
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
 <p>The resolutions of system clocks vary by platform.</p>
-</div>
 <h2 id="examples">Examples</h2>
 <h3 class="example" id="timestamp-to-time-number-conversion">Timestamp to time number conversion</h3>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">¯1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕DT</span><span class="w"> </span><span class="o">⊂</span><span class="nf">⎕TS</span>
