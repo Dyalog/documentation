@@ -89,6 +89,7 @@ nav:
           - External Variables: introduction/external-variables.md
           - Component Files: introduction/component-files.md
           - Auxiliary Processors: introduction/auxiliary-processors.md
+  - Deprecated Features: deprecated-features.md
   - Defined Functions & Operators:
       - Traditional Functions and Operators:
           - Introduction: 

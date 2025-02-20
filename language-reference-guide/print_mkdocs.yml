@@ -49,6 +49,10 @@ markdown_extensions:
 nav:
   - Key to Notation: primitive-functions/key-to-notation.md
   - Primitive Functions:
+<<<<<<< HEAD
+      - Introduction: primitive-functions/chapter-4.md
+=======
+>>>>>>> a78ba524c3860543360bcf05b286980ca99ac78d
       - Scalar Functions: primitive-functions/scalar-functions.md
       - Mixed Functions: primitive-functions/mixed-functions.md
       - Notes: primitive-functions/notes.md
@@ -165,8 +169,15 @@ nav:
           - Without: primitive-functions/without.md
           - Zilde: primitive-functions/zilde.md
   - Primitive Operators:
+<<<<<<< HEAD
+      - Introduction: primitive-operators/chapter-5.md
       - Operator Syntax: primitive-operators/operator-syntax.md
       - Operators Summarised: primitive-operators/operators-summarised.md
+      - Operators A Z: primitive-operators/operators-a-z.md
+=======
+      - Operator Syntax: primitive-operators/operator-syntax.md
+      - Operators Summarised: primitive-operators/operators-summarised.md
+>>>>>>> a78ba524c3860543360bcf05b286980ca99ac78d
       - Primitive Operators (A-Z):
           - Assignment Modified: primitive-operators/assignment-modified.md
           - Assignment Indexed Modified: primitive-operators/assignment-indexed-modified.md
@@ -201,6 +212,9 @@ nav:
       - I-Beam: primitive-operators/i-beam.md
       - The I-Beam Operator:
           - Inverted Table Index Of: the-i-beam-operator/inverted-table-index-of.md
+          - Deprecated Features: the-i-beam-operator/deprecated-features.md
+          - Deprecated APL Code: the-i-beam-operator/deprecated-apl-code.md
+          - Log File for Deprecations: the-i-beam-operator/log-file-for-deprecations.md
           - Execute Expression: the-i-beam-operator/execute-expression.md
           - Overwrite Free Pockets: the-i-beam-operator/overwrite-free-pockets.md
           - Canonical Representation: the-i-beam-operator/canonical-representation.md
