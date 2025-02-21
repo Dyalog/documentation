@@ -49,7 +49,7 @@ If Native Look and Feel is enabled all three bitmap resources are mapped to a di
 | ![](img/paste-object-icon.png) ![](img/nlf-disabled/paste-object-icon.png) | Paste Object | Executes the system operation `[ObjPaste]` which copies the contents of the clipboard into the current object, replacing its previous value |
 | ![](img/print-object-icon.png) ![](img/nlf-disabled/print-object-icon.png) | Print Object | Executes the system operation `[ObjPrint]` . Prints the current object. Note that if the object is being edited, the version of the object displayed in the edit window is printed. |
 | ![](img/edit-object-icon.png) ![](img/nlf-disabled/edit-object-icon.png)     | Edit Object  | Executes the system operation `[Edit]` which edits the current object using the standard system editor |
-| ![](img/edit-numbers-icon.png) ![](img/nlf-disabled/edit-numbers-icon.png) | Edit Array   | Executes a defined function in `⎕SE` that edits the current object using the Array Editor (Unicode Edition) or a spreadsheet-like interface based upon the Grid object (Classic Edition). See [Array Editor](array-editor.md) |
+| ![](img/edit-numbers-icon.png) ![](img/nlf-disabled/edit-numbers-icon.png) | Edit in Array Notation | Edits the object in [array notation](../../programming-reference-guide/introduction/arrays/array-notation). |
 | ![](img/sharpplot-icon.png) ![](img/nlf-disabled/sharpplot-icon.jpg)             | SharpPlot    | Executes a defined function in `⎕SE` that runs the Chart Wizard to plot the current object using the `]chart` User Command. |
 
 

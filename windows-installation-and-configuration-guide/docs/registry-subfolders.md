@@ -86,9 +86,3 @@ Value Tips.
 
 This contains entries to maintain the position of various Session tool windows so that they remain consistent between successive invocations of APL.
 
-### Array Editor
-
-The Array Editor stores its settings in the following registry sub-folder:
-```
-HKEY_CURRENT_USER\Software\DavidLiebtag.com\Array Editor\1.1\Options
-```
