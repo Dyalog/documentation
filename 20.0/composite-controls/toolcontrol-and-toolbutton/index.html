@@ -1,0 +1,3708 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../graphics/using-icons/">
+      
+      
+        <link rel="next" href="../coolbar-and-coolband-objects/">
+      
+      
+      <link rel="icon" href="../../img/favicon-32.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
+    
+    
+      
+        <title>ToolControl and ToolButton Objects - Interface Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.2ebf2d53.css">
+        <style>:root{--md-text-font:"Be Vietnam Pro";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../style/main.css">
+    
+      <link rel="stylesheet" href="../../style/extra.css">
+    
+      <link rel="stylesheet" href="../../style/admonition-ucmdhelp.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#standard-bitmap-resources" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Interface Guide" class="md-header__button md-logo" aria-label="Interface Guide" data-md-component="logo">
+      
+  <img src="../../img/dyalog-logo-2025_white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Interface Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ToolControl and ToolButton Objects
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Interface Guide" class="md-nav__button md-logo" aria-label="Interface Guide" data-md-component="logo">
+      
+  <img src="../../img/dyalog-logo-2025_white.svg" alt="logo">
+
+    </a>
+    Interface Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/creating-objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Objects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/user-interaction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Interaction and Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/methods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Methods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/high-priority-callbacks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    High-Priority Callback Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/gui-objects-as-namespaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GUI Objects as Namespaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/modal-dialog-boxes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modal Dialog Boxes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/multi-threading-with-objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multi Threading with Objects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/the-cooordinate-system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Coordinate System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/high-dpi-support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    High DPI Support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/colour/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Colour
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/fonts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fonts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/drag-and-drop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drag and Drop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/debugging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/creating-objects-using-new/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Objects using NEW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/native-look-and-feel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Native Look and Feel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/gestures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GUI Tutorial
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            GUI Tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gui-tutorial/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gui-tutorial/some-concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Some Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gui-tutorial/creating-a-form/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a Form
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gui-tutorial/adding-a-fahrenheit-label/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding a Fahrenheit Label
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gui-tutorial/adding-a-fahrenheit-edit-field/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding a Fahrenheit Edit Field
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gui-tutorial/adding-a-centigrade-label-edit-field/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding a Centigrade Label Edit Field
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gui-tutorial/adding-calculate-buttons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Calculate Buttons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gui-tutorial/closing-the-application-window/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Closing the Application Window
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gui-tutorial/adding-a-quit-button/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding a Quit Button
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gui-tutorial/the-calculation-functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Calculation Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gui-tutorial/testing-the-application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing the Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gui-tutorial/making-the-enter-key-work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Making the Enter Key Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gui-tutorial/introducing-a-scrollbar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducing a ScrollBar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gui-tutorial/adding-a-menu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding a Menu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gui-tutorial/running-from-desktop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running from Desktop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gui-tutorial/using-new-instead-of-wc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using NEW instead of WC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gui-tutorial/temperature-converter-class/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Temperature Converter Class
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gui-tutorial/dual-class-example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dual Class Example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Graphics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Graphics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphics/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphics/drawing-lines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drawing Lines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphics/drawing-in-a-bitmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drawing in a Bitmap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphics/multiple-graphical-items/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiple Graphical Items
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphics/unnamed-graphical-objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unnamed Graphical Objects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphics/bitmaps-and-icons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bitmaps and Icons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphics/metafiles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metafiles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphics/picture-buttons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Picture Buttons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphics/using-icons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Icons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Composite Controls
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Composite Controls
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ToolControl and ToolButton Objects
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ToolControl and ToolButton Objects
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#standard-bitmap-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Bitmap Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dyalog-bitmap-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dyalog Bitmap Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-imagelists-for-toolbuttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating ImageLists for ToolButtons
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-style-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Style Property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-divider-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Divider Property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-multiline-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      The MultiLine Property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-transparent-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Transparent Property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radio-buttons-check-buttons-and-separators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Radio buttons, Check buttons and Separators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drop-down-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drop-Down buttons
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-menubar-as-the-child-of-a-toolcontrol" class="md-nav__link">
+    <span class="md-ellipsis">
+      A MenuBar as the child of a ToolControl
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#providing-user-customisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Providing User Customisation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coolbar-and-coolband-objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CoolBar and CoolBand Objects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tabcontrol-and-tabbutton-objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TabControl and TabButton Objects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statusbar-object/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StatusBar Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hints and Tips
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Hints and Tips
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hints-and-tips/using-hints/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Hints
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hints-and-tips/using-tips/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hints-and-tips/hints-and-tips-combined/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hints and Tips Combined
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Grid Object
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Grid Object
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grid-object/using-the-grid-object/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using the Grid Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grid-object/defining-overall-appearance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Defining Overall Appearance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grid-object/row-and-column-titles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Row and Column Titles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grid-object/displaying-and-editing-values-in-grid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Displaying and Editing Values in Grid Cells
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grid-object/specifying-individual-cell-attributes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Specifying Individual Cell Attributes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grid-object/drawing-graphics-on-a-grid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drawing Graphics on a Grid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grid-object/controlling-user-input/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controlling User Input
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grid-object/treeview-feature/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TreeView Feature
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grid-object/grid-comments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grid Comments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MDI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            MDI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mdi/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiple Document Interface Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mdi/mdi-behaviour/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MDI Behaviour
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mdi/menus-in-mdi-applications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Menus in MDI Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mdi/defining-a-window-menu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Defining a Window Menu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mdi/arranging-child-forms-and-icons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arranging Child Forms and Icons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Docking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docking/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docking/docking-events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docking Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docking/docking-a-form-inside-another/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docking a Form inside another
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docking/docking-a-form-into-a-coolbar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docking a Form into a CoolBar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docking/undocking-a-subform-or-a-coolband/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Undocking a SubForm or a CoolBand
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docking/docking-and-undocking-a-toolcontrol/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docking and Undocking a ToolControl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OLE Client
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            OLE Client
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-client/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-client/using-an-ole-server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using an OLE Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-client/loading-an-activex-control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Loading an ActiveX Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-client/type-information/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Type Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-client/methods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Methods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-client/properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-client/events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-client/ole-objects-without-type-information/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OLE Objects without Type Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-client/collections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-client/null-values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Null Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-client/additional-interfaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Additional Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-client/writing-classes-based-on-oleclient/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing Classes based on OLEClient
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OLE Server
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            OLE Server
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-server/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-server/in-process-ole-servers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    In process OLE Servers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-server/out-of-process-ole-servers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Out of process OLE Servers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-server/the-loan-workspace/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The LOAN Workspace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-server/implementing-an-object-hierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Implementing an Object Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-server/the-cfiles-workspace/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The CFILES Workspace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-server/configuring-an-out-of-process-oleserver/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring an out of process OLEServer for DCOM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ole-server/calling-an-ole-function-asynchronously/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calling an OLE Function Asynchronously
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ActiveX Control
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            ActiveX Control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../activex-control/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../activex-control/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../activex-control/dual-control-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Dual Control Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DDE
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            DDE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dde/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dde/shared-variable-principles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shared Variable Principles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dde/apl-and-dde-in-practice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    APL and DDE in Practice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dde/state-and-access-control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    State and Access Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dde/example-communication-between-apls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Communication Between APLs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dde/example-excel-as-the-server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Excel as the Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dde/example-excel-as-the-client/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Excel as the Client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dde/example-apl-as-compute-server-for-excel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    APL as Compute Server for Excel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dde/restrictions-limitations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Restrictions and Limitations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#standard-bitmap-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Bitmap Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dyalog-bitmap-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dyalog Bitmap Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-imagelists-for-toolbuttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating ImageLists for ToolButtons
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-style-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Style Property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-divider-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Divider Property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-multiline-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      The MultiLine Property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-transparent-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Transparent Property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radio-buttons-check-buttons-and-separators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Radio buttons, Check buttons and Separators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drop-down-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drop-Down buttons
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-menubar-as-the-child-of-a-toolcontrol" class="md-nav__link">
+    <span class="md-ellipsis">
+      A MenuBar as the child of a ToolControl
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#providing-user-customisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Providing User Customisation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 class="heading"><span class="name">The ToolControl and ToolButton Objects</span></h1>
+
+<p>The ToolControl object is normally used in conjunction with ToolButtons, although it may also act as a parent for other objects, including a MenuBar.</p>
+<p>A ToolButton may display a Caption and an Image, although both are optional. Images for individual ToolButtons are not defined one-by-one, but instead are defined by an ImageList which contains a set of bitmaps or icons.</p>
+<p>The ImageListObj property of the ToolControl specifies the name of one or more ImageList objects to be used. The ImageIndex properties of each of the ToolButtons specifies which of the images in each ImageList object apply to which of the ToolButtons.</p>
+<h2 id="standard-bitmap-resources">Standard Bitmap Resources</h2>
+<p>Typically, you will want your ToolControls to provide standard Windows buttons and the easiest way to achieve this is to utilise the standard Windows bitmaps that are contained in COMCTL32.DLL. There are three main sets of bitmaps, each of which is provided in two sizes, small (16x16) and large (24 x 24).</p>
+<p>Resource number 120 (<code>IDB_STD_SMALL_COLOR</code>) and 121 (<code>IDB_STD_LARGE_COLOR</code>) contain the following set of assorted bitmap images.</p>
+<p><img alt="" src="../../img/idb-std-bitmaps.bmp"></p>
+<p>Resource number 124 (<code>IDB_VIEW_SMALL_COLOR</code>) and 125 (<code>IDB_VIEW_LARGE_COLOR</code>) contain a set of bitmaps relating to different views of information. These are used, for example in the Windows Explorer tool bar</p>
+<p><img alt="" src="../../img/idb-view-bitmaps.bmp"></p>
+<p>Resource number 130 (IDB_HIST_SMALL_COLOR) and 131 (IDB_HIST_LARGE_COLOR) contain another useful set of bitmaps</p>
+<p><img alt="" src="../../img/idb-hist-bitmaps.bmp"></p>
+<p>COMCTL32.DLL also contains individual bitmaps in resources 132-134.</p>
+<h2 id="dyalog-bitmap-resources">Dyalog Bitmap Resources</h2>
+<p>Another three sets of useful bitmaps are to be found in the DyaRes DLL file. These bitmaps are used in the Dyalog APL/W Session tool buttons. Note that if you include these bitmaps in a run-time application, you will have to ship DyaRes DLL with it.</p>
+<p>The <em>normal</em> set of bitmaps associated with the Session buttons may be created using the statement:</p>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'bm'</span><span class="nf">⎕wc</span><span class="s1">'Bitmap'</span><span class="w"> </span><span class="p">(</span><span class="s1">'dyares180_64.dll'</span><span class="w"> </span><span class="s1">'tb_normal'</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="" src="../../img/tb-normal-bitmaps.bmp"></p>
+<p>The bitmaps used when the buttons are <em>highlighted</em> may be created using the statement.
+</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'bm'</span><span class="nf">⎕wc</span><span class="s1">'Bitmap'</span><span class="w"> </span><span class="p">(</span><span class="s1">'dyares180_64.dll'</span><span class="w"> </span><span class="s1">'tb_hot'</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="" src="../../img/tb-hot-bitmaps.bmp"></p>
+<p>The bitmaps used when the buttons are <em>inactive</em> may be created using the statement
+</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'bm'</span><span class="nf">⎕wc</span><span class="s1">'Bitmap'</span><span class="w"> </span><span class="p">(</span><span class="s1">'dyares180_64.dll'</span><span class="w"> </span><span class="s1">'tb_inactive'</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="" src="../../img/tb-inactive-bitmaps.bmp"></p>
+<p>Note that in the Dyalog Session, if Native Look and Feel is enabled, these bitmaps are overridden by a single set of images designed to operate with the user's chosen theme and Visual Styles. For further information, see <a href="../../introduction/native-look-and-feel/">Native Look and Feel</a>.</p>
+<h2 id="creating-imagelists-for-toolbuttons">Creating ImageLists for ToolButtons</h2>
+<p>You may use up to three ImageList objects to represent ToolButton images. These will be used to specify the pictures of the ToolButton objects in their normal, highlighted (sometimes termed hot) and inactive states respectively.</p>
+<p>The set of images in each ImageList is then defined by creating unnamed Bitmap or Icon objects as children.</p>
+<p>When creating an ImageList, it is a good idea to set its MapCols property to 1. This means that standard button colours used in the bitmaps will automatically be adjusted to take the user's colour preferences into account.</p>
+<p>When you create each ToolButton you specify its ImageIndex property, selecting up to three pictures (normal, highlighted and inactive) to be displayed on the button.</p>
+<p>If you specify only a single ImageList, the picture on the ToolButton will be the same in all three cases. However, the appearance of the buttons themselves change when the button is highlighted or pressed, and in many situations this may be sufficient behaviour.</p>
+<p>The following example illustrates how a simple ToolControl can be constructed using standard Windows bitmaps. Notice that the Masked property of the ImageList is set to 0; this is necessary if the ImageList is to contain bitmaps, as opposed to icons. Secondly, because the bitmaps are in this case size 16 x 16, it is unnecessary to specify the Size property of the ImageList which is, by default, also 16 x 16.
+</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">40</span><span class="p">)</span>
+<span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span>
+<span class="s1">'F.TB.IL'</span><span class="nf">⎕WC</span><span class="s1">'ImageList'</span><span class="p">(</span><span class="s1">'Masked'</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'MapCols'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+<span class="s1">'F.TB.IL.'</span><span class="nf">⎕WC</span><span class="s1">'Bitmap'</span><span class="p">(</span><span class="s1">'ComCtl32'</span><span class="w"> </span><span class="m">120</span><span class="p">)</span><span class="c1">⍝ STD_SMALL</span>
+<span class="s1">'F.TB'</span><span class="nf">⎕WS</span><span class="s1">'ImageListObj'</span><span class="w"> </span><span class="s1">'F.TB.IL'</span>
+<span class="s1">'F.TB.B1'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'New'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">7</span><span class="p">)</span>
+<span class="s1">'F.TB.B2'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Open'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">8</span><span class="p">)</span>
+<span class="s1">'F.TB.B3'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Save'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">9</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="" src="../../img/toolcontrol-style-flatbuttons.png"></p>
+<h2 id="the-style-property">The Style Property</h2>
+<p>The overall appearance of the ToolButton objects displayed by the ToolControl is defined by the Style property of the ToolControl itself, rather than by properties of individual ToolButtons.</p>
+<p>Note that the Style property may only be set when the ToolControl is created using <code>⎕WC</code> and may not subsequently be changed using <code>⎕WS</code>.</p>
+<p>Style may be <code>'FlatButtons'</code>, <code>'Buttons'</code>, <code>'List'</code> or <code>'FlatList'</code>. The default Style is of a ToolControl is <code>'FlatButtons'</code>, as is the first example above. The following examples illustrate the other three styles:</p>
+<p><img alt="" src="../../img/toolcontrol-style-buttons.png"></p>
+<p><img alt="" src="../../img/toolcontrol-style-list.png"></p>
+<p><img alt="" src="../../img/toolcontrol-style-flatlist.png"></p>
+<h2 id="the-divider-property">The Divider Property</h2>
+<p>You will notice that, in the above examples, there is a thin groove drawn above the ToolControl. The presence or absence of this groove is controlled by the Divider property whose default is 1. The following picture illustrates the effect of setting Divider to 0.</p>
+<p><img alt="" src="../../img/toolcontrol-no-divider.png"></p>
+<h2 id="the-multiline-property">The MultiLine Property</h2>
+<p>The MultiLine property specifies whether or not ToolButtons (and other child controls) are arranged in several rows (or columns) when there are more than would otherwise fit.</p>
+<p>If MultiLine is 0 (the default), the ToolControl object <em>clips</em> its children and the user must resize the Form to bring more objects into view.</p>
+<p>Note that you may change MultiLine dynamically, using <code>⎕WS</code>.
+</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: MultiLine 0'</span>
+<span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'List'</span><span class="p">)</span>
+
+<span class="s1">'F.TB.IL'</span><span class="nf">⎕WC</span><span class="s1">'ImageList'</span><span class="p">(</span><span class="s1">'Masked'</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">24</span><span class="w"> </span><span class="m">24</span><span class="p">)</span>
+<span class="s1">'F.TB.IL.'</span><span class="nf">⎕WC</span><span class="s1">'Bitmap'</span><span class="p">(</span><span class="s1">'ComCtl32'</span><span class="w"> </span><span class="m">121</span><span class="p">)</span><span class="c1">⍝ STD_LARGE</span>
+<span class="s1">'F.TB'</span><span class="nf">⎕WS</span><span class="s1">'ImageListObj'</span><span class="w"> </span><span class="s1">'F.TB.IL'</span>
+
+<span class="s1">'F.TB.B1'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Cut'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+<span class="s1">'F.TB.B2'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Copy'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
+<span class="s1">'F.TB.B3'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Paste'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+<span class="s1">'F.TB.B4'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Undo'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">4</span><span class="p">)</span>
+<span class="s1">'F.TB.B5'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Redo'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
+<span class="s1">'F.TB.B6'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Delete'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="" src="../../img/toolcontrol-multiline-0.png"></p>
+<p>If we set MultiLine to 1, the ToolButtons are instead displayed in several rows:</p>
+<p><img alt="" src="../../img/toolcontrol-multiline-1.png"></p>
+<h2 id="the-transparent-property">The Transparent Property</h2>
+<p>The Transparent property (default 0) specifies whether or not the ToolControl is transparent. Note that Transparent must be set when the object is created using <code>⎕WC</code> and may not subsequently be changed using <code>⎕WS</code>.</p>
+<p>If a ToolControl is created with Transparent set to 1, the visual effect is as if the ToolButtons (and other controls) were drawn directly on the parent Form as shown below.
+</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: Transparent 1)'</span>
+<span class="nv">ROOT</span><span class="kd">←</span><span class="s1">'C:\Program Files\Dyalog\Dyalog APL 13.1 Unicode\'</span>
+<span class="s1">'F.BM'</span><span class="nf">⎕WC</span><span class="s1">'Bitmap'</span><span class="p">(</span><span class="nv">ROOT</span><span class="o">,</span><span class="s1">'\WS\BUBBLES'</span><span class="p">)</span>
+<span class="s1">'F'</span><span class="nf">⎕WS</span><span class="s1">'Picture'</span><span class="w"> </span><span class="s1">'F.BM'</span><span class="w"> </span><span class="m">1</span>
+
+<span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Buttons'</span><span class="p">)(</span><span class="s1">'Transparent'</span><span class="m">1</span><span class="p">)</span>
+<span class="s1">'F.TB.IL'</span><span class="nf">⎕WC</span><span class="s1">'ImageList'</span><span class="p">(</span><span class="s1">'Masked'</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">24</span><span class="w"> </span><span class="m">24</span><span class="p">)</span>
+<span class="s1">'F.TB.IL.'</span><span class="nf">⎕WC</span><span class="s1">'Bitmap'</span><span class="p">(</span><span class="s1">'ComCtl32'</span><span class="w"> </span><span class="m">121</span><span class="p">)</span><span class="c1">⍝ STD_LARGE</span>
+<span class="s1">'F.TB'</span><span class="nf">⎕WS</span><span class="s1">'ImageListObj'</span><span class="w"> </span><span class="s1">'F.TB.IL'</span>
+
+<span class="s1">'F.TB.B1'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'New'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">7</span><span class="p">)</span>
+<span class="s1">'F.TB.B2'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Open'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">8</span><span class="p">)</span>
+<span class="s1">'F.TB.B3'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Save'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">9</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="" src="../../img/toolcontrol-transparent.png"></p>
+<h2 id="radio-buttons-check-buttons-and-separators">Radio buttons, Check buttons and Separators</h2>
+<p>The Style property of a ToolButton may be <code>'Push'</code>, <code>'Check'</code>, <code>'Radio'</code>, <code>'Separator'</code> or <code>'DropDown'</code>.</p>
+<p><em>Push</em> buttons (the default) are used to generate actions and pop in and out when clicked.</p>
+<p><em>Radio</em> and <em>Check</em> buttons are used to select options and have two states, normal (out) and selected (in). Their State property is 0 when the button is in its normal (unselected state) or 1 when it is selected.</p>
+<p>A group of adjacent ToolButtons with Style <code>'Radio'</code> defines a set in which only one of the ToolButtons may be selected at any one time. The act of selecting one will automatically deselect any other. Note that a group of Radio buttons must be separated from Check buttons or other groups of Radio buttons by ToolButtons of another Style.</p>
+<p>Separator buttons are a special case as they have no Caption or picture, but appear as a thin vertical grooves that are used only to separate groups of buttons.</p>
+<p>The following example illustrates how two groups of radio buttons are established by inserting a ToolButton with Style <code>'Separator'</code> between them. This ToolControl could be used to control the appearance of a ListView object. The first group is used to select the view (Large Icon, Small Icon, List or Report), and the second is used to sort the items by Name, Size or Date. In the picture, the user has selected Small Icon View and Sort by Date.
+</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: Radio Buttons'</span>
+<span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span>
+
+<span class="s1">'F.TB.IL'</span><span class="nf">⎕WC</span><span class="s1">'ImageList'</span><span class="p">(</span><span class="s1">'Masked'</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="s1">'F.TB.IL.'</span><span class="nf">⎕WC</span><span class="s1">'Bitmap'</span><span class="p">(</span><span class="s1">'ComCtl32'</span><span class="w"> </span><span class="m">124</span><span class="p">)</span><span class="c1">⍝ VIEW_SMALL</span>
+<span class="s1">'F.TB'</span><span class="nf">⎕WS</span><span class="s1">'ImageListObj'</span><span class="w"> </span><span class="s1">'F.TB.IL'</span>
+
+<span class="s1">'F.TB.B1'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Large'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Radio'</span><span class="p">)</span>
+<span class="s1">'F.TB.B2'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Small'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">2</span><span class="p">)(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Radio'</span><span class="p">)</span>
+<span class="s1">'F.TB.B3'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'List'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">3</span><span class="p">)(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Radio'</span><span class="p">)</span>
+<span class="s1">'F.TB.B4'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Details'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">4</span><span class="p">)(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Radio'</span><span class="p">)</span>
+
+<span class="s1">'F.TB.S1'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Separator'</span><span class="p">)</span>
+
+<span class="s1">'F.TB.B5'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Name'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">5</span><span class="p">)(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Radio'</span><span class="p">)</span>
+<span class="s1">'F.TB.B6'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Size'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">6</span><span class="p">)(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Radio'</span><span class="p">)</span>
+<span class="s1">'F.TB.B7'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Date'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">7</span><span class="p">)(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Radio'</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="" src="../../img/toolcontrol-radio-buttons.png"></p>
+<p>Notice that the appearance of the Separator ToolButton is less obvious when the ToolControl Style is Buttons or List, but the radio grouping effect is the same:</p>
+<p><img alt="" src="../../img/toolcontrol-list-radio-buttons.png"></p>
+<h2 id="drop-down-buttons">Drop-Down buttons</h2>
+<p>It is possible to define ToolButtons that display a drop-down menu from which the user may choose an option. This is done by creating a ToolButton with Style <code>'DropDown'</code>.</p>
+<p>A ToolButton with Style <code>'DropDown'</code> has an associated popup Menu object which is named by its Popup property. There are two cases to consider.</p>
+<p>If the ShowDropDown property of the parent ToolControl is 0, clicking the ToolButton causes the popup menu to appear. In this case, the ToolButton itself does not itself generate a Select event; you must rely on the user selecting a MenuItem to specify a particular action.</p>
+<p>If the ShowDropDown property of the parent ToolControl is 1, clicking the dropdown button causes the popup menu to appear; clicking the ToolButton itself generates a Select event, but does not display the popup menu.
+</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: Dropdown Buttons'</span>
+<span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span><span class="p">(</span><span class="s1">'ShowDropDown'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+
+<span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="s1">'F.FMENU'</span><span class="nf">⎕WC</span><span class="s1">'Menu'</span><span class="w"> </span><span class="c1">⍝ Popup File menu</span>
+<span class="w">    </span><span class="s1">'NEW'</span><span class="nf">⎕WC</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'&amp;New'</span>
+<span class="w">    </span><span class="s1">'OPEN'</span><span class="nf">⎕WC</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'&amp;Open'</span>
+<span class="w">    </span><span class="s1">'CLOSE'</span><span class="nf">⎕WC</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'&amp;Close'</span>
+<span class="bp">:</span><span class="nv">EndWith</span>
+
+<span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="s1">'F.EMENU'</span><span class="nf">⎕WC</span><span class="s1">'Menu'</span><span class="w"> </span><span class="c1">⍝ Popup Edit menu</span>
+<span class="w">    </span><span class="s1">'CUT'</span><span class="nf">⎕WC</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'Cu&amp;t'</span>
+<span class="w">    </span><span class="s1">'COPY'</span><span class="nf">⎕WC</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'&amp;Copy'</span>
+<span class="w">    </span><span class="s1">'PASTE'</span><span class="nf">⎕WC</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'&amp;Paste'</span>
+<span class="w"> </span><span class="bp">:</span><span class="nv">EndWith</span>
+
+<span class="s1">'F.TB.B1'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'File'</span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'DropDown'</span><span class="p">)(</span><span class="s1">'Popup'</span><span class="w"> </span><span class="s1">'F.FMENU'</span><span class="p">)</span>
+<span class="s1">'F.TB.B2'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Edit'</span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'DropDown'</span><span class="p">)(</span><span class="s1">'Popup'</span><span class="w"> </span><span class="s1">'F.EMENU'</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="" src="../../img/toolcontrol-dropdown-buttons.png"></p>
+<h2 id="a-menubar-as-the-child-of-a-toolcontrol">A MenuBar as the child of a ToolControl</h2>
+<p>As a special case, the ToolControl may contain a MenuBar as its <strong>only</strong> child. In this case, Dyalog APL/W causes the menu items to be drawn as buttons, even under Windows 95.</p>
+<p>Although nothing is done to prevent it, the use of other objects in a ToolControl containing a MenuBar, is not supported.
+</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl with MenuBar'</span>
+<span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span><span class="w"> </span>
+
+<span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="s1">'F.TB.MB'</span><span class="nf">⎕WC</span><span class="s1">'MenuBar'</span><span class="w"> </span>
+<span class="w">    </span><span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="s1">'File'</span><span class="nf">⎕WC</span><span class="s1">'Menu'</span><span class="w"> </span><span class="s1">'File'</span><span class="w"> </span>
+<span class="w">        </span><span class="s1">'New'</span><span class="nf">⎕WC</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'New'</span><span class="w"> </span>
+<span class="w">        </span><span class="s1">'Open'</span><span class="nf">⎕WC</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'Open'</span><span class="w"> </span>
+<span class="w">        </span><span class="s1">'Close'</span><span class="nf">⎕WC</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'Close'</span><span class="w"> </span>
+<span class="w">    </span><span class="bp">:</span><span class="nv">EndWith</span><span class="w"> </span>
+
+<span class="w">    </span><span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="s1">'Edit'</span><span class="nf">⎕WC</span><span class="s1">'Menu'</span><span class="w"> </span><span class="s1">'Edit'</span>
+<span class="w">        </span><span class="s1">'Cut'</span><span class="nf">⎕WC</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'Cut'</span>
+<span class="w">        </span><span class="s1">'Copy'</span><span class="nf">⎕WC</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'Copy'</span><span class="w"> </span>
+<span class="w">        </span><span class="s1">'Paste'</span><span class="nf">⎕WC</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'Paste'</span><span class="w"> </span>
+<span class="w">    </span><span class="bp">:</span><span class="nv">EndWith</span><span class="w"> </span>
+
+<span class="bp">:</span><span class="nv">EndWith</span>
+</code></pre></div>
+<p><img alt="" src="../../img/toolcontrol-menubar.png"></p>
+<h2 id="providing-user-customisation">Providing User Customisation</h2>
+<p>It is common to allow the user to switch the appearance of a ToolControl dynamically. This may be done using a pop-up menu. In addition to providing a choice of styles, the user may switch the text captions on and off.</p>
+<p>The ShowCaptions property specifies whether or not the captions of ToolButton objects are drawn. Its default value is 1 (draw captions).</p>
+<p>ToolButtons drawn without captions occupy much less space and ShowCaptions provides a quick way to turn captions on/off for user customisation.</p>
+<p><img alt="" src="../../img/toolcontrol-user-options.png"></p>
+<p>The following functions illustrate how this was achieved.
+</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Example</span>
+<span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: User Options'</span>
+<span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span>
+<span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="s1">'F.TB'</span><span class="nf">⎕WS</span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'MouseDown'</span><span class="w"> </span><span class="s1">'TC_POPUP'</span>
+<span class="sr">[</span><span class="m">4</span><span class="sr">]</span>
+<span class="sr">[</span><span class="m">5</span><span class="sr">]</span><span class="w">    </span><span class="s1">'F.TB.IL'</span><span class="nf">⎕WC</span><span class="s1">'ImageList'</span><span class="p">(</span><span class="s1">'Masked'</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">24</span><span class="w"> </span><span class="m">24</span><span class="p">)</span>
+<span class="sr">[</span><span class="m">6</span><span class="sr">]</span><span class="w">    </span><span class="s1">'F.TB.IL.'</span><span class="nf">⎕WC</span><span class="s1">'Bitmap'</span><span class="p">(</span><span class="s1">'ComCtl32'</span><span class="w"> </span><span class="m">121</span><span class="p">)</span><span class="c1">⍝ STD_LARGE</span>
+<span class="sr">[</span><span class="m">7</span><span class="sr">]</span><span class="w">    </span><span class="s1">'F.TB'</span><span class="nf">⎕WS</span><span class="s1">'ImageListObj'</span><span class="w"> </span><span class="s1">'F.TB.IL'</span>
+<span class="sr">[</span><span class="m">8</span><span class="sr">]</span>
+<span class="sr">[</span><span class="m">9</span><span class="sr">]</span><span class="w">    </span><span class="s1">'F.TB.B1'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Cut'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+<span class="sr">[</span><span class="m">10</span><span class="sr">]</span><span class="w">   </span><span class="s1">'F.TB.B2'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Copy'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
+<span class="sr">[</span><span class="m">11</span><span class="sr">]</span><span class="w">   </span><span class="s1">'F.TB.B3'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Paste'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+<span class="sr">[</span><span class="m">12</span><span class="sr">]</span><span class="w">   </span><span class="s1">'F.TB.B4'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Undo'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">4</span><span class="p">)</span>
+<span class="sr">[</span><span class="m">13</span><span class="sr">]</span><span class="w">   </span><span class="s1">'F.TB.B5'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Redo'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
+<span class="sr">[</span><span class="m">14</span><span class="sr">]</span><span class="w">   </span><span class="s1">'F.TB.B6'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Delete'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
+<span class="w">     </span><span class="bp">∇</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">TC_POPUP</span><span class="w"> </span><span class="nv">MSG</span><span class="sr">;</span><span class="nv">popup</span><span class="sr">;</span><span class="nv">TC</span><span class="sr">;</span><span class="nv">STYLE</span><span class="sr">;</span><span class="nv">SHOW</span><span class="sr">;</span><span class="nv">MULTI</span><span class="sr">;</span><span class="nv">OPTION</span>
+<span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="c1">⍝ Popup menu on ToolControl</span>
+<span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="o">≠</span><span class="m">5</span><span class="o">⊃</span><span class="nv">MSG</span><span class="p">)</span><span class="w"> </span><span class="c1">⍝ Right mouse button ?</span>
+<span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">        </span><span class="bp">:</span><span class="nv">Return</span>
+<span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">EndIf</span>
+<span class="sr">[</span><span class="m">5</span><span class="sr">]</span>
+<span class="sr">[</span><span class="m">6</span><span class="sr">]</span><span class="w">    </span><span class="nv">TC</span><span class="kd">←</span><span class="s1">'#.'</span><span class="o">,⊃</span><span class="nv">MSG</span>
+<span class="sr">[</span><span class="m">7</span><span class="sr">]</span><span class="w">    </span><span class="nv">STYLE</span><span class="w"> </span><span class="nv">SHOW</span><span class="w"> </span><span class="nv">MULTI</span><span class="kd">←</span><span class="nv">TC</span><span class="w"> </span><span class="nf">⎕WG</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'ShowCaptions'</span>
+<span class="w">                              </span><span class="s1">'MultiLine'</span>
+<span class="sr">[</span><span class="m">8</span><span class="sr">]</span>
+<span class="sr">[</span><span class="m">9</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="s1">'popup'</span><span class="nf">⎕WC</span><span class="s1">'Menu'</span>
+<span class="sr">[</span><span class="m">10</span><span class="sr">]</span><span class="w">       </span><span class="s1">'FlatButtons'</span><span class="nf">⎕WC</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'&amp;Flat Buttons'</span>
+<span class="w">                          </span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Radio'</span><span class="p">)</span>
+<span class="sr">[</span><span class="m">11</span><span class="sr">]</span><span class="w">       </span><span class="s1">'Buttons'</span><span class="nf">⎕WC</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'&amp;Buttons'</span>
+<span class="w">                          </span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Radio'</span><span class="p">)</span>
+<span class="sr">[</span><span class="m">12</span><span class="sr">]</span><span class="w">       </span><span class="s1">'List'</span><span class="nf">⎕WC</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'&amp;List'</span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Radio'</span><span class="p">)</span>
+<span class="sr">[</span><span class="m">13</span><span class="sr">]</span><span class="w">       </span><span class="s1">'FlatList'</span><span class="nf">⎕WC</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'Fla&amp;t List'</span>
+<span class="w">                          </span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Radio'</span><span class="p">)</span>
+<span class="sr">[</span><span class="m">14</span><span class="sr">]</span><span class="w">       </span><span class="nv">STYLE</span><span class="w"> </span><span class="nf">⎕WS</span><span class="s1">'Checked'</span><span class="w"> </span><span class="m">1</span>
+<span class="sr">[</span><span class="m">15</span><span class="sr">]</span><span class="w">       </span><span class="s1">'sep'</span><span class="nf">⎕WC</span><span class="s1">'Separator'</span>
+<span class="sr">[</span><span class="m">16</span><span class="sr">]</span><span class="w">       </span><span class="s1">'ShowCaptions'</span><span class="nf">⎕WC</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'&amp;Show Text'</span>
+<span class="w">                           </span><span class="p">(</span><span class="s1">'Checked'</span><span class="nv">SHOW</span><span class="p">)</span>
+<span class="sr">[</span><span class="m">17</span><span class="sr">]</span><span class="w">       </span><span class="s1">'MultiLine'</span><span class="nf">⎕WC</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'&amp;MultiLine'</span>
+<span class="w">                           </span><span class="p">(</span><span class="s1">'Checked'</span><span class="nv">MULTI</span><span class="p">)</span>
+<span class="sr">[</span><span class="m">18</span><span class="sr">]</span>
+<span class="sr">[</span><span class="m">19</span><span class="sr">]</span><span class="w">       </span><span class="p">(</span><span class="s1">'MenuItem'</span><span class="nf">⎕WN</span><span class="s1">''</span><span class="p">)</span><span class="nf">⎕WS</span><span class="na">¨</span><span class="o">⊂</span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'Select'</span><span class="w"> </span><span class="m">1</span>
+<span class="sr">[</span><span class="m">20</span><span class="sr">]</span>
+<span class="sr">[</span><span class="m">21</span><span class="sr">]</span><span class="w">       </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="m">0</span><span class="o">=⍴</span><span class="nv">MSG</span><span class="kd">←</span><span class="nf">⎕DQ</span><span class="s1">''</span>
+<span class="sr">[</span><span class="m">22</span><span class="sr">]</span><span class="w">           </span><span class="bp">:</span><span class="nv">Return</span>
+<span class="sr">[</span><span class="m">23</span><span class="sr">]</span><span class="w">       </span><span class="bp">:</span><span class="nv">EndIf</span>
+<span class="sr">[</span><span class="m">24</span><span class="sr">]</span>
+<span class="sr">[</span><span class="m">25</span><span class="sr">]</span><span class="w">       </span><span class="bp">:</span><span class="nv">Select</span><span class="w"> </span><span class="nv">OPTION</span><span class="kd">←</span><span class="o">⊃</span><span class="nv">MSG</span>
+<span class="sr">[</span><span class="m">26</span><span class="sr">]</span><span class="w">       </span><span class="bp">:</span><span class="nv">CaseList</span><span class="w"> </span><span class="s1">'FlatButtons'</span><span class="w"> </span><span class="s1">'Buttons'</span><span class="w"> </span><span class="s1">'List'</span>
+<span class="w">                     </span><span class="s1">'FlatList'</span>
+<span class="sr">[</span><span class="m">27</span><span class="sr">]</span><span class="w">           </span><span class="nv">TC</span><span class="w"> </span><span class="nf">⎕WS</span><span class="s1">'Style'</span><span class="nv">OPTION</span>
+<span class="sr">[</span><span class="m">28</span><span class="sr">]</span><span class="w">       </span><span class="bp">:</span><span class="nv">Else</span>
+<span class="sr">[</span><span class="m">29</span><span class="sr">]</span><span class="w">           </span><span class="nv">TC</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="nv">OPTION</span><span class="p">(</span><span class="o">~</span><span class="nv">TC</span><span class="w"> </span><span class="nf">⎕WG</span><span class="w"> </span><span class="nv">OPTION</span><span class="p">)</span>
+<span class="sr">[</span><span class="m">30</span><span class="sr">]</span><span class="w">       </span><span class="bp">:</span><span class="nv">EndSelect</span>
+<span class="sr">[</span><span class="m">31</span><span class="sr">]</span>
+<span class="sr">[</span><span class="m">32</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">EndWith</span>
+<span class="w">     </span><span class="bp">∇</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.path", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../https:/polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="../../assets/external/unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../assets/external/unpkg.com/mermaid@10.7.0/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
