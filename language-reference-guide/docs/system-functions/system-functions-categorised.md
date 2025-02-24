@@ -239,6 +239,8 @@ NOTE: Tolerant comparisons depend on `⎕FR` to select which of `⎕CT` and `⎕
 |[`⎕SIZE`](size.md)  |Size of objects          |
 |[`⎕STACK`](stack.md) |Report Stack             |
 |[`⎕STATE`](state.md) |Return State of an object|
+|[`⎕VGET`](vget.md)  |Value Get              |
+|[`⎕VSET`](vset.md)  |Value Set              |
 |[`⎕WA`](wa.md)    |Workspace Available      |
 |[`⎕WSID`](wsid.md)  |Workspace Identification |
 |[`⎕XSI`](xsi.md)   |Extended State Indicator |

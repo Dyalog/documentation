@@ -447,7 +447,9 @@ nav:
           - Wait for Threads to Terminate: system-functions/tsync.md
           - Unicode Convert: system-functions/ucs.md
           - Using Microsoft Net Search Path: system-functions/using.md
+          - Value Get: system-functions/vget.md
           - Vector Representation: system-functions/vr.md
+          - Value Set: system-functions/vset.md
           - Verify Fix Input: system-functions/vfi.md
           - Workspace Available: system-functions/wa.md
           - Windows Create Object: system-functions/wc.md
