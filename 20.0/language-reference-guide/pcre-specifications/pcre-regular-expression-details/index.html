@@ -27222,6 +27222,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -27483,6 +27487,50 @@
   
   <span class="md-ellipsis">
     State of Object
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-functions/vget/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Value Get
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-functions/vset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Value Set
     
   </span>
   
@@ -28495,6 +28543,10 @@
   
     
     
+      
+        
+      
+        
       
         
       
@@ -32734,11 +32786,55 @@
   
   
     <li class="md-nav__item">
+      <a href="../../system-functions/vget/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Value Get
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../system-functions/vr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Vector Representation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-functions/vset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Value Set
     
   </span>
   
@@ -75440,7 +75536,8 @@
 
 <h1 class="heading"><span class="name">PCRE Regular Expression Details</span></h1>
 
-<div class="highlight"><pre><span></span><code>PCREPATTERN(3)             Library Functions Manual             PCREPATTERN(3)
+<pre class="manpage">
+PCREPATTERN(3)             Library Functions Manual             PCREPATTERN(3)
 
 NAME
        PCRE - Perl-compatible regular expressions
@@ -76830,8 +76927,8 @@ NAMED SUBPATTERNS
        tax. Perl allows identically numbered  subpatterns  to  have  different
        names, but PCRE does not.
 
-       In  PCRE,  a subpattern can be named in one of three ways: (?&lt;name&gt;...)
-       or (?'name'...) as in Perl, or (?P&lt;name&gt;...) as in  Python.  References
+       In  PCRE,  a subpattern can be named in one of three ways: (?<name>...)
+       or (?'name'...) as in Perl, or (?P<name>...) as in  Python.  References
        to  capturing parentheses from other parts of the pattern, such as back
        references, recursion, and conditions, can be made by name as  well  as
        by number.
@@ -76853,11 +76950,11 @@ NAMED SUBPATTERNS
        both cases you want to extract the abbreviation. This pattern (ignoring
        the line breaks) does the job:
 
-         (?&lt;DN&gt;Mon|Fri|Sun)(?:day)?|
-         (?&lt;DN&gt;Tue)(?:sday)?|
-         (?&lt;DN&gt;Wed)(?:nesday)?|
-         (?&lt;DN&gt;Thu)(?:rsday)?|
-         (?&lt;DN&gt;Sat)(?:urday)?
+         (?<dn>Mon|Fri|Sun)(?:day)?|
+         (?<dn>Tue)(?:sday)?|
+         (?<dn>Wed)(?:nesday)?|
+         (?<dn>Thu)(?:rsday)?|
+         (?<dn>Sat)(?:urday)?
 
        There are five capturing substrings, but only one is ever set  after  a
        match.  (An alternative way of solving this problem is to use a "branch
@@ -76874,7 +76971,7 @@ NAMED SUBPATTERNS
        first one that is set is used for the reference. For example, this pat-
        tern matches both "foofoo" and "barbar" but not "foobar" or "barfoo":
 
-         (?:(?&lt;n&gt;foo)|(?&lt;n&gt;bar))\k&lt;n&gt;
+         (?:(?<n>foo)|(?<n>bar))\k<n>
 
        If you make a subroutine call to a non-unique named subpattern, the one
        that corresponds to the first occurrence of the name is  used.  In  the
@@ -77226,16 +77323,16 @@ BACK REFERENCES
        original capturing subpattern is matched caselessly.
 
        There  are  several  different ways of writing back references to named
-       subpatterns. The .NET syntax \k{name} and the Perl syntax  \k&lt;name&gt;  or
+       subpatterns. The .NET syntax \k{name} and the Perl syntax  \k<name>  or
        \k'name'  are supported, as is the Python syntax (?P=name). Perl 5.10's
        unified back reference syntax, in which \g can be used for both numeric
        and  named  references,  is  also supported. We could rewrite the above
        example in any of the following ways:
 
-         (?&lt;p1&gt;(?i)rah)\s+\k&lt;p1&gt;
+         (?<p1>(?i)rah)\s+\k<p1>
          (?'p1'(?i)rah)\s+\k{p1}
-         (?P&lt;p1&gt;(?i)rah)\s+(?P=p1)
-         (?&lt;p1&gt;(?i)rah)\s+\g{p1}
+         (?P<p1>(?i)rah)\s+(?P=p1)
+         (?<p1>(?i)rah)\s+\g{p1}
 
        A subpattern that is referenced by  name  may  appear  in  the  pattern
        before or after the reference.
@@ -77346,188 +77443,14 @@ ASSERTIONS
 
    Lookbehind assertions
 
-       Lookbehind  assertions start with (?&lt;= for positive assertions and (?&lt;!
-       for negative assertions. For example,
-
-         (?&lt;!foo)bar
-
-       does find an occurrence of "bar" that is not  preceded  by  "foo".  The
-       contents  of  a  lookbehind  assertion are restricted such that all the
-       strings it matches must have a fixed length. However, if there are sev-
-       eral  top-level  alternatives,  they  do  not all have to have the same
-       fixed length. Thus
-
-         (?&lt;=bullock|donkey)
-
-       is permitted, but
-
-         (?&lt;!dogs?|cats?)
-
-       causes an error at compile time. Branches that match  different  length
-       strings  are permitted only at the top level of a lookbehind assertion.
-       This is an extension compared with Perl, which requires all branches to
-       match the same length of string. An assertion such as
-
-         (?&lt;=ab(c|de))
-
-       is  not  permitted,  because  its single top-level branch can match two
-       different lengths, but it is acceptable to PCRE if rewritten to use two
-       top-level branches:
-
-         (?&lt;=abc|abde)
-
-       In  some  cases, the escape sequence \K (see above) can be used instead
-       of a lookbehind assertion to get round the fixed-length restriction.
-
-       The implementation of lookbehind assertions is, for  each  alternative,
-       to  temporarily  move the current position back by the fixed length and
-       then try to match. If there are insufficient characters before the cur-
-       rent position, the assertion fails.
-
-       In  a UTF mode, PCRE does not allow the \C escape (which matches a sin-
-       gle data unit even in a UTF mode) to appear in  lookbehind  assertions,
-       because  it  makes it impossible to calculate the length of the lookbe-
-       hind. The \X and \R escapes, which can match different numbers of  data
-       units, are also not permitted.
-
-       "Subroutine"  calls  (see below) such as (?2) or (?&amp;X) are permitted in
-       lookbehinds, as long as the subpattern matches a  fixed-length  string.
-       Recursion, however, is not supported.
-
-       Possessive  quantifiers  can  be  used  in  conjunction with lookbehind
-       assertions to specify efficient matching of fixed-length strings at the
-       end of subject strings. Consider a simple pattern such as
-
-         abcd$
-
-       when  applied  to  a  long string that does not match. Because matching
-       proceeds from left to right, PCRE will look for each "a" in the subject
-       and  then  see  if what follows matches the rest of the pattern. If the
-       pattern is specified as
-
-         ^.*abcd$
-
-       the initial .* matches the entire string at first, but when this  fails
-       (because there is no following "a"), it backtracks to match all but the
-       last character, then all but the last two characters, and so  on.  Once
-       again  the search for "a" covers the entire string, from right to left,
-       so we are no better off. However, if the pattern is written as
-
-         ^.*+(?&lt;=abcd)
-
-       there can be no backtracking for the .*+ item; it can  match  only  the
-       entire  string.  The subsequent lookbehind assertion does a single test
-       on the last four characters. If it fails, the match fails  immediately.
-       For  long  strings, this approach makes a significant difference to the
-       processing time.
-
-   Using multiple assertions
-
-       Several assertions (of any sort) may occur in succession. For example,
-
-         (?&lt;=\d{3})(?&lt;!999)foo
-
-       matches "foo" preceded by three digits that are not "999". Notice  that
-       each  of  the  assertions is applied independently at the same point in
-       the subject string. First there is a  check  that  the  previous  three
-       characters  are  all  digits,  and  then there is a check that the same
-       three characters are not "999".  This pattern does not match "foo" pre-
-       ceded  by  six  characters,  the first of which are digits and the last
-       three of which are not "999". For example, it  doesn't  match  "123abc-
-       foo". A pattern to do that is
-
-         (?&lt;=\d{3}...)(?&lt;!999)foo
-
-       This  time  the  first assertion looks at the preceding six characters,
-       checking that the first three are digits, and then the second assertion
-       checks that the preceding three characters are not "999".
-
-       Assertions can be nested in any combination. For example,
-
-         (?&lt;=(?&lt;!foo)bar)baz
-
-       matches  an occurrence of "baz" that is preceded by "bar" which in turn
-       is not preceded by "foo", while
-
-         (?&lt;=\d{3}(?!999)...)foo
-
-       is another pattern that matches "foo" preceded by three digits and  any
-       three characters that are not "999".
-
-CONDITIONAL SUBPATTERNS
-
-       It  is possible to cause the matching process to obey a subpattern con-
-       ditionally or to choose between two alternative subpatterns,  depending
-       on  the result of an assertion, or whether a specific capturing subpat-
-       tern has already been matched. The two possible  forms  of  conditional
-       subpattern are:
-
-         (?(condition)yes-pattern)
-         (?(condition)yes-pattern|no-pattern)
-
-       If  the  condition is satisfied, the yes-pattern is used; otherwise the
-       no-pattern (if present) is used. If there are more  than  two  alterna-
-       tives  in  the subpattern, a compile-time error occurs. Each of the two
-       alternatives may itself contain nested subpatterns of any form, includ-
-       ing  conditional  subpatterns;  the  restriction  to  two  alternatives
-       applies only at the level of the condition. This pattern fragment is an
-       example where the alternatives are complex:
-
-         (?(1) (A|B|C) | (D | (?(2)E|F) | E) )
-
-       There  are  four  kinds of condition: references to subpatterns, refer-
-       ences to recursion, a pseudo-condition called DEFINE, and assertions.
-
-   Checking for a used subpattern by number
-
-       If the text between the parentheses consists of a sequence  of  digits,
-       the condition is true if a capturing subpattern of that number has pre-
-       viously matched. If there is more than one  capturing  subpattern  with
-       the  same  number  (see  the earlier section about duplicate subpattern
-       numbers), the condition is true if any of them have matched. An  alter-
-       native  notation is to precede the digits with a plus or minus sign. In
-       this case, the subpattern number is relative rather than absolute.  The
-       most  recently opened parentheses can be referenced by (?(-1), the next
-       most recent by (?(-2), and so on. Inside loops it can also  make  sense
-       to refer to subsequent groups. The next parentheses to be opened can be
-       referenced as (?(+1), and so on. (The value zero in any of these  forms
-       is not used; it provokes a compile-time error.)
-
-       Consider  the  following  pattern, which contains non-significant white
-       space to make it more readable (assume the PCRE_EXTENDED option) and to
-       divide it into three parts for ease of discussion:
-
-         ( \( )?    [^()]+    (?(1) \) )
-
-       The  first  part  matches  an optional opening parenthesis, and if that
-       character is present, sets it as the first captured substring. The sec-
-       ond  part  matches one or more characters that are not parentheses. The
-       third part is a conditional subpattern that tests whether  or  not  the
-       first  set  of  parentheses  matched.  If they did, that is, if subject
-       started with an opening parenthesis, the condition is true, and so  the
-       yes-pattern  is  executed and a closing parenthesis is required. Other-
-       wise, since no-pattern is not present, the subpattern matches  nothing.
-       In  other  words,  this  pattern matches a sequence of non-parentheses,
-       optionally enclosed in parentheses.
-
-       If you were embedding this pattern in a larger one,  you  could  use  a
-       relative reference:
-
-         ...other stuff... ( \( )?    [^()]+    (?(-1) \) ) ...
-
-       This  makes  the  fragment independent of the parentheses in the larger
-       pattern.
-
-   Checking for a used subpattern by name
-
-       Perl uses the syntax (?(&lt;name&gt;)...) or (?('name')...)  to  test  for  a
+       Lookbehind  assertions start with (?&lt;= for positive assertions and (?)...) or (?('name')...)  to  test  for  a
        used  subpattern  by  name.  For compatibility with earlier versions of
        PCRE, which had this facility before Perl, the syntax  (?(name)...)  is
        also recognized.
 
        Rewriting the above example to use a named subpattern gives this:
 
-         (?&lt;OPEN&gt; \( )?    [^()]+    (?(&lt;OPEN&gt;) \) )
+         (?<open> \( )?    [^()]+    (?(<open>) \) )
 
        If  the  name used in a condition of this kind is a duplicate, the test
        is applied to all subpatterns of the same name, and is true if any  one
@@ -77562,7 +77485,7 @@ CONDITIONAL SUBPATTERNS
        example,  a  pattern  to match an IPv4 address such as "192.168.23.245"
        could be written like this (ignore white space and line breaks):
 
-         (?(DEFINE) (?&lt;byte&gt; 2[0-4]\d | 25[0-5] | 1\d\d | [1-9]?\d) )
+         (?(DEFINE) (?<byte> 2[0-4]\d | 25[0-5] | 1\d\d | [1-9]?\d) )
          \b (?&amp;byte) (\.(?&amp;byte)){3} \b
 
        The first part of the pattern is a DEFINE group inside which a  another
@@ -77688,7 +77611,7 @@ RECURSIVE PATTERNS
        syntax  for  this  is (?&amp;name); PCRE's earlier syntax (?P&gt;name) is also
        supported. We could rewrite the above example as follows:
 
-         (?&lt;pn&gt; \( ( [^()]++ | (?&amp;pn) )* \) )
+         (?<pn> \( ( [^()]++ | (?&amp;pn) )* \) )
 
        If there is more than one subpattern with the same name,  the  earliest
        one is used.
@@ -77876,7 +77799,7 @@ ONIGURUMA SUBROUTINE SYNTAX
        possibly  recursively. Here are two of the examples used above, rewrit-
        ten using this syntax:
 
-         (?&lt;pn&gt; \( ( (?&gt;[^()]+) | \g&lt;pn&gt; )* \) )
+         (?<pn> \( ( (?&gt;[^()]+) | \g<pn> )* \) )
          (sens|respons)e and \g'1'ibility
 
        PCRE supports an extension to Oniguruma: if a number is preceded  by  a
@@ -78336,7 +78259,7 @@ REVISION
 
        Last updated: 08 January 2014
        Copyright (c) 1997-2014 University of Cambridge.
-</code></pre></div>
+</pn></pn></pn></byte></open></open></p1></p1></p1></p1></name></n></n></n></dn></dn></dn></dn></dn></name></name></pre>
 
 
 

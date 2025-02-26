@@ -27242,6 +27242,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -27503,6 +27507,50 @@
   
   <span class="md-ellipsis">
     State of Object
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-functions/vget/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Value Get
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-functions/vset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Value Set
     
   </span>
   
@@ -28515,6 +28563,10 @@
   
     
     
+      
+        
+      
+        
       
         
       
@@ -32754,11 +32806,55 @@
   
   
     <li class="md-nav__item">
+      <a href="../../system-functions/vget/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Value Get
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../system-functions/vr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Vector Representation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-functions/vset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Value Set
     
   </span>
   
@@ -75450,6 +75546,15 @@
 
 <h1 class="heading"><span class="name">Execute</span> <span class="command">R←{X}⍎Y</span></h1>
 
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the argument to execute could include user input, then this might put data and systems at risk.
+To reduce the risk of this, a system function might be more appropriate than the execute function:</p>
+<ul>
+<li>To get or set the value of one or more variables named within one or more character vectors, consider using <a href="../../system-functions/vget/"><code>⎕VGET</code></a> or <a href="../../system-functions/vset/"><code>⎕VSET</code></a>.</li>
+<li>To make numbers in text form into actual numbers, consider using <a href="../../system-functions/vfi/"><code>⎕VFI</code></a>, <a href="../../system-functions/json/"><code>⎕JSON</code></a>, or <a href="../../system-functions/csv/"><code>⎕CSV</code></a>.</li>
+</ul>
+</div>
 <p><code>Y</code> must be a simple character scalar or vector containing an APL expression to be executed. The expression may contain one or more sub-expressions separated by <code>⋄</code> (Diamond) characters.</p>
 <p>If the result of the expression is used or is assigned to a name,  <code>R</code> is the result (if any) of the last-executed sub-expression and the non-shy results of all preceding expressions (that are not assigned within the expression) are displayed. Otherwise the unassigned non-shy results of all of the sub-expressions are displayed.</p>
 <p>If the expression is an empty vector or a vector containing only blanks or one that does not produce a result, then <code>⍎Y</code> has no value and using or assigning it to a name will generate <code>VALUE ERROR</code>.</p>

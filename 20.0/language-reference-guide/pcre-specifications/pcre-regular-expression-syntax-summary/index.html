@@ -27222,6 +27222,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -27483,6 +27487,50 @@
   
   <span class="md-ellipsis">
     State of Object
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-functions/vget/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Value Get
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-functions/vset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Value Set
     
   </span>
   
@@ -28495,6 +28543,10 @@
   
     
     
+      
+        
+      
+        
       
         
       
@@ -32734,11 +32786,55 @@
   
   
     <li class="md-nav__item">
+      <a href="../../system-functions/vget/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Value Get
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../system-functions/vr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Vector Representation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-functions/vset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Value Set
     
   </span>
   
@@ -75440,8 +75536,9 @@
 
 <h1 class="heading"><span class="name">PCRE Regular Expression Syntax Summary</span></h1>
 
-<p>The following is a summary of search pattern syntax.
-</p><div class="highlight"><pre><span></span><code>PCRESYNTAX(3)              Library Functions Manual              PCRESYNTAX(3)
+<p>The following is a summary of search pattern syntax.</p>
+<pre class="manpage">
+PCRESYNTAX(3)              Library Functions Manual              PCRESYNTAX(3)
 
 NAME
        PCRE - Perl-compatible regular expressions
@@ -75659,9 +75756,9 @@ ALTERNATION
 CAPTURING
 
          (...)           capturing group
-         (?&lt;name&gt;...)    named capturing group (Perl)
+         (?<name>...)    named capturing group (Perl)
          (?'name'...)    named capturing group (Perl)
-         (?P&lt;name&gt;...)   named capturing group (Python)
+         (?P<name>...)   named capturing group (Python)
          (?:...)         non-capturing group
          (?|...)         non-capturing group; reset group numbers for
                           capturing groups in each alternative
@@ -75725,17 +75822,7 @@ LOOKAHEAD AND LOOKBEHIND ASSERTIONS
          (?=...)         positive look ahead
          (?!...)         negative look ahead
          (?&lt;=...)        positive look behind
-         (?&lt;!...)        negative look behind
-
-       Each top-level branch of a look behind must be of a fixed length.
-
-BACKREFERENCES
-
-         \n              reference by number (can be ambiguous)
-         \gn             reference by number
-         \g{n}           reference by number
-         \g{-n}          relative reference by number
-         \k&lt;name&gt;        reference by name (Perl)
+         (?        reference by name (Perl)
          \k'name'        reference by name (Perl)
          \g{name}        reference by name (Perl)
          \k{name}        reference by name (.NET)
@@ -75749,9 +75836,9 @@ SUBROUTINE REFERENCES (POSSIBLY RECURSIVE)
          (?-n)           call subpattern by relative number
          (?&amp;name)        call subpattern by name (Perl)
          (?P&gt;name)       call subpattern by name (Python)
-         \g&lt;name&gt;        call subpattern by name (Oniguruma)
+         \g<name>        call subpattern by name (Oniguruma)
          \g'name'        call subpattern by name (Oniguruma)
-         \g&lt;n&gt;           call subpattern by absolute number (Oniguruma)
+         \g<n>           call subpattern by absolute number (Oniguruma)
          \g'n'           call subpattern by absolute number (Oniguruma)
          \g&lt;+n&gt;          call subpattern by relative number (PCRE extension)
          \g'+n'          call subpattern by relative number (PCRE extension)
@@ -75766,7 +75853,7 @@ CONDITIONAL PATTERNS
          (?(n)...        absolute reference condition
          (?(+n)...       relative reference condition
          (?(-n)...       relative reference condition
-         (?(&lt;name&gt;)...   named reference condition (Perl)
+         (?(<name>)...   named reference condition (Perl)
          (?('name')...   named reference condition (Perl)
          (?(name)...     named reference condition (PCRE)
          (?(R)...        overall recursion condition
@@ -75816,7 +75903,7 @@ REVISION
 
        Last updated: 08 January 2014
        Copyright (c) 1997-2014 University of Cambridge.
-</code></pre></div>
+</name></n></name></name></name></pre>
 
 
 

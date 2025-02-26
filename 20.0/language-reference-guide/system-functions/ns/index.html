@@ -24952,6 +24952,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#variant-option-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variant Option: Trigger
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -27286,6 +27295,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -27547,6 +27560,50 @@
   
   <span class="md-ellipsis">
     State of Object
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vget/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Value Get
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Value Set
     
   </span>
   
@@ -28561,6 +28618,10 @@
   
     
     
+      
+        
+      
+        
       
         
       
@@ -31455,6 +31516,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#variant-option-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variant Option: Trigger
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -32857,11 +32927,55 @@
   
   
     <li class="md-nav__item">
+      <a href="../vget/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Value Get
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../vr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Vector Representation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Value Set
     
   </span>
   
@@ -75558,6 +75672,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#variant-option-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variant Option: Trigger
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -75579,8 +75702,20 @@
 
 <h1 class="heading"><span class="name">Namespace</span> <span class="command">{R}←{X}⎕NS Y</span></h1>
 
-<p>If specified, <code>X</code> must be a simple character scalar or vector identifying the name of a namespace.</p>
-<p><code>Y</code> is either a character array which represents a list of names of objects to be copied into the namespace, or a ref to a namespace, or  an array produced by the <code>⎕OR</code> of a namespace.</p>
+<p>The <code>⎕NS</code> system function makes it possible to create namespaces, copy elements from one namespace to another, and clone namespaces.</p>
+<p><code>Y</code> is one of the following:</p>
+<ul>
+<li>a character array that represents a list of names of objects to be copied into a namespace.</li>
+<li>a ref to a namespace.</li>
+<li>an array produced by the <a href="../or/"><code>⎕OR</code></a> of a namespace.</li>
+</ul>
+<p>If specified, <code>X</code> must be an array that identifies one or more namespaces. This means <code>X</code> must be one of:</p>
+<ul>
+<li>a simple character scalar or vector identifying the name of a namespace.</li>
+<li>a reference to a namespace.</li>
+<li>an array where each item is one of the above. If <code>X</code> refers to multiple namespaces, then <code>⎕NS</code> processes each item of <code>X</code> in ravel order, using the entire argument <code>Y</code>; this is equivalent to <code>X ⎕NS¨⊂Y</code>. If <code>X</code> is empty, no action is taken.</li>
+</ul>
+<p>The result <code>R</code> is shy when the system function is invoked dyadically, otherwise its contents are determined by the value of <code>Y</code>.</p>
 <h2 id="case-1">Case 1</h2>
 <p>In the first case, <code>Y</code> must be a simple character scalar, vector, matrix or a nested vector of character vectors identifying zero or more workspace objects to be copied into the namespace <code>X</code>.  The identifiers in <code>X</code> and <code>Y</code> may be simple names or compound names separated by <code>'.'</code> and including the names of the special namespaces <code>'#'</code>, <code>'##'</code> and <code>'⎕SE'</code>.</p>
 <p>The namespace <code>X</code> is created if it doesn't already exist.  If the name is already in use for an object other than a namespace, APL issues a <code>DOMAIN ERROR</code>.</p>
@@ -75625,6 +75760,64 @@
 <li>If <code>X</code> does not currently exist (name class is 0), <code>X</code> is created as a complete copy (clone) of the original namespace represented by <code>Y</code>. If <code>Y</code> is a ref to or the <code>⎕OR</code> of a GUI object or of a namespace containing GUI objects, the corresponding GUI components of <code>Y</code> will be instantiated in <code>X</code>.</li>
 <li>If <code>X</code> is the name of an existing namespace (name class 9), the contents of <code>Y</code>, including any GUI components, are merged into <code>X</code>. Any items in <code>X</code> with corresponding names in <code>Y</code> (names with the same path in both <code>Y</code> and <code>X</code>) will be replaced by the names in <code>Y</code>, unless they have a conflicting name class in which case the existing items in <code>X</code> will remain unchanged. However, all GUI spaces in <code>X</code> will be stripped of their GUI components prior to the merge operation.</li>
 </ul>
+<p><code>Y</code> can also be a vector of namespaces, in which case each item of <code>Y</code> is processed as explained above, in ravel order. The effect is that the contents of all the namespaces are merged into the target namespace.</p>
+<h3 class="example">Examples</h3>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">original</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="no">⍬</span>
+<span class="w">      </span><span class="nv">original</span><span class="na">.</span><span class="p">(</span><span class="nv">A</span><span class="w"> </span><span class="nv">B</span><span class="w"> </span><span class="nv">C</span><span class="p">)</span><span class="kd">←</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span>
+<span class="w">      </span><span class="nv">cloned</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="w"> </span><span class="nv">original</span><span class="w">       </span><span class="c1">⍝ cloning a namespace</span>
+<span class="w">      </span><span class="nv">cloned</span><span class="na">.</span><span class="nv">D</span><span class="kd">←</span><span class="m">4</span>
+
+<span class="w">      </span><span class="nv">original</span><span class="na">.</span><span class="nf">⎕NL</span><span class="w"> </span><span class="m">¯2</span>
+<span class="w"> </span><span class="nv">A</span><span class="w">  </span><span class="nv">B</span><span class="w">  </span><span class="nv">C</span>
+<span class="w">      </span><span class="nv">cloned</span><span class="na">.</span><span class="nf">⎕NL</span><span class="w"> </span><span class="m">¯2</span>
+<span class="w"> </span><span class="nv">A</span><span class="w">  </span><span class="nv">B</span><span class="w">  </span><span class="nv">C</span><span class="w">  </span><span class="nv">D</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">defaults</span><span class="kd">←</span><span class="p">(</span>
+<span class="w">        </span><span class="nv">name</span><span class="bp">:</span><span class="w"> </span><span class="s1">'&lt;no name&gt;'</span>
+<span class="w">        </span><span class="nv">age</span><span class="bp">:</span><span class="w"> </span><span class="s1">'&lt;no age&gt;'</span>
+<span class="w">        </span><span class="nv">phone</span><span class="bp">:</span><span class="w"> </span><span class="s1">'&lt;no phone&gt;'</span>
+<span class="w">        </span><span class="nv">email</span><span class="bp">:</span><span class="w"> </span><span class="s1">'&lt;no email&gt;'</span>
+<span class="w">      </span><span class="p">)</span>
+<span class="w">      </span><span class="nv">jack</span><span class="kd">←</span><span class="p">(</span><span class="nv">name</span><span class="bp">:</span><span class="w"> </span><span class="s1">'Jack'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">email</span><span class="bp">:</span><span class="w"> </span><span class="s1">'jack@example.com'</span><span class="p">)</span>
+<span class="w">      </span><span class="nv">person</span><span class="kd">←</span><span class="p">(</span><span class="nv">age</span><span class="bp">:</span><span class="w"> </span><span class="m">42</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">phone</span><span class="bp">:</span><span class="w"> </span><span class="m">12345678</span><span class="p">)</span>
+<span class="w">      </span><span class="nv">show</span><span class="kd">←</span><span class="nf">⎕JSON</span><span class="na">⍠</span><span class="s1">'Compact'</span><span class="w"> </span><span class="m">0</span>
+
+<span class="w">      </span><span class="nv">show</span><span class="w"> </span><span class="nf">⎕NS</span><span class="w"> </span><span class="nv">defaults</span><span class="w"> </span><span class="nv">jack</span><span class="w">        </span><span class="c1">⍝ merge defaults and jack</span>
+<span class="kt">{</span>
+<span class="w">  </span><span class="s2">"age"</span><span class="bp">:</span><span class="w"> </span><span class="s2">"&lt;no age&gt;"</span><span class="o">,</span>
+<span class="w">  </span><span class="s2">"email"</span><span class="bp">:</span><span class="w"> </span><span class="s2">"jack@example.com"</span><span class="o">,</span>
+<span class="w">  </span><span class="s2">"name"</span><span class="bp">:</span><span class="w"> </span><span class="s2">"Jack"</span><span class="o">,</span>
+<span class="w">  </span><span class="s2">"phone"</span><span class="bp">:</span><span class="w"> </span><span class="s2">"&lt;no phone&gt;"</span>
+<span class="kt">}</span>
+<span class="w">      </span><span class="nv">show</span><span class="w"> </span><span class="nf">⎕NS</span><span class="w"> </span><span class="nv">defaults</span><span class="w"> </span><span class="nv">person</span><span class="w">  </span><span class="c1">⍝ merge defaults and person</span>
+<span class="kt">{</span>
+<span class="w">  </span><span class="s2">"age"</span><span class="bp">:</span><span class="w"> </span><span class="m">42</span><span class="o">,</span>
+<span class="w">  </span><span class="s2">"email"</span><span class="bp">:</span><span class="w"> </span><span class="s2">"&lt;no email&gt;"</span><span class="o">,</span>
+<span class="w">  </span><span class="s2">"name"</span><span class="bp">:</span><span class="w"> </span><span class="s2">"&lt;no name&gt;"</span><span class="o">,</span>
+<span class="w">  </span><span class="s2">"phone"</span><span class="bp">:</span><span class="w"> </span><span class="m">12345678</span>
+<span class="kt">}</span>
+</code></pre></div>
+<h2 id="variant-option-trigger">Variant Option: Trigger</h2>
+<p>The <code>Trigger</code> variant option specifies whether any <a href="../../programming-reference-guide/triggers/triggers">triggers</a> should be run for the modified variables in the target namespace that have triggers attached.
+The value must be a Boolean scalar. The default is 0, meaning that triggers are not run.</p>
+<h4 class="example">Example</h4>
+
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕VR</span><span class="w"> </span><span class="s1">'trigger'</span>
+<span class="w">     </span><span class="bp">∇</span><span class="nv">trigger</span><span class="w"> </span><span class="nv">arg</span>
+<span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Trigger</span><span class="w"> </span><span class="nv">X</span><span class="o">,</span><span class="nv">Y</span>
+<span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="vg">⎕</span><span class="kd">←</span><span class="s1">'Running trigger for: '</span><span class="o">,</span><span class="nv">arg</span><span class="na">.</span><span class="nv">Name</span>
+<span class="w">     </span><span class="bp">∇</span>
+
+<span class="w">      </span><span class="nv">newValues</span><span class="kd">←</span><span class="p">(</span><span class="nv">Y</span><span class="bp">:</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">Z</span><span class="bp">:</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
+
+<span class="w">      </span><span class="c1">⍝ ⎕NS without running triggers</span>
+<span class="w">      </span><span class="nf">⎕THIS</span><span class="w"> </span><span class="nf">⎕NS</span><span class="w"> </span><span class="nv">newValues</span>
+<span class="w">      </span><span class="nf">⎕THIS</span><span class="w"> </span><span class="nf">⎕NS</span><span class="na">⍠</span><span class="s1">'Trigger'</span><span class="w"> </span><span class="m">0</span><span class="o">⊢</span><span class="nv">newValues</span>
+
+<span class="w">      </span><span class="c1">⍝ ⎕NS running triggers</span>
+<span class="w">      </span><span class="nf">⎕THIS</span><span class="w"> </span><span class="nf">⎕NS</span><span class="na">⍠</span><span class="s1">'Trigger'</span><span class="w"> </span><span class="m">1</span><span class="o">⊢</span><span class="nv">newValues</span>
+<span class="nv">Running</span><span class="w"> </span><span class="nv">trigger</span><span class="w"> </span><span class="nv">for</span><span class="bp">:</span><span class="w"> </span><span class="nv">Y</span>
+</code></pre></div>
 
 
 
