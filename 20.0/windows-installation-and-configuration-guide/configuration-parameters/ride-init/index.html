@@ -75536,18 +75536,18 @@
 
 <h1 class="heading"><span class="name">RIDE_Init</span></h1>
 
-<p>This parameter determines how the interpreter should behave with respect to the RIDE protocol. Setting this configuration parameter on the machine that hosts the interpreter enables the interpreter-RIDE connection.</p>
-<p>RIDE_Init can only be used to specify a limited number of RIDE configuration options; the rest must be specified in a RIDE ini file. Full details describing how to configure RIDE, including using certificates to authenticate connections can be found in the <em>RIDE User Guide</em>.</p>
+<p>This parameter determines how the interpreter should behave with respect to the Ride protocol. Setting this configuration parameter on the machine that hosts the interpreter enables the interpreter-Ride connection.</p>
+<p>RIDE_Init can only be used to specify a limited number of Ride configuration options; the rest must be specified in a Ride ini file. Full details describing how to configure Ride, including using certificates to authenticate connections can be found in the <a href="https://dyalog.github.io/ride">Ride User Guide</a>.</p>
 <p>The format of the value is:
-</p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="o">&lt;</span><span class="nv">setting</span><span class="o">&gt;</span><span class="w"> </span><span class="bp">:</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">address</span><span class="o">&gt;</span><span class="w"> </span><span class="bp">:</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">port</span><span class="o">&gt;</span>
+</p><div class="highlight"><pre><span></span><code>&lt;setting&gt; : &lt;address&gt; : &lt;port&gt;
 </code></pre></div>
 <p><em>setting</em> is the action the interpreter should take. Valid values, which are case-insensitive, are as follows:</p>
 <ul>
 <li>serve – listen for incoming connections</li>
-<li>http - listen for an incoming request for Zero Footprint RIDE</li>
-<li>connect – connect to the specified RIDE and end the session if this fails</li>
-<li>poll – try to connect to the specified RIDE at regular intervals and reconnect if the connection is lost</li>
-<li>config - specifies the name of the RIDE ini file to be used</li>
+<li>http - listen for an incoming request for Zero Footprint Ride</li>
+<li>connect – connect to the specified Ride and end the session if this fails</li>
+<li>poll – try to connect to the specified Ride at regular intervals and reconnect if the connection is lost</li>
+<li>config - specifies the name of the Ride ini file to be used</li>
 </ul>
 <p>For serve and http, </p><address> is a list of IPv4 or IPv6 addresses and/or DNS names of interfaces in the machine where the APL process is running, and specifies the interfaces through which incoming requests to connect are accepted. If <address> is empty, incoming requests are accepted only from the machine itself (the interpreter will listen on the loopback addresses only). If <address> is set to “*” then the interpreter will listen for requests through all the available interfaces in the local machine.
 <p>If <em>setting</em> is <code>serve</code> or <code>http</code> then <em>address</em>  is a list of IPv4 or IPv6 addresses and/or DNS names of interfaces in the machine where the APL process is running, and specifies the interfaces through which incoming requests to connect are accepted. If <em>address</em> is empty, incoming requests are accepted only from the machine itself (the interpreter will listen on the loopback addresses only). If <em>address</em> is set to “*” then the interpreter will listen for requests through all the available interfaces in the local machine.</p>
@@ -75567,21 +75567,21 @@
 </li>
 </ul>
 <p><em>port</em> is the TCP port to listen on</p>
-<p>Settings specified by the <strong>RIDE_Init</strong> configuration parameter take precedence over the same setting specified in the RIDE ini file. Note that the <strong>RIDE_Init</strong> configuration parameter can specify both <em>config</em> and one of <em>serve</em>, <em>http</em>, <em>connect</em> or <em>poll</em>. For example
-</p><div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nv">RIDE_INIT</span><span class="o">=</span><span class="nv">serve</span><span class="bp">:</span><span class="o">*</span><span class="bp">:</span><span class="m">4502</span><span class="o">,</span><span class="nv">config</span><span class="o">=</span><span class="na">/</span><span class="nv">home</span><span class="na">/</span><span class="nv">andys</span><span class="na">/.</span><span class="nv">dyalog</span><span class="na">/</span><span class="nv">secureride</span><span class="na">.</span><span class="nv">ini</span>
+<p>Settings specified by the <strong>RIDE_Init</strong> configuration parameter take precedence over the same setting specified in the Ride ini file. Note that the <strong>RIDE_Init</strong> configuration parameter can specify both <em>config</em> and one of <em>serve</em>, <em>http</em>, <em>connect</em> or <em>poll</em>. For example,
+</p><div class="highlight"><pre><span></span><code>RIDE_INIT=serve:*:4502,config=/home/andys/.dyalog/secureride.ini
 </code></pre></div>
-<p>This is most useful when multiple interpreters need to be run, each with its own RIDE connection as each must have a separate port number.</p>
-<p>Note that the <strong>RIDE_Init</strong> configuration parameter is set automatically when launching a new Dyalog Session from the RIDE.</p>
+<p>This is most useful when multiple interpreters need to be run, each with its own Ride connection as each must have a separate port number.</p>
+<p>Note that the <strong>RIDE_Init</strong> configuration parameter is set automatically when launching a new Dyalog Session from Ride.</p>
 <h2 class="example">Examples</h2>
 
 <p>To allow an incoming connection through any interface in the machine running the interpreter:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">RIDE_INIT</span><span class="o">=</span><span class="nv">serve</span><span class="bp">:</span><span class="o">*</span><span class="bp">:</span><span class="m">4052</span>
+</p><div class="highlight"><pre><span></span><code>RIDE_INIT=serve:*:4052
 </code></pre></div>
-<p>To allow incoming Zero Footprint RIDE connection through just one interface of the machine running the interpreter:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">RIDE_INIT</span><span class="o">=</span><span class="nv">http</span><span class="bp">:</span><span class="m">192.168.0.10</span><span class="bp">:</span><span class="m">8080</span>
+<p>To allow incoming Zero Footprint Ride connection through just one interface of the machine running the interpreter:
+</p><div class="highlight"><pre><span></span><code>RIDE_INIT=http:192.168.0.10:8080
 </code></pre></div>
-<p>To attempt to connect to RIDE running on my colleague's machine:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">RIDE_INIT</span><span class="o">=</span><span class="nv">connect</span><span class="bp">:</span><span class="nv">pete</span><span class="na">.</span><span class="nv">dyalog</span><span class="na">.</span><span class="nv">com</span><span class="bp">:</span><span class="m">4052</span>
+<p>To attempt to connect to Ride running on my colleague's machine:
+</p><div class="highlight"><pre><span></span><code>RIDE_INIT=connect:pete.dyalog.com:4052
 </code></pre></div>
 
 
@@ -75612,7 +75612,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 2015-2024 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong> (2025-02-26 main:cf9f74c3a)
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong> (2025-02-27 main:2de611890)
     </div>
   
   

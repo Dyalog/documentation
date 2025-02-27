@@ -75544,19 +75544,19 @@
 <p>If <code>Y</code> is a character vector and Ride is currently disabled, then the current initialisation string is unconditionally replaced by the contents of <code>Y</code>. If Ride is currently enabled, the initialisation string is not replaced, and <code>R</code> will have the value <code>¯2</code>.</p>
 <p>The initialisation string has the same syntax as the value of the <strong>RIDE_INIT</strong> configuration parameter which is described in the <a href="https://dyalog.github.io/ride">Ride User Guide</a>.</p>
 <p>The configuration parameter <strong>RIDE_INIT</strong> can still be used to establish the initial value of the Ride initialisation string.</p>
-<p>The runtime interpreter has RIDE disabled by default, whether or not <strong>RIDE_INIT</strong> is set; the only method of enabling Ride in a runtime interpreter is to  call <code>3502⌶1</code>.</p>
+<p>The runtime interpreter has Ride disabled by default, whether or not <strong>RIDE_INIT</strong> is set; the only method of enabling Ride in a runtime interpreter is to  call <code>3502⌶1</code>.</p>
 <p>If <strong>RIDE_INIT</strong> is set when a development interpreter is called, Ride will be enabled provided that the Ride DLL/shared library is available and the <strong>RIDE_INIT</strong> variable is properly formed. If the connection is of type SERVE the port must not be in use.  If any of these conditions are not met, then the interpreter fails with a non-zero exit code.  If <strong>RIDE_INIT</strong> is not set then the development interpreter will start, but with Ride disabled.</p>
 <p>It is therefore possible to override the <strong>RIDE_INIT</strong> variable in the development interpreter with code similar to:
 </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">r</span><span class="kd">←</span><span class="m">3502</span><span class="na">⌶</span><span class="m">0</span><span class="w">             </span><span class="c1">⍝ Stop Ride</span>
 <span class="w">      </span><span class="nv">r</span><span class="kd">←</span><span class="m">3502</span><span class="na">⌶</span><span class="s1">'SERVE::4511'</span><span class="w"> </span><span class="c1">⍝ Update init string</span>
 <span class="w">      </span><span class="nv">r</span><span class="kd">←</span><span class="m">3502</span><span class="na">⌶</span><span class="m">1</span><span class="w">             </span><span class="c1">⍝ Start Ride</span>
 </code></pre></div>
-<p>And similarly for altering the Ride settings in an active APL session.</p>
+<p>and similarly for altering the Ride settings in an active APL session.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In 14.1 and earlier <code>3502⌶⍬</code> was used to enable Ride; this value is still valid, albeit deprecated: code should call <code>3502⌶1</code> instead.</p>
 </div>
-<p>Enabling the Ride to access applications that use the run-time interpreter means that the APL code of those applications can be accessed. The I-beam mechanism described above means that the APL code itself must grant the right for a Ride client to connect to the run‑time interpreter. Although Dyalog Ltd might change the details of this mechanism, the APL code will <strong>always</strong> need to grant connection rights. In particular, no mechanism that is only dependent on configuration parameters will be implemented.</p>
+<p>Enabling Ride to access applications that use the run-time interpreter means that the APL code of those applications can be accessed. The I-beam mechanism described above means that the APL code itself must grant the right for a Ride client to connect to the run‑time interpreter. Although Dyalog Ltd might change the details of this mechanism, the APL code will <strong>always</strong> need to grant connection rights. In particular, no mechanism that is only dependent on configuration parameters will be implemented.</p>
 
 
 
@@ -75586,7 +75586,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 2015-2024 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong> (2025-02-26 main:cf9f74c3a)
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong> (2025-02-27 main:2de611890)
     </div>
   
   
