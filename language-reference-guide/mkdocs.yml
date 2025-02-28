@@ -284,6 +284,7 @@ nav:
           - Atop: primitive-operators/atop.md
           - Axis with Monadic Operand: primitive-operators/axis-with-monadic-operand.md
           - Axis with Dyadic Operand: primitive-operators/axis-with-dyadic-operand.md
+          - Behind: primitive-operators/behind.md
           - Beside: primitive-operators/beside.md
           - Bind: primitive-operators/bind.md
           - Commute: primitive-operators/commute.md

@@ -69,14 +69,15 @@ A `TRANSLATION ERROR` will also be issued when a Classic edition attempts to `)L
 
 `TCPSocket` objects have an `APL` property that corresponds to the Unicode property of a file, if this is set to `Classic` (the default) the data in the socket will be restricted to `⎕AV`, if Unicode it will contain Unicode character data. As a result, `TRANSLATION ERROR`s can occur on transmission or reception in the same way as when updating or reading a file component.
 
-The symbols `⊆`, `⍸`, `⍤`, `⍠`, `⌸`, `⌺` and `⍥`  used for the 
+The symbols `⊆`, `⍸`, `⍤`, `⍠`, `⌸`, `⌺`, `⍥` and `⍛`  used for the 
 		Nest (Interval Index) and 
 		Where (Partition) functions, the 
 		Rank, 
 		Variant, 
 		Key, 
-		Stencil and 
-		Over operators respectively are available only in the Unicode edition. In the Classic edition, these symbols are replaced by `⎕U2286`, `⎕U2378`, `⎕U2364`, `⎕U2360`, `⎕U2338`, `⎕U233a` and `⎕U2365` respectively. In both Unicode and Classic editions Variant may be represented by `⎕OPT`.
+		Stencil, 
+		Over and
+		Behind operators respectively are available only in the Unicode edition. In the Classic edition, these symbols are replaced by `⎕U2286`, `⎕U2378`, `⎕U2364`, `⎕U2360`, `⎕U2338`, `⎕U233a`, `⎕U2365` and `⎕U235b` respectively. In both Unicode and Classic editions Variant may be represented by `⎕OPT`.
 
 ## Very large array components
 

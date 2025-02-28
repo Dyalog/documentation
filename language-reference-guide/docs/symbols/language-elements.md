@@ -203,6 +203,14 @@
         <td class="Dyalog"><a href="../at">@</a>
         </td>
     </tr>
+    <tr>
+        <td class="Dyalog"><a href="../jot-underbar">⍛</a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
 </table>
 
 ## Other Language Elements
