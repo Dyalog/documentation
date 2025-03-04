@@ -173,7 +173,7 @@ NOTE: Tolerant comparisons depend on `⎕FR` to select which of `⎕CT` and `⎕
 |[`⎕NERASE`](nerase.md)  |Erase a File                                                 |
 |[`⎕NEXISTS`](nexists.md) |Discover whether or not a file or directory exists           |
 |[`⎕NGET`](nget.md)    |Read Text File                                               |
-|[`⎕NINFO`](ninfo.md)   |Obtain information about one or more files and/or directories|
+|[`⎕NINFO`](ninfo.md)   |Query or set information about one or more files and/or directories|
 |[`⎕NLOCK`](nlock.md)   |Lock a region of a file                                      |
 |[`⎕NMOVE`](nmove.md)   |Move files and directories                                   |
 |[`⎕NNAMES`](nnames.md)  |Names of tied Files                                          |
