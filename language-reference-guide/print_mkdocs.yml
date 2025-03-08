@@ -203,6 +203,7 @@ nav:
           - Inverted Table Index Of: the-i-beam-operator/inverted-table-index-of.md
           - Monadic Opeator Generator: the-i-beam-operator/monadic-operator-generator.md
           - Execute Expression: the-i-beam-operator/execute-expression.md
+          - UUID Generator: the-i-beam-operator/uuid-generator.md
           - Overwrite Free Pockets: the-i-beam-operator/overwrite-free-pockets.md
           - Canonical Representation: the-i-beam-operator/canonical-representation.md
           - Unsqueezed Type: the-i-beam-operator/unsqueezed-type.md
