@@ -79,27 +79,25 @@ You may select text in an Editor window by clicking the left or right mouse butt
 
 ![](img/editor-toolbar.png)
 
-In the table below, the first image shows the appearance of the toolbutton with Native Look and Feel enabled; the second with it disabled.
-
 |Button|Description|
 |---|---|
-|![](img/trace-theme-14-00.png) ![](img/editor-line-numbers-icon.png) Toggle line numbers|Toggles Line numbers on/off|
-|![](img/editor-toggle-treeview-icon.png) ![](img/nlf-disabled/editor-toggle-treeview-icon.png) Toggle tree view|Toggles the treeview on/off. See **Editing Classes** .|
-|![](img/editor-previous-location-icon.png) ![](img/nlf-disabled/editor-previous-location-icon.png) Previous Location|Certain operations (such as selecting an item in the treeview)  reposition the caret in the Editor window. This button moves the caret back to its previous location.|
-|![](img/trace-theme-12-00.png) ![](img/editor-comment-icon.png) Comment selected text|Inserts a comment symbol to the left of the selection in each of the selected lines.|
-|![](img/trace-theme-13-00.png) ![](img/editor-uncomment-icon.png) Uncomment selected text|Removes the comment symbol (if present) from the left-most column of the selection in each of the selected lines.|
-|![](img/trace-theme-02-00.png) ![](img/editor-save-icon.png) Save changes and return|Saves changes and closes the current edit window|
-|![](img/editor-search-icon.png) ![](img/nlf-disabled/editor-search-icon.png) Search Box|Enter search text and click one of the following two buttons|
-|![](img/trace-theme-16-00.png) ![](img/editor-next-match-icon.png) Search for Next Match|Locates the next occurrence of the search text|
-|![](img/trace-theme-15-00.png) ![](img/editor-previous-match-icon.png) Search for Previous Match|Locates the previous occurrence of the search|
-|![](img/trace-theme-17-00.png) ![](img/editor-search-hidden-text-icon.png) Search hidden text|Determines whether or not the search examines collapsed blocks|
-|![](img/trace-theme-21-00.png) ![](img/editor-match-case-icon.png) Match case|Specifies whether or not the search is case-sensitive|
-|![](img/trace-theme-22-00.png) ![](img/editor-match-whole-word-icon.png) Match whole word|Specifies whether or not the search matches a whole word|
-|![](img/trace-theme-23-00.png) ![](img/editor-use-regular-expressions-icon.png) Use Regular Expressions|Specifies whether or not the search uses PCRE regular expressions|
-|![](img/trace-theme-18-00.png) ![](img/editor-refactor-method-icon.png) Refactor text as method|Inserts a Method template for the selected name|
-|![](img/trace-theme-19-00.png) ![](img/editor-refactor-field-icon.png) Refactor text as field|Inserts a Field template for the selected name|
-|![](img/trace-theme-20-00.png) ![](img/editor-refactor-property-icon.png) Refactor text as property|Inserts a Property template for the selected name|
-
+|![](img/trace-theme-14-00.png) Toggle line numbers|Toggles Line numbers on/off|
+|![](img/editor-previous-location-icon.png) Previous Location|Certain operations (such as selecting an item in the treeview)  reposition the caret in the Editor window. This button moves the caret back to its previous location.|
+|![](img/editor-localise-icon.png) Localise|Localise name under cursor.|
+|![](img/trace-theme-12-00.png) Comment selected text|Inserts a comment symbol to the left of the selection in each of the selected lines.|
+|![](img/trace-theme-13-00.png) Uncomment selected text|Removes the comment symbol (if present) from the left-most column of the selection in each of the selected lines.|
+|![](img/trace-theme-02-00.png) Save changes and return|Saves changes and closes the current edit window|
+|![](img/editor-search-icon.png) Search Box|Enter search text and click one of the following two buttons|
+|![](img/trace-theme-16-00.png) Search for Next Match|Locates the next occurrence of the search text|
+|![](img/trace-theme-15-00.png) Search for Previous Match|Locates the previous occurrence of the search|
+|![](img/trace-theme-17-00.png) Search hidden text|Determines whether or not the search examines collapsed blocks|
+|![](img/trace-theme-21-00.png) Match case|Specifies whether or not the search is case-sensitive|
+|![](img/trace-theme-22-00.png) Match whole word|Specifies whether or not the search matches a whole word|
+|![](img/trace-theme-23-00.png) Use Regular Expressions|Specifies whether or not the search uses PCRE regular expressions|
+<!-- |![](img/trace-theme-18-00.png) Refactor text as method|Inserts a Method template for the selected name|
+|![](img/trace-theme-19-00.png) Refactor text as field|Inserts a Field template for the selected name|
+|![](img/trace-theme-20-00.png) Refactor text as property|Inserts a Property template for the selected name|
+ -->
 ### The File Menu
 
 ![](img/editor-file-menu.png)
