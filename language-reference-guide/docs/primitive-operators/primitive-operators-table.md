@@ -9,6 +9,7 @@
 |`⍤`  |Jot Diaeresis  |[Atop](atop.md)                                                  |`{R}←{X}f⍤gY`       |
 |`[]` |&nbsp;         |[Axis with Dyadic Operand](axis-with-dyadic-operand.md)          |`R←Xf[B]Y`          |
 |`[]` |&nbsp;         |[Axis with Monadic Operand](axis-with-monadic-operand.md)        |`R←f[B]Y`           |
+|`⍛`  |Jot Underbar   |[Behind](behind.md)                                              |`{R}←{X}f⍛gY`       |
 |`∘`  |Jot            |[Beside](beside.md)                                              |`{R}←{X}f∘gY`       |
 |`∘`  |Jot            |[Bind](bind.md)                                                  |`{R}←A∘fY{R}←(f∘B)Y`|
 |`⍨`  |Tilde Diaeresis|[Commute](commute.md)                                            |`{R}←{X}f⍨Y`        |

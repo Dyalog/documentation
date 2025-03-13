@@ -200,8 +200,16 @@
         </td>
         <td class="Dyalog"><a href="../circle-dieresis">⍥</a>
         </td>
-        <td class="Dyalog"><a href="../at">@</a>
+        <td class="Dyalog"><a href="../jot-underbar">⍛</a>
         </td>
+    </tr>
+    <tr>
+        <td class="Dyalog"><a href="../at">@</a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
 </table>
 

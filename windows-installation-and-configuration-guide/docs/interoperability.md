@@ -69,14 +69,20 @@ A `TRANSLATION ERROR` will also be issued when a Classic edition attempts to `)L
 
 `TCPSocket` objects have an `APL` property that corresponds to the Unicode property of a file, if this is set to `Classic` (the default) the data in the socket will be restricted to `⎕AV`, if Unicode it will contain Unicode character data. As a result, `TRANSLATION ERROR`s can occur on transmission or reception in the same way as when updating or reading a file component.
 
-The symbols `⊆`, `⍸`, `⍤`, `⍠`, `⌸`, `⌺` and `⍥`  used for the 
-		Nest (Interval Index) and 
-		Where (Partition) functions, the 
-		Rank, 
-		Variant, 
-		Key, 
-		Stencil and 
-		Over operators respectively are available only in the Unicode edition. In the Classic edition, these symbols are replaced by `⎕U2286`, `⎕U2378`, `⎕U2364`, `⎕U2360`, `⎕U2338`, `⎕U233a` and `⎕U2365` respectively. In both Unicode and Classic editions Variant may be represented by `⎕OPT`.
+Some APL glyphs are only available in the Unicode edition, and need to be replaced with Unicode hex values in the Classic edition. These are:
+
+|Glyph|Classic replacement|Description|
+|---|----|----------------------------------|
+| `⊆` | `⎕U2286` | _nest_/_partition_ function |
+| `⍸` | `⎕U2378` | _where_/_interval index_ function |
+| `⍤` | `⎕U2364` | _atop_/_rank_ operator|
+| `⍠` | `⎕U2360` | _variant_ operator |
+| `⌸` | `⎕U2338` | _key_ operator |
+| `⌺` | `⎕U233A` | _stencil_ operator |
+| `⍥` | `⎕U2365` | _over_ operator |
+| `⍛` | `⎕U235B` | _behind_ operator |
+
+In both Unicode and Classic editions, the _variant_ operator can also be represented by `⎕OPT`.
 
 ## Very large array components
 
