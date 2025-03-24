@@ -20115,8 +20115,18 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Operator Syntax
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -20128,6 +20138,52 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#monadic-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monadic Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#right-operand-currying" class="md-nav__link">
+    <span class="md-ellipsis">
+      Right Operand Currying
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Composition
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -75565,8 +75621,41 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#monadic-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monadic Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#right-operand-currying" class="md-nav__link">
+    <span class="md-ellipsis">
+      Right Operand Currying
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Composition
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -75588,9 +75677,9 @@
 <h1 class="heading"><span class="name">Operator Syntax</span></h1>
 
 <p>Operators take one or two operands.  An operator with one operand is monadic.  The operand of a monadic operator is to the left of the operator.  An operator with two operands is dyadic.  Both operands are required for a dyadic operator.</p>
-<p>Operators have long scope to the left.  That is, the left operand is the longest function or array expression to its left (see <a href="../../../programming-reference-guide/introduction/operators">Programmer's Guide: "Operators"</a>).  A dyadic operator has short scope on the right.  Right scope may be extended by the use of parentheses.</p>
-<p>An operand may be an array, a primitive function, a system function, a defined function or a derived function.  An array may be the result of an array expression.</p>
-<p>An operator with its operand(s) forms a derived function.  The derived function may be monadic or dyadic and it may or may not return an explicit result.</p>
+<p>Operators have long scope to the left.  That is, the left operand is the longest function or array expression to its left (see <a href="../../../programming-reference-guide/introduction/operators">Programmer's Guide: "Operators"</a>). A dyadic operator has short scope on the right.  Right scope may be extended by the use of parentheses.</p>
+<p>An operand may be an array, a primitive function, a system function, a defined function or a derived function. An array may be the result of an array expression.</p>
+<p>An operator with its operand(s) forms a derived function. The derived function may be monadic or dyadic and it may or may not return an explicit result.</p>
 <h2 class="example">Examples</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="na">/</span><span class="o">⍳</span><span class="m">5</span>
 <span class="m">15</span>
@@ -75607,7 +75696,7 @@
 <span class="w">      </span><span class="nf">⎕EX</span><span class="na">¨</span><span class="o">↓</span><span class="nf">⎕NL</span><span class="w"> </span><span class="m">2</span>
 <span class="w">      </span><span class="nf">⎕NL</span><span class="w"> </span><span class="m">2</span>
 </code></pre></div>
-<h1 id="monadic-operators">Monadic Operators</h1>
+<h2 id="monadic-operators">Monadic Operators</h2>
 <p>Like primitive functions, monadic operators can be:</p>
 <ul>
 <li>named</li>
@@ -75628,7 +75717,7 @@
 <span class="w">      </span><span class="m">3</span><span class="w"> </span><span class="o">-</span><span class="nv">swap</span><span class="w"> </span><span class="m">4</span>
 <span class="m">1</span>
 </code></pre></div>
-<h1 id="right-operand-currying">Right Operand Currying</h1>
+<h2 id="right-operand-currying">Right Operand Currying</h2>
 <p>A dyadic operator may be bound or <em>curried</em> with its right operand to form a monadic operator:</p>
 <h4 class="example">Examples</h4>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="vg">⎕</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="nv">inv</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="na">⍣</span><span class="m">¯1</span><span class="w">  </span><span class="c1">⍝ produces monadic inverse operator</span>
@@ -75640,9 +75729,9 @@
 <span class="w">      </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="na">∘</span><span class="o">÷</span><span class="nv">lim</span><span class="w"> </span><span class="m">1</span><span class="w">     </span><span class="c1">⍝ Phi</span>
 <span class="m">1.61803</span>
 </code></pre></div>
-<h1 id="function-composition">Function Composition</h1>
+<h2 id="function-composition">Function Composition</h2>
 <p>Function composition refers to the "gluing" together of two functions using a dyadic operator such that the functions are applied to the argument(s) as normal, but in a particular pattern specific to the operator that is being used. The term function composition comes from traditional mathematics where it is used for a function <code>h(x)=f(g(x))</code> when written as  <code>h(x)=(f∘g)(x)</code> APL generalises this idea to dyadic functions, allowing various patterns of application in addition to the simple application of one monadic function to the result of another monadic function. The three main patterns, represented by Atop, Beside, and Over can be visualised as follows:</p>
-<p><figure id="_figure-1"><img alt="compositions" src="../../img/compositions.png"><figcaption>Figure 1: compositions</figcaption></figure></p>
+<p><img alt="" src="../../img/compositions.png"></p>
 <p>When any of these are applied monadically, the dotted branch falls away, and they are all equivalent to each other and to <code>h(x)=(f∘g)(x)</code> of traditional mathematics.</p>
 
 
@@ -75673,7 +75762,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong> (2025-03-24 main:0548dc156)
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong> (2025-03-24 main:e49b8be46)
     </div>
   
   
