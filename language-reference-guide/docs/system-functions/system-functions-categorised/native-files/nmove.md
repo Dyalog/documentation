@@ -87,11 +87,11 @@ i:/Documents/Dyalog APL-64 17.0 Unicode Files/
  
 ⍝ Rename the Session file
       ⊢'session.dlf' ⎕NMOVE 'default.dlf'
+1
 ```
 
 ```apl
 
-1
       ⊢ ⎕MKDIR 'backups' ⍝ Make a backups directory
 1
  ⍝ Move the Session file to backups directory
