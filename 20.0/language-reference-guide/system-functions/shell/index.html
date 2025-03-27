@@ -76323,7 +76323,8 @@
 <p><code>⎕SHELL</code> executes an external program, either directly or using the operating system's shell.</p>
 <p><code>Y</code> describes the command to execute. <code>Y</code> is specified as either a character vector or a vector of character vectors.
 <code>R</code> contains information about the termination reason, along with output collected.</p>
-<p>The system function is cross-platform, but the command specification is inherently operating-system specific.</p>
+<p>Although <code>⎕SHELL</code> itself is cross-platform, the command specification depends on the platform's shell, the program being invoked, and the expected format of the command line arguments – <code>⎕SHELL</code> calls are only as cross-platform as the programs they execute.
+In practice, many command line tools that are useful when building cross-platform applications, such as <code>git</code> and <code>aws-cli</code>, <em>are</em> cross-platform tools, which makes this less likely to be an issue.</p>
 <h3 id="using-the-systems-shell">Using the System's Shell</h3>
 <p>When <code>Y</code> is a character vector, the contents are executed using the system's shell.
 The shell being used can be changed using the <a href="#shell"><code>Shell</code></a> variant. The defaults are:</p>
@@ -76347,6 +76348,7 @@ The shell being used can be changed using the <a href="#shell"><code>Shell</code
 </code></pre></div>
 <h3 id="direct-execution">Direct Execution</h3>
 <p>When <code>Y</code> is a vector of character vectors or an enclosed character vector, the first element of the array is treated as a program name, and the rest as individual arguments. The program is executed directly, without invoking the system's shell first. The program name can be an absolute path, a relative path, or the name of an executable in the current search path (operating-system specific). When the program is specified as a relative path, the name is resolved relative to the working directory, which can be set with the <a href="#workingdir"><code>WorkingDir</code></a> variant.</p>
+<p>If the command does not depend on any shell features, then direct execution should be used as it has lower overhead.</p>
 <h2 id="return-value">Return Value</h2>
 <p>The result is a five element nested vector:
 </p><div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nv">StreamData</span><span class="w"> </span><span class="nv">StreamIds</span><span class="w"> </span><span class="nv">ExitCode</span><span class="w"> </span><span class="nv">ExitReason</span><span class="w"> </span><span class="nv">Pid</span><span class="p">)</span><span class="kd">←</span><span class="nv">R</span>
@@ -76722,7 +76724,7 @@ The value must be either an integer representing a valid signal number, or <code
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong> (2025-03-24 main:e49b8be46)
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong> (2025-03-27 main:8984d3333)
     </div>
   
   
