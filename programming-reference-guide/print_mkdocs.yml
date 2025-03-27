@@ -58,6 +58,7 @@ nav:
               - Enclosed Elements: introduction/arrays/enclosed-elements.md
               - Specification of Variables: introduction/arrays/specification-of-variables.md
               - Vector Notation: introduction/arrays/vector-notation.md
+              - Array Notation: introduction/arrays/array-notation.md
               - Structuring of Arrays: introduction/arrays/structuring-of-arrays.md
               - Display of Arrays: introduction/arrays/display-of-arrays.md
               - Prototypes and Fill Items: introduction/arrays/prototypes-and-fill-items.md
@@ -68,7 +69,7 @@ nav:
           - Binding Strength: introduction/binding-strength.md
           - Function Trains: introduction/trains.md
           - Search Functions and Hash Tables: introduction/search-functions-and-hash.md
-          - Idiom Recogition:
+          - Idiom Recognition:
               - Introduction: introduction/idiom-recogition/idiom-recognition.md
               - Idiom List: introduction/idiom-recogition/idiom-list.md
           - Parallel Execution: introduction/parallel-execution.md

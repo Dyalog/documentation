@@ -393,6 +393,72 @@ Finally, with all the sections opened:
 
 ![](img/editor-sections-4.png)
 
+### Array Notation
+
+The Editor allows you to edit arbitrary arrays using [array notation](../../programming-reference-guide/introduction/arrays/array-notation).
+
+Any of the following invokes it:
+
+- Click the ![](img/edit-array-icon.png) icon in the Session toolbar when the mouse pointer is over the name of a suitable variable.
+- Click the ![](img/edit-array-icon.png) icon in the Editor toolbar.
+- Hitting <ED> or <RD> from within the Editor
+- Call the system command `)ED` and prefix the variable name with a diamond; for example: `)ED ⋄q`
+- Call the system function `⎕ED` with a left argument `'⋄'`; for example, `'⋄'⎕ED'q'`.
+
+The Editor presents the array for you to edit in array notation.
+
+![](img/array-editor.png)
+
+
+You can include APL expressions:
+the Editor will evaluate them when you fix or format the array.
+
+For example, in the session:
+```apl
+      x←[
+       (
+        'Hello'
+       )
+       (
+        'World'
+       )
+      ]
+      )ED ⋄ x
+```
+In the Editor, insert `⎕C`:
+```apl
+⎕C[
+ (
+  'Hello'
+ )
+ (
+  'World'
+ )
+]
+```
+It reformats as
+```apl
+[
+ (
+  'hello'
+ )
+ (
+  'world'
+ )
+]
+```
+and fixes as
+```apl
+      x
+┌─────┐
+│hello│
+├─────┤
+│world│
+└─────┘
+```
+
+
+
 ### Editing Classes
 
 The picture below shows the result of opening the `ComponentFile` class. Notice how each function is delineated separately and that each function is individually line-numbered.

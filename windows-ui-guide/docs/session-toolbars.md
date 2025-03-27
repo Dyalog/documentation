@@ -39,28 +39,28 @@ If Native Look and Feel is enabled all three bitmap resources are mapped to a di
 | ![](img/copy-workspace-icon.png) ![](img/nlf-disabled/copy-workspace-icon.png) | Copy Workspace   | Executes the system operation `[WSCopy]` which displays a file selection dialog box and copies the (entire) selected workspace |
 | ![](img/save-workspace-icon.png) ![](img/nlf-disabled/save-workspace-icon.png) | Save Workspace   | Executes the system operation `[WSSaveas]` which displays a file selection dialog box and saves the workspace in the selected file |
 | ![](img/export-workspace-icon.png) ![](img/nlf-disabled/reexport-workspace-icon.png) | Export Workspace | Executes the system operation `[MakeExe]` which re-exports the workspace using the settings, parameters and options that were previously selected using the *Create Bound File* dialog |
-| ![](img/print-functions-icon.png) ![](img/nlf-disabled/print-workspace-icon.png) | Print Functions  | Executes the system operation `[PrintFnsInNS]` that prints all the functions and operators in the current namespace |
+<!-- | ![](img/print-functions-icon.png) ![](img/nlf-disabled/print-workspace-icon.png) | Print Functions  | Executes the system operation `[PrintFnsInNS]` that prints all the functions and operators in the current namespace | -->
 
 ## Object Operations
 
 | Button  | Operation  | Description |
 | --- | ---  | --- |
-| ![](img/copy-object-icon.png) ![](img/nlf-disabled/copy-object-icon.png)     | Copy Object  | Executes the system operation `[ObjCopy]` which copies the contents of the current object to the clipboard |
+| ![](img/copy-object-icon.png) ![](img/nlf-disabled/copy-object-icon.png) | Copy Object  | Executes the system operation `[ObjCopy]` which copies the contents of the current object to the clipboard |
 | ![](img/paste-object-icon.png) ![](img/nlf-disabled/paste-object-icon.png) | Paste Object | Executes the system operation `[ObjPaste]` which copies the contents of the clipboard into the current object, replacing its previous value |
 | ![](img/print-object-icon.png) ![](img/nlf-disabled/print-object-icon.png) | Print Object | Executes the system operation `[ObjPrint]` . Prints the current object. Note that if the object is being edited, the version of the object displayed in the edit window is printed. |
-| ![](img/edit-object-icon.png) ![](img/nlf-disabled/edit-object-icon.png)     | Edit Object  | Executes the system operation `[Edit]` which edits the current object using the standard system editor |
-| ![](img/edit-numbers-icon.png) ![](img/nlf-disabled/edit-numbers-icon.png) | Edit Array   | Executes a defined function in `⎕SE` that edits the current object using the Array Editor (Unicode Edition) or a spreadsheet-like interface based upon the Grid object (Classic Edition). See [Array Editor](array-editor.md) |
-| ![](img/sharpplot-icon.png) ![](img/nlf-disabled/sharpplot-icon.jpg)             | SharpPlot    | Executes a defined function in `⎕SE` that runs the Chart Wizard to plot the current object using the `]chart` User Command. |
+| ![](img/edit-object-icon.png) ![](img/nlf-disabled/edit-object-icon.png) | Edit Object  | Executes the system operation `[Edit]` which edits the current object using the standard system editor |
+| ![](img/edit-numbers-icon.png) ![](img/nlf-disabled/edit-numbers-icon.png) | Edit using Array Notation | Edits the object using [array notation](../../programming-reference-guide/introduction/arrays/array-notation). |
+| ![](img/sharpplot-icon.png) ![](img/nlf-disabled/sharpplot-icon.jpg) | SharpPlot    | Executes a defined function in `⎕SE` that runs the Chart Wizard to plot the current object using the `]chart` User Command. |
 
 
 ## Tools
 
 | Button  | Operation  | Description |
 | --- | ---  | --- |
-| ![](img/explorer-icon.png) ![](img/nlf-disabled/explorer-icon.png) | Explorer | Executes the system operation `[Explorer]` which displays the *Workspace Explorer* tool |
 | ![](img/search-icon.png) ![](img/nlf-disabled/search-icon.png) | Search | Executes the system operation `[WSSearch]` which displays the *Workspace Search* tool |
-| ![](img/line-numbers-icon.png) ![](img/nlf-disabled/line-numbers-icon.png) | Line Numbers | Executes the system operation `[LineNumbers]` which toggles the display of line numbers in edit and trace windows on and off |
+| ![](img/explorer-icon.png) ![](img/nlf-disabled/explorer-icon.png) | Explorer | Executes the system operation `[Explorer]` which displays the *Workspace Explorer* tool |
 | ![](img/clear-all-stops-icon.png) ![](img/nlf-disabled/clear-all-stops-icon.png) | Clear all Stops | Executes the system operation `[ClearTSM]` which clears all `⎕STOP` , `⎕MONITOR` and `⎕TRACE` settings |
+<!-- | ![](img/line-numbers-icon.png) ![](img/nlf-disabled/line-numbers-icon.png) | Line Numbers | Executes the system operation `[LineNumbers]` which toggles the display of line numbers in edit and trace windows on and off | -->
 
 ## Edit Operations
 
