@@ -37,6 +37,12 @@ When `Y` is a vector of character vectors or an enclosed character vector, the f
 
 If the command does not depend on any shell features, then direct execution should be used as it has lower overhead.
 
+!!! Info "Information"
+    This difference in performance can be very significant, especially under Microsoft Windows where PowerShell is the default.
+    Direct calls can be 5-10x faster.
+    
+    See [the example below](#example-using-cmdexe-microsoft-windows) for information about how to use `cmd.exe` instead of PowerShell.
+
 ## Return Value
 
 The result is a five element nested vector:
@@ -222,6 +228,12 @@ The value must be a character vector or a vector of character vectors with a len
 
 !!! info
     Shells typically takes some argument which specify that the next argument is a command to run, such as `/bin/bash -c` on Linux, but since the argument differs from shell to shell, it must be specified manually.
+
+#### Example using cmd.exe (Microsoft Windows) { .example }
+```apl
+      ⎕SHELL⍠'Shell' ('cmd.exe' '/C')⊢'someCmd'
+...
+```
 
 #### Example using bash (Linux) { .example }
 ```apl
