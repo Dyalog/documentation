@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../img/favicon-32.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
     
     
       
@@ -121,11 +121,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -157,6 +159,7 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
@@ -21111,6 +21114,8 @@
       
         
       
+        
+      
     
     
     
@@ -21293,6 +21298,29 @@
   
   <span class="md-ellipsis">
     Axis with Dyadic Operand
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../behind/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Behind
     
   </span>
   
@@ -78765,25 +78793,25 @@
 
 <h1 class="heading"><span class="name">Operator Syntax</span></h1>
 
-<p>Operators take one or two operands.  An operator with one operand is monadic.  The operand of a monadic operator is to the left of the operator.  An operator with two operands is dyadic.  Both operands are required for a dyadic operator.</p>
+<p>Operators take one or two operands.  An operator with one operand is monadic.  The operand of a monadic operator is to the left of the operator.  An operator with two operands is dyadic.  Both operands are required for a dyadic operator.</p>
 <p>Operators have long scope to the left.  That is, the left operand is the longest function or array expression to its left (see <a href="../../../programming-reference-guide/introduction/operators">Programmer's Guide: "Operators"</a>). A dyadic operator has short scope on the right.  Right scope may be extended by the use of parentheses.</p>
 <p>An operand may be an array, a primitive function, a system function, a defined function or a derived function. An array may be the result of an array expression.</p>
 <p>An operator with its operand(s) forms a derived function. The derived function may be monadic or dyadic and it may or may not return an explicit result.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="na">/</span><span class="o">⍳</span><span class="m">5</span>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="na">/</span><span class="o">⍳</span><span class="m">5</span>
 <span class="m">15</span>
-<span class="w">      </span><span class="p">(</span><span class="o">*</span><span class="na">∘</span><span class="m">2</span><span class="p">)</span><span class="o">⍳</span><span class="m">3</span>
+<span class="w">      </span><span class="p">(</span><span class="o">*</span><span class="na">∘</span><span class="m">2</span><span class="p">)</span><span class="o">⍳</span><span class="m">3</span>
 <span class="m">1</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">9</span>
-<span class="w"> </span>
-<span class="w">      </span><span class="nv">PLUS</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">TIMES</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="o">×</span>
-<span class="w">      </span><span class="m">1</span><span class="w"> </span><span class="nv">PLUS</span><span class="na">.</span><span class="nv">TIMES</span><span class="w"> </span><span class="m">2</span>
+
+<span class="w">      </span><span class="nv">PLUS</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">TIMES</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="o">×</span>
+<span class="w">      </span><span class="m">1</span><span class="w"> </span><span class="nv">PLUS</span><span class="na">.</span><span class="nv">TIMES</span><span class="w"> </span><span class="m">2</span>
 <span class="m">2</span>
-<span class="w"> </span>
-<span class="w">      </span><span class="nf">⎕NL</span><span class="w"> </span><span class="m">2</span>
+
+<span class="w">      </span><span class="nf">⎕NL</span><span class="w"> </span><span class="m">2</span>
 <span class="nv">A</span>
 <span class="nv">X</span>
-<span class="w">      </span><span class="nf">⎕EX</span><span class="na">¨</span><span class="o">↓</span><span class="nf">⎕NL</span><span class="w"> </span><span class="m">2</span>
-<span class="w">      </span><span class="nf">⎕NL</span><span class="w"> </span><span class="m">2</span>
+<span class="w">      </span><span class="nf">⎕EX</span><span class="na">¨</span><span class="o">↓</span><span class="nf">⎕NL</span><span class="w"> </span><span class="m">2</span>
+<span class="w">      </span><span class="nf">⎕NL</span><span class="w"> </span><span class="m">2</span>
 </code></pre></div>
 <h2 id="monadic-operators">Monadic Operators</h2>
 <p>Like primitive functions, monadic operators can be:</p>
@@ -78819,9 +78847,21 @@
 <span class="m">1.61803</span>
 </code></pre></div>
 <h2 id="function-composition">Function Composition</h2>
-<p>Function composition refers to the "gluing" together of two functions using a dyadic operator such that the functions are applied to the argument(s) as normal, but in a particular pattern specific to the operator that is being used. The term function composition comes from traditional mathematics where it is used for a function <code>h(x)=f(g(x))</code> when written as  <code>h(x)=(f∘g)(x)</code> APL generalises this idea to dyadic functions, allowing various patterns of application in addition to the simple application of one monadic function to the result of another monadic function. The three main patterns, represented by Atop, Beside, and Over can be visualised as follows:</p>
-<p><img alt="" src="../../img/compositions.png"></p>
-<p>When any of these are applied monadically, the dotted branch falls away, and they are all equivalent to each other and to <code>h(x)=(f∘g)(x)</code> of traditional mathematics.</p>
+<p>Function composition refers to the "gluing" together of two functions using a dyadic operator such that the functions are applied to the argument(s) as normal, but in a particular pattern specific to the operator that is being used. The term <em>function composition</em> comes from traditional mathematics, where it is used for a function <code>h(x)=f(g(x))</code> when written as  <code>h(x)=(f∘g)(x)</code> APL generalises this idea to dyadic functions, allowing various patterns of application in addition to the simple application of one monadic function to the result of another monadic function. The four main patterns, represented by <em>atop</em>, <em>behind</em>, <em>beside</em>, and <em>over</em>, can be visualised as shown below.</p>
+<div class="admonition info">
+<p class="admonition-title">Information</p>
+<p>In the diagrams below, the dotted branch falls away when the operator is applied monadically.
+Note that monadic <em>atop</em>, <em>beside</em>, and <em>over</em> are all equivalent to each other and to <code>h(x)=(f∘g)(x)</code> of traditional mathematics.</p>
+</div>
+<p><em>Atop</em>: <code>{R}←{X}f⍤g Y</code></p>
+<p><figure id="_figure-1"><img alt="Function composition diagram for atop" src="../../img/atop-composition.png" style="max-height: 16em"><figcaption>Figure 1: Function composition diagram for atop</figcaption></figure></p>
+<p><em>Behind</em>: <code>{R}←{X}f⍛g Y</code></p>
+<p><figure id="_figure-2"><img alt="Function composition diagram for monadic behind" src="../../img/behind-monadic-composition.png" style="max-height: 16em"><figcaption>Figure 2: Function composition diagram for monadic behind</figcaption></figure></p>
+<p><figure id="_figure-3"><img alt="Function composition diagram for dyadic behind" src="../../img/behind-dyadic-composition.png" style="max-height: 16em"><figcaption>Figure 3: Function composition diagram for dyadic behind</figcaption></figure></p>
+<p><em>Beside</em>: <code>{R}←{X}f∘g Y</code></p>
+<p><figure id="_figure-4"><img alt="Function composition diagram for beside" src="../../img/beside-composition.png" style="max-height: 16em"><figcaption>Figure 4: Function composition diagram for beside</figcaption></figure></p>
+<p><em>Over</em>: <code>{R}←{X}f⍥g Y</code></p>
+<p><figure id="_figure-5"><img alt="Function composition diagram for over" src="../../img/over-composition.png" style="max-height: 16em"><figcaption>Figure 5: Function composition diagram for over</figcaption></figure></p>
 
 
 
@@ -78851,7 +78891,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong> (2025-03-31 main:d6c6b4873)
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong> (2025-04-01 main:147911913)
     </div>
   
   
@@ -78880,7 +78920,7 @@
       
         <script src="../../../assets/external/unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../../https:/unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
+        <script src="../../../assets/external/unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
       
     
   </body>

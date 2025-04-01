@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../img/favicon-32.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
     
     
       
@@ -121,11 +121,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -157,6 +159,7 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
@@ -21199,6 +21202,8 @@
       
         
       
+        
+      
     
     
     
@@ -21381,6 +21386,29 @@
   
   <span class="md-ellipsis">
     Axis with Dyadic Operand
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../language-reference-guide/primitive-operators/behind/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Behind
     
   </span>
   
@@ -78981,14 +79009,59 @@ edition (consisting of elements of <code>⎕AV</code>).</p>
 <p>Likewise, a Classic edition will issue a <code>TRANSLATION ERROR</code> if it attempts to read a component containing Unicode data that is not in <code>⎕AVU</code> from a component file.</p>
 <p>A <code>TRANSLATION ERROR</code> will also be issued when a Classic edition attempts to <code>)LOAD</code> or <code>)COPY</code> a workspace containing Unicode data that cannot be mapped to <code>⎕AV</code> using the <code>⎕AVU</code> in the recipient workspace.</p>
 <p><code>TCPSocket</code> objects have an <code>APL</code> property that corresponds to the Unicode property of a file, if this is set to <code>Classic</code> (the default) the data in the socket will be restricted to <code>⎕AV</code>, if Unicode it will contain Unicode character data. As a result, <code>TRANSLATION ERROR</code>s can occur on transmission or reception in the same way as when updating or reading a file component.</p>
-<p>The symbols <code>⊆</code>, <code>⍸</code>, <code>⍤</code>, <code>⍠</code>, <code>⌸</code>, <code>⌺</code> and <code>⍥</code>  used for the 
-        Nest (Interval Index) and 
-        Where (Partition) functions, the 
-        Rank, 
-        Variant, 
-        Key, 
-        Stencil and 
-        Over operators respectively are available only in the Unicode edition. In the Classic edition, these symbols are replaced by <code>⎕U2286</code>, <code>⎕U2378</code>, <code>⎕U2364</code>, <code>⎕U2360</code>, <code>⎕U2338</code>, <code>⎕U233a</code> and <code>⎕U2365</code> respectively. In both Unicode and Classic editions Variant may be represented by <code>⎕OPT</code>.</p>
+<p>Some APL glyphs are only available in the Unicode edition, and need to be replaced with Unicode hex values in the Classic edition. These are:</p>
+<table>
+<thead>
+<tr>
+<th>Glyph</th>
+<th>Classic replacement</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>⊆</code></td>
+<td><code>⎕U2286</code></td>
+<td><em>nest</em>/<em>partition</em> function</td>
+</tr>
+<tr>
+<td><code>⍸</code></td>
+<td><code>⎕U2378</code></td>
+<td><em>where</em>/<em>interval index</em> function</td>
+</tr>
+<tr>
+<td><code>⍤</code></td>
+<td><code>⎕U2364</code></td>
+<td><em>atop</em>/<em>rank</em> operator</td>
+</tr>
+<tr>
+<td><code>⍠</code></td>
+<td><code>⎕U2360</code></td>
+<td><em>variant</em> operator</td>
+</tr>
+<tr>
+<td><code>⌸</code></td>
+<td><code>⎕U2338</code></td>
+<td><em>key</em> operator</td>
+</tr>
+<tr>
+<td><code>⌺</code></td>
+<td><code>⎕U233A</code></td>
+<td><em>stencil</em> operator</td>
+</tr>
+<tr>
+<td><code>⍥</code></td>
+<td><code>⎕U2365</code></td>
+<td><em>over</em> operator</td>
+</tr>
+<tr>
+<td><code>⍛</code></td>
+<td><code>⎕U235B</code></td>
+<td><em>behind</em> operator</td>
+</tr>
+</tbody>
+</table>
+<p>In both Unicode and Classic editions, the <em>variant</em> operator can also be represented by <code>⎕OPT</code>.</p>
 <h2 id="very-large-array-components">Very large array components</h2>
 <p>An attempt to read
 a component greater than 2GB in 32-bit interpreters will result in a <code>WS FULL</code>.</p>
@@ -79028,7 +79101,7 @@ saved. Under Microsoft Windows, Session files may only be used by the  architect
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong> (2025-03-31 main:d6c6b4873)
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong> (2025-04-01 main:147911913)
     </div>
   
   
@@ -79057,7 +79130,7 @@ saved. Under Microsoft Windows, Session files may only be used by the  architect
       
         <script src="../../assets/external/unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../https:/unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
+        <script src="../../assets/external/unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
       
     
   </body>

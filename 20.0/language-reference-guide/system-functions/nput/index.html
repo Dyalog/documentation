@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../img/favicon-32.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.10">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
     
     
       
@@ -121,11 +121,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -157,6 +159,7 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
@@ -21042,6 +21045,8 @@
       
         
       
+        
+      
     
     
     
@@ -21224,6 +21229,29 @@
   
   <span class="md-ellipsis">
     Axis with Dyadic Operand
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primitive-operators/behind/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Behind
     
   </span>
   
@@ -78867,7 +78895,7 @@
 <p><code>content</code> is either a vector of character vectors, each of which represents a line in the file to be written, or a simple character vector.</p>
 <p>If specified, <code>encoding</code> is either:</p>
 <ul>
-<li>a character vector from the first column in the table <a href="../nget/">File Encodings</a>.  If <code>encoding</code> specifies a UTF format, it may be qualified with -BOM  (for example, UTF-8-BOM), which causes a Byte Order Mark (BOM) to be written at the beginning of the file or -NOBOM which does not. If the -BOM or -NOBOM suffix is omitted, UTF-8 defaults to UTF-8-NOBOM, while the other UTF formats default to -BOM.</li>
+<li>a character vector from the first column in the table <a href="../nget/">File Encodings</a>. If <code>encoding</code> specifies a UTF format, it may be qualified with -BOM  (for example, UTF-8-BOM), which causes a Byte Order Mark (BOM) to be written at the beginning of the file or -NOBOM which does not. If the -BOM or -NOBOM suffix is omitted, UTF-8 defaults to UTF-8-NOBOM, while the other UTF formats default to -BOM.</li>
 <li>a 256-element numeric vector that maps each possible byte value (0-255) to a  Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value may appear in the table more than once.</li>
 </ul>
 <p>If  omitted, <code>encoding</code> defaults to UTF-8-NOBOM.</p>
@@ -78882,16 +78910,16 @@
 <p>If both <code>encoding</code> and <code>newline</code> are omitted <code>X</code> specifies only <code>content</code> and may be a simple character vector or a vector of character vectors.</p>
 <p>The shy result <code>R</code> is the number of bytes written to the file.</p>
 <h2 class="example">Examples</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">txt</span><span class="kd">←</span><span class="s1">'mene'</span><span class="w"> </span><span class="s1">'mene'</span><span class="w"> </span><span class="s1">'tekel'</span><span class="w"> </span><span class="s1">'upharsin'</span>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">txt</span><span class="kd">←</span><span class="s1">'mene'</span><span class="w"> </span><span class="s1">'mene'</span><span class="w"> </span><span class="s1">'tekel'</span><span class="w"> </span><span class="s1">'upharsin'</span>
 
 <span class="w">      </span><span class="vg">⎕</span><span class="kd">←</span><span class="p">(</span><span class="o">⊂</span><span class="nv">txt</span><span class="p">)</span><span class="w"> </span><span class="nf">⎕NPUT</span><span class="w"> </span><span class="s1">'writing.txt'</span>
 <span class="m">25</span>
 <span class="w">      </span><span class="o">⊢</span><span class="p">(</span><span class="o">⊂</span><span class="s1">'adding'</span><span class="w"> </span><span class="s1">'3'</span><span class="w"> </span><span class="s1">'lines'</span><span class="p">)</span><span class="nf">⎕NPUT</span><span class="s1">'writing.txt'</span><span class="w"> </span><span class="m">2</span>
 <span class="m">18</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">LF</span><span class="kd">←</span><span class="nf">⎕UCS</span><span class="w"> </span><span class="m">10</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">t</span><span class="kd">←</span><span class="s1">'adding'</span><span class="o">,</span><span class="nv">LF</span><span class="o">,</span><span class="s1">'3'</span><span class="o">,</span><span class="nv">LF</span><span class="o">,</span><span class="s1">'lines'</span><span class="o">,</span><span class="nv">LF</span>
+
+<span class="w">      </span><span class="nv">LF</span><span class="kd">←</span><span class="nf">⎕UCS</span><span class="w"> </span><span class="m">10</span>
+
+<span class="w">      </span><span class="nv">t</span><span class="kd">←</span><span class="s1">'adding'</span><span class="o">,</span><span class="nv">LF</span><span class="o">,</span><span class="s1">'3'</span><span class="o">,</span><span class="nv">LF</span><span class="o">,</span><span class="s1">'lines'</span><span class="o">,</span><span class="nv">LF</span>
 <span class="w">      </span><span class="o">⊢</span><span class="nv">t</span><span class="w"> </span><span class="nf">⎕NPUT</span><span class="s1">'writing.txt'</span><span class="w"> </span><span class="m">2</span>
 <span class="m">18</span><span class="w">                                         </span>
 </code></pre></div>
@@ -78904,7 +78932,7 @@
 <td>embedded line separator characters are preserved as is,and a <code>newline</code> is added to the last line if required.</td>
 </tr>
 <tr>
-<td>1</td>
+<td class="shaded"><code>1</code></td>
 <td>every embedded LF is replaced by <code>newline</code></td>
 </tr>
 <tr>
@@ -78933,7 +78961,7 @@
 <p>In the second example, none of the line endings are normalised so the written file contains lines ending with LF, CR and CRLF.</p>
 <p>In the third example, all of the line endings are normalised so the written file contains lines ending with CRLF, CRLF and CRLF.</p>
 <h2 id="note">Note</h2>
-<p>If two or more APL processes separately write to a file using <code>⎕NPUT</code> the behaviour is undefined. In particular, if multiple APLs use <code>⎕NPUT</code> with flags set to 2 (append), it is not guaranteed that each  <code>⎕NPUT</code> operation will be atomic and all the text written to the file will be complete and/or contiguous.</p>
+<p>If two or more APL processes separately write to a file using <code>⎕NPUT</code> the behaviour is undefined. In particular, if multiple APLs use <code>⎕NPUT</code> with flags set to 2 (append), it is not guaranteed that each <code>⎕NPUT</code> operation will be atomic and all the text written to the file will be complete and/or contiguous.</p>
 
 
 
@@ -78963,7 +78991,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong> (2025-03-31 main:d6c6b4873)
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong> (2025-04-01 main:147911913)
     </div>
   
   
@@ -78992,7 +79020,7 @@
       
         <script src="../../../assets/external/unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../../https:/unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
+        <script src="../../../assets/external/unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
       
     
   </body>

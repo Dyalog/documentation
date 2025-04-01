@@ -60,6 +60,10 @@
     /* Light grey background */
 }
 
+.shaded code {
+    background-color: inherit;
+}
+
 .md-content code {
     padding: 0;
 }
