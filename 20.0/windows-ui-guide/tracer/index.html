@@ -12,7 +12,7 @@
         <link rel="prev" href="../source-as-typed/">
       
       
-        <link rel="next" href="trace-primitives/">
+        <link rel="next" href="../threads-tool/">
       
       
       <link rel="icon" href="../../img/favicon-32.png">
@@ -71473,7 +71473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="trace-primitives/" class="md-nav__link">
+      <a href="trace-primitives.md" class="md-nav__link">
         
   
   
@@ -78825,7 +78825,7 @@
 </ul>
 <h2 id="the-trace-window">The Trace Window</h2>
 <p>The Tracer is implemented as a single dockable window that displays the function that is currently being executed. There are several subsidiary information panes which are also fully dockable. The first of these (<em>SIStack</em>) displays the current function calling stack; the second (<em>Threads</em>) displays a list of running threads.</p>
-<p>There are also two docked, but minimised panes, named <strong>Left Argument</strong> and <strong>Right Argument</strong>. They will open up automatically if you <a href="trace-primitives/">trace primitives</a>.</p>
+<p>There are also two docked, but minimised panes, named <strong>Left Argument</strong> and <strong>Right Argument</strong>. They will open up automatically if you <a href="inline-tracing/">trace inline</a>.</p>
 <p>In the default Session files, the Tracer is docked along the bottom edge of the Session window. When you invoke the Tracer, it springs up as illustrated below. In this example, the function being traced is <code>⎕SE.UCMD</code>, which is invoked by typing a user-command, in this case <code>]APLCart</code>.</p>
 <p><img alt="" src="../img/tracer-1.png"></p>
 <p>In the default layout, the <em>SIstack</em> window is displayed alongside the main Tracer window, although this can be hidden or made to appear as a separate floating window, as required.</p>
@@ -78858,10 +78858,10 @@
 </tr>
 <tr>
 <td><span class="toolbar-icon" style="background-position: -432px 0"></span></td>
-<td>Trace Primitive</td>
-<td><strong>&lt;TP&gt;</strong></td>
-<td><kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>Enter</kbd></td>
-<td>Trace Primitive</td>
+<td>Inline Trace</td>
+<td><strong>&lt;IT&gt;</strong></td>
+<td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Enter</kbd></td>
+<td>Trace inline</td>
 </tr>
 <tr>
 <td><span class="toolbar-icon" style="background-position: 0 0"></span></td>
@@ -78991,7 +78991,7 @@
 <span class="nf">⎕SE</span><span class="na">.</span><span class="nv">SALTUtils</span><span class="na">.</span><span class="nv">CallUserCode</span><span class="sr">[</span><span class="m">0</span><span class="sr">]</span>
 <span class="nf">⎕SE</span><span class="na">.</span><span class="nv">UCMD</span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span>
 </code></pre></div>
-<p>See also the section on <a href="trace-primitives/">tracing primitives</a>.</p>
+<p>See also the section on <a href="inline-tracing/">inline tracing</a>.</p>
 <h2 id="controlling-execution">Controlling Execution</h2>
 <p>The point of execution may be moved by clicking the <em>Back</em> and <em>Fwd</em> buttons in the <em>Trace Tools</em> window or, using the keyboard, by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Bksp</kbd> and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd>. Notice however that these buttons do not themselves change the state indicator or the display in the <em>SIStack</em> window. This happens only when you restart execution from the new point.</p>
 <p>You can cut back the stack by clicking the <strong>&lt;EP&gt;</strong> button in the <em>Trace Tools</em> window. This causes execution to be suspended at the start of the line which was previously traced. The same effect can be achieved using the keyboard by pressing Esc. It can also be done by selecting <em>Exit</em> from the <em>File</em> menu on the Trace Window or by selecting <em>Close</em> from its system menu.</p>
@@ -79041,7 +79041,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong> (2025-04-03 main:f0f70f505)
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong> (2025-04-03 main:125c15314)
     </div>
   
   

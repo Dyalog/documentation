@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../">
-      
-      
-        <link rel="next" href="../../threads-tool/">
       
       
       <link rel="icon" href="../../../img/favicon-32.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Trace Primitives - Documentation</title>
+        <title>Inline tracing - Documentation</title>
       
     
     
@@ -109,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Trace Primitives
+              Inline tracing
             
           </span>
         </div>
@@ -70557,10 +70553,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -70646,11 +70640,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -70666,7 +70660,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Windows UI Guide
@@ -71413,8 +71407,6 @@
                 
   
   
-    
-  
   
   
     
@@ -71430,11 +71422,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_33" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_33" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -71457,7 +71449,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_33_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_33_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_33">
             <span class="md-nav__icon md-icon"></span>
             The Tracer
@@ -71470,30 +71462,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Trace Primitives
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../trace-primitives.md" class="md-nav__link">
         
   
   
@@ -71504,68 +71476,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      Getting started
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting started">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#aspect-panes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aspect Panes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aspect-pane-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aspect Pane Options
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tracing-diamond-separated-expressions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tracing Diamond-Separated Expressions
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -78821,30 +78731,31 @@
   
 
 
-<h1 class="heading"><span class="name">Trace Primitives</span></h1>
+<h1 class="heading"><span class="name">Inline Tracing</span></h1>
 
-<p>The ability to trace primitives is an extension to the Tracer that allows you to step through the execution of individual primitives within expressions, examining intermediate results and arguments of sub-expressions. It enables an in-depth inspection of complex expressions typed directly into the session, and can be used in conjunction with the traditional tracing mode to skip over lines you're not interested in and step through primitive-by-primitive in complex expressions where required.</p>
+<p><em>Inline Tracing</em> is an extension to the Tracer that allows you to step through the execution of individual primitives within expressions, examining intermediate results and arguments of sub-expressions. It enables an in-depth inspection of complex expressions typed directly into the session, and can be used in conjunction with the traditional tracing mode to skip over lines you're not interested in and step through primitive-by-primitive in complex expressions where required.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><em>Trace Primitives</em> is not an entirely accurate name: it is tracing with the (approximate) granularity of primitives, though it does stop on non-primitives.</p>
+<p><em>Inline Tracing</em> is tracing with the (approximate) granularity of primitives, though it does stop on non-primitives, such as user-defined functions.</p>
 </div>
 <h2 id="getting-started">Getting started</h2>
-<p>There is a command <strong>&lt;TP&gt;</strong> called <em>Trace Primitive</em> with the default keyboard shortcut <kbd>shift</kbd>+<kbd>alt</kbd>+<kbd>enter</kbd> which is used to trace primitives.</p>
-<p>To start tracing primitives, position the cursor within an expression and do one of the following:</p>
+<p>There is a command <strong>&lt;IT&gt;</strong> called <em>Inline Trace</em> with the default keyboard shortcut <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>enter</kbd> which is used to trace inline.</p>
+<p>To start inline tracing, position the cursor within an expression and do one of the following:</p>
 <ul>
-<li>enter the <em>Trace Primitive</em> command (<strong>&lt;TP&gt;</strong>) in the session.</li>
-<li>select <strong>Action &gt; Trace Primitives…</strong> from the Session menu bar.</li>
-<li>select <strong>Action &gt; Trace Primitives…</strong> from the Session window's context menu.</li>
+<li>enter the <em>Inline Trace</em> command (<strong>&lt;IT&gt;</strong>) in the session.</li>
+<li>select <strong>Action &gt; Trace Inline…</strong> from the Session menu bar.</li>
+<li>select <strong>Action &gt; Trace Inline…</strong> from the Session window's context menu.</li>
 <li>click the <strong>Next Primitive</strong> icon <span class="toolbar-icon" style="background-position: -432px 0"></span> in the Tracer toolbar.</li>
 </ul>
 <p>The Tracer opens with primitive tracing activated.</p>
 <h2 class="example">Example</h2>
-<p>In a Session, enter the expression <code>(+/÷≢)⍳10</code> and start tracing primitives.</p>
+
+<p>In a Session, enter the expression <code>(+/÷≢)⍳10</code> and start inline tracing.</p>
 <p><img alt="" src="../../img/tp-start.png"></p>
-<p>The red outline around the <code>⍳</code>in the Tracer shows the next primitive to be executed. Enter <strong>&lt;TP&gt;</strong> or click the <strong>Next Primitive</strong> icon in the Tracer toolbar to see how the execution progresses through the expression.
-The <strong>Next Primitive</strong> icon is always present in the Tracer. The <strong>&lt;TP&gt;</strong> command lets you open a Tracer on an expression that has been typed directly in the Session.</p>
+<p>The red outline around the <code>⍳</code> in the Tracer shows the next primitive to be executed. Enter <strong>&lt;IT&gt;</strong> or click the <strong>Next Primitive</strong> icon in the Tracer toolbar to see how the execution progresses through the expression.</p>
+<p>The <strong>Next Primitive</strong> icon is always present in the Tracer. The <strong>&lt;IT&gt;</strong> command lets you open a Tracer on an expression that has been typed directly in the Session.</p>
 <h3 id="aspect-panes">Aspect Panes</h3>
-<p>When tracing primitives, there are several more aspects of an expression that can be inspected beyond the default ones for left and right arguments, available under the <strong>Windows</strong> menu in the Tracer. These are divided into two sections; items 1-4 apply to the current function, and items 5-9 apply to the previously-executed function. They are:</p>
+<p>When tracing inline, there are several more aspects of an expression that can be inspected beyond the default ones for left and right arguments, available under the <strong>Windows</strong> menu in the Tracer. These are divided into two sections; items 1-4 apply to the current function, and items 5-9 apply to the previously-executed function. They are:</p>
 <ol>
 <li>
 <p><strong>Left Argument</strong></p>
@@ -78912,7 +78823,7 @@ Current Function  ┘     │ │ └  Previous Axis
 </li>
 <li>
 <p><strong>Trace idioms</strong></p>
-<p>Whether specific expressions that the interpreter might treat as special cases (for example, idioms) are included when tracing primitives. If this option is not selected, such expressions are treated as atomic functions.</p>
+<p>Whether specific expressions that the interpreter might treat as special cases (for example, idioms) are included when tracing inline. If this option is not selected, such expressions are treated as atomic functions.</p>
 </li>
 <li>
 <p><strong>Use Array Notation</strong></p>
@@ -78923,14 +78834,14 @@ Current Function  ┘     │ │ └  Previous Axis
 <p><img alt="" src="../../img/tbt-current-fn-options-menu.png"></p>
 <h2 id="tracing-diamond-separated-expressions">Tracing Diamond-Separated Expressions</h2>
 <p>A line of code can comprise a set of expressions separated by diamonds. In this situation, you might only want to trace into some of them and skip others; this can be done by using the command <strong>&lt;ER&gt;</strong> (by default, this is <kbd>enter</kbd>).</p>
-<p>For example, consider a line that consists of three diamond-separated expressions; you want to skip the first two, and trace primitives in the third one:</p>
+<p>For example, consider a line that consists of three diamond-separated expressions; you want to skip the first two, and trace into the third one:</p>
 <div class="highlight"><pre><span></span><code><span class="nv">a</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">9</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="o">⍉</span><span class="nv">a</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span>
 </code></pre></div>
-<p>Enter the expressions in the Session, and start primitive tracing. You should see:</p>
+<p>Enter the expressions in the Session, and start inline tracing. You should see:</p>
 <p><img alt="" src="../../img/tbt-diamond1.png"></p>
 <p>with the first expression highlighted (red outline). Enter <strong>&lt;ER&gt;</strong> (<kbd>enter</kbd>) to execute the single expression before the first diamond separator:</p>
 <p><img alt="" src="../../img/tbt-diamond2.png"></p>
-<p>The second expression is now highlighted. Enter <strong>&lt;ER&gt;</strong> (<kbd>enter</kbd>) again to execute the second expression, then enter <strong>&lt;TP&gt;</strong> (<kbd>alt</kbd>+<kbd>shift</kbd>+<kbd>enter</kbd>) to start tracing the primitives in the third expression:</p>
+<p>The second expression is now highlighted. Enter <strong>&lt;ER&gt;</strong> (<kbd>enter</kbd>) again to execute the second expression, then enter <strong>&lt;IT&gt;</strong> (<kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>enter</kbd>) to start tracing the primitives in the third expression:</p>
 <p><img alt="" src="../../img/tbt-diamond3.png"></p>
 
 
@@ -78961,7 +78872,7 @@ Current Function  ┘     │ │ └  Previous Axis
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong> (2025-04-03 main:f0f70f505)
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog, LTD</a></strong> (2025-04-03 main:125c15314)
     </div>
   
   
