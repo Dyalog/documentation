@@ -50,7 +50,6 @@ nav:
   - Introduction:
     - Overview: overview.md
     - Entering Characters: entering-characters.md
-    - Entering Nest and Stencil Characters: entering-the-stencil-character.md
     - Entering Commands: entering-commands.md
   - Input Windows: the-different-input-windows.md
   - Driving the tty version: driving-tty-dyalog-apl.md
