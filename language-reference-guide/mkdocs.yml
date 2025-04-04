@@ -371,6 +371,7 @@ nav:
       - List Loaded File Objects: the-i-beam-operator/list-loaded-file-objects.md
       - Remove Loaded File Object Info: the-i-beam-operator/remove-loaded-file-object-info.md
       - Loaded File Object Info: the-i-beam-operator/loaded-file-object-info.md
+      - Unicode Normalisation: the-i-beam-operator/unicode-normalisation.md
       - JSON Translate Name: the-i-beam-operator/json-translate-name.md
       - Shell Process Control: the-i-beam-operator/shell-process-control.md
       - Singular Value Decomposition: the-i-beam-operator/singular-value-decomposition.md
