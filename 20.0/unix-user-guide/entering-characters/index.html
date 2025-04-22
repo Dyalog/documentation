@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../img/favicon-32.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
       
       
 
@@ -68,6 +68,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#recently-added-glyphs" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -21953,6 +21958,8 @@
       
         
       
+        
+      
     
     
     
@@ -23423,6 +23430,29 @@
   
   <span class="md-ellipsis">
     Loaded File Object Info
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../language-reference-guide/the-i-beam-operator/unicode-normalisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unicode Normalisation
     
   </span>
   
@@ -78261,6 +78291,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Entering Characters
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -78272,6 +78315,34 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recently-added-glyphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recently-added Glyphs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -78648,6 +78719,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recently-added-glyphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recently-added Glyphs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -78674,6 +78762,33 @@
 </div>
 <p>Linux Window managers are in generally in a state of flux, so it is best to look at the following article on the Dyalog Forum for the latest information about keyboard configuration:</p>
 <p><a href="https://www.dyalog.com/forum/viewtopic.php?f=20&amp;t=210">https://www.dyalog.com/forum/viewtopic.php?f=20&amp;t=210</a></p>
+<h2 id="recently-added-glyphs">Recently-added Glyphs</h2>
+<p>Newly-added glyphs are not always added to the keymap (keyboard mapping file) included in Linux distributions before they start to be used within Dyalog.</p>
+<p>The following glyphs are not yet present in the distributed Linux keymap:</p>
+<ul>
+<li><code>⍛</code> (Jot Underbar, Unicode character "APL FUNCTIONAL SYMBOL JOT UNDERBAR"). Used from Dyalog v20.0 for the <a href="../../../language-reference-guide/primitive-operators/behind/"><em>behind</em></a> operator.</li>
+</ul>
+<p>In this situation, there are several methods in which such glyphs can be typed. For <code>⍛</code>, you can do any of the following:</p>
+<ul>
+<li>Update the keyboard mapping file manually (see below).</li>
+<li>Define a <a href="https://en.wikipedia.org/wiki/Compose_key"><kbd>Compose</kbd></a> key and enter <code>⍛</code> by pressing <kbd>Compose</kbd> <kbd>Jot</kbd> <kbd>Underscore</kbd>.</li>
+<li>Within the Session, use the <em>Insert</em> command <strong>&lt;IN&gt;</strong> to change to overstrike mode, enter <kbd>Jot</kbd> <kbd>←</kbd> <kbd>Underscore</kbd>, and enter <strong>&lt;IN&gt;</strong> again to return to insert mode.</li>
+<li>In Ride, use the Prefix key and <kbd>F</kbd>.</li>
+</ul>
+<hr>
+<p><strong>To update the keyboard mapping file</strong></p>
+<ol>
+<li>Open the keyboard mapping file. By default, this is located in <em>/usr/share/X11/xkb/symbols/apl</em></li>
+<li>Search for the text <strong>xkb_symbols "dyalog_base"</strong></li>
+<li>Replace<br><em>key &lt;AC04&gt; { [ underscore       ] };    // low line</em><br>with:<br><em>key &lt;AC04&gt; { [ underscore, U235b   ] };    // low line, jot underbar</em></li>
+<li>Log out and back in again.</li>
+</ol>
+<hr>
+<p>Be aware that:</p>
+<ul>
+<li>there are multiple occurrences of AC04 within the keyboard mapping file – you should only amend the one in the Dyalog APL section.</li>
+<li>any changes made to the keyboard mapping file might be lost if you update the operating system.</li>
+</ul>
 
 
 
@@ -78703,7 +78818,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-04-09 main:a55d07d4f).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-04-22 main:026991c98).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   
