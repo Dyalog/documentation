@@ -75,7 +75,7 @@ Functionality that is only available in the Classic edition includes:
 
 ### Typing Glyphs
 
-Some APL glyphs are only available in the Unicode edition, and need to be replaced with Unicode hex values in the Classic edition. These are:
+The Classic interpreter is not able to process glyphs that are not in `⎕AV`, and instead uses/displays system functions formatted as `⎕Uxxxx` values (where `xxxx` is the Hexadecimal code point). These are:
 
 |Glyph|Classic replacement|Description|
 |---|----|----------------------------------|
@@ -88,9 +88,14 @@ Some APL glyphs are only available in the Unicode edition, and need to be replac
 | `⍤` | `⎕U2364` | _atop_/_rank_ operator|
 | `⍥` | `⎕U2365` | _over_ operator |
 
-In both Unicode and Classic editions, the _variant_ operator can also be represented by `⎕OPT`.
+In both Unicode and Classic editions, `⎕OPT` can be used instead of the _variant_ operator.
 
-Any further glyphs that are introduced to Dyalog will also have `⎕Uxxxx` equivalents in the Classic edition.
+Any further glyphs that are introduced to Dyalog and are not already part of `⎕AV` will also have `⎕Uxxxx` representations in the Classic edition.
+
+Any workspace can be opened in either edition; the appropriate representation for the edition will automatically be applied.
+
+Classic edition: `⎕FIX`, `Link`, `SALT`, and Editor automatically translate Unicode glyphs as required.
+.
 
 ### Component Files
 
