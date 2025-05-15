@@ -10,3 +10,27 @@ services:
     environment:
       - DOCS_DIR=${DOCS_DIR}
     working_dir: /docs
+
+  mkdocs2chm:
+    build:
+      context: .
+      dockerfile: mkdocs2chm/Dockerfile
+    volumes:
+      - ${DOCS_DIR}:/app/documentation
+      - ${CHM_OUTPUT_DIR}:/app/mkdocs2chm/project
+    environment:
+      - DOCS_DIR=${DOCS_DIR}
+      - CHM_OUTPUT_DIR=${CHM_OUTPUT_DIR}
+    entrypoint: [ "/usr/local/bin/mkdocs2chm.py" ]
+
+  mkdocs2pdf:
+    build:
+      context: .
+      dockerfile: mkdocs2pdf/Dockerfile
+    volumes:
+      - ${DOCS_DIR}:/app/documentation
+      - ${PDF_OUTPUT_DIR}:/app/mkdocs2pdf/project
+    environment:
+      - DOCS_DIR=${DOCS_DIR}
+      - PDF_OUTPUT_DIR=${PDF_OUTPUT_DIR}
+    entrypoint: [ "/usr/local/bin/mkdocs2pdf.py" ]
