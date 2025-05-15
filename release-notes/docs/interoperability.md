@@ -94,8 +94,7 @@ Any further glyphs that are introduced to Dyalog and are not already part of `�
 
 Any workspace can be opened in either edition; the appropriate representation for the edition will automatically be applied.
 
-Classic edition: `⎕FIX`, `Link`, `SALT`, and Editor automatically translate Unicode glyphs as required.
-.
+Classic edition: `⎕FIX`, Link, SALT, and Editor automatically translate Unicode glyphs as required.
 
 ### Component Files
 

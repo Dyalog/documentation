@@ -47,8 +47,10 @@ markdown_extensions:
   - toc:
       title: On this page
 nav:
-  - About Dyalog v20.0:
-     - index.md
-     - Interoperability: interoperability.md
+  - About This Document: index.md
+  - System Requirements:
+    - System Requirements: system-requirements/index.md   
+    - Interoperability: interoperability.md
+  - Announcements: announcements.md
   - New and Enhanced Features: new-enhanced.md
   - Minor Updates and Bug Fixes: minor-updates.md
