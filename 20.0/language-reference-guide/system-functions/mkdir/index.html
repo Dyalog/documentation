@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../img/favicon-32.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
       
 
@@ -68,6 +68,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#variant-options" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -27156,6 +27161,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Make Directory
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -27167,6 +27185,43 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variant-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variant Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unique-option-boolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unique Option (Boolean)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -32074,6 +32129,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Make Directory
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -32085,6 +32153,43 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variant-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variant Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unique-option-boolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unique Option (Boolean)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -78435,6 +78540,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variant-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variant Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unique-option-boolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unique Option (Boolean)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -78452,21 +78583,44 @@
   
 
 
+<div style="display: none;">
+  ⎕MKDIR MKDIR
+</div>
+
 <h1 class="heading"><span class="name">Make Directory</span> <span class="command">{R}←{X}⎕MKDIR Y</span></h1>
 
 <p>This function creates new directories.</p>
 <p><code>Y</code> is a character vector or scalar containing a single directory name, or a vector of character vectors containing zero or more directory names. Names must conform to the naming rules of the host Operating System.</p>
-<p>By default, for each file in <code>Y</code> the path must exist and the base name must not exist (see <a href="../nparts/">File Name Parts</a>), otherwise an error is signalled.</p>
-<p>The optional left argument <code>X</code> is the numeric scalar 0, 1, 2 or 3 which amends this behaviour as shown in the following table. If omitted, it is assumed to be 0.</p>
+<p>By default, for each name in <code>Y</code> the path must exist and the base name must not exist (see <a href="../nparts/">File Name Parts</a>), otherwise an error is signalled. The optional left argument <code>X</code> and the variant option <strong>Unique</strong> can be used to amend this behaviour.</p>
+<p>The result <code>R</code> depends on the value of the variant option <strong>Unique</strong>. If  <strong>Unique</strong> is not present, it is assumed to have a value of <code>0</code>.</p>
 <table>
+<thead>
+<tr>
+<th>Unique</th>
+<th>Result <code>R</code></th>
+</tr>
+</thead>
 <tbody>
 <tr>
 <td><code>0</code></td>
-<td>Default behaviour.</td>
+<td>If <code>Y</code> specifies a single name, the shy result <code>R</code> is a scalar <code>1</code> if a directory was created or <code>0</code> if not. If <code>Y</code> is a vector of character vectors, <code>R</code> is a vector of <code>1</code>s and <code>0</code>s with the same length as <code>Y</code>.</td>
 </tr>
 <tr>
 <td><code>1</code></td>
-<td>No action is taken if a directory specified by <code>Y</code> already exists. The return value may be used to determine whether a new directory was created or not.</td>
+<td>If <code>Y</code> specifies a single name, the shy result <code>R</code> is a character vector containing the name of the directory that was created. If <code>Y</code> is a vector of character vectors, <code>R</code> is a vector of character vectors with the same length as <code>Y</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>The optional left argument <code>X</code> is a numeric scalar that modifies the default behaviour when the base name in <code>Y</code> already exists and/or the path in <code>Y</code> does not already exist. If omitted, it is assumed to be 0. Possible values and the effect that they have on the default behaviour are:</p>
+<table>
+<tbody>
+<tr>
+<td class="shaded"><code>0</code></td>
+<td>The base name in <code>Y</code> must not exist and the path in <code>Y</code> must exist, otherwise an error is signalled.</td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td>No action is taken if a directory specified by <code>Y</code> already exists (the return value indicates whether a new directory was created). Has no effect when the variant option <strong>Unique</strong> is set.</td>
 </tr>
 <tr>
 <td><code>2</code></td>
@@ -78478,7 +78632,29 @@
 </tr>
 </tbody>
 </table>
-<p>If <code>Y</code> specifies a single name, the shy result <code>R</code> is a scalar 1 if a directory was created or 0 if not. If <code>Y</code> is a vector of character vectors, <code>R</code> is a vector of 1s and 0s with the same length as <code>Y</code>.</p>
+<h2 id="variant-options">Variant Options</h2>
+<p><code>⎕MKDIR</code> may be applied using the variant operator with the option <strong>Unique</strong>. There is no primary option.</p>
+<h2 id="unique-option-boolean">Unique Option (Boolean)</h2>
+<p>The <strong>Unique</strong> option specifies whether the base name (see <a href="../nparts/">File Name Parts</a>) in <code>Y</code> is modified so that the name is unique (does not already exist).</p>
+<table>
+<thead>
+<tr>
+<th>Unique</th>
+<th>Effect on Behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="shaded"><code>0</code></td>
+<td>The directory named in <code>Y</code> will be created.</td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td>The name in <code>Y</code> is modified by extending the base name with random characters and the directory is created. The name of the directory is returned in the result <code>R</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>If a directory cannot be created (for example, if a directory with that name already exists, or write access is denied) then an error is signalled.</p>
 <h2 class="example">Examples</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NEXISTS</span><span class="w"> </span><span class="s1">'/Users/Pete/Documents/temp'</span>
 <span class="m">0</span>
@@ -78496,6 +78672,15 @@
 
 <span class="w">      </span><span class="vg">⎕</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕MKDIR</span><span class="s1">'/Users/Pete/Documents/temp/t1/t2'</span>
 <span class="m">1</span>
+
+<span class="w">      </span><span class="vg">⎕</span><span class="kd">←</span><span class="nf">⎕MKDIR</span><span class="s1">'/Users/Pete/Documents/temp/t1/t2'</span>
+<span class="nv">FILE</span><span class="w"> </span><span class="nv">NAME</span><span class="w"> </span><span class="nv">ERROR</span><span class="bp">:</span><span class="w"> </span><span class="na">/</span><span class="nv">Users</span><span class="na">/</span><span class="nv">Pete</span><span class="na">/</span><span class="nv">Documents</span><span class="na">/</span><span class="nv">temp</span><span class="na">/</span><span class="nv">t1</span><span class="na">/</span><span class="nv">t2</span><span class="bp">:</span><span class="w"> </span><span class="nv">Already</span><span class="w"> </span><span class="nv">exists</span>
+<span class="w">      </span><span class="vg">⎕</span><span class="kd">←</span><span class="nf">⎕MKDIR</span><span class="s1">'/Users/Pete/Documents/temp/t1/t2'</span>
+<span class="w">        </span><span class="o">∧</span>
+
+<span class="w">      </span><span class="vg">⎕</span><span class="kd">←</span><span class="p">(</span><span class="nf">⎕MKDIR</span><span class="na">⍠</span><span class="s1">'Unique'</span><span class="m">1</span><span class="p">)</span><span class="s1">'/Users/Pete/Documents/temp/t1/t2'</span>
+<span class="na">/</span><span class="nv">Users</span><span class="na">/</span><span class="nv">Pete</span><span class="na">/</span><span class="nv">Documents</span><span class="na">/</span><span class="nv">temp</span><span class="na">/</span><span class="nv">t1</span><span class="na">/</span><span class="nv">t2djM0X8</span>
+
 <span class="w">      </span><span class="o">⊢</span><span class="nf">⎕MKDIR</span><span class="s1">'temp1'</span><span class="w"> </span><span class="s1">'temp2'</span>
 <span class="m">1</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
@@ -78532,7 +78717,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-04-29 main:5687a35623).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-05-16 main:c6d1270672).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   
@@ -78550,10 +78735,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.path", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.path", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       
