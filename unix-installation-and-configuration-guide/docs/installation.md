@@ -16,14 +16,14 @@ or, in the case of AIX:
 /opt/mdyalog/{{ version_majmin }}/<APLWidth>/<APLEdition>/<platform>
 ```
 
-So for example, Dyalog APL Version {{ version_majmin }} 32 bit Unicode for POWER6 hardware on AIX will by default be installed into
+So for example, Dyalog APL Version {{ version_majmin }} 64 bit Unicode for POWER9 hardware on AIX will by default be installed into
 ```apl
-/opt/mdyalog/{{ version_majmin }}/32/unicode/p6        
+/opt/mdyalog/{{ version_majmin }}/64/unicode/p9        
 ```
 
 whereas on a Linux distribution the equivalent version would be installed in
 ```apl
-/opt/mdyalog/{{ version_majmin }}/32/Unicode        
+/opt/mdyalog/{{ version_majmin }}/64/Unicode        
 ```
 
 This naming convention began with Version 12.0, and is planned to continue into the future. This ensures that all versions and releases of Dyalog APL can be installed in parallel.
@@ -37,22 +37,22 @@ Dyalog APL version
 
 ## Installing under AIX
 
-For each version of Dyalog APL on AIX three separate hardware-specific builds are created for each of the four combinations of 32 or 64 bit versions, Classic or Unicode editions. For version {{ version_majmin }} specific builds for p5, p6 and p7 are created.
+For each version of Dyalog APL on AIX, separate hardware-specific builds are created for each of the four combinations of 32 or 64 bit versions, Classic or Unicode editions. For version {{ version_majmin }} specific builds for p9 are created.
 ```apl
 $ su -
 # cd /opt
 ## cpio -icdvum </tmp/dyalog-20090901-64-unicode-p6.cpi
-## /opt/mdyalog/{{ version_majmin }}/64/unicode/p6/make_scripts
+## /opt/mdyalog/{{ version_majmin }}/64/unicode/p9/make_scripts
 ## exit
 ```
 
 Dyalog APL is now installed. To run as any user, type
 ```apl
-$ /opt/mdyalog/{{ version_majmin }}/64/unicode/p6/mapl
+$ /opt/mdyalog/{{ version_majmin }}/64/unicode/p9/mapl
 ```
 
 !!! note
-    Version {{ version_majmin }} is compiled on AIX6.1.
+    Version {{ version_majmin }} is compiled on AIX7.2.
 
 ## Installing on an RPM-based Linux Distribution
 ```apl
