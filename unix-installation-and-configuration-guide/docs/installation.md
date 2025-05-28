@@ -41,8 +41,7 @@ For each version of Dyalog APL on AIX, separate hardware-specific builds are cre
 ```apl
 $ su -
 # cd /opt
-## cpio -icdvum </tmp/dyalog-20090901-64-unicode-p6.cpi
-## /opt/mdyalog/{{ version_majmin }}/64/unicode/p9/make_scripts
+## cpio -icdvum </tmp/dyalog-unicode_20.0.51795_ppc64_p9.cpi
 ## exit
 ```
 
@@ -57,8 +56,8 @@ $ /opt/mdyalog/{{ version_majmin }}/64/unicode/p9/mapl
 ## Installing on intel machines
 ### Installing on an RPM-based Linux Distribution
 ```apl
-$ unzip linux_64_15.0.26964_unicode.zip
-$ sudo rpm --install linux_64_15.0.26964_unicode.x86_64.rpm
+$ unzip dyalog-unicode_20.0.51795_x86_64.tar.gz
+$ sudo rpm --install dyalog-unicode_20.0.51795_x86_64.rpm
 ```
 
 Dyalog APL is now installed. To run as any user, type
@@ -67,7 +66,7 @@ $ dyalog
 ```
 or
 ```apl
-$ /opt/mdyalog/15.0/64/unicode/mapl
+$ /opt/mdyalog/20.0/64/unicode/mapl
 ```
 
 !!! note
@@ -76,8 +75,8 @@ $ /opt/mdyalog/15.0/64/unicode/mapl
 
 ### Installing on a DEB-based Linux Distribution
 ```other
-$ unzip linux_64_15.0.26964_unicode.zip
-$ sudo dpkg --install linux_64_15.0.26964_unicode.x86_64.deb
+$ unzip dyalog-unicode_20.0.51795_amd64.tar.gz
+$ sudo dpkg --install dyalog-unicode_20.0.51795_amd64.deb
 ```
 Dyalog APL is now installed. To run as any user, type
 ```other
@@ -85,7 +84,7 @@ $ dyalog
 ```
 or
 ```other
-$ /opt/mdyalog/15.0/64/unicode/mapl
+$ /opt/mdyalog/20.0/64/unicode/mapl
 ```
 
 !!! note
@@ -115,8 +114,8 @@ $ /opt/mdyalog/20.0/64/unicode/mapl
 
 ### Installing on a DEB-based Linux Distribution
 ```other
-$ unzip 
-$ sudo dpkg --install 
+$ unzip dyalog-unicode_20.0.51795_aarch64.tar.gz
+$ sudo dpkg --install dyalog-unicode_20.0.51795_aarch64.rpm
 ```
 Dyalog APL is now installed. To run as any user, type
 ```other
