@@ -56,7 +56,7 @@ $ /opt/mdyalog/{{ version_majmin }}/64/unicode/p9/mapl
 ## Installing on intel machines
 ### Installing on an RPM-based Linux Distribution
 ```apl
-$ unzip dyalog-unicode_20.0.51795_x86_64.tar.gz
+$ tar -xzf dyalog-unicode_20.0.51795_x86_64.tar.gz
 $ sudo rpm --install dyalog-unicode_20.0.51795_x86_64.rpm
 ```
 
@@ -75,7 +75,7 @@ $ /opt/mdyalog/20.0/64/unicode/mapl
 
 ### Installing on a DEB-based Linux Distribution
 ```other
-$ unzip dyalog-unicode_20.0.51795_amd64.tar.gz
+$ tar -xzf  dyalog-unicode_20.0.51795_amd64.tar.gz
 $ sudo dpkg --install dyalog-unicode_20.0.51795_amd64.deb
 ```
 Dyalog APL is now installed. To run as any user, type
@@ -95,7 +95,7 @@ $ /opt/mdyalog/20.0/64/unicode/mapl
 ## Installing on arm machines
 ### Installing on an RPM-based Linux Distribution
 ```apl
-$ unzip 
+$ tar -xzf dyalog-unicode_20.0.51795_aarch64.tar.gz
 $ sudo rpm --install 
 ```
 
@@ -114,7 +114,7 @@ $ /opt/mdyalog/20.0/64/unicode/mapl
 
 ### Installing on a DEB-based Linux Distribution
 ```other
-$ unzip dyalog-unicode_20.0.51795_aarch64.tar.gz
+$ tar -xzf dyalog-unicode_20.0.51795_aarch64.tar.gz
 $ sudo dpkg --install dyalog-unicode_20.0.51795_aarch64.rpm
 ```
 Dyalog APL is now installed. To run as any user, type
