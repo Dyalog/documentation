@@ -54,7 +54,8 @@ $ /opt/mdyalog/{{ version_majmin }}/64/unicode/p9/mapl
 !!! note
     Version {{ version_majmin }} is compiled on AIX7.2.
 
-## Installing on an RPM-based Linux Distribution
+## Installing on intel machines
+### Installing on an RPM-based Linux Distribution
 ```apl
 $ unzip linux_64_15.0.26964_unicode.zip
 $ sudo rpm --install linux_64_15.0.26964_unicode.x86_64.rpm
@@ -73,7 +74,7 @@ $ /opt/mdyalog/15.0/64/unicode/mapl
     - It may be necessary to use the --force flag or equivalent if an earlier version of Dyalog APL is to be installed on the same server as a later version. This is safe since the versions have no files in common.
     - It has been noticed that in some circumstances the 32-bit installs fail on 64-bit operating systems due to a missing ncurses package. However, it appears that that package is indeed installed. What is required however is the 32-bit version: once installed, Dyalog APL will then install.
 
-## Installing on a DEB-based Linux Distribution
+### Installing on a DEB-based Linux Distribution
 ```other
 $ unzip linux_64_15.0.26964_unicode.zip
 $ sudo dpkg --install linux_64_15.0.26964_unicode.x86_64.deb
@@ -91,6 +92,46 @@ $ /opt/mdyalog/15.0/64/unicode/mapl
     - It may be necessary to use the --force flag or equivalent if an earlier version of Dyalog APL is to be installed on the same server as a later version. This is safe since the versions have no files in common.
     - If dpkg generates dependency errors, run  `apt-get install -f` (as root)
     - It has been noticed that in some circumstances the 32-bit installs fail on 64-bit operating systems due to a missing ncurses package. However, it appears that that package is indeed installed. What is required however is the 32-bit version: once installed, Dyalog APL will then install.
+
+## Installing on arm machines
+### Installing on an RPM-based Linux Distribution
+```apl
+$ unzip 
+$ sudo rpm --install 
+```
+
+Dyalog APL is now installed. To run as any user, type
+```apl
+$ dyalog
+```
+or
+```apl
+$ /opt/mdyalog/20.0/64/unicode/mapl
+```
+
+!!! note
+    - It may be necessary to use the --force flag or equivalent if an earlier version of Dyalog APL is to be installed on the same server as a later version. This is safe since the versions have no files in common.
+
+
+### Installing on a DEB-based Linux Distribution
+```other
+$ unzip 
+$ sudo dpkg --install 
+```
+Dyalog APL is now installed. To run as any user, type
+```other
+$ dyalog
+```
+or
+```other
+$ /opt/mdyalog/20.0/64/unicode/mapl
+```
+
+!!! note
+    - It may be necessary to use the --force flag or equivalent if an earlier version of Dyalog APL is to be installed on the same server as a later version. This is safe since the versions have no files in common.
+    - If dpkg generates dependency errors, run  `apt-get install -f` (as root)
+    - It has been noticed that in some circumstances the 32-bit installs fail on 64-bit operating systems due to a missing ncurses package. However, it appears that that package is indeed installed. What is required however is the 32-bit version: once installed, Dyalog APL will then install.
+
 
 ## Installing in a non-default location
 
