@@ -164,14 +164,14 @@ In the following examples, it is assumed that only Dyalog APL 20.0 64-bit Unicod
 
 Should it be necessary to deinstall Dyalog APL, then the process is:
 
-## Deinstalling under AIX
+### Deinstalling under AIX
 ```apl
 su -
 cd /opt
 rm -rf mdyalog/20.0
 ```
 
-## Deinstalling on an RPM-based Linux Distribution
+### Deinstalling on an RPM-based Linux Distribution
 ```other
 su -
 rpm -e dyalog-unicode_20.0.51795_x86_64
@@ -180,7 +180,7 @@ rm -rf mdyalog/20.0
 exit
 ```
 
-## Deinstalling on a DEB-based Linux Distribution
+### Deinstalling on a DEB-based Linux Distribution
 ```other
 sudo su -
 apt-get purge dyalog-unicode-200
