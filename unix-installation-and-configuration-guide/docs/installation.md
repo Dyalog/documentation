@@ -26,7 +26,7 @@ whereas on a Linux distribution the equivalent version would be installed in
 /opt/mdyalog/{{ version_majmin }}/64/Unicode        
 ```
 
-This naming convention began with Version 12.0, and is planned to continue into the future. This ensures that all versions and releases of Dyalog APL can be installed in parallel.
+This naming convention ensures that all versions and releases of Dyalog APL can be installed in parallel.
 
 As part of installing Dyalog on Linux (including Pi) the script /usr/bin/dyalog is created; this is a copy of the $DYALOG/mapl script and can be used to start Dyalog APL. Note that this script will start the most recently installed version of Dyalog APL. This script is used in the target of the Dyalog APL icon on Linux desktops. If preferable, Dyalog can be started by calling the script mapl in the appropriate Dyalog installation directory.
 
@@ -160,7 +160,7 @@ This last step generates the mapl script; should you chose to move the installat
 
 ## Deinstalling Dyalog APL
 
-In the following examples, it is assumed that only Dyalog APL 14.0 64-bit Unicode is installed on the server; the commands to delete directories will need to be more specific if multiple versions of Dyalog APL are installed.
+In the following examples, it is assumed that only Dyalog APL 20.0 64-bit Unicode is installed on the server; the commands to delete directories will need to be more specific if multiple versions of Dyalog APL are installed.
 
 Should it be necessary to deinstall Dyalog APL, then the process is:
 
@@ -168,24 +168,24 @@ Should it be necessary to deinstall Dyalog APL, then the process is:
 ```apl
 su -
 cd /opt
-rm -rf mdyalog/14.0
+rm -rf mdyalog/20.0
 ```
 
 ## Deinstalling on an RPM-based Linux Distribution
 ```other
 su -
-rpm -e dyalog.32.classic-14.0-20090901
+rpm -e dyalog-unicode_20.0.51795_x86_64
 cd /opt
-rm -rf mdyalog/14.0
+rm -rf mdyalog/20.0
 exit
 ```
 
 ## Deinstalling on a DEB-based Linux Distribution
 ```other
 sudo su -
-apt-get purge dyalog-unicode-140
+apt-get purge dyalog-unicode-200
 cd /opt
-rm -rf mdyalog/14.0
+rm -rf mdyalog/20.0
 exit
 ```
 
