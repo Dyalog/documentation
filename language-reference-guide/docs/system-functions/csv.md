@@ -145,7 +145,7 @@ The Separator, QuoteChar and EscapeChar characters, when defined, must be differ
 Other options defined for export are also accepted but ignored.
 
 
-## Invert Option
+### Invert Option
 
 
 This option specifies how the CSV data should be returned as follows:
@@ -158,7 +158,7 @@ This option specifies how the CSV data should be returned as follows:
 
 
 
-## QuoteChar, EscapeChar and DoubleQuote Options
+### QuoteChar, EscapeChar and DoubleQuote Options
 
 
 If EscapeChar is set then any character may be prefixed by the escape character. The escape character is typically defined as `'\'`. The escape character immediately followed by the character `c` is the literal character `c` even if `c` alone would have been a metacharacter.
@@ -309,7 +309,7 @@ In all cases the files must contain text using one of the supported encodings. S
 - The result does not report the file encoding or line ending type as it does with `⎕NGET`. If this information is required then it must be obtained by other means.
 
 
-### Dyadic `⎕CSV`
+# Dyadic `⎕CSV`
 
 
 `{R}←X ⎕CSV Y`
@@ -354,7 +354,7 @@ If `Y[1]` is empty, *Description* may be a character scalar `'S'` (simple) or `'
 
 
 
-### Variant options
+## Variant options
 
 
 Dyadic `⎕CSV` may be applied using the  Variant operator with the following options.
@@ -451,7 +451,7 @@ FILE NAME ERROR: Unable to create file ("The file exists.")
 
 ![csv_excel1](../img/csv-excel1.png)
 
-### Notes
+## Notes
 
 - When `Y` contains only the destination of the CSV data (that is, omits the description in its second element) it does not have to be enclosed to form a single element vector.
 - Native files are written from the current file position. On successful completion, the file position will be at the end of the written data. If an error is signalled the amount of data written is undefined.
