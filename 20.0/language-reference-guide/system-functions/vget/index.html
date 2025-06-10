@@ -227,18 +227,256 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Release Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Release Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../coming-soon/" class="md-nav__link">
+      <a href="../../../release-notes/about/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Dyalog v20.0 Release Notes
+    About This Document
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/system-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../release-notes/announcements/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Announcements
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Announcements
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/announcements/deprecated-functionality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deprecated Functionality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/new-enhanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    New and Enhanced Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/minor-updates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Minor Updates and Bug Fixes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/interoperability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interoperability
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -78621,7 +78859,7 @@
 <p>The result <code>R</code> is a vector of the values from the corresponding names or fallback values.</p>
 <h3 class="example">Examples</h3>
 
-<p>Names without fallback:</p>
+<p>Multiple names without fallback:</p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">name1</span><span class="w"> </span><span class="nv">name2</span><span class="w"> </span><span class="nv">name3</span><span class="w"> </span><span class="nv">longer_name</span><span class="p">)</span><span class="kd">←</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="s1">'APL'</span><span class="w"> </span><span class="m">42</span>
 <span class="w">      </span><span class="nv">names</span><span class="kd">←</span><span class="o">↑</span><span class="s1">'name1'</span><span class="w"> </span><span class="s1">'name2'</span><span class="w"> </span><span class="s1">'name3'</span><span class="w"> </span><span class="s1">'longer_name'</span>
 <span class="w">      </span><span class="nv">names</span>
@@ -78632,7 +78870,7 @@
 <span class="w">      </span><span class="nf">⎕VGET</span><span class="w"> </span><span class="nv">names</span>
 <span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w">  </span><span class="c1">#.[Namespace]  APL  42</span>
 </code></pre></div>
-<p>Names with different fallback for each name:</p>
+<p>Multiple names with different fallback for each name:</p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">name2</span><span class="kd">←</span><span class="m">100</span>
 <span class="w">      </span><span class="nv">names</span><span class="kd">←</span><span class="o">↑</span><span class="s1">'name1'</span><span class="w"> </span><span class="s1">'name2'</span><span class="w"> </span><span class="s1">'name3'</span>
 <span class="w">      </span><span class="nv">names</span>
@@ -78643,7 +78881,7 @@
 <span class="w">      </span><span class="nf">⎕vget</span><span class="w"> </span><span class="nv">names</span><span class="w"> </span><span class="nv">defaults</span>
 <span class="m">1</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="m">3</span>
 </code></pre></div>
-<p>Names with the same fallback for all of them:</p>
+<p>Multiple names with the same fallback for all of them:</p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">persons</span><span class="kd">←</span><span class="p">(</span>
 <span class="w">        </span><span class="p">(</span><span class="nv">name</span><span class="bp">:</span><span class="w"> </span><span class="s1">'Jack'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">age</span><span class="bp">:</span><span class="w"> </span><span class="m">36</span><span class="p">)</span>
 <span class="w">        </span><span class="p">(</span><span class="nv">name</span><span class="bp">:</span><span class="w"> </span><span class="s1">'Peter'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">email</span><span class="bp">:</span><span class="w"> </span><span class="s1">'peter@example.com'</span><span class="p">)</span>
@@ -78714,6 +78952,7 @@
 <span class="w">      </span><span class="nf">⎕VGET</span><span class="w"> </span><span class="p">(</span><span class="s1">'name1'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'name2'</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'name3'</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
 <span class="m">1</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="m">3</span>
 </code></pre></div>
+<p>See <a href="#case-1-name-matrix">Case 1: Name Matrix</a> for an example of multiple names with the same fallback value for all of them.</p>
 <h2 id="case-3-nameclasses">Case 3: Nameclasses</h2>
 <p><code>Y</code> must be a numeric scalar or vector, where each item is a nameclass (see <a href="../nc/">Name Classification</a>).</p>
 <p>If any of the numbers in <code>Y</code> are negative, the result <code>R</code> is a vector of name-value pairs, one for each existing name in the source namespace with a nameclass from <code>Y</code>. Otherwise, <code>R</code> is a 2-element nested vector, where the first element is a character matrix of names and the second element is a vector of values. In both cases, <code>R</code> is suitable as an argument for <a href="./"><code>⎕VGET</code></a> and <a href="../vset/"><code>⎕VSET</code></a>.</p>
@@ -78793,7 +79032,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-05 main:ab9c0b1c32).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-10 main:eab6f4e125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   
