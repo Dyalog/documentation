@@ -21509,12 +21509,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../language-reference-guide/the-i-beam-operator/deprecated-features/" class="md-nav__link">
+      <a href="../../language-reference-guide/the-i-beam-operator/log-use-of-deprecated-features/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Deprecated Features
+    Log Use of Deprecated Features
     
   </span>
   
@@ -21532,12 +21532,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../language-reference-guide/the-i-beam-operator/log-file-for-deprecations/" class="md-nav__link">
+      <a href="../../language-reference-guide/the-i-beam-operator/deprecated-feature-log-file/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Log File for Deprecations
+    Deprecated Feature Log File
     
   </span>
   
@@ -79223,11 +79223,11 @@ The single/first element of <code>X</code> (which specifies <code>content</code>
 </div>
 <p>The following I-beams have been added:</p>
 <ul>
-<li><a href="../../language-reference-guide/the-i-beam-operator/deprecated-features/"><code>13⌶</code></a> – Deprecated Features<br>
+<li><a href="../../language-reference-guide/the-i-beam-operator/log-use-of-deprecated-features/"><code>13⌶</code></a> – Deprecated Features<br>
 Records information in the log file set by <code>109⌶</code> about the specified deprecated feature names or keywords</li>
 <li><a href="../../language-reference-guide/the-i-beam-operator/monadic-operator-generator/"><code>43⌶</code></a> – Monadic Operator Generator<br>
 Generates a monadic operator with specified functionality. The functionality is currently limited to creating a .NET-specific operator that can create concrete versions of generic classes and execute generic methods.</li>
-<li><a href="../../language-reference-guide/the-i-beam-operator/log-file-for-deprecations/"><code>109⌶</code></a> – Log File for Deprecations<br>
+<li><a href="../../language-reference-guide/the-i-beam-operator/deprecated-feature-log-file/"><code>109⌶</code></a> – Log File for Deprecations<br>
 Manages the file used to log the use of deprecated features.</li>
 <li><a href="../../language-reference-guide/the-i-beam-operator/generate-uuid/"><code>120⌶</code></a> – Generate UUID<br>
 Generates a UUID (Universally Unique IDentifier) according to the RFC 9562 specification.</li>
@@ -79249,18 +79249,20 @@ Temporary functionality used for identification of potential side-effects of a c
 </ul>
 <h2 id="syntax-changes">Syntax Changes</h2>
 <h3 id="array-notation">Array Notation</h3>
-<p><a href="../../programming-reference-guide/introduction/arrays/array-notation/">Array notation</a> is a literal syntax for most arrays (including nested and high-rank arrays) and namespaces. With array notation, arrays can be entered and displayed over multiple lines.</p>
-<p>Array notation can be enabled in the following ways:</p>
+<p><a href="../../programming-reference-guide/introduction/arrays/array-notation/">Array notation</a> is a literal syntax for most arrays (including nested and high-rank arrays) and namespaces. Array notation is an extension of APL syntax, and, as such, can be used inside and around all other APL expressions, and wherever an APL expression can appear (for example in the Session, in functions, and in namespace scripts).</p>
+<p>You can edit variables using array notation in the following ways:</p>
 <ul>
 <li>Enter the <em>Edit</em> command (<strong>&lt;ED&gt;</strong>) from within the Editor.</li>
 <li>Call the system command <code>)ED</code> and prefix the variable name with a diamond character, for example, <code>)ED ⋄foo</code></li>
 <li>Call the system function <code>⎕ED</code> with a left argument <code>'⋄'</code>, for example, <code>'⋄' ⎕ED 'foo'</code>.</li>
+<li>Set the <code>APLAN_FOR_OUTPUT</code> configuration parameter to <code>1</code> (this sets use of array notation to be permanently on)</li>
 </ul>
-<p>In addition, in the Microsoft Windows IDE, array notation can be enabled in the following ways:</p>
+<p>In addition, in the Microsoft Windows IDE, array notation can be accessed in the following ways:</p>
 <ul>
-<li>Click the <img alt="" height="20" src="../img/session_arraynotation.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20"> icon in the <strong>Session</strong> toolbar when the cursor is over the name of an array.</li>
-<li>Click the <img alt="" height="20" src="../img/object_arraynotation.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20"> icon in the <strong>Object</strong> toolbar.</li>
-<li>Select <strong>Show as Array Notation</strong> from the Editor's <strong>Syntax</strong> menu.</li>
+<li>Click the <img alt="" height="20" src="../img/session_arraynotation.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20"> icon in the <strong>Session</strong> toolbar – this button toggles use of array notation syntax on/off.</li>
+<li>Click the <img alt="" height="20" src="../img/object_arraynotation.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20"> icon in the <strong>Object</strong> toolbar when the cursor is over the name of an array – this opens the array in the Editor in the same way as <code>)ED ⋄foo</code>.</li>
+<li>Click the <img alt="" height="20" src="../img/object_arraynotation.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20"> icon in the Editor's toolbar – this button toggles use of array notation syntax on/off.</li>
+<li>Select <strong>Show as Array Notation</strong> from the Editor's <strong>Syntax</strong> menu – this displays the contents of the Editor using array notation.</li>
 </ul>
 <h2 id="user-interface-changes">User Interface Changes</h2>
 <h3 id="inline-tracing">Inline Tracing</h3>
@@ -79278,8 +79280,10 @@ Temporary functionality used for identification of potential side-effects of a c
 <h3 id="configuration-parameters">Configuration Parameters</h3>
 <p>The following configuration parameters have been added:</p>
 <ul>
+<li><code>APLAN_FOR_OUTPUT</code><br>
+This displays session output using array notation when possible. The default is <code>0</code> (array notation is not in use).</li>
 <li><code>DYALOG_SHELL_SUBPROCESS</code><br>
-This improves the performance of <code>⎕SHELL</code> on AIX. When set to <code>1</code> (the default on AIX), <code>⎕SHELL</code> uses another mechanism for running/executing its command, which can improve performance on some operating systems.</li>
+This improves the performance of <code>⎕SHELL</code> on AIX. When set to <code>1</code> (the default on AIX), the interpreter starts a (small) child process that handles calls to <code>⎕SHELL</code>, mitigating some of the performance issues seen on AIX when <code class="language-nonAPL">fork()</code>ing large processes.</li>
 </ul>
 <h3 id="command-shortcuts">Command Shortcuts</h3>
 <p>The following command shortcuts have been extended:</p>
@@ -79371,7 +79375,7 @@ This improves the performance of <code>⎕SHELL</code> on AIX. When set to <code
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-10 main:c6eb369378).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-11 main:5f4b0172a3).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

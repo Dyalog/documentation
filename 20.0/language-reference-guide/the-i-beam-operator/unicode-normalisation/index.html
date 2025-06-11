@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#normalisation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -21285,12 +21290,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../deprecated-features/" class="md-nav__link">
+      <a href="../log-use-of-deprecated-features/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Deprecated Features
+    Log Use of Deprecated Features
     
   </span>
   
@@ -21308,12 +21313,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../log-file-for-deprecations/" class="md-nav__link">
+      <a href="../deprecated-feature-log-file/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Log File for Deprecations
+    Deprecated Feature Log File
     
   </span>
   
@@ -22741,6 +22746,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Unicode Normalisation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -22752,6 +22770,34 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#normalisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normalisation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -78735,6 +78781,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#normalisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normalisation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -78754,14 +78817,15 @@
 
 <h1 class="heading"><span class="name">Unicode Normalisation</span> <span class="command">R←X(5581⌶)Y</span></h1>
 
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>5581⌶ is temporary functionality – it is expected that it will be replaced by a system function in Dyalog v21.0. The replacement system function might not give results of exactly the same shape or rank for non-vector character data.</p>
-</div>
-<p><code>Y</code> can be any array.</p>
-<p><code>X</code> must be a scalar or vector character array describing the form of normalisation required. Possible values are shown in the table below.</p>
-<p>The result <code>R</code> is the same as <code>Y</code> except that all character arrays within <code>Y</code> are normalised as specified. This means that, because normalisation can change the length of character encodings, character data in <code>R</code> can be of a different shape and/or rank to that in <code>Y</code>.</p>
-<p>The Unicode character set includes characters that can be formed from single or multiple code points. Some code points or combinations of code points represent the same character. For example, the character <code>Ç</code> is defined as a code point in its own right (<code>U+00C7</code>, or <code>⎕UCS 199</code>), and can be formed from two separate code points – that for the character <code>C</code> (<code>U+0043</code>, or <code>⎕UCS 67</code>) followed by the combining cedilla (<code>U+0327</code>, or <code>⎕UCS 807</code>). These two representations are <em>canonically equivalent</em>. Some code points or combinations of code points more loosely represent the same character. For example, the characters <code>5</code> <em>and</em> <code>⁵</code> (superscript 5) both represent the same numeric digit but are visually distinct. These two have <em>compatibility equivalence</em>. Unicode normalisation is used to transform all equivalent text to a single representation. For a full explanation of the different normalisation forms, see <a href="https://unicode.org/reports/tr15/">Unicode Standard Annex #15</a>.</p>
+<p>Converts characters in an array to one of four Unicode Normal Forms.</p>
+<p><code>Y</code> must be one of the following:</p>
+<ul>
+<li>A character scalar or vector.</li>
+<li>A nested vector of character scalars/vectors.</li>
+<li>An array of any shape, in which each element is a vector character, a scalar numeric, or <code>⎕NULL</code>.</li>
+</ul>
+<p>All characters in Y must be valid Unicode code points, that is, within the ranges U+0000 to U+D800 and U+E000 to U+10FFFF.</p>
+<p><code>X</code> must be a character scalar or vector describing the form of normalisation required, from the following:</p>
 <table>
 <thead>
 <tr>
@@ -78788,6 +78852,37 @@
 </tr>
 </tbody>
 </table>
+<p>The result <code>R</code> is the same as <code>Y</code> except that the character arrays are normalised as required. If <code>Y</code> is a character scalar or a vector of character scalars and vectors, then scalars in <code>Y</code> are converted to vectors. Vectors can contain a different number of characters after normalisation.</p>
+<h2 id="normalisation">Normalisation</h2>
+<p>The Universal Character Set allows multiple ways to represent certain glyphs and glyph sequences. For example, the character <code>Ç</code> has its own code point (U+00C7, or <code>⎕UCS 199</code>) but can also be formed from two separate code points – that for the character <code>C</code> (U+0043, or <code>⎕UCS 67</code>) followed by the combining cedilla (U+0327, or <code>⎕UCS 807</code>). These two representations are <em>canonically equivalent</em>. Some code points or combinations of code points more loosely represent the same character. For example, the characters <code>5</code> and <code>⁵</code> (superscript 5) both represent the same numeric digit but are visually distinct. These two have <em>compatibility equivalence</em>.</p>
+<p>Unicode normalisation is used to transform all equivalent text to a single representation. The four different normal forms are generated by decomposing, or decomposing then composing, code points to either their canonically equivalent or compatibly equivalent sequences. Example use cases for each form are:</p>
+<table>
+<thead>
+<tr>
+<th>Form</th>
+<th>Use For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>D</code></td>
+<td>Searching, linguistic analysis</td>
+</tr>
+<tr>
+<td><code>C</code></td>
+<td>Display, storage, user input</td>
+</tr>
+<tr>
+<td><code>KD</code></td>
+<td>Text comparison, data indexing, accessibility</td>
+</tr>
+<tr>
+<td><code>KC</code></td>
+<td>Search, login names, spoofing defence</td>
+</tr>
+</tbody>
+</table>
+<p>For a full explanation of the different normalisation forms, see <a href="https://unicode.org/reports/tr15/">Unicode Standard Annex #15</a>.</p>
 <h2 class="example">Examples</h2>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">COMBINING_CEDILLA</span><span class="kd">←</span><span class="nf">⎕UCS</span><span class="w"> </span><span class="m">807</span>
 <span class="w">      </span><span class="s1">'C'</span><span class="w"> </span><span class="p">(</span><span class="m">5581</span><span class="na">⌶</span><span class="p">)</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="s1">'5⁵'</span><span class="w"> </span><span class="p">(</span><span class="s1">'C'</span><span class="w"> </span><span class="nv">COMBINING_CEDILLA</span><span class="p">)</span>
@@ -78802,7 +78897,8 @@
 <span class="err">│</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="err">│</span><span class="m">55</span><span class="err">│</span><span class="w"> </span><span class="err">│Ç│</span><span class="w"> </span><span class="err">│</span>
 <span class="err">│</span><span class="w">   </span><span class="err">└──┘</span><span class="w"> </span><span class="err">└─┘</span><span class="w"> </span><span class="err">│</span>
 <span class="err">└</span><span class="o">∊</span><span class="err">───────────┘</span>
-
+<span class="w">      </span><span class="s1">'C'</span><span class="w"> </span><span class="nv">COMBINING_CEDILLA</span><span class="w"> </span><span class="o">≡</span><span class="w"> </span><span class="s1">'D'</span><span class="w"> </span><span class="p">(</span><span class="m">5581</span><span class="na">⌶</span><span class="p">)</span><span class="w"> </span><span class="s1">'Ç'</span>
+<span class="m">1</span>
 <span class="w">      </span><span class="s1">'BrandTM'</span><span class="o">≡</span><span class="s1">'Brand™'</span>
 <span class="m">0</span>
 <span class="w">      </span><span class="s1">'KD'</span><span class="p">(</span><span class="m">5581</span><span class="na">⌶</span><span class="p">)</span><span class="s1">'Brand™'</span>
@@ -78839,7 +78935,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-10 main:c6eb369378).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-11 main:5f4b0172a3).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   
