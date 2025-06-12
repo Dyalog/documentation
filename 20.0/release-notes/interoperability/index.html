@@ -282,12 +282,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    About This Document
+    Introduction
     
   </span>
   
@@ -586,15 +586,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#very-large-array-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Very Large Array Components
-    </span>
-  </a>
   
 </li>
       
@@ -78966,15 +78957,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#very-large-array-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Very Large Array Components
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#session-files" class="md-nav__link">
     <span class="md-ellipsis">
       Session Files
@@ -79016,12 +78998,12 @@
 <p>THIS DOCUMENT IS STILL UNDER DEVELOPMENT</p>
 </div>
 <h1 id="interoperability">Interoperability</h1>
-<p>Workspaces and component files are stored on disk in a binary format. This format differs between machine architectures and versions of Dyalog. For example, a component file written from Microsoft Windows will have an internal format that is different from one written from AIX. Similarly, a workspace saved from Dyalog v19.0 will differ internally from one saved from Dyalog v14.1.</p>
-<p>It is convenient for versions of Dyalog running on different platforms to be able to interoperate by sharing workspaces and component files. Component files and workspaces can generally be shared between Dyalog interpreters running on different platforms. However, this is not always possible – this section describes the limitations in interoperability.</p>
+<p>Workspaces and component files are stored on disk in a binary format. This format differs between machine architectures and versions of Dyalog. For example, a component file written from Microsoft Windows will have an internal format that is different from one written from AIX. Similarly, a workspace saved in Dyalog v19.0 will differ internally from one saved in Dyalog v14.1.</p>
+<p>It is convenient for versions of Dyalog running on different platforms to be able to interoperate by sharing workspaces and component files. Component files and workspaces can generally be shared between Dyalog interpreters running on different platforms. However, this is not always possible – this section describes the limitations of interoperability.</p>
 <h2 id="ordinary-arrays">"Ordinary" Arrays</h2>
-<p>With the exception of the Unicode restrictions described below, Dyalog provides interoperability for arrays that only contain (nested) character and numeric data. Such arrays can be stored in component files, or transmitted using Conga connections, and shared between all versions and across all platforms.  </p>
+<p>With the exception of the Unicode restrictions described below, Dyalog provides interoperability for arrays that only contain character and numeric data. Such arrays can be stored in component files, or transmitted using Conga connections, and shared between all versions and across all platforms.  </p>
 <h2 id="code-and-object-representations-or">Code and Object Representations (<code>⎕OR</code>)</h2>
-<p>Code that is saved in workspaces, or embedded within <code>⎕OR</code>s stored in component files, cannot be read by earlier versions of Dyalog than the version that saved them. An attempt to <code>⎕FREAD</code> a component file containing a <code>⎕OR</code> that was created by a later version of Dyalog will generate <code>DOMAIN ERROR: Array is from a later version of APL</code>. This also applies to APL objects passed using Conga, or objects that have been serialised using <code>220⌶</code>.</p>
+<p>Code that is saved in workspaces, or embedded within <code>⎕OR</code>s stored in component files, cannot be read by earlier versions of Dyalog than the version that saved them. An attempt to read a component containing a <code>⎕OR</code> that was created by a later version of Dyalog will generate <code>DOMAIN ERROR: Array is from a later version of APL</code>. This also applies to APL arrays passed using Conga, or arrays that have been serialised using <code>220⌶</code>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Hints and Recommendations</p>
 <p>Every time a <code>⎕OR</code> object is read by an interpreter that is a different, edition, or version later than that which created it, time is spent converting the internal representation into the latest form. Dyalog Ltd recommends that <code>⎕OR</code> should not be used as a mechanism for sharing code or objects between different versions of APL.</p>
@@ -79133,7 +79115,7 @@ those connections when loaded or copied by an interpreter with different archite
 <p>Any translateable workspace can be opened in either edition; the appropriate representation for the edition will automatically be applied.</p>
 <p>Classic edition: <code>⎕FIX</code>, Link, SALT, and Editor automatically translate Unicode glyphs as required.</p>
 <h3 id="component-files">Component Files</h3>
-<p>Component files have a Unicode property. When this is enabled, all characters can written as Unicode data to the file. By default, the Unicode property is switched on by Unicode editions and off for Classic editions. This can be changed using the <a href="../../language-reference-guide/system-functions/fprops.md"><code>⎕FPROPS</code></a> system function.</p>
+<p>Component files have a Unicode property. When this is enabled, all characters can written as Unicode data to the file. By default, the Unicode property is switched on for Unicode editions and off for Classic editions. This property can be changed using the <a href="../../language-reference-guide/system-functions/fprops/"><code>⎕FPROPS</code></a> system function.</p>
 <p>When a Unicode edition writes to a component file that cannot contain Unicode data, character data is mapped using <code>⎕AVU</code>; it can, therefore, be read without problems by Classic editions.</p>
 <p>A <code>TRANSLATION ERROR</code> will be generated if:  </p>
 <ul>
@@ -79142,10 +79124,8 @@ those connections when loaded or copied by an interpreter with different archite
 </ul>
 <h3 id="workspaces">Workspaces</h3>
 <p>A <code>TRANSLATION ERROR</code> will be generated if a Classic edition attempts to <code>)LOAD</code> or <code>)COPY</code> a workspace containing Unicode data that cannot be mapped to <code>⎕AV</code> using the <code>⎕AVU</code> in the recipient workspace. The problematic Unicode data might be in the part of a workspace that holds the information needed to generate <code>⎕DM</code> and <code>⎕DMX</code>; in this situation, calling <code>)Reset</code> before <code>)Save</code> in the Unicode interpreter might eliminate the TRANSLATION ERRORs.</p>
-<h2 id="very-large-array-components">Very Large Array Components</h2>
-<p>An attempt to read a component file greater than 2GB in 32-bit interpreters will result in a <code>LIMIT ERROR</code> being generated.</p>
 <h2 id="session-files">Session Files</h2>
-<p>Session files (<strong>.dse</strong>) can only be used on the platform on which they were created and saved. Under Microsoft Windows, Session files can only be used by the architecture (32-bit/64-bit) of the version of Dyalog that saved them.</p>
+<p>Session files (<strong>.dse</strong>) can only be used on the platform on which they were created and saved. Under Microsoft Windows, Session files can only be used by the architecture (32-bit/64-bit) of the version of Dyalog with which they were saved.</p>
 <h2 id="log-files">Log Files</h2>
 <p>Log files (<strong>.dlf</strong>) can only be used by the version and edition with which they were created and saved. </p>
 
@@ -79177,7 +79157,7 @@ those connections when loaded or copied by an interpreter with different archite
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-12 main:4b2901e079).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-12 main:14d1abfd6b).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

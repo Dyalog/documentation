@@ -282,12 +282,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    About This Document
+    Introduction
     
   </span>
   
@@ -572,15 +572,6 @@
   <a href="#home-and-end-keys" class="md-nav__link">
     <span class="md-ellipsis">
       Home and End Keys
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#session-gutter" class="md-nav__link">
-    <span class="md-ellipsis">
-      Session Gutter
     </span>
   </a>
   
@@ -79072,15 +79063,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#session-gutter" class="md-nav__link">
-    <span class="md-ellipsis">
-      Session Gutter
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#microsoft-windows-ide" class="md-nav__link">
     <span class="md-ellipsis">
       Microsoft Windows IDE
@@ -79175,16 +79157,16 @@
 <h3 id="system-functions">System Functions</h3>
 <p>The following system functions have been added:</p>
 <ul>
-<li><a href="../../language-reference-guide/system-functions/shell/"><code>⎕SHELL</code></a><br>
+<li><a href="../../language-reference-guide/system-functions/shell/"><code>⎕SHELL</code></a> – Execute External Program<br>
 This enables execution of external programs with more control and options than <a href="../../language-reference-guide/system-functions/start-unix-auxiliary-processor/"><code>⎕SH</code></a>/<a href="../../language-reference-guide/system-functions/start-windows-auxiliary-processor/"><code>⎕CMD</code></a>.</li>
-<li><a href="../../language-reference-guide/system-functions/vget/"><code>⎕VGET</code></a><br>
+<li><a href="../../language-reference-guide/system-functions/vget/"><code>⎕VGET</code></a> – Value Get<br>
 This enables values to be read for names in a source namespace/namespaces.</li>
-<li><a href="../../language-reference-guide/system-functions/vset/"><code>⎕VSET</code></a><br>
+<li><a href="../../language-reference-guide/system-functions/vset/"><code>⎕VSET</code></a> – Value Set<br>
 This enables values to be set for names in a target namespace/namespaces.</li>
 </ul>
 <p>The following system functions have been enhanced:</p>
 <ul>
-<li><a href="../../language-reference-guide/system-functions/dt/"><code>⎕DT</code></a><br>
+<li><a href="../../language-reference-guide/system-functions/dt/"><code>⎕DT</code></a> – Date-Time<br>
 Additional conversion types have been added:<ul>
 <li>15 – Go UnixMicro</li>
 <li>16 – Go UnixNano</li>
@@ -79194,25 +79176,25 @@ Additional conversion types have been added:<ul>
 <li>70  – AmigaOS</li>
 </ul>
 </li>
-<li><a href="../../language-reference-guide/system-functions/fstie/"><code>⎕FSTIE</code></a><br>
+<li><a href="../../language-reference-guide/system-functions/fstie/"><code>⎕FSTIE</code></a> – File Share Tie<br>
 A new variant option, <strong>Mode</strong>, has been added. This specifies the intended purpose of the tie, and can affect when/how errors are generated.</li>
-<li><a href="../../language-reference-guide/system-functions/ftie/"><code>⎕FTIE</code></a><br>
+<li><a href="../../language-reference-guide/system-functions/ftie/"><code>⎕FTIE</code></a> – Exclusive File Tie<br>
 A new variant option, <strong>Mode</strong>, has been added. This specifies the intended purpose of the tie, and can affect when/how errors are generated.</li>
-<li><a href="../../language-reference-guide/system-functions/mkdir/"><code>⎕MKDIR</code></a><br>
+<li><a href="../../language-reference-guide/system-functions/mkdir/"><code>⎕MKDIR</code></a> – Make Directory<br>
 A new variant option, <strong>Unique</strong>, has been added. This specifies whether the base name in the right argument is modified so that the name is unique.</li>
-<li><a href="../../language-reference-guide/system-functions/nget/"><code>⎕NGET</code></a><br>
+<li><a href="../../language-reference-guide/system-functions/nget/"><code>⎕NGET</code></a> – Read Text File<br>
 If <code>Y</code> is a 2-item vector, the second element (which specifies <code>flags</code> for the operation) can now be set to <code>2</code>. In this situation, the first element of the result <code>R</code> is a matrix, with each row corresponding to a line in the text file specified within <code>X</code>.</li>
-<li><a href="../../language-reference-guide/system-functions/ninfo/"><code>⎕NINFO</code></a>  <ul>
+<li><a href="../../language-reference-guide/system-functions/ninfo/"><code>⎕NINFO</code></a> – Native File Information  <ul>
 <li>Several of the properties can now be set by extending the appropriate element in the left argument from a <code>propertyNumber</code> to a <code>(propertyNumber newValue)</code> pair.</li>
-<li>A new variant option, <strong>ProgressCallBack</strong>, has been added. This causes <code>⎕NINFO</code> to invoke an APL callback function as a file operation (for example, a query relating to a file's size, name, or modification date) proceeds.</li>
+<li>A new variant option, <strong>ProgressCallBack</strong>, has been added. This causes <code>⎕NINFO</code> to invoke an APL callback function as the file operations (for example, a query relating to a file's size, name, or modification date) proceed.</li>
 </ul>
 </li>
-<li><a href="../../language-reference-guide/system-functions/nput/"><code>⎕NPUT</code></a><br>
+<li><a href="../../language-reference-guide/system-functions/nput/"><code>⎕NPUT</code></a> – Write Text File<br>
 The single/first element of <code>X</code> (which specifies <code>content</code>) can now be a matrix. In this situation, the resulting text file will include one line for each row of the matrix, with trailing spaces stripped.</li>
-<li><a href="../../language-reference-guide/system-functions/ns/"><code>⎕NS</code></a>  <ul>
+<li><a href="../../language-reference-guide/system-functions/ns/"><code>⎕NS</code></a> – Namespace  <ul>
 <li>The left argument <code>X</code> has been extended to allow references to namespaces to be specified. It can also now be an array in which each element identifies a namespace. </li>
-<li>The right argument <code>Y</code> has been extended to  allow references to namespaces to be specified. It can also now be an array produced by the <a href="../../language-reference-guide/system-functions/or/"><code>⎕OR</code></a> of a namespace.</li>
-<li>A new variant option, <strong>Trigger</strong>, has been added. This specifies whether any triggers should be run for the modified variables in the target namespace that have triggers attached.</li>
+<li>The right argument <code>Y</code> has been extended to allow multiple references to namespaces to be specified.</li>
+<li>A new variant option, <strong>Trigger</strong>, has been added. This specifies whether any triggers should run when <code>⎕NS</code> modifies names in the target namespace.</li>
 </ul>
 </li>
 </ul>
@@ -79223,10 +79205,10 @@ The single/first element of <code>X</code> (which specifies <code>content</code>
 </div>
 <p>The following I-beams have been added:</p>
 <ul>
-<li><a href="../../language-reference-guide/the-i-beam-operator/log-use-of-deprecated-features/"><code>13⌶</code></a> – Deprecated Features<br>
+<li><a href="../../language-reference-guide/the-i-beam-operator/log-use-of-deprecated-features/"><code>13⌶</code></a> – Log Use of Deprecated Features<br>
 Records information in the log file set by <code>109⌶</code> about the specified deprecated feature names or keywords</li>
 <li><a href="../../language-reference-guide/the-i-beam-operator/monadic-operator-generator/"><code>43⌶</code></a> – Monadic Operator Generator<br>
-Generates a monadic operator with specified functionality. The functionality is currently limited to creating a .NET-specific operator that can create concrete versions of generic classes and execute generic methods.</li>
+Generates a monadic operator with specified functionality. The functionality allows the creation of a .NET-specific operator that can create concrete versions of generic classes and execute generic methods; additional options will be available in a future release.</li>
 <li><a href="../../language-reference-guide/the-i-beam-operator/deprecated-feature-log-file/"><code>109⌶</code></a> – Log File for Deprecations<br>
 Manages the file used to log the use of deprecated features.</li>
 <li><a href="../../language-reference-guide/the-i-beam-operator/generate-uuid/"><code>120⌶</code></a> – Generate UUID<br>
@@ -79252,30 +79234,30 @@ Temporary functionality used for identification of potential side-effects of a c
 <p><a href="../../programming-reference-guide/introduction/arrays/array-notation/">Array notation</a> is a literal syntax for most arrays (including nested and high-rank arrays) and namespaces. Array notation is an extension of APL syntax, and, as such, can be used inside and around all other APL expressions, and wherever an APL expression can appear (for example in the Session, in functions, and in namespace scripts).</p>
 <p>You can edit variables using array notation in the following ways:</p>
 <ul>
-<li>Enter the <em>Edit</em> command (<strong>&lt;ED&gt;</strong>) from within the Editor.</li>
+<li>Invoke the <em>Edit</em> command (<strong>&lt;ED&gt;</strong>) from within the Editor.</li>
 <li>Call the system command <code>)ED</code> and prefix the variable name with a diamond character, for example, <code>)ED ⋄foo</code></li>
 <li>Call the system function <code>⎕ED</code> with a left argument <code>'⋄'</code>, for example, <code>'⋄' ⎕ED 'foo'</code>.</li>
-<li>Set the <code>APLAN_FOR_OUTPUT</code> configuration parameter to <code>1</code> (this sets use of array notation to be permanently on)</li>
 </ul>
 <p>In addition, in the Microsoft Windows IDE, array notation can be accessed in the following ways:</p>
 <ul>
-<li>Click the <img alt="" height="20" src="../img/session_arraynotation.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20"> icon in the <strong>Session</strong> toolbar – this button toggles use of array notation syntax on/off.</li>
+<li>Click the <img alt="" height="20" src="../img/session_arraynotation.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20"> icon in the <strong>Session</strong> toolbar – this button toggles on/off the use of array notation for output (when possible).</li>
 <li>Click the <img alt="" height="20" src="../img/object_arraynotation.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20"> icon in the <strong>Object</strong> toolbar when the cursor is over the name of an array – this opens the array in the Editor in the same way as <code>)ED ⋄foo</code>.</li>
-<li>Click the <img alt="" height="20" src="../img/object_arraynotation.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20"> icon in the Editor's toolbar – this button toggles use of array notation syntax on/off.</li>
+<li>Click the <img alt="" height="20" src="../img/object_arraynotation.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20"> icon in the Editor's toolbar – this displays the contents of the Editor using array notation.</li>
 <li>Select <strong>Show as Array Notation</strong> from the Editor's <strong>Syntax</strong> menu – this displays the contents of the Editor using array notation.</li>
 </ul>
+<p>Setting the <code>APLAN_FOR_OUTPUT</code> configuration parameter to <code>1</code> sets use of array notation to be permanently on.</p>
 <h2 id="user-interface-changes">User Interface Changes</h2>
 <h3 id="inline-tracing">Inline Tracing</h3>
-<p><a href="../../windows-ui-guide/tracer/inline-tracing/">Inline Tracing</a> is an extension to tracing that allows you to step through the execution of individual primitives within expressions, examining intermediate results and arguments of sub-expressions. It enables an in-depth inspection of complex expressions typed directly into the session. Inline Tracing is tracing with the (approximate) granularity of primitives, although it does stop on non-primitives, such as user-defined functions.</p>
-<p>Inline tracing can be enabled in the following ways:</p>
+<p><a href="../../windows-ui-guide/tracer/inline-tracing/">Inline Tracing</a> is an extension to tracing that allows you to step through the execution of individual primitives within expressions, examining intermediate results and arguments of sub-expressions. It enables an in-depth inspection of complex expressions.</p>
+<p>Inline tracing can be initiated in the following ways:</p>
 <ul>
-<li>Enter the <em>Inline Tracing</em> command (<strong>&lt;IT&gt;</strong>) from within the Session when the cursor is within the expression of interest.</li>
+<li>Invoke the <em>Inline Tracing</em> command (<strong>&lt;IT&gt;</strong>) from within the Session when the cursor is within the expression of interest.</li>
 </ul>
-<p>In addition, in the Microsoft Windows IDE, inline tracing can be enabled in the following ways:</p>
+<p>In addition, in the Microsoft Windows IDE, inline tracing can be initiated in the following ways:</p>
 <ul>
 <li>Click the <img alt="" height="20" src="../img/tracer_inlinetracing.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20"> icon in the <strong>Tracer</strong> toolbar</li>
 <li>Select <strong>Trace Inline...</strong> from the Session's <strong>Action</strong> menu.</li>
-<li>Select <strong>Action</strong> &gt; <strong>Trace Inline...</strong> from the Session's context (right-click) menu.</li>
+<li>Select <strong>Action</strong> &gt; <strong>Trace Inline...</strong> from the Session's context ("right-click") menu.</li>
 </ul>
 <h3 id="configuration-parameters">Configuration Parameters</h3>
 <p>The following configuration parameters have been added:</p>
@@ -79288,8 +79270,12 @@ This improves the performance of <code>⎕SHELL</code> on AIX. When set to <code
 <h3 id="command-shortcuts">Command Shortcuts</h3>
 <p>The following command shortcuts have been extended:</p>
 <ul>
-<li>The <em>Redraw Function</em> command (<strong>&lt;RD&gt;</strong>) will now reformat and indent an array when array notation is switched on (previously this functionality was restricted to functions).</li>
-<li>The <em>Undo All</em> command (<strong>&lt;UA&gt;</strong>) will now exit multi-line input (previously this only "unmarked" input lines within multi-line input).</li>
+<li>
+<p>The <em>Redraw Function</em> command (<strong>&lt;RD&gt;</strong>) will now reformat and indent an array when array notation is switched on (previously this functionality was restricted to functions). It can also now be used to reformat JSON5 text, although any comments in the JSON5 are discarded.</p>
+</li>
+<li>
+<p>The <em>Undo All</em> command (<strong>&lt;UA&gt;</strong>) will now exit multi-line input (previously this only "unmarked" input lines within multi-line input).</p>
+</li>
 </ul>
 <h3 id="home-and-end-keys">Home and End Keys</h3>
 <p>The actions of the <kbd>Home</kbd> and <kbd>End</kbd> keys have been enhanced to provide finer granularity.</p>
@@ -79309,8 +79295,6 @@ This improves the performance of <code>⎕SHELL</code> on AIX. When set to <code
 </li>
 </ul>
 <p>Pressing <kbd>Home</kbd> or <kbd>End</kbd> multiple times progresses through the list in the order shown.</p>
-<h3 id="session-gutter">Session Gutter</h3>
-<p>The left bracket that appears in the Session gutter when entering multi-line input now includes a close icon at the bottom (<img alt="" height="20" src="../img/multilineinput_gutter_cross.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20">). Clicking this cancels the multi-line input.</p>
 <h3 id="microsoft-windows-ide">Microsoft Windows IDE</h3>
 <p>The following changes have been made to the Microsoft Windows IDE:</p>
 <ul>
@@ -79324,6 +79308,7 @@ This improves the performance of <code>⎕SHELL</code> on AIX. When set to <code
 <li>A new icon (<img alt="" height="20" src="../img/session_arraynotation.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20">) has been added to the <strong>Session</strong> toolbar to toggle the use of array notation.</li>
 <li>The Session caption can now include the current thread by adding the <code>{TID}</code> field to the <code>⎕SE.Caption</code> property.</li>
 <li>In the <strong>Configuration</strong> dialog box's <strong>Keyboard Shortcuts</strong> tab, the <strong>Available shortcuts</strong> now include function keys (code F1-F48). These can be used in conjunction with <code>⎕PFKEY</code> to define keyboard shortcuts for function key actions.</li>
+<li>The left bracket that appears in the Session gutter when entering multi-line input now includes a close icon at the bottom (<img alt="" height="20" src="../img/multilineinput_gutter_cross.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20">). Clicking this cancels the multi-line input.</li>
 </ul>
 <h3 id="tty-interface">TTY Interface</h3>
 <p>The following changes have been made to the TTY interface:</p>
@@ -79343,9 +79328,9 @@ This improves the performance of <code>⎕SHELL</code> on AIX. When set to <code
 <p>Some semantic changes introduced with this upgrade could result in unexpected results when using <code>⎕R</code>, <code>⎕S</code>, or the search functionality within the Microsoft Windows IDE (and all tools that build on these) compared to results in Dyalog v19.0.</p>
 </div>
 <h3 id="net-interface">.NET Interface</h3>
-<p>In .NET, a generic class is a class that has type parameters, which must be given values to create a concrete version of the class. Similarly, a generic method has type parameters which must be specified before the method can be called. </p>
+<p>In .NET, a <em>generic</em> class is a class that has type parameters which must be given values to create a concrete version of the class. Similarly, a generic method has type parameters which must be specified before the method can be called. </p>
 <p>The .NET interface now supports creating concrete versions of generic classes, instantiating them, and calling generic methods. For more information, see the <a href="https://docs.dyalog.com/20.0/dotNET_Interface_Guide.pdf"><em>.NET Interface Guide</em></a>.</p>
-<p>The .NET Framework interface does not support generics.</p>
+<p>The .NET Framework interface does not support generic classes.</p>
 
 
 
@@ -79375,7 +79360,7 @@ This improves the performance of <code>⎕SHELL</code> on AIX. When set to <code
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-12 main:4b2901e079).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-12 main:14d1abfd6b).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

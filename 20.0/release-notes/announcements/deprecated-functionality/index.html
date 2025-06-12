@@ -282,12 +282,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
+      <a href="../../introduction/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    About This Document
+    Introduction
     
   </span>
   
@@ -447,9 +447,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#identifying-deprecated-functionality-in-called-code" class="md-nav__link">
+  <a href="#identifying-deprecated-functionality-in-executed-code" class="md-nav__link">
     <span class="md-ellipsis">
-      Identifying Deprecated Functionality in Called Code
+      Identifying Deprecated Functionality in Executed Code
     </span>
   </a>
   
@@ -78828,9 +78828,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#identifying-deprecated-functionality-in-called-code" class="md-nav__link">
+  <a href="#identifying-deprecated-functionality-in-executed-code" class="md-nav__link">
     <span class="md-ellipsis">
-      Identifying Deprecated Functionality in Called Code
+      Identifying Deprecated Functionality in Executed Code
     </span>
   </a>
   
@@ -78883,13 +78883,13 @@
 <p>In these circumstances, the feature is classified as <em>deprecated</em>. This means that it is unlikely to be developed or extended further, and its use in new development work is discouraged. Some deprecated features remain for backwards compatibility reasons, but some are later removed in a pre-announced Dyalog version.</p>
 <h2 id="deprecated-functionality-scheduled-for-removal">Deprecated Functionality Scheduled for Removal</h2>
 <p>If removing a deprecated feature is considered to be sufficiently significant, Dyalog Ltd will enable the ability to identify where this feature exists in a given codebase.</p>
-<p>Deprecated functionality can be identified either when it is encountered in code that is called or by scanning a directory for deprecated file types.</p>
-<h3 id="identifying-deprecated-functionality-in-called-code">Identifying Deprecated Functionality in Called Code</h3>
+<p>Deprecated functionality can be identified either when it is encountered in code that is executed or by scanning a directory for deprecated file types.</p>
+<h3 id="identifying-deprecated-functionality-in-executed-code">Identifying Deprecated Functionality in Executed Code</h3>
 <p>Dyalog can be configured to log use of a deprecated feature when it is encountered. Logging must be configured and enabled/disabled in each APL process – information about logging is not retained.  </p>
 <p>To enable logging of deprecated features:</p>
 <ol>
 <li>Specify the name of the file into which the JSON5 log messages will be written (using <a href="../../../language-reference-guide/the-i-beam-operator/deprecated-feature-log-file/"><code>109⌶</code></a> with a right argument of <code>0</code>). By default, the file is created in the current working directory; if you do not have write permission for the current working directory, you will also need to include a path. If a filename is not set, then all logging information will be silently discarded.</li>
-<li>Specify which deprecated features should be logged (using <a href="../../../language-reference-guide/the-i-beam-operator/log-use-of-deprecated-features/"><code>13⌶</code></a> with a right argument of the names identifying the deprecated features of interest). If no names are specified then all logging will be disabled.</li>
+<li>Specify which deprecated features should be logged (using <a href="../../../language-reference-guide/the-i-beam-operator/log-use-of-deprecated-features/"><code>13⌶</code></a> with a right argument of the names identifying the deprecated features of interest).</li>
 </ol>
 <p>For Dyalog v20.0, the following names are valid:</p>
 <ul>
@@ -78911,9 +78911,10 @@
 <span class="w">      </span><span class="m">13</span><span class="na">⌶</span><span class="w"> </span><span class="s1">'J0C0'</span><span class="w"> </span><span class="s1">'S32'</span><span class="w">  </span>
 </code></pre></div>
 <p>After logging has been enabled, every subsequent use of the specified deprecated features is logged. Each line in the log file contains a complete JSON5 object, which includes a description of the deprecated feature and the SI Stack at the point it was called. The log file can be examined using any text editor or from within a Dyalog Session. For example:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">log_entries</span><span class="kd">←</span><span class="p">(</span><span class="nf">⎕JSON</span><span class="na">⍠</span><span class="p">(</span><span class="s1">'Dialect'</span><span class="w"> </span><span class="s1">'JSON5'</span><span class="p">)(</span><span class="s1">'Compact'</span><span class="w"> </span><span class="m">0</span><span class="p">))</span><span class="na">⍣</span><span class="m">2</span><span class="na">¨</span><span class="o">⊃</span><span class="nf">⎕NGET</span><span class="w"> </span><span class="s1">'C:\Users\fiona\deprecated_log.txt'</span><span class="w"> </span><span class="m">1</span>
+<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">log_entries</span><span class="kd">←</span><span class="m">0</span><span class="nf">⎕JSON</span><span class="na">⍠</span><span class="s1">'Dialect'</span><span class="w"> </span><span class="s1">'JSON5'</span><span class="na">¨</span><span class="o">⊃</span><span class="nf">⎕NGET</span><span class="w"> </span><span class="s1">'C:\Users\fiona\deprecated_log.txt'</span><span class="w"> </span><span class="m">1</span>
+<span class="w">      </span><span class="s1">'⋄'</span><span class="nf">⎕ED</span><span class="s1">'log_entries'</span>
 </code></pre></div>
-<p>If an error occurs when writing to the log file, further logging is suspended. The log file status can be queried at any time by calling <code>109⌶</code> with a right argument of <code>1</code>; the result is a numeric status code (<code>0</code> indicates no error) and a character vector describing the error that was encountered (empty if no error). For example:</p>
+If an error occurs when writing to the log file, further logging is suspended. The log file status can be queried at any time by calling <code>109⌶</code> with a right argument of <code>1</code>; the result is a numeric status code (<code>0</code> indicates no error) and a character vector describing the error that was encountered (empty if no error). For example:
 <p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="m">109</span><span class="na">⌶</span><span class="p">)</span><span class="m">1</span>
 <span class="err">┌─┬┐</span>
 <span class="err">│</span><span class="m">0</span><span class="err">││</span>
@@ -78993,7 +78994,7 @@ or:
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-12 main:4b2901e079).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-12 main:14d1abfd6b).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   
