@@ -78754,7 +78754,7 @@
 
 <h1 class="heading"><span class="name">Scan For Deprecated Files</span> <span class="command">R←{X}(3535⌶)Y</span></h1>
 
-<p>Scans a directory (and, optionally, sub-directories) for deprecated filetypes. For an overview of deprecated features, see <a href="../../programming-reference-guide/deprecated-features">Deprecated features</a> in the <em>Dyalog Programming Reference Guide</em>.</p>
+<p>Scans a directory (and, optionally, sub-directories) for deprecated filetypes. For an overview of deprecated features, see <a href="../../../programming-reference-guide/deprecated-functionality">Deprecated functionality</a> in the <em>Dyalog Programming Reference Guide</em>.</p>
 <p><code>Y</code> is the name of the directory to scan.</p>
 <p><code>X</code> specifies whether sub-directories within <code>Y</code> should also be scanned. Possible values are:</p>
 <ul>
@@ -78762,7 +78762,7 @@
 <li><code>1</code> – sub-directories are scanned.</li>
 </ul>
 <p><code>R</code> is a two-column matrix identifying the files which are deprecated, with one filename per row.</p>
-<p>The files in <code>Y</code> (and, optionally, sub-directories of <code>Y</code>) are examined, and only the names of files that are deprecated or cannot be checked are included in <code>R</code>. The first column contains the filenames, and the second contains a vector of one or more labels indicating why the file is deprecated. The labels are release-dependent; for a list of valid labels see the <a href="../../release-notes/announcements/deprecated-functionality/">Release Notes</a>. The rows in <code>R</code> are not sorted.</p>
+<p>The files in <code>Y</code> (and, optionally, sub-directories of <code>Y</code>) are examined, and only the names of files that are deprecated or cannot be checked are included in <code>R</code>. The first column contains the filenames, and the second contains a vector of one or more labels indicating why the file is deprecated. The labels are release-dependent; for a list of valid labels see the <a href="../../../release-notes/announcements/deprecated-functionality">Release Notes</a>. The rows in <code>R</code> are not sorted.</p>
 <h2 class="example">Example</h2>
 
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">1</span><span class="p">(</span><span class="m">3535</span><span class="na">⌶</span><span class="p">)</span><span class="s1">'.'</span>
@@ -78801,7 +78801,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-11 main:46757815be).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-12 main:4b2901e079).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

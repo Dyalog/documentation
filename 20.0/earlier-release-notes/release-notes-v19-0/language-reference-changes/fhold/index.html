@@ -78821,7 +78821,7 @@
 
 <h2 id="access-code-2048">Access code 2048</h2>
 <p>This function holds component file(s) and/or external variable(s). It is used  to synchronise access to resources shared between multiple cooperating Dyalog processes. It is not intended to synchronise access between Dyalog threads; for this purpose you should use  <code>:Hold</code>.</p>
-<p>For a  multi-threaded and multi-process application, a single <code>⎕FHOLD</code> is used to synchronise inter-process access, while <code>:Hold</code> is used in multiple threads to synchronise access between  threads in the same process. See also <a href="../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/hold">Hold Statement</a>.</p>
+<p>For a  multi-threaded and multi-process application, a single <code>⎕FHOLD</code> is used to synchronise inter-process access, while <code>:Hold</code> is used in multiple threads to synchronise access between  threads in the same process. See also <a href="https://help.dyalog.com/19.0/index.htm#Language/Control%20Structures/hold.htm">Hold Statement</a>.</p>
 <p>If applied to component files, then <code>Y</code> is an integer scalar, vector, or one-row matrix of file tie numbers, or a two-row matrix whose first row contains file tie numbers and whose second row contains passnumbers.</p>
 <p>If applied to external variables, then <code>Y</code> is a simple scalar character, a character vector, a non-simple scalar character vector, or a vector of character vectors that specifies one or more names of external variable(s) (NOT the file names associated with those variables). Note that when <code>Y</code> is simple, each character in <code>Y</code> is interpreted as a  variable name. If applied to component files <strong>and</strong> external variables, <code>Y</code> is a vector whose elements are either integer scalars representing tie numbers, or character scalars or vectors containing names of external variables.</p>
 <p>The effect is as follows:</p>
@@ -78889,7 +78889,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-11 main:46757815be).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-12 main:4b2901e079).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   
