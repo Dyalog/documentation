@@ -1,0 +1,4 @@
+.git
+Jenkinsfile
+service.yml
+.rsync-exclude

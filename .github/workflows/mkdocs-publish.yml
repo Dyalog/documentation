@@ -79,3 +79,25 @@ jobs:
         else
           mike deploy --push ${{ inputs.version }}
         fi
+    
+    - name: Copy Jenkins files to gh-pages
+      run: |
+        # Checkout gh-pages branch
+        git checkout gh-pages
+        
+        # Copy Jenkins files from the source branch
+        git checkout ${{ github.sha }} -- tools/jenkins/Jenkinsfile tools/jenkins/service.yml tools/jenkins/.rsync-exclude
+        
+        # Move them to root of gh-pages
+        mv tools/jenkins/Jenkinsfile .
+        mv tools/jenkins/service.yml .
+        mv tools/jenkins/.rsync-exclude .
+        rm -rf tools
+        
+        # Commit if there are changes
+        if git diff --staged --quiet; then
+          echo "No changes to Jenkins files"
+        else
+          git commit -m "Update Jenkins deployment files"
+          git push origin gh-pages
+        fi

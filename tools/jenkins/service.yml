@@ -1,0 +1,34 @@
+services:
+  devtweb:
+    ## Always use a fixed version
+    image: httpd:2.4.63
+    stdin_open: true
+    volumes:
+    - {{WEB_ROOT}}:/usr/local/apache2/htdocs/
+    tty: true
+    deploy:
+      ## This site doesn't need much at all
+      resources:
+        limits:
+          cpus: '1'
+          memory: 128M
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=traefik-public
+        - traefik.constraint-label=traefik-public
+        - traefik.http.routers.docs20web-http.rule=Host(`{{WEB_URL}}`)
+        - traefik.http.routers.docs20web-http.entrypoints=http
+        - traefik.http.routers.docs20web-http.middlewares=https-redirect, internal-ipwhitelist
+        - traefik.http.routers.docs20web-https.rule=Host(`{{WEB_URL}}`)
+        - traefik.http.routers.docs20web-https.entrypoints=https
+        - traefik.http.routers.docs20web-https.middlewares=internal-ipwhitelist
+        - traefik.http.routers.docs20web-https.tls=true
+        - traefik.http.routers.docs20web-https.tls.certresolver=le
+        - traefik.http.services.docs20web.loadbalancer.server.port=80
+
+    networks:
+    - traefik-public
+
+networks:
+  traefik-public:
+    external: true
