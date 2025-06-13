@@ -32,7 +32,7 @@ The type of a new object may be specified explicitly by preceding its name with 
 |`⍟`|Namespace script           |
 |`○`|Class script               |
 |`∘`|Interface                  |
-|`⋄`|Array Notation             |
+|`⋄`|array: use array notation  |
 
 
 

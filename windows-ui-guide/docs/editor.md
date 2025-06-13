@@ -187,13 +187,13 @@ Once displayed, each of the two dialog boxes remains on the screen until it is e
 
 The *Syntax* menu provides options to specify  how the data displayed in the Editor window is to be syntax coloured. For workspace objects, the default is *APL* for functions and operators, and *Nothing* for variables.
 
-|Item          |Effect                  |
-|--------------|------------------------|
-|Nothing       |Nothing                 |
-|APL           |Colour as APL           |
-|JSON          |Colour as JSON          |
-|XML           |Colour as XML           |
-|Array Notation|Show as Array Notation  |
+|Item                    |
+|------------------------|
+|Nothing                 |
+|Colour as APL           |
+|Colour as JSON          |
+|Colour as XML           |
+|Show as Array Notation  |
 
 ### The Window Menu
 
@@ -396,7 +396,7 @@ Any of the following invokes it:
 
 The Editor presents the array for you to edit in array notation.
 
-![](img/array-editor.png)
+![Editing in array notation](img/array-editor.png)
 
 
 You can include APL expressions:
