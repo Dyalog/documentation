@@ -191,7 +191,7 @@ pipeline {
                     fi
                     
                     echo "Syncing content from ${WORKSPACE} to ${WEB_ROOT}/"
-                    rsync -r --delete --exclude-from="${WORKSPACE}/.rsync-exclude" "${WORKSPACE}/" "${WEB_ROOT}/"
+                    rsync -rl --delete --exclude-from="${WORKSPACE}/.rsync-exclude" "${WORKSPACE}/" "${WEB_ROOT}/"
                     
                     echo "Storing new git hash (${LATEST_HASH})."
                     echo "${LATEST_HASH}" | tee "${WEB_ROOT}/.git-hash" >/dev/null
