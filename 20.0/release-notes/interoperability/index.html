@@ -78956,9 +78956,9 @@
 <p>Code that is saved in workspaces, or embedded within <code>⎕OR</code>s stored in component files, cannot be read by earlier versions of Dyalog than the version that saved them. An attempt to read a component containing a <code>⎕OR</code> that was created by a later version of Dyalog will generate <code>DOMAIN ERROR: Array is from a later version of APL</code>. This also applies to APL arrays passed using Conga, or arrays that have been serialised using <code>220⌶</code>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Hints and Recommendations</p>
-<p>Every time a <code>⎕OR</code> object is read by an interpreter that is a different, edition, or version later than that which created it, time is spent converting the internal representation into the latest form. Dyalog Ltd recommends that <code>⎕OR</code> should not be used as a mechanism for sharing code or objects between different versions of APL.</p>
+<p>Every time a <code>⎕OR</code> object is read by an interpreter that is either a different edition or a version later than that which created it, time is spent converting the internal representation into the latest form. Dyalog Ltd recommends that <code>⎕OR</code> should not be used as a mechanism for sharing code or objects between different versions of APL.</p>
 </div>
-<p>In the case of workspaces, a load (or copy) into an older version would fail with the message: <code>this WS requires a later version of the interpreter</code>.</p>
+<p>In the case of workspaces, a load (or copy) into an older version would fail with the message <code>this WS requires a later version of the interpreter</code>.</p>
 <h2 id="32-bit64-bit-interpreters">32-bit/64-bit Interpreters</h2>
 <p>There is complete interoperability between 32-bit and 64-bit interpreters, with the following exceptions:  </p>
 <ul>
@@ -79062,10 +79062,10 @@ those connections when loaded or copied by an interpreter with different archite
 </table>
 <p>In both Unicode and Classic editions, <code>⎕OPT</code> can be used instead of the <em>variant</em> operator.</p>
 <p>Any further glyphs that are introduced to Dyalog and are not already part of <code>⎕AV</code> will also have <code>⎕Uxxxx</code> representations in the Classic edition.</p>
-<p>Any translateable workspace can be opened in either edition; the appropriate representation for the edition will automatically be applied.</p>
+<p>A translateable workspace can be opened in either edition; the appropriate representation for the edition will automatically be applied.</p>
 <p>Classic edition: <code>⎕FIX</code>, Link, SALT, and Editor automatically translate Unicode glyphs as required.</p>
 <h3 id="component-files">Component Files</h3>
-<p>Component files have a Unicode property. When this is enabled, all characters can written as Unicode data to the file. By default, the Unicode property is switched on for Unicode editions and off for Classic editions. This property can be changed using the <a href="../../language-reference-guide/system-functions/fprops/"><code>⎕FPROPS</code></a> system function.</p>
+<p>Component files have a Unicode property. When this is enabled, all characters can be written as Unicode data to the file. By default, the Unicode property is switched on for Unicode editions and off for Classic editions. This property can be changed using the <a href="../../language-reference-guide/system-functions/fprops/"><code>⎕FPROPS</code></a> system function.</p>
 <p>When a Unicode edition writes to a component file that cannot contain Unicode data, character data is mapped using <code>⎕AVU</code>; it can, therefore, be read without problems by Classic editions.</p>
 <p>A <code>TRANSLATION ERROR</code> will be generated if:  </p>
 <ul>
@@ -79073,11 +79073,11 @@ those connections when loaded or copied by an interpreter with different archite
 <li>a Classic edition attempts to read a component containing Unicode data that is not in <code>⎕AVU</code> from a component file.</li>
 </ul>
 <h3 id="workspaces">Workspaces</h3>
-<p>A <code>TRANSLATION ERROR</code> will be generated if a Classic edition attempts to <code>)LOAD</code> or <code>)COPY</code> a workspace containing Unicode data that cannot be mapped to <code>⎕AV</code> using the <code>⎕AVU</code> in the recipient workspace. The problematic Unicode data might be in the part of a workspace that holds the information needed to generate <code>⎕DM</code> and <code>⎕DMX</code>; in this situation, calling <code>)Reset</code> before <code>)Save</code> in the Unicode interpreter might eliminate the TRANSLATION ERRORs.</p>
+<p>A <code>TRANSLATION ERROR</code> will be generated if a Classic edition attempts to <code>)LOAD</code> or <code>)COPY</code> a workspace containing Unicode data that cannot be mapped to <code>⎕AV</code> using the <code>⎕AVU</code> in the recipient workspace. The problematic Unicode data might be in the part of a workspace that holds the information needed to generate <code>⎕DM</code> and <code>⎕DMX</code>; in this situation, calling <code>)Reset</code> before <code>)Save</code> in the Unicode interpreter might eliminate the <code>TRANSLATION ERROR</code>s.</p>
 <h2 id="session-files">Session Files</h2>
-<p>Session files (<strong>.dse</strong>) can only be used on the platform on which they were created and saved. Under Microsoft Windows, Session files can only be used by the architecture (32-bit/64-bit) of the version of Dyalog with which they were saved.</p>
+<p>Session files (<strong>.dse</strong>) can only be used on the platform on which they were created and saved. Under Microsoft Windows, Session files can only be used by the architecture (32‑bit/64‑bit) of the version of Dyalog with which they were saved.</p>
 <h2 id="log-files">Log Files</h2>
-<p>Log files (<strong>.dlf</strong>) can only be used by the version and edition with which they were created and saved. </p>
+<p>Log files (<strong>.dlf</strong>) can only be used by the version and edition of Dyalog with which they were created and saved. </p>
 
 
 
@@ -79107,7 +79107,7 @@ those connections when loaded or copied by an interpreter with different archite
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-16 main:37cf396cbd).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-19 main:40f0b428fa).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

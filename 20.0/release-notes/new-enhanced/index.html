@@ -79195,7 +79195,8 @@ Temporary functionality used for identification of potential side-effects of a c
 <li>Click the <img alt="" height="20" src="../img/object_arraynotation.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20"> icon in the Editor's toolbar – this displays the contents of the Editor using array notation.</li>
 <li>Select <strong>Show as Array Notation</strong> from the Editor's <strong>Syntax</strong> menu – this displays the contents of the Editor using array notation.</li>
 </ul>
-<p>Setting the <code>APLAN_FOR_OUTPUT</code> configuration parameter to <code>1</code> sets use of array notation to be permanently on.</p>
+<p>When using array notation in the Editor, the <em>Reformat</em> command (<strong>&lt;RD&gt;</strong>) evaluates the Editor's content and regenerates it using array notation.</p>
+<p>Setting the <code>APLAN_FOR_OUTPUT</code> configuration parameter to <code>1</code> sets use of array notation for output to be on; in the Microsoft Windows IDE, this can be overridden by toggling it off using the toolbar icons/menu items.</p>
 <h2 id="user-interface-changes">User Interface Changes</h2>
 <h3 id="inline-tracing">Inline Tracing</h3>
 <p><a href="../../windows-ui-guide/tracer/inline-tracing/">Inline Tracing</a> is an extension to tracing that allows you to step through the execution of individual primitives within expressions, examining intermediate results and arguments of sub-expressions. It enables an in-depth inspection of complex expressions.</p>
@@ -79213,19 +79214,15 @@ Temporary functionality used for identification of potential side-effects of a c
 <p>The following configuration parameters have been added:</p>
 <ul>
 <li><code>APLAN_FOR_OUTPUT</code><br>
-This displays session output using array notation when possible. The default is <code>0</code> (array notation is not in use).</li>
+This displays session output using array notation when possible (unless it is overridden within the session). The default is <code>0</code> (array notation is not in use).</li>
 <li><code>DYALOG_SHELL_SUBPROCESS</code><br>
 This improves the performance of <code>⎕SHELL</code> on AIX. When set to <code>1</code> (the default on AIX), the interpreter starts a (small) child process that handles calls to <code>⎕SHELL</code>, mitigating some of the performance issues seen on AIX when <code class="language-nonAPL">fork()</code>ing large processes.</li>
 </ul>
 <h3 id="command-shortcuts">Command Shortcuts</h3>
 <p>The following command shortcuts have been extended:</p>
 <ul>
-<li>
-<p>The <em>Redraw Function</em> command (<strong>&lt;RD&gt;</strong>) will now reformat and indent an array when array notation is switched on (previously this functionality was restricted to functions). It can also now be used to reformat JSON5 text, although any comments in the JSON5 are discarded.</p>
-</li>
-<li>
-<p>The <em>Undo All</em> command (<strong>&lt;UA&gt;</strong>) will now exit multi-line input (previously this only "unmarked" input lines within multi-line input).</p>
-</li>
+<li>The <em>Reformat</em> command (<strong>&lt;RD&gt;</strong>) will now reformat and indent an array when array notation is switched on (previously this functionality was restricted to functions); it will also execute any expressions within the array notation and replace the text with a representation of their results. In addition, it can now be used to reformat JSON5 text, although any comments in the JSON5 are discarded.</li>
+<li>The <em>Undo All</em> command (<strong>&lt;UA&gt;</strong>) will now exit multi-line input (previously this only "unmarked" input lines within multi-line input).</li>
 </ul>
 <h3 id="home-and-end-keys">Home and End Keys</h3>
 <p>The actions of the <kbd>Home</kbd> and <kbd>End</kbd> keys have been enhanced to provide finer granularity.</p>
@@ -79259,6 +79256,7 @@ This improves the performance of <code>⎕SHELL</code> on AIX. When set to <code
 <li>The Session caption can now include the current thread by adding the <code>{TID}</code> field to the <code>⎕SE.Caption</code> property.</li>
 <li>In the <strong>Configuration</strong> dialog box's <strong>Keyboard Shortcuts</strong> tab, the <strong>Available shortcuts</strong> now include function keys (code F1-F48). These can be used in conjunction with <code>⎕PFKEY</code> to define keyboard shortcuts for function key actions.</li>
 <li>The left bracket that appears in the Session gutter when entering multi-line input now includes a close icon at the bottom (<img alt="" height="20" src="../img/multilineinput_gutter_cross.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20">). Clicking this cancels the multi-line input.</li>
+<li>The appearance/layout of several of the dialog boxes has been adjusted, but their options and functionality have not been changed.</li>
 </ul>
 <h3 id="tty-interface">TTY Interface</h3>
 <p>The following changes have been made to the TTY interface:</p>
@@ -79269,6 +79267,7 @@ This improves the performance of <code>⎕SHELL</code> on AIX. When set to <code
 <li>keystroke – PuTTY terminal emulator: <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Enter</kbd></li>
 </ul>
 </li>
+<li>The <em>Left Limit</em> command (<strong>&lt;LL&gt;</strong>) and <em>Right Limit</em> command (<strong>&lt;RL&gt;</strong>) have been enhanced to match the extended behaviour of the <kbd>Home</kbd> and <kbd>End</kbd> keys respectively (see <a href="#home-and-end-keys">Home and End Keys</a>).</li>
 </ul>
 <h2 id="interfaces-and-libraries">Interfaces and Libraries</h2>
 <h3 id="pcre-library">PCRE Library</h3>
@@ -79310,7 +79309,7 @@ This improves the performance of <code>⎕SHELL</code> on AIX. When set to <code
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-16 main:37cf396cbd).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-19 main:40f0b428fa).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   
