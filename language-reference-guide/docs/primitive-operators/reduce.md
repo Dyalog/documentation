@@ -31,6 +31,12 @@ Otherwise, if `f` is Catenate, `R` is `S⍴⊂0/⊃Y`. If `f` is Catenate First,
 
 Otherwise, `DOMAIN ERROR` is reported.
 
+!!! Warning
+	Due to historic implementation choices, `+` and `×` reductions are applied in the opposite order to what has been descibed above.
+    
+	That is, for `+/Y` and `×/Y`, the result `R` is:
+           `R ←→ ⊂(1⊃⌽Y)f(2⊃⌽Y)f......f(n⊃⌽Y)`
+
 Table: Identity Elements {: #IdentityElements }
 
 |Function|&nbsp;| Identity |
