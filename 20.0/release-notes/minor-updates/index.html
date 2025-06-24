@@ -78716,10 +78716,16 @@
 <h1 id="minor-updates-and-bug-fixes">Minor Updates and Bug Fixes</h1>
 <p>This page describes minor updates and bug fixes included in Dyalog v20.0.</p>
 <p><a href="../../language-reference-guide/system-functions/fx/"><code>⎕FX</code></a> – Fix Definition<br>
-The rules around whether a function can be fixed have been tightened to prevent functions with unmatched parentheses from being fixed.</p>
+The rules around whether a function can be fixed have been tightened to prevent functions with unmatched parentheses from being fixed. This is to accommodate array notation, which changes the meaning of parentheses and brackets that span more than one statement.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hints and Recommendations</p>
+<p>If the enhanced restrictions on <code>⎕FX</code> cause problems for you, please contact <a href="mailto:support@dyalog.com">support@dyalog.com</a> to discuss tools and techniques for mitigation.</p>
+</div>
 <p><a href="../../language-reference-guide/system-commands/save/"><code>)SAVE</code></a><br>
 You can no longer overwrite a workspace that was saved with an earlier version of Dyalog without using the <code>-force</code> option. This was already required on Microsoft Windows, but is now required on all supported operating systems.</p>
-<p>More coming soon...</p>
+<p><strong>&lt;RD&gt;</strong> – The <em>Reformat</em> command<br>
+The ability to reformat JSON text has been extended to also reformat JSON5 text.</p>
+<p><em>more coming soon...</em></p>
 
 
 
@@ -78749,7 +78755,7 @@ You can no longer overwrite a workspace that was saved with an earlier version o
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-20 main:1cbd70a244).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-24 main:0d5c6ef9e5).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

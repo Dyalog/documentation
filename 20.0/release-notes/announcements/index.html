@@ -78891,6 +78891,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next-dyalog-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Dyalog Version
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Next Dyalog Version">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expected-supported-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Supported Platforms
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -78953,7 +78977,7 @@
 <p>Dyalog v20.0 is the last release that will be supported on 32-bit Raspberry Pi OS.</p>
 <h3 id="legacy-workspaces">Legacy Workspaces</h3>
 <p>Dyalog v20.0 is the last major version that will support workspaces saved using Dyalog v11.0 or Dyalog v12.0 (workspaces saved using earlier versions are already unsupported). From Dyalog v21.0, the minimum version of a workspace that can be loaded will be v12.1.</p>
-<p>To resave your Dyalog v11.0 or Dyalog v12.0 workspaces in a later version, you can use <code>)XLOAD</code> and <code>)SAVE</code>.   </p>
+<p>To update workspaces that were saved using Dyalog v11.0 or v12.0 so that they can be loaded using a future version of Dyalog, you can use <code>)XLOAD</code> and <code>)SAVE</code> in any version of Dyalog from v12.1 to v20.0 inclusive. </p>
 <div class="admonition tip">
 <p class="admonition-title">Hints and Recommendations</p>
 <p>Dyalog Ltd recommends that workspaces are saved without any suspended functions on the stack before loading them into a newer interpreter. To achieve this, run <code>)RESET</code> before <code>)SAVE</code>.</p>
@@ -78982,6 +79006,35 @@
 <li><a href="https://github.com/Dyalog/documentation/issues">raise an issue</a> directly in the GitHub project – this should only be done if the issue relates to a document that is in the GitHub project.</li>
 </ul>
 <p>The GitHub project's <a href="https://github.com/Dyalog/documentation/blob/main/README.md">readme file</a> includes information on how to contribute by drafting amendments/enhancements.</p>
+<h2 id="next-dyalog-version">Next Dyalog Version</h2>
+<h3 id="expected-supported-platforms">Expected Supported Platforms</h3>
+<p>The next version of Dyalog is expected to be supported on the following platforms/operating systems:  </p>
+<ul>
+<li>IBM AIX:<ul>
+<li>AIX 7.2 SP2 TL5 onwards with a POWER9 chip or higher</li>
+</ul>
+</li>
+<li>Linux:<ul>
+<li>x86_64: Built on Ubuntu 22.04</li>
+<li>ARM64: Built on Debian GNU/Linux 12</li>
+</ul>
+</li>
+<li>macOS (ARM-based, Apple M1 or later):<ul>
+<li>macOS 26 (Tahoe) onwards</li>
+</ul>
+</li>
+<li>Microsoft Windows:<ul>
+<li>Windows 11 onwards (Windows Server 2016 onwards)</li>
+</ul>
+</li>
+<li>Raspberry Pi (ARM-based, 64-bit Raspberry Pi OS only):<br>
+    NOTE: Installed using the Linux ARM64 package<ul>
+<li>Not supported on Raspberry Pi Pico</li>
+<li>Not supported on Raspberry Pi 2 or earlier</li>
+</ul>
+</li>
+</ul>
+<p>This list is not definitive and is subject to change.</p>
 
 
 
@@ -79011,7 +79064,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-20 main:1cbd70a244).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-24 main:0d5c6ef9e5).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

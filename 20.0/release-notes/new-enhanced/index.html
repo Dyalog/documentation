@@ -466,6 +466,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#syntax-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntax Changes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Syntax Changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#array-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array Notation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#language-changes" class="md-nav__link">
     <span class="md-ellipsis">
       Language Changes
@@ -508,37 +532,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#syntax-changes" class="md-nav__link">
+  <a href="#development-environment-changes" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax Changes
+      Development Environment Changes
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Syntax Changes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#array-notation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Array Notation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#user-interface-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      User Interface Changes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="User Interface Changes">
+    <nav class="md-nav" aria-label="Development Environment Changes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -78901,6 +78901,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#syntax-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntax Changes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Syntax Changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#array-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array Notation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#language-changes" class="md-nav__link">
     <span class="md-ellipsis">
       Language Changes
@@ -78943,37 +78967,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#syntax-changes" class="md-nav__link">
+  <a href="#development-environment-changes" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax Changes
+      Development Environment Changes
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Syntax Changes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#array-notation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Array Notation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#user-interface-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      User Interface Changes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="User Interface Changes">
+    <nav class="md-nav" aria-label="Development Environment Changes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -79093,6 +79093,24 @@
 </div>
 <h1 id="new-features-changes-and-enhancements">New Features, Changes, and Enhancements</h1>
 <p>This page describes the changes and new features in Dyalog v20.0 compared with Dyalog v19.0.</p>
+<h2 id="syntax-changes">Syntax Changes</h2>
+<h3 id="array-notation">Array Notation</h3>
+<p><a href="../../programming-reference-guide/introduction/arrays/array-notation/">Array notation</a> is a literal syntax for most arrays (including nested and high-rank arrays) and namespaces. Array notation is an extension of APL syntax, and, as such, can be used inside and around all other APL expressions, and wherever an APL expression can appear (for example in the Session, in functions, and in namespace scripts).</p>
+<p>You can edit variables using array notation in the following ways:</p>
+<ul>
+<li>Invoke the <em>Edit</em> command (<strong>&lt;ED&gt;</strong>) from within the Editor.</li>
+<li>Call the system command <code>)ED</code> and prefix the variable name with a diamond character, for example, <code>)ED ⋄foo</code></li>
+<li>Call the system function <code>⎕ED</code> with a left argument <code>'⋄'</code>, for example, <code>'⋄' ⎕ED 'foo'</code>.</li>
+</ul>
+<p>In addition, in the Microsoft Windows IDE, array notation can be accessed in the following ways:</p>
+<ul>
+<li>Click the <img alt="" height="20" src="../img/session_arraynotation.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20"> icon in the <strong>Session</strong> toolbar – this button toggles on/off the use of array notation for output (when possible).</li>
+<li>Click the <img alt="" height="20" src="../img/object_arraynotation.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20"> icon in the <strong>Object</strong> toolbar when the cursor is over the name of an array – this opens the array in the Editor in the same way as <code>)ED ⋄foo</code>.</li>
+<li>Click the <img alt="" height="20" src="../img/object_arraynotation.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20"> icon in the Editor's toolbar – this displays the contents of the Editor using array notation.</li>
+<li>Select <strong>Show as Array Notation</strong> from the Editor's <strong>Syntax</strong> menu – this displays the contents of the Editor using array notation.</li>
+</ul>
+<p>When using array notation in the Editor, the <em>Reformat</em> command (<strong>&lt;RD&gt;</strong>) evaluates the Editor's content and regenerates it using array notation.</p>
+<p>Setting the <code>APLAN_FOR_OUTPUT</code> configuration parameter to <code>1</code> sets use of array notation for output to be on; in the Microsoft Windows IDE, this can be overridden by toggling it off using the toolbar icons/menu items.</p>
 <h2 id="language-changes">Language Changes</h2>
 <h3 id="primitive-functionsoperators">Primitive Functions/Operators</h3>
 <p>A new primitive operator, <a href="../../language-reference-guide/primitive-operators/behind/"><em>behind</em></a>, has been added. This completes the set of <a href="../../language-reference-guide/primitive-operators/operator-syntax/#function-composition">function composition</a> operators, which allow functions to be glued together to build up more complex functions:</p>
@@ -79158,7 +79176,10 @@ The single/first element of <code>X</code> (which specifies <code>content</code>
 <li><a href="../../language-reference-guide/the-i-beam-operator/log-use-of-deprecated-features/"><code>13⌶</code></a> – Log Use of Deprecated Features<br>
 Records information in the log file set by <code>109⌶</code> about the specified deprecated feature names or keywords</li>
 <li><a href="../../language-reference-guide/the-i-beam-operator/monadic-operator-generator/"><code>43⌶</code></a> – Monadic Operator Generator<br>
-Generates a monadic operator with specified functionality. The functionality allows the creation of a .NET-specific operator that can create concrete versions of generic classes and execute generic methods; additional options will be available in a future release.</li>
+Generates a monadic operator with specified functionality. The exact functionaity of the generated operator depend on the right argument. Current options are:  <ul>
+<li><code>43⌶632</code> – Generics Operator<br>Generates a .NET-specific operator that can create concrete versions of generic classes and execute generic methods<br>This is likely to be superseded by a new language construct in Dyalog v21.0.</li>
+</ul>
+</li>
 <li><a href="../../language-reference-guide/the-i-beam-operator/deprecated-feature-log-file/"><code>109⌶</code></a> – Deprecated Feature Log File<br>
 Manages the file used to log the use of deprecated features.</li>
 <li><a href="../../language-reference-guide/the-i-beam-operator/generate-uuid/"><code>120⌶</code></a> – Generate UUID<br>
@@ -79179,25 +79200,7 @@ Temporary functionality used for identification of potential side-effects of a c
 <li><code>8469⌶</code> – Lookup Table Size (introduced in Dyalog v19.0)<br>
 Temporary functionality used for identification of potential side-effects of a change that has now been implemented. No longer relevant.</li>
 </ul>
-<h2 id="syntax-changes">Syntax Changes</h2>
-<h3 id="array-notation">Array Notation</h3>
-<p><a href="../../programming-reference-guide/introduction/arrays/array-notation/">Array notation</a> is a literal syntax for most arrays (including nested and high-rank arrays) and namespaces. Array notation is an extension of APL syntax, and, as such, can be used inside and around all other APL expressions, and wherever an APL expression can appear (for example in the Session, in functions, and in namespace scripts).</p>
-<p>You can edit variables using array notation in the following ways:</p>
-<ul>
-<li>Invoke the <em>Edit</em> command (<strong>&lt;ED&gt;</strong>) from within the Editor.</li>
-<li>Call the system command <code>)ED</code> and prefix the variable name with a diamond character, for example, <code>)ED ⋄foo</code></li>
-<li>Call the system function <code>⎕ED</code> with a left argument <code>'⋄'</code>, for example, <code>'⋄' ⎕ED 'foo'</code>.</li>
-</ul>
-<p>In addition, in the Microsoft Windows IDE, array notation can be accessed in the following ways:</p>
-<ul>
-<li>Click the <img alt="" height="20" src="../img/session_arraynotation.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20"> icon in the <strong>Session</strong> toolbar – this button toggles on/off the use of array notation for output (when possible).</li>
-<li>Click the <img alt="" height="20" src="../img/object_arraynotation.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20"> icon in the <strong>Object</strong> toolbar when the cursor is over the name of an array – this opens the array in the Editor in the same way as <code>)ED ⋄foo</code>.</li>
-<li>Click the <img alt="" height="20" src="../img/object_arraynotation.png" vertical-align:text-bottom="vertical-align:text-bottom" width="20"> icon in the Editor's toolbar – this displays the contents of the Editor using array notation.</li>
-<li>Select <strong>Show as Array Notation</strong> from the Editor's <strong>Syntax</strong> menu – this displays the contents of the Editor using array notation.</li>
-</ul>
-<p>When using array notation in the Editor, the <em>Reformat</em> command (<strong>&lt;RD&gt;</strong>) evaluates the Editor's content and regenerates it using array notation.</p>
-<p>Setting the <code>APLAN_FOR_OUTPUT</code> configuration parameter to <code>1</code> sets use of array notation for output to be on; in the Microsoft Windows IDE, this can be overridden by toggling it off using the toolbar icons/menu items.</p>
-<h2 id="user-interface-changes">User Interface Changes</h2>
+<h2 id="development-environment-changes">Development Environment Changes</h2>
 <h3 id="inline-tracing">Inline Tracing</h3>
 <p><a href="../../windows-ui-guide/tracer/inline-tracing/">Inline Tracing</a> is an extension to tracing that allows you to step through the execution of individual primitives within expressions, examining intermediate results and arguments of sub-expressions. It enables an in-depth inspection of complex expressions.</p>
 <p>Inline tracing can be initiated in the following ways:</p>
@@ -79221,7 +79224,7 @@ This improves the performance of <code>⎕SHELL</code> on AIX. When set to <code
 <h3 id="command-shortcuts">Command Shortcuts</h3>
 <p>The following command shortcuts have been extended:</p>
 <ul>
-<li>The <em>Reformat</em> command (<strong>&lt;RD&gt;</strong>) will now reformat and indent an array when array notation is switched on (previously this functionality was restricted to functions); it will also execute any expressions within the array notation and replace the text with a representation of their results. In addition, it can now be used to reformat JSON5 text, although any comments in the JSON5 are discarded.</li>
+<li>The <em>Reformat</em> command (<strong>&lt;RD&gt;</strong>) will now reformat and indent an array when array notation is switched on (previously this functionality was restricted to functions); it will also execute any expressions within the array notation and replace the text with a representation of their results.</li>
 <li>The <em>Undo All</em> command (<strong>&lt;UA&gt;</strong>) will now exit multi-line input (previously this only "unmarked" input lines within multi-line input).</li>
 </ul>
 <h3 id="home-and-end-keys">Home and End Keys</h3>
@@ -79278,7 +79281,7 @@ This improves the performance of <code>⎕SHELL</code> on AIX. When set to <code
 </div>
 <h3 id="net-interface">.NET Interface</h3>
 <p>In .NET, a <em>generic</em> class is a class that has type parameters which must be given values to create a concrete version of the class. Similarly, a generic method has type parameters which must be specified before the method can be called. </p>
-<p>The .NET interface now supports creating concrete versions of generic classes, instantiating them, and calling generic methods. For more information, see the <a href="https://docs.dyalog.com/20.0/dotNET_Interface_Guide.pdf"><em>.NET Interface Guide</em></a>.</p>
+<p>The introduction of <a href="../../language-reference-guide/the-i-beam-operator/monadic-operator-generator/"><code>43⌶632</code></a> means that the .NET interface now supports creating concrete versions of generic classes, instantiating them, and calling generic methods. For more information, see the <a href="https://docs.dyalog.com/20.0/dotNET_Interface_Guide.pdf"><em>.NET Interface Guide</em></a>.</p>
 <p>The .NET Framework interface does not support generic classes.</p>
 
 
@@ -79309,7 +79312,7 @@ This improves the performance of <code>⎕SHELL</code> on AIX. When set to <code
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-20 main:1cbd70a244).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-24 main:0d5c6ef9e5).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   
