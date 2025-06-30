@@ -1,8 +1,3 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕ED ED
-</div>
-
 
 
 
@@ -23,7 +18,7 @@
 |`⍟`|Namespace script           |
 |`○`|Class script               |
 |`∘`|Interface                  |
-|`⋄`|Array Notation             |
+|`⋄`|array: use array notation  |
 
 
 
