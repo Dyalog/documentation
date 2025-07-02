@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../img/favicon-32.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -78879,17 +78879,18 @@
 <p><code>⎕VGET</code> enables values to be read for names in a source namespace or source namespaces. Optionally, a fallback value can be used if the name requested is undefined.</p>
 <p><code>Y</code> specifies the names. It must be one of the following:</p>
 <ul>
-<li>a matrix – see <a href="#case-1-name-matrix">Case 1: Name Matrix</a>.</li>
-<li>a vector of names – see <a href="#case-2-vector-of-names">Case 2: Vector of Names</a>.</li>
+<li>a matrix of names or a matrix of names and a value vector – see <a href="#case-1-name-matrix">Case 1: Name Matrix</a>.</li>
+<li>a vector of names or name-value pairs – see <a href="#case-2-vector-of-names">Case 2: Vector of Names</a>.</li>
 <li>a vector of nameclasses – see <a href="#case-3-nameclasses">Case 3: Nameclasses</a>.</li>
 </ul>
-<p>All specified names must have a nameclass of 0, 2, 8, or 9 in the source namespace(s). For more information on nameclasses, see <a href="../nc/"><code>⎕NC</code></a>. If <code>Y</code> specifies a matrix or a vector of names, fallback values to use in cases where a name has a nameclass of 0 can also be specified to prevent a <code>VALUE ERROR</code> from being generated.</p>
+<p>All specified names must be either undefined, or have an array value in the source namespace(s). If <code>Y</code> specifies a matrix or a vector of names, fallback values to use in cases where a name has no value can also be specified to prevent a <code>VALUE ERROR</code> from being generated.</p>
 <p>If specified, <code>X</code> must be an array that identifies one or more source namespaces. This means that <code>X</code> must be one of:</p>
 <ul>
 <li>a simple character scalar or vector identifying the name of a namespace.</li>
 <li>a reference to a namespace.</li>
 <li>an array in which each item is one of the above. If <code>X</code> refers to multiple namespaces, then <code>⎕VGET</code> processes each item of <code>X</code> in ravel order, using the entire right argument <code>Y</code>; this is equivalent to  <code>X ⎕VGET¨⊂Y</code>.</li>
 </ul>
+<p>When <code>X</code> is an empty array, the prototype of the empty result <code>R</code> depends on the fallback values, if specified. If the prototype of <code>X</code> is an instance of a class that can be instantiated, such as an instance of a class with a niladic or no constructors, then a new instance of the class is made and the prototype of the result is determined by the values found within the new instance.</p>
 <p>The namespace(s) referenced must already exist, or a <code>VALUE ERROR</code> is generated.  </p>
 <p>If <code>X</code> is not specified, the source namespace is the current namespace.</p>
 <p>The result <code>R</code> depends on the format of <code>Y</code>.</p>
@@ -78957,7 +78958,7 @@
 <ul>
 <li>a single name: <code>R</code> is the value of that name in the source namespace.</li>
 <li>a single enclosed name: <code>R</code> is also the value of the name, but enclosed.</li>
-<li>a single enclosed name-value pair, which is a two-element vector consisting of a character vector name and a fallback value for that name: <code>R</code> is the value of the name, or the fallback value in case the name has nameclass 0.</li>
+<li>a single enclosed name-value pair, which is a two-element vector consisting of a character vector name and a fallback value for that name: <code>R</code> is the value of the name, or the fallback value in case the name has no value.</li>
 <li>a nested vector where each item is either a name, or a name value pair: <code>R</code> is a vector with the same length as <code>Y</code>, with the values from the corresponding names, or fallback values.</li>
 </ul>
 <h3 class="example">Examples</h3>
@@ -79006,6 +79007,7 @@
 <h2 id="case-3-nameclasses">Case 3: Nameclasses</h2>
 <p><code>Y</code> must be a numeric scalar or vector, where each item is a nameclass (see <a href="../nc/">Name Classification</a>).</p>
 <p>If any of the numbers in <code>Y</code> are negative, the result <code>R</code> is a vector of name-value pairs, one for each existing name in the source namespace with a nameclass from <code>Y</code>. Otherwise, <code>R</code> is a 2-element nested vector, where the first element is a character matrix of names and the second element is a vector of values. In both cases, <code>R</code> is suitable as an argument for <a href="./"><code>⎕VGET</code></a> and <a href="../vset/"><code>⎕VSET</code></a>.</p>
+<p><a href="../nc/"><code>⎕NC</code></a> always reports the names of fields in a class as having nameclass <code>2</code> (<code>2.2</code> with the sub-class), even when the name has no value (might expect <code>0</code>) or the field is a namespace reference (might expect <code>9</code>). <a href="./"><code>⎕VGET</code></a> with a right argument of <code>2</code> will only include fields that have values that are not references, while a right argument of <code>9</code> will include fields that are references. With a right argument of <code>2.2</code>, <a href="./"><code>⎕VGET</code></a> will return all fields that are not undefined.</p>
 <h3 class="example">Examples</h3>
 <p>Name value pairs:</p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ns</span><span class="kd">←</span><span class="p">()</span>
@@ -79082,7 +79084,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-24 main:0d5c6ef9e5).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-02 main:2847c487fe).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   
@@ -79103,7 +79105,7 @@
       <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.path", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       

@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../img/favicon-32.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -79338,7 +79338,7 @@
 <h3 id="character-data">Character Data</h3>
 <p>Character data consists of free-form text. The free-form text should not include the characters '&gt;', '&lt;' or '&amp;', so these must be represented by their entity references ('&gt;', '&lt;' and '&amp;' respectively), or numeric character references.</p>
 <h3 id="entity-references-and-character-references">Entity References and Character References</h3>
-<p>Entity references are named representations of single characters which cannot normally be used in character data because they are used to delimit markup, such as &gt; for '&gt;'. Character references are numeric representations of any character, such as  for space. Note that character references always take values in the Unicode code space, regardless of the encoding of the XML text itself.</p>
+<p>Entity references are named representations of single characters which cannot normally be used in character data because they are used to delimit markup, such as &gt; for '&gt;'. Character references are numeric representations of any character, such as  for space. Note that character references always take values in the Unicode code space, regardless of the encoding of the XML text itself.</p>
 <p><code>⎕XML</code> converts entity references and all character references which the APL character set is able to represent into their character equivalent when generating APL array data; when generating XML it converts any or all characters to entity references as needed.</p>
 <p>There is a predefined set of entity references, and the XML specification allows others to be defined within the XML using the <code>&lt;!ENTITY &gt;</code> markup. <code>⎕XML</code> does not process these additional declarations and therefore will only convert the predefined types.</p>
 <h3 id="whitespace">Whitespace</h3>
@@ -79364,7 +79364,7 @@
 <h3 id="comments">Comments</h3>
 <p>Comments are fully supported markup. They are delimited by '<!--' and '-->' and all text between these delimiters is ignored. This text is included in the APL array if markup is being preserved, or discarded otherwise.</p>
 <h3 id="cdata-sections">CDATA Sections</h3>
-<p>CDATA Sections are fully supported markup. They are used to delimit text within character data which has, or may have, markup text in it which is not to be processed as such. They and are delimited by ''. CDATA sections are never recorded in the APL array as markup when XML is processed – instead, that data appears as character data. Note that this means that if you convert XML to an APL array and then convert this back to XML, CDATA sections will not be regenerated. It is, however, <em>possible</em> to generate CDATA sections in XML by presenting them as markup.</p>
+<p>CDATA Sections are fully supported markup. They are used to delimit text within character data which has, or may have, markup text in it which is not to be processed as such. They and are delimited by '<!--[CDATA[' and ']]-->'. CDATA sections are never recorded in the APL array as markup when XML is processed – instead, that data appears as character data. Note that this means that if you convert XML to an APL array and then convert this back to XML, CDATA sections will not be regenerated. It is, however, <em>possible</em> to generate CDATA sections in XML by presenting them as markup.</p>
 <h3 id="processing-instructions">Processing Instructions</h3>
 <p>Processing Instructions are delimited by '&lt;&amp;' and '&amp;&gt;' but are otherwise treated as other markup, below.</p>
 <h3 id="other-markup">Other markup</h3>
@@ -79768,7 +79768,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-24 main:0d5c6ef9e5).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-02 main:2847c487fe).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   
@@ -79789,7 +79789,7 @@
       <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.path", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       

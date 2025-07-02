@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../img/favicon-32.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -78908,7 +78908,7 @@
 </code></pre></div>
 <h2 id="variant-option-trigger">Variant Option: Trigger</h2>
 <p>The <code>Trigger</code> variant option specifies whether any <a href="../../../programming-reference-guide/triggers/triggers">triggers</a> should be run for the modified variables in the target namespace that have triggers attached.
-The value must be a Boolean scalar. The default is 0, meaning that triggers are not run.</p>
+The value must be a Boolean scalar. The default is <code>1</code>, meaning that triggers are run.</p>
 <h4 class="example">Example</h4>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕VR</span><span class="w"> </span><span class="s1">'trigger'</span>
 <span class="w">     </span><span class="bp">∇</span><span class="nv">trigger</span><span class="w"> </span><span class="nv">arg</span>
@@ -78921,12 +78921,16 @@ The value must be a Boolean scalar. The default is 0, meaning that triggers are 
 <span class="nv">Running</span><span class="w"> </span><span class="nv">trigger</span><span class="w"> </span><span class="nv">for</span><span class="bp">:</span><span class="w"> </span><span class="nv">name1</span>
 <span class="w">      </span><span class="nv">name2</span><span class="kd">←</span><span class="m">2</span>
 
-<span class="w">      </span><span class="c1">⍝ Without the trigger option, triggers are not run by ⎕VSET</span>
-<span class="w">      </span><span class="nf">⎕VSET</span><span class="w"> </span><span class="p">(</span><span class="s1">'name1'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'name2'</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'name3'</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+<span class="w">      </span><span class="c1">⍝ With the trigger option disabled, triggers are not run</span>
 <span class="w">      </span><span class="nf">⎕VSET</span><span class="na">⍠</span><span class="s1">'Trigger'</span><span class="w"> </span><span class="m">0</span><span class="o">⊢</span><span class="p">(</span><span class="s1">'name1'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'name2'</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'name3'</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
 
 <span class="w">      </span><span class="c1">⍝ With the trigger option enabled, triggers are run</span>
-<span class="w">      </span><span class="nf">⎕VSET</span><span class="na">⍠</span><span class="s1">'Trigger'</span><span class="w"> </span><span class="m">0</span><span class="o">⊢</span><span class="p">(</span><span class="s1">'name1'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'name2'</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'name3'</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+<span class="w">      </span><span class="nf">⎕VSET</span><span class="na">⍠</span><span class="s1">'Trigger'</span><span class="w"> </span><span class="m">1</span><span class="o">⊢</span><span class="p">(</span><span class="s1">'name1'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'name2'</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'name3'</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+<span class="nv">Running</span><span class="w"> </span><span class="nv">trigger</span><span class="w"> </span><span class="nv">for</span><span class="bp">:</span><span class="w"> </span><span class="nv">name1</span>
+<span class="nv">Running</span><span class="w"> </span><span class="nv">trigger</span><span class="w"> </span><span class="nv">for</span><span class="bp">:</span><span class="w"> </span><span class="nv">name3</span>
+
+<span class="w">      </span><span class="c1">⍝ Without the trigger option, triggers are run (the default)</span>
+<span class="w">      </span><span class="nf">⎕VSET</span><span class="w"> </span><span class="p">(</span><span class="s1">'name1'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'name2'</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'name3'</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
 <span class="nv">Running</span><span class="w"> </span><span class="nv">trigger</span><span class="w"> </span><span class="nv">for</span><span class="bp">:</span><span class="w"> </span><span class="nv">name1</span>
 <span class="nv">Running</span><span class="w"> </span><span class="nv">trigger</span><span class="w"> </span><span class="nv">for</span><span class="bp">:</span><span class="w"> </span><span class="nv">name3</span>
 </code></pre></div>
@@ -78959,7 +78963,7 @@ The value must be a Boolean scalar. The default is 0, meaning that triggers are 
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-24 main:0d5c6ef9e5).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-02 main:2847c487fe).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   
@@ -78980,7 +78984,7 @@ The value must be a Boolean scalar. The default is 0, meaning that triggers are 
       <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.path", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       

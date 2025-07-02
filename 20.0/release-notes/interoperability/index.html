@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../img/favicon-32.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -78943,10 +78943,6 @@
   
 
 
-<div class="admonition info">
-<p class="admonition-title">Information</p>
-<p>THIS DOCUMENT IS STILL UNDER DEVELOPMENT</p>
-</div>
 <h1 id="interoperability">Interoperability</h1>
 <p>Workspaces and component files are stored on disk in a binary format. This format differs between machine architectures and versions of Dyalog. For example, a component file written from Microsoft Windows will have an internal format that is different from one written from AIX. Similarly, a workspace saved in Dyalog v19.0 will differ internally from one saved in Dyalog v14.1.</p>
 <p>It is convenient for versions of Dyalog running on different platforms to be able to interoperate by sharing workspaces and component files. Component files and workspaces can generally be shared between Dyalog interpreters running on different platforms. However, this is not always possible – this section describes the limitations of interoperability.</p>
@@ -78954,7 +78950,7 @@
 <p>With the exception of the Unicode restrictions described below, Dyalog provides interoperability for arrays that only contain character and numeric data. Such arrays can be stored in component files, or transmitted using Conga connections, and shared between all versions and across all platforms.  </p>
 <h2 id="code-and-object-representations-or">Code and Object Representations (<code>⎕OR</code>)</h2>
 <p>Code that is saved in workspaces, or embedded within <code>⎕OR</code>s stored in component files, cannot be read by earlier versions of Dyalog than the version that saved them. An attempt to read a component containing a <code>⎕OR</code> that was created by a later version of Dyalog will generate <code>DOMAIN ERROR: Array is from a later version of APL</code>. This also applies to APL arrays passed using Conga, or arrays that have been serialised using <code>220⌶</code>.</p>
-<div class="admonition tip">
+<div class="admonition hint">
 <p class="admonition-title">Hints and Recommendations</p>
 <p>Every time a <code>⎕OR</code> object is read by an interpreter that is either a different edition or a version later than that which created it, time is spent converting the internal representation into the latest form. Dyalog Ltd recommends that <code>⎕OR</code> should not be used as a mechanism for sharing code or objects between different versions of APL.</p>
 </div>
@@ -79075,7 +79071,7 @@ those connections when loaded or copied by an interpreter with different archite
 <h3 id="workspaces">Workspaces</h3>
 <p>A <code>TRANSLATION ERROR</code> will be generated if a Classic edition attempts to <code>)LOAD</code> or <code>)COPY</code> a workspace containing Unicode data that cannot be mapped to <code>⎕AV</code> using the <code>⎕AVU</code> in the recipient workspace. The problematic Unicode data might be in the part of a workspace that holds the information needed to generate <code>⎕DM</code> and <code>⎕DMX</code>; in this situation, calling <code>)Reset</code> before <code>)Save</code> in the Unicode interpreter might eliminate the <code>TRANSLATION ERROR</code>s.</p>
 <h2 id="session-files">Session Files</h2>
-<p>Session files (<strong>.dse</strong>) can only be used on the platform on which they were created and saved. Under Microsoft Windows, Session files can only be used by the architecture (32‑bit/64‑bit) of the version of Dyalog with which they were saved.</p>
+<p>Session files (<strong>.dse</strong>) can only be used on the platform on which they were created and saved. Under Microsoft Windows, Session files can only be used by an interpreter with the same architecture (32‑bit/64‑bit) as the interpreter that saved them.</p>
 <h2 id="log-files">Log Files</h2>
 <p>Log files (<strong>.dlf</strong>) can only be used by the version and edition of Dyalog with which they were created and saved. </p>
 
@@ -79107,7 +79103,7 @@ those connections when loaded or copied by an interpreter with different archite
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-06-24 main:0d5c6ef9e5).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-02 main:2847c487fe).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   
@@ -79128,7 +79124,7 @@ those connections when loaded or copied by an interpreter with different archite
       <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.path", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       
