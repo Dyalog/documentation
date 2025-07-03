@@ -1,0 +1,3 @@
+[submodule "documentation-styles"]
+	path = documentation-styles
+	url = https://github.com/Dyalog/documentation-styles

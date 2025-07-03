@@ -25,8 +25,12 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
+        submodules: recursive
         fetch-depth: 0  # Required for mike to work properly
     
+    - name: Update Styles
+      run: git submodule update --remote --recursive documentation-styles
+
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
@@ -71,6 +75,10 @@ jobs:
         # Display substituted content for debugging
         echo "--- Checking substituted content ---"
         cat mkdocs.yml | grep -A5 copyright
+
+    - name: Move Styles into docs
+      run: |
+        mv documentation-styles docs
 
     - name: Deploy documentation
       run: |

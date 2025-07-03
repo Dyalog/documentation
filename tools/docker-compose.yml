@@ -5,10 +5,12 @@ services:
       dockerfile: mkdocs/Dockerfile
     volumes:
       - ${DOCS_DIR}:/docs
+      - ${STYLES_DIR}:/docs/docs/documentation-styles
     ports:
       - "8000:8000"
     environment:
       - DOCS_DIR=${DOCS_DIR}
+      - STYLES_DIR=${STYLES_DIR}
     working_dir: /docs
     command: mkdocs serve --dev-addr 0.0.0.0:8000 --dirty
 
@@ -18,6 +20,7 @@ services:
       dockerfile: utils/Dockerfile
     volumes:
       - ${DOCS_DIR}:/docs
+      - ${STYLES_DIR}:/docs/docs/documentation-styles
       - ./utils:/utils
     environment:
       - DOCS_DIR=${DOCS_DIR}
