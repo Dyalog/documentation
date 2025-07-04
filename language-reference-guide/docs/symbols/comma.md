@@ -2,21 +2,11 @@
 search:
   exclude: true
 ---
-
-
-
-
-
 <h1 class="heading"><span class="name">Comma</span> <span class="command">,</span></h1>
 
-
-## Monadic Comma means
-
-
-[Ravel
-      ](../primitive-functions/ravel.md)
+Monadic Comma means
+[Ravel](../primitive-functions/ravel.md)
 ```apl
-
       cube    ⍝ 3D array
 1 2
 3 4
@@ -30,23 +20,16 @@ search:
 1 2 3 4
 5 6 7 8
 ```
-
-
-[Ravel with Axes
-			](../primitive-functions/ravel-with-axes.md)
+[Ravel with Axes](../primitive-functions/ravel-with-axes.md)
 ```apl
-
       ,[1.5]'ABC'
 A
 B
 C
 ```
 
-## Dyadic Comma means
-
-
-[Catenate/Laminate
-(Join)      ](../primitive-functions/catenate-laminate.md)
+Dyadic Comma means
+[Catenate/Laminate (Join)](../primitive-functions/catenate-laminate.md)
 ```apl
       1 2 3 , 4 5 6
 1 2 3 4 5 6
@@ -61,10 +44,7 @@ C
       1 2 3 ,[0.5] 4 5 6   ⍝ Laminate
 1 2 3
 4 5 6 
-
 ```
-
-
 [Language Elements](./language-elements.md)
 
 

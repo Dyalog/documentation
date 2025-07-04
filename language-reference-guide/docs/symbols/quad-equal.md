@@ -2,23 +2,14 @@
 search:
   exclude: true
 ---
-
-
-
-
-
 <h1 class="heading"><span class="name">Quad Equal</span> <span class="command">⌸</span></h1>
 
 
-## Quad Equal is a Monadic operator with an ambivalent
-      operand
+Quad Equal is a monadic operator with an ambivalent operand
 
-## Operator Quad Equal means
-
-
+Operator Quad Equal means
 [Key](../primitive-operators/key.md)
 ```apl
-
       'Banana' {⍺ ⍵}⌸ 3 1 4 1 5 9
 ┌─┬─────┐
 │B│3    │
@@ -47,10 +38,7 @@ n  9
 ├─┼─────┤
 │n│3 5  │
 └─┴─────┘
-
 ```
-
-
 [Language Elements](./language-elements.md)
 
 

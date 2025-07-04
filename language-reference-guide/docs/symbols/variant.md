@@ -2,19 +2,12 @@
 search:
   exclude: true
 ---
-
-
-
-
-
 <h1 class="heading"><span class="name">Variant</span> <span class="command">⍠</span></h1>
 
-
-## The Variant operator  specifies the value of an option to be used by its left operand function.
+The Variant operator  specifies the value of an option to be used by its left operand function.
 
 <h2 class="example">Examples</h2>
 ```apl
-
       ('a' ⎕R 'x') 'ABC'           ⍝ 'a' replaced with 'x'
 ABC
 
@@ -25,9 +18,7 @@ xBC
       
       'a' ⎕R 'x' IgnCase 'ABC'
 xBC 
-
 ```
-
 
 The following derived function returns the location of the word `'variant'` within its right argument using default values for all the options.
 ```apl
@@ -36,13 +27,11 @@ The following derived function returns the location of the word `'variant'` with
 4
 ```
 
-
 It may be modified to perform a case-insensitive search:
 ```apl
       (f1 ⍠ 1) 'The variant Variant operator'
 4 12
 ```
-
 
 This modified function may be named:
 ```apl
@@ -50,7 +39,6 @@ This modified function may be named:
       f2 'The variant Variant operator'
 4 12
 ```
-
 
 The modified function may itself be modified, in this case to revert to a case sensitive search:
 ```apl
@@ -65,8 +53,6 @@ This is equivalent to:
       (f1 ⍠ 1 ⍠ 0) 'The variant Variant operator'
 4
 ```
-
-
 [Language Elements](./language-elements.md)
 
 

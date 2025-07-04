@@ -2,17 +2,9 @@
 search:
   exclude: true
 ---
-
-
-
-
-
 <h1 class="heading"><span class="name">Right Arrow</span> <span class="command">→</span></h1>
 
-
-## Monadic Right Arrow means
-
-
+Monadic Right Arrow means
 [Branch](../primitive-functions/branch.md)
 ```apl
 Syntax:  Branch (Clear suspension)
@@ -24,10 +16,7 @@ Syntax:  Branch (Clear suspension)
 
 Branching is superseded by the more modern
 control structures such as :If ... :EndIf
-
 ```
-
-
 [Language Elements](./language-elements.md)
 
 

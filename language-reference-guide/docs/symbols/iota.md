@@ -2,15 +2,9 @@
 search:
   exclude: true
 ---
-
-
-
 <h1 class="heading"><span class="name">Iota</span> <span class="command">⍳</span></h1>
 
-
-## Monadic Iota means
-
-
+Monadic Iota means
 [Index Generator
       ](../primitive-functions/index-generator.md)
 ```apl
@@ -26,7 +20,7 @@ search:
 └───┴───┴───┘
 ```
 
-## Dyadic Iota means
+Dyadic Iota means
 
 
 [Index Of
@@ -44,6 +38,4 @@ search:
 3
 
 ```
-
-
 [Language Elements](./language-elements.md)

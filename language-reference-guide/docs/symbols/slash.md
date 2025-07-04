@@ -2,25 +2,15 @@
 search:
   exclude: true
 ---
-
-
-
-
-
 <h1 class="heading"><span class="name">Slash</span> <span class="command">/</span></h1>
 
-
-## Used as a Function
-
+# Used as a Function
 
 Monadic Slash is not defined
 
-### Dyadic Slash means
-
-
+Dyadic Slash means
 [Replicate](../primitive-functions/replicate.md)
 ```apl
-
       3 1 ¯2 2 / 6 7 8 9
 6 6 6 7 0 0 9 9
 
@@ -28,17 +18,13 @@ Monadic Slash is not defined
 Hat
 ```
 
-## Used as an Operator
+# Used as an Operator
 
+Slash is a monadic operator with a dyadic operand
 
-Slash is a Monadic operator with a Dyadic operand
-
-#### Operator Slash means
-
-
+Operator Slash means
 [Reduce](../primitive-operators/reduce.md), [N-Wise Reduce](../primitive-operators/reduce-n-wise.md)
 ```apl
-
       +/ 1 2 3 4 5
 15
       2 +/ 1 2 3 4 5   ⍝ pair-wise sum
@@ -67,8 +53,6 @@ Slash is a Monadic operator with a Dyadic operand
 51 54 57 60
 
 ```
-
-
 [Language Elements](./language-elements.md)
 
 

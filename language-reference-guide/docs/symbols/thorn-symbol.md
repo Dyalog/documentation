@@ -10,7 +10,7 @@ search:
 <h1 class="heading"><span class="name">Thorn</span> <span class="command">⍕</span></h1>
 
 
-## Monadic Format means
+Monadic Thorn means
 
 
 [Format](../primitive-functions/format-monadic.md)
@@ -36,11 +36,10 @@ NB: In the following examples space characters
 
 N.B. depends on `⎕PP`
 
-## Dyadic Format means
+Dyadic Thorn means
 
 
-[Format By Specification
-      ](../primitive-functions/format-dyadic.md)
+[Format By Specification](../primitive-functions/format-dyadic.md)
 ```apl
 
 Field-width and number of decimal places:
@@ -56,8 +55,6 @@ Field-width and number of decimal places:
 ******
 
 ```
-
-
 [Language Elements](./language-elements.md)
 
 

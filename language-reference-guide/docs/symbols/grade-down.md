@@ -2,20 +2,11 @@
 search:
   exclude: true
 ---
-
-
-
-
-
 <h1 class="heading"><span class="name">Grade Down</span> <span class="command">⍒</span></h1>
 
-
-## Monadic Grade Down means
-
-
+Monadic Grade Down means
 [Grade Down](../primitive-functions/grade-down-monadic.md)
 ```apl
-
       ⍒ 33 11 44 66 22
 4 3 1 5 2
 
@@ -31,12 +22,9 @@ search:
 1 5 4 2 3
 ```
 
-## Dyadic Grade Down means
-
-
+Dyadic Grade Down means
 [Dyadic Grade Down](../primitive-functions/grade-down-dyadic.md)
 ```apl
-
 Provide collating sequence for character data.
 
       ⍒ 'Banana'
@@ -44,10 +32,7 @@ Provide collating sequence for character data.
 
       'an' ⍒ 'Banana'
 1 3 5 2 4 6
-
 ```
-
-
 [Language Elements](./language-elements.md)
 
 

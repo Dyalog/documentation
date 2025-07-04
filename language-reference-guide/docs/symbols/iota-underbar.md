@@ -2,17 +2,11 @@
 search:
   exclude: true
 ---
-
-
 <h1 class="heading"><span class="name">Iota Underbar</span> <span class="command">⍸</span></h1>
 
-
-## Monadic Iota Underbar means
-
-
+Monadic Iota Underbar means
 [Where](../primitive-functions/where.md)
 ```apl
-
       ⍸ 1 0 0 1 1
 1 4 5
       bmat
@@ -24,13 +18,9 @@ search:
 └───┴───┴───┘
 ```
 
-## Dyadic Iota Underbar means
-
-
-[Interval Index
-      ](../primitive-functions/interval-index.md)
+Dyadic Iota Underbar means
+[Interval Index](../primitive-functions/interval-index.md)
 ```apl
-
       'AEIOU' ⍸ 'DYALOG'
 1 5 1 3 4 2
 
@@ -45,8 +35,5 @@ search:
 1
       mat ⍸ 3 5
 2
-
 ```
-
-
 [Language Elements](./language-elements.md)
