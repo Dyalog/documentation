@@ -2,3 +2,4 @@
 Jenkinsfile
 service.yml
 .rsync-exclude
+*.tar.gz

@@ -151,7 +151,7 @@ pipeline {
                     SITE_BASENAME=$(basename "${WEB_ROOT}")
 
                     echo "Creating compressed backup: ${BACKUP_FILE}"
-                    tar -czf "${BACKUP_FILE}" -C "${BACKUP_DIR}" "${SITE_BASENAME}"
+                    tar -czf "${BACKUP_FILE}" -C "${BACKUP_DIR}" --exclude='*.tar.gz' "${SITE_BASENAME}"
                     
                     BACKUP_SIZE=$(ls -lh "${BACKUP_FILE}" | awk '{print $5}')
                     echo "Backup created successfully. Size: ${BACKUP_SIZE}"
