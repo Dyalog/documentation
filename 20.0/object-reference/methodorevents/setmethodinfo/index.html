@@ -78738,13 +78738,13 @@
 <p>If you wish to describe the method completely, the structure of <em>Method info</em> should be identical to the structure returned by GetMethodInfo, although abbreviated formats are also allowed.</p>
 <p>If the object exports the method directly, and not through the standard IDispatch interface, you must also specify <em>Method Index</em>, which is the index of the method in the object's virtual table (vtable). This information may be available in printed documentation or in a C-language header file.</p>
 <p>For example, the InchesToPoint method exported by <em>Excel.Application</em> takes a single argument whose name is <em>Arg1</em> and whose data type is VT_R8. The function returns a result of the same data type. The details provided in the <em>Excel.Application</em> Type Library are in fact correct, but if you wanted to redefine them, the following statements could be used to describe the InchesToPoints method.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'EX'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'OLEClient'</span><span class="w"> </span><span class="s1">'Excel.Application'</span><span class="w"> </span><span class="p">(</span><span class="s1">'AutoBrowse'</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'EX'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'OLEClient'</span><span class="w"> </span><span class="s1">'Excel.Application'</span><span class="w"> </span><span class="p">(</span><span class="s1">'AutoBrowse'</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
 
 <span class="w">      </span><span class="nv">methodinfo</span><span class="kd">←</span><span class="w"> </span><span class="p">(</span><span class="s1">''</span><span class="w"> </span><span class="s1">'VT_R8'</span><span class="p">)(</span><span class="s1">'Arg1'</span><span class="w"> </span><span class="s1">'VT_R8'</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">EX</span><span class="na">.</span><span class="nv">SetMethodInfo</span><span class="w"> </span><span class="s1">'InchesToPoints'</span><span class="w"> </span><span class="nv">methodinfo</span>
 </code></pre></div>
 <p>Note that the structure of variable <code>methodinfo</code> is identical to the result of the GetMethodInfo method.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DISPLAY</span><span class="w"> </span><span class="nv">methodinfo</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DISPLAY</span><span class="w"> </span><span class="nv">methodinfo</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">───────────────────────────────────┐</span>
 <span class="err">│</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">────────────┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">───────────────┐</span><span class="w"> </span><span class="err">│</span>
 <span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">┌</span><span class="o">⊖</span><span class="err">┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">────┐</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">───┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">────┐</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">│</span>
@@ -78763,7 +78763,7 @@
 <span class="err">└</span><span class="o">∊</span><span class="err">───────────────────────────────────┘</span>
 </code></pre></div>
 <p>Unless you are going to call the method using the names of its arguments, these names are clearly superfluous and may be omitted, for example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">methodinfo</span><span class="kd">←</span><span class="w"> </span><span class="s1">'VT_R8'</span><span class="w"> </span><span class="s1">'VT_R8'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">methodinfo</span><span class="kd">←</span><span class="w"> </span><span class="s1">'VT_R8'</span><span class="w"> </span><span class="s1">'VT_R8'</span>
 <span class="w">      </span><span class="nv">EX</span><span class="na">.</span><span class="nv">SetMethodInfo</span><span class="w"> </span><span class="s1">'InchesToPoints'</span><span class="w"> </span><span class="nv">methodinfo</span><span class="w"> </span>
 </code></pre></div>
 
@@ -78795,7 +78795,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78847,7 +78847,7 @@
 </table>
 <p>Note: Mix and Split (monadic <code>↑</code> and <code>↓</code>), Type (monadic <code>∊</code> when <code>⎕ML&lt;1</code>) and Membership (dyadic <code>∊</code>) may not be used in the selection expression.</p>
 <h2 class="example">Examples</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="s1">'HELLO'</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="s1">'HELLO'</span>
 <span class="w">      </span><span class="p">((</span><span class="nv">A</span><span class="o">∊</span><span class="s1">'AEIOU'</span><span class="p">)</span><span class="na">/</span><span class="nv">A</span><span class="p">)</span><span class="kd">←</span><span class="s1">'*'</span>
 
 <span class="w">      </span><span class="nv">A</span>
@@ -78861,7 +78861,7 @@
 <span class="m">0</span><span class="w">  </span><span class="m">6</span><span class="w">  </span><span class="m">7</span><span class="w">  </span><span class="m">8</span>
 <span class="m">9</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">11</span><span class="w"> </span><span class="m">12</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MAT</span><span class="kd">←</span><span class="m">3</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">9</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MAT</span><span class="kd">←</span><span class="m">3</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">9</span>
 <span class="w">      </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="o">⍉</span><span class="nv">MAT</span><span class="p">)</span><span class="kd">←</span><span class="m">0</span>
 
 <span class="w">      </span><span class="nv">MAT</span>
@@ -78878,7 +78878,7 @@
 <h2 id="each-operator">Each Operator</h2>
 <p>The functions listed in the table above may also be used with the Each Operator <code>¨</code>.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="s1">'HELLO'</span><span class="w"> </span><span class="s1">'WORLD'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="s1">'HELLO'</span><span class="w"> </span><span class="s1">'WORLD'</span>
 <span class="w">      </span><span class="p">(</span><span class="m">2</span><span class="o">↑</span><span class="na">¨</span><span class="nv">A</span><span class="p">)</span><span class="kd">←</span><span class="s1">'*'</span>
 <span class="w">      </span><span class="nv">A</span>
 <span class="w"> </span><span class="o">**</span><span class="nv">LLO</span><span class="w">  </span><span class="o">**</span><span class="nv">RLD</span>
@@ -78896,7 +78896,7 @@
 <h2 id="bracket-indexing">Bracket Indexing</h2>
 <p>Bracket indexing may also be applied to the expression on the left of the assignment arrow.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MAT</span><span class="kd">←</span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="s1">'Hello'</span><span class="w"> </span><span class="s1">'World'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MAT</span><span class="kd">←</span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="s1">'Hello'</span><span class="w"> </span><span class="s1">'World'</span>
 <span class="w">      </span><span class="p">(</span><span class="m">¯2</span><span class="o">↑</span><span class="na">¨</span><span class="nv">MAT</span><span class="sr">[;</span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="sr">]</span><span class="p">)</span><span class="kd">←</span><span class="s1">'$'</span>
 <span class="w">      </span><span class="nv">MAT</span>
 <span class="w"> </span><span class="nv">Hel</span><span class="err">$$</span><span class="w">  </span><span class="nv">World</span><span class="w">  </span><span class="nv">Hel</span><span class="err">$$</span><span class="w"> </span>
@@ -78933,7 +78933,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

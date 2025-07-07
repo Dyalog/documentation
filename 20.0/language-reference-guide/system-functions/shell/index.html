@@ -79492,7 +79492,7 @@ The shell being used can be changed using the <a href="#shell"><code>Shell</code
 <li>Linux, macOS, AIX: <code>/bin/sh</code></li>
 </ul>
 <h4 class="example" id="example-microsoft-windows">Example ( Microsoft Windows)</h4>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑⊃⊃</span><span class="nf">⎕SHELL</span><span class="w"> </span><span class="s1">'Get-ChildItem -path C:\tmp'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑⊃⊃</span><span class="nf">⎕SHELL</span><span class="w"> </span><span class="s1">'Get-ChildItem -path C:\tmp'</span>
 
 
 <span class="w">    </span><span class="nv">Directory</span><span class="bp">:</span><span class="w"> </span><span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">tmp</span>
@@ -79516,7 +79516,7 @@ Direct calls can be 5-10x faster.</p>
 </div>
 <h2 id="return-value">Return Value</h2>
 <p>The result is a five element nested vector:
-</p><div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nv">StreamData</span><span class="w"> </span><span class="nv">StreamIds</span><span class="w"> </span><span class="nv">ExitCode</span><span class="w"> </span><span class="nv">ExitReason</span><span class="w"> </span><span class="nv">Pid</span><span class="p">)</span><span class="kd">←</span><span class="nv">R</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="p">(</span><span class="nv">StreamData</span><span class="w"> </span><span class="nv">StreamIds</span><span class="w"> </span><span class="nv">ExitCode</span><span class="w"> </span><span class="nv">ExitReason</span><span class="w"> </span><span class="nv">Pid</span><span class="p">)</span><span class="kd">←</span><span class="nv">R</span>
 </code></pre></div>
 <p>Within this:</p>
 <ul>
@@ -79784,7 +79784,7 @@ In practice, the child process often closes shortly after without the need for i
 </ul>
 <p>Each row or two-element vector consists of an environment variable name and its value, both specified as character vectors.</p>
 <p>Example: Add three environment variables: <code>DAY=monday</code>, <code>MONTH=december</code>, and <code>WEEK=50</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="c1">⍝ Using a two-column matrix and array notation</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="c1">⍝ Using a two-column matrix and array notation</span>
 <span class="w">      </span><span class="nv">env</span><span class="kd">←</span><span class="sr">[</span>
 <span class="w">        </span><span class="s1">'DAY'</span><span class="w"> </span><span class="s1">'monday'</span>
 <span class="w">        </span><span class="s1">'MONTH'</span><span class="w"> </span><span class="s1">'december'</span>
@@ -79808,15 +79808,15 @@ In practice, the child process often closes shortly after without the need for i
 <p>Shells typically takes some argument which specify that the next argument is a command to run, such as <code>/bin/bash -c</code> on Linux, but since the argument differs from shell to shell, it must be specified manually.</p>
 </div>
 <h4 class="example" id="example-using-cmdexe-microsoft-windows">Example using cmd.exe (Microsoft Windows)</h4>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SHELL</span><span class="na">⍠</span><span class="s1">'Shell'</span><span class="w"> </span><span class="p">(</span><span class="s1">'cmd.exe'</span><span class="w"> </span><span class="s1">'/C'</span><span class="p">)</span><span class="o">⊢</span><span class="s1">'someCmd'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SHELL</span><span class="na">⍠</span><span class="s1">'Shell'</span><span class="w"> </span><span class="p">(</span><span class="s1">'cmd.exe'</span><span class="w"> </span><span class="s1">'/C'</span><span class="p">)</span><span class="o">⊢</span><span class="s1">'someCmd'</span>
 <span class="na">...</span>
 </code></pre></div>
 <h4 class="example" id="example-using-bash-linux">Example using bash (Linux)</h4>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SHELL</span><span class="na">⍠</span><span class="s1">'Shell'</span><span class="w"> </span><span class="p">(</span><span class="s1">'/bin/bash'</span><span class="w"> </span><span class="s1">'-c'</span><span class="p">)</span><span class="o">⊢</span><span class="s1">'someCmd'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SHELL</span><span class="na">⍠</span><span class="s1">'Shell'</span><span class="w"> </span><span class="p">(</span><span class="s1">'/bin/bash'</span><span class="w"> </span><span class="s1">'-c'</span><span class="p">)</span><span class="o">⊢</span><span class="s1">'someCmd'</span>
 <span class="na">...</span>
 </code></pre></div>
 <p>There is no difference between the following two calls; the <code>Shell</code> variant option is simply a convenience.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SHELL</span><span class="s1">'/bin/bash'</span><span class="w"> </span><span class="s1">'-c'</span><span class="w"> </span><span class="s1">'a b c'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SHELL</span><span class="s1">'/bin/bash'</span><span class="w"> </span><span class="s1">'-c'</span><span class="w"> </span><span class="s1">'a b c'</span>
 <span class="w">      </span><span class="nf">⎕SHELL</span><span class="na">⍠</span><span class="s1">'Shell'</span><span class="w"> </span><span class="p">(</span><span class="s1">'/bin/bash'</span><span class="w"> </span><span class="s1">'-c'</span><span class="p">)</span><span class="o">⊢</span><span class="s1">'a b c'</span>
 </code></pre></div>
 <p>When the right argument of <code>⎕SHELL</code> is a nested vector, the <code>Shell</code> option has no effect.</p>
@@ -79893,7 +79893,7 @@ The value must be either an integer representing a valid signal number, or <code
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

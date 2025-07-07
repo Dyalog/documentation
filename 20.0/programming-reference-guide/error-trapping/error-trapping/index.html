@@ -78805,7 +78805,7 @@
 
 <p>The purpose of this section is to show some of the ways in which the ideas of error trapping can be used to great effect to change the flow of control in a system.</p>
 <p>First, we must have an idea of what is meant by error trapping. We are all used to entering some duff APL code, and seeing a (sometimes) rather obscure, esoteric error message echoed back:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="m">10</span><span class="o">÷</span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="m">10</span><span class="o">÷</span><span class="m">0</span>
 <span class="w">   </span><span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span>
 <span class="w">         </span><span class="m">10</span><span class="o">÷</span><span class="m">0</span>
 <span class="w">        </span><span class="err">^</span>
@@ -78815,25 +78815,25 @@
 <p>Dyalog APL provides two distinct but related mechanisms for the trapping and control of errors. The first is based on the control structure <code>:Trap ... :EndTrap</code>, and the second, on the system variable <code>⎕TRAP</code>. The control structure is easier to administer and so is recommended for normal use, while the system variable provides slightly finer control and may be necessary for specialist applications.</p>
 <h2 id="last-error-number-and-diagnostic-message">Last Error number and Diagnostic Message</h2>
 <p>Dyalog APL keeps a note of the last error that occurred, and provides this information through system functions: <code>⎕EN</code>, <code>⎕EM</code> and <code>⎕DM</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="m">10</span><span class="o">÷</span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="m">10</span><span class="o">÷</span><span class="m">0</span>
 <span class="w">   </span><span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span>
 <span class="w">         </span><span class="m">10</span><span class="o">÷</span><span class="m">0</span>
 <span class="w">        </span><span class="err">^</span>
 </code></pre></div>
 <p>Error Number for last occurring error:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="nf">⎕EN</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="nf">⎕EN</span>
 <span class="w">   </span><span class="m">11</span>
 </code></pre></div>
 <p>Error Message associated with code 11:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="nf">⎕EM</span><span class="w"> </span><span class="m">11</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="nf">⎕EM</span><span class="w"> </span><span class="m">11</span>
 <span class="w">   </span><span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span>
 </code></pre></div>
 <p><code>⎕DM</code> (Diagnostic Message) is a 3 element nested vector containing error message, expression and caret:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="nf">⎕DM</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="nf">⎕DM</span>
 <span class="w">    </span><span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span><span class="w">         </span><span class="m">10</span><span class="o">÷</span><span class="m">0</span><span class="w">        </span><span class="err">^</span>
 </code></pre></div>
 <p>Use function <code>DISPLAY</code> to show structure:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="nv">DISPLAY</span><span class="w"> </span><span class="nf">⎕DM</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="nv">DISPLAY</span><span class="w"> </span><span class="nf">⎕DM</span>
 <span class="w">   </span><span class="err">┌</span><span class="kd">→</span><span class="err">─────────────────────────────────────┐</span>
 <span class="w">   </span><span class="err">│</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">───────────┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">─────────┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">─────┐</span><span class="w"> </span><span class="err">│</span>
 <span class="w">   </span><span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span><span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="w">      </span><span class="m">10</span><span class="o">÷</span><span class="m">0</span><span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="w">     </span><span class="o">∧</span><span class="err">│</span><span class="w"> </span><span class="err">│</span>
@@ -78841,14 +78841,14 @@
 <span class="w">   </span><span class="err">└</span><span class="o">∊</span><span class="err">─────────────────────────────────────┘</span>
 </code></pre></div>
 <p>Mix (<code>↑</code>) of this vector produces a matrix that displays the same as the error message produced by APL:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="o">↑</span><span class="nf">⎕DM</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="o">↑</span><span class="nf">⎕DM</span>
 <span class="w">    </span><span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span>
 <span class="w">         </span><span class="m">10</span><span class="o">÷</span><span class="m">0</span>
 <span class="w">        </span><span class="err">^</span>
 </code></pre></div>
 <h2 id="error-trapping-control-structure">Error Trapping Control Structure</h2>
 <p>You can embed a number of lines of code in a <code>:Trap</code> control structure within a defined function.
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="na">...</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="na">...</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="m">0</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">       </span><span class="na">...</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w">       </span><span class="na">...</span>
@@ -78856,10 +78856,10 @@
 <span class="w">   </span><span class="sr">[</span><span class="m">6</span><span class="sr">]</span><span class="w">   </span><span class="na">...</span>
 </code></pre></div>
 <p>Now, whenever <em>any</em> error occurs in one of the enclosed lines, or in a function called from one of the lines, processing stops immediately and control is transferred to the line following the <code>:EndTrap</code>. The 0 argument to <code>:Trap</code>, in this case represents any error. To trap only specific errors, you could use a vector of error numbers:
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="m">11</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="m">11</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span>
 </code></pre></div>
 <p>Notice that in this case, no extra lines are executed after an error. Control is passed to line <code>[6]</code> either when an error has occurred, <em>or</em> if all the lines have been executed without error. If you want to execute some code <em>only</em> after an error, you could re-code the example like this:
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="na">...</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="na">...</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="m">0</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">       </span><span class="na">...</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w">       </span><span class="na">...</span>
@@ -78871,7 +78871,7 @@
 </code></pre></div>
 <p>Now, if an error occurs in lines <code>[3-4]</code>, (or in a function called from those lines), control will be passed immediately to the line following the <code>:Else</code> statement. On the other hand, if all the lines between <code>:Trap</code> and <code>:Else</code> complete successfully, control will pass out of the control structure to (in this case) line <code>[9]</code>.</p>
 <p>The final refinement is that specific error cases can be accommodated using <code>:Case[List]</code> constructs in the same manner as the <code>:Select</code> control structure.
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="m">17</span><span class="o">+⍳</span><span class="m">21</span><span class="w">            </span><span class="c1">⍝ Component file errors.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="m">17</span><span class="o">+⍳</span><span class="m">21</span><span class="w">            </span><span class="c1">⍝ Component file errors.</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">       </span><span class="nv">tie</span><span class="kd">←</span><span class="nv">name</span><span class="w"> </span><span class="nf">⎕ftie</span><span class="w"> </span><span class="m">0</span><span class="w">    </span><span class="c1">⍝ Try to tie file</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">       </span><span class="s1">'OK'</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Case</span><span class="w"> </span><span class="m">22</span>
@@ -78884,7 +78884,7 @@
 </code></pre></div>
 <p>Note that <code>:Trap</code> can be used in conjunction with <code>⎕SIGNAL</code> described below.</p>
 <p>Traps can be nested. In the following example, code in the inner trap structure attempts to tie a component file, and if unsuccessful, tries to create one. In either case, the tie number is then passed to function <code>ProcessFile</code>. If an error other than 22 (<code>FILE NAME ERROR</code>) occurs in the inner trap structure, or an error occurs in function <code>ProcessFile</code> (or any of its called function), control passes to line immediately to line <code>[9]</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="m">0</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">       </span><span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="m">22</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">           </span><span class="nv">tie</span><span class="kd">←</span><span class="nv">name</span><span class="w"> </span><span class="nf">⎕ftie</span><span class="w"> </span><span class="m">0</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w">       </span><span class="bp">:</span><span class="nv">Else</span>
@@ -78915,10 +78915,10 @@
 </tbody>
 </table>
 <p>So a single trap specification may be set up as:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="m">5</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">'ACTION1'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="m">5</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">'ACTION1'</span>
 </code></pre></div>
 <p>and a multiple trap specification as:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="p">(</span><span class="m">5</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">'ACTION1'</span><span class="p">)((</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="s1">'C'</span><span class="w"> </span><span class="s1">'ACTION2'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="p">(</span><span class="m">5</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">'ACTION1'</span><span class="p">)((</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="s1">'C'</span><span class="w"> </span><span class="s1">'ACTION2'</span><span class="p">)</span>
 </code></pre></div>
 <p>The action code <code>E</code> tells APL that you want your action to be taken in the function in which the error occurred, whereas the code <code>C</code> indicates that you want your action to be taken in the function where the <code>⎕TRAP</code> was <em>localised</em>. If necessary, APL must first travel back up the state indicator (cut-back) until it reaches that function.</p>
 
@@ -78950,7 +78950,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

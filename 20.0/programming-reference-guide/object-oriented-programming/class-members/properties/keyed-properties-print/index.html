@@ -78732,7 +78732,7 @@
 <p>To implement a Keyed Property, only a <code>get</code> and/or a <code>set</code> function are required. APL does not attempt to validate or resolve the specified indices in any way, so does not require the presence of a <code>shape</code> function for the Property.</p>
 <p>However, APL <strong>does</strong> check that the rank and lengths of the indices correspond to the rank and lengths of the array to the right of the assignment (for an indexed assignment) and the array returned by the get function (for an indexed reference). If the rank or shape of these arrays fails to conform to the rank or shape of the indices, APL will issue a <code>RANK ERROR</code> or <code>LENGTH ERROR</code>.</p>
 <p>Note too that indices <strong>may be elided</strong>. If <code>KProp</code> is a Keyed Property of Instance <code>I1</code>, the following expressions are all valid.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">I1</span><span class="na">.</span><span class="nv">KProp</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">I1</span><span class="na">.</span><span class="nv">KProp</span>
 <span class="w">      </span><span class="nv">I1</span><span class="na">.</span><span class="nv">KProp</span><span class="sr">[]</span><span class="kd">←</span><span class="m">10</span>
 <span class="w">      </span><span class="nv">I1</span><span class="na">.</span><span class="nv">KProp</span><span class="sr">[;]</span><span class="kd">←</span><span class="m">10</span>
 <span class="w">      </span><span class="nv">I1</span><span class="na">.</span><span class="nv">KProp</span><span class="sr">[</span><span class="s1">'One'</span><span class="w"> </span><span class="s1">'Two'</span><span class="sr">;]</span><span class="kd">←</span><span class="m">10</span>
@@ -78743,7 +78743,7 @@
 <p>The Sparse2 Class illustrates the implementation and use of a Keyed Property.</p>
 <p><code>Sparse2</code> represents a 2-dimensional sparse array each of whose dimensions are indexed by arbitrary character keys. The
 sparse array is implemented as a Keyed Property named <code>Values</code>. The following expressions show how it might be used.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">SA1</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Sparse2</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">SA1</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Sparse2</span>
 <span class="w">      </span><span class="nv">SA1</span><span class="na">.</span><span class="nv">Values</span><span class="sr">[</span><span class="o">⊂</span><span class="s1">'Widgets'</span><span class="sr">;</span><span class="o">⊂</span><span class="s1">'Jan'</span><span class="sr">]</span><span class="kd">←</span><span class="m">100</span>
 <span class="w">      </span><span class="nv">SA1</span><span class="na">.</span><span class="nv">Values</span><span class="sr">[</span><span class="o">⊂</span><span class="s1">'Widgets'</span><span class="sr">;</span><span class="o">⊂</span><span class="s1">'Jan'</span><span class="sr">]</span>
 <span class="m">100</span>
@@ -78758,7 +78758,7 @@ sparse array is implemented as a Keyed Property named <code>Values</code>. The f
 <span class="m">30</span>
 </code></pre></div>
 <h2 class="example" id="sparse2-class-example">Sparse2 Class Example</h2>
-<div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Sparse2</span><span class="w">  </span><span class="c1">⍝ 2D Sparse Array</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Sparse2</span><span class="w">  </span><span class="c1">⍝ 2D Sparse Array</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Field</span><span class="w"> </span><span class="nv">Private</span><span class="w"> </span><span class="nv">keys</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Field</span><span class="w"> </span><span class="nv">Private</span><span class="w"> </span><span class="nv">values</span>
 <span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">make</span>
@@ -78808,10 +78808,10 @@ lists.</p>
 <p>When an indexed reference is made, the <code>get</code> function receives a list of keys (indices) in <code>arg.Indexer</code>. The function
 uses these keys to retrieve the corresponding values, inserting 0s for non-existent keys.</p>
 <p>Note that in the expression:</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nv">SA1</span><span class="na">.</span><span class="nv">Values</span><span class="sr">[</span><span class="s1">'Widgets'</span><span class="w"> </span><span class="s1">'Grommets'</span><span class="sr">;</span><span class="s1">'Jan'</span><span class="w"> </span><span class="s1">'Mar'</span><span class="w"> </span><span class="s1">'Oct'</span><span class="sr">]</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w"> </span><span class="nv">SA1</span><span class="na">.</span><span class="nv">Values</span><span class="sr">[</span><span class="s1">'Widgets'</span><span class="w"> </span><span class="s1">'Grommets'</span><span class="sr">;</span><span class="s1">'Jan'</span><span class="w"> </span><span class="s1">'Mar'</span><span class="w"> </span><span class="s1">'Oct'</span><span class="sr">]</span>
 </code></pre></div>
 <p>the structure of <code>arg.Indexer</code> is:</p>
-<div class="highlight"><pre><span></span><code><span class="na">.</span><span class="kd">→</span><span class="o">-----------------------------------------------</span><span class="na">.</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="na">.</span><span class="kd">→</span><span class="o">-----------------------------------------------</span><span class="na">.</span>
 <span class="o">|</span><span class="w"> </span><span class="na">.</span><span class="kd">→</span><span class="o">---------------------</span><span class="na">.</span><span class="w"> </span><span class="na">.</span><span class="kd">→</span><span class="o">------------------</span><span class="na">.</span><span class="w"> </span><span class="o">|</span>
 <span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="na">.</span><span class="kd">→</span><span class="o">------</span><span class="na">.</span><span class="w"> </span><span class="na">.</span><span class="kd">→</span><span class="o">-------</span><span class="na">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="na">.</span><span class="kd">→</span><span class="o">--</span><span class="na">.</span><span class="w"> </span><span class="na">.</span><span class="kd">→</span><span class="o">--</span><span class="na">.</span><span class="w"> </span><span class="na">.</span><span class="kd">→</span><span class="o">--</span><span class="na">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">|</span>
 <span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="nv">Widgets</span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="nv">Grommets</span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="nv">Jan</span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="nv">Mar</span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="nv">Oct</span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">|</span>
@@ -78822,7 +78822,7 @@ uses these keys to retrieve the corresponding values, inserting 0s for non-exist
 <h2 class="example" id="example">Example</h2>
 <p>A second example of a Keyed Property is provided by the <code>KeyedFile</code> Class which is based upon
 the ComponentFile Class (see <a href="../component-file-class-example/">Section</a>) used previously.</p>
-<div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">KeyedFile</span><span class="bp">:</span><span class="w"> </span><span class="nv">ComponentFile</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">KeyedFile</span><span class="bp">:</span><span class="w"> </span><span class="nv">ComponentFile</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Field</span><span class="w"> </span><span class="nv">Public</span><span class="w"> </span><span class="nv">Keys</span>
 <span class="w">    </span><span class="nf">⎕ML</span><span class="kd">←</span><span class="m">0</span>
 
@@ -78860,7 +78860,7 @@ the ComponentFile Class (see <a href="../component-file-class-example/">Section<
 
 <span class="bp">:</span><span class="nv">EndClass</span><span class="w"> </span><span class="c1">⍝ Class KeyedFile</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">K1</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">KeyedFile</span><span class="w"> </span><span class="s1">'ktest'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">K1</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">KeyedFile</span><span class="w"> </span><span class="s1">'ktest'</span>
 <span class="w">      </span><span class="nv">K1</span><span class="na">.</span><span class="nv">Count</span>
 <span class="m">0</span>
 <span class="w">      </span><span class="nv">K1</span><span class="na">.</span><span class="nv">Component</span><span class="sr">[</span><span class="o">⊂</span><span class="s1">'Pete'</span><span class="sr">]</span><span class="kd">←</span><span class="m">42</span>
@@ -78869,7 +78869,7 @@ the ComponentFile Class (see <a href="../component-file-class-example/">Section<
 <span class="w">      </span><span class="nv">K1</span><span class="na">.</span><span class="nv">Component</span><span class="sr">[</span><span class="s1">'John'</span><span class="w"> </span><span class="s1">'Geoff'</span><span class="sr">]</span><span class="kd">←</span><span class="p">(</span><span class="o">⍳</span><span class="m">10</span><span class="p">)(</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">12</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">K1</span><span class="na">.</span><span class="nv">Count</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="m">3</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="m">3</span>
 <span class="w">      </span><span class="nv">K1</span><span class="na">.</span><span class="nv">Component</span><span class="sr">[</span><span class="s1">'Geoff'</span><span class="w"> </span><span class="s1">'Pete'</span><span class="sr">]</span>
 <span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="m">2</span><span class="w">  </span><span class="m">3</span><span class="w">  </span><span class="m">4</span><span class="w">  </span><span class="m">42</span>
 <span class="w"> </span><span class="m">5</span><span class="w">  </span><span class="m">6</span><span class="w">  </span><span class="m">7</span><span class="w">  </span><span class="m">8</span><span class="w">    </span>
@@ -78914,7 +78914,7 @@ the ComponentFile Class (see <a href="../component-file-class-example/">Section<
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78879,12 +78879,12 @@
 <p>The standard tab control is analogous to a set of dividers in a notebook and allows you to define a set of <em>pages</em> that occupy the same area of a window or dialog box. Each page consists of a set of information or a group of controls that the application displays when the user selects the corresponding tab.</p>
 <p>A special type of tab control displays tabs that look like buttons. For example, the Windows 98 taskbar is such a tab control.</p>
 <p>To implement a multiple page tabbed dialog, illustrated below, you should create a Form, then a TabControl with Style <code>'Tabs'</code> (which is the default) as a child of the Form.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'TabControl: Default'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">50</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'TabControl: Default'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">50</span><span class="p">)</span>
 <span class="s1">'F.TC'</span><span class="nf">⎕WC</span><span class="s1">'TabControl'</span>
 </code></pre></div>
 <p>Individual tabs or buttons are represented by TabButton objects which should be created as children of the TabControl object. Optional captions and pictures are specified by the Caption and ImageIndex properties of the individual TabButton objects themselves.</p>
 <p>Note that the icons used in these examples are provided in the <code>ws</code> sub-directory.
-</p><div class="highlight"><pre><span></span><code><span class="nv">icodir</span><span class="kd">←</span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="s1">'.'</span><span class="w"> </span><span class="s1">'GetEnvironment'</span><span class="w"> </span><span class="s1">'Dyalog'</span><span class="p">)</span><span class="o">,</span><span class="s1">'\ws\'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">icodir</span><span class="kd">←</span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="s1">'.'</span><span class="w"> </span><span class="s1">'GetEnvironment'</span><span class="w"> </span><span class="s1">'Dyalog'</span><span class="p">)</span><span class="o">,</span><span class="s1">'\ws\'</span>
 
 <span class="s1">'F.TC.IL'</span><span class="nf">⎕WC</span><span class="s1">'ImageList'</span>
 <span class="s1">'F.TC.IL.'</span><span class="nf">⎕WC</span><span class="s1">'Icon'</span><span class="p">(</span><span class="nv">icodir</span><span class="o">,</span><span class="s1">'aplicon.ico'</span><span class="p">)</span>
@@ -78893,7 +78893,7 @@
 <span class="s1">'F.TC'</span><span class="nf">⎕WS</span><span class="s1">'ImageListObj'</span><span class="w"> </span><span class="s1">'F.TC.IL'</span>
 </code></pre></div>
 <p>Next, create one or more pairs of TabButton and SubForm objects as children of the TabControl. You associate each SubForm with a particular tab by setting its TabObj property to the name of the associated TabButton object. Making the SubForms children of the TabControl ensures that, by default, they will automatically be resized correctly. (You may alternatively create your SubForms as children of the main Form and establish appropriate resize behaviour using their Attach property.)
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F.TC.T1'</span><span class="nf">⎕WC</span><span class="s1">'TabButton'</span><span class="w"> </span><span class="s1">'One'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F.TC.T1'</span><span class="nf">⎕WC</span><span class="s1">'TabButton'</span><span class="w"> </span><span class="s1">'One'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 <span class="s1">'F.TC.T2'</span><span class="nf">⎕WC</span><span class="s1">'TabButton'</span><span class="w"> </span><span class="s1">'Two'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
 <span class="s1">'F.TC.T3'</span><span class="nf">⎕WC</span><span class="s1">'TabButton'</span><span class="w"> </span><span class="s1">'Three'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
 <span class="s1">'F.TC.S1'</span><span class="nf">⎕WC</span><span class="s1">'SubForm'</span><span class="p">(</span><span class="s1">'TabObj'</span><span class="w"> </span><span class="s1">'F.TC.T1'</span><span class="p">)</span>
@@ -78912,7 +78912,7 @@
 <h2 id="the-align-property">The Align Property</h2>
 <p>The Align property specifies along which of the 4 edges of the TabControl the tabs or buttons are arranged. Align also controls the relative positioning of the picture and Caption within each TabButton. Align may be Top (the default), Bottom, Left or Right.</p>
 <p>If Align is <code>'Top'</code> or <code>'Bottom'</code>, the tabs or buttons are arranged along the top or bottom edge of the TabControl and the picture is drawn to the left of the Caption.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'TabControl: Align Bottom'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">50</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'TabControl: Align Bottom'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">50</span><span class="p">)</span>
 <span class="s1">'F.TC'</span><span class="nf">⎕WC</span><span class="s1">'TabControl'</span><span class="p">(</span><span class="s1">'Align'</span><span class="w"> </span><span class="s1">'Bottom'</span><span class="p">)</span>
 
 <span class="s1">'F.TC.IL'</span><span class="nf">⎕WC</span><span class="s1">'ImageList'</span>
@@ -78944,7 +78944,7 @@
 <h2 id="the-scrollopposite-property">The ScrollOpposite Property</h2>
 <p>The ScrollOpposite property specifies that unneeded tabs scroll to the opposite side of a TabControl, when a tab is selected. This only applies when MultiLine is 1.</p>
 <p>The following example illustrates a TabControl with ScrollOpposite set to 1, after the user has clicked <em>Third Tab</em>. Notice that, in this example, the SubForms have been created as children of the TabControl. This is necessary to ensure that they are managed correctly in this case.</p>
-<div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'TabControl: ScrollOpposite'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'TabControl: ScrollOpposite'</span>
 <span class="s1">'F.TC'</span><span class="nf">⎕WC</span><span class="s1">'TabControl'</span><span class="w"> </span><span class="p">(</span><span class="s1">'ScrollOpposite'</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="s1">'MultiLine'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 
 <span class="s1">'F.TC.IL'</span><span class="nf">⎕WC</span><span class="s1">'ImageList'</span>
@@ -78963,7 +78963,7 @@
 <p>If MultiLine is 1, the way that multiple flights of tabs or rows/columns of buttons are displayed is further defined by the Justify property which may be <code>'Right'</code> (the default) or <code>'None'</code>.</p>
 <h2 id="the-justify-property">The Justify Property</h2>
 <p>If Justify is <code>'Right'</code> (which is the default), the TabControl increases the width of each tab, if necessary, so that each row of tabs fills the entire width of the tab control. Otherwise, if Justify is empty or <code>'None'</code>, the rows are ragged as shown below.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'TabControl: MultiLine Tabs, Justify None'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'TabControl: MultiLine Tabs, Justify None'</span>
 <span class="s1">'F.TC'</span><span class="nf">⎕WC</span><span class="s1">'TabControl'</span><span class="p">(</span><span class="s1">'MultiLine'</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="s1">'Justify '</span><span class="w"> </span><span class="s1">'None'</span><span class="p">)</span>
 <span class="s1">'F.TC.IL'</span><span class="nf">⎕WC</span><span class="s1">'ImageList'</span>
 <span class="s1">'F.TC.IL.'</span><span class="nf">⎕WC</span><span class="s1">'Icon'</span><span class="p">(</span><span class="nv">icodir</span><span class="o">,</span><span class="s1">'aplicon.ico'</span><span class="p">)</span>
@@ -78981,7 +78981,7 @@
 <h2 id="the-tabsize-and-tabjustify-properties">The TabSize and TabJustify Properties</h2>
 <p>By default, the size of the tabs may vary from one row to another. Fixed size tabs may be obtained by setting the TabSize property.</p>
 <p>If fixed size tabs are in effect, the positions at which the picture and Caption are drawn within each TabButton is controlled by the TabJustify property which may be <code>'Centre'</code>(the default), <code>'Edge'</code>, or <code>'IconEdge'</code>.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'TabControl: TabJustify Centre'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'TabControl: TabJustify Centre'</span>
 <span class="s1">'F.TC'</span><span class="nf">⎕WC</span><span class="s1">'TabControl'</span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Buttons'</span><span class="p">)(</span><span class="s1">'TabSize'</span><span class="no">⍬</span><span class="w"> </span><span class="m">30</span><span class="p">)</span><span class="w"> </span>
 
 <span class="s1">'F.TC.IL'</span><span class="nf">⎕WC</span><span class="s1">'ImageList'</span>
@@ -78996,7 +78996,7 @@
 </code></pre></div>
 <p><img alt="" src="../../img/tabcontrol-tabjustify-centre.png"></p>
 <p>If TabJustify is set to <code>'Edge'</code> then the picture and text on the TabButton are justified along the side defined by the Align property (default <code>'Top'</code>).
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'TabControl: TabJustify Edge'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">40</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'TabControl: TabJustify Edge'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">40</span><span class="p">)</span>
 <span class="s1">'F.TC'</span><span class="nf">⎕WC</span><span class="s1">'TabControl'</span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Buttons'</span><span class="p">)</span>
 <span class="w">                     </span><span class="p">(</span><span class="s1">'TabJustify'</span><span class="w"> </span><span class="s1">'Edge'</span><span class="p">)(</span><span class="s1">'TabSize'</span><span class="no">⍬</span><span class="w"> </span><span class="m">30</span><span class="p">)</span><span class="w">   </span>
 </code></pre></div>
@@ -79039,7 +79039,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

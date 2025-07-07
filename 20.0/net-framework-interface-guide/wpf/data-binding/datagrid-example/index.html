@@ -78810,7 +78810,7 @@
 <p><img alt="" src="../../../img/data-binding-datagrid1.png"></p>
 <h2 id="the-xaml">The XAML</h2>
 <p>The XAML shown below,  describes a Window containing a DockPanel, inside which is a DataGrid.
-</p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nt">&lt;Window</span>
+</p><div class="language-xml highlight"><pre><span></span><code><span class="w"> </span><span class="nt">&lt;Window</span>
 <span class="w">    </span><span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span>
 <span class="w">    </span><span class="na">xmlns:x=</span><span class="s">"http://schemas.microsoft.com/winfx/2006/xaml"</span>
 <span class="w">    </span><span class="na">Title=</span><span class="s">"DataGrid Example"</span><span class="w"> </span><span class="na">Height=</span><span class="s">"500"</span>
@@ -78834,7 +78834,7 @@
 <p>Similarly, <code>Binding="{Binding Price, StringFormat=C}"</code> specifies that the Path for the second column is <em>Price</em> (<code>StringFormat=C</code> merely specifies the default currency format).</p>
 <h2 id="the-apl-code">The APL Code</h2>
 <p>The function <code>Grid</code> is shown below.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Grid</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">MySource</span><span class="sr">;</span><span class="nv">win</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Grid</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">MySource</span><span class="sr">;</span><span class="nv">win</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">winelist</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="na">¨</span><span class="p">(</span><span class="o">⍴</span><span class="nv">Wines</span><span class="p">)</span><span class="o">⍴⊂</span><span class="s1">''</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">winelist</span><span class="na">.</span><span class="nv">Name</span><span class="kd">←</span><span class="nv">Wines</span>
@@ -78847,13 +78847,13 @@
 </code></pre></div>
 <p>The global variable <code>Wines</code> contains a vector of character vectors, each of which is the name of a wine. <code>Grid[2-4</code>] creates <code>winelist</code>, a vector of namespaces, of the same length, each of which contains two variables c <code>Name</code> and <code>Price</code>.</p>
 <h2 id="testing-the-data-binding">Testing the Data Binding</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">wpfintro</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">wpfintro</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">DataBinding</span><span class="na">.</span><span class="nv">DataGrid</span>
 <span class="w">      </span><span class="nv">Grid</span>
 </code></pre></div>
 <p><img alt="" src="../../../img/data-binding-datagrid1.png"></p>
 <p>Let's round the prices to the nearest $5.
-</p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nv">winelist</span><span class="na">.</span><span class="nv">Price</span><span class="kd">←</span><span class="m">5</span><span class="o">×⌊</span><span class="m">0.5</span><span class="o">+</span><span class="nv">winelist</span><span class="na">.</span><span class="nv">Price</span><span class="o">÷</span><span class="m">5</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w"> </span><span class="nv">winelist</span><span class="na">.</span><span class="nv">Price</span><span class="kd">←</span><span class="m">5</span><span class="o">×⌊</span><span class="m">0.5</span><span class="o">+</span><span class="nv">winelist</span><span class="na">.</span><span class="nv">Price</span><span class="o">÷</span><span class="m">5</span>
 </code></pre></div>
 <p><img alt="" src="../../../img/data-binding-datagrid2.png"></p>
 
@@ -78885,7 +78885,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

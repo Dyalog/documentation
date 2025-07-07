@@ -78716,7 +78716,7 @@
 <p>In Dyalog, this mechanism is implemented by the <code>⎕USING</code> system variable. <code>⎕USING</code> performs the same two tasks that <code>Using/Imports</code> declarations and compiler directives provide in C# and Visual Basic; namely to give a list of .NET namespaces to be searched for unqualified class names, and to specify the assemblies which are to be loaded.</p>
 <p><code>⎕USING</code> is a vector of character vectors each element of which contains 1 or 2 comma-delimited strings. The first string specifies the name of a .NET namespace; the second specifies the <em>pathname</em> of an assembly file. This may be a full pathname or a relative one, but must include the file extension (<code>.dll</code>). If just the file name is specified, it is assumed to be located in the standard  .NET Framework directory that was specified when the .NET Framework was installed (for example, <code>C:\Windows\Microsoft.NET\Framework64\v4.0.30319</code>)</p>
 <p>It is convenient to treat .NET namespaces and assemblies in pairs. For example:
-</p><div class="highlight"><pre><span></span><code><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System,mscorlib.dll'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System,mscorlib.dll'</span>
 <span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'System.Windows.Forms,System.Windows.Forms.dll'</span>
 <span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'System.Drawing,System.Drawing.dll'</span>
 </code></pre></div>
@@ -78725,19 +78725,19 @@
 <p>If <code>⎕USING</code> is empty (<code>⎕USING←0⍴⊂''</code>), APL will not search for .NET classes in order to resolve names which would otherwise give a <code>VALUE ERROR</code>.</p>
 <p>Assigning a simple character vector to <code>⎕USING</code> is equivalent to setting it to the enclose of that vector. The statement (<code>⎕USING←'')</code> does not empty <code>⎕USING</code>, it sets it to a single empty element, which gives access to <code>mscorlib.dll</code> and the  Bridge DLL without a namespace prefix.</p>
 <p>Within a Class script, you may instead employ one or more <code>:Using</code> statements to specify the .NET search path. Each of these statements is equivalent to appending an enclosed character vector to <code>⎕USING</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">:</span><span class="nv">Using</span><span class="w"> </span><span class="nv">System</span><span class="o">,</span><span class="nv">mscorlib</span><span class="na">.</span><span class="nv">dll</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">:</span><span class="nv">Using</span><span class="w"> </span><span class="nv">System</span><span class="o">,</span><span class="nv">mscorlib</span><span class="na">.</span><span class="nv">dll</span>
 <span class="w">     </span><span class="bp">:</span><span class="nv">Using</span><span class="w"> </span><span class="nv">System</span><span class="na">.</span><span class="nv">Windows</span><span class="na">.</span><span class="nv">Forms</span><span class="o">,</span><span class="nv">System</span><span class="na">.</span><span class="nv">Windows</span><span class="na">.</span><span class="nv">Forms</span><span class="na">.</span><span class="nv">dll</span>
 <span class="w">     </span><span class="bp">:</span><span class="nv">Using</span><span class="w"> </span><span class="nv">System</span><span class="na">.</span><span class="nv">Drawing</span><span class="o">,</span><span class="nv">System</span><span class="na">.</span><span class="nv">Drawing</span><span class="na">.</span><span class="nv">dll</span>
 </code></pre></div>
 <p>Classes also inherit from the namespace they are contained in. The statement
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">:</span><span class="nv">Using</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">:</span><span class="nv">Using</span>
 </code></pre></div>
 <p>Is equivalent to
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="m">0</span><span class="o">⍴⊂</span><span class="s1">''</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="m">0</span><span class="o">⍴⊂</span><span class="s1">''</span>
 </code></pre></div>
 <p>…and allows a class to clear the inherited value before appending to <code>⎕USING</code>, or to state that no .NET assemblies should be loaded.</p>
 <p>The equivalent to <code>⎕USING←''</code> is a <code>:Using</code> statement followed by a comma separator but no namespace prefix and no assembly name:
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Using</span><span class="w"> </span><span class="o">,</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Using</span><span class="w"> </span><span class="o">,</span>
 </code></pre></div>
 
 
@@ -78768,7 +78768,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

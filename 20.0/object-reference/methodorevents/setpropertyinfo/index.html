@@ -78741,12 +78741,12 @@
 </tbody>
 </table>
 <p>For example, the Visible property exported by <em>Excel.Application</em> has the data type VT_BOOL and may be declared as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'EX'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'OLEClient'</span><span class="w"> </span><span class="s1">'Excel.Application'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'EX'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'OLEClient'</span><span class="w"> </span><span class="s1">'Excel.Application'</span>
 <span class="w">      </span><span class="nv">EX</span><span class="na">.</span><span class="nv">SetPropertyInfo</span><span class="w"> </span><span class="s1">'Visible'</span><span class="w"> </span><span class="s1">'VT_BOOL'</span>
 </code></pre></div>
 <p><em>Property function</em> may be required if the property value is retrieved or set via a function. This typically applies if the property takes parameters and will result in the property being fixed as a function rather than as a variable. Such properties may have a PropertyGet function, a PropertyPut function and/or a PropertyPutByReference function. If so, it is necessary to say to which of these three functions the details apply. The value of <em>Property function</em> is an integer 2 (PropertyGet), 4 (PropertyPut), or 8 (PropertyPutByReference).</p>
 <p>For example, the following statement declares the PropertyGet function for the Item property of the Fields collection of the OLE object DAO.DBEngine. This property takes an index (into the collection) and returns an object.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Fields</span><span class="na">.</span><span class="nv">SetPropertyInfo</span><span class="w"> </span><span class="s1">'Item'</span><span class="p">(</span><span class="s1">'VT_DISPATCH'</span><span class="w"> </span><span class="s1">'VT_I4'</span><span class="p">)</span><span class="m">2</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Fields</span><span class="na">.</span><span class="nv">SetPropertyInfo</span><span class="w"> </span><span class="s1">'Item'</span><span class="p">(</span><span class="s1">'VT_DISPATCH'</span><span class="w"> </span><span class="s1">'VT_I4'</span><span class="p">)</span><span class="m">2</span>
 </code></pre></div>
 
 
@@ -78777,7 +78777,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

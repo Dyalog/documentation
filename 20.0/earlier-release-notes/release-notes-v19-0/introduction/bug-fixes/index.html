@@ -78711,7 +78711,7 @@
 <li>When <strong>APL_COMPLEX_AS_V12</strong> is set, the circular functions <code>(X○Y)</code> with <code>(|X)&gt;7</code>, generate <code>DOMAIN ERROR</code> if the result would be complex.</li>
 <li>Previously, if GetTextSize was given an invalid font name it would use the default for the window that the method was invoked in. Now, invalid font names correctly generate <code>DOMAIN ERROR</code>.</li>
 <li><code>⎕FMT</code> using the <code>E</code> qualifier now behaves as intended.
-<div class="highlight"><pre><span></span><code><span class="w">       </span><span class="s1">'E13.6'</span><span class="w"> </span><span class="nf">⎕FMT</span><span class="w"> </span><span class="m">¯4.56789E¯12</span><span class="w"> </span><span class="m">¯4.56789E¯123</span><span class="w"> </span><span class="c1">⍝ previous</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="s1">'E13.6'</span><span class="w"> </span><span class="nf">⎕FMT</span><span class="w"> </span><span class="m">¯4.56789E¯12</span><span class="w"> </span><span class="m">¯4.56789E¯123</span><span class="w"> </span><span class="c1">⍝ previous</span>
 <span class="w"> </span><span class="m">¯4.56789E¯12</span>
 <span class="w"> </span><span class="m">¯4.5678E¯123</span>
 
@@ -78722,7 +78722,7 @@
 <span class="c1">⍝ Old behaviour - note ¯1.234 printed as ¯1.23</span>
 <span class="c1">⍝ despite 4 digits requested</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">        </span><span class="s1">'|'</span><span class="o">,</span><span class="p">(</span><span class="s1">'E12.4'</span><span class="w"> </span><span class="nf">⎕FMT</span><span class="w"> </span><span class="m">¯1.234E¯123</span><span class="p">)</span><span class="o">,</span><span class="s1">'|'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="s1">'|'</span><span class="o">,</span><span class="p">(</span><span class="s1">'E12.4'</span><span class="w"> </span><span class="nf">⎕FMT</span><span class="w"> </span><span class="m">¯1.234E¯123</span><span class="p">)</span><span class="o">,</span><span class="s1">'|'</span>
 <span class="o">|</span><span class="w">  </span><span class="m">¯1.23E¯123</span><span class="o">|</span>
 
 <span class="c1">⍝ NEW behaviour - honour request for 4 digits</span>
@@ -78767,7 +78767,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

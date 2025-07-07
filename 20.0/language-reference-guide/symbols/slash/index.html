@@ -78673,62 +78673,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#used-as-a-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      Used as a Function
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Used as a Function">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dyadic-slash-means" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dyadic Slash means
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#used-as-an-operator" class="md-nav__link">
-    <span class="md-ellipsis">
-      Used as an Operator
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Used as an Operator">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#operator-slash-means" class="md-nav__link">
-    <span class="md-ellipsis">
-      Operator Slash means
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -78749,21 +78695,21 @@
 
 <h1 class="heading"><span class="name">Slash</span> <span class="command">/</span></h1>
 
-<h2 id="used-as-a-function">Used as a Function</h2>
+<h1 id="used-as-a-function">Used as a Function</h1>
 <p>Monadic Slash is not defined</p>
-<h3 id="dyadic-slash-means">Dyadic Slash means</h3>
-<p><a href="../../primitive-functions/replicate/">Replicate</a>
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">3</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">¯2</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="na">/</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="m">9</span>
+<p>Dyadic Slash means
+<a href="../../primitive-functions/replicate/">Replicate</a>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">3</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">¯2</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="na">/</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="m">9</span>
 <span class="m">6</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="m">9</span>
 
 <span class="w">      </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="na">/</span><span class="w"> </span><span class="s1">'Heart'</span>
 <span class="nv">Hat</span>
 </code></pre></div>
-<h2 id="used-as-an-operator">Used as an Operator</h2>
-<p>Slash is a Monadic operator with a Dyadic operand</p>
-<h4 id="operator-slash-means">Operator Slash means</h4>
-<p><a href="../../primitive-operators/reduce/">Reduce</a>, <a href="../../primitive-operators/reduce-n-wise/">N-Wise Reduce</a>
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="na">/</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span>
+<h1 id="used-as-an-operator">Used as an Operator</h1>
+<p>Slash is a monadic operator with a dyadic operand</p>
+<p>Operator Slash means
+<a href="../../primitive-operators/reduce/">Reduce</a>, <a href="../../primitive-operators/reduce-n-wise/">N-Wise Reduce</a>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="na">/</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span>
 <span class="m">15</span>
 <span class="w">      </span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="na">/</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w">   </span><span class="c1">⍝ pair-wise sum</span>
 <span class="m">3</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">9</span>
@@ -78790,7 +78736,7 @@
 <span class="m">15</span><span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">21</span><span class="w"> </span><span class="m">24</span>
 <span class="m">51</span><span class="w"> </span><span class="m">54</span><span class="w"> </span><span class="m">57</span><span class="w"> </span><span class="m">60</span>
 </code></pre></div>
-<p><a href="../language-elements/">Language Elements</a></p>
+<a href="../language-elements/">Language Elements</a>
 
 
 
@@ -78823,7 +78769,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

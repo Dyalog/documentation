@@ -78978,7 +78978,7 @@
 <p>In order to explore the use of an APL OLE Server using the cfiles workspace as an example, you must register the CFiles object on your system.</p>
 <p><strong>On Windows 7 or later, you must start Dyalog APL with Administrator privileges (right-click the desktop icon and choose Run as administrator). This is necessary to register an OLE server.</strong></p>
 <p><code>)LOAD</code> the <code>cfiles</code> workspace from the <code>samples\ole</code> sub-directory
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">cfiles</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">cfiles</span>
 <span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Program</span><span class="w"> </span><span class="nv">Files</span><span class="w"> </span><span class="p">(</span><span class="nv">x86</span><span class="p">)</span><span class="na">\</span><span class="nv">Dyalog</span><span class="na">\</span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">APL</span><span class="w"> </span><span class="m">15.0</span><span class="w"> </span><span class="nv">Unicode</span><span class="na">\...</span>
 
 <span class="nv">To</span><span class="w"> </span><span class="nv">implement</span><span class="w"> </span><span class="nv">this</span><span class="w"> </span><span class="nv">workspace</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="nv">an</span><span class="w"> </span><span class="nv">OLEServer</span><span class="o">,</span><span class="w"> </span><span class="nv">run</span><span class="w"> </span><span class="s2">"Make"</span>
@@ -78991,7 +78991,7 @@
 
 <span class="nv">You</span><span class="w"> </span><span class="nv">are</span><span class="w"> </span><span class="nv">running</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="nv">administrator</span><span class="w"> </span><span class="na">...</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Make</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Make</span>
 <span class="nv">Making</span><span class="w"> </span><span class="nv">OLEServers</span><span class="w"> </span><span class="na">...</span>
 <span class="na">...</span><span class="w"> </span><span class="nv">Done</span>
 <span class="nv">Workspace</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">now</span><span class="w"> </span><span class="nv">mycfiles</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">empty</span><span class="w"> </span><span class="nf">⎕LX</span>
@@ -79002,7 +79002,7 @@
 <span class="nv">OLEServer</span>
 </code></pre></div>
 <p>You should now save your workspace in a personal directory to which you have write access. This will allow you to export CFiles as either an in-process or out-of-process OLE Server.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">WSID</span><span class="w"> </span><span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">mycfiles</span><span class="na">.</span><span class="nv">dws</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">WSID</span><span class="w"> </span><span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">mycfiles</span><span class="na">.</span><span class="nv">dws</span>
 <span class="nv">was</span><span class="w"> </span><span class="nv">mycfiles</span><span class="na">.</span><span class="nv">dws</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">SAVE</span>
 <span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">mycfiles</span><span class="na">.</span><span class="nv">dws</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="nv">Wed</span><span class="w"> </span><span class="nv">Jun</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">13</span><span class="bp">:</span><span class="m">53</span><span class="bp">:</span><span class="m">56</span><span class="w"> </span><span class="m">2016</span>
@@ -79012,7 +79012,7 @@
 <p><img alt="" src="../../img/cfiles-create-bound-file-status.png"></p>
 <p><img alt="" src="../../img/cfiles-create-bound-file-ok.png"></p>
 <h2 id="the-getfile-function">The GetFile Function</h2>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">GetFile</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">GetFile</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">r</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="s1">'.'</span><span class="w"> </span><span class="s1">'GetEnvironment'</span><span class="w"> </span><span class="s1">'DYALOG'</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">r</span><span class="o">,</span><span class="kd">←</span><span class="s1">'\samples\ole\test.dcf'</span>
 <span class="w">     </span><span class="bp">∇</span>
@@ -79020,7 +79020,7 @@
 <p><code>GetFile</code> simply returns the full pathname of the <code>test.dcf</code> component file.</p>
 <p><img alt="" src="../../img/cfiles-getfile-properties.png"></p>
 <h2 id="the-openfile-function">The OpenFile Function</h2>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FILE</span><span class="kd">←</span><span class="nv">OpenFile</span><span class="w"> </span><span class="nv">NAME</span><span class="sr">;</span><span class="nv">F</span><span class="sr">;</span><span class="nv">TIE</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FILE</span><span class="kd">←</span><span class="nv">OpenFile</span><span class="w"> </span><span class="nv">NAME</span><span class="sr">;</span><span class="nv">F</span><span class="sr">;</span><span class="nv">TIE</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Makes a new File object</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">TIE</span><span class="kd">←</span><span class="m">1</span><span class="o">+⌈</span><span class="na">/</span><span class="m">0</span><span class="o">,</span><span class="nf">⎕FNUMS</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">NAME</span><span class="w"> </span><span class="nf">⎕FSTIE</span><span class="w"> </span><span class="nv">TIE</span>
@@ -79038,7 +79038,7 @@
 <p>The COM Properties dialog box for <code>OpenFile</code> is shown below. The function is declared to take a single parameter called <em>FileName</em> whose data type is VT_BSTR (a string). The result of the function is of data type VT_DISPATCH. This data type is used to represent an object.</p>
 <p><img alt="" src="../../img/cfiles-openfile-properties.png"></p>
 <h2 id="the-fsize-function">The FSIZE Function</h2>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">FSIZE</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">FSIZE</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="nf">⎕FSIZE</span><span class="w"> </span><span class="nv">TieNumber</span>
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
@@ -79046,7 +79046,7 @@
 <p>The COM Properties dialog box for <code>FSIZE</code> is shown below. The function is declared to take no parameters. The result of the function is of data type VT_VARIANT. This data type is used to represent an arbitrary APL array.</p>
 <p><img alt="" src="../../img/cfiles-fsize-properties.png"></p>
 <h2 id="the-fread-function">The FREAD Function</h2>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">FREAD</span><span class="w"> </span><span class="nv">N</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">FREAD</span><span class="w"> </span><span class="nv">N</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="nf">⎕FREAD</span><span class="w"> </span><span class="nv">TieNumber</span><span class="o">,</span><span class="nv">N</span>
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
@@ -79054,7 +79054,7 @@
 <p>The COM Properties dialog box for <code>FREAD</code> is shown below. The function is declared to take a single parameter called <em>Component</em> whose data type is VT_I4 (an integer). The result of the function is of data type VT_VARIANT. This data type is used to represent an arbitrary APL array.</p>
 <p><img alt="" src="../../img/cfiles-fread-properties.png"></p>
 <h2 id="the-fappend-function">The FAPPEND Function</h2>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">FAPPEND</span><span class="w"> </span><span class="nv">DATA</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">FAPPEND</span><span class="w"> </span><span class="nv">DATA</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="nv">DATA</span><span class="w"> </span><span class="nf">⎕FAPPEND</span><span class="w"> </span><span class="nv">TieNumber</span>
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
@@ -79062,7 +79062,7 @@
 <p>The COM Properties dialog box for <code>FAPPEND</code> is shown below. The function is declared to take a single parameter called <em>Data</em> whose data type is VT_VARIANT. This data type is used to represent an arbitrary APL array. The result of the function is of data type VT_I4 (an integer).</p>
 <p><img alt="" src="../../img/cfiles-fappend-properties.png"></p>
 <h2 id="the-freplace-function">The FREPLACE Function</h2>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FREPLACE</span><span class="w"> </span><span class="nv">ID</span><span class="sr">;</span><span class="nv">I</span><span class="sr">;</span><span class="nv">DATA</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FREPLACE</span><span class="w"> </span><span class="nv">ID</span><span class="sr">;</span><span class="nv">I</span><span class="sr">;</span><span class="nv">DATA</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">I</span><span class="w"> </span><span class="nv">DATA</span><span class="kd">←</span><span class="nv">ID</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">DATA</span><span class="w"> </span><span class="nf">⎕FREPLACE</span><span class="w"> </span><span class="nv">TieNumber</span><span class="o">,</span><span class="nv">I</span>
 <span class="w">     </span><span class="bp">∇</span>
@@ -79085,7 +79085,7 @@
 <p>To replace a component, first enter the component number. Then type some data elsewhere on the spreadsheet and select it. Now click <em>Replace</em>. This runs the FReplace procedure.</p>
 <p>To append a component, enter some data elsewhere on the spreadsheet and select it. Now click <em>Append</em>. This runs the FAppend procedure.</p>
 <h2 id="the-fopen-procedure">The FOpen Procedure</h2>
-<div class="highlight"><pre><span></span><code><span class="nv">Public</span><span class="w"> </span><span class="nv">CF</span><span class="w"> </span><span class="nv">As</span><span class="w"> </span><span class="nv">Object</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="nv">Public</span><span class="w"> </span><span class="nv">CF</span><span class="w"> </span><span class="nv">As</span><span class="w"> </span><span class="nv">Object</span>
 <span class="nv">Public</span><span class="w"> </span><span class="nv">File</span><span class="w"> </span><span class="nv">As</span><span class="w"> </span><span class="nv">Object</span>
 <span class="w"> </span>
 <span class="nv">Dim</span><span class="w"> </span><span class="nv">Data</span><span class="w"> </span><span class="nv">As</span><span class="w"> </span><span class="nv">Variant</span>
@@ -79099,19 +79099,19 @@
 </code></pre></div>
 <p>In the declaration section, the first statement declares a global variable CF to be of data type Object. This variable will be connected to the dyalog.CFiles OLE Server object. The second statement declares a global variable File to be of data type Object. This variable will be connected to the dyalog.File OLE Server object. The third statement declares a global variable Data to be of data type Variant. This is equivalent to a nested array. This variable will be used for the component data.</p>
 <p>The statement:
-</p><div class="highlight"><pre><span></span><code><span class="nv">Set</span><span class="w"> </span><span class="nv">CF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">CreateObject</span><span class="p">(</span><span class="s2">"dyalog.cfiles"</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">Set</span><span class="w"> </span><span class="nv">CF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">CreateObject</span><span class="p">(</span><span class="s2">"dyalog.cfiles"</span><span class="p">)</span>
 </code></pre></div>
 <p>causes OLE to start Dyalog APL and obtain an instance of the dyalog.CFiles OLE Server object which is then associated with the variable CF. Because this variable is global, the OLE Server remains in memory and available for use.</p>
 <p>The statement
-</p><div class="highlight"><pre><span></span><code><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Cells</span><span class="p">(</span><span class="m">1</span><span class="o">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="na">.</span><span class="nv">Value</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Cells</span><span class="p">(</span><span class="m">1</span><span class="o">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="na">.</span><span class="nv">Value</span>
 </code></pre></div>
 <p>gets the name of the file to be opened and puts it into the (local) variable f.</p>
 <p>Finally, the statement:
-</p><div class="highlight"><pre><span></span><code><span class="nv">Set</span><span class="w"> </span><span class="nv">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">CF</span><span class="na">.</span><span class="nv">OpenFile</span><span class="p">(</span><span class="nv">f</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">Set</span><span class="w"> </span><span class="nv">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">CF</span><span class="na">.</span><span class="nv">OpenFile</span><span class="p">(</span><span class="nv">f</span><span class="p">)</span>
 </code></pre></div>
 <p>calls the OpenFile function and stores the result (which is an object) in the global variable File.</p>
 <h2 id="the-fread-procedure">The FRead Procedure</h2>
-<div class="highlight"><pre><span></span><code><span class="nv">Sub</span><span class="w"> </span><span class="nv">FRead</span><span class="p">()</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="nv">Sub</span><span class="w"> </span><span class="nv">FRead</span><span class="p">()</span>
 <span class="w">    </span><span class="nv">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Cells</span><span class="p">(</span><span class="m">4</span><span class="o">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="na">.</span><span class="nv">Value</span>
 <span class="w">    </span><span class="nv">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">File</span><span class="na">.</span><span class="nv">FREAD</span><span class="p">(</span><span class="nv">c</span><span class="p">)</span>
 <span class="w">    </span><span class="nv">For</span><span class="w"> </span><span class="nv">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="nv">To</span><span class="w"> </span><span class="nv">UBound</span><span class="p">(</span><span class="nv">Data</span><span class="o">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
@@ -79122,16 +79122,16 @@
 <span class="nv">End</span><span class="w"> </span><span class="nv">Sub</span><span class="w"> </span>
 </code></pre></div>
 <p>The statement:
-</p><div class="highlight"><pre><span></span><code><span class="nv">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Cells</span><span class="p">(</span><span class="m">4</span><span class="o">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="na">.</span><span class="nv">Value</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Cells</span><span class="p">(</span><span class="m">4</span><span class="o">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="na">.</span><span class="nv">Value</span>
 </code></pre></div>
 <p>gets the number of the component to be read and stores it in the (local) variable c.</p>
 <p>The statement:
-</p><div class="highlight"><pre><span></span><code><span class="nv">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">File</span><span class="na">.</span><span class="nv">FREAD</span><span class="p">(</span><span class="nv">c</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">File</span><span class="na">.</span><span class="nv">FREAD</span><span class="p">(</span><span class="nv">c</span><span class="p">)</span>
 </code></pre></div>
 <p>calls the <code>FREAD</code> function in the instance of the <code>File</code> namespace that is connected to the (global) Excel variable File. The result is stored in the variable Data.</p>
 <p>The remaining statements copy the data from Data into the spreadsheet.</p>
 <h2 id="the-freplace-procedure">The FReplace Procedure</h2>
-<div class="highlight"><pre><span></span><code><span class="nv">Sub</span><span class="w"> </span><span class="nv">FReplace</span><span class="p">()</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="nv">Sub</span><span class="w"> </span><span class="nv">FReplace</span><span class="p">()</span>
 <span class="w">    </span><span class="nv">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Cells</span><span class="p">(</span><span class="m">4</span><span class="o">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="na">.</span><span class="nv">Value</span>
 <span class="w">    </span><span class="nv">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Selection</span><span class="na">.</span><span class="nv">Value</span>
 <span class="w">    </span><span class="nv">Call</span><span class="w"> </span><span class="nv">File</span><span class="na">.</span><span class="nv">FReplace</span><span class="p">(</span><span class="nv">c</span><span class="o">,</span><span class="w"> </span><span class="nv">Data</span><span class="p">)</span>
@@ -79139,19 +79139,19 @@
 <span class="nv">End</span><span class="w"> </span><span class="nv">Sub</span>
 </code></pre></div>
 <p>The statement:
-</p><div class="highlight"><pre><span></span><code><span class="nv">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Cells</span><span class="p">(</span><span class="m">4</span><span class="o">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="na">.</span><span class="nv">Value</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Cells</span><span class="p">(</span><span class="m">4</span><span class="o">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="na">.</span><span class="nv">Value</span>
 </code></pre></div>
 <p>gets the number of the component to be replaced and stores it in the (local) variable c.</p>
 <p>The statement:
-</p><div class="highlight"><pre><span></span><code><span class="nv">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Selection</span><span class="na">.</span><span class="nv">Value</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Selection</span><span class="na">.</span><span class="nv">Value</span>
 </code></pre></div>
 <p>gets the contents of the selected range of cells and stores it in the variable Data. This will be a 2-dimensional matrix.</p>
 <p>The statement:
-</p><div class="highlight"><pre><span></span><code><span class="nv">Call</span><span class="w"> </span><span class="nv">File</span><span class="na">.</span><span class="nv">FReplace</span><span class="p">(</span><span class="nv">c</span><span class="o">,</span><span class="w"> </span><span class="nv">Data</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">Call</span><span class="w"> </span><span class="nv">File</span><span class="na">.</span><span class="nv">FReplace</span><span class="p">(</span><span class="nv">c</span><span class="o">,</span><span class="w"> </span><span class="nv">Data</span><span class="p">)</span>
 </code></pre></div>
 <p>calls the <code>FREPLACE</code> function in the instance of the <code>File</code> namespace that is connected to the (global) Excel variable File.</p>
 <h2 id="the-fappend-procedure">The FAppend Procedure</h2>
-<div class="highlight"><pre><span></span><code><span class="nv">Sub</span><span class="w"> </span><span class="nv">FAppend</span><span class="p">()</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="nv">Sub</span><span class="w"> </span><span class="nv">FAppend</span><span class="p">()</span>
 <span class="w">    </span><span class="nv">Dim</span><span class="w"> </span><span class="nv">Rslt</span><span class="w"> </span><span class="nv">As</span><span class="w"> </span><span class="nv">Variant</span>
 <span class="w">    </span><span class="nv">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Selection</span><span class="na">.</span><span class="nv">Value</span>
 <span class="w">    </span><span class="nv">Rslt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">File</span><span class="na">.</span><span class="nv">FAppend</span><span class="p">(</span><span class="nv">Data</span><span class="p">)</span>
@@ -79159,11 +79159,11 @@
 <span class="nv">End</span><span class="w"> </span><span class="nv">Sub</span>
 </code></pre></div>
 <p>The statement:
-</p><div class="highlight"><pre><span></span><code><span class="nv">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Selection</span><span class="na">.</span><span class="nv">Value</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">Data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Selection</span><span class="na">.</span><span class="nv">Value</span>
 </code></pre></div>
 <p>gets the contents of the selected range of cells and stores it in the variable Data. This will be a 2-dimensional matrix.</p>
 <p>The statement:
-</p><div class="highlight"><pre><span></span><code><span class="nv">Rslt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">File</span><span class="na">.</span><span class="nv">FAppend</span><span class="p">(</span><span class="nv">Data</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">Rslt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">File</span><span class="na">.</span><span class="nv">FAppend</span><span class="p">(</span><span class="nv">Data</span><span class="p">)</span>
 </code></pre></div>
 <p>calls the <code>FAPPEND</code> function in the instance of the <code>File</code> namespace that is connected to the (global) Excel variable File. The result of this function is ignored.</p>
 
@@ -79195,7 +79195,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

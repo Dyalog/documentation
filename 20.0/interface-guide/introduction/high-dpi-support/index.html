@@ -78935,14 +78935,14 @@
 <p>The DPI-Aware scaling features provided by Dyalog APL are designed to allow you to deploy GUI applications that look attractive in most situations, whatever the screen resolution and scaling factor is in use.</p>
 <p>However, if you wish to ignore these facilities and fall back on Windows DWM scaling, you may do so as follows.</p>
 <p>If you wish to <em>enable</em> DWM scaling in your application, you can either remove or set to zero the <strong>AUTODPI</strong> parameter. For example, the command line to start a run-time application might be:
-</p><div class="highlight"><pre><span></span><code>dyalogrt.exe myruntime.dws AUTODPI=0
+</p><div class="language-text highlight"><pre><span></span><code>dyalogrt.exe myruntime.dws AUTODPI=0
 </code></pre></div>
 <p>This will prevent Dyalog from registering your application as DPI-Aware in start-up.</p>
 <p>Another way to enable DWM scaling is to use a manifest file. Note that if you disable DWM scaling for the development version of Dyalog APL, the appearance of the Session window may be imperfect.</p>
 <h3 id="using-a-manifest">Using a Manifest</h3>
 <p>A Windows application can declare itself to be DPI-aware or not  using a declaration in the optional XML manifest file associated with its <code>.exe</code>.  If you want your Dyalog APL application to be automatically scaled by the DWM, you may use a manifest file to override the call that Dyalog itself makes to register itself as being DPI-Aware.</p>
 <p>This is done by setting the XML entity <em>dpiAware</em> to the value <em>false</em> as illustrated by the skeleton manifest file listed below.
-</p><div class="highlight"><pre><span></span><code><span class="nt">&lt;assembly</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"urn:schemas-microsoft-com:asm.v1"</span><span class="w"> </span><span class="na">manifestVersion=</span><span class="s">"1.0"</span><span class="w"> </span><span class="na">xmlns:asmv3=</span><span class="s">"urn:schemas-microsoft-com:asm.v3"</span><span class="w"> </span><span class="nt">&gt;</span>
+</p><div class="language-xml highlight"><pre><span></span><code><span class="nt">&lt;assembly</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"urn:schemas-microsoft-com:asm.v1"</span><span class="w"> </span><span class="na">manifestVersion=</span><span class="s">"1.0"</span><span class="w"> </span><span class="na">xmlns:asmv3=</span><span class="s">"urn:schemas-microsoft-com:asm.v3"</span><span class="w"> </span><span class="nt">&gt;</span>
 <span class="w"> </span><span class="nt">&lt;asmv3:application&gt;</span>
 <span class="w">   </span><span class="nt">&lt;asmv3:windowsSettings</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/SMI/2005/WindowsSettings"</span><span class="nt">&gt;</span>
 <span class="w">     </span><span class="nt">&lt;dpiAware&gt;</span>false<span class="nt">&lt;/dpiAware&gt;</span>
@@ -78953,11 +78953,11 @@
 <p>If <em>dpiAware</em> appears in the manifest file, its value take precedence over the value of the <strong>AUTODPI</strong> parameter, whether it is specified implicitly by omission (it defaults to 1) or is specified in the registry or on the command line.</p>
 <h2 id="naming-a-manifest-file">Naming a Manifest File</h2>
 <p>The name of the manifest file is the full name of the application file followed by an optional resource id (if omitted, the default is 1) and the extension <code>.manifest</code>. If your application runs courtesy of the dyalogrt.exe or dyalogrt.dll, the name of the manifest file should be one of:
-</p><div class="highlight"><pre><span></span><code>   dyalogrt.exe.&lt;resource ID&gt;.manifest
+</p><div class="language-text highlight"><pre><span></span><code>   dyalogrt.exe.&lt;resource ID&gt;.manifest
    dyalogrt.dll.&lt;resource ID&gt;.manifest
 </code></pre></div>
 <p>If you have exported your application as an executable called example.exe or as a dll called example.dll, it should be one of:
-</p><div class="highlight"><pre><span></span><code>   example.exe.&lt;resource ID&gt;.manifest
+</p><div class="language-text highlight"><pre><span></span><code>   example.exe.&lt;resource ID&gt;.manifest
    example.dll.&lt;resource ID&gt;.manifest
 </code></pre></div>
 
@@ -78989,7 +78989,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

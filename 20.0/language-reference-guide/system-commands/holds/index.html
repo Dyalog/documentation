@@ -78708,13 +78708,13 @@
 
 <p>System command <code>)HOLDS</code> displays a list of tokens which have been acquired or requested by the <code>:Hold</code> control structure.</p>
 <p>Each line of the display is of the form:
-</p><div class="highlight"><pre><span></span><code><span class="nv">token</span><span class="bp">:</span><span class="w">  </span><span class="nv">acq</span><span class="w">  </span><span class="nv">req</span><span class="w">  </span><span class="nv">req</span><span class="w"> </span><span class="na">...</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">token</span><span class="bp">:</span><span class="w">  </span><span class="nv">acq</span><span class="w">  </span><span class="nv">req</span><span class="w">  </span><span class="nv">req</span><span class="w"> </span><span class="na">...</span>
 </code></pre></div>
 <p>Where <code>acq</code> is the number of <em>the</em> thread that has acquired the token, and <code>req</code> is the number of <em>a</em> thread which is requesting it. For a token to appear in the display, a thread (and only one thread) must have acquired it, whereas any number of threads can be requesting it.</p>
 <h2 class="example">Example</h2>
 
 <p>Thread <code>300</code>’s attempt to acquire token <code>'blue'</code> results in a deadlock:
-</p><div class="highlight"><pre><span></span><code><span class="m">300</span><span class="bp">:</span><span class="nv">DEADLOCK</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="m">300</span><span class="bp">:</span><span class="nv">DEADLOCK</span>
 <span class="nv">Sema4</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w"> </span><span class="bp">:</span><span class="nv">Hold</span><span class="w"> </span><span class="s1">'blue'</span>
 <span class="w">        </span><span class="err">^</span>
 
@@ -78729,7 +78729,7 @@
 <li><code>Red</code> has been acquired by <code>300</code> and requested by <code>200</code> and <code>100</code>.</li>
 </ul>
 <p>The following cycle of dependencies has caused the deadlock:
-</p><div class="highlight"><pre><span></span><code>Thread 300 attempts to acquire blue,      300 → blue
+</p><div class="language-text highlight"><pre><span></span><code>Thread 300 attempts to acquire blue,      300 → blue
 which is owned by 100,                     ↑      ↓
 which is waiting for red,                 red ←  100
 which is owned by 300.
@@ -78763,7 +78763,7 @@ which is owned by 300.
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

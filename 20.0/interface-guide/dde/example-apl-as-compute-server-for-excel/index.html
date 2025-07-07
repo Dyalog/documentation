@@ -78708,7 +78708,7 @@
 <p>Start Excel and enter some NUMBERS into the cells R1C1 to R3C3 of the spreadsheet "SHEET1".</p>
 <p>Start Dyalog APL/W and size your windows so that both the Excel window and the APL Session window can be viewed comfortably at the same time.</p>
 <p><code>)LOAD</code> the EXCEL workspace. This contains the following functions :</p>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">RUN</span><span class="sr">;</span><span class="nv">Z</span><span class="sr">;</span><span class="nf">⎕WSID</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">RUN</span><span class="sr">;</span><span class="nv">Z</span><span class="sr">;</span><span class="nf">⎕WSID</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">Z</span><span class="kd">←</span><span class="s1">'DDE:EXCEL|SHEET1'</span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'DATA R1C1:R3C3'</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="kd">→</span><span class="p">(</span><span class="m">2</span><span class="o">=</span><span class="nv">Z</span><span class="p">)</span><span class="na">/</span><span class="nv">L1</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="s1">'No Excel out there ?'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="kd">→</span><span class="m">0</span>
@@ -78725,7 +78725,7 @@
 <span class="sr">[</span><span class="m">14</span><span class="sr">]</span><span class="w">  </span><span class="nf">⎕DQ</span><span class="w"> </span><span class="s1">'.'</span>
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">CALLB</span><span class="w"> </span><span class="nv">MSG</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">CALLB</span><span class="w"> </span><span class="nv">MSG</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Callback to recalculate when Excel changes DATA</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="kd">→</span><span class="p">(</span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="o">≡</span><span class="nf">⎕SVS</span><span class="w"> </span><span class="s1">'DATA'</span><span class="p">)</span><span class="na">/</span><span class="m">0</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">CALC</span>
@@ -78739,7 +78739,7 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>Type the following statement in the APL Session :</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">RUN</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">RUN</span>
 </code></pre></div>
 <p>Now type "=dyalog|excel!answer" into cell A4 in your spreadsheet</p>
 <p>Follow the above instructions to establish a link from APL to cell A4 in your Excel spreadsheet. The result of the computation will be displayed.</p>
@@ -78775,7 +78775,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

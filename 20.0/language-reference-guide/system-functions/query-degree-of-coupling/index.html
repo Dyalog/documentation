@@ -78723,7 +78723,7 @@
 <p>If <code>Y</code> is a scalar, it specifies a single 1-character name.  If <code>Y</code> is a matrix, each row of <code>Y</code> specifies a name and an optional external name as for the vector case.</p>
 <p>If <code>Y</code> specifies a single name, the result <code>R</code> is a 1-element vector whose value 0, 1 or 2 indicates its current degree of coupling.  If <code>Y</code> specifies more than one name, <code>R</code> is a vector whose elements indicate the current degree of coupling of the variable specified by the corresponding row in <code>Y</code>.  A value of 2 indicates that the variable is fully coupled (via a warm or hot DDE link) with a shared variable in another APL workspace, or with a DDE item in another application.  A value of 1 indicates that you have offered the variable but there is no such connection, or that the second application rejected a warm link.  In this case, a transfer of data may have taken place (via a cold link) but the connection is no longer open.  A value of 0 indicates that the name is not a shared variable.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'X'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'X'</span>
 <span class="m">2</span>
 <span class="w">      </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="o">↑</span><span class="s1">'X SALES'</span><span class="w"> </span><span class="s1">'Y'</span><span class="w"> </span><span class="s1">'JUNK'</span>
 <span class="m">2</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span>
@@ -78757,7 +78757,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

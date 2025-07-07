@@ -78847,13 +78847,13 @@
 <h2 id="magic-and-aix">magic and AIX</h2>
 <p>AIX still uses a very early version of <code>magic</code>, so it is not possible to give as much information about Dyalog APL files as on Linux.</p>
 <p>Dyalog provides a file, <code>magic</code>, which is located in the top level installation directory of Dyalog APL. To use this file to extend the capabilities of the <code>file</code> command either run
-</p><div class="highlight"><pre><span></span><code>file -m /opt/mdyalog/20.0/32/classic/p5/magic *
+</p><div class="language-text highlight"><pre><span></span><code>file -m /opt/mdyalog/20.0/32/classic/p5/magic *
 </code></pre></div>
 <p>or catenate the contents of /opt/mdyalog/20.0/32/classic/p5/magic onto /etc/magic, and then run
-</p><div class="highlight"><pre><span></span><code>file *
+</p><div class="language-text highlight"><pre><span></span><code>file *
 </code></pre></div>
 <h3 class="example">Example</h3>
-<div class="highlight"><pre><span></span><code>$ file -m /opt/mdyalog/20.0/32/classic/p6/magic *
+<div class="language-text highlight"><pre><span></span><code>$ file -m /opt/mdyalog/20.0/32/classic/p6/magic *
 1_apl_j1: Dyalog APL component file 64-bit level 1 journaled non-checksummed
 1_apl_j2: Dyalog APL component file 64-bit level 2 journaled checksummed
 1_apl_qfile: Dyalog APL component file 64-bit non-journaled non-checksummed
@@ -78870,7 +78870,7 @@ utf8: Dyalog APL workspace type 12 subtype 4 32-bit unicode little-endian
 <h3 id="magic-and-linux">magic and Linux</h3>
 <p>Most Linux distributions include details about Dyalog-related files in their magic files; Dyalog has submitted two versions of the magic file for inclusion in distributions. To check whether your Linux distribution has the more recent version, create a journaled component file and then run the file command against that component file. The two examples below show the output with the earlier and later versions of magic in use.</p>
 <h2 id="example-using-the-older-default-magic-file">Example, using the older default magic file</h2>
-<div class="highlight"><pre><span></span><code>$ file *
+<div class="language-text highlight"><pre><span></span><code>$ file *
 1_apl_j1: data
 1_apl_j2: data
 1_apl_qfile: data
@@ -78885,7 +78885,7 @@ signals: \012- Dyalog APL\012- workspace\012- version 12\012- .4
 utf8: \012- Dyalog APL\012- workspace\012- version 12\012- .4
 </code></pre></div>
 <h3 id="example-with-more-recent-magic-file">Example, with more recent magic file</h3>
-<div class="highlight"><pre><span></span><code>$ file *
+<div class="language-text highlight"><pre><span></span><code>$ file *
 1_apl_j1: Dyalog APL component file 64-bit level 1 journaled non-checksummed
 1_apl_j2: Dyalog APL component file 64-bit level 2 journaled checksummed
 1_apl_qfile: Dyalog APL component file 64-bit non-journaled non-checksummed
@@ -78929,7 +78929,7 @@ utf8: Dyalog APL workspace type 12 subtype 4 32-bit unicode little-endian
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

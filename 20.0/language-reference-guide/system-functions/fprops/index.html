@@ -79016,16 +79016,16 @@
 <p>Enabling the checksum option on an existing non-empty component file will result in all previously written components without a checksum  being check-summed and converted. This operation which will take place when <code>⎕FPROPS</code> is changed, may not therefore be instantaneous.</p>
 <p>Journaling and checksum settings may be changed at any time a file is exclusively tied.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">tn</span><span class="kd">←</span><span class="s1">'myfile64'</span><span class="w"> </span><span class="nf">⎕FCREATE</span><span class="w"> </span><span class="m">0</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">tn</span><span class="kd">←</span><span class="s1">'myfile64'</span><span class="w"> </span><span class="nf">⎕FCREATE</span><span class="w"> </span><span class="m">0</span>
 <span class="w">      </span><span class="s1">'SEUJ'</span><span class="w"> </span><span class="nf">⎕FPROPS</span><span class="w"> </span><span class="nv">tn</span>
 <span class="m">64</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <p>The following expression disables Unicode and switches Journaling on. The function returns the previous settings:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="s1">'U'</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="s1">'J'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="nf">⎕FPROPS</span><span class="w"> </span><span class="nv">tn</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="s1">'U'</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="s1">'J'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="nf">⎕FPROPS</span><span class="w"> </span><span class="nv">tn</span>
 <span class="m">1</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <p>Note that to set the value of just a single property, the following two statements are equivalent:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'J'</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕FPROPS</span><span class="w"> </span><span class="nv">tn</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'J'</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕FPROPS</span><span class="w"> </span><span class="nv">tn</span>
 <span class="w">      </span><span class="p">(</span><span class="o">,⊂</span><span class="s1">'J'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="nf">⎕FPROPS</span><span class="w"> </span><span class="nv">tn</span>
 </code></pre></div>
 <p>Properties may be read by a task with <code>⎕FREAD</code> permission (access code 1), and set by a task with <code>⎕FSTAC</code> access (8192). To set the value of the Journaling property, the file must be exclusively tied.</p>
@@ -79086,7 +79086,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

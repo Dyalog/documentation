@@ -78895,7 +78895,7 @@
 </li>
 </ol>
 <p>The relationship between these panes can be illustrated as</p>
-<div class="highlight"><pre><span></span><code>     Left Arg  ┐     ┌─  Axis Specification
+<div class="language-text highlight"><pre><span></span><code>     Left Arg  ┐     ┌─  Axis Specification
                │ ┌─┐ │  ┌──────┬─  Right Arg / Prev Result
                a │B│[1] c D[2] e
                  └┬┘    │ │ │  └  Previous Right
@@ -78935,7 +78935,7 @@ Current Function  ┘     │ │ └  Previous Axis
 <h2 id="tracing-diamond-separated-expressions">Tracing Diamond-Separated Expressions</h2>
 <p>A line of code can comprise a set of expressions separated by diamonds. In this situation, you might only want to trace into some of them and skip others; this can be done by using the command <strong>&lt;ER&gt;</strong> (by default, this is <kbd>enter</kbd>).</p>
 <p>For example, consider a line that consists of three diamond-separated expressions; you want to skip the first two, and trace into the third one:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">a</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">9</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="o">⍉</span><span class="nv">a</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="nv">a</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">9</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="o">⍉</span><span class="nv">a</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span>
 </code></pre></div>
 <p>Enter the expressions in the Session, and start inline tracing. You should see:</p>
 <p><img alt="" src="../../img/tbt-diamond1.png"></p>
@@ -78972,7 +78972,7 @@ Current Function  ┘     │ │ └  Previous Axis
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

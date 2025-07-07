@@ -78829,14 +78829,14 @@ scalar or 1-element vector is extended to a vector of the required length. If th
 of <code>Y</code> has a length of 1, the array is extended along that axis to conform with the other argument.</p>
 <p>The shape of <code>R</code> is the catenation of the shape of <code>X</code> less the last dimension with the shape of <code>Y</code> less the first
 dimension. That is:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">R</span><span class="w"> </span><span class="kd">←→</span><span class="w"> </span><span class="p">(</span><span class="m">¯1</span><span class="o">↓⍴</span><span class="nv">X</span><span class="p">)</span><span class="o">,</span><span class="m">1</span><span class="o">↓⍴</span><span class="nv">Y</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">R</span><span class="w"> </span><span class="kd">←→</span><span class="w"> </span><span class="p">(</span><span class="m">¯1</span><span class="o">↓⍴</span><span class="nv">X</span><span class="p">)</span><span class="o">,</span><span class="m">1</span><span class="o">↓⍴</span><span class="nv">Y</span>
 </code></pre></div>
 <p>For vector arguments, each element of <code>X</code> defines the ratio between the units for corresponding pairs of elements
 in <code>Y</code>. The first element of <code>X</code> has no effect on the result.</p>
 <p>This function is also known as Base Value.</p>
 <h2 class="example">Examples</h2>
 
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">60</span><span class="w"> </span><span class="m">60</span><span class="o">⊥</span><span class="m">3</span><span class="w"> </span><span class="m">13</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">60</span><span class="w"> </span><span class="m">60</span><span class="o">⊥</span><span class="m">3</span><span class="w"> </span><span class="m">13</span>
 <span class="m">193</span>
 
 <span class="w">      </span><span class="m">0</span><span class="w"> </span><span class="m">60</span><span class="o">⊥</span><span class="m">3</span><span class="w"> </span><span class="m">13</span>
@@ -78901,7 +78901,7 @@ in <code>Y</code>. The first element of <code>X</code> has no effect on the resu
 
 <h2 class="example">Examples</h2>
 
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="o">⊥</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="o">⊥</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span>
 <span class="m">26</span>
 <span class="w">      </span><span class="m">3</span><span class="o">⊥</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span>
 <span class="m">58</span>
@@ -78912,7 +78912,7 @@ in <code>Y</code>. The first element of <code>X</code> has no effect on the resu
 the vectors along the first axis of <code>Y</code>.</p>
 <h2 class="example">Examples</h2>
 
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">M</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">M</span>
 <span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span>
 <span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span>
 <span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span>
@@ -78930,11 +78930,11 @@ the vectors along the first axis of <code>Y</code>.</p>
 <span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="m">17</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">21</span>
 </code></pre></div>
 <p>Scalar extension may be applied:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="o">⊥</span><span class="nv">M</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="o">⊥</span><span class="nv">M</span>
 <span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">7</span>
 </code></pre></div>
 <p>Extension along a unit axis may be applied:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="nv">A</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">1</span><span class="o">⍴</span><span class="m">2</span><span class="w"> </span><span class="m">10</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="nv">A</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">1</span><span class="o">⍴</span><span class="m">2</span><span class="w"> </span><span class="m">10</span>
 <span class="w"> </span><span class="m">2</span>
 <span class="m">10</span>
 <span class="w">      </span><span class="nv">A</span><span class="o">⊥</span><span class="nv">M</span>
@@ -78970,7 +78970,7 @@ the vectors along the first axis of <code>Y</code>.</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

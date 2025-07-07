@@ -78709,7 +78709,7 @@
 <p>The monadic form of <code>⎕NS</code> makes a new (and unique) unnamed namespace and returns a ref to it.</p>
 <p>One use of unnamed namespaces is to represent hierarchical data structures; for example, a simple employee database:</p>
 <p>The first record is represented by <code>JOHN</code> which is a ref to an unnamed namespace:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">JOHN</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="w"> </span><span class="s1">''</span><span class="w">                         </span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">JOHN</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="w"> </span><span class="s1">''</span><span class="w">                         </span>
 <span class="w">      </span><span class="nv">JOHN</span>
 <span class="c1">#.[Namespace]</span>
 
@@ -78721,11 +78721,11 @@
 <span class="w">      </span><span class="nv">JOHN</span><span class="na">.</span><span class="nv">Age</span><span class="kd">←</span><span class="m">50</span>
 </code></pre></div>
 <p>Data variables for the second record, <code>PAUL</code>, can be established using strand, or vector, assignment:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">PAUL</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="w"> </span><span class="s1">''</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">PAUL</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="w"> </span><span class="s1">''</span>
 <span class="w">      </span><span class="nv">PAUL</span><span class="na">.</span><span class="p">(</span><span class="nv">FirstName</span><span class="w"> </span><span class="nv">LastName</span><span class="w"> </span><span class="nv">Age</span><span class="kd">←</span><span class="s1">'Paul'</span><span class="w"> </span><span class="s1">'Brown'</span><span class="w"> </span><span class="m">44</span><span class="p">)</span>
 </code></pre></div>
 <p>The function <code>SHOW</code> can be used to display the data in each record (the function is split into 2 lines only to fit on the printed page). Notice that its argument is a ref.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">SHOW</span><span class="w"> </span><span class="nv">PERSON</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">SHOW</span><span class="w"> </span><span class="nv">PERSON</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="nv">PERSON</span><span class="na">.</span><span class="nv">FirstName</span><span class="o">,</span><span class="s1">' '</span><span class="o">,</span><span class="nv">PERSON</span><span class="na">.</span><span class="nv">LastName</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="o">,</span><span class="w"> </span><span class="kd">←</span><span class="s1">' is '</span><span class="o">,⍕</span><span class="nv">PERSON</span><span class="na">.</span><span class="nv">Age</span>
 <span class="w">     </span><span class="bp">∇</span>
@@ -78737,7 +78737,7 @@
 <span class="nv">Paul</span><span class="w"> </span><span class="nv">Brown</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="m">44</span>
 </code></pre></div>
 <p>An alternative version of the function illustrates the use of the <code>:With :EndWith</code> control structure to execute an expression, or block of expressions, within a namespace:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">SHOW1</span><span class="w"> </span><span class="nv">PERSON</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">SHOW1</span><span class="w"> </span><span class="nv">PERSON</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="nv">PERSON</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">        </span><span class="nv">R</span><span class="kd">←</span><span class="nv">FirstName</span><span class="o">,</span><span class="s1">' '</span><span class="o">,</span><span class="nv">LastName</span><span class="o">,</span><span class="s1">' is '</span><span class="o">,</span><span class="p">(</span><span class="o">⍕</span><span class="nv">Age</span><span class="p">)</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">EndWith</span>
@@ -78747,14 +78747,14 @@
 <span class="nv">John</span><span class="w"> </span><span class="nv">Smith</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="m">50</span>
 </code></pre></div>
 <p>In this case, as only a single expression is involved, it can be expressed more simply using parentheses.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">SHOW2</span><span class="w"> </span><span class="nv">PERSON</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">SHOW2</span><span class="w"> </span><span class="nv">PERSON</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="nv">PERSON</span><span class="na">.</span><span class="p">(</span><span class="nv">FirstName</span><span class="o">,</span><span class="s1">' '</span><span class="o">,</span><span class="nv">LastName</span><span class="o">,</span><span class="s1">' is '</span><span class="o">,</span><span class="p">(</span><span class="o">⍕</span><span class="nv">Age</span><span class="p">))</span>
 <span class="w">     </span><span class="bp">∇</span>
 <span class="w">      </span><span class="nv">SHOW2</span><span class="w"> </span><span class="nv">PAUL</span>
 <span class="nv">Paul</span><span class="w"> </span><span class="nv">Brown</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="m">44</span>
 </code></pre></div>
 <p>Dfns also accept refs as arguments:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">SHOW3</span><span class="kd">←</span><span class="kt">{</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">SHOW3</span><span class="kd">←</span><span class="kt">{</span>
 <span class="w">        </span><span class="bp">⍵</span><span class="na">.</span><span class="p">(</span><span class="nv">FirstName</span><span class="o">,</span><span class="s1">' '</span><span class="o">,</span><span class="nv">LastName</span><span class="o">,</span><span class="s1">' is '</span><span class="o">,⍕</span><span class="nv">Age</span><span class="p">)</span>
 <span class="w">      </span><span class="kt">}</span>
 
@@ -78790,7 +78790,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78769,14 +78769,14 @@
 
 <p>You may create user-defined Classes based upon Dyalog GUI objects as illustrated by the Temperature Converter Class which is listed overleaf.</p>
 <p>To base a Class on a Dyalog GUI object, you specify the <em>name</em> of the object as its Base Class. For example, the Temperature Converter is based upon a Form:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Temp</span><span class="bp">:</span><span class="w"> </span><span class="s1">'Form'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Temp</span><span class="bp">:</span><span class="w"> </span><span class="s1">'Form'</span>
 </code></pre></div>
 <p>Being based upon a top-level GUI object, the Temperature Converter may be used as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">T1</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Temp</span><span class="p">(</span><span class="o">⊂</span><span class="s1">'Posn'</span><span class="p">(</span><span class="m">68</span><span class="w"> </span><span class="m">50</span><span class="p">))</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">T1</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Temp</span><span class="p">(</span><span class="o">⊂</span><span class="s1">'Posn'</span><span class="p">(</span><span class="m">68</span><span class="w"> </span><span class="m">50</span><span class="p">))</span>
 </code></pre></div>
 <p><img alt="" src="../../img/temperature-converter-8.png"></p>
 <h2 id="temperature-converter-example">Temperature Converter Example</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Temp</span><span class="bp">:</span><span class="w"> </span><span class="s1">'Form'</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Temp</span><span class="bp">:</span><span class="w"> </span><span class="s1">'Form'</span>
 <span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Make</span><span class="w"> </span><span class="nv">pv</span><span class="sr">;</span><span class="nv">TITLE</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
 <span class="w">      </span><span class="nv">TITLE</span><span class="kd">←</span><span class="s1">'Temperature Converter'</span>
@@ -78830,7 +78830,7 @@
 <span class="w">      </span><span class="nv">f2c</span>
 <span class="w">    </span><span class="bp">∇</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Quit</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Quit</span>
 <span class="w">      </span><span class="nv">Close</span>
 <span class="w">    </span><span class="bp">∇</span>
 <span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">SET_DEF</span><span class="w"> </span><span class="nv">MSG</span>
@@ -78853,12 +78853,12 @@
 <span class="bp">:</span><span class="nv">EndClass</span><span class="w"> </span><span class="c1">⍝ Temp</span>
 </code></pre></div>
 <p>Notice that the <code>:Implements Constructor</code> statement of its Constructor <code>Make</code>:
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Constructor</span><span class="w"> </span><span class="bp">:</span><span class="nv">Base</span><span class="w"> </span><span class="p">(</span><span class="o">⊂</span><span class="s1">'Caption'</span><span class="w"> </span><span class="nv">TITLE</span><span class="p">)</span><span class="o">,</span><span class="nv">pv</span><span class="o">,</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Constructor</span><span class="w"> </span><span class="bp">:</span><span class="nv">Base</span><span class="w"> </span><span class="p">(</span><span class="o">⊂</span><span class="s1">'Caption'</span><span class="w"> </span><span class="nv">TITLE</span><span class="p">)</span><span class="o">,</span><span class="nv">pv</span><span class="o">,</span>
 <span class="w">                             </span><span class="o">⊂</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="p">(</span><span class="m">30</span><span class="w"> </span><span class="m">40</span><span class="p">))</span>
 </code></pre></div>
 <p>passes on the application-specific property list (<code>pv</code>) given as its argument, but (in this case) specifies Caption and Size as well. The order in which the properties are specified in the <code>:Base</code> call ensures that the former will act as a default (and be overridden by an application-specific Caption requested in <code>pv</code>), whereas the specified Size of<code>(30 40)</code> will override whatever value of Size is requested by the host application in <code>pv</code>.</p>
 <p>Other Instances can co-exist with the first:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">T2</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Temp</span><span class="p">((</span><span class="s1">'Caption'</span><span class="w"> </span><span class="s1">'My Application'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">T2</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Temp</span><span class="p">((</span><span class="s1">'Caption'</span><span class="w"> </span><span class="s1">'My Application'</span><span class="p">)</span>
 <span class="w">                   </span><span class="p">(</span><span class="s1">'Posn'</span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">10</span><span class="p">))</span>
 </code></pre></div>
 
@@ -78890,7 +78890,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

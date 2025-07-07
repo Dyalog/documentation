@@ -78710,7 +78710,7 @@
 
 <p><a class="noprint" href="../with-statement-definition/">Formal Definition</a></p>
 <p><code>:With</code> is a control structure that may be used to simplify a series of references to an object or namespace. <code>:With</code> changes into the specified namespace for the duration of the control structure, and is terminated by <code>:End[With]</code>. <code>obj</code> is either the name of or a reference to a namespace. For example, you could update several properties of a Grid object <code>F.G</code> as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="w">       </span><span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span>
 <span class="w">            </span><span class="nv">Values</span><span class="kd">←</span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="m">0</span>
 <span class="w">            </span><span class="nv">RowTitles</span><span class="kd">←</span><span class="s1">'North'</span><span class="w"> </span><span class="s1">'South'</span><span class="w"> </span><span class="s1">'East'</span><span class="w"> </span><span class="s1">'West'</span>
 <span class="w">            </span><span class="nv">ColTitles</span><span class="kd">←</span><span class="s1">'Cakes'</span><span class="w"> </span><span class="s1">'Buns'</span><span class="w"> </span><span class="s1">'Biscuits'</span>
@@ -78724,7 +78724,7 @@
 <li>Exiting the defined function from within a <code>:With</code> control structure causes the space to revert to the one from which the function was called.</li>
 </ul>
 <p>On leaving the <code>:With</code> control structure, execution reverts to the original namespace. Notice however that the interpreter does not detect branches <code>(→)</code> out of the control structure. <code>:With</code> control structures can be nested in the normal fashion:
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="s1">'x'</span><span class="w">           </span><span class="c1">⍝ Change to #.x</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="s1">'x'</span><span class="w">           </span><span class="c1">⍝ Change to #.x</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">       </span><span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="s1">'y'</span><span class="w">       </span><span class="c1">⍝ Change to #.x.y</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">           </span><span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="nf">⎕SE</span><span class="w">   </span><span class="c1">⍝ Change to ⎕SE</span>
 <span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w">               </span><span class="na">...</span><span class="w">     </span><span class="c1">⍝ ... in ⎕SE</span>
@@ -78761,7 +78761,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

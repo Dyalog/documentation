@@ -78854,7 +78854,7 @@
 <p><code>R</code> is determined such that <code>(X-Y+.×R)*2</code> is minimised.</p>
 <p>The shape of <code>R</code> is <code>(1↓⍴Y),1↓⍴X</code>.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕PP</span><span class="kd">←</span><span class="m">5</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕PP</span><span class="kd">←</span><span class="m">5</span>
 
 <span class="w">      </span><span class="nv">B</span>
 <span class="m">3</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">4</span>
@@ -78875,7 +78875,7 @@
 <span class="m">5.0889</span><span class="w"> </span><span class="m">5.5778</span>
 </code></pre></div>
 <p>If there are more rows than columns in the right argument, the least squares solution results.  In the following example, the constants a and b which provide the best fit for the set of equations represented by P = a + bQ are determined:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Q</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Q</span>
 <span class="m">1</span><span class="w"> </span><span class="m">1</span>
 <span class="m">1</span><span class="w"> </span><span class="m">2</span>
 <span class="m">1</span><span class="w"> </span><span class="m">3</span>
@@ -78890,7 +78890,7 @@
 <span class="m">14.941</span><span class="w"> </span><span class="m">¯2.9609</span>
 </code></pre></div>
 <h2 id="example-linear-regression-on-complex-numbers">Example: linear regression on complex numbers</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">x</span><span class="kd">←</span><span class="nv">j</span><span class="na">⌿</span><span class="m">¯50</span><span class="o">+?</span><span class="m">2</span><span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">4</span><span class="o">⍴</span><span class="m">100</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">x</span><span class="kd">←</span><span class="nv">j</span><span class="na">⌿</span><span class="m">¯50</span><span class="o">+?</span><span class="m">2</span><span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">4</span><span class="o">⍴</span><span class="m">100</span>
 <span class="w">      </span><span class="nv">y</span><span class="kd">←</span><span class="p">(</span><span class="nv">x</span><span class="o">+</span><span class="na">.</span><span class="o">×</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">j</span><span class="na">⌿</span><span class="m">0.0001</span><span class="o">×</span><span class="m">¯50</span><span class="o">+?</span><span class="m">2</span><span class="w"> </span><span class="m">13</span><span class="o">⍴</span><span class="m">100</span>
 <span class="w">      </span><span class="o">⍴</span><span class="nv">x</span>
 <span class="m">13</span><span class="w"> </span><span class="m">4</span>
@@ -78901,7 +78901,7 @@
 <span class="w">      </span><span class="c1">⍝ that is, y⌹x recovered the coefficients 3 4 5 6</span>
 </code></pre></div>
 <h2 id="additional-information">Additional Information</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">x</span><span class="o">⌹</span><span class="nv">y</span><span class="w"> </span><span class="kd">←→</span><span class="w"> </span><span class="p">(</span><span class="o">⌹</span><span class="p">(</span><span class="o">⍉</span><span class="nv">y</span><span class="p">)</span><span class="o">+</span><span class="na">.</span><span class="o">×</span><span class="nv">y</span><span class="p">)</span><span class="o">+</span><span class="na">.</span><span class="o">×</span><span class="p">(</span><span class="o">⍉</span><span class="nv">y</span><span class="p">)</span><span class="o">+</span><span class="na">.</span><span class="o">×</span><span class="nv">x</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">x</span><span class="o">⌹</span><span class="nv">y</span><span class="w"> </span><span class="kd">←→</span><span class="w"> </span><span class="p">(</span><span class="o">⌹</span><span class="p">(</span><span class="o">⍉</span><span class="nv">y</span><span class="p">)</span><span class="o">+</span><span class="na">.</span><span class="o">×</span><span class="nv">y</span><span class="p">)</span><span class="o">+</span><span class="na">.</span><span class="o">×</span><span class="p">(</span><span class="o">⍉</span><span class="nv">y</span><span class="p">)</span><span class="o">+</span><span class="na">.</span><span class="o">×</span><span class="nv">x</span>
 </code></pre></div>
 <p>(Use <code>+⍉</code> instead of <code>⍉</code> for complex <code>y</code>.)</p>
 <p>This equivalence, familiar to mathematicians and statisticians, explains</p>
@@ -78938,7 +78938,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

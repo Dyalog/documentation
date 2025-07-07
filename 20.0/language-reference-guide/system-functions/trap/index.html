@@ -79004,14 +79004,14 @@
 </table>
 <p>See <a href="../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/trap">Programmer's Guide: "Trap Statement"</a> for an alternative 'control structured' error trapping mechanism.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="o">⊂</span><span class="p">(</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">'ERROR'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="o">⍴</span><span class="nf">⎕TRAP</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="o">⊂</span><span class="p">(</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">'ERROR'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="o">⍴</span><span class="nf">⎕TRAP</span>
 <span class="m">1</span>
 <span class="w"> </span>
 <span class="w">      </span><span class="nf">⎕TRAP</span>
 <span class="w">  </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="nv">E</span><span class="w"> </span><span class="nv">ERROR</span>
 </code></pre></div>
 <p>Items may be specified as scalars.  If there is only a single trap definition, it need not be enclosed.  However, the value of <code>⎕TRAP</code> will be rigorously correct:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="m">11</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">'→LAB'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="m">11</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">'→LAB'</span>
 <span class="w"> </span>
 <span class="w">      </span><span class="nf">⎕TRAP</span>
 <span class="w">  </span><span class="m">11</span><span class="w"> </span><span class="nv">E</span><span class="w"> </span><span class="kd">→</span><span class="nv">ERR</span>
@@ -79021,14 +79021,14 @@
 </code></pre></div>
 <p>The value of <code>⎕TRAP</code> in a clear workspace is an empty vector whose prototype is</p>
 <p><code>0⍴(⍬ '' '')</code>.  A convenient way of cancelling a <code>⎕TRAP</code> definition is:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="m">0</span><span class="o">⍴</span><span class="nf">⎕TRAP</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="m">0</span><span class="o">⍴</span><span class="nf">⎕TRAP</span>
 </code></pre></div>
 <p>Event codes 0 and 1000 allow all events in the respective ranges 1-999 and 1000-1006 to be trapped.  Specific event codes may be excluded by the <code>N</code> action (which must precede the general event action):
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="s1">'N'</span><span class="p">)(</span><span class="m">0</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">'→GENERR'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="s1">'N'</span><span class="p">)(</span><span class="m">0</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">'→GENERR'</span><span class="p">)</span>
 </code></pre></div>
 <p>The 'stop' action is a useful mechanism for cancelling trap definitions during development of applications.</p>
 <p>The 'cut-back' action is useful for returning control to a known point in the application system when errors occur.  The following example shows a function that selects and executes an option with a general trap to return control to the function when an untrapped event occurs:
-</p><div class="highlight"><pre><span></span><code><span class="w"> </span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w"> </span>
 <span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">SELECT</span><span class="sr">;</span><span class="nv">OPT</span><span class="sr">;</span><span class="nf">⎕TRAP</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Option selection and execution</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ A general cut-back trap</span>
@@ -79042,7 +79042,7 @@
 </code></pre></div>
 <p>User-defined events may be signalled through the <code>⎕SIGNAL</code> system function.  A user-defined event (in the range 500-999) may be trapped explicitly or implicitly by the event code 0.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="m">500</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">'''USER EVENT 500 - TRAPPED'''</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="m">500</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">'''USER EVENT 500 - TRAPPED'''</span>
 <span class="w"> </span>
 <span class="w">      </span><span class="nf">⎕SIGNAL</span><span class="w"> </span><span class="m">500</span>
 <span class="nv">USER</span><span class="w"> </span><span class="nv">EVENT</span><span class="w"> </span><span class="m">500</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">TRAPPED</span>
@@ -79076,7 +79076,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

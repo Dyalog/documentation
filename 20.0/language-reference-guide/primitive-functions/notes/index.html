@@ -78828,7 +78828,7 @@
 <p>The Disclose function (<code>⊃</code>) returns the first item of an array.  If the array is empty, <code>⊃Y</code> is the PROTOTYPE of <code>Y</code>.  The prototype is the type of the first element of the original array.</p>
 <p>Primitive functions which may return an array including fill elements are Expand (<code>\</code> or <code>⍀</code>), Replicate (<code>/</code> or <code>⌿</code>), Reshape (<code>⍴</code>) and Take (<code>↑</code>).</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ML</span><span class="kd">←</span><span class="m">0</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ML</span><span class="kd">←</span><span class="m">0</span>
 <span class="w">      </span><span class="o">∊⍳</span><span class="m">5</span>
 <span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
 
@@ -78851,17 +78851,17 @@
 <h2 id="axis-operator">Axis Operator</h2>
 <p>The axis operator may be applied to all scalar dyadic primitive functions and certain mixed primitive functions.  An integer axis identifies a specific axis along which the function is to be applied to one or both of its arguments.  If the primitive function is to be applied without an axis specification, a default axis is implied, either the first or last.</p>
 <h2 class="example">Example</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="na">/</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">2</span><span class="o">⍴⍳</span><span class="m">6</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="na">/</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">2</span><span class="o">⍴⍳</span><span class="m">6</span>
 <span class="m">1</span><span class="w"> </span><span class="m">2</span>
 <span class="m">5</span><span class="w"> </span><span class="m">6</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">+</span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">+</span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span>
 <span class="m">11</span><span class="w"> </span><span class="m">22</span><span class="w"> </span><span class="m">33</span>
 <span class="m">11</span><span class="w"> </span><span class="m">22</span><span class="w"> </span><span class="m">33</span>
 </code></pre></div>
 <p>Sometimes the axis value is fractional, indicating that a new axis or axes are to be created between the axes identified by the lower and upper integer bounds of the value (either of which might not exist).</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'NAMES'</span><span class="o">,</span><span class="sr">[</span><span class="m">0.5</span><span class="sr">]</span><span class="s1">'='</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'NAMES'</span><span class="o">,</span><span class="sr">[</span><span class="m">0.5</span><span class="sr">]</span><span class="s1">'='</span>
 <span class="nv">NAMES</span>
 <span class="o">=====</span>
 </code></pre></div>
@@ -78897,7 +78897,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78812,7 +78812,7 @@
 <p>Incidentally, the ItemsSource property overrides the Items collection as a means to specify the content of the ItemsControl. When the ItemsSource property is set, the Items collection becomes read-only and of fixed-size. Note that the ItemsSource property supports OneWay binding by default.</p>
 <h2 id="the-xaml">The XAML</h2>
 <p>The variable <code>XAML_FilteredList</code>, shown below, contains XAML to specify a Window containing a StackPanel. The StackPanel control is a WPF layout control that organises child controls in a single line, by default vertically. In this example, the StackPanel contains a TextBox and, below it, a WrapPanel, and below that a TextBlock. The WrapPanel is also a layout control that organises its child controls sequentially from left to right. The WrapPanel contains two ListBox controls.
-</p><div class="highlight"><pre><span></span><code><span class="nt">&lt;Window</span><span class="w"> </span>
+</p><div class="language-xml highlight"><pre><span></span><code><span class="nt">&lt;Window</span><span class="w"> </span>
 <span class="w">    </span><span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span>
 <span class="w">    </span><span class="na">xmlns:x=</span><span class="s">"http://schemas.microsoft.com/winfx/2006/xaml"</span>
 <span class="w">    </span><span class="na">Title=</span><span class="s">"Filtered List Example"</span>
@@ -78833,7 +78833,7 @@
 <span class="w"> </span><span class="nt">&lt;/Window&gt;</span>
 </code></pre></div>
 <h2 id="the-code">The Code</h2>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FilteredList</span><span class="sr">;</span><span class="nv">MySource</span><span class="sr">;</span><span class="nv">win</span><span class="sr">;</span><span class="nv">sink</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FilteredList</span><span class="sr">;</span><span class="nv">MySource</span><span class="sr">;</span><span class="nv">win</span><span class="sr">;</span><span class="nv">sink</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">MySource</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="s1">''</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">MySource</span><span class="na">.</span><span class="nv">Filter</span><span class="kd">←</span><span class="s1">''</span>
@@ -78849,27 +78849,27 @@
 </code></pre></div>
 <p>Like the previous example, this example uses a namespace <code>MySource</code> containing the bound variables <code>Filter</code>, <code>FilteredList</code> and <code>DyalogNames</code>.</p>
 <p><code>FilteredList[8]</code> creates a Binding Source object and assigns it to the DataContext property of the Window <code>win</code>.
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">8</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="na">.</span><span class="nv">DataContext</span><span class="kd">←</span><span class="m">2015</span><span class="na">⌶</span><span class="s1">'MySource'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">8</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="na">.</span><span class="nv">DataContext</span><span class="kd">←</span><span class="m">2015</span><span class="na">⌶</span><span class="s1">'MySource'</span>
 </code></pre></div>
 <p>The DataContext property is inherited by all child controls, so they all share the same Binding Source. Their different Paths to different values in the Binding Source are specified in the XAML as follows.</p>
 <p>The Text property of the TextBox named <em>filter</em> is bound to the variable <code>Filter</code> by the expression <code>Text="{Binding Filter,...</code>
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="o">&lt;</span><span class="nv">TextBox</span><span class="w"> </span><span class="nv">Name</span><span class="o">=</span><span class="s2">"filter"</span><span class="w"> </span><span class="nv">Margin</span><span class="o">=</span><span class="s2">"5"</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="o">&lt;</span><span class="nv">TextBox</span><span class="w"> </span><span class="nv">Name</span><span class="o">=</span><span class="s2">"filter"</span><span class="w"> </span><span class="nv">Margin</span><span class="o">=</span><span class="s2">"5"</span>
 <span class="w">         </span><span class="nv">Text</span><span class="o">=</span><span class="err">"</span><span class="kt">{</span><span class="nv">Binding</span><span class="w"> </span><span class="nv">Filter</span><span class="o">,</span><span class="nv">Mode</span><span class="o">=</span><span class="nv">TwoWay</span><span class="o">,</span>
 </code></pre></div>
 <p>The ItemsSource property of the ListBox named <em>all</em> is bound to the variable <code>DyalogNames</code> by the expression <code>ItemsSource="{Binding DyalogNames}"</code>
-</p><div class="highlight"><pre><span></span><code><span class="w">            </span><span class="o">&lt;</span><span class="nv">ListBox</span><span class="w"> </span><span class="nv">Name</span><span class="o">=</span><span class="s2">"all"</span><span class="w"> </span><span class="nv">Width</span><span class="o">=</span><span class="s2">"135"</span><span class="w"> </span><span class="nv">Height</span><span class="o">=</span><span class="s2">"440"</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">            </span><span class="o">&lt;</span><span class="nv">ListBox</span><span class="w"> </span><span class="nv">Name</span><span class="o">=</span><span class="s2">"all"</span><span class="w"> </span><span class="nv">Width</span><span class="o">=</span><span class="s2">"135"</span><span class="w"> </span><span class="nv">Height</span><span class="o">=</span><span class="s2">"440"</span>
 <span class="w">             </span><span class="nv">Margin</span><span class="o">=</span><span class="s2">"5"</span><span class="w"> </span><span class="nv">ItemsSource</span><span class="o">=</span><span class="s2">"{Binding DyalogNames}"</span><span class="na">/</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>Thirdly, the ItemsSource property of the ListBox named <em>filtered</em> is bound to the variable <code>FilteredList</code> by the expression <code>ItemsSource="{Binding FilteredList}"</code>
-</p><div class="highlight"><pre><span></span><code><span class="w">            </span><span class="o">&lt;</span><span class="nv">ListBox</span><span class="w"> </span><span class="nv">Name</span><span class="o">=</span><span class="s2">"filtered"</span><span class="w"> </span><span class="nv">Width</span><span class="o">=</span><span class="s2">"135"</span><span class="w"> </span><span class="nv">Height</span><span class="o">=</span><span class="s2">"440"</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">            </span><span class="o">&lt;</span><span class="nv">ListBox</span><span class="w"> </span><span class="nv">Name</span><span class="o">=</span><span class="s2">"filtered"</span><span class="w"> </span><span class="nv">Width</span><span class="o">=</span><span class="s2">"135"</span><span class="w"> </span><span class="nv">Height</span><span class="o">=</span><span class="s2">"440"</span>
 <span class="w">             </span><span class="nv">Margin</span><span class="o">=</span><span class="s2">"5"</span><span class="w"> </span><span class="nv">ItemsSource</span><span class="o">=</span><span class="s2">"{Binding FilteredList}"</span><span class="na">/</span><span class="o">&gt;</span>
 </code></pre></div>
 <h2 id="testing-the-data-binding">Testing the Data Binding</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">FilteredList</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">FilteredList</span>
 </code></pre></div>
 <p><img alt="" src="../../../img/data-binding-filteredlist-1.png"></p>
 <p>If the user types a single character, in this case "e", into the TextBox, this fires a TextChanged event which in turn fires the callback function shown below:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FilteredList_TextChanged</span><span class="w"> </span><span class="nv">a</span><span class="sr">;</span><span class="nv">hits</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FilteredList_TextChanged</span><span class="w"> </span><span class="nv">a</span><span class="sr">;</span><span class="nv">hits</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">hits</span><span class="kd">←</span><span class="p">(</span><span class="o">⊂</span><span class="nv">MySource</span><span class="na">.</span><span class="nv">Filter</span><span class="p">)</span><span class="kt">{</span><span class="o">∨</span><span class="na">/</span><span class="bp">⍺</span><span class="o">⍷</span><span class="bp">⍵</span><span class="kt">}</span><span class="na">¨</span><span class="nv">DyalogNames</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">MySource</span><span class="na">.</span><span class="nv">FilteredList</span><span class="kd">←</span><span class="nv">hits</span><span class="na">/</span><span class="nv">DyalogNames</span>
 <span class="w">     </span><span class="bp">∇</span>
@@ -78907,7 +78907,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

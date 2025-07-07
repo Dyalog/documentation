@@ -78726,20 +78726,20 @@
 <h2 class="example">Examples</h2>
 
 <p>First make a <a href="../form/">Form</a>
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span>
 </code></pre></div>
 <p>Then make two <a href="../bitmap/">Bitmap</a>s :
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'YES'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Bitmap'</span><span class="w"> </span><span class="s1">'C:\WDYALOG\WS\YES'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'YES'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Bitmap'</span><span class="w"> </span><span class="s1">'C:\WDYALOG\WS\YES'</span>
 <span class="w">      </span><span class="s1">'NO'</span><span class="w">  </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Bitmap'</span><span class="w"> </span><span class="s1">'C:\WDYALOG\WS\NO'</span>
 </code></pre></div>
 <p>Display the "YES" <a href="../bitmap/">Bitmap</a> at (20,10)
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F.I'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Image'</span><span class="w"> </span><span class="p">(</span><span class="m">20</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="s1">'Picture'</span><span class="w"> </span><span class="s1">'YES'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F.I'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Image'</span><span class="w"> </span><span class="p">(</span><span class="m">20</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="s1">'Picture'</span><span class="w"> </span><span class="s1">'YES'</span><span class="p">)</span>
 </code></pre></div>
 <p>Display the "YES" <a href="../bitmap/">Bitmap</a> at (20,10) and (20,50)
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F.I'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Image'</span><span class="w"> </span><span class="p">(</span><span class="m">20</span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">50</span><span class="p">))(</span><span class="s1">'Picture'</span><span class="w"> </span><span class="s1">'YES'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F.I'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Image'</span><span class="w"> </span><span class="p">(</span><span class="m">20</span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">50</span><span class="p">))(</span><span class="s1">'Picture'</span><span class="w"> </span><span class="s1">'YES'</span><span class="p">)</span>
 </code></pre></div>
 <p>Display the "YES" <a href="../bitmap/">Bitmap</a> at (20,10) and the "NO" <a href="../bitmap/">Bitmap</a> at (20,50)
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F.I'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="s1">'Image'</span><span class="p">(</span><span class="m">20</span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">50</span><span class="p">))(</span><span class="s1">'Picture'</span><span class="w"> </span><span class="s1">'YES'</span><span class="w"> </span><span class="s1">'NO'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F.I'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="s1">'Image'</span><span class="p">(</span><span class="m">20</span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">50</span><span class="p">))(</span><span class="s1">'Picture'</span><span class="w"> </span><span class="s1">'YES'</span><span class="w"> </span><span class="s1">'NO'</span><span class="p">)</span>
 </code></pre></div>
 
 
@@ -78770,7 +78770,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

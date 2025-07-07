@@ -78826,12 +78826,12 @@
 <p><img alt="" src="../../img/temperatureconverterctl1.png"></p>
 <p>The <code>TemperatureConverterCtl1</code> control  <em>contains</em> other standard controls as <em>child controls</em>. A control that acts as a container must implement an interface called <code>INamingContainer</code>.</p>
 <p>This interface does not in fact require any methods; it merely acts as a marker. So the <code>:Class</code> statement specifies that it provides this interface:
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">TemperatureConverterCtl1</span><span class="bp">:</span><span class="w"> </span><span class="nv">Control</span><span class="o">,</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">TemperatureConverterCtl1</span><span class="bp">:</span><span class="w"> </span><span class="nv">Control</span><span class="o">,</span>
 <span class="w">                  </span><span class="nv">System</span><span class="na">.</span><span class="nv">Web</span><span class="na">.</span><span class="nv">UI</span><span class="na">.</span><span class="nv">INamingContainer</span>
 </code></pre></div>
 <h2 id="child-controls">Child Controls</h2>
 <p>Whenever ASP.NET initialises a <code>Control</code>, it calls its <code>CreateChildControls</code> method. The default <code>CreateChildControls</code> method does nothing). So we simply define a function called <code>CreateChildControls</code> with the appropriate public interface (no arguments and  no result) as shown below.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">CreateChildControls</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">CreateChildControls</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span><span class="w"> </span><span class="nv">override</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">CreateChildControls</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span>
@@ -78867,7 +78867,7 @@
 <p>This function is run every time the page is loaded; however in a postback situation, other code steps in to modify the values in the textboxes, as we shall see.</p>
 <h2 id="fahrenheit-and-centigrade-values">Fahrenheit and Centigrade Values</h2>
 <p>The <code>TemperatureConverterCtl1</code> maintains two public properties named <code>CentigradeValue</code> and <code>FahrenheitValue</code>, which may be accessed by a client application. These properties are not exposed directly as variables, but are obtained and set via <em>property get</em> (or <em>accessor</em>) and <em>property set</em> (or <em>mutator</em>) functions. (This is recommended practice for C#, so the example shows how it is done in APL). In this case, the values are simply stored in or obtained directly from the corresponding textboxes set up by <code>CreateChildControls</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Property</span><span class="w"> </span><span class="nv">CentigradeValue</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Property</span><span class="w"> </span><span class="nv">CentigradeValue</span>
 <span class="w">        </span><span class="bp">∇</span><span class="w"> </span><span class="nv">C</span><span class="kd">←</span><span class="nv">get</span>
 <span class="w">          </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
 <span class="w">          </span><span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">Double</span><span class="kd">←</span><span class="nv">get_CentigradeValue</span>
@@ -78885,7 +78885,7 @@
 <p>Similar functions to handle the <code>Fahrenheit</code> property are provided but are not shown here.</p>
 <h2 id="responding-to-button-presses">Responding to Button presses</h2>
 <p>We have seen how APL callback functions have been attached to the <code>onClick</code> events in the two buttons. The <code>C2FconvertBtn_Click</code> callback function simply obtains the <code>CentigradeValue</code> property, converts it to Fahrenheit using <code>C2F</code>, and then sets the <code>FahrenheitValue</code> property.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">C2FConvertBtn_Click</span><span class="w"> </span><span class="nv">args</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">C2FConvertBtn_Click</span><span class="w"> </span><span class="nv">args</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">C2FConvertBtn_Click</span><span class="w"> </span><span class="nv">Object</span><span class="o">,</span><span class="nv">EventArgs</span>
 <span class="w">      </span><span class="nv">FahrenheitValue</span><span class="kd">←</span><span class="nv">C2F</span><span class="w"> </span><span class="nv">CentigradeValue</span>
@@ -78908,7 +78908,7 @@
 <p>The <code>F2CconvertBtn_Click</code> callback function converts from Fahrenheit to Centigrade. Note that the functions <code>C2F</code> and <code>F2C</code> are internal functions that are private to the control, and it is therefore not necessary to define public interfaces for them.</p>
 <h2 id="using-the-control-on-the-page">Using the Control on the Page</h2>
 <p>The text of the script file <code>samples\temp\temp1.aspx</code> is shown below. There is really no difference between this example and the <code>simple.aspx</code> described earlier.
-</p><div class="highlight"><pre><span></span><code><span class="err">&lt;</span>%@<span class="w"> </span>Register<span class="w"> </span>TagPrefix="Dyalog"<span class="w"> </span>Namespace="DyalogSamples"<span class="w"> </span>
+</p><div class="language-xml highlight"><pre><span></span><code><span class="err">&lt;</span>%@<span class="w"> </span>Register<span class="w"> </span>TagPrefix="Dyalog"<span class="w"> </span>Namespace="DyalogSamples"<span class="w"> </span>
 <span class="w">                                </span>Assembly="TEMP"%&gt;
 <span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;body</span><span class="w"> </span><span class="na">bgcolor=</span><span class="s">"yellow"</span><span class="nt">&gt;</span>
@@ -78924,7 +78924,7 @@
 <span class="nt">&lt;/html&gt;</span>
 </code></pre></div>
 <p>The HTML generated by the control at run-time is shown below. Notice that in place of the server-side control declaration in <code>temp1.aspx</code>, there are two edit controls with numerical values in them, and two push buttons to submit data entered on the form to the server.
-</p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</p><div class="language-html highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">body</span> <span class="na">bgcolor</span><span class="o">=</span><span class="s">"yellow"</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
@@ -78969,7 +78969,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

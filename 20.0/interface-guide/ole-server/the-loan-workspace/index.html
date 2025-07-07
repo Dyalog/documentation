@@ -78871,7 +78871,7 @@
 <p><code>CalcPayments</code> returns a matrix.  The first row contains the period numbers (from min to max).  The first column contains the interest rates (from min to max in steps of 0.5%). Other elements contain the monthly repayments for the corresponding number of periods and interest rates.</p>
 <h2 id="using-calcpayments">Using CalcPayments</h2>
 <p>The following session transcript illustrates how the <code>CalcPayments</code> function is used.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">LOAN</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">LOAN</span>
 <span class="nv">C</span><span class="bp">:</span><span class="na">\...\</span><span class="nv">samples</span><span class="na">\</span><span class="nv">ole</span><span class="na">\</span><span class="nv">loan</span><span class="na">.</span><span class="nv">dws</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="na">...</span>
 <span class="w"> </span>
 <span class="w">      </span><span class="p">)</span><span class="nv">OBS</span>
@@ -78883,7 +78883,7 @@
 <span class="w">      </span><span class="p">)</span><span class="nv">VARS</span>
 <span class="nv">PeriodType</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">CalcPayments</span><span class="w"> </span><span class="m">10000</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">3</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">CalcPayments</span><span class="w"> </span><span class="m">10000</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">3</span>
 <span class="m">0</span><span class="w">     </span><span class="m">3</span><span class="w">           </span><span class="m">4</span><span class="w">           </span><span class="m">5</span><span class="w">        </span>
 <span class="m">3</span><span class="w">   </span><span class="m">290.8120963</span><span class="w"> </span><span class="m">221.3432699</span><span class="w"> </span><span class="m">179.6869066</span>
 <span class="m">3.5</span><span class="w"> </span><span class="m">293.0207973</span><span class="w"> </span><span class="m">223.5600105</span><span class="w"> </span><span class="m">181.9174497</span>
@@ -78894,7 +78894,7 @@
 <span class="m">6</span><span class="w">   </span><span class="m">304.2193745</span><span class="w"> </span><span class="m">234.8502905</span><span class="w"> </span><span class="m">193.3280153</span>
 </code></pre></div>
 <h2 id="the-calcpayments-function">The CalcPayments Function</h2>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">PAYMENTS</span><span class="kd">←</span><span class="nv">CalcPayments</span><span class="w"> </span><span class="nv">X</span><span class="sr">;</span><span class="nv">LoanAmt</span><span class="sr">;</span><span class="nv">LenMax</span><span class="sr">;</span><span class="nv">LenMin</span><span class="sr">;</span><span class="nv">IntrMax</span><span class="sr">;</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">PAYMENTS</span><span class="kd">←</span><span class="nv">CalcPayments</span><span class="w"> </span><span class="nv">X</span><span class="sr">;</span><span class="nv">LoanAmt</span><span class="sr">;</span><span class="nv">LenMax</span><span class="sr">;</span><span class="nv">LenMin</span><span class="sr">;</span><span class="nv">IntrMax</span><span class="sr">;</span>
 <span class="w">                </span><span class="nv">IntrMin</span><span class="sr">;</span><span class="nv">PERIODS</span><span class="sr">;</span><span class="nv">INTEREST</span><span class="sr">;</span><span class="nv">NI</span><span class="sr">;</span><span class="nv">NM</span><span class="sr">;</span><span class="nv">PER</span><span class="sr">;</span><span class="nv">INT</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Calculates loan repayments</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Argument X specifies:</span>
@@ -78931,16 +78931,16 @@
 <p>Please perform the following steps:</p>
 <p><strong>On Windows 7 or later, you must start Dyalog APL with Administrator privileges (right-click the desktop icon and choose Run as administrator). This is necessary to register an OLE server.</strong></p>
 <p><code>)LOAD</code> the <code>loan</code> workspace from the <code>samples\ole</code> sub-directory
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">samples</span><span class="na">\</span><span class="nv">ole</span><span class="na">\</span><span class="nv">loan</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">samples</span><span class="na">\</span><span class="nv">ole</span><span class="na">\</span><span class="nv">loan</span>
 <span class="nv">samples</span><span class="na">\</span><span class="nv">ole</span><span class="na">\</span><span class="nv">loan</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="na">...</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">OBS</span>
 <span class="nv">Loan</span>
 </code></pre></div>
 <p>Execute the following statement to make <code>Loan</code> an OLEServer object:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Loan</span><span class="na">.</span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'OLEServer'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Loan</span><span class="na">.</span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'OLEServer'</span>
 </code></pre></div>
 <p>Next, change space into the <code>Loan</code> namespace and use <code>⎕NL</code> to display the names of the two objects therein:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">cs</span><span class="w"> </span><span class="nv">Loan</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">cs</span><span class="w"> </span><span class="nv">Loan</span>
 <span class="c1">#.Loan</span>
 <span class="w">      </span><span class="nf">⎕NL</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span>
 <span class="nv">CalcPayments</span>
@@ -78954,7 +78954,7 @@
 <p><img alt="" src="../../img/loan-periodtype-properties.png"></p>
 <p>The picture above shows the COM properties to export variable <code>PeriodType</code> as a property. The property is declared to be of type VT_I4 (integer).</p>
 <p>Rename and save the workspace to avoid overwriting the original:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">WSID</span><span class="w"> </span><span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">myloan</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">WSID</span><span class="w"> </span><span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">myloan</span>
 <span class="nv">was</span><span class="w"> </span><span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Program</span><span class="w"> </span><span class="nv">Files</span><span class="na">\</span><span class="nv">Dyalog</span><span class="na">\</span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">APL</span><span class="o">-</span><span class="m">64</span><span class="w"> </span><span class="m">15.0</span><span class="w"> </span><span class="nv">Unicode</span><span class="na">\</span><span class="nv">Samples</span><span class="na">\</span><span class="nv">ole</span><span class="na">\</span><span class="nv">loan</span><span class="na">.</span><span class="nv">dws</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">SAVE</span>
 <span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">myloan</span><span class="na">.</span><span class="nv">dws</span><span class="w"> </span><span class="nv">saved</span><span class="na">...</span>
@@ -78969,7 +78969,7 @@
 <p>The Calc macro actually calculates the repayments matrix by calling the CalcPayments method in the dyalog.Loan object; that is, it runs the <code>CalcPayments</code> function in the <code>Loan</code> namespace.</p>
 <p><img alt="" src="../../img/loan-excel-example.png"></p>
 <h2 id="how-it-works">How it Works</h2>
-<div class="highlight"><pre><span></span><code><span class="nv">Sub</span><span class="w"> </span><span class="nv">Calc</span><span class="p">()</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="nv">Sub</span><span class="w"> </span><span class="nv">Calc</span><span class="p">()</span>
 <span class="w">    </span><span class="nv">Dim</span><span class="w"> </span><span class="nv">APLLoan</span><span class="w"> </span><span class="nv">As</span><span class="w"> </span><span class="nv">Object</span>
 <span class="w">    </span><span class="nv">Dim</span><span class="w"> </span><span class="nv">Payments</span><span class="w"> </span><span class="nv">As</span><span class="w"> </span><span class="nv">Variant</span>
 <span class="w">    </span><span class="nv">Set</span><span class="w"> </span><span class="nv">APLLoan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">CreateObject</span><span class="p">(</span><span class="s2">"dyalog.Loan"</span><span class="p">)</span>
@@ -78989,21 +78989,21 @@
 <span class="nv">End</span><span class="w"> </span><span class="nv">Sub</span>
 </code></pre></div>
 <p>The statement:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Dim</span><span class="w"> </span><span class="nv">APLLoan</span><span class="w"> </span><span class="nv">As</span><span class="w"> </span><span class="nv">Object</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Dim</span><span class="w"> </span><span class="nv">APLLoan</span><span class="w"> </span><span class="nv">As</span><span class="w"> </span><span class="nv">Object</span>
 </code></pre></div>
 <p>declares a (local) variable called <code>APLLoan</code> to be of type Object</p>
 <p>The next statement:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Set</span><span class="w"> </span><span class="nv">APLLoan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">CreateObject</span><span class="p">(</span><span class="s2">"dyalog.Loan"</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Set</span><span class="w"> </span><span class="nv">APLLoan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">CreateObject</span><span class="p">(</span><span class="s2">"dyalog.Loan"</span><span class="p">)</span>
 </code></pre></div>
 <p>creates an instance of dyalog.Loan associated with this variable.</p>
 <p>Effectively, when the macro is run, Excel asks OLE to provide the external object called <em>dyalog.Loan</em>.</p>
 <p>If you exported <code>Loan</code> as an <em>out-of-process</em> OLE Server, OLE starts the appropriate version (development or run-time) of Dyalog APL with your workspace <code>MYLOAN</code>. If you exported <code>Loan</code> as an <em>in-process</em> OLE Server, OLE loads MYLOAN.DLL into your Visual Basic application which in turn loads the appropriate Dyalog APL DLL. In either case, an instance of the <code>Loan</code> namespace is connected to the Excel macro as an Object.</p>
 <p>The next statement to notice is:
-</p><div class="highlight"><pre><span></span><code><span class="nv">APLLoan</span><span class="na">.</span><span class="nv">PeriodType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">APLLoan</span><span class="na">.</span><span class="nv">PeriodType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <p>In Excel terms, this statement sets the PeriodType property of the APLLoan object to the value 1. What actually happens, is that the APL variable <code>PeriodType</code> in the corresponding running instance of the <code>Loan</code> namespace is set to 1.</p>
 <p>Finally, the following statement:
-</p><div class="highlight"><pre><span></span><code><span class="nv">Payments</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">APLLoan</span><span class="na">.</span><span class="nv">CalcPayments</span><span class="p">(</span><span class="nv">LoanAmt</span><span class="o">,</span><span class="w"> </span><span class="nv">LenMax</span><span class="o">,</span><span class="w"> </span><span class="nv">LenMin</span><span class="o">,</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">Payments</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">APLLoan</span><span class="na">.</span><span class="nv">CalcPayments</span><span class="p">(</span><span class="nv">LoanAmt</span><span class="o">,</span><span class="w"> </span><span class="nv">LenMax</span><span class="o">,</span><span class="w"> </span><span class="nv">LenMin</span><span class="o">,</span>
 <span class="w">                                </span><span class="nv">IntrMax</span><span class="o">,</span><span class="w"> </span><span class="nv">IntrMin</span><span class="p">)</span>
 </code></pre></div>
 <p>calls the APL function <code>CalcPayments</code> and receives the result.</p>
@@ -79012,7 +79012,7 @@
 <h2 id="using-loan-from-dyalog-apl">Using Loan from Dyalog APL</h2>
 <p>It is of course possible to use Dyalog APL as both an OLE Automation client and an OLE Automation Server.</p>
 <p>To use the dyalog.Loan object, start Dyalog APL and then enter the following expressions in the Session window.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'LN'</span><span class="nf">⎕WC</span><span class="s1">'OLEClient'</span><span class="w"> </span><span class="s1">'dyalog.Loan'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'LN'</span><span class="nf">⎕WC</span><span class="s1">'OLEClient'</span><span class="w"> </span><span class="s1">'dyalog.Loan'</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">OBS</span>
 <span class="nv">LN</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">LN</span>
@@ -79036,7 +79036,7 @@
 <span class="m">6</span><span class="w">   </span><span class="m">304.2193745</span><span class="w"> </span><span class="m">234.8502905</span><span class="w"> </span><span class="m">193.3280153</span>
 </code></pre></div>
 <p>The statement:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'LN'</span><span class="nf">⎕WC</span><span class="s1">'OLEClient'</span><span class="w"> </span><span class="s1">'dyalog.Loan'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'LN'</span><span class="nf">⎕WC</span><span class="s1">'OLEClient'</span><span class="w"> </span><span class="s1">'dyalog.Loan'</span>
 </code></pre></div>
 <p>causes APL to ask OLE to provide the external object called <em>dyalog.Loan</em>. This name will have been recorded in the registry by Dyalog APL when you saved the <code>MYLOAN</code> workspace.</p>
 <p>If you exported <code>Loan</code> as an <em>out-of-process</em> OLE Server, OLE starts a second Dyalog APL process (development or run-time) with your workspace <code>MYLOAN</code>. There are now two separate copies of Dyalog APL running; one is the client, the other the server.</p>
@@ -79071,7 +79071,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

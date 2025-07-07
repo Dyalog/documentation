@@ -78706,23 +78706,23 @@
 
 <p>Now that we have a final working application, it would be nice to add it as a shortcut, so that the user can run it from the Start Menu or from the Desktop, like any other application.</p>
 <p>First we need to define <code>⎕LX</code> so that the application starts automatically.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕LX</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'⎕DQ''.'''</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕LX</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'⎕DQ''.'''</span>
 </code></pre></div>
 <p>or, to avoid so many confusing quotes...
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕LX</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="vg">⍞</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕LX</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="vg">⍞</span>
 <span class="nf">⎕DQ</span><span class="w"> </span><span class="s1">'.'</span>
 </code></pre></div>
 <p>Next, it would be a good idea to clear the edit fields and ensure that the scrollbar is in its default position:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'TEMP.F'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="s1">''</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'TEMP.F'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="s1">''</span>
 <span class="w">      </span><span class="s1">'TEMP.C'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="s1">''</span>
 <span class="w">      </span><span class="s1">'TEMP.S'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Thumb'</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <p>Then we must <code>)SAVE</code> the workspace in a suitable directory to which we have write-access ...
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SAVE</span><span class="w"> </span><span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">TEMP</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SAVE</span><span class="w"> </span><span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">TEMP</span>
 <span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">TEMP</span><span class="na">.</span><span class="nv">dws</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="nv">Wed</span><span class="w"> </span><span class="nv">Jun</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">14</span><span class="bp">:</span><span class="m">53</span><span class="bp">:</span><span class="m">48</span><span class="w"> </span><span class="m">2016</span>
 </code></pre></div>
 <p>... and exit APL
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">OFF</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">OFF</span>
 </code></pre></div>
 <p>The next step is to add the application to the Desktop. This is done in the normal way, that is:</p>
 <p>Right-click on the Desktop and choose "New" followed by "Shortcut".</p>
@@ -78762,7 +78762,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

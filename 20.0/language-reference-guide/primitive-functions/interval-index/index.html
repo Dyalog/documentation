@@ -78894,7 +78894,7 @@
 <p><code>X</code> and <code>Y</code> are compared using  the same logic as monadic <code>⍋</code> (see <a href="../grade-up-monadic/">Grade Up (Monadic)</a>) which is independent of <code>⎕CT</code> and <code>⎕DCT</code>.</p>
 <p><code>⎕IO</code> is an implicit argument of Interval Index. In all the following examples, <code>⎕IO</code> is 1.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="o">⍸</span><span class="m">11</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">31</span><span class="w"> </span><span class="m">21</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="o">⍸</span><span class="m">11</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">31</span><span class="w"> </span><span class="m">21</span>
 <span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">2</span>
 </code></pre></div>
 <p>In the above example:</p>
@@ -78903,7 +78903,7 @@
 <li>1 is less than  <code>X[1]</code> so the answer is 0</li>
 <li>31 is greater than <code>X[⍴X]</code> so the answer is 3</li>
 <li>21 is between <code>X[2]</code> and <code>X[3]</code> so the answer is 2.
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'AEIOU'</span><span class="w"> </span><span class="o">⍸</span><span class="w"> </span><span class="s1">'DYALOG'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'AEIOU'</span><span class="w"> </span><span class="o">⍸</span><span class="w"> </span><span class="s1">'DYALOG'</span>
 <span class="m">1</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">2</span>
 </code></pre></div></li>
 </ul>
@@ -78922,7 +78922,7 @@
 <li>if its acidity is less than 2%, as "Virgin"</li>
 <li>if its acidity is less than 3.3%, as "Ordinary"</li>
 <li>otherwise, as "Lampante"
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nv">grades</span><span class="kd">←</span><span class="s1">'Extra Virgin'</span><span class="w"> </span><span class="s1">'Virgin'</span><span class="w"> </span><span class="s1">'Ordinary'</span><span class="w"> </span><span class="s1">'Lampante'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="nv">grades</span><span class="kd">←</span><span class="s1">'Extra Virgin'</span><span class="w"> </span><span class="s1">'Virgin'</span><span class="w"> </span><span class="s1">'Ordinary'</span><span class="w"> </span><span class="s1">'Lampante'</span>
 <span class="w">     </span><span class="nv">acidity</span><span class="kd">←</span><span class="m">0.8</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3.3</span>
 
 <span class="w">     </span><span class="nv">samples</span><span class="kd">←</span><span class="m">1.3</span><span class="w"> </span><span class="m">1.9</span><span class="w"> </span><span class="m">0.7</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">.6</span><span class="w"> </span><span class="m">3.2</span>
@@ -78947,15 +78947,15 @@
 <h2 class="example">Example (Data Consolidation by Interval)</h2>
 
 <p><code>x</code> represents some data sampled in chronological order at timestamps <code>t</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">x</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">x</span>
 <span class="m">200000</span>
 <span class="w">      </span><span class="nv">x</span>
 <span class="m">3984300</span><span class="w"> </span><span class="m">2020650</span><span class="w"> </span><span class="m">819000</span><span class="w"> </span><span class="m">1677100</span><span class="w"> </span><span class="m">3959200</span><span class="w"> </span><span class="m">2177250</span><span class="w"> </span><span class="m">3431800</span><span class="w"> </span><span class="na">...</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">t</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">t</span>
 <span class="m">200000</span><span class="w"> </span><span class="m">3</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="m">10</span><span class="o">↑</span><span class="nv">t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m">¯10</span><span class="o">↑</span><span class="nv">t</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="m">10</span><span class="o">↑</span><span class="nv">t</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m">¯10</span><span class="o">↑</span><span class="nv">t</span><span class="p">)</span>
 <span class="err">┌─────┬────────┐</span>
 <span class="err">│</span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="err">│</span><span class="m">23</span><span class="w"> </span><span class="m">59</span><span class="w"> </span><span class="m">54</span><span class="err">│</span>
 <span class="err">│</span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="err">│</span><span class="m">23</span><span class="w"> </span><span class="m">59</span><span class="w"> </span><span class="m">55</span><span class="err">│</span>
@@ -78970,7 +78970,7 @@
 <span class="err">└─────┴────────┘</span>
 </code></pre></div>
 <p><code>u</code> represents timestamps for 5-minute intervals:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">u</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">u</span>
 <span class="m">288</span><span class="w"> </span><span class="m">3</span>
 <span class="w">      </span><span class="p">(</span><span class="m">10</span><span class="o">↑</span><span class="nv">u</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m">¯10</span><span class="o">↑</span><span class="nv">u</span><span class="p">)</span>
 <span class="err">┌──────┬───────┐</span>
@@ -78987,7 +78987,7 @@
 <span class="err">└──────┴───────┘</span>
 </code></pre></div>
 <p>Therefore, the expression <code>(u⍸t){+/⍵}⌸x</code> summarises <code>x</code> in 5-minute intervals.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">u</span><span class="w"> </span><span class="o">⍸</span><span class="w"> </span><span class="nv">t</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">u</span><span class="w"> </span><span class="o">⍸</span><span class="w"> </span><span class="nv">t</span>
 <span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="na">...</span><span class="w"> </span><span class="m">288</span><span class="w"> </span><span class="m">288</span><span class="w"> </span><span class="m">288</span><span class="w"> </span><span class="m">288</span><span class="w"> </span><span class="m">288</span><span class="w"> </span><span class="m">288</span>
 
 <span class="w">      </span><span class="p">(</span><span class="nv">u</span><span class="o">⍸</span><span class="nv">t</span><span class="p">)</span><span class="w"> </span><span class="kt">{</span><span class="o">+</span><span class="na">/</span><span class="bp">⍵</span><span class="kt">}</span><span class="na">⌸</span><span class="w"> </span><span class="nv">x</span>
@@ -79006,7 +79006,7 @@
 <h3 id="higher-rank-left-argument">Higher-Rank Left Argument</h3>
 <p>If <code>X</code> is a higher rank array, the function compares sub-arrays in <code>Y</code>  with the major cells of  <code>X</code>, where a major cell is  a sub-array on the leading dimension of <code>X</code> with shape <code>1↓⍴X</code>. In this case, the shape of the result <code>R</code> is <code>(1-⍴⍴X)↓⍴Y</code>.</p>
 <h2 class="example">Example</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">x</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="o">↑</span><span class="w"> </span><span class="s1">'Fi'</span><span class="w"> </span><span class="s1">'Jay'</span><span class="w"> </span><span class="s1">'John'</span><span class="w"> </span><span class="s1">'Morten'</span><span class="w"> </span><span class="s1">'Roger'</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">x</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="o">↑</span><span class="w"> </span><span class="s1">'Fi'</span><span class="w"> </span><span class="s1">'Jay'</span><span class="w"> </span><span class="s1">'John'</span><span class="w"> </span><span class="s1">'Morten'</span><span class="w"> </span><span class="s1">'Roger'</span>
 <span class="w">      </span><span class="nv">x</span>
 <span class="nv">Fi</span>
 <span class="nv">Jay</span><span class="w">   </span>
@@ -79016,7 +79016,7 @@
 <span class="w">      </span><span class="o">⍴</span><span class="nv">x</span>
 <span class="m">5</span><span class="w"> </span><span class="m">6</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">y</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">⍪</span><span class="w"> </span><span class="o">↑</span><span class="w"> </span><span class="s1">'JD'</span><span class="w"> </span><span class="s1">'Jd'</span><span class="w"> </span><span class="s1">'Geoff'</span><span class="w"> </span><span class="s1">'Alpha'</span><span class="w"> </span><span class="s1">'Omega'</span><span class="w"> </span><span class="s1">'Zeus  '</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">y</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">⍪</span><span class="w"> </span><span class="o">↑</span><span class="w"> </span><span class="s1">'JD'</span><span class="w"> </span><span class="s1">'Jd'</span><span class="w"> </span><span class="s1">'Geoff'</span><span class="w"> </span><span class="s1">'Alpha'</span><span class="w"> </span><span class="s1">'Omega'</span><span class="w"> </span><span class="s1">'Zeus  '</span>
 <span class="w">      </span><span class="nv">y</span>
 <span class="nv">Fi</span>
 <span class="nv">Jay</span><span class="w">   </span>
@@ -79030,7 +79030,7 @@
 <span class="nv">Omega</span><span class="w"> </span>
 <span class="nv">Zeus</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">x</span><span class="w"> </span><span class="o">⍸</span><span class="w"> </span><span class="nv">y</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">x</span><span class="w"> </span><span class="o">⍸</span><span class="w"> </span><span class="nv">y</span>
 <span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span>
 <span class="w">      </span><span class="nv">y</span><span class="w"> </span><span class="o">,⍪</span><span class="w"> </span><span class="nv">x</span><span class="o">⍸</span><span class="nv">y</span>
 <span class="nv">Fi</span><span class="w">     </span><span class="m">1</span>
@@ -79046,7 +79046,7 @@
 <span class="nv">Zeus</span><span class="w">   </span><span class="m">5</span>
 </code></pre></div>
 <h2 class="example">Further Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">x</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">x</span>
 <span class="m">5</span><span class="w"> </span><span class="m">6</span>
 <span class="w">      </span><span class="o">⍴</span><span class="nv">y</span>
 <span class="m">3</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">6</span>
@@ -79076,7 +79076,7 @@
 <h2 class="example">Nested Array Example</h2>
 
 <p>A card-player likes to sort a hand into suits spades, hearts, diamond, clubs (fortunately alphabetic) and high-to-low within each suit.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">suits</span><span class="kd">←</span><span class="s1">'Clubs'</span><span class="w"> </span><span class="s1">'Diamonds'</span><span class="w"> </span><span class="s1">'Hearts'</span><span class="w"> </span><span class="s1">'Spades'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">suits</span><span class="kd">←</span><span class="s1">'Clubs'</span><span class="w"> </span><span class="s1">'Diamonds'</span><span class="w"> </span><span class="s1">'Hearts'</span><span class="w"> </span><span class="s1">'Spades'</span>
 <span class="w">      </span><span class="nv">pack</span><span class="kd">←</span><span class="o">,</span><span class="p">(</span><span class="o">⊂</span><span class="na">¨</span><span class="nv">suits</span><span class="p">)</span><span class="na">∘.</span><span class="o">,</span><span class="m">1</span><span class="o">↓</span><span class="m">14</span><span class="w"> </span><span class="c1">⍝ 11=Jack ... 14=Ace</span>
 <span class="w">      </span><span class="nv">hand</span><span class="kd">←</span><span class="o">↑</span><span class="p">(</span><span class="o">,</span><span class="nv">pack</span><span class="p">)</span><span class="sr">[</span><span class="m">7</span><span class="o">?</span><span class="m">52</span><span class="sr">]</span>
 <span class="w">      </span><span class="nv">hand</span><span class="kd">←</span><span class="nv">hand</span><span class="sr">[</span><span class="o">⍒</span><span class="nv">hand</span><span class="sr">;]</span>
@@ -79098,7 +79098,7 @@
 <span class="err">└────────┴──┘</span>
 </code></pre></div>
 <p>Another card, the 10 of diamonds is dealt. Where must it go in the hand ?
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="o">⊖</span><span class="nv">hand</span><span class="p">)</span><span class="o">⍸</span><span class="s1">'Diamonds'</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="c1">⍝ left arg must be sorted up</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="o">⊖</span><span class="nv">hand</span><span class="p">)</span><span class="o">⍸</span><span class="s1">'Diamonds'</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="c1">⍝ left arg must be sorted up</span>
 <span class="m">2</span>
 <span class="w">      </span><span class="p">(</span><span class="m">¯2</span><span class="o">↓</span><span class="nv">hand</span><span class="p">)</span><span class="o">⍪</span><span class="s1">'Diamonds'</span><span class="w"> </span><span class="m">10</span><span class="o">⍪</span><span class="m">¯2</span><span class="o">↑</span><span class="nv">hand</span>
 <span class="err">┌────────┬──┐</span>
@@ -79149,7 +79149,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

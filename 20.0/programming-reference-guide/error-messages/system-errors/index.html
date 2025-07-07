@@ -79044,7 +79044,7 @@
 <p>If the problem is reproducible, that is, can be easily repeated, please also send the appropriate description, workspace, and other files required to do so.</p>
 <h2 id="system-error-dialog-box">System Error Dialog Box</h2>
 <p>The System Error Dialog illustrated below was produced by deliberately inducing a system exception in the DLL function <code>memcpy()</code>. The functions used were:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">foo</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">foo</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">goo</span>
 <span class="w">     </span><span class="bp">∇</span>
 <span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">goo</span>
@@ -79101,7 +79101,7 @@
 <p>After debugging, the System Exception dialog box appears again. Click on <em>Don't send</em> to terminate Windows' exception handling.</p>
 <h2 id="erroronexternalexception-parameter">ErrorOnExternalException Parameter</h2>
 <p>This parameter allows you to prevent APL from taking the actions described above when an exception caused by an external DLL occurs. The following example illustrates what happens when the functions above are run, but with the <a href="../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters"><strong>ErrorOnExternalException</strong></a> parameter set to 1.
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="vg">⎕</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="s1">'.'</span><span class="w"> </span><span class="s1">'GetEnvironment'</span><span class="w"> </span><span class="s1">'ErrorOnExternalException'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="vg">⎕</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="s1">'.'</span><span class="w"> </span><span class="s1">'GetEnvironment'</span><span class="w"> </span><span class="s1">'ErrorOnExternalException'</span>
 <span class="m">1</span>
 <span class="w">     </span><span class="nv">foo</span>
 <span class="nv">EXTERNAL</span><span class="w"> </span><span class="nv">DLL</span><span class="w"> </span><span class="nv">EXCEPTION</span>
@@ -79154,7 +79154,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

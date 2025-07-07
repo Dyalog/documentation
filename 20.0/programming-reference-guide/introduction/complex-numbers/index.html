@@ -78824,7 +78824,7 @@
 <p>A complex number is a number consisting of a real and an imaginary part which is usually written in the form a+ bi, where a and b are real numbers, and i is the standard imaginary unit with the property i<sup>2</sup>= −1.</p>
 <p>Dyalog APL adopts the J notation introduced in IBM APL2 to represent the value of a complex number which is written as <code>aJb</code> or <code>ajb</code> (without spaces). The former representation (with a capital <code>J</code>) is always used to display a value.</p>
 <h2 id="notation">Notation</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="o">+</span><span class="m">¯1</span><span class="o">*</span><span class="m">.5</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="o">+</span><span class="m">¯1</span><span class="o">*</span><span class="m">.5</span>
 <span class="m">2J1</span>
 
 <span class="w">      </span><span class="m">.3j.5</span>
@@ -78835,7 +78835,7 @@
 </code></pre></div>
 <h2 id="arithmetic">Arithmetic</h2>
 <p>The arithmetic primitive functions handle complex numbers in the appropriate way.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">2j3</span><span class="o">+</span><span class="m">.3j.5</span><span class="w"> </span><span class="c1">⍝ (a+bi)+(c+di) = (a+c)+(b+d)i</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">2j3</span><span class="o">+</span><span class="m">.3j.5</span><span class="w"> </span><span class="c1">⍝ (a+bi)+(c+di) = (a+c)+(b+d)i</span>
 <span class="m">2.3J3.5</span>
 
 <span class="w">      </span><span class="m">2j3</span><span class="o">-</span><span class="m">.3j5</span><span class="w">  </span><span class="c1">⍝ (a+bi)-(c+di) = (a-c)+(b-d)i</span>
@@ -78846,23 +78846,23 @@
 <span class="m">¯0.9J1.9</span>
 </code></pre></div>
 <p>The absolute value, or magnitude of a complex number is naturally obtained using the Magnitude function
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">|</span><span class="m">3j4</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">|</span><span class="m">3j4</span>
 <span class="m">5</span>
 </code></pre></div>
 <p>Monadic <code>+</code> of a complex number (a+bi) returns its conjugate (a-bi) ...
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="m">3j4</span><span class="w"> </span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="m">3j4</span><span class="w"> </span>
 <span class="m">3J¯4</span>
 </code></pre></div>
 <p>... which when multiplied by the complex number itself, produces the square of its magnitude.
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="m">3j4</span><span class="o">×</span><span class="m">3j¯4</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="m">3j4</span><span class="o">×</span><span class="m">3j¯4</span>
 <span class="m">25</span>
 </code></pre></div>
 <p>Furthermore, adding a complex number and its conjugate produces a real number:
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="m">3j4</span><span class="o">+</span><span class="m">3j¯4</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="m">3j4</span><span class="o">+</span><span class="m">3j¯4</span>
 <span class="m">6</span>
 </code></pre></div>
 <p>The famous Euler's Identityeiπ+1=0 may be expressed as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">1</span><span class="o">+*○</span><span class="m">0j1</span><span class="w"> </span><span class="c1">⍝ Euler Identity</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">1</span><span class="o">+*○</span><span class="m">0j1</span><span class="w"> </span><span class="c1">⍝ Euler Identity</span>
 <span class="m">0</span>
 </code></pre></div>
 <h2 id="circular-functions">Circular functions</h2>
@@ -78902,7 +78902,7 @@
 </tbody>
 </table>
 <p>Note that <code>9○Y</code> and <code>11○Y</code> return the real and imaginary parts of <code>Y</code> respectively:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">9</span><span class="w"> </span><span class="m">11</span><span class="o">○</span><span class="m">3.5J¯1.2</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">9</span><span class="w"> </span><span class="m">11</span><span class="o">○</span><span class="m">3.5J¯1.2</span>
 <span class="m">3.5</span><span class="w"> </span><span class="m">¯1.2</span>
 
 <span class="w">      </span><span class="m">9</span><span class="w"> </span><span class="m">11</span><span class="na">∘.</span><span class="o">○</span><span class="m">3.5J¯1.2</span><span class="w"> </span><span class="m">2J3</span><span class="w"> </span><span class="m">3J4</span>
@@ -78913,7 +78913,7 @@
 <p>In comparing two complex numbers <code>X</code> and <code>Y,</code> <code>X=Y</code> is 1 if the magnitude of <code>X-Y</code> does not exceed <code>⎕CT</code> times the larger of the magnitudes of <code>X</code> and <code>Y</code>; geometrically, <code>X=Y</code> if the number smaller in magnitude lies on or within a circle centred on the one with larger magnitude, having radius <code>⎕CT</code> times the larger magnitude.</p>
 <p><figure id="_figure-1"><img alt="comparison" src="../../img/comparison.png"><figcaption>Figure 1: comparison</figcaption></figure></p>
 <p>As with real values, complex values sufficiently close to Boolean or integral values are accepted by functions which require Boolean or integral values. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">2j1e¯14</span><span class="w"> </span><span class="o">⍴</span><span class="w"> </span><span class="m">12</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">2j1e¯14</span><span class="w"> </span><span class="o">⍴</span><span class="w"> </span><span class="m">12</span>
 <span class="m">12</span><span class="w"> </span><span class="m">12</span>
 <span class="w">      </span><span class="m">0</span><span class="w"> </span><span class="o">⍱</span><span class="w"> </span><span class="m">1j1e¯15</span>
 <span class="m">0</span>
@@ -78949,7 +78949,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78707,7 +78707,7 @@
 <h1 class="heading"><span class="name">Default Left Argument</span></h1>
 
 <p>The special  syntax: <code>⍺←expr</code> is used to give a default value to the left argument if a dfn is called monadically. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">root</span><span class="kd">←</span><span class="kt">{</span><span class="w">      </span><span class="c1">⍝ ⍺th root</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">root</span><span class="kd">←</span><span class="kt">{</span><span class="w">      </span><span class="c1">⍝ ⍺th root</span>
 <span class="w">          </span><span class="bp">⍺</span><span class="kd">←</span><span class="m">2</span><span class="w">     </span><span class="c1">⍝ default to sqrt</span>
 <span class="w">          </span><span class="bp">⍵</span><span class="o">*÷</span><span class="bp">⍺</span>
 <span class="w">      </span><span class="kt">}</span>
@@ -78717,21 +78717,21 @@
 <p><code>⍺←</code> must be the first tokens at the beginning of an expression.</p>
 <p><strong>Ambivalence</strong></p>
 <p>The assignment <code>⍺←⊢</code> allows an ambivalent function to call an ambivalent sub-function. For example in:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">foo</span><span class="kd">←</span><span class="kt">{</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">foo</span><span class="kd">←</span><span class="kt">{</span>
 <span class="w">         </span><span class="bp">⍺</span><span class="kd">←</span><span class="o">⊢</span>
 <span class="w">         </span><span class="bp">⍺</span><span class="w"> </span><span class="nv">goo</span><span class="w"> </span><span class="bp">⍵</span>
 <span class="w">      </span><span class="kt">}</span>
 </code></pre></div>
 <p>If <code>foo</code> is given a left argument, this is passed to <code>goo</code>. Otherwise, <code>⍺</code> is assigned <code>⊢</code> and the last line is <code>⊢ goo ⍵</code>, which is a monadic call on <code>goo</code> followed by the <code>⊢</code> (Right) of the result of <code>goo</code>, which is the same value.</p>
 <p>The assignment <code>⍺←⍣0</code> allows an ambivalent operator to skip the application of an operand to a missing argument. For example in:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">over</span><span class="kd">←</span><span class="kt">{</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">over</span><span class="kd">←</span><span class="kt">{</span>
 <span class="w">         </span><span class="bp">⍺</span><span class="kd">←</span><span class="na">⍣</span><span class="m">0</span>
 <span class="w">         </span><span class="p">(</span><span class="bp">⍺⍺</span><span class="w"> </span><span class="bp">⍺</span><span class="p">)</span><span class="bp">⍵⍵</span><span class="p">(</span><span class="bp">⍺⍺</span><span class="w"> </span><span class="bp">⍵</span><span class="p">)</span>
 <span class="w">      </span><span class="kt">}</span>
 </code></pre></div>
 <p>If the function derived from <em>over</em> is given a left argument, this argument is preprocessed by the left operand <code>⍺⍺</code> and the result is passed to the right operand <code>⍵⍵</code>. Otherwise, <code>⍺</code> is assigned <code>⍣0</code> and the last line is <code>(⍺⍺⍣0)⍵⍵(⍺⍺ ⍵)</code>, which is a monadic call on <code>⍵⍵</code> followed by not applying <code>⍺⍺</code> to the result of <code>⍵⍵</code>, returning it unmodified.</p>
 <p>The assignment <code>⍺←⍵</code> allows a function to act as if the <em>commute</em> operator (<code>⍨</code>) was applied to it twice:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">sort</span><span class="kd">←</span><span class="kt">{</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">sort</span><span class="kd">←</span><span class="kt">{</span>
 <span class="w">         </span><span class="bp">⍺</span><span class="kd">←</span><span class="bp">⍵</span>
 <span class="w">         </span><span class="bp">⍵</span><span class="sr">[</span><span class="o">⍋</span><span class="bp">⍺</span><span class="sr">]</span>
 <span class="w">      </span><span class="kt">}</span>
@@ -78766,7 +78766,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

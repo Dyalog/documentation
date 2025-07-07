@@ -78707,7 +78707,7 @@
 <p>When the Web Service, specified by the <code>.asmx</code> file, is called <strong>for the first time</strong>, ASP.NET invokes the appropriate language compiler (in this case, the Dyalog Script compiler) whose job is to produce an Assembly that defines and describes a class. When the Web Service is used subsequently, the request is satisfied by creating and using an instance of the class. However, ASP.NET detects if the <code>.asmx</code> script has been modified, and recompiles it in this case.</p>
 <p>The Dyalog Script compiler creates a <code>DLL</code> containing a workspace, which itself contains the Web Service class. The class contains all the functions, which are defined within the script, together with any variables that were established by expressions in the script. A single function comprises all the statements enclosed within a pair of del (<code>∇</code>) symbols.</p>
 <p>For example, the following script would define a class, instances of which would run using <code>⎕ML←2</code>, containing a single function <code>FOO</code> and a variable <code>X</code>.
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">MyClass</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">MyClass</span>
 <span class="w">   </span><span class="nf">⎕ML</span><span class="kd">←</span><span class="m">2</span>
 <span class="w">   </span><span class="nv">X</span><span class="kd">←</span><span class="m">10</span>
 <span class="w">   </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Z</span><span class="kd">←</span><span class="nv">FOO</span><span class="w"> </span><span class="nv">Y</span>
@@ -78746,7 +78746,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

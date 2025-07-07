@@ -78808,7 +78808,7 @@
 <p>This example uses XAML to specify the user-interface and the main components of the data binding.</p>
 <h2 id="the-xaml">The XAML</h2>
 <p>The XAML is much the same as in Example 1 and 2 except that it connects two properties Text and FontSize of the same TextBox to two Paths <em>txtSource</em> and <em>sizeSource</em>.
-</p><div class="highlight"><pre><span></span><code><span class="nt">&lt;Window</span>
+</p><div class="language-xml highlight"><pre><span></span><code><span class="nt">&lt;Window</span>
 <span class="w"> </span><span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span>
 <span class="w"> </span><span class="na">xmlns:x=</span><span class="s">"http://schemas.microsoft.com/winfx/2006/xaml"</span>
 <span class="w"> </span><span class="na">Name=</span><span class="s">"Temp"</span>
@@ -78822,7 +78822,7 @@
 </code></pre></div>
 <h2 id="the-apl-code">The APL Code</h2>
 <p>The function <code>TextFontSize</code> is shown below.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">TextFontSize</span><span class="p">(</span><span class="nv">txt</span><span class="w"> </span><span class="nv">size</span><span class="p">)</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">str</span><span class="sr">;</span><span class="nv">xml</span><span class="sr">;</span><span class="nv">win</span><span class="sr">;</span><span class="nv">options</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">TextFontSize</span><span class="p">(</span><span class="nv">txt</span><span class="w"> </span><span class="nv">size</span><span class="p">)</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">str</span><span class="sr">;</span><span class="nv">xml</span><span class="sr">;</span><span class="nv">win</span><span class="sr">;</span><span class="nv">options</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'System.Windows,WPF/PresentationFramework.dll'</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span>
@@ -78838,30 +78838,30 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>Lines [6-7] create a new namespace src containing two variables <code>txtSource</code> and <code>sizeSource</code> which are initialised to the arguments of the function.
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">6</span><span class="sr">]</span><span class="w">    </span><span class="nv">src</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="s1">''</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">6</span><span class="sr">]</span><span class="w">    </span><span class="nv">src</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="s1">''</span>
 <span class="sr">[</span><span class="m">7</span><span class="sr">]</span><span class="w">    </span><span class="nv">src</span><span class="na">.</span><span class="p">(</span><span class="nv">txtSource</span><span class="w"> </span><span class="nv">sizeSource</span><span class="p">)</span><span class="kd">←</span><span class="nv">txt</span><span class="w"> </span><span class="nv">size</span>
 </code></pre></div>
 <p>Line [8] creates a local variable named options which will be used as the left argument of  <code>2015⌶)</code>. It is a 2-column matrix. The first column is a list of the names of the variables which are to be exported by the namespace when used as a Binding Source. The second column specifies their data types.
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">8</span><span class="sr">]</span><span class="w">    </span><span class="nv">options</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="s1">'txtSource'</span><span class="nv">String</span><span class="s1">'sizeSource'</span><span class="nv">Int32</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">8</span><span class="sr">]</span><span class="w">    </span><span class="nv">options</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="s1">'txtSource'</span><span class="nv">String</span><span class="s1">'sizeSource'</span><span class="nv">Int32</span>
 </code></pre></div>
 <p>Line [10] creates a Binding Source object from the namespace <code>src</code> and a left argument <code>options</code> and assigns it to the DataContext property of the Window <code>win</code>.
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">10</span><span class="sr">]</span><span class="w">   </span><span class="nv">win</span><span class="na">.</span><span class="nv">DataContext</span><span class="kd">←</span><span class="nv">options</span><span class="p">(</span><span class="m">2015</span><span class="na">⌶</span><span class="p">)</span><span class="s1">'src'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">10</span><span class="sr">]</span><span class="w">   </span><span class="nv">win</span><span class="na">.</span><span class="nv">DataContext</span><span class="kd">←</span><span class="nv">options</span><span class="p">(</span><span class="m">2015</span><span class="na">⌶</span><span class="p">)</span><span class="s1">'src'</span>
 </code></pre></div>
 <p>An alternative would be to assign it to the DataContext property of the TextBox object, but this would require one further line of code to identify it. The reason this works is that the DataContext property of a TextBox (and many other controls) is inherited from its parent Window. This feature allows a single Binding Source namespace to be used to specify data bindings between its component variables and any number of properties of any number of controls in the same Window.</p>
 <p>As shown before, the left argument of <code>2015⌶)</code> is optional. Without it, the namespace would export all its variables using default binding types. In this case, because the binding type of <code>sizeSource</code> must be specified as Int32, it is necessary to use a left argument, which means specifying all the variables involved.</p>
 <h2 id="testing-the-data-binding">Testing the Data Binding</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">wpfintro</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">wpfintro</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">DataBinding</span><span class="na">.</span><span class="nv">TextFontSizeXAML</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DB_Text_FontSize_XAML</span><span class="s1">'Hello World'</span><span class="w"> </span><span class="m">30</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DB_Text_FontSize_XAML</span><span class="s1">'Hello World'</span><span class="w"> </span><span class="m">30</span>
 </code></pre></div>
 <p><img alt="" src="../../../img/data-binding-text-fontsize-1.png">
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">src</span><span class="na">.</span><span class="p">(</span><span class="nv">txtSource</span><span class="w"> </span><span class="nv">sizeSource</span><span class="kd">←</span><span class="p">(</span><span class="o">⌽</span><span class="nv">txtSource</span><span class="p">)</span><span class="w"> </span><span class="m">18</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">src</span><span class="na">.</span><span class="p">(</span><span class="nv">txtSource</span><span class="w"> </span><span class="nv">sizeSource</span><span class="kd">←</span><span class="p">(</span><span class="o">⌽</span><span class="nv">txtSource</span><span class="p">)</span><span class="w"> </span><span class="m">18</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="" src="../../../img/data-binding-text-fontsize-2.png"></p>
 <p>As in previous examples, when the user changes the text, the new text appears in <code>txtSource</code>.</p>
 <p><img alt="" src="../../../img/data-binding-text-fontsize-3.png">
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">src</span><span class="na">.</span><span class="nv">txtSource</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">src</span><span class="na">.</span><span class="nv">txtSource</span>
 <span class="nv">Learn</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">play</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">bouzouki</span><span class="o">!</span>
 </code></pre></div>
 
@@ -78893,7 +78893,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

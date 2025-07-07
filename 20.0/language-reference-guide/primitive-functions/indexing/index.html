@@ -78911,7 +78911,7 @@
 <p>For vector <code>X</code>, <code>Y</code> is a simple integer array composed of items from the set <code>⍳⍴X</code>.</p>
 <p><code>R</code> consists of elements selected according to index positions in <code>Y</code>. <code>R</code> has the same shape as <code>Y</code>.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">40</span><span class="w"> </span><span class="m">50</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">40</span><span class="w"> </span><span class="m">50</span>
 
 <span class="w">      </span><span class="nv">A</span><span class="sr">[</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="sr">]</span>
 <span class="m">10</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">10</span>
@@ -78925,7 +78925,7 @@
 </code></pre></div>
 <p>For matrix <code>X</code>, <code>Y</code> is composed of two simple integer arrays separated by the semicolon character (<code>;</code>). The arrays select indices from the rows and columns of <code>X</code> respectively.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="nv">M</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="o">⍴</span><span class="m">10</span><span class="o">×⍳</span><span class="m">8</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="nv">M</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="o">⍴</span><span class="m">10</span><span class="o">×⍳</span><span class="m">8</span>
 <span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">40</span>
 <span class="m">50</span><span class="w"> </span><span class="m">60</span><span class="w"> </span><span class="m">70</span><span class="w"> </span><span class="m">80</span>
 
@@ -78934,7 +78934,7 @@
 </code></pre></div>
 <p>For higher-rank array <code>X</code>, <code>Y</code> is composed of a simple integer array for each axis of <code>X</code> with adjacent arrays separated by a single semicolon character (<code>;</code>). The arrays select indices from the respective axes of <code>X</code>, taken in row-major order.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊢</span><span class="nv">A</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴</span><span class="m">10</span><span class="o">×⍳</span><span class="m">24</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊢</span><span class="nv">A</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴</span><span class="m">10</span><span class="o">×⍳</span><span class="m">24</span>
 <span class="w"> </span><span class="m">10</span><span class="w">  </span><span class="m">20</span><span class="w">  </span><span class="m">30</span><span class="w">  </span><span class="m">40</span>
 <span class="w"> </span><span class="m">50</span><span class="w">  </span><span class="m">60</span><span class="w">  </span><span class="m">70</span><span class="w">  </span><span class="m">80</span>
 <span class="w"> </span><span class="m">90</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="m">110</span><span class="w"> </span><span class="m">120</span>
@@ -78952,7 +78952,7 @@
 </code></pre></div>
 <p>If an indexing array is omitted for the <code>K</code>th axis, the index vector <code>⍳(⍴X)[K]</code> is assumed for that axis.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="sr">[;</span><span class="m">2</span><span class="sr">;]</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="sr">[;</span><span class="m">2</span><span class="sr">;]</span>
 <span class="w"> </span><span class="m">50</span><span class="w">  </span><span class="m">60</span><span class="w">  </span><span class="m">70</span><span class="w">  </span><span class="m">80</span>
 <span class="m">170</span><span class="w"> </span><span class="m">180</span><span class="w"> </span><span class="m">190</span><span class="w"> </span><span class="m">200</span>
 
@@ -78973,7 +78973,7 @@
 <h2 id="choose-indexing">Choose Indexing</h2>
 <p>The index specification <code>Y</code> is a non-simple array. Each item identifies a single element of <code>X</code> by a set of indices with one element per axis of <code>X</code> in row-major order.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">M</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">M</span>
 <span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">40</span>
 <span class="m">50</span><span class="w"> </span><span class="m">60</span><span class="w"> </span><span class="m">70</span><span class="w"> </span><span class="m">80</span>
 
@@ -78988,12 +78988,12 @@
 <span class="m">50</span><span class="w"> </span><span class="m">20</span>
 </code></pre></div>
 <p>A scalar may be indexed by the enclosed empty vector:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">S</span><span class="kd">←</span><span class="s1">'Z'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">S</span><span class="kd">←</span><span class="s1">'Z'</span>
 <span class="w">      </span><span class="nv">S</span><span class="sr">[</span><span class="m">3</span><span class="o">⍴⊂⍳</span><span class="m">0</span><span class="sr">]</span>
 <span class="nv">ZZZ</span>
 </code></pre></div>
 <p>Simple and Choose indexing are indistinguishable for vector <code>X</code>:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">V</span><span class="kd">←</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">40</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">V</span><span class="kd">←</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">40</span>
 
 <span class="w">      </span><span class="nv">V</span><span class="sr">[</span><span class="o">⊂</span><span class="m">2</span><span class="sr">]</span>
 <span class="m">20</span>
@@ -79005,7 +79005,7 @@
 <h2 id="reach-indexing">Reach Indexing</h2>
 <p>The index specification <code>Y</code> is a non-simple integer array, each of whose items reach down to a nested element of <code>X</code>. The items of an item of <code>Y</code> are simple vectors (or scalars) forming sets of indices that index arrays at successive levels of <code>X</code> starting at the top-most level. A set of indices has one element per axis at the respective level of nesting of <code>X</code> in row-major order.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">G</span><span class="kd">←</span><span class="p">(</span><span class="s1">'ABC'</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="s1">'DEF'</span><span class="w"> </span><span class="m">2</span><span class="p">)(</span><span class="s1">'GHI'</span><span class="w"> </span><span class="m">3</span><span class="p">)(</span><span class="s1">'JKL'</span><span class="w"> </span><span class="m">4</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">G</span><span class="kd">←</span><span class="p">(</span><span class="s1">'ABC'</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="s1">'DEF'</span><span class="w"> </span><span class="m">2</span><span class="p">)(</span><span class="s1">'GHI'</span><span class="w"> </span><span class="m">3</span><span class="p">)(</span><span class="s1">'JKL'</span><span class="w"> </span><span class="m">4</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">G</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="nv">G</span><span class="o">,</span><span class="p">(</span><span class="s1">'MNO'</span><span class="w"> </span><span class="m">5</span><span class="p">)(</span><span class="s1">'PQR'</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">G</span>
 <span class="w">  </span><span class="nv">ABC</span><span class="w">  </span><span class="m">1</span><span class="w">   </span><span class="nv">DEF</span><span class="w">  </span><span class="m">2</span><span class="w">   </span><span class="nv">GHI</span><span class="w">  </span><span class="m">3</span>
@@ -79037,7 +79037,7 @@
 <h2 id="indexing-classes">Indexing  Classes</h2>
 <p>If <code>Y</code> is a ref to an instance of a Class with a Default property, indexing is applied to the Default property. Similarly, indexing applied to a .NET collection returns the appropriate item(s) of the collection.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="nf">⎕SRC</span><span class="w"> </span><span class="nv">c</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="nf">⎕SRC</span><span class="w"> </span><span class="nv">c</span>
 <span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">c</span><span class="w">                 </span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Property</span><span class="w"> </span><span class="nv">Default</span><span class="w"> </span><span class="nv">p</span><span class="w">  </span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span><span class="w"> </span><span class="nv">Shared</span>
@@ -79079,7 +79079,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

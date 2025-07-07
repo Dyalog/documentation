@@ -78721,7 +78721,7 @@
 <p>For example, you can deduce that <code>DateTime.New</code> may be called with three numeric (<code>Int32</code>) parameters, or six numeric (<code>Int32</code>) parameters, and so forth. There are in fact seven different ways that you can create an instance of a <code>DateTime</code>.</p>
 <p><img alt="" src="../../img/browsing-net-classes-5.png"></p>
 <p>For example, the following statement may be used to create a new instance of <code>DateTime</code> (09:30 in the morning on 30<sup>th</sup> April 2001):
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mydt</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">2001</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mydt</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">2001</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
 <span class="w"> </span>
 <span class="w">      </span><span class="nv">mydt</span>
 <span class="m">30</span><span class="na">/</span><span class="m">04</span><span class="na">/</span><span class="m">2001</span><span class="w"> </span><span class="m">09</span><span class="bp">:</span><span class="m">30</span><span class="bp">:</span><span class="m">00</span>
@@ -78729,17 +78729,17 @@
 <p>The <em>Properties</em> folder provides a list of the properties supported by the Class. It shows the name of the property followed by its data type. For example, the <code>DayOfYear</code> property is defined to be of type <code>Int32</code>.</p>
 <p><img alt="" src="../../img/browsing-net-classes-6.png"></p>
 <p>You can query a property by direct reference:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mydt</span><span class="na">.</span><span class="nv">DayOfWeek</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mydt</span><span class="na">.</span><span class="nv">DayOfWeek</span>
 <span class="nv">Monday</span>
 </code></pre></div>
 <p>Notice too that the data types of some properties are not simple data types, but Classes in their own right. For example, the data type of the <code>Now</code> property is itself <code>System.DateTime</code>. This means that when you reference the <code>Now</code> property, you get back an object that represents an instance of the <code>System.DateTime</code> object:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mydt</span><span class="na">.</span><span class="nv">Now</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mydt</span><span class="na">.</span><span class="nv">Now</span>
 <span class="m">07</span><span class="na">/</span><span class="m">11</span><span class="na">/</span><span class="m">2001</span><span class="w"> </span><span class="m">11</span><span class="bp">:</span><span class="m">30</span><span class="bp">:</span><span class="m">48</span>
 <span class="w">      </span><span class="nf">⎕TS</span>
 <span class="m">2001</span><span class="w"> </span><span class="m">11</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">11</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">48</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <p>The <em>Methods</em> folder lists the methods supported by the Class. The Explorer shows the data type of the result of the method, followed by the name of the method and the types of its arguments. For example, the <code>IsLeapYear</code> method takes an <code>Int32</code> parameter (year) and returns a <code>Boolean</code> result.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mydt</span><span class="na">.</span><span class="nv">IsLeapYear</span><span class="w"> </span><span class="m">2000</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mydt</span><span class="na">.</span><span class="nv">IsLeapYear</span><span class="w"> </span><span class="m">2000</span>
 <span class="m">1</span>
 </code></pre></div>
 <p><img alt="" src="../../img/browsing-net-classes-7.png"></p>
@@ -78782,7 +78782,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

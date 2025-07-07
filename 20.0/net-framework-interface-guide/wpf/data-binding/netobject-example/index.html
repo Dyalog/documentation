@@ -78808,7 +78808,7 @@
 <p>This example illustrates data binding using a vector of .NET objects, in this case DateTime objects.</p>
 <h2 id="the-xaml">The XAML</h2>
 <p>The XAML shown below,  describes a Window containing a StackPanel, inside which is a ListBox.
-</p><div class="highlight"><pre><span></span><code><span class="nt">&lt;Window</span><span class="w"> </span>
+</p><div class="language-xml highlight"><pre><span></span><code><span class="nt">&lt;Window</span><span class="w"> </span>
 <span class="w">    </span><span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span>
 <span class="w">    </span><span class="na">xmlns:x=</span><span class="s">"http://schemas.microsoft.com/winfx/2006/xaml"</span>
 <span class="w">    </span><span class="na">Title=</span><span class="s">"NetObjects (DateTime) Example"</span>
@@ -78823,7 +78823,7 @@
 </code></pre></div>
 <h2 id="the-apl-code">The APL Code</h2>
 <p>The function <code>NetObjects</code> is shown below.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">NetObjects</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">win</span><span class="sr">;</span><span class="nv">dt</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">NetObjects</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">win</span><span class="sr">;</span><span class="nv">dt</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="kd">←</span><span class="nv">LoadXAML</span><span class="w"> </span><span class="nv">XAML</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="na">.</span><span class="nv">dates</span><span class="kd">←</span><span class="nv">win</span><span class="na">.</span><span class="nv">FindName</span><span class="o">⊂</span><span class="s1">'EasterDates'</span>
@@ -78833,10 +78833,10 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p><code>NetObjects[3]</code> uses FindName to obtain a ref to the ListBox (defined in the XAML) named <em>EasterDates:</em>
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="na">.</span><span class="nv">dates</span><span class="kd">←</span><span class="nv">win</span><span class="na">.</span><span class="nv">FindName</span><span class="o">⊂</span><span class="s1">'EasterDates'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="na">.</span><span class="nv">dates</span><span class="kd">←</span><span class="nv">win</span><span class="na">.</span><span class="nv">FindName</span><span class="o">⊂</span><span class="s1">'EasterDates'</span>
 </code></pre></div>
 <p>The global variable <code>Easter</code> contains a vector of 3-element numeric vectors representing the dates of forthcoming Orthodox Easter Sundays.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="nv">Easter</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="nv">Easter</span>
 <span class="m">2015</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">12</span>
 <span class="m">2016</span><span class="w"> </span><span class="m">5</span><span class="w">  </span><span class="m">1</span>
 <span class="m">2017</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">16</span>
@@ -78849,13 +78849,13 @@
 <span class="m">2024</span><span class="w"> </span><span class="m">5</span><span class="w">  </span><span class="m">5</span>
 </code></pre></div>
 <p><code>NetObjects[4]</code> creates a vector of DateTime objects from the global variable <code>Easter</code>.
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w">    </span><span class="nv">dt</span><span class="kd">←</span><span class="kt">{</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="bp">⍵</span><span class="kt">}</span><span class="na">¨</span><span class="nv">Easter</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w">    </span><span class="nv">dt</span><span class="kd">←</span><span class="kt">{</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="bp">⍵</span><span class="kt">}</span><span class="na">¨</span><span class="nv">Easter</span>
 </code></pre></div>
 <p>Then, NetObjects[5] creates a binding source object from this array and assigns it to the ItemsSource property of the ListBox.
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">5</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="na">.</span><span class="nv">dates</span><span class="na">.</span><span class="nv">ItemsSource</span><span class="kd">←</span><span class="m">2015</span><span class="na">⌶</span><span class="s1">'dt'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">5</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="na">.</span><span class="nv">dates</span><span class="na">.</span><span class="nv">ItemsSource</span><span class="kd">←</span><span class="m">2015</span><span class="na">⌶</span><span class="s1">'dt'</span>
 </code></pre></div>
 <h2 id="testing-the-data-binding">Testing the Data Binding</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">wpfintro</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">wpfintro</span>
 <span class="w">      </span><span class="nv">DataBinding</span><span class="na">.</span><span class="nv">NETObjects</span><span class="na">.</span><span class="nv">NETObjects</span>
 </code></pre></div>
 <p><img alt="" src="../../../img/data-binding-netobjects1.png"></p>
@@ -78888,7 +78888,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78882,7 +78882,7 @@
 <p>The result <code>R</code> is a reference to a new instance of Class, Dyalog GUI object, or Type <code>Y</code>.</p>
 <p>For further information, see <em>Interface Guide</em>.</p>
 <h2 id="class-example">Class Example</h2>
-<div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Animal</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Animal</span>
 <span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Name</span><span class="w"> </span><span class="nv">nm</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Constructor</span>
@@ -78895,7 +78895,7 @@
 <span class="nv">Eeyore</span>
 </code></pre></div>
 <p>If <code>⎕NEW</code> is called with just a Class reference (that is, without parameters for the Constructor), the default constructor will be called. A default constructor is defined by a niladic function with the :Implements Constructor attribute. For example, the Animal Class may be redefined as:
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Animal</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Animal</span>
 <span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">NoName</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Constructor</span>
@@ -78914,7 +78914,7 @@
 <span class="nv">Noname</span>
 </code></pre></div>
 <h2 id="net-examples">.NET Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span><span class="w"> </span><span class="s1">'System.Web.Mail,System.Web.dll'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span><span class="w"> </span><span class="s1">'System.Web.Mail,System.Web.dll'</span>
 <span class="w">      </span><span class="nv">dt</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">2006</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">msg</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">MailMessage</span>
 <span class="w">      </span><span class="nf">⎕NC</span><span class="w"> </span><span class="s1">'dt'</span><span class="w"> </span><span class="s1">'msg'</span><span class="w"> </span><span class="s1">'DateTime'</span><span class="w"> </span><span class="s1">'MailMessage'</span>
@@ -78923,20 +78923,20 @@
 <p>Note that <strong>.NET Types</strong> are accessed as follows.</p>
 <p>If the name specified by the first item of <code>Y</code> would otherwise generate a <code>VALUE ERROR</code>, and <code>⎕USING</code> has been set, APL attempts to load the Type specified by <code>Y</code> from the .NET assemblies (DLLs) specified in <code>⎕USING</code>. If successful, the name specified by <code>Y</code> is entered into the SYMBOL TABLE with a name-class of <code>9.6</code>. Subsequent references to that symbol (in this case <code>DateTime</code>) are resolved directly and do not involve any assembly searching.</p>
 <h2 id="dyalog-gui-examples">Dyalog GUI Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'Form'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'Form'</span>
 <span class="w">      </span><span class="nv">F</span>
 <span class="c1">#.[Form]</span>
 </code></pre></div>
 <p>To specify the initial values of any properties, <code>Y[2]</code> must be a vector (or scalar) of items each of which is of the form (PropertyName PropertyValue); the free-form syntax implemented by <code>⎕WC</code> and <code>⎕WS</code> is not allowed.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NEW</span><span class="s1">'Form'</span><span class="p">(</span><span class="o">⊂</span><span class="s1">'Caption'</span><span class="w"> </span><span class="s1">'Hello'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NEW</span><span class="s1">'Form'</span><span class="p">(</span><span class="o">⊂</span><span class="s1">'Caption'</span><span class="w"> </span><span class="s1">'Hello'</span><span class="p">)</span>
 <span class="c1">#.[Form]</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="s1">'Form'</span><span class="p">((</span><span class="s1">'Caption'</span><span class="w"> </span><span class="s1">'Hello'</span><span class="p">)(</span><span class="s1">'Posn'</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">10</span><span class="p">)))</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="s1">'Form'</span><span class="p">((</span><span class="s1">'Caption'</span><span class="w"> </span><span class="s1">'Hello'</span><span class="p">)(</span><span class="s1">'Posn'</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">10</span><span class="p">)))</span>
 <span class="w">      </span><span class="nv">F</span>
 <span class="c1">#.[Form]</span>
 </code></pre></div>
 <p>Note that as <code>⎕NEW</code> provides no facility to <em>name</em> a GUI object, the Event property should use the <em>onEvent</em> syntax so that a callback function (or the result of <code>⎕DQ</code>) receives a ref to the object. Otherwise, without the <em>onEvent</em> syntax, the first element of the argument to a callback function will contain a character vector such as <code>'[Form].[Button]'</code> which merely describes the type of the object but does not identify the object itself.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">cap</span><span class="kd">←</span><span class="s1">'Caption'</span><span class="w"> </span><span class="s1">'Push Me'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">cap</span><span class="kd">←</span><span class="s1">'Caption'</span><span class="w"> </span><span class="s1">'Push Me'</span>
 <span class="w">      </span><span class="nv">ev</span><span class="kd">←</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">(</span><span class="s1">'onSelect'</span><span class="w"> </span><span class="s1">'foo'</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="p">(</span><span class="nv">B</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="s1">'Button'</span><span class="c1">#.(pos cap ev))</span>
 </code></pre></div>
@@ -78970,7 +78970,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78957,7 +78957,7 @@
 <h2 id="creating-defined-operation">Creating Defined Operation</h2>
 <p>The opening <code>∇</code> symbol is followed by the header line of a defined operation.  Redundant blanks in the request are permitted except within names.  If acceptable, the editor prompts for the first statement of the operation body with the line-number 1 enclosed in brackets.  On successful completion of editing, the defined operation becomes the active definition in the workspace.</p>
 <h3 class="example">Example</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="nv">R</span><span class="kd">←</span><span class="nv">FOO</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="nv">R</span><span class="kd">←</span><span class="nv">FOO</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">  </span><span class="nv">R</span><span class="kd">←</span><span class="m">10</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">  </span><span class="bp">∇</span>
 <span class="w"> </span>
@@ -78965,20 +78965,20 @@
 <span class="m">10</span>
 </code></pre></div>
 <p>The given operation name must not have an active referent in the workspace, otherwise the system reports <code>defn error</code> and the system editor is not invoked:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">VARS</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">VARS</span>
 <span class="nv">SALES</span><span class="w">  </span><span class="nv">X</span><span class="w">  </span><span class="nv">Y</span>
 <span class="w"> </span>
 <span class="w">      </span><span class="bp">∇</span><span class="nv">R</span><span class="kd">←</span><span class="nv">SALES</span><span class="w"> </span><span class="nv">Y</span>
 <span class="nv">defn</span><span class="w"> </span><span class="nv">error</span>
 </code></pre></div>
 <p>The header line of the operation must be syntactically correct, otherwise the system reports <code>defn error</code> and the system editor is not invoked:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="w"> </span><span class="nv">B</span><span class="w"> </span><span class="nv">C</span><span class="w"> </span><span class="nv">D</span><span class="bp">:</span><span class="nv">G</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="w"> </span><span class="nv">B</span><span class="w"> </span><span class="nv">C</span><span class="w"> </span><span class="nv">D</span><span class="bp">:</span><span class="nv">G</span>
 <span class="nv">defn</span><span class="w"> </span><span class="nv">error</span>
 </code></pre></div>
 <h2 id="listing-defined-operation">Listing Defined Operation</h2>
 <p>The <code>∇</code> symbol followed by the name of a defined operation and then by a closing <code>∇</code>, causes the display of the named operation.  Omitting the function name causes the suspended operation (that is, the one at the top of the state indicator) to be displayed and opened for editing.</p>
 <h4 class="example">Example</h4>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="nv">FOO</span><span class="bp">∇</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="nv">FOO</span><span class="bp">∇</span>
 <span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">FOO</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="m">10</span>
 <span class="w">     </span><span class="bp">∇</span>
@@ -78998,7 +78998,7 @@
 <p>The <code>∇</code> symbol followed by the name of an active defined operation and an editing directive causes the operation to be opened for editing and the editing directive actioned.  If the editing directive is invalid, it is ignored by the editor which then prompts with a line-number one greater than the highest line-number in the operation.  If the name refers to a pendent operation, the editor issues the message  <code>warning pendent operation</code> prior to actioning the editing directive.  If the name refers to a locked operation, the system reports <code>defn error</code> and definition mode is not entered.</p>
 <p>On successful completion of editing, the defined operation becomes the active definition in the workspace which may replace an existing version of the function.  Monitors, and stop and trace vectors are removed.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="nv">FOO</span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="nv">FOO</span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">  </span><span class="nv">R</span><span class="kd">←</span><span class="nv">R</span><span class="o">*</span><span class="m">2</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">  </span><span class="bp">∇</span>
 </code></pre></div>
@@ -79053,19 +79053,19 @@
 <h2 id="line-numbers">Line Numbers</h2>
 <p>Line numbers are associated with lines in the operation.  Initially, numbers are assigned as consecutive integers, beginning with <code>[0]</code> for the header line.  The number associated with an operation line remains the same for the duration of the definition mode unless altered by editing directives.  Additional lines may be inserted by decimal numbering.  Up to three places of decimal are permitted.  On closing definition mode, operation lines are re-numbered as consecutive integers.</p>
 <p>The editor always prompts with a line number.  The response may be a statement line or an editing directive.  A statement line replaces the existing line (if there is one) or becomes an additional line in the operation:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="w"> </span><span class="nv">PLUS</span><span class="w"> </span><span class="nv">B</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="w"> </span><span class="nv">PLUS</span><span class="w"> </span><span class="nv">B</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">  </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="o">+</span><span class="nv">B</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span>
 </code></pre></div>
 <h2 id="position">Position</h2>
 <p>The editing directive <code>[n]</code>, where n is a line number, causes the editor to prompt for input at that line number.  A statement or another editing directive may be entered.  If a statement is entered, the next line number to be prompted is the previous number incremented by a unit of the display form of the last decimal digit.  Trailing zeros are not displayed in the fractional part of a line number:
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="sr">[</span><span class="m">0.8</span><span class="sr">]</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="sr">[</span><span class="m">0.8</span><span class="sr">]</span>
 <span class="sr">[</span><span class="m">0.8</span><span class="sr">]</span><span class="w"> </span><span class="c1">⍝ MONADIC OR DYADIC +</span>
 <span class="sr">[</span><span class="m">0.9</span><span class="sr">]</span><span class="w"> </span><span class="c1">⍝ A ←→ OPTIONAL ARGUMENT</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span>
 </code></pre></div>
 <p>The editing directive <code>[n]</code>s, where <code>n</code> is a line number and s is a statement, causes the statement to replace the current contents of line <code>n</code>, or to insert line n if there is none:
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w"> </span><span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="kt">{</span><span class="nv">A</span><span class="kt">}</span><span class="w"> </span><span class="nv">PLUS</span><span class="w"> </span><span class="nv">B</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w"> </span><span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="kt">{</span><span class="nv">A</span><span class="kt">}</span><span class="w"> </span><span class="nv">PLUS</span><span class="w"> </span><span class="nv">B</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span>
 </code></pre></div>
 <h2 id="delete">Delete</h2>
@@ -79099,7 +79099,7 @@
 <p>Invalid edit symbols are ignored.  If there are no valid edit symbols entered, or if there are only deletion or space insertion symbols, the statement line is re-displayed with characters deleted and spaces inserted as specified.  The cursor is placed at the first inserted space position or at the end of the line if none.  Characters may be added to the line which is then interpreted as seen.</p>
 <p>The line number may be edited.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="vg">⎕</span><span class="m">7</span><span class="sr">]</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="vg">⎕</span><span class="m">7</span><span class="sr">]</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="o">+</span><span class="nv">B</span>
 <span class="w">     </span><span class="o">,</span><span class="kd">→</span><span class="p">(</span><span class="m">0</span><span class="o">=</span><span class="nf">⎕NC</span><span class="s1">'A'</span><span class="p">)</span><span class="o">⍴</span><span class="m">1</span><span class="kd">←</span><span class="nf">⎕LC</span><span class="w"> </span><span class="p">⋄</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="kd">→</span><span class="p">(</span><span class="m">0</span><span class="o">=</span><span class="nf">⎕NC</span><span class="s1">'A'</span><span class="p">)</span><span class="o">⍴</span><span class="m">1</span><span class="kd">←</span><span class="nf">⎕LC</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="o">+</span><span class="nv">B</span>
@@ -79111,7 +79111,7 @@
 <p>The form <code>[n⎕0]</code> causes the line number <code>n</code> to be displayed and the cursor to be positioned at the end of the displayed line, omitting the edit phase.</p>
 <h2 id="display">Display</h2>
 <p>The editing directive <code>[⎕]</code> causes the entire operation to be displayed.  The form <code>[⎕n]</code> causes all lines from line number n to be displayed.  The form <code>[n⎕]</code> causes only line number <code>n</code> to be displayed:
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w">   </span><span class="sr">[</span><span class="m">0</span><span class="vg">⎕</span><span class="sr">]</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w">   </span><span class="sr">[</span><span class="m">0</span><span class="vg">⎕</span><span class="sr">]</span>
 <span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="w">   </span><span class="nv">R</span><span class="kd">←</span><span class="kt">{</span><span class="nv">A</span><span class="kt">}</span><span class="w"> </span><span class="nv">PLUS</span><span class="w"> </span><span class="nv">B</span>
 <span class="sr">[</span><span class="m">0</span><span class="sr">]</span>
 <span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="w">   </span><span class="sr">[</span><span class="vg">⎕</span><span class="sr">]</span>
@@ -79126,7 +79126,7 @@
 <p>The editing directive <code>∇</code> causes definition mode to be closed.  The new definition of the operation becomes the active version in the workspace.  If the name in the operation header (which may or may not be the name used to enter definition mode) refers to a pendent operation, the editor issues the message <code>warning pendent operation</code> before exiting.  The new definition becomes the active version, but the original one will continue to be referenced until the operation completes or is cleared from the state indicator.</p>
 <p>If the name in the operation header is the name of a visible variable or label, the editor reports <code>defn error</code> and remains in definition mode.  It is then necessary to edit the header line or quit.</p>
 <p>If the header line is changed such that it is syntactically incorrect, the system reports <code>defn error</code>, and re-displays the line leaving the cursor beyond the end of the text on the line.  Backspace/linefeed editing may be used to alter or cancel the change:
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">   </span><span class="sr">[</span><span class="m">0</span><span class="vg">⎕</span><span class="sr">]</span><span class="w">             </span><span class="o">-</span><span class="w"> </span><span class="nv">display</span><span class="w"> </span><span class="nv">line</span><span class="w"> </span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">   </span><span class="sr">[</span><span class="m">0</span><span class="vg">⎕</span><span class="sr">]</span><span class="w">             </span><span class="o">-</span><span class="w"> </span><span class="nv">display</span><span class="w"> </span><span class="nv">line</span><span class="w"> </span><span class="m">0</span>
 <span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="w">   </span><span class="nv">R</span><span class="kd">←</span><span class="kt">{</span><span class="nv">A</span><span class="kt">}</span><span class="w"> </span><span class="nv">PLUS</span><span class="w"> </span><span class="nv">B</span>
 <span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="w">   </span><span class="nv">R</span><span class="kd">←</span><span class="kt">{</span><span class="nv">A</span><span class="kt">}</span><span class="w"> </span><span class="nv">PLUS</span><span class="w"> </span><span class="nv">B</span><span class="bp">:</span><span class="nv">G</span><span class="sr">;</span><span class="nv">H</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">put</span><span class="w"> </span><span class="nv">syntax</span><span class="w"> </span><span class="nv">error</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">line</span><span class="w"> </span><span class="m">0</span>
 <span class="nv">defn</span><span class="w"> </span><span class="nv">error</span>
@@ -79154,7 +79154,7 @@
 </ul>
 <p>These errors are not detected if they occur in a comment or within quotes.  Other syntactical errors in statement lines will remain undetected until the operation is executed.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w">   </span><span class="nv">R</span><span class="kd">←</span><span class="p">(</span><span class="nv">A</span><span class="sr">[;</span><span class="m">1</span><span class="p">)</span><span class="o">=</span><span class="m">2</span><span class="p">)</span><span class="na">⌿</span><span class="o">⍎</span><span class="nv">EXP</span><span class="o">,</span><span class="err">'</span><span class="o">×</span><span class="m">2</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w">   </span><span class="nv">R</span><span class="kd">←</span><span class="p">(</span><span class="nv">A</span><span class="sr">[;</span><span class="m">1</span><span class="p">)</span><span class="o">=</span><span class="m">2</span><span class="p">)</span><span class="na">⌿</span><span class="o">⍎</span><span class="nv">EXP</span><span class="o">,</span><span class="err">'</span><span class="o">×</span><span class="m">2</span>
 <span class="nv">warning</span><span class="w"> </span><span class="nv">unmatched</span><span class="w"> </span><span class="nv">parentheses</span>
 <span class="nv">warning</span><span class="w"> </span><span class="nv">unmatched</span><span class="w"> </span><span class="nv">brackets</span>
 <span class="sr">[</span><span class="m">5</span><span class="sr">]</span>
@@ -79191,7 +79191,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

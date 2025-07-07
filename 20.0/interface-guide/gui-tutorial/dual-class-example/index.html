@@ -78769,11 +78769,11 @@
 
 <p>The Dual Class example is based upon the example used to illustrate how you may build an ActiveX Control in Dyalog APL (see <a href="../../activex-control/dual-control-tutorial/">The Dual Control Tutorial</a>), but re-engineered as an internal Dyalog APL Class. The full listing of the Dual Class script is provided overleaf.</p>
 <p>This version of Dual is based upon a SubForm:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Dual</span><span class="bp">:</span><span class="w"> </span><span class="s1">'SubForm'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Dual</span><span class="bp">:</span><span class="w"> </span><span class="s1">'SubForm'</span>
 </code></pre></div>
 <p>The Dual Control requires a GUI parent but several Instances can co-exist, quite independently, in the same parent.</p>
 <p>For example, function <code>RUN</code> creates a Form and 3 Instances of Dual; one to convert Centigrade to Fahrenheit, one to convert Fahrenheit to Centigrade, and the third to convert centimetres to inches.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">RUN</span><span class="sr">;</span><span class="nv">F</span><span class="sr">;</span><span class="nv">D1PROPS</span><span class="sr">;</span><span class="nv">D2PROPS</span><span class="sr">;</span><span class="nv">D3PROPS</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">RUN</span><span class="sr">;</span><span class="nv">F</span><span class="sr">;</span><span class="nv">D1PROPS</span><span class="sr">;</span><span class="nv">D2PROPS</span><span class="sr">;</span><span class="nv">D3PROPS</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">F</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="s1">'Form'</span><span class="p">((</span><span class="s1">'Caption'</span><span class="w"> </span><span class="s1">'Dual Instances'</span><span class="p">)</span>
 <span class="w">                    </span><span class="p">(</span><span class="s1">'Coord'</span><span class="w"> </span><span class="s1">'Pixel'</span><span class="p">)(</span><span class="s1">'Size'</span><span class="p">(</span><span class="m">320</span><span class="w"> </span><span class="m">320</span><span class="p">)))</span>
@@ -78804,11 +78804,11 @@
 </code></pre></div>
 <p><img alt="" src="../../img/dual-instances.png"></p>
 <p>Dual's Constructor <code>Make</code> first splits its constructor arguments into those that apply to the Dual Class itself, and those that apply to the SubForm. Its <code>:Implements Constructor</code> statement then passes these on to the Base Constructor, together with an appropriate setting for EdgeStyle.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Constructor</span><span class="w"> </span><span class="bp">:</span><span class="nv">Base</span><span class="w"> </span><span class="nv">BaseArgs</span><span class="o">,</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Constructor</span><span class="w"> </span><span class="bp">:</span><span class="nv">Base</span><span class="w"> </span><span class="nv">BaseArgs</span><span class="o">,</span>
 <span class="w">                                   </span><span class="o">⊂</span><span class="s1">'EdgeStyle'</span><span class="w"> </span><span class="s1">'Dialog'</span>
 </code></pre></div>
 <h2 id="dual-class-example">Dual Class Example</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Dual</span><span class="bp">:</span><span class="w"> </span><span class="s1">'SubForm'</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Dual</span><span class="bp">:</span><span class="w"> </span><span class="s1">'SubForm'</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Include</span><span class="w"> </span><span class="nv">GUITools</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Field</span><span class="w"> </span><span class="nv">Private</span><span class="w"> </span><span class="nv">_Caption1</span><span class="kd">←</span><span class="s1">''</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Field</span><span class="w"> </span><span class="nv">Private</span><span class="w"> </span><span class="nv">_Caption2</span><span class="kd">←</span><span class="s1">''</span>
@@ -78819,7 +78819,7 @@
 <span class="w">    </span><span class="bp">:</span><span class="nv">Field</span><span class="w"> </span><span class="nv">Private</span><span class="w"> </span><span class="nv">_Gradient</span><span class="kd">←</span><span class="m">1</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Field</span><span class="w"> </span><span class="nv">Private</span><span class="w"> </span><span class="nv">_Height</span><span class="kd">←</span><span class="m">40</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Create</span><span class="w"> </span><span class="nv">args</span><span class="sr">;</span><span class="nv">H</span><span class="sr">;</span><span class="nv">W</span><span class="sr">;</span><span class="nv">POS</span><span class="sr">;</span><span class="nv">SH</span><span class="sr">;</span><span class="nv">CH</span><span class="sr">;</span><span class="nv">Y1</span><span class="sr">;</span><span class="nv">Y2</span><span class="sr">;</span><span class="nv">BaseArgs</span><span class="sr">;</span><span class="nv">MyArgs</span><span class="sr">;</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Create</span><span class="w"> </span><span class="nv">args</span><span class="sr">;</span><span class="nv">H</span><span class="sr">;</span><span class="nv">W</span><span class="sr">;</span><span class="nv">POS</span><span class="sr">;</span><span class="nv">SH</span><span class="sr">;</span><span class="nv">CH</span><span class="sr">;</span><span class="nv">Y1</span><span class="sr">;</span><span class="nv">Y2</span><span class="sr">;</span><span class="nv">BaseArgs</span><span class="sr">;</span><span class="nv">MyArgs</span><span class="sr">;</span>
 <span class="w">                  </span><span class="nv">Defaults</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
 <span class="w">      </span><span class="nv">MyArgs</span><span class="w"> </span><span class="nv">BaseArgs</span><span class="kd">←</span><span class="nv">SplitNV</span><span class="w"> </span><span class="nv">args</span>
@@ -78869,7 +78869,7 @@
 <span class="w">        </span><span class="bp">∇</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">EndProperty</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Property</span><span class="w"> </span><span class="nv">Intercept</span><span class="o">,</span><span class="w"> </span><span class="nv">Gradient</span><span class="o">,</span><span class="w"> </span><span class="nv">Range</span><span class="o">,</span><span class="w"> </span><span class="nv">Height</span><span class="o">,</span><span class="w"> </span><span class="nv">Value2</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Property</span><span class="w"> </span><span class="nv">Intercept</span><span class="o">,</span><span class="w"> </span><span class="nv">Gradient</span><span class="o">,</span><span class="w"> </span><span class="nv">Range</span><span class="o">,</span><span class="w"> </span><span class="nv">Height</span><span class="o">,</span><span class="w"> </span><span class="nv">Value2</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
 <span class="w">        </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">Get</span><span class="w"> </span><span class="nv">arg</span>
 <span class="w">          </span><span class="nv">R</span><span class="kd">←</span><span class="o">⍎</span><span class="s1">'_'</span><span class="o">,</span><span class="nv">arg</span><span class="na">.</span><span class="nv">Name</span>
@@ -78905,7 +78905,7 @@
 <span class="bp">:</span><span class="nv">EndClass</span><span class="w"> </span><span class="c1">⍝ Dual</span>
 </code></pre></div>
 <p>The utilities contained in in the GUITools Namespace are as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">SplitNV</span><span class="w"> </span><span class="nv">args</span><span class="sr">;</span><span class="nv">m</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">SplitNV</span><span class="w"> </span><span class="nv">args</span><span class="sr">;</span><span class="nv">m</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Parse Name,Value Pairs</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Return pairs for this class in 1st element,</span>
 <span class="w">        </span><span class="nv">others</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="m">2</span><span class="nv">nd</span><span class="w"> </span><span class="nv">element</span>
@@ -78950,7 +78950,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

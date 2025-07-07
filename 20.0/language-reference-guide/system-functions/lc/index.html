@@ -78718,11 +78718,11 @@
 
 <h1 class="heading"><span class="name">Line Count</span> <span class="command">R←⎕LC</span></h1>
 
-<p>This is a simple vector of line numbers drawn from the state indicator (See <a href="../defined-functions-and-operators/state-indicator.md">The State Indicator</a>).  The most recently activated line is shown first.  If a value corresponds to a defined function in the state indicator, it represents the current line number where the function is either suspended or pendent.</p>
-<p>The value of <code>⎕LC</code> changes immediately upon completion of the most recently activated line, or upon completion of execution within <code>⍎</code> or <code>⎕</code>.  If a <code>⎕STOP</code> control is set, <code>⎕LC</code> identifies the line on which the stop control is effected.  In the case where a stop control is set on line 0 of a defined function, the first entry in <code>⎕LC</code> is 0 when the control is effected.</p>
+<p>This is a simple vector of line numbers drawn from the state indicator. The most recently activated line is shown first. If a value corresponds to a defined function in the state indicator, it represents the current line number where the function is either suspended or pendent.</p>
+<p>The value of <code>⎕LC</code> changes immediately upon completion of the most recently activated line, or upon completion of execution within <code>⍎</code> or <code>⎕</code>.  If a <code>⎕STOP</code> control is set, <code>⎕LC</code> identifies the line on which the stop control is effected. In the case where a stop control is set on line 0 of a defined function, the first entry in <code>⎕LC</code> is 0 when the control is effected.</p>
 <p>The value of <code>⎕LC</code> in a clear workspace is the null vector.</p>
 <h2 class="example">Examples</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SI</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SI</span>
 <span class="c1">#.TASK1[5]*</span>
 <span class="o">⍎</span>
 <span class="c1">#.BEGIN[3]</span>
@@ -78730,7 +78730,7 @@
 <span class="w">      </span><span class="nf">⎕LC</span>
 <span class="m">5</span><span class="w"> </span><span class="m">3</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="kd">→</span><span class="nf">⎕LC</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="kd">→</span><span class="nf">⎕LC</span>
 <span class="w">      </span><span class="nf">⎕LC</span>
 <span class="w"> </span>
 <span class="w">      </span><span class="o">⍴</span><span class="nf">⎕LC</span>
@@ -78765,7 +78765,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

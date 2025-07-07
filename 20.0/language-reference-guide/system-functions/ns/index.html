@@ -78897,7 +78897,7 @@
 <p>The objects identified in the list <code>Y</code> are copied into the namespace <code>X</code>.</p>
 <p>If <code>X</code> is specified, the result <code>R</code> is the full name (starting with <code>#.</code> or <code>⎕SE.</code>) of the namespace <code>X</code>. If <code>X</code> is omitted, the result <code>R</code> is a namespace reference, or <em>ref</em>, to an unnamed namespace.</p>
 <h2 class="example">Examples</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="s1">'X'</span><span class="nf">⎕NS</span><span class="s1">''</span><span class="w">               </span><span class="c1">⍝ Create namespace X.</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="s1">'X'</span><span class="nf">⎕NS</span><span class="s1">''</span><span class="w">               </span><span class="c1">⍝ Create namespace X.</span>
 <span class="c1">#.X</span>
 <span class="w">      </span><span class="o">⊢</span><span class="s1">'X'</span><span class="nf">⎕NS</span><span class="s1">'VEC'</span><span class="w"> </span><span class="s1">'UTIL.DISP'</span><span class="c1">⍝ Copy VEC and DISP to X.</span>
 <span class="c1">#.X</span>
@@ -78910,18 +78910,18 @@
 <span class="w">      </span><span class="o">⊢</span><span class="s1">'#'</span><span class="nf">⎕NS</span><span class="s1">'Y'</span><span class="w">              </span><span class="c1">⍝ Copy namespace Y to root.</span>
 <span class="c1">#</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊢</span><span class="s1">''</span><span class="nf">⎕NS</span><span class="s1">'#.MAT'</span><span class="w">           </span><span class="c1">⍝ Copy MAT to current space.</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊢</span><span class="s1">''</span><span class="nf">⎕NS</span><span class="s1">'#.MAT'</span><span class="w">           </span><span class="c1">⍝ Copy MAT to current space.</span>
 <span class="c1">#.X</span>
 <span class="w">      </span><span class="o">⊢</span><span class="s1">''</span><span class="nf">⎕NS</span><span class="s1">''</span><span class="w">                </span><span class="c1">⍝ Display current space.</span>
 <span class="c1">#.X</span>
 <span class="w">      </span><span class="o">⊢</span><span class="s1">'Z'</span><span class="nf">⎕NS</span><span class="w"> </span><span class="nf">⎕OR</span><span class="s1">'Y'</span><span class="w">          </span><span class="c1">⍝ Create nspace from ⎕OR.</span>
 <span class="c1">#.X.Z</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">NONAME</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="w"> </span><span class="s1">''</span><span class="w">           </span><span class="c1">⍝ Create unnamed nspace</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">NONAME</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="w"> </span><span class="s1">''</span><span class="w">           </span><span class="c1">⍝ Create unnamed nspace</span>
 <span class="w">      </span><span class="nv">NONAME</span>
 <span class="c1">#.[Namespace]</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DATA</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="na">¨</span><span class="m">3</span><span class="o">⍴⊂</span><span class="s1">''</span><span class="w">         </span><span class="c1">⍝ Create 3-element vector of</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DATA</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="na">¨</span><span class="m">3</span><span class="o">⍴⊂</span><span class="s1">''</span><span class="w">         </span><span class="c1">⍝ Create 3-element vector of</span>
 <span class="w">                             </span><span class="c1">⍝ distinct unnamed nspaces</span>
 <span class="w">      </span><span class="nv">DATA</span>
 <span class="w"> </span><span class="c1">#.[Namespace]  #.[Namespace]  #.[Namespace]</span>
@@ -78936,7 +78936,7 @@
 </ul>
 <p><code>Y</code> can also be a vector of namespaces, in which case each item of <code>Y</code> is processed as explained above, in ravel order. The effect is that the contents of all the namespaces are merged into the target namespace.</p>
 <h3 class="example">Examples</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">original</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="no">⍬</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">original</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="no">⍬</span>
 <span class="w">      </span><span class="nv">original</span><span class="na">.</span><span class="p">(</span><span class="nv">A</span><span class="w"> </span><span class="nv">B</span><span class="w"> </span><span class="nv">C</span><span class="p">)</span><span class="kd">←</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span>
 <span class="w">      </span><span class="nv">cloned</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="w"> </span><span class="nv">original</span><span class="w">       </span><span class="c1">⍝ cloning a namespace</span>
 <span class="w">      </span><span class="nv">cloned</span><span class="na">.</span><span class="nv">D</span><span class="kd">←</span><span class="m">4</span>
@@ -78946,7 +78946,7 @@
 <span class="w">      </span><span class="nv">cloned</span><span class="na">.</span><span class="nf">⎕NL</span><span class="w"> </span><span class="m">¯2</span>
 <span class="w"> </span><span class="nv">A</span><span class="w">  </span><span class="nv">B</span><span class="w">  </span><span class="nv">C</span><span class="w">  </span><span class="nv">D</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">defaults</span><span class="kd">←</span><span class="p">(</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">defaults</span><span class="kd">←</span><span class="p">(</span>
 <span class="w">        </span><span class="nv">name</span><span class="bp">:</span><span class="w"> </span><span class="s1">'&lt;no name&gt;'</span>
 <span class="w">        </span><span class="nv">age</span><span class="bp">:</span><span class="w"> </span><span class="s1">'&lt;no age&gt;'</span>
 <span class="w">        </span><span class="nv">phone</span><span class="bp">:</span><span class="w"> </span><span class="s1">'&lt;no phone&gt;'</span>
@@ -78976,7 +78976,7 @@
 The value must be a Boolean scalar. The default is 0, meaning that triggers are not run.</p>
 <h4 class="example">Example</h4>
 
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕VR</span><span class="w"> </span><span class="s1">'trigger'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕VR</span><span class="w"> </span><span class="s1">'trigger'</span>
 <span class="w">     </span><span class="bp">∇</span><span class="nv">trigger</span><span class="w"> </span><span class="nv">arg</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Trigger</span><span class="w"> </span><span class="nv">X</span><span class="o">,</span><span class="nv">Y</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="vg">⎕</span><span class="kd">←</span><span class="s1">'Running trigger for: '</span><span class="o">,</span><span class="nv">arg</span><span class="na">.</span><span class="nv">Name</span>
@@ -79021,7 +79021,7 @@ The value must be a Boolean scalar. The default is 0, meaning that triggers are 
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

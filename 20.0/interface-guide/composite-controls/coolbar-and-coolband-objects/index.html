@@ -78897,7 +78897,7 @@
 <p>Using the gripper bars, the user may drag bands from one row to another, resize bands in the same row, and maximise or minimise bands in a row. The CoolBar therefore gives the user a degree of control over the layout of the controls that it contains.</p>
 <p>A CoolBand may not contain more than one child object, but that child object may itself be a container such as a ToolControl or a SubForm.</p>
 <p>The following example illustrates a CoolBar containing two CoolBands, each of which itself contains a ToolControl.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'CoolBar Object with ToolControls'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'CoolBar Object with ToolControls'</span>
 <span class="s1">'F.IL'</span><span class="nf">⎕WC</span><span class="s1">'ImageList'</span><span class="p">(</span><span class="s1">'Masked'</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="s1">'MapCols'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 <span class="s1">'F.IL.'</span><span class="nf">⎕WC</span><span class="s1">'Bitmap'</span><span class="p">(</span><span class="s1">'ComCtl32'</span><span class="w"> </span><span class="m">120</span><span class="p">)</span><span class="c1">⍝ STD_SMALL</span>
 
@@ -78937,7 +78937,7 @@
 <p>The VariableHeight property specifies whether or not the CoolBar displays bands in different rows at the minimum required height (the default), or all the same height.</p>
 <p>The BandBorders property specifies whether or not narrow lines are drawn to separate adjacent bands. The default is 0 (no lines).</p>
 <p>The following example uses simple controls (as opposed to container controls) as children of the CoolBands and illustrate the effect of these properties on the appearance of the CoolBar.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'CoolBar Object with simple controls'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'CoolBar Object with simple controls'</span>
 <span class="s1">'F.CB'</span><span class="nf">⎕WC</span><span class="s1">'CoolBar'</span>
 
 <span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="nv">F</span><span class="na">.</span><span class="nv">CB</span><span class="na">.</span><span class="nv">C1</span><span class="s1">'⎕WC'</span><span class="nv">CoolBand</span><span class="s1">'</span>
@@ -78966,7 +78966,7 @@
 <h2 id="coolband-caption-and-imageindex-properties">CoolBand: Caption and ImageIndex Properties</h2>
 <p>The Caption and ImageIndex properties of a CoolBand are used to display an optional text string and picture in the CoolBand.</p>
 <p>The picture is defined by an image in an ImageList object whose name is referenced by the ImageListObj property of the parent CoolBar. The following example illustrates how this is done.</p>
-<div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'CoolBand Caption and ImageIndex'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'CoolBand Caption and ImageIndex'</span>
 <span class="s1">'F.IL'</span><span class="nf">⎕WC</span><span class="s1">'ImageList'</span><span class="p">(</span><span class="s1">'Masked'</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="s1">'MapCols'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 <span class="s1">'F.IL.'</span><span class="nf">⎕WC</span><span class="s1">'Bitmap'</span><span class="p">(</span><span class="s1">'ComCtl32'</span><span class="w"> </span><span class="m">120</span><span class="p">)</span><span class="c1">⍝ STD_SMALL</span>
 
@@ -79004,7 +79004,7 @@
 <h2 id="coolbands-with-subforms">CoolBands with SubForms</h2>
 <p>The CoolBand object itself may contain only a single child object. However, if that child is a SubForm containing other objects, the CoolBand can appear to manage a group of objects. A similar effect can be obtained using a ToolBar or ToolControl.</p>
 <p>The following example illustrates this technique. Note that the SubForms are disguised by setting their EdgeStyle and BCol properties. In addition, their AutoConf properties are set to 0 to prevent resizing of the child controls when the CoolBands are resized.</p>
-<div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'CoolBar with SubForms'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">50</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'CoolBar with SubForms'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">50</span><span class="p">)</span>
 <span class="s1">'F'</span><span class="nf">⎕WS</span><span class="s1">'Coord'</span><span class="w"> </span><span class="s1">'Pixel'</span>
 
 <span class="s1">'F.CB'</span><span class="nf">⎕WC</span><span class="s1">'CoolBar'</span>
@@ -79053,7 +79053,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

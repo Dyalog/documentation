@@ -80128,10 +80128,10 @@
 <h1 class="heading"><span class="name">Name Association</span> <span class="command">{R}←{X}⎕NA Y</span></h1>
 
 <p><code>⎕NA</code> provides access from APL to compiled functions within a library. A library is implemented according to the Operating System as follows:</p>
-<pre><code>- a Dynamic Link Library(DLL) under Windows
+<div class="language-text highlight"><pre><span></span><code>- a Dynamic Link Library(DLL) under Windows
 - a Shared Library (.so or .dylib) under Linux or macOS
 - a static library (.a) under AIX
-</code></pre>
+</code></pre></div>
 <p>A DLL<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> is a collection of functions typically written in C (or C++) each of which may take arguments and return a result.</p>
 <p>Instructional examples using <code>⎕NA</code> can be found in the supplied workspace <code>quadna</code>.</p>
 <p>The DLL may be part of the standard operating system software, a library purchased from a third party supplier, or one that you have written yourself.</p>
@@ -80139,24 +80139,24 @@
 <p>The shy result <code>R</code> is a character vector containing the name of the external function that was fixed.</p>
 <p>For example, <code>math.dll</code> might be a library of mathematical functions containing a function <code>divide</code>.</p>
 <p>In a compiled language such as C, the types of arguments and results of functions must be declared explicitly. Typically, these types will be published with the documentation that accompanies the DLL. For example, function <code>divide</code> might be declared:
-</p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">divide</span><span class="p">(</span><span class="kt">int32_t</span><span class="p">,</span><span class="w"> </span><span class="kt">int32_t</span><span class="p">);</span>
+</p><div class="language-c highlight"><pre><span></span><code><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">divide</span><span class="p">(</span><span class="kt">int32_t</span><span class="p">,</span><span class="w"> </span><span class="kt">int32_t</span><span class="p">);</span>
 </code></pre></div>
 <p>which means that it expects two long (4-byte) integer arguments and returns a double (8-byte) floating point result. Notice the correspondence between the C declaration and the right argument of <code>⎕NA</code>:
-</p><div class="highlight"><pre><span></span><code>    C:             double    divide       (int32_t,  int32_t);
+</p><div class="language-text highlight"><pre><span></span><code>    C:             double    divide       (int32_t,  int32_t);
     APL:  'div' ⎕NA 'F8    math|divide       I4        I4 '
 </code></pre></div>
 <p>So to associate the APL name <code>div</code> with this external function:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'div'</span><span class="w"> </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'F8 math|divide I4 I4'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'div'</span><span class="w"> </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'F8 math|divide I4 I4'</span>
 </code></pre></div>
 <p>where <code>F8</code> and <code>I4</code>, specify the types of the result and arguments expected by <code>divide</code>. The association has the effect of establishing a new function: <code>div</code> in the workspace, which when called, passes its arguments to <code>divide</code> and returns the result.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">fns</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">fns</span>
 <span class="nv">div</span>
 <span class="w">      </span><span class="nv">div</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">4</span>
 <span class="m">2.5</span>
 </code></pre></div>
 <p>It is imperative that care be taken when coding type declarations. A DLL <em>cannot</em> check types of data passed from APL. A wrong type declaration will lead to erroneous results or may even cause the workspace to become corrupted and crash. During development, you may wish to prevent this happening. See <a href="../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters">ErrorOnExternalException</a>.</p>
 <p>The full syntax for the right argument of <code>⎕NA</code> is:
-</p><div class="highlight"><pre><span></span><code>    [result] library|function [arg1] [arg2] ...
+</p><div class="language-text highlight"><pre><span></span><code>    [result] library|function [arg1] [arg2] ...
 </code></pre></div>
 <p>Note that functions associated with DLLs are never dyadic. All arguments are passed as items of a (possibly nested) vector on the right of the function.</p>
 <h2 id="locating-the-dll">Locating the DLL</h2>
@@ -80167,25 +80167,25 @@
 <h3 id="pathname">Pathname</h3>
 <p>APL uses the <code>LoadLibrary()</code> system function under Windows or <code>dlopen()</code> under UNIX, Linux and macOS to load the DLL. If a full or relative pathname is omitted, these functions search a list of directories determined by the operating system. This list always includes the directory which contains the Dyalog program, and on all non-Windows platforms, $DYALOG/lib. For further details, see the operating system documentation about these functions.</p>
 <p>Alternatively, a full or relative pathname may be supplied in the usual way:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="s1">'... c:\mydir\mydll|foo ...'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="s1">'... c:\mydir\mydll|foo ...'</span>
 </code></pre></div>
 <h3 id="errors">Errors</h3>
 <p>If the specified DLL (or a dependent DLL) fails to load it will generate:
-</p><div class="highlight"><pre><span></span><code>FILE ERROR 2 No such file or directory
+</p><div class="language-text highlight"><pre><span></span><code>FILE ERROR 2 No such file or directory
 </code></pre></div>
 <p>It is frequently the case that this error is a result of a missing dependency; operating systems do not return error codes which allow the interpreter to generate a more specific error.</p>
 <p>If the DLL loads successfully, but the specified library function is not accessible, it will generate:
-</p><div class="highlight"><pre><span></span><code><span class="nv">VALUE</span><span class="w"> </span><span class="nv">ERROR</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">VALUE</span><span class="w"> </span><span class="nv">ERROR</span>
 </code></pre></div>
 <h3 id="file-extension">File Extension</h3>
 <p>Under Windows, if the file extension is omitted, <strong>.dll</strong> is assumed. Note that some DLLs are in fact <strong>.exe</strong> files, and in this case the extension must be specified explicitly:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="s1">'... mydll.exe|foo ...'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="s1">'... mydll.exe|foo ...'</span>
 </code></pre></div>
 <h3 id="libca-on-non-windows-platforms">libc.a on Non-Windows Platforms</h3>
 <p>On non-Windows platforms many of the most useful system library functions appear in <code>libc.a</code>. The <code>quadna</code> workspace includes the function <code>NonWindows.Setup</code> which has code which will locate <code>libc.a</code> on each platform.</p>
 <h2 id="data-type-coding-scheme">Data Type Coding Scheme</h2>
 <p>The type coding scheme introduced above is of the form:</p>
-<div class="highlight"><pre><span></span><code>[direction] [special] type [width] [array][[count]]
+<div class="language-text highlight"><pre><span></span><code>[direction] [special] type [width] [array][[count]]
 </code></pre></div>
 <p>The options are summarised in the following table and their functions detailed below.</p>
 <table>
@@ -80307,7 +80307,7 @@
 <p>The use of T with default width is recommended to ensure portability between Editions.</p>
 <h3 id="direction">Direction</h3>
 <p>C functions accept data arguments either by <em>value</em> or by <em>address</em>. This distinction is indicated by the presence of a '<code>*</code>' or '<code>[]</code>' in the argument declaration:
-</p><div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w">  </span><span class="n">num1</span><span class="p">;</span><span class="w">       </span><span class="c1">// value of num1 passed.</span>
+</p><div class="language-c highlight"><pre><span></span><code><span class="kt">int</span><span class="w">  </span><span class="n">num1</span><span class="p">;</span><span class="w">       </span><span class="c1">// value of num1 passed.</span>
 <span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">num2</span><span class="p">;</span><span class="w">       </span><span class="c1">// Address of num2 passed.</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">num3</span><span class="p">[];</span><span class="w">      </span><span class="c1">// Address of num3 passed.</span>
 </code></pre></div>
@@ -80552,7 +80552,7 @@
 </table>
 <h3 id="arrays">Arrays</h3>
 <p>Arrays are specified by following the basic data type with <code>[n]</code> or <code>[]</code>, where <code>n</code> indicates the number of elements in the array. In the C declaration, the number of elements in an array may be specified explicitly at compile time, or determined dynamically at runtime. In the latter case, the size of the array is often passed along with the array, in a separate argument. In this case, <code>n</code>, the number of elements is omitted from the specification. Note that C deals only in scalars and rank 1 (vector) arrays.
-</p><div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">vec</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span><span class="w">               </span><span class="c1">// explicit vector length.</span>
+</p><div class="language-c highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">vec</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span><span class="w">               </span><span class="c1">// explicit vector length.</span>
 <span class="kt">unsigned</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="p">[];</span><span class="w">     </span><span class="c1">// undetermined length. </span>
 </code></pre></div>
 <p>could be coded as:</p>
@@ -80569,36 +80569,36 @@
 </tbody>
 </table>
 <p>Confusion sometimes arises over a difference in the declaration syntax between C and <code>⎕NA</code>. In C, an argument declaration may be given to receive a pointer to either a single scalar item, or to the first element of an array. This is because in C, the address of an array is deemed to be the address of its first element.
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="kt">void</span><span class="w"> </span><span class="nf">foo</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">string</span><span class="p">);</span>
+</p><div class="language-c highlight"><pre><span></span><code><span class="w">   </span><span class="kt">void</span><span class="w"> </span><span class="nf">foo</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">string</span><span class="p">);</span>
 <span class="w">   </span><span class="kt">char</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'a'</span><span class="p">,</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"abc"</span><span class="p">;</span>
 <span class="w">   </span><span class="n">foo</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ch</span><span class="p">);</span><span class="c1">// call with address of scalar.</span>
 <span class="w">   </span><span class="n">foo</span><span class="p">(</span><span class="n">ptr</span><span class="p">);</span><span class="c1">// call with address of array.</span>
 </code></pre></div>
 <p>However, from APL's point of view, these two cases are distinct and if the function is to be called with the address of (pointer to) a <em>scalar</em>, it must be declared: <code>'&lt;T'</code>. Otherwise, to be called with the address of an <em>array</em>, it must be declared: <code>'&lt;T[]'</code>. Note that it is perfectly acceptable in such circumstances to define more than one name association to the same DLL function specifying different argument types:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'FooScalar'</span><span class="nf">⎕NA</span><span class="s1">'mydll|foo &lt;T'</span><span class="w">   </span><span class="p">⋄</span><span class="w"> </span><span class="nv">FooScalar</span><span class="s1">'a'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'FooScalar'</span><span class="nf">⎕NA</span><span class="s1">'mydll|foo &lt;T'</span><span class="w">   </span><span class="p">⋄</span><span class="w"> </span><span class="nv">FooScalar</span><span class="s1">'a'</span>
 <span class="w">      </span><span class="s1">'FooVector'</span><span class="nf">⎕NA</span><span class="s1">'mydll|foo &lt;T[]'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">FooVector</span><span class="s1">'abc'</span>
 </code></pre></div>
 <h3 id="structures">Structures</h3>
 <p>Arbitrary data structures, which are akin to nested arrays, are specified using the symbols <code>{}</code>. For example, the code <code>{F8 I2}</code> indicates a structure comprised of an 8-byte <em>float</em> followed by a 2-byte <em>int</em>. Furthermore, the code <code>&lt;{F8 I2}[3]</code> means an input pointer to an array of 3 such structures.</p>
 <p>For example, this structure might be defined in C thus:
-</p><div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
+</p><div class="language-c highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="kt">double</span><span class="w">  </span><span class="n">f</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">short</span><span class="w">   </span><span class="n">i</span><span class="p">;</span>
 <span class="p">}</span><span class="w"> </span><span class="n">mystruct</span><span class="p">;</span>
 </code></pre></div>
 <p>A function defined to receive a count followed by an <em>input</em> pointer to an array of such structures:
-</p><div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">count</span><span class="p">,</span><span class="w"> </span><span class="n">mystruct</span><span class="w"> </span><span class="o">*</span><span class="n">str</span><span class="p">);</span>
+</p><div class="language-c highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">count</span><span class="p">,</span><span class="w"> </span><span class="n">mystruct</span><span class="w"> </span><span class="o">*</span><span class="n">str</span><span class="p">);</span>
 </code></pre></div>
 <p>An appropriate <code>⎕NA</code> declaration would be:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="s1">'mydll.foo U &lt;{F8 I2}[]'</span><span class="w"> </span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="s1">'mydll.foo U &lt;{F8 I2}[]'</span><span class="w"> </span>
 </code></pre></div>
 <p>A call on the function with two arguments - a count followed by a vector of structures:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">foo</span><span class="w"> </span><span class="m">4</span><span class="o">,⊂</span><span class="p">(</span><span class="m">1.4</span><span class="w"> </span><span class="m">3</span><span class="p">)(</span><span class="m">5.9</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="m">6.5</span><span class="w"> </span><span class="m">2</span><span class="p">)(</span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">foo</span><span class="w"> </span><span class="m">4</span><span class="o">,⊂</span><span class="p">(</span><span class="m">1.4</span><span class="w"> </span><span class="m">3</span><span class="p">)(</span><span class="m">5.9</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="m">6.5</span><span class="w"> </span><span class="m">2</span><span class="p">)(</span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
 </code></pre></div>
 <p>Notice that for the above call, APL converts the two Boolean <code>(0 0)</code> elements to an 8-byte float and a 2-byte int, respectively.</p>
 <p>Note that if the C compiler would add extra space for alignment within a structure the <code>⎕NA</code> syntax will need to code that explicitly. For example:
-</p><div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
+</p><div class="language-c highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="kt">short</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
 <span class="w">    </span><span class="cm">/* most C compilers would add 6 bytes of alignment here */</span>
@@ -80606,10 +80606,10 @@
 <span class="p">}</span><span class="w"> </span><span class="n">mystruct</span><span class="p">;</span>
 </code></pre></div>
 <p>An appropriate <code>⎕NA</code> declaration would be:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="s1">'mydll.foo U &lt;{I2  {I1[6]} F8}[]'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="s1">'mydll.foo U &lt;{I2  {I1[6]} F8}[]'</span>
 </code></pre></div>
 <p>A call on the function with two arguments - a count followed by a vector of structures:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">pad</span><span class="kd">←</span><span class="o">⊂</span><span class="m">6</span><span class="o">⍴</span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">pad</span><span class="kd">←</span><span class="o">⊂</span><span class="m">6</span><span class="o">⍴</span><span class="m">0</span>
 <span class="w">      </span><span class="nv">foo</span><span class="w"> </span><span class="m">4</span><span class="o">,⊂</span><span class="p">(</span><span class="m">3</span><span class="w"> </span><span class="nv">pad</span><span class="w"> </span><span class="m">1.4</span><span class="p">)(</span><span class="m">1</span><span class="w"> </span><span class="nv">pad</span><span class="w"> </span><span class="m">5.9</span><span class="w"> </span><span class="p">)(</span><span class="m">2</span><span class="w"> </span><span class="nv">pad</span><span class="w"> </span><span class="m">6.5</span><span class="w"> </span><span class="p">)(</span><span class="m">0</span><span class="w"> </span><span class="nv">pad</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
 </code></pre></div>
 <p>A library designer tries to avoid defining structures that induce padding.</p>
@@ -80621,59 +80621,59 @@
 <h2 id="using-a-function">Using a Function</h2>
 <p>A DLL function may or may not return a result, and may take zero or more arguments. This syntax is reflected in the coding of the right argument of <code>⎕NA</code>. However, notice that the corresponding associated APL function is a result-returning niladic (if it takes no arguments) or monadic function. It cannot be dyadic and it must <em>always</em> return a vector result - a null one if there is no output from the DLL function. See Result Vector section below. Examples of the various combinations are:</p>
 <h3 id="dll-function-non-result-returning">DLL function Non-result-returning</h3>
-<div class="highlight"><pre><span></span><code><span class="nf">⎕NA</span><span class="w">    </span><span class="s1">'mydll|fn1'</span><span class="w">          </span><span class="c1">⍝ Niladic</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="nf">⎕NA</span><span class="w">    </span><span class="s1">'mydll|fn1'</span><span class="w">          </span><span class="c1">⍝ Niladic</span>
 <span class="nf">⎕NA</span><span class="w">    </span><span class="s1">'mydll|fn2 &lt;0T'</span><span class="w">      </span><span class="c1">⍝ Monadic - 1-element arg</span>
 <span class="nf">⎕NA</span><span class="w">    </span><span class="s1">'mydll|fn3 =0T &lt;0T'</span><span class="w">  </span><span class="c1">⍝ Monadic - 2-element arg</span>
 </code></pre></div>
 <h3 id="dll-function-result-returning">DLL function Result-returning</h3>
-<div class="highlight"><pre><span></span><code><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'I4 mydll|fn4'</span><span class="w">          </span><span class="c1">⍝ Niladic</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'I4 mydll|fn4'</span><span class="w">          </span><span class="c1">⍝ Niladic</span>
 <span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'I4 mydll|fn5 F8'</span><span class="w">       </span><span class="c1">⍝ Monadic - 1-element arg</span>
 <span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'I4 mydll|fn6 &gt;I4[] &lt;0T'</span><span class="c1">⍝ Monadic - 2-element arg</span>
 </code></pre></div>
 <p>When the external function is called, the number of elements in the argument must match the number defined in the <code>⎕NA</code> definition. Using the examples above:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">fn1</span><span class="w">                   </span><span class="c1">⍝ Niladic Function.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">fn1</span><span class="w">                   </span><span class="c1">⍝ Niladic Function.</span>
 <span class="w">      </span><span class="nv">fn2</span><span class="o">,</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'Single String'</span><span class="w"> </span><span class="c1">⍝ 1-element arg</span>
 <span class="w">      </span><span class="nv">fn3</span><span class="w"> </span><span class="s1">'This'</span><span class="w"> </span><span class="s1">'That'</span><span class="w">     </span><span class="c1">⍝ 2-element arg</span>
 </code></pre></div>
 <p>Note in the second example, that you must enclose the argument string to produce a single item (nested) array in order to match the declaration. Dyalog converts the type of a numeric argument if necessary, so for example in <code>fn5</code> defined above, a Boolean value would be converted to double floating point (F8) prior to being passed to the DLL function.</p>
 <h3 id="multi-threading">Multi-Threading</h3>
 <p>Appending the '<code>&amp;</code>' character to the function name causes the external function to be run in its own system thread. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="s1">'... mydll|foo&amp; ...'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="s1">'... mydll|foo&amp; ...'</span>
 </code></pre></div>
 <p>This means that other APL threads can run concurrently with the one that is calling the <code>⎕NA</code> function.</p>
 <h3 id="name-mangling">Name Mangling</h3>
 <p>C++ and some other languages will by default mangle (or decorate) function names which are exported from a DLL file. The given external function name must exactly match the exported name, either by matching the name mangling or by ensuring the names exported from the library are not mangled.</p>
 <h3 id="call-by-ordinal-number">Call by Ordinal Number</h3>
 <p>Under Windows, a DLL may associate an <em>ordinal number</em> with any of its functions. This number may then be used to call the function as an alternative to calling it by name. Using <code>⎕NA</code> to call by ordinal number uses the same syntax but with the function name replaced with its ordinal number. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="s1">'... mydll|57 ...'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="s1">'... mydll|57 ...'</span>
 </code></pre></div>
 <h3 id="pointer-arguments">Pointer Arguments</h3>
 <p>When passing pointer arguments there are three cases to consider.</p>
 <h3 id="input-pointer"><code>&lt;</code> Input pointer</h3>
 <p>In this case you must supply the data array itself as argument to the function. A pointer to its first element is then passed to the DLL function.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">fn2</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'hello'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">fn2</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'hello'</span>
 </code></pre></div>
 <h3 id="output-pointer"><code>&gt;</code> Output pointer</h3>
 <p>Here, you must supply the <strong>number of elements</strong> that the output will need in order for APL to allocate memory to accommodate the resulting array.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">fn6</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="s1">'world'</span><span class="w">  </span><span class="c1">⍝ 1st arg needs space for 10 ints.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">fn6</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="s1">'world'</span><span class="w">  </span><span class="c1">⍝ 1st arg needs space for 10 ints.</span>
 </code></pre></div>
 <p>Note that if you were to reserve fewer elements than the DLL function actually used, the DLL function would write beyond the end of the reserved array and may cause the interpreter to crash with a System Error (syserror 999 on Windows or SIGSEGV on UNIX, Linux or macOS).</p>
 <h3 id="inputoutput"><code>=</code>  Input/Output</h3>
 <p>As with the input-only case, a pointer to the first element of the argument is passed to the DLL function. The DLL function then overwrites some or all of the elements of the array, and the new value is passed back as part of the result of the call. As with the output pointer case, if the input array were too short, so that the DLL wrote beyond the end of the array, the interpreter would almost certainly crash.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">fn3</span><span class="w"> </span><span class="s1">'.....'</span><span class="w"> </span><span class="s1">'hello'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">fn3</span><span class="w"> </span><span class="s1">'.....'</span><span class="w"> </span><span class="s1">'hello'</span>
 </code></pre></div>
 <h3 id="specifying-pointers-explicitly">Specifying Pointers Explicitly</h3>
 <p><code>⎕NA</code> syntax enables APL to pass arguments to DLL functions by <em>value</em> or <em>address</em> as appropriate. For example if a function requires an integer followed by a <em>pointer</em> to an integer:
-</p><div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">fun</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">addr</span><span class="p">);</span>
+</p><div class="language-c highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">fun</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">addr</span><span class="p">);</span>
 </code></pre></div>
 <p>You might declare and call it:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="s1">'mydll|fun I &lt;I'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">fun</span><span class="w"> </span><span class="m">42</span><span class="w"> </span><span class="m">42</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="s1">'mydll|fun I &lt;I'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">fun</span><span class="w"> </span><span class="m">42</span><span class="w"> </span><span class="m">42</span>
 </code></pre></div>
 <p>The interpreter passes the <em>value</em> of the first argument and the <em>address</em> of the second one.</p>
 <p>Two common cases occur where it is necessary to pass a pointer explicitly. The first is if the DLL function requires a <em>null pointer</em>, and the second is where you want to pass on a pointer which itself is a result from a DLL function.</p>
 <p>In both cases, the pointer argument should be coded as <code>P</code>. This causes APL to pass the pointer unchanged, <em>by value</em>, to the DLL function.</p>
 <p>In the previous example, to pass a null pointer, (or one returned from another DLL function), you must code a separate <code>⎕NA</code> definition.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'fun_null'</span><span class="nf">⎕NA</span><span class="s1">'mydll|fun I P'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">fun_null</span><span class="w"> </span><span class="m">42</span><span class="w"> </span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'fun_null'</span><span class="nf">⎕NA</span><span class="s1">'mydll|fun I P'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">fun_null</span><span class="w"> </span><span class="m">42</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <p>Now APL passes the <em>value</em> of the second argument (in this case 0 - the null pointer), rather than its address.</p>
 <p>Note that by using P, which is 4-byte for 32-bit processes and 8-byte for 64-bit processes, you will ensure that the code will run unchanged under both 32-bit and 64-bit versions of Dyalog APL.</p>
@@ -80731,7 +80731,7 @@
 </table>
 <p>Note that the result vector from a function that is declared <code>void()</code> and has no output parameters is <code>⍬</code> (zilde).</p>
 <p>As a convenience, if the result would otherwise be a 1-item vector, it is disclosed. Using the third example above:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">fn3</span><span class="w"> </span><span class="s1">'.....'</span><span class="w"> </span><span class="s1">'abc'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">fn3</span><span class="w"> </span><span class="s1">'.....'</span><span class="w"> </span><span class="s1">'abc'</span>
 <span class="m">5</span>
 </code></pre></div>
 <p><code>fn3</code> has no explicit result; its first argument is input/output pointer; and its second argument is input pointer. Therefore as the length of the result would be 1, it has been disclosed.</p>
@@ -80739,7 +80739,7 @@
 <p>When a 64 bit integer result is returned it is converted into 128 bit decimal floating point, because this is the only APL data type that can fully preserve all 64 bits of the result. If you wish to perform arithmetic with this value, you must set  <code>⎕FR</code>  to 1287 in order to preserve the same precision. If this is not done then the precision will be 53 bits which might not be enough.</p>
 <h3 id="callbacks">Callbacks (<code>∇</code>)</h3>
 <p>Currently, support for a <code>⎕NA</code> function to call an APL function is limited to the use of the NAG (National Algorithms Group) library of functions. This library is a FORTRAN library and FORTRAN passes arguments by reference (address) rather than by value. The expression:
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="bp">∇</span><span class="nv">f8</span><span class="kd">←</span><span class="p">(</span><span class="nv">P</span><span class="w"> </span><span class="nv">P</span><span class="w"> </span><span class="nv">P</span><span class="w"> </span><span class="nv">P</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="bp">∇</span><span class="nv">f8</span><span class="kd">←</span><span class="p">(</span><span class="nv">P</span><span class="w"> </span><span class="nv">P</span><span class="w"> </span><span class="nv">P</span><span class="w"> </span><span class="nv">P</span><span class="p">)</span>
 </code></pre></div>
 <p>declares a callback function that returns a double and takes 4 pointer arguments. The result can be any of the normal results. It is not possible to return a pointer. The arguments can be from 0 to 16 P values.</p>
 <p>The argument when passed can be the name of an APL function or the <code>⎕OR</code> of a function.</p>
@@ -80908,7 +80908,7 @@ You should consult the documentation for the specific function that you intend t
 <h3 id="memcpy">MEMCPY</h3>
 <p><code>MEMCPY</code> is an extremely versatile function used for moving arbitrary data between memory buffers.</p>
 <p>Its C definition is:
-</p><div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="nf">MEMCPY</span><span class="p">(</span><span class="w">     </span><span class="c1">// copy memory</span>
+</p><div class="language-c highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="nf">MEMCPY</span><span class="p">(</span><span class="w">     </span><span class="c1">// copy memory</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">to</span><span class="p">,</span><span class="w">     </span><span class="c1">// target address</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">fm</span><span class="p">,</span><span class="w">     </span><span class="c1">// source address</span>
 <span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="w">   </span><span class="c1">// number of bytes to copy</span>
@@ -80919,7 +80919,7 @@ You should consult the documentation for the specific function that you intend t
 <h3 class="example">Example</h3>
 
 <p>Suppose a global buffer (at address: <code>addr</code>) contains (<code>numb</code>) double floating point numbers. To copy these to an APL array, we could define the association:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'doubles'</span><span class="w"> </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'dyalog32|MEMCPY &gt;F8[] I4 U4'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'doubles'</span><span class="w"> </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'dyalog32|MEMCPY &gt;F8[] I4 U4'</span>
 <span class="w">      </span><span class="nv">doubles</span><span class="w"> </span><span class="nv">numb</span><span class="w"> </span><span class="nv">addr</span><span class="w"> </span><span class="p">(</span><span class="nv">numb</span><span class="o">×</span><span class="m">8</span><span class="p">)</span>
 </code></pre></div>
 <p>Notice that:</p>
@@ -80930,20 +80930,20 @@ You should consult the documentation for the specific function that you intend t
 <h3 class="example">Example</h3>
 
 <p>Suppose that a database application requires that we construct a record in global memory prior to writing it to file. The record structure might look like this:
-</p><div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
+</p><div class="language-c highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">empno</span><span class="p">;</span><span class="w">     </span><span class="c1">// employee number.</span>
 <span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">salary</span><span class="p">;</span><span class="w">  </span><span class="c1">// salary.</span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">name</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span><span class="w"> </span><span class="c1">// name.</span>
 <span class="p">}</span><span class="w"> </span><span class="n">person</span><span class="p">;</span>
 </code></pre></div>
 <p>Then, having previously allocated memory (<code>addr</code>) to receive the record, we can define:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'prec'</span><span class="w"> </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'dyalog64|MEMCPY P &lt;{P F4 T[20]} P'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'prec'</span><span class="w"> </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'dyalog64|MEMCPY P &lt;{P F4 T[20]} P'</span>
 <span class="w">      </span><span class="nv">prec</span><span class="w"> </span><span class="nv">addr</span><span class="p">(</span><span class="m">99</span><span class="w"> </span><span class="m">12345.60</span><span class="w"> </span><span class="s1">'Charlie Brown'</span><span class="p">)(</span><span class="m">4</span><span class="o">+</span><span class="m">4</span><span class="o">+</span><span class="m">20</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="strncpy">STRNCPY</h3>
 <p><code>STRNCPY</code> is used to copy null-terminated strings between memory buffers.</p>
 <p>Its C definition is:
-</p><div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="nf">STRNCPY</span><span class="p">(</span><span class="w">  </span><span class="c1">// copy null-terminated string</span>
+</p><div class="language-c highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="nf">STRNCPY</span><span class="p">(</span><span class="w">  </span><span class="c1">// copy null-terminated string</span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">to</span><span class="p">,</span><span class="w">   </span><span class="c1">// target address</span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">fm</span><span class="p">,</span><span class="w">   </span><span class="c1">// source address</span>
 <span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="c1">// MAX number of chars to copy</span>
@@ -80955,13 +80955,13 @@ You should consult the documentation for the specific function that you intend t
 <h3 class="example">Example</h3>
 
 <p>Suppose that a database application returns a pointer (<code>addr</code>) to a structure that contains two (max 20-char) null-terminated strings.
-</p><div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span><span class="w">     </span><span class="c1">// null-terminated strings:</span>
+</p><div class="language-c highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span><span class="w">     </span><span class="c1">// null-terminated strings:</span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">first</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span><span class="w">  </span><span class="c1">// first name (max 19 chars + 1 null).</span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">last</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span><span class="w">   </span><span class="c1">// last name. (max 19 chars + 1 null).</span>
 <span class="p">}</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
 </code></pre></div>
 <p>To copy the names <em>from</em> the structure:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'get'</span><span class="nf">⎕NA</span><span class="s1">'dyalog64|STRNCPY &gt;0T1[] P U4'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'get'</span><span class="nf">⎕NA</span><span class="s1">'dyalog64|STRNCPY &gt;0T1[] P U4'</span>
 <span class="w">      </span><span class="nv">get</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="nv">addr</span><span class="w"> </span><span class="m">20</span>
 <span class="nv">Charlie</span>
 <span class="w">      </span><span class="nv">get</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="p">(</span><span class="nv">addr</span><span class="o">+</span><span class="m">20</span><span class="p">)</span><span class="w"> </span><span class="m">20</span>
@@ -80969,7 +80969,7 @@ You should consult the documentation for the specific function that you intend t
 </code></pre></div>
 <p>Note that (as this is a 64-bit example), <code>⎕FR</code> must be 1287 for the addition to be reliable.</p>
 <p>To copy data <em>from</em> the workspace <em>into</em> an already allocated (<code>new</code>) structure:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'put'</span><span class="nf">⎕NA</span><span class="s1">'dyalog32|STRNCPY I4 &lt;0T[] U4'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'put'</span><span class="nf">⎕NA</span><span class="s1">'dyalog32|STRNCPY I4 &lt;0T[] U4'</span>
 <span class="w">      </span><span class="nv">put</span><span class="w"> </span><span class="nv">new</span><span class="w"> </span><span class="s1">'Bo'</span><span class="w"> </span><span class="m">20</span>
 <span class="w">      </span><span class="nv">put</span><span class="w"> </span><span class="p">(</span><span class="nv">new</span><span class="o">+</span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="s1">'Peep'</span><span class="w"> </span><span class="m">20</span>
 </code></pre></div>
@@ -80980,7 +80980,7 @@ You should consult the documentation for the specific function that you intend t
 <p>This is a cover for the C standard function <code>wcsncpy()</code>. It is named this way so that (on Microsoft Windows) <code>STRNCPY*</code> will behave helpfully.</p>
 <h3 id="strlen">STRLEN</h3>
 <p><code>STRLEN</code> calculates the length of a C string (a 0-terminated string of bytes in memory). Its C declaration is:
-</p><div class="highlight"><pre><span></span><code><span class="kt">size_t</span><span class="w"> </span><span class="nf">STRLEN</span><span class="p">(</span><span class="w">       </span><span class="c1">// calculate length of string</span>
+</p><div class="language-c highlight"><pre><span></span><code><span class="kt">size_t</span><span class="w"> </span><span class="nf">STRLEN</span><span class="p">(</span><span class="w">       </span><span class="c1">// calculate length of string</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="w">    </span><span class="c1">// address of string</span>
 <span class="p">);</span>
 </code></pre></div>
@@ -80988,7 +80988,7 @@ You should consult the documentation for the specific function that you intend t
 
 <p>Suppose that a database application returns a pointer (<code>addr</code>) to a null-terminated string and you do not know the upper bound on the length of the string.</p>
 <p>To copy the string into the workspace:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'len'</span><span class="nf">⎕NA</span><span class="s1">'P dyalog32|STRLEN P'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'len'</span><span class="nf">⎕NA</span><span class="s1">'P dyalog32|STRLEN P'</span>
 <span class="w">      </span><span class="s1">'cpy'</span><span class="nf">⎕NA</span><span class="s1">'dyalog32|MEMCPY &gt;T[] P P'</span>
 <span class="w">      </span><span class="nv">cpy</span><span class="w"> </span><span class="nv">l</span><span class="w"> </span><span class="nv">addr</span><span class="w"> </span><span class="p">(</span><span class="nv">l</span><span class="kd">←</span><span class="nv">len</span><span class="w"> </span><span class="nv">addr</span><span class="p">)</span>
 <span class="nv">Bartholemew</span>
@@ -80998,64 +80998,64 @@ You should consult the documentation for the specific function that you intend t
 <p>This DLL should be located in a standard Windows directory, so you should not normally need to give the full path name of the library. However if trying these examples results in the error message <code>FILE ERROR 1 No such file or directory</code>, you must locate the DLL and supply the full path name (and possibly extension).</p>
 <h3 id="getcaretblinktime">GetCaretBlinkTime()</h3>
 <p>The Windows function <code>GetCaretBlinkTime</code> retrieves the caret blink rate.  It takes no arguments and returns an unsigned <em>int</em> and is declared as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="n">UINT</span><span class="w"> </span><span class="nf">GetCaretBlinkTime</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<div class="language-c highlight"><pre><span></span><code><span class="n">UINT</span><span class="w"> </span><span class="nf">GetCaretBlinkTime</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 </code></pre></div>
 <p>The following statements would provide access to this routine through an APL function of the same name.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'U user32|GetCaretBlinkTime'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'U user32|GetCaretBlinkTime'</span>
 <span class="w">      </span><span class="nv">GetCaretBlinkTime</span>
 <span class="m">530</span>
 </code></pre></div>
 <p>The following statement would achieve the same thing, but using an APL function called <code>BLINK</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'BLINK'</span><span class="w"> </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'U user32|GetCaretBlinkTime'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'BLINK'</span><span class="w"> </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'U user32|GetCaretBlinkTime'</span>
 <span class="w">      </span><span class="nv">BLINK</span>
 <span class="m">530</span>
 </code></pre></div>
 <h3 id="setcaretblinktime">SetCaretBlinkTime()</h3>
 <p>The Microsoft Windows function <code>SetCaretBlinkTime</code> sets the caret blink rate. It takes a single unsigned <code>int</code> argument, does not return a result and is declared as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">SetCaretBlinkTime</span><span class="p">(</span><span class="n">UINT</span><span class="p">);</span>
+<div class="language-c highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">SetCaretBlinkTime</span><span class="p">(</span><span class="n">UINT</span><span class="p">);</span>
 </code></pre></div>
 <p>The following statements would provide access to this routine through an APL function of the same name:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'user32|SetCaretBlinkTime U'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'user32|SetCaretBlinkTime U'</span>
 <span class="w">      </span><span class="nv">SetCaretBlinkTime</span><span class="w"> </span><span class="m">1000</span>
 </code></pre></div>
 <h3 id="messagebox">MessageBox()</h3>
 <p>The Microsoft Windows function <code>MessageBox</code> displays a standard dialog box on the screen and awaits a response from the user.  It takes 4 arguments.  The first is the window handle for the window that owns the message box.  This is declared as an unsigned <em>int</em>.  The second and third arguments are both pointers to null-terminated strings containing the message to be displayed in the Message Box and the caption to be used in the window title bar.  The 4th argument is an unsigned <em>int</em> that specifies the Message Box type.  The result is an <em>int</em> which indicates which of the buttons in the message box the user has pressed.  The function is declared as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">MessageBox</span><span class="p">(</span><span class="n">HWND</span><span class="p">,</span><span class="w"> </span><span class="n">LPCSTR</span><span class="p">,</span><span class="w"> </span><span class="n">LPCSTR</span><span class="p">,</span><span class="w"> </span><span class="n">UINT</span><span class="p">);</span>
+<div class="language-c highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">MessageBox</span><span class="p">(</span><span class="n">HWND</span><span class="p">,</span><span class="w"> </span><span class="n">LPCSTR</span><span class="p">,</span><span class="w"> </span><span class="n">LPCSTR</span><span class="p">,</span><span class="w"> </span><span class="n">UINT</span><span class="p">);</span>
 </code></pre></div>
 <p>The following statements provide access to this routine through an APL function of the same name. Note that the 2nd and 3rd arguments are both coded as input pointers to type T null-terminated character arrays which ensures portability between Editions.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'I user32|MessageBox* P &lt;0T &lt;0T U'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'I user32|MessageBox* P &lt;0T &lt;0T U'</span>
 </code></pre></div>
 <p>The following statement displays a Message Box with a stop sign icon together with 2 push buttons labelled OK and Cancel (this is specified by the value 19).
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MessageBox</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="s1">'Message'</span><span class="w"> </span><span class="s1">'Title'</span><span class="w"> </span><span class="m">19</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MessageBox</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="s1">'Message'</span><span class="w"> </span><span class="s1">'Title'</span><span class="w"> </span><span class="m">19</span>
 </code></pre></div>
 <p>The function works equally well in the Unicode Edition because the <code>&lt;0T</code> specification is portable.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MessageBox</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="s1">'Το Μήνυμα'</span><span class="w"> </span><span class="s1">'Ο Τίτλος'</span><span class="w"> </span><span class="m">19</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MessageBox</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="s1">'Το Μήνυμα'</span><span class="w"> </span><span class="s1">'Ο Τίτλος'</span><span class="w"> </span><span class="m">19</span>
 </code></pre></div>
 <p>Note that a simpler, portable (and safer) method for displaying a Message Box is to use Dyalog APL's primitive <code>MsgBox</code> object.</p>
 <h3 id="findwindow">FindWindow()</h3>
 <p>The Microsoft Windows function <code>FindWindow</code> obtains the window handle of a window which has a given character string in its title bar.  The function takes two arguments.  The first is a pointer to a null-terminated character string that specifies the window's class name. However, if you are not interested in the class name, this argument should be a NULL pointer.  The second is a pointer to a character string that specifies the title that identifies the window in question.  This is an example of a case described above where two instances of the function must be defined to cater for the two different types of argument.  However, in practice this function is most often used without specifying the class name.  The function is declared as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="n">HWND</span><span class="w"> </span><span class="nf">FindWindow</span><span class="p">(</span><span class="n">LPCSTR</span><span class="p">,</span><span class="w"> </span><span class="n">LPCSTR</span><span class="p">);</span>
+<div class="language-c highlight"><pre><span></span><code><span class="n">HWND</span><span class="w"> </span><span class="nf">FindWindow</span><span class="p">(</span><span class="n">LPCSTR</span><span class="p">,</span><span class="w"> </span><span class="n">LPCSTR</span><span class="p">);</span>
 </code></pre></div>
 <p>The following statement associates the APL function <code>FW</code> with the second variant of the FindWindow call, where the class name is specified as a NULL pointer.  To indicate that APL is to pass the <em>value</em> of the NULL pointer, rather than its address, we need to code this argument as <code>I4</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'FW'</span><span class="w"> </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'P user32|FindWindow* P &lt;0T'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'FW'</span><span class="w"> </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'P user32|FindWindow* P &lt;0T'</span>
 </code></pre></div>
 <p>To obtain the handle of the window entitled "CLEAR WS - Dyalog APL/W":
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="vg">⎕</span><span class="kd">←</span><span class="nv">HNDL</span><span class="kd">←</span><span class="nv">FW</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="s1">'CLEAR WS - Dyalog APL/W'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="vg">⎕</span><span class="kd">←</span><span class="nv">HNDL</span><span class="kd">←</span><span class="nv">FW</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="s1">'CLEAR WS - Dyalog APL/W'</span>
 <span class="m">59245156</span>
 </code></pre></div>
 <h3 id="getwindowtext">GetWindowText()</h3>
 <p>The Microsoft Windows function <code>GetWindowText</code> retrieves the caption displayed in a window's title bar.  It takes 3 arguments.  The first is an unsigned <em>int</em> containing the window handle.  The second is a pointer to a buffer to receive the caption as a null-terminated character string.  This is an example of an output array.  The third argument is an <em>int</em> which specifies the maximum number of characters to be copied into the output buffer.  The function returns an <em>int</em> containing the actual number of characters copied into the buffer and is declared as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">GetWindowText</span><span class="p">(</span><span class="n">HWND</span><span class="p">,</span><span class="w"> </span><span class="n">LPSTR</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">);</span>
+<div class="language-c highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">GetWindowText</span><span class="p">(</span><span class="n">HWND</span><span class="p">,</span><span class="w"> </span><span class="n">LPSTR</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">);</span>
 </code></pre></div>
 <p>The following associates the "<code>GetWindowText</code>" DLL function with an APL function of the same name.  Note that the second argument is coded as "<code>&gt;0T</code>" indicating that it is a pointer to a character output array.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'I user32|GetWindowText* P &gt;0T I'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'I user32|GetWindowText* P &gt;0T I'</span>
 </code></pre></div>
 <p>Now change the Session caption using <code>)WSID</code> :
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">WSID</span><span class="w"> </span><span class="nv">MYWS</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">WSID</span><span class="w"> </span><span class="nv">MYWS</span>
 <span class="nv">was</span><span class="w"> </span><span class="nv">CLEAR</span><span class="w"> </span><span class="nv">WS</span>
 </code></pre></div>
 <p>Then retrieve the new caption (max length 255) using window handle <code>HNDL</code> from the previous example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="nv">GetWindowText</span><span class="w"> </span><span class="nv">HNDL</span><span class="w"> </span><span class="m">255</span><span class="w"> </span><span class="m">255</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="nv">GetWindowText</span><span class="w"> </span><span class="nv">HNDL</span><span class="w"> </span><span class="m">255</span><span class="w"> </span><span class="m">255</span>
 <span class="na">.</span><span class="kd">→</span><span class="o">-------------------------</span><span class="na">.</span>
 <span class="o">|</span><span class="w">    </span><span class="na">.</span><span class="kd">→</span><span class="o">------------------</span><span class="na">.</span><span class="w"> </span><span class="o">|</span>
 <span class="o">|</span><span class="w"> </span><span class="m">19</span><span class="w"> </span><span class="o">|</span><span class="nv">MYWS</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">APL</span><span class="na">/</span><span class="nv">W</span><span class="o">|</span><span class="w"> </span><span class="o">|</span>
@@ -81070,7 +81070,7 @@ You should consult the documentation for the specific function that you intend t
 </ol>
 <p>An alternative way of coding and using this function is to treat the second argument as an input/output array.</p>
 <p>For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'I User32|GetWindowText* P =0T I'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'I User32|GetWindowText* P =0T I'</span>
 <span class="w"> </span>
 <span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="nv">GetWindowText</span><span class="w"> </span><span class="nv">HNDL</span><span class="w"> </span><span class="p">(</span><span class="m">255</span><span class="o">⍴</span><span class="s1">' '</span><span class="p">)</span><span class="w"> </span><span class="m">255</span>
 <span class="na">.</span><span class="kd">→</span><span class="o">-------------------------</span><span class="na">.</span>
@@ -81082,10 +81082,10 @@ You should consult the documentation for the specific function that you intend t
 <p>In this case, the second argument is coded as <code>=0T</code>, so when the function is called an array of the appropriate size must be supplied.  This method uses more space in the workspace, although for small arrays (as in this case) the real impact of doing so is negligible.</p>
 <h3 id="getcharwidth">GetCharWidth()</h3>
 <p>The function <code>GetCharWidth</code> returns the width of each character in a given range. Its first argument is a device context (handle).  Its second and third arguments specify font positions (start and end).  The third argument is the resulting integer vector that contains the character widths (this is an example of an output array).  The function returns a Boolean value to indicate success or failure.  The function is defined as follows.  Note that this function is provided in the library: <code>gdi32.dll</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">BOOL</span><span class="w"> </span><span class="nf">GetCharWidth</span><span class="p">(</span><span class="n">HDC</span><span class="p">,</span><span class="w"> </span><span class="n">UINT</span><span class="p">,</span><span class="w"> </span><span class="n">UINT</span><span class="p">,</span><span class="w"> </span><span class="n">LPINT</span><span class="p">);</span>
+<div class="language-c highlight"><pre><span></span><code><span class="n">BOOL</span><span class="w"> </span><span class="nf">GetCharWidth</span><span class="p">(</span><span class="n">HDC</span><span class="p">,</span><span class="w"> </span><span class="n">UINT</span><span class="p">,</span><span class="w"> </span><span class="n">UINT</span><span class="p">,</span><span class="w"> </span><span class="n">LPINT</span><span class="p">);</span>
 </code></pre></div>
 <p>The following statements provide access to this routine through an APL function of the same name:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'U4 gdi32|GetCharWidth* P U U &gt;I[]'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NA</span><span class="w"> </span><span class="s1">'U4 gdi32|GetCharWidth* P U U &gt;I[]'</span>
 <span class="w"> </span>
 <span class="w">     </span><span class="s1">'Prin'</span><span class="nf">⎕WC</span><span class="s1">'Printer'</span>
 <span class="w"> </span>
@@ -81110,7 +81110,7 @@ You should consult the documentation for the specific function that you intend t
 <li>Free the memory.</li>
 </ol>
 <p>Notice that steps 1 and 7 and steps 2 and 6 complement each other. That is, if you allocate global system memory, you must free it after you have finished using it. If you continue to use global memory without freeing it, your system will gradually run out of resources. Similarly, if you lock memory (which you must do before using it), then you should unlock it before freeing it. Although on some versions of Windows, freeing the memory will include unlocking it, in the interests of good style, maintaining the symmetry is probably a good thing.</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">version</span><span class="kd">←</span><span class="nv">DllVersion</span><span class="w"> </span><span class="nv">file</span><span class="sr">;</span><span class="nv">Alloc</span><span class="sr">;</span><span class="nv">Free</span><span class="sr">;</span><span class="nv">Lock</span><span class="sr">;</span><span class="nv">Unlock</span><span class="sr">;</span><span class="nv">Size</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">version</span><span class="kd">←</span><span class="nv">DllVersion</span><span class="w"> </span><span class="nv">file</span><span class="sr">;</span><span class="nv">Alloc</span><span class="sr">;</span><span class="nv">Free</span><span class="sr">;</span><span class="nv">Lock</span><span class="sr">;</span><span class="nv">Unlock</span><span class="sr">;</span><span class="nv">Size</span>
 <span class="w">                  </span><span class="sr">;</span><span class="nv">Info</span><span class="sr">;</span><span class="nv">Value</span><span class="sr">;</span><span class="nv">Copy</span><span class="sr">;</span><span class="nv">size</span><span class="sr">;</span><span class="nv">hndl</span><span class="sr">;</span><span class="nv">addr</span><span class="sr">;</span><span class="nv">buff</span><span class="sr">;</span><span class="nv">ok</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">  </span><span class="s1">'Alloc'</span><span class="nf">⎕NA</span><span class="s1">'P kernel32|GlobalAlloc U4 P'</span>
@@ -81151,7 +81151,7 @@ You should consult the documentation for the specific function that you intend t
 <p>Unlock on line[23] is called if  and only if the call to Lock on line [15] succeeds.</p>
 <p>A result is returned from the function <em>only</em> if all the calls are successful Otherwise, the calling environment will sustain a <code>VALUE ERROR</code>.</p>
 <h3 id="more-examples">More Examples</h3>
-<div class="highlight"><pre><span></span><code><span class="nf">⎕NA</span><span class="s1">'I4 advapi32 |RegCloseKey          P'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="nf">⎕NA</span><span class="s1">'I4 advapi32 |RegCloseKey          P'</span>
 <span class="nf">⎕NA</span><span class="s1">'I4 advapi32 |RegCreateKeyEx*      P &lt;0T U4 &lt;0T U4 U4 P &gt;P &gt;U4'</span>
 <span class="nf">⎕NA</span><span class="s1">'I4 advapi32 |RegEnumValue*        P U4 &gt;0T =U4 =U4 &gt;U4 &gt;0T =U4'</span>
 <span class="nf">⎕NA</span><span class="s1">'I4 advapi32 |RegOpenKey*          P &lt;0T &gt;P'</span>
@@ -81238,7 +81238,7 @@ You should consult the documentation for the specific function that you intend t
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

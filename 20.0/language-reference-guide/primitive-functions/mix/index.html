@@ -78995,24 +78995,24 @@
 <h2 id="simple-vector-examples">Simple Vector Examples</h2>
 <p>In this example, the shape of <code>Y</code> is 3, and the shape of  <code>y</code> is 2. So the shape of the result will be a permutation of 2 and 3, that is, in this simple example, either <code>(2 3)</code> or <code>(3 2</code>).</p>
 <p>If <code>K</code> is omitted, the shape of the result is <code>(⍴Y),⍴y</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)(</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="p">)(</span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)(</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="p">)(</span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
 <span class="m">1</span><span class="w"> </span><span class="m">2</span>
 <span class="m">3</span><span class="w"> </span><span class="m">4</span>
 <span class="m">5</span><span class="w"> </span><span class="m">6</span>
 </code></pre></div>
 <p>If <code>K</code> is between 0 and 1, the shape of the result is <code>(⍴y),⍴Y</code> because <code>(⍴y)</code> is inserted between the 0<sup>th</sup> and the 1<sup>st</sup> axis of the result, that is, at the beginning.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="sr">[</span><span class="m">.5</span><span class="sr">]</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)(</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="p">)(</span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="sr">[</span><span class="m">.5</span><span class="sr">]</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)(</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="p">)(</span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
 <span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">5</span>
 <span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">6</span>
 </code></pre></div>
 <p>If <code>K</code> is between 1 and 2, the shape of the result is <code>(⍴Y),⍴y</code> because <code>(⍴y)</code> is inserted between the 1<sup>st</sup> and 2<sup>nd</sup> axis of the result, that is, at the end. This is the same as the case when <code>K</code> is omitted.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="sr">[</span><span class="m">1.5</span><span class="sr">]</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)(</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="p">)(</span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="sr">[</span><span class="m">1.5</span><span class="sr">]</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)(</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="p">)(</span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
 <span class="m">1</span><span class="w"> </span><span class="m">2</span>
 <span class="m">3</span><span class="w"> </span><span class="m">4</span>
 <span class="m">5</span><span class="w"> </span><span class="m">6</span>
 </code></pre></div>
 <p>An integer <code>K</code> may be used instead. If <code>⎕ML≥2</code>,  <code>⊃</code> is used instead of <code>↑</code>).
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕ML</span><span class="kd">←</span><span class="m">3</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕ML</span><span class="kd">←</span><span class="m">3</span>
 <span class="w">      </span><span class="o">⊃</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)(</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="p">)(</span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
 <span class="m">1</span><span class="w"> </span><span class="m">2</span>
 <span class="m">3</span><span class="w"> </span><span class="m">4</span>
@@ -79027,7 +79027,7 @@
 </code></pre></div>
 <h2 id="shape-extension">Shape Extension</h2>
 <p>If the items of <code>Y</code> are unequal in shape, the shorter ones are extended:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕ML</span><span class="kd">←</span><span class="m">3</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕ML</span><span class="kd">←</span><span class="m">3</span>
 <span class="w">      </span><span class="o">⊃</span><span class="p">(</span><span class="m">1</span><span class="p">)(</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="p">)(</span><span class="m">5</span><span class="p">)</span>
 <span class="m">1</span><span class="w"> </span><span class="m">0</span>
 <span class="m">3</span><span class="w"> </span><span class="m">4</span>
@@ -79037,7 +79037,7 @@
 <span class="m">0</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <h1 id="more-simple-vector-examples">More Simple Vector Examples</h1>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">box</span><span class="w"> </span><span class="nv">on</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">box</span><span class="w"> </span><span class="nv">on</span>
 <span class="nv">Was</span><span class="w"> </span><span class="nv">OFF</span>
 <span class="w">       </span><span class="s1">'Andy'</span><span class="w"> </span><span class="s1">'Geoff'</span><span class="w"> </span><span class="s1">'Pauline'</span>
 <span class="err">┌────┬─────┬───────┐</span>
@@ -79075,7 +79075,7 @@
 <p>Notice that in the last statement, the shape of the third item was extended by catenating it with its prototype.</p>
 <h3 id="example-matrix-of-matrices">Example (Matrix of Matrices)</h3>
 <p>In the following examples, <code>Y</code> is a matrix of shape <code>(5 4)</code> and each item of <code>Y</code> (<code>y</code>) is a matrix of shape <code>(3 2)</code>. The shape of the result will be some permutation of <code>(5 4 3 2)</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="nv">Y</span><span class="kd">←</span><span class="m">5</span><span class="w"> </span><span class="m">4</span><span class="o">⍴</span><span class="p">(</span><span class="o">⍳</span><span class="m">20</span><span class="p">)</span><span class="o">×⊂</span><span class="m">3</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="m">1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="nv">Y</span><span class="kd">←</span><span class="m">5</span><span class="w"> </span><span class="m">4</span><span class="o">⍴</span><span class="p">(</span><span class="o">⍳</span><span class="m">20</span><span class="p">)</span><span class="o">×⊂</span><span class="m">3</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="m">1</span>
 <span class="w">       </span><span class="nv">Y</span>
 <span class="err">┌─────┬─────┬─────┬─────┐</span>
 <span class="err">│</span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="err">│</span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="w">  </span><span class="err">│</span><span class="m">3</span><span class="w"> </span><span class="m">3</span><span class="w">  </span><span class="err">│</span><span class="m">4</span><span class="w"> </span><span class="m">4</span><span class="w">  </span><span class="err">│</span>
@@ -79100,7 +79100,7 @@
 <span class="err">└─────┴─────┴─────┴─────┘</span>
 </code></pre></div>
 <p>By default, the axes of <code>y</code> appear in the last position in the shape of the result, but this position is altered by specifying the axis <code>K</code>. Notice where the <code>(3 2)</code> appears in the following results:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴⊃</span><span class="nv">Y</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴⊃</span><span class="nv">Y</span>
 <span class="m">5</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">2</span>
 <span class="w">      </span><span class="o">⍴⊃</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="nv">Y</span>
 <span class="m">3</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">4</span>
@@ -79116,7 +79116,7 @@
 <p>Note that <code>⊃[4]Y</code> generates an <code>INDEX ERROR</code> because 4 is greater than the length of the result.</p>
 <h3 id="example-vector-k">Example (Vector K)</h3>
 <p>The axes of <code>y</code> do not have to be contiguous in the shape of the result. By specifying a vector <code>K</code>, they can be distributed. Notice where the <code>3</code> and the <code>2</code> appear in the following results:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴⊃</span><span class="sr">[</span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="sr">]</span><span class="nv">Y</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴⊃</span><span class="sr">[</span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="sr">]</span><span class="nv">Y</span>
 <span class="m">3</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">4</span>
 <span class="w">      </span><span class="o">⍴⊃</span><span class="sr">[</span><span class="m">1</span><span class="w"> </span><span class="m">4</span><span class="sr">]</span><span class="nv">Y</span>
 <span class="m">3</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">2</span>
@@ -79127,7 +79127,7 @@
 </code></pre></div>
 <h3 id="rank-extension">Rank Extension</h3>
 <p>If the items of <code>Y</code> are unequal in rank, the lower rank items are extended in rank by prefixing their shapes with 1s. Each additional 1 may then be increased to match the maximum shape of the other items along that axis.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕ML</span><span class="kd">←</span><span class="m">3</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕ML</span><span class="kd">←</span><span class="m">3</span>
 <span class="w">      </span><span class="nv">Y</span><span class="kd">←</span><span class="p">(</span><span class="m">1</span><span class="p">)(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="p">)(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="m">10</span><span class="o">×⍳</span><span class="m">8</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">Y</span>
 <span class="err">┌─┬───────┬────────┐</span>
@@ -79176,7 +79176,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

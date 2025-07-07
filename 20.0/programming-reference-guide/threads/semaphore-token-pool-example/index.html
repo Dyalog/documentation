@@ -78706,7 +78706,7 @@
 
 <p>A <em>semaphore</em> to control a number of resources can be implemented by keeping that number of tokens in the pool. Each thread will take a token while processing, and return it to the pool when it has finished.</p>
 <p>For example, if we want to restrict the number of threads that can have sockets open at any one time.
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">sock</span><span class="kd">←</span><span class="m">99</span><span class="w">                  </span><span class="c1">⍝ socket-token</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="nv">sock</span><span class="kd">←</span><span class="m">99</span><span class="w">                  </span><span class="c1">⍝ socket-token</span>
 <span class="w">                               </span><span class="nv">any</span><span class="w"> </span><span class="o">+</span><span class="nv">ive</span><span class="w"> </span><span class="nv">number</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">do</span><span class="p">)</span><span class="na">.</span>
 <span class="w">    </span><span class="nf">⎕TPUT</span><span class="w"> </span><span class="m">5</span><span class="na">/</span><span class="nv">sock</span><span class="w">             </span><span class="c1">⍝ add 5 socket-tokens to pool.</span>
 
@@ -78752,7 +78752,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

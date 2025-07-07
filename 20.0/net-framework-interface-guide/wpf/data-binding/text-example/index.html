@@ -78809,7 +78809,7 @@
 <p><img alt="" src="../../../img/data-binding-text-xaml-1.png"></p>
 <h2 id="the-xaml">The XAML</h2>
 <p>The XAML shown below, describes a Window containing a TextBox.
-</p><div class="highlight"><pre><span></span><code><span class="nt">&lt;Window</span>
+</p><div class="language-xml highlight"><pre><span></span><code><span class="nt">&lt;Window</span>
 <span class="w"> </span><span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span>
 <span class="w"> </span><span class="na">xmlns:x=</span><span class="s">"http://schemas.microsoft.com/winfx/2006/xaml"</span>
 <span class="w"> </span><span class="na">Name=</span><span class="s">"Temp"</span>
@@ -78821,14 +78821,14 @@
 <span class="nt">&lt;/Window&gt;</span>
 </code></pre></div>
 <p>It contains a data binding expression, namely:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span>Text="{Binding<span class="w"> </span>txtSource,Mode=TwoWay,
+</p><div class="language-xml highlight"><pre><span></span><code><span class="w">      </span>Text="{Binding<span class="w"> </span>txtSource,Mode=TwoWay,
 <span class="w">             </span>UpdateSourceTrigger=PropertyChanged}"
 </code></pre></div>
 <p>This specifies that the Text property of the TextBox is bound to a value in the Binding Source (which has yet to be defined) whose path is <code>txtSource</code>. The binding mode is set to <code>TwoWay</code> which means that any change in the TextBox will be reflected in a new value in the Binding Source, and vice-versa. The value in the Binding Source will be updated when the property (in this case the Text Property) changes.</p>
 <h2 id="the-apl-code">The APL Code</h2>
 <p>The function <code>Text</code> which generates this example is shown below.</p>
 <p>The argument <code>txt</code> is the text to be displayed initially in the TextBox. Note that the variable <code>XAML_Text</code> contains the XAML that describes the user-interface listed above.</p>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Text</span><span class="w"> </span><span class="nv">txt</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">str</span><span class="sr">;</span><span class="nv">xml</span><span class="sr">;</span><span class="nv">win</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Text</span><span class="w"> </span><span class="nv">txt</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">str</span><span class="sr">;</span><span class="nv">xml</span><span class="sr">;</span><span class="nv">win</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="o">,⊂</span><span class="s1">'System.Windows.Controls,WPF/PresentationFramework.dll'</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="kd">←</span><span class="nv">LoadXAML</span><span class="w"> </span><span class="nv">XAML</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="na">.</span><span class="nv">txtBox</span><span class="kd">←</span><span class="nv">win</span><span class="na">.</span><span class="nv">FindName</span><span class="o">⊂</span><span class="s1">'txt'</span>
@@ -78841,7 +78841,7 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>The utility function <code>LoadXAML</code> incorporates the 3 lines of code, used to create a WPF window from XAML, that were coded in-line in previous examples in this chapter.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">win</span><span class="kd">←</span><span class="nv">LoadXAML</span><span class="w"> </span><span class="nv">xaml</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">str</span><span class="sr">;</span><span class="nv">xml</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">win</span><span class="kd">←</span><span class="nv">LoadXAML</span><span class="w"> </span><span class="nv">xaml</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">str</span><span class="sr">;</span><span class="nv">xml</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System.IO'</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'System.Windows.Markup'</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'System.Xml,system.xml.dll'</span>
@@ -78853,36 +78853,36 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p><code>Text[1]</code> defines the .NET search path needed to access the WPF controls.
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="o">,⊂</span><span class="s1">'System.Windows.Controls,WPF/PresentationFramework.dll'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="o">,⊂</span><span class="s1">'System.Windows.Controls,WPF/PresentationFramework.dll'</span>
 </code></pre></div>
 <p><code>Text[2-3]</code> uses the utility function <code>LoadXAML</code> to load a WPF user-interface from the XAML and then uses the FindName method to obtain a reference to the object named <em>txt</em>.
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="kd">←</span><span class="nv">LoadXAML</span><span class="w"> </span><span class="nv">XAML</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="kd">←</span><span class="nv">LoadXAML</span><span class="w"> </span><span class="nv">XAML</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="na">.</span><span class="nv">txtBox</span><span class="kd">←</span><span class="nv">win</span><span class="na">.</span><span class="nv">FindName</span><span class="o">⊂</span><span class="s1">'txt'</span>
 </code></pre></div>
 <p><code>Text[5-6]</code> initialise a new global variable named <code>txtSource</code> to the value of the argument. When using a <em>global</em> variable as a data binding source, it is generally advisable to establish a new variable by first expunging it.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">5</span><span class="sr">]</span><span class="w">   </span><span class="nf">⎕EX</span><span class="s1">'txtSource'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">5</span><span class="sr">]</span><span class="w">   </span><span class="nf">⎕EX</span><span class="s1">'txtSource'</span>
 <span class="sr">[</span><span class="m">6</span><span class="sr">]</span><span class="w">   </span><span class="nv">txtSource</span><span class="kd">←</span><span class="nv">txt</span>
 </code></pre></div>
 <p><code>Text[7]</code>creates a Binding Source object using <code>2015⌶</code> and assigns it to the DataContext property of the TextBox object. Because it is a character vector, the exported Type for the bound variable <code>txtSource</code> is System.String which is appropriate for the Text property of a TextBox.
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">7</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="na">.</span><span class="nv">txtBox</span><span class="na">.</span><span class="nv">DataContext</span><span class="kd">←</span><span class="m">2015</span><span class="na">⌶</span><span class="s1">'txtSource'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">7</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="na">.</span><span class="nv">txtBox</span><span class="na">.</span><span class="nv">DataContext</span><span class="kd">←</span><span class="m">2015</span><span class="na">⌶</span><span class="s1">'txtSource'</span>
 </code></pre></div>
 <p><code>Text[9]</code> displays the Window. Note that although the APL local variable <code>win</code> goes out of scope when the function terminates, the Window remains visible until the user has closed it.
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">9</span><span class="sr">]</span><span class="w">   </span><span class="nv">win</span><span class="na">.</span><span class="nv">Show</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">9</span><span class="sr">]</span><span class="w">   </span><span class="nv">win</span><span class="na">.</span><span class="nv">Show</span>
 </code></pre></div>
 <h2 id="testing-the-data-binding">Testing the Data Binding</h2>
 <p>The following expressions may be used to explore the effect of data binding.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">wpfintro</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">wpfintro</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">DataBinding</span><span class="na">.</span><span class="nv">Text</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Text</span><span class="w"> </span><span class="s1">'Hello World'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Text</span><span class="w"> </span><span class="s1">'Hello World'</span>
 </code></pre></div>
 <p><img alt="" src="../../../img/data-binding-text-xaml-1.png">
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nv">txtSource</span><span class="kd">←</span><span class="o">⌽</span><span class="nv">txtSource</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="nv">txtSource</span><span class="kd">←</span><span class="o">⌽</span><span class="nv">txtSource</span>
 </code></pre></div>
 <p><img alt="" src="../../../img/data-binding-text-xaml-2.png"></p>
 <p>Typing into the TextBox changes the value of the bound variable.</p>
 <p><img alt="" src="../../../img/data-binding-text-xaml-3.png">
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">txtSource</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">txtSource</span>
 <span class="nv">What</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">txtSource</span><span class="w"> </span><span class="nv">now</span><span class="o">?</span>
 </code></pre></div>
 <div class="footnote">
@@ -78922,7 +78922,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78722,16 +78722,16 @@
 <p>If <code>Y</code> is the name of a defined function or operator, a label or a namespace in the active workspace, a <code>DOMAIN ERROR</code> is reported.</p>
 <p>Attempts to assign namespace references or the <code>⎕OR</code> of namespaces to an external array will result in a <code>DOMAIN ERROR</code>.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'EXT\ARRAY'</span><span class="w"> </span><span class="nf">⎕XT</span><span class="w"> </span><span class="s1">'V'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'EXT\ARRAY'</span><span class="w"> </span><span class="nf">⎕XT</span><span class="w"> </span><span class="s1">'V'</span>
 </code></pre></div>
 <p>If the file reference does not exist, the external variable has no value until a value is assigned:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">V</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">V</span>
 <span class="nv">VALUE</span><span class="w"> </span><span class="nv">ERROR</span>
 <span class="w">      </span><span class="nv">V</span>
 <span class="w">      </span><span class="err">^</span>
 </code></pre></div>
 <p>A value assigned to an external variable is stored in file space, not within the workspace:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕WA</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕WA</span>
 <span class="m">2261186</span>
 
 <span class="w">      </span><span class="nv">V</span><span class="kd">←</span><span class="o">⍳</span><span class="m">100000</span>
@@ -78741,7 +78741,7 @@
 </code></pre></div>
 <p>There are no specific restrictions placed on the use of external variables.  They must conform to the normal requirements when used as arguments of functions or as operands of operators.  The essential difference between a variable and an external variable is that an external variable requires only temporary workspace for an operation to accommodate (usually) a part of its value.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">V</span><span class="kd">←</span><span class="o">⍳</span><span class="m">5</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">V</span><span class="kd">←</span><span class="o">⍳</span><span class="m">5</span>
 <span class="w">      </span><span class="o">+</span><span class="na">/</span><span class="nv">V</span>
 <span class="m">15</span>
 
@@ -78755,7 +78755,7 @@
 </code></pre></div>
 <p>Assignment allows the structure or the value of an external variable to be changed without fully defining the external array in the workspace.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">V</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">8</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">V</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">8</span>
 
 <span class="w">      </span><span class="o">⍴</span><span class="nv">V</span>
 <span class="m">6</span>
@@ -78772,7 +78772,7 @@
 </code></pre></div>
 <p>An external array is (usually) preserved in file space when the name of the external variable is disassociated from the file.  It may be re-associated with any valid variable name.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'V'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'V'</span>
 
 <span class="w">      </span><span class="s1">'EXT\ARRAY'</span><span class="nf">⎕XT</span><span class="s1">'F'</span>
 
@@ -78782,7 +78782,7 @@
 </code></pre></div>
 <p>In UNIX versions, if <code>X</code> is an empty vector, the external array is associated with a temporary file which is erased when the array is disassociated.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">''</span><span class="nf">⎕XT</span><span class="s1">'TEMP'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">''</span><span class="nf">⎕XT</span><span class="s1">'TEMP'</span>
 
 <span class="w">      </span><span class="nv">TEMP</span><span class="kd">←</span><span class="o">⍳</span><span class="m">10</span>
 
@@ -78826,7 +78826,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

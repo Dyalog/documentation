@@ -78878,7 +78878,7 @@
 <h2 id="shared-members">Shared Members</h2>
 <p>Certain .NET Classes provide methods, fields and properties, that can be called directly without the need to create an instance of the Class first. These <em>members</em> are known as shared, because they have the same definition for the class and for any instance of the class.</p>
 <p>The methods <code>Now</code> and <code>IsLeapYear</code> exported by System.DateTime fall into this category. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="o">,⊂</span><span class="s1">'System'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="o">,⊂</span><span class="s1">'System'</span>
 
 <span class="w">      </span><span class="nv">DateTime</span><span class="na">.</span><span class="nv">Now</span>
 <span class="m">07</span><span class="na">/</span><span class="m">11</span><span class="na">/</span><span class="m">2008</span><span class="w"> </span><span class="m">11</span><span class="bp">:</span><span class="m">30</span><span class="bp">:</span><span class="m">48</span>
@@ -78889,7 +78889,7 @@
 <h2 id="apl-language-extensions-for-net-objects">APL language extensions for .NET objects</h2>
 <p>The .NET Framework provides a set of standard operators (methods) that are supported by certain classes. These operators include methods to compare two .NET objects and methods to add and subtract objects.</p>
 <p>In the case of the <code>DateTime</code> Class, there are operators to compare two <code>DateTime</code> objects. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DT1</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">2008</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DT1</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">2008</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">DT2</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">2008</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 
 <span class="w">     </span><span class="c1">⍝ Is DT1 equal to DT2 ?</span>
@@ -78897,7 +78897,7 @@
 <span class="m">0</span>
 </code></pre></div>
 <p>The <code>op_Addition</code> and <code>op_Subtraction</code> operators add and subtract <code>TimeSpan</code> objects to <code>DateTime</code> objects. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DT3</span><span class="kd">←</span><span class="nv">DateTime</span><span class="na">.</span><span class="nv">Now</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DT3</span><span class="kd">←</span><span class="nv">DateTime</span><span class="na">.</span><span class="nv">Now</span>
 <span class="w">      </span><span class="nv">DT3</span>
 <span class="m">07</span><span class="na">/</span><span class="m">11</span><span class="na">/</span><span class="m">2008</span><span class="w"> </span><span class="m">11</span><span class="bp">:</span><span class="m">33</span><span class="bp">:</span><span class="m">45</span>
 
@@ -78905,7 +78905,7 @@
 <span class="w">      </span><span class="nv">TS</span>
 <span class="m">01</span><span class="bp">:</span><span class="m">01</span><span class="bp">:</span><span class="m">01</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DateTime</span><span class="na">.</span><span class="nv">op_Addition</span><span class="w"> </span><span class="nv">DT3</span><span class="w"> </span><span class="nv">TS</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DateTime</span><span class="na">.</span><span class="nv">op_Addition</span><span class="w"> </span><span class="nv">DT3</span><span class="w"> </span><span class="nv">TS</span>
 <span class="m">07</span><span class="na">/</span><span class="m">11</span><span class="na">/</span><span class="m">2008</span><span class="w"> </span><span class="m">12</span><span class="bp">:</span><span class="m">34</span><span class="bp">:</span><span class="m">46</span>
 
 <span class="w">      </span><span class="nv">DateTime</span><span class="na">.</span><span class="nv">op_Subtraction</span><span class="w"> </span><span class="nv">DT3</span><span class="w"> </span><span class="nv">TS</span>
@@ -78964,7 +78964,7 @@
 </tbody>
 </table>
 <p>So instead of calling the appropriate .NET method to compare two objects, you can use the familiar APL primitive instead. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DT1</span><span class="o">=</span><span class="nv">DT2</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DT1</span><span class="o">=</span><span class="nv">DT2</span>
 <span class="m">0</span>
 <span class="w">      </span><span class="nv">DT1</span><span class="o">&gt;</span><span class="nv">DT2</span>
 <span class="m">1</span>
@@ -78974,11 +78974,11 @@
 <span class="m">07</span><span class="na">/</span><span class="m">11</span><span class="na">/</span><span class="m">2008</span><span class="w"> </span><span class="m">10</span><span class="bp">:</span><span class="m">32</span><span class="bp">:</span><span class="m">44</span>
 </code></pre></div>
 <p>Apart from being easier to use, the primitive functions automatically handle arrays and support scalar extension; for example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DT1</span><span class="o">&gt;</span><span class="nv">DT2</span><span class="w"> </span><span class="nv">DT3</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DT1</span><span class="o">&gt;</span><span class="nv">DT2</span><span class="w"> </span><span class="nv">DT3</span>
 <span class="m">1</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <p>In addition, the monadic form of Grade Up (<code>⍋</code>) and Grade Down (<code>⍒</code>), and the Minimum (<code>⌊</code>) and Maximum (<code>⌈</code>) primitive functions have been extended to work on arrays of references to .NET objects. Note that the argument(s) must be a homogeneous set of references to objects of the same .NET class, and in the case of Grade Up and Grade Down, the argument must be a vector. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍋</span><span class="nv">DT1</span><span class="w"> </span><span class="nv">DT2</span><span class="w"> </span><span class="nv">DT3</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍋</span><span class="nv">DT1</span><span class="w"> </span><span class="nv">DT2</span><span class="w"> </span><span class="nv">DT3</span>
 <span class="m">2</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">3</span>
 <span class="w">      </span><span class="o">⌊</span><span class="na">/</span><span class="nv">DT1</span><span class="w"> </span><span class="nv">DT2</span><span class="w"> </span><span class="nv">DT3</span>
 <span class="m">01</span><span class="na">/</span><span class="m">01</span><span class="na">/</span><span class="m">2008</span><span class="w"> </span><span class="m">00</span><span class="bp">:</span><span class="m">00</span><span class="bp">:</span><span class="m">00</span>
@@ -78987,7 +78987,7 @@
 <p>When a .NET object generates an error, it does so by <em>throwing an exception</em>. An exception is in fact a .NET class whose ultimate base class is <code>System.Exception</code>.</p>
 <p>The system constant <code>⎕EXCEPTION</code> returns a reference to the most recently generated exception object.</p>
 <p>For example, if you attempt to create an instance of a <code>DateTime</code> object with a year that is outside its range, the constructor throws an exception. This causes APL to report a (trappable) <code>EXCEPTION</code> error (error number 90) and access to the exception object is provided by <code>⎕EXCEPTION</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
 <span class="w">      </span><span class="nv">DT</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">100000</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
 <span class="nv">EXCEPTION</span>
 <span class="w">      </span><span class="nv">DT</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">100000</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
@@ -79016,25 +79016,25 @@
 <p>Both these requirements are met by calling the function via the Variant operator <code>⍠</code>. There are two options, <strong>OverloadTypes</strong> (the Principle Option) and <strong>CastToTypes</strong>. Each option takes an array of refs to .NET types, the same length as the number of parameters to the function.</p>
 <h2 id="overloadtypes-examples">OverloadTypes Examples</h2>
 <p>To force APL to call the double version of function <code>foo()</code> regardless of the type of the argument <code>val</code>:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">foo</span><span class="w"> </span><span class="na">⍠</span><span class="p">(</span><span class="s1">'OverloadTypes'</span><span class="nv">Double</span><span class="p">))</span><span class="nv">val</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">foo</span><span class="w"> </span><span class="na">⍠</span><span class="p">(</span><span class="s1">'OverloadTypes'</span><span class="nv">Double</span><span class="p">))</span><span class="nv">val</span>
 </code></pre></div>
 <p>or more simply:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">foo</span><span class="w"> </span><span class="na">⍠</span><span class="nv">Double</span><span class="p">)</span><span class="nv">val</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">foo</span><span class="w"> </span><span class="na">⍠</span><span class="nv">Double</span><span class="p">)</span><span class="nv">val</span>
 </code></pre></div>
 <p>Note that <code>Double</code> is a ref to the .NET type <code>System.Double</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
 <span class="w">      </span><span class="nv">Double</span>
 <span class="p">(</span><span class="nv">System</span><span class="na">.</span><span class="nv">Double</span><span class="p">)</span>
 </code></pre></div>
 <p>Taking this a stage further, suppose that <code>foo()</code> is defined with 5 overloads as follows:
-</p><div class="highlight"><pre><span></span><code><span class="nv">foo</span><span class="p">()</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">foo</span><span class="p">()</span>
 <span class="nv">foo</span><span class="p">(</span><span class="nv">int</span><span class="w"> </span><span class="nv">i</span><span class="p">)</span>
 <span class="nv">foo</span><span class="p">(</span><span class="nv">double</span><span class="w"> </span><span class="nv">d</span><span class="p">)</span>
 <span class="nv">foo</span><span class="p">(</span><span class="nv">double</span><span class="w"> </span><span class="nv">d</span><span class="o">,</span><span class="w"> </span><span class="nv">int</span><span class="w"> </span><span class="nv">i</span><span class="p">)</span>
 <span class="nv">foo</span><span class="p">(</span><span class="nv">double</span><span class="sr">[]</span><span class="w"> </span><span class="nv">d</span><span class="p">)</span>
 </code></pre></div>
 <p>The following statements will call the niladic, double, (double, int) and double[] overloads respectively.</p>
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nv">foo</span><span class="w"> </span><span class="na">⍠</span><span class="w"> </span><span class="p">(</span><span class="o">⊂</span><span class="no">⍬</span><span class="p">))</span><span class="w"> </span><span class="no">⍬</span><span class="w">                              </span><span class="c1">⍝ niladic</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="p">(</span><span class="nv">foo</span><span class="w"> </span><span class="na">⍠</span><span class="w"> </span><span class="p">(</span><span class="o">⊂</span><span class="no">⍬</span><span class="p">))</span><span class="w"> </span><span class="no">⍬</span><span class="w">                              </span><span class="c1">⍝ niladic</span>
 <span class="p">(</span><span class="nv">foo</span><span class="w"> </span><span class="na">⍠</span><span class="w"> </span><span class="nv">Double</span><span class="p">)</span><span class="w"> </span><span class="m">1</span><span class="w">                            </span><span class="c1">⍝ double</span>
 <span class="p">(</span><span class="nv">foo</span><span class="w"> </span><span class="na">⍠</span><span class="p">(</span><span class="o">⊂</span><span class="nv">Double</span><span class="w"> </span><span class="nv">Int32</span><span class="p">))</span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w">                   </span><span class="c1">⍝ double,int</span>
 <span class="p">(</span><span class="nv">foo</span><span class="w"> </span><span class="na">⍠</span><span class="p">(</span><span class="nv">Type</span><span class="na">.</span><span class="nv">GetType</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'System.Double[]'</span><span class="p">))</span><span class="o">⊂</span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="c1">⍝ double[]</span>
@@ -79042,16 +79042,16 @@
 <p>Note that in the niladic case, an enclosed empty vector is used to represent a null reference to a .NET type.</p>
 <h2 id="casttotypes-example">CastToTypes Example</h2>
 <p>The .NET function <code>Array.SetValue()</code> sets the value of a specified element (or elements) of an array. The first argument, the new value, is declared as <code>System.Object</code>, but the value supplied must correspond to the type of the <code>Array</code> in question. APL has no means to know what this is and will therefore pass the value <em>as is</em>, that is, in whatever internal format it happens to be at the time. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
 
 <span class="w">      </span><span class="c1">⍝ create a Boolean  array with 2 elements</span>
 <span class="w">      </span><span class="nv">BA</span><span class="kd">←</span><span class="nv">Array</span><span class="na">.</span><span class="nv">CreateInstance</span><span class="w"> </span><span class="nv">Boolean</span><span class="w"> </span><span class="m">2</span>
 <span class="w">      </span><span class="nv">BA</span><span class="na">.</span><span class="nv">GetValue</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="c1">⍝ get the 0th element</span>
 <span class="m">0</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="c1">⍝ attempt to set the 0th element to 1 (AKA true)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="c1">⍝ attempt to set the 0th element to 1 (AKA true)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">BA</span><span class="na">.</span><span class="nv">SetValue</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">BA</span><span class="na">.</span><span class="nv">SetValue</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span>
 <span class="nv">EXCEPTION</span><span class="bp">:</span><span class="w"> </span><span class="nv">Cannot</span><span class="w"> </span><span class="nv">widen</span><span class="w"> </span><span class="nv">from</span><span class="w"> </span><span class="nv">source</span><span class="w"> </span><span class="nv">type</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">target</span><span class="w"> </span><span class="nv">type</span>
 <span class="nv">either</span><span class="w"> </span><span class="nv">because</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">source</span><span class="w"> </span><span class="nv">type</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">primitive</span><span class="w"> </span><span class="nv">type</span><span class="w"> </span><span class="nv">or</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">conversion</span><span class="w"> </span><span class="nv">cannot</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">accomplished</span><span class="na">.</span>
 <span class="nv">test</span><span class="sr">[</span><span class="m">5</span><span class="sr">]</span><span class="w"> </span><span class="nv">BA</span><span class="na">.</span><span class="nv">SetValue</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span>
@@ -79059,14 +79059,14 @@
 </code></pre></div>
 <p>The above expression failed because APL passed the first argument 1 ,unchanged from its current internal representation, as a 1-byte integer which does not fit into a Boolean element.</p>
 <p>To rectify the situation, APL must be told to cast the argument to a Boolean as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">BA</span><span class="na">.</span><span class="nv">SetValue</span><span class="w"> </span><span class="na">⍠</span><span class="w"> </span><span class="p">(</span><span class="s1">'CastToTypes'</span><span class="p">(</span><span class="nv">Boolean</span><span class="w"> </span><span class="nv">Int32</span><span class="p">)))</span><span class="m">1</span><span class="w"> </span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">BA</span><span class="na">.</span><span class="nv">SetValue</span><span class="w"> </span><span class="na">⍠</span><span class="w"> </span><span class="p">(</span><span class="s1">'CastToTypes'</span><span class="p">(</span><span class="nv">Boolean</span><span class="w"> </span><span class="nv">Int32</span><span class="p">)))</span><span class="m">1</span><span class="w"> </span><span class="m">0</span>
 <span class="w">      </span><span class="nv">BA</span><span class="na">.</span><span class="nv">GetValue</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="c1">⍝ get the 0th element</span>
 <span class="m">1</span>
 </code></pre></div>
 <h2 id="overloaded-constructors">Overloaded Constructors</h2>
 <p>If a class provides constructor overloads, a similar mechanism is used to specify which of the constructors is to be used when an instance of the class is created using <code>⎕NEW</code>.</p>
 <p>For example, if <code>MyClass</code> is a .NET class with an overloaded constructor, and one of its constructors is defined to take two parameters; a <code>double</code> and an <code>int</code>, the following statement would create an instance of the class by calling that specific constructor overload:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="na">⍠</span><span class="w"> </span><span class="p">(</span><span class="o">⊂</span><span class="nv">Double</span><span class="w"> </span><span class="nv">Int32</span><span class="p">))</span><span class="w"> </span><span class="nv">MyClass</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="na">⍠</span><span class="w"> </span><span class="p">(</span><span class="o">⊂</span><span class="nv">Double</span><span class="w"> </span><span class="nv">Int32</span><span class="p">))</span><span class="w"> </span><span class="nv">MyClass</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 </code></pre></div>
 
 
@@ -79097,7 +79097,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

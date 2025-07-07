@@ -78722,13 +78722,13 @@
 <p>Each name in <code>Y</code> is disassociated from its value if the active referent for the name is a defined function, operator, variable or namespace.</p>
 <p>The value of an element of <code>R</code> is 1 if the corresponding name in <code>Y</code> is now available for use.  This does not necessarily mean that the existing value was erased for that name.  A value of  0 is returned for an ill-formed name or for a distinguished name in <code>Y</code>.  The result is suppressed if not used or assigned.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'VAR'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'VAR'</span>
 <span class="w">      </span><span class="o">+</span><span class="nf">⎕EX</span><span class="s1">'FOO'</span><span class="w"> </span><span class="s1">'⎕IO'</span><span class="w"> </span><span class="s1">'X'</span><span class="w"> </span><span class="s1">'123'</span>
 <span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <p>If a named object is being executed the existing value will continue to be used until its execution is completed.  However, the name becomes available immediately for other use.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SI</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SI</span>
 <span class="c1">#.FOO[1]*</span>
 
 <span class="w">      </span><span class="nf">⎕VR</span><span class="s1">'FOO'</span>
@@ -78750,7 +78750,7 @@
 <span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span>
 </code></pre></div>
 <p>If a named object is an external variable, the external array is disassociated from the name:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕XT</span><span class="s1">'F'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕XT</span><span class="s1">'F'</span>
 <span class="nv">FILES</span><span class="na">/</span><span class="nv">COSTS</span>
 <span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'F'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nf">⎕XT</span><span class="s1">'F'</span>
 </code></pre></div>
@@ -78787,7 +78787,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

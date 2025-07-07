@@ -78770,12 +78770,12 @@
 <h1 class="heading"><span class="name">Error-Guards</span></h1>
 
 <p>An <strong>error-guard</strong> is (an expression that evaluates to) a vector of error numbers (see <a href="../../../error-messages/apl-errors/">APL Error Messages</a>), followed by the digraph: <code>::</code>, followed by an expression, the <em>body</em> of the guard, to be evaluated as the result of the function. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">11</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="bp">::</span><span class="w"> </span><span class="bp">⍵</span><span class="o">×</span><span class="m">0</span><span class="w"> </span><span class="c1">⍝ Trap DOMAIN and LENGTH errors.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">11</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="bp">::</span><span class="w"> </span><span class="bp">⍵</span><span class="o">×</span><span class="m">0</span><span class="w"> </span><span class="c1">⍝ Trap DOMAIN and LENGTH errors.</span>
 </code></pre></div>
 <p>In common with <code>:Trap</code> and <code>⎕TRAP</code>, error numbers 0 and 1000 are catch-alls for synchronous errors and interrupts respectively.</p>
 <p>When an error is generated, the system searches dynamically through the calling functions for an error-guard that matches the error. If one is found, the execution environment is unwound to its state immediately <em>prior</em> to the error-guard's execution and the body of the error-guard is evaluated as the result of the function. This means that, during evaluation of the body, the guard is no longer in effect and so the danger of a hang caused by an infinite "trap loop", is avoided.</p>
 <p>Notice that you can provide "cascading" error trapping in the following way:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">0</span><span class="bp">::</span><span class="nv">try_2nd</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">0</span><span class="bp">::</span><span class="nv">try_2nd</span>
 <span class="w">      </span><span class="m">0</span><span class="bp">::</span><span class="nv">try_1st</span>
 <span class="w">      </span><span class="nv">expr</span>
 </code></pre></div>
@@ -78784,7 +78784,7 @@
 <h2 class="example">Examples</h2>
 
 <p><code>Open</code> returns a handle for a component file. If the exclusive tie fails, it attempts a share-tie and if this fails, it creates a new file. Finally, if all else fails, a handle of 0 is returned.
-</p><div class="highlight"><pre><span></span><code><span class="nv">open</span><span class="kd">←</span><span class="kt">{</span><span class="w">                 </span><span class="c1">⍝ Handle for component file ⍵.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">open</span><span class="kd">←</span><span class="kt">{</span><span class="w">                 </span><span class="c1">⍝ Handle for component file ⍵.</span>
 <span class="w">    </span><span class="m">0</span><span class="bp">::</span><span class="m">0</span><span class="w">               </span><span class="c1">⍝ Fails:: return 0 handle.</span>
 <span class="w">    </span><span class="m">22</span><span class="bp">::⍵</span><span class="w"> </span><span class="nf">⎕FCREATE</span><span class="w"> </span><span class="m">0</span><span class="w">   </span><span class="c1">⍝ FILE NAME:: create new one.</span>
 <span class="w">    </span><span class="m">24</span><span class="w"> </span><span class="m">25</span><span class="bp">::⍵</span><span class="w"> </span><span class="nf">⎕FSTIE</span><span class="w"> </span><span class="m">0</span><span class="w">  </span><span class="c1">⍝ FILE TIED:: try share tie.</span>
@@ -78792,7 +78792,7 @@
 <span class="kt">}</span>
 </code></pre></div>
 <p>An error in <code>div</code> causes it to be called recursively with <em>improved</em> arguments.
-</p><div class="highlight"><pre><span></span><code><span class="nv">div</span><span class="kd">←</span><span class="kt">{</span><span class="w">                  </span><span class="c1">⍝ Tolerant division:: ⍺÷0 → ⍺.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">div</span><span class="kd">←</span><span class="kt">{</span><span class="w">                  </span><span class="c1">⍝ Tolerant division:: ⍺÷0 → ⍺.</span>
 <span class="w">    </span><span class="bp">⍺</span><span class="kd">←</span><span class="m">1</span><span class="w">                </span><span class="c1">⍝ default numerator.</span>
 <span class="w">    </span><span class="m">5</span><span class="bp">::</span><span class="o">↑</span><span class="bp">∇</span><span class="na">/</span><span class="o">↓↑</span><span class="bp">⍺</span><span class="w"> </span><span class="bp">⍵</span><span class="w">        </span><span class="c1">⍝ LENGTH:: stretch to fit.</span>
 <span class="w">    </span><span class="m">11</span><span class="bp">::⍺</span><span class="w"> </span><span class="bp">∇</span><span class="w"> </span><span class="bp">⍵</span><span class="o">+</span><span class="bp">⍵</span><span class="o">=</span><span class="m">0</span><span class="w">      </span><span class="c1">⍝ DOMAIN:: increase divisor.</span>
@@ -78800,13 +78800,13 @@
 <span class="kt">}</span>
 </code></pre></div>
 <p>Notice that some arguments may cause <code>div</code> to recur twice:
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="m">6</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nv">div</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">2</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="m">6</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nv">div</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">2</span>
 <span class="kd">→</span><span class="w">      </span><span class="m">6</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nv">div</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">0</span>
 <span class="kd">→</span><span class="w">      </span><span class="m">6</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nv">div</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">1</span>
 <span class="kd">→</span><span class="w">      </span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">2</span>
 </code></pre></div>
 <p>The final example shows the unwinding of the local environment before the error-guard's body is evaluated. Local name <code>trap</code> is set to describe the domain of its following error-guard. When an error occurs, the environment is unwound to expose <code>trap</code>'s statically correct value.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">add</span><span class="kd">←</span><span class="kt">{</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">add</span><span class="kd">←</span><span class="kt">{</span>
 <span class="w">          </span><span class="nv">trap</span><span class="kd">←</span><span class="s1">'domain'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="m">11</span><span class="bp">::</span><span class="nv">trap</span>
 <span class="w">          </span><span class="nv">trap</span><span class="kd">←</span><span class="s1">'length'</span><span class="w"> </span><span class="p">⋄</span><span class="w">  </span><span class="m">5</span><span class="bp">::</span><span class="nv">trap</span>
 <span class="w">          </span><span class="bp">⍺</span><span class="o">+</span><span class="bp">⍵</span>
@@ -78823,14 +78823,14 @@
 </code></pre></div>
 <h2 id="note">Note</h2>
 <p>Following the setting of an error-guard, subsequent function calls will disable tail call optimisation:
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">{</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="kt">{</span>
 <span class="w">        </span><span class="m">22</span><span class="bp">::</span><span class="s1">'Oops!'</span><span class="w">     </span><span class="c1">⍝ this error-guard means that ...</span>
 <span class="w">        </span><span class="nv">tie</span><span class="kd">←</span><span class="bp">⍵</span><span class="w"> </span><span class="nf">⎕ftie</span><span class="w"> </span><span class="m">0</span>
 <span class="w">        </span><span class="nv">subfn</span><span class="w"> </span><span class="nv">tie</span><span class="w">       </span><span class="c1">⍝ ... tail call not optimised</span>
 <span class="w">    </span><span class="kt">}</span>
 </code></pre></div>
 <p>One way to maintain the tail call optimisation in the presence of an error-guard is to isolate it within an inner function:
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">{</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="kt">{</span>
 <span class="w">        </span><span class="nv">tie</span><span class="kd">←</span><span class="kt">{</span>
 <span class="w">            </span><span class="m">22</span><span class="bp">::</span><span class="m">0</span><span class="w">        </span><span class="c1">⍝ error-guard local to inner fn</span>
 <span class="w">            </span><span class="bp">⍵</span><span class="w"> </span><span class="nf">⎕ftie</span><span class="w"> </span><span class="m">0</span>
@@ -78868,7 +78868,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78709,40 +78709,40 @@
 <p>Start Dyalog APL/W (clear ws).</p>
 <p>Size your windows so that both the Excel window and the APL Session window can be viewed comfortably at the same time.</p>
 <p>Type the following statement in the APL Session :
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'DDE:EXCEL|SHEET1'</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'X R1C1:R4C3'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'DDE:EXCEL|SHEET1'</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'X R1C1:R4C3'</span>
 <span class="m">2</span>
 </code></pre></div>
 <p>The result should be 2. If not, please check that you have typed the expression correctly, and that the name of the topic (SHEET1) corresponds to the spreadsheet name displayed by Excel.</p>
 <p>Note that the character between "EXCEL" and "SHEET1" may be the ASCII <em>pipe</em> symbol or the APL stile. Also note that in some countries, you use Lnn instead of Rnn to refer to rows in Excel. You may therefore need to use the following expression instead:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'DDE:EXCEL|SHEET1'</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'X L1C1:L4C3'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'DDE:EXCEL|SHEET1'</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'X L1C1:L4C3'</span>
 <span class="m">2</span>
 </code></pre></div>
 <p>Remaining in the APL Session, type <code>X</code>. It is a matrix containing as many cells as you have requested in the <code>⎕SVO</code> statement. If you entered any character strings, <code>X</code> will be nested.</p>
 <p>Switch to your Excel window and change the data in one or more of the cells.</p>
 <p>Switch back to the APL Session and look at <code>X</code> again. It will contain the new data.</p>
 <p>Look at the state of the shared variable <code>X</code> using <code>⎕SVS</code>. It indicates that both partners are aware of the current value of <code>X</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SVS</span><span class="w"> </span><span class="s1">'X'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SVS</span><span class="w"> </span><span class="s1">'X'</span>
 <span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <p>Now switch to Excel and change the data again. Repeat step 8. Note the result indicates that Excel has changed <code>X</code>, but you have not yet referenced it.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SVS</span><span class="w"> </span><span class="s1">'X'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SVS</span><span class="w"> </span><span class="s1">'X'</span>
 <span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <p>Type the expressions :
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'.'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'EVENT'</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'.'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'EVENT'</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">1</span>
 <span class="w">      </span><span class="nf">⎕DQ</span><span class="s1">'.'</span>
 </code></pre></div>
 <p>Now switch to Excel and change the data again. Note that the <code>⎕DQ</code> terminates and returns a result.
-</p><div class="highlight"><pre><span></span><code><span class="w">  </span><span class="na">.</span><span class="w"> </span><span class="m">50</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">  </span><span class="na">.</span><span class="w"> </span><span class="m">50</span>
 </code></pre></div>
 <p>Switch back to APL and create the following function :
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FOO</span><span class="w"> </span><span class="nv">MSG</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FOO</span><span class="w"> </span><span class="nv">MSG</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w"> </span><span class="s1">'MSG IS '</span><span class="w"> </span><span class="nv">MSG</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w"> </span><span class="s1">'X IS'</span><span class="w"> </span><span class="nv">X</span>
 <span class="w">      </span><span class="bp">∇</span>
 </code></pre></div>
 <p>Then type :
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'.'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'EVENT'</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="s1">'FOO'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'.'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'EVENT'</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="s1">'FOO'</span>
 <span class="w">      </span><span class="nf">⎕DQ</span><span class="s1">'.'</span>
 </code></pre></div>
 <p>Now switch back to Excel and change the data. Note that every time you change a cell, the DDE event fires your callback function <code>FOO</code>. In fact the function is fired twice because it itself alters the STATE of <code>X</code> by <em>referencing</em> it. This causes a second DDE event.</p>
@@ -78776,7 +78776,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

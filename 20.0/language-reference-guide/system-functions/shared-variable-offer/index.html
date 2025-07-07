@@ -78726,7 +78726,7 @@
 <p>If the shared variable offer is a general one (server), <code>X</code>, or the corresponding row of <code>X</code>, should just contain <code>'DDE:'</code>. In this case, Dyalog automatically defines the application name and topic to be <code>dyalog</code> and <code>⎕WSID</code> respectively.</p>
 <p>The result <code>R</code> is a numeric scalar or vector with one element for each name in <code>Y</code> and indicates the "degree of coupling".  A value of 2 indicates that the variable is fully coupled (via a warm or hot DDE link) with a shared variable in another APL workspace, or with a DDE item in another application.  A value of 1 indicates that there is no connection, or that the second application rejected a warm link.  In this case, a transfer of data may have taken place (via a cold link) but the connection is no longer open.  Effectively, APL treats an application that insists on a cold link as if it immediately retracts the sharing after setting or using the value, whichever is appropriate.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'DDE:'</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'X'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'DDE:'</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'X'</span>
 <span class="m">1</span>
 
 <span class="w">      </span><span class="s1">'DDE:'</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'X SALES_92'</span>
@@ -78743,7 +78743,7 @@
 </code></pre></div>
 <p>A special syntax is used to provide a mechanism for sending <code>DDE_EXECUTE</code> messages to another application.  This case is identified by specifying the <code>'⍎'</code> symbol in place of the external name.  The subsequent assignment of a character vector to a variable shared with the external name of <code>'⍎'</code> causes the value of the variable to be transmitted in the form of a <code>DDE_EXECUTE</code> message.  The value of the variable is then reset to 1 or 0 corresponding to a positive or negative acknowledgement from the partner.  In most (if not all) applications, commands transmitted in <code>DDE_EXECUTE</code> messages must be enclosed in square brackets <code>[]</code>.  For details, see the relevant documentation for the external application.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'DDE:EXCEL|SYSTEM'</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'X ⍎'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'DDE:EXCEL|SYSTEM'</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'X ⍎'</span>
 <span class="m">2</span>
 
 <span class="w">      </span><span class="nv">X</span><span class="kd">←</span><span class="s1">'[OPEN("c:\mydir\mysheet.xls")]'</span>
@@ -78783,7 +78783,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

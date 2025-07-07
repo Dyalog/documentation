@@ -78915,7 +78915,7 @@
 <p>A <em>Train</em> is a derived function constructed from a sequence of 2 or 3 functions, or from an array followed by two functions, which bind together to form a function.</p>
 <p>Note that the right-most item  of a function train (which is by definition a function) must be isolated from anything to its right, otherwise it will be bound to that rather than to the items to its left. This is done using parentheses.</p>
 <p>For example, the following expression  comprises a function train <code>-,÷</code> that is separated from its argument 2 by parentheses:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="o">-,÷</span><span class="p">)</span><span class="w"> </span><span class="m">2</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="o">-,÷</span><span class="p">)</span><span class="w"> </span><span class="m">2</span>
 <span class="m">¯2</span><span class="w"> </span><span class="m">0.5</span>
 </code></pre></div>
 <p>and means:</p>
@@ -78929,13 +78929,13 @@
 <li>Calculate the reciprocal of 2</li>
 <li>Ravel the result of step 1</li>
 <li>Negate the result of step 2
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">-,÷</span><span class="w"> </span><span class="m">2</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">-,÷</span><span class="w"> </span><span class="m">2</span>
 <span class="m">¯0.5</span>
 </code></pre></div></li>
 </ol>
 <h2 id="forks-and-atops">Forks and Atops</h2>
 <p>The following trains are currently supported where <code>f</code>, <code>g</code> and <code>h</code> are functions and <code>A</code> is an array:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">f</span><span class="w"> </span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">f</span><span class="w"> </span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span>
 <span class="w">      </span><span class="nv">A</span><span class="w"> </span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span>
 <span class="w">        </span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span>
 </code></pre></div>
@@ -78949,7 +78949,7 @@
 <li>and so forth.</li>
 </ul>
 <p>In particular, trains may be applied to a single array (monadic use) or between 2 arrays (dyadic use), providing  six new constructs.
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="bp">⍺</span><span class="p">(</span><span class="nv">f</span><span class="w"> </span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span><span class="p">)</span><span class="bp">⍵</span><span class="w"> </span><span class="kd">←→</span><span class="w"> </span><span class="p">(</span><span class="bp">⍺</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="bp">⍵</span><span class="p">)</span><span class="w"> </span><span class="nv">g</span><span class="w"> </span><span class="p">(</span><span class="bp">⍺</span><span class="w"> </span><span class="nv">h</span><span class="w"> </span><span class="bp">⍵</span><span class="p">)</span><span class="w">   </span><span class="c1">⍝ dyadic (fgh) fork</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="bp">⍺</span><span class="p">(</span><span class="nv">f</span><span class="w"> </span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span><span class="p">)</span><span class="bp">⍵</span><span class="w"> </span><span class="kd">←→</span><span class="w"> </span><span class="p">(</span><span class="bp">⍺</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="bp">⍵</span><span class="p">)</span><span class="w"> </span><span class="nv">g</span><span class="w"> </span><span class="p">(</span><span class="bp">⍺</span><span class="w"> </span><span class="nv">h</span><span class="w"> </span><span class="bp">⍵</span><span class="p">)</span><span class="w">   </span><span class="c1">⍝ dyadic (fgh) fork</span>
 <span class="w">    </span><span class="bp">⍺</span><span class="p">(</span><span class="nv">A</span><span class="w"> </span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span><span class="p">)</span><span class="bp">⍵</span><span class="w"> </span><span class="kd">←→</span><span class="w">    </span><span class="nv">A</span><span class="w">    </span><span class="nv">g</span><span class="w"> </span><span class="p">(</span><span class="bp">⍺</span><span class="w"> </span><span class="nv">h</span><span class="w"> </span><span class="bp">⍵</span><span class="p">)</span><span class="w">   </span><span class="c1">⍝ dyadic (Agh) fork</span>
 <span class="w">    </span><span class="bp">⍺</span><span class="p">(</span><span class="w">  </span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span><span class="p">)</span><span class="bp">⍵</span><span class="w"> </span><span class="kd">←→</span><span class="w">         </span><span class="nv">g</span><span class="w"> </span><span class="p">(</span><span class="bp">⍺</span><span class="w"> </span><span class="nv">h</span><span class="w"> </span><span class="bp">⍵</span><span class="p">)</span><span class="w">   </span><span class="c1">⍝ dyadic       atop</span>
 
@@ -78960,16 +78960,16 @@
 <h2 id="identifying-a-train">Identifying a Train</h2>
 <p>For a sequence to be interpreted as a train it must be separated from the argument to which it is applied. This can be done using parentheses or by naming the derived function.</p>
 <h2 id="example-fork-negation-of-catenated-with-reciprocal">Example - fork: negation of catenated with reciprocal</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="o">-,÷</span><span class="p">)</span><span class="m">5</span><span class="w">         </span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="o">-,÷</span><span class="p">)</span><span class="m">5</span><span class="w">         </span>
 <span class="m">¯5</span><span class="w"> </span><span class="m">0.2</span>
 </code></pre></div>
 <h2 id="example-named-fork">Example - named fork</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">negrec</span><span class="kd">←</span><span class="o">-,÷</span><span class="w"> </span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">negrec</span><span class="kd">←</span><span class="o">-,÷</span><span class="w"> </span>
 <span class="w">      </span><span class="nv">negrec</span><span class="w"> </span><span class="m">5</span>
 <span class="w"> </span><span class="m">¯5</span><span class="w"> </span><span class="m">0.2</span>
 </code></pre></div>
 <p>Whereas, without these means to identify the sequence as a train, the expression:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">-,÷</span><span class="w"> </span><span class="m">5</span><span class="w">         </span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">-,÷</span><span class="w"> </span><span class="m">5</span><span class="w">         </span>
 <span class="m">¯0.2</span>
 </code></pre></div>
 <p>means the negation of the ravel of the reciprocal of 5.</p>
@@ -78978,24 +78978,24 @@
 <h3 class="example">Example</h3>
 
 <p>An expression to find the first position in a random integer vector <code>X</code> of a number greater than 999000 is:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">X</span><span class="kd">←</span><span class="o">?</span><span class="m">1e6</span><span class="o">⍴</span><span class="m">1e6</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">X</span><span class="kd">←</span><span class="o">?</span><span class="m">1e6</span><span class="o">⍴</span><span class="m">1e6</span>
 <span class="w">      </span><span class="p">(</span><span class="nv">X</span><span class="o">≥</span><span class="m">999000</span><span class="p">)</span><span class="o">⍳</span><span class="m">1</span>
 <span class="m">1704</span>
 </code></pre></div>
 <p>A function train is not only more concise, it is faster too.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">X</span><span class="w"> </span><span class="p">(</span><span class="o">⍳</span><span class="na">∘</span><span class="m">1</span><span class="w"> </span><span class="o">≥</span><span class="p">)</span><span class="w"> </span><span class="m">999000</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">X</span><span class="w"> </span><span class="p">(</span><span class="o">⍳</span><span class="na">∘</span><span class="m">1</span><span class="w"> </span><span class="o">≥</span><span class="p">)</span><span class="w"> </span><span class="m">999000</span>
 <span class="m">1704</span>
 </code></pre></div>
 <h2 id="trains-of-trains">Trains of Trains</h2>
 <p>As a train resolves to a function, a sequences of more than 3 functions represents a train of trains. Function sequences longer than 3 are bound in threes, starting from the right:
-</p><div class="highlight"><pre><span></span><code><span class="na">...</span><span class="w"> </span><span class="nv">fu</span><span class="w"> </span><span class="nv">fv</span><span class="w"> </span><span class="nv">fw</span><span class="w"> </span><span class="nv">fx</span><span class="w"> </span><span class="nv">fy</span><span class="w"> </span><span class="nv">fz</span><span class="w"> </span><span class="kd">→</span><span class="w"> </span><span class="na">...</span><span class="w"> </span><span class="nv">fu</span><span class="w"> </span><span class="p">(</span><span class="nv">fv</span><span class="w"> </span><span class="nv">fw</span><span class="w"> </span><span class="p">(</span><span class="nv">fx</span><span class="w"> </span><span class="nv">fy</span><span class="w"> </span><span class="nv">fz</span><span class="p">))</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="na">...</span><span class="w"> </span><span class="nv">fu</span><span class="w"> </span><span class="nv">fv</span><span class="w"> </span><span class="nv">fw</span><span class="w"> </span><span class="nv">fx</span><span class="w"> </span><span class="nv">fy</span><span class="w"> </span><span class="nv">fz</span><span class="w"> </span><span class="kd">→</span><span class="w"> </span><span class="na">...</span><span class="w"> </span><span class="nv">fu</span><span class="w"> </span><span class="p">(</span><span class="nv">fv</span><span class="w"> </span><span class="nv">fw</span><span class="w"> </span><span class="p">(</span><span class="nv">fx</span><span class="w"> </span><span class="nv">fy</span><span class="w"> </span><span class="nv">fz</span><span class="p">))</span>
 </code></pre></div>
 <p>This means that, in the absence of parentheses, a sequence of an odd number of functions resolves to a 3-train (fork) and an even-numbered sequence resolves to a 2-train (atop):</p>
-<div class="highlight"><pre><span></span><code><span class="nv">e</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="nv">j</span><span class="w"> </span><span class="nv">k</span><span class="w"> </span><span class="kd">→</span><span class="w"> </span><span class="nv">e</span><span class="w"> </span><span class="nv">f</span><span class="p">(</span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span><span class="p">(</span><span class="nv">i</span><span class="w"> </span><span class="nv">j</span><span class="w"> </span><span class="nv">k</span><span class="p">))</span><span class="w">     </span><span class="c1">⍝ fork(fork(fork))</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="nv">e</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="nv">j</span><span class="w"> </span><span class="nv">k</span><span class="w"> </span><span class="kd">→</span><span class="w"> </span><span class="nv">e</span><span class="w"> </span><span class="nv">f</span><span class="p">(</span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span><span class="p">(</span><span class="nv">i</span><span class="w"> </span><span class="nv">j</span><span class="w"> </span><span class="nv">k</span><span class="p">))</span><span class="w">     </span><span class="c1">⍝ fork(fork(fork))</span>
 <span class="nv">f</span><span class="w"> </span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="nv">j</span><span class="w"> </span><span class="nv">k</span><span class="w"> </span><span class="kd">→</span><span class="w">   </span><span class="nv">f</span><span class="p">(</span><span class="nv">g</span><span class="w"> </span><span class="nv">h</span><span class="p">(</span><span class="nv">i</span><span class="w"> </span><span class="nv">j</span><span class="w"> </span><span class="nv">k</span><span class="p">))</span><span class="w">       </span><span class="c1">⍝ atop(fork(fork))</span>
 </code></pre></div>
 <h3 class="example">Examples</h3>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">6</span><span class="p">(</span><span class="w"> </span><span class="o">+,-,×,÷</span><span class="p">)</span><span class="m">2</span><span class="w">     </span><span class="c1">⍝ fork:(6+2),((6-2),((6×2),(6÷2)))</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">6</span><span class="p">(</span><span class="w"> </span><span class="o">+,-,×,÷</span><span class="p">)</span><span class="m">2</span><span class="w">     </span><span class="c1">⍝ fork:(6+2),((6-2),((6×2),(6÷2)))</span>
 <span class="m">8</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">3</span>
 
 <span class="w">      </span><span class="m">6</span><span class="p">(</span><span class="o">⌽+,-,×,÷</span><span class="p">)</span><span class="m">2</span><span class="w">     </span><span class="c1">⍝ atop: ⌽ (6+2), ...</span>
@@ -79004,7 +79004,7 @@
 <span class="w">      </span><span class="sr">]</span><span class="nv">boxing</span><span class="w"> </span><span class="nv">on</span>
 <span class="nv">Was</span><span class="w"> </span><span class="nv">OFF</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+,-,×,÷</span><span class="w">          </span><span class="c1">⍝ boxed display of fork</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">+,-,×,÷</span><span class="w">          </span><span class="c1">⍝ boxed display of fork</span>
 <span class="err">┌─┬─┬─────────────┐</span>
 <span class="err">│</span><span class="o">+</span><span class="err">│</span><span class="o">,</span><span class="err">│┌─┬─┬───────┐│</span>
 <span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">││</span><span class="o">-</span><span class="err">│</span><span class="o">,</span><span class="err">│┌─┬─┬─┐││</span>
@@ -79023,7 +79023,7 @@
 <span class="err">│</span><span class="w"> </span><span class="err">│└─┴─┴─────────────┘│</span>
 <span class="err">└─┴───────────────────┘</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">boxing</span><span class="w"> </span><span class="o">-</span><span class="nv">trains</span><span class="o">=</span><span class="nv">tree</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">boxing</span><span class="w"> </span><span class="o">-</span><span class="nv">trains</span><span class="o">=</span><span class="nv">tree</span>
 <span class="nv">Was</span><span class="w"> </span><span class="o">-</span><span class="nv">trains</span><span class="o">=</span><span class="nv">box</span>
 <span class="w">      </span><span class="o">+,-,×,÷</span><span class="w">          </span><span class="c1">⍝ boxed (tree) display of fork</span>
 <span class="err">┌─┼───┐</span><span class="w">      </span>
@@ -79034,7 +79034,7 @@
 <h2 id="binding-strengths">Binding Strengths</h2>
 <p>The binding strength between the items of a train is less than that of operand-operator binding. In other words, operators bind first with their function (or array) operands to form derived functions, which may then participate as items in a train.</p>
 <h3 class="example">Example</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="na">⌿</span><span class="w"> </span><span class="o">÷</span><span class="w"> </span><span class="o">≢</span><span class="w">            </span><span class="c1">⍝ fork for mean value</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="na">⌿</span><span class="w"> </span><span class="o">÷</span><span class="w"> </span><span class="o">≢</span><span class="w">            </span><span class="c1">⍝ fork for mean value</span>
 <span class="err">┌─────┬─┬─┐</span>
 <span class="err">│┌─┬─┐│</span><span class="o">÷</span><span class="err">│</span><span class="o">≢</span><span class="err">│</span>
 <span class="err">││</span><span class="o">+</span><span class="err">│</span><span class="na">⌿</span><span class="err">││</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">│</span>
@@ -79049,7 +79049,7 @@
 <span class="err">└─────┴─┴─────┘</span>
 </code></pre></div>
 <p>This means that any of the four hybrid tokens <code>/ ⌿ \ ⍀</code> will not be interpreted as a function if there's a function to its left in the train. In order to fix one of these tokens as a replicate or expand function, it must be isolated from the function to its left:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="o">⍳</span><span class="na">/</span><span class="o">⍳</span><span class="p">)</span><span class="m">3</span><span class="w">        </span><span class="c1">⍝ → ⍳/ atop ⍳3 → RANK ERROR</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="o">⍳</span><span class="na">/</span><span class="o">⍳</span><span class="p">)</span><span class="m">3</span><span class="w">        </span><span class="c1">⍝ → ⍳/ atop ⍳3 → RANK ERROR</span>
 <span class="nv">RANK</span><span class="w"> </span><span class="nv">ERROR</span>
 
 <span class="w">      </span><span class="p">(</span><span class="o">⍳</span><span class="kt">{</span><span class="bp">⍺</span><span class="na">/</span><span class="bp">⍵</span><span class="kt">}</span><span class="o">⍳</span><span class="p">)</span><span class="m">3</span><span class="w">    </span><span class="c1">⍝ → (⍳3){⍺/⍵}(⍳3) → (⍳3)/(⍳3)</span>
@@ -79090,7 +79090,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

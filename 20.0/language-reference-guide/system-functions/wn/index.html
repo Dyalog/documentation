@@ -78727,12 +78727,12 @@
 <p>If <code>Y</code> refers to a namespace with no GUI element, a <code>VALUE ERROR</code> is reported.</p>
 <p>Note that <code>⎕WN</code> reports <strong>only</strong> those child objects visible from the current thread.</p>
 <p>GUI objects are named <strong>relative</strong> to the current namespace.  The following examples are equivalent:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕WN</span><span class="w"> </span><span class="s1">'F1.B1'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕WN</span><span class="w"> </span><span class="s1">'F1.B1'</span>
 <span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nf">⎕WN</span><span class="w"> </span><span class="s1">'B1'</span>
 <span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">B1</span><span class="na">.</span><span class="nf">⎕WN</span><span class="w"> </span><span class="s1">''</span><span class="w">    </span>
 </code></pre></div>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">f</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="o">⊂</span><span class="s1">'Form'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">f</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="o">⊂</span><span class="s1">'Form'</span>
 <span class="w">      </span><span class="nv">f</span><span class="na">.</span><span class="nv">n</span><span class="kd">←</span><span class="nf">⎕ns</span><span class="s1">''</span><span class="w">                  </span><span class="c1">⍝ A non-GUI object       </span>
 <span class="w">      </span><span class="nv">f</span><span class="na">.</span><span class="nv">l</span><span class="kd">←</span><span class="nv">f</span><span class="na">.</span><span class="nf">⎕NEW</span><span class="o">⊂</span><span class="s1">'Label'</span><span class="w">         </span><span class="c1">⍝ A reference to a Label</span>
 <span class="w">      </span><span class="s1">'f.b1'</span><span class="nf">⎕wc</span><span class="s1">'Button'</span><span class="w">          </span><span class="c1">⍝ A named Button</span>
@@ -78773,7 +78773,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

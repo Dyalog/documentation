@@ -78691,7 +78691,7 @@
 <p>Control structures provide a means to control the flow of execution in your APL programs.</p>
 <p>Traditionally, lines of APL code are executed one by one from top to bottom and the only way to alter the flow of execution is using the branch arrow.  So how do you handle logical operations of the form "If this, do that; otherwise do the other"?</p>
 <p>In APL this is often not a problem because many logical operations are easily performed using the standard array handling facilities that are absent in other languages.  For example, the expression:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">STATUS</span><span class="kd">←</span><span class="p">(</span><span class="m">1</span><span class="o">+</span><span class="nv">AGE</span><span class="o">&lt;</span><span class="m">16</span><span class="p">)</span><span class="o">⊃</span><span class="s1">'Adult'</span><span class="w"> </span><span class="s1">'Minor'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">STATUS</span><span class="kd">←</span><span class="p">(</span><span class="m">1</span><span class="o">+</span><span class="nv">AGE</span><span class="o">&lt;</span><span class="m">16</span><span class="p">)</span><span class="o">⊃</span><span class="s1">'Adult'</span><span class="w"> </span><span class="s1">'Minor'</span>
 </code></pre></div>
 <p>sets <code>STATUS</code> to <code>'Adult'</code> if <code>AGE</code> is 16 or more; otherwise sets <code>STATUS</code> to <code>'Minor'</code>.</p>
 <p>Things become trickier if, depending upon some condition, you wish to execute one set of code instead of another, especially when the code fragments cannot conveniently be packaged as functions.  Nevertheless, careful use of array logic, defined operators, the execute primitive function and the branch arrow can produce high quality maintainable and comprehensible APL systems.</p>
@@ -78728,7 +78728,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

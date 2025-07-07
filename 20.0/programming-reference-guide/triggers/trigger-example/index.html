@@ -78705,7 +78705,7 @@
 <h1 class="heading"><span class="name">Trigger Example</span></h1>
 
 <p>The following function displays information when the value of variables <code>A</code> or <code>B</code> changes.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">TRIG</span><span class="w"> </span><span class="nv">arg</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">TRIG</span><span class="w"> </span><span class="nv">arg</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Trigger</span><span class="w"> </span><span class="nv">A</span><span class="o">,</span><span class="nv">B</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">arg</span><span class="na">.</span><span class="nv">Name</span><span class="s1">'is now '</span><span class="nv">arg</span><span class="na">.</span><span class="nv">NewValue</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="c1">⍝ VALUE ERROR</span>
@@ -78716,7 +78716,7 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>Note that on the very first assignment to <code>A</code>, when the variable was previously undefined, <code>arg.OldValue</code> is a <code>VALUE ERROR</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="m">10</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="m">10</span>
 <span class="w"> </span><span class="nv">A</span><span class="w">  </span><span class="nv">is</span><span class="w"> </span><span class="nv">now</span><span class="w">   </span><span class="m">10</span>
 <span class="w"> </span><span class="nv">A</span><span class="w">   </span><span class="nv">was</span><span class="w">     </span><span class="sr">[</span><span class="nv">undefined</span><span class="sr">]</span><span class="w"> </span>
 <span class="w"> </span>
@@ -78749,10 +78749,10 @@
 <span class="w"> </span><span class="nv">A</span><span class="w">  </span><span class="nv">was</span><span class="w">      </span><span class="c1">#.[Instance of MyClass] </span>
 </code></pre></div>
 <p>Note that Trigger functions are actioned only by assignment, so changing <code>A</code> to a Form using <code>⎕WC</code> does not invoke <code>TRIG</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'A'</span><span class="nf">⎕WC</span><span class="s1">'FORM'</span><span class="w"> </span><span class="c1">⍝ Note that Trigger Function is not invoked</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'A'</span><span class="nf">⎕WC</span><span class="s1">'FORM'</span><span class="w"> </span><span class="c1">⍝ Note that Trigger Function is not invoked</span>
 </code></pre></div>
 <p>However, the connection (between <code>A</code> and <code>TRIG</code>) remains and the Trigger Function will be invoked if and when the Trigger is re-assigned.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="m">99</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="m">99</span>
 <span class="w"> </span><span class="nv">A</span><span class="w">  </span><span class="nv">is</span><span class="w"> </span><span class="nv">now</span><span class="w">   </span><span class="m">99</span>
 <span class="w"> </span><span class="nv">A</span><span class="w">  </span><span class="nv">was</span><span class="w">      </span><span class="c1">#.A</span>
 </code></pre></div>
@@ -78786,7 +78786,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

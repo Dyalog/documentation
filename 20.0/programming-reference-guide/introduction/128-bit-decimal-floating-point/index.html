@@ -78863,12 +78863,12 @@
 <p>Computations using 128-bit decimal numbers require twice as much space for storage, and run more than an order of magnitude more slowly on platforms which do not provide hardware support for the type. At this time, hardware support is only available from IBM (POWER 6 chips onwards, and recent System z mainframes). Even with hardware support, a slowdown of a factor of 4 can be expected. For this reason, Dyalog allows users to decide whether they need the higher-precision decimal representation, or prefer to stay with the faster and smaller binary representation.</p>
 <p>The system variable <code>⎕FR</code> (for Floating-point Representation) can be set to the value 645 (the installed default) to indicate 64-bit binary FP, or 1287 for 128-bit decimal FP. The default value of <code>⎕FR</code> is configurable.</p>
 <p>Simply put, the value of <code>⎕FR</code> decides the type of the result of any floating-point calculation that APL performs. In other words, when entered into the session:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nf">⎕FR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">⎕DR</span><span class="w"> </span><span class="m">1.234</span><span class="w"> </span><span class="c1">⍝ Type of a floating-point constant</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="nf">⎕FR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">⎕DR</span><span class="w"> </span><span class="m">1.234</span><span class="w"> </span><span class="c1">⍝ Type of a floating-point constant</span>
 <span class="w">     </span><span class="nf">⎕FR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">⎕DR</span><span class="w"> </span><span class="m">3</span><span class="o">÷</span><span class="m">4</span><span class="w">   </span><span class="c1">⍝ Type of any floating-point result</span>
 </code></pre></div>
 <p><code>⎕FR</code> has workspace scope, and may be localised. If so, like most other system variables, it inherits its initial value from the global environment.</p>
 <p>However: Although <code>⎕FR</code> can vary, the system is not designed to allow "seamless" modification during the running of an application and the dynamic alteration of <code>⎕FR</code> is not recommended. Strange effects may occur. For example, the type of a constant contained in a line of code (in a function or class), will depend on the value of <code>⎕FR</code> when the function is fixed. Similarly, a constant typed into a line in the Session is evaluated using the value of <code>⎕FR</code> that pertained before the line is executed. Thus, it would be possible for the first line of code above to return 0, if it is in the body of a function. If the function was edited and while suspended and execution is resumed, the result would become 1. Also note:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕FR</span><span class="kd">←</span><span class="m">1287</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕FR</span><span class="kd">←</span><span class="m">1287</span>
 <span class="w">      </span><span class="nv">x</span><span class="kd">←</span><span class="m">1</span><span class="o">÷</span><span class="m">3</span>
 <span class="w"> </span>
 <span class="w">      </span><span class="nf">⎕FR</span><span class="kd">←</span><span class="m">645</span>
@@ -78876,7 +78876,7 @@
 <span class="m">1</span>
 </code></pre></div>
 <p>The decimal number has 17 more 3s. Using the tolerance which applies to binary floats (type 645), the numbers are equal. However, the "reverse" experiment yields 0, as tolerance is much narrower in the 128-bit universe:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕FR</span><span class="kd">←</span><span class="m">645</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕FR</span><span class="kd">←</span><span class="m">645</span>
 <span class="w">      </span><span class="nv">x</span><span class="kd">←</span><span class="m">1</span><span class="o">÷</span><span class="m">3</span>
 <span class="w"> </span>
 <span class="w">      </span><span class="nf">⎕FR</span><span class="kd">←</span><span class="m">1287</span>
@@ -78885,7 +78885,7 @@
 </code></pre></div>
 <p>Since <code>⎕FR</code> can vary, it will be possible for a single workspace to contain floating-point values of both types (existing variables are not converted when <code>⎕FR</code> is changed). For example, an array that has just been brought into the workspace from external storage may have a different type from <code>⎕FR</code> in the current namespace. Conversion (if necessary) will only take place when a <em>new</em> floating-point array is generated as the result of "a calculation". The result of a computation returning a floating-point result will <em>not</em> depend on the type of the arrays involved in the expression: <code>⎕FR</code> at the time when a computation is performed decides the result type, alone.</p>
 <p>Structural functions generally do NOT change the type, for example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕FR</span><span class="kd">←</span><span class="m">1287</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕FR</span><span class="kd">←</span><span class="m">1287</span>
 <span class="w">      </span><span class="nv">x</span><span class="kd">←</span><span class="m">1.1</span><span class="w"> </span><span class="m">2.2</span><span class="w"> </span><span class="m">3.3</span>
 <span class="w">      </span>
 <span class="w">      </span><span class="nf">⎕FR</span><span class="kd">←</span><span class="m">645</span>
@@ -78895,7 +78895,7 @@
 <span class="m">1287</span>
 </code></pre></div>
 <p>128-bit decimal numbers not only have greater precision (roughly 34 decimal digits); they also have significantly larger range- from <code>¯1E6145</code> to <code>1E6145</code>. Loss of precision is accepted on conversion from 645 to 1287, but the magnitude of a number may make the conversion impossible, in which case a <code>DOMAIN ERROR</code> is issued:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕FR</span><span class="kd">←</span><span class="m">1287</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕FR</span><span class="kd">←</span><span class="m">1287</span>
 <span class="w">      </span><span class="nv">x</span><span class="kd">←</span><span class="m">1E1000</span>
 <span class="w">      </span>
 <span class="w">      </span><span class="nf">⎕FR</span><span class="kd">←</span><span class="m">645</span>
@@ -78952,7 +78952,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

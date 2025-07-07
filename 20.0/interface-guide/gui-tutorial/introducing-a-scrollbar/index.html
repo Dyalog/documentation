@@ -78705,12 +78705,12 @@
 <h1 class="heading"><span class="name">Introducing a ScrollBar</span></h1>
 
 <p>Another way to improve the application would be to allow the user to input using a slider or scrollbar. Let's create one called <code>'TEMP.S'</code> ...
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">SCR</span><span class="kd">←</span><span class="s1">'Scroll'</span><span class="w"> </span><span class="p">(</span><span class="s1">'Range'</span><span class="w"> </span><span class="m">101</span><span class="p">)(</span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'Scroll'</span><span class="w"> </span><span class="s1">'C2F'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">SCR</span><span class="kd">←</span><span class="s1">'Scroll'</span><span class="w"> </span><span class="p">(</span><span class="s1">'Range'</span><span class="w"> </span><span class="m">101</span><span class="p">)(</span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'Scroll'</span><span class="w"> </span><span class="s1">'C2F'</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">'TEMP.S'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="nv">SCR</span>
 </code></pre></div>
 <p><img alt="" src="../../img/temperature-converter-9.png"></p>
 <p>The range of a scrollbar goes from 1 to the value of the Range property. Setting Range to 101 will give us a range of 1-101. You will see in a moment why we need to do this. The Scroll event will be generated whenever the user moves the scrollbar. We have associated it with the callback function <code>'C2F'</code> which we will define as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">C2F</span><span class="w"> </span><span class="nv">MSG</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">C2F</span><span class="w"> </span><span class="nv">MSG</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Callback for Centigrade input via scrollbar</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">TEMP</span><span class="na">.</span><span class="nv">C</span><span class="na">.</span><span class="nv">Value</span><span class="kd">←</span><span class="m">101</span><span class="o">-</span><span class="m">4</span><span class="o">⊃</span><span class="nv">MSG</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">TEMP</span><span class="na">.</span><span class="nv">F</span><span class="na">.</span><span class="nv">Value</span><span class="kd">←</span><span class="m">32</span><span class="o">+</span><span class="nv">TEMP</span><span class="na">.</span><span class="nv">C</span><span class="na">.</span><span class="nv">Value</span><span class="o">÷</span><span class="m">5</span><span class="o">÷</span><span class="m">9</span>
@@ -78748,7 +78748,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

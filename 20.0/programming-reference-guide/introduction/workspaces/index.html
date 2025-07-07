@@ -78709,11 +78709,11 @@
 <p>Workspaces are stored in files whose names must conform to operating system conventions. When a workspace name is specified without a file suffix, these are added or implied. For further information, see <a href="../../../windows-installation-and-configuration-guide/configuration-parameters/wsext">WSEXT</a>.</p>
 <p>If the name of the file in which the workspace is saved contains spaces, the ws argument for the system functions <code>)SAVE</code>, <code>)COPY</code>, <code>)PCOPY</code>, <code>)LOAD</code>, <code>)XLOAD</code> and <code>)DROP</code> should be surrounded by two double-quote (") characters. To include a " character in the file name, you must specify two adjoining double-quotes (that is, """"). Note however that Windows does not allow double-quotes in file names, so this effectively applies only to non-Windows systems.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SAVE</span><span class="w"> </span><span class="nv">Pete</span><span class="err">'</span><span class="nv">s</span><span class="w"> </span><span class="nv">work</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SAVE</span><span class="w"> </span><span class="nv">Pete</span><span class="err">'</span><span class="nv">s</span><span class="w"> </span><span class="nv">work</span>
 <span class="nv">unacceptable</span><span class="w"> </span><span class="nv">char</span>
 </code></pre></div>
 <p>The above statement fails because the presence of the space in the file name requires that it be surrounded by "s.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SAVE</span><span class="w"> </span><span class="s2">"Pete's work"</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SAVE</span><span class="w"> </span><span class="s2">"Pete's work"</span>
 <span class="nv">Pete</span><span class="s1">'s work.dws saved Sun Jan 17 16:23:17 2016</span>
 
 <span class="s1">      )COPY "Pete'</span><span class="nv">s</span><span class="w"> </span><span class="nv">work</span><span class="s2">" A B C</span>
@@ -78751,7 +78751,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78852,10 +78852,10 @@
 <p>The <a href="../../properties/fontlist/">FontList</a> property provides a list of all the character fonts that are available. The <a href="../../properties/printlist/">PrintList</a> property provides a list of all the installed printers. These properties are <em>read-only</em> and may not be changed using <a href="../../../language-reference-guide/system-functions/ws"><code>⎕WS</code></a></p>
 <p>As the default value of <a href="../../properties/coord/">Coord</a> is <code>'Inherit'</code> for all other objects, the value of <a href="../../properties/coord/">Coord</a> for <code>'.'</code> defines the default co-ordinate system. It may be either <code>'Prop'</code> (the default) or <code>'Pixel'</code>. <code>'Inherit'</code> and <code>'User'</code> are not allowed.</p>
 <p>The <a href="../../properties/cursorobj/">CursorObj</a> property is used to define a cursor for the application as a whole. Its default value is an empty character vector. If it is set to any value other than <code>''</code> or 0, the selected cursor overrides the <a href="../../properties/cursorobj/">CursorObj</a> values for all other objects. If you want to indicate that the application is "busy", you can therefore set the <a href="../../properties/cursorobj/">CursorObj</a> property on <code>'.'</code> to an hourglass for the duration of the operation. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'.'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'CursorObj'</span><span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="c1">⍝ Set cursor to an hourglass</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'.'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'CursorObj'</span><span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="c1">⍝ Set cursor to an hourglass</span>
 </code></pre></div>
 <p>[lengthy process...]
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'.'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'CursorObj'</span><span class="w"> </span><span class="m">0</span><span class="w">  </span><span class="c1">⍝ Reset cursor</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'.'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'CursorObj'</span><span class="w"> </span><span class="m">0</span><span class="w">  </span><span class="c1">⍝ Reset cursor</span>
 </code></pre></div>
 <p>The <a href="../../properties/yield/">Yield</a> property specifies how frequently APL yields to Windows during the execution of code. Its default value is 200 milliseconds.</p>
 <p>The <a href="../../properties/edgestyle/">EdgeStyle</a> property is used to determine whether or not objects may have 3-dimensional effects. Setting <a href="../../properties/edgestyle/">EdgeStyle</a> to <code>'None'</code> disables 3-dimensional effects on all <a href="../form/">Form</a>s and controls. Setting <a href="../../properties/edgestyle/">EdgeStyle</a> to any other value enables 3-dimensional effects for these objects.</p>
@@ -78864,7 +78864,7 @@
 <h2 id="exposing-root-members">Exposing Root members</h2>
 <p>The Properties, Methods and Events of the Root object are always accessible using the system functions <code>⎕WS</code>, <code>⎕WG</code> and <code>⎕NQ</code> but may also be optionally accessed directly as if they were global variables or functions in the workspace.</p>
 <p>For example, if Root members are exposed, the following expression will set the application cursor (GUI) to an hourglass:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">CursorObj</span><span class="kd">←</span><span class="m">1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">CursorObj</span><span class="kd">←</span><span class="m">1</span>
 </code></pre></div>
 <p>There are a number of elements that control whether or not Root members are exposed.</p>
 <ol>
@@ -78907,7 +78907,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

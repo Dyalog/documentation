@@ -78720,7 +78720,7 @@
 <p><code>R[;3]</code> is <code>¯1</code> if the child process terminated as the result of a signal, otherwise it is the exit code of the child process</p>
 <p>The remaining 15 columns are the contents of the <code>rusage</code> structure returned by the underlying <code>wait3()</code> system call. Note that the two timevalstructs are each returned as a floating point number.</p>
 <p>The current <code>rusage</code> structure contains:
-</p><div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">rusage</span><span class="w"> </span><span class="p">{</span>
+</p><div class="language-c highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">rusage</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">timeval</span><span class="w"> </span><span class="n">ru_utime</span><span class="p">;</span><span class="w"> </span><span class="cm">/* user time used */</span>
 <span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">timeval</span><span class="w"> </span><span class="n">ru_stime</span><span class="p">;</span><span class="w"> </span><span class="cm">/* system time used */</span>
 <span class="w">    </span><span class="kt">long</span><span class="w">   </span><span class="n">ru_maxrss</span><span class="p">;</span><span class="w">        </span><span class="cm">/* maximum resident set size */</span>
@@ -78741,7 +78741,7 @@
 </code></pre></div>
 <p><code>4002⌶</code> may return the PID of an abnormally terminated Auxiliary Processor; APL code should check that the list of processes that have been reaped is a superset of the list of processes that have been started.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">tryforks</span><span class="sr">;</span><span class="nv">pid</span><span class="sr">;</span><span class="nv">fpid</span><span class="sr">;</span><span class="nv">rpid</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">tryforks</span><span class="sr">;</span><span class="nv">pid</span><span class="sr">;</span><span class="nv">fpid</span><span class="sr">;</span><span class="nv">rpid</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">rpids</span><span class="kd">←</span><span class="nv">fpids</span><span class="kd">←</span><span class="no">⍬</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">For</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="bp">:</span><span class="nv">In</span><span class="w"> </span><span class="o">⍳</span><span class="m">5</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">        </span><span class="nv">fpid</span><span class="kd">←</span><span class="m">4000</span><span class="na">⌶</span><span class="s1">''</span><span class="w"> </span><span class="c1">⍝ fork() a process</span>
@@ -78799,7 +78799,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78788,11 +78788,11 @@
 <p>A Windows metafile is a mechanism for representing a picture as a collection of graphics commands. Once a metafile has been created, the picture that it represents can be drawn repeatedly from it. Metafiles are device-independent, so the picture can be reproduced on different devices. Unlike bitmaps, metafiles can be scaled accurately and are therefore particularly useful for passing graphical information between different applications. Note that some other applications only support <em>placeable</em> metafiles. See RealSize property for details.</p>
 <h2 id="creating-a-metafile-object">Creating a Metafile Object</h2>
 <p>In Dyalog APL, a Windows metafile is represented by the Metafile object. This is created in much the same way as a Bitmap object. That is, you can either make a Metafile object from an existing .WMF file, or you can create an empty one and then draw onto it using Poly, Text and other graphical objects. For example, to create a Metafile object called <code>Ducky</code> from the <code>AN00015_.wmf</code> metafile that comes with a certain version of Microsoft Office, you can execute the following:
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="nv">Dir</span><span class="kd">←</span><span class="s1">'C:\Program Files\Microsoft Office\root\CLIPART\PUB60COR\'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="nv">Dir</span><span class="kd">←</span><span class="s1">'C:\Program Files\Microsoft Office\root\CLIPART\PUB60COR\'</span>
 <span class="w">   </span><span class="s1">'Ducky'</span><span class="nf">⎕WC</span><span class="s1">'Metafile'</span><span class="p">(</span><span class="nv">Dir</span><span class="o">,</span><span class="s1">'AN00015_.wmf'</span><span class="p">)</span>
 </code></pre></div>
 <p>If instead you wanted to create a metafile drawing from scratch, you could do so as follows. Notice that there is no need to assign names to the graphical objects drawn onto the Metafile.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="s1">'METADUCK'</span><span class="w">  </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Metafile'</span><span class="w"> </span><span class="s1">''</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="s1">'METADUCK'</span><span class="w">  </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Metafile'</span><span class="w"> </span><span class="s1">''</span>
 <span class="w">     </span><span class="s1">'METADUCK.'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Poly'</span><span class="w"> </span><span class="nv">DUCK</span>
 <span class="w">     </span><span class="s1">'fnt'</span><span class="nf">⎕WC</span><span class="s1">'Font'</span><span class="w"> </span><span class="s1">'Arial'</span><span class="w"> </span><span class="m">72</span>
 <span class="w">     </span><span class="s1">'METADUCK.'</span><span class="nf">⎕WC</span><span class="s1">'Text'</span><span class="w"> </span><span class="s1">'Quack'</span><span class="p">(</span><span class="m">45</span><span class="w"> </span><span class="m">60</span><span class="p">)(</span><span class="s1">'FontObj'</span><span class="w"> </span><span class="s1">'fnt'</span><span class="p">)</span>
@@ -78800,11 +78800,11 @@
 <h2 id="drawing-a-metafile-object">Drawing a Metafile Object</h2>
 <p>A Metafile object is drawn by specifying either the object itself or its name as the Picture property of another object. This causes the Metafile to be drawn in that object and scaled to fit exactly within its boundaries.</p>
 <p>The following statement creates a Form containing the Metafile object  <code>Ducky</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="s1">'F1'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">30</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'Picture'</span><span class="w"> </span><span class="nv">Ducky</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="s1">'F1'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">30</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'Picture'</span><span class="w"> </span><span class="nv">Ducky</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="" src="../../img/ducky.png"></p>
 <p>The next statement replaces the Picture with the Metafile object <code>METADUCK</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">Picture</span><span class="kd">←</span><span class="nv">METADUCK</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">Picture</span><span class="kd">←</span><span class="nv">METADUCK</span>
 </code></pre></div>
 <p><img alt="" src="../../img/metaduck.png"></p>
 
@@ -78836,7 +78836,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78705,7 +78705,7 @@
 <p>Each interpreter has its own unique  BuildID. This is a 32-bit checksum of the program file which is the Dyalog APL interpreter. This checksum allows Dyalog Ltd. support staff to uniquely identify the interpreter and from that determine the version, edition, platform etc. of the interpreter.</p>
 <p>For that reason, Dyalog Ltd. support staff ask that whenever an issue is raised with them that the BuildID is included in all communications.</p>
 <p>The BuildID is included in binary form in any aplcore that is generated; if a core file is created, then is it possible to identify the BuildID using the following command:
-</p><div class="highlight"><pre><span></span><code>$ strings -a -n 14 core | grep "BuildID="
+</p><div class="language-text highlight"><pre><span></span><code>$ strings -a -n 14 core | grep "BuildID="
 </code></pre></div>
 <p>Additionally, the BuildID is included in the "Interesting Information" section of aplcore files provided that the environment variable APL_TEXTINAPLCORE is set to 1.</p>
 <p>The BuildID can be identified both from within the interpreter (using the GetBuildID method), and also from the BuildID executable which is supplied with the product on UNIX.</p>
@@ -78713,14 +78713,14 @@
 <h2 class="example">Examples</h2>
 
 <p>At the command line:
-</p><div class="highlight"><pre><span></span><code>$ cd /opt/mdyalog/12.1/32/classic/p6
+</p><div class="language-text highlight"><pre><span></span><code>$ cd /opt/mdyalog/12.1/32/classic/p6
 $ ./BuildID dyalog
 70a3446e
 $ ./BuildID magic
 0a744663
 </code></pre></div>
 <p>In APL:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕nq</span><span class="w"> </span><span class="s1">'.'</span><span class="w"> </span><span class="s1">'GetbuildID'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕nq</span><span class="w"> </span><span class="s1">'.'</span><span class="w"> </span><span class="s1">'GetbuildID'</span>
 <span class="m">70</span><span class="nv">a3446e</span>
 <span class="w">      </span><span class="nv">magicfile</span><span class="kd">←</span><span class="s1">'/opt/mdyalog/12.1/32/classic/p6/magic'</span>
 <span class="w">      </span><span class="o">+</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕nq</span><span class="w"> </span><span class="s1">'.'</span><span class="w"> </span><span class="s1">'GetBuildID'</span><span class="w"> </span><span class="nv">magicfile</span>
@@ -78761,7 +78761,7 @@ $ ./BuildID magic
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

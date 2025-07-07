@@ -78738,7 +78738,7 @@ specifies the columns to be locked and whose second row specifies <em>where</em>
 the default and may be omitted. If the <em>Lock flag</em> is 0, the corresponding
 columns are unlocked</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">LockColumns</span><span class="w"> </span><span class="m">3</span><span class="w">         </span><span class="c1">⍝Lock 3rd column</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">LockColumns</span><span class="w"> </span><span class="m">3</span><span class="w">         </span><span class="c1">⍝Lock 3rd column</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">LockColumns</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">0</span><span class="w">       </span><span class="c1">⍝Unlock 3rd column</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">LockColumns</span><span class="w"> </span><span class="p">(</span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w">     </span><span class="c1">⍝Lock 4th &amp; 5th cols</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">LockColumns</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">1</span><span class="o">⍴</span><span class="m">8</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="c1">⍝Lock 8 at 4</span>
@@ -78750,10 +78750,10 @@ columns are unlocked</p>
 <p>The result is an integer matrix containing the indices of all locked columns
 and the positions at which they are currently locked.</p>
 <p>The expression:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">LockColumns</span><span class="w"> </span><span class="o">⊂</span><span class="no">⍬</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">LockColumns</span><span class="w"> </span><span class="o">⊂</span><span class="no">⍬</span>
 </code></pre></div>
 <p>may therefore be used to obtain the indices of the locked columns, and:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">LockColumns</span><span class="p">(</span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">LockColumns</span><span class="w"> </span><span class="o">⊂</span><span class="no">⍬</span><span class="p">)</span><span class="w"> </span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">LockColumns</span><span class="p">(</span><span class="nv">F</span><span class="na">.</span><span class="nv">G</span><span class="na">.</span><span class="nv">LockColumns</span><span class="w"> </span><span class="o">⊂</span><span class="no">⍬</span><span class="p">)</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <p>unlocks all currently locked columns.</p>
 <p>Locks are additive. If column 4 is locked, locking column 5 results in both
@@ -78773,7 +78773,7 @@ column in the <a href="../../objects/grid/">Grid</a> depends upon the value of t
 <a href="../../properties/index-property/">Index</a> property at the time it was locked.</p>
 <p>If <code>C</code> is the value specified for where a
 given column is to be locked, the value of the physical column <code>P</code> at which it will be displayed in the Grid named <code>GRID</code> is:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">P</span><span class="kd">←</span><span class="nv">C</span><span class="o">-</span><span class="p">(</span><span class="m">2</span><span class="o">⊃</span><span class="nv">GRID</span><span class="w"> </span><span class="nf">⎕WG</span><span class="w"> </span><span class="s1">'Index'</span><span class="p">)</span><span class="o">-</span><span class="nf">⎕IO</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">P</span><span class="kd">←</span><span class="nv">C</span><span class="o">-</span><span class="p">(</span><span class="m">2</span><span class="o">⊃</span><span class="nv">GRID</span><span class="w"> </span><span class="nf">⎕WG</span><span class="w"> </span><span class="s1">'Index'</span><span class="p">)</span><span class="o">-</span><span class="nf">⎕IO</span>
 </code></pre></div>
 <p>Furthermore, the position of a locked column given by the result of the
 LockColumns method changes (with the <a href="../../properties/index-property/">Index</a> property) as the <a href="../../objects/grid/">Grid</a> is scrolled.</p>
@@ -78806,7 +78806,7 @@ LockColumns method changes (with the <a href="../../properties/index-property/">
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78705,11 +78705,11 @@
 <p>When Dyalog APL encounters an unexpected problem it is likely that the interpreter will terminate and generate either a core file or an aplcore file. Under Linux core files are not created by default; it is necessary to enable their creation.</p>
 <p>An aplcore file contains the workspace at the point where the interpreter terminated, along with debug information that may enable Dyalog to identify and rectify the problem.</p>
 <p>The Dyalog support department (support@dyalog.com, other means of contact on the Dyalog website) should be contacted if an aplcore file is generated. More immediately it may be possible to copy the contents of the aplcore into a new Dyalog process by running
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">copy</span><span class="w"> </span><span class="nv">aplcore</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">copy</span><span class="w"> </span><span class="nv">aplcore</span>
 </code></pre></div>
 <p>Note however that it is possible that the <code>)COPY</code> itself will cause another aplcore; it is best to rename the original aplcore before attempting this course of action.</p>
 <p>From Version 13.2 onwards in situations where a core file is generated, an aplcore file will be generated too; this is done by forking the failing APL process, so an additional APL process will appear in any process listing while the aplcore is being created. If the environment variable <em>APL_TEXTINAPLCORE</em> is set and has the value 1 then an "Interesting Information" section is appended to the aplcore which contains information such as the APL stack, the WSID of the originating workspace etc. This section can be extracted from an aplcore using
-</p><div class="highlight"><pre><span></span><code><span class="nv">sed</span><span class="w"> </span><span class="o">-</span><span class="nv">n</span><span class="w"> </span><span class="s1">'/======== Interesting Information/,$p'</span><span class="w"> </span><span class="nv">aplcore</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">sed</span><span class="w"> </span><span class="o">-</span><span class="nv">n</span><span class="w"> </span><span class="s1">'/======== Interesting Information/,$p'</span><span class="w"> </span><span class="nv">aplcore</span>
 </code></pre></div>
 
 
@@ -78740,7 +78740,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

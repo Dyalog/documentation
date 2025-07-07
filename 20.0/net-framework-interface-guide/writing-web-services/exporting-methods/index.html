@@ -78786,15 +78786,15 @@
 <h1 class="heading"><span class="name">Exporting Methods</span></h1>
 
 <p>Your Web Service will be of no use unless it exports at least one method. To export a function as a method, you must include declaration statements. Such declarations may be supplied anywhere within the function body, but it is recommended that they appear together as the first block of statements in your code. All declaration statements begin with the colon (:) character and the following declaration statements are supported:
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">WebMethod</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">WebMethod</span>
 </code></pre></div>
 <p>This statement causes the function to be exported as a method and <strong>must</strong> be present.
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">type</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="nv">fnname</span><span class="w"> </span><span class="nv">type</span><span class="w"> </span><span class="nv">name1</span><span class="o">,</span><span class="w"> </span><span class="nv">type</span><span class="w"> </span><span class="nv">name2</span><span class="o">,</span><span class="w"> </span><span class="na">...</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">type</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="nv">fnname</span><span class="w"> </span><span class="nv">type</span><span class="w"> </span><span class="nv">name1</span><span class="o">,</span><span class="w"> </span><span class="nv">type</span><span class="w"> </span><span class="nv">name2</span><span class="o">,</span><span class="w"> </span><span class="na">...</span>
 </code></pre></div>
 <p>This statement declares the data type of the result and the arguments of the method where <code>type</code> may specify any valid .NET type that is supported by Web Services. Note that the assignment arrow (<code>←</code>) is necessary if the function returns a result.</p>
 <p>The declaration of each parameter of the method is separated from the next by a comma. Each <code>name</code> may be any ASCII character string. Note that names are optional.</p>
 <h2 id="add1">Add1</h2>
-<div class="highlight"><pre><span></span><code><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">Add1</span><span class="w"> </span><span class="nv">args</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">Add1</span><span class="w"> </span><span class="nv">args</span>
 <span class="w"> </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">WebMethod</span>
 <span class="w"> </span><span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">Int32</span><span class="kd">←</span><span class="nv">Add</span><span class="w"> </span><span class="nv">Int32</span><span class="w"> </span><span class="nv">arg1</span><span class="o">,</span><span class="nv">Int32</span><span class="w"> </span><span class="nv">arg2</span>
 <span class="w">  </span><span class="nv">R</span><span class="kd">←</span><span class="o">+</span><span class="na">/</span><span class="nv">args</span>
@@ -78802,7 +78802,7 @@
 </code></pre></div>
 <p>The <code>Add1</code> function defined above is exported as a method named <code>Add</code>, that takes exactly (and only) two parameters of type <code>Int32</code> and returns a result of type <code>Int32</code>. Armed with this definition, which is recorded in the metadata associated with the class, the .NET Framework guarantees that the method will only be called in this way.</p>
 <h2 id="add2">Add2</h2>
-<div class="highlight"><pre><span></span><code><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">Add2</span><span class="w"> </span><span class="nv">arg</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">Add2</span><span class="w"> </span><span class="nv">arg</span>
 <span class="w"> </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">WebMethod</span>
 <span class="w"> </span><span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">Double</span><span class="kd">←</span><span class="nv">Add</span><span class="w"> </span><span class="nv">Double</span><span class="sr">[]</span><span class="w"> </span><span class="nv">arg1</span>
 <span class="w">  </span><span class="nv">R</span><span class="kd">←</span><span class="o">+</span><span class="na">/</span><span class="nv">arg</span>
@@ -78838,7 +78838,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

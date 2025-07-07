@@ -78763,23 +78763,23 @@
 <h2 class="example">Examples</h2>
 
 <p>Start a print job on the default printer
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'PR1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Printer'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'PR1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Printer'</span>
 </code></pre></div>
 <p>Write a centred heading at the top of the page using a proportional font
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'PR1.'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="s1">'Report Title'</span><span class="w"> </span><span class="p">(</span><span class="m">0</span><span class="w"> </span><span class="m">50</span><span class="p">)(</span><span class="s1">'HAlign'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'FontObj'</span><span class="w"> </span><span class="s1">'Roman'</span><span class="w"> </span><span class="m">64</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'PR1.'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="s1">'Report Title'</span><span class="w"> </span><span class="p">(</span><span class="m">0</span><span class="w"> </span><span class="m">50</span><span class="p">)(</span><span class="s1">'HAlign'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'FontObj'</span><span class="w"> </span><span class="s1">'Roman'</span><span class="w"> </span><span class="m">64</span><span class="p">)</span>
 </code></pre></div>
 <p>Draw a line across the page, 2 pixels wide
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'PR1.'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Poly'</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="p">(</span><span class="m">0</span><span class="w"> </span><span class="m">100</span><span class="p">))</span><span class="w"> </span><span class="p">(</span><span class="s1">'LWidth'</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'PR1.'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Poly'</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="p">(</span><span class="m">0</span><span class="w"> </span><span class="m">100</span><span class="p">))</span><span class="w"> </span><span class="p">(</span><span class="s1">'LWidth'</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
 </code></pre></div>
 <p>Print a character matrix. Note that a fixed width font is used.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">REPORT</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'I6'</span><span class="w"> </span><span class="nf">⎕FMT</span><span class="w"> </span><span class="o">?</span><span class="m">20</span><span class="w"> </span><span class="m">6</span><span class="o">⍴</span><span class="m">1000</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">REPORT</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'I6'</span><span class="w"> </span><span class="nf">⎕FMT</span><span class="w"> </span><span class="o">?</span><span class="m">20</span><span class="w"> </span><span class="m">6</span><span class="o">⍴</span><span class="m">1000</span>
 <span class="w">      </span><span class="s1">'PR1.'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Text'</span><span class="w"> </span><span class="nv">REPORT</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="s1">'FontObj'</span><span class="w"> </span><span class="s1">'DyalogAPL'</span><span class="p">)</span>
 </code></pre></div>
 <p>Throw a new page
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">PR1</span><span class="na">.</span><span class="nv">NewPage</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">PR1</span><span class="na">.</span><span class="nv">NewPage</span>
 </code></pre></div>
 <p>Spool output
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="w"> </span><span class="s1">'PR1'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="w"> </span><span class="s1">'PR1'</span>
 </code></pre></div>
 
 
@@ -78810,7 +78810,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

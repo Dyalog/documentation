@@ -78771,21 +78771,21 @@
 <p>In this example, the requirement is to export three different versions of the <code>IndexGen</code> method; one that takes a single number as an argument, one that takes two numbers, and a third that takes any number of numbers. These are represented by three functions named <code>IndexGen1</code>, <code>IndexGen2</code> and <code>IndexGen3</code> respectively. Because monadic <code>⍳</code> performs all of these operations, the three APL functions are in fact identical. However, their public interfaces, as defined in their <code>:Signature</code> statement, are all different.</p>
 <p>The overloading is achieved by entering the same name for the exported method (<code>IndexGen</code>) in the box provided, for each of the three APL functions.</p>
 <p><code>aplclasses5.dws</code> contains a new version of the <code>Primitives</code> class with three different versions of <code>IndexGen</code> as shown below:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">IndexGen1</span><span class="w"> </span><span class="nv">N</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">IndexGen1</span><span class="w"> </span><span class="nv">N</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">public</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">Int32</span><span class="sr">[]</span><span class="kd">←</span><span class="nv">IndexGen</span><span class="w"> </span><span class="nv">Int32</span><span class="w"> </span><span class="nv">N</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="o">⍳</span><span class="nv">N</span>
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>This is the version we have seen before. The method is defined to take a single argument of type <code>Int32</code>, and to return a 1-dimensional array (vector) of type <code>Int32</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">IndexGen2</span><span class="w"> </span><span class="nv">N</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">IndexGen2</span><span class="w"> </span><span class="nv">N</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">public</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">Int32</span><span class="sr">[][</span><span class="o">,</span><span class="sr">]</span><span class="kd">←</span><span class="nv">IndexGen</span><span class="w"> </span><span class="nv">Int32</span><span class="w"> </span><span class="nv">N1</span><span class="o">,</span><span class="w"> </span><span class="nv">Int32</span><span class="w"> </span><span class="nv">N2</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="o">⍳</span><span class="nv">N</span>
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>This version is defined to take two arguments of type <code>Int32</code>, and to return a 2-dimensional array, each of whose elements is a 1-dimensional array (vector) of type <code>Int32</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">IndexGen3</span><span class="w"> </span><span class="nv">N</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">IndexGen3</span><span class="w"> </span><span class="nv">N</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">public</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">Array</span><span class="kd">←</span><span class="nv">IndexGen</span><span class="w"> </span><span class="nv">Int32</span><span class="sr">[]</span><span class="w"> </span><span class="nv">N</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="o">⍳</span><span class="nv">N</span>
@@ -78798,7 +78798,7 @@
 <p><img alt="" src="../../img/aplclasses5-2.png"></p>
 <h2 id="programcs">program.cs</h2>
 <p><code>samples\APLClasses\aplfns5.cs</code>contains code to invoke the three different variants of <code>IndexGen</code>, in the new <code>aplclasses.dll</code>. Notice that it uses a local sub-routine <code>PrintArray()</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+</p><div class="language-cs highlight"><pre><span></span><code><span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 <span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="nn">APLClasses</span><span class="p">;</span>
 <span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MainClass</span>
 <span class="w">            </span><span class="p">{</span>
@@ -78846,7 +78846,7 @@
 <p>Click <em>Debug/Start Without debugging</em> (or press <kbd>Ctrl</kbd>+<kbd>F5</kbd>) to run the program. The results are shown in a console window.</p>
 <p><img alt="" src="../../img/aplclasses5-4.png"></p>
 <p>It is possible for a function to have several <code>:Signature</code> statements. Given that our three functions perform exactly the same operation, it might have made more sense to use a single function:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">IndexGen1</span><span class="w"> </span><span class="nv">N</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">IndexGen1</span><span class="w"> </span><span class="nv">N</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">public</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">Int32</span><span class="sr">[]</span><span class="kd">←</span><span class="nv">IndexGen</span><span class="w"> </span><span class="nv">Int32</span><span class="w"> </span><span class="nv">N</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">Int32</span><span class="sr">[][</span><span class="o">,</span><span class="sr">]</span><span class="kd">←</span><span class="nv">IndexGen</span><span class="w"> </span><span class="nv">Int32</span><span class="w"> </span><span class="nv">N1</span><span class="o">,</span><span class="w"> </span><span class="nv">Int32</span><span class="w"> </span><span class="nv">N2</span>
@@ -78883,7 +78883,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

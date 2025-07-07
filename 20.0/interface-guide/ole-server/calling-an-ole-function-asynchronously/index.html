@@ -78812,7 +78812,7 @@
 <p>The OLEASYNC workspace illustrates this technique. It contains a single namespace called <code>Async</code> which exports 2 functions (methods), <code>PRINT</code> and <code>ASYNC</code> and two variables (properties) <code>ERRCODE</code> and <code>COPIES</code>.</p>
 <p>The first function, <code>PRINT</code>, prints a specified number of test pages <em>in the background</em>. <code>PRINT</code> does not actually do any printing. All it does is to associate a second function <code>PRINT_CB</code> as a callback on a user-defined event 3001 (the choice of 3001 is purely arbitrary). It then posts an event 3001 onto the queue and returns 0 as its result.</p>
 <p>The function also illustrates the use of <code>:Trap</code>. Should either of the statements on lines <code>[3]</code> and <code>[4]</code> fail, the function terminates cleanly and returns <code>⎕DM</code> instead.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">PRINT</span><span class="w"> </span><span class="nv">N</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">PRINT</span><span class="w"> </span><span class="nv">N</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="c1">⍝ Prints N test pages "in background"</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="m">0</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">        </span><span class="s1">'.'</span><span class="nf">⎕WS</span><span class="s1">'Event'</span><span class="w"> </span><span class="m">3001</span><span class="w"> </span><span class="s1">'PRINT_CB'</span><span class="nv">N</span>
@@ -78824,7 +78824,7 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>The actual printing is performed by <code>PRINT_CB</code> <em>after</em> <code>PRINT</code> has returned to the client and <em>while</em> the client itself continues processing. It too uses <code>:Trap</code> to terminate cleanly should an error occur.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">N</span><span class="w"> </span><span class="nv">PRINT_CB</span><span class="w"> </span><span class="nv">MSG</span><span class="sr">;</span><span class="nv">PR</span><span class="sr">;</span><span class="nv">I</span><span class="sr">;</span><span class="nv">M</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">N</span><span class="w"> </span><span class="nv">PRINT_CB</span><span class="w"> </span><span class="nv">MSG</span><span class="sr">;</span><span class="nv">PR</span><span class="sr">;</span><span class="nv">I</span><span class="sr">;</span><span class="nv">M</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="c1">⍝ Callback function : prints N test pages</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="m">0</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">        </span><span class="s1">'PR'</span><span class="nf">⎕WC</span><span class="s1">'Printer'</span>
@@ -78840,7 +78840,7 @@
 </code></pre></div>
 <p>Note that the client can (later) query <code>ERRCODE</code> to find out whether or not the operation succeeded. Indeed, referencing <code>ERRCODE</code> will synchronise the client and server because the server will have to wait until <code>PRINT_CB</code> completes before it can service the request for the value of <code>ERRCODE</code>.</p>
 <p>The <code>ASYNC</code> function illustrates a slightly different approach and may be used to execute any expression asynchronously. It simply associates its argument (a character vector) as an expression to be executed when (user-defined) event 3001 occurs. It then <em>posts</em> this event onto the queue as before.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">ASYNC</span><span class="w"> </span><span class="nv">CMD</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">ASYNC</span><span class="w"> </span><span class="nv">CMD</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="c1">⍝ Executes expression CMD "asynchronously"</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="m">0</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">        </span><span class="s1">'#.Async'</span><span class="nf">⎕WS</span><span class="s1">'Event'</span><span class="w"> </span><span class="m">3001</span><span class="w"> </span><span class="s1">'DO'</span><span class="nv">CMD</span>
@@ -78852,7 +78852,7 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>The callback function <code>DO</code> is invoked (later) when the event 3001 is processed from the event queue. This happens immediately after the function <code>ASYNC</code> has returned its result to the client workspace. <code>DO</code> simply executes its left argument, which is the string that was supplied as the right argument to <code>ASYNC</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">CMD</span><span class="w"> </span><span class="nv">DO</span><span class="w"> </span><span class="nv">MSG</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">CMD</span><span class="w"> </span><span class="nv">DO</span><span class="w"> </span><span class="nv">MSG</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="m">0</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">        </span><span class="o">⍎</span><span class="nv">CMD</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">        </span><span class="nv">ERRCODE</span><span class="kd">←</span><span class="m">0</span>
@@ -78862,11 +78862,11 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>You may wonder why it is necessary to use a callback function as opposed to an execute expression. In particular, why not have <code>ASYNC[3]</code> as follows?
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">        </span><span class="s1">'#.Async'</span><span class="nf">⎕WS</span><span class="s1">'Event'</span><span class="w"> </span><span class="m">3001</span><span class="w"> </span><span class="s1">'⍎CMD'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">        </span><span class="s1">'#.Async'</span><span class="nf">⎕WS</span><span class="s1">'Event'</span><span class="w"> </span><span class="m">3001</span><span class="w"> </span><span class="s1">'⍎CMD'</span>
 </code></pre></div>
 <p>The reason is that whilst a callback will execute in the <em>instance</em> of the OLEServer namespace connected to this client (which is what we want), an execute expression will be executed in the master OLEServer namespace itself.</p>
 <p>The namespace contains a fourth function called <code>LPR</code> which is designed to be called via <code>ASYNC</code> using an expression such as <code>ASYNC 'LPR'</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">LPR</span><span class="sr">;</span><span class="nv">PR</span><span class="sr">;</span><span class="nv">I</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">LPR</span><span class="sr">;</span><span class="nv">PR</span><span class="sr">;</span><span class="nv">I</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="m">0</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">        </span><span class="s1">'PR'</span><span class="nf">⎕WC</span><span class="s1">'Printer'</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">        </span><span class="bp">:</span><span class="nv">For</span><span class="w"> </span><span class="nv">I</span><span class="w"> </span><span class="bp">:</span><span class="nv">In</span><span class="w"> </span><span class="o">⍳</span><span class="nv">COPIES</span>
@@ -78882,19 +78882,19 @@
 <p>Note that the number of copies to be printed is defined by the (global) variable <code>COPIES</code> whose default value is 1. This is done only to illustrate that <code>LPR</code> called via <code>DO</code> runs in the correct instance of the OLEServer (using <em>your</em> value of <code>COPIES</code>) as opposed to in the master OLEServer namespace itself.</p>
 <h2 id="testing-dyalogasync">Testing dyalog.Async</h2>
 <p>Load OLEASYNC and then register dyalog.Async as an OLE object by doing the following:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Async</span><span class="na">.</span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'OLEServer'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Async</span><span class="na">.</span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'OLEServer'</span>
 <span class="w">      </span><span class="s1">'Async'</span><span class="nf">⎕WS</span><span class="s1">'ExportedFns'</span><span class="w"> </span><span class="p">(</span><span class="s1">'PRINT'</span><span class="w"> </span><span class="s1">'ASYNC'</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">'Async'</span><span class="nf">⎕WS</span><span class="s1">'ExportedVars'</span><span class="w"> </span><span class="p">(</span><span class="s1">'ERRCODE'</span><span class="w"> </span><span class="s1">'COPIES'</span><span class="p">)</span>
 </code></pre></div>
 <p>Rename the workspace to avoid overwriting the original and <code>)SAVE</code> it.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">WSID</span><span class="w"> </span><span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">MYASYNC</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">WSID</span><span class="w"> </span><span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">MYASYNC</span>
 <span class="nv">was</span><span class="w"> </span><span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Program</span><span class="w"> </span><span class="nv">Files</span><span class="na">\</span><span class="nv">Dyalog</span><span class="na">\</span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">APL</span><span class="o">-</span><span class="m">64</span><span class="w"> </span><span class="m">15.0</span><span class="w"> </span><span class="nv">Unicode</span><span class="na">\</span><span class="nv">Samples</span><span class="na">\</span><span class="nv">ole</span><span class="na">\</span><span class="nv">oleasync</span><span class="na">.</span><span class="nv">dws</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">SAVE</span>
 <span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">MYASYNC</span><span class="na">.</span><span class="nv">dws</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="nv">Wed</span><span class="w"> </span><span class="nv">Jun</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">14</span><span class="bp">:</span><span class="m">11</span><span class="bp">:</span><span class="m">01</span><span class="w"> </span><span class="m">2016</span>
 </code></pre></div>
 <p>Finally, register the OLE Server using <em>File/Export</em>. <strong>Note that dyalog.Async will only work as an out-of-process OLE Server.</strong></p>
 <p>Now clear the workspace and test dyalog.Async using Dyalog APL as an OLE client application. You could also try calling it from Excel. Note that the results from the functions <code>PRINT</code> and <code>ASYNC</code> are returned immediately.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CLEAR</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CLEAR</span>
 <span class="nv">clear</span><span class="w"> </span><span class="nv">ws</span>
 <span class="w">      </span><span class="s1">'TEST'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'OLEClient'</span><span class="w"> </span><span class="s1">'dyalog.Async'</span>
 
@@ -78941,7 +78941,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

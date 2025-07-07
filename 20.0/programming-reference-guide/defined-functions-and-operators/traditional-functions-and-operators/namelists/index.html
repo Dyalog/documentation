@@ -78710,7 +78710,7 @@
 <p>Names specified in a Namelist are automatically local to the function; there is no need to localise them explicitly using semi-colons.</p>
 <p>If the <em>right argument</em> of a function is declared as a Namelist, the function will only accept a right argument that is a vector whose length is the same as the number of names in the Namelist. Calling the function with any other argument will result in a <code>LENGTH ERROR</code> in the calling statement. Otherwise, the elements of the argument are assigned to the names in the Namelist in the specified order.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">IDN</span><span class="kd">←</span><span class="nv">Date2IDN</span><span class="p">(</span><span class="nv">Year</span><span class="w"> </span><span class="nv">Month</span><span class="w"> </span><span class="nv">Day</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">IDN</span><span class="kd">←</span><span class="nv">Date2IDN</span><span class="p">(</span><span class="nv">Year</span><span class="w"> </span><span class="nv">Month</span><span class="w"> </span><span class="nv">Day</span><span class="p">)</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="s1">'Year is '</span><span class="o">,⍕</span><span class="nv">Year</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="s1">'Month is '</span><span class="o">,⍕</span><span class="nv">Month</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="s1">'Day is '</span><span class="o">,⍕</span><span class="nv">Day</span>
@@ -78729,7 +78729,7 @@
 </code></pre></div>
 <p>Note that if you specify a <em>single</em> name in the Namelist, the function may be called only with a 1-element vector right argument. If the <em>result</em> of a function is declared as a Namelist, the values of the names will automatically be stranded together in the specified order and returned as the result of the function when the function terminates.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="p">(</span><span class="nv">Year</span><span class="w"> </span><span class="nv">Month</span><span class="w"> </span><span class="nv">Day</span><span class="p">)</span><span class="kd">←</span><span class="nv">Birthday</span><span class="w"> </span><span class="nv">age</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="p">(</span><span class="nv">Year</span><span class="w"> </span><span class="nv">Month</span><span class="w"> </span><span class="nv">Day</span><span class="p">)</span><span class="kd">←</span><span class="nv">Birthday</span><span class="w"> </span><span class="nv">age</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">Year</span><span class="kd">←</span><span class="m">1949</span><span class="o">+</span><span class="nv">age</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">Month</span><span class="kd">←</span><span class="m">4</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">Day</span><span class="kd">←</span><span class="m">30</span>
@@ -78766,7 +78766,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

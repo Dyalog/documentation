@@ -78706,16 +78706,16 @@
 
 <p>Our personnel database could be termed a <em>record oriented</em> system. All the information relating to one person is easily obtained, and information relating to a new person is easily added, but if we wish to find the oldest person, we have to read ALL the records in the file.</p>
 <p>It is sometimes more useful to have separate components, perhaps stored on separate files, that hold indexes of the data fields that you may wish to search on. For example, suppose we know that we always want to access our personnel database by name. Then it would make sense to hold an index component of names:
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="c1">⍝ Extract name field from each data record</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="c1">⍝ Extract name field from each data record</span>
 <span class="w">        </span><span class="s1">'PERSONNEL'</span><span class="w"> </span><span class="nf">⎕FSTIE</span><span class="w"> </span><span class="m">1</span>
 <span class="w">        </span><span class="nv">NAMES</span><span class="kd">←</span><span class="o">⊃</span><span class="na">∘</span><span class="nf">⎕FREAD</span><span class="na">¨</span><span class="m">1</span><span class="o">,</span><span class="na">¨</span><span class="o">⍳</span><span class="m">¯1</span><span class="o">+</span><span class="m">2</span><span class="o">⊃</span><span class="nf">⎕FSIZE</span><span class="w"> </span><span class="m">2</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">        </span><span class="c1">⍝ Create index file, and append NAMES</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="c1">⍝ Create index file, and append NAMES</span>
 <span class="w">        </span><span class="s1">'INDEX'</span><span class="w"> </span><span class="nf">⎕FCREATE</span><span class="w"> </span><span class="m">2</span>
 <span class="w">        </span><span class="nv">NAMES</span><span class="w"> </span><span class="nf">⎕FAPPEND</span><span class="w"> </span><span class="m">2</span>
 </code></pre></div>
 <p>Then if we want to find Pauline's data record:
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="nv">NAMES</span><span class="kd">←</span><span class="nf">⎕FREAD</span><span class="w"> </span><span class="m">2</span><span class="o">,</span><span class="m">1</span><span class="w">       </span><span class="c1">⍝ Read index of names</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="nv">NAMES</span><span class="kd">←</span><span class="nf">⎕FREAD</span><span class="w"> </span><span class="m">2</span><span class="o">,</span><span class="m">1</span><span class="w">       </span><span class="c1">⍝ Read index of names</span>
 <span class="w">        </span><span class="nv">CMP</span><span class="kd">←</span><span class="nv">NAMES</span><span class="o">⍳⊂</span><span class="s1">'Pauline'</span><span class="w">   </span><span class="c1">⍝ Search for Pauline</span>
 <span class="w">        </span><span class="nv">DATA</span><span class="kd">←</span><span class="nf">⎕FREAD</span><span class="w"> </span><span class="m">1</span><span class="o">,</span><span class="nv">CMP</span><span class="w">      </span><span class="c1">⍝ Read relevant record</span>
 </code></pre></div>
@@ -78749,7 +78749,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

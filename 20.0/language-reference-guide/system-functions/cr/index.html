@@ -78721,7 +78721,7 @@
 <p><code>Y</code> must be a simple character scalar or vector which represents the name of a defined function or operator.</p>
 <p>If <code>Y</code> is a name of a defined function or operator, <code>R</code> is a simple character matrix.  The first row of <code>R</code> is the function or operator header.  Subsequent rows are lines of the function or operator.  <code>R</code> contains no unnecessary blanks, except for leading indentation of control structures, trailing blanks that pad each row, and the blanks in comments.  If <code>Y</code> is the name of a variable, a locked function or operator, an external function, or is undefined, <code>R</code> is an empty matrix whose shape is <code>0 0</code>.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="nv">R</span><span class="kd">←</span><span class="nv">MEAN</span><span class="w"> </span><span class="nv">X</span><span class="w">    </span><span class="c1">⍝ Arithmetic mean</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="nv">R</span><span class="kd">←</span><span class="nv">MEAN</span><span class="w"> </span><span class="nv">X</span><span class="w">    </span><span class="c1">⍝ Arithmetic mean</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">  </span><span class="nv">R</span><span class="kd">←</span><span class="p">(</span><span class="o">+</span><span class="na">/</span><span class="nv">X</span><span class="p">)</span><span class="o">÷⍴</span><span class="nv">X</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">  </span><span class="bp">∇</span>
 <span class="w">      </span><span class="o">+</span><span class="nv">F</span><span class="kd">←</span><span class="nf">⎕CR</span><span class="s1">'MEAN'</span>
@@ -78734,7 +78734,7 @@
 <p>The definition of <code>⎕CR</code> has been extended to names assigned to functions by specification (<code>←</code>), and to local names of functions used as operands to defined operators.</p>
 <p>If <code>Y</code> is a name assigned to a primitive function, <code>R</code> is a one-element vector containing the corresponding function symbol.  If <code>Y</code> is a name assigned to a system function, <code>R</code> is a one element nested array containing the name of the system function.</p>
 <h2 class="example">Examples</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">PLUS</span><span class="kd">←</span><span class="o">+</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">PLUS</span><span class="kd">←</span><span class="o">+</span>
 <span class="w">      </span><span class="o">+</span><span class="nv">F</span><span class="kd">←</span><span class="nf">⎕CR</span><span class="s1">'PLUS'</span>
 <span class="o">+</span>
 <span class="w">      </span><span class="o">⍴</span><span class="nv">F</span>
@@ -78745,7 +78745,7 @@
 <span class="w">      </span><span class="o">⍴</span><span class="nv">C</span><span class="s1">'C'</span>
 <span class="m">1</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="nv">R</span><span class="kd">←</span><span class="nv">CONDITION</span><span class="w"> </span><span class="p">(</span><span class="nv">FN1</span><span class="w"> </span><span class="nv">ELSE</span><span class="w"> </span><span class="nv">FN2</span><span class="p">)</span><span class="w"> </span><span class="nv">X</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="nv">R</span><span class="kd">←</span><span class="nv">CONDITION</span><span class="w"> </span><span class="p">(</span><span class="nv">FN1</span><span class="w"> </span><span class="nv">ELSE</span><span class="w"> </span><span class="nv">FN2</span><span class="p">)</span><span class="w"> </span><span class="nv">X</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="kd">→</span><span class="nv">CONDITION</span><span class="na">/</span><span class="nv">L1</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="nv">R</span><span class="kd">←</span><span class="nv">FN2</span><span class="w"> </span><span class="nv">X</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="kd">→</span><span class="m">0</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">  </span><span class="nv">L1</span><span class="bp">:</span><span class="nv">R</span><span class="kd">←</span><span class="nv">FN1</span><span class="w"> </span><span class="nv">X</span>
@@ -78764,7 +78764,7 @@
 </code></pre></div>
 <p>If <code>Y</code> is a name assigned to a derived function, <code>R</code> is a vector whose elements represent the arrays, functions, and operators from which <code>Y</code> was constructed.  Constituent functions are represented by their own <code>⎕CR</code>s, so in this respect the definition of <code>⎕CR</code> is recursive.  Primitive operators are treated like primitive functions, and are represented by their corresponding symbols.  Arrays are represented by themselves.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">BOX</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="na">∘</span><span class="o">⍴</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">BOX</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="na">∘</span><span class="o">⍴</span>
 <span class="w">      </span><span class="o">+</span><span class="nv">F</span><span class="kd">←</span><span class="nf">⎕CR</span><span class="s1">'BOX'</span>
 <span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="na">∘</span><span class="o">⍴</span>
 <span class="w">      </span><span class="o">⍴</span><span class="nv">F</span>
@@ -78778,7 +78778,7 @@
 </code></pre></div>
 <p>If <code>Y</code> is a name assigned to a defined function, <code>R</code> is the <code>⎕CR</code> of the defined function.  In particular, the name that appears in the function header is the name of the original defined function, not the assigned name <code>Y</code>.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">AVERAGE</span><span class="kd">←</span><span class="nv">MEAN</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">AVERAGE</span><span class="kd">←</span><span class="nv">MEAN</span>
 <span class="w">      </span><span class="nf">⎕CR</span><span class="s1">'AVERAGE'</span>
 <span class="nv">R</span><span class="kd">←</span><span class="nv">MEAN</span><span class="w"> </span><span class="nv">X</span><span class="w">    </span><span class="c1">⍝ Arithmetic mean</span>
 <span class="nv">R</span><span class="kd">←</span><span class="p">(</span><span class="o">+</span><span class="na">/</span><span class="nv">X</span><span class="p">)</span><span class="o">÷⍴</span><span class="nv">X</span>
@@ -78812,7 +78812,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

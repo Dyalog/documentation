@@ -78706,7 +78706,7 @@
 
 <p>The <code>MakeProxy</code> function is provided in the supplied workspace <code>samples\asp.net\webservices\webservices.dws</code>.</p>
 <p><code>MakeProxy</code> is monadic and its argument specifies the URL of the Web Service to which you want to connect. For example, the following expressions uses <code>MakeProxy</code> to connect to the LoanService sample Web Service provided with Dyalog .NET:
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="nv">MakeProxy</span><span class="s1">'http://localhost/dyalog.net/Loan/Loan.asmx'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="nv">MakeProxy</span><span class="s1">'http://localhost/dyalog.net/Loan/Loan.asmx'</span>
 </code></pre></div>
 <p><code>MakeProxy</code> runs the Microsoft utility <code>WSDL.EXE</code> passing the name of your URL to it as an argument. The utility then creates a C# source code file in your current directory that contains the code necessary to create a proxy class. The name of the C# file is the name of the Web Service (as declared in its header line) followed by the extension .cs.</p>
 <p><code>MakeProxy</code> then calls the C# compiler to compile this file, creating an assembly with the same name, but with a .dll extension, in your current directory. This assembly contains a .NET class of the same name.</p>
@@ -78740,7 +78740,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

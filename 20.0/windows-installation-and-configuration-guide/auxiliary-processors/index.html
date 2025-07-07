@@ -78825,7 +78825,7 @@
 <p>Dyalog would recommend that rather than creating APs, customers should now create DLLs (Dynamic Shared Libraries)/shared libraries. If very high performance is required, customers should consider DWA (Direct Workspace Access); contact support@dyalog.com for more information about DWA, including pre-requisite training courses.</p>
 <h2 id="starting-an-ap">Starting an AP</h2>
 <p>An Auxiliary Processor is invoked using the dyadic form of <code>⎕CMD</code>. The left argument to <code>⎕CMD</code> is the name of the program to be executed; the value of the <strong>WSPATH</strong> parameter is used to find the named file. In Dyalog APL/W, the right argument to <code>⎕CMD</code> is ignored.
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="s1">'xutils'</span><span class="w"> </span><span class="nf">⎕CMD</span><span class="w"> </span><span class="s1">''</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="s1">'xutils'</span><span class="w"> </span><span class="nf">⎕CMD</span><span class="w"> </span><span class="s1">''</span>
 </code></pre></div>
 <p>On locating the specified program, Dyalog APL starts the AP and initialises a memory segment for communication between the workspace and the AP. This communication segment allows data to be passed from the workspace to the other process, and for results to be passed back. The AP then sends APL some information about its external functions (names, code numbers and calling syntax), which APL enters in the symbol table. APL then continues processing while the AP waits for instructions.</p>
 <h2 id="using-the-ap">Using the AP</h2>
@@ -78835,7 +78835,7 @@
 <h3 class="example">Example</h3>
 
 <p>Start an Auxiliary Processor called <code>EXAMPLE</code>. This fixes two external functions called <code>DATE_TO_IDN</code> and <code>IDN_TO_DATE</code> which deal with the conversion of International Day Numbers to Julian Dates.
-</p><div class="highlight"><pre><span></span><code><span class="na">.</span><span class="o">------------------------</span><span class="na">.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="na">.</span><span class="o">------------------------</span><span class="na">.</span>
 <span class="o">|</span><span class="w">      </span><span class="nv">APL</span><span class="w"> </span><span class="nv">PROCESS</span><span class="w">       </span><span class="o">|</span>
 <span class="o">|------------------------|</span>
 <span class="o">|</span><span class="w">     </span><span class="p">)</span><span class="nv">CLEAR</span><span class="w">             </span><span class="o">|</span>
@@ -78889,7 +78889,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

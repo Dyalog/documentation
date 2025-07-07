@@ -78843,26 +78843,26 @@
 <p>If the argument is a scalar or a 1-element vector, an instance of the class is created using the <em>constructor</em> that takes NO argument.</p>
 <p>If the argument is a 2-element vector, an instance of the class is created using the <em>constructor</em> whose argument matches the disclosed second element.</p>
 <p>For example, to create a <code>DateTime</code> object whose value is the 30<sup>th</sup> April 2008:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
 <span class="w"> </span>
 <span class="w">      </span><span class="nv">mydt</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">2008</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
 <span class="w"> </span>
 </code></pre></div>
 <p>The result of  <code>⎕NEW</code> is an reference to the newly created instance:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NC</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'mydt'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NC</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'mydt'</span>
 <span class="m">9.2</span>
 </code></pre></div>
 <p>If you format a reference to a .NET Object, APL calls its <code>ToString</code> method to obtain a useful description or identification of the object. This topic is discussed in more detail later in this chapter.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mydt</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mydt</span>
 <span class="m">30</span><span class="na">/</span><span class="m">04</span><span class="na">/</span><span class="m">2008</span><span class="w"> </span><span class="m">00</span><span class="bp">:</span><span class="m">00</span><span class="bp">:</span><span class="m">00</span>
 </code></pre></div>
 <p>If you want to use fully qualified class names instead, one of the elements of <code>⎕USING</code> must be an empty vector. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="o">,⊂</span><span class="s1">''</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="o">,⊂</span><span class="s1">''</span>
 <span class="w"> </span>
 <span class="w">      </span><span class="nv">mydt</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">System</span><span class="na">.</span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">2008</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
 </code></pre></div>
 <p>When creating an instance of the <code>DateTime</code> class, you are required to provide an argument with two elements: (the class and the <em>constructor argument</em>, in our case a 3-element vector representing the date). Many classes provide a default constructor which takes no arguments. From Dyalog, the <em>default constructor</em> is called by calling <code>⎕NEW</code> with only a reference to the class in the argument. For example, to obtain a default <code>Button</code> object, we only need to write:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mybtn</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Button</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mybtn</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Button</span>
 </code></pre></div>
 <p>The above statement assumes that you have defined <code>⎕USING</code> correctly; there must be a reference to <code>System.Windows.Forms.dll</code>, and a namespace prefix which allows the name <code>Button</code> to be recognised as <code>System.Windows.Forms.Button</code>.</p>
 <p>The mechanism by which APL associates the class name with a class in a .NET namespace is described below.</p>
@@ -78872,7 +78872,7 @@
 <p>When you create an instance of a class in C#, you do so using the <code>new</code> operator. This is automatically mapped to the appropriate constructor method by matching the parameters you supply to the various forms of the constructor. A similar mechanism is implemented in Dyalog using the <code>⎕NEW</code> system function.</p>
 <h2 id="how-the-new-system-function-is-implemented">How the <code>⎕NEW</code> System Function is implemented</h2>
 <p>When APL executes an expression such as:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mydt</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">2008</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mydt</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">2008</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
 </code></pre></div>
 <p>the following logic is used to resolve the reference to <code>DateTime</code> correctly.</p>
 <p>The first time that APL encounters a reference to a non-existent name (that is, a name that would otherwise generate a <code>VALUE ERROR</code>), it searches the .NET namespaces/assemblies specified by <code>⎕USING</code> for a .NET class of that name. If found, the name (in this case <code>DateTime</code>) is recorded in the APL symbol table with a name class of 9.6 and is associated with the corresponding .NET namespace. If not, <code>VALUE ERROR</code> is reported as usual. Note that this search ONLY takes place if <code>⎕USING</code> has been assigned a value.</p>
@@ -78887,7 +78887,7 @@
 </ul>
 <h2 id="displaying-a-net-object">Displaying a .NET Object</h2>
 <p>When you display a reference to a .NET object, APL calls the object's <code>ToString</code> method and displays the result. All objects provide a <code>ToString</code> method because all objects ultimately inherit from the .NET class <code>System.Object</code>. Many .NET classes will provide their own <code>ToString</code> that overrides the one inherited from <code>System.Object</code>, and return a useful description or identifier for the object in question. <code>ToString</code> usually supports a range of calling parameters, but APL always calls the version of <code>ToString</code> that is defined to take no calling parameters. Monadic format (<code>⍕</code>) and monadic <code>⎕FMT</code> have been extended to provide the same result, and provides a quick shorthand method to call <code>ToString</code> in this way. The default <code>ToString</code> supplied by <code>System.Object</code> returns the name of the object's Type. This can be changed using the system function <code>⎕DF</code>. For example,
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nv">z</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="nf">⎕TS</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="nv">z</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="nf">⎕TS</span>
 <span class="w">     </span><span class="nv">z</span><span class="na">.</span><span class="p">(</span><span class="nf">⎕DF</span><span class="p">(</span><span class="o">⍕</span><span class="nv">DayOfWeek</span><span class="p">)</span><span class="o">,,</span><span class="s1">'G&lt; 99:99&gt;'</span><span class="nf">⎕FMT</span><span class="w"> </span><span class="m">100</span><span class="o">⊥</span><span class="nv">Hour</span><span class="w"> </span><span class="nv">Minute</span><span class="p">)</span>
 <span class="w">     </span><span class="nv">z</span>
 <span class="nv">Saturday</span><span class="w"> </span><span class="m">09</span><span class="bp">:</span><span class="m">17</span>
@@ -78929,7 +78929,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

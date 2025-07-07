@@ -79004,13 +79004,13 @@
 <p>Note that Ride does not directly support <code>⎕SM</code>, although it is possible to display <code>⎕SM</code> in the tty session to which a Ride client is connected.</p>
 <p>If the USER screen is current, any change in the value of <code>⎕SM</code> is immediately reflected by a corresponding change in the appearance of the display.  However, an assignment to <code>⎕SM</code> that leaves its value unchanged has no effect.</p>
 <p>Dyalog APL automatically switches to the SESSION screen for default output, if it enters immediate input mode (6-space prompt), or through use of <code>⎕</code> or <code>⍞</code>.  This means that typing
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SM</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="nv">expression</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SM</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="nv">expression</span>
 </code></pre></div>
 <p>in the APL session will cause the screen to switch first to the USER screen, display the form defined by <code>⎕SM</code>, and then switch back to the SESSION screen to issue the 6-space prompt.  This normally happens so quickly that all the user sees is a flash on the screen.To retain the USER screen in view it is necessary to issue a call to <code>⎕SR</code> or for APL to continue processing. For example:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SM</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="nv">expression</span><span class="w">  </span><span class="p">⋄</span><span class="w">  </span><span class="nf">⎕SR</span><span class="w"> </span><span class="m">1</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SM</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="nv">expression</span><span class="w">  </span><span class="p">⋄</span><span class="w">  </span><span class="nf">⎕SR</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <p>or
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SM</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="nv">expression</span><span class="w">  </span><span class="p">⋄</span><span class="w">  </span><span class="nf">⎕DL</span><span class="w"> </span><span class="m">5</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SM</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="nv">expression</span><span class="w">  </span><span class="p">⋄</span><span class="w">  </span><span class="nf">⎕DL</span><span class="w"> </span><span class="m">5</span>
 </code></pre></div>
 <h2 id="screen-management-window-versions">Screen Management (Window Versions)</h2>
 <p>In Dyalog APL/X, and optionally in Dyalog APL/W, <code>⎕SM</code> is displayed in a separate <strong>USER WINDOW</strong> on the screen.  In an end-user application this may be the only Dyalog APL window.  However, during development, there will be a SESSION window, and perhaps EDIT and TRACE windows too.</p>
@@ -79065,7 +79065,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

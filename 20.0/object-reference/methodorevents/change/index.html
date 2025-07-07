@@ -78745,7 +78745,7 @@
 <p>If you disable the event by setting the "action" code to <code>¯1</code>, or inhibit it by returning 0 from a callback, the focus change (if applicable) is allowed to proceed, but the internal flag is not reset. If you wish to prevent the focus change you must explicitly reset the focus back onto the object that generated the event.</p>
 <p>If the event was generated because the user switched to another application, and you return a 0 from your callback (because the data was not valid), the flag marking the <a href="../../objects/combo/">Combo</a> or <a href="../../objects/edit/">Edit</a> as having been changed remains set. If the user returns to your application by re-focusing on the same <a href="../../objects/combo/">Combo</a> or <a href="../../objects/edit/">Edit</a>, nothing happens immediately, but because the field is marked as changed (the flag was not reset) you will get another Change event when he leaves it. However, if the user returns to your application in some other way, for example, by focusing on another object or by selecting a <a href="../../objects/menuitem/">MenuItem</a>, a second Change event will be generated immediately.</p>
 <p>The following function illustrates how Change events can be processed. The <code>Check</code> function referred to in line[4] is assumed to return 1 if the data is valid and 0 if not.
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="w">   </span><span class="nv">R</span><span class="kd">←</span><span class="nv">VALIDATE</span><span class="w"> </span><span class="nv">Msg</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="w">   </span><span class="nv">R</span><span class="kd">←</span><span class="nv">VALIDATE</span><span class="w"> </span><span class="nv">Msg</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">  </span><span class="c1">⍝ Validates field contents after Change event</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">  </span><span class="c1">⍝ Normal exit (R←1) if data is valid</span>
@@ -78796,7 +78796,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

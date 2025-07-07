@@ -78734,7 +78734,7 @@
 <p>When copying data between Classic and Unicode Editions, <code>⎕CY</code> will fail and a <code>TRANSLATION ERROR</code> will be reported if <em>any</em> object in workspace <code>Y</code> fails conversion between Unicode and <code>⎕AV</code> indices, whether or not that object is specified by <code>X</code>. See <a href="../avu/#note">Note</a> for further details.</p>
 <p>A <code>WS FULL</code> is reported if the active workspace becomes full during the copying process.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕VR</span><span class="s1">'FOO'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕VR</span><span class="s1">'FOO'</span>
 <span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">FOO</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="m">10</span>
 <span class="w">     </span><span class="bp">∇</span>
@@ -78746,7 +78746,7 @@
 </code></pre></div>
 <p>System variables are copied if explicitly included in the left argument, but not if the left argument is omitted.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕LX</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕LX</span>
 
 <span class="w">      </span><span class="p">(</span><span class="s1">'⎕LX'</span><span class="w"> </span><span class="s1">'X'</span><span class="p">)</span><span class="nf">⎕CY</span><span class="s1">'WS/CRASH'</span>
 <span class="w">      </span><span class="nf">⎕LX</span>
@@ -78754,7 +78754,7 @@
 </code></pre></div>
 <p>A copied object may have the same name as an object being executed.  If so, the name is disassociated from the existing object, but the existing object remains defined in the workspace until its execution is completed.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SI</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SI</span>
 <span class="c1">#.FOO[1]*</span>
 
 <span class="w">      </span><span class="nf">⎕VR</span><span class="s1">'FOO'</span>
@@ -78800,7 +78800,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

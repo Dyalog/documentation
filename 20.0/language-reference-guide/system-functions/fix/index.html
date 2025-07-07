@@ -79108,12 +79108,12 @@
 <p>In this case,  the shy result <code>R</code> is a vector of character vectors, containing the names of all of the objects that have been established in the workspace; the order of the names in <code>R</code> is not defined. Currently <code>2 ⎕FIX</code> is not certain to be an atomic operation, although this might change in future versions.</p>
 <h2 id="example-1">Example 1</h2>
 <p>In the first example, the Class specified by <code>Y</code> is <em>named</em> (<code>MyClass</code>) but the result of <code>⎕FIX</code> is discarded. The end-result is that <code>MyClass</code> is established in the workspace as a Class.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="vg">⎕</span><span class="kd">←</span><span class="nf">⎕FIX</span><span class="w"> </span><span class="s1">':Class MyClass'</span><span class="w"> </span><span class="s1">':EndClass'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="vg">⎕</span><span class="kd">←</span><span class="nf">⎕FIX</span><span class="w"> </span><span class="s1">':Class MyClass'</span><span class="w"> </span><span class="s1">':EndClass'</span>
 <span class="c1">#.MyClass</span>
 </code></pre></div>
 <h2 id="example-2">Example 2</h2>
 <p>In the second example, the Class specified by <code>Y</code> is <em>named</em> (<code>MyClass</code>) and the result of <code>⎕FIX</code> is assigned to a different name (<code>MYREF</code>). The end-result is that a Class named <code>MyClass</code> is established in the workspace, and <code>MYREF</code> is a reference to it.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MYREF</span><span class="kd">←</span><span class="nf">⎕FIX</span><span class="w"> </span><span class="s1">':Class MyClass'</span><span class="w"> </span><span class="s1">':EndClass'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MYREF</span><span class="kd">←</span><span class="nf">⎕FIX</span><span class="w"> </span><span class="s1">':Class MyClass'</span><span class="w"> </span><span class="s1">':EndClass'</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">CLASSES</span>
 <span class="nv">MyClass</span><span class="w"> </span><span class="nv">MYREF</span>
 <span class="w">      </span><span class="nf">⎕NC</span><span class="s1">'MyClass'</span><span class="w"> </span><span class="s1">'MYREF'</span>
@@ -79125,7 +79125,7 @@
 </code></pre></div>
 <h2 id="example-3">Example 3</h2>
 <p>In the third example, the left-argument of <code>0</code> causes the named Class <code>MyClass</code> to be visible only via the reference to it (<code>MYREF</code>). It is there, but hidden.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MYREF</span><span class="kd">←</span><span class="m">0</span><span class="w"> </span><span class="nf">⎕FIX</span><span class="w"> </span><span class="s1">':Class MyClass'</span><span class="w"> </span><span class="s1">':EndClass'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MYREF</span><span class="kd">←</span><span class="m">0</span><span class="w"> </span><span class="nf">⎕FIX</span><span class="w"> </span><span class="s1">':Class MyClass'</span><span class="w"> </span><span class="s1">':EndClass'</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">CLASSES</span>
 <span class="nv">MYREF</span>
 <span class="w">      </span><span class="nv">MYREF</span>
@@ -79133,7 +79133,7 @@
 </code></pre></div>
 <h2 id="example-4">Example 4</h2>
 <p>The fourth example illustrates the use of un-named Classes.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">src</span><span class="kd">←</span><span class="s1">':Class'</span><span class="w"> </span><span class="s1">'∇Make n'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">src</span><span class="kd">←</span><span class="s1">':Class'</span><span class="w"> </span><span class="s1">'∇Make n'</span>
 <span class="w">      </span><span class="nv">src</span><span class="o">,</span><span class="kd">←</span><span class="s1">'Access Public'</span><span class="w"> </span><span class="s1">'Implements Constructor'</span>
 <span class="w">      </span><span class="nv">src</span><span class="o">,</span><span class="kd">←</span><span class="s1">'⎕DF n'</span><span class="w"> </span><span class="s1">'∇'</span><span class="w"> </span><span class="s1">':EndClass'</span>
 <span class="w">      </span><span class="nv">MYREF</span><span class="kd">←</span><span class="nf">⎕FIX</span><span class="w"> </span><span class="nv">src</span>
@@ -79145,7 +79145,7 @@
 </code></pre></div>
 <h2 id="example-5">Example 5</h2>
 <p>In the final example, the left argument of <code>2</code> allows a script containing multiple objects to be fixed:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">src</span><span class="kd">←</span><span class="s1">':Namespace andys'</span><span class="w"> </span><span class="s1">'∇foo'</span><span class="w"> </span><span class="s1">'2'</span><span class="w"> </span><span class="s1">'∇'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">src</span><span class="kd">←</span><span class="s1">':Namespace andys'</span><span class="w"> </span><span class="s1">'∇foo'</span><span class="w"> </span><span class="s1">'2'</span><span class="w"> </span><span class="s1">'∇'</span>
 <span class="w">      </span><span class="nv">src</span><span class="o">,</span><span class="kd">←</span><span class="s1">':EndNamespace'</span><span class="w"> </span><span class="s1">'dfn←{⍺ ⍵}'</span><span class="w"> </span><span class="s1">'∇r←tfn'</span>
 <span class="w">      </span><span class="nv">src</span><span class="o">,</span><span class="kd">←</span><span class="s1">'r←33'</span><span class="w"> </span><span class="s1">'∇'</span><span class="w"> </span><span class="s1">':Class c1'</span><span class="w"> </span><span class="s1">'∇goo'</span><span class="w"> </span><span class="s1">'1'</span>
 <span class="w">      </span><span class="nv">src</span><span class="o">,</span><span class="kd">←</span><span class="s1">'∇'</span><span class="w"> </span><span class="s1">':EndClass'</span>
@@ -79155,7 +79155,7 @@
 </code></pre></div>
 <h2 id="restriction">Restriction</h2>
 <p><code>⎕FIX</code> is unable to fix a namespace from <code>Y</code> when <code>Y</code> specifies a multi-line dfn which is preceded by a <code>⋄</code> (diamond separator).
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕FIX</span><span class="s1">':Namespace iaK'</span><span class="w"> </span><span class="s1">'a←1 ⋄ adfn←{'</span><span class="w"> </span><span class="s1">'⍵'</span><span class="w"> </span><span class="s1">' }'</span><span class="w"> </span><span class="s1">':EndNamespace'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕FIX</span><span class="s1">':Namespace iaK'</span><span class="w"> </span><span class="s1">'a←1 ⋄ adfn←{'</span><span class="w"> </span><span class="s1">'⍵'</span><span class="w"> </span><span class="s1">' }'</span><span class="w"> </span><span class="s1">':EndNamespace'</span>
 <span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span><span class="bp">:</span><span class="w"> </span><span class="nv">There</span><span class="w"> </span><span class="nv">were</span><span class="w"> </span><span class="nv">errors</span><span class="w"> </span><span class="nv">processing</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">script</span>
 <span class="w">      </span><span class="nf">⎕FIX</span><span class="s1">':Namespace iaK'</span><span class="w"> </span><span class="s1">'a←1 ⋄ adfn←{'</span><span class="w"> </span><span class="s1">'⍵'</span><span class="w"> </span><span class="s1">' }'</span><span class="w"> </span><span class="s1">':EndNamespace'</span>
 <span class="w">      </span><span class="o">∧</span>
@@ -79227,7 +79227,7 @@
 <p><figure id="_figure-1"><img alt="family tree for fix" src="../../img/family-tree-for-fix.png"><figcaption>Figure 1: family tree for fix</figcaption></figure></p>
 <p>Two scripts are defined to map this tree onto a structure of Classes and Namespaces. In this scheme, female family members are represented by Classes and male family members by Namespaces.</p>
 <p>So the scripted tree for <code>Pete</code> has a parent Namespace:
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">Pete</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">Pete</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">Andy</span>
 <span class="w">        </span><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Aisha</span>
 <span class="w">        </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
@@ -79244,7 +79244,7 @@
 <span class="bp">:</span><span class="nv">EndNamespace</span>
 </code></pre></div>
 <p>While the scripted tree for <code>Jill</code> has a parent Class:
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Jill</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Jill</span>
 <span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">Andy</span>
 <span class="w">        </span><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Aisha</span>
@@ -79262,7 +79262,7 @@
 <span class="bp">:</span><span class="nv">EndClass</span>
 </code></pre></div>
 <p>Using the <code>Pete</code> Namespace, after executing the expression:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="p">(</span><span class="nf">⎕FIX</span><span class="na">⍠</span><span class="s1">'InjectReferences'</span><span class="w"> </span><span class="s1">'All'</span><span class="p">)</span><span class="nf">⎕SRC</span><span class="w"> </span><span class="nv">Pete</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="p">(</span><span class="nf">⎕FIX</span><span class="na">⍠</span><span class="s1">'InjectReferences'</span><span class="w"> </span><span class="s1">'All'</span><span class="p">)</span><span class="nf">⎕SRC</span><span class="w"> </span><span class="nv">Pete</span>
 </code></pre></div>
 <ul>
 <li>Code in <code>Pete</code> may refer to <code>Aisha</code>    , <code>Andy</code>     , <code>George</code>   , <code>Katherine</code>, and <code>Woody</code></li>
@@ -79270,7 +79270,7 @@
 <li>... and so forth.</li>
 </ul>
 <p>But after executing:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="p">(</span><span class="nf">⎕FIX</span><span class="na">⍠</span><span class="s1">'InjectReferences'</span><span class="w"> </span><span class="s1">'InClasses'</span><span class="p">)</span><span class="nf">⎕SRC</span><span class="w"> </span><span class="nv">Pete</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="p">(</span><span class="nf">⎕FIX</span><span class="na">⍠</span><span class="s1">'InjectReferences'</span><span class="w"> </span><span class="s1">'InClasses'</span><span class="p">)</span><span class="nf">⎕SRC</span><span class="w"> </span><span class="nv">Pete</span>
 </code></pre></div>
 <ul>
 <li>Code in <code>Pete</code> may refer only to <code>Andy</code> and  <code>Katherine</code></li>
@@ -79722,7 +79722,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

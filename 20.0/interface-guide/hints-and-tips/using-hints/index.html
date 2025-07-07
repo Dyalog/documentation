@@ -78793,7 +78793,7 @@
 <p>The object named by HintObj may be any object with either a Caption property or a Text property. Thus you can use the Caption on a Label, Form, or Button or the text in an Edit object. If you use a StatusField object which has both Caption <em>and</em> Text properties, the Text property is employed. If you set HintObj to the name of an object which possesses neither of these properties, the hints will simply not be displayed. The following example illustrates the use of a StatusField for displaying hints.</p>
 <h2 id="example-using-a-statusfield-for-hints">Example: Using a StatusField for Hints</h2>
 <p>This example illustrates the use of a StatusField object to display hints. .
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="s1">'Test'</span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Using Hints'</span><span class="p">(</span><span class="s1">'HintObj'</span><span class="w"> </span><span class="s1">'Test.SB.H'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="s1">'Test'</span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Using Hints'</span><span class="p">(</span><span class="s1">'HintObj'</span><span class="w"> </span><span class="s1">'Test.SB.H'</span><span class="p">)</span>
 
 <span class="w">    </span><span class="s1">'Test.MB'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'MenuBar'</span>
 <span class="w">    </span><span class="s1">'Test.MB.F'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Menu'</span><span class="w"> </span><span class="s1">'&amp;File'</span>
@@ -78807,13 +78807,13 @@
 <p>Using a StatusBar to display Hints</p>
 <h2 id="example-using-an-edit-object-for-hints">Example: Using an Edit Object for Hints</h2>
 <p>You can display a much larger amount of information using a multi-line Edit object as shown in this example.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="s1">'Test'</span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Using Hints'</span><span class="w"> </span><span class="p">(</span><span class="s1">'HintObj'</span><span class="w"> </span><span class="s1">'Test.ED'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="s1">'Test'</span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Using Hints'</span><span class="w"> </span><span class="p">(</span><span class="s1">'HintObj'</span><span class="w"> </span><span class="s1">'Test.ED'</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">'Test.MB'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'MenuBar'</span>
 <span class="w">      </span><span class="s1">'Test.MB.F'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Menu'</span><span class="w"> </span><span class="s1">'&amp;File'</span>
 <span class="w">      </span><span class="nv">HINT</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">100</span><span class="o">⍴</span><span class="s1">'Creates a new empty document '</span>
 <span class="w">      </span><span class="s1">'Test.MB.F.New'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'&amp;New'</span><span class="w"> </span><span class="p">(</span><span class="s1">'Hint'</span><span class="w"> </span><span class="nv">HINT</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Test.ED'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Edit'</span><span class="w"> </span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Multi'</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Test.ED'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Edit'</span><span class="w"> </span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Multi'</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="" src="../../img/hints-edit.png"></p>
 <p>Displaying Hints in an Edit object</p>
@@ -78846,7 +78846,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

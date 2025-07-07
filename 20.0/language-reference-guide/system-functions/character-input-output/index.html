@@ -78717,7 +78717,7 @@
 <p><code>⍞</code> is a variable which communicates between the user's terminal and APL.  Its behaviour depends on whether it is being assigned or referenced.</p>
 <p>When <code>⍞</code> is assigned with a vector or a scalar, the array is displayed without the normal ending new-line character.  Successive assignments of vectors or scalars to <code>⍞</code> without any intervening input or output cause the arrays to be displayed on the same output line.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="vg">⍞</span><span class="kd">←</span><span class="s1">'2+2'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="vg">⍞</span><span class="kd">←</span><span class="s1">'='</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="vg">⍞</span><span class="kd">←</span><span class="m">4</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="vg">⍞</span><span class="kd">←</span><span class="s1">'2+2'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="vg">⍞</span><span class="kd">←</span><span class="s1">'='</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="vg">⍞</span><span class="kd">←</span><span class="m">4</span>
 <span class="m">2</span><span class="o">+</span><span class="m">2</span><span class="o">=</span><span class="m">4</span>
 </code></pre></div>
 <p>Output through <code>⍞</code> is independent of the print width in <code>⎕PW</code>.  The way in which lines exceeding the print width of the terminal are treated is dependent on the characteristics of the terminal.  Numeric output is formatted in the same manner as direct output (see <a href="../../../programming-reference-guide/introduction/arrays/display-of-arrays">Programmer's Guide: "Display of Arrays"</a>).</p>
@@ -78725,10 +78725,10 @@
 <p>When <code>⍞</code> is referenced, terminal input is expected without any specific prompt, and the response is returned as a character vector.</p>
 <p>If the <code>⍞</code> request was preceded by one or more assignments to <code>⍞</code> without any intervening input or output, the last (or only) line of the output characters are returned as part of the response.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mat</span><span class="kd">←</span><span class="o">↑⌽</span><span class="vg">⍞⍞⍞⍞⍞</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mat</span><span class="kd">←</span><span class="o">↑⌽</span><span class="vg">⍞⍞⍞⍞⍞</span>
 </code></pre></div>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="vg">⍞</span><span class="kd">←</span><span class="s1">'OPTION : '</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="vg">⍞</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="vg">⍞</span><span class="kd">←</span><span class="s1">'OPTION : '</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="vg">⍞</span>
 <span class="nv">OPTION</span><span class="w"> </span><span class="bp">:</span><span class="w"> </span><span class="nv">INPUT</span>
 <span class="w"> </span>
 <span class="w">      </span><span class="nv">R</span>
@@ -78739,13 +78739,13 @@
 </code></pre></div>
 <p>The output of simple arrays of rank greater than 1 through <code>⍞</code> includes a new-line character at the end of each line.  Input through <code>⍞</code> includes the preceding output through <code>⍞</code> since the last new-line character.</p>
 <p>A soft interrupt causes an <code>INPUT INTERRUPT</code> error if entered while <code>⍞</code> is awaiting input, and execution is then suspended (unless the interrupt is trapped):</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">R</span><span class="kd">←</span><span class="vg">⍞</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">R</span><span class="kd">←</span><span class="vg">⍞</span>
 </code></pre></div>
 <p>(Interrupt)
-</p><div class="highlight"><pre><span></span><code><span class="nv">INPUT</span><span class="w"> </span><span class="nv">INTERRUPT</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">INPUT</span><span class="w"> </span><span class="nv">INTERRUPT</span>
 </code></pre></div>
 <p>A time limit is imposed on input through <code>⍞</code> if <code>⎕RTL</code> is set to a non-zero value:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕RTL</span><span class="kd">←</span><span class="m">5</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="vg">⍞</span><span class="kd">←</span><span class="s1">'PASSWORD ? '</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="vg">⍞</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕RTL</span><span class="kd">←</span><span class="m">5</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="vg">⍞</span><span class="kd">←</span><span class="s1">'PASSWORD ? '</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="vg">⍞</span>
 <span class="nv">PASSWORD</span><span class="w"> </span><span class="o">?</span>
 <span class="nv">TIMEOUT</span>
 <span class="w">      </span><span class="nf">⎕RTL</span><span class="kd">←</span><span class="m">5</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="vg">⍞</span><span class="kd">←</span><span class="s1">'PASSWORD : '</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="vg">⍞</span>
@@ -78781,7 +78781,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78840,7 +78840,7 @@
 <h2 class="example">Example</h2>
 
 <p>In this example, both arrays are vectors so their major cells are their elements. The function <code>{⍺':'⍵}</code> is applied between the unique elements in <code>suits</code> (<code>'Spades' 'Hearts' 'Clubs'</code>) and the elements in <code>cards</code> grouped according to their corresponding elements in <code>suits</code>, that is, (<code>'2' 'Ace'</code>), (<code>'Queen' 'Jack'</code>) and (<code>,'4'</code>).
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">cards</span><span class="kd">←</span><span class="s1">'2'</span><span class="w"> </span><span class="s1">'Queen'</span><span class="w"> </span><span class="s1">'Ace'</span><span class="w"> </span><span class="s1">'4'</span><span class="w"> </span><span class="s1">'Jack'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">cards</span><span class="kd">←</span><span class="s1">'2'</span><span class="w"> </span><span class="s1">'Queen'</span><span class="w"> </span><span class="s1">'Ace'</span><span class="w"> </span><span class="s1">'4'</span><span class="w"> </span><span class="s1">'Jack'</span>
 <span class="w">      </span><span class="nv">suits</span><span class="kd">←</span><span class="s1">'Spades'</span><span class="w"> </span><span class="s1">'Hearts'</span><span class="w"> </span><span class="s1">'Spades'</span><span class="w"> </span><span class="s1">'Clubs'</span><span class="w"> </span><span class="s1">'Hearts'</span>
 
 <span class="w">      </span><span class="nv">suits</span><span class="o">,</span><span class="sr">[</span><span class="m">1.5</span><span class="sr">]</span><span class="nv">cards</span>
@@ -78856,7 +78856,7 @@
 <span class="w">  </span><span class="nv">Clubs</span><span class="w">   </span><span class="bp">:</span><span class="w"> </span><span class="m">4</span>
 </code></pre></div>
 <h2 id="monadic-examples">Monadic Examples</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="kt">{</span><span class="bp">⍺</span><span class="w"> </span><span class="bp">⍵</span><span class="kt">}</span><span class="w"> </span><span class="na">⌸</span><span class="w"> </span><span class="nv">suits</span><span class="w"> </span><span class="c1">⍝ indices of unique major cells</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="kt">{</span><span class="bp">⍺</span><span class="w"> </span><span class="bp">⍵</span><span class="kt">}</span><span class="w"> </span><span class="na">⌸</span><span class="w"> </span><span class="nv">suits</span><span class="w"> </span><span class="c1">⍝ indices of unique major cells</span>
 <span class="w">  </span><span class="nv">Spades</span><span class="w">   </span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>
 <span class="w">  </span><span class="nv">Hearts</span><span class="w">   </span><span class="m">2</span><span class="w"> </span><span class="m">5</span><span class="w"> </span>
 <span class="w">  </span><span class="nv">Clubs</span><span class="w">    </span><span class="m">4</span>
@@ -78866,7 +78866,7 @@
 <span class="w"> </span><span class="nv">Hearts</span><span class="w">  </span><span class="m">2</span>
 <span class="w"> </span><span class="nv">Clubs</span><span class="w">   </span><span class="m">1</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">       </span><span class="nv">letters</span><span class="kd">←</span><span class="s1">'zabayza'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="nv">letters</span><span class="kd">←</span><span class="s1">'zabayza'</span>
 <span class="w">       </span><span class="kt">{</span><span class="bp">⍺</span><span class="p">(</span><span class="o">≢</span><span class="bp">⍵</span><span class="p">)</span><span class="kt">}</span><span class="na">⌸</span><span class="nv">letters</span>
 <span class="nv">z</span><span class="w"> </span><span class="m">2</span>
 <span class="nv">a</span><span class="w"> </span><span class="m">3</span>
@@ -78875,7 +78875,7 @@
 </code></pre></div>
 <h2 id="further-examples">Further Examples</h2>
 <p><code>x</code> is a vector of stock codes, <code>y</code> is a corresponding matrix of values.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">x</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">x</span>
 <span class="m">10</span>
 <span class="w">      </span><span class="o">⍴</span><span class="nv">y</span>
 <span class="m">10</span><span class="w"> </span><span class="m">2</span>
@@ -78892,7 +78892,7 @@
 <span class="w"> </span><span class="nv">IBM</span><span class="w">    </span><span class="m">6</span><span class="w"> </span><span class="m">41</span>
 </code></pre></div>
 <p>If we apply the function <code>{⍺ ⍵}</code> to <code>x</code> and <code>y</code> using the <code>⌸</code> operator, we can see how the rows (its major cells) of <code>y</code> are grouped according to the corresponding elements (its major cells) of <code>x</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">x</span><span class="kt">{</span><span class="bp">⍺</span><span class="w"> </span><span class="bp">⍵</span><span class="kt">}</span><span class="na">⌸</span><span class="nv">y</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">x</span><span class="kt">{</span><span class="bp">⍺</span><span class="w"> </span><span class="bp">⍵</span><span class="kt">}</span><span class="na">⌸</span><span class="nv">y</span>
 <span class="w"> </span><span class="nv">IBM</span><span class="w">   </span><span class="m">13</span><span class="w"> </span><span class="m">75</span><span class="w"> </span>
 <span class="w">        </span><span class="m">3</span><span class="w">  </span><span class="m">5</span><span class="w"> </span>
 <span class="w">        </span><span class="m">6</span><span class="w"> </span><span class="m">41</span><span class="w"> </span>
@@ -78905,14 +78905,14 @@
 <span class="w"> </span><span class="nv">MSFT</span><span class="w">  </span><span class="m">51</span><span class="w"> </span><span class="m">83</span><span class="w">       </span>
 </code></pre></div>
 <p>More usefully, we can apply the function <code>{⍺(+⌿⍵)}</code>, which delivers the stock codes and the corresponding totals in <code>y</code>:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">x</span><span class="kt">{</span><span class="bp">⍺</span><span class="p">(</span><span class="o">+</span><span class="na">⌿</span><span class="bp">⍵</span><span class="p">)</span><span class="kt">}</span><span class="na">⌸</span><span class="nv">y</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">x</span><span class="kt">{</span><span class="bp">⍺</span><span class="p">(</span><span class="o">+</span><span class="na">⌿</span><span class="bp">⍵</span><span class="p">)</span><span class="kt">}</span><span class="na">⌸</span><span class="nv">y</span>
 <span class="w">  </span><span class="nv">IBM</span><span class="w">    </span><span class="m">22</span><span class="w"> </span><span class="m">121</span><span class="w">  </span>
 <span class="w">  </span><span class="nv">AAPL</span><span class="w">   </span><span class="m">190</span><span class="w"> </span><span class="m">196</span><span class="w"> </span>
 <span class="w">  </span><span class="nv">GOOG</span><span class="w">   </span><span class="m">88</span><span class="w"> </span><span class="m">71</span><span class="w">   </span>
 <span class="w">  </span><span class="nv">MSFT</span><span class="w">   </span><span class="m">51</span><span class="w"> </span><span class="m">83</span><span class="w">   </span>
 </code></pre></div>
 <p>There is no need for the function to use its left argument. So to obtain just the totals in <code>y</code> grouped by the stock codes in <code>x</code>:
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="nv">x</span><span class="kt">{</span><span class="o">+</span><span class="na">⌿</span><span class="bp">⍵</span><span class="kt">}</span><span class="na">⌸</span><span class="nv">y</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="nv">x</span><span class="kt">{</span><span class="o">+</span><span class="na">⌿</span><span class="bp">⍵</span><span class="kt">}</span><span class="na">⌸</span><span class="nv">y</span>
 <span class="w"> </span><span class="m">22</span><span class="w"> </span><span class="m">121</span>
 <span class="m">190</span><span class="w"> </span><span class="m">196</span>
 <span class="w"> </span><span class="m">88</span><span class="w">  </span><span class="m">71</span>
@@ -78920,7 +78920,7 @@
 </code></pre></div>
 <h2 id="defined-function-example">Defined Function Example</h2>
 <p>This example appends the data for a stock into a component file named by the symbol.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">stock</span><span class="w"> </span><span class="nv">foo</span><span class="w"> </span><span class="nv">data</span><span class="sr">;</span><span class="nv">fid</span><span class="sr">;</span><span class="nv">file</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">stock</span><span class="w"> </span><span class="nv">foo</span><span class="w"> </span><span class="nv">data</span><span class="sr">;</span><span class="nv">fid</span><span class="sr">;</span><span class="nv">file</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">file</span><span class="kd">←</span><span class="o">⊃</span><span class="nv">stock</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="m">0</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">        </span><span class="nv">fid</span><span class="kd">←</span><span class="nv">file</span><span class="w"> </span><span class="nf">⎕FTIE</span><span class="w"> </span><span class="m">0</span>
@@ -78931,11 +78931,11 @@
 <span class="sr">[</span><span class="m">8</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕FUNTIE</span><span class="w"> </span><span class="nv">fid</span>
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nv">x</span><span class="w"> </span><span class="nv">foo</span><span class="na">⌸</span><span class="nv">y</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="nv">x</span><span class="w"> </span><span class="nv">foo</span><span class="na">⌸</span><span class="nv">y</span>
 <span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="kt">{</span><span class="bp">⍺</span><span class="w"> </span><span class="bp">⍵</span><span class="kt">}</span><span class="w"> </span><span class="na">⌸</span><span class="w"> </span><span class="nv">suits</span><span class="w"> </span><span class="c1">⍝ indices of unique major cells</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="kt">{</span><span class="bp">⍺</span><span class="w"> </span><span class="bp">⍵</span><span class="kt">}</span><span class="w"> </span><span class="na">⌸</span><span class="w"> </span><span class="nv">suits</span><span class="w"> </span><span class="c1">⍝ indices of unique major cells</span>
 <span class="w">  </span><span class="nv">Spades</span><span class="w">   </span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>
 <span class="w">  </span><span class="nv">Hearts</span><span class="w">   </span><span class="m">2</span><span class="w"> </span><span class="m">5</span><span class="w"> </span>
 <span class="w">  </span><span class="nv">Clubs</span><span class="w">    </span><span class="m">4</span>
@@ -78947,7 +78947,7 @@
 </code></pre></div>
 <h2 id="another-example">Another Example</h2>
 <p>Given a list of names and scores., the problem is to sum the scores for each unique name. A solution is presented first without using the Key operator, and then with the Key operator.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">names</span><span class="w"> </span><span class="c1">⍝ 12, some repeat</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">names</span><span class="w"> </span><span class="c1">⍝ 12, some repeat</span>
 <span class="w"> </span><span class="nv">Pete</span><span class="w">  </span><span class="nv">Jay</span><span class="w">  </span><span class="nv">Bob</span><span class="w">  </span><span class="nv">Pete</span><span class="w">  </span><span class="nv">Pete</span><span class="w">  </span><span class="nv">Jay</span><span class="w">  </span><span class="nv">Jim</span><span class="w">  </span><span class="nv">Pete</span><span class="w">  </span><span class="nv">Pete</span><span class="w">  </span><span class="nv">Jim</span>
 <span class="w"> </span><span class="nv">Pete</span><span class="w">  </span><span class="nv">Pete</span><span class="w"> </span>
 
@@ -79006,7 +79006,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

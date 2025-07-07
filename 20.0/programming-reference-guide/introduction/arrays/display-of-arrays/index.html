@@ -78896,14 +78896,14 @@
 <h1 class="heading"><span class="name">Display of Arrays</span></h1>
 
 <p>Simple scalars and vectors are displayed in a single line beginning at the left margin. A number is separated from the next adjacent element by a single space.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">3</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">3</span>
 <span class="m">3</span>
 <span class="w">      </span><span class="o">⍳</span><span class="m">4</span>
 <span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span>
 </code></pre></div>
 <h2 id="print-precision">Print Precision</h2>
 <p>The <a href="../../../../language-reference-guide/system-functions/pp/"><code>⎕PP</code></a> system variable determines the number of significant digits to be printed. The fractional part of the number is rounded in the last digit if it cannot be represented within the print precision. Leading zeros, and trailing zeros after a decimal point, are omitted, as are decimal points for integers.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">0.1</span><span class="w"> </span><span class="m">1.0</span><span class="w"> </span><span class="m">1.12</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">0.1</span><span class="w"> </span><span class="m">1.0</span><span class="w"> </span><span class="m">1.12</span>
 <span class="m">0.1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1.12</span>
 
 <span class="w">      </span><span class="s1">'A'</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="s1">'B'</span><span class="w"> </span><span class="s1">'C'</span>
@@ -78913,14 +78913,14 @@
 <span class="m">0.3333333333</span><span class="w"> </span><span class="m">0.5</span><span class="w"> </span><span class="m">0.1666666667</span>
 </code></pre></div>
 <p>If a number cannot be fully represented in <code>⎕PP</code> significant digits, or if the number requires more than five leading zeros after the decimal point, it is represented in scaled form. The mantissa displays up to <code>⎕PP</code> significant digits, omitting trailing zeros.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕PP</span><span class="kd">←</span><span class="m">3</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕PP</span><span class="kd">←</span><span class="m">3</span>
 
 <span class="w">      </span><span class="m">123</span><span class="w"> </span><span class="m">1234</span><span class="w"> </span><span class="m">12345</span><span class="w"> </span><span class="m">0.12345</span><span class="w"> </span><span class="m">0.00012345</span><span class="w"> </span><span class="m">0.00000012345</span>
 <span class="m">123</span><span class="w"> </span><span class="m">1.23E3</span><span class="w"> </span><span class="m">1.23E4</span><span class="w"> </span><span class="m">0.123</span><span class="w"> </span><span class="m">0.000123</span><span class="w"> </span><span class="m">1.23E¯7</span>
 </code></pre></div>
 <h2 id="simple-matrices">Simple Matrices</h2>
 <p>Simple matrices are displayed in rectangular form, with one line for each matrix row.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="o">⍴</span><span class="s1">'HANDFIST'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="o">⍴</span><span class="s1">'HANDFIST'</span>
 <span class="nv">HAND</span>
 <span class="nv">FIST</span>
 
@@ -78934,7 +78934,7 @@
 Numeric columns are right-justified; others are left-justified.
 Numeric columns are separated from their neighbours by a single column of blanks.</p>
 <p>A numeric column aligns any decimal points or E characters (for scaled formats), adding trailing zeros to the mantissae if necessary. Integers are right-adjusted one place to the left of any decimal points.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">6.1</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="m">10.24</span><span class="w"> </span><span class="m">12</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">6.1</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="m">10.24</span><span class="w"> </span><span class="m">12</span>
 <span class="m">2</span><span class="w">  </span><span class="m">4</span><span class="w">     </span><span class="m">6.1</span>
 <span class="m">8</span><span class="w"> </span><span class="m">10.24</span><span class="w"> </span><span class="m">12</span>
 
@@ -78944,7 +78944,7 @@ Numeric columns are separated from their neighbours by a single column of blanks
 </code></pre></div>
 <h2 id="non-simple-arrays">Non-simple Arrays</h2>
 <p>In the display of non-simple arrays, each element is displayed within a rectangle such that the rows and columns of the array are aligned.  Simple items within the array are displayed as above.  For non-simple items, this rule is applied recursively, with one space added on each side of the enclosed element for each level of nesting.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍳</span><span class="m">3</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍳</span><span class="m">3</span>
 <span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span>
 
 <span class="w">      </span><span class="o">⊂⍳</span><span class="m">3</span>
@@ -78962,7 +78962,7 @@ Numeric columns are separated from their neighbours by a single column of blanks
 </code></pre></div>
 <h2 id="multi-dimensional-arrays">Multi-dimensional Arrays</h2>
 <p>Multi-dimensional arrays are displayed in rectangular planes.  Planes are separated by one blank line, and hyper-planes of higher dimensions are separated by increasing numbers of blank lines.  In all other respects, multi-dimensional arrays are displayed in the same manner as matrices.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">24</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">24</span>
 <span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="m">2</span><span class="w">  </span><span class="m">3</span><span class="w">  </span><span class="m">4</span>
 <span class="w"> </span><span class="m">5</span><span class="w">  </span><span class="m">6</span><span class="w">  </span><span class="m">7</span><span class="w">  </span><span class="m">8</span>
 <span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">11</span><span class="w"> </span><span class="m">12</span>
@@ -78981,7 +78981,7 @@ Numeric columns are separated from their neighbours by a single column of blanks
 <span class="nv">FOX</span>
 </code></pre></div>
 <p>The power of this form of display is made apparent when formatting informal reports.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">AREAS</span><span class="kd">←</span><span class="s1">'West'</span><span class="w"> </span><span class="s1">'Central'</span><span class="w"> </span><span class="s1">'East'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">AREAS</span><span class="kd">←</span><span class="s1">'West'</span><span class="w"> </span><span class="s1">'Central'</span><span class="w"> </span><span class="s1">'East'</span>
 <span class="w">      </span><span class="nv">PRODUCTS</span><span class="kd">←</span><span class="s1">'Biscuits'</span><span class="w"> </span><span class="s1">'Cakes'</span><span class="w"> </span><span class="s1">'Buns'</span><span class="w"> </span><span class="s1">'Rolls'</span>
 
 <span class="w">      </span><span class="nv">SALES</span><span class="kd">←</span><span class="sr">[</span>
@@ -79002,7 +79002,7 @@ Numeric columns are separated from their neighbours by a single column of blanks
 <p>In the <a href="../../../../windows-ui-guide">Windows IDE</a> you can have arrays displayed using <a href="../array-notation/">Array Notation</a> when it is possible to do so.</p>
 <h2 id="print-width">Print Width</h2>
 <p>If the display of an array is wider than the print width, as defined by the <a href="../../../../language-reference-guide/system-functions/pw/"><code>⎕PW</code></a> system variable, it will be folded at or before <code>⎕PW</code> and the folded portions indented six spaces.  The display of a simple numeric or mixed array may be folded at a width less than <code>⎕PW</code> so that individual numbers are not split across a page boundary.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕PW</span><span class="kd">←</span><span class="m">40</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕PW</span><span class="kd">←</span><span class="m">40</span>
 
 <span class="w">      </span><span class="o">?</span><span class="m">3</span><span class="w"> </span><span class="m">20</span><span class="o">⍴</span><span class="m">100</span>
 <span class="m">54</span><span class="w"> </span><span class="m">22</span><span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">68</span><span class="w"> </span><span class="m">68</span><span class="w"> </span><span class="m">94</span><span class="w"> </span><span class="m">39</span><span class="w"> </span><span class="m">52</span><span class="w"> </span><span class="m">84</span><span class="w">  </span><span class="m">4</span><span class="w">  </span><span class="m">6</span><span class="w"> </span><span class="m">53</span><span class="w"> </span><span class="m">68</span>
@@ -79014,14 +79014,14 @@ Numeric columns are separated from their neighbours by a single column of blanks
 </code></pre></div>
 <h2 id="the-display-user-command">The ]Display User Command</h2>
 <p>The user command <code>]Display</code> illustrates the structure of an array.</p>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">Display</span><span class="w"> </span><span class="s1">'ABC'</span><span class="w"> </span><span class="sr">[</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="p">⋄</span><span class="sr">]</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">Display</span><span class="w"> </span><span class="s1">'ABC'</span><span class="w"> </span><span class="sr">[</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="p">⋄</span><span class="sr">]</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">────────────────┐</span>
 <span class="err">│</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">──┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">──────┐</span><span class="w"> </span><span class="err">│</span>
 <span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="nv">ABC</span><span class="err">│</span><span class="w"> </span><span class="o">↓</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="err">│</span><span class="w"> </span><span class="err">│</span>
 <span class="err">│</span><span class="w"> </span><span class="err">└───┘</span><span class="w"> </span><span class="err">└</span><span class="o">~</span><span class="err">──────┘</span><span class="w"> </span><span class="err">│</span>
 <span class="err">└</span><span class="o">∊</span><span class="err">────────────────┘</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">Display</span><span class="w"> </span><span class="s1">' '</span><span class="nv">PRODUCTS</span><span class="o">⍪</span><span class="na">.</span><span class="o">,</span><span class="nv">AREAS</span><span class="w"> </span><span class="nv">SALES</span><span class="w"> </span><span class="c1">⍝ see above</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">Display</span><span class="w"> </span><span class="s1">' '</span><span class="nv">PRODUCTS</span><span class="o">⍪</span><span class="na">.</span><span class="o">,</span><span class="nv">AREAS</span><span class="w"> </span><span class="nv">SALES</span><span class="w"> </span><span class="c1">⍝ see above</span>
 <span class="err">┌────────────────────────────────────────┐</span>
 <span class="err">│</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">───────────────────────────────────┐</span><span class="w"> </span><span class="err">│</span>
 <span class="err">│</span><span class="w"> </span><span class="o">↓</span><span class="w">            </span><span class="err">┌</span><span class="kd">→</span><span class="err">───┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">──────┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">───┐</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">│</span>
@@ -79045,7 +79045,7 @@ Numeric columns are separated from their neighbours by a single column of blanks
 <p>An explanation of the symbols that appear in the borders can be seen by running <code>]Display -??</code></p>
 <h2 id="the-boxing-user-command">The ]Boxing User Command</h2>
 <p>The user command <code>]Boxing</code> changes how nested arrays are displayed in the Session. The following examples show different settings.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">Boxing</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="o">-</span><span class="nv">style</span><span class="o">=</span><span class="nv">min</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">Boxing</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="o">-</span><span class="nv">style</span><span class="o">=</span><span class="nv">min</span>
 <span class="nv">Was</span><span class="w"> </span><span class="nv">OFF</span><span class="w"> </span><span class="o">-</span><span class="nv">style</span><span class="o">=</span><span class="nv">min</span>
 
 <span class="w">      </span><span class="s1">'ABC'</span><span class="w"> </span><span class="sr">[</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="p">⋄</span><span class="sr">]</span>
@@ -79110,7 +79110,7 @@ Numeric columns are separated from their neighbours by a single column of blanks
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

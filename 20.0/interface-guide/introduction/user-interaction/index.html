@@ -78875,18 +78875,18 @@
 <h2 id="assignment-and-reference-to-the-event-property">Assignment and reference to the Event Property</h2>
 <p>There are a number of special considerations when using assignment and reference to the Event property.</p>
 <p>You can set the action for a single event by prefixing the Event name by "on". For example, to set the action of a MouseUp event on a Form <code>F</code> to execute the callback function <code>FOO</code>:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">onMouseUp</span><span class="kd">←</span><span class="s1">'UP'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">onMouseUp</span><span class="kd">←</span><span class="s1">'UP'</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">onMouseUp</span>
 <span class="w"> </span><span class="c1">#.UP</span>
 </code></pre></div>
 <p>Notice that the value returned (<code>#.UP</code>) is not necessarily exactly the same as you set it (<code>UP</code>).</p>
 <p>If you reference the Event property, you will obtain all the current settings, reported in order of their internal event number. Notice the use of distributed strand notation to set more than one event in the same statement.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="p">(</span><span class="nv">onMouseUp</span><span class="w"> </span><span class="nv">onMouseDown</span><span class="p">)</span><span class="kd">←</span><span class="s1">'UP'</span><span class="w"> </span><span class="p">(</span><span class="s1">'DOWN'</span><span class="w"> </span><span class="m">42</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="p">(</span><span class="nv">onMouseUp</span><span class="w"> </span><span class="nv">onMouseDown</span><span class="p">)</span><span class="kd">←</span><span class="s1">'UP'</span><span class="w"> </span><span class="p">(</span><span class="s1">'DOWN'</span><span class="w"> </span><span class="m">42</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">Event</span>
 <span class="w">  </span><span class="nv">onMouseDown</span><span class="w">  </span><span class="c1">#.DOWN  42   onMouseUp  #.UP  </span>
 </code></pre></div>
 <p>If you set the Event property using assignment, all the event actions are redefined, that is, previous event settings are lost. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="p">(</span><span class="nv">onMouseUp</span><span class="w"> </span><span class="nv">onMouseDown</span><span class="p">)</span><span class="kd">←</span><span class="s1">'UP'</span><span class="w"> </span><span class="p">(</span><span class="s1">'DOWN'</span><span class="w"> </span><span class="m">42</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="p">(</span><span class="nv">onMouseUp</span><span class="w"> </span><span class="nv">onMouseDown</span><span class="p">)</span><span class="kd">←</span><span class="s1">'UP'</span><span class="w"> </span><span class="p">(</span><span class="s1">'DOWN'</span><span class="w"> </span><span class="m">42</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">Event</span>
 <span class="w">  </span><span class="nv">onMouseDown</span><span class="w">  </span><span class="c1">#.DOWN  42   onMouseUp  #.UP  </span>
 
@@ -78895,7 +78895,7 @@
 <span class="w">  </span><span class="nv">onMouseMove</span><span class="w">  </span><span class="c1">#.MOVE  </span>
 </code></pre></div>
 <p>The All event can also be set by assignment, and it too clears previous settings. Notice too that a subsequent reference to a specific event using the "on" prefix, will report the "All" setting, unless it is specifically reset.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="p">(</span><span class="nv">onMouseUp</span><span class="w"> </span><span class="nv">onMouseDown</span><span class="p">)</span><span class="kd">←</span><span class="s1">'UP'</span><span class="w"> </span><span class="p">(</span><span class="s1">'DOWN'</span><span class="w"> </span><span class="m">42</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="p">(</span><span class="nv">onMouseUp</span><span class="w"> </span><span class="nv">onMouseDown</span><span class="p">)</span><span class="kd">←</span><span class="s1">'UP'</span><span class="w"> </span><span class="p">(</span><span class="s1">'DOWN'</span><span class="w"> </span><span class="m">42</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">Event</span>
 <span class="w">  </span><span class="nv">onMouseDown</span><span class="w">  </span><span class="c1">#.DOWN  42   onMouseUp  #.UP  </span>
 
@@ -78911,7 +78911,7 @@
 <span class="w">  </span><span class="nv">onMouseMove</span><span class="w">  </span><span class="c1">#.MOVE  </span>
 </code></pre></div>
 <p>If no events are set, the result obtained by <code>⎕WG</code> and the result obtained by referencing Event directly are different:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
 <span class="w">      </span><span class="nv">DISPLAY</span><span class="w"> </span><span class="s1">'F'</span><span class="nf">⎕WG</span><span class="s1">'Event'</span>
 <span class="na">.</span><span class="kd">→</span><span class="o">--</span><span class="na">.</span>
 <span class="o">|</span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="o">|</span>
@@ -78927,19 +78927,19 @@
 </code></pre></div>
 <h2 id="callback-functions">Callback Functions</h2>
 <p>By setting the action code to 1 for all the events you are interested in, you could write the control loop in your application as:
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="nv">Loop</span><span class="bp">:</span><span class="w">  </span><span class="nv">Event</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="nf">⎕DQ</span><span class="w"> </span><span class="s1">'system'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="nv">Loop</span><span class="bp">:</span><span class="w">  </span><span class="nv">Event</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="nf">⎕DQ</span><span class="w"> </span><span class="s1">'system'</span>
 <span class="w">          </span><span class="nv">test</span><span class="w"> </span><span class="nv">Event</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w"> </span><span class="p">(</span><span class="nv">object</span><span class="w"> </span><span class="nv">name</span><span class="p">)</span>
 <span class="w">          </span><span class="nv">and</span><span class="w">  </span><span class="nv">Event</span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w"> </span><span class="p">(</span><span class="nv">event</span><span class="w"> </span><span class="nv">code</span><span class="p">)</span>
 <span class="w">          </span><span class="kd">→</span><span class="nv">Label</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">   </span><span class="nv">Label</span><span class="bp">:</span><span class="w"> </span><span class="nv">process</span><span class="w"> </span><span class="nv">event</span><span class="w"> </span><span class="nv">for</span><span class="w"> </span><span class="nv">object</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="nv">Label</span><span class="bp">:</span><span class="w"> </span><span class="nv">process</span><span class="w"> </span><span class="nv">event</span><span class="w"> </span><span class="nv">for</span><span class="w"> </span><span class="nv">object</span>
 <span class="w">          </span><span class="kd">→</span><span class="nv">Loop</span>
 </code></pre></div>
 <p>However, such code can be error prone and difficult to maintain. Another limitation is that events that occur between successive calls on <code>⎕DQ</code> are discarded.</p>
 <p>An alternative is to use callback functions. Not only do they encourage an object-oriented modular approach to programming, but they can also be used to validate the user's actions and prevent something untoward happening. For example, a callback function can prevent the user from terminating the application at an inappropriate point. The use of callback functions will also produce applications that execute faster than those that process events by exiting <code>⎕DQ</code> and looping back again as above.</p>
 <p>You associate a callback function with a particular event or set of events in a given object. There is nothing to prevent you from using the same callback function with several objects, but it only makes sense to do so if the processing for the event(s) is common to all of them. The object that caused the event is identified by the first element of the right argument when the callback is invoked.</p>
 <p>When an event occurs that has an action set to a character vector, the system looks for a function with that name. If none exists <code>⎕DQ</code> terminates with a <code>VALUE ERROR</code>. If the function does exist, it is called. If the callback function was called <code>FOO</code> and it stopped on line [1], the state indicator would be:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SI</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SI</span>
 <span class="nv">FOO</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="o">*</span>
 <span class="nf">⎕DQ</span>
 <span class="na">...</span>
@@ -78965,16 +78965,16 @@
 <h2 id="generating-events-using-nq">Generating Events using <code>⎕NQ</code></h2>
 <p>The <code>⎕NQ</code> system function is used to generate events under program control and has several uses.</p>
 <p>Firstly, it can be used to do something automatically for the user. For example, the following expression gives the input focus to the object <code>Form1.ED1.</code>
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="nv">Form1</span><span class="na">.</span><span class="nv">ED1</span><span class="w"> </span><span class="s1">'GotFocus'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="nv">Form1</span><span class="na">.</span><span class="nv">ED1</span><span class="w"> </span><span class="s1">'GotFocus'</span>
 </code></pre></div>
 <p>Secondly, <code>⎕NQ</code> can be used to generate user-defined events which trigger special actions either by invoking callback functions or by causing <code>⎕DQ</code> to terminate. For example, if you were to define the Event property on <code>'Form1'</code> as:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Form1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="p">(</span><span class="s1">'Event'</span><span class="w"> </span><span class="m">1001</span><span class="w"> </span><span class="s1">'FOO'</span><span class="p">)(</span><span class="s1">'Event'</span><span class="w"> </span><span class="m">1002</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Form1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="p">(</span><span class="s1">'Event'</span><span class="w"> </span><span class="m">1001</span><span class="w"> </span><span class="s1">'FOO'</span><span class="p">)(</span><span class="s1">'Event'</span><span class="w"> </span><span class="m">1002</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 </code></pre></div>
 <p>The expression:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="nv">Form1</span><span class="w"> </span><span class="m">1001</span><span class="w"> </span><span class="s1">'Hello'</span><span class="w"> </span><span class="m">42</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="nv">Form1</span><span class="w"> </span><span class="m">1001</span><span class="w"> </span><span class="s1">'Hello'</span><span class="w"> </span><span class="m">42</span>
 </code></pre></div>
 <p>would cause <code>⎕DQ</code> to invoke the function <code>FOO</code>, passing it the entire event message <code>(#.Form1 1001 'Hello' 42)</code> as its right argument. Similarly, the expression:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'Form1'</span><span class="w"> </span><span class="m">1002</span><span class="w"> </span><span class="m">23.59</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'Form1'</span><span class="w"> </span><span class="m">1002</span><span class="w"> </span><span class="m">23.59</span>
 </code></pre></div>
 <p>would cause <code>⎕DQ</code> to terminate with the array <code>('Form1' 1002 23.59)</code> as its result.</p>
 <p><code>⎕NQ</code> can be used to generate events in one of three ways which affect the <strong>context</strong> in which the event is processed.</p>
@@ -79012,7 +79012,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

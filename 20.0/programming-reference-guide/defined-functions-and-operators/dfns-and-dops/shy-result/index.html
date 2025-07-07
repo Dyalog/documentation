@@ -78707,7 +78707,7 @@
 <h1 class="heading"><span class="name">Shy Result</span></h1>
 
 <p>Dfns are usually 'pure' functions that take arguments and return explicit results. Occasionally, however, the main purpose of the function might be a side-effect such as the display of information in the session, or the updating of a file, and the value of a result, a secondary consideration. In such circumstances, you might want to make the result 'shy', so that it is discarded unless the calling context requires it. This can be achieved by assigning a dummy variable after a (true) guard:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">log</span><span class="kd">←</span><span class="kt">{</span><span class="w">                   </span><span class="c1">⍝ Append ⍵ to file ⍺.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">log</span><span class="kd">←</span><span class="kt">{</span><span class="w">                   </span><span class="c1">⍝ Append ⍵ to file ⍺.</span>
 <span class="w">          </span><span class="nv">tie</span><span class="kd">←</span><span class="bp">⍺</span><span class="w"> </span><span class="nf">⎕fstie</span><span class="w"> </span><span class="m">0</span><span class="w">      </span><span class="c1">⍝ tie number for file,</span>
 <span class="w">          </span><span class="nv">cno</span><span class="kd">←</span><span class="bp">⍵</span><span class="w"> </span><span class="nf">⎕fappend</span><span class="w"> </span><span class="nv">tie</span><span class="w">  </span><span class="c1">⍝ new component number,</span>
 <span class="w">          </span><span class="nv">tie</span><span class="kd">←</span><span class="nf">⎕funtie</span><span class="w"> </span><span class="nv">tie</span><span class="w">     </span><span class="c1">⍝ untie file,        </span>
@@ -78743,7 +78743,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

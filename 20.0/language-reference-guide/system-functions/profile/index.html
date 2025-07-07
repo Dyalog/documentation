@@ -79387,28 +79387,28 @@
 <h2 id="stateprofile-start" timer="timer">{state}←⎕PROFILE 'start'</h2>
 <p>Turn profiling on; <code>timer</code> is an optional case-independent character vector containing  <code>'CPU'</code> or <code>'elapsed'</code> or <code>'none'</code> or <code>'coverage'</code>. If omitted, it defaults to <code>'CPU'</code>. If <code>timer</code> is <code>'none'</code>, <code>⎕PROFILE</code>  records  just the number of times each line of code is executed without incurring the timing overhead. If <code>timer</code> is <code>'coverage'</code>, <code>⎕PROFILE</code>   only identifies which  lines of code are executed without incurring the timing or counting overhead.</p>
 <p>The first time a particular timer is chosen, <code>⎕PROFILE</code> will spend 1000 milliseconds (1 second) to approximate the call time bias and granularity for that timer.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊢</span><span class="nf">⎕PROFILE</span><span class="w"> </span><span class="s1">'start'</span><span class="w"> </span><span class="s1">'CPU'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊢</span><span class="nf">⎕PROFILE</span><span class="w"> </span><span class="s1">'start'</span><span class="w"> </span><span class="s1">'CPU'</span>
 <span class="w"> </span><span class="nv">active</span><span class="w">  </span><span class="nv">CPU</span><span class="w">  </span><span class="m">0.0001037499999</span><span class="w"> </span><span class="m">0.0001037499999</span>
 </code></pre></div>
 <h2 id="stateprofile-stop">{state}←⎕PROFILE 'stop'</h2>
 <p>Suspends the collection of profiling data.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊢</span><span class="nf">⎕PROFILE</span><span class="w"> </span><span class="s1">'stop'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊢</span><span class="nf">⎕PROFILE</span><span class="w"> </span><span class="s1">'stop'</span>
 <span class="w"> </span><span class="nv">inactive</span><span class="w">  </span><span class="nv">CPU</span><span class="w">  </span><span class="m">0.0001037499999</span><span class="w"> </span><span class="m">0.0001037499999</span>
 </code></pre></div>
 <h2 id="stateprofile-clear">{state}←⎕PROFILE 'clear'</h2>
 <p>Clears any collected profiling data and, if profiling is active, places profiling in an inactive state.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊢</span><span class="nf">⎕PROFILE</span><span class="w"> </span><span class="s1">'clear'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊢</span><span class="nf">⎕PROFILE</span><span class="w"> </span><span class="s1">'clear'</span>
 <span class="w"> </span><span class="nv">inactive</span><span class="w">    </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <h2 id="stateprofile-calibrate">{state}←⎕PROFILE 'calibrate'</h2>
 <p>Causes <code>⎕PROFILE</code> to perform a 1000 millisecond calibration to approximate the call time bias and granularity for the current timer. Note, a timer must have been previously selected by using <code>⎕PROFILE 'start'</code>.</p>
 <p><code>⎕PROFILE</code> will retain the lesser of the current timer values compared to the new values computed by the calibration. The rationale for this is to use the smallest possible values of which we can be certain.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊢</span><span class="nf">⎕PROFILE</span><span class="s1">'calibrate'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊢</span><span class="nf">⎕PROFILE</span><span class="s1">'calibrate'</span>
 <span class="w"> </span><span class="nv">active</span><span class="w">  </span><span class="nv">CPU</span><span class="w">  </span><span class="m">0.0001037499997</span><span class="w"> </span><span class="m">0.0001037499997</span>
 </code></pre></div>
 <h2 id="stateprofile-state">state←⎕PROFILE 'state'</h2>
 <p>Returns the current profiling state.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">clear</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">clear</span>
 <span class="nv">clear</span><span class="w"> </span><span class="nv">ws</span>
 <span class="w">      </span><span class="nf">⎕PROFILE</span><span class="w"> </span><span class="s1">'state'</span>
 <span class="w"> </span><span class="nv">inactive</span><span class="w">    </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
@@ -79453,11 +79453,11 @@
 </tbody>
 </table>
 <h2 id="example-numbers-have-been-truncated-for-formatting">Example: (numbers have been truncated for formatting)</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕PROFILE</span><span class="w"> </span><span class="s1">'data'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕PROFILE</span><span class="w"> </span><span class="s1">'data'</span>
 <span class="c1">#.foo             1  1.04406  39347.64945   503 4080803 #.foo      1      1  0.12488     0.124887     1       1 #.foo      2    100  0.58851 39347.193900   200 4080500 #.foo      3    100  0.21340     0.213406   100     100 #.NS1.goo       100 99.44404   39346.6053 50300 4080300 #.NS1.goo  1    100  0.61679     0.616793   100     100 #.NS1.goo  2  10000 67.80292   39314.9642 20000 4050000 #.NS1.goo  3  10000 19.60274      19.6027 10000   10000</span>
 </code></pre></div>
 <p>If <code>X</code> is specified it must be a simple vector of column indices. In this case, the result has the same shape as <code>X</code> and is a vector of the specified column vectors:
-</p><div class="highlight"><pre><span></span><code><span class="nv">X</span><span class="w"> </span><span class="nf">⎕PROFILE</span><span class="w"> </span><span class="s1">'data'</span><span class="w"> </span><span class="kd">←→</span><span class="w"> </span><span class="o">↓</span><span class="sr">[</span><span class="nf">⎕IO</span><span class="sr">]</span><span class="p">(</span><span class="nf">⎕PROFILE</span><span class="w"> </span><span class="s1">'data'</span><span class="p">)</span><span class="sr">[;</span><span class="nv">X</span><span class="sr">]</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">X</span><span class="w"> </span><span class="nf">⎕PROFILE</span><span class="w"> </span><span class="s1">'data'</span><span class="w"> </span><span class="kd">←→</span><span class="w"> </span><span class="o">↓</span><span class="sr">[</span><span class="nf">⎕IO</span><span class="sr">]</span><span class="p">(</span><span class="nf">⎕PROFILE</span><span class="w"> </span><span class="s1">'data'</span><span class="p">)</span><span class="sr">[;</span><span class="nv">X</span><span class="sr">]</span>
 </code></pre></div>
 <p>If column 2 is included in the result, the value <code>¯1</code> is used instead of <code>⍬</code> to indicate a whole-function entry.</p>
 <h2 id="datax-profile-tree">data←{X} ⎕PROFILE 'tree'</h2>
@@ -79500,7 +79500,7 @@
 </table>
 <p>The optional left argument is treated in exactly the same way as for <code>X ⎕PROFILE 'data'</code>.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕PROFILE</span><span class="w"> </span><span class="s1">'tree'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕PROFILE</span><span class="w"> </span><span class="s1">'tree'</span>
 <span class="m">0</span><span class="w">  </span><span class="c1">#.foo               1     1.04406 39347.64945     503 4080803</span>
 <span class="m">1</span><span class="w">  </span><span class="c1">#.foo      1        1     0.12488     0.12488       1       1</span>
 <span class="m">1</span><span class="w">  </span><span class="c1">#.foo      2      100     0.58851 39347.19390     200 4080500</span>
@@ -79519,7 +79519,7 @@
 <h3 id="profile-data-entry-types">Profile Data Entry Types</h3>
 <p>The results of <code>⎕PROFILE 'data'</code> and <code>⎕PROFILE 'tree'</code> have two types of entries; function summary entries and function line entries. Function summary entries contain <code>⍬</code> in the line number column, whereas function line entries contain the line number. Dfns line entries begin with 0 as they do not have a header line like traditional functions. The timer data and timer call counts in function summary entries represent the aggregate of the function line entries plus any time spent that cannot be directly attributed to a function line entry. This could include time spent during function initialisation, etc.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="c1">#.foo         1  1.04406 39347.649450   503 4080803</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w"> </span><span class="c1">#.foo         1  1.04406 39347.649450   503 4080803</span>
 <span class="w"> </span><span class="c1">#.foo    1    1  0.12488     0.124887     1       1</span>
 <span class="w"> </span><span class="c1">#.foo    2  100  0.58851 39347.193900   200 4080500</span>
 <span class="w"> </span><span class="c1">#.foo    3  100  0.21340     0.213406   100     100</span>
@@ -79554,7 +79554,7 @@
 <h5 id="advanced-profiling">Advanced Profiling</h5>
 <p>The timing data collected by <code>⎕PROFILE</code> is not adjusted for the timer's call time bias; in other words, the times reported by <code>⎕PROFILE</code> include the time spent calling the timer function. One effect of this can be to make "cheap" lines that are called many times seem to consume more resource. If you desire more accurate profiling measurements, or if your application takes a short amount of time to run, you will probably want to adjust for the timer call time bias. To do so, subtract from the timing data the timer's' 'call time bias multiplied by the number of times the timer was called.</p>
 <h5 class="example">Example</h5>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">CallTimeBias</span><span class="kd">←</span><span class="m">3</span><span class="o">⊃</span><span class="nf">⎕PROFILE</span><span class="w"> </span><span class="s1">'state'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">CallTimeBias</span><span class="kd">←</span><span class="m">3</span><span class="o">⊃</span><span class="nf">⎕PROFILE</span><span class="w"> </span><span class="s1">'state'</span>
 <span class="w">      </span><span class="nv">RawTimes</span><span class="kd">←</span><span class="nf">⎕PROFILE</span><span class="w"> </span><span class="s1">'data'</span>
 <span class="w">      </span><span class="nv">Adjusted</span><span class="kd">←</span><span class="nv">RawTimes</span><span class="sr">[;</span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="sr">]</span><span class="o">-</span><span class="nv">RawTimes</span><span class="sr">[;</span><span class="m">6</span><span class="w"> </span><span class="m">7</span><span class="sr">]</span><span class="o">×</span><span class="nv">CallTimeBias</span>
 </code></pre></div>
@@ -79587,7 +79587,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

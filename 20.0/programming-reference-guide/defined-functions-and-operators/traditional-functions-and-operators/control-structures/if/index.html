@@ -78710,14 +78710,14 @@
 
 <p><a class="noprint" href="../if-statement-definition/">Formal Definition</a></p>
 <p>The simplest <code>:If</code> control structure is a single condition of the form:
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="nv">AGE</span><span class="o">&lt;</span><span class="m">21</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="nv">AGE</span><span class="o">&lt;</span><span class="m">21</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">       </span><span class="nv">expr</span><span class="w"> </span><span class="m">1</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">       </span><span class="nv">expr</span><span class="w"> </span><span class="m">2</span>
 <span class="sr">[</span><span class="m">5</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">EndIf</span>
 </code></pre></div>
 <p>If the test condition (in this case <code>AGE&lt;21</code>) is true, the statements between the <code>:If</code> and the <code>:EndIf</code> will be executed.  If the condition is false, none of these statements will be run and execution resumes after the <code>:EndIf</code>.  Note that the test condition to the right of <code>:If</code> must return a single element Boolean value 1 (true) or 0 (false).</p>
 <p><code>:If</code> control structures may be considerably more complex.  For example, the following code will execute the statements on lines <code>[2-3]</code> if <code>AGE&lt;21</code> is 1 (true), <strong>or alternatively</strong>, the statement on line <code>[6]</code> if <code>AGE&lt;21</code> is 0 (false).
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="nv">AGE</span><span class="o">&lt;</span><span class="m">21</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="nv">AGE</span><span class="o">&lt;</span><span class="m">21</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">       </span><span class="nv">expr</span><span class="w"> </span><span class="m">1</span><span class="w">    </span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">       </span><span class="nv">expr</span><span class="w"> </span><span class="m">2</span>
 <span class="sr">[</span><span class="m">5</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Else</span>
@@ -78725,7 +78725,7 @@
 <span class="sr">[</span><span class="m">7</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">EndIf</span>
 </code></pre></div>
 <p>Instead of a single condition, it is possible to have multiple conditions using the <code>:ElseIf</code> control word.  For example:
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="nv">WINEAGE</span><span class="o">&lt;</span><span class="m">5</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="nv">WINEAGE</span><span class="o">&lt;</span><span class="m">5</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">       </span><span class="s1">'Too young to drink'</span>
 <span class="sr">[</span><span class="m">5</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">ElseIf</span><span class="w"> </span><span class="nv">WINEAGE</span><span class="o">&lt;</span><span class="m">10</span>
 <span class="sr">[</span><span class="m">6</span><span class="sr">]</span><span class="w">       </span><span class="s1">'Just Right'</span>
@@ -78737,7 +78737,7 @@
 </code></pre></div>
 <p>Notice that APL executes the expression(s) associated with the <strong>first</strong> condition that is true or those following the <code>:Else</code> if <strong>none</strong> of the conditions are true.</p>
 <p>The <code>:AndIf</code> and <code>:OrIf</code> control words may be used to define a block of conditions and so refine the logic still further.  You may qualify an <code>:If</code> or an <code>:ElseIf</code> with one or more <code>:AndIf</code> statements <strong>or</strong> with one or more <code>:OrIf</code> statements.  You may not however mix <code>:AndIf</code> and <code>:OrIf</code> in the same conditional block.  For example:
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="nv">WINE</span><span class="na">.</span><span class="nv">NAME</span><span class="o">≡</span><span class="s1">'Chateau Lafitte'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="nv">WINE</span><span class="na">.</span><span class="nv">NAME</span><span class="o">≡</span><span class="s1">'Chateau Lafitte'</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">AndIf</span><span class="w"> </span><span class="nv">WINE</span><span class="na">.</span><span class="nv">YEAR</span><span class="o">∊</span><span class="m">1962</span><span class="w"> </span><span class="m">1967</span><span class="w"> </span><span class="m">1970</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">       </span><span class="s1">'The greatest?'</span>
 <span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">ElseIf</span><span class="w"> </span><span class="nv">WINE</span><span class="na">.</span><span class="nv">NAME</span><span class="o">≡</span><span class="s1">'Chateau Latour'</span>
@@ -78746,7 +78746,7 @@
 <span class="sr">[</span><span class="m">7</span><span class="sr">]</span><span class="w">       </span><span class="s1">'Almost as good'</span>
 <span class="sr">[</span><span class="m">8</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Else</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">9</span><span class="sr">]</span><span class="w">       </span><span class="s1">'Everyday stuff'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">9</span><span class="sr">]</span><span class="w">       </span><span class="s1">'Everyday stuff'</span>
 <span class="sr">[</span><span class="m">10</span><span class="sr">]</span><span class="w">  </span><span class="bp">:</span><span class="nv">EndIf</span>
 </code></pre></div>
 <p>Please note that in a <code>:If</code> control structure, the conditions associated with each of the condition blocks are executed in order until an entire condition block evaluates to true.  At that point, the APL statements following this condition block are executed.  None of the conditions associated with any other condition block are executed.  Furthermore, if an <code>:AndIf</code> condition yields 0 (false), it means that the entire block must evaluate to false so the system moves immediately on to the next block without executing the other conditions following the failing <code>:AndIf</code>.  Likewise, if an <code>:OrIf</code> condition yields 1 (true), the entire block is at that point deemed to yield true and none of the following <code>:OrIf</code> conditions in the same block are executed.</p>
@@ -78779,7 +78779,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

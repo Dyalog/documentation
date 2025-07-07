@@ -79685,7 +79685,7 @@
 </table>
 <h4 id="editing-scripts">Editing Scripts</h4>
 <p>Suppose that you have a Class that manages a list of items in a shared Field, so somewhere in the script would appear a line such as:-
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">:</span><span class="nv">Field</span><span class="w"> </span><span class="nv">shared</span><span class="w"> </span><span class="nv">public</span><span class="w"> </span><span class="nv">List</span><span class="kd">←</span><span class="no">⍬</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">:</span><span class="nv">Field</span><span class="w"> </span><span class="nv">shared</span><span class="w"> </span><span class="nv">public</span><span class="w"> </span><span class="nv">List</span><span class="kd">←</span><span class="no">⍬</span>
 </code></pre></div>
 <p>You run your application for a bit, and <code>List</code>, which was initially empty, gets updated as new instances of the Class are created. You then edit the Class to add a new function, or fix a bug. In this instance, when you exit the editor you <strong>may not</strong> want <code>List</code> to be reset back to the empty vector although you <strong>do want</strong> the new version of the function(s) in the Class to be fixed.</p>
 <p>Nevertheless whenever you edit the Class <em>when it is not suspended</em>, you probably always want the entire script to be re-fixed, and <code>List</code> re-initialised.</p>
@@ -80001,7 +80001,7 @@
 <h3 id="outlining">Outlining</h3>
 <p>When you are editing a function, outlining identifies the blocks of code within control structures, and allows you to collapse and expand these blocks so that you can focus your attention on particular parts of the code</p>
 <p>The picture below shows the result of opening the function <code>⎕SE.cbtop.TB_POPUP</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">ed</span><span class="w"> </span><span class="nf">⎕SE</span><span class="na">.</span><span class="nv">cbtop</span><span class="na">.</span><span class="nv">TB_POPUP</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">ed</span><span class="w"> </span><span class="nf">⎕SE</span><span class="na">.</span><span class="nv">cbtop</span><span class="na">.</span><span class="nv">TB_POPUP</span>
 </code></pre></div>
 <p><img alt="" src="../img/editor-outlining-1.png"></p>
 <p>Notice that the various control structure blocks are delineated by a treeview diagram.</p>
@@ -80017,7 +80017,7 @@
 <p>The first picture shows the function with all sections closed.</p>
 <p><img alt="" src="../img/editor-sections-1.png"></p>
 <p>The next picture shows the effect of opening the <em>Comments</em> section. Notice how this is delineated by the statements:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Section</span><span class="w"> </span><span class="nv">Comments</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Section</span><span class="w"> </span><span class="nv">Comments</span>
 <span class="w">      </span><span class="na">...</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">EndSection</span><span class="w"> </span><span class="nv">Comments</span>
 </code></pre></div>
@@ -80041,7 +80041,7 @@
 <p>You can include APL expressions:
 the Editor will evaluate them when you fix or format the array.</p>
 <p>For example, in the session:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">x</span><span class="kd">←</span><span class="sr">[</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">x</span><span class="kd">←</span><span class="sr">[</span>
 <span class="w">       </span><span class="p">(</span>
 <span class="w">        </span><span class="s1">'Hello'</span>
 <span class="w">       </span><span class="p">)</span>
@@ -80052,7 +80052,7 @@ the Editor will evaluate them when you fix or format the array.</p>
 <span class="w">      </span><span class="p">)</span><span class="nv">ED</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">x</span>
 </code></pre></div>
 In the Editor, insert <code>⎕C</code>:
-<div class="highlight"><pre><span></span><code><span class="nf">⎕C</span><span class="sr">[</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="nf">⎕C</span><span class="sr">[</span>
 <span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="s1">'Hello'</span>
 <span class="w"> </span><span class="p">)</span>
@@ -80062,7 +80062,7 @@ In the Editor, insert <code>⎕C</code>:
 <span class="sr">]</span>
 </code></pre></div>
 It reformats as
-<div class="highlight"><pre><span></span><code><span class="sr">[</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span>
 <span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="s1">'hello'</span>
 <span class="w"> </span><span class="p">)</span>
@@ -80072,7 +80072,7 @@ It reformats as
 <span class="sr">]</span>
 </code></pre></div>
 and fixes as
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">x</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">x</span>
 <span class="err">┌─────┐</span>
 <span class="err">│</span><span class="nv">hello</span><span class="err">│</span>
 <span class="err">├─────┤</span>
@@ -80081,7 +80081,7 @@ and fixes as
 </code></pre></div>
 <h3 id="editing-classes">Editing Classes</h3>
 <p>The picture below shows the result of opening the <code>ComponentFile</code> class. Notice how each function is delineated separately and that each function is individually line-numbered.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">ed</span><span class="w"> </span><span class="nv">ComponentFile</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">ed</span><span class="w"> </span><span class="nv">ComponentFile</span>
 </code></pre></div>
 <p><img alt="" src="../img/editor-classes-1.png"></p>
 <p>The outlining feature really comes into its own when editing classes because you can collapse and expand whole functions. The picture below shows the effect of collapsing all but the <code>Append</code> method.</p>
@@ -80095,13 +80095,13 @@ and fixes as
 <p>The next picture shows the effect of opening just the <code>Main</code> section.</p>
 <p><img alt="" src="../img/editor-classes-5.png"></p>
 <p>Notice that this section is delimited by the two statements:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Section</span><span class="w"> </span><span class="nv">Main</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Section</span><span class="w"> </span><span class="nv">Main</span>
 <span class="w">      </span><span class="na">...</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">EndSection</span><span class="w"> </span><span class="nv">Main</span>
 </code></pre></div>
 <p>In this picture the 3 functions within the <code>Main</code> section are temporarily closed.</p>
 <p>Similarly, the section called <code>Validation</code> is delimited by:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Section</span><span class="w"> </span><span class="nv">Validation</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Section</span><span class="w"> </span><span class="nv">Validation</span>
 <span class="w">      </span><span class="na">...</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">EndSection</span><span class="w"> </span><span class="nv">Validation</span>
 </code></pre></div>
@@ -80135,7 +80135,7 @@ and fixes as
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

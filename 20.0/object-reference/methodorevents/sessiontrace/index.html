@@ -78723,7 +78723,7 @@
 <p>When the event is generated, the left argument of the callback function contains the result value of the expression, if any. The callback function may display this or any other value, using default output or by assignment to <code>⎕</code>. If so, this output will be processed normally, without generating any SessionTrace or <a href="../sessionprint/">SessionPrint</a> events. If the callback fails to explicitly display anything, nothing will appear in the Session.</p>
 <p>If the expression has no value, then the callback function will be called monadically. It is therefore required that the callback function is ambivalent (can be called both monadically and dyadically).</p>
 <h2 class="example">Example</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">cs</span><span class="w"> </span><span class="nf">⎕SE</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">cs</span><span class="w"> </span><span class="nf">⎕SE</span>
 <span class="nf">⎕SE</span>
 <span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="kt">{</span><span class="nv">VAL</span><span class="kt">}</span><span class="nv">TimeStamp</span><span class="w"> </span><span class="nv">EV</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="vg">⍞</span><span class="kd">←</span><span class="nf">⎕TS</span><span class="p">(</span><span class="m">2</span><span class="o">↑</span><span class="m">2</span><span class="o">↓</span><span class="nv">EV</span><span class="p">)</span>
@@ -78736,7 +78736,7 @@
 <span class="c1">#</span>
 <span class="w">      </span><span class="s1">'⎕SE'</span><span class="nf">⎕WS</span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'SessionTrace'</span><span class="w"> </span><span class="s1">'⎕SE.TimeStamp'</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Foo</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Foo</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">     </span><span class="c1">⍝ just a comment</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">global</span><span class="kd">←</span><span class="nf">⎕A</span>
 <span class="w">     </span><span class="bp">∇</span>
@@ -78780,7 +78780,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

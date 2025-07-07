@@ -78745,7 +78745,7 @@
 <p>If <code>Y</code> is empty, the branch function has no effect.  The next expression is executed on the same line, if any, or on the next line if not.  If there is no following line, the function is terminated.</p>
 <p>The <code>:GoTo</code> statement may be used in place of Branch in a defined function.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">TEST</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">TEST</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="m">1</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="kd">→</span><span class="m">4</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="m">3</span>
@@ -78758,7 +78758,7 @@
 </code></pre></div>
 <p>In general it is better to branch to a LABEL than to a line number.  A label occurs in a statement followed by a colon and is assigned the value of the statement line number when the function is defined.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">TEST</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">TEST</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="m">1</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="kd">→</span><span class="nv">FOUR</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="m">3</span>
@@ -78813,13 +78813,13 @@
 </tbody>
 </table>
 <p>A branch expression may occur within a statement including <code>⋄</code> separators:
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">5</span><span class="sr">]</span><span class="w">   </span><span class="kd">→</span><span class="nv">NEXT</span><span class="o">⍴</span><span class="na">⍨</span><span class="nv">TEST</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">A</span><span class="kd">←</span><span class="nv">A</span><span class="o">+</span><span class="m">1</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="kd">→</span><span class="nv">END</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">5</span><span class="sr">]</span><span class="w">   </span><span class="kd">→</span><span class="nv">NEXT</span><span class="o">⍴</span><span class="na">⍨</span><span class="nv">TEST</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">A</span><span class="kd">←</span><span class="nv">A</span><span class="o">+</span><span class="m">1</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="kd">→</span><span class="nv">END</span>
 <span class="sr">[</span><span class="m">6</span><span class="sr">]</span><span class="w">  </span><span class="nv">NEXT</span><span class="bp">:</span>
 </code></pre></div>
 <p>In this example, the expressions <code>'A←A+1'</code> and <code>'→END'</code> are executed only if <code>TEST</code> returns the value 1.  Otherwise control branches to label <code>NEXT</code>.</p>
 <p>In immediate execution mode, the branch function permits execution to be continued within the most recently suspended function, if any, in the state indicator.  If the state indicator is empty, or if the argument <code>Y</code> is the empty vector, the branch expression has no effect.  If a statement line is specified which does not exist, the function is terminated.  Otherwise, execution is restarted from the beginning of the specified statement line in the most recently suspended function.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">F</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">F</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="m">1</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="m">2</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">   </span><span class="m">3</span>
@@ -78837,7 +78837,7 @@
 <span class="m">3</span>
 </code></pre></div>
 <p>The system constant <code>⎕LC</code> returns a vector of the line numbers of statement lines in the state indicator, starting with that in the most recently suspended function.  It is convenient to restart execution in a suspended state by the expression:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="kd">→</span><span class="nf">⎕LC</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="kd">→</span><span class="nf">⎕LC</span>
 </code></pre></div>
 
 
@@ -78868,7 +78868,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

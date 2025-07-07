@@ -78837,7 +78837,7 @@
 <p><strong>[ws]</strong></p>
 <p>The name of a Dyalog APL workspace to be loaded. Unless specified, on Windows the file extension .DWS is assumed.</p>
 <p><strong>[param]</strong></p>
-<p>A parameter name followed by an equals sign (<code>=</code>) and a value. The parameter name may be one of the standard APL parameters (see <a href="configuration-parameters.md">Configuration Parameters</a> ) or a name and value of your own choosing (see <a href="../../object-reference/methodorevents/getenvironment">GetEnvironment</a> ) . If the parameter is in a registry sub-folder (see <a href="../registry-subfolders/">Registry Sub-Folders</a> ), its name must be preceded by the name of the sub-folder, followed by a backslash (<code>\</code>) or underscore (<code>_</code>).</p>
+<p>A parameter name followed by an equals sign (<code>=</code>) and a value. The parameter name may be one of the standard APL parameters (see <a href="../configuration-parameters/configuration-parameters/">Configuration Parameters</a> ) or a name and value of your own choosing (see <a href="../../object-reference/methodorevents/getenvironment">GetEnvironment</a> ) . If the parameter is in a registry sub-folder (see <a href="../registry-subfolders/">Registry Sub-Folders</a> ), its name must be preceded by the name of the sub-folder, followed by a backslash (<code>\</code>) or underscore (<code>_</code>).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Instead of  a loading a workspace specified by the <strong>ws</strong> option, APL can be instructed to load a program from a script file. For further information, see <a href="../configuration-parameters/load/">Load</a>.</p>
@@ -78845,19 +78845,19 @@
 <h2 class="example">Examples</h2>
 
 <p>Start APL using the configuration file <code>myconfig.dcfg</code>:
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="s2">"c:\program files\…\dyalog.exe"</span><span class="w"> </span><span class="nv">ConfigFile</span><span class="o">=</span><span class="s2">"myconfig.dcfg"</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="s2">"c:\program files\…\dyalog.exe"</span><span class="w"> </span><span class="nv">ConfigFile</span><span class="o">=</span><span class="s2">"myconfig.dcfg"</span>
 </code></pre></div>
 <p>Load the workspace <code>myapp</code>, setting <strong>MaxWS</strong> parameter:
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="s2">"c:\program files\…\dyalog.exe"</span><span class="w"> </span><span class="nv">myapp</span><span class="w"> </span><span class="nv">maxws</span><span class="o">=</span><span class="m">2</span><span class="nv">G</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="s2">"c:\program files\…\dyalog.exe"</span><span class="w"> </span><span class="nv">myapp</span><span class="w"> </span><span class="nv">maxws</span><span class="o">=</span><span class="m">2</span><span class="nv">G</span>
 </code></pre></div>
 <p>Load the workspace <code>myapp</code>, set an application specific parameter, but do not execute the latent expression:
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="s2">"c:\program files\…\dyalog.exe"</span><span class="w"> </span><span class="o">-</span><span class="nv">x</span><span class="w"> </span><span class="nv">myapp</span><span class="w"> </span><span class="nv">myparam</span><span class="o">=</span><span class="m">8080</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="s2">"c:\program files\…\dyalog.exe"</span><span class="w"> </span><span class="o">-</span><span class="nv">x</span><span class="w"> </span><span class="nv">myapp</span><span class="w"> </span><span class="nv">myparam</span><span class="o">=</span><span class="m">8080</span>
 </code></pre></div>
 <p>Run the function defined in <code>myfn.aplf</code>:
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="s2">"c:\program files\…\dyalog.exe"</span><span class="w"> </span><span class="nv">load</span><span class="o">=</span><span class="nv">myfn</span><span class="na">.</span><span class="nv">aplf</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="s2">"c:\program files\…\dyalog.exe"</span><span class="w"> </span><span class="nv">load</span><span class="o">=</span><span class="nv">myfn</span><span class="na">.</span><span class="nv">aplf</span>
 </code></pre></div>
 <p>Start APL and output "Hello World":
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="s2">"c:\program files\…\dyalog.exe"</span><span class="w"> </span><span class="nv">lx</span><span class="o">=</span><span class="s2">"⎕←'Hello World'"</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="s2">"c:\program files\…\dyalog.exe"</span><span class="w"> </span><span class="nv">lx</span><span class="o">=</span><span class="s2">"⎕←'Hello World'"</span>
 </code></pre></div>
 
 
@@ -78888,7 +78888,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

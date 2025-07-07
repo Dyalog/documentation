@@ -78808,11 +78808,11 @@
 <p>Examples are the Print, NewPage, Setup and Abort methods, all of which cause a Printer object to take a particular action.</p>
 <p>If the system variable <code>⎕WX</code> is 1, you may invoke an object's method using exactly the same syntax as you would use to call a function in that object.</p>
 <p>For example, to execute the IDNToDate method of a Calendar object named <code>F.CAL</code>, you can use the expression:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">CAL</span><span class="na">.</span><span class="nv">IDNToDate</span><span class="w"> </span><span class="m">36525</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">CAL</span><span class="na">.</span><span class="nv">IDNToDate</span><span class="w"> </span><span class="m">36525</span>
 <span class="m">2000</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">5</span>
 </code></pre></div>
 <p>When you call a method in this way, the method name is case-sensitive and if you spell it incorrectly, you will get a  <code>VALUE ERROR</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">CAL</span><span class="na">.</span><span class="nv">idntodate</span><span class="w"> </span><span class="m">36525</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">CAL</span><span class="na">.</span><span class="nv">idntodate</span><span class="w"> </span><span class="m">36525</span>
 <span class="nv">VALUE</span><span class="w"> </span><span class="nv">ERROR</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">C</span><span class="na">.</span><span class="nv">idntodate</span><span class="w"> </span><span class="m">36525</span>
 <span class="w">     </span><span class="err">^</span>
@@ -78821,24 +78821,24 @@
 <p>Methods may also be called using <code>⎕NQ</code> with a left argument of 2, indeed if <code>⎕WX</code> is 0, this is the only way to call a method.</p>
 <p>The result of the method is returned by <code>⎕NQ</code>. Note however that the result is <em>shy</em>.</p>
 <p>For example, for a TreeView object you can obtain status information about a particular item in the object using the GetItemState method:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="vg">⎕</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'f.tv'</span><span class="w"> </span><span class="s1">'GetItemState'</span><span class="w"> </span><span class="m">6</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="vg">⎕</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'f.tv'</span><span class="w"> </span><span class="s1">'GetItemState'</span><span class="w"> </span><span class="m">6</span>
 <span class="m">96</span>
 </code></pre></div>
 <p>Or you can call the IDNToDate method of a Calendar object <code>F.C</code> as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="vg">⎕</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'F.CAL'</span><span class="w"> </span><span class="s1">'IDNToDate'</span><span class="w"> </span><span class="m">36525</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="vg">⎕</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'F.CAL'</span><span class="w"> </span><span class="s1">'IDNToDate'</span><span class="w"> </span><span class="m">36525</span>
 <span class="m">2000</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">5</span>
 </code></pre></div>
 <p>When you call a method using <code>2 ⎕NQ</code>, the method name is <strong>not</strong> case-sensitive.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="vg">⎕</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'F.CAL'</span><span class="w"> </span><span class="s1">'idntodate'</span><span class="w"> </span><span class="m">36525</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="vg">⎕</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'F.CAL'</span><span class="w"> </span><span class="s1">'idntodate'</span><span class="w"> </span><span class="m">36525</span>
 <span class="m">2000</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">5</span>
 </code></pre></div>
 <h2 id="events-as-methods">Events as Methods</h2>
 <p>Methods and events are closely related and most events can be invoked as methods.</p>
 <p>For example, you can reposition and resize a Form in one step by calling its Configure event as a method. The argument you supply is the same as the event message associated with the event, but with the first two items (Object and Event code) omitted.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">Configure</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">20</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">Configure</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">20</span>
 </code></pre></div>
 <p>Or, using <code>2 ⎕NQ</code>
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'F'</span><span class="w"> </span><span class="s1">'Configure'</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">20</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'F'</span><span class="w"> </span><span class="s1">'Configure'</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">20</span>
 </code></pre></div>
 <p>Notice that when you call an event as a method, you are executing the <em>default processing</em> associated with the event. The setting for the Event property is ignored and, in particular, any callback associated with the event is not executed.</p>
 
@@ -78870,7 +78870,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

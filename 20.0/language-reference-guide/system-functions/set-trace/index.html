@@ -78722,19 +78722,19 @@
 <p><code>X</code> identifies the numbers of lines in the function or operator named by <code>Y</code> on which a trace control is to be placed.  Numbers outside the range of line numbers in the function or operator (other than 0) are ignored.  The number 0 indicates that a trace control is to be placed immediately prior to exit from the function or operator.  The value of <code>X</code> is independent of <code>⎕IO</code>.</p>
 <p><code>R</code> is a simple integer vector of non-negative elements indicating the lines in the function or operator on which a trace control has been placed.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="p">(</span><span class="m">0</span><span class="o">,⍳</span><span class="m">10</span><span class="p">)</span><span class="w"> </span><span class="nf">⎕TRACE</span><span class="s1">'FOO'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="p">(</span><span class="m">0</span><span class="o">,⍳</span><span class="m">10</span><span class="p">)</span><span class="w"> </span><span class="nf">⎕TRACE</span><span class="s1">'FOO'</span>
 <span class="m">0</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <p>Existing trace controls in the function or operator named by <code>Y</code> are cancelled before new trace controls are set:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕TRACE</span><span class="s1">'FOO'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕TRACE</span><span class="s1">'FOO'</span>
 <span class="m">1</span>
 </code></pre></div>
 <p>All trace controls may be cancelled by giving <code>X</code> an empty vector:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="no">⍬</span><span class="w"> </span><span class="nf">⎕TRACE</span><span class="w"> </span><span class="s1">'FOO'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="no">⍬</span><span class="w"> </span><span class="nf">⎕TRACE</span><span class="w"> </span><span class="s1">'FOO'</span>
 <span class="m">0</span>
 </code></pre></div>
 <p>Attempts to set trace controls in a locked function or operator are ignored.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕LOCK</span><span class="w"> </span><span class="s1">'FOO'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕LOCK</span><span class="w"> </span><span class="s1">'FOO'</span>
 <span class="w">      </span><span class="o">+</span><span class="m">1</span><span class="w"> </span><span class="nf">⎕TRACE</span><span class="w"> </span><span class="s1">'FOO'</span>
 </code></pre></div>
 <p>The effect of trace controls when a function or operator is invoked is to display the result of each complete expression for lines with trace controls as they are executed, and the result of the function if trace control 0 is set.  If a line contains expressions separated by <code>⋄</code>, the result of each complete expression is displayed for that line after execution.</p>
@@ -78750,7 +78750,7 @@
 <li><code>→</code> followed by a line number.</li>
 </ul>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕VR</span><span class="w"> </span><span class="s1">'DSL'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕VR</span><span class="w"> </span><span class="s1">'DSL'</span>
 <span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">DSL</span><span class="w"> </span><span class="nv">SKIP</span><span class="sr">;</span><span class="nv">A</span><span class="sr">;</span><span class="nv">B</span><span class="sr">;</span><span class="nv">C</span><span class="sr">;</span><span class="nv">D</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">A</span><span class="kd">←</span><span class="m">2</span><span class="o">×</span><span class="m">3</span><span class="o">+</span><span class="m">4</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">B</span><span class="kd">←</span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="s1">'ABCDEF'</span><span class="p">)</span><span class="nv">A</span>
@@ -78802,7 +78802,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

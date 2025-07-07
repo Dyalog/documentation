@@ -78768,7 +78768,7 @@
 <h1 class="heading"><span class="name">The SimpleCtl Control</span></h1>
 
 <p>The <code>SimpleCtl</code> Class is illustrated below:
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">SimpleCtl</span><span class="bp">:</span><span class="w"> </span><span class="nv">Control</span><span class="w">                       </span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">SimpleCtl</span><span class="bp">:</span><span class="w"> </span><span class="nv">Control</span><span class="w">                       </span>
 <span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">public</span><span class="w">                                  </span>
 <span class="bp">:</span><span class="nv">Using</span><span class="w"> </span><span class="nv">System</span><span class="w">                                   </span>
 <span class="bp">:</span><span class="nv">Using</span><span class="w"> </span><span class="nv">System</span><span class="na">.</span><span class="nv">Collections</span><span class="na">.</span><span class="nv">Specialized</span><span class="o">,</span><span class="nv">System</span><span class="na">.</span><span class="nv">dll</span>
@@ -78792,7 +78792,7 @@
 <p>Using the <code>:Signature</code> statement, the <code>Render</code> function is defined to have the same syntax as the method it overrides, that is, it does not return a result  <code>void</code> and takes a single parameter of type <code>HtmlTextWriter</code>. Note that to successfully replace the base class method, the <code>Render</code> function must have exactly this <em>:Signature</em>.</p>
 <h2 id="using-simplectl">Using SimpleCtl</h2>
 <p>Our <code>SimpleCtl</code> control may now be included in any .NET Web Page from which <code>temp.dll</code> is accessible. The file <code>samples\asp.net\temp\Simple.aspx</code> is simply an example. The fact that this control is written in Dyalog is immaterial.
-</p><div class="highlight"><pre><span></span><code><span class="err">&lt;</span>%@<span class="w"> </span>Register<span class="w"> </span>TagPrefix="Dyalog"
+</p><div class="language-xml highlight"><pre><span></span><code><span class="err">&lt;</span>%@<span class="w"> </span>Register<span class="w"> </span>TagPrefix="Dyalog"
 <span class="w">             </span>Namespace="DyalogSamples"<span class="w"> </span>Assembly="temp"<span class="w"> </span>%&gt;
 
 <span class="nt">&lt;html&gt;</span>
@@ -78832,7 +78832,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

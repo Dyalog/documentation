@@ -78706,29 +78706,29 @@
 
 <p>It would also be helpful if you could use the scrollbar to calculate in the reverse direction, from Fahrenheit to Centigrade. Let's add this facility, and give you the ability to choose to which scale the scrollbar applies through a menu.</p>
 <p>To create a menu structure in a bar along the top of a Form (as opposed to a <em>floating</em> or <em>pop-up</em> menu) we first need to create a MenuBar object. This type of object has very few properties, and we need only specify its name, <code>'TEMP.MB'</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'TEMP.MB'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'MenuBar'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'TEMP.MB'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'MenuBar'</span>
 </code></pre></div>
 <p>Notice that, at this stage, there is no change in the appearance of the Form.</p>
 <p>Then we can add a menu with the Caption <code>'Scale'</code>. The name of the menu is <code>'TEMP.MB.M'</code>. Adding the first menu causes the MenuBar to become visible.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'TEMP.MB.M'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Menu'</span><span class="w"> </span><span class="s1">'&amp;Scale'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'TEMP.MB.M'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Menu'</span><span class="w"> </span><span class="s1">'&amp;Scale'</span>
 </code></pre></div>
 <p><img alt="" src="../../img/temperature-converter-11.png"></p>
 <p>Note that the ampersand (&amp;) allows the user to select the menu quickly by pressing "Alt+S".</p>
 <p>Now we can add the two options to the menu. Note that the MenuBar and Menu objects do not represent final choices, they merely specify a path to a choice which is represented by the MenuItem object. When either of these is chosen, we want to execute a callback function that will make the necessary changes to the scrollbar. The statements to create each of these MenuItems are broken into 3 only to fit them onto the page.</p>
 <p>First we create the Centigrade MenuItem...
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">C</span><span class="kd">←</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'&amp;Centigrade'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">C</span><span class="kd">←</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'&amp;Centigrade'</span>
 <span class="w">      </span><span class="nv">C</span><span class="o">,</span><span class="kd">←</span><span class="p">(</span><span class="s1">'Checked'</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'Select'</span><span class="w"> </span><span class="s1">'SET_C'</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">'TEMP.MB.M.C'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="nv">C</span>
 </code></pre></div>
 <p>Setting the Checked property to 1 will cause a tick mark to appear against this option, indicating that it is the current one in force.</p>
 <p>Then the Fahrenheit MenuItem...
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="kd">←</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'&amp;Fahrenheit'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="kd">←</span><span class="s1">'MenuItem'</span><span class="w"> </span><span class="s1">'&amp;Fahrenheit'</span>
 <span class="w">      </span><span class="nv">F</span><span class="o">,</span><span class="kd">←</span><span class="p">(</span><span class="s1">'Checked'</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'Select'</span><span class="w"> </span><span class="s1">'SET_F'</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">'TEMP.MB.M.F'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="nv">F</span>
 </code></pre></div>
 <p>Notice that as the default value of Checked is 0, we didn't really have to set it explicitly for Fahrenheit. Nevertheless, it will do no harm to do so, and improves clarity.</p>
 <p>The <code>SET_C</code> callback function is defined as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">SET_C</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">SET_C</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Sets the scrollbar to work in Centigrade</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">TEMP</span><span class="na">.</span><span class="nv">S</span><span class="na">.</span><span class="nv">Range</span><span class="kd">←</span><span class="m">101</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">TEMP</span><span class="na">.</span><span class="nv">S</span><span class="na">.</span><span class="nv">onScroll</span><span class="kd">←</span><span class="s1">'C2F'</span>
@@ -78738,7 +78738,7 @@
 </code></pre></div>
 <p>Line [2] simply sets the Range property of the scrollbar to be 101, and line [3] makes <code>C2F</code> the callback function when the scrollbar is moved. Lines [4] and [5] ensure that the tick mark is set on the chosen option.</p>
 <p>The <code>SET_F</code> function is very similar...
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">SET_F</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">SET_F</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Sets the scrollbar to work in Fahrenheit</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">TEMP</span><span class="na">.</span><span class="nv">S</span><span class="na">.</span><span class="nv">Range</span><span class="kd">←</span><span class="m">213</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">TEMP</span><span class="na">.</span><span class="nv">S</span><span class="na">.</span><span class="nv">onScroll</span><span class="kd">←</span><span class="s1">'F2C'</span>
@@ -78747,7 +78747,7 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>and of course we need <code>F2C</code> to make the scrollbar work in Fahrenheit.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">F2C</span><span class="w"> </span><span class="nv">Msg</span><span class="sr">;</span><span class="nv">C</span><span class="sr">;</span><span class="nv">F</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">F2C</span><span class="w"> </span><span class="nv">Msg</span><span class="sr">;</span><span class="nv">C</span><span class="sr">;</span><span class="nv">F</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Callback for Fahrenheit input via scrollbar</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">TEMP</span><span class="na">.</span><span class="nv">F</span><span class="na">.</span><span class="nv">Value</span><span class="kd">←</span><span class="m">213</span><span class="o">-</span><span class="m">4</span><span class="o">⊃</span><span class="nv">Msg</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">TEMP</span><span class="na">.</span><span class="nv">C</span><span class="na">.</span><span class="nv">Value</span><span class="kd">←</span><span class="p">(</span><span class="nv">TEMP</span><span class="na">.</span><span class="nv">F</span><span class="na">.</span><span class="nv">Value</span><span class="o">-</span><span class="m">32</span><span class="p">)</span><span class="o">×</span><span class="m">5</span><span class="o">÷</span><span class="m">9</span>
@@ -78782,7 +78782,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

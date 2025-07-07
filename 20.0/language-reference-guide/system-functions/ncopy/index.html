@@ -79161,13 +79161,13 @@
 <li>The source name must be an existent file or directory.</li>
 <li>If the destination name does not exist but its path name does exist, the source is copied to the destination name.</li>
 <li>If the destination name is an existing directory the copy is created within that directory with the base name of the source.
-<div class="highlight"><pre><span></span><code><span class="w">       </span><span class="o">⊃</span><span class="m">1</span><span class="w"> </span><span class="nf">⎕NPARTS</span><span class="w"> </span><span class="s1">''</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="o">⊃</span><span class="m">1</span><span class="w"> </span><span class="nf">⎕NPARTS</span><span class="w"> </span><span class="s1">''</span>
 <span class="nv">i</span><span class="bp">:</span><span class="na">/</span><span class="nv">Documents</span><span class="na">/</span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">APL</span><span class="o">-</span><span class="m">64</span><span class="w"> </span><span class="m">17.0</span><span class="w"> </span><span class="nv">Unicode</span><span class="w"> </span><span class="nv">Files</span><span class="na">/</span>
 
 <span class="c1">⍝ Make a named back-up of the Session file</span>
 <span class="w">      </span><span class="o">⊢</span><span class="s1">'session.bak'</span><span class="w"> </span><span class="nf">⎕NCOPY</span><span class="w"> </span><span class="s1">'default.dlf'</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="m">1</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="m">1</span>
 <span class="w">      </span><span class="o">⊢</span><span class="w"> </span><span class="nf">⎕MKDIR</span><span class="w"> </span><span class="s1">'backups'</span><span class="w"> </span><span class="c1">⍝ Make a backups directory</span>
 <span class="m">1</span>
 <span class="w"> </span><span class="c1">⍝ Copy the Session file to backups directory</span>
@@ -79181,7 +79181,7 @@
 <ul>
 <li>The source name may include wildcard characters which matches a number of existing files and/or directories. The destination name must be an existing directory.</li>
 <li>The files and/or directories that match the pattern specified by the source name are copied into the destination directory. If there are no matches, zero copies are made.
-<div class="highlight"><pre><span></span><code><span class="w">       </span><span class="o">⊃</span><span class="m">1</span><span class="w"> </span><span class="nf">⎕NPARTS</span><span class="w"> </span><span class="s1">''</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="o">⊃</span><span class="m">1</span><span class="w"> </span><span class="nf">⎕NPARTS</span><span class="w"> </span><span class="s1">''</span>
 <span class="nv">i</span><span class="bp">:</span><span class="na">/</span><span class="nv">Documents</span><span class="na">/</span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">APL</span><span class="o">-</span><span class="m">64</span><span class="w"> </span><span class="m">17.0</span><span class="w"> </span><span class="nv">Unicode</span><span class="w"> </span><span class="nv">Files</span><span class="na">/</span>
 
 <span class="w">      </span><span class="o">⊢</span><span class="w"> </span><span class="nf">⎕MKDIR</span><span class="w"> </span><span class="s1">'backups'</span><span class="w"> </span><span class="c1">⍝ Make a backups directory</span>
@@ -79190,7 +79190,7 @@
 <span class="w">      </span><span class="o">⊢</span><span class="s1">'backups'</span><span class="p">(</span><span class="nf">⎕NCOPY</span><span class="na">⍠</span><span class="s1">'Wildcard'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="s1">'*.*'</span>
 <span class="m">3</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑⊃</span><span class="m">0</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕NINFO</span><span class="na">⍠</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="s1">'backups\*'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑⊃</span><span class="m">0</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕NINFO</span><span class="na">⍠</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="s1">'backups\*'</span>
 <span class="nv">backups</span><span class="na">/</span><span class="nv">default</span><span class="na">.</span><span class="nv">dlf</span><span class="w">        </span>
 <span class="nv">backups</span><span class="na">/</span><span class="nv">def_uk</span><span class="na">.</span><span class="nv">dse</span><span class="w">         </span>
 <span class="nv">backups</span><span class="na">/</span><span class="nv">UserCommand20</span><span class="na">.</span><span class="nv">cache</span>
@@ -79200,7 +79200,7 @@
 <ul>
 <li>Each source name must specify a single file or directory which must exist. The destination name must be an existing directory.</li>
 <li>Copies of each of the files and/or directories specified by the source base names are made in the destination directory.
-<div class="highlight"><pre><span></span><code><span class="w">       </span><span class="o">⊃</span><span class="m">1</span><span class="w"> </span><span class="nf">⎕NPARTS</span><span class="w"> </span><span class="s1">''</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="o">⊃</span><span class="m">1</span><span class="w"> </span><span class="nf">⎕NPARTS</span><span class="w"> </span><span class="s1">''</span>
 <span class="nv">i</span><span class="bp">:</span><span class="na">/</span><span class="nv">Documents</span><span class="na">/</span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">APL</span><span class="o">-</span><span class="m">64</span><span class="w"> </span><span class="m">17.0</span><span class="w"> </span><span class="nv">Unicode</span><span class="w"> </span><span class="nv">Files</span><span class="na">/</span>
 
 <span class="w">      </span><span class="o">⊢</span><span class="w"> </span><span class="nf">⎕MKDIR</span><span class="w"> </span><span class="s1">'backups'</span><span class="w"> </span><span class="c1">⍝ Make a backups directory</span>
@@ -79217,7 +79217,7 @@
 <ul>
 <li>The destination name must be an existing directory.</li>
 <li>Copies of each of the files and/or directories that match the patterns specified by the source names (if any) are made in the destination directory.
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊃</span><span class="m">1</span><span class="w"> </span><span class="nf">⎕NPARTS</span><span class="w"> </span><span class="s1">''</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊃</span><span class="m">1</span><span class="w"> </span><span class="nf">⎕NPARTS</span><span class="w"> </span><span class="s1">''</span>
 <span class="nv">i</span><span class="bp">:</span><span class="na">/</span><span class="nv">Documents</span><span class="na">/</span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">APL</span><span class="o">-</span><span class="m">64</span><span class="w"> </span><span class="m">17.0</span><span class="w"> </span><span class="nv">Unicode</span><span class="w"> </span><span class="nv">Files</span><span class="na">/</span>
 
 <span class="w">      </span><span class="o">⊢</span><span class="w"> </span><span class="nf">⎕MKDIR</span><span class="w"> </span><span class="s1">'backups'</span><span class="w"> </span><span class="c1">⍝ Make a backups directory</span>
@@ -79272,7 +79272,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

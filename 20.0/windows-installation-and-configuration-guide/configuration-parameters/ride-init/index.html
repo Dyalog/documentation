@@ -78707,7 +78707,7 @@
 <p>This parameter determines how the interpreter should behave with respect to the Ride protocol. Setting this configuration parameter on the machine that hosts the interpreter enables the interpreter-Ride connection.</p>
 <p>RIDE_Init can only be used to specify a limited number of Ride configuration options; the rest must be specified in a Ride ini file. Full details describing how to configure Ride, including using certificates to authenticate connections can be found in the <a href="https://dyalog.github.io/ride">Ride User Guide</a>.</p>
 <p>The format of the value is:
-</p><div class="highlight"><pre><span></span><code>&lt;setting&gt; : &lt;address&gt; : &lt;port&gt;
+</p><div class="language-text highlight"><pre><span></span><code>&lt;setting&gt; : &lt;address&gt; : &lt;port&gt;
 </code></pre></div>
 <p><em>setting</em> is the action the interpreter should take. Valid values, which are case-insensitive, are as follows:</p>
 <ul>
@@ -78736,20 +78736,20 @@
 </ul>
 <p><em>port</em> is the TCP port to listen on</p>
 <p>Settings specified by the <strong>RIDE_Init</strong> configuration parameter take precedence over the same setting specified in the Ride ini file. Note that the <strong>RIDE_Init</strong> configuration parameter can specify both <em>config</em> and one of <em>serve</em>, <em>http</em>, <em>connect</em> or <em>poll</em>. For example,
-</p><div class="highlight"><pre><span></span><code>RIDE_INIT=serve:*:4502,config=/home/andys/.dyalog/secureride.ini
+</p><div class="language-text highlight"><pre><span></span><code>RIDE_INIT=serve:*:4502,config=/home/andys/.dyalog/secureride.ini
 </code></pre></div>
 <p>This is most useful when multiple interpreters need to be run, each with its own Ride connection as each must have a separate port number.</p>
 <p>Note that the <strong>RIDE_Init</strong> configuration parameter is set automatically when launching a new Dyalog Session from Ride.</p>
 <h2 class="example">Examples</h2>
 
 <p>To allow an incoming connection through any interface in the machine running the interpreter:
-</p><div class="highlight"><pre><span></span><code>RIDE_INIT=serve:*:4052
+</p><div class="language-text highlight"><pre><span></span><code>RIDE_INIT=serve:*:4052
 </code></pre></div>
 <p>To allow incoming Zero Footprint Ride connection through just one interface of the machine running the interpreter:
-</p><div class="highlight"><pre><span></span><code>RIDE_INIT=http:192.168.0.10:8080
+</p><div class="language-text highlight"><pre><span></span><code>RIDE_INIT=http:192.168.0.10:8080
 </code></pre></div>
 <p>To attempt to connect to Ride running on my colleague's machine:
-</p><div class="highlight"><pre><span></span><code>RIDE_INIT=connect:pete.dyalog.com:4052
+</p><div class="language-text highlight"><pre><span></span><code>RIDE_INIT=connect:pete.dyalog.com:4052
 </code></pre></div>
 
 
@@ -78780,7 +78780,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

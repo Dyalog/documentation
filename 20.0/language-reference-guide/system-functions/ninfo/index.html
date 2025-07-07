@@ -79175,14 +79175,14 @@
 <p>In the Unicode Edition, if the UTF-8 encoding is invalid, Dyalog replaces each offending byte with a unique Unicode symbol (in the <em>Low Surrogate Area</em> of the Unicode charts) that is mapped back to the original byte by the other system functions (including <code>⎕NTIE</code> and <code>⎕NDELETE</code>) that take native file names as arguments. The display of a file name containing these mapped bytes may appear strange.</p>
 <p>In the Classic Edition, offending bytes are replaced by the <code>?</code> symbol, which means that the names reported do not accurately identify the files.</p>
 <h2 class="example">Examples</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="nf">⎕NINFO</span><span class="w"> </span><span class="s1">'c:/Users/Pete/Documents'</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="nf">⎕NINFO</span><span class="w"> </span><span class="s1">'c:/Users/Pete/Documents'</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">───────────────────────────────────┐</span>
 <span class="err">│</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">──────────────────────┐</span><span class="w">          </span><span class="err">│</span>
 <span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="nv">c</span><span class="bp">:</span><span class="na">/</span><span class="nv">Users</span><span class="na">/</span><span class="nv">Pete</span><span class="na">/</span><span class="nv">Documents</span><span class="err">│</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">163840</span><span class="w"> </span><span class="err">│</span>
 <span class="err">│</span><span class="w"> </span><span class="err">└───────────────────────┘</span><span class="w">          </span><span class="err">│</span>
 <span class="err">└</span><span class="o">∊</span><span class="err">───────────────────────────────────┘</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊃</span><span class="m">1</span><span class="nf">⎕NPARTS</span><span class="w"> </span><span class="s1">''</span><span class="w"> </span><span class="c1">⍝ current working directory</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊃</span><span class="m">1</span><span class="nf">⎕NPARTS</span><span class="w"> </span><span class="s1">''</span><span class="w"> </span><span class="c1">⍝ current working directory</span>
 <span class="nv">c</span><span class="bp">:</span><span class="na">/</span><span class="nv">Users</span><span class="na">/</span><span class="nv">Pete</span><span class="na">/</span>
 <span class="w">      </span><span class="p">(</span><span class="nf">⎕NINFO</span><span class="na">⍠</span><span class="m">1</span><span class="p">)</span><span class="s1">'D*'</span>
 <span class="err">┌─────────────────────────────────────┐</span>
@@ -79191,14 +79191,14 @@
 <span class="err">│└───────┴─────────┴─────────┴───────┘│</span>
 <span class="err">└─────────────────────────────────────┘</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕NINFO</span><span class="na">⍠</span><span class="m">1</span><span class="p">)</span><span class="s1">'Documents/*.zip'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕NINFO</span><span class="na">⍠</span><span class="m">1</span><span class="p">)</span><span class="s1">'Documents/*.zip'</span>
 <span class="err">┌──────────────────────┐</span>
 <span class="err">│┌────────────────────┐│</span>
 <span class="err">││</span><span class="nv">Documents</span><span class="na">/</span><span class="nv">dyalog</span><span class="na">.</span><span class="nv">zip</span><span class="err">││</span>
 <span class="err">│└────────────────────┘│</span>
 <span class="err">└──────────────────────┘</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍪</span><span class="w"> </span><span class="p">(</span><span class="m">0</span><span class="o">,⍳</span><span class="m">6</span><span class="p">)</span><span class="w"> </span><span class="nf">⎕NINFO</span><span class="w"> </span><span class="s1">'Documents/dyalog.zip'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍪</span><span class="w"> </span><span class="p">(</span><span class="m">0</span><span class="o">,⍳</span><span class="m">6</span><span class="p">)</span><span class="w"> </span><span class="nf">⎕NINFO</span><span class="w"> </span><span class="s1">'Documents/dyalog.zip'</span>
 <span class="err">┌──────────────────────────────────────────────┐</span>
 <span class="err">│</span><span class="nv">Documents</span><span class="na">/</span><span class="nv">dyalog</span><span class="na">.</span><span class="nv">zip</span><span class="w">                          </span><span class="err">│</span>
 <span class="err">├──────────────────────────────────────────────┤</span>
@@ -79215,7 +79215,7 @@
 <span class="err">│</span><span class="m">0</span><span class="w">                                             </span><span class="err">│</span>
 <span class="err">└──────────────────────────────────────────────┘</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊃</span><span class="m">1</span><span class="nf">⎕NPARTS</span><span class="w"> </span><span class="s1">''</span><span class="w"> </span><span class="c1">⍝ current working directory</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊃</span><span class="m">1</span><span class="nf">⎕NPARTS</span><span class="w"> </span><span class="s1">''</span><span class="w"> </span><span class="c1">⍝ current working directory</span>
 <span class="nv">C</span><span class="bp">:</span><span class="na">/</span><span class="nv">Users</span><span class="na">/</span><span class="nv">Pete</span><span class="na">/</span><span class="nv">Documents</span><span class="na">/</span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">APL</span><span class="o">-</span><span class="m">64</span><span class="w"> </span><span class="m">16.0</span><span class="w"> </span><span class="nv">Unicode</span><span class="w"> </span><span class="nv">Files</span><span class="na">/</span>
 <span class="w">      </span><span class="p">(</span><span class="nf">⎕NINFO</span><span class="na">⍠</span><span class="m">1</span><span class="p">)</span><span class="s1">'*.*'</span>
 <span class="err">┌──────────────────────────────────────────────────────┐</span>
@@ -79224,7 +79224,7 @@
 <span class="err">│└───────────┴──────────┴─────────┴───────────────────┘│</span>
 <span class="err">└──────────────────────────────────────────────────────┘</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊢</span><span class="w"> </span><span class="nf">⎕MKDIR</span><span class="w"> </span><span class="s1">'d1'</span><span class="w"> </span><span class="s1">'d2'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊢</span><span class="w"> </span><span class="nf">⎕MKDIR</span><span class="w"> </span><span class="s1">'d1'</span><span class="w"> </span><span class="s1">'d2'</span>
 <span class="m">1</span><span class="w"> </span><span class="m">1</span>
 <span class="w">      </span><span class="s1">'a'</span><span class="na">∘</span><span class="nf">⎕NPUT</span><span class="na">¨</span><span class="s1">'find'</span><span class="w"> </span><span class="s1">'d1/find'</span><span class="w"> </span><span class="s1">'d1/nofind'</span><span class="w"> </span><span class="s1">'d2/find'</span>
 <span class="w">      </span><span class="p">(</span><span class="nf">⎕ninfo</span><span class="na">⍠</span><span class="s1">'Recurse'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="s1">'find'</span>
@@ -79235,7 +79235,7 @@
 <span class="err">└──────────────────────┘</span>
 </code></pre></div>
 <p>The next set of examples illustrates the use of the <strong>Recurse</strong> variant option to limit the sub-directory depth.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Y</span><span class="kd">←</span><span class="s1">'d:\bouzouki\*.*'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Y</span><span class="kd">←</span><span class="s1">'d:\bouzouki\*.*'</span>
 <span class="w">      </span><span class="o">⍴⊃</span><span class="m">0</span><span class="p">(</span><span class="nf">⎕NINFO</span><span class="na">⍠</span><span class="p">(</span><span class="s1">'Wildcard'</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="s1">'Recurse'</span><span class="w"> </span><span class="m">0</span><span class="p">))</span><span class="nv">Y</span>
 <span class="m">355</span>
 <span class="w">      </span><span class="o">⍴⊃</span><span class="m">0</span><span class="p">(</span><span class="nf">⎕NINFO</span><span class="na">⍠</span><span class="p">(</span><span class="s1">'Wildcard'</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="s1">'Recurse'</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="p">)))</span><span class="nv">Y</span>
@@ -79246,10 +79246,10 @@
 <span class="m">4223</span>
 </code></pre></div>
 <p>The following expression will return all Microsoft Word documents (<code>.docx</code> and <code>.doc</code>) in the current directory, searching recursively through any sub-directories:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="p">(</span><span class="nf">⎕NINFO</span><span class="na">⍠</span><span class="p">(</span><span class="s1">'Recurse'</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="s1">'Wildcard'</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="s1">'*.docx'</span><span class="w"> </span><span class="s1">'*.doc'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="p">(</span><span class="nf">⎕NINFO</span><span class="na">⍠</span><span class="p">(</span><span class="s1">'Recurse'</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="s1">'Wildcard'</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="s1">'*.docx'</span><span class="w"> </span><span class="s1">'*.doc'</span>
 </code></pre></div>
 <p>The following expression "touches" files, that is, it sets their last modification time to the current UTC time:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="o">⊂</span><span class="m">13</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="nf">⎕DT</span><span class="s1">'Z'</span><span class="p">))(</span><span class="nf">⎕NINFO</span><span class="na">⍠</span><span class="m">1</span><span class="p">)</span><span class="s1">'*.txt'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="o">⊂</span><span class="m">13</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="nf">⎕DT</span><span class="s1">'Z'</span><span class="p">))(</span><span class="nf">⎕NINFO</span><span class="na">⍠</span><span class="m">1</span><span class="p">)</span><span class="s1">'*.txt'</span>
 <span class="err">┌───────────────────────┐</span>
 <span class="err">│</span><span class="m">45719.53226</span><span class="w"> </span><span class="m">45719.53226</span><span class="err">│</span>
 <span class="err">└───────────────────────┘</span>
@@ -79287,7 +79287,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

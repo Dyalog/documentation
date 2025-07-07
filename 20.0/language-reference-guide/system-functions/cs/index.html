@@ -78729,7 +78729,7 @@
 <h2 class="example">Example</h2>
 
 <p>This simple example illustrates how <code>⎕CS</code> may be used to avoid typing long pathnames when building a tree of GUI objects.  Note that the objects <code>NEW</code> and <code>OPEN</code> are created as children of the <code>FILE</code> menu as a result of using <code>⎕CS</code> to change into the <code>F.MB.FILE</code> namespace.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">MAKE_FORM</span><span class="sr">;</span><span class="nv">F</span><span class="sr">;</span><span class="nv">OLD</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">MAKE_FORM</span><span class="sr">;</span><span class="nv">F</span><span class="sr">;</span><span class="nv">OLD</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="s1">'F.MB'</span><span class="nf">⎕WC</span><span class="s1">'MenuBar'</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="s1">'F.MB.FILE'</span><span class="nf">⎕WC</span><span class="s1">'Menu'</span><span class="w"> </span><span class="s1">'&amp;File'</span>
@@ -78751,7 +78751,7 @@
 <h2 class="example">Example</h2>
 
 <p>Suppose a form <code>F1</code> contains buttons <code>B1</code> and <code>B2</code>. Each button maintains a count of the number of times it has been pressed, and the form maintains a count of the total number of button presses. The single callback function <code>PRESS</code> and its subfunction <code>FMT</code> can reside in the form itself
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">F1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">F1</span>
 <span class="c1">#.F1</span>
 <span class="w">      </span><span class="c1">⍝ Note that both instances reference</span>
 <span class="w">      </span><span class="c1">⍝ the same callback function</span>
@@ -78761,20 +78761,20 @@
 <span class="w">      </span><span class="c1">⍝ Initialise total and instance counts.</span>
 <span class="w">      </span><span class="nv">TOTAL</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="nv">B1</span><span class="na">.</span><span class="nv">COUNT</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="nv">B2</span><span class="na">.</span><span class="nv">COUNT</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">PRESS</span><span class="w"> </span><span class="nv">MSG</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">PRESS</span><span class="w"> </span><span class="nv">MSG</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="s1">'FMT'</span><span class="w"> </span><span class="s1">'TOTAL'</span><span class="nf">⎕CS</span><span class="o">⊃</span><span class="nv">MSG</span><span class="w"> </span><span class="c1">⍝     Switch to instance space</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="p">(</span><span class="nv">TOTAL</span><span class="w"> </span><span class="nv">COUNT</span><span class="p">)</span><span class="o">+</span><span class="kd">←</span><span class="m">1</span><span class="w">   </span><span class="c1">⍝    Incr total &amp; instance count</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">   </span><span class="nf">⎕WS</span><span class="s1">'Caption'</span><span class="p">(</span><span class="nv">COUNT</span><span class="w"> </span><span class="nv">FMT</span><span class="w"> </span><span class="nv">TOTAL</span><span class="p">)</span><span class="c1">⍝ Set instance caption</span>
 <span class="w">    </span><span class="bp">∇</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">CAPT</span><span class="kd">←</span><span class="nv">INST</span><span class="w"> </span><span class="nv">FMT</span><span class="w"> </span><span class="nv">TOTL</span><span class="w">      </span><span class="c1">⍝ Format button caption.</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">CAPT</span><span class="kd">←</span><span class="nv">INST</span><span class="w"> </span><span class="nv">FMT</span><span class="w"> </span><span class="nv">TOTL</span><span class="w">      </span><span class="c1">⍝ Format button caption.</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="nv">CAPT</span><span class="kd">←</span><span class="p">(</span><span class="o">⍕</span><span class="nv">INST</span><span class="p">)</span><span class="o">,</span><span class="s1">'/'</span><span class="o">,⍕</span><span class="nv">TOTL</span><span class="w">  </span><span class="c1">⍝ For example, 40/100.</span>
 <span class="w">    </span><span class="bp">∇</span>
 </code></pre></div>
 <h2 class="example">Example</h2>
 
 <p>This example uses <code>⎕CS</code> to explore a namespace tree and display the structure.  Note that it must export its own name (tree) each time it changes space, because the name tree is global.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">tabs</span><span class="w"> </span><span class="nv">tree</span><span class="w"> </span><span class="nv">space</span><span class="sr">;</span><span class="nv">subs</span><span class="w">     </span><span class="c1">⍝ Display namespace tree</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">tabs</span><span class="w"> </span><span class="nv">tree</span><span class="w"> </span><span class="nv">space</span><span class="sr">;</span><span class="nv">subs</span><span class="w">     </span><span class="c1">⍝ Display namespace tree</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">tabs</span><span class="o">,</span><span class="nv">space</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="s1">'tree'</span><span class="nf">⎕CS</span><span class="w"> </span><span class="nv">space</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="kd">→</span><span class="p">(</span><span class="o">⍴</span><span class="nv">subs</span><span class="kd">←</span><span class="o">↓</span><span class="nf">⎕NL</span><span class="w"> </span><span class="m">9</span><span class="p">)</span><span class="o">↓</span><span class="m">0</span>
@@ -78824,7 +78824,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

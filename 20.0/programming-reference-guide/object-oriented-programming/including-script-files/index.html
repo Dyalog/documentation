@@ -78705,7 +78705,7 @@
 <h1 class="heading"><span class="name">Including Script Files in Scripts</span></h1>
 
 <p>A Class or Namespace script in the workspace or in a script file may specify that other  script files are to be loaded prior to the fixing of the script itself. To do so, it must begin with one or more <code>:Require</code> statements, with the following syntax:
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Require</span><span class="w"> </span><span class="nv">file</span><span class="bp">:</span><span class="na">//</span><span class="sr">[</span><span class="nv">path</span><span class="sr">]</span><span class="na">/</span><span class="nv">file</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Require</span><span class="w"> </span><span class="nv">file</span><span class="bp">:</span><span class="na">//</span><span class="sr">[</span><span class="nv">path</span><span class="sr">]</span><span class="na">/</span><span class="nv">file</span>
 </code></pre></div>
 <p>If no <code>path</code> is specified, the path is taken to be relative to the current script file or, if in a workspace script, the current working directory. Note that a leading <code>'./'</code> or <code>'.\'</code> in <code>path</code> is not  allowed, to avoid any potential confusion with "current directory".</p>
 <p><code>:Require</code> is a directive to the Editor (more specifically, to the internal mechanism that fixes a script as an object in the workspace) and can appear in any script containing APL code, but <strong>must</strong> precede all code in the script. <code>:Require</code> is thus not valid within a function, class, namespace or any other definition.</p>
@@ -78740,7 +78740,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

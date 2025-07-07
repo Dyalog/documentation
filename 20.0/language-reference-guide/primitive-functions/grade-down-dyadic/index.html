@@ -78720,7 +78720,7 @@
 
 <p><code>Y</code> must be a simple character array of rank greater than 0.  <code>X</code> must be a simple character array of rank 1 or greater.  <code>R</code> is a simple integer vector of shape <code>1↑⍴Y</code> containing the permutation of <code>⍳1↑⍴Y</code> that places the sub-arrays of <code>Y</code> along the first axis in descending order according to the collation sequence <code>X</code>.  The indices of any set of identical sub-arrays in <code>Y</code> occur in <code>R</code> in ascending order.</p>
 <p>If <code>X</code> is a vector, the following identity holds:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">X</span><span class="o">⍒</span><span class="nv">Y</span><span class="w"> </span><span class="kd">←→</span><span class="w"> </span><span class="o">⍒</span><span class="nv">X</span><span class="o">⍳</span><span class="nv">Y</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">X</span><span class="o">⍒</span><span class="nv">Y</span><span class="w"> </span><span class="kd">←→</span><span class="w"> </span><span class="o">⍒</span><span class="nv">X</span><span class="o">⍳</span><span class="nv">Y</span>
 </code></pre></div>
 <p>A left argument of rank greater than 1 allows successive resolution of duplicate orderings in the following way.</p>
 <p>Starting with the last axis:</p>
@@ -78812,19 +78812,19 @@
 </tbody>
 </table>
 <p>So the final row ordering is:
-</p><div class="highlight"><pre><span></span><code>        ab              3
+</p><div class="language-text highlight"><pre><span></span><code>        ab              3
         ac              2
         Aa              4
         Ac              1
 </code></pre></div>
 <p>That is, the order of rows is 4 2 1 3 which corresponds to a descending row sort of:
-</p><div class="highlight"><pre><span></span><code>        Ac              1
+</p><div class="language-text highlight"><pre><span></span><code>        Ac              1
         ac              2
         ab              3
         Aa              4
 </code></pre></div>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">S1</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">S1</span>
 <span class="m">2</span><span class="w"> </span><span class="m">27</span>
 <span class="w">      </span><span class="nv">S1</span>
 <span class="w"> </span><span class="nv">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
@@ -78838,7 +78838,7 @@
 <span class="w"> </span><span class="nv">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
 </code></pre></div>
 <p>The following results are tabulated for comparison:
-</p><div class="highlight"><pre><span></span><code>X       X[S1⍒X;]    X[S2⍒X;]    X[S3⍒X;]    X[S4⍒X;]
+</p><div class="language-text highlight"><pre><span></span><code>X       X[S1⍒X;]    X[S2⍒X;]    X[S3⍒X;]    X[S4⍒X;]
 FIRsT     TAPE        rAT         TAPE        TAPE
 TAP       TAP         fIRST       TAP         TAP
 RATE      RATE        TAPE        rAT         RATE
@@ -78880,7 +78880,7 @@ RAT       FIRST       FIRST       FIRST       fIRST
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

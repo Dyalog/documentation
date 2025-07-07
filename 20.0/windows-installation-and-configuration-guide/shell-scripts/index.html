@@ -78925,7 +78925,7 @@
 <p>A script is executed by typing its name. User input is entered from the same terminal or shell and output is displayed on the terminal or shell.</p>
 <h2 id="unix">UNIX</h2>
 <p>On UNIX (and related) systems a Dyalog APL <em>shell script</em> is a text file with the following as the first line:
-</p><div class="highlight"><pre><span></span><code><span class="c1">#!/usr/local/bin/dyalogscript</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="c1">#!/usr/local/bin/dyalogscript</span>
 </code></pre></div>
 <p>The script file must be executable. There are three execute bits relating to the user, the group and everyone else.</p>
 <h2 id="windows">Windows</h2>
@@ -78938,17 +78938,17 @@
 <h3 class="example">Examples</h3>
 
 <p>The following then are all valid APL shell scripts:
-</p><div class="highlight"><pre><span></span><code><span class="c1">#!/usr/local/bin/dyalogscript</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="c1">#!/usr/local/bin/dyalogscript</span>
 <span class="s1">'this text will not be seen'</span>
 <span class="vg">⎕</span><span class="kd">←</span><span class="m">2</span><span class="o">+</span><span class="m">2</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">#!/usr/local/bin/dyalogscript</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="c1">#!/usr/local/bin/dyalogscript</span>
 <span class="bp">∇</span><span class="nv">r</span><span class="kd">←</span><span class="nv">l</span><span class="w"> </span><span class="nv">plus</span><span class="w"> </span><span class="nv">r</span>
 <span class="nv">r</span><span class="kd">←</span><span class="nv">l</span><span class="o">+</span><span class="nv">r</span>
 <span class="bp">∇</span>
 <span class="vg">⎕</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="nv">plus</span><span class="w"> </span><span class="m">2</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">#!/usr/local/bin/dyalogscript</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="c1">#!/usr/local/bin/dyalogscript</span>
 <span class="nv">plus</span><span class="kd">←</span><span class="kt">{</span>
 <span class="bp">⍺</span><span class="o">+</span><span class="bp">⍵</span>
 <span class="kt">}</span>
@@ -78956,13 +78956,13 @@
 </code></pre></div>
 <h2 id="errors">Errors</h2>
 <p>Untrapped errors in a script will cause the termination of the process, further lines in the script will NOT be processed.
-</p><div class="highlight"><pre><span></span><code><span class="c1">#!/usr/local/bin/dyalogscript</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="c1">#!/usr/local/bin/dyalogscript</span>
 <span class="vg">⎕</span><span class="kd">←</span><span class="s1">'this will be seen'</span>
 <span class="vg">⎕</span><span class="kd">←</span><span class="o">÷</span><span class="m">0</span>
 <span class="vg">⎕</span><span class="kd">←</span><span class="s1">'this will NOT be seen'</span>
 </code></pre></div>
 <p>However, the multiline input mechanism allows for <code>:Trap</code> statements, so the following will run to completion:
-</p><div class="highlight"><pre><span></span><code><span class="c1">#!/usr/local/bin/dyalogscript</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="c1">#!/usr/local/bin/dyalogscript</span>
 <span class="vg">⎕</span><span class="kd">←</span><span class="s1">'this will be seen'</span>
 <span class="bp">:</span><span class="nv">Trap</span><span class="w"> </span><span class="m">0</span>
 <span class="w">    </span><span class="vg">⎕</span><span class="kd">←</span><span class="o">÷</span><span class="m">0</span>
@@ -78972,12 +78972,12 @@
 <h3 id="configuration-parameters">Configuration Parameters</h3>
 <p>Configuration parameters may be specified in a Configuration file located in the same directory as the script, or may be specified on the first line of the script.  The name of the configuration file is derived from the name of the script file by replacing its file extension (if any) by the extension <code>.dcfg</code>. Configuration parameters specified in the Windows Registry or by environment variables are not honoured in Dyalog Shell Scripts.</p>
 <h3 id="example-first-line-of-script">Example (first line of script)</h3>
-<div class="highlight"><pre><span></span><code><span class="c1">#!/usr/local/bin/dyalogscript MAXWS=3GB</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="c1">#!/usr/local/bin/dyalogscript MAXWS=3GB</span>
 <span class="vg">⎕</span><span class="kd">←</span><span class="nf">⎕WA</span>
 <span class="vg">⎕</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕nq</span><span class="w"> </span><span class="s1">'#'</span><span class="w"> </span><span class="s1">'GetEnvironment'</span><span class="w"> </span><span class="p">(</span><span class="s1">'MAXWS'</span><span class="w"> </span><span class="s1">'WSPATH'</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="example-configuration-file">Example (configuration file)</h3>
-<div class="highlight"><pre><span></span><code><span class="kt">{</span><span class="w"> </span><span class="nv">settings</span><span class="bp">:</span><span class="w"> </span><span class="kt">{</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="kt">{</span><span class="w"> </span><span class="nv">settings</span><span class="bp">:</span><span class="w"> </span><span class="kt">{</span>
 <span class="w">        </span><span class="na">/</span><span class="o">*</span><span class="w"> </span><span class="nv">Maximum</span><span class="w"> </span><span class="nv">workspace</span><span class="w"> </span><span class="nv">size</span><span class="w"> </span><span class="o">*</span><span class="na">/</span>
 <span class="w">        </span><span class="nv">MAXWS</span><span class="bp">:</span><span class="w"> </span><span class="s2">"256M"</span><span class="o">,</span>
 <span class="w">        </span><span class="na">/</span><span class="o">*</span><span class="w"> </span><span class="nv">wspath</span><span class="w"> </span><span class="o">*</span><span class="na">/</span>
@@ -79016,7 +79016,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

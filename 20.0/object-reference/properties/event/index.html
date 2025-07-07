@@ -79564,7 +79564,7 @@
 <li>A composite vector whose first element contains the property name <code>'Event'</code>, followed by a series of 2 or 3-element vectors, each defining the action to be taken for a different Event Type (or types).</li>
 </ul>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'MouseUp'</span><span class="w"> </span><span class="s1">'foo'</span><span class="w"> </span><span class="m">88</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'MouseUp'</span><span class="w"> </span><span class="s1">'foo'</span><span class="w"> </span><span class="m">88</span>
 <span class="w">     </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">(</span><span class="s1">'MouseUp'</span><span class="w"> </span><span class="s1">'MouseDown'</span><span class="p">)</span><span class="w"> </span><span class="s1">'foo'</span><span class="w"> </span><span class="m">88</span>
 <span class="w">     </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">(</span><span class="s1">'MouseUp'</span><span class="w"> </span><span class="s1">'foo'</span><span class="w"> </span><span class="m">88</span><span class="p">)(</span><span class="s1">'MouseDown'</span><span class="w"> </span><span class="s1">'goo'</span><span class="p">)</span>
 </code></pre></div>
@@ -79634,7 +79634,7 @@ callback function, followed by the character <code>&amp;</code>, the
 callback function will be executed asynchronously in a new thread when the event
 occurs.</p>
 <p>For example, the event specification:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'onSelect'</span><span class="w"> </span><span class="s1">'DoIt&amp;'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'onSelect'</span><span class="w"> </span><span class="s1">'DoIt&amp;'</span>
 </code></pre></div>
 <p>tells <code>⎕DQ</code> to execute the callback function <code>DoIt</code> asynchronously as a thread when a Select event occurs on the object. Note that a callback function executed in this way should not return a result (because <code>⎕DQ</code> does not wait for it) and any result will be displayed in the Session window.</p>
 <h3 id="execute">Execute</h3>
@@ -79643,7 +79643,7 @@ occurs.</p>
 <h2 id="optional-left-argument-arg">Optional Left Argument (Arg)</h2>
 <p>If specified, <em>Arg</em> is an array whose value will be passed as the left argument to a callback function when that particular event (or events) is generated. Note that this is a constant defined when the value is assigned to the Event property.</p>
 <p>If the callback function is defined to take an explicit left argument and <em>Arg</em> was not specified, the call will fail with the error message:
-</p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nv">SYNTAX</span><span class="w"> </span><span class="nv">ERROR</span><span class="bp">:</span><span class="w"> </span><span class="nv">The</span><span class="w"> </span><span class="nv">function</span><span class="w"> </span><span class="nv">requires</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">left</span><span class="w"> </span><span class="nv">argument</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w"> </span><span class="nv">SYNTAX</span><span class="w"> </span><span class="nv">ERROR</span><span class="bp">:</span><span class="w"> </span><span class="nv">The</span><span class="w"> </span><span class="nv">function</span><span class="w"> </span><span class="nv">requires</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">left</span><span class="w"> </span><span class="nv">argument</span>
 </code></pre></div>
 If the callback function is defined to take an optional left argument  and <em>Arg</em> was not specified, a reference to the left argument (<code>⍺</code> for a dfn) will generate <code>VALUE ERROR</code>.
 <h2 id="event-message">Event Message</h2>
@@ -79658,17 +79658,17 @@ If the callback function is defined to take an optional left argument  and <em>A
 <p>There are two ways to specify the Event property using assignment; you can specify the entire set of events, or you can set events one by one (see below).</p>
 <p>To specify the entire set of events, you assign an array to the Event property. The array  must contain one or more nested vectors, each containing 2 or 3 elements (<em>Type</em>, <em>Action</em> and optionally <em>Arg</em>) as described above.</p>
 <h3 id="examples-f1-is-a-form">Examples (<code>F1</code> is a Form)</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">Event</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'onMouseDown'</span><span class="w"> </span><span class="s1">'FOO'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">Event</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'onMouseDown'</span><span class="w"> </span><span class="s1">'FOO'</span>
 </code></pre></div>
 <p>Means: invoke callback function <code>FOO</code> on MouseDown, the first element of the right argument to <code>FOO</code> will contain a <em>namespace reference</em> to <code>F1</code>. All other events perform their default actions.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">Event</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'MouseDown'</span><span class="w"> </span><span class="s1">'FOO'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">Event</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'MouseDown'</span><span class="w"> </span><span class="s1">'FOO'</span>
 </code></pre></div>
 <p>Means: invoke callback function <code>FOO</code> on MouseDown, the first element of the right argument to <code>FOO</code> will contain the <em>character vector</em><code>'F1'</code>.
 All other events perform their default actions.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">Event</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="p">(</span><span class="s1">'onMouseDown'</span><span class="w"> </span><span class="s1">'FOO'</span><span class="p">)(</span><span class="s1">'onMouseUp'</span><span class="w"> </span><span class="s1">'FOO'</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">Event</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="p">(</span><span class="s1">'onMouseDown'</span><span class="w"> </span><span class="s1">'FOO'</span><span class="p">)(</span><span class="s1">'onMouseUp'</span><span class="w"> </span><span class="s1">'FOO'</span><span class="p">)</span>
 </code></pre></div>
 <p>Means: invoke callback function <code>FOO</code> on MouseDown and MouseUp. All other events perform their default actions.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">Event</span><span class="o">,</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="o">⊂</span><span class="w"> </span><span class="s1">'onMouseMove'</span><span class="w"> </span><span class="s1">'FOO'</span><span class="w"> </span><span class="p">(</span><span class="s1">'THIS'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">Event</span><span class="o">,</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="o">⊂</span><span class="w"> </span><span class="s1">'onMouseMove'</span><span class="w"> </span><span class="s1">'FOO'</span><span class="w"> </span><span class="p">(</span><span class="s1">'THIS'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 </code></pre></div>
 <p>Means: add a callback function <code>FOO</code> on the MouseMove event. The function will receive the array <code>('THIS'1)</code> as its left argument. All other events
 perform their default actions.</p>
@@ -79676,17 +79676,17 @@ perform their default actions.</p>
 <p>To define the action to be taken for individual events, one by one, you use the <em>onEvent</em> syntax and make the assignment to the event
 name prefixed by the string <code>'on'</code>.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">onMouseDown</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'FOO'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">onMouseDown</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'FOO'</span>
 </code></pre></div>
 <p>Means: invoke callback function <code>FOO</code> on MouseDown.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">onMouseUp</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'FOO'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">onMouseUp</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'FOO'</span>
 </code></pre></div>
 <p>Means: add the same callback for MouseUp.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">onMouseMove</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'FOO'</span><span class="w"> </span><span class="p">(</span><span class="s1">'THIS'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">onMouseMove</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'FOO'</span><span class="w"> </span><span class="p">(</span><span class="s1">'THIS'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 </code></pre></div>
 <p>Means: add the same callback function <code>FOO</code> for the MouseMove event. The function will receive the array <code>('THIS' 1)</code> as its left-argument.</p>
 <p>Notice that you must use the <code>'on'</code> prefix; you cannot assign to the Event name itself. This would cause an error:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">MouseUp</span><span class="kd">←</span><span class="s1">'foo'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">MouseUp</span><span class="kd">←</span><span class="s1">'foo'</span>
 <span class="nv">SYNTAX</span><span class="w"> </span><span class="nv">ERROR</span><span class="bp">:</span><span class="w"> </span><span class="nv">Invalid</span><span class="w"> </span><span class="nv">modified</span><span class="w"> </span><span class="nv">assignment</span><span class="o">,</span><span class="w"> </span><span class="nv">or</span><span class="w"> </span><span class="nv">an</span><span class="w"> </span><span class="nv">attempt</span><span class="w"> </span><span class="nv">was</span><span class="w"> </span><span class="nv">made</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">change</span><span class="w"> </span><span class="nv">nameclass</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">assignment</span>
 <span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">MouseUp</span><span class="kd">←</span><span class="s1">'foo'</span>
 <span class="w">     </span><span class="o">∧</span>
@@ -79695,68 +79695,68 @@ name prefixed by the string <code>'on'</code>.</p>
 <p>When you set the Event property using <code>⎕WC</code> and <code>⎕WS</code> you define the actions for the event types that you specify in the argument, leaving the actions for all other event types unchanged. When you create an object with <code>⎕WC</code>, all unspecified event types will be unhandled; that is, those events will perform the default processing. However, when you specify the action for a new event type using <code>⎕WS</code>, any actions previously defined for other event types will remain as they were.</p>
 <h3 id="examples-using-event-names">Examples using Event Names</h3>
 <p>Ignore MouseDown (1) event (APL will perform the default processing for you)
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'MouseDown'</span><span class="w"> </span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'MouseDown'</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <p>Terminate <code>⎕DQ</code> on MouseDown
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'MouseDown'</span><span class="w"> </span><span class="m">1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'MouseDown'</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <p>Invoke callback function <code>FOO</code> on MouseDown, the first element of the right argument to <code>FOO</code> will contain a <em>namespace reference</em> to <code>F1</code>
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'onMouseDown'</span><span class="w"> </span><span class="s1">'FOO'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'onMouseDown'</span><span class="w"> </span><span class="s1">'FOO'</span>
 </code></pre></div>
 <p>Invoke callback function <code>FOO</code> on MouseDown, the first element of the right argument to <code>FOO</code> will contain the <em>character vector</em> <code>'F1'</code>
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'MouseDown'</span><span class="w"> </span><span class="s1">'FOO'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'MouseDown'</span><span class="w"> </span><span class="s1">'FOO'</span>
 </code></pre></div>
 <p>Invoke callback function <code>FOO</code> on MouseDown and MouseUp
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">(</span><span class="s1">'onMouseDown'</span><span class="w"> </span><span class="s1">'onMouseUp'</span><span class="p">)</span><span class="w"> </span><span class="s1">'FOO'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">(</span><span class="s1">'onMouseDown'</span><span class="w"> </span><span class="s1">'onMouseUp'</span><span class="p">)</span><span class="w"> </span><span class="s1">'FOO'</span>
 </code></pre></div>
 <p>Invoke callback function <code>FOO</code> with <code>('THIS' 1)</code> as its left-argument on MouseDown
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'onMouseDown'</span><span class="w"> </span><span class="s1">'FOO'</span><span class="w"> </span><span class="p">(</span><span class="s1">'THIS'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'onMouseDown'</span><span class="w"> </span><span class="s1">'FOO'</span><span class="w"> </span><span class="p">(</span><span class="s1">'THIS'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 </code></pre></div>
 <p>Invoke callback function <code>FOO</code> with <code>('THIS' 1)</code> as its left-argument on MouseDown, MouseUp and MouseMove
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">EV</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'onMouseDown'</span><span class="w"> </span><span class="s1">'onMouseUp'</span><span class="w"> </span><span class="s1">'onMouseMove'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">EV</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'onMouseDown'</span><span class="w"> </span><span class="s1">'onMouseUp'</span><span class="w"> </span><span class="s1">'onMouseMove'</span>
 <span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="nv">EV</span><span class="w"> </span><span class="s1">'FOO'</span><span class="w"> </span><span class="p">(</span><span class="s1">'THIS'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 </code></pre></div>
 <p>Execute the expression <code>COUNT+←1</code> on MouseDown
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'MouseDown'</span><span class="w"> </span><span class="s1">'⍎COUNT+←1'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'MouseDown'</span><span class="w"> </span><span class="s1">'⍎COUNT+←1'</span>
 </code></pre></div>
 <p>Execute the expression <code>COUNT+←1</code> on MouseDown, MouseUp and MouseMove
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">EV</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'MouseDown'</span><span class="w"> </span><span class="s1">'MouseUp'</span><span class="w"> </span><span class="s1">'MouseMove'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">EV</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'MouseDown'</span><span class="w"> </span><span class="s1">'MouseUp'</span><span class="w"> </span><span class="s1">'MouseMove'</span>
 <span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="nv">EV</span><span class="w"> </span><span class="s1">'⍎COUNT+←1'</span>
 </code></pre></div>
 <h3 id="examples-using-event-numbers">Examples using Event Numbers</h3>
 <p>Ignore MouseDown (1) event (APL will perform the default processing for you)
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w">     </span><span class="c1">⍝  Ditto</span>
 </code></pre></div>
 <p>Terminate <code>⎕DQ</code> on MouseDown
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w">     </span><span class="c1">⍝ Ditto</span>
 </code></pre></div>
 <p>Call function <code>FOO</code> on MouseDown
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="s1">'FOO'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="s1">'FOO'</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="s1">'FOO'</span><span class="w">    </span><span class="c1">⍝ Ditto</span>
 </code></pre></div>
 <p>Call function <code>FOO</code> on MouseDown and MouseUp
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">((</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="s1">'FOO'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">((</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="s1">'FOO'</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="s1">'FOO'</span><span class="w">              </span><span class="c1">⍝ Ditto</span>
 <span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="s1">'FOO'</span><span class="w">                </span><span class="c1">⍝ Ditto</span>
 <span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="s1">'FOO'</span><span class="p">)(</span><span class="m">2</span><span class="w"> </span><span class="s1">'FOO'</span><span class="p">)</span><span class="w">       </span><span class="c1">⍝ Ditto</span>
 </code></pre></div>
 <p>Call function <code>FOO</code> with <code>('THIS' 1)</code> as its left-argument on MouseDown
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="s1">'FOO'</span><span class="w"> </span><span class="p">(</span><span class="s1">'THIS'</span><span class="w"> </span><span class="m">1</span><span class="p">))</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="s1">'FOO'</span><span class="w"> </span><span class="p">(</span><span class="s1">'THIS'</span><span class="w"> </span><span class="m">1</span><span class="p">))</span>
 <span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="s1">'FOO'</span><span class="w"> </span><span class="p">(</span><span class="s1">'THIS'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">       </span><span class="c1">⍝ Ditto</span>
 </code></pre></div>
 <p>Call function <code>FOO</code> with <code>('THIS' 1)</code> as its left-argument on MouseDown and MouseUp
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">((</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="s1">'FOO'</span><span class="w"> </span><span class="p">(</span><span class="s1">'THIS'</span><span class="w"> </span><span class="m">1</span><span class="p">))</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">((</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="s1">'FOO'</span><span class="w"> </span><span class="p">(</span><span class="s1">'THIS'</span><span class="w"> </span><span class="m">1</span><span class="p">))</span>
 <span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="s1">'FOO'</span><span class="w"> </span><span class="p">(</span><span class="s1">'THIS'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">   </span><span class="c1">⍝ Ditto</span>
 <span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="s1">'FOO'</span><span class="w"> </span><span class="p">(</span><span class="s1">'THIS'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">     </span><span class="c1">⍝ Ditto</span>
 <span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="s1">'FOO'</span><span class="w"> </span><span class="p">(</span><span class="s1">'THIS'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">     </span><span class="c1">⍝ Ditto</span>
 </code></pre></div>
 <p>Execute the expression <code>COUNT+←1</code> on MouseDown
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="s1">'⍎COUNT+←1'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="s1">'⍎COUNT+←1'</span>
 </code></pre></div>
 <p>Execute the expression <code>COUNT+←1</code> on MouseDown, MouseUp and MouseMove
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="s1">'⍎COUNT+←1'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="s1">'⍎COUNT+←1'</span>
 <span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="s1">'⍎COUNT+←1'</span><span class="w">     </span><span class="c1">⍝ Ditto</span>
 </code></pre></div>
 <h2 id="user-defined-events">User defined Events</h2>
@@ -79764,7 +79764,7 @@ name prefixed by the string <code>'on'</code>.</p>
 <p>You may use any numbers not already defined, but it is strongly recommended that you choose numbers greater than 1000 to avoid potential conflict with  future releases of Dyalog APL.</p>
 <p>You can only <strong>generate</strong> user-defined events under program control with <code>⎕NQ</code>.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">foo</span><span class="w"> </span><span class="nv">m</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">foo</span><span class="w"> </span><span class="nv">m</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕SE</span><span class="na">.</span><span class="nv">UCMD</span><span class="s1">'display m'</span>
 <span class="w">     </span><span class="bp">∇</span>
 
@@ -79788,7 +79788,7 @@ name prefixed by the string <code>'on'</code>.</p>
 <span class="err">└</span><span class="o">∊</span><span class="err">─────────┘</span>
 </code></pre></div>
 <p>Notice that if you use the <em>onEvent</em> syntax, the event property reports the event type as you specified, but the callback function receives just the number as before.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">f</span><span class="na">.</span><span class="nv">on1003</span><span class="kd">←</span><span class="s1">'foo'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">f</span><span class="na">.</span><span class="nv">on1003</span><span class="kd">←</span><span class="s1">'foo'</span>
 <span class="w">      </span><span class="nv">f</span><span class="na">.</span><span class="nv">Event</span>
 <span class="w"> </span><span class="m">1001</span><span class="w">  </span><span class="c1">#.foo   1002  #.foo    on1003  #.foo  </span>
 <span class="w">      </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'f'</span><span class="w"> </span><span class="m">1003</span>
@@ -79799,7 +79799,7 @@ name prefixed by the string <code>'on'</code>.</p>
 <h2 id="notes">Notes</h2>
 <h3 id="resetting-clearing-the-event-property">Resetting (clearing) the Event Property</h3>
 <p>If no events are set, the result obtained by <code>⎕WG</code> and the result obtained by referencing Event directly are different:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
 <span class="w">      </span><span class="nv">DISPLAY</span><span class="w"> </span><span class="s1">'F'</span><span class="nf">⎕WG</span><span class="s1">'Event'</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">──┐</span>
 <span class="err">│</span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="err">│</span>
@@ -79814,15 +79814,15 @@ name prefixed by the string <code>'on'</code>.</p>
 <span class="err">└</span><span class="o">∊</span><span class="err">────────────</span>
 </code></pre></div>
 <p>To reset the Event property, the same (different) values must be used accordingly:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">f</span><span class="na">.</span><span class="nv">Event</span><span class="kd">←</span><span class="m">0</span><span class="o">⍴⊂</span><span class="s1">''</span><span class="w"> </span><span class="s1">''</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">f</span><span class="na">.</span><span class="nv">Event</span><span class="kd">←</span><span class="m">0</span><span class="o">⍴⊂</span><span class="s1">''</span><span class="w"> </span><span class="s1">''</span>
 </code></pre></div>
 <p>or
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'f'</span><span class="nf">⎕ws</span><span class="s1">'Event'</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'f'</span><span class="nf">⎕ws</span><span class="s1">'Event'</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <h3 id="onevent-syntax-with-event-numbers">onEvent Syntax with Event Numbers</h3>
 <p>If you use the <em>onEvent</em> syntax with <em>built-in</em> event numbers, the effect is the same as if you had used the event name. This does not apply to user-defined events.</p>
 <h4 class="example">Example</h4>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'f'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'f'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
 <span class="w">      </span><span class="nv">f</span><span class="na">.</span><span class="nv">on2</span><span class="kd">←</span><span class="s1">'foo'</span>
 <span class="w">      </span><span class="nv">f</span><span class="na">.</span><span class="nv">Event</span>
 <span class="w">  </span><span class="nv">onMouseUp</span><span class="w">  </span><span class="c1">#.foo  </span>
@@ -79837,7 +79837,7 @@ name prefixed by the string <code>'on'</code>.</p>
 <span class="err">└</span><span class="o">∊</span><span class="err">──────────────────────────────────────────┘</span>
 </code></pre></div>
 <p>This differs from the behaviour when you use event number normally:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'f'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'f'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
 <span class="w">      </span><span class="s1">'f'</span><span class="w"> </span><span class="nf">⎕ws</span><span class="w"> </span><span class="s1">'Event'</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="s1">'foo'</span>
 <span class="w">      </span><span class="nv">f</span><span class="na">.</span><span class="nv">Event</span><span class="w">                  </span>
 <span class="w"> </span><span class="m">2</span><span class="w">  </span><span class="c1">#.foo  </span>
@@ -79849,7 +79849,7 @@ name prefixed by the string <code>'on'</code>.</p>
 </code></pre></div>
 <h3 id="callback-names">Callback Names</h3>
 <p>When you query the Event property using <code>⎕WG</code>, names of callbacks associated with events are reported exactly as they were set. When you reference the Event property, the names are reported as absolute pathnames.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">ns</span><span class="w"> </span><span class="nv">x</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">ns</span><span class="w"> </span><span class="nv">x</span>
 <span class="c1">#.x</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">cs</span><span class="w"> </span><span class="nv">x</span>
 <span class="c1">#.x</span>
@@ -79888,7 +79888,7 @@ name prefixed by the string <code>'on'</code>.</p>
 <p>The event number 0 and the event name <code>'All'</code>,
 are convenient shorthands to associate a particular action (such as a callback) with <strong>all</strong> the built-in events supported by an object.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'f'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="p">(</span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'All'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'f'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="p">(</span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'All'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">f</span><span class="na">.</span><span class="nv">Event</span>
 <span class="w">  </span><span class="nv">All</span><span class="w">  </span><span class="m">1</span><span class="w"> </span>
 <span class="w">      </span><span class="vg">⎕</span><span class="kd">←</span><span class="nf">⎕DQ</span><span class="w"> </span><span class="s1">'f'</span>
@@ -79923,7 +79923,7 @@ are convenient shorthands to associate a particular action (such as a callback) 
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

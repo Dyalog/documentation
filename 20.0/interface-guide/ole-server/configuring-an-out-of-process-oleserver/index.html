@@ -78886,14 +78886,14 @@
 <li>
 <p>A key under <code>HKEY_CLASSES_ROOT\AppID</code> whose name corresponds to the CLSID of your OLEServer object as reported by the value of its <code>ClassID</code> property. The <em>(Default)</em> value of this key should be the name of the server object. In addition, you must define a <em>RunAs</em> entry which specifies the manner in which a client application runs your server. The simplest choice is <em>Interactive User</em> which specifies that the client application is treated like a normal user.</p>
 <p>For example, if you had saved an OLEServer namespace called <code>Loan</code> (c.f. <code>samples\loan.dws</code>), whose <code>ClassID</code> property had the value <code>{B80E9D40-2090-11D1-8F93-0020AFABD95D}</code> the entries would be:
-</p><div class="highlight"><pre><span></span><code>HKEY_CLASSES_ROOT\AppID\{B80E9D40-2090-11D1-8F93-0020AFABD95D}
+</p><div class="language-text highlight"><pre><span></span><code>HKEY_CLASSES_ROOT\AppID\{B80E9D40-2090-11D1-8F93-0020AFABD95D}
 (Default)=dyalog.Loan
 RunAs=Interactive User
 </code></pre></div>
 </li>
 <li>
 <p>An AppID entry to the <code>HKEY_CLASSES_ROOT**\**CLSID</code> key. (Note that this key will itself have been created by Dyalog APL/W when you saved the workspace) Once again, CLSID refers to the value of your OLEServer's <code>ClassID</code> property. The value of the AppID entry is the (same) CLSID. Using the same example as above, the entry would be:
-    </p><div class="highlight"><pre><span></span><code>HKEY_CLASSES_ROOT\{B80E9D40-2090-11D1-8F93-0020AFABD95D}
+    </p><div class="language-text highlight"><pre><span></span><code>HKEY_CLASSES_ROOT\{B80E9D40-2090-11D1-8F93-0020AFABD95D}
 AppID={B80E9D40-2090-11D1-8F93-0020AFABD95D}
 </code></pre></div>
 </li>
@@ -78903,14 +78903,14 @@ AppID={B80E9D40-2090-11D1-8F93-0020AFABD95D}
 <ol>
 <li>
 <p>Two keys under <code>HKEY_CLASSES_ROOT</code> that identify the object (locally) and associate it with your OLEServer Note that the local name of the object is arbitrary and may be different on each client.
-    </p><div class="highlight"><pre><span></span><code>HKEY_CLASSES_ROOT\dyalog.ServerName&lt;/p&gt;
+    </p><div class="language-text highlight"><pre><span></span><code>HKEY_CLASSES_ROOT\dyalog.ServerName&lt;/p&gt;
 HKEY_CLASSES_ROOT\dyalog.ServerName\CLSID
 </code></pre></div>
     CLSID is again the CLSID of the OLEServer object (this <strong>must</strong> be the same as that of the server machine). <code>dyalog.ServerName</code> can be replaced with whatever name you want clients to use to refer to this object.
 </li>
 <li>
 <p>Under <code>HKEY_CLASSES_ROOT\AppID</code>, a key whose name corresponds to the CLSID of your server object. The <em>(Default)</em> value of this key should be the name of the OLE server object (its name on the server computer). In addition, the key should contain a <em>RemoteServerName</em> entry whose value is the name of the server computer. For example:
-    </p><div class="highlight"><pre><span></span><code>HKEY_CLASSES_ROOT\AppID\{B80E9D40-2090-11D1-8F93-0020AFABD95D}
+    </p><div class="language-text highlight"><pre><span></span><code>HKEY_CLASSES_ROOT\AppID\{B80E9D40-2090-11D1-8F93-0020AFABD95D}
 (Default)=dyalog.Loan
 RemoteServerName=ntsvr
 </code></pre></div>
@@ -78920,10 +78920,10 @@ RemoteServerName=ntsvr
 <p>The workspace DCOMREG.DWS contains a single namespace called <code>reg</code> that contains three functions to help register an <em>out-of-process</em> OLE Server for DCOM.</p>
 <h2 id="regdcomserver">RegDCOMServer</h2>
 <p>This function should be run on the <em>server</em> computer and is called as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">RegDCOMServer</span><span class="w"> </span><span class="nv">ServerName</span><span class="w"> </span><span class="nv">CLSID</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">RegDCOMServer</span><span class="w"> </span><span class="nv">ServerName</span><span class="w"> </span><span class="nv">CLSID</span>
 </code></pre></div>
 <p>Where <code>ServerName</code> is a character string containing the (full) name of the OLEServer (e.g. <code>dyalog.Loan</code>) and <code>CLSID</code> is a character string containing the CLSID of the server (the value of it <code>ClassID</code> property). For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">LOAN</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">LOAN</span>
 <span class="na">.\</span><span class="nv">LOAN</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="na">...</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">COPY</span><span class="w"> </span><span class="nv">DCOMREG</span>
 <span class="nv">DCOMREG</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="na">...</span>
@@ -78933,10 +78933,10 @@ RemoteServerName=ntsvr
 </code></pre></div>
 <h2 id="regdcomclient">RegDCOMClient</h2>
 <p>This function should be run on each of the <em>client</em> computers and is called as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">machine</span><span class="w"> </span><span class="nv">RegDCOMClient</span><span class="w"> </span><span class="nv">ServerName</span><span class="w"> </span><span class="nv">CLSID</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">machine</span><span class="w"> </span><span class="nv">RegDCOMClient</span><span class="w"> </span><span class="nv">ServerName</span><span class="w"> </span><span class="nv">CLSID</span>
 </code></pre></div>
 <p>Where <code>machine</code> is a character vector specifying the name of the (NT) server computer, <code>ServerName</code> is a character vector containing the (full) name of the OLEServer (e.g. <code>dyalog.Loan</code>) and <code>CLSID</code> is a character string containing the CLSID of the server (the value of it <code>ClassID</code> property). For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">CLSID</span><span class="kd">←</span><span class="s1">'{B80E9D40-2090-11D1-8F93-0020AFABD95D}'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">CLSID</span><span class="kd">←</span><span class="s1">'{B80E9D40-2090-11D1-8F93-0020AFABD95D}'</span>
 <span class="w">      </span><span class="s1">'NTSVR'</span><span class="w"> </span><span class="nv">reg</span><span class="na">.</span><span class="nv">RegDCOMClient</span><span class="w"> </span><span class="s1">'dyalog.Loan'</span><span class="w"> </span><span class="nv">CLSID</span>
 </code></pre></div>
 <h2 id="config">Config</h2>
@@ -78970,7 +78970,7 @@ RemoteServerName=ntsvr
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

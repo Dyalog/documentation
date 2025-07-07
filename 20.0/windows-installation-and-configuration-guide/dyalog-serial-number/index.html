@@ -78706,14 +78706,14 @@
 <p>The serial number should be entered during the installation process (if you already have a version of Dyalog installed then the installer should pre-populate this field with your serial number). This is recommended because  if you enter it as part of the installation process then all users will automatically detect the same serial number.</p>
 <p>If the serial number is not entered during the installation process, then it can be set by running <code>⎕SE.Dyalog.Serial</code> from within a Dyalog session. However, each individual user of that installation will have to perform this task.</p>
 <p>To set your Dyalog serial number from within a Session:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SE</span><span class="na">.</span><span class="nv">Dyalog</span><span class="na">.</span><span class="nv">Serial</span><span class="w"> </span><span class="nv">serialnumber</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SE</span><span class="na">.</span><span class="nv">Dyalog</span><span class="na">.</span><span class="nv">Serial</span><span class="w"> </span><span class="nv">serialnumber</span>
 </code></pre></div>
 <p>where <code>serialnumber</code> is your Dyalog serial number. This updates the registry string value <strong>DYALOG_SERIAL</strong> in <code>HKEY_CURRENT_USER\Software\Dyalog\Dyalog &lt;version&gt;</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. To complete the process you must exit and restart the Session.</p>
 <p>When you start a Session, your serial number is displayed in the banner . To see your serial number at any time, enter:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="m">2</span><span class="nf">⎕NQ</span><span class="s1">'.'</span><span class="w"> </span><span class="s1">'GetEnvironment'</span><span class="w"> </span><span class="s1">'DYALOG_SERIAL'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="m">2</span><span class="nf">⎕NQ</span><span class="s1">'.'</span><span class="w"> </span><span class="s1">'GetEnvironment'</span><span class="w"> </span><span class="s1">'DYALOG_SERIAL'</span>
 </code></pre></div>
 <p>or
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SE</span><span class="na">.</span><span class="nv">Dyalog</span><span class="na">.</span><span class="nv">Serial</span><span class="w"> </span><span class="s1">''</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SE</span><span class="na">.</span><span class="nv">Dyalog</span><span class="na">.</span><span class="nv">Serial</span><span class="w"> </span><span class="s1">''</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -78756,7 +78756,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

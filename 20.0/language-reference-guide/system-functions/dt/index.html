@@ -79410,7 +79410,7 @@
 <p>The resolutions of system clocks vary by platform.</p>
 <h2 id="examples">Examples</h2>
 <h3 class="example" id="timestamp-to-time-number-conversion">Timestamp to time number conversion</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">¯1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕DT</span><span class="w"> </span><span class="o">⊂</span><span class="nf">⎕TS</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">¯1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕DT</span><span class="w"> </span><span class="o">⊂</span><span class="nf">⎕TS</span>
 <span class="m">43886.48039</span>
 <span class="w">      </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕DT</span><span class="w"> </span><span class="o">⊂</span><span class="nf">⎕TS</span>
 <span class="m">43886.48039</span>
@@ -79425,7 +79425,7 @@
 <span class="m">44217.63465</span>
 </code></pre></div>
 <h3 class="example" id="time-number-to-timestamp-conversion">Time number to timestamp conversion</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">1</span><span class="w"> </span><span class="m">¯1</span><span class="w"> </span><span class="nf">⎕DT</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">43508.42843</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">1</span><span class="w"> </span><span class="m">¯1</span><span class="w"> </span><span class="nf">⎕DT</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">43508.42843</span>
 <span class="err">┌──────────────────┬──────────────────────┐</span>
 <span class="err">│</span><span class="m">1899</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">31</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="err">│</span><span class="m">2019</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="m">56</span><span class="w"> </span><span class="m">352</span><span class="err">│</span>
 <span class="err">└──────────────────┴──────────────────────┘</span>
@@ -79443,7 +79443,7 @@
 <span class="err">└──────────────┘</span>
 </code></pre></div>
 <h3 class="example" id="time-number-to-time-number-conversion">Time number to time number conversion</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕DT</span><span class="w"> </span><span class="m">3</span><span class="o">⊃</span><span class="nf">⎕FRDCI</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕DT</span><span class="w"> </span><span class="m">3</span><span class="o">⊃</span><span class="nf">⎕FRDCI</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span>
 <span class="m">43886.48188</span>
 <span class="w">      </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕DT</span><span class="w"> </span><span class="s1">'J'</span>
 <span class="m">43886.48371</span>
@@ -79452,7 +79452,7 @@
 <span class="m">¯5</span>
 </code></pre></div>
 <h3 class="example" id="timestamp-to-timestamp-conversions">Timestamp to timestamp conversions</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">¯30</span><span class="w"> </span><span class="nf">⎕DT</span><span class="w"> </span><span class="o">⊂</span><span class="nf">⎕TS</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">¯30</span><span class="w"> </span><span class="nf">⎕DT</span><span class="w"> </span><span class="o">⊂</span><span class="nf">⎕TS</span>
 <span class="err">┌─────────────┐</span>
 <span class="err">│</span><span class="m">44216</span><span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">46</span><span class="err">│</span>
 <span class="err">└─────────────┘</span>
@@ -79463,7 +79463,7 @@
 <span class="err">└───────────────────┘</span>
 </code></pre></div>
 <h3 class="example" id="validation">Validation</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">0</span><span class="w"> </span><span class="nf">⎕DT</span><span class="w"> </span><span class="nf">⎕TS</span><span class="w"> </span><span class="p">(</span><span class="m">2020</span><span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="s1">'J'</span><span class="w"> </span><span class="s1">'DT'</span><span class="w"> </span><span class="c1">#</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">0</span><span class="w"> </span><span class="nf">⎕DT</span><span class="w"> </span><span class="nf">⎕TS</span><span class="w"> </span><span class="p">(</span><span class="m">2020</span><span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="s1">'J'</span><span class="w"> </span><span class="s1">'DT'</span><span class="w"> </span><span class="c1">#</span>
 <span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
 
 <span class="w">      </span><span class="m">¯30</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="nf">⎕DT</span><span class="o">⊂</span><span class="m">32000</span><span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">0</span>
@@ -79542,7 +79542,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78777,7 +78777,7 @@
 <li>A dyadic operator has short scope on the right.  That is, the right operand of an operator is the single function or array on its right. Right scope may be extended by enclosing an expression in parentheses.</li>
 </ol>
 <h2 class="example">Examples</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="na">¨</span><span class="nv">X</span><span class="kd">←</span><span class="s1">'WILLIAM'</span><span class="w"> </span><span class="s1">'MARY'</span><span class="w"> </span><span class="s1">'BELLE'</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="na">¨</span><span class="nv">X</span><span class="kd">←</span><span class="s1">'WILLIAM'</span><span class="w"> </span><span class="s1">'MARY'</span><span class="w"> </span><span class="s1">'BELLE'</span>
 <span class="w"> </span><span class="m">7</span><span class="w">  </span><span class="m">4</span><span class="w">  </span><span class="m">5</span>
 
 <span class="w">      </span><span class="o">⍴</span><span class="na">∘</span><span class="o">⍴</span><span class="na">¨</span><span class="nv">X</span>
@@ -78786,7 +78786,7 @@
 <span class="w">      </span><span class="p">(</span><span class="o">⍴</span><span class="na">∘</span><span class="o">⍴</span><span class="p">)</span><span class="na">¨</span><span class="nv">X</span>
 <span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="m">1</span><span class="w">  </span><span class="m">1</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="vg">⎕</span><span class="na">∘</span><span class="kd">←</span><span class="na">∘</span><span class="nf">⎕VR</span><span class="na">¨</span><span class="s1">'PLUS'</span><span class="w"> </span><span class="s1">'MINUS'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="vg">⎕</span><span class="na">∘</span><span class="kd">←</span><span class="na">∘</span><span class="nf">⎕VR</span><span class="na">¨</span><span class="s1">'PLUS'</span><span class="w"> </span><span class="s1">'MINUS'</span>
 <span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="w"> </span><span class="nv">PLUS</span><span class="w"> </span><span class="nv">B</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="o">+</span><span class="nv">B</span>
 <span class="w">     </span><span class="bp">∇</span>
@@ -78801,16 +78801,16 @@
 <p>Operators may be defined with the system function <code>⎕FX</code>, or with the function editor. A defined operator consists of a HEADER which identifies the syntax of the operator, and a BODY in which one or more APL statements are specified.</p>
 <p>A defined operator may have one or two operands; and its derived function may have one or two arguments, and may or may not produce a result. The header syntax defines the operator name, its operand(s), the argument(s) to its derived function, and the result (if any) of its derived function. The names of the operator and its operand(s) are separated from the name(s) of the argument(s) to its derived function by parentheses.</p>
 <h3 class="example">Example</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="p">(</span><span class="nv">F</span><span class="w"> </span><span class="nv">AND</span><span class="w"> </span><span class="nv">G</span><span class="p">)</span><span class="nv">B</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="p">(</span><span class="nv">F</span><span class="w"> </span><span class="nv">AND</span><span class="w"> </span><span class="nv">G</span><span class="p">)</span><span class="nv">B</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">     </span><span class="nv">R</span><span class="kd">←</span><span class="p">(</span><span class="nv">A</span><span class="w"> </span><span class="nv">F</span><span class="w"> </span><span class="nv">B</span><span class="p">)(</span><span class="nv">A</span><span class="w"> </span><span class="nv">G</span><span class="w"> </span><span class="nv">B</span><span class="p">)</span>
 <span class="w">      </span><span class="bp">∇</span>
 </code></pre></div>
 <p>The above example shows a dyadic operator called AND with two operands (<code>F</code> and <code>G</code>). The operator produces a derived function which takes two arguments (<code>A</code> and <code>B</code>), and produces a result (<code>R</code>).
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">12</span><span class="w"> </span><span class="o">+</span><span class="nv">AND</span><span class="o">÷</span><span class="w"> </span><span class="m">4</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">12</span><span class="w"> </span><span class="o">+</span><span class="nv">AND</span><span class="o">÷</span><span class="w"> </span><span class="m">4</span>
 <span class="m">16</span><span class="w"> </span><span class="m">3</span>
 </code></pre></div>
 <p>Operands passed to an operator may be either functions or arrays.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">12</span><span class="w"> </span><span class="p">(</span><span class="m">3</span><span class="w"> </span><span class="nv">AND</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="m">4</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">12</span><span class="w"> </span><span class="p">(</span><span class="m">3</span><span class="w"> </span><span class="nv">AND</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="m">4</span>
 <span class="m">12</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w">  </span><span class="m">12</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">4</span>
 
 <span class="w">      </span><span class="m">12</span><span class="w"> </span><span class="p">(</span><span class="o">×</span><span class="w"> </span><span class="nv">AND</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="m">4</span>
@@ -78845,7 +78845,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

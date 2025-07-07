@@ -79306,10 +79306,10 @@
 </table>
 <p>These values are additive. For example, a value of 5 in column 5 means that the row contains both an element (value 1) and character data (value 4).</p>
 <h2 class="example">Example</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">x</span><span class="kd">←</span><span class="s1">'&lt;xml&gt;&lt;document id="001"&gt;An introduction to XML'</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">x</span><span class="kd">←</span><span class="s1">'&lt;xml&gt;&lt;document id="001"&gt;An introduction to XML'</span>
 <span class="w">      </span><span class="nv">x</span><span class="o">,</span><span class="kd">←</span><span class="s1">'&lt;/document&gt;&lt;/xml&gt;'</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="nv">v</span><span class="kd">←</span><span class="nf">⎕XML</span><span class="w"> </span><span class="nv">x</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="nv">v</span><span class="kd">←</span><span class="nf">⎕XML</span><span class="w"> </span><span class="nv">x</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">───────────────────────────────────────────────────────┐</span>
 <span class="o">↓</span><span class="w">   </span><span class="err">┌</span><span class="kd">→</span><span class="err">──┐</span><span class="w">      </span><span class="err">┌</span><span class="o">⊖</span><span class="err">┐</span><span class="w">                      </span><span class="err">┌</span><span class="kd">→</span><span class="err">────────┐</span><span class="w">      </span><span class="err">│</span>
 <span class="err">│</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="err">│</span><span class="nv">xml</span><span class="err">│</span><span class="w">      </span><span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="w">                      </span><span class="o">⌽</span><span class="w"> </span><span class="err">┌</span><span class="o">⊖</span><span class="err">┐</span><span class="w"> </span><span class="err">┌</span><span class="o">⊖</span><span class="err">┐</span><span class="w"> </span><span class="err">│</span><span class="w">    </span><span class="m">3</span><span class="w"> </span><span class="err">│</span>
@@ -79325,7 +79325,7 @@
 </code></pre></div>
 <p>For conversion <em>to</em> XML, <code>Y</code> is a 3, 4 or 5 column matrix and the result <code>R</code> is a character vector. The columns of <code>Y</code> have the same meaning as those described above for the result of converting <em>from</em> XML.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕XML</span><span class="w"> </span><span class="nv">v</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕XML</span><span class="w"> </span><span class="nv">v</span>
 <span class="o">&lt;</span><span class="nv">xml</span><span class="o">&gt;</span><span class="w"> </span>
 <span class="w">  </span><span class="o">&lt;</span><span class="nv">document</span><span class="w"> </span><span class="nv">id</span><span class="o">=</span><span class="s2">"001"</span><span class="o">&gt;</span><span class="nv">An</span><span class="w"> </span><span class="nv">introduction</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">XML</span><span class="o">&lt;</span><span class="na">/</span><span class="nv">document</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="na">/</span><span class="nv">xml</span><span class="o">&gt;</span>
@@ -79433,7 +79433,7 @@
 <p>The values of each option are tabulated below. In each case the value of the option for Variant is given first, followed by its equivalent for the optional left argument in brackets; for example, <strong>UnknownEntity (unknown-entity)</strong>.</p>
 <p>Note that the default value is shown first, and that the option names and values are case-sensitive.</p>
 <p>If options are specified using the optional left argument,  <code>X</code> specifies a set of option/value pairs, each of which is a character vector. <code>X</code> can be a 2-element vector, or a vector of 2-element character vectors. In the examples below, this method is illustrated by the equivalent expression written as a comment, following the recommended approach using the Variant operator <code>⍠</code>:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕XML</span><span class="na">⍠</span><span class="s1">'Whitespace'</span><span class="w"> </span><span class="s1">'Strip'</span><span class="p">)</span><span class="nv">eg</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕XML</span><span class="na">⍠</span><span class="s1">'Whitespace'</span><span class="w"> </span><span class="s1">'Strip'</span><span class="p">)</span><span class="nv">eg</span>
 <span class="w">      </span><span class="c1">⍝      'whitespace' 'strip' ⎕XML eg</span>
 </code></pre></div>
 <p>Errors detected in the input arrays or options will all cause <code>DOMAIN ERROR</code>.</p>
@@ -79474,7 +79474,7 @@
 <td>White space in the data is preserved as given, except that line endings are represented by Linefeed               ( <code>⎕UCS 10</code> ). XML is generated with no formatting and indentation other than that which is contained within the data</td>
 </tr>
 <tr>
-<td colspan="2"><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="nv">eg</span>
+<td colspan="2"><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="nv">eg</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">───────────────────┐</span>
 <span class="err">│</span><span class="o">&lt;</span><span class="nv">xml</span><span class="o">&gt;</span><span class="w">               </span><span class="err">│</span>
 <span class="err">│</span><span class="w">  </span><span class="o">&lt;</span><span class="nv">a</span><span class="o">&gt;</span><span class="w">               </span><span class="err">│</span>
@@ -79490,7 +79490,7 @@
 </code></pre></div></td>
 </tr>
 <tr>
-<td colspan="2"><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕XML</span><span class="na">⍠</span><span class="s1">'Whitespace'</span><span class="w"> </span><span class="s1">'Strip'</span><span class="p">)</span><span class="nv">eg</span>
+<td colspan="2"><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕XML</span><span class="na">⍠</span><span class="s1">'Whitespace'</span><span class="w"> </span><span class="s1">'Strip'</span><span class="p">)</span><span class="nv">eg</span>
 <span class="w">      </span><span class="c1">⍝      'whitespace' 'strip' ⎕XML eg</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">────────────────────────────────────────┐</span>
 <span class="o">↓</span><span class="w">   </span><span class="err">┌</span><span class="kd">→</span><span class="err">──┐</span><span class="w"> </span><span class="err">┌</span><span class="o">⊖</span><span class="err">┐</span><span class="w">           </span><span class="err">┌</span><span class="kd">→</span><span class="err">────────┐</span><span class="w">       </span><span class="err">│</span>
@@ -79527,7 +79527,7 @@
 </code></pre></div></td>
 </tr>
 <tr>
-<td colspan="2"><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕XML</span><span class="na">⍠</span><span class="s1">'Whitespace'</span><span class="w"> </span><span class="s1">'Preserve'</span><span class="p">)</span><span class="nv">eg</span>
+<td colspan="2"><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕XML</span><span class="na">⍠</span><span class="s1">'Whitespace'</span><span class="w"> </span><span class="s1">'Preserve'</span><span class="p">)</span><span class="nv">eg</span>
 <span class="w">      </span><span class="c1">⍝         'whitespace' 'preserve' ⎕XML eg</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">──────────────────────────────────────┐</span>
 <span class="o">↓</span><span class="w">   </span><span class="err">┌</span><span class="kd">→</span><span class="err">──┐</span><span class="w"> </span><span class="err">┌</span><span class="o">⊖</span><span class="err">┐</span><span class="w">         </span><span class="err">┌</span><span class="kd">→</span><span class="err">────────┐</span><span class="w">       </span><span class="err">│</span>
@@ -79600,7 +79600,7 @@
 <td>Markup text appears in the output array, without the leading '&lt;' and trailing '&gt;' in the tag (2 <sup>nd</sup> ) column</td>
 </tr>
 <tr>
-<td colspan="2"><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="nv">eg</span>
+<td colspan="2"><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="nv">eg</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">───────────────────┐</span>
 <span class="err">│</span><span class="o">&lt;</span><span class="nv">xml</span><span class="o">&gt;</span><span class="w">               </span><span class="err">│</span>
 <span class="err">│</span><span class="w">  </span><span class="o">&lt;</span><span class="nv">a</span><span class="o">&gt;</span><span class="w">               </span><span class="err">│</span>
@@ -79616,7 +79616,7 @@
 </code></pre></div></td>
 </tr>
 <tr>
-<td colspan="2"><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕XML</span><span class="na">⍠</span><span class="s1">'Markup'</span><span class="w"> </span><span class="s1">'Strip'</span><span class="p">)</span><span class="nv">eg</span>
+<td colspan="2"><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕XML</span><span class="na">⍠</span><span class="s1">'Markup'</span><span class="w"> </span><span class="s1">'Strip'</span><span class="p">)</span><span class="nv">eg</span>
 <span class="w">      </span><span class="c1">⍝      'markup' 'strip' ⎕XML eg</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">────────────────────────────────────────┐</span>
 <span class="o">↓</span><span class="w">   </span><span class="err">┌</span><span class="kd">→</span><span class="err">──┐</span><span class="w"> </span><span class="err">┌</span><span class="o">⊖</span><span class="err">┐</span><span class="w">           </span><span class="err">┌</span><span class="kd">→</span><span class="err">────────┐</span><span class="w">       </span><span class="err">│</span>
@@ -79653,7 +79653,7 @@
 </code></pre></div></td>
 </tr>
 <tr>
-<td colspan="2"><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕XML</span><span class="na">⍠</span><span class="s1">'Markup'</span><span class="w"> </span><span class="s1">'Preserve'</span><span class="p">)</span><span class="nv">eg</span>
+<td colspan="2"><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">display</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕XML</span><span class="na">⍠</span><span class="s1">'Markup'</span><span class="w"> </span><span class="s1">'Preserve'</span><span class="p">)</span><span class="nv">eg</span>
 <span class="w">      </span><span class="c1">⍝         'markup' 'preserve' ⎕XML eg</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">──────────────────────────────────────────────┐</span>
 <span class="o">↓</span><span class="w">   </span><span class="err">┌</span><span class="kd">→</span><span class="err">──┐</span><span class="w">            </span><span class="err">┌</span><span class="o">⊖</span><span class="err">┐</span><span class="w">     </span><span class="err">┌</span><span class="kd">→</span><span class="err">────────┐</span><span class="w">        </span><span class="err">│</span>
@@ -79768,7 +79768,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

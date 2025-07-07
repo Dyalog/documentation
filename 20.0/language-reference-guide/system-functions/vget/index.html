@@ -78911,7 +78911,7 @@
 <h3 class="example">Examples</h3>
 
 <p>Multiple names without fallback:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">name1</span><span class="w"> </span><span class="nv">name2</span><span class="w"> </span><span class="nv">name3</span><span class="w"> </span><span class="nv">longer_name</span><span class="p">)</span><span class="kd">←</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="s1">'APL'</span><span class="w"> </span><span class="m">42</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">name1</span><span class="w"> </span><span class="nv">name2</span><span class="w"> </span><span class="nv">name3</span><span class="w"> </span><span class="nv">longer_name</span><span class="p">)</span><span class="kd">←</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="s1">'APL'</span><span class="w"> </span><span class="m">42</span>
 <span class="w">      </span><span class="nv">names</span><span class="kd">←</span><span class="o">↑</span><span class="s1">'name1'</span><span class="w"> </span><span class="s1">'name2'</span><span class="w"> </span><span class="s1">'name3'</span><span class="w"> </span><span class="s1">'longer_name'</span>
 <span class="w">      </span><span class="nv">names</span>
 <span class="nv">name1</span>
@@ -78922,7 +78922,7 @@
 <span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w">  </span><span class="c1">#.[Namespace]  APL  42</span>
 </code></pre></div>
 <p>Multiple names with different fallback for each name:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">name2</span><span class="kd">←</span><span class="m">100</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">name2</span><span class="kd">←</span><span class="m">100</span>
 <span class="w">      </span><span class="nv">names</span><span class="kd">←</span><span class="o">↑</span><span class="s1">'name1'</span><span class="w"> </span><span class="s1">'name2'</span><span class="w"> </span><span class="s1">'name3'</span>
 <span class="w">      </span><span class="nv">names</span>
 <span class="nv">name1</span>
@@ -78933,7 +78933,7 @@
 <span class="m">1</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="m">3</span>
 </code></pre></div>
 <p>Multiple names with the same fallback for all of them:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">persons</span><span class="kd">←</span><span class="p">(</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">persons</span><span class="kd">←</span><span class="p">(</span>
 <span class="w">        </span><span class="p">(</span><span class="nv">name</span><span class="bp">:</span><span class="w"> </span><span class="s1">'Jack'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">age</span><span class="bp">:</span><span class="w"> </span><span class="m">36</span><span class="p">)</span>
 <span class="w">        </span><span class="p">(</span><span class="nv">name</span><span class="bp">:</span><span class="w"> </span><span class="s1">'Peter'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">email</span><span class="bp">:</span><span class="w"> </span><span class="s1">'peter@example.com'</span><span class="p">)</span>
 <span class="w">        </span><span class="p">(</span><span class="nv">phone</span><span class="bp">:</span><span class="w"> </span><span class="m">12345678</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">email</span><span class="bp">:</span><span class="w"> </span><span class="s1">'susan@example.com'</span><span class="p">)</span>
@@ -78964,7 +78964,7 @@
 <h3 class="example">Examples</h3>
 
 <p>Single name:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">ns1</span><span class="w"> </span><span class="nv">ns2</span><span class="p">)</span><span class="kd">←</span><span class="p">()()</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">ns1</span><span class="w"> </span><span class="nv">ns2</span><span class="p">)</span><span class="kd">←</span><span class="p">()()</span>
 <span class="w">      </span><span class="p">(</span><span class="nv">ns1</span><span class="w"> </span><span class="nv">ns2</span><span class="p">)</span><span class="na">.</span><span class="nv">name1</span><span class="kd">←</span><span class="s1">'ABC'</span><span class="w"> </span><span class="s1">'DEF'</span>
 
 <span class="w">      </span><span class="nv">ns1</span><span class="w"> </span><span class="nf">⎕VGET</span><span class="w"> </span><span class="s1">'name1'</span>
@@ -78973,25 +78973,25 @@
 <span class="w"> </span><span class="nv">ABC</span><span class="w">  </span><span class="nv">DEF</span>
 </code></pre></div>
 <p>Single name enclosed:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">name1</span><span class="kd">←</span><span class="s1">'APL'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">name1</span><span class="kd">←</span><span class="s1">'APL'</span>
 <span class="w">      </span><span class="nf">⎕VGET</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'name1'</span>
 <span class="w"> </span><span class="nv">APL</span>
 <span class="w">      </span><span class="o">≢⍴</span><span class="nf">⎕VGET</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'name1'</span>
 <span class="m">0</span>
 </code></pre></div>
 <p>Multiple names without fallback:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">name1</span><span class="w"> </span><span class="nv">name2</span><span class="w"> </span><span class="nv">name3</span><span class="p">)</span><span class="kd">←</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="s1">'APL'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">name1</span><span class="w"> </span><span class="nv">name2</span><span class="w"> </span><span class="nv">name3</span><span class="p">)</span><span class="kd">←</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="s1">'APL'</span>
 
 <span class="w">      </span><span class="nf">⎕VGET</span><span class="w"> </span><span class="s1">'name1'</span><span class="w"> </span><span class="s1">'name2'</span><span class="w"> </span><span class="s1">'name3'</span>
 <span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w">  </span><span class="c1">#.[Namespace]  APL</span>
 </code></pre></div>
 <p>Single name with fallback:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ns</span><span class="kd">←</span><span class="p">()</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ns</span><span class="kd">←</span><span class="p">()</span>
 <span class="w">      </span><span class="nv">ns</span><span class="w"> </span><span class="nf">⎕VGET</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'name1'</span><span class="w"> </span><span class="s1">'default'</span>
 <span class="nv">default</span>
 </code></pre></div>
 <p>Multiple names with fallback for some:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">name1</span><span class="w"> </span><span class="nv">name2</span><span class="p">)</span><span class="kd">←</span><span class="s1">'APL'</span><span class="w"> </span><span class="m">123</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">name1</span><span class="w"> </span><span class="nv">name2</span><span class="p">)</span><span class="kd">←</span><span class="s1">'APL'</span><span class="w"> </span><span class="m">123</span>
 <span class="w">      </span><span class="nf">⎕VGET</span><span class="w"> </span><span class="p">(</span><span class="s1">'name1'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="s1">'name2'</span><span class="w"> </span><span class="p">(</span><span class="s1">'name3'</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
 <span class="w"> </span><span class="nv">APL</span><span class="w">  </span><span class="m">123</span><span class="w"> </span><span class="m">3</span>
 <span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'name1'</span>
@@ -78999,7 +78999,7 @@
 <span class="m">1</span><span class="w"> </span><span class="m">123</span><span class="w"> </span><span class="m">3</span>
 </code></pre></div>
 <p>Multiple names with different fallback for each of them:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">name2</span><span class="kd">←</span><span class="m">100</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">name2</span><span class="kd">←</span><span class="m">100</span>
 <span class="w">      </span><span class="nf">⎕VGET</span><span class="w"> </span><span class="p">(</span><span class="s1">'name1'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'name2'</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'name3'</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
 <span class="m">1</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="m">3</span>
 </code></pre></div>
@@ -79010,7 +79010,7 @@
 <p><a href="../nc/"><code>⎕NC</code></a> always reports the names of fields in a class as having nameclass <code>2</code> (<code>2.2</code> with the sub-class), even when the name has no value (might expect <code>0</code>) or the field is a namespace reference (might expect <code>9</code>). <a href="./"><code>⎕VGET</code></a> with a right argument of <code>2</code> will only include fields that have values that are not references, while a right argument of <code>9</code> will include fields that are references. With a right argument of <code>2.2</code>, <a href="./"><code>⎕VGET</code></a> will return all fields that are not undefined.</p>
 <h3 class="example">Examples</h3>
 <p>Name value pairs:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ns</span><span class="kd">←</span><span class="p">()</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ns</span><span class="kd">←</span><span class="p">()</span>
 <span class="w">      </span><span class="nv">ns</span><span class="na">.</span><span class="nv">ns1</span><span class="kd">←</span><span class="nf">⎕SE</span>
 <span class="w">      </span><span class="nv">ns</span><span class="na">.</span><span class="nv">ns2</span><span class="kd">←</span><span class="c1">#</span>
 <span class="w">      </span><span class="nv">ns</span><span class="na">.</span><span class="nv">a1</span><span class="kd">←</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span>
@@ -79045,7 +79045,7 @@
 <span class="w"> </span><span class="nv">Vendor</span><span class="w">                                                </span><span class="nv">Dyalog</span>
 </code></pre></div>
 <p>Name matrix and value vector:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">box</span><span class="w"> </span><span class="nv">on</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="sr">]</span><span class="nv">box</span><span class="w"> </span><span class="nv">on</span>
 <span class="nv">Was</span><span class="w"> </span><span class="nv">OFF</span>
 <span class="w">      </span><span class="p">(</span><span class="nv">name1</span><span class="w"> </span><span class="nv">name2</span><span class="w"> </span><span class="nv">name3</span><span class="p">)</span><span class="kd">←</span><span class="s1">'APL'</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="nf">⎕SE</span>
 <span class="w">      </span><span class="nf">⎕VGET</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">9</span>
@@ -79084,7 +79084,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

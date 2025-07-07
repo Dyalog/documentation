@@ -78780,25 +78780,25 @@
 <li>Otherwise, acquisition of the tokens is abandoned and execution resumed immediately at the first phrase in the <code>:Else</code> clause.</li>
 </ol>
 <p><code>tkns</code> can be either a single token:
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="s1">'a'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="s1">'a'</span>
 <span class="w">    </span><span class="s1">'Red'</span>
 <span class="w">    </span><span class="s1">'#.Util'</span>
 <span class="w">    </span><span class="s1">''</span>
 <span class="w">    </span><span class="s1">'Program Files'</span>
 </code></pre></div>
 <p>… or a number of tokens:
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="s1">'red'</span><span class="w"> </span><span class="s1">'green'</span><span class="w"> </span><span class="s1">'blue'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="s1">'red'</span><span class="w"> </span><span class="s1">'green'</span><span class="w"> </span><span class="s1">'blue'</span>
 <span class="w">    </span><span class="s1">'doe'</span><span class="w"> </span><span class="s1">'a'</span><span class="w"> </span><span class="s1">'deer'</span>
 <span class="w">    </span><span class="o">,</span><span class="na">¨</span><span class="s1">'abc'</span>
 <span class="w">    </span><span class="o">↓</span><span class="nf">⎕nl</span><span class="w"> </span><span class="m">9</span>
 </code></pre></div>
 <p>Pre-processing removes trailing blanks from each token before comparison, so that, for example, the following two statements are equivalent:
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Hold</span><span class="w"> </span><span class="s1">'Red'</span><span class="w"> </span><span class="s1">'Green'</span><span class="w"> </span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Hold</span><span class="w"> </span><span class="s1">'Red'</span><span class="w"> </span><span class="s1">'Green'</span><span class="w"> </span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Hold</span><span class="w"> </span><span class="o">↓</span><span class="m">2</span><span class="w"> </span><span class="m">5</span><span class="o">⍴</span><span class="s1">'Red  Green'</span>
 </code></pre></div>
 <p>Unlike <code>⎕FHOLD</code>, a thread does not release all existing tokens before attempting to acquire new ones. This enables the nesting of holds, which can be useful when multiple threads are concurrently updating parts of a complex data structure.</p>
 <p>In the following example, a thread updates a critical structure in a child namespace, and then updates a structure in its parent space. The holds will allow all "sibling" namespaces to update concurrently, but will constrain updates to the parent structure to be executed one at a time.
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Hold</span><span class="w"> </span><span class="nf">⎕cs</span><span class="s1">''</span><span class="w">          </span><span class="c1">⍝ Hold child space     </span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Hold</span><span class="w"> </span><span class="nf">⎕cs</span><span class="s1">''</span><span class="w">          </span><span class="c1">⍝ Hold child space     </span>
 <span class="w">        </span><span class="na">...</span><span class="w">              </span><span class="c1">⍝ Update child space</span>
 <span class="w">        </span><span class="bp">:</span><span class="nv">Hold</span><span class="w"> </span><span class="c1">##.⎕cs''   ⍝ Hold parent space </span>
 <span class="w">            </span><span class="na">...</span><span class="w">          </span><span class="c1">⍝ Update Parent space</span>
@@ -78846,41 +78846,41 @@
 <h2 class="example">Examples</h2>
 
 <p><code>:Hold</code> could be used for example, during the update of a complex data structure that might take several lines of code. In this case, an appropriate value for the token would be the name of the data structure variable itself, although this is just a programming convention: the interpreter does not associate the token value with the data variable.
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Hold</span><span class="s1">'Struct'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Hold</span><span class="s1">'Struct'</span>
 <span class="w">        </span><span class="na">...</span><span class="w">              </span><span class="c1">⍝ Update Struct</span>
 <span class="w">        </span><span class="nv">Struct</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="na">...</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">EndHold</span>
 </code></pre></div>
 <p>The next example guarantees exclusive use of the current namespace:
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Hold</span><span class="w"> </span><span class="nf">⎕CS</span><span class="s1">''</span><span class="w">          </span><span class="c1">⍝ Hold current space</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Hold</span><span class="w"> </span><span class="nf">⎕CS</span><span class="s1">''</span><span class="w">          </span><span class="c1">⍝ Hold current space</span>
 <span class="w">        </span><span class="na">...</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">EndHold</span>
 </code></pre></div>
 <p>The following example shows code that holds two positions in a vector while the contents are exchanged.
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Hold</span><span class="w"> </span><span class="o">⍕</span><span class="na">¨</span><span class="nv">to</span><span class="w"> </span><span class="nv">fm</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Hold</span><span class="w"> </span><span class="o">⍕</span><span class="na">¨</span><span class="nv">to</span><span class="w"> </span><span class="nv">fm</span>
 <span class="w">        </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="o">&gt;</span><span class="na">/</span><span class="nv">vec</span><span class="sr">[</span><span class="nv">fm</span><span class="w"> </span><span class="nv">to</span><span class="sr">]</span>
 <span class="w">            </span><span class="nv">vec</span><span class="sr">[</span><span class="nv">fm</span><span class="w"> </span><span class="nv">to</span><span class="sr">]</span><span class="kd">←</span><span class="nv">vec</span><span class="sr">[</span><span class="nv">to</span><span class="w"> </span><span class="nv">fm</span><span class="sr">]</span>
 <span class="w">        </span><span class="bp">:</span><span class="nv">End</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">End</span>
 </code></pre></div>
 <p>Between obtaining the next available file tie number and using it:
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Hold</span><span class="w"> </span><span class="s1">'⎕FNUMS'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Hold</span><span class="w"> </span><span class="s1">'⎕FNUMS'</span>
 <span class="w">        </span><span class="nv">tie</span><span class="kd">←</span><span class="m">1</span><span class="o">+⌈</span><span class="na">/</span><span class="m">0</span><span class="o">,</span><span class="nf">⎕FNUMS</span>
 <span class="w">        </span><span class="nv">fname</span><span class="w"> </span><span class="nf">⎕FSTIE</span><span class="w"> </span><span class="nv">tie</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">End</span>
 </code></pre></div>
 <p>The above hold is not necessary if the code is combined into a single line:
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">fname</span><span class="w"> </span><span class="nf">⎕FSTIE</span><span class="w"> </span><span class="nv">tie</span><span class="kd">←</span><span class="m">1</span><span class="o">+⌈</span><span class="na">/</span><span class="m">0</span><span class="o">,</span><span class="nf">⎕FNUMS</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="nv">fname</span><span class="w"> </span><span class="nf">⎕FSTIE</span><span class="w"> </span><span class="nv">tie</span><span class="kd">←</span><span class="m">1</span><span class="o">+⌈</span><span class="na">/</span><span class="m">0</span><span class="o">,</span><span class="nf">⎕FNUMS</span>
 </code></pre></div>
 <p>or,
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">tie</span><span class="kd">←</span><span class="nv">fname</span><span class="w"> </span><span class="nf">⎕FSTIE</span><span class="w"> </span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="nv">tie</span><span class="kd">←</span><span class="nv">fname</span><span class="w"> </span><span class="nf">⎕FSTIE</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <p>Note that <code>:Hold</code>, like its component file system counterpart <code>⎕FHOLD</code>, is a device to enable <em>co-operating</em> threads to synchronise their operation.</p>
 <p><code>:Hold</code> does not <em>prevent</em> threads from updating the same data structures concurrently, it prevents threads only from <code>:Hold</code>ing the same tokens.</p>
 <h2 id="high-priority-callbacks">High-Priority Callbacks</h2>
 <p><code>:Hold</code>
  with a non-zero number of tokens is not permitted in a high-priority callback and an attempt to use it  will cause the error:
-</p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span><span class="bp">:</span><span class="w"> </span><span class="nv">Cannot</span><span class="w"> </span><span class="bp">:</span><span class="nv">Hold</span><span class="w"> </span><span class="nv">within</span><span class="w"> </span><span class="nv">high</span><span class="w"> </span><span class="nv">priority</span><span class="w"> </span><span class="nv">callback</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w"> </span><span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span><span class="bp">:</span><span class="w"> </span><span class="nv">Cannot</span><span class="w"> </span><span class="bp">:</span><span class="nv">Hold</span><span class="w"> </span><span class="nv">within</span><span class="w"> </span><span class="nv">high</span><span class="w"> </span><span class="nv">priority</span><span class="w"> </span><span class="nv">callback</span>
 </code></pre></div>
 <p>See <a href="../../../../../interface-guide/introduction/high-priority-callbacks">High-Priority Callback Functions</a>.</p>
 
@@ -78912,7 +78912,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78825,19 +78825,19 @@
 <p><code>Y</code> must be numeric.</p>
 <p>For real numbers, <code>R</code> is the largest integer value less than or equal to <code>Y</code> within the comparison tolerance <code>⎕CT</code>.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⌊</span><span class="m">¯2.3</span><span class="w"> </span><span class="m">0.1</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="m">3.3</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⌊</span><span class="m">¯2.3</span><span class="w"> </span><span class="m">0.1</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="m">3.3</span>
 <span class="m">¯3</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="m">3</span>
 
 <span class="w">      </span><span class="o">⌊</span><span class="m">0.5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">0.4</span><span class="w"> </span><span class="m">0.5</span><span class="w"> </span><span class="m">0.6</span>
 <span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <p>For complex numbers, <code>R</code> depends on the relationship between the real and imaginary parts of the numbers in <code>Y</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⌊</span><span class="m">1j3.2</span><span class="w"> </span><span class="m">3.3j2.5</span><span class="w"> </span><span class="m">¯3.3j¯2.5</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⌊</span><span class="m">1j3.2</span><span class="w"> </span><span class="m">3.3j2.5</span><span class="w"> </span><span class="m">¯3.3j¯2.5</span>
 <span class="m">1J3</span><span class="w"> </span><span class="m">3J2</span><span class="w"> </span><span class="m">¯3J¯3</span>
 </code></pre></div>
 <h2 id="complex-floor">Complex Floor</h2>
 <p>The following (deliberately) simple function illustrates one way to express the rules for evaluating complex Floor.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">fl</span><span class="kd">←</span><span class="nv">CpxFloor</span><span class="w"> </span><span class="nv">cpxs</span><span class="sr">;</span><span class="nv">a</span><span class="sr">;</span><span class="nv">b</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">fl</span><span class="kd">←</span><span class="nv">CpxFloor</span><span class="w"> </span><span class="nv">cpxs</span><span class="sr">;</span><span class="nv">a</span><span class="sr">;</span><span class="nv">b</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Complex floor of scalar complex number (a+ib)</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">a</span><span class="w"> </span><span class="nv">b</span><span class="kd">←</span><span class="m">9</span><span class="w"> </span><span class="m">11</span><span class="o">○</span><span class="nv">cpxs</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="m">1</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">a</span><span class="o">-⌊</span><span class="nv">a</span><span class="p">)</span><span class="o">+</span><span class="nv">b</span><span class="o">-⌊</span><span class="nv">b</span>
@@ -78884,7 +78884,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

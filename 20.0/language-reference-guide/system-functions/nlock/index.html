@@ -78887,7 +78887,7 @@
 </ol>
 <p>The shy result <code>R</code> is <code>Y</code>. To unlock the file, this value should subsequently be supplied in the right argument to <code>0 ⎕NLOCK</code>.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NLOCK</span><span class="w"> </span><span class="m">¯1</span><span class="w">        </span><span class="c1">⍝ write-lock whole file</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NLOCK</span><span class="w"> </span><span class="m">¯1</span><span class="w">        </span><span class="c1">⍝ write-lock whole file</span>
 <span class="w">    </span><span class="m">0</span><span class="w"> </span><span class="nf">⎕NLOCK</span><span class="w"> </span><span class="m">¯1</span><span class="w">        </span><span class="c1">⍝ unlock whole file.</span>
 <span class="w">    </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕NLOCK</span><span class="w"> </span><span class="m">¯1</span><span class="w">        </span><span class="c1">⍝ read (share) lock whole file.</span>
 <span class="w">    </span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NLOCK</span><span class="na">¨</span><span class="nf">⎕NNUMS</span><span class="w">    </span><span class="c1">⍝ write-lock all files.</span>
@@ -78900,7 +78900,7 @@
 <span class="w">    </span><span class="m">0</span><span class="w"> </span><span class="nf">⎕NLOCK</span><span class="w"> </span><span class="m">¯1</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">1</span><span class="w">   </span><span class="c1">⍝ remove lock from byte 12.</span>
 </code></pre></div>
 <p>To lock the region immediately beyond the end of the file prior extending it:
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="vg">⎕</span><span class="kd">←</span><span class="nv">region</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NLOCK</span><span class="w"> </span><span class="m">¯1</span><span class="o">,</span><span class="w"> </span><span class="nf">⎕NSIZE</span><span class="w"> </span><span class="m">¯1</span><span class="w"> </span><span class="c1">⍝ write-lock from EOF.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="vg">⎕</span><span class="kd">←</span><span class="nv">region</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NLOCK</span><span class="w"> </span><span class="m">¯1</span><span class="o">,</span><span class="w"> </span><span class="nf">⎕NSIZE</span><span class="w"> </span><span class="m">¯1</span><span class="w"> </span><span class="c1">⍝ write-lock from EOF.</span>
 <span class="m">¯1</span><span class="w"> </span><span class="m">1000</span><span class="w">   </span>
 <span class="w">   </span><span class="na">...</span><span class="w"> </span><span class="nf">⎕NAPPEND</span><span class="w"> </span><span class="m">¯1</span><span class="w">                 </span><span class="c1">⍝ append bytes to file</span>
 <span class="w">   </span><span class="na">...</span><span class="w"> </span><span class="nf">⎕NAPPEND</span><span class="w"> </span><span class="m">¯1</span><span class="w">                 </span><span class="c1">⍝ append bytes to file</span>
@@ -78908,7 +78908,7 @@
 <span class="w">   </span><span class="m">0</span><span class="w"> </span><span class="nf">⎕NLOCK</span><span class="w"> </span><span class="nv">region</span><span class="w">                 </span><span class="c1">⍝ release lock.</span>
 </code></pre></div>
 <p>The left argument may have a second optional item that specifies a <em>timeout</em> value. If a lock has not been acquired within this number of seconds, the acquisition is abandoned and a <code>TIMEOUT</code> error reported.
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="m">2</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="nf">⎕nlock</span><span class="w"> </span><span class="m">¯1</span><span class="w">      </span><span class="c1">⍝ wait up to 10 seconds for lock.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="m">2</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="nf">⎕nlock</span><span class="w"> </span><span class="m">¯1</span><span class="w">      </span><span class="c1">⍝ wait up to 10 seconds for lock.</span>
 </code></pre></div>
 <h2 id="notes">Notes</h2>
 <ul>
@@ -78953,7 +78953,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

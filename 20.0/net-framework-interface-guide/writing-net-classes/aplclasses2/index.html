@@ -78771,7 +78771,7 @@
 <p>In fact, in Example 1, APL supplied a default constructor, which is inherited from the base class (<code>System.Object</code>) and is called without arguments.</p>
 <p>Example 2 will extend Example 1 by adding a constructor that specifies the value of <code>⎕IO</code>.</p>
 <p>Load the workspace <code>aplclasses2.dws</code> from <code>aplclasses2</code>, then display the <code>Primitives</code> class:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="nf">⎕SRC</span><span class="w"> </span><span class="nv">APLClasses</span><span class="na">.</span><span class="nv">Primitives</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="nf">⎕SRC</span><span class="w"> </span><span class="nv">APLClasses</span><span class="na">.</span><span class="nv">Primitives</span>
 <span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Primitives</span><span class="w">                      </span>
 <span class="bp">:</span><span class="nv">Using</span><span class="w"> </span><span class="nv">System</span><span class="w">                          </span>
 
@@ -78796,7 +78796,7 @@
 <p><img alt="" src="../../img/aplclasses2-2.png"></p>
 <h2 id="programcs">program.cs</h2>
 <p>The following C# source, called <code>aplclasses2\Framework\program.cs</code>, will be used to call the new version of our Dyalog.NET class.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+</p><div class="language-cs highlight"><pre><span></span><code><span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 <span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="nn">APLClasses</span><span class="p">;</span>
 <span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MainClass</span>
 <span class="w">            </span><span class="p">{</span>
@@ -78811,7 +78811,7 @@
 <span class="w">            </span><span class="p">}</span>
 </code></pre></div>
 <p>The program is the same as in the previous example, except that the code that creates an instance of the <code>Primitives</code> class is simply changed to specify an argument; in this case 0.
-</p><div class="highlight"><pre><span></span><code><span class="n">Primitives</span><span class="w"> </span><span class="n">apl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Primitives</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</p><div class="language-cs highlight"><pre><span></span><code><span class="n">Primitives</span><span class="w"> </span><span class="n">apl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Primitives</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </code></pre></div>
 <p>Using VS, open the solution file <code>d:\aplclasses\aplclasses2\Framework\project.sln</code> and view <code>program.cs</code>.</p>
 <p><img alt="" src="../../img/aplclasses2-3.png"></p>
@@ -78846,7 +78846,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

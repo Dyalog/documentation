@@ -78961,16 +78961,16 @@
 <p>Dyalog APL version 20.0 is supplied in either 32 or 64 bit versions, and in either Classic or Unicode editions. The installation procedure for Dyalog APL is the same in each case. Note that the 64-bit versions of Dyalog APL will only run on a 64-bit operating systems; the 32-bit versions of Dyalog APL will run on both 32 and 64 bit operating systems.</p>
 <p>It is assumed that in all cases the installation image has been downloaded into /tmp on the local machine.</p>
 <p>The default installation subdirectory will be formed as:
-</p><div class="highlight"><pre><span></span><code><span class="na">/</span><span class="nv">opt</span><span class="na">/</span><span class="nv">mdyalog</span><span class="na">/</span><span class="m">20.0</span><span class="na">/</span><span class="o">&lt;</span><span class="nv">APLWidth</span><span class="o">&gt;</span><span class="na">/</span><span class="o">&lt;</span><span class="nv">APLEdition</span><span class="o">&gt;</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="na">/</span><span class="nv">opt</span><span class="na">/</span><span class="nv">mdyalog</span><span class="na">/</span><span class="m">20.0</span><span class="na">/</span><span class="o">&lt;</span><span class="nv">APLWidth</span><span class="o">&gt;</span><span class="na">/</span><span class="o">&lt;</span><span class="nv">APLEdition</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>or, in the case of AIX:
-</p><div class="highlight"><pre><span></span><code><span class="na">/</span><span class="nv">opt</span><span class="na">/</span><span class="nv">mdyalog</span><span class="na">/</span><span class="m">20.0</span><span class="na">/</span><span class="o">&lt;</span><span class="nv">APLWidth</span><span class="o">&gt;</span><span class="na">/</span><span class="o">&lt;</span><span class="nv">APLEdition</span><span class="o">&gt;</span><span class="na">/</span><span class="o">&lt;</span><span class="nv">platform</span><span class="o">&gt;</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="na">/</span><span class="nv">opt</span><span class="na">/</span><span class="nv">mdyalog</span><span class="na">/</span><span class="m">20.0</span><span class="na">/</span><span class="o">&lt;</span><span class="nv">APLWidth</span><span class="o">&gt;</span><span class="na">/</span><span class="o">&lt;</span><span class="nv">APLEdition</span><span class="o">&gt;</span><span class="na">/</span><span class="o">&lt;</span><span class="nv">platform</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>So for example, Dyalog APL Version 20.0 32 bit Unicode for POWER6 hardware on AIX will by default be installed into
-</p><div class="highlight"><pre><span></span><code><span class="na">/</span><span class="nv">opt</span><span class="na">/</span><span class="nv">mdyalog</span><span class="na">/</span><span class="m">20.0</span><span class="na">/</span><span class="m">32</span><span class="na">/</span><span class="nv">unicode</span><span class="na">/</span><span class="nv">p6</span><span class="w">        </span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="na">/</span><span class="nv">opt</span><span class="na">/</span><span class="nv">mdyalog</span><span class="na">/</span><span class="m">20.0</span><span class="na">/</span><span class="m">32</span><span class="na">/</span><span class="nv">unicode</span><span class="na">/</span><span class="nv">p6</span><span class="w">        </span>
 </code></pre></div>
 <p>whereas on a Linux distribution the equivalent version would be installed in
-</p><div class="highlight"><pre><span></span><code><span class="na">/</span><span class="nv">opt</span><span class="na">/</span><span class="nv">mdyalog</span><span class="na">/</span><span class="m">20.0</span><span class="na">/</span><span class="m">32</span><span class="na">/</span><span class="nv">Unicode</span><span class="w">        </span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="na">/</span><span class="nv">opt</span><span class="na">/</span><span class="nv">mdyalog</span><span class="na">/</span><span class="m">20.0</span><span class="na">/</span><span class="m">32</span><span class="na">/</span><span class="nv">Unicode</span><span class="w">        </span>
 </code></pre></div>
 <p>This naming convention began with Version 12.0, and is planned to continue into the future. This ensures that all versions and releases of Dyalog APL can be installed in parallel.</p>
 <p>As part of installing Dyalog on Linux (including Pi) the script /usr/bin/dyalog is created; this is a copy of the $DYALOG/mapl script and can be used to start Dyalog APL. Note that this script will start the most recently installed version of Dyalog APL. This script is used in the target of the Dyalog APL icon on Linux desktops. If preferable, Dyalog can be started by calling the script mapl in the appropriate Dyalog installation directory.</p>
@@ -78979,28 +78979,28 @@
 20.0 for       Linux is supplied as a zip file which contains both a .deb- and a .rpm-based installation image.</p>
 <h2 id="installing-under-aix">Installing under AIX</h2>
 <p>For each version of Dyalog APL on AIX three separate hardware-specific builds are created for each of the four combinations of 32 or 64 bit versions, Classic or Unicode editions. For version 20.0 specific builds for p5, p6 and p7 are created.
-</p><div class="highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="nv">su</span><span class="w"> </span><span class="o">-</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="nv">su</span><span class="w"> </span><span class="o">-</span>
 <span class="c1"># cd /opt</span>
 <span class="c1">## cpio -icdvum &lt;/tmp/dyalog-20090901-64-unicode-p6.cpi</span>
 <span class="c1">## /opt/mdyalog/20.0/64/unicode/p6/make_scripts</span>
 <span class="c1">## exit</span>
 </code></pre></div>
 <p>Dyalog APL is now installed. To run as any user, type
-</p><div class="highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="na">/</span><span class="nv">opt</span><span class="na">/</span><span class="nv">mdyalog</span><span class="na">/</span><span class="m">20.0</span><span class="na">/</span><span class="m">64</span><span class="na">/</span><span class="nv">unicode</span><span class="na">/</span><span class="nv">p6</span><span class="na">/</span><span class="nv">mapl</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="na">/</span><span class="nv">opt</span><span class="na">/</span><span class="nv">mdyalog</span><span class="na">/</span><span class="m">20.0</span><span class="na">/</span><span class="m">64</span><span class="na">/</span><span class="nv">unicode</span><span class="na">/</span><span class="nv">p6</span><span class="na">/</span><span class="nv">mapl</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Version 20.0 is compiled on AIX6.1.</p>
 </div>
 <h2 id="installing-on-an-rpm-based-linux-distribution">Installing on an RPM-based Linux Distribution</h2>
-<div class="highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="nv">unzip</span><span class="w"> </span><span class="nv">linux_64_15</span><span class="m">.0.26964</span><span class="nv">_unicode</span><span class="na">.</span><span class="nv">zip</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="nv">unzip</span><span class="w"> </span><span class="nv">linux_64_15</span><span class="m">.0.26964</span><span class="nv">_unicode</span><span class="na">.</span><span class="nv">zip</span>
 <span class="err">$</span><span class="w"> </span><span class="nv">sudo</span><span class="w"> </span><span class="nv">rpm</span><span class="w"> </span><span class="o">--</span><span class="nv">install</span><span class="w"> </span><span class="nv">linux_64_15</span><span class="m">.0.26964</span><span class="nv">_unicode</span><span class="na">.</span><span class="nv">x86_64</span><span class="na">.</span><span class="nv">rpm</span>
 </code></pre></div>
 <p>Dyalog APL is now installed. To run as any user, type
-</p><div class="highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="nv">dyalog</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="nv">dyalog</span>
 </code></pre></div>
 or
-<div class="highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="na">/</span><span class="nv">opt</span><span class="na">/</span><span class="nv">mdyalog</span><span class="na">/</span><span class="m">15.0</span><span class="na">/</span><span class="m">64</span><span class="na">/</span><span class="nv">unicode</span><span class="na">/</span><span class="nv">mapl</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="na">/</span><span class="nv">opt</span><span class="na">/</span><span class="nv">mdyalog</span><span class="na">/</span><span class="m">15.0</span><span class="na">/</span><span class="m">64</span><span class="na">/</span><span class="nv">unicode</span><span class="na">/</span><span class="nv">mapl</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -79010,14 +79010,14 @@ or
 </ul>
 </div>
 <h2 id="installing-on-a-deb-based-linux-distribution">Installing on a DEB-based Linux Distribution</h2>
-<p></p><div class="highlight"><pre><span></span><code>$ unzip linux_64_15.0.26964_unicode.zip
+<p></p><div class="language-text highlight"><pre><span></span><code>$ unzip linux_64_15.0.26964_unicode.zip
 $ sudo dpkg --install linux_64_15.0.26964_unicode.x86_64.deb
 </code></pre></div>
 Dyalog APL is now installed. To run as any user, type
-<div class="highlight"><pre><span></span><code>$ dyalog
+<div class="language-text highlight"><pre><span></span><code>$ dyalog
 </code></pre></div>
 or
-<div class="highlight"><pre><span></span><code>$ /opt/mdyalog/15.0/64/unicode/mapl
+<div class="language-text highlight"><pre><span></span><code>$ /opt/mdyalog/15.0/64/unicode/mapl
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -79030,38 +79030,38 @@ or
 <h2 id="installing-in-a-non-default-location">Installing in a non-default location</h2>
 <p>It is possible to install Dyalog APL for UNIX in non-default locations, without the need for root privileges.</p>
 <p>For all UNIXes,</p>
-<div class="highlight"><pre><span></span><code>cd &lt;directory under which I wish to install Dyalog APL&gt;
+<div class="language-text highlight"><pre><span></span><code>cd &lt;directory under which I wish to install Dyalog APL&gt;
 </code></pre></div>
 <p>For AIX:</p>
-<div class="highlight"><pre><span></span><code>cpio -icvdum &lt;installation_image.cpi
+<div class="language-text highlight"><pre><span></span><code>cpio -icvdum &lt;installation_image.cpi
 </code></pre></div>
 <p>For .deb based Linux distributions:</p>
-<div class="highlight"><pre><span></span><code>/usr/bin/dpkg --extract installation_image.deb
+<div class="language-text highlight"><pre><span></span><code>/usr/bin/dpkg --extract installation_image.deb
 </code></pre></div>
 <p>For .rpm based Linux distributions
-</p><div class="highlight"><pre><span></span><code>rpm2cpio installation_image.rpm | cpio -icdvum
+</p><div class="language-text highlight"><pre><span></span><code>rpm2cpio installation_image.rpm | cpio -icdvum
 </code></pre></div>
 For all UNIXes:
-<div class="highlight"><pre><span></span><code>find opt/mdyalog -name make_scripts -exec {} \;
+<div class="language-text highlight"><pre><span></span><code>find opt/mdyalog -name make_scripts -exec {} \;
 </code></pre></div>
 <p>This last step generates the mapl script; should you chose to move the installation directory, it will be necessary to re-run the make_scripts script so that the environment variable $DYALOG is set correctly.</p>
 <h2 id="deinstalling-dyalog-apl">Deinstalling Dyalog APL</h2>
 <p>In the following examples, it is assumed that only Dyalog APL 14.0 64-bit Unicode is installed on the server; the commands to delete directories will need to be more specific if multiple versions of Dyalog APL are installed.</p>
 <p>Should it be necessary to deinstall Dyalog APL, then the process is:</p>
 <h2 id="deinstalling-under-aix">Deinstalling under AIX</h2>
-<div class="highlight"><pre><span></span><code><span class="nv">su</span><span class="w"> </span><span class="o">-</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="nv">su</span><span class="w"> </span><span class="o">-</span>
 <span class="nv">cd</span><span class="w"> </span><span class="na">/</span><span class="nv">opt</span>
 <span class="nv">rm</span><span class="w"> </span><span class="o">-</span><span class="nv">rf</span><span class="w"> </span><span class="nv">mdyalog</span><span class="na">/</span><span class="m">14.0</span>
 </code></pre></div>
 <h2 id="deinstalling-on-an-rpm-based-linux-distribution">Deinstalling on an RPM-based Linux Distribution</h2>
-<div class="highlight"><pre><span></span><code>su -
+<div class="language-text highlight"><pre><span></span><code>su -
 rpm -e dyalog.32.classic-14.0-20090901
 cd /opt
 rm -rf mdyalog/14.0
 exit
 </code></pre></div>
 <h2 id="deinstalling-on-a-deb-based-linux-distribution">Deinstalling on a DEB-based Linux Distribution</h2>
-<div class="highlight"><pre><span></span><code>sudo su -
+<div class="language-text highlight"><pre><span></span><code>sudo su -
 apt-get purge dyalog-unicode-140
 cd /opt
 rm -rf mdyalog/14.0
@@ -79071,10 +79071,10 @@ exit
 <h3 id="applying-a-later-release-of-the-same-version">Applying a later release of the same version</h3>
 <p>In general Dyalog will issue a new installation image if a problem is discovered which requires a new version of the interpreter. Dyalog recommends that the entire installation image is installed over the existing installation, but that is not essential. Particularly in a live environment it may be preferable to install only a revised interpreter. This can be done by extracting the individual files from the installation image, and copying them into the correct place in the installation directory tree. To apply a fix image, run the appropriate installation command with the -force option if appropriate. Be aware: the process of installing a later installation image over an already installed version of Dyalog APL WILL result in all files being overwritten. If you have changed any, it will be necessary to take copies of them, and then to reapply local alterations to the new files. Please contact support@dyalog.com for further advice.</p>
 <p>For rpm-based installation, run
-</p><div class="highlight"><pre><span></span><code>sudo --Uvh &lt;new installation image&gt;
+</p><div class="language-text highlight"><pre><span></span><code>sudo --Uvh &lt;new installation image&gt;
 </code></pre></div>
 <p>For deb-based installation, run
-</p><div class="highlight"><pre><span></span><code>sudo dpkg -i &lt;new installation image&gt;
+</p><div class="language-text highlight"><pre><span></span><code>sudo dpkg -i &lt;new installation image&gt;
 </code></pre></div>
 <p>See https://packages.dyalog.com/ for details of updating on the Pi.</p>
 <h3 id="upgrading-from-an-earlier-version">Upgrading from an earlier version</h3>
@@ -79108,7 +79108,7 @@ exit
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

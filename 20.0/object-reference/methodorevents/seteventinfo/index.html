@@ -78885,7 +78885,7 @@
 
 <p>The example <em>Dual</em> ActiveXControl, that is fully described elsewhere, generates a ChangeValue1 event. This event occurs when the user moves the thumb in a TrackBar that is internal to an instance of the <a href="../../objects/activexcontrol/">ActiveXControl</a>.</p>
 <p>The external ChangeValue1 event is fired by an internal APL callback function (called <code>ChangeValue</code>) that is attached to ThumbDrag and Scroll events on the TrackBar object. The internal callback function is :
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="w">   </span><span class="nv">ChangeValue</span><span class="w"> </span><span class="nv">MSG</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">0</span><span class="sr">]</span><span class="w">   </span><span class="nv">ChangeValue</span><span class="w"> </span><span class="nv">MSG</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Callback for ThumbDrag and Scroll</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="nv">Value1</span><span class="kd">←</span><span class="m">4</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="s1">''</span><span class="w"> </span><span class="s1">'ChangeValue1'</span><span class="p">(</span><span class="o">⊃</span><span class="m">¯1</span><span class="o">↑</span><span class="nv">MSG</span><span class="p">)</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">   </span><span class="nv">CalcValue2</span>
@@ -78894,12 +78894,12 @@
 </code></pre></div>
 <p>Note that <code>ChangeValue[2]</code> generates the external ChangeValue1 event by invoking <code>4 ⎕NQ</code>, passing it the new value provided by the TrackBar. However, the host application is permitted to modify that value, returning it in the result of <code>4 ⎕NQ</code>. This result, rather than the TrackBar value itself, is then used to update other (Label) controls in the object.</p>
 <p>The following statements were used to declare the <em>ChangeValue1</em> event The event provides a single parameter named <em>Value1</em> that may be modified in-situ by a callback function in the host application. The callback is not, otherwise, expected to return a result.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">INFO</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'Occurs when the value of the control is changed'</span><span class="w"> </span><span class="s1">'VT_VOID'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">INFO</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'Occurs when the value of the control is changed'</span><span class="w"> </span><span class="s1">'VT_VOID'</span>
 <span class="w">      </span><span class="nv">INFO</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'Value1'</span><span class="w"> </span><span class="s1">'VT_PTR TO VT_I4'</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">Dual</span><span class="na">.</span><span class="nv">SetEventInfo</span><span class="w"> </span><span class="s1">'ChangeValue1'</span><span class="w"> </span><span class="nv">INFO</span>
 </code></pre></div>
 <p>If the host application was Visual Basic, a suitable callback function might be:
-</p><div class="highlight"><pre><span></span><code><span class="nv">Private</span><span class="w"> </span><span class="nv">Sub</span><span class="w"> </span><span class="nv">Dual1_ChangeValue1</span><span class="p">(</span><span class="nv">Value1</span><span class="w"> </span><span class="nv">As</span><span class="w"> </span><span class="nv">Long</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">Private</span><span class="w"> </span><span class="nv">Sub</span><span class="w"> </span><span class="nv">Dual1_ChangeValue1</span><span class="p">(</span><span class="nv">Value1</span><span class="w"> </span><span class="nv">As</span><span class="w"> </span><span class="nv">Long</span><span class="p">)</span>
 <span class="nv">Value1</span><span class="o">=</span><span class="m">2</span><span class="o">*</span><span class="p">(</span><span class="nv">Value1</span><span class="na">\</span><span class="m">2</span><span class="p">)</span>
 <span class="nv">End</span><span class="w"> </span><span class="nv">Sub</span>
 </code></pre></div>
@@ -78933,7 +78933,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

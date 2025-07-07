@@ -79391,7 +79391,7 @@
 <p>In addition, values in <code>R</code> are negative to identify names of methods, properties and events that are inherited through the <em>class hierarchy</em> of the current class or instance.</p>
 <h2 id="variable-name-class-21">Variable (Name-Class 2.1)</h2>
 <p>Conventional APL arrays have name-class 2.1.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">NUM</span><span class="kd">←</span><span class="m">88</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">NUM</span><span class="kd">←</span><span class="m">88</span>
 <span class="w">      </span><span class="nv">CHAR</span><span class="kd">←</span><span class="s1">'Hello World'</span>
 
 <span class="w">      </span><span class="nf">⎕NC</span><span class="w"> </span><span class="o">↑</span><span class="s1">'NUM'</span><span class="w"> </span><span class="s1">'CHAR'</span>
@@ -79409,7 +79409,7 @@
 </code></pre></div>
 <h2 id="field-name-class-22">Field (Name-Class 2.2)</h2>
 <p>Fields defined by APL Classes have name-class 2.2.
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">nctest</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">nctest</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Field</span><span class="w"> </span><span class="nv">Public</span><span class="w"> </span><span class="nv">pubFld</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Field</span><span class="w"> </span><span class="nv">pvtFld</span>
 
@@ -79423,24 +79423,24 @@
 <span class="w">      </span><span class="nv">ncinst</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">nctest</span>
 </code></pre></div>
 <p>The name-class of a Field, whether Public or Private, viewed from a Method that is executing within the Instance Space, is 2.2.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ncinst</span><span class="na">.</span><span class="nv">NameClass</span><span class="s1">'pubFld'</span><span class="w"> </span><span class="s1">'pvtFld'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ncinst</span><span class="na">.</span><span class="nv">NameClass</span><span class="s1">'pubFld'</span><span class="w"> </span><span class="s1">'pvtFld'</span>
 <span class="m">2.2</span><span class="w"> </span><span class="m">2.2</span>
 </code></pre></div>
 <p>Note that an internal Method sees both Public and Private Fields in the Class Instance. However, when viewed from <em>outside</em> the instance, only public fields are visible
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NC</span><span class="w"> </span><span class="s1">'ncinst.pubFld'</span><span class="w"> </span><span class="s1">'ncinst.pvtFld'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NC</span><span class="w"> </span><span class="s1">'ncinst.pubFld'</span><span class="w"> </span><span class="s1">'ncinst.pvtFld'</span>
 <span class="m">¯2.2</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <p>In this case, the name-class is negative to indicate that the name has been exposed by the class hierarchy, rather than existing in the associated namespace which APL has created to contain the instance. The same result is returned if <code>⎕NC</code> is executed inside this space:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ncinst</span><span class="na">.</span><span class="nf">⎕NC</span><span class="s1">'pubFld'</span><span class="w"> </span><span class="s1">'pvtFld'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ncinst</span><span class="na">.</span><span class="nf">⎕NC</span><span class="s1">'pubFld'</span><span class="w"> </span><span class="s1">'pvtFld'</span>
 <span class="m">¯2.2</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <p>Note that the names of Fields are reported as being <em>unused</em> if the argument to <code>⎕NC</code> is simple.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ncinst</span><span class="na">.</span><span class="nf">⎕NC</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">6</span><span class="o">⍴</span><span class="s1">'pubFldpvtFld'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ncinst</span><span class="na">.</span><span class="nf">⎕NC</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">6</span><span class="o">⍴</span><span class="s1">'pubFldpvtFld'</span>
 <span class="m">0</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <h2 id="property-name-class-23">Property (Name-Class 2.3)</h2>
 <p>Properties defined by APL Classes have name-class 2.3.
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">nctest</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">nctest</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Field</span><span class="w"> </span><span class="nv">pvtFld</span><span class="kd">←</span><span class="m">99</span>
 
 <span class="w">    </span><span class="bp">:</span><span class="nv">Property</span><span class="w"> </span><span class="nv">pubProp</span>
@@ -79466,24 +79466,24 @@
 <span class="w">      </span><span class="nv">ncinst</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">nctest</span>
 </code></pre></div>
 <p>The name-class of a Property, whether Public or Private, <em>viewed from a Method that is executing within the Instance Space</em>, is 2.3.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ncinst</span><span class="na">.</span><span class="nv">NameClass</span><span class="s1">'pubProp'</span><span class="w"> </span><span class="s1">'pvtProp'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ncinst</span><span class="na">.</span><span class="nv">NameClass</span><span class="s1">'pubProp'</span><span class="w"> </span><span class="s1">'pvtProp'</span>
 <span class="m">2.3</span><span class="w"> </span><span class="m">2.3</span>
 </code></pre></div>
 <p>Note that an internal Method sees both Public and Private Properties in the Class Instance. However, when viewed from <em>outside</em> the instance, only Public Properties are visible
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NC</span><span class="w"> </span><span class="s1">'ncinst.pubProp'</span><span class="w"> </span><span class="s1">'ncinst.pvtProp'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NC</span><span class="w"> </span><span class="s1">'ncinst.pubProp'</span><span class="w"> </span><span class="s1">'ncinst.pvtProp'</span>
 <span class="m">¯2.3</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <p>In this case, the name-class is negative to indicate that the name has been exposed by the class hierarchy, rather than existing in the associated namespace which APL has created to contain the instance. The same result is returned if <code>⎕NC</code> is executed inside this space:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ncinst</span><span class="na">.</span><span class="nf">⎕NC</span><span class="w"> </span><span class="s1">'pubProp'</span><span class="w"> </span><span class="s1">'pvtProp'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ncinst</span><span class="na">.</span><span class="nf">⎕NC</span><span class="w"> </span><span class="s1">'pubProp'</span><span class="w"> </span><span class="s1">'pvtProp'</span>
 <span class="m">¯2.3</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <p>Note that the names of Properties are reported as being <em>unused</em> if the argument to <code>⎕NC</code> is simple.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ncinst</span><span class="na">.</span><span class="nf">⎕NC</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">6</span><span class="o">⍴</span><span class="s1">'pubProppvtProp'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ncinst</span><span class="na">.</span><span class="nf">⎕NC</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">6</span><span class="o">⍴</span><span class="s1">'pubProppvtProp'</span>
 <span class="m">0</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <h2 id="external-property-name-class-26">External Property (Name-Class 2.6)</h2>
 <p>Properties exposed by external objects (.NET and COM and the APL GUI) have name-class <code>¯2.6</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
 <span class="w">      </span><span class="nv">dt</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">2006</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">dt</span><span class="na">.</span><span class="nf">⎕NC</span><span class="w"> </span><span class="s1">'Day'</span><span class="w"> </span><span class="s1">'Month'</span><span class="w"> </span><span class="s1">'Year'</span>
 <span class="m">¯2.6</span><span class="w"> </span><span class="m">¯2.6</span><span class="w"> </span><span class="m">¯2.6</span>
@@ -79497,12 +79497,12 @@
 <span class="m">¯2.6</span><span class="w"> </span><span class="m">¯2.6</span>
 </code></pre></div>
 <p>Note that the names of such Properties are reported as being <em>unused</em> if the argument to <code>⎕NC</code> is simple.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">f</span><span class="na">.</span><span class="nf">⎕NC</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">7</span><span class="o">⍴</span><span class="s1">'CaptionSize   '</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">f</span><span class="na">.</span><span class="nf">⎕NC</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">7</span><span class="o">⍴</span><span class="s1">'CaptionSize   '</span>
 <span class="m">0</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <h2 id="defined-function-name-class-31">Defined Function (Name-Class 3.1)</h2>
 <p>Traditional APL defined functions have name-class 3.1.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">AVG</span><span class="w"> </span><span class="nv">X</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">AVG</span><span class="w"> </span><span class="nv">X</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="p">(</span><span class="o">+</span><span class="na">/</span><span class="nv">X</span><span class="p">)</span><span class="o">÷⍴</span><span class="nv">X</span>
 <span class="w">     </span><span class="bp">∇</span>
 <span class="w">      </span><span class="nv">AVG</span><span class="w"> </span><span class="o">⍳</span><span class="m">100</span>
@@ -79523,18 +79523,18 @@
 <span class="m">3.1</span>
 </code></pre></div>
 <p>Note that a function that is simply cloned from a defined function by assignment retains its name-class.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MEAN</span><span class="kd">←</span><span class="nv">AVG</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MEAN</span><span class="kd">←</span><span class="nv">AVG</span>
 <span class="w">      </span><span class="nf">⎕NC</span><span class="s1">'AVG'</span><span class="w"> </span><span class="s1">'MEAN'</span>
 <span class="m">3.1</span><span class="w"> </span><span class="m">3.1</span>
 </code></pre></div>
 <p>Whereas, the name of a function that amalgamates a defined function with any other functions has the name-class of a Derived Function, that is, 3.3.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">VMEAN</span><span class="kd">←</span><span class="nv">AVG</span><span class="na">∘</span><span class="o">,</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">VMEAN</span><span class="kd">←</span><span class="nv">AVG</span><span class="na">∘</span><span class="o">,</span>
 <span class="w">      </span><span class="nf">⎕NC</span><span class="s1">'AVG'</span><span class="w"> </span><span class="s1">'VMEAN'</span>
 <span class="m">3.1</span><span class="w"> </span><span class="m">3.3</span>
 </code></pre></div>
 <h2 id="dfn-name-class-32">Dfn (Name-Class 3.2)</h2>
 <p>Dfns have name-class 3.2
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Avg</span><span class="kd">←</span><span class="kt">{</span><span class="p">(</span><span class="o">+</span><span class="na">/</span><span class="bp">⍵</span><span class="p">)</span><span class="o">÷⍴</span><span class="bp">⍵</span><span class="kt">}</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Avg</span><span class="kd">←</span><span class="kt">{</span><span class="p">(</span><span class="o">+</span><span class="na">/</span><span class="bp">⍵</span><span class="p">)</span><span class="o">÷⍴</span><span class="bp">⍵</span><span class="kt">}</span>
 
 <span class="w">      </span><span class="nf">⎕NC</span><span class="s1">'Avg'</span>
 <span class="m">3</span>
@@ -79543,7 +79543,7 @@
 </code></pre></div>
 <h2 id="derived-function-name-class-33">Derived Function (Name-Class 3.3)</h2>
 <p>Names that reference a primitive or derived function have a name-class of 3.3.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">PLUS</span><span class="kd">←</span><span class="o">+</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">PLUS</span><span class="kd">←</span><span class="o">+</span>
 <span class="w">      </span><span class="nv">SUM</span><span class="kd">←</span><span class="o">+</span><span class="na">/</span>
 <span class="w">      </span><span class="nv">CUM</span><span class="kd">←</span><span class="nv">PLUS</span><span class="na">\</span>
 <span class="w">      </span><span class="nf">⎕NC</span><span class="s1">'PLUS'</span><span class="w"> </span><span class="s1">'SUM'</span><span class="w"> </span><span class="s1">'CUM'</span>
@@ -79552,7 +79552,7 @@
 <span class="m">3</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">3</span>
 </code></pre></div>
 <p>Note the difference between the name-class of a name referring to a defined function (3.1) and that of a name referring to a defined function bound with an operator to form a derived function (3.3). Trains, being derived functions, also have  nameclass 3.3.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">AVG</span><span class="w"> </span><span class="nv">X</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">AVG</span><span class="w"> </span><span class="nv">X</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="p">(</span><span class="o">+</span><span class="na">/</span><span class="nv">X</span><span class="p">)</span><span class="o">÷⍴</span><span class="nv">X</span>
 <span class="w">     </span><span class="bp">∇</span>
 
@@ -79566,7 +79566,7 @@
 </code></pre></div>
 <h2 id="external-function-name-class-36">External Function (Name-Class 3.6)</h2>
 <p>Methods exposed by the Dyalog APL GUI and COM and .NET objects have name-class <code>¯3.6</code>. Methods exposed by External Functions created using <code>⎕NA</code> and <code>⎕SH</code> all have name-class <code>3.6</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
 
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nf">⎕NC</span><span class="s1">'GetTextSize'</span><span class="w"> </span><span class="s1">'GetFocus'</span>
 <span class="m">¯3.6</span><span class="w"> </span><span class="m">¯3.6</span>
@@ -79580,7 +79580,7 @@
 <span class="w">      </span><span class="nv">dt</span><span class="na">.</span><span class="nf">⎕NC</span><span class="w"> </span><span class="s1">'AddDays'</span><span class="w"> </span><span class="s1">'AddHours'</span>
 <span class="m">¯3.6</span><span class="w"> </span><span class="m">¯3.6</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'beep'</span><span class="nf">⎕NA</span><span class="s1">'user32|MessageBeep i'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'beep'</span><span class="nf">⎕NA</span><span class="s1">'user32|MessageBeep i'</span>
 
 <span class="w">      </span><span class="nf">⎕NC</span><span class="s1">'beep'</span>
 <span class="m">3</span>
@@ -79593,13 +79593,13 @@
 <span class="m">3.6</span><span class="w"> </span><span class="m">3.6</span><span class="w"> </span>
 </code></pre></div>
 <p>Note that the names of such Methods are reported as being <em>unused</em> if the argument to <code>⎕NC</code> is simple.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nf">⎕NC</span><span class="o">↑</span><span class="s1">'GetTextSize'</span><span class="w"> </span><span class="s1">'GetFocus'</span>
 <span class="m">0</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <h2 id="operator-name-class-41">Operator (Name-Class 4.1)</h2>
 <p>Traditional Defined Operators have name-class 4.1.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="nv">FILTER</span><span class="bp">∇</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="nv">FILTER</span><span class="bp">∇</span>
 <span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">VEC</span><span class="kd">←</span><span class="p">(</span><span class="nv">P</span><span class="w"> </span><span class="nv">FILTER</span><span class="p">)</span><span class="nv">VEC</span><span class="w">  </span><span class="c1">⍝ Select from VEC those elts ..</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">VEC</span><span class="kd">←</span><span class="p">(</span><span class="nv">P</span><span class="na">¨</span><span class="nv">VEC</span><span class="p">)</span><span class="na">/</span><span class="nv">VEC</span><span class="w">    </span><span class="c1">⍝ for which BOOL fn P is true.</span>
 <span class="w">     </span><span class="bp">∇</span>
@@ -79611,7 +79611,7 @@
 </code></pre></div>
 <h2 id="dop-name-class-42">Dop (Name-Class 4.2)</h2>
 <p>Dops have name-class 4.2.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nv">pred</span><span class="kd">←</span><span class="kt">{</span><span class="nf">⎕IO</span><span class="w"> </span><span class="nf">⎕ML</span><span class="kd">←</span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="w">   </span><span class="c1">⍝ Partitioned reduction.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="nv">pred</span><span class="kd">←</span><span class="kt">{</span><span class="nf">⎕IO</span><span class="w"> </span><span class="nf">⎕ML</span><span class="kd">←</span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="w">   </span><span class="c1">⍝ Partitioned reduction.</span>
 <span class="w">     </span><span class="o">⊃</span><span class="bp">⍺⍺</span><span class="na">/¨</span><span class="p">(</span><span class="bp">⍺</span><span class="na">/</span><span class="o">⍳⍴</span><span class="bp">⍺</span><span class="p">)</span><span class="o">⊂</span><span class="bp">⍵</span>
 <span class="w">     </span><span class="kt">}</span>
 
@@ -79630,13 +79630,13 @@
 <li>A dyadic operator curried with its right-operand. </li>
 </ul>
 <h2 class="example">Example</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="nv">each</span><span class="kd">←</span><span class="na">¨</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="nv">each</span><span class="kd">←</span><span class="na">¨</span>
 <span class="w">       </span><span class="nv">each</span>
 <span class="na">¨</span>
 <span class="w">       </span><span class="nf">⎕NC</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'each'</span>
 <span class="m">4.3</span><span class="w"> </span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">       </span><span class="nv">inv</span><span class="kd">←</span><span class="na">⍣</span><span class="m">¯1</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="nv">inv</span><span class="kd">←</span><span class="na">⍣</span><span class="m">¯1</span>
 <span class="w">       </span><span class="nv">inv</span>
 <span class="na">⍣</span><span class="w"> </span><span class="m">¯1</span>
 <span class="w">       </span><span class="nf">⎕NC</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'inv'</span>
@@ -79649,7 +79649,7 @@
 </code></pre></div>
 <h2 id="external-event-name-class-86">External Event (Name-Class 8.6)</h2>
 <p>Events exposed by Dyalog APL GUI objects, COM and .NET objects have name-class <code>¯8.6</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">f</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="s1">'Form'</span><span class="p">(</span><span class="s1">'Caption'</span><span class="w"> </span><span class="s1">'Dyalog GUI Form'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">f</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="s1">'Form'</span><span class="p">(</span><span class="s1">'Caption'</span><span class="w"> </span><span class="s1">'Dyalog GUI Form'</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">f</span><span class="na">.</span><span class="nf">⎕NC</span><span class="s1">'Close'</span><span class="w"> </span><span class="s1">'Configure'</span><span class="w"> </span><span class="s1">'MouseDown'</span>
 <span class="m">¯8.6</span><span class="w"> </span><span class="m">¯8.6</span><span class="w"> </span><span class="m">¯8.6</span>
 
@@ -79668,14 +79668,14 @@
 </code></pre></div>
 <h2 id="namespace-name-class-91">Namespace (Name-Class 9.1)</h2>
 <p>Plain namespaces created using <code>⎕</code>NS, or fixed from a <code>:Namespace</code> script, have name-class 9.1.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'MYSPACE'</span><span class="w"> </span><span class="nf">⎕NS</span><span class="w"> </span><span class="s1">''</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'MYSPACE'</span><span class="w"> </span><span class="nf">⎕NS</span><span class="w"> </span><span class="s1">''</span>
 <span class="w">      </span><span class="nf">⎕NC</span><span class="s1">'MYSPACE'</span>
 <span class="m">9</span>
 <span class="w">      </span><span class="nf">⎕NC</span><span class="o">⊂</span><span class="s1">'MYSPACE'</span>
 <span class="m">9.1</span>
 </code></pre></div>
 <p>Note however that a namespace created by cloning, where the right argument to <code>⎕NS</code> is a <code>⎕OR</code> of a namespace, retains the name-class of the original space.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'CopyMYSPACE'</span><span class="nf">⎕NS</span><span class="w"> </span><span class="nf">⎕OR</span><span class="w"> </span><span class="s1">'MYSPACE'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'CopyMYSPACE'</span><span class="nf">⎕NS</span><span class="w"> </span><span class="nf">⎕OR</span><span class="w"> </span><span class="s1">'MYSPACE'</span>
 <span class="w">      </span><span class="s1">'CopyF'</span><span class="nf">⎕NS</span><span class="w"> </span><span class="nf">⎕OR</span><span class="w"> </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
 
 <span class="w">      </span><span class="nf">⎕NC</span><span class="s1">'MYSPACE'</span><span class="w"> </span><span class="s1">'F'</span>
@@ -79684,13 +79684,13 @@
 <span class="m">9.1</span><span class="w"> </span><span class="m">9.2</span>
 </code></pre></div>
 <p>The Name-Class of .NET namespaces (visible through <code>⎕USING</code>) is also 9.1
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">''</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">''</span>
 <span class="w">      </span><span class="nf">⎕NC</span><span class="w"> </span><span class="s1">'System'</span><span class="w"> </span><span class="s1">'System.IO'</span>
 <span class="m">9.1</span><span class="w"> </span><span class="m">9.1</span>
 </code></pre></div>
 <h2 id="instance-name-class-92">Instance (Name-Class 9.2)</h2>
 <p>Instances of Classes created using <code>⎕NEW</code>, and GUI objects created using <code>⎕WC</code> all have name-class 9.2.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MyInst</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">MyClass</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MyInst</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">MyClass</span>
 <span class="w">      </span><span class="nf">⎕NC</span><span class="s1">'MyInst'</span>
 <span class="m">9</span>
 <span class="w">      </span><span class="nf">⎕NC</span><span class="o">⊂</span><span class="s1">'MyInst'</span>
@@ -79706,37 +79706,37 @@
 <span class="w">      </span><span class="nf">⎕NC</span><span class="s1">'F'</span><span class="w"> </span><span class="s1">'F.B'</span>
 <span class="m">9.2</span><span class="w"> </span><span class="m">9.2</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nf">⎕NC</span><span class="s1">'B'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nf">⎕NC</span><span class="s1">'B'</span>
 <span class="m">9</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nf">⎕NC</span><span class="o">⊂,</span><span class="s1">'B'</span>
 <span class="m">9.2</span>
 </code></pre></div>
 <p>Instances of COM Objects whether created using <code>⎕WC</code> or <code>⎕NEW</code> also have name-class 9.2.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">xl</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="s1">'OLEClient'</span><span class="p">(</span><span class="o">⊂</span><span class="s1">'ClassName'</span><span class="w"> </span><span class="s1">'Excel.Application'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">xl</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="s1">'OLEClient'</span><span class="p">(</span><span class="o">⊂</span><span class="s1">'ClassName'</span><span class="w"> </span><span class="s1">'Excel.Application'</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">'XL'</span><span class="nf">⎕WC</span><span class="s1">'OLEClient'</span><span class="w"> </span><span class="s1">'Excel.Application'</span>
 <span class="w">      </span><span class="nf">⎕NC</span><span class="s1">'xl'</span><span class="w"> </span><span class="s1">'XL'</span>
 <span class="m">9.2</span><span class="w"> </span><span class="m">9.2</span>
 </code></pre></div>
 <p>The same is true of Instances of .NET Classes (Types) whether created using <code>⎕NEW</code> or <code>.New</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
 <span class="w">      </span><span class="nv">dt</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">3</span><span class="o">↑</span><span class="nf">⎕TS</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">DT</span><span class="kd">←</span><span class="nv">DateTime</span><span class="na">.</span><span class="nv">New</span><span class="w"> </span><span class="m">3</span><span class="o">↑</span><span class="nf">⎕TS</span>
 <span class="w">      </span><span class="nf">⎕NC</span><span class="w"> </span><span class="s1">'dt'</span><span class="w"> </span><span class="s1">'DT'</span>
 <span class="m">9.2</span><span class="w"> </span><span class="m">9.2</span>
 </code></pre></div>
 <p>Note that if you remove the GUI component of a GUI object, using the Detach method, it reverts to a plain namespace.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">Detach</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">Detach</span>
 <span class="w">      </span><span class="nf">⎕NC</span><span class="o">⊂,</span><span class="s1">'F'</span>
 <span class="m">9.1</span>
 </code></pre></div>
 <p>Correspondingly, if you attach a GUI component to a plain namespace using the monadic form of <code>⎕WC</code>, it morphs into a GUI object
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'PropertySheet'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'PropertySheet'</span>
 <span class="w">      </span><span class="nf">⎕NC</span><span class="o">⊂,</span><span class="s1">'F'</span>
 <span class="m">9.2</span>
 </code></pre></div>
 <h2 id="class-name-class-94">Class (Name-Class 9.4)</h2>
 <p>Classes created using the editor or <code>⎕FIX</code> have name-class 9.4.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">ED</span><span class="w"> </span><span class="o">○</span><span class="nv">MyClass</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">ED</span><span class="w"> </span><span class="o">○</span><span class="nv">MyClass</span>
 
 <span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">MyClass</span>
 <span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">NameClass</span><span class="w"> </span><span class="nv">x</span>
@@ -79750,19 +79750,19 @@
 <span class="w">      </span><span class="nf">⎕NC</span><span class="o">⊂</span><span class="s1">'MyClass'</span>
 <span class="m">9.4</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕FIX</span><span class="w"> </span><span class="s1">':Class UrClass'</span><span class="w">  </span><span class="s1">':EndClass'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕FIX</span><span class="w"> </span><span class="s1">':Class UrClass'</span><span class="w">  </span><span class="s1">':EndClass'</span>
 <span class="w">      </span><span class="nf">⎕NC</span><span class="w"> </span><span class="s1">'MyClass'</span><span class="w"> </span><span class="s1">'UrClass'</span>
 <span class="m">9.4</span><span class="w"> </span><span class="m">9.4</span>
 </code></pre></div>
 <p>Note that the name of the Class is visible to a Public Method in that Class, or an Instance of that Class.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MyClass</span><span class="na">.</span><span class="nv">NameClass</span><span class="s1">'MyClass'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MyClass</span><span class="na">.</span><span class="nv">NameClass</span><span class="s1">'MyClass'</span>
 <span class="m">9</span>
 <span class="w">      </span><span class="nv">MyClass</span><span class="na">.</span><span class="nv">NameClass</span><span class="o">⊂</span><span class="s1">'MyClass'</span>
 <span class="m">9.4</span>
 </code></pre></div>
 <h2 id="interface-name-class-95">Interface (Name-Class 9.5)</h2>
 <p>Interfaces, defined by <code>:Interface ... :EndInterface</code> clauses, have name-class 9.5.
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Interface</span><span class="w"> </span><span class="nv">IGolfClub</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Interface</span><span class="w"> </span><span class="nv">IGolfClub</span>
 <span class="bp">:</span><span class="nv">Property</span><span class="w"> </span><span class="nv">Club</span>
 <span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">get</span>
 <span class="w">    </span><span class="bp">∇</span>
@@ -79782,7 +79782,7 @@
 </code></pre></div>
 <h2 id="external-class-name-class-96">External Class (Name-Class 9.6)</h2>
 <p>External Classes (Types) exposed by .NET have name-class 9.6.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span><span class="w"> </span><span class="s1">'System.IO'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span><span class="w"> </span><span class="s1">'System.IO'</span>
 
 <span class="w">      </span><span class="nf">⎕NC</span><span class="w"> </span><span class="s1">'DateTime'</span><span class="w"> </span><span class="s1">'File'</span><span class="w"> </span><span class="s1">'DirectoryInfo'</span>
 <span class="m">9.6</span><span class="w"> </span><span class="m">9.6</span><span class="w"> </span><span class="m">9.6</span>
@@ -79790,7 +79790,7 @@
 <p>Note that referencing a .NET class (type) with <code>⎕NC</code>, fixes the name of that class in the workspace and obviates the need for APL to repeat the task of searching for and loading the class when the name is next used.</p>
 <h2 id="external-interface-name-class-97">External Interface (Name-Class 9.7)</h2>
 <p>External Interfaces exposed by .NET have name-class 9.7.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System.Web.UI,system.web.dll'</span><span class="w"> </span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System.Web.UI,system.web.dll'</span><span class="w"> </span>
 
 <span class="w">      </span><span class="nf">⎕NC</span><span class="w"> </span><span class="s1">'IPostBackDataHandler'</span><span class="w"> </span><span class="s1">'IPostBackEventHandler'</span><span class="w"> </span>
 <span class="m">9.7</span><span class="w"> </span><span class="m">9.7</span>
@@ -79825,7 +79825,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

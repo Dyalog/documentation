@@ -78982,7 +78982,7 @@
 </ul>
 <p>The names and values correspond to configuration parameters, but names are not case sensitive. Any named values may be defined; an APL application may query the values using <code>+2⎕NQ'.' 'GetEnvironment' name</code>, or using the <code>]config</code> user command. Note that <code>GetEnvironment</code> returns the value in use as defined by the precedence rules (see <strong>Precedence above</strong>).</p>
 <h3 class="example">Example</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'.'</span><span class="w"> </span><span class="s1">'GetEnvironment'</span><span class="w"> </span><span class="p">(</span><span class="s1">'MaxWS'</span><span class="w"> </span><span class="s1">'Captions\Session'</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'.'</span><span class="w"> </span><span class="s1">'GetEnvironment'</span><span class="w"> </span><span class="p">(</span><span class="s1">'MaxWS'</span><span class="w"> </span><span class="s1">'Captions\Session'</span><span class="p">)</span>
 <span class="err">┌────┬───────────────────────┐</span>
 <span class="err">│</span><span class="m">256</span><span class="nv">M</span><span class="err">│</span><span class="nv">My</span><span class="w"> </span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">V18</span><span class="m">.0</span><span class="w"> </span><span class="nv">Session</span><span class="err">│</span>
 <span class="err">└────┴───────────────────────┘</span>
@@ -79000,7 +79000,7 @@
 <p>whereas,</p>
 <p><code>WSPATH: ["c:\Dyalog18.0"]</code> means  <code>c:Dyalog18.0</code>.</p>
 <h4 class="example">Example</h4>
-<div class="highlight"><pre><span></span><code><span class="kt">{</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="kt">{</span>
 <span class="w">  </span><span class="nv">Extend</span><span class="bp">:</span><span class="w"> </span><span class="s2">"my_default_configuration.dcfg"</span><span class="o">,</span>
 
 <span class="w">  </span><span class="nv">Settings</span><span class="bp">:</span><span class="w"> </span><span class="kt">{</span>
@@ -79016,16 +79016,16 @@
 </code></pre></div>
 <h2 id="arrays">Arrays</h2>
 <p>An array may be used to define file paths etc. For example,
-</p><div class="highlight"><pre><span></span><code><span class="nv">WSPATH</span><span class="bp">:</span><span class="w"> </span><span class="sr">[</span><span class="s2">"/dir1"</span><span class="o">,</span><span class="w"> </span><span class="s2">"/dir2"</span><span class="sr">]</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">WSPATH</span><span class="bp">:</span><span class="w"> </span><span class="sr">[</span><span class="s2">"/dir1"</span><span class="o">,</span><span class="w"> </span><span class="s2">"/dir2"</span><span class="sr">]</span>
 </code></pre></div>
 <p>The only parameters which may be defined as arrays are <strong>WSPATH</strong>, <strong>WSEXT</strong> and <strong>CFEXT</strong>.</p>
 <h4 id="references-to-other-configuration-parameters">References to other Configuration Parameters</h4>
 <p>Configuration parameters which are string values may include references to other configuration parameters (regardless of where they are defined) using square bracket delimiters. For example:
-</p><div class="highlight"><pre><span></span><code><span class="nv">MySetting</span><span class="bp">:</span><span class="w"> </span><span class="s2">"[DYALOG]/MyFile"</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">MySetting</span><span class="bp">:</span><span class="w"> </span><span class="s2">"[DYALOG]/MyFile"</span>
 </code></pre></div>
 <p>will replace <code>[DYALOG</code>] with the value of the <strong>DYALOG</strong> configuration value.</p>
 <p>If the string inside the <code>[]</code> delimiters is "<code>.</code>", the "<code>.</code>" is replaced is replaced with the path of the directory containing the configuration file itself. Therefore,
-</p><div class="highlight"><pre><span></span><code><span class="nv">FILENAME</span><span class="bp">:</span><span class="w"> </span><span class="s2">"[.]/x.txt"</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">FILENAME</span><span class="bp">:</span><span class="w"> </span><span class="s2">"[.]/x.txt"</span>
 </code></pre></div>
 <p>will set the parameter <strong>FILENAME</strong> to a value which is a reference to a file called <code>x.txt</code> in the same directory as the configuration file defining it.</p>
 <p>Note that:</p>
@@ -79036,12 +79036,12 @@
 <h4 id="nested-structures">Nested Structures</h4>
 <p>Some parameters are stored in sub-folders in the Windows Registry. Currently, all such parameters used by Dyalog APL itself relate to the Windows IDE, but you can create your own application-specific structures..</p>
 <p>The Configuration file supports this structure by defining an object that corresponds to a Registry sub-folder. For example:
-</p><div class="highlight"><pre><span></span><code><span class="nv">Captions</span><span class="bp">:</span><span class="w"> </span><span class="kt">{</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">Captions</span><span class="bp">:</span><span class="w"> </span><span class="kt">{</span>
 <span class="w">    </span><span class="nv">Session</span><span class="bp">:</span><span class="w"> </span><span class="s2">"My Dyalog Session"</span><span class="o">,</span>
 <span class="w">    </span><span class="nv">Status</span><span class="bp">:</span><span class="w"> </span><span class="s2">"My Status window"</span><span class="o">,</span>
 <span class="kt">}</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'.'</span><span class="w"> </span><span class="s1">'GetEnvironment'</span><span class="w"> </span><span class="s1">'Captions\Session'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="m">2</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'.'</span><span class="w"> </span><span class="s1">'GetEnvironment'</span><span class="w"> </span><span class="s1">'Captions\Session'</span>
 <span class="nv">My</span><span class="w"> </span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">Session</span>
 </code></pre></div>
 
@@ -79073,7 +79073,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

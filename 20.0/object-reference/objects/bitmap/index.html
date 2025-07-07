@@ -78725,10 +78725,10 @@
 <p>The <a href="../../properties/size/">Size</a> property allows you to query the size of a Bitmap without having to retrieve the <a href="../../properties/cbits/">CBits</a> or <a href="../../properties/bits/">Bits</a> property and then take its "shape". This will be noticeably faster for a large Bitmap. If you set the <a href="../../properties/size/">Size</a> property using <a href="../../../language-reference-guide/system-functions/ws"><code>⎕WS</code></a> the Bitmap is scaled to the new size.</p>
 <p>A useful feature of a Bitmap is that it can be the parent of any of the graphical objects. This allows you to create or edit a bitmap by drawing lines, circles, etc. in it.</p>
 <p>The <a href="../../methodorevents/fileread/">FileRead</a> (90) and <a href="../../methodorevents/filewrite/">FileWrite</a> (91) methods allow you to dynamically manage bitmap files (.BMP). The expression:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">bmname</span><span class="na">.</span><span class="nv">FileWrite</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">bmname</span><span class="na">.</span><span class="nv">FileWrite</span>
 </code></pre></div>
 <p>causes the Bitmap called <code>bmname</code> to be written to the file specified by the current value of the <a href="../../properties/file/">File</a> property. The file is automatically written in standard bitmap format. Similarly, the expression:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">bmname</span><span class="na">.</span><span class="nv">FileRead</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">bmname</span><span class="na">.</span><span class="nv">FileRead</span>
 </code></pre></div>
 <p>causes the Bitmap called <code>bmname</code> to be redefined from the bitmap file specified by the current value of the <a href="../../properties/file/">File</a> property.</p>
 <p>The <a href="../../methodorevents/makegif/">MakeGIF</a> and <a href="../../methodorevents/makepng/">MakePNG</a> methods may be used to convert the image represented by a Bitmap object into a GIF or PNG data stream, suitable for display in a web browser. The <a href="../../methodorevents/tcpsendpicture/">TCPSendPicture</a> method may be used to transfer a Bitmap on a TCP/IP socket.</p>
@@ -78765,7 +78765,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78720,7 +78720,7 @@
 
 <p><code>R</code> is a nested vector of vectors giving the names of the functions or operators in the execution stack.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SI</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SI</span>
 <span class="c1">#.PLUS[2]*</span>
 <span class="na">.</span>
 <span class="c1">#.MATDIV[4]</span>
@@ -78734,7 +78734,7 @@
 <span class="m">1</span>
 </code></pre></div>
 <p>If execution stops in a callback function, <code>⎕DQ</code> will appear on the stack, and may occur more than once
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SI</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">SI</span>
 <span class="c1">#.ERRFN[7]*</span>
 <span class="nf">⎕DQ</span>
 <span class="c1">#.CALC</span>
@@ -78742,13 +78742,13 @@
 <span class="c1">#.MAIN</span>
 </code></pre></div>
 <p>To edit the function on the top of the stack:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕ED</span><span class="w"> </span><span class="o">⊃</span><span class="nf">⎕SI</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕ED</span><span class="w"> </span><span class="o">⊃</span><span class="nf">⎕SI</span>
 </code></pre></div>
 <p>The name of the function which called this one:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊃</span><span class="m">1</span><span class="o">↓</span><span class="nf">⎕SI</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊃</span><span class="m">1</span><span class="o">↓</span><span class="nf">⎕SI</span>
 </code></pre></div>
 <p>To check if the function <code>∆N</code> is pendent:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="p">((</span><span class="o">⊂</span><span class="nv">∆N</span><span class="p">)</span><span class="o">∊</span><span class="m">1</span><span class="o">↓</span><span class="nf">⎕SI</span><span class="p">)</span><span class="na">/</span><span class="s1">'Warning : '</span><span class="o">,</span><span class="nv">∆N</span><span class="o">,</span><span class="s1">' is pendent'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="p">((</span><span class="o">⊂</span><span class="nv">∆N</span><span class="p">)</span><span class="o">∊</span><span class="m">1</span><span class="o">↓</span><span class="nf">⎕SI</span><span class="p">)</span><span class="na">/</span><span class="s1">'Warning : '</span><span class="o">,</span><span class="nv">∆N</span><span class="o">,</span><span class="s1">' is pendent'</span>
 </code></pre></div>
 <p>See also <a href="../xsi/">Extended State Indicator</a>.</p>
 
@@ -78780,7 +78780,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

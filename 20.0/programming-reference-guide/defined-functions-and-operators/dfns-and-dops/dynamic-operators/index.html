@@ -78716,7 +78716,7 @@
 <h2 class="example">Example</h2>
 
 <p>The following monadic <code>each</code> operator applies its function operand only to unique elements of its argument. It then distributes the result to match the original argument. This can deliver a performance improvement over the primitive each (<code>¨</code>) operator if the operand function is costly and the argument contains a significant number of duplicate elements. Note however, that if the operand function causes side effects, the operation of dop and primitive versions will be different.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">each</span><span class="kd">←</span><span class="kt">{</span><span class="w">              </span><span class="c1">⍝ Fast each:                           </span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">each</span><span class="kd">←</span><span class="kt">{</span><span class="w">              </span><span class="c1">⍝ Fast each:                           </span>
 <span class="w">          </span><span class="nv">shp</span><span class="kd">←</span><span class="o">⍴</span><span class="bp">⍵</span><span class="w">          </span><span class="c1">⍝ Shape and ...                        </span>
 <span class="w">          </span><span class="nv">vec</span><span class="kd">←</span><span class="o">,</span><span class="bp">⍵</span><span class="w">          </span><span class="c1">⍝ ... ravel of arg.                    </span>
 <span class="w">          </span><span class="nv">nub</span><span class="kd">←</span><span class="o">∪</span><span class="nv">vec</span><span class="w">        </span><span class="c1">⍝ Vector of unique elements.           </span>
@@ -78726,7 +78726,7 @@
 <span class="w">      </span><span class="kt">}</span>
 </code></pre></div>
 <p>The dyadic <code>else</code> operator applies its left (else right) operand to its right argument depending on its left argument.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">else</span><span class="kd">←</span><span class="kt">{</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">else</span><span class="kd">←</span><span class="kt">{</span>
 <span class="w">          </span><span class="bp">⍺:</span><span class="w"> </span><span class="bp">⍺⍺</span><span class="w"> </span><span class="bp">⍵</span><span class="w">     </span><span class="c1">⍝ True: apply Left operand</span>
 <span class="w">             </span><span class="bp">⍵⍵</span><span class="w"> </span><span class="bp">⍵</span><span class="w">     </span><span class="c1">⍝ Else,  ..   Right   ..</span>
 <span class="w">      </span><span class="kt">}</span>
@@ -78762,7 +78762,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

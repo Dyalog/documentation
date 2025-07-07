@@ -78816,7 +78816,7 @@
 <p>If an APL error occurs in an APL .NET object, a suspension will occur and the Session will be available for debugging. But what if you want to force this to happen so that you can Trace your code and see what is happening?</p>
 <p>If your APL class is built directly from a workspace, you can force a suspension by setting stops in your code before using <em>Export</em> to build the DLL. If your class is a Web Page or Web Service where the code is contained in a workspace using the <em>workspace behind</em> technique (See Chapter 8), you can set stops in this workspace before you <code>)SAVE</code> it.</p>
 <p>If your APL class is defined entirely in a Web Page, Web Service, or an APLScript file, the only way to set a break point is to insert a line that sets a stop explicitly using <code>⎕STOP</code>. It is essential that this line appears after the definition of the function in the script. For example, to set a stop in the <code>Intro\intro1.aspx</code> example discussed in Chapter 8, the script section could be as follows:
-</p><div class="highlight"><pre><span></span><code><span class="nt">&lt;script</span><span class="w"> </span><span class="na">language=</span><span class="s">"dyalog"</span><span class="w"> </span><span class="na">runat=</span><span class="s">"server"</span><span class="nt">&gt;</span>
+</p><div class="language-xml highlight"><pre><span></span><code><span class="nt">&lt;script</span><span class="w"> </span><span class="na">language=</span><span class="s">"dyalog"</span><span class="w"> </span><span class="na">runat=</span><span class="s">"server"</span><span class="nt">&gt;</span>
 
 ∇Rotate<span class="w"> </span>args
 :Access<span class="w"> </span>Public
@@ -78870,7 +78870,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

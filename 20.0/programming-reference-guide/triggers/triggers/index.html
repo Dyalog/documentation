@@ -78709,7 +78709,7 @@
 <p>Triggers <em>can</em> also be applied to variables outside a class, and there will be situations where this is very useful. However, dynamically attaching and detaching a trigger from a variable is a little tricky at present.</p>
 <p>The function that is called when a variable or Field changes is referred to as the <em>Trigger Function</em>. The name of a variable or Field which has an associated Trigger Function is termed a <em>Trigger</em>.</p>
 <p>A function is declared as a Trigger function by including the statement:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Trigger</span><span class="w"> </span><span class="nv">Name1</span><span class="o">,</span><span class="nv">Name2</span><span class="o">,</span><span class="nv">Name3</span><span class="o">,</span><span class="w"> </span><span class="na">...</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Trigger</span><span class="w"> </span><span class="nv">Name1</span><span class="o">,</span><span class="nv">Name2</span><span class="o">,</span><span class="nv">Name3</span><span class="o">,</span><span class="w"> </span><span class="na">...</span>
 </code></pre></div>
 <p>where <code>Name1</code>, <code>Name2</code> etc. are the Triggers.</p>
 <p>When a Trigger function is invoked, it is passed an Instance of the internal Class <code>TriggerArguments</code>. This Class has 3 Fields:</p>
@@ -78742,7 +78742,7 @@
 <p>A Trigger may have only a single Trigger Function. If the Trigger is named in more than one Trigger Function, the Trigger Function that was last fixed will apply.</p>
 <p>In general, it is inadvisable for a Trigger function to modify its own Trigger, as this will potentially cause the Trigger to be invoked repeatedly and forever.</p>
 <p>To associate a Trigger function with a <em>local</em> name, it is necessary to dynamically fix the Trigger function in the function in which the Trigger is localised; for example:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">TRIG</span><span class="w"> </span><span class="nv">arg</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">TRIG</span><span class="w"> </span><span class="nv">arg</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Trigger</span><span class="w"> </span><span class="nv">A</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="na">...</span>
 
@@ -78779,7 +78779,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

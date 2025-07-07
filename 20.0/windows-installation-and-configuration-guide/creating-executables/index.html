@@ -78775,7 +78775,7 @@
 </ul>
 <p>You can package the workspace as a stand-alone executable or as a .EXE file that must be accompanied by the Dyalog APL Dynamic Link Library (<code>dyalog150.dll</code> or <code>dyalog150rt.dll</code>), in which case the DLL should be installed in the same directory (as the EXE) or in the Windows System directory.</p>
 <p>Various Dyalog-supplied files are required  (such as the runtime DLL for creating a bound runtime executable); all such files are assumed to reside in the <strong>Dyalog</strong> directory, as specified by default in the registry.  The location of this directory is most easily reported by calling
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="m">2</span><span class="nf">⎕nq</span><span class="w"> </span><span class="s1">'.'</span><span class="w"> </span><span class="s1">'GetEnvironment'</span><span class="w"> </span><span class="s1">'Dyalog'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="m">2</span><span class="nf">⎕nq</span><span class="w"> </span><span class="s1">'.'</span><span class="w"> </span><span class="s1">'GetEnvironment'</span><span class="w"> </span><span class="s1">'Dyalog'</span>
 </code></pre></div>
 <p>The creation of both in-process and out-of-process COM servers produces a .TLB (Type Library) file. This file is created in the same directory as the workspace - so write access must be allowed to this directory. In the case of an in-process server, the content of this file is then embedded into the DLL, and the file is deleted. For an out-of-process server the file persists and may be needed at runtime. This requirement means that even if you do not <code>)Save</code> the workspace, you should set the workspace name  so that <code>)SAVE</code> would work - that is the directory where the workspace would be saved has write access.</p>
 <p>In addition, a temporary copy of your workspace is created, the location of which is determined by the Windows function <code>GetTempPath()</code>.</p>
@@ -78863,7 +78863,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

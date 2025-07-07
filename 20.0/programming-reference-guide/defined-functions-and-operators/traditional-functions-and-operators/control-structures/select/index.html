@@ -78710,7 +78710,7 @@
 
 <p><a class="noprint" href="../select-statement-definition/">Formal Definition</a></p>
 <p>A <code>:Select</code> structure is used to execute alternative blocks of code depending upon the value of an array.  For example, the following displays <code>'I is 1'</code> if the variable <code>I</code> has the value 1, <code>'I is 2'</code> if it is 2, or <code>'I is neither 1 nor 2'</code> if it has some other value.
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Select</span><span class="w"> </span><span class="nv">I</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Select</span><span class="w"> </span><span class="nv">I</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Case</span><span class="w"> </span><span class="m">1</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">       </span><span class="s1">'I is 1'</span>
 <span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Case</span><span class="w"> </span><span class="m">2</span>
@@ -78723,7 +78723,7 @@
 <p>Instead of a <code>:Case</code> statement, you may also use a <code>:CaseList</code> statement.  If so, the <em>enclose of</em> the array expression to the right of <code>:Select</code> is tested for membership of the array expression to the right of the <code>:CaseList</code> using the <code>∊</code> primitive function.</p>
 <p>Note also that any code placed between the <code>:Select</code> and the first <code>:Case</code> or <code>:CaseList</code> statements are unreachable; future versions of Dyalog APL may generate an error when attempting to fix functions which include such code.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Select</span><span class="w"> </span><span class="o">?</span><span class="m">6</span><span class="w"> </span><span class="m">6</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Select</span><span class="w"> </span><span class="o">?</span><span class="m">6</span><span class="w"> </span><span class="m">6</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Case</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">6</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">       </span><span class="s1">'Box Cars'</span>
 <span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Case</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span>
@@ -78765,7 +78765,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

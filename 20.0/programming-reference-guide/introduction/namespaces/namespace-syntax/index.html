@@ -78770,14 +78770,14 @@
 <h1 class="heading"><span class="name">Namespaces</span></h1>
 
 <p>Names within namespaces may be referenced <em>explicitly</em> or <em>implicitly</em>.  An <em>explicit</em> reference requires that you identify the object by its full or relative pathname using a <code>'.'</code> syntax; for example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">X</span><span class="na">.</span><span class="nv">NUMB</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">88</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">X</span><span class="na">.</span><span class="nv">NUMB</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">88</span>
 </code></pre></div>
 <p>sets the variable <code>NUMB</code> in namespace <code>X</code> to 88.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">88</span><span class="w"> </span><span class="nv">UTIL</span><span class="na">.</span><span class="nv">FOO</span><span class="w"> </span><span class="m">99</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">88</span><span class="w"> </span><span class="nv">UTIL</span><span class="na">.</span><span class="nv">FOO</span><span class="w"> </span><span class="m">99</span>
 </code></pre></div>
 <p>calls dyadic function <code>FOO</code> in namespace <code>UTIL</code> with left and right arguments of 88 and 99 respectively.  The interpreter can distinguish between this use of <code>'.'</code> and its use as the inner product operator, because the leftmost name: <code>UTIL</code> is a (class 9) namespace, rather than a (class 3) function.</p>
 <p>The general namespace reference syntax is:
-</p><div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nv">SPACE</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="nv">SPACE</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="p">(</span><span class="na">...</span><span class="p">)</span><span class="w"> </span><span class="nv">EXPR</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">  </span><span class="nv">SPACE</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="nv">SPACE</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="p">(</span><span class="na">...</span><span class="p">)</span><span class="w"> </span><span class="nv">EXPR</span>
 </code></pre></div>
 <p>Where <code>SPACE</code> is an <em>expression</em> which resolves to a namespace reference, and <code>EXPR</code> is any APL expression to be resolved in the resulting namespace.</p>
 <p>There are two special space names:</p>
@@ -78785,7 +78785,7 @@
 <p><code>##</code> is the parent or space containing the current namespace.</p>
 <p><code>⎕SE</code> is a system namespace which is preserved across workspace load and clear.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">WSDOC</span><span class="na">.</span><span class="nv">PAGE</span><span class="na">.</span><span class="nv">NO</span><span class="w"> </span><span class="o">+</span><span class="kd">←</span><span class="w"> </span><span class="m">1</span><span class="w">     </span><span class="c1">⍝ Increment WSDOC page count</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">WSDOC</span><span class="na">.</span><span class="nv">PAGE</span><span class="na">.</span><span class="nv">NO</span><span class="w"> </span><span class="o">+</span><span class="kd">←</span><span class="w"> </span><span class="m">1</span><span class="w">     </span><span class="c1">⍝ Increment WSDOC page count</span>
 <span class="w"> </span>
 <span class="w">      </span><span class="c1">#.⎕NL 2                   ⍝ Variables in root space</span>
 <span class="w"> </span>
@@ -78805,7 +78805,7 @@
 </code></pre></div>
 <p>You may also reference a function or operator in a namespace <em>implicitly</em> using the mechanism provided by <code>⎕EXPORT</code> (See <a href="../../../../language-reference-guide/system-functions/export">Language Reference</a>) and <code>⎕PATH</code>. If you reference a name that is undefined in the current space, the system searches for it in the list of exported names defined for the namespaces specified by <code>⎕PATH</code>. See <a href="../../../../language-reference-guide/system-functions/path">Language Reference</a> for further details.</p>
 <p>Notice that the expression to the right of a dot may be arbitrarily complex and will be executed within the namespace or ref to the left of the dot.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">X</span><span class="na">.</span><span class="p">(</span><span class="nv">C</span><span class="kd">←</span><span class="nv">A</span><span class="o">×</span><span class="nv">B</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">X</span><span class="na">.</span><span class="p">(</span><span class="nv">C</span><span class="kd">←</span><span class="nv">A</span><span class="o">×</span><span class="nv">B</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">X</span><span class="na">.</span><span class="nv">C</span>
 <span class="m">10</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">14</span>
 <span class="m">16</span><span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">20</span>
@@ -78875,7 +78875,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

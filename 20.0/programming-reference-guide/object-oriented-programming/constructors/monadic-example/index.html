@@ -78770,7 +78770,7 @@
 <h1 class="heading"><span class="name">Monadic Example</span></h1>
 
 <p>In the following example, <code>DomesticParrot</code> is derived from <code>Parrot</code> which is derived from <code>Bird</code>. They all share the Field <code>Species</code> (inherited from <code>Bird</code>) but only a <code>DomesticParrot</code> has a Field <code>Name</code>. Each of the 3 Classes has its own Constructor called <code>egg</code>.
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Bird</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Bird</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Field</span><span class="w"> </span><span class="nv">Public</span><span class="w"> </span><span class="nv">Species</span>
 <span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">egg</span><span class="w"> </span><span class="nv">spec</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span><span class="w"> </span><span class="nv">Instance</span>
@@ -78798,7 +78798,7 @@
 <span class="w">    </span><span class="na">...</span>
 <span class="bp">:</span><span class="nv">EndClass</span><span class="w"> </span><span class="c1">⍝ DomesticParrot</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">pol</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DomesticParrot</span><span class="p">(</span><span class="s1">'Polly'</span><span class="w"> </span><span class="s1">'Scarlet Macaw'</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">pol</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DomesticParrot</span><span class="p">(</span><span class="s1">'Polly'</span><span class="w"> </span><span class="s1">'Scarlet Macaw'</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">pol</span><span class="na">.</span><span class="nv">Name</span>
 <span class="nv">Polly</span>
 <span class="w">      </span><span class="nv">pol</span><span class="na">.</span><span class="nv">Species</span>
@@ -78806,16 +78806,16 @@
 </code></pre></div>
 <h2 id="explanation">Explanation</h2>
 <p><code>⎕NEW</code> creates the new instance and runs the Constructor <code>DomesticParrot.egg</code>. The <code>egg</code> header splits the argument into two items <code>name</code> and <code>species</code>. As soon as the line:
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Constructor</span><span class="w"> </span><span class="bp">:</span><span class="nv">Base</span><span class="w"> </span><span class="nv">species</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Constructor</span><span class="w"> </span><span class="bp">:</span><span class="nv">Base</span><span class="w"> </span><span class="nv">species</span>
 </code></pre></div>
 <p>is encountered, <code>⎕NEW</code> calls the Base Class constructor <code>Parrot.egg</code>, passing it the result of the expression to the right, which in this case is simply the value in <code>species</code>.</p>
 <p><code>Parrot.egg</code> starts to execute and as soon as the line:
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Constructor</span><span class="w"> </span><span class="bp">:</span><span class="nv">Base</span><span class="w"> </span><span class="s1">'Parrot: '</span><span class="o">,</span><span class="nv">species</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Constructor</span><span class="w"> </span><span class="bp">:</span><span class="nv">Base</span><span class="w"> </span><span class="s1">'Parrot: '</span><span class="o">,</span><span class="nv">species</span>
 </code></pre></div>
 <p>is encountered, <code>⎕NEW</code> calls <em>its</em> Base Class constructor <code>Bird.egg</code>, passing it the result of the expression to the right, which in this case is the character vector <code>'Parrot: '</code> catenated with the value in <code>species</code>.</p>
 <p><code>Bird.egg</code> assigns its argument to the Public Field <code>Species</code>.</p>
 <p>At this point, the state indicator would be:
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="p">)</span><span class="nv">SI</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="p">)</span><span class="nv">SI</span>
 <span class="sr">[</span><span class="c1">#.[Instance of DomesticParrot]] #.Bird.egg[3]*</span>
 <span class="sr">[</span><span class="nv">constructor</span><span class="sr">]</span>
 <span class="bp">:</span><span class="nv">base</span>
@@ -78856,7 +78856,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

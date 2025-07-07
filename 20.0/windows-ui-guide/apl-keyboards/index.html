@@ -78840,11 +78840,11 @@
 <p>The Registry Keyboard provides an alternative mechanism for the Unicode Edition. This feature maps keystrokes to APL characters using entries in the Windows Registry. Dyalog supports the mechanism but does not provide the mappings which must therefore be defined by the user.</p>
 <p>Note that the Dyalog IME is used if it is available; the Registry Keyboard mechanism is used only if the Dyalog IME is not installed.</p>
 <p>The mappings are defined in the Registry sub-folder :
-</p><div class="highlight"><pre><span></span><code>Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Dyalog\Dyalog APL/W-64 20.0 Unicode\KeyboardShortcuts\chars
+</p><div class="language-text highlight"><pre><span></span><code>Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Dyalog\Dyalog APL/W-64 20.0 Unicode\KeyboardShortcuts\chars
 </code></pre></div>
 <p>Each entry consists of theUnicode code point of an APL character followed by the keystroke to which it is mapped.</p>
 <p>The keystroke is defined by 4 hexadecimal values which specify the key, the shift-state, and 2 zeros. The key is represented by the Unicode code point of the symbol engraved upon it, so (on a UK keyboard) the &lt;1&gt; key is hex 31 and the &lt;A&gt; key is hex 41. The Shift-states values are the sum of 1 (Shift), 2 (Ctrl), 4 (Alt).
-</p><div class="highlight"><pre><span></span><code>"0x230A"=hex:44,02,00,00
+</p><div class="language-text highlight"><pre><span></span><code>"0x230A"=hex:44,02,00,00
 "0x235F"=hex:38,03,00,00
 </code></pre></div>
 <p>In the first entry, the APL character is  Unicode code point  <code>230A</code> which is <code>⌊</code>. The key is &lt;D&gt; (hex 44) and the shift-state is Ctrl (hex 02).</p>
@@ -78884,7 +78884,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

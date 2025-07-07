@@ -79030,7 +79030,7 @@
 <h2 id="examples">Examples</h2>
 <p>Some examples of different kinds of arrays defined with array notation.</p>
 <h3 class="example" id="nested-vector">Nested Vector</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">z</span><span class="kd">←</span><span class="w"> </span><span class="p">(</span><span class="m">0</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="m">2</span><span class="o">*</span><span class="m">0</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">1</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">z</span><span class="kd">←</span><span class="w"> </span><span class="p">(</span><span class="m">0</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="m">2</span><span class="o">*</span><span class="m">0</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">1</span>
 <span class="w">      </span><span class="m">2</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
 <span class="m">4</span>
 <span class="w">      </span><span class="nv">z</span>
@@ -79045,7 +79045,7 @@
 <span class="err">└─────┴─────┴────┘</span>
 </code></pre></div>
 <h3 class="example" id="matrix">Matrix</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">m</span><span class="kd">←</span><span class="sr">[</span><span class="m">0</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">4</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">m</span><span class="kd">←</span><span class="sr">[</span><span class="m">0</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">4</span>
 <span class="w">       </span><span class="m">2</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">2</span><span class="sr">]</span>
 <span class="m">4</span><span class="w"> </span><span class="m">4</span>
 <span class="w">      </span><span class="nv">m</span>
@@ -79056,7 +79056,7 @@
 </code></pre></div>
 <p>Short items are padded.
 (See <a href="../../../../language-reference-guide/primitive-functions/mix">Mix</a> for details.)</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">mice</span><span class="kd">←</span><span class="sr">[</span><span class="s1">'Three'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">mice</span><span class="kd">←</span><span class="sr">[</span><span class="s1">'Three'</span>
 <span class="w">             </span><span class="s1">'Blind'</span>
 <span class="w">             </span><span class="s1">'Mice'</span><span class="sr">]</span>
 <span class="m">3</span><span class="w"> </span><span class="m">5</span>
@@ -79077,7 +79077,7 @@
 <span class="m">0</span><span class="w"> </span><span class="m">2</span>
 </code></pre></div>
 <h3 class="example" id="column-matrix">Column Matrix</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="sr">[</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="sr">]</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="sr">[</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="sr">]</span>
 <span class="m">1</span>
 <span class="m">2</span>
 <span class="m">3</span>
@@ -79099,7 +79099,7 @@
 <span class="err">└─────┘</span>
 </code></pre></div>
 <h3 class="example" id="rank-3-array">Rank-3 Array</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">block</span><span class="kd">←</span><span class="sr">[</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">block</span><span class="kd">←</span><span class="sr">[</span>
 <span class="w">       </span><span class="sr">[</span><span class="m">3</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="sr">]</span>
 <span class="w">       </span><span class="sr">[</span><span class="m">2</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="m">2</span><span class="sr">]</span>
 <span class="w">      </span><span class="sr">]</span>
@@ -79113,7 +79113,7 @@
 </code></pre></div>
 <h2 id="namespaces">Namespaces</h2>
 <p>Array notation allows you to write a namespace literal as zero or more name-value pairs, spanned by parentheses.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">()</span><span class="w">                       </span><span class="c1">⍝ empty namespace</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">()</span><span class="w">                       </span><span class="c1">⍝ empty namespace</span>
 <span class="c1">#.[Namespace]</span>
 <span class="w">      </span><span class="p">()()</span><span class="w">                     </span><span class="c1">⍝ vector of empty namespaces</span>
 <span class="w"> </span><span class="c1">#.[Namespace]  #.[Namespace]</span>
@@ -79141,10 +79141,10 @@
 </code></pre></div>
 <h3 id="scoping-in-namespace-literals">Scoping In Namespace Literals</h3>
 <p>Array and namespace literals can include value expressions.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">LUE</span><span class="kd">←</span><span class="p">(</span><span class="nv">answer</span><span class="bp">:</span><span class="m">7</span><span class="o">×</span><span class="m">6</span><span class="p">)</span><span class="w">   </span><span class="c1">⍝ Life, the Universe, and Everything</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">LUE</span><span class="kd">←</span><span class="p">(</span><span class="nv">answer</span><span class="bp">:</span><span class="m">7</span><span class="o">×</span><span class="m">6</span><span class="p">)</span><span class="w">   </span><span class="c1">⍝ Life, the Universe, and Everything</span>
 </code></pre></div>
 <p>Any expressions are evaluated in the scope around the namespace.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">long</span><span class="kd">←</span><span class="s1">'bobby'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">long</span><span class="kd">←</span><span class="s1">'bobby'</span>
 <span class="w">      </span><span class="nv">short</span><span class="kd">←</span><span class="s1">'jack'</span>
 <span class="w">      </span><span class="nv">ns</span><span class="kd">←</span><span class="p">(</span><span class="nv">short</span><span class="bp">:</span><span class="s1">'jill'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">inner</span><span class="bp">:</span><span class="nv">short</span><span class="na">∘.</span><span class="o">=</span><span class="nv">short</span><span class="kd">←</span><span class="m">3</span><span class="o">↑</span><span class="nv">long</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">ns</span><span class="na">.</span><span class="nv">inner</span>
@@ -79178,8 +79178,8 @@
 <p>Separators in a list of value expressions or name-value pairs make an enclosing parenthesis or bracket <em>broken</em>.</p>
 <p>Separators encapsulated in a dfn or further contained in array notation do not break a parenthesis or bracket.
 For example, in</p>
-<pre><code>({1=⍵:'y' ⋄ 'n'}?2)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code>({1=⍵:'y' ⋄ 'n'}?2)
+</code></pre></div>
 <p>the diamond is part of the dfn and does not break the surrounding parenthesis.</p>
 </div>
 <h3 id="unsupported">Unsupported</h3>
@@ -79194,12 +79194,12 @@ For example, in</p>
 <p>While one can include the last three items when writing in array notation, they cannot be displayed in the notation.</p>
 <h3 id="formal-syntax">Formal Syntax</h3>
 <p>The array notation can be described in this form, where <code>expression</code> is any traditional APL expression:</p>
-<pre><code>value ::= expression | list | block | space
+<div class="language-text highlight"><pre><span></span><code>value ::= expression | list | block | space
 list  ::= '(' ( ( value sep )+ value? | ( sep value )+ sep? ) ')'
 block ::= '[' ( ( value sep )+ value? | ( sep value )+ sep? ) ']'
 space ::= '(' sep? ( name ':' value ( sep name ':' value )* )? sep? ')'
 sep   ::= [⋄#x000A#x000D#x0085]+
-</code></pre>
+</code></pre></div>
 <p><figure id="_figure-1"><img alt="Syntax diagram" src="../../../img/array-notation-syntax.png"><figcaption>Figure 1: Syntax diagram</figcaption></figure></p>
 <!-- Eventually replace with Mermaid diagram. -->
 
@@ -79231,7 +79231,7 @@ sep   ::= [⋄#x000A#x000D#x0085]+
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

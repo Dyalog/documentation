@@ -78769,16 +78769,16 @@
 
 <p>An ActiveX or OLE Control is in fact a type of Dynamic Link Library (DLL) which must be loaded before it can be used. This is done by creating an OCXClass object using <code>⎕WC</code> or <code>⎕NEW</code>.</p>
 <p>For  example, if you have an OLE Control named "Microsoft Office Chart 9.0 ", you can load it with the following statements (which are split here only to prevent text wrap)</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">NAME</span><span class="kd">←</span><span class="s1">' Microsoft Office Chart 9.0 '</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">NAME</span><span class="kd">←</span><span class="s1">' Microsoft Office Chart 9.0 '</span>
 <span class="w">      </span><span class="nv">MOC</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="s1">'OCXClass'</span><span class="w"> </span><span class="p">(</span><span class="o">⊂</span><span class="s1">'ClassName'</span><span class="w"> </span><span class="nv">NAME</span><span class="p">)</span>
 </code></pre></div>
 <p>or, using <code>⎕WC</code></p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'MOC'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'OCXClass'</span><span class="w"> </span><span class="nv">NAME</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'MOC'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'OCXClass'</span><span class="w"> </span><span class="nv">NAME</span>
 </code></pre></div>
 <p>The right argument is a character string containing the name or class identifier of the ActiveX Control. The left argument is an arbitrary name of your own choosing by which you will subsequently refer to the Control class.</p>
 <h2 id="using-an-ole-control">Using an OLE Control</h2>
 <p>Having created an OCXClass object, you may <em>use</em> an OLE Control by creating an <em>instance</em> of it from its class. The instance must be created as the child of a Form. For example:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span>
 <span class="w">      </span><span class="s1">'F.MM'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'MOC'</span><span class="w"> </span><span class="c1">⍝ Instance of MOC</span>
 </code></pre></div>
 <p>Although you can obtain general information about an OLE Control from both the class (represented by the OCXClass object) and any instance, you may only query and manipulate a control through an instance.</p>
@@ -78811,7 +78811,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

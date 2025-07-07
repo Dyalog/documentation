@@ -78706,7 +78706,7 @@
 
 <p>A collection is a special type of object that represents a set of other objects. Collections are typically implemented as properties. For example, the Excel Sheet object has a property named Sheets whose value is a collection object that represents a set of worksheets. Collections typically have a property called Count, which tells you how many objects there are, and a Default Property named Item that provides access to each member of the set. Item typically accepts a number or a name as an index and returns a reference to an object.</p>
 <p>For example, if a workbook contains two worksheets named "P&amp;L" and "2002 Sales" respectively, they might be accessed as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">S1</span><span class="kd">←</span><span class="nv">Sheets</span><span class="na">.</span><span class="nv">Item</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">S1</span><span class="kd">←</span><span class="nv">Sheets</span><span class="na">.</span><span class="nv">Item</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span>
 <span class="w">      </span><span class="nv">S1</span><span class="na">.</span><span class="nv">Name</span>
 <span class="nv">P</span><span class="na">&amp;</span><span class="nv">L</span>
 <span class="w">      </span><span class="nv">S2</span><span class="kd">←</span><span class="nv">Sheets</span><span class="na">.</span><span class="nv">Item</span><span class="w"> </span><span class="sr">[</span><span class="s1">'2002 Sales'</span><span class="sr">]</span>
@@ -78714,7 +78714,7 @@
 <span class="m">2</span>
 </code></pre></div>
 <p>Note that in old versions of Dyalog APL (pre-Version 11.0) the Item property was exposed as a method. This old behaviour may be select by setting <code>⎕WX</code> to 0 or 1 when you create the object. In which case:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">S1</span><span class="kd">←</span><span class="nv">Sheets</span><span class="na">.</span><span class="nv">Item</span><span class="w"> </span><span class="m">1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">S1</span><span class="kd">←</span><span class="nv">Sheets</span><span class="na">.</span><span class="nv">Item</span><span class="w"> </span><span class="m">1</span>
 <span class="w">      </span><span class="nv">S1</span><span class="na">.</span><span class="nv">Name</span>
 <span class="nv">P</span><span class="na">&amp;</span><span class="nv">L</span>
 <span class="w">      </span><span class="nv">S2</span><span class="kd">←</span><span class="nv">Sheets</span><span class="na">.</span><span class="nv">Item</span><span class="w"> </span><span class="s1">'2002 Sales'</span>
@@ -78723,11 +78723,11 @@
 </code></pre></div>
 <p>Note that some collections work in origin 0 and some in origin 1; there is no way to tell which applies except from the documentation. Furthermore, collections are used for all sorts of purposes, and may not necessarily permit the instantiation of more than one member of the set at the same time. Collections are <em>not</em> the same as arrays.</p>
 <p>As mentioned above, the Item property is typically the Default Property (see Language reference) of a Collection, so indexing may be applied directly to the Collection object.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Sheets</span><span class="sr">[</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="sr">]</span><span class="na">.</span><span class="nv">Name</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Sheets</span><span class="sr">[</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="sr">]</span><span class="na">.</span><span class="nv">Name</span>
 <span class="w"> </span><span class="nv">P</span><span class="na">&amp;</span><span class="nv">L</span><span class="w">  </span><span class="m">2002</span><span class="w"> </span><span class="nv">Sales</span>
 </code></pre></div>
 <p>The <code>:For - :EndFor</code> control structure provides a convenient way to enumerate through the members of a collection without using the Item property. For example, the following code snippet accumulates the values in an Excel worksheet collection.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DATA</span><span class="kd">←</span><span class="m">0</span><span class="o">⍴⊂</span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="o">⍴</span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DATA</span><span class="kd">←</span><span class="m">0</span><span class="o">⍴⊂</span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="o">⍴</span><span class="m">0</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">For</span><span class="w"> </span><span class="nv">S</span><span class="w"> </span><span class="bp">:</span><span class="nv">In</span><span class="w"> </span><span class="nv">Sheets</span><span class="w">  </span><span class="c1">⍝ Enumerate SHEETS collection</span>
 <span class="w">          </span><span class="nv">DATA</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="nv">S</span><span class="na">.</span><span class="nv">UsedRange</span><span class="na">.</span><span class="nv">Value2</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">EndFor</span>
@@ -78761,7 +78761,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

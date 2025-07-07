@@ -78724,13 +78724,13 @@
 <p>If <code>X</code> refers to a non-existent GUI name, a <code>VALUE ERROR</code> is reported.  If <code>Y</code> refers to a non-existent property, or to a property that is not defined for the type of object <code>X</code>, or to a property whose value may not be changed by <code>⎕WS</code>, a <code>DOMAIN ERROR</code> is reported.</p>
 <p>The shy result <code>R</code> contains the previous values of the properties specified in <code>Y</code>.</p>
 <p>GUI objects are named <strong>relative</strong> to the current namespace.  A null value of <code>X</code> (referring to the namespace in which the function is being evaluated) may be omitted.  The following examples are equivalent:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1.B1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Caption'</span><span class="w"> </span><span class="s1">'&amp;Ok'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1.B1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Caption'</span><span class="w"> </span><span class="s1">'&amp;Ok'</span>
 <span class="w">      </span><span class="s1">'B1'</span><span class="w"> </span><span class="nv">F1</span><span class="na">.</span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Caption'</span><span class="w"> </span><span class="s1">'&amp;Ok'</span>
 <span class="w">      </span><span class="s1">''</span><span class="w"> </span><span class="nv">F1</span><span class="na">.</span><span class="nv">B1</span><span class="na">.</span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Caption'</span><span class="w"> </span><span class="s1">'&amp;Ok'</span>
 <span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">B1</span><span class="na">.</span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Caption'</span><span class="w"> </span><span class="s1">'&amp;Ok'</span>
 </code></pre></div>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w">  </span><span class="c1">⍝ A default Form</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w">  </span><span class="c1">⍝ A default Form</span>
 <span class="w"> </span>
 <span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'Active'</span><span class="w"> </span><span class="m">0</span>
 <span class="w"> </span>
@@ -78775,7 +78775,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

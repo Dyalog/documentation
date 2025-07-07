@@ -78769,7 +78769,7 @@
 
 <p>A global Trigger is a function that triggers on any assignment to a global variable in the same namespace. Global Triggers may be disabled and re-enabled using <code>2007⌶</code>. See <a href="../../../language-reference-guide/the-i-beam-operator/disable-global-triggers">Disable Global Triggers</a>.</p>
 <p>This is implemented by the function declaration statement:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Trigger</span><span class="w"> </span><span class="o">*</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Trigger</span><span class="w"> </span><span class="o">*</span>
 </code></pre></div>
 <p>The argument to the trigger function is an instance of the internal class <code>TriggerArguments</code> which contains the following members:</p>
 <table>
@@ -78791,7 +78791,7 @@
 </tbody>
 </table>
 <h2 class="example">Example</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">foo</span><span class="w"> </span><span class="nv">args</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">foo</span><span class="w"> </span><span class="nv">args</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Trigger</span><span class="w"> </span><span class="o">*</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">args</span><span class="na">.</span><span class="nv">Name</span><span class="s1">'has changed'</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="m">2</span><span class="o">=</span><span class="nv">args</span><span class="na">.</span><span class="nf">⎕NC</span><span class="s1">'Indexers'</span>
@@ -78800,7 +78800,7 @@
 <span class="sr">[</span><span class="m">6</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">EndIf</span>
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">vec</span><span class="kd">←</span><span class="o">⍳</span><span class="m">5</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">vec</span><span class="kd">←</span><span class="o">⍳</span><span class="m">5</span>
 <span class="w"> </span><span class="nv">vec</span><span class="w">  </span><span class="nv">has</span><span class="w"> </span><span class="nv">changed</span>
 
 <span class="w">      </span><span class="nv">a</span><span class="w"> </span><span class="nv">b</span><span class="kd">←</span><span class="m">10</span><span class="w"> </span><span class="s1">'Pete'</span>
@@ -78812,10 +78812,10 @@
 <span class="w"> </span><span class="o">⍴</span><span class="nv">Indexers</span><span class="w">  </span><span class="m">2</span><span class="w"> </span>
 <span class="w"> </span><span class="nv">Indexers</span><span class="w">  </span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">array</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">12</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">array</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">12</span>
 <span class="w"> </span><span class="nv">array</span><span class="w">  </span><span class="nv">has</span><span class="w"> </span><span class="nv">changed</span><span class="w"> </span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="o">↑</span><span class="nv">array</span><span class="p">)</span><span class="kd">←</span><span class="m">42</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="o">↑</span><span class="nv">array</span><span class="p">)</span><span class="kd">←</span><span class="m">42</span>
 <span class="w"> </span><span class="nv">array</span><span class="w">  </span><span class="nv">has</span><span class="w"> </span><span class="nv">changed</span><span class="w"> </span>
 <span class="w"> </span><span class="o">⍴</span><span class="nv">Indexers</span><span class="w">  </span><span class="m">2</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>
 <span class="w"> </span><span class="nv">Indexers</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">15</span><span class="w"> </span>
@@ -78831,7 +78831,7 @@
 </div>
 <h2 id="further-example">Further Example</h2>
 <p>A potential use for a global trigger is to detect the unintended creation of global variables due to localisation omissions. Note however that the timing of the activation of the Trigger is unpredictable. In this example, the trigger for the assignment to <code>b</code> activates after function <code>hoo</code> has exited. When Threads are involved, timing becomes even less predictable.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">CatchGlobals</span><span class="w"> </span><span class="nv">arg</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">CatchGlobals</span><span class="w"> </span><span class="nv">arg</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="c1">⍝ Displays a warning when a global is assigned</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Trigger</span><span class="w"> </span><span class="o">*</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="s1">'*** assignment to global variable: '</span><span class="o">,</span>
@@ -78880,7 +78880,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

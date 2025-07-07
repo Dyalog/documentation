@@ -79026,7 +79026,7 @@
 <h2 id="executing-the-windows-command-processor">Executing the Windows Command Processor</h2>
 <p>If <code>Y</code> is a simple character vector, <code>⎕CMD</code> invokes the Windows Command Processor (normally <code>cmd.exe</code>) and passes the command specified by character vector <code>Y</code> to it for execution. The term command means here an instruction recognised by the Command Processor, or the pathname of a program (with optional parameters) to be executed by it. In either case, APL waits for the command to finish and then returns the result <code>R</code>,  a vector of character vectors containing its result. Each element in <code>R</code> corresponds to a line of output produced by the command.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Z</span><span class="kd">←</span><span class="nf">⎕CMD</span><span class="s1">'dir'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Z</span><span class="kd">←</span><span class="nf">⎕CMD</span><span class="s1">'dir'</span>
 <span class="w">      </span><span class="o">⍴</span><span class="nv">Z</span>
 <span class="m">12</span>
 <span class="w">      </span><span class="o">↑</span><span class="nv">Z</span>
@@ -79046,7 +79046,7 @@
 <p>If the command specified in <code>Y</code> already contains the redirection symbol (<code>&gt;</code>) the capture of output through a pipe is avoided and the result <code>R</code> is empty.  If the command specified by <code>Y</code> issues prompts and expects user input, it is <strong>ESSENTIAL</strong> to explicitly redirect input and output to the console.</p>
 <p>If this is done, APL detects the presence of a "<code>&gt;</code>" in the command line, runs the command processor in a <strong>visible</strong> window, and does not direct output to the pipe.  If you fail to do this your system will appear to hang because there is no mechanism for you to receive or respond to the prompt.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕CMD</span><span class="w"> </span><span class="s1">'DATE &lt;CON &gt;CON'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕CMD</span><span class="w"> </span><span class="s1">'DATE &lt;CON &gt;CON'</span>
 </code></pre></div>
 <p>(Command Prompt window appears)</p>
 <p><code>Current date is Wed 19-07-1995</code></p>
@@ -79055,23 +79055,23 @@
 <h3 id="spaces-in-pathnames">Spaces in pathnames</h3>
 <p>If <code>Y</code> specifies a program (with or without parameters) and the pathname to the program  contains spaces, you must enclose the string in double-quotes.</p>
 <p>For example, to start a version of Excel to which the pathname is:
-</p><div class="highlight"><pre><span></span><code><span class="w">   </span><span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Program</span><span class="w"> </span><span class="nv">Files</span><span class="na">\</span><span class="nv">Microsoft</span><span class="w"> </span><span class="nv">Office</span><span class="na">\</span><span class="nv">OFFICE11</span><span class="na">\</span><span class="nv">excel</span><span class="na">.</span><span class="nv">exe</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Program</span><span class="w"> </span><span class="nv">Files</span><span class="na">\</span><span class="nv">Microsoft</span><span class="w"> </span><span class="nv">Office</span><span class="na">\</span><span class="nv">OFFICE11</span><span class="na">\</span><span class="nv">excel</span><span class="na">.</span><span class="nv">exe</span>
 </code></pre></div>
 <p>the argument to <code>⎕CMD</code> should be:
-</p><div class="highlight"><pre><span></span><code><span class="nf">⎕CMD</span><span class="w"> </span><span class="s1">'"c:\program files\microsoft office\office11\excel.exe"'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nf">⎕CMD</span><span class="w"> </span><span class="s1">'"c:\program files\microsoft office\office11\excel.exe"'</span>
 </code></pre></div>
 <h3 id="double-quote-restriction">Double-Quote Restriction</h3>
 <p>The Windows Command Processor does not permit more than one set of double-quotes in a command string.</p>
 <p>The following statements are all valid:
-</p><div class="highlight"><pre><span></span><code><span class="nf">⎕CMD</span><span class="w"> </span><span class="s1">'c:\windows\system32\notepad.exe c:\myfile.txt'</span><span class="w">  </span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nf">⎕CMD</span><span class="w"> </span><span class="s1">'c:\windows\system32\notepad.exe c:\myfile.txt'</span><span class="w">  </span>
 <span class="nf">⎕CMD</span><span class="w"> </span><span class="s1">'c:\windows\system32\notepad.exe "c:\myfile.txt"'</span>
 <span class="nf">⎕CMD</span><span class="w"> </span><span class="s1">'"c:\windows\system32\notepad.exe" c:\myfile.txt'</span>
 </code></pre></div>
 <p>Whereas the next statement, which contains two sets of double-quotes, will fail:
-</p><div class="highlight"><pre><span></span><code><span class="nf">⎕CMD</span><span class="w"> </span><span class="s1">'"c:\windows\system32\notepad.exe" "c:\myfile.txt"'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nf">⎕CMD</span><span class="w"> </span><span class="s1">'"c:\windows\system32\notepad.exe" "c:\myfile.txt"'</span>
 </code></pre></div>
 <p>Such a statement can however be executed using the second form of <code>⎕CMD</code>(where the argument is a 2-element vector of character vectors) which does not use the Windows Command Processor and is not subject to this restriction. However, the call to <code>⎕CMD</code> will return immediately, and no output from the command will be returned.
-</p><div class="highlight"><pre><span></span><code><span class="nf">⎕CMD</span><span class="s1">'"c:\windows\system32\notepad.exe" "c:\myfile.txt"'</span><span class="w"> </span><span class="s1">''</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nf">⎕CMD</span><span class="s1">'"c:\windows\system32\notepad.exe" "c:\myfile.txt"'</span><span class="w"> </span><span class="s1">''</span>
 </code></pre></div>
 <h3 id="implementation-notes">Implementation Notes</h3>
 <p>The right argument of <code>⎕CMD</code> is simply passed to the appropriate command processor for execution and its output is received using an <em>unnamed pipe</em>.</p>
@@ -79095,7 +79095,7 @@
 </tbody>
 </table>
 <p>If you simply wish to open a Command Prompt window, you may execute the command as a Windows Program (see below).  For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕CMD</span><span class="w"> </span><span class="s1">'cmd.exe'</span><span class="w"> </span><span class="s1">''</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕CMD</span><span class="w"> </span><span class="s1">'cmd.exe'</span><span class="w"> </span><span class="s1">''</span>
 </code></pre></div>
 <h2 id="starting-a-windows-program">Starting a Windows Program</h2>
 <p>If <code>Y</code> is a 2-element vector of character vectors, <code>⎕CMD</code> starts the executable program named by <code>Y[1]</code> with the initial window parameter specified by <code>Y[2]</code>.  The shy result is an integer scalar containing the window handle allocated by the window manager. Note that in this case APL does not wait for the program specified by <code>Y</code> to finish, but returns immediately. The shy result <code>R</code> is the process identifier (PID).</p>
@@ -79135,7 +79135,7 @@
 </table>
 <p>There is no way to terminate an application started by <code>⎕CMD</code> from APL; it will run until it completes or is terminated by an external mechanism. Furthermore, if the window parameter is HIDDEN, the user is unaware of the application (unless it makes itself visible) and has no means to close it.</p>
 <h3 class="example">Examples</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Path</span><span class="kd">←</span><span class="s1">'c:\Program Files\Microsoft Office\Office\'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Path</span><span class="kd">←</span><span class="s1">'c:\Program Files\Microsoft Office\Office\'</span>
 <span class="w">      </span><span class="vg">⎕</span><span class="kd">←</span><span class="nf">⎕CMD</span><span class="w"> </span><span class="p">(</span><span class="nv">Path</span><span class="o">,</span><span class="s1">'excel.exe'</span><span class="p">)</span><span class="w"> </span><span class="s1">''</span>
 <span class="m">33</span>
 <span class="w">      </span><span class="nf">⎕CMD</span><span class="w"> </span><span class="p">(</span><span class="nv">Path</span><span class="o">,</span><span class="s1">'winword /mMyMacro'</span><span class="p">)</span><span class="w"> </span><span class="s1">'Minimized'</span>
@@ -79173,7 +79173,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

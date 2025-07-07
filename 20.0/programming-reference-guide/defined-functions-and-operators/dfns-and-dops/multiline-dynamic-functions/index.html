@@ -78708,7 +78708,7 @@
 
 <p>The single expression which provides the result of the dfn may be preceded by any number of assignment statements. Each such statement introduces a name which is local to the function.</p>
 <p>For example in the following, the expressions <code>sum←</code> and <code>num←</code> create <strong>local</strong> definitions <code>sum</code> and <code>num</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mean</span><span class="kd">←</span><span class="kt">{</span><span class="w">          </span><span class="c1">⍝ Arithmetic mean</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mean</span><span class="kd">←</span><span class="kt">{</span><span class="w">          </span><span class="c1">⍝ Arithmetic mean</span>
 <span class="w">          </span><span class="nv">sum</span><span class="kd">←</span><span class="o">+</span><span class="na">/</span><span class="bp">⍵</span><span class="w">     </span><span class="c1">⍝ Sum of items</span>
 <span class="w">          </span><span class="nv">num</span><span class="kd">←</span><span class="o">⍴</span><span class="bp">⍵</span><span class="w">      </span><span class="c1">⍝ Number of items</span>
 <span class="w">          </span><span class="nv">sum</span><span class="o">÷</span><span class="nv">num</span><span class="w">     </span><span class="c1">⍝ Mean</span>
@@ -78719,7 +78719,7 @@
 <p>When the interpreter encounters a local definition, a new local name is created. The name is shadowed dynamically exactly as if the assignment had been preceded by: <code>⎕shadow</code> <em>name</em> <code>⋄</code>.</p>
 <p>It is <strong>important</strong> to note the distinction between the two types of statement above. There can be <strong>many</strong> assignment statements, each introducing a new local definition, but only a <strong>single</strong> expression where the result is not assigned. As soon as the interpreter encounters such an expression, it is evaluated and the result returned immediately as the result of the function.</p>
 <p>For example, in the following,
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mean</span><span class="kd">←</span><span class="kt">{</span><span class="w">          </span><span class="c1">⍝ Arithmetic mean</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mean</span><span class="kd">←</span><span class="kt">{</span><span class="w">          </span><span class="c1">⍝ Arithmetic mean</span>
 <span class="w">          </span><span class="nv">sum</span><span class="kd">←</span><span class="o">+</span><span class="na">/</span><span class="bp">⍵</span><span class="w">     </span><span class="c1">⍝ Sum of items</span>
 <span class="w">          </span><span class="nv">num</span><span class="kd">←</span><span class="o">⍴</span><span class="bp">⍵</span><span class="w">      </span><span class="c1">⍝ Number of items</span>
 <span class="w">          </span><span class="nv">sum</span><span class="o">,</span><span class="nv">num</span><span class="w">     </span><span class="c1">⍝ Attempt to show sum,num (wrong)!</span>
@@ -78728,7 +78728,7 @@
 </code></pre></div>
 <p>... as soon as the interpreter encounters the expression <code>sum,num</code>, the function terminates with the two item result (<code>sum,num</code>) and the following line is not evaluated.</p>
 <p>To display arrays to the session from within a dfn, you can use the explicit display forms <code>⎕←</code> or <code>⍞←</code> as in:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mean</span><span class="kd">←</span><span class="kt">{</span><span class="w">          </span><span class="c1">⍝ Arithmetic mean</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mean</span><span class="kd">←</span><span class="kt">{</span><span class="w">          </span><span class="c1">⍝ Arithmetic mean</span>
 <span class="w">          </span><span class="nv">sum</span><span class="kd">←</span><span class="o">+</span><span class="na">/</span><span class="bp">⍵</span><span class="w">     </span><span class="c1">⍝ Sum of items</span>
 <span class="w">          </span><span class="nv">num</span><span class="kd">←</span><span class="o">⍴</span><span class="bp">⍵</span><span class="w">      </span><span class="c1">⍝ Number of items</span>
 <span class="w">          </span><span class="vg">⎕</span><span class="kd">←</span><span class="nv">sum</span><span class="o">,</span><span class="nv">num</span><span class="w">   </span><span class="c1">⍝ show sum,num.</span>
@@ -78736,7 +78736,7 @@
 <span class="w">       </span><span class="kt">}</span>
 </code></pre></div>
 <p>Note that local definitions can be used to specify local nested dfns:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">rms</span><span class="kd">←</span><span class="kt">{</span><span class="w">                </span><span class="c1">⍝ Root Mean Square</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">rms</span><span class="kd">←</span><span class="kt">{</span><span class="w">                </span><span class="c1">⍝ Root Mean Square</span>
 <span class="w">         </span><span class="nv">root</span><span class="kd">←</span><span class="kt">{</span><span class="bp">⍵</span><span class="o">*</span><span class="m">0.5</span><span class="kt">}</span><span class="w">      </span><span class="c1">⍝ ∇ Square root</span>
 <span class="w">         </span><span class="nv">mean</span><span class="kd">←</span><span class="kt">{</span><span class="p">(</span><span class="o">+</span><span class="na">/</span><span class="bp">⍵</span><span class="p">)</span><span class="o">÷⍴</span><span class="bp">⍵</span><span class="kt">}</span><span class="w">   </span><span class="c1">⍝ ∇ Mean</span>
 <span class="w">         </span><span class="nv">square</span><span class="kd">←</span><span class="kt">{</span><span class="bp">⍵</span><span class="o">×</span><span class="bp">⍵</span><span class="kt">}</span><span class="w">      </span><span class="c1">⍝ ∇ Square</span>
@@ -78772,7 +78772,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

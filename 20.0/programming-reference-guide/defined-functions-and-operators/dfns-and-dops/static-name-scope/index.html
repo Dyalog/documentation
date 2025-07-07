@@ -78708,7 +78708,7 @@
 
 <p>When an inner (nested) dfn refers to a name, the interpreter searches for it by looking outwards through enclosing dfns, rather than searching back along the state indicator. This regime, which is more appropriate for nested functions, is said to employ <strong>lexical scope</strong> instead of APL's usual <strong>dynamic scope</strong>.  This distinction becomes apparent only if a call is made to a function defined at an outer level. For the more usual inward calls, the two systems are indistinguishable.</p>
 <p>For example, in the following function, variable <code>type</code> is defined both within <code>which</code> itself and within the inner function <code>fn1</code>. When <code>fn1</code> calls outward to <code>fn2</code> and <code>fn2</code> refers to <code>type</code>, it finds the outer one (with value <code>'lexical'</code>) rather than the one defined in <code>fn1</code>:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">which</span><span class="kd">←</span><span class="kt">{</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">which</span><span class="kd">←</span><span class="kt">{</span>
 
 <span class="w">          </span><span class="nv">type</span><span class="kd">←</span><span class="s1">'lexical'</span><span class="w"> </span>
 
@@ -78756,7 +78756,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

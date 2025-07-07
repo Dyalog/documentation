@@ -78962,15 +78962,15 @@
 <h2 id="dyalog-bitmap-resources">Dyalog Bitmap Resources</h2>
 <p>Another three sets of useful bitmaps are to be found in the DyaRes DLL file. These bitmaps are used in the Dyalog APL/W Session tool buttons. Note that if you include these bitmaps in a run-time application, you will have to ship DyaRes DLL with it.</p>
 <p>The <em>normal</em> set of bitmaps associated with the Session buttons may be created using the statement:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'bm'</span><span class="nf">⎕wc</span><span class="s1">'Bitmap'</span><span class="w"> </span><span class="p">(</span><span class="s1">'dyares180_64.dll'</span><span class="w"> </span><span class="s1">'tb_normal'</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'bm'</span><span class="nf">⎕wc</span><span class="s1">'Bitmap'</span><span class="w"> </span><span class="p">(</span><span class="s1">'dyares180_64.dll'</span><span class="w"> </span><span class="s1">'tb_normal'</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="" src="../../img/tb-normal-bitmaps.bmp"></p>
 <p>The bitmaps used when the buttons are <em>highlighted</em> may be created using the statement.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'bm'</span><span class="nf">⎕wc</span><span class="s1">'Bitmap'</span><span class="w"> </span><span class="p">(</span><span class="s1">'dyares180_64.dll'</span><span class="w"> </span><span class="s1">'tb_hot'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'bm'</span><span class="nf">⎕wc</span><span class="s1">'Bitmap'</span><span class="w"> </span><span class="p">(</span><span class="s1">'dyares180_64.dll'</span><span class="w"> </span><span class="s1">'tb_hot'</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="" src="../../img/tb-hot-bitmaps.bmp"></p>
 <p>The bitmaps used when the buttons are <em>inactive</em> may be created using the statement
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'bm'</span><span class="nf">⎕wc</span><span class="s1">'Bitmap'</span><span class="w"> </span><span class="p">(</span><span class="s1">'dyares180_64.dll'</span><span class="w"> </span><span class="s1">'tb_inactive'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'bm'</span><span class="nf">⎕wc</span><span class="s1">'Bitmap'</span><span class="w"> </span><span class="p">(</span><span class="s1">'dyares180_64.dll'</span><span class="w"> </span><span class="s1">'tb_inactive'</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="" src="../../img/tb-inactive-bitmaps.bmp"></p>
 <p>Note that in the Dyalog Session, if Native Look and Feel is enabled, these bitmaps are overridden by a single set of images designed to operate with the user's chosen theme and Visual Styles. For further information, see <a href="../../introduction/native-look-and-feel/">Native Look and Feel</a>.</p>
@@ -78981,7 +78981,7 @@
 <p>When you create each ToolButton you specify its ImageIndex property, selecting up to three pictures (normal, highlighted and inactive) to be displayed on the button.</p>
 <p>If you specify only a single ImageList, the picture on the ToolButton will be the same in all three cases. However, the appearance of the buttons themselves change when the button is highlighted or pressed, and in many situations this may be sufficient behaviour.</p>
 <p>The following example illustrates how a simple ToolControl can be constructed using standard Windows bitmaps. Notice that the Masked property of the ImageList is set to 0; this is necessary if the ImageList is to contain bitmaps, as opposed to icons. Secondly, because the bitmaps are in this case size 16 x 16, it is unnecessary to specify the Size property of the ImageList which is, by default, also 16 x 16.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">40</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">40</span><span class="p">)</span>
 <span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span>
 <span class="s1">'F.TB.IL'</span><span class="nf">⎕WC</span><span class="s1">'ImageList'</span><span class="p">(</span><span class="s1">'Masked'</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'MapCols'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 <span class="s1">'F.TB.IL.'</span><span class="nf">⎕WC</span><span class="s1">'Bitmap'</span><span class="p">(</span><span class="s1">'ComCtl32'</span><span class="w"> </span><span class="m">120</span><span class="p">)</span><span class="c1">⍝ STD_SMALL</span>
@@ -79005,7 +79005,7 @@
 <p>The MultiLine property specifies whether or not ToolButtons (and other child controls) are arranged in several rows (or columns) when there are more than would otherwise fit.</p>
 <p>If MultiLine is 0 (the default), the ToolControl object <em>clips</em> its children and the user must resize the Form to bring more objects into view.</p>
 <p>Note that you may change MultiLine dynamically, using <code>⎕WS</code>.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: MultiLine 0'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: MultiLine 0'</span>
 <span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'List'</span><span class="p">)</span>
 
 <span class="s1">'F.TB.IL'</span><span class="nf">⎕WC</span><span class="s1">'ImageList'</span><span class="p">(</span><span class="s1">'Masked'</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">24</span><span class="w"> </span><span class="m">24</span><span class="p">)</span>
@@ -79025,7 +79025,7 @@
 <h2 id="the-transparent-property">The Transparent Property</h2>
 <p>The Transparent property (default 0) specifies whether or not the ToolControl is transparent. Note that Transparent must be set when the object is created using <code>⎕WC</code> and may not subsequently be changed using <code>⎕WS</code>.</p>
 <p>If a ToolControl is created with Transparent set to 1, the visual effect is as if the ToolButtons (and other controls) were drawn directly on the parent Form as shown below.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: Transparent 1)'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: Transparent 1)'</span>
 <span class="nv">ROOT</span><span class="kd">←</span><span class="s1">'C:\Program Files\Dyalog\Dyalog APL 13.1 Unicode\'</span>
 <span class="s1">'F.BM'</span><span class="nf">⎕WC</span><span class="s1">'Bitmap'</span><span class="p">(</span><span class="nv">ROOT</span><span class="o">,</span><span class="s1">'\WS\BUBBLES'</span><span class="p">)</span>
 <span class="s1">'F'</span><span class="nf">⎕WS</span><span class="s1">'Picture'</span><span class="w"> </span><span class="s1">'F.BM'</span><span class="w"> </span><span class="m">1</span>
@@ -79047,7 +79047,7 @@
 <p>A group of adjacent ToolButtons with Style <code>'Radio'</code> defines a set in which only one of the ToolButtons may be selected at any one time. The act of selecting one will automatically deselect any other. Note that a group of Radio buttons must be separated from Check buttons or other groups of Radio buttons by ToolButtons of another Style.</p>
 <p>Separator buttons are a special case as they have no Caption or picture, but appear as a thin vertical grooves that are used only to separate groups of buttons.</p>
 <p>The following example illustrates how two groups of radio buttons are established by inserting a ToolButton with Style <code>'Separator'</code> between them. This ToolControl could be used to control the appearance of a ListView object. The first group is used to select the view (Large Icon, Small Icon, List or Report), and the second is used to sort the items by Name, Size or Date. In the picture, the user has selected Small Icon View and Sort by Date.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: Radio Buttons'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: Radio Buttons'</span>
 <span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span>
 
 <span class="s1">'F.TB.IL'</span><span class="nf">⎕WC</span><span class="s1">'ImageList'</span><span class="p">(</span><span class="s1">'Masked'</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
@@ -79073,7 +79073,7 @@
 <p>A ToolButton with Style <code>'DropDown'</code> has an associated popup Menu object which is named by its Popup property. There are two cases to consider.</p>
 <p>If the ShowDropDown property of the parent ToolControl is 0, clicking the ToolButton causes the popup menu to appear. In this case, the ToolButton itself does not itself generate a Select event; you must rely on the user selecting a MenuItem to specify a particular action.</p>
 <p>If the ShowDropDown property of the parent ToolControl is 1, clicking the dropdown button causes the popup menu to appear; clicking the ToolButton itself generates a Select event, but does not display the popup menu.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: Dropdown Buttons'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: Dropdown Buttons'</span>
 <span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span><span class="p">(</span><span class="s1">'ShowDropDown'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 
 <span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="s1">'F.FMENU'</span><span class="nf">⎕WC</span><span class="s1">'Menu'</span><span class="w"> </span><span class="c1">⍝ Popup File menu</span>
@@ -79095,7 +79095,7 @@
 <h2 id="a-menubar-as-the-child-of-a-toolcontrol">A MenuBar as the child of a ToolControl</h2>
 <p>As a special case, the ToolControl may contain a MenuBar as its <strong>only</strong> child. In this case, Dyalog APL/W causes the menu items to be drawn as buttons, even under Windows 95.</p>
 <p>Although nothing is done to prevent it, the use of other objects in a ToolControl containing a MenuBar, is not supported.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl with MenuBar'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl with MenuBar'</span>
 <span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span><span class="w"> </span>
 
 <span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="s1">'F.TB.MB'</span><span class="nf">⎕WC</span><span class="s1">'MenuBar'</span><span class="w"> </span>
@@ -79120,7 +79120,7 @@
 <p>ToolButtons drawn without captions occupy much less space and ShowCaptions provides a quick way to turn captions on/off for user customisation.</p>
 <p><img alt="" src="../../img/toolcontrol-user-options.png"></p>
 <p>The following functions illustrate how this was achieved.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Example</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Example</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: User Options'</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="s1">'F.TB'</span><span class="nf">⎕WS</span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'MouseDown'</span><span class="w"> </span><span class="s1">'TC_POPUP'</span>
@@ -79137,7 +79137,7 @@
 <span class="sr">[</span><span class="m">14</span><span class="sr">]</span><span class="w">   </span><span class="s1">'F.TB.B6'</span><span class="nf">⎕WC</span><span class="s1">'ToolButton'</span><span class="w"> </span><span class="s1">'Delete'</span><span class="p">(</span><span class="s1">'ImageIndex'</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">TC_POPUP</span><span class="w"> </span><span class="nv">MSG</span><span class="sr">;</span><span class="nv">popup</span><span class="sr">;</span><span class="nv">TC</span><span class="sr">;</span><span class="nv">STYLE</span><span class="sr">;</span><span class="nv">SHOW</span><span class="sr">;</span><span class="nv">MULTI</span><span class="sr">;</span><span class="nv">OPTION</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">TC_POPUP</span><span class="w"> </span><span class="nv">MSG</span><span class="sr">;</span><span class="nv">popup</span><span class="sr">;</span><span class="nv">TC</span><span class="sr">;</span><span class="nv">STYLE</span><span class="sr">;</span><span class="nv">SHOW</span><span class="sr">;</span><span class="nv">MULTI</span><span class="sr">;</span><span class="nv">OPTION</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="c1">⍝ Popup menu on ToolControl</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="o">≠</span><span class="m">5</span><span class="o">⊃</span><span class="nv">MSG</span><span class="p">)</span><span class="w"> </span><span class="c1">⍝ Right mouse button ?</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">        </span><span class="bp">:</span><span class="nv">Return</span>
@@ -79208,7 +79208,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

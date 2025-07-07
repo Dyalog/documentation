@@ -78712,7 +78712,7 @@
 <p>Effectively, when you undock a ToolControl, you need to insert a new (floating) Form between the Host Form and the ToolControl. Then when you re-dock it, you need to remove the (floating) Form from the hierarchy.</p>
 <p>The following example illustrates the procedure.</p>
 <p>The following function creates a Form containing a dockable ToolControl. The ToolControl can be undocked, becoming a floating toolbar, and then docked back into the original Form.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">DockableToolControl</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">DockableToolControl</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="s1">'IL'</span><span class="nf">⎕WC</span><span class="s1">'ImageList'</span><span class="p">(</span><span class="s1">'Masked'</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="s1">'IL.'</span><span class="nf">⎕WC</span><span class="s1">'Bitmap'</span><span class="p">(</span><span class="s1">'ComCtl32'</span><span class="w"> </span><span class="m">120</span><span class="p">)</span><span class="c1">⍝ STD_SMALL</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="s1">'Host'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Host'</span>
@@ -78742,7 +78742,7 @@
 <li>The <code>Floater</code> Form is created as a child of the <code>Host</code> Form so that it always floats above it in the window stacking order.</li>
 <li>The <code>Floater</code> Form is made dockable so that it can be re-docked back into <code>Host</code>.</li>
 <li>The (new) ToolControl is made non-dockable, so that the user cannot drag it out of <code>Floater</code>.
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">UNDOCK</span><span class="w"> </span><span class="nv">MSG</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">UNDOCK</span><span class="w"> </span><span class="nv">MSG</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="m">0</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="s1">'Host.Floater'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">        </span><span class="nv">Caption</span><span class="kd">←</span><span class="s1">'Floating ToolControl'</span>
@@ -78761,7 +78761,7 @@
 <p><img alt="" src="../../img/docking-toolcontrol-3.png"></p>
 <p>The user may dock the ToolControl back into Host by dragging the <code>Floater</code> Form into it.</p>
 <p>The <code>DOCKMOVE</code> callback function, shown below, prevents the ToolControl (represented by its parent <code>Floater</code>) from being docked anywhere except along the top edge.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">DOCKMOVE</span><span class="w"> </span><span class="nv">MSG</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">DOCKMOVE</span><span class="w"> </span><span class="nv">MSG</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Only allow docking along Top edge</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="nv">MSG</span><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="o">∊</span><span class="s1">'Top'</span><span class="w"> </span><span class="s1">'None'</span>
 <span class="w">     </span><span class="bp">∇</span>
@@ -78769,7 +78769,7 @@
 <p>The picture below illustrates the moment just before the user releases the mouse button to dock Floater back into Host.</p>
 <p><img alt="" src="../../img/docking-toolcontrol-4.png"></p>
 <p>At this point, the <code>Host</code> Form generates a DockAccept event and the callback function <code>DOCK</code> is invoked. This function recreates the ToolControl as a child of <code>Host</code> (making it dockable once more), and then expunges the <code>Floater</code> Form.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">DOCK</span><span class="w"> </span><span class="nv">MSG</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">DOCK</span><span class="w"> </span><span class="nv">MSG</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="m">0</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="o">⊃</span><span class="nv">MSG</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">        </span><span class="s1">'TC'</span><span class="nf">⎕WC</span><span class="w"> </span><span class="nf">⎕OR</span><span class="p">(</span><span class="m">3</span><span class="o">⊃</span><span class="nv">MSG</span><span class="p">)</span><span class="na">.</span><span class="nv">TC</span>
@@ -78809,7 +78809,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

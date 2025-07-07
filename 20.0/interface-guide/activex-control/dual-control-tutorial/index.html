@@ -79016,7 +79016,7 @@
 </tbody>
 </table>
 <p>Value2 is derived from Value 1 using the expression:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Value2</span><span class="kd">←</span><span class="nv">Intercept</span><span class="o">+</span><span class="nv">Gradient</span><span class="o">×</span><span class="nv">Value1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Value2</span><span class="kd">←</span><span class="nv">Intercept</span><span class="o">+</span><span class="nv">Gradient</span><span class="o">×</span><span class="nv">Value1</span>
 </code></pre></div>
 <h2 id="events">Events</h2>
 <p>Your Dual control will generate a <em>ChangeValue1</em> event whenever the user alters Value1 using the slider.</p>
@@ -79038,7 +79038,7 @@
 <ul>
 <li>
 <p>Load the <code>samples\activex\dualbase.dws</code> workspace:
-    </p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">dualbase</span>
+    </p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">dualbase</span>
 <span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Program</span><span class="w"> </span><span class="nv">Files</span><span class="w"> </span><span class="p">(</span><span class="nv">x86</span><span class="p">)</span><span class="na">\</span><span class="nv">Dyalog</span><span class="na">\</span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">APL</span><span class="w"> </span><span class="m">15.0</span><span class="w"> </span><span class="nv">Unicode</span><span class="na">\...</span>
 </code></pre></div>
 </li>
@@ -79060,30 +79060,30 @@
 </ul>
 <h2 id="changing-dual-into-an-activex-control">Changing Dual into an ActiveX Control</h2>
 <p>Change the name of the workspace to Dual in a directory to which you have write-access:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">WSID</span><span class="w"> </span><span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">Dual</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">WSID</span><span class="w"> </span><span class="nv">c</span><span class="bp">:</span><span class="na">\</span><span class="nv">MyWS</span><span class="na">\</span><span class="nv">Dual</span>
 </code></pre></div>
 <p>Make a new namespace called <code>F</code>
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">NS</span><span class="w"> </span><span class="nv">F</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">NS</span><span class="w"> </span><span class="nv">F</span>
 </code></pre></div>
 <p>Using the Workspace Explorer, move the <code>Dual</code> namespace into <code>F</code>, so that <code>Dual</code> is a child namespace of <code>F</code>.</p>
 <p>Now edit the function <code>F.Dual.Create</code> and make the following changes:</p>
 <p>Remove all references to the local variable <code>POSITION</code>. This change is required because an ActiveX control has no say in its position within its parent. (Hint: use the Search/Replace dialog to remove all occurrences of <code>POSITION+</code>)</p>
 <p>Remove the right argument, <code>SIZE</code> and change <code>Create[1]</code> from:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">H</span><span class="w"> </span><span class="nv">W</span><span class="kd">←</span><span class="nv">SIZE</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">H</span><span class="w"> </span><span class="nv">W</span><span class="kd">←</span><span class="nv">SIZE</span>
 </code></pre></div>
 <p>to
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">H</span><span class="w"> </span><span class="nv">W</span><span class="kd">←</span><span class="nv">Size</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">H</span><span class="w"> </span><span class="nv">W</span><span class="kd">←</span><span class="nv">Size</span>
 </code></pre></div>
 <p>This change allows the control to fit itself within the space allocated by the host application.</p>
 <p>Change <code>Create[4]</code> from:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">CH</span><span class="kd">←</span><span class="o">⊃</span><span class="c1">##.GetTextSize 'W'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">CH</span><span class="kd">←</span><span class="o">⊃</span><span class="c1">##.GetTextSize 'W'</span>
 </code></pre></div>
 <p>to
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">CH</span><span class="kd">←</span><span class="o">⊃</span><span class="nv">GetTextSize</span><span class="w"> </span><span class="s1">'W'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">CH</span><span class="kd">←</span><span class="o">⊃</span><span class="nv">GetTextSize</span><span class="w"> </span><span class="s1">'W'</span>
 </code></pre></div>
 <p>The original code was designed to pick up the character height from the parent Form. The ActiveXControl object does this automatically via its own GetTextSize method.</p>
 <p>After making these changes, the Create function should be as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Create</span><span class="sr">;</span><span class="nv">H</span><span class="sr">;</span><span class="nv">W</span><span class="sr">;</span><span class="nv">POS</span><span class="sr">;</span><span class="nv">SH</span><span class="sr">;</span><span class="nv">CH</span><span class="sr">;</span><span class="nv">Y1</span><span class="sr">;</span><span class="nv">Y2</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Create</span><span class="sr">;</span><span class="nv">H</span><span class="sr">;</span><span class="nv">W</span><span class="sr">;</span><span class="nv">POS</span><span class="sr">;</span><span class="nv">SH</span><span class="sr">;</span><span class="nv">CH</span><span class="sr">;</span><span class="nv">Y1</span><span class="sr">;</span><span class="nv">Y2</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">H</span><span class="w"> </span><span class="nv">W</span><span class="kd">←</span><span class="nv">Size</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">SH</span><span class="kd">←</span><span class="m">40</span><span class="w"> </span><span class="c1">⍝ Default TrackBar height</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">POS</span><span class="kd">←</span><span class="m">2</span><span class="o">↑⌊</span><span class="m">0.5</span><span class="o">×</span><span class="m">0</span><span class="o">⌈</span><span class="p">(</span><span class="nv">H</span><span class="o">-</span><span class="nv">SH</span><span class="p">)</span>
@@ -79105,7 +79105,7 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>Open the function <code>F.Dual.Build</code>. This function turns the Dual's parent namespace into a Form (an ActiveXControl  requires a parent Form) and turns Dual itself into an ActiveXControl. It then attaches functions Create and Configure as callbacks on the Create and Configure events of the ActiveXControl object itself.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Build</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Build</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="c1">##.⎕WC'Form'('Coord' 'Pixel')('KeepOnClose' 1)</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕WC</span><span class="s1">'ActiveXControl'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">80</span><span class="w"> </span><span class="m">200</span><span class="p">)</span>
 <span class="w">                          </span><span class="p">(</span><span class="s1">'KeepOnClose'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
@@ -79116,7 +79116,7 @@
 </code></pre></div>
 <p>Run function <code>F.Dual.Build</code>. You should see a Form containing a single instance of the Dual control. Please resist any temptation to play with it at this stage; we want it to be in its default state for when we save it.</p>
 <p>Type the following expression; note that the ClassID, which uniquely identifies your control (and so will not be the same as that shown below), is allocated when you create the ActiveXControl object.
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="nv">F</span><span class="na">.</span><span class="nv">Dual</span><span class="na">.</span><span class="nv">ClassID</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="nv">F</span><span class="na">.</span><span class="nv">Dual</span><span class="na">.</span><span class="nv">ClassID</span>
 <span class="kt">{</span><span class="m">002</span><span class="nv">F9614</span><span class="o">-</span><span class="m">50</span><span class="nv">F7</span><span class="o">-</span><span class="m">4</span><span class="nv">F3B</span><span class="o">-</span><span class="nv">BB0B</span><span class="o">-</span><span class="nv">FA3316964E78</span><span class="kt">}</span>
 </code></pre></div>
 <p>Save the workspace (<code>c:\MyWS\Dual.dws</code>).</p>
@@ -79139,7 +79139,7 @@
 <p>Close but <strong>do not</strong> save the project.</p>
 <h2 id="defining-and-exporting-properties">Defining and Exporting Properties</h2>
 <p>Back in the Dyalog Session, change space into the <code>F.Dual</code> namespace.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">F</span><span class="na">.</span><span class="nv">Dual</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">F</span><span class="na">.</span><span class="nv">Dual</span>
 </code></pre></div>
 <p>The properties we wish to export are:</p>
 <table>
@@ -79174,7 +79174,7 @@
 </table>
 
 <p>Although we could export all these properties as variables, it is generally more useful to employ <em>Get</em> and <em>Put</em> functions. The reason for this is that there is no mechanism to detect when the host application changes a property/variable; nor is there any mechanism to prevent it assigning an inappropriate value. The <em>Get</em> and <em>Put</em> functions you need are listed below. To save you time, you can copy them in from the workspace <code>samples\activex\dualfns.dws</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">COPY</span><span class="w"> </span><span class="nv">dualfns</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">COPY</span><span class="w"> </span><span class="nv">dualfns</span>
 <span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Program</span><span class="w"> </span><span class="nv">Files</span><span class="w"> </span><span class="p">(</span><span class="nv">x86</span><span class="p">)</span><span class="na">\</span><span class="nv">Dyalog</span><span class="na">\</span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">APL</span><span class="w"> </span><span class="m">15.0</span><span class="w"> </span><span class="nv">Unicode</span><span class="na">\...</span>
 
 <span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">GetCaption1</span>
@@ -79233,7 +79233,7 @@
 <p><img alt="" src="../../img/dual-com-functions-b.png"></p>
 <p>The third way to define the syntax for exported functions is to use the SetFnInfo method of the ActiveXControl object. This allows you to export functions using APL code, which in some circumstances may be more convenient than filling in dialog boxes.</p>
 <p>The SetFnInfo method requires the name of the function, its syntax, a help id, a code which specifies its type (0 = method, 2 = property get, 4 = property put) and, if appropriate, the name of the property to which it applies, that is
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">SetFnInfo</span><span class="w"> </span><span class="nv">fn</span><span class="w"> </span><span class="nv">syntax</span><span class="w"> </span><span class="nv">helpid</span><span class="w"> </span><span class="nv">type</span><span class="w"> </span><span class="nv">property</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">SetFnInfo</span><span class="w"> </span><span class="nv">fn</span><span class="w"> </span><span class="nv">syntax</span><span class="w"> </span><span class="nv">helpid</span><span class="w"> </span><span class="nv">type</span><span class="w"> </span><span class="nv">property</span>
 </code></pre></div>
 <p>The function <code>syntax</code> is a nested array whose first element defines the function's result and whose subsequent elements define each of its parameters. Each syntax specifier is a single character string that defines a data type, or a pair of character strings. If so, the first string for the result defines a help string, and the first string for each parameter defines its name.</p>
 <p>The following table describes the information we must specify for each of the functions to be exported:</p>
@@ -79333,12 +79333,12 @@
 </table>
 
 <p>From this table we can easily construct the corresponding SetFnInfo statements. For example, the statement for <code>GetCaption1</code> is:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">SetFnInfo</span><span class="w"> </span><span class="s1">'GetCaption1'</span><span class="w"> </span><span class="s1">'VT_BSTR'</span><span class="w"> </span><span class="m">¯1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="s1">'Caption1'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">SetFnInfo</span><span class="w"> </span><span class="s1">'GetCaption1'</span><span class="w"> </span><span class="s1">'VT_BSTR'</span><span class="w"> </span><span class="m">¯1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="s1">'Caption1'</span>
 </code></pre></div>
 <p>Note that <code>¯1</code> in the 3<sup>rd</sup> element of the right argument specifies that there is no help id.</p>
 <p>Open the function <code>F.Dual.EXPORT</code>; this contains statements to export all the <em>Get</em> and <em>Put</em> functions we need.</p>
 <p>Run the function and save the workspace.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span>
 <span class="c1">#</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">Dual</span><span class="na">.</span><span class="nv">EXPORT</span>
 <span class="w">            </span><span class="p">)</span><span class="nv">SAVE</span>
@@ -79377,10 +79377,10 @@
 <p>Close but <strong>do not</strong> save the project. This is necessary to allow you to rebuild the Dual ActiveX control which is (currently) loaded in your VB application. Otherwise, Dyalog will be unable to overwrite the <code>.ocx</code> file.</p>
 <h2 id="defining-and-exporting-events">Defining and Exporting Events</h2>
 <p>Back in Dyalog, using the Workspace Explorer, open the callback function <code>F.Dual.ChangeValue</code> and alter <code>ChangeValue[2]</code> from:
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">Value1</span><span class="kd">←</span><span class="o">⊃</span><span class="m">¯1</span><span class="o">↑</span><span class="nv">MSG</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="nv">Value1</span><span class="kd">←</span><span class="o">⊃</span><span class="m">¯1</span><span class="o">↑</span><span class="nv">MSG</span>
 </code></pre></div>
 <p>to
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">Value1</span><span class="kd">←</span><span class="o">⊃</span><span class="m">4</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">''</span><span class="w"> </span><span class="s1">'ChangeValue1'</span><span class="w"> </span><span class="p">(</span><span class="o">⊃</span><span class="m">¯1</span><span class="o">↑</span><span class="nv">MSG</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="nv">Value1</span><span class="kd">←</span><span class="o">⊃</span><span class="m">4</span><span class="w"> </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">''</span><span class="w"> </span><span class="s1">'ChangeValue1'</span><span class="w"> </span><span class="p">(</span><span class="o">⊃</span><span class="m">¯1</span><span class="o">↑</span><span class="nv">MSG</span><span class="p">)</span>
 </code></pre></div>
 <p>Then close the function. Previously, the <code>ChangeValue</code> function simply accepted the new value (of the TrackBar thumb) that it received as the last element of the event message. Now it generates an external ChangeValue1 event for the host application using <code>4 ⎕NQ</code>. The host may in turn modify the new value which is returned as the result of the expression. Thus, not only can Dyalog APL generate events which are detectable by the host application, it can also accept modifications.</p>
 <p>Again using the Workspace Explorer, open the Properties dialog box for the Dual object itself and select the <em>COM Events</em> tab.</p>
@@ -79391,7 +79391,7 @@
 <p>The final appearance of this dialog box should be as follows:</p>
 <p><img alt="" src="../../img/dual-com-events.png"></p>
 <p>Click <em>OK</em>, change back to the root space, and save the workspace.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="c1">#</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="c1">#</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">SAVE</span>
 </code></pre></div>
 <p>Select <em>File/Export</em> and rebuild your <code>.ocx</code> file.</p>
@@ -79409,13 +79409,13 @@
 <p><img alt="" src="../../img/dual-com-events-2.png"></p>
 <p>View the code window and choose the object AxDual1 and its only event ChangeValue1. Enter a line of code to set the Caption property of the Label object Label1 to the String equivalent of the event parameter Value1.</p>
 <p>Enter the following code, and then close the code window, that is
-</p><div class="highlight"><pre><span></span><code><span class="nv">Label1</span><span class="na">.</span><span class="nv">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Str</span><span class="p">(</span><span class="nv">e</span><span class="na">.</span><span class="nv">Value1</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">Label1</span><span class="na">.</span><span class="nv">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Str</span><span class="p">(</span><span class="nv">e</span><span class="na">.</span><span class="nv">Value1</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="" src="../../img/dual-com-events-3.png"></p>
 <p>Start the application using <em>Start Debugging</em>. Exercise the Dual control and observe that VB updates the Label1 control in response to the ChangeValue1 events. When you have finished, select <em>Stop Debugging</em>.</p>
 <p><img alt="" src="../../img/dual-com-events-4.png"></p>
 <p>In the code window, add the following line of code to the <code>AxDual1_ChangeValue</code> subroutine:
-</p><div class="highlight"><pre><span></span><code><span class="nv">e</span><span class="na">.</span><span class="nv">Value1</span><span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="nv">e</span><span class="na">.</span><span class="nv">Value1</span><span class="na">\</span><span class="m">2</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">e</span><span class="na">.</span><span class="nv">Value1</span><span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="nv">e</span><span class="na">.</span><span class="nv">Value1</span><span class="na">\</span><span class="m">2</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="" src="../../img/dual-com-events-5.png"></p>
 <p>Start the application using <em>Start Debugging</em>. Exercise the Dual control and observe that now the slider moves in increments of 2. When you have finished, select <em>Stop Debugging</em></p>
@@ -79449,7 +79449,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

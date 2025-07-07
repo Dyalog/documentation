@@ -78814,10 +78814,10 @@
 <h2 id="registering-and-unregistering-in-process-ole-servers">Registering and Unregistering In-Process OLE Servers</h2>
 <p>During development, an in-process OLE Server is automatically registered when you create it using <em>File/Export</em>.</p>
 <p>The Windows utility regsvr32.exe should be used to register an <em>in-process</em> OLE Server independently, or to install a runtime in-process OLE Server on a target computer. For example:</p>
-<div class="highlight"><pre><span></span><code>C:\WINDOWS\System32&gt;regsvr32 c:\MyWS\mysvr.dll
+<div class="language-text highlight"><pre><span></span><code>C:\WINDOWS\System32&gt;regsvr32 c:\MyWS\mysvr.dll
 </code></pre></div>
 <p>regsvr32 should also be used (with the <em>/u</em> flag) to unregister an in-process OLE Server. For example:</p>
-<div class="highlight"><pre><span></span><code>C:\WINDOWS\System32&gt;regsvr32 /u c:\MyWS\mysvr.dll
+<div class="language-text highlight"><pre><span></span><code>C:\WINDOWS\System32&gt;regsvr32 /u c:\MyWS\mysvr.dll
 </code></pre></div>
 <p>Note that in both cases, regsvr32 actually starts the OLE Server. This in turn loads the appropriate Dyalog APL DLL. If you are using the development DLL, note that if your session start-up code fails for any reason, the regsvr32 process will hang and have to be terminated using the Task Manager.</p>
 
@@ -78849,7 +78849,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

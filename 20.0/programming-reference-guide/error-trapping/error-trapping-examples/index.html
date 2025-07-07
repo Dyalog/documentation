@@ -78859,32 +78859,32 @@
 
 <h2 id="dividing-by-zero">Dividing by Zero</h2>
 <p>Let's try setting a <code>⎕TRAP</code> on <code>DOMAIN ERROR</code>:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="nv">MSG</span><span class="kd">←</span><span class="s1">'''Please give a non-zero right arg'''</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="nv">MSG</span><span class="kd">←</span><span class="s1">'''Please give a non-zero right arg'''</span>
 <span class="w">         </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="m">11</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="nv">MSG</span>
 </code></pre></div>
 <p>When we enter:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="m">10</span><span class="o">÷</span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="m">10</span><span class="o">÷</span><span class="m">0</span>
 </code></pre></div>
 <p>APL executes the expression, and notes that it causes an error number 11. Before issuing the standard error, it scans its <code>⎕TRAP</code> table, to see if you were interested enough in that error to set a trap; you were, so APL executes the action specified by you:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="m">10</span><span class="o">÷</span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="m">10</span><span class="o">÷</span><span class="m">0</span>
 <span class="w">   </span><span class="nv">Please</span><span class="w"> </span><span class="nv">give</span><span class="w"> </span><span class="nv">non</span><span class="o">-</span><span class="nv">zero</span><span class="w"> </span><span class="nv">right</span><span class="w"> </span><span class="nv">arg</span>
 </code></pre></div>
 <p>Let's reset our <code>⎕TRAP</code>:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="m">0</span><span class="o">⍴</span><span class="nf">⎕TRAP</span><span class="w">        </span><span class="c1">⍝ No traps now set</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="m">0</span><span class="o">⍴</span><span class="nf">⎕TRAP</span><span class="w">        </span><span class="c1">⍝ No traps now set</span>
 </code></pre></div>
 <p>and write a defined function to take the place of the primitive function <code>÷</code>:
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="nv">B</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="nv">B</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="o">÷</span><span class="nv">B</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w"> </span><span class="bp">∇</span>
 </code></pre></div>
 <p>Then run it:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="m">10</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="m">10</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="m">0</span>
 <span class="w">   </span><span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span>
 <span class="w">         </span><span class="nv">DIV</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="o">÷</span><span class="nv">B</span>
 <span class="w">                </span><span class="err">^</span>
 </code></pre></div>
 <p>Let's edit our function, and include a localised <code>⎕TRAP</code>:
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="nv">B</span><span class="sr">;</span><span class="nf">⎕TRAP</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="nv">B</span><span class="sr">;</span><span class="nf">⎕TRAP</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w"> </span><span class="c1">⍝ Set the trap</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="m">11</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">'→ERR1'</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w"> </span><span class="c1">⍝ Do the work; if it results in error 11,</span>
@@ -78897,14 +78897,14 @@
 <span class="w">       </span><span class="bp">∇</span>
 </code></pre></div>
 <p>Running the function with good and bad arguments has the desired effect:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="m">10</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="m">2</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="m">10</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="m">2</span>
 <span class="w">   </span><span class="m">5</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">         </span><span class="m">10</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="m">0</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="m">10</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="m">0</span>
 <span class="w">   </span><span class="nv">Please</span><span class="w"> </span><span class="nv">give</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">non</span><span class="o">-</span><span class="nv">zero</span><span class="w"> </span><span class="nv">right</span><span class="w"> </span><span class="nv">arg</span>
 </code></pre></div>
 <p><code>⎕TRAP</code> is a variable like any other, and since it is localised in <code>DIV</code>, it is only effective in <code>DIV</code> and any other functions that may be called by <code>DIV</code>. So
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="m">10</span><span class="o">÷</span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="m">10</span><span class="o">÷</span><span class="m">0</span>
 <span class="w">   </span><span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span>
 <span class="w">        </span><span class="m">10</span><span class="o">÷</span><span class="m">0</span>
 <span class="w">       </span><span class="err">^</span>
@@ -78912,14 +78912,14 @@
 <p>still gives an error, since there is no trap set in the global environment.</p>
 <h2 id="other-errors">Other Errors</h2>
 <p>What happens to our function if we run it with other duff arguments:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span>
 <span class="w">   </span><span class="nv">LENGTH</span><span class="w"> </span><span class="nv">ERROR</span>
 <span class="w">   </span><span class="nv">DIV</span><span class="w"> </span><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="o">÷</span><span class="nv">B</span>
 <span class="w">            </span><span class="err">^</span>
 </code></pre></div>
 <p>Here is an error that we have taken no account of.</p>
 <p>Change <code>DIV</code> to take this new error into account:
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="nv">B</span><span class="sr">;</span><span class="nf">⎕TRAP</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="nv">B</span><span class="sr">;</span><span class="nf">⎕TRAP</span>
 <span class="w">  </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">  </span><span class="c1">⍝ Set the trap</span>
 <span class="w">  </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="p">(</span><span class="m">11</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">'→ERR1'</span><span class="p">)(</span><span class="m">5</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">'→ERR2'</span><span class="p">)</span>
 <span class="w">  </span><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">  </span><span class="c1">⍝ Do the work; if it results in error 11,</span>
@@ -78933,33 +78933,33 @@
 <span class="w">  </span><span class="sr">[</span><span class="m">11</span><span class="sr">]</span><span class="w"> </span><span class="nv">ERR2</span><span class="bp">:</span><span class="s1">'Arguments must be same length'</span>
 <span class="w">       </span><span class="bp">∇</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">         </span><span class="p">)</span><span class="nv">RESET</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="p">)</span><span class="nv">RESET</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">         </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span>
 <span class="w">   </span><span class="nv">Arguments</span><span class="w"> </span><span class="nv">must</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">same</span><span class="w"> </span><span class="nv">length</span>
 </code></pre></div>
 <p>But here's yet another problem that we didn't think of:
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">6</span><span class="p">)</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">24</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">6</span><span class="p">)</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">24</span><span class="p">)</span>
 <span class="w">   </span><span class="nv">RANK</span><span class="w"> </span><span class="nv">ERROR</span>
 <span class="w">   </span><span class="nv">DIV</span><span class="w"> </span><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="o">÷</span><span class="nv">B</span>
 <span class="w">            </span><span class="err">^</span>
 </code></pre></div>
 <h2 id="global-traps">Global Traps</h2>
 <p>Often when we are writing a system, we can't think of everything that may go wrong ahead of time; so we need a way of catching "everything else that I may not have thought of". The error number used for "everything else" is zero:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="p">)</span><span class="nv">RESET</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="p">)</span><span class="nv">RESET</span>
 </code></pre></div>
 <p>Set a global trap:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="nf">⎕TRAP</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">' ''Invalid arguments'' '</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="nf">⎕TRAP</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">' ''Invalid arguments'' '</span>
 </code></pre></div>
 <p>And run the function:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">6</span><span class="p">)</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">24</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">6</span><span class="p">)</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">24</span><span class="p">)</span>
 <span class="w">   </span><span class="nv">Invalid</span><span class="w"> </span><span class="nv">arguments</span>
 </code></pre></div>
 <p>In this case, when APL executed line 4 of our function <code>DIV</code>, it encountered an error number 4 (<code>RANK ERROR</code>). It searched the local trap table, found nothing relating to error 4, so searched further up the stack to see if the error was mentioned anywhere else. It found an entry with an associated Execute code, so executed the appropriate action AT THE POINT THAT THE ERROR OCCURRED. Let's see what's in the stack:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="p">)</span><span class="nv">SI</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="p">)</span><span class="nv">SI</span>
 <span class="w">   </span><span class="nv">DIV</span><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="o">*</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">         </span><span class="o">↑</span><span class="nf">⎕DM</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="o">↑</span><span class="nf">⎕DM</span>
 <span class="w">   </span><span class="nv">RANK</span><span class="w"> </span><span class="nv">ERROR</span>
 <span class="w">   </span><span class="nv">DIV</span><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="o">÷</span><span class="nv">B</span>
 <span class="w">           </span><span class="err">^</span>
@@ -78967,13 +78967,13 @@
 <p>So although our action has been taken, execution has stopped where it normally would after a <code>RANK ERRO</code>R.</p>
 <h2 id="dangers">Dangers</h2>
 <p>We must be careful when we set global traps; let's call the non-existent function BUG whenever we get an unexpected error:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="p">)</span><span class="nv">RESET</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="p">)</span><span class="nv">RESET</span>
 <span class="w">         </span><span class="nf">⎕TRAP</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">'BUG'</span>
 <span class="w">         </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">6</span><span class="p">)</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">24</span><span class="p">)</span>
 </code></pre></div>
 <p>Nothing happens, since APL traps a <code>RANK ERROR</code> on line 4 of <code>DIV</code>, so executes the trap statement, which causes a <code>VALUE ERROR</code>, which activates the trap action, which causes a <code>VALUE ERROR</code>, which .... etc. etc. If we had also chosen to trap on 1000 (ALL INTERRUPTS), then we'd be in trouble!</p>
 <p>Let's define a function <code>BUG</code>:
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="bp">∇</span><span class="w"> </span><span class="nv">BUG</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="bp">∇</span><span class="w"> </span><span class="nv">BUG</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w"> </span><span class="c1">⍝ Called whenever there is an unexpected error</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="s1">'*** UNEXPECTED ERROR OCCURRED IN: '</span><span class="o">,⊃</span><span class="m">1</span><span class="o">↓</span><span class="nf">⎕SI</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">   </span><span class="s1">'*** PLEASE CALL YOUR SYSTEM ADMINISTRATOR'</span>
@@ -78985,12 +78985,12 @@
 <span class="w">       </span><span class="bp">∇</span>
 </code></pre></div>
 <p>Now, whenever we run our system and an unexpected error occurs, our <code>BUG</code> function will be called.
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="m">10</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="m">10</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="m">0</span>
 <span class="w">   </span><span class="nv">Please</span><span class="w"> </span><span class="nv">give</span><span class="w"> </span><span class="nv">non</span><span class="o">-</span><span class="nv">zero</span><span class="w"> </span><span class="nv">right</span><span class="w"> </span><span class="nv">arg</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">         </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">6</span><span class="p">)</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">12</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">6</span><span class="p">)</span><span class="w"> </span><span class="nv">DIV</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">12</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">   </span><span class="o">***</span><span class="w"> </span><span class="nv">UNEXPECTED</span><span class="w"> </span><span class="nv">ERROR</span><span class="w"> </span><span class="nv">OCCURRED</span><span class="w"> </span><span class="nv">IN</span><span class="bp">:</span><span class="w"> </span><span class="nv">DIV</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="o">***</span><span class="w"> </span><span class="nv">UNEXPECTED</span><span class="w"> </span><span class="nv">ERROR</span><span class="w"> </span><span class="nv">OCCURRED</span><span class="w"> </span><span class="nv">IN</span><span class="bp">:</span><span class="w"> </span><span class="nv">DIV</span>
 <span class="w">   </span><span class="o">***</span><span class="w"> </span><span class="nv">PLEASE</span><span class="w"> </span><span class="nv">CALL</span><span class="w"> </span><span class="nv">YOUR</span><span class="w"> </span><span class="nv">SYSTEM</span><span class="w"> </span><span class="nv">ADMINISTRATOR</span><span class="s1">'</span>
 <span class="s1">   *** WORKSPACE SAVED AS BUG.DIV</span>
 <span class="s1">   *** LOGGING YOU OFF THE SYSTEM'</span>
@@ -78998,7 +78998,7 @@
 <p>The system administrator can then load BUG.DIV, look at the SI stack, discover the problem, and fix it.</p>
 <h2 id="looking-out-for-specific-problems">Looking out for Specific Problems</h2>
 <p>In many cases, you can of course achieve the same effect of a trap by using APL code to detect the problem before it happens. Consider the function <code>TIE∆FILE</code>, which checks to see if a file already exists before it tries to access it:
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">TIE∆FILE</span><span class="w"> </span><span class="nv">FILE</span><span class="sr">;</span><span class="nv">FILES</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">TIE∆FILE</span><span class="w"> </span><span class="nv">FILE</span><span class="sr">;</span><span class="nv">FILES</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">  </span><span class="c1">⍝ Tie file FILE with next available tie number</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">  </span><span class="c1">⍝</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">  </span><span class="c1">⍝ All files in my directory</span>
@@ -79016,7 +79016,7 @@
 <span class="w">       </span><span class="bp">∇</span>
 </code></pre></div>
 <p>This function executes the same code whether the file name is right or wrong, and it could take a while to get all the file names in your directory. It would be neater, and more efficient to take action ONLY when the file name is wrong:
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">TIE∆FILE</span><span class="w"> </span><span class="nv">FILE</span><span class="sr">;</span><span class="nf">⎕TRAP</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">TIE∆FILE</span><span class="w"> </span><span class="nv">FILE</span><span class="sr">;</span><span class="nf">⎕TRAP</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w"> </span><span class="c1">⍝ Tie file FILE with next available tie number</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w"> </span><span class="c1">⍝</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w"> </span><span class="c1">⍝ Set trap</span>
@@ -79030,7 +79030,7 @@
 </code></pre></div>
 <h2 id="cut-back-versus-execute">Cut-Back versus Execute</h2>
 <p>Let us consider the effect of using Cut-Back instead of Execute. Consider the system illustrated below, in which the function <code>REPORT</code> gives the user the option of 4 reports to be generated:
-</p><div class="highlight"><pre><span></span><code><span class="w">             </span><span class="nv">REPORT</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">             </span><span class="nv">REPORT</span>
 <span class="w">                </span><span class="o">|</span>
 <span class="w"> </span><span class="na">.</span><span class="o">-------------------------</span><span class="na">.</span>
 <span class="w"> </span><span class="o">|</span><span class="w">          </span><span class="o">|</span><span class="w">      </span><span class="o">|</span><span class="w">       </span><span class="o">|</span>
@@ -79040,7 +79040,7 @@
 <span class="w">              </span><span class="o">|</span><span class="w">    </span><span class="o">|</span><span class="w">    </span><span class="o">|</span>
 <span class="w">             </span><span class="na">...</span><span class="w">  </span><span class="nv">DIV</span><span class="w">  </span><span class="na">...</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">       </span><span class="bp">∇</span><span class="w">  </span><span class="nv">REPORT</span><span class="sr">;</span><span class="nv">OPTIONS</span><span class="sr">;</span><span class="nv">OPTION</span><span class="sr">;</span><span class="nf">⎕TRAP</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="bp">∇</span><span class="w">  </span><span class="nv">REPORT</span><span class="sr">;</span><span class="nv">OPTIONS</span><span class="sr">;</span><span class="nv">OPTION</span><span class="sr">;</span><span class="nf">⎕TRAP</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">  </span><span class="c1">⍝ Driver functions for report sub-system. If an</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">  </span><span class="c1">⍝ unexpected error occurs, take action in the</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">  </span><span class="c1">⍝ function where the error occurred</span>
@@ -79059,10 +79059,10 @@
 <span class="w">   </span><span class="sr">[</span><span class="m">16</span><span class="sr">]</span><span class="w"> </span><span class="nv">END</span><span class="bp">:</span>
 </code></pre></div>
 <p>Suppose the user chooses <code>REP3</code>, and an unexpected error occurs in <code>DIV</code>. The good news is that the System Administrator gets a snapshot copy of the workspace that he can play about with:
-</p><div class="highlight"><pre><span></span><code><span class="w">         </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">BUG</span><span class="na">.</span><span class="nv">DIV</span><span class="w">  </span><span class="c1">⍝ Load workspace</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">BUG</span><span class="na">.</span><span class="nv">DIV</span><span class="w">  </span><span class="c1">⍝ Load workspace</span>
 <span class="w">   </span><span class="nv">saved</span><span class="w"> </span><span class="na">......</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">         </span><span class="p">)</span><span class="nv">SI</span><span class="w">            </span><span class="c1">⍝ Where did error occur?</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">         </span><span class="p">)</span><span class="nv">SI</span><span class="w">            </span><span class="c1">⍝ Where did error occur?</span>
 <span class="w">   </span><span class="nv">DIV</span><span class="sr">[</span><span class="m">4</span><span class="sr">]</span><span class="o">*</span>
 <span class="w">   </span><span class="nv">REP3</span><span class="sr">[</span><span class="m">6</span><span class="sr">]</span>
 <span class="w">   </span><span class="o">⍎</span>
@@ -79077,7 +79077,7 @@
 <span class="w">   </span><span class="na">.........</span>
 </code></pre></div>
 <p>The bad news is, our user is locked out of the whole system, even though it may only be <code>REP3</code> that has a problem. We can get around this by making use of the CUT-BACK action code.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">REPORT</span><span class="sr">;</span><span class="nv">OPTIONS</span><span class="sr">;</span><span class="nv">OPTION</span><span class="sr">;</span><span class="nf">⎕TRAP</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">REPORT</span><span class="sr">;</span><span class="nv">OPTIONS</span><span class="sr">;</span><span class="nv">OPTION</span><span class="sr">;</span><span class="nf">⎕TRAP</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w"> </span><span class="c1">⍝ Driver functions for report sub-system. If an</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w"> </span><span class="c1">⍝ unexpected error occurs, cut the stack back</span>
 <span class="w">   </span><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w"> </span><span class="c1">⍝ to this function, then take action</span>
@@ -79133,7 +79133,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

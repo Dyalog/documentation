@@ -78787,36 +78787,36 @@
 
 <p>GUI objects are a special type of namespace and this has several useful implications. Firstly, instead of creating the children of an object from <em>outside</em> in the workspace, you can use <code>)CS</code> to change to an object and create them from within. The only restriction is that you can only create GUI objects that are valid as children of the current object. A second benefit is that you can put the callback functions, together with any global variables they require, into the objects to which they apply. Consider the following example.</p>
 <p>First make a Form <code>F1</code>
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'GUI Objects as Namespaces'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'GUI Objects as Namespaces'</span>
 <span class="w">                      </span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">50</span><span class="p">)</span>
 </code></pre></div>
 <p>Then change to the Form's namespace
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">F1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">F1</span>
 <span class="c1">#.F1</span>
 </code></pre></div>
 <p>Now you can create a Group (or any other child object), but because you are already <em>inside</em> the Form, the name you give to the Group will be taken as being <em>relative</em> to the Form. In other words, you must specify the part of the name that applies to the Group itself, leaving out the <code>'F1.'</code> prefix that you would use if you executed the statement <em>outside</em> in the workspace.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'CH'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Group'</span><span class="w"> </span><span class="s1">'Counter'</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="w"> </span><span class="m">70</span><span class="w"> </span><span class="m">60</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'CH'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Group'</span><span class="w"> </span><span class="s1">'Counter'</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="w"> </span><span class="m">70</span><span class="w"> </span><span class="m">60</span><span class="p">)</span>
 </code></pre></div>
 <p>You can continue to create other objects
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'OK'</span><span class="w">  </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Button'</span><span class="w"> </span><span class="s1">'&amp;Ok'</span><span class="w"> </span><span class="p">(</span><span class="m">20</span><span class="w"> </span><span class="m">80</span><span class="p">)(</span><span class="no">⍬</span><span class="w"> </span><span class="m">15</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'OK'</span><span class="w">  </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Button'</span><span class="w"> </span><span class="s1">'&amp;Ok'</span><span class="w"> </span><span class="p">(</span><span class="m">20</span><span class="w"> </span><span class="m">80</span><span class="p">)(</span><span class="no">⍬</span><span class="w"> </span><span class="m">15</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">'CAN'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Button'</span><span class="w"> </span><span class="s1">'&amp;Cancel'</span><span class="w"> </span><span class="p">(</span><span class="m">60</span><span class="w"> </span><span class="m">80</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">⍬</span><span class="w"> </span><span class="m">15</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">'FNT'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Font'</span><span class="w"> </span><span class="s1">'Arial'</span><span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="p">(</span><span class="s1">'Weight'</span><span class="w"> </span><span class="m">700</span><span class="p">)</span>
 </code></pre></div>
 <p>If you ask for a list of objects, you will see only those within the current namespace
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">OBJECTS</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">OBJECTS</span>
 <span class="nv">CAN</span><span class="w">     </span><span class="nv">CH</span><span class="w">      </span><span class="nv">FNT</span><span class="w">     </span><span class="nv">OK</span>
 </code></pre></div>
 <p>When you are inside an object you can also set (or get) a property directly, so you can set the FontObj property for the Form with the following statement.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">FontObj</span><span class="kd">←</span><span class="s1">'FNT'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">FontObj</span><span class="kd">←</span><span class="s1">'FNT'</span>
 </code></pre></div>
 <p>You can achieve the same with <code>⎕WS</code> by omitting its left argument:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'FontObj'</span><span class="w"> </span><span class="s1">'FNT'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'FontObj'</span><span class="w"> </span><span class="s1">'FNT'</span>
 </code></pre></div>
 <p>You can create a child of the Group from outside it ...
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'CH.UP'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Button'</span><span class="w"> </span><span class="s1">'+1'</span><span class="w"> </span><span class="p">(</span><span class="m">20</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="m">30</span><span class="w"> </span><span class="m">20</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'CH.UP'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Button'</span><span class="w"> </span><span class="s1">'+1'</span><span class="w"> </span><span class="p">(</span><span class="m">20</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="m">30</span><span class="w"> </span><span class="m">20</span><span class="p">)</span>
 </code></pre></div>
 <p>or you can change to it and create others from within...
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">CH</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">CH</span>
 <span class="c1">#.F1.CH</span>
 <span class="w">      </span><span class="s1">'DOWN'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Button'</span><span class="w"> </span><span class="s1">'-1'</span><span class="w"> </span><span class="p">(</span><span class="m">60</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="m">30</span><span class="w"> </span><span class="m">20</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">'FNT'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Font'</span><span class="w"> </span><span class="s1">'Arial'</span><span class="w"> </span><span class="m">32</span>
@@ -78824,11 +78824,11 @@
 <span class="w">                </span><span class="p">(</span><span class="s1">'FontObj'</span><span class="w"> </span><span class="s1">'FNT'</span><span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 <p>Once again, if you request a list of objects you will see only those in the current namespace.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">OBJECTS</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">OBJECTS</span>
 <span class="nv">CTR</span><span class="w">     </span><span class="nv">DOWN</span><span class="w">    </span><span class="nv">FNT</span><span class="w">     </span><span class="nv">UP</span>
 </code></pre></div>
 <p>You can create functions and variables in a GUI namespace in exactly the same way as in any other. So, for example, you could create a variable called <code>COUNT</code> and a function <code>CHANGE</code> to update it:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">COUNT</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">COUNT</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">0</span>
 
 <span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">INCR</span><span class="w"> </span><span class="nv">CHANGE</span><span class="w"> </span><span class="nv">MSG</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">COUNT</span><span class="kd">←</span><span class="nv">COUNT</span><span class="o">+</span><span class="nv">INCR</span>
@@ -78836,12 +78836,12 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>You can also make <code>CHANGE</code> a callback function for the two Buttons.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">UP</span><span class="na">.</span><span class="nv">onSelect</span><span class="kd">←</span><span class="s1">'CHANGE'</span><span class="w"> </span><span class="m">1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">UP</span><span class="na">.</span><span class="nv">onSelect</span><span class="kd">←</span><span class="s1">'CHANGE'</span><span class="w"> </span><span class="m">1</span>
 <span class="w">      </span><span class="nv">DOWN</span><span class="na">.</span><span class="nv">onSelect</span><span class="kd">←</span><span class="s1">'CHANGE'</span><span class="w"> </span><span class="m">¯1</span>
 </code></pre></div>
 <p>Notice that because you were in the <code>F1.CH</code> namespace when you made this association, the event will fire the function <code>CHANGE</code> in the <code>F1.CH</code> namespace and, furthermore, it will execute it within that namespace. Hence the names referenced by the function are the local names, that is, the variable <code>COUNT</code> and the Label <code>CTR</code>, within that namespace.</p>
 <p>So if you now switch back to the outer workspace
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span>
 <span class="c1">#</span>
 </code></pre></div>
 <p>and click on the buttons...</p>
@@ -78849,7 +78849,7 @@
 <p><img alt="" src="../../img/gui-objects-as-namespaces.png"></p>
 <h2 id="attaching-gui-objects-to-namespaces">Attaching GUI Objects to Namespaces</h2>
 <p>Monadic <code>⎕WC</code> is used to <em>attach</em> a GUI component to an existing object. The existing object must be a pure namespace or an appropriate GUI object (one that can legitimately be placed at that point in the object hierarchy). The operation may be performed by changing space to the object or by running <code>⎕WC</code> <em>inside</em> the object using the <em>dot</em> syntax. For example, the following statements are equivalent.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">F</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">F</span>
 <span class="c1">#.F</span>
 <span class="w">      </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w">  </span><span class="c1">⍝ Attach a Form to this namespace</span>
 
@@ -78863,10 +78863,10 @@
 <h2 id="namespace-references-and-gui-objects">Namespace References and GUI Objects</h2>
 <p>The use of a GUI name in an expression is a reference to the GUI object, or <em>ref</em> for short. If you assign a <em>ref</em> or call a function with a <em>ref</em> as an argument, the <em>reference</em> to the GUI object is copied, not the GUI object itself.</p>
 <p>So for example, if you have a Form named <code>F</code>:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span>
 </code></pre></div>
 <p>Assigning <code>F</code> to <code>F1</code>, does not create a second Form <code>F1</code>; it simply creates a second reference (<code>F1</code>) to the Form <code>F</code>.  Subsequently, you can manipulate the Form <code>F</code> using either <code>F</code> or <code>F1</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="kd">←</span><span class="nv">F</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="kd">←</span><span class="nv">F</span>
 <span class="w">      </span><span class="nv">F1</span>
 <span class="c1">#.F</span>
 <span class="w">      </span><span class="nv">F1</span><span class="na">.</span><span class="nv">Caption</span><span class="kd">←</span><span class="s1">'Hello World'</span>
@@ -78875,7 +78875,7 @@
 </code></pre></div>
 <p>Similarly, if you call a function with <code>F</code> as the argument, the local argument name becomes a second reference to the Form, and a new Form is not created:</p>
 <p>Here is a simple function which approximately centres a Form in the middle of the screen:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">SHOW_CENTRE</span><span class="w"> </span><span class="nv">FORM</span><span class="sr">;</span><span class="nv">OLD</span><span class="sr">;</span><span class="nv">SCREEN</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">SHOW_CENTRE</span><span class="w"> </span><span class="nv">FORM</span><span class="sr">;</span><span class="nv">OLD</span><span class="sr">;</span><span class="nv">SCREEN</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">SCREEN</span><span class="kd">←</span><span class="o">⊃</span><span class="s1">'.'</span><span class="nf">⎕WG</span><span class="s1">'DevCaps'</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">OLD</span><span class="kd">←</span><span class="nv">FORM</span><span class="na">.</span><span class="nv">Coord</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">FORM</span><span class="na">.</span><span class="nv">Coord</span><span class="kd">←</span><span class="s1">'Pixel'</span>
@@ -78884,13 +78884,13 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>The function can be called using either <code>F</code> or <code>F1</code> (or any other Form) as an argument:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">SHOW_CENTRE</span><span class="w"> </span><span class="nv">F</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">SHOW_CENTRE</span><span class="w"> </span><span class="nv">F</span>
 <span class="m">287</span><span class="w"> </span><span class="m">329</span>
 <span class="w">      </span><span class="nv">SHOW_CENTRE</span><span class="w"> </span><span class="nv">F1</span>
 <span class="m">287</span><span class="w"> </span><span class="m">329</span>
 </code></pre></div>
 <p>A <em>ref</em> to a GUI object can conveniently be used as the argument to <code>:With</code>; for example, the <code>SHOW_CENTRE</code> function can instead be written as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">SHOW_CENTRE</span><span class="w"> </span><span class="nv">FORM</span><span class="sr">;</span><span class="nv">OLD</span><span class="sr">;</span><span class="nv">SCREEN</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">SHOW_CENTRE</span><span class="w"> </span><span class="nv">FORM</span><span class="sr">;</span><span class="nv">OLD</span><span class="sr">;</span><span class="nv">SCREEN</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">SCREEN</span><span class="kd">←</span><span class="o">⊃</span><span class="s1">'.'</span><span class="nf">⎕WG</span><span class="s1">'DevCaps'</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="nv">FORM</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">        </span><span class="nv">OLD</span><span class="kd">←</span><span class="nv">Coord</span>
@@ -78902,17 +78902,17 @@
 </code></pre></div>
 <p>If instead, you actually want to duplicate (clone) a GUI object, you may do so by calling <code>⎕WC</code> with a <em>ref</em> as the right argument and the new name as the left argument.</p>
 <p>For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="s1">'F'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Cloning Example'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="s1">'F'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Cloning Example'</span>
 <span class="w">    </span><span class="s1">'F.B'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Group'</span><span class="w"> </span><span class="s1">'Background'</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="m">80</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
 <span class="w">    </span><span class="s1">'F.B.R'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Button'</span><span class="w"> </span><span class="s1">'Red'</span><span class="w"> </span><span class="p">(</span><span class="m">20</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Radio'</span><span class="p">)</span>
 <span class="w">    </span><span class="s1">'F.B.B'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Button'</span><span class="w"> </span><span class="s1">'Blue'</span><span class="w"> </span><span class="p">(</span><span class="m">50</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Radio'</span><span class="p">)</span>
 <span class="w">    </span><span class="s1">'F.B.G'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Button'</span><span class="w"> </span><span class="s1">'Green'</span><span class="w"> </span><span class="p">(</span><span class="m">80</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Radio'</span><span class="p">)</span>
 </code></pre></div>
 <p>Then, instead of creating a second Group for selecting Foreground colour line by line as before, you can clone the "Background" Group as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F.F'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="nv">F</span><span class="na">.</span><span class="nv">B</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F.F'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="nv">F</span><span class="na">.</span><span class="nv">B</span>
 </code></pre></div>
 <p>The new Group <code>F.F</code> is an exact copy of <code>F.B</code> and will have the same Posn, Size and Caption, as well as having identical children. To achieve the desired result, it is therefore only necessary to change its Posn and Caption properties; for example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">F</span><span class="na">.</span><span class="nv">Caption</span><span class="w"> </span><span class="nv">F</span><span class="na">.</span><span class="nv">F</span><span class="na">.</span><span class="nv">Posn</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'ForeGround'</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">60</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nv">F</span><span class="na">.</span><span class="nv">Caption</span><span class="w"> </span><span class="nv">F</span><span class="na">.</span><span class="nv">F</span><span class="na">.</span><span class="nv">Posn</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'ForeGround'</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">60</span><span class="p">)</span>
 </code></pre></div>
 <p>The result is illustrated below.</p>
 <p><img alt="" src="../../img/cloning-example.png"></p>
@@ -78946,7 +78946,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

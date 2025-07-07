@@ -78868,7 +78868,7 @@
 <p>See also <a href="../vget/"><code>⎕VGET</code></a>.</p>
 <h2 id="examples">Examples</h2>
 <p>Name value pairs:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕VSET</span><span class="w"> </span><span class="p">(</span><span class="s1">'name1'</span><span class="w"> </span><span class="m">123</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'name2'</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="s1">'hello'</span><span class="p">))</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕VSET</span><span class="w"> </span><span class="p">(</span><span class="s1">'name1'</span><span class="w"> </span><span class="m">123</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'name2'</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="s1">'hello'</span><span class="p">))</span>
 <span class="w">      </span><span class="nv">name1</span>
 <span class="m">123</span>
 <span class="w">      </span><span class="nv">name2</span>
@@ -78880,7 +78880,7 @@
 <span class="w">  </span><span class="nv">X</span><span class="w"> </span><span class="nv">value</span><span class="w">  </span><span class="nv">Y</span><span class="w"> </span><span class="nv">value</span><span class="w">    </span><span class="nv">X</span><span class="w"> </span><span class="nv">value</span><span class="w">  </span><span class="nv">Y</span><span class="w"> </span><span class="nv">value</span><span class="w">    </span><span class="nv">X</span><span class="w"> </span><span class="nv">value</span><span class="w">  </span><span class="nv">Y</span><span class="w"> </span><span class="nv">value</span>
 </code></pre></div>
 <p>Name matrix and value vector:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">names</span><span class="kd">←</span><span class="o">↑</span><span class="s1">'name1'</span><span class="w"> </span><span class="s1">'name2'</span><span class="w"> </span><span class="s1">'name3'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">names</span><span class="kd">←</span><span class="o">↑</span><span class="s1">'name1'</span><span class="w"> </span><span class="s1">'name2'</span><span class="w"> </span><span class="s1">'name3'</span>
 <span class="w">      </span><span class="nv">names</span>
 <span class="nv">name1</span>
 <span class="nv">name2</span>
@@ -78891,7 +78891,7 @@
 <span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span>
 </code></pre></div>
 <p>Single name-value pair:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕VSET</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'name1'</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕VSET</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'name1'</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
 <span class="w">      </span><span class="nf">⎕VSET</span><span class="w"> </span><span class="o">,⊂</span><span class="s1">'name2'</span><span class="w"> </span><span class="p">(</span><span class="m">40</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">60</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">name1</span>
 <span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span>
@@ -78899,7 +78899,7 @@
 <span class="m">40</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">60</span>
 </code></pre></div>
 <p>Multiple names, with a single value:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">names</span><span class="kd">←</span><span class="o">↑</span><span class="s1">'name1'</span><span class="w"> </span><span class="s1">'name2'</span><span class="w"> </span><span class="s1">'name3'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">names</span><span class="kd">←</span><span class="o">↑</span><span class="s1">'name1'</span><span class="w"> </span><span class="s1">'name2'</span><span class="w"> </span><span class="s1">'name3'</span>
 <span class="w">      </span><span class="nv">value</span><span class="kd">←</span><span class="s1">'APL'</span>
 
 <span class="w">      </span><span class="nf">⎕VSET</span><span class="w"> </span><span class="nv">names</span><span class="w"> </span><span class="p">(</span><span class="o">⊂</span><span class="nv">value</span><span class="p">)</span>
@@ -78910,7 +78910,7 @@
 <p>The <code>Trigger</code> variant option specifies whether any <a href="../../../programming-reference-guide/triggers/triggers">triggers</a> should be run for the modified variables in the target namespace that have triggers attached.
 The value must be a Boolean scalar. The default is <code>1</code>, meaning that triggers are run.</p>
 <h4 class="example">Example</h4>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕VR</span><span class="w"> </span><span class="s1">'trigger'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕VR</span><span class="w"> </span><span class="s1">'trigger'</span>
 <span class="w">     </span><span class="bp">∇</span><span class="nv">trigger</span><span class="w"> </span><span class="nv">arg</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Trigger</span><span class="w"> </span><span class="nv">name1</span><span class="o">,</span><span class="nv">name3</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="vg">⎕</span><span class="kd">←</span><span class="s1">'Running trigger for: '</span><span class="o">,</span><span class="nv">arg</span><span class="na">.</span><span class="nv">Name</span>
@@ -78963,7 +78963,7 @@ The value must be a Boolean scalar. The default is <code>1</code>, meaning that 
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

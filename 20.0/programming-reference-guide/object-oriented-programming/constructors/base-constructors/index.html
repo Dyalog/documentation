@@ -78709,14 +78709,14 @@
 <p>Constructors in a Class hierarchy are not inherited in the same way as other members. However, there is a mechanism for all the Classes in the Class inheritance tree to participate in the initialisation of an Instance.</p>
 <p>Every Constructor function contains a <code>:Implements Constructor</code> statement which may appear anywhere in the function body. The statement may optionally be followed by the <code>:Base</code> control word and an arbitrary expression.</p>
 <p>The statement:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Constructor</span><span class="w"> </span><span class="bp">:</span><span class="nv">Base</span><span class="w"> </span><span class="nv">expr</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Constructor</span><span class="w"> </span><span class="bp">:</span><span class="nv">Base</span><span class="w"> </span><span class="nv">expr</span>
 </code></pre></div>
 <p>calls <em>a monadic</em> Constructor in the Base Class. The choice of Constructor depends upon the rank and shape of the result of <code>expr</code> (see <a href="../constructor-overloading/">Constructor Overloading</a> for details).</p>
 <p>Whereas, the statement:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Constructor</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Constructor</span>
 </code></pre></div>
 <p>or
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Constructor</span><span class="w"> </span><span class="bp">:</span><span class="nv">Base</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Constructor</span><span class="w"> </span><span class="bp">:</span><span class="nv">Base</span>
 </code></pre></div>
 <p>calls <em>the niladic</em> Constructor in the Base Class.</p>
 <p>Note that during the instantiation of an Instance, these calls potentially take place in every Class in the Class hierarchy.</p>
@@ -78753,7 +78753,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

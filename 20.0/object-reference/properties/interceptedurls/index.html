@@ -78739,22 +78739,22 @@
 </tbody>
 </table>
 <p>If the requested url is a relative rather than an absolute URL, it is prepended by the string <code>http://dyalog_root/</code>. So, for example, if the <a href="../html/">HTML</a> property contains :
-</p><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nv">link</span><span class="w"> </span><span class="nv">rel</span><span class="o">=</span><span class="s2">"stylesheet"</span><span class="w"> </span><span class="nv">href</span><span class="o">=</span><span class="s2">"style.css"</span><span class="o">&gt;</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nv">link</span><span class="w"> </span><span class="nv">rel</span><span class="o">=</span><span class="s2">"stylesheet"</span><span class="w"> </span><span class="nv">href</span><span class="o">=</span><span class="s2">"style.css"</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="nv">script</span><span class="w"> </span><span class="nv">src</span><span class="o">=</span><span class="s2">"app.js"</span><span class="o">&gt;&lt;</span><span class="na">/</span><span class="nv">script</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>the HTMLRenderer will request <code>http://dyalog_root/style.css</code> and <code>http://dyalog_root/app.js</code> respectively.</p>
 <p>When the value of InterceptedURLs is its default ( <code>(0 2⍴'')</code> it is treated as if it were set to <code>((1 2⍴'*://dyalog_root/*' 1)</code>. So by default, requests for a relative URL will fire an event in the workspace while absolute URL will be directed by the CEF to the internet.</p>
 <p>Note that if code in the page creates a web socket intended for internal use, with anything other than <code>dyalog_root</code> as the URL, the URL must match a pattern in InterceptedURLs with 1 in the second column. The following example does not require a matching pattern in InterceptedURLs.
-</p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="na">//</span><span class="w"> </span><span class="nv">Create</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">new</span><span class="w"> </span><span class="nv">WebSocket</span><span class="na">.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w"> </span><span class="na">//</span><span class="w"> </span><span class="nv">Create</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">new</span><span class="w"> </span><span class="nv">WebSocket</span><span class="na">.</span>
 <span class="w">  </span><span class="nv">window</span><span class="na">.</span><span class="nv">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">new</span><span class="w"> </span><span class="nv">WebSocket</span><span class="p">(</span><span class="s1">'ws://dyalog_root/'</span><span class="p">)</span><span class="sr">;</span>
 </code></pre></div>
 <h2 class="example">Examples</h2>
 
 <p>The following will trigger an  event for all requested URLs.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">InterceptedURLs</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="s1">'*'</span><span class="w"> </span><span class="m">1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">InterceptedURLs</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="s1">'*'</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <p>The following will attempt to retrieve from the net URLs containing <code>'.dyalog.com'</code> and trigger an <a href="../../methodorevents/httprequest/">HTTPRequest</a> event for all other requested URLs.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">InterceptedURLs</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="s1">'*.dyalog.com*'</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="s1">'*'</span><span class="w"> </span><span class="m">1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">InterceptedURLs</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="s1">'*.dyalog.com*'</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="s1">'*'</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 
 
@@ -78785,7 +78785,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

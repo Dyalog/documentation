@@ -78726,14 +78726,14 @@
 <p>A request for a negative token type will only be satisfied by the presence of a negative token type in the pool, and that token will be removed.</p>
 <p>If, when a thread calls <code>⎕TGET</code>, the token pool satisfies <strong>all</strong> of the tokens specified by <code>Y</code>, the function returns immediately with a (shy) result that contains the values associated with the pool tokens. Otherwise, the function will block (wait) until <strong>all</strong> of the requested tokens are present or until a time-out (as specified by <code>X</code>) or a weak interrupt occurs.</p>
 <p>For example, if the pool contains only tokens of type 2:
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nf">⎕TGET</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w">        </span><span class="c1">⍝ blocks waiting for a 4-token ...</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="nf">⎕TGET</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w">        </span><span class="c1">⍝ blocks waiting for a 4-token ...</span>
 </code></pre></div>
 <p>The <code>⎕TGET</code> operation is atomic in the sense that no tokens are taken from the pool until <strong>all</strong> of the requested types are present. While this last example is waiting for a 4-token, other threads could take any of the remaining 2-tokens.</p>
 <p>Note also, that repeated items in the right argument are distinct. The following will block until there are at least 3 <code>×</code> 1.9-tokens in the pool:
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nf">⎕TGET</span><span class="w"> </span><span class="m">3</span><span class="na">/</span><span class="m">1.9</span><span class="w">       </span><span class="c1">⍝ wait for 3 × 2-tokens ...</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="nf">⎕TGET</span><span class="w"> </span><span class="m">3</span><span class="na">/</span><span class="m">1.9</span><span class="w">       </span><span class="c1">⍝ wait for 3 × 2-tokens ...</span>
 </code></pre></div>
 <p>The pool is administered on a first-in-first-out basis. This is significant only if tokens of the same type are given distinct values. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nf">⎕TGET</span><span class="w"> </span><span class="nf">⎕TPOOL</span><span class="w">             </span><span class="c1">⍝ empty pool.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="nf">⎕TGET</span><span class="w"> </span><span class="nf">⎕TPOOL</span><span class="w">             </span><span class="c1">⍝ empty pool.</span>
 
 <span class="w">    </span><span class="s1">'ABCDE'</span><span class="nf">⎕TPUT</span><span class="na">¨</span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w">  </span><span class="c1">⍝ pool some tokens.</span>
 
@@ -78745,7 +78745,7 @@
 </code></pre></div>
 <p><code>R</code> is an empty numeric vector <code>⍬</code> (zilde) if a timeout or a weak interrupt occurs.</p>
 <p><strong>Beware</strong> - the following statement will wait forever and can only be terminated by an interrupt.
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nf">⎕TGET</span><span class="w"> </span><span class="m">0</span><span class="w">       </span><span class="c1">⍝ wait forever ...</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="nf">⎕TGET</span><span class="w"> </span><span class="m">0</span><span class="w">       </span><span class="c1">⍝ wait forever ...</span>
 </code></pre></div>
 <p>Note too that if a thread waiting to <code>⎕TGET</code> tokens is <code>⎕TKILL</code>ed, the thread disappears without removing any tokens from the pool. Conversely, if a thread that has removed tokens from the pools is <code>⎕TKILL</code>ed, the tokens are not returned to the pool.</p>
 
@@ -78777,7 +78777,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -79455,7 +79455,7 @@
 <h2 class="example">Examples</h2>
 
 <p><img alt="csv_excel" src="../../img/csv-excel.png">
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊃</span><span class="nf">⎕NGET</span><span class="w"> </span><span class="nv">CSVFile</span><span class="kd">←</span><span class="s1">'c:\Dyalog16.0\sales.csv'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊃</span><span class="nf">⎕NGET</span><span class="w"> </span><span class="nv">CSVFile</span><span class="kd">←</span><span class="s1">'c:\Dyalog16.0\sales.csv'</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">───────────────────────────────────────────────┐</span>
 <span class="err">│</span><span class="nv">Product</span><span class="o">,</span><span class="nv">Sales</span><span class="w">                                   </span><span class="err">│</span>
 <span class="err">│</span><span class="w">             </span><span class="nv">Widgets</span><span class="o">,</span><span class="m">1912</span><span class="w">                       </span><span class="err">│</span>
@@ -79464,7 +79464,7 @@
 <span class="err">│</span><span class="w">                                                </span><span class="err">│</span>
 <span class="err">└────────────────────────────────────────────────┘</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕CSV</span><span class="w"> </span><span class="nv">CSVFile</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕CSV</span><span class="w"> </span><span class="nv">CSVFile</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">───────────────────┐</span>
 <span class="o">↓</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">──────┐</span><span class="w">  </span><span class="err">┌</span><span class="kd">→</span><span class="err">────┐</span><span class="w"> </span><span class="err">│</span>
 <span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="nv">Product</span><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="nv">Sales</span><span class="err">│</span><span class="w"> </span><span class="err">│</span>
@@ -79480,7 +79480,7 @@
 <span class="err">│</span><span class="w"> </span><span class="err">└────────┘</span><span class="w"> </span><span class="err">└───┘</span><span class="w">   </span><span class="err">│</span>
 <span class="err">└</span><span class="o">∊</span><span class="err">───────────────────┘</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕CSV</span><span class="w"> </span><span class="nv">CSVFile</span><span class="s1">''</span><span class="w"> </span><span class="no">⍬</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="c1">⍝ Header row</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕CSV</span><span class="w"> </span><span class="nv">CSVFile</span><span class="s1">''</span><span class="w"> </span><span class="no">⍬</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="c1">⍝ Header row</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">────────────────────────────────────────────┐</span>
 <span class="err">│</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">──────────────────┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">──────────────────┐</span><span class="w"> </span><span class="err">│</span>
 <span class="err">│</span><span class="w"> </span><span class="o">↓</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">──────┐</span><span class="w">  </span><span class="err">┌</span><span class="kd">→</span><span class="err">───┐</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">──────┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">────┐</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">│</span>
@@ -79495,7 +79495,7 @@
 <span class="err">│</span><span class="w"> </span><span class="err">└</span><span class="o">∊</span><span class="err">──────────────────┘</span><span class="w">                       </span><span class="err">│</span>
 <span class="err">└</span><span class="o">∊</span><span class="err">────────────────────────────────────────────┘</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕CSV</span><span class="w"> </span><span class="nv">CSVFile</span><span class="s1">''</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="m">1</span><span class="w"> </span><span class="c1">⍝ Fields are Char, Num</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕CSV</span><span class="w"> </span><span class="nv">CSVFile</span><span class="s1">''</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="m">1</span><span class="w"> </span><span class="c1">⍝ Fields are Char, Num</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">──────────────────────────────────────────┐</span>
 <span class="err">│</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">────────────────┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">──────────────────┐</span><span class="w"> </span><span class="err">│</span>
 <span class="err">│</span><span class="w"> </span><span class="o">↓</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">──────┐</span><span class="w">       </span><span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">──────┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">────┐</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">│</span>
@@ -79510,7 +79510,7 @@
 <span class="err">│</span><span class="w"> </span><span class="err">└</span><span class="o">∊</span><span class="err">────────────────┘</span><span class="w">                       </span><span class="err">│</span>
 <span class="err">└</span><span class="o">∊</span><span class="err">──────────────────────────────────────────┘</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕CSV</span><span class="na">⍠</span><span class="s1">'Invert'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="nv">CSVFile</span><span class="s1">''</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="m">1</span><span class="w">    </span><span class="c1">⍝ Invert 1</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕CSV</span><span class="na">⍠</span><span class="s1">'Invert'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="nv">CSVFile</span><span class="s1">''</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="m">1</span><span class="w">    </span><span class="c1">⍝ Invert 1</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">────────────────────────────────────────────────────┐</span>
 <span class="err">│</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">──────────────────────────┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">──────────────────┐</span><span class="w"> </span><span class="err">│</span>
 <span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">───────┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">───────────┐</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">──────┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">────┐</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">│</span>
@@ -79521,7 +79521,7 @@
 <span class="err">│</span><span class="w"> </span><span class="err">└</span><span class="o">∊</span><span class="err">──────────────────────────┘</span><span class="w">                       </span><span class="err">│</span>
 <span class="err">└</span><span class="o">∊</span><span class="err">────────────────────────────────────────────────────┘</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊃</span><span class="p">(</span><span class="nf">⎕CSV</span><span class="na">⍠</span><span class="s1">'Invert'</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="nv">CSVFile</span><span class="s1">''</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="m">1</span><span class="w">    </span><span class="c1">⍝ Invert 2</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊃</span><span class="p">(</span><span class="nf">⎕CSV</span><span class="na">⍠</span><span class="s1">'Invert'</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="nv">CSVFile</span><span class="s1">''</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="m">1</span><span class="w">    </span><span class="c1">⍝ Invert 2</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">──────────────────────────────────────────────────┐</span>
 <span class="err">│</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">───────────────────────────────┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">───────────┐</span><span class="w"> </span><span class="err">│</span>
 <span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">──────┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">──────┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">───────┐</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="m">1912</span><span class="w"> </span><span class="m">205</span><span class="w"> </span><span class="m">189</span><span class="err">│</span><span class="w"> </span><span class="err">│</span>
@@ -79665,7 +79665,7 @@
 <p>If <code>Y</code> specifies that the CSV data is written to a file then <code>R</code> is the number of bytes (not characters) written, and is shy.</p>
 <p>Otherwise, <code>R</code> is the CSV data in the format specified in Y, and is not shy.</p>
 <h3 class="example">Examples</h3>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="nv">CSVFile</span><span class="kd">←</span><span class="s1">'c:\Dyalog16.0\sales.csv'</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="nv">CSVFile</span><span class="kd">←</span><span class="s1">'c:\Dyalog16.0\sales.csv'</span>
 <span class="w">       </span><span class="vg">⎕</span><span class="kd">←</span><span class="nv">DATA</span><span class="w"> </span><span class="nv">HDR</span><span class="kd">←</span><span class="nf">⎕CSV</span><span class="w"> </span><span class="nv">CSVFile</span><span class="s1">''</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="m">1</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">──────────────────────────────────────────┐</span>
 <span class="err">│</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">────────────────┐</span><span class="w"> </span><span class="err">┌</span><span class="kd">→</span><span class="err">──────────────────┐</span><span class="w"> </span><span class="err">│</span>
@@ -79681,7 +79681,7 @@
 <span class="err">│</span><span class="w"> </span><span class="err">└</span><span class="o">∊</span><span class="err">────────────────┘</span><span class="w">                       </span><span class="err">│</span>
 <span class="err">└</span><span class="o">∊</span><span class="err">──────────────────────────────────────────┘</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nv">DATA</span><span class="o">⍪</span><span class="kd">←</span><span class="s1">'Gizmos'</span><span class="w"> </span><span class="m">23</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="nv">DATA</span><span class="o">⍪</span><span class="kd">←</span><span class="s1">'Gizmos'</span><span class="w"> </span><span class="m">23</span>
 <span class="w">      </span><span class="nv">DATA</span><span class="w"> </span><span class="nv">HDR</span><span class="w"> </span><span class="nf">⎕CSV</span><span class="s1">''</span>
 <span class="err">┌</span><span class="kd">→</span><span class="err">────────────┐</span>
 <span class="err">│</span><span class="nv">Product</span><span class="o">,</span><span class="nv">Sales</span><span class="err">│</span>
@@ -79697,7 +79697,7 @@
 <span class="err">│</span><span class="w">             </span><span class="err">│</span>
 <span class="err">└─────────────┘</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">       </span><span class="nv">CSVFile1</span><span class="kd">←</span><span class="s1">'c:\Dyalog16.0\sales1.csv'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="nv">CSVFile1</span><span class="kd">←</span><span class="s1">'c:\Dyalog16.0\sales1.csv'</span>
 <span class="w">       </span><span class="vg">⎕</span><span class="kd">←</span><span class="nv">DATA</span><span class="w"> </span><span class="nv">HDR</span><span class="w"> </span><span class="nf">⎕CSV</span><span class="w"> </span><span class="nv">CSVFile1</span>
 
 <span class="m">67</span>
@@ -79749,7 +79749,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

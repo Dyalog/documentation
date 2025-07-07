@@ -78723,7 +78723,7 @@
 <p><code>X</code> specifies two numbers (possibly after extension) for each column in <code>Y</code>.  For this purpose, scalar <code>Y</code> is treated as a one-element vector.  Each pair of numbers in <code>X</code> identifies a format width (<code>W</code>) and a format precision (<code>P</code>).</p>
 <p>If <code>P</code> is 0, the column is to be formatted as integers.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">5</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">⍕</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">6</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">5</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">⍕</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">6</span>
 <span class="w">    </span><span class="m">1</span><span class="w">    </span><span class="m">2</span><span class="w">    </span><span class="m">3</span>
 <span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">5</span><span class="w">    </span><span class="m">6</span>
 
@@ -78733,26 +78733,26 @@
 <h2 class="example">Example</h2>
 
 <p>If <code>P</code> is positive, the format is floating point with <code>P</code> significant digits to be displayed after the decimal point.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">4</span><span class="w"> </span><span class="m">1</span><span class="o">⍕</span><span class="m">1.1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">¯4</span><span class="w"> </span><span class="m">2.547</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">4</span><span class="w"> </span><span class="m">1</span><span class="o">⍕</span><span class="m">1.1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">¯4</span><span class="w"> </span><span class="m">2.547</span>
 <span class="w"> </span><span class="m">1.1</span><span class="w"> </span><span class="m">2.0¯4.0</span><span class="w"> </span><span class="m">2.5</span>
 </code></pre></div>
 <h2 class="example">Example</h2>
 
 <p>If <code>P</code> is negative, scaled format is used with <code>|P</code> digits in the mantissa.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">7</span><span class="w"> </span><span class="m">¯3</span><span class="o">⍕</span><span class="m">5</span><span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">155</span><span class="w"> </span><span class="m">1555</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">7</span><span class="w"> </span><span class="m">¯3</span><span class="o">⍕</span><span class="m">5</span><span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">155</span><span class="w"> </span><span class="m">1555</span>
 <span class="m">5.00E0</span><span class="w"> </span><span class="m">1.50E1</span><span class="w"> </span><span class="m">1.55E2</span><span class="w"> </span><span class="m">1.56E3</span>
 </code></pre></div>
 <h2 class="example">Example</h2>
 
 <p>If <code>W</code> is 0 or absent, then the width of the corresponding columns of <code>R</code> are determined by the maximum width required by any element in the corresponding columns of <code>Y</code>, plus one separating space.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">3</span><span class="o">⍕</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="m">10</span><span class="w"> </span><span class="m">15.2346</span><span class="w"> </span><span class="m">¯17.1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">3</span><span class="o">⍕</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="m">10</span><span class="w"> </span><span class="m">15.2346</span><span class="w"> </span><span class="m">¯17.1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span>
 <span class="w"> </span><span class="m">10.000</span><span class="w"> </span><span class="m">15.235</span><span class="w"> </span><span class="m">¯17.100</span>
 <span class="w">  </span><span class="m">2.000</span><span class="w">  </span><span class="m">3.000</span><span class="w">   </span><span class="m">4.000</span>
 </code></pre></div>
 <h2 class="example">Example</h2>
 
 <p>If a formatted element exceeds its specified field width when <code>W&gt;</code>0, the field width for that element is filled with asterisks.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">3</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">⍕</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="m">10.1</span><span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">1001</span><span class="w"> </span><span class="m">22.357</span><span class="w"> </span><span class="m">101</span><span class="w"> </span><span class="m">1110.1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">3</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">⍕</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="m">10.1</span><span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">1001</span><span class="w"> </span><span class="m">22.357</span><span class="w"> </span><span class="m">101</span><span class="w"> </span><span class="m">1110.1</span>
 <span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">15.00</span>
 <span class="o">***</span><span class="w"> </span><span class="m">22.36</span>
 <span class="m">101</span><span class="o">******</span>
@@ -78760,7 +78760,7 @@
 <h2 class="example">Example</h2>
 
 <p>If the format precision exceeds the internal precision, low order digits are replaced by the symbol '<code>_</code>'.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">26</span><span class="o">⍕</span><span class="m">2</span><span class="o">*</span><span class="m">100</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">26</span><span class="o">⍕</span><span class="m">2</span><span class="o">*</span><span class="m">100</span>
 <span class="m">1267650600228229</span><span class="nv">_______________</span><span class="na">.</span><span class="nv">__________________________</span>
 
 <span class="w">      </span><span class="o">⍴</span><span class="m">26</span><span class="o">⍕</span><span class="m">2</span><span class="o">*</span><span class="m">100</span>
@@ -78773,7 +78773,7 @@
 <span class="w"> </span><span class="m">3.333333333333333</span><span class="nv">____E¯1</span>
 </code></pre></div>
 <p>The shape of <code>R</code> is the same as the shape of <code>Y</code> except that the last dimension of <code>R</code> is the sum of the field widths specified in <code>X</code> or deduced by the function.  If <code>Y</code> is a scalar, the shape of <code>R</code> is the field width.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="m">5</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">⍕</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">24</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="m">5</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">⍕</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">24</span>
 <span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">20</span>
 </code></pre></div>
 
@@ -78805,7 +78805,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

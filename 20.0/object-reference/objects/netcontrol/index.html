@@ -78717,14 +78717,14 @@
 <p><strong>Description</strong></p>
 <p>In principle, you may use the NetControl to embed any class that derives from System.Windows.Forms.Control (from system.windows.forms.dll), including derived classes written in Dyalog APL.</p>
 <p>To load a particular .NET control, the appropriate .NET Assembly must be specified in <code>⎕USING</code>; otherwise the expression will cause a <code>LIMIT ERROR</code>. For example, to load one of the standard .NET controls:
-</p><div class="highlight"><pre><span></span><code><span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'System.Windows.Forms,system.windows.forms.dll'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'System.Windows.Forms,system.windows.forms.dll'</span>
 </code></pre></div>
 <p>The <a href="../../properties/classname/"> ClassName</a> property specifies the name of the .NET control to be instantiated and to which the new object named by the left argument of <code>⎕WC</code> is to be connected.
 <a href="../../properties/classname/"> ClassName</a> may only be specified by <code>⎕WC</code>.</p>
 <p>Once you have created an instance of a particular NetControl, the properties, events and methods it supports may be obtained using <code>⎕NL</code>. These are the properties, events and methods defined for the control by its author. The "Dyalog" properties listed above, are not reported by
 <code>⎕NL</code>, but take precedence over (that is, mask) any members of the same name that may be exposed by the class itself.</p>
 <p>The following example illustrates the use of the Button class. In this case, the FlatStyle property of the button is set to "Popup". This gives the button a flat appearance until the mouse is hovered over it, when its appearance it changes to 3-dimensional.
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
 <span class="w">       </span><span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'System.Windows.Forms,system.windows.forms.dll'</span>
 <span class="w">       </span><span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'System.Drawing,system.drawing.dll'</span>
 <span class="w">       </span><span class="nv">an</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">FontFamily</span><span class="p">(</span><span class="o">⊂</span><span class="s1">'Arial'</span><span class="p">)</span>
@@ -78766,7 +78766,7 @@
 </table>
 <p>In most cases, you may use a NetControl in the cells of a <a href="../grid/"> Grid</a> object. Unless you specify otherwise, using the
 <a href="../../properties/inputproperties/"> InputProperties</a> property of the <a href="../grid/"> Grid</a>, the default property of the NetControl will be associated with the corresponding element of Values. The following example illustrates the use of a TextBox control. In this example, the CharacterCasing property of the TextBox is set to Upper, causing all text to be converted to upper-case.
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
 <span class="w">       </span><span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'System.Windows.Forms,system.windows.forms.dll'</span>
 <span class="w">       </span><span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'System.Drawing,system.drawing.dll'</span>
 <span class="w">       </span><span class="nv">an</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">FontFamily</span><span class="p">(</span><span class="o">⊂</span><span class="s1">'Arial Narrow'</span><span class="p">)</span>
@@ -78815,7 +78815,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

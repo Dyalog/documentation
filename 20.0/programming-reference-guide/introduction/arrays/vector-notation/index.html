@@ -78781,13 +78781,13 @@
 <li>any other APL expression which yields a result, within parentheses</li>
 </ol>
 <h2 class="example" id="examples">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">A</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">10</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">A</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">10</span>
 <span class="m">3</span>
 <span class="w">      </span><span class="o">⍴</span><span class="nv">TEXT</span><span class="kd">←</span><span class="s1">'ONE'</span><span class="w"> </span><span class="s1">'TWO'</span>
 <span class="m">2</span>
 </code></pre></div>
 <p>Numbers and characters may be mixed:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">X</span><span class="kd">←</span><span class="s1">'THE ANSWER IS '</span><span class="w"> </span><span class="m">10</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">X</span><span class="kd">←</span><span class="s1">'THE ANSWER IS '</span><span class="w"> </span><span class="m">10</span>
 <span class="m">2</span>
 <span class="w">      </span><span class="nv">X</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span>
 <span class="w"> </span><span class="nv">THE</span><span class="w"> </span><span class="nv">ANSWER</span><span class="w"> </span><span class="nv">IS</span>
@@ -78795,12 +78795,12 @@
 <span class="m">42</span>
 </code></pre></div>
 <p>Blanks, quotes or parentheses must separate adjacent items in vector notation.  Redundant blanks and parentheses are permitted.  In this manual, the symbol pair '<code>←→</code>' indicates the phrase 'is equivalent to'.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">1</span><span class="w">  </span><span class="m">2</span><span class="w">  </span><span class="kd">←→</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="p">)(</span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="kd">←→</span><span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="p">(</span><span class="m">2</span><span class="p">)</span><span class="w">  </span><span class="kd">←→</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="p">)</span><span class="w">  </span><span class="m">2</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">1</span><span class="w">  </span><span class="m">2</span><span class="w">  </span><span class="kd">←→</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="p">)(</span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="kd">←→</span><span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="p">(</span><span class="m">2</span><span class="p">)</span><span class="w">  </span><span class="kd">←→</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="p">)</span><span class="w">  </span><span class="m">2</span>
 <span class="w">      </span><span class="m">2</span><span class="s1">'X'</span><span class="m">3</span><span class="w"> </span><span class="kd">←→</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="s1">'X'</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="kd">←→</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'X'</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
 <span class="w">      </span><span class="m">1</span><span class="w">  </span><span class="p">(</span><span class="m">2</span><span class="o">+</span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="kd">←→</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="p">((</span><span class="m">2</span><span class="o">+</span><span class="m">2</span><span class="p">))</span><span class="w"> </span><span class="kd">←→</span><span class="w"> </span><span class="p">((</span><span class="m">1</span><span class="p">))</span><span class="w">  </span><span class="p">(</span><span class="m">2</span><span class="o">+</span><span class="m">2</span><span class="p">)</span>
 </code></pre></div>
 <p>Vector notation may be used to define an item in vector notation:
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="o">⍴</span><span class="nv">X</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'THIS'</span><span class="w"> </span><span class="s1">'AND'</span><span class="w"> </span><span class="s1">'THAT'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="o">⍴</span><span class="nv">X</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="s1">'THIS'</span><span class="w"> </span><span class="s1">'AND'</span><span class="w"> </span><span class="s1">'THAT'</span><span class="p">)</span>
 <span class="m">3</span>
 <span class="w">      </span><span class="nv">X</span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span>
 <span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span>
@@ -78808,12 +78808,12 @@
 <span class="w">  </span><span class="nv">THIS</span><span class="w">  </span><span class="nv">AND</span><span class="w">  </span><span class="nv">THAT</span>
 </code></pre></div>
 <p>Expressions within parentheses are evaluated to produce an item in the vector:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Y</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="o">+</span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="s1">'IS'</span><span class="w"> </span><span class="m">4</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Y</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="o">+</span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="s1">'IS'</span><span class="w"> </span><span class="m">4</span>
 <span class="w">      </span><span class="nv">Y</span>
 <span class="m">4</span><span class="w">  </span><span class="nv">IS</span><span class="w">  </span><span class="m">4</span>
 </code></pre></div>
 <p>The following identity holds:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="w">  </span><span class="nv">B</span><span class="w">  </span><span class="nv">C</span><span class="w">  </span><span class="kd">←→</span><span class="w"> </span><span class="p">(</span><span class="o">⊂</span><span class="nv">A</span><span class="p">)</span><span class="o">,</span><span class="w"> </span><span class="p">(</span><span class="o">⊂</span><span class="nv">B</span><span class="p">)</span><span class="o">,</span><span class="w"> </span><span class="o">⊂</span><span class="nv">C</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="w">  </span><span class="nv">B</span><span class="w">  </span><span class="nv">C</span><span class="w">  </span><span class="kd">←→</span><span class="w"> </span><span class="p">(</span><span class="o">⊂</span><span class="nv">A</span><span class="p">)</span><span class="o">,</span><span class="w"> </span><span class="p">(</span><span class="o">⊂</span><span class="nv">B</span><span class="p">)</span><span class="o">,</span><span class="w"> </span><span class="o">⊂</span><span class="nv">C</span>
 </code></pre></div>
 
 
@@ -78844,7 +78844,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

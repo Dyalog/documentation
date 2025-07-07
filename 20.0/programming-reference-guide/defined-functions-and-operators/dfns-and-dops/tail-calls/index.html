@@ -78709,7 +78709,7 @@
 <p>A novel feature of the implementation of dfns is the way in which tail calls are optimised.</p>
 <p>When a dfn calls a sub-function, the result of the call may or may not be modified by the calling function before being returned. A call where the result is passed back immediately without modification is termed a tail call.</p>
 <p>For example in the following, the first call on function <code>fact</code> is a tail call because the result of  <code>fact</code> is the result of the whole expression, whereas the second call isn't because the result is subsequently multiplied by <code>⍵</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="bp">⍺</span><span class="o">×</span><span class="bp">⍵</span><span class="p">)</span><span class="nv">fact</span><span class="w"> </span><span class="bp">⍵</span><span class="o">-</span><span class="m">1</span><span class="w">       </span><span class="c1">⍝ Tail call on fact.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="bp">⍺</span><span class="o">×</span><span class="bp">⍵</span><span class="p">)</span><span class="nv">fact</span><span class="w"> </span><span class="bp">⍵</span><span class="o">-</span><span class="m">1</span><span class="w">       </span><span class="c1">⍝ Tail call on fact.</span>
 <span class="w">      </span><span class="bp">⍵</span><span class="o">×</span><span class="nv">fact</span><span class="w"> </span><span class="bp">⍵</span><span class="o">-</span><span class="m">1</span><span class="w">          </span><span class="c1">⍝ Embedded call on fact.</span>
 </code></pre></div>
 <p>Tail calls occur frequently in dfns, and the interpreter optimises them by re-using the current stack frame instead of creating a new one. This gives a significant saving in both time and workspace usage. It is easy to check whether a call is a tail call by tracing it. An embedded call will pop up a new trace window for the called function, whereas a tail call will re-use the current one.</p>
@@ -78724,21 +78724,21 @@
 <li>Branch to step 2. <code>⍝ jump</code></li>
 </ol>
 <p>For example, in classical APL you might find the following:
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="bp">∇</span><span class="w"> </span><span class="nv">value</span><span class="kd">←</span><span class="nv">limit</span><span class="w"> </span><span class="nv">loop</span><span class="w"> </span><span class="nv">value</span><span class="w">  </span><span class="c1">⍝ init</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="bp">∇</span><span class="w"> </span><span class="nv">value</span><span class="kd">←</span><span class="nv">limit</span><span class="w"> </span><span class="nv">loop</span><span class="w"> </span><span class="nv">value</span><span class="w">  </span><span class="c1">⍝ init</span>
 <span class="w">    </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">  </span><span class="nv">top</span><span class="bp">:</span><span class="kd">→</span><span class="p">(</span><span class="nf">⎕CT</span><span class="o">&gt;</span><span class="nv">value</span><span class="o">-</span><span class="nv">limit</span><span class="p">)</span><span class="na">/</span><span class="m">0</span><span class="w"> </span><span class="c1">⍝ test</span>
 <span class="w">    </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="nv">value</span><span class="kd">←</span><span class="nv">Next</span><span class="w"> </span><span class="nv">value</span><span class="w">        </span><span class="c1">⍝ proc, mod</span>
 <span class="w">    </span><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">   </span><span class="kd">→</span><span class="nv">top</span><span class="w">                    </span><span class="c1">⍝ jump</span>
 <span class="w">        </span><span class="bp">∇</span>
 </code></pre></div>
 <p>Control structures help us to package these steps:
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="bp">∇</span><span class="w"> </span><span class="nv">value</span><span class="kd">←</span><span class="nv">limit</span><span class="w"> </span><span class="nv">loop</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="c1">⍝ init</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="bp">∇</span><span class="w"> </span><span class="nv">value</span><span class="kd">←</span><span class="nv">limit</span><span class="w"> </span><span class="nv">loop</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="c1">⍝ init</span>
 <span class="w">    </span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">While</span><span class="w"> </span><span class="nf">⎕CT</span><span class="o">&lt;</span><span class="nv">value</span><span class="o">-</span><span class="nv">limit</span><span class="w"> </span><span class="c1">⍝ test</span>
 <span class="w">    </span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">       </span><span class="nv">value</span><span class="kd">←</span><span class="nv">Next</span><span class="w"> </span><span class="nv">value</span><span class="w">   </span><span class="c1">⍝ proc, mod</span>
 <span class="w">    </span><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">EndWhile</span><span class="w">              </span><span class="c1">⍝ jump</span>
 <span class="w">        </span><span class="bp">∇</span>
 </code></pre></div>
 <p>Using tail calls:
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">loop</span><span class="kd">←</span><span class="kt">{</span><span class="c1">⍝ init</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="nv">loop</span><span class="kd">←</span><span class="kt">{</span><span class="c1">⍝ init</span>
 <span class="w">        </span><span class="nf">⎕CT</span><span class="o">&gt;</span><span class="bp">⍺</span><span class="o">-</span><span class="bp">⍵:⍵</span><span class="w">    </span><span class="c1">⍝ test</span>
 <span class="w">        </span><span class="bp">⍺</span><span class="w"> </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Next</span><span class="w"> </span><span class="bp">⍵</span><span class="w">   </span><span class="c1">⍝ proc, mod, jump</span>
 <span class="w">    </span><span class="kt">}</span>
@@ -78772,7 +78772,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

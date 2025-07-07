@@ -78941,7 +78941,7 @@
 <p>SCM notification messages generate a ServiceNotification event on the Root object. To handle these messages, it is necessary to attach a callback function to this event, and to invoke the Wait method or <code>⎕DQ'.'</code> to process them. This must be executed in thread 0.</p>
 <p>If the application is designed to be driven from events such as Timer or TCPSocket or user-defined events, it too may be implemented via callbacks in thread 0 under the control of the same Wait method or <code>⎕DQ'.'</code>. If the application uses Conga it is recommended that it runs in a separate thread.</p>
 <p>The workspace <code>ws\aplservice.dws</code> is included in the APL release. Its start-up function is as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nf">⎕lX</span><span class="kd">←</span><span class="s1">'Start'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="nf">⎕lX</span><span class="kd">←</span><span class="s1">'Start'</span>
 
 <span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Start</span><span class="sr">;</span><span class="nv">ServiceState</span><span class="sr">;</span><span class="nv">ServiceControl</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="s1">'W'</span><span class="o">≠</span><span class="m">3</span><span class="o">⊃</span><span class="c1">#.⎕WG'APLVersion'</span>
@@ -78972,7 +78972,7 @@
 <p>To give the workspace (which may be busy) time to respond to SCM notifications, Dyalog responds immediately to confirm that the service has entered the appropriate pending state. For example, if the notification is SERVICE_CONTROL_STOP, Dyalog informs the SCM that the service state is SERVICE_STOP_PENDING. It is then up to the callback function to confirm that the state has reached SERVICE_STOPPED.</p>
 <p>The following sample function is provided in <code>aplservice.dws</code>.</p>
 <h3 id="servicehandler-callback-function">ServiceHandler Callback Function</h3>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">ServiceHandler</span><span class="p">(</span><span class="nv">obj</span><span class="w"> </span><span class="nv">event</span><span class="w"> </span><span class="nv">action</span><span class="w"> </span><span class="nv">state</span><span class="p">)</span><span class="sr">;</span><span class="nv">sink</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">ServiceHandler</span><span class="p">(</span><span class="nv">obj</span><span class="w"> </span><span class="nv">event</span><span class="w"> </span><span class="nv">action</span><span class="w"> </span><span class="nv">state</span><span class="p">)</span><span class="sr">;</span><span class="nv">sink</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Callback to handle notifications from the SCM</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝ Note that the interpreter has already responded</span>
@@ -79011,7 +79011,7 @@
 </code></pre></div>
 <h3 id="the-application-code">The Application Code</h3>
 <p>The following function illustrates how the application code for the service might be structured. It is merely an illustration, but however it is done, it is important that the code handles the instructions to pause, continue and stop in an appropriate manner. In this example, the function <code>Main</code> creates a log file and writes to it when the state of the service changes.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Main</span><span class="w"> </span><span class="nv">arg</span><span class="sr">;</span><span class="nv">nid</span><span class="sr">;</span><span class="nv">log</span><span class="sr">;</span><span class="nv">LogFile</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">Main</span><span class="w"> </span><span class="nv">arg</span><span class="sr">;</span><span class="nv">nid</span><span class="sr">;</span><span class="nv">log</span><span class="sr">;</span><span class="nv">LogFile</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕NUNTIE</span><span class="w"> </span><span class="nf">⎕NNUMS</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">log</span><span class="kd">←</span><span class="kt">{</span><span class="p">((</span><span class="o">⍕</span><span class="nf">⎕TS</span><span class="p">)</span><span class="o">,</span><span class="s1">' '</span><span class="o">,</span><span class="bp">⍵</span><span class="o">,</span><span class="nf">⎕UCS</span><span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">10</span><span class="p">)</span><span class="nf">⎕NAPPEND</span><span class="w"> </span><span class="bp">⍺</span><span class="kt">}</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">LogFile</span><span class="kd">←</span><span class="s1">'c:\ProgramData\TEMP\APLServiceLog.txt'</span>
@@ -79075,7 +79075,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78824,7 +78824,7 @@
 <p>For optimal performance of <em>repeated</em> search operations, the hash table may be retained between calls, by binding the function with its principal argument using the primitive <code>∘</code> (compose) operator. The retained hash table is then used directly whenever this monadic derived function is applied to a subject argument.</p>
 <p>Notice that retaining the hash table pays off only on a second or subsequent application of the derived function. This usually occurs in one of two ways: either the derived function is named for later (and repeated) use, as in the first example below or it is applied repeatedly as the operand of a primitive or defined operator, as in the second example.</p>
 <h2 id="example-naming-a-derived-function">Example: naming a derived function.</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">words</span><span class="kd">←</span><span class="s1">'red'</span><span class="w"> </span><span class="s1">'ylo'</span><span class="w"> </span><span class="s1">'grn'</span><span class="w"> </span><span class="s1">'brn'</span><span class="w"> </span><span class="s1">'blu'</span><span class="w"> </span><span class="s1">'pnk'</span><span class="w"> </span><span class="s1">'blk'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">words</span><span class="kd">←</span><span class="s1">'red'</span><span class="w"> </span><span class="s1">'ylo'</span><span class="w"> </span><span class="s1">'grn'</span><span class="w"> </span><span class="s1">'brn'</span><span class="w"> </span><span class="s1">'blu'</span><span class="w"> </span><span class="s1">'pnk'</span><span class="w"> </span><span class="s1">'blk'</span>
 
 <span class="w">      </span><span class="nv">find</span><span class="kd">←</span><span class="nv">words</span><span class="na">∘</span><span class="o">⍳</span><span class="w">                 </span><span class="c1">⍝ monadic find function</span>
 <span class="w">      </span><span class="nv">find</span><span class="s1">'blk'</span><span class="w"> </span><span class="s1">'blu'</span><span class="w"> </span><span class="s1">'grn'</span><span class="w"> </span><span class="s1">'ylo'</span><span class="w">  </span><span class="c1">⍝ </span>
@@ -78833,7 +78833,7 @@
 <span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <h2 id="example-repeated-application-by-each-operator">Example: repeated application by (<code>¨</code>) each operator.</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">∊</span><span class="na">∘</span><span class="nf">⎕A</span><span class="na">¨</span><span class="s1">'This'</span><span class="w"> </span><span class="s1">'And'</span><span class="w"> </span><span class="s1">'That'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">∊</span><span class="na">∘</span><span class="nf">⎕A</span><span class="na">¨</span><span class="s1">'This'</span><span class="w"> </span><span class="s1">'And'</span><span class="w"> </span><span class="s1">'That'</span>
 <span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 
@@ -78865,7 +78865,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

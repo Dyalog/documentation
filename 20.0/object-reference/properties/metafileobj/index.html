@@ -78717,12 +78717,12 @@
 <p>This property is used to copy graphical data to and from the Windows clipboard using the Windows Metafile format.</p>
 <p>When you set the MetafileObj property of a <a href="../../objects/clipboard/">Clipboard</a> object to the name of the <a href="../../objects/metafile/">Metafile</a> object using <a href="../../../language-reference-guide/system-functions/ws"><code>⎕WS</code></a> its contents are copied to the Windows clipboard in Windows Metafile format.</p>
 <p>To import a picture that has been stored in the Windows clipboard in Metafile format you use <a href="../../../language-reference-guide/system-functions/wg"><code>⎕WG</code></a>. This returns a nested array whose elements correspond to the graphical components of the picture. Each of the elements of the array may be used as the arguments of <a href="../../../language-reference-guide/system-functions/wc"><code>⎕WC</code></a> to draw the corresponding component of the picture. For example, if the picture stored in C:\MSOFFICE\CLIPART\BIRD.WMF is copied to the Windows clipboard, it may be imported into Dyalog APL/W as follows :
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">BIRD</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'CL'</span><span class="w"> </span><span class="nf">⎕WG</span><span class="w"> </span><span class="s1">'MetafileObj'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">BIRD</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="s1">'CL'</span><span class="w"> </span><span class="nf">⎕WG</span><span class="w"> </span><span class="s1">'MetafileObj'</span>
 <span class="w">      </span><span class="o">⍴</span><span class="nv">BIRD</span>
 <span class="m">4</span>
 </code></pre></div>
 <p>Each of the items in <code>BIRD</code> is a 2-element vector. The first element is a "dummy" object name which you may use or ignore as you wish. The second element is an array that defines a graphical object and is suitable as the right argument of <a href="../../../language-reference-guide/system-functions/wc"><code>⎕WC</code></a>. For example :
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="o">⊃</span><span class="m">4</span><span class="o">⊃</span><span class="nv">BIRD</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">2</span><span class="o">⊃</span><span class="m">4</span><span class="o">⊃</span><span class="nv">BIRD</span>
 <span class="nv">POLY</span><span class="w">  </span><span class="m">191</span><span class="w"> </span><span class="m">397</span><span class="w">   </span><span class="nv">FSTYLE</span><span class="w">  </span><span class="m">0</span><span class="w">   </span><span class="nv">FILLCOL</span><span class="w">  </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w">    </span><span class="na">...</span>
 
 <span class="m">190</span><span class="w"> </span><span class="m">402</span>
@@ -78745,7 +78745,7 @@
 <span class="m">191</span><span class="w"> </span><span class="m">397</span>
 </code></pre></div>
 <p>From this array, you can rebuild the imported picture component by component, either as a <a href="../../objects/metafile/">Metafile</a> object or directly onto a <a href="../../objects/form/">Form</a>, <a href="../../objects/static/">Static</a> or another object. The following example draws the picture in a <a href="../../objects/form/">Form</a> using the dummy names supplied.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'TEST'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'FORM'</span><span class="w"> </span><span class="p">(</span><span class="s1">'Coord'</span><span class="w"> </span><span class="s1">'User'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'TEST'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'FORM'</span><span class="w"> </span><span class="p">(</span><span class="s1">'Coord'</span><span class="w"> </span><span class="s1">'User'</span><span class="p">)</span>
 <span class="w">      </span><span class="s1">'TEST'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="p">(</span><span class="s1">'YRange'</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1024</span><span class="p">)(</span><span class="s1">'XRange'</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">2048</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">TEST</span><span class="na">.</span><span class="nf">⎕WC</span><span class="na">/¨</span><span class="nv">BIRD</span>
 </code></pre></div>
@@ -78779,7 +78779,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78705,7 +78705,7 @@
 <h1 class="heading"><span class="name">The Page_Load Event</span></h1>
 
 <p><code>Intro3.aspx</code> illustrates how you can dynamically initialise the contents of a Web Page using the Page_Load event. This example also introduces another type of Web Control, the <code>DropDownList</code> object.
-</p><div class="highlight"><pre><span></span><code>&lt;%@Register TagPrefix="tutorial" Namespace="Tutorial" Assembly="tutorial" %&gt;
+</p><div class="language-text highlight"><pre><span></span><code>&lt;%@Register TagPrefix="tutorial" Namespace="Tutorial" Assembly="tutorial" %&gt;
 &lt;script language="Dyalog" runat="server"&gt;
 
 ∇Page_Load 
@@ -78747,7 +78747,7 @@ out.Text←'You selected ',list.SelectedItem.Text
 <p>When an ASP.NET web page is loaded, it generates a <code>Page_Load</code> event. You can use this event to perform initialisation simply by defining a public function called <code>Page_Load</code> in your <code>APLScript</code>. This function will automatically be called every time the page is loaded. The <code>Page_Load</code> function should be niladic.</p>
 <p>Note that, if the page employs the technique illustrated in <code>Intro1.aspx</code>, whereby the page is continually POSTed back to itself by user interaction, your <code>Page_Load</code> function will be run every time the page is loaded and you may not wish to repeat the initialisation every time. Fortunately, you can distinguish between the initial load, and a subsequent load caused by the post back, using the <code>IsPostBack</code> property. This property is inherited from the <code>System.Web.UI.Page</code> class, which is the base class for any <code>.aspx</code> page.</p>
 <p>The <code>Page_Load</code> function in this example checks the value of <code>IsPostBack</code>. If 0 (the page is being loaded for the first time) it initialises the contents of the <code>list</code> object, adding 3 items "Apples", "Oranges" and "Bananas". The explanation for the statement:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">list</span><span class="na">.</span><span class="nv">Items</span><span class="na">.</span><span class="nv">Add</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'...'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">list</span><span class="na">.</span><span class="nv">Items</span><span class="na">.</span><span class="nv">Add</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'...'</span>
 </code></pre></div>
 <p>is that the <code>DropDownList</code> WebControl has an <code>Items</code> property that is a collection of <code>ListItem</code> objects. The collection implements an <code>Add</code> function that takes a <code>String</code> Argument that can be used to add an item to the list.</p>
 <p>Notice that the name of the object <code>list</code> is defined by the <code>id="list"</code> attribute of the <code>DropDownList</code> control that is defined in the page layout section of the page.</p>
@@ -78755,7 +78755,7 @@ out.Text←'You selected ',list.SelectedItem.Text
 <p>In this example, the page is processed by a POST back caused by pressing the <code>Submit</code> button. As it stands, changing the selection in the <code>list</code> object does not cause the text in the <code>out</code> object to be changed; you have to press the <code>Submit</code> button first.</p>
 <p><img alt="" src="../../img/intro3-2.png"></p>
 <p>However, you can make this happen automatically by adding the following attributes to the <code>list</code> object (see <code>intro4.aspx</code>):</p>
-<div class="highlight"><pre><span></span><code>AutoPostback="true"
+<div class="language-xml highlight"><pre><span></span><code>AutoPostback="true"
 OnSelectedIndexChanged="Select"/&gt;
 </code></pre></div>
 <p><code>AutoPostback</code> causes the object to generate HTML that will provoke a post back whenever the selection is changed. When it does so, the <code>OnSelectedIndexChanged</code> event will be generated in the server-side script which in turn will call <code>Select</code>, which in turn will cause the text in the out object to change.</p>
@@ -78789,7 +78789,7 @@ OnSelectedIndexChanged="Select"/&gt;
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78836,21 +78836,21 @@
 <p>If you are going to make a lot of use of APL files in your systems, it is useful for you to have a rough idea of how Dyalog APL organises and manages the disk area used by such files.</p>
 <p>The internal structure of external variables and component files is the same, and the examples given below apply to both.</p>
 <p>Consider a component file with 3 components:
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="s1">'TEMP'</span><span class="w"> </span><span class="nf">⎕FCREATE</span><span class="w"> </span><span class="m">1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="s1">'TEMP'</span><span class="w"> </span><span class="nf">⎕FCREATE</span><span class="w"> </span><span class="m">1</span>
 <span class="w">        </span><span class="s1">'One'</span><span class="w"> </span><span class="s1">'Two'</span><span class="w"> </span><span class="s1">'Three'</span><span class="w"> </span><span class="nf">⎕FAPPEND</span><span class="na">¨</span><span class="m">1</span>
 </code></pre></div>
 <p>Dyalog APL will write these components onto contiguous areas of disk:
-</p><div class="highlight"><pre><span></span><code><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">   </span><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">   </span><span class="na">.</span><span class="o">-</span><span class="na">.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">   </span><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">   </span><span class="na">.</span><span class="o">-</span><span class="na">.</span>
 <span class="o">|</span><span class="m">1</span><span class="o">|</span><span class="w">   </span><span class="o">|</span><span class="m">2</span><span class="o">|</span><span class="w">   </span><span class="o">|</span><span class="m">3</span><span class="o">|</span>
 <span class="na">.</span><span class="o">-----</span><span class="na">.</span><span class="o">-----</span><span class="na">.</span><span class="o">-------</span><span class="na">.</span>
 <span class="o">|</span><span class="w"> </span><span class="nv">One</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">Two</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">Three</span><span class="w"> </span><span class="o">|</span>
 <span class="o">--------------------</span><span class="na">.</span>
 </code></pre></div>
 <p>Replace the second component with something the same size:
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="s1">'Six'</span><span class="w"> </span><span class="nf">⎕FREPLACE</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="s1">'Six'</span><span class="w"> </span><span class="nf">⎕FREPLACE</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span>
 </code></pre></div>
 <p>This will fit into the area currently used by component 2.
-</p><div class="highlight"><pre><span></span><code><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">   </span><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">   </span><span class="na">.</span><span class="o">-</span><span class="na">.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">   </span><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">   </span><span class="na">.</span><span class="o">-</span><span class="na">.</span>
 <span class="o">|</span><span class="m">1</span><span class="o">|</span><span class="w">   </span><span class="o">|</span><span class="m">2</span><span class="o">|</span><span class="w">   </span><span class="o">|</span><span class="m">3</span><span class="o">|</span>
 <span class="na">.</span><span class="o">-----</span><span class="na">.</span><span class="o">-----</span><span class="na">.</span><span class="o">-------</span><span class="na">.</span>
 <span class="o">|</span><span class="w"> </span><span class="nv">One</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">Six</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">Three</span><span class="w"> </span><span class="o">|</span>
@@ -78858,10 +78858,10 @@
 </code></pre></div>
 <p>If your system uses fixed length records, then the size of your components never change, and the internal structure of the file remains static.</p>
 <p>However, suppose we start replacing larger data objects:
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="s1">'Bigger One'</span><span class="w"> </span><span class="nf">⎕FREPLACE</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="s1">'Bigger One'</span><span class="w"> </span><span class="nf">⎕FREPLACE</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <p>This will not fit into the area currently assigned to component 1, so it is appended to the end of the file. Dyalog APL maintains internal tables which contain the location of each component; hence, even though the components may not be physically stored in order, they can always be accessed in order.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">   </span><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">     </span><span class="na">.</span><span class="o">-</span><span class="na">.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">   </span><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">     </span><span class="na">.</span><span class="o">-</span><span class="na">.</span>
 <span class="w">      </span><span class="o">|</span><span class="m">2</span><span class="o">|</span><span class="w">   </span><span class="o">|</span><span class="m">3</span><span class="o">|</span><span class="w">     </span><span class="o">|</span><span class="m">1</span><span class="o">|</span>
 <span class="na">.</span><span class="o">-----</span><span class="na">.</span><span class="o">-----</span><span class="na">.</span><span class="o">-------</span><span class="na">.</span><span class="o">------------</span><span class="na">.</span>
 <span class="o">|</span><span class="vg">⎕⎕⎕⎕⎕</span><span class="o">|</span><span class="w"> </span><span class="nv">Six</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">Three</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">Bigger</span><span class="w"> </span><span class="nv">One</span><span class="w"> </span><span class="o">|</span>
@@ -78869,20 +78869,20 @@
 </code></pre></div>
 <p>The area that was occupied by component 1 now becomes free.</p>
 <p>Now we'll replace component 3 with something bigger:
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="s1">'BigThree'</span><span class="w"> </span><span class="nf">⎕FREPLACE</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">3</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="s1">'BigThree'</span><span class="w"> </span><span class="nf">⎕FREPLACE</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">3</span>
 </code></pre></div>
 <p>Component 3 is appended to the end of the file, and the area that was used before becomes free:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">                </span><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">          </span><span class="na">.</span><span class="o">-</span><span class="na">.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">                </span><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">          </span><span class="na">.</span><span class="o">-</span><span class="na">.</span>
 <span class="w">      </span><span class="o">|</span><span class="m">2</span><span class="o">|</span><span class="w">                </span><span class="o">|</span><span class="m">1</span><span class="o">|</span><span class="w">          </span><span class="o">|</span><span class="m">3</span><span class="o">|</span>
 <span class="na">.</span><span class="o">-----</span><span class="na">.</span><span class="o">------------------</span><span class="na">.</span><span class="o">------------</span><span class="na">.</span><span class="o">----------</span><span class="na">.</span>
 <span class="o">|</span><span class="vg">⎕⎕⎕⎕⎕</span><span class="o">|</span><span class="w"> </span><span class="nv">Six</span><span class="w"> </span><span class="o">|</span><span class="vg">⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕</span><span class="o">|</span><span class="w"> </span><span class="nv">Bigger</span><span class="w"> </span><span class="nv">One</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">BigThree</span><span class="w"> </span><span class="o">|</span>
 <span class="o">-------------------------------------------------</span><span class="na">.</span>
 </code></pre></div>
 <p>Dyalog APL keeps tables of the size and location of the free areas, as well as the actual location of your data. Now we'll replace component 2 with something bigger:
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="s1">'BigTwo'</span><span class="w"> </span><span class="nf">⎕FREPLACE</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="s1">'BigTwo'</span><span class="w"> </span><span class="nf">⎕FREPLACE</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span>
 </code></pre></div>
 <p>Free areas are used whenever possible, and contiguous holes are amalgamated.
-</p><div class="highlight"><pre><span></span><code><span class="w">            </span><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">          </span><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">          </span><span class="na">.</span><span class="o">-</span><span class="na">.</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">            </span><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">          </span><span class="na">.</span><span class="o">-</span><span class="na">.</span><span class="w">          </span><span class="na">.</span><span class="o">-</span><span class="na">.</span>
 <span class="w">            </span><span class="o">|</span><span class="m">2</span><span class="o">|</span><span class="w">          </span><span class="o">|</span><span class="m">1</span><span class="o">|</span><span class="w">          </span><span class="o">|</span><span class="m">3</span><span class="o">|</span>
 <span class="na">.</span><span class="o">-----------</span><span class="na">.</span><span class="o">------------</span><span class="na">.</span><span class="o">------------</span><span class="na">.</span><span class="o">----------</span><span class="na">.</span>
 <span class="o">|</span><span class="vg">⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕</span><span class="o">|</span><span class="nv">BigTwo</span><span class="o">|</span><span class="vg">⎕⎕⎕⎕⎕</span><span class="o">|</span><span class="w"> </span><span class="nv">Bigger</span><span class="w"> </span><span class="nv">One</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">BigThree</span><span class="w"> </span><span class="o">|</span>
@@ -78891,13 +78891,13 @@
 <p>You can see that if you are continually updating your file with larger data objects, then the file structure can become fragmented. At any one time, the disk area occupied by your file will be greater than the area necessary to hold your data. However, free areas are constantly being reused, so that the amount of unused space in the file will seldom exceed 30%.</p>
 <p>Whenever you issue a monadic <code>⎕FRESIZE</code> command on a component file, Dyalog APL COMPACTS the file; that is, it restructures it by reordering the components and by amalgamating the free areas at the end of the file. It then truncates the file and releases the disk space back to the operating system (note that some versions of UNIX do not allow the space to be released). For a large file with many components, this process may take a significant time.</p>
 <h2 id="error-conditions">Error Conditions</h2>
-<div class="highlight"><pre><span></span><code><span class="nv">FILE</span><span class="w"> </span><span class="nv">SYSTEM</span><span class="w"> </span><span class="nv">NOT</span><span class="w"> </span><span class="nv">AVAILABLE</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="nv">FILE</span><span class="w"> </span><span class="nv">SYSTEM</span><span class="w"> </span><span class="nv">NOT</span><span class="w"> </span><span class="nv">AVAILABLE</span>
 </code></pre></div>
 <p>A <code>FILE SYSTEM NOT AVAILABLE</code> (Error code 28) error will be generated if the operating system returns an unexpected error when attempting to get a lock on a component file. In Windows environments this may indicate that <em>opportunistic locks</em> (aka <em>oplocks</em>) are in use; they should be disabled if Dyalog components files are being used.
-</p><div class="highlight"><pre><span></span><code><span class="nv">FILE</span><span class="w"> </span><span class="nv">SYSTEM</span><span class="w"> </span><span class="nv">TIES</span><span class="w"> </span><span class="nv">USED</span><span class="w"> </span><span class="nv">UP</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">FILE</span><span class="w"> </span><span class="nv">SYSTEM</span><span class="w"> </span><span class="nv">TIES</span><span class="w"> </span><span class="nv">USED</span><span class="w"> </span><span class="nv">UP</span>
 </code></pre></div>
 <p>A <code>FILE SYSTEM TIES USED UP</code> (Error code 30) error will be generated when an attempt is made to open more component files than is possible.
-</p><div class="highlight"><pre><span></span><code><span class="nv">FILE</span><span class="w"> </span><span class="nv">TIED</span><span class="w"> </span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">FILE</span><span class="w"> </span><span class="nv">TIED</span><span class="w"> </span>
 </code></pre></div>
 <p>A <code>FILE TIED</code> error is reported if you attempt to tie a file which another user has exclusively tied.</p>
 <h2 id="limitations">Limitations</h2>
@@ -78934,7 +78934,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

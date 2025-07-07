@@ -79067,7 +79067,7 @@
 <p>Under Windows, this is a number which is defined by the <strong>aplnid</strong> parameter.   If you intend to use Dyalog's <strong>access matrix</strong> to control file access in a multi-user environment, it is desirable to allocate to each user, a distinct <strong>user number</strong>. However, if you intend to rely on underlying operating system controls, allocating a user number of 0 (the default installation value) to everyone is more appropriate.  Under non-Windows platforms the User Number is set to be the effective user-id of the APL process and cannot be altered. In both cases, a user number of 0 causes APL to circumvent the access matrix mechanism described below.</p>
 <h2 id="permission-code">Permission Code</h2>
 <p>This is an integer representation of a Boolean mask. Each bit in the mask indicates whether or not a particular file operation is permitted as follows:
-</p><div class="highlight"><pre><span></span><code>┌──┬──┬──┬──┬──┬──┬─┬─┬─┬─┬─┬─┬─┬─┬─┐ Bit No.
+</p><div class="language-text highlight"><pre><span></span><code>┌──┬──┬──┬──┬──┬──┬─┬─┬─┬─┬─┬─┬─┬─┬─┐ Bit No.
 │15│14│13│12│11│10│9│8│7│6│5│4│3│2│1│
 └──┴──┴──┴──┴──┴──┴─┴─┴─┴─┴─┴─┴─┴─┴─┘  File      Access
   ↑  ↑  ↑  ↑  ↑  ↑   ↑   ↑ ↑ ↑ ↑ ↑ ↑   Operation   Code
@@ -79229,7 +79229,7 @@
 </table>
 <h3 id="using-the-component-file-system">Using the Component File System</h3>
 <p>Let us suppose that you have written an APL system that builds a personnel database, containing the name, age and place of birth of each employee. Let us assume that you have created a variable <code>DATA</code>, which is a nested vector with each element containing a person's name, age and place of birth:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DISPLAY</span><span class="w"> </span><span class="m">2</span><span class="o">↑</span><span class="nv">DATA</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DISPLAY</span><span class="w"> </span><span class="m">2</span><span class="o">↑</span><span class="nv">DATA</span>
 <span class="na">.</span><span class="kd">→</span><span class="o">-------------------------------------------------------</span><span class="na">.</span>
 <span class="o">|</span><span class="w"> </span><span class="na">.</span><span class="kd">→</span><span class="o">----------------------</span><span class="na">.</span><span class="w"> </span><span class="na">.</span><span class="kd">→</span><span class="o">-------------------------</span><span class="na">.</span><span class="w"> </span><span class="o">|</span>
 <span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="na">.</span><span class="kd">→</span><span class="o">-------</span><span class="na">.</span><span class="w">    </span><span class="na">.</span><span class="kd">→</span><span class="o">----</span><span class="na">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="na">.</span><span class="kd">→</span><span class="o">------</span><span class="na">.</span><span class="w">    </span><span class="na">.</span><span class="kd">→</span><span class="o">--------</span><span class="na">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">|</span>
@@ -79242,7 +79242,7 @@
 <h2 class="example">Example 1</h2>
 
 <p>Show record 2
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DISPLAY</span><span class="w"> </span><span class="m">2</span><span class="o">⊃</span><span class="nv">DATA</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DISPLAY</span><span class="w"> </span><span class="m">2</span><span class="o">⊃</span><span class="nv">DATA</span>
 <span class="na">.</span><span class="kd">→</span><span class="o">-------------------------</span><span class="na">.</span>
 <span class="o">|</span><span class="w"> </span><span class="na">.</span><span class="kd">→</span><span class="o">------</span><span class="na">.</span><span class="w">    </span><span class="na">.</span><span class="kd">→</span><span class="o">--------</span><span class="na">.</span><span class="w"> </span><span class="o">|</span>
 <span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="nv">Pauline</span><span class="o">|</span><span class="w"> </span><span class="m">21</span><span class="w"> </span><span class="o">|</span><span class="nv">Isleworth</span><span class="o">|</span><span class="w"> </span><span class="o">|</span>
@@ -79252,32 +79252,32 @@
 <h2 class="example">Example 2</h2>
 
 <p>How many people in the database?
-</p><div class="highlight"><pre><span></span><code><span class="w">           </span><span class="o">⍴</span><span class="nv">DATA</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">           </span><span class="o">⍴</span><span class="nv">DATA</span>
 <span class="w">     </span><span class="m">123</span>
 </code></pre></div>
 <h2 class="example">Example 3</h2>
 
 <p>Update Pauline's age
-</p><div class="highlight"><pre><span></span><code><span class="w">           </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="o">⊃</span><span class="nv">DATA</span><span class="p">)</span><span class="kd">←</span><span class="m">16</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">           </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="o">⊃</span><span class="nv">DATA</span><span class="p">)</span><span class="kd">←</span><span class="m">16</span>
 </code></pre></div>
 <h2 class="example">Example 4</h2>
 
 <p>Add a new record to the database
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DATA</span><span class="w"> </span><span class="o">,</span><span class="kd">←</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'Maurice'</span><span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="s1">'London'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DATA</span><span class="w"> </span><span class="o">,</span><span class="kd">←</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'Maurice'</span><span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="s1">'London'</span>
 </code></pre></div>
 <p>Now let's build a component file to hold our personnel database.</p>
 <p>Create a new file, giving the file name, and the number you wish to use to identify it (the file tie number):
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'COMPFILE'</span><span class="w"> </span><span class="nf">⎕FCREATE</span><span class="w"> </span><span class="m">1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'COMPFILE'</span><span class="w"> </span><span class="nf">⎕FCREATE</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <p>If the file already exists, or you have already used this tie number, then APL will respond with the appropriate error message.</p>
 <p>Now write the data to the file. We could write a function that loops to do this, but it is neater to take advantage of the fact that our data is a nested vector, and use each (<code>¨</code>).
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DATA</span><span class="w"> </span><span class="nf">⎕FAPPEND</span><span class="na">¨</span><span class="w"> </span><span class="m">1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DATA</span><span class="w"> </span><span class="nf">⎕FAPPEND</span><span class="na">¨</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <p>Now we'll try our previous examples using this file.</p>
 <h2 class="example">Example 1</h2>
 
 <p>Show record 2
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DISPLAY</span><span class="w"> </span><span class="nf">⎕FREAD</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DISPLAY</span><span class="w"> </span><span class="nf">⎕FREAD</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span>
 <span class="na">.</span><span class="kd">→</span><span class="o">-------------------------</span><span class="na">.</span>
 <span class="o">|</span><span class="w"> </span><span class="na">.</span><span class="kd">→</span><span class="o">------</span><span class="na">.</span><span class="w">    </span><span class="na">.</span><span class="kd">→</span><span class="o">--------</span><span class="na">.</span><span class="w"> </span><span class="o">|</span>
 <span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="nv">Pauline</span><span class="o">|</span><span class="w"> </span><span class="m">21</span><span class="w"> </span><span class="o">|</span><span class="nv">Isleworth</span><span class="o">|</span><span class="w"> </span><span class="o">|</span>
@@ -79287,62 +79287,62 @@
 <h2 class="example">Example 2</h2>
 
 <p>How many people in our database?
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕FSIZE</span><span class="w"> </span><span class="m">1</span><span class="w">        </span><span class="c1">⍝ First component, next</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕FSIZE</span><span class="w"> </span><span class="m">1</span><span class="w">        </span><span class="c1">⍝ First component, next</span>
 <span class="m">1</span><span class="w"> </span><span class="m">125</span><span class="w"> </span><span class="m">10324</span><span class="w"> </span><span class="m">4294967295</span><span class="w">  </span><span class="c1">⍝ component, file size,</span>
 <span class="w">                        </span><span class="c1">⍝ maximum file size</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">¯1</span><span class="o">+</span><span class="m">2</span><span class="o">⊃</span><span class="nf">⎕FSIZE</span><span class="w"> </span><span class="m">1</span><span class="w">   </span><span class="c1">⍝ Number of data items</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">¯1</span><span class="o">+</span><span class="m">2</span><span class="o">⊃</span><span class="nf">⎕FSIZE</span><span class="w"> </span><span class="m">1</span><span class="w">   </span><span class="c1">⍝ Number of data items</span>
 </code></pre></div>
 <p>The fourth element of <code>⎕FSIZE</code> indicates the file size limit. Dyalog APL does not impose a file size limit, although your operating system may do so, but the concept is retained in order to make this version of Component Files compatible with others.</p>
 <h2 class="example">Example 3</h2>
 
 <p>Update Pauline's age
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="nv">REC</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="nf">⎕FREAD</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w">       </span><span class="c1">⍝ Read second component</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="nv">REC</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="nf">⎕FREAD</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w">       </span><span class="c1">⍝ Read second component</span>
 <span class="w">        </span><span class="nv">REC</span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">18</span><span class="w">            </span><span class="c1">⍝ Change age</span>
 <span class="w">        </span><span class="nv">REC</span><span class="w"> </span><span class="nf">⎕FREPLACE</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w">      </span><span class="c1">⍝ And replace component</span>
 </code></pre></div>
 <h2 class="example">Example 4</h2>
 
 <p>Add a new record
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="p">(</span><span class="s1">'Janet'</span><span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="s1">'Basingstoke'</span><span class="p">)</span><span class="w"> </span><span class="nf">⎕FAPPEND</span><span class="w"> </span><span class="m">1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="p">(</span><span class="s1">'Janet'</span><span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="s1">'Basingstoke'</span><span class="p">)</span><span class="w"> </span><span class="nf">⎕FAPPEND</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <h2 class="example">Example 5</h2>
 
 <p>Rename our file
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="s1">'PERSONNEL'</span><span class="w"> </span><span class="nf">⎕FRENAME</span><span class="w"> </span><span class="m">1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="s1">'PERSONNEL'</span><span class="w"> </span><span class="nf">⎕FRENAME</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <h2 class="example">Example 6</h2>
 
 <p>Tie an existing file; give file name and have the interpreter allocate the next available tie number.
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="s1">'SALARIES'</span><span class="w"> </span><span class="nf">⎕FTIE</span><span class="w"> </span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="s1">'SALARIES'</span><span class="w"> </span><span class="nf">⎕FTIE</span><span class="w"> </span><span class="m">0</span>
 <span class="w">  </span><span class="m">2</span>
 </code></pre></div>
 <h2 class="example">Example 7</h2>
 
 <p>Give everyone access to the PERSONNEL file
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="m">0</span><span class="w"> </span><span class="m">¯1</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="nf">⎕FSTAC</span><span class="w"> </span><span class="m">1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="m">0</span><span class="w"> </span><span class="m">¯1</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="nf">⎕FSTAC</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <h2 class="example">Example 8</h2>
 
 <p>Set different permissions on <code>SALARIES</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="nv">AM</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="m">1</span><span class="w"> </span><span class="m">¯1</span><span class="w"> </span><span class="m">0</span><span class="w">    </span><span class="c1">⍝ Owner ID 1 has full access</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="nv">AM</span><span class="w"> </span><span class="kd">←</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="m">1</span><span class="w"> </span><span class="m">¯1</span><span class="w"> </span><span class="m">0</span><span class="w">    </span><span class="c1">⍝ Owner ID 1 has full access</span>
 <span class="w">       </span><span class="nv">AM</span><span class="o">⍪</span><span class="kd">←</span><span class="w"> </span><span class="m">102</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w">       </span><span class="c1">⍝ User ID 102 has READ only</span>
 <span class="w">       </span><span class="nv">AM</span><span class="o">⍪</span><span class="kd">←</span><span class="w"> </span><span class="m">210</span><span class="w"> </span><span class="m">2073</span><span class="w"> </span><span class="m">0</span><span class="w">    </span><span class="c1">⍝ User ID 210 has</span>
 <span class="w">                           </span><span class="c1">⍝ READ+APPEND+REPLACE+HOLD</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">       </span><span class="nv">AM</span><span class="w"> </span><span class="nf">⎕FSTAC</span><span class="w"> </span><span class="m">2</span><span class="w">        </span><span class="c1">⍝ Store access matrix</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="nv">AM</span><span class="w"> </span><span class="nf">⎕FSTAC</span><span class="w"> </span><span class="m">2</span><span class="w">        </span><span class="c1">⍝ Store access matrix</span>
 </code></pre></div>
 <h2 class="example">Example 9</h2>
 
 <p>Report on file names and associated numbers
-</p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="nf">⎕FNAMES</span><span class="o">,</span><span class="nf">⎕FNUMS</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">        </span><span class="nf">⎕FNAMES</span><span class="o">,</span><span class="nf">⎕FNUMS</span>
 <span class="w"> </span><span class="nv">PERSONNEL</span><span class="w">  </span><span class="m">1</span>
 <span class="w"> </span><span class="nv">SALARIES</span><span class="w">   </span><span class="m">2</span>
 </code></pre></div>
 <h2 class="example">Example 10</h2>
 
 <p>Untie all files
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="nf">⎕FUNTIE</span><span class="w"> </span><span class="nf">⎕FNUMS</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="nf">⎕FUNTIE</span><span class="w"> </span><span class="nf">⎕FNUMS</span>
 </code></pre></div>
 
 
@@ -79373,7 +79373,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

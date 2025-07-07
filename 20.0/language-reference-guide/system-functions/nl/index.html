@@ -78883,7 +78883,7 @@
 <p>If <code>X</code> is supplied, <code>R</code> contains only those names which begin with any character of <code>X</code>. Standard sorted order is in Unicode point order for Unicode editions, and in the collation order of <code>⎕AV</code> for Classic editions.</p>
 <p>If an element of <code>Y</code> is an integer, the names of all of the corresponding sub-name-classes are included in <code>R</code>. For example, if <code>Y</code> contains the value 2, the names of all variables (name-class 2.1), fields (2.2), properties (2.3) and external or shared variables (2.6) are obtained. Otherwise, only the names of members of the corresponding sub-name-class are obtained.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NL</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NL</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span>
 <span class="nv">A</span>
 <span class="nv">FAST</span>
 <span class="nv">FIND</span>
@@ -78906,7 +78906,7 @@
 <p><code>⎕NL</code> can also be used to explore Dyalog GUI Objects, .NET types and COM objects.</p>
 <h3 id="dyalog-gui-objects">Dyalog GUI Objects</h3>
 <p><code>⎕NL</code> may be used to obtain lists of the Methods, Properties and Events provided by Dyalog APL GUI Objects.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'F'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span>
 <span class="w">      </span><span class="nv">F</span><span class="na">.</span><span class="nf">⎕NL</span><span class="w"> </span><span class="o">-</span><span class="m">2</span><span class="w"> </span><span class="c1">⍝ Properties</span>
 <span class="w"> </span><span class="nv">Accelerator</span><span class="w"> </span><span class="nv">AcceptFiles</span><span class="w">  </span><span class="nv">Active</span><span class="w">  </span><span class="nv">AlphaBlend</span><span class="w">  </span><span class="nv">AutoConf</span><span class="w">  </span><span class="nv">Border</span><span class="w">  </span><span class="nv">BCol</span><span class="w">  </span><span class="nv">Caption</span><span class="w"> </span><span class="na">...</span>
 
@@ -78919,7 +78919,7 @@
 <h3 id="net-classes-types">.NET Classes (Types)</h3>
 <p><code>⎕NL</code> can be used to explore .NET types.</p>
 <p>When a reference is made to an undefined name, and <code>⎕USING</code> is set, APL attempts to load the Type from the appropriate .NET Assemblies. If successful, the name is entered into the symbol table with name-class 9.6.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
 <span class="w">      </span><span class="nv">DateTime</span>
 <span class="p">(</span><span class="nv">System</span><span class="na">.</span><span class="nv">DateTime</span><span class="p">)</span>
 <span class="w">      </span><span class="nf">⎕NL</span><span class="w"> </span><span class="o">-</span><span class="m">9</span>
@@ -78928,21 +78928,21 @@
 <span class="m">9.6</span>
 </code></pre></div>
 <p>The names of the Properties and Methods of a .NET Type may then be obtained using <code>⎕NL</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DateTime</span><span class="na">.</span><span class="nf">⎕NL</span><span class="w"> </span><span class="o">-</span><span class="m">2</span><span class="w"> </span><span class="c1">⍝ Properties</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DateTime</span><span class="na">.</span><span class="nf">⎕NL</span><span class="w"> </span><span class="o">-</span><span class="m">2</span><span class="w"> </span><span class="c1">⍝ Properties</span>
 <span class="w"> </span><span class="nv">MaxValue</span><span class="w">  </span><span class="nv">MinValue</span><span class="w">  </span><span class="nv">Now</span><span class="w">  </span><span class="nv">Today</span><span class="w">  </span><span class="nv">UtcNow</span><span class="w"> </span>
 
 <span class="w">      </span><span class="nv">DateTime</span><span class="na">.</span><span class="nf">⎕NL</span><span class="w"> </span><span class="o">-</span><span class="m">3</span><span class="w"> </span><span class="c1">⍝ Methods</span>
 <span class="w"> </span><span class="nv">get_Now</span><span class="w">  </span><span class="nv">get_Today</span><span class="w">  </span><span class="nv">get_UtcNow</span><span class="w">  </span><span class="nv">op_Addition</span><span class="w">  </span><span class="nv">op_Equality</span><span class="w">  </span><span class="na">...</span>
 </code></pre></div>
 <p>In fact it is not necessary to make a separate reference first, because the expression <code>Type.⎕NL</code> (where <code>Type</code> is a .NET Type) is itself a reference to Type. So, (with <code>⎕USING</code> still set to <code>'System'</code>):
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Array</span><span class="na">.</span><span class="nf">⎕NL</span><span class="w"> </span><span class="o">-</span><span class="m">3</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Array</span><span class="na">.</span><span class="nf">⎕NL</span><span class="w"> </span><span class="o">-</span><span class="m">3</span>
 <span class="w"> </span><span class="nv">BinarySearch</span><span class="w">  </span><span class="nv">Clear</span><span class="w">  </span><span class="nv">Copy</span><span class="w">  </span><span class="nv">CreateInstance</span><span class="w">  </span><span class="nv">IndexOf</span><span class="w">  </span><span class="nv">LastIndexOf</span><span class="w">  </span><span class="nv">Reverse</span><span class="w">  </span><span class="nv">Sort</span>
 
 <span class="w">      </span><span class="nf">⎕NL</span><span class="w"> </span><span class="o">-</span><span class="m">9</span>
 <span class="w"> </span><span class="nv">Array</span><span class="w">  </span><span class="nv">DateTime</span>
 </code></pre></div>
 <p>Another use for <code>⎕NL</code> is to examine .NET <em>enumerations</em>. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System.Windows.Forms,system.windows.forms.dll'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System.Windows.Forms,system.windows.forms.dll'</span>
 
 <span class="w">      </span><span class="nv">FormBorderStyle</span><span class="na">.</span><span class="nf">⎕NL</span><span class="w"> </span><span class="o">-</span><span class="m">2</span>
 <span class="nv">Fixed3D</span><span class="w">  </span><span class="nv">FixedDialog</span><span class="w">  </span><span class="nv">FixedSingle</span><span class="w">  </span><span class="nv">FixedToolWindow</span><span class="w">  </span><span class="nv">None</span><span class="w">  </span><span class="nv">Sizable</span><span class="w">  </span><span class="nv">SizableToolWindow</span><span class="w"> </span>
@@ -78961,7 +78961,7 @@
 </code></pre></div>
 <h3 id="com-objects">COM Objects</h3>
 <p>Once a reference to a COM object has been obtained, <code>⎕NL</code> may be used to obtain lists of its Methods, Properties and Events.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">xl</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="s1">'OLEClient'</span><span class="p">(</span><span class="o">⊂</span><span class="s1">'ClassName'</span><span class="w"> </span><span class="s1">'Excel.Application'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">xl</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="s1">'OLEClient'</span><span class="p">(</span><span class="o">⊂</span><span class="s1">'ClassName'</span><span class="w"> </span><span class="s1">'Excel.Application'</span><span class="p">)</span>
 
 <span class="w">      </span><span class="nv">xl</span><span class="na">.</span><span class="nf">⎕NL</span><span class="w"> </span><span class="o">-</span><span class="m">2</span><span class="w"> </span><span class="c1">⍝ Properties</span>
 <span class="w"> </span><span class="nv">_Default</span><span class="w">  </span><span class="nv">ActiveCell</span><span class="w">  </span><span class="nv">ActiveChart</span><span class="w">  </span><span class="nv">ActiveDialog</span><span class="w">  </span><span class="nv">ActiveMenuBar</span><span class="w">  </span><span class="nv">ActivePrinter</span><span class="w">  </span><span class="nv">ActiveSheet</span><span class="w">  </span><span class="nv">ActiveWindow</span><span class="w"> </span><span class="na">...</span>
@@ -79001,7 +79001,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

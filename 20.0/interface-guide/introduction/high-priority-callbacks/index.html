@@ -78772,15 +78772,15 @@ event which demands that Dyalog must return a result to the operating system bef
 may process any other event. Such high-priority events include Configure, ExitWindows, DateTimeChange, DockStart, DockCancel, DropDown, GetTipText, GesturePan, GestureZoom, GestureRotate, GestureTwoFingerTap, GesturePressAndTap.</p>
 <p>If a high-priority callback function  is traced or stops for any reason, the system is <em>in limbo</em> until the windows notification has been actioned. This will occur only when the callback exits. During this time, it is not possible to reset the state indicator or save the workspace.</p>
 <p>In the following example, there is a deliberate error on <code>GenCB[2]</code> which is assigned as the callback function for the GesturePan event on object <code>f.s1</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">f</span><span class="na">.</span><span class="nv">s1</span><span class="na">.</span><span class="nv">onGesturePan</span><span class="kd">←</span><span class="s1">'GenCB'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">f</span><span class="na">.</span><span class="nv">s1</span><span class="na">.</span><span class="nv">onGesturePan</span><span class="kd">←</span><span class="s1">'GenCB'</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">GenCB</span><span class="w"> </span><span class="nv">m</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">GenCB</span><span class="w"> </span><span class="nv">m</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">m</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="na">∘</span>
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>[user drags finger in object]
-</p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="c1">#.f.s1  GesturePan  1  84 103  0 0 </span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w"> </span><span class="c1">#.f.s1  GesturePan  1  84 103  0 0 </span>
 <span class="nv">SYNTAX</span><span class="w"> </span><span class="nv">ERROR</span>
 <span class="nv">GenCB</span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w"> </span><span class="na">∘</span>
 <span class="w">        </span><span class="o">∧</span>
@@ -78799,7 +78799,7 @@ may process any other event. Such high-priority events include Configure, ExitWi
 <span class="nv">Cannot</span><span class="w"> </span><span class="nv">perform</span><span class="w"> </span><span class="nv">operation</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">calls</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">or</span><span class="w"> </span><span class="nv">from</span><span class="w"> </span><span class="nv">external</span><span class="w"> </span><span class="nv">functions</span><span class="w"> </span><span class="nv">or</span><span class="w"> </span><span class="nv">certain</span><span class="w"> </span><span class="nv">callbacks</span><span class="na">.</span>
 </code></pre></div>
 <p>The only way to restore the situation to normal is to force the callback function to exit. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="kd">→</span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="kd">→</span><span class="m">0</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">si</span>
 </code></pre></div>
 <h2 id="thread-switching-and-hold">Thread-Switching and :Hold</h2>
@@ -78807,7 +78807,7 @@ may process any other event. Such high-priority events include Configure, ExitWi
 high-priority callback.</p>
 <p><code>:Hold</code>
  with a non-zero number of tokens is not permitted in a high-priority callback and an attempt to use it  will cause the error:
-</p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span><span class="bp">:</span><span class="w"> </span><span class="nv">Cannot</span><span class="w"> </span><span class="bp">:</span><span class="nv">Hold</span><span class="w"> </span><span class="nv">within</span><span class="w"> </span><span class="nv">high</span><span class="w"> </span><span class="nv">priority</span><span class="w"> </span><span class="nv">callback</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w"> </span><span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span><span class="bp">:</span><span class="w"> </span><span class="nv">Cannot</span><span class="w"> </span><span class="bp">:</span><span class="nv">Hold</span><span class="w"> </span><span class="nv">within</span><span class="w"> </span><span class="nv">high</span><span class="w"> </span><span class="nv">priority</span><span class="w"> </span><span class="nv">callback</span>
 </code></pre></div>
 
 
@@ -78838,7 +78838,7 @@ high-priority callback.</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

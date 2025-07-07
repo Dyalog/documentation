@@ -78833,21 +78833,21 @@
 <p>Note that exit includes normal exit as the code drops through <code>:EndDisposable</code>, or if an error occurs and is trapped, or if branch (<code>→</code>) is used to exit the block, or anything else.</p>
 <p>See also:  .Disposing of .NET Objects.</p>
 <h2 id="example-normal-exit">Example (Normal Exit)</h2>
-<div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Disposable</span><span class="w"> </span><span class="nv">f</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Font</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Disposable</span><span class="w"> </span><span class="nv">f</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Font</span>
 <span class="na">.</span>
 <span class="na">.</span>
 <span class="bp">:</span><span class="nv">EndDisposable</span>
 </code></pre></div>
 <p>In the above example, when the <code>:EndDisposable</code> statement is reached, the system disposes of the Font object <code>f</code> (and all the resources associated with it) by calling <code>(IDisposable)f.Dispose()</code>. A subsequent reference to <code>f</code> would generate <code>VALUE ERROR</code>.</p>
 <h2 id="example-normal-exit_1">Example (Normal Exit)</h2>
-<div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Disposable</span><span class="w"> </span><span class="nv">fonts</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="na">¨</span><span class="nv">Font</span><span class="w"> </span><span class="nv">Font</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Disposable</span><span class="w"> </span><span class="nv">fonts</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="na">¨</span><span class="nv">Font</span><span class="w"> </span><span class="nv">Font</span>
 <span class="na">.</span>
 <span class="na">.</span>
 <span class="bp">:</span><span class="nv">EndDisposable</span>
 </code></pre></div>
 <p>In the above example, Dispose() is called on <strong>each</strong> of the Font objects in <code>fonts</code> during the processing of <code>:EndDisposable</code>.</p>
 <h2 id="example-branch-exit">Example (Branch Exit)</h2>
-<div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Disposable</span><span class="w"> </span><span class="nv">fonts</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="na">¨</span><span class="nv">Font</span><span class="w"> </span><span class="nv">Font</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Disposable</span><span class="w"> </span><span class="nv">fonts</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="na">¨</span><span class="nv">Font</span><span class="w"> </span><span class="nv">Font</span>
 <span class="na">.</span>
 <span class="kd">→</span><span class="m">0</span>
 <span class="na">.</span>
@@ -78855,7 +78855,7 @@
 </code></pre></div>
 <p>In this example, Dispose() is called on  the Font objects in <code>fonts</code> during the processing of the branch statement <code>→0</code>.</p>
 <h2 id="example-trapexit">Example (TrapExit)</h2>
-<div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">trap</span><span class="w"> </span><span class="m">0</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">trap</span><span class="w"> </span><span class="m">0</span>
 
 <span class="w">   </span><span class="bp">:</span><span class="nv">Disposable</span><span class="w"> </span><span class="nv">fonts</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="na">¨</span><span class="nv">Font</span><span class="w"> </span><span class="nv">Font</span>
 <span class="w">   </span><span class="na">.</span>
@@ -78899,7 +78899,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

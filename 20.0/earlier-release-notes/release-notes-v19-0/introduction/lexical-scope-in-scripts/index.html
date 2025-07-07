@@ -78811,7 +78811,7 @@
 <p>Objects (Namespaces and Classes) that are defined using scripts, either in the workspace or in script files, may include nested objects (sub-namespaces and sub-classes). If so, Dyalog applies a form of lexical scope to all these objects to allow them to reference one another. Dyalog otherwise uses dynamic scope  – see <a href="https://en.wikipedia.org/wiki/Scope_(computer_science)">https://en.wikipedia.org/wiki/Scope_(computer_science)</a>.</p>
 <p>This feature makes it possible to implement a class structure, in which members of the class tree may access one another, and it provides a way for classes to share data stored in a namespace.</p>
 <p>When Dyalog fixes nested classes and namespaces in a script, references between parent and child objects are inserted to allow them to reference one another, preventing what would otherwise be <code>VALUE ERROR</code>. For example:
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Parent</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Parent</span>
 <span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
 
 <span class="w">    </span><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">Data</span>
@@ -78836,13 +78836,13 @@
 <span class="w">    </span><span class="bp">:</span><span class="nv">EndClass</span>
 <span class="bp">:</span><span class="nv">EndClass</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">pete</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Parent</span><span class="w"> </span><span class="s1">'Pete'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">pete</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Parent</span><span class="w"> </span><span class="s1">'Pete'</span>
 <span class="w">      </span><span class="nv">andy</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">pete</span><span class="na">.</span><span class="nv">Child</span><span class="w"> </span><span class="s1">'Andy'</span>
 <span class="nv">Andy</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">child</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">Pete</span>
 </code></pre></div>
 <p>In this example, the namespace <code>Data</code> is accessible from the <code>Parent</code> class, and from any sub-classes within it and can therefore be used to share information between them. A more realistic example might be to share the value of the tie number of a component file.</p>
 <p>Note that this is not possible using variables or Fields; <strong>data to be shared between nested classes must be stored in a namespace</strong>.
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Parent</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Parent</span>
 <span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
 <span class="bp">:</span><span class="nv">Field</span><span class="w"> </span><span class="nv">Private</span><span class="w"> </span><span class="nv">NameAsField</span><span class="kd">←</span><span class="s1">''</span>
 <span class="nv">NameAsVariable</span><span class="kd">←</span><span class="s1">''</span><span class="w">            </span>
@@ -78873,7 +78873,7 @@
 <span class="w">    </span><span class="bp">:</span><span class="nv">EndClass</span>
 <span class="bp">:</span><span class="nv">EndClass</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">            </span><span class="nv">pete</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Parent</span><span class="w"> </span><span class="s1">'Pete'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">            </span><span class="nv">pete</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Parent</span><span class="w"> </span><span class="s1">'Pete'</span>
 <span class="w">            </span><span class="nv">andy</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">pete</span><span class="na">.</span><span class="nv">Child</span><span class="w"> </span><span class="s1">'Andy'</span>
 <span class="nv">Andy</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">child</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">Pete</span>
 <span class="nv">Andy</span><span class="w"> </span><span class="nv">cannot</span><span class="w"> </span><span class="nv">see</span><span class="w"> </span><span class="nv">NameAsField</span>
@@ -78911,7 +78911,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

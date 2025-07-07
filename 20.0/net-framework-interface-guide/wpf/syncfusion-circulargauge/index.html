@@ -78794,21 +78794,21 @@
 <h2 id="the-xaml">The XAML</h2>
 <p>Like most Syncfusion controls, the CircularGauge is made up of  a complex structure of objects, and the XAML (see variable <code>XAML_SF</code>) is too extensive to describe in detail herein. It was created from the sample XAML from the Syncfusion documentation for this control entitled <em>Essential Gauge for WPF</em>, which may be downloaded from <a href="https://help.syncfusion.com/wpf/gauge">https://help.syncfusion.com/wpf/gauge</a>.</p>
 <p>The key statements in the XAML are as follows:
-</p><div class="highlight"><pre><span></span><code>xmlns:syncfusion="clr-namespace:Syncfusion.Windows.Gauge;assembly=Syncfusion.Gauge.WPF"
+</p><div class="language-xml highlight"><pre><span></span><code>xmlns:syncfusion="clr-namespace:Syncfusion.Windows.Gauge;assembly=Syncfusion.Gauge.WPF"
 </code></pre></div>
 <p>The above statement defines the prefix <code>syncfusion</code> to mean the specified Syncfusion namespace and assembly. When the prefix <code>syncfusion</code> is subsequently used in front of a control in the XAML, the system knows where to find it.</p>
 <p>The next two statements define CircularPointer controls (the needles on the gauges); one for the Fahrenheit gauge (named <em>f_pointer</em>) and one for the Centigrade gauge (named <em>c_pointer</em>).
-</p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nt">&lt;syncfusion:CircularPointer</span><span class="w"> </span><span class="na">Name=</span><span class="s">"f_pointer"</span><span class="w"> </span><span class="na">BorderWidth=</span><span class="s">"0.3"</span>
+</p><div class="language-xml highlight"><pre><span></span><code><span class="w"> </span><span class="nt">&lt;syncfusion:CircularPointer</span><span class="w"> </span><span class="na">Name=</span><span class="s">"f_pointer"</span><span class="w"> </span><span class="na">BorderWidth=</span><span class="s">"0.3"</span>
 <span class="w">  </span><span class="na">PointerLength=</span><span class="s">"100"</span><span class="w"> </span><span class="na">PointerPlacement=</span><span class="s">"Inside"</span><span class="w"> </span><span class="na">PointerWidth=</span><span class="s">"20"</span>
 <span class="w">  </span><span class="na">Value=</span><span class="s">"32"</span><span class="nt">/&gt;</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nt">&lt;syncfusion:CircularPointer</span><span class="w"> </span><span class="na">Name=</span><span class="s">"c_pointer"</span><span class="w"> </span><span class="na">BorderWidth=</span><span class="s">"0.3"</span>
+<div class="language-xml highlight"><pre><span></span><code><span class="w"> </span><span class="nt">&lt;syncfusion:CircularPointer</span><span class="w"> </span><span class="na">Name=</span><span class="s">"c_pointer"</span><span class="w"> </span><span class="na">BorderWidth=</span><span class="s">"0.3"</span>
 <span class="w">  </span><span class="na">PointerLength=</span><span class="s">"100"</span><span class="w"> </span><span class="na">PointerPlacement=</span><span class="s">"Inside"</span><span class="w"> </span><span class="na">PointerWidth=</span><span class="s">"20"</span>
 <span class="w">  </span><span class="na">Value=</span><span class="s">"0"</span><span class="err">/</span>
 </code></pre></div>
 <h2 id="the-apl-code">The APL Code</h2>
 <p>The following functions were used to produce the example illustrated above. The main function is <code>SF_TC_XAML</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">SF_TC_XAML</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">win</span><span class="sr">;</span><span class="nv">f_pointer</span><span class="sr">;</span><span class="nv">c_pointer</span><span class="sr">;</span><span class="nv">sink</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">SF_TC_XAML</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">win</span><span class="sr">;</span><span class="nv">f_pointer</span><span class="sr">;</span><span class="nv">c_pointer</span><span class="sr">;</span><span class="nv">sink</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="kd">←</span><span class="nv">LoadXAML</span><span class="w"> </span><span class="nv">XAML_SF</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span>
@@ -78822,7 +78822,7 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>After creating the Window from the text in <code>XAML_SF</code>, the function <code>SF_TC_XAML</code> obtains refs to the two CircularPointer controls named <em>f_pointer</em> (in the Fahrenheit gauge) and <em>c_pointer</em> (in the Centigrade gauge). It then attaches the <code>MouseEnter</code> callback to each of these objects.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">MouseEnter</span><span class="p">(</span><span class="nv">this</span><span class="w"> </span><span class="nv">ev</span><span class="p">)</span><span class="sr">;</span><span class="nv">ptrs</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">MouseEnter</span><span class="p">(</span><span class="nv">this</span><span class="w"> </span><span class="nv">ev</span><span class="p">)</span><span class="sr">;</span><span class="nv">ptrs</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">ptrs</span><span class="kd">←</span><span class="nv">f_pointer</span><span class="w"> </span><span class="nv">c_pointer</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">ptrs</span><span class="na">.</span><span class="nv">onValueChanged</span><span class="kd">←</span><span class="p">(</span><span class="nv">ptrs</span><span class="o">⍳</span><span class="nv">this</span><span class="p">)</span><span class="o">⌽</span><span class="m">0</span><span class="w"> </span><span class="s1">'TempChanged'</span>
 <span class="w">     </span><span class="bp">∇</span>
@@ -78830,7 +78830,7 @@
 <p>In this example, the user grabs one of the gauge needles and moves it around the face of the gauge. When the user moves the mouse into one of these needles, the <code>MouseEnter</code> callback fires. The function <code>MouseEnter</code> receives the CircularPointer object that generated the event <code>this</code>  as the first item in its argument.</p>
 <p>The code simply attaches the callback function <code>TempChanged</code> to <code>this</code>, and disables any callback on the other CircularPointer object.</p>
 <p>Note that if both CircularPointer objects had callbacks on <code>TempChanged</code> at the same time, the system would enter a callback loop.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">TempChanged</span><span class="p">(</span><span class="nv">obj</span><span class="w"> </span><span class="nv">ev</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">TempChanged</span><span class="p">(</span><span class="nv">obj</span><span class="w"> </span><span class="nv">ev</span><span class="p">)</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">Select</span><span class="w"> </span><span class="nv">obj</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">Case</span><span class="w"> </span><span class="nv">f_pointer</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">        </span><span class="nv">c_pointer</span><span class="na">.</span><span class="nv">Value</span><span class="kd">←</span><span class="p">(</span><span class="nv">obj</span><span class="na">.</span><span class="nv">Value</span><span class="o">-</span><span class="m">32</span><span class="p">)</span><span class="o">×</span><span class="m">5</span><span class="o">÷</span><span class="m">9</span>
@@ -78840,7 +78840,7 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>The <code>LoadXAML</code> function used in this example is subtly different from previous examples.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">win</span><span class="kd">←</span><span class="nv">LoadXAML</span><span class="w"> </span><span class="nv">xaml</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">str</span><span class="sr">;</span><span class="nv">xml</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">win</span><span class="kd">←</span><span class="nv">LoadXAML</span><span class="w"> </span><span class="nv">xaml</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">str</span><span class="sr">;</span><span class="nv">xml</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System.IO'</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'System.Windows.Markup'</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'System.Xml,system.xml.dll'</span>
@@ -78852,7 +78852,7 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>In particular, it contains the all-important statement:
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">5</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'Syncfusion.Windows.Gauge,</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">5</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'Syncfusion.Windows.Gauge,</span>
 <span class="s1">                 YOUR_INSTALL_DIR/Syncfusion.Gauge.WPF.dll'</span>
 </code></pre></div>
 <p>This statement tells APL to search the .NET namespace named <em>Syncfusion.Windows.Gauge</em>, which is located in the assembly file whose path depends on your exact Syncfusion installation.</p>
@@ -78885,7 +78885,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

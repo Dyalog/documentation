@@ -78833,7 +78833,7 @@
 <p>Note that a <code>⎕OR</code> object can be transmitted through an 'APL-style' TCP socket. This technique may be used to transfer objects including namespaces between APL sessions.</p>
 <p>The object representation forms of namespaces produced by <code>⎕OR</code> may not be used as arguments to any primitive functions.  The only operations permitted for such objects (or arrays containing such objects) are <code>⎕EX</code>, <code>⎕FAPPEND</code>, <code>⎕FREPLACE</code>, <code>⎕NS</code>, and <code>⎕WC</code>.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="kd">←</span><span class="nf">⎕OR</span><span class="w"> </span><span class="nf">⎕FX</span><span class="s1">'R←FOO'</span><span class="w"> </span><span class="s1">'R←10'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="kd">←</span><span class="nf">⎕OR</span><span class="w"> </span><span class="nf">⎕FX</span><span class="s1">'R←FOO'</span><span class="w"> </span><span class="s1">'R←10'</span>
 
 <span class="w">      </span><span class="o">⍴</span><span class="nv">F</span>
 
@@ -78846,7 +78846,7 @@
 </code></pre></div>
 <p>The display of the <code>⎕OR</code> form of a function or operator is a listing of the function or operator.  If the <code>⎕OR</code> form of a function or operator has been enclosed, then the result will display as the  name preceded by the symbol <code>∇</code>.  It is permitted to apply <code>⎕OR</code> to a locked function or operator.  In this instance the result will display as for the enclosed form.</p>
 <h2 class="example">Examples</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="nv">F</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="nv">F</span>
 <span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">FOO</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">     </span><span class="nv">R</span><span class="kd">←</span><span class="m">10</span>
 <span class="w">      </span><span class="bp">∇</span>
@@ -78859,7 +78859,7 @@
 <span class="w">      </span><span class="nf">⎕OR</span><span class="s1">'FOO'</span>
 <span class="bp">∇</span><span class="nv">FOO</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="o">⍳</span><span class="m">5</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="o">⍳</span><span class="m">5</span>
 
 <span class="w">      </span><span class="nv">A</span><span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="kd">←</span><span class="o">⊂</span><span class="nv">F</span>
 
@@ -78868,7 +78868,7 @@
 </code></pre></div>
 <p>For the <code>⎕OR</code> forms of two functions or operators to be considered identical, their unlocked display forms must be the same, they must either both be locked or unlocked, and any monitors, trace and stop vectors must be the same.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="kd">←</span><span class="nf">⎕OR</span><span class="w"> </span><span class="nf">⎕FX</span><span class="w"> </span><span class="s1">'R←A PLUS B'</span><span class="w"> </span><span class="s1">'R←A+B'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F</span><span class="kd">←</span><span class="nf">⎕OR</span><span class="w"> </span><span class="nf">⎕FX</span><span class="w"> </span><span class="s1">'R←A PLUS B'</span><span class="w"> </span><span class="s1">'R←A+B'</span>
 
 <span class="w">      </span><span class="nv">F</span><span class="o">≡</span><span class="nf">⎕OR</span><span class="w"> </span><span class="s1">'PLUS'</span>
 <span class="m">1</span>
@@ -78880,7 +78880,7 @@
 </code></pre></div>
 <h2 id="namespace-examples">Namespace Examples</h2>
 <p>The following example sets up a namespace called <code>UTILS</code>, copies into it the contents of the <code>UTIL</code> workspace, then writes it to a component file:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CLEAR</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CLEAR</span>
 <span class="nv">clear</span><span class="w"> </span><span class="nv">ws</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">NS</span><span class="w"> </span><span class="nv">UTILS</span>
 <span class="c1">#.UTILS</span>
@@ -78894,7 +78894,7 @@
 <span class="w">      </span><span class="p">(</span><span class="nf">⎕OR</span><span class="s1">'UTILS'</span><span class="p">)</span><span class="nf">⎕FAPPEND</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <p>The namespace can be restored with <code>⎕NS</code>, using either the original name or a new one:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CLEAR</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CLEAR</span>
 <span class="nv">clear</span><span class="w"> </span><span class="nv">ws</span>
 <span class="w">      </span><span class="s1">'UTILS'</span><span class="w"> </span><span class="nf">⎕NS</span><span class="w"> </span><span class="nf">⎕FREAD</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span>
 <span class="c1">#.UTILS</span>
@@ -78904,7 +78904,7 @@
 <span class="c1">#.NEWUTILS</span>
 </code></pre></div>
 <p>This example illustrates how <code>⎕OR</code> can be used to clone a GUI object; in this case a Group containing some Button objects.  Note that <code>⎕WC</code> will accept <strong>only</strong> a <code>⎕OR</code> object as its argument (or preceded by the "Type" keyword).  You may not specify any other properties in the same <code>⎕WC</code> statement, but you must instead use <code>⎕WS</code> to reset them afterwards.
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
 <span class="w">    </span><span class="s1">'F.G1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Group'</span><span class="w"> </span><span class="s1">'&amp;One'</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="m">80</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
 <span class="w">    </span><span class="s1">'F.G1.B2'</span><span class="nf">⎕WC</span><span class="s1">'Button'</span><span class="w"> </span><span class="s1">'&amp;Blue'</span><span class="w"> </span><span class="p">(</span><span class="m">40</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Radio'</span><span class="p">)</span>
 <span class="w">    </span><span class="s1">'F.G1.B3'</span><span class="nf">⎕WC</span><span class="s1">'Button'</span><span class="w"> </span><span class="s1">'&amp;Green'</span><span class="w"> </span><span class="p">(</span><span class="m">60</span><span class="w"> </span><span class="m">10</span><span class="p">)(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Radio'</span><span class="p">)</span>
@@ -78950,7 +78950,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

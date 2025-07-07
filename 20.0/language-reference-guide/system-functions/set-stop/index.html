@@ -78721,28 +78721,28 @@
 <p><code>Y</code> must be a simple character scalar or vector which is taken to be the name of a visible defined function or operator.  <code>X</code> must be a simple non-negative integer scalar or vector.  <code>R</code> is a simple integer vector of non-negative elements.  <code>X</code> identifies the numbers of lines in the function or operator named by <code>Y</code> on which a stop control is to be placed.  Numbers outside the range of line numbers in the function or operator (other than 0) are ignored.  The number 0 indicates that a stop control is to be placed immediately prior to exit from the function or operator.  If <code>X</code> is empty, all existing stop controls are cancelled.  The value of <code>X</code> is independent of <code>⎕IO</code>.</p>
 <p><code>R</code> is a vector of the line numbers on which a stop control has been placed in ascending order.  The result is suppressed unless it is explicitly used or assigned.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊢</span><span class="p">(</span><span class="m">0</span><span class="o">,⍳</span><span class="m">10</span><span class="p">)</span><span class="w"> </span><span class="nf">⎕STOP</span><span class="w"> </span><span class="s1">'FOO'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊢</span><span class="p">(</span><span class="m">0</span><span class="o">,⍳</span><span class="m">10</span><span class="p">)</span><span class="w"> </span><span class="nf">⎕STOP</span><span class="w"> </span><span class="s1">'FOO'</span>
 <span class="m">0</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <p>Existing stop controls in the function or operator named by <code>Y</code> are cancelled before new stop controls are set:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊢</span><span class="m">1</span><span class="w"> </span><span class="nf">⎕STOP</span><span class="w"> </span><span class="s1">'FOO'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊢</span><span class="m">1</span><span class="w"> </span><span class="nf">⎕STOP</span><span class="w"> </span><span class="s1">'FOO'</span>
 <span class="m">1</span>
 </code></pre></div>
 <p>All stop controls may be cancelled by giving <code>X</code> an empty vector:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="s1">''</span><span class="w"> </span><span class="nf">⎕STOP</span><span class="w"> </span><span class="s1">'FOO'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="s1">''</span><span class="w"> </span><span class="nf">⎕STOP</span><span class="w"> </span><span class="s1">'FOO'</span>
 <span class="m">0</span>
 
 <span class="w">      </span><span class="o">⍴</span><span class="no">⍬</span><span class="w"> </span><span class="nf">⎕STOP</span><span class="w"> </span><span class="s1">'FOO'</span>
 <span class="m">0</span>
 </code></pre></div>
 <p>Attempts to set stop controls in a locked function or operator are ignored.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕LOCK</span><span class="s1">'FOO'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕LOCK</span><span class="s1">'FOO'</span>
 
 <span class="w">      </span><span class="o">⊢</span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕STOP</span><span class="s1">'FOO'</span>
 </code></pre></div>
 <p>The effect of <code>⎕STOP</code> when a function or operator is invoked is to suspend execution at the beginning of any line in the function or operator on which a stop control is placed immediately before that line is executed, and immediately before exiting from the function or operator if a stop control of 0 is set.  Execution may be resumed by a branch expression.  A stop control interrupt (1001) may also be trapped - see <a href="../trap/">Trap Event</a>.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕FX</span><span class="s1">'R←FOO'</span><span class="w"> </span><span class="s1">'R←10'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕FX</span><span class="s1">'R←FOO'</span><span class="w"> </span><span class="s1">'R←10'</span>
 
 <span class="w">      </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕STOP</span><span class="s1">'FOO'</span>
 
@@ -78792,7 +78792,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

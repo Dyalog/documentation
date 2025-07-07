@@ -78705,11 +78705,11 @@
 <h1 class="heading"><span class="name">Docking a Form inside another</span></h1>
 
 <p>The following example illustrates the effect of docking one Form in another.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Host'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Host'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Host'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Host'</span>
 <span class="w">      </span><span class="nv">Host</span><span class="na">.</span><span class="nv">DockChildren</span><span class="kd">←</span><span class="s1">'Client'</span>
 </code></pre></div>
 <p><img alt="" src="../../img/docking-form-host-0.png"></p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Client'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Client'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Client'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Client'</span>
 <span class="w">      </span><span class="nv">Client</span><span class="na">.</span><span class="nv">Dockable</span><span class="kd">←</span><span class="s1">'Always'</span>
 </code></pre></div>
 <p><img alt="" src="../../img/docking-form-client-0.png"></p>
@@ -78723,12 +78723,12 @@
 <p>The following picture shows the <code>Client</code> Form docked as a SubForm along the right edge of the <code>Host</code> Form.</p>
 <p><img alt="" src="../../img/docking-form-host-4.png"></p>
 <p>It is also possible to dock a Form into an already docked Form.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Client2'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Second Client'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Client2'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Second Client'</span>
 <span class="w">      </span><span class="nv">Client2</span><span class="na">.</span><span class="nv">Dockable</span><span class="kd">←</span><span class="s1">'Always'</span>
 </code></pre></div>
 <p><img alt="" src="../../img/docking-form-client-1.png"></p>
 <p>which we can make dockable in both the <code>Host</code> Form and the <code>Host.Client</code> SubForm:
-</p><div class="highlight"><pre><span></span><code><span class="nv">Host</span><span class="na">.</span><span class="nv">DockChildren</span><span class="w"> </span><span class="nv">Host</span><span class="na">.</span><span class="nv">Client</span><span class="na">.</span><span class="nv">DockChildren</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'Client2'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">Host</span><span class="na">.</span><span class="nv">DockChildren</span><span class="w"> </span><span class="nv">Host</span><span class="na">.</span><span class="nv">Client</span><span class="na">.</span><span class="nv">DockChildren</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'Client2'</span>
 </code></pre></div>
 <p>The next picture shows <code>Client2</code> about to be docked in the <code>Client</code> SubForm:</p>
 <p><img alt="" src="../../img/docking-form-host-5.png"></p>
@@ -78763,7 +78763,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

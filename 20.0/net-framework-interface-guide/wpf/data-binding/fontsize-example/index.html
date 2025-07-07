@@ -78809,7 +78809,7 @@
 <p><img alt="" src="../../../img/data-binding-text-xaml-1.png"></p>
 <h2 id="the-xaml">The XAML</h2>
 <p>The XAML shown below,  describes the same Window containing a TextBox as before.
-</p><div class="highlight"><pre><span></span><code><span class="nt">&lt;Window</span>
+</p><div class="language-xml highlight"><pre><span></span><code><span class="nt">&lt;Window</span>
 <span class="w"> </span><span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span>
 <span class="w"> </span><span class="na">xmlns:x=</span><span class="s">"http://schemas.microsoft.com/winfx/2006/xaml"</span>
 <span class="w"> </span><span class="na">Name=</span><span class="s">"Temp"</span>
@@ -78821,12 +78821,12 @@
 <span class="nt">&lt;/Window&gt;</span>
 </code></pre></div>
 <p>This time, the data binding expression is:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span>FontSize="{Binding<span class="w"> </span>sizeSource,Mode=OneWay}"/&gt;
+</p><div class="language-xml highlight"><pre><span></span><code><span class="w">      </span>FontSize="{Binding<span class="w"> </span>sizeSource,Mode=OneWay}"/&gt;
 </code></pre></div>
 <p>This specifies that the FontSize property of the TextBox is bound to a value in the Binding Source (which has yet to be defined) whose path is <code>sizeSource</code>. The binding mode is set to <code>OneWay</code> which means that the FontSize property depends on the data value but not vice versa. Were the FontSize to change for any external reason (which is admittedly unlikely in the case of FontSize), it would not alter the value in <code>sizeSource</code> to which it is bound.</p>
 <h2 id="the-apl-code">The APL Code</h2>
 <p>The function <code>FontSize</code> is almost identical to the function <code>Text</code> which is described in Example 1.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FontSize</span><span class="w"> </span><span class="nv">size</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">win</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FontSize</span><span class="w"> </span><span class="nv">size</span><span class="sr">;</span><span class="nf">⎕USING</span><span class="sr">;</span><span class="nv">win</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕USING</span><span class="o">,</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'System.Windows.Controls,WPF/PresentationFramework.dll'</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="kd">←</span><span class="nv">LoadXAML</span><span class="w"> </span><span class="nv">XAML</span>
@@ -78840,16 +78840,16 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>The key difference is in <code>FontSize[8]</code>. Here the left argument of <code>(2015⌶)</code> is <code>Int32</code>. This means that the exported Type of the variable <code>sizeSource</code> will be Int32. This Type (a 32-bit integer) is required by the FontSize property of a TextBox; no other Type will do. If this were omitted, APL would export the value of the variable using a Type dependent on its internal format (most likely Int16) and the binding would fail.
-</p><div class="highlight"><pre><span></span><code><span class="sr">[</span><span class="m">8</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="na">.</span><span class="nv">txtBox</span><span class="na">.</span><span class="nv">DataContext</span><span class="kd">←</span><span class="nv">Int32</span><span class="p">(</span><span class="m">2015</span><span class="na">⌶</span><span class="p">)</span><span class="s1">'sizeSource'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="sr">[</span><span class="m">8</span><span class="sr">]</span><span class="w">    </span><span class="nv">win</span><span class="na">.</span><span class="nv">txtBox</span><span class="na">.</span><span class="nv">DataContext</span><span class="kd">←</span><span class="nv">Int32</span><span class="p">(</span><span class="m">2015</span><span class="na">⌶</span><span class="p">)</span><span class="s1">'sizeSource'</span>
 </code></pre></div>
 <h2 id="testing-the-data-binding">Testing the Data Binding</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">wpfintro</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">LOAD</span><span class="w"> </span><span class="nv">wpfintro</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">DataBinding</span><span class="na">.</span><span class="nv">FontSize</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">FontSize</span><span class="w"> </span><span class="m">12</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">FontSize</span><span class="w"> </span><span class="m">12</span>
 </code></pre></div>
 <p><img alt="" src="../../../img/data-binding-fontsize-xaml-1.png">
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">sizeSource</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">sizeSource</span>
 <span class="m">12</span>
 <span class="w">      </span><span class="nv">sizeSource</span><span class="kd">←</span><span class="m">30</span>
 </code></pre></div>
@@ -78883,7 +78883,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

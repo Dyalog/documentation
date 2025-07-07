@@ -78835,19 +78835,19 @@
 <h2 id="simple-indexed-assignment">Simple Indexed Assignment</h2>
 <p>For vector <code>X</code>, <code>I</code> is a simple integer array whose items are from the set <code>⍳⍴R</code>.  Elements of <code>X</code> identified by index positions <code>I</code> are replaced by corresponding elements of <code>Y</code>.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="nv">A</span><span class="kd">←</span><span class="o">⍳</span><span class="m">5</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="nv">A</span><span class="kd">←</span><span class="o">⍳</span><span class="m">5</span>
 <span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span>
 
 <span class="w">      </span><span class="nv">A</span><span class="sr">[</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="sr">]</span><span class="kd">←</span><span class="m">10</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">A</span>
 <span class="m">1</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span>
 </code></pre></div>
 <p>The last-most element of <code>Y</code> is assigned when an index is repeated in <code>I</code>:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="sr">[</span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="sr">]</span><span class="kd">←</span><span class="m">100</span><span class="w"> </span><span class="m">101</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">A</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="sr">[</span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="sr">]</span><span class="kd">←</span><span class="m">100</span><span class="w"> </span><span class="m">101</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">A</span>
 <span class="m">1</span><span class="w"> </span><span class="m">101</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span>
 </code></pre></div>
 <p>For matrix <code>X</code>, <code>I</code> is composed of two simple integer arrays separated by the semicolon character (<code>;</code>).  The arrays select indices from the rows and columns of <code>X</code> respectively.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="nv">B</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="s1">'REDSUN'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">+</span><span class="nv">B</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="s1">'REDSUN'</span>
 <span class="nv">RED</span>
 <span class="nv">SUN</span>
 
@@ -78857,7 +78857,7 @@
 </code></pre></div>
 <p>For higher-rank array <code>X</code>, <code>I</code> is a series of simple integer arrays with adjacent arrays separated by a single semicolon character (<code>;</code>).  Each array selects indices from an axis of <code>X</code> taken in row-major order.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">C</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">C</span>
 <span class="m">11</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">13</span>
 <span class="m">14</span><span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">16</span>
 
@@ -78872,7 +78872,7 @@
 <span class="m">24</span><span class="w"> </span><span class="m">25</span><span class="w">  </span><span class="m">26</span>
 </code></pre></div>
 <p>An indexing array may be ELIDED.  That is, if an indexing array is omitted from the <code>K</code>th axis, the indexing vector <code>⍳(⍴X)[K]</code> is implied:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">C</span><span class="sr">[;</span><span class="m">1</span><span class="sr">;</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="sr">]</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="m">112</span><span class="w"> </span><span class="m">113</span><span class="w"> </span><span class="m">122</span><span class="w"> </span><span class="m">123</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">C</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">C</span><span class="sr">[;</span><span class="m">1</span><span class="sr">;</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="sr">]</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="m">112</span><span class="w"> </span><span class="m">113</span><span class="w"> </span><span class="m">122</span><span class="w"> </span><span class="m">123</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">C</span>
 <span class="m">11</span><span class="w"> </span><span class="m">112</span><span class="w"> </span><span class="m">113</span>
 <span class="m">14</span><span class="w">  </span><span class="m">15</span><span class="w">  </span><span class="m">16</span>
 
@@ -78889,7 +78889,7 @@
 <h2 id="choose-indexed-assignment">Choose Indexed Assignment</h2>
 <p>The index specification <code>I</code> is a non-simple integer array. Each item identifies a single element of <code>X</code> by a set of indices with one element per axis of <code>X</code> in row-major order.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">C</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">C</span>
 <span class="m">11</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">14</span>
 <span class="m">21</span><span class="w"> </span><span class="m">22</span><span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="m">24</span>
 
@@ -78906,7 +78906,7 @@
 <span class="m">201</span><span class="w">  </span><span class="m">22</span><span class="w"> </span><span class="m">203</span><span class="w"> </span><span class="m">204</span>
 </code></pre></div>
 <p>A scalar may be indexed by the enclosed empty vector:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">S</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">S</span>
 <span class="m">10</span>
 <span class="w">      </span><span class="nv">S</span><span class="sr">[</span><span class="o">⊂⍳</span><span class="m">0</span><span class="sr">]</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'VECTOR'</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="nv">S</span>
 <span class="w"> </span><span class="nv">VECTOR</span><span class="w"> </span>
@@ -78914,7 +78914,7 @@
 <span class="m">5</span>
 </code></pre></div>
 <p>Choose Indexed Assignment may be used very effectively in conjunction with Index Generator (<code>⍳</code>) and Structural functions in order to assign into an array:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">C</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">C</span>
 <span class="m">11</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">14</span>
 <span class="m">21</span><span class="w"> </span><span class="m">22</span><span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="m">24</span>
 
@@ -78933,7 +78933,7 @@
 <h2 id="reach-indexed-assignment">Reach Indexed Assignment</h2>
 <p>The index specification <code>I</code> is a non-simple integer array, each of whose items reach down to a nested element of <code>X</code>.  The items of an item of <code>I</code> are simple vectors (or scalars) forming sets of indices that index arrays at successive levels of <code>X</code> starting at the top-most level.  A set of indices has one element per axis at the respective level of nesting of <code>X</code> in row-major order.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">D</span><span class="kd">←</span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">6</span><span class="p">)(</span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="s1">'SMITH'</span><span class="w"> </span><span class="s1">'JONES'</span><span class="w"> </span><span class="s1">'SAM'</span><span class="w"> </span><span class="s1">'BILL'</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">D</span><span class="kd">←</span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">6</span><span class="p">)(</span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="s1">'SMITH'</span><span class="w"> </span><span class="s1">'JONES'</span><span class="w"> </span><span class="s1">'SAM'</span><span class="w"> </span><span class="s1">'BILL'</span><span class="p">)</span>
 
 <span class="w">      </span><span class="nv">D</span>
 <span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w">   </span><span class="nv">SMITH</span><span class="w">  </span><span class="nv">JONES</span>
@@ -78957,10 +78957,10 @@
 <span class="w"> </span><span class="nv">GREEN</span><span class="w">  </span><span class="nv">MELLOW</span><span class="w">  </span><span class="nv">RED</span>
 </code></pre></div>
 <p>The context of indexing is important.  In the last example, the indexing method is determined to be Reach rather than Choose since <code>E</code> is a vector, not a matrix as would be required for Choose.  Observe that:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊂</span><span class="m">2</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="kd">←→</span><span class="w"> </span><span class="o">⊂</span><span class="p">(</span><span class="o">⊂</span><span class="m">2</span><span class="p">)</span><span class="o">,</span><span class="p">(</span><span class="o">⊂</span><span class="m">1</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊂</span><span class="m">2</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="kd">←→</span><span class="w"> </span><span class="o">⊂</span><span class="p">(</span><span class="o">⊂</span><span class="m">2</span><span class="p">)</span><span class="o">,</span><span class="p">(</span><span class="o">⊂</span><span class="m">1</span><span class="p">)</span>
 </code></pre></div>
 <p>Note that for any array <code>A</code>, <code>A[⊂⍬]</code> represents a scalar quantity, which is the whole of <code>A</code>, so:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="m">5</span><span class="o">⍴</span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="m">5</span><span class="o">⍴</span><span class="m">0</span>
 <span class="w">      </span><span class="nv">A</span>
 <span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
 <span class="w">      </span><span class="nv">A</span><span class="sr">[</span><span class="o">⊂</span><span class="no">⍬</span><span class="sr">]</span><span class="kd">←</span><span class="m">1</span>
@@ -78969,7 +78969,7 @@
 </code></pre></div>
 <h2 id="combined-indexed-and-selective-assignment">Combined Indexed and Selective Assignment</h2>
 <p>Instead of <code>X</code> being a name, it may be a selection from a named array, and the statement is of the form <code>(EXP X)[I]←Y</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MAT</span><span class="kd">←</span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="s1">'Hello'</span><span class="w"> </span><span class="s1">'World'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MAT</span><span class="kd">←</span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="s1">'Hello'</span><span class="w"> </span><span class="s1">'World'</span>
 <span class="w">      </span><span class="p">(</span><span class="m">2</span><span class="o">↑</span><span class="na">¨</span><span class="nv">MAT</span><span class="p">)</span><span class="sr">[</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="sr">;]</span><span class="kd">←</span><span class="s1">'#'</span>
 <span class="w">      </span><span class="nv">MAT</span>
 <span class="w"> </span><span class="c1">##llo  ##rld  ##llo </span>
@@ -78977,7 +78977,7 @@
 <span class="w"> </span><span class="nv">Hello</span><span class="w">  </span><span class="nv">World</span><span class="w">  </span><span class="nv">Hello</span><span class="w"> </span>
 <span class="w"> </span><span class="nv">World</span><span class="w">  </span><span class="nv">Hello</span><span class="w">  </span><span class="nv">World</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MAT</span><span class="kd">←</span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="s1">'Hello'</span><span class="w"> </span><span class="s1">'World'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">MAT</span><span class="kd">←</span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="s1">'Hello'</span><span class="w"> </span><span class="s1">'World'</span>
 <span class="w">      </span><span class="nf">⎕ML</span><span class="kd">←</span><span class="m">1</span><span class="w"> </span><span class="c1">⍝ ∊ is Enlist</span>
 <span class="w">     </span><span class="p">(</span><span class="o">∊</span><span class="nv">MAT</span><span class="p">)</span><span class="sr">[</span><span class="m">2</span><span class="o">×⍳⌊</span><span class="m">0.5</span><span class="o">×⍴∊</span><span class="nv">MAT</span><span class="sr">]</span><span class="kd">←</span><span class="s1">'#'</span>
 <span class="w">      </span><span class="nv">MAT</span>
@@ -79015,7 +79015,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

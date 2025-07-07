@@ -78742,32 +78742,32 @@
 </tbody>
 </table>
 <p>In the following examples, the <code>Make</code> function (see <a class="noprint" href="../constructor-overload-example-class/">Clover Class</a>  for details) displays:
-</p><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nv">shape</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">argument</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">name</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">Constructor</span><span class="w"> </span><span class="nv">called</span><span class="o">&gt;&lt;</span><span class="nv">argument</span><span class="o">&gt;</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nv">shape</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">argument</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">name</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">Constructor</span><span class="w"> </span><span class="nv">called</span><span class="o">&gt;&lt;</span><span class="nv">argument</span><span class="o">&gt;</span>
 <span class="p">(</span><span class="nv">see</span><span class="w"> </span><span class="nv">function</span><span class="w"> </span><span class="nv">make</span><span class="p">)</span>
 </code></pre></div>
 <p>Creating a new Instance of Clover with a 1-element vector as the Constructor argument, causes the system to choose the <code>Make1</code> Constructor. Note that, although the argument to <code>Make1</code> is a 1-element vector, this is disclosed as the list of arguments is unpacked into the (single) variable <code>arg1</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Clover</span><span class="p">(</span><span class="o">,</span><span class="m">1</span><span class="p">))</span><span class="na">.</span><span class="nv">Con</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Clover</span><span class="p">(</span><span class="o">,</span><span class="m">1</span><span class="p">))</span><span class="na">.</span><span class="nv">Con</span>
 <span class="w">   </span><span class="nv">Make1</span><span class="w">  </span><span class="m">1</span>
 </code></pre></div>
 <p>Creating a new Instance of Clover with a 2- or 3-element vector as the Constructor argument causes the system to choose <code>Make2</code>, or <code>Make3</code> respectively.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Clover</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="na">.</span><span class="nv">Con</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Clover</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="na">.</span><span class="nv">Con</span>
 <span class="w"> </span><span class="m">2</span><span class="w">  </span><span class="nv">Make2</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>
 <span class="w">      </span><span class="p">(</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Clover</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="p">))</span><span class="na">.</span><span class="nv">Con</span>
 <span class="w"> </span><span class="m">3</span><span class="w">  </span><span class="nv">Make3</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>
 </code></pre></div>
 <p>Creating an Instance with any other Constructor argument causes the system to choose <code>MakeAny</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Clover</span><span class="p">(</span><span class="o">⍳</span><span class="m">10</span><span class="p">))</span><span class="na">.</span><span class="nv">Con</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Clover</span><span class="p">(</span><span class="o">⍳</span><span class="m">10</span><span class="p">))</span><span class="na">.</span><span class="nv">Con</span>
 <span class="w"> </span><span class="m">10</span><span class="w">  </span><span class="nv">MakeAny</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="m">10</span>
 <span class="w">      </span><span class="p">(</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Clover</span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="o">⍴⍳</span><span class="m">4</span><span class="p">))</span><span class="na">.</span><span class="nv">Con</span>
 <span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="w">  </span><span class="nv">MakeAny</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>
 <span class="w">               </span><span class="m">3</span><span class="w"> </span><span class="m">4</span>
 </code></pre></div>
 <p>Note that a scalar argument will call <code>MakeAny</code> and not <code>Make1</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Clover</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="na">.</span><span class="nv">Con</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Clover</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="na">.</span><span class="nv">Con</span>
 <span class="w">   </span><span class="nv">MakeAny</span><span class="w">  </span><span class="m">1</span>
 </code></pre></div>
 <p>and finally, creating an Instance without a Constructor argument causes the system to choose <code>Make0</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Clover</span><span class="p">)</span><span class="na">.</span><span class="nv">Con</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Clover</span><span class="p">)</span><span class="na">.</span><span class="nv">Con</span>
 <span class="w">   </span><span class="nv">Make0</span><span class="w">  </span><span class="m">0</span>
 </code></pre></div>
 
@@ -78799,7 +78799,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

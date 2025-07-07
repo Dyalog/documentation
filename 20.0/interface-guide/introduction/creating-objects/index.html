@@ -78823,7 +78823,7 @@
 
 <p>You create objects using <code>⎕WC</code>. Its left argument is a character vector that specifies the name of the object to be created. Its right argument specifies the object's Type and various other properties. Its (shy) result is the full pathname of the newly created object.</p>
 <p>The following statement creates a Form called <code>'f1'</code> with the title "A Default Form" and with default size, position, etc.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'f1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'A Default Form'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'f1'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'A Default Form'</span>
 </code></pre></div>
 <p><img alt="" src="../../img/default-form.png"></p>
 <h2 id="naming-objects">Naming Objects</h2>
@@ -78831,7 +78831,7 @@
 <p>For reasons which will become apparent later, there is a single Root object whose name is <code>'.'</code> (dot) or <code>'#'</code>. It acts a bit like the root directory in a Windows system file structure, and is the implied parent of all the top-level objects you create.</p>
 <p>When you create a top-level object, you don't actually have to specify that it is a child of the Root; this is implied. For any other object, you specify its position in the hierarchy by including the names of its "parent", "grand-parent", and so forth in its name.</p>
 <p>Object names are specified in the form:
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="s1">'grandparent.parent.child'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="s1">'grandparent.parent.child'</span>
 </code></pre></div>
 <p>where the "." character is used to separate the individual parts of the name. There is no explicit limit to the depth of the object hierarchy; although in practice it is limited by the rules governing which objects may be children of which others.</p>
 <p>Complete object names must be unique, although you could use the same sub-name for two objects that have different parents. For example, it would be valid to have <code>'form1.btn1'</code> and <code>'form2.btn1'</code>.</p>
@@ -78843,7 +78843,7 @@
 <p>GUI Objects are <em>namespaces</em> with nameclass 9.2. Like any other namespace they are saved in the workspace when it is saved and rebuilt when the workspace is re-loaded. The expression <code>)OBJECTS</code> or <code>⎕NL 9.2</code> may be used to report their names. Like other namespaces, GUI objects may be copied from a saved workspace using <code>)COPY</code> or <code>⎕CY</code>.</p>
 <h2 id="the-object-hierarchy">The Object Hierarchy</h2>
 <p>This example illustrates how an object hierarchy is defined. The following statements create a Form called <code>'accounts'</code> which contains a Group called <code>'type'</code> and some Buttons called <code>'PLAN'</code>, <code>'BUDGET'</code> and <code>'ACTUAL'</code>. The embedded spaces in these statements are intended only to improve clarity. The numbers refer to the object's position within its parent. This will be discussed in detail later.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'accounts'</span><span class="w">             </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Accounts'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'accounts'</span><span class="w">             </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Accounts'</span>
 <span class="s1">'accounts.type'</span><span class="w">        </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Group'</span><span class="w"> </span><span class="s1">'Account Type'</span>
 <span class="s1">'accounts.type.PLAN'</span><span class="w">   </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Button'</span><span class="w"> </span><span class="s1">'PLAN'</span><span class="w">   </span><span class="p">(</span><span class="m">20</span><span class="w"> </span><span class="m">35</span><span class="p">)</span>
 <span class="s1">'accounts.type.BUDGET'</span><span class="w"> </span><span class="nf">⎕WC</span><span class="w"> </span><span class="s1">'Button'</span><span class="w"> </span><span class="s1">'BUDGET'</span><span class="w"> </span><span class="p">(</span><span class="m">45</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
@@ -78851,7 +78851,7 @@
 </code></pre></div>
 <p><img alt="" src="../../img/accounts.png"></p>
 <p>Schematically, this object structure looks as follows:
-</p><div class="highlight"><pre><span></span><code>                            __ACTUAL
+</p><div class="language-text highlight"><pre><span></span><code>                            __ACTUAL
         .___accounts___type___BUDGET
                             __PLAN
 </code></pre></div>
@@ -78884,7 +78884,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

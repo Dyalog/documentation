@@ -79114,7 +79114,7 @@
 <li>For<code>Format 'M'</code> all duplicate members are recorded in the result matrix.</li>
 </ul>
 <p><strong>Examples</strong></p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">JSON</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">JSON</span>
 <span class="m">18</span><span class="w"> </span><span class="m">19</span>
 <span class="w">      </span><span class="nv">JSON</span>
 <span class="kt">{</span><span class="w">                  </span>
@@ -79137,7 +79137,7 @@
 <span class="kt">}</span>
 </code></pre></div>
 <h3 id="import-as-data-format-d">Import as Data (<code>Format 'D'</code>)</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">j</span><span class="kd">←</span><span class="m">0</span><span class="w"> </span><span class="nf">⎕JSON</span><span class="w"> </span><span class="nv">JSON</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">j</span><span class="kd">←</span><span class="m">0</span><span class="w"> </span><span class="nf">⎕JSON</span><span class="w"> </span><span class="nv">JSON</span>
 <span class="w">      </span><span class="nv">j</span>
 <span class="c1">#.[JSON object]</span>
 <span class="w">      </span><span class="nv">j</span><span class="na">.</span><span class="nf">⎕NL</span><span class="w"> </span><span class="m">9</span>
@@ -79170,7 +79170,7 @@
 <span class="err">└────────┴───┴──────┴──────┘</span>
 </code></pre></div>
 <h3 id="import-as-matrix-format-m">Import as Matrix (<code>Format 'M'</code>)</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕JSON</span><span class="na">⍠</span><span class="s1">'M'</span><span class="p">)</span><span class="nv">JSON</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕JSON</span><span class="na">⍠</span><span class="s1">'M'</span><span class="p">)</span><span class="nv">JSON</span>
 <span class="err">┌─┬──┬────────┬─┐</span>
 <span class="err">│</span><span class="m">0</span><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">        </span><span class="err">│</span><span class="m">1</span><span class="err">│</span>
 <span class="err">├─┼──┼────────┼─┤</span>
@@ -79306,7 +79306,7 @@
 </table>
 <p>The name of any namespace member that begins with <code>⍙</code> and otherwise conforms to the conversion format used for JSON object names will be demangled.</p>
 <p><strong>Example</strong></p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">j</span><span class="w">             </span><span class="c1">⍝ See above</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">j</span><span class="w">             </span><span class="c1">⍝ See above</span>
 <span class="c1">#.[JSON object]</span>
 <span class="w">      </span><span class="o">⍴</span><span class="nv">JS</span><span class="kd">←</span><span class="m">1</span><span class="w"> </span><span class="nf">⎕JSON</span><span class="w"> </span><span class="nv">j</span>
 <span class="m">94</span>
@@ -79336,7 +79336,7 @@
 </code></pre></div>
 <p>If there are any mis-matches between the values in <code>Y[;3]</code> and the types in <code>Y[;4]</code>, <code>⎕JSON</code> will signal <code>DOMAIN ERROR</code> and report the first row where there is a mis-match (<code>⎕IO</code> sensitive) as illustrated in the following example.</p>
 <p><strong>Example</strong></p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">M</span><span class="kd">←</span><span class="p">(</span><span class="nf">⎕JSON</span><span class="na">⍠</span><span class="s1">'Format'</span><span class="w"> </span><span class="s1">'M'</span><span class="p">)</span><span class="s1">'{"values": [ 75, 300 ]}'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">M</span><span class="kd">←</span><span class="p">(</span><span class="nf">⎕JSON</span><span class="na">⍠</span><span class="s1">'Format'</span><span class="w"> </span><span class="s1">'M'</span><span class="p">)</span><span class="s1">'{"values": [ 75, 300 ]}'</span>
 <span class="w">      </span><span class="nv">M</span>
 <span class="err">┌─┬──────┬───┬─┐</span>
 <span class="err">│</span><span class="m">0</span><span class="err">│</span><span class="w">      </span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="m">1</span><span class="err">│</span>
@@ -79368,7 +79368,7 @@
 <span class="w">      </span><span class="o">∧</span>
 </code></pre></div>
 <p><strong>Charset Example</strong></p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ns</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="w"> </span><span class="s1">''</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ns</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="w"> </span><span class="s1">''</span>
 <span class="w">      </span><span class="nv">ns</span><span class="na">.</span><span class="nv">d</span><span class="err">é</span><span class="kd">←</span><span class="s1">'DÉ'</span>
 <span class="w">      </span><span class="nv">ns</span><span class="na">.</span><span class="nv">d</span><span class="err">é</span>
 <span class="nv">D</span><span class="err">É</span>
@@ -79378,7 +79378,7 @@
 <span class="kt">{</span><span class="s2">"d\u00E9"</span><span class="bp">:</span><span class="s2">"D\u00C9"</span><span class="kt">}</span>
 </code></pre></div>
 <p><strong>High Rank Example</strong></p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">d</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">d</span>
 <span class="err">┌─────┬─────────────────────────┐</span>
 <span class="err">│</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w">  </span><span class="err">│</span><span class="nv">ABC</span><span class="w">                      </span><span class="err">│</span>
 <span class="err">│</span><span class="nv">A</span><span class="w"> </span><span class="nv">B</span><span class="w">  </span><span class="err">│</span><span class="nv">DEF</span><span class="w">                      </span><span class="err">│</span>
@@ -79399,7 +79399,7 @@
 <h3 id="raw-text">Raw Text</h3>
 <p>An enclosed character vector is inserted into the result of JSON export as raw text. This feature may be used to export special JSON values such as <code>null</code>, <code>true</code> and <code>false</code>. Without the extra enclosure, the character vectors are exported as strings:</p>
 <p><strong>Example</strong></p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕JSON</span><span class="w"> </span><span class="s1">'null'</span><span class="w"> </span><span class="s1">'true'</span><span class="w"> </span><span class="s1">'false'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕JSON</span><span class="w"> </span><span class="s1">'null'</span><span class="w"> </span><span class="s1">'true'</span><span class="w"> </span><span class="s1">'false'</span>
 <span class="sr">[</span><span class="s2">"null"</span><span class="o">,</span><span class="s2">"true"</span><span class="o">,</span><span class="s2">"false"</span><span class="sr">]</span>
 <span class="w">      </span><span class="nf">⎕JSON</span><span class="w"> </span><span class="o">⊂</span><span class="na">¨</span><span class="s1">'null'</span><span class="w"> </span><span class="s1">'true'</span><span class="w"> </span><span class="s1">'false'</span>
 <span class="sr">[</span><span class="nv">null</span><span class="o">,</span><span class="nv">true</span><span class="o">,</span><span class="nv">false</span><span class="sr">]</span>
@@ -79407,7 +79407,7 @@
 <p>The same mechanism may be used to inject any raw text, although unless this is valid JSON it cannot then be re-imported.</p>
 <p>The following example illustrates how JavaScript objects may be exported. In the example, the object is a JavaScript function which is specified by the contents of an enclosed character vector.</p>
 <p><strong>Example</strong></p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Slider'</span><span class="w"> </span><span class="nf">⎕NS</span><span class="w"> </span><span class="s1">''</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Slider'</span><span class="w"> </span><span class="nf">⎕NS</span><span class="w"> </span><span class="s1">''</span>
 <span class="w">      </span><span class="nv">Slider</span><span class="na">.</span><span class="nv">range</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'true'</span><span class="w">         </span><span class="c1">⍝ Note the ⊂</span>
 <span class="w">      </span><span class="nv">Slider</span><span class="na">.</span><span class="nv">min</span><span class="kd">←</span><span class="m">0</span>
 <span class="w">      </span><span class="nv">Slider</span><span class="na">.</span><span class="nv">max</span><span class="kd">←</span><span class="m">500</span>
@@ -79425,7 +79425,7 @@
 </code></pre></div>
 <h3 id="wrappers">Wrappers</h3>
 <p>A wrapper is an enclosed vector of the form:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊂</span><span class="nv">code</span><span class="w"> </span><span class="nv">special</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊂</span><span class="nv">code</span><span class="w"> </span><span class="nv">special</span>
 </code></pre></div>
 <p>The nature of the <code>special</code> data structure is identified within the wrapper by a leading numeric code. Code 1 is used to identify JSON values such as <code>null</code>, <code>true</code> and <code>false</code>. Codes 2, 3 and 4 are used to identify different forms of datasets.</p>
 <p>This wrapper mechanism has been chosen to identify special treatment because a scalar enclosure cannot be represented in JSON/JavaScript.</p>
@@ -79433,25 +79433,25 @@
 <p><strong>Wrappers for special JSON values</strong></p>
 <p>Wrappers may be used to export JSON special values such as <code>null</code>, <code>true</code> and <code>false</code> using code 1. This mechanism is supplementary to the use of enclosed character vectors. See <strong>RawText</strong> above.</p>
 <p><strong>Example</strong></p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕JSON</span><span class="o">⊂</span><span class="na">¨</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="s1">'null'</span><span class="p">)(</span><span class="m">1</span><span class="w"> </span><span class="s1">'true'</span><span class="p">)(</span><span class="m">1</span><span class="w"> </span><span class="s1">'false'</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕JSON</span><span class="o">⊂</span><span class="na">¨</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="s1">'null'</span><span class="p">)(</span><span class="m">1</span><span class="w"> </span><span class="s1">'true'</span><span class="p">)(</span><span class="m">1</span><span class="w"> </span><span class="s1">'false'</span><span class="p">)</span>
 <span class="sr">[</span><span class="nv">null</span><span class="o">,</span><span class="nv">true</span><span class="o">,</span><span class="nv">false</span><span class="sr">]</span>
 </code></pre></div>
 <p><strong>Datasets</strong></p>
 <p>The term dataset is used here to mean a collection of data, usually presented in tabular form. Each named column represents a particular variable. Each row corresponds to a given member of the dataset in question. It lists values for each of the variables, such as height and weight of an object.</p>
 <p>Datasets are often represented in APL as a collection of variables.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Fields</span><span class="kd">←</span><span class="s1">'Item'</span><span class="w"> </span><span class="s1">'Price'</span><span class="w"> </span><span class="s1">'Qty'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Fields</span><span class="kd">←</span><span class="s1">'Item'</span><span class="w"> </span><span class="s1">'Price'</span><span class="w"> </span><span class="s1">'Qty'</span>
 <span class="w">      </span><span class="nv">Items</span><span class="kd">←</span><span class="s1">'Knife'</span><span class="w"> </span><span class="s1">'Fork'</span>
 <span class="w">      </span><span class="nv">Price</span><span class="kd">←</span><span class="m">3</span><span class="w"> </span><span class="m">4</span>
 <span class="w">      </span><span class="nv">Qty</span><span class="kd">←</span><span class="m">23</span><span class="w"> </span><span class="m">45</span>
 </code></pre></div>
 <p>As an aside, note that using this scheme each variable represents an inverted index into the dataset and enables rapid searches.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">Price</span><span class="o">&lt;</span><span class="m">4</span><span class="p">)</span><span class="na">/</span><span class="nv">Items</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">Price</span><span class="o">&lt;</span><span class="m">4</span><span class="p">)</span><span class="na">/</span><span class="nv">Items</span>
 <span class="err">┌─────┐</span>
 <span class="err">│</span><span class="nv">Knife</span><span class="err">│</span>
 <span class="err">└─────┘</span>
 </code></pre></div>
 <p>A conventional way to represent this dataset is as a matrix:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Fields</span><span class="o">⍪⍉↑</span><span class="w"> </span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Fields</span><span class="o">⍪⍉↑</span><span class="w"> </span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span>
 
 <span class="err">┌─────┬─────┬───┐</span>
 <span class="err">│</span><span class="nv">Item</span><span class="w"> </span><span class="err">│</span><span class="nv">Price</span><span class="err">│</span><span class="nv">Qty</span><span class="err">│</span>
@@ -79462,7 +79462,7 @@
 <span class="err">└─────┴─────┴───┘</span>
 </code></pre></div>
 <p>Another is as a 2-item vector containing the names of the fields and a matrix of their values:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">Fields</span><span class="w"> </span><span class="p">(</span><span class="o">⍉↑</span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span><span class="p">))</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">Fields</span><span class="w"> </span><span class="p">(</span><span class="o">⍉↑</span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span><span class="p">))</span>
 
 <span class="err">┌────────────────┬────────────┐</span>
 <span class="err">│┌────┬─────┬───┐│┌─────┬─┬──┐│</span>
@@ -79473,7 +79473,7 @@
 <span class="err">└────────────────┴────────────┘</span>
 </code></pre></div>
 <p>A third way retains the inverted nature of the data structure, storing the values as a vector. The advantage of this structure is that it consumes significantly less memory compared to the matrix forms, because numeric columns are stored as simple numeric vectors.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">Fields</span><span class="w"> </span><span class="p">(</span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span><span class="p">))</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">Fields</span><span class="w"> </span><span class="p">(</span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span><span class="p">))</span>
 
 <span class="err">┌────────────────┬────────────────────────┐</span>
 <span class="err">│┌────┬─────┬───┐│┌────────────┬───┬─────┐│</span>
@@ -79484,7 +79484,7 @@
 <span class="err">└────────────────┴────────────────────────┘</span>
 </code></pre></div>
 <p>In JSON, these three data structures are all expressed as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<div class="language-json highlight"><pre><span></span><code><span class="p">[</span>
 <span class="w">      </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">"Item"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knife"</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">"Price"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
@@ -79498,7 +79498,7 @@
 <span class="p">]</span>
 </code></pre></div>
 <p><strong>Examples</strong></p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Fields</span><span class="o">,</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="o">↑</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Fields</span><span class="o">,</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="o">↑</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span>
 
 <span class="err">┌─────┬─────┬───┐</span>
 <span class="err">│</span><span class="nv">Item</span><span class="w"> </span><span class="err">│</span><span class="nv">Price</span><span class="err">│</span><span class="nv">Qty</span><span class="err">│</span>
@@ -79511,35 +79511,35 @@
 <span class="sr">[</span><span class="kt">{</span><span class="s2">"Item"</span><span class="bp">:</span><span class="s2">"Knife"</span><span class="o">,</span><span class="s2">"Price"</span><span class="bp">:</span><span class="m">3</span><span class="o">,</span><span class="s2">"Qty"</span><span class="bp">:</span><span class="m">23</span><span class="kt">}</span><span class="o">,</span><span class="kt">{</span><span class="s2">"Item"</span><span class="bp">:</span><span class="s2">"Fork"</span><span class="o">,</span><span class="s2">"Price"</span><span class="bp">:</span><span class="m">4</span><span class="o">,</span><span class="s2">"Qty"</span><span class="bp">:</span><span class="m">45</span><span class="kt">}</span><span class="sr">]</span>
 </code></pre></div>
 <p>Note that if you omit the wrapper the operation fails:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕JSON</span><span class="w"> </span><span class="nv">Fields</span><span class="o">,</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="o">↑</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕JSON</span><span class="w"> </span><span class="nv">Fields</span><span class="o">,</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="o">↑</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span><span class="p">)</span>
 
 <span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span><span class="bp">:</span><span class="w"> </span><span class="nv">JSON</span><span class="w"> </span><span class="nv">export</span><span class="bp">:</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">right</span><span class="w"> </span><span class="nv">argument</span><span class="w"> </span><span class="nv">cannot</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">converted</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕IO</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
 <span class="nf">⎕JSON</span><span class="w"> </span><span class="nv">Fields</span><span class="o">,</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="o">↑</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span><span class="p">)</span>
 <span class="o">∧</span>
 </code></pre></div>
 <p><strong>Further Examples</strong></p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕JSON</span><span class="w"> </span><span class="o">⊂</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="p">((</span><span class="o">↑</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span><span class="p">)</span><span class="nv">Fields</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕JSON</span><span class="w"> </span><span class="o">⊂</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="p">((</span><span class="o">↑</span><span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span><span class="p">)</span><span class="nv">Fields</span><span class="p">)</span>
 <span class="sr">[</span><span class="kt">{</span><span class="s2">"Item"</span><span class="bp">:</span><span class="s2">"Knife"</span><span class="o">,</span><span class="s2">"Price"</span><span class="bp">:</span><span class="m">3</span><span class="o">,</span><span class="s2">"Qty"</span><span class="bp">:</span><span class="m">23</span><span class="kt">}</span><span class="o">,</span><span class="kt">{</span><span class="s2">"Item"</span><span class="bp">:</span><span class="s2">"Fork"</span><span class="o">,</span><span class="s2">"Price"</span><span class="bp">:</span><span class="m">4</span><span class="o">,</span><span class="s2">"Qty"</span><span class="bp">:</span><span class="m">45</span><span class="kt">}</span><span class="sr">]</span>
 
 <span class="w">      </span><span class="nf">⎕JSON</span><span class="w"> </span><span class="o">⊂</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="p">((</span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span><span class="p">)</span><span class="nv">Fields</span><span class="p">)</span>
 <span class="sr">[</span><span class="kt">{</span><span class="s2">"Item"</span><span class="bp">:</span><span class="s2">"Knife"</span><span class="o">,</span><span class="s2">"Price"</span><span class="bp">:</span><span class="m">3</span><span class="o">,</span><span class="s2">"Qty"</span><span class="bp">:</span><span class="m">23</span><span class="kt">}</span><span class="o">,</span><span class="kt">{</span><span class="s2">"Item"</span><span class="bp">:</span><span class="s2">"Fork"</span><span class="o">,</span><span class="s2">"Price"</span><span class="bp">:</span><span class="m">4</span><span class="o">,</span><span class="s2">"Qty"</span><span class="bp">:</span><span class="m">45</span><span class="kt">}</span><span class="sr">]</span>
 </code></pre></div>
 <p>Note that if you omit the wrapper, the operation generates a different result.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕JSON</span><span class="w"> </span><span class="p">((</span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span><span class="p">)</span><span class="nv">Fields</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕JSON</span><span class="w"> </span><span class="p">((</span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span><span class="p">)</span><span class="nv">Fields</span><span class="p">)</span>
 <span class="sr">[[[</span><span class="s2">"Knife"</span><span class="o">,</span><span class="s2">"Fork"</span><span class="sr">]</span><span class="o">,</span><span class="sr">[</span><span class="m">3</span><span class="o">,</span><span class="m">4</span><span class="sr">]</span><span class="o">,</span><span class="sr">[</span><span class="m">23</span><span class="o">,</span><span class="m">45</span><span class="sr">]]</span><span class="o">,</span><span class="sr">[</span><span class="s2">"Item"</span><span class="o">,</span><span class="s2">"Price"</span><span class="o">,</span><span class="s2">"Qty"</span><span class="sr">]]</span>
 </code></pre></div>
 <p><strong>Selection</strong></p>
 <p>For codes 2, 3 and 4 the extension also provides the facility to optionally select elements of the dataset, so the array may contain 2, 3 or 4 items:</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊂</span><span class="p">(</span><span class="nv">code</span><span class="w"> </span><span class="nv">dataset</span><span class="w"> </span><span class="kt">{</span><span class="nv">records</span><span class="kt">}</span><span class="w"> </span><span class="kt">{</span><span class="nv">fields</span><span class="kt">}</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊂</span><span class="p">(</span><span class="nv">code</span><span class="w"> </span><span class="nv">dataset</span><span class="w"> </span><span class="kt">{</span><span class="nv">records</span><span class="kt">}</span><span class="w"> </span><span class="kt">{</span><span class="nv">fields</span><span class="kt">}</span><span class="p">)</span>
 </code></pre></div>
 <p>where records and fields are integer indices that select which fields and which records are to be exported. The following example selects the first record and the first and third fields (Items and Qty)</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕JSON</span><span class="o">⊂</span><span class="m">4</span><span class="w"> </span><span class="p">((</span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span><span class="p">)</span><span class="nv">Fields</span><span class="p">)</span><span class="m">1</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕JSON</span><span class="o">⊂</span><span class="m">4</span><span class="w"> </span><span class="p">((</span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span><span class="p">)</span><span class="nv">Fields</span><span class="p">)</span><span class="m">1</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
 <span class="sr">[</span><span class="kt">{</span><span class="s2">"Item"</span><span class="bp">:</span><span class="s2">"Knife"</span><span class="o">,</span><span class="s2">"Qty"</span><span class="bp">:</span><span class="m">23</span><span class="kt">}</span><span class="sr">]</span>
 </code></pre></div>
 <p><strong>Namespaces and Sub-Arrays</strong></p>
 <p>Wrappers in namespaces and sub-arrays are recognised for special treatment.</p>
 <p><strong>Example</strong></p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ns</span><span class="na">.</span><span class="nv">Items</span><span class="kd">←</span><span class="s1">'Fork'</span><span class="w"> </span><span class="s1">'Knife'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ns</span><span class="na">.</span><span class="nv">Items</span><span class="kd">←</span><span class="s1">'Fork'</span><span class="w"> </span><span class="s1">'Knife'</span>
 <span class="w">      </span><span class="nv">ns</span><span class="na">.</span><span class="nv">Price</span><span class="kd">←</span><span class="m">3</span><span class="w"> </span><span class="m">4</span>
 <span class="w">      </span><span class="nv">ns</span><span class="na">.</span><span class="nv">Qty</span><span class="kd">←</span><span class="m">23</span><span class="w"> </span><span class="m">45</span>
 <span class="w">      </span><span class="nv">ns</span><span class="na">.</span><span class="p">(</span><span class="nv">ds</span><span class="kd">←</span><span class="o">⊂</span><span class="m">4</span><span class="p">(</span><span class="o">⌽</span><span class="p">(</span><span class="s1">'Item'</span><span class="w"> </span><span class="s1">'Price'</span><span class="w"> </span><span class="s1">'Qty'</span><span class="p">)(</span><span class="nv">Items</span><span class="w"> </span><span class="nv">Price</span><span class="w"> </span><span class="nv">Qty</span><span class="p">)))</span>
@@ -79556,19 +79556,19 @@
 <h2 class="example">Example</h2>
 
 <p>In this example, the JSON describes an object containing two numeric items, one named <em>a</em> (which is a valid APL name) and the other named <em>2a</em> (which is not):
-</p><div class="highlight"><pre><span></span><code><span class="kt">{</span><span class="s2">"a"</span><span class="bp">:</span><span class="w"> </span><span class="m">1</span><span class="o">,</span><span class="w"> </span><span class="s2">"2a"</span><span class="bp">:</span><span class="w"> </span><span class="m">2</span><span class="kt">}</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="kt">{</span><span class="s2">"a"</span><span class="bp">:</span><span class="w"> </span><span class="m">1</span><span class="o">,</span><span class="w"> </span><span class="s2">"2a"</span><span class="bp">:</span><span class="w"> </span><span class="m">2</span><span class="kt">}</span>
 </code></pre></div>
 <p>When this JSON is imported as an APL namespace using <code>⎕JSON</code>, Dyalog converts the name <em>2a</em> to a valid APL name. The <em>name mangling</em> algorithm creates a name beginning with <code>⍙</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕JSON</span><span class="s1">'{"a": 1, "2a": 2}'</span><span class="p">)</span><span class="na">.</span><span class="nf">⎕NL</span><span class="w"> </span><span class="m">2</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nf">⎕JSON</span><span class="s1">'{"a": 1, "2a": 2}'</span><span class="p">)</span><span class="na">.</span><span class="nf">⎕NL</span><span class="w"> </span><span class="m">2</span>
 <span class="nv">a</span><span class="w">  </span>
 <span class="nv">⍙2a</span>
 </code></pre></div>
 <p>When Dyalog exports JSON it performs the reverse <em>name mangling</em>, so:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕JSON</span><span class="w"> </span><span class="nf">⎕JSON</span><span class="s1">'{"a": 1, "2a": 2}'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">1</span><span class="w"> </span><span class="nf">⎕JSON</span><span class="w"> </span><span class="nf">⎕JSON</span><span class="s1">'{"a": 1, "2a": 2}'</span>
 <span class="kt">{</span><span class="s2">"a"</span><span class="bp">:</span><span class="m">1</span><span class="o">,</span><span class="s2">"2a"</span><span class="bp">:</span><span class="m">2</span><span class="kt">}</span>
 </code></pre></div>
 <p>Should you need to create and decode these names directly,<code>7162⌶</code> provides the same name mangling and un-mangling operations. See <a href="../../the-i-beam-operator/json-translate-name/">JSON Translate Name</a>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">0</span><span class="p">(</span><span class="m">7162</span><span class="na">⌶</span><span class="p">)</span><span class="s1">'2a'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">0</span><span class="p">(</span><span class="m">7162</span><span class="na">⌶</span><span class="p">)</span><span class="s1">'2a'</span>
 <span class="nv">⍙2a</span>
 <span class="w">      </span><span class="m">1</span><span class="p">(</span><span class="m">7162</span><span class="na">⌶</span><span class="p">)</span><span class="s1">'⍙2a'</span>
 <span class="m">2</span><span class="nv">a</span>
@@ -79602,7 +79602,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

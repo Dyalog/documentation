@@ -78810,7 +78810,7 @@
 <p>If the list of names is excluded, all defined objects (including namespaces) are copied.</p>
 <p>If the workspace name identifies a valid, readable workspace, the system reports the workspace name, "<code>saved</code>" and the date and time when the workspace was last saved.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">COPY</span><span class="w"> </span><span class="nv">WS</span><span class="na">/</span><span class="nv">UTILITY</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">COPY</span><span class="w"> </span><span class="nv">WS</span><span class="na">/</span><span class="nv">UTILITY</span>
 <span class="nv">WS</span><span class="na">/</span><span class="nv">UTILITY</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="nv">Mon</span><span class="w"> </span><span class="nv">Nov</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">13</span><span class="bp">:</span><span class="m">11</span><span class="bp">:</span><span class="m">19</span><span class="w"> </span><span class="m">1992</span>
 <span class="w"> </span>
 <span class="w">      </span><span class="p">)</span><span class="nv">COPY</span><span class="w"> </span><span class="nv">TEMP</span><span class="w"> </span><span class="nf">⎕LX</span><span class="w"> </span><span class="nv">FOO</span><span class="w"> </span><span class="nv">X</span><span class="w"> </span><span class="nv">A</span><span class="na">.</span><span class="nv">B</span><span class="na">.</span><span class="nv">C</span>
@@ -78834,7 +78834,7 @@
 </ul>
 <p>the dependent object(s) <strong>will also be copied</strong> but will be <strong>unnamed</strong> and <strong>hidden</strong>. In such as case, the system will issue a warning message.</p>
 <p>For example, if a saved workspace named CFWS contains a Class named <code>#.CompFile</code> and an Instance (of <code>CompFile</code>) named <code>icf</code>,
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">COPY</span><span class="w"> </span><span class="nv">CFWS</span><span class="w"> </span><span class="nv">icf</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">COPY</span><span class="w"> </span><span class="nv">CFWS</span><span class="w"> </span><span class="nv">icf</span>
 <span class="na">.\</span><span class="nv">CFWS</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="nv">Fri</span><span class="w"> </span><span class="nv">Mar</span><span class="w"> </span><span class="m">03</span><span class="w"> </span><span class="m">10</span><span class="bp">:</span><span class="m">21</span><span class="bp">:</span><span class="m">36</span><span class="w"> </span><span class="m">2006</span>
 <span class="nv">copied</span><span class="w"> </span><span class="nv">object</span><span class="w"> </span><span class="nv">created</span><span class="w"> </span><span class="nv">an</span><span class="w"> </span><span class="nv">unnamed</span><span class="w"> </span><span class="nv">copy</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">class</span><span class="w"> </span><span class="c1">#.CompFile</span>
 </code></pre></div>
@@ -78846,7 +78846,7 @@
 <h2 class="example">Example</h2>
 
 <p>The current workspace has a class named <code>pete</code> whose Base class is called <code>base</code>.
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">pete</span><span class="bp">:</span><span class="w"> </span><span class="nv">base</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">pete</span><span class="bp">:</span><span class="w"> </span><span class="nv">base</span>
 <span class="bp">:</span><span class="nv">EndClass</span>
 
 <span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">base</span>
@@ -78857,7 +78857,7 @@
 <span class="bp">:</span><span class="nv">EndClass</span>
 </code></pre></div>
 <p>A second workspace named <code>copy.dws</code> contains a different version of the <code>base</code> class:
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">base</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">base</span>
 <span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">foo</span><span class="w"> </span><span class="nv">n</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
 <span class="w">      </span><span class="nv">r</span><span class="kd">←</span><span class="s1">'Copied'</span><span class="nv">n</span>
@@ -78878,7 +78878,7 @@
 <h2 id="copying-objects-from-session-files">Copying Objects from Session Files</h2>
 <p>You may also copy objects from session (.dse) files, although with certain restrictions.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code>        )copy C:\Users\Pete\Desktop\pete.dse ⎕SE.UCMD
+<div class="language-text highlight"><pre><span></span><code>        )copy C:\Users\Pete\Desktop\pete.dse ⎕SE.UCMD
 C:\Users\Pete\Desktop\pete.dse saved Wed Oct 14 ...
 </code></pre></div>
 <ul>
@@ -78889,16 +78889,16 @@ C:\Users\Pete\Desktop\pete.dse saved Wed Oct 14 ...
 <h2 class="example">Examples</h2>
 
 <p>In the following example, the <em>not copied</em> cases occur because the current namespace is not an appropriate parent for the object in question.
-</p><div class="highlight"><pre><span></span><code>      )CS #
+</p><div class="language-text highlight"><pre><span></span><code>      )CS #
 #
       )copy C:\Users\...\pete.dse ⎕SE.Dyalog.Callbacks
 C:\Users\...\pete.dse saved Wed Oct 14 15:31:14 2015
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>       )copy C:\Users\...\pete.dse ⎕SE.cbbot
+<div class="language-text highlight"><pre><span></span><code>       )copy C:\Users\...\pete.dse ⎕SE.cbbot
 C:\Users\...\pete.dse saved Wed Oct 14 15:31:14 2015
 not copied cbbot
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>       )CS ⎕SE
+<div class="language-text highlight"><pre><span></span><code>       )CS ⎕SE
 ⎕SE
       )copy C:\Users\...\pete.dse ⎕SE.cbbot
 C:\Users\...\pete.dse saved Wed Oct 14 15:31:14 2015
@@ -78936,7 +78936,7 @@ not copied bandsb1
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

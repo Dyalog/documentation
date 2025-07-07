@@ -78810,7 +78810,7 @@
 <p>Notice that it is necessary to prevent the right operand <code>k</code> binding to the right argument. This can be done using parentheses, for example, <code>(f⍤1)Y</code>. The same can be achieved using  <code>⊢</code>, for example, <code>f⍤1⊢Y</code> because <code>⍤</code> binds tighter to its right operand than <code>⊢</code> does to its left argument, and <code>⊢</code> therefore resolves to Identity.</p>
 <h2 id="monadic-examples">Monadic Examples</h2>
 <p>Using enclose (<code>⊂</code>) as the left operand elucidates the workings of the rank operator.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Y</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Y</span>
 <span class="m">36</span><span class="w"> </span><span class="m">99</span><span class="w"> </span><span class="m">20</span><span class="w">  </span><span class="m">5</span>
 <span class="m">63</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">10</span>
 <span class="m">64</span><span class="w"> </span><span class="m">90</span><span class="w"> </span><span class="m">68</span><span class="w"> </span><span class="m">98</span>
@@ -78821,14 +78821,14 @@
 <span class="w">      </span><span class="o">⍴</span><span class="nv">Y</span>
 <span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊂</span><span class="na">⍤</span><span class="m">2</span><span class="w"> </span><span class="o">⊢</span><span class="nv">Y</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊂</span><span class="na">⍤</span><span class="m">2</span><span class="w"> </span><span class="o">⊢</span><span class="nv">Y</span>
 <span class="err">┌───────────┬───────────┐</span>
 <span class="err">│</span><span class="m">36</span><span class="w"> </span><span class="m">99</span><span class="w"> </span><span class="m">20</span><span class="w">  </span><span class="m">5</span><span class="err">│</span><span class="m">66</span><span class="w"> </span><span class="m">72</span><span class="w"> </span><span class="m">27</span><span class="w"> </span><span class="m">74</span><span class="err">│</span>
 <span class="err">│</span><span class="m">63</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">10</span><span class="err">│</span><span class="m">44</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">46</span><span class="w"> </span><span class="m">62</span><span class="err">│</span>
 <span class="err">│</span><span class="m">64</span><span class="w"> </span><span class="m">90</span><span class="w"> </span><span class="m">68</span><span class="w"> </span><span class="m">98</span><span class="err">│</span><span class="m">48</span><span class="w">  </span><span class="m">9</span><span class="w"> </span><span class="m">81</span><span class="w"> </span><span class="m">22</span><span class="err">│</span>
 <span class="err">└───────────┴───────────┘</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊂</span><span class="na">⍤</span><span class="m">1</span><span class="w"> </span><span class="o">⊢</span><span class="nv">Y</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⊂</span><span class="na">⍤</span><span class="m">1</span><span class="w"> </span><span class="o">⊢</span><span class="nv">Y</span>
 <span class="err">┌───────────┬───────────┬───────────┐</span>
 <span class="err">│</span><span class="m">36</span><span class="w"> </span><span class="m">99</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="err">│</span><span class="m">63</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">10</span><span class="err">│</span><span class="m">64</span><span class="w"> </span><span class="m">90</span><span class="w"> </span><span class="m">68</span><span class="w"> </span><span class="m">98</span><span class="err">│</span>
 <span class="err">├───────────┼───────────┼───────────┤</span>
@@ -78836,11 +78836,11 @@
 <span class="err">└───────────┴───────────┴───────────┘</span>
 </code></pre></div>
 <p>The function <code>{(⊂⍋⍵)⌷⍵}</code> sorts a vector.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="kt">{</span><span class="p">(</span><span class="o">⊂⍋</span><span class="bp">⍵</span><span class="p">)</span><span class="o">⌷</span><span class="bp">⍵</span><span class="kt">}</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">5</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="kt">{</span><span class="p">(</span><span class="o">⊂⍋</span><span class="bp">⍵</span><span class="p">)</span><span class="o">⌷</span><span class="bp">⍵</span><span class="kt">}</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">5</span>
 <span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">9</span>
 </code></pre></div>
 <p>The rank operator can be used to apply the function to sub-arrays; in this case to sort the 1-cells (rows) of a 3-dimensional array.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Y</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Y</span>
 <span class="m">36</span><span class="w"> </span><span class="m">99</span><span class="w"> </span><span class="m">20</span><span class="w">  </span><span class="m">5</span>
 <span class="m">63</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">10</span>
 <span class="m">64</span><span class="w"> </span><span class="m">90</span><span class="w"> </span><span class="m">68</span><span class="w"> </span><span class="m">98</span>
@@ -78849,7 +78849,7 @@
 <span class="m">44</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">46</span><span class="w"> </span><span class="m">62</span>
 <span class="m">48</span><span class="w">  </span><span class="m">9</span><span class="w"> </span><span class="m">81</span><span class="w"> </span><span class="m">22</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="kt">{</span><span class="p">(</span><span class="o">⊂⍋</span><span class="bp">⍵</span><span class="p">)</span><span class="o">⌷</span><span class="bp">⍵</span><span class="kt">}</span><span class="na">⍤</span><span class="m">1</span><span class="p">)</span><span class="nv">Y</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="kt">{</span><span class="p">(</span><span class="o">⊂⍋</span><span class="bp">⍵</span><span class="p">)</span><span class="o">⌷</span><span class="bp">⍵</span><span class="kt">}</span><span class="na">⍤</span><span class="m">1</span><span class="p">)</span><span class="nv">Y</span>
 <span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">36</span><span class="w"> </span><span class="m">99</span>
 <span class="m">10</span><span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">63</span>
 <span class="m">64</span><span class="w"> </span><span class="m">68</span><span class="w"> </span><span class="m">90</span><span class="w"> </span><span class="m">98</span>
@@ -78859,13 +78859,13 @@
 <span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="m">22</span><span class="w"> </span><span class="m">48</span><span class="w"> </span><span class="m">81</span>
 </code></pre></div>
 <h2 id="dyadic-examples">Dyadic Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="p">(</span><span class="o">+</span><span class="na">⍤</span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">12</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="p">(</span><span class="o">+</span><span class="na">⍤</span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">12</span>
 <span class="m">10</span><span class="w"> </span><span class="m">11</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">13</span>
 <span class="m">24</span><span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">27</span>
 <span class="m">38</span><span class="w"> </span><span class="m">39</span><span class="w"> </span><span class="m">40</span><span class="w"> </span><span class="m">41</span>
 </code></pre></div>
 <p>Using the function <code>{⍺ ⍵}</code>  as the left operand demonstrates how the dyadic case of the rank operator works.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="p">(</span><span class="kt">{</span><span class="bp">⍺</span><span class="w"> </span><span class="bp">⍵</span><span class="kt">}</span><span class="na">⍤</span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">12</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="p">(</span><span class="kt">{</span><span class="bp">⍺</span><span class="w"> </span><span class="bp">⍵</span><span class="kt">}</span><span class="na">⍤</span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">12</span>
 <span class="err">┌──┬─────────┐</span>
 <span class="err">│</span><span class="m">10</span><span class="err">│</span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w">  </span><span class="err">│</span>
 <span class="err">├──┼─────────┤</span>
@@ -78875,7 +78875,7 @@
 <span class="err">└──┴─────────┘</span>
 </code></pre></div>
 <p>Note that a right operand of <code>¯1</code> applies the function between the major cells (in this case <em>elements</em>) of the left argument, and the major cells (in this case <em>rows</em>) of the right argument.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="p">(</span><span class="kt">{</span><span class="bp">⍺</span><span class="w"> </span><span class="bp">⍵</span><span class="kt">}</span><span class="na">⍤</span><span class="m">¯1</span><span class="p">)</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">12</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="p">(</span><span class="kt">{</span><span class="bp">⍺</span><span class="w"> </span><span class="bp">⍵</span><span class="kt">}</span><span class="na">⍤</span><span class="m">¯1</span><span class="p">)</span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">12</span>
 <span class="err">┌──┬─────────┐</span>
 <span class="err">│</span><span class="m">10</span><span class="err">│</span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w">  </span><span class="err">│</span>
 <span class="err">├──┼─────────┤</span>
@@ -78913,7 +78913,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

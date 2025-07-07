@@ -78769,7 +78769,7 @@
 
 <p>Like the Toolbar, the StatusBar object is also a container that manages its children. However, the StatusBar may contain only one type of object, namely StatusFields. By default, the StatusBar is a flat grey object, positioned along the bottom edge of a Form, upon which the StatusFields are drawn as sunken rectangles. StatusFields display textual information and are typically used for help messages and for monitoring the status of an application. They can also be used to automatically report the status of the Caps Lock, Num Lock, Scroll Lock, and Insert keys</p>
 <p>The following example illustrates a default StatusBar containing three StatusFields. Notice how the StatusFields are positioned automatically.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'TEST'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Simple StatusBar'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'TEST'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Simple StatusBar'</span>
 <span class="s1">'TEST'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="s1">'BCol'</span><span class="w"> </span><span class="p">(</span><span class="m">255</span><span class="w"> </span><span class="m">255</span><span class="w"> </span><span class="m">255</span><span class="p">)</span>
 <span class="s1">'TEST.SB'</span><span class="nf">⎕WC</span><span class="s1">'StatusBar'</span>
 <span class="s1">'TEST.SB.S1'</span><span class="nf">⎕WC</span><span class="s1">'StatusField'</span><span class="w"> </span><span class="s1">'Field1:'</span><span class="w"> </span><span class="s1">'text1'</span>
@@ -78779,7 +78779,7 @@
 <p><img alt="" src="../../img/statusbar-simple.png"></p>
 <p>A Default StatusBar</p>
 <p>The following example illustrates a scrolling StatusBar. The fourth StatusField extends beyond the right edge of the StatusBar and, because HScroll is <code>¯2</code>, a mini scrollbar appears.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'TEST'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Scrolling StatusBar'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'TEST'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Scrolling StatusBar'</span>
 <span class="w">                </span><span class="p">(</span><span class="s1">'BCol'</span><span class="w"> </span><span class="p">(</span><span class="m">255</span><span class="w"> </span><span class="m">255</span><span class="w"> </span><span class="m">255</span><span class="p">))</span>
 
 <span class="s1">'TEST.SB'</span><span class="nf">⎕WC</span><span class="s1">'StatusBar'</span><span class="p">(</span><span class="s1">'HScroll'</span><span class="w"> </span><span class="m">¯2</span><span class="p">)</span>
@@ -78792,7 +78792,7 @@
 <p><img alt="" src="../../img/statusbar-scrolling.png"></p>
 <p>A Scrolling StatusBar</p>
 <p>As an alternative to single-row scrolling StatusBar, you can have a multi-line one. Indeed, this is the default if you omit to specify HScroll. However, you do have to explicitly set the height of the StatusBar to accommodate the second row.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'TEST'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Multi Line StatusBar'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'TEST'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Multi Line StatusBar'</span>
 <span class="w">                </span><span class="p">(</span><span class="s1">'BCol'</span><span class="w"> </span><span class="p">(</span><span class="m">255</span><span class="w"> </span><span class="m">255</span><span class="w"> </span><span class="m">255</span><span class="p">))</span>
 
 <span class="s1">'TEST.SB.S1'</span><span class="nf">⎕WC</span><span class="s1">'StatusField'</span><span class="w"> </span><span class="s1">'Field1:'</span><span class="w"> </span><span class="s1">'text1'</span>
@@ -78836,7 +78836,7 @@
 </tbody>
 </table>
 <p>The following example illustrates different uses of the StatusField object. The first StatusField <code>F.SB.S1</code> is used for context-sensitive help by making it the HintObj for the Form <code>F</code>. The second StatusField <code>F.SB.S2</code> is simply used to display application status; in this case "Ready ...". The third and fourth StatusField objects monitor the status of the Insert and Caps Lock keys respectively. Note that whilst the Caps Lock, Num Lock and Scroll Lock keys have a recognised <em>state</em>, the Insert key does not. Initially, APL sets the key to "Ins" and then toggles to and from "Rep" whenever the key is pressed. To discover which mode the keyboard is in, you should use <code>⎕WG</code> to read the value of the Text property of the StatusField.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Using StatusFields'</span><span class="p">(</span><span class="s1">'Coord'</span><span class="w"> </span><span class="s1">'Pixel'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'Using StatusFields'</span><span class="p">(</span><span class="s1">'Coord'</span><span class="w"> </span><span class="s1">'Pixel'</span><span class="p">)</span>
 
 <span class="s1">'F.SB'</span><span class="nf">⎕WC</span><span class="s1">'StatusBar'</span>
 
@@ -78879,7 +78879,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

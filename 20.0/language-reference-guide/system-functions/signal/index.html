@@ -78916,7 +78916,7 @@
 <p>The effect of the system function is to interrupt execution.  The state indicator is cut back to exit from the function or operator containing the line that invoked <code>⎕SIGNAL</code>, or is cut back to exit the Execute (<code>⍎</code>) expression that invoked <code>⎕SIGNAL</code>. If executed within a nested dfn, the state indicator is cut back to exit from the capsule containing the line that invoked <code>⎕SIGNAL</code>. An error is then generated.</p>
 <p>An error interrupt may be trapped if the system variable <code>⎕TRAP</code> is set to intercept the event.  Otherwise, the standard system action is taken (which may involve cutting back the state indicator further if there are locked functions or operators in the state indicator).  The standard event message is replaced by the text given in <code>X</code>, if present.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕VR</span><span class="s1">'DIVIDE'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕VR</span><span class="s1">'DIVIDE'</span>
 <span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="w"> </span><span class="nv">DIVIDE</span><span class="w"> </span><span class="nv">B</span><span class="sr">;</span><span class="nf">⎕TRAP</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nf">⎕TRAP</span><span class="kd">←</span><span class="m">11</span><span class="w"> </span><span class="s1">'E'</span><span class="w"> </span><span class="s1">'→ERR'</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="nv">A</span><span class="o">÷</span><span class="nv">B</span><span class="w"> </span><span class="p">⋄</span><span class="w"> </span><span class="kd">→</span><span class="m">0</span>
@@ -78929,7 +78929,7 @@
 <span class="w">     </span><span class="err">^</span>
 </code></pre></div>
 <p>If you are using the Microsoft .NET Framework, you may use <code>⎕SIGNAL</code> to throw an exception by specifying a value of 90 in <code>Y</code>. In this case, if you specify the optional left argument <code>X</code>, it must be a reference to a .NET object that is or derives from the Microsoft .NET class System.Exception. The following example illustrates a <em>constructor</em> function <code>CTOR</code> that expects to be called with a value for <code>⎕IO</code> (0 or 1)
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">CTOR</span><span class="w"> </span><span class="nv">IO</span><span class="sr">;</span><span class="nv">EX</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">CTOR</span><span class="w"> </span><span class="nv">IO</span><span class="sr">;</span><span class="nv">EX</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">If</span><span class="w"> </span><span class="nv">IO</span><span class="o">∊</span><span class="m">0</span><span class="w"> </span><span class="m">1</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">        </span><span class="nf">⎕IO</span><span class="kd">←</span><span class="nv">IO</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="bp">:</span><span class="nv">Else</span>
@@ -78941,7 +78941,7 @@
 <h2 id="signal-0-reset-error-related-system-constants"><code>⎕SIGNAL 0</code>: Reset error-related system constants</h2>
 <p>If <code>Y</code> is a simple integer with the value 0, <code>⎕SIGNAL</code> does not interrupt execution, but merely returns the value 0. The side effect of calling <code>⎕SIGNAL 0</code> is to reset the values of <code>⎕DM</code>, <code>⎕DMX</code>, <code>⎕EN</code> and <code>⎕EXCEPTION</code> to their default values. <code>⎕SIGNAL 0</code> is the only form of <code>⎕SIGNAL</code> which can be used to reset the aforementioned system constants; including a left argument or using a name/value pair right argument of <code>⎕SIGNAL</code> will result in a <code>DOMAIN ERROR</code>.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">÷</span><span class="m">0</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">÷</span><span class="m">0</span>
 <span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span><span class="bp">:</span><span class="w"> </span><span class="nv">Divide</span><span class="w"> </span><span class="nv">by</span><span class="w"> </span><span class="nv">zero</span>
 <span class="w">      </span><span class="o">÷</span><span class="m">0</span>
 <span class="w">     </span><span class="o">∧</span>
@@ -78960,7 +78960,7 @@
 </code></pre></div>
 <h2 id="further-examples">Further examples</h2>
 <h2 id="example-1">Example 1</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Hello'</span><span class="nf">⎕SIGNAL</span><span class="w"> </span><span class="m">200</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'Hello'</span><span class="nf">⎕SIGNAL</span><span class="w"> </span><span class="m">200</span>
 <span class="nv">Hello</span>
 <span class="w">      </span><span class="s1">'Hello'</span><span class="nf">⎕SIGNAL</span><span class="w"> </span><span class="m">200</span>
 <span class="w">     </span><span class="o">∧</span>
@@ -78971,7 +78971,7 @@
 <span class="w">      </span><span class="nf">⎕DM</span>
 <span class="w"> </span><span class="nv">Hello</span><span class="w">        </span><span class="s1">'Hello'</span><span class="nf">⎕SIGNAL</span><span class="w"> </span><span class="m">200</span><span class="w">       </span><span class="o">∧</span><span class="w"> </span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SIGNAL</span><span class="o">⊂⊂</span><span class="p">(</span><span class="s1">'EN'</span><span class="w"> </span><span class="m">200</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SIGNAL</span><span class="o">⊂⊂</span><span class="p">(</span><span class="s1">'EN'</span><span class="w"> </span><span class="m">200</span><span class="p">)</span>
 <span class="nv">ERROR</span><span class="w"> </span><span class="m">200</span>
 <span class="w">      </span><span class="nf">⎕SIGNAL</span><span class="o">⊂⊂</span><span class="p">(</span><span class="s1">'EN'</span><span class="w"> </span><span class="m">200</span><span class="p">)</span>
 <span class="w">     </span><span class="o">∧</span>
@@ -78984,22 +78984,22 @@
 <span class="w"> </span><span class="nv">ERROR</span><span class="w"> </span><span class="m">200</span><span class="w">        </span><span class="nf">⎕SIGNAL</span><span class="o">⊂⊂</span><span class="p">(</span><span class="s1">'EN'</span><span class="w"> </span><span class="m">200</span><span class="p">)</span><span class="w">       </span><span class="o">∧</span><span class="w"> </span>
 </code></pre></div>
 <h2 id="example-2">Example 2</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SIGNAL</span><span class="o">⊂</span><span class="p">(</span><span class="s1">'EN'</span><span class="w"> </span><span class="m">200</span><span class="p">)(</span><span class="s1">'Vendor'</span><span class="w"> </span><span class="s1">'Andy'</span><span class="p">)(</span><span class="s1">'Message'</span><span class="w"> </span><span class="s1">'My error'</span><span class="p">)</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SIGNAL</span><span class="o">⊂</span><span class="p">(</span><span class="s1">'EN'</span><span class="w"> </span><span class="m">200</span><span class="p">)(</span><span class="s1">'Vendor'</span><span class="w"> </span><span class="s1">'Andy'</span><span class="p">)(</span><span class="s1">'Message'</span><span class="w"> </span><span class="s1">'My error'</span><span class="p">)</span>
 <span class="nv">ERROR</span><span class="w"> </span><span class="m">200</span><span class="bp">:</span><span class="w"> </span><span class="nv">My</span><span class="w"> </span><span class="nv">error</span>
 <span class="w">      </span><span class="nf">⎕SIGNAL</span><span class="o">⊂</span><span class="p">(</span><span class="s1">'EN'</span><span class="w"> </span><span class="m">200</span><span class="p">)(</span><span class="s1">'Vendor'</span><span class="w"> </span><span class="s1">'Andy'</span><span class="p">)(</span><span class="s1">'Message'</span><span class="w"> </span><span class="s1">'My error'</span><span class="p">)</span>
 <span class="w">     </span><span class="o">∧</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕DMX</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕DMX</span>
 <span class="w"> </span><span class="nv">EM</span><span class="w">       </span><span class="nv">ERROR</span><span class="w"> </span><span class="m">200</span><span class="w"> </span>
 <span class="w"> </span><span class="nv">Message</span><span class="w">  </span><span class="nv">My</span><span class="w"> </span><span class="nv">error</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍪</span><span class="nf">⎕DMX</span><span class="na">.</span><span class="p">(</span><span class="nv">EN</span><span class="w"> </span><span class="nv">EM</span><span class="w"> </span><span class="nv">Vendor</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍪</span><span class="nf">⎕DMX</span><span class="na">.</span><span class="p">(</span><span class="nv">EN</span><span class="w"> </span><span class="nv">EM</span><span class="w"> </span><span class="nv">Vendor</span><span class="p">)</span>
 <span class="w">       </span><span class="m">200</span><span class="w"> </span>
 <span class="w"> </span><span class="nv">ERROR</span><span class="w"> </span><span class="m">200</span><span class="w"> </span>
 <span class="w">      </span><span class="nv">Andy</span><span class="w"> </span>
 </code></pre></div>
 <p>Be aware of the following case, in which the argument has not been sufficiently nested:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SIGNAL</span><span class="o">⊂</span><span class="p">(</span><span class="s1">'EN'</span><span class="w"> </span><span class="m">200</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SIGNAL</span><span class="o">⊂</span><span class="p">(</span><span class="s1">'EN'</span><span class="w"> </span><span class="m">200</span><span class="p">)</span>
 <span class="nv">DOMAIN</span><span class="w"> </span><span class="nv">ERROR</span><span class="bp">:</span><span class="w"> </span><span class="nv">Unexpected</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">signalled</span><span class="w"> </span><span class="nf">⎕DMX</span><span class="w"> </span><span class="nv">specification</span>
 <span class="w">      </span><span class="nf">⎕SIGNAL</span><span class="o">⊂</span><span class="p">(</span><span class="s1">'EN'</span><span class="w"> </span><span class="m">200</span><span class="p">)</span>
 <span class="w">     </span><span class="o">∧</span>
@@ -79033,7 +79033,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -31,12 +31,6 @@ body {
     line-height: 1.2em !important;
 }
 
-.language-nonAPL, .language-nonapl,
-/* Selects pre code with class="language-X" for X≠APL */
-:is(div[class^=language], :not(.language-apl, .language-APL)) pre code {
-    font-family: 'Courier New', Courier, monospace;
-}
-
 code, .command, .Dyalog {
     font-family: APL;
 }

@@ -78796,7 +78796,7 @@
 <p>Functions have long SCOPE on the right; that is, the right argument of the function is the result of the entire expression to its right which must be an array.  A dyadic function has short scope on the left; that is, the left argument of the function is the array immediately to its left.  Left scope may be extended by enclosing an expression in parentheses whence the result must be an array.</p>
 <p>For some functions, the explicit result is suppressed if it would otherwise be displayed on completion of evaluation of the expression. This applies on assignment to a variable name.  It applies for certain system functions, and may also apply for defined functions.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">10</span><span class="o">×</span><span class="m">5</span><span class="o">-</span><span class="m">2</span><span class="o">×</span><span class="m">4</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">10</span><span class="o">×</span><span class="m">5</span><span class="o">-</span><span class="m">2</span><span class="o">×</span><span class="m">4</span>
 <span class="m">¯30</span>
 <span class="w">      </span><span class="m">2</span><span class="o">×</span><span class="m">4</span>
 <span class="m">8</span>
@@ -78811,7 +78811,7 @@
 <p>Functions may be defined with the system function <code>⎕FX</code>, or with the function editor. A function consists of a HEADER which identifies the syntax of the function, and a BODY in which one or more APL statements are specified.</p>
 <p>The header syntax identifies the function name, its (optional) result and its (optional) arguments. If a function is ambivalent, it is defined with two arguments but with the left argument within braces (<code>{}</code>).  If an ambivalent function is called monadically, the left argument has no value inside the function.  If the explicit result is to be suppressed for display purposes, the result is shown within braces.  A function need not produce an explicit result.  Refer to <em>Chapter 2</em> for further details.</p>
 <h3 class="example">Example</h3>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="kt">{</span><span class="nv">A</span><span class="kt">}</span><span class="w"> </span><span class="nv">FOO</span><span class="w"> </span><span class="nv">B</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="kt">{</span><span class="nv">A</span><span class="kt">}</span><span class="w"> </span><span class="nv">FOO</span><span class="w"> </span><span class="nv">B</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">R</span><span class="kd">←</span><span class="o">⊃</span><span class="s1">'MONADIC'</span><span class="w"> </span><span class="s1">'DYADIC'</span><span class="sr">[</span><span class="nf">⎕IO</span><span class="o">+</span><span class="m">0</span><span class="o">≠</span><span class="nf">⎕NC</span><span class="s1">'A'</span><span class="sr">]</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">  </span><span class="bp">∇</span>
 
@@ -78825,7 +78825,7 @@
 <h2 id="function-assignment-display">Function Assignment &amp; Display</h2>
 <p>The result of a function-expression may be given a name.  This is known as FUNCTION ASSIGNMENT (see also <a href="../../defined-functions-and-operators/dfns-and-dops/dynamic-functions-and-operators/">Dfns &amp; Dops</a>).  If the result of a function-expression is not given a name, its value is displayed.  This is termed FUNCTION DISPLAY.</p>
 <h3 class="example">Examples</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">PLUS</span><span class="kd">←</span><span class="o">+</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">PLUS</span><span class="kd">←</span><span class="o">+</span>
 <span class="w">      </span><span class="nv">PLUS</span>
 <span class="o">+</span>
 <span class="w">      </span><span class="nv">SUM</span><span class="kd">←</span><span class="o">+</span><span class="na">/</span>
@@ -78834,7 +78834,7 @@
 </code></pre></div>
 <p>Function expressions may include defined functions and operators. These are displayed as a <code>∇</code> followed by their name.</p>
 <h3 class="example">Example</h3>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">MEAN</span><span class="w"> </span><span class="nv">X</span><span class="w">    </span><span class="c1">⍝ Arithmetic mean</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">∇</span><span class="w"> </span><span class="nv">R</span><span class="kd">←</span><span class="nv">MEAN</span><span class="w"> </span><span class="nv">X</span><span class="w">    </span><span class="c1">⍝ Arithmetic mean</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">     </span><span class="nv">R</span><span class="kd">←</span><span class="p">(</span><span class="o">+</span><span class="na">/</span><span class="nv">X</span><span class="p">)</span><span class="o">÷⍴</span><span class="nv">X</span>
 <span class="w">      </span><span class="bp">∇</span>
 
@@ -78876,7 +78876,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

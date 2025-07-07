@@ -78706,7 +78706,7 @@
 
 <p>The following instructions will allow you to explore the DDE interface with APL acting as the server to another application; in this case Microsoft Excel.</p>
 <p>Start APL (clear ws) and type the expressions :</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">WSID</span><span class="w"> </span><span class="nv">MYWS</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">WSID</span><span class="w"> </span><span class="nv">MYWS</span>
 <span class="w">      </span><span class="nv">X</span><span class="kd">←</span><span class="m">12</span>
 <span class="w">      </span><span class="s1">'DDE:'</span><span class="w"> </span><span class="nf">⎕SVO</span><span class="w"> </span><span class="s1">'X SALES'</span>
 </code></pre></div>
@@ -78714,26 +78714,26 @@
 <p>Start Excel (empty spreadsheet).</p>
 <p>Size your windows so that both the Excel window and the APL Session window can be viewed comfortably at the same time. Do NOT iconify either one.</p>
 <p>Select the Excel window and type the following formula into the first cell :</p>
-<div class="highlight"><pre><span></span><code><span class="o">=</span><span class="nv">dyalog</span><span class="o">|</span><span class="nv">myws</span><span class="o">!</span><span class="nv">sales</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="o">=</span><span class="nv">dyalog</span><span class="o">|</span><span class="nv">myws</span><span class="o">!</span><span class="nv">sales</span>
 </code></pre></div>
 <p>the value of <code>X</code> (12) will now appear in the cell.</p>
 <p>Switch to the APL Session and type :</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SVO</span><span class="s1">'X'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕SVO</span><span class="s1">'X'</span>
 <span class="m">2</span>
 </code></pre></div>
 <p>Notice that now that Excel has made the connection, the degree of coupling is 2.</p>
 <p>Now type :</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">X</span><span class="kd">←</span><span class="m">34</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">X</span><span class="kd">←</span><span class="m">34</span>
 </code></pre></div>
 <p>You will immediately see the new value appear in your spreadsheet.</p>
 <p>Create the following function in your workspace :</p>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FOO</span><span class="w"> </span><span class="nv">MSG</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">FOO</span><span class="w"> </span><span class="nv">MSG</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">MSG</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="nv">X</span><span class="kd">←</span><span class="nf">⎕AI</span><span class="sr">[</span><span class="m">2</span><span class="sr">]</span>
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>Then type the expressions :</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'.'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'EVENT'</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="s1">'FOO'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'.'</span><span class="w"> </span><span class="nf">⎕WS</span><span class="w"> </span><span class="s1">'EVENT'</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="s1">'FOO'</span>
 
 <span class="w">      </span><span class="nf">⎕DQ</span><span class="w"> </span><span class="s1">'.'</span>
 </code></pre></div>
@@ -78768,7 +78768,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

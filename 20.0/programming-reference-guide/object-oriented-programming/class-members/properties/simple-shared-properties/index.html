@@ -78711,7 +78711,7 @@
 <p>The <a class="noprint" href="../component-file-class-example/">ComponentFile Class</a>  specifies a Simple Shared Property named <code>Files</code> which returns the names of all the Component Files in the current directory.</p>
 <p>The previous examples have illustrated the use of Instance Properties. It is also possible to define <em>Shared</em> properties.</p>
 <p>A Shared property may be used to handle information that is relevant to the Class as a whole, and which is not specific to any a particular Instance.
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Property</span><span class="w"> </span><span class="nv">Files</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="bp">:</span><span class="nv">Property</span><span class="w"> </span><span class="nv">Files</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span><span class="w"> </span><span class="nv">Shared</span>
 <span class="w">        </span><span class="bp">∇</span><span class="w"> </span><span class="nv">r</span><span class="kd">←</span><span class="nv">get</span>
 <span class="w">          </span><span class="nv">r</span><span class="kd">←</span><span class="nf">⎕FLIB</span><span class="s1">''</span>
@@ -78719,7 +78719,7 @@
 <span class="w">    </span><span class="bp">:</span><span class="nv">EndProperty</span>
 </code></pre></div>
 <p>Note that <code>⎕FLIB</code> (invoked by the <code>Files</code> <code>get</code> function) does not report the names of <em>tied</em> files.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">ComponentFile</span><span class="w"> </span><span class="s1">'test1'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">F1</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">ComponentFile</span><span class="w"> </span><span class="s1">'test1'</span>
 <span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'F1'</span><span class="w">      </span>
 <span class="w">      </span><span class="nv">F2</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">ComponentFile</span><span class="w"> </span><span class="s1">'test2'</span>
 <span class="w">      </span><span class="nv">F2</span><span class="na">.</span><span class="nv">Files</span><span class="w"> </span><span class="c1">⍝ NB ⎕FLIB does not report tied files</span>
@@ -78727,7 +78727,7 @@
 <span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'F2'</span>
 </code></pre></div>
 <p>Note that a Shared Property may be accessed from the Class itself. It is not necessary to create an Instance first.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ComponentFile</span><span class="na">.</span><span class="nv">Files</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ComponentFile</span><span class="na">.</span><span class="nv">Files</span>
 <span class="nv">test1</span>
 <span class="nv">test2</span>
 </code></pre></div>
@@ -78760,7 +78760,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

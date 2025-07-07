@@ -78805,30 +78805,30 @@
 
 <h2 id="directory-and-file-manipulation">Directory and File Manipulation</h2>
 <p>The .NET Namespace <code>System.IO</code> (also in the Assembly <code>mscorlib.dll</code>) provides some useful facilities for manipulating files. For example, you can create a <code>DirectoryInfo</code> object associated with a particular directory on your computer, call its <code>GetFiles</code> method to obtain a list of files, and then get their <code>Name</code> and <code>CreationTime</code> properties.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="o">,⊂</span><span class="s1">'System.IO'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="o">,⊂</span><span class="s1">'System.IO'</span>
 <span class="w">      </span><span class="nv">d</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DirectoryInfo</span><span class="w"> </span><span class="p">(</span><span class="o">⊂</span><span class="s1">'C:\Dyalog'</span><span class="p">)</span>
 </code></pre></div>
 <p><code>d</code> is an instance of the <code>Directory</code> Class, corresponding to the directory <code>c:\Dyalog</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">d</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">d</span>
 <span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Dyalog</span>
 </code></pre></div>
 <p>The <code>GetFiles</code> method returns a list of files; actually, <code>FileInfo</code> objects, that represent each of the files in the directory: Its optional argument specifies a filter; for example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">d</span><span class="na">.</span><span class="nv">GetFiles</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'*.exe'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">d</span><span class="na">.</span><span class="nv">GetFiles</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'*.exe'</span>
 <span class="w"> </span><span class="nv">evalstub</span><span class="na">.</span><span class="nv">exe</span><span class="w">  </span><span class="nv">exestub</span><span class="na">.</span><span class="nv">exe</span><span class="w">  </span><span class="nv">dyalog</span><span class="na">.</span><span class="nv">exe</span><span class="w">  </span><span class="nv">dyalogrt</span><span class="na">.</span><span class="nv">exe</span>
 </code></pre></div>
 <p>The <code>Name</code> property returns the name of the file associated with the <code>File</code> object:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">d</span><span class="na">.</span><span class="nv">GetFiles</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'*.exe'</span><span class="p">)</span><span class="na">.</span><span class="nv">Name</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">d</span><span class="na">.</span><span class="nv">GetFiles</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'*.exe'</span><span class="p">)</span><span class="na">.</span><span class="nv">Name</span>
 <span class="w"> </span><span class="nv">evalstub</span><span class="na">.</span><span class="nv">exe</span><span class="w">  </span><span class="nv">exestub</span><span class="na">.</span><span class="nv">exe</span><span class="w">  </span><span class="nv">dyalog</span><span class="na">.</span><span class="nv">exe</span><span class="w">  </span><span class="nv">dyalogrt</span><span class="na">.</span><span class="nv">exe</span>
 </code></pre></div>
 <p>And the <code>CreationTime</code> property returns its creation time, which is a <code>DateTime</code> object:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">d</span><span class="na">.</span><span class="nv">GetFiles</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'*.exe'</span><span class="p">)</span><span class="na">.</span><span class="nv">CreationTime</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">d</span><span class="na">.</span><span class="nv">GetFiles</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'*.exe'</span><span class="p">)</span><span class="na">.</span><span class="nv">CreationTime</span>
 </code></pre></div>
 <p>01/04/2004 09:37:01  01/04/2004 09:37:01  08/06/2004 ...</p>
 <p>If you call <code>GetFiles</code> without an argument (in APL, with an argument of <code>⍬</code>), it returns a complete list of files:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">files</span><span class="kd">←</span><span class="nv">d</span><span class="na">.</span><span class="nv">GetFiles</span><span class="w"> </span><span class="no">⍬</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">files</span><span class="kd">←</span><span class="nv">d</span><span class="na">.</span><span class="nv">GetFiles</span><span class="w"> </span><span class="no">⍬</span>
 </code></pre></div>
 <p>Taking advantage of namespace reference array expansion, an expression to display file names and their creation times is as follows.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">files</span><span class="o">,</span><span class="sr">[</span><span class="m">1.5</span><span class="sr">]</span><span class="nv">files</span><span class="na">.</span><span class="nv">CreationTime</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">files</span><span class="o">,</span><span class="sr">[</span><span class="m">1.5</span><span class="sr">]</span><span class="nv">files</span><span class="na">.</span><span class="nv">CreationTime</span>
 <span class="w"> </span><span class="nv">relnotes</span><span class="na">.</span><span class="nv">hlp</span><span class="w">       </span><span class="m">03</span><span class="na">/</span><span class="m">02</span><span class="na">/</span><span class="m">2004</span><span class="w"> </span><span class="m">11</span><span class="bp">:</span><span class="m">47</span><span class="bp">:</span><span class="m">02</span><span class="w"> </span>
 <span class="w"> </span><span class="nv">relnotes</span><span class="na">.</span><span class="nv">cnt</span><span class="w">       </span><span class="m">03</span><span class="na">/</span><span class="m">02</span><span class="na">/</span><span class="m">2004</span><span class="w"> </span><span class="m">11</span><span class="bp">:</span><span class="m">47</span><span class="bp">:</span><span class="m">02</span><span class="w"> </span>
 <span class="w"> </span><span class="nv">def_uk</span><span class="na">.</span><span class="nv">dse</span><span class="w">         </span><span class="m">22</span><span class="na">/</span><span class="m">03</span><span class="na">/</span><span class="m">2004</span><span class="w"> </span><span class="m">12</span><span class="bp">:</span><span class="m">13</span><span class="bp">:</span><span class="m">31</span><span class="w"> </span>
@@ -78840,7 +78840,7 @@
 <p>The .NET Namespace <code>System.Web.Mail</code> provides objects for handing email.</p>
 <p>You can create a new email message as an instance of the <code>MailMessage</code> class, set its various properties, and then send it using the <code>SmtpMail</code> class.</p>
 <p>Please note that these examples will only work if your computer is configured to allow you to send email in this way.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System.Web.Mail,System.Web.dll'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System.Web.Mail,System.Web.dll'</span>
 <span class="w">      </span><span class="nv">m</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">MailMessage</span>
 <span class="w">      </span><span class="nv">m</span><span class="na">.</span><span class="nv">From</span><span class="kd">←</span><span class="s1">'tony.blair@uk.gov'</span>
 <span class="w">      </span><span class="nv">m</span><span class="na">.</span><span class="nv">To</span><span class="kd">←</span><span class="s1">'sales@dyalog.com'</span>
@@ -78851,7 +78851,7 @@
 </code></pre></div>
 <p>However, note that the <code>Send</code> method of the <code>SmtpMail</code> object is overloaded and may be called with a single parameter of type <code>System.Web.Mail.MailMessage</code> as above, or four parameters of type <code>System.String</code>:</p>
 <p>So instead, you can just say:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">SmtpMail</span><span class="na">.</span><span class="nv">Send</span><span class="w"> </span><span class="s1">'tony.blair@uk.gov'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">SmtpMail</span><span class="na">.</span><span class="nv">Send</span><span class="w"> </span><span class="s1">'tony.blair@uk.gov'</span>
 <span class="w">                    </span><span class="s1">'sales@dyalog.com'</span>
 <span class="w">                    </span><span class="s1">'order'</span>
 <span class="w">                    </span><span class="s1">'Send me the goods'</span>
@@ -78859,45 +78859,45 @@
 <h2 id="web-scraping">Web Scraping</h2>
 <p>The .NET Framework provides a whole range of classes for accessing the internet from a program. The following example illustrates how you can read the contents of a web page. It is complicated, but realistic, in that it includes code to cater for a firewall/proxy connection to the internet. It is only 9 lines of APL code, but each line requires careful explanation.</p>
 <p>First we need to define <code>⎕USING</code> so that it specifies all of the .NET Namespaces and Assemblies that we require.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System,System.dll'</span><span class="w"> </span><span class="s1">'System.Net'</span><span class="w"> </span><span class="s1">'System.IO'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System,System.dll'</span><span class="w"> </span><span class="s1">'System.Net'</span><span class="w"> </span><span class="s1">'System.IO'</span>
 </code></pre></div>
 <p>The <code>WebRequest</code> class in the .NET Namespace <code>System.Net</code> implements the .NET Framework's request/response model for accessing data from the Internet. In this example we create a <code>WebRequest</code> object associated with the URI <code>http://www.cdnow.com</code>. Note that <code>WebRequest</code> is an example of a static class. You don't make instances of it; you just use its methods.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">wrq</span><span class="kd">←</span><span class="nv">WebRequest</span><span class="na">.</span><span class="nv">Create</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'http://www.cdnow.com'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">wrq</span><span class="kd">←</span><span class="nv">WebRequest</span><span class="na">.</span><span class="nv">Create</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'http://www.cdnow.com'</span>
 </code></pre></div>
 <p>In fact (and somewhat confusingly) if the URI specifies a scheme of "http://" or "https://", you get back an object of type <code>HttpWebRequest</code> rather than a plain and simple <code>WebRequest</code>. So, at this stage, <code>wrq</code> is an <code>HttpWebRequest</code> object.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">wrq</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">wrq</span>
 <span class="nv">System</span><span class="na">.</span><span class="nv">Net</span><span class="na">.</span><span class="nv">HttpWebRequest</span>
 </code></pre></div>
 <p>This class has a <code>Proxy</code> property through which you specify the proxy information for a request made through a firewall. The value assigned to the <code>Proxy</code> property has to be an object of type <code>System.Net.WebProxy</code>. So first we must create a new <code>WebProxy</code> object specifying the hostname and port number for the firewall. You will need to change this statement to suit your own internet configuration (it may even not be necessary to do this).
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">PX</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">WebProxy</span><span class="p">(</span><span class="o">⊂</span><span class="s1">'http://dyagate.dyadic.com:8080'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">PX</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">WebProxy</span><span class="p">(</span><span class="o">⊂</span><span class="s1">'http://dyagate.dyadic.com:8080'</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">PX</span>
 <span class="nv">System</span><span class="na">.</span><span class="nv">Net</span><span class="na">.</span><span class="nv">WebProxy</span>
 </code></pre></div>
 <p>Having set up the <code>WebProxy</code> object as required, we then assign it to the <code>Proxy</code> property of the <code>HttpRequest</code> object <code>wrq</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">wrq</span><span class="na">.</span><span class="nv">Proxy</span><span class="kd">←</span><span class="nv">PX</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">wrq</span><span class="na">.</span><span class="nv">Proxy</span><span class="kd">←</span><span class="nv">PX</span>
 </code></pre></div>
 <p>The <code>HttpRequest</code> class has a <code>GetResponse</code> method that returns a response from an internet resource. No it's not HTML (yet), the result is an object of type <code>System.Net.HttpWebResponse</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">wr</span><span class="kd">←</span><span class="nv">wrq</span><span class="na">.</span><span class="nv">GetResponse</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">wr</span><span class="kd">←</span><span class="nv">wrq</span><span class="na">.</span><span class="nv">GetResponse</span>
 <span class="w">      </span><span class="nv">wr</span>
 <span class="nv">System</span><span class="na">.</span><span class="nv">Net</span><span class="na">.</span><span class="nv">HttpWebResponse</span>
 </code></pre></div>
 <p>The <code>HttpWebResponse</code> class has a <code>GetResponseStream</code> method whose result is of type <code>System.Net.ConnectStream</code>. This object, whose base class is <code>System.IO.Stream</code>, provides methods to read and write data both synchronously and asynchronously from a data source, which in this case is physically connected to a TCP/IP socket.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">str</span><span class="kd">←</span><span class="nv">wr</span><span class="na">.</span><span class="nv">GetResponseStream</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">str</span><span class="kd">←</span><span class="nv">wr</span><span class="na">.</span><span class="nv">GetResponseStream</span>
 <span class="w">      </span><span class="nv">str</span>
 <span class="nv">System</span><span class="na">.</span><span class="nv">Net</span><span class="na">.</span><span class="nv">ConnectStream</span>
 </code></pre></div>
 <p>However, there is yet another step to consider. The <code>Stream</code> class is designed for byte input and output; what we need is a class that reads characters in a byte stream using a particular encoding. This is a job for the <code>System.IO.StreamReader</code> class. Given a <code>Stream</code> object, you can create a new instance of a <code>StreamReader</code> by passing it the <code>Stream</code> as a parameter.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">rdr</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">StreamReader</span><span class="w"> </span><span class="nv">str</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">rdr</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">StreamReader</span><span class="w"> </span><span class="nv">str</span>
 <span class="w">      </span><span class="nv">rdr</span>
 <span class="nv">System</span><span class="na">.</span><span class="nv">IO</span><span class="na">.</span><span class="nv">StreamReader</span>
 </code></pre></div>
 <p>Finally, we can use the <code>ReadToEnd</code> method of the <code>StreamReader</code> to get the contents of the page.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">s</span><span class="kd">←</span><span class="nv">rdr</span><span class="na">.</span><span class="nv">ReadToEnd</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">s</span><span class="kd">←</span><span class="nv">rdr</span><span class="na">.</span><span class="nv">ReadToEnd</span>
 <span class="w">      </span><span class="o">⍴</span><span class="nv">s</span>
 <span class="m">45242</span>
 </code></pre></div>
 <p>Note that to avoid running out of connections, it is necessary to close the Stream:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">str</span><span class="na">.</span><span class="nv">Close</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">str</span><span class="na">.</span><span class="nv">Close</span>
 </code></pre></div>
 <div class="footnote">
 <hr>
@@ -78936,7 +78936,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

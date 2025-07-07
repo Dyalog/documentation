@@ -78784,7 +78784,7 @@
 <h2 class="example">Example</h2>
 
 <p>The following example uses the sample <a href="../../../programming-reference-guide/object-oriented-programming/class-members/properties/component-file-class-example">ComponentFile Class</a>.
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="p">)</span><span class="nv">Load</span><span class="w"> </span><span class="nv">ComponentFile</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="p">)</span><span class="nv">Load</span><span class="w"> </span><span class="nv">ComponentFile</span>
 <span class="na">...\</span><span class="nv">Samples</span><span class="na">\</span><span class="nv">OO4APL</span><span class="na">\</span><span class="nv">ComponentFile</span><span class="na">.</span><span class="nv">dws</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="na">...</span>
 <span class="w">      </span><span class="nv">F1</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">ComponentFile</span><span class="w"> </span><span class="s1">'test1'</span>
 
@@ -78799,7 +78799,7 @@
 <span class="err">└───────┴───────┴────────┴─────────┴──────────┘</span>
 </code></pre></div>
 <p>The following example shows how <code>⌷</code>obtains the items in an Excel Sheets collection .
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">wb</span><span class="kd">←</span><span class="nv">ex</span><span class="na">.</span><span class="nv">Workbooks</span><span class="na">.</span><span class="nv">Open</span><span class="o">⊂</span><span class="s1">'budget.xls'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">wb</span><span class="kd">←</span><span class="nv">ex</span><span class="na">.</span><span class="nv">Workbooks</span><span class="na">.</span><span class="nv">Open</span><span class="o">⊂</span><span class="s1">'budget.xls'</span>
 <span class="w">      </span><span class="nv">wb</span><span class="na">.</span><span class="nv">Sheets</span>
 <span class="c1">#.[OLEClient].[Workbooks].[_Workbook].[Sheets]</span>
 <span class="w">      </span><span class="o">⌷</span><span class="nv">wb</span><span class="na">.</span><span class="nv">Sheets</span>
@@ -78812,11 +78812,11 @@
 <h2 id="performance-considerations">Performance Considerations</h2>
 <p>Note that the <em>values</em> of the index set are obtained or assigned by calls to the corresponding PropertyGet and PropertySet functions. Furthermore, if there is a sequence of primitive functions to the left of the Index function, that operate on the index set itself (functions such as dyadic <code>⍴,↑,↓,⊃</code>) as opposed to functions that operate on the <em>values</em> of the index set (functions such as <code>+,⌈,⌊,⍴¨</code>), calls to the PropertyGet and PropertySet functions are deferred until the required index set has been completely determined. The full set of functions that cause deferral of calls to the PropertyGet and PropertySet functions is the same as the set of functions that applies to selective specification.</p>
 <p>If for example, <code>CompFile</code> is an Instance of the <a href="../../../programming-reference-guide/object-oriented-programming/class-members/properties/component-file-class-example">ComponentFile Class</a>:
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="m">1</span><span class="o">↑⌽⌷</span><span class="nv">CompFile</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="m">1</span><span class="o">↑⌽⌷</span><span class="nv">CompFile</span>
 </code></pre></div>
 <p>would only call the PropertyGet function (for <code>CompFile</code>) once, to get the value of the last element.</p>
 <p>Note that similarly, the expression
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">10000</span><span class="o">⍴⌷</span><span class="nv">CompFile</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">10000</span><span class="o">⍴⌷</span><span class="nv">CompFile</span>
 </code></pre></div>
 <p>would call the PropertyGet function 10000 times, on repeated indices if <code>CompFile</code> has less than 10000 elements. The deferral of access function calls is intended to be an optimisation, but can have the opposite effect. You can avoid unnecessary repetitive calls by assigning the result of <code>⌷</code> to a temporary variable.</p>
 
@@ -78848,7 +78848,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

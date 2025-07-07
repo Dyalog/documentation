@@ -78712,10 +78712,10 @@
 <p><code>Y</code> is a 2-item vector containing the name of the probability distribution from those listed in the table below, and the shape of the result.</p>
 <p><code>X</code> is a scalar or 1 or 2 element numeric vector that specifies parameters.</p>
 <p>For example to get an array with shape (3 5 7) of uniform random numbers for the interval from ¯17.3 to 12.7, you’d enter
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">¯17.3</span><span class="w"> </span><span class="m">12.7</span><span class="w"> </span><span class="p">(</span><span class="m">16808</span><span class="w"> </span><span class="na">⌶</span><span class="p">)</span><span class="w"> </span><span class="s1">'Uniform'</span><span class="w"> </span><span class="p">(</span><span class="m">3</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">7</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">¯17.3</span><span class="w"> </span><span class="m">12.7</span><span class="w"> </span><span class="p">(</span><span class="m">16808</span><span class="w"> </span><span class="na">⌶</span><span class="p">)</span><span class="w"> </span><span class="s1">'Uniform'</span><span class="w"> </span><span class="p">(</span><span class="m">3</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">7</span><span class="p">)</span>
 </code></pre></div>
 <p>If you wanted a vector of 100,000 uniform random numbers for that interval, you’d enter
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">¯17.3</span><span class="w"> </span><span class="m">12.7</span><span class="w"> </span><span class="p">(</span><span class="m">16808</span><span class="w"> </span><span class="na">⌶</span><span class="p">)</span><span class="w"> </span><span class="s1">'Uniform'</span><span class="w"> </span><span class="m">100000</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">¯17.3</span><span class="w"> </span><span class="m">12.7</span><span class="w"> </span><span class="p">(</span><span class="m">16808</span><span class="w"> </span><span class="na">⌶</span><span class="p">)</span><span class="w"> </span><span class="s1">'Uniform'</span><span class="w"> </span><span class="m">100000</span>
 </code></pre></div>
 <p>The domain rules for the distributions currently  implemented are as follows:</p>
 <table>
@@ -78837,7 +78837,7 @@
 
 <p>The probability density function for the Beta distribution (see ) with the parameter vector (2 5) has an interesting shape.</p>
 <p><code>BucketCount</code> counts random numbers that fall into a sequence of evenly distributed bucket intervals:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">BucketCounts</span><span class="kd">←</span><span class="kt">{</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">BucketCounts</span><span class="kd">←</span><span class="kt">{</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">        </span><span class="nv">ir</span><span class="kd">←</span><span class="o">⌊</span><span class="bp">⍵</span><span class="o">÷÷</span><span class="bp">⍺</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">        </span><span class="nv">kir</span><span class="kd">←</span><span class="kt">{</span><span class="bp">⍺</span><span class="p">(</span><span class="o">≢</span><span class="bp">⍵</span><span class="p">)</span><span class="kt">}</span><span class="na">⌸</span><span class="nv">ir</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">        </span><span class="nv">kir</span><span class="sr">[;</span><span class="nf">⎕IO</span><span class="sr">]</span><span class="o">÷</span><span class="kd">←</span><span class="bp">⍺</span>
@@ -78845,7 +78845,7 @@
 <span class="sr">[</span><span class="m">5</span><span class="sr">]</span><span class="w">    </span><span class="kt">}</span>
 </code></pre></div>
 <p>So then we can create 100,000 samples and calculate values for a density graph with 1,000 evenly spaced buckets by:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">rv</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="p">(</span><span class="m">16808</span><span class="na">⌶</span><span class="p">)</span><span class="s1">'Beta'</span><span class="w"> </span><span class="m">100000</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">rv</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="p">(</span><span class="m">16808</span><span class="na">⌶</span><span class="p">)</span><span class="s1">'Beta'</span><span class="w"> </span><span class="m">100000</span>
 <span class="w">      </span><span class="nv">bc</span><span class="kd">←</span><span class="m">1000</span><span class="w"> </span><span class="nv">BucketCounts</span><span class="w"> </span><span class="nv">rv</span>
 </code></pre></div>
 <p>Using the Chart Wizard <img alt="sharpplot icon" src="../../img/sharpplot-icon.png"> we can plot <code>(⊂2)⌷⍉bc</code> against <code>(⊂1)⌷⍉bc</code> to get the graph:</p>
@@ -78879,7 +78879,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

@@ -78708,20 +78708,20 @@
 <p>An example is the <code>DivRem</code> method that is provided by the <code>System.Math</code> class. This method performs an integer division, returning the quotient as its result, and the remainder in an address specified as a pointer by the calling program.</p>
 <p>APL does not have a mechanism for dealing with pointers, so Dyalog provides a .NET class for this purpose. This is the <code>Dyalog.ByRef</code> class, which is a provided by an Assembly that is loaded automatically by the Dyalog program.</p>
 <p>Firstly, to gain access to the Dyalog .NET Namespace, it must be specified by <code>⎕USING</code>. Note that you need not specify the Assembly (DLL) from which it is obtained (the  Bridge DLL), because (like <code>mscorlib.dll</code>) it is automatically loaded by when APL starts.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span><span class="w"> </span><span class="s1">'Dyalog'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="s1">'System'</span><span class="w"> </span><span class="s1">'Dyalog'</span>
 </code></pre></div>
 <p>The <code>Dyalog.ByRef</code> class represents a pointer to an object of type <code>System.Object</code>. It has a number of constructors, some of which are used internally by APL itself. You only need to be concerned about two of them; the one that takes no parameters, and the one that takes a single parameter of type <code>System.Object</code>. The former is used to create an empty pointer; the latter to create a pointer to an object or some data.</p>
 <p>For example, to create an empty pointer:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ptr1</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">ByRef</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ptr1</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">ByRef</span>
 </code></pre></div>
 <p>Or, to create pointers to specific values,
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ptr2</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">ByRef</span><span class="w"> </span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ptr2</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">ByRef</span><span class="w"> </span><span class="m">0</span>
 <span class="w">      </span><span class="nv">ptr3</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">ByRef</span><span class="w"> </span><span class="p">(</span><span class="o">⊂⍳</span><span class="m">10</span><span class="p">)</span>
 <span class="w">      </span><span class="nv">ptr4</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">ByRef</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">2000</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">30</span><span class="p">))</span>
 </code></pre></div>
 <p>Notice that a single parameter is required, so you must enclose it if it is an array with several elements. Alternatively, the parameter may be a .NET object.</p>
 <p>The ByRef class has a single property called <code>Value</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ptr2</span><span class="na">.</span><span class="nv">Value</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ptr2</span><span class="na">.</span><span class="nv">Value</span>
 <span class="m">0</span>
 <span class="w">      </span><span class="nv">ptr3</span><span class="na">.</span><span class="nv">Value</span>
 <span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="m">10</span>
@@ -78729,7 +78729,7 @@
 <span class="m">30</span><span class="na">/</span><span class="m">04</span><span class="na">/</span><span class="m">2000</span><span class="w"> </span><span class="m">00</span><span class="bp">:</span><span class="m">00</span><span class="bp">:</span><span class="m">00</span>
 </code></pre></div>
 <p>Note that if you reference the Value property without first setting it, you get a <code>VALUE ERROR</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ptr1</span><span class="na">.</span><span class="nv">Value</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">ptr1</span><span class="na">.</span><span class="nv">Value</span>
 <span class="nv">VALUE</span><span class="w"> </span><span class="nv">ERROR</span>
 <span class="w">      </span><span class="nv">ptr1</span><span class="na">.</span><span class="nv">Value</span>
 <span class="w">     </span><span class="err">^</span>
@@ -78739,7 +78739,7 @@
 <li>the numerator</li>
 <li>the denominator</li>
 <li>a pointer to an address into which the method will write the remainder after performing the division.
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">remptr</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">ByRef</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">remptr</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">ByRef</span>
 <span class="w">      </span><span class="nv">remptr</span><span class="na">.</span><span class="nv">Value</span>
 <span class="nv">VALUE</span><span class="w"> </span><span class="nv">ERROR</span>
 <span class="w">      </span><span class="nv">remptr</span><span class="na">.</span><span class="nv">Value</span>
@@ -78751,7 +78751,7 @@
 </code></pre></div></li>
 </ol>
 <p>In some cases a .NET method may take a parameter that is an Array and the method expects to fill in the array with appropriate values. In APL there is no syntax to allow a parameter to a function to be modified in this way. However, we can use the <code>Dyalog.ByRef</code> class to call this method. For example, the <code>System.IO.FileStream</code> class contains a <code>Read</code> method that populates its first argument with the bytes in the file.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕using</span><span class="kd">←</span><span class="s1">'System.IO'</span><span class="w"> </span><span class="s1">'Dyalog'</span><span class="w"> </span><span class="s1">'System'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕using</span><span class="kd">←</span><span class="s1">'System.IO'</span><span class="w"> </span><span class="s1">'Dyalog'</span><span class="w"> </span><span class="s1">'System'</span>
 <span class="w">      </span><span class="nv">fs</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">FileStream</span><span class="w"> </span><span class="p">(</span><span class="s1">'c:\tmp\jd.txt'</span><span class="w"> </span><span class="nv">FileMode</span><span class="na">.</span><span class="nv">Open</span><span class="p">)</span><span class="w"> </span>
 <span class="w">      </span><span class="nv">fs</span><span class="na">.</span><span class="nv">Length</span>
 <span class="m">25</span>
@@ -78789,7 +78789,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

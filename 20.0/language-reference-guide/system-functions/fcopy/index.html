@@ -78859,7 +78859,7 @@
 <p>Note that the Access Code is 4609, which is the sum of the Access Codes for <code>⎕FREAD</code> (1), <code>⎕FRDCI</code> (512) and <code>⎕FRDAC</code> (4096).</p>
 <p>Note also that although the file need not be tied exclusively, the <code>⎕FCOPY</code> function will not yield the file to other APL processes while it is running, and it may take some considerable time to run in the case of a large component file.</p>
 <h2 class="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">told</span><span class="kd">←</span><span class="s1">'oldfile32'</span><span class="nf">⎕FTIE</span><span class="w"> </span><span class="m">0</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">told</span><span class="kd">←</span><span class="s1">'oldfile32'</span><span class="nf">⎕FTIE</span><span class="w"> </span><span class="m">0</span>
 <span class="w">      </span><span class="s1">'S'</span><span class="w"> </span><span class="nf">⎕FPROPS</span><span class="w"> </span><span class="nv">told</span>
 <span class="m">32</span>
 <span class="w">      </span><span class="nv">tnew</span><span class="kd">←</span><span class="s1">'newfile64'</span><span class="w"> </span><span class="nf">⎕FCOPY</span><span class="w"> </span><span class="nv">told</span>
@@ -78889,16 +78889,16 @@
 <li>3 - sets <code>('J' 3) ('C' 1)</code></li>
 </ul>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">newfid</span><span class="kd">←</span><span class="s1">'newfile'</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕FCOPY</span><span class="w"> </span><span class="na">⍠</span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="m">1</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">newfid</span><span class="kd">←</span><span class="s1">'newfile'</span><span class="w"> </span><span class="p">(</span><span class="nf">⎕FCOPY</span><span class="w"> </span><span class="na">⍠</span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="m">1</span>
 
 <span class="w">      </span><span class="s1">'SEUJCZ'</span><span class="w"> </span><span class="nf">⎕FPROPS</span><span class="w"> </span><span class="nv">newfid</span>
 <span class="m">64</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <p>Alternatively:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">JFCOPY</span><span class="kd">←</span><span class="nf">⎕FCOPY</span><span class="w"> </span><span class="na">⍠</span><span class="w"> </span><span class="m">3</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">JFCOPY</span><span class="kd">←</span><span class="nf">⎕FCOPY</span><span class="w"> </span><span class="na">⍠</span><span class="w"> </span><span class="m">3</span>
 </code></pre></div>
 <p>will name a variant of <code>⎕FCREATE</code> which will create component file with level 3 journaling, and checksum enabled. Then:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">newfid</span><span class="kd">←</span><span class="s1">'newfile'</span><span class="w"> </span><span class="nv">JFCOPY</span><span class="w"> </span><span class="m">1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">newfid</span><span class="kd">←</span><span class="s1">'newfile'</span><span class="w"> </span><span class="nv">JFCOPY</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -78937,7 +78937,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

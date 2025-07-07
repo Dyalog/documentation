@@ -78781,15 +78781,15 @@
 </table>
 <p>To respond to the request for a new window, the callback function should open the requested URL as appropriate, for example, in a newly created <a href="../../objects/htmlrenderer/">HTMLRenderer</a> object.</p>
 <h2 class="example">Example</h2>
-<p></p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'h'</span><span class="nf">⎕WC</span><span class="w">  </span><span class="s1">'HTMLRenderer'</span>
+<p></p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'h'</span><span class="nf">⎕WC</span><span class="w">  </span><span class="s1">'HTMLRenderer'</span>
 <span class="w">      </span><span class="s1">'h'</span><span class="nf">⎕WS</span><span class="w">  </span><span class="p">(</span><span class="s1">'Event'</span><span class="w"> </span><span class="s1">'DoPopUp'</span><span class="w"> </span><span class="s1">'DoPopUpCB'</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">html</span><span class="kd">←</span><span class="w"> </span><span class="s1">'&lt;a href="https://www.dyalog.com"'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">html</span><span class="kd">←</span><span class="w"> </span><span class="s1">'&lt;a href="https://www.dyalog.com"'</span>
 <span class="w">      </span><span class="nv">html</span><span class="o">,</span><span class="kd">←</span><span class="w"> </span><span class="nv">target</span><span class="o">=</span><span class="s2">"_blank"</span><span class="o">&gt;</span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">Website</span><span class="o">&lt;</span><span class="na">/</span><span class="nv">a</span><span class="o">&gt;</span><span class="err">'</span>
 
 <span class="w">      </span><span class="nv">h</span><span class="na">.</span><span class="nv">HTML</span><span class="kd">←</span><span class="nv">html</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">DoPopUpCB</span><span class="w"> </span><span class="nv">msg</span><span class="sr">;</span><span class="nv">props</span><span class="sr">;</span><span class="nv">posn</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">DoPopUpCB</span><span class="w"> </span><span class="nv">msg</span><span class="sr">;</span><span class="nv">props</span><span class="sr">;</span><span class="nv">posn</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="nv">props</span><span class="kd">←</span><span class="o">⊂</span><span class="s1">'URL'</span><span class="p">(</span><span class="m">3</span><span class="o">⊃</span><span class="nv">msg</span><span class="p">)</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">    </span><span class="p">(</span><span class="nv">posn</span><span class="w"> </span><span class="nv">size</span><span class="p">)</span><span class="kd">←</span><span class="m">2</span><span class="o">↑</span><span class="m">4</span><span class="o">⊃</span><span class="nv">msg</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">    </span><span class="nv">props</span><span class="o">,</span><span class="kd">←</span><span class="p">(</span><span class="s1">'Posn'</span><span class="nv">posn</span><span class="p">)(</span><span class="s1">'Size'</span><span class="nv">size</span><span class="p">)</span>
@@ -78797,7 +78797,7 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <h2 class="example">Extended Example</h2>
-<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="kt">{</span><span class="nv">r</span><span class="kt">}</span><span class="kd">←</span><span class="nv">DoPopupDemo</span><span class="w"> </span><span class="nv">args</span><span class="sr">;</span><span class="nv">html</span><span class="sr">;</span><span class="nv">h</span><span class="sr">;</span><span class="nv">c</span><span class="sr">;</span><span class="nv">s</span><span class="sr">;</span><span class="nv">e</span><span class="sr">;</span><span class="nv">p</span><span class="sr">;</span><span class="nv">d</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="kt">{</span><span class="nv">r</span><span class="kt">}</span><span class="kd">←</span><span class="nv">DoPopupDemo</span><span class="w"> </span><span class="nv">args</span><span class="sr">;</span><span class="nv">html</span><span class="sr">;</span><span class="nv">h</span><span class="sr">;</span><span class="nv">c</span><span class="sr">;</span><span class="nv">s</span><span class="sr">;</span><span class="nv">e</span><span class="sr">;</span><span class="nv">p</span><span class="sr">;</span><span class="nv">d</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">    </span><span class="kd">→</span><span class="nv">EndHTML</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="nv">StartHTML</span><span class="bp">:</span>
 <span class="sr">[</span><span class="m">3</span><span class="sr">]</span><span class="w">   </span><span class="c1">⍝&lt;html&gt;</span>
@@ -78837,7 +78837,7 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>The example function show above will display a new window when the button labelled Click me! is pressed. To start, type:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DoPopupDemo</span><span class="w"> </span><span class="s1">''</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DoPopupDemo</span><span class="w"> </span><span class="s1">''</span>
 </code></pre></div>
 
 
@@ -78868,7 +78868,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

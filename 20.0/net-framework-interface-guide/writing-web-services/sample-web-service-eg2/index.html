@@ -78776,11 +78776,11 @@
 <p>Note that the sub-directory <code>samples\asp.net\aplservices\bin</code> already contains copies of the dependent Dyalog DLLs that are required to execute the code.</p>
 <p><strong>Start Dyalog as Administrator.</strong> This is essential both to allow you to create an assembly.</p>
 <p>Starting with a <code>CLEAR WS</code>,  create a namespace called <code>APLServices</code>. This will act as the container corresponding to a .NET Namespace in the assembly.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">NS</span><span class="w"> </span><span class="nv">APLServices</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">NS</span><span class="w"> </span><span class="nv">APLServices</span>
 <span class="c1">#.APLServices</span>
 </code></pre></div>
 <p>Within <code>APLServices</code>, create a class called <code>Example</code> that inherits from System.Web.Services.WebService. This is the Web Service class.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">APLServices</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CS</span><span class="w"> </span><span class="nv">APLServices</span>
 <span class="c1">#.APLServices</span>
 <span class="w">      </span><span class="p">)</span><span class="nv">ED</span><span class="w"> </span><span class="o">○</span><span class="nv">Example</span>
 
@@ -78796,7 +78796,7 @@
 </code></pre></div>
 <p>Within <code>APLServices.Example</code>, we have a function called <code>Add</code> that will represent the single method to be exported by this Web Service.</p>
 <p>Fix the class, then click <em>File/Save As ...</em> in the Session menubar and save the workspace in <code>samples\asp.net\aplwebservices\bin</code>.
-</p><div class="highlight"><pre><span></span><code><span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Program</span><span class="w"> </span><span class="nv">Files</span><span class="na">\</span><span class="nv">Dyalog</span><span class="na">\</span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">APL</span><span class="w"> </span><span class="m">15.0</span><span class="w"> </span><span class="nv">Unicode</span><span class="na">\</span><span class="nv">Samples</span><span class="na">\</span><span class="nv">asp</span><span class="na">.</span><span class="nv">net</span><span class="na">\</span><span class="nv">webservices</span><span class="na">\</span><span class="nv">bin</span><span class="na">\</span><span class="nv">eg2</span><span class="na">.</span><span class="nv">dws</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="nv">Mon</span><span class="w"> </span><span class="nv">Sep</span><span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">15</span><span class="bp">:</span><span class="m">31</span><span class="bp">:</span><span class="m">56</span><span class="w"> </span><span class="m">2016</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">C</span><span class="bp">:</span><span class="na">\</span><span class="nv">Program</span><span class="w"> </span><span class="nv">Files</span><span class="na">\</span><span class="nv">Dyalog</span><span class="na">\</span><span class="nv">Dyalog</span><span class="w"> </span><span class="nv">APL</span><span class="w"> </span><span class="m">15.0</span><span class="w"> </span><span class="nv">Unicode</span><span class="na">\</span><span class="nv">Samples</span><span class="na">\</span><span class="nv">asp</span><span class="na">.</span><span class="nv">net</span><span class="na">\</span><span class="nv">webservices</span><span class="na">\</span><span class="nv">bin</span><span class="na">\</span><span class="nv">eg2</span><span class="na">.</span><span class="nv">dws</span><span class="w"> </span><span class="nv">saved</span><span class="w"> </span><span class="nv">Mon</span><span class="w"> </span><span class="nv">Sep</span><span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">15</span><span class="bp">:</span><span class="m">31</span><span class="bp">:</span><span class="m">56</span><span class="w"> </span><span class="m">2016</span>
 </code></pre></div>
 <p>Select the <em>Export…</em> item from the Session <em>File</em> menu, and save the assembly as <code>eg2.dll</code> in the same directory, that is, <code>samples\asp.net\webservices\bin</code>.</p>
 <p><img alt="" src="../../img/eg2-2.png"></p>
@@ -78804,7 +78804,7 @@
 <p><img alt="" src="../../img/eg2-3.png"></p>
 <h2 id="testing-eg2-from-a-browser">Testing EG2 from a Browser</h2>
 <p>If you point your browser at the URL:
-</p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nv">http</span><span class="bp">:</span><span class="na">//</span><span class="nv">localhost</span><span class="na">/</span><span class="nv">dyalog</span><span class="na">.</span><span class="nv">net</span><span class="m">.15.0</span><span class="na">.</span><span class="nv">unicode</span><span class="m">.32</span><span class="na">/</span><span class="nv">webservices</span><span class="na">/</span><span class="nv">eg2</span><span class="na">.</span><span class="nv">asmx</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w"> </span><span class="nv">http</span><span class="bp">:</span><span class="na">//</span><span class="nv">localhost</span><span class="na">/</span><span class="nv">dyalog</span><span class="na">.</span><span class="nv">net</span><span class="m">.15.0</span><span class="na">.</span><span class="nv">unicode</span><span class="m">.32</span><span class="na">/</span><span class="nv">webservices</span><span class="na">/</span><span class="nv">eg2</span><span class="na">.</span><span class="nv">asmx</span>
 </code></pre></div>
 <p>ASP.NET will fabricate a page about it for the browser to display as shown below.</p>
 <p>The <code>Add</code> method exposed by <code>APLServices.Example</code> is shown, together with a Form from which you can invoke it.</p>
@@ -78840,7 +78840,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

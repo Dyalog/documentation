@@ -78865,7 +78865,7 @@
 <p>If a method takes a parameter declared as a string (VT_BSTR) you must call it with an <strong>enclosed</strong> character vector.</p>
 <p><strong>Note:</strong> In previous versions of Dyalog APL, a character vector was automatically enclosed if required. For backwards compatibility you may select old or new behaviour using <code>⎕WX</code>. If <code>⎕WX</code> is 3 (the default) you <strong>must</strong> enclose a single string argument. IF <code>⎕WX</code> is 0 or 1, you <strong>may</strong> supply a simple character vector.</p>
 <p>For example, the OpenDatabase method in the DAO.DBEngine OLE server may be called with a single parameter that specifies the name of the database to be opened. You may call it from APL with either of the following two expressions:
-</p><div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nv">OpenDatabase</span><span class="w"> </span><span class="s1">'c:\example.mdb'</span><span class="w"> </span><span class="c1">⍝only if ⎕WX is 0 or 1</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">     </span><span class="nv">OpenDatabase</span><span class="w"> </span><span class="s1">'c:\example.mdb'</span><span class="w"> </span><span class="c1">⍝only if ⎕WX is 0 or 1</span>
 <span class="w">     </span><span class="nv">OpenDatabase</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'c:\example.mdb'</span><span class="c1">⍝any value of ⎕WX</span>
 </code></pre></div>
 <h2 id="arrays-and-pointers">Arrays and Pointers</h2>
@@ -78874,7 +78874,7 @@
 <p>The rule is that if a pointer is required, APL will provide it automatically; you do not have to do so. Instead, all you do is supply the value.</p>
 <h2 id="optional-parameters">Optional Parameters</h2>
 <p>Methods are often defined to have optional parameters. For example the parameters defined for the OpenDatabase method provided by the DAO.DBEngine OLE object are:
-</p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nv">Name</span><span class="w">         </span><span class="nv">VT_BSTR</span><span class="w">     </span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w"> </span><span class="nv">Name</span><span class="w">         </span><span class="nv">VT_BSTR</span><span class="w">     </span>
 <span class="w"> </span><span class="sr">[</span><span class="nv">Exclusive</span><span class="sr">]</span><span class="w">  </span><span class="nv">VT_VARIANT</span><span class="w">  </span>
 <span class="w"> </span><span class="sr">[</span><span class="nv">ReadOnly</span><span class="sr">]</span><span class="w">   </span><span class="nv">VT_VARIANT</span><span class="w">  </span>
 <span class="w"> </span><span class="sr">[</span><span class="nv">Connect</span><span class="sr">]</span><span class="w">    </span><span class="nv">VT_VARIANT</span>
@@ -78882,10 +78882,10 @@
 <p>To call the corresponding APL function, you may supply a nested array that contains 1,2, 3or 4 elements corresponding to these parameters.</p>
 <p>The parameters to some methods are all optional. This means that the method may be called with or without any parameters. As APL does not support this type of syntax, the special value <code>⍬</code> (zilde) is used to mean "0 parameters".</p>
 <p>For example, the parameters for the Idle method provided by DAO.DBEngine are defined to be:
-</p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="sr">[</span><span class="nv">Action</span><span class="sr">]</span><span class="w">  </span><span class="nv">VT_VARIANT</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w"> </span><span class="sr">[</span><span class="nv">Action</span><span class="sr">]</span><span class="w">  </span><span class="nv">VT_VARIANT</span>
 </code></pre></div>
 <p>This means that the method takes either no arguments or one argument. To call it with no argument, you must use <code>⍬</code> (zilde), for example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Idle</span><span class="w"> </span><span class="no">⍬</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">Idle</span><span class="w"> </span><span class="no">⍬</span>
 </code></pre></div>
 <p>Note that you cannot therefore call a function in an <em>APL</em> server with a single argument that is an empty numeric vector.</p>
 <h2 id="output-parameters">Output Parameters</h2>
@@ -78895,23 +78895,23 @@
 <p>The result of the method is then a vector containing the result defined for the method, followed by the (new) values of the output parameters. This is similar to the mechanism used by <code>⎕NA</code>.</p>
 <h2 id="named-parameters">Named Parameters</h2>
 <p>Visual Basic syntax allows you to specify parameters by position or by name; rather like <code>⎕WC</code> and <code>⎕WS</code>. For example the parameters defined for the OpenDatabase method provided by the DAO.DBEngine OLE object are:
-</p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nv">Name</span><span class="w">         </span><span class="nv">VT_BSTR</span><span class="w">     </span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w"> </span><span class="nv">Name</span><span class="w">         </span><span class="nv">VT_BSTR</span><span class="w">     </span>
 <span class="w"> </span><span class="sr">[</span><span class="nv">Exclusive</span><span class="sr">]</span><span class="w">  </span><span class="nv">VT_VARIANT</span><span class="w">  </span>
 <span class="w"> </span><span class="sr">[</span><span class="nv">ReadOnly</span><span class="sr">]</span><span class="w">   </span><span class="nv">VT_VARIANT</span><span class="w">  </span>
 <span class="w"> </span><span class="sr">[</span><span class="nv">Connect</span><span class="sr">]</span><span class="w">    </span><span class="nv">VT_VARIANT</span>
 </code></pre></div>
 <p>You could call this method from Visual Basic using the syntax:
-</p><div class="highlight"><pre><span></span><code><span class="nv">Set</span><span class="w"> </span><span class="nv">Db</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">OpenDatabase</span><span class="p">(</span><span class="nv">Name</span><span class="bp">:</span><span class="o">=</span><span class="s2">"c:\example.mdb"</span><span class="o">,</span><span class="nv">_</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">Set</span><span class="w"> </span><span class="nv">Db</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">OpenDatabase</span><span class="p">(</span><span class="nv">Name</span><span class="bp">:</span><span class="o">=</span><span class="s2">"c:\example.mdb"</span><span class="o">,</span><span class="nv">_</span>
 <span class="w">                      </span><span class="nv">ReadOnly</span><span class="bp">:</span><span class="o">=</span><span class="nv">True</span><span class="p">)</span>
 </code></pre></div>
 <p>You may do the same thing from Dyalog APL, using <code>⎕WS</code> syntax. For example, the equivalent call from APL would be:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">OpenDatabase</span><span class="p">(</span><span class="s1">'Name'</span><span class="w"> </span><span class="s1">'c:\example.mdb'</span><span class="p">)(</span><span class="s1">'ReadOnly'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">OpenDatabase</span><span class="p">(</span><span class="s1">'Name'</span><span class="w"> </span><span class="s1">'c:\example.mdb'</span><span class="p">)(</span><span class="s1">'ReadOnly'</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 </code></pre></div>
 <p>Note that you may only use named parameters if they are supported by the method. Many methods do not allow them.</p>
 <h2 id="methods-that-return-objects">Methods that return Objects</h2>
 <p>Object hierarchies in OLE are not static, but are created dynamically by calling methods that return objects as their result.</p>
 <p>If the data type of the result of a method is a pre-defined object type, or VT_DISPATCH or VT_COCLASS, or VT_PTR to VT_DISPATCH or VT_PTR to VT_COCLASS, the result returned to APL is a <em>namespace</em>. If the result is assigned to a name, the value associated with that name becomes a <em>namespace reference</em>. For example, GetMethodInfo tells us that the syntax for the OpenDatabase method provided by the OLE object DAO.DBEngine is as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="w"> </span><span class="nv">DB</span><span class="na">.</span><span class="nv">GetMethodInfo</span><span class="w"> </span><span class="s1">'OpenDatabase'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="w"> </span><span class="nv">DB</span><span class="na">.</span><span class="nv">GetMethodInfo</span><span class="w"> </span><span class="s1">'OpenDatabase'</span>
 <span class="w"> </span><span class="nv">Opens</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">specified</span><span class="w"> </span><span class="nv">database</span><span class="w">  </span><span class="nv">VT_DISPATCH</span><span class="w"> </span>
 <span class="w"> </span><span class="nv">Name</span><span class="w">                        </span><span class="nv">VT_BSTR</span><span class="w">     </span>
 <span class="w"> </span><span class="sr">[</span><span class="nv">Exclusive</span><span class="sr">]</span><span class="w">                 </span><span class="nv">VT_VARIANT</span><span class="w">  </span>
@@ -78919,16 +78919,16 @@
 <span class="w"> </span><span class="sr">[</span><span class="nv">Connect</span><span class="sr">]</span><span class="w">                   </span><span class="nv">VT_VARIANT</span>
 </code></pre></div>
 <p>The data-type of the result is VT_DISPATCH, so it returns an object; indeed the help for the method tells us that it returns a Database object. The function could be called from APL as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DB</span><span class="kd">←</span><span class="nv">OpenDatabase</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'example.mdb'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">DB</span><span class="kd">←</span><span class="nv">OpenDatabase</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'example.mdb'</span>
 </code></pre></div>
 <p>Alternatively, you may simply use the result as an argument to a defined function or as the argument to <code>⎕CS</code> or <code>:With</code>, thereby switching into the namespace returned by the method. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="nv">OpenDatabase</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'example.mdb'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="nv">OpenDatabase</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'example.mdb'</span>
 
 <span class="w">      </span><span class="bp">:</span><span class="nv">EndWith</span>
 </code></pre></div>
 <p>Notice that in both these cases, the namespace associated with the result of the OpenDatabase method is <em>unnamed</em>. Assigning the result of OpenDatabase to <code>DB</code> does not set the namespace <em>name</em> to <code>DB</code>, it merely assigns a namespace <em>reference</em> to <code>DB</code>.</p>
 <p>To preserve compatibility with previous versions of Dyalog APL that did not support namespace references, a method that returns an object may be called with the name of the (new) namespace as its left argument. Note that OLE methods do not themselves accept left arguments, so this extension does not conflict with OLE conventions.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'DB'</span><span class="w"> </span><span class="nv">OpenDatabase</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'example.mdb'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'DB'</span><span class="w"> </span><span class="nv">OpenDatabase</span><span class="w"> </span><span class="o">⊂</span><span class="s1">'example.mdb'</span>
 </code></pre></div>
 <p>This expression creates a new namespace called <code>DB</code> associated with a new object in the OLE Server. Note that if you invoke the <code>OpenDataBase</code> method in this way, its result is a number that represents the <em>Dispatch Interface</em> of the new object. This is done to preserve compatibility with previous versions of Dyalog APL.</p>
 
@@ -78960,7 +78960,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

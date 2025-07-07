@@ -78806,7 +78806,7 @@
 <p>The following examples, which illustrate how you can create an executable program (<code>.exe</code>) direct from an APLScript file, may be found in the directory <code>samples\aplscript</code>.</p>
 <h2 id="a-simple-gui-example">A simple GUI example</h2>
 <p>The following APLScript illustrates the simplest possible GUI application that displays a message box containing the string "Hello World".
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">N</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">N</span>
 <span class="nf">⎕LX</span><span class="kd">←</span><span class="s1">'N.RUN'</span><span class="w"> </span>
 <span class="bp">∇</span><span class="nv">RUN</span><span class="sr">;</span><span class="nv">M</span><span class="w"> </span>
 <span class="s1">'M'</span><span class="nf">⎕WC</span><span class="s1">'MsgBox'</span><span class="w"> </span><span class="s1">'A GUI exe'</span><span class="w"> </span><span class="s1">'Hello World'</span>
@@ -78821,7 +78821,7 @@
 <h2 id="a-simple-console-example">A simple console example</h2>
 <p>The following APLScript illustrates the simplest possible application that displays the text "Hello World".</p>
 <p>This example, which is saved in the file <code>eg2.apl</code>, is compiled to a Windows executable (<code>.exe</code>) and run from a command window as shown below. Notice that the <code>/console</code> flag is used to tell the APLScript compiler to create a <em>console</em> application that runs from a command prompt. In this case, default APL output that would normally be displayed in the session window turns up in the command window from which the program was run.
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">N</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">N</span>
 <span class="nf">⎕LX</span><span class="kd">←</span><span class="s1">'N.RUN'</span>
 <span class="bp">∇</span><span class="nv">RUN</span>
 <span class="s1">'Hello World'</span>
@@ -78832,16 +78832,16 @@
 <p><img alt="" src="../../img/aplscript3.png"></p>
 <h2 id="defining-namespaces">Defining Namespaces</h2>
 <p>Namespaces are specified in an APLScript using the <code>:Namespace</code> and :<code>EndNamespace</code> statements. Although you may use <code>⎕NS</code> and <code>⎕CS</code> within functions inside an APLScript, you should not use these system functions outside function bodies. Note that such use is not <em>prevented</em>, but that the results will be unpredictable.
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">Name</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">Name</span>
 </code></pre></div>
 <p>introduces a new namespace called <code>Name</code> relative to the current space.
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">EndNamespace</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">EndNamespace</span>
 </code></pre></div>
 <p>terminates the definition of the current namespace. Subsequent statements and function bodies are processed in the context of the original space.</p>
 <p>It is imperative that at least ONE namespace be specified.</p>
 <p>All functions specified between the <code>:Namespace</code> and <code>:EndNamespace</code> statements are fixed in that namespace. Similarly, all assignments define variables inside that namespace.</p>
 <p>The following example illustrates how APL namespace usage is handled in APLScript. The program, contained in the file <code>eg3.apl</code>, is as follows:
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">N</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">N</span>
 <span class="nf">⎕LX</span><span class="kd">←</span><span class="s1">'N.RUN'</span>
 
 <span class="bp">∇</span><span class="nv">RUN</span>
@@ -78896,7 +78896,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

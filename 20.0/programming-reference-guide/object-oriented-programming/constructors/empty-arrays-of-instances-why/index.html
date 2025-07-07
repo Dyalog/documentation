@@ -78707,7 +78707,7 @@
 <h1 class="heading"><span class="name">Empty Arrays of Instances: Why?</span></h1>
 
 <p>In APL it is natural to use <em>arrays</em> of Instances. For example, consider the following example.
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Cheese</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Cheese</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Field</span><span class="w"> </span><span class="nv">Public</span><span class="w"> </span><span class="nv">Name</span><span class="kd">←</span><span class="s1">''</span>
 <span class="w">    </span><span class="bp">:</span><span class="nv">Field</span><span class="w"> </span><span class="nv">Public</span><span class="w"> </span><span class="nv">Strength</span><span class="kd">←</span><span class="no">⍬</span>
 <span class="w">    </span><span class="bp">∇</span><span class="w"> </span><span class="nv">make2</span><span class="p">(</span><span class="nv">name</span><span class="w"> </span><span class="nv">strength</span><span class="p">)</span>
@@ -78728,28 +78728,28 @@
 <span class="bp">:</span><span class="nv">EndClass</span>
 </code></pre></div>
 <p>We might create an array of Instances of the Cheese Class as follows:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">cdata</span><span class="kd">←</span><span class="p">(</span><span class="s1">'Camembert'</span><span class="w"> </span><span class="m">5</span><span class="p">)(</span><span class="s1">'Caephilly'</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="s1">'Mild Cheddar'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">cdata</span><span class="kd">←</span><span class="p">(</span><span class="s1">'Camembert'</span><span class="w"> </span><span class="m">5</span><span class="p">)(</span><span class="s1">'Caephilly'</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="s1">'Mild Cheddar'</span>
 <span class="w">      </span><span class="nv">cheeses</span><span class="kd">←</span><span class="kt">{</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="nv">Cheese</span><span class="w"> </span><span class="bp">⍵</span><span class="kt">}</span><span class="na">¨</span><span class="nv">cdata</span>
 </code></pre></div>
 <p>Suppose we want a range of medium-strength cheese for our cheese board.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">board</span><span class="kd">←</span><span class="p">(</span><span class="nv">cheeses</span><span class="na">.</span><span class="nv">Strength</span><span class="o">&lt;</span><span class="m">3</span><span class="p">)</span><span class="na">/</span><span class="nv">cheeses</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">board</span><span class="kd">←</span><span class="p">(</span><span class="nv">cheeses</span><span class="na">.</span><span class="nv">Strength</span><span class="o">&lt;</span><span class="m">3</span><span class="p">)</span><span class="na">/</span><span class="nv">cheeses</span>
 <span class="w">      </span><span class="nv">board</span><span class="na">.</span><span class="nv">Name</span>
 <span class="w"> </span><span class="nv">Caephilly</span><span class="w">  </span><span class="nv">Mild</span><span class="w"> </span><span class="nv">Cheddar</span><span class="w"> </span>
 </code></pre></div>
 <p>But look what happens when we try to select really strong cheese:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">board</span><span class="kd">←</span><span class="p">(</span><span class="nv">cheeses</span><span class="na">.</span><span class="nv">Strength</span><span class="o">&gt;</span><span class="m">5</span><span class="p">)</span><span class="na">/</span><span class="nv">cheeses</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">board</span><span class="kd">←</span><span class="p">(</span><span class="nv">cheeses</span><span class="na">.</span><span class="nv">Strength</span><span class="o">&gt;</span><span class="m">5</span><span class="p">)</span><span class="na">/</span><span class="nv">cheeses</span>
 <span class="w">      </span><span class="nv">board</span><span class="na">.</span><span class="nv">Name</span>
 <span class="nv">The</span><span class="w"> </span><span class="nv">cat</span><span class="w"> </span><span class="nv">ate</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">last</span><span class="w"> </span><span class="nv">one</span><span class="o">!</span>
 </code></pre></div>
 <p>Note that this message is not the result of the expression, but was explicitly displayed by the <code>make_excuse</code> function. The clue to this behaviour is the shape of <code>board</code>; it is empty!
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">board</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⍴</span><span class="nv">board</span>
 <span class="m">0</span>
 </code></pre></div>
 <p>When a reference is made to an empty array of Instances (strictly speaking, a reference that requires a <em>prototype</em>), APL creates a new Instance by calling the <em>niladic</em> (default) Constructor, uses the new Instance to satisfy the reference, and then discards it. Hence, in this example, the reference:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">board</span><span class="na">.</span><span class="nv">Name</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">board</span><span class="na">.</span><span class="nv">Name</span>
 </code></pre></div>
 <p>caused APL to run the <em>niladic</em> Constructor <code>make_excuse</code>, which displayed:
-</p><div class="highlight"><pre><span></span><code><span class="nv">The</span><span class="w"> </span><span class="nv">cat</span><span class="w"> </span><span class="nv">ate</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">last</span><span class="w"> </span><span class="nv">one</span><span class="o">!</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">The</span><span class="w"> </span><span class="nv">cat</span><span class="w"> </span><span class="nv">ate</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">last</span><span class="w"> </span><span class="nv">one</span><span class="o">!</span>
 </code></pre></div>
 <p>Notice that the behaviour of empty arrays of Instances is modelled VERY closely after the behaviour of empty arrays in general. In particular, the Class designer is given the task of deciding what the types of the members of the prototype are.</p>
 <p>The full explanation is given in the <a href="../empty-arrays-of-instances-how/">next topic</a>.</p>
@@ -78782,7 +78782,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

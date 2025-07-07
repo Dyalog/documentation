@@ -78807,23 +78807,23 @@
 <h2 id="web-page-layout">Web Page Layout</h2>
 <p>An ASP.NET Web Page typically consists of a mixture of HTML and code written in a scripting language. The script code is separated from the HTML by being embedded within <script> and </script> tags and normally appears in the </p>  section of the page. Only one block of script is allowed in a page. The script block normally consists of a collection of functions, which are invoked by some event on the page, or on an element of the page.
 <p><code>APLScript</code> code starts with a statement:
-</p><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nv">script</span><span class="w"> </span><span class="nv">language</span><span class="o">=</span><span class="s2">"Dyalog"</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="nv">server</span><span class="o">&gt;</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nv">script</span><span class="w"> </span><span class="nv">language</span><span class="o">=</span><span class="s2">"Dyalog"</span><span class="w"> </span><span class="nv">runat</span><span class="o">=</span><span class="nv">server</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>and finishes with:
-</p><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="na">/</span><span class="nv">script</span><span class="o">&gt;</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="o">&lt;</span><span class="na">/</span><span class="nv">script</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>Typically, the APLScript code consists of callback functions that are attached to server-side events on the page.</p>
 <p>For further information, see <a href="../../implementation-details/asp-net-configuration-file/">The web.config file</a>.</p>
 <h2 id="web-service-layout">Web Service Layout</h2>
 <p>The first line in a Web Service script must be a declaration statement such as:
-</p><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="err">%</span><span class="na">@</span><span class="w"> </span><span class="nv">WebService</span><span class="w"> </span><span class="nv">Language</span><span class="o">=</span><span class="s2">"Dyalog"</span><span class="w"> </span><span class="nv">Class</span><span class="o">=</span><span class="s2">"ServiceName"</span><span class="w"> </span><span class="err">%</span><span class="o">&gt;</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="o">&lt;</span><span class="err">%</span><span class="na">@</span><span class="w"> </span><span class="nv">WebService</span><span class="w"> </span><span class="nv">Language</span><span class="o">=</span><span class="s2">"Dyalog"</span><span class="w"> </span><span class="nv">Class</span><span class="o">=</span><span class="s2">"ServiceName"</span><span class="w"> </span><span class="err">%</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>where <code>ServiceName</code> is an arbitrary name that identifies your Web Service.</p>
 <p>The next statement must be a <code>:Class</code> statement that declares the name of the Web Service and its Base Class from which it inherits. The base class will normally be <code>System.Web.Services.WebService</code>. For example:
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">ServiceName</span><span class="bp">:</span><span class="w"> </span><span class="nv">System</span><span class="na">.</span><span class="nv">Web</span><span class="na">.</span><span class="nv">Services</span><span class="na">.</span><span class="nv">WebService</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">ServiceName</span><span class="bp">:</span><span class="w"> </span><span class="nv">System</span><span class="na">.</span><span class="nv">Web</span><span class="na">.</span><span class="nv">Services</span><span class="na">.</span><span class="nv">WebService</span>
 </code></pre></div>
 <p>The last line in the script must be:
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">EndClass</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">EndClass</span>
 </code></pre></div>
 <p>Although it may appear awkward to have to specify the name of your Web Service twice, this is necessary because the two statements are being processed quite separately by different software components. The first statement is processed by ASP.NET. When it sees <code>Language="Dyalog"</code>, it then calls the Dyalog <code>APLScript</code> compiler, passing it the remainder of the script file. The <code>:Class</code> statement tells the <code>APLScript</code> compiler the name of the Web Service and its base class. <code>:Class</code> and <code>:EndClass</code> statements are private directives to the <code>APLScript</code> compiler and are not relevant to ASP.NET.</p>
 <h2 id="how-aplscript-is-processed-by-aspnet">How APLScript is processed by ASP.NET</h2>
@@ -78863,7 +78863,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

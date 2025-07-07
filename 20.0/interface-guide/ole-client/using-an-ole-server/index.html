@@ -78706,10 +78706,10 @@
 
 <p>You can access an OLE Automation Server (also known as COM Server) using the OLEClient object. When you create an OLEClient, you specify the name of the Server as the ClassName property for the object.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nv">EX</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="s1">'OLEClient'</span><span class="w"> </span><span class="p">(</span><span class="o">⊂</span><span class="s1">'ClassName'</span><span class="w"> </span><span class="s1">'Excel.Application'</span><span class="p">)</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">    </span><span class="nv">EX</span><span class="kd">←</span><span class="nf">⎕NEW</span><span class="w"> </span><span class="s1">'OLEClient'</span><span class="w"> </span><span class="p">(</span><span class="o">⊂</span><span class="s1">'ClassName'</span><span class="w"> </span><span class="s1">'Excel.Application'</span><span class="p">)</span>
 </code></pre></div>
 <p>or, using <code>⎕WC</code></p>
-<div class="highlight"><pre><span></span><code><span class="w">   </span><span class="s1">'EX'</span><span class="nf">⎕WC</span><span class="s1">'OLEClient'</span><span class="w"> </span><span class="s1">'Excel.Application'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">   </span><span class="s1">'EX'</span><span class="nf">⎕WC</span><span class="s1">'OLEClient'</span><span class="w"> </span><span class="s1">'Excel.Application'</span>
 </code></pre></div>
 <p>The effect of both statements is to create an object <code>EX</code>, which is connected to an instance of the of the Excel.Application Class, an OLE Server. The OLE Server instance may be <em>in-process</em> or <em>out-of-process</em>. If it is in-process, the code and data associated with the instance are loaded into the same address space as the Dyalog APL process. In the latter case, the instance represents a separate Windows process on your computer or, on an entirely different computer in the network.</p>
 <p>When APL connects to an out-of-process OLE Server in this way, you can specify whether you wish to connect to an existing (running) instance of the Server, or start a new copy of the Server. This is done using the InstanceMode property.</p>
@@ -78742,7 +78742,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

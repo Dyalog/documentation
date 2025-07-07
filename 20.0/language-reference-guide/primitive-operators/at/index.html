@@ -78841,34 +78841,34 @@
 <p>The result <code>R</code> is the same as <code>Y</code> but with the items specified by <code>g</code> substituted or modified by <code>f</code>.</p>
 <h2 id="examples-array-array">Examples (array @ array)</h2>
 <p>Replace the 2nd and 4th items of <code>⍳5</code>:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="na">@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="o">⍳</span><span class="m">5</span><span class="w">   </span><span class="c1">⍝ [^1]</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="na">@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="o">⍳</span><span class="m">5</span><span class="w">   </span><span class="c1">⍝ [^1]</span>
 <span class="m">1</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">5</span>
 
 <span class="w">      </span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="na">@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="o">⍳</span><span class="m">5</span>
 <span class="m">1</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">5</span>
 </code></pre></div>
 <p>Replace the 2nd and 4th items  of nested vector with <code>⍬</code>:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="o">⊂</span><span class="no">⍬</span><span class="p">)</span><span class="na">@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">⍳</span><span class="na">¨</span><span class="o">⍳</span><span class="m">5</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="o">⊂</span><span class="no">⍬</span><span class="p">)</span><span class="na">@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">⍳</span><span class="na">¨</span><span class="o">⍳</span><span class="m">5</span>
 <span class="err">┌─┬┬─────┬┬─────────┐</span>
 <span class="err">│</span><span class="m">1</span><span class="err">││</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="err">││</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="err">│</span>
 <span class="err">└─┴┴─────┴┴─────────┘</span>
 </code></pre></div>
 <p>Replace the 2nd and 4th rows (major cells) of a matrix:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="p">)(</span><span class="na">@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">12</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="o">⍴</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="p">)(</span><span class="na">@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">12</span>
 <span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="m">2</span><span class="w">  </span><span class="m">3</span>
 <span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">10</span>
 <span class="w"> </span><span class="m">7</span><span class="w">  </span><span class="m">8</span><span class="w">  </span><span class="m">9</span>
 <span class="m">20</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">20</span>
 </code></pre></div>
 <p>Replace first and last elements with 0 using Choose Indexing:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="m">0</span><span class="na">@</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="p">))</span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">12</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="m">0</span><span class="na">@</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="p">))</span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">12</span>
 <span class="w"> </span><span class="m">0</span><span class="w">  </span><span class="m">2</span><span class="w"> </span><span class="m">3</span>
 <span class="w"> </span><span class="m">4</span><span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">6</span>
 <span class="w"> </span><span class="m">7</span><span class="w">  </span><span class="m">8</span><span class="w"> </span><span class="m">9</span>
 <span class="m">10</span><span class="w"> </span><span class="m">11</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <p>Replace nested items using Reach Indexing:
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="nv">G</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="nv">G</span>
 <span class="err">┌───────┬───────┬───────┐</span>
 <span class="err">│┌───┬─┐│┌───┬─┐│┌───┬─┐│</span>
 <span class="err">││</span><span class="nv">ABC</span><span class="err">│</span><span class="m">1</span><span class="err">│││</span><span class="nv">DEF</span><span class="err">│</span><span class="m">2</span><span class="err">│││</span><span class="nv">GHI</span><span class="err">│</span><span class="m">3</span><span class="err">││</span>
@@ -78895,25 +78895,25 @@
 </code></pre></div>
 <h2 id="examples-function-array">Examples (function @ array)</h2>
 <p>Replace the 2nd and 4th items of <code>⍳5</code> with their reciprocals:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">÷</span><span class="na">@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">⍳</span><span class="m">5</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">÷</span><span class="na">@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">⍳</span><span class="m">5</span>
 <span class="m">1</span><span class="w"> </span><span class="m">0.5</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">0.25</span><span class="w"> </span><span class="m">5</span>
 </code></pre></div>
 <p>Replace the 2nd and 4th items of <code>⍳5</code> with their reversal:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⌽</span><span class="na">@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">⍳</span><span class="m">5</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⌽</span><span class="na">@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">⍳</span><span class="m">5</span>
 <span class="m">1</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">5</span>
 </code></pre></div>
 <p>Multiply the 2nd and 4th items of <code>⍳5</code> by 10:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">10</span><span class="o">×</span><span class="na">@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="o">⍳</span><span class="m">5</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">10</span><span class="o">×</span><span class="na">@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="o">⍳</span><span class="m">5</span>
 <span class="m">1</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">40</span><span class="w"> </span><span class="m">5</span>
 </code></pre></div>
 <p>Replace the 2nd and 4th items by their totals:
-</p><div class="highlight"><pre><span></span><code><span class="w">       </span><span class="o">+</span><span class="na">/¨@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">⍳</span><span class="na">¨</span><span class="o">⍳</span><span class="m">5</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">       </span><span class="o">+</span><span class="na">/¨@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">⍳</span><span class="na">¨</span><span class="o">⍳</span><span class="m">5</span>
 <span class="err">┌─┬─┬─────┬──┬─────────┐</span>
 <span class="err">│</span><span class="m">1</span><span class="err">│</span><span class="m">3</span><span class="err">│</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="err">│</span><span class="m">10</span><span class="err">│</span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="err">│</span>
 <span class="err">└─┴─┴─────┴──┴─────────┘</span>
 </code></pre></div>
 <p>Replace the 2nd and 4th rows (major cells) of a matrix with their accumulatives:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="o">+</span><span class="na">\@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">12</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="o">+</span><span class="na">\@</span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="o">⍴⍳</span><span class="m">12</span>
 <span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="m">2</span><span class="w">  </span><span class="m">3</span>
 <span class="w"> </span><span class="m">4</span><span class="w">  </span><span class="m">9</span><span class="w"> </span><span class="m">15</span>
 <span class="w"> </span><span class="m">7</span><span class="w">  </span><span class="m">8</span><span class="w">  </span><span class="m">9</span>
@@ -78921,11 +78921,11 @@
 </code></pre></div>
 <h2 id="examples-array-function">Examples (array @ function)</h2>
 <p>Replace odd elements with 0:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="m">0</span><span class="na">@</span><span class="p">(</span><span class="m">2</span><span class="na">∘</span><span class="o">|</span><span class="p">)</span><span class="o">⍳</span><span class="m">5</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">0</span><span class="na">@</span><span class="p">(</span><span class="m">2</span><span class="na">∘</span><span class="o">|</span><span class="p">)</span><span class="o">⍳</span><span class="m">5</span>
 <span class="m">0</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <p>Replace multiples of 3 (note              that masked items are substituted in ravel order):
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'abcde'</span><span class="na">@</span><span class="kt">{</span><span class="m">0</span><span class="o">=</span><span class="m">3</span><span class="o">|</span><span class="bp">⍵</span><span class="kt">}</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">16</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'abcde'</span><span class="na">@</span><span class="kt">{</span><span class="m">0</span><span class="o">=</span><span class="m">3</span><span class="o">|</span><span class="bp">⍵</span><span class="kt">}</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">4</span><span class="o">⍴⍳</span><span class="m">16</span>
 <span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="m">2</span><span class="w">  </span><span class="nv">a</span><span class="w">  </span><span class="m">4</span>
 <span class="w"> </span><span class="m">5</span><span class="w">  </span><span class="nv">b</span><span class="w">  </span><span class="m">7</span><span class="w">  </span><span class="m">8</span>
 <span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">11</span><span class="w">  </span><span class="nv">d</span>
@@ -78939,11 +78939,11 @@
 </code></pre></div>
 <h2 id="examples-function-function">Examples (function @ function)</h2>
 <p>Replace odd elements with their reciprocals:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">÷</span><span class="na">@</span><span class="p">(</span><span class="m">2</span><span class="na">∘</span><span class="o">|</span><span class="p">)</span><span class="o">⍳</span><span class="m">5</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">÷</span><span class="na">@</span><span class="p">(</span><span class="m">2</span><span class="na">∘</span><span class="o">|</span><span class="p">)</span><span class="o">⍳</span><span class="m">5</span>
 <span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">0.3333333333</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">0.2</span>
 </code></pre></div>
 <p>Replace odd items of <code>⍳5</code> with themselves reversed:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">⌽</span><span class="na">@</span><span class="p">(</span><span class="m">2</span><span class="na">∘</span><span class="o">|</span><span class="p">)</span><span class="o">⍳</span><span class="m">5</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">⌽</span><span class="na">@</span><span class="p">(</span><span class="m">2</span><span class="na">∘</span><span class="o">|</span><span class="p">)</span><span class="o">⍳</span><span class="m">5</span>
 <span class="m">5</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <div class="footnote">
@@ -78983,7 +78983,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

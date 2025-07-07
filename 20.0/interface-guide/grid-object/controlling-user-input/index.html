@@ -78889,14 +78889,14 @@
 <h2 id="updating-cell-data">Updating Cell Data</h2>
 <p>You can change the entire contents of the Grid by resetting its Values property with <code>⎕WS</code>. However, this will causes the entire Grid to be redrawn and is not to be recommended if you only want to change one cell or just a few cells.</p>
 <p>You can change the value in a particular cell by using <code>⎕NQ</code> to send a CellChange event to the Grid. For example, if you want to alter the value in row 2 column 3 of the Grid object called <code>Test.G</code> to 42, you simply execute the following statement :
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'Test.G'</span><span class="w"> </span><span class="s1">'CellChange'</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">42</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'Test.G'</span><span class="w"> </span><span class="s1">'CellChange'</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">42</span>
 </code></pre></div>
 <p>To update an entire row or column of data you can use the RowChange and ColChange events. For example, to change all 12 columns of row 500 to the 12-element vector <code>TOTAL</code>, you could execute :
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'Test.G'</span><span class="w"> </span><span class="s1">'RowChange'</span><span class="w"> </span><span class="m">500</span><span class="w"> </span><span class="nv">TOTAL</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'Test.G'</span><span class="w"> </span><span class="s1">'RowChange'</span><span class="w"> </span><span class="m">500</span><span class="w"> </span><span class="nv">TOTAL</span>
 </code></pre></div>
 <h2 id="deleting-rows-and-columns">Deleting Rows and Columns</h2>
 <p>You can delete a row or column by using <code>⎕NQ</code> to send a DelRow or DelCol message to the Grid object. For example, the following statement deletes the 123rd row from the Grid object <code>Test.G</code>. Note that if you have specified it, the corresponding element of RowTitles is removed too.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'Test.G'</span><span class="w"> </span><span class="s1">'DelRow'</span><span class="w"> </span><span class="m">123</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'Test.G'</span><span class="w"> </span><span class="s1">'DelRow'</span><span class="w"> </span><span class="m">123</span>
 </code></pre></div>
 <h2 id="inserting-rows-and-columns">Inserting Rows and Columns</h2>
 <p>You can insert or add a row or column using the AddRow or AddCol method. You must specify the following information.</p>
@@ -78931,7 +78931,7 @@
 <p>The undo flag indicates whether or not the insertion will be added to the undo stack and may therefore be subsequently undone. Its default value is 1.</p>
 <p>If the data in the Grid is entirely numeric, the new row or column will be filled with zeros. If not, it will be filled with empty character vectors. If you want to set the row or column data explicitly, you should invoke the ChangeRow or ChangeCol immediately after the AddRow or AddCol event. The ChangeRow and ChangeCol event require just the row or column number followed by the new data.</p>
 <p>The following example adds a new row entitled "Chateau Latour" to a  Grid object called <code>Test.G</code>. The first statement adds a new row between rows 122 and 123 (it becomes row 123) of the Grid. It will be of default height (or the same as all the other rows) and the change may not be undone (the undo flag is 0). The second statement sets the data in the new row to the values defined by the vector <code>LATOUR_SALES</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'Test.G'</span><span class="w"> </span><span class="s1">'AddRow'</span><span class="w"> </span><span class="m">123</span><span class="w"> </span><span class="s1">'Chateau Latour'</span><span class="w"> </span><span class="m">¯1</span><span class="w"> </span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'Test.G'</span><span class="w"> </span><span class="s1">'AddRow'</span><span class="w"> </span><span class="m">123</span><span class="w"> </span><span class="s1">'Chateau Latour'</span><span class="w"> </span><span class="m">¯1</span><span class="w"> </span><span class="m">0</span>
 <span class="w">      </span><span class="nf">⎕NQ</span><span class="w"> </span><span class="s1">'Test.G'</span><span class="w"> </span><span class="s1">'ChangeRow'</span><span class="w"> </span><span class="m">123</span><span class="w"> </span><span class="nv">LATOUR_SALES</span>
 </code></pre></div>
 
@@ -78963,7 +78963,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

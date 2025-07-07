@@ -78824,10 +78824,10 @@
 <p>It is possible to define and use new .NET classes within an <code>APLScript</code>.</p>
 <p>A class is defined by <code>:Class</code> and <code>:EndClass</code> statements. The methods provided by the class are defined as function bodies enclosed within these statements. Please see the Language Reference for a complete discussion of writing classes in Dyalog. This chapter will only provide a brief introduction to the subject, aimed specifically at APLScript.</p>
 <p>You may also define sub-classes or nested classes using nested <code>:Class</code> and <code>:EndClass</code> statements.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Name</span><span class="bp">:</span><span class="w"> </span><span class="nv">Type</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Name</span><span class="bp">:</span><span class="w"> </span><span class="nv">Type</span>
 </code></pre></div>
 <p>Declares a new class called <code>Name</code>, which is based upon the Base Class <code>Type</code>, which may be any valid .NET Class.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">EndClass</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">EndClass</span>
 </code></pre></div>
 <p>Terminates a class definition block</p>
 <p>A class specified in this way will automatically support the methods, properties and events that it inherits from its Base Class, together with any new public methods that you care to specify.</p>
@@ -78836,23 +78836,23 @@
 <h2 id="exporting-functions-as-web-methods">Exporting Functions as Web Methods</h2>
 <p>Within a <code>:Class</code> definition block, you may define private functions and public functions. A public function is one that is exposed as a method and may be called by a client that creates an instance of your class. Public functions must have a section of <em>declaration</em> statements. Other functions are purely internal to the class and are not directly accessible by a client application.</p>
 <p>The declaration statements for public functions perform the same task for an <code>APLScript</code> that is performed using the .NET Properties dialog box, or by executing SetMethodInfo in the Dyalog Session, prior to creating a .NET assembly. The following declaration statements may be used.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
 </code></pre></div>
 <p>Specifies that the function is callable. This statement applies only to a .NET class or to a Web Page and is not applicable to a Web Service.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">WebMethod</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">WebMethod</span>
 </code></pre></div>
 <p>Specifies that the function is callable as a Web Method. This statement applies only to a Web Service (.asmx). From version 11.0, the statement is equivalent to:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">Public</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">Attribute</span><span class="w"> </span><span class="nv">System</span><span class="na">.</span><span class="nv">Web</span><span class="na">.</span><span class="nv">Services</span><span class="na">.</span><span class="nv">WebMethodAttribute</span>
 <span class="w">      </span><span class="bp">:</span><span class="nv">Implements</span><span class="w"> </span><span class="nv">Constructor</span>
 </code></pre></div>
 <p>Specifies that the function is a constructor for a new .NET class. This function must appear between <code>:Class</code> and <code>:EndClass</code> statements and this applies only to a Web Page (.aspx). See <em>Defining Classes in</em> <em>APLScript</em> for further details. A constructor is called when you execute the <code>New</code> method in the class.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">result</span><span class="kd">←</span><span class="nv">fn</span><span class="w"> </span><span class="nv">type1</span><span class="w"> </span><span class="nv">Name1</span><span class="o">,</span><span class="w"> </span><span class="nv">type2</span><span class="w"> </span><span class="nv">Name2</span><span class="o">,</span><span class="na">..</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">result</span><span class="kd">←</span><span class="nv">fn</span><span class="w"> </span><span class="nv">type1</span><span class="w"> </span><span class="nv">Name1</span><span class="o">,</span><span class="w"> </span><span class="nv">type2</span><span class="w"> </span><span class="nv">Name2</span><span class="o">,</span><span class="na">..</span>
 </code></pre></div>
 <p>Declares the result of the method to have a given data type, if any. It also declares parameters to the method to have given data types and names. <code>Namex</code> is optional and may be any well-formed name that identifies the parameter. This name will appear in the metadata and is made available to a client application as information. It is therefore sensible to choose meaningful names. The names you allocate to parameters have no other meaning and are not associated with the names of local variables that you may choose to receive them. However, it is not a bad idea to use the same local names as the public names of your parameters.</p>
 <h2 id="a-net-class-example">A .NET Class example</h2>
 <p>The following APLScript illustrates how you may create a .NET Class using APLScript. The example class is the same as <em>Example 1</em> in Chapter 5. The APLScript code, saved in the file <code>samples\aplclasses\aplclasses6.apl</code>, is as follows:
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">APLClasses</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">APLClasses</span>
 
 <span class="w">    </span><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Primitives</span><span class="bp">:</span><span class="w"> </span><span class="nv">Object</span>
 <span class="w">        </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="o">,⊂</span><span class="s1">'System'</span>
@@ -78877,7 +78877,7 @@
 <p>Now click <em>Debug/Start Without debugging</em> (or press Ctrl+F5) to run the program. The results are shown in a console window.</p>
 <p><img alt="" src="../../img/aplclasses6-3.png"></p>
 <p>This .NET Class can also be called from APL just like any other. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CLEAR</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CLEAR</span>
 <span class="nv">clear</span><span class="w"> </span><span class="nv">ws</span>
 
 <span class="w">       </span><span class="s1">'APLClasses, D:\aplclasses\aplclasses6\framework\bin\aplclasses6.dll'</span>
@@ -78888,7 +78888,7 @@
 </code></pre></div>
 <h2 id="defining-properties">Defining Properties</h2>
 <p>Properties are defined by <code>:Property</code> and <code>:EndProperty</code> statements. A property pertains to the class in which it is defined.
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Property</span><span class="w"> </span><span class="nv">Name</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Property</span><span class="w"> </span><span class="nv">Name</span>
 <span class="w">     </span><span class="bp">∇</span><span class="w"> </span><span class="nv">C</span><span class="kd">←</span><span class="nv">get</span>
 <span class="sr">[</span><span class="m">1</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Access</span><span class="w"> </span><span class="nv">public</span>
 <span class="sr">[</span><span class="m">2</span><span class="sr">]</span><span class="w">   </span><span class="bp">:</span><span class="nv">Signature</span><span class="w"> </span><span class="nv">Double</span><span class="kd">←</span><span class="nv">get</span>
@@ -78896,14 +78896,14 @@
 <span class="w">     </span><span class="bp">∇</span>
 </code></pre></div>
 <p>Declares a new property called <code>Name</code> whose data type is <code>System.Double.</code> The latter may be any valid .NET type which can be located through <code>⎕USING</code>.
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">EndProperty</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">EndProperty</span>
 </code></pre></div>
 <p>Terminates a property definition block</p>
 <p>Within a <code>:Property</code> block, you must define the <em>accessors</em> of the property. The accessors specify the code that is associated with referencing and assigning the value of the property. No other function definitions or statements are allowed inside a <code>:Property</code> block.</p>
 <p>The accessor used to reference the value of the property is represented by a function named <code>get</code> that is defined within the <code>:Property</code> block. The accessor used to assign a value to the property is represented by a function named <code>set</code> that is defined within the <code>:Property</code> block.</p>
 <p>The <code>get</code> function is used to retrieve the value of the property and must be a niladic result returning function. The data type of its result determines the <code>Type</code> of the property. The <code>set</code> function is used to change the value of the property and must be a monadic function with no result. The argument to the function will have a data type <code>Type</code> specified by the <code>:Signature</code> statement. A property that contains a <code>get</code> function but no <code>set</code> function is effectively a read-only property.</p>
 <p>The following APLScript, saved in the file <code>samples\aplclasses\aplclasses7.apl</code>, shows how a property called <code>IndexOrigin</code> can be added to the previous example. Within the <code>:Property</code> block there are two functions defined called <code>get</code> and <code>set</code> which are used to reference and assign a new value respectively. These functions have the fixed names and syntax specified for <em>property get</em> and <em>property set</em> functions as described above.
-</p><div class="highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">APLClasses</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="bp">:</span><span class="nv">Namespace</span><span class="w"> </span><span class="nv">APLClasses</span>
 
 <span class="w">    </span><span class="bp">:</span><span class="nv">Class</span><span class="w"> </span><span class="nv">Primitives</span><span class="bp">:</span><span class="w"> </span><span class="nv">Object</span>
 <span class="w">        </span><span class="nf">⎕USING</span><span class="kd">←</span><span class="o">,⊂</span><span class="s1">'System'</span>
@@ -78941,7 +78941,7 @@
 <p>Now click <em>Debug/Start Without debugging</em> (or press Ctrl+F5) to run the program. The results are shown in a console window.</p>
 <p><img alt="" src="../../img/aplclasses7-3.png"></p>
 <p>This .NET Class can also be called from APL just like any other. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CLEAR</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">)</span><span class="nv">CLEAR</span>
 <span class="nv">clear</span><span class="w"> </span><span class="nv">ws</span>
 
 <span class="w">      </span><span class="s1">'APLClasses, D:\aplclasses\aplclasses7\framework\bin\aplclasses7.dll'</span>
@@ -78988,7 +78988,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

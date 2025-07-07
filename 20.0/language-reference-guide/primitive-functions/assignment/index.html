@@ -78868,7 +78868,7 @@
 <p>If <code>X</code> contains a single name, the variable assumes the value of <code>Y</code>. If <code>X</code> contains multiple names then <code>Y</code> can be a single-item array of any rank (including a scalar) or  a vector. If <code>Y</code> is a single-item array, the scalar value <code>⊃Y</code> is assigned to all names in <code>X</code>. Otherwise, each element of <code>Y</code> is assigned to the corresponding name in <code>X</code>.  Although not mandatory, Dyalog recommends that the names in <code>X</code> are enclosed in parentheses to reduce potential ambiguity in assignment statements.</p>
 <p>The assignment arrow (or specification arrow) is often read as 'Is' or 'Gets'.</p>
 <h2 id="examples-of-single-assignment">Examples of single assignment</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="m">2.3</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">A</span><span class="kd">←</span><span class="m">2.3</span>
 <span class="w">      </span><span class="nv">A</span>
 <span class="m">2.3</span>
 
@@ -78877,7 +78877,7 @@
 <span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span>
 </code></pre></div>
 <h2 id="examples-of-multiple-assignment-using-parentheses">Examples of multiple assignment using parentheses</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">A</span><span class="w"> </span><span class="nv">B</span><span class="p">)</span><span class="kd">←</span><span class="m">2</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="nv">A</span><span class="w"> </span><span class="nv">B</span><span class="p">)</span><span class="kd">←</span><span class="m">2</span>
 <span class="w">      </span><span class="nv">A</span>
 <span class="m">2</span>
 <span class="w">      </span><span class="nv">B</span>
@@ -78892,7 +78892,7 @@
 <span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span>
 </code></pre></div>
 <h2 id="example-of-multiple-assignment-without-parentheses">Example of multiple assignment without parentheses</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">year</span><span class="w"> </span><span class="nv">month</span><span class="w"> </span><span class="nv">day</span><span class="kd">←</span><span class="m">2017</span><span class="w"> </span><span class="m">05</span><span class="w"> </span><span class="m">24</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">year</span><span class="w"> </span><span class="nv">month</span><span class="w"> </span><span class="nv">day</span><span class="kd">←</span><span class="m">2017</span><span class="w"> </span><span class="m">05</span><span class="w"> </span><span class="m">24</span>
 <span class="w">      </span><span class="nv">day</span>
 <span class="m">24</span>
 <span class="w">      </span><span class="nv">month</span>
@@ -78902,14 +78902,14 @@
 </code></pre></div>
 <p>Implementation note: erroneous expressions such as <code>var 3←5</code> will result in <code>5</code> being assigned to <code>var</code>, even though a <code>SYNTAX ERROR</code> will be generated. In the case of <code>(var 3)←5</code> no assignment will be made.</p>
 <p>Pass-through assignments are permitted. The value of <code>Y</code> is carried through each assignment:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">I</span><span class="kd">←</span><span class="nv">J</span><span class="kd">←</span><span class="nv">K</span><span class="kd">←</span><span class="m">0</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">I</span><span class="kd">←</span><span class="nv">J</span><span class="kd">←</span><span class="nv">K</span><span class="kd">←</span><span class="m">0</span>
 <span class="w">      </span><span class="nv">I</span><span class="o">,</span><span class="nv">J</span><span class="o">,</span><span class="nv">K</span>
 <span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <h2 id="function-assignment">Function Assignment</h2>
 <p>If <code>Y</code> is a function expression, <code>X</code> must be a single name which is either undefined, or is the name of an existing function or defined operator. <code>X</code> may not be the name of a system function, or a primitive symbol.</p>
 <h2 class="example">Examples</h2>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">PLUS</span><span class="kd">←</span><span class="o">+</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">PLUS</span><span class="kd">←</span><span class="o">+</span>
 <span class="w">      </span><span class="nv">PLUS</span>
 <span class="o">+</span>
 
@@ -78921,7 +78921,7 @@
 </code></pre></div>
 <h2 id="namespace-reference-assignment">Namespace Reference Assignment</h2>
 <p>If an expression evaluates to a namespace reference, or <em>ref</em>, you may assign it to a name. A name assigned to a simple scalar <em>ref</em>, has name class 9, whereas one assigned to an <em>array</em> containing <em>refs</em> has name class 2.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'f1'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="s1">'f1'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span>
 <span class="w">      </span><span class="s1">'ns1'</span><span class="w"> </span><span class="nf">⎕NS</span><span class="w"> </span><span class="s1">''</span>
 
 <span class="w">      </span><span class="nv">N</span><span class="kd">←</span><span class="nv">ns1</span>
@@ -79009,7 +79009,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

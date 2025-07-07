@@ -79095,20 +79095,20 @@
 <p>Note that in the following examples, the reason for expunging the name first is discussed in the section headed Rebinding a Variable.</p>
 <h2 id="binding-a-character-vector">Binding a Character Vector</h2>
 <p>This example illustrates how to bind a variable which contains a character vector.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'txtSource'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'txtSource'</span>
 <span class="w">      </span><span class="nv">txtSource</span><span class="kd">←</span><span class="nv">HELLO</span><span class="w"> </span><span class="nv">WORLD</span><span class="s1">'</span>
 <span class="s1">      bindsource←2015⌶'</span><span class="nv">txtSource</span><span class="err">'</span>
 </code></pre></div>
 <p>In this example, the binding type of the variable <code>txtSource</code> will be System.String, suitable for binding to any property that accepts a String, such as the Text property of a <code>TextBox</code>.</p>
 <h2 id="binding-a-numeric-scalar">Binding a Numeric Scalar</h2>
 <p>This example illustrates how to bind a variable which contains a numeric scalar value.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'sizeSource'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'sizeSource'</span>
 <span class="w">      </span><span class="nv">sizeSource</span><span class="kd">←</span><span class="m">36</span>
 <span class="w">      </span><span class="nv">bindSource</span><span class="kd">←</span><span class="nv">Int32</span><span class="p">(</span><span class="m">2015</span><span class="na">⌶</span><span class="p">)</span><span class="s1">'sizeSource'</span>
 </code></pre></div>
 <p>In this example, the left argument <code>Int32</code> specifies that the binding type for the variable sizeSource is to be System.Int32. This means that whenever APL passes the value of <code>sizeSource</code> to the control, it will first be cast to an Int32. This makes it suitable, for example, for binding to the FontSize property of a TextBox.</p>
 <p>A number of controls have a Value property which must be expressed as a System.Double. The next example shows how to create a Binding Source for such a variable.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'valSource'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'valSource'</span>
 <span class="w">      </span><span class="nv">valSource</span><span class="kd">←</span><span class="m">42</span>
 <span class="w">      </span><span class="nv">bindSource</span><span class="kd">←</span><span class="nv">Double</span><span class="p">(</span><span class="m">2015</span><span class="na">⌶</span><span class="p">)</span><span class="s1">'valSource'</span>
 </code></pre></div>
@@ -79117,25 +79117,25 @@
 <h2 id="binding-a-vector-of-character-vectors">Binding a Vector of Character Vectors</h2>
 <p>WPF data binding provides the means to bind controls that display lists of items, such as the ListBox, ListView, and TreeView controls, to collections of data. These controls are all based upon the ItemsControl class. To bind an ItemsControl to a collection object, you use its ItemsSource property.</p>
 <p>This example illustrates how to bind a variable which contains a vector of character vectors.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'itemsSource'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'itemsSource'</span>
 <span class="w">      </span><span class="nv">itemsSource</span><span class="kd">←</span><span class="s1">'beer'</span><span class="w"> </span><span class="s1">'wine'</span><span class="w"> </span><span class="s1">'water'</span>
 <span class="w">      </span><span class="nv">bindsource</span><span class="kd">←</span><span class="m">2015</span><span class="na">⌶</span><span class="s1">'itemsSource'</span>
 </code></pre></div>
 <p>In this example, the binding type of the variable <code>itemsSource</code> will be System.Collection, suitable for binding to the ItemSource property of an ItemsControl.</p>
 <h3 id="binding-a-numeric-vector">Binding a Numeric Vector</h3>
 <p>By default, a numeric vector is bound in the same way as a vector of character vectors, that is, as a System.Collection, suitable for binding to the ItemSource property of an ItemsControl.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'yearsSource'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'yearsSource'</span>
 <span class="w">      </span><span class="nv">yearsSource</span><span class="kd">←</span><span class="m">2000</span><span class="o">+⍳</span><span class="m">20</span>
 <span class="w">      </span><span class="nv">bindSource</span><span class="kd">←</span><span class="m">2015</span><span class="na">⌶</span><span class="s1">'yearsSource'</span>
 </code></pre></div>
 <p>In principle, a numeric vector may alternatively be bound to a WPF property that requires a 1-dimensional numeric array, by specifying the appropriate data type (for example, Int32, Double) for the array as the left argument. For example:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'arraySource'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="s1">'arraySource'</span>
 <span class="w">      </span><span class="nv">arraySource</span><span class="kd">←</span><span class="m">42</span><span class="w"> </span><span class="m">24</span>
 <span class="w">      </span><span class="nv">bindSource</span><span class="kd">←</span><span class="nv">Int32</span><span class="w"> </span><span class="p">(</span><span class="m">2015</span><span class="na">⌶</span><span class="p">)</span><span class="s1">'arraySource'</span>
 </code></pre></div>
 <h3 id="binding-a-vector-of-net-objects">Binding a Vector of .NET Objects</h3>
 <p>A vector of .NET objects is bound in the same way as a vector of character vectors, that is, as a System.Collection, suitable for binding to the ItemSource property of an ItemsControl.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="nv">Easter</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="o">↑</span><span class="nv">Easter</span>
 <span class="m">2015</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">12</span>
 <span class="m">2016</span><span class="w"> </span><span class="m">5</span><span class="w">  </span><span class="m">1</span>
 <span class="m">2017</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">16</span>
@@ -79150,17 +79150,17 @@
 <span class="w">      </span><span class="nv">bindSource</span><span class="kd">←</span><span class="m">2015</span><span class="na">⌶</span><span class="s1">'dt'</span>
 </code></pre></div>
 <p>Note that, as a specific optimisation for binding DateTime data, it is not necessary to create <code>DateTime</code> objects in the workspace. Instead, the data may be represented by 7-element integer vectors (<code>⎕TS</code> format) or character strings that can be parsed by the DateTime.Parse(String) method.  However, in both cases it is necessary to explicitly specify the binding type to force the data to be converted to <code>DateTime</code>, as illustrated by the following examples:
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">TSEaster</span><span class="kd">←</span><span class="m">7</span><span class="o">↑</span><span class="na">¨</span><span class="nv">Easter</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">TSEaster</span><span class="kd">←</span><span class="m">7</span><span class="o">↑</span><span class="na">¨</span><span class="nv">Easter</span>
 <span class="w">      </span><span class="nv">bindSource</span><span class="kd">←</span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">2015</span><span class="na">⌶</span><span class="p">)</span><span class="w"> </span><span class="s1">'TSEaster'</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">CharEaster</span><span class="kd">←</span><span class="s1">'2015/4/12'</span><span class="w"> </span><span class="s1">'2016/5/1'</span><span class="w"> </span><span class="s1">'2017/4/16'</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">CharEaster</span><span class="kd">←</span><span class="s1">'2015/4/12'</span><span class="w"> </span><span class="s1">'2016/5/1'</span><span class="w"> </span><span class="s1">'2017/4/16'</span>
 <span class="w">      </span><span class="nv">bindSource</span><span class="kd">←</span><span class="nv">DateTime</span><span class="w"> </span><span class="p">(</span><span class="m">2015</span><span class="na">⌶</span><span class="p">)</span><span class="w"> </span><span class="s1">'CharEaster'</span>
 </code></pre></div>
 <h4 id="binding-a-matrix">Binding a Matrix</h4>
 <p>If the bind variable is a matrix, it is bound in a similar way to a vector of namespaces and is discussed below.</p>
 <h3 id="rebinding-a-variable">Rebinding a Variable</h3>
 <p>As mentioned earlier, when a variable is bound its binding type is stored with it in the workspace. If you subsequently attempt to rebind the variable there is no mechanism in place to alter the binding type. If the current binding type (whether specified by the left argument <code>X</code>, or by being the default) differs from the saved one, the function will generate a <code>DOMAIN ERROR</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">num</span><span class="kd">←</span><span class="m">42</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">num</span><span class="kd">←</span><span class="m">42</span>
 <span class="w">      </span><span class="nv">bs</span><span class="kd">←</span><span class="m">2015</span><span class="na">⌶</span><span class="s1">'num'</span>
 
 <span class="w">      </span><span class="nv">bs</span><span class="kd">←</span><span class="s1">'Int32'</span><span class="p">(</span><span class="m">2015</span><span class="na">⌶</span><span class="p">)</span><span class="s1">'num'</span>
@@ -79169,7 +79169,7 @@
 <span class="w">     </span><span class="o">∧</span>
 </code></pre></div>
 <p>In this example, perhaps the programmer realised after binding <code>num</code> (with a default binding type of System.Object) that the binding type should really be System.Int32, and simply was trying to correct the error. To avoid this problem, it is recommended that you expunge the name before using it.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="w"> </span><span class="s1">'num'</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nf">⎕EX</span><span class="w"> </span><span class="s1">'num'</span>
 <span class="w">      </span><span class="nv">num</span><span class="kd">←</span><span class="m">42</span>
 <span class="w">      </span><span class="nv">bs</span><span class="kd">←</span><span class="m">2015</span><span class="na">⌶</span><span class="s1">'num'</span><span class="c1">⍝ (default) binding type System.Object</span>
 
@@ -79183,7 +79183,7 @@
 <h4 class="example">Example</h4>
 
 <p>The following code snippet binds a namespace containing two variables named <code>txtSource</code> and <code>sizeSource</code>. In this case, the name of each variable may be specified as the Path for a WPF property that requires a String or an Int32. For example, if bindSource were assigned to the DataContext property of a TextBox, its Text property could be bound to <code>txtSource</code> and its FontSize property to <code>sizeSource</code>.
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">src</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="s1">''</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">src</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="s1">''</span>
 <span class="w">      </span><span class="nv">src</span><span class="na">.</span><span class="nv">txtSource</span><span class="kd">←</span><span class="s1">'Hello World'</span>
 <span class="w">      </span><span class="nv">src</span><span class="na">.</span><span class="nv">sizeSource</span><span class="kd">←</span><span class="m">36</span>
 <span class="w">      </span><span class="nv">options</span><span class="kd">←</span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="o">⍴</span><span class="s1">'txtSource'</span><span class="nv">String</span><span class="s1">'sizeSource'</span><span class="nv">Int32</span>
@@ -79193,7 +79193,7 @@
 <p>In this case, <code>Y</code> specifies the name of a variable that contains a vector of refs to namespaces. In this case, the result <code>R</code> is of type Dyalog.Data.DataBoundCollectionHandler which is suitable for binding to a WPF property that requires  an IEnumerable implementation, such as the  ItemsSource property of the DataGrid.</p>
 <p>Each namespace in <code>Y</code> represents one of a collection of  instances of an object, which exports a particular set of properties for binding purposes. For example, <code>Y</code> could specify a wine database where each namespace represents a different wine, and each namespace contains the same set of variables that contain the name, price (and so forth) of each wine.</p>
 <h4 class="example">Example</h4>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nv">winelist</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="na">¨</span><span class="p">(</span><span class="o">⍴</span><span class="nv">Wines</span><span class="p">)</span><span class="o">⍴⊂</span><span class="s1">''</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w"> </span><span class="nv">winelist</span><span class="kd">←</span><span class="nf">⎕NS</span><span class="na">¨</span><span class="p">(</span><span class="o">⍴</span><span class="nv">Wines</span><span class="p">)</span><span class="o">⍴⊂</span><span class="s1">''</span>
 <span class="w"> </span><span class="nv">winelist</span><span class="na">.</span><span class="nv">Name</span><span class="kd">←</span><span class="nv">Wines</span>
 <span class="w"> </span><span class="nv">winelist</span><span class="na">.</span><span class="nv">Price</span><span class="kd">←</span><span class="m">0.01</span><span class="o">×</span><span class="m">10000</span><span class="o">+?</span><span class="p">(</span><span class="o">⍴</span><span class="nv">Wines</span><span class="p">)</span><span class="o">⍴</span><span class="m">10000</span>
 
@@ -79209,13 +79209,13 @@
 <h4 class="example">Example</h4>
 
 <p><code>mat</code> is a matrix of numbers and is bound with default property/column names <code>Column1</code>, <code>Column2</code>, ... <code>Column10</code> and the default data type of <code>System.Object</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mat</span><span class="kd">←</span><span class="o">?</span><span class="m">20</span><span class="w"> </span><span class="m">10</span><span class="o">⍴</span><span class="m">100</span>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">mat</span><span class="kd">←</span><span class="o">?</span><span class="m">20</span><span class="w"> </span><span class="m">10</span><span class="o">⍴</span><span class="m">100</span>
 <span class="w">      </span><span class="nv">bindSource</span><span class="kd">←</span><span class="m">2015</span><span class="na">⌶</span><span class="s1">'mat'</span>
 </code></pre></div>
 <h4 class="example">Example</h4>
 
 <p><code>winelist</code> is a matrix whose first column contains a list of wines, and whose second column their prices. The left argument is a matrix. Its first column specifies the property names by which the columns will be exported (<code>'Name'</code> and <code>'Price'</code>) and its second column, their data types (<code>System.Object</code>)
-</p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nv">winelist</span><span class="kd">←</span><span class="nv">Wines</span><span class="o">,</span><span class="sr">[</span><span class="m">1.5</span><span class="sr">]</span><span class="m">0.01</span><span class="o">×</span><span class="m">10000</span><span class="o">+?</span><span class="p">(</span><span class="o">⍴</span><span class="nv">Wines</span><span class="p">)</span><span class="o">⍴</span><span class="m">10000</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w"> </span><span class="nv">winelist</span><span class="kd">←</span><span class="nv">Wines</span><span class="o">,</span><span class="sr">[</span><span class="m">1.5</span><span class="sr">]</span><span class="m">0.01</span><span class="o">×</span><span class="m">10000</span><span class="o">+?</span><span class="p">(</span><span class="o">⍴</span><span class="nv">Wines</span><span class="p">)</span><span class="o">⍴</span><span class="m">10000</span>
 <span class="w"> </span><span class="nv">info</span><span class="kd">←</span><span class="p">(</span><span class="o">⍪</span><span class="s1">'Name'</span><span class="w"> </span><span class="s1">'Price'</span><span class="p">)</span><span class="o">,⊂</span><span class="nv">Object</span>
 
 <span class="w"> </span><span class="nv">bindSource</span><span class="kd">←</span><span class="nv">info</span><span class="p">(</span><span class="m">2015</span><span class="na">⌶</span><span class="p">)</span><span class="s1">'winelist'</span>
@@ -79223,7 +79223,7 @@
 <h4 class="example">Example</h4>
 
 <p><code>emp</code> is a 3-column matrix which contains names,  numbers and  addresses. Each address is made up of two character vectors containing street and town
-</p><div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nv">emp</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">emp</span>
 <span class="err">┌───────────────────┬──────────────────┬────────────────────┐</span>
 <span class="err">│</span><span class="nv">John</span><span class="w"> </span><span class="nv">Smith</span><span class="w">         </span><span class="err">│</span><span class="nv">Mary</span><span class="w"> </span><span class="nv">White</span><span class="w">        </span><span class="err">│</span><span class="nv">T</span><span class="na">.</span><span class="nv">W</span><span class="na">.</span><span class="w"> </span><span class="nv">Penk</span><span class="w">           </span><span class="err">│</span>
 <span class="err">├───────────────────┼──────────────────┼────────────────────┤</span>
@@ -79344,7 +79344,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

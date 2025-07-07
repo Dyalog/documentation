@@ -78849,10 +78849,10 @@
 <h2 id="workspace-management">Workspace Management</h2>
 <p>By default, the Dyalog APL DLL does not use a fixed maximum workspace size, but automatically increases the size of its active workspace as required. If you write a run-away COM object, or if there is insufficient computer memory available to load a new control, it is left to the host application or to Windows itself to deal with the situation.</p>
 <p>Nevertheless, it is possible to specify a value for <strong>maxws</strong> for the application in which the Dyalog APL DLL is embedded. This is achieved by defining a Registry key named:
-</p><div class="highlight"><pre><span></span><code><span class="nv">HKLM</span><span class="na">\</span><span class="nv">Software</span><span class="na">\</span><span class="nv">Dyalog</span><span class="na">\</span><span class="nv">Embedded</span><span class="na">\</span><span class="o">&lt;</span><span class="nv">appname</span><span class="o">&gt;</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">HKLM</span><span class="na">\</span><span class="nv">Software</span><span class="na">\</span><span class="nv">Dyalog</span><span class="na">\</span><span class="nv">Embedded</span><span class="na">\</span><span class="o">&lt;</span><span class="nv">appname</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>or on 64-bit Windows:
-</p><div class="highlight"><pre><span></span><code><span class="nv">HKLM</span><span class="na">\</span><span class="nv">Software</span><span class="na">\</span><span class="nv">Wow6432Node</span><span class="na">\</span><span class="nv">Dyalog</span><span class="na">\</span><span class="nv">Embedded</span><span class="na">\</span><span class="o">&lt;</span><span class="nv">appname</span><span class="o">&gt;</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="nv">HKLM</span><span class="na">\</span><span class="nv">Software</span><span class="na">\</span><span class="nv">Wow6432Node</span><span class="na">\</span><span class="nv">Dyalog</span><span class="na">\</span><span class="nv">Embedded</span><span class="na">\</span><span class="o">&lt;</span><span class="nv">appname</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>where <code>&lt;appname&gt;</code> is the name of the application, containing a String Value named <code>maxws</code> set to the desired size. If you were running an APL in-process server from Microsoft Excel, the application name would be <code>excel.exe</code>.</p>
 <p>When an application loads its first Dyalog APL COM object, it starts the Dyalog APL DLL which initialises a <code>CLEAR WS</code>. It then copies the namespace tree for the appropriate OLEServer or ActiveXControl object into its active workspace.</p>
@@ -78901,7 +78901,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   

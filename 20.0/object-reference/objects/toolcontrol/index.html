@@ -78720,7 +78720,7 @@
 <p>Unlike the <a href="../toolbar/">ToolBar</a>, the ToolControl fully determines the positioning of its children automatically and this is governed by their order of creation. The Posn property of any child of a ToolControl is therefore read-only. Furthermore, the height of objects in a ToolControl may be no greater than that of a <a href="../toolbutton/">ToolButton</a> in the same ToolControl. This in turn is governed by the sizes of the <a href="../../properties/fontobj/">FontObj</a> and <a href="../imagelist/">ImageList</a> in use in that ToolControl. ToolControl objects should be used in preference to <a href="../toolbar/">ToolBar</a> objects.</p>
 <p>If a ToolControl is the child of a <a href="../form/">Form</a>, its position and orientation is defined by its <a href="../../properties/align/">Align</a> property. This property is ignored if the ToolControl is the child of a <a href="../coolband/">CoolBand</a>.</p>
 <p>The overall appearance of the <a href="../toolbutton/">ToolButton</a> objects displayed by the ToolControl is defined by the <a href="../../properties/style/">Style</a> property of the ToolControl itself, rather than by individual <a href="../toolbutton/">ToolButtons</a>. This may be <code>'Buttons'</code>, <code>'FlatButtons'</code>, <code>'List'</code> or <code>'FlatList'</code>.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: FlatButtons Style (default)'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">40</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: FlatButtons Style (default)'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">40</span><span class="p">)</span>
 <span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span>
 
 <span class="s1">'F.TB.IL'</span><span class="nf">⎕WC</span><span class="s1">'ImageList'</span><span class="p">(</span><span class="s1">'Masked'</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
@@ -78733,17 +78733,17 @@
 </code></pre></div>
 <p><img alt="" src="../../img/tool1.gif"></p>
 <p><img alt="" src="../../img/tool2.gif">
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Buttons'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'Buttons'</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="" src="../../img/tool3.gif">
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'FlatList'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'FlatList'</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="" src="../../img/tool4.gif">
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'List'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'List'</span><span class="p">)</span>
 </code></pre></div>
 <p>The presence or absence of a recessed line drawn above, below, to the left of, or to the right of the ToolControl is controlled by the <a href="../../properties/divider/">Divider</a> property whose default is 1 (show divider).</p>
 <p>The <a href="../../properties/multiline/">MultiLine</a> property specifies whether or not <a href="../toolbutton/">ToolButtons</a> (and other controls) are arranged in several rows (or columns) when there are more than will otherwise fit. If <a href="../../properties/multiline/">MultiLine</a> is 0 (the default), the ToolControl object clips its children and the user must resize it to bring more objects into view.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: MultiLine 0'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">36</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: MultiLine 0'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">36</span><span class="p">)</span>
 <span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span><span class="p">(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'List'</span><span class="p">)</span>
 
 <span class="s1">'F.TB.IL'</span><span class="nf">⎕WC</span><span class="s1">'ImageList'</span><span class="p">(</span><span class="s1">'Masked'</span><span class="w"> </span><span class="m">0</span><span class="p">)(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">24</span><span class="w"> </span><span class="m">24</span><span class="p">)</span>
@@ -78759,10 +78759,10 @@
 </code></pre></div>
 <p><img alt="" src="../../img/tool6.gif"></p>
 <p><img alt="" src="../../img/tool7.gif">
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span><span class="p">(</span><span class="s1">'MultiLine'</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'List'</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span><span class="p">(</span><span class="s1">'MultiLine'</span><span class="w"> </span><span class="m">1</span><span class="p">)(</span><span class="s1">'Style'</span><span class="w"> </span><span class="s1">'List'</span><span class="p">)</span>
 </code></pre></div>
 <p>The <a href="../../properties/transparent/">Transparent</a> property specifies whether or not the ToolControl is transparent. If so, the visual effect is as if the <a href="../toolbutton/">ToolButtons</a> (and other controls) were drawn directly on the parent Form as illustrated below:
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: Transparent 1)'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">40</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl: Transparent 1)'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">40</span><span class="p">)</span>
 <span class="s1">'F.BM'</span><span class="nf">⎕WC</span><span class="s1">'Bitmap'</span><span class="w"> </span><span class="s1">'C:\WINDOWS\WINLOGO'</span>
 <span class="s1">'F'</span><span class="nf">⎕WS</span><span class="s1">'Picture'</span><span class="w"> </span><span class="s1">'F.BM'</span><span class="w"> </span><span class="m">1</span>
 
@@ -78781,7 +78781,7 @@
 <p>The <a href="../../properties/buttonsacceptfocus/">ButtonsAcceptFocus</a> property determines how the ToolControl responds to the Tab and cursor movement keys.</p>
 <p>As a special case, the ToolControl may contain a <a href="../menubar/">MenuBar</a> as its <strong>only</strong> child. In this case, Dyalog APL causes the menu items to be drawn as buttons as shown below.</p>
 <p>Although nothing is done to prevent it, the use of other objects in a ToolControl containing a <a href="../menubar/">MenuBar</a>, is not supported.
-</p><div class="highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl with MenuBar'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">40</span><span class="p">)</span>
+</p><div class="language-apl highlight"><pre><span></span><code><span class="s1">'F'</span><span class="nf">⎕WC</span><span class="s1">'Form'</span><span class="w"> </span><span class="s1">'ToolControl with MenuBar'</span><span class="p">(</span><span class="s1">'Size'</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">40</span><span class="p">)</span>
 <span class="s1">'F.TB'</span><span class="nf">⎕WC</span><span class="s1">'ToolControl'</span>
 
 <span class="bp">:</span><span class="nv">With</span><span class="w"> </span><span class="s1">'F.TB.MB'</span><span class="nf">⎕WC</span><span class="s1">'MenuBar'</span>
@@ -78829,7 +78829,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:03c9007116).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
+      Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-2025 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (2025-07-07 main:75ab9ab125).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
     </div>
   
   
