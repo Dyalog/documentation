@@ -5,7 +5,7 @@ def hashSame = null
 pipeline {
     agent {
         // Change to 'swarm && gosport for live server'
-        label 'swarm && bramley'
+        label 'swarm && gosport'
     }
 
     options {
@@ -34,10 +34,10 @@ pipeline {
 
     environment {
         GITHUB_REPO = 'https://github.com/dyalog/documentation.git'
-        WEB_ROOT    = '/swarm/docs20web/'
-        WEB_URL     = 'docs20web.bramley.dyalog.com'
+        WEB_ROOT    = '/DockerVolumes/websites/docs.dyalog.com/'
+        WEB_URL     = 'docs.dyalog.com'
         HASH_SAME   = 'unknown'  // Prevent undefined variable issues
-        SWARM_NAME  = "Docs20Web"
+        SWARM_NAME  = "docsweb"
     }
 
     stages {
@@ -183,15 +183,16 @@ pipeline {
                         exit 1
                     fi 
 
+                    ## Force docs/20.0 so we don't overwrite older versions
                     if [ -d "${WEB_ROOT}" ]; then
-                        rm -rf "${WEB_ROOT}"/*
+                        rm -rf "${WEB_ROOT}"/20.0/*
                         rm -rf "${WEB_ROOT}"/.[^.]*  2>/dev/null || true
                     else
-                        mkdir -p "${WEB_ROOT}"
+                        mkdir -p "${WEB_ROOT}/20.0"
                     fi
                     
                     echo "Syncing content from ${WORKSPACE} to ${WEB_ROOT}/"
-                    rsync -rl --delete --exclude-from="${WORKSPACE}/.rsync-exclude" "${WORKSPACE}/" "${WEB_ROOT}/"
+                    rsync -rl --delete --exclude-from="${WORKSPACE}/.rsync-exclude" "${WORKSPACE}/20.0" "${WEB_ROOT}"
                     
                     echo "Storing new git hash (${LATEST_HASH})."
                     echo "${LATEST_HASH}" | tee "${WEB_ROOT}/.git-hash" >/dev/null
@@ -226,7 +227,7 @@ pipeline {
                     set -euo pipefail
                     echo "Verifying deployment at ${WEB_ROOT}..."
 
-                    if ! test -f "${WEB_ROOT}/index.html"; then
+                    if ! test -f "${WEB_ROOT}/20.0/index.html"; then
                         echo "ERROR: Verification failed - index.html not found in ${WEB_ROOT}."
                         exit 1
                     fi
