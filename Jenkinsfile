@@ -93,7 +93,7 @@ pipeline {
         {
             agent {
                 // Change to 'swarm && gosport for live server'
-                label 'swarm && bramley'
+                label 'swarm && gosport'
             }
             stages {
 
