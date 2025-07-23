@@ -115,10 +115,10 @@ pipeline {
 
                 stage('Get files from svn/docbin') {
                     steps {
-                        dir("site/${env.DOCSVERSION}/files") { // Remove files directory to ensure we start with a clean sheet
+                        dir("${env.DOCSVERSION}/files") { // Remove files directory to ensure we start with a clean sheet
                             deleteDir()
                         }
-                        dir("site/${env.DOCSVERSION}") {
+                        dir("${env.DOCSVERSION}") {
                             doSvnCheckout(SVNDOCURL, "files", true, 'svncom')
                             doSvnCheckout(SVNSHARPPLOTURL, "files/sharpplot", true, 'svncom')
                             sh '''$WORKSPACE/get_svn_docbin ${DOCSVERSION}'''
