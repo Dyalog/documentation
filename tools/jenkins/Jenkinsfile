@@ -39,10 +39,11 @@ pipeline {
         GITDOCURL       = 'documentation'
 
         SVNDOCURL       = "docbin/trunk/documentation"
+        SVNREADMEURL    = "dyalog/branches/20.0/svn/docs/readmes"
         SVNSHARPPLOTURL = "dyalogtools/Causeway/trunk/release"
 
-        SVNDOCDIR = 'svn_docs'
-        GITDOCDIR = 'git_docs'
+        SVNDOCDIR       = 'svn_docs'
+        GITDOCDIR       = 'git_docs'
     }
 
     stages {
@@ -113,7 +114,7 @@ pipeline {
                     }
                 }
 
-                stage('Get files from svn/docbin') {
+                stage('Get files from svn/docbin etc') {
                     steps {
                         dir("${env.DOCSVERSION}/files") { // Remove files directory to ensure we start with a clean sheet
                             deleteDir()
@@ -121,6 +122,7 @@ pipeline {
                         dir("${env.DOCSVERSION}") {
                             doSvnCheckout(SVNDOCURL, "files", true, 'svncom')
                             doSvnCheckout(SVNSHARPPLOTURL, "files/sharpplot", true, 'svncom')
+                            doSvnCheckout(SVNREADMEURL, "files/readmes")
                             sh '''$WORKSPACE/get_svn_docbin ${DOCSVERSION}'''
                         }
                     }
