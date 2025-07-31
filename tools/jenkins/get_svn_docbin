@@ -29,6 +29,9 @@ Exit ()
 FILESDIR="files"
 SHARPPLOTDIR="./sharpplot"		# Relative to $FILESDIR
 SHARPPLOTCHM="sharpplot.chm"
+READMEDIR="./readmes"
+SETUPREADME="setup_readme.htm"
+DYALOGREADME="dyalog_readme.htm"
 FILELISTFILE="./filelist.txt"
 
 TMPFILE="$(basename $0).$$"
@@ -37,17 +40,23 @@ TMPFILELIST="$TMPFILE.filelist.$$"
 [ $# -ne 1 ] && Exit 1 "Usage: $0 version"
 VERSION=$1
 
-# 1. move sharplot.chm up one level and delete .svn and sharpplot directories
-echo "Move sharpplot.chm up one level and remove .svn and sharpplot directories .."
+# 1. move sharplot.chm up one level and delete .svn, readmes and sharpplot directories
+echo "Move sharplot.chm, setup_readme and dyalog_readme  up one level and delete .svn, readmes and sharpplot directories .."
 cd $FILESDIR || Exit 2 "Unable to cd to $FILESDIR after exporting from svn"
 [ ! -f $SHARPPLOTDIR/$SHARPPLOTCHM ] && Exit 2 "No $SHARPPLOTDIR/$SHARPPLOTCHM file exists; bailing"
+[ ! -f $READMEDIR/$SETUPREADME ] && Exit 2 "No $READMEDIR/$SETUPREADME file exists; bailing"
+[ ! -f $READMEDIR/$DYALOGREADME ] && Exit 2 "No $READMEDIR/$DYALOGREADME file exists; bailing"
 [ ! -f $FILELISTFILE ] && Exit 2 "No $FILELISTFILE; bailing"
-mv $SHARPPLOTDIR/$SHARPPLOTCHM .
-rm -rf .svn $SHARPPLOTDIR
+mv $SHARPPLOTDIR/$SHARPPLOTCHM $READMEDIR/$SETUPREADME $READMEDIR/$DYALOGREADME.
+rm -rf .svn $SHARPPLOTDIR $READMEDIR
 
 # 2. Sanity check: all files in the file list should be present
 echo "Check that all files in filelist are present .."
-echo "./$SHARPPLOTCHM\tweb" >>$FILELISTFILE	# a bit of a kludge, but simplifies things below
+# We have to cope with $SHARPPLOTCHM, $SETUPREADME and $DYALOGREADME.  The simplest way is to add them to
+# $FILELISTFILE at this point ..
+echo "./$SHARPPLOTCHM\tweb" >>$FILELISTFILE
+echo "./$SETUPREADME\tweb" >>$FILELISTFILE
+echo "./$DYALOGREADME\tweb" >>$FILELISTFILE
 egrep -v "^#|^$|^[ 	]*$" $FILELISTFILE >$TMPFILE && mv $TMPFILE $FILELISTFILE
 [ 0 -eq $(wc -l $FILELISTFILE | awk '{print $1}') ] && Exit 2 "$FILELISTFILE is empty"
 
