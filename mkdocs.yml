@@ -70,16 +70,18 @@ markdown_extensions:
 nav:
   - Conventions: conventions.md
   - Release Notes: "!include ./release-notes/mkdocs.yml"
-  - Windows Installation: "!include ./windows-installation-and-configuration-guide/mkdocs.yml"
-  - UNIX Installation: "!include ./unix-installation-and-configuration-guide/mkdocs.yml"
-  - Programmer's Guide: "!include ./programming-reference-guide/mkdocs.yml"
-  - Language Reference: "!include ./language-reference-guide/mkdocs.yml"
-  - Object Reference: "!include ./object-reference/mkdocs.yml"
-  - Windows UI Guide: "!include ./windows-ui-guide/mkdocs.yml"
-  - Interface Guide: "!include ./interface-guide/mkdocs.yml"
-  - .NET Framework Interface: "!include ./dotnet-framework-interface/mkdocs.yml"
-  - UNIX User Guide: "!include ./unix-user-guide/mkdocs.yml"
+  - Core documents:
+    - Programmer's Guide: "!include ./programming-reference-guide/mkdocs.yml"
+    - Language Reference: "!include ./language-reference-guide/mkdocs.yml"
+  - Dyalog for Microsoft Windows:
+    - Installation: "!include ./windows-installation-and-configuration-guide/mkdocs.yml"
+    - UI Guide: "!include ./windows-ui-guide/mkdocs.yml"
+    - Object Reference: "!include ./object-reference/mkdocs.yml"
+    - Interface Guide: "!include ./interface-guide/mkdocs.yml"
+    - .NET Framework Interface: "!include ./dotnet-framework-interface/mkdocs.yml"
+  - UNIX:
+    - User Guide: "!include ./unix-user-guide/mkdocs.yml"
+    - Installation: "!include ./unix-installation-and-configuration-guide/mkdocs.yml"
   - Earlier Release Notes: "!include ./earlier-release-notes/mkdocs.yml"
   - Licences for third-party components: licences-overview.md
   - Trademarks: trademarks.md
-  
