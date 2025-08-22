@@ -19,6 +19,9 @@ body {
 .md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4 {
   color: var(--dyalog-body-text-color);
 }
+.md-typeset h1 code, .md-typeset h2 code, .md-typeset h3 code, .md-typeset h4 code {
+    font-size: inherit;
+}
 
 .example {
     font-variant-caps: all-small-caps;
@@ -49,6 +52,10 @@ code, .command, .Dyalog {
     height: 1.2rem !important;
 }
 
+.md-typeset img {
+    vertical-align: text-bottom;
+}
+
 @media screen and (max-width: 76.1875em) {
     .md-logo>img {
         width: 10rem !important;
@@ -70,6 +77,10 @@ th, td {
     border: 1px solid #eee;
     padding: 4px !important;
     text-align: left;
+}
+
+.md-typeset table th, .md-typeset table td {
+    font-size: 0.8rem;
 }
 
 /* Style the heading container for the Language Reference */
