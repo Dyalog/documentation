@@ -23,7 +23,7 @@ This is a mkdocs _monorepo_, using the Spotify [monorepo](https://github.com/bac
 
 ### Central Styles and Assets Submodule
 
-Dyalog documentation uses the [Dyalog/documentation-styles](https://github.com/Dyalog/documentation-styles) repository as a submodule, included in `documentation-styles/`, to include CSS, fonts and images. Any additions or changes must be merged into that repository.
+Dyalog documentation uses the [Dyalog/documentation-assets](https://github.com/Dyalog/documentation-assets) repository as a submodule, included in `documentation-assets/`, to include CSS, fonts and images. Any additions or changes must be merged into that repository.
 
 Using the [development tools](#tools) ensures that the styles are correctly included while developing, and the [GitHub Action to publish](./.github/workflows/mkdocs-publish.yml) handles them for publication.
 

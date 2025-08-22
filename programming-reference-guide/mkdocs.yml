@@ -1,7 +1,7 @@
 site_name: Programming Reference Guide
 theme:
-  favicon: documentation-styles/images/favicon-32.png
-  logo: documentation-styles/images/dyalog-logo_white.svg
+  favicon: documentation-assets/images/favicon-32.png
+  logo: documentation-assets/images/dyalog-logo_white.svg
   features:
     - navigation.instant
     - navigation.tracking
@@ -11,8 +11,8 @@ theme:
   font:
     text: Be Vietnam Pro
 extra_css:
-  - documentation-styles/css/main.css
-  - documentation-styles/css/extra.css
+  - documentation-assets/css/main.css
+  - documentation-assets/css/extra.css
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6

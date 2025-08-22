@@ -28,8 +28,8 @@ jobs:
         submodules: recursive
         fetch-depth: 0  # Required for mike to work properly
     
-    - name: Update Styles
-      run: git submodule update --remote --recursive documentation-styles
+    - name: Update Assets
+      run: git submodule update --remote --recursive documentation-assets
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -79,7 +79,7 @@ jobs:
 
     - name: Move Styles into docs
       run: |
-        mv documentation-styles docs
+        mv documentation-assets docs
 
     - name: Deploy documentation
       run: |
