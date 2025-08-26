@@ -10,6 +10,8 @@
     --md-default-bg-color: white;
     --md-code-hl-number-color: #797979;
     --dyalog-body-text-color: #232222;
+    --dyalog-brand-color-midnight: #003B5C;
+    --md-accent-fg-color: var(--dyalog-brand-color-midnight);
 }
 
 body {
@@ -21,6 +23,14 @@ body {
 }
 .md-typeset h1 code, .md-typeset h2 code, .md-typeset h3 code, .md-typeset h4 code {
     font-size: inherit;
+}
+
+/* Table of Contents (TOC) section headings */
+ .md-nav__item--section {
+    margin-top: 2em;
+}
+.md-nav .md-nav__item--section > .md-nav__link {
+    color: var(--dyalog-brand-color-midnight);
 }
 
 .example {
@@ -64,17 +74,16 @@ code, .command, .Dyalog {
 }
 
 /* Reduce vertical table spacing, and put in a faint cell border */
-table {
+.md-typeset table:not([class]) {
     border: none;
     border-collapse: collapse;
-    font-size: 1em;
 }
 caption {
     text-wrap: none;
 }
 
 th, td {
-    border: 1px solid #eee;
+    border: 1px solid #bbb;
     padding: 4px !important;
     text-align: left;
 }
