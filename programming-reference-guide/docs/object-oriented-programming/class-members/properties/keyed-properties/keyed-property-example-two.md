@@ -1,6 +1,6 @@
 <h1 class="heading"><span class="name">Example 2</span></h1>
 
-A second example of a Keyed Property is provided by the `KeyedFile` Class which is based upon the [ComponentFile Class](component-file-class-example.md){: .noprint } used previously.
+A second example of a Keyed Property is provided by the `KeyedFile` Class which is based upon the [ComponentFile Class](../component-file-class-example.md){: .noprint } used previously.
 ```apl
 :Class KeyedFile: ComponentFile
     :Field Public Keys

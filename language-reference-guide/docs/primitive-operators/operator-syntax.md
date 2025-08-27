@@ -18,12 +18,6 @@ An operator with its operand(s) forms a derived function. The derived function 
       PLUS ← + ⋄ TIMES ← ×
       1 PLUS.TIMES 2
 2
- 
-      ⎕NL 2
-A
-X
-      ⎕EX¨↓⎕NL 2
-      ⎕NL 2
 ```
 
 ## Monadic Operators

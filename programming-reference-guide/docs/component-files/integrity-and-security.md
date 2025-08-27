@@ -21,3 +21,6 @@ For further information, see `⎕FPROPS` and `⎕FCHK`.
 APL files are treated as normal data files by the operating system, and may be manipulated by any of the standard operating system commands.
 
 Do not use operating system commands to copy, erase or move component files that are tied and in use by an APL session.
+
+!!! Info "Information"
+    Component files that have both journalling and checksum properties set to `0` have been deprecated; from Dyalog v21.0, component files with this combination of properties will be read-only. Dyalog Ltd recommends using `⎕FPROPS` to convert any such files to have different properties. For information on how to identify component files that have both journalling and checksum properties set to `0` in your existing codebase, see the [Release Notes](../../release-notes/announcements/deprecated-functionality.md).

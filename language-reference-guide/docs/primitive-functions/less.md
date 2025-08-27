@@ -1,3 +1,7 @@
+<div style="display: none;">
+  <
+</div>
+
 <h1 class="heading"><span class="name">Less</span> <span class="command">R←X&lt;Y</span></h1>
 
 `Y` may be any numeric array.  `X` may be any numeric array.  `R` is Boolean.  `R` is 1 if `X` is less than `Y` and `X=Y` is 0.  Otherwise `R` is 0.

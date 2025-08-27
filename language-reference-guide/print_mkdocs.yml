@@ -1,7 +1,7 @@
 site_name: Language Reference Guide
 theme:
-  favicon: img/favicon-32.png
-  logo: img/dyalog-logo-2025_white.svg
+  favicon: documentation-assets/images/favicon-32.png
+  logo: documentation-assets/images/dyalog-logo_white.svg
   features:
     - navigation.instant
     - navigation.tracking
@@ -11,9 +11,8 @@ theme:
   font:
     text: Be Vietnam Pro
 extra_css:
-  - style/main.css
-  - style/extra.css
-  - style/admonition-ucmdhelp.css
+  - documentation-assets/css/main.css
+  - documentation-assets/css/extra.css
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -199,9 +198,11 @@ nav:
           - Stencil: primitive-operators/stencil.md
           - Variant: primitive-operators/variant.md
   - I-Beam Operator:
-      - I-Beam: primitive-operators/i-beam.md
+      - I-Beam: the-i-beam-operator/i-beam.md
       - The I-Beam Operator:
           - Inverted Table Index Of: the-i-beam-operator/inverted-table-index-of.md
+          - Log Use of Deprecated Features: the-i-beam-operator/log-use-of-deprecated-features.md
+          - Deprecated Feature Log File: the-i-beam-operator/deprecated-feature-log-file.md
           - Monadic Operator Generator: the-i-beam-operator/monadic-operator-generator.md
           - Execute Expression: the-i-beam-operator/execute-expression.md
           - Generate UUID: the-i-beam-operator/generate-uuid.md
@@ -214,7 +215,6 @@ nav:
           - Serialise/Deserialise Arrays: the-i-beam-operator/serialise-array.md
           - Compiler Control: the-i-beam-operator/compiler-control.md
           - Trap Control: the-i-beam-operator/trap-control.md
-          - Case Convert: the-i-beam-operator/case-convert.md
           - Called Monadically: the-i-beam-operator/called-monadically.md
           - Temporary Directory: the-i-beam-operator/temporary-directory.md
           - Loaded Libraries: the-i-beam-operator/loaded-libraries.md
@@ -253,6 +253,7 @@ nav:
           - Send Text to RIDE-embedded Browser: the-i-beam-operator/send-text-to-ride-embedded-browser.md
           - Connected to the RIDE: the-i-beam-operator/connected-to-the-ride.md
           - Manage RIDE: the-i-beam-operator/manage-ride-connections.md
+          - Scan For Deprecated Files: the-i-beam-operator/scan-for-deprecated-files.md
           - Fork New Task: the-i-beam-operator/fork-new-task.md
           - Change User: the-i-beam-operator/change-user.md
           - Reap Forked Tasks: the-i-beam-operator/reap-forked-tasks.md
@@ -267,8 +268,6 @@ nav:
           - JSON Translate Name: the-i-beam-operator/json-translate-name.md
           - Shell Process Control: the-i-beam-operator/shell-process-control.md
           - Singular Value Decomposition: the-i-beam-operator/singular-value-decomposition.md
-          - Hash Table Size: the-i-beam-operator/hash-table-size.md
-          - Lookup Table Size: the-i-beam-operator/lookup-table-size.md
           - Sample Probability Distribution: the-i-beam-operator/sample-probability-distribution.md
           - Line Count: the-i-beam-operator/line-count.md
           - RIDE and Experimental Features-related I-Beams: the-i-beam-operator/supplementary-i-beam-functions.md
@@ -499,6 +498,5 @@ nav:
           - Workspace Identification: system-commands/wsid.md
           - Load without Latent Expression: system-commands/xload.md
   - Appendices:
-      - Introduction: pcre-specifications/pcre-overview.md
-      - Appendix A Search Pattern syntax summary: pcre-specifications/pcre-regular-expression-syntax-summary.md
-      - PCRE Regular Expression Details: pcre-specifications/pcre-regular-expression-details.md
+    - PCRE Specifications: pcre-specifications.md
+

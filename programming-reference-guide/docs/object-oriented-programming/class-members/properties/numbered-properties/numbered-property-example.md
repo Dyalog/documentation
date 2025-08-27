@@ -1,6 +1,6 @@
 <h1 class="heading"><span class="name">Example</span></h1>
 
-The [ComponentFile Class](component-file-class-example.md){: .noprint }  specifies a Numbered Property named `Component` which represents the contents of a specified component on the file.
+The [ComponentFile Class](../component-file-class-example.md){: .noprint }  specifies a Numbered Property named `Component` which represents the contents of a specified component on the file.
 ```apl
     :Property Numbered Component
     :Access Public Instance

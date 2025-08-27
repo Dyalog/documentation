@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name"> Entering Characters</span></h1>
+<h1 class="heading"><span class="name">Entering Characters</span></h1>
 
 It is necessary to select a metakey which is to be used to enter characters. In this document this metakey is represented by the string "APL". In a terminal window under a Linux GUI Dyalog recommends using the Windows key as the metakey to generate APL characters; with PuTTY and the Unicode IME the <kbd>Ctrl</kbd> key is used (similarly to the Windows Unicode edition of Dyalog APL). For example, in a terminal window <kbd>WindowsKey</kbd>+<kbd>a</kbd>generates an `⍺`; when using PuTTY the same APL character is entered by using <kbd>Ctrl</kbd>+<kbd>a</kbd>. 
 
@@ -15,7 +15,7 @@ Newly-added glyphs are not always added to the keymap (keyboard mapping file) in
 
 The following glyphs are not yet present in the distributed Linux keymap:
 
-- `⍛` (Jot Underbar, Unicode character "APL FUNCTIONAL SYMBOL JOT UNDERBAR"). Used from Dyalog v20.0 for the [_behind_](../../../language-reference-guide/primitive-operators/behind/) operator.
+- `⍛` (Jot Underbar, Unicode character "APL FUNCTIONAL SYMBOL JOT UNDERBAR"). Used from Dyalog v20.0 for the [_behind_](../../language-reference-guide/primitive-operators/behind/) operator.
 
 In this situation, there are several methods in which such glyphs can be typed. For `⍛`, you can do any of the following:
 
@@ -36,5 +36,3 @@ Be aware that:
 
 - there are multiple occurrences of AC04 within the keyboard mapping file – you should only amend the one in the Dyalog APL section.
 - any changes made to the keyboard mapping file might be lost if you update the operating system.
-
- 

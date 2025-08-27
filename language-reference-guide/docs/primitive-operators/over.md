@@ -1,3 +1,7 @@
+<div style="display: none;">
+  ⍥
+</div>
+
 <h1 class="heading"><span class="name">Over</span> <span class="command">{R}←{X}f⍥gY</span></h1>
 
 !!! note "Classic Edition"

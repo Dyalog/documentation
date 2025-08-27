@@ -172,7 +172,7 @@ DOMAIN ERROR: There were errors processing the script
 |`'None'`   |No internal references are inserted and lexical scope does not apply.                                                                                |
 
 
-See [Lexical Scope in Scripts](../../../release-notes-v19-0/introduction/lexical-scope-in-scripts).
+See [Lexical Scope in Scripts](../../../earlier-release-notes/release-notes-v19-0/introduction/lexical-scope-in-scripts).
 
 
 The following examples illustrate how different values of the InjectReferences option affect the scope of objects in scripts. The examples are based on the following family tree:

@@ -39,4 +39,4 @@ As an adjunct to the overall Session Colour Scheme, you may choose to apply a *s
 
 Syntax colouring may be used to highlight the context of names and other elements when the line was entered. For example, you can identify global names and local names by allocating them different colours.
 
-See [Colour Selection Dialog](colour-selection-dialog.md) for further details.
+See [Colour Selection Dialog](../../windows-installation-and-configuration-guide/configuring-the-ide/colour-selection-dialog) for further details.

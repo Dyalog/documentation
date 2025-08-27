@@ -378,55 +378,47 @@ The following creates a dictionary defined by the namespace `dict` using JSON te
 for uses of this dictionary.
 
 ```apl
-      dict_json
-{
-  "Patterns": {
-    "Global": {
-      "ISOweek": "YYYY-'W'ww",
-      "DateCompact": "D-MMM-YYYY",
-      "DateVerbose": "'the date is' DD _mm YYYY"
-    },
-    "fr": {
-      "DateVerbose": "'la date est le' DD mmm YYYY"
-    },
-    "en_US": {
-      "DateVerbose": "'the date is' Mmm DD, YYYY"
-    }
-  },
-  "en_US": {
-    "ShortMonthNames": [
-      "Jan.", "Feb.", "Mar.", "Apr.", "May", "June",
-      "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."
-    ]
-  },
-  "cy": {
-    "MonthNames": [
-      "Ionawr", "Chwefror", "Mawrth", "Ebrill", "Mai", "Mehefin",
-      "Gorffennaf", "Awst", "Medi", "Hydref", "Tachwedd", "Rhagfyr"
-    ],
-    "ShortMonthNames": [
-      "Ion", "Chw", "Maw", "Ebr", "Mai", "Meh",
-      "Gor", "Awst", "Medi", "Hyd", "Tach", "Rhag"
-    ],
-    "WeekdayNames": [
-      "Dydd Sul", "Dydd Llun", "Dydd Mawrth", "Dydd Mercher",
-      "Dydd Iau", "Dydd Gwener", "Dydd Sadwrn"
-    ],
-    "ShortWeekdayNames": [
-      "Sul", "Llun", "Maw", "Mer", "Iau", "Gwen", "Sad"
-    ],
-    "MorningAfternoon": [
-      "yb", "yh"
-    ],
-    "Ordinals": [
-      "af", "il", "ydd", "ydd", "ed", "ed", "fed", "fed", "fed",
-      "fed", "eg", "fed", "eg", "eg", "fed", "eg", "eg", "fed",
-      "eg", "fed", "ain", "ain", "ain", "ain", "ain", "ain",
-      "ain", "ain", "ain", "ain", "ain"
-    ]
-  }
-}
-      dict←⎕JSON dict_json
+dict←(
+  Patterns: (
+    Global: (
+      ISOweek: 'YYYY-"W"ww'
+      DateCompact: 'D-MMM-YYYY'
+      DateVerbose: '"the date is" DD _mm YYYY'
+    )
+    fr: ( DateVerbose: '"la date est le" DD mmm YYYY' )
+    en_US: ( DateVerbose: '"the date is" Mmm DD, YYYY' )
+  )
+  en_US: (
+    ShortMonthNames: (
+      'Jan.' ⋄ 'Feb.' ⋄ 'Mar.' ⋄ 'Apr.' ⋄ 'May' ⋄ 'June'
+      'July' ⋄ 'Aug.' ⋄ 'Sept.' ⋄ 'Oct.' ⋄ 'Nov.' ⋄ 'Dec.'
+    )
+  )
+  cy: (
+    MonthNames: (
+      'Ionawr' ⋄ 'Chwefror' ⋄ 'Mawrth' ⋄ 'Ebrill' ⋄ 'Mai' ⋄ 'Mehefin'
+      'Gorffennaf' ⋄ 'Awst' ⋄ 'Medi' ⋄ 'Hydref' ⋄ 'Tachwedd' ⋄ 'Rhagfyr'
+    )
+    ShortMonthNames: (
+      'Ion' ⋄ 'Chw' ⋄ 'Maw' ⋄ 'Ebr' ⋄ 'Mai' ⋄ 'Meh'
+      'Gor' ⋄ 'Awst' ⋄ 'Medi' ⋄ 'Hyd' ⋄ 'Tach' ⋄ 'Rhag'
+    )
+    WeekdayNames: (
+      'Dydd Sul' ⋄ 'Dydd Llun' ⋄ 'Dydd Mawrth' ⋄ 'Dydd Mercher'
+      'Dydd Iau' ⋄ 'Dydd Gwener' ⋄ 'Dydd Sadwrn'
+    )
+    ShortWeekdayNames: (
+      'Sul' ⋄ 'Llun' ⋄ 'Maw' ⋄ 'Mer' ⋄ 'Iau' ⋄ 'Gwen' ⋄ 'Sad'
+    )
+    MorningAfternoon: ( 'yb' ⋄ 'yh' )
+    Ordinals: (
+      'af' ⋄ 'il' ⋄ 'ydd' ⋄ 'ydd' ⋄ 'ed' ⋄ 'ed' ⋄ 'fed' ⋄ 'fed' ⋄ 'fed'
+      'fed' ⋄ 'eg' ⋄ 'fed' ⋄ 'eg' ⋄ 'eg' ⋄ 'fed' ⋄ 'eg' ⋄ 'eg' ⋄ 'fed'
+      'eg' ⋄ 'fed' ⋄ 'ain' ⋄ 'ain' ⋄ 'ain' ⋄ 'ain' ⋄ 'ain' ⋄ 'ain'
+      'ain' ⋄ 'ain' ⋄ 'ain' ⋄ 'ain' ⋄ 'ain'
+    )
+  )
+)
 ```
 
 ## Note the following

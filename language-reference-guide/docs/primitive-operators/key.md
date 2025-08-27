@@ -1,3 +1,7 @@
+<div style="display: none;">
+  ⌸
+</div>
+
 <h1 class="heading"><span class="name">Key</span> <span class="command">R←{X}f⌸Y</span></h1>
 
 !!! note "Classic Edition"

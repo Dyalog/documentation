@@ -558,7 +558,7 @@ When Dyalog exports JSON it performs the reverse *name mangling*, so:
 
 ```
 
-Should you need to create and decode these names directly,`7162⌶` provides the same name mangling and un-mangling operations. See [JSON Translate Name](../../the-i-beam-operator/json-translate-name.md).
+Should you need to create and decode these names directly,`7162⌶` provides the same name mangling and un-mangling operations. See [JSON Translate Name](../the-i-beam-operator/json-translate-name.md).
 ```apl
       0(7162⌶)'2a'
 ⍙2a

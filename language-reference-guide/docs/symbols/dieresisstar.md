@@ -2,23 +2,13 @@
 search:
   exclude: true
 ---
-
-
-
-
-
 <h1 class="heading"><span class="name">Star Diaeresis</span> <span class="command">⍣</span></h1>
 
+Star Diaeresis is a dyadic operator with an ambivalent left operand and an integer or dyadic right operand
 
-## Star Diaeresis is a Dyadic operator with an ambivalent
-      left operand and an integer or dyadic right operand
-
-## Operator Star Diaeresis means
-
-
-[Power Operator  ](../primitive-operators/power-operator.md)
+Operator Star Diaeresis means
+[Power Operator](../primitive-operators/power-operator.md)
 ```apl
-
       cube    ⍝ 3D array
 AB
 CD
@@ -51,8 +41,6 @@ GH
       1 +∘÷⍣= 1            ⍝ fixpoint: golden mean
 1.61803
 ```
-
-
 [Language Elements](./language-elements.md)
 
 

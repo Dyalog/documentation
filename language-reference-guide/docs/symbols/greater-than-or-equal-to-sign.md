@@ -2,20 +2,11 @@
 search:
   exclude: true
 ---
+<h1 class="heading"><span class="name">Greater Than Or Equal To</span> <span class="command">≥</span></h1>
 
+Monadic Greater Than or Equal To is not defined
 
-
-
-
-<h1 class="heading"><span class="name">Greater Than Or Equal To Sign</span> <span class="command">≥</span></h1>
-
-
-
-Monadic Greater Than or Equal To Sign is not defined
-
-## Dyadic Greater Than or Equal To Sign means
-
-
+Dyadic Greater Than or Equal To means
 [Is Greater Or Equal To](../primitive-functions/greater-or-equal.md)
 ```apl
 
@@ -25,8 +16,6 @@ Monadic Greater Than or Equal To Sign is not defined
 0 1 1
 
 ```
-
-
 [Language Elements](./language-elements.md)
 
 

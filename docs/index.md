@@ -1,6 +1,9 @@
-# Dyalog APL v{{ version_majmin }}
+# Dyalog v{{ version_majmin }}
 
-Welcome! This is the official documentation for Dyalog APL version {{ version_majmin }}. See the     [v20.0 Release Notes](./release-notes/introduction/key-features/) (previous versions: [19.0](https://help.dyalog.com/19.0/#RelNotes19.0/Key%20Features.htm), [18.2](https://help.dyalog.com/18.2/#RelNotes18.2/Key%20Features.htm), [18.0](https://help.dyalog.com/18.0/#RelNotes18.0/Key%20Features.htm)).
+Welcome! This is the documentation for Dyalog v{{ version_majmin }}.
+
+[Dyalog v20.0 Release Notes](./release-notes/introduction.md)  
+Release Notes for supported versions: [Dyalog v19.0](./earlier-release-notes/release-notes-v19-0/introduction/key-features.md) | [Dyalog v18.2](https://help.dyalog.com/18.2/#RelNotes18.2/Key%20Features.htm)
 
 
 <div class="grid cards" markdown>

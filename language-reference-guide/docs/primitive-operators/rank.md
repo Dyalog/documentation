@@ -1,3 +1,7 @@
+<div style="display: none;">
+  ⍤
+</div>
+
 <h1 class="heading"><span class="name">Rank</span> <span class="command">R←{X}(f⍤B)Y</span></h1>
 
 !!! note "Classic Edition"

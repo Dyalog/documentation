@@ -4,7 +4,7 @@ The Session allows multi-line input. This feature is optional and is controlled 
 
 See [Dyalog_LineEditor_Mode.](../../windows-installation-and-configuration-guide/configuration-parameters/dyalog-lineeditor-mode)
 
-On Windows Multi-line input can be enabled and disabled via the checkbox on the Session tab of the configuration parameter: see [Dyalog_LineEditor_Mode](configuration-dialog-session-tab.md).
+On Windows Multi-line input can be enabled and disabled via the checkbox on the Session tab of the configuration parameter: see [Dyalog_LineEditor_Mode](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab).
 
 ## When Multi-line Input is Enabled
 

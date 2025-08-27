@@ -272,6 +272,53 @@ div.admonition.note p:not(.admonition-title) {
     /* Ensures background matches the document */
 }
 
+/* Main admonition container: info (same styling as note) */
+div.admonition.info {
+    border: 1px solid #0D47A1;
+    /* Dark blue border */
+    border-radius: 5px;
+    /* Rounded corners */
+    background-color: transparent;
+    /* Matches the document's background */
+    padding: 0;
+    /* No padding around the outer div */
+    margin: 20px 0;
+    /* Vertical margin for separation */
+    margin-left: 2%;
+    /* Left margin to make the div narrower */
+    margin-right: 2%;
+    /* Right margin to keep the width uniform */
+    color: inherit;
+    /* Inherits text color from the document */
+    width: 96%;
+    /* Makes the admonition box narrower than the body text */
+}
+
+/* Styling for the title within the info admonition */
+div.admonition.info .admonition-title {
+    margin: 0;
+    /* No outer margins to fit the header to the borders */
+    background-color: #E3F2FD;
+    /* Light blue background for the heading */
+    color: #000000;
+    /* Black text for the heading */
+    padding: 5px 20px;
+    /* Reduced vertical padding, kept horizontal padding */
+    border-radius: 5px 5px 0 0;
+    /* Rounded top corners */
+    font-weight: bold;
+}
+
+/* Styling for paragraphs within the info admonition */
+div.admonition.info p:not(.admonition-title) {
+    margin: 0;
+    padding: 10px 20px;
+    /* Padding to prevent content from feeling squashed */
+    line-height: 1.6;
+    background-color: transparent;
+    /* Ensures background matches the document */
+}
+
 /* Collapsible blocks */
 
 details {

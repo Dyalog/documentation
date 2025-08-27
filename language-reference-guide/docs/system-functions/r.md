@@ -132,9 +132,7 @@ With an output stream specified each match is appended to the stream. If any mat
 
 ## Search pattern
 
-A summary of the syntax of the search pattern is reproduced from the PCRE documentation. See [PCRE Regular Expression Syntax Summary](../pcre-specifications/pcre-regular-expression-syntax-summary.md).
-
-A full description is provided in [PCRE Regular Expression Details](../pcre-specifications/pcre-regular-expression-details.md).
+For more information on the syntax of the search pattern, see the [PCRE documentation](../pcre-specifications.md).
 
 There may be multiple search patterns. If more than one search pattern is specified and more than one pattern matches the same part of the input document then priority is given to the pattern specified first.
 

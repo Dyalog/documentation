@@ -1,8 +1,3 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FMT FMT
-</div>
-
 ---
 search:
   exclude: true

@@ -94,12 +94,9 @@
 |[ShowHelp](../methodorevents/showhelp.md)|580|displays the help file associated with an OLE Control|
 |[ShowItem](../methodorevents/showitem.md)|316|displays a particular item in a [TreeView](../objects/treeview.md)|
 |[ShowProperties](../methodorevents/showproperties.md)|560|displays the property sheet associated with an OLE Control|
-|[ShowSIP](../methodorevents/showsip.md)|25|Raise or lowers the *Input Panel* (Pocket APL only)|
 |[TCPGetHostID](../methodorevents/tcpgethostid.md)|376|obtains the IP Address of your PC|
 |[TCPSend](../methodorevents/tcpsend.md)|375|used to send data to a remote process connected to a [TCPSocket](../objects/tcpsocket.md) object|
 |[TCPSendPicture](../methodorevents/tcpsendpicture.md)|380|Transmits a picture represented by a [Bitmap](../objects/bitmap.md) object to a TCP/IP socket|
 |[Undo](../methodorevents/undo.md)|170|reverses last change made to a [Grid](../objects/grid.md) object|
 |[Wait](../methodorevents/wait.md)|147|same as executing `⎕DQ` on the object|
 |[WebSocketSend](../methodorevents/websocketsend.md)|847|sends data to a WebSocket|
-
-

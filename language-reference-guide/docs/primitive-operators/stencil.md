@@ -1,3 +1,7 @@
+<div style="display: none;">
+  ⌺
+</div>
+
 <h1 class="heading"><span class="name">Stencil</span> <span class="command">R←(f⌺g)Y</span></h1>
 
 !!! note "Classic Edition"

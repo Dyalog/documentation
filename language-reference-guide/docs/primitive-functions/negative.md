@@ -1,3 +1,7 @@
+<div style="display: none;">
+  -
+</div>
+
 <h1 id="negative" class="heading"><span class="name">Negative</span> <span class="command">R←-Y</span></h1>
 
 `Y` may be any numeric array. `R` is numeric and is the negative value of `Y`. For complex numbers both the real and imaginary parts are negated.

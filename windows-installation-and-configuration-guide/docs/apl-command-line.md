@@ -41,7 +41,7 @@ The name of a Dyalog APL workspace to be loaded. Unless specified, on Windows th
 
 **[param]**
 
-A parameter name followed by an equals sign (`=`) and a value. The parameter name may be one of the standard APL parameters (see [Configuration Parameters](configuration-parameters.md) ) or a name and value of your own choosing (see [GetEnvironment](../../object-reference/methodorevents/getenvironment) ) . If the parameter is in a registry sub-folder (see [Registry Sub-Folders](registry-subfolders.md) ), its name must be preceded by the name of the sub-folder, followed by a backslash (`\`) or underscore (`_`).
+A parameter name followed by an equals sign (`=`) and a value. The parameter name may be one of the standard APL parameters (see [Configuration Parameters](configuration-parameters/configuration-parameters.md) ) or a name and value of your own choosing (see [GetEnvironment](../../object-reference/methodorevents/getenvironment) ) . If the parameter is in a registry sub-folder (see [Registry Sub-Folders](registry-subfolders.md) ), its name must be preceded by the name of the sub-folder, followed by a backslash (`\`) or underscore (`_`).
 
 !!! note
     Instead of  a loading a workspace specified by the **ws** option, APL can be instructed to load a program from a script file. For further information, see [Load](configuration-parameters/load.md).

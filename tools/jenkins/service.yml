@@ -1,0 +1,31 @@
+services:
+  devtweb:
+    ## Always use a fixed version
+    image: jasonrivers/php:8-20250708
+    stdin_open: true
+    volumes:
+    - {{WEB_ROOT}}:/var/www/public
+    tty: true
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 128M
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=traefik-public
+        - traefik.constraint-label=traefik-public
+        - traefik.http.routers.docsweb-http.rule=Host(`{{WEB_URL}}`)
+        - traefik.http.routers.docsweb-http.entrypoints=http
+        - traefik.http.routers.docsweb-http.middlewares=https-redirect
+        - traefik.http.routers.docsweb-https.rule=Host(`{{WEB_URL}}`)
+        - traefik.http.routers.docsweb-https.entrypoints=https
+        - traefik.http.routers.docsweb-https.tls=true
+        - traefik.http.routers.docsweb-https.tls.certresolver=le
+        - traefik.http.services.docsweb.loadbalancer.server.port=80
+    networks:
+    - traefik-public
+
+networks:
+  traefik-public:
+    external: true

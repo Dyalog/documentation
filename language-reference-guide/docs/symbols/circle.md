@@ -2,29 +2,17 @@
 search:
   exclude: true
 ---
-
-
-
-
-
 <h1 class="heading"><span class="name">Circle</span> <span class="command">○</span></h1>
 
-
-## Monadic Circle means
-
-
+Monadic Circle means
 [Pi Times](../primitive-functions/pi-times.md)
 ```apl
       ○ 0 1 2
 0 3.14159 6.28319
 ```
-
-## Dyadic Circle means
-
-
+Dyadic Circle means
 [Circular Function (Trig)](../primitive-functions/circular.md)
 ```apl
-
           Note: Angles are in radians 
                 radians ← ○ degrees ÷ 180
 
@@ -47,8 +35,6 @@ search:
 ¯12  *⍵×0J1       12   phase of ⍵
 
 ```
-
-
 [Language Elements](./language-elements.md)
 
 

@@ -10,7 +10,7 @@ If you are using a log file, the Session log is loaded into memory when APL is s
 
 In general you type an expression into the input line, then press Enter (ER) to run it. After execution, the expression and any displayed results become part of the session log.
 
-You can move around in the session using the scrollbar, the cursor keys, and the PgUp and PgDn keys. In addition, Ctrl+Home (UL) moves the cursor to the beginning of the top-line in the Log and Ctrl+End (DL) moves the cursor to the end of the last (that is, the *current*) line in the session log. Home (LL) and End (RL) move the cursor to the beginning and end respectively of the line containing the cursor.
+You can move around in the session using the scrollbar, the cursor keys, and the PgUp and PgDn keys. In addition, Ctrl+Home (UL) moves the cursor to the beginning of the top-line in the Log and Ctrl+End (DL) moves the cursor to the end of the last (that is, the *current*) line in the session log. Home (LL) and End (RL) move the cursor to the beginning and end respectively of the content on the line containing the cursor. That is, if a line of text starts or ends with multiple spaces, Home (LL) and End (RL) move the cursor to the left/right end of the text respectively, ignoring the multiple spaces. Repeating the keystroke will move to the limit of the line, including the spaces.
 
 ## Deleting Lines
 

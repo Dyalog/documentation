@@ -1,3 +1,7 @@
+<div style="display: none;">
+  ⊂
+</div>
+
 <h1 class="heading"><span class="name">Partitioned Enclose</span> <span class="command">(⎕ML<3) R←X⊂[K]Y</span></h1>
 
 `Y` may be any array.  `X` must be a simple integer scalar or vector. If `X` is a scalar it is extended to `(≢Y)⍴X`.

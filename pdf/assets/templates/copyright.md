@@ -17,7 +17,8 @@ https://www.dyalog.com
 TRADEMARKS:
 
 Raspberry Pi is a trademark of the Raspberry Pi Foundation.<br>
-Oracle®, JavaScript™ and Java™ are registered trademarks of Oracle and/or its affiliates.<br>
+Oracle®, MySQL, and Java™ are registered trademarks of Oracle and/or its affiliates. JavaScript™ is a trademark of Oracle Corporation.<br>
+Unicode is a registered trademarks of Unicode, Inc. in the U.S. and other countries.<br>
 UNIX® is a registered trademark in the U.S. and other countries, licensed exclusively through X/Open Company Limited.<br>
 Linux® is the registered trademark of Linus Torvalds in the U.S. and other countries.<br>
 Windows® is a registered trademark of Microsoft Corporation in the U.S. and other countries.<br>

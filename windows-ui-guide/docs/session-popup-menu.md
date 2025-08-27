@@ -36,4 +36,4 @@ Table: Session popup menu operations
 |Open link|`[OpenLink]`|Opens the URL or link using the appropriate program. Unicode Edition only.|
 |Copy link to clipboard|`[CopyLink]`|Copies the URL or link to the Windows Clipboard.  Unicode Edition only.|
 
-For the last two items, see [Underline URLs and links](configuration-dialog.md).
+For the last two items, see [Underline URLs and links](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-general-tab).

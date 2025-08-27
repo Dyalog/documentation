@@ -51,4 +51,27 @@ to:
       '../budget/COSTS' ⎕FSTIE 2
 ```
 
+# Variant Options
+## Mode
 
+Writing to a component file is not always permitted. For example, restrictions on writing to a component file might be imposed by operating system permissions, the host filesystem, or individual component file property settings.
+
+The **Mode** variant option specifies whether the file that is being tied will only be read or must be writeable. Possible values are:
+
+- `P` (tied as **p**ermitted) – the file will be tied for write access if possible, otherwise for read access only. If the file permissions do not allow the file to be written to, any subsequent attempt to write to it will fail. This is the default.
+- `R` (**r**ead mode) – the file will be tied for read access only; any subsequent attempt to write to it will fail.
+- `W` (**w**rite mode) – if the file permissions do not allow the file to be written to, the attempt to tie it will fail.
+
+The **Mode** variant option is independent of any [file access controls managed using an access matrix](../../../programming-reference-guide/component-files/component-files/#file-access-control).
+
+<h3 class="example">Example</h3>
+
+```apl
+      'cf' (⎕FSTIE⍠'Mode' 'W') 1
+FILE ACCESS ERROR: cf.dcf: File is not writable
+      'cf'(⎕FSTIE⍠'Mode' 'W')1
+                ∧
+```
+
+!!! Info "Information"
+    Small-span (32-bit) component files are currently read-only; this support is scheduled for removal in a future release, after which it will not be possible to tie small-span component files. Dyalog Ltd recommends using `⎕FCOPY` to convert any such files to large-span (64-bit). For information on how to identify calls to small-span component files in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).

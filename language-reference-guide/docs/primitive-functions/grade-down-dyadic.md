@@ -1,3 +1,7 @@
+<div style="display: none;">
+  ⍒
+</div>
+
 <h1 class="heading"><span class="name">Grade Down (Dyadic)</span> <span class="command">R←X⍒Y</span></h1>
 
 `Y` must be a simple character array of rank greater than 0.  `X` must be a simple character array of rank 1 or greater.  `R` is a simple integer vector of shape `1↑⍴Y` containing the permutation of `⍳1↑⍴Y` that places the sub-arrays of `Y` along the first axis in descending order according to the collation sequence `X`.  The indices of any set of identical sub-arrays in `Y` occur in `R` in ascending order.

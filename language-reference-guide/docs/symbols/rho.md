@@ -2,21 +2,11 @@
 search:
   exclude: true
 ---
-
-
-
-
-
 <h1 class="heading"><span class="name">Rho</span> <span class="command">⍴</span></h1>
 
-
-## Monadic Rho means
-
-
-[Shape Of
-      ](../primitive-functions/shape.md)
+Monadic Rho means
+[Shape](../primitive-functions/shape.md)
 ```apl
-
       mat
 1  2  3  4
 5  6  7  8
@@ -34,11 +24,8 @@ search:
 0
 ```
 
-## Dyadic Rho means
-
-
-[Reshape
-      ](../primitive-functions/reshape.md)
+Dyadic Rho means
+[Reshape](../primitive-functions/reshape.md)
 ```apl
       2 3 4 ⍴ 1 2 3 4 5 6 7
 1 2 3 4
@@ -48,10 +35,7 @@ search:
 6 7 1 2
 3 4 5 6
 7 1 2 3
-
 ```
-
-
 [Language Elements](./language-elements.md)
 
 

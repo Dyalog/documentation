@@ -145,7 +145,7 @@ The Separator, QuoteChar and EscapeChar characters, when defined, must be differ
 Other options defined for export are also accepted but ignored.
 
 
-## Invert Option
+### Invert Option
 
 
 This option specifies how the CSV data should be returned as follows:
@@ -158,7 +158,7 @@ This option specifies how the CSV data should be returned as follows:
 
 
 
-## QuoteChar, EscapeChar and DoubleQuote Options
+### QuoteChar, EscapeChar and DoubleQuote Options
 
 
 If EscapeChar is set then any character may be prefixed by the escape character. The escape character is typically defined as `'\'`. The escape character immediately followed by the character `c` is the literal character `c` even if `c` alone would have been a metacharacter.
@@ -291,11 +291,9 @@ If `Y[4]` does specify that the data contains a header then `R` is a 2-element v
 
 ### File handling
 
-
 Data may be read from a named file or a tied native file. A tied native file may be read in sections by repeatedly invoking `⎕CSV` for a specified maximum number of records (specified by the Records variant) until no more data is read.
 
-
-In all cases the files must contain text using one of the supported encodings. See [File Encodings](nget.md). The method used to determine the file encoding is as follows:
+In all cases the files must contain text using one of the supported encodings (see [File Encodings](nget.md)). The method used to determine the file encoding is as follows:
 
 - If a Byte Order Mark (BOM) is encountered at the start of the file, it is used regardless of `Y[2]` (if specified). Note, however, that the BOM can only be encountered if the file is read from the start - specifically, if a native file is read in sections, any BOM present will only be encountered when the first section is read.
 - Otherwise, the file will be read and decoded according to the file encoding in `Y[2]` if specified.
@@ -303,33 +301,25 @@ In all cases the files must contain text using one of the supported encodings. S
 - Native files will be decoded as if `'UTF-8'` had been specified.
 - Files specified by name will be examined and the likely file encoding will be deduced using the same heuristics performed by `⎕NGET`.
 
-## Note also
+Note that:
 
-- Native files are read from the current file position. On successful completion, the file position will be at the first unprocessed character (end of file if the Records variant option is not specified). If an error is signalled the file position is undefined.
-- The result does not report the file encoding or line ending type as it does with `⎕NGET`. If this information is required then it must be obtained by other means.
+- native files are read from the current file position. On successful completion, the file position will be at the first unprocessed character (end of file if the Records variant option is not specified). If an error is signalled the file position is undefined.
+- the result does not report the file encoding or line ending type as it does with `⎕NGET`. If this information is required then it must be obtained by other means.
 
-
-### Dyadic `⎕CSV`
-
+# Dyadic `⎕CSV`
 
 `{R}←X ⎕CSV Y`
-
 
 The left argument `X` is either:
 
 - a matrix or a vector of vectors/matrices  containing the data to be converted to CSV format.
 - or a 2-element vector containing a matrix or vector of vectors/matrices containing the data to be converted to CSV format, and a vector of character vectors containing the header record.
 
-
 `Y` is a 1 or 2-element vector containing:
-
 
 |-----|---------------------------------------|
 |`[1]`|Destination of CSV Data (see below)    |
 |`[2]`|Description of the CSV data (see below)|
-
-
-
 
 *Destination* - may be one of:
 
@@ -337,11 +327,7 @@ The left argument `X` is either:
 - a native tie number
 - an empty character vector, indicating that the CSV data is to be returned in the result `R`
 
-
-
-
 *Description*
-
 
 If `Y[1]`  is a file name or tie number, *Description* may be:
 
@@ -354,7 +340,7 @@ If `Y[1]` is empty, *Description* may be a character scalar `'S'` (simple) or `'
 
 
 
-### Variant options
+## Variant options
 
 
 Dyadic `⎕CSV` may be applied using the  Variant operator with the following options.
@@ -451,7 +437,7 @@ FILE NAME ERROR: Unable to create file ("The file exists.")
 
 ![csv_excel1](../img/csv-excel1.png)
 
-### Notes
+## Notes
 
 - When `Y` contains only the destination of the CSV data (that is, omits the description in its second element) it does not have to be enclosed to form a single element vector.
 - Native files are written from the current file position. On successful completion, the file position will be at the end of the written data. If an error is signalled the amount of data written is undefined.

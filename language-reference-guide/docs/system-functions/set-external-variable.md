@@ -121,4 +121,5 @@ An external array may be erased using the native file function: `⎕NERASE`.
 
 In a multi-user environment (UNIX or a Windows LAN) a new file associated with an external array is created with access permission for owner read/write.  An existing file is opened for exclusive use (by the owner) if the permissions remain at this level.  If the access permissions allow any other users to read and write to the file, the file is opened for shared use.  In UNIX versions, access permissions may be modified using the appropriate Operating System command, or in Windows using the supplied function `XVAR` from the UTIL workspace.
 
-
+!!! Info "Information"
+    Support for external variables has been deprecated, and they are scheduled for removal in a future release. For information on how to identify uses of external variables in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).

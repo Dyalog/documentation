@@ -2,23 +2,13 @@
 search:
   exclude: true
 ---
-
-
-
-
-
 <h1 class="heading"><span class="name">Down Tack</span> <span class="command">⊤</span></h1>
-
-
 
 Monadic Down Tack is not defined
 
-## Dyadic Down Tack means
-
-
+Dyadic Down Tack means
 [Encode](../primitive-functions/encode.md)
 ```apl
-
       2 2 2 2 ⊤ 5 7 12   ⍝ binary encode
 0 0 1
 1 1 1
@@ -32,8 +22,6 @@ Monadic Down Tack is not defined
 2 46 40
 
 ```
-
-
 [Language Elements](./language-elements.md)
 
 

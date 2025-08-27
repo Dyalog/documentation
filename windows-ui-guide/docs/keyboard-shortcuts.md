@@ -30,8 +30,16 @@ Table: Cursor Movement Commands
 |UC        |Up Arrow        |Moves the cursor to the current character position on the line above the current line|
 |UL        |Ctrl+Home       |Move the cursor to the top-left position in the window                               |
 |DL        |Ctrl+End        |Moves the cursor to the bottom-right position in the window                          |
-|RL        |End             |Moves the cursor to the end of the current line                                      |
-|LL        |Home            |Moves the cursor to the beginning of the current line                                |
+|RL        |End             |Moves the cursor right to the first of:                                              |
+|          |                |- the six space prompt (only when the cursor is on a blank line)                     |
+|          |                |- the end of the content of the line excluding space characters                      |
+|          |                |- the end of the content of the line including space characters                      |
+|_        _|_              _| Pressing RL multiple times progresses through the list in the order shown above.    |
+|LL        |Home            |Moves the cursor left to the first of:                                               |
+|          |                |- the start of the content of the line                                               |
+|          |                |- the six space prompt (except when in the **Editor**, in which case this is skipped)|
+|          |                |- the left edge of the session                                                       |
+|_        _|_              _| Pressing LL multiple times progresses through the list in the order shown above.    |
 |LW        |Ctrl+Left Arrow |Moves the cursor to the beginning of the word to the left of the cursor              |
 |RW        |Ctrl+Right Arrow|Moves the cursor to the end of the word to the right of the cursor                   |
 |TB        |Ctrl+Tab        |Switches to the next session/edit/trace window                                       |

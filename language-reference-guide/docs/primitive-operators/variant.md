@@ -1,3 +1,7 @@
+<div style="display: none;">
+  ⍠
+</div>
+
 <h1 class="heading"><span class="name">Variant</span> <span class="command">{R}←{X}(f⍠B)Y</span></h1>
 
 !!! note "Classic Edition"
@@ -170,4 +174,4 @@ A modified version of `⎕JSON` ...
 
 ## Variant and .NET
 
-The Variant operator may also be used in conjunction with .NET classes; it can used to cast an array into a specific .NET data type, and to specify which constructor should be used when creating a new instance of a .NET class which has overloaded constructors. For further information, see [Advanced Techniques](../../../dotnet-framework-interface/accessing-net-classes/advanced-techniques).
+The Variant operator may also be used in conjunction with .NET classes; it can used to cast an array into a specific .NET data type, and to specify which constructor should be used when creating a new instance of a .NET class which has overloaded constructors. For further information, see [Advanced Techniques](../../../net-framework-interface-guide/accessing-net-classes/advanced-techniques).

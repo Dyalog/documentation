@@ -1,3 +1,7 @@
+<div style="display: none;">
+  ⍋
+</div>
+
 <h1 class="heading"><span class="name">Grade Up (Monadic)</span> <span class="command">R←⍋Y</span></h1>
 
 `Y` may be any array of rank greater than 0 but may not contain namespaces.  `R` is an integer vector being the permutation of `⍳1↑⍴Y` that places the sub-arrays along the first axis in ascending order. The rules for comparing items of `Y` with one another are as follows:

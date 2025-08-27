@@ -63,11 +63,25 @@ The tables below show the keystrokes that can be used in the different windows.
     </tr>
     <tr>
         <td>LL<br />RL<br />UL<br />DL</td>
-        <td>Left/Right/Up/Down to limit in that direction</td>
+        <td>UL/DL move the cursor up/down (respectively) to the limit in that direction.<br />
+        LL moves the cursor left to the first of:
+        <ul>
+<li>the start of the content of the line</li>
+<li>the six space prompt (except when in the <b>Editor</b>, in which case this is skipped)</li>
+<li>the left edge of the session</li>
+        </ul>
+        RL moves the cursor right to the first of:
+        <ul>
+<li>the end of the content of the line excluding space characters</li>
+<li>the end of the content of the line including space characters</li>
+<li>the six space prompt (only when the cursor is on a blank line)</li>
+        </ul>
+        Pressing LL or RL multiple times progresses through the list in the order shown above.
+        </td>
     </tr>
     <tr>
         <td>HO</td>
-        <td>Home Cursor .. to top left hand corner of object</td>
+        <td>Home Cursor either to the six space prompt in the Session or to the top left corner of the object.</td>
     </tr>
     <tr>
         <td>Toggle line numbers</td>

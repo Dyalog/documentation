@@ -20,3 +20,6 @@ Refer to the sections describing the system functions `⎕XT` and `⎕FHOLD` in 
       F
 1 2 3 4 5 6 7 8 9 10
 ```
+
+!!! Info "Information"
+    Support for external variables has been deprecated, and is scheduled for removal in a future release. For information on how to identify calls to external variables in your existing codebase, see the [Release Notes](../../release-notes/announcements/deprecated-functionality.md).

@@ -1,0 +1,6 @@
+.git
+Jenkinsfile
+service.yml
+.rsync-exclude
+*.tar.gz
+get_svn_docbin

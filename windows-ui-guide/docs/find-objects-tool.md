@@ -20,7 +20,7 @@ The  *Containing Text*  field is used to search for objects that contain a parti
 
 If this box is not checked, the system will find objects that contain the 4 characters `FOO*`.
 
-Text searches are performed using PCRE. If the *Use Regular Expressions* box is checked, the full range of regular expressions provided by PCRE are available for use. See [PCRE Regular Expression Syntax Summary](../../language-reference-guide/pcre-specifications/pcre-regular-expression-syntax-summary).
+Text searches are performed using PCRE. If the *Use Regular Expressions* box is checked, the full range of regular expressions provided by PCRE are available for use. See [PCRE Regular Expression Syntax Summary](../../language-reference-guide/pcre-specifications).
 
 *Match Whole Word* specifies whether or not the search is restricted to entire words.
 

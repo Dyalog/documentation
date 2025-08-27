@@ -2,20 +2,11 @@
 search:
   exclude: true
 ---
-
-
-
-
-
 <h1 class="heading"><span class="name">Down Arrow</span> <span class="command">↓</span></h1>
 
-
-## Monadic Down Arrow means
-
-
+Monadic Down Arrow means
 [Split](../primitive-functions/split.md)
 ```apl
-
       mat
 1  2  3  4
 5  6  7  8
@@ -30,12 +21,9 @@ search:
 ┌─────┬──────┬──────┬──────┐
 │1 5 9│2 6 10│3 7 11│4 8 12│
 └─────┴──────┴──────┴──────┘
-
 ```
 
-## Dyadic Down Arrow means
-
-
+Dyadic Down Arrow means
 [Drop](../primitive-functions/drop.md)
 ```apl
       4 ↓ 'Pineapple'
@@ -48,10 +36,7 @@ Pine
       1 ↓ mat
 5  6  7  8
 9 10 11 12
-
 ```
-
-
 [Language Elements](./language-elements.md)
 
 

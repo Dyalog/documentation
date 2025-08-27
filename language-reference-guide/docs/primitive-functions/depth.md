@@ -1,3 +1,7 @@
+<div style="display: none;">
+  ≡
+</div>
+
 <h1 class="heading"><span class="name">Depth</span> <span class="command">(⎕ML) R←≡Y</span></h1>
 
 `Y` may be any array. `R` is the maximum number of levels of nesting of `Y`. A simple scalar (rank-0 number, character or namespace-reference) has a depth of 0.

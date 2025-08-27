@@ -9,7 +9,7 @@ Table: Scalar Primitive Functions {: #ScalarPrimitiveFunctions }
 |`+`|[Conjugate](conjugate.md)|[Plus (Add)](add.md)|
 |`-`|[Negative](negative.md)|[Minus (Subtract)](subtract.md)|
 |`×`|[Direction (Signum)](direction.md)|[Times (Multiply)](multiply.md)|
-|`÷`|[Reciprocal](reciprocal.md) l|[Divide](divide.md)|
+|`÷`|[Reciprocal](reciprocal.md)|[Divide](divide.md)|
 |`|`|[Magnitude](magnitude.md)|[Residue](residue.md)|
 |`⌊`|[Floor](floor.md)|[Minimum](minimum.md)|
 |`⌈`|[Ceiling](ceiling.md)|[Maximum](maximum.md)|

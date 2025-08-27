@@ -1,8 +1,3 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕DT DT
-</div>
-
 ---
 search:
   exclude: true

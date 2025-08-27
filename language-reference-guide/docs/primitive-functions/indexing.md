@@ -1,6 +1,10 @@
+<div style="display: none;">
+  ←
+</div>
+
 <h1 class="heading"><span class="name">Indexing</span> <span class="command">R←X[Y]</span></h1>
 
-`X` may be  any array. `Y` must be a valid index specification. `R` is an array composed of elements indexed from `X` and the shape of `X` is determined by the index specification.
+`X` may be  any array. `Y` must be a valid index specification. `R` is an array composed of elements indexed from `X` and the shape of `R` is determined by the index specification.
 
 This form of Indexing, using brackets, does not follow the normal syntax of a dyadic function. For an alternative method of indexing, see [Index](squad.md).
 

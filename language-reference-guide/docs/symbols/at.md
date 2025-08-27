@@ -2,23 +2,13 @@
 search:
   exclude: true
 ---
-
-
-
-
-
 <h1 class="heading"><span class="name">At</span> <span class="command">@</span></h1>
 
+At is a dyadic operator
 
-## At is a Dyadic operator
-
-## Operator At means
-
-
+Operator At means
 [At](../primitive-operators/at.md)
 ```apl
-
-
       (0@2 4) 1 2 3 4 5
 1 0 3 0 5
 
@@ -33,7 +23,5 @@ search:
 
       ⌽@(2∘|) 1 2 3 4 5     ⍝ Reversal of sub-array 1 3 5
 5 2 3 4 1
-
 ```
-
-
+[Language Elements](./language-elements.md)

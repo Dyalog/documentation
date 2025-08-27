@@ -1,3 +1,7 @@
+<div style="display: none;">
+  ∊
+</div>
+
 <h1 class="heading"><span class="name">Enlist</span> <span class="command">(⎕ML≥1) R←∊Y</span></h1>
 
 Migration level must be such that `⎕ML≥1` (otherwise see [Type](type.md)).

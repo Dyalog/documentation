@@ -1,3 +1,7 @@
+<div style="display: none;">
+  |
+</div>
+
 <h1 class="heading"><span class="name">Magnitude</span> <span class="command">R←|Y</span></h1>
 
 `Y` may be any numeric array. `R` is numeric composed of the absolute (unsigned) values of `Y`.

@@ -2,158 +2,97 @@
 
 ## Unicode and Classic Editions
 
-Dyalog APL continues to be available in two separate editions; *Unicode* and *Classic*.
+Dyalog is available in two separate editions:  
 
-- The *Unicode* edition is intended for users who need to develop
-    Unicode applications now, and are prepared to make the necessary (usually
-    small) changes to existing applications in order to support new Unicode
-    character types.
-- The *Classic* edition is intended for customers who want to take
-    advantage of other product enhancements, but do not wish to use Unicode at
-    this time.
+* The _Unicode_ edition is Dyalog’s strategic edition; it is the edition that is generally available, and the only one available to new users. It is compatible with many third-party applications and tools, is capable of handling data from third-party tools and websites, and can be used with source code management systems (such as Git) to store APL code.
+* The _Classic_ edition is only available for existing customers who have been using Dyalog for a long time and for whom moving to the Unicode edition would involve considerable effort.
 
-The two different editions are maintained from the same source code, and
-every effort will be made to ensure that they are identical except for the
-handling of character arrays, and the transfer of data into and out of the
-workspace.
+## 32-Bit and 64-Bit Widths
 
-## 32-Bit and 64-Bit Versions
-
-Two separate versions of Dyalog for Microsoft Windows are available. The 32-bit version will run on both 32-bit and 64-bit Operating Systems; the 64-bit version will only run on a 64-bit Operating System.
+Two separate widths of Dyalog for Microsoft Windows are available. The 32-bit width  will run on both 32-bit and 64-bit operating systems; the 64-bit width will only run on a 64-bit operating system.
 
 ## Files
 
-The following tables show files that are included in the different versions and editions under Microsoft Windows.  These are referred to in the remainder of this document and in other documents by the name shown in the first column of the tables.
+The names of the files that are included in a Dyalog installation can vary slightly between the different editions and widths.
 
-With the exception of the following all these files may be distributed as part of end-user applications, under the terms and conditions of a Dyalog APL Run-Time Agreement. Please contact Dyalog or your distributor, or see the Dyalog web page for more information.
+For information about licences, see [https://www.dyalog.com/prices-and-licences.htm](https://www.dyalog.com/prices-and-licences.htm) or contact sales@dyalog.com.
 
-## Non-Distributable Development Components
+### Distributable Development Components
 
-- Development EXE
-- Development DLL
-- Array Editor
+This section lists the files that are included with Dyalog for Microsoft Windows that can be distributed as part of end-user applications, under the terms and conditions of your Dyalog Run-Time Licence or Royalty Licence.
 
-|Name               |File                                    |
-|-------------------|----------------------------------------|
-|32-bit Unicode { .shaded }    |Dyalog APL {{ version_majmin }} Unicode\\ { .shaded }|
-|Development EXE    |`dyalog.exe`                            |
-|Development DLL    |`dyalog{{ version_maj }}_32_unicode.dll`|
-|Shell Script Engine|`dyascript.exe`                         |
-|Array Editor       |`dlaedit32.dll`                         |
-|Run-Time EXE       |`dyalogrt.exe`                          |
-|Run-Time DLL       |`dyalog{{ version_maj }}rt_unicode.dll` |
-|Bridge DLL         |`bridge{{ version_maj }}_unicode.dll`   |
-|Dyalog DLL         |`dyalog32.dll`                          |
-|DyaRes DLL         |`dyares{{ version_maj }}_32.dll`        |
-|DyalogProvider DLL |`dyalogprovider.dll`                    |
-|DyalogNet DLL      |`dyalognet.dll`                         |
-|APLScript Compiler |`dyalogc_unicode.exe`                   |
-|For Conga and Ride |`conga34ssl32.dll`                      |
-|For Conga and Ride |`conga34_32.dll`                        |
-|&nbsp;             |`exestub.dll`                           |
-|&nbsp;             |`dllstub.dll`                           |
-|SQAPL INI          |`sqapl.ini`                             |
-|SQAPL ERR          |`sqapl.err`                             |
-|SQAPL DLL          |`cwdya64u32w.dll`                       |
-|APLUNICD INI       |`aplunicd.ini`                          |
-|&nbsp;             |`sharpplot.dll`                         |
-|&nbsp;             |`sharpplot.xml`                         |
+The following files have names that are consistent between editions; differences in names for the different widths are indicated by **&lt;width>**, which can be either **32** or **64**):  
 
-|Name               |File                                    |
-|-------------------|----------------------------------------|
-|32-bit Classic { .shaded }     |Dyalog APL {{ version_majmin }} Classic\\  { .shaded }|
-|Development EXE    |`dyalog.exe`                            |
-|Development DLL    |`dyalog{{ version_maj }}_32.dll`        |
-|Shell Script Engine|`dyascript.exe`                         |
-|Array Editor       |`dlaedit32.dll`                         |
-|Run-Time EXE       |`dyalogrt.exe`                          |
-|Run-Time DLL       |`dyalog{{ version_maj }}rt.dll`         |
-|Bridge DLL         |`bridge{{ version_maj }}.dll`           |
-|Dyalog DLL         |`dyalog32.dll`                          |
-|DyaRes DLL         |`dyares{{ version_maj }}_32.dll`        |
-|DyalogProvider DLL |`dyalogprovider.dll`                    |
-|DyalogNet DLL      |`dyalognet.dll`                         |
-|APLScript Compiler |`dyalogc.exe`                           |
-|For Conga and Ride |`conga34ssl32.dll`                      |
-|For Conga and Ride |`conga34_32.dll`                        |
-|&nbsp;             |`exestub.dll`                           |
-|&nbsp;             |`dllstub.dll`                           |
-|SQAPL INI          |`sqapl.ini`                             |
-|SQAPL ERR          |`sqapl.err`                             |
-|SQAPL DLL          |`cwdya64c32w.dll`                       |
-|APLUNICD INI       |`aplunicd.ini`                          |
-|&nbsp;             |`sharpplot.dll`                         |
-|&nbsp;             |`sharpplot.xml`                         |
+* **dyascript.exe**
+* **dyalogrt.exe**
+* **dyalog&lt;width>.dll**
+* **dyares{{ version_condensed }}_&lt;width>.dll**
+* **dyalogprovider.dll** (.NET Framework Interface)
+* **dyalognet.dll** (.NET Framework Interface)
+* **conga{{ conga_version_condensed }}ssl&lt;width>.dll** (Conga and Ride)
+* **conga{{ conga_version_condensed }}_&lt;width>.dll** (Conga and Ride)
+* **exestub.dll**
+* **dllstub.dll**
+* **sqapl.ini**
+* **sqapl.err**
+* **aplunicd.ini**
+* **sharpplot.dll**
+* **sharpplot.xml**
 
-|Name               |File                                       |
-|-------------------|-------------------------------------------|
-|64-bit Unicode { .shaded }     |Dyalog APL-64 {{ version_majmin }} Unicode\\  { .shaded }|
-|Development EXE    |`dyalog.exe`                               |
-|Development DLL    |`dyalog{{ version_maj }}_64_unicode.dll`   |
-|Shell Script Engine|`dyascript.exe`                            |
-|Array Editor       |`dlaedit64.dll`                            |
-|Run-Time EXE       |`dyalogrt.exe`                             |
-|Run-Time DLL       |`dyalog{{ version_maj }}_64rt_unicode.dll` |
-|Bridge DLL         |`bridge{{ version_maj }}-64_unicode.dll`   |
-|Dyalog DLL         |`dyalog64.dll`                             |
-|DyaRes DLL         |`dyares{{ version_maj }}_64.dll`           |
-|DyalogProvider DLL |`dyalogprovider.dll`                       |
-|DyalogNet DLL      |`dyalognet.dll`                            |
-|APLScript Compiler |`dyalogc64_unicode.exe`                    |
-|For Conga and Ride |`conga34ssl64.dll`                         |
-|For Conga and Ride |`conga34_64.dll`                           |
-|&nbsp;             |`exestub.dll`                              |
-|&nbsp;             |`dllstub.dll`                              |
-|SQAPL INI          |`sqapl.ini`                                |
-|SQAPL ERR          |`sqapl.err`                                |
-|SQAPL DLL          |`cwdya64u64w.dll`                          |
-|APLUNICD INI       |`aplunicd.ini`                             |
-|&nbsp;             |`sharpplot.dll`                            |
-|&nbsp;             |`sharpplot.xml`                            |
+The following files relate to the .NET Interface, and are only available in Unicode editions:  
 
-|Name               |File                                       |
-|-------------------|-------------------------------------------|
-|64-bit Classic { .shaded }     |Dyalog APL-64 {{ version_majmin }} Classic\\ { .shaded }|
-|Development EXE    |`dyalog.exe`                               |
-|Development DLL    |`dyalog{{ version_maj }}_64.dll`           |
-|Shell Script Engine|`dyascript.exe`                            |
-|Array Editor       |`dlaedit64.dll`                            |
-|Run-Time EXE       |`dyalogrt.exe`                             |
-|Run-Time DLL       |`dyalog{{ version_maj }}_64rt.dll`         |
-|Bridge DLL         |`bridge{{ version_maj }}-64.dll`           |
-|Dyalog DLL         |`dyalog64.dll`                             |
-|DyaRes DLL         |`dyares{{ version_maj }}_64.dll`           |
-|DyalogProvider DLL |`dyalogprovider.dll`                       |
-|DyalogNet DLL      |`dyalognet.dll`                            |
-|APLScript Compiler |`dyalogc64.exe`                            |
-|For Conga and Ride |`conga34ssl64.dll`                         |
-|For Conga and Ride |`conga34_64.dll`                           |
-|&nbsp;             |`exestub.dll`                              |
-|&nbsp;             |`dllstub.dll`                              |
-|SQAPL INI          |`sqapl.ini`                                |
-|SQAPL ERR          |`sqapl.err`                                |
-|SQAPL DLL          |`cwdya64c64w.dll`                          |
-|APLUNICD INI       |`aplunicd.ini`                             |
-|&nbsp;             |`sharpplot.dll`                            |
-|&nbsp;             |`sharpplot.xml`                            |
+* **Dyalog.Net.Bridge.Host.Windows.dll**
+* **Dyalog.Net.Bridge.dll**
+* **Dyalog.Net.Bridge.deps.json**
+* **Dyalog.Net.Bridge.runtimeconfig.json**
 
-## File Naming Conventions
+The following files have names that change between editions and widths:  
 
-The following file naming conventions have been adopted for the various files distributed with and used by Dyalog APL.
+* 64-bit Unicode:  
+    * **dyalog{{ version_condensed }}_64rt_unicode.dll**
+    * **bridge{{ version_condensed }}-64_unicode.dll**
+    * **dyalogc64_unicode.exe**
+    * **cwdya64u64w.dll**
+* 32-bit Unicode:  
+    * **dyalog{{ version_condensed }}rt_unicode.dll**
+    * **bridge{{ version_condensed }}_unicode.dll**
+    * **dyalogc_unicode.exe**
+    * **cwdya64u32w.dll**
+* 64-bit Classic:  
+    * **dyalog{{ version_condensed }}_64rt.dll**
+    * **bridge{{ version_condensed }}-64.dll**
+    * **dyalogc64.exe**
+    * **cwdya64c64w.dll**
+* 32-bit Classic:  
+    * **dyalog{{ version_condensed }}rt.dll**
+    * **bridge{{ version_condensed }}.dll**
+    * **dyalogc.exe**
+    * **cwdya64c32w.dll**
+
+### Non-Distributable Development Components
+
+The following files are included with Dyalog for Microsoft Windows. These files must not be distibuted without an appropriate licence:  
+
+* **dyalog.exe**
+* **dyalog{{ version_condensed }}_&lt;width>.dll** or **dyalog{{ version_condensed }}_&lt;width>_unicode.dll**          
+
+## File Extension Conventions
+
+The following file extension conventions have been adopted for the various files distributed with, and used by, Dyalog.
 
 |Extension|Description                     |
 |---------|--------------------------------|
-|.dws     |Dyalog APL Workspace            |
-|.dse     |Dyalog APL Session              |
-|.dcf     |Dyalog APL Component File       |
-|.DXV     |Dyalog APL External Variable    |
-|.din     |Dyalog APL Input Table          |
-|.dot     |Dyalog APL Output Table         |
-|.dft     |Dyalog APL Format File          |
-|.DXF     |Dyalog APL Transfer File        |
-|.dlf     |Dyalog APL Session Log File     |
-|.dyalog  |Dyalog APL SALT file            |
-|.dyapp   |Dyalog APL SALT application file|
+|**.dws**     |Dyalog workspace            |
+|**.dse**     |Dyalog Session              |
+|**.dcf**     |Dyalog component file       |
+|**.DXV**     |Dyalog external variable    |
+|**.din**     |Dyalog input table          |
+|**.dot**     |Dyalog output table         |
+|**.dft**     |Dyalog format file          |
+|**.DXF**     |Dyalog transfer file        |
+|**.dlf**     |Dyalog Session log file     |
+|**.dyalog**  |Dyalog SALT file            |
+|**.dyapp**   |Dyalog SALT application file|
 
-!!! note
-    Some of these extensions, notably .dcf, .dlf, .dot and .DXF, are not unique to Dyalog and conflict with the same extensions used by other software applications. Although all the above file extensions are associated with Dyalog during its installation, these associations may subsequently be changed by the installation of other software or by a Windows System restore.
+!!! Info "Information"
+    Some of these extensions (notably **.dcf**, **.dlf**, **.dot**, and **.DXF**) are not unique to Dyalog, and conflict with the same extensions used by other software applications. Although all the above file extensions are associated with Dyalog during its installation, these associations could subsequently be changed by the installation of other software or by a Microsoft Windows System restore.

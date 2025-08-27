@@ -137,7 +137,7 @@ Otherwise, the result of the operation depends upon the existence of `X`.
 ```
 ## Variant Option: Trigger
 
-The `Trigger` variant option specifies whether any [triggers](../../programming-reference-guide/triggers/triggers) should be run for the modified variables in the target namespace that have triggers attached.
+The `Trigger` variant option specifies whether any [triggers](../../../programming-reference-guide/triggers/triggers) should be run for the modified variables in the target namespace that have triggers attached.
 The value must be a Boolean scalar. The default is 0, meaning that triggers are not run.
 
 <h4 class="example">Example</h4>

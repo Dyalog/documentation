@@ -1,8 +1,3 @@
----
-search:
-  exclude: true
----
-
 <h1 class="heading"><span class="name">Axis Operator</span></h1>
 
 The axis operator may be applied to all scalar dyadic primitive functions and certain mixed primitive functions.  An integer axis identifies a specific axis along which the function is to be applied to one or both of its arguments.  If the primitive function is to be applied without an axis specification, a default axis is implied, either the first or last.

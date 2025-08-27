@@ -165,17 +165,19 @@ Table: Threads Menu Operations {: #threads-menu-operations }
 |Resume all Threads |`[ThreadsResumeAll]`   |Resumes all threads                                |
 |Restart all Threads|`[ThreadsRestartAll]`  |Restarts all threads                               |
 
-## The Debugger Menu
+## The Layout Menu
 
-The *Debugger* menu (`⎕SE.mb.layout`) provides layout options for the Debugger.
+The *Layout* menu (`⎕SE.mb.layout`) provides layout options for the Debugger.
 
-Table: Debugger Menu Operations {: #debugger-layout-menu-operations }
+Table: Layout Menu Operations {: #debugger-layout-menu-operations }
 
-|Item           |Action             |Description                                        |
-|---------------|-------------------|---------------------------------------------------|
-|Floating       |APL callback       |Detaches the Debugger window                       |
-|Bottom         |APL callback       |Docks the Debugger at the bottom (default)         |
-|Left           |APL callback       |Docks the Debugger to the left                     |
+|Item                   |Action             |Description                                        |
+|-----------------------|-------------------|---------------------------------------------------|
+|Classic                |APL callback       |Detaches the Debugger window                       |
+|Debugger at the bottom |APL callback       |Docks the Debugger at the bottom (default)         |
+|Debugger on the left   |APL callback       |Docks the Debugger on the left                     |
+
+The selected option does *not* persist if you restart the session.
 
 ## The Help Menu
 

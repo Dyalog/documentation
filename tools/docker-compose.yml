@@ -2,35 +2,28 @@ services:
   mkdocs-server:
     build:
       context: .
-      dockerfile: mkdocs/Dockerfile  # Dockerfile for serving MkDocs site
+      dockerfile: mkdocs/Dockerfile
     volumes:
       - ${DOCS_DIR}:/docs
+      - ${ASSETS_DIR}:/docs/docs/documentation-assets
     ports:
       - "8000:8000"
     environment:
       - DOCS_DIR=${DOCS_DIR}
+      - ASSETS_DIR=${ASSETS_DIR}
     working_dir: /docs
+    command: mkdocs serve --dev-addr 0.0.0.0:8000 --dirty
 
-  mkdocs2chm:
+  utils:
     build:
       context: .
-      dockerfile: mkdocs2chm/Dockerfile
+      dockerfile: utils/Dockerfile
     volumes:
-      - ${DOCS_DIR}:/app/documentation
-      - ${CHM_OUTPUT_DIR}:/app/mkdocs2chm/project
+      - ${DOCS_DIR}:/docs
+      - ${ASSETS_DIR}:/docs/docs/documentation-assets
+      - ./utils:/utils
     environment:
       - DOCS_DIR=${DOCS_DIR}
-      - CHM_OUTPUT_DIR=${CHM_OUTPUT_DIR}
-    entrypoint: [ "/usr/local/bin/mkdocs2chm.py" ]
-
-  mkdocs2pdf:
-    build:
-      context: .
-      dockerfile: mkdocs2pdf/Dockerfile
-    volumes:
-      - ${DOCS_DIR}:/app/documentation
-      - ${PDF_OUTPUT_DIR}:/app/mkdocs2pdf/project
-    environment:
-      - DOCS_DIR=${DOCS_DIR}
-      - PDF_OUTPUT_DIR=${PDF_OUTPUT_DIR}
-    entrypoint: [ "/usr/local/bin/mkdocs2pdf.py" ]
+    working_dir: /docs
+    # Default command can be overridden when running
+    command: python --version

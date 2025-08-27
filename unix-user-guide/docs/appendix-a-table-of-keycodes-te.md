@@ -5,8 +5,8 @@ Keycodes, their common keystrokes, and the keystrokes specific to terminal emula
 ## Notes
 
 1. APL represents the metakey used as the APL character and command shift
-2. Cmd represents the keystroke <Ctrl-x>
-3. CMD represents the keystrokes <Ctrl-x><Ctrl-x>
+2. Cmd represents the keystroke <kbd>Ctrl</kbd>+<kbd>x</kbd>
+3. CMD represents the keystrokes <kbd>Ctrl</kbd>+<kbd>x</kbd> <kbd>Ctrl</kbd>+<kbd>x</kbd>
 4. The file $DYALOG/aplkeys/xterm is certain to be up to date and should be treated as the definitive source of the keycode-keystroke translations
 
 |Keycode|Command                 |Common keystrokes    |Terminal Emulator  |
@@ -42,6 +42,7 @@ Keycodes, their common keystrokes, and the keystrokes specific to terminal emula
 |IG     |Ignore next             |&nbsp;               |&nbsp;             |
 |IL     |Insert Line             |&nbsp;               |&nbsp;             |
 |IN     |Insert Mode             |Cmd i                |&nbsp;             |
+|IT     | Inline Tracing         | Cmd k               |&nbsp;             |
 |JP     |Jump                    |Cmd j                |&nbsp;             |
 |LC     |Left Cursor             |Cursor Left          |&nbsp;             |
 |LL     |Left Limit              |Ctrl+Left            |Shift+APL+Home     |

@@ -2,21 +2,12 @@
 search:
   exclude: true
 ---
-
-
-
-
-
 <h1 class="heading"><span class="name">Up Arrow</span> <span class="command">↑</span></h1>
 
-
-## Monadic Up Arrow means
-
+Monadic Up Arrow means
 
 If `⎕ML<2` [Mix](../primitive-functions/mix.md)
 ```apl
-
-
       ↑ 'Hip' 'Hop'
 Hip
 Hop
@@ -30,21 +21,15 @@ io
 pp
 ```
 
-
 If `⎕ML≥2` [First](../primitive-functions/disclose.md)
 ```apl
       ↑ (6 4) 5 3
 6 4
-
 ```
 
-## Dyadic Up Arrow means
-
-
-[Take
-      ](../primitive-functions/take.md)
+Dyadic Up Arrow means
+[Take](../primitive-functions/take.md)
 ```apl
-
       4 ↑ 'Pineapple'
 Pine
       ¯5 ↑ 'Pineapple'
@@ -66,10 +51,5 @@ apple
       ¯2 3 ↑ 7
 0 0 0
 7 0 0
-
 ```
-
-
 [Language Elements](./language-elements.md)
-
-

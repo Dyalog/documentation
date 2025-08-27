@@ -2,21 +2,12 @@
 search:
   exclude: true
 ---
-
-
-
-
-
 <h1 class="heading"><span class="name">Left Shoe Underbar</span> <span class="command">⊆</span></h1>
 
 
-## Monadic Left Shoe Underbar means
-
-
-[Nest
-      ](../primitive-functions/nest.md)
+Monadic Left Shoe Underbar means
+[Nest](../primitive-functions/nest.md)
 ```apl
-
       ⊆ 'this'
 ┌────┐
 │this│
@@ -27,12 +18,9 @@ search:
 └────┴────┘
 ```
 
-## Dyadic Left Shoe Underbar means
-
-
+Dyadic Left Shoe Underbar means
 [Partition](../primitive-functions/partition.md)
 ```apl
-
       1 0 0 1 1 ⊆ 1 2 3 4 5
 ┌─┬───┐
 │1│4 5│
@@ -45,10 +33,7 @@ search:
 ┌────┬─┬────┐
 │many│a│time│
 └────┴─┴────┘
-
 ```
-
-
 [Language Elements](./language-elements.md)
 
 

@@ -32,7 +32,7 @@ In Versions of Dyalog prior to Version 12.0 and in the Classic Edition, a charac
 
 
 
-The default value of `⎕``AVU` corresponds to the use of the **Dyalog Alt** Output Translate Table and font in the Classic Edition or in earlier versions of Dyalog APL.
+The default value of `⎕AVU` corresponds to the use of the **Dyalog Alt** Output Translate Table and font in the Classic Edition or in earlier versions of Dyalog APL.
 ```apl
       2 13⍴⎕AVU[97+⍳26]
 193 194 195 199 200 202 203 204 205 206 207 208 210

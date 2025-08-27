@@ -26,7 +26,7 @@ This function discards source code and file information for scripted objects, na
 - `5171⌶ # ⎕SE` discards source code and file information from the workspace and from  `⎕SE`.
 
 
-For further information, see [Source as Typed](../../../release-notes-v19-0/introduction/source-as-typed).
+For further information, see [Source as Typed](../../../earlier-release-notes/release-notes-v19-0/introduction/source-as-typed).
 
 
 

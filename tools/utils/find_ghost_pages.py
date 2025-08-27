@@ -1,128 +1,122 @@
 #!/usr/bin/env python3
 """
-find_ghost_pages_ruamel.py
-Pin-point Markdown files that sit inside an MkDocs docs tree but are *not*
-referenced by any “nav” entry (supports monorepo + docs_dir).
-
-Requires:  ruamel.yaml   (pip install ruamel.yaml)
+Find "ghost pages" - Markdown files that exist in docs directories but are NOT
+referenced in any nav section. This version uses the doc_utils module.
 """
 
-from __future__ import annotations
-
 import argparse
+import os
 import sys
 from pathlib import Path
-from typing import Iterable, Set, Tuple
 
-from ruamel.yaml import YAML
-from ruamel.yaml.scalarstring import ScalarString
+# Add the utils directory to the path
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-yaml = YAML(typ="rt")
-yaml.preserve_quotes = True
+from doc_utils import MkDocsRepo, YAMLLoader, NavTraverser
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-def _candidate_md(value: str, base_dir: Path, docs_root: Path) -> Path:
+def find_ghost_pages(root_yaml: Path) -> tuple[set[Path], set[Path], set[Path], int]:
     """
-    Resolve a nav reference to the on-disk Markdown file:
-      1. <docs_root>/<value>  (normal MkDocs behaviour)
-      2. <base_dir>/<value>   (fallback – handles non-standard layouts)
+    Find all ghost pages in the documentation.
+    
+    Returns:
+        (referenced_files, all_md_files, ghost_pages, docs_roots_count)
     """
-    preferred = (docs_root / value).resolve()
-    return preferred if preferred.exists() else (base_dir / value).resolve()
-
-
-def _parse_nav(
-    nav: list,
-    base_dir: Path,
-    docs_root: Path
-) -> Tuple[Set[Path], Set[Path]]:
-    """Return (referenced_md, included_mkdocs) for one nav tree."""
-    referenced, includes = set(), set()
-
-    def walk(items: Iterable):
-        for item in items:
-            if isinstance(item, dict):
-                for _label, val in item.items():
-                    if isinstance(val, (str, ScalarString)):
-                        s = str(val)
-                        if s.lower().endswith(".md"):
-                            referenced.add(_candidate_md(s, base_dir, docs_root))
-                        elif s.startswith("!include"):
-                            inc = s.split("!include", 1)[1].strip()
-                            includes.add((base_dir / inc).resolve())
-                    elif isinstance(val, list):
-                        walk(val)
-            elif isinstance(item, list):
-                walk(item)
-
-    walk(nav)
-    return referenced, includes
-
-
-def _harvest(root_yaml: Path) -> Tuple[Set[Path], Set[Path]]:
-    """
-    Walk every linked mkdocs.yml and gather:
-      referenced_md  – all Markdown paths explicitly mentioned in nav entries
-      docs_roots     – the set of <base_dir>/<docs_dir> directories encountered
-    """
-    referenced, docs_roots = set(), set()
-    queue, seen = {root_yaml.resolve()}, set()
-
-    while queue:
-        current = queue.pop()
-        if current in seen:
-            continue
-        seen.add(current)
-
-        try:
-            data = yaml.load(current.open("r", encoding="utf-8")) or {}
-        except Exception as err:
-            sys.exit(f"[ERROR] Cannot parse {current}: {err}")
-
-        base_dir = current.parent
-        docs_dir = str(data.get("docs_dir", "docs")).lstrip("./\\")
-        docs_root = (base_dir / docs_dir).resolve()
+    # Create MkDocsRepo instance
+    root_dir = root_yaml.parent
+    repo = MkDocsRepo(str(root_dir))
+    loader = YAMLLoader()
+    
+    referenced_files = set()
+    docs_roots = set()
+    
+    # Process main mkdocs.yml
+    main_config = loader.load_file(str(root_yaml))
+    if not main_config:
+        sys.exit(f"[ERROR] Cannot parse {root_yaml}")
+    
+    # Get docs_dir for main site
+    docs_dir = main_config.get("docs_dir", "docs").lstrip("./\\")
+    main_docs_root = (root_dir / docs_dir).resolve()
+    if main_docs_root.is_dir():
+        docs_roots.add(main_docs_root)
+    
+    # Collect files from main nav
+    if 'nav' in main_config:
+        main_files = NavTraverser.extract_markdown_files(main_config['nav'])
+        for file_ref in main_files:
+            # Resolve to actual path
+            if file_ref.startswith('/'):
+                file_path = (root_dir / file_ref[1:]).resolve()
+            else:
+                file_path = (main_docs_root / file_ref).resolve()
+            if not file_path.exists():
+                # Fallback to base_dir
+                file_path = (root_dir / file_ref).resolve()
+            referenced_files.add(file_path)
+    
+    # Process subsites
+    for name, subsite_dir, config in repo.iter_subsites():
+        subsite_path = Path(subsite_dir)
+        
+        # Get docs_dir for subsite
+        docs_dir = config.get("docs_dir", "docs").lstrip("./\\")
+        docs_root = (subsite_path / docs_dir).resolve()
         if docs_root.is_dir():
             docs_roots.add(docs_root)
+        
+        # Collect files from subsite nav
+        if 'nav' in config:
+            subsite_files = NavTraverser.extract_markdown_files(config['nav'])
+            for file_ref in subsite_files:
+                # Resolve to actual path
+                if file_ref.startswith('/'):
+                    file_path = (subsite_path / file_ref[1:]).resolve()
+                else:
+                    file_path = (docs_root / file_ref).resolve()
+                if not file_path.exists():
+                    # Fallback to subsite base_dir
+                    file_path = (subsite_path / file_ref).resolve()
+                referenced_files.add(file_path)
+        
+    
+    # Discover all *.md files under the collected docs roots
+    all_md_files = set()
+    for docs_root in docs_roots:
+        all_md_files.update(p.resolve() for p in docs_root.rglob("*.md"))
+    
+    # Find ghost pages
+    ghost_pages = all_md_files - referenced_files
+    
+    return referenced_files, all_md_files, ghost_pages, len(docs_roots)
 
-        nav = data.get("nav", [])
-        refs, inc = _parse_nav(nav, base_dir, docs_root)
-        referenced.update(refs)
-        queue.update(inc - seen)
 
-    return referenced, docs_roots
-
-
-def main() -> None:
-    ap = argparse.ArgumentParser(
+def main():
+    parser = argparse.ArgumentParser(
         description="List Markdown files inside docs trees that are not "
                     "referenced from any MkDocs nav entry.")
-    ap.add_argument("--root", required=True, type=Path,
-                    help="Path to the top-level mkdocs.yml")
-    args = ap.parse_args()
-
+    parser.add_argument("--root", required=True, type=Path,
+                        help="Path to the top-level mkdocs.yml")
+    args = parser.parse_args()
+    
     root_yaml = args.root.resolve()
     if not root_yaml.is_file():
         sys.exit(f"[ERROR] {root_yaml} does not exist or is unreadable")
-
-    referenced, docs_roots = _harvest(root_yaml)
-
-    # Discover every *.md under the collected docs roots
-    all_md: Set[Path] = set()
-    for d in docs_roots:
-        all_md.update(p.resolve() for p in d.rglob("*.md"))
-
-    ghosts = sorted(all_md - referenced)
-
-    print(f"Docs roots         : {len(docs_roots):>5}")
+    
+    referenced, all_md, ghosts, docs_roots_count = find_ghost_pages(root_yaml)
+    
+    # Sort ghost pages for consistent output
+    sorted_ghosts = sorted(ghosts)
+    
+    # Print summary
+    print(f"Docs roots         : {docs_roots_count:>5}")
     print(f"Referenced pages   : {len(referenced):>5}")
     print(f"Markdown discovered: {len(all_md):>5}")
-    print(f"Ghost pages        : {len(ghosts):>5}\n")
-
-    if ghosts:
-        for p in ghosts:
-            print(p)          # absolute path
+    print(f"Ghost pages        : {len(sorted_ghosts):>5}\n")
+    
+    if sorted_ghosts:
+        for p in sorted_ghosts:
+            print(p)  # absolute path
     else:
         print("None")
 

@@ -5,8 +5,8 @@ Keycodes, their common keystrokes, and the keystrokes specific to the PuTTY term
 ## Notes
 
 1. APL represents the metakey used as the APL character and command shift
-2. Cmd represents the keystroke <Ctrl-x>
-3. CMD represents the keystrokes <Ctrl-x><Ctrl-x>
+2. Cmd represents the keystroke <kbd>Ctrl</kbd>+<kbd>x</kbd>
+3. CMD represents the keystrokes <kbd>Ctrl</kbd>+<kbd>x</kbd> <kbd>Ctrl</kbd>+<kbd>x</kbd>
 4. The file $DYALOG\aplkeys\xterm is certain to be uptodate and should be treated as the definitive source of the keycode-keystroke translations
 
 |Keycode|Command            |Common keystrokes    |PuTTY               |
@@ -35,6 +35,7 @@ Keycodes, their common keystrokes, and the keystrokes specific to the PuTTY term
 |HK     |Hot Key ( `⎕SM` )  |Cmd u                |&nbsp;              |
 |HO     |Home Cursor        |Cmd h                |&nbsp;              |
 |IN     |Insert Mode        |Cmd i                |&nbsp;              |
+|IT     | Inline Tracing    |Cmd k                |Alt+Ctrl+Enter      |
 |JP     |Jump               |Cmd j                |Shift+Ctrl+Home     |
 |LC     |Left Cursor        |Cursor Left          |&nbsp;              |
 |LL     |Left Limit         |Ctrl+Left            |&nbsp;              |

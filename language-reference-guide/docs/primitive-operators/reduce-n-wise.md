@@ -1,3 +1,7 @@
+<div style="display: none;">
+  /
+</div>
+
 <h1 class="heading"><span class="name">Reduce N-Wise</span> <span class="command">R←Xf/[K]Y</span></h1>
 
 `f` must be a dyadic function. `X` must be a simple scalar or one-item integer array. `Y` may be any array whose sub-arrays along the `K`th axis are appropriate to function `f`.

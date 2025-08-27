@@ -18,7 +18,7 @@ All but the first of these are made using the *Export* dialog box accessed from 
 
 ## Configuration Parameters
 
-Configuration parameters for these run-time applications, both for the Dyalog engine and for your own application settings, may be specified in a number of ways. See [Configuration Parameters](configuration-parameters.md).
+Configuration parameters for these run-time applications, both for the Dyalog engine and for your own application settings, may be specified in a number of ways. See [Configuration Parameters](configuration-parameters/configuration-parameters.md).
 
 Nevertheless, it is strongly recommended that you use Configuration files. In this section we will discuss only Application Configuration files, although User Configuration files may be used as well.
 
@@ -160,7 +160,7 @@ you may enter configuration parameters or specify a Configuration file for your 
 
 For the other isolation modes, this is not appropriate because only the command line from the first assembly loaded into the interpreter could be honoured, and the order in which assemblies are loaded is unpredictable. However, configuration files may be specified using the **ConfigFile** parameter and/or the **UserConfigFile** parameter specified as an environment variable or in the registry.
 
-For more information, see [Isolation Mode](../../dotnet-framework-interface/implementation-details/isolation-mode).
+For more information, see [Isolation Mode](../../net-framework-interface-guide/implementation-details/isolation-mode).
 
 To distribute your .NET Classes, you need to supply and install
 

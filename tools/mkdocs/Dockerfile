@@ -10,7 +10,8 @@ RUN pip install \
     mkdocs-monorepo-plugin \
     mkdocs-site-urls \
     mkdocs-caption \
-    markdown-tables-extended
+    markdown-tables-extended \
+    mkdocs-minify-plugin
 
 # Set the working directory
 WORKDIR /docs

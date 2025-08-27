@@ -29,8 +29,10 @@ The column labelled *O/S* indicates if a function applies only on Windows (W), o
 |A      |Derived Function                                                                      |O/S   |
 |-------|--------------------------------------------------------------------------------------|------|
 |`8`    |[Inverted Table Index-of](./inverted-table-index-of.md)                               |&nbsp;|
+|`13`   |[Log Use of Deprecated Features](./log-use-of-deprecated-features.md)                 |&nbsp;|
 |`43`   |[Monadic Operator Generator](./monadic-operator-generator.md)                         |&nbsp;|
 |`85`   |[Execute Expression](./execute-expression.md)                                         |&nbsp;|
+|`109`  |[Deprecated feature log file](./deprecated-feature-log-file.md)                       |&nbsp;|
 |`120`  |[Generate UUID](./generate-uuid.md)                                                   |&nbsp;|
 |`127`  |[Overwrite Free Pockets](./overwrite-free-pockets.md)                                 |&nbsp;|
 |`180`  |[Canonical Representation](./canonical-representation.md)                             |&nbsp;|
@@ -79,6 +81,7 @@ The column labelled *O/S* indicates if a function applies only on Windows (W), o
 |`3500` |[Send Text to Ride-embedded Browser](./send-text-to-ride-embedded-browser.md)         |&nbsp;|
 |`3501` |[Connected to Ride](./connected-to-the-ride.md)                                       |&nbsp;|
 |`3502` |[Manage Ride Connections](./manage-ride-connections.md)                               |&nbsp;|
+|`3535` |[Scan For Deprecated Files](./scan-for-deprecated-files.md)                           |&nbsp;|
 |`4000` |[Fork New Task](./fork-new-task.md)                                                   |AIX   |
 |`4001` |[Change User](./change-user.md)                                                       |X     |
 |`4002` |[Reap Forked Tasks](./reap-forked-tasks.md)                                           |AIX   |
@@ -93,8 +96,6 @@ The column labelled *O/S* indicates if a function applies only on Windows (W), o
 |`7162` |[JSON Translate Name](./json-translate-name.md)                                       |&nbsp;|
 |`8373` |[Shell Process Control](./shell-process-control.md)                                   |&nbsp;|
 |`8415` |[Singular Value Decomposition](./singular-value-decomposition.md)                     |&nbsp;|
-|`9468` |[Hash Table Size](./hash-table-size.md)                                               |&nbsp;|
-|`9469` |[Lookup Table Size](./lookup-table-size.md)                                           |&nbsp;|
 |`16808`|[Sample Probability Distribution](./sample-probability-distribution.md)               |&nbsp;|
 |`50100`|[Line Count](./line-count.md)                                                         |&nbsp;|
 

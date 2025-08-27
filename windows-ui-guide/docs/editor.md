@@ -61,7 +61,7 @@ Subsequent ones are staggered according to the values of the **edit_offset_y** a
 
 ### Moving around an edit window
 
-You can move around in the edit window using the scrollbar, the cursor keys, and the PgUp and PgDn keys. In addition, Ctrl+Home (UL) moves the cursor to the beginning of the top-line in the object and Ctrl+End moves the cursor to the end of the last line in the object. Home (LL) and End (RL) move the cursor to the beginning and end respectively of the line containing the cursor.
+You can move around in the edit window using the scrollbar, the cursor keys, and the PgUp and PgDn keys. In addition, Ctrl+Home (UL) moves the cursor to the beginning of the top-line in the object and Ctrl+End moves the cursor to the end of the last line in the object. Home (LL) and End (RL) move the cursor to the beginning and end respectively of the content on the line containing the cursor. That is, if a line of text starts or ends with multiple spaces, Home (LL) and End (RL) move the cursor to the left/right end of the text respectively, ignoring the multiple spaces. Repeating the keystroke will move to the limit of the line, including the spaces.
 
 ### Closing an edit window
 
@@ -150,7 +150,7 @@ Nevertheless whenever you edit the Class *when it is not suspended*, you probabl
 
 The options in the *File* menu shown above provide for these alternatives.
 
-In addition, the Configuration Dialog (see [Fixing Scripts](configuration-dialog.md)) allows you to define  the behaviour of the keystrokes <EP> and <S1> for both the suspended case and the non-suspended case. This association will be displayed against the appropriate action according to the state of the script you are editing.
+In addition, the Configuration Dialog (see [Fixing Scripts](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab)) allows you to define  the behaviour of the keystrokes <EP> and <S1> for both the suspended case and the non-suspended case. This association will be displayed against the appropriate action according to the state of the script you are editing.
 
 ### The Edit Menu
 
@@ -185,15 +185,15 @@ Once displayed, each of the two dialog boxes remains on the screen until it is e
 
 ### The Syntax Menu
 
-The *Syntax* menu provides options to specify  how the data displayed in the Editor window is to be syntax coloured. For workspace objects, the default is *APL* for functions and operators, and *Nothing* for variables.
+The *Syntax* menu provides options related to the display of data in the *Edit* window. The initial items are concerned with syntax colouring; for workspace objects, the default is *APL* for functions and operators, and *Nothing* for variables. The final item toggles how arrays are displayed in the Editor.
 
-|Item          |Effect                  |
-|--------------|------------------------|
-|Nothing       |Nothing                 |
-|APL           |Colour as APL           |
-|JSON          |Colour as JSON          |
-|XML           |Colour as XML           |
-|Array Notation|Show as Array Notation  |
+|Item                    |
+|------------------------|
+|Nothing                 |
+|Colour as APL           |
+|Colour as JSON          |
+|Colour as XML           |
+|Show as Array Notation  |
 
 ### The Window Menu
 
@@ -264,7 +264,7 @@ Dyalog allows you to insert leading spaces in lines of a function and (unless th
 
 ### Reformatting
 
-The RD command (which by default is mapped to Keypad-Slash) reformats a function according to your **AutoFormat** and **TabStops** settings. See [ Trace/Edit Tab](configuration-dialog.md).
+The RD command (which by default is mapped to Keypad-Slash) reformats a function according to your **AutoFormat** and **TabStops** settings. See [ Trace/Edit Tab](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab).
 
 ### Deleting Lines
 
@@ -313,12 +313,12 @@ When you position the caret over a name, control word, or simple text or to the 
 When you press the <AC> key, or select *Align Comments* in the Editor's context menu, the alignment of the comments in every line in the function will be changed so that the left-most comment (Lamp) symbol is in the same column as the cursor, except that:
 
 - Comment symbols that are preceded only by white space, that is, comments in lines that contain no code, are ignored and are not adjusted in any way.
-- Comment symbols that lie between the first column and the first tab stop will remain in or be moved to the first column. For information on setting tab stops, see _Dyalog for Microsoft Windows Installation and Configuration Reference Guide_: [Configuration Dialog (Edit/Trace Tab)](../../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab/).
+- Comment symbols that lie between the first column and the first tab stop will remain in or be moved to the first column. For information on setting tab stops, see _Dyalog for Microsoft Windows Installation and Configuration Reference Guide_: [Configuration Dialog (Edit/Trace Tab)](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab).
 - Comment symbols will not move further left than the end of the statement.
 
 When a comment is re-aligned, text to the right of the left-most comment symbol (including spaces and other comment symbols) will remain fixed in relation to  that symbol.
 
-Note that there is no keystroke associated with this command by default; you must define one. See _Dyalog for Microsoft Windows Installation and Configuration Reference Guide_: [Configuration Dialog (Keyboard Shortcuts Tab)](../../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-keyboard-shortcuts-tab/).
+Note that there is no keystroke associated with this command by default; you must define one. See _Dyalog for Microsoft Windows Installation and Configuration Reference Guide_: [Configuration Dialog (Keyboard Shortcuts Tab)](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-keyboard-shortcuts-tab).
 
 ### Stop, Trace and Monitor Controls
 
@@ -388,19 +388,22 @@ The Editor allows you to edit arbitrary arrays using [array notation](../../prog
 
 Any of the following invokes it:
 
-- Click the ![](img/edit-array-icon.png) icon in the Session toolbar when the mouse pointer is over the name of a suitable variable.
-- Click the ![](img/edit-array-icon.png) icon in the Editor toolbar.
-- Hitting &lt;ED&gt; or &lt;RD&gt; from within the Editor
-- Call the system command `)ED` and prefix the variable name with a diamond; for example: `)ED ⋄q`
-- Call the system function `⎕ED` with a left argument `'⋄'`; for example, `'⋄'⎕ED'q'`.
+-   Within the **Editor**, invoke the _Edit_ command (**<ED>**) when the cursor is not over any name.
+-   In the **session**, call the system command `)ED` and prefix the variable name with a diamond character, for example, `)ED ⋄foo`.
+-   In the **session**, call the system function `⎕ED` with a left argument `'⋄'`, for example, `'⋄' ⎕ED 'foo'`.
+-   In the **Object** toolbar, click the ![Edit Array Icon](img/edit-array-icon.png) button when the cursor is over the name of an array. This opens the array in the Editor in the same way as `)ED ⋄foo`.
+-   In the **Editor**’s toolbar, click the ![Edit Array Icon](img/edit-array-icon.png) button. This toggles whether the **Editor** contents are displayed using array notation.
+-   From the **Editor**’s **Syntax** menu select _Show as Array Notation_.
 
 The Editor presents the array for you to edit in array notation.
 
-![](img/array-editor.png)
+![Editing in array notation](img/array-editor.png)
 
+When using array notation in the **Editor**, the _Reformat_ command (**<RD>**) evaluates the content and regenerates it using array notation.
 
 You can include APL expressions:
 the Editor will evaluate them when you fix or format the array.
+This allows you to insert the value of one array into another by typing its name and pressing **<RD>**.
 
 For example, in the session:
 ```apl
@@ -445,7 +448,6 @@ and fixes as
 │world│
 └─────┘
 ```
-
 
 
 ### Editing Classes

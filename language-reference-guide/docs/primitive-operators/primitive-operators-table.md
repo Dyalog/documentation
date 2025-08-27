@@ -16,7 +16,7 @@
 |`⍨`  |Tilde Diaeresis|[Constant](constant.md)                                          |`R←{X}(A⍨)Y`        |
 |`¨`  |Diaeresis      |[Each with Dyadic Operand](each-with-dyadic-operand.md)          |`{R}←Xf¨Y`          |
 |`¨`  |Diaeresis      |[Each with Monadic Operand](each-with-monadic-operand.md)        |`{R}←f¨Y`           |
-|`⌶`  |IBeam          |[I-Beam](i-beam.md)                                              |`R←{X}(A⌶)Y`        |
+|`⌶`  |IBeam          |[I-Beam](../the-i-beam-operator/i-beam.md)                       |`R←{X}(A⌶)Y`        |
 |`.`  |Dot            |[Inner Product](inner-product.md)                                |`R←Xf.gY`           |
 |`⌸`  |Quad Equal     |[Key](key.md)                                                    |`R←{X}f⌸Y`          |
 |`∘.` |&nbsp;         |[Outer Product](outer-product.md)                                |`{R}←X∘.gY`         |

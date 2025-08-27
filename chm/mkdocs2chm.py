@@ -115,15 +115,21 @@ def _process_nav_item(item: dict | str, parent: Node, project="project") -> None
     """
     if isinstance(item, dict):
         ((key, value),) = item.items()
+        # Navigation titles are already cleaned in parse_mkdocs_yml
     else:  # No name in the yml -- name should be picked up from the H1 in the file
         key = ""
         value = item  # item is the filename -- swap to .htm to parse
         if item.endswith(".md"):
             html_file = os.path.join(project, item.replace(".md", ".htm"))
-            with open(html_file, "r", encoding="utf-8") as f:
-                data = f.read()
-            if h1 := extract_h1(data):
-                key = h1
+            # Check if the HTML file exists (it might have been excluded)
+            if os.path.exists(html_file):
+                with open(html_file, "r", encoding="utf-8") as f:
+                    data = f.read()
+                if h1 := extract_h1(data):
+                    key = h1
+            else:
+                # File was excluded, skip this nav item
+                return
 
             # Special case for welcome.md - override the H1 title
             if item == "welcome.md":
@@ -138,17 +144,34 @@ def _process_nav_item(item: dict | str, parent: Node, project="project") -> None
 
 
 def _traverse(node: Node, toc: IO[str]) -> None:
+    # Just clean up quotes and backticks (HTML tags and quad already removed during parsing)
     title = node.name.replace("`", "").replace('"', "")
-    toc.write(DIR_ENTRY.format(name=title))
+    
+    # Check if this directory has an "Introduction" child that should be used as its link
+    intro_file = None
+    if node.children:
+        for child in node.children:
+            if child.name == "Introduction" and not child.isdir() and child.html_name:
+                intro_file = child.html_name
+                break
+    
+    # Write the entry with or without a Local parameter
+    if intro_file:
+        toc.write(FILE_ENTRY.format(name=title, file=intro_file))
+    else:
+        toc.write(DIR_ENTRY.format(name=title))
+    
     if node.children:  # Only write <ul> if there are children
         toc.write("<ul>\n")
         for child in node.children:
             if child.isdir():
                 _traverse(child, toc)
             else:
+                # Just clean up quotes and backticks
+                child_name = child.name.replace("`", "").replace('"', "")
                 toc.write(
                     FILE_ENTRY.format(
-                        name=child.name.replace("`", "").replace('"', ""),
+                        name=child_name,
                         file=child.html_name,
                     )
                 )
@@ -171,6 +194,29 @@ def modify_paths(navdata, base_path: str):
     elif isinstance(navdata, str):
         navdata = os.path.join(base_path, navdata)
     return navdata
+
+
+def clean_nav_titles(navdata):
+    """
+    Clean navigation titles by removing HTML tags and the quad symbol.
+    This ensures CHM compatibility by removing UTF-8 characters that don't display properly.
+    """
+    if isinstance(navdata, dict):
+        cleaned = {}
+        for key, value in navdata.items():
+            # Clean the key if it's a navigation title
+            if isinstance(value, (str, list, dict)) and not key.startswith('!'):
+                # Remove HTML tags and quad symbol from navigation titles
+                cleaned_key = re.sub(r'<[^>]+>', '', key).replace('⎕', '')
+            else:
+                cleaned_key = key
+            # Recursively clean the value
+            cleaned[cleaned_key] = clean_nav_titles(value)
+        return cleaned
+    elif isinstance(navdata, list):
+        return [clean_nav_titles(item) for item in navdata]
+    else:
+        return navdata
 
 
 def parse_mkdocs_yml(yml_file: str, remove: List[str]) -> dict:
@@ -205,7 +251,13 @@ def parse_mkdocs_yml(yml_file: str, remove: List[str]) -> dict:
         return data
 
     base_path = os.path.dirname(yml_file)
-    return resolve_includes(data, base_path)
+    data = resolve_includes(data, base_path)
+    
+    # Clean navigation titles after parsing
+    if "nav" in data:
+        data["nav"] = clean_nav_titles(data["nav"])
+    
+    return data
 
 
 def generate_toc(yml_data: dict, project="project"):
@@ -231,9 +283,11 @@ def generate_toc(yml_data: dict, project="project"):
         if child.isdir():
             _traverse(child, toc)
         else:
+            # Just clean up quotes and backticks (HTML tags and quad already removed during parsing)
+            child_name = child.name.replace("`", "").replace('"', "")
             toc.write(
                 FILE_ENTRY.format(
-                    name=child.name.replace("`", "").replace('"', ""),
+                    name=child_name,
                     file=child.html_name,
                 )
             )
@@ -250,6 +304,7 @@ def find_source_files(topdir: str, subdirs: List[str]) -> Tuple[List[str], List[
     """
     markdown_files = []
     image_files = []
+    excluded_print_files = []
 
     for subdir in subdirs:
         incldir = os.path.join(topdir, re.sub(r"^[./]+", "", os.path.dirname(subdir)))
@@ -264,9 +319,18 @@ def find_source_files(topdir: str, subdirs: List[str]) -> Tuple[List[str], List[
                     continue
                 extension = os.path.splitext(full_path)[-1]
                 if extension == ".md":
-                    markdown_files.append(full_path)
+                    # Skip -print.md files completely
+                    if file.endswith("-print.md"):
+                        excluded_print_files.append(full_path)
+                    else:
+                        markdown_files.append(full_path)
                 elif extension in {".png", ".gif", ".jpg", ".bmp", ".jpeg"}:
                     image_files.append(full_path)
+
+    if excluded_print_files:
+        print(f"\nExcluded {len(excluded_print_files)} -print.md files from all processing:")
+        for f in sorted(excluded_print_files):
+            print(f"  - {os.path.basename(f)}")
 
     return markdown_files, image_files
 
@@ -402,6 +466,27 @@ def purge_css(css: str, html_content: str) -> str:
     return new_stylesheet.cssText.decode("utf-8")
 
 
+def parse_frontmatter(content: str) -> Tuple[dict, str]:
+    """
+    Parse YAML frontmatter from markdown content.
+    Returns (frontmatter_dict, content_without_frontmatter)
+    """
+    frontmatter_pattern = r'^\s*---\n(.*?)\n---\n+'
+    match = re.match(frontmatter_pattern, content, flags=re.DOTALL)
+    
+    if match:
+        yaml = YAML()
+        try:
+            frontmatter = yaml.load(match.group(1))
+            if frontmatter is None:
+                frontmatter = {}
+        except:
+            frontmatter = {}
+        content_without = re.sub(frontmatter_pattern, '', content, count=1, flags=re.DOTALL)
+        return frontmatter, content_without
+    return {}, content
+
+
 def convert_to_html(
     filenames: List[str],
     css: str,
@@ -409,7 +494,7 @@ def convert_to_html(
     transforms: List[Callable[[str], str]],
     project: str,
     top_level_files: List[str],
-) -> List[str]:
+) -> Tuple[List[str], List[str]]:
     """
     Convert each Markdown file and convert to HTML, using the same rendering library as
     mkdocs, with the same set of extensions. We expand the mkdocs-macro {{ templates }}
@@ -418,8 +503,11 @@ def convert_to_html(
     viewer does not understand <link ...>.
 
     As a mitigation, take steps to only add the actually used CSS bits.
+    
+    Returns: (converted_files, excluded_files)
     """
     converted: List[str] = []
+    excluded: List[str] = []
 
     head_template = """
 <!DOCTYPE html>
@@ -430,8 +518,6 @@ def convert_to_html(
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
 """
-
-    converted: List[str] = []
 
     for file in filenames:
         if file in top_level_files:
@@ -451,6 +537,11 @@ def convert_to_html(
 
         with open(file, "r", encoding="utf-8") as f:
             md = f.read()
+
+        # Parse frontmatter and check for search exclusion
+        frontmatter, md = parse_frontmatter(md)
+        if frontmatter.get('search', {}).get('exclude', False):
+            excluded.append(file)
 
         # Macros are defined in the "extra:" section in the mkdocs.yml file. In the Markdown
         # source, they are templates of the type
@@ -480,6 +571,8 @@ def convert_to_html(
         body = body.replace("``", "")  # Empty code blocks aren't rendered correctly
 
         body = fix_links_html(body)
+        body = remove_footnote_links(body)
+        body = fix_external_links(body)
 
         # Extract the H1 content for use in the title tag, setting for_title=True
         # to only extract the name part (excluding command span)
@@ -522,7 +615,7 @@ def convert_to_html(
             f.write(final_html)
 
         converted.append(str(newname))
-    return converted
+    return converted, excluded
 
 
 def copy_images(filenames: List[str], project="project") -> List[str]:
@@ -682,7 +775,7 @@ def find_nav_files_and_dirs(
             if isinstance(value, str):
                 if m := re.match(r'!include\s+([^"]+)', value):
                     included_dirs.append(m.group(1))  # Path from !include
-                elif value.endswith(".md"):
+                elif value.endswith(".md") and not value.endswith("-print.md"):
                     standalone_files.append(
                         os.path.join("docs", value)
                     )  # Direct .md file reference
@@ -886,6 +979,62 @@ def fix_links_html(html: str) -> str:
         a_tag["href"] = transform_link(original_href)
 
     # Return the modified HTML as a string
+    return str(soup)
+
+
+def remove_footnote_links(html: str) -> str:
+    """
+    Remove linking aspects from footnotes:
+    1. Convert footnote reference links to plain superscript text
+    2. Remove backlinks from footnote text
+    
+    Parameters:
+        html (str): The HTML content as a string.
+        
+    Returns:
+        str: The modified HTML content.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    
+    # Find all footnote reference links and replace with plain superscript text
+    for a_tag in soup.find_all("a", class_="footnote-ref"):
+        # Get the footnote number/text
+        footnote_text = a_tag.get_text()
+        # Create a superscript element
+        sup_tag = soup.new_tag("sup")
+        sup_tag.string = footnote_text
+        # Replace the link with the superscript
+        a_tag.replace_with(sup_tag)
+    
+    # Find all footnote backlinks and remove them
+    for a_tag in soup.find_all("a", class_="footnote-backref"):
+        # Simply remove the backlink
+        a_tag.decompose()
+    
+    return str(soup)
+
+
+def fix_external_links(html: str) -> str:
+    """
+    Fix external links for CHM compatibility.
+    The Windows CHM viewer can open external links with target="_blank".
+    This function adds the target attribute to all external HTTP/HTTPS links.
+    
+    Parameters:
+        html (str): The HTML content as a string.
+        
+    Returns:
+        str: The modified HTML content.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    
+    # Find all external links
+    for a_tag in soup.find_all("a", href=True):
+        href = a_tag.get("href")
+        if href and href.startswith(("http://", "https://")):
+            # Add target="_blank" to open in external browser
+            a_tag["target"] = "_blank"
+    
     return str(soup)
 
 
@@ -1168,6 +1317,16 @@ if __name__ == "__main__":
         os.path.abspath(os.path.join(os.path.dirname(args.mkdocs_yml), f))
         for f in standalone_files
     ]
+    
+    # Filter out -print.md files from standalone files
+    excluded_print_standalone = [f for f in standalone_files_abs if f.endswith("-print.md")]
+    standalone_files_abs = [f for f in standalone_files_abs if not f.endswith("-print.md")]
+    
+    if excluded_print_standalone:
+        print(f"\nExcluded {len(excluded_print_standalone)} -print.md standalone files:")
+        for f in sorted(excluded_print_standalone):
+            print(f"  - {os.path.basename(f)}")
+    
     md_files = md_files_from_dirs + standalone_files_abs
 
     # Add welcome.md to the start of the files list
@@ -1191,7 +1350,7 @@ if __name__ == "__main__":
         macros["build_date"] = args.build_date
 
     # Convert to HTML
-    html_files = convert_to_html(
+    html_files, excluded_files = convert_to_html(
         md_files,
         css,
         macros=macros,
@@ -1199,6 +1358,14 @@ if __name__ == "__main__":
         project=args.project_dir,
         top_level_files=standalone_files_abs,
     )
+    
+    # Remove excluded files from md_files for indexing
+    md_files = [f for f in md_files if f not in excluded_files]
+    
+    if excluded_files:
+        print(f"\nExcluded {len(excluded_files)} files from search index due to 'search: exclude: true':")
+        for f in excluded_files:
+            print(f"  - {os.path.basename(f)}")
 
     # Generate the CHM ToC
     generate_toc(yml_data, project=args.project_dir)

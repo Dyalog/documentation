@@ -25,8 +25,12 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
+        submodules: recursive
         fetch-depth: 0  # Required for mike to work properly
     
+    - name: Update Assets
+      run: git submodule update --remote --recursive documentation-assets
+
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
@@ -47,7 +51,8 @@ jobs:
           mkdocs-monorepo-plugin \
           mkdocs-site-urls \
           mkdocs-caption \
-          markdown-tables-extended
+          markdown-tables-extended \
+          mkdocs-minify-plugin
 
     - name: Get Git Info
       id: git-info
@@ -72,10 +77,43 @@ jobs:
         echo "--- Checking substituted content ---"
         cat mkdocs.yml | grep -A5 copyright
 
+    - name: Move Styles into docs
+      run: |
+        mv documentation-assets docs
+
     - name: Deploy documentation
       run: |
         if [ "${{ inputs.update_latest }}" = "true" ]; then
           mike deploy --push ${{ inputs.version }} latest
         else
           mike deploy --push ${{ inputs.version }}
+        fi
+    
+    - name: Copy Jenkins files to gh-pages
+      run: |
+        # Discard local changes to mkdocs.yml before switching branches
+        git checkout -- mkdocs.yml
+        
+        # Checkout gh-pages branch
+        git checkout gh-pages
+        
+        # Copy Jenkins files from the source branch
+        git checkout ${{ github.sha }} -- tools/jenkins/Jenkinsfile tools/jenkins/service.yml tools/jenkins/.rsync-exclude tools/jenkins/get_svn_docbin
+        
+        # Move them to root of gh-pages and update staging
+        mv tools/jenkins/Jenkinsfile .
+        mv tools/jenkins/service.yml .
+        mv tools/jenkins/.rsync-exclude .
+        mv tools/jenkins/get_svn_docbin .
+        
+        # Remove from staging in old location and add to staging in new location
+        git rm -r tools
+        git add Jenkinsfile service.yml .rsync-exclude get_svn_docbin
+        
+        # Commit if there are changes
+        if git diff --staged --quiet; then
+          echo "No changes to Jenkins files"
+        else
+          git commit -m "Update Jenkins deployment files"
+          git push origin gh-pages
         fi

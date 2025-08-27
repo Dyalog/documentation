@@ -1,3 +1,8 @@
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  dyalogscript
+</div>
+
 <h1 class="heading"><span class="name">Shell Scripts</span></h1>
 
 Shell scripts are typically executed  from a terminal (or *shell*).

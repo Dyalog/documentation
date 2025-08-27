@@ -68,6 +68,7 @@ Table: Variables used to configure the Session {: #E3 }
 
 |Variable|Notes|
 |---|---|
+|`APLAN_FOR_OUTPUT`|Enable or disable use of [array notation](../../../programming-reference-guide/introduction/arrays/array-notation/) for session output|
 |`DYALOGLINK`|Specifies the directory for Link|
 |`DYALOGSTARTUPSE`|Specifies one or more *Session initialisation* directories that contain APL code to be installed in `⎕SE`|
 |`DYALOGSTART_X`|Specifies whether the `Run` function is executed during Session startup|
@@ -101,7 +102,8 @@ Table: Editor-related environment variables {: #E5 }
 
 |---|---|
 |Variable|Notes|
-|`EDITOR_COLUMNS_*`|See [Configuring the Editor](configuring-the-editor.md). Can be one of `EDITOR_COLUMNS_CHARACTER_ARRAY EDITOR_COLUMNS_CLASS EDITOR_COLUMNS_FUNCTION EDITOR_COLUMNS_NAMESPACE EDITOR_COLUMNS_NUMERIC_ARRAY`|
+|`APLAN_FOR_EDITOR`|Enable or disable use of [array notation](../../../programming-reference-guide/introduction/arrays/array-notation/) for editing arrays|
+|`EDITOR_COLUMNS_*`|See [Configuring the Editor](../configuring-the-editor.md). Can be one of `EDITOR_COLUMNS_CHARACTER_ARRAY EDITOR_COLUMNS_CLASS EDITOR_COLUMNS_FUNCTION EDITOR_COLUMNS_NAMESPACE EDITOR_COLUMNS_NUMERIC_ARRAY`|
 |`DYALOG_DISCARD_FN_SOURCE`|Specifies whether source code is retained in the workspace|
 
 Table: Tracer-related environment variables {: #E6 }

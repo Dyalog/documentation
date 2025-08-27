@@ -82,8 +82,8 @@ Multiple names, with a single value:
 ```
 ## Variant Option: Trigger
 
-The `Trigger` variant option specifies whether any [triggers](../../programming-reference-guide/triggers/triggers) should be run for the modified variables in the target namespace that have triggers attached.
-The value must be a Boolean scalar. The default is 0, meaning that triggers are not run.
+The `Trigger` variant option specifies whether any [triggers](../../../programming-reference-guide/triggers/triggers) should be run for the modified variables in the target namespace that have triggers attached.
+The value must be a Boolean scalar. The default is `1`, meaning that triggers are run.
 
 <h4 class="example">Example</h4>
 ```apl
@@ -98,12 +98,16 @@ The value must be a Boolean scalar. The default is 0, meaning that triggers are 
 Running trigger for: name1
       name2←2
 
-      ⍝ Without the trigger option, triggers are not run by ⎕VSET
-      ⎕VSET ('name1' 1) ('name2' 2) ('name3' 3)
+      ⍝ With the trigger option disabled, triggers are not run
       ⎕VSET⍠'Trigger' 0⊢('name1' 1) ('name2' 2) ('name3' 3)
 
       ⍝ With the trigger option enabled, triggers are run
-      ⎕VSET⍠'Trigger' 0⊢('name1' 1) ('name2' 2) ('name3' 3)
+      ⎕VSET⍠'Trigger' 1⊢('name1' 1) ('name2' 2) ('name3' 3)
+Running trigger for: name1
+Running trigger for: name3
+
+      ⍝ Without the trigger option, triggers are run (the default)
+      ⎕VSET ('name1' 1) ('name2' 2) ('name3' 3)
 Running trigger for: name1
 Running trigger for: name3
 ```

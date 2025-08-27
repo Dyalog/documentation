@@ -2,24 +2,13 @@
 search:
   exclude: true
 ---
-
-
-
-
-
 <h1 class="heading"><span class="name">Jot Diaeresis</span> <span class="command">⍤</span></h1>
 
+Jot Diaeresis is a dyadic operator with an ambivalent left operand
 
-## Jot Diaeresis is a Dyadic operator with an ambivalent
-      left operand
-
-## Operator Jot Diaeresis means
-
-
+Operator Jot Diaeresis means
 [Atop](../primitive-operators/atop.md)
 ```apl
-
-
       -⍤÷ 4
 ¯0.25
       12 -⍤÷ 4
@@ -29,11 +18,8 @@ search:
       3 1 4 1 5 (~⍤∊ ⊢⍤/ ⊣) ⍳3  ⍝ ⊢⍤/ is always a function
 4 5
 ```
-
-
 [Rank ](../primitive-operators/rank.md)
 ```apl
-
       cube    ⍝ 3D array
  1  2  3
  4  5  6
@@ -60,10 +46,7 @@ zxy
 11 12 13 14 
 25 26 27 28 
 39 40 41 42
-
 ```
-
-
 [Language Elements](./language-elements.md)
 
 
