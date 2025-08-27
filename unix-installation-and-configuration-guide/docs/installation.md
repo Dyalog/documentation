@@ -151,12 +151,6 @@ For .rpm based Linux distributions
 ```other
 rpm2cpio installation_image.rpm | cpio -icdvum
 ```
-For all UNIXes:
-```other
-find opt/mdyalog -name make_scripts -exec {} \;
-```
-
-This last step generates the mapl script; should you chose to move the installation directory, it will be necessary to re-run the make_scripts script so that the environment variable $DYALOG is set correctly.
 
 ## Deinstalling Dyalog APL
 
