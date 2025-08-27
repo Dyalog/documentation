@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Zilde;</span> <span class="command">⍬</span></h1>
+<h1 class="heading"><span class="name">Zilde</span> <span class="command">⍬</span></h1>
 
 Niladic Zilde is
 [Zilde](../primitive-functions/zilde.md)
