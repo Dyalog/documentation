@@ -8,17 +8,17 @@ AIX still uses a very early version of `magic`, so it is not possible to give as
 
 Dyalog provides a file, `magic`, which is located in the top level installation directory of Dyalog APL. To use this file to extend the capabilities of the `file` command either run
 ```
-file -m /opt/mdyalog/{{ version_majmin }}/32/classic/p5/magic *
+file -m /opt/mdyalog/{{ version_majmin }}/64/unicode/p9/magic *
 ```
 
-or catenate the contents of /opt/mdyalog/{{ version_majmin }}/32/classic/p5/magic onto /etc/magic, and then run
+or catenate the contents of /opt/mdyalog/{{ version_majmin }}/64/unicode/p9/magic onto /etc/magic, and then run
 ```
 file *
 ```
 
 <h3 class="example">Example</h3>
 ```
-$ file -m /opt/mdyalog/{{ version_majmin }}/32/classic/p6/magic *
+$ file -m /opt/mdyalog/{{ version_majmin }}/64/unicode/p9/magic *
 1_apl_j1: Dyalog APL component file 64-bit level 1 journaled non-checksummed
 1_apl_j2: Dyalog APL component file 64-bit level 2 journaled checksummed
 1_apl_qfile: Dyalog APL component file 64-bit non-journaled non-checksummed
