@@ -69,5 +69,5 @@ Various values for EDITOR_COLUMNS_FUNCTION
 |0    |<pre> fn1 a<br /> :If a=1 <br/>     b←2<br /> :EndIf</pre>|
 |22   |<pre>[0]   fn1 a<br />[1]   :If a=1 <br />[2] ○     b←2<br />[3]   :EndIf</pre>|
 |26   |<pre>   fn1 a<br /> ├ :If a=1 <br />○│     b←2<br /> ├ :EndIf</pre>|
-|40   |<pre>[0]    fn1 a<br />[1]  ├ :If a=1<br />[2] ○│     b←2<br />[3]  ├ :EndIf<br></pre>|
+|30   |<pre>[0]    fn1 a<br />[1]  ├ :If a=1<br />[2] ○│     b←2<br />[3]  ├ :EndIf<br></pre>|
 
