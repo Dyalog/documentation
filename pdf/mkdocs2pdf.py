@@ -419,6 +419,9 @@ def convert_examples(soup: BeautifulSoup) -> None:
     headers = soup.find_all(["h1", "h2", "h3", "h4", "h5", "h6"], class_="example")
     for header in headers:
         p_tag = soup.new_tag("p", **{"class": "example"})
+        # Preserve the ID if it exists
+        if "id" in header.attrs:
+            p_tag["id"] = header["id"]
         p_tag.string = header.string
         header.replace_with(p_tag)
 
@@ -788,11 +791,22 @@ def normalise_links(
             anchor = path_parts[1] if len(path_parts) > 1 else None
 
             if not path:
+                # This is an anchor-only link within the same document
+                # But skip TOC links which are handled elsewhere
+                if anchor and "toc" not in a_tag.get("class", []):
+                    parent_article = a_tag.find_parent("article")
+                    if parent_article and "id" in parent_article.attrs:
+                        article_id = parent_article["id"]
+                        new_href = f"#{article_id}-{anchor}"
+                        a_tag["href"] = new_href
                 continue
 
             if path.startswith("/"):
                 # Handle potential inter-document links
                 components = extract_components(path)
+                # Handle renamed documents
+                if components and components[0] == "net-framework-interface-guide":
+                    components[0] = "dotnet-framework-interface"
                 if components and components[0] in documents:
                     new_tag = soup.new_tag("i")
                     text_parts = [documents[components[0]]]
