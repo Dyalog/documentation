@@ -19,18 +19,11 @@ file *
 <h3 class="example">Example</h3>
 ```
 $ file -m /opt/mdyalog/{{ version_majmin }}/64/unicode/p9/magic *
-1_apl_j1: Dyalog APL component file 64-bit level 1 journaled non-checksummed
-1_apl_j2: Dyalog APL component file 64-bit level 2 journaled checksummed
-1_apl_qfile: Dyalog APL component file 64-bit non-journaled non-checksummed
-1_big1: Dyalog APL component file 64-bit level 2 journaled checksummed
-1_big2: Dyalog APL component file 64-bit level 1 journaled checksummed
-apl64u: Dyalog APL workspace type 12 subtype 4 64-bit unicode big-endian
-aplout: Dyalog APL workspace type 12 subtype 0 32-bit classic little-endian
-aplcore: Dyalog APL workspace type 12 subtype 4 32-bit classic little-endian
-colours: Dyalog APL workspace type 12 subtype 4 32-bit classic little-endian
-core: data or International Language text
-signals: Dyalog APL workspace type 12 subtype 4 32-bit classic little-endian
-utf8: Dyalog APL workspace type 12 subtype 4 32-bit unicode little-endian
+apl64u.dws: Dyalog APL workspace type 20 subtype 14 64-bit unicode big-endian
+aplcore: Dyalog APL aplcore
+j1c0.dcf: Dyalog APL component file 64-bit level 1 journaled non-checksummed
+j1c1.dcf: Dyalog APL component file 64-bit level 1 journaled checksummed
+j2c1.dcf: Dyalog APL component file 64-bit level 2 journaled checksummed
 ```
 
 ### magic and Linux
@@ -57,18 +50,11 @@ utf8: \012- Dyalog APL\012- workspace\012- version 12\012- .4
 ### Example, with more recent magic file
 ```
 $ file *
-1_apl_j1: Dyalog APL component file 64-bit level 1 journaled non-checksummed
-1_apl_j2: Dyalog APL component file 64-bit level 2 journaled checksummed
-1_apl_qfile: Dyalog APL component file 64-bit non-journaled non-checksummed
-1_big1: Dyalog APL component file 64-bit level 2 journaled checksummed
-1_big2: Dyalog APL component file 64-bit level 1 journaled checksummed
-apl64u: Dyalog APL workspace type 12 subtype 4 64-bit unicode big-endian
-aplout: Dyalog APL workspace type 12 subtype 0 32-bit classic little-endian
-aplcore: Dyalog APL workspace type 12 subtype 4 32-bit classic little-endian
-colours: Dyalog APL workspace type 12 subtype 4 32-bit classic little-endian
-core: ELF 32-bit LSB core file Intel 80386, version 1 (SYSV), SVR4-style, from '/opt/mdyalog/14.0/32/classic/dyalog'
-signals: Dyalog APL workspace type 12 subtype 4 32-bit classic little-endian
-utf8: Dyalog APL workspace type 12 subtype 4 32-bit unicode little-endian
+apl64u.dws: Dyalog APL workspace 64-bit unicode big-endian version 20.14
+aplcore:    Dyalog APL aplcore version 20.14
+j1c0.dcf:   Dyalog APL component file 64-bit level 1 journaled non-checksummed version 20.0
+j1c1.dcf:   Dyalog APL component file 64-bit level 1 journaled checksummed version 20.0
+j2c1.dcf:   Dyalog APL component file 64-bit level 2 journaled checksummed version 20.0
 ```
 
 The most recent version of the magic file can be found in the top level of the installation directory; see the man page for the file command for details of how to update the system magic file, or use the syntax described in the /etc/magic and AIX section above to override the default magic file with the one supplied in the installation directory.
