@@ -884,21 +884,34 @@ def toc_friendly_headings(soup: BeautifulSoup) -> None:
 
 def toplevel_docs(nav: List[Dict[str, str]]) -> Dict[str, str]:
     result = {}
-    for entry in nav:
-        for doc_name, include_path in entry.items():
-            if "!include" in include_path:
+    
+    def process_nav_value(doc_name, value):
+        """Process a nav value which could be a string or a list (section group)."""
+        if isinstance(value, str):
+            if "!include" in value:
                 # This is a directory include
-                path = include_path.split(" ")[1]
-                first_component = path.split("/")[1]
+                path = value.split(' ')[1]
+                first_component = path.split('/')[1]
                 result[first_component] = doc_name
             else:
                 # This is a direct file reference
-                path_parts = include_path.split("/")
+                path_parts = value.split('/')
                 # Use the filename without extension as the key
                 if len(path_parts) > 0:
                     filename = path_parts[-1]
                     file_base = os.path.splitext(filename)[0]
                     result[file_base] = doc_name
+        elif isinstance(value, list):
+            # This is a section group - process each item in the group
+            for item in value:
+                if isinstance(item, dict):
+                    for sub_name, sub_value in item.items():
+                        process_nav_value(sub_name, sub_value)
+    
+    for entry in nav:
+        for doc_name, value in entry.items():
+            process_nav_value(doc_name, value)
+    
     return result
 
 
