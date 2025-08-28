@@ -28,24 +28,7 @@ j2c1.dcf: Dyalog APL component file 64-bit level 2 journaled checksummed
 
 ### magic and Linux
 
-Most Linux distributions include details about Dyalog-related files in their magic files; Dyalog has submitted two versions of the magic file for inclusion in distributions. To check whether your Linux distribution has the more recent version, create a journaled component file and then run the file command against that component file. The two examples below show the output with the earlier and later versions of magic in use.
-
-## Example, using the older default magic file
-```
-$ file *
-1_apl_j1: data
-1_apl_j2: data
-1_apl_qfile: data
-1_big1: data
-1_big2: data
-apl64u: \012- Dyalog APL\012- workspace\012- version 12\012- .4
-aplout: \012- Dyalog APL\012- workspace\012- version 12\012- .0
-aplcore: \012- Dyalog APL\012- workspace\012- version 12\012- .4
-colours: \012- Dyalog APL\012- workspace\012- version 12\012- .4
-core: ELF 32-bit LSB core file Intel 80386, version 1 (SYSV), SVR4-style
-signals: \012- Dyalog APL\012- workspace\012- version 12\012- .4
-utf8: \012- Dyalog APL\012- workspace\012- version 12\012- .4
-```
+Most Linux distributions include details about Dyalog-related files in their magic files.
 
 ### Example, with more recent magic file
 ```
