@@ -583,7 +583,9 @@ def convert_to_html(
 
         # Add to TOC (except for top-level file articles since they're already in TOC)
         if not is_top_level:
-            toc += f'<li{front_matter}><a href="#{article_id}-header" class="toc"></a></li>\n'
+            # Use the YAML key text if available, otherwise empty
+            toc_text = keypath[-1] if keypath else ""
+            toc += f'<li{front_matter}><a href="#{article_id}-header" class="toc">{toc_text}</a></li>\n'
 
         # Process and add article content
         articles += f'<article id="{article_id}">\n'
@@ -1066,7 +1068,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--mkdocs-yml",
         type=str,
-        default="/app/documentation/mkdocs.yml",
+        default="../mkdocs.yml",
         help="Path to the toplevel mkdocs.yml file",
     )
     parser.add_argument(
@@ -1080,13 +1082,13 @@ if __name__ == "__main__":
     parser.add_argument(
         "--project-dir",
         type=str,
-        default="/app/mkdocs2pdf/project",
+        default="project",
         help="Name of output directory",
     )
     parser.add_argument(
         "--assets-dir",
         type=str,
-        default="/app/mkdocs2pdf/assets",
+        default="assets",
         help="Name of assets directory",
     )
     parser.add_argument("--verbose", action="store_true", help="Enable verbose output")
