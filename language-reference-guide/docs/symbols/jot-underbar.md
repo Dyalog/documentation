@@ -4,7 +4,7 @@ search:
 ---
 <h1 class="heading"><span class="name">Jot Underbar</span> <span class="command">⍛</span></h1>
 
-Jot Underbar is a dyadic Operator
+Jot Underbar is a dyadic operator
 
 Operator Jot Underbar means
 [Behind](../primitive-operators/behind.md)

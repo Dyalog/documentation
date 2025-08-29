@@ -2,9 +2,9 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Divide Sign</span> <span class="command">÷</span></h1>
+<h1 class="heading"><span class="name">Divide</span> <span class="command">÷</span></h1>
 
-Monadic Divide Sign means
+Monadic Divide means
 [Reciprocal](../primitive-functions/reciprocal.md)
 ```apl
       ÷ 1 2 3
@@ -12,7 +12,7 @@ Monadic Divide Sign means
 
 ```
 
-Dyadic Divide Sign means
+Dyadic Divide means
 [Divided By](../primitive-functions/divide.md)
 ```apl
       1 2 3 ÷ 4 5 7
