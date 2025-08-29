@@ -152,24 +152,28 @@ You can gather the environment variable settings into a `.env` file which will b
 
 ```
 DOCS_DIR={YOUR_REPO}
+ASSETS_DIR={PATH_TO}/documentation-assets
 ```
 
 Here is mine:
 
 ```
-DOCS_DIR=/Users/stefan/work/dyalog-docs/documentation
+DOCS_DIR=/Users/stefan/work/dyalog-docs/documentation/
+ASSETS_DIR=/Users/stefan/work/dyalog-docs/documentation/documentation-assets
 ```
 
 and for a specific sub-site, in this case `language-reference-guide`:
 
 ```
 DOCS_DIR=/Users/stefan/work/dyalog-docs/documentation/language-reference-guide
+ASSETS_DIR=/Users/stefan/work/dyalog-docs/documentation/documentation-assets
 ```
 
 If you're on Windows, you _must_ use backslashes:
 
 ```
 DOCS_DIR=C:\devt\documentation
+...
 ```
 
 ## Running Docker on Windows
