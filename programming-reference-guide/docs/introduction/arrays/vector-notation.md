@@ -1,15 +1,19 @@
 <h1 class="heading"><span class="name">Vector Notation</span></h1>
 
+Vector notation complements [array notation](array-notation.md) with a clean syntax for vectors.
+
 A series of two or more adjacent expressions results in a vector whose elements are the enclosed arrays resulting from each expression.  This is known as vector (or strand) notation. Each expression in the series may consist of one of the following:
 
 1. a single numeric value
-2. single character, within a pair of quotes
-3. more than one character, within a pair of quotes
-4. the name of a variable
-5. the evaluated input symbol `⎕`
-6. the quote-quad symbol `⍞`
-7. the name of a niladic, defined function yielding a result
-8. any other APL expression which yields a result, within parentheses
+2. the empty numeric vector symbol `⍬`
+3. zero or more characters, within a pair of quotes
+4. array notation
+5. the name of a variable or system variable
+6. a special namespace or dfn name like `##`, `⍵`, and so on
+7. the evaluated input symbol `⎕`
+8. the character input symbol `⍞`
+9. the name of a niladic, defined function or system function yielding a result
+10. any other APL expression which yields a result, within parentheses
 
 ## Examples { .example }
 ```apl
