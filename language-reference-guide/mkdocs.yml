@@ -387,15 +387,14 @@ nav:
           - Introduction: system-functions/system-functions-categorised.md
           - System Settings:
               - Introduction: system-functions/system-settings.md
-              - State Settings:
-                  - '<code>⎕CT</code>: Comparison Tolerance': system-functions/ct.md
-                  - '<code>⎕DCT</code>: Decimal Comparison Tolerance': system-functions/dct.md
-                  - '<code>⎕DIV</code>: Division Method': system-functions/div.md
-                  - '<code>⎕FR</code>: Floating Point Representation': system-functions/fr.md
-                  - '<code>⎕IO</code>: Index Origin': system-functions/io.md
-                  - '<code>⎕ML</code>: Migration Level': system-functions/ml.md
-                  - '<code>⎕PP</code>: Print Precision': system-functions/pp.md
-                  - '<code>⎕RL</code>: Random Link': system-functions/rl.md
+              - '<code>⎕CT</code>: Comparison Tolerance': system-functions/ct.md
+              - '<code>⎕DCT</code>: Decimal Comparison Tolerance': system-functions/dct.md
+              - '<code>⎕DIV</code>: Division Method': system-functions/div.md
+              - '<code>⎕FR</code>: Floating Point Representation': system-functions/fr.md
+              - '<code>⎕IO</code>: Index Origin': system-functions/io.md
+              - '<code>⎕ML</code>: Migration Level': system-functions/ml.md
+              - '<code>⎕PP</code>: Print Precision': system-functions/pp.md
+              - '<code>⎕RL</code>: Random Link': system-functions/rl.md
           - Session Information and Management:
               - Introduction: system-functions/session-information-and-management.md
               - '<code>⎕AI</code>: Account Information': system-functions/ai.md
@@ -410,32 +409,30 @@ nav:
               - '<code>⎕TS</code>: Timestamp': system-functions/ts.md
           - System Constants:
               - Introduction: system-functions/constants.md
-              - Constants:
-                  - '<code>⎕A</code>: Alphabetic Characters': system-functions/a.md
-                  - '<code>⎕D</code>: Digits': system-functions/d.md
-                  - '<code>⎕NULL</code>: Null Item': system-functions/null.md
+              - '<code>⎕A</code>: Alphabetic Characters': system-functions/a.md
+              - '<code>⎕D</code>: Digits': system-functions/d.md
+              - '<code>⎕NULL</code>: Null Item': system-functions/null.md
           - Tools and Access to External Facilities:
               - Introduction: system-functions/tools-and-external-access.md
-              - Tools and Access to External Utilities:
-                  - '<code>⎕CMD</code>: Execute Windows Command': system-functions/execute-windows-command.md
-                  - '<code>⎕CMD</code>: Start Windows Auxiliary Processor': system-functions/start-windows-auxiliary-processor.md
-                  - '<code>⎕CSV</code>: Comma Separated Values': system-functions/csv.md
-                  - '<code>⎕DR</code>: Data Representation Monadic': system-functions/data-representation-monadic.md
-                  - '<code>⎕DR</code>: Data Representation Dyadic': system-functions/data-representation-dyadic.md
-                  - '<code>⎕FMT</code>: Format Monadic': system-functions/format-monadic.md
-                  - '<code>⎕FMT</code>: Format Dyadic': system-functions/format-dyadic.md
-                  - '<code>⎕JSON</code>: JSON Convert': system-functions/json.md
-                  - '<code>⎕MAP</code>: Map File': system-functions/map.md
-                  - '<code>⎕NA</code>: Name Association': system-functions/na.md
-                  - '<code>⎕R</code>: Replace': system-functions/r.md
-                  - '<code>⎕S</code>: Search': system-functions/s.md
-                  - '<code>⎕SH</code>: Execute UNIX Command': system-functions/execute-unix-command.md
-                  - '<code>⎕SH</code>: Start UNIX Auxiliary Processor': system-functions/start-unix-auxiliary-processor.md
-                  - '<code>⎕SHELL</code>: Execute external program': system-functions/shell.md
-                  - '<code>⎕UCS</code>: Unicode Convert': system-functions/ucs.md
-                  - '<code>⎕USING</code>: Using Microsoft Net Search Path': system-functions/using.md
-                  - '<code>⎕VFI</code>: Verify Fix Input': system-functions/vfi.md
-                  - '<code>⎕XML</code>: XML Convert': system-functions/xml.md
+              - '<code>⎕CMD</code>: Execute Windows Command': system-functions/execute-windows-command.md
+              - '<code>⎕CMD</code>: Start Windows Auxiliary Processor': system-functions/start-windows-auxiliary-processor.md
+              - '<code>⎕CSV</code>: Comma Separated Values': system-functions/csv.md
+              - '<code>⎕DR</code>: Data Representation Monadic': system-functions/data-representation-monadic.md
+              - '<code>⎕DR</code>: Data Representation Dyadic': system-functions/data-representation-dyadic.md
+              - '<code>⎕FMT</code>: Format Monadic': system-functions/format-monadic.md
+              - '<code>⎕FMT</code>: Format Dyadic': system-functions/format-dyadic.md
+              - '<code>⎕JSON</code>: JSON Convert': system-functions/json.md
+              - '<code>⎕MAP</code>: Map File': system-functions/map.md
+              - '<code>⎕NA</code>: Name Association': system-functions/na.md
+              - '<code>⎕R</code>: Replace': system-functions/r.md
+              - '<code>⎕S</code>: Search': system-functions/s.md
+              - '<code>⎕SH</code>: Execute UNIX Command': system-functions/execute-unix-command.md
+              - '<code>⎕SH</code>: Start UNIX Auxiliary Processor': system-functions/start-unix-auxiliary-processor.md
+              - '<code>⎕SHELL</code>: Execute external program': system-functions/shell.md
+              - '<code>⎕UCS</code>: Unicode Convert': system-functions/ucs.md
+              - '<code>⎕USING</code>: Using Microsoft Net Search Path': system-functions/using.md
+              - '<code>⎕VFI</code>: Verify Fix Input': system-functions/vfi.md
+              - '<code>⎕XML</code>: XML Convert': system-functions/xml.md
           - Manipulating Functions and Operators:
               - Introduction: system-functions/manipulating-functions-and-operators.md
               - '<code>⎕AT</code>: Attributes': system-functions/at.md
@@ -469,12 +466,11 @@ nav:
               - '<code>⎕THIS</code>: This Space': system-functions/this.md
           - Input and Output:
               - Introduction: system-functions/input-and-output.md
-              - Input/Output:
-                  - Character Input/Output: system-functions/character-input-output.md
-                  - Evaluated Input/Output: system-functions/evaluated-input-output.md
-                  - '<code>⎕ARBIN</code>: Arbitrary Input': system-functions/arbin.md
-                  - '<code>⎕ARBOUT</code>: Arbitrary Output': system-functions/arbout.md
-                  - '<code>⎕RTL</code>: Response Time Limit': system-functions/rtl.md
+              - Character Input/Output: system-functions/character-input-output.md
+              - Evaluated Input/Output: system-functions/evaluated-input-output.md
+              - '<code>⎕ARBIN</code>: Arbitrary Input': system-functions/arbin.md
+              - '<code>⎕ARBOUT</code>: Arbitrary Output': system-functions/arbout.md
+              - '<code>⎕RTL</code>: Response Time Limit': system-functions/rtl.md
           - Component Files:
               - Introduction: system-functions/component-files.md
               - '<code>⎕FAPPEND</code>: File Append Component': system-functions/fappend.md
@@ -553,28 +549,27 @@ nav:
               - '<code>⎕TRAP</code>: Trap Event': system-functions/trap.md
           - Stack and Workspace:
               - Introduction: system-functions/stack-and-workspace.md
-              - Stack and Workspace Information:
-                  - '<code>⎕LC</code>: Line Count': system-functions/lc.md
-                  - '<code>⎕LX</code>: Latent Expression': system-functions/lx.md
-                  - '<code>⎕NC</code>: Name Classification': system-functions/nc.md
-                  - '<code>⎕NL</code>: Name List': system-functions/nl.md
-                  - '<code>⎕NSI</code>: Namespace Indicator': system-functions/nsi.md
-                  - '<code>⎕RSI</code>: Space Indicator': system-functions/rsi.md
-                  - '<code>⎕SI</code>: State Indicator': system-functions/si.md
-                  - '<code>⎕SHADOW</code>: Shadow Name': system-functions/shadow.md
-                  - '<code>⎕SIZE</code>: Size of Object': system-functions/size.md
-                  - '<code>⎕STACK</code>: State Indicator Stack': system-functions/stack.md
-                  - '<code>⎕STATE</code>: State of Object': system-functions/state.md
-                  - '<code>⎕VGET</code>: Value Get': system-functions/vget.md
-                  - '<code>⎕VSET</code>: Value Set': system-functions/vset.md
-                  - '<code>⎕WA</code>: Workspace Available': system-functions/wa.md
-                  - '<code>⎕WSID</code>: Workspace Identification': system-functions/wsid.md
-                  - '<code>⎕XSI</code>: Extended State Indicator': system-functions/xsi.md
+              - '<code>⎕LC</code>: Line Count': system-functions/lc.md
+              - '<code>⎕LX</code>: Latent Expression': system-functions/lx.md
+              - '<code>⎕NC</code>: Name Classification': system-functions/nc.md
+              - '<code>⎕NL</code>: Name List': system-functions/nl.md
+              - '<code>⎕NSI</code>: Namespace Indicator': system-functions/nsi.md
+              - '<code>⎕RSI</code>: Space Indicator': system-functions/rsi.md
+              - '<code>⎕SI</code>: State Indicator': system-functions/si.md
+              - '<code>⎕SHADOW</code>: Shadow Name': system-functions/shadow.md
+              - '<code>⎕SIZE</code>: Size of Object': system-functions/size.md
+              - '<code>⎕STACK</code>: State Indicator Stack': system-functions/stack.md
+              - '<code>⎕STATE</code>: State of Object': system-functions/state.md
+              - '<code>⎕VGET</code>: Value Get': system-functions/vget.md
+              - '<code>⎕VSET</code>: Value Set': system-functions/vset.md
+              - '<code>⎕WA</code>: Workspace Available': system-functions/wa.md
+              - '<code>⎕WSID</code>: Workspace Identification': system-functions/wsid.md
+              - '<code>⎕XSI</code>: Extended State Indicator': system-functions/xsi.md
           - Shared Variables:
               - Introduction: system-functions/shared-variables.md
               - '<code>⎕SVC</code>: Query Access Control': system-functions/query-access-control.md
               - '<code>⎕SVC</code>: Set Access Control': system-functions/set-access-control.md
-              - Offer Shared Variable: system-functions/svo.md
+              - '<code>⎕SVO</code>: Offer Shared Variable': system-functions/svo.md
               - '<code>⎕SVO</code>: Shared Variable Offer': system-functions/shared-variable-offer.md
               - '<code>⎕SVO</code>: Query Degree of Coupling': system-functions/query-degree-of-coupling.md
               - '<code>⎕SVQ</code>: Shared Variable Query': system-functions/svq.md
