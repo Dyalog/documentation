@@ -87,7 +87,10 @@ td {
 }
 
 .right {
-    text-align: right;
+    float: right;
+    /* Float right to position at the end */
+    padding-right: 5pt;
+    /* Match the left padding for symmetry */
     color: black;
 }
 
