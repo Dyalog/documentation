@@ -20,7 +20,7 @@ The derived function is equivalent to either `(f Y) g Y` or `(f X) g Y`, dependi
 
 The _behind_ operator allows functions to be *glued* together to build up more complex functions. For further information, see [Function Composition](./operator-syntax.md).
 
-<h2 class="example">Examples: Monadic Use</h2>
+<h2 class="example">Examples: Monadic Application of Derived Function</h2>
 
 Are numbers in a sequence identical to the first number in that sequence?
 ```apl
@@ -28,7 +28,7 @@ Are numbers in a sequence identical to the first number in that sequence?
 1 0 0 0 1 0 0 0 1 0 
 ```
 
-Are the characters within a vector unique?
+Are the characters within each vector unique?
 ```apl
       ∪⍛≡¨ 'Hello' 'Helo'
 0 1
@@ -64,9 +64,9 @@ Identify the numbers in a vector greater than 3, and filter to return only those
 
 Identify the integers in a vector of numbers, and filter to return only the integers:
 ```apl
-      ⌊⍛= 1 3.2 ¯5 0 ¯3.2 8.1   ⍝ create mask
+      ⌊⍛= 1 3.2 ¯5 0 ¯3.2 8.1     ⍝ create mask
 1 0 1 1 0 0
-      ⌊⍛= 1 3.2 ¯5 0 ¯3.2 8.1   ⍝ apply filter
+      ⌊⍛=⍛/ 1 3.2 ¯5 0 ¯3.2 8.1   ⍝ apply filter
 1 ¯5 0
 ```
 
@@ -88,7 +88,7 @@ Find the mean value of a vector of numbers, identify the individual numbers in t
 4 5 9 6
 ```
 
-<h2 class="example">Examples: Dyadic Use</h2>
+<h2 class="example">Examples: Dyadic Application of Derived Function</h2>
 
 Some functions require their left arguments to be enclosed to achieve the desired result. Without _behind_, the left argument needs to be parenthesised to enclose the left argument. With _behind_, a new function can be derived that achieves the required enclosure by including `⊂⍛` before the main function. For example:
 
@@ -139,16 +139,15 @@ Identify the first occurrence of an element starting from the end of the source:
 ```apl
       'abracadabra' ⌽⍛⍳ 'ab'
 1 3
-
 ```
 
-Construct a Boolean mask from a length and the indices of the `1`s:
+Construct a Boolean mask from a length and the indices of the `1`s (inverse of monadic `⍸`):
 ```apl
       10 ⍳⍛∊ 1 3 5
 1 0 1 0 1 0 0 0 0 0
 ```
 
-Filter to return elements that match `0` in a Boolean mask:
+Filter to return elements that correspond to `0` in a Boolean mask – the opposite of _reduce_ (`/`), which returns elements that correspond to `1` in a Boolean mask.:
 ```apl
       0 1 0 1 1 0 ~⍛/ 'Dyalog'
 Dag
@@ -166,10 +165,11 @@ Sort a vector by values in another vector:
 Carl Abe Bea
 ```
 
-Split a vector:
+Split a vector with a function that can be applied either monadically (in which case it uses the initial character as separator) or dyadically (in which case it uses the left argument as separator):
+
 ```apl
       ]Boxing on
-      Split←⊂⍤⍋⍛⌷
+      Split←⊃⍛≠⊆⊢
       Text←',I S,EAT ING,RATES'
       Split Text     ⍝ Split at occurences of first element
 ┌───┬───────┬─────┐
