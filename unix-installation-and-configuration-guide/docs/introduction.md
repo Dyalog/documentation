@@ -17,4 +17,4 @@ The server version has the same functionality as the development version, other 
 
 There are different licences associated with the development and server versions, which affects how each might be distributed. For more information, please contact sales@dyalog.com.
 
-All examples are written assuming that the Korn shell is being used.
+All examples are written assuming that the bash shell is being used.
