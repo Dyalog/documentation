@@ -134,8 +134,26 @@ The power of this form of display is made apparent when formatting informal repo
 
 ## Array Notation
 
-In the [Windows IDE](../../../../windows-ui-guide) you can have arrays displayed using [Array Notation](array-notation.md) when it is possible to do so.
+Arrays (including namespaces) can be displayed in the session using [array notation](array-notation.md). This mode is enabled using the `]APLAN.Output` user command:
+```apl
+      SALES
+  50  5.25   75
+ 250 20.15  900
+ 500 80.98  650
+1000 90.03 1200
+      ]APLAN.Output ON
+'Was OFF'
+      SALES
+[               
+   50  5.25   75
+  250 20.15  900
+  500 80.98  650
+ 1000 90.03 1200
+]               
+```
+In the [Microsoft Windows IDE](../../../../windows-ui-guide) it can be toggled on and off using the ![](../../../../release-notes/img/session_arraynotation.png){width=20 height=20 vertical-align:text-bottom} icon on the Session toolbar.
 
+To have output as array notation enabled when Dyalog starts, the [configuration parameter](../../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) APLAN_FOR_OUTPUT can be set to `1`.
 
 ## Print Width
 
