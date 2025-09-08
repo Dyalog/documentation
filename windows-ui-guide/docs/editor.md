@@ -388,7 +388,7 @@ The Editor allows you to edit arbitrary arrays using [array notation](../../prog
 
 Any of the following invokes it:
 
--   Within the **Editor**, invoke the _Edit_ command (**&lt;ED>**) when the cursor is not over any name.
+-   Within the **Editor**, invoke the _Edit_ command (**<ED\>**) when the cursor is not over any name.
 -   In the **session**, call the system command `)ED` and prefix the variable name with a diamond character, for example, `)ED ⋄foo`.
 -   In the **session**, call the system function `⎕ED` with a left argument `'⋄'`, for example, `'⋄' ⎕ED 'foo'`.
 -   In the **Object** toolbar, click the ![Edit Array Icon](img/edit-array-icon.png) button when the cursor is over the name of an array. This opens the array in the Editor in the same way as `)ED ⋄foo`.
@@ -399,11 +399,11 @@ The Editor presents the array for you to edit in array notation.
 
 ![Editing in array notation](img/array-editor.png)
 
-When using array notation in the **Editor**, the _Reformat_ command (**&lt;RD>**) evaluates the content and regenerates it using array notation.
+When using array notation in the **Editor**, the _Reformat_ command (**<RD\>**) evaluates the content and regenerates it using array notation.
 
 You can include APL expressions:
 the Editor will evaluate them when you fix or format the array.
-This allows you to insert the value of one array into another by typing its name and pressing **&lt;RD>**.
+This allows you to insert the value of one array into another by typing its name and pressing **<RD\>**.
 
 For example, in the session:
 ```apl
