@@ -155,7 +155,7 @@ If the display of an array is wider than the print width, as defined by the [`�
 
 ## The `]Disp` User Command
 
-The user command `]Disp` illustrates the specified array with borders indicating sub-array shape and type. For example:
+The user command `]Disp` illustrates the specified array, with borders indicating sub-array shape and type. For example:
 
 ```apl
       ]Disp 'ABC' [1 2 3 4 ⋄]
@@ -177,13 +177,13 @@ The user command `]Disp` illustrates the specified array with borders indicating
 │ Rolls  │1000│ 90.03 │1200│
 └───────→┴~───┴~──────┴~───┘
 ```
-This is similar to displaying array with `]Boxing on -style=mid`; see below.
+This is similar to displaying array with `]Boxing on -style=mid` (see [The `]Boxing` User Command](#boxing) below).
 
 An explanation of the symbols that appear in the borders can be seen by running `]Disp -??`
 
 ## The `]Display` User Command
 
-The user command `]Display` illustrates the specified array with borders indicating array and sub-array shape and type. For example:
+The user command `]Display` illustrates the specified array, with borders indicating array and sub-array shape and type. For example:
 
 ```apl
       ]Display 'ABC' [1 2 3 4 ⋄]
@@ -213,11 +213,11 @@ The user command `]Display` illustrates the specified array with borders indicat
 │ └─────┘                            │
 └∊───────────────────────────────────┘
 ```
-This is similar to displaying array with `]Boxing on -style=max`; see below.
+This is similar to displaying array with `]Boxing on -style=max` (see [The `]Boxing` User Command](#boxing) below).
 
 An explanation of the symbols that appear in the borders can be seen by running `]Display -??`
 
-## The `]Boxing` User Command
+## The `]Boxing` User Command {#boxing}
 
 The user command `]Boxing` changes how nested arrays are displayed in the Session. The following examples show different settings.
 
