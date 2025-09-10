@@ -24,5 +24,5 @@ It is expected that the structure of files in ~/.dyalog will change in future ve
 
 It is possible to assign the contents of the Session Log to a variable:
 ```apl
-      z←'⎕se'⎕wg'Log'
+      z←'⎕SE'⎕WG'Log'
 ```
