@@ -30,7 +30,7 @@ LocalPort may not subsequently be changed using `⎕WS`
 If you specify a value of 0, the system will assign an available port number.
 For example:
 ```apl
-      'S1' ⎕wc'TCPSocket' ('LocalPort' 0)
+      'S1' ⎕WC'TCPSocket' ('LocalPort' 0)
       S1.LocalPort
 4047
 ```
