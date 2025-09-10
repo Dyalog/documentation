@@ -64,7 +64,7 @@ VALUE ERROR
 
 In some cases a .NET method may take a parameter that is an Array and the method expects to fill in the array with appropriate values. In APL there is no syntax to allow a parameter to a function to be modified in this way. However, we can use the `Dyalog.ByRef` class to call this method. For example, the `System.IO.FileStream` class contains a `Read` method that populates its first argument with the bytes in the file.
 ```apl
-      ⎕using←'System.IO' 'Dyalog' 'System'
+      ⎕USING←'System.IO' 'Dyalog' 'System'
       fs←⎕NEW FileStream ('c:\tmp\jd.txt' FileMode.Open) 
       fs.Length
 25
