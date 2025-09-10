@@ -11,8 +11,8 @@ C:\Program Files\Dyalog\Dyalog APL-64 15.0 Unicode
 <h2 class="example">Example</h2>
 ```apl
 
-      dyalog←2⎕nq'.' 'GetEnvironment' 'DYALOG'
-      ⎕cmd 'dir "',dyalog,'/help"'
+      dyalog←2⎕NQ'.' 'GetEnvironment' 'DYALOG'
+      ⎕CMD 'dir "',dyalog,'/help"'
  Volume in drive C is OS
  Volume Serial Number is 3013-866E
 

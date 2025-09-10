@@ -37,7 +37,7 @@ If the application is designed to be driven from events such as Timer or TCPSock
 
 The workspace `ws\aplservice.dws` is included in the APL release. Its start-up function is as follows:
 ```apl
-     ⎕lX←'Start'
+     ⎕LX←'Start'
 
      ∇ Start;ServiceState;ServiceControl
 [1]    :If 'W'≠3⊃#.⎕WG'APLVersion'
