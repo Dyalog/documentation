@@ -37,9 +37,9 @@ As a consequence of these two rules, you must specify the data type (either 160 
 
 			
       n←'test'⎕NCREATE 0
-      'abc' ⎕nappend n
+      'abc' ⎕NAPPEND n
 
-      'ταβέρνα'⎕nappend n
+      'ταβέρνα'⎕NAPPEND n
 DOMAIN ERROR
       'ταβέρνα'⎕NAPPEND n
      ∧
@@ -55,8 +55,8 @@ abc
 
 To write 2 or more lines, you must insert appropriate end-of-line codes.
 ```apl
-      ('hello',(⎕UCS 13 10),'world')⎕nappend ¯1 ⍝ Windows
-      ('hello',(⎕UCS 10),'world')⎕nappend ¯1    ⍝ Other
+      ('hello',(⎕UCS 13 10),'world')⎕NAPPEND ¯1 ⍝ Windows
+      ('hello',(⎕UCS 10),'world')⎕NAPPEND ¯1    ⍝ Other
 ```
 
 

@@ -80,7 +80,7 @@ The second, optional, element of `X` specifies the length of the uncompressed da
 ```apl
 
       sint←{⍵-256×⍵>127}
-      utf8←'UTF-8'∘⎕ucs
+      utf8←'UTF-8'∘⎕UCS
       str←'empty←⍬'
       ⊣v←sint utf8  str
 101 109 112 116 121 ¯30 ¯122 ¯112 ¯30 ¯115 ¯84			

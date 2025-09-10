@@ -163,7 +163,7 @@ C:/Users/Pete/Documents/Dyalog APL-64 16.0 Unicode Files/
       ⊢ ⎕MKDIR 'd1' 'd2'
 1 1
       'a'∘⎕NPUT¨'find' 'd1/find' 'd1/nofind' 'd2/find'
-      (⎕ninfo⍠'Recurse' 1)'find'
+      (⎕NINFO⍠'Recurse' 1)'find'
 ┌──────────────────────┐
 │┌───────┬───────┬────┐│
 ││d1/find│d2/find│find││

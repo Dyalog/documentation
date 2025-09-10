@@ -25,7 +25,7 @@ The result `R` is an integer scalar containing an integer value which indicates 
 <h2 class="example">Example</h2>
 ```apl
 
-      ⎕dr 1↑1 1000
+      ⎕DR 1↑1 1000
 11
       (181⌶) 1↑1 1000
 163

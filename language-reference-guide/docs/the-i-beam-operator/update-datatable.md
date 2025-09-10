@@ -37,7 +37,7 @@ Shown firstly for comparison is the type of code that is required to update a Da
  365  odd   5  19-01-2011 14:03:29 
  
       ar←{(row←dt.NewRow).ItemArray←⍵ ⋄ dt.Rows.Add row}
-      t←3⊃⎕ai ⋄ ar¨↓data ⋄ (3⊃⎕ai)-t
+      t←3⊃⎕AI ⋄ ar¨↓data ⋄ (3⊃⎕AI)-t
 449
 ```
 
