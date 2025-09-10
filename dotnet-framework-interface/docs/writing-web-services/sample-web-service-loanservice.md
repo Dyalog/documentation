@@ -67,7 +67,7 @@ The `Periods` field is defined to be an array of integers; the `InterestRates` f
 
 Notice however that `Payments` is also defined to be 1-dimensional when in fact it is, more naturally, a 2-dimesional matrix. The reason for this is that, currently, Web Services do not support multi-dimensional arrays. This is a .NET restriction and not a Dyalog restriction.
 
-`CalcPayments[13]` gets a new instance of the `LoanResult` class by doing `⎕New LoanResult`. It then assigns values to each of the three fields in lines `[14]`, `[15]` and `[18]`.
+`CalcPayments[13]` gets a new instance of the `LoanResult` class by doing `⎕NEW LoanResult`. It then assigns values to each of the three fields in lines `[14]`, `[15]` and `[18]`.
 
 ## Testing LoanService from a Browser
 
