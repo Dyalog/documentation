@@ -244,7 +244,7 @@ NIL
    N/A
     13
  
-      'O99<replace>F20.2'⎕fmt 99 100 101
+      'O99<replace>F20.2'⎕FMT 99 100 101
              replace
               100.00
               101.00

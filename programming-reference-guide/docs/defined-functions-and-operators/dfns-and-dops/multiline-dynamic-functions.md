@@ -16,7 +16,7 @@ An assignment to `⍵` is not allowed and will result in an error. For assignmen
 
 Note that dfns may be commented in the usual way using `⍝`.
 
-When the interpreter encounters a local definition, a new local name is created. The name is shadowed dynamically exactly as if the assignment had been preceded by: `⎕shadow` *name* `⋄`.
+When the interpreter encounters a local definition, a new local name is created. The name is shadowed dynamically exactly as if the assignment had been preceded by: `⎕SHADOW` *name* `⋄`.
 
 It is **important** to note the distinction between the two types of statement above. There can be **many** assignment statements, each introducing a new local definition, but only a **single** expression where the result is not assigned. As soon as the interpreter encounters such an expression, it is evaluated and the result returned immediately as the result of the function.
 

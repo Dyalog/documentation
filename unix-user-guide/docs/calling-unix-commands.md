@@ -35,17 +35,17 @@ Command interpreter returned failure code 17
 
 It is possible to run tasks from within APL using `⎕SH`:
 ```apl
-      ⎕sh'myjob'
+      ⎕SH'myjob'
 ```
 
 However, in this case, APL will wait until myjob has completed, and will return the output from myjob (assuming that is that myjob completes with a non-zero exit code). It is possible to start a job that will run in background, without APL waiting for that job to complete, with the job continuing even if APL is terminated:
 
 Example:
 ```apl
-      ⎕sh 'sleep 40000 </dev/null >/dev/null 2>&1 &'
+      ⎕SH 'sleep 40000 </dev/null >/dev/null 2>&1 &'
 ```
 
 More useful might be to save the stdout and stderr of the command, and pipe the input in from a file; it might also be useful to have the job continue to run even after the user has both quit APL and logs out from the server:
 ```apl
-      ⎕sh 'nohup myjob <my.in >my.out 2>my.err &'
+      ⎕SH 'nohup myjob <my.in >my.out 2>my.err &'
 ```

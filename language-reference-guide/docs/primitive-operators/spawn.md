@@ -39,11 +39,11 @@ Note that `&` can be used in conjunction with the **each** operator `¨` to laun
  
       X.GOO&99    ⍝ thread in remote space.
  
-      ⍎&'⎕dl 2'   ⍝ Execute async expression.
+      ⍎&'⎕DL 2'   ⍝ Execute async expression.
  
       'NS'⍎&'FOO' ⍝ .. remote .. .. .. 
  
-      PRT&¨↓⎕nl 9 ⍝ PRT spaces in parallel.
+      PRT&¨↓⎕NL 9 ⍝ PRT spaces in parallel.
 ```
 
 

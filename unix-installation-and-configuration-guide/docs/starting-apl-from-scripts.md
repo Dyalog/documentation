@@ -23,9 +23,9 @@ The example below shows the same set of APL expressions as they would appear in 
 
 ### Unicode example
 ```apl
-(+2⎕nq'.'  'GetBuildID'),('.'⎕wg'APLVersion')
+(+2⎕NQ'.'  'GetBuildID'),('.'⎕WG'APLVersion')
 var←1÷1 ⍝ Check input from file: Unicode
 )si
 )si
-⎕off
+⎕OFF
 ```

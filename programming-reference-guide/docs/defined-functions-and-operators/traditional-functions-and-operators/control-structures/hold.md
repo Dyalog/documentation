@@ -38,7 +38,7 @@ Within the whole active workspace, a token with a particular value may be held o
     'red' 'green' 'blue'
     'doe' 'a' 'deer'
     ,¨'abc'
-    ↓⎕nl 9
+    ↓⎕NL 9
 ```
 
 
@@ -54,9 +54,9 @@ Unlike `⎕FHOLD`, a thread does not release all existing tokens before attempti
 
 In the following example, a thread updates a critical structure in a child namespace, and then updates a structure in its parent space. The holds will allow all "sibling" namespaces to update concurrently, but will constrain updates to the parent structure to be executed one at a time.
 ```apl
-    :Hold ⎕cs''          ⍝ Hold child space     
+    :Hold ⎕CS''          ⍝ Hold child space     
         ...              ⍝ Update child space
-        :Hold ##.⎕cs''   ⍝ Hold parent space 
+        :Hold ##.⎕CS''   ⍝ Hold parent space 
             ...          ⍝ Update Parent space
         :EndHold
         ...

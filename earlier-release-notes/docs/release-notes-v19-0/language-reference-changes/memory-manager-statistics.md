@@ -85,7 +85,7 @@ If `X` is specified, it must be either a simple integer scalar, or a vector of t
       (2000⌶)13 14 ⍝ Current, peak WS allocation
 15108580 15108580
 
-      ⎕EX 'a' ⋄ {}⎕wa ⍝ Decrease current WS allocation
+      ⎕EX 'a' ⋄ {}⎕WA ⍝ Decrease current WS allocation
 
       (2000⌶)13 14 ⍝ Current, peak WS allocation
 1962856 15108580

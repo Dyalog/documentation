@@ -22,7 +22,7 @@ An inverted table is a (nested) vector all of whose items have the same number o
 
 The following is an example of an inverted table:
 ```apl
-      X←(10 3⍴⎕a) (⍳10) 'metalepsis'
+      X←(10 3⍴⎕A) (⍳10) 'metalepsis'
       X
 ┌───┬───────────────────┬──────────┐
 │ABC│0 1 2 3 4 5 6 7 8 9│metalepsis│

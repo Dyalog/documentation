@@ -22,7 +22,7 @@ The result `R` is the argument `Y`.
  abc  1 2 3
 ```
 ```apl
-      (⊢,⎕size) 'a'⎕nl 4 ⍝ left tine of fork meaning "it"
+      (⊢,⎕SIZE) 'a'⎕NL 4 ⍝ left tine of fork meaning "it"
 acc      572
 and      492
 ascan    740

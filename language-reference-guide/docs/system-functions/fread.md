@@ -42,12 +42,12 @@ However, the first statement will, in the case of a share-tied file,  prevent an
       ⍴SALES←⎕FREAD 1 241
 3 2 12
  
-GetFile←{⎕io←0                ⍝ Extract contents.
-    tie←⍵ ⎕fstie 0            ⍝ new tie number.
-    fm to←2↑⎕fsize tie        ⍝ first and next component.
+GetFile←{⎕IO←0                ⍝ Extract contents.
+    tie←⍵ ⎕FSTIE 0            ⍝ new tie number.
+    fm to←2↑⎕FSIZE tie        ⍝ first and next component.
     cnos←fm+⍳to-fm            ⍝ vector of component nos.
-    cvec←⎕fread tie cnos      ⍝ vector of components.
-    cvec⊣⎕funtie tie        ⍝ ... untie and return.
+    cvec←⎕FREAD tie cnos      ⍝ vector of components.
+    cvec⊣⎕FUNTIE tie        ⍝ ... untie and return.
 }
 ```
 

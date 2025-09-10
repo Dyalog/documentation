@@ -2,7 +2,7 @@
 
 Environment variables are used to configure various aspects of Dyalog APL. The complete list appears in the *Dyalog for Microsoft Windows Installation and Configuration Guide: Configuration Parameters*; this section discusses those variables which are of particular importance to the Non-GUI versions of Dyalog APL, and lists those that have meaning to the UNIX versions. Additionally there some non-GUI-specific variables which are described below and some which either do not apply, or may not work as the user might at first expect.
 
-Under UNIX, all environment variables should appear in UPPER CASE. For example, to set the default value of `⎕ml` to 3, then
+Under UNIX, all environment variables should appear in UPPER CASE. For example, to set the default value of `⎕ML` to 3, then
 ```
 $ export DEFAULT_ML=3
 ```

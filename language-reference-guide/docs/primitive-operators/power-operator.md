@@ -106,7 +106,7 @@ One can ensure that weak interrupts and `⎕TKILL` can interrupt by packaging th
       PowOp←{⍺←⊢ ⋄ ⍺ (⍺⍺{⍺←⊢ ⋄ ⍺ ⍺⍺ ⍵}⍣⍵⍵) ⍵}
       tnum←!PowOp-&1 ⍝ using naked ⍣ will freeze APL
 
-      ⎕tkill tnum
+      ⎕TKILL tnum
 ```
 
 

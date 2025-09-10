@@ -83,7 +83,7 @@ Configuration parameters may be specified in a Configuration file located in the
 ```apl
 #!/usr/local/bin/dyalogscript MAXWS=3GB
 ⎕←⎕WA
-⎕←2 ⎕nq '#' 'GetEnvironment' ('MAXWS' 'WSPATH')
+⎕←2 ⎕NQ '#' 'GetEnvironment' ('MAXWS' 'WSPATH')
 ```
 
 ### Example (configuration file)

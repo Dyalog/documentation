@@ -20,7 +20,7 @@ The shy result of `⎕NERASE` is the tie number that the erased file had.
 
 <h2 class="example">Example</h2>
 ```apl
-      file ⎕nerase file ⎕ntie 0
+      file ⎕NERASE file ⎕NTIE 0
 ```
 
 

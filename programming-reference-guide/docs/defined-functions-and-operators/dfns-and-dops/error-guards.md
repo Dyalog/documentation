@@ -75,7 +75,7 @@ Following the setting of an error-guard, subsequent function calls will disable 
 ```apl
     {
         22::'Oops!'     ⍝ this error-guard means that ...
-        tie←⍵ ⎕ftie 0
+        tie←⍵ ⎕FTIE 0
         subfn tie       ⍝ ... tail call not optimised
     }
 ```
@@ -85,7 +85,7 @@ One way to maintain the tail call optimisation in the presence of an error-guard
     {
         tie←{
             22::0        ⍝ error-guard local to inner fn
-            ⍵ ⎕ftie 0
+            ⍵ ⎕FTIE 0
         }⍵
         tie=0:'Oops!'
         subfn tie        ⍝ ... so this is a tail call 

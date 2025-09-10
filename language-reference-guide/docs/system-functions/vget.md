@@ -73,7 +73,7 @@ name1
 name2
 name3
       defaults←1 2 3
-      ⎕vget names defaults
+      ⎕VGET names defaults
 1 100 3
 ```
 
