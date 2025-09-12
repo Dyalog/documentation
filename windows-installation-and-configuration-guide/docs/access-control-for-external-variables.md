@@ -5,4 +5,4 @@ External variables may be EXCLUSIVE or SHARED. An exclusive variable can only be
 Access to an external variable is faster if it has exclusive status than if it is shared. This is because if several users are accessing the file data must always be read and written directly to disk. If it has exclusive status, the system uses buffering and avoids disk accesses where possible.
 
 !!! Info "Information"
-    Support for external variables has been deprecated, and is scheduled for removal in a future release. For information on how to identify calls to external variables in your existing codebase, see the the [Release Notes](../release-notes/announcements/deprecated-functionality.md).
+    Support for external variables has been deprecated, and is scheduled for removal in a future release. For information on how to identify calls to external variables in your existing codebase, see the [Release Notes](../release-notes/announcements/deprecated-functionality.md).
