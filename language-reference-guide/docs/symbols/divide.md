@@ -13,7 +13,7 @@ Monadic Divide means
 ```
 
 Dyadic Divide means
-[Divided By](../primitive-functions/divide.md)
+[Divide](../primitive-functions/divide.md)
 ```apl
       1 2 3 ÷ 4 5 7
 0.25 0.4 0.428571

@@ -7,7 +7,7 @@ search:
 Monadic Logical OR is not defined.
 
 Dyadic Logical OR means
-[Greatest Common Divisor (Or)](../primitive-functions/or-greatest-common-divisor.md)
+[Greatest Common Divisor/OR](../primitive-functions/greatest-common-divisor-or.md)
 ```apl
 
       0 1 0 1 ∨ 0 0 1 1

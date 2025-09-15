@@ -12,7 +12,7 @@ Monadic Times means
 ```
 
 Dyadic Times means
-[Times](../primitive-functions/multiply.md)
+[Times](../primitive-functions/times.md)
 ```apl
       2 ¯3 4.5 × ¯3 ¯4 2
 ¯6 12 9

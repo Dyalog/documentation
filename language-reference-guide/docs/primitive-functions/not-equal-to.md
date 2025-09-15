@@ -7,11 +7,11 @@
 
 
 
-<h1 class="heading"><span class="name">Not Equal</span> <span class="command">R←X≠Y</span></h1>
+<h1 class="heading"><span class="name">Not Equal To</span> <span class="command">R←X≠Y</span></h1>
 
 
 
-`Y` may be any array.  `X` may be any array.  `R` is Boolean.  `R` is 0 if `X=Y`.  Otherwise `R` is 1.
+`Y` may be any array. `X` may be any array. `R` is Boolean. `R` is 0 if `X=Y`. Otherwise `R` is 1.
 
 
 For Boolean `X` and `Y`, the value of `R` is the exclusive or (XOR)  result, determined as follows:
@@ -25,7 +25,7 @@ For Boolean `X` and `Y`, the value of `R` is the exclusive or (XOR)  result, det
 ```
 
 
-`⎕CT` and `⎕DCT` are  implicit arguments of Not Equal.
+`⎕CT` and `⎕DCT` are  implicit arguments of Not Equal To.
 
 
 <h2 class="example">Examples</h2>

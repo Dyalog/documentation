@@ -7,7 +7,7 @@ search:
 Monadic Greater Than is not defined
 
 Dyadic Greater Than means
-[Greater Than](../primitive-functions/greater.md)
+[Greater Than](../primitive-functions/greater-than.md)
 ```apl
 
       1 2 3 > 4 2 ¯1
