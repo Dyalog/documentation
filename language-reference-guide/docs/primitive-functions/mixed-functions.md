@@ -39,7 +39,7 @@ Table: Structural Primitive Functions {: #Structural }
 |`⍪`   |[Table](table.md)                            |[Catenate First / Laminate ](catenate-first.md) `[]`|
 |`⌽`   |[Reverse ](reverse.md) `[]`                  |[Rotate ](rotate.md) `[]`                           |
 |`⊖`   |[Reverse First ](reverse-first.md) `[]`      |[Rotate First ](rotate-first.md) `[]`               |
-|`⍉`   |[Transpose](transposec.md)            |[Dyadic Transpose](dyadic-transpose.md)                    |
+|`⍉`   |[Transpose](transpose.md)            |[Dyadic Transpose](dyadic-transpose.md)                    |
 |`↑`   |[Mix](mix.md) / [First ](first.md) `[]`|$                                                   |
 |`↓`   |[Split ](split.md) `[]`                      |$                                                   |
 |`⊂`   |[Enclose ](enclose.md) `[]`                  |[Partitioned Enclose ](partitioned-enclose.md) `[]` |
@@ -85,7 +85,7 @@ Table: Miscellaneous Primitive Functions {: #Miscellaneous }
 |`≡`   |[Depth](depth.md)                  |[Match](match.md)                   |
 |`≢`   |[Tally](tally.md)                  |[Not Match](not-match.md)           |
 |`⍎`   |[Execute](execute.md)              |[Execute](execute.md)               |
-|`⍕`   |[Format](format.md)        |[Format](format-dy-specification.md)          |
+|`⍕`   |[Format](format.md)        |[Format](format-by-specification.md)          |
 |`⊥`   |&nbsp;                             |[Decode](decode.md)          |
 |`⊤`   |&nbsp;                             |[Encode](encode.md)|
 |`⌹`   |[Matrix Inverse](matrix-inverse.md)|[Matrix Divide](matrix-divide.md)   |

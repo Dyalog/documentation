@@ -6,7 +6,7 @@
 
 
 
-<h1 class="heading"><span class="name">Lowest Common Multiple/AND</span> <span class="command">R←X^Y</span></h1>
+<h1 class="heading"><span class="name">Lowest Common Multiple/AND</span> <span class="command">R←X∧Y</span></h1>
 
 
 ## Case 1: Lowest Common Multiple – either or both X and Y are numeric (non-Boolean)
@@ -16,7 +16,7 @@
 
 <h2 class="example">Example</h2>
 ```apl
-      15 1 2 7 ^ 35 1 4 0
+      15 1 2 7 ∧ 35 1 4 0
 105 1 4 0
  
       2 3 4 ∧ 0j1 1j2 2j3
@@ -41,7 +41,7 @@
 
 
 
-Note that the ASCII caret (`^`) will also be interpreted as an APL **And** (`^`).
+Note that the ASCII caret (`^`) will also be interpreted as an APL **And** (`∧`).
 
 
 <h2 class="example">Example</h2>
