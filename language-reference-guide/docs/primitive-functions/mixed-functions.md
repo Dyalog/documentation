@@ -62,7 +62,7 @@ Table: Selection Primitive Functions {: #Selection }
 |`∪`   |[Unique](unique.md)                     |[Union](union.md)                          |
 |`⊣`   |[Same](same.md)                         |[Left](left.md)                            |
 |`⊢`   |[Same](same.md)                         |[Right](right.md)                          |
-|`⌷`   |[Materialise](materialise.md)           |[Index](index.md)                          |
+|`⌷`   |[Materialise](materialise.md)           |[Index](index-function.md)                          |
 |`≠`   |[Unique Mask](unique-mask.md)           |&nbsp;                                     |
 
 Table: Selector Primitive Functions {: #Selector }

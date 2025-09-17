@@ -35,7 +35,7 @@ The result `R` is an integer array that identifies into which interval  the corr
 
 Like dyadic `⍳` (see [Index Of](index-of.md)), Interval Index works with major cells. For a vector these are its elements; for a matrix its rows, and so forth.
 
-`X` and `Y` are compared using  the same logic as monadic `⍋` (see [Grade Up (Monadic)](grade-up-monadic.md)) which is independent of `⎕CT` and `⎕DCT`.
+`X` and `Y` are compared using  the same logic as monadic `⍋` (see [Grade Up](grade-up.md)) which is independent of `⎕CT` and `⎕DCT`.
 
 `⎕IO` is an implicit argument of Interval Index. In all the following examples, `⎕IO` is 1.
 

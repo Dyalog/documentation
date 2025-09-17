@@ -63,8 +63,8 @@ Primitive Functions
         <td class="Dyalog"><a href="../epsilon-underbar">⍷</a> </td>
         <td class="Dyalog"><a href="../slash">/</a> </td>
         <td class="Dyalog"><a href="../slash-bar">⌿</a> </td>
-        <td class="Dyalog"><a href="../slope">\</a> </td>
-        <td class="Dyalog"><a href="../slope-bar">⍀</a> </td>
+        <td class="Dyalog"><a href="../backslash">\</a> </td>
+        <td class="Dyalog"><a href="../backslash-bar">⍀</a> </td>
         <td class="Dyalog">&#160; </td>
         <td>&#160;</td>
     </tr>
