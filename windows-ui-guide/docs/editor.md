@@ -85,8 +85,6 @@ Function or operator<br>![](img/editor-toolbar-function.png)
 
 Class or namespace script<br>![](img/editor-toolbar-script.png)
 
-In the table below, the first image shows the appearance of the toolbutton with Native Look and Feel enabled; the second with it disabled.
-
 |Button|Description|
 |---|---|
 |![](img/trace-theme-14-00.png) ![](img/editor-line-numbers-icon.png) Toggle line numbers|Toggles Line numbers on/off|
