@@ -12,7 +12,7 @@ Monadic Plus means
 ```
 
 Dyadic Plus means
-[Plus](../primitive-functions/add.md)
+[Plus](../primitive-functions/plus.md)
 ```apl
       1 2 3 4 + 10
 11 12 13 14

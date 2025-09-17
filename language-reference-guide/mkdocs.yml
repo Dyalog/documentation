@@ -48,6 +48,7 @@ markdown_extensions:
   - toc:
       title: On this page
 nav:
+  - Key to Notation: primitive-functions/key-to-notation.md
   - Symbols:
       - Language Elements: symbols/language-elements.md
       - Brackets: symbols/brackets.md
@@ -58,8 +59,8 @@ nav:
       - Mixed Functions: primitive-functions/mixed-functions.md
       - Notes: primitive-functions/notes.md
       - Scalar Monadic Functions:
-          - Negative: primitive-functions/negative.md
-          - Direction (Signum): primitive-functions/direction.md
+          - Negate: primitive-functions/negate.md
+          - Direction: primitive-functions/direction.md
           - Reciprocal: primitive-functions/reciprocal.md
           - Magnitude: primitive-functions/magnitude.md
           - Floor: primitive-functions/floor.md
@@ -68,13 +69,13 @@ nav:
           - Natural Logarithm: primitive-functions/natural-logarithm.md
           - Pi Times: primitive-functions/pi-times.md
           - Factorial: primitive-functions/factorial.md
-          - Not: primitive-functions/not.md
+          - NOT: primitive-functions/not.md
           - Roll: primitive-functions/roll.md
           - Type: primitive-functions/type.md
       - Scalar Dyadic Arithmetic Functions:
-          - Add: primitive-functions/add.md
-          - Subtract: primitive-functions/subtract.md
-          - Multiply: primitive-functions/multiply.md
+          - Plus: primitive-functions/plus.md
+          - Minus: primitive-functions/minus.md
+          - Times: primitive-functions/times.md
           - Divide: primitive-functions/divide.md
           - Residue: primitive-functions/residue.md
           - Minimum: primitive-functions/minimum.md
@@ -83,17 +84,17 @@ nav:
           - Logarithm: primitive-functions/logarithm.md
           - Binomial: primitive-functions/binomial.md
       - Scalar Dyadic Logical Functions:
-          - And Lowest Common Multiple: primitive-functions/and-lowest-common-multiple.md
-          - Or Greatest Common Divisor: primitive-functions/or-greatest-common-divisor.md
-          - Nand: primitive-functions/nand.md
-          - Nor: primitive-functions/nor.md
-          - Less: primitive-functions/less.md
-          - Less Or Equal: primitive-functions/less-or-equal.md
-          - Equal: primitive-functions/equal.md
-          - Greater Or Equal: primitive-functions/greater-or-equal.md
-          - Greater: primitive-functions/greater.md
-          - Not Equal: primitive-functions/not-equal.md
-      - Trigonometric Functions: primitive-functions/circular.md
+          - Lowest Common Multiple/AND: primitive-functions/lowest-common-multiple-and.md
+          - Greatest Common Divisor/OR: primitive-functions/greatest-common-divisor-or.md
+          - NAND: primitive-functions/nand.md
+          - NOR: primitive-functions/nor.md
+          - Less Than: primitive-functions/less-than.md
+          - Less Than Or Equal To: primitive-functions/less-than-or-equal-to.md
+          - Equal To: primitive-functions/equal-to.md
+          - Greater Than Or Equal To: primitive-functions/greater-than-or-equal-to.md
+          - Greater Than: primitive-functions/greater-than.md
+          - Not Equal To: primitive-functions/not-equal-to.md
+      - Trigonometric Functions: primitive-functions/circular-functions.md
       - Non-Scalar Monadic Structural Functions:
           - Shape: primitive-functions/shape.md
           - Ravel: primitive-functions/ravel.md
@@ -101,28 +102,28 @@ nav:
           - Reverse: primitive-functions/reverse.md
           - Table: primitive-functions/table.md
           - Tally: primitive-functions/tally.md
-          - Transpose: primitive-functions/transpose-monadic.md
+          - Transpose: primitive-functions/transpose.md
           - Mix: primitive-functions/mix.md
           - Split: primitive-functions/split.md
           - Enclose: primitive-functions/enclose.md
           - Enclose with Axes: primitive-functions/enclose-with-axes.md
           - Nest: primitive-functions/nest.md
-          - Format: primitive-functions/format-monadic.md
+          - Format: primitive-functions/format.md
           - Depth: primitive-functions/depth.md
           - Enlist: primitive-functions/enlist.md
       - Non-Scalar Dyadic Structural Functions:
           - Reshape: primitive-functions/reshape.md
           - Catenate and Laminate: primitive-functions/catenate-laminate.md
           - Rotate: primitive-functions/rotate.md
-          - Dyadic Transpose: primitive-functions/transpose-dyadic.md
+          - Dyadic Transpose: primitive-functions/dyadic-transpose.md
           - Partitioned Enclose: primitive-functions/partitioned-enclose.md
           - Partition: primitive-functions/partition.md
-          - Dyadic Format: primitive-functions/format-dyadic.md
+          - Format by Specification: primitive-functions/format-by-specification.md
       - Non-Scalar Selection Functions:
           - Right: primitive-functions/right.md
           - Same: primitive-functions/same.md
           - Left: primitive-functions/left.md
-          - Disclose: primitive-functions/disclose.md
+          - First: primitive-functions/first.md
           - Unique: primitive-functions/unique.md
           - Unique Mask: primitive-functions/unique-mask.md
           - Pick: primitive-functions/pick.md
@@ -132,13 +133,13 @@ nav:
           - Drop with Axes: primitive-functions/drop-with-axes.md
           - Replicate: primitive-functions/replicate.md
           - Expand: primitive-functions/expand.md
-          - Excluding: primitive-functions/excluding.md
+          - Without: primitive-functions/without.md
           - Intersection: primitive-functions/intersection.md
           - Union: primitive-functions/union.md
       - Non-Scalar Selector Functions:
           - Index Generator: primitive-functions/index-generator.md
-          - Grade Up: primitive-functions/grade-up-monadic.md
-          - Grade Down: primitive-functions/grade-down-monadic.md
+          - Grade Up: primitive-functions/grade-up.md
+          - Grade Down: primitive-functions/grade-down.md
           - Indexing: primitive-functions/indexing.md
           - Index with Axes: primitive-functions/index-with-axes.md
           - Index Of: primitive-functions/index-of.md
@@ -146,8 +147,8 @@ nav:
           - Where: primitive-functions/where.md
           - Membership: primitive-functions/membership.md
           - Find: primitive-functions/find.md
-          - Dyadic Grade Up: primitive-functions/grade-up-dyadic.md
-          - Dyadic Grade Down: primitive-functions/grade-down-dyadic.md
+          - Dyadic Grade Up: primitive-functions/dyadic-grade-up.md
+          - Dyadic Grade Down: primitive-functions/dyadic-grade-down.md
           - Deal: primitive-functions/deal.md
           - Match: primitive-functions/match.md
           - Not Match: primitive-functions/not-match.md
@@ -161,10 +162,7 @@ nav:
           - Encode: primitive-functions/encode.md
           - Matrix Divide: primitive-functions/matrix-divide.md
       - Primitive Functions (A-Z):
-          - Introduction: primitive-functions/key-to-notation.md
           - Abort: primitive-functions/abort.md
-          - Add: primitive-functions/add.md
-          - And, Lowest Common Multiple: primitive-functions/and-lowest-common-multiple.md
           - Assignment: primitive-functions/assignment.md
           - Assignment Indexed: primitive-functions/assignment-indexed.md
           - Assignment Selective: primitive-functions/assignment-selective.md
@@ -173,22 +171,23 @@ nav:
           - Catenate Laminate: primitive-functions/catenate-laminate.md
           - Catenate First: primitive-functions/catenate-first.md
           - Ceiling: primitive-functions/ceiling.md
-          - Circular: primitive-functions/circular.md
+          - Circular Functiona: primitive-functions/circular-functions.md
           - Conjugate: primitive-functions/conjugate.md
           - Deal: primitive-functions/deal.md
           - Decode: primitive-functions/decode.md
           - Depth: primitive-functions/depth.md
-          - Direction Signum: primitive-functions/direction.md
-          - Disclose: primitive-functions/disclose.md
+          - Direction: primitive-functions/direction.md
           - Divide: primitive-functions/divide.md
           - Drop: primitive-functions/drop.md
           - Drop with Axes: primitive-functions/drop-with-axes.md
+          - Dyadic Grade Down: primitive-functions/dyadic-grade-down.md
+          - Dyadic Grade Up: primitive-functions/dyadic-grade-up.md
+          - Dyadic Transpose: primitive-functions/dyadic-transpose.md
           - Enclose: primitive-functions/enclose.md
           - Enclose with Axes: primitive-functions/enclose-with-axes.md
           - Encode: primitive-functions/encode.md
           - Enlist: primitive-functions/enlist.md
-          - Equal: primitive-functions/equal.md
-          - Excluding: primitive-functions/excluding.md
+          - Equal To: primitive-functions/equal-to.md
           - Execute: primitive-functions/execute.md
           - Expand: primitive-functions/expand.md
           - Expand First: primitive-functions/expand-first.md
@@ -197,15 +196,13 @@ nav:
           - Find: primitive-functions/find.md
           - First: primitive-functions/first.md
           - Floor: primitive-functions/floor.md
-          - Format Monadic: primitive-functions/format-monadic.md
-          - Format Dyadic: primitive-functions/format-dyadic.md
-          - Grade Down Monadic: primitive-functions/grade-down-monadic.md
-          - Grade Down Dyadic: primitive-functions/grade-down-dyadic.md
-          - Grade Up Monadic: primitive-functions/grade-up-monadic.md
-          - Grade Up Dyadic: primitive-functions/grade-up-dyadic.md
-          - Greater: primitive-functions/greater.md
-          - Greater Or Equal: primitive-functions/greater-or-equal.md
-          - Index: primitive-functions/squad.md
+          - Format: primitive-functions/format.md
+          - Format by Specification: primitive-functions/format-by-specification.md
+          - Grade Down: primitive-functions/grade-down.md
+          - Grade Up: primitive-functions/grade-up.md
+          - Greater Than: primitive-functions/greater-than.md
+          - Greater Than Or Equal To: primitive-functions/greater-than-or-equal-to.md
+          - Index: primitive-functions/index.md
           - Index with Axes: primitive-functions/index-with-axes.md
           - Index Generator: primitive-functions/index-generator.md
           - Index Of: primitive-functions/index-of.md
@@ -213,9 +210,10 @@ nav:
           - Intersection: primitive-functions/intersection.md
           - Interval Index: primitive-functions/interval-index.md
           - Left: primitive-functions/left.md
-          - Less: primitive-functions/less.md
-          - Less Or Equal: primitive-functions/less-or-equal.md
+          - Less Than: primitive-functions/less-than.md
+          - Less Than Or Equal To: primitive-functions/less-than-or-equal-to.md
           - Logarithm: primitive-functions/logarithm.md
+          - Lowest Common Multiple/AND: primitive-functions/lowest-common-multiple/AND.md
           - Magnitude: primitive-functions/magnitude.md
           - Match: primitive-functions/match.md
           - Materialise: primitive-functions/materialise.md
@@ -226,16 +224,15 @@ nav:
           - Minimum: primitive-functions/minimum.md
           - Minus: primitive-functions/minus.md
           - Mix: primitive-functions/mix.md
-          - Multiply: primitive-functions/multiply.md
-          - Nand: primitive-functions/nand.md
+          - NAND: primitive-functions/nand.md
           - Natural Logarithm: primitive-functions/natural-logarithm.md
-          - Negative: primitive-functions/negative.md
+          - Negate: primitive-functions/negate.md
           - Nest: primitive-functions/nest.md
-          - Nor: primitive-functions/nor.md
-          - Not: primitive-functions/not.md
-          - Not Equal: primitive-functions/not-equal.md
+          - NOR: primitive-functions/nor.md
+          - NOT: primitive-functions/not.md
+          - Not Equal To: primitive-functions/not-equal-to.md
           - Not Match: primitive-functions/not-match.md
-          - Or, Greatest Common Divisor: primitive-functions/or-greatest-common-divisor.md
+          - Greatest Common Divisor/OR: primitive-functions/greatest-common-divisor-or.md
           - Partition: primitive-functions/partition.md
           - Partitioned Enclose: primitive-functions/partitioned-enclose.md
           - Pi Times: primitive-functions/pi-times.md
@@ -258,14 +255,12 @@ nav:
           - Same: primitive-functions/same.md
           - Shape: primitive-functions/shape.md
           - Split: primitive-functions/split.md
-          - Subtract: primitive-functions/subtract.md
           - Table: primitive-functions/table.md
           - Take: primitive-functions/take.md
           - Take with Axes: primitive-functions/take-with-axes.md
           - Tally: primitive-functions/tally.md
           - Times: primitive-functions/times.md
-          - Transpose Monadic: primitive-functions/transpose-monadic.md
-          - Transpose Dyadic: primitive-functions/transpose-dyadic.md
+          - Transpose: primitive-functions/transpose.md
           - Type: primitive-functions/type.md
           - Union: primitive-functions/union.md
           - Unique: primitive-functions/unique.md
@@ -297,7 +292,7 @@ nav:
           - Key: primitive-operators/key.md
           - Outer Product: primitive-operators/outer-product.md
           - Over: primitive-operators/over.md
-          - Power Operator: primitive-operators/power-operator.md
+          - Power: primitive-operators/power.md
           - Rank: primitive-operators/rank.md
           - Reduce: primitive-operators/reduce.md
           - Reduce First: primitive-operators/reduce-first.md

@@ -7,7 +7,7 @@ search:
 Monadic Equal is not defined
 
 Dyadic Equal means
-[Equal To](../primitive-functions/equal.md)
+[Equal To](../primitive-functions/equal-to.md)
 ```apl
       1 2 3 = 4 2 ¯1
 0 1 0

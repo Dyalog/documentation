@@ -13,7 +13,7 @@ search:
 Monadic Thorn means
 
 
-[Format](../primitive-functions/format-monadic.md)
+[Format](../primitive-functions/format.md)
 ```apl
 
 NB: In the following examples space characters
@@ -39,7 +39,7 @@ N.B. depends on `⎕PP`
 Dyadic Thorn means
 
 
-[Format By Specification](../primitive-functions/format-dyadic.md)
+[Format By Specification](../primitive-functions/format-by-Specification.md)
 ```apl
 
 Field-width and number of decimal places:

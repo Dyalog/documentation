@@ -2,9 +2,9 @@
   ⍋
 </div>
 
-<h1 class="heading"><span class="name">Grade Up (Monadic)</span> <span class="command">R←⍋Y</span></h1>
+<h1 class="heading"><span class="name">Grade Up</span> <span class="command">R←⍋Y</span></h1>
 
-`Y` may be any array of rank greater than 0 but may not contain namespaces.  `R` is an integer vector being the permutation of `⍳1↑⍴Y` that places the sub-arrays along the first axis in ascending order. The rules for comparing items of `Y` with one another are as follows:
+`Y` may be any array of rank greater than 0 but may not contain namespaces. `R` is an integer vector being the permutation of `⍳1↑⍴Y` that places the sub-arrays along the first axis in ascending order. The rules for comparing items of `Y` with one another are as follows:
 
 ## Rules for comparing simple scalars
 
@@ -22,7 +22,7 @@
 - Arrays with differing rank are ordered by first extending the shape of the lower-ranked array with 1s at the beginning, and then comparing the resultant equal-rank arrays as described above. So, to compare a vector (rank 1) with a matrix (rank 2), the vector is reshaped into a 1-row matrix.
 - Empty arrays are compared first by type alone, so an empty numeric array precedes an empty character array, regardless of rank or shape.Thus `((0 3 2)⍴0)` precedes `''`. If the empty arrays are of the same type, they are sorted in order of their shape vector, working right to left.So `((0 5 2)⍴99)` precedes `((0 3 4)⍴0)`  and`((0 3 4)⍴'')` precedes `((1 0 5 4)⍴'')`.
 
-`⎕IO` is an implicit argument of Grade Up
+`⎕IO` is an implicit argument of Grade Up.
 
 <h2 class="example">Examples</h2>
 ```apl

@@ -5,7 +5,7 @@ search:
 <h1 class="heading"><span class="name">Circle Backslash</span> <span class="command">⍉</span></h1>
 
 Monadic Circle Backslash means
-[Transpose](../primitive-functions/transpose-monadic.md)
+[Transpose](../primitive-functions/transpose.md)
 ```apl
       mat
 1 2 3
@@ -18,7 +18,7 @@ Monadic Circle Backslash means
 ```
 
 Dyadic Circle Backslash means
-[Dyadic Transpose](../primitive-functions/transpose-dyadic.md)
+[Dyadic Transpose](../primitive-functions/dyadic-transpose.md)
 ```apl
       2 1 ⍉ mat
 1 4

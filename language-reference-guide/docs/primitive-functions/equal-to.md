@@ -7,14 +7,14 @@
 
 
 
-<h1 class="heading"><span class="name">Equal</span> <span class="command">R←X=Y</span></h1>
+<h1 class="heading"><span class="name">Equal To</span> <span class="command">R←X=Y</span></h1>
 
 
 
 `Y` may be any array. `X` may be any array. `R` is Boolean.
 
 
-`⎕CT` and `⎕DCT` are  implicit arguments of Equal.
+`⎕CT` and `⎕DCT` are  implicit arguments of Equal To.
 
 
 If `X` and `Y` are refs, then `R` is 1 if they are refs to the same object. If `X` is a ref and `Y` is not, or vice-versa, then `R` is 0.

@@ -7,11 +7,11 @@
 
 
 
-<h1 class="heading"><span class="name">Format (Dyadic)</span> <span class="command">R←X⍕Y</span></h1>
+<h1 class="heading"><span class="name">Format by Specification</span> <span class="command">R←X⍕Y</span></h1>
 
 
 
-`Y` must be a simple real (non-complex) numeric array.  `X` must be a simple integer scalar or vector.  `R` is a character array displaying the array `Y` according to the specification `X`.  `R` has rank `1⌈⍴⍴Y` and `¯1↓⍴R` is `¯1↓⍴Y`. If any element of `Y` is complex, dyadic `⍕` reports a `DOMAIN ERROR`.
+`Y` must be a simple real (non-complex) numeric array. `X` must be a simple integer scalar or vector.  `R` is a character array displaying the array `Y` according to the specification `X`. `R` has rank `1⌈⍴⍴Y` and `¯1↓⍴R` is `¯1↓⍴Y`. If any element of `Y` is complex, dyadic `⍕` reports a `DOMAIN ERROR`.
 
 
 Conformability requires that if `X` has more than two elements, then `⍴X` must be `2×¯1↑⍴Y`. If `X` contains one element, it is extended to `(2×¯1↑⍴Y)⍴0,X`.  If `X` contains 2 elements, it is extended to `(2×¯1↑⍴Y)⍴X`.

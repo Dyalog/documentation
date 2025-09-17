@@ -7,11 +7,11 @@
 
 
 
-<h1 class="heading"><span class="name">Grade Up (Dyadic)</span> <span class="command">R←X⍋Y</span></h1>
+<h1 class="heading"><span class="name">Dyadic Grade Up</span> <span class="command">R←X⍋Y</span></h1>
 
 
 
-`Y` must be a simple character array of rank greater than 0.  `X` must be a simple character array of rank 1 or greater.  `R` is a simple integer vector being the permutation of `⍳1↑⍴Y` that places the sub-arrays of `Y` along the first axis in ascending order according to the collation sequence `X`.
+`Y` must be a simple character array of rank greater than 0. `X` must be a simple character array of rank 1 or greater. `R` is a simple integer vector being the permutation of `⍳1↑⍴Y` that places the sub-arrays of `Y` along the first axis in ascending order according to the collation sequence `X`.
 
 
 If `X` is a vector, the following identity holds:

@@ -10,7 +10,7 @@ search:
 |[Dyadic Each](each-with-dyadic-operand.md)|`Xf¨Y`                    |apply dyadic `f` to corresponding elements of `X` and `Y`                                               |
 |[Rank](rank.md)                           |`f(⍤k)Y`                  |apply monadic `f` to k-cells of `Y`                                                                     |
 |[Dyadic Rank](rank.md)                    |`Xf(⍤kx ky)Y`             |dyadic `f` placed between kx-cells of `X` and  ky-cells of `Y`                                          |
-|[Power](power-operator.md)                |`X(f⍣g)Y`                 |apply monadic or dyadic `f` repeatedly to `Y`                                                           |
+|[Power](power.md)                         |`X(f⍣g)Y`                 |apply monadic or dyadic `f` repeatedly to `Y`                                                           |
 |[Reduce](reduce.md)                       |`f/Y`                     |dyadic `f` placed between each sub-array along (last) axis of `Y`                                       |
 |[Reduce First](reduce-first.md)           |`f⌿Y`                     |dyadic `f` placed between each sub-array along (first) axis of `Y`                                      |
 |[N-Wise Reduce](reduce-n-wise.md)         |`Xf/Y`                    |dyadic `f` placed between items of sub-vectors of length `X` of `Y`                                     |

@@ -15,7 +15,7 @@ Monadic Not Equal means
 ```
 
 Dyadic Not Equal means
-[Not Equal To](../primitive-functions/not-equal.md)
+[Not Equal To](../primitive-functions/not-equal-to.md)
 ```apl
       1 2 3 ≠ 4 2 ¯1
 1 0 1

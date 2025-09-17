@@ -7,7 +7,7 @@ search:
 Monadic Less Than is not defined
 
 Dyadic Less Than means
-[Less Than](../primitive-functions/less.md)
+[Less Than](../primitive-functions/less-than.md)
 ```apl
       1 2 3 < 4 2 ¯1
 1 0 0

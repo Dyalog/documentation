@@ -7,11 +7,11 @@
 
 
 
-<h1 class="heading"><span class="name">Format (Monadic)</span> <span class="command">R←⍕Y</span></h1>
+<h1 class="heading"><span class="name">Format</span> <span class="command">R←⍕Y</span></h1>
 
 
 
-`Y` may be any array.  `R` is a simple character array which will display identically to the display produced by `Y`.  The result is independent of `⎕PW`.  If `Y` is a simple character array, then `R` is `Y`.
+`Y` may be any array. `R` is a simple character array which will display identically to the display produced by `Y`. The result is independent of `⎕PW`.  If `Y` is a simple character array, then `R` is `Y`.
 
 
 <h2 class="example">Example</h2>
@@ -179,7 +179,7 @@ By replacing spaces with `^`, it is clearer to see how the result of `⍕` is fo
 ```
 
 
-`⎕PP` is an implicit argument of Monadic Format.
+`⎕PP` is an implicit argument of Format.
 
 
 

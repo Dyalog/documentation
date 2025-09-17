@@ -7,7 +7,7 @@
 
 
 
-<h1 class="heading"><span class="name">Power Operator</span> <span class="command">{R}←{X}(f⍣g)Y</span></h1>
+<h1 class="heading"><span class="name">Power</span> <span class="command">{R}←{X}(f⍣g)Y</span></h1>
 
 
 
