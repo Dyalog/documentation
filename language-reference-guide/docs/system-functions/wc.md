@@ -31,7 +31,7 @@ If `Y` is a ref or the result of `⎕OR`, the new object is a complete copy of t
 The shy result `R` is the full name (starting `#.` or   `⎕SE`.) of the namespace `X`.
 
 
-An object's name is specified by giving its full pathname in the object hierarchy.  At the top of the hierarchy is the `Root` object whose name is "`.`".  Below "`.`" there may be one or more "top-level" objects.  The names of these objects follow the standard rules for other APL objects as described in *Chapter 1*.
+An object's name is specified by giving its full pathname in the object hierarchy.  At the top of the hierarchy is the `Root` object whose name is "`.`".  Below "`.`" there may be one or more "top-level" objects.  The names of these objects follow the standard rules for other APL objects as described in [Legal Names](../../../programming-reference-guide/introduction/names)
 
 
 Names for sub-objects follow the same rules except that the character "`.`" is used as a delimiter to indicate parent/child relationships.
