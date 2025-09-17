@@ -8,7 +8,7 @@ Primitive functions that restructure arrays:
 |`,` |[ravel](../../../../language-reference-guide/primitive-functions/ravel)|[laminate and catenate](../../../../language-reference-guide/primitive-functions/catenate-laminate)|
 |`⍪` |[table](../../../../language-reference-guide/primitive-functions/table)|[catenate first](../../../../language-reference-guide/primitive-functions/catenate-first)|
 |`⌽⍟`|[reverse](../../../../language-reference-guide/primitive-functions/reverse)|[rotate](../../../../language-reference-guide/primitive-functions/rotate)|
-|`⍉` |[transpose](../../../../language-reference-guide/symbols/transpose/)||
+|`⍉` |[transpose](../../../../language-reference-guide/symbols/transpose)||
 |`↑` |[mix](../../../../language-reference-guide/primitive-functions/mix)|[take](../../../../language-reference-guide/primitive-functions/take)|
 |`↓` |[split](../../../../language-reference-guide/primitive-functions/split)|[drop](../../../../language-reference-guide/primitive-functions/drop)|
 |`∊` |[enlist](../../../../language-reference-guide/primitive-functions/enlist)| |

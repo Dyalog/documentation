@@ -12,7 +12,7 @@
 |`×`|Times|[Direction](direction.md)|[Times](times.md)|
 |`÷`|Divide|[Reciprocal](reciprocal.md)|[Divide](divide.md)|
 |`↓`|Down Arrow|[split](split.md)|[Drop](drop.md)|
-|`⊂`|Left Shoe|[Enclose](enclose.md)|Partitioned Enclose|
+|`⊂`|Left Shoe|[Enclose](enclose.md)|Partitioned Enclose](partitioned-enclose.md)|
 |`⊤`|Down Tack|&nbsp;|[Encode](encode.md)|
 |`=`|Equal|&nbsp;|[Equal To](equal-to.md)|
 |`~`|Tilde|[NOT](not.md)|[Without](without.md)|
@@ -27,7 +27,7 @@
 |`≥`|Greater Than Or Equal To|&nbsp;|[Greater Than Or Equal To](greater-than-or-equal-to.md)|
 |`⊢`|Right Tack|[Same](same.md)|[Right](right.md)|
 |`⍳`|Iota|[Index Generator](index-generator.md)|[Index Of](index-of.md)|
-|`⌷`|Squad|[Materialise](materialise.md)|[Index](index.md)|
+|`⌷`|Squad|[Materialise](materialise.md)|[Index](index-function.md)|
 |`∩`|Up Shoe|&nbsp;|[Intersection](intersection.md)|
 |`⍸`|Iota Underbar|[Where](where.md)|[Interval Index](interval-index.md)|
 |`⊣`|Left Tack|[Same](same.md)|[Left](left.md)|
@@ -39,7 +39,7 @@
 |`∊`|Epsilon|[Enlist](enlist.md)|[Membership](membership.md)|
 |`-`|Minus|[Negate](negate.md)|[Minus](minus.md)|
 |`⍲`|Logical NAND|&nbsp;|[NAND](nand.md)|
-|`⊆`|Left Shoe Underbar|[Nest](nest.md)|[Partition](partition)|
+|`⊆`|Left Shoe Underbar|[Nest](nest.md)|[Partition](partition.md)|
 |`⍱`|Logical NOR|&nbsp;|[NOR](nor.md)|
 |`≠`|Not Equal|[Unique Mask](unique-mask.md)|[Not Equal To](not-equal-to.md)|
 |`≢`|Equal Underbar Slash|[Tally](tally.md)|[Not Match](not-match.md)|

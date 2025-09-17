@@ -57,6 +57,8 @@ nav:
     - Configuration Parameters:
         - Introduction: configuration-parameters/configuration-parameters.md
         - AddClassHeaders: configuration-parameters/addclassheaders.md
+        - APLAN_FOR_EDITOR: configuration-parameters/aplan-for-editor.md
+        - APLAN_FOR_OUTPUT: configuration-parameters/aplan-for-output.md
         - AplCoreName: configuration-parameters/aplcorename.md
         - aplk: configuration-parameters/aplk.md
         - aplkeys: configuration-parameters/aplkeys.md

@@ -91,7 +91,7 @@ nav:
           - Grade Up: primitive-functions/grade-up.md
           - Greater Than: primitive-functions/greater-than.md
           - Greater Than Or Equal To: primitive-functions/greater-than-or-equal-to.md
-          - Index: primitive-functions/index.md
+          - Index: primitive-functions/index-function.md
           - Index with Axes: primitive-functions/index-with-axes.md
           - Index Generator: primitive-functions/index-generator.md
           - Index Of: primitive-functions/index-of.md
@@ -102,7 +102,7 @@ nav:
           - Less Than: primitive-functions/less-than.md
           - Less Than Or Equal To: primitive-functions/less-than-or-equal-to.md
           - Logarithm: primitive-functions/logarithm.md
-          - Lowest Common Multiple/AND: primitive-functions/lowest-common-multiple/AND.md
+          - Lowest Common Multiple/AND: primitive-functions/lowest-common-multiple-and.md
           - Magnitude: primitive-functions/magnitude.md
           - Match: primitive-functions/match.md
           - Materialise: primitive-functions/materialise.md
