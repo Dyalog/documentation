@@ -113,7 +113,7 @@ A second workspace named `copy.dws` contains a different version of the `base` c
     ∇
 :EndClass
 
-      )copy copy.dws base
+      )COPY copy.dws base
 copy.dws saved Thu Nov 22 16:24:27 2018
       inst←⎕NEW pete
       inst.foo 1
@@ -131,7 +131,7 @@ You may also copy objects from session (.dse) files, although with certain restr
 
 <h2 class="example">Example</h2>
 ```
-        )copy C:\Users\Pete\Desktop\pete.dse ⎕SE.UCMD
+        )COPY C:\Users\Pete\Desktop\pete.dse ⎕SE.UCMD
 C:\Users\Pete\Desktop\pete.dse saved Wed Oct 14 ...
 
 ```
@@ -146,12 +146,12 @@ In the following example, the *not copied* cases occur because the current names
 ```
       )CS #
 #
-      )copy C:\Users\...\pete.dse ⎕SE.Dyalog.Callbacks
+      )COPY C:\Users\...\pete.dse ⎕SE.Dyalog.Callbacks
 C:\Users\...\pete.dse saved Wed Oct 14 15:31:14 2015
 
 ```
 ```
-       )copy C:\Users\...\pete.dse ⎕SE.cbbot
+       )COPY C:\Users\...\pete.dse ⎕SE.cbbot
 C:\Users\...\pete.dse saved Wed Oct 14 15:31:14 2015
 not copied cbbot
 
@@ -159,10 +159,10 @@ not copied cbbot
 ```
        )CS ⎕SE
 ⎕SE
-      )copy C:\Users\...\pete.dse ⎕SE.cbbot
+      )COPY C:\Users\...\pete.dse ⎕SE.cbbot
 C:\Users\...\pete.dse saved Wed Oct 14 15:31:14 2015
       
-      )copy C:\Users\...\pete.dse ⎕SE.cbbot.bandsb1
+      )COPY C:\Users\...\pete.dse ⎕SE.cbbot.bandsb1
 C:\Users\...\pete.dse saved Wed Oct 14 15:31:14 2015
 not copied bandsb1
 ```
