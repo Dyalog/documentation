@@ -88,7 +88,7 @@ When you fix the script, the version of the function in the script will replace 
       ns.⎕FX 'foo' '2'
       ns.foo
 2
-      )ed ns.foo ns
+      )ED ns.foo ns
 
 ```
 

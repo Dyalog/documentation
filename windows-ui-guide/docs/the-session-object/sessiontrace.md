@@ -31,7 +31,7 @@ If the expression has no value, then the callback function will be called monadi
 **Example**
 
 ```apl
-      )cs ⎕SE
+      )CS ⎕SE
 ⎕SE
      ∇ {VAL}TimeStamp EV
 [1]    ⍞←⎕TS(2↑2↓EV)
@@ -40,7 +40,7 @@ If the expression has no value, then the callback function will be called monadi
 [4]    :EndIf
 [5]    ⍞←⎕UCS 13
      ∇
-     )cs
+     )CS
 #
       '⎕SE'⎕WS'Event' 'SessionTrace' '⎕SE.TimeStamp'
 ```

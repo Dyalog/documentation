@@ -41,7 +41,7 @@ Table: Parameters for the Dyalog interpreter:
 |+q|A return to the six-space prompt will result in the interpreter terminating.|
 |-s|Turn off the session: APL acts similarly to a scrolling terminal.|
 |+s|forces APL to enable the session.|
-|-x|Do not execute the latent expression of any workspace that is `)LOAD` ed or `⎕LOAD` ed. This applies to every `)load` or `⎕LOAD` during the life of the APL session.|
+|-x|Do not execute the latent expression of any workspace that is `)LOAD` ed or `⎕LOAD` ed. This applies to every `)LOAD` or `⎕LOAD` during the life of the APL session.|
 |ws|This is assumed to be a workspace which will be loaded once the interpreter has started. Unless the -x parameter is included on the command line, the latent expression will be run.|
 |-cef / -apl|See the Dyalog Version 17.0 Release Notes for more information|
 

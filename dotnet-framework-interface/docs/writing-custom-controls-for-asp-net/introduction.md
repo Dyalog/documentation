@@ -18,10 +18,10 @@ These examples, which are based upon a series of articles called *Advanced ASP.N
 C:\Program Files (x86)\Dyalog\Dyalog APL 15.0 Unicode\Samples\asp.net\temp\bin\temp.dws saved Tue Nov 22 15:04:11 2016
 ```
 ```
-      )obs
+      )OBS
 DyalogSamples
-      )cs DyalogSamples
+      )CS DyalogSamples
 #.DyalogSamples
-      )Classes
+      )CLASSES
 SimpleCtl       TemperatureConverterCtl1        TemperatureConverterCtl2        TemperatureConverterCtl3
 ```

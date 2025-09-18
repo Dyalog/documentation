@@ -41,7 +41,7 @@ So to associate the APL name `div` with this external function:
 
 where `F8` and `I4`, specify the types of the result and arguments expected by `divide`. The association has the effect of establishing a new function: `div` in the workspace, which when called, passes its arguments to `divide` and returns the result.
 ```apl
-      )fns
+      )FNS
 div
       div 10 4
 2.5

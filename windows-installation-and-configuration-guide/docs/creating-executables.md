@@ -17,7 +17,7 @@ Various Dyalog-supplied files are required  (such as the runtime DLL for creatin
       +2⎕NQ '.' 'GetEnvironment' 'Dyalog'
 ```
 
-The creation of both in-process and out-of-process COM servers produces a .TLB (Type Library) file. This file is created in the same directory as the workspace - so write access must be allowed to this directory. In the case of an in-process server, the content of this file is then embedded into the DLL, and the file is deleted. For an out-of-process server the file persists and may be needed at runtime. This requirement means that even if you do not `)Save` the workspace, you should set the workspace name  so that `)SAVE` would work - that is the directory where the workspace would be saved has write access.
+The creation of both in-process and out-of-process COM servers produces a .TLB (Type Library) file. This file is created in the same directory as the workspace - so write access must be allowed to this directory. In the case of an in-process server, the content of this file is then embedded into the DLL, and the file is deleted. For an out-of-process server the file persists and may be needed at runtime. This requirement means that even if you do not `)SAVE` the workspace, you should set the workspace name  so that `)SAVE` would work - that is the directory where the workspace would be saved has write access.
 
 In addition, a temporary copy of your workspace is created, the location of which is determined by the Windows function `GetTempPath()`.
 

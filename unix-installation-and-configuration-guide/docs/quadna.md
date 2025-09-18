@@ -34,7 +34,7 @@ Under AIX, `sharedlib` is defined as:
 
 Under Linux, it is necessary to identify the shared library:
 ```apl
-      )copy quadna NonWindows.libc
+      )COPY quadna NonWindows.libc
       sharedlib←libc ⍬
 ```
 
