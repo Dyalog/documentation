@@ -27,7 +27,7 @@ FILES WS temp
       )CLEAR
 clear ws
       'xutils' ⎕SH 'xutils'
-      )fns
+      )FNS
 avx     box     dbr     getenv  hex     ltom    ltov    mtol    ss      vtol
 
 ```
