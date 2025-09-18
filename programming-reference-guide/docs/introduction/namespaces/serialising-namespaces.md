@@ -34,7 +34,7 @@ The following example uses `220⌶` but applies equally to an array serialised b
 
 ```
 ```apl
-      )clear
+      )CLEAR
 clear ws
       'A' ⎕NS ''
       'B' ⎕NS ''
