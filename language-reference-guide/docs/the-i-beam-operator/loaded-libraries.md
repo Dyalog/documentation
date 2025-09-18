@@ -38,13 +38,13 @@ clear ws
       )FNS
 Aloc    Free    Lock    Ulok    Valu    copy
 
-      )erase Aloc    Free    Lock    Valu 
+      )ERASE Aloc    Free    Lock    Valu 
       950⌶⍬
  KERNEL32.DLL  MSVCRT.DLL 
       )FNS
 Ulok    copy
 
-      )erase Ulok
+      )ERASE Ulok
       950⌶⍬
  MSVCRT.DLL 
 
