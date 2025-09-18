@@ -16,7 +16,7 @@ The example below shows the same set of APL expressions as they would appear in 
 ```apl
 ^O(2^NLnqK.K K^OGetBuildID^NK^O),(^NK.KLwgK^OAPLVersion^NK^O)
 ^Ovar^N[1+1 J^HC^O Check input from file: Classic
-)si
+)SI
 ^N"si
 ^Nloff
 ```
@@ -25,7 +25,7 @@ The example below shows the same set of APL expressions as they would appear in 
 ```apl
 (+2⎕NQ'.'  'GetBuildID'),('.'⎕WG'APLVersion')
 var←1÷1 ⍝ Check input from file: Unicode
-)si
-)si
+)SI
+)SI
 ⎕OFF
 ```

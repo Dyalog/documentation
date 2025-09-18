@@ -22,7 +22,7 @@ If no thread number is given, `)TID` reports the number of the current thread.
 <h2 class="example">Examples</h2>
 ```apl
       ⍝ State indicator
-      )si
+      )SI
 ·   #.print[1]
 &3
 ·   ·   #.sub_calc[2]*
@@ -39,7 +39,7 @@ is 2
 was 2
  
       ⍝ State indicator
-      )si
+      )SI
 ·   #.print[1]*
 &3
 ·   ·   #.sub_calc[2]
