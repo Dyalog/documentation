@@ -4,7 +4,7 @@
   1159⌶
 </div>
 
-<h1 class="heading"><span class="name">Update Function Timestamp</span> <span class="command">{R}←X(1159⌶)Y</span></h1>
+<h1 class="heading"><span class="name">Update Function Time and User Stamp</span> <span class="command">{R}←X(1159⌶)Y</span></h1>
 
 
 

@@ -9,7 +9,7 @@
 
 
 
-<h1 class="heading"><span class="name">Trap Control</span> <span class="command">R←600⌶Y</span></h1>
+<h1 class="heading"><span class="name">Disable Traps</span> <span class="command">R←600⌶Y</span></h1>
 
 
 

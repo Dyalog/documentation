@@ -194,30 +194,30 @@ nav:
   - I-Beam Operator:
       - I-Beam: the-i-beam-operator/i-beam.md
       - The I-Beam Operator:
-          - '8: Inverted Table Index Of': the-i-beam-operator/inverted-table-index-of.md
+          - '8: Inverted Table Index-of': the-i-beam-operator/inverted-table-index-of.md
           - '13: Log Use of Deprecated Features': the-i-beam-operator/log-use-of-deprecated-features.md
-          - '109: Deprecated Feature Log File': the-i-beam-operator/deprecated-feature-log-file.md
           - '43: Monadic Operator Generator': the-i-beam-operator/monadic-operator-generator.md
           - '85: Execute Expression': the-i-beam-operator/execute-expression.md
+          - '109: Log File for Deprecations': the-i-beam-operator/deprecated-feature-log-file.md
           - '120: Generate UUID': the-i-beam-operator/generate-uuid.md
           - '127: Overwrite Free Pockets': the-i-beam-operator/overwrite-free-pockets.md
           - '180: Canonical Representation': the-i-beam-operator/canonical-representation.md
           - '181: Unsqueezed Type': the-i-beam-operator/unsqueezed-type.md
           - '200: Syntax Colouring': the-i-beam-operator/syntax-colouring.md
           - '201: Syntax Colour Tokens': the-i-beam-operator/syntax-colour-tokens.md
-          - '219: Compress/Uncompress vector of short integers': the-i-beam-operator/compress-vector-of-short-integers.md
-          - '220: Serialise/Deserialise Arrays': the-i-beam-operator/serialise-array.md
+          - '219: Compress/Decompress Vector of Short Integers': the-i-beam-operator/compress-vector-of-short-integers.md
+          - '220: Serialise/Deserialise Array': the-i-beam-operator/serialise-array.md
           - '400: Compiler Control': the-i-beam-operator/compiler-control.md
-          - '600: Trap Control': the-i-beam-operator/trap-control.md
-          - '900: Called Monadically': the-i-beam-operator/called-monadically.md
+          - '600: Disable Traps': the-i-beam-operator/trap-control.md
           - '739: Temporary Directory': the-i-beam-operator/temporary-directory.md
-          - '950: Loaded Libraries': the-i-beam-operator/loaded-libraries.md
+          - '900: Called Monadically?': the-i-beam-operator/called-monadically.md
+          - '950: List Loaded Libraries': the-i-beam-operator/loaded-libraries.md
           - '1010: Set Shell Script Debug Options': the-i-beam-operator/set-shell-script-debug-options.md
           - '1111: Number of Threads': the-i-beam-operator/number-of-threads.md
           - '1112: Parallel Execution Threshold': the-i-beam-operator/parallel-execution-threshold.md
-          - '1159: Update Function Timestamp': the-i-beam-operator/update-function-timestamp.md
-          - '1200: Format Date-time': the-i-beam-operator/format-datetime.md
-          - '1302: Set aplcore Parameters': the-i-beam-operator/set-aplcore-parameters.md
+          - '1159: Update Function Time and User Stamp': the-i-beam-operator/update-function-timestamp.md
+          - '1200: Format Date-Time': the-i-beam-operator/format-datetime.md
+          - '1302: aplcore Parameters': the-i-beam-operator/set-aplcore-parameters.md
           - '1500: Hash Array': the-i-beam-operator/hash-array.md
           - '2000: Memory Manager Statistics': the-i-beam-operator/memory-manager-statistics.md
           - '2002: Specify Workspace Available': the-i-beam-operator/specify-workspace-available.md
@@ -236,17 +236,17 @@ nav:
           - '2101: Close .NET AppDomain': the-i-beam-operator/close-net-appdomain.md
           - '2250: Verify .NET Interface': the-i-beam-operator/verify-net-interface.md
           - '2400: Set Workspace Save Options': the-i-beam-operator/set-workspace-save-options.md
-          - '2401: Expose Root Properties, Events and Methods': the-i-beam-operator/expose-root-properties.md
+          - '2401: Expose Root Properties': the-i-beam-operator/expose-root-properties.md
           - '2501: Discard Thread on Exit': the-i-beam-operator/discard-thread-on-exit.md
           - '2502: Discard Parked Threads': the-i-beam-operator/discard-parked-threads.md
           - '2503: Mark Thread as Uninterruptible': the-i-beam-operator/mark-thread-as-uninterruptible.md
-          - '2520: Spawn .NET Thread': the-i-beam-operator/use-separate-thread-for-net.md
+          - '2520: Use Separate Thread for .NET': the-i-beam-operator/use-separate-thread-for-net.md
           - '2704: Continue Autosave': the-i-beam-operator/continue-autosave.md
           - '3002: Disable Component Checksum Validation': the-i-beam-operator/disable-component-checksum-validation.md
           - '3012: Enable Compression of Large Components': the-i-beam-operator/enable-compression-of-large-components.md
-          - '3500: Send Text to RIDE-embedded Browser': the-i-beam-operator/send-text-to-ride-embedded-browser.md
-          - '3501: Connected to the RIDE': the-i-beam-operator/connected-to-the-ride.md
-          - '3502: Manage RIDE': the-i-beam-operator/manage-ride-connections.md
+          - '3500: Send Text to Ride-embedded Browser': the-i-beam-operator/send-text-to-ride-embedded-browser.md
+          - '3501: Connected to Ride?': the-i-beam-operator/connected-to-the-ride.md
+          - '3502: Manage Ride Connections': the-i-beam-operator/manage-ride-connections.md
           - '3535: Scan For Deprecated Files': the-i-beam-operator/scan-for-deprecated-files.md
           - '4000: Fork New Task': the-i-beam-operator/fork-new-task.md
           - '4001: Change User': the-i-beam-operator/change-user.md

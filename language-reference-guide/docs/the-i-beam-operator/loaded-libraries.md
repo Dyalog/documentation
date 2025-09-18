@@ -9,7 +9,7 @@
 
 
 
-<h1 class="heading"><span class="name">Loaded Libraries</span> <span class="command">R←950⌶Y</span></h1>
+<h1 class="heading"><span class="name">List Loaded Libraries</span> <span class="command">R←950⌶Y</span></h1>
 
 
 
