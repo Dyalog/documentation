@@ -35,13 +35,13 @@ clear ws
  
       950⌶⍬
  KERNEL32.DLL  VERSION.DLL  MSVCRT.DLL 
-      )fns
+      )FNS
 Aloc    Free    Lock    Ulok    Valu    copy
 
       )erase Aloc    Free    Lock    Valu 
       950⌶⍬
  KERNEL32.DLL  MSVCRT.DLL 
-      )fns
+      )FNS
 Ulok    copy
 
       )erase Ulok
