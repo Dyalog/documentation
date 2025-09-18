@@ -18,7 +18,7 @@ This function is the same as the system function `⎕CR` except that it can be u
 <h2 class="example">Example</h2>
 ```apl
 
-      )load ComponentFile
+      )LOAD ComponentFile
 C:\Program Files\Dyalog\Dyalog APL-64 15.0 Unicode\...
 
       180⌶'ComponentFile.Close'
