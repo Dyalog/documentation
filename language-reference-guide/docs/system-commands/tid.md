@@ -31,11 +31,11 @@ If no thread number is given, `)TID` reports the number of the current thread.
 &1
  
       ⍝ Current thread
-      )tid
+      )TID
 is 2
  
       ⍝ Switch suspension to thread 3
-      )tid 3
+      )TID 3
 was 2
  
       ⍝ State indicator
@@ -48,7 +48,7 @@ was 2
 &1
  
       ⍝ Attempt to switch to pendent thread 1
-      )tid 1
+      )TID 1
 Can't switch, this thread is 3
 ```
 
