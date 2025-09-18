@@ -2,7 +2,7 @@
 
 Load the workspace `aplclasses1.dws`, then view the `Primitives` class:
 ```apl
-      )load D:\aplclasses\aplclasses1\aplclasses1.dws
+      )LOAD D:\aplclasses\aplclasses1\aplclasses1.dws
 D:\aplclasses\aplclasses1\aplclasses1.dws ⍝ saved ...
 
       )ED ○APLClasses.Primitives
