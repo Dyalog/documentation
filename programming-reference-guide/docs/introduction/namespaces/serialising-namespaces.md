@@ -21,7 +21,7 @@ The following example uses `220⌶` but applies equally to an array serialised b
         A.b←B
         B.c←C
         s←1 (220⌶)A
-       )erase A B C
+       )ERASE A B C
        )OBS
 
       New←0(220⌶)s
