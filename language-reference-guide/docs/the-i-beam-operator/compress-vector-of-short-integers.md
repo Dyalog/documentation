@@ -9,7 +9,7 @@
 
 
 
-<h1 class="heading"><span class="name">Compress Vector of Short Integers</span> <span class="command">R←X(219⌶)Y</span></h1>
+<h1 class="heading"><span class="name">Compress/Decompress Vector of Short Integers</span> <span class="command">R←X(219⌶)Y</span></h1>
 
 
 

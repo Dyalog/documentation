@@ -32,7 +32,7 @@ The column labelled *O/S* indicates if a function applies only on Windows (W), o
 |`13`   |[Log Use of Deprecated Features](./log-use-of-deprecated-features.md)                 |&nbsp;|
 |`43`   |[Monadic Operator Generator](./monadic-operator-generator.md)                         |&nbsp;|
 |`85`   |[Execute Expression](./execute-expression.md)                                         |&nbsp;|
-|`109`  |[Deprecated feature log file](./deprecated-feature-log-file.md)                       |&nbsp;|
+|`109`  |[Log File for Deprecations](./deprecated-feature-log-file.md)                       |&nbsp;|
 |`120`  |[Generate UUID](./generate-uuid.md)                                                   |&nbsp;|
 |`127`  |[Overwrite Free Pockets](./overwrite-free-pockets.md)                                 |&nbsp;|
 |`180`  |[Canonical Representation](./canonical-representation.md)                             |&nbsp;|
@@ -42,16 +42,16 @@ The column labelled *O/S* indicates if a function applies only on Windows (W), o
 |`219`  |[Compress/Decompress Vector of Short Integers](./compress-vector-of-short-integers.md)|&nbsp;|
 |`220`  |[Serialise/Deserialise Array](./serialise-array.md)                                   |&nbsp;|
 |`400`  |[Compiler Control](./compiler-control.md)                                             |&nbsp;|
-|`600`  |[Trap Control](./trap-control.md)                                                     |&nbsp;|
+|`600`  |[Disable Traps](./trap-control.md)                                                     |&nbsp;|
 |`739`  |[Temporary Directory](./temporary-directory.md)                                       |&nbsp;|
-|`900`  |[Called Monadically](./called-monadically.md)                                         |&nbsp;|
-|`950`  |[Loaded Libraries](./loaded-libraries.md)                                             |&nbsp;|
+|`900`  |[Called Monadically?](./called-monadically.md)                                         |&nbsp;|
+|`950`  |[List Loaded Libraries](./loaded-libraries.md)                                             |&nbsp;|
 |`1010` |[Set Shell Script Debug Options](./set-shell-script-debug-options.md)                 |&nbsp;|
 |`1111` |[Number of Threads](./number-of-threads.md)                                           |&nbsp;|
 |`1112` |[Parallel Execution Threshold](./parallel-execution-threshold.md)                     |&nbsp;|
 |`1159` |[Update Function Time and User Stamp](./update-function-timestamp.md)                 |&nbsp;|
 |`1200` |[Format Date-time](./format-datetime.md)                                              |&nbsp;|
-|`1302` |[Set aplcore Parameters](./set-aplcore-parameters.md)                                 |&nbsp;|
+|`1302` |[aplcore Parameters](./set-aplcore-parameters.md)                                 |&nbsp;|
 |`1500` |[Hash Array](./hash-array.md)                                                         |&nbsp;|
 |`2000` |[Memory Manager Statistics](./memory-manager-statistics.md)                           |&nbsp;|
 |`2002` |[Specify Workspace Available](./specify-workspace-available.md)                       |&nbsp;|
@@ -71,15 +71,15 @@ The column labelled *O/S* indicates if a function applies only on Windows (W), o
 |`2250` |[Verify .NET Interface](./verify-net-interface.md)                                    |&nbsp;|
 |`2400` |[Set Workspace Save Options](./set-workspace-save-options.md)                         |&nbsp;|
 |`2401` |[Expose Root Properties](./expose-root-properties.md)                                 |&nbsp;|
-|`2501` |[Discard thread on exit](./discard-thread-on-exit.md)                                 |W     |
-|`2502` |[Discard parked threads](./discard-parked-threads.md)                                 |W     |
+|`2501` |[Discard Thread on Exit](./discard-thread-on-exit.md)                                 |W     |
+|`2502` |[Discard Parked Threads](./discard-parked-threads.md)                                 |W     |
 |`2503` |[Mark Thread as Uninterruptible](./mark-thread-as-uninterruptible.md)                 |&nbsp;|
 |`2520` |[Use Separate Thread For .NET](./use-separate-thread-for-net.md)                      |WF    |
 |`2704` |[Continue Autosave](./continue-autosave.md)                                           |&nbsp;|
 |`3002` |[Disable Component Checksum Validation](./disable-component-checksum-validation.md)   |&nbsp;|
 |`3012` |[Enable Compression of Large Components](./enable-compression-of-large-components.md) |&nbsp;|
 |`3500` |[Send Text to Ride-embedded Browser](./send-text-to-ride-embedded-browser.md)         |&nbsp;|
-|`3501` |[Connected to Ride](./connected-to-the-ride.md)                                       |&nbsp;|
+|`3501` |[Connected to Ride?](./connected-to-the-ride.md)                                       |&nbsp;|
 |`3502` |[Manage Ride Connections](./manage-ride-connections.md)                               |&nbsp;|
 |`3535` |[Scan For Deprecated Files](./scan-for-deprecated-files.md)                           |&nbsp;|
 |`4000` |[Fork New Task](./fork-new-task.md)                                                   |AIX   |
