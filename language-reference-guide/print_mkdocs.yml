@@ -198,26 +198,26 @@ nav:
           - '13: Log Use of Deprecated Features': the-i-beam-operator/log-use-of-deprecated-features.md
           - '43: Monadic Operator Generator': the-i-beam-operator/monadic-operator-generator.md
           - '85: Execute Expression': the-i-beam-operator/execute-expression.md
-          - '109: Log File for Deprecations': the-i-beam-operator/deprecated-feature-log-file.md
+          - '109: Log File for Deprecations': the-i-beam-operator/log-file-for-deprecations.md
           - '120: Generate UUID': the-i-beam-operator/generate-uuid.md
           - '127: Overwrite Free Pockets': the-i-beam-operator/overwrite-free-pockets.md
           - '180: Canonical Representation': the-i-beam-operator/canonical-representation.md
           - '181: Unsqueezed Type': the-i-beam-operator/unsqueezed-type.md
           - '200: Syntax Colouring': the-i-beam-operator/syntax-colouring.md
           - '201: Syntax Colour Tokens': the-i-beam-operator/syntax-colour-tokens.md
-          - '219: Compress/Decompress Vector of Short Integers': the-i-beam-operator/compress-vector-of-short-integers.md
-          - '220: Serialise/Deserialise Array': the-i-beam-operator/serialise-array.md
+          - '219: Compress/Decompress Vector of Short Integers': the-i-beam-operator/compress-decompress-vector-of-short-integers.md
+          - '220: Serialise/Deserialise Array': the-i-beam-operator/serialise-deserialise-array.md
           - '400: Compiler Control': the-i-beam-operator/compiler-control.md
-          - '600: Disable Traps': the-i-beam-operator/trap-control.md
+          - '600: Disable Traps': the-i-beam-operator/disable-traps.md
           - '739: Temporary Directory': the-i-beam-operator/temporary-directory.md
           - '900: Called Monadically?': the-i-beam-operator/called-monadically.md
-          - '950: List Loaded Libraries': the-i-beam-operator/loaded-libraries.md
+          - '950: List Loaded Libraries': the-i-beam-operator/list-loaded-libraries.md
           - '1010: Set Shell Script Debug Options': the-i-beam-operator/set-shell-script-debug-options.md
           - '1111: Number of Threads': the-i-beam-operator/number-of-threads.md
           - '1112: Parallel Execution Threshold': the-i-beam-operator/parallel-execution-threshold.md
-          - '1159: Update Function Time and User Stamp': the-i-beam-operator/update-function-timestamp.md
+          - '1159: Update Function Time and User Stamp': the-i-beam-operator/update-function-time-and-user-stamp.md
           - '1200: Format Date-Time': the-i-beam-operator/format-datetime.md
-          - '1302: aplcore Parameters': the-i-beam-operator/set-aplcore-parameters.md
+          - '1302: aplcore Parameters': the-i-beam-operator/aplcore-parameters.md
           - '1500: Hash Array': the-i-beam-operator/hash-array.md
           - '2000: Memory Manager Statistics': the-i-beam-operator/memory-manager-statistics.md
           - '2002: Specify Workspace Available': the-i-beam-operator/specify-workspace-available.md
@@ -245,7 +245,7 @@ nav:
           - '3002: Disable Component Checksum Validation': the-i-beam-operator/disable-component-checksum-validation.md
           - '3012: Enable Compression of Large Components': the-i-beam-operator/enable-compression-of-large-components.md
           - '3500: Send Text to Ride-embedded Browser': the-i-beam-operator/send-text-to-ride-embedded-browser.md
-          - '3501: Connected to Ride?': the-i-beam-operator/connected-to-the-ride.md
+          - '3501: Connected to Ride?': the-i-beam-operator/connected-to-ride.md
           - '3502: Manage Ride Connections': the-i-beam-operator/manage-ride-connections.md
           - '3535: Scan For Deprecated Files': the-i-beam-operator/scan-for-deprecated-files.md
           - '4000: Fork New Task': the-i-beam-operator/fork-new-task.md
