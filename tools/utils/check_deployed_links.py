@@ -11,10 +11,11 @@ from bs4 import BeautifulSoup
 from collections import defaultdict
 from datetime import datetime
 import sys
+from ruamel.yaml import YAML
 
 
 class LinkChecker:
-    def __init__(self, base_url, max_concurrent=5, output_file="broken_links.txt"):
+    def __init__(self, base_url, max_concurrent=5, output_file="broken_links.yaml"):
         self.base_url = base_url.rstrip("/")
         self.max_concurrent = max_concurrent
         self.pages = set()  # All pages found in navigation
@@ -22,13 +23,14 @@ class LinkChecker:
         self.broken_links = defaultdict(
             set
         )  # Map of broken link -> pages that reference it
+        self.page_broken_links = defaultdict(
+            list
+        )  # Map of page -> list of broken links
         self.semaphore = asyncio.Semaphore(max_concurrent)
         self.pages_processed = 0
         self.pages_failed = 0
         self.output_file = output_file
         self.problematic_pages = set()  # Pages with broken links
-        # Open file for immediate writing
-        self.output_handle = None
 
     def normalize_url(self, url):
         """Normalise a URL by removing fragments and ensuring consistent format."""
@@ -39,6 +41,7 @@ class LinkChecker:
         )
         # For MkDocs, directories often redirect to add trailing slash
         # Don't remove trailing slashes as they may be significant
+        # IMPORTANT: Keep .md extensions to track exactly what links are broken
         return normalized
 
     def is_internal_link(self, url):
@@ -180,36 +183,41 @@ class LinkChecker:
                             self.broken_links[link].add(page_url)
 
                     self.pages_processed += 1
-                    broken_count = len([l for l in links if l in self.broken_links])
-                    if broken_count > 0:
+                    # Collect broken links for this page with their status
+                    page_broken = []
+                    for link in links:
+                        if link in self.broken_links:
+                            status = self.checked_links[link][1]
+                            page_broken.append({'url': link, 'status': status})
+                    if page_broken:
                         self.problematic_pages.add(page_url)
-                        # Write immediately to file
-                        if self.output_handle:
-                            self.output_handle.write(f"{page_url}\n")
-                            self.output_handle.flush()
+                        self.page_broken_links[page_url] = page_broken
                     return True
                 else:
                     self.pages_failed += 1
                     self.problematic_pages.add(page_url)
-                    # Write failed pages too
-                    if self.output_handle:
-                        self.output_handle.write(f"{page_url}\n")
-                        self.output_handle.flush()
+                    # Record that this page from navigation couldn't be fetched
+                    # This indicates the navigation contains a broken link
+                    self.page_broken_links[page_url] = [{
+                        'url': page_url,
+                        'status': response.status,
+                        'found_on': 'NAVIGATION (page in nav but returns error)'
+                    }]
                     return False
-        except Exception:
+        except Exception as e:
             self.pages_failed += 1
             self.problematic_pages.add(page_url)
-            # Write error pages too
-            if self.output_handle:
-                self.output_handle.write(f"{page_url}\n")
-                self.output_handle.flush()
+            # Record the error fetching the page from navigation
+            error_msg = str(e)[:100]
+            self.page_broken_links[page_url] = [{
+                'url': page_url,
+                'status': f'Error: {error_msg}',
+                'found_on': 'NAVIGATION (page in nav but failed to fetch)'
+            }]
             return False
 
     async def spider(self):
         """Spider the documentation starting from the base URL."""
-        # Open output file for writing
-        self.output_handle = open(self.output_file, "w")
-
         try:
             # Create a session with custom headers
             connector = aiohttp.TCPConnector(limit=100)
@@ -276,9 +284,83 @@ class LinkChecker:
                         file=sys.stderr,
                     )
         finally:
-            # Always close the file
-            if self.output_handle:
-                self.output_handle.close()
+            # Write YAML output at the end
+            self.write_yaml_output()
+
+    def write_yaml_output(self):
+        """Write the results to a YAML file."""
+        # Separate navigation errors from page content errors
+        output_data = {}
+        bad_nav_links = []
+
+        for page_url, broken_links in self.page_broken_links.items():
+            # Make page URL relative to base URL for cleaner output
+            relative_page = page_url.replace(self.base_url, "")
+            if not relative_page:
+                relative_page = "/"
+
+            # Check if this is a navigation error
+            is_nav_error = False
+            for link_info in broken_links:
+                if isinstance(link_info, dict):
+                    found_on = link_info.get('found_on', '')
+                    if found_on and 'NAVIGATION' in found_on:
+                        is_nav_error = True
+                        break
+
+            if is_nav_error:
+                # Add to bad navigation links list
+                status = broken_links[0]['status'] if broken_links else 'Unknown'
+                bad_nav_links.append(f"{relative_page} (Status: {status})")
+            else:
+                # Regular page with broken links
+                formatted_links = []
+                for link_info in broken_links:
+                    if isinstance(link_info, dict):
+                        url = link_info['url']
+                        status = link_info['status']
+
+                        # Make internal URLs relative
+                        if url.startswith(self.base_url):
+                            url = url.replace(self.base_url, "")
+
+                        formatted_links.append(f"{url} (Status: {status})")
+                    else:
+                        # Fallback for any legacy format
+                        formatted_links.append(str(link_info))
+
+                output_data[relative_page] = formatted_links
+
+        # Add bad nav links as a special entry if any exist
+        if bad_nav_links:
+            # Sort and group bad nav links for better readability
+            bad_nav_links.sort()
+            output_data = {'Bad nav links:': bad_nav_links, **output_data}
+
+        # Write to YAML file with header comment
+        yaml = YAML()
+        yaml.preserve_quotes = True
+        yaml.default_flow_style = False
+        yaml.width = 4096  # Prevent line wrapping
+        yaml.indent(mapping=2, sequence=4, offset=2)  # Proper indentation like other scripts
+
+        with open(self.output_file, "w") as f:
+            f.write("# Broken Links Report\n")
+            f.write(f"# Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"# Base URL: {self.base_url}\n")
+            f.write(f"# Pages with issues: {len(output_data)}\n")
+            f.write("#\n")
+            f.write("# Format:\n")
+            f.write("#   - 'Bad nav links:' = Pages listed in navigation that don't exist\n")
+            f.write("#   - Other keys = Pages that exist but contain broken links\n")
+            f.write("#   - Values = The broken links found (with HTTP status)\n")
+            f.write("#   - Links with .md extensions indicate incorrect markdown links\n")
+            f.write("#\n\n")
+
+            if output_data:
+                yaml.dump(output_data, f)
+            else:
+                f.write("# No broken links found\n{}\n")
 
     def report(self):
         """Show summary of the link check."""
@@ -294,7 +376,7 @@ class LinkChecker:
         print(f"  - Broken links found: {len(self.broken_links)}", file=sys.stderr)
         print(f"  - Pages with issues: {len(self.problematic_pages)}", file=sys.stderr)
         print(
-            f"\n[{datetime.now().strftime('%H:%M:%S')}] Problematic pages written to: {self.output_file}",
+            f"\n[{datetime.now().strftime('%H:%M:%S')}] Broken links report written to: {self.output_file}",
             file=sys.stderr,
         )
 
@@ -316,8 +398,8 @@ def main():
     )
     parser.add_argument(
         "--output",
-        default="broken_links.txt",
-        help="Output file for problematic pages (default: broken_links.txt)",
+        default="broken_links.yaml",
+        help="Output file for broken links report in YAML format (default: broken_links.yaml)",
     )
 
     args = parser.parse_args()
