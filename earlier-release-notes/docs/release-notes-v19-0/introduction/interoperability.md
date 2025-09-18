@@ -70,7 +70,7 @@ A `TRANSLATION ERROR` will occur if a Unicode edition writes to a non-Unicode co
 
 Likewise, a Classic edition will issue a `TRANSLATION ERROR` if it attempts to read a component containing Unicode data that is not in `⎕AVU` from a component file.
 
-A `TRANSLATION ERROR` will also be issued when a Classic edition attempts to `)LOAD` or `)COPY` a workspace containing Unicode data that cannot be mapped to `⎕AV` using the `⎕AVU` in the recipient workspace. Note that the problematic Unicode data may be in that part of a workspace which holds the information needed to generate `⎕DM` and `⎕DMX`, so calling `)RESET` before `)save` in the Unicode interpreter may eliminate the `TRANSLATION ERROR`s.
+A `TRANSLATION ERROR` will also be issued when a Classic edition attempts to `)LOAD` or `)COPY` a workspace containing Unicode data that cannot be mapped to `⎕AV` using the `⎕AVU` in the recipient workspace. Note that the problematic Unicode data may be in that part of a workspace which holds the information needed to generate `⎕DM` and `⎕DMX`, so calling `)RESET` before `)SAVE` in the Unicode interpreter may eliminate the `TRANSLATION ERROR`s.
 
 `TCPSocket` objects have an `APL` property that corresponds to the Unicode property of a file, if this is set to `Classic` (the default) the data in the socket will be restricted to `⎕AV`, if Unicode it will contain Unicode character data. As a result, `TRANSLATION ERROR`s can occur on transmission or reception in the same way as when updating or reading a file component.
 
