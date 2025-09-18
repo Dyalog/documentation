@@ -409,7 +409,7 @@ This differs from the behaviour when you use event number normally:
 
 When you query the Event property using `⎕WG`, names of callbacks associated with events are reported exactly as they were set. When you reference the Event property, the names are reported as absolute pathnames.
 ```apl
-      )ns x
+      )NS x
 #.x
       )cs x
 #.x

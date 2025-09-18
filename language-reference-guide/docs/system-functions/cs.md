@@ -108,9 +108,9 @@ This example uses `⎕CS` to explore a namespace tree and display the structure.
 [4]    (tabs,'.   ')∘tree¨subs
      ∇ 
  
-      )ns x.y
+      )NS x.y
 #.x.y
-      )ns z
+      )NS z
 #.z
       ''tree '#'
 #
