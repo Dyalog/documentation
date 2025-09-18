@@ -25,7 +25,7 @@ In the following example, there is a deliberate error on `GenCB[2]` which is ass
 SYNTAX ERROR
 GenCB[2] ∘
         ∧
-      )si
+      )SI
 #.GenCB[2]*
 ⎕DQ
       →
@@ -43,7 +43,7 @@ Cannot perform operation with calls to or from external functions or certain cal
 The only way to restore the situation to normal is to force the callback function to exit. For example:
 ```apl
       →0
-      )si
+      )SI
 
 ```
 
