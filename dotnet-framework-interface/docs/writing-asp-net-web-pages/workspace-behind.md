@@ -36,7 +36,7 @@ The steps involved in converting the workspaces were as follows:
 2. Attach the names of APL callback functions to the appropriate ASP controls; essentially, any controls that will be involved in a postback operation, such as the Submit button. 
 3. Starting with a `CLEAR WS`, create a `Class` that represents a .NET class based upon `System.Web.UI.Page`. For example, in converting the ACTFNS workspace, we started by creating the class:
     ```apl
-          )edit ○actuarial
+          )ED ○actuarial
     ```
 
 4. then defining `⎕USING` as follows:
