@@ -6,7 +6,7 @@ An aplcore file contains the workspace at the point where the interpreter termin
 
 The Dyalog support department (support@dyalog.com, other means of contact on the Dyalog website) should be contacted if an aplcore file is generated. More immediately it may be possible to copy the contents of the aplcore into a new Dyalog process by running
 ```apl
-      )copy aplcore
+      )COPY aplcore
 ```
 
 Note however that it is possible that the `)COPY` itself will cause another aplcore; it is best to rename the original aplcore before attempting this course of action.
