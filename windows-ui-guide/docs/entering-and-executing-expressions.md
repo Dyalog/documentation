@@ -30,7 +30,7 @@ If the current space is a GUI namespace, the list will also include Properties, 
 
 As an additional refinement, AC remembers a certain number of previous auto complete operations, and uses this information to highlight the most recent choice you made.
 
-For example, suppose that you enter the two characters `)c`. AC offers you `)clear` thru' `)cs`, and you choose `)cs` from the list. The next time you enter the two characters `)c`, AC displays the same list of choices, but this time `)cs` is pre-selected.
+For example, suppose that you enter the two characters `)C`. AC offers you `)clear` thru' `)CS`, and you choose `)CS` from the list. The next time you enter the two characters `)C`, AC displays the same list of choices, but this time `)CS` is pre-selected.
 
 You can disable or customise Auto Completion from the *Auto Complete* page in the Configuration dialog box which is described later in this chapter.
 

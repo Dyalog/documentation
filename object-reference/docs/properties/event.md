@@ -411,7 +411,7 @@ When you query the Event property using `⎕WG`, names of callbacks associated w
 ```apl
       )NS x
 #.x
-      )cs x
+      )CS x
 #.x
      'f'⎕WC'form'
       f.onMouseUp←'foo'
@@ -427,7 +427,7 @@ When you query the Event property using `⎕WG`, names of callbacks associated w
 ││onMouseUp│foo││
 │└─────────┴───┘│
 └───────────────┘
-      )cs
+      )CS
 #
       #.x.f.Event
 ┌───────────────────┐
