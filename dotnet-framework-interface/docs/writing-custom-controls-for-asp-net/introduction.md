@@ -22,6 +22,6 @@ C:\Program Files (x86)\Dyalog\Dyalog APL 15.0 Unicode\Samples\asp.net\temp\bin\t
 DyalogSamples
       )cs DyalogSamples
 #.DyalogSamples
-      )Classes
+      )CLASSES
 SimpleCtl       TemperatureConverterCtl1        TemperatureConverterCtl2        TemperatureConverterCtl3
 ```
