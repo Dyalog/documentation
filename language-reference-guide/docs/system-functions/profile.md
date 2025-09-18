@@ -99,7 +99,7 @@ Causes `⎕PROFILE` to perform a 1000 millisecond calibration to approximate the
 
 Returns the current profiling state.
 ```apl
-      )clear
+      )CLEAR
 clear ws
       ⎕PROFILE 'state'
  inactive    0 0

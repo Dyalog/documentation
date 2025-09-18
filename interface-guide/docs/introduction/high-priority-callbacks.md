@@ -34,7 +34,7 @@ DOMAIN ERROR: Operation cannot be completed with an "external" call on the stack
      ∧
       )reset
 Can't )RESET with external call on the stack.
-      )clear
+      )CLEAR
 Can't )CLEAR with external call on the stack.
       )save
 Cannot perform operation with calls to or from external functions or certain callbacks.
