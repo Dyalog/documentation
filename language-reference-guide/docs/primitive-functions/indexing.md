@@ -191,6 +191,6 @@ If `Y` is a ref to an instance of a Class with a Default property, indexing is a
 UVWX
 ```
 
-See also: [Indexing Classes](squad.md#indexing-classes).
+See also: [Indexing Classes](index-function.md#indexing-classes).
 
 

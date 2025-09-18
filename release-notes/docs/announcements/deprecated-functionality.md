@@ -20,7 +20,7 @@ Dyalog can be configured to log use of a deprecated feature when it is encounter
 
 To enable logging of deprecated features:
 
-1. Specify the name of the file into which the JSON5 log messages will be written (using [`109⌶`](../../../language-reference-guide/the-i-beam-operator/deprecated-feature-log-file/) with a right argument of `0`). By default, the file is created in the current working directory; if you do not have write permission for the current working directory, you will also need to include a path. If a filename is not set, then all logging information will be silently discarded.
+1. Specify the name of the file into which the JSON5 log messages will be written (using [`109⌶`](../../../language-reference-guide/the-i-beam-operator/log-file-for-deprecations/) with a right argument of `0`). By default, the file is created in the current working directory; if you do not have write permission for the current working directory, you will also need to include a path. If a filename is not set, then all logging information will be silently discarded.
 2. Specify which deprecated features should be logged (using [`13⌶`](../../../language-reference-guide/the-i-beam-operator/log-use-of-deprecated-features/) with a right argument of the names identifying the deprecated features of interest).
 
 For Dyalog v20.0, the following names are valid:

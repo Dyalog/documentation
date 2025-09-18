@@ -6,4 +6,4 @@ The setting can be toggled with the `]APLAN.Editor` user command.
 
 In Ride and the Microsoft Windows IDE, once an **Edit** window is open, its mode can be toggled by clicking the ![](../../../release-notes/img/object_arraynotation.png){width=20 height=20 vertical-align:text-bottom} icon in the Editor's toolbar.
 
-See also [APLAN_FOR_SESSION](../aplan-for-session).
+See also [APLAN_FOR_OUTPUT](../aplan-for-output).
