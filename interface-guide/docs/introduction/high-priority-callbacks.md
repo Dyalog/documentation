@@ -32,7 +32,7 @@ GenCB[2] ∘
 DOMAIN ERROR: Operation cannot be completed with an "external" call on the stack
       →
      ∧
-      )reset
+      )RESET
 Can't )RESET with external call on the stack.
       )CLEAR
 Can't )CLEAR with external call on the stack.

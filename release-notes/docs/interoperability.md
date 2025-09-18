@@ -104,7 +104,7 @@ A `TRANSLATION ERROR` will be generated if:
 
 ### Workspaces
 
-A `TRANSLATION ERROR` will be generated if a Classic edition attempts to `)LOAD` or `)COPY` a workspace containing Unicode data that cannot be mapped to `⎕AV` using the `⎕AVU` in the recipient workspace. The problematic Unicode data might be in the part of a workspace that holds the information needed to generate `⎕DM` and `⎕DMX`; in this situation, calling `)Reset` before `)Save` in the Unicode interpreter might eliminate the `TRANSLATION ERROR`s.
+A `TRANSLATION ERROR` will be generated if a Classic edition attempts to `)LOAD` or `)COPY` a workspace containing Unicode data that cannot be mapped to `⎕AV` using the `⎕AVU` in the recipient workspace. The problematic Unicode data might be in the part of a workspace that holds the information needed to generate `⎕DM` and `⎕DMX`; in this situation, calling `)RESET` before `)Save` in the Unicode interpreter might eliminate the `TRANSLATION ERROR`s.
 
 ## Session Files
 Session files (**.dse**) can only be used on the platform on which they were created and saved. Under Microsoft Windows, Session files can only be used by an interpreter with the same architecture (32&#8209;bit/64&#8209;bit) as the interpreter that saved them.

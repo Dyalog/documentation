@@ -112,7 +112,7 @@ The benefit of the localisation strategy is that code which uses error trapping 
 `⎕DMX` is cleared by  `)RESET`:
 ```apl
 
-      )reset
+      )RESET
       ⍴⎕FMT ⎕DMX
 0 0
 
