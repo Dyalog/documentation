@@ -15,7 +15,7 @@ Alternatively, type `)ED` followed by the pathname to the file. To identify the 
 
       )ED \x.txt  ⍝ x.txt in current directory
 
-      )ed / x.txt ⍝ ditto
+      )ED / x.txt ⍝ ditto
 
 ```
 
