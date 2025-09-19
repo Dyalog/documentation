@@ -1,13 +1,10 @@
 <h1 class="heading"><span class="name">Arrays of Namespace References</span></h1>
 
-You may construct arrays of refs using strand notation, catenate (`,`) and reshape (`⍴`).
+You can construct arrays of refs using strand notation, array notation, catenate (`,`), reshape (`⍴`) and other structural primitives, as well as certain system functions.
 ```apl
       EMP←JOHN PAUL
       ⍴EMP
-```
-
 2
-```apl
       EMP
  #.[Namespace]  #.[Namespace]
 ```
@@ -51,7 +48,7 @@ Dyadic function `g`:
 
 An array of refs to the left of an assignment arrow is expanded thus:
 ```apl
-      (x y).a←c d   →  (x.a←c)(y.a←d)
+      (x y).a←c d → (x.a←c)(y.a←d)
 ```
 
 Note that the array of refs can be of any rank. In the limiting case of a simple scalar array, the array construct: `refs.exp` is identical to the scalar construct: `ref.exp`.
@@ -65,7 +62,8 @@ Note also that with successive expansions `(u v).(x y z).` ..., the final number
 
 <h2 class="example">Examples</h2>
 ```apl
-      JOHN.Children←⎕NS¨'' ''
+      (JOHN PAUL)←()()
+      JOHN.Children←()()
       ⍴JOHN.Children
 2
       JOHN.Children[1].FirstName←'Andy'
@@ -74,12 +72,10 @@ Note also that with successive expansions `(u v).(x y z).` ..., the final number
       JOHN.Children[2].FirstName←'Katherine'
       JOHN.Children[2].Age←19               
  
-      PAUL.Children←⎕NS¨'' ''
+      PAUL.Children←()()
       PAUL.Children[1].(FirstName Age←'Tom' 25)
       PAUL.Children[2].(FirstName Age←'Jamie' 22)
 
-```
-```apl
       EMP←JOHN PAUL
       ⍴EMP
 2
@@ -87,13 +83,13 @@ Note also that with successive expansions `(u v).(x y z).` ..., the final number
   Andy  23   Katherine  19
  
       ]display (2⊃EMP).Children.(FirstName Age)
-.→----------------------------.
-| .→---------. .→-----------. |
-| | .→--.    | | .→----.    | |
-| | |Tom| 25 | | |Jamie| 22 | |
-| | '---'    | | '-----'    | |
-| '∊---------' '∊-----------' |
-'∊----------------------------'
+┌→────────────────────────────┐
+│ ┌→─────────┐ ┌→───────────┐ │
+│ │ ┌→──┐    │ │ ┌→────┐    │ │
+│ │ │Tom│ 25 │ │ │Jamie│ 22 │ │
+│ │ └───┘    │ │ └─────┘    │ │
+│ └∊─────────┘ └∊───────────┘ │
+└∊────────────────────────────┘
  
       EMP.Children ⍝ Is an array of refs
   #.[Namespace]  #.[Namespace]    #.[Namespace]  ...

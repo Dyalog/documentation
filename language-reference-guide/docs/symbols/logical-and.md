@@ -7,7 +7,7 @@ search:
 Monadic Logical AND is not defined.
 
 Dyadic Logical AND means
-[Lowest Common Multiple (AND)](../primitive-functions/and-lowest-common-multiple.md)
+[Lowest Common Multiple/AND](../primitive-functions/lowest-common-multiple-and.md)
 ```apl
       0 1 0 1 ∧ 0 0 1 1
 0 0 0 1

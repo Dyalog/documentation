@@ -81,6 +81,15 @@
   text-decoration: none;
 }
 
-#contents a::before {
+#contents a:empty::before {
   content: target-text(attr(href)) ' ' leader('.') ' ' target-counter(attr(href), page);
+}
+
+#contents a:not(:empty)::after {
+  content: ' ' leader('.') ' ' target-counter(attr(href), page);
+}
+
+#contents code {
+  font-family: 'APL385 Unicode', 'Courier New', Courier, monospace;
+  font-size: 0.95em;
 }

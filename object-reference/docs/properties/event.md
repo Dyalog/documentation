@@ -368,7 +368,7 @@ To reset the Event property, the same (different) values must be used accordingl
 
 or
 ```apl
-      'f'⎕ws'Event' 0 0
+      'f'⎕WS'Event' 0 0
 ```
 
 ### onEvent Syntax with Event Numbers
@@ -395,7 +395,7 @@ If you use the *onEvent* syntax with *built-in* event numbers, the effect is the
 This differs from the behaviour when you use event number normally:
 ```apl
       'f'⎕WC'Form'
-      'f' ⎕ws 'Event' 2 'foo'
+      'f' ⎕WS 'Event' 2 'foo'
       f.Event                  
  2  #.foo  
 ┌→──────────────────────────────────┐
@@ -421,7 +421,7 @@ When you query the Event property using `⎕WG`, names of callbacks associated w
 ││onMouseUp│#.x.foo││
 │└─────────┴───────┘│
 └───────────────────┘
-      'f'⎕wg'event'
+      'f'⎕WG'event'
 ┌───────────────┐
 │┌─────────┬───┐│
 ││onMouseUp│foo││
@@ -435,7 +435,7 @@ When you query the Event property using `⎕WG`, names of callbacks associated w
 ││onMouseUp│#.x.foo││
 │└─────────┴───────┘│
 └───────────────────┘
-      '#.x.f'⎕wg'Event'
+      '#.x.f'⎕WG'Event'
 ┌─────────────────┐
 │┌─────────┬─────┐│
 ││onMouseUp│x.foo││

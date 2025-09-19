@@ -21,7 +21,7 @@ io
 pp
 ```
 
-If `⎕ML≥2` [First](../primitive-functions/disclose.md)
+If `⎕ML≥2` [First](../primitive-functions/first.md)
 ```apl
       ↑ (6 4) 5 3
 6 4

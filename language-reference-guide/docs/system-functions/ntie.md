@@ -67,7 +67,7 @@ to:
 ```apl
 ntie←{                  ⍝ tie file and return tie no.
     ⍺←2+64              ⍝ default all access.
-    ⍵ ⎕ntie 0 ⍺         ⍝ return new tie no.
+    ⍵ ⎕NTIE 0 ⍺         ⍝ return new tie no.
 }
 ```
 

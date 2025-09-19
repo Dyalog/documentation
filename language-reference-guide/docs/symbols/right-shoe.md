@@ -6,7 +6,7 @@ search:
 
 Monadic Right Shoe means
 
-If `⎕ML<2`[Disclose;First](../primitive-functions/disclose.md)
+If `⎕ML<2`[First](../primitive-functions/first.md)
 ```apl
       ⊃ 'Word'
 W

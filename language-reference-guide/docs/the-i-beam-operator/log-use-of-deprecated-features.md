@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Log use of deprecated features</span> <span class="command">{R}←(13⌶)Y</span></h1>
+<h1 class="heading"><span class="name">Log Use of Deprecated Features</span> <span class="command">{R}←(13⌶)Y</span></h1>
 
 Controls which deprecated features are logged when logging is enabled. For an overview of deprecated features and this I-beam's role in identifying them within your code, see [Deprecated functionality](../../../programming-reference-guide/deprecated-functionality).
 
@@ -45,4 +45,4 @@ Each log entry is a complete JSON5 object definition that includes the following
  This  That  TheOther
 ```
 
-See also [`109⌶` – Deprecated feature log file](deprecated-feature-log-file.md).
+See also [`109⌶` – Log File for Deprecations](deprecated-feature-log-file.md).

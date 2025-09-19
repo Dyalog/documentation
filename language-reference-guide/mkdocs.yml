@@ -16,7 +16,6 @@ extra_css:
   - documentation-assets/css/admonition-ucmdhelp.css
 extra_javascript:
   - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 plugins:
   - privacy
@@ -49,6 +48,7 @@ markdown_extensions:
   - toc:
       title: On this page
 nav:
+  - Key to Notation: primitive-functions/key-to-notation.md
   - Symbols:
       - Language Elements: symbols/language-elements.md
       - Brackets: symbols/brackets.md
@@ -59,8 +59,8 @@ nav:
       - Mixed Functions: primitive-functions/mixed-functions.md
       - Notes: primitive-functions/notes.md
       - Scalar Monadic Functions:
-          - Negative: primitive-functions/negative.md
-          - Direction (Signum): primitive-functions/direction.md
+          - Negate: primitive-functions/negate.md
+          - Direction: primitive-functions/direction.md
           - Reciprocal: primitive-functions/reciprocal.md
           - Magnitude: primitive-functions/magnitude.md
           - Floor: primitive-functions/floor.md
@@ -69,13 +69,13 @@ nav:
           - Natural Logarithm: primitive-functions/natural-logarithm.md
           - Pi Times: primitive-functions/pi-times.md
           - Factorial: primitive-functions/factorial.md
-          - Not: primitive-functions/not.md
+          - NOT: primitive-functions/not.md
           - Roll: primitive-functions/roll.md
           - Type: primitive-functions/type.md
       - Scalar Dyadic Arithmetic Functions:
-          - Add: primitive-functions/add.md
-          - Subtract: primitive-functions/subtract.md
-          - Multiply: primitive-functions/multiply.md
+          - Plus: primitive-functions/plus.md
+          - Minus: primitive-functions/minus.md
+          - Times: primitive-functions/times.md
           - Divide: primitive-functions/divide.md
           - Residue: primitive-functions/residue.md
           - Minimum: primitive-functions/minimum.md
@@ -84,17 +84,17 @@ nav:
           - Logarithm: primitive-functions/logarithm.md
           - Binomial: primitive-functions/binomial.md
       - Scalar Dyadic Logical Functions:
-          - And Lowest Common Multiple: primitive-functions/and-lowest-common-multiple.md
-          - Or Greatest Common Divisor: primitive-functions/or-greatest-common-divisor.md
-          - Nand: primitive-functions/nand.md
-          - Nor: primitive-functions/nor.md
-          - Less: primitive-functions/less.md
-          - Less Or Equal: primitive-functions/less-or-equal.md
-          - Equal: primitive-functions/equal.md
-          - Greater Or Equal: primitive-functions/greater-or-equal.md
-          - Greater: primitive-functions/greater.md
-          - Not Equal: primitive-functions/not-equal.md
-      - Trigonometric Functions: primitive-functions/circular.md
+          - Lowest Common Multiple/AND: primitive-functions/lowest-common-multiple-and.md
+          - Greatest Common Divisor/OR: primitive-functions/greatest-common-divisor-or.md
+          - NAND: primitive-functions/nand.md
+          - NOR: primitive-functions/nor.md
+          - Less Than: primitive-functions/less-than.md
+          - Less Than Or Equal To: primitive-functions/less-than-or-equal-to.md
+          - Equal To: primitive-functions/equal-to.md
+          - Greater Than Or Equal To: primitive-functions/greater-than-or-equal-to.md
+          - Greater Than: primitive-functions/greater-than.md
+          - Not Equal To: primitive-functions/not-equal-to.md
+      - Trigonometric Functions: primitive-functions/circular-functions.md
       - Non-Scalar Monadic Structural Functions:
           - Shape: primitive-functions/shape.md
           - Ravel: primitive-functions/ravel.md
@@ -102,28 +102,28 @@ nav:
           - Reverse: primitive-functions/reverse.md
           - Table: primitive-functions/table.md
           - Tally: primitive-functions/tally.md
-          - Transpose: primitive-functions/transpose-monadic.md
+          - Transpose: primitive-functions/transpose.md
           - Mix: primitive-functions/mix.md
           - Split: primitive-functions/split.md
           - Enclose: primitive-functions/enclose.md
           - Enclose with Axes: primitive-functions/enclose-with-axes.md
           - Nest: primitive-functions/nest.md
-          - Format: primitive-functions/format-monadic.md
+          - Format: primitive-functions/format.md
           - Depth: primitive-functions/depth.md
           - Enlist: primitive-functions/enlist.md
       - Non-Scalar Dyadic Structural Functions:
           - Reshape: primitive-functions/reshape.md
           - Catenate and Laminate: primitive-functions/catenate-laminate.md
           - Rotate: primitive-functions/rotate.md
-          - Dyadic Transpose: primitive-functions/transpose-dyadic.md
+          - Dyadic Transpose: primitive-functions/dyadic-transpose.md
           - Partitioned Enclose: primitive-functions/partitioned-enclose.md
           - Partition: primitive-functions/partition.md
-          - Dyadic Format: primitive-functions/format-dyadic.md
+          - Format by Specification: primitive-functions/format-by-specification.md
       - Non-Scalar Selection Functions:
           - Right: primitive-functions/right.md
           - Same: primitive-functions/same.md
           - Left: primitive-functions/left.md
-          - Disclose: primitive-functions/disclose.md
+          - First: primitive-functions/first.md
           - Unique: primitive-functions/unique.md
           - Unique Mask: primitive-functions/unique-mask.md
           - Pick: primitive-functions/pick.md
@@ -133,13 +133,13 @@ nav:
           - Drop with Axes: primitive-functions/drop-with-axes.md
           - Replicate: primitive-functions/replicate.md
           - Expand: primitive-functions/expand.md
-          - Excluding: primitive-functions/excluding.md
+          - Without: primitive-functions/without.md
           - Intersection: primitive-functions/intersection.md
           - Union: primitive-functions/union.md
       - Non-Scalar Selector Functions:
           - Index Generator: primitive-functions/index-generator.md
-          - Grade Up: primitive-functions/grade-up-monadic.md
-          - Grade Down: primitive-functions/grade-down-monadic.md
+          - Grade Up: primitive-functions/grade-up.md
+          - Grade Down: primitive-functions/grade-down.md
           - Indexing: primitive-functions/indexing.md
           - Index with Axes: primitive-functions/index-with-axes.md
           - Index Of: primitive-functions/index-of.md
@@ -147,8 +147,8 @@ nav:
           - Where: primitive-functions/where.md
           - Membership: primitive-functions/membership.md
           - Find: primitive-functions/find.md
-          - Dyadic Grade Up: primitive-functions/grade-up-dyadic.md
-          - Dyadic Grade Down: primitive-functions/grade-down-dyadic.md
+          - Dyadic Grade Up: primitive-functions/dyadic-grade-up.md
+          - Dyadic Grade Down: primitive-functions/dyadic-grade-down.md
           - Deal: primitive-functions/deal.md
           - Match: primitive-functions/match.md
           - Not Match: primitive-functions/not-match.md
@@ -162,10 +162,7 @@ nav:
           - Encode: primitive-functions/encode.md
           - Matrix Divide: primitive-functions/matrix-divide.md
       - Primitive Functions (A-Z):
-          - Introduction: primitive-functions/key-to-notation.md
           - Abort: primitive-functions/abort.md
-          - Add: primitive-functions/add.md
-          - And, Lowest Common Multiple: primitive-functions/and-lowest-common-multiple.md
           - Assignment: primitive-functions/assignment.md
           - Assignment Indexed: primitive-functions/assignment-indexed.md
           - Assignment Selective: primitive-functions/assignment-selective.md
@@ -174,22 +171,23 @@ nav:
           - Catenate Laminate: primitive-functions/catenate-laminate.md
           - Catenate First: primitive-functions/catenate-first.md
           - Ceiling: primitive-functions/ceiling.md
-          - Circular: primitive-functions/circular.md
+          - Circular Functiona: primitive-functions/circular-functions.md
           - Conjugate: primitive-functions/conjugate.md
           - Deal: primitive-functions/deal.md
           - Decode: primitive-functions/decode.md
           - Depth: primitive-functions/depth.md
-          - Direction Signum: primitive-functions/direction.md
-          - Disclose: primitive-functions/disclose.md
+          - Direction: primitive-functions/direction.md
           - Divide: primitive-functions/divide.md
           - Drop: primitive-functions/drop.md
           - Drop with Axes: primitive-functions/drop-with-axes.md
+          - Dyadic Grade Down: primitive-functions/dyadic-grade-down.md
+          - Dyadic Grade Up: primitive-functions/dyadic-grade-up.md
+          - Dyadic Transpose: primitive-functions/dyadic-transpose.md
           - Enclose: primitive-functions/enclose.md
           - Enclose with Axes: primitive-functions/enclose-with-axes.md
           - Encode: primitive-functions/encode.md
           - Enlist: primitive-functions/enlist.md
-          - Equal: primitive-functions/equal.md
-          - Excluding: primitive-functions/excluding.md
+          - Equal To: primitive-functions/equal-to.md
           - Execute: primitive-functions/execute.md
           - Expand: primitive-functions/expand.md
           - Expand First: primitive-functions/expand-first.md
@@ -198,15 +196,13 @@ nav:
           - Find: primitive-functions/find.md
           - First: primitive-functions/first.md
           - Floor: primitive-functions/floor.md
-          - Format Monadic: primitive-functions/format-monadic.md
-          - Format Dyadic: primitive-functions/format-dyadic.md
-          - Grade Down Monadic: primitive-functions/grade-down-monadic.md
-          - Grade Down Dyadic: primitive-functions/grade-down-dyadic.md
-          - Grade Up Monadic: primitive-functions/grade-up-monadic.md
-          - Grade Up Dyadic: primitive-functions/grade-up-dyadic.md
-          - Greater: primitive-functions/greater.md
-          - Greater Or Equal: primitive-functions/greater-or-equal.md
-          - Index: primitive-functions/squad.md
+          - Format: primitive-functions/format.md
+          - Format by Specification: primitive-functions/format-by-specification.md
+          - Grade Down: primitive-functions/grade-down.md
+          - Grade Up: primitive-functions/grade-up.md
+          - Greater Than: primitive-functions/greater-than.md
+          - Greater Than Or Equal To: primitive-functions/greater-than-or-equal-to.md
+          - Index: primitive-functions/index-function.md
           - Index with Axes: primitive-functions/index-with-axes.md
           - Index Generator: primitive-functions/index-generator.md
           - Index Of: primitive-functions/index-of.md
@@ -214,9 +210,10 @@ nav:
           - Intersection: primitive-functions/intersection.md
           - Interval Index: primitive-functions/interval-index.md
           - Left: primitive-functions/left.md
-          - Less: primitive-functions/less.md
-          - Less Or Equal: primitive-functions/less-or-equal.md
+          - Less Than: primitive-functions/less-than.md
+          - Less Than Or Equal To: primitive-functions/less-than-or-equal-to.md
           - Logarithm: primitive-functions/logarithm.md
+          - Lowest Common Multiple/AND: primitive-functions/lowest-common-multiple-and.md
           - Magnitude: primitive-functions/magnitude.md
           - Match: primitive-functions/match.md
           - Materialise: primitive-functions/materialise.md
@@ -227,16 +224,15 @@ nav:
           - Minimum: primitive-functions/minimum.md
           - Minus: primitive-functions/minus.md
           - Mix: primitive-functions/mix.md
-          - Multiply: primitive-functions/multiply.md
-          - Nand: primitive-functions/nand.md
+          - NAND: primitive-functions/nand.md
           - Natural Logarithm: primitive-functions/natural-logarithm.md
-          - Negative: primitive-functions/negative.md
+          - Negate: primitive-functions/negate.md
           - Nest: primitive-functions/nest.md
-          - Nor: primitive-functions/nor.md
-          - Not: primitive-functions/not.md
-          - Not Equal: primitive-functions/not-equal.md
+          - NOR: primitive-functions/nor.md
+          - NOT: primitive-functions/not.md
+          - Not Equal To: primitive-functions/not-equal-to.md
           - Not Match: primitive-functions/not-match.md
-          - Or, Greatest Common Divisor: primitive-functions/or-greatest-common-divisor.md
+          - Greatest Common Divisor/OR: primitive-functions/greatest-common-divisor-or.md
           - Partition: primitive-functions/partition.md
           - Partitioned Enclose: primitive-functions/partitioned-enclose.md
           - Pi Times: primitive-functions/pi-times.md
@@ -259,14 +255,12 @@ nav:
           - Same: primitive-functions/same.md
           - Shape: primitive-functions/shape.md
           - Split: primitive-functions/split.md
-          - Subtract: primitive-functions/subtract.md
           - Table: primitive-functions/table.md
           - Take: primitive-functions/take.md
           - Take with Axes: primitive-functions/take-with-axes.md
           - Tally: primitive-functions/tally.md
           - Times: primitive-functions/times.md
-          - Transpose Monadic: primitive-functions/transpose-monadic.md
-          - Transpose Dyadic: primitive-functions/transpose-dyadic.md
+          - Transpose: primitive-functions/transpose.md
           - Type: primitive-functions/type.md
           - Union: primitive-functions/union.md
           - Unique: primitive-functions/unique.md
@@ -298,7 +292,7 @@ nav:
           - Key: primitive-operators/key.md
           - Outer Product: primitive-operators/outer-product.md
           - Over: primitive-operators/over.md
-          - Power Operator: primitive-operators/power-operator.md
+          - Power: primitive-operators/power.md
           - Rank: primitive-operators/rank.md
           - Reduce: primitive-operators/reduce.md
           - Reduce First: primitive-operators/reduce-first.md
@@ -311,30 +305,30 @@ nav:
           - Variant: primitive-operators/variant.md
   - The I-Beam Operator:
       - Introduction: the-i-beam-operator/i-beam.md
-      - '8: Inverted Table Index Of': the-i-beam-operator/inverted-table-index-of.md
+      - '8: Inverted Table Index-of ': the-i-beam-operator/inverted-table-index-of.md
       - '13: Log Use of Deprecated Features': the-i-beam-operator/log-use-of-deprecated-features.md
       - '43: Monadic Operator Generator': the-i-beam-operator/monadic-operator-generator.md
       - '85: Execute Expression': the-i-beam-operator/execute-expression.md
-      - '109: Deprecated Feature Log File': the-i-beam-operator/deprecated-feature-log-file.md
+      - '109: Log File for Deprecations': the-i-beam-operator/log-file-for-deprecations.md
       - '120: Generate UUID': the-i-beam-operator/generate-uuid.md
       - '127: Overwrite Free Pockets': the-i-beam-operator/overwrite-free-pockets.md
       - '180: Canonical Representation': the-i-beam-operator/canonical-representation.md
       - '181: Unsqueezed Type': the-i-beam-operator/unsqueezed-type.md
       - '200: Syntax Colouring': the-i-beam-operator/syntax-colouring.md
       - '201: Syntax Colour Tokens': the-i-beam-operator/syntax-colour-tokens.md
-      - '219: Compress/Uncompress vector of short integers': the-i-beam-operator/compress-vector-of-short-integers.md
-      - '220: Serialise/Deserialise Arrays': the-i-beam-operator/serialise-array.md
+      - '219: Compress/Decompress Vector of Short Integers': the-i-beam-operator/compress-decompress-vector-of-short-integers.md
+      - '220: Serialise/Deserialise Array': the-i-beam-operator/serialise-deserialise-array.md
       - '400: Compiler Control': the-i-beam-operator/compiler-control.md
-      - '600: Trap Control': the-i-beam-operator/trap-control.md
+      - '600: Disable Traps': the-i-beam-operator/disable-traps.md
       - '739: Temporary Directory': the-i-beam-operator/temporary-directory.md
-      - '900: Called Monadically': the-i-beam-operator/called-monadically.md
-      - '950: Loaded Libraries': the-i-beam-operator/loaded-libraries.md
+      - '900: Called Monadically?': the-i-beam-operator/called-monadically.md
+      - '950: List Loaded Libraries': the-i-beam-operator/list-loaded-libraries.md
       - '1010: Set Shell Script Debug Options': the-i-beam-operator/set-shell-script-debug-options.md
       - '1111: Number of Threads': the-i-beam-operator/number-of-threads.md
       - '1112: Parallel Execution Threshold': the-i-beam-operator/parallel-execution-threshold.md
-      - '1159: Update Function Timestamp': the-i-beam-operator/update-function-timestamp.md
-      - '1200: Format Datetime': the-i-beam-operator/format-datetime.md
-      - '1302: Set aplcore Parameters': the-i-beam-operator/set-aplcore-parameters.md
+      - '1159: Update Function Time and User Stamp': the-i-beam-operator/update-function-time-and-user-stamp.md
+      - '1200: Format Date-Time': the-i-beam-operator/format-datetime.md
+      - '1302: aplcore Parameters': the-i-beam-operator/aplcore-parameters.md
       - '1500: Hash Array': the-i-beam-operator/hash-array.md
       - '2000: Memory Manager Statistics': the-i-beam-operator/memory-manager-statistics.md
       - '2002: Specify Workspace Available': the-i-beam-operator/specify-workspace-available.md
@@ -353,17 +347,17 @@ nav:
       - '2101: Close .NET AppDomain': the-i-beam-operator/close-net-appdomain.md
       - '2250: Verify .NET Interface': the-i-beam-operator/verify-net-interface.md
       - '2400: Set Workspace Save Options': the-i-beam-operator/set-workspace-save-options.md
-      - '2401: Expose Root Properties, Events and Methods': the-i-beam-operator/expose-root-properties.md
+      - '2401: Expose Root Properties': the-i-beam-operator/expose-root-properties.md
       - '2501: Discard Thread on Exit': the-i-beam-operator/discard-thread-on-exit.md
       - '2502: Discard Parked Threads': the-i-beam-operator/discard-parked-threads.md
       - '2503: Mark Thread as Uninterruptible': the-i-beam-operator/mark-thread-as-uninterruptible.md
-      - '2520: Spawn .NET Thread': the-i-beam-operator/use-separate-thread-for-net.md
+      - '2520: Use Separate Thread for .NET': the-i-beam-operator/use-separate-thread-for-net.md
       - '2704: Continue Autosave': the-i-beam-operator/continue-autosave.md
       - '3002: Disable Component Checksum Validation': the-i-beam-operator/disable-component-checksum-validation.md
       - '3012: Enable Compression of Large Components': the-i-beam-operator/enable-compression-of-large-components.md
       - '3500: Send Text to Ride-embedded Browser': the-i-beam-operator/send-text-to-ride-embedded-browser.md
-      - '3501: Connected to Ride': the-i-beam-operator/connected-to-the-ride.md
-      - '3502: Manage Ride': the-i-beam-operator/manage-ride-connections.md
+      - '3501: Connected to Ride?': the-i-beam-operator/connected-to-ride.md
+      - '3502: Manage Ride Connections': the-i-beam-operator/manage-ride-connections.md
       - '3535: Scan For Deprecated Files': the-i-beam-operator/scan-for-deprecated-files.md
       - '4000: Fork New Task': the-i-beam-operator/fork-new-task.md
       - '4001: Change User': the-i-beam-operator/change-user.md
@@ -388,15 +382,14 @@ nav:
           - Introduction: system-functions/system-functions-categorised.md
           - System Settings:
               - Introduction: system-functions/system-settings.md
-              - State Settings:
-                  - '<code>⎕CT</code>: Comparison Tolerance': system-functions/ct.md
-                  - '<code>⎕DCT</code>: Decimal Comparison Tolerance': system-functions/dct.md
-                  - '<code>⎕DIV</code>: Division Method': system-functions/div.md
-                  - '<code>⎕FR</code>: Floating Point Representation': system-functions/fr.md
-                  - '<code>⎕IO</code>: Index Origin': system-functions/io.md
-                  - '<code>⎕ML</code>: Migration Level': system-functions/ml.md
-                  - '<code>⎕PP</code>: Print Precision': system-functions/pp.md
-                  - '<code>⎕RL</code>: Random Link': system-functions/rl.md
+              - '<code>⎕CT</code>: Comparison Tolerance': system-functions/ct.md
+              - '<code>⎕DCT</code>: Decimal Comparison Tolerance': system-functions/dct.md
+              - '<code>⎕DIV</code>: Division Method': system-functions/div.md
+              - '<code>⎕FR</code>: Floating Point Representation': system-functions/fr.md
+              - '<code>⎕IO</code>: Index Origin': system-functions/io.md
+              - '<code>⎕ML</code>: Migration Level': system-functions/ml.md
+              - '<code>⎕PP</code>: Print Precision': system-functions/pp.md
+              - '<code>⎕RL</code>: Random Link': system-functions/rl.md
           - Session Information and Management:
               - Introduction: system-functions/session-information-and-management.md
               - '<code>⎕AI</code>: Account Information': system-functions/ai.md
@@ -411,32 +404,30 @@ nav:
               - '<code>⎕TS</code>: Timestamp': system-functions/ts.md
           - System Constants:
               - Introduction: system-functions/constants.md
-              - Constants:
-                  - '<code>⎕A</code>: Alphabetic Characters': system-functions/a.md
-                  - '<code>⎕D</code>: Digits': system-functions/d.md
-                  - '<code>⎕NULL</code>: Null Item': system-functions/null.md
+              - '<code>⎕A</code>: Alphabetic Characters': system-functions/a.md
+              - '<code>⎕D</code>: Digits': system-functions/d.md
+              - '<code>⎕NULL</code>: Null Item': system-functions/null.md
           - Tools and Access to External Facilities:
               - Introduction: system-functions/tools-and-external-access.md
-              - Tools and Access to External Utilities:
-                  - '<code>⎕CMD</code>: Execute Windows Command': system-functions/execute-windows-command.md
-                  - '<code>⎕CMD</code>: Start Windows Auxiliary Processor': system-functions/start-windows-auxiliary-processor.md
-                  - '<code>⎕CSV</code>: Comma Separated Values': system-functions/csv.md
-                  - '<code>⎕DR</code>: Data Representation Monadic': system-functions/data-representation-monadic.md
-                  - '<code>⎕DR</code>: Data Representation Dyadic': system-functions/data-representation-dyadic.md
-                  - '<code>⎕FMT</code>: Format Monadic': system-functions/format-monadic.md
-                  - '<code>⎕FMT</code>: Format Dyadic': system-functions/format-dyadic.md
-                  - '<code>⎕JSON</code>: JSON Convert': system-functions/json.md
-                  - '<code>⎕MAP</code>: Map File': system-functions/map.md
-                  - '<code>⎕NA</code>: Name Association': system-functions/na.md
-                  - '<code>⎕R</code>: Replace': system-functions/r.md
-                  - '<code>⎕S</code>: Search': system-functions/s.md
-                  - '<code>⎕SH</code>: Execute UNIX Command': system-functions/execute-unix-command.md
-                  - '<code>⎕SH</code>: Start UNIX Auxiliary Processor': system-functions/start-unix-auxiliary-processor.md
-                  - '<code>⎕SHELL</code>: Execute external program': system-functions/shell.md
-                  - '<code>⎕UCS</code>: Unicode Convert': system-functions/ucs.md
-                  - '<code>⎕USING</code>: Using Microsoft Net Search Path': system-functions/using.md
-                  - '<code>⎕VFI</code>: Verify Fix Input': system-functions/vfi.md
-                  - '<code>⎕XML</code>: XML Convert': system-functions/xml.md
+              - '<code>⎕CMD</code>: Execute Windows Command': system-functions/execute-windows-command.md
+              - '<code>⎕CMD</code>: Start Windows Auxiliary Processor': system-functions/start-windows-auxiliary-processor.md
+              - '<code>⎕CSV</code>: Comma Separated Values': system-functions/csv.md
+              - '<code>⎕DR</code>: Data Representation Monadic': system-functions/data-representation-monadic.md
+              - '<code>⎕DR</code>: Data Representation Dyadic': system-functions/data-representation-dyadic.md
+              - '<code>⎕FMT</code>: Format Monadic': system-functions/format-monadic.md
+              - '<code>⎕FMT</code>: Format Dyadic': system-functions/format-dyadic.md
+              - '<code>⎕JSON</code>: JSON Convert': system-functions/json.md
+              - '<code>⎕MAP</code>: Map File': system-functions/map.md
+              - '<code>⎕NA</code>: Name Association': system-functions/na.md
+              - '<code>⎕R</code>: Replace': system-functions/r.md
+              - '<code>⎕S</code>: Search': system-functions/s.md
+              - '<code>⎕SH</code>: Execute UNIX Command': system-functions/execute-unix-command.md
+              - '<code>⎕SH</code>: Start UNIX Auxiliary Processor': system-functions/start-unix-auxiliary-processor.md
+              - '<code>⎕SHELL</code>: Execute external program': system-functions/shell.md
+              - '<code>⎕UCS</code>: Unicode Convert': system-functions/ucs.md
+              - '<code>⎕USING</code>: Using Microsoft Net Search Path': system-functions/using.md
+              - '<code>⎕VFI</code>: Verify Fix Input': system-functions/vfi.md
+              - '<code>⎕XML</code>: XML Convert': system-functions/xml.md
           - Manipulating Functions and Operators:
               - Introduction: system-functions/manipulating-functions-and-operators.md
               - '<code>⎕AT</code>: Attributes': system-functions/at.md
@@ -470,12 +461,11 @@ nav:
               - '<code>⎕THIS</code>: This Space': system-functions/this.md
           - Input and Output:
               - Introduction: system-functions/input-and-output.md
-              - Input/Output:
-                  - Character Input/Output: system-functions/character-input-output.md
-                  - Evaluated Input/Output: system-functions/evaluated-input-output.md
-                  - '<code>⎕ARBIN</code>: Arbitrary Input': system-functions/arbin.md
-                  - '<code>⎕ARBOUT</code>: Arbitrary Output': system-functions/arbout.md
-                  - '<code>⎕RTL</code>: Response Time Limit': system-functions/rtl.md
+              - Character Input/Output: system-functions/character-input-output.md
+              - Evaluated Input/Output: system-functions/evaluated-input-output.md
+              - '<code>⎕ARBIN</code>: Arbitrary Input': system-functions/arbin.md
+              - '<code>⎕ARBOUT</code>: Arbitrary Output': system-functions/arbout.md
+              - '<code>⎕RTL</code>: Response Time Limit': system-functions/rtl.md
           - Component Files:
               - Introduction: system-functions/component-files.md
               - '<code>⎕FAPPEND</code>: File Append Component': system-functions/fappend.md
@@ -554,28 +544,27 @@ nav:
               - '<code>⎕TRAP</code>: Trap Event': system-functions/trap.md
           - Stack and Workspace:
               - Introduction: system-functions/stack-and-workspace.md
-              - Stack and Workspace Information:
-                  - '<code>⎕LC</code>: Line Count': system-functions/lc.md
-                  - '<code>⎕LX</code>: Latent Expression': system-functions/lx.md
-                  - '<code>⎕NC</code>: Name Classification': system-functions/nc.md
-                  - '<code>⎕NL</code>: Name List': system-functions/nl.md
-                  - '<code>⎕NSI</code>: Namespace Indicator': system-functions/nsi.md
-                  - '<code>⎕RSI</code>: Space Indicator': system-functions/rsi.md
-                  - '<code>⎕SI</code>: State Indicator': system-functions/si.md
-                  - '<code>⎕SHADOW</code>: Shadow Name': system-functions/shadow.md
-                  - '<code>⎕SIZE</code>: Size of Object': system-functions/size.md
-                  - '<code>⎕STACK</code>: State Indicator Stack': system-functions/stack.md
-                  - '<code>⎕STATE</code>: State of Object': system-functions/state.md
-                  - '<code>⎕VGET</code>: Value Get': system-functions/vget.md
-                  - '<code>⎕VSET</code>: Value Set': system-functions/vset.md
-                  - '<code>⎕WA</code>: Workspace Available': system-functions/wa.md
-                  - '<code>⎕WSID</code>: Workspace Identification': system-functions/wsid.md
-                  - '<code>⎕XSI</code>: Extended State Indicator': system-functions/xsi.md
+              - '<code>⎕LC</code>: Line Count': system-functions/lc.md
+              - '<code>⎕LX</code>: Latent Expression': system-functions/lx.md
+              - '<code>⎕NC</code>: Name Classification': system-functions/nc.md
+              - '<code>⎕NL</code>: Name List': system-functions/nl.md
+              - '<code>⎕NSI</code>: Namespace Indicator': system-functions/nsi.md
+              - '<code>⎕RSI</code>: Space Indicator': system-functions/rsi.md
+              - '<code>⎕SI</code>: State Indicator': system-functions/si.md
+              - '<code>⎕SHADOW</code>: Shadow Name': system-functions/shadow.md
+              - '<code>⎕SIZE</code>: Size of Object': system-functions/size.md
+              - '<code>⎕STACK</code>: State Indicator Stack': system-functions/stack.md
+              - '<code>⎕STATE</code>: State of Object': system-functions/state.md
+              - '<code>⎕VGET</code>: Value Get': system-functions/vget.md
+              - '<code>⎕VSET</code>: Value Set': system-functions/vset.md
+              - '<code>⎕WA</code>: Workspace Available': system-functions/wa.md
+              - '<code>⎕WSID</code>: Workspace Identification': system-functions/wsid.md
+              - '<code>⎕XSI</code>: Extended State Indicator': system-functions/xsi.md
           - Shared Variables:
               - Introduction: system-functions/shared-variables.md
               - '<code>⎕SVC</code>: Query Access Control': system-functions/query-access-control.md
               - '<code>⎕SVC</code>: Set Access Control': system-functions/set-access-control.md
-              - Offer Shared Variable: system-functions/svo.md
+              - '<code>⎕SVO</code>: Offer Shared Variable': system-functions/svo.md
               - '<code>⎕SVO</code>: Shared Variable Offer': system-functions/shared-variable-offer.md
               - '<code>⎕SVO</code>: Query Degree of Coupling': system-functions/query-degree-of-coupling.md
               - '<code>⎕SVQ</code>: Shared Variable Query': system-functions/svq.md

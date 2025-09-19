@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Partition</span> <span class="command"></span></h1>
+<h1 class="heading"><span class="name">Partition</span> <span class="command">R←X⊆[K]Y</span></h1>
 
 !!! note "Classic Edition"
     The symbol `⊆` (Left Shoe Underbar) is not available in Classic Edition, and Partition is instead represented by `⎕U2286`.

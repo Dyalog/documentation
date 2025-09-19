@@ -18,6 +18,6 @@ For example, if we want to restrict the number of threads that can have sockets 
 [.]   :EndIf
     ∇
  
-    0 ⎕TPUT ⎕treq ⎕tnums     ⍝ retract socket "service"
+    0 ⎕TPUT ⎕TREQ ⎕TNUMS     ⍝ retract socket "service"
                                with 0 value.
 ```

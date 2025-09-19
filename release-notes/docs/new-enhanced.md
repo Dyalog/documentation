@@ -95,7 +95,7 @@ Records information in the log file set by `109⌶` about the specified deprecat
 - [`43⌶`](../../language-reference-guide/the-i-beam-operator/monadic-operator-generator/) – Monadic Operator Generator  
 Generates a monadic operator with specified functionality. The exact functionaity of the generated operator depend on the right argument. Current options are:  
     - `43⌶632` – Generics Operator<br />Generates a .NET-specific operator that can create concrete versions of generic classes and execute generic methods<br />This is likely to be superseded by a new language construct in Dyalog v21.0.
-- [`109⌶`](../../language-reference-guide/the-i-beam-operator/deprecated-feature-log-file/) – Deprecated Feature Log File  
+- [`109⌶`](../../language-reference-guide/the-i-beam-operator/log-file-for-deprecations/) – Deprecated Feature Log File  
 Manages the file used to log the use of deprecated features.
 - [`120⌶`](../../language-reference-guide/the-i-beam-operator/generate-uuid/) – Generate UUID  
 Generates a UUID (Universally Unique IDentifier) according to the RFC 9562 specification.

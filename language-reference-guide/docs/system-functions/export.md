@@ -44,7 +44,7 @@ When the path mechanism locates a referenced function (or operator) in the list 
 
 Warning: The left domain of `⎕EXPORT` may be extended in future to include extra types 2, 3,... (for example, to change the behaviour of the function).  This means that, while `⎕EXPORT` returns a Boolean result in the first version, this may not be the case in the future.  If you need a Boolean result, use `0≠` or an equivalent.
 ```apl
-   (0≠⎕EXPORT ⎕nl 3 4)⌿⎕nl 3 4  ⍝ list of exported
+   (0≠⎕EXPORT ⎕NL 3 4)⌿⎕NL 3 4  ⍝ list of exported
                                 ⍝ functions and ops.
 ```
 

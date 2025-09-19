@@ -419,6 +419,9 @@ def convert_examples(soup: BeautifulSoup) -> None:
     headers = soup.find_all(["h1", "h2", "h3", "h4", "h5", "h6"], class_="example")
     for header in headers:
         p_tag = soup.new_tag("p", **{"class": "example"})
+        # Preserve the ID if it exists
+        if "id" in header.attrs:
+            p_tag["id"] = header["id"]
         p_tag.string = header.string
         header.replace_with(p_tag)
 
@@ -580,7 +583,9 @@ def convert_to_html(
 
         # Add to TOC (except for top-level file articles since they're already in TOC)
         if not is_top_level:
-            toc += f'<li{front_matter}><a href="#{article_id}-header" class="toc"></a></li>\n'
+            # Use the YAML key text if available, otherwise empty
+            toc_text = keypath[-1] if keypath else ""
+            toc += f'<li{front_matter}><a href="#{article_id}-header" class="toc">{toc_text}</a></li>\n'
 
         # Process and add article content
         articles += f'<article id="{article_id}">\n'
@@ -788,11 +793,22 @@ def normalise_links(
             anchor = path_parts[1] if len(path_parts) > 1 else None
 
             if not path:
+                # This is an anchor-only link within the same document
+                # But skip TOC links which are handled elsewhere
+                if anchor and "toc" not in a_tag.get("class", []):
+                    parent_article = a_tag.find_parent("article")
+                    if parent_article and "id" in parent_article.attrs:
+                        article_id = parent_article["id"]
+                        new_href = f"#{article_id}-{anchor}"
+                        a_tag["href"] = new_href
                 continue
 
             if path.startswith("/"):
                 # Handle potential inter-document links
                 components = extract_components(path)
+                # Handle renamed documents
+                if components and components[0] == "net-framework-interface-guide":
+                    components[0] = "dotnet-framework-interface"
                 if components and components[0] in documents:
                     new_tag = soup.new_tag("i")
                     text_parts = [documents[components[0]]]
@@ -884,21 +900,34 @@ def toc_friendly_headings(soup: BeautifulSoup) -> None:
 
 def toplevel_docs(nav: List[Dict[str, str]]) -> Dict[str, str]:
     result = {}
-    for entry in nav:
-        for doc_name, include_path in entry.items():
-            if "!include" in include_path:
+    
+    def process_nav_value(doc_name, value):
+        """Process a nav value which could be a string or a list (section group)."""
+        if isinstance(value, str):
+            if "!include" in value:
                 # This is a directory include
-                path = include_path.split(" ")[1]
-                first_component = path.split("/")[1]
+                path = value.split(' ')[1]
+                first_component = path.split('/')[1]
                 result[first_component] = doc_name
             else:
                 # This is a direct file reference
-                path_parts = include_path.split("/")
+                path_parts = value.split('/')
                 # Use the filename without extension as the key
                 if len(path_parts) > 0:
                     filename = path_parts[-1]
                     file_base = os.path.splitext(filename)[0]
                     result[file_base] = doc_name
+        elif isinstance(value, list):
+            # This is a section group - process each item in the group
+            for item in value:
+                if isinstance(item, dict):
+                    for sub_name, sub_value in item.items():
+                        process_nav_value(sub_name, sub_value)
+    
+    for entry in nav:
+        for doc_name, value in entry.items():
+            process_nav_value(doc_name, value)
+    
     return result
 
 
@@ -1039,7 +1068,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--mkdocs-yml",
         type=str,
-        default="/app/documentation/mkdocs.yml",
+        default="../mkdocs.yml",
         help="Path to the toplevel mkdocs.yml file",
     )
     parser.add_argument(
@@ -1053,13 +1082,13 @@ if __name__ == "__main__":
     parser.add_argument(
         "--project-dir",
         type=str,
-        default="/app/mkdocs2pdf/project",
+        default="project",
         help="Name of output directory",
     )
     parser.add_argument(
         "--assets-dir",
         type=str,
-        default="/app/mkdocs2pdf/assets",
+        default="assets",
         help="Name of assets directory",
     )
     parser.add_argument("--verbose", action="store_true", help="Enable verbose output")

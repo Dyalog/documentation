@@ -9,7 +9,7 @@
 
 
 
-<h1 class="heading"><span class="name">Called Monadically</span> <span class="command">R←900⌶Y</span></h1>
+<h1 class="heading"><span class="name">Called Monadically?</span> <span class="command">R←900⌶Y</span></h1>
 
 
 

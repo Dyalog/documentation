@@ -224,6 +224,8 @@ def parse_mkdocs_yml(yml_file: str, remove: List[str]) -> dict:
     Read and parse the mkdocs.yml files. The monorepo plugin references
     the sub-document mkdocs.yml files, which we expand in place to produce
     the complete state.
+    
+    The remove list can contain section group names to exclude entire groups.
     """
 
     yaml = YAML()
@@ -231,9 +233,20 @@ def parse_mkdocs_yml(yml_file: str, remove: List[str]) -> dict:
         data = yaml.load(f)
 
     if remove:
-        data["nav"] = [
-            item for item in data["nav"] if not any(key in item for key in remove)
-        ]
+        # Filter out nav items that match the exclusion list
+        # This now handles both direct nav items and section groups
+        filtered_nav = []
+        for item in data["nav"]:
+            # Get the top-level key (which could be a section group name)
+            if isinstance(item, dict):
+                key = next(iter(item.keys()))
+                # Skip this entire item if its key is in the remove list
+                if key not in remove:
+                    filtered_nav.append(item)
+            else:
+                # Non-dict items (shouldn't happen in normal mkdocs.yml)
+                filtered_nav.append(item)
+        data["nav"] = filtered_nav
 
     def resolve_includes(data: dict, base_path: str) -> dict:
         if isinstance(data, dict):
@@ -758,6 +771,9 @@ def find_nav_files_and_dirs(
     """
     Extract both top-level directories (from !include directives) and standalone Markdown files
     directly listed in the nav section of the mkdocs.yml file.
+    
+    Handles both direct includes and section groups containing includes.
+    The remove list can contain section group names to exclude entire groups.
 
     Returns:
         Tuple[List[str], List[str]]: (included_dirs, standalone_files)
@@ -769,16 +785,28 @@ def find_nav_files_and_dirs(
     included_dirs = []
     standalone_files = []
 
+    def process_nav_value(value):
+        """Recursively process nav values to find !include directives."""
+        if isinstance(value, str):
+            if m := re.match(r'!include\s+([^"]+)', value):
+                included_dirs.append(m.group(1))  # Path from !include
+            elif value.endswith(".md") and not value.endswith("-print.md"):
+                standalone_files.append(
+                    os.path.join("docs", value)
+                )  # Direct .md file reference
+        elif isinstance(value, list):
+            # Section group - process each item in the list
+            for item in value:
+                if isinstance(item, dict):
+                    for _, subvalue in item.items():
+                        process_nav_value(subvalue)
+
     for d in data["nav"]:
-        key, value = next(iter(d.items()))
-        if key not in remove:
-            if isinstance(value, str):
-                if m := re.match(r'!include\s+([^"]+)', value):
-                    included_dirs.append(m.group(1))  # Path from !include
-                elif value.endswith(".md") and not value.endswith("-print.md"):
-                    standalone_files.append(
-                        os.path.join("docs", value)
-                    )  # Direct .md file reference
+        if isinstance(d, dict):
+            key, value = next(iter(d.items()))
+            # Skip this entire nav item (including section groups) if key is in remove list
+            if key not in remove:
+                process_nav_value(value)
 
     return included_dirs, standalone_files
 
@@ -1151,18 +1179,31 @@ def add_langref_disambiguation_pages(root: Node, project: str) -> None:
     """
     print("Post-processing TOC to add Language Reference disambiguation pages...")
 
-    # First find the "Language Reference" node
+    # First find the "Dyalog APL Language" node which might be under "Core Reference" section group
     lang_ref_node = None
+    
+    # Check direct children first
     for child in root.children:
-        if child.name == "Language Reference":
+        if child.name == "Dyalog APL Language":
             lang_ref_node = child
             break
+    
+    # If not found, check under section groups
+    if not lang_ref_node:
+        for child in root.children:
+            if child.name == "Core Reference" and child.children:
+                for subchild in child.children:
+                    if subchild.name == "Dyalog APL Language":
+                        lang_ref_node = subchild
+                        break
+                if lang_ref_node:
+                    break
 
     if not lang_ref_node:
-        print("  Warning: Language Reference node not found in TOC")
+        print("  Warning: Dyalog APL Language node not found in TOC")
         return
 
-    # Then find the "Symbols" node under "Language Reference"
+    # Then find the "Symbols" node under "Dyalog APL Language"
     symbols_node = None
     for child in lang_ref_node.children:
         if child.name == "Symbols":

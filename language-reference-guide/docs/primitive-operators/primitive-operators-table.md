@@ -21,7 +21,7 @@
 |`⌸`  |Quad Equal     |[Key](key.md)                                                    |`R←{X}f⌸Y`          |
 |`∘.` |&nbsp;         |[Outer Product](outer-product.md)                                |`{R}←X∘.gY`         |
 |`⍥`  |Circle Dieresis|[Over](over.md)                                                  |`{R}←{X}f⍥gY`       |
-|`⍣`  |Star Diaeresis |[Power Operator](power-operator.md)                              |`{R}←{X}(f⍣g)Y`     |
+|`⍣`  |Star Diaeresis |[Power](power.md)                                                |`{R}←{X}(f⍣g)Y`     |
 |`⍤`  |Jot Diaeresis  |[Rank](rank.md)                                                  |`R←{X}(f⍤B)Y`       |
 |`⌿`  |Slash Bar      |[Reduce First N Wise](reduce-first-n-wise.md)                    |`R←Xf⌿[K]Y`         |
 |`⌿`  |Slash Bar      |[Reduce First](reduce-first.md)                                  |`R←f⌿Y`             |

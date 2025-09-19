@@ -46,9 +46,9 @@ Structural functions generally do NOT change the type, for example:
       x←1.1 2.2 3.3
       
       ⎕FR←645
-      ⎕dr x
+      ⎕DR x
 1287
-      ⎕dr 2↑x
+      ⎕DR 2↑x
 1287
 ```
 

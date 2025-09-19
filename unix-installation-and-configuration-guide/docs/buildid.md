@@ -28,10 +28,10 @@ $ ./BuildID magic
 
 In APL:
 ```apl
-      +2 ⎕nq '.' 'GetbuildID'
+      +2 ⎕NQ '.' 'GetbuildID'
 70a3446e
       magicfile←'/opt/mdyalog/12.1/32/classic/p6/magic'
-      +2 ⎕nq '.' 'GetBuildID' magicfile
+      +2 ⎕NQ '.' 'GetBuildID' magicfile
 0a744663
       )sh
 $ echo $PPID

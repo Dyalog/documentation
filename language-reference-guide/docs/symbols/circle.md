@@ -11,7 +11,7 @@ Monadic Circle means
 0 3.14159 6.28319
 ```
 Dyadic Circle means
-[Circular Function (Trig)](../primitive-functions/circular.md)
+[Circular Functions](../primitive-functions/circular-functions.md)
 ```apl
           Note: Angles are in radians 
                 radians ← ○ degrees ÷ 180
