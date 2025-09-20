@@ -11,15 +11,9 @@ If you discover an error on this site or would like to request an enhancement, [
 
 Alternatively, if you have a GitHub account, you can click the appropriate button below. We also welcome [direct content contributions](https://github.com/Dyalog/documentation/blob/main/CONTRIBUTE.md).
 
-<style>
-.md-typeset .md-button.buttonsmalltext small {
-    color: var(--dyalog-body-text-color);
-}
-</style>
-
 <div class="grid cards" markdown>
-- [<img alt="" height="20" src="/img/icon-orange_reference-guide.svg"> Content error<br /><small>For example: typos, broken links, inaccurate information, example doesn't work, images are too small</small>](https://github.com/Dyalog/documentation/issues/new?assignees=FionaDyalog&labels=for-triage&template=content_error.md&title=){ .md-button .buttonsmalltext}
-- [<img alt="" height="20" src="/img/icon-orange_reference-guide.svg"> Technical error<br /><small>For example, content not wrapping correctly, APL font not displaying, images failing with screen reader</small>](https://github.com/Dyalog/documentation/issues/new?assignees=FionaDyalog&labels=for-triage&template=technical_error.md&title=){ .md-button .buttonsmalltext}
-- [<img alt="" height="20" src="/img/icon-orange_reference-guide.svg"> Content enhancement<br /><small>For example: additional examples for a primitive function, more screenshots of a process</small>](https://github.com/Dyalog/documentation/issues/new?assignees=FionaDyalog&labels=for-triage&template=content_enhancement.md&title=){ .md-button .buttonsmalltext}
-- [<img alt="" height="20" src="/img/icon-orange_reference-guide.svg"> Technical enhancement<br /><small>For example: add a "dark mode" option, enhance search features, add ability to "bookmark" favorites</small>](https://github.com/Dyalog/documentation/issues/new?assignees=FionaDyalog&labels=for-triage&template=technical_enhancement.md&title=){ .md-button .buttonsmalltext}
+- [<h3><img alt="" height="20" src="/img/icon-orange_reference-guide.svg"> Content error</h3><p>For example: typos, broken links, inaccurate information, example doesn't work, images are too small</p>](https://github.com/Dyalog/documentation/issues/new?assignees=FionaDyalog&labels=for-triage&template=content_error.md&title=){ .md-button .button-small-text }
+- [<h3><img alt="" height="20" src="/img/icon-orange_reference-guide.svg"> Technical error</h3><p>For example, content not wrapping correctly, APL font not displaying, images failing with screen reader</p>](https://github.com/Dyalog/documentation/issues/new?assignees=FionaDyalog&labels=for-triage&template=technical_error.md&title=){ .md-button .button-small-text }
+- [<h3><img alt="" height="20" src="/img/icon-orange_reference-guide.svg"> Content enhancement</h3><p>For example: additional examples for a primitive function, more screenshots of a process</p>](https://github.com/Dyalog/documentation/issues/new?assignees=FionaDyalog&labels=for-triage&template=content_enhancement.md&title=){ .md-button .button-small-text }
+- [<h3><img alt="" height="20" src="/img/icon-orange_reference-guide.svg"> Technical enhancement</h3><p>For example: add a "dark mode" option, enhance search features, add ability to "bookmark" favorites</p>](https://github.com/Dyalog/documentation/issues/new?assignees=FionaDyalog&labels=for-triage&template=technical_enhancement.md&title=){ .md-button .button-small-text }
 </div>
