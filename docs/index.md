@@ -1,6 +1,6 @@
 # Dyalog v{{ version_majmin }}
 
-Welcome to the documentaiton for Dyalog v20.0!
+Welcome to the documentation for Dyalog v20.0!
 
 This documentation site is a new project, and we are continuing to add documents from the full documentation set (which is available at the [Dyalog v20.0 Documentation Centre](https://www.dyalog.com/documentation_200.htm)).
 
