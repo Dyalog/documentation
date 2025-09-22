@@ -1,6 +1,6 @@
 site_name: Documentation
 repo_url: https://github.com/dyalog/documentation
-copyright: Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-$CURRENT_YEAR <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> ($BUILD_DATE $GIT_INFO).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence. 
+copyright: Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-$CURRENT_YEAR <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (<a href="#" class="copy" onclick="navigator.clipboard.writeText(innerText);return false" title="Click to copy!">$BUILD_DATE $GIT_INFO</a>).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
 
 
 theme:
@@ -68,7 +68,9 @@ markdown_extensions:
       title: On this page
 
 nav:
-  - Conventions: conventions.md
+  - 'Release Notes':
+        - 'v20.0 Release Notes': "!include ./release-notes/mkdocs.yml"
+        - 'Earlier Release Notes': "!include ./earlier-release-notes/mkdocs.yml"
   - 'Core Reference':
         - 'Dyalog APL Language': "!include ./language-reference-guide/mkdocs.yml"
         - 'Programming': "!include ./programming-reference-guide/mkdocs.yml"
@@ -81,9 +83,7 @@ nav:
   - 'Dyalog for UNIX': 
         - 'Installation/Configuration': "!include ./unix-installation-and-configuration-guide/mkdocs.yml"       
         - 'User Interface': "!include ./unix-user-guide/mkdocs.yml"
-  - 'Release Notes':
-        - 'v20.0 Release Notes': "!include ./release-notes/mkdocs.yml"
-        - 'Earlier Release Notes': "!include ./earlier-release-notes/mkdocs.yml"
   - 'About':
+        - 'Conventions': conventions.md
         - 'Third-party Licences': licences-overview.md
         - 'Trademarks': trademarks.md

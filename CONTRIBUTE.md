@@ -1,7 +1,7 @@
 # Contribution process
 
 The purpose of this document is to outline how documentation authors should contribute material to the Dyalog documentation.
-When working with the Dyalog documentation, we follow common `git` workflows, preferring to think about treating [documentation as code](https://www.writethedocs.org/guide/docs-as-code/).
+When working with the Dyalog documentation, we follow common `git` workflows, preferring to think about treating [documentation as code](https://www.writethedocs.org/guide/docs-as-code/). Please consult the [Dyalog Documentation Guidelines](https://dyalog.github.io/documentation-guidelines) for the style and language conventions we adopt.
 
 > **Note:** In order to be a Dyalog documentation contributor, you need basic `git` and GitHub proficiency and a GitHub account. You need to be fluent in Markdown and at least somewhat familiar with YAML.
 
