@@ -92,6 +92,33 @@ th, td {
     font-size: 0.8rem;
 }
 
+/* Grid cards used on the home page */
+.md-typeset .grid.cards .md-button {
+    color: var(--dyalog-body-text-color);
+    font-weight: normal;
+}
+.md-typeset .grid.cards .md-button h2,
+.md-typeset .grid.cards .md-button h3,
+.md-typeset .grid.cards .md-button h4
+{
+    margin: 0;
+    font-weight: bold;
+    color: var(--md-primary-fg-color);
+    font-size: 1em;
+}
+.md-typeset .grid.cards .md-button:hover h2,
+.md-typeset .grid.cards .md-button:hover h3,
+.md-typeset .grid.cards .md-button:hover h4
+{
+    color: var(--md-default-bg-color);
+}
+.md-typeset .grid.cards .md-button:hover {
+    color: var(--md-accent-bg-color--light);
+}
+.md-typeset .grid.cards .md-button:hover img {
+    filter: saturate(0%) brightness(200%) contrast(100%);   /* Make CSS icons white */
+}
+
 /* Style the heading container for the Language Reference */
 .heading {
     display: flex;
