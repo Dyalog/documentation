@@ -66,6 +66,16 @@ code, .command, .Dyalog {
     vertical-align: text-bottom;
 }
 
+.copy::after {
+    content: "⿻";
+    color: var(--md-default-bg-color);
+    cursor: grab;
+}
+.copy:active::after {
+    content: "⿴";
+    cursor: grabbing;
+}
+
 @media screen and (max-width: 76.1875em) {
     .md-logo>img {
         width: 10rem !important;
@@ -93,7 +103,13 @@ th, td {
 }
 
 /* Grid cards used on the home page */
+.md-typeset .grid.cards > ul > li {
+    padding: 0;
+}
 .md-typeset .grid.cards .md-button {
+    height: 100%;
+    padding: 1.2em;
+    border: none;
     color: var(--dyalog-body-text-color);
     font-weight: normal;
 }
