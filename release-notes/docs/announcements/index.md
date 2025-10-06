@@ -113,7 +113,7 @@ The next version of Dyalog (Dyalog v21.0) is expected to be supported on the fol
     - AIX 7.3 SP3 TL1 onwards with a POWER9 chip or higher<br />NOTE: Minimum chip level might be revised upwards to POWER10
 - Linux:
     - x86_64: Built on Ubuntu 22.04
-    - ARM64: Built on Debian GNU/Linux 12
+    - ARM64: Built on Debian GNU/Linux 13
 - macOS (ARM-based, Apple M1 or later):
     - macOS 26 (Tahoe) onwards
 - Microsoft Windows:
