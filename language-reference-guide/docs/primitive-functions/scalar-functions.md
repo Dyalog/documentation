@@ -23,7 +23,7 @@ Table: Scalar Primitive Functions {: #ScalarPrimitiveFunctions }
 |`^`|&nbsp;|[AND](lowest-common-multiple-and.md)|
 |`∨`|&nbsp;|[OR](greatest-common-divisor-or.md)|
 |`⍲`|&nbsp;|[NAND](nand.md)|
-|`⍱`|&nbsp;|[NOR(nor.md)|
+|`⍱`|&nbsp;|[NOR](nor.md)|
 |`<`|&nbsp;|[Less Than](less-than.md)|
 |`≤`|&nbsp;|[Less Than Or Equal To](less-than-or-equal-to.md)|
 |`=`|&nbsp;|[Equal To](equal-to.md)|
