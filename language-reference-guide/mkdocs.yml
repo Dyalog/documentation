@@ -129,8 +129,9 @@ nav:
           - Pick: primitive-functions/pick.md
           - Take: primitive-functions/take.md
           - Take with Axes: primitive-functions/take-with-axes.md
-          - Drop: primitive-functions/drop.md
-          - Drop with Axes: primitive-functions/drop-with-axes.md
+          - Drop:
+              - Drop: primitive-functions/drop/index.md
+              - Drop with Axes: primitive-functions/drop/drop-with-axes.md
           - Replicate: primitive-functions/replicate.md
           - Expand: primitive-functions/expand.md
           - Without: primitive-functions/without.md
@@ -178,8 +179,9 @@ nav:
           - Depth: primitive-functions/depth.md
           - Direction: primitive-functions/direction.md
           - Divide: primitive-functions/divide.md
-          - Drop: primitive-functions/drop.md
-          - Drop with Axes: primitive-functions/drop-with-axes.md
+          - Drop:
+              - Drop: primitive-functions/drop/index.md
+              - Drop with Axes: primitive-functions/drop-with-axes.md
           - Dyadic Grade Down: primitive-functions/dyadic-grade-down.md
           - Dyadic Grade Up: primitive-functions/dyadic-grade-up.md
           - Dyadic Transpose: primitive-functions/dyadic-transpose.md
