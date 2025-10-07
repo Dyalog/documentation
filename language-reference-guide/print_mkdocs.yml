@@ -67,13 +67,15 @@ nav:
           - Depth: primitive-functions/depth.md
           - Direction: primitive-functions/direction.md
           - Divide: primitive-functions/divide.md
-          - Drop: primitive-functions/drop.md
-          - Drop with Axes: primitive-functions/drop-with-axes.md
+          - Drop:
+              - Drop: primitive-functions/drop/index.md
+              - Drop with Axes: primitive-functions/drop/drop-with-axes.md
           - Dyadic Grade Down: primitive-functions/dyadic-grade-down.md
           - Dyadic Grade Up: primitive-functions/dyadic-grade-up.md
           - Dyadic Transpose: primitive-functions/dyadic-transpose.md
-          - Enclose: primitive-functions/enclose.md
-          - Enclose with Axes: primitive-functions/enclose-with-axes.md
+          - Enclose:
+              - Enclose: primitive-functions/enclose/index.md
+              - Enclose with Axes: primitive-functions/enclose/enclose-with-axes.md
           - Encode: primitive-functions/encode.md
           - Enlist: primitive-functions/enlist.md
           - Equal To: primitive-functions/equal-to.md
@@ -91,8 +93,9 @@ nav:
           - Grade Up: primitive-functions/grade-up.md
           - Greater Than: primitive-functions/greater-than.md
           - Greater Than Or Equal To: primitive-functions/greater-than-or-equal-to.md
-          - Index: primitive-functions/index-function.md
-          - Index with Axes: primitive-functions/index-with-axes.md
+          - Index:
+              - Index: primitive-functions/index-function/index.md
+              - Index with Axes: primitive-functions/index-function/index-with-axes.md
           - Index Generator: primitive-functions/index-generator.md
           - Index Of: primitive-functions/index-of.md
           - Indexing: primitive-functions/indexing.md
@@ -128,8 +131,9 @@ nav:
           - Pick: primitive-functions/pick.md
           - Plus: primitive-functions/plus.md
           - Power: primitive-functions/power.md
-          - Ravel: primitive-functions/ravel.md
-          - Ravel with Axes: primitive-functions/ravel-with-axes.md
+          - Ravel:
+              - Ravel: primitive-functions/ravel/index.md
+              - Ravel with Axes: primitive-functions/ravel/ravel-with-axes.md
           - Reciprocal: primitive-functions/reciprocal.md
           - Replicate: primitive-functions/replicate.md
           - Replicate First: primitive-functions/replicate-first.md
@@ -145,8 +149,9 @@ nav:
           - Shape: primitive-functions/shape.md
           - Split: primitive-functions/split.md
           - Table: primitive-functions/table.md
-          - Take: primitive-functions/take.md
-          - Take with Axes: primitive-functions/take-with-axes.md
+          - Take:
+              - Take: primitive-functions/take/index.md
+              - Take with Axes: primitive-functions/take/take-with-axes.md
           - Tally: primitive-functions/tally.md
           - Times: primitive-functions/times.md
           - Transpose: primitive-functions/transpose.md

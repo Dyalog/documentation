@@ -20,7 +20,7 @@ Monadic Comma means
 1 2 3 4
 5 6 7 8
 ```
-[Ravel with Axes](../primitive-functions/ravel-with-axes.md)
+[Ravel with Axes](../primitive-functions/ravel/ravel-with-axes.md)
 ```apl
       ,[1.5]'ABC'
 A
