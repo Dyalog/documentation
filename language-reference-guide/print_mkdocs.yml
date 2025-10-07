@@ -52,9 +52,10 @@ nav:
       - Notes: primitive-functions/notes.md
       - Functions (A-Z):
           - Abort: primitive-functions/abort.md
-          - Assignment: primitive-functions/assignment.md
-          - Assignment Indexed: primitive-functions/assignment-indexed.md
-          - Assignment Selective: primitive-functions/assignment-selective.md
+          - Assignment:
+              - Assignment: primitive-functions/assignment/index.md
+              - Assignment Indexed: primitive-functions/assignment/assignment-indexed.md
+              - Assignment Selective: primitive-functions/assignment/assignment-selective.md
           - Binomial: primitive-functions/binomial.md
           - Branch: primitive-functions/branch.md
           - Catenate Laminate: primitive-functions/catenate-laminate.md

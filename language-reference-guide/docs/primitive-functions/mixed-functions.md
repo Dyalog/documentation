@@ -96,7 +96,7 @@ Table: Special Syntax {: #Special }
 |------|-------------------|------------------------------------------------|
 |`→`   |[Abort](abort.md)  |&nbsp;                                          |
 |`→`   |[Branch](branch.md)|&nbsp;                                          |
-|`←`   |&nbsp;             |[Assignment](assignment.md)                     |
-|`[I]←`|&nbsp;             |[Assignment(Indexed)](assignment-indexed.md)    |
-|`(I)←`|&nbsp;             |[Assignment(Selective)](assignment-selective.md)|
+|`←`   |&nbsp;             |[Assignment](assignment/index.md)                     |
+|`[I]←`|&nbsp;             |[Assignment(Indexed)](assignment/assignment-indexed.md)    |
+|`(I)←`|&nbsp;             |[Assignment(Selective)](assignment/assignment-selective.md)|
 |`[]`  |&nbsp;             |[Indexing](indexing.md)                         |
