@@ -62,3 +62,7 @@ NAMES
 ```
 
 `⎕IO` is an implicit argument of an axis specification.
+
+## Migration Level
+
+`⎕ML` determines the degree of migration of the Dyalog APL language towards IBM's APL2. Unless otherwise stated, the manual assumes `⎕ML` has a value of 1.
