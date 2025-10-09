@@ -12,7 +12,7 @@ The axis specification is optional. If present, `K` must identify an axis of `Y`
 
 `X` can be thought of as the width of a "window" which moves along vectors drawn from the `K`th axis of `Y`.
 
-If `X` is zero, the result is a `(⍴Y)+(-⍴⍴Y)↑1` array of identity elements for the function `f`. See [Identity Elements](reduce.md/#IdentityElements).
+If `X` is zero, the result is a `(⍴Y)+(-⍴⍴Y)↑1` array of identity elements for the function `f`. See [Identity Elements](index.md/#IdentityElements).
 
 If `X` is negative, each sub-vector is reversed before being reduced.
 

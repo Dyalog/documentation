@@ -52,28 +52,31 @@ nav:
       - Notes: primitive-functions/notes.md
       - Functions (A-Z):
           - Abort: primitive-functions/abort.md
-          - Assignment: primitive-functions/assignment.md
-          - Assignment Indexed: primitive-functions/assignment-indexed.md
-          - Assignment Selective: primitive-functions/assignment-selective.md
+          - Assignment:
+              - Assignment: primitive-functions/assignment/index.md
+              - Assignment Indexed: primitive-functions/assignment/assignment-indexed.md
+              - Assignment Selective: primitive-functions/assignment/assignment-selective.md
           - Binomial: primitive-functions/binomial.md
           - Branch: primitive-functions/branch.md
           - Catenate Laminate: primitive-functions/catenate-laminate.md
           - Catenate First: primitive-functions/catenate-first.md
           - Ceiling: primitive-functions/ceiling.md
-          - Circular Functiona: primitive-functions/circular-functions.md
+          - Circular Functions: primitive-functions/circular-functions.md
           - Conjugate: primitive-functions/conjugate.md
           - Deal: primitive-functions/deal.md
           - Decode: primitive-functions/decode.md
           - Depth: primitive-functions/depth.md
           - Direction: primitive-functions/direction.md
           - Divide: primitive-functions/divide.md
-          - Drop: primitive-functions/drop.md
-          - Drop with Axes: primitive-functions/drop-with-axes.md
+          - Drop:
+              - Drop: primitive-functions/drop/index.md
+              - Drop with Axes: primitive-functions/drop/drop-with-axes.md
           - Dyadic Grade Down: primitive-functions/dyadic-grade-down.md
           - Dyadic Grade Up: primitive-functions/dyadic-grade-up.md
           - Dyadic Transpose: primitive-functions/dyadic-transpose.md
-          - Enclose: primitive-functions/enclose.md
-          - Enclose with Axes: primitive-functions/enclose-with-axes.md
+          - Enclose:
+              - Enclose: primitive-functions/enclose/index.md
+              - Enclose with Axes: primitive-functions/enclose/enclose-with-axes.md
           - Encode: primitive-functions/encode.md
           - Enlist: primitive-functions/enlist.md
           - Equal To: primitive-functions/equal-to.md
@@ -91,8 +94,9 @@ nav:
           - Grade Up: primitive-functions/grade-up.md
           - Greater Than: primitive-functions/greater-than.md
           - Greater Than Or Equal To: primitive-functions/greater-than-or-equal-to.md
-          - Index: primitive-functions/index-function.md
-          - Index with Axes: primitive-functions/index-with-axes.md
+          - Index:
+              - Index: primitive-functions/index-function/index.md
+              - Index with Axes: primitive-functions/index-function/index-with-axes.md
           - Index Generator: primitive-functions/index-generator.md
           - Index Of: primitive-functions/index-of.md
           - Indexing: primitive-functions/indexing.md
@@ -128,8 +132,9 @@ nav:
           - Pick: primitive-functions/pick.md
           - Plus: primitive-functions/plus.md
           - Power: primitive-functions/power.md
-          - Ravel: primitive-functions/ravel.md
-          - Ravel with Axes: primitive-functions/ravel-with-axes.md
+          - Ravel:
+              - Ravel: primitive-functions/ravel/index.md
+              - Ravel with Axes: primitive-functions/ravel/ravel-with-axes.md
           - Reciprocal: primitive-functions/reciprocal.md
           - Replicate: primitive-functions/replicate.md
           - Replicate First: primitive-functions/replicate-first.md
@@ -145,8 +150,9 @@ nav:
           - Shape: primitive-functions/shape.md
           - Split: primitive-functions/split.md
           - Table: primitive-functions/table.md
-          - Take: primitive-functions/take.md
-          - Take with Axes: primitive-functions/take-with-axes.md
+          - Take:
+              - Take: primitive-functions/take/index.md
+              - Take with Axes: primitive-functions/take/take-with-axes.md
           - Tally: primitive-functions/tally.md
           - Times: primitive-functions/times.md
           - Transpose: primitive-functions/transpose.md
@@ -173,8 +179,9 @@ nav:
           - Bind: primitive-operators/bind.md
           - Commute: primitive-operators/commute.md
           - Constant: primitive-operators/constant.md
-          - Each with Monadic Operand: primitive-operators/each-with-monadic-operand.md
-          - Each with Dyadic Operand: primitive-operators/each-with-dyadic-operand.md
+          - Each:
+              - Each with Monadic Operand: primitive-operators/each/each-with-monadic-operand.md
+              - Each with Dyadic Operand: primitive-operators/each/each-with-dyadic-operand.md
           - I-Beam: primitive-operators/i-beam-short.md
           - Inner Product: primitive-operators/inner-product.md
           - Key: primitive-operators/key.md
@@ -182,10 +189,12 @@ nav:
           - Over: primitive-operators/over.md
           - Power: primitive-operators/power.md
           - Rank: primitive-operators/rank.md
-          - Reduce: primitive-operators/reduce.md
-          - Reduce First: primitive-operators/reduce-first.md
-          - Reduce N Wise: primitive-operators/reduce-n-wise.md
-          - Reduce First N Wise: primitive-operators/reduce-first-n-wise.md
+          - Reduce:
+              - Reduce: primitive-operators/reduce/index.md
+              - Reduce N Wise: primitive-operators/reduce/reduce-n-wise.md
+          - Reduce First:
+              - Reduce First: primitive-operators/reduce-first/index.md
+              - Reduce First N Wise: primitive-operators/reduce-first/reduce-first-n-wise.md
           - Scan: primitive-operators/scan.md
           - Scan First: primitive-operators/scan-first.md
           - Spawn: primitive-operators/spawn.md

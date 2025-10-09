@@ -4,7 +4,7 @@ Controls which deprecated features are logged when logging is enabled. For an ov
 
 `Y` is a character vector, or a vector of character vectors, each containing the name of a deprecated feature, or one of the names defined in the table below. The names are release-dependent; for a list of valid names see the [Release Notes](../../../release-notes/announcements/deprecated-functionality).
 
-Subsequent uses of the selected deprecated features will be logged, provided that [`109⌶`](deprecated-feature-log-file.md) has been called to set the name of the log file.
+Subsequent uses of the selected deprecated features will be logged, provided that [`109⌶`](log-file-for-deprecations.md) has been called to set the name of the log file.
 
 If `13⌶` is called again, the list of features that are logged is replaced.
 
@@ -18,7 +18,7 @@ The result `R` is a vector of zero or more names, as described in the table belo
 |`'Enabled'`    |List all features for which logging is enabled |_                                                      _|
 |`'List'`       |List names of all possible features            |Names of all deprecated features (non-shy)              |
 
-Before any logging information is created, the log file must also be configured using [`109⌶`](deprecated-feature-log-file.md). Without selecting a log file, all logging is silently discarded.
+Before any logging information is created, the log file must also be configured using [`109⌶`](log-file-for-deprecations.md). Without selecting a log file, all logging is silently discarded.
 
 Each log entry is a complete JSON5 object definition that includes the following items:
 
@@ -45,4 +45,4 @@ Each log entry is a complete JSON5 object definition that includes the following
  This  That  TheOther
 ```
 
-See also [`109⌶` – Log File for Deprecations](deprecated-feature-log-file.md).
+See also [`109⌶` – Log File for Deprecations](log-file-for-deprecations.md).

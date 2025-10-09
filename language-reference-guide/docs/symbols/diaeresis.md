@@ -7,7 +7,7 @@ search:
 Diaeresis is a monadic operator with an ambivalent operand
 
 Operator Diaeresis means
-[Each (with monadic operand)](../primitive-operators/each-with-monadic-operand.md) or [Each (with dyadic operand)](../primitive-operators/each-with-dyadic-operand.md)
+[Each (with monadic operand)](../primitive-operators/each/each-with-monadic-operand.md) or [Each (with dyadic operand)](../primitive-operators/each/each-with-dyadic-operand.md)
 ```apl
       ⊃¨ 1 2 3 'ABC' (9 8 7)
 1 2 3 A 9

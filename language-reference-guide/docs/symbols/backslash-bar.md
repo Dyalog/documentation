@@ -10,7 +10,7 @@ search:
 Monadic Backslash Bar is not defined
 
 Dyadic Backslash Bar means
-[Expand  First](../primitive-functions/expand.md)
+[Expand First](../primitive-functions/expand.md)
 ```apl
 
       mat

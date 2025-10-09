@@ -24,7 +24,7 @@ Monadic Down Arrow means
 ```
 
 Dyadic Down Arrow means
-[Drop](../primitive-functions/drop.md)
+[Drop](../primitive-functions/drop/index.md)
 ```apl
       4 ↓ 'Pineapple'
 apple

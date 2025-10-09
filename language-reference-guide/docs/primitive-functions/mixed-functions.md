@@ -35,14 +35,14 @@ Table: Structural Primitive Functions {: #Structural }
 |Symbol|Monadic                                      |Dyadic                                              |
 |------|---------------------------------------------|----------------------------------------------------|
 |`⍴`   |$                                            |[Reshape](reshape.md)                               |
-|`,`   |[Ravel ](ravel.md) `[]`                      |[Catenate/Laminate](catenate-laminate.md) `[]`      |
+|`,`   |[Ravel ](ravel/index.md) `[]`                      |[Catenate/Laminate](catenate-laminate.md) `[]`      |
 |`⍪`   |[Table](table.md)                            |[Catenate First / Laminate ](catenate-first.md) `[]`|
 |`⌽`   |[Reverse ](reverse.md) `[]`                  |[Rotate ](rotate.md) `[]`                           |
 |`⊖`   |[Reverse First ](reverse-first.md) `[]`      |[Rotate First ](rotate-first.md) `[]`               |
 |`⍉`   |[Transpose](transpose.md)            |[Dyadic Transpose](dyadic-transpose.md)                    |
 |`↑`   |[Mix](mix.md) / [First ](first.md) `[]`|$                                                   |
 |`↓`   |[Split ](split.md) `[]`                      |$                                                   |
-|`⊂`   |[Enclose ](enclose.md) `[]`                  |[Partitioned Enclose ](partitioned-enclose.md) `[]` |
+|`⊂`   |[Enclose ](enclose/index.md) `[]`                  |[Partitioned Enclose ](partitioned-enclose.md) `[]` |
 |`⊆`   |[Nest](nest.md)                              |[Partition ](partition.md) `[]`                     |
 |`∊`   |[Enlist](enlist.md) (See [Type](type.md) )   |$                                                   |
 
@@ -51,8 +51,8 @@ Table: Selection Primitive Functions {: #Selection }
 |Symbol|Monadic                                 |Dyadic                                     |
 |------|----------------------------------------|-------------------------------------------|
 |`⊃`   |[First ](first.md) / [Mix](mix.md)|[Pick](pick.md)                            |
-|`↑`   |$                                       |[Take ](take.md) `[]`                      |
-|`↓`   |$                                       |[Drop ](drop.md) `[]`                      |
+|`↑`   |$                                       |[Take ](take/index.md) `[]`                      |
+|`↓`   |$                                       |[Drop ](drop/index.md) `[]`                      |
 |`/`   |&nbsp;                                  |[Replicate ](replicate.md) `[]`            |
 |`⌿`   |&nbsp;                                  |[Replicate First ](replicate-first.md) `[]`|
 |`\`   |&nbsp;                                  |[Expand ](expand.md) `[]`                  |
@@ -62,7 +62,7 @@ Table: Selection Primitive Functions {: #Selection }
 |`∪`   |[Unique](unique.md)                     |[Union](union.md)                          |
 |`⊣`   |[Same](same.md)                         |[Left](left.md)                            |
 |`⊢`   |[Same](same.md)                         |[Right](right.md)                          |
-|`⌷`   |[Materialise](materialise.md)           |[Index](index-function.md)                          |
+|`⌷`   |[Materialise](materialise.md)           |[Index](index-function/index.md)                          |
 |`≠`   |[Unique Mask](unique-mask.md)           |&nbsp;                                     |
 
 Table: Selector Primitive Functions {: #Selector }
@@ -96,7 +96,7 @@ Table: Special Syntax {: #Special }
 |------|-------------------|------------------------------------------------|
 |`→`   |[Abort](abort.md)  |&nbsp;                                          |
 |`→`   |[Branch](branch.md)|&nbsp;                                          |
-|`←`   |&nbsp;             |[Assignment](assignment.md)                     |
-|`[I]←`|&nbsp;             |[Assignment(Indexed)](assignment-indexed.md)    |
-|`(I)←`|&nbsp;             |[Assignment(Selective)](assignment-selective.md)|
+|`←`   |&nbsp;             |[Assignment](assignment/index.md)                     |
+|`[I]←`|&nbsp;             |[Assignment(Indexed)](assignment/assignment-indexed.md)    |
+|`(I)←`|&nbsp;             |[Assignment(Selective)](assignment/assignment-selective.md)|
 |`[]`  |&nbsp;             |[Indexing](indexing.md)                         |

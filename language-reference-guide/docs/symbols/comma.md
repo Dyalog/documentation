@@ -5,7 +5,7 @@ search:
 <h1 class="heading"><span class="name">Comma</span> <span class="command">,</span></h1>
 
 Monadic Comma means
-[Ravel](../primitive-functions/ravel.md)
+[Ravel](../primitive-functions/ravel/index.md)
 ```apl
       cube    ⍝ 3D array
 1 2
@@ -20,7 +20,7 @@ Monadic Comma means
 1 2 3 4
 5 6 7 8
 ```
-[Ravel with Axes](../primitive-functions/ravel-with-axes.md)
+[Ravel with Axes](../primitive-functions/ravel/ravel-with-axes.md)
 ```apl
       ,[1.5]'ABC'
 A

@@ -17,7 +17,7 @@ in the collection as an array.
 ```
 
 Index with Axes means
-[Index](../primitive-functions/index-with-axes.md)
+[Index](../primitive-functions/index-function/index-with-axes.md)
 ```apl
       mat
 1  2  3  4

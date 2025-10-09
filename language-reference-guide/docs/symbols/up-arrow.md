@@ -28,7 +28,7 @@ If `⎕ML≥2` [First](../primitive-functions/first.md)
 ```
 
 Dyadic Up Arrow means
-[Take](../primitive-functions/take.md)
+[Take](../primitive-functions/take/index.md)
 ```apl
       4 ↑ 'Pineapple'
 Pine
