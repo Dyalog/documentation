@@ -23,7 +23,7 @@ Hat
 Slash is a monadic operator with a dyadic operand
 
 Operator Slash means
-[Reduce](../primitive-operators/reduce.md), [N-Wise Reduce](../primitive-operators/reduce-n-wise.md)
+[Reduce](../primitive-operators/reduce.md), [N-Wise Reduce](../primitive-operators/reduce/reduce-n-wise.md)
 ```apl
       +/ 1 2 3 4 5
 15

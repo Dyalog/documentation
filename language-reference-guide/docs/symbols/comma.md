@@ -5,7 +5,7 @@ search:
 <h1 class="heading"><span class="name">Comma</span> <span class="command">,</span></h1>
 
 Monadic Comma means
-[Ravel](../primitive-functions/ravel.md)
+[Ravel](../primitive-functions/ravel/index.md)
 ```apl
       cube    ⍝ 3D array
 1 2

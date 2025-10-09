@@ -5,7 +5,7 @@ search:
 <h1 class="heading"><span class="name">Left Shoe</span> <span class="command">⊂</span></h1>
 
 Monadic Left Shoe means
-[Enclose](../primitive-functions/enclose.md)
+[Enclose](../primitive-functions/enclose/index.md)
 ```apl
       1(2 3)
 ┌─┬───┐
