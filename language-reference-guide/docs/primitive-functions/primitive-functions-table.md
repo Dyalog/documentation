@@ -12,7 +12,7 @@
 |`×`|Times|[Direction](direction.md)|[Times](times.md)|
 |`÷`|Divide|[Reciprocal](reciprocal.md)|[Divide](divide.md)|
 |`↓`|Down Arrow|[Split](split.md)|[Drop](drop/index.md)|
-|`⊂`|Left Shoe|[Enclose](enclose/index.md)|Partitioned Enclose](partitioned-enclose.md)|
+|`⊂`|Left Shoe|[Enclose](enclose/index.md)|[Partitioned Enclose](partitioned-enclose.md)|
 |`⊤`|Down Tack|&nbsp;|[Encode](encode.md)|
 |`=`|Equal|&nbsp;|[Equal To](equal-to.md)|
 |`~`|Tilde|[NOT](not.md)|[Without](without.md)|
@@ -45,7 +45,7 @@
 |`≢`|Equal Underbar Slash|[Tally](tally.md)|[Not Match](not-match.md)|
 |`∨`|Logical OR|&nbsp;|[Greatest Common Divisor/OR](greatest-common-divisor-or.md)|
 |`⊃`|Right Shoe|[First](first.md)|[Pick](pick.md)|
-|`,`|Comma|[Ravel](ravel/index.md)|[Catenate/Laminate](catenate-laminate.md)]
+|`,`|Comma|[Ravel](ravel/index.md)|[Catenate/Laminate](catenate-laminate.md)|
 |`⍴`|Rho|[Shape](shape.md)|[Reshape](reshape.md)|
 |`⍪`|Comma Bar|[Table](table.md)|[Catenate First/Laminate](catenate-first.md)|
 |`↑`|Up Arrow|[Mix](mix.md)|[Take](take/index.md)|
