@@ -507,6 +507,7 @@ def convert_to_html(
     transforms: List[Callable[[str], str]],
     project: str,
     top_level_files: List[str],
+    version: str = None,
 ) -> Tuple[List[str], List[str]]:
     """
     Convert each Markdown file and convert to HTML, using the same rendering library as
@@ -583,7 +584,7 @@ def convert_to_html(
 
         body = body.replace("``", "")  # Empty code blocks aren't rendered correctly
 
-        body = fix_links_html(body)
+        body = fix_links_html(body, version=version)
         body = remove_footnote_links(body)
         body = fix_external_links(body)
 
@@ -962,15 +963,17 @@ def table_captions(body: str) -> str:
     )  # Update table references
 
 
-def fix_links_html(html: str) -> str:
+def fix_links_html(html: str, version: str = None) -> str:
     """
     Applies the link transformations to an HTML document:
     1. Links with targets ending in ".md" are changed to ".htm".
     2. Links without extensions and leading "../" are lifted one relative level, and suffixed with ".htm".
     3. Off-site links starting with "http" remain unchanged.
+    4. Links containing "/files/" are converted to external URLs pointing to docs.dyalog.com.
 
     Parameters:
         html (str): The HTML content as a string.
+        version (str): The version string for external file links (e.g., "20.0")
 
     Returns:
         str: The modified HTML content.
@@ -982,6 +985,16 @@ def fix_links_html(html: str) -> str:
         """
         if href.startswith("http"):  # Off-site link: leave unchanged
             return href
+
+        # Check if this is a /files/ link that should be converted to external URL
+        # Look for patterns like ../files/ or ../../files/ etc.
+        if "/files/" in href:
+            # Extract the part after /files/
+            files_index = href.index("/files/") + len("/files/")
+            file_path = href[files_index:]
+            # Use version if provided, otherwise default to 20.0
+            ver = version if version else "20.0"
+            return f"https://docs.dyalog.com/{ver}/files/{file_path}"
 
         # Remove trailing slash if present
         if href.endswith("/"):
@@ -1402,6 +1415,7 @@ if __name__ == "__main__":
         transforms=[table_captions],
         project=args.project_dir,
         top_level_files=standalone_files_abs,
+        version=version,
     )
     
     # Remove excluded files from md_files for indexing
