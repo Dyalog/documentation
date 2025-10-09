@@ -45,4 +45,4 @@ Each log entry is a complete JSON5 object definition that includes the following
  This  That  TheOther
 ```
 
-See also [`109⌶` – Log File for Deprecations](deprecated-feature-log-file.md).
+See also [`109⌶` – Log File for Deprecations](log-file-for-deprecations.md).
