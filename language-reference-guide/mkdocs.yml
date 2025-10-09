@@ -94,7 +94,7 @@ nav:
           - Greater Than Or Equal To: primitive-functions/greater-than-or-equal-to.md
           - Greater Than: primitive-functions/greater-than.md
           - Not Equal To: primitive-functions/not-equal-to.md
-      - Trigonometric Functions: primitive-functions/circular-functions.md
+      - Circular Functions: primitive-functions/circular-functions.md
       - Non-Scalar Monadic Structural Functions:
           - Shape: primitive-functions/shape.md
           - Ravel:
@@ -177,7 +177,7 @@ nav:
           - Catenate Laminate: primitive-functions/catenate-laminate.md
           - Catenate First: primitive-functions/catenate-first.md
           - Ceiling: primitive-functions/ceiling.md
-          - Circular Functiona: primitive-functions/circular-functions.md
+          - Circular Functions: primitive-functions/circular-functions.md
           - Conjugate: primitive-functions/conjugate.md
           - Deal: primitive-functions/deal.md
           - Decode: primitive-functions/decode.md
