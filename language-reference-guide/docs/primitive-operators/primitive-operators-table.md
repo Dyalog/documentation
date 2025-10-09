@@ -14,8 +14,8 @@
 |`∘`  |Jot            |[Bind](bind.md)                                                  |`{R}←A∘fY{R}←(f∘B)Y`|
 |`⍨`  |Tilde Diaeresis|[Commute](commute.md)                                            |`{R}←{X}f⍨Y`        |
 |`⍨`  |Tilde Diaeresis|[Constant](constant.md)                                          |`R←{X}(A⍨)Y`        |
-|`¨`  |Diaeresis      |[Each with Dyadic Operand](each-with-dyadic-operand.md)          |`{R}←Xf¨Y`          |
-|`¨`  |Diaeresis      |[Each with Monadic Operand](each-with-monadic-operand.md)        |`{R}←f¨Y`           |
+|`¨`  |Diaeresis      |[Each with Dyadic Operand](each/each-with-dyadic-operand.md)          |`{R}←Xf¨Y`          |
+|`¨`  |Diaeresis      |[Each with Monadic Operand](each/each-with-monadic-operand.md)        |`{R}←f¨Y`           |
 |`⌶`  |IBeam          |[I-Beam](../the-i-beam-operator/i-beam.md)                       |`R←{X}(A⌶)Y`        |
 |`.`  |Dot            |[Inner Product](inner-product.md)                                |`R←Xf.gY`           |
 |`⌸`  |Quad Equal     |[Key](key.md)                                                    |`R←{X}f⌸Y`          |
@@ -23,10 +23,10 @@
 |`⍥`  |Circle Dieresis|[Over](over.md)                                                  |`{R}←{X}f⍥gY`       |
 |`⍣`  |Star Diaeresis |[Power](power.md)                                                |`{R}←{X}(f⍣g)Y`     |
 |`⍤`  |Jot Diaeresis  |[Rank](rank.md)                                                  |`R←{X}(f⍤B)Y`       |
-|`⌿`  |Slash Bar      |[Reduce First N Wise](reduce-first-n-wise.md)                    |`R←Xf⌿[K]Y`         |
-|`⌿`  |Slash Bar      |[Reduce First](reduce-first.md)                                  |`R←f⌿Y`             |
-|`/`  |Slash          |[Reduce N Wise](reduce-n-wise.md)                                |`R←Xf/[K]Y`         |
-|`/`  |Slash          |[Reduce](reduce.md)                                              |`R←f/[K]Y`          |
+|`⌿`  |Slash Bar      |[Reduce First N Wise](reduce-first/reduce-first-n-wise.md)                    |`R←Xf⌿[K]Y`         |
+|`⌿`  |Slash Bar      |[Reduce First](reduce-first/index.md)                                  |`R←f⌿Y`             |
+|`/`  |Slash          |[Reduce N Wise](reduce/reduce-n-wise.md)                                |`R←Xf/[K]Y`         |
+|`/`  |Slash          |[Reduce](reduce/index.md)                                              |`R←f/[K]Y`          |
 |`⍀`  |Slope Bar      |[Scan First](scan-first.md)                                      |`R←f⍀Y`             |
 |`\`  |Slope          |[Scan](scan.md)                                                  |`R←f\[K]Y`          |
 |`&`  |Ampersand      |[Spawn](spawn.md)                                                |`{R}←{X}f&Y`        |

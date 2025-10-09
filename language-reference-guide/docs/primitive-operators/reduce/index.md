@@ -26,7 +26,7 @@ Otherwise, if the length of the `K`<sup>th</sup> axis is 0 then the result depen
 
 If `f` is one of the functions listed in [](#IdentityElements) then `R` is `S⍴⊂I`, where `I` is formed from `⊃Y` by replacing each depth-zero item of `⊃Y` with the *identity element* from the table.
 
-Otherwise, if `f` is Catenate, `R` is `S⍴⊂0/⊃Y`. If `f` is Catenate First, `R` is `S⍴⊂0⌿⊃Y`. If `f` is Catenate along the J<sup>th</sup> axis, `R` is `S⍴⊂0/[J]⊃Y`. See [Catenate/Laminate](../primitive-functions/catenate-laminate.md).
+Otherwise, if `f` is Catenate, `R` is `S⍴⊂0/⊃Y`. If `f` is Catenate First, `R` is `S⍴⊂0⌿⊃Y`. If `f` is Catenate along the J<sup>th</sup> axis, `R` is `S⍴⊂0/[J]⊃Y`. See [Catenate/Laminate](../../primitive-functions/catenate-laminate.md).
 
 
 Otherwise, `DOMAIN ERROR` is reported.
