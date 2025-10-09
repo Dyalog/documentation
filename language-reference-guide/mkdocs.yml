@@ -273,7 +273,7 @@ nav:
           - Times: primitive-functions/times.md
           - Transpose: primitive-functions/transpose.md
           - Type: primitive-functions/type.md
-          - Union: primitive-functions/union.md
+          - Union: primitive-functions/union.md          
           - Unique: primitive-functions/unique.md
           - Unique Mask: primitive-functions/unique-mask.md
           - Where: primitive-functions/where.md
@@ -296,8 +296,9 @@ nav:
           - Bind: primitive-operators/bind.md
           - Commute: primitive-operators/commute.md
           - Constant: primitive-operators/constant.md
-          - Each with Monadic Operand: primitive-operators/each-with-monadic-operand.md
-          - Each with Dyadic Operand: primitive-operators/each-with-dyadic-operand.md
+          - Each:
+              - Each with Monadic Operand: primitive-operators/each/each-with-monadic-operand.md
+              - Each with Dyadic Operand: primitive-operators/each/each-with-dyadic-operand.md
           - I-Beam: primitive-operators/i-beam-short.md
           - Inner Product: primitive-operators/inner-product.md
           - Key: primitive-operators/key.md
@@ -305,10 +306,12 @@ nav:
           - Over: primitive-operators/over.md
           - Power: primitive-operators/power.md
           - Rank: primitive-operators/rank.md
-          - Reduce: primitive-operators/reduce.md
-          - Reduce First: primitive-operators/reduce-first.md
-          - Reduce N Wise: primitive-operators/reduce-n-wise.md
-          - Reduce First N Wise: primitive-operators/reduce-first-n-wise.md
+          - Reduce:
+              - Reduce: primitive-operators/reduce/index.md
+              - Reduce N Wise: primitive-operators/reduce/reduce-n-wise.md
+          - Reduce First:
+              - Reduce First: primitive-operators/reduce-first/index.md
+              - Reduce First N Wise: primitive-operators/reduce-first/reduce-first-n-wise.md
           - Scan: primitive-operators/scan.md
           - Scan First: primitive-operators/scan-first.md
           - Spawn: primitive-operators/spawn.md
