@@ -6,14 +6,14 @@ search:
 <h1 class="heading"><span class="name">Primitive Operators</span></h1>
 
 |------------------------------------------|--------------------------|--------------------------------------------------------------------------------------------------------|
-|[Each](each-with-monadic-operand.md)      |`f¨Y`                     |apply monadic `f` to elements of `Y`                                                                    |
-|[Dyadic Each](each-with-dyadic-operand.md)|`Xf¨Y`                    |apply dyadic `f` to corresponding elements of `X` and `Y`                                               |
+|[Each](each/each-with-monadic-operand.md)      |`f¨Y`                     |apply monadic `f` to elements of `Y`                                                                    |
+|[Dyadic Each](each/each-with-dyadic-operand.md)|`Xf¨Y`                    |apply dyadic `f` to corresponding elements of `X` and `Y`                                               |
 |[Rank](rank.md)                           |`f(⍤k)Y`                  |apply monadic `f` to k-cells of `Y`                                                                     |
 |[Dyadic Rank](rank.md)                    |`Xf(⍤kx ky)Y`             |dyadic `f` placed between kx-cells of `X` and  ky-cells of `Y`                                          |
 |[Power](power.md)                         |`X(f⍣g)Y`                 |apply monadic or dyadic `f` repeatedly to `Y`                                                           |
-|[Reduce](reduce.md)                       |`f/Y`                     |dyadic `f` placed between each sub-array along (last) axis of `Y`                                       |
+|[Reduce](reduce/index.md)                       |`f/Y`                     |dyadic `f` placed between each sub-array along (last) axis of `Y`                                       |
 |[Reduce First](reduce-first.md)           |`f⌿Y`                     |dyadic `f` placed between each sub-array along (first) axis of `Y`                                      |
-|[N-Wise Reduce](reduce-n-wise.md)         |`Xf/Y`                    |dyadic `f` placed between items of sub-vectors of length `X` of `Y`                                     |
+|[N-Wise Reduce](reduce/reduce-n-wise.md)         |`Xf/Y`                    |dyadic `f` placed between items of sub-vectors of length `X` of `Y`                                     |
 |[Scan](scan.md)                           |`f\Y`                     |successive reductions along (last) axis of `Y`                                                          |
 |[Scan First](scan-first.md)               |`f⍀Y`                     |successive reductions along (first) axis of `Y`                                                         |
 |[Commute](commute.md)                     |`{X}f⍨Y`                  |commute arguments of dyadic `f`                                                                         |
