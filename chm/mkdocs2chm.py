@@ -983,6 +983,10 @@ def fix_links_html(html: str) -> str:
         if href.startswith("http"):  # Off-site link: leave unchanged
             return href
 
+        # Remove trailing slash if present
+        if href.endswith("/"):
+            href = href[:-1]
+
         path, name = os.path.split(href)
         base, ext = os.path.splitext(name)
 
