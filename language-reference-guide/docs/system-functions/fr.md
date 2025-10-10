@@ -113,5 +113,5 @@ WARNING: The use of COMPLEX numbers when `⎕FR` is 1287 is not recommended, bec
 
 
 
-[^1]: http://en.wikipedia.org/wiki/Double_precision_floating-point_format
-[^2]: http://en.wikipedia.org/wiki/Decimal128_floating-point_format
+[^1]: https://en.wikipedia.org/wiki/Double_precision_floating-point_format
+[^2]: https://en.wikipedia.org/wiki/Decimal128_floating-point_format
