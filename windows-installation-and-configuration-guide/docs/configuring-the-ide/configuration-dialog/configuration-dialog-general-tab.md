@@ -11,7 +11,6 @@ Table: Configuration dialog: General
 |Display Value Tips|[Enabled](../../configuration-parameters/valuetips/enabled.md)|Specifies whether or not Value Tips are enabled.|
 |Display Value Tips after|[Delay](../../configuration-parameters/valuetips/delay.md)|Specifies the delay before APL displays a Value Tip.|
 |Colour Scheme|[ColourScheme](../../configuration-parameters/valuetips/colourscheme.md)|Specifies the colour scheme used to display Value Tips.|
-|Enable Native Look and Feel|[XPLookAndFeel](../../configuration-parameters/xplookandfeel.md)|Specifies whether or not *Native Look and Feel* is enabled. This changes the appearance of user-interface controls such as Buttons in both the Session and the Dyalog GUI.|
 |Enable DPI Scaling of the interpreter and development environment|[AutoDPI](../../configuration-parameters/autodpi.md)|Enables or disables DPI scaling for the APL Session|
 |Enable DPI scaling of GUI application|[Dyalog_Pixel_Type](../../configuration-parameters/dyalog-pixel-type.md)|Determines whether Coord `'Pixel'` is treated as ScaledPixel or RealPixel.|
 |Configuration saved in|[IniFile](../../configuration-parameters/inifile.md)|Specifies the full pathname of the registry folder used by APL|
