@@ -65,12 +65,12 @@ When the HTMLRenderer is displayed in its own window, the  window caption is set
 [8]    'f.l2'⎕WC'Label'Q(320 10)
 [9]    'f.q'⎕WC'HTMLRenderer'('ASChild' 1)
 [10]   f.q.(Posn Size)←(350 10)(360 360)
-[11]   U←'http://hasthelargehadroncolliderdestroyedtheworldyet.com'
+[11]   U←'https://hasthelargehadroncolliderdestroyedtheworldyet.com'
 [12]   f.q.URL←U
 [13]   tw←'<a class="twtimeline"'
 [14]   tw,←'href="https://twitter.com/dyalogapl">'
 [15]   tw,←'Tweets by dyalogapl</a>'
-[16]   tw,←'<script async src="http://platform.twitter.com/widgets.js"'
+[16]   tw,←'<script async src="https://platform.twitter.com/widgets.js"'
 [17]   tw,←'charset="utf-8"></script>'
 [18]   'f.t'⎕WC'HTMLRenderer'('AsChild' 1)
 [19]   f.t.(Posn Size)←(10 400)(680 280)
