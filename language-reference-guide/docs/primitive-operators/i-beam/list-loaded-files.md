@@ -31,7 +31,7 @@ The editor may be used to edit Dyalog script files (*.dyalog* files) and general
 |5      |Flags    |
 
 
-Encoding, newline and flags are defined the same as for `⎕NGET`. See [File Encodings](../system-functions/nget.md). Checksum is an 8-character hexadecimal value, see [GetBuildID](../../../object-reference/methodorevents/getbuildid)  for more information.
+Encoding, newline and flags are defined the same as for `⎕NGET`. See [File Encodings](../../system-functions/nget.md). Checksum is an 8-character hexadecimal value, see [GetBuildID](../../../../object-reference/methodorevents/getbuildid)  for more information.
 
 
 <h2 class="example">Examples</h2>

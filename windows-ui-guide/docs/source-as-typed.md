@@ -30,4 +30,4 @@ The Boolean parameter **DYALOG_DISCARD_FN_SOURCE**  (default 0) and `5172⌶` (D
 
 Note that, to ensure that they can be used by Classic Edition, the source code has been discarded from all the workspaces supplied by Dyalog as part of the distribution.
 
-See also: [Discard Source Code](../../language-reference-guide/the-i-beam-operator/discard-source-code) and [Discard Source Information](../../language-reference-guide/the-i-beam-operator/discard-source-information).
+See also: [Discard Source Code](../../language-reference-guide/primitive-operators/i-beam/discard-source-code) and [Discard Source Information](../../language-reference-guide/primitive-operators/i-beam/discard-source-information).

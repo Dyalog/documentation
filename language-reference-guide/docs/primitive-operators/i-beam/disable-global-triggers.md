@@ -13,7 +13,7 @@
 
 
 
-This function is used to temporarily disable and re-enable [Global Triggers](../../../programming-reference-guide/triggers/global-triggers).
+This function is used to temporarily disable and re-enable [Global Triggers](../../../../programming-reference-guide/triggers/global-triggers).
 
 
 `Y` is Boolean.

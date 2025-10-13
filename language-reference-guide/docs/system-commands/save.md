@@ -22,7 +22,7 @@ See [Programmer's Guide: "Workspaces"](../../../programming-reference-guide/intr
 If an extension is not specified, an extension is added according to the [**WSEXT** parameter](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters)..
 
 
-A workspace may not be saved if any threads (other than the root thread 0) are running or if there are any Edit or Trace windows open. Otherwise, the workspace is saved with its state of execution intact, however certain operations may be performed before it is saved. For further information, see [Set Workspace Save Options](../the-i-beam-operator/set-workspace-save-options.md).
+A workspace may not be saved if any threads (other than the root thread 0) are running or if there are any Edit or Trace windows open. Otherwise, the workspace is saved with its state of execution intact, however certain operations may be performed before it is saved. For further information, see [Set Workspace Save Options](../primitive-operators/i-beam/set-workspace-save-options.md).
 
 
 

@@ -30,6 +30,6 @@ A side effect of using `⎕WA` is an internal reorganisation of the workspace an
 ```
 
 
-See also: [Specify Workspace Available](../the-i-beam-operator/specify-workspace-available.md)
+See also: [Specify Workspace Available](../primitive-operators/i-beam/specify-workspace-available.md)
 
 

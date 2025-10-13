@@ -23,7 +23,7 @@ Is the location of the Dyalog executable. Usually this is the full pathname, sur
 |-s|Disable the Session. This option is ignored in Windows versions.|
 |+s|Force the display of the Session when it would otherwise not be shown.|
 |-q|Don't quit APL on error (used when piping input into APL).|
-|+q|Quit APL on error. In earlier versions of Dyalog, quitting on error saved a workspace with the reserved name CONTINUE; this behaviour can be re-enabled using `2704⌶`. See [Continue Autosave](../../language-reference-guide/the-i-beam-operator/continue-autosave) .|
+|+q|Quit APL on error. In earlier versions of Dyalog, quitting on error saved a workspace with the reserved name CONTINUE; this behaviour can be re-enabled using `2704⌶`. See [Continue Autosave](../../language-reference-guide/primitive-operators/i-beam/continue-autosave) .|
 |-c|Signifies a command-line comment. All characters to the right are ignored.|
 |-cef -cef_all|Instructs Dyalog to ignore the parameter that immediately follows or all the parameters that follow. These options are intended to isolate parameters intended for the built-in Chromium Embedded Framework (CEF). See [HTMLRenderer](../../object-reference/objects/htmlrenderer) .|
 

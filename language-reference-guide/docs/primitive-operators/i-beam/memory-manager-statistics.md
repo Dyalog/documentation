@@ -13,7 +13,7 @@
 
 
 
-This function returns information about the state of the workspace and provides a means to reset certain statistics and to control workspace allocation. This I-Beam is provided for performance tuning and is VERY LIKELY to change in the next release. See also [Workspace Management](../../../windows-installation-and-configuration-guide/workspace-management).
+This function returns information about the state of the workspace and provides a means to reset certain statistics and to control workspace allocation. This I-Beam is provided for performance tuning and is VERY LIKELY to change in the next release. See also [Workspace Management](../../../../windows-installation-and-configuration-guide/workspace-management).
 
 
 `Y` is a simple integer scalar or vector containing values listed in the table below.

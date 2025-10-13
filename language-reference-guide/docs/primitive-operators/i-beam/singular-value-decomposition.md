@@ -26,7 +26,7 @@ This can be useful for analysing matrices for which `⌹` cannot compute an inve
 For further information, see Wikipedia's article on [Singular Value Decomposition](https://en.wikipedia.org/wiki/Singular_value_decomposition).
 
 !!! note
-    This function signals `DOMAIN ERROR` if `⎕FR` is 1287. See [Floating-Point Representation ](../system-functions/fr.md).
+    This function signals `DOMAIN ERROR` if `⎕FR` is 1287. See [Floating-Point Representation ](../../system-functions/fr.md).
 
 
 

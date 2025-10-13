@@ -8,7 +8,7 @@
 
 
 
-`Y` is an array of function names in the same format as the right argument of `⎕AT`. For further information, see [Attributes](../system-functions/at.md).
+`Y` is an array of function names in the same format as the right argument of `⎕AT`. For further information, see [Attributes](../../system-functions/at.md).
 
 
 `X` is an array of function attributes in the same format as the output of `⎕AT`.
