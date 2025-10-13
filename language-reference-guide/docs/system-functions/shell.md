@@ -291,7 +291,7 @@ The `Window` variant option specifies the initial window mode. The value must be
 
 The default is `'Hidden'`.
 
-See also [8373⌶](../../the-i-beam-operator/shell-process-control).
+See also [8373⌶](../../primitive-operators/i-beam/shell-process-control).
 
 ## Default Redirections
 Most programs assume that the three standard streams are configured when the program starts. For this reason, `⎕SHELL` always sets up some redirections for those three, even when variant options have explicitly only set up some of them. For example, when `⎕SHELL⍠'Output' (1 ('File' '/tmp/log.txt'))⊢cmd` is run, stream 0 and stream 2 are set up to their default values.

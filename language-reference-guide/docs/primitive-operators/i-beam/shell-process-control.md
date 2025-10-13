@@ -6,7 +6,7 @@
 
 <h1 class="heading"><span class="name">Shell Process Control</span> <span class="command">R←{X}(8373⌶)Y</span></h1>
 
-This function provides a way to determine the process IDs of processes started by [`⎕SHELL`](../../system-functions/shell.md), as well as enabling the sending of signals to any of those processes.
+This function provides a way to determine the process IDs of processes started by [`⎕SHELL`](../../../system-functions/shell.md), as well as enabling the sending of signals to any of those processes.
 
 ## Monadic Use: Query Process IDs
 

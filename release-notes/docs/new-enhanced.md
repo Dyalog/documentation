@@ -203,6 +203,6 @@ The new version of PCRE is not 100% compatible with the previous version. Althou
 
 In .NET, a _generic_ class is a class that has type parameters which must be given values to create a concrete version of the class. Similarly, a generic method has type parameters which must be specified before the method can be called. 
 
-The introduction of [`43⌶632`](../../language-reference-guide/the-i-beam-operator/monadic-operator-generator/) means that the .NET interface now supports creating concrete versions of generic classes, instantiating them, and calling generic methods. For more information, see the [_.NET Interface Guide_](../../files/dotNET_Interface_Guide.pdf).
+The introduction of [`43⌶632`](../../language-reference-guide/primitive-operators/i-beam/monadic-operator-generator/) means that the .NET interface now supports creating concrete versions of generic classes, instantiating them, and calling generic methods. For more information, see the [_.NET Interface Guide_](../../files/dotNET_Interface_Guide.pdf).
 
 The .NET Framework interface does not support generic classes.
