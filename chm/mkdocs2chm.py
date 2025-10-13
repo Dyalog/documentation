@@ -146,21 +146,30 @@ def _process_nav_item(item: dict | str, parent: Node, project="project") -> None
 def _traverse(node: Node, toc: IO[str]) -> None:
     # Just clean up quotes and backticks (HTML tags and quad already removed during parsing)
     title = node.name.replace("`", "").replace('"', "")
-    
-    # Check if this directory has an "Introduction" child that should be used as its link
-    intro_file = None
+
+    # Determine a linked page for directory nodes, if available
+    linked_file = None
     if node.children:
+        # Prefer an explicit index page within this section
         for child in node.children:
-            if child.name == "Introduction" and not child.isdir() and child.html_name:
-                intro_file = child.html_name
-                break
-    
+            if not child.isdir() and child.html_name:
+                base = os.path.basename(child.html_name).lower()
+                if base in ("index.htm", "index.html"):
+                    linked_file = child.html_name
+                    break
+        # Fall back to a child named "Introduction" if present
+        if linked_file is None:
+            for child in node.children:
+                if child.name == "Introduction" and not child.isdir() and child.html_name:
+                    linked_file = child.html_name
+                    break
+
     # Write the entry with or without a Local parameter
-    if intro_file:
-        toc.write(FILE_ENTRY.format(name=title, file=intro_file))
+    if linked_file:
+        toc.write(FILE_ENTRY.format(name=title, file=linked_file))
     else:
         toc.write(DIR_ENTRY.format(name=title))
-    
+
     if node.children:  # Only write <ul> if there are children
         toc.write("<ul>\n")
         for child in node.children:
@@ -308,6 +317,7 @@ def generate_toc(yml_data: dict, project="project"):
     toc.write("</ul>\n")
     toc.write("</body></html>\n")
     toc.close()
+    return None
 
 
 def find_source_files(topdir: str, subdirs: List[str]) -> Tuple[List[str], List[str]]:
@@ -1434,6 +1444,8 @@ if __name__ == "__main__":
     write_index_data(idx, f"{args.project_dir}/_index.hhk")
 
     print(f"Converted {len(md_files)} Markdown files to HTML.")
+
+    # No additional redirect helper pages
 
     # Generate the CHM project config file
     chm_name = "dyalog.chm"
