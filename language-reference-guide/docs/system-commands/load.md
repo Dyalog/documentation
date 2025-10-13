@@ -31,7 +31,7 @@ Holding the Shift key down while selecting a workspace from the session file men
 <h2 class="example">Example</h2>
 ```apl
 
-      )load dfns
+      )LOAD dfns
 C:\Program Files\Dyalog\Dyalog APL-64 ...
 
 An assortment of D Functions and Operators.

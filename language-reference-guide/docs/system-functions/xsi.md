@@ -21,7 +21,7 @@
 In the following, function `foo` in namespace `x` has called `goo` in namespace `y`.  Function `goo` has then changed space (`⎕CS`) to namespace `z` where it has been suspended:
 ```apl
  
-      )si
+      )SI
 [z] y.goo[2]*
 x.foo[1]
  

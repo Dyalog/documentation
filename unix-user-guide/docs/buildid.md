@@ -34,7 +34,7 @@ In APL:
       magicfile←'/opt/mdyalog/12.1/32/classic/p6/magic'
       +2 ⎕NQ '.' 'GetBuildID' magicfile
 0a744663
-      )sh
+      )SH
 $ echo $PPID
 $ kill -11 $PPID
 /opt/mdyalog/12.1/32/classic/p6/mapl[58]: 274434 Segmentation fault(coredump)

@@ -340,7 +340,7 @@ When you are editing a function, outlining identifies the blocks of code within 
 
 The picture below shows the result of opening the function `⎕SE.cbtop.TB_POPUP`.
 ```apl
-      )ed ⎕SE.cbtop.TB_POPUP
+      )ED ⎕SE.cbtop.TB_POPUP
 ```
 
 ![](img/editor-outlining-1.png)
@@ -452,7 +452,7 @@ and fixes as
 
 The picture below shows the result of opening the `ComponentFile` class. Notice how each function is delineated separately and that each function is individually line-numbered.
 ```apl
-      )ed ComponentFile
+      )ED ComponentFile
 ```
 
 ![](img/editor-classes-1.png)

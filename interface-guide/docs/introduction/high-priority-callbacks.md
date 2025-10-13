@@ -25,25 +25,25 @@ In the following example, there is a deliberate error on `GenCB[2]` which is ass
 SYNTAX ERROR
 GenCB[2] ∘
         ∧
-      )si
+      )SI
 #.GenCB[2]*
 ⎕DQ
       →
 DOMAIN ERROR: Operation cannot be completed with an "external" call on the stack
       →
      ∧
-      )reset
+      )RESET
 Can't )RESET with external call on the stack.
-      )clear
+      )CLEAR
 Can't )CLEAR with external call on the stack.
-      )save
+      )SAVE
 Cannot perform operation with calls to or from external functions or certain callbacks.
 ```
 
 The only way to restore the situation to normal is to force the callback function to exit. For example:
 ```apl
       →0
-      )si
+      )SI
 
 ```
 

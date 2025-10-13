@@ -24,7 +24,7 @@ The result `R` is a vector of character vectors containing  the names of all the
 
 <h2 class="example">Examples</h2>
 ```apl
-      )clear
+      )CLEAR
 clear ws
       'Aloc'⎕NA'P kernel32∣GlobalAlloc U4 P'
       'Free'⎕NA'P kernel32∣GlobalFree P'
@@ -35,20 +35,20 @@ clear ws
  
       950⌶⍬
  KERNEL32.DLL  VERSION.DLL  MSVCRT.DLL 
-      )fns
+      )FNS
 Aloc    Free    Lock    Ulok    Valu    copy
 
-      )erase Aloc    Free    Lock    Valu 
+      )ERASE Aloc    Free    Lock    Valu 
       950⌶⍬
  KERNEL32.DLL  MSVCRT.DLL 
-      )fns
+      )FNS
 Ulok    copy
 
-      )erase Ulok
+      )ERASE Ulok
       950⌶⍬
  MSVCRT.DLL 
 
-      )clear
+      )CLEAR
 clear ws
       950⌶⍬
 

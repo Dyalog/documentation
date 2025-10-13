@@ -8,7 +8,7 @@ Note that under Windows, you may not execute `)CMD` without a command.  If you 
 
 <h2 class="example">Example</h2>
 ```apl
-     )cmd dir
+     )CMD dir
  Volume in drive C is OS
  Volume Serial Number is B438-9B76
 
