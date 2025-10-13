@@ -23,14 +23,14 @@ When attempting to use the I-beam operator with an unsupported operation value `
 
 This allows the user to distinguish between operation values that have never been used, those that have been used in earlier versions but are no longer included in the current version, and those that are valid in other editions or on other platforms.
 
-Key to restirctions in the following table:
+Key to restrictions in the following table:
 
+- AIX: AIX only
+- LiW: Linux/Windows only
 - WF: Microsoft .NET Framework only
 - WIN: Microsoft Windows only
 - X: AIX/Linux/macOS only
-- AIX: AIX only
 - 64U: 64-bit Unicode only
-- LiW: Linux/Windows only
 
 
 |`A`      |Derived Function                                                                      |Restrictions |

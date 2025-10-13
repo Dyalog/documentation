@@ -57,6 +57,6 @@ a
 ```
 
 
-For further details, see [JSON Name Mangling](../system-functions/json.md).
+For further details, see [JSON Name Mangling](../../system-functions/json.md).
 
 

@@ -93,7 +93,7 @@ The  reasons why a call to `⎕SHELL` ends are described in the table below. `Ex
 
 Returning the exit code (instead of `⎕SHELL` producing some trappable error) makes it possible to access the other parts of the result, such as the error messages that were printed on the standard error stream. However, it is possible to turn non-successful exits into trappable errors using the [`ExitCheck`](#exitcheck) variant.
 
-When the `ExitReason` is 2 or 3, the child process had not stopped running before `⎕SHELL` stopped, which means it might still be running, and require some appropriate cleanup (see [8373⌶](../../the-i-beam-operator/shell-process-control)).
+When the `ExitReason` is 2 or 3, the child process had not stopped running before `⎕SHELL` stopped, which means it might still be running, and require some appropriate cleanup (see [8373⌶](../../primitive-operators/i-beam/shell-process-control)).
 In practice, the child process often closes shortly after without the need for intervention, either due to the default signal being sent to it on non-Windows platforms (see the [`Signal`](#signal) option), or because the connected streams are closed on the `⎕SHELL` end.
 
 ## Thread Switching
