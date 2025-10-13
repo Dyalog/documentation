@@ -1,32 +1,39 @@
+<div style="display: none;">
+  ⌶
+</div>
+
 <h1 class="heading"><span class="name">I-Beam</span> <span class="command">R←{X}(A⌶)Y</span></h1>
 
-I-Beam is a monadic operator that provides a range of system related services.
+I-Beam is a monadic operator that provides a range of system-related services.
 
-!!! warning 
-    Although documentation is provided for I-Beam functions, any service provided using I-Beam should be considered as "experimental" and subject to change – without notice - from one release to the next. Any use of I-Beams in applications should therefore be carefully isolated in cover-functions that can be adjusted if necessary. See also: [Ride and Experimental Features-related I-Beams](./supplementary-i-beam-functions.md).
+!!! Warning "Warning"
+    Any service provided using an I-beam should be considered as experimental and subject to change – without notice – from one release to the next. Any use of I&#8209;beams in applications should, therefore, be carefully isolated in cover-functions that can be adjusted if necessary.
 
-`A` is an integer that specifies the type of operation to be performed  as shown in the table below. `Y` is an array that supplies further information about what is to be done.
+`A` is an integer that specifies the type of operation to be performed – see the table below.
 
-`X` may or may not be required depending on `A`.
+`X` (optionally, depends on `A`) and `Y` are arrays that supply further information about what is to be done and to what.
 
-`R` is the result of the derived function.
+`R` is the result.
 
-When attempting to use  I-Beam with an unsupported operation value, `A`, one of three different error messages will be reported:
+When attempting to use the I-beam operator with an unsupported operation value `A`, one of three different error messages will be reported:
 
 - Invalid I-Beam function selection
-- I-Beam function xxx has been withdrawn
-- I-Beam function xxx is not supported by this interpreter
+- I-Beam function A has been withdrawn
+- I-Beam function A is not supported by this interpreter
+
+This allows the user to distinguish between operation values that have never been used, those that have been used in earlier versions but are no longer included in the current version, and those that are valid in other editions or on other platforms.
+
+Key to restirctions in the following table:
+
+- WF: Microsoft .NET Framework only
+- WIN: Microsoft Windows only
+- X: AIX/Linux/macOS only
+- AIX: AIX only
+- 64U: 64-bit Unicode only
+- LiW: Linux/Windows only
 
 
-This allows the user to distinguish between operation values that have never been used, those that have been used in earlier versions but are no longer included in the current version, and those
-that are valid in other editions or on other platforms other than the current interpreter.
-
-
-
-The column labelled *O/S* indicates if a function applies only on Windows (W), only on Windows .NET Framework, (WF), only under IBM AIX (AIX), or only on non-Windows (X) platforms.
-
-
-|A      |Derived Function                                                                      |O/S   |
+|`A`      |Derived Function                                                                      |Restrictions |
 |-------|--------------------------------------------------------------------------------------|------|
 |`8`    |[Inverted Table Index-of](./inverted-table-index-of.md)                               |&nbsp;|
 |`13`   |[Log Use of Deprecated Features](./log-use-of-deprecated-features.md)                 |&nbsp;|
@@ -62,17 +69,17 @@ The column labelled *O/S* indicates if a function applies only on Windows (W), o
 |`2015` |[Create Data Binding Source](./create-data-binding-source.md)                         |WF    |
 |`2016` |[Create .NET Delegate](./create-net-delegate.md)                                      |WF    |
 |`2017` |[Identify .NET Type](./identify-net-type.md)                                          |WF    |
-|`2022` |[Flush Session Caption](./flush-session-caption.md)                                   |W     |
+|`2022` |[Flush Session Caption](./flush-session-caption.md)                                   |WIN     |
 |`2023` |[Close all Windows](./close-all-windows.md)                                           |&nbsp;|
-|`2035` |[Set Dyalog Pixel Type](./set-dyalog-pixel-type.md)                                   |W     |
-|`2041` |[Override COM Default Value](./override-com-default-value.md)                         |W     |
-|`2100` |[Export to Memory](./export-to-memory.md)                                             |W     |
+|`2035` |[Set Dyalog Pixel Type](./set-dyalog-pixel-type.md)                                   |WIN     |
+|`2041` |[Override COM Default Value](./override-com-default-value.md)                         |WIN     |
+|`2100` |[Export to Memory](./export-to-memory.md)                                             |WIN     |
 |`2101` |[Close .NET AppDomain](./close-net-appdomain.md)                                      |WF    |
 |`2250` |[Verify .NET Interface](./verify-net-interface.md)                                    |&nbsp;|
 |`2400` |[Set Workspace Save Options](./set-workspace-save-options.md)                         |&nbsp;|
 |`2401` |[Expose Root Properties](./expose-root-properties.md)                                 |&nbsp;|
-|`2501` |[Discard Thread on Exit](./discard-thread-on-exit.md)                                 |W     |
-|`2502` |[Discard Parked Threads](./discard-parked-threads.md)                                 |W     |
+|`2501` |[Discard Thread on Exit](./discard-thread-on-exit.md)                                 |WIN     |
+|`2502` |[Discard Parked Threads](./discard-parked-threads.md)                                 |WIN     |
 |`2503` |[Mark Thread as Uninterruptible](./mark-thread-as-uninterruptible.md)                 |&nbsp;|
 |`2520` |[Use Separate Thread For .NET](./use-separate-thread-for-net.md)                      |WF    |
 |`2704` |[Continue Autosave](./continue-autosave.md)                                           |&nbsp;|
@@ -96,8 +103,5 @@ The column labelled *O/S* indicates if a function applies only on Windows (W), o
 |`7162` |[JSON Translate Name](./json-translate-name.md)                                       |&nbsp;|
 |`8373` |[Shell Process Control](./shell-process-control.md)                                   |&nbsp;|
 |`8415` |[Singular Value Decomposition](./singular-value-decomposition.md)                     |&nbsp;|
-|`16808`|[Sample Probability Distribution](./sample-probability-distribution.md)               |&nbsp;|
+|`16808`|[Sample Probability Distribution](./sample-probability-distribution.md)               |LiW|
 |`50100`|[Line Count](./line-count.md)                                                         |&nbsp;|
-
-
-

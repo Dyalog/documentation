@@ -299,7 +299,78 @@ nav:
           - Each:
               - Each with Monadic Operand: primitive-operators/each/each-with-monadic-operand.md
               - Each with Dyadic Operand: primitive-operators/each/each-with-dyadic-operand.md
-          - I-Beam: primitive-operators/i-beam-short.md
+          - I-Beam: 
+              - I-Beam: primitive-operators/i-beam/index.md
+              - '8: Inverted Table Index-of ': primitive-operators/i-beam/inverted-table-index-of.md
+              - '13: Log Use of Deprecated Features': primitive-operators/i-beam/log-use-of-deprecated-features.md
+              - '43: Monadic Operator Generator': primitive-operators/i-beam/monadic-operator-generator.md
+              - '85: Execute Expression': primitive-operators/i-beam/execute-expression.md
+              - '109: Log File for Deprecations': primitive-operators/i-beam/log-file-for-deprecations.md
+              - '120: Generate UUID': primitive-operators/i-beam/generate-uuid.md
+              - '127: Overwrite Free Pockets': primitive-operators/i-beam/overwrite-free-pockets.md
+              - '180: Canonical Representation': primitive-operators/i-beam/canonical-representation.md
+              - '181: Unsqueezed Type': primitive-operators/i-beam/unsqueezed-type.md
+              - '200: Syntax Colouring': primitive-operators/i-beam/syntax-colouring.md
+              - '201: Syntax Colour Tokens': primitive-operators/i-beam/syntax-colour-tokens.md
+              - '219: Compress/Decompress Vector of Short Integers': primitive-operators/i-beam/compress-decompress-vector-of-short-integers.md
+              - '220: Serialise/Deserialise Array': primitive-operators/i-beam/serialise-deserialise-array.md
+              - '400: Compiler Control': primitive-operators/i-beam/compiler-control.md
+              - '600: Disable Traps': primitive-operators/i-beam/disable-traps.md
+              - '739: Temporary Directory': primitive-operators/i-beam/temporary-directory.md
+              - '900: Called Monadically?': primitive-operators/i-beam/called-monadically.md
+              - '950: List Loaded Libraries': primitive-operators/i-beam/list-loaded-libraries.md
+              - '1010: Set Shell Script Debug Options': primitive-operators/i-beam/set-shell-script-debug-options.md
+              - '1111: Number of Threads': primitive-operators/i-beam/number-of-threads.md
+              - '1112: Parallel Execution Threshold': primitive-operators/i-beam/parallel-execution-threshold.md
+              - '1159: Update Function Time and User Stamp': primitive-operators/i-beam/update-function-time-and-user-stamp.md
+              - '1200: Format Date-Time': primitive-operators/i-beam/format-datetime.md
+              - '1302: aplcore Parameters': primitive-operators/i-beam/aplcore-parameters.md
+              - '1500: Hash Array': primitive-operators/i-beam/hash-array.md
+              - '2000: Memory Manager Statistics': primitive-operators/i-beam/memory-manager-statistics.md
+              - '2002: Specify Workspace Available': primitive-operators/i-beam/specify-workspace-available.md
+              - '2007: Disable Global Triggers': primitive-operators/i-beam/disable-global-triggers.md
+              - '2010: Update DataTable': primitive-operators/i-beam/update-datatable.md
+              - '2011: Read DataTable': primitive-operators/i-beam/read-datatable.md
+              - '2014: Remove Data Binding': primitive-operators/i-beam/remove-data-binding.md
+              - '2015: Create Data Binding Source': primitive-operators/i-beam/create-data-binding-source.md
+              - '2016: Create .NET Delegate': primitive-operators/i-beam/create-net-delegate.md
+              - '2017: Identify .NET Type': primitive-operators/i-beam/identify-net-type.md
+              - '2022: Flush Session Caption': primitive-operators/i-beam/flush-session-caption.md
+              - '2023: Close all Windows': primitive-operators/i-beam/close-all-windows.md
+              - '2035: Set Dyalog Pixel Type': primitive-operators/i-beam/set-dyalog-pixel-type.md
+              - '2041: Override COM Default Value': primitive-operators/i-beam/override-com-default-value.md
+              - '2100: Export To Memory': primitive-operators/i-beam/export-to-memory.md
+              - '2101: Close .NET AppDomain': primitive-operators/i-beam/close-net-appdomain.md
+              - '2250: Verify .NET Interface': primitive-operators/i-beam/verify-net-interface.md
+              - '2400: Set Workspace Save Options': primitive-operators/i-beam/set-workspace-save-options.md
+              - '2401: Expose Root Properties': primitive-operators/i-beam/expose-root-properties.md
+              - '2501: Discard Thread on Exit': primitive-operators/i-beam/discard-thread-on-exit.md
+              - '2502: Discard Parked Threads': primitive-operators/i-beam/discard-parked-threads.md
+              - '2503: Mark Thread as Uninterruptible': primitive-operators/i-beam/mark-thread-as-uninterruptible.md
+              - '2520: Use Separate Thread for .NET': primitive-operators/i-beam/use-separate-thread-for-net.md
+              - '2704: Continue Autosave': primitive-operators/i-beam/continue-autosave.md
+              - '3002: Disable Component Checksum Validation': primitive-operators/i-beam/disable-component-checksum-validation.md
+              - '3012: Enable Compression of Large Components': primitive-operators/i-beam/enable-compression-of-large-components.md
+              - '3500: Send Text to Ride-embedded Browser': primitive-operators/i-beam/send-text-to-ride-embedded-browser.md
+              - '3501: Connected to Ride?': primitive-operators/i-beam/connected-to-ride.md
+              - '3502: Manage Ride Connections': primitive-operators/i-beam/manage-ride-connections.md
+              - '3535: Scan For Deprecated Files': primitive-operators/i-beam/scan-for-deprecated-files.md
+              - '4000: Fork New Task': primitive-operators/i-beam/fork-new-task.md
+              - '4001: Change User': primitive-operators/i-beam/change-user.md
+              - '4002: Reap Forked Tasks': primitive-operators/i-beam/reap-forked-tasks.md
+              - '4007: Signal Counts': primitive-operators/i-beam/signal-counts.md
+              - '5171: Discard Source Information': primitive-operators/i-beam/discard-source-information.md
+              - '5172: Discard Source Code': primitive-operators/i-beam/discard-source-code.md
+              - '5176: List Loaded Files': primitive-operators/i-beam/list-loaded-files.md
+              - '5177: List Loaded File Objects': primitive-operators/i-beam/list-loaded-file-objects.md
+              - '5178: Remove Loaded File Object Info': primitive-operators/i-beam/remove-loaded-file-object-info.md
+              - '5179: Loaded File Object Info': primitive-operators/i-beam/loaded-file-object-info.md
+              - '5581: Unicode Normalisation': primitive-operators/i-beam/unicode-normalisation.md
+              - '7162: JSON Translate Name': primitive-operators/i-beam/json-translate-name.md
+              - '8373: Shell Process Control': primitive-operators/i-beam/shell-process-control.md
+              - '8415: Singular Value Decomposition': primitive-operators/i-beam/singular-value-decomposition.md
+              - '16808: Sample Probability Distribution': primitive-operators/i-beam/sample-probability-distribution.md
+              - '50100: Line Count': primitive-operators/i-beam/line-count.md
           - Inner Product: primitive-operators/inner-product.md
           - Key: primitive-operators/key.md
           - Outer Product: primitive-operators/outer-product.md
@@ -317,79 +388,6 @@ nav:
           - Spawn: primitive-operators/spawn.md
           - Stencil: primitive-operators/stencil.md
           - Variant: primitive-operators/variant.md
-  - The I-Beam Operator:
-      - Introduction: the-i-beam-operator/i-beam.md
-      - '8: Inverted Table Index-of ': the-i-beam-operator/inverted-table-index-of.md
-      - '13: Log Use of Deprecated Features': the-i-beam-operator/log-use-of-deprecated-features.md
-      - '43: Monadic Operator Generator': the-i-beam-operator/monadic-operator-generator.md
-      - '85: Execute Expression': the-i-beam-operator/execute-expression.md
-      - '109: Log File for Deprecations': the-i-beam-operator/log-file-for-deprecations.md
-      - '120: Generate UUID': the-i-beam-operator/generate-uuid.md
-      - '127: Overwrite Free Pockets': the-i-beam-operator/overwrite-free-pockets.md
-      - '180: Canonical Representation': the-i-beam-operator/canonical-representation.md
-      - '181: Unsqueezed Type': the-i-beam-operator/unsqueezed-type.md
-      - '200: Syntax Colouring': the-i-beam-operator/syntax-colouring.md
-      - '201: Syntax Colour Tokens': the-i-beam-operator/syntax-colour-tokens.md
-      - '219: Compress/Decompress Vector of Short Integers': the-i-beam-operator/compress-decompress-vector-of-short-integers.md
-      - '220: Serialise/Deserialise Array': the-i-beam-operator/serialise-deserialise-array.md
-      - '400: Compiler Control': the-i-beam-operator/compiler-control.md
-      - '600: Disable Traps': the-i-beam-operator/disable-traps.md
-      - '739: Temporary Directory': the-i-beam-operator/temporary-directory.md
-      - '900: Called Monadically?': the-i-beam-operator/called-monadically.md
-      - '950: List Loaded Libraries': the-i-beam-operator/list-loaded-libraries.md
-      - '1010: Set Shell Script Debug Options': the-i-beam-operator/set-shell-script-debug-options.md
-      - '1111: Number of Threads': the-i-beam-operator/number-of-threads.md
-      - '1112: Parallel Execution Threshold': the-i-beam-operator/parallel-execution-threshold.md
-      - '1159: Update Function Time and User Stamp': the-i-beam-operator/update-function-time-and-user-stamp.md
-      - '1200: Format Date-Time': the-i-beam-operator/format-datetime.md
-      - '1302: aplcore Parameters': the-i-beam-operator/aplcore-parameters.md
-      - '1500: Hash Array': the-i-beam-operator/hash-array.md
-      - '2000: Memory Manager Statistics': the-i-beam-operator/memory-manager-statistics.md
-      - '2002: Specify Workspace Available': the-i-beam-operator/specify-workspace-available.md
-      - '2007: Disable Global Triggers': the-i-beam-operator/disable-global-triggers.md
-      - '2010: Update DataTable': the-i-beam-operator/update-datatable.md
-      - '2011: Read DataTable': the-i-beam-operator/read-datatable.md
-      - '2014: Remove Data Binding': the-i-beam-operator/remove-data-binding.md
-      - '2015: Create Data Binding Source': the-i-beam-operator/create-data-binding-source.md
-      - '2016: Create .NET Delegate': the-i-beam-operator/create-net-delegate.md
-      - '2017: Identify .NET Type': the-i-beam-operator/identify-net-type.md
-      - '2022: Flush Session Caption': the-i-beam-operator/flush-session-caption.md
-      - '2023: Close all Windows': the-i-beam-operator/close-all-windows.md
-      - '2035: Set Dyalog Pixel Type': the-i-beam-operator/set-dyalog-pixel-type.md
-      - '2041: Override COM Default Value': the-i-beam-operator/override-com-default-value.md
-      - '2100: Export To Memory': the-i-beam-operator/export-to-memory.md
-      - '2101: Close .NET AppDomain': the-i-beam-operator/close-net-appdomain.md
-      - '2250: Verify .NET Interface': the-i-beam-operator/verify-net-interface.md
-      - '2400: Set Workspace Save Options': the-i-beam-operator/set-workspace-save-options.md
-      - '2401: Expose Root Properties': the-i-beam-operator/expose-root-properties.md
-      - '2501: Discard Thread on Exit': the-i-beam-operator/discard-thread-on-exit.md
-      - '2502: Discard Parked Threads': the-i-beam-operator/discard-parked-threads.md
-      - '2503: Mark Thread as Uninterruptible': the-i-beam-operator/mark-thread-as-uninterruptible.md
-      - '2520: Use Separate Thread for .NET': the-i-beam-operator/use-separate-thread-for-net.md
-      - '2704: Continue Autosave': the-i-beam-operator/continue-autosave.md
-      - '3002: Disable Component Checksum Validation': the-i-beam-operator/disable-component-checksum-validation.md
-      - '3012: Enable Compression of Large Components': the-i-beam-operator/enable-compression-of-large-components.md
-      - '3500: Send Text to Ride-embedded Browser': the-i-beam-operator/send-text-to-ride-embedded-browser.md
-      - '3501: Connected to Ride?': the-i-beam-operator/connected-to-ride.md
-      - '3502: Manage Ride Connections': the-i-beam-operator/manage-ride-connections.md
-      - '3535: Scan For Deprecated Files': the-i-beam-operator/scan-for-deprecated-files.md
-      - '4000: Fork New Task': the-i-beam-operator/fork-new-task.md
-      - '4001: Change User': the-i-beam-operator/change-user.md
-      - '4002: Reap Forked Tasks': the-i-beam-operator/reap-forked-tasks.md
-      - '4007: Signal Counts': the-i-beam-operator/signal-counts.md
-      - '5171: Discard Source Information': the-i-beam-operator/discard-source-information.md
-      - '5172: Discard Source Code': the-i-beam-operator/discard-source-code.md
-      - '5176: List Loaded Files': the-i-beam-operator/list-loaded-files.md
-      - '5177: List Loaded File Objects': the-i-beam-operator/list-loaded-file-objects.md
-      - '5178: Remove Loaded File Object Info': the-i-beam-operator/remove-loaded-file-object-info.md
-      - '5179: Loaded File Object Info': the-i-beam-operator/loaded-file-object-info.md
-      - '5581: Unicode Normalisation': the-i-beam-operator/unicode-normalisation.md
-      - '7162: JSON Translate Name': the-i-beam-operator/json-translate-name.md
-      - '8373: Shell Process Control': the-i-beam-operator/shell-process-control.md
-      - '8415: Singular Value Decomposition': the-i-beam-operator/singular-value-decomposition.md
-      - '16808: Sample Probability Distribution': the-i-beam-operator/sample-probability-distribution.md
-      - '50100: Line Count': the-i-beam-operator/line-count.md
-      - Other I-Beams: the-i-beam-operator/supplementary-i-beam-functions.md
   - System Functions:
       - Introduction: system-functions/introduction.md
       - System Functions Categorised:
