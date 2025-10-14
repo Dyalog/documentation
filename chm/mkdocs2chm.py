@@ -595,7 +595,8 @@ def convert_to_html(
         body = body.replace("``", "")  # Empty code blocks aren't rendered correctly
 
         body = fix_links_html(body, version=version)
-        body = remove_footnote_links(body)
+        body = remove_footnote_backlinks(body)
+        body = make_footnote_urls_clickable(body)
         body = fix_external_links(body)
 
         # Extract the H1 content for use in the title tag, setting for_title=True
@@ -1037,20 +1038,20 @@ def fix_links_html(html: str, version: str = None) -> str:
     return str(soup)
 
 
-def remove_footnote_links(html: str) -> str:
+def remove_footnote_backlinks(html: str) -> str:
     """
     Remove linking aspects from footnotes:
     1. Convert footnote reference links to plain superscript text
     2. Remove backlinks from footnote text
-    
+
     Parameters:
         html (str): The HTML content as a string.
-        
+
     Returns:
         str: The modified HTML content.
     """
     soup = BeautifulSoup(html, "html.parser")
-    
+
     # Find all footnote reference links and replace with plain superscript text
     for a_tag in soup.find_all("a", class_="footnote-ref"):
         # Get the footnote number/text
@@ -1060,12 +1061,86 @@ def remove_footnote_links(html: str) -> str:
         sup_tag.string = footnote_text
         # Replace the link with the superscript
         a_tag.replace_with(sup_tag)
-    
+
     # Find all footnote backlinks and remove them
     for a_tag in soup.find_all("a", class_="footnote-backref"):
         # Simply remove the backlink
         a_tag.decompose()
-    
+
+    return str(soup)
+
+
+def make_footnote_urls_clickable(html: str) -> str:
+    """
+    Convert bare URLs in footnote content into clickable links.
+    This is necessary because Python Markdown doesn't automatically convert
+    bare URLs to links in footnotes, making them unclickable in CHM files.
+
+    Parameters:
+        html (str): The HTML content as a string.
+
+    Returns:
+        str: The modified HTML content with clickable URLs in footnotes.
+    """
+    from bs4.element import NavigableString, Tag
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    # Find the footnote div
+    footnote_div = soup.find("div", class_="footnote")
+    if not footnote_div or not isinstance(footnote_div, Tag):
+        return str(soup)
+
+    # Pattern to match URLs (http, https, ftp)
+    url_pattern = re.compile(
+        r'(https?://[^\s<>"{}|\\^`\[\]]+|ftp://[^\s<>"{}|\\^`\[\]]+)',
+        re.IGNORECASE
+    )
+
+    # Find all <p> tags within footnotes that might contain URLs
+    p_tags = footnote_div.find_all("p")
+    if not p_tags:
+        return str(soup)
+
+    for p_tag in p_tags:
+        # We need to work with a copy of contents since we're modifying it
+        if not isinstance(p_tag, Tag):
+            continue
+
+        contents_to_process = list(p_tag.contents)
+
+        for content in contents_to_process:
+            # Only process NavigableString (text) nodes, not tags
+            if isinstance(content, NavigableString) and not isinstance(content, type(soup)):
+                text = str(content)
+                # Check if this text contains a URL
+                if url_pattern.search(text):
+                    # Split the text by URLs and create new elements
+                    new_contents = []
+                    last_end = 0
+
+                    for match in url_pattern.finditer(text):
+                        url = match.group(0)
+                        start, end = match.span()
+
+                        # Add text before the URL
+                        if start > last_end:
+                            new_contents.append(text[last_end:start])
+
+                        # Create a link for the URL
+                        a_tag = soup.new_tag("a", href=url, target="_blank")
+                        a_tag.string = url
+                        new_contents.append(a_tag)
+
+                        last_end = end
+
+                    # Add any remaining text after the last URL
+                    if last_end < len(text):
+                        new_contents.append(text[last_end:])
+
+                    # Replace the original text node with the new contents
+                    content.replace_with(*new_contents)
+
     return str(soup)
 
 
