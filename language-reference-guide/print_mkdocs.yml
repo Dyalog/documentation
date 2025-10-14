@@ -252,6 +252,9 @@ nav:
               - '7162: JSON Translate Name': primitive-operators/i-beam/json-translate-name.md
               - '8373: Shell Process Control': primitive-operators/i-beam/shell-process-control.md
               - '8415: Singular Value Decomposition': primitive-operators/i-beam/singular-value-decomposition.md
+              - '8659: List Shared Code Files/Attached Names': primitive-operators/i-beam/list-shared-code-files-attached-names.md
+              - '8666: Attach/Assimilate/Detach Shared Code Files': primitive-operators/i-beam/attach-assimilate-detach-shared-code-files.md
+              - '8667: Save Shared Code Files': primitive-operators/i-beam/save-shared-code-files.md
               - '16808: Sample Probability Distribution': primitive-operators/i-beam/sample-probability-distribution.md
               - '50100: Line Count': primitive-operators/i-beam/line-count.md
           - Inner Product: primitive-operators/inner-product.md
