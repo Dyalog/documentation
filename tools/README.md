@@ -107,6 +107,11 @@ Check that all files in nav exist:
 docker compose run --rm utils python /utils/check_yml_files.py
 ```
 
+Validate image references in markdown files:
+```
+docker compose run --rm utils python /utils/validate_images.py --output /docs/tools/broken_images.yaml
+```
+
 Add APL symbol synonyms:
 ```
 docker compose run --rm utils python /utils/add_synonyms.py /docs/language-reference-guide/docs/primitive-functions [--dry-run]
