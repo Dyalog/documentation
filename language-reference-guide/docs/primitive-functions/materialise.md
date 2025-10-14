@@ -29,7 +29,7 @@ Otherwise, if `Y` is an array, `Y` is returned.
 
 The following example uses the sample [ComponentFile Class](../../../programming-reference-guide/object-oriented-programming/class-members/properties/component-file-class-example).
 ```apl
-     )Load ComponentFile
+     )LOAD ComponentFile
 ...\Samples\OO4APL\ComponentFile.dws saved ...
       F1←⎕NEW ComponentFile 'test1'
 

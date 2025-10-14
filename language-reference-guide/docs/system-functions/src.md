@@ -22,7 +22,7 @@
 
 ```apl
 
-      )ed ○MyClass
+      )ED ○MyClass
 ```
 ```apl
 

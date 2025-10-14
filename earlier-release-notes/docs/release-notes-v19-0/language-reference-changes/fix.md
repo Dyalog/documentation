@@ -82,7 +82,7 @@ In the final example, the left argument of `2` allows a script containing multip
       src,←':EndNamespace' 'dfn←{⍺ ⍵}' '∇r←tfn'
       src,←'r←33' '∇' ':Class c1' '∇goo' '1'
       src,←'∇' ':EndClass'
-      ≢⎕←2⎕fix src
+      ≢⎕←2⎕FIX src
  c1  tfn  dfn  andys 
 4
 ```

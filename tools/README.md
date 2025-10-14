@@ -88,7 +88,9 @@ From the tools/ directory:
 docker compose run --rm utils python /utils/find_ghost_pages.py --root /docs/mkdocs.yml
 ```
 
-Check for dangling links:
+### Link validation
+
+Check for dangling links via the Markdown source -- note, this can be unreliable:
 
 ```
 docker compose run --rm utils python /utils/dangling_links.py
@@ -114,7 +116,14 @@ Spider the deployed site to check for broken links:
 ```
 docker compose run --rm utils python /utils/check_deployed_links.py \
                    --base-url https://dyalog.github.io/documentation/20.0 \
-                   --output broken_links.txt
+                   --output /docs/tools/broken_links.yaml
+```
+
+If you're checking against a local site build running in Docker, use Docker's internal network:
+```
+docker compose run --rm utils python /utils/check_deployed_links.py \
+                   --base-url http://mkdocs-server:8000 \
+                   --output /docs/tools/broken_links.yaml
 ```
 
 Key points:
@@ -123,6 +132,12 @@ Key points:
 - `/docs` inside the container is mapped to your `DOCS_DIR` from the `.env` file
 - `/utils` inside the container contains all the utility scripts
 - The scripts expect paths relative to the *container's* filesystem, not your host
+
+`http://mkdocs-server:8000` works because:
+
+1. Both containers are in the same Docker Compose network
+2. Docker provides automatic DNS resolution for service names
+3. `mkdocs-server` resolves to the internal IP of the mkdocs container
 
 ### Additional Scripts
 
@@ -152,24 +167,28 @@ You can gather the environment variable settings into a `.env` file which will b
 
 ```
 DOCS_DIR={YOUR_REPO}
+ASSETS_DIR={PATH_TO}/documentation-assets
 ```
 
 Here is mine:
 
 ```
-DOCS_DIR=/Users/stefan/work/dyalog-docs/documentation
+DOCS_DIR=/Users/stefan/work/dyalog-docs/documentation/
+ASSETS_DIR=/Users/stefan/work/dyalog-docs/documentation/documentation-assets
 ```
 
 and for a specific sub-site, in this case `language-reference-guide`:
 
 ```
 DOCS_DIR=/Users/stefan/work/dyalog-docs/documentation/language-reference-guide
+ASSETS_DIR=/Users/stefan/work/dyalog-docs/documentation/documentation-assets
 ```
 
 If you're on Windows, you _must_ use backslashes:
 
 ```
 DOCS_DIR=C:\devt\documentation
+...
 ```
 
 ## Running Docker on Windows

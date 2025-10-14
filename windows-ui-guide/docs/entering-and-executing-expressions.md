@@ -22,7 +22,7 @@ You may delete one or more lines from the Session using the DK command (Ctrl+Del
 
 As you start to enter characters in an APL expression, the *Auto Complete* suggestions pop-up window (AC for short) offers you a choice based upon the characters you have already entered and the current context.
 
-For example, if you enter a `⎕`, AC displays a list of all the system functions and variables. If you then enter the character `r`, the list shrinks to those system functions and variables beginning with the letter r, namely `⎕refs`, `⎕rl`, `⎕rsi`, and `⎕rtl`. Instead of entering the remaining characters, you may select the appropriate choice in the AC list. This is done by pressing the right cursor key.
+For example, if you enter a `⎕`, AC displays a list of all the system functions and variables. If you then enter the character `r`, the list shrinks to those system functions and variables beginning with the letter r, namely `⎕REFS`, `⎕RL`, `⎕RSI`, and `⎕RTL`. Instead of entering the remaining characters, you may select the appropriate choice in the AC list. This is done by pressing the right cursor key.
 
 If you begin to enter a name, AC will display a list of namespaces, variables, functions, operators that are defined in the current namespace. If you are editing a function, AC will also include names that are localised in the function header.
 
@@ -30,7 +30,7 @@ If the current space is a GUI namespace, the list will also include Properties, 
 
 As an additional refinement, AC remembers a certain number of previous auto complete operations, and uses this information to highlight the most recent choice you made.
 
-For example, suppose that you enter the two characters `)c`. AC offers you `)clear` thru' `)cs`, and you choose `)cs` from the list. The next time you enter the two characters `)c`, AC displays the same list of choices, but this time `)cs` is pre-selected.
+For example, suppose that you enter the two characters `)C`. AC offers you `)CLEAR` thru' `)CS`, and you choose `)CS` from the list. The next time you enter the two characters `)C`, AC displays the same list of choices, but this time `)CS` is pre-selected.
 
 You can disable or customise Auto Completion from the *Auto Complete* page in the Configuration dialog box which is described later in this chapter.
 

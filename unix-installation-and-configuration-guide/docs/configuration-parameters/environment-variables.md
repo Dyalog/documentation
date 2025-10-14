@@ -2,7 +2,7 @@
 
 Environment variables are used to configure various aspects of Dyalog APL. The complete list appears in the *Dyalog for Microsoft Windows Installation and Configuration Guide: Configuration Parameters*; this section discusses those variables which are of particular importance to the Non-GUI versions of Dyalog APL, and lists those that have meaning to the UNIX versions. Additionally there some non-GUI-specific variables which are described below and some which either do not apply, or may not work as the user might at first expect.
 
-Under UNIX, all environment variables should appear in UPPER CASE. For example, to set the default value of `⎕ml` to 3, then
+Under UNIX, all environment variables should appear in UPPER CASE. For example, to set the default value of `⎕ML` to 3, then
 ```
 $ export DEFAULT_ML=3
 ```
@@ -13,16 +13,16 @@ Many of these environment variables are set in the mapl script; their values are
 
 The environment variables are broken down into several tables:
 
-- [](#E1): The most commonly defined and used for non-GUI versions of Dyalog APL under UNIX. Most of these variables are essential for a usable APL session
-- [](#E2): Variables used to control default values in the workspace
-- [](#E3): Variables used to configure the Session
-- [](#E4): Miscellaneous Variables used by non-GUI Dyalog APL
-- [](#E5): Editor-related environment variables
-- [](#E6): Tracer-related environment variables
-- [](#E7): Ride-related environment variables
-- [](#E8): SALT and User Command-related environment variables
+- [Table 1](#_table-1): The most commonly defined and used for non-GUI versions of Dyalog APL under UNIX. Most of these variables are essential for a usable APL session
+- [Table 2](#_table-2): Variables used to control default values in the workspace
+- [Table 3](#_table-3): Variables used to configure the Session
+- [Table 4](#_table-4): Miscellaneous Variables used by non-GUI Dyalog APL
+- [Table 5](#_table-5): Editor-related environment variables
+- [Table 6](#_table-6): Tracer-related environment variables
+- [Table 7](#_table-7): Ride-related environment variables
+- [Table 8](#_table-8): SALT and User Command-related environment variables
 
-Table: Commonly used Variables {: #E1 }
+Table: Commonly used Variables
 
 |Variable|Notes|
 |---|---|
@@ -48,7 +48,7 @@ is used.
 
 Under macOS and Linux, if the configuration parameter **ENABLE_CEF** is 1, Auxiliary Processors cannot be used (they hang on error). The default value is 1 unless you are not running under a desktop (for example, you are running Dyalog in a PuTTY session when the default is 0).
 
-Table: Default workspace values {: #E2 }
+Table: Default workspace values
 
 |Variable|Notes|
 |---|---|
@@ -64,7 +64,7 @@ For numeric values, the interpreter takes the value of the environment variable,
 
 This string, now of digits only, is converted into an integer. If the resulting value is valid, then that is the value that will be used in the workspace. If the resulting value is invalid, then the default value will be used instead.
 
-Table: Variables used to configure the Session {: #E3 }
+Table: Variables used to configure the Session
 
 |Variable|Notes|
 |---|---|
@@ -86,7 +86,7 @@ Example:
 HISTORY_SIZE=4K my_apl_startup_script
 ```
 
-Table: Miscellaneous Variables used by non-GUI Dyalog APL {: #E4 }
+Table: Miscellaneous Variables used by non-GUI Dyalog APL
 
 |---|---|
 |Variable|Notes|
@@ -98,7 +98,7 @@ Table: Miscellaneous Variables used by non-GUI Dyalog APL {: #E4 }
 
 These are the remaining variables listed in the *Dyalog for Microsoft Windows Installation and Configuration Guide* which are effective in the non-GUI UNIX versions of Dyalog APL
 
-Table: Editor-related environment variables {: #E5 }
+Table: Editor-related environment variables
 
 |---|---|
 |Variable|Notes|
@@ -106,19 +106,19 @@ Table: Editor-related environment variables {: #E5 }
 |`EDITOR_COLUMNS_*`|See [Configuring the Editor](../configuring-the-editor.md). Can be one of `EDITOR_COLUMNS_CHARACTER_ARRAY EDITOR_COLUMNS_CLASS EDITOR_COLUMNS_FUNCTION EDITOR_COLUMNS_NAMESPACE EDITOR_COLUMNS_NUMERIC_ARRAY`|
 |`DYALOG_DISCARD_FN_SOURCE`|Specifies whether source code is retained in the workspace|
 
-Table: Tracer-related environment variables {: #E6 }
+Table: Tracer-related environment variables
 
 |--------------|--------------------------------------------------------------------------------------|
 |Variable      |Notes                                                                                 |
 |`TRACE_ON_ERROR`|With this is set to 1 (the default) the tracer is opened if an untrapped error occurs.|
 
-Table: Ride-related environment variables {: #E7 }
+Table: Ride-related environment variables
 
 |---------|----------------------------------------------------------------------------|
 |Variable |Notes                                                                       |
 |`RIDE_INIT`|Enables and configures Ride; see the [Ride User Guide](https://dyalog.github.io/ride) for more information.|
 
-Table: SALT and user commands related environment variables {: #E8 }
+Table: SALT and user commands related environment variables
 
 |---|---|
 |Variable|Notes|

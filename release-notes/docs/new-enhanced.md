@@ -90,20 +90,20 @@ The single/first element of `X` (which specifies `content`) can now be a matrix.
 
 The following I&#8209;beams have been added:
 
-- [`13⌶`](../../language-reference-guide/the-i-beam-operator/log-use-of-deprecated-features/) – Log Use of Deprecated Features  
+- [`13⌶`](../../language-reference-guide/primitive-operators/i-beam/log-use-of-deprecated-features/) – Log Use of Deprecated Features  
 Records information in the log file set by `109⌶` about the specified deprecated feature names or keywords
-- [`43⌶`](../../language-reference-guide/the-i-beam-operator/monadic-operator-generator/) – Monadic Operator Generator  
+- [`43⌶`](../../language-reference-guide/primitive-operators/i-beam/monadic-operator-generator/) – Monadic Operator Generator  
 Generates a monadic operator with specified functionality. The exact functionaity of the generated operator depend on the right argument. Current options are:  
     - `43⌶632` – Generics Operator<br />Generates a .NET-specific operator that can create concrete versions of generic classes and execute generic methods<br />This is likely to be superseded by a new language construct in Dyalog v21.0.
-- [`109⌶`](../../language-reference-guide/the-i-beam-operator/deprecated-feature-log-file/) – Deprecated Feature Log File  
+- [`109⌶`](../../language-reference-guide/primitive-operators/i-beam/log-file-for-deprecations/) – Deprecated Feature Log File  
 Manages the file used to log the use of deprecated features.
-- [`120⌶`](../../language-reference-guide/the-i-beam-operator/generate-uuid/) – Generate UUID  
+- [`120⌶`](../../language-reference-guide/primitive-operators/i-beam/generate-uuid/) – Generate UUID  
 Generates a UUID (Universally Unique IDentifier) according to the RFC 9562 specification.
-- [`3535⌶`](../../language-reference-guide/the-i-beam-operator/scan-for-deprecated-files/) – Scan For Deprecated Files  
+- [`3535⌶`](../../language-reference-guide/primitive-operators/i-beam/scan-for-deprecated-files/) – Scan For Deprecated Files  
 Scans the specified directory (and, optionally, sub-directories) for deprecated saved workspaces, component files, and external variables.
-- [`5581⌶`](../../language-reference-guide/the-i-beam-operator/unicode-normalisation/) – Unicode Normalisation  
+- [`5581⌶`](../../language-reference-guide/primitive-operators/i-beam/unicode-normalisation/) – Unicode Normalisation  
 Applies the specified Unicode normalisation form to given character data.
-- [`8373⌶`](../../language-reference-guide/the-i-beam-operator/shell-process-control/) – Shell Process Control  
+- [`8373⌶`](../../language-reference-guide/primitive-operators/i-beam/shell-process-control/) – Shell Process Control  
 Provides a way to determine the process IDs of processes started by `⎕SHELL`, as well as enabling the sending of signals to any of those processes.
 
 The following I-beams have been removed:
@@ -203,6 +203,6 @@ The new version of PCRE is not 100% compatible with the previous version. Althou
 
 In .NET, a _generic_ class is a class that has type parameters which must be given values to create a concrete version of the class. Similarly, a generic method has type parameters which must be specified before the method can be called. 
 
-The introduction of [`43⌶632`](../../language-reference-guide/the-i-beam-operator/monadic-operator-generator/) means that the .NET interface now supports creating concrete versions of generic classes, instantiating them, and calling generic methods. For more information, see the [_.NET Interface Guide_](../../files/dotNET_Interface_Guide.pdf).
+The introduction of [`43⌶632`](../../language-reference-guide/primitive-operators/i-beam/monadic-operator-generator/) means that the .NET interface now supports creating concrete versions of generic classes, instantiating them, and calling generic methods. For more information, see the [_.NET Interface Guide_](../../files/dotNET_Interface_Guide.pdf).
 
 The .NET Framework interface does not support generic classes.

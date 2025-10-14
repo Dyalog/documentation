@@ -28,7 +28,7 @@ $ ./BuildID magic
 
 In APL:
 ```apl
-      +2 ⎕nq '.' 'GetbuildID'
+      +2 ⎕NQ '.' 'GetbuildID'
 70a3446e
       magicfile←'/opt/mdyalog/20.0/64/unicode/magic'
       +2 ⎕nq '.' 'GetBuildID' magicfile

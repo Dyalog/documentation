@@ -17,7 +17,7 @@ If `ws` is a full or relative pathname, only the specified directory is examined
 
 
 
-If the workspace name is not valid or does not exist or if access to the workspace is not authorised, the system reports `ws not found`.  If the workspace name identifies a file or directory that is not a workspace, the system reports  `wsname is not a ws`.  If successfully loaded, the system reports workspace name `saved`, followed by the date and time when the workspace was last saved.  If the workspace is too large to be loaded into the APL session, the system reports `ws too large`.  After loading the workspace, the current namespace is set to `#` and the latent expression (`⎕LX`) is executed unless APL was invoked with the **-x** option. If the workspace was saved with a suspension, typing the expression `→1+⎕lc` will resume execution and switch back into the namespace associated with the suspended function.
+If the workspace name is not valid or does not exist or if access to the workspace is not authorised, the system reports `ws not found`.  If the workspace name identifies a file or directory that is not a workspace, the system reports  `wsname is not a ws`.  If successfully loaded, the system reports workspace name `saved`, followed by the date and time when the workspace was last saved.  If the workspace is too large to be loaded into the APL session, the system reports `ws too large`.  After loading the workspace, the current namespace is set to `#` and the latent expression (`⎕LX`) is executed unless APL was invoked with the **-x** option. If the workspace was saved with a suspension, typing the expression `→1+⎕LC` will resume execution and switch back into the namespace associated with the suspended function.
 
 
 If the workspace contains any GUI objects whose `Visible` property is 1, these objects will be displayed.  If the workspace contains a non-empty `⎕SM` but does not contain an SM GUI object, the form defined by `⎕SM` will be displayed in a window on the screen.
@@ -31,13 +31,13 @@ Holding the Shift key down while selecting a workspace from the session file men
 <h2 class="example">Example</h2>
 ```apl
 
-      )load dfns
+      )LOAD dfns
 C:\Program Files\Dyalog\Dyalog APL-64 ...
 
 An assortment of D Functions and Operators.
 
       tree #                ⍝ Workspace map.
-      ↑¯10↑↓attrib ⎕nl 3 4  ⍝ What's new?
+      ↑¯10↑↓attrib ⎕NL 3 4  ⍝ What's new?
       notes find 'Word'     ⍝ Apropos "Word".
 ```
 

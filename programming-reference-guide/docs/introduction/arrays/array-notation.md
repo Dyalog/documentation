@@ -15,7 +15,7 @@ Some examples of different kinds of arrays defined with array notation.
 ### Nested Vector { .example }
 
 ```apl
-      ⍴z← (0 6 1 8 ⋄ 2*0 2 0 2 1
+      ⍴z← (0 6 1 8 ⋄ 2*0 2 0 2 1  ⍝ four-element vector over two lines
       2 7 1 8 2 8 ⋄ 3 1 4 1 5)
 4
       z
@@ -28,6 +28,8 @@ Some examples of different kinds of arrays defined with array notation.
 ┌─────┬─────┬────┐
 │Three│Blind│Mice│
 └─────┴─────┴────┘
+      (,⊂'Three') ≡ ('Three' ⋄)  ⍝ single-element vector
+1
 ```
 
 ### Matrix { .example }
@@ -75,8 +77,6 @@ Mice |
 1
 2
 3
-      (,⊂'Three') ≡ ('Three' ⋄)
-1
       ⍴¨cm3←[('Three' ⋄)
              ('Blind' ⋄)
              ('Mice'  ⋄)]
@@ -165,6 +165,8 @@ Any expressions are evaluated in the scope around the namespace.
 bob
       ns.short  ⍝ unaffected by inner assignment
 jill
+      (y:(x:'hello')).y  ⍝ inner namespace's parent is NOT outer namespace
+#.[Namespace]
 ```
 
 ## Specification
@@ -189,11 +191,15 @@ A vector is defined by a parenthesised, separated list of two or more value expr
 
 Empty value expressions define no vector elements.
 
+At least one value expression must be non-empty.
+
 ### Matrices And Higher-rank Arrays
 
-An array of rank 2 or higher is defined by a bracketed, separated list of value expressions, which constitute the major cells of the array.
+An array of rank 2 or higher is defined by a bracketed, separated list of two or more value expressions, which constitute the major cells of the array.
 
 Short elements are padded to fill, and scalars are treated as length-1 vectors.
+
+At least one value expression must be non-empty.
 
 !!! info "Information"
 

@@ -47,15 +47,15 @@ GUI objects are named **relative** to the current namespace.  The following exa
 <h2 class="example">Example</h2>
 ```apl
       f←⎕NEW⊂'Form'
-      f.n←⎕ns''                  ⍝ A non-GUI object       
+      f.n←⎕NS''                  ⍝ A non-GUI object       
       f.l←f.⎕NEW⊂'Label'         ⍝ A reference to a Label
-      'f.b1'⎕wc'Button'          ⍝ A named Button
-      f.(b2←⎕new ⊂'Button')      ⍝ A reference to a Button
-      ⎕wn 'f'
+      'f.b1'⎕WC'Button'          ⍝ A named Button
+      f.(b2←⎕NEW ⊂'Button')      ⍝ A reference to a Button
+      ⎕WN 'f'
  [Form].b1
-      ⎕wn f
+      ⎕WN f
  #.[Form].[Label]  #.[Form].b1  #.[Form].[Button]
-      'Button' ⎕wn f
+      'Button' ⎕WN f
  #.[Form].b1  #.[Form].[Button]
 ```
 

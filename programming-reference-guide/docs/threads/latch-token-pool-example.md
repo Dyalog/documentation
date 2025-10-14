@@ -13,7 +13,7 @@ A visual example of a latch might be a ferry terminal, where cars accumulate in 
  
     ∇ ferry ...
 [1]   arrives in port
-[2]   ⎕TPUT(↑,/⎕treq ⎕tnums)∩tkt  ⍝ ferry tickets for all.
+[2]   ⎕TPUT(↑,/⎕TREQ ⎕TNUMS)∩tkt  ⍝ ferry tickets for all.
 [3]   ...
 ```
 

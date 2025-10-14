@@ -2,10 +2,10 @@
 
 Load the workspace `aplclasses1.dws`, then view the `Primitives` class:
 ```apl
-      )load D:\aplclasses\aplclasses1\aplclasses1.dws
+      )LOAD D:\aplclasses\aplclasses1\aplclasses1.dws
 D:\aplclasses\aplclasses1\aplclasses1.dws ⍝ saved ...
 
-      )ed ○APLClasses.Primitives
+      )ED ○APLClasses.Primitives
 ```
 !!! note
     The character before the name `APLClasses.Primitives`, `○`, is typically obtained with <kbd>Ctrl</kbd>-<kbd>O</kbd>. It is used to tell the editor to edit a class.

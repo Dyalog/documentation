@@ -102,7 +102,7 @@ Execute the following statement to make `Loan` an OLEServer object:
 
 Next, change space into the `Loan` namespace and use `⎕NL` to display the names of the two objects therein:
 ```apl
-      )cs Loan
+      )CS Loan
 #.Loan
       ⎕NL 2 3
 CalcPayments

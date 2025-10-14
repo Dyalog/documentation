@@ -1,6 +1,5 @@
 {
     "exclude": [
-        "UNIX Installation",
-        "UNIX User Guide"
+        "Dyalog for UNIX"
     ]
 }

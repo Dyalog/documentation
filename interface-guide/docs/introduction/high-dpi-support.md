@@ -50,7 +50,7 @@ If you are using `'ScaledPixel'`, this means that your fonts will also be scaled
 
 ## Set Dyalog Pixel Type (`2035⌶`)
 
-This function provides the means to set the meaning of `Coord 'Pixel'` programmatically and dynamically. This function affects the way that Pixel coordinates are subsequently treated. For further information, see [Set Dyalog Pixel Type](../../../language-reference-guide/the-i-beam-operator/set-dyalog-pixel-type).
+This function provides the means to set the meaning of `Coord 'Pixel'` programmatically and dynamically. This function affects the way that Pixel coordinates are subsequently treated. For further information, see [Set Dyalog Pixel Type](../../../language-reference-guide/primitive-operators/i-beam/set-dyalog-pixel-type).
 
 ## Enabling DWM Scaling
 

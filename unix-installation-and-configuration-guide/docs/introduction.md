@@ -8,7 +8,7 @@ Version {{ version_majmin }} supports Ride, the Dyalog Remote IDE, versions 3 or
 
 Throughout the document the  directory in which Dyalog APL has been installed is referred to as **$DYALOG**; this is because it is the name of an environment variable, whose value can most easily found by running the following expression in Dyalog:
 ```apl
-      +2 ⎕nq '.' 'GetEnvironment' 'DYALOG'
+      +2 ⎕NQ '.' 'GetEnvironment' 'DYALOG'
 ```
 
 Two versions of the interpreter are shipped with each Dyalog APL release: the development version and the server version.

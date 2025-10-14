@@ -83,10 +83,9 @@ jobs:
 
     - name: Deploy documentation
       run: |
+        mike deploy --push ${{ inputs.version }}
         if [ "${{ inputs.update_latest }}" = "true" ]; then
-          mike deploy --push ${{ inputs.version }} latest
-        else
-          mike deploy --push ${{ inputs.version }}
+          mike deploy --push --update-aliases ${{ inputs.version }} latest
         fi
     
     - name: Copy Jenkins files to gh-pages

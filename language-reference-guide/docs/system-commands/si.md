@@ -82,7 +82,7 @@ The state indicator for a particular thread `tn` may be displayed by specifying 
 ┌→─────────┐
 │9 10 11 12│
 └~─────────┘
-       )si
+       )SI
 ·   #.foo[1]
 &9
 ·   #.foo[1]
@@ -91,7 +91,7 @@ The state indicator for a particular thread `tn` may be displayed by specifying 
 &11
 ·   #.foo[1]
 &12
-      )si -tid=11
+      )SI -tid=11
 #.foo[1]
 
 ```

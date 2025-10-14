@@ -15,7 +15,7 @@ Alternatively, type `)ED` followed by the pathname to the file. To identify the 
 
       )ED \x.txt  ⍝ x.txt in current directory
 
-      )ed / x.txt ⍝ ditto
+      )ED / x.txt ⍝ ditto
 
 ```
 
@@ -33,13 +33,13 @@ When you exit the editor with *Exit and fix*,  you will be offered a number of a
 
 **Saving a Text file**
 
-Note that if you choose *Save as text in the workspace*, information about the file and the text variable associated with it is retained in the workspace. This information  may be obtained using `5176⌶` and `5177⌶`. See [List Loaded Files](../../language-reference-guide/the-i-beam-operator/list-loaded-files) and [List Loaded File Objects](../../language-reference-guide/the-i-beam-operator/list-loaded-file-objects).
+Note that if you choose *Save as text in the workspace*, information about the file and the text variable associated with it is retained in the workspace. This information  may be obtained using `5176⌶` and `5177⌶`. See [List Loaded Files](../../language-reference-guide/primitive-operators/i-beam/list-loaded-files) and [List Loaded File Objects](../../language-reference-guide/primitive-operators/i-beam/list-loaded-file-objects).
 
 ![](img/editing-text-files-save-script-file-content.png)
 
 **Saving a Script file**
 
-Note that if you choose *Fix as code in the workspace* or *Save as text in the workspace*, information about the file and the text variable associated with it is retained in the workspace. This information  may be obtained using `5176⌶` and `5177⌶`. See [List Loaded Files](../../language-reference-guide/the-i-beam-operator/list-loaded-files) and [List Loaded File Objects](../../language-reference-guide/the-i-beam-operator/list-loaded-file-objects).
+Note that if you choose *Fix as code in the workspace* or *Save as text in the workspace*, information about the file and the text variable associated with it is retained in the workspace. This information  may be obtained using `5176⌶` and `5177⌶`. See [List Loaded Files](../../language-reference-guide/primitive-operators/i-beam/list-loaded-files) and [List Loaded File Objects](../../language-reference-guide/primitive-operators/i-beam/list-loaded-file-objects).
 
 ## Fix as code in the workspace
 

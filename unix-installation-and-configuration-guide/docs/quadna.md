@@ -34,7 +34,7 @@ Under AIX, `sharedlib` is defined as:
 
 Under Linux, it is necessary to identify the shared library:
 ```apl
-      )copy quadna NonWindows.libc
+      )COPY quadna NonWindows.libc
       sharedlib←libc ⍬
 ```
 
@@ -56,7 +56,7 @@ where pid_t is a 4-byte integer.
 The APL code to instantiate this function is
 ```apl
 
-      ⎕na 'I4 ',sharedlib,'|getpid'
+      ⎕NA 'I4 ',sharedlib,'|getpid'
 		
 ```
 
@@ -75,7 +75,7 @@ char *getenv(const char *name)
        'get'⎕NA dyalib,'|STRNCPY >0U1[] P U4'
        P←getenv⊂'UTF-8'⎕UCS ⎕UCS envvar
        →0⍴⍨P=0
-       r←'UTF-8'⎕ucs get 4096 P 4096
+       r←'UTF-8'⎕UCS get 4096 P 4096
       ∇
 
       GetEnv'MAXWS'
@@ -90,7 +90,7 @@ char *getenv(const char *name)
 The dyalog shared libary under UNIX includes the function `geterrno`. This returns the current value of errno; be aware that it may not have the same value as at the point when the error was raised. To use this function:
 ```apl
 
-      ⎕na 'I ',dyalib,'|geterrno'
+      ⎕NA 'I ',dyalib,'|geterrno'
       geterrno
 5
       		

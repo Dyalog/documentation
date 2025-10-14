@@ -146,21 +146,30 @@ def _process_nav_item(item: dict | str, parent: Node, project="project") -> None
 def _traverse(node: Node, toc: IO[str]) -> None:
     # Just clean up quotes and backticks (HTML tags and quad already removed during parsing)
     title = node.name.replace("`", "").replace('"', "")
-    
-    # Check if this directory has an "Introduction" child that should be used as its link
-    intro_file = None
+
+    # Determine a linked page for directory nodes, if available
+    linked_file = None
     if node.children:
+        # Prefer an explicit index page within this section
         for child in node.children:
-            if child.name == "Introduction" and not child.isdir() and child.html_name:
-                intro_file = child.html_name
-                break
-    
+            if not child.isdir() and child.html_name:
+                base = os.path.basename(child.html_name).lower()
+                if base in ("index.htm", "index.html"):
+                    linked_file = child.html_name
+                    break
+        # Fall back to a child named "Introduction" if present
+        if linked_file is None:
+            for child in node.children:
+                if child.name == "Introduction" and not child.isdir() and child.html_name:
+                    linked_file = child.html_name
+                    break
+
     # Write the entry with or without a Local parameter
-    if intro_file:
-        toc.write(FILE_ENTRY.format(name=title, file=intro_file))
+    if linked_file:
+        toc.write(FILE_ENTRY.format(name=title, file=linked_file))
     else:
         toc.write(DIR_ENTRY.format(name=title))
-    
+
     if node.children:  # Only write <ul> if there are children
         toc.write("<ul>\n")
         for child in node.children:
@@ -224,6 +233,8 @@ def parse_mkdocs_yml(yml_file: str, remove: List[str]) -> dict:
     Read and parse the mkdocs.yml files. The monorepo plugin references
     the sub-document mkdocs.yml files, which we expand in place to produce
     the complete state.
+    
+    The remove list can contain section group names to exclude entire groups.
     """
 
     yaml = YAML()
@@ -231,9 +242,20 @@ def parse_mkdocs_yml(yml_file: str, remove: List[str]) -> dict:
         data = yaml.load(f)
 
     if remove:
-        data["nav"] = [
-            item for item in data["nav"] if not any(key in item for key in remove)
-        ]
+        # Filter out nav items that match the exclusion list
+        # This now handles both direct nav items and section groups
+        filtered_nav = []
+        for item in data["nav"]:
+            # Get the top-level key (which could be a section group name)
+            if isinstance(item, dict):
+                key = next(iter(item.keys()))
+                # Skip this entire item if its key is in the remove list
+                if key not in remove:
+                    filtered_nav.append(item)
+            else:
+                # Non-dict items (shouldn't happen in normal mkdocs.yml)
+                filtered_nav.append(item)
+        data["nav"] = filtered_nav
 
     def resolve_includes(data: dict, base_path: str) -> dict:
         if isinstance(data, dict):
@@ -295,6 +317,7 @@ def generate_toc(yml_data: dict, project="project"):
     toc.write("</ul>\n")
     toc.write("</body></html>\n")
     toc.close()
+    return None
 
 
 def find_source_files(topdir: str, subdirs: List[str]) -> Tuple[List[str], List[str]]:
@@ -494,6 +517,7 @@ def convert_to_html(
     transforms: List[Callable[[str], str]],
     project: str,
     top_level_files: List[str],
+    version: str = None,
 ) -> Tuple[List[str], List[str]]:
     """
     Convert each Markdown file and convert to HTML, using the same rendering library as
@@ -570,8 +594,9 @@ def convert_to_html(
 
         body = body.replace("``", "")  # Empty code blocks aren't rendered correctly
 
-        body = fix_links_html(body)
-        body = remove_footnote_links(body)
+        body = fix_links_html(body, version=version)
+        body = remove_footnote_backlinks(body)
+        body = make_footnote_urls_clickable(body)
         body = fix_external_links(body)
 
         # Extract the H1 content for use in the title tag, setting for_title=True
@@ -758,6 +783,9 @@ def find_nav_files_and_dirs(
     """
     Extract both top-level directories (from !include directives) and standalone Markdown files
     directly listed in the nav section of the mkdocs.yml file.
+    
+    Handles both direct includes and section groups containing includes.
+    The remove list can contain section group names to exclude entire groups.
 
     Returns:
         Tuple[List[str], List[str]]: (included_dirs, standalone_files)
@@ -769,16 +797,28 @@ def find_nav_files_and_dirs(
     included_dirs = []
     standalone_files = []
 
+    def process_nav_value(value):
+        """Recursively process nav values to find !include directives."""
+        if isinstance(value, str):
+            if m := re.match(r'!include\s+([^"]+)', value):
+                included_dirs.append(m.group(1))  # Path from !include
+            elif value.endswith(".md") and not value.endswith("-print.md"):
+                standalone_files.append(
+                    os.path.join("docs", value)
+                )  # Direct .md file reference
+        elif isinstance(value, list):
+            # Section group - process each item in the list
+            for item in value:
+                if isinstance(item, dict):
+                    for _, subvalue in item.items():
+                        process_nav_value(subvalue)
+
     for d in data["nav"]:
-        key, value = next(iter(d.items()))
-        if key not in remove:
-            if isinstance(value, str):
-                if m := re.match(r'!include\s+([^"]+)', value):
-                    included_dirs.append(m.group(1))  # Path from !include
-                elif value.endswith(".md") and not value.endswith("-print.md"):
-                    standalone_files.append(
-                        os.path.join("docs", value)
-                    )  # Direct .md file reference
+        if isinstance(d, dict):
+            key, value = next(iter(d.items()))
+            # Skip this entire nav item (including section groups) if key is in remove list
+            if key not in remove:
+                process_nav_value(value)
 
     return included_dirs, standalone_files
 
@@ -934,15 +974,17 @@ def table_captions(body: str) -> str:
     )  # Update table references
 
 
-def fix_links_html(html: str) -> str:
+def fix_links_html(html: str, version: str = None) -> str:
     """
     Applies the link transformations to an HTML document:
     1. Links with targets ending in ".md" are changed to ".htm".
     2. Links without extensions and leading "../" are lifted one relative level, and suffixed with ".htm".
     3. Off-site links starting with "http" remain unchanged.
+    4. Links containing "/files/" are converted to external URLs pointing to docs.dyalog.com.
 
     Parameters:
         html (str): The HTML content as a string.
+        version (str): The version string for external file links (e.g., "20.0")
 
     Returns:
         str: The modified HTML content.
@@ -954,6 +996,20 @@ def fix_links_html(html: str) -> str:
         """
         if href.startswith("http"):  # Off-site link: leave unchanged
             return href
+
+        # Check if this is a /files/ link that should be converted to external URL
+        # Look for patterns like ../files/ or ../../files/ etc.
+        if "/files/" in href:
+            # Extract the part after /files/
+            files_index = href.index("/files/") + len("/files/")
+            file_path = href[files_index:]
+            # Use version if provided, otherwise default to 20.0
+            ver = version if version else "20.0"
+            return f"https://docs.dyalog.com/{ver}/files/{file_path}"
+
+        # Remove trailing slash if present
+        if href.endswith("/"):
+            href = href[:-1]
 
         path, name = os.path.split(href)
         base, ext = os.path.splitext(name)
@@ -982,20 +1038,20 @@ def fix_links_html(html: str) -> str:
     return str(soup)
 
 
-def remove_footnote_links(html: str) -> str:
+def remove_footnote_backlinks(html: str) -> str:
     """
     Remove linking aspects from footnotes:
     1. Convert footnote reference links to plain superscript text
     2. Remove backlinks from footnote text
-    
+
     Parameters:
         html (str): The HTML content as a string.
-        
+
     Returns:
         str: The modified HTML content.
     """
     soup = BeautifulSoup(html, "html.parser")
-    
+
     # Find all footnote reference links and replace with plain superscript text
     for a_tag in soup.find_all("a", class_="footnote-ref"):
         # Get the footnote number/text
@@ -1005,12 +1061,86 @@ def remove_footnote_links(html: str) -> str:
         sup_tag.string = footnote_text
         # Replace the link with the superscript
         a_tag.replace_with(sup_tag)
-    
+
     # Find all footnote backlinks and remove them
     for a_tag in soup.find_all("a", class_="footnote-backref"):
         # Simply remove the backlink
         a_tag.decompose()
-    
+
+    return str(soup)
+
+
+def make_footnote_urls_clickable(html: str) -> str:
+    """
+    Convert bare URLs in footnote content into clickable links.
+    This is necessary because Python Markdown doesn't automatically convert
+    bare URLs to links in footnotes, making them unclickable in CHM files.
+
+    Parameters:
+        html (str): The HTML content as a string.
+
+    Returns:
+        str: The modified HTML content with clickable URLs in footnotes.
+    """
+    from bs4.element import NavigableString, Tag
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    # Find the footnote div
+    footnote_div = soup.find("div", class_="footnote")
+    if not footnote_div or not isinstance(footnote_div, Tag):
+        return str(soup)
+
+    # Pattern to match URLs (http, https, ftp)
+    url_pattern = re.compile(
+        r'(https?://[^\s<>"{}|\\^`\[\]]+|ftp://[^\s<>"{}|\\^`\[\]]+)',
+        re.IGNORECASE
+    )
+
+    # Find all <p> tags within footnotes that might contain URLs
+    p_tags = footnote_div.find_all("p")
+    if not p_tags:
+        return str(soup)
+
+    for p_tag in p_tags:
+        # We need to work with a copy of contents since we're modifying it
+        if not isinstance(p_tag, Tag):
+            continue
+
+        contents_to_process = list(p_tag.contents)
+
+        for content in contents_to_process:
+            # Only process NavigableString (text) nodes, not tags
+            if isinstance(content, NavigableString) and not isinstance(content, type(soup)):
+                text = str(content)
+                # Check if this text contains a URL
+                if url_pattern.search(text):
+                    # Split the text by URLs and create new elements
+                    new_contents = []
+                    last_end = 0
+
+                    for match in url_pattern.finditer(text):
+                        url = match.group(0)
+                        start, end = match.span()
+
+                        # Add text before the URL
+                        if start > last_end:
+                            new_contents.append(text[last_end:start])
+
+                        # Create a link for the URL
+                        a_tag = soup.new_tag("a", href=url, target="_blank")
+                        a_tag.string = url
+                        new_contents.append(a_tag)
+
+                        last_end = end
+
+                    # Add any remaining text after the last URL
+                    if last_end < len(text):
+                        new_contents.append(text[last_end:])
+
+                    # Replace the original text node with the new contents
+                    content.replace_with(*new_contents)
+
     return str(soup)
 
 
@@ -1151,18 +1281,31 @@ def add_langref_disambiguation_pages(root: Node, project: str) -> None:
     """
     print("Post-processing TOC to add Language Reference disambiguation pages...")
 
-    # First find the "Language Reference" node
+    # First find the "Dyalog APL Language" node which might be under "Core Reference" section group
     lang_ref_node = None
+    
+    # Check direct children first
     for child in root.children:
-        if child.name == "Language Reference":
+        if child.name == "Dyalog APL Language":
             lang_ref_node = child
             break
+    
+    # If not found, check under section groups
+    if not lang_ref_node:
+        for child in root.children:
+            if child.name == "Core Reference" and child.children:
+                for subchild in child.children:
+                    if subchild.name == "Dyalog APL Language":
+                        lang_ref_node = subchild
+                        break
+                if lang_ref_node:
+                    break
 
     if not lang_ref_node:
-        print("  Warning: Language Reference node not found in TOC")
+        print("  Warning: Dyalog APL Language node not found in TOC")
         return
 
-    # Then find the "Symbols" node under "Language Reference"
+    # Then find the "Symbols" node under "Dyalog APL Language"
     symbols_node = None
     for child in lang_ref_node.children:
         if child.name == "Symbols":
@@ -1357,6 +1500,7 @@ if __name__ == "__main__":
         transforms=[table_captions],
         project=args.project_dir,
         top_level_files=standalone_files_abs,
+        version=version,
     )
     
     # Remove excluded files from md_files for indexing
@@ -1375,6 +1519,8 @@ if __name__ == "__main__":
     write_index_data(idx, f"{args.project_dir}/_index.hhk")
 
     print(f"Converted {len(md_files)} Markdown files to HTML.")
+
+    # No additional redirect helper pages
 
     # Generate the CHM project config file
     chm_name = "dyalog.chm"

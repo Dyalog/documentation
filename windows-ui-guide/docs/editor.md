@@ -85,8 +85,6 @@ Function or operator<br>![](img/editor-toolbar-function.png)
 
 Class or namespace script<br>![](img/editor-toolbar-script.png)
 
-In the table below, the first image shows the appearance of the toolbutton with Native Look and Feel enabled; the second with it disabled.
-
 |Button|Description|
 |---|---|
 |![](img/trace-theme-14-00.png) ![](img/editor-line-numbers-icon.png) Toggle line numbers|Toggles Line numbers on/off|
@@ -342,7 +340,7 @@ When you are editing a function, outlining identifies the blocks of code within 
 
 The picture below shows the result of opening the function `⎕SE.cbtop.TB_POPUP`.
 ```apl
-      )ed ⎕SE.cbtop.TB_POPUP
+      )ED ⎕SE.cbtop.TB_POPUP
 ```
 
 ![](img/editor-outlining-1.png)
@@ -388,7 +386,7 @@ The Editor allows you to edit arbitrary arrays using [array notation](../../prog
 
 Any of the following invokes it:
 
--   Within the **Editor**, invoke the _Edit_ command (**<ED>**) when the cursor is not over any name.
+-   Within the **Editor**, invoke the _Edit_ command (**<ED\>**) when the cursor is not over any name.
 -   In the **session**, call the system command `)ED` and prefix the variable name with a diamond character, for example, `)ED ⋄foo`.
 -   In the **session**, call the system function `⎕ED` with a left argument `'⋄'`, for example, `'⋄' ⎕ED 'foo'`.
 -   In the **Object** toolbar, click the ![Edit Array Icon](img/edit-array-icon.png) button when the cursor is over the name of an array. This opens the array in the Editor in the same way as `)ED ⋄foo`.
@@ -399,20 +397,20 @@ The Editor presents the array for you to edit in array notation.
 
 ![Editing in array notation](img/array-editor.png)
 
-When using array notation in the **Editor**, the _Reformat_ command (**<RD>**) evaluates the content and regenerates it using array notation.
+When using array notation in the **Editor**, the _Reformat_ command (**<RD\>**) evaluates the content and regenerates it using array notation.
 
 You can include APL expressions:
 the Editor will evaluate them when you fix or format the array.
-This allows you to insert the value of one array into another by typing its name and pressing **<RD>**.
+This allows you to insert the value of one array into another by typing its name and pressing **<RD\>**.
 
 For example, in the session:
 ```apl
       x←[
        (
-        'Hello'
+        'HELLO'
        )
        (
-        'World'
+        'WORLD'
        )
       ]
       )ED ⋄ x
@@ -421,10 +419,10 @@ In the Editor, insert `⎕C`:
 ```apl
 ⎕C[
  (
-  'Hello'
+  'HELLO'
  )
  (
-  'World'
+  'WORLD'
  )
 ]
 ```
@@ -454,7 +452,7 @@ and fixes as
 
 The picture below shows the result of opening the `ComponentFile` class. Notice how each function is delineated separately and that each function is individually line-numbered.
 ```apl
-      )ed ComponentFile
+      )ED ComponentFile
 ```
 
 ![](img/editor-classes-1.png)

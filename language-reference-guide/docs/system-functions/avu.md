@@ -57,6 +57,9 @@ C:\Program Files\Dyalog\Dyalog APL 12.0 Unicode\ws\avu saved Thu Dec 06 11:24:32
 ⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏ
 ```
 
+!!! Hint "Hints and Recommendations"
+    The majority of Unicode fonts display APL's underscored alphabet as a circled alphabet instead. Unicode does not contain the underscored letters as distinct glyphs; Dyalog APL maps these characters to the Unicode positions for the circled alphabet, and provides APL fonts (such as APL385 Unicode) that display them as underscores. To avoid confusion, Dyalog Ltd recommends that you remove underscored characters from your APL application at your earliest convenience.
+
 ## Rules for Conversion on Import
 
 

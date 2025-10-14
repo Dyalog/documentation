@@ -31,21 +31,21 @@ Another three sets of useful bitmaps are to be found in the DyaRes DLL file. The
 The *normal* set of bitmaps associated with the Session buttons may be created using the statement:
 
 ```apl
-      'bm'⎕wc'Bitmap' ('dyares180_64.dll' 'tb_normal')
+      'bm'⎕WC'Bitmap' ('dyares180_64.dll' 'tb_normal')
 ```
 
 ![](../img/tb-normal-bitmaps.bmp)
 
 The bitmaps used when the buttons are *highlighted* may be created using the statement.
 ```apl
-      'bm'⎕wc'Bitmap' ('dyares180_64.dll' 'tb_hot')
+      'bm'⎕WC'Bitmap' ('dyares180_64.dll' 'tb_hot')
 ```
 
 ![](../img/tb-hot-bitmaps.bmp)
 
 The bitmaps used when the buttons are *inactive* may be created using the statement
 ```apl
-      'bm'⎕wc'Bitmap' ('dyares180_64.dll' 'tb_inactive')
+      'bm'⎕WC'Bitmap' ('dyares180_64.dll' 'tb_inactive')
 ```
 
 ![](../img/tb-inactive-bitmaps.bmp)

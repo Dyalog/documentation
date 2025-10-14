@@ -14,10 +14,10 @@ You can package the workspace as a stand-alone executable or as a .EXE file that
 
 Various Dyalog-supplied files are required  (such as the runtime DLL for creating a bound runtime executable); all such files are assumed to reside in the **Dyalog** directory, as specified by default in the registry.  The location of this directory is most easily reported by calling
 ```apl
-      +2⎕nq '.' 'GetEnvironment' 'Dyalog'
+      +2⎕NQ '.' 'GetEnvironment' 'Dyalog'
 ```
 
-The creation of both in-process and out-of-process COM servers produces a .TLB (Type Library) file. This file is created in the same directory as the workspace - so write access must be allowed to this directory. In the case of an in-process server, the content of this file is then embedded into the DLL, and the file is deleted. For an out-of-process server the file persists and may be needed at runtime. This requirement means that even if you do not `)Save` the workspace, you should set the workspace name  so that `)SAVE` would work - that is the directory where the workspace would be saved has write access.
+The creation of both in-process and out-of-process COM servers produces a .TLB (Type Library) file. This file is created in the same directory as the workspace - so write access must be allowed to this directory. In the case of an in-process server, the content of this file is then embedded into the DLL, and the file is deleted. For an out-of-process server the file persists and may be needed at runtime. This requirement means that even if you do not `)SAVE` the workspace, you should set the workspace name  so that `)SAVE` would work - that is the directory where the workspace would be saved has write access.
 
 In addition, a temporary copy of your workspace is created, the location of which is determined by the Windows function `GetTempPath()`.
 

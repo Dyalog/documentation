@@ -9,7 +9,7 @@ search:
 Monadic Slash Bar is not defined
 
 Dyadic Slash Bar means
-[Replicate First (Compress First)](../primitive-functions/replicate.md)
+[Replicate First (Compress First)](../primitive-functions/replicate-first.md)
 ```apl
       mat
 1  2  3  4

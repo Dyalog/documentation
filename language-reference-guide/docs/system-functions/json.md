@@ -34,7 +34,7 @@ If `Format` is`'D'` (which stands for "data") the JSON described by `Y` is conve
 - JSON objects are created as APL namespaces.
 - JSON null is converted to the value specified by the `Null` variant, which may be either `⊂'null'` (the default) or `⎕NULL`.
 - JSON true and false and the JSON5 numeric constants `Infinity`, `-Infinity`, `NaN` and `-NaN` are converted to enclosed character vectors `⊂'true'`,`⊂'false'` and so forth.
-- If the JSON source contains object names which are not valid APL names they are converted to APL objects with mangled names. See [JSON Name Mangling](#json-name-mangling). `7162⌶` can be used to obtain the original name. See [JSON Translate Name](../the-i-beam-operator/json-translate-name.md)
+- If the JSON source contains object names which are not valid APL names they are converted to APL objects with mangled names. See [JSON Name Mangling](#json-name-mangling). `7162⌶` can be used to obtain the original name. See [JSON Translate Name](../primitive-operators/i-beam/json-translate-name.md)
                         
 If `Format` is`'M'` (which stands for "matrix") the result `R` is a matrix whose columns contain the following:
 
@@ -558,7 +558,7 @@ When Dyalog exports JSON it performs the reverse *name mangling*, so:
 
 ```
 
-Should you need to create and decode these names directly,`7162⌶` provides the same name mangling and un-mangling operations. See [JSON Translate Name](../the-i-beam-operator/json-translate-name.md).
+Should you need to create and decode these names directly,`7162⌶` provides the same name mangling and un-mangling operations. See [JSON Translate Name](../primitive-operators/i-beam/json-translate-name.md).
 ```apl
       0(7162⌶)'2a'
 ⍙2a

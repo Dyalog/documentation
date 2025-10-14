@@ -1,6 +1,6 @@
 <h1 class="heading"><span class="name">Global Triggers</span></h1>
 
-A global Trigger is a function that triggers on any assignment to a global variable in the same namespace. Global Triggers may be disabled and re-enabled using `2007⌶`. See [Disable Global Triggers](../../../language-reference-guide/the-i-beam-operator/disable-global-triggers).
+A global Trigger is a function that triggers on any assignment to a global variable in the same namespace. Global Triggers may be disabled and re-enabled using `2007⌶`. See [Disable Global Triggers](../../../language-reference-guide/primitive-operators/i-beam/disable-global-triggers).
 
 This is implemented by the function declaration statement:
 

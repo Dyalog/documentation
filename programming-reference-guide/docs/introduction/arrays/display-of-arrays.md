@@ -134,8 +134,26 @@ The power of this form of display is made apparent when formatting informal repo
 
 ## Array Notation
 
-In the [Windows IDE](../../../../windows-ui-guide) you can have arrays displayed using [Array Notation](array-notation.md) when it is possible to do so.
+Arrays (including namespaces) can be displayed in the session using [array notation](array-notation.md). This mode is enabled using the `]APLAN.Output` user command. For example:
+```apl
+      SALES
+  50  5.25   75
+ 250 20.15  900
+ 500 80.98  650
+1000 90.03 1200
+      ]APLAN.Output ON
+'Was OFF'
+      SALES
+[               
+   50  5.25   75
+  250 20.15  900
+  500 80.98  650
+ 1000 90.03 1200
+]               
+```
+In the [Microsoft Windows IDE](../../../../windows-ui-guide) it can also be toggled on and off using the ![](../../../../release-notes/img/session_arraynotation.png){width=20 height=20 vertical-align:text-bottom} icon on the Session toolbar.
 
+To enable the display of output using array notation when starting a Dyalog session, set the [APLAN_FOR_OUTPUT](../../../../windows-installation-and-configuration-guide/configuration-parameters/aplan-for-output.md) configuration parameter to `1`.
 
 ## Print Width
 
@@ -153,9 +171,37 @@ If the display of an array is wider than the print width, as defined by the [`�
       90  91  7 91 51 52 32
 ```
 
-## The ]Display User Command
+## The `]Disp` User Command
 
-The user command `]Display` illustrates the structure of an array.
+The user command `]Disp` illustrates the specified array, with borders indicating sub-array shape and type. For example:
+
+```apl
+      ]Disp 'ABC' [1 2 3 4 ⋄]
+┌→──┬───────┐
+│ABC│1 2 3 4↓
+└──→┴~─────→┘
+```
+```apl
+      ]Disp (' ',PRODUCTS),AREAS⍪SALES ⍝ see above
+┌→───────┬────┬───────┬────┐
+↓        │West│Central│East│
+├────────┼───→┼──────→┼───→┤
+│Biscuits│ 50 │ 5.25  │ 75 │
+├───────→┼~───┼~──────┼~───┤
+│ Cakes  │250 │ 20.15 │900 │
+├───────→┼~───┼~──────┼~───┤
+│  Buns  │500 │ 80.98 │650 │
+├───────→┼~───┼~──────┼~───┤
+│ Rolls  │1000│ 90.03 │1200│
+└───────→┴~───┴~──────┴~───┘
+```
+This is similar to displaying array with `]Boxing on -style=mid` (see [The `]Boxing` User Command](#boxing) below).
+
+An explanation of the symbols that appear in the borders can be seen by running `]Disp -??`
+
+## The `]Display` User Command
+
+The user command `]Display` illustrates the specified array, with borders indicating array and sub-array shape and type. For example:
 
 ```apl
       ]Display 'ABC' [1 2 3 4 ⋄]
@@ -164,35 +210,32 @@ The user command `]Display` illustrates the structure of an array.
 │ │ABC│ ↓1 2 3 4│ │
 │ └───┘ └~──────┘ │
 └∊────────────────┘
-
 ```
 ```apl
-      ]Display ' 'PRODUCTS⍪.,AREAS SALES ⍝ see above
-┌────────────────────────────────────────┐
-│ ┌→───────────────────────────────────┐ │
-│ ↓            ┌→───┐ ┌→──────┐ ┌→───┐ │ │
-│ │            │West│ │Central│ │East│ │ │
-│ │ -          └────┘ └───────┘ └────┘ │ │
-│ │ ┌→───────┐                         │ │
-│ │ │Biscuits│ 50     5.25      75     │ │
-│ │ └────────┘                         │ │
-│ │ ┌→────┐                            │ │
-│ │ │Cakes│    250    20.15     900    │ │
-│ │ └─────┘                            │ │
-│ │ ┌→───┐                             │ │
-│ │ │Buns│     500    80.98     650    │ │
-│ │ └────┘                             │ │
-│ │ ┌→────┐                            │ │
-│ │ │Rolls│    1000   90.03     1200   │ │
-│ │ └─────┘                            │ │
-│ └∊───────────────────────────────────┘ │
-└∊───────────────────────────────────────┘
-
+      ]Display (' ',PRODUCTS),AREAS⍪SALES ⍝ see above
+┌→───────────────────────────────────┐
+↓            ┌→───┐ ┌→──────┐ ┌→───┐ │
+│            │West│ │Central│ │East│ │
+│ -          └────┘ └───────┘ └────┘ │
+│ ┌→───────┐                         │
+│ │Biscuits│ 50     5.25      75     │
+│ └────────┘                         │
+│ ┌→────┐                            │
+│ │Cakes│    250    20.15     900    │
+│ └─────┘                            │
+│ ┌→───┐                             │
+│ │Buns│     500    80.98     650    │
+│ └────┘                             │
+│ ┌→────┐                            │
+│ │Rolls│    1000   90.03     1200   │
+│ └─────┘                            │
+└∊───────────────────────────────────┘
 ```
+This is similar to displaying array with `]Boxing on -style=max` (see [The `]Boxing` User Command](#boxing) below).
 
 An explanation of the symbols that appear in the borders can be seen by running `]Display -??`
 
-## The ]Boxing User Command
+## The `]Boxing` User Command {#boxing}
 
 The user command `]Boxing` changes how nested arrays are displayed in the Session. The following examples show different settings.
 
@@ -233,5 +276,5 @@ Was ON
       'ABC' [1 2 3 4 ⋄]
  ABC  1 2 3 4
 ```
-
+Information about all the options and explanation of the symbols that appear in the borders can be seen by running `]Display -??`
 

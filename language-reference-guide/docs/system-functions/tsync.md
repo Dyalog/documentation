@@ -67,10 +67,10 @@ If any item of `Y` does not correspond to the thread number of an active thread,
 3
 0.25
       ⎕TSYNC 3       ⍝ no result required: no prob
-      ⎕←⎕tsync 3     ⍝ context requires result
+      ⎕←⎕TSYNC 3     ⍝ context requires result
 VALUE ERROR
  
-      ⎕←⎕tsync {}&0  ⍝ non-result-returning fn: no result.
+      ⎕←⎕TSYNC {}&0  ⍝ non-result-returning fn: no result.
 VALUE ERROR
 ```
 

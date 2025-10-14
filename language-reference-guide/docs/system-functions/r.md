@@ -696,7 +696,7 @@ Output file:
       dateptn←'(\d{2})/(\d{2})/(\d{4}),'
       valptn←',DEM ([0-9.]+)'
       out (dateptn valptn ⎕R f) in
-      ⎕nuntie¨in out
+      ⎕NUNTIE¨in out
 ```
 ## Create a simple profanity filter:
 
@@ -717,7 +717,7 @@ first construct a pattern which will match the words:
 
 then a function that uses this pattern:
 ```apl
-      sanitise←ptn ⎕R '****' ⎕opt 1
+      sanitise←ptn ⎕R '****' ⎕OPT 1
       sanitise '"Heck", I said'
 "****", I said
 ```

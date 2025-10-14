@@ -69,7 +69,7 @@ The operation will fail with a `DOMAIN ERROR` if  `Y` contains anything other th
 
 ## Examples (UNIX)
 ```apl
-      )sh mkfifo ./fifo
+      )SH mkfifo ./fifo
 
 ```
 ```apl

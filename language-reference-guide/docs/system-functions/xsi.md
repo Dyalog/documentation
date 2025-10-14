@@ -21,7 +21,7 @@
 In the following, function `foo` in namespace `x` has called `goo` in namespace `y`.  Function `goo` has then changed space (`⎕CS`) to namespace `z` where it has been suspended:
 ```apl
  
-      )si
+      )SI
 [z] y.goo[2]*
 x.foo[1]
  
@@ -31,12 +31,12 @@ x.foo[1]
 
 `⎕XSI` reports the full path name of each function:
 ```apl
-       ⎕xsi
+       ⎕XSI
  #.y.goo  #.x.foo
 ```
 
 
-This can be used for example, to edit all functions in the stack, irrespective of the current namespace by typing:    `⎕ed ⎕xsi`
+This can be used for example, to edit all functions in the stack, irrespective of the current namespace by typing:    `⎕ED ⎕XSI`
 
 
 See also [State Indicator](si.md).

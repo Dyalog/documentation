@@ -69,7 +69,7 @@ To lock the region immediately beyond the end of the file prior extending it:
 
 The left argument may have a second optional item that specifies a *timeout* value. If a lock has not been acquired within this number of seconds, the acquisition is abandoned and a `TIMEOUT` error reported.
 ```apl
-    2 10 ⎕nlock ¯1      ⍝ wait up to 10 seconds for lock.
+    2 10 ⎕NLOCK ¯1      ⍝ wait up to 10 seconds for lock.
 ```
 
 

@@ -26,7 +26,7 @@ Assignment pervades nested strands of names to the left of the arrow. The confor
 ```apl
       ((a b)(c d))←(1 2)(3 4)   ⍝ a←1 ⋄ b←2 ⋄ c←3 ⋄ d←4
  
-      ((⎕io ⎕ml)vec)←0 ⎕av      ⍝ ⎕io←0 ⋄ ⎕ml←0 ⋄ vec←⎕av
+      ((⎕IO ⎕ML)vec)←0 ⎕AV      ⍝ ⎕IO←0 ⋄ ⎕ML←0 ⋄ vec←⎕AV
  
       (i (j k))+←1 2            ⍝ i+←1 ⋄ j+←2 ⋄ k+←2
  

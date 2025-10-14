@@ -14,9 +14,9 @@ The `⎕PATH` variable can be used to identify a namespace in which commonly use
 To make the `DISPLAY` function available directly from within any namespace.
 ```apl
       ⍝ Create and reference utility namespace.
-      ⎕PATH←'⎕se.util'⎕ns''
+      ⎕PATH←'⎕SE.util'⎕NS''
       ⍝ Copy DISPLAY function from UTIL into it.
-      'DISPLAY'⎕se.util.⎕cy'UTIL'
+      'DISPLAY'⎕SE.util.⎕CY'UTIL'
       ⍝ (Remember to save the session to file).  
 ```
 
@@ -39,24 +39,24 @@ Note that the `⎕PATH` mechanism is used ONLY if the function reference cannot 
 
 ```
 ```other
-1. '⎕se.util'          Current space,   then
-                       ⎕se.util,        then
+1. '⎕SE.util'          Current space,   then
+                       ⎕SE.util,        then
                        VALUE ERROR
  
 2. '↑'                 Current space
                        Parent space: ##
                        Parent's parent space:  ##.##
                        ...
-                       Root: # (or ⎕se if current space
-                                was inside ⎕se)
+                       Root: # (or ⎕SE if current space
+                                was inside ⎕SE)
                        VALUE ERROR
  
-3. 'util ↑ ⎕se.util'   Current space
+3. 'util ↑ ⎕SE.util'   Current space
                        util (relative to current space)
                        Parent space: ##
                        ...
-                       Root: # or ⎕se
-                       ⎕se.util
+                       Root: # or ⎕SE
+                       ⎕SE.util
                        VALUE ERROR
 ```
 

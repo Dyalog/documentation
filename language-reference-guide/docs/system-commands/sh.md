@@ -15,7 +15,7 @@ The parameters CMD_PREFIX and CMD_POSTFIX may be used to execute a different she
 
 <h2 class="example">Example</h2>
 ```apl
-      )sh ps -u andys | grep -v ps
+      )SH ps -u andys | grep -v ps
    UID      PID    TTY  TIME CMD
   6179  9437326  pts/0  0:00 ksh
   6179 10223736  pts/0  0:00 dyalog

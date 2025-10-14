@@ -99,7 +99,7 @@ Now, if an error occurs in lines `[3-4]`, (or in a function called from those li
 The final refinement is that specific error cases can be accommodated using `:Case[List]` constructs in the same manner as the `:Select` control structure.
 ```apl
    [1]   :Trap 17+⍳21            ⍝ Component file errors.
-   [2]       tie←name ⎕ftie 0    ⍝ Try to tie file
+   [2]       tie←name ⎕FTIE 0    ⍝ Try to tie file
    [3]       'OK'
    [4]   :Case 22
    [5]       'Can''t find ',name
@@ -116,9 +116,9 @@ Traps can be nested. In the following example, code in the inner trap structure 
 ```apl
    [1]   :Trap 0
    [2]       :Trap 22
-   [3]           tie←name ⎕ftie 0
+   [3]           tie←name ⎕FTIE 0
    [4]       :Else
-   [5]           tie←name ⎕fcreate 0
+   [5]           tie←name ⎕FCREATE 0
    [6]       :EndTrap
    [7]       ProcessFile tie 
    [8]   :Else

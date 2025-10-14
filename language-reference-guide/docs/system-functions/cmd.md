@@ -39,7 +39,7 @@ search:
       )CLEAR
 clear ws
       'xutils' ⎕CMD ''
-      )fns
+      )FNS
 avx     box     dbr     getenv  hex     ltom    ltov    mtol    ss      vtol
 
 ```

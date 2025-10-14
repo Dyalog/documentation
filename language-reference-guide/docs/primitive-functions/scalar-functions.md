@@ -1,35 +1,35 @@
 <h1 class="heading"><span class="name">Scalar Functions</span></h1>
 
-There is a class of primitive functions termed scalar functions This class is identified in [](#ScalarPrimitiveFunctions) below. Scalar functions are **pervasive**, that is, their properties apply at all levels of nesting.  Scalar functions have the following properties:
+There is a class of primitive functions termed scalar functions This class is identified in [](#ScalarPrimitiveFunctions) below. Scalar functions are **pervasive**, that is, their properties apply at all levels of nesting. Scalar functions have the following properties:
 
 Table: Scalar Primitive Functions {: #ScalarPrimitiveFunctions }
 
 |Symbol|Monadic|Dyadic|
 |---|---|---|
-|`+`|[Conjugate](conjugate.md)|[Plus (Add)](add.md)|
-|`-`|[Negative](negative.md)|[Minus (Subtract)](subtract.md)|
-|`×`|[Direction (Signum)](direction.md)|[Times (Multiply)](multiply.md)|
+|`+`|[Conjugate](conjugate.md)|[Plus](plus.md)|
+|`-`|[Negate](negate.md)|[Minus](minus.md)|
+|`×`|[Direction](direction.md)|[Times](times.md)|
 |`÷`|[Reciprocal](reciprocal.md)|[Divide](divide.md)|
 |`|`|[Magnitude](magnitude.md)|[Residue](residue.md)|
 |`⌊`|[Floor](floor.md)|[Minimum](minimum.md)|
 |`⌈`|[Ceiling](ceiling.md)|[Maximum](maximum.md)|
 |`*`|[Exponential](exponential.md)|[Power](power.md)|
 |`⍟`|[Natural Logarithm](natural-logarithm.md)|[Logarithm](logarithm.md)|
-|`○`|[Pi Times](pi-times.md)|[Circular](circular.md)|
+|`○`|[Pi Times](pi-times.md)|[Circular Functions](circular-functions.md)|
 |`!`|[Factorial](factorial.md)|[Binomial](binomial.md)|
-|`~`|[Not](not.md)|$|
+|`~`|[NOT](not.md)|$|
 |`?`|[Roll](roll.md)|$|
 |`∊`|[Type](type.md) (See [Enlist](enlist.md) )|$|
-|`^`|&nbsp;|[And](and-lowest-common-multiple.md)|
-|`∨`|&nbsp;|[Or](or-greatest-common-divisor.md)|
-|`⍲`|&nbsp;|[Nand](nand.md)|
-|`⍱`|&nbsp;|[Nor](nor.md)|
-|`<`|&nbsp;|[Less](less.md)|
-|`≤`|&nbsp;|[Less Or Equal](less-or-equal.md)|
-|`=`|&nbsp;|[Equal](equal.md)|
-|`≥`|&nbsp;|[Greater Or Equal](greater-or-equal.md)|
-|`>`|&nbsp;|[Greater](greater.md)|
-|`≠`|&nbsp;|[Not Equal](not-equal.md)|
+|`^`|&nbsp;|[AND](lowest-common-multiple-and.md)|
+|`∨`|&nbsp;|[OR](greatest-common-divisor-or.md)|
+|`⍲`|&nbsp;|[NAND](nand.md)|
+|`⍱`|&nbsp;|[NOR](nor.md)|
+|`<`|&nbsp;|[Less Than](less-than.md)|
+|`≤`|&nbsp;|[Less Than Or Equal To](less-than-or-equal-to.md)|
+|`=`|&nbsp;|[Equal To](equal-to.md)|
+|`≥`|&nbsp;|[Greater Than Or Equal To](greater-than-or-equal-to.md)|
+|`>`|&nbsp;|[Greater Than](greater-than.md)|
+|`≠`|&nbsp;|[Not Equal To](not-equal-to.md)|
 |$ Dyadic form is not scalar|||
 
 ## Monadic Scalar Functions
