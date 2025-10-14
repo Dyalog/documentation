@@ -12,7 +12,7 @@ The type of a new object defaults to function/operator unless the object is shad
 
 If the name is not already being edited, it is assigned a new edit window. If you edit a name which is already being edited, the system *focuses* on the existing edit window rather than opening a new one. Edit windows are displayed using the colour combination associated with the type of the object being edited.
 
-If the name is followed by a line-number in square brackets, for example, `MyFn[1000]`, the Editor will position the cursor on the specified line. This applies to alll methods of invoking the Editor, except `⎕ED`. There must not be a space between the last character of the name and the "[".
+If the name is followed by a line-number in square brackets, for example, `MyFn[1000]`, the Editor will position the cursor on the specified line. This applies to all methods of invoking the Editor, except `⎕ED`. There must not be a space between the last character of the name and the "[".
 
 ## Window Management (Standard)
 
