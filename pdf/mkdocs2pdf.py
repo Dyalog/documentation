@@ -333,31 +333,93 @@ def print_footnotes(soup: BeautifulSoup) -> None:
     """
     Convert to CSS-only footnotes style.
     """
+    from bs4.element import NavigableString, Tag
+
+    # First, convert bare URLs in footnote content to clickable links
+    footnote_div = soup.find("div", class_="footnote")
+    if footnote_div and isinstance(footnote_div, Tag):
+        # Pattern to match URLs (http, https, ftp)
+        url_pattern = re.compile(
+            r'(https?://[^\s<>"{}|\\^`\[\]]+|ftp://[^\s<>"{}|\\^`\[\]]+)',
+            re.IGNORECASE
+        )
+
+        # Find all <p> tags within footnotes
+        for p_tag in footnote_div.find_all("p"):
+            if not isinstance(p_tag, Tag):
+                continue
+
+            # Process text nodes to find bare URLs
+            contents_to_process = list(p_tag.contents)
+            for content in contents_to_process:
+                # Only process NavigableString (text) nodes, not tags
+                if isinstance(content, NavigableString) and not isinstance(content, type(soup)):
+                    text = str(content)
+                    # Check if this text contains a URL
+                    if url_pattern.search(text):
+                        # Split the text by URLs and create new elements
+                        new_contents = []
+                        last_end = 0
+
+                        for match in url_pattern.finditer(text):
+                            url = match.group(0)
+                            start, end = match.span()
+
+                            # Add text before the URL
+                            if start > last_end:
+                                new_contents.append(text[last_end:start])
+
+                            # Create a link for the URL
+                            a_tag = soup.new_tag("a", href=url)
+                            a_tag.string = url
+                            new_contents.append(a_tag)
+
+                            last_end = end
+
+                        # Add any remaining text after the last URL
+                        if last_end < len(text):
+                            new_contents.append(text[last_end:])
+
+                        # Replace the original text node with the new contents
+                        content.replace_with(*new_contents)
+
+    # Now extract footnote definitions, preserving HTML content
     footnote_defs = {}
 
     # Find all footnote definitions
     for footnote in soup.select("div.footnote ol li"):
         footnote_id = footnote.get("id")
         if footnote_id and footnote_id.startswith("fn:"):
-            # Extract the text from the footnote definition
+            # Extract the content from the footnote definition, preserving HTML
             p_tag = footnote.find("p")
-            footnote_text = "".join(
-                str(c)
-                for c in p_tag.contents
-                if not (c.name == "a" and "footnote-backref" in c.get("class", []))
-            )
-            footnote_defs[footnote_id] = footnote_text.strip()
+            if p_tag:
+                # Get all contents except the backref link
+                footnote_contents = [
+                    c for c in p_tag.contents
+                    if not (hasattr(c, 'get') and c.name == "a" and "footnote-backref" in c.get("class", []))
+                ]
+                footnote_defs[footnote_id] = footnote_contents
 
     # Find all footnote references
     footnote_refs = soup.find_all("sup", id=lambda x: x and x.startswith("fnref:"))
 
     # Replace footnote references with inlined footnotes
     for ref in footnote_refs:
-        footnote_id = ref.find("a").get("href", "").lstrip("#")
-        if footnote_id in footnote_defs:
-            new_span = soup.new_tag("span", **{"class": "footnote"})
-            new_span.string = footnote_defs[footnote_id]
-            ref.replace_with(new_span)
+        a_tag = ref.find("a")
+        if a_tag:
+            footnote_id = a_tag.get("href", "").lstrip("#")
+            if footnote_id in footnote_defs:
+                new_span = soup.new_tag("span", **{"class": "footnote"})
+                # Append the HTML contents instead of setting string
+                for content in footnote_defs[footnote_id]:
+                    # Clone the content to avoid moving it
+                    if isinstance(content, NavigableString):
+                        new_span.append(type(content)(content))
+                    elif isinstance(content, Tag):
+                        new_span.append(content.__copy__())
+                    else:
+                        new_span.append(str(content))
+                ref.replace_with(new_span)
 
     # Remove the original footnote definitions section
     footnote_div = soup.find("div", class_="footnote")
