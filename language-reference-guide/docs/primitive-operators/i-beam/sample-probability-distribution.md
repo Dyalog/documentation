@@ -88,9 +88,9 @@ So then we can create 100,000 samples and calculate values for a density graph w
 ```
 
 
-Using the Chart Wizard ![sharpplot icon](../img/sharpplot-icon.png) we can plot `(⊂2)⌷⍉bc` against `(⊂1)⌷⍉bc` to get the graph:
+Using the Chart Wizard ![sharpplot icon](../../img/sharpplot-icon.png) we can plot `(⊂2)⌷⍉bc` against `(⊂1)⌷⍉bc` to get the graph:
 
 
-![beta distribution](../img/beta-distribution.png)
+![beta distribution](../../img/beta-distribution.png)
 
 
