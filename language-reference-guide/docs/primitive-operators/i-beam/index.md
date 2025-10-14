@@ -103,5 +103,8 @@ Key to restrictions in the following table:
 |`7162` |[JSON Translate Name](./json-translate-name.md)                                       |&nbsp;|
 |`8373` |[Shell Process Control](./shell-process-control.md)                                   |&nbsp;|
 |`8415` |[Singular Value Decomposition](./singular-value-decomposition.md)                     |&nbsp;|
+|`8659` |[List Shared Code Files/Attached Names](./list-shared-code-files-attached-names.md)   |64U   |
+|`8666` |[Attach/Assimilate/Detach Shared Code Files](./attach-assimilate-detach-shared-code-files.md)    |64U   |
+|`8667` |[Save Shared Code Files](./save-shared-code-files.md)                                 |64U   |
 |`16808`|[Sample Probability Distribution](./sample-probability-distribution.md)               |LiW|
 |`50100`|[Line Count](./line-count.md)                                                         |&nbsp;|
