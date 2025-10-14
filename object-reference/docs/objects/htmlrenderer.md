@@ -54,7 +54,7 @@ When the HTMLRenderer is displayed in its own window, the  window caption is set
 
 <h2 class="example">Example</h2>
 ```apl
-     ∇ Example;enc;Q;U;tw
+     ∇ Example;Q;U;tw
 [1]    'f'⎕WC'Form' 'HTMLRender'
 [2]    f.(Coord Size)←'Pixel'(730 700)
 [3]    'pco'⎕CY'dfns'
