@@ -87,9 +87,9 @@ First we need to define `⎕USING` so that it specifies all of the .NET Namespac
       ⎕USING←'System,System.dll' 'System.Net' 'System.IO'
 ```
 
-The `WebRequest` class in the .NET Namespace `System.Net` implements the .NET Framework's request/response model for accessing data from the Internet. In this example we create a `WebRequest` object associated with the URI `http://www.example.com`. Note that `WebRequest` is an example of a static class. You don't make instances of it; you just use its methods.
+The `WebRequest` class in the .NET Namespace `System.Net` implements the .NET Framework's request/response model for accessing data from the Internet. In this example we create a `WebRequest` object associated with the URI `https://www.example.com`. Note that `WebRequest` is an example of a static class. You don't make instances of it; you just use its methods.
 ```apl
-      wrq←WebRequest.Create ⊂'http://www.example.com'
+      wrq←WebRequest.Create ⊂'https://www.example.com'
 ```
 
 In fact (and somewhat confusingly) if the URI specifies a scheme of "http://" or "https://", you get back an object of type `HttpWebRequest` rather than a plain and simple `WebRequest`. So, at this stage, `wrq` is an `HttpWebRequest` object.
