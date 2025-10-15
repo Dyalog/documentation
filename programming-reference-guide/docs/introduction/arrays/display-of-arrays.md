@@ -235,7 +235,7 @@ This is similar to displaying array with `]Boxing on -style=max` (see [The `]Box
 
 An explanation of the symbols that appear in the borders can be seen by running `]Display -??`
 
-## The `]Boxing` User Command {#boxing}
+## The `]Boxing` User Command { #boxing }
 
 The user command `]Boxing` changes how nested arrays are displayed in the Session. The following examples show different settings.
 
