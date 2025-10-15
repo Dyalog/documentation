@@ -107,9 +107,24 @@ Check that all files in nav exist:
 docker compose run --rm utils python /utils/check_yml_files.py
 ```
 
-Validate image references in markdown files:
+Validate image references in markdown files (detects both markdown `![](path)` and HTML `<img>` tags):
 ```
 docker compose run --rm utils python /utils/validate_images.py --output /docs/tools/broken_images.yaml
+```
+
+This script automatically uses ripgrep to verify unreferenced images and detects cross-document image references. The YAML report includes:
+- `broken_references`: Markdown files with broken image links
+- `cross_document_references`: Images referenced across document boundaries (bad practice that breaks isolated builds)
+- `unreferenced_images`: Truly unreferenced images (safe to delete - verified with ripgrep)
+
+**Important**: This script requires ripgrep (rg) to be installed. If ripgrep is not found, the script will exit with an error. To fix:
+```
+docker compose build utils
+```
+
+Report all image references (not just broken ones):
+```
+docker compose run --rm utils python /utils/validate_images.py --all --output /docs/tools/all_images.yaml
 ```
 
 Add APL symbol synonyms:
@@ -117,7 +132,7 @@ Add APL symbol synonyms:
 docker compose run --rm utils python /utils/add_synonyms.py /docs/language-reference-guide/docs/primitive-functions [--dry-run]
 ```
 
-Spider the deployed site to check for broken links:
+Spider the deployed site to check for broken links and images (images are checked by default):
 ```
 docker compose run --rm utils python /utils/check_deployed_links.py \
                    --base-url https://dyalog.github.io/documentation/20.0 \
