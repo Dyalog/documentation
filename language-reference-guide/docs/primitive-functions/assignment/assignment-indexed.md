@@ -1,5 +1,6 @@
+<!-- Hidden search keywords -->
 <div style="display: none;">
-  ←
+  ← gets
 </div>
 
 <h1 class="heading"><span class="name">Assignment (Indexed)</span> <span class="command">{R}←X[I]←Y</span></h1>
