@@ -5,7 +5,7 @@ search:
 <h1 class="heading"><span class="name">Left Arrow</span> <span class="command">←</span></h1>
 
 Dyadic Left Arrow means
-[Naming      ](../primitive-functions/assignment/index.md)
+[Naming      ](../other-syntax/assignment/index.md)
 ```apl
 
     V ← 5 6 7
@@ -16,7 +16,7 @@ Dyadic Left Arrow means
 ```
 
 Operator Left Arrow means
-[Modified Assignment](../primitive-functions/assignment/index.md)
+[Modified Assignment](../other-syntax/assignment/assignment+modified.md)
 ```apl
 
     V +← 1
@@ -24,6 +24,6 @@ Operator Left Arrow means
     (⊃V) ← 2
 
 ```
-[Language Elements](../primitive-functions/assignment/index.md)
+[Language Elements](../other-syntax/assignment/index.md)
 
 

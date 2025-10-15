@@ -167,13 +167,7 @@ nav:
           - Encode: primitive-functions/encode.md
           - Matrix Divide: primitive-functions/matrix-divide.md
       - Primitive Functions (A-Z):
-          - Abort: primitive-functions/abort.md
-          - Assignment:
-              - Assignment: primitive-functions/assignment/index.md
-              - Assignment Indexed: primitive-functions/assignment/assignment-indexed.md
-              - Assignment Selective: primitive-functions/assignment/assignment-selective.md
           - Binomial: primitive-functions/binomial.md
-          - Branch: primitive-functions/branch.md
           - Catenate Laminate: primitive-functions/catenate-laminate.md
           - Catenate First: primitive-functions/catenate-first.md
           - Ceiling: primitive-functions/ceiling.md
@@ -215,7 +209,6 @@ nav:
               - Index with Axes: primitive-functions/index-function/index-with-axes.md
           - Index Generator: primitive-functions/index-generator.md
           - Index Of: primitive-functions/index-of.md
-          - Indexing: primitive-functions/indexing.md
           - Intersection: primitive-functions/intersection.md
           - Interval Index: primitive-functions/interval-index.md
           - Left: primitive-functions/left.md
@@ -278,19 +271,13 @@ nav:
           - Unique Mask: primitive-functions/unique-mask.md
           - Where: primitive-functions/where.md
           - Without: primitive-functions/without.md
-          - Zilde: primitive-functions/zilde.md
   - Primitive Operators:
       - Introduction: primitive-operators/primitive-operators-table.md
       - Operator Syntax: primitive-operators/operator-syntax.md
       - Operators Summarised: primitive-operators/operators-summarised.md
       - Operators A-Z:
-          - Assignment Modified: primitive-operators/assignment-modified.md
-          - Assignment Indexed Modified: primitive-operators/assignment-indexed-modified.md
-          - Assignment Selective Modified: primitive-operators/assignment-selective-modified.md
           - At: primitive-operators/at.md
           - Atop: primitive-operators/atop.md
-          - Axis with Monadic Operand: primitive-operators/axis-with-monadic-operand.md
-          - Axis with Dyadic Operand: primitive-operators/axis-with-dyadic-operand.md
           - Behind: primitive-operators/behind.md
           - Beside: primitive-operators/beside.md
           - Bind: primitive-operators/bind.md
@@ -391,6 +378,21 @@ nav:
           - Spawn: primitive-operators/spawn.md
           - Stencil: primitive-operators/stencil.md
           - Variant: primitive-operators/variant.md
+  - Other Syntax:
+          - Abort: other-syntax/abort.md
+          - Assignment:
+              - Assignment: other-syntax/assignment/index.md
+              - Assignment Modified: other-syntax/assignment/assignment-modified.md
+              - Assignment Indexed: other-syntax/assignment/assignment-indexed.md
+              - Assignment Indexed Modified: other-syntax/assignment/assignment-indexed-modified.md
+              - Assignment Selective: other-syntax/assignment/assignment-selective.md
+              - Assignment Selective Modified: other-syntax/assignment/assignment-selective-modified.md
+          - Axis:
+              - Axis with Monadic Operand: other-syntax/axis-with-monadic-operand.md
+              - Axis with Dyadic Operand: other-syntax/axis-with-dyadic-operand.md
+          - Branch: other-syntax/branch.md
+          - Indexing: other-syntax/indexing.md
+          - Zilde: other-syntax/zilde.md
   - System Functions:
       - Introduction: system-functions/introduction.md
       - System Functions Categorised:
