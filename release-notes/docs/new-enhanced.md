@@ -3,7 +3,7 @@
 This page describes the changes and new features in Dyalog v20.0 compared with Dyalog v19.0.
 
 ## Syntax Changes
-
+png
 ### Array Notation
 
 [Array notation](../../programming-reference-guide/introduction/arrays/array-notation/) is a literal syntax for most arrays (including nested and high-rank arrays) and namespaces. Array notation is an extension of APL syntax, and, as such, can be used inside and around all other APL expressions, and wherever an APL expression can appear (for example in the Session, in functions, and in namespace scripts). It can also be used in the Editor to manipulate arrays directly.
@@ -16,9 +16,9 @@ You can edit variables using array notation in the following ways:
 
 In addition, in the Microsoft Windows IDE, array notation can be accessed in the following ways:
 
-- Click the ![](img/session_arraynotation.png){width=20 height=20 vertical-align:text-bottom} icon in the **Session** toolbar – this button toggles on/off the use of array notation for output (when possible).
-- Click the ![](img/object_arraynotation.png){width=20 height=20 vertical-align:text-bottom} icon in the **Object** toolbar when the cursor is over the name of an array – this opens the array in the Editor in the same way as `)ED ⋄foo`.
-- Click the ![](img/object_arraynotation.png){width=20 height=20 vertical-align:text-bottom} icon in the Editor's toolbar – this displays the contents of the Editor using array notation.
+- Click the ![](img200/session-arraynotation.png){width=20 height=20 vertical-align:text-bottom} icon in the **Session** toolbar – this button toggles on/off the use of array notation for output (when possible).
+- Click the ![](img200/object-arraynotation.png){width=20 height=20 vertical-align:text-bottom} icon in the **Object** toolbar when the cursor is over the name of an array – this opens the array in the Editor in the same way as `)ED ⋄foo`.
+- Click the ![](img200/object-arraynotation.png){width=20 height=20 vertical-align:text-bottom} icon in the Editor's toolbar – this displays the contents of the Editor using array notation.
 - Select **Show as Array Notation** from the Editor's **Syntax** menu – this displays the contents of the Editor using array notation.
 
 When using array notation in the Editor, the _Reformat_ command (**&lt;RD>**) evaluates the Editor's content and regenerates it using array notation.
@@ -127,7 +127,7 @@ Inline tracing can be initiated in the following ways:
 
 In addition, in the Microsoft Windows IDE, inline tracing can be initiated in the following ways:
 
-- Click the ![](img/tracer_inlinetracing.png){width=20 height=20 vertical-align:text-bottom} icon in the **Tracer** toolbar
+- Click the ![](img200/tracer-inlinetracing.png){width=20 height=20 vertical-align:text-bottom} icon in the **Tracer** toolbar
 - Select **Trace Inline...** from the Session's **Action** menu.
 - Select **Action** > **Trace Inline...** from the Session's context ("right-click") menu.
 
@@ -174,11 +174,11 @@ The following changes have been made to the Microsoft Windows IDE:
 - A new keyboard shortcut has been added to toggle inline tracing:
     - key code: **&lt;IT&gt;**
 	- keystroke: <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Enter</kbd>
-- A new icon (![](img/object_arraynotation.png){width=20 height=20 vertical-align:text-bottom}) has been added to the **Object** toolbar. This enables array notation to be used when editing an object, and replaces the previous Array Editor icon.
-- A new icon (![](img/session_arraynotation.png){width=20 height=20 vertical-align:text-bottom}) has been added to the **Session** toolbar to toggle the use of array notation.
+- A new icon (![](img200/object-arraynotation.png){width=20 height=20 vertical-align:text-bottom}) has been added to the **Object** toolbar. This enables array notation to be used when editing an object, and replaces the previous Array Editor icon.
+- A new icon (![](img200/session-arraynotation.png){width=20 height=20 vertical-align:text-bottom}) has been added to the **Session** toolbar to toggle the use of array notation.
 - The Session caption can now include the current thread by adding the `{TID}` field to the `⎕SE.Caption` property.
 - In the **Configuration** dialog box's **Keyboard Shortcuts** tab, the **Available shortcuts** now include function keys (code F1-F48). These can be used in conjunction with `⎕PFKEY` to define keyboard shortcuts for function key actions.
-- The left bracket that appears in the Session gutter when entering multi-line input now includes a close icon at the bottom (![](img/multilineinput_gutter_cross.png){width=20 height=20 vertical-align:text-bottom}). Clicking this cancels the multi-line input.
+- The left bracket that appears in the Session gutter when entering multi-line input now includes a close icon at the bottom (![](img200/multilineinput-gutter-cross.png){width=20 height=20 vertical-align:text-bottom}). Clicking this cancels the multi-line input.
 + The appearance/layout of several of the dialog boxes has been adjusted, but their options and functionality have not been changed.
 	
 ### TTY Interface
