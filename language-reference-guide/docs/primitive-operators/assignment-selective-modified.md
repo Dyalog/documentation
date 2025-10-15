@@ -1,5 +1,5 @@
 <div style="display: none;">
-  ←
+  ← gets
 </div>
 
 <h1 class="heading"><span class="name">Assignment (Selective Modified)</span> <span class="command">{R}←(EXP X)f←Y</span></h1>
