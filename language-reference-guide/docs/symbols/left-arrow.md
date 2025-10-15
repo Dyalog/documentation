@@ -16,7 +16,7 @@ Dyadic Left Arrow means
 ```
 
 Operator Left Arrow means
-[Modified Assignment](../other-syntax/assignment/assignment+modified.md)
+[Modified Assignment](../other-syntax/assignment/assignment-modified.md)
 ```apl
 
     V +← 1
