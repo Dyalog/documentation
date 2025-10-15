@@ -271,8 +271,8 @@ nav:
               - Assignment Selective: other-syntax/assignment/assignment-selective.md
               - Assignment Selective Modified: other-syntax/assignment/assignment-selective-modified.md
           - Axis:
-              - Axis with Monadic Operand: other-syntax/axis-with-monadic-operand.md
-              - Axis with Dyadic Operand: other-syntax/axis-with-dyadic-operand.md
+              - Axis with Monadic Operand: other-syntax/axis/axis-with-monadic-operand.md
+              - Axis with Dyadic Operand: other-syntax/axis/axis-with-dyadic-operand.md
           - Branch: other-syntax/branch.md
           - Indexing: other-syntax/indexing.md
           - Zilde: other-syntax/zilde.md
