@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Spider the deployed Dyalog documentation and verify that all internal links work.
+Spider the deployed Dyalog documentation and verify that all internal links and images work.
 """
 
 import argparse
@@ -20,17 +20,24 @@ class LinkChecker:
         self.max_concurrent = max_concurrent
         self.pages = set()  # All pages found in navigation
         self.checked_links = {}  # Map of link -> (is_valid, status)
+        self.checked_images = {}  # Map of image URL -> (is_valid, status)
         self.broken_links = defaultdict(
             set
         )  # Map of broken link -> pages that reference it
+        self.broken_images = defaultdict(
+            set
+        )  # Map of broken image -> pages that reference it
         self.page_broken_links = defaultdict(
             list
         )  # Map of page -> list of broken links
+        self.page_broken_images = defaultdict(
+            list
+        )  # Map of page -> list of broken images
         self.semaphore = asyncio.Semaphore(max_concurrent)
         self.pages_processed = 0
         self.pages_failed = 0
         self.output_file = output_file
-        self.problematic_pages = set()  # Pages with broken links
+        self.problematic_pages = set()  # Pages with broken links or images
 
     def normalize_url(self, url):
         """Normalise a URL by removing fragments and ensuring consistent format."""
@@ -118,6 +125,41 @@ class LinkChecker:
 
         return links
 
+    def extract_all_images(self, url, html):
+        """Extract all image references from an HTML page."""
+        soup = BeautifulSoup(html, "html.parser")
+        images = set()
+
+        # Find the main content area
+        content = (
+            soup.find("article")
+            or soup.find("main")
+            or soup.find("div", class_="md-content")
+        )
+
+        if not content:
+            # Fallback to the whole page
+            content = soup
+
+        # Find all img tags
+        if hasattr(content, "find_all"):
+            for tag in content.find_all("img", src=True):
+                src = tag["src"]
+
+                # Skip data URIs
+                if src.startswith("data:"):
+                    continue
+
+                # Convert relative URLs to absolute
+                absolute_url = urljoin(url, src)
+
+                # Only process internal images
+                if self.is_internal_link(absolute_url):
+                    normalized = self.normalize_url(absolute_url)
+                    images.add(normalized)
+
+        return images
+
     async def check_url(self, session, url):
         """Check if a URL is accessible."""
         # Return cached result if we already checked this URL
@@ -140,6 +182,29 @@ class LinkChecker:
             except Exception as e:
                 error_msg = str(e)[:50]  # Truncate long error messages
                 self.checked_links[url] = (False, error_msg)
+                return url, False, error_msg
+
+    async def check_image(self, session, url):
+        """Check if an image URL is accessible."""
+        # Return cached result if we already checked this image
+        if url in self.checked_images:
+            return url, self.checked_images[url][0], self.checked_images[url][1]
+
+        async with self.semaphore:
+            try:
+                # Use HEAD request for images (faster than GET)
+                async with session.head(
+                    url, allow_redirects=True, timeout=aiohttp.ClientTimeout(total=5)
+                ) as response:
+                    is_valid = response.status < 400
+                    self.checked_images[url] = (is_valid, response.status)
+                    return url, is_valid, response.status
+            except asyncio.TimeoutError:
+                self.checked_images[url] = (False, "Timeout")
+                return url, False, "Timeout"
+            except Exception as e:
+                error_msg = str(e)[:50]
+                self.checked_images[url] = (False, error_msg)
                 return url, False, error_msg
 
     async def process_page(self, session, page_url):
@@ -182,6 +247,36 @@ class LinkChecker:
                         ):
                             self.broken_links[link].add(page_url)
 
+                    # Check images
+                    images = self.extract_all_images(page_url, html)
+
+                    # Check each image
+                    image_tasks = []
+                    for img in images:
+                        if img not in self.checked_images:
+                            image_tasks.append(self.check_image(session, img))
+
+                    # Check all images for this page
+                    if image_tasks:
+                        results = await asyncio.gather(
+                            *image_tasks, return_exceptions=True
+                        )
+                        for result in results:
+                            if isinstance(result, Exception):
+                                continue
+                            if isinstance(result, tuple) and len(result) == 3:
+                                url, is_valid, status = result
+                                if not is_valid and url in images:
+                                    self.broken_images[url].add(page_url)
+
+                    # Also record any previously checked broken images
+                    for img in images:
+                        if (
+                            img in self.checked_images
+                            and not self.checked_images[img][0]
+                        ):
+                            self.broken_images[img].add(page_url)
+
                     self.pages_processed += 1
                     # Collect broken links for this page with their status
                     page_broken = []
@@ -192,6 +287,17 @@ class LinkChecker:
                     if page_broken:
                         self.problematic_pages.add(page_url)
                         self.page_broken_links[page_url] = page_broken
+
+                    # Collect broken images for this page with their status
+                    page_broken_imgs = []
+                    for img in images:
+                        if img in self.broken_images:
+                            status = self.checked_images[img][1]
+                            page_broken_imgs.append({'url': img, 'status': status})
+                    if page_broken_imgs:
+                        self.problematic_pages.add(page_url)
+                        self.page_broken_images[page_url] = page_broken_imgs
+
                     return True
                 else:
                     self.pages_failed += 1
@@ -276,13 +382,15 @@ class LinkChecker:
                     await asyncio.gather(*batch, return_exceptions=True)
 
                     # Progress update
-                    print(
+                    progress_msg = (
                         f"[{datetime.now().strftime('%H:%M:%S')}] Progress: {min(i+batch_size, len(tasks))}/{len(tasks)} pages | "
                         f"{len(self.checked_links)} links checked | "
                         f"{len(self.problematic_pages)} pages with issues | "
-                        f"{len(self.broken_links)} broken links",
-                        file=sys.stderr,
+                        f"{len(self.broken_links)} broken links | "
+                        f"{len(self.checked_images)} images checked | "
+                        f"{len(self.broken_images)} broken images"
                     )
+                    print(progress_msg, file=sys.stderr)
         finally:
             # Write YAML output at the end
             self.write_yaml_output()
@@ -293,6 +401,7 @@ class LinkChecker:
         output_data = {}
         bad_nav_links = []
 
+        # Process broken links
         for page_url, broken_links in self.page_broken_links.items():
             # Make page URL relative to base URL for cleaner output
             relative_page = page_url.replace(self.base_url, "")
@@ -331,6 +440,31 @@ class LinkChecker:
 
                 output_data[relative_page] = formatted_links
 
+        # Process broken images
+        for page_url, broken_images in self.page_broken_images.items():
+            relative_page = page_url.replace(self.base_url, "")
+            if not relative_page:
+                relative_page = "/"
+
+            # Format broken images
+            formatted_images = []
+            for img_info in broken_images:
+                if isinstance(img_info, dict):
+                    url = img_info['url']
+                    status = img_info['status']
+
+                    # Make internal URLs relative
+                    if url.startswith(self.base_url):
+                        url = url.replace(self.base_url, "")
+
+                    formatted_images.append(f"{url} (Status: {status})")
+
+            # Merge with existing entries or create new
+            if relative_page in output_data:
+                output_data[relative_page].extend(formatted_images)
+            else:
+                output_data[relative_page] = formatted_images
+
         # Add bad nav links as a special entry if any exist
         if bad_nav_links:
             # Sort and group bad nav links for better readability
@@ -345,16 +479,18 @@ class LinkChecker:
         yaml.indent(mapping=2, sequence=4, offset=2)  # Proper indentation like other scripts
 
         with open(self.output_file, "w") as f:
-            f.write("# Broken Links Report\n")
+            f.write("# Broken Links and Images Report\n")
             f.write(f"# Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
             f.write(f"# Base URL: {self.base_url}\n")
             f.write(f"# Pages with issues: {len(output_data)}\n")
+            f.write(f"# Images checked: {len(self.checked_images)}\n")
             f.write("#\n")
             f.write("# Format:\n")
             f.write("#   - 'Bad nav links:' = Pages listed in navigation that don't exist\n")
-            f.write("#   - Other keys = Pages that exist but contain broken links\n")
-            f.write("#   - Values = The broken links found (with HTTP status)\n")
+            f.write("#   - Other keys = Pages that exist but contain broken links/images\n")
+            f.write("#   - Values = The broken links/images found (with HTTP status)\n")
             f.write("#   - Links with .md extensions indicate incorrect markdown links\n")
+            f.write("#   - Image URLs are identifiable by their file extensions (.png, .jpg, etc.)\n")
             f.write("#\n\n")
 
             if output_data:
@@ -374,9 +510,11 @@ class LinkChecker:
         print(f"  - Failed pages: {self.pages_failed}", file=sys.stderr)
         print(f"  - Total links checked: {len(self.checked_links)}", file=sys.stderr)
         print(f"  - Broken links found: {len(self.broken_links)}", file=sys.stderr)
+        print(f"  - Total images checked: {len(self.checked_images)}", file=sys.stderr)
+        print(f"  - Broken images found: {len(self.broken_images)}", file=sys.stderr)
         print(f"  - Pages with issues: {len(self.problematic_pages)}", file=sys.stderr)
         print(
-            f"\n[{datetime.now().strftime('%H:%M:%S')}] Broken links report written to: {self.output_file}",
+            f"\n[{datetime.now().strftime('%H:%M:%S')}] Broken links and images report written to: {self.output_file}",
             file=sys.stderr,
         )
 
@@ -406,7 +544,7 @@ def main():
 
     # Start message
     print(
-        f"[{datetime.now().strftime('%H:%M:%S')}] Starting link check for: {args.base_url}",
+        f"[{datetime.now().strftime('%H:%M:%S')}] Starting link and image check for: {args.base_url}",
         file=sys.stderr,
     )
     print(

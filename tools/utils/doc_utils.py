@@ -13,6 +13,19 @@ from bs4 import BeautifulSoup
 from ruamel.yaml import YAML
 
 
+class ImageReference:
+    """Represents an image reference found in markdown."""
+
+    def __init__(self, alt_text: str, image_path: str, line_number: int, raw_text: str = ''):
+        self.alt_text = alt_text
+        self.image_path = image_path
+        self.line_number = line_number
+        self.raw_text = raw_text  # The actual markdown text as it appears in the file
+
+    def __repr__(self):
+        return f"ImageReference(line={self.line_number}, raw='{self.raw_text}')"
+
+
 class YAMLLoader:
     """Unified YAML loader with mkdocs custom tag support."""
     
@@ -349,8 +362,111 @@ class MkDocsRepo:
             if rel_path.startswith(site_rel_path + os.sep):
                 # Return the directory name as the subsite identifier
                 return os.path.basename(site_dir)
-        
+
         return 'root'
+
+    def find_all_image_files(self, image_extensions: Optional[Set[str]] = None) -> Set[str]:
+        """
+        Find all image files in img directories within the documentation hierarchy.
+        Only processes directories defined by the top-level mkdocs.yml structure.
+
+        Args:
+            image_extensions: Set of file extensions to consider (default: common image formats)
+
+        Returns:
+            Set of absolute paths to image files
+        """
+        from pathlib import Path
+
+        if image_extensions is None:
+            image_extensions = {'.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp', '.bmp', '.ico'}
+
+        image_files = set()
+
+        # Check main docs/img directory
+        main_img_dir = os.path.join(self.root_dir, 'docs', 'img')
+        if os.path.exists(main_img_dir):
+            for root, _, files in os.walk(main_img_dir):
+                for file in files:
+                    if Path(file).suffix.lower() in image_extensions:
+                        image_files.add(os.path.abspath(os.path.join(root, file)))
+
+        # Check each subsite's docs/img directory
+        for _, path, _ in self.iter_subsites():
+            img_dir = os.path.join(path, 'docs', 'img')
+            if os.path.exists(img_dir):
+                for root, _, files in os.walk(img_dir):
+                    for file in files:
+                        if Path(file).suffix.lower() in image_extensions:
+                            image_files.add(os.path.abspath(os.path.join(root, file)))
+
+        return image_files
+
+    def extract_image_references(self, md_file: str) -> List[ImageReference]:
+        """
+        Extract all image references from a markdown file with line numbers.
+        Handles both markdown syntax ![](path) and HTML <img> tags.
+
+        Args:
+            md_file: Path to the markdown file to extract references from
+
+        Returns:
+            List of ImageReference objects
+        """
+        refs = []
+
+        try:
+            with open(md_file, 'r', encoding='utf-8') as f:
+                content = f.read()
+                lines = content.splitlines(keepends=True)
+
+            # Pattern for markdown images: ![alt text](path)
+            md_pattern = re.compile(r'!\[([^\]]*)\]\(([^)]+)\)')
+
+            # First pass: Find markdown-style images with line numbers
+            for line_num, line in enumerate(lines, start=1):
+                for match in md_pattern.finditer(line):
+                    alt_text = match.group(1)
+                    image_path = match.group(2)
+                    raw_text = match.group(0)  # Full match: ![alt](path)
+                    refs.append(ImageReference(alt_text, image_path, line_num, raw_text))
+
+            # Second pass: Use BeautifulSoup to find HTML img tags
+            # This handles multi-line HTML tags better than regex
+            soup = BeautifulSoup(content, 'html.parser')
+            for img_tag in soup.find_all('img', src=True):
+                src = img_tag.get('src')
+                alt = img_tag.get('alt', '')
+
+                # Convert to strings and handle None values
+                src_str = str(src) if src else ''
+                alt_str = str(alt) if alt else ''
+
+                # Skip if no valid src
+                if not src_str:
+                    continue
+
+                # Reconstruct the HTML tag as it appears
+                raw_html = str(img_tag)
+
+                # Find which line this tag appears on
+                # Search for the tag in the original content
+                tag_start = content.find(raw_html)
+                if tag_start >= 0:
+                    # Count line breaks before this position
+                    line_num = content[:tag_start].count('\n') + 1
+                else:
+                    # Fallback: search for just the src attribute
+                    search_str = f'src="{src_str}"' if '"' in raw_html else f"src='{src_str}'"
+                    tag_start = content.find(search_str)
+                    line_num = content[:tag_start].count('\n') + 1 if tag_start >= 0 else 1
+
+                refs.append(ImageReference(alt_str, src_str, line_num, raw_html))
+
+        except Exception as e:
+            print(f"Warning: Could not read {md_file}: {e}", file=sys.stderr)
+
+        return refs
 
 
 class LinkValidator:
