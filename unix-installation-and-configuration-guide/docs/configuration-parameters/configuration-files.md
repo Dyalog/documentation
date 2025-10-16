@@ -16,12 +16,12 @@ Dyalog Ltd recommends that configuration files are used for all run-time applica
 
 There are two different types of configuration file:
 
-- A user configuration file – this defines configuration values for the current (possibly only) user of the system. The first time a new version of Dyalog is launched it creates and initialises a user configuration file called *\$HOME/.dyalog/dyalog.<version-specific>.dcfg*, where the version-specific information comprises the version number, edition and width. For example, a 64‑bit Unicode edition of Dyalog version 18.0 will be identified as *180U64*. The name of this file should not be changed.
+- A user configuration file – this defines configuration values for the current (possibly only) user of the system. The first time a new version of Dyalog is launched it creates and initialises a user configuration file called *\$HOME/.dyalog/dyalog.&lt;version-specific&gt;.dcfg*, where the version-specific information comprises the version number, edition and width. For example, a 64‑bit Unicode edition of Dyalog version 18.0 will be identified as *180U64*. The name of this file should not be changed.
 - An application configuration file – this contains configuration values associated with a specific application. This is created by the user and should be saved at the same level as the application. It can either be given the same name as the workspace/script that is loaded when the application starts (but with the extension *.dcfg*) or the name should be stored in the CONFIGFILE parameter.
 
 An additional configuration file called *\$HOME/.dyalog/dyalog.dcfg* is also created the first time any version of Dyalog is run. This can be edited to include configuration parameter values that should always be applied irrespective of Dyalog version so that they do not have to be redefined in multiple version-specific user configuration files.
 
-Prior to Dyalog version 18.0, configuration parameters could be specified as environment variables and set in the *\$HOME/.dyalog/dyalog.config* script. This is no longer referenced, and any settings that should be retained must be re-entered in the appropriate *\$HOME/.dyalog/dyalog.<version-specific>.dcfg* configuration file.
+Prior to Dyalog version 18.0, configuration parameters could be specified as environment variables and set in the *\$HOME/.dyalog/dyalog.config* script. This is no longer referenced, and any settings that should be retained must be re-entered in the appropriate *\$HOME/.dyalog/dyalog.&lt;version-specific&gt;.dcfg* configuration file.
 
 ## Configuration File Structure
 
