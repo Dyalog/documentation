@@ -112,15 +112,38 @@ Validate image references in markdown files (detects both markdown `![](path)` a
 docker compose run --rm utils python /utils/validate_images.py --output /docs/tools/broken_images.yaml
 ```
 
+If you're running outside Docker:
+
+```
+python utils/validate_images.py --output broken_images.yaml --root-dir ..
+```
+
 This script automatically uses ripgrep to verify unreferenced images and detects cross-document image references. The YAML report includes:
 - `broken_references`: Markdown files with broken image links
 - `cross_document_references`: Images referenced across document boundaries (bad practice that breaks isolated builds)
 - `unreferenced_images`: Truly unreferenced images (safe to delete - verified with ripgrep)
 
-**Important**: This script requires ripgrep (rg) to be installed. If ripgrep is not found, the script will exit with an error. To fix:
+**Important**: This script requires ripgrep (`rg`) to be installed. If ripgrep is not found, the script will exit with an error. To fix:
 ```
 docker compose build utils
 ```
+
+Remove unreferenced images identified by validate_images.py:
+```
+cd tools
+./utils/remove-unused-images.sh broken_images.yaml           # Dry-run (shows what would be deleted)
+./utils/remove-unused-images.sh broken_images.yaml --execute # Actually delete files
+```
+
+**Note**: This script must be run locally (not via Docker). The script:
+- Must be run from the `tools/` directory
+- Processes the `unreferenced_images:` section from the YAML output
+- Uses `git rm` to remove files from both filesystem and git index
+- Runs in dry-run mode by default for safety
+- Requires explicit `--execute` flag to actually delete files
+- Prompts for confirmation when running in execute mode
+
+After running with `--execute`, review the staged deletions with `git status` and commit when ready.
 
 Report all image references (not just broken ones):
 ```
