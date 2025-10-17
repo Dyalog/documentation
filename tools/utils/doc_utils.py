@@ -700,3 +700,139 @@ class SummaryReporter:
                 print(f"  ... and {len(self.warnings_list) - 5} more")
         
         return self.failed == 0
+
+
+class AdmonitionReference:
+    """Represents an admonition found in markdown."""
+
+    def __init__(self, adm_type: str, title: str, line_number: int,
+                 is_collapsible: bool = False, raw_text: str = '', body: str = ''):
+        self.adm_type = adm_type
+        self.title = title
+        self.line_number = line_number
+        self.is_collapsible = is_collapsible
+        self.raw_text = raw_text  # The opening line as it appears
+        self.body = body  # The content of the admonition
+
+    def __repr__(self):
+        prefix = "???" if self.is_collapsible else "!!!"
+        return f"AdmonitionReference(line={self.line_number}, type={self.adm_type}, {prefix})"
+
+    def contains(self, search_str: str, case_sensitive: bool = False) -> bool:
+        """Check if the admonition body contains the search string."""
+        if case_sensitive:
+            return search_str in self.body
+        else:
+            return search_str.lower() in self.body.lower()
+
+
+class AdmonitionExtractor:
+    """Extract admonitions from markdown files."""
+
+    # Known admonition types based on CSS definitions
+    KNOWN_TYPES = {
+        'note', 'info', 'warning', 'hint', 'legacy',
+        'linux', 'unix', 'macos', 'windows',
+        'tip', 'important', 'caution', 'danger', 'attention',  # Common mkdocs types
+        'example', 'quote', 'success', 'failure', 'bug'  # Additional common types
+    }
+
+    @staticmethod
+    def extract_admonitions(md_file: str, filter_types: Set[str] = None,
+                           filter_contains: str = None, case_sensitive: bool = False) -> List[AdmonitionReference]:
+        """
+        Extract all admonition blocks from a markdown file, including their body content.
+
+        Args:
+            md_file: Path to the markdown file
+            filter_types: Optional set of admonition types to filter for (case-insensitive)
+            filter_contains: Optional text to search for in admonition body
+            case_sensitive: Whether the contains filter is case-sensitive
+
+        Returns:
+            List of AdmonitionReference objects
+        """
+        admonitions = []
+
+        try:
+            with open(md_file, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+
+            # Pattern for admonition start: !!! or ??? followed by type and optional title
+            # Examples:
+            #   !!! note
+            #   !!! info "Custom Title"
+            #   ??? warning "Collapsible Warning"
+            adm_pattern = re.compile(r'^(\?\?\?|!!!)\s+(\w+)(?:\s+"([^"]+)")?')
+
+            i = 0
+            while i < len(lines):
+                line = lines[i]
+                match = adm_pattern.match(line.strip())
+
+                if match:
+                    prefix = match.group(1)
+                    adm_type = match.group(2).lower()
+                    title = match.group(3) or ""  # Empty string if no custom title
+                    is_collapsible = (prefix == "???")
+                    line_num = i + 1
+
+                    # Extract the body content (indented lines following the admonition)
+                    body_lines = []
+                    i += 1  # Move to next line
+
+                    # Admonition body is indented (typically 4 spaces)
+                    # Continue until we hit a non-indented line or end of file
+                    while i < len(lines):
+                        next_line = lines[i]
+                        # Check if line is indented or empty
+                        if next_line.strip() == '' or next_line.startswith((' ', '\t')):
+                            body_lines.append(next_line.rstrip())
+                            i += 1
+                        else:
+                            # Non-indented line means admonition ended
+                            break
+
+                    # Join body lines
+                    body = '\n'.join(body_lines)
+
+                    adm = AdmonitionReference(
+                        adm_type=adm_type,
+                        title=title,
+                        line_number=line_num,
+                        is_collapsible=is_collapsible,
+                        raw_text=line.strip(),
+                        body=body
+                    )
+
+                    # Apply filters if specified
+                    passes_type_filter = (filter_types is None or adm_type in filter_types)
+                    passes_content_filter = (filter_contains is None or
+                                            adm.contains(filter_contains, case_sensitive))
+
+                    if passes_type_filter and passes_content_filter:
+                        admonitions.append(adm)
+                else:
+                    i += 1
+
+        except Exception as e:
+            print(f"Warning: Could not read {md_file}: {e}", file=sys.stderr)
+
+        return admonitions
+
+    @staticmethod
+    def get_unknown_types(admonitions: List[AdmonitionReference]) -> Set[str]:
+        """
+        Identify admonition types that are not in the known types set.
+
+        Args:
+            admonitions: List of AdmonitionReference objects
+
+        Returns:
+            Set of unknown admonition type names
+        """
+        unknown = set()
+        for adm in admonitions:
+            if adm.adm_type not in AdmonitionExtractor.KNOWN_TYPES:
+                unknown.add(adm.adm_type)
+        return unknown
