@@ -1117,7 +1117,9 @@ def process_document(document_path):
             else f"{document_path}.pdf"
         )
 
-        cmd = ["weasyprint", f"{document_path}.htm", output_filename]
+        # Set base URL to help WeasyPrint resolve relative paths (especially for images in CSS)
+        base_url = f"file://{os.path.abspath(args.project_dir)}/"
+        cmd = ["weasyprint", "--base-url", base_url, f"{document_path}.htm", output_filename]
         if not args.verbose:
             cmd.append("--quiet")
 

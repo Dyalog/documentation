@@ -150,6 +150,42 @@ Report all image references (not just broken ones):
 docker compose run --rm utils python /utils/validate_images.py --all --output /docs/tools/all_images.yaml
 ```
 
+Find and report all admonitions (note, info, warning, hint, etc.):
+```
+docker compose run --rm utils python /utils/find_admonitions.py --output /docs/tools/admonitions.yaml
+```
+
+Filter by admonition type:
+```
+docker compose run --rm utils python /utils/find_admonitions.py --type "warning,note" --output /docs/tools/warnings_notes.yaml
+```
+
+Filter admonitions by content (case-insensitive by default):
+```
+docker compose run --rm utils python /utils/find_admonitions.py --contains "strong INTERRUPT" --output /docs/tools/filtered.yaml
+```
+
+Combine type and content filters:
+```
+docker compose run --rm utils python /utils/find_admonitions.py --type info --contains "deprecated" --output /docs/tools/deprecated_info.yaml
+```
+
+Case-sensitive search:
+```
+docker compose run --rm utils python /utils/find_admonitions.py --contains "INTERRUPT" --case-sensitive --output /docs/tools/filtered.yaml
+```
+
+This script scans all markdown files and reports:
+- Total count and breakdown by type (note, info, warning, hint, legacy, OS-specific)
+- Files containing admonitions with line numbers and body content
+- Usage statistics grouped by type
+- Unknown admonition types that may lack styling in admonitions.css
+- Optional filtering by type (e.g., `--type warning,note`) and/or content (e.g., `--contains "deprecated"`)
+
+Admonition types supported in PDF generation:
+- `note`, `info`, `warning`, `hint`, `legacy` (general purpose)
+- `linux`, `unix`, `macos`, `windows` (OS-specific)
+
 Add APL symbol synonyms:
 ```
 docker compose run --rm utils python /utils/add_synonyms.py /docs/language-reference-guide/docs/primitive-functions [--dry-run]

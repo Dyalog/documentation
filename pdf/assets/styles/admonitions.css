@@ -1,12 +1,28 @@
 /*------- Admonitions -------*/
 /* Enhanced admonition styles with modern CSS features supported by WeasyPrint */
 
+/*
+ * Icon mapping (from documentation-assets/images/admonitions/):
+ * - note: admonition_note (gunmetal #2A3244)
+ * - info: admonition_information (midnight #003B5C)
+ * - hint: admonition_hint (peel #FFA300)
+ * - tip: admonition_hint (peel #FFA300) - reused, no separate tip icon
+ * - warning: admonition_warning (rose #CA2E51)
+ * - important/caution/danger: admonition_warning (rose #CA2E51) - reused
+ * - legacy: admonition_legacy (grey #505050)
+ * - linux/unix/macos/windows: admonition_os (dark-lavender #7370A9)
+ */
+
 /* Admonition colors */
 :root {
     --md-admonition-color-note: #2A3244;
     --md-admonition-color-hint: #FFA300;
+    --md-admonition-color-tip: #FFA300;
     --md-admonition-color-info: #003B5C;
     --md-admonition-color-warning: #CA2E51;
+    --md-admonition-color-important: #CA2E51;
+    --md-admonition-color-caution: #CA2E51;
+    --md-admonition-color-danger: #CA2E51;
     --md-admonition-color-legacy: #505050;
     --md-admonition-color-linux: #7370A9;
     --md-admonition-color-unix: #7370A9;
@@ -176,16 +192,108 @@
     background-image: url('../images/admonitions/admonition_os-01_floating_dark-lavender-7370A9_128.svg');
 }
 
+/* TIP (uses hint icon as no separate tip icon exists) */
+.admonition.tip {
+    border-color: var(--md-admonition-color-tip);
+}
+
+.admonition.tip .admonition-title {
+    color: var(--md-admonition-color-tip);
+}
+
+.admonition.tip .admonition-title::before {
+    background-image: url('../images/admonitions/admonition_hint-01_floating_peel-FFA300_128.svg');
+}
+
+/* IMPORTANT (uses warning icon) */
+.admonition.important {
+    border-color: var(--md-admonition-color-important);
+}
+
+.admonition.important .admonition-title {
+    color: var(--md-admonition-color-important);
+}
+
+.admonition.important .admonition-title::before {
+    background-image: url('../images/admonitions/admonition_warning-01_floating_rose-CA2E51_128.svg');
+}
+
+/* CAUTION (uses warning icon) */
+.admonition.caution {
+    border-color: var(--md-admonition-color-caution);
+}
+
+.admonition.caution .admonition-title {
+    color: var(--md-admonition-color-caution);
+}
+
+.admonition.caution .admonition-title::before {
+    background-image: url('../images/admonitions/admonition_warning-01_floating_rose-CA2E51_128.svg');
+}
+
+/* DANGER (uses warning icon) */
+.admonition.danger {
+    border-color: var(--md-admonition-color-danger);
+}
+
+.admonition.danger .admonition-title {
+    color: var(--md-admonition-color-danger);
+}
+
+.admonition.danger .admonition-title::before {
+    background-image: url('../images/admonitions/admonition_warning-01_floating_rose-CA2E51_128.svg');
+}
+
+/* Fix code blocks inside admonitions */
+/* Remove default backgrounds from highlight and pre elements */
+.admonition .highlight {
+    background: transparent !important;
+    margin: 0.75em 0 !important;
+    padding: 0 !important;
+}
+
+.admonition .highlight pre {
+    background: rgba(0, 0, 0, 0.03) !important;
+    margin: 0 !important;
+    padding: 0.75em 1em !important;
+    border-radius: 2px;
+    overflow-x: auto;
+}
+
+/* For pre elements not in .highlight wrapper */
+.admonition > pre,
+.admonition p + pre {
+    background: rgba(0, 0, 0, 0.03) !important;
+    margin: 0.75em 0 !important;
+    padding: 0.75em 1em !important;
+    border-radius: 2px;
+}
+
+/* Fix inline code within admonitions */
+.admonition p code:not(pre code) {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 0.15em 0.4em;
+    border-radius: 2px;
+    font-size: 0.95em;
+}
+
 /* Print-specific optimizations */
 @media print {
     .admonition {
         page-break-inside: avoid;
         break-inside: avoid;
     }
-    
+
     .admonition .admonition-title {
         page-break-after: avoid;
         break-after: avoid;
+    }
+
+    /* Ensure icons print correctly */
+    .admonition .admonition-title::before {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color-adjust: exact;
     }
 }
 
