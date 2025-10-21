@@ -131,7 +131,7 @@ See [Lexical Scope in Scripts](../introduction/lexical-scope-in-scripts.md).
 
 The following examples illustrate how different values of the InjectReferences option affect the scope of objects in scripts. The examples are based on the following family tree:
 
-![family tree for fix](../../img/family-tree-for-fix.png)
+![family tree for fix](../../img190/family-tree-for-fix.png)
 
 Two scripts are defined to map this tree onto a structure of Classes and Namespaces. In this scheme, female family members are represented by Classes and male family members by Namespaces.
 

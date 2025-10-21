@@ -29,22 +29,22 @@ The argument to SetZoomLevel is a single numeric value:
       hr Zoom 0
 ```
 
-![](../../img/zoomlevel-0.png)
+![](../../img190/zoomlevel-0.png)
 
 ```apl
       hr Zoom 1
 ```
 
-![](../../img/zoomlevel-1.png)
+![](../../img190/zoomlevel-1.png)
 
 ```apl
       hr Zoom 2
 ```
 
-![](../../img/zoomlevel-2.png)
+![](../../img190/zoomlevel-2.png)
 
 ```apl
       hr Zoom ¯1
 ```
 
-![](../../img/zoomlevel-neg1.png)
+![](../../img190/zoomlevel-neg1.png)
