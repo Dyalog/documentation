@@ -48,11 +48,8 @@ markdown_extensions:
   - toc:
       title: On this page
 nav:
-  - Key to Notation: primitive-functions/key-to-notation.md
-  - Symbols:
-      - Language Elements: symbols/language-elements.md
-      - Brackets: symbols/brackets.md
-      - Special Symbols: symbols/special-symbols.md
+  - Key to Notation: key-to-notation.md
+  - Glyphs: glyphs.md
   - Primitive Functions:
       - Primitive Functions: primitive-functions/index.md
       - Scalar Functions: primitive-functions/scalar-functions.md
