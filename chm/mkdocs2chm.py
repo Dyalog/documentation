@@ -1007,6 +1007,12 @@ def fix_links_html(html: str, version: str = None) -> str:
             ver = version if version else "20.0"
             return f"https://docs.dyalog.com/{ver}/files/{file_path}"
 
+        # Separate anchor from the path (if present)
+        anchor = ""
+        if "#" in href:
+            href, anchor = href.split("#", 1)
+            anchor = "#" + anchor
+
         # Remove trailing slash if present
         if href.endswith("/"):
             href = href[:-1]
@@ -1015,16 +1021,16 @@ def fix_links_html(html: str, version: str = None) -> str:
         base, ext = os.path.splitext(name)
 
         if ext == ".md":  # Link to another sub-site: change ".md" to ".htm"
-            return os.path.join(path, f"{base}.htm")
+            return os.path.join(path, f"{base}.htm") + anchor
 
         if (
             ext == ""
         ):  # Link within the same side -- lift one relative level, and add .htm
             target = re.sub(r"^\.\.\/", "", href, count=1)
-            return f"{target}.htm"
+            return f"{target}.htm" + anchor
 
-        # Something else; leave unchanged
-        return href
+        # Something else; leave unchanged (but restore anchor)
+        return href + anchor
 
     # Parse the HTML
     soup = BeautifulSoup(html, "html.parser")
