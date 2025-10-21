@@ -47,6 +47,7 @@ markdown_extensions:
 nav:
   - Key to Notation: primitive-functions/key-to-notation.md
   - Primitive Functions:
+      - Primitive Functions: primitive-functions/index.md
       - Scalar Functions: primitive-functions/scalar-functions.md
       - Mixed Functions: primitive-functions/mixed-functions.md
       - Notes: primitive-functions/notes.md

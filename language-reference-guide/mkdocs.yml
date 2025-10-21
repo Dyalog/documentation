@@ -54,7 +54,7 @@ nav:
       - Brackets: symbols/brackets.md
       - Special Symbols: symbols/special-symbols.md
   - Primitive Functions:
-      - Introduction: primitive-functions/primitive-functions-table.md
+      - Primitive Functions: primitive-functions/index.md
       - Scalar Functions: primitive-functions/scalar-functions.md
       - Mixed Functions: primitive-functions/mixed-functions.md
       - Notes: primitive-functions/notes.md
