@@ -13,7 +13,7 @@ There is one (and only one) object of type Session and it is called `⎕SE`. You
 
 `⎕SE` is loaded from a session file when APL starts. The name of the session file is specified by the **session_file** parameter. If no session file is defined, `⎕SE` will have no children and the session will be devoid of menu bar, tool bar and status bar components.
 
-An additional feature is provided to establish code in the Session. See .
+An additional feature is provided to establish code in the Session. See the [DyalogStartupSE](../../../windows-installation-and-configuration-guide/configuration-parameters/dyalogstartupse) parameter.
 
 You may use all of the standard GUI system functions to build or configure the components of the Session to your own requirements. You may also control the Session by changing certain of its properties.
 
