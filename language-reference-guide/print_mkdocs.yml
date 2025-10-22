@@ -49,9 +49,8 @@ nav:
   - Glyphs: glyphs.md
   - Primitive Functions:
       - Primitive Functions: primitive-functions/index.md
-      - Scalar Functions: primitive-functions/scalar-functions.md
-      - Mixed Functions: primitive-functions/mixed-functions.md
       - Notes: primitive-functions/notes.md
+      - Primitive Functions (by category): primitive-functions/primitive-functions-by-category.md
       - Functions (A-Z):
           - Binomial: primitive-functions/binomial.md
           - Catenate Laminate: primitive-functions/catenate-laminate.md
