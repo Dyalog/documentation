@@ -55,10 +55,6 @@ pipeline {
                     args '-v /home/jenkins/.ssh:/build/.ssh'
                 }
             }
-            options
-            {
-                skipDefaultCheckout(true)
-            }
             stages
             {
                 stage('Checkout from svndocs')
