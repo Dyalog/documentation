@@ -158,6 +158,7 @@ nav:
           - Without: primitive-functions/without.md
   - Primitive Operators:
       - Operator Syntax: primitive-operators/operator-syntax.md
+      - Function Composition: primitive-operators/function-composition.md
       - Operators Summarised: primitive-operators/operators-summarised.md
       - Primitive Operators (A-Z):
           - At: primitive-operators/at.md
