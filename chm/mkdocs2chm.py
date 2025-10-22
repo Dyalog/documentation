@@ -588,6 +588,7 @@ def convert_to_html(
                 "markdown_tables_extended",  # https://github.com/fumbles/tables_extended
                 "pymdownx.details",  # https://facelessuser.github.io/pymdown-extensions/extensions/details/
                 "pymdownx.superfences",  # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
+                "toc",  # https://python-markdown.github.io/extensions/toc/ - adds id attributes to headings
                 TableCaptionExtension(),  # https://github.com/flywire/caption
             ],
         )
