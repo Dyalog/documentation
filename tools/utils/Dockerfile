@@ -17,11 +17,14 @@ RUN pip install --no-cache-dir \
     mkdocs-macros-plugin \
     mkdocs-caption \
     pymdown-extensions \
+    markdown-tables-extended \
     ruamel.yaml \
     beautifulsoup4 \
     aiohttp \
     lxml \
-    Pillow
+    Pillow \
+    watchdog \
+    markdown
 
 # Copy utils scripts
 COPY utils /utils
