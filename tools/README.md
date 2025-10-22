@@ -79,9 +79,92 @@ Edit `.env` to contain:
 
 ```
 DOCS_DIR=/Users/stefan/work/dyalog-docs/documentation
+ASSETS_DIR=/Users/stefan/work/dyalog-docs/documentation/documentation-assets
 ```
 
 From the tools/ directory:
+
+### Live Markdown Renderer
+
+`render.py` is a live markdown renderer with auto-reload functionality. It renders a markdown file to HTML and automatically refreshes the browser view when the source file changes. This is perfect for testing markdown files before building the full site.
+
+**Features:**
+- ✨ Live preview with auto-reload on file changes
+- 🎨 Uses **exact same CSS** as the live MkDocs site (from `documentation-assets`)
+- 🔧 Uses **same markdown extensions** as MkDocs (pymdownx, tables, admonitions, etc.)
+- 📊 Proper rendering of tables with column alignment
+- 🌐 Built-in HTTP server for proper JavaScript execution
+
+#### Docker Usage (Recommended)
+
+```bash
+# Make sure .env has ASSETS_DIR set (see above)
+docker compose run --rm utils python /utils/render.py /docs/tools/primitive-functions-by-category.md --no-browser
+```
+
+The rendered HTML will be created in the same directory as the source markdown file.
+
+#### Local Usage
+
+```bash
+cd tools
+source ../docs-venv/bin/activate
+python utils/render.py primitive-functions-by-category.md
+```
+
+This will open your browser automatically and watch for changes.
+
+#### Options
+
+```bash
+# Custom output file
+python /utils/render.py /docs/input.md --output /docs/custom.html
+
+# Custom port (if 8000 is in use)
+python /utils/render.py /docs/input.md --port 8080
+
+# Don't open browser (useful for Docker)
+python /utils/render.py /docs/input.md --no-browser
+```
+
+#### CSS Sources
+
+The script automatically loads CSS in this priority:
+
+1. **External CSS (preferred)**: Loads `main.css` and `extra.css` from `documentation-assets`
+   - In Docker: mounted at `/docs/docs/documentation-assets`
+   - Locally: auto-detected relative to the script location
+   - Gives you the same styling as the live site
+   - Shows message: `Loaded CSS from /path/to/documentation-assets`
+
+2. **Embedded CSS (fallback)**: Uses built-in CSS if `documentation-assets` not found
+   - Shows warning: `Warning: documentation-assets not found, using embedded CSS`
+   - Still provides good styling but may not match live site exactly
+
+**Tip:** To ensure you see the same rendering as the live site, make sure `ASSETS_DIR` is set in your `.env` file (see [The `.env` file](#the-env-file) section below).
+
+#### What Gets Rendered
+
+The script renders markdown using the same extensions as MkDocs:
+- Extended tables with column/row spans and alignment (`:--:`, `---:`, etc.)
+- Admonition blocks (note, warning, info, tip, etc.)
+- Collapsible sections (details/summary)
+- Syntax-highlighted code blocks
+- Keyboard key combinations
+- Footnotes
+
+For detailed documentation:
+```bash
+# Quick help
+python /utils/render.py --help
+
+# Full documentation (local)
+cd tools/utils && pydoc3 render
+
+# Or view the comprehensive docstring at the top of utils/render.py
+```
+
+### Ghost pages
 
 `find_ghost_pages.py`: list pages not referenced by any `nav` section:
 ```
