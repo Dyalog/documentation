@@ -122,7 +122,7 @@ pipeline {
                         dir("${env.DOCSVERSION}") {
                             doSvnCheckout(SVNDOCURL, "files", true, 'svncom')
                             doSvnCheckout(SVNSHARPPLOTURL, "files/sharpplot", true, 'svncom')
-                            doSvnCheckout(SVNREADMEURL, "files/readmes")
+                            doSvnCheckout(SVNREADMEURL, "files/readmes", true, 'svncom')
                             sh '''$WORKSPACE/get_svn_docbin ${DOCSVERSION}'''
                         }
                     }
