@@ -164,9 +164,37 @@ cd tools/utils && pydoc3 render
 # Or view the comprehensive docstring at the top of utils/render.py
 ```
 
-### Ghost pages
+### Finding Orphaned Pages
 
-`find_ghost_pages.py`: list pages not referenced by any `nav` section:
+`find_orphans.py`: Find truly orphaned markdown files across ALL output formats:
+
+```bash
+# Docker
+docker compose run --rm utils python /utils/find_orphans.py --root /docs/mkdocs.yml
+
+# Local
+python utils/find_orphans.py --root ../mkdocs.yml --verbose
+
+# With YAML output
+python utils/find_orphans.py --root ../mkdocs.yml --output orphans.yaml
+
+# Exclude specific subsites (comma-separated)
+python utils/find_orphans.py --root ../mkdocs.yml --exclude object-reference,unix-user-guide
+
+# Exclude CHM disambiguation pages
+python utils/find_orphans.py --root ../mkdocs.yml --output orphans.yaml --help_urls path/to/svn/help_urls.h
+```
+
+This locates files that are invisible in ALL formats:
+- Not in any `mkdocs.yml` nav (standard or `print_mkdocs.yml`)
+- Not referenced by any markdown links
+- Not referenced by any HTML links
+- Not used by CHM (`welcome.md`) or PDF builds
+
+**Note:** Files in object-reference/ that are only accessible via links (not in nav) are correctly identified as NON-orphans.
+
+### Ghost pages
+`find_ghost_pages.py`: list pages not referenced by any `nav` section (simpler, faster):
 ```
 docker compose run --rm utils python /utils/find_ghost_pages.py --root /docs/mkdocs.yml
 ```
@@ -300,6 +328,27 @@ Key points:
 1. Both containers are in the same Docker Compose network
 2. Docker provides automatic DNS resolution for service names
 3. `mkdocs-server` resolves to the internal IP of the mkdocs container
+
+### Shared Utilities (`doc_utils.py`)
+
+The `tools/utils/doc_utils.py` module provides reusable classes for working with the documentation:
+
+**Core Classes:**
+- `YAMLLoader` - Load YAML files with mkdocs custom tag support
+- `NavTraverser` - Traverse and extract files from mkdocs nav structures
+- `MkDocsRepo` - Represent and navigate the monorepo structure
+- `LinkExtractor` - Extract markdown and HTML links from content
+- `PathResolver` - Resolve file paths in the monorepo structure
+- `LinkValidator` - Validate internal and cross-subsite links
+
+**Specialized Parsers:**
+- `HelpUrlsParser` - Parse C header files containing `HELP_URL()` macros
+  - `parse_help_urls(file_path)` - Extract (symbol, url) tuples from `.h` files
+  - `url_to_markdown_path(url, root_dir)` - Convert help URLs to source file paths
+- `ImageReference` - Represent image references with line numbers
+- `AdmonitionExtractor` - Extract and validate admonition blocks
+
+These classes are used by multiple utility scripts to maintain consistency in how the documentation structure is processed.
 
 ### Additional Scripts
 

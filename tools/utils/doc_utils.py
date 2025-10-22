@@ -726,6 +726,112 @@ class AdmonitionReference:
             return search_str.lower() in self.body.lower()
 
 
+class HelpUrlsParser:
+    """Parse C header files containing HELP_URL macros."""
+
+    @staticmethod
+    def parse_help_urls(file_path: str) -> List[Tuple[str, str]]:
+        """
+        Parse a C header file containing HELP_URL macros.
+
+        Args:
+            file_path: Path to the .h file
+
+        Returns:
+            List of (symbol, url) tuples extracted from HELP_URL macros
+        """
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+        except Exception as e:
+            print(f"Error reading {file_path}: {e}", file=sys.stderr)
+            return []
+
+        # Parse #define statements for substitution
+        defines = {}
+        define_pattern = re.compile(r'^\s*#define\s+(\w+)\s+"([^"]+)"', re.MULTILINE)
+        for match in define_pattern.finditer(content):
+            name, value = match.groups()
+            defines[name] = value
+
+        # Parse HELP_URL() macros
+        # Pattern: HELP_URL("text", "url") or HELP_URL("text", DEFINE"/path")
+        help_url_pattern = re.compile(
+            r'HELP_URL\s*\(\s*"([^"]*)"\s*,\s*(?:(\w+)"([^"]*)"|"([^"]+)")\s*\)',
+            re.MULTILINE
+        )
+
+        urls = []
+        for match in help_url_pattern.finditer(content):
+            symbol = match.group(1)
+            define_name = match.group(2)
+            define_suffix = match.group(3)
+            full_url = match.group(4)
+
+            # Reconstruct URL with substitution if needed
+            if define_name:
+                if define_name in defines:
+                    url = defines[define_name] + define_suffix
+                else:
+                    # Skip if we can't resolve the define
+                    continue
+            else:
+                url = full_url
+
+            urls.append((symbol, url))
+
+        return urls
+
+    @staticmethod
+    def url_to_markdown_path(url: str, root_dir: str) -> Optional[str]:
+        """
+        Convert a help URL to a markdown file path.
+
+        URLs are in format: subsite-name/path/to/file
+        Files are at: subsite-name/docs/path/to/file.md
+
+        Args:
+            url: The URL from HELP_URL macro
+            root_dir: Root directory of the documentation
+
+        Returns:
+            Absolute path to markdown file, or None if not found
+        """
+        from pathlib import Path
+
+        # Remove .htm/.html extension if present (for backward compatibility)
+        if url.endswith('.htm'):
+            url = url[:-4]
+        elif url.endswith('.html'):
+            url = url[:-5]
+
+        # URL decode spaces and special characters
+        url = url.replace('%20', ' ')
+
+        # Split URL into subsite and path
+        parts = url.split('/', 1)
+        if len(parts) == 2:
+            subsite, path = parts
+            # Try with /docs/ inserted
+            md_path = f"{subsite}/docs/{path}.md"
+            candidate = Path(root_dir) / md_path
+            if candidate.exists():
+                return str(candidate.resolve())
+
+        # Fallback: try direct path
+        md_path = url + '.md'
+        candidate = Path(root_dir) / md_path
+        if candidate.exists():
+            return str(candidate.resolve())
+
+        # Try in docs subdirectory of root
+        candidate = Path(root_dir) / 'docs' / md_path
+        if candidate.exists():
+            return str(candidate.resolve())
+
+        return None
+
+
 class AdmonitionExtractor:
     """Extract admonitions from markdown files."""
 
