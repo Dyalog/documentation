@@ -22,6 +22,6 @@ Dyadic Down Tack means
 2 46 40
 
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

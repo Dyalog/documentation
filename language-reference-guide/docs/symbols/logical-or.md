@@ -16,6 +16,6 @@ Dyadic Logical OR means
       15 1 2 7 ∨ 35 1 4 0
 5 1 2 7
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

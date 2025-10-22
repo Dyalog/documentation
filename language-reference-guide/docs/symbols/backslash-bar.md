@@ -38,6 +38,6 @@ Operator Backslash Bar means
  6  8 10 12
 15 18 21 24 
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

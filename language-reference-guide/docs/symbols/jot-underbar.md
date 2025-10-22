@@ -19,4 +19,4 @@ Operator Jot Underbar means
       4-⍛↓'Dyalog APL'
 Dyalog
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)

@@ -23,4 +23,4 @@ Delayed:  10.2228
                   ⍝ thread 1 completes:
 Delayed:  10.03183
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)

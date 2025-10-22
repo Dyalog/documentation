@@ -41,6 +41,6 @@ GH
       1 +∘÷⍣= 1            ⍝ fixpoint: golden mean
 1.61803
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

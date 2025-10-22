@@ -30,6 +30,6 @@ Dyadic Down Shoe means
 │ab│cde│fg│a│
 └──┴───┴──┴─┘
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

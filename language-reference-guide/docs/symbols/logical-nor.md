@@ -12,6 +12,6 @@ Dyadic Logical NOR means
       0 1 0 1 ⍱ 0 0 1 1
 1 0 0 0
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

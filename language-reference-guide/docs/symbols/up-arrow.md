@@ -52,4 +52,4 @@ apple
 0 0 0
 7 0 0
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)

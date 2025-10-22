@@ -27,6 +27,6 @@ Dyadic Epsilon Underbar means
 0 0 0 0
 
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

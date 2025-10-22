@@ -18,6 +18,6 @@ Operator Circle Diaeresis means
       'Dyalog' ≡⍥⎕C 'IBM'
 0
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

@@ -27,6 +27,6 @@ Dyadic Circle Backslash means
       1 1 ⍉ mat     ⍝ leading diagonal
 1 5
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

@@ -22,6 +22,6 @@ Dyadic Tilde means
 │aa│cc│
 └──┴──┘
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

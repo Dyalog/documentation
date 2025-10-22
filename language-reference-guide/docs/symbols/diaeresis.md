@@ -25,6 +25,6 @@ Operator Diaeresis means
 │1 99│2 99│3 99│
 └────┴────┴────┘
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

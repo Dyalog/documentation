@@ -29,6 +29,6 @@ Dyadic Not Equal means
       7 ≠ '7'
 1
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

@@ -38,4 +38,4 @@ Dyadic Iota means
 3
 
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)

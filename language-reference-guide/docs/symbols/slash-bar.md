@@ -36,6 +36,6 @@ Operator Slash Bar means
  6  8 10 12
 14 16 18 20
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

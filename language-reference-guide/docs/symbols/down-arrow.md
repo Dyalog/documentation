@@ -37,6 +37,6 @@ Pine
 5  6  7  8
 9 10 11 12
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

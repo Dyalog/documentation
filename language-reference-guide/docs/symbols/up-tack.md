@@ -18,6 +18,6 @@ Dyadic Up Tack means
       24 60 60 ⊥ 2 46 40
 10000
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

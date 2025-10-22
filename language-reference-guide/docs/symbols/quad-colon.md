@@ -53,6 +53,6 @@ This is equivalent to:
       (f1 ⍠ 1 ⍠ 0) 'The variant Variant operator'
 4
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

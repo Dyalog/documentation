@@ -50,6 +50,6 @@ StandHat
 5 10  3  4
 9  2  7  8
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

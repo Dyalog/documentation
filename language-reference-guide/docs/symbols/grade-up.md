@@ -31,6 +31,6 @@ Dyadic Grade Up means
       'an' ⍋ 'Banana'
 2 4 6 3 5 1
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

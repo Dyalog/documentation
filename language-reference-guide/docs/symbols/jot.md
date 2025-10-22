@@ -36,6 +36,6 @@ Operator Jot means Beside or Bind
 N.B. Jot is also used in conjunction with Dot to mean
       [Outer Product](../primitive-operators/outer-product.md).
 
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

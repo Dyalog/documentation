@@ -32,6 +32,6 @@ r
       2 1 ⊃ (1 2)(3 4 5)
 3
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

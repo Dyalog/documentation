@@ -47,6 +47,6 @@ zxy
 25 26 27 28 
 39 40 41 42
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

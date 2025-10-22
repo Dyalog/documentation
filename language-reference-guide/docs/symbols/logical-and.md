@@ -16,6 +16,6 @@ Dyadic Logical AND means
 105 1 4 0
 
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

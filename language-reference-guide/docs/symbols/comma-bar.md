@@ -38,6 +38,6 @@ Dyadic Comma Bar means
 4 5 6
 7 8 9
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

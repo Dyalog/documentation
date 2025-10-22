@@ -36,4 +36,4 @@ Dyadic Iota Underbar means
       mat ⍸ 3 5
 2
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)

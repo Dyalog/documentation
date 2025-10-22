@@ -17,6 +17,6 @@ Dyadic Exclamation Mark means
       2 1 3 ! 3 10 ¯0.11
 3 10 ¯0.0429385
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

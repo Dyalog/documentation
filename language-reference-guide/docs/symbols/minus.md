@@ -20,6 +20,6 @@ Dyadic Minus means
       5 1 4 - 2 3 4
 3 ¯2 0
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

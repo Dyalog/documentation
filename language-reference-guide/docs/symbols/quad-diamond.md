@@ -42,6 +42,6 @@ Operator Quad Diamond means
 57 90 99 69
 46 72 78 54
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

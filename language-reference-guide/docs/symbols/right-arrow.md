@@ -17,6 +17,6 @@ Syntax:  Branch (Clear suspension)
 Branching is superseded by the more modern
 control structures such as :If ... :EndIf
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

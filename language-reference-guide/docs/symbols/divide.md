@@ -22,6 +22,6 @@ Dyadic Divide means
 ¯5 20
 
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 
