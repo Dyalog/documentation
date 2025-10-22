@@ -47,7 +47,7 @@ cd $FILESDIR || Exit 2 "Unable to cd to $FILESDIR after exporting from svn"
 [ ! -f $READMEDIR/$SETUPREADME ] && Exit 2 "No $READMEDIR/$SETUPREADME file exists; bailing"
 [ ! -f $READMEDIR/$DYALOGREADME ] && Exit 2 "No $READMEDIR/$DYALOGREADME file exists; bailing"
 [ ! -f $FILELISTFILE ] && Exit 2 "No $FILELISTFILE; bailing"
-mv $SHARPPLOTDIR/$SHARPPLOTCHM $READMEDIR/$SETUPREADME $READMEDIR/$DYALOGREADME.
+mv $SHARPPLOTDIR/$SHARPPLOTCHM $READMEDIR/$SETUPREADME $READMEDIR/$DYALOGREADME .
 rm -rf .svn $SHARPPLOTDIR $READMEDIR
 
 # 2. Sanity check: all files in the file list should be present
