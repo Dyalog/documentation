@@ -23,6 +23,6 @@ Dyadic Times means
       ×/ 2 3 4
 24
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

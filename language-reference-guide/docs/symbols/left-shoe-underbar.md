@@ -34,6 +34,6 @@ Dyadic Left Shoe Underbar means
 │many│a│time│
 └────┴─┴────┘
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

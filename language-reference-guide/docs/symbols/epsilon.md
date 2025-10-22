@@ -35,6 +35,6 @@ Dyadic Epsilon means
 0 1 0
 1 0 1
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

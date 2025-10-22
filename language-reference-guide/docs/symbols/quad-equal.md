@@ -39,6 +39,6 @@ n  9
 │n│3 5  │
 └─┴─────┘
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

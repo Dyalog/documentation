@@ -19,6 +19,6 @@ R
       ⊢/ 1 2 3
 3
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

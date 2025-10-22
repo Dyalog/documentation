@@ -23,6 +23,6 @@ Dyadic Plus means
       +/ 1 2 3
 6
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

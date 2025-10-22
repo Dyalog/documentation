@@ -20,6 +20,6 @@ Dyadic Upstile means
       ⌈/ 3 1 4 1
 4
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

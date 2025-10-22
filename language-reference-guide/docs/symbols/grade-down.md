@@ -33,6 +33,6 @@ Provide collating sequence for character data.
       'an' ⍒ 'Banana'
 1 3 5 2 4 6
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

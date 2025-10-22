@@ -21,6 +21,6 @@ Dyadic Domino means
       5 6 ⌹ mat
 ¯4 4.5
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

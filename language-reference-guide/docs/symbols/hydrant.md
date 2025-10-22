@@ -26,6 +26,6 @@ Dyadic Hydrant means
 └──┴─────┴────┘
 
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

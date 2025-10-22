@@ -17,6 +17,6 @@ Dyadic Log means
       2 10 ⍟ 32 1000
 5 3
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

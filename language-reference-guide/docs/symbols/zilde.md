@@ -16,6 +16,6 @@ Niladic Zilde is
       ⍬≡''
 0
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

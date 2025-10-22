@@ -14,6 +14,6 @@ Dyadic Less Than means
       1 2 3 < 2
 1 0 0
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

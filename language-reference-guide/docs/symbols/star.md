@@ -18,6 +18,6 @@ Dyadic Star means
       49 5 ¯4 * 0.5 2 0.5
 7 25 0J2
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

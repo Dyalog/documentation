@@ -32,6 +32,6 @@ Dyadic Not Equal Underbar means
       1 ≢ 1 1
 1
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

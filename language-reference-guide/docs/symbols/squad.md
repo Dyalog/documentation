@@ -32,6 +32,6 @@ Index with Axes means
       2 ⌷[2] mat
 2 6 10
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

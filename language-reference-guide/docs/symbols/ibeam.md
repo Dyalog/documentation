@@ -14,6 +14,6 @@ Monadic operator:  I-Beam
 Provides a system-related service
 determined by the left-operand value.
 
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

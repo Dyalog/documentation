@@ -16,6 +16,6 @@ Dyadic Greater Than means
 0 0 1
 
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

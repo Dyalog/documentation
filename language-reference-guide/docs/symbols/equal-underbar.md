@@ -29,6 +29,6 @@ Dyadic Equal Underbar means
       1 ≡ 1 1
 0
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

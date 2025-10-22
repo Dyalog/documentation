@@ -14,6 +14,6 @@ Dyadic Up Shoe means
 │22│ab│
 └──┴──┘
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

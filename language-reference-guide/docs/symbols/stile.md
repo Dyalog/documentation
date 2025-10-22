@@ -18,6 +18,6 @@ Dyadic Stile means
       2 10 ¯2.5 | 7 ¯13 8
 1 7 ¯2
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

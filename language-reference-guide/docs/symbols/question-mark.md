@@ -20,6 +20,6 @@ Dyadic Question Mark means
       13 ? 52
 36 31 44 11 27 42 13 8 2 33 19 34 6
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

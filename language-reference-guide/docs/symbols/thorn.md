@@ -55,6 +55,6 @@ Field-width and number of decimal places:
 ******
 
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

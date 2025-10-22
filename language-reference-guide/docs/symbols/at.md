@@ -24,4 +24,4 @@ Operator At means
       ⌽@(2∘|) 1 2 3 4 5     ⍝ Reversal of sub-array 1 3 5
 5 2 3 4 1
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)

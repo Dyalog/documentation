@@ -21,6 +21,6 @@ Dyadic Equal means
       7 = '7'
 0
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

@@ -53,6 +53,6 @@ Operator Slash means
 51 54 57 60
 
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

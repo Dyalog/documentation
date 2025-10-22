@@ -22,6 +22,6 @@ Dyadic Downstile means
 1
 
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 

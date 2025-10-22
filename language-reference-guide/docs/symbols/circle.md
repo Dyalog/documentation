@@ -35,6 +35,6 @@ Dyadic Circle means
 ¯12  *⍵×0J1       12   phase of ⍵
 
 ```
-[Language Elements](./language-elements.md)
+[Language Elements](../glyphs.md)
 
 
