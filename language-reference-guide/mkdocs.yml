@@ -162,6 +162,7 @@ nav:
   - Primitive Operators:
       - Introduction: primitive-operators/primitive-operators-table.md
       - Operator Syntax: primitive-operators/operator-syntax.md
+      - Function Composition: primitive-operators/function-composition.md
       - Operators Summarised: primitive-operators/operators-summarised.md
       - Operators A-Z:
           - At: primitive-operators/at.md
