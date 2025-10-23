@@ -13,6 +13,9 @@ RUN pip install \
     markdown-tables-extended \
     mkdocs-minify-plugin
 
+RUN pip install --force-reinstall click==8.2.1
+
+
 # Set the working directory
 WORKDIR /docs
 
