@@ -98,6 +98,24 @@ th, td {
     text-align: left;
 }
 
+/* Default left alignment for cells without align attribute */
+th:not([align]), td:not([align]) {
+    text-align: left;
+}
+
+/* Respect align attributes from markdown table syntax */
+th[align="left"], td[align="left"] {
+    text-align: left;
+}
+
+th[align="center"], td[align="center"] {
+    text-align: center;
+}
+
+th[align="right"], td[align="right"] {
+    text-align: right;
+}
+
 .md-typeset table th, .md-typeset table td {
     font-size: 0.8rem;
 }
