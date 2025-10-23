@@ -304,3 +304,7 @@ The default redirections for the two output streams are:
 The default for the input stream is
 
 - `(0 'Null')`: Provide no data on standard input.
+
+## Environment Variables
+
+The `DYALOG_SHELL_SUBPROCESS` environment variable determines whether a the interpreter starts a (small) child process that handles calls to ⎕SHELL, mitigating some of the performance issues seen on AIX when fork()ing large processes.
