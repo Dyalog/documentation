@@ -1,6 +1,6 @@
 # Announcements
 
-Notice of new and planned additions, removals, and deprecations in Dyalog v20.0 compared with Dyalog v19.0.
+Notice of new and planned additions, changes, removals, and deprecations in Dyalog v20.0 compared with Dyalog v19.0.
 
 ## Additions
 
@@ -34,6 +34,15 @@ Images of docker containers that host Dyalog running on ARM64 Linux are availabl
  
 !!! Info "Information"  
     The HTMLRenderer is not currently supported on Linux ARM64.
+
+## Changes
+
+### Defining Dfns with Unmatched Brackets
+
+The rules around whether a function can be fixed have been tightened to prevent dfns with unmatched parentheses and brackets from being fixed. This is to accommodate array notation, which changes the meaning of parentheses and brackets that span more than one statement. TradFns will continue to fix as before, but subtle differences in how the code behaves might not be backwards-compatible and could have unexpected results.
+
+    !!! Hint "Hints and Recommendations"
+        If the enhanced restrictions cause problems for you, please contact [support@dyalog.com](mailto:support@dyalog.com) to discuss tools and techniques for mitigation.
 
 ## Removals (Previously Announced)
 

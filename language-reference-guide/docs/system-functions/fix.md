@@ -123,7 +123,7 @@ In the final example, the left argument of `2` allows a script containing multip
 
 
 
-## Restriction
+## Restrictions
 
 
 `⎕FIX` is unable to fix a namespace from `Y` when `Y` specifies a multi-line dfn which is preceded by a `⋄` (diamond separator).
@@ -135,6 +135,8 @@ DOMAIN ERROR: There were errors processing the script
 
 ```
 
+!!! Legacy "Legacy"
+    Before Dyalog v20.0, it was possible to define dfns with unmatched parentheses and brackets. These are now rejected. TradFns will continue to fix as before, but subtle differences in how the code behaves might not be backwards-compatible and could have unexpected results.
 
 ## Variant Options
 
