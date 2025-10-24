@@ -306,5 +306,5 @@ The default for the input stream is
 - `(0 'Null')`: Provide no data on standard input.
 
 
-!!! aix "Dyalog on AIX"
+!!! unix "Dyalog on AIX"
     To improve the performance of `⎕SHELL` on AIX, the [`DYALOG_SHELL_SUBPROCESS`](../../unix-installation-and-configuration-guide/docs/configuration-parameters/environment-variables.md) configuration parameter has been added.
