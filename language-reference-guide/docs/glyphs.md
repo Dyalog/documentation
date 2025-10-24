@@ -73,7 +73,7 @@
 |`(`…`)`|Parentheses|[modify order of execution](../../../programming-reference-guide/introduction/expressions), [indicate namelist](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/namelists), [literal namespace or vector](../../../../programming-reference-guide/introduction/arrays/array-notation)
 |`(`…`)←`|Parentheses with Left Arrow|[Selective Assignment](other-syntax/assignment/assignment-selective.md)
 |`(`…`)`…`←`|Parentheses with Left Arrow|[Modified Selective Assignment](other-syntax/assignment/assignment-selective-modified.md)
-|`)`…|Right parenthesis|[start a system command](../system-commands/index.md)
+|`)`…|Right parenthesis|[start a system command](system-commands/index.md)
 |`{}`|Braces|[suppress result](../../../programming-reference-guide/introduction/idiom-recogition/idiom-list/)
 |`{`…`}`|Braces|[shy result, optional left argument](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/model-syntax), [dfn/dop body](../../../programming-reference-guide/defined-functions-and-operators/dfns-and-dops/dynamic-functions-and-operators)
 |`''`|Quote Quote|[empty character vector](../../../programming-reference-guide/introduction/arrays/characters)

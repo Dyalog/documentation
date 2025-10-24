@@ -17,7 +17,7 @@ The value of `Y` specifies whether this attaches, assimilates, or detaches share
 
 Optionally, `X` is a list of nameclass identifiers to be brought over (cannot include sub-classes). The default is `2 3 4 9` (variables, functions, operators, and namespaces respectively).
 
-The effect of attaching shared code files is analogous to performing a [`)PCOPY`](../../system-commands/pcopy) from the shared code files, that is:
+The effect of attaching shared code files is analogous to performing a [`)PCOPY`](../../../system-commands/pcopy.md) from the shared code files, that is:
 
 - names that already have a definition are preserved unaltered; if the same name appears in more than one shared code file, then the files are searched in the specified order and the first occurrence of the name is used.
 - names in attached files immediately affect the results of system functions that provide metadata, such as `⎕NL` or `⎕NC`.
