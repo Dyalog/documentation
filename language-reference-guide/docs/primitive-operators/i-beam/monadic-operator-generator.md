@@ -11,7 +11,7 @@ Returns a monadic operator, with functionality determined by the value of `Y`.
 `Y` is a scalar integer. Possible values for `Y` are shown in the table below. If an undefined value is specified, a `DOMAIN ERROR` is generated.
 
 `R` is a monadic operator with functionality determined by the value of `Y`.
-As `R`is a monadic operator, Dyalog Ltd recommends that the evaluation of this I-Beam is either parenthesised or named.
+As `R` is a monadic operator, Dyalog Ltd recommends that the evaluation of this I-Beam is either parenthesised or named.
 
 | `Y` | Returned Operator | Notes |
 |---|---                |---|

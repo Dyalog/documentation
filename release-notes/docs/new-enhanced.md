@@ -3,7 +3,7 @@
 This page describes the changes and new features in Dyalog v20.0 compared with Dyalog v19.0.
 
 ## Syntax Changes
-png
+
 ### Array Notation
 
 [Array notation](../../programming-reference-guide/introduction/arrays/array-notation/) is a literal syntax for most arrays (including nested and high-rank arrays) and namespaces. Array notation is an extension of APL syntax, and, as such, can be used inside and around all other APL expressions, and wherever an APL expression can appear (for example in the Session, in functions, and in namespace scripts). It can also be used in the Editor to manipulate arrays directly.
