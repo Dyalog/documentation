@@ -95,7 +95,7 @@ Table: Miscellaneous Variables used by non-GUI Dyalog APL
 |`AUTOINDENT`|If `AUTOINDENT` is set to 1, then if a line is added it is indented the same as the previous line.|
 |`AUTO_PW`|Introduced in 13.0. With `AUTO_PW=0` `⎕PW` remains fixed at the size of the terminal window when APL was started. When set to 1, or unset, `⎕PW` alters each time the terminal window is resized.|
 |`DYALOG`|This variable is defined in the supplied `mapl` startup script, and is used to form the default values for `APLKEYS`, `APLTRANS`, `WSPATH` etc. If it is necessary to identify the location of the Dyalog executable, then a more reliable method is to determine the full path name from the appropriate file in the `/proc/<process_id_of_APL_session>/` subdirectory or from the output of `ps`.|
-|`DYALOG_SHELL_SUBPROCESS`|On AIX, if `DYALOG_SHELL_SUBPROCESS` is 1 (the default on AIX), the interpreter starts a (small) child process that handles calls to ⎕SHELL.|
+|`DYALOG_SHELL_SUBPROCESS`|On AIX, if `DYALOG_SHELL_SUBPROCESS` is `1` (the default on AIX), the interpreter starts a (small) child process that handles calls to `⎕SHELL`.|
 
 These are the remaining variables listed in the *Dyalog for Microsoft Windows Installation and Configuration Guide* which are effective in the non-GUI UNIX versions of Dyalog APL
 
