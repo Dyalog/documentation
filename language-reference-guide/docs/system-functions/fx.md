@@ -24,6 +24,8 @@
 
 If the function or operator is successfully fixed, `R` is a simple character vector containing its name and the result is shy. Otherwise `R` is an integer scalar containing the (`⎕IO` dependent) index of the row of the canonical representation form in which the first error preventing its definition is detected. In this case the result `R` is **not shy**.
 
+!!! Legacy "Legacy"
+    Before Dyalog v20.0, it was possible to define dfns with unmatched parentheses and brackets. These are now rejected. TradFns will continue to fix as before, but subtle differences in how the code behaves might not be backwards-compatible and could have unexpected results.
 
 Functions and operators which are pendent, that is, in the state indicator without a suspension mark (`*`), retain their original definition until they complete, or are cleared from the state indicator.  All other occurrences of the function or operator assume the new definition.  The function or operator will fail to fix if it has the same name as an existing variable, or a visible label.
 

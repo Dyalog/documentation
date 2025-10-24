@@ -63,11 +63,11 @@ Additional conversion types have been added:
 A new variant option, **Mode**, has been added. This specifies the intended purpose of the tie, and can affect when/how errors are generated.
 - [`⎕FTIE`](../../language-reference-guide/system-functions/ftie/) – Exclusive File Tie  
 A new variant option, **Mode**, has been added. This specifies the intended purpose of the tie, and can affect when/how errors are generated.
-- [`⎕FX`](../../language-reference-guide/system-functions/fx/) – Fix Definition  
-The rules around whether a function can be fixed have been tightened to prevent dfns with unmatched parentheses from being fixed. This is to accommodate array notation, which changes the meaning of parentheses and brackets that span more than one statement. TradFns will continue to fix as before, but subtle differences in how the code behaves might not be backwards-compatible and could have unexpected results.
+- [`⎕FIX`](../../language-reference-guide/system-functions/fx/) and [`⎕FX`](../../language-reference-guide/system-functions/fx/) – Fix Script/Definition  
+The rules around whether a function can be fixed have been tightened to prevent dfns with unmatched parentheses and brackets from being fixed. This is to accommodate array notation, which changes the meaning of parentheses and brackets that span more than one statement. TradFns will continue to fix as before, but subtle differences in how the code behaves might not be backwards-compatible and could have unexpected results.
 
     !!! Hint "Hints and Recommendations"
-        If the enhanced restrictions on `⎕FX` cause problems for you, please contact [support@dyalog.com](mailto:support@dyalog.com) to discuss tools and techniques for mitigation.
+        If the enhanced restrictions on `⎕FIX` and `⎕FX` cause problems for you, please contact [support@dyalog.com](mailto:support@dyalog.com) to discuss tools and techniques for mitigation.
 
 - [`⎕MKDIR`](../../language-reference-guide/system-functions/mkdir/) – Make Directory  
 A new variant option, **Unique**, has been added. This specifies whether the base name in the right argument is modified so that the name is unique.
