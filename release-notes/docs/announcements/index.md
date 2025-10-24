@@ -35,6 +35,12 @@ Images of docker containers that host Dyalog running on ARM64 Linux are availabl
 !!! Info "Information"  
     The HTMLRenderer is not currently supported on Linux ARM64.
 
+## Changes
+
+### Windows IDE Classic Mode
+
+The Windows IDE Classic Mode, which was previously enabled and customised via **Options**>**Configure**>**Trace/Edit** or the configuration parameters **ClassicMode**, **SingleTrace**, **SessionOnTop**, and **ClassicModeSavePosition** has been replaced with a pre-configuration of the Default mode. This gives a similar experience, while enabling the inline tracing interface and thread tabs in the Tracer/Debugger. You can activate this configuration via **Layout**>**Classic**, but note that you must now save the session for the changes to be saved.
+
 ## Removals (Previously Announced)
 
 ### Syncfusion
