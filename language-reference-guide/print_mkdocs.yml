@@ -281,8 +281,7 @@ nav:
   - System Functions and Variables:
       - Introduction: system-functions/introduction.md
       - System Functions: system-functions/system-functions-and-variables-print.md
-      - System Functions Categorised: system-functions/system-functions-categorised.md
-      - System Variables: system-functions/system-variables.md
+      - System Functions Categorised: system-functions/system-functions-by-category.md
       - System Functions (A-Z):
           - Character Input Output: system-functions/character-input-output.md
           - Evaluated Input Output: system-functions/evaluated-input-output.md
@@ -470,7 +469,7 @@ nav:
           - '<code>⎕XT</code>: Set External Variable': system-functions/set-external-variable.md
           - '<code>⎕XT</code>: Query External Variable': system-functions/query-external-variable.md
   - System Commands:
-      - Introduction: system-commands/introduction.md
+      - System Commands: system-commands/index.md
       - System Commands (A-Z):
           - 'CLASSES: List Classes': system-commands/classes.md
           - 'CLEAR: Clear Workspace': system-commands/clear.md

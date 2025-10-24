@@ -19,7 +19,7 @@ If `flags` is 0 (the default value if omitted) the file will not be overwritten 
 
 The left-argument `X` is comprised of 1, 2 or 3 items which identify `(content) (encoding) (newline)` respectively.
 
-`content` is either a vector of character vectors, each of which represents a line in the file to be written, or a simple character vector.
+`content` is either a vector of character vectors, each of which represents a line in the file to be written, a simple character vector, or a character matrix. If it is a matrix, then trailing spaces will be stripped from each row.
 
 If specified, `encoding` is either:
 

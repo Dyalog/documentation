@@ -18,7 +18,10 @@ This function reads the contents of the specified text file. See also [Write Tex
 `Y` is either a character vector/scalar containing the name of the file to be read, or a 2-item vector whose first item is the file name and whose second is an integer scalar specifying `flags` for the operation.
 
 
-If `flags` is 0 (the default value if omitted) the content in the result `R` is a character vector. If `flags` is 1 the result is a nested array of character vectors corresponding to the lines in the file.
+- if `flags` is `0` then `R[1]` is a character vector. This is the default.
+- if `flags` is `1` then `R[1]` is a nested array of character vectors.
+- if `flags` is `2` then `R[1]` is a matrix, with each row corresponding to a line in the text file specified within `X`.
+
 
 
 

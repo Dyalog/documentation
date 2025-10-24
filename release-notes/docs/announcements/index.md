@@ -1,6 +1,6 @@
 # Announcements
 
-Notice of new and planned additions, removals, and deprecations in Dyalog v20.0 compared with Dyalog v19.0.
+Notice of new and planned additions, changes, removals, and deprecations in Dyalog v20.0 compared with Dyalog v19.0.
 
 ## Additions
 
@@ -40,6 +40,13 @@ Images of docker containers that host Dyalog running on ARM64 Linux are availabl
 ### Windows IDE Classic Mode
 
 The Windows IDE Classic Mode, which was previously enabled and customised via **Options**>**Configure**>**Trace/Edit** or the configuration parameters **ClassicMode**, **SingleTrace**, **SessionOnTop**, and **ClassicModeSavePosition** has been replaced with a pre-configuration of the Default mode. This gives a similar experience, while enabling the inline tracing interface and thread tabs in the Tracer/Debugger. You can activate this configuration via **Layout**>**Classic**, but note that you must now save the session for the changes to be saved.
+
+### Defining Dfns with Unmatched Brackets
+
+The rules around whether a function can be fixed have been tightened to prevent dfns with unmatched parentheses and brackets from being fixed. This is to accommodate array notation, which changes the meaning of parentheses and brackets that span more than one statement. TradFns will continue to fix as before, but subtle differences in how the code behaves might not be backwards-compatible and could have unexpected results.
+
+    !!! Hint "Hints and Recommendations"
+        If the enhanced restrictions cause problems for you, please contact [support@dyalog.com](mailto:support@dyalog.com) to discuss tools and techniques for mitigation.
 
 ## Removals (Previously Announced)
 
