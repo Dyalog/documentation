@@ -203,5 +203,3 @@ Instead of `X` being a name, it may be a selection from a named array, and the s
  H#l#o  #o#l#  H#l#o 
  #o#l#  H#l#o  #o#l# 
 ```
-
-
