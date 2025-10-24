@@ -88,12 +88,10 @@ From the tools/ directory:
 
 `render.py` is a live markdown renderer with auto-reload functionality. It renders a markdown file to HTML and automatically refreshes the browser view when the source file changes. This is perfect for testing markdown files before building the full site.
 
-**Features:**
-- ✨ Live preview with auto-reload on file changes
-- 🎨 Uses **exact same CSS** as the live MkDocs site (from `documentation-assets`)
-- 🔧 Uses **same markdown extensions** as MkDocs (pymdownx, tables, admonitions, etc.)
-- 📊 Proper rendering of tables with column alignment
-- 🌐 Built-in HTTP server for proper JavaScript execution
+- Live preview with auto-reload on file changes
+- Uses the same CSS as the live MkDocs site (from `documentation-assets`)
+- Uses same markdown extensions as MkDocs (pymdownx, tables, admonitions, etc.)
+- Built-in HTTP server for proper JavaScript execution
 
 #### Docker Usage (Recommended)
 
@@ -201,7 +199,7 @@ docker compose run --rm utils python /utils/find_ghost_pages.py --root /docs/mkd
 
 ### Link validation
 
-Check for dangling links via the Markdown source -- note, this can be unreliable:
+Check for dangling links via the Markdown source -- note, this can be unreliable, as it doesn't account for all the possible ways that MkDocs tolerates link syntax.
 
 ```
 docker compose run --rm utils python /utils/dangling_links.py
@@ -302,14 +300,18 @@ Add APL symbol synonyms:
 docker compose run --rm utils python /utils/add_synonyms.py /docs/language-reference-guide/docs/primitive-functions [--dry-run]
 ```
 
-Spider the deployed site to check for broken links and images (images are checked by default):
+Check the deployed site to check for broken links and images (images are checked by default):
 ```
 docker compose run --rm utils python /utils/check_deployed_links.py \
                    --base-url https://dyalog.github.io/documentation/20.0 \
                    --output /docs/tools/broken_links.yaml
 ```
 
-If you're checking against a local site build running in Docker, use Docker's internal network:
+#### Validating against a local build
+
+> **Note**: for this to work, you first need to be running the site locally: `docker compose up mkdocs-server`. Verify that you can see the local site in your browser at http://localhost:8000/ before running `check_deployed_links.py` as described below.
+
+If you're checking against a local site build running in Docker, use Docker's internal network. In a separate terminal, run:
 ```
 docker compose run --rm utils python /utils/check_deployed_links.py \
                    --base-url http://mkdocs-server:8000 \
