@@ -304,3 +304,7 @@ The default redirections for the two output streams are:
 The default for the input stream is
 
 - `(0 'Null')`: Provide no data on standard input.
+
+
+!!! unix "Dyalog on AIX"
+    The performance of `⎕SHELL` on AIX can be improved using the [`DYALOG_SHELL_SUBPROCESS`](../../unix-installation-and-configuration-guide/docs/configuration-parameters/environment-variables) configuration parameter; this configuration parameter is active by default.
