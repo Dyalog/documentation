@@ -14,19 +14,19 @@ The result has the same structure as the argument, and is numeric (exception: `+
 
 |Syntax|Meaning|
 |---:|---|
-|`+Y`&emsp;|[Conjugate](primitive-functions/conjugate)|
-|`-Y`&emsp;|[Negate](primitive-functions/negate)|
-|`×Y`&emsp;|[Direction](primitive-functions/direction)|
-|`÷Y`&emsp;|[Reciprocal](primitive-functions/reciprocal)|
-|`|Y`&emsp;|[Magnitude](primitive-functions/magnitude)|
-|`*Y`&emsp;|[Exponential](primitive-functions/exponential)|
-|`⍟Y`&emsp;|[Natural Logarithm](primitive-functions/natural-logarithm)|
-|`○Y`&emsp;|[Pi Times](primitive-functions/pi-times)|
-|`⌈Y`&emsp;|[Ceiling](primitive-functions/ceiling)|
-|`⌊Y`&emsp;|[Floor](primitive-functions/floor)|
-|`!Y`&emsp;|[Factorial](primitive-functions/factorial)|
-|`?Y`&emsp;|[Roll](primitive-functions/roll)|
-|`~Y`&emsp;|[NOT](primitive-functions/not)|
+|`+Y`&emsp;|[Conjugate](conjugate.md)|
+|`-Y`&emsp;|[Negate](negate.md)|
+|`×Y`&emsp;|[Direction](direction.md)|
+|`÷Y`&emsp;|[Reciprocal](reciprocal.md)|
+|`|Y`&emsp;|[Magnitude](magnitude.md)|
+|`*Y`&emsp;|[Exponential](exponential.md)|
+|`⍟Y`&emsp;|[Natural Logarithm](natural-logarithm.md)|
+|`○Y`&emsp;|[Pi Times](pi-times.md)|
+|`⌈Y`&emsp;|[Ceiling](ceiling.md)|
+|`⌊Y`&emsp;|[Floor](floor.md)|
+|`!Y`&emsp;|[Factorial](factorial.md)|
+|`?Y`&emsp;|[Roll](roll.md)|
+|`~Y`&emsp;|[NOT](not.md)|
 
 ### Dyadic Scalar Functions
 
@@ -38,30 +38,30 @@ A singleton (single-element array) is treated as a scalar for scalar extension p
 
 |Syntax|Meaning
 |---:|---
-|`X+Y`&emsp;|[Plus](primitive-functions/plus)|
-|`X-Y`&emsp;|[Minus](primitive-functions/minus)|
-|`X×Y`&emsp;|[Times](primitive-functions/times)|
-|`X÷Y`&emsp;|[Divide](primitive-functions/divide)|
-|`X|Y`&emsp;|[Residue](primitive-functions/residue)|
-|`X*Y`&emsp;|[Power](primitive-functions/power)|
-|`X⍟Y`&emsp;|[Logarithm](primitive-functions/logarithm)|
-|`X○Y`&emsp;|[Circular Functions](primitive-functions/circular-functions)|
-|`X⌈Y`&emsp;|[Maximum](primitive-functions/maximum)|
-|`X⌊Y`&emsp;|[Minimum](primitive-functions/minimum)|
-|`X!Y`&emsp;|[Binomial](primitive-functions/binomial)|
-|`X∧Y`&emsp;|[Lowest Common Multiple](primitive-functions/lowest-common-multiple-and)|
-|`X∨Y`&emsp;|[Greatest Common Divisor](primitive-functions/greatest-common-divisor-or)|
-|`X~Y`&emsp;|[Without](primitive-functions/without)|
-|`X∧Y`&emsp;|[AND](primitive-functions/lowest-common-multiple-and)|
-|`X∨Y`&emsp;|[OR](primitive-functions/greatest-common-divisor-or)|
-|`X⍲Y`&emsp;|[NAND](primitive-functions/nand)|
-|`X⍱Y`&emsp;|[NOR](primitive-functions/nor)|
-|`X<Y`&emsp;|[Less Than](primitive-functions/less-than)|
-|`X≤Y`&emsp;|[Less Than Or Equal To](primitive-functions/less-than-or-equal-to)|
-|`X=Y`&emsp;|[Equal To](primitive-functions/equal-to)|
-|`X≥Y`&emsp;|[Greater Than Or Equal To](primitive-functions/greater-than-or-equal-to)|
-|`X>Y`&emsp;|[Greater Than](primitive-functions/greater-than)|
-|`X≠Y`&emsp;|[Not Equal To](primitive-functions/not-equal-to)|
+|`X+Y`&emsp;|[Plus](plus.md)|
+|`X-Y`&emsp;|[Minus](minus.md)|
+|`X×Y`&emsp;|[Times](times.md)|
+|`X÷Y`&emsp;|[Divide](divide.md)|
+|`X|Y`&emsp;|[Residue](residue.md)|
+|`X*Y`&emsp;|[Power](power.md)|
+|`X⍟Y`&emsp;|[Logarithm](logarithm.md)|
+|`X○Y`&emsp;|[Circular Functions](circular-functions.md)|
+|`X⌈Y`&emsp;|[Maximum](maximum.md)|
+|`X⌊Y`&emsp;|[Minimum](minimum.md)|
+|`X!Y`&emsp;|[Binomial](binomial.md)|
+|`X∧Y`&emsp;|[Lowest Common Multiple](lowest-common-multiple-and.md)|
+|`X∨Y`&emsp;|[Greatest Common Divisor](greatest-common-divisor-or.md)|
+|`X~Y`&emsp;|[Without](without.md)|
+|`X∧Y`&emsp;|[AND](lowest-common-multiple-and.md)|
+|`X∨Y`&emsp;|[OR](greatest-common-divisor-or.md)|
+|`X⍲Y`&emsp;|[NAND](nand.md)|
+|`X⍱Y`&emsp;|[NOR](nor.md)|
+|`X<Y`&emsp;|[Less Than](less-than.md)|
+|`X≤Y`&emsp;|[Less Than Or Equal To](less-than-or-equal-to.md)|
+|`X=Y`&emsp;|[Equal To](equal-to.md)|
+|`X≥Y`&emsp;|[Greater Than Or Equal To](greater-than-or-equal-to.md)|
+|`X>Y`&emsp;|[Greater Than](greater-than.md)|
+|`X≠Y`&emsp;|[Not Equal To](not-equal-to.md)|
 
 ## Mathematical Functions
 
@@ -71,92 +71,92 @@ Several of the monadic forms are equivalent to the dyadic forms with a default l
 
 |Syntax|Meaning|
 |---:|---|
-|`+Y`&emsp;|[Conjugate](primitive-functions/conjugate)|
-|`X+Y`&emsp;|[Plus](primitive-functions/plus)|
-|`-Y`&emsp;|[Negate](primitive-functions/negate)|
-|`X-Y`&emsp;|[Minus](primitive-functions/minus)|
-|`×Y`&emsp;|[Direction](primitive-functions/direction)|
-|`X×Y`&emsp;|[Times](primitive-functions/times)|
-|`÷Y`&emsp;|[Reciprocal](primitive-functions/reciprocal)|
-|`X÷Y`&emsp;|[Divide](primitive-functions/divide)|
-|`|Y`&emsp;|[Magnitude](primitive-functions/magnitude)|
-|`X|Y`&emsp;|[Residue](primitive-functions/residue)|
-|`*Y`&emsp;|[Exponential](primitive-functions/exponential)|
-|`X*Y`&emsp;|[Power](primitive-functions/power)|
-|`⍟Y`&emsp;|[Natural Logarithm](primitive-functions/natural-logarithm)|
-|`X⍟Y`&emsp;|[Logarithm](primitive-functions/logarithm)|
-|`○Y`&emsp;|[Pi Times](primitive-functions/pi-times)|
-|`X○Y`&emsp;|[Circular Functions](primitive-functions/circular-functions)|
-|`⌈Y`&emsp;|[Ceiling](primitive-functions/ceiling)|
-|`X⌈Y`&emsp;|[Maximum](primitive-functions/maximum)|
-|`⌊Y`&emsp;|[Floor](primitive-functions/floor)|
-|`X⌊Y`&emsp;|[Minimum](primitive-functions/minimum)|
-|`!Y`&emsp;|[Factorial](primitive-functions/factorial)|
-|`X!Y`&emsp;|[Binomial](primitive-functions/binomial)|
-|`?Y`&emsp;|[Roll](primitive-functions/roll)|
-|`X?Y`&emsp;|[Deal](primitive-functions/deal)|
-|`X⊤Y`&emsp;|[Encode](primitive-functions/encode)|
-|`X⊥Y`&emsp;|[Decode](primitive-functions/decode)|
-|`⌹Y`&emsp;|[Matrix Inverse](primitive-functions/matrix-inverse)|
-|`X⌹Y`&emsp;|[Matrix Divide](primitive-functions/matrix-divide)|
-|`X∧Y`&emsp;|[Lowest Common Multiple](primitive-functions/lowest-common-multiple-and)|
-|`X∨Y`&emsp;|[Greatest Common Divisor](primitive-functions/greatest-common-divisor-or)|
-|`⍋Y`&emsp;|[Grade Up](primitive-functions/grade-up)|
-|`⍒Y`&emsp;|[Grade Down](primitive-functions/grade-down)|
-|`X⍕Y`&emsp;|[Format by Specification](primitive-functions/format-by-specification)|
+|`+Y`&emsp;|[Conjugate](conjugate.md)|
+|`X+Y`&emsp;|[Plus](plus.md)|
+|`-Y`&emsp;|[Negate](negate.md)|
+|`X-Y`&emsp;|[Minus](minus.md)|
+|`×Y`&emsp;|[Direction](direction.md)|
+|`X×Y`&emsp;|[Times](times.md)|
+|`÷Y`&emsp;|[Reciprocal](reciprocal.md)|
+|`X÷Y`&emsp;|[Divide](divide.md)|
+|`|Y`&emsp;|[Magnitude](magnitude.md)|
+|`X|Y`&emsp;|[Residue](residue.md)|
+|`*Y`&emsp;|[Exponential](exponential.md)|
+|`X*Y`&emsp;|[Power](power.md)|
+|`⍟Y`&emsp;|[Natural Logarithm](natural-logarithm.md)|
+|`X⍟Y`&emsp;|[Logarithm](logarithm.md)|
+|`○Y`&emsp;|[Pi Times](pi-times.md)|
+|`X○Y`&emsp;|[Circular Functions](circular-functions.md)|
+|`⌈Y`&emsp;|[Ceiling](ceiling.md)|
+|`X⌈Y`&emsp;|[Maximum](maximum.md)|
+|`⌊Y`&emsp;|[Floor](floor.md)|
+|`X⌊Y`&emsp;|[Minimum](minimum.md)|
+|`!Y`&emsp;|[Factorial](factorial.md)|
+|`X!Y`&emsp;|[Binomial](binomial.md)|
+|`?Y`&emsp;|[Roll](roll.md)|
+|`X?Y`&emsp;|[Deal](deal.md)|
+|`X⊤Y`&emsp;|[Encode](encode.md)|
+|`X⊥Y`&emsp;|[Decode](decode.md)|
+|`⌹Y`&emsp;|[Matrix Inverse](matrix-inverse.md)|
+|`X⌹Y`&emsp;|[Matrix Divide](matrix-divide.md)|
+|`X∧Y`&emsp;|[Lowest Common Multiple](lowest-common-multiple-and.md)|
+|`X∨Y`&emsp;|[Greatest Common Divisor](greatest-common-divisor-or.md)|
+|`⍋Y`&emsp;|[Grade Up](grade-up.md)|
+|`⍒Y`&emsp;|[Grade Down](grade-down.md)|
+|`X⍕Y`&emsp;|[Format by Specification](format-by-specification.md)|
 
 ## Logic Functions
 Logic functions represent logic gates. Their arguments and results are Boolean (comprising only `1`s and `0`s).
 
 |Syntax|Meaning|Logic Gate|
 |---:|---|---|
-|`~Y`&emsp;|[NOT](primitive-functions/not)|NOT| 
-|`X∧Y`&emsp;|[AND](primitive-functions/lowest-common-multiple-and)|AND|
-|`X∨Y`&emsp;|[OR](primitive-functions/greatest-common-divisor-or)|OR|
-|`X⍲Y`&emsp;|[NAND](primitive-functions/nand)|NAND|
-|`X⍱Y`&emsp;|[NOR](primitive-functions/nor)|NOR|
-|`X<Y`&emsp;|[Less Than](primitive-functions/less-than)|CNIMPLY|
-|`X≤Y`&emsp;|[Less Than Or Equal To](primitive-functions/less-than-or-equal-to)|IMPLY|
-|`X=Y`&emsp;|[Equal To](primitive-functions/equal-to)|XNOR|
-|`X≥Y`&emsp;|[Greater Than Or Equal To](primitive-functions/greater-than-or-equal-to)|CIMPLY|
-|`X>Y`&emsp;|[Greater Than](primitive-functions/greater-than)|NIMPLY|
-|`X≠Y`&emsp;|[Not Equal To](primitive-functions/not-equal-to)|XOR|
+|`~Y`&emsp;|[NOT](not.md)|NOT| 
+|`X∧Y`&emsp;|[AND](lowest-common-multiple-and.md)|AND|
+|`X∨Y`&emsp;|[OR](greatest-common-divisor-or.md)|OR|
+|`X⍲Y`&emsp;|[NAND](nand.md)|NAND|
+|`X⍱Y`&emsp;|[NOR](nor.md)|NOR|
+|`X<Y`&emsp;|[Less Than](less-than.md)|CNIMPLY|
+|`X≤Y`&emsp;|[Less Than Or Equal To](less-than-or-equal-to.md)|IMPLY|
+|`X=Y`&emsp;|[Equal To](equal-to.md)|XNOR|
+|`X≥Y`&emsp;|[Greater Than Or Equal To](greater-than-or-equal-to.md)|CIMPLY|
+|`X>Y`&emsp;|[Greater Than](greater-than.md)|NIMPLY|
+|`X≠Y`&emsp;|[Not Equal To](not-equal-to.md)|XOR|
 
 ## Comparison Functions
 Comparison functions perform comparisons. They return Boolean results indicating whether the comparisons are true (`1`) or false (`0`).
 
 |Syntax|Meaning|
 |---:|---
-|`X<Y`&emsp;|[Less Than](primitive-functions/less-than)|
-|`X≤Y`&emsp;|[Less Than Or Equal To](primitive-functions/less-than-or-equal-to)|
-|`X=Y`&emsp;|[Equal To](primitive-functions/equal-to)|
-|`X≥Y`&emsp;|[Greater Than Or Equal To](primitive-functions/greater-than-or-equal-to)|
-|`X>Y`&emsp;|[Greater Than](primitive-functions/greater-than)|
-|`X≠Y`&emsp;|[Not Equal To](primitive-functions/not-equal-to)|
-|`X≡Y`&emsp;|[Match](primitive-functions/match)|
-|`X≢Y`&emsp;|[Not Match](primitive-functions/not-match)|
-|`X∊Y`&emsp;|[Membership](primitive-functions/membership)|
+|`X<Y`&emsp;|[Less Than](less-than.md)|
+|`X≤Y`&emsp;|[Less Than Or Equal To](less-than-or-equal-to.md)|
+|`X=Y`&emsp;|[Equal To](equal-to.md)|
+|`X≥Y`&emsp;|[Greater Than Or Equal To](greater-than-or-equal-to.md)|
+|`X>Y`&emsp;|[Greater Than](greater-than.md)|
+|`X≠Y`&emsp;|[Not Equal To](not-equal-to.md)|
+|`X≡Y`&emsp;|[Match](match.md)|
+|`X≢Y`&emsp;|[Not Match](not-match.md)|
+|`X∊Y`&emsp;|[Membership](membership.md)|
 
 ## Selection Functions
 Selection functions restrict the parts of their arguments that are propagated into their result (exception: `X⊢Y` and `X⊣Y` return one of their arguments).
 
 |Syntax|Meaning|
 |---:|---|
-|`X⌷Y`&emsp;|[Index](primitive-functions/index-function)|
-|`⊃Y`&emsp;|[First](primitive-functions/first)|
-|`X⊃Y`&emsp;|[Pick](primitive-functions/pick)|
-|`X/Y`&emsp;|[Replicate](primitive-functions/replicate)|
-|`X⌿Y`&emsp;|[Replicate First](primitive-functions/replicate-first)|
-|`X\Y`&emsp;|[Expand](primitive-functions/expand)|
-|`X⍀Y`&emsp;|[Expand First](primitive-functions/expand-first)|
-|`X⍉Y`&emsp;|[Dyadic Transpose](primitive-functions/dyadic-transpose)|
-|`X↑Y`&emsp;|[Take](primitive-functions/take)|
-|`X↓Y`&emsp;|[Drop](primitive-functions/drop)|
-|`X∩Y`&emsp;|[Intersection](primitive-functions/intersection)|
-|`∪Y`&emsp;|[Unique](primitive-functions/unique)|
-|`X∪Y`&emsp;|[Union](primitive-functions/union)|
-|`X⊢Y`&emsp;|[Right](primitive-functions/right)|
-|`X⊣Y`&emsp;|[Left](primitive-functions/left)|
+|`X⌷Y`&emsp;|[Index](index-function.md)|
+|`⊃Y`&emsp;|[First](first.md)|
+|`X⊃Y`&emsp;|[Pick](pick.md)|
+|`X/Y`&emsp;|[Replicate](replicate.md)|
+|`X⌿Y`&emsp;|[Replicate First](replicate-first.md)|
+|`X\Y`&emsp;|[Expand](expand.md)|
+|`X⍀Y`&emsp;|[Expand First](expand-first.md)|
+|`X⍉Y`&emsp;|[Dyadic Transpose](dyadic-transpose.md)|
+|`X↑Y`&emsp;|[Take](take.md)|
+|`X↓Y`&emsp;|[Drop](drop.md)|
+|`X∩Y`&emsp;|[Intersection](intersection.md)|
+|`∪Y`&emsp;|[Unique](unique.md)|
+|`X∪Y`&emsp;|[Union](union.md)|
+|`X⊢Y`&emsp;|[Right](right.md)|
+|`X⊣Y`&emsp;|[Left](left.md)|
 
 ## Set Functions
 Set functions operate on arrays representing collections. Within the set functions:
@@ -167,54 +167,54 @@ Set functions operate on arrays representing collections. Within the set functio
 
 |Syntax|Meaning|
 |---:|---|
-|`X~Y`&emsp;|[Without](primitive-functions/without)|
-|`X∩Y`&emsp;|[Intersection](primitive-functions/intersection)|
-|`∪Y`&emsp;|[Unique](primitive-functions/unique)|
-|`X∪Y`&emsp;|[Union](primitive-functions/union)|
-|`≠Y`&emsp;|[Unique Mask](primitive-functions/unique-mask)|
-|`X≡Y`&emsp;|[Match](primitive-functions/match)|
-|`X≢Y`&emsp;|[Not Match](primitive-functions/not-match)|
-|`X∊Y`&emsp;|[Membership](primitive-functions/membership)|
+|`X~Y`&emsp;|[Without](without.md)|
+|`X∩Y`&emsp;|[Intersection](intersection.md)|
+|`∪Y`&emsp;|[Unique](unique.md)|
+|`X∪Y`&emsp;|[Union](union.md)|
+|`≠Y`&emsp;|[Unique Mask](unique-mask.md)|
+|`X≡Y`&emsp;|[Match](match.md)|
+|`X≢Y`&emsp;|[Not Match](not-match.md)|
+|`X∊Y`&emsp;|[Membership](membership.md)|
 
 ## Search Functions
 Search functions determine whether/where values are located.
 
 |Syntax|Meaning|
 |---:|---|
-|`X⍳Y`&emsp;|[Index Of](primitive-functions/index-of)|
-|`⍸Y`&emsp;|[Where](primitive-functions/where)|
-|`X⍸Y`&emsp;|[Interval Index](primitive-functions/interval-index)|
-|`X∊Y`&emsp;|[Membership](primitive-functions/membership)|
-|`X⍷Y`&emsp;|[Find](primitive-functions/find)|
+|`X⍳Y`&emsp;|[Index Of](index-of.md)|
+|`⍸Y`&emsp;|[Where](where.md)|
+|`X⍸Y`&emsp;|[Interval Index](interval-index.md)|
+|`X∊Y`&emsp;|[Membership](membership.md)|
+|`X⍷Y`&emsp;|[Find](find.md)|
 
 ## Ordering Functions
 Ordering functions return indices that can subsequently be used to select from within the original array.
 
 |Syntax|Meaning|
 |---:|---|
-|`⍳Y`&emsp;|[Index Generator](primitive-functions/index-generator)|
-|`X⍳Y`&emsp;|[Index Of](primitive-functions/index-of)|
-|`X⍸Y`&emsp;|[Interval Index](primitive-functions/interval-index)|
-|`⍋Y`&emsp;|[Grade Up](primitive-functions/grade-up)|
-|`X⍋Y`&emsp;|[Dyadic Grade Up](primitive-functions/dyadic-grade-up)|
-|`⍒Y`&emsp;|[Grade Down](primitive-functions/grade-down)|
-|`X⍒Y`&emsp;|[Dyadic Grade Down](primitive-functions/dyadic-grade-down)|
+|`⍳Y`&emsp;|[Index Generator](index-generator.md)|
+|`X⍳Y`&emsp;|[Index Of](index-of.md)|
+|`X⍸Y`&emsp;|[Interval Index](interval-index.md)|
+|`⍋Y`&emsp;|[Grade Up](grade-up.md)|
+|`X⍋Y`&emsp;|[Dyadic Grade Up](dyadic-grade-up.md)|
+|`⍒Y`&emsp;|[Grade Down](grade-down.md)|
+|`X⍒Y`&emsp;|[Dyadic Grade Down](dyadic-grade-down.md)|
 
 ## Index Generator Functions
 Index generator functions return indices that can then be used directly or to select from within the original array.
 
 |Syntax|Meaning|
 |---:|---|
-|`?Y`&emsp;|[Roll](primitive-functions/roll)|
-|`X?Y`&emsp;|[Deal](primitive-functions/deal)|
-|`⍳Y`&emsp;|[Index Generator](primitive-functions/index-generator)|
-|`X⍳Y`&emsp;|[Index Of](primitive-functions/index-of)|
-|`⍸Y`&emsp;|[Where](primitive-functions/where)|
-|`X⍸Y`&emsp;|[Interval Index](primitive-functions/interval-index)|
-|`⍋Y`&emsp;|[Grade Up](primitive-functions/grade-up)|
-|`X⍋Y`&emsp;|[Dyadic Grade Up](primitive-functions/dyadic-grade-up)|
-|`⍒Y`&emsp;|[Grade Down](primitive-functions/grade-down)|
-|`X⍒Y`&emsp;|[Dyadic Grade Down](primitive-functions/dyadic-grade-down)|
+|`?Y`&emsp;|[Roll](roll.md)|
+|`X?Y`&emsp;|[Deal](deal.md)|
+|`⍳Y`&emsp;|[Index Generator](index-generator.md)|
+|`X⍳Y`&emsp;|[Index Of](index-of.md)|
+|`⍸Y`&emsp;|[Where](where.md)|
+|`X⍸Y`&emsp;|[Interval Index](interval-index.md)|
+|`⍋Y`&emsp;|[Grade Up](grade-up.md)|
+|`X⍋Y`&emsp;|[Dyadic Grade Up](dyadic-grade-up.md)|
+|`⍒Y`&emsp;|[Grade Down](grade-down.md)|
+|`X⍒Y`&emsp;|[Dyadic Grade Down](dyadic-grade-down.md)|
 
 
 ## Structural Functions
@@ -222,57 +222,57 @@ Structural functions modify the structure or shape of their right argument (incl
 
 |Syntax|Meaning|
 |---:|---|
-|`X⍴Y`&emsp;|[Reshape](primitive-functions/reshape)|
-|`,Y`&emsp;|[Ravel](primitive-functions/ravel)|
-|`X,Y`&emsp;|[Catenate/Laminate](primitive-functions/catenate-laminate)|
-|`⍪Y`&emsp;|[Table](primitive-functions/table)|
-|`X⍪Y`&emsp;|[Catenate First/Laminate](primitive-functions/catenate-first)|
-|`⌽Y`&emsp;|[Reverse](primitive-functions/reverse)|
-|`X⌽Y`&emsp;|[Rotate](primitive-functions/rotate)|
-|`⍉Y`&emsp;|[Transpose](primitive-functions/transpose)|
-|`X⍉Y`&emsp;|[Dyadic Transpose](primitive-functions/dyadic-transpose)|
-|`⊖Y`&emsp;|[Reverse First](primitive-functions/reverse-first)|
-|`X⊖Y`&emsp;|[Rotate First](primitive-functions/rotate-first)|
-|`↑Y`&emsp;|[Mix](primitive-functions/mix)|
-|`X↑Y`&emsp;|[Take](primitive-functions/take)|
-|`↓Y`&emsp;|[Split](primitive-functions/split)|
-|`X↓Y`&emsp;|[Drop](primitive-functions/drop)|
-|`⊂Y`&emsp;|[Enclose](primitive-functions/enclose)|
-|`X⊂Y`&emsp;|[Partitioned Enclose](primitive-functions/partitioned-enclose)|
-|`⊆Y`&emsp;|[Nest](primitive-functions/nest)|
-|`X⊆Y`&emsp;|[Partition](primitive-functions/partition)|
-|`⊃Y`&emsp;|[First](primitive-functions/first)|
-|`X⊃Y`&emsp;|[Pick](primitive-functions/pick)|
-|`∊Y`&emsp;|[Enlist](primitive-functions/enlist)|
+|`X⍴Y`&emsp;|[Reshape](reshape.md)|
+|`,Y`&emsp;|[Ravel](ravel.md)|
+|`X,Y`&emsp;|[Catenate/Laminate](catenate-laminate.md)|
+|`⍪Y`&emsp;|[Table](table.md)|
+|`X⍪Y`&emsp;|[Catenate First/Laminate](catenate-first.md)|
+|`⌽Y`&emsp;|[Reverse](reverse.md)|
+|`X⌽Y`&emsp;|[Rotate](rotate.md)|
+|`⍉Y`&emsp;|[Transpose](transpose.md)|
+|`X⍉Y`&emsp;|[Dyadic Transpose](dyadic-transpose.md)|
+|`⊖Y`&emsp;|[Reverse First](reverse-first.md)|
+|`X⊖Y`&emsp;|[Rotate First](rotate-first.md)|
+|`↑Y`&emsp;|[Mix](mix.md)|
+|`X↑Y`&emsp;|[Take](take.md)|
+|`↓Y`&emsp;|[Split](split.md)|
+|`X↓Y`&emsp;|[Drop](drop.md)|
+|`⊂Y`&emsp;|[Enclose](enclose.md)|
+|`X⊂Y`&emsp;|[Partitioned Enclose](partitioned-enclose.md)|
+|`⊆Y`&emsp;|[Nest](nest.md)|
+|`X⊆Y`&emsp;|[Partition](partition.md)|
+|`⊃Y`&emsp;|[First](first.md)|
+|`X⊃Y`&emsp;|[Pick](pick.md)|
+|`∊Y`&emsp;|[Enlist](enlist.md)|
 
 ## Data Conversion Functions
 Data conversion functions change between different representations of the same data.
 
 |Syntax|Meaning|
 |---:|---|
-|`⌷Y`&emsp;|[Materialise](primitive-functions/materialise)|
-|`⍎Y`&emsp;|[Execute](primitive-functions/execute)|
-|`X⍎Y`&emsp;|[Dyadic Execute](primitive-functions/execute)|
-|`⍕Y`&emsp;|[Format](primitive-functions/format)|
-|`X⍕Y`&emsp;|[Format by Specification](primitive-functions/format-by-specification)|
+|`⌷Y`&emsp;|[Materialise](materialise.md)|
+|`⍎Y`&emsp;|[Execute](execute.md)|
+|`X⍎Y`&emsp;|[Dyadic Execute](execute.md)|
+|`⍕Y`&emsp;|[Format](format.md)|
+|`X⍕Y`&emsp;|[Format by Specification](format-by-specification.md)|
 
 ## Identity Functions
 Identity functions make it easy to write ambivalent dfns and are useful in tacit programming, as generic operands, and to break up stranding. They do not modify structure, shape, or values (exception: `⌷Y`, when applied to an object, extracts its default value).
 
 |Syntax|Meaning|
 |---:|---|
-|`⌷Y`&emsp;|[Materialise](primitive-functions/materialise)|
-|`⊢Y`&emsp;|[Same](primitive-functions/same)|
-|`X⊢Y`&emsp;|[Right](primitive-functions/right)|
-|`⊣Y`&emsp;|[Same](primitive-functions/same)|
-|`X⊣Y`&emsp;|[Left](primitive-functions/left)|
+|`⌷Y`&emsp;|[Materialise](materialise.md)|
+|`⊢Y`&emsp;|[Same](same.md)|
+|`X⊢Y`&emsp;|[Right](right.md)|
+|`⊣Y`&emsp;|[Same](same.md)|
+|`X⊣Y`&emsp;|[Left](left.md)|
 
 ## Array Property Functions
 Array property functions provide information about a given array.
 
 |Syntax|Meaning|
 |---:|---|
-|`⌷Y`&emsp;|[Materialise](primitive-functions/materialise)|
-|`⍴Y`&emsp;|[Shape](primitive-functions/shape)|
-|`≡Y`&emsp;|[Depth](primitive-functions/depth)|
-|`≢Y`&emsp;|[Tally](primitive-functions/tally)|
+|`⌷Y`&emsp;|[Materialise](materialise.md)|
+|`⍴Y`&emsp;|[Shape](shape.md)|
+|`≡Y`&emsp;|[Depth](depth.md)|
+|`≢Y`&emsp;|[Tally](tally.md)|

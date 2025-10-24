@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">System Functions Categorised</span></h1>
+<h1 class="heading"><span class="name">System Functions (by Category)</span></h1>
 
 The following tables list the system functions divided into appropriate categories.
 
