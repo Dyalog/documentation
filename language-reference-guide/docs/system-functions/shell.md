@@ -307,4 +307,4 @@ The default for the input stream is
 
 
 !!! unix "Dyalog on AIX"
-    The performance of `⎕SHELL` on AIX can be improved using the [`DYALOG_SHELL_SUBPROCESS`](../../unix-installation-and-configuration-guide/docs/configuration-parameters/environment-variables) configuration parameter; this configuration parameter is active by default.
+    The performance of `⎕SHELL` on AIX can be improved using the [`DYALOG_SHELL_SUBPROCESS`](../../../unix-installation-and-configuration-guide/configuration-parameters/environment-variables/#_table-4) configuration parameter; this configuration parameter is active by default.
