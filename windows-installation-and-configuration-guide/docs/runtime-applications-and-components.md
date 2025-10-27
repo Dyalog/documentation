@@ -54,7 +54,7 @@ The application starts by running `⎕LX` in `myapp.dws`. If a configuration fil
      dyalogrt.exe Load=myfn.aplf
 ```
 
-The application loads the file named `myfn.aplf` which contains the source code for a function, and executes the expression `(myfn 0⍴⊂'')` (see [ Load](configuration-parameters/load.md)).  If a configuration file named `myfn.dcfg` in the same directory, it is loaded and applied.
+The application loads the file named `myfn.aplf` which contains the source code for a function, and executes the expression `(myfn 0⍴⊂'')` (see [Load](configuration-parameters/load.md)).  If a configuration file named `myfn.dcfg` in the same directory, it is loaded and applied.
 
 If your application uses any component of the Microsoft .NET Framework, you must distribute the Bridge DLL and DyalogNet DLLs. These DLLs must be placed in the same directory as your EXE.
 
@@ -160,7 +160,7 @@ you may enter configuration parameters or specify a Configuration file for your 
 
 For the other isolation modes, this is not appropriate because only the command line from the first assembly loaded into the interpreter could be honoured, and the order in which assemblies are loaded is unpredictable. However, configuration files may be specified using the **ConfigFile** parameter and/or the **UserConfigFile** parameter specified as an environment variable or in the registry.
 
-For more information, see [Isolation Mode](../../net-framework-interface-guide/implementation-details/isolation-mode).
+For more information, see [Isolation Mode](../../dotnet-framework-interface/implementation-details/isolation-mode).
 
 To distribute your .NET Classes, you need to supply and install
 

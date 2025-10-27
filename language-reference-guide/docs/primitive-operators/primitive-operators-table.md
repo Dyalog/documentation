@@ -2,13 +2,13 @@
 
 |Glyph|Glyph Name     |Operator                                                         |Syntax              |
 |-----|---------------|-----------------------------------------------------------------|--------------------|
-|`[]←`|&nbsp;         |[Assignment Indexed Modified](assignment-indexed-modified.md)    |`{R}←X[I]f←Y`       |
-|`←`  |Left Arrow     |[Assignment Modified](assignment-modified.md)                    |`{R}←Xf←Y`          |
-|`←`  |Left Arrow     |[Assignment Selective Modified](assignment-selective-modified.md)|`{R}←(EXP X)f←Y`    |
+|`[]←`|&nbsp;         |[Assignment Indexed Modified](../other-syntax/assignment/assignment-indexed-modified.md)    |`{R}←X[I]f←Y`       |
+|`←`  |Left Arrow     |[Assignment Modified](../other-syntax/assignment/assignment-modified.md)                    |`{R}←Xf←Y`          |
+|`←`  |Left Arrow     |[Assignment Selective Modified](../other-syntax/assignment/assignment-selective-modified.md)|`{R}←(EXP X)f←Y`    |
 |`@`  |At             |[At](at.md)                                                      |`R←{X}(f@g)Y`       |
 |`⍤`  |Jot Diaeresis  |[Atop](atop.md)                                                  |`{R}←{X}f⍤gY`       |
-|`[]` |&nbsp;         |[Axis with Dyadic Operand](axis-with-dyadic-operand.md)          |`R←Xf[B]Y`          |
-|`[]` |&nbsp;         |[Axis with Monadic Operand](axis-with-monadic-operand.md)        |`R←f[B]Y`           |
+|`[]` |&nbsp;         |[Axis with Dyadic Operand](../other-syntax/axis/axis-with-dyadic-operand.md)          |`R←Xf[B]Y`          |
+|`[]` |&nbsp;         |[Axis with Monadic Operand](../other-syntax/axis/axis-with-monadic-operand.md)        |`R←f[B]Y`           |
 |`⍛`  |Jot Underbar   |[Behind](behind.md)                                              |`{R}←{X}f⍛gY`       |
 |`∘`  |Jot            |[Beside](beside.md)                                              |`{R}←{X}f∘gY`       |
 |`∘`  |Jot            |[Bind](bind.md)                                                  |`{R}←A∘fY{R}←(f∘B)Y`|

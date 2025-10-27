@@ -2,24 +2,13 @@
   ← gets
 </div>
 
-
-
-
-
-
 <h1 class="heading"><span class="name">Assignment (Indexed Modified)</span> <span class="command">{R}←X[I]f←Y</span></h1>
-
-
 
 `f` may be any dyadic function which returns an explicit result.  `Y` may be any array whose items are appropriate to function `f`.  `X` must be the *name* of an existing array.  `I` must be a valid index specification.  The items of the indexed portion of `X` must be appropriate to function `f`.
 
-
 `Y` is either an array of the same shape as the indices specified by `I` or a scalar that is notionally extended to be the same shape as those indices.
 
-
 The operator loops through the indices specified by `I` in ravel order. For each successive index `i` in the set specified by `I`,     it calculates the result of `X[i]fY[i]` and assigns it back to `X[i]`.
-
-
 
 `R` is the "pass-through" value, that is, the value of `Y`.  If the result of the derived function is not assigned or used, there is no explicit result.
 
@@ -53,5 +42,3 @@ As the operator performs a loop, if an index in `I` is repeated, function `f` wi
 1 0 2 0 1
 
 ```
-
-

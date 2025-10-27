@@ -2,23 +2,13 @@
   ← gets
 </div>
 
-
-
-
-
-
 <h1 class="heading"><span class="name">Assignment (Modified)</span> <span class="command">{R}←Xf←Y</span></h1>
-
-
 
 `f` may be any dyadic function which returns an explicit result.  `Y` may be any array  appropriate to function `f`.  `X` must be the *name* of an existing array appropriate to function `f`.
 
-
 `R` is the “pass-through” value, that is, the value of `Y`.  If the result of the derived function is not assigned or used, there is no explicit result.
 
-
 The effect of the derived function is to reset the value of the array named by `X` to the result of `XfY`.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -40,5 +30,3 @@ The effect of the derived function is to reset the value of the array named by `
       vec/⍨←vec>0 ⋄vec
 3 5 1 4 2
 ```
-
-
