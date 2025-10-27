@@ -190,7 +190,3 @@ If `Y` is a ref to an instance of a Class with a Default property, indexing is a
       c[2;3;]
 UVWX
 ```
-
-See also: [Indexing Classes](index-function/index.md#indexing-classes).
-
-

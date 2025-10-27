@@ -153,7 +153,7 @@ Arrays (including namespaces) can be displayed in the session using [array notat
 ```
 In the [Microsoft Windows IDE](../../../../windows-ui-guide) it can also be toggled on and off using the ![](../../img/session_arraynotation.png){width=20 height=20 vertical-align:text-bottom} icon on the Session toolbar.
 
-To enable the display of output using array notation when starting a Dyalog session, set the [APLAN_FOR_OUTPUT](../../../../windows-installation-and-configuration-guide/configuration-parameters/aplan-for-output.md) configuration parameter to `1`.
+To enable the display of output using array notation when starting a Dyalog session, set the [APLAN_FOR_OUTPUT](../../../../windows-installation-and-configuration-guide/configuration-parameters/aplan-for-output) configuration parameter to `1`.
 
 ## Print Width
 
