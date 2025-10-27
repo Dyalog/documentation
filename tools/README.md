@@ -4,19 +4,26 @@ The `tools/` directory contains Docker-based tools for Dyalog's documentation au
 
 Note: the directory settings can be stashed in a `.env` file; see [below](#the-env-file).
 
+## Available Docker Services
+
+- **`mkdocs-server`** - Live preview server with hot-reload (port 8000)
+- **`docs-nginx`** - Build static site and serve via nginx (port 8080) - **much faster, but no live reload**
+- **`utils`** - Utility scripts for validation, checking links, finding orphans, etc.
+
 ## Live preview
 
 A "sub-site" is one of the component documents as defined by the nav section in the top-level `mkdocs.yml` file, currently:
 
-- release-notes-v19-0
-- windows-installation-and-configuration-guide
-- unix-installation-and-configuration-guide
-- programming-reference-guide
+- release-notes
+- earlier-release-notes
 - language-reference-guide
-- object-reference
+- programming-reference-guide
+- windows-installation-and-configuration-guide
 - windows-ui-guide
+- object-reference
 - interface-guide
-- dotnet-interface
+- dotnet-framework-interface
+- unix-installation-and-configuration-guide
 - unix-user-guide
 
 > **Note:** When using the Docker-based tools, you need to give `docker compose` the **full command name**, _not_ a bare `docker compose up`. 
@@ -88,10 +95,11 @@ From the tools/ directory:
 
 `render.py` is a live markdown renderer with auto-reload functionality. It renders a markdown file to HTML and automatically refreshes the browser view when the source file changes. This is perfect for testing markdown files before building the full site.
 
+**Features:**
 - Live preview with auto-reload on file changes
 - Uses the same CSS as the live MkDocs site (from `documentation-assets`)
-- Uses same markdown extensions as MkDocs (pymdownx, tables, admonitions, etc.)
-- Built-in HTTP server for proper JavaScript execution
+- Uses the same Markdown extensions as MkDocs (pymdownx, tables, admonitions, etc.)
+- Built-in HTTP server
 
 #### Docker Usage (Recommended)
 
@@ -100,7 +108,7 @@ From the tools/ directory:
 docker compose run --rm utils python /utils/render.py /docs/tools/primitive-functions-by-category.md --no-browser
 ```
 
-The rendered HTML will be created in the same directory as the source markdown file.
+The rendered HTML will be created in the same directory as the source Markdown file.
 
 #### Local Usage
 
@@ -116,13 +124,13 @@ This will open your browser automatically and watch for changes.
 
 ```bash
 # Custom output file
-python /utils/render.py /docs/input.md --output /docs/custom.html
+python utils/render.py /path/to/input.md --output /docs/custom.html
 
 # Custom port (if 8000 is in use)
-python /utils/render.py /docs/input.md --port 8080
+python utils/render.py /path/to/input.md --port 8080
 
 # Don't open browser (useful for Docker)
-python /utils/render.py /docs/input.md --no-browser
+python utils/render.py /path/to/input.md --no-browser
 ```
 
 #### CSS Sources
@@ -164,7 +172,7 @@ cd tools/utils && pydoc3 render
 
 ### Finding Orphaned Pages
 
-`find_orphans.py`: Find truly orphaned markdown files across ALL output formats:
+`find_orphans.py`: Find truly orphaned Markdown files across ALL output formats:
 
 ```bash
 # Docker
@@ -199,7 +207,46 @@ docker compose run --rm utils python /utils/find_ghost_pages.py --root /docs/mkd
 
 ### Link validation
 
-Check for dangling links via the Markdown source -- note, this can be unreliable, as it doesn't account for all the possible ways that MkDocs tolerates link syntax.
+#### Deployed Link Checker
+
+Check links on a deployed site by testing actual HTTP responses.
+
+Using [nginx](https://nginx.org/) (serves pre-built static site; fast!):
+```bash
+docker compose up docs-nginx
+
+# in a different terminal:
+docker compose run --rm utils python /utils/check_deployed_links.py \
+    --base-url http://docs-nginx \
+    --output /docs/tools/broken_links.yaml
+
+docker compose down docs-nginx
+```
+
+Using `mkdocs serve` (renders pages on-demand; slow!):
+```bash
+docker compose up mkdocs-server
+
+# in a different terminal:
+docker compose run --rm utils python /utils/check_deployed_links.py \
+    --base-url http://mkdocs-server:8000 \
+    --output /docs/tools/broken_links.yaml
+docker compose down mkdocs-server
+```
+
+Local:
+```bash
+mkdocs build
+python tools/utils/check_deployed_links.py \
+    --base-url http://localhost:8080 \  # or --base-url http://localhost:8000 \
+    --max-concurrent 100 \
+    --output tools/broken_links.yaml
+kill %1
+```
+
+#### Source-based Link Validation
+
+Check for dangling links via the Markdown source -- note, this can be unreliable:
 
 ```
 docker compose run --rm utils python /utils/dangling_links.py
@@ -300,18 +347,14 @@ Add APL symbol synonyms:
 docker compose run --rm utils python /utils/add_synonyms.py /docs/language-reference-guide/docs/primitive-functions [--dry-run]
 ```
 
-Check the deployed site to check for broken links and images (images are checked by default):
+Spider the deployed site to check for broken links and images (images are checked by default):
 ```
 docker compose run --rm utils python /utils/check_deployed_links.py \
                    --base-url https://dyalog.github.io/documentation/20.0 \
                    --output /docs/tools/broken_links.yaml
 ```
 
-#### Validating against a local build
-
-> **Note**: for this to work, you first need to be running the site locally: `docker compose up mkdocs-server`. Verify that you can see the local site in your browser at http://localhost:8000/ before running `check_deployed_links.py` as described below.
-
-If you're checking against a local site build running in Docker, use Docker's internal network. In a separate terminal, run:
+If you're checking against a local site build running in Docker, use Docker's internal network:
 ```
 docker compose run --rm utils python /utils/check_deployed_links.py \
                    --base-url http://mkdocs-server:8000 \
