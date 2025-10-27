@@ -27,3 +27,19 @@ services:
     working_dir: /docs
     # Default command can be overridden when running
     command: python --version
+
+  docs-nginx:
+    build:
+      context: ${DOCS_DIR}
+      dockerfile: tools/nginx/Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ${DOCS_DIR}:/docs
+      - ${ASSETS_DIR}:/docs/docs/documentation-assets
+    environment:
+      - DOCS_DIR=${DOCS_DIR}
+      - ASSETS_DIR=${ASSETS_DIR}
+    # This service builds the site when started and serves it via nginx
+    # The site is built from the current state of the mounted docs directory
+    # Access at http://localhost:8080
