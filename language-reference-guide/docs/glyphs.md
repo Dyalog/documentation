@@ -111,7 +111,7 @@
 
 |Glyph|Glyph Name|Uses
 |---|---|---|
-|`/`|Slash|[Replicate](primitive-functions/replicate.md), [Reduce](primitive-operators/reduce.md), [Reduce N Wise](primitive-operators/reduce/reduce-n-wise.md)
+|`/`|Slash|[Replicate](primitive-functions/replicate.md), [Reduce](primitive-operators/reduce/index.md), [Reduce N Wise](primitive-operators/reduce/reduce-n-wise.md)
 |`\`|Backslash|[Expand](primitive-functions/expand.md), [Scan](primitive-operators/scan.md)
 |`⌿`|Slash Bar|[Replicate First](primitive-functions/replicate-first.md), [Reduce First](primitive-operators/reduce-first/index.md), [Reduce First N Wise](primitive-operators/reduce-first/reduce-first-n-wise.md)
 |`⍀`|Backslash Bar|[Expand First](primitive-functions/expand-first.md), [Scan First](primitive-operators/scan-first.md)
