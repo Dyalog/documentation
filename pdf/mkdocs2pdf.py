@@ -50,6 +50,11 @@ import markdown
 from markdown.extensions.toc import slugify_unicode
 from ruamel.yaml import YAML
 
+FRONT_MATTER_RE = re.compile(
+    r"\A\ufeff?\s*---\s*\r?\n.*?\r?\n(?:---|\.\.\.)[ \t]*(?:\r?\n|$)",
+    re.DOTALL,
+)
+
 NavItem = Union[str, List["NavItem"]]
 NavDict = Dict[str, NavItem]
 NavType = Union[List[NavDict], NavDict]
@@ -537,6 +542,9 @@ def convert_to_html(
         with open(file_path, "r", encoding="utf-8") as f:
             md = f.read()
 
+        # Strip YAML front matter if present (handles optional BOM and CRLF endings)
+        md = FRONT_MATTER_RE.sub("", md, count=1)
+
         # Apply macros and any pre-html transforms
         md = expand_macros(md, macros)
         for fun in transforms:
@@ -794,10 +802,12 @@ def normalise_links(
     section_map: Dict[str, str],
     path_to_id: Dict[str, str],
     rewrite_links: bool = True,
+    version_majmin: str = "",
 ) -> None:
     """
     Rewrite internal links to point to correct article IDs within the single HTML file using file path resolution.
     Optionally rewrite link text to section numbers for print-friendliness.
+    Also handles /files/ links with .pdf or .docx extensions, converting them to docs.dyalog.com URLs.
     """
 
     def in_table(tag):
@@ -848,6 +858,24 @@ def normalise_links(
                 print(f'--> Warning: could not find a matching table for id "{href}"')
             continue
 
+        # Check for /files/ links with .pdf or .docx extensions
+        # These should be converted to docs.dyalog.com URLs
+        if not href.startswith("http") and ("/files/" in href or href.startswith("files/")):
+            # Check if it has a .pdf or .docx extension
+            if href.endswith(".pdf") or href.endswith(".docx"):
+                # Remove any leading ../ or ./ components
+                clean_path = re.sub(r"^(\.\./)+", "", href)
+                clean_path = re.sub(r"^\./", "", clean_path)
+
+                # Extract everything from files/ onwards
+                if "files/" in clean_path:
+                    files_index = clean_path.find("files/")
+                    files_path = clean_path[files_index:]
+                    # Build the full URL with version
+                    full_url = f"https://docs.dyalog.com/{version_majmin}/{files_path}"
+                    a_tag["href"] = full_url
+                    continue
+
         if not href.startswith("http"):
             # Split off anchor if present
             path_parts = href.split("#", maxsplit=1)
@@ -868,9 +896,6 @@ def normalise_links(
             if path.startswith("/"):
                 # Handle potential inter-document links
                 components = extract_components(path)
-                # Handle renamed documents
-                if components and components[0] == "net-framework-interface-guide":
-                    components[0] = "dotnet-framework-interface"
                 if components and components[0] in documents:
                     new_tag = soup.new_tag("i")
                     text_parts = [documents[components[0]]]
@@ -1089,6 +1114,7 @@ def process_document(document_path):
         title_page.insert_after(copyright_section)
 
     table_refs = caption_tables(soup)
+    version_majmin = top_mkdocs_data.get("extra", {}).get("version_majmin", "")
     normalise_links(
         soup,
         documents,
@@ -1096,7 +1122,8 @@ def process_document(document_path):
         section_map,
         path_to_id,
         rewrite_links=args.link_rewrite,
-    )  # Pass path_to_id
+        version_majmin=version_majmin,
+    )
     toc_friendly_headings(soup)
 
     # Insert link to title page CSS
