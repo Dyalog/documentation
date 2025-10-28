@@ -43,12 +43,19 @@ import re
 import shutil
 from subprocess import Popen, run, CalledProcessError
 import sys
-from typing import Callable, Dict, Generator, Iterator, List, Tuple, Union
+from typing import Callable, Dict, Generator, Iterable, Iterator, List, Set, Tuple, Union
 
 from bs4 import BeautifulSoup
 import markdown
 from markdown.extensions.toc import slugify_unicode
 from ruamel.yaml import YAML
+
+FRONT_MATTER_RE = re.compile(
+    r"\A\ufeff?\s*---\s*\r?\n.*?\r?\n(?:---|\.\.\.)[ \t]*(?:\r?\n|$)",
+    re.DOTALL,
+)
+
+DOC_ROOTS: Set[str] = set()
 
 NavItem = Union[str, List["NavItem"]]
 NavDict = Dict[str, NavItem]
@@ -537,6 +544,9 @@ def convert_to_html(
         with open(file_path, "r", encoding="utf-8") as f:
             md = f.read()
 
+        # Strip YAML front matter if present (handles optional BOM and CRLF endings)
+        md = FRONT_MATTER_RE.sub("", md, count=1)
+
         # Apply macros and any pre-html transforms
         md = expand_macros(md, macros)
         for fun in transforms:
@@ -732,22 +742,21 @@ def static_assets(src_dir="assets", project="project") -> None:
     shutil.copytree(src_dir, dest_dir)
 
 
-def fix_links(b: str) -> str:
+def make_fix_links(current_doc: str, doc_roots: Iterable[str]) -> Callable[[str], str]:
     """
-    Links in the mkdocs source are "clean URLs" -- the renderer will remove the .md extensions
-    on link targets. We have to do that transformation ourselves -- or rather, change to .htm.
-
-    Three cases:
-
-    1. Intra-doc links present with link targets ending in ".md" -- they go to other pages
-    defined within the same mkdocs.yml sub-site. Fix those by changing suffix to ".htm".
-
-    2. Inter-doc links have a target presenting with (potentially several) leading "../" and no
-    extension. The first actual component (not "../") of the path will be the name of one of the other
-    sub-sites. Make the link absolute, and add the ".htm" extension.
-
-    3. Off-site links start with "http" -- return those unchanged.
+    Build a link-fixing transform that respects cross-document references based on configured roots.
     """
+    doc_root_set = {root.strip().strip("/") for root in doc_roots if root}
+    current_doc = current_doc.strip().strip("/")
+
+    def first_real_component(path: str) -> Union[str, None]:
+        for component in path.split("/"):
+            if not component or component == ".":
+                continue
+            if component == "..":
+                continue
+            return component
+        return None
 
     def link_transform(match: re.Match) -> str:
         link_text = match.group(1)
@@ -764,27 +773,50 @@ def fix_links(b: str) -> str:
         if link_target.startswith("http"):  # Off-site link: return unchanged
             return f"[{link_text}]({link_target})"
 
-        # If the link contains an internal anchor (#), return unchanged
+        # Split off anchor if present to process the path separately
+        anchor = ""
         if "#" in link_target:
+            path_part, anchor = link_target.split("#", 1)
+            anchor = "#" + anchor
+        else:
+            path_part = link_target
+
+        # Only process non-empty paths (anchor-only links like "#heading" should be unchanged)
+        if not path_part:
             return f"[{link_text}]({link_target})"
 
-        path, name = os.path.split(link_target)
+        path, name = os.path.split(path_part)
         base, ext = os.path.splitext(name)
-        htm_target = f"{os.path.join(path, base)}.htm"
 
-        if ext == ".md":  # Intra-doc link: change extension to ".htm"
-            return f"[{link_text}]({htm_target})"
+        if ext == ".md":
+            first_component = first_real_component(path_part)
+            is_cross_doc = (
+                first_component is not None
+                and first_component in doc_root_set
+                and first_component != current_doc
+            )
+            if is_cross_doc:
+                normalized = os.path.normpath("/" + path_part)
+                htm_target = os.path.splitext(normalized)[0] + ".htm"
+                return f"[{link_text}]({htm_target}{anchor})"
 
-        if ext == "":  # Inter-doc link: make absolute, change extension
-            # Replace any number of leading ../ with a single /
+            htm_target = f"{os.path.join(path, base)}.htm"
+            return f"[{link_text}]({htm_target}{anchor})"
+
+        if ext == "":
+            # Inter-doc link: make absolute, change extension
+            htm_target = f"{os.path.join(path, base)}.htm" if base else path
             no_slashdot = re.sub(r"^[/.]+", "/", htm_target)
-            return f"[{link_text}]({no_slashdot})"
+            return f"[{link_text}]({no_slashdot}{anchor})"
 
-        # Something else; leave alone
+        # Something else (e.g., has other extension); leave alone
         return f"[{link_text}]({link_target})"
 
-    # Exclude markdown images (which start with !)
-    return re.sub(r"(?<!!)\[([^]]*)]\(([^)]+)\)", link_transform, b)
+    def transform(markdown_text: str) -> str:
+        # Exclude markdown images (which start with !)
+        return re.sub(r"(?<!!)\[([^]]*)]\(([^)]+)\)", link_transform, markdown_text)
+
+    return transform
 
 
 def normalise_links(
@@ -794,10 +826,12 @@ def normalise_links(
     section_map: Dict[str, str],
     path_to_id: Dict[str, str],
     rewrite_links: bool = True,
+    version_majmin: str = "",
 ) -> None:
     """
     Rewrite internal links to point to correct article IDs within the single HTML file using file path resolution.
     Optionally rewrite link text to section numbers for print-friendliness.
+    Also handles /files/ links with .pdf or .docx extensions, converting them to docs.dyalog.com URLs.
     """
 
     def in_table(tag):
@@ -848,6 +882,24 @@ def normalise_links(
                 print(f'--> Warning: could not find a matching table for id "{href}"')
             continue
 
+        # Check for /files/ links with .pdf or .docx extensions
+        # These should be converted to docs.dyalog.com URLs
+        if not href.startswith("http") and ("/files/" in href or href.startswith("files/")):
+            # Check if it has a .pdf or .docx extension
+            if href.endswith(".pdf") or href.endswith(".docx"):
+                # Remove any leading ../ or ./ components
+                clean_path = re.sub(r"^(\.\./)+", "", href)
+                clean_path = re.sub(r"^\./", "", clean_path)
+
+                # Extract everything from files/ onwards
+                if "files/" in clean_path:
+                    files_index = clean_path.find("files/")
+                    files_path = clean_path[files_index:]
+                    # Build the full URL with version
+                    full_url = f"https://docs.dyalog.com/{version_majmin}/{files_path}"
+                    a_tag["href"] = full_url
+                    continue
+
         if not href.startswith("http"):
             # Split off anchor if present
             path_parts = href.split("#", maxsplit=1)
@@ -868,9 +920,6 @@ def normalise_links(
             if path.startswith("/"):
                 # Handle potential inter-document links
                 components = extract_components(path)
-                # Handle renamed documents
-                if components and components[0] == "net-framework-interface-guide":
-                    components[0] = "dotnet-framework-interface"
                 if components and components[0] in documents:
                     new_tag = soup.new_tag("i")
                     text_parts = [documents[components[0]]]
@@ -1047,7 +1096,7 @@ def process_document(document_path):
         prefix=os.path.join(os.path.dirname(doc_mkdocs_file), "docs"),
         title=yml_data["site_name"],
         macros=top_mkdocs_data.get("extra", {}),
-        transforms=[fix_links],
+        transforms=[make_fix_links(document_path, DOC_ROOTS)],
         create_toc=args.toc,
         enumerate_sections=args.enumerate_sections,
         syntax_hilite=args.syntax_hilite,
@@ -1089,6 +1138,7 @@ def process_document(document_path):
         title_page.insert_after(copyright_section)
 
     table_refs = caption_tables(soup)
+    version_majmin = top_mkdocs_data.get("extra", {}).get("version_majmin", "")
     normalise_links(
         soup,
         documents,
@@ -1096,7 +1146,8 @@ def process_document(document_path):
         section_map,
         path_to_id,
         rewrite_links=args.link_rewrite,
-    )  # Pass path_to_id
+        version_majmin=version_majmin,
+    )
     toc_friendly_headings(soup)
 
     # Insert link to title page CSS
@@ -1269,8 +1320,10 @@ if __name__ == "__main__":
     if args.config:
         if not isinstance(config.get("documents"), dict):
             sys.exit('--> config file must contain a "documents" dictionary')
+        DOC_ROOTS = set(config["documents"].keys())
         for doc in config["documents"]:
             print(f"=== building: {doc} ===")
             process_document(doc)
     else:
+        DOC_ROOTS = {args.document}
         process_document(args.document)
