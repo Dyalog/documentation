@@ -160,7 +160,7 @@ you may enter configuration parameters or specify a Configuration file for your 
 
 For the other isolation modes, this is not appropriate because only the command line from the first assembly loaded into the interpreter could be honoured, and the order in which assemblies are loaded is unpredictable. However, configuration files may be specified using the **ConfigFile** parameter and/or the **UserConfigFile** parameter specified as an environment variable or in the registry.
 
-For more information, see [Isolation Mode](../../dotnet-framework-interface/implementation-details/isolation-mode).
+For more information, see [Isolation Mode](../../net-framework-interface-guide/implementation-details/isolation-mode).
 
 To distribute your .NET Classes, you need to supply and install
 
