@@ -772,23 +772,33 @@ def fix_links(b: str) -> str:
         if link_target.startswith("http"):  # Off-site link: return unchanged
             return f"[{link_text}]({link_target})"
 
-        # If the link contains an internal anchor (#), return unchanged
+        # Split off anchor if present to process the path separately
+        anchor = ""
         if "#" in link_target:
+            path_part, anchor = link_target.split("#", 1)
+            anchor = "#" + anchor
+        else:
+            path_part = link_target
+
+        # Only process non-empty paths (anchor-only links like "#heading" should be unchanged)
+        if not path_part:
             return f"[{link_text}]({link_target})"
 
-        path, name = os.path.split(link_target)
+        path, name = os.path.split(path_part)
         base, ext = os.path.splitext(name)
-        htm_target = f"{os.path.join(path, base)}.htm"
 
         if ext == ".md":  # Intra-doc link: change extension to ".htm"
-            return f"[{link_text}]({htm_target})"
+            htm_target = f"{os.path.join(path, base)}.htm"
+            return f"[{link_text}]({htm_target}{anchor})"
 
         if ext == "":  # Inter-doc link: make absolute, change extension
+            # Add .htm extension to the base name
+            htm_target = f"{os.path.join(path, base)}.htm" if base else path
             # Replace any number of leading ../ with a single /
             no_slashdot = re.sub(r"^[/.]+", "/", htm_target)
-            return f"[{link_text}]({no_slashdot})"
+            return f"[{link_text}]({no_slashdot}{anchor})"
 
-        # Something else; leave alone
+        # Something else (e.g., has other extension); leave alone
         return f"[{link_text}]({link_target})"
 
     # Exclude markdown images (which start with !)
