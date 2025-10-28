@@ -43,7 +43,7 @@ import re
 import shutil
 from subprocess import Popen, run, CalledProcessError
 import sys
-from typing import Callable, Dict, Generator, Iterator, List, Tuple, Union
+from typing import Callable, Dict, Generator, Iterable, Iterator, List, Set, Tuple, Union
 
 from bs4 import BeautifulSoup
 import markdown
@@ -54,6 +54,8 @@ FRONT_MATTER_RE = re.compile(
     r"\A\ufeff?\s*---\s*\r?\n.*?\r?\n(?:---|\.\.\.)[ \t]*(?:\r?\n|$)",
     re.DOTALL,
 )
+
+DOC_ROOTS: Set[str] = set()
 
 NavItem = Union[str, List["NavItem"]]
 NavDict = Dict[str, NavItem]
@@ -740,22 +742,21 @@ def static_assets(src_dir="assets", project="project") -> None:
     shutil.copytree(src_dir, dest_dir)
 
 
-def fix_links(b: str) -> str:
+def make_fix_links(current_doc: str, doc_roots: Iterable[str]) -> Callable[[str], str]:
     """
-    Links in the mkdocs source are "clean URLs" -- the renderer will remove the .md extensions
-    on link targets. We have to do that transformation ourselves -- or rather, change to .htm.
-
-    Three cases:
-
-    1. Intra-doc links present with link targets ending in ".md" -- they go to other pages
-    defined within the same mkdocs.yml sub-site. Fix those by changing suffix to ".htm".
-
-    2. Inter-doc links have a target presenting with (potentially several) leading "../" and no
-    extension. The first actual component (not "../") of the path will be the name of one of the other
-    sub-sites. Make the link absolute, and add the ".htm" extension.
-
-    3. Off-site links start with "http" -- return those unchanged.
+    Build a link-fixing transform that respects cross-document references based on configured roots.
     """
+    doc_root_set = {root.strip().strip("/") for root in doc_roots if root}
+    current_doc = current_doc.strip().strip("/")
+
+    def first_real_component(path: str) -> Union[str, None]:
+        for component in path.split("/"):
+            if not component or component == ".":
+                continue
+            if component == "..":
+                continue
+            return component
+        return None
 
     def link_transform(match: re.Match) -> str:
         link_text = match.group(1)
@@ -787,22 +788,35 @@ def fix_links(b: str) -> str:
         path, name = os.path.split(path_part)
         base, ext = os.path.splitext(name)
 
-        if ext == ".md":  # Intra-doc link: change extension to ".htm"
+        if ext == ".md":
+            first_component = first_real_component(path_part)
+            is_cross_doc = (
+                first_component is not None
+                and first_component in doc_root_set
+                and first_component != current_doc
+            )
+            if is_cross_doc:
+                normalized = os.path.normpath("/" + path_part)
+                htm_target = os.path.splitext(normalized)[0] + ".htm"
+                return f"[{link_text}]({htm_target}{anchor})"
+
             htm_target = f"{os.path.join(path, base)}.htm"
             return f"[{link_text}]({htm_target}{anchor})"
 
-        if ext == "":  # Inter-doc link: make absolute, change extension
-            # Add .htm extension to the base name
+        if ext == "":
+            # Inter-doc link: make absolute, change extension
             htm_target = f"{os.path.join(path, base)}.htm" if base else path
-            # Replace any number of leading ../ with a single /
             no_slashdot = re.sub(r"^[/.]+", "/", htm_target)
             return f"[{link_text}]({no_slashdot}{anchor})"
 
         # Something else (e.g., has other extension); leave alone
         return f"[{link_text}]({link_target})"
 
-    # Exclude markdown images (which start with !)
-    return re.sub(r"(?<!!)\[([^]]*)]\(([^)]+)\)", link_transform, b)
+    def transform(markdown_text: str) -> str:
+        # Exclude markdown images (which start with !)
+        return re.sub(r"(?<!!)\[([^]]*)]\(([^)]+)\)", link_transform, markdown_text)
+
+    return transform
 
 
 def normalise_links(
@@ -1082,7 +1096,7 @@ def process_document(document_path):
         prefix=os.path.join(os.path.dirname(doc_mkdocs_file), "docs"),
         title=yml_data["site_name"],
         macros=top_mkdocs_data.get("extra", {}),
-        transforms=[fix_links],
+        transforms=[make_fix_links(document_path, DOC_ROOTS)],
         create_toc=args.toc,
         enumerate_sections=args.enumerate_sections,
         syntax_hilite=args.syntax_hilite,
@@ -1306,8 +1320,10 @@ if __name__ == "__main__":
     if args.config:
         if not isinstance(config.get("documents"), dict):
             sys.exit('--> config file must contain a "documents" dictionary')
+        DOC_ROOTS = set(config["documents"].keys())
         for doc in config["documents"]:
             print(f"=== building: {doc} ===")
             process_document(doc)
     else:
+        DOC_ROOTS = {args.document}
         process_document(args.document)
