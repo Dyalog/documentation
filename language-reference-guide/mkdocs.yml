@@ -53,7 +53,7 @@ nav:
   - Primitive Functions:
       - Primitive Functions: primitive-functions/index.md
       - Notes: primitive-functions/notes.md
-      - Primitive Functions (by category): primitive-functions/primitive-functions-by-category.md
+      - Primitive Functions (by Category): primitive-functions/primitive-functions-by-category.md
       - Primitive Functions (A-Z):
           - Binomial: primitive-functions/binomial.md
           - Catenate Laminate: primitive-functions/catenate-laminate.md
