@@ -1,6 +1,6 @@
 # Dyalog APL documentation
 
-> **Note** This is the source repository for the documentation for Dyalog APL. If you are looking for the actual published documentation, visit the [help section](https://help.dyalog.com/) on Dyalog's website instead. This repository is intended for documentation authors, not users.
+> **Note** This is the source repository for the documentation for Dyalog. For the published documentation, see [https://docs.dyalog.com/20.0/](https://docs.dyalog.com/20.0/). This repository is intended for documentation authors, not users.
 
 If you want to contribute content to Dyalog's documentation, see the file [CONTRIBUTE.md](CONTRIBUTE.md) for an outline of the process we use.
 
@@ -10,16 +10,17 @@ Please consult the [Dyalog Documentation Guidelines](https://dyalog.github.io/do
 
 This is a mkdocs _monorepo_, using the Spotify [monorepo](https://github.com/backstage/mkdocs-monorepo-plugin) plugin. The top-level site is defined by the file `mkdocs.yml` in the root, and the `docs/` directory. The other directories are the respective sub-sites included in the `nav` section in `mkdocs.yml`, currently:
 
-- release-notes-v19-0
-- windows-installation-and-configuration-guide
-- unix-installation-and-configuration-guide
-- programming-reference-guide
-- language-reference-guide
-- object-reference
-- windows-ui-guide
+- release-notes
+- earlier-release-notes > release-notes-v19-0
 - interface-guide
-- dotnet-interface
+- language-reference-guide
+- net-framework-interface-guide
+- object-reference
+- programming-reference-guide
+- unix-installation-and-configuration-guide
 - unix-user-guide
+- windows-installation-and-configuration-guide
+- windows-ui-guide
 
 ### Central Styles and Assets Submodule
 
