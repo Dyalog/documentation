@@ -49,7 +49,7 @@ The objects identified in the list `Y` are copied into the namespace `X`.
 
 If `X` is specified, the result `R` is the full name (starting with `#.` or `⎕SE.`) of the namespace `X`. If `X` is omitted, the result `R` is a namespace reference to an unnamed namespace.
 
-<h4 class="example">Examples</h3>
+<h4 class="example">Examples</h4>
 
 ```apl
       ⎕←'X'⎕NS''                 ⍝ Create namespace X
@@ -102,7 +102,7 @@ If `Y` does not contain a reference to, or a `⎕OR` of, a *GUI* object, the res
 
 `Y` can also be a vector of namespaces, in which case each item of `Y` is processed as explained above, in ravel order. The effect is that the contents of all the namespaces are merged into the target namespace.
 
-<h4 class="example">Examples</h3>
+<h4 class="example">Examples</h4>
 
 ```apl
       original←⎕NS⍬
