@@ -491,7 +491,9 @@ def convert_examples(soup: BeautifulSoup) -> None:
         # Preserve the ID if it exists
         if "id" in header.attrs:
             p_tag["id"] = header["id"]
-        p_tag.string = header.string
+        # Move all children across so nested markup is preserved
+        for child in list(header.children):
+            p_tag.append(child)
         header.replace_with(p_tag)
 
 
