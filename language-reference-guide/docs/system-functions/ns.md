@@ -14,9 +14,8 @@ The `⎕NS` system function makes it possible to create namespaces, copy element
 
 `Y` is one of the following:
 
-* a character array that represents a list of names of objects to be copied into a namespace.
-* a ref to a namespace.
-* an array produced by the [`⎕OR`](or.md) of a namespace.
+* an vector of zero or more objects to be copied.
+* an array containing references to, and/or [`⎕OR`](or.md)s of, one or more namespaces.
 
 If specified, `X` must be an array that identifies one or more namespaces. This means `X` must be one of:
 
@@ -26,80 +25,92 @@ If specified, `X` must be an array that identifies one or more namespaces. This 
 
 The result `R` is shy when the system function is invoked dyadically, otherwise its contents are determined by the value of `Y`.
 
-## Case 1
+## Usage
 
-In the first case, `Y` must be a simple character scalar, vector, matrix or a nested vector of character vectors identifying zero or more workspace objects to be copied into the namespace `X`.  The identifiers in `X` and `Y` may be simple names or compound names separated by `'.'` and including the names of the special namespaces `'#'`, `'##'` and `'⎕SE'`.
+`⎕NS` is used to create or populate one or more namespaces based on either a list of members to be copied into the target namespace(s), or a list of objects to be merged into the target namespace(s).
 
+For simplicity, `X` is treated in the following as if it refers to only a single namespace, but is subject to the aforementioned equivalence of `X ⎕NS¨⊂Y`.
 
-The namespace `X` is created if it doesn't already exist.  If the name is already in use for an object other than a namespace, APL issues a `DOMAIN ERROR`.
+### Case 1: Create or Populate Namespace from Member List
 
+`Y` must be a simple character scalar, vector, matrix, or a nested vector of character vectors identifying zero or more workspace objects to be copied into `X`. The identifiers in `X` and `Y` can be simple names or compound names separated by `'.'` and including the names of the special namespaces `'#'`, `'##'` and `'⎕SE'`.
 
-If `X` is omitted, an unnamed namespace is created.
+The treatment of `X` varies:
 
+| `X` | Treatment |
+| ---| ---|
+| Omitted (monadic `⎕NS`) | Anonymous namespace created |
+| Not in use | Namespace `X` created |
+| Existing object | Used as-is |
+| Existing non-object variable | Variable replaced with new namespace |
+| Existing non-variable | `DOMAIN ERROR` |
 
 The objects identified in the list `Y` are copied into the namespace `X`.
 
+If `X` is specified, the result `R` is the full name (starting with `#.` or `⎕SE.`) of the namespace `X`. If `X` is omitted, the result `R` is a namespace reference to an unnamed namespace.
 
-If `X` is specified, the result `R` is the full name (starting with `#.` or `⎕SE.`) of the namespace `X`. If `X` is omitted, the result `R` is a namespace reference, or *ref*, to an unnamed namespace.
+<h4 class="example">Examples</h3>
 
-
-<h2 class="example">Examples</h2>
 ```apl
-      +'X'⎕NS''               ⍝ Create namespace X.
+      ⎕←'X'⎕NS''                 ⍝ Create namespace X
 #.X
-      ⊢'X'⎕NS'VEC' 'UTIL.DISP'⍝ Copy VEC and DISP to X.
+      ⎕←'X'⎕NS'VEC' 'UTIL.DISP'  ⍝ Copy VEC and DISP to X
 #.X
-      )CS X                   ⍝ Change to namespace X.
+      )CS X                      ⍝ Change to namespace X
 #.X
-      ⊢'Y'⎕NS'#.MAT' '##.VEC' ⍝ Create #.X.Y &copy in
+      ⎕←'Y'⎕NS'#.MAT' '##.VEC'   ⍝ Create #.X.Y and copy in
 #.X.Y
-      ⊢'#.UTIL'⎕NS'Y.MAT'     ⍝ Copy MAT from Y to UTIL #.UTIL.
+      ⎕←'#.UTIL'⎕NS'Y.MAT'       ⍝ Copy MAT from Y to UTIL #.UTIL
 #.UTIL
-      ⊢'#'⎕NS'Y'              ⍝ Copy namespace Y to root.
+      ⎕←'#'⎕NS'Y'                ⍝ Copy namespace Y to root
 #
+```
 
-```
 ```apl
-      ⊢''⎕NS'#.MAT'           ⍝ Copy MAT to current space.
+      ⎕←''⎕NS'#.MAT'           ⍝ Copy MAT to current space
 #.X
-      ⊢''⎕NS''                ⍝ Display current space.
+      ⎕←''⎕NS''                ⍝ Display current space
 #.X
-      ⊢'Z'⎕NS ⎕OR'Y'          ⍝ Create nspace from ⎕OR.
-#.X.Z
 ```
+
 ```apl
-      NONAME←⎕NS ''           ⍝ Create unnamed nspace
+      NONAME←⎕NS ''           ⍝ Create unnamed namespace
       NONAME
 #.[Namespace]
 ```
+
 ```apl
       DATA←⎕NS¨3⍴⊂''         ⍝ Create 3-element vector of
                              ⍝ distinct unnamed nspaces
       DATA
  #.[Namespace]  #.[Namespace]  #.[Namespace]
+      'one' 'two' ⎕NS 'DATA'
+      one.⎕NL ¯2
+ DATA
 ```
 
-## Case 2
+## Case 2: Create or Populate Namespace from Object List
 
+`Y` is one or more references to, or `⎕OR`s of, namespaces.
 
-The second case is where `Y` is a ref to a namespace or the `⎕OR` of a namespace.
+If `Y` contains a reference to, or a `⎕OR` of, a *GUI* object, `X` must be a valid parent for the GUI object represented by `Y`, or the operation will fail with a `DOMAIN ERROR`. A maximum of one element of `Y` can represent a GUI object or the operation will fail with a `NONCE ERROR`.
 
+If `Y` does not contain a reference to, or a `⎕OR` of, a *GUI* object, the result of the operation depends upon the existence of `X`:
 
-If `Y` is a ref to or a `⎕OR` of a *GUI* object, `X` must be a valid parent for the GUI object represented by `Y`, or the operation will fail with a `DOMAIN ERROR`.
-
-
-Otherwise, the result of the operation depends upon the existence of `X`.
-
-- If `X` does not currently exist (name class is 0), `X` is created as a complete copy (clone) of the original namespace represented by `Y`. If `Y` is a ref to or the `⎕OR` of a GUI object or of a namespace containing GUI objects, the corresponding GUI components of `Y` will be instantiated in `X`.
+- If `X` does not currently exist (name class is 0), `X` is created as a complete copy (clone) of the original namespace represented by `Y`. If `Y` contains a reference to, or the `⎕OR` of, a GUI object or of a namespace containing GUI objects, the corresponding GUI components of `Y` will be instantiated in `X`.
 - If `X` is the name of an existing namespace (name class 9), the contents of `Y`, including any GUI components, are merged into `X`. Any items in `X` with corresponding names in `Y` (names with the same path in both `Y` and `X`) will be replaced by the names in `Y`, unless they have a conflicting name class in which case the existing items in `X` will remain unchanged. However, all GUI spaces in `X` will be stripped of their GUI components prior to the merge operation.
 
 `Y` can also be a vector of namespaces, in which case each item of `Y` is processed as explained above, in ravel order. The effect is that the contents of all the namespaces are merged into the target namespace.
 
-<h3 class="example">Examples</h3>
+<h4 class="example">Examples</h3>
+
 ```apl
       original←⎕NS⍬
       original.(A B C)←1 2 3
-      cloned←⎕NS original		⍝ cloning a namespace
+      'new' ⎕NS ⎕OR'original'  ⍝ cloning a namespace from ⎕OR
+      new.A
+1
+      cloned←⎕NS original  ⍝ cloning a namespace from reference
       cloned.D←4
 
       original.⎕NL ¯2
@@ -119,14 +130,14 @@ Otherwise, the result of the operation depends upon the existence of `X`.
       person←(age: 42 ⋄ phone: 12345678)
       show←⎕JSON⍠'Compact' 0
 
-      show ⎕NS defaults jack		⍝ merge defaults and jack
+      show ⎕NS defaults jack  ⍝ merge defaults and jack
 {
   "age": "<no age>",
   "email": "jack@example.com",
   "name": "Jack",
   "phone": "<no phone>"
 }
-      show ⎕NS defaults person	⍝ merge defaults and person
+      show ⎕NS defaults person  ⍝ merge defaults and person
 {
   "age": 42,
   "email": "<no email>",
@@ -135,7 +146,7 @@ Otherwise, the result of the operation depends upon the existence of `X`.
 }
 
 ```
-## Variant Option: Trigger
+### Variant Option: Trigger
 
 The `Trigger` variant option specifies whether any [triggers](../../../programming-reference-guide/triggers/triggers) should be run for the modified variables in the target namespace that have triggers attached.
 The value must be a Boolean scalar. The default is 0, meaning that triggers are not run.
