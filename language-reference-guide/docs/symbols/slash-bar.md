@@ -27,7 +27,7 @@ Dyadic Slash Bar means
 Slash Bar is a monadic operator with a dyadic operand
 
 Operator Slash Bar means
-[Reduce First,  Reduce First N-Wise ](../primitive-operators/reduce-first.md)
+[Reduce First,  Reduce First N-Wise ](../primitive-operators/reduce-first/index.md)
 ```apl
       +⌿ mat
 15 18 21 24
