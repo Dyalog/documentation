@@ -8,11 +8,6 @@ on:
         required: true
         default: '20.0'
         type: string
-      update_latest:
-        description: 'Update this as latest version?'
-        required: true
-        default: true
-        type: boolean
 
 permissions:
   contents: write
@@ -84,9 +79,6 @@ jobs:
     - name: Deploy documentation
       run: |
         mike deploy --push ${{ inputs.version }}
-        if [ "${{ inputs.update_latest }}" = "true" ]; then
-          mike deploy --push --update-aliases ${{ inputs.version }} latest
-        fi
     
     - name: Copy Jenkins files to gh-pages
       run: |
