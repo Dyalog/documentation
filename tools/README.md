@@ -216,33 +216,22 @@ Using [nginx](https://nginx.org/) (serves pre-built static site; fast!):
 docker compose up docs-nginx
 
 # in a different terminal:
-docker compose run --rm utils python /utils/check_deployed_links.py \
-    --base-url http://docs-nginx \
-    --output /docs/tools/broken_links.yaml
+docker compose run --rm utils python /utils/check_links.py \
+                   --base-url http://docs-nginx:8080 \
+                   --output /docs/tools/broken_links.yaml
 
 docker compose down docs-nginx
-```
-
-Using `mkdocs serve` (renders pages on-demand; slow!):
-```bash
-docker compose up mkdocs-server
-
-# in a different terminal:
-docker compose run --rm utils python /utils/check_deployed_links.py \
-    --base-url http://mkdocs-server:8000 \
-    --output /docs/tools/broken_links.yaml
-docker compose down mkdocs-server
 ```
 
 Local:
 ```bash
 mkdocs build
-python tools/utils/check_deployed_links.py \
-    --base-url http://localhost:8080 \  # or --base-url http://localhost:8000 \
-    --max-concurrent 100 \
+python tools/utils/check_links.py \
+    --base-url http://localhost:8080 \ 
     --output tools/broken_links.yaml
-kill %1
 ```
+
+Note: local is slower than Docker to Docker.
 
 #### Source-based Link Validation
 
