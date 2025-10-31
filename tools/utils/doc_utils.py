@@ -9,8 +9,21 @@ import re
 import sys
 from typing import Dict, List, Set, Tuple, Optional, Iterator
 from urllib.parse import urlparse, unquote
-from bs4 import BeautifulSoup
-from ruamel.yaml import YAML
+try:
+    from bs4 import BeautifulSoup
+except ImportError:  # pragma: no cover - optional dependency
+    BeautifulSoup = None
+
+try:
+    from ruamel.yaml import YAML
+except ImportError:  # pragma: no cover - optional dependency
+    YAML = None
+    try:
+        import yaml as pyyaml  # type: ignore
+    except ImportError:  # pragma: no cover - optional dependency
+        pyyaml = None
+else:
+    pyyaml = None
 
 
 class ImageReference:
@@ -205,6 +218,8 @@ class HTMLLinkExtractor:
     @staticmethod
     def extract_links(html_content: str) -> List[str]:
         """Extract all links from HTML content."""
+        if BeautifulSoup is None:
+            raise RuntimeError("BeautifulSoup is required for HTML link extraction; please install bs4.")
         soup = BeautifulSoup(html_content, 'html.parser')
         links = []
         for a_tag in soup.find_all('a', href=True):
@@ -700,6 +715,98 @@ class SummaryReporter:
                 print(f"  ... and {len(self.warnings_list) - 5} more")
         
         return self.failed == 0
+
+
+class FootnoteReference:
+    """Represents a markdown footnote reference or definition."""
+
+    def __init__(self, label: str, line_number: int, is_definition: bool, raw_text: str = ''):
+        self.label = label
+        self.line_number = line_number
+        self.is_definition = is_definition
+        self.raw_text = raw_text
+
+    def __repr__(self):
+        kind = "definition" if self.is_definition else "reference"
+        return f"FootnoteReference(label={self.label!r}, line={self.line_number}, {kind})"
+
+
+class FootnoteExtractor:
+    """Extract footnote references and definitions from markdown files."""
+
+    FOOTNOTE_REF_PATTERN = re.compile(r'\[\^(?P<label>[^\]]+)\]')
+    FOOTNOTE_DEF_PATTERN = re.compile(r'^\s*\[\^(?P<label>[^\]]+)\]:')
+    FENCE_PATTERN = re.compile(r'^\s*(`{3,}|~{3,})')
+
+    @staticmethod
+    def extract_footnotes(md_file: str,
+                          include_references: bool = True,
+                          include_definitions: bool = True) -> List[FootnoteReference]:
+        """
+        Extract footnote occurrences from a markdown file.
+
+        Args:
+            md_file: Path to the markdown file
+            include_references: Whether to include inline footnote references
+            include_definitions: Whether to include footnote definition blocks
+
+        Returns:
+            List of FootnoteReference instances
+        """
+        results: List[FootnoteReference] = []
+        fence_delimiter: Optional[str] = None
+
+        try:
+            with open(md_file, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+        except Exception as exc:
+            print(f"Warning: Could not read {md_file}: {exc}", file=sys.stderr)
+            return results
+
+        for idx, line in enumerate(lines, start=1):
+            stripped = line.rstrip('\n')
+
+            # Track fenced code blocks (``` or ~~~)
+            fence_match = FootnoteExtractor.FENCE_PATTERN.match(stripped)
+            if fence_match:
+                delimiter = fence_match.group(1)
+                if fence_delimiter is None:
+                    fence_delimiter = delimiter
+                elif stripped.strip().startswith(fence_delimiter):
+                    fence_delimiter = None
+                continue
+
+            if fence_delimiter is not None:
+                continue  # Skip content inside fenced code blocks
+
+            # Detect definitions
+            if include_definitions:
+                def_match = FootnoteExtractor.FOOTNOTE_DEF_PATTERN.match(stripped)
+                if def_match:
+                    label = def_match.group('label')
+                    results.append(
+                        FootnoteReference(
+                            label=label,
+                            line_number=idx,
+                            is_definition=True,
+                            raw_text=stripped
+                        )
+                    )
+                    continue  # Avoid double-counting definitions as references
+
+            if include_references:
+                for match in FootnoteExtractor.FOOTNOTE_REF_PATTERN.finditer(stripped):
+                    label = match.group('label')
+                    results.append(
+                        FootnoteReference(
+                            label=label,
+                            line_number=idx,
+                            is_definition=False,
+                            raw_text=stripped
+                        )
+                    )
+
+        return results
 
 
 class AdmonitionReference:
