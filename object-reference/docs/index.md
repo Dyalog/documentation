@@ -1,7 +1,5 @@
 # About This Document
 
-## Audience
+This document describes the complete set of objects, properties, events, and methods through which Dyalog supports the creation of a Graphical User Interface.
 
-## Conventions
-
-Unless explicitly stated otherwise, all examples in Dyalog documentation assume that `⎕IO` and `⎕ML` are both 1.
+This document should be read in conjunction with the [_Dyalog for Microsoft Windows Interfaces Guide_](../interface-guide/).

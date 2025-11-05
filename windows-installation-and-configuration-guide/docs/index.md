@@ -1,7 +1,5 @@
 # About This Document
 
-## Audience
+This document covers the installation procedure and configuration options for Dyalog on the Microsoft Windows operating system. It details the parameters that can be used to customise individual instances, the creation of executables and run-time applications, use of the command line, and the Dyalog Dynamic Link Library, as well as describing the recovery process if a system error is encountered.
 
-## Conventions
-
-Unless explicitly stated otherwise, all examples in Dyalog documentation assume that `⎕IO` and `⎕ML` are both 1.
+It is assumed that the reader has a basic knowledge of Microsoft Windows and software terminology; a working knowledge of Dyalog is useful but not essential.

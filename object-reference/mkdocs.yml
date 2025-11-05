@@ -45,6 +45,7 @@ markdown_extensions:
   - toc:
       title: On this page
 nav:
+  - index.md
   - GUI Overview:
       - GUI Overview: gui-overview/guioverview.md
       - Objects Categorised: gui-overview/objects-categorised.md

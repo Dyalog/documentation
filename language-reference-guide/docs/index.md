@@ -1,7 +1,5 @@
 # About This Document
 
-## Audience
+This document details the individual elements that form the 'vocabulary' of the APL language. It explains every primitive function, primitive operator, system function, system variable, and system command in Dyalog.
 
-## Conventions
-
-Unless explicitly stated otherwise, all examples in Dyalog documentation assume that `⎕IO` and `⎕ML` are both 1.
+It is assumed that the reader has a reasonable understanding of mathematics.
