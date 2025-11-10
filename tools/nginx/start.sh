@@ -1,6 +1,13 @@
 #!/bin/bash
 set -e
 
+# Copy source files from read-only mount to writable working directory
+echo "================================================================"
+echo "[$(date '+%H:%M:%S')] Copying source files from /docs-source to /docs..."
+echo "================================================================"
+rsync -a --exclude='.git' /docs-source/ /docs/
+echo "[$(date '+%H:%M:%S')] Source files copied"
+
 # Create the loading page
 create_loading_page() {
     local start_time="$2"

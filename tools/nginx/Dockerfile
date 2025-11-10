@@ -3,12 +3,14 @@
 
 FROM python:3.11-slim
 
+# Create working directory for builds (container-only)
 WORKDIR /docs
 
 # Install MkDocs, nginx, git, and required plugins
 RUN apt-get update && apt-get install -y --no-install-recommends \
     nginx \
     git \
+    rsync \
     && rm -rf /var/lib/apt/lists/* \
     && rm -f /etc/nginx/conf.d/default.conf
 
@@ -37,4 +39,6 @@ RUN chmod +x /start.sh
 EXPOSE 8080
 
 # Build site and start nginx on container start
+# Source will be mounted read-only at /docs-source at runtime
+# All builds happen in /docs (container-only)
 CMD ["/start.sh"]
