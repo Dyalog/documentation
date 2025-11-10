@@ -96,6 +96,28 @@ def normalize_url(url: str) -> str:
 
 def is_internal_link(url: str, base_url: str) -> bool:
     """Determine whether the URL points to the same site we are checking."""
+    # Parse both URLs to compare properly
+    from urllib.parse import urlparse
+    base_parsed = urlparse(base_url)
+    url_parsed = urlparse(url)
+
+    # Check if same scheme and netloc (domain)
+    if base_parsed.scheme != url_parsed.scheme or base_parsed.netloc != url_parsed.netloc:
+        return False
+
+    # For versioned docs, check if the URL is under the documentation path
+    # This catches links that escape the version directory (e.g., /20.0/)
+    # but are still internal to the documentation site
+    base_path_parts = [p for p in base_parsed.path.split('/') if p]
+    url_path_parts = [p for p in url_parsed.path.split('/') if p]
+
+    # If base has at least a documentation root, check the URL has it too
+    if base_path_parts and url_path_parts:
+        # Both should start with 'documentation' or similar root
+        if base_path_parts[0] == url_path_parts[0]:
+            return True
+
+    # Fall back to prefix match for simple cases
     return url.startswith(base_url)
 
 

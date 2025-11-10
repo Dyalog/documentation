@@ -44,12 +44,33 @@ create_loading_page() {
             margin: 20px 0;
         }
     </style>
+    <script>
+        // Check if the build is complete by trying to fetch /20.0/
+        function checkBuildStatus() {
+            fetch('/20.0/')
+                .then(response => {
+                    if (response.ok) {
+                        // Build is complete, redirect to /20.0/
+                        window.location.href = '/20.0/';
+                    }
+                })
+                .catch(() => {
+                    // Build not ready yet, keep waiting
+                });
+        }
+
+        // Check every 10 seconds
+        setInterval(checkBuildStatus, 10000);
+
+        // Also check immediately on load
+        checkBuildStatus();
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>Building Documentation</h1>
         <p>The documentation is being built. This might take up to 40 minutes.</p>
-        <p>This page will update automatically when the build is complete.</p>
+        <p>This page will automatically redirect when the build is complete.</p>
         <p><strong>Build started:</strong> ${start_time}</p>
         <p>To view the Docker logs:</p>
         <div class="command">docker logs -f dyalog-docs-nginx</div>
@@ -79,16 +100,41 @@ echo "[$(date '+%H:%M:%S')] Nginx started at http://localhost:8080 (loading page
 
 # Build into a staging directory (not the live site directory)
 echo "================================================================"
-echo "[$(date '+%H:%M:%S')] Starting MkDocs site build in staging area..."
+echo "[$(date '+%H:%M:%S')] Starting MkDocs site build with mike (version 20.0)..."
 echo "This will take 30-40 minutes for the full documentation set."
 echo "================================================================"
 
 START_TIME=$(date +%s)
 cd /docs
 
-# Build to a staging directory first
+# Initialize git if not already initialized (mike requires git)
+if [ ! -d .git ]; then
+    git init
+    git config user.name "Docker Build"
+    git config user.email "build@localhost"
+    # Make an initial commit so mike has something to work with
+    git add -A
+    git commit -m "Initial commit for mike" --allow-empty
+fi
+
+# Always set git config (in case .git already existed from mounted volume)
+git config user.name "Docker Build"
+git config user.email "build@localhost"
+
+# Build using mike EXACTLY as CI does, but WITHOUT --push to keep it local
+# This deploys to the local gh-pages branch inside the container only
+mike deploy 20.0
+
+# Mike builds to a gh-pages branch, extract it to serve via nginx
 rm -rf /docs/site-staging
-mkdocs build --clean --site-dir /docs/site-staging -q
+
+# Clean up any existing worktrees first
+git worktree prune
+
+# Use a simpler approach: checkout gh-pages directly to site-staging
+# This avoids the worktree issue with .git paths on macOS
+mkdir -p /docs/site-staging
+git --work-tree=/docs/site-staging checkout gh-pages -- .
 
 END_TIME=$(date +%s)
 ELAPSED=$((END_TIME - START_TIME))
