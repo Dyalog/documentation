@@ -49,7 +49,7 @@ The **format specification** consists of a series of control phrases, with adjac
 |`Km`|scales numeric values by `1Em` where m is an integer; negation may be indicated by `¯` or - preceding the number.|
 |`L`|left justifies the result in the field width.|
 |`Ov⍞t⍞`|replaces specific numeric value `v` with the text `t` .|
-|`S⍞p⍞`|substitutes standard characters.  p is a string of pairs of symbols enclosed between any of the Text Insertion delimiters.  The first of each pair is the standard symbol and the second is the symbol to be substituted.  Standard symbols are: `*` overflow fill character `.` decimal point `,` triad separator for `C` qualifier `0` fill character for `Z` qualifier `_` loss of precision character `¯` high minus symbol|
+|`S⍞p⍞`|substitutes standard characters. `p` is a string of pairs of symbols enclosed between any of the Text Insertion delimiters; the first of each pair is the standard symbol, and the second is the symbol to be substituted. Standard symbols are:<br>`*` overflow fill character<br>`.` decimal point<br>`,` triad separator for `C` qualifier<br>`0` fill character for `Z` qualifier<br>`_` loss of precision character<br>`¯` high minus symbol|
 |`Z`|fills unused leading positions in the result with zeros (and commas if `C` is also specified).|
 |`9`|digit selector|
 
