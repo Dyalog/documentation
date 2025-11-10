@@ -5,13 +5,15 @@ FROM python:3.11-slim
 
 WORKDIR /docs
 
-# Install MkDocs, nginx, and required plugins
+# Install MkDocs, nginx, git, and required plugins
 RUN apt-get update && apt-get install -y --no-install-recommends \
     nginx \
+    git \
     && rm -rf /var/lib/apt/lists/* \
     && rm -f /etc/nginx/conf.d/default.conf
 
 RUN pip install --no-cache-dir \
+    mike \
     mkdocs \
     mkdocs-material \
     mkdocs-monorepo-plugin \
@@ -21,7 +23,8 @@ RUN pip install --no-cache-dir \
     markdown-include \
     pymdown-extensions \
     mkdocs-git-revision-date-localized-plugin \
-    markdown-tables-extended
+    markdown-tables-extended \
+    mkdocs-site-urls
 
 # Copy nginx configuration
 COPY tools/nginx/nginx.conf /etc/nginx/nginx.conf
