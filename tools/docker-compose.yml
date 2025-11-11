@@ -35,11 +35,13 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ${DOCS_DIR}:/docs
-      - ${ASSETS_DIR}:/docs/docs/documentation-assets
+      # Mount source as READ-ONLY so container can't write to host
+      - ${DOCS_DIR}:/docs-source:ro
+      - ${ASSETS_DIR}:/docs-source/docs/documentation-assets:ro
     environment:
       - DOCS_DIR=${DOCS_DIR}
       - ASSETS_DIR=${ASSETS_DIR}
     # This service builds the site when started and serves it via nginx
-    # The site is built from the current state of the mounted docs directory
+    # Source is mounted read-only at /docs-source
+    # All git operations and builds happen in /docs (inside container only)
     # Access at http://localhost:8080
