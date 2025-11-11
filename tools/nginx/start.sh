@@ -5,7 +5,7 @@ set -e
 echo "================================================================"
 echo "[$(date '+%H:%M:%S')] Copying source files from /docs-source to /docs..."
 echo "================================================================"
-rsync -a --exclude='.git' /docs-source/ /docs/
+rsync -a --exclude='.git' --exclude='site' --exclude='20.0' --exclude='latest' --exclude='versions.json' /docs-source/ /docs/
 echo "[$(date '+%H:%M:%S')] Source files copied"
 
 # Create the loading page
@@ -87,25 +87,7 @@ create_loading_page() {
 EOF
 }
 
-# Always start nginx with a loading page
-echo "================================================================"
-echo "[$(date '+%H:%M:%S')] Starting nginx with loading page"
-echo "================================================================"
-
-# Create directory for serving
-mkdir -p /docs/site
-
-# Get the current time for the loading page
-START_TIMESTAMP="$(date '+%Y-%m-%d %H:%M:%S')"
-
-# Create the loading page
-create_loading_page /docs/site/index.html "$START_TIMESTAMP"
-
-# Start nginx
-nginx
-echo "[$(date '+%H:%M:%S')] Nginx started at http://localhost:8080 (loading page)"
-
-# Build into a staging directory (not the live site directory)
+# Build first, THEN start nginx (so mike doesn't conflict with site directory)
 echo "================================================================"
 echo "[$(date '+%H:%M:%S')] Starting MkDocs site build with mike (version 20.0)..."
 echo "This will take 30-40 minutes for the full documentation set."
@@ -128,20 +110,14 @@ fi
 git config user.name "Docker Build"
 git config user.email "build@localhost"
 
-# Build using mike EXACTLY as CI does, but WITHOUT --push to keep it local
-# This deploys to the local gh-pages branch inside the container only
+# Create the site directory that mike expects
+mkdir -p /docs/site
+echo "[$(date '+%H:%M:%S')] Created /docs/site directory"
+ls -la /docs/site
+
+# Build using mike - it will create the gh-pages branch
+echo "[$(date '+%H:%M:%S')] Starting mike deploy..."
 mike deploy 20.0
-
-# Mike builds to a gh-pages branch, extract it to serve via nginx
-rm -rf /docs/site-staging
-
-# Clean up any existing worktrees first
-git worktree prune
-
-# Use a simpler approach: checkout gh-pages directly to site-staging
-# This avoids the worktree issue with .git paths on macOS
-mkdir -p /docs/site-staging
-git --work-tree=/docs/site-staging checkout gh-pages -- .
 
 END_TIME=$(date +%s)
 ELAPSED=$((END_TIME - START_TIME))
@@ -151,20 +127,21 @@ echo "================================================================"
 echo "[$(date '+%H:%M:%S')] Build complete in ${ELAPSED} seconds!"
 echo "================================================================"
 
-# Atomic switch: move the old site out, move the new site in
-echo "[$(date '+%H:%M:%S')] Performing atomic switch to new documentation..."
+# Mike built to /docs/site but that's just the flat structure
+# We need to replace it with the gh-pages content (which has the version structure)
+echo "[$(date '+%H:%M:%S')] Extracting gh-pages content for serving..."
+rm -rf /docs/site
+mkdir -p /docs/site
 
-# Backup the loading page (in case we need to revert)
-mv /docs/site /docs/site-old
+# Export the gh-pages branch content (which has 20.0/ directory structure)
+git archive gh-pages | tar -x -C /docs/site
 
-# Move the completed build to the live directory
-mv /docs/site-staging /docs/site
+echo "[$(date '+%H:%M:%S')] Documentation prepared"
+ls -la /docs/site/
 
-# Clean up the old loading page
-rm -rf /docs/site-old
-
-# Reload nginx to ensure it picks up any new files
-nginx -s reload
+# Start nginx now that the site is ready
+echo "[$(date '+%H:%M:%S')] Starting nginx..."
+nginx
 
 echo "================================================================"
 echo "[$(date '+%H:%M:%S')] Documentation is now live at http://localhost:8080"
