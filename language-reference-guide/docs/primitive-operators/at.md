@@ -155,7 +155,6 @@ Replace odd items of `⍳5` with themselves reversed:
 ```apl
       ⌽@(2∘|)⍳5
 5 2 3 4 1
-
 ```
 
 [^1]: Note that the expression does not require parentheses because without them, the array 2 4 binds anyway to the @ operator rather than to the ⍳ function.
