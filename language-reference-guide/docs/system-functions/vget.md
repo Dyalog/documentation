@@ -39,7 +39,7 @@ Names are specified as rows in a character matrix.
 * a character matrix, where each row is a name.
 * a two element vector, where the first item is a character matrix of names and the second item is a specification of fallback values.
 
-The fallback values must one of the following:
+The fallback values must be one of the following:
 
 * a vector with as many elements as there are names in the matrix.
 * a scalar value that is the fallback value for all names.
@@ -63,7 +63,7 @@ longer_name
  1 2 3  #.[Namespace]  APL  42
 ```
 
-Multiple names with different fallback for each name:
+Multiple names with a different fallback for each name:
 
 ```apl
       name2←100
@@ -157,7 +157,7 @@ Multiple names with fallback for some:
 1 123 3
 ```
 
-Multiple names with different fallback for each of them:
+Multiple names with a different fallback for each of them:
 ```apl
       name2←100
       ⎕VGET ('name1' 1) ('name2' 2) ('name3' 3)
