@@ -48,6 +48,7 @@ markdown_extensions:
   - toc:
       title: On this page
 nav:
+  - index.md
   - Key to Notation: key-to-notation.md
   - Glyphs: glyphs.md
   - Primitive Functions:

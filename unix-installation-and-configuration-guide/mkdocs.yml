@@ -45,6 +45,7 @@ markdown_extensions:
   - toc:
       title: On this page
 nav:
+  - index.md
   - Introduction: introduction.md
   - Installing Dyalog APL: installation.md
   - Dyalog Serial Number: dyalog-serial-number.md

@@ -46,6 +46,7 @@ markdown_extensions:
       title: On this page
 nav:
   - Dyalog v19.0 Release Notes:
+    - release-notes-v19-0/index.md
     - Introduction:
         - Key Features: release-notes-v19-0/introduction/key-features.md
         - Extension to Native File Functions: release-notes-v19-0/introduction/extension-to-native-file-functions.md

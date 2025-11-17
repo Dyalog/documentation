@@ -46,6 +46,7 @@ markdown_extensions:
   - toc:
       title: On this page
 nav:
+  - index.md
   - Introduction:
       - Overview: introduction/overview.md
       - Concepts: introduction/concepts.md
