@@ -24,7 +24,10 @@ Replace the 2nd and 4th items of `⍳5`:
 ```apl
       (10 20@2 4)⍳5
 1 10 3 20 5
+```
 
+Note that in the previous example, no parentheses are required as the array `2 4` binds to the @ operator rather than the ⍳ function as operator-array binding is stronger than function-array binding.
+```
       10 20@2 4⍳5
 1 10 3 20 5
 ```
