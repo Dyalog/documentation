@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2
+---
+
 <div style="display: none;">
   ← gets
 </div>

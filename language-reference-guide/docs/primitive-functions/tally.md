@@ -1,5 +1,9 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  ≢
+  ≢ tally
 </div>
 
 <h1 class="heading"><span class="name">Tally</span> <span class="command">R←≢Y</span></h1>

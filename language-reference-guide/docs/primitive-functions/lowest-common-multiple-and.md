@@ -1,10 +1,10 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  ^
+  ^ lcm and
 </div>
-
-
-
-
 
 <h1 class="heading"><span class="name">Lowest Common Multiple/AND</span> <span class="command">R←X∧Y</span></h1>
 

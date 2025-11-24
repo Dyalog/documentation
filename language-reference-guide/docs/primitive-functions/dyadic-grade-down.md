@@ -1,5 +1,9 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  ⍒
+  ⍒ grade
 </div>
 
 <h1 class="heading"><span class="name">Dyadic Grade Down</span> <span class="command">R←X⍒Y</span></h1>

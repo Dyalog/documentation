@@ -1,5 +1,10 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
   ∘
+  bind
 </div>
 
 

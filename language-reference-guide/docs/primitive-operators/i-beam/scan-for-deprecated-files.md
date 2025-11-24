@@ -1,3 +1,7 @@
+---
+search:
+  boost: 2
+---
 <h1 class="heading"><span class="name">Scan For Deprecated Files</span> <span class="command">R←{X}(3535⌶)Y</span></h1>
 
 Scans a directory (and, optionally, sub-directories) for deprecated filetypes. For an overview of deprecated features, see [Deprecated functionality](../../../../programming-reference-guide/deprecated-functionality) in the _Dyalog Programming Reference Guide_.

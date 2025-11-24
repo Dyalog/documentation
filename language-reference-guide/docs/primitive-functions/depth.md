@@ -1,5 +1,9 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  ≡
+  ≡ depth
 </div>
 
 <h1 class="heading"><span class="name">Depth</span> <span class="command">(⎕ML) R←≡Y</span></h1>

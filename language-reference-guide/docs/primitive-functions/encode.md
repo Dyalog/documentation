@@ -1,11 +1,10 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  ⊤
+  ⊤ encode
 </div>
-
-
-
-
-
 
 <h1 class="heading"><span class="name">Encode</span> <span class="command">R←X⊤Y</span></h1>
 

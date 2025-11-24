@@ -1,6 +1,9 @@
+---
+search:
+  exclude: true
+---
+
 <h1 class="heading"><span class="name">Objects Categorised</span></h1>
-
-
 
 [Objects: A-Z](objects-a-z.md)
 

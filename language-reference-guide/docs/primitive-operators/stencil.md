@@ -1,5 +1,10 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
   ⌺
+  stencil
 </div>
 
 <h1 class="heading"><span class="name">Stencil</span> <span class="command">R←(f⌺g)Y</span></h1>

@@ -1,5 +1,10 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
   ⌸
+  key
 </div>
 
 <h1 class="heading"><span class="name">Key</span> <span class="command">R←{X}f⌸Y</span></h1>

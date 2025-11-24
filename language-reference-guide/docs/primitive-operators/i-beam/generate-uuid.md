@@ -1,3 +1,7 @@
+---
+search:
+  boost: 2
+---
 <h1 class="heading"><span class="name">Generate UUID</span> <span class="command">R←120⌶Y</span></h1>
 
 This function generates a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) (Universally Unique IDentifier) according to the [RFC 9562](https://datatracker.ietf.org/doc/html/rfc9562) specification.

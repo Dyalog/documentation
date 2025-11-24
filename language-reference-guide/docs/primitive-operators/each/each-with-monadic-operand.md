@@ -1,15 +1,13 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
   ¨
+  each
 </div>
 
-
-
-
-
-
 <h1 class="heading"><span class="name">Each (with Monadic Operand)</span> <span class="command">{R}←f¨Y</span></h1>
-
-
 
 `f` may be any monadic function.  `Y` may be any array, each of whose items are separately appropriate to function `f`.
 

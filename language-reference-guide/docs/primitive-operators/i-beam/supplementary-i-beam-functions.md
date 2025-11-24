@@ -1,3 +1,7 @@
+---
+search:
+  boost: 2
+---
 <h1 class="heading"><span class="name">Other I-Beams</span></h1>
 
 Dyalog APL includes a number of I-Beams which exist in order to support experimental features or features which are documented elsewhere.

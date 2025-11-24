@@ -1,14 +1,5 @@
-<div style="display: none;">
-  ←
-</div>
-
-
-
-
-
 
 <h1 class="heading"><span class="name">Axis (with Dyadic Operand)</span> <span class="command">R←Xf[B]Y</span></h1>
-
 
 
 `f` must be a dyadic primitive scalar function, or a dyadic primitive mixed function taken from [](#DyadicMixed) below. `B` must be a numeric scalar or vector. `X` and `Y` may be any arrays whose items are appropriate to function `f`. Axis does not follow the normal syntax of an operator.

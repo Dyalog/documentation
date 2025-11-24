@@ -1,14 +1,5 @@
-<div style="display: none;">
-  ←
-</div>
-
-
-
-
-
 
 <h1 class="heading"><span class="name">Axis (with Monadic Operand)</span> <span class="command">R←f[B]Y</span></h1>
-
 
 
 `f` must be a monadic primitive mixed function taken from those shown in [](#MonadicMixed) below, or a function derived from the operators Reduction (`/`) or Scan (`\`). `B` must be a numeric scalar or vector. `Y` may be any array whose items are appropriate to function `f`. Axis does not follow the normal syntax of an operator.

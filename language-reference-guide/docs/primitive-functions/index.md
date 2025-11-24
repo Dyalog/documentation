@@ -1,3 +1,7 @@
+---
+search:
+  exclude: true
+---
 <h1 class="heading"><span class="name">Primitive Functions</span></h1>
 
 |Glyph|Glyph Name|Monadic Function|Dyadic Function|

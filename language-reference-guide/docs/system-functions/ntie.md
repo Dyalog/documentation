@@ -1,35 +1,27 @@
+---
+search:
+  boost: 2
+---
+
 <!-- Hidden search keywords -->
+
 <div style="display: none;">
   ⎕NTIE NTIE
 </div>
 
-
-
-
-
-
 <h1 class="heading"><span class="name">Native File Tie</span> <span class="command">{R}←X ⎕NTIE Y</span></h1>
-
-
 
 `⎕NTIE` opens a native file.
 
-
 `X` is a simple character vector or scalar containing a valid pathname for an existing native file.
-
 
 `Y` is a 1- or 2-element vector.
 
-
 `Y[1]` is a negative integer value that specifies an (unused) tie number by which the file may subsequently be referred.
-
-
 
 `Y[2]` is optional and specifies the mode in which the file is to be opened.  This is an integer value calculated as the sum of 2 codes.  The first code refers to the type of access needed from users who have already tied the native file.  The second code refers to the type of access you wish to grant to users who subsequently try to open the file while you have it open.
 
-
 If `Y[2]` is omitted, the system tries to open the file with the default value of 66 (read and write access for this process and for any subsequent processes that attempt to access the file). If this fails, the system attempts to open the file with the value 64 (read access for this process, read and write for subsequent processes).
-
 
 |Needed from existing users                     ||Granted to subsequent users                     ||
 |--------------------------|---------------------|---------------------------|---------------------|
@@ -42,14 +34,11 @@ If `Y[2]` is omitted, the system tries to open the file with the default value o
 
 On UNIX systems, the second column has no meaning and only the first code (`16|mode`) is passed to the `open(2)` call as the access parameter. See include file `fcntl.h` for details. See also [Native File Lock](nlock.md) which is not platform dependent.
 
-
 `R` is the tie number by which the file may subsequently be referred. If `Y[1]` is a negative integer, then `R` is a shy result; if `Y[1]` is 0, `R` is an explicit result.
 
 ## Automatic Tie Number Allocation
 
-
 A tie number of 0 as argument to a create or tie operation, allocates, and returns as an explicit result, the first (closest to zero) available tie number. This allows you to simplify code. For example:
-
 
 from:
 ```apl

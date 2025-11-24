@@ -1,5 +1,9 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  ⊃
+  ⊃ mix
 </div>
 
 <h1 class="heading"><span class="name">Mix</span> <span class="command">(⎕ML) R←↑[K]Y or R←⊃[K]Y</span></h1>

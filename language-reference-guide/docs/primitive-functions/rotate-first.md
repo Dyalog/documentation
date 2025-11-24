@@ -1,5 +1,9 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  ⊖
+  ⊖ rotate
 </div>
 
 <h1 class="heading"><span class="name">Rotate First</span> <span class="command">R←X⊖[K]Y</span></h1>

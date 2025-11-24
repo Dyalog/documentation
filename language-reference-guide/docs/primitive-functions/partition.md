@@ -1,3 +1,11 @@
+---
+search:
+  boost: 2
+---
+
+<div style="display: none;">
+   ⊆ partition
+
 <h1 class="heading"><span class="name">Partition</span> <span class="command">R←X⊆[K]Y</span></h1>
 
 !!! note "Classic Edition"

@@ -1,27 +1,21 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  ↓
+  ↓ drop
 </div>
-
-
-
-
-
 
 <h1 class="heading"><span class="name">Drop</span> <span class="command">R←X↓Y</span></h1>
 
-
-
 `Y` may be any array.  `X` must be a simple scalar or vector of integers. If `X` is a scalar, it is treated as a one-element vector.  If `Y` is a scalar, it is treated as an array whose shape is `(⍴X)⍴1`. After any scalar extensions, the shape of `X` must be less than or equal to the rank of `Y`. Any missing trailing items in `X` default to 0.
-
 
 `R` is an array with the same rank as `Y` but with elements removed from the vectors along each of the axes of `Y`. For the `I`th axis:
 
 - if `X[I]` is positive, all but the first `X[I]` elements of the vectors result
 - if `X[I]` is negative, all but the last `X[I]` elements of the vectors result
 
-
 If the magnitude of `X[I]` exceeds the length of the `I`th axis, the result is an empty array with zero length along that axis.
-
 
 <h2 class="example">Examples</h2>
 ```apl

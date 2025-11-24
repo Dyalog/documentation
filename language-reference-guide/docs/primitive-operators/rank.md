@@ -1,5 +1,10 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
   ⍤
+  rank
 </div>
 
 <h1 class="heading"><span class="name">Rank</span> <span class="command">R←{X}(f⍤B)Y</span></h1>

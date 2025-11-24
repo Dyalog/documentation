@@ -1,3 +1,7 @@
+---
+search:
+  exclude: true
+---
 <h1 class="heading"><span class="name">Primitive Functions (by Category)</span></h1>
 
 The primitive functions can be grouped together into categories that exhibit common behaviours or goals. Functions can be in multiple categories.

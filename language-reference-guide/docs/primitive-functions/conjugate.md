@@ -1,15 +1,13 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  +
+  + conjugate
 </div>
 
 
-
-
-
-
 <h1 class="heading"><span class="name">Conjugate</span> <span class="command">R←+Y</span></h1>
-
-
 
 If `Y` is complex, `R` is `Y` with the imaginary part of all elements negated.
 

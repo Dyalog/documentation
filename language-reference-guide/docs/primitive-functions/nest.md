@@ -1,11 +1,10 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  ⊆
+  ⊆ nest
 </div>
-
-
-
-
-
 
 <h1 class="heading"><span class="name">Nest</span> <span class="command">R←⊆Y</span></h1>
 

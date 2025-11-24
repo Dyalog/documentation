@@ -1,11 +1,10 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  ○
+  ○ circular
 </div>
-
-
-
-
-
 
 <h1 class="heading"><span class="name">Circular Functions</span> <span class="command">R←X○Y</span></h1>
 

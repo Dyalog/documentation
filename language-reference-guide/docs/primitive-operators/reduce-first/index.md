@@ -1,5 +1,10 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
   ⌿
+  reduce
 </div>
 
 <h1 class="heading"><span class="name">Reduce First</span> <span class="command">R←f⌿Y</span></h1>

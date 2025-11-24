@@ -1,5 +1,9 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  -
+  - negate
 </div>
 
 <h1 id="negative" class="heading"><span class="name">Negate</span> <span class="command">R←-Y</span></h1>
