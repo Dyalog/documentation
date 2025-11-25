@@ -1,6 +1,9 @@
+---
+search:
+  exclude: true
+---
+
 <h1 class="heading"><span class="name">Methods A-Z</span></h1>
-
-
 
 |Method|Num|Description|
 |---|---|---|

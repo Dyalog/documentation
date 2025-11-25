@@ -1,10 +1,10 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  ⊣
+  ⊣ tack left
 </div>
-
-
-
-
 
 
 <h1 class="heading"><span class="name">Left</span> <span class="command">R←X⊣Y</span></h1>

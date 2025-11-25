@@ -1,3 +1,7 @@
+---
+search:
+  boost: 2
+---
 <h1 class="heading"><span class="name">Log File for Deprecations</span> <span class="command">{R}←{X} 109⌶Y</span></h1>
 
 Manages the file used to log the use of deprecated features. For an overview of deprecated features and this I-beam's role in identifying them within your code, see [Deprecated functionality](../../../../programming-reference-guide/deprecated-functionality).

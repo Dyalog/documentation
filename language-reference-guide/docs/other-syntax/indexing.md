@@ -1,6 +1,7 @@
-<div style="display: none;">
-  ←
-</div>
+---
+search:
+  boost: 2
+---
 
 <h1 class="heading"><span class="name">Indexing</span> <span class="command">R←X[Y]</span></h1>
 

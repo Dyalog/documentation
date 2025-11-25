@@ -1,3 +1,7 @@
+---
+search:
+  boost: 2
+---
 <h1 class="heading"><span class="name">Constants</span></h1>
 
 |Name   |Description                     |

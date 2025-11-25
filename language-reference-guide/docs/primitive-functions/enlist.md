@@ -1,5 +1,9 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  ∊
+  ∊ enlist
 </div>
 
 <h1 class="heading"><span class="name">Enlist</span> <span class="command">(⎕ML≥1) R←∊Y</span></h1>

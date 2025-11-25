@@ -1,3 +1,7 @@
+---
+search:
+  boost: 2
+---
 <!-- Hidden search keywords -->
 <div style="display: none;">
   ⎕RL RL

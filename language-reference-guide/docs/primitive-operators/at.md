@@ -1,5 +1,9 @@
+---
+search:
+  boost: 99
+---
 <div style="display: none;">
-  @
+  at @
 </div>
 
 <h1 class="heading"><span class="name">At</span> <span class="command">R←{X}(f@g)Y</span></h1>

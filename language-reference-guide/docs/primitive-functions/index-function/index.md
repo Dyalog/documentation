@@ -1,5 +1,9 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  ⌷
+  ⌷ index squad
 </div>
 
 <h1 class="heading"><span class="name">Index</span> <span class="command">R←X⌷Y</span></h1>

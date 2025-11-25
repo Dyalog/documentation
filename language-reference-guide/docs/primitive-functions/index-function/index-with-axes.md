@@ -1,5 +1,9 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  ⌷
+  ⌷ index squad
 </div>
 
 

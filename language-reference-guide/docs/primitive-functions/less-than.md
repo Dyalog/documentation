@@ -1,5 +1,9 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  <
+  < less
 </div>
 
 <h1 class="heading"><span class="name">Less Than</span> <span class="command">R←X&lt;Y</span></h1>

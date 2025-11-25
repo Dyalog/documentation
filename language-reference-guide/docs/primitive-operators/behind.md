@@ -1,5 +1,10 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
   ⍛
+  behind
 </div>
 
 <h1 class="heading"><span class="name">Behind</span> <span class="command">{R}←{X}f⍛gY</span></h1>

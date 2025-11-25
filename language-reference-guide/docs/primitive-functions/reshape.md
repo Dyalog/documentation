@@ -1,11 +1,10 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  ⍴
+  ⍴ rho reshape
 </div>
-
-
-
-
-
 
 <h1 class="heading"><span class="name">Reshape</span> <span class="command">R←X⍴Y</span></h1>
 

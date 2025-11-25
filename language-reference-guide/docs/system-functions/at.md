@@ -1,6 +1,10 @@
+---
+search:
+  boost: 2
+---
 <!-- Hidden search keywords -->
 <div style="display: none;">
-  ⎕AT AT
+  ⎕AT
 </div>
 
 <h1 class="heading"><span class="name">Attributes</span> <span class="command">R←{X} ⎕AT Y</span></h1>

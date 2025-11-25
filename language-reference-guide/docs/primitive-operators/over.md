@@ -1,5 +1,10 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
   ⍥
+  over
 </div>
 
 <h1 class="heading"><span class="name">Over</span> <span class="command">{R}←{X}f⍥gY</span></h1>

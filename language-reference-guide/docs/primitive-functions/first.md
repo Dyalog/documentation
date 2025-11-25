@@ -1,11 +1,10 @@
+---
+search:
+  boost: 2
+---
 <div style="display: none;">
-  ↑
+  ↑ first
 </div>
-
-
-
-
-
 
 <h1 class="heading"><span class="name">First</span> <span class="command">(⎕ML) R←⊃Y or R←↑Y</span></h1>
 
