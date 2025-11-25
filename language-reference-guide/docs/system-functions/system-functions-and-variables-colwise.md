@@ -1,6 +1,6 @@
 ---
 search:
-  boost: 2
+  exclude: true
 ---
 <h1 class="heading"><span class="name">System Functions and Variables (A-Z)</span></h1>
 
