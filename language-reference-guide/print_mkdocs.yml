@@ -280,7 +280,6 @@ nav:
           - Zilde: other-syntax/zilde.md
   - System Functions and Variables:
       - Introduction: system-functions/index.md
-      - System Functions: system-functions/system-functions-and-variables-print.md
       - System Functions Categorised: system-functions/system-functions-by-category.md
       - System Functions (A-Z):
           - Character Input Output: system-functions/character-input-output.md
