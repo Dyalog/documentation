@@ -5,7 +5,7 @@
 **Description**
 
 
-This property specifies how an object responds to its parent being resized. It is a 4-element vector of character vectors which defines how each of the four edges of the object moves in response to a resize request made by the parent. Note that this property is only effective if the value of [AutoConf](autoconf.md) on the parent is 2 or 3 and [AutoConf](autoconf.md) for the object itself is 1 or 3.
+This property specifies how an object responds to its parent being resized by the user (but not by altering the [Size](size.md) property). It is a 4-element vector of character vectors which defines how each of the four edges of the object moves in response to a resize request made by the parent. Note that this property is only effective if the value of [AutoConf](autoconf.md) on the parent is 2 or 3 and [AutoConf](autoconf.md) for the object itself is 1 or 3.
 
 
 
