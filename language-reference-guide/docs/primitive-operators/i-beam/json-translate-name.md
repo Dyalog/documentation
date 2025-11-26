@@ -45,19 +45,13 @@ When `X` is 1, `R` is the name in `Y` which, if mangled, is converted back to th
       1(7162⌶)'⍙2a'
 2a
 ```
+Note that the algorithm can be applied, even when mangling is not required. So:
 ```apl
       0(7162⌶)'foo'
 foo
       1(7162⌶)'foo'
 foo
 
-```
-
-
-Note that the algorithm can be applied, even when mangling is not required. So:
-```apl
-      1(7162⌶)'⍙97'
-a
 ```
 
 
