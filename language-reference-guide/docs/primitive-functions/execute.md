@@ -33,7 +33,7 @@ If the expression is an empty vector or a vector containing only blanks or one t
 
 
 
-If `Y` contains a branch expression, the branch is effected in the environment from which the Execute was invoked, and `⍎Y` does not return.
+If `Y` contains a branch expression, the branch is effected in the environment from which _execute_ was invoked, and `⍎Y` does not return.
 
 
 <h2 class="example">Examples</h2>

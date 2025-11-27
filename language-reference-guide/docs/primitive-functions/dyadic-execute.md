@@ -27,7 +27,7 @@ search:
 `Y` must be a simple character scalar or vector containing an APL expression to be executed. The expression may contain one or more sub-expressions separated by `⋄` (Diamond) characters.
 
 
-`X` must be a namespace reference or a simple character scalar or vector representing the name of a namespace in which the expression is to be executed. If `X` is omitted or is an empty character vector, the expression is executed in the current space.
+`X` must be a namespace reference or a simple character scalar or vector representing the name of a namespace in which the expression is to be executed. If `X` is an empty character vector, the expression is executed in the current space.
 
 
 If the result of the expression is used or is assigned to a name,  `R` is the result (if any) of the last-executed sub-expression and the non-shy results of all preceding expressions (that are not assigned within the expression) are displayed. Otherwise the unassigned non-shy results of all of the sub-expressions are displayed.
@@ -36,7 +36,7 @@ If the result of the expression is used or is assigned to a name,  `R` is the re
 If the expression is an empty vector or a vector containing only blanks or one that does not produce a result, then `X⍎Y` has no value and using or assigning it to a name will generate `VALUE ERROR`.
 
 
-If `Y` contains a branch expression, the branch is effected in the environment from which the Dyadic Execute was invoked, and `X⍎Y` does not return.
+If `Y` contains a branch expression, the branch is effected in the environment from which the _dyadic execute_ was invoked, and `X⍎Y` does not return.
 
 
 <h2 class="example">Examples</h2>
@@ -58,7 +58,7 @@ Using a reference:
 ```
 
 !!! Hint "Hints and Recommendations"
-    It is faster and safer to do the above as follows:
+    It is faster and (potentially) safer to use system functions instead of _dyadic execute_ in the above examples as follows:
     
     Using a named namespace:
     ```apl
