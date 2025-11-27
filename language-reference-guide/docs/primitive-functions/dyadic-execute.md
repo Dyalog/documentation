@@ -59,7 +59,7 @@ Using a reference:
 ```
 
 !!! Hint "Hints and Recommendations"
-    It is faster and safer to do the above as follows:
+    It is faster and (potentially) safer to use system functions instead of _dyadic execute_ in the above examples as follows:
     
     Using a named namespace:
     ```apl
