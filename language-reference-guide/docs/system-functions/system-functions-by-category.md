@@ -12,7 +12,7 @@ The dyadic operator `⎕OPT` is unique in that it modifies the behaviour of othe
 
 ### Session Information and Management
 
-These provide information on or control the execution environment.
+These provide information on, or control, the execution environment.
 
 |Name                   |Description                |Syntax|
 |-----------------------|---------------------------|----|
