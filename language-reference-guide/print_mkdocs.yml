@@ -66,6 +66,7 @@ nav:
           - Drop:
               - Drop: primitive-functions/drop/index.md
               - Drop with Axes: primitive-functions/drop/drop-with-axes.md
+          - Dyadic Execute: primitive-functions/dyadic-execute.md
           - Dyadic Grade Down: primitive-functions/dyadic-grade-down.md
           - Dyadic Grade Up: primitive-functions/dyadic-grade-up.md
           - Dyadic Transpose: primitive-functions/dyadic-transpose.md
