@@ -125,6 +125,7 @@ Dyalog includes a collection of built-in facilities that provide various service
 |[`⎕NUNTIE`](nuntie.md)  |Untie Files                                                  |Monadic function|
 |[`⎕NXLATE`](nxlate.md)  |Specify Translation Table |Ambivalent function|
 |[`⎕OFF`](off.md)    |End the session            |Constant|
+|[`⎕OPT`](or.md)     |Variant            |Dyadic operator|
 |[`⎕OR`](or.md)     |Object Representation   |Monadic function|
 |[`⎕PATH`](path.md)  |Search Path            |Variable|
 |[`⎕PFKEY`](pfkey.md)|Programmable Function Keys    |Ambivalent function|
