@@ -13,16 +13,15 @@ search:
 
 <h1 class="heading"><span class="name">Dyadic Execute</span> <span class="command">R←X⍎Y</span></h1>
 
-!!! Warning
-	If the right argument to Dyadic Execute could include user input, then this might put data and systems at risk.
-	To reduce the risk of this, a system function might be more appropriate than the Dyadic Execute function:
+!!! Warning "Warning"
+    If the right argument to _dyadic execute_ could include user input, then there is a risk to data and systems. To reduce this risk, a system function might be more appropriate than the _dyadic execute_ function. For example:
 
-	* To get or set the value of one or more variables named within one or more character vectors, consider using [`⎕VGET`](../system-functions/vget.md) or [`⎕VSET`](../system-functions/vset.md).
-	* To make numbers in text form into actual numbers, consider using [`⎕VFI`](../system-functions/vfi.md), [`⎕JSON`](../system-functions/json.md), or [`⎕CSV`](../system-functions/csv.md).
-    * To call a function by name, in the namespace with the reference `nsRef`:
-      * Niladic: `nsRef.⎕OR fnName nsRef.{⍺⍺})⍬`
-      * Monadic: `nsRef.⎕OR fnName nsRef.{⍺⍺ ⍵})Y`
-      * Dyadic: `X nsRef.⎕OR fnName nsRef.{⍺ ⍺⍺ ⍵})Y`
+	* use [`⎕VGET`](../system-functions/vget.md) or [`⎕VSET`](../system-functions/vset.md to get or set the value of one or more variables named within one or more character vectors.
+	* use [`⎕VFI`](../system-functions/vfi.md), [`⎕JSON`](../system-functions/json.md), or [`⎕CSV`](../system-functions/csv.md) to make numbers in text form into actual numbers.
+    * use [`⎕OR`](../system-functions/or.md) to call a function by name; exact usage depends on valency. For example, in the namespace with the reference `nsRef`:
+      * niladic – `(nsRef.⎕OR fnName)nsRef.{⍺⍺})⍬`
+      * monadic – `(nsRef.⎕OR fnName)nsRef.{⍺⍺ ⍵}Y`
+      * dyadic – `X((nsRef.⎕OR fnName)nsRef.{⍺ ⍺⍺ ⍵})Y`
       A namespace name can be resolved to a reference with `nsRef←⎕VGET nsName`.
 
 `Y` must be a simple character scalar or vector containing an APL expression to be executed. The expression may contain one or more sub-expressions separated by `⋄` (Diamond) characters.

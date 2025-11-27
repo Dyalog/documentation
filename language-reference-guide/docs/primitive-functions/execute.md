@@ -13,16 +13,15 @@ search:
 
 <h1 class="heading"><span class="name">Execute</span> <span class="command">R←⍎Y</span></h1>
 
-!!! Warning
-	If the argument to Execute could include user input, then this might put data and systems at risk.
-	To reduce the risk of this, a system function might be more appropriate than the Execute function:
+!!! Warning "Warning"
+    If the argument to _execute_ could include user input, then there is a risk to data and systems. To reduce this risk, a system function might be more appropriate than the _execute_ function. For example:
 
-	* To get or set the value of one or more variables named within one or more character vectors, consider using [`⎕VGET`](../system-functions/vget.md) or [`⎕VSET`](../system-functions/vset.md).
-	* To make numbers in text form into actual numbers, consider using [`⎕VFI`](../system-functions/vfi.md), [`⎕JSON`](../system-functions/json.md), or [`⎕CSV`](../system-functions/csv.md).
-    * To call a function by name:
-        * Niladic: `(⎕OR fnName){⍺⍺}⍬`
-        * Monadic: `(⎕OR fnName){⍺⍺ ⍵}Y`
-        * Dyadic: `X((⎕OR fnName){⍺ ⍺⍺ ⍵})Y`
+	* use [`⎕VGET`](../system-functions/vget.md) or [`⎕VSET`](../system-functions/vset.md to get or set the value of one or more variables named within one or more character vectors.
+	* use [`⎕VFI`](../system-functions/vfi.md), [`⎕JSON`](../system-functions/json.md), or [`⎕CSV`](../system-functions/csv.md) to make numbers in text form into actual numbers.
+    * use [`⎕OR`](../system-functions/or.md) to call a function by name; exact usage depends on valency. For example:
+      * niladic – `(⎕OR fnName){⍺⍺}`
+      * monadic – `(⎕OR fnName){⍺⍺ ⍵}YY`
+      * dyadic – `X((⎕OR fnName){⍺ ⍺⍺ ⍵})Y`
 
 `Y` must be a simple character scalar or vector containing an APL expression to be executed. The expression may contain one or more sub-expressions separated by `⋄` (Diamond) characters.
 
