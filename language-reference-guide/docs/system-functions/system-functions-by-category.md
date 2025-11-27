@@ -26,7 +26,7 @@ These provide information on, or control, the execution environment.
 
 ### Workspace
 
-These provide information and control the current workspace and its contents.
+These provide information on, and control, the current workspace and its contents.
 
 |Name     |Description              |Syntax|
 |---------|-------------------------|-----|
