@@ -29,7 +29,7 @@ The result `R` is the full name (starting `#.`) of the space in which the functi
 
 
 
-`⎕CS` changes the space in which the current function or operator is running to the namespace `Y` and returns the original space, in which the function was previously running, as a shy result.  **After the** `⎕CS`, references to *global* names (with the exception of those specified in `X`) are taken to be references to *global* names in `Y`.  References to *local* names (that is, those local to the current function or operator) are, with the exception of those with name class 9, unaffected. Local names with name class  9 are however no longer visible.
+`⎕CS` changes the space in which the current function or operator is running to the namespace `Y` and returns the original space, in which the function was previously running, as a shy result.  **After the** `⎕CS`, references to *global* names (with the exception of those specified in `X`) are taken to be references to *global* names in `Y`.  References to *local* names (that is, those local to the current function or operator) are, with the exception of those with name class `9`, unaffected. Therefore any names in the new space that match local names in the containing defined function will be invisible. Local names with name class `9` are also not visible.
 
 
 When the function or operator terminates, the calling function resumes execution in its original space.
