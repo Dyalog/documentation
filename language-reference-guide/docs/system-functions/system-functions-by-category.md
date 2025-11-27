@@ -78,7 +78,7 @@ These are facilities to create, manipulate, and navigate namespaces and other ob
 
 ### Built-in Objects and Windows GUI
 
-These are facilities for dealing with built-in objects that mostly represent Windows GUI elements, although a few other built-in objects are cross-platform and/or do not relate to the graphical interface.
+These are facilities for dealing with built-in objects. They mostly represent Microsoft Windows GUI elements, although a few other built-in objects are cross-platform and/or do not relate to the graphical interface.
 
 |Name     |Description                |Syntax|
 |---------|---------------------------|-----|
