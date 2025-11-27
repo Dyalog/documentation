@@ -33,5 +33,9 @@ Right
   Enter  Esc  Shift+Esc  F1  Shift+F1
 ```
 
-
-
+!!! windows "Dyalog on Microsoft Windows"
+    In the Unicode edition, `⎕KL` can also get the keystrokes to type APL glyphs:
+    ```apl
+          ⎕KL '⌸'
+    Control+Shift+K
+    ```
