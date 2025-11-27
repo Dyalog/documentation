@@ -13,7 +13,7 @@ search:
 
 <h1 class="heading"><span class="name">Dyadic Execute</span> <span class="command">R←X⍎Y</span></h1>
 
-!!! Warning
+!!! Warning "Warning"
 	If the right argument to Dyadic Execute could include user input, then this might put data and systems at risk.
 	To reduce the risk of this, a system function might be more appropriate than the Dyadic Execute function:
 
