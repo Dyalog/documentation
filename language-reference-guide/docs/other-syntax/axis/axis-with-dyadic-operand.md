@@ -2,9 +2,9 @@
 <h1 class="heading"><span class="name">Axis (with Dyadic Operand)</span> <span class="command">R←Xf[B]Y</span></h1>
 
 
-`f` must be a dyadic primitive scalar function, or a dyadic primitive mixed function taken from [](#DyadicMixed) below. `B` must be a numeric scalar or vector. `X` and `Y` may be any arrays whose items are appropriate to function `f`. Axis does not follow the normal syntax of an operator.
+`f` must be a dyadic primitive scalar function, or a dyadic primitive mixed function taken from [](#DyadicMixed) below. `B` must be a numeric scalar or vector. `X` and `Y` may be any arrays whose items are appropriate to function `f`.
 
-
+For an alternative method of applying any function to a subset of axes, see [Rank](../primitive-operators/rank.md).
 
 Table: Primitive dyadic mixed functions with optional axis. {: #DyadicMixed }
 
@@ -31,6 +31,7 @@ Exceptionally, `B` must be a fractional value for the Laminate function (`,`) wh
 `⎕IO` is an implicit argument of the derived function which determines the meaning of `B`.
 
 <h2 class="example">Examples</h2>
+
 ```apl
       1 4 5 =[1] 3 2⍴⍳6
 1 0
@@ -60,7 +61,7 @@ ABC
 ## Axis with Scalar Dyadic Functions
 
 
-The axis operator `[X]` can take a scalar dyadic function as operand. This has the effect of "stretching" a lower rank array to fit a higher rank one. The arguments must be conformable along the specified axis (or axes) with elements of the lower rank array being replicated along the other axes.
+Axis `[X]` can take a scalar dyadic function as operand. This has the effect of "stretching" a lower rank array to fit a higher rank one. The arguments must be conformable along the specified axis (or axes) with elements of the lower rank array being replicated along the other axes.
 
 
 For example, if `H` is the higher rank array, `L` the lower rank one, `X` is an axis specification, and `f` a scalar dyadic function, then the expressions `Hf[X]L` and `Lf[X]H` are conformable if `(⍴L)←→(⍴H)[X]`. Each element of L is replicated along the remaining `(⍴H)~X` axes of `H`.
@@ -109,9 +110,8 @@ In the special case where both arguments have the same rank, the right one will 
               
  710  820  930
 1040 1150 1260
- 
-
 ```
+
 ```apl
       cube+[1 3]mat
  110  220  330
