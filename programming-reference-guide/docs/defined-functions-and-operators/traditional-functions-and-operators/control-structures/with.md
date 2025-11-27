@@ -28,7 +28,6 @@
 
 - The namespace argument to `:With` is interpreted relative to the current space.
 - With the exception of those with name class  9, local names in the containing defined function continue to be visible in the new space. Therefore any names in the new space that match local names in the containing defined function will be invisible.
-- Names in the new space must not be localised in the containing defined function.
 - Global references from within the `:With` control structure are to names in the new space. 
 - Exiting the defined function from within a `:With` control structure causes the space to revert to the one from which the function was called.
 
