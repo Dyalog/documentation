@@ -12,7 +12,7 @@ The dyadic operator `⎕OPT` is unique in that it modifies the behaviour of othe
 
 ### Session Information and Management
 
-These provide information on or control the execution environment.
+These provide information on, or control, the execution environment.
 
 |Name                   |Description                |Syntax|
 |-----------------------|---------------------------|----|
@@ -26,7 +26,7 @@ These provide information on or control the execution environment.
 
 ### Workspace
 
-These provide information and control the current workspace and its contents.
+These provide information on, and control, the current workspace and its contents.
 
 |Name     |Description              |Syntax|
 |---------|-------------------------|-----|
@@ -78,7 +78,7 @@ These are facilities to create, manipulate, and navigate namespaces and other ob
 
 ### Built-in Objects and Windows GUI
 
-These are facilities for dealing with built-in objects that mostly represent Windows GUI elements, although a few other built-in objects are cross-platform and/or do not relate to the graphical interface.
+These are facilities for dealing with built-in objects. They mostly represent Microsoft Windows GUI elements, although a few other built-in objects are cross-platform and/or do not relate to the graphical interface.
 
 |Name     |Description                |Syntax|
 |---------|---------------------------|-----|
@@ -335,7 +335,7 @@ These are relevant only for the Classic (non-Unicode) edition and dealing with i
 
 ### Archaic and Deprecated
 
-These are outdated facilites that have newer and better alternatives.
+Although still supported for legacy reasons, these facilites have newer and better alternatives.
 
 |Name    |Description                      |Syntax|Alternative|
 |--------|---------------------------------|----|-----------|
