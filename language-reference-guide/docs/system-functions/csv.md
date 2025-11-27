@@ -136,7 +136,7 @@ Monadic `⎕CSV` may be applied using the  Variant operator with the following 
 |Trim       |A Boolean specifying whether undelimited/unescaped  whitespace is trimmed at the beginning and end of fields                                               |`1`    |
 |Ragged     |A Boolean specifying whether records with varying numbers  of fields are allowed; see notes below                                                          |`0`    |
 |Fill       |The numeric value substituted for invalid numeric data in  columns of type 3                                                                               |`0`    |
-|Records    |The maximum number of records to process or 0 for no limit. This applies only to a file specified by a tie number.                                         |`0`    |
+|Records    |The maximum number of records to process or 0 for no limit.                                                                                                |`0`    |
 |QuoteChar  |The field quote character (delimiter), which may be specified as an empty character vector (meaning none is defined) or a character scalar                 |`"`    |
 |EscapeChar |The escape character, which may be specified as an empty character vector (meaning none is defined) or a character scalar                                  |`''`   |
 |DoubleQuote|A Boolean which indicates whether (1) or not (0) a quote character within a quoted field is represented by two consecutive quote characters                |`1`    |
