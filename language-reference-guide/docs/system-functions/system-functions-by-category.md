@@ -131,8 +131,7 @@ Table: Implicit Arguments {: #Implicit_Arguments }
 
 <sup>5</sup> that is, some extended error messages take `⎕IO` into account
 
-!!! note
-    Tolerant comparisons depend on `⎕FR` to select which of `⎕CT` and `⎕DCT` is used. Even  intolerant comparison depends on `⎕FR` in the case of comparing DECFs: If two DECFs are different but correspond to the same double, then they will be treated as unequal when `⎕FR` is `1287` but equal when it is `645`.
+Tolerant comparisons depend on `⎕FR` to select which of `⎕CT` and `⎕DCT` is used. Even  intolerant comparison depends on `⎕FR` in the case of comparing DECFs: If two DECFs are different but correspond to the same double, then they will be treated as unequal when `⎕FR` is `1287` but equal when it is `645`.
 
 ### System Constants
 
@@ -355,8 +354,8 @@ These are outdated facilites that have newer and better alternatives.
 |[`⎕SRC`](src.md)      |Source        |Monadic function|`⎕ATX` can provide source for non-objects|
 |[`⎕TC`](tc.md)   |Terminal Control           |Constant|`⎕UCS 8`, `⎕UCS 10`, and `⎕UCS 13`|
 |[`⎕VR`](vr.md)     |Vector Representation   |Monadic function|`⎕ATX` can provide source as typed|
-|[`⎕XT`](query-external-variable.md)   |Query External variable  |Monadic function|&nbsp;|
-|[`⎕XT`](set-external-variable.md)   |Associate External variable|Dyadic function|&nbsp;|
+|[`⎕XT`](query-external-variable.md)   |Query External variable  |Monadic function|`⎕MAP` or [component files](../../../programming-reference-guide/introduction/component-files/)|
+|[`⎕XT`](set-external-variable.md)   |Associate External variable|Dyadic function|`⎕MAP` or [component files](../../../programming-reference-guide/introduction/component-files/)|
 
 ## System Variables
 
