@@ -336,7 +336,7 @@ These are relevant only for the Classic (non-Unicode) edition and dealing with i
 
 ### Archaic and Deprecated
 
-These are outdated facilites that have newer and better alternatives.
+Although still supported for legacy reasons, these facilites have newer and better alternatives.
 
 |Name    |Description                      |Syntax|Alternative|
 |--------|---------------------------------|----|-----------|
