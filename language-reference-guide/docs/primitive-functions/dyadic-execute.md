@@ -37,7 +37,7 @@ If the result of the expression is used or is assigned to a name,  `R` is the re
 If the expression is an empty vector or a vector containing only blanks or one that does not produce a result, then `X⍎Y` has no value and using or assigning it to a name will generate `VALUE ERROR`.
 
 
-If `Y` contains a branch expression, the branch is effected in the environment from which the Dyadic Execute was invoked, and `X⍎Y` does not return.
+If `Y` contains a branch expression, the branch is effected in the environment from which the _dyadic execute_ was invoked, and `X⍎Y` does not return.
 
 
 <h2 class="example">Examples</h2>
