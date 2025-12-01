@@ -16,7 +16,7 @@ Monadic Hydrant means
 ```
 
 Dyadic Hydrant means
-[Execute expression in given namespace](../primitive-functions/execute.md)
+[Execute expression in given namespace](../primitive-functions/dyadic-execute.md)
 ```apl
       '#' ⍎ '⎕PP ⎕CT ⎕RL'
 ┌──┬─────┬────┐
