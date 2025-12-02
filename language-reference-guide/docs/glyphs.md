@@ -63,14 +63,14 @@
 
 |Glyph|Glyph Name|Uses
 |---|---|---|
-|`[`…`]`|Brackets|[Indexing](other-syntax/indexing.md), [literal array of rank 2 or higher](../../../programming-reference-guide/introduction/arrays/array-notation)
+|`[`…`]`|Brackets|[Indexing](other-syntax/indexing.md), [literal array of rank 2 or higher](../../programming-reference-guide/introduction/arrays/array-notation)
 |…`[`…`]`|Brackets|[Axis with Dyadic Operand](other-syntax/axis/axis-with-dyadic-operand.md), [Axis with Monadic Operand](other-syntax/axis/axis-with-monadic-operand.md)
 |`[`…`]←`|Brackets with Left Arrow|[Indexed Assignment](other-syntax/assignment/assignment-indexed.md)
 |`[`…`]`…`←`|Brackets with Left Arrow|[Modified Indexed Assignment](other-syntax/assignment/assignment-indexed-modified.md)
-|`]`|Right Bracket|[user command help](../../../windows-ui-guide/user-commands)
-|`]`…|Right Bracket|[begin user command](../../../windows-ui-guide/user-commands)
-|`()`|Parentheses|[empty namespace](../../../programming-reference-guide/introduction/arrays/array-notation)
-|`(`…`)`|Parentheses|[modify order of execution](../../programming-reference-guide/introduction/expressions), [indicate namelist](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/namelists), [literal namespace or vector](../../../programming-reference-guide/introduction/arrays/array-notation)
+|`]`|Right Bracket|[user command help](../../windows-ui-guide/user-commands)
+|`]`…|Right Bracket|[begin user command](../../windows-ui-guide/user-commands)
+|`()`|Parentheses|[empty namespace](../../programming-reference-guide/introduction/arrays/array-notation)
+|`(`…`)`|Parentheses|[modify order of execution](../../programming-reference-guide/introduction/expressions), [indicate namelist](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/namelists), [literal namespace or vector](../../programming-reference-guide/introduction/arrays/array-notation)
 |`(`…`)←`|Parentheses with Left Arrow|[Selective Assignment](other-syntax/assignment/assignment-selective.md)
 |`(`…`)`…`←`|Parentheses with Left Arrow|[Modified Selective Assignment](other-syntax/assignment/assignment-selective-modified.md)
 |`)`…|Right parenthesis|[start a system command](system-commands/index.md)
@@ -229,5 +229,5 @@
 |`≥`|Greater Than Or Equal To|[Greater Than Or Equal To](primitive-functions/greater-than-or-equal-to.md)
 |`⍲`|Logical NAND|[NAND](primitive-functions/nand.md)
 |`⍱`|Logical NOR|[NOR](primitive-functions/nor.md)
-|`⋄`|Diamond|[statement separator](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/statements), [array notation separator](../../../programming-reference-guide/introduction/arrays/array-notation)
+|`⋄`|Diamond|[statement separator](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/statements), [array notation separator](../../programming-reference-guide/introduction/arrays/array-notation)
 |`⌺`|Quad Diamond|[Stencil](primitive-operators/stencil.md)
