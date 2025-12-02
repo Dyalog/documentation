@@ -6,29 +6,19 @@ search:
   ! binomial
 </div>
 
-
-
-
-
-
 <h1 class="heading"><span class="name">Binomial</span> <span class="command">R←X!Y</span></h1>
 
-
-
 `X` and `Y` may be any numbers except that if `Y` is a negative integer then `X` must be an integer. `R` is numeric. An element of `R` is integer if corresponding elements of `X` and `Y` are integers.
-
 
 Binomial is defined in terms of the function Factorial:
 ```apl
       X!Y ←→ (!Y)÷(!X)×!Y-X
 ```
 
-
 Results are derived smoothly from the Beta function:
 ```apl
       Beta(X,Y) ←→ ÷Y×(X-1)!X+Y-1
 ```
-
 
 For positive integer arguments, `R` is the number of selections of `X` things from `Y` things.
 
@@ -40,6 +30,3 @@ For positive integer arguments, `R` is the number of selections of `X` things fr
       2!3j2
 1J5
 ```
-
-
-
