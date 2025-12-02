@@ -45,6 +45,7 @@ markdown_extensions:
   - toc:
       title: On this page
 nav:
+  - index.md
   - Overview: overview.md
   - Entering Characters: entering-characters.md
   - Entering Commands: entering-commands.md

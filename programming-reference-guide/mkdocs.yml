@@ -45,6 +45,7 @@ markdown_extensions:
   - toc:
       title: On this page
 nav:
+  - index.md
   - Introduction:
       - Workspaces: introduction/workspaces.md
       - Legal Names: introduction/names.md

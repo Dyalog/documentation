@@ -45,6 +45,7 @@ markdown_extensions:
   - toc:
       title: On this page
 nav:
+  - index.md
   - Documentation: documentation.md
   - Files and Directories: files-and-directories.md
   - File Extensions: file-associations.md

@@ -1,7 +1,8 @@
-# About This Document
+---
+search:
+  exclude: true
+---
 
-## Audience
+# About
 
-## Conventions
-
-Unless explicitly stated otherwise, all examples in Dyalog documentation assume that `⎕IO` and `⎕ML` are both 1.
+The _Dyalog Programming  Reference Guide_ details the syntax that forms the 'grammar' of the APL language. It describes the viable values that can be used in expressions, and explains how the individual language elements can be manipulated through defined functions and operators, control structures, and object oriented programming, as well as the way in which multi-threading can be implemented.

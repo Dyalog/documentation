@@ -46,6 +46,7 @@ markdown_extensions:
   - toc:
       title: On this page
 nav:
+  - index.md
   - Introduction: introduction.md
   - APL Keyboards: apl-keyboards.md
   - Session Manager: session-manager.md

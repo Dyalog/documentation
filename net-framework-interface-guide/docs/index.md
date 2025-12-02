@@ -1,7 +1,10 @@
-# About This Document
+---
+search:
+  exclude: true
+---
 
-## Audience
+# About
 
-## Conventions
+The _Dyalog for Microsoft Windows .NET Framework Interface Guide_ describes the Dyalog interface to the Microsoft .NET Framework. The information provided in this document does not explain the features of the .NET Framework, but concentrates on explaining the APL interfaces that sit between the .NET Framework and the APL Session.
 
-Unless explicitly stated otherwise, all examples in Dyalog documentation assume that `⎕IO` and `⎕ML` are both 1.
+Assumed knowledge: Familiarity the .NET Framework and a basic understanding of OO methodologies.

@@ -1,7 +1,10 @@
-# About This Document
+---
+search:
+  exclude: true
+---
 
-## Audience
+# About
 
-## Conventions
+The _Dyalog APL Language Reference Guide_ details the individual elements that form the 'vocabulary' of the APL language. It explains every primitive function, primitive operator, system function, and system command in Dyalog.
 
-Unless explicitly stated otherwise, all examples in Dyalog documentation assume that `⎕IO` and `⎕ML` are both 1.
+Assumed knowledge: A reasonable understanding of mathematics.

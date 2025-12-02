@@ -1,7 +1,10 @@
-# About This Document
+---
+search:
+  exclude: true
+---
 
-## Audience
+# About
 
-## Conventions
+The _Dyalog for Microsoft Windows UI Guide_ introduces the Dyalog user interface. It describes the windows, menu options, built-in tools, and customisation possibilities that are available when running Dyalog on the Microsoft Windows operating system, and explains the programming techniques, file storage mechanisms, integrity checking features, and error trapping concepts available with Dyalog.
 
-Unless explicitly stated otherwise, all examples in Dyalog documentation assume that `⎕IO` and `⎕ML` are both 1.
+Assumed knowledge: A basic understanding of software terminology.
