@@ -138,7 +138,7 @@ nav:
                   defined-functions-and-operators/traditional-functions-and-operators/control-structures/goto.md
               - Return Statement: 
                   defined-functions-and-operators/traditional-functions-and-operators/control-structures/return.md
-              - Leave Statement :Leave: 
+              - Leave Statement: 
                   defined-functions-and-operators/traditional-functions-and-operators/control-structures/leave.md
               - Continue Statement: 
                   defined-functions-and-operators/traditional-functions-and-operators/control-structures/continue.md
@@ -253,7 +253,7 @@ nav:
           - PropertyShape Function Syntax: object-oriented-programming/property-section/propertyshape-function-syntax.md
   - Threads and Triggers:
       - Threads:
-          - Language Elements.: threads/multithreading-language-elements.md
+          - Multi-Threading Language Elements: threads/multithreading-language-elements.md
           - Thread Switching: threads/thread-switching.md
           - Name Scope: threads/name-scope.md
           - Stack Considerations: threads/stack-considerations.md

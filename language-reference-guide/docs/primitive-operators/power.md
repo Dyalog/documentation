@@ -40,7 +40,7 @@ A *negative* right operand `g` applies the *inverse* of the operand function `f`
 
 If the function does not have an inverse, a negative argument `g` generates `DOMAIN ERROR`.
 
-!!! Tip "Hints and Recommendations"
+!!! Hint "Hints and Recommendations"
     Dyalog Ltd recommends that the use of inverses in production code is limited to `⊥`, `⍸`, `+\`, `≠\`, `+⍀`, and `≠⍀`, and functions derived from these, for example, `2∘⊥` and `≠\[1]`.
 
 <h2 class="example">Examples</h2>
