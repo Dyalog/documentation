@@ -24,7 +24,7 @@ where `<Load>` is the value of the **Load** parameter.
 
 If the value of Load is the name of a file, Dyalog determines whether or not the file is a workspace by its internal signature.
 
-If the file is a workspace the expression to be executed is specified by its `⎕LX`. See [Latent Expression](../../../../language-reference-guide/system-functions/lx).
+If the file is a workspace the expression to be executed is specified by its `⎕LX`. See [Latent Expression](../../../language-reference-guide/system-functions/lx).
 
 Otherwise, if the file extension is `.aplf` `.aplc` or `.apln` the expression is shown in the table below, where `filename` is the file name specified by the **Load** parameter without its extension.
 
