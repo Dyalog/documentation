@@ -4,7 +4,7 @@
 
 `f` must be a monadic primitive mixed function taken from those shown in [](#MonadicMixed) below, or a function derived from the operators Reduction (`/`) or Scan (`\`). `B` must be a numeric scalar or vector. `Y` may be any array whose items are appropriate to function `f`.
 
-For an alternative method of applying any function to a subset of axes, see [Rank](../primitive-operators/rank.md).
+For an alternative method of applying any function to a subset of axes, see [Rank](../../primitive-operators/rank.md).
 
 Table: Primitive monadic mixed functions with optional axis. {: #MonadicMixed }
 
