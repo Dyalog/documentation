@@ -4,7 +4,7 @@
 
 `f` must be a dyadic primitive scalar function, or a dyadic primitive mixed function taken from [](#DyadicMixed) below. `B` must be a numeric scalar or vector. `X` and `Y` may be any arrays whose items are appropriate to function `f`.
 
-For an alternative method of applying any function to a subset of axes, see [Rank](../primitive-operators/rank.md).
+For an alternative method of applying any function to a subset of axes, see [Rank](../../primitive-operators/rank.md).
 
 Table: Primitive dyadic mixed functions with optional axis. {: #DyadicMixed }
 

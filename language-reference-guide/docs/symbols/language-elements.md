@@ -135,8 +135,8 @@ Primitive Operators
 
 Other Language Elements
 
-- [Brackets](../brackets)
-- [Special Syntax](../special-symbols)
+- [Brackets](../../glyphs/#enclosures)
+- [Special Syntax](../../glyphs)
 - [Variables](../../../programming-reference-guide/introduction/arrays/arrays)
 - [Namespaces](../../../programming-reference-guide/introduction/namespaces/namespaces)
 - [Defined Fns & Ops](../../../programming-reference-guide/defined-functions-and-operators/introduction)
@@ -145,7 +145,6 @@ Other Language Elements
 - [Object Oriented Programming](../../../programming-reference-guide/object-oriented-programming/introducing-classes/introducing-classes)
 - [Control Structures](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/control-structures-summary)
 - [Triggers](../../../programming-reference-guide/triggers/triggers)
-- [System Functions](../../system-functions/introduction)
-- [System Commands](../../system-commands/introduction)
+- [System Functions](../../system-functions)
+- [System Commands](../../system-commands)
 - [Error Messages](../../../programming-reference-guide/error-messages/apl-errors)
-
