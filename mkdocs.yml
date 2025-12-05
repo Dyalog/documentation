@@ -30,14 +30,16 @@ plugins:
   - search
   - macros
   - monorepo
-  - minify:
-      minify_html: true
   - caption:
-      table: 
+      table:
         enable: true
         start_index: 1
         increment_index: 1
         position: bottom
+        reference_text: 'Table {index}'
+        caption_prefix: 'Table {index}:'
+  - minify:
+      minify_html: true
 
 extra:
   version_maj: 20
