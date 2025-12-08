@@ -27,6 +27,8 @@ plugins:
         start_index: 1
         increment_index: 1
         position: bottom
+        reference_text: 'Table {index}'
+        caption_prefix: 'Table {index}:' 
 extra:
   version_maj: 20
   version_majmin: 20.0
