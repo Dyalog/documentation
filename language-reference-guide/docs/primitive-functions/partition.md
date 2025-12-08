@@ -5,6 +5,7 @@ search:
 
 <div style="display: none;">
    ⊆ partition
+</div>
 
 <h1 class="heading"><span class="name">Partition</span> <span class="command">R←X⊆[K]Y</span></h1>
 
