@@ -56,6 +56,7 @@ from xml.dom.minidom import getDOMImplementation
 
 from caption import TableCaptionExtension
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
+from bs4.element import NavigableString, Tag
 import markdown
 from ruamel.yaml import YAML
 
@@ -160,7 +161,11 @@ def _traverse(node: Node, toc: IO[str]) -> None:
         # Fall back to a child named "Introduction" if present
         if linked_file is None:
             for child in node.children:
-                if child.name == "Introduction" and not child.isdir() and child.html_name:
+                if (
+                    child.name == "Introduction"
+                    and not child.isdir()
+                    and child.html_name
+                ):
                     linked_file = child.html_name
                     break
 
@@ -214,9 +219,9 @@ def clean_nav_titles(navdata):
         cleaned = {}
         for key, value in navdata.items():
             # Clean the key if it's a navigation title
-            if isinstance(value, (str, list, dict)) and not key.startswith('!'):
+            if isinstance(value, (str, list, dict)) and not key.startswith("!"):
                 # Remove HTML tags and quad symbol from navigation titles
-                cleaned_key = re.sub(r'<[^>]+>', '', key).replace('⎕', '')
+                cleaned_key = re.sub(r"<[^>]+>", "", key).replace("⎕", "")
             else:
                 cleaned_key = key
             # Recursively clean the value
@@ -233,7 +238,7 @@ def parse_mkdocs_yml(yml_file: str, remove: List[str]) -> dict:
     Read and parse the mkdocs.yml files. The monorepo plugin references
     the sub-document mkdocs.yml files, which we expand in place to produce
     the complete state.
-    
+
     The remove list can contain section group names to exclude entire groups.
     """
 
@@ -274,11 +279,11 @@ def parse_mkdocs_yml(yml_file: str, remove: List[str]) -> dict:
 
     base_path = os.path.dirname(yml_file)
     data = resolve_includes(data, base_path)
-    
+
     # Clean navigation titles after parsing
     if "nav" in data:
         data["nav"] = clean_nav_titles(data["nav"])
-    
+
     return data
 
 
@@ -351,7 +356,9 @@ def find_source_files(topdir: str, subdirs: List[str]) -> Tuple[List[str], List[
                     image_files.append(full_path)
 
     if excluded_print_files:
-        print(f"\nExcluded {len(excluded_print_files)} -print.md files from all processing:")
+        print(
+            f"\nExcluded {len(excluded_print_files)} -print.md files from all processing:"
+        )
         for f in sorted(excluded_print_files):
             print(f"  - {os.path.basename(f)}")
 
@@ -494,9 +501,9 @@ def parse_frontmatter(content: str) -> Tuple[dict, str]:
     Parse YAML frontmatter from markdown content.
     Returns (frontmatter_dict, content_without_frontmatter)
     """
-    frontmatter_pattern = r'^\s*---\n(.*?)\n---\n+'
+    frontmatter_pattern = r"^\s*---\n(.*?)\n---\n+"
     match = re.match(frontmatter_pattern, content, flags=re.DOTALL)
-    
+
     if match:
         yaml = YAML()
         try:
@@ -505,7 +512,9 @@ def parse_frontmatter(content: str) -> Tuple[dict, str]:
                 frontmatter = {}
         except:
             frontmatter = {}
-        content_without = re.sub(frontmatter_pattern, '', content, count=1, flags=re.DOTALL)
+        content_without = re.sub(
+            frontmatter_pattern, "", content, count=1, flags=re.DOTALL
+        )
         return frontmatter, content_without
     return {}, content
 
@@ -527,7 +536,7 @@ def convert_to_html(
     viewer does not understand <link ...>.
 
     As a mitigation, take steps to only add the actually used CSS bits.
-    
+
     Returns: (converted_files, excluded_files)
     """
     converted: List[str] = []
@@ -564,7 +573,7 @@ def convert_to_html(
 
         # Parse frontmatter and check for search exclusion
         frontmatter, md = parse_frontmatter(md)
-        if frontmatter.get('search', {}).get('exclude', False):
+        if frontmatter.get("search", {}).get("exclude", False):
             excluded.append(file)
 
         # Macros are defined in the "extra:" section in the mkdocs.yml file. In the Markdown
@@ -599,6 +608,7 @@ def convert_to_html(
         body = remove_footnote_backlinks(body)
         body = make_footnote_urls_clickable(body)
         body = fix_external_links(body)
+        body = fix_apl_root_namespace_highlighting(body)
 
         # Extract the H1 content for use in the title tag, setting for_title=True
         # to only extract the name part (excluding command span)
@@ -784,7 +794,7 @@ def find_nav_files_and_dirs(
     """
     Extract both top-level directories (from !include directives) and standalone Markdown files
     directly listed in the nav section of the mkdocs.yml file.
-    
+
     Handles both direct includes and section groups containing includes.
     The remove list can contain section group names to exclude entire groups.
 
@@ -1089,8 +1099,6 @@ def make_footnote_urls_clickable(html: str) -> str:
     Returns:
         str: The modified HTML content with clickable URLs in footnotes.
     """
-    from bs4.element import NavigableString, Tag
-
     soup = BeautifulSoup(html, "html.parser")
 
     # Find the footnote div
@@ -1100,8 +1108,7 @@ def make_footnote_urls_clickable(html: str) -> str:
 
     # Pattern to match URLs (http, https, ftp)
     url_pattern = re.compile(
-        r'(https?://[^\s<>"{}|\\^`\[\]]+|ftp://[^\s<>"{}|\\^`\[\]]+)',
-        re.IGNORECASE
+        r'(https?://[^\s<>"{}|\\^`\[\]]+|ftp://[^\s<>"{}|\\^`\[\]]+)', re.IGNORECASE
     )
 
     # Find all <p> tags within footnotes that might contain URLs
@@ -1118,7 +1125,9 @@ def make_footnote_urls_clickable(html: str) -> str:
 
         for content in contents_to_process:
             # Only process NavigableString (text) nodes, not tags
-            if isinstance(content, NavigableString) and not isinstance(content, type(soup)):
+            if isinstance(content, NavigableString) and not isinstance(
+                content, type(soup)
+            ):
                 text = str(content)
                 # Check if this text contains a URL
                 if url_pattern.search(text):
@@ -1156,22 +1165,50 @@ def fix_external_links(html: str) -> str:
     Fix external links for CHM compatibility.
     The Windows CHM viewer can open external links with target="_blank".
     This function adds the target attribute to all external HTTP/HTTPS links.
-    
+
     Parameters:
         html (str): The HTML content as a string.
-        
+
     Returns:
         str: The modified HTML content.
     """
     soup = BeautifulSoup(html, "html.parser")
-    
+
     # Find all external links
     for a_tag in soup.find_all("a", href=True):
         href = a_tag.get("href")
         if href and href.startswith(("http://", "https://")):
             # Add target="_blank" to open in external browser
             a_tag["target"] = "_blank"
-    
+
+    return str(soup)
+
+
+def fix_apl_root_namespace_highlighting(html: str) -> str:
+    """
+    Fix incorrect syntax highlighting of '#' in APL code blocks.
+
+    The Pygments APL lexer treats '#' as a comment character (for GNU APL
+    compatibility).
+
+    This function finds comment spans within highlight blocks that start with '#'
+    and converts them to regular variable spans, preserving any actual APL
+    comments that start with '⍝'.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+
+    # Find all highlight divs (code blocks with syntax highlighting)
+    for highlight_div in soup.find_all("div", class_="highlight"):
+        # Find comment spans (c1 = Comment.Single, c = Comment)
+        for comment_span in highlight_div.find_all("span", class_=["c1", "c"]):
+            text = comment_span.get_text()
+
+            # Check if this "comment" starts with '#' (root namespace, not a real comment)
+            # Real APL comments start with '⍝'
+            if text.startswith("#"):
+                # Change the class from comment to variable (nv = Name.Variable)
+                comment_span["class"] = ["nv"]
+
     return str(soup)
 
 
@@ -1290,13 +1327,13 @@ def add_langref_disambiguation_pages(root: Node, project: str) -> None:
 
     # First find the "Dyalog APL Language" node which might be under "Core Reference" section group
     lang_ref_node = None
-    
+
     # Check direct children first
     for child in root.children:
         if child.name == "Dyalog APL Language":
             lang_ref_node = child
             break
-    
+
     # If not found, check under section groups
     if not lang_ref_node:
         for child in root.children:
@@ -1467,16 +1504,22 @@ if __name__ == "__main__":
         os.path.abspath(os.path.join(os.path.dirname(args.mkdocs_yml), f))
         for f in standalone_files
     ]
-    
+
     # Filter out -print.md files from standalone files
-    excluded_print_standalone = [f for f in standalone_files_abs if f.endswith("-print.md")]
-    standalone_files_abs = [f for f in standalone_files_abs if not f.endswith("-print.md")]
-    
+    excluded_print_standalone = [
+        f for f in standalone_files_abs if f.endswith("-print.md")
+    ]
+    standalone_files_abs = [
+        f for f in standalone_files_abs if not f.endswith("-print.md")
+    ]
+
     if excluded_print_standalone:
-        print(f"\nExcluded {len(excluded_print_standalone)} -print.md standalone files:")
+        print(
+            f"\nExcluded {len(excluded_print_standalone)} -print.md standalone files:"
+        )
         for f in sorted(excluded_print_standalone):
             print(f"  - {os.path.basename(f)}")
-    
+
     md_files = md_files_from_dirs + standalone_files_abs
 
     # Add welcome.md to the start of the files list
@@ -1509,12 +1552,14 @@ if __name__ == "__main__":
         top_level_files=standalone_files_abs,
         version=version,
     )
-    
+
     # Remove excluded files from md_files for indexing
     md_files = [f for f in md_files if f not in excluded_files]
-    
+
     if excluded_files:
-        print(f"\nExcluded {len(excluded_files)} files from search index due to 'search: exclude: true':")
+        print(
+            f"\nExcluded {len(excluded_files)} files from search index due to 'search: exclude: true':"
+        )
         for f in excluded_files:
             print(f"  - {os.path.basename(f)}")
 
