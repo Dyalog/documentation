@@ -256,7 +256,7 @@ pipeline {
                             ## Force docs/20.0 so we don't overwrite older versions
                             if [ -d "${WEB_ROOT}" ]; then
                                 rm -rf "${WEB_ROOT}"/20.0/*
-                                rm -rf "${WEB_ROOT}"/.[^.]*  2>/dev/null || true
+                                rm "${WEB_ROOT}"/.git-hash
                             else
                                 mkdir -p "${WEB_ROOT}/20.0"
                             fi
