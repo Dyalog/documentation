@@ -290,7 +290,6 @@ nav:
       - System Functions: system-functions/index.md
       - System Functions (by Category): system-functions/system-functions-by-category.md
       - System Functions (A-Z):
-          - Introduction: system-functions/system-functions-and-variables-colwise.md
           - Character Input Output: system-functions/character-input-output.md
           - Evaluated Input Output: system-functions/evaluated-input-output.md
           - Underscored Alphabetic Characters: system-functions/underscored-alphabetic-characters.md
