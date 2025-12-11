@@ -61,12 +61,12 @@ The following files have names that change between editions and widths:
 * 64-bit Classic:  
     * **dyalog{{ version_condensed }}_64rt.dll** (Dyalog interpreter)
     * **bridge{{ version_condensed }}-64.dll** (.NET Framework Interface)
-    * **dyalogc64.exe** (Dyalog .NET Compiler/APLScript Compiler – .NET Interface and .NET Framework Interface)
+    * **dyalogc64.exe** (APLScript Compiler – .NET Framework Interface)
     * **cwdya64c64w.dll** (SQL interface)
 * 32-bit Classic:  
     * **dyalog{{ version_condensed }}rt.dll** (Dyalog interpreter)
     * **bridge{{ version_condensed }}.dll** (.NET Framework Interface)
-    * **dyalogc.exe** (Dyalog .NET Compiler/APLScript Compiler – .NET Interface and .NET Framework Interface)
+    * **dyalogc.exe** (APLScript Compiler – .NET Framework Interface)
     * **cwdya64c32w.dll** (SQL interface)
 
 ### Non-Distributable Development Components
