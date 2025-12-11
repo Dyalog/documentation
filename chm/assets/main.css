@@ -220,7 +220,7 @@ div.admonition p.admonition-title {
 div.admonition.note {
     border-color: #2A3244;
 }
-div.admonition.note .admonition-title {
+div.admonition.note p.admonition-title {
     background-color: #2A3244;
 }
 
@@ -228,7 +228,7 @@ div.admonition.note .admonition-title {
 div.admonition.hint {
     border-color: #FFA300;
 }
-div.admonition.hint .admonition-title {
+div.admonition.hint p.admonition-title {
     background-color: #FFA300;
 }
 
@@ -236,7 +236,7 @@ div.admonition.hint .admonition-title {
 div.admonition.info {
     border-color: #003B5C;
 }
-div.admonition.info .admonition-title {
+div.admonition.info p.admonition-title {
     background-color: #003B5C;
 }
 
@@ -244,7 +244,7 @@ div.admonition.info .admonition-title {
 div.admonition.warning {
     border-color: #CA2E51;
 }
-div.admonition.warning .admonition-title {
+div.admonition.warning p.admonition-title {
     background-color: #CA2E51;
 }
 
@@ -252,7 +252,7 @@ div.admonition.warning .admonition-title {
 div.admonition.legacy {
     border-color: #505050;
 }
-div.admonition.legacy .admonition-title {
+div.admonition.legacy p.admonition-title {
     background-color: #505050;
 }
 
@@ -260,7 +260,7 @@ div.admonition.legacy .admonition-title {
 div.admonition.linux {
     border-color: #7370A9;
 }
-div.admonition.linux .admonition-title {
+div.admonition.linux p.admonition-title {
     background-color: #7370A9;
 }
 
@@ -268,7 +268,7 @@ div.admonition.linux .admonition-title {
 div.admonition.unix {
     border-color: #7370A9;
 }
-div.admonition.unix .admonition-title {
+div.admonition.unix p.admonition-title {
     background-color: #7370A9;
 }
 
@@ -276,7 +276,7 @@ div.admonition.unix .admonition-title {
 div.admonition.macos {
     border-color: #7370A9;
 }
-div.admonition.macos .admonition-title {
+div.admonition.macos p.admonition-title {
     background-color: #7370A9;
 }
 
@@ -284,7 +284,7 @@ div.admonition.macos .admonition-title {
 div.admonition.windows {
     border-color: #7370A9;
 }
-div.admonition.windows .admonition-title {
+div.admonition.windows p.admonition-title {
     background-color: #7370A9;
 }
 
