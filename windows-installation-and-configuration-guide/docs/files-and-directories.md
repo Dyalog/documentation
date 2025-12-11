@@ -49,25 +49,25 @@ The following files relate to the .NET Interface, and are only available in Unic
 The following files have names that change between editions and widths:  
 
 * 64-bit Unicode:  
-    * **dyalog{{ version_condensed }}_64rt_unicode.dll**
-    * **bridge{{ version_condensed }}-64_unicode.dll**
-    * **dyalogc64_unicode.exe**
-    * **cwdya64u64w.dll**
+    * **dyalog{{ version_condensed }}_64rt_unicode.dll** (Dyalog interpreter)
+    * **bridge{{ version_condensed }}-64_unicode.dll** (.NET Framework Interface)
+    * **dyalogc64_unicode.exe** (Dyalog .NET Compiler/APLScript Compiler – .NET Interface and .NET Framework Interface)
+    * **cwdya64u64w.dll** (SQL interface)
 * 32-bit Unicode:  
-    * **dyalog{{ version_condensed }}rt_unicode.dll**
-    * **bridge{{ version_condensed }}_unicode.dll**
-    * **dyalogc_unicode.exe**
-    * **cwdya64u32w.dll**
+    * **dyalog{{ version_condensed }}rt_unicode.dll** (Dyalog interpreter)
+    * **bridge{{ version_condensed }}_unicode.dll** (.NET Framework Interface)
+    * **dyalogc_unicode.exe** (Dyalog .NET Compiler/APLScript Compiler – .NET Interface and .NET Framework Interface)
+    * **cwdya64u32w.dll** (SQL interface)
 * 64-bit Classic:  
-    * **dyalog{{ version_condensed }}_64rt.dll**
-    * **bridge{{ version_condensed }}-64.dll**
-    * **dyalogc64.exe**
-    * **cwdya64c64w.dll**
+    * **dyalog{{ version_condensed }}_64rt.dll** (Dyalog interpreter)
+    * **bridge{{ version_condensed }}-64.dll** (.NET Framework Interface)
+    * **dyalogc64.exe** (Dyalog .NET Compiler/APLScript Compiler – .NET Interface and .NET Framework Interface)
+    * **cwdya64c64w.dll** (SQL interface)
 * 32-bit Classic:  
-    * **dyalog{{ version_condensed }}rt.dll**
-    * **bridge{{ version_condensed }}.dll**
-    * **dyalogc.exe**
-    * **cwdya64c32w.dll**
+    * **dyalog{{ version_condensed }}rt.dll** (Dyalog interpreter)
+    * **bridge{{ version_condensed }}.dll** (.NET Framework Interface)
+    * **dyalogc.exe** (Dyalog .NET Compiler/APLScript Compiler – .NET Interface and .NET Framework Interface)
+    * **cwdya64c32w.dll** (SQL interface)
 
 ### Non-Distributable Development Components
 
