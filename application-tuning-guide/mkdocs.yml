@@ -28,7 +28,7 @@ plugins:
         increment_index: 1
         position: bottom
         reference_text: 'Table {index}'
-        caption_prefix: 'Table {index}:' 
+        caption_prefix: 'Table {index}:'
 extra:
   version_maj: 20
   version_majmin: 20.0
@@ -47,3 +47,12 @@ markdown_extensions:
   - toc:
       title: On this page
 nav:
+ - index.md
+ - introduction.md
+ - Data Collection:
+   - collection/index.md
+   - collection/initiating-the-collection-of-data.md
+   - collection/stopping-the-collection-of-data.md
+   - collection/timer-overhead.md
+
+ - Appendix A: appendix-a-syntax-of-profile-user-command.md
