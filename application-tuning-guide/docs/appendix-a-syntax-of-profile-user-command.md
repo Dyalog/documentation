@@ -27,9 +27,9 @@ Each of the report types can have different combinations of modifiers applied. T
 
 |Modifier   |Report Types                  ||||
 |_^        _|calls|dashboard|data|summary|tree|
--avg        |y| |y|y| |
--bias       |y|y|y|y|y|
--code       |y| | | |y|
+|-avg        |y| |y|y| |
+|-bias       |y|y|y|y|y|
+|-code       |y| | | |y|
 |-cumpct    |y| |y| |y|
 |-decimal   |y| |y|y|y|
 |-exclusive |y| |y| |y|
