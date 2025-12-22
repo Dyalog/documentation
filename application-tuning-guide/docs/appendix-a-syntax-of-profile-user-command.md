@@ -70,3 +70,90 @@ The default is 1.
 
 
 # Examples
+
+These examples are intended to show at least one use of every modifier.
+
+```apl
+      )LOAD sharpplot
+C:\...\ ws\sharpplot.dws saved Mon May  8 09:57:02 2017
+      ⎕PROFILE 'start'
+</pre><pre class="APLcode" xml:space="preserve">
+      #.Samples.Sample 'Sample.svg'
+mySharpPlot  Sample.svg
+      ⎕PROFILE 'stop'
+```
+
+To see which 5 functions consumed the most CPU time:
+```apl
+      ]Profile summary -expr="#.Samples.Sample 'Sample.svg'" -first=5
+ Element                      msec       %  Calls
+ #.Samples.Sample             56.1   100.0      1
+ #.SharpPlot.DrawLineGraph    24.9    44.4      1
+ #.SharpPlot.Plot             18.0    32.1      1
+ #.SharpPlot.DrawBarChart      7.8    14.0      1
+ #.SharpPlot.CH∆PLOT           3.2     5.6      1
+```
+Show the five biggest CPU consumers, excluding CPU time spent in sub-functions. Display decimal numbers to 3 decimal places, include a cumulative percentage and only include functions up to 65% of the cumulative CPU:
+```apl
+      ]Profile summary -exclusive -decimal=3 -cumpct -pct=65
+ Element               msec        %  Calls   %(cum)
+ #.Samples.Sample    19.351   33.249      1   33.249
+ #.SharpPlot.Plot    14.719   25.290      1   58.540
+```
+
+To see the average CPU consumption per call without adjusting for timer bias:
+```apl
+      ]Profile summary -exclusive -decimal=3 -avg -bias=0 -first=3
+ Total time: 61.8 msec
+ Element                        msec        %  Calls      Avg
+ #.Samples.Sample             19.362   31.316      1   19.362
+ #.SharpPlot.Plot             14.733   23.829      1   14.733
+ #.SharpPlot.DrawLineGraph     7.254   11.733      1    7.254</pre>
+```
+
+The second set of numbers are higher than the first – the total time is 3.6 ms higher when the timer bias adjustment is not made and the function with the highest consumption, `#.Samples.Sample`, is reported as having consumed 0.011 ms more. The raw data recorded for a function can be displayed (without bias adjustment) by the data report type; in this case the function with the highest consumption is the one of interest:
+```apl
+      ]Profile data –fn=#.Samples.Sample
+ Total time: 389.7 msec; Selected time: 104475.0 msec
+ Element                Calls  msec(exc)  msec(inc)
+ #.Samples.Sample           1       23.0      104.5
+ #.Samples.Sample[1]        1        0.0        0.0
+ #.Samples.Sample[2]        1        0.0        0.0
+ #.Samples.Sample[3]        1        0.0        0.0
+ #.Samples.Sample[4]        1        0.0        0.0
+ #.Samples.Sample[5]        1        0.0        0.0
+ #.Samples.Sample[6]        1        0.0        0.0
+ #.Samples.Sample[7]        1        1.4        2.3
+ #.Samples.Sample[8]        1        0.0        0.0
+ ...etc...
+```
+
+For a summary or calls report, the `-code` modifier can be used to include source code in a report:
+```apl
+      ]Profile summary -code -lines -first=5
+ Total time: 56.1 msec</pre><pre class="APLcode" xml:space="preserve"> Element                          msec      %  Calls  Code
+ #.Samples.Sample[33]             25.5   45.4      1  sp.DrawBarChart⊂data1
+ #.Samples.Sample[42]             24.9   44.4      1  sp.DrawLineGraph⊂data2
+ #.SharpPlot.DrawLineGraph[43]    24.9   44.3      1  Plot yValues xValues'linegraph'
+ #.SharpPlot.Plot[174]            17.3   30.9      1  cv←CH∆PLOT DATA VAL ptype iLine iMarker(bFramed∨bCropped)
+ #.Samples.Sample[7]               2.0    3.5      1  sp←⎕NEW Causeway.SharpPlot</pre>
+```
+
+The `-outfile` modifier allows output to be directed to a file instead of displaying it in the Session. By default, the format of the data in the file is XML, but this can be changed to CSV or text with the `-format` modifier. For example:
+```apl
+      ]Profile data -outfile=c:\temp\data.csv -format=csv &#8209;separators='.,'
+```
+creates a CSV file using a period as the decimal separator and a comma as the field separator. For more information on the `-outfile` modifier, see data_storage.
+
+If output is directed to an XML or text file, then the `-title` modifier can be used to specify a title that will be displayed when viewing that file in the Dashboard:
+```apl
+      ]Profile tree -expr="queens 8" -title="queens eight" &#8209;outfile="c:\temp\q8profile.xml"
+```
+
+If the `-title` modifier is omitted then the specified expression is used as the title.
+
+
+The `-infile` modifier loads a previously-saved dataset for analysis – specifying this does not destroy any existing `⎕PROFILE` data:
+`]Profile -infile="c:\temp\test.xml"`
+
+This only applies when the dataset being loaded was a tree report saved in XML format (see Section 5.1).
