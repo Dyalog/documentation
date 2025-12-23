@@ -49,13 +49,8 @@ markdown_extensions:
 nav:
  - index.md
  - introduction.md
- - Data Collection:
-   - collection/index.md
-   - collection/before-initiating-the-collection-of-data.md
-   - collection/initiating-the-collection-of-data.md
-   - collection/stopping-the-collection-of-data.md
-   - collection/timer-overhead.md
- - data-reporting.md 
+ - data-collection.md
+ - data-reporting.md
  - Data Storage:
    - data-storage/index.md
    - data-storage/xml-format.md
