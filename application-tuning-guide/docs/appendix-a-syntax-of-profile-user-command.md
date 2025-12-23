@@ -28,11 +28,11 @@ The report types can be qualified using modifiers. These can, for example, filte
 
 Each of the report types can have different combinations of modifiers applied. The state report type does not take any modifiers; the valid modifiers for each of the other report types are shown in. the following table:
 
-|Modifier   |Report Types                  ||||
-|_^        _|calls|dashboard|data|summary|tree|
-|-avg        |y| |y|y| |
-|-bias       |y|y|y|y|y|
-|-code       |y| | | |y|
+|Modifier|calls|dashboard|data|summary|tree|
+|-----------|-|-|-|-|-|
+|-avg       |y| |y|y| |
+|-bias      |y|y|y|y|y|
+|-code      |y| | | |y|
 |-cumpct    |y| |y| |y|
 |-decimal   |y| |y|y|y|
 |-exclusive |y| |y| |y|
