@@ -75,7 +75,7 @@ A left-click in a pie segment (or on its label) or table row displays the source
 
 ### Breadcrumb Trail
 
-Immediately above the panelled body of the Dashboard (see Section ##Panels) is a breadcrumb trail describing the function currently displayed in the panels. At the end of this breadcrumb trail is a label that reports the percentage of the overall consumption that this function accounts for. [](#B-2)  shows an example breadcrumb trail.
+Immediately above the panelled body of the Dashboard (see [Panels](#panels)) is a breadcrumb trail describing the function currently displayed in the panels. At the end of this breadcrumb trail is a label that reports the percentage of the overall consumption that this function accounts for. [](#B-2)  shows an example breadcrumb trail.
 
 ![Example breadcrumb trail in the Dashboard](img/dashboard_breadcrumbs.jpg){ #B-2 }
 
@@ -85,7 +85,7 @@ Each breadcrumb in the trail has one of the following symbol/highlighting colour
 
 * A star (`*`) and green highlighting indicate a call sequence in which other functions could have been called.
 
-* An upwards arrow (`↑`) and pink highlighting indicate a "show calls" step has been made, that is, consumption is displayed according to the functions/lines that have called the relevant function/line (see Section ##B3.2).
+* An upwards arrow (`↑`) and pink highlighting indicate a "show calls" step has been made, that is, consumption is displayed according to the functions/lines that have called the relevant function/line (see [Right-click Menu](#right-click-menu)).
 
 Clicking a function in the breadcrumb trail displays that function in the panels.
 
@@ -109,7 +109,9 @@ This section details the options available under each of the menu items in the m
 
 ### File Menu
 
-The options available under the *File* menu are detailed in the following table:
+The options available under the *File* menu are detailed in [Table 1](#_table-1):
+
+Table: File menu options
 
 |Item |Description|
 |-----|-----------|
@@ -118,11 +120,13 @@ The options available under the *File* menu are detailed in the following table:
 |Reset|Returns the Dashboard to its the initial state, displaying the initial top-level function in four panels (as shown in Figure #).
 |Exit |Terminates the Dashboard and returns to the Dyalog Session.|
 
-For panel number references, see [Panels](appendix-b-dashbord.md#panels)
+For panel number references, see [Panels](#panels)
 
 ### Windows Menu
 
-The options available under the *Windows* menu are detailed in the following table:
+The options available under the *Windows* menu are detailed in [Table 2](#_table-2):
+
+Table: Windows menu options
 
 |Item|Description|
 |----|---------|
@@ -132,12 +136,14 @@ The options available under the *Windows* menu are detailed in the following tab
 |Lines|Moves the vertical splitter to the left-hand edge of the Dashboard, displaying only the lines panels (panels 2 and 3).<br>This can also be achieved by double-clicking at the top of the Lines panel (panel 2).
 |Line Details|Moves the vertical splitter to the left-hand edge of the Dashboard and the horizontal splitter to the top of the Dashboard, displaying only the Line details panel (panel 3).<br>This can also be achieved by double-clicking at the top of the Line details panel (panel 3).
 
-For panel number references, see [Panels](appendix-b-dashbord.md#panels)
+For panel number references, see [Panels](#panels)
 
 
 ### Help Menu
 
-The options available under the *Help menu* are detailed in the table below.
+The options available under the *Help menu* are detailed in [Table 3](#_table-3):
+
+Table: Help menu options
 
 |Item |Description|
 |-----|---------|
@@ -145,7 +151,7 @@ The options available under the *Help menu* are detailed in the table below.
 
 ## Single Function Mode
 
-If the data set only pertains to a single function, then the dashboard displays two panels rather than four (as shown in [](#B-3)). In this situation, the panel on the left displays the detailed view of the function body (equivalent to panel 3 or 4 in panels.md#moveablesplitters"); the panel on the right displays the Lines panel (equivalent to panel 2 in panels.md#moveablesplitters).
+If the data set only pertains to a single function, then the dashboard displays two panels rather than four (as shown in [](#B-3)). In this situation, the panel on the left displays the detailed view of the function body (equivalent to panel 3 or 4 in [](#B-1)); the panel on the right displays the Lines panel (equivalent to panel 2 in [](#B-1)).
 
 <h3 class="example">Example</h3>
 ```apl
