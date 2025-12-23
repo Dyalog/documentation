@@ -99,3 +99,20 @@ A right-click in a pie segment (or on its label) or table row displays a pop-up 
 * **Show Calls** – Breaks down consumption according to the functions/lines that have called the relevant function/line (higher levels of filtering are retained).
 
 * **Up 1 Level** –  Drills up one level (equivalent to clicking on the penultimate breadcrumb in the breadcrumb trail). This option is only included in the pop-up menu when it is possible to drill up.
+
+## Menu Bar
+
+This section details the options available under each of the menu items in the menu bar.
+
+### File Menu
+
+The options available under the *File* menu are detailed in the following table:
+
+|Item |Description|
+|-----|-----------|
+|Open |Opens an explorer window from which an XML file can be selected and analysed.<br>Equivalent to starting the Dashboard with the `-infile` modifier set.|
+|Save |Saves the current dataset.<br>Equivalent to calling the `]Profile` user command with the  `-outfile` modifier set.|
+|Reset|Returns the Dashboard to its the initial state, displaying the initial top-level function in four panels (as shown in Figure #).
+|Exit |Terminates the Dashboard and returns to the Dyalog Session.|
+
+For panel number references, see Section #
