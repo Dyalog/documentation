@@ -85,3 +85,17 @@ Each breadcrumb in the trail has one of the following symbol/highlighting colour
 * An upwards arrow (`↑`) and pink highlighting indicate a "show calls" step has been made, that is, consumption is displayed according to the functions/lines that have called the relevant function/line (see Section ##B3.2).
 
 Clicking a function in the breadcrumb trail displays that function in the panels.
+
+### Right-click Menu
+
+A right-click in a pie segment (or on its label) or table row displays a pop-up menu with the following options, each of which impacts one or more panels of the display:
+
+* **Drill Down** – Drills down one level on the relevant function/line (equivalent to double-clicking on the relevant segment/label/row). This option is only included in the pop-up menu when it is possible to drill down.
+
+* **Make Root** – Only displays consumption that originates in the relevant function/line.
+
+* **Reset** – Returns to the starting position.
+
+* **Show Calls** – Breaks down consumption according to the functions/lines that have called the relevant function/line (higher levels of filtering are retained).
+
+* **Up 1 Level** –  Drills up one level (equivalent to clicking on the penultimate breadcrumb in the breadcrumb trail). This option is only included in the pop-up menu when it is possible to drill up.
