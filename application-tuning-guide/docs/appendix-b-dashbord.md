@@ -134,8 +134,20 @@ For panel number references, see Section
 
 ### Help Menu
 
-The options available under the *Help menu* are detailed in [](#B-3).
+The options available under the *Help menu* are detailed in the table below.
 
 |Item |Description|
 |-----|---------|
 |About|Displays the version number of the `]PROFILE` user command and the corresponding user command framework.
+
+## Single Function Mode
+
+If the data set only pertains to a single function, then the dashboard displays two panels rather than four (as shown in [](#B-3)). In this situation, the panel on the left displays the detailed view of the function body (equivalent to panel 3 or 4 in panels.md#moveablesplitters"); the panel on the right displays the Lines panel (equivalent to panel 2 in panels.md#moveablesplitters).
+
+<h3 class="example">Example</h3>
+```apl
+      )LOAD dfns
+      ]Profile -eqpr="⍴queens 8"
+```
+
+![Dashboard in single function mode](){ #B-3}
