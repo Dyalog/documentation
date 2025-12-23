@@ -51,6 +51,7 @@ nav:
  - introduction.md
  - Data Collection:
    - collection/index.md
+   - collection/before-initiating-the-collection-of-data.md
    - collection/initiating-the-collection-of-data.md
    - collection/stopping-the-collection-of-data.md
    - collection/timer-overhead.md
