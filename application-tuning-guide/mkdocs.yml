@@ -54,7 +54,11 @@ nav:
    - collection/initiating-the-collection-of-data.md
    - collection/stopping-the-collection-of-data.md
    - collection/timer-overhead.md
-
+ - Data Storage:
+   - data-storage/index.md
+   - data-storage/xml-format.md
+   - data-storage/csv-format.md
+   - data-storage/text-format.md
  - Appendix A: appendix-a-syntax-of-profile-user-command.md
  - Appendix B: appendix-b-dashbord.md 
 
