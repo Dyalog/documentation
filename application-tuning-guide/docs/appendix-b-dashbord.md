@@ -132,3 +132,10 @@ The options available under the *Windows* menu are detailed in the following tab
 For panel number references, see Section 
 
 
+### Help Menu
+
+The options available under the *Help menu* are detailed in [](#B-3).
+
+|Item |Description|
+|-----|---------|
+|About|Displays the version number of the `]PROFILE` user command and the corresponding user command framework.
