@@ -25,5 +25,5 @@ returned by `⎕PROFILE`.
 
 For more information on the `⎕PROFILE` system function, see the Dyalog
 APL Language Reference Guide. For more information on the `]Profile`
-user command, see Appendix A.
+user command, see [Appendix A](appendix-a-syntax-of-profile-user-command.md).
 

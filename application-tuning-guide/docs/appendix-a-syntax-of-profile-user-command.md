@@ -6,7 +6,7 @@ The `]Profile` user command is always followed by a report type; modifiers can b
 
 Syntax: ]Profile [reporttype][-avg][-code][-lines]|[-outfile{=name}] [-format{=xml|csv|txt}][-cumpct][-exclusive][-first{=n}|-pct{=n}][-fn{=name}][-infile{=name}][-separators{="decimalsep phrasesep"}][-bias{=t}][-decimal{=n}][-expr{=expression}][-title{=name}]
 
-# Report Types
+## Report Types
 
 The six possible report types are detailed below. If no report type is specified then a default report type is assumed; this is dashboard on the Microsoft Windows operating system and summary on the AIX, Linux and Mac OS operating systems.
 
@@ -19,7 +19,7 @@ The six possible report types are detailed below. If no report type is specified
 |`summary`|Reports the number of calls, total consumption and consumption as a percentage of overall consumption.<br>The `summary` and `calls` report types are the most frequently used reporting tools. <br>This is the default report type on the AIX, Linux and macOS operating systems.|
 |`tree`|Writes the raw data produced by `⎕PROFILE'tree'` to a file for later use. Intended as a tool for storing data using the `-outfile=<name>` modifier, for subsequent reporting using the `-infile=<name>` modifier.|
 
-# Modifiers
+## Modifiers
 
 The report types can be qualified using modifiers. These can, for example, filter the data that is displayed, add optional output columns, read input from a previously saved file or store the results of a command in a file.
 
@@ -67,8 +67,7 @@ Each of the report types can have different combinations of modifiers applied. T
 |-expr= n| Executes the expression specified as the modifier value and replaces any existing â••PROFILE data with that for the specified expression.|
 
 
-# Examples
-
+<h2 class="example">Examples</h2>
 These examples are intended to show at least one use of every modifier.
 
 ```apl

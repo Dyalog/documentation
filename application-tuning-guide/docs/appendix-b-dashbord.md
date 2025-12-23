@@ -132,7 +132,7 @@ The options available under the *Windows* menu are detailed in the following tab
 |Lines|Moves the vertical splitter to the left-hand edge of the Dashboard, displaying only the lines panels (panels 2 and 3).<br>This can also be achieved by double-clicking at the top of the Lines panel (panel 2).
 |Line Details|Moves the vertical splitter to the left-hand edge of the Dashboard and the horizontal splitter to the top of the Dashboard, displaying only the Line details panel (panel 3).<br>This can also be achieved by double-clicking at the top of the Line details panel (panel 3).
 
-For panel number references, see Section 
+For panel number references, see [Panels](appendix-b-dashbord.md#panels)
 
 
 ### Help Menu
