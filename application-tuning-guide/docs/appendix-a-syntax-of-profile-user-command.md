@@ -47,7 +47,8 @@ Each of the report types can have different combinations of modifiers applied. T
 |-separators|y *| |y *|y *|y *|
 |-title**   |y** |y **| y **| y **| y **|
 
-* can only be used when -“format=csv is included
+\* can only be used when -“format=csv is included
+
 ** only relevant when -“format=xml or -“format=txt
 
 |Modifier| Description|
