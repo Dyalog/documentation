@@ -54,6 +54,7 @@ nav:
    - collection/initiating-the-collection-of-data.md
    - collection/stopping-the-collection-of-data.md
    - collection/timer-overhead.md
+ - data-reporting.md 
  - Data Storage:
    - data-storage/index.md
    - data-storage/xml-format.md
