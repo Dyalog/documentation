@@ -19,6 +19,9 @@ The six possible report types are detailed below. If no report type is specified
 |`summary`|Reports the number of calls, total consumption and consumption as a percentage of overall consumption.<br>The `summary` and `calls` report types are the most frequently used reporting tools. <br>This is the default report type on the AIX, Linux and macOS operating systems.|
 |`tree`|Writes the raw data produced by `⎕PROFILE'tree'` to a file for later use. Intended as a tool for storing data using the `-outfile=<name>` modifier, for subsequent reporting using the `-infile=<name>` modifier.|
 
+!!! windows "Dyalog on Microsoft Windows"
+	The Dashboard is only available on Microsoft Windows
+
 ## Modifiers
 
 The report types can be qualified using modifiers. These can, for example, filter the data that is displayed, add optional output columns, read input from a previously saved file or store the results of a command in a file.
