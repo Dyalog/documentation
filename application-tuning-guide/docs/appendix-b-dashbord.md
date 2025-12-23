@@ -116,3 +116,19 @@ The options available under the *File* menu are detailed in the following table:
 |Exit |Terminates the Dashboard and returns to the Dyalog Session.|
 
 For panel number references, see Section #
+
+### Windows Menu
+
+The options available under the *Windows* menu are detailed in the following table:
+
+|Item|Description|
+|----|---------|
+|Reset|Positions the vertical and horizontal splitters in their default position, as seen when first opening the Dashboard, and display the first function in the breadcrumb trail.|
+|Functions|Moves the vertical splitter to the right hand edge of the Dashboard, displaying only the functions panels (panels 1 and 4).<br>This can also be achieved by double-clicking at the top of the Functions panel (panel 1).
+|Function Details|Moves the vertical splitter to the right-hand edge of the Dashboard and the horizontal splitter to the top of the Dashboard, displaying only the Function details panel (panel 4).<br>This can also be achieved by double-clicking at the top of the Function details panel (panel 4).
+|Lines|Moves the vertical splitter to the left-hand edge of the Dashboard, displaying only the lines panels (panels 2 and 3).<br>This can also be achieved by double-clicking at the top of the Lines panel (panel 2).
+|Line Details|Moves the vertical splitter to the left-hand edge of the Dashboard and the horizontal splitter to the top of the Dashboard, displaying only the Line details panel (panel 3).<br>This can also be achieved by double-clicking at the top of the Line details panel (panel 3).
+
+For panel number references, see Section 
+
+
