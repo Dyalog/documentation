@@ -1,4 +1,4 @@
-site_name: UNIX Installation and Configuration Guide
+site_name: Application Tuning Guide
 theme:
   favicon: documentation-assets/images/favicon-32.png
   logo: documentation-assets/images/dyalog-logo_white.svg
