@@ -12,9 +12,11 @@ The Dashboard will open and display an  overview of the data currently stored by
 
 ## Panels
 
-The main body of the Dashboard is divided into four panels by moveable splitters, as shown in Figure
+The main body of the Dashboard is divided into four panels by moveable splitters, as shown in [](#B-1).
 
-The panels shown in the figure above are:
+![Dashboard with moveable splitters in their default positions](img/dashboard_labelled.png){ #B-1 }
+
+The panels shown in [](#B-1) above are:
 
 * panel 1 – Functions panel<br />Consumption broken down by function. Displayed as a pie chart by default, but can be displayed as a table using the drop-down selector in the top right corner.
 
@@ -24,7 +26,7 @@ The panels shown in the figure above are:
 
 * panel 4 – Function details panel<br />Only populated when a function is clicked in panel 1; displays the code of the selected function.<br />
 
-In the figure above, the Function details panel was populated by clicking on the pie segment for `#.SharpPlot.Plot` in the Functions panel and the Line Details panel was populated by clicking on the row for `#.SharpPlot.Plot[174]` in the table in the Lines panel.
+In [](#B-1) above, the Function details panel was populated by clicking on the pie segment for `#.SharpPlot.Plot` in the Functions panel and the Line Details panel was populated by clicking on the row for `#.SharpPlot.Plot[174]` in the table in the Lines panel.
 
 ## Display Options
 
@@ -73,8 +75,9 @@ A left-click in a pie segment (or on its label) or table row displays the source
 
 ### Breadcrumb Trail
 
-Immediately above the panelled body of the Dashboard (see Section ##Panels) is a breadcrumb trail describing the function currently displayed in the panels. At the end of this breadcrumb trail is a label that reports the percentage of the overall consumption that this function accounts for. Figure B-2  shows an example breadcrumb trail.
+Immediately above the panelled body of the Dashboard (see Section ##Panels) is a breadcrumb trail describing the function currently displayed in the panels. At the end of this breadcrumb trail is a label that reports the percentage of the overall consumption that this function accounts for. [](#B-2)  shows an example breadcrumb trail.
 
+![Example breadcrumb trail in the Dashboard](img/dashboard_breadcrumbs.jpg){ #B-2 }
 
 Each breadcrumb in the trail has one of the following symbol/highlighting colour combinations:
 
@@ -115,7 +118,7 @@ The options available under the *File* menu are detailed in the following table:
 |Reset|Returns the Dashboard to its the initial state, displaying the initial top-level function in four panels (as shown in Figure #).
 |Exit |Terminates the Dashboard and returns to the Dyalog Session.|
 
-For panel number references, see Section #
+For panel number references, see [Panels](appendix-b-dashbord.md#panels)
 
 ### Windows Menu
 
@@ -150,4 +153,4 @@ If the data set only pertains to a single function, then the dashboard displays 
       ]Profile -eqpr="⍴queens 8"
 ```
 
-![Dashboard in single function mode](){ #B-3}
+![Dashboard in single function mode](img/dashboard_singlefn.png){ #B-3}
