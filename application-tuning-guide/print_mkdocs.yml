@@ -1,4 +1,4 @@
-site_name: UNIX Installation and Configuration Guide
+site_name: Application Tuning Guide
 theme:
   favicon: documentation-assets/images/favicon-32.png
   logo: documentation-assets/images/dyalog-logo_white.svg
@@ -45,3 +45,14 @@ markdown_extensions:
   - toc:
       title: On this page
 nav:
+ - index.md
+ - Introduction: introduction.md
+ - Data Collection: data-collection.md
+ - Data Reporting: data-reporting.md
+ - Data Storage:
+   - data-storage/index.md
+   - XML Format: data-storage/xml-format.md
+   - CSV Format: data-storage/csv-format.md
+   - Text Format: data-storage/text-format.md
+ - Appendix A: appendix-a-syntax-of-profile-user-command.md
+ - Appendix B: appendix-b-dashbord.md 
