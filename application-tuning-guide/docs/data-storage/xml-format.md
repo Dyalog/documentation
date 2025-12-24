@@ -1,6 +1,6 @@
 <h1 class="heading"><span class="name">XML Format</span></h1>
 
-Using the XML format generates very large files, but the content can be processed using `⎕SM` or many external tools (for more information on `⎕SM`, see the Dyalog APL Language Reference Guide`). However, `tree` reports in XML format can be used as input to the `]Profile` user command (using the `-nfile` modifier) and are the only way to store a complete data set that can be reused for reporting at a later time. For example, entering the following command: 
+Using the XML format generates very large files, but the content can be processed using `⎕SM` or many external tools (for more information on `⎕SM`, see the [Language Reference Guide]( ../../language-reference-guide)). However, `tree` reports in XML format can be used as input to the `]Profile` user command (using the `-nfile` modifier) and are the only way to store a complete data set that can be reused for reporting at a later time. For example, entering the following command: 
 ```apl
       ]Profile tree -outfile=c:\temp\one.xml
 ```
@@ -15,7 +15,7 @@ saves the tree report in a file called `one.xml` in the `c:\temp` directory. Thi
 ```
         The XML format produced by the `]Profile` user command comprises an outer `<ProfileData>` element; this contains a `<ProfileSettings>` element followed by a number of `<ProfileEntry>` elements, one for each row of output data.
         The `<ProfileSettings>` element contains the version number of the `]Profile` user command that produced the file, the report title, information about timer cost and other information, including the total registered time for the report.
-        Each `<ProfileEntry>` element contains an element for each output column, depending on the command and switches, selected from the set listed in [](#Table)
+        Each `<ProfileEntry>` element contains an element for each output column, depending on the command and switches, selected from the set listed in [](#_table-1)
 
 Table: Elements that can be contained within the `ProfileEntry` element
 

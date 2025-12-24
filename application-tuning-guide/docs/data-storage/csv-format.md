@@ -1,6 +1,6 @@
 <h1 class="heading"><span class="name">CSV Format</span></h1>
 
-Files saved in CSV format can be used by `⎕CSV` and many external tools (for more information on `⎕CSV`, see the Dyalog APL Language Reference Guide`). For example:
+Files saved in CSV format can be used by `⎕CSV` and many external tools (for more information on `⎕CSV`, see the [Language Reference Guide]( ../../language-reference-guide)`). For example:
 ```apl
       ]Profile data -outfile=c:\temp\data.csv -format=csv -separators='.,'
 ```
@@ -20,7 +20,7 @@ creates a CSV file using a period as the decimal separator and a comma as the fi
 
 <h2 class="example">Examples</h2>
 
-This section contains a few examples of output files created using `-format=csv` (all files are encoded as UTF-8). The first row of each file contains column names, selected from the same list as the element names that can appear in XML files (see <>).
+This section contains a few examples of output files created using `-format=csv` (all files are encoded as UTF-8). The first row of each file contains column names, selected from the same list as the element names that can appear in XML files (see [XML Format](./xml-format.md)).
 
 ```apl
      ]Profile tree -outfile=data1.csv -format=csv

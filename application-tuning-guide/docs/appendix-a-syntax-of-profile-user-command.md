@@ -13,9 +13,9 @@ The six possible report types are detailed below. If no report type is specified
 |Report Type|Description|
 |-----------|-----------|
 |`calls`|Shows how the consumption of a named function (the `-fn` modifier is required) is broken down by calling function. <br>The `summary` and `calls` report types are the most frequently used reporting tools.|
-|`dashboard`|Opens the Dashboard, a graphical overview of the profiling data collected by the `⎕PROFILE` system function. For more information on the Dashboard, see Appendix B.
+|`dashboard`|Opens the Dashboard, a graphical overview of the profiling data collected by the `⎕PROFILE` system function. For more information on the Dashboard, see [Appendix B](./appendix-b-dashbord.md)
 |`data`|Writes the raw data produced by `⎕PROFILE'data'` to a file for use with tools other than `]Profile`, for example, Microsoft Excel.|
-|`state`|Displays the current profiling state of `⎕PROFILE` (see Section).|
+|`state`|Displays the current profiling state of `⎕PROFILE` (see [Collecting Data]( ./data-collection.md#collecting-data)).|
 |`summary`|Reports the number of calls, total consumption and consumption as a percentage of overall consumption.<br>The `summary` and `calls` report types are the most frequently used reporting tools. <br>This is the default report type on the AIX, Linux and macOS operating systems.|
 |`tree`|Writes the raw data produced by `⎕PROFILE'tree'` to a file for later use. Intended as a tool for storing data using the `-outfile=<name>` modifier, for subsequent reporting using the `-infile=<name>` modifier.|
 
@@ -144,7 +144,7 @@ The `-outfile` modifier allows output to be directed to a file instead of displa
 ```apl
       ]Profile data -outfile=c:\temp\data.csv -format=csv &#8209;separators='.,'
 ```
-creates a CSV file using a period as the decimal separator and a comma as the field separator. For more information on the `-outfile` modifier, see data_storage.
+creates a CSV file using a period as the decimal separator and a comma as the field separator. For more information on the `-outfile` modifier, see [Data Storage](../data-storage).
 
 If output is directed to an XML or text file, then the `-title` modifier can be used to specify a title that will be displayed when viewing that file in the Dashboard:
 ```apl
@@ -157,4 +157,4 @@ If the `-title` modifier is omitted then the specified expression is used as the
 The `-infile` modifier loads a previously-saved dataset for analysis – specifying this does not destroy any existing `⎕PROFILE` data:
 `]Profile -infile="c:\temp\test.xml"`
 
-This only applies when the dataset being loaded was a tree report saved in XML format (see Section 5.1).
+This only applies when the dataset being loaded was a tree report saved in [XML format]( ./data-storage/xml-format.md).

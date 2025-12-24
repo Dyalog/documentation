@@ -117,7 +117,7 @@ Table: File menu options
 |-----|-----------|
 |Open |Opens an explorer window from which an XML file can be selected and analysed.<br>Equivalent to starting the Dashboard with the `-infile` modifier set.|
 |Save |Saves the current dataset.<br>Equivalent to calling the `]Profile` user command with the  `-outfile` modifier set.|
-|Reset|Returns the Dashboard to its the initial state, displaying the initial top-level function in four panels (as shown in Figure #).
+|Reset|Returns the Dashboard to its the initial state, displaying the initial top-level function in four panels (as shown in [](./data-reporting#4-1 )).
 |Exit |Terminates the Dashboard and returns to the Dyalog Session.|
 
 For panel number references, see [Panels](#panels)

@@ -3,11 +3,11 @@
 !!! Warning "Warning"
 	The `⎕PROFILE` system function can collect very large quantities of data. This means that, to profile a large application or to save a dataset as an XML file, the workspace size might need to be increased significantly.
 
-For complete documentation of the `⎕PROFILE` system function, see the Dyalog APL Language Reference Guide.
+For complete documentation of the `⎕PROFILE` system function, see the [Language Reference Guide]( ../language-reference-guide ).
 
 ## Before Initiating the Collection of Data
 
-To improve the accuracy of the data and minimise the impact of timer overhead (see [Timer Overhead]()):
+To improve the accuracy of the data and minimise the impact of timer overhead (see [Timer Overhead](#timer-overhead)):
 
 * Switch off as much hardware as possible, including peripherals and network connections.
 * Switch off as many other tasks and processes as possible, including anti-virus software, firewalls, internet services and background tasks.

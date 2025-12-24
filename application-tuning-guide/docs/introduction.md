@@ -23,7 +23,6 @@ returned by `⎕PROFILE`.
 	precision timing, calling tree analysis, and superior dfn and
 	recursive code handling.
 
-For more information on the `⎕PROFILE` system function, see the Dyalog
-APL Language Reference Guide. For more information on the `]Profile`
-user command, see [Appendix A](appendix-a-syntax-of-profile-user-command.md).
+For more information on the `⎕PROFILE` system function, see the [Language Reference Guide](../language-reference-guide).
+For more information on the `]Profile` user command, see [Appendix A](appendix-a-syntax-of-profile-user-command.md).
 

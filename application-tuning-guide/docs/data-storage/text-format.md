@@ -1,6 +1,6 @@
 <h1 class="heading"><span class="name">Text Format</span></h1>
 
-If the text format is used, the output is written to the file as it would have been displayed in the Session. The content of such plain text files can then be further processed using external text processing tools, or manipulated using APL (after using <code>⎕NGET</code> to import it – for more information on `⎕NGET`, see the Dyalog APL Language Reference Guide).
+If the text format is used, the output is written to the file as it would have been displayed in the Session. The content of such plain text files can then be further processed using external text processing tools, or manipulated using APL (after using <code>⎕NGET</code> to import it – for more information on `⎕NGET`, see the [Language Reference Guide]( ../../language-reference-guide)).
 
 ```apl
       ]Profile summary
