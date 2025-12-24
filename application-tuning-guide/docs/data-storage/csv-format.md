@@ -1,6 +1,6 @@
 <h1 class="heading"><span class="name">CSV Format</span></h1>
 
-Files saved in CSV format can be used by `⎕CSV` and many external tools (for more information on `⎕CSV`, see the [Language Reference Guide](../../../language-reference-guide)`). For example:
+Files saved in CSV format can be used by [`⎕CSV`](../../../language-reference-guide/system-functions/csv) and many external tools. For example:
 ```apl
       ]Profile data -outfile=c:\temp\data.csv -format=csv -separators='.,'
 ```
