@@ -1,6 +1,6 @@
 <h1 class="heading"><span class="name">XML Format</span></h1>
 
-Using the XML format generates very large files, but the content can be processed using `⎕XML` or many external tools (for more information on `⎕XML`, see the [Language Reference Guide]( ../../language-reference-guide)). However, `tree` reports in XML format can be used as input to the `]Profile` user command (using the `-nfile` modifier) and are the only way to store a complete data set that can be reused for reporting at a later time. For example, entering the following command: 
+Using the XML format generates very large files, but the content can be processed using `⎕XML` or many external tools (for more information on `⎕XML`, see the [Language Reference Guide](../../../language-reference-guide)). However, `tree` reports in XML format can be used as input to the `]Profile` user command (using the `-nfile` modifier) and are the only way to store a complete data set that can be reused for reporting at a later time. For example, entering the following command: 
 ```apl
       ]Profile tree -outfile=c:\temp\one.xml
 ```
