@@ -7,7 +7,7 @@ search:
 
 |---------------------------------------------------|-------------------------------------------------|-------------------------------------------------------------|
 |[Detach](../methodorevents/detach.md)              |[ChooseFont](../methodorevents/choosefont.md)    |[GetTextSize](../methodorevents/gettextsize.md)              |
-|[Animate](../methodorevents/animate.md)            |[GetFocus](../methodorevents/getfocus.md)        |[ShowSIP](../methodorevents/showsip.md)                      |
+|[Animate](../methodorevents/animate.md)            |[GetFocus](../methodorevents/getfocus.md)        ||
 |[GetFocusObj](../methodorevents/getfocusobj.md)    |[DelRow](../methodorevents/delrow.md)            |[DelCol](../methodorevents/delcol.md)                        |
 |[SetCellType](../methodorevents/setcelltype.md)    |[RowChange](../methodorevents/rowchange.md)      |[ColChange](../methodorevents/colchange.md)                  |
 |[Undo](../methodorevents/undo.md)                  |[SetCellSet](../methodorevents/setcellset.md)    |[RowSetVisibleDepth](../methodorevents/rowsetvisibledepth.md)|
