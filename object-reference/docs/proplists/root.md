@@ -13,7 +13,7 @@ search:
 |[YRange](../properties/yrange.md)          |[XRange](../properties/xrange.md)                |[Data](../properties/data.md)              |
 |[TextSize](../properties/textsize.md)      |[Yield](../properties/yield.md)                  |[EdgeStyle](../properties/edgestyle.md)    |
 |[HintObj](../properties/hintobj.md)        |[TipObj](../properties/tipobj.md)                |[Translate](../properties/translate.md)    |
-|[APLVersion](../properties/aplversion.md)  |[KeepOnClose](../properties/keeponclose.md)|
-|[OLEControls](../properties/olecontrols.md)|[OLEServers](../properties/oleservers.md)        |[LastError](../properties/lasterror.md)    |
-|[RadiusMode](../properties/radiusmode.md)  |[MethodList](../properties/methodlist.md)        |[ChildList](../properties/childlist.md)    |
-|[EventList](../properties/eventlist.md)    |[PropList](../properties/proplist.md)            |&nbsp;                                     |
+|[APLVersion](../properties/aplversion.md)  |[KeepOnClose](../properties/keeponclose.md)      |[OLEControls](../properties/olecontrols.md)|
+|[OLEServers](../properties/oleservers.md)        |[LastError](../properties/lasterror.md)    |[RadiusMode](../properties/radiusmode.md)  |
+|[MethodList](../properties/methodlist.md)        |[ChildList](../properties/childlist.md)    |[EventList](../properties/eventlist.md)    |
+|[PropList](../properties/proplist.md)            |&nbsp;                                     |&nbsp;                                     |

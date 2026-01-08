@@ -11,4 +11,4 @@ search:
 |[AddChildren](../methodorevents/addchildren.md)    |[DeleteChildren](../methodorevents/deletechildren.md)|[GetParentItem](../methodorevents/getparentitem.md)|
 |[GetItemHandle](../methodorevents/getitemhandle.md)|[SetItemImage](../methodorevents/setitemimage.md)    |[ShowItem](../methodorevents/showitem.md)          |
 |[GetTextSize](../methodorevents/gettextsize.md)    |[Animate](../methodorevents/animate.md)              |[GetFocus](../methodorevents/getfocus.md)          |
-||[GetFocusObj](../methodorevents/getfocusobj.md)      |&nbsp;                                             |
+|[GetFocusObj](../methodorevents/getfocusobj.md)    |&nbsp;                                               |&nbsp;                                             |
