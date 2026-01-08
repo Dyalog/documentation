@@ -1008,6 +1008,9 @@ def fix_links_html(html: str, version: str = None) -> str:
         if href.startswith("http"):  # Off-site link: leave unchanged
             return href
 
+        if href.startswith("#"):  # Pure anchor link: leave unchanged
+            return href
+
         # Check if this is a /files/ link that should be converted to external URL
         # Look for patterns like ../files/ or ../../files/ etc.
         if "/files/" in href:
