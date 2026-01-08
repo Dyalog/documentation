@@ -13,7 +13,7 @@ search:
 |[Step](../properties/step.md)                |[VScroll](../properties/vscroll.md)            |[HScroll](../properties/hscroll.md)                |
 |[Sizeable](../properties/sizeable.md)        |[Moveable](../properties/moveable.md)          |[SysMenu](../properties/sysmenu.md)                |
 |[MaxButton](../properties/maxbutton.md)      |[MinButton](../properties/minbutton.md)        |[HelpButton](../properties/helpbutton.md)          |
-|[OKButton](../properties/okbutton.md)        |[SIPResize](../properties/sipresize.md)            |
+|[OKButton](../properties/okbutton.md)        |
 |[FontObj](../properties/fontobj.md)          |[BCol](../properties/bcol.md)                  |[Picture](../properties/picture.md)                |
 |[OnTop](../properties/ontop.md)              |[IconObj](../properties/iconobj.md)            |[CursorObj](../properties/cursorobj.md)            |
 |[AutoConf](../properties/autoconf.md)        |[YRange](../properties/yrange.md)              |[XRange](../properties/xrange.md)                  |
