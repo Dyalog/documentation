@@ -1,5 +1,25 @@
 <h1 class="heading"><span class="name">Glyphs</span></h1>
 
+## Overview
+
+| Category | Glyphs |
+|-|-|
+| [Arrows](#arrows) | ` ← []← ()← → ↑ ↓ `  |
+| [Circles](#circles) | `○ ∘ ∘. ⍤ ⍎ ⍕ ⍝ ⍛ ⍥ ⊖ ⍉ ⌽ ⍟` |
+| [Diaereses](#diaereses) | `¨ ⍨ ⍤ ⍣ ⍥` |
+| [Dots and Commas](#dots-and-commas) | `. , ∘. : :: ÷ ⍠ ⌹ ! ? ⍪ ;` |
+| [Enclosures](#enclosures) | ` [] () {} '' ` |
+| [Horseshoes](#horseshoes) | ` ⊂ ⊃ ∩ ∪ ⊆`  |
+| [Letterforms](#letterforms) | `@ & ⍺ ⍺⍺ ⍵ ⍵⍵ ∆ ⍙ ∊ ⍷ ⍳ ⍸ ⍴` |
+| [Lines – Diagonal](#lines-diagonal) | `/ \ ⌿ ⍀ ≢ ≠ # ## × ⍉` |
+| <a href="#lines-horizontal-_">Lines – Horizontal:</a> | ` ¯ - _ = ≡ ≠ ≢ ⌸ # ## + ⌈ ⊖ ⍪ ⌿ ⍀ ⊢ ⊣ ⍎ ⍕ ⊤ ⌶ ⊥ ⍛ ≤ ≥ ⊆ ⍸ ⍷ ⍙ ⌊` |
+| [Lines – Vertical](#lines-vertical) | `| + ⌈ ⌊ ⊤ ⌶ ⊥ ⌽ ⍋ ⍒ ⍎ ⍕` |
+| [Rectangles](#rectangles) | `⌷ ⎕ ⎕ ⍞ ⍠ ⌹ ⌸ ⌺` |
+| [Stars](#stars) | ` * ⍣ ⍟` |
+| [Tildes](#tildes) | `~ ⍨ ⍲ ⍱ ⍬`  |
+| [Triangles](#triangles) | `∆ ∇ ∇∇ ⍋ ⍒ ⍙` |
+| [Wedges and Diamonds](#wedges) | `< > ∧ ∨ ≤ ≥ ⍲ ⍱ ⋄ ⌺` |
+
 ## Arrows: ` ← → ↑ ↓ `
 
 |Glyph|Glyph Name|Uses
@@ -217,7 +237,7 @@
 |`⍒`|Grade Down|[Grade Down](primitive-functions/grade-down.md), [Dyadic Grade Down](primitive-functions/dyadic-grade-down.md)
 |`⍙`|Delta Underbar|[name character](../../programming-reference-guide/introduction/names)
 
-## Wedges: ` < > ∧ ∨ `
+## Wedges and Diamonds: ` < > ∧ ∨ `
 
 |Glyph|Glyph Name|Uses
 |---|---|---|
