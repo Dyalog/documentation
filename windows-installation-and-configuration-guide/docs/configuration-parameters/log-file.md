@@ -1,11 +1,13 @@
 <h1 class="heading"><span class="name">Log_File</span></h1>
 
-This parameter specifies the pathname to the Session log file; it can be absolute or relative to the working directory.
+This parameter specifies the path (absolute or relative to the working directory) and name of the Session log file.
 
-The Session log file is not interchangeable between different versions/editions/widths of Dyalog – this means that opening a new instance of Dyalog will overwrite any contents of the Session log file populated by an already‑running instance. However, if the LOG_FILE parameter contains a '`*`' (for example,  `JD.*.dlf` ) then at start-up Dyalog will attempt to open, and then **lock**, a file where the '`*`' has been replaced with an increasing integer value (starting with 000, so `JD.000.dlf`, `JD.001.dlf` etc). If said file cannot be opened and locked, the value will be incremented. The process will fail, and no log will be used if the extension number would exceed 999.
+Session log files are not interchangeable between different versions/editions/widths of Dyalog. In addition, starting multiple instances of a Dyalog interpreter with the same log file name will only create a log file for the first instance started.
 
-The default is `Users\<username>\Documents\Dyalog APL-<bits> <DyalogMajor>.<DyalogMinor> <Unicode|Classic> Files\default_*.dlf`, for example, `Users\Bob\Documents\Dyalog APL-64 19.0 Unicode Files\default_*.dlf`
+This is mitigated by including a __\*__ character in the default Session log’s filename, for example, __log.\*.dlfx__ or __log\*.dlfx__. In this situation, at start-up, Dyalog attempts to open, and then lock, a file in which the __\*__ is replaced with an increasing integer value starting from __000__, for example, __log\*.dlfx__ results in files called __log000.dlfx__, __log001.dlfx__, and so on. If a file cannot be opened and locked, the value is incremented. This means that starting multiple instances of the same interpreter simultaneously will create and open multiple log files with different values. If one or more instances are then closed, starting a new instance will re-open the closed log file for that interpreter that has the lowest value. The process fails, and no log will be created or used, if the value would exceed __999__.
 
-Note that the LogFile property of `⎕SE` reports the name of the log file that is being used.
+NOTE: The LogFile property of `⎕SE` reports the name of the log file that is being used.
+
+The default is __<DocumentsDirectory\>\Dyalog APL-<bits\> <DyalogMajor\><DyalogMinor\> <Unicode|Classic\> Files\default_\*.dlfx__, for example, __C:\Users\Bob\Documents\Dyalog APL-64 20.0 Unicode Files\default_\*.dlfx__
 
 See also [Use log file](../configuring-the-ide/configuration-dialog/configuration-dialog-session-tab.md).
