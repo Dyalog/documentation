@@ -8,11 +8,11 @@
 | [Circles](#circles) | `○ ∘ ∘. ⍤ ⍎ ⍕ ⍝ ⍛ ⍥ ⊖ ⍉ ⌽ ⍟` |
 | [Diaereses](#diaereses) | `¨ ⍨ ⍤ ⍣ ⍥` |
 | [Dots and Commas](#dots-and-commas) | `. , ∘. : :: ÷ ⍠ ⌹ ! ? ⍪ ;` |
-| [Enclosures](#enclosures) | ` [] () {} '' ` |
+| [Enclosures](#enclosures) | ` [] []← () ()← {} '' ` |
 | [Horseshoes](#horseshoes) | ` ⊂ ⊃ ∩ ∪ ⊆`  |
 | [Letterforms](#letterforms) | `@ & ⍺ ⍺⍺ ⍵ ⍵⍵ ∆ ⍙ ∊ ⍷ ⍳ ⍸ ⍴` |
 | [Lines – Diagonal](#lines-diagonal) | `/ \ ⌿ ⍀ ≢ ≠ # ## × ⍉` |
-| <a href="#lines-horizontal-_">Lines – Horizontal:</a> | ` ¯ - _ = ≡ ≠ ≢ ⌸ # ## + ⌈ ⊖ ⍪ ⌿ ⍀ ⊢ ⊣ ⍎ ⍕ ⊤ ⌶ ⊥ ⍛ ≤ ≥ ⊆ ⍸ ⍷ ⍙ ⌊` |
+| [Lines – Horizontal:(#lines-horizontal-_) | ` ¯ - _ = ≡ ≠ ≢ ⌸ # ## + ⌈ ⊖ ⍪ ⌿ ⍀ ⊢ ⊣ ⍎ ⍕ ⊤ ⌶ ⊥ ⍛ ≤ ≥ ⊆ ⍸ ⍷ ⍙ ⌊` |
 | [Lines – Vertical](#lines-vertical) | `| + ⌈ ⌊ ⊤ ⌶ ⊥ ⌽ ⍋ ⍒ ⍎ ⍕` |
 | [Rectangles](#rectangles) | `⌷ ⎕ ⎕ ⍞ ⍠ ⌹ ⌸ ⌺` |
 | [Stars](#stars) | ` * ⍣ ⍟` |
