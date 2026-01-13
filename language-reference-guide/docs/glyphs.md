@@ -12,7 +12,7 @@
 | [Horseshoes](#horseshoes) | ` ⊂ ⊃ ∩ ∪ ⊆`  |
 | [Letterforms](#letterforms) | `@ & ⍺ ⍺⍺ ⍵ ⍵⍵ ∆ ⍙ ∊ ⍷ ⍳ ⍸ ⍴` |
 | [Lines – Diagonal](#lines-diagonal) | `/ \ ⌿ ⍀ ≢ ≠ # ## × ⍉` |
-| [Lines – Horizontal:(#lines-horizontal-_) | ` ¯ - _ = ≡ ≠ ≢ ⌸ # ## + ⌈ ⊖ ⍪ ⌿ ⍀ ⊢ ⊣ ⍎ ⍕ ⊤ ⌶ ⊥ ⍛ ≤ ≥ ⊆ ⍸ ⍷ ⍙ ⌊` |
+| [Lines – Horizontal](#lines-horizontal-_) | ` ¯ - _ = ≡ ≠ ≢ ⌸ # ## + ⌈ ⊖ ⍪ ⌿ ⍀ ⊢ ⊣ ⍎ ⍕ ⊤ ⌶ ⊥ ⍛ ≤ ≥ ⊆ ⍸ ⍷ ⍙ ⌊` |
 | [Lines – Vertical](#lines-vertical) | `| + ⌈ ⌊ ⊤ ⌶ ⊥ ⌽ ⍋ ⍒ ⍎ ⍕` |
 | [Rectangles](#rectangles) | `⌷ ⎕ ⎕ ⍞ ⍠ ⌹ ⌸ ⌺` |
 | [Stars](#stars) | ` * ⍣ ⍟` |
