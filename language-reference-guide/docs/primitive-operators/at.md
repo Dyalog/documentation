@@ -26,9 +26,12 @@ The result `R` is the same as `Y` but with the items specified by `g` substitute
 
 Replace the 2nd and 4th items of `⍳5`:
 ```apl
-      (10 20@2 4)⍳5   ⍝ [^1]
+      (10 20@2 4)⍳5
 1 10 3 20 5
+```
 
+The parentheses in the previous example are included to aid comprehension but are not required as the array `2 4` binds to the `@` operator rather than the `⍳` function due to [operator-array binding being stronger than function-array binding](programming-reference-guide/introduction/binding-strength):
+```apl
       10 20@2 4⍳5
 1 10 3 20 5
 ```
@@ -159,7 +162,4 @@ Replace odd items of `⍳5` with themselves reversed:
 ```apl
       ⌽@(2∘|)⍳5
 5 2 3 4 1
-
 ```
-
-[^1]: Note that the expression does not require parentheses because without them, the array 2 4 binds anyway to the @ operator rather than to the ⍳ function.
