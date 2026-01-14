@@ -180,7 +180,7 @@ Split a vector with a function that can be applied either monadically (in which 
 ┌───┬───────┬─────┐
 │I S│EAT ING│RATES│
 └───┴───────┴─────┘
-      ' 'SPLIT TEXT  ⍝ Split at occurences of left argument
+      ' 'Split Text  ⍝ Split at occurences of left argument
 ┌──┬─────┬─────────┐
 │,I│S,EAT│ING,RATES│
 └──┴─────┴─────────┘
