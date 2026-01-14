@@ -4,9 +4,95 @@ search:
 ---
 <h1 class="heading"><span class="name">System Functions (by Category)</span></h1>
 
-The following tables list the system functions divided into appropriate categories.
+## System Functions by Subject
 
-## Settings Affecting Behaviour of Primitive Functions
+The following tables list the system functions (a collective term for system constants, variables, functions, and operators) divided into appropriate categories by usage.
+
+The dyadic operator `⎕OPT` is unique in that it modifies the behaviour of other system functions (and function derived from system operators), effectively providing them with additional option arguments.
+
+### Session Information and Management
+
+These provide information on, or control, the execution environment.
+
+|Name                   |Description                |Form|
+|-----------------------|---------------------------|----|
+|[`⎕AI`](ai.md)      |Account Information        |Constant|
+|[`⎕AN`](an.md)      |Account Name               |Constant|
+|[`⎕CLEAR`](clear.md)|Clear workspace (WS)       |Constant|
+|[`⎕CY`](cy.md)      |Copy objects into active WS|Function|
+|[`⎕LOAD`](load.md)  |Load a saved WS            |Function|
+|[`⎕OFF`](off.md)    |End the session            |Constant|
+|[`⎕SAVE`](save.md)  |Save the active WS         |Function|
+
+### Workspace
+
+These provide information on, and control, the current workspace and its contents.
+
+|Name     |Description              |Form|
+|---------|-------------------------|-----|
+|[`⎕EX`](ex.md)     |Expunge objects         |Monadic function|
+|[`⎕LX`](lx.md)    |Latent Expression        |Variable|
+|[`⎕NC`](nc.md)    |Name Classification      |Monadic function|
+|[`⎕NL`](nl.md)    |Name List                |Monadic function|
+|[`⎕SHADOW`](shadow.md)|Shadow names         |Monadic function|
+|[`⎕SIZE`](size.md)  |Size of objects        |Monadic function|
+|[`⎕WA`](wa.md)    |Workspace Available      |Constant|
+|[`⎕WSID`](wsid.md)  |Workspace Identification|Variable|
+
+### Manipulating Workspace Contents
+
+These are tools that allow you perform development environment actions under program control.
+
+|Name      |Description             |Form|
+|----------|------------------------|-----|
+|[`⎕ED`](ed.md)     |Edit one or more objects|Ambivalent function|
+|[`⎕EX`](ex.md)     |Expunge objects         |Monadic function|
+|[`⎕LOCK`](lock.md)   |Lock a function       |Ambivalent function|
+|[`⎕MONITOR`](set-monitor.md)|Monitor set    |Dyadic function|
+|[`⎕MONITOR`](query-monitor.md)|Monitor query|Monadic function|
+|[`⎕OR`](or.md)     |Object Representation   |Monadic function|
+|[`⎕PROFILE`](profile.md)|Profile Application|Ambivalent function|
+|[`⎕REFS`](refs.md)   |Local References      |Ambivalent function|
+|[`⎕STOP`](set-stop.md)   |Set Stop vector   |Dyadic function|
+|[`⎕STOP`](query-stop.md)   |Query Stop vector|Monadic function|
+|[`⎕TRACE`](set-trace.md)  |Set Trace vector  |Dyadic function|
+|[`⎕TRACE`](query-trace.md)  |Query Trace vector|Monadic function|
+
+### Namespaces and Objects
+
+These are facilities to create, manipulate, and navigate namespaces and other objects, and for object oriented programming.
+
+|Name        |Description   |Form|
+|------------|--------------|-----|
+|[`⎕BASE`](base.md)     |Base Class   |Reference|
+|[`⎕CLASS`](class.md)    |Class       |Monadic function|
+|[`⎕CS`](cs.md)       |Change Space   |Monadic function|
+|[`⎕DF`](df.md)       |Display Format |Monadic function|
+|[`⎕FIX`](fix.md)      |Fix           |Ambivalent function|
+|[`⎕INSTANCES`](instances.md)|Instances|Monadic function|
+|[`⎕NEW`](new.md)      |New Instance  |Monadic function|
+|[`⎕NS`](ns.md)       |Namespace      |Ambivalent function|
+|[`⎕THIS`](this.md)     |Self-reference|Reference|
+|[`⎕VGET`](vget.md)     |Value Get    |Ambivalent function|
+|[`⎕VSET`](vset.md)     |Value Set    |Ambivalent function|
+
+### Built-in Objects and Windows GUI
+
+These are facilities for dealing with built-in objects. They mostly represent Microsoft Windows GUI elements, although a few other built-in objects are cross-platform and/or do not relate to the graphical interface.
+
+|Name     |Description                |Form|
+|---------|---------------------------|-----|
+|[`⎕DQ`](dq.md)    |Await and process events   |Monadic function|
+|[`⎕NQ`](nq.md)    |Place an event on the Queue|Ambivalent function|
+|[`⎕WC`](wc.md)    |Create GUI object          |Ambivalent function|
+|[`⎕WG`](wg.md)    |Get GUI object properties  |Ambivalent function|
+|[`⎕WN`](wn.md)    |Query GUI object Names     |Ambivalent function|
+|[`⎕WS`](ws.md)    |Set GUI object properties  |Ambivalent function|
+|[`⎕WX`](wx.md)    |Expose GUI property names  |Variable|
+
+### Modifying Language Behaviour
+
+Certain primitives and system functions have behaviour that is customised globally via a set of system variables. They are: 
 
 |Name  |Description                              |
 |------|-----------------------------------------|
@@ -19,278 +105,255 @@ The following tables list the system functions divided into appropriate categori
 |[`⎕PP`](pp.md) |Print Precision              |
 |[`⎕RL`](rl.md) |Random Link                  |
 
-The following table describes the dependencies that exist between functions, operators and these system variables.
+The following table describes the dependencies that exist between language elements and these system variables.
 
 Table: Implicit Arguments {: #Implicit_Arguments }
 
-|System Variable|Monadic Functions|Dyadic Functions|Operators|
+|System Variable|Monadic Functions|Dyadic Functions|Other|
 |---|---|---|---|
-|`⎕CT, ⎕DCT`|`⌈ ⌊ ∪`|`~ < ≤ = ≥ > ≠ ≡ ≢ ⍳ ∊ ∪ ∩ ⍷ | ∨ ∧`|`⌸`|
+|`⎕CT`, `⎕DCT`|`⌈` `⌊` `∪`|`~` `<` `≤` `=` `≥` `>` `≠` `≡` `≢` `⍳` `∊` `∪` `∩` `⍷` `|` `∨` `∧` `⎕FMT`|`⌸`|
 |`⎕DIV`|`÷`|`÷`|&nbsp;|
-|`⎕FR   ⍝ 1`|`÷ * ⍟ ! ○ ⌹`|`+ - × ÷ * ⍟ | ! ○ ∨ ∧ ⊥ ⊤ ⌹`|&nbsp;|
-|`⎕FR   ⍝ 2`|`⌈ ⌊ ∪`|`~ < ≤ = ≥ > ≠ ≡ ≢ ⍳ ∊ ∪ ∩ ⍷`|`⌸`|
-|`⎕FR   ⍝ 3`|`⍒ ⍋`|`⌈ ⌊ ⍒ ⍋ ⍸`|&nbsp;|
-|`⎕IO`|`⍳ ? ⍒ ⍋ ⍸`|`⍳ ? ⍒ ⍋ ⍉ ⊃ ⌷ ⍸`|`⌸ @ []`|
-|`⎕ML`|`∊ ↑ ⊃ ≡`|&nbsp;|&nbsp;|
-|`⎕PP`|`⍕`|&nbsp;|&nbsp;|
+|`⎕FR`<sup>1</sup>|`÷` `*` `⍟` `!` `○` `⌹`|`+` `-` `×` `÷` `*` `⍟` `|` `!` `○` `∨` `∧` `⊥` `⊤` `⌹`|&nbsp;|
+|`⎕FR`<sup>2</sup>|`⌈` `⌊` `∪`|`~` `<` `≤` `=` `≥` `>` `≠` `≡` `≢` `⍳` `∊` `∪` `∩` `⍷`|`⌸`|
+|`⎕FR`<sup>3</sup>|`⍒` `⍋`|`⌈` `⌊` `⍒` `⍋` `⍸` `⎕FX`|&nbsp;|
+|`⎕IO`|`⍳` `?` `⍒` `⍋` `⍸`|`⍳` `?` `⍒` `⍋` `⍉` `⊃` `⌷` `⍸` `⎕FX`|`⌸` `@` `[]`<sup>4</sup> `⎕DMX`<sup>5</sup>
+|`⎕ML`|`∊` `↑` `⊃` `≡`|&nbsp;|`⎕TC`|
+|`⎕PP`|`⍕` `⎕FMT`|&nbsp;|`⎕←` `⍞←`|
 |`⎕RL`|`?`|`?`|&nbsp;|
 
-where, for `⎕FR`, `1` indicates functions that compute real numbers and whose precision depends on `⎕FR`, `2` indicates functions that perform tolerant comparisons and `3` indicates functions that perform tolerant comparisons.
+<sup>1</sup> functions that compute real numbers and whose precision depends on `⎕FR`
 
-!!! note
-    Tolerant comparisons depend on `⎕FR` to select which of `⎕CT` and `⎕DCT` is used; `⎕FR` also determines the precision of the comparison computation that can affect results. However, even primitives involving intolerant comparison (including the tolerant ones with all comparison tolerances set to 0) can depend on `⎕FR` if the argument contains DECFs. This is because DECFs must be converted to doubles for comparison. If two DECFs are different but correspond to the same double, then they will be treated as intolerantly unequal when `⎕FR` is `1287` but equal when it is `645`.
+<sup>2</sup> functions that perform tolerant comparisons (intolerant if `⎕CT`/`⎕DCT` is `0`)
 
-## Session Information/Management
+<sup>3</sup> functions that perform intolerant comparisons (as if `⎕CT`/`⎕DCT` was `0`)
 
-|Name                   |Description                |
-|-----------------------|---------------------------|
-|[`⎕AI`](ai.md)      |Account Information        |
-|[`⎕AN`](an.md)      |Account Name               |
-|[`⎕CLEAR`](clear.md)|Clear workspace (WS)       |
-|[`⎕CY`](cy.md)      |Copy objects into active WS|
-|[`⎕DL`](dl.md)      |Delay execution            |
-|[`⎕LOAD`](load.md)  |Load a saved WS            |
-|[`⎕OFF`](off.md)    |End the session            |
-|[`⎕PATH`](path.md)  |Search Path                |
-|[`⎕SAVE`](save.md)  |Save the active WS         |
-|[`⎕TS`](ts.md)      |Timestamp                  |
+<sup>4</sup> that is, bracket indexing and bracket axis
 
+<sup>5</sup> that is, some extended error messages take `⎕IO` into account
 
-## System Constants
+Tolerant comparisons depend on `⎕FR` to select which of `⎕CT` and `⎕DCT` is used. Even  intolerant comparison depends on `⎕FR` in the case of comparing DECFs: If two DECFs are different but correspond to the same double, then they will be treated as unequal when `⎕FR` is `1287` but equal when it is `645`.
+
+### System Constants
+
+These constants simplify access to commonly-used values.
 
 |Name   |Description                     |
 |-------|--------------------------------|
-|[`⎕A`](a.md)   |Alphabetic upper case characters|
+|[`⎕A`](a.md)   |Alphabetic uppercase characters (lowercase characters can be obtained with `⎕C⎕A`)|
 |[`⎕D`](d.md)   |Digits                          |
 |[`⎕NULL`](null.md)|Null Item                       |
 
-## Tools and Access to External Utilities
+### Data Conversion
 
-|Name    |Description                                             |
-|--------|--------------------------------------------------------|
-|[`⎕C`](c.md)    |Case Convert                                            |
-|[`⎕CMD`](execute-windows-command.md)  |Execute the Windows Command Processor or another program|
-|[`⎕CMD`](start-windows-auxiliary-processor.md)  |Start a Windows AP        |
-|[`⎕CSV`](csv.md)  |Comma Separated Values                                  |
-|[`⎕DR`](data-representation-monadic.md)   |Data Representation (Monadic)                           |
-|[`⎕DR`](data-representation-dyadic.md)   |Data Representation (Dyadic)                            |
-|[`⎕DT`](dt.md)   |Datetime                                                |
-|[`⎕FMT`](format-monadic.md)  |Resolve display                                         |
-|[`⎕FMT`](format-dyadic.md)  |Format array                                            |
-|[`⎕JSON`](json.md) |JSON Convert                                            |
-|[`⎕MAP`](map.md)  |Map a file                                              |
-|[`⎕NA`](na.md)   |Declare a DLL function                                  |
-|[`⎕R`](r.md)    |Replace                                                 |
-|[`⎕S`](s.md)    |Search                                                  |
-|[`⎕SH`](execute-unix-command.md)   |Execute a UNIX command or another program               |
-|[`⎕SH`](start-unix-auxiliary-processor.md)   |Start a UNIX AP                                         |
-|[`⎕SHELL`](shell.md)|Execute a shell command or another program              |
-|[`⎕UCS`](ucs.md)  |Unicode Convert                                         |
-|[`⎕USING`](using.md)|Microsoft .NET Search Path                              |
-|[`⎕VFI`](vfi.md)  |Verify and Fix numeric                                  |
-|[`⎕XML`](xml.md)  |XML Convert                                             |
+These are tools to convert between common representations of data.
 
-## Manipulating Functions and Operators
+|Name    |Description                                             |Form|
+|--------|--------------------------------------------------------|----|
+|[`⎕C`](c.md)    |Case Convert                                           |Ambivalent function|
+|[`⎕CSV`](csv.md)  |Comma Separated Values                               |Ambivalent function|
+|[`⎕DR`](data-representation-monadic.md)   |Data Representation          |Monadic function|
+|[`⎕DR`](data-representation-dyadic.md)   |Data Representation           |Dyadic function|
+|[`⎕DT`](dt.md)   |Datetime                                              |Dyadic function|
+|[`⎕FMT`](format-monadic.md)  |Resolve display                           |Monadic function|
+|[`⎕FMT`](format-dyadic.md)  |Format array                               |Dyadic function|
+|[`⎕JSON`](json.md) |JSON Convert                                        |Ambivalent function|
+|[`⎕TS`](ts.md)      |Timestamp                                          |Constant|
+|[`⎕UCS`](ucs.md)  |Unicode Convert                                      |Ambivalent function|
+|[`⎕VFI`](vfi.md)  |Verify and Fix numeric                               |Ambivalent function|
+|[`⎕XML`](xml.md)  |XML Convert                                          |Ambivalent function|
 
-|Name      |Description             |
-|----------|------------------------|
-|[`⎕AT`](at.md)     |Object Attributes       |
-|[`⎕CR`](cr.md)     |Canonical Representation|
-|[`⎕ED`](ed.md)     |Edit one or more objects|
-|[`⎕EX`](ex.md)     |Expunge objects         |
-|[`⎕FX`](fx.md)     |Fix definition          |
-|[`⎕LOCK`](lock.md)   |Lock a function         |
-|[`⎕MONITOR`](set-monitor.md)|Monitor set             |
-|[`⎕MONITOR`](query-monitor.md)|Monitor query           |
-|[`⎕OR`](or.md)     |Object Representation   |
-|[`⎕NR`](nr.md)     |Nested Representation   |
-|[`⎕PROFILE`](profile.md)|Profile Application     |
-|[`⎕REFS`](refs.md)   |Local References        |
-|[`⎕STOP`](set-stop.md)   |Set Stop vector         |
-|[`⎕STOP`](query-stop.md)   |Query Stop vector       |
-|[`⎕TRACE`](set-trace.md)  |Set Trace vector        |
-|[`⎕TRACE`](query-trace.md)  |Query Trace vector      |
-|[`⎕VR`](vr.md)     |Vector Representation   |
+### Input and Output
 
-## Namespaces and Objects
+These are communication facilities.
 
-|Name        |Description   |
-|------------|--------------|
-|[`⎕BASE`](base.md)     |Base Class    |
-|[`⎕CLASS`](class.md)    |Class         |
-|[`⎕CS`](cs.md)       |Change Space  |
-|[`⎕DF`](df.md)       |Display Format|
-|[`⎕FIX`](fix.md)      |Fix           |
-|[`⎕INSTANCES`](instances.md)|Instances     |
-|[`⎕NEW`](new.md)      |New Instance  |
-|[`⎕NS`](ns.md)       |Namespace     |
-|[`⎕SRC`](src.md)      |Source        |
-|[`⎕THIS`](this.md)     |This          |
+|Name     |Description           |Form|
+|---------|----------------------|-----|
+|[`⎕`](evaluated-input-output.md)      |Evaluated Input/Output|Variable|
+|[`⍞`](character-input-output.md)      |Character Input/Output|Variable|
+|[`⎕ARBIN`](arbin.md) |Arbitrary Input       |Dyadic function|
+|[`⎕ARBOUT`](arbout.md)|Arbitrary Output      |Dyadic function|
+|[`⎕KL`](kl.md)   |Key Labels                       |Monadic function|
+|[`⎕PFKEY`](pfkey.md)|Programmable Function Keys    |Ambivalent function|
+|[`⎕RTL`](rtl.md)   |Response Time Limit   |Variable|
+|[`⎕SD`](sd.md)   |Screen Dimensions                |Constant|
+|[`⎕SM`](sm.md)   |Screen Map                       |Variable|
+|[`⎕SR`](sr.md)   |Screen Read                      |Ambivalent function|
 
-## Input and Output
+### External Utilities
 
-|Name     |Description           |
-|---------|----------------------|
-|[`⎕`](evaluated-input-output.md)      |Evaluated Input/Output|
-|[`⍞`](character-input-output.md)      |Character Input/Output|
-|[`⎕ARBIN`](arbin.md) |Arbitrary Input       |
-|[`⎕ARBOUT`](arbout.md)|Arbitrary Output      |
-|[`⎕RTL`](rtl.md)   |Response Time Limit   |
+These are APL interfaces to various facilities outside Dyalog.
 
-## Component Files
+|Name    |Description                                             |Form|
+|--------|--------------------------------------------------------|----|
+|[`⎕MAP`](map.md)  |Map a file                                              |Abivalent function|
+|[`⎕NA`](na.md)   |Declare a DLL function                                  |Abivalent function|
+|[`⎕R`](r.md)    |Replace                                                 |Dyadic operator|
+|[`⎕S`](s.md)    |Search                                                  |Dyadic operator|
+|[`⎕SHELL`](shell.md)|Execute a shell command or another program              |Monadic function|
+|[`⎕USING`](using.md)|Microsoft .NET Search Path                              |Variable|
 
-|Name       |Description                |
-|-----------|---------------------------|
-|[`⎕FAPPEND`](fappend.md) |Append a component to File |
-|[`⎕FAVAIL`](favail.md)  |File system Availability   |
-|[`⎕FCHK`](fchk.md)    |File Check and Repair      |
-|[`⎕FCOPY`](fcopy.md)   |Copy a File                |
-|[`⎕FCREATE`](fcreate.md) |Create a File              |
-|[`⎕FDROP`](fdrop.md)   |Drop a block of components |
-|[`⎕FERASE`](ferase.md)  |Erase a File               |
-|[`⎕FHIST`](fhist.md)   |File History               |
-|[`⎕FHOLD`](fhold.md)   |File Hold                  |
-|[`⎕FLIB`](flib.md)    |List File Library          |
-|[`⎕FNAMES`](fnames.md)  |Names of tied Files        |
-|[`⎕FNUMS`](fnums.md)   |Tie Numbers of tied Files  |
-|[`⎕FPROPS`](fprops.md)  |File Properties            |
-|[`⎕FRDAC`](frdac.md)   |Read File Access matrix    |
-|[`⎕FRDCI`](frdci.md)   |Read Component Information |
-|[`⎕FREAD`](fread.md)   |Read a component from File |
-|[`⎕FRENAME`](frename.md) |Rename a File              |
-|[`⎕FREPLACE`](freplace.md)|Replace a component on File|
-|[`⎕FRESIZE`](fresize.md) |File Resize                |
-|[`⎕FSIZE`](fsize.md)   |File Size                  |
-|[`⎕FSTAC`](fstac.md)   |Set File Access matrix     |
-|[`⎕FSTIE`](fstie.md)   |Share-Tie a File           |
-|[`⎕FTIE`](ftie.md)    |Tie a File exclusively     |
-|[`⎕FUNTIE`](funtie.md)  |Untie Files                |
+### Component Files
 
-## Native Files
+These create, control, and manipulate component files.
 
-|Name       |Description                                                  |
-|-----------|-------------------------------------------------------------|
-|[`⎕MKDIR`](mkdir.md)   |Create a directory                                           |
-|[`⎕NAPPEND`](nappend.md) |Append to File                                               |
-|[`⎕NCOPY`](ncopy.md)   |Copy files and directories                                   |
-|[`⎕NCREATE`](ncreate.md) |Create a File                                                |
-|[`⎕NDELETE`](ndelete.md) |Delete a File or Directory                                   |
-|[`⎕NERASE`](nerase.md)  |Erase a File                                                 |
-|[`⎕NEXISTS`](nexists.md) |Discover whether or not a file or directory exists           |
-|[`⎕NGET`](nget.md)    |Read Text File                                               |
-|[`⎕NINFO`](ninfo.md)   |Query or set information about one or more files and/or directories|
-|[`⎕NLOCK`](nlock.md)   |Lock a region of a file                                      |
-|[`⎕NMOVE`](nmove.md)   |Move files and directories                                   |
-|[`⎕NNAMES`](nnames.md)  |Names of tied Files                                          |
-|[`⎕NNUMS`](nnums.md)   |Tie Numbers of tied Files                                    |
-|[`⎕NPARTS`](nparts.md)  |Split a file name into its constituent parts.                |
-|[`⎕NPUT`](nput.md)    |Write Text File                                              |
-|[`⎕NREAD`](nread.md)   |Read from File                                               |
-|[`⎕NRENAME`](nrename.md) |Rename a File                                                |
-|[`⎕NREPLACE`](nreplace.md)|Replace data on File                                         |
-|[`⎕NRESIZE`](nresize.md) |File Resize                                                  |
-|[`⎕NSIZE`](nsize.md)   |File Size                                                    |
-|[`⎕NTIE`](ntie.md)    |Tie a File exclusively                                       |
-|[`⎕NUNTIE`](nuntie.md)  |Untie Files                                                  |
-|[`⎕NXLATE`](nxlate.md)  |Specify Translation Table                                    |
+|Name       |Description                |Form|
+|-----------|---------------------------|-----|
+|[`⎕FAPPEND`](fappend.md) |Append a component to File |Dyadic function|
+|[`⎕FAVAIL`](favail.md)  |File system Availability   |Constant|
+|[`⎕FCHK`](fchk.md)    |File Check and Repair      |Ambivalent function|
+|[`⎕FCOPY`](fcopy.md)   |Copy a File                |Dyadic function|
+|[`⎕FCREATE`](fcreate.md) |Create a File              |Dyadic function|
+|[`⎕FDROP`](fdrop.md)   |Drop a block of components |Dyadic function|
+|[`⎕FERASE`](ferase.md)  |Erase a File               |Dyadic function|
+|[`⎕FHIST`](fhist.md)   |File History               |Monadic function|
+|[`⎕FHOLD`](fhold.md)   |File Hold                  |Ambivalent function|
+|[`⎕FLIB`](flib.md)    |List File Library          |Monadic function|
+|[`⎕FNAMES`](fnames.md)  |Names of tied Files        |Constant|
+|[`⎕FNUMS`](fnums.md)   |Tie Numbers of tied Files  |Constant|
+|[`⎕FPROPS`](fprops.md)  |File Properties            |Dyadic function|
+|[`⎕FRDAC`](frdac.md)   |Read File Access matrix    |Monadic function|
+|[`⎕FRDCI`](frdci.md)   |Read Component Information |Monadic function|
+|[`⎕FREAD`](fread.md)   |Read a component from File |Monadic function|
+|[`⎕FRENAME`](frename.md) |Rename a File              |Dyadic function|
+|[`⎕FREPLACE`](freplace.md)|Replace a component on File|Dyadic function|
+|[`⎕FRESIZE`](fresize.md) |File Resize                |Ambivalent function|
+|[`⎕FSIZE`](fsize.md)   |File Size                  |Monadic function|
+|[`⎕FSTAC`](fstac.md)   |Set File Access matrix     |Dyadic function|
+|[`⎕FSTIE`](fstie.md)   |Share-Tie a File           |Dyadic function|
+|[`⎕FTIE`](ftie.md)    |Tie a File exclusively     |Dyadic function|
+|[`⎕FUNTIE`](funtie.md)  |Untie Files                |Monadic function|
 
-## Threads
+### Native Files
 
-|Name     |Description                  |
-|---------|-----------------------------|
-|[`⎕TALLOC`](talloc.md) |Allocate Token Range         |
-|[`⎕TCNUMS`](tcnums.md) |Thread Child Numbers         |
-|[`⎕TID`](tid.md)   |Current Thread Identity      |
-|[`⎕TKILL`](tkill.md) |Kill Threads                 |
-|[`⎕TNAME`](tname.md) |Current Thread Name          |
-|[`⎕TNUMS`](tnums.md) |Thread Numbers               |
-|[`⎕TSYNC`](tsync.md) |Wait for Threads to Terminate|
+These create and manipulate files of any type as well as directories.
 
-## Synchronisation
+|Name       |Description                                                  |Form|
+|-----------|-------------------------------------------------------------|----|
+|[`⎕MKDIR`](mkdir.md)   |Create a directory                                           |Ambivalent function|
+|[`⎕NAPPEND`](nappend.md) |Append to File                                               |Dyadic function|
+|[`⎕NCOPY`](ncopy.md)   |Copy files and directories                                   |Dyadic function|
+|[`⎕NCREATE`](ncreate.md) |Create a File                                                |Dyadic function|
+|[`⎕NDELETE`](ndelete.md) |Delete a File or Directory                                   |Ambivalent function|
+|[`⎕NERASE`](nerase.md)  |Erase a File                                                 |Dyadic function|
+|[`⎕NEXISTS`](nexists.md) |Discover whether or not a file or directory exists           |Monadic function|
+|[`⎕NGET`](nget.md)    |Read Text File                                               |Ambivalent function|
+|[`⎕NINFO`](ninfo.md)   |Query or set information about one or more files and/or directories|Ambivalent function|
+|[`⎕NLOCK`](nlock.md)   |Lock a region of a file                                      |Ambivalent function|
+|[`⎕NMOVE`](nmove.md)   |Move files and directories                                   |Dyadic function|
+|[`⎕NNAMES`](nnames.md)  |Names of tied Files                                          |Constant|
+|[`⎕NNUMS`](nnums.md)   |Tie Numbers of tied Files                                    |Constant|
+|[`⎕NPARTS`](nparts.md)  |Split a file name into its constituent parts.                |Ambivalent function|
+|[`⎕NPUT`](nput.md)    |Write Text File                                              |Dyadic function|
+|[`⎕NREAD`](nread.md)   |Read from File                                               |Monadic function|
+|[`⎕NRENAME`](nrename.md) |Rename a File                                                |Dyadic function|
+|[`⎕NREPLACE`](nreplace.md)|Replace data on File                                         |Dyadic function|
+|[`⎕NRESIZE`](nresize.md) |File Resize                                                  |Dyadic function|
+|[`⎕NSIZE`](nsize.md)   |File Size                                                    |Monadic function|
+|[`⎕NTIE`](ntie.md)    |Tie a File exclusively                                       |Dyadic function|
+|[`⎕NUNTIE`](nuntie.md)  |Untie Files                                                  |Monadic function|
 
-|Name     |Description         |
-|---------|--------------------|
-|[`⎕TALLOC`](talloc.md)|Allocate Token Range|
-|[`⎕TGET`](tget.md)  |Get Tokens          |
-|[`⎕TKILL`](tkill.md) |Kill Threads        |
-|[`⎕TPOOL`](tpool.md) |Token Pool          |
-|[`⎕TPUT`](tput.md)  |Put Tokens          |
-|[`⎕TREQ`](treq.md)  |Token Requests      |
+### Threads
 
-## Error Handling
+These are facilities to handle threads such as those created by [Spawn](../../primitive-operators/spawn.md) (`&`).
 
-|Name        |Description                                     |
-|------------|------------------------------------------------|
-|[`⎕DM`](dm.md)       |Diagnostic Message                              |
-|[`⎕DMX`](dmx.md)      |Extended Diagnostic Message                     |
-|[`⎕EM`](em.md)       |Event Messages                                  |
-|[`⎕EN`](en.md)       |Event Number                                    |
-|[`⎕EXCEPTION`](exception.md)|Reports the most recent Microsoft .NET Exception|
-|[`⎕SIGNAL`](signal.md)   |Signal event                                    |
-|[`⎕TRAP`](trap.md)     |Event Trap                                      |
+|Name     |Description                  |Form|
+|---------|-----------------------------|-----|
+|[`⎕TALLOC`](talloc.md) |Allocate Token Range         |Abivalent function|
+|[`⎕TCNUMS`](tcnums.md) |Thread Child Numbers         |Monadic function|
+|[`⎕TID`](tid.md)   |Current Thread Identity      |Constant|
+|[`⎕TKILL`](tkill.md) |Kill Threads        |Ambivalent function|
+|[`⎕TNAME`](tname.md) |Current Thread Name          |Variable|
+|[`⎕TNUMS`](tnums.md) |Thread Numbers               |Constant|
+|[`⎕TSYNC`](tsync.md) |Wait for Threads to Terminate|Monadic function|
 
-## Stack and Workspace Information
+### Synchronisation
 
-|Name     |Description              |
-|---------|-------------------------|
-|[`⎕LC`](lc.md)    |Line Count               |
-|[`⎕LX`](lx.md)    |Latent Expression        |
-|[`⎕NC`](nc.md)    |Name Classification      |
-|[`⎕NL`](nl.md)    |Name List                |
-|[`⎕NSI`](nsi.md)   |Namespace Indicator      |
-|[`⎕RSI`](rsi.md)   |Space Indicator          |
-|[`⎕SI`](si.md)    |State Indicator          |
-|[`⎕SHADOW`](shadow.md)|Shadow names             |
-|[`⎕SIZE`](size.md)  |Size of objects          |
-|[`⎕STACK`](stack.md) |Report Stack             |
-|[`⎕STATE`](state.md) |Return State of an object|
-|[`⎕VGET`](vget.md)  |Value Get              |
-|[`⎕VSET`](vset.md)  |Value Set              |
-|[`⎕WA`](wa.md)    |Workspace Available      |
-|[`⎕WSID`](wsid.md)  |Workspace Identification |
-|[`⎕XSI`](xsi.md)   |Extended State Indicator |
+These are facilities to ensure proper timing in the relationship between threads such as those created by [Spawn](../../primitive-operators/spawn.md) (`&`).
 
-## Shared Variables
+|Name     |Description         |Form|
+|---------|--------------------|-----|
+|[`⎕DL`](dl.md)      |Delay execution            |Function|
+|[`⎕TALLOC`](talloc.md)|Allocate Token Range|Ambivalent function|
+|[`⎕TGET`](tget.md)  |Get Tokens          |Ambivalent function|
+|[`⎕TPOOL`](tpool.md) |Token Pool          |Monadic function|
+|[`⎕TPUT`](tput.md)  |Put Tokens          |Ambivalent function|
+|[`⎕TREQ`](treq.md)  |Token Requests      |Monadic function|
 
-|Name  |Description                |
-|------|---------------------------|
-|[`⎕SVC`](set-access-control.md)|Set access Control         |
-|[`⎕SVC`](query-access-control.md)|Query access Control       |
-|[`⎕SVO`](shared-variable-offer.md)|Shared Variable Offer      |
-|[`⎕SVO`](query-degree-of-coupling.md)|Query degree of coupling   |
-|[`⎕SVQ`](svq.md)|Shared Variable Query      |
-|[`⎕SVR`](svr.md)|Retract offer              |
-|[`⎕SVS`](svs.md)|Query Shared Variable State|
+### Stack
 
-## GUI and COM Support
+These provide information about and manipulate the current call stack.
 
-|Name     |Description                |
-|---------|---------------------------|
-|[`⎕DQ`](dq.md)    |Await and process events   |
-|[`⎕EXPORT`](export.md)|Export objects             |
-|[`⎕NQ`](nq.md)    |Place an event on the Queue|
-|[`⎕WC`](wc.md)    |Create GUI object          |
-|[`⎕WG`](wg.md)    |Get GUI object properties  |
-|[`⎕WN`](wn.md)    |Query GUI object Names     |
-|[`⎕WS`](ws.md)    |Set GUI object properties  |
-|[`⎕WX`](wx.md)    |Expose GUI property names  |
+|Name     |Description              |Form|
+|---------|-------------------------|-----|
+|[`⎕LC`](lc.md)    |Line Count               |Constant|
+|[`⎕NSI`](nsi.md)   |Namespace Indicator      |Constant|
+|[`⎕RSI`](rsi.md)   |Space Indicator          |Constant|
+|[`⎕SI`](si.md)    |State Indicator          |Constant|
+|[`⎕SHADOW`](shadow.md)|Shadow names             |Monadic function|
+|[`⎕STACK`](stack.md) |Report Stack             |Constant|
+|[`⎕STATE`](state.md) |Return State of an object|Monadic function|
+|[`⎕XSI`](xsi.md)   |Extended State Indicator |Constant|
 
-## Miscellaneous
+### Error Handling
 
-|Name    |Description                      |
-|--------|---------------------------------|
-|[`⎕Ⓐ`](underscored-alphabetic-characters.md)    |Underscored Alphabetic Characters|
-|[`⎕AV`](av.md)   |Atomic Vector                    |
-|[`⎕AVU`](avu.md)  |Atomic Vector - Unicode          |
-|[`⎕KL`](kl.md)   |Key Labels                       |
-|[`⎕PFKEY`](pfkey.md)|Programmable Function Keys       |
-|[`⎕SD`](sd.md)   |Screen Dimensions                |
-|[`⎕SM`](sm.md)   |Screen Map                       |
-|[`⎕SR`](sr.md)   |Screen Read                      |
-|[`⎕OPT`](opt.md)  |Variant Operator                 |
-|[`⎕TC`](tc.md)   |Terminal Control                 |
-|[`⎕XT`](set-external-variable.md)   |Associate External variable      |
-|[`⎕XT`](query-external-variable.md)   |Query External variable          |
+These are facilities to catch, cause, and investigate error events and interruptions.
+
+|Name        |Description                                     |Form|
+|------------|------------------------------------------------|----|
+|[`⎕DMX`](dmx.md)      |Extended Diagnostic Message                     |Reference|
+|[`⎕EM`](em.md)       |Event Messages                                  |Monadic function|
+|[`⎕EXCEPTION`](exception.md)|Reports the most recent Microsoft .NET Exception|Reference|
+|[`⎕SIGNAL`](signal.md)   |Signal event                                    |Ambivalent function|
+|[`⎕TRAP`](trap.md)     |Event Trap                                      |Variable|
+
+### Shared Variables
+
+These constitute the [shared variable](../../../interface-guide/dde/shared-variable-principles.md) interface.
+
+|Name  |Description                |Form|
+|------|---------------------------|-----|
+|[`⎕SVC`](set-access-control.md)|Set access Control         |Dyadic function|
+|[`⎕SVC`](query-access-control.md)|Query access Control       |Monadic function|
+|[`⎕SVO`](shared-variable-offer.md)|Shared Variable Offer      |Dyadic function|
+|[`⎕SVO`](query-degree-of-coupling.md)|Query degree of coupling   |Monadic function|
+|[`⎕SVQ`](svq.md)|Shared Variable Query      |Monadic function|
+|[`⎕SVR`](svr.md)|Retract offer              |Monadic function|
+|[`⎕SVS`](svs.md)|Query Shared Variable State|Monadic function|
+
+### Features for Classic
+
+These are relevant only for the Classic (non-Unicode) edition and dealing with its data.
+
+|Name     |Description                |Form|
+|---------|---------------------------|-----|
+|[`⎕NXLATE`](nxlate.md)  |Specify Translation Table |Ambivalent function|
+|[`⎕Ⓐ` or `⎕Á`](underscored-alphabetic-characters.md) |Underscored Alphabetic Characters|Constant|
+|[`⎕AV`](av.md)   |Atomic Vector              |Constant|
+|[`⎕AVU`](avu.md)  |Atomic Vector - Unicode         |Variable|
+
+### Archaic and Deprecated
+
+These are deprecated facilities that are still supported for legacy purposes; Dyalog Ltd recommends using alternative approaches.
+
+|Name    |Description                      |Form|Alternative|
+|--------|---------------------------------|----|-----------|
+|[`⎕AT`](at.md)     |Object Attributes       |Ambivalent function|`⎕ATX` supports many more attributes|
+|[`⎕CMD`](execute-windows-command.md)  |Execute the Windows Command Processor or another program|Monadic function|`⎕SHELL` is interruptible, can separate output streams, and has lots of advanced options|
+|[`⎕CMD`](start-windows-auxiliary-processor.md)  |Start a Windows Auxiliary Processor|Dyadic function|DLL/shared libraries via `⎕NA`|
+|[`⎕CR`](cr.md)     |Canonical Representation|Monadic function|`⎕ATX` can provide source as typed|
+|[`⎕DM`](dm.md)       |Diagnostic Message    |Constant|`⎕DMX.DM` is thread-safe|
+|[`⎕EN`](en.md)       |Event Number          |Constant|`⎕DMX.EN` is thread-safe|
+|[`⎕EXPORT`](export.md)|Export objects       |Ambivalent function|Use full (absolute or relative) namespace paths|
+|[`⎕FX`](fx.md)     |Fix definition          |Monadic function|`⎕FIX` saves source as typed|
+|[`⎕NR`](nr.md)     |Nested Representation   |Monadic function|`⎕ATX` can provide source as typed|
+|[`⎕PATH`](path.md)  |Search Path            |Variable|Use full (absolute or relative) namespace paths|
+|[`⎕SH`](execute-unix-command.md)   |Execute a UNIX command or another program|Monadic function|`⎕SHELL` is interruptible, can separate output streams, and has lots of advanced options|
+|[`⎕SH`](start-unix-auxiliary-processor.md)   |Start a UNIX Auxiliary Processor|Dyadic function|DLL/shared libraries via `⎕NA`|
+|[`⎕SRC`](src.md)      |Source        |Monadic function|`⎕ATX` can provide source for non-objects|
+|[`⎕TC`](tc.md)   |Terminal Control           |Constant|`⎕UCS 8`, `⎕UCS 10`, and `⎕UCS 13`|
+|[`⎕VR`](vr.md)     |Vector Representation   |Monadic function|`⎕ATX` can provide source as typed|
+|[`⎕XT`](query-external-variable.md)   |Query External variable  |Monadic function|`⎕MAP` or [component files](../../../programming-reference-guide/introduction/component-files/)|
+|[`⎕XT`](set-external-variable.md)   |Associate External variable|Dyadic function|`⎕MAP` or [component files](../../../programming-reference-guide/introduction/component-files/)|
 
 ## System Variables
 
@@ -300,11 +363,13 @@ System variables can be localised by inclusion in the header line of a defined f
 
 A system variable can never be undefined. Default values are assigned to all system variables in a clear workspace.
 
+[`⎕PATH`](path.md) and [`⎕PW`](pw.md) relate to the session. [`⎕LX`](lx.md), [`⎕SM`](sm.md), [`⎕TRAP`](trap.md), and [`⎕WSID`](wsid.md) relate to the active workspace, and all the other system variables relate to the current namespace:
+
 |Name           |Description                               |Scope      |
 |---------------|-----------------------------------------|-----------|
 |[`⎕AVU`](avu.md)  |Atomic Vector – Unicode              |Namespace  |
 |[`⎕CT`](ct.md)    |Comparison Tolerance                |Namespace  |
-|[`⎕DCT`](dct.md)  |Decimal Comp Tolerance              |Namespace  |
+|[`⎕DCT`](dct.md)  |Decimal Comparison Tolerance              |Namespace  |
 |[`⎕DIV`](div.md)  |Division Method                     |Namespace  |
 |[`⎕FR`](fr.md)    |Floating-Point Representation       |Namespace  |
 |[`⎕IO`](io.md)    |Index Origin                        |Namespace  |
@@ -322,29 +387,29 @@ A system variable can never be undefined. Default values are assigned to all sys
 |[`⎕WSID`](wsid.md)|Workspace ID                        |Workspace  |
 |[`⎕WX`](wx.md)    |Window Expose                       |Namespace  |
 
-In other words, [`⎕PATH`](path.md) and [`⎕PW`](pw.md) relate to the session. [`⎕LX`](lx.md), [`⎕SM`](sm.md), [`⎕TRAP`](trap.md), and [`⎕WSID`](wsid.md) relate to the active workspace. All the other system variables relate to the current namespace.
-
-|Session   |Workspace     |Namespace        |
-|----------|--------------|-----------------|
-|[`⎕PATH`](path.md) |[`⎕LX`](lx.md)    |[`⎕AVU`](avu.md)   |
-|[`⎕PW`](pw.md)     |[`⎕SM`](sm.md)    |[`⎕CT`](ct.md)     |
-|&nbsp;                 |[`⎕TRAP`](trap.md) |[`⎕DCT`](dct.md)   |
-|&nbsp;                 |[`⎕WSID`](wsid.md) |[`⎕DIV`](div.md)   |
-|&nbsp;                 |&nbsp;               |[`⎕FR`](fr.md)     |
-|&nbsp;                 |&nbsp;               |[`⎕IO`](io.md)     |
-|&nbsp;                 |&nbsp;               |[`⎕ML`](ml.md)     |
-|&nbsp;                 |&nbsp;               |[`⎕PP`](pp.md)     |
-|&nbsp;                 |&nbsp;               |[`⎕RL`](rl.md)     |
-|&nbsp;                 |&nbsp;               |[`⎕RTL`](rtl.md)   |
-|&nbsp;                 |&nbsp;               |[`⎕USING`](using.md)|
-|&nbsp;                 |&nbsp;               |[`⎕WX`](wx.md)     |
-
 Note that the value assigned to a system variable must be appropriate, otherwise an error will be reported immediately.
 
 <h2 class="example">Example</h2>
+
 ```apl
       ⎕IO←3
 DOMAIN ERROR
       ⎕IO←3
-      ^
+      ∧
+```
+
+Most system variables normalise their value structure:
+```apl
+      ⍴⎕DIV←⍪0  ⍝ matrix in
+1 1
+      ⍴⎕DIV     ⍝ scalar out
+
+      ⍴⎕LX←'+'  ⍝ scalar in
+
+      ⍴⎕LX     ⍝ vector out
+1
+      ≡⎕TRAP←0'C' '''Eh?'''  ⍝ depth 2 array in
+¯2
+      ≡⎕TRAP                 ⍝ depth 3 array out
+¯3
 ```
