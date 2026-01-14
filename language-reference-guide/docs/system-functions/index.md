@@ -9,7 +9,7 @@ Dyalog includes a collection of built-in facilities that provide various service
 !!! Hint "Hints and Recommendations"
     Dyalog can extend any of these facilities by, for example, adding extra elements, rows, or columns to a result, so code should take this possibility into account.
 
-|Name                   |Description                |Syntax|
+|Name                   |Description                |Form|
 |-----------------------|---------------------------|----|
 |[`⎕`](evaluated-input-output.md)      |Evaluated Input/Output|Variable|
 |[`⍞`](character-input-output.md)      |Character Input/Output|Variable|
