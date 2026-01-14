@@ -14,7 +14,7 @@ The dyadic operator `⎕OPT` is unique in that it modifies the behaviour of othe
 
 These provide information on, or control, the execution environment.
 
-|Name                   |Description                |Syntax|
+|Name                   |Description                |Form|
 |-----------------------|---------------------------|----|
 |[`⎕AI`](ai.md)      |Account Information        |Constant|
 |[`⎕AN`](an.md)      |Account Name               |Constant|
@@ -28,7 +28,7 @@ These provide information on, or control, the execution environment.
 
 These provide information on, and control, the current workspace and its contents.
 
-|Name     |Description              |Syntax|
+|Name     |Description              |Form|
 |---------|-------------------------|-----|
 |[`⎕EX`](ex.md)     |Expunge objects         |Monadic function|
 |[`⎕LX`](lx.md)    |Latent Expression        |Variable|
@@ -43,7 +43,7 @@ These provide information on, and control, the current workspace and its content
 
 These are tools that allow you perform development environment actions under program control.
 
-|Name      |Description             |Syntax|
+|Name      |Description             |Form|
 |----------|------------------------|-----|
 |[`⎕ED`](ed.md)     |Edit one or more objects|Ambivalent function|
 |[`⎕EX`](ex.md)     |Expunge objects         |Monadic function|
@@ -62,7 +62,7 @@ These are tools that allow you perform development environment actions under pro
 
 These are facilities to create, manipulate, and navigate namespaces and other objects, and for object oriented programming.
 
-|Name        |Description   |Syntax|
+|Name        |Description   |Form|
 |------------|--------------|-----|
 |[`⎕BASE`](base.md)     |Base Class   |Reference|
 |[`⎕CLASS`](class.md)    |Class       |Monadic function|
@@ -80,7 +80,7 @@ These are facilities to create, manipulate, and navigate namespaces and other ob
 
 These are facilities for dealing with built-in objects. They mostly represent Microsoft Windows GUI elements, although a few other built-in objects are cross-platform and/or do not relate to the graphical interface.
 
-|Name     |Description                |Syntax|
+|Name     |Description                |Form|
 |---------|---------------------------|-----|
 |[`⎕DQ`](dq.md)    |Await and process events   |Monadic function|
 |[`⎕NQ`](nq.md)    |Place an event on the Queue|Ambivalent function|
@@ -135,26 +135,24 @@ Tolerant comparisons depend on `⎕FR` to select which of `⎕CT` and `⎕DCT` i
 
 ### System Constants
 
-These constants are convenient names for commonly used values that would otherwise be tedious or errorprone to type out or produce.
+These constants simplify access to commonly-used values.
 
 |Name   |Description                     |
 |-------|--------------------------------|
-|[`⎕A`](a.md)   |Alphabetic uppercase<sup>1</sup> characters|
+|[`⎕A`](a.md)   |Alphabetic uppercase characters (lowercase characters can be obtained with `⎕C⎕A`)|
 |[`⎕D`](d.md)   |Digits                          |
 |[`⎕NULL`](null.md)|Null Item                       |
-
-<sup>1</sup> The alphabetic lowercase characters can be obtained with `⎕C⎕A`.
 
 ### Data Conversion
 
 These are tools to convert between common representations of data.
 
-|Name    |Description                                             |Syntax|
+|Name    |Description                                             |Form|
 |--------|--------------------------------------------------------|----|
 |[`⎕C`](c.md)    |Case Convert                                           |Ambivalent function|
 |[`⎕CSV`](csv.md)  |Comma Separated Values                               |Ambivalent function|
-|[`⎕DR`](data-representation-monadic.md)   |Data Representation (Monadic)|Ambivalent function|
-|[`⎕DR`](data-representation-dyadic.md)   |Data Representation (Dyadic)  |Ambivalent function|
+|[`⎕DR`](data-representation-monadic.md)   |Data Representation          |Monadic function|
+|[`⎕DR`](data-representation-dyadic.md)   |Data Representation           |Dyadic function|
 |[`⎕DT`](dt.md)   |Datetime                                              |Dyadic function|
 |[`⎕FMT`](format-monadic.md)  |Resolve display                           |Monadic function|
 |[`⎕FMT`](format-dyadic.md)  |Format array                               |Dyadic function|
@@ -168,7 +166,7 @@ These are tools to convert between common representations of data.
 
 These are communication facilities.
 
-|Name     |Description           |Syntax|
+|Name     |Description           |Form|
 |---------|----------------------|-----|
 |[`⎕`](evaluated-input-output.md)      |Evaluated Input/Output|Variable|
 |[`⍞`](character-input-output.md)      |Character Input/Output|Variable|
@@ -185,7 +183,7 @@ These are communication facilities.
 
 These are APL interfaces to various facilities outside Dyalog.
 
-|Name    |Description                                             |Syntax|
+|Name    |Description                                             |Form|
 |--------|--------------------------------------------------------|----|
 |[`⎕MAP`](map.md)  |Map a file                                              |Abivalent function|
 |[`⎕NA`](na.md)   |Declare a DLL function                                  |Abivalent function|
@@ -198,7 +196,7 @@ These are APL interfaces to various facilities outside Dyalog.
 
 These create, control, and manipulate component files.
 
-|Name       |Description                |Syntax|
+|Name       |Description                |Form|
 |-----------|---------------------------|-----|
 |[`⎕FAPPEND`](fappend.md) |Append a component to File |Dyadic function|
 |[`⎕FAVAIL`](favail.md)  |File system Availability   |Constant|
@@ -229,7 +227,7 @@ These create, control, and manipulate component files.
 
 These create and manipulate files of any type as well as directories.
 
-|Name       |Description                                                  |Syntax|
+|Name       |Description                                                  |Form|
 |-----------|-------------------------------------------------------------|----|
 |[`⎕MKDIR`](mkdir.md)   |Create a directory                                           |Ambivalent function|
 |[`⎕NAPPEND`](nappend.md) |Append to File                                               |Dyadic function|
@@ -258,7 +256,7 @@ These create and manipulate files of any type as well as directories.
 
 These are facilities to handle threads such as those created by [Spawn](../../primitive-operators/spawn.md) (`&`).
 
-|Name     |Description                  |Syntax|
+|Name     |Description                  |Form|
 |---------|-----------------------------|-----|
 |[`⎕TALLOC`](talloc.md) |Allocate Token Range         |Abivalent function|
 |[`⎕TCNUMS`](tcnums.md) |Thread Child Numbers         |Monadic function|
@@ -272,7 +270,7 @@ These are facilities to handle threads such as those created by [Spawn](../../pr
 
 These are facilities to ensure proper timing in the relationship between threads such as those created by [Spawn](../../primitive-operators/spawn.md) (`&`).
 
-|Name     |Description         |Syntax|
+|Name     |Description         |Form|
 |---------|--------------------|-----|
 |[`⎕DL`](dl.md)      |Delay execution            |Function|
 |[`⎕TALLOC`](talloc.md)|Allocate Token Range|Ambivalent function|
@@ -285,7 +283,7 @@ These are facilities to ensure proper timing in the relationship between threads
 
 These provide information about and manipulate the current call stack.
 
-|Name     |Description              |Syntax|
+|Name     |Description              |Form|
 |---------|-------------------------|-----|
 |[`⎕LC`](lc.md)    |Line Count               |Constant|
 |[`⎕NSI`](nsi.md)   |Namespace Indicator      |Constant|
@@ -300,7 +298,7 @@ These provide information about and manipulate the current call stack.
 
 These are facilities to catch, cause, and investigate error events and interruptions.
 
-|Name        |Description                                     |Syntax|
+|Name        |Description                                     |Form|
 |------------|------------------------------------------------|----|
 |[`⎕DMX`](dmx.md)      |Extended Diagnostic Message                     |Reference|
 |[`⎕EM`](em.md)       |Event Messages                                  |Monadic function|
@@ -312,7 +310,7 @@ These are facilities to catch, cause, and investigate error events and interrupt
 
 These constitute the [shared variable](../../../interface-guide/dde/shared-variable-principles.md) interface.
 
-|Name  |Description                |Syntax|
+|Name  |Description                |Form|
 |------|---------------------------|-----|
 |[`⎕SVC`](set-access-control.md)|Set access Control         |Dyadic function|
 |[`⎕SVC`](query-access-control.md)|Query access Control       |Monadic function|
@@ -326,7 +324,7 @@ These constitute the [shared variable](../../../interface-guide/dde/shared-varia
 
 These are relevant only for the Classic (non-Unicode) edition and dealing with its data.
 
-|Name     |Description                |Syntax|
+|Name     |Description                |Form|
 |---------|---------------------------|-----|
 |[`⎕NXLATE`](nxlate.md)  |Specify Translation Table |Ambivalent function|
 |[`⎕Ⓐ` or `⎕Á`](underscored-alphabetic-characters.md) |Underscored Alphabetic Characters|Constant|
@@ -335,9 +333,9 @@ These are relevant only for the Classic (non-Unicode) edition and dealing with i
 
 ### Archaic and Deprecated
 
-Although still supported for legacy reasons, these facilites have newer and better alternatives.
+These are deprecated facilities that are still supported for legacy purposes; Dyalog Ltd recommends using alternative approaches.
 
-|Name    |Description                      |Syntax|Alternative|
+|Name    |Description                      |Form|Alternative|
 |--------|---------------------------------|----|-----------|
 |[`⎕AT`](at.md)     |Object Attributes       |Ambivalent function|`⎕ATX` supports many more attributes|
 |[`⎕CMD`](execute-windows-command.md)  |Execute the Windows Command Processor or another program|Monadic function|`⎕SHELL` is interruptible, can separate output streams, and has lots of advanced options|
@@ -345,10 +343,10 @@ Although still supported for legacy reasons, these facilites have newer and bett
 |[`⎕CR`](cr.md)     |Canonical Representation|Monadic function|`⎕ATX` can provide source as typed|
 |[`⎕DM`](dm.md)       |Diagnostic Message    |Constant|`⎕DMX.DM` is thread-safe|
 |[`⎕EN`](en.md)       |Event Number          |Constant|`⎕DMX.EN` is thread-safe|
-|[`⎕EXPORT`](export.md)|Export objects       |Ambivalent function|&nbsp;|
+|[`⎕EXPORT`](export.md)|Export objects       |Ambivalent function|Use full (absolute or relative) namespace paths|
 |[`⎕FX`](fx.md)     |Fix definition          |Monadic function|`⎕FIX` saves source as typed|
 |[`⎕NR`](nr.md)     |Nested Representation   |Monadic function|`⎕ATX` can provide source as typed|
-|[`⎕PATH`](path.md)  |Search Path            |Variable|&nbsp;|
+|[`⎕PATH`](path.md)  |Search Path            |Variable|Use full (absolute or relative) namespace paths|
 |[`⎕SH`](execute-unix-command.md)   |Execute a UNIX command or another program|Monadic function|`⎕SHELL` is interruptible, can separate output streams, and has lots of advanced options|
 |[`⎕SH`](start-unix-auxiliary-processor.md)   |Start a UNIX Auxiliary Processor|Dyadic function|DLL/shared libraries via `⎕NA`|
 |[`⎕SRC`](src.md)      |Source        |Monadic function|`⎕ATX` can provide source for non-objects|
