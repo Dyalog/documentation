@@ -26,7 +26,7 @@ The following files have names that are consistent between editions; differences
 * **dyascript.exe**
 * **dyalogrt.exe** (runtime interpreter)
 * **dyalog&lt;width>.dll**
-* **dyares{{ version_condensed }}_&lt;width>.dll** (development interpreter – requires explicit permission from Dyalog Ltd to distribute)
+* **dyares{{ version_condensed }}_&lt;width>.dll**
 * **dyalogprovider.dll** (.NET Framework Interface)
 * **dyalognet.dll** (.NET Framework Interface)
 * **conga{{ conga_version_condensed }}ssl&lt;width>.dll** (Conga and Ride)
