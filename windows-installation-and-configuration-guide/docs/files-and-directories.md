@@ -24,20 +24,20 @@ This section lists the files that are included with Dyalog for Microsoft Windows
 The following files have names that are consistent between editions; differences in names for the different widths are indicated by **&lt;width>**, which can be either **32** or **64**):  
 
 * **dyascript.exe**
-* **dyalogrt.exe**
+* **dyalogrt.exe** (runtime interpreter)
 * **dyalog&lt;width>.dll**
-* **dyares{{ version_condensed }}_&lt;width>.dll**
+* **dyares{{ version_condensed }}_&lt;width>.dll** (development interpreter – requires explicit permission from Dyalog Ltd to distribute)
 * **dyalogprovider.dll** (.NET Framework Interface)
 * **dyalognet.dll** (.NET Framework Interface)
 * **conga{{ conga_version_condensed }}ssl&lt;width>.dll** (Conga and Ride)
 * **conga{{ conga_version_condensed }}_&lt;width>.dll** (Conga and Ride)
 * **exestub.dll**
 * **dllstub.dll**
-* **sqapl.ini**
-* **sqapl.err**
-* **aplunicd.ini**
-* **sharpplot.dll**
-* **sharpplot.xml**
+* **sqapl.ini** (SQAPL)
+* **sqapl.err** (SQAPL)
+* **aplunicd.ini** (SQAPL and, optionally, Conga)
+* **sharpplot.dll** (SharpPlot)
+* **sharpplot.xml** (SharpPlot)
 
 The following files relate to the .NET Interface, and are only available in Unicode editions:  
 
