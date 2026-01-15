@@ -31,7 +31,7 @@ The following files have names that are consistent between editions; differences
 * **dyalognet.dll** (.NET Framework Interface)
 * **conga{{ conga_version_condensed }}ssl&lt;width>.dll** (Conga and Ride)
 * **conga{{ conga_version_condensed }}_&lt;width>.dll** (Conga and Ride)
-* **exestub.dll**
+* **exestub.exe**
 * **dllstub.dll**
 * **sqapl.ini** (SQAPL)
 * **sqapl.err** (SQAPL)
