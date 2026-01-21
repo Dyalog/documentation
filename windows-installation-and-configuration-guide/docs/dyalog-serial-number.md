@@ -13,7 +13,7 @@ To set your Dyalog serial number from within a Session:
 
 where `serialnumber` is your Dyalog serial number. This updates the registry string value **DYALOG_SERIAL** in `HKEY_CURRENT_USER\Software\Dyalog\Dyalog <version>`[^1]. To complete the process you must exit and restart the Session.
 
-When you start a Session, your serial number is displayed in the banner . To see your serial number at any time, enter:
+When you start a Session, your serial number is displayed in the banner. To see your serial number at any time, enter:
 ```apl
       +2⎕NQ'.' 'GetEnvironment' 'DYALOG_SERIAL'
 ```
@@ -24,6 +24,6 @@ or
 ```
 
 !!! note 
-    Using or entering a serial number other than the one issued to you is not permitted. Transferring the serial number to anyone else is not permitted.For the full licence terms and conditions, see: [Terms and Conditions](https://www.dyalog.com/uploads/documents/Terms_and_Conditions.pdf)
+    Using or entering a serial number other than the one issued to you is not permitted. Transferring the serial number to anyone else is not permitted. For the full licence terms and conditions, see: [Terms and Conditions](https://www.dyalog.com/uploads/documents/Terms_and_Conditions.pdf)
 
 [^1]: This string can also be set using regedit but Dyalog Ltd does not recommend this approach.
