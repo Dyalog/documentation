@@ -10,7 +10,7 @@
 This command compacts (see [Workspace Available](../system-functions/wa.md) for details) and saves the active workspace.
 
 
-If specified, `ws` is a full or relative path name to the file in which the workspace will be written. If `ws` is omitted, it defaults to `⎕WSID`. Unless the path specified by `ws` or `⎕WSID` is a full pathname, it is taken to be relative to the current working directory which may be obtained by the expression: `⊃1 ⎕NPARTS ''`.
+If specified, `ws` is a full or relative path name to the file in which the workspace will be written. If `ws` is omitted, it defaults to [`⎕WSID`](../system-functions/wsid.md). Unless the path specified by `ws` or `⎕WSID` is a full pathname, it is taken to be relative to the current working directory which may be obtained by the expression: `⊃1 ⎕NPARTS ''`.
 
 
 If  `ws` specifies a file name other than that implied by  `⎕WSID`, the specified file must not already exist unless the **force** parameter is specified.. If `ws` is omitted or resolves to the same file as  `⎕WSID`, an existing stored workspace with the same name will be replaced.
@@ -50,10 +50,10 @@ After a successful save, the system reports the workspace name, followed by the 
 ```
 
 
-Note that any time prior to executing `)SAVE`, the active workspace may be renamed by the system command `)WSID` or by assigning a name to the system variable `⎕WSID`.
+Note that any time prior to executing `)SAVE`, the active workspace may be renamed by the system command [`)WSID`](wsid.md) or by assigning a name to the system variable [`⎕WSID`](../system-functions/wsid.md).
 
 
-A stored workspace may subsequently be loaded with the system command `)LOAD` or the system function `⎕LOAD`, and objects may be copied from a stored workspace with the system commands `)COPY` or `)PCOPY` or the system function `⎕CY`.
+A stored workspace may subsequently be loaded with the system command [`)LOAD`](load.md) or the system function `⎕LOAD`, and objects may be copied from a stored workspace with the system commands [`)COPY`](copy.md) or [`)PCOPY`](pcopy.md) or the system function [`⎕CY`](../system-functions/cy.md).
 
 
 
