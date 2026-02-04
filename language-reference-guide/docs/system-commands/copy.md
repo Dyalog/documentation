@@ -7,7 +7,7 @@
 
 
 
-This command brings all or selected global objects `nms` from a stored workspace (or session file) with the given name.  A stored workspace is one which has previously been saved with the system command `)SAVE` or the system function `⎕SAVE`.
+This command brings all or selected global objects `nms` from a stored workspace (or session file) with the given name.  A stored workspace is one which has previously been saved with the system command [`)SAVE`](save.md) or the system function [`⎕SAVE`](../system-functions/save.md).
 
 
 See [Programmer's Guide: "Workspaces"](../../../programming-reference-guide/introduction/workspaces) for the rules for specifying a workspace name.
@@ -136,9 +136,9 @@ C:\Users\Pete\Desktop\pete.dse saved Wed Oct 14 ...
 
 ```
 
-- You can copy a function or variable from any namespace under a saved `⎕SE`, no matter what your current namespace is.
-- You can copy any namespace without GUI from a saved `⎕SE`, no matter what you current namespace is.
-- You can copy any namespace with GUI from a saved `⎕SE` as long as your current namespace is the same as the parent namespace of the namespace you are trying to copy
+- You can copy a function or variable from any namespace under a saved [`⎕SE`](../system-functions/se.md), no matter what your current namespace is.
+- You can copy any namespace without GUI from a saved [`⎕SE`](../system-functions/se.md), no matter what you current namespace is.
+- You can copy any namespace with GUI from a saved [`⎕SE`](../system-functions/se.md) as long as your current namespace is the same as the parent namespace of the namespace you are trying to copy
 
 <h2 class="example">Examples</h2>
 
