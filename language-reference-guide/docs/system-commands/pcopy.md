@@ -7,10 +7,10 @@
 
 
 
-This command brings all or selected global objects from a stored workspace with the given name provided that there is no existing global usage of the name in the active workspace.  A stored workspace is one which has previously been saved with the system command `)SAVE` or the system function `⎕SAVE`.
+This command brings all or selected global objects from a stored workspace with the given name provided that there is no existing global usage of the name in the active workspace.  A stored workspace is one which has previously been saved with the system command [`)SAVE`](save.md) or the system function [`⎕SAVE`](../system-functions/save.md).
 
 
-`)PCOPY` does not copy `⎕SM`.  This restriction may be removed in a later release.
+`)PCOPY` does not copy [`⎕SM`](../system-functions/sm.md).  This restriction may be removed in a later release.
 
 
 If the workspace name is not valid or does not exist or if access to the workspace is not authorised, the system reports "`ws not found`".  If the workspace name identifies a file that is not a workspace, or is a workspace with an invalid version number (one that is greater than the version of the current APL) the system reports "`bad ws`".
