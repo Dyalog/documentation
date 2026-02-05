@@ -6,7 +6,7 @@
 
 
 
-This command displays the contents of the state indicator together with local names. The display is the same as for [`)SI`](../si) except that a list of local names is appended to each defined function or operator line.
+This command displays the contents of the state indicator together with local names. The display is the same as for [`)SI`](si.md) except that a list of local names is appended to each defined function or operator line.
 
 <h2 class="example">Example</h2>
 
