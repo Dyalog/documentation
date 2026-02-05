@@ -31,8 +31,3 @@ clear ws
 avx     box     dbr     getenv  hex     ltom    ltov    mtol    ss      vtol
 
 ```
-
-
-[Language Elements](../symbols/language-elements.md)
-
-

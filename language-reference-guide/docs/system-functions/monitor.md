@@ -33,8 +33,3 @@ search:
 4 1  467 1000 0
 5 1  100    0 0
 ```
-
-
-[Language Elements](../symbols/language-elements.md)
-
-

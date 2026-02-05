@@ -31,8 +31,3 @@ search:
 0 0 0 0 1 0 1 0
 
 ```
-
-
-[Language Elements](../symbols/language-elements.md)
-
-

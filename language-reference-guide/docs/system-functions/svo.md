@@ -32,8 +32,3 @@ search:
       ⎕SVO 'DATA'
 1
 ```
-
-
-[Language Elements](../symbols/language-elements.md)
-
-

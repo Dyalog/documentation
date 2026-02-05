@@ -28,8 +28,3 @@ search:
       ⎕SVC 'X'
 1 1 1 1
 ```
-
-
-[Language Elements](../symbols/language-elements.md)
-
-
