@@ -27,8 +27,3 @@ search:
       ⎕STOP 'FOO'
 0 1
 ```
-
-
-[Language Elements](../symbols/language-elements.md)
-
-

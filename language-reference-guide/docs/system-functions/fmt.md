@@ -30,8 +30,3 @@ search:
   1 2.00  3 4.00
   5 6.00  7 8.00
 ```
-
-
-[Language Elements](../symbols/language-elements.md)
-
-

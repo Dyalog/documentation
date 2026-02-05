@@ -27,8 +27,3 @@ search:
       ⎕TRACE 'foo'
 0 1 2 3 4 5
 ```
-
-
-[Language Elements](../symbols/language-elements.md)
-
-

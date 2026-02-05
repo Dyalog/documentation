@@ -26,8 +26,3 @@ search:
       ⎕XT'V'
 EXT\ARRAY
 ```
-
-
-[Language Elements](../symbols/language-elements.md)
-
-
