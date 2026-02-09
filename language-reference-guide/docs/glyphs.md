@@ -18,7 +18,7 @@
 | [Stars](#stars) | ` * ⍣ ⍟` |
 | [Tildes](#tildes) | `~ ⍨ ⍲ ⍱ ⍬`  |
 | [Triangles](#triangles) | `∆ ∇ ∇∇ ⍋ ⍒ ⍙` |
-| [Wedges and Diamonds](#wedges) | `< > ∧ ∨ ≤ ≥ ⍲ ⍱ ⋄ ⌺` |
+| [Wedges and Diamonds](#wedges-and-diamonds) | `< > ∧ ∨ ≤ ≥ ⍲ ⍱ ⋄ ⌺` |
 
 ## Arrows: ` ← → ↑ ↓ `
 
