@@ -291,7 +291,7 @@ nav:
           - APL Error Messages Table: error-messages/apl-errors.md
           - Operating System Error Messages Table: error-messages/os-errors.md
           - Windows Operating System Error Messages Table: error-messages/windows-errors.md
-          - APL Error Messages: error-messages/apl-error-messages.md
+          - APL Error Messages: error-messages/apl-errors.md
           - APL Error Messages (A-Z):
               - bad ws: error-messages/bad-ws.md
               - cannot create name: error-messages/cannot-create-name.md
@@ -369,7 +369,7 @@ nav:
               - WS FULL: error-messages/ws-full.md
               - ws not found: error-messages/ws-not-found.md
               - ws too large: error-messages/ws-too-large.md
-          - Operating System Error Messages: error-messages/operating-system-error-messages.md
+          - Operating System Error Messages: error-messages/os-errors.md
           - Operating System Error Messages (A-Z):
               - FILE ERROR 1 Not owner: error-messages/file-error-1-not-owner.md
               - FILE ERROR 2 No such file: error-messages/file-error-2-no-such-file.md
