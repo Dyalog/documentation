@@ -28,7 +28,7 @@ The result `R` is a 3-element nested array:
 
 |Item  |Description                                                                                                                                                                       |
 |------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|`R[1]`|Numeric. <br>¯1: the interface is not supported 0: the interface is not configured <br>1: the interface is configured to use .NET <br>2: the interface is configured to use the .NET Framework|
+|`R[1]`|Numeric. <br>¯1: the interface is not supported. <br>0: the interface is not configured. <br>1: the interface is configured to use .NET <br>2: the interface is configured to use the .NET Framework.|
 |`R[2]`|Boolean 0 or 1. <br>1 : the Bridge DLL was successfully loaded. <br>0 : the Bridge DLL failed to load, or was not attempted.                                                              |
 |`R[3]`|A character vector containing error messages generated during load.                                                                                                               |
 
