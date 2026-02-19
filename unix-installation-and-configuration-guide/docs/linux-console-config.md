@@ -6,7 +6,7 @@ In order to support Dyalog APL for UNIX in a console/terminal window under a Lin
 
 Dyalog submitted APL Language keyboard support to Xorg at the end of 2011; most Linux distributions released after mid-2012 have the Dyalog APL keyboard support included with the distribution. Such distributions include openSUSE 12.2, Ubuntu 12.10 and Fedora 17.
 
-Support for the Key character was submitted to Xorg in mid-2014; if your distribution does not support this character, contact Dyalog support for assistance.
+Support for the Behind character was submitted to Xorg in late-2024; if your distribution does not support this character, contact Dyalog support for assistance.
 
 Details of how to configure the keyboard under KDE4 appear below; keyboard support for other window managers (such as Gnome and Unity) is in a state of flux. The latest information about the process of installing and configuring Dyalog APL keyboard support for such environments can be found at:
 

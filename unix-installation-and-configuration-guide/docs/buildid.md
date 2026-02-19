@@ -19,24 +19,28 @@ Both of these methods can be used for any file; they are useful and very fast wa
 
 At the command line:
 ```
-$ cd /opt/mdyalog/12.1/32/classic/p6
+$ cd /opt/mdyalog/20.0/64/Unicode
 $ ./BuildID dyalog
-70a3446e
+bce024d2
 $ ./BuildID magic
-0a744663
+227a0227
 ```
 
 In APL:
 ```apl
       +2 ⎕NQ '.' 'GetbuildID'
 70a3446e
-      magicfile←'/opt/mdyalog/12.1/32/classic/p6/magic'
-      +2 ⎕NQ '.' 'GetBuildID' magicfile
-0a744663
-      )SH
+      magicfile←'/opt/mdyalog/20.0/64/unicode/magic'
+      +2 ⎕nq '.' 'GetBuildID' magicfile
+227a0227
+
+      )sh
 $ echo $PPID
+15323
 $ kill -11 $PPID
-/opt/mdyalog/12.1/32/classic/p6/mapl[58]: 274434 Segmentation fault(coredump)
-$ strings -a -n14 core | grep BuildID=
-BuildID=70a3446e
+$ apl: syserror 999.Segmentation fault (core dumped)
+$ strings -a -n14 core.15323 | grep BuildID=
+BuildID=bce024d2
+BuildID=bce024d2
+$ 
 ```

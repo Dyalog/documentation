@@ -16,48 +16,44 @@ or, in the case of AIX:
 /opt/mdyalog/{{ version_majmin }}/<APLWidth>/<APLEdition>/<platform>
 ```
 
-So for example, Dyalog APL Version {{ version_majmin }} 32 bit Unicode for POWER6 hardware on AIX will by default be installed into
+So for example, Dyalog APL Version {{ version_majmin }} 64 bit Unicode for POWER9 hardware on AIX will by default be installed into
 ```apl
-/opt/mdyalog/{{ version_majmin }}/32/unicode/p6        
+/opt/mdyalog/{{ version_majmin }}/64/unicode/p9        
 ```
 
 whereas on a Linux distribution the equivalent version would be installed in
 ```apl
-/opt/mdyalog/{{ version_majmin }}/32/Unicode        
+/opt/mdyalog/{{ version_majmin }}/64/Unicode        
 ```
 
-This naming convention began with Version 12.0, and is planned to continue into the future. This ensures that all versions and releases of Dyalog APL can be installed in parallel.
+This naming convention ensures that all versions and releases of Dyalog APL can be installed in parallel.
 
 As part of installing Dyalog on Linux (including Pi) the script /usr/bin/dyalog is created; this is a copy of the $DYALOG/mapl script and can be used to start Dyalog APL. Note that this script will start the most recently installed version of Dyalog APL. This script is used in the target of the Dyalog APL icon on Linux desktops. If preferable, Dyalog can be started by calling the script mapl in the appropriate Dyalog installation directory.
 
 When supplying updates or fixes, Dyalog issues a full installation image; this means that any file under the installation subdirectory may be overwritten. It is therefore strongly recommended that users do not alter issued files, as those changes could be lost if an update is installed.
 
-Dyalog APL version 
-{{ version_majmin }} for       Linux is supplied as a zip file which contains both a .deb- and a .rpm-based installation image.
-
 ## Installing under AIX
 
-For each version of Dyalog APL on AIX three separate hardware-specific builds are created for each of the four combinations of 32 or 64 bit versions, Classic or Unicode editions. For version {{ version_majmin }} specific builds for p5, p6 and p7 are created.
+For each version of Dyalog APL on AIX, separate hardware-specific builds are created for each of the four combinations of 32 or 64 bit versions, Classic or Unicode editions. For version {{ version_majmin }} specific builds for p9 are created.
 ```apl
 $ su -
 # cd /opt
-## cpio -icdvum </tmp/dyalog-20090901-64-unicode-p6.cpi
-## /opt/mdyalog/{{ version_majmin }}/64/unicode/p6/make_scripts
+## cpio -icdvum </tmp/dyalog-unicode_20.0.51795_ppc64_p9.cpi
 ## exit
 ```
 
 Dyalog APL is now installed. To run as any user, type
 ```apl
-$ /opt/mdyalog/{{ version_majmin }}/64/unicode/p6/mapl
+$ /opt/mdyalog/{{ version_majmin }}/64/unicode/p9/mapl
 ```
 
 !!! note
-    Version {{ version_majmin }} is compiled on AIX6.1.
+    Version {{ version_majmin }} is compiled on AIX7.2.
 
-## Installing on an RPM-based Linux Distribution
+## Installing on intel machines
+### Installing on an RPM-based Linux Distribution
 ```apl
-$ unzip linux_64_15.0.26964_unicode.zip
-$ sudo rpm --install linux_64_15.0.26964_unicode.x86_64.rpm
+$ sudo rpm --install dyalog-unicode_20.0.51795_x86_64.rpm
 ```
 
 Dyalog APL is now installed. To run as any user, type
@@ -66,17 +62,16 @@ $ dyalog
 ```
 or
 ```apl
-$ /opt/mdyalog/15.0/64/unicode/mapl
+$ /opt/mdyalog/20.0/64/unicode/mapl
 ```
 
 !!! note
     - It may be necessary to use the --force flag or equivalent if an earlier version of Dyalog APL is to be installed on the same server as a later version. This is safe since the versions have no files in common.
     - It has been noticed that in some circumstances the 32-bit installs fail on 64-bit operating systems due to a missing ncurses package. However, it appears that that package is indeed installed. What is required however is the 32-bit version: once installed, Dyalog APL will then install.
 
-## Installing on a DEB-based Linux Distribution
+### Installing on a DEB-based Linux Distribution
 ```other
-$ unzip linux_64_15.0.26964_unicode.zip
-$ sudo dpkg --install linux_64_15.0.26964_unicode.x86_64.deb
+$ sudo apt install dyalog-unicode_20.0.51795_amd64.deb
 ```
 Dyalog APL is now installed. To run as any user, type
 ```other
@@ -84,13 +79,49 @@ $ dyalog
 ```
 or
 ```other
-$ /opt/mdyalog/15.0/64/unicode/mapl
+$ /opt/mdyalog/20.0/64/unicode/mapl
 ```
 
 !!! note
     - It may be necessary to use the --force flag or equivalent if an earlier version of Dyalog APL is to be installed on the same server as a later version. This is safe since the versions have no files in common.
-    - If dpkg generates dependency errors, run  `apt-get install -f` (as root)
     - It has been noticed that in some circumstances the 32-bit installs fail on 64-bit operating systems due to a missing ncurses package. However, it appears that that package is indeed installed. What is required however is the 32-bit version: once installed, Dyalog APL will then install.
+
+## Installing on arm machines
+### Installing on an RPM-based Linux Distribution
+```apl
+$ sudo rpm --install dyalog-unicode_20.0.51795_aarch64.rpm
+```
+
+Dyalog APL is now installed. To run as any user, type
+```apl
+$ dyalog
+```
+or
+```apl
+$ /opt/mdyalog/20.0/64/unicode/mapl
+```
+
+!!! note
+    - It may be necessary to use the --force flag or equivalent if an earlier version of Dyalog APL is to be installed on the same server as a later version. This is safe since the versions have no files in common.
+
+
+### Installing on a DEB-based Linux Distribution
+```other
+$ sudo apt install dyalog-unicode_20.0.51795_aarch64.deb
+```
+Dyalog APL is now installed. To run as any user, type
+```other
+$ dyalog
+```
+or
+```other
+$ /opt/mdyalog/20.0/64/unicode/mapl
+```
+
+!!! note
+    - It may be necessary to use the --force flag or equivalent if an earlier version of Dyalog APL is to be installed on the same server as a later version. This is safe since the versions have no files in common.
+    - It has been noticed that in some circumstances the 32-bit installs fail on 64-bit operating systems due to a missing ncurses package. However, it appears that that package is indeed installed. What is required however is the 32-bit version: once installed, Dyalog APL will then install.
+
 
 ## Installing in a non-default location
 
@@ -118,41 +149,35 @@ For .rpm based Linux distributions
 ```other
 rpm2cpio installation_image.rpm | cpio -icdvum
 ```
-For all UNIXes:
-```other
-find opt/mdyalog -name make_scripts -exec {} \;
-```
-
-This last step generates the mapl script; should you chose to move the installation directory, it will be necessary to re-run the make_scripts script so that the environment variable $DYALOG is set correctly.
 
 ## Deinstalling Dyalog APL
 
-In the following examples, it is assumed that only Dyalog APL 14.0 64-bit Unicode is installed on the server; the commands to delete directories will need to be more specific if multiple versions of Dyalog APL are installed.
+In the following examples, it is assumed that only Dyalog APL 20.0 64-bit Unicode is installed on the server; the commands to delete directories will need to be more specific if multiple versions of Dyalog APL are installed.
 
 Should it be necessary to deinstall Dyalog APL, then the process is:
 
-## Deinstalling under AIX
+### Deinstalling under AIX
 ```apl
 su -
 cd /opt
-rm -rf mdyalog/14.0
+rm -rf mdyalog/20.0
 ```
 
-## Deinstalling on an RPM-based Linux Distribution
+### Deinstalling on an RPM-based Linux Distribution
 ```other
 su -
-rpm -e dyalog.32.classic-14.0-20090901
+rpm -e dyalog-unicode_20.0.51795_x86_64
 cd /opt
-rm -rf mdyalog/14.0
+rm -rf mdyalog/20.0
 exit
 ```
 
-## Deinstalling on a DEB-based Linux Distribution
+### Deinstalling on a DEB-based Linux Distribution
 ```other
 sudo su -
-apt-get purge dyalog-unicode-140
+apt-get purge dyalog-unicode-200
 cd /opt
-rm -rf mdyalog/14.0
+rm -rf mdyalog/20.0
 exit
 ```
 

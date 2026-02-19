@@ -24,7 +24,7 @@ On Linux, it is a little more difficult to location the libc.so file; the functi
 
 ### Definitions
 
-In the remainder of this section references are made to the APL variables `sharedlib` and `dyalib`; the definitions for both vary  between AIX and Linux, and between 32 and 64 bit interpreters.
+In the remainder of this section references are made to the APL variables `sharedlib` and `dyalib`; the definitions for both vary between AIX and Linux, and between 32 and 64 bit interpreters.
 
 Under AIX, `sharedlib` is defined as:
 ```apl
