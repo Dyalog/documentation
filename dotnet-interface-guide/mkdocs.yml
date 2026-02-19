@@ -1,0 +1,149 @@
+site_name: .NET Interface Guide
+theme:
+  favicon: documentation-assets/images/favicon-32.png
+  logo: documentation-assets/images/dyalog-logo_white.svg
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.path
+    - navigation.indexes
+  name: material
+  font:
+    text: Be Vietnam Pro
+extra_css:
+  - documentation-assets/css/main.css
+  - documentation-assets/css/extra.css
+  - documentation-assets/css/admonition-ucmdhelp.css
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+plugins:
+  - privacy
+  - search
+  - macros
+  - site-urls
+  - caption:
+      table:
+        enable: true
+        start_index: 1
+        increment_index: 1
+        position: bottom
+        reference_text: 'Table {index}'
+        caption_prefix: 'Table {index}:'
+extra:
+  version_maj: 20
+  version_majmin: 20.0
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+  - abbr
+  - footnotes
+  - md_in_html
+  - markdown_tables_extended
+  - toc:
+      title: On this page
+nav:
+  - Installation:
+      - Introduction: installation/installation.md
+      - Pre-requisites:
+          - Introduction: installation/pre-requisites/prerequisites.md
+          - Installing .NET:
+              - Introduction: 
+                  installation/pre-requisites/installing-net/installing-dotnet.md
+              - Upgrading .NET Support: 
+                  installation/pre-requisites/installing-net/upgrading-dotnet-support.md
+      - Files Installed with Dyalog: installation/files-installed-with-dyalog.md
+      - Enabling the .NET Interface: installation/enabling-net-interface.md
+      - Verifying the Installation: installation/verifying-the-installation.md
+  - .NET Classes:
+      - Introduction: net-classes/dotnet-classes.md
+      - Locating .NET Classes and Assemblies: 
+          net-classes/locating-net-classes-and-assemblies.md
+      - Using .NET Classes:
+          - Introduction: net-classes/using-net-classes/using-dotnet-classes.md
+          - Constructors and Overloading: 
+              net-classes/using-net-classes/constructors-and-overloading.md
+          - Resolving References to .NET Objects: 
+              net-classes/using-net-classes/resolving-refs-to-net-objects.md
+          - Displaying a .NET Object:
+              - Introduction: 
+                  net-classes/using-net-classes/displaying-a-net-object/displaying-a-dotnet-object.md
+              - Value Tips for External Functions: 
+                  net-classes/using-net-classes/displaying-a-net-object/value-tips-for-external-functions.md
+          - Disposing of .NET Objects: 
+              net-classes/using-net-classes/disposing-of-dotnet-objects.md
+          - Advanced Techniques:
+              - Shared Members: 
+                  net-classes/using-net-classes/advanced-techniques/shared-members.md
+              - APL Language Extensions for .NET Projects: 
+                  net-classes/using-net-classes/advanced-techniques/apl-language-extensions-for-dotnet-projects.md
+              - Exceptions: 
+                  net-classes/using-net-classes/advanced-techniques/exceptions.md
+              - Specifying Overloads:
+                  - Introduction: 
+                      net-classes/using-net-classes/advanced-techniques/specifying-overloads/specifying-overloads.md
+                  - Overloaded Constructors: 
+                      net-classes/using-net-classes/advanced-techniques/specifying-overloads/overloaded-constructors.md
+              - Generics:
+                  - Introduction: 
+                      net-classes/using-net-classes/advanced-techniques/generics/generics.md
+                  - Creating a Concrete Version of a Generic Class: 
+                      net-classes/using-net-classes/advanced-techniques/generics/creating-a-concrete-version-of-a-generic-class.md
+                  - Calling a Generic Method: 
+                      net-classes/using-net-classes/advanced-techniques/generics/calling-a-generic-method.md
+                  - Calling a Niladic Generic Method: 
+                      net-classes/using-net-classes/advanced-techniques/generics/calling-a-niladic-generic-method.md
+          - Example Usage:
+              - Directory and File Manipulation: 
+                  net-classes/using-net-classes/example-usage/directory-and-file-manipulation.md
+              - Sending an Email: 
+                  net-classes/using-net-classes/example-usage/sending-an-email.md
+              - Web Scraping: 
+                  net-classes/using-net-classes/example-usage/web-scraping.md
+          - Enumerations: net-classes/using-net-classes/enumerations.md
+          - Handling Pointers with Dyalog.ByRef: 
+              net-classes/using-net-classes/handling-pointers-with-dyalogbyref.md
+          - DECF Conversion: net-classes/using-net-classes/decf-conversion.md
+  - APL Source Files:
+      - Introduction: apl-source-files/apl-source-files.md
+      - The Dyalog .NET Compiler: apl-source-files/the-dyalog-dotnet-compiler.md
+      - Creating an APL Source File: 
+          apl-source-files/creating-an-apl-source-file.md
+      - Copying Code from the Dyalog  Session: 
+          apl-source-files/copying-code-from-the-dyalog-session.md
+      - General Principles of APL Source Files: 
+          apl-source-files/general-principles-of-apl-source-files.md
+      - Creating Programs (.exe) with APL Source Files:
+          - Introduction: 
+              apl-source-files/creating-programs-exe-with-apl-source-files/creating-programs-with-apl-source-files.md
+          - Defining Namespaces: 
+              apl-source-files/creating-programs-exe-with-apl-source-files/defining-namespaces.md
+  - Writing .NET Classes:
+      - Introduction: writing-net-classes/writing-dotnet-classes-in-dyalog.md
+      - Assemblies, Namespaces, and Classes:
+          - Introduction: 
+              writing-net-classes/assemblies-namespaces-and-classes/assemblies-namespaces-and-classes.md
+          - The Bind Method: 
+              writing-net-classes/assemblies-namespaces-and-classes/the-bind-method.md
+      - Tutorial:
+          - Introduction: writing-net-classes/tutorial/tutorial.md
+          - Example 1: writing-net-classes/tutorial/dotnet-classes-eg1.md
+          - Example 2: writing-net-classes/tutorial/dotnet-classes-eg2.md
+          - Example 3: writing-net-classes/tutorial/dotnet-classes-eg3.md
+          - Example 4: writing-net-classes/tutorial/dotnet-classes-eg4.md
+          - Example 5: writing-net-classes/tutorial/dotnet-classes-eg5.md
+      - Interfaces: writing-net-classes/interfaces.md
+      - Creating .NET Classes with APL Source Files:
+          - Introduction: 
+              writing-net-classes/creating-net-classes-with-apl-source-files/creating-dotnet-classes-with-apl-source-files.md
+          - 'Example: Creating A .NET Class Using an APL Source File': 
+              writing-net-classes/creating-net-classes-with-apl-source-files/example-creating-a-dotnet-class-using-apl-source-files.md
+          - Defining Properties: 
+              writing-net-classes/creating-net-classes-with-apl-source-files/defining-properties.md
+          - Indexers: 
+              writing-net-classes/creating-net-classes-with-apl-source-files/indexers.md

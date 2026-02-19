@@ -82,6 +82,7 @@ nav:
         - 'Object Reference': "!include ./object-reference/mkdocs.yml"
         - 'Interfaces': "!include ./interface-guide/mkdocs.yml"
         - '.NET Framework Interface': "!include ./net-framework-interface-guide/mkdocs.yml"
+        - '.NET Interface': "!include ./dotnet-interface-guide/mkdocs.yml"
   - 'Dyalog for UNIX': 
         - 'Installation/Configuration': "!include ./unix-installation-and-configuration-guide/mkdocs.yml"       
         - 'User Interface': "!include ./unix-user-guide/mkdocs.yml"
