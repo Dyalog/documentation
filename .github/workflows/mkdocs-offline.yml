@@ -1,0 +1,116 @@
+name: Build Offline Documentation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-offline:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        fetch-depth: 0
+
+    - name: Update Assets
+      run: git submodule update --remote --recursive documentation-assets
+
+    - name: Get Git Info
+      id: git-info
+      run: |
+        BRANCH=$(git rev-parse --abbrev-ref HEAD)
+        HASH=$(git rev-parse --short HEAD)
+        echo "GIT_INFO=${BRANCH}:${HASH}" >> $GITHUB_OUTPUT
+        echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+        echo "CURRENT_YEAR=$(date +'%Y')" >> $GITHUB_OUTPUT
+
+    - name: Install yq
+      run: |
+        sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/v4.44.1/yq_linux_amd64
+        sudo chmod +x /usr/local/bin/yq
+
+    - name: Determine Version
+      id: version
+      run: |
+        VERSION=$(yq -r '.extra.version_majmin | tostring' mkdocs.yml)
+        if ! echo "${VERSION}" | grep -qE '^[0-9]+\.[0-9]+$'; then
+          echo "ERROR: Invalid version format '${VERSION}'. Expected X.Y"
+          exit 1
+        fi
+        echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install \
+          mkdocs-material \
+          mkdocs-macros-plugin \
+          mkdocs-monorepo-plugin \
+          mkdocs-site-urls \
+          mkdocs-caption \
+          markdown-tables-extended \
+          mkdocs-minify-plugin
+
+    - name: Build offline site
+      env:
+        OFFLINE: 'true'
+        GIT_INFO: ${{ steps.git-info.outputs.GIT_INFO }}
+        BUILD_DATE: ${{ steps.git-info.outputs.DATE }}
+        CURRENT_YEAR: ${{ steps.git-info.outputs.CURRENT_YEAR }}
+      run: |
+        VERSION="${{ steps.version.outputs.VERSION }}"
+
+        # Substitute env variables in mkdocs.yml
+        cp mkdocs.yml mkdocs.yml.bak
+        envsubst '$BUILD_DATE $GIT_INFO $CURRENT_YEAR' < mkdocs.yml.bak > mkdocs.yml
+
+        # Disable features incompatible with offline viewing
+        yq -i 'del(.theme.features[] | select(. == "navigation.instant"))' mkdocs.yml
+
+        mv documentation-assets docs/documentation-assets
+        mkdocs build
+        cd site && zip -r "../documentation-${VERSION}-offline.zip" .
+
+    - name: Create draft release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        VERSION="${{ steps.version.outputs.VERSION }}"
+        COMMIT_COUNT=$(git rev-list --count HEAD)
+        RELEASE_TAG="v${VERSION}.${COMMIT_COUNT}"
+
+        # Clean up old drafts (keep 5)
+        MAX_DRAFTS=5
+        DRAFTS=$(gh release list --json tagName,isDraft,createdAt \
+          --jq '.[] | select(.isDraft==true) | [.tagName,.createdAt] | @tsv' \
+          | sort -k2 | awk '{print $1}')
+        DRAFT_COUNT=$(echo "$DRAFTS" | grep -c "^" || true)
+        if [ $DRAFT_COUNT -gt $MAX_DRAFTS ]; then
+          TO_DELETE=$((DRAFT_COUNT - MAX_DRAFTS + 1))
+          echo "$DRAFTS" | head -n $TO_DELETE | while read -r tag; do
+            gh release delete "$tag" --yes
+          done
+        fi
+
+        # Handle tag collisions
+        TAG="$RELEASE_TAG"
+        LETTER="a"
+        while gh release view "$TAG" &>/dev/null; do
+          TAG="${RELEASE_TAG}${LETTER}"
+          LETTER=$(echo "$LETTER" | tr "a-y" "b-z")
+        done
+
+        gh release create "$TAG" \
+          "documentation-${VERSION}-offline.zip" \
+          --draft \
+          --title "Documentation Offline ${TAG}" \
+          --notes "Offline documentation generated from ${{ steps.git-info.outputs.GIT_INFO }}"

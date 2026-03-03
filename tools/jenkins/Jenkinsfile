@@ -2,6 +2,65 @@
 
 def hashSame = null
 
+// Per-version SVN path configuration.
+// Convention: trunk is always the current development version;
+// released versions live under branches/{version}/.
+
+def getSvnDocbinUrl(String version) {
+    if (version == env.TRUNK_VERSION) {
+        return "docbin/trunk/documentation"
+    }
+    return "docbin/branches/${version}/documentation"
+}
+
+def getSvnReadmeUrl(String version) {
+    if (version == env.TRUNK_VERSION) {
+        return "dyalog/trunk/svn/docs/readmes"
+    }
+    return "dyalog/branches/${version}/svn/docs/readmes"
+}
+
+/**
+ * Download release assets for a specific documentation version.
+ * Finds the latest non-draft release whose tag starts with "v{version}."
+ * and downloads all assets to the target directory.
+ */
+def getVersionedReleaseAssets(String repo, String targetDir, String version) {
+    withCredentials([
+        usernamePassword(
+            credentialsId: getCredentialsId('github'),
+            usernameVariable: 'GITHUB_USER',
+            passwordVariable: 'GITHUB_PASS'
+        )
+    ]) {
+        sh """#!/bin/bash
+            set -euo pipefail
+            echo "\${GITHUB_PASS}" | /usr/bin/gh auth login --with-token
+
+            REPO="Dyalog/${repo}"
+            TAG=\$(gh release list -R "\$REPO" --exclude-drafts \\
+                --json tagName,createdAt \\
+                | jq -r '[.[] | select(.tagName | startswith("v${version}."))]
+                         | sort_by(.createdAt) | last | .tagName')
+
+            if [ -z "\$TAG" ] || [ "\$TAG" = "null" ]; then
+                echo "ERROR: No release found matching v${version}.*"
+                exit 1
+            fi
+
+            echo "Downloading assets from release \$TAG for version ${version}"
+            rm -rf "\$WORKSPACE/${targetDir}"
+            mkdir -p "\$WORKSPACE/${targetDir}"
+            gh release download "\$TAG" -R "\$REPO" -D "\$WORKSPACE/${targetDir}"
+            gh release view "\$TAG" -R "\$REPO" \\
+                --json apiUrl,author,createdAt,id,isDraft,isPrerelease,name,publishedAt,tagName \\
+                > "\$WORKSPACE/${targetDir}/buildinfo.json"
+            echo "Downloaded:"
+            ls "\$WORKSPACE/${targetDir}"
+        """
+    }
+}
+
 pipeline {
     agent none
 
@@ -33,13 +92,22 @@ pipeline {
         GITHUB_REPO     = 'https://github.com/dyalog/documentation.git'
         WEB_ROOT        = '/DockerVolumes/websites/docs.dyalog.com/'
         WEB_URL         = 'docs.dyalog.com'
-        HASH_SAME       = 'unknown'  // Prevent undefined variable issues
+        HASH_SAME       = 'unknown'
         SWARM_NAME      = "docsweb"
-        DOCSVERSION     = '20.0'
+
+        // ============================================================
+        // PRODUCTION_VERSIONS: Space-separated list of versions to deploy
+        // Add '21.0' when v21 is ready for production release
+        // ============================================================
+        PRODUCTION_VERSIONS = '20.0'
+
+        // The "development" version currently on trunk in SVN.
+        // When v21 is released and v22 development starts, update this to '22.0'.
+        TRUNK_VERSION = '21.0'
+
         GITDOCURL       = 'documentation'
 
-        SVNDOCURL       = "docbin/trunk/documentation"
-        SVNREADMEURL    = "dyalog/branches/20.0/svn/docs/readmes"
+        // Version-agnostic SVN paths
         SVNSHARPPLOTURL = "dyalogtools/Causeway/trunk/release"
 
         SVNDOCDIR       = 'svn_docs'
@@ -68,8 +136,13 @@ pipeline {
                         {
                             sh '[ "x" != "x$WORKSPACE" ] && rm -rf $WORKSPACE/*'
                             doGitCheckout('JenkinsBuild', 'Jenkins')
-                            r=ghGetReleaseAssets(GITDOCURL, GITDOCDIR)
-                            doSvnCheckout(SVNDOCURL, SVNDOCDIR)
+
+                            // Fetch release assets and SVN checkout for each production version
+                            def versions = env.PRODUCTION_VERSIONS.split(' ')
+                            versions.each { version ->
+                                getVersionedReleaseAssets(GITDOCURL, "${GITDOCDIR}/${version}", version)
+                                doSvnCheckout(getSvnDocbinUrl(version), "${SVNDOCDIR}/${version}")
+                            }
                         }
                     }
                 }
@@ -116,14 +189,19 @@ pipeline {
 
                 stage('Get files from svn/docbin etc') {
                     steps {
-                        dir("${env.DOCSVERSION}/files") { // Remove files directory to ensure we start with a clean sheet
-                            deleteDir()
-                        }
-                        dir("${env.DOCSVERSION}") {
-                            doSvnCheckout(SVNDOCURL, "files", true, 'svncom')
-                            doSvnCheckout(SVNSHARPPLOTURL, "files/sharpplot", true, 'svncom')
-                            doSvnCheckout(SVNREADMEURL, "files/readmes", true, 'svncom')
-                            sh '''$WORKSPACE/get_svn_docbin ${DOCSVERSION}'''
+                        script {
+                            def versions = env.PRODUCTION_VERSIONS.split(' ')
+                            versions.each { version ->
+                                dir("${version}/files") {
+                                    deleteDir()
+                                }
+                                dir("${version}") {
+                                    doSvnCheckout(getSvnDocbinUrl(version), "files", true, 'svncom')
+                                    doSvnCheckout(env.SVNSHARPPLOTURL, "files/sharpplot", true, 'svncom')
+                                    doSvnCheckout(getSvnReadmeUrl(version), "files/readmes", true, 'svncom')
+                                    sh "\$WORKSPACE/get_svn_docbin ${version}"
+                                }
+                            }
                         }
                     }
                 }
@@ -158,7 +236,7 @@ pipeline {
                                 } else {
                                     hashSame = false
                                     env.HASH_SAME = 'false'
-                                    env.LATEST_HASH = latestHash 
+                                    env.LATEST_HASH = latestHash
                                     echo 'Changes detected or no current deployment – proceeding with deployment.'
                                 }
                             } catch (Exception e) {
@@ -181,11 +259,13 @@ pipeline {
                             echo "  HASH_SAME (env) = ${env.HASH_SAME}"
                             echo "  LATEST_HASH = ${env.LATEST_HASH ?: 'not set'}"
                             echo "  BUILD_TIMESTAMP = ${env.BUILD_TIMESTAMP ?: 'not set'}"
+                            echo "  PRODUCTION_VERSIONS = ${env.PRODUCTION_VERSIONS}"
+                            echo "  TRUNK_VERSION = ${env.TRUNK_VERSION}"
                             echo "  WEB_ROOT exists = ${sh(script: "test -d '${env.WEB_ROOT}' && echo 'yes' || echo 'no'", returnStdout: true).trim()}"
                         }
                     }
                 }
-                
+
                 stage('Backup current site') {
                     when {
                         allOf {
@@ -210,23 +290,47 @@ pipeline {
                                 ''',
                                 returnStdout: true
                             ).trim()
-                            
+
                             def backupName = "docs.backup.${env.BUILD_TIMESTAMP}.${currentHash}.tar.gz"
                             env.BACKUP_FILE = backupName
                         }
                         sh '''#!/bin/bash
                             set -euo pipefail
                             echo "Backing up current site at ${WEB_ROOT} before deployment."
-                            BACKUP_DIR=$(dirname "${WEB_ROOT}")
-                            SITE_BASENAME=$(basename "${WEB_ROOT}")
 
                             echo "Creating compressed backup: ${BACKUP_FILE}"
-                            tar -czf "${BACKUP_FILE}" -C "${BACKUP_DIR}" --exclude='*.tar.gz' "${SITE_BASENAME}"
-                            
-                            BACKUP_SIZE=$(ls -lh "${BACKUP_FILE}" | awk '{print $5}')
-                            echo "Backup created successfully. Size: ${BACKUP_SIZE}"
+                            cd "${WEB_ROOT}"
+
+                            # Build list of existing directories to backup
+                            BACKUP_TARGETS=""
+                            for VERSION in ${PRODUCTION_VERSIONS}; do
+                                if [ -d "${VERSION}" ]; then
+                                    BACKUP_TARGETS="${BACKUP_TARGETS} ${VERSION}"
+                                else
+                                    echo "  Note: ${VERSION} does not exist yet, skipping from backup"
+                                fi
+                            done
+
+                            # Add .git-hash if it exists
+                            if [ -f ".git-hash" ]; then
+                                BACKUP_TARGETS="${BACKUP_TARGETS} .git-hash"
+                            fi
+
+                            # Only create backup if we have something to backup
+                            if [ -z "${BACKUP_TARGETS}" ]; then
+                                echo "WARNING: Nothing to backup (no existing production versions)"
+                                # Create empty marker file so archiveArtifacts doesn't fail
+                                touch "${WORKSPACE}/${BACKUP_FILE}.empty"
+                            else
+                                echo "Backing up:${BACKUP_TARGETS}"
+                                tar -czf "${WORKSPACE}/${BACKUP_FILE}" ${BACKUP_TARGETS}
+                                BACKUP_SIZE=$(ls -lh "${WORKSPACE}/${BACKUP_FILE}" | awk '{print $5}')
+                                echo "Backup created successfully. Size: ${BACKUP_SIZE}"
+                            fi
+
+                            cd "${WORKSPACE}"
                         '''
-                        archiveArtifacts artifacts: "${env.BACKUP_FILE}", 
+                        archiveArtifacts artifacts: "${env.BACKUP_FILE}",
                                         fingerprint: true,
                                         onlyIfSuccessful: true
                     }
@@ -244,38 +348,62 @@ pipeline {
                             set -euo pipefail
                             echo "Starting deployment to ${WEB_ROOT}."
 
-                            # Since WEB_ROOT is a volume mount (on Docker), we need to sync directly into it.
-                            # This is safer on non-Docker, too, rather than wiping the directory itself.
-                            echo "Clearing existing content in ${WEB_ROOT}..."
-                            # Safety check!
-                            if [ "x" = "x${WEB_ROOT}" ]; then
-                                echo "WEB_ROOT NOT SET"
+                            if [ -z "${WEB_ROOT}" ]; then
+                                echo "ERROR: WEB_ROOT NOT SET"
                                 exit 1
-                            fi 
-
-                            ## Force docs/20.0 so we don't overwrite older versions
-                            if [ -d "${WEB_ROOT}" ]; then
-                                rm -rf "${WEB_ROOT}"/20.0/*
-                                rm -f "${WEB_ROOT}"/.git-hash
-                            else
-                                mkdir -p "${WEB_ROOT}/20.0"
                             fi
-                            
-                            echo "Syncing content from ${WORKSPACE} to ${WEB_ROOT}/"
-                            rsync -rl --delete --exclude-from="${WORKSPACE}/.rsync-exclude" "${WORKSPACE}/20.0" "${WEB_ROOT}"
-                            
+
+                            # Create WEB_ROOT if it doesn't exist
+                            if [ ! -d "${WEB_ROOT}" ]; then
+                                mkdir -p "${WEB_ROOT}"
+                            fi
+
+                            # Track deployment success
+                            DEPLOYED_COUNT=0
+
+                            # Deploy only PRODUCTION_VERSIONS
+                            for VERSION in ${PRODUCTION_VERSIONS}; do
+                                echo "Processing version: ${VERSION}"
+
+                                # CRITICAL: Verify source exists before touching production
+                                if [ ! -d "${WORKSPACE}/${VERSION}" ]; then
+                                    echo "  ERROR: Source ${WORKSPACE}/${VERSION} does not exist!"
+                                    echo "  This version may not have been published to gh-pages."
+                                    echo "  Skipping to avoid wiping production."
+                                    continue
+                                fi
+
+                                if [ ! -f "${WORKSPACE}/${VERSION}/index.html" ]; then
+                                    echo "  ERROR: ${WORKSPACE}/${VERSION}/index.html missing!"
+                                    echo "  Source appears incomplete. Skipping to avoid corruption."
+                                    continue
+                                fi
+
+                                # Source verified - safe to deploy
+                                echo "  Source verified, deploying..."
+
+                                # Clear existing version directory (only now that source is verified)
+                                if [ -d "${WEB_ROOT}/${VERSION}" ]; then
+                                    rm -rf "${WEB_ROOT}/${VERSION:?}"/*
+                                fi
+
+                                # Sync this version
+                                rsync -rl --delete --exclude-from="${WORKSPACE}/.rsync-exclude" "${WORKSPACE}/${VERSION}" "${WEB_ROOT}"
+                                echo "  Deployed ${VERSION} successfully"
+                                DEPLOYED_COUNT=$((DEPLOYED_COUNT + 1))
+                            done
+
+                            # Only update git hash if at least one version was deployed
+                            if [ $DEPLOYED_COUNT -eq 0 ]; then
+                                echo "ERROR: No versions were deployed! Not updating .git-hash"
+                                exit 1
+                            fi
+
+                            # Update git hash
                             echo "Storing new git hash (${LATEST_HASH})."
                             echo "${LATEST_HASH}" | tee "${WEB_ROOT}/.git-hash" >/dev/null
-                            
-                            #echo "Setting permissions on ${WEB_ROOT}..."
-                            #chown -R www-data:www-data "${WEB_ROOT}"
-                            #find "${WEB_ROOT}" -type d -exec chmod 755 {} +
-                            #find "${WEB_ROOT}" -type f -exec chmod 644 {} +
-                            #echo "Permissions set."
 
-                            echo "Deployment completed successfully."
-                            # Uncomment next line to test rollback
-                            # exit 1
+                            echo "Deployment completed successfully. Deployed ${DEPLOYED_COUNT} version(s)."
                         '''
                         script {
                             env.DEPLOYMENT_EXECUTED = 'true'
@@ -288,7 +416,7 @@ pipeline {
                     }
                 }
 
-                stage('Verify deployment') { // Noddy check that the site is up
+                stage('Verify deployment') {
                     when {
                         expression { hashSame == false }
                     }
@@ -297,11 +425,20 @@ pipeline {
                             set -euo pipefail
                             echo "Verifying deployment at ${WEB_ROOT}..."
 
-                            if ! test -f "${WEB_ROOT}/20.0/index.html"; then
-                                echo "ERROR: Verification failed - index.html not found in ${WEB_ROOT}."
+                            FAILED=0
+                            for VERSION in ${PRODUCTION_VERSIONS}; do
+                                if ! test -f "${WEB_ROOT}/${VERSION}/index.html"; then
+                                    echo "ERROR: ${VERSION}/index.html not found"
+                                    FAILED=1
+                                else
+                                    echo "  ${VERSION}/index.html OK"
+                                fi
+                            done
+
+                            if [ $FAILED -eq 1 ]; then
                                 exit 1
                             fi
-                            
+
                             echo "Deployment verified successfully."
                             echo "Site location: ${WEB_ROOT}"
                             echo "Deployed Git hash: $(cat "${WEB_ROOT}/.git-hash" 2>/dev/null || echo 'unknown')"
@@ -344,7 +481,7 @@ pipeline {
                     script {
                         // Report which stage failed
                         echo "FAILURE: Pipeline failed at stage: ${env.STAGE_NAME ?: 'Unknown'}"
-                        
+
                         // Only attempt rollback if a deployment was actually attempted
                         if (hashSame == false) {
                             echo "ERROR: Deployment failed. Attempting automatic rollback to the latest backup..."
@@ -355,31 +492,31 @@ pipeline {
                                             filter: 'docs.backup.*.tar.gz',
                                             flatten: true,
                                             optional: false
-                                
+
                                 sh '''#!/bin/bash
                                     set -euo pipefail
                                     # Find the backup file that was copied
                                     BACKUP_FILE=$(ls docs.backup.*.tar.gz | head -n1)
-                                    
+
                                     if [[ -n "${BACKUP_FILE}" ]]; then
                                         echo "Found backup for rollback: ${BACKUP_FILE}"
-                                        
+
                                         # Clear contents but preserve mount point
                                         echo "Clearing failed deployment from ${WEB_ROOT}..."
                                         find "${WEB_ROOT}" -mindepth 1 -delete
-                                        
+
                                         echo "Extracting ${BACKUP_FILE} to ${WEB_ROOT}..."
                                         tar -xzf "${BACKUP_FILE}" -C "${WEB_ROOT}" --strip-components=1
                                         echo "Extraction complete."
-                                        
+
                                         chown -R www-data:www-data "${WEB_ROOT}"
                                         echo "Ownership set for rolled-back site."
-                                        
+
                                         echo "Automatic rollback completed successfully from ${BACKUP_FILE}"
                                         if test -f "${WEB_ROOT}/.git-hash"; then
                                             echo "Rolled back to Git hash: $(cat "${WEB_ROOT}/.git-hash")"
                                         fi
-                                        
+
                                         # Clean up the copied artifact
                                         rm -f "${BACKUP_FILE}"
                                     else
