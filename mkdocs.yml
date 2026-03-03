@@ -40,6 +40,8 @@ plugins:
         caption_prefix: 'Table {index}:'
   - minify:
       minify_html: true
+  - offline:
+      enabled: !ENV [OFFLINE, false]
 
 extra:
   version_maj: 20

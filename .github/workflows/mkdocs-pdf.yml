@@ -11,6 +11,10 @@ on:
         description: 'Generate CHM help file'
         type: boolean
         default: true
+      generate_offline:
+        description: 'Generate offline site bundle'
+        type: boolean
+        default: true
 
 jobs:
   convert-docs:
@@ -28,6 +32,7 @@ jobs:
         HASH=$(git rev-parse --short HEAD)
         echo "GIT_INFO=${BRANCH}:${HASH}" >> $GITHUB_OUTPUT
         echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+        echo "CURRENT_YEAR=$(date +'%Y')" >> $GITHUB_OUTPUT
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -63,7 +68,12 @@ jobs:
           git+https://github.com/flywire/caption \
           htmlmin \
           csscompressor \
-          cssutils
+          cssutils \
+          mkdocs-macros-plugin \
+          mkdocs-monorepo-plugin \
+          mkdocs-site-urls \
+          mkdocs-caption \
+          mkdocs-minify-plugin
 
     - name: Prepare directories
       run: |
@@ -138,6 +148,21 @@ jobs:
           --git-info "$GIT_INFO" \
           --build-date "$BUILD_DATE"
 
+    - name: Build offline site
+      if: ${{ inputs.generate_offline }}
+      env:
+        OFFLINE: 'true'
+        GIT_INFO: ${{ steps.git-info.outputs.GIT_INFO }}
+        BUILD_DATE: ${{ steps.git-info.outputs.DATE }}
+        CURRENT_YEAR: ${{ steps.git-info.outputs.CURRENT_YEAR }}
+      run: |
+        git submodule update --init --recursive documentation-assets
+        cp mkdocs.yml mkdocs.yml.bak
+        envsubst '$BUILD_DATE $GIT_INFO $CURRENT_YEAR' < mkdocs.yml.bak > mkdocs.yml
+        mv documentation-assets docs/documentation-assets
+        mkdocs build
+        cd site && zip -r ../site.zip .
+
     - name: Install yq
       run: |
         sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
@@ -204,20 +229,24 @@ jobs:
         BASE_TAG="${{ steps.version.outputs.VERSION }}"
         RELEASE_TAG=$(get_available_tag "$BASE_TAG")
         
-        # Set release name and assets based on what was generated
-        if ${{ inputs.generate_pdf && inputs.generate_chm }}; then
-          RELEASE_NAME="Documentation PDFs and CHM $RELEASE_TAG"
-          ASSETS="pdf/output/*.pdf chm/output/*.chm"
-          NOTES="Documentation PDFs and CHM help file generated from ${{ steps.git-info.outputs.GIT_INFO }}"
-        elif ${{ inputs.generate_pdf }}; then
-          RELEASE_NAME="Documentation PDFs $RELEASE_TAG"
-          ASSETS="pdf/output/*.pdf"
-          NOTES="Documentation PDFs generated from ${{ steps.git-info.outputs.GIT_INFO }}"
-        else
-          RELEASE_NAME="Documentation CHM $RELEASE_TAG"
-          ASSETS="chm/output/*.chm"
-          NOTES="Documentation CHM help file generated from ${{ steps.git-info.outputs.GIT_INFO }}"
+        # Collect assets based on what was generated
+        ASSETS=""
+        PARTS=""
+        if ${{ inputs.generate_pdf }}; then
+          ASSETS="$ASSETS pdf/output/*.pdf"
+          PARTS="$PARTS PDFs"
         fi
+        if ${{ inputs.generate_chm }}; then
+          ASSETS="$ASSETS chm/output/*.chm"
+          PARTS="$PARTS CHM"
+        fi
+        if ${{ inputs.generate_offline }}; then
+          ASSETS="$ASSETS site.zip"
+          PARTS="$PARTS Offline"
+        fi
+        PARTS=$(echo $PARTS | xargs)
+        RELEASE_NAME="Documentation ${PARTS} $RELEASE_TAG"
+        NOTES="Documentation ${PARTS} generated from ${{ steps.git-info.outputs.GIT_INFO }}"
         
         echo "Creating new draft release: $RELEASE_TAG"
         
