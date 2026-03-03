@@ -1,0 +1,234 @@
+name: Test Jenkins Deployment Logic
+
+# Simulates the Jenkins pipeline's core logic against the gh-pages branch.
+# Tests version filtering, selective deployment, and release asset queries.
+# Safe to run: operates entirely in temp directories, never touches production.
+
+on:
+  workflow_dispatch:
+    inputs:
+      production_versions:
+        description: 'Space-separated versions to deploy (simulates PRODUCTION_VERSIONS)'
+        required: true
+        default: '20.0'
+        type: string
+      trunk_version:
+        description: 'Version on SVN trunk (simulates TRUNK_VERSION)'
+        required: true
+        default: '21.0'
+        type: string
+
+jobs:
+  simulate-jenkins:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        ref: gh-pages
+        fetch-depth: 0
+
+    - name: Show gh-pages structure
+      run: |
+        echo "=== Top-level files on gh-pages ==="
+        ls -la
+        echo ""
+        echo "=== Version directories ==="
+        for d in */; do
+          if echo "$d" | grep -qE '^[0-9]+\.[0-9]+/$'; then
+            echo "  $d  ($(find "$d" -type f | wc -l) files)"
+          fi
+        done
+        echo ""
+        echo "=== versions.json ==="
+        cat versions.json 2>/dev/null || echo "(not found)"
+        echo ""
+        echo "=== Root index.html redirect ==="
+        grep -o 'url=[^"]*\|replace([^)]*' index.html 2>/dev/null || echo "(not found)"
+
+    - name: Verify Jenkinsfile on gh-pages
+      run: |
+        echo "=== Checking Jenkinsfile content ==="
+        if [ ! -f Jenkinsfile ]; then
+          echo "FAIL: No Jenkinsfile on gh-pages"
+          exit 1
+        fi
+
+        # Check for key markers of the new Jenkinsfile
+        if grep -q 'PRODUCTION_VERSIONS' Jenkinsfile; then
+          echo "PASS: Jenkinsfile has PRODUCTION_VERSIONS"
+          grep 'PRODUCTION_VERSIONS' Jenkinsfile
+        else
+          echo "INFO: Jenkinsfile does not have PRODUCTION_VERSIONS (old version)"
+        fi
+
+        if grep -q 'TRUNK_VERSION' Jenkinsfile; then
+          echo "PASS: Jenkinsfile has TRUNK_VERSION"
+          grep 'TRUNK_VERSION' Jenkinsfile
+        else
+          echo "INFO: Jenkinsfile does not have TRUNK_VERSION (old version)"
+        fi
+
+        if grep -q 'getSvnDocbinUrl' Jenkinsfile; then
+          echo "PASS: Jenkinsfile has getSvnDocbinUrl helper"
+        else
+          echo "INFO: Jenkinsfile does not have getSvnDocbinUrl (old version)"
+        fi
+
+    - name: Simulate selective deployment
+      env:
+        PRODUCTION_VERSIONS: ${{ inputs.production_versions }}
+      run: |
+        echo "=== Simulating deploy stage ==="
+        echo "PRODUCTION_VERSIONS: '${PRODUCTION_VERSIONS}'"
+        echo ""
+
+        WEB_ROOT=$(mktemp -d)
+        WORKSPACE=$(pwd)
+        DEPLOYED_COUNT=0
+        SKIPPED=""
+
+        # List all version directories on gh-pages
+        echo "Available version directories on gh-pages:"
+        for d in */; do
+          if echo "$d" | grep -qE '^[0-9]+\.[0-9]+/$'; then
+            echo "  ${d%/}"
+          fi
+        done
+        echo ""
+
+        for VERSION in ${PRODUCTION_VERSIONS}; do
+          echo "Processing version: ${VERSION}"
+
+          if [ ! -d "${WORKSPACE}/${VERSION}" ]; then
+            echo "  SKIP: ${WORKSPACE}/${VERSION} does not exist on gh-pages"
+            SKIPPED="${SKIPPED} ${VERSION}"
+            continue
+          fi
+
+          if [ ! -f "${WORKSPACE}/${VERSION}/index.html" ]; then
+            echo "  SKIP: ${VERSION}/index.html missing"
+            SKIPPED="${SKIPPED} ${VERSION}"
+            continue
+          fi
+
+          mkdir -p "${WEB_ROOT}/${VERSION}"
+          rsync -rl --delete "${WORKSPACE}/${VERSION}/" "${WEB_ROOT}/${VERSION}/"
+          FILE_COUNT=$(find "${WEB_ROOT}/${VERSION}" -type f | wc -l)
+          echo "  DEPLOYED: ${VERSION} (${FILE_COUNT} files)"
+          DEPLOYED_COUNT=$((DEPLOYED_COUNT + 1))
+        done
+
+        echo ""
+        echo "=== Deployment summary ==="
+        echo "Deployed: ${DEPLOYED_COUNT} version(s)"
+        if [ -n "${SKIPPED}" ]; then
+          echo "Skipped:${SKIPPED}"
+        fi
+
+        # Verify non-production versions were NOT deployed
+        echo ""
+        echo "=== Verifying non-production versions excluded ==="
+        for d in */; do
+          DIR="${d%/}"
+          if ! echo "$DIR" | grep -qE '^[0-9]+\.[0-9]+$'; then
+            continue
+          fi
+          if echo " ${PRODUCTION_VERSIONS} " | grep -q " ${DIR} "; then
+            continue
+          fi
+          if [ -d "${WEB_ROOT}/${DIR}" ]; then
+            echo "FAIL: ${DIR} was deployed but is NOT in PRODUCTION_VERSIONS"
+            exit 1
+          else
+            echo "  PASS: ${DIR} correctly excluded from deployment"
+          fi
+        done
+
+        if [ $DEPLOYED_COUNT -eq 0 ]; then
+          echo ""
+          echo "WARNING: No versions were deployed"
+        fi
+
+        rm -rf "${WEB_ROOT}"
+
+    - name: Test release asset filtering
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PRODUCTION_VERSIONS: ${{ inputs.production_versions }}
+      run: |
+        echo "=== Testing release asset filtering ==="
+        # Note: on a fork, there may be no releases. This test verifies
+        # the query logic works; actual downloads are skipped if no releases exist.
+
+        REPO="${{ github.repository }}"
+        echo "Repository: ${REPO}"
+        echo ""
+
+        for VERSION in ${PRODUCTION_VERSIONS}; do
+          echo "--- Version ${VERSION} ---"
+          TAG=$(gh release list --repo "${REPO}" --exclude-drafts \
+              --json tagName,createdAt \
+              | jq -r "[.[] | select(.tagName | startswith(\"v${VERSION}.\"))]
+                       | sort_by(.createdAt) | last | .tagName")
+
+          if [ -z "$TAG" ] || [ "$TAG" = "null" ]; then
+            echo "  No release found matching v${VERSION}.*"
+            echo "  (This is expected on a fork with no releases)"
+          else
+            echo "  Latest release: ${TAG}"
+            ASSETS=$(gh release view "${TAG}" --repo "${REPO}" --json assets --jq '.assets[].name')
+            echo "  Assets:"
+            echo "${ASSETS}" | sed 's/^/    /'
+          fi
+          echo ""
+        done
+
+    - name: Test SVN path generation
+      env:
+        TRUNK_VERSION: ${{ inputs.trunk_version }}
+        PRODUCTION_VERSIONS: ${{ inputs.production_versions }}
+      run: |
+        echo "=== SVN path mapping ==="
+
+        for VERSION in ${PRODUCTION_VERSIONS}; do
+          if [ "${VERSION}" = "${TRUNK_VERSION}" ]; then
+            DOCBIN="docbin/trunk/documentation"
+            README="dyalog/trunk/svn/docs/readmes"
+          else
+            DOCBIN="docbin/branches/${VERSION}/documentation"
+            README="dyalog/branches/${VERSION}/svn/docs/readmes"
+          fi
+          echo "Version ${VERSION}:"
+          echo "  docbin:  ${DOCBIN}"
+          echo "  readmes: ${README}"
+          echo "  sharpplot: dyalogtools/Causeway/trunk/release"
+        done
+
+    - name: Test rsync-exclude
+      env:
+        PRODUCTION_VERSIONS: ${{ inputs.production_versions }}
+      run: |
+        echo "=== .rsync-exclude content ==="
+        if [ -f .rsync-exclude ]; then
+          cat .rsync-exclude
+          echo ""
+
+          # Check that non-production versions are excluded
+          for d in */; do
+            DIR="${d%/}"
+            if ! echo "$DIR" | grep -qE '^[0-9]+\.[0-9]+$'; then
+              continue
+            fi
+            if echo " ${PRODUCTION_VERSIONS} " | grep -q " ${DIR} "; then
+              continue
+            fi
+            if grep -q "^${DIR}$" .rsync-exclude; then
+              echo "PASS: ${DIR} is in .rsync-exclude (defence-in-depth)"
+            else
+              echo "WARNING: ${DIR} is NOT in .rsync-exclude and NOT in PRODUCTION_VERSIONS"
+            fi
+          done
+        else
+          echo "(not found on gh-pages)"
+        fi
