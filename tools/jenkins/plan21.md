@@ -1,0 +1,1022 @@
+# Plan: v21 Documentation Branch Strategy
+
+This document describes the concrete steps to enable parallel development of v20.0 (maintenance) and v21.0 (new development) documentation, with v21 visible only on GitHub Pages staging until production release.
+
+Executive summary at the end.
+---
+
+## Current State
+
+### Documentation Repository Structure
+- `main` contains v20.0 documentation
+- `gh-pages` is the built site with mike versioning, monitored by Jenkins
+
+### Action Workflows
+| Workflow | Trigger | Purpose |
+|----------|---------|---------|
+| `mkdocs-pdf.yml` | Manual dispatch | Generates PDF/CHM, creates draft GitHub release |
+| `mkdocs-publish.yml` | Manual dispatch (version param) | Runs `mike deploy --push <version>` |
+
+### Jenkins Behaviour
+- Monitors `gh-pages` branch
+- Deploys all content from `gh-pages` to `docs.dyalog.com`
+- Hardcoded `DOCSVERSION = '20.0'` for SVN file fetching
+
+Jenkins deploys everything on `gh-pages`, meaning if we publish v21 via `mike`, it would immediately appear on production.
+
+The Dyalog Jenkins utility library can be found in https://git.bramley.dyalog.com/Systems/Jenkins-Library
+
+---
+
+## Target State
+
+| Version | Source Branch | Staging (GitHub Pages) | Production (docs.dyalog.com) |
+|---------|---------------|------------------------|------------------------------|
+| 20.0 | `v20.0` | Visible | Visible |
+| 21.0 | `main` | Visible | Not visible (until release) |
+
+---
+
+## Implementation
+
+### Step 1: Create v20.0 Maintenance Branch
+
+```bash
+git switch main
+git pull origin main
+git switch -c v20.0
+git push -u origin v20.0
+```
+
+Branch `v20.0` created, identical to current `main`.
+
+---
+
+### Step 2: Update `main` Branch for v21
+
+In `mkdocs.yml` (on `main` branch only), change:
+```yaml
+extra:
+  version_maj: 20
+  version_min: 0
+  version_majmin: 20.0
+  version_condensed: 200
+```
+
+To (note: values must be quoted strings to prevent YAML number coercion):
+```yaml
+extra:
+  version_maj: 21
+  version_min: 0
+  version_majmin: "21.0"
+  version_condensed: 210
+```
+
+Quote `version_majmin` as a string. YAML parsers (including `yq`) treat unquoted `20.0` as a float and may drop the trailing `.0`, resulting in `20` instead of `20.0`. This might cause mike to deploy to `/20` instead of `/20.0`.
+
+Also update `v20.0` branch to quote the value:
+```yaml
+  version_majmin: "20.0"
+```
+
+Additional changes on `main`:
+- Create `release-notes-21/` directory structure (or update existing)
+
+---
+
+### Step 3: Modify `.github/workflows/mkdocs-publish.yml`
+
+**This is important**: auto-detect version from `mkdocs.yml` to prevent human error.
+
+Replace the entire file with:
+
+```yaml
+name: Publish MkDocs Documentation
+
+on:
+  workflow_dispatch:
+    inputs:
+      version_override:
+        description: 'Version override (leave empty to use mkdocs.yml value)'
+        required: false
+        default: ''
+        type: string
+      set_as_latest:
+        description: 'Set this version as the default/latest'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        fetch-depth: 0
+
+    - name: Update Assets
+      run: git submodule update --remote --recursive documentation-assets
+
+    - name: Install yq
+      run: |
+        sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+        sudo chmod +x /usr/local/bin/yq
+
+    - name: Determine Version
+      id: version
+      run: |
+        if [ -n "${{ inputs.version_override }}" ]; then
+          VERSION="${{ inputs.version_override }}"
+          echo "Using override version: ${VERSION}"
+        else
+          # Use -r for raw output (no quotes) and ensure string format
+          VERSION=$(yq -r '.extra.version_majmin | tostring' mkdocs.yml)
+          # Validate version format (X.Y)
+          if ! echo "${VERSION}" | grep -qE '^[0-9]+\.[0-9]+$'; then
+            echo "ERROR: Invalid version format '${VERSION}'. Expected X.Y (e.g., 20.0, 21.0)"
+            exit 1
+          fi
+          echo "Using mkdocs.yml version: ${VERSION}"
+        fi
+        echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Set up Git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install \
+          mike \
+          mkdocs-material \
+          mkdocs-macros-plugin \
+          mkdocs-monorepo-plugin \
+          mkdocs-site-urls \
+          mkdocs-caption \
+          markdown-tables-extended \
+          mkdocs-minify-plugin
+
+    - name: Get Git Info
+      id: git-info
+      run: |
+        BRANCH=$(git rev-parse --abbrev-ref HEAD)
+        HASH=$(git rev-parse --short HEAD)
+        echo "GIT_INFO=${BRANCH}:${HASH}" >> $GITHUB_OUTPUT
+        echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+        echo "CURRENT_YEAR=$(date +'%Y')" >> $GITHUB_OUTPUT
+
+    - name: Substitute env variables in mkdocs.yml
+      env:
+        GIT_INFO: ${{ steps.git-info.outputs.GIT_INFO }}
+        BUILD_DATE: ${{ steps.git-info.outputs.DATE }}
+        CURRENT_YEAR: ${{ steps.git-info.outputs.CURRENT_YEAR }}
+      run: |
+        cp mkdocs.yml mkdocs.yml.bak
+        envsubst '$BUILD_DATE $GIT_INFO $CURRENT_YEAR' < mkdocs.yml.bak > mkdocs.yml
+        echo "--- Checking substituted content ---"
+        cat mkdocs.yml | grep -A5 copyright
+
+    - name: Move Styles into docs
+      run: |
+        mv documentation-assets docs
+
+    - name: Deploy documentation
+      run: |
+        VERSION="${{ steps.version.outputs.VERSION }}"
+        if [ "${{ inputs.set_as_latest }}" = "true" ]; then
+          mike deploy --push --update-aliases ${VERSION} latest
+          mike set-default --push latest
+        else
+          mike deploy --push ${VERSION}
+        fi
+
+    - name: Copy Jenkins files to gh-pages
+      run: |
+        git checkout -- mkdocs.yml
+        git checkout gh-pages
+        git checkout ${{ github.sha }} -- tools/jenkins/Jenkinsfile tools/jenkins/service.yml tools/jenkins/.rsync-exclude tools/jenkins/get_svn_docbin
+        mv tools/jenkins/Jenkinsfile .
+        mv tools/jenkins/service.yml .
+        mv tools/jenkins/.rsync-exclude .
+        mv tools/jenkins/get_svn_docbin .
+        git rm -r tools
+        git add Jenkinsfile service.yml .rsync-exclude get_svn_docbin
+        if git diff --staged --quiet; then
+          echo "No changes to Jenkins files"
+        else
+          git commit -m "Update Jenkins deployment files"
+          git push origin gh-pages
+        fi
+```
+
+Key changes:
+1. Version auto-detected from `mkdocs.yml` using `yq -r ... | tostring` to handle both quoted and unquoted values
+2. Validation step ensures version matches `X.Y` format before proceeding
+3. Optional `version_override` parameter for edge cases
+4. Optional `set_as_latest` to control mike aliases
+
+---
+
+### Step 4: Modify `tools/jenkins/Jenkinsfile`
+
+Goal: Only deploy specified versions to production, ignoring others on `gh-pages`.
+
+Replace the entire `environment` block (lines 32-47) with:
+
+```groovy
+    environment {
+        GITHUB_REPO     = 'https://github.com/dyalog/documentation.git'
+        WEB_ROOT        = '/DockerVolumes/websites/docs.dyalog.com/'
+        WEB_URL         = 'docs.dyalog.com'
+        HASH_SAME       = 'unknown'
+        SWARM_NAME      = "docsweb"
+
+        // ============================================================
+        // PRODUCTION_VERSIONS: Space-separated list of versions to deploy
+        // Add '21.0' when v21 is ready for production release
+        // ============================================================
+        PRODUCTION_VERSIONS = '20.0'
+
+        GITDOCURL       = 'documentation'
+
+        // Version-agnostic SVN paths
+        SVNDOCURL       = "docbin/trunk/documentation"
+        SVNSHARPPLOTURL = "dyalogtools/Causeway/trunk/release"
+
+        SVNDOCDIR       = 'svn_docs'
+        GITDOCDIR       = 'git_docs'
+    }
+```
+
+Add a helper function at the top of the pipeline (after `def hashSame = null`):
+
+```groovy
+// Per-version SVN path configuration
+def getSvnReadmeUrl(String version) {
+    return "dyalog/branches/${version}/svn/docs/readmes"
+}
+```
+
+Replace the `Get files from svn/docbin etc` stage (lines 117-129) with:
+
+```groovy
+                stage('Get files from svn/docbin etc') {
+                    steps {
+                        script {
+                            def versions = env.PRODUCTION_VERSIONS.split(' ')
+                            versions.each { version ->
+                                dir("${version}/files") {
+                                    deleteDir()
+                                }
+                                dir("${version}") {
+                                    doSvnCheckout(env.SVNDOCURL, "files", true, 'svncom')
+                                    doSvnCheckout(env.SVNSHARPPLOTURL, "files/sharpplot", true, 'svncom')
+                                    // Version-specific readme path
+                                    doSvnCheckout(getSvnReadmeUrl(version), "files/readmes", true, 'svncom')
+                                    sh "\$WORKSPACE/get_svn_docbin ${version}"
+                                }
+                            }
+                        }
+                    }
+                }
+```
+
+Each version now fetches from its own SVN branch path:
+- v20.0 → `dyalog/branches/20.0/svn/docs/readmes`
+- v21.0 → `dyalog/branches/21.0/svn/docs/readmes`
+
+Replace the `Deploy site` stage (lines 235-289) with:
+
+```groovy
+                stage('Deploy site') {
+                    when {
+                        expression { hashSame == false }
+                    }
+                    options {
+                        lock('docs-deploy')
+                    }
+                    steps {
+                        sh '''#!/bin/bash
+                            set -euo pipefail
+                            echo "Starting deployment to ${WEB_ROOT}."
+
+                            if [ -z "${WEB_ROOT}" ]; then
+                                echo "ERROR: WEB_ROOT NOT SET"
+                                exit 1
+                            fi
+
+                            # Create WEB_ROOT if it doesn't exist
+                            if [ ! -d "${WEB_ROOT}" ]; then
+                                mkdir -p "${WEB_ROOT}"
+                            fi
+
+                            # Track deployment success
+                            DEPLOYED_COUNT=0
+
+                            # Deploy only PRODUCTION_VERSIONS
+                            for VERSION in ${PRODUCTION_VERSIONS}; do
+                                echo "Processing version: ${VERSION}"
+
+                                # CRITICAL: Verify source exists before touching production
+                                if [ ! -d "${WORKSPACE}/${VERSION}" ]; then
+                                    echo "  ERROR: Source ${WORKSPACE}/${VERSION} does not exist!"
+                                    echo "  This version may not have been published to gh-pages."
+                                    echo "  Skipping to avoid wiping production."
+                                    continue
+                                fi
+
+                                if [ ! -f "${WORKSPACE}/${VERSION}/index.html" ]; then
+                                    echo "  ERROR: ${WORKSPACE}/${VERSION}/index.html missing!"
+                                    echo "  Source appears incomplete. Skipping to avoid corruption."
+                                    continue
+                                fi
+
+                                # Source verified - safe to deploy
+                                echo "  Source verified, deploying..."
+
+                                # Clear existing version directory (only now that source is verified)
+                                if [ -d "${WEB_ROOT}/${VERSION}" ]; then
+                                    rm -rf "${WEB_ROOT}/${VERSION:?}"/*
+                                fi
+
+                                # Sync this version
+                                rsync -rl --delete --exclude-from="${WORKSPACE}/.rsync-exclude" "${WORKSPACE}/${VERSION}" "${WEB_ROOT}"
+                                echo "  Deployed ${VERSION} successfully"
+                                DEPLOYED_COUNT=$((DEPLOYED_COUNT + 1))
+                            done
+
+                            # Only update git hash if at least one version was deployed
+                            if [ $DEPLOYED_COUNT -eq 0 ]; then
+                                echo "ERROR: No versions were deployed! Not updating .git-hash"
+                                exit 1
+                            fi
+
+                            # Update git hash
+                            echo "Storing new git hash (${LATEST_HASH})."
+                            echo "${LATEST_HASH}" | tee "${WEB_ROOT}/.git-hash" >/dev/null
+
+                            echo "Deployment completed successfully. Deployed ${DEPLOYED_COUNT} version(s)."
+                        '''
+                        script {
+                            env.DEPLOYMENT_EXECUTED = 'true'
+                        }
+                    }
+                    post {
+                        failure {
+                            echo "ERROR: Deployment failed at ${env.WEB_ROOT}"
+                        }
+                    }
+                }
+```
+
+Safety:
+
+1. Verifies source directory exists AND contains `index.html` before touching production
+2. Only deletes production directory after source verification passes
+3. Tracks deployment count; fails if zero versions deployed (prevents `.git-hash` update masking failure)
+4. Uses `${VERSION:?}` in `rm` to prevent catastrophic deletion if `VERSION` is somehow empty
+
+Replace the `Verify deployment` stage (lines 291-315) with:
+
+```groovy
+                stage('Verify deployment') {
+                    when {
+                        expression { hashSame == false }
+                    }
+                    steps {
+                        sh '''#!/bin/bash
+                            set -euo pipefail
+                            echo "Verifying deployment at ${WEB_ROOT}..."
+
+                            FAILED=0
+                            for VERSION in ${PRODUCTION_VERSIONS}; do
+                                if ! test -f "${WEB_ROOT}/${VERSION}/index.html"; then
+                                    echo "ERROR: ${VERSION}/index.html not found"
+                                    FAILED=1
+                                else
+                                    echo "  ${VERSION}/index.html OK"
+                                fi
+                            done
+
+                            if [ $FAILED -eq 1 ]; then
+                                exit 1
+                            fi
+
+                            echo "Deployment verified successfully."
+                            echo "Site location: ${WEB_ROOT}"
+                            echo "Deployed Git hash: $(cat "${WEB_ROOT}/.git-hash" 2>/dev/null || echo 'unknown')"
+                        '''
+                    }
+                    post {
+                        failure {
+                            echo "ERROR: Deployment verification failed - site may be in inconsistent state"
+                        }
+                    }
+                }
+```
+
+Update the `Backup current site` stage (lines 189-233):
+
+Change the backup command to handle missing directories gracefully:
+```groovy
+                        sh '''#!/bin/bash
+                            set -euo pipefail
+                            echo "Backing up current site at ${WEB_ROOT} before deployment."
+
+                            echo "Creating compressed backup: ${BACKUP_FILE}"
+                            cd "${WEB_ROOT}"
+
+                            # Build list of existing directories to backup
+                            BACKUP_TARGETS=""
+                            for VERSION in ${PRODUCTION_VERSIONS}; do
+                                if [ -d "${VERSION}" ]; then
+                                    BACKUP_TARGETS="${BACKUP_TARGETS} ${VERSION}"
+                                else
+                                    echo "  Note: ${VERSION} does not exist yet, skipping from backup"
+                                fi
+                            done
+
+                            # Add .git-hash if it exists
+                            if [ -f ".git-hash" ]; then
+                                BACKUP_TARGETS="${BACKUP_TARGETS} .git-hash"
+                            fi
+
+                            # Only create backup if we have something to backup
+                            if [ -z "${BACKUP_TARGETS}" ]; then
+                                echo "WARNING: Nothing to backup (no existing production versions)"
+                                # Create empty marker file so archiveArtifacts doesn't fail
+                                touch "${WORKSPACE}/${BACKUP_FILE}.empty"
+                            else
+                                echo "Backing up:${BACKUP_TARGETS}"
+                                tar -czf "${WORKSPACE}/${BACKUP_FILE}" ${BACKUP_TARGETS}
+                                BACKUP_SIZE=$(ls -lh "${WORKSPACE}/${BACKUP_FILE}" | awk '{print $5}')
+                                echo "Backup created successfully. Size: ${BACKUP_SIZE}"
+                            fi
+
+                            cd "${WORKSPACE}"
+                        '''
+```
+
+---
+
+### Step 5: Update `.rsync-exclude`
+
+File: `tools/jenkins/.rsync-exclude`
+
+Current contents:
+```
+.git
+Jenkinsfile
+service.yml
+.rsync-exclude
+*.tar.gz
+get_svn_docbin
+```
+
+Add exclusion for non-production versions. Change to:
+```
+.git
+Jenkinsfile
+service.yml
+.rsync-exclude
+*.tar.gz
+get_svn_docbin
+21.0
+```
+
+When v21 goes to production, remove `21.0` from this file.
+
+This exclusion is a safety backstop. The Jenkinsfile changes in Step 4 explicitly deploy only `PRODUCTION_VERSIONS`, so even without this exclusion, v21 would not be deployed. However, defence-in-depth is valuable.
+
+---
+
+## Operational Procedures
+
+### Publishing v20.0 Updates
+
+1. Create PR against `v20.0` branch
+2. Merge PR
+3. If PDF/CHM updates needed:
+   - Go to Actions → "Convert MkDocs to PDF and CHM"
+   - Click "Run workflow" → Select branch `v20.0`
+   - Wait for completion, then publish the draft release
+4. Publish to staging and production:
+   - Go to Actions → "Publish MkDocs Documentation"
+   - Click "Run workflow" → Select branch `v20.0`
+   - Leave version_override empty (will use `20.0` from mkdocs.yml)
+   - Leave `set_as_latest` unchecked
+5. Jenkins automatically deploys to `docs.dyalog.com`
+
+### Publishing v21.0 to Staging Only
+
+1. Create PR against `main` branch
+2. Merge PR
+3. Publish to staging:
+   - Go to Actions → "Publish MkDocs Documentation"
+   - Click "Run workflow" → Select branch `main`
+   - Leave version_override empty (will use `21.0` from mkdocs.yml)
+   - Leave set_as_latest unchecked
+4. Site appears at https://dyalog.github.io/documentation/21.0/
+5. Jenkins runs but **does not deploy** 21.0 (not in PRODUCTION_VERSIONS)
+
+### Releasing v21.0 to Production
+
+When v21 is ready for production release:
+
+1. Generate final PDF/CHM:
+   - Run `mkdocs-pdf.yml` from `main` branch
+   - Publish the GitHub release (not draft)
+
+2. Update Jenkins configuration:
+   - Edit `tools/jenkins/Jenkinsfile` on `main` branch
+   - Change: `PRODUCTION_VERSIONS = '20.0'`
+   - To: `PRODUCTION_VERSIONS = '20.0 21.0'`
+
+3. Update `.rsync-exclude`:
+   - Remove `21.0` line
+
+4. Publish and set as default:
+   - Run `mkdocs-publish.yml` from `main`
+   - Check "Set this version as the default/latest"
+
+5. Verify:
+   - https://docs.dyalog.com/21.0/ should now be live
+   - Version dropdown should show both 20.0 and 21.0
+
+---
+
+## Testing the Changes
+
+### Before Going Live
+
+1. Test on a fork or test branch:
+   - Create test branch `test-v21-workflow`
+   - Apply all Jenkinsfile changes
+   - Run workflow manually and verify behaviour
+
+2. Verify mike behaviour:
+   ```bash
+   # Locally test mike commands
+   mike deploy 21.0
+   mike list  # Should show both 20.0 and 21.0
+   ```
+
+3. Verify Jenkins selective deployment:
+   - With `PRODUCTION_VERSIONS = '20.0'`, confirm only 20.0 directory is synced
+   - Check that 21.0 exists on `gh-pages` but not on production
+
+---
+
+## Rollback Procedures
+
+### If v21 Accidentally Deploys to Production
+
+```bash
+# SSH to production server
+cd /DockerVolumes/websites/docs.dyalog.com/
+rm -rf 21.0/
+# Also remove .git-hash to force redeployment on next Jenkins run
+rm -f .git-hash
+```
+
+Then fix `PRODUCTION_VERSIONS` in Jenkinsfile and trigger a new publish from v20.0 branch.
+
+Removing `.git-hash` is necessary because Jenkins uses it to detect changes. If left in place, Jenkins will see "no changes" and skip deployment even after fixing the config.
+
+### If mike Versioning Breaks
+
+```bash
+# Remove problematic version from gh-pages
+mike delete 21.0 --push
+
+# Or reset gh-pages entirely (destructive!)
+git checkout gh-pages
+git reset --hard <known-good-commit>
+git push --force origin gh-pages
+```
+
+### Revert to Single-Branch Workflow
+
+1. Delete `v20.0` branch
+2. Revert mkdocs.yml to 20.0 values
+3. Revert Jenkinsfile to original
+4. Run `mike delete 21.0 --push`
+
+---
+
+## GitHub Release Strategy for PDF/CHM Assets
+
+### Problem
+
+The `ghGetReleaseAssets` function (in the `dyalog-scripts` shared library) fetches the "latest" GitHub release. Once v21 PDF/CHM releases are published, they become "latest" and v20 production would incorrectly receive v21 assets.
+
+Releases are already tagged with version prefixes:
+```
+v20.0.1092  (latest published)
+v20.0.1080  (draft)
+v20.0.1078
+...
+```
+
+When v21 releases appear, they'll be tagged `v21.0.XXX`.
+
+### Modify `ghGetReleaseAssets` in Shared Library
+
+Add an optional third parameter for tag pattern filtering:
+
+```groovy
+// Current signature:
+def ghGetReleaseAssets(String repo, String targetDir)
+
+// Proposed signature:
+def ghGetReleaseAssets(String repo, String targetDir, String tagPattern = null)
+```
+
+Implementation approach:
+```groovy
+def ghGetReleaseAssets(String repo, String targetDir, String tagPattern = null) {
+    def releaseCmd = "gh release list --repo dyalog/${repo} --exclude-drafts --json tagName,isLatest"
+
+    if (tagPattern) {
+        // Filter releases by tag pattern (e.g., "v20.0.*")
+        // Get the most recent release matching the pattern
+        releaseCmd = """
+            gh release list --repo dyalog/${repo} --exclude-drafts --json tagName,createdAt \\
+            | jq -r '[.[] | select(.tagName | test("^${tagPattern}"))] | sort_by(.createdAt) | last | .tagName'
+        """
+    } else {
+        // Existing behaviour: get latest release
+        releaseCmd = "gh release list --repo dyalog/${repo} --exclude-drafts --limit 1 --json tagName -q '.[0].tagName'"
+    }
+
+    def tag = sh(script: releaseCmd, returnStdout: true).trim()
+    // ... rest of existing download logic using tag
+}
+```
+
+### Jenkinsfile Changes
+
+Update the `Update svndocs` stage to pass version-specific tag patterns:
+
+```groovy
+stage('Checkout from svndocs') {
+    steps {
+        script {
+            sh '[ "x" != "x$WORKSPACE" ] && rm -rf $WORKSPACE/*'
+            doGitCheckout('JenkinsBuild', 'Jenkins')
+
+            // Fetch release assets for each production version
+            def versions = env.PRODUCTION_VERSIONS.split(' ')
+            versions.each { version ->
+                def tagPattern = "v${version}\\\\."  // e.g., "v20.0\\." matches v20.0.1092
+                ghGetReleaseAssets(GITDOCURL, "${GITDOCDIR}/${version}", tagPattern)
+            }
+
+            doSvnCheckout(SVNDOCURL, SVNDOCDIR)
+        }
+    }
+}
+```
+
+### Backwards Compatibility
+
+The `tagPattern` parameter defaults to `null`, preserving existing behaviour for other pipelines using the shared library. Only this pipeline needs to pass the pattern.
+
+### Fallback (if shared library change is delayed)
+
+If the shared library cannot be modified immediately, add a local function in the Jenkinsfile:
+
+```groovy
+def getVersionedReleaseAssets(String repo, String targetDir, String version) {
+    sh """
+        # Get latest non-draft release matching version pattern
+        TAG=\$(gh release list --repo dyalog/${repo} --exclude-drafts --json tagName,createdAt \\
+            | jq -r '[.[] | select(.tagName | startswith("v${version}."))] | sort_by(.createdAt) | last | .tagName')
+
+        if [ -z "\$TAG" ] || [ "\$TAG" = "null" ]; then
+            echo "WARNING: No release found matching v${version}.* - skipping asset download"
+            exit 0
+        fi
+
+        echo "Downloading assets from release \$TAG"
+        mkdir -p ${targetDir}
+        gh release download "\$TAG" --repo dyalog/${repo} --dir ${targetDir}
+    """
+}
+```
+
+Then call it instead of `ghGetReleaseAssets`:
+```groovy
+versions.each { version ->
+    getVersionedReleaseAssets(GITDOCURL, "${GITDOCDIR}/${version}", version)
+}
+```
+
+---
+
+## Documentation Assets Submodule
+
+### Current Setup
+
+The `documentation-assets` submodule (https://github.com/Dyalog/documentation-assets) contains shared CSS and images. Currently:
+
+- Single branch: `main`
+- Submodule reference in `.gitmodules` points to the repo without a branch specifier
+- The workflow runs `git submodule update --remote --recursive documentation-assets` which always pulls latest from `main`
+
+### Problem
+
+If v20 and v21 need different styles (e.g., v21 has new CSS for new features), pulling "latest" for both versions would:
+- Give v20 builds potentially broken or inappropriate v21 styles
+- Make it impossible to fix v20 styling without affecting v21
+
+### Solution: Version Branches in documentation-assets
+
+Create version branches in `documentation-assets`:
+- `main` → latest/development (v21)
+- `v20.0` → frozen styles for v20
+
+**Changes to `.gitmodules`:**
+
+On the `v20.0` documentation branch:
+```ini
+[submodule "documentation-assets"]
+    path = documentation-assets
+    url = https://github.com/Dyalog/documentation-assets
+    branch = v20.0
+```
+
+On the `main` documentation branch:
+```ini
+[submodule "documentation-assets"]
+    path = documentation-assets
+    url = https://github.com/Dyalog/documentation-assets
+    branch = main
+```
+
+**Changes to workflow:**
+
+The current workflow step:
+```yaml
+- name: Update Assets
+  run: git submodule update --remote --recursive documentation-assets
+```
+
+This already respects the `branch` setting in `.gitmodules`, so no workflow change needed. The `--remote` flag fetches the branch specified in `.gitmodules`.
+
+**Setup steps:**
+
+1. In `documentation-assets` repo:
+   ```bash
+   git checkout main
+   git checkout -b v20.0
+   git push -u origin v20.0
+   ```
+
+2. On the `v20.0` documentation branch, update `.gitmodules`:
+   ```bash
+   git config -f .gitmodules submodule.documentation-assets.branch v20.0
+   git add .gitmodules
+   git commit -m "Pin documentation-assets to v20.0 branch"
+   ```
+
+3. On the `main` documentation branch, make explicit:
+   ```bash
+   git config -f .gitmodules submodule.documentation-assets.branch main
+   git add .gitmodules
+   git commit -m "Pin documentation-assets to main branch"
+   ```
+
+### Implementation Order
+
+1. Before creating the `v20.0` documentation branch:
+   - Create `v20.0` branch in `documentation-assets`
+
+2. After creating `v20.0` documentation branch:
+   - Update `.gitmodules` on `v20.0` to point to `v20.0` assets branch
+
+3. On `main` documentation branch:
+   - Update `.gitmodules` to explicitly specify `main`
+
+---
+
+## Offline Documentation: Replacing CHM and PDF with MkDocs Offline Build
+
+Starting with v21, we are abandoning CHM and PDF generation in favour of Material for MkDocs' built-in offline plugin. This produces a self-contained site that can be downloaded as a zip file and viewed directly in a browser without a server.
+
+The `chm-replacement` branch contains prior work on this: the offline plugin is already integrated into `mkdocs.yml` and the `mkdocs-pdf.yml` workflow has a `generate_offline` input. The changes below build on that foundation.
+
+### What Changes
+
+For v21 onwards:
+- The `mkdocs-pdf.yml` workflow on `main` is replaced with a dedicated offline build workflow
+- No more CHM compilation or PDF generation from `main`
+- The only generated asset is `documentation-{version}-offline.zip`
+
+For v20 maintenance:
+- The `mkdocs-pdf.yml` workflow continues to run from the `v20.0` branch
+- CHM and PDF releases continue to be published for v20
+- Jenkins continues to fetch v20 release assets as before
+
+### Configuration Changes for v21
+
+The `chm-replacement` branch already has the correct plugin setup in `mkdocs.yml`:
+
+```yaml
+plugins:
+  - privacy      # Downloads external assets for offline use (already present)
+  - offline:     # Enables offline site search
+      enabled: !ENV [OFFLINE, false]
+```
+
+The `privacy` plugin automatically downloads external assets (fonts, scripts) so the offline build is fully self-contained. The `offline` plugin is gated behind the `OFFLINE` environment variable so it does not affect normal site builds or mike deployments.
+
+**Disabling incompatible features for offline builds:**
+
+`navigation.instant` (currently enabled in `mkdocs.yml` line 10) uses fetch API calls that browsers block from `file://` URLs. This must be conditionally disabled when building offline. Options:
+
+1. **Recommended: environment override in mkdocs.yml** — Material for MkDocs does not support `!ENV` toggles on individual theme features. Instead, use a `mkdocs-offline.yml` overlay or a build script that patches the config:
+   ```bash
+   # In the offline build step, remove navigation.instant before building
+   yq -i 'del(.theme.features[] | select(. == "navigation.instant"))' mkdocs.yml
+   ```
+
+2. Analytics and version switcher: not currently configured, so no action needed. If added later, they must also be disabled for offline builds.
+
+### Workflow Changes
+
+Replace `mkdocs-pdf.yml` on the `main` branch with a workflow that produces only the offline zip. The `chm-replacement` branch already has the core build step; the changes below adapt it to be the sole asset generator:
+
+```yaml
+name: Build Offline Documentation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-offline:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        fetch-depth: 0
+
+    - name: Update Assets
+      run: git submodule update --remote --recursive documentation-assets
+
+    - name: Get Git Info
+      id: git-info
+      run: |
+        BRANCH=$(git rev-parse --abbrev-ref HEAD)
+        HASH=$(git rev-parse --short HEAD)
+        echo "GIT_INFO=${BRANCH}:${HASH}" >> $GITHUB_OUTPUT
+        echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+        echo "CURRENT_YEAR=$(date +'%Y')" >> $GITHUB_OUTPUT
+
+    - name: Install yq
+      run: |
+        sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/v4.44.1/yq_linux_amd64
+        sudo chmod +x /usr/local/bin/yq
+
+    - name: Determine Version
+      id: version
+      run: |
+        VERSION=$(yq -r '.extra.version_majmin | tostring' mkdocs.yml)
+        if ! echo "${VERSION}" | grep -qE '^[0-9]+\.[0-9]+$'; then
+          echo "ERROR: Invalid version format '${VERSION}'. Expected X.Y"
+          exit 1
+        fi
+        echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install \
+          mkdocs-material \
+          mkdocs-macros-plugin \
+          mkdocs-monorepo-plugin \
+          mkdocs-site-urls \
+          mkdocs-caption \
+          mkdocs-minify-plugin
+
+    - name: Build offline site
+      env:
+        OFFLINE: 'true'
+        GIT_INFO: ${{ steps.git-info.outputs.GIT_INFO }}
+        BUILD_DATE: ${{ steps.git-info.outputs.DATE }}
+        CURRENT_YEAR: ${{ steps.git-info.outputs.CURRENT_YEAR }}
+      run: |
+        VERSION="${{ steps.version.outputs.VERSION }}"
+
+        # Substitute env variables in mkdocs.yml
+        cp mkdocs.yml mkdocs.yml.bak
+        envsubst '$BUILD_DATE $GIT_INFO $CURRENT_YEAR' < mkdocs.yml.bak > mkdocs.yml
+
+        # Disable features incompatible with offline viewing
+        yq -i 'del(.theme.features[] | select(. == "navigation.instant"))' mkdocs.yml
+
+        mv documentation-assets docs/documentation-assets
+        mkdocs build
+        cd site && zip -r "../documentation-${VERSION}-offline.zip" .
+
+    - name: Create draft release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        VERSION="${{ steps.version.outputs.VERSION }}"
+        COMMIT_COUNT=$(git rev-list --count HEAD)
+        RELEASE_TAG="v${VERSION}.${COMMIT_COUNT}"
+
+        # Clean up old drafts (keep 5)
+        MAX_DRAFTS=5
+        DRAFTS=$(gh release list --json tagName,isDraft,createdAt \
+          --jq '.[] | select(.isDraft==true) | [.tagName,.createdAt] | @tsv' \
+          | sort -k2 | awk '{print $1}')
+        DRAFT_COUNT=$(echo "$DRAFTS" | grep -c "^" || true)
+        if [ $DRAFT_COUNT -gt $MAX_DRAFTS ]; then
+          TO_DELETE=$((DRAFT_COUNT - MAX_DRAFTS + 1))
+          echo "$DRAFTS" | head -n $TO_DELETE | while read -r tag; do
+            gh release delete "$tag" --yes
+          done
+        fi
+
+        # Handle tag collisions
+        TAG="$RELEASE_TAG"
+        LETTER="a"
+        while gh release view "$TAG" &>/dev/null; do
+          TAG="${RELEASE_TAG}${LETTER}"
+          LETTER=$(echo "$LETTER" | tr "a-y" "b-z")
+        done
+
+        gh release create "$TAG" \
+          "documentation-${VERSION}-offline.zip" \
+          --draft \
+          --title "Documentation Offline ${TAG}" \
+          --notes "Offline documentation generated from ${{ steps.git-info.outputs.GIT_INFO }}"
+```
+
+Key differences from the `chm-replacement` branch:
+1. **Versioned zip filename**: `documentation-{version}-offline.zip` instead of `site.zip`
+2. **No PDF/CHM steps or inputs**: this workflow only produces the offline zip
+3. **`navigation.instant` removed** via `yq` before building, preventing broken navigation in offline mode
+4. **Pinned `yq` version** (`v4.44.1`) instead of fetching latest
+5. **Submodule checkout in the actions/checkout step** rather than a separate `git submodule update --init`
+
+### Jenkins Implications
+
+The `ghGetReleaseAssets` modification described earlier still applies. For v21, the release asset is `documentation-{version}-offline.zip` instead of CHM/PDF files. The Jenkins pipeline downloads and deploys this to the `/files` directory just as it does for v20 CHM/PDF files.
+
+The `get_svn_docbin` script may need minor adjustments to handle a single zip file instead of multiple CHM/PDF files.
+
+### Version-Specific Behaviour
+
+| Version | Offline Format | Workflow | Release Assets |
+|---------|----------------|----------|----------------|
+| 20.0 | CHM + PDF | mkdocs-pdf.yml (on v20.0 branch) | *.chm, *.pdf |
+| 21.0 | Offline zip | mkdocs-offline.yml (on main) | documentation-21.0-offline.zip |
+
+This means the shared library changes for version-filtered release assets are essential: v20 must fetch CHM/PDF releases (tagged `v20.0.*`) while v21 fetches zip releases (tagged `v21.0.*`).
+
+---
+
+## Summary
+
+We need to enable parallel maintenance of v20 documentation alongside new v21 development. The core strategy is that v20 content lives on a new v20.0 branch while v21 development continues on main.
+
+The existing GitHub Actions publish workflow is modified to automatically detect the version from the mkdocs configuration file rather than requiring manual input. This prevents accidental cross-version deployments.
+
+The Jenkins pipeline is changed from deploying everything on the gh-pages branch to deploying only explicitly listed production versions. A new environment variable controls which versions are deployed to the live site. Initially this is set to v20 only, meaning v21 can be published to GitHub Pages staging without appearing on the production site. Each version fetches its SVN assets from version-specific paths, allowing v20 and v21 to have different readme files and other supplementary content.
+
+The shared Jenkins library function that fetches PDF and CHM release assets needs modification to support filtering by version tag pattern. Currently it fetches the latest release regardless of version. The proposed change adds an optional parameter so each documentation version can fetch releases tagged with its own version prefix. A fallback implementation is provided if the shared library cannot be updated immediately.
+
+The documentation-assets submodule, which contains shared stylesheets and images, will use version branches matching the documentation branches. The v20.0 documentation branch will reference the v20.0 assets branch, while main references the main assets branch. This allows styles to evolve independently for each version. The workflow already respects branch settings in gitmodules, so no workflow changes are needed for this.
+
+Starting with v21, CHM and PDF generation is replaced by a single offline zip bundle (`documentation-{version}-offline.zip`) built using Material for MkDocs' offline plugin. The `chm-replacement` branch contains prior work on this; the plan incorporates and refines it. The v20.0 branch retains the existing `mkdocs-pdf.yml` workflow for CHM/PDF. The offline build disables `navigation.instant` (incompatible with `file://` URLs) via `yq` before invoking `mkdocs build`.
+
+Safety: the deploy stage verifies source directories exist before deleting production content, the backup stage handles missing directories gracefully, and the rsync exclude file provides defence against accidental v21 deployment.
+
+On staging (github pages), v21 becomes the default version immediately upon first publish. On production, the root URL redirect to v21 requires a separate web server configuration change when v21 goes live.
