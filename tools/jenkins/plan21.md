@@ -111,6 +111,11 @@ permissions:
   contents: write
   pages: write
 
+# Prevent concurrent mike pushes to gh-pages (e.g., v20.0 and main publishing simultaneously)
+concurrency:
+  group: docs-publish
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -126,7 +131,7 @@ jobs:
 
     - name: Install yq
       run: |
-        sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+        sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/v4.44.1/yq_linux_amd64
         sudo chmod +x /usr/local/bin/yq
 
     - name: Determine Version
@@ -206,14 +211,18 @@ jobs:
 
     - name: Copy Jenkins files to gh-pages
       run: |
+        # Always take Jenkins/deployment files from main, regardless of
+        # which branch triggered this workflow. This prevents the v20.0
+        # branch from overwriting PRODUCTION_VERSIONS or helper functions.
+        git fetch origin main
         git checkout -- mkdocs.yml
         git checkout gh-pages
-        git checkout ${{ github.sha }} -- tools/jenkins/Jenkinsfile tools/jenkins/service.yml tools/jenkins/.rsync-exclude tools/jenkins/get_svn_docbin
+        git checkout origin/main -- tools/jenkins/Jenkinsfile tools/jenkins/service.yml tools/jenkins/.rsync-exclude tools/jenkins/get_svn_docbin
         mv tools/jenkins/Jenkinsfile .
         mv tools/jenkins/service.yml .
         mv tools/jenkins/.rsync-exclude .
         mv tools/jenkins/get_svn_docbin .
-        git rm -r tools
+        git rm -r tools 2>/dev/null || true
         git add Jenkinsfile service.yml .rsync-exclude get_svn_docbin
         if git diff --staged --quiet; then
           echo "No changes to Jenkins files"
@@ -559,8 +568,8 @@ This exclusion is a safety backstop. The Jenkinsfile changes in Step 4 explicitl
 
 When v21 is ready for production release:
 
-1. Generate final PDF/CHM:
-   - Run `mkdocs-pdf.yml` from `main` branch
+1. Generate final offline documentation:
+   - Run the offline build workflow from `main` branch
    - Publish the GitHub release (not draft)
 
 2. Update Jenkins configuration:
@@ -574,9 +583,16 @@ When v21 is ready for production release:
 4. Publish and set as default:
    - Run `mkdocs-publish.yml` from `main`
    - Check "Set this version as the default/latest"
+   - This makes mike update the root `index.html` on `gh-pages` to redirect to `21.0/`
 
-5. Verify:
+5. Deploy root redirect to production:
+   - The root redirect (`index.html`, `versions.json`, `latest/`) lives on `gh-pages` outside the version directories. The current deploy stage only syncs `PRODUCTION_VERSIONS` directories, so **the root files are not deployed automatically**.
+   - Either: extend the deploy stage to also sync root-level files from `gh-pages` to `WEB_ROOT`
+   - Or: manually update the redirect on the production server
+
+6. Verify:
    - https://docs.dyalog.com/21.0/ should now be live
+   - https://docs.dyalog.com/ should redirect to 21.0
    - Version dropdown should show both 20.0 and 21.0
 
 ---
@@ -860,12 +876,7 @@ This mirrors the authentication and `buildinfo.json` generation from the shared 
 
 ### Jenkinsfile Changes
 
-Replace the current single call:
-```groovy
-r=ghGetReleaseAssets(GITDOCURL, GITDOCDIR)
-```
-
-With a per-version loop in the `Checkout from svndocs` stage:
+Replace the current `Checkout from svndocs` stage with a per-version loop:
 ```groovy
 stage('Checkout from svndocs') {
     steps {
@@ -873,17 +884,18 @@ stage('Checkout from svndocs') {
             sh '[ "x" != "x$WORKSPACE" ] && rm -rf $WORKSPACE/*'
             doGitCheckout('JenkinsBuild', 'Jenkins')
 
-            // Fetch release assets for each production version
+            // Fetch release assets and SVN checkout for each production version
             def versions = env.PRODUCTION_VERSIONS.split(' ')
             versions.each { version ->
                 getVersionedReleaseAssets(GITDOCURL, "${GITDOCDIR}/${version}", version)
+                doSvnCheckout(getSvnDocbinUrl(version), "${SVNDOCDIR}/${version}")
             }
-
-            doSvnCheckout(SVNDOCURL, SVNDOCDIR)
         }
     }
 }
 ```
+
+Note: the `Update and Commit svndocs` stage runs `./Jenkins/gitdocs2svn` (from the private `Dyalog/JenkinsBuild` repo). This script likely needs a version parameter or loop to handle per-version SVN paths. Since it's in a separate repo, this change is out of scope for this plan but must be coordinated. Until `gitdocs2svn` is updated, the `Update svndocs` stage can be limited to `PRODUCTION_VERSIONS` that the script already handles (i.e., 20.0 only initially).
 
 ### Version-Specific Assets
 
@@ -1149,4 +1161,4 @@ Starting with v21, CHM and PDF generation is replaced by a single offline zip bu
 
 Safety: the deploy stage verifies source directories exist before deleting production content, the backup stage handles missing directories gracefully, and the rsync exclude file provides defence against accidental v21 deployment.
 
-On staging (github pages), v21 becomes the default version immediately upon first publish. On production, the root URL redirect to v21 requires a separate web server configuration change when v21 goes live.
+On staging (GitHub Pages), mike manages the root redirect via `index.html` and `versions.json` on `gh-pages`. Running `mike set-default latest` updates these to point to the aliased version. On production, the deploy stage currently only syncs version directories — the root-level redirect files are not deployed. This must be addressed (either by extending the deploy stage or a manual step) when v21 goes live.
