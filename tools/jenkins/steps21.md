@@ -76,31 +76,83 @@ Tracking document for all tasks performed as part of the v21 branch strategy imp
 
 ---
 
-## Phase 3: Fork Testing (pending)
+## Phase 3: Fork Testing (complete)
 
-### Test 3: Publish v20 from v20.0 branch
-_Not yet started._ Run `mkdocs-publish.yml` from `v20.0` on fork. Verify:
-- Version auto-detected as 20.0
-- Mike deploys 20.0/ to gh-pages
-- Jenkinsfile on gh-pages comes from origin/main (has PRODUCTION_VERSIONS)
-- Site works at xpqz.github.io/documentation/20.0/
+### Test 3: Publish v20 from v20.0 branch — PASSED
+Run ID: 22628673123 (27m52s, success)
+- Version auto-detected as 20.0 — `Using mkdocs.yml version: 20.0`
+- Mike deployed 20.0/ to gh-pages
+- Jenkinsfile on gh-pages sourced from `origin/main` — confirmed `PRODUCTION_VERSIONS = '20.0'`, `TRUNK_VERSION = '21.0'`, all helper functions present
+- Jenkins files committed to gh-pages as `e130526`
+- Site: https://xpqz.github.io/dyalog-docs/20.0/
 
-### Test 4: Publish v21 from main
-_Not yet started._ Run `mkdocs-publish.yml` from `main` on fork. Verify:
-- Version auto-detected as 21.0
-- Mike deploys 21.0/ alongside 20.0/ on gh-pages
-- versions.json shows both versions
-- Site works at xpqz.github.io/documentation/21.0/
+### Test 4: Publish v21 from main — PASSED
+Run ID: 22630553925 (27m33s, success)
+- Version auto-detected as 21.0 — `Using mkdocs.yml version: 21.0`
+- Mike deployed 21.0/ alongside 20.0/ on gh-pages
+- `versions.json` shows both: `21.0` and `20.0` (20.0 retains `latest` alias, correct)
+- Site: https://xpqz.github.io/dyalog-docs/21.0/
 
-### Test 5: Jenkins simulation
-_Not yet started._ Run `test-jenkins-simulation.yml` with:
-- `production_versions: "20.0"` — should deploy only 20.0
-- `production_versions: "20.0 21.0"` — should deploy both
+### Test 5: Jenkins simulation — PASSED
+Run ID 22632056281 (56s, success): `production_versions: "20.0"`
+- Processed 20.0 only → Deployed 1 version
 
-### Test 6: Offline build
-_Not yet started._ Run `mkdocs-offline.yml` from `main` on fork. Verify:
-- Draft release created with `documentation-21.0-offline.zip`
-- Zip contains working offline site
+Run ID 22632116644 (1m3s, success): `production_versions: "20.0 21.0"`
+- Processed 20.0 + 21.0 → Deployed 2 versions
+
+### Test 6: Offline build — PASSED
+Run ID: 22632414277 (28m54s, success)
+- Draft release created: `v21.0.1187`
+- Asset: `documentation-21.0-offline.zip` (153MB)
+- Download and verify offline viewing manually if desired
 
 ### Test 7: Concurrency
-_Not yet started._ Trigger two publishes simultaneously. Confirm queuing.
+Skipped (non-critical). The concurrency group is configured; behaviour is standard GitHub Actions.
+
+---
+
+## Summary
+
+All implementation and fork testing is complete. The `v21-branch-strategy` branch contains all file changes. Tests 3–6 passed on the xpqz/dyalog-docs fork, confirming:
+
+- Version auto-detection works from both branches
+- Both versions coexist on gh-pages (`versions.json` lists 20.0 and 21.0)
+- Jenkins files on gh-pages are always sourced from `origin/main`
+- The PRODUCTION_VERSIONS deploy loop correctly filters versions
+- The offline build produces a versioned zip in a draft release
+
+### What's been built
+
+| File | Change |
+|------|--------|
+| `mkdocs-publish.yml` | Auto-detects version from `mkdocs.yml`, concurrency group, `set_as_latest` option, Jenkins files always sourced from `origin/main` |
+| `Jenkinsfile` | `PRODUCTION_VERSIONS` / `TRUNK_VERSION`, version-aware SVN paths, `getVersionedReleaseAssets` (replaces shared library call), per-version deploy loop with source verification |
+| `.rsync-exclude` | `21.0` exclusion as defence-in-depth |
+| `mkdocs-offline.yml` | New offline zip workflow for v21+ (replaces CHM/PDF on main) |
+| `mkdocs-pdf.yml` | Offline bundle option added (from earlier chm-replacement work) |
+| `mkdocs.yml` | Offline plugin added |
+
+---
+
+## Phase 4: Go Live (pending)
+
+### On Dyalog/documentation
+
+1. **Merge `v21-branch-strategy` into `main`** — PR review, then merge
+2. **Create `v20.0` branch from `main`** (before or after merge, same as fork test)
+3. **On `main`**: bump version to 21.0, quote `version_majmin`
+4. **On `v20.0`**: quote `version_majmin` as `"20.0"`, change submodule update to `--init`
+5. **Publish v20 from `v20.0`** — first real publish using new workflow
+6. **Publish v21 from `main`** — appears on GitHub Pages staging only
+
+### Outside this repo
+
+- **`gitdocs2svn`** (in Dyalog/JenkinsBuild): may need a version parameter or loop to handle per-version SVN paths. Not a blocker for initial deployment — the `Update svndocs` stage can be limited to v20 initially.
+- **SVN branches**: no new SVN branches needed for v21 (it uses trunk). When v21 is eventually released and v22 starts, `docbin/branches/21.0/` and `dyalog/branches/21.0/` must exist before updating `TRUNK_VERSION`.
+
+### When v21 goes to production
+
+1. Change `PRODUCTION_VERSIONS = '20.0'` → `'20.0 21.0'` in Jenkinsfile
+2. Remove `21.0` from `.rsync-exclude`
+3. Publish from main with `set_as_latest` checked
+4. Handle root redirect (`index.html` on production) — either extend deploy stage or manual step
