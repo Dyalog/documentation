@@ -740,77 +740,35 @@ The `documentation-assets` submodule (https://github.com/Dyalog/documentation-as
 
 ### Problem
 
-If v20 and v21 need different styles (e.g., v21 has new CSS for new features), pulling "latest" for both versions would:
-- Give v20 builds potentially broken or inappropriate v21 styles
-- Make it impossible to fix v20 styling without affecting v21
+If v20 and v21 need different styles (e.g., v21 has new CSS for new features), pulling "latest" for both versions would give v20 builds potentially broken or inappropriate v21 styles.
 
-### Solution: Version Branches in documentation-assets
+### Solution: Pin the v20.0 branch to a specific commit
 
-Create version branches in `documentation-assets`:
-- `main` → latest/development (v21)
-- `v20.0` → frozen styles for v20
+No version branches needed in `documentation-assets`. The submodule pointer on the `v20.0` documentation branch is simply frozen at the commit that was current when the branch was created. This is the default git submodule behaviour — the recorded commit doesn't change unless someone explicitly updates it.
 
-**Changes to `.gitmodules`:**
+The key is to **remove `--remote`** from the workflow on the `v20.0` branch. The `--remote` flag overrides the recorded commit and fetches latest from the remote branch, which is exactly what we want to avoid.
 
-On the `v20.0` documentation branch:
-```ini
-[submodule "documentation-assets"]
-    path = documentation-assets
-    url = https://github.com/Dyalog/documentation-assets
-    branch = v20.0
-```
-
-On the `main` documentation branch:
-```ini
-[submodule "documentation-assets"]
-    path = documentation-assets
-    url = https://github.com/Dyalog/documentation-assets
-    branch = main
-```
-
-**Changes to workflow:**
-
-The current workflow step:
+**On the `v20.0` documentation branch**, change the workflow step from:
 ```yaml
 - name: Update Assets
   run: git submodule update --remote --recursive documentation-assets
 ```
 
-This already respects the `branch` setting in `.gitmodules`, so no workflow change needed. The `--remote` flag fetches the branch specified in `.gitmodules`.
+To:
+```yaml
+- name: Update Assets
+  run: git submodule update --init --recursive documentation-assets
+```
 
-**Setup steps:**
+This checks out the exact commit recorded in the submodule pointer, giving v20 a frozen set of styles.
 
-1. In `documentation-assets` repo:
-   ```bash
-   git checkout main
-   git checkout -b v20.0
-   git push -u origin v20.0
-   ```
+**On `main`**, keep `--remote` so v21 builds always use the latest assets:
+```yaml
+- name: Update Assets
+  run: git submodule update --remote --recursive documentation-assets
+```
 
-2. On the `v20.0` documentation branch, update `.gitmodules`:
-   ```bash
-   git config -f .gitmodules submodule.documentation-assets.branch v20.0
-   git add .gitmodules
-   git commit -m "Pin documentation-assets to v20.0 branch"
-   ```
-
-3. On the `main` documentation branch, make explicit:
-   ```bash
-   git config -f .gitmodules submodule.documentation-assets.branch main
-   git add .gitmodules
-   git commit -m "Pin documentation-assets to main branch"
-   ```
-
-### Implementation Order
-
-1. Before creating the `v20.0` documentation branch:
-   - Create `v20.0` branch in `documentation-assets`
-
-2. After creating `v20.0` documentation branch:
-   - Update `.gitmodules` on `v20.0` to point to `v20.0` assets branch
-
-3. On `main` documentation branch:
-   - Update `.gitmodules` to explicitly specify `main`
+No changes to `.gitmodules` or the `documentation-assets` repo are required.
 
 ---
 
@@ -1013,7 +971,7 @@ The Jenkins pipeline is changed from deploying everything on the gh-pages branch
 
 The shared Jenkins library function that fetches PDF and CHM release assets needs modification to support filtering by version tag pattern. Currently it fetches the latest release regardless of version. The proposed change adds an optional parameter so each documentation version can fetch releases tagged with its own version prefix. A fallback implementation is provided if the shared library cannot be updated immediately.
 
-The documentation-assets submodule, which contains shared stylesheets and images, will use version branches matching the documentation branches. The v20.0 documentation branch will reference the v20.0 assets branch, while main references the main assets branch. This allows styles to evolve independently for each version. The workflow already respects branch settings in gitmodules, so no workflow changes are needed for this.
+The documentation-assets submodule is handled simply: the v20.0 branch pins the submodule to the commit that was current at branch creation by removing the `--remote` flag from the workflow's submodule update step. The main branch continues to pull latest assets. No version branches or `.gitmodules` changes are needed in the assets repo.
 
 Starting with v21, CHM and PDF generation is replaced by a single offline zip bundle (`documentation-{version}-offline.zip`) built using Material for MkDocs' offline plugin. The `chm-replacement` branch contains prior work on this; the plan incorporates and refines it. The v20.0 branch retains the existing `mkdocs-pdf.yml` workflow for CHM/PDF. The offline build disables `navigation.instant` (incompatible with `file://` URLs) via `yq` before invoking `mkdocs build`.
 
