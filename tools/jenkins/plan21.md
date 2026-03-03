@@ -251,10 +251,13 @@ Replace the entire `environment` block (lines 32-47) with:
         // ============================================================
         PRODUCTION_VERSIONS = '20.0'
 
+        // The "development" version currently on trunk in SVN.
+        // When v21 is released and v22 development starts, update this to '22.0'.
+        TRUNK_VERSION = '21.0'
+
         GITDOCURL       = 'documentation'
 
         // Version-agnostic SVN paths
-        SVNDOCURL       = "docbin/trunk/documentation"
         SVNSHARPPLOTURL = "dyalogtools/Causeway/trunk/release"
 
         SVNDOCDIR       = 'svn_docs'
@@ -262,14 +265,26 @@ Replace the entire `environment` block (lines 32-47) with:
     }
 ```
 
-Add a helper function at the top of the pipeline (after `def hashSame = null`):
+Add helper functions at the top of the pipeline (after `def hashSame = null`):
 
 ```groovy
-// Per-version SVN path configuration
+// Per-version SVN path configuration.
+// Convention: trunk is always the current development version;
+// released versions live under branches/{version}/.
+
+def getSvnDocbinUrl(String version) {
+    if (version == env.TRUNK_VERSION) {
+        return "docbin/trunk/documentation"
+    }
+    return "docbin/branches/${version}/documentation"
+}
+
 def getSvnReadmeUrl(String version) {
     return "dyalog/branches/${version}/svn/docs/readmes"
 }
 ```
+
+**SVN prerequisites:** `dyalog/branches/21.0/svn/docs/readmes` does not yet exist in SVN and must be created before v21 goes to production. This is not a blocker for the initial branch setup (v21 is staging-only and Jenkins skips non-production versions), but it must be in place before adding `21.0` to `PRODUCTION_VERSIONS`.
 
 Replace the `Get files from svn/docbin etc` stage (lines 117-129) with:
 
@@ -283,9 +298,8 @@ Replace the `Get files from svn/docbin etc` stage (lines 117-129) with:
                                     deleteDir()
                                 }
                                 dir("${version}") {
-                                    doSvnCheckout(env.SVNDOCURL, "files", true, 'svncom')
+                                    doSvnCheckout(getSvnDocbinUrl(version), "files", true, 'svncom')
                                     doSvnCheckout(env.SVNSHARPPLOTURL, "files/sharpplot", true, 'svncom')
-                                    // Version-specific readme path
                                     doSvnCheckout(getSvnReadmeUrl(version), "files/readmes", true, 'svncom')
                                     sh "\$WORKSPACE/get_svn_docbin ${version}"
                                 }
@@ -295,9 +309,14 @@ Replace the `Get files from svn/docbin etc` stage (lines 117-129) with:
                 }
 ```
 
-Each version now fetches from its own SVN branch path:
-- v20.0 → `dyalog/branches/20.0/svn/docs/readmes`
-- v21.0 → `dyalog/branches/21.0/svn/docs/readmes`
+Each version now fetches from its own SVN paths:
+
+| Version | `docbin` | `readmes` | `sharpplot` |
+|---------|----------|-----------|-------------|
+| 20.0 | `docbin/branches/20.0/documentation` | `dyalog/branches/20.0/svn/docs/readmes` | `dyalogtools/Causeway/trunk/release` (shared) |
+| 21.0 | `docbin/trunk/documentation` | `dyalog/branches/21.0/svn/docs/readmes` | `dyalogtools/Causeway/trunk/release` (shared) |
+
+The `TRUNK_VERSION` environment variable controls which version maps to trunk. When v21 is released and v22 development begins, update `TRUNK_VERSION` to `'22.0'` and the paths will automatically adjust.
 
 Replace the `Deploy site` stage (lines 235-289) with:
 
@@ -1117,7 +1136,7 @@ We need to enable parallel maintenance of v20 documentation alongside new v21 de
 
 The existing GitHub Actions publish workflow is modified to automatically detect the version from the mkdocs configuration file rather than requiring manual input. This prevents accidental cross-version deployments.
 
-The Jenkins pipeline is changed from deploying everything on the gh-pages branch to deploying only explicitly listed production versions. A new environment variable controls which versions are deployed to the live site. Initially this is set to v20 only, meaning v21 can be published to GitHub Pages staging without appearing on the production site. Each version fetches its SVN assets from version-specific paths, allowing v20 and v21 to have different readme files and other supplementary content.
+The Jenkins pipeline is changed from deploying everything on the gh-pages branch to deploying only explicitly listed production versions. A new environment variable controls which versions are deployed to the live site. Initially this is set to v20 only, meaning v21 can be published to GitHub Pages staging without appearing on the production site. SVN paths are now version-aware: released versions fetch from `docbin/branches/{version}/documentation`, while the current development version fetches from `docbin/trunk/documentation`. A `TRUNK_VERSION` variable controls the trunk mapping. Readmes follow the same pattern via `dyalog/branches/{version}/svn/docs/readmes`; SharpPlot remains on trunk (version-agnostic). The SVN branch `dyalog/branches/21.0/svn/docs/readmes` must be created before v21 goes to production.
 
 The shared Jenkins library function `ghGetReleaseAssets` (in `dyalog-scripts` at `git.bramley.dyalog.com/Systems/Jenkins-Library`) currently fetches the single latest release regardless of version. Rather than modifying the shared library, a local helper function `getVersionedReleaseAssets` is added to the Jenkinsfile. It uses the same `gh` CLI and authentication pattern but filters releases by version tag prefix (e.g., `v20.0.*`), so each version fetches its own assets independently. The shared library can be updated later if other pipelines need the same capability.
 
