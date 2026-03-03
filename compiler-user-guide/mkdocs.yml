@@ -51,10 +51,11 @@ markdown_extensions:
       title: On this page
 nav:
   - index.md
-  - Introduction: introduction/index.md
-    - Optimisations: introduction/optimisations.md
-    - Changes to Behaviour of Functions when Compiled: introduction/changes-to-behaviour.md
-    - Upgrading from Previous Versions of Dyalog: introduction/upgrading-from-previous-dyalog-versions.md
+  - Introduction:
+      - introduction/index.md
+      - Optimisations: introduction/optimisations.md
+      - Changes to Behaviour of Functions when Compiled: introduction/changes-to-behaviour.md
+      - Upgrading from Previous Versions of Dyalog: introduction/upgrading-from-previous-dyalog-versions.md
   - Basic Usage: basic-usage.md
   - Compiling with Global Names: compiling-with-global-names.md
   - Compiling Operators: compiling-operators.md

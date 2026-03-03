@@ -8,7 +8,7 @@ foo←{
 }
 ```
 
-If this fuction is compiled with `2(400⌶) 'foo'` (see [xxx](xxx)), the compiler will determine the nameclass of global names by looking at the names that are currently defined in the workspace:
+If this fuction is compiled with [`2(400⌶)Y` ](compiler-control-ibeam.md#x-2-compile)`'foo'` , the compiler will determine the nameclass of global names by looking at the names that are currently defined in the workspace:
 
 - If `bar` is undefined, then the compiler will not compile `foo`.
 - If `bar` is defined, then the compiler will use its nameclass to determine whether it is an array, function or operator, and parse the body of `foo` accordingly.
@@ -23,4 +23,4 @@ For example, to mimic the behaviour of `2(400⌶)`, the following callback funct
       #(400⌶)'foo'                ⍝ pass in # as the namespace
 ```
 
-More complicated definitions of the callback functions grant finer control over exactly which global names a compiled function is allowed to refer to (see [xxx](xxx)).
+More complicated definitions of the callback functions grant finer control over exactly which global names a compiled function is allowed to refer to.

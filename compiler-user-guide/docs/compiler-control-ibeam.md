@@ -23,7 +23,7 @@ The nature of `Y` and `R` depend on the value of `X`.
 When `X` is `0`, `Y` must be one of the following values:
 
 - `0` – Disable automatic compilation (initial setting)
-- `1` – Compile functions when they are fixed (with `⎕FX` or from the function editor)
+- `1` – Compile functions when they are fixed (with [`⎕FX`](../../language-reference-guide/system-functions/fx) or from the function editor)
 - `2` – Compile operators the first time they are executed
 - `3` – Compile functions when they are fixed (with `⎕FX` or from the function editor) and compile operators the first time they are executed
 
@@ -76,16 +76,16 @@ The result `R` is a multi-line string (that is, a character vector with embedded
 
 This functionality is provided for information and diagnostic purposes only. The human-readable form of the bytecode is subject to change at any time.
 
-## X is a Namespace :  Compile with Callbacks
+## X is a Namespace : Compile with Callbacks
 
 `R←N(400⌶)Y  ⍝ compile function/operator(s) Y`
 
-`Y` must be a character vector, matrix, or vector of vectors specifying the name of a function or operator or a list of such names. The specified functions or operators are compiled in the same way as when `X` = 2 (see [xxx](xxx)) except that the compiler uses the namespace `N` to obtain information about global names.
+`Y` must be a character vector, matrix, or vector of vectors specifying the name of a function or operator or a list of such names. The specified functions or operators are compiled in the same way as when  [`X` = `2`](#x-2-compile)) except that the compiler uses the namespace `N` to obtain information about global names.
 
 The namespace `N` can contain any or all of following callback functions:
 
-- `N.quadNC` – analogous to the system function [`⎕NC`](xxx). When applied monadically to an enclosed character vector it returns the detailed nameclass of that name. For example, given the name of a global dfn it returns the value `3.2`.
-- `N.quadAT` – analogous to the system function [`⎕AT`](xxx). When applied monadically to an enclosed character vector it returns a 1 by 4 matrix whose first item is a vector of 3 integers describing (respectively) the result, function valence, and operator valence of the name.
+- `N.quadNC` – analogous to the system function [`⎕NC`](../../language-reference-guide/system-functions/nc). When applied monadically to an enclosed character vector it returns the detailed nameclass of that name. For example, given the name of a global dfn it returns the value `3.2`.
+- `N.quadAT` – analogous to the system function [`⎕AT`](../../language-reference-guide/system-functions/at). When applied monadically to an enclosed character vector it returns a 1 by 4 matrix whose first item is a vector of 3 integers describing (respectively) the result, function valence, and operator valence of the name.
 - `N.getValue` – used to obtain the name of a global constant. When applied monadically to a character vector that is a global constant it returns the enclose of the constant value, otherwise it returns `⍬`.
 
 Each of these callback functions returns information about names that should be guaranteed to exist when the compiled functions are executed. The compiler assumes that the information returned by the callbacks is correct, and generates bytecode accordingly. In the case of `quadNC` and `quadAT`, if the information returned by the callbacks turns out not to be correct when the compiled function is executed, then a runtime error is generated.

@@ -8,7 +8,7 @@ Thread switching will not occur between lines of code after a function has been 
 
 ## Error Trapping
 
-Compiled functions cannot be suspended. Errors occurring within compiled functions are signalled back to the calling environment (in the same way as if [`⎕SIGNAL`](xxx) had been used inside the function).
+Compiled functions cannot be suspended. Errors occurring within compiled functions are signalled back to the calling environment (in the same way as if [`⎕SIGNAL`](../../../language-reference-guide/system-functions/signal) had been used inside the function).
 
 Similarly, when an error in a compiled function is handled by an Execute trap, the APL expression specified in the trap will be executed in the calling environment and will not be able to see any of the compiled function's local names.
 

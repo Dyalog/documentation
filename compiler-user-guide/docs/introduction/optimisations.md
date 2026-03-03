@@ -2,9 +2,9 @@
 
 In addition to reducing interpreter overhead, the compiler can also perform certain optimisations on the APL code. These include:
 
-- constant folding (see xxx)
-- eliminating local names (see xxx)
-- flexible idiom recognition (see xxx)
+- constant folding
+- eliminating local names
+- flexible idiom recognition
 
 ## Constant Folding
 
