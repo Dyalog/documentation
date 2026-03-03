@@ -561,23 +561,153 @@ When v21 is ready for production release:
 
 ## Testing the Changes
 
-### Before Going Live
+The pipeline can't be run locally as a Jenkins pipeline (it needs the Jenkins agent, Docker swarm, SVN, credential store, etc.), but most of the moving parts can be validated independently.
 
-1. Test on a fork or test branch:
-   - Create test branch `test-v21-workflow`
-   - Apply all Jenkinsfile changes
-   - Run workflow manually and verify behaviour
+### 1. GitHub Actions Workflows (local)
 
-2. Verify mike behaviour:
-   ```bash
-   # Locally test mike commands
-   mike deploy 21.0
-   mike list  # Should show both 20.0 and 21.0
-   ```
+The `mkdocs-publish.yml` and offline build workflows can be tested locally since `mkdocs`, `mike`, `yq`, and `gh` are all available in the local venv/homebrew:
 
-3. Verify Jenkins selective deployment:
-   - With `PRODUCTION_VERSIONS = '20.0'`, confirm only 20.0 directory is synced
-   - Check that 21.0 exists on `gh-pages` but not on production
+```bash
+# Activate the docs venv
+source docs-venv/bin/activate
+
+# Test version detection (the core of the publish workflow)
+VERSION=$(yq -r '.extra.version_majmin | tostring' mkdocs.yml)
+echo "Detected version: ${VERSION}"
+echo "${VERSION}" | grep -qE '^[0-9]+\.[0-9]+$' && echo "PASS: format valid" || echo "FAIL"
+
+# Test mike deploy (locally, does not push)
+mike deploy ${VERSION}
+mike list
+
+# Test offline build
+OFFLINE=true mkdocs build
+ls -lh site/index.html  # verify output exists
+(cd site && zip -r ../documentation-${VERSION}-offline.zip .)
+ls -lh documentation-${VERSION}-offline.zip
+
+# Test that navigation.instant is removed for offline
+yq -i 'del(.theme.features[] | select(. == "navigation.instant"))' mkdocs.yml
+grep -c 'navigation.instant' mkdocs.yml  # should be 0
+
+# Clean up
+git checkout mkdocs.yml
+rm -rf site/ documentation-*-offline.zip
+```
+
+### 2. Release Asset Filtering (local)
+
+The `getVersionedReleaseAssets` logic is just `gh` + `jq`. Test the query directly:
+
+```bash
+# This is the exact query the Jenkinsfile helper runs
+TAG=$(gh release list --repo dyalog/documentation --exclude-drafts \
+    --json tagName,createdAt \
+    | jq -r '[.[] | select(.tagName | startswith("v20.0."))]
+             | sort_by(.createdAt) | last | .tagName')
+echo "Latest v20.0 release: ${TAG}"
+# Expected: v20.0.1175
+
+# Verify it downloads correctly
+mkdir -p /tmp/test-assets
+gh release download "${TAG}" --repo dyalog/documentation --dir /tmp/test-assets
+ls /tmp/test-assets
+rm -rf /tmp/test-assets
+
+# Test that a non-existent version returns null (not an error)
+TAG21=$(gh release list --repo dyalog/documentation --exclude-drafts \
+    --json tagName,createdAt \
+    | jq -r '[.[] | select(.tagName | startswith("v21.0."))]
+             | sort_by(.createdAt) | last | .tagName')
+echo "Latest v21.0 release: '${TAG21}'"
+# Expected: 'null' (no v21 releases yet)
+```
+
+### 3. Jenkinsfile Deploy Logic (local simulation)
+
+The deploy stage is a shell script that can be tested against a temporary directory:
+
+```bash
+# Simulate the deploy stage locally
+export WEB_ROOT=$(mktemp -d)
+export PRODUCTION_VERSIONS='20.0'
+export WORKSPACE=$(mktemp -d)
+export LATEST_HASH=$(git rev-parse HEAD)
+
+# Create a fake 20.0 source
+mkdir -p "${WORKSPACE}/20.0"
+echo '<html>test</html>' > "${WORKSPACE}/20.0/index.html"
+
+# Create a fake 21.0 source (should NOT be deployed)
+mkdir -p "${WORKSPACE}/21.0"
+echo '<html>v21</html>' > "${WORKSPACE}/21.0/index.html"
+
+# Run the deploy loop from the plan
+DEPLOYED_COUNT=0
+for VERSION in ${PRODUCTION_VERSIONS}; do
+    if [ ! -d "${WORKSPACE}/${VERSION}" ]; then
+        echo "SKIP: ${WORKSPACE}/${VERSION} does not exist"
+        continue
+    fi
+    if [ ! -f "${WORKSPACE}/${VERSION}/index.html" ]; then
+        echo "SKIP: index.html missing"
+        continue
+    fi
+    mkdir -p "${WEB_ROOT}/${VERSION}"
+    rsync -rl --delete "${WORKSPACE}/${VERSION}/" "${WEB_ROOT}/${VERSION}/"
+    echo "Deployed ${VERSION}"
+    DEPLOYED_COUNT=$((DEPLOYED_COUNT + 1))
+done
+
+# Verify: 20.0 deployed, 21.0 not deployed
+echo "--- WEB_ROOT contents ---"
+find "${WEB_ROOT}" -type f
+# Expected: only 20.0/index.html, no 21.0/
+
+# Clean up
+rm -rf "${WEB_ROOT}" "${WORKSPACE}"
+```
+
+### 4. Mike Versioning (local)
+
+Test that both versions coexist on gh-pages without interfering:
+
+```bash
+source docs-venv/bin/activate
+
+# Deploy v20.0 (from current content)
+mike deploy 20.0
+mike list  # should show 20.0
+
+# Temporarily tweak version and deploy v21.0
+yq -i '.extra.version_majmin = "21.0"' mkdocs.yml
+mike deploy 21.0
+mike list  # should show 20.0 and 21.0
+
+# Test setting latest alias
+mike deploy --update-aliases 21.0 latest
+mike set-default latest
+mike list  # should show 20.0, 21.0 [latest]
+
+# Clean up: delete test versions from local gh-pages
+mike delete 21.0
+mike delete 20.0
+git checkout mkdocs.yml
+```
+
+Note: these `mike` commands modify the local `gh-pages` branch. Do **not** use `--push` during testing.
+
+### 5. End-to-End: GitHub Actions on a Fork
+
+For full integration testing of the workflows before merging:
+
+1. Fork the repo (or use a test branch with a modified workflow trigger)
+2. Push the `v21-branch-strategy` branch changes
+3. Run `mkdocs-publish.yml` manually → verify mike deploys to gh-pages
+4. Run the offline build workflow → verify the draft release contains `documentation-{version}-offline.zip`
+5. Verify the Jenkinsfile and `.rsync-exclude` are correctly copied to gh-pages
+
+The Jenkins pipeline itself can only be tested on the actual Jenkins server, but by that point the only untested logic is the `PRODUCTION_VERSIONS` loop and `rsync`, which have been validated locally in step 3.
 
 ---
 
@@ -618,60 +748,102 @@ git push --force origin gh-pages
 
 ---
 
-## GitHub Release Strategy for PDF/CHM Assets
+## GitHub Release Strategy for PDF/CHM/Offline Assets
 
 ### Problem
 
-The `ghGetReleaseAssets` function (in the `dyalog-scripts` shared library) fetches the "latest" GitHub release. Once v21 PDF/CHM releases are published, they become "latest" and v20 production would incorrectly receive v21 assets.
+The `ghGetReleaseAssets` function in the `dyalog-scripts` shared library (`@Library('dyalog-scripts')`, source at `https://git.bramley.dyalog.com/Systems/Jenkins-Library`) fetches the single "latest" non-draft GitHub release, regardless of version. The actual implementation (from `Library/vars/ghGetReleaseAssets.groovy`):
 
-Releases are already tagged with version prefixes:
+```groovy
+def call(String repository, directory="github_assets") {
+    withCredentials([...]) {
+        sh('echo ${GITHUB_PASS} | /usr/bin/gh auth login --with-token')
+        r=sh(script: """
+            ...
+            GH_LATEST_RELEASE=\$(gh release list -R \$REPO --exclude-drafts \
+                --json name,isPrerelease,isLatest,tagName \
+                --jq '.[0] | select(.isLatest)|.tagName')
+            if [ "x\$GH_LATEST_RELEASE" = "x" ]; then
+                # Fallback: latest prerelease
+                GH_LATEST_RELEASE=\$(gh release list -R \$REPO --exclude-drafts \
+                    --json name,isPrerelease,isLatest,tagName \
+                    --jq '.[0] | select(.isPrerelease)|.tagName')
+            fi
+            gh release -R \$REPO download -D $WORKSPACE/$directory \$GH_LATEST_RELEASE
+            gh release view -R \$REPO --json ... \$GH_LATEST_RELEASE \
+                > $WORKSPACE/$directory/buildinfo.json
+        """, returnStdout: true).trim()
+    }
+}
 ```
-v20.0.1092  (latest published)
-v20.0.1080  (draft)
+
+Current releases are all tagged `v20.0.*`:
+```
+v20.0.1175  (latest — assets: dyalog.chm + 8 PDFs)
+v20.0.1092
 v20.0.1078
 ...
 ```
 
-When v21 releases appear, they'll be tagged `v21.0.XXX`.
+Once v21 releases appear (tagged `v21.0.*`), the latest release will be a v21 offline zip, and v20 production would incorrectly receive it.
 
-### Modify `ghGetReleaseAssets` in Shared Library
+### Approach: Local Helper Function in Jenkinsfile
 
-Add an optional third parameter for tag pattern filtering:
+Rather than modifying the shared library (which affects other pipelines), add a local function in the Jenkinsfile that handles version-filtered downloads. This avoids shared library coordination and can be tested independently.
 
 ```groovy
-// Current signature:
-def ghGetReleaseAssets(String repo, String targetDir)
+/**
+ * Download release assets for a specific documentation version.
+ * Finds the latest non-draft release whose tag starts with "v{version}."
+ * and downloads all assets to the target directory.
+ */
+def getVersionedReleaseAssets(String repo, String targetDir, String version) {
+    withCredentials([
+        usernamePassword(
+            credentialsId: getCredentialsId('github'),
+            usernameVariable: 'GITHUB_USER',
+            passwordVariable: 'GITHUB_PASS'
+        )
+    ]) {
+        sh """#!/bin/bash
+            set -euo pipefail
+            echo "\${GITHUB_PASS}" | /usr/bin/gh auth login --with-token
 
-// Proposed signature:
-def ghGetReleaseAssets(String repo, String targetDir, String tagPattern = null)
-```
+            REPO="Dyalog/${repo}"
+            TAG=\$(gh release list -R "\$REPO" --exclude-drafts \\
+                --json tagName,createdAt \\
+                | jq -r '[.[] | select(.tagName | startswith("v${version}."))]
+                         | sort_by(.createdAt) | last | .tagName')
 
-Implementation approach:
-```groovy
-def ghGetReleaseAssets(String repo, String targetDir, String tagPattern = null) {
-    def releaseCmd = "gh release list --repo dyalog/${repo} --exclude-drafts --json tagName,isLatest"
+            if [ -z "\$TAG" ] || [ "\$TAG" = "null" ]; then
+                echo "ERROR: No release found matching v${version}.*"
+                exit 1
+            fi
 
-    if (tagPattern) {
-        // Filter releases by tag pattern (e.g., "v20.0.*")
-        // Get the most recent release matching the pattern
-        releaseCmd = """
-            gh release list --repo dyalog/${repo} --exclude-drafts --json tagName,createdAt \\
-            | jq -r '[.[] | select(.tagName | test("^${tagPattern}"))] | sort_by(.createdAt) | last | .tagName'
+            echo "Downloading assets from release \$TAG for version ${version}"
+            rm -rf "\$WORKSPACE/${targetDir}"
+            mkdir -p "\$WORKSPACE/${targetDir}"
+            gh release download "\$TAG" -R "\$REPO" -D "\$WORKSPACE/${targetDir}"
+            gh release view "\$TAG" -R "\$REPO" \\
+                --json apiUrl,author,createdAt,id,isDraft,isPrerelease,name,publishedAt,tagName \\
+                > "\$WORKSPACE/${targetDir}/buildinfo.json"
+            echo "Downloaded:"
+            ls "\$WORKSPACE/${targetDir}"
         """
-    } else {
-        // Existing behaviour: get latest release
-        releaseCmd = "gh release list --repo dyalog/${repo} --exclude-drafts --limit 1 --json tagName -q '.[0].tagName'"
     }
-
-    def tag = sh(script: releaseCmd, returnStdout: true).trim()
-    // ... rest of existing download logic using tag
 }
 ```
 
+This mirrors the authentication and `buildinfo.json` generation from the shared library's `ghGetReleaseAssets`, so downstream stages that read `buildinfo.json` continue to work.
+
 ### Jenkinsfile Changes
 
-Update the `Update svndocs` stage to pass version-specific tag patterns:
+Replace the current single call:
+```groovy
+r=ghGetReleaseAssets(GITDOCURL, GITDOCDIR)
+```
 
+With a per-version loop in the `Checkout from svndocs` stage:
 ```groovy
 stage('Checkout from svndocs') {
     steps {
@@ -682,8 +854,7 @@ stage('Checkout from svndocs') {
             // Fetch release assets for each production version
             def versions = env.PRODUCTION_VERSIONS.split(' ')
             versions.each { version ->
-                def tagPattern = "v${version}\\\\."  // e.g., "v20.0\\." matches v20.0.1092
-                ghGetReleaseAssets(GITDOCURL, "${GITDOCDIR}/${version}", tagPattern)
+                getVersionedReleaseAssets(GITDOCURL, "${GITDOCDIR}/${version}", version)
             }
 
             doSvnCheckout(SVNDOCURL, SVNDOCDIR)
@@ -692,39 +863,18 @@ stage('Checkout from svndocs') {
 }
 ```
 
-### Backwards Compatibility
+### Version-Specific Assets
 
-The `tagPattern` parameter defaults to `null`, preserving existing behaviour for other pipelines using the shared library. Only this pipeline needs to pass the pattern.
+| Version | Release tag pattern | Assets downloaded |
+|---------|---------------------|-------------------|
+| 20.0 | `v20.0.*` | `dyalog.chm`, `*.pdf` |
+| 21.0 | `v21.0.*` | `documentation-21.0-offline.zip` |
 
-### Fallback (if shared library change is delayed)
+The `get_svn_docbin` script validates against `filelist.txt` from SVN, so the different asset types don't conflict — each version's assets are in their own directory (`git_docs/20.0/`, `git_docs/21.0/`).
 
-If the shared library cannot be modified immediately, add a local function in the Jenkinsfile:
+### Future: Shared Library Update
 
-```groovy
-def getVersionedReleaseAssets(String repo, String targetDir, String version) {
-    sh """
-        # Get latest non-draft release matching version pattern
-        TAG=\$(gh release list --repo dyalog/${repo} --exclude-drafts --json tagName,createdAt \\
-            | jq -r '[.[] | select(.tagName | startswith("v${version}."))] | sort_by(.createdAt) | last | .tagName')
-
-        if [ -z "\$TAG" ] || [ "\$TAG" = "null" ]; then
-            echo "WARNING: No release found matching v${version}.* - skipping asset download"
-            exit 0
-        fi
-
-        echo "Downloading assets from release \$TAG"
-        mkdir -p ${targetDir}
-        gh release download "\$TAG" --repo dyalog/${repo} --dir ${targetDir}
-    """
-}
-```
-
-Then call it instead of `ghGetReleaseAssets`:
-```groovy
-versions.each { version ->
-    getVersionedReleaseAssets(GITDOCURL, "${GITDOCDIR}/${version}", version)
-}
-```
+Once the local approach is validated in production, the shared library can optionally be updated with a `tagPattern` parameter for reuse by other pipelines. This is not a blocker.
 
 ---
 
@@ -969,7 +1119,7 @@ The existing GitHub Actions publish workflow is modified to automatically detect
 
 The Jenkins pipeline is changed from deploying everything on the gh-pages branch to deploying only explicitly listed production versions. A new environment variable controls which versions are deployed to the live site. Initially this is set to v20 only, meaning v21 can be published to GitHub Pages staging without appearing on the production site. Each version fetches its SVN assets from version-specific paths, allowing v20 and v21 to have different readme files and other supplementary content.
 
-The shared Jenkins library function that fetches PDF and CHM release assets needs modification to support filtering by version tag pattern. Currently it fetches the latest release regardless of version. The proposed change adds an optional parameter so each documentation version can fetch releases tagged with its own version prefix. A fallback implementation is provided if the shared library cannot be updated immediately.
+The shared Jenkins library function `ghGetReleaseAssets` (in `dyalog-scripts` at `git.bramley.dyalog.com/Systems/Jenkins-Library`) currently fetches the single latest release regardless of version. Rather than modifying the shared library, a local helper function `getVersionedReleaseAssets` is added to the Jenkinsfile. It uses the same `gh` CLI and authentication pattern but filters releases by version tag prefix (e.g., `v20.0.*`), so each version fetches its own assets independently. The shared library can be updated later if other pipelines need the same capability.
 
 The documentation-assets submodule is handled simply: the v20.0 branch pins the submodule to the commit that was current at branch creation by removing the `--remote` flag from the workflow's submodule update step. The main branch continues to pull latest assets. No version branches or `.gitmodules` changes are needed in the assets repo.
 
