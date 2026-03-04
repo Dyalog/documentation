@@ -1,0 +1,58 @@
+site_name: Application Tuning Guide
+theme:
+  favicon: documentation-assets/images/favicon-32.png
+  logo: documentation-assets/images/dyalog-logo_white.svg
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.path
+    - navigation.indexes
+  name: material
+  font:
+    text: Be Vietnam Pro
+extra_css:
+  - documentation-assets/css/main.css
+  - documentation-assets/css/extra.css
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+plugins:
+  - privacy
+  - search
+  - macros
+  - site-urls
+  - caption:
+      table:
+        enable: true
+        start_index: 1
+        increment_index: 1
+        position: bottom
+extra:
+  version_maj: 20
+  version_majmin: 20.0
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+  - abbr
+  - footnotes
+  - md_in_html
+  - markdown_tables_extended
+  - toc:
+      title: On this page
+nav:
+ - index.md
+ - Introduction: introduction.md
+ - Data Collection: data-collection.md
+ - Data Reporting: data-reporting.md
+ - Data Storage:
+   - data-storage/index.md
+   - XML Format: data-storage/xml-format.md
+   - CSV Format: data-storage/csv-format.md
+   - Text Format: data-storage/text-format.md
+ - Appendix A: appendix-a-syntax-of-profile-user-command.md
+ - Appendix B: appendix-b-dashbord.md 
