@@ -156,7 +156,16 @@ pipeline {
                             usernameVariable: 'SVN_USER')
                         ])
                         {
-                            sh "./Jenkins/gitdocs2svn"
+                            script {
+                                def versions = env.PRODUCTION_VERSIONS.split(' ')
+                                versions.each { version ->
+                                    sh """
+                                        SVNDOCDIR="${SVNDOCDIR}/${version}" \
+                                        GITDOCDIR="${GITDOCDIR}/${version}" \
+                                        ./Jenkins/gitdocs2svn
+                                    """
+                                }
+                            }
                         }
                     }
                 }

@@ -817,7 +817,7 @@ def call(String repository, directory="github_assets") {
 
 Current releases are all tagged `v20.0.*`:
 ```
-v20.0.1175  (latest — assets: dyalog.chm + 8 PDFs)
+v20.0.1175  (latest -- assets: dyalog.chm + 8 PDFs)
 v20.0.1092
 v20.0.1078
 ...
@@ -895,7 +895,26 @@ stage('Checkout from svndocs') {
 }
 ```
 
-Note: the `Update and Commit svndocs` stage runs `./Jenkins/gitdocs2svn` (from the private `Dyalog/JenkinsBuild` repo). This script likely needs a version parameter or loop to handle per-version SVN paths. Since it's in a separate repo, this change is out of scope for this plan but must be coordinated. Until `gitdocs2svn` is updated, the `Update svndocs` stage can be limited to `PRODUCTION_VERSIONS` that the script already handles (i.e., 20.0 only initially).
+The `Update and Commit svndocs` stage calls `./Jenkins/gitdocs2svn` (from `Dyalog/JenkinsBuild`) once per version, overriding `$SVNDOCDIR` and `$GITDOCDIR` to point at the per-version subdirectories. The script itself is unchanged — it already reads those vars from the environment:
+
+```groovy
+stage('Update and Commit svndocs') {
+    steps {
+        withCredentials([...]) {
+            script {
+                def versions = env.PRODUCTION_VERSIONS.split(' ')
+                versions.each { version ->
+                    sh """
+                        SVNDOCDIR="${SVNDOCDIR}/${version}" \
+                        GITDOCDIR="${GITDOCDIR}/${version}" \
+                        ./Jenkins/gitdocs2svn
+                    """
+                }
+            }
+        }
+    }
+}
+```
 
 ### Version-Specific Assets
 
@@ -904,7 +923,7 @@ Note: the `Update and Commit svndocs` stage runs `./Jenkins/gitdocs2svn` (from t
 | 20.0 | `v20.0.*` | `dyalog.chm`, `*.pdf` |
 | 21.0 | `v21.0.*` | `documentation-21.0-offline.zip` |
 
-The `get_svn_docbin` script validates against `filelist.txt` from SVN, so the different asset types don't conflict — each version's assets are in their own directory (`git_docs/20.0/`, `git_docs/21.0/`).
+The `get_svn_docbin` script validates against `filelist.txt` from SVN, so the different asset types don't conflict -- each version's assets are in their own directory (`git_docs/20.0/`, `git_docs/21.0/`).
 
 ### Future: Shared Library Update
 
@@ -928,7 +947,7 @@ If v20 and v21 need different styles (e.g., v21 has new CSS for new features), p
 
 ### Solution: Pin the v20.0 branch to a specific commit
 
-No version branches needed in `documentation-assets`. The submodule pointer on the `v20.0` documentation branch is simply frozen at the commit that was current when the branch was created. This is the default git submodule behaviour — the recorded commit doesn't change unless someone explicitly updates it.
+No version branches needed in `documentation-assets`. The submodule pointer on the `v20.0` documentation branch is simply frozen at the commit that was current when the branch was created. This is the default git submodule behaviour -- the recorded commit doesn't change unless someone explicitly updates it.
 
 The key is to **remove `--remote`** from the workflow on the `v20.0` branch. The `--remote` flag overrides the recorded commit and fetches latest from the remote branch, which is exactly what we want to avoid.
 
@@ -991,7 +1010,7 @@ The `privacy` plugin automatically downloads external assets (fonts, scripts) so
 
 `navigation.instant` (currently enabled in `mkdocs.yml` line 10) uses fetch API calls that browsers block from `file://` URLs. This must be conditionally disabled when building offline. Options:
 
-1. **Recommended: environment override in mkdocs.yml** — Material for MkDocs does not support `!ENV` toggles on individual theme features. Instead, use a `mkdocs-offline.yml` overlay or a build script that patches the config:
+1. **Recommended: environment override in mkdocs.yml** -- Material for MkDocs does not support `!ENV` toggles on individual theme features. Instead, use a `mkdocs-offline.yml` overlay or a build script that patches the config:
    ```bash
    # In the offline build step, remove navigation.instant before building
    yq -i 'del(.theme.features[] | select(. == "navigation.instant"))' mkdocs.yml
@@ -1132,7 +1151,7 @@ Key differences from the `chm-replacement` branch:
 
 The `ghGetReleaseAssets` modification described earlier still applies. For v21, the release asset is `documentation-{version}-offline.zip` instead of CHM/PDF files. The Jenkins pipeline downloads and deploys this to the `/files` directory just as it does for v20 CHM/PDF files.
 
-The `get_svn_docbin` script may need minor adjustments to handle a single zip file instead of multiple CHM/PDF files.
+The `get_svn_docbin` script (in this repo at `tools/jenkins/get_svn_docbin`) runs per-version in the `Get files from svn/docbin etc` stage. It currently expects v20-specific files from SVN docbin (`sharpplot.chm`, `setup_readme.htm`, `dyalog_readme.htm`, `filelist.txt`, `theme/header.html`). For v21, the script will need updating if the docbin/trunk layout differs — but this only matters once v21 is added to `PRODUCTION_VERSIONS`. While `PRODUCTION_VERSIONS = '20.0'`, the script only runs for v20 and works as-is.
 
 ### Version-Specific Behaviour
 
@@ -1161,4 +1180,4 @@ Starting with v21, CHM and PDF generation is replaced by a single offline zip bu
 
 Safety: the deploy stage verifies source directories exist before deleting production content, the backup stage handles missing directories gracefully, and the rsync exclude file provides defence against accidental v21 deployment.
 
-On staging (GitHub Pages), mike manages the root redirect via `index.html` and `versions.json` on `gh-pages`. Running `mike set-default latest` updates these to point to the aliased version. On production, the deploy stage currently only syncs version directories — the root-level redirect files are not deployed. This must be addressed (either by extending the deploy stage or a manual step) when v21 goes live.
+On staging (GitHub Pages), mike manages the root redirect via `index.html` and `versions.json` on `gh-pages`. Running `mike set-default latest` updates these to point to the aliased version. On production, the deploy stage currently only syncs version directories -- the root-level redirect files are not deployed. This must be addressed (either by extending the deploy stage or a manual step) when v21 goes live.
