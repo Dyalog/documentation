@@ -76,7 +76,7 @@ nav:
   - 'Core Reference':
         - 'Dyalog APL Language': "!include ./language-reference-guide/mkdocs.yml"
         - 'Programming': "!include ./programming-reference-guide/mkdocs.yml"
-  - 'Class TBA':
+  - 'Code Tooling':
         - 'Compiler': "!include ./compiler-user-guide/mkdocs.yml"
   - 'Dyalog for Microsoft Windows':
         - 'Installation/Configuration': "!include ./windows-installation-and-configuration-guide/mkdocs.yml"
