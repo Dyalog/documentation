@@ -378,7 +378,7 @@ few elements) an error is signalled only if the missing content would actually b
 
 ## Example dictionary
 
-The following creates a dictionary defined by the namespace `dict` using JSON text. See the formatting examples below
+The following creates a dictionary defined by the namespace `dict`. See the formatting examples below
 for uses of this dictionary.
 
 ```apl
