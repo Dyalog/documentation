@@ -56,10 +56,11 @@ The result `R` is a Boolean scalar or vector, with a value of `1` if the functio
 `Y` must be a character vector, matrix, or vector of vectors specifying the name of a function or operator or a list of such names that should be compiled.
 
 The result `R` is a matrix of diagnostic information or, if `Y` was either a matrix or a vector of vectors, a vector of such matrices. Each row of the matrix describes a problem that caused the compilation to fail, with four columns corresponding to:  
-&nbsp;&nbsp;&nbsp;`[;1]` – the APL error number  
-&nbsp;&nbsp;&nbsp;`[;2]` – the line number in the function/operator  
-&nbsp;&nbsp;&nbsp;`[;3]` – the column number (currently always `0`)  
-&nbsp;&nbsp;&nbsp;`[;4]` – the error message  
+
+- `[;1]` – the APL error number  
+- `[;2]` – the line number in the function/operator  
+- `[;3]` – the column number (currently always `0`)  
+- `[;4]` – the error message  
 
 If the matrix `R` has zero rows then the compilation was successful.
 
@@ -100,10 +101,11 @@ The namespace `N` can contain any or all of following callback functions:
 
 Each of these callback functions returns information about names that should be guaranteed to exist when the compiled functions are executed. The compiler assumes that the information returned by the callbacks is correct, and generates bytecode accordingly. In the case of `quadNC` and `quadAT`, if the information returned by the callbacks turns out not to be correct when the compiled function is executed, then a runtime error is generated.
 
-The result `R` is a matrix of diagnostic information or, if `Y` was either a matrix or a vector of vectors, a vector of such matrices. Each row of the matrix describes a problem that caused the compilation to fail, with four columns corresponding to:  
-&nbsp;&nbsp;&nbsp;`[;1]` – the APL error number  
-&nbsp;&nbsp;&nbsp;`[;2]` – the line number in the function/operator  
-&nbsp;&nbsp;&nbsp;`[;3]` – the column number (currently always `0`)  
-&nbsp;&nbsp;&nbsp;`[;4]` – the error message   
+The result `R` is a matrix of diagnostic information or, if `Y` was either a matrix or a vector of vectors, a vector of such matrices. Each row of the matrix describes a problem that caused the compilation to fail, with four columns corresponding to:
+  
+- `[;1]` – the APL error number  
+- `[;2]` – the line number in the function/operator  
+- `[;3]` – the column number (currently always `0`)  
+- `[;4]` – the error message   
 
 If the matrix has zero rows then the compilation was successful.
