@@ -16,7 +16,7 @@ sum←{
 }
 ```
 
-For global names, [callbacks from `400⌶`](compiler-control-ibeam.md#x-is-a-namespace-compile-with-callbacks)) enable the compiler to identify the nameclass.
+For global names, [callbacks from `400⌶`](../language-reference-guide/primitive-operators/i-beam/compiler-control.md#x-is-a-namespace-compile-with-callbacks)) enable the compiler to identify the nameclass.
 
 However, for semi-global names (that is, names that are local to the function that calls the function to be compiled) the compiler cannot determine the nameclass:
 ```apl
@@ -82,7 +82,7 @@ The following language features prevent a function from being compiled:
 
 __A function that includes the Execute function (`⍎`) cannot be compiled.__
 
-The compiler prohibits the use of _execute_ ([`⍎`](../../language-reference-guide/docs/primitive-functions/execute)) because it could have arbitrary side effects unknown to the compiler.
+The compiler prohibits the use of _execute_ ([`⍎`](../../language-reference-guide/primitive-functions/execute)) because it could have arbitrary side effects unknown to the compiler.
 
 ## Summary
 

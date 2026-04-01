@@ -32,4 +32,4 @@ In summary:
       foo 99           ⍝ execute the compiled code
 ```
 
-For full details on the syntax of `400⌶`, see [Compiler Control I-beam](compiler-control-ibeam.md).
+For full details on the syntax of `400⌶`, see [Compiler Control I-beam](../../language-reference-guide/primitive-operators/i-beam/compiler-control).

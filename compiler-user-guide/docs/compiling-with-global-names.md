@@ -8,7 +8,7 @@ foo←{
 }
 ```
 
-If this fuction is compiled with [`2(400⌶)Y` ](compiler-control-ibeam.md#x-2-compile)`'foo'` , the compiler will determine the nameclass of global names by looking at the names that are currently defined in the workspace:
+If this fuction is compiled with [`2(400⌶)` ](../language-reference-guide/primitive-operators/i-beam/compiler-control.md#x-2-compile)`'foo'` , the compiler will determine the nameclass of global names by looking at the names that are currently defined in the workspace:
 
 - If `bar` is undefined, then the compiler will not compile `foo`.
 - If `bar` is defined, then the compiler will use its nameclass to determine whether it is an array, function or operator, and parse the body of `foo` accordingly.

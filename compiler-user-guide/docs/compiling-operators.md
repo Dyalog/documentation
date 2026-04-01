@@ -7,7 +7,7 @@ op←{
 }
 ```
 
-When an operator is compiled using [`2(400⌶)Y`](compiler-control-ibeam.md#x-2-compile), the compiler assumes that the operands are functions. If the compiled operator is subsequently called with an array operand, then the compiled version is not used and the interpreter uses the parser instead.
+When an operator is compiled using [`2(400⌶)Y`](../language-reference-guide/primitive-operators/i-beam/compiler-control.md#x-2-compile), the compiler assumes that the operands are functions. If the compiled operator is subsequently called with an array operand, then the compiled version is not used and the interpreter uses the parser instead.
 
 To work around this, the compiler can be run in a mode where it will attempt to compile a defined operator the first time it is applied to some arguments; at this point the compiler can see exactly what the operands are. If the compilation is successful, then the compiler will record the nameclass of the operands along with the compiled bytecode. When the operator is applied again, the compiled bytecode will only be executed if the operands still have the same nameclass as they did the first time the operator was applied (if the nameclass of an operand has changed, then the compiled bytecode will not be used and the operator will be interpreted).
 
