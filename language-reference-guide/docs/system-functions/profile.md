@@ -251,6 +251,6 @@ The timing data collected by `⎕PROFILE` is not adjusted for the timer's call t
       Adjusted←RawTimes[;4 5]-RawTimes[;6 7]×CallTimeBias
 ```
 
-## The PROFILE User Command
+## The `]Profile` User Command
 
-`]Profile` implements a high-level interface to `⎕PROFILE`, and provides reporting and analysis tools that act on the profiling data. For more information, see the [_Application Tuning Guide_](https://docs.dyalog.com/20.0/files/Application_Tuning_Guide.pdf).
+The `]Profile` user command implements a high-level interface to `⎕PROFILE`, and provides reporting and analysis tools that act on the profiling data. For more information, see the [_Application Tuning Guide_](https://docs.dyalog.com/20.0/files/Application_Tuning_Guide.pdf).
