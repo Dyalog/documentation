@@ -9,7 +9,7 @@ search:
 
 <h1 class="heading"><span class="name">Profile Application</span> <span class="command">{R}←{X}⎕PROFILE Y</span></h1>
 
-`⎕PROFILE` facilitates the profiling of either CPU consumption or elapsed time for a workspace. It does so by retaining time measurements collected for APL functions/operators and function/operator lines. `⎕PROFILE` is used to both control the state of profiling and retrieve the collected profiling data.
+`⎕PROFILE` facilitates the profiling of CPU consumption, code coverage, or elapsed time for a workspace. It does so by retaining time measurements collected for APL functions/operators and function/operator lines. `⎕PROFILE` is used to both control the state of profiling and retrieve the collected profiling data.
 
 `Y` specifies the action to perform and any options for that action, if applicable. `Y` is case-insensitive. The result `R` is, in some cases, shy.
 
