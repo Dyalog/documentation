@@ -7,16 +7,12 @@ There are two ways to choose the file to be edited. If the file exists, you can 
 Alternatively, type `)ED` followed by the pathname to the file. To identify the name given as a file, it must either contain a slash character ("\" or "/") or be preceded by one.
 
 <h2 class="example">Examples</h2>
+
 ```apl
       )ED c:\myfiles\myscript.dyalog
-```
-```apl
       )ED c:\myfiles\pete.txt
-
       )ED \x.txt  ⍝ x.txt in current directory
-
       )ED / x.txt ⍝ ditto
-
 ```
 
 If the named file does not exist, you will be asked whether or not you want to create it:
