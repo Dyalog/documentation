@@ -10,7 +10,7 @@ A UUID is a label that uniquely identifies objects in computer systems; it does 
 
 `Y` specifies the UUID version required. Supported values of `Y` are:
 
-|`Y`| Version | Hexadecimal Values |
+|`Y`| Version | Generated Hexadecimal Values |
 |---|----|---------------------------------------------------------|
 | 0 | Nil UUID | All zero                                          |
 | 4 | UUIDv4 | Random                                              |
