@@ -121,17 +121,13 @@ Table: Options menu operations {: #options-menu-operations }
 
 |Item                     |Action                      |Description                                                                                                      |
 |-------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------|
-|Expose GUI Properties    |`[ExposeGUI]`               |Exposes the names of properties, methods and events in GUI objects                                               |
 |Expose Root Properties   |`[ExposeRoot]`              |Exposes the names of the properties, methods and events of the Root object                                       |
-|Expose Session Properties|`[ExposeSession]`           |Exposes the names of the properties, methods and events of `⎕SE`                                                 |
 |Line Numbers             |`[LineNumbers]`             |Toggle the display of line numbers in edit and trace windows on/off                                              |
 |Disable traps in session |`[DisableTrapsAtSuspension]`|Disables the error trapping mechanism used by `:Trap` and `⎕TRAP`. This can be useful in debugging applications  |
 |Configure                |`[Configure]`               |Displays the *Configuration* dialog box                                                                          |
 |Colours                  |`[ChooseColors]`            |Displays the *Colours Selection* dialog box                                                                      |
 
-The values associated with the *Expose GUI*, *Expose Root* and *Expose Session* options reflect the values of these settings in your current workspace and are saved in it. When you change these values through the *Options* menu, you are changing them in the current workspace only.
-
-The default values of these items are defined by the parameters **default_wx**, **PropertyExposeRoot** and **PropertyExposeSE** which may be set using the *Object Syntax* tab of the *Configuration* dialog.
+The value associated with the *Expose Root* option reflects the value of this setting in your current workspace and is saved in it. When you change this value through the *Options* menu, you are changing it in the current workspace only. The default value of this items is defined by the **default_wx** configuration parameter, which can be set using the *Object Syntax* tab of the *Configuration* dialog.
 
 ## The Tools Menu
 
