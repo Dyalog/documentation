@@ -127,7 +127,7 @@ Table: Options menu operations {: #options-menu-operations }
 |Configure                |`[Configure]`               |Displays the *Configuration* dialog box                                                                          |
 |Colours                  |`[ChooseColors]`            |Displays the *Colours Selection* dialog box                                                                      |
 
-The value associated with the *Expose Root* option reflects the value of this setting in your current workspace and is saved in it. When you change this value through the *Options* menu, you are changing it in the current workspace only. The default value of this items is defined by the **default_wx** configuration parameter, which can be set using the *Object Syntax* tab of the *Configuration* dialog.
+The value associated with the *Expose Root* option reflects the value of this setting in your current workspace and is saved in it. When you change this value through the *Options* menu, you are changing it in the current workspace only. The default value of this items is defined by the **PropertyExposeRoot** configuration parameter, which can be set using the *Object Syntax* tab of the *Configuration* dialog.
 
 ## The Tools Menu
 
