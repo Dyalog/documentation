@@ -44,7 +44,7 @@ plugins:
 extra:
   version_maj: 20
   version_min: 0
-  version_majmin: 20.0
+  version_majmin: "20.0"
   version_condensed: 200
   conga_version: 3.6
   conga_version_condensed: 36
