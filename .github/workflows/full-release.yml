@@ -1,0 +1,30 @@
+name: Full Release (Assets + Site)
+
+on:
+  workflow_dispatch:
+    inputs:
+      set_as_latest:
+        description: 'Set this version as the default/latest (tick when releasing v21 to production)'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  build-assets:
+    uses: ./.github/workflows/mkdocs-pdf.yml
+    with:
+      generate_pdf: true
+      generate_chm: true
+      publish_release: true
+    secrets: inherit
+
+  publish-site:
+    needs: build-assets
+    uses: ./.github/workflows/mkdocs-publish.yml
+    with:
+      set_as_latest: ${{ inputs.set_as_latest }}
+    secrets: inherit
