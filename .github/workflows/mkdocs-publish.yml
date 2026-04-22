@@ -13,6 +13,14 @@ on:
         required: false
         default: false
         type: boolean
+  workflow_call:
+    inputs:
+      version_override:
+        type: string
+        default: ''
+      set_as_latest:
+        type: boolean
+        default: false
 
 permissions:
   contents: write
