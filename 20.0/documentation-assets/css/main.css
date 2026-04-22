@@ -66,21 +66,14 @@ code, .command, .Dyalog {
     vertical-align: text-bottom;
 }
 
-.copy {
+.copy::after {
+    content: "⿻";
+    color: var(--md-default-bg-color);
     cursor: grab;
-    padding-right:1em;
-    &::after {
-        content: "⿻";
-        color: var(--md-default-bg-color);
-        margin-right: -1em;
-        pointer-events: none;
-    }
-    &:active {
-        cursor: grabbing;
-        &::after {
-            content: "⿴";
-        }
-    }
+}
+.copy:active::after {
+    content: "⿴";
+    cursor: grabbing;
 }
 
 @media screen and (max-width: 76.1875em) {
