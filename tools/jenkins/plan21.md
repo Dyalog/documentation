@@ -568,8 +568,8 @@ This exclusion is a safety backstop. The Jenkinsfile changes in Step 4 explicitl
 
 When v21 is ready for production release:
 
-1. Generate final offline documentation:
-   - Run the offline build workflow from `main` branch
+1. Generate final release assets:
+   - Run `mkdocs-pdf.yml` from `main` branch
    - Publish the GitHub release (not draft)
 
 2. Update Jenkins configuration:
@@ -603,7 +603,7 @@ The pipeline can't be run locally as a Jenkins pipeline (it needs the Jenkins ag
 
 ### 1. GitHub Actions Workflows (local)
 
-The `mkdocs-publish.yml` and offline build workflows can be tested locally since `mkdocs`, `mike`, `yq`, and `gh` are all available in the local venv/homebrew:
+The `mkdocs-publish.yml` workflow can be tested locally since `mkdocs`, `mike`, `yq`, and `gh` are all available in the local venv/homebrew:
 
 ```bash
 # Activate the docs venv
@@ -618,19 +618,8 @@ echo "${VERSION}" | grep -qE '^[0-9]+\.[0-9]+$' && echo "PASS: format valid" || 
 mike deploy ${VERSION}
 mike list
 
-# Test offline build
-OFFLINE=true mkdocs build
-ls -lh site/index.html  # verify output exists
-(cd site && zip -r ../documentation-${VERSION}-offline.zip .)
-ls -lh documentation-${VERSION}-offline.zip
-
-# Test that navigation.instant is removed for offline
-yq -i 'del(.theme.features[] | select(. == "navigation.instant"))' mkdocs.yml
-grep -c 'navigation.instant' mkdocs.yml  # should be 0
-
 # Clean up
-git checkout mkdocs.yml
-rm -rf site/ documentation-*-offline.zip
+rm -rf site/
 ```
 
 ### 2. Release Asset Filtering (local)
@@ -742,8 +731,7 @@ For full integration testing of the workflows before merging:
 1. Fork the repo (or use a test branch with a modified workflow trigger)
 2. Push the `v21-branch-strategy` branch changes
 3. Run `mkdocs-publish.yml` manually → verify mike deploys to gh-pages
-4. Run the offline build workflow → verify the draft release contains `documentation-{version}-offline.zip`
-5. Verify the Jenkinsfile and `.rsync-exclude` are correctly copied to gh-pages
+4. Verify the Jenkinsfile and `.rsync-exclude` are correctly copied to gh-pages
 
 The Jenkins pipeline itself can only be tested on the actual Jenkins server, but by that point the only untested logic is the `PRODUCTION_VERSIONS` loop and `rsync`, which have been validated locally in step 3.
 
@@ -823,7 +811,7 @@ v20.0.1078
 ...
 ```
 
-Once v21 releases appear (tagged `v21.0.*`), the latest release will be a v21 offline zip, and v20 production would incorrectly receive it.
+Once v21 releases appear (tagged `v21.0.*`), the latest release will be a v21 build, and v20 production would incorrectly receive it.
 
 ### Approach: Local Helper Function in Jenkinsfile
 
@@ -921,9 +909,9 @@ stage('Update and Commit svndocs') {
 | Version | Release tag pattern | Assets downloaded |
 |---------|---------------------|-------------------|
 | 20.0 | `v20.0.*` | `dyalog.chm`, `*.pdf` |
-| 21.0 | `v21.0.*` | `documentation-21.0-offline.zip` |
+| 21.0 | `v21.0.*` | `dyalog.chm`, `*.pdf` |
 
-The `get_svn_docbin` script validates against `filelist.txt` from SVN, so the different asset types don't conflict -- each version's assets are in their own directory (`git_docs/20.0/`, `git_docs/21.0/`).
+Each version's assets are in their own directory (`git_docs/20.0/`, `git_docs/21.0/`).
 
 ### Future: Shared Library Update
 
@@ -975,195 +963,6 @@ No changes to `.gitmodules` or the `documentation-assets` repo are required.
 
 ---
 
-## Offline Documentation: Replacing CHM and PDF with MkDocs Offline Build
-
-Starting with v21, we are abandoning CHM and PDF generation in favour of Material for MkDocs' built-in offline plugin. This produces a self-contained site that can be downloaded as a zip file and viewed directly in a browser without a server.
-
-The `chm-replacement` branch contains prior work on this: the offline plugin is already integrated into `mkdocs.yml` and the `mkdocs-pdf.yml` workflow has a `generate_offline` input. The changes below build on that foundation.
-
-### What Changes
-
-For v21 onwards:
-- The `mkdocs-pdf.yml` workflow on `main` is replaced with a dedicated offline build workflow
-- No more CHM compilation or PDF generation from `main`
-- The only generated asset is `documentation-{version}-offline.zip`
-
-For v20 maintenance:
-- The `mkdocs-pdf.yml` workflow continues to run from the `v20.0` branch
-- CHM and PDF releases continue to be published for v20
-- Jenkins continues to fetch v20 release assets as before
-
-### Configuration Changes for v21
-
-The `chm-replacement` branch already has the correct plugin setup in `mkdocs.yml`:
-
-```yaml
-plugins:
-  - privacy      # Downloads external assets for offline use (already present)
-  - offline:     # Enables offline site search
-      enabled: !ENV [OFFLINE, false]
-```
-
-The `privacy` plugin automatically downloads external assets (fonts, scripts) so the offline build is fully self-contained. The `offline` plugin is gated behind the `OFFLINE` environment variable so it does not affect normal site builds or mike deployments.
-
-**Disabling incompatible features for offline builds:**
-
-`navigation.instant` (currently enabled in `mkdocs.yml` line 10) uses fetch API calls that browsers block from `file://` URLs. This must be conditionally disabled when building offline. Options:
-
-1. **Recommended: environment override in mkdocs.yml** -- Material for MkDocs does not support `!ENV` toggles on individual theme features. Instead, use a `mkdocs-offline.yml` overlay or a build script that patches the config:
-   ```bash
-   # In the offline build step, remove navigation.instant before building
-   yq -i 'del(.theme.features[] | select(. == "navigation.instant"))' mkdocs.yml
-   ```
-
-2. Analytics and version switcher: not currently configured, so no action needed. If added later, they must also be disabled for offline builds.
-
-### Workflow Changes
-
-Replace `mkdocs-pdf.yml` on the `main` branch with a workflow that produces only the offline zip. The `chm-replacement` branch already has the core build step; the changes below adapt it to be the sole asset generator:
-
-```yaml
-name: Build Offline Documentation
-
-on:
-  workflow_dispatch:
-
-permissions:
-  contents: write
-
-jobs:
-  build-offline:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v4
-      with:
-        submodules: recursive
-        fetch-depth: 0
-
-    - name: Update Assets
-      run: git submodule update --remote --recursive documentation-assets
-
-    - name: Get Git Info
-      id: git-info
-      run: |
-        BRANCH=$(git rev-parse --abbrev-ref HEAD)
-        HASH=$(git rev-parse --short HEAD)
-        echo "GIT_INFO=${BRANCH}:${HASH}" >> $GITHUB_OUTPUT
-        echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
-        echo "CURRENT_YEAR=$(date +'%Y')" >> $GITHUB_OUTPUT
-
-    - name: Install yq
-      run: |
-        sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/v4.44.1/yq_linux_amd64
-        sudo chmod +x /usr/local/bin/yq
-
-    - name: Determine Version
-      id: version
-      run: |
-        VERSION=$(yq -r '.extra.version_majmin | tostring' mkdocs.yml)
-        if ! echo "${VERSION}" | grep -qE '^[0-9]+\.[0-9]+$'; then
-          echo "ERROR: Invalid version format '${VERSION}'. Expected X.Y"
-          exit 1
-        fi
-        echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
-
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install \
-          mkdocs-material \
-          mkdocs-macros-plugin \
-          mkdocs-monorepo-plugin \
-          mkdocs-site-urls \
-          mkdocs-caption \
-          mkdocs-minify-plugin
-
-    - name: Build offline site
-      env:
-        OFFLINE: 'true'
-        GIT_INFO: ${{ steps.git-info.outputs.GIT_INFO }}
-        BUILD_DATE: ${{ steps.git-info.outputs.DATE }}
-        CURRENT_YEAR: ${{ steps.git-info.outputs.CURRENT_YEAR }}
-      run: |
-        VERSION="${{ steps.version.outputs.VERSION }}"
-
-        # Substitute env variables in mkdocs.yml
-        cp mkdocs.yml mkdocs.yml.bak
-        envsubst '$BUILD_DATE $GIT_INFO $CURRENT_YEAR' < mkdocs.yml.bak > mkdocs.yml
-
-        # Disable features incompatible with offline viewing
-        yq -i 'del(.theme.features[] | select(. == "navigation.instant"))' mkdocs.yml
-
-        mv documentation-assets docs/documentation-assets
-        mkdocs build
-        cd site && zip -r "../documentation-${VERSION}-offline.zip" .
-
-    - name: Create draft release
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        VERSION="${{ steps.version.outputs.VERSION }}"
-        COMMIT_COUNT=$(git rev-list --count HEAD)
-        RELEASE_TAG="v${VERSION}.${COMMIT_COUNT}"
-
-        # Clean up old drafts (keep 5)
-        MAX_DRAFTS=5
-        DRAFTS=$(gh release list --json tagName,isDraft,createdAt \
-          --jq '.[] | select(.isDraft==true) | [.tagName,.createdAt] | @tsv' \
-          | sort -k2 | awk '{print $1}')
-        DRAFT_COUNT=$(echo "$DRAFTS" | grep -c "^" || true)
-        if [ $DRAFT_COUNT -gt $MAX_DRAFTS ]; then
-          TO_DELETE=$((DRAFT_COUNT - MAX_DRAFTS + 1))
-          echo "$DRAFTS" | head -n $TO_DELETE | while read -r tag; do
-            gh release delete "$tag" --yes
-          done
-        fi
-
-        # Handle tag collisions
-        TAG="$RELEASE_TAG"
-        LETTER="a"
-        while gh release view "$TAG" &>/dev/null; do
-          TAG="${RELEASE_TAG}${LETTER}"
-          LETTER=$(echo "$LETTER" | tr "a-y" "b-z")
-        done
-
-        gh release create "$TAG" \
-          "documentation-${VERSION}-offline.zip" \
-          --draft \
-          --title "Documentation Offline ${TAG}" \
-          --notes "Offline documentation generated from ${{ steps.git-info.outputs.GIT_INFO }}"
-```
-
-Key differences from the `chm-replacement` branch:
-1. **Versioned zip filename**: `documentation-{version}-offline.zip` instead of `site.zip`
-2. **No PDF/CHM steps or inputs**: this workflow only produces the offline zip
-3. **`navigation.instant` removed** via `yq` before building, preventing broken navigation in offline mode
-4. **Pinned `yq` version** (`v4.44.1`) instead of fetching latest
-5. **Submodule checkout in the actions/checkout step** rather than a separate `git submodule update --init`
-
-### Jenkins Implications
-
-The `ghGetReleaseAssets` modification described earlier still applies. For v21, the release asset is `documentation-{version}-offline.zip` instead of CHM/PDF files. The Jenkins pipeline downloads and deploys this to the `/files` directory just as it does for v20 CHM/PDF files.
-
-The `get_svn_docbin` script (in this repo at `tools/jenkins/get_svn_docbin`) runs per-version in the `Get files from svn/docbin etc` stage. It currently expects v20-specific files from SVN docbin (`sharpplot.chm`, `setup_readme.htm`, `dyalog_readme.htm`, `filelist.txt`, `theme/header.html`). For v21, the script will need updating if the docbin/trunk layout differs — but this only matters once v21 is added to `PRODUCTION_VERSIONS`. While `PRODUCTION_VERSIONS = '20.0'`, the script only runs for v20 and works as-is.
-
-### Version-Specific Behaviour
-
-| Version | Offline Format | Workflow | Release Assets |
-|---------|----------------|----------|----------------|
-| 20.0 | CHM + PDF | mkdocs-pdf.yml (on v20.0 branch) | *.chm, *.pdf |
-| 21.0 | Offline zip | mkdocs-offline.yml (on main) | documentation-21.0-offline.zip |
-
-This means the shared library changes for version-filtered release assets are essential: v20 must fetch CHM/PDF releases (tagged `v20.0.*`) while v21 fetches zip releases (tagged `v21.0.*`).
-
----
-
 ## Summary
 
 We need to enable parallel maintenance of v20 documentation alongside new v21 development. The core strategy is that v20 content lives on a new v20.0 branch while v21 development continues on main.
@@ -1175,8 +974,6 @@ The Jenkins pipeline is changed from deploying everything on the gh-pages branch
 The shared Jenkins library function `ghGetReleaseAssets` (in `dyalog-scripts` at `git.bramley.dyalog.com/Systems/Jenkins-Library`) currently fetches the single latest release regardless of version. Rather than modifying the shared library, a local helper function `getVersionedReleaseAssets` is added to the Jenkinsfile. It uses the same `gh` CLI and authentication pattern but filters releases by version tag prefix (e.g., `v20.0.*`), so each version fetches its own assets independently. The shared library can be updated later if other pipelines need the same capability.
 
 The documentation-assets submodule is handled simply: the v20.0 branch pins the submodule to the commit that was current at branch creation by removing the `--remote` flag from the workflow's submodule update step. The main branch continues to pull latest assets. No version branches or `.gitmodules` changes are needed in the assets repo.
-
-Starting with v21, CHM and PDF generation is replaced by a single offline zip bundle (`documentation-{version}-offline.zip`) built using Material for MkDocs' offline plugin. The `chm-replacement` branch contains prior work on this; the plan incorporates and refines it. The v20.0 branch retains the existing `mkdocs-pdf.yml` workflow for CHM/PDF. The offline build disables `navigation.instant` (incompatible with `file://` URLs) via `yq` before invoking `mkdocs build`.
 
 Safety: the deploy stage verifies source directories exist before deleting production content, the backup stage handles missing directories gracefully, and the rsync exclude file provides defence against accidental v21 deployment.
 

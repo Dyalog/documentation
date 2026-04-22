@@ -21,13 +21,9 @@ The `gitdocs2svn` script is unchanged — the Jenkinsfile calls it once per vers
 
 Details of what's changing in the Jenkinsfile and what (little) we need from IT are in the attached `it.md`.
 
-### What changes for offline documentation
-
-Starting with v21, we're replacing CHM and PDF generation with a single offline zip built using MkDocs' offline plugin. The v20.0 branch retains the existing CHM/PDF workflow.
-
 ### What's been tested
 
-All workflows have been tested end-to-end on a fork (see `steps21.md`). Version auto-detection, multi-version publishing, selective deployment, and the offline build all passed. The only thing not tested is the actual Jenkins pipeline against live infrastructure — the changes are designed to be safe (source verification before deployment, defence-in-depth exclusions) and trivially reversible.
+All workflows have been tested end-to-end on a fork (see `steps21.md`). Version auto-detection, multi-version publishing, and selective deployment all passed. The only thing not tested is the actual Jenkins pipeline against live infrastructure — the changes are designed to be safe (source verification before deployment, defence-in-depth exclusions) and trivially reversible.
 
 ### Next steps
 

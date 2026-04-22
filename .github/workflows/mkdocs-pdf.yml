@@ -11,10 +11,6 @@ on:
         description: 'Generate CHM help file'
         type: boolean
         default: true
-      generate_offline:
-        description: 'Generate offline site bundle'
-        type: boolean
-        default: true
 
 jobs:
   convert-docs:
@@ -148,21 +144,6 @@ jobs:
           --git-info "$GIT_INFO" \
           --build-date "$BUILD_DATE"
 
-    - name: Build offline site
-      if: ${{ inputs.generate_offline }}
-      env:
-        OFFLINE: 'true'
-        GIT_INFO: ${{ steps.git-info.outputs.GIT_INFO }}
-        BUILD_DATE: ${{ steps.git-info.outputs.DATE }}
-        CURRENT_YEAR: ${{ steps.git-info.outputs.CURRENT_YEAR }}
-      run: |
-        git submodule update --init --recursive documentation-assets
-        cp mkdocs.yml mkdocs.yml.bak
-        envsubst '$BUILD_DATE $GIT_INFO $CURRENT_YEAR' < mkdocs.yml.bak > mkdocs.yml
-        mv documentation-assets docs/documentation-assets
-        mkdocs build
-        cd site && zip -r ../site.zip .
-
     - name: Install yq
       run: |
         sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
@@ -239,10 +220,6 @@ jobs:
         if ${{ inputs.generate_chm }}; then
           ASSETS="$ASSETS chm/output/*.chm"
           PARTS="$PARTS CHM"
-        fi
-        if ${{ inputs.generate_offline }}; then
-          ASSETS="$ASSETS site.zip"
-          PARTS="$PARTS Offline"
         fi
         PARTS=$(echo $PARTS | xargs)
         RELEASE_NAME="Documentation ${PARTS} $RELEASE_TAG"

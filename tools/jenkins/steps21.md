@@ -30,14 +30,7 @@ Tracking document for all tasks performed as part of the v21 branch strategy imp
 ### 1.3 Update `.rsync-exclude` (Plan Step 5)
 - Added `21.0` line as defence-in-depth against accidental v21 production deployment
 
-### 1.4 Create `mkdocs-offline.yml` workflow
-- New dedicated offline build workflow for v21+
-- Produces `documentation-{version}-offline.zip`
-- Removes `navigation.instant` via `yq` (incompatible with `file://` URLs)
-- Creates draft GitHub release with tag `v{version}.{commit_count}`
-- Cleans up old drafts (keeps 5)
-
-### 1.5 Commit and push to fork
+### 1.4 Commit and push to fork
 - Committed as `3889fda` "Implement v21 branch strategy file changes"
 - Pushed to `xpqz` remote only (git@github.com:xpqz/dyalog-docs.git)
 - Origin (Dyalog/documentation) NOT touched
@@ -101,26 +94,19 @@ Run ID 22632056281 (56s, success): `production_versions: "20.0"`
 Run ID 22632116644 (1m3s, success): `production_versions: "20.0 21.0"`
 - Processed 20.0 + 21.0 → Deployed 2 versions
 
-### Test 6: Offline build -- PASSED
-Run ID: 22632414277 (28m54s, success)
-- Draft release created: `v21.0.1187`
-- Asset: `documentation-21.0-offline.zip` (153MB)
-- Download and verify offline viewing manually if desired
-
-### Test 7: Concurrency
+### Test 6: Concurrency
 Skipped (non-critical). The concurrency group is configured; behaviour is standard GitHub Actions.
 
 ---
 
 ## Summary
 
-Fork testing is complete. The `v21-branch-strategy` branch contains all file changes. Tests 3–6 passed on the xpqz/dyalog-docs fork, confirming:
+Fork testing is complete. The `v21-branch-strategy` branch contains all file changes. Tests 3–5 passed on the xpqz/dyalog-docs fork, confirming:
 
 - Version auto-detection works from both branches
 - Both versions coexist on gh-pages (`versions.json` lists 20.0 and 21.0)
 - Jenkins files on gh-pages are always sourced from `origin/main`
 - The PRODUCTION_VERSIONS deploy loop correctly filters versions
-- The offline build produces a versioned zip in a draft release
 
 ### Changes
 
@@ -129,9 +115,6 @@ Fork testing is complete. The `v21-branch-strategy` branch contains all file cha
 | `mkdocs-publish.yml` | Auto-detects version from `mkdocs.yml`, concurrency group, `set_as_latest` option, Jenkins files always sourced from `origin/main` |
 | `Jenkinsfile` | `PRODUCTION_VERSIONS` / `TRUNK_VERSION`, version-aware SVN paths, `getVersionedReleaseAssets` (replaces shared library call), per-version deploy loop with source verification, `gitdocs2svn` called per-version via env var override |
 | `.rsync-exclude` | `21.0` exclusion as defence-in-depth |
-| `mkdocs-offline.yml` | New offline zip workflow for v21+ (replaces CHM/PDF on main) |
-| `mkdocs-pdf.yml` | Offline bundle option added (from earlier chm-replacement work) |
-| `mkdocs.yml` | Offline plugin added for the CHM replacement |
 
 ---
 
