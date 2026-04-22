@@ -11,6 +11,18 @@ on:
         description: 'Generate CHM help file'
         type: boolean
         default: true
+  workflow_call:
+    inputs:
+      generate_pdf:
+        type: boolean
+        default: true
+      generate_chm:
+        type: boolean
+        default: true
+      publish_release:
+        description: 'Publish release immediately instead of as a draft'
+        type: boolean
+        default: false
 
 jobs:
   convert-docs:
@@ -224,12 +236,20 @@ jobs:
         PARTS=$(echo $PARTS | xargs)
         RELEASE_NAME="Documentation ${PARTS} $RELEASE_TAG"
         NOTES="Documentation ${PARTS} generated from ${{ steps.git-info.outputs.GIT_INFO }}"
-        
-        echo "Creating new draft release: $RELEASE_TAG"
-        
-        # Create a draft release with current syntax
+
+        # When called from the Full Release workflow, publish_release=true
+        # and we skip the draft step so Jenkins can immediately pick up the assets.
+        DRAFT_FLAG="--draft"
+        RELEASE_TYPE="draft"
+        if [ "${{ inputs.publish_release }}" = "true" ]; then
+          DRAFT_FLAG=""
+          RELEASE_TYPE="published"
+        fi
+
+        echo "Creating new ${RELEASE_TYPE} release: $RELEASE_TAG"
+
         gh release create "$RELEASE_TAG" \
           $ASSETS \
-          --draft \
+          $DRAFT_FLAG \
           --title "$RELEASE_NAME" \
           --notes "$NOTES"
