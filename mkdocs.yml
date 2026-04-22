@@ -42,10 +42,10 @@ plugins:
       minify_html: true
 
 extra:
-  version_maj: 20
+  version_maj: 21
   version_min: 0
-  version_majmin: 20.0
-  version_condensed: 200
+  version_majmin: "21.0"
+  version_condensed: 210
   conga_version: 3.6
   conga_version_condensed: 36
   version:
