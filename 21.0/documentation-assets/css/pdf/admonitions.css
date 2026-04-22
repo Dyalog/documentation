@@ -1,0 +1,59 @@
+/*------- Admonitions -------*/
+
+div.admonition.warning {  /* Main admonition container: warning */
+    border: 1px solid #FF8600;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 0;
+    margin: 20px 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    color: inherit;
+    width: 96%;
+}
+
+div.admonition.warning .admonition-title {
+    margin: 0;
+    background-color: #F8EADA;
+    color: black;
+    padding: 5px 20px;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+}
+
+div.admonition.warning p:not(.admonition-title) {
+    margin: 0;
+    padding: 10px 20px;
+    line-height: 1.6;
+    background-color: transparent;
+}
+
+div.admonition.note {  /* Main admonition container: note */
+    border: 1px solid #0D47A1;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 0;
+    margin: 20px 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    color: inherit;
+    width: 96%;
+}
+
+div.admonition.note .admonition-title {
+    margin: 0;
+    background-color: #E3F2FD;
+    color: black;
+    padding: 5px 20px;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+}
+
+div.admonition.note p:not(.admonition-title) {
+    margin: 0;
+    padding: 10px 20px;
+    line-height: 1.6;
+    background-color: transparent;
+}
+
+/*------- Table of Contents -------*/

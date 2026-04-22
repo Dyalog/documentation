@@ -1,0 +1,8 @@
+.toolbar-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-image: url('../images/trace-theme-sprite-16.png');
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
