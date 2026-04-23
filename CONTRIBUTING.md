@@ -36,27 +36,25 @@ On the PR form on GitHub, change the base branch dropdown from `main` to `v20.0`
 
 Examples: typo in shared content, fix to an API description that both versions document.
 
-**Shape:** fix it on `v20.0` first (lower risk, hits production soonest), then forward-port to `main`. Two PRs.
+**Shape:** make the change commit on `main` (where v21 development lives), then apply the same commit to `v20.0` via a cherry-pick. Two PRs — one against each branch — and the v20 PR contains the exact commit that was merged to `main`.
 
-**Step 1:** fix on `v20.0` exactly as in scenario (1). Merge it.
+**Step 1:** make the change on `main` as in scenario (3). Merge it.
 
-**Step 2:** once step 1 is merged, bring the same change to `main`:
+**Step 2:** once step 1 is merged, apply the same commit to `v20.0`:
 
 ```
-git checkout main
+git checkout v20.0
 git pull
-git checkout -b fix-typo-v21
-git cherry-pick <hash-of-the-v20-merge-commit>
-git push -u origin fix-typo-v21
+git checkout -b fix-typo-v20
+git cherry-pick <hash-of-the-main-merge-commit>
+git push -u origin fix-typo-v20
 ```
 
-To find the hash: on the merged v20 PR, copy the merge-commit SHA shown in the conversation view. Or run `git log --oneline origin/v20.0 -5`.
+To find the hash: on the merged `main` PR, copy the merge-commit SHA shown in the conversation view. Or run `git log --oneline origin/main -5`.
 
-Then PR against `main`.
+Then open a PR **against `v20.0`** (remember to change the base branch dropdown).
 
-**If the cherry-pick conflicts** (because v21 content has drifted from v20), either resolve the conflict and continue (`git cherry-pick --continue`), or abort (`git cherry-pick --abort`) and just apply the change manually on a fresh branch from `main`.
-
-**Shortcut for simple, obviously-clean fixes:** skip the cherry-pick and do both PRs in parallel — one branch from `v20.0` targeting `v20.0`, another from `main` targeting `main`, same edits.
+**If the cherry-pick conflicts** (because v20 content has drifted from v21), either resolve the conflict and continue (`git cherry-pick --continue`), or abort (`git cherry-pick --abort`) and just apply the change manually on a fresh branch from `v20.0`.
 
 ## (3) Writing something only for v21
 
@@ -80,7 +78,7 @@ PR base defaults to `main`, so nothing special to set.
 | What you're changing | Branch from | PR base |
 |---|---|---|
 | v20 only | `v20.0` | `v20.0` |
-| Both v20 and v21 | `v20.0` then `main` | two PRs: one against each |
+| Both v20 and v21 | `main` then cherry-pick to `v20.0` | two PRs: one against each |
 | v21 only | `main` | `main` |
 
 ## Common mistakes to watch for
