@@ -80,15 +80,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install \
-          mike \
-          mkdocs-material \
-          mkdocs-macros-plugin \
-          mkdocs-monorepo-plugin \
-          mkdocs-site-urls \
-          mkdocs-caption \
-          markdown-tables-extended \
-          mkdocs-minify-plugin
+        pip install -r tools/requirements-docs.txt
 
     - name: Get Git Info
       id: git-info
