@@ -9,22 +9,16 @@ RUN apt-get update && apt-get install -y \
 # Create working directory
 WORKDIR /docs
 
-# Install Python dependencies for utils scripts
+# Install mkdocs stack from the pinned requirements file (shared with CI)
+COPY requirements-docs.txt /requirements-docs.txt
+RUN pip install --no-cache-dir -r /requirements-docs.txt
+
+# Utility-script-only dependencies, unrelated to mkdocs — left unpinned
 RUN pip install --no-cache-dir \
-    mkdocs \
-    mkdocs-material \
-    mkdocs-monorepo-plugin \
-    mkdocs-macros-plugin \
-    mkdocs-caption \
-    pymdown-extensions \
-    markdown-tables-extended \
-    ruamel.yaml \
-    beautifulsoup4 \
     aiohttp \
     lxml \
     Pillow \
-    watchdog \
-    markdown
+    watchdog
 
 # Copy utils scripts
 COPY utils /utils
