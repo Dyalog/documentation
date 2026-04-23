@@ -1,9 +1,9 @@
 # Dyalog v{{ version_majmin }}
 
-Welcome to the documentation for Dyalog v21.0!
+Welcome to the documentation for Dyalog v21.0.
 
 !!! Info "Information"
-    The documentation for Dyalog v21.0 is currently being developed and will not be finalised (complete, reviewed, and so on) until nearer Dyalog v21.0's release.
+    The documentation for Dyalog v21.0 is currently being developed and will not be finalised until nearer the release of Dyalog v21.0.
 
 This documentation site is a new project, and we are continuing to add documents from the full documentation set (which is available at the [Dyalog v21.0 Documentation Centre](https://www.dyalog.com/documentation_210.htm)).
 
