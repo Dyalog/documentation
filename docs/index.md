@@ -1,8 +1,11 @@
 # Dyalog v{{ version_majmin }}
 
-Welcome to the documentation for Dyalog v20.0!
+Welcome to the documentation for Dyalog v21.0.
 
-This documentation site is a new project, and we are continuing to add documents from the full documentation set (which is available at the [Dyalog v20.0 Documentation Centre](https://www.dyalog.com/documentation_200.htm)).
+!!! Info "Information"
+    The documentation for Dyalog v21.0 is currently being developed and will not be finalised until nearer the release of Dyalog v21.0.
+
+This documentation site is a new project, and we are continuing to add documents from the full documentation set (which is available at the [Dyalog v21.0 Documentation Centre](https://www.dyalog.com/documentation_210.htm)).
 
 !!! Hint "Hints and Recommendations"
     New to APL? See [Getting started](https://www.dyalog.com/getting-started.htm).
