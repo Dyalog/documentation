@@ -63,25 +63,7 @@ jobs:
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install \
-          mkdocs \
-          mkdocs-material \
-          weasyprint \
-          beautifulsoup4 \
-          markdown \
-          ruamel.yaml \
-          pygments \
-          pymdown-extensions \
-          markdown-tables-extended \
-          git+https://github.com/flywire/caption \
-          htmlmin \
-          csscompressor \
-          cssutils \
-          mkdocs-macros-plugin \
-          mkdocs-monorepo-plugin \
-          mkdocs-site-urls \
-          mkdocs-caption \
-          mkdocs-minify-plugin
+        pip install -r tools/requirements-docs.txt
 
     - name: Prepare directories
       run: |

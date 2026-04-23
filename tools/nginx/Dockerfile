@@ -14,19 +14,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
     && rm -f /etc/nginx/conf.d/default.conf
 
+COPY tools/requirements-docs.txt /requirements-docs.txt
+RUN pip install --no-cache-dir -r /requirements-docs.txt
+
+# Extras not referenced in mkdocs.yml — left unpinned pending a follow-up
+# that confirms whether they're still needed.
 RUN pip install --no-cache-dir \
-    mike \
-    mkdocs \
-    mkdocs-material \
-    mkdocs-monorepo-plugin \
-    mkdocs-macros-plugin \
-    mkdocs-minify-plugin \
-    mkdocs-caption \
     markdown-include \
-    pymdown-extensions \
-    mkdocs-git-revision-date-localized-plugin \
-    markdown-tables-extended \
-    mkdocs-site-urls
+    mkdocs-git-revision-date-localized-plugin
 
 # Copy nginx configuration
 COPY tools/nginx/nginx.conf /etc/nginx/nginx.conf
