@@ -14,25 +14,36 @@ If the name is not already being edited, it is assigned a new edit window. If yo
 
 If the name is followed by a line-number in square brackets, for example, `MyFn[1000]`, the Editor will position the cursor on the specified line. This applies to all methods of invoking the Editor, except `⎕ED`. There must not be a space between the last character of the name and the "[".
 
-## Window Management (Standard)
+## Window Management
 
-Unless *Classic Dyalog mode* is selected (*Options/Configure/Trace/Edit*), the Editor is a Multiple Document Interface (MDI) window that may be a stand-alone window, or be docked in the Session window. Each of the objects being edited is displayed in a separate sub-window. Individual edit windows are managed using standard MDI facilities.
-
-![](img/editor-2.png)
-
-The first edit sub-window window is created at the position specified by the **edit_first_y** and **edit_first_x** parameters which  are specified in terms of the size of a character in the current font relative to the top-left corner of the main Editor window. Subsequent ones are staggered according to the values of the **edit_offset_y** and **edit_offset_x** parameters.
-
-The initial size of an edit window is specified by the **edit_rows** and **edit_cols** parameters.
-
-Note that the blue triangles indicate that the line of text is longer than can be displayed in the current Edit window.
-
-By default, the Session has the Editor docked along the right edge of the Session window. When you edit a function, the Editor window automatically springs into view as illustrated below.
+By default, the Session has an Editor windows which is docked along the right edge of the Session window. When you edit a function, the Editor window automatically springs into view as illustrated below.
 
 ![](img/editor-3.png)
 
+A functionally identical interface, especially suitable for wide screens, can be configured via **Layout**>**Debugger on the left**. As an alternative, **Layout**>**Classic** removes the Editor window, instead opening objects in individual edit windows. The default configuration can be restored via **Layout**>**Debugger at the bottom**. See below for details on the different configurations.
+
+Independently of the editing configuration, the first edited object opens in an edit window window at the position specified by the **edit_first_y** and **edit_first_x** parameters which  are specified in terms of the size of a character in the current font relative to the top-left corner of the main Editor window or, if this windows was removed, the screen. Subsequent ones are staggered according to the values of the **edit_offset_y** and **edit_offset_x** parameters.
+
+![](img/editor-7.png)
+
+Note that a triangle at the end of a line indicates that the line is longer than can be displayed in the current edit window. Click and hold the left mouse button on such a triangle to show the full line in a pop-up.
+
+The initial size of an edit window is specified by the **edit_rows** and **edit_cols** parameters.
+
+### Classic Layout
+
+This configuration is set via **Layout**>**Classic**. It removes the Editor window and instead displays each object in a separate window, as if they had been undocked from the Editor. Note that these edit windows cannot be docked anywhere. Each window has the full functionality of the Editor, and all settings and documentation for the Editor are also relevant for these object windows.
+
+### Debugger at the bottom/on the left Layout
+
+These configurations are set via **Layout**>**Debugger at the bottom** and **Layout**>**Debugger on the left**. They provide a single Editor in the form of a Multiple Document Interface (MDI) window that may be a stand-alone window, or be docked in the Session window, as seen in the pictures below. Each of the objects being edited is displayed in a separate sub-window. Individual edit windows are managed using standard MDI facilities, and can be undocked and redocked in the Editor window, but not directly in the Session window.
+
+![](img/editor-2.png)
+
+
 ![](img/editor-4.png)
 
-You can resize the Editor pane to view more or less of the Session itself, by dragging its title bar.
+You can resize the Editor pane to view more or less of the Session itself, by dragging the border between its title bar and the Session pane.
 
 Using the buttons in the title bar, you can instantly maximise the Editor pane to allow you to concentrate on editing, or minimise it to reveal the entire Session. In either case, the restore button quickly restores the 2-pane layout.
 
@@ -40,24 +51,7 @@ The picture below shows the effect of maximising the Editor. The `BUILD_SESSION`
 
 ![](img/editor-5.png)
 
-Note that when the Editor has the focus, the Editor menubar is displayed in place of the Session menubar.
-
-## Window Management (Classic Dyalog mode)
-
-If *Classic Dyalog mode* is selected (*Options/Configure/Trace/Edit*) each Edit window is a top-level window created as a child of the Session window. This means that normally Edit windows appear on top of the Session. However, if the **SessionOnTop** parameter is set, the Session window, when given the focus, will appear on top of Edit windows.
-
-When the first Edit window is opened, its position is determined as follows:
-
-- If the **ClassicModeSavePosition** parameter is set, the first Edit window is displayed at the position that was previously occupied by the most recently saved Edit window.
-- If not, the first edit window is created at the position specified by the **edit_first_y** and **edit_first_x** parameters which  are specified in terms of the size of a character in the current font relative to the top-left corner of the screen.
-
-The initial size of an edit window is specified by the **edit_rows** and **edit_cols** parameters.
-
-![](img/editor-6.png)
-
-Subsequent ones are staggered according to the values of the **edit_offset_y** and **edit_offset_x** parameters.
-
-![](img/editor-7.png)
+Note that when the Editor is docked and has the focus, the Editor menubar is displayed in place of the Session menubar.
 
 ### Moving around an edit window
 
