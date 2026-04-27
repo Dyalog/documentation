@@ -1,10 +1,6 @@
 # New Features, Changes, and Enhancements
 
-This page describes the changes and new features in Dyalog v21.0 compared with Dyalog v20.0.
-
-<p style="color:red;">This document is currently being developed and will not be finalised until nearer the release of Dyalog v21.0.</p>
-
-<!--
+This page describes the changes and new features in Dyalog v20.0 compared with Dyalog v19.0.
 
 ## Syntax Changes
 
@@ -210,5 +206,3 @@ In .NET, a _generic_ class is a class that has type parameters which must be giv
 The introduction of [`43⌶632`](../../language-reference-guide/primitive-operators/i-beam/monadic-operator-generator/) means that the .NET interface now supports creating concrete versions of generic classes, instantiating them, and calling generic methods. For more information, see the [_.NET Interface Guide_](../../files/dotNET_Interface_Guide.pdf).
 
 The .NET Framework interface does not support generic classes.
-
--->

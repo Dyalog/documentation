@@ -1,7 +1,5 @@
 # Deprecated Functionality
 
-<p style="color:red;">This document is currently being developed and will not be finalised until nearer the release of Dyalog v21.0.</p>
-
 Over time, certain functionality (such as language elements, development environment features, or supplied samples or tools) can become obsolete or cease to be useful. There are many reasons why this might happen. For example:
 
 * a superior alternative has been introduced.<br />For example, `⎕UCS` has superseded `⎕TC` (which generates only the newline, backspace, and tabstop characters).
@@ -22,12 +20,10 @@ Dyalog can be configured to log use of a deprecated feature when it is encounter
 
 To enable logging of deprecated features:
 
-1. Specify the name of the file into which the JSON5 log messages will be written (using [`109⌶`](../../../21.0/language-reference-guide/primitive-operators/i-beam/log-file-for-deprecations/) with a right argument of `0`). By default, the file is created in the current working directory; if you do not have write permission for the current working directory, you will also need to include a path. If a filename is not set, then all logging information will be silently discarded.
-2. Specify which deprecated features should be logged (using [`13⌶`](../../../21.0/language-reference-guide/primitive-operators/i-beam/log-use-of-deprecated-features/) with a right argument of the names identifying the deprecated features of interest).
+1. Specify the name of the file into which the JSON5 log messages will be written (using [`109⌶`](../../../language-reference-guide/primitive-operators/i-beam/log-file-for-deprecations/) with a right argument of `0`). By default, the file is created in the current working directory; if you do not have write permission for the current working directory, you will also need to include a path. If a filename is not set, then all logging information will be silently discarded.
+2. Specify which deprecated features should be logged (using [`13⌶`](../../../language-reference-guide/primitive-operators/i-beam/log-use-of-deprecated-features/) with a right argument of the names identifying the deprecated features of interest).
 
-For Dyalog v21.0, the following names are valid:
-
-<!--
+For Dyalog v20.0, the following names are valid:
 
 * `J0C0` – component files that have both journalling (J) and checksum (C) properties set to `0`
 * `S32` – small-span component files
@@ -94,5 +90,3 @@ For Dyalog v20.0, the following labels can be returned:
  ./ws2000.dws           OLDWS
  ./subdir/S32J0C0.dcf   J0C0  S32
 ```
-
--->

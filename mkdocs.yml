@@ -71,7 +71,7 @@ markdown_extensions:
 
 nav:
   - 'Release Notes':
-        - 'v20.0 Release Notes': "!include ./release-notes/mkdocs.yml"
+        - 'v21.0 Release Notes': "!include ./release-notes/mkdocs.yml"
         - 'Earlier Release Notes': "!include ./earlier-release-notes/mkdocs.yml"
   - 'Core Reference':
         - 'Dyalog APL Language': "!include ./language-reference-guide/mkdocs.yml"

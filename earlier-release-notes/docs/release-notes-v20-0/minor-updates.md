@@ -1,10 +1,7 @@
 # Minor Updates and Bug Fixes
 
-<p style="color:red;">This document is currently being developed and will not be finalised until nearer the release of Dyalog v21.0.</p>
+This page describes minor updates and bug fixes included in Dyalog v20.0.
 
-This page describes minor updates and bug fixes included in Dyalog v21.0.
-
-<!--
 [`)SAVE`](../../language-reference-guide/system-commands/save/)  
 You can no longer overwrite a workspace that was saved with an earlier version of Dyalog without using the `-force` option. This was already required on Microsoft Windows, but is now required on all supported operating systems.
 
@@ -27,5 +24,3 @@ Additional arguments can now be supplied to tailor the generated PDF output.
 
 Memory Manager Performance  
 Prior to Dyalog v20.0, the performance of the memory manager was poor if there were namespaces that did not have a name referring to them but only continued to exist because they were parents of other namespaces. For example, using `⎕JSON` to create a namespace, then immediately extracting a child name space from that result using `records←(⎕JSON text).Data.Records`, creates a vector of namespaces that all have `Data` as their parent, but no name references `Data` itself. This has now been resolved, and the suggested workaround of assigning a name to the top-level namespace is no longer required.
-
--->

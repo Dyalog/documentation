@@ -1,10 +1,6 @@
 # Announcements
 
-<p style="color:red;">This document is currently being developed and will not be finalised until nearer the release of Dyalog v21.0.</p>
-
 Notice of new and planned additions, changes, removals, and deprecations in Dyalog v20.0 compared with Dyalog v19.0.
-
-<!--
 
 ## Additions
 
@@ -136,5 +132,3 @@ The next version of Dyalog (Dyalog v21.0) is expected to be supported on the fol
     - Not tested on Raspberry Pi Zero 2 W
 
 This list is not definitive and is subject to change.
-
--->
