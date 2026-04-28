@@ -6,7 +6,7 @@ This page describes the changes and new features in Dyalog v20.0 compared with D
 
 ### Array Notation
 
-[Array notation](../../programming-reference-guide/introduction/arrays/array-notation/) is a literal syntax for most arrays (including nested and high-rank arrays) and namespaces. Array notation is an extension of APL syntax, and, as such, can be used inside and around all other APL expressions, and wherever an APL expression can appear (for example in the Session, in functions, and in namespace scripts). It can also be used in the Editor to manipulate arrays directly.
+[Array notation](https://docs.dyalog.com/20.0/programming-reference-guide/introduction/arrays/array-notation/) is a literal syntax for most arrays (including nested and high-rank arrays) and namespaces. Array notation is an extension of APL syntax, and, as such, can be used inside and around all other APL expressions, and wherever an APL expression can appear (for example in the Session, in functions, and in namespace scripts). It can also be used in the Editor to manipulate arrays directly.
 
 You can edit variables using array notation in the following ways:
 
@@ -31,7 +31,7 @@ Setting the `APLAN_FOR_EDITOR` configuration parameter to `1` sets use of array 
 
 ### Primitive Functions/Operators
 
-A new primitive operator, [_behind_](../../language-reference-guide/primitive-operators/behind/), has been added. This completes the set of [function composition](../../language-reference-guide/primitive-operators/operator-syntax/#function-composition) operators, which allow functions to be glued together to build up more complex functions:
+A new primitive operator, [_behind_](https://docs.dyalog.com/20.0/language-reference-guide/primitive-operators/behind/), has been added. This completes the set of [function composition](https://docs.dyalog.com/20.0/language-reference-guide/primitive-operators/operator-syntax/#function-composition) operators, which allow functions to be glued together to build up more complex functions:
 
 - Glyph: `⍛` (Classic: `⎕U235B`)
 - Derived function equivalence:
@@ -42,16 +42,16 @@ A new primitive operator, [_behind_](../../language-reference-guide/primitive-op
 
 The following system functions have been added:
 
-- [`⎕SHELL`](../../language-reference-guide/system-functions/shell/) – Execute External Program  
-This enables execution of external programs with more control and options than [`⎕SH`](../../language-reference-guide/system-functions/start-unix-auxiliary-processor/)/[`⎕CMD`](../../language-reference-guide/system-functions/start-windows-auxiliary-processor/).
-- [`⎕VGET`](../../language-reference-guide/system-functions/vget/) – Value Get  
+- [`⎕SHELL`](https://docs.dyalog.com/20.0/language-reference-guide/system-functions/shell/) – Execute External Program  
+This enables execution of external programs with more control and options than [`⎕SH`](https://docs.dyalog.com/20.0/language-reference-guide/system-functions/start-unix-auxiliary-processor/)/[`⎕CMD`](https://docs.dyalog.com/20.0/language-reference-guide/system-functions/start-windows-auxiliary-processor/).
+- [`⎕VGET`](https://docs.dyalog.com/20.0/language-reference-guide/system-functions/vget/) – Value Get  
 This enables values to be read for names in a source namespace/namespaces.
-- [`⎕VSET`](../../language-reference-guide/system-functions/vset/) – Value Set  
+- [`⎕VSET`](https://docs.dyalog.com/20.0/language-reference-guide/system-functions/vset/) – Value Set  
 This enables values to be set for names in a target namespace/namespaces.
 
 The following system functions have been enhanced:
 
-- [`⎕DT`](../../language-reference-guide/system-functions/dt/) – Date-Time  
+- [`⎕DT`](https://docs.dyalog.com/20.0/language-reference-guide/system-functions/dt/) – Date-Time  
 Additional conversion types have been added:
     - 15 – Go UnixMicro
 	- 16 – Go UnixNano
@@ -59,26 +59,26 @@ Additional conversion types have been added:
 	- 21 – Apollo NCS UUID
 	- 22 – OSF DCE UUID
 	- 70  – AmigaOS
-- [`⎕FSTIE`](../../language-reference-guide/system-functions/fstie/) – File Share Tie  
+- [`⎕FSTIE`](https://docs.dyalog.com/20.0/language-reference-guide/system-functions/fstie/) – File Share Tie  
 A new variant option, **Mode**, has been added. This specifies the intended purpose of the tie, and can affect when/how errors are generated.
-- [`⎕FTIE`](../../language-reference-guide/system-functions/ftie/) – Exclusive File Tie  
+- [`⎕FTIE`](https://docs.dyalog.com/20.0/language-reference-guide/system-functions/ftie/) – Exclusive File Tie  
 A new variant option, **Mode**, has been added. This specifies the intended purpose of the tie, and can affect when/how errors are generated.
-- [`⎕FIX`](../../language-reference-guide/system-functions/fx/) and [`⎕FX`](../../language-reference-guide/system-functions/fx/) – Fix Script/Definition  
+- [`⎕FIX`](https://docs.dyalog.com/20.0/language-reference-guide/system-functions/fix/) and [`⎕FX`](https://docs.dyalog.com/20.0/language-reference-guide/system-functions/fx/) – Fix Script/Definition  
 The rules around whether a function can be fixed have been tightened to prevent dfns with unmatched parentheses and brackets from being fixed. This is to accommodate array notation, which changes the meaning of parentheses and brackets that span more than one statement. TradFns will continue to fix as before, but subtle differences in how the code behaves might not be backwards-compatible and could have unexpected results.
 
     !!! Hint "Hints and Recommendations"
         If the enhanced restrictions on `⎕FIX` and `⎕FX` cause problems for you, please contact [support@dyalog.com](mailto:support@dyalog.com) to discuss tools and techniques for mitigation.
 
-- [`⎕MKDIR`](../../language-reference-guide/system-functions/mkdir/) – Make Directory  
+- [`⎕MKDIR`](https://docs.dyalog.com/20.0/language-reference-guide/system-functions/mkdir/) – Make Directory  
 A new variant option, **Unique**, has been added. This specifies whether the base name in the right argument is modified so that the name is unique.
-- [`⎕NGET`](../../language-reference-guide/system-functions/nget/) – Read Text File  
+- [`⎕NGET`](https://docs.dyalog.com/20.0/language-reference-guide/system-functions/nget/) – Read Text File  
 If `Y` is a 2-item vector, the second element (which specifies `flags` for the operation) can now be set to `2`. In this situation, the first element of the result `R` is a matrix, with each row corresponding to a line in the text file specified within `X`.
-- [`⎕NINFO`](../../language-reference-guide/system-functions/ninfo/) – Native File Information  
+- [`⎕NINFO`](https://docs.dyalog.com/20.0/language-reference-guide/system-functions/ninfo/) – Native File Information  
     - Several of the properties can now be set by extending the appropriate element in the left argument from a `propertyNumber` to a `(propertyNumber newValue)` pair.
     - A new variant option, **ProgressCallBack**, has been added. This causes `⎕NINFO` to invoke an APL callback function as the file operations (for example, a query relating to a file's size, name, or modification date) proceed.
-- [`⎕NPUT`](../../language-reference-guide/system-functions/nput/) – Write Text File  
+- [`⎕NPUT`](https://docs.dyalog.com/20.0/language-reference-guide/system-functions/nput/) – Write Text File  
 The single/first element of `X` (which specifies `content`) can now be a matrix. In this situation, the resulting text file will include one line for each row of the matrix, with trailing spaces stripped.
-- [`⎕NS`](../../language-reference-guide/system-functions/ns/) – Namespace  
+- [`⎕NS`](https://docs.dyalog.com/20.0/language-reference-guide/system-functions/ns/) – Namespace  
     - The left argument `X` has been extended to allow references to namespaces to be specified. It can also now be an array in which each element identifies a namespace. 
 	- The right argument `Y` has been extended to allow multiple references to namespaces to be specified.
 	- A new variant option, **Trigger**, has been added. This specifies whether any triggers should run when `⎕NS` modifies names in the target namespace.
@@ -90,26 +90,26 @@ The single/first element of `X` (which specifies `content`) can now be a matrix.
 
 The following I&#8209;beams have been added:
 
-- [`13⌶`](../../language-reference-guide/primitive-operators/i-beam/log-use-of-deprecated-features/) – Log Use of Deprecated Features  
+- [`13⌶`](https://docs.dyalog.com/20.0/language-reference-guide/primitive-operators/i-beam/log-use-of-deprecated-features/) – Log Use of Deprecated Features  
 Records information in the log file set by `109⌶` about the specified deprecated feature names or keywords
-- [`43⌶`](../../language-reference-guide/primitive-operators/i-beam/monadic-operator-generator/) – Monadic Operator Generator  
+- [`43⌶`](https://docs.dyalog.com/20.0/language-reference-guide/primitive-operators/i-beam/monadic-operator-generator/) – Monadic Operator Generator  
 Generates a monadic operator with specified functionality. The exact functionaity of the generated operator depend on the right argument. Current options are:  
     - `43⌶632` – Generics Operator<br />Generates a .NET-specific operator that can create concrete versions of generic classes and execute generic methods<br />This is likely to be superseded by a new language construct in Dyalog v21.0.
-- [`109⌶`](../../language-reference-guide/primitive-operators/i-beam/log-file-for-deprecations/) – Deprecated Feature Log File  
+- [`109⌶`](https://docs.dyalog.com/20.0/language-reference-guide/primitive-operators/i-beam/log-file-for-deprecations/) – Deprecated Feature Log File  
 Manages the file used to log the use of deprecated features.
-- [`120⌶`](../../language-reference-guide/primitive-operators/i-beam/generate-uuid/) – Generate UUID  
+- [`120⌶`](https://docs.dyalog.com/20.0/language-reference-guide/primitive-operators/i-beam/generate-uuid/) – Generate UUID  
 Generates a UUID (Universally Unique IDentifier) according to the RFC 9562 specification.
-- [`3535⌶`](../../language-reference-guide/primitive-operators/i-beam/scan-for-deprecated-files/) – Scan For Deprecated Files  
+- [`3535⌶`](https://docs.dyalog.com/20.0/language-reference-guide/primitive-operators/i-beam/scan-for-deprecated-files/) – Scan For Deprecated Files  
 Scans the specified directory (and, optionally, sub-directories) for deprecated saved workspaces, component files, and external variables.
-- [`5581⌶`](../../language-reference-guide/primitive-operators/i-beam/unicode-normalisation/) – Unicode Normalisation  
+- [`5581⌶`](https://docs.dyalog.com/20.0/language-reference-guide/primitive-operators/i-beam/unicode-normalisation/) – Unicode Normalisation  
 Applies the specified Unicode normalisation form to given character data.
-- [`8373⌶`](../../language-reference-guide/primitive-operators/i-beam/shell-process-control/) – Shell Process Control  
+- [`8373⌶`](https://docs.dyalog.com/20.0/language-reference-guide/primitive-operators/i-beam/shell-process-control/) – Shell Process Control  
 Provides a way to determine the process IDs of processes started by `⎕SHELL`, as well as enabling the sending of signals to any of those processes.
 
 The following I-beams have been removed:
 
 - `819⌶` – Case Convert (introduced in Dyalog v15.0)  
-The functionality provided by this I-beam is available through the [`⎕C`](../../language-reference-guide/system-functions/c/) system function.
+The functionality provided by this I-beam is available through the [`⎕C`](https://docs.dyalog.com/20.0/language-reference-guide/system-functions/c/) system function.
 - `8468⌶` – Hash Table Size (introduced in Dyalog v19.0)  
 Temporary functionality used for identification of potential side-effects of a change that has now been implemented. No longer relevant.
 - `8469⌶` – Lookup Table Size (introduced in Dyalog v19.0)  
@@ -119,7 +119,7 @@ Temporary functionality used for identification of potential side-effects of a c
 
 ### Inline Tracing
 
-[Inline Tracing](../../windows-ui-guide/tracer/inline-tracing/) is an extension to tracing that allows you to step through the execution of individual primitives within expressions, examining intermediate results and arguments of sub-expressions. It enables an in-depth inspection of complex expressions.
+[Inline Tracing](https://docs.dyalog.com/20.0/windows-ui-guide/tracer/inline-tracing/) is an extension to tracing that allows you to step through the execution of individual primitives within expressions, examining intermediate results and arguments of sub-expressions. It enables an in-depth inspection of complex expressions.
 
 Inline tracing can be initiated in the following ways:
 
@@ -203,6 +203,6 @@ The new version of PCRE is not 100% compatible with the previous version. Althou
 
 In .NET, a _generic_ class is a class that has type parameters which must be given values to create a concrete version of the class. Similarly, a generic method has type parameters which must be specified before the method can be called. 
 
-The introduction of [`43⌶632`](../../language-reference-guide/primitive-operators/i-beam/monadic-operator-generator/) means that the .NET interface now supports creating concrete versions of generic classes, instantiating them, and calling generic methods. For more information, see the [_.NET Interface Guide_](../../files/dotNET_Interface_Guide.pdf).
+The introduction of [`43⌶632`](https://docs.dyalog.com/20.0/language-reference-guide/primitive-operators/i-beam/monadic-operator-generator/) means that the .NET interface now supports creating concrete versions of generic classes, instantiating them, and calling generic methods. For more information, see the [_.NET Interface Guide_](https://docs.dyalog.com/20.0/files/dotNET_Interface_Guide.pdf).
 
 The .NET Framework interface does not support generic classes.

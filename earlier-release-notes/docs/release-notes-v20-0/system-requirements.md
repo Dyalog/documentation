@@ -33,7 +33,7 @@ Dyalog v20.0 is supported on the following platforms/operating systems:
 The .NET interface requires version 8.0 of Microsoft .NET or higher.  
 
 !!! Info "Information"
-    Dyalog v20.0 supports .NET v8.0 and later, but is configured to support .NET v8.0 by default. To support a later version of .NET, minor amendments are needed to two of the files installed with Dyalog – see the [_.NET Interface Guide_](../../files/dotNET_Interface_Guide.pdf) for more information.
+    Dyalog v20.0 supports .NET v8.0 and later, but is configured to support .NET v8.0 by default. To support a later version of .NET, minor amendments are needed to two of the files installed with Dyalog – see the [_.NET Interface Guide_](https://docs.dyalog.com/20.0/files/dotNET_Interface_Guide.pdf) for more information.
 
 ### Microsoft .NET Framework
 The .NET Framework interface requires version 4.0 or greater of Microsoft .NET Framework. It does not operate with earlier versions of the .NET Framework. In addition:  
