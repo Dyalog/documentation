@@ -30,8 +30,8 @@ plugins:
         reference_text: 'Table {index}'
         caption_prefix: 'Table {index}:' 
 extra:
-  version_maj: 20
-  version_majmin: 20.0
+  version_maj: 21
+  version_majmin: 21.0
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -49,7 +49,7 @@ markdown_extensions:
   - toc:
       title: On this page
 nav:
-  - Introduction: introduction.md
+  - index.md
   - System Requirements: system-requirements.md 
   - Announcements:
     - Announcements: announcements/index.md   

@@ -47,7 +47,18 @@ markdown_extensions:
   - toc:
       title: On this page
 nav:
-  - Dyalog v19.0 Release Notes:
+
+  - v20.0 Release Notes:
+    - release-notes-v20-0/index.md
+    - System Requirements: release-notes-v20-0/system-requirements.md 
+    - Announcements:
+      - Announcements: release-notes-v20-0/announcements/index.md   
+      - Deprecated Functionality: release-notes-v20-0/announcements/deprecated-functionality.md
+    - New and Enhanced Features: release-notes-v20-0/new-enhanced.md
+    - Minor Updates and Bug Fixes: release-notes-v20-0/minor-updates.md
+    - Interoperability: release-notes-v20-0/interoperability.md
+
+  - v19.0 Release Notes:
     - release-notes-v19-0/index.md
     - Introduction:
         - Key Features: release-notes-v19-0/introduction/key-features.md
