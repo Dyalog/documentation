@@ -111,10 +111,3 @@ Session files (**.dse**) can only be used on the platform on which they were cre
 
 ## Log Files
 Log files (**.dlf**) can only be used by the version and edition of Dyalog with which they were created and saved. 
-
-
-
-
-
-
-
