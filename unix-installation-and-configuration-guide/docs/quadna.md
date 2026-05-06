@@ -20,7 +20,7 @@ When calling system shared libraries under AIX, you must refer to them as:
 
 It is not always possible to access all library functions - on AIX for example it is not possible to access memcpy() or strncpy(). it is for this reason that dyalog*.so includes MEMCPY and STRNCPY.
 
-On Linux, it is a little more difficult to location the libc.so file; the function `libc` in the supplied workspace quadna (which contains two namespaces, `Windows` and `NonWindows`)can be used to locate this file.
+On Linux, it is a little more difficult to locate the libc.so file; the function `libc` in the supplied workspace quadna (which contains two namespaces, `Windows` and `NonWindows`) can be used to locate this file.
 
 ### Definitions
 
