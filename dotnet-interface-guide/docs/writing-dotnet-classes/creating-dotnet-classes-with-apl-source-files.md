@@ -15,7 +15,7 @@ You can create and use instances of a class by using the `⎕NEW` system functio
 
 ## Example: Creating A .NET Class Using an APL Source File
 
-The following code illustrates how you can create a .NET Class using an APL Source file. The example class is the same as in [xxx](dotnet-classes-eg1.md). The APL Source file **[DYALOG]/Samples/aplclasses/aplclasses6/aplclasses6.apln** is:
+The following code illustrates how you can create a .NET Class using an APL Source file. The example class is the same as in [Example 1](tutorial.md/#example-1). The APL Source file **[DYALOG]/Samples/aplclasses/aplclasses6/aplclasses6.apln** is:
 ```apl
 :Namespace APLClasses
 
