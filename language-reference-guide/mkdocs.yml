@@ -420,7 +420,7 @@ nav:
           - '<code>⎕SAVE</code>: Save Workspace': system-functions/save.md
           - '<code>⎕SD</code>: Screen Dimensions': system-functions/sd.md
           - '<code>⎕SE</code>: Session Namespace': system-functions/se.md
-          - '<code>⎕SH</code>: Execute UNIX Command': system-functions/execute-unix-command.md
+          - '<code>⎕SH</code>: Execute Unix Command': system-functions/execute-unix-command.md
           - '<code>⎕SH</code>: Start UNIX Auxiliary Processor': system-functions/start-unix-auxiliary-processor.md
           - '<code>⎕SHADOW</code>: Shadow Name': system-functions/shadow.md
           - '<code>⎕SHELL</code>: Execute external program': system-functions/shell.md
