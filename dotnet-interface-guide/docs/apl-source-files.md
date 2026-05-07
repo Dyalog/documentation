@@ -133,8 +133,6 @@ The Dyalog .NET Compiler will execute any valid APL expression that you include.
 
 Function bodies are defined between opening and closing del (`∇`) characters. These are fixed by the Dyalog .NET Compiler using `⎕FX`. Line numbers and white space formatting are ignored.
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
 ## Creating Programs (.exe) with APL Source Files
 
 !!! windows "Dyalog on Microsoft Windows"
@@ -159,9 +157,9 @@ The code must be contained within `:NameSpace` and `:EndNamespace` statements, a
 
 This  is compiled to a Windows executable (**.exe**) using **make.bat** and run from the same command window.
 
-![Compiling and running APL Source file **eg1.apln**](../../img/s-aplsource-eg1.png)
+![Compiling and running APL Source file **eg1.apln**](img/s-aplsource-eg1.png)
 
-!["Hello World" Message Box (**eg1.exe**)](../../img/s-aplsource-eg1-output.png)
+!["Hello World" Message Box (**eg1.exe**)](img/s-aplsource-eg1-output.png)
 
 The resulting executable can be associated with a desktop icon, and will run without a command prompt window. Any default APL output that would normally be displayed in the session window will be ignored.
 
@@ -181,7 +179,7 @@ The code must be contained within `:NameSpace` and `:EndNamespace` statements, a
 
 This is compiled to a Windows executable (**.exe**) using **make.bat** and run from the same command window. The `/console` flag in **make.bat** instructs the Dyalog .NET Compiler to create a console application that runs from a command prompt. In this case, default APL output that would normally be displayed in the Session window is instead displayed in the command window from which the program was run.
 
-![Compiling and running APL Source file **eg2.apln**](../../img/s-aplsource-eg2-output.png)
+![Compiling and running APL Source file **eg2.apln**](img/s-aplsource-eg2-output.png)
 
 ### Defining Namespaces
 

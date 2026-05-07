@@ -63,6 +63,6 @@ nav:
   - Writing .NET Classes:
       - writing-dotnet-classes/index.md
       - Assemblies, Namespaces, and Classes: writing-dotnet-classes/assemblies-namespaces-and-classes.md
-      - Tutorial: writing-dotnet-classes/xxx.md
+      - Tutorial: writing-dotnet-classes/tutorial.md
       - Interfaces: writing-dotnet-classes/interfaces.md
       - Creating .NET Classes with APL Source Files: writing-dotnet-classes/creating-dotnet-classes-with-apl-source-files.md
