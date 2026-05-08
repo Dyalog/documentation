@@ -30,6 +30,7 @@ These provide information on, and control, the current workspace and its content
 
 |Name     |Description              |Form|
 |---------|-------------------------|-----|
+|[`⎕ATX`](atx.md)   |Extended Attributes     |Dyadic function|
 |[`⎕EX`](ex.md)     |Expunge objects         |Monadic function|
 |[`⎕LX`](lx.md)    |Latent Expression        |Variable|
 |[`⎕NC`](nc.md)    |Name Classification      |Monadic function|
