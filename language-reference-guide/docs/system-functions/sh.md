@@ -7,13 +7,13 @@ search:
 
 
 
-<h1 class="heading"><span class="name">UNIX Shell</span> <span class="command">⎕SH</span></h1>
+<h1 class="heading"><span class="name">Unix Shell</span> <span class="command">⎕SH</span></h1>
 
 
 ## Monadic `⎕SH` means
 
 
-[Execute UNIX Command](execute-unix-command.md)
+[Execute Unix Command](execute-unix-command.md)
 ```apl
        ⎕SH'ls'
 FILES WS temp
@@ -22,7 +22,7 @@ FILES WS temp
 ## Dyadic `⎕SH` means
 
 
-[Start UNIX Auxiliary Processor](start-unix-auxiliary-processor.md)
+[Start Unix Auxiliary Processor](start-unix-auxiliary-processor.md)
 ```apl
       )CLEAR
 clear ws
