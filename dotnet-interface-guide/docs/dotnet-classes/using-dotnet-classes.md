@@ -1,10 +1,10 @@
 # Using .NET Classes
 
-To create a Dyalog object as an instance of a .NET class, the `⎕NEW` system function is used. The `⎕NEW` system function is monadic. It takes a 1 or 2-element argument, the first element of which is a class.
+To create a Dyalog object as an instance of a .NET class, the [`⎕NEW`](../../../language-reference-guide/system-functions/new/) system function is used. The `⎕NEW` system function is monadic. It takes a 1 or 2-element argument, the first element of which is a class.
 
 If the argument is a scalar or a 1-element vector, an instance of the class is created using the constructor overload that takes no argument.
 
-If the argument is a 2-element vector, an instance of the class is created using the constructor overload  (see [Constructors and Overloading](#constructors-and-overloading)) whose argument matches the disclosed second element.
+If the argument is a 2-element vector, an instance of the class is created using the constructor overload (see [Constructors and Overloading](#constructors-and-overloading)) whose argument matches the disclosed second element.
 
 <h4 class="example">Example</h4>
 
@@ -17,7 +17,7 @@ To create a <code class="language-nonAPL">DateTime</code> object whose value is 
 
 ```
 
-Alternatively, to use fully-qualified class names, one of the elements of `⎕USING` must be an empty vector:
+Alternatively, to use fully-qualified class names, one of the elements of [`⎕USING`](../../../language-reference-guide/system-functions/using/) must be an empty vector:
 ```apl
       ⎕USING←,⊂''
       mydt←⎕NEW System.DateTime (2008 4 30)
@@ -62,7 +62,7 @@ If `⎕NEW` is called with a class as argument and a second element, then Dyalog
 
 ## Displaying a .NET Object
 
-When you display a reference to a .NET object, APL calls the object's <code class="language-nonAPL">ToString</code> method and displays the result. All objects provide a <code class="language-nonAPL">ToString</code> method because all objects ultimately inherit from the .NET class <code class="language-nonAPL">System.Object</code>, which provides a default implementation. Many .NET classes provide their own <code class="language-nonAPL">ToString</code> that overrides the one inherited from <code class="language-nonAPL">System.Object</code> and returns a useful representation of the object in question. <code class="language-nonAPL">ToString</code> usually supports a range of calling parameters, but APL always calls the version of <code class="language-nonAPL">ToString</code> that is defined to take no calling parameters. The monadic format function (`⍕`) and monadic `⎕FMT` have been extended to provide the same result and provide a shorthand method to call <code class="language-nonAPL">ToString</code>. The default <code class="language-nonAPL">ToString</code> supplied by <code class="language-nonAPL">System.Object</code> returns the name of the object's Type. For a particular object in the namespace, this can be changed using the system function `⎕DF`.
+When you display a reference to a .NET object, APL calls the object's <code class="language-nonAPL">ToString</code> method and displays the result. All objects provide a <code class="language-nonAPL">ToString</code> method because all objects ultimately inherit from the .NET class <code class="language-nonAPL">System.Object</code>, which provides a default implementation. Many .NET classes provide their own <code class="language-nonAPL">ToString</code> that overrides the one inherited from <code class="language-nonAPL">System.Object</code> and returns a useful representation of the object in question. <code class="language-nonAPL">ToString</code> usually supports a range of calling parameters, but APL always calls the version of <code class="language-nonAPL">ToString</code> that is defined to take no calling parameters. The monadic _format_ function ([`⍕`](../../../language-reference-guide/primitive-functions/format/)) and monadic [`⎕FMT`](../../../language-reference-guide/system-functions/format-monadic/) have been extended to provide the same result and provide a shorthand method to call <code class="language-nonAPL">ToString</code>. The default <code class="language-nonAPL">ToString</code> supplied by <code class="language-nonAPL">System.Object</code> returns the name of the object's Type. For a particular object in the namespace, this can be changed using the system function [`⎕DF`](../../../language-reference-guide/system-functions/df/).
 
 <h* class="example">Example</h*>
 ```apl
@@ -94,11 +94,11 @@ If an external function provides more than one signature, then they are all show
 
 ## Disposing of .NET Objects
 
-.NET objects are managed by the .NET Common Language Runtime (CLR). The CLR allocates memory for an object when it is created, and deallocates this memory when it is no longer required.
+.NET objects are managed by the [.NET Common Language Runtime (CLR)](https://learn.microsoft.com/en-us/dotnet/standard/clr). The CLR allocates memory for an object when it is created, and deallocates this memory when it is no longer required.
 
 When the (last) reference from Dyalog to a .NET object is expunged by `⎕EX` or by localisation, the system marks the object as unused, leaving it to the CLR to deallocate the memory that it had previously allocated to it (when appropriate – even though Dyalog has dereferenced the APL name, the object could potentially still be referenced by another .NET class).
 
-Deallocated memory might not be reused immediately and might never be reused,  depending on the algorithms used by the CLR garbage disposal.
+Deallocated memory might not be reused immediately and might never be reused, depending on the algorithms used by the CLR garbage disposal.
 
 Furthermore, a .NET object can allocate unmanaged resources (such as window handles) which are not automatically released by the CLR.
 

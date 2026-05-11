@@ -7,7 +7,7 @@ See [Microsoft's .NET webpages](https://dotnet.microsoft.com/) for information o
 !!! Info "Information"
     .NET is not available for IBM AIX and is not supported on the Raspberry Pi models Zero, 1, or 2. 
 
-The Dyalog version {{ version_majmin }} .NET interface requires .NET version 8.0 or later – it does not work with earlier versions of .NET.
+The Dyalog v{{ version_majmin }} .NET interface requires .NET v8.0 or later – it does not work with earlier versions of .NET.
 
 The .NET interface only works with the Unicode edition of Dyalog; the Classic edition is not supported.
 
@@ -78,7 +78,7 @@ The replacement version number can also be that of a .NET Release Candidate. For
 The components used to support the .NET interface are summarised below. Different versions of each component are supplied according to the target platform.
 
 - **Dyalog.Net.Bridge.dll** – the interface library through which all calls between Dyalog and .NET are processed.
-- **Dyalog.Net.Bridge.Host.<operating system>.dll** – auxiliary file
+- **Dyalog.Net.Bridge.Host.&lt;operating system&gt;.dll** – auxiliary file
 - **nethost.dll** – auxiliary file
 - **Dyalog.Net.Bridge.deps.json** – auxiliary file
 - **Dyalog.Net.Bridge.runtimeconfig.json** – auxiliary file

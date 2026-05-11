@@ -59,8 +59,8 @@ Some corresponding APL primitive functions have been extended to accept .NET obj
 
 |.NET Method  |APL Primitive Function|
 |-------------|----------------------|
-|<code class="language-nonAPL">op_Equality</code>  |`=` and `≡`           |
-|<code class="language-nonAPL">op_Inequality</code>|`≠` and `≢`           |
+|<code class="language-nonAPL">op_Equality</code>  |[`=`](../../../language-reference-guide/primitive-functions/equal-to/) and `≡`           |
+|<code class="language-nonAPL">op_Inequality</code>|[`≠`](../../../language-reference-guide/primitive-functions/not-equal-to/) and `≢`           |
 
 This means that Example 2 becomes:
 ```apl
@@ -79,7 +79,7 @@ This means that Example 2 becomes:
 
 When a .NET object generates an error, it does so by _throwing an exception_. An _exception_ is a .NET class whose ultimate base class is <code class="language-nonAPL">System.Exception</code>.
 
-The system constant `⎕EXCEPTION` returns a reference to the most recently generated exception object.
+The system constant [`⎕EXCEPTION`](../../../language-reference-guide/system-functions/exception/) returns a reference to the most recently generated exception object.
 
 For example, if you attempt to create an instance of a <code class="language-nonAPL">DateTime</code> object with a year that is outside its range, the constructor throws an exception. This causes APL to report a (trappable) `EXCEPTION` error (error number 90) and access to the exception object is provided by `⎕EXCEPTION`.
 ```apl
@@ -108,7 +108,7 @@ at System.DateTime..ctor(Int32 year, Int32 month, Int32 day)
 
 If a .NET function is overloaded in terms of the types of arguments that it accepts, then Dyalog chooses which overload to call depending on the data types of the arguments passed to it. For example, if a .NET function <code class="language-nonAPL">foo()</code> is declared to take a single argument either of type <code class="language-nonAPL">int</code> or of type <code class="language-nonAPL">double</code>, Dyalog would call the first version if you called it with an integer value and the second version if you called it with a floating-point value.
 
-Occasionally it might be desirable to override this mechanism and explicitly specify which overload to use. This can be done by calling the function and specifying the _variant_ operator (`⍠`) with the `OverloadTypes` option. This takes an array of references to .NET types, of the same length as the number of parameters to the function.
+Occasionally it might be desirable to override this mechanism and explicitly specify which overload to use. This can be done by calling the function and specifying the _variant_ operator ([`⍠`](../../../language-reference-guide/primitive-operators/variant/)) with the `OverloadTypes` option. This takes an array of references to .NET types, of the same length as the number of parameters to the function.
 
 <h4 class="example">Example</h4>
 

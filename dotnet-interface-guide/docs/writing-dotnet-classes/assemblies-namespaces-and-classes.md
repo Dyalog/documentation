@@ -35,4 +35,5 @@ The `Bind` method is described in the _Dyalog for Microsoft Windows Object Refer
 
 creates a .NET assembly (in `<filename>`) that contains the APL code in the classes in the active workspace
 
-This use of the `Bind` method is similar to selecting **File** > **Export...** in the Session.
+!!! windows "Dyalog on Microsoft Windows"
+      This use of the `Bind` method is similar to selecting **File** > **Export...** in the Session.

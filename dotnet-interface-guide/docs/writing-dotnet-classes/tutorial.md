@@ -11,18 +11,18 @@ The code for all of the examples is provided in the **[DYALOG]/Samples/aplclasse
 Each workspace contains a .NET namespace called <code class="language-nonAPL">APLClasses</code> which itself contains a single .NET class called <code class="language-nonAPL">Primitives</code> that exports a single method called <code class="language-nonAPL">IndexGen</code>. When executing each example, the workspace (**aplclassesN.dws** will be exported to the **/net/project/bin/Debug/net8.0** sub‑directory as a .NET assembly called **aplclassesN.dll**.
 
 !!! Info "Information"
-    The examples in the tutorial require write access to successfully build the samples. Dyalog Ltd recommends copying the **[DYALOG]/Samples/aplclasses** directory to somewhere you have write access; in this tutorial that location will be identified as **<your_dir>**.
+    The examples in the tutorial require write access to successfully build the samples. Dyalog Ltd recommends copying the **[DYALOG]/Samples/aplclasses** directory to somewhere you have write access; in this tutorial that location will be identified as __&lt;your_dir&gt;__.
 
 To compile the C# source code
 
-1. On the command line, navigate to **<your_dir>/aplclassesN/net**.
-2. Run **build** (Linux and macOS)/**build.bat** (Microsoft Windows).This invokes the Dyalog script compiler to compile **aplclassesN.dws** to **aplclassesN.dll**, and then invokes the C# compiler to compile the C# source code (**Program.cs**) to produce an executable called **project.exe** in **<your_dir>/aplclassesN/net/project/bin/Debug/net8.0**.
+1. On the command line, navigate to **&lt;your_dir&gt;/aplclassesN/net**.
+2. Run **build** (Linux and macOS)/**build.bat** (Microsoft Windows).This invokes the Dyalog script compiler to compile **aplclassesN.dws** to **aplclassesN.dll**, and then invokes the C# compiler to compile the C# source code (**Program.cs**) to produce an executable called **project.exe** in **&lt;your_dir&gt;/aplclassesN/net/project/bin/Debug/net8.0**.
 
 ## Example 1
 
-As write access is required to successfully build the samples, this example assumes that you have copied the **[DYALOG]/Samples/aplclasses** directory to **<your_dir>**, where you have write access.
+As write access is required to successfully build the samples, this example assumes that you have copied the **[DYALOG]/Samples/aplclasses** directory to __&lt;your_dir&gt;__, where you have write access.
 
-Load the **aplclasses1.dws** workspace from **<your_dir>/aplclasses1**, then view the `Primitives` class:
+Load the **aplclasses1.dws** workspace from **&lt;your_dir&gt;/aplclasses1**, then view the `Primitives` class:
 ```apl
       )ED APLClasses.Primitives
 :Class Primitives
@@ -55,7 +55,7 @@ When the class is fixed, APL will try to find the .NET data types that have been
 	
 ### aplclasses1
 
-The C# source code (**<your_dir>/aplclasses1/net/project/Program.cs**) can be used to call the Dyalog.NET class. The <code class="language-nonAPL">using</code> statements specify the names of .NET namespaces to be searched for unqualified class names. The program creates an object called <code class="language-nonAPL">apl</code> of type <code class="language-nonAPL">Primitives</code> by calling the <code class="language-nonAPL">new</code> operator on that class. Then it calls the <code class="language-nonAPL">IndexGen</code> method with a parameter of <code class="language-nonAPL">10</code>.
+The C# source code (**&lt;your_dir&gt;/aplclasses1/net/project/Program.cs**) can be used to call the Dyalog.NET class. The <code class="language-nonAPL">using</code> statements specify the names of .NET namespaces to be searched for unqualified class names. The program creates an object called <code class="language-nonAPL">apl</code> of type <code class="language-nonAPL">Primitives</code> by calling the <code class="language-nonAPL">new</code> operator on that class. Then it calls the <code class="language-nonAPL">IndexGen</code> method with a parameter of <code class="language-nonAPL">10</code>.
 ```nonAPL
       using System;
       using APLClasses;
@@ -73,8 +73,8 @@ The C# source code (**<your_dir>/aplclasses1/net/project/Program.cs**) can be us
 
 To compile the C# source code:
 
-1. On the command line, navigate to **<your_dir>/aplclasses1/net**.
-2. Run **build** (Linux and macOS)/**build.bat** (Microsoft Windows).This invokes the Dyalog script compiler to compile **aplclasses1.dws** to **aplclasses1.dll**, and then invokes the C# compiler to compile the C# source code (**Program.cs**) to produce an executable called **project.exe** in **<your_dir>/aplclasses1/net/project/bin/Debug/net8.0**.
+1. On the command line, navigate to **&lt;your_dir&gt;/aplclasses1/net**.
+2. Run **build** (Linux and macOS)/**build.bat** (Microsoft Windows).This invokes the Dyalog script compiler to compile **aplclasses1.dws** to **aplclasses1.dll**, and then invokes the C# compiler to compile the C# source code (**Program.cs**) to produce an executable called **project.exe** in **&lt;your_dir&gt;/aplclasses1/net/project/bin/Debug/net8.0**.
 
 The output when the program is run is displayed in a console window:
 
@@ -82,11 +82,11 @@ The output when the program is run is displayed in a console window:
 
 ## Example 2
 
-As write access is required to successfully build the samples, this example assumes that you have copied the **[DYALOG]/Samples/aplclasses** directory to **<your_dir>**, where you have write access.
+As write access is required to successfully build the samples, this example assumes that you have copied the **[DYALOG]/Samples/aplclasses** directory to __&lt;your_dir&gt;__, where you have write access.
 
 In [Example 1](#example-1), APL supplied a default constructor, which was used to create an instance of the Primitives class. It was inherited from the base class (`System.Object`) and called without arguments. This example extends that by adding a constructor that specifies the value of `⎕IO`.
 
-Load the **aplclasses2.dws** workspace from **<your_dir>/aplclasses2**, then view the `Primitives` class:
+Load the **aplclasses2.dws** workspace from **&lt;your_dir&gt;/aplclasses2**, then view the `Primitives` class:
 ```apl
       ↑⎕SRC APLClasses.Primitives
 :Class Primitives                      
@@ -113,7 +113,7 @@ This version of `Primitives` contains a constructor function called `CTOR` which
 
 ### aplclasses2
 
-The C# source code (**<your_dir>/aplclasses2/net/project/Program.cs**) can be used to call the new version of the Dyalog .NET class:
+The C# source code (**&lt;your_dir&gt;/aplclasses2/net/project/Program.cs**) can be used to call the new version of the Dyalog .NET class:
 ```nonAPL
       using System;
       using APLClasses;
@@ -134,8 +134,8 @@ The program is the same as in [Example 1](#example-1), except that the code that
 
 To compile the C# source code:
 
-1. On the command line, navigate to **<your_dir>/aplclasses2/net**.
-2. Run **build** (Linux and macOS)/**build.bat** (Microsoft Windows).This invokes the Dyalog script compiler to compile **aplclasses2.dws** to **aplclasses2.dll**, and then invokes the C# compiler to compile the C# source code (**Program.cs**) to produce an executable called **project.exe** in **<your_dir>/aplclasses2/net/project/bin/Debug/net8.0**.
+1. On the command line, navigate to **&lt;your_dir&gt;/aplclasses2/net**.
+2. Run **build** (Linux and macOS)/**build.bat** (Microsoft Windows).This invokes the Dyalog script compiler to compile **aplclasses2.dws** to **aplclasses2.dll**, and then invokes the C# compiler to compile the C# source code (**Program.cs**) to produce an executable called **project.exe** in **&lt;your_dir&gt;/aplclasses2/net/project/bin/Debug/net8.0**.
 
 The output when the program is run is displayed in a console window: – the amended line numbers show the effect of changing the index origin from 1 (the default) to 0.
 
@@ -143,7 +143,7 @@ The output when the program is run is displayed in a console window: – the ame
 
 ## Example 3
 
-As write access is required to successfully build the samples, this example assumes that you have copied the **[DYALOG]/Samples/aplclasses** directory to **<your_dir>**, where you have write access.
+As write access is required to successfully build the samples, this example assumes that you have copied the **[DYALOG]/Samples/aplclasses** directory to __&lt;your_dir&gt;__, where you have write access.
 
 The correct .NET behaviour when an APL function fails with an error is to generate an exception; this example shows how this is achieved.
 
@@ -153,7 +153,7 @@ In .NET, exceptions are implemented as .NET classes. The base exception is imple
 
 When you create the instance of the <code class="language-nonAPL">Exception</code> class, you can specify a string (which will be its <code class="language-nonAPL">Message</code> property) containing information about the error.
 
-Load the **aplclasses3.dws** workspace from **<your_dir>/aplclasses3**, then view its improved (compared with that in [Example 2](#example-2)) `CTOR` constructor function:
+Load the **aplclasses3.dws** workspace from **&lt;your_dir&gt;/aplclasses3**, then view its improved (compared with that in [Example 2](#example-2)) `CTOR` constructor function:
 ```apl
      ∇ CTOR IO;EX
 [1]   :Implements constructor
@@ -171,7 +171,7 @@ Load the **aplclasses3.dws** workspace from **<your_dir>/aplclasses3**, then vie
 
 ### aplclasses3
 
-The C# source code (**<your_dir>/aplclasses3/net/project/Program.cs**) contains code to catch the exception and display the exception message:
+The C# source code (**&lt;your_dir&gt;/aplclasses3/net/project/Program.cs**) contains code to catch the exception and display the exception message:
 ```nonAPL
 using System;
 using APLClasses;
@@ -197,8 +197,8 @@ catch (Exception e)
 
 To compile the C# source code:
 
-1. On the command line, navigate to **<your_dir>/aplclasses3/net**.
-2. Run **build** (Linux and macOS)/**build.bat** (Microsoft Windows).This invokes the Dyalog script compiler to compile **aplclasses3.dws** to **aplclasses3.dll**, and then invokes the C# compiler to compile the C# source code (**Program.cs**) to produce an executable called **project.exe** in **<your_dir>/aplclasses3/net/project/bin/Debug/net8.0**.
+1. On the command line, navigate to **&lt;your_dir&gt;/aplclasses3/net**.
+2. Run **build** (Linux and macOS)/**build.bat** (Microsoft Windows).This invokes the Dyalog script compiler to compile **aplclasses3.dws** to **aplclasses3.dll**, and then invokes the C# compiler to compile the C# source code (**Program.cs**) to produce an executable called **project.exe** in **&lt;your_dir&gt;/aplclasses3/net/project/bin/Debug/net8.0**.
 
 The output when the program is run is displayed in a console window:
 
@@ -206,13 +206,13 @@ The output when the program is run is displayed in a console window:
 
 ## Example 4
 
-As write access is required to successfully build the samples, this example assumes that you have copied the **[DYALOG]/Samples/aplclasses** directory to **<your_dir>**, where you have write access.
+As write access is required to successfully build the samples, this example assumes that you have copied the **[DYALOG]/Samples/aplclasses** directory to __&lt;your_dir&gt;__, where you have write access.
 
 This example builds on [Example 3](#example-3), and illustrates how you can implement constructor overloading by establishing several different constructor functions.
 
 For this example, when a client application creates an instance of the <code class="language-nonAPL">Primitives</code> class, is should be able to specify either the value of `⎕IO` or the values of both `⎕IO` and `⎕ML`. The simplest way to implement this is to have two public constructor functions, `CTOR1` and `CTOR2`, which call a private constructor function, `CTOR`.
 
-Load the **aplclasses4.dws** workspace from **<your_dir>/aplclasses4**; the new version of the `Primitives` class includes the following additions:
+Load the **aplclasses4.dws** workspace from **&lt;your_dir&gt;/aplclasses4**; the new version of the `Primitives` class includes the following additions:
 ```apl
 
      ∇ CTOR1 IO
@@ -256,7 +256,7 @@ Next, a function called `GetIOML` is defined and exported as a public method. Th
 
 ### aplclasses4
 
-The C# source code (**<your_dir>/aplclasses4/net/project/Program.cs**) contains code to invoke the two different constructor functions `CTOR1` and `CTOR2`:
+The C# source code (**&lt;your_dir&gt;/aplclasses4/net/project/Program.cs**) contains code to invoke the two different constructor functions `CTOR1` and `CTOR2`:
 ```nonAPL
 using System;
 using APLClasses;
@@ -283,8 +283,8 @@ The C# compiler matches the first call with `CTOR1`, because `CTOR1` is defined 
 
 To compile the C# source code:
 
-1. On the command line, navigate to **<your_dir>/aplclasses4/net**.
-2. Run **build** (Linux and macOS)/**build.bat** (Microsoft Windows).This invokes the Dyalog script compiler to compile **aplclasses4.dws** to **aplclasses4.dll**, and then invokes the C# compiler to compile the C# source code (**Program.cs**) to produce an executable called **project.exe** in **<your_dir>/aplclasses4/net/project/bin/Debug/net8.0**.
+1. On the command line, navigate to **&lt;your_dir&gt;/aplclasses4/net**.
+2. Run **build** (Linux and macOS)/**build.bat** (Microsoft Windows).This invokes the Dyalog script compiler to compile **aplclasses4.dws** to **aplclasses4.dll**, and then invokes the C# compiler to compile the C# source code (**Program.cs**) to produce an executable called **project.exe** in **&lt;your_dir&gt;/aplclasses4/net/project/bin/Debug/net8.0**.
 
 The output when the program is run is displayed in a console window:
 
@@ -292,13 +292,13 @@ The output when the program is run is displayed in a console window:
 
 ## Example 5
 
-As write access is required to successfully build the samples, this example assumes that you have copied the **[DYALOG]/Samples/aplclasses** directory to **<your_dir>**, where you have write access.
+As write access is required to successfully build the samples, this example assumes that you have copied the **[DYALOG]/Samples/aplclasses** directory to __&lt;your_dir&gt;__, where you have write access.
 
 This example builds on [Example 4](#example-4), and illustrates how you can implement method overloading.
 
 In this example, the requirement is to export three different versions of the `IndexGen` method; one that takes a single number as an argument, one that takes two numbers, and a third that takes any number of numbers. These are represented by three functions called `IndexGen1`, `IndexGen2` and `IndexGen3` respectively. The _index generator_ function (monadic `⍳`) performs all of these operations, therefore the three APL functions are identical. However, their public interfaces, as defined in their `:Signature` statement, are all different. The overloading is achieved by entering the same name for the exported method (`IndexGen`) for each of the three APL functions.
 
-Load the **aplclasses5.dws** workspace from **<your_dir>/aplclasses5**; the new version of the `Primitives` class includes three different versions of `IndexGen`. The first is the version we have seen before, which is defined to take a single argument of type <code class="language-nonAPL">Int32</code> and to return a 1-dimensional array (vector) of type <code class="language-nonAPL">Int32</code>:
+Load the **aplclasses5.dws** workspace from **&lt;your_dir&gt;/aplclasses5**; the new version of the `Primitives` class includes three different versions of `IndexGen`. The first is the version we have seen before, which is defined to take a single argument of type <code class="language-nonAPL">Int32</code> and to return a 1-dimensional array (vector) of type <code class="language-nonAPL">Int32</code>:
 ```apl
      ∇ R←IndexGen1 N
 [1]   :Access public
@@ -341,7 +341,7 @@ All these functions use the same descriptive name, `IndexGen`.
 
 ### aplclasses5
 
-The C# source code (**<your_dir>/aplclasses5/net/project/Program.cs**) contains code to invoke the three different variants of <code class="language-nonAPL">IndexGen</code> in the new **aplclasses.dll**. It uses a local sub-routine <code class="language-nonAPL">PrintArray()</code>:
+The C# source code (**&lt;your_dir&gt;/aplclasses5/net/project/Program.cs**) contains code to invoke the three different variants of <code class="language-nonAPL">IndexGen</code> in the new **aplclasses.dll**. It uses a local sub-routine <code class="language-nonAPL">PrintArray()</code>:
 ```nonAPL
       using System;
       using APLClasses;
@@ -390,8 +390,8 @@ The C# source code (**<your_dir>/aplclasses5/net/project/Program.cs**) contains 
 
 To compile the C# source code:
 
-1. On the command line, navigate to **<your_dir>/aplclasses5/net**.
-2. Run **build** (Linux and macOS)/**build.bat** (Microsoft Windows).This invokes the Dyalog script compiler to compile **aplclasses5.dws** to **aplclasses5.dll**, and then invokes the C# compiler to compile the C# source code (**Program.cs**) to produce an executable called **project.exe** in **<your_dir>/aplclasses5/net/project/bin/Debug/net8.0**.
+1. On the command line, navigate to **&lt;your_dir&gt;/aplclasses5/net**.
+2. Run **build** (Linux and macOS)/**build.bat** (Microsoft Windows).This invokes the Dyalog script compiler to compile **aplclasses5.dws** to **aplclasses5.dll**, and then invokes the C# compiler to compile the C# source code (**Program.cs**) to produce an executable called **project.exe** in **&lt;your_dir&gt;/aplclasses5/net/project/bin/Debug/net8.0**.
 
 The output when the program is run is displayed in a console window:
 

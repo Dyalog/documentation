@@ -37,7 +37,7 @@ and the <code class="language-nonAPL">CreationTime</code> property returns its c
  08/02/2024 20:51:24  08/02/2024 20:50:06  08/02/2024 ...
 ```
 
-Calling the <code class="language-nonAPL">GetFiles</code> overload that does not take any arguments (from Dyalog by supplying an argument of `⍬`) returns a complete list of files:
+Calling the <code class="language-nonAPL">GetFiles</code> overload that does not take any arguments (from Dyalog by supplying an argument of [`⍬`](../../../language-reference-guide/other-syntax/zilde/)) returns a complete list of files:
 ```apl
       files←d.GetFiles ⍬
       files
@@ -86,7 +86,7 @@ This could then be called as follows:
 
 .NET provides a range of classes for accessing the internet from a program. This section works through an example that shows how to read the contents of a web page. It is complicated, but realistic (for example, it includes code to cater for a firewall/proxy connection to the internet). It is only 9 lines of APL code, but each line requires careful explanation.
 
-Start by defining `⎕USING` so that it specifies all of the necessary .NET namespaces and assemblies:
+Start by defining [`⎕USING`](../../../language-reference-guide/system-functions/using/) so that it specifies all of the necessary .NET namespaces and assemblies:
 ```apl
       ⎕USING←,⊂'System,System.dll'
       ⎕USING,←⊂'System.Net, System.Net.Requests'
