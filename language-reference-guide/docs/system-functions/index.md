@@ -20,6 +20,7 @@ Dyalog includes a collection of built-in facilities that provide various service
 |[`⎕ARBIN`](arbin.md) |Arbitrary Input       |Dyadic function|
 |[`⎕ARBOUT`](arbout.md)|Arbitrary Output      |Dyadic function|
 |[`⎕AT`](at.md)     |Object Attributes       |Ambivalent function|
+|[`⎕ATX`](atx.md)   |Extended Attributes     |Dyadic function|
 |[`⎕AV`](av.md)   |Atomic Vector              |Constant|
 |[`⎕AVU`](avu.md)  |Atomic Vector - Unicode         |Variable|
 |[`⎕BASE`](base.md)     |Base Class   |Reference|
