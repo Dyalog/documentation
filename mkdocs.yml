@@ -79,6 +79,7 @@ nav:
   - 'Code Tooling':
         - '.NET Interface': "!include ./dotnet-interface-guide/mkdocs.yml"
         - 'Compiler': "!include ./compiler-user-guide/mkdocs.yml"
+        - 'Shared Code Files': "!include ./shared-code-files-user-guide/mkdocs.yml"
   - 'Dyalog for Microsoft Windows':
         - 'Installation/Configuration': "!include ./windows-installation-and-configuration-guide/mkdocs.yml"
         - 'User Interface': "!include ./windows-ui-guide/mkdocs.yml"
