@@ -1,4 +1,4 @@
-# Changes to Behaviour of Functions when Compiled
+<h1 class="heading"><span class="name">Changes to Behaviour of Functions when Compiled</span></h1>
 
 The same run-time engine is used by both compiled functions and interpreted functions when executing primitive functions. However, a small number of behavioural changes occur when functions are compiled.
 

@@ -1,4 +1,4 @@
-# Compiling With Global Names
+<h1 class="heading"><span class="name">Compiling With Global Names</span></h1>
 
 When compiling a defined function or operator, the compiler needs to know the nameclass of every name that is used. It is useful to distinguish between local names (those that are defined in the function or operator being compiled) and non-local or global names (everything else).
 ```apl

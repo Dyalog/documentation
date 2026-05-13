@@ -1,4 +1,4 @@
-# Installation
+<h1 class="heading"><span class="name">Installation</span></h1>
 
 ## Pre-requisites
 
