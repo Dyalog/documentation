@@ -1,4 +1,4 @@
-# Limitations
+<h1 class="heading"><span class="name">Limitations</span></h1>
 
 ## Fundamental Limitations
 
@@ -47,7 +47,7 @@ The following cannot be saved in a shared code file:
 - GUI namespaces and their derivatives
 - Functions created by starting an auxiliary processor
 - External functions created using name association ([`⎕NA`](../../language-reference-guide/system-functions/na.md))
-- `⎕SM`
+- [`⎕SM`](../../language-reference-guide/system-functions/sm.md)
 
 ### Restriction 2
 

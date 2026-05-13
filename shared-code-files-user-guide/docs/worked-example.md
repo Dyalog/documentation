@@ -1,6 +1,6 @@
-# Worked Example
+<h1 class="heading"><span class="name">Worked Example</span></h1>
 
-There follows an annotated example that demonstrates the use of some of the cases of the [I-Beam functions](../technical-details/#technical-reference.md) (examples of assimilate and detach are not included).
+This annotated example demonstrates the use of some of the [I-Beam functions](../technical-details/#technical-reference.md) related to shared code files (examples of assimilate and detach are not included).
 
 First, load the dfns workspace:
 ```apl
@@ -91,7 +91,7 @@ X
 _fk
 ```
 
-Finally, verify that the result of `⎕NL` and the names exposed by the shared code file are identical (the only difference should be the three names defined since the `)CLEAR` operation):
+Finally, verify that the result of [`⎕NL`](../../language-reference-guide/system-functions/nl) and the names exposed by the shared code file are identical (the only difference should be the three names defined since the [`)CLEAR`](../../language-reference-guide/system-commands/clear) operation):
 ```apl
       (⎕NL ⍳10)≡1 listDWX ⍳10
 0

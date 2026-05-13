@@ -18,7 +18,7 @@ The value of `Y` specifies whether this returns a list of the [shared code files
 
 Lists the shared code files that are attached to the current workspace.
 
-Y` is `⍬`
+`Y` is `⍬`
 
 `X` is ignored.
 
@@ -33,8 +33,8 @@ The rows of the matrix (one row for each shared code file) are ordered to corres
 
 Lists the names in the shared code file identified by the specified memory address.
 
-`Y` is an integer vector that would be a valid right argument to `⎕NL`; it identifies the nameclasses and subclasses for which the names should be listed.
+`Y` is an integer vector that would be a valid right argument to [`⎕NL`](../../../system-functions/nl/); it identifies the nameclasses and subclasses for which the names should be listed.
 
 `X` is the slot identifier (an integer in the range 1-8) for the unique fixed virtual memory address of the shared code file.
 
-`R` lists the names in the shared code file identified by slot. If any element of `Y` is negative, then positive values in `Y` are treated as if they were negative and `R` is a vector of character vectors. Otherwise, `R` is a simple character matrix. 
+`R` lists the names in the shared code file identified by slot. If any element of `Y` is negative, then positive values in `Y` are treated as if they were negative and `R` is a vector of character vectors. Otherwise, `R` is a simple character matrix.

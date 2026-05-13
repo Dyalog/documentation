@@ -1,4 +1,4 @@
-# Technical Details
+<h1 class="heading"><span class="name">Technical Details</span></h1>
 
 ## Technical Reference
 
