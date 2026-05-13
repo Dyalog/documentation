@@ -14,6 +14,10 @@ T.B.A.
 
 ## Removals (Previously Announced)
 
+Raspberry Pi Platform
+
+Dyalog v20.0 was the last release to be built for 32-bit Raspberry Pis; Dyalog v21.0 is only supported on 64-bit Raspberry Pis.
+
 T.B.A.
 
 ## Notice of Removals in Future Releases
@@ -35,6 +39,14 @@ T.B.A.
 ### Expected Supported Platforms
 The next version of Dyalog (Dyalog v22.0) is expected to be supported on the following platforms/operating systems:  
 
-T.B.A.
+- IBM AIX:
+    - AIX 7.3 SP4 onwards with a POWER9 chip or higher<br />NOTE: Minimum chip level might be revised upwards to POWER10
+- Linux (including Raspberry Pi):
+    - x86_64: Built on Ubuntu 22.04
+    - ARM64: Built on Debian GNU/Linux 13
+- macOS (ARM-based, Apple M1 or later):
+    - macOS 26.3 (Tahoe) onwards
+- Microsoft Windows:
+    - Windows 11 2H24 onwards (Windows Server 2016 onwards)
 
 This list is not definitive and is subject to change.
