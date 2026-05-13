@@ -1,6 +1,6 @@
 # Worked Example
 
-There follows an annotated example that demonstrates the use of some of the cases of the I-Beam functions described in [Chapter 1](technical-reference.md) (examples of assimilate and detach are not included).
+There follows an annotated example that demonstrates the use of some of the cases of the [I-Beam functions](../technical-details/#technical-reference.md) (examples of assimilate and detach are not included).
 
 First, load the dfns workspace:
 ```apl

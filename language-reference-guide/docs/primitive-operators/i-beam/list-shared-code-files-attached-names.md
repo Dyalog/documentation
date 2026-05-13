@@ -12,9 +12,11 @@ search:
 
 **Restriction**: 64-bit Unicode only
 
-The value of `Y` specifies whether this returns a list of the shared code files that are attached to the current workspace or the names in a specific shared code file. For more information on shared code files, see the [_Shared Code Files User Guide_](../../../../files/Shared_Code_Files_User_Guide.pdf).
+The value of `Y` specifies whether this returns a list of the [shared code files](../../../../shared-code-files-user-guide/) that are attached to the current workspace or the names in a specific shared code file.
 
-**List shared code files**
+## List shared code files
+
+Lists the shared code files that are attached to the current workspace.
 
 Y` is `⍬`
 
@@ -25,9 +27,11 @@ Y` is `⍬`
 - `[;1]` is the slot identifier for the fixed virtual memory address of the shared code file.
 - `[;2]` is the name (including the filename extension) of the shared code file that was loaded.
 
-The rows of the matrix (one row for each shared code file) are ordered to correspond to the order in which the shared code files were specified when they were originally attached, that is, in the right argument to `8666⌶` (see ADD XREF).
+The rows of the matrix (one row for each shared code file) are ordered to correspond to the order in which the shared code files were specified when they were originally attached, that is, in the right argument to [`8666⌶`](../attach-assimilate-detach-shared-code-files).
 
-**List attached names**
+## List attached names
+
+Lists the names in the shared code file identified by the specified memory address.
 
 `Y` is an integer vector that would be a valid right argument to `⎕NL`; it identifies the nameclasses and subclasses for which the names should be listed.
 

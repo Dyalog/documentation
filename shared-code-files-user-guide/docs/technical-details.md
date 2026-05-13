@@ -1,21 +1,7 @@
 # Technical Details
 
-xxx
-
 ## Technical Reference
 
-The operations that comprise the shared code file mechanism are implemented using three I-Beams:
-
-- `{R}←{X} (`[`8659⌶`](../../language-reference-guide/primitive-operators/i-beam/list-shared-code-files-attached-names)`) Y` – List Shared Code Files/Attached Names
-	- list shared code files: `(8659⌶) ncs `
-	- list attached names: `{slot} (8659⌶) ncs `
-- `{R}←{X} (`[`8666⌶`](../../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files)`) Y` – Attach/Assimilate/Detach Shared Code Files
-    - attach shared code file: `{nameclasses} (8666⌶) file `
-    - assimilate shared code files: `(8666⌶) ⎕NULL`
-    - detach shared code files: `(8666⌶) 0⍴⊂''`
-- `{R}←{X} (`[`8667⌶`](../../language-reference-guide/primitive-operators/i-beam/save-shared-code-files)`) Y` – Save Shared Code Files
-    - save shared code file: `{names} (8667⌶) slot file`
-	
 The operations that comprise the shared code file mechanism are implemented using three I-Beams:
 
 - [`8659⌶`](../../language-reference-guide/primitive-operators/i-beam/list-shared-code-files-attached-names) – List Shared Code Files/Attached Names
@@ -74,7 +60,7 @@ When one or more shared code files is attached, the following rules apply:
 
 - When items with the same name exist in multiple workspaces, the one that is used in the active workspace is the first one found when going through the workspaces in the following order:
     1. the active workspace
-    2. the shared code file specified first when [attaching](../../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files#xxx))
+    2. the shared code file specified first when [attaching](../../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files#xxx)
     3. the shared code file specified second when attaching, and so so
 - When the shared code files are assimilated:
     - all references to each shared code file are resolved by copying data from the shared code file to the active workspace as required.

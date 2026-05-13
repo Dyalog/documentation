@@ -1,7 +1,5 @@
 # Limitations
 
-xxx
-
 ## Fundamental Limitations
 
 Despite the benefits offered by shared code files, they will not replace the standard Dyalog workspace due to some fundamental limitations.
@@ -28,7 +26,7 @@ A shared code files cannot be converted in any way when it is used. This means t
 
 __Shared code files are not workspaces__
 
-A shared code file is not a workspace; it is not possible to `⎕CY` or `)COPY` from them.
+A shared code file is not a workspace; it is not possible to [`⎕CY`](../../language-reference-guide/system-functions/cy.md) or [`)COPY`](../../language-reference-guide/system-commands/copy.md) from them.
 
 ### Restriction 5
 
@@ -48,7 +46,7 @@ The following cannot be saved in a shared code file:
 
 - GUI namespaces and their derivatives
 - Functions created by starting an auxiliary processor
-- External functions created using name association (`⎕NA`)
+- External functions created using name association ([`⎕NA`](../../language-reference-guide/system-functions/na.md))
 - `⎕SM`
 
 ### Restriction 2
@@ -61,19 +59,19 @@ A maximum of 8 virtual memory addresses are available for shared code files; the
 
 __Cannot `)SAVE` or `⎕SAVE` a workspace that has shared code files attached__
 
-It is not possible to `)SAVE` or `⎕SAVE` the current workspace if any shared code files are attached (they must be assimilated or detached first – see [Section 1.1](assimilate-shared-code-files.md) and [Section 1.1](detach-shared-code-files.md) respectively).
+It is not possible to [`)SAVE`](../../language-reference-guide/system-commands/save.md) or [`⎕SAVE`](../../language-reference-guide/system-functions/save.md) the current workspace if any shared code files are attached (they must be [assimilated](../../../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files/#assimilate-shared-code-files.md) or [detached](../../../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files/#detach-shared-code-files.md) first).
 
 ### Restriction 4
 
 __Attaching a shared code file containing namespaces copies all the namespaces (functions and arrays remain in the shared space)__
 
-Attaching shared code files results in data being copied from the shared code files as needed (see [Section 1.1](detach-shared-code-files.md)). However, namespaces are always copied.
+Attaching shared code files results in data being copied from the shared code files as needed. However, namespaces are always copied.
 
 ### Restriction 5
 
 __Only certain content can be saved in a shared code files__
 
-The content of a shared code file is limited to namespaces, nested arrays, simple arrays, tradfns, tradops, dfns, dops and derived functions (futures and external variables are instantiated and become arrays). If other content (for example, .NET objects, shared variables and COM objects) is present in a workspace then that workspace cannot be saved as a shared code file (see [Section 1.1](save-shared-code-file.md)).
+The content of a shared code file is limited to namespaces, nested arrays, simple arrays, tradfns, tradops, dfns, dops and derived functions (futures and external variables are instantiated and become arrays). If other content (for example, .NET objects, shared variables and COM objects) is present in a workspace then that workspace cannot be [saved](../../../language-reference-guide/primitive-operators/i-beam/save-shared-code-files/) as a shared code file.
 
 
 ## Summary of Limitations

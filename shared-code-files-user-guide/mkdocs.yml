@@ -52,14 +52,6 @@ nav:
       - introduction/index.md
       - Benefits Offered by Shared Code Files: introduction/benefits-offered-by-shared-code-files.md
       - Limitations: introduction/limitations.md
-  - Performance: performance/performance.md
-  - Technical Reference:
-      - Introduction: technical-reference/technical-reference.md
-      - Save Shared Code File: technical-reference/save-shared-code-file.md
-      - Attach Shared Code File: technical-reference/attach-shared-code-file.md
-      - Assimilate Shared Code Files: technical-reference/assimilate-shared-code-files.md
-      - Detach Shared Code Files: technical-reference/detach-shared-code-files.md
-      - List Shared Code Files: technical-reference/list-shared-code-files.md
-      - List Attached Names: technical-reference/list-attached-names.md
+  - Performance: performance.md
   - Technical Details: technical-details.md
   - Worked Example: worked-example.md
