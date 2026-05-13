@@ -1,4 +1,4 @@
-# Restrictions
+<h1 class="heading"><span class="name">Restrictions</span></h1>
 
 There are several restrictions when using the compiler, some of which might be removed in later versions.
 
