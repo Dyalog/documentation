@@ -1,4 +1,4 @@
-# Example Usage
+<h1 class="heading"><span class="name">Example Usage</span></h1>
 
 ## Directory and File Manipulation
 

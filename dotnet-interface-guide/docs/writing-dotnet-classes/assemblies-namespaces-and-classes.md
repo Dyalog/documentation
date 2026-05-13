@@ -1,4 +1,4 @@
-# Assemblies, Namespaces, and Classes
+<h1 class="heading"><span class="name">Assemblies, Namespaces, and Classes</span></h1>
 
 To create a .NET class in Dyalog, create a standard APL class and export the workspace as a .NET assembly (***.dll**).
 

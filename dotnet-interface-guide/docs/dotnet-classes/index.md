@@ -1,4 +1,4 @@
-# .NET Classes
+<h1 class="heading"><span class="name">.NET Classes</span></h1>
 
 .NET conforms to Microsoft's Common Type System. This comprises a set of data types, permitted values and permitted operations that define the rules by which different languages can interact with one another – all co-operating languages that use these types can have their operations and values checked (by the Common Language Runtime) at runtime. .NET also provides its own built-in class library that provides all the primitive data types, together with higher-level classes that perform useful operations.
 

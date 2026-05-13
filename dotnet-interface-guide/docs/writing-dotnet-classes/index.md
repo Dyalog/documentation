@@ -1,4 +1,4 @@
-# Writing .NET Classes
+<h1 class="heading"><span class="name">Writing .NET Classes</span></h1>
 
 Dyalog allows you to build new .NET classes, components and controls:
 
