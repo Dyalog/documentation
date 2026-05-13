@@ -14,21 +14,40 @@ Dyalog v18.2 and earlier versions are no longer supported.
 ### Supported Platforms
 Dyalog v21.0 is supported on the following platforms/operating systems:  
 
-T.B.A.
+* IBM AIX:
+    * AIX 7.3 SP4 onwards with a POWER9 chip or higher
+* Linux:
+    * x86_64: Built on Ubuntu 22.04
+    * ARM64: Built on Debian GNU/Linux 13
+* macOS (ARM-based, Apple M1 or later):
+    *  macOS 26.3 (Tahoe) onwards
+* Microsoft Windows (Intel-based):
+    * Windows 11 version 25H2 onwards (Windows Server 2016 onwards)
+* Raspberry Pi (ARM-based): 
+    * 64-bit: Raspberry Pi OS Bookworm or later  
+    NOTE: Installed using the Linux ARM64 package
+    * Not supported on Raspberry Pi Pico
 
 ## External .NET Requirements  
 
 ### .NET
 
-T.B.A.
+The .NET interface requires version 10.0 of Microsoft .NET or higher. 
+ 
+!!! Info "Information"
+    Dyalog v21.0 supports .NET v10.0 and later, but is configured to support .NET v10.0 by default. To support a later version of .NET, minor amendments are needed to two of the files installed with Dyalog – see [Installing .NET](https://docs.dyalog.com/21.0/net-interface-guide/installation/#installing-net) for more information.
 
 ### Microsoft .NET Framework
 
-T.B.A.  
+The .NET Framework interface requires version 4.0 or greater of Microsoft .NET Framework. It does not operate with earlier versions of the .NET Framework. In addition: 
+ 
+* Microsoft .NET Framework version 4.5 is needed for full data binding support.  
+Note: This includes support for the <code class="language-other">INotifyCollectionChanged</code> interface, which is used by Dyalog to notify a data consumer when the contents of a variable that is data bound as a list of items changes.  
+* IIS (and ASP.NET) need to be installed before installing Dyalog. If these are not present when Dyalog is installed, the **[DYALOG]/Samples/asp.net** directory will not be installed.  
 
 ## Chromium Embedded Framework (CEF)
 
-T.B.A.
+Dyalog v21.0 is supplied with CEF version 138 on all supported platforms.
 
 ### HTMLRenderer
 
@@ -47,5 +66,3 @@ To see which version of CEF was used when the HTMLRenderer was built, query the 
 ### Auxiliary Processors
 
 If the configuration parameter `ENABLE_CEF` is `1`, Auxiliary Processors cannot be used (they hang on error). By default, `ENABLE_CEF` is `1` (unless you are not running under a desktop, for example, you are running Dyalog in a PuTTY session; in this case the default is `0`).
-
--->
