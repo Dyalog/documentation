@@ -13,7 +13,7 @@ Dyalog v18.0 and earlier versions are no longer supported.
 Dyalog v20.0 is supported on the following platforms/operating systems:  
 
 * IBM AIX:
-    * AIX 7.2 SP2 TL2 onwards with a POWER9 chip or higher
+    * AIX 7.3 TL4 onwards with a POWER9 chip or higher
 * Linux:
     * x86_64: Built on Ubuntu 20.04
     * ARM64: Built on Debian GNU/Linux 12
