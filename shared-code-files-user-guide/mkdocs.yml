@@ -1,0 +1,57 @@
+site_name: Shared Code Files User Guide
+theme:
+  favicon: img/favicon-32.png
+  logo: img/dyalog-white.svg
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.path
+    - navigation.indexes
+  name: material
+  font:
+    text: Be Vietnam Pro
+extra_css:
+  - style/main.css
+  - style/extra.css
+  - style/admonition-ucmdhelp.css
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+plugins:
+  - privacy
+  - search
+  - macros
+  - site-urls
+  - caption:
+      table:
+        enable: true
+        start_index: 1
+        increment_index: 1
+        position: bottom
+extra:
+  version_maj: 21
+  version_majmin: 21.0
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+  - abbr
+  - footnotes
+  - md_in_html
+  - markdown_tables_extended
+  - toc:
+      title: On this page
+nav:
+  - index.md
+  - Introduction:
+      - introduction/index.md
+      - Benefits Offered by Shared Code Files: introduction/benefits-offered-by-shared-code-files.md
+      - Limitations: introduction/limitations.md
+  - Performance: performance.md
+  - Technical Details: technical-details.md
+  - Worked Example: worked-example.md

@@ -12,7 +12,7 @@ search:
 
 **Restriction**: 64-bit Unicode only
 
-This saves a shared code file. For more information on shared code files, see the [_Shared Code Files User Guide_](../../../../files/Shared_Code_Files_User_Guide.pdf).
+This creates/saves a [shared code file](../../../../shared-code-files-user-guide/), optionally based on a list of names of functions, operators, or variables. Restrictions apply to the location and structure of objects that can be placed into a shared code file; most importantly, the names must all be visible in the root (`#`) of the active workspace. For a complete list of restrictions, see [Section 1.1](../../../../shared-code-files-user-guide/introduction/limitations/#restriction-4).
 
 `Y` is 2-element vector of vectors in which:
 
@@ -25,3 +25,6 @@ Optionally, `X` is a vector of character vectors or a matrix specifying the name
 ```apl
       8667⌶ 1 'scf.dwx' 
 ```
+
+!!! windows "Dyalog on Microsoft Windows"
+    A multi-user development team might need a strategy for creating (and [attaching](../attach-assimilate-detach-shared-code-files/#attach-shared-code-files) cycles of shared code files as shared code files could remain in use for some time by members of the development team. This should not be an issue with distributed applications.

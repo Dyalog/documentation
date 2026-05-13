@@ -1,0 +1,8 @@
+<h1 class="heading"><span class="name">Introduction</span></h1>
+
+While a standard Dyalog workspace (a **.dws** file) needs to be read by the interpreter and loaded in its entirety, a shared code file (a **.dwx** file) has a structure that allows it to be attached to the active workspace with a minimum of file operations. This significantly decreases the start time of application processes, especially when several processes run on the same machine.
+
+When a shared code file is attached to the active workspace, a list of all the names of the functions, operators and variables that it contains is loaded into the active workspace. However, the definitions and values of these names are only paged into virtual memory the first time that the names are referenced, and they are not loaded into the active workspace unless their content is modified. In addition, because shared code files are memory-mapped by the operating system, the definitions and values are shared by concurrent processes. This means that, if a shared code file is already in use by one Dyalog application, then the name list can be loaded from shared memory by another application; the same is true for any of the names that are already in use (unless the system is low on memory, in which situation memory mapped pages are flushed from memory).
+
+!!! Warning "Warning"
+    The use of shared code files is only supported on 64-bit Unicode interpreters and there are no current plans to extend this support. Shared code files are memory mapped, and they can only be attached by interpreters that use exactly the same memory layout as the system that generated them.
