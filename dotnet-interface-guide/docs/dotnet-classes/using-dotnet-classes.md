@@ -86,11 +86,11 @@ Value Tips can be used to view the syntax of external functions. If you hover ov
 
 For example, **Figure 1** shows the mouse hovered over the external function `dt.AddMonths`, which reveals that it requires a single integer as its argument.
 
-![Function signature – single integer argument](../../img/s-value-tips-single.png)
+![Function signature – single integer argument](../img/s-value-tips-single.png)
 
 If an external function provides more than one signature, then they are all shown in the Value Tip (see **Figure 2**; the function <code class="language-nonAPL">ToString</code> has four different overloads).
 
-![Function signature – multiple arguments](../../img/s-value-tips-multiple.png)
+![Function signature – multiple arguments](../img/s-value-tips-multiple.png)
 
 ## Disposing of .NET Objects
 
