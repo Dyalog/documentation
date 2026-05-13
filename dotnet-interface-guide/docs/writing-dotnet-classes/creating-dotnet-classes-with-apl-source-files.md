@@ -46,7 +46,7 @@ aplclasses6>
 !!! windows "Dyalog on Microsoft Windows"
     The image below shows a view of the resulting **aplclasses6.dll** using ILDASM.
 
-    ![ILDASM view of aplclasses6.dll structure](../../img/s-idslam-aplclasses6.png)
+    ![ILDASM view of aplclasses6.dll structure](../img/s-idslam-aplclasses6.png)
 
 As with other .NET classes, this .NET class can be called from APL. For example:
 ```apl
@@ -117,7 +117,7 @@ io←⎕IO
 !!! windows "Dyalog on Microsoft Windows"
     The `ILDASM` view of the new **aplclasses7.dll**, showing the new `IndexOrigin` property, is shown below.
 
-    ![ILDASM view of aplclasses7.dll structure](../../img/s-idslam-aplclasses7.png)
+    ![ILDASM view of aplclasses7.dll structure](../img/s-idslam-aplclasses7.png)
 
 As with other .NET classes, this .NET class can be called from APL. For example:
 ```apl

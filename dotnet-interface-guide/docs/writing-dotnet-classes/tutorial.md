@@ -288,7 +288,7 @@ To compile the C# source code:
 
 The output when the program is run is displayed in a console window:
 
-![Program output in console window](../../img/s-dotnet-classes-eg4-output.png)
+![Program output in console window](../img/s-dotnet-classes-eg4-output.png)
 
 ## Example 5
 
@@ -395,4 +395,4 @@ To compile the C# source code:
 
 The output when the program is run is displayed in a console window:
 
-![Program output in console window](../../img/s-dotnet-classes-eg5-output.png)
+![Program output in console window](../img/s-dotnet-classes-eg5-output.png)
