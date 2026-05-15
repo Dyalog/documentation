@@ -68,10 +68,12 @@ The `Dialect` variant option can be used to enable [JSON5](https://json5.org/) e
 
 The `Null` variant option can be used to select how JSON `null` is represented in APL.
 
-| Null  | Effect on import     | Effect on export |
-|------------|-----------------|-----------------|
-| `'⊂'null'` { .shaded } | JSON `null` is imported as `⊂null`. | `⊂null` is exported as `null`; `⎕NULL` is rejected (`DOMAIN ERROR`). |
-| `'⎕NULL'` | JSON `null` is imported as `⎕NULL`. | Both `⎕NULL` and `⊂null` are exported as JSON `null`. |
+| Null  | Exporting `⎕NULL` |
+|------------|-----------------|-
+| `⊂'null'` { .shaded } | Rejected (`DOMAIN ERROR`). |
+| `'⎕NULL'` | Allowed. |
+
+Note that `Null` `⎕NULL` will still let `⊂'null'` be exported as `null`. See [Raw Text](#raw-text).
 
 **Examples**
 
@@ -82,12 +84,15 @@ The `Null` variant option can be used to select how JSON `null` is represented i
 ││null│││null││
 │└────┘│└────┘│
 └──────┴──────┘
-      1 ⎕JSON(⊂'null')⎕NULL
-DOMAIN ERROR: JSON export: item "[2]" of the right argument (⎕IO=1) cannot be converted
-      1 ⎕JSON(⊂'null')⎕NULL
-        ∧
-      0(⎕JSON⍠'Null'⎕NULL)1(⎕JSON⍠'Null'⎕NULL)(⊂'null')⎕NULL
+      0(⎕JSON⍠'Null'⎕NULL)'[null,null]'
  [Null]  [Null]
+
+      1 ⎕JSON ⎕NULL ⎕NULL
+DOMAIN ERROR: JSON export: item "[1]" of the right argument (⎕IO=1) cannot be converted
+      1 ⎕JSON ⎕NULL ⎕NULL
+        ∧
+      1(⎕JSON⍠'Null'⎕NULL)⎕NULL ⎕NULL
+[null,null]
 ```
 
 ## JSON Import (`X` is `0`)
