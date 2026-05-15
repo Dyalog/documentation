@@ -30,7 +30,7 @@ The following variant options pertain equally to both import and export. Variant
 
 ### Dialect Option
 
-The `Dialect` variant option can be used enable [JSON5](https://json5.org/) extensions on import and export.
+The `Dialect` variant option can be used to enable [JSON5](https://json5.org/) extensions on import and export.
 
 | Dialect | Effect on import     | Effect on export |
 |------------|-----------------|-----------------|
