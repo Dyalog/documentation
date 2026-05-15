@@ -38,7 +38,31 @@ The `Dialect` variant option can be used to enable [JSON5](https://json5.org/) e
 | `'JSON5'` | JSON5 extensions are rejected (`DOMAIN ERROR`). | Object member names are always quoted, only double quotes (`"`) are used, no trailing comma is added to arrays or objects, character escapes only use the form `\uNNNN`. |
 
 **Examples**
+```apl
+      1 ⎕JSON(a:'é"')
+{"a":"é\""}
+      1(⎕JSON⍠'Dialect' 'JSON5')(a:'é"')
+{a:'é"'}
 
+      1(⎕JSON⍠'Charset' 'ASCII'⍠'Compact' 0)(a:'é"')
+{
+  "a": "\u00E9\""
+}
+      1(⎕JSON⍠'Charset' 'ASCII'⍠'Compact' 0⍠'Dialect' 'JSON5')(a:'é"')
+{
+  a: '\xE9"',
+}
+
+      0(⎕JSON⍠'Dialect' 'JSON5')['["a\'
+                                 'bc",'
+                                 '//:)'
+                                 '+.1,'
+                                 '/**/'
+                                 '0xf]']
+┌───┬───┬──┐
+│abc│0.1│15│
+└───┴───┴──┘
+```
 
 ### Null Option
 
