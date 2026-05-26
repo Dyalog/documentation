@@ -200,9 +200,9 @@ A concrete version of the <code class="language-nonAPL">List</code> class can be
 (System.Collections.Generic.List[System.Int32])
 ```
 
-The shared members of the <code class="language-nonAPL">IntList</code> class can then be accessed, and the class instantiated using `⎕NEW`. It is not necessary to give the constructed class a name.
+The shared members of the <code class="language-nonAPL">IntList</code> class can then be accessed, and the class instantiated using `⎕NEW`.
 
-The operations can also be combined and multiple type arguments specified. For example:
+It is not necessary to give the constructed class a name before creating instances of it. Multiple type arguments can also be specified. For example:
 ```apl
 	  ⎕USING←''
       types←System.Char System.Int32
@@ -296,7 +296,7 @@ System.Decimal CreateChecked[Int32](Int32)
 50
 ```
 
-If a generic method has overloads with different numbers of type parameters, apply type arguments will narrow down the list of overloads which are applicable, as in the example below where only one overload expects a single type argument.
+If a generic method has overloads with different numbers of type parameters, applying type arguments will narrow down the list of overloads which are applicable, as in the example below where only one overload expects a single type argument.
 
 ```apl
       ⎕USING←'System'
@@ -341,7 +341,7 @@ LENGTH ERROR: No overload of the method expects the given number of generic type
                                 ∧
 ```
 
-However, in some cases [type inference](#type-inference) can take place, and no error will be generated.
+However when no type arguments are applied, in some cases [type inference](#type-inference) can take place, and no error will be generated.
 
 #### Type Inference
 
@@ -361,7 +361,7 @@ LENGTH ERROR: No overload of the method expects the given number of generic type
       Task.FromResult[Int128] 123
 System.Threading.Tasks.Task`1[System.Int128]
 
-      ⍝ Explicitly apply type arguments, but pass in a .NET object
+      ⍝ Explicitly apply type arguments, and pass in a .NET object of that type
       i128←Int128.Parse ⊂'123'
       Task.FromResult[Int128] i128
 System.Threading.Tasks.Task`1[System.Int128]
@@ -384,4 +384,4 @@ System.Threading.Tasks.Task`1[TResult] FromResult[TResult](TResult)
 System.Threading.Tasks.Task`1[System.Int128]
 ```
 
-which works because we tell the .NET bridge that we want the overload that takes an <code class="language-nonAPL">Int128</code> as its argument, which makes the type parameter `TResult` *must* be <code class="language-nonAPL">Int128</code>, and therefore there is no need to explicitly apply the type arguments using square brackets.
+which works because we tell the .NET bridge that we want the overload that takes an <code class="language-nonAPL">Int128</code> as its argument, which means the type parameter `TResult` *must* be <code class="language-nonAPL">Int128</code>, and therefore there is no need to explicitly apply the type arguments using square brackets.
