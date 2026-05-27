@@ -214,7 +214,7 @@ Attempting to instantiate a generic class without the expected number of type ar
 ```apl
       ⎕USING←''
       ⎕NEW System.Collections.Generic.List
-LENGTH ERROR: No overload of the type expects the given number of generic type arguments: 0
+LENGTH ERROR: No overload of the type expects the given number (0) of generic type arguments
       ⎕NEW System.Collections.Generic.List
       ∧
 ```
@@ -224,7 +224,7 @@ Similarly, applying too many type arguments also results in an error:
 ```apl
       ⎕USING←''
       System.Collections.Generic.List[3⍴System.Int32]
-LENGTH ERROR: No overload of the type expects the given number of generic type arguments: 3
+LENGTH ERROR: No overload of the type expects the given number (3) of generic type arguments
       System.Collections.Generic.List[3⍴System.Int32]
 ```
 ### Creating a Concrete Version of a Generic Interface
@@ -331,12 +331,12 @@ Applying an incorrect number of type arguments to a method will generate an erro
 ```apl
       ⎕USING←'System'
       Decimal.CreateChecked 50
-LENGTH ERROR: No overload of the method expects the given number of generic type arguments: 0
+LENGTH ERROR: No overload of the method expects the given number (0) of generic type arguments
       Decimal.CreateChecked 50
       ∧
 
       ValueTuple.Create[10⍴Int32]
-LENGTH ERROR: No overload of the method expects the given number of generic type arguments: 10
+LENGTH ERROR: No overload of the method expects the given number (10) of generic type arguments
       ValueTuple.Create[10⍴Int32]
                                 ∧
 ```
@@ -353,7 +353,7 @@ If the arguments to a generic method have a concrete .NET type, then their type 
 System.Threading.Tasks.Task`1[TResult] FromResult[TResult](TResult)
 
       Task.FromResult 123
-LENGTH ERROR: No overload of the method expects the given number of generic type arguments: 0
+LENGTH ERROR: No overload of the method expects the given number (0) of generic type arguments
       Task.FromResult 123
       ∧
 
