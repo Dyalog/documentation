@@ -159,7 +159,7 @@ For example, if <code class="language-nonAPL">MyClass</code> is a .NET class wit
 
 ## Generics
 
-In .NET, a method, interface, or class can be _generic_, which means it it is a template or recipe for a _concrete_ method, interface or class. What makes them generic is that they have a list of type parameters, and the user must apply a matching number of type arguments to get a concrete version. In the case of methods, it is not always necessary to apply type arguments, as the .NET interface can sometimes perform [type inference](#type-inference) to deduce the type arguments from the types of the method arguments.
+In .NET, a method, interface, or class can be _generic_, which means it is a template or recipe for a _concrete_ method, interface or class. What makes them generic is that they have a list of type parameters, and the user must apply a matching number of type arguments to get a concrete version. In the case of methods, it is not always necessary to apply type arguments, as the .NET interface can sometimes perform [type inference](#type-inference) to deduce the type arguments from the types of the method arguments.
 
 The syntax used to apply type arguments to both methods, classes, and interfaces, is the square brackets, as in `G[T]` where `G` is the generic thing, and `T` is a .NET type, or a vector of .NET types, which themselves might be the result of applying types to a generic .NET class.
 
