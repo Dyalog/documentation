@@ -161,9 +161,9 @@ For example, if <code class="language-nonAPL">MyClass</code> is a .NET class wit
 
 In .NET, a method, interface, or class can be _generic_, which means it is a template or recipe for a _concrete_ method, interface or class. What makes them generic is that they have a list of type parameters, and the user must apply a matching number of type arguments to get a concrete version. In the case of methods, it is not always necessary to apply type arguments, as the .NET interface can sometimes perform [type inference](#type-inference) to deduce the type arguments from the types of the method arguments.
 
-The syntax used to apply type arguments to both methods, classes, and interfaces, is the square brackets, as in `G[T]` where `G` is the generic thing, and `T` is a .NET type, or a vector of .NET types, which themselves might be the result of applying types to a generic .NET class.
+The syntax used to apply type arguments to methods, classes, and interfaces, is square brackets, for example `G[T]` where `G` is the generic entity, and `T` is a .NET type, or a vector of .NET types. These types themselves might be the result of applying types to a generic .NET class.
 
-The square bracket syntax means that working with generics in Dyalog APL and C# looks visually similar, except that C# uses angle brackets instead, as illustrated by the example below:
+The square bracket syntax means that working with generics in Dyalog APL and C# looks visually similar, except that C# uses angle brackets, as illustrated by the example below:
 
 ```C#
 // Instantiate a concrete version of a generic class in C#
@@ -283,7 +283,7 @@ System.Decimal CreateChecked[TOther](TOther)
 
 The <code class="language-nonAPL">CreateChecked</code> function has one type parameter, shown in square brackets, and one regular parameter, shown in parentheses.
 
-The generic type argument can be applied using square brackets, and the result is concrete version of the generic method. The method can either be given a name, or evaluated directly. The display form indicates that the type parameters have been replaced by a concrete type.
+The generic type argument can be applied using square brackets, and the result is a concrete version of the generic method. The method can either be given a name, or evaluated directly. The display form indicates that the type parameters have been replaced to form a concrete function.
 
 ```apl
       ⎕USING←'System'
@@ -371,7 +371,7 @@ System.Threading.Tasks.Task`1[System.Int128]
 System.Threading.Tasks.Task`1[System.Int128]
 ```
 
-Type inference can save the programmer from doing some typing which feels unnecessary, as shown in the last lines of the example above, but it is still allowed to manually apply type arguments.
+Type inference can save the programmer from doing unnecessary typing, as shown in the last lines of the example above, but it is still allowed to manually apply type arguments.
 
 If the user has [specified an overload](#specifying-overloads), the type information is taken into account, which means another way of doing the above would be:
 
