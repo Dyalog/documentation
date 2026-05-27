@@ -159,7 +159,7 @@ For example, if <code class="language-nonAPL">MyClass</code> is a .NET class wit
 
 ## Generics
 
-In .NET, a method, interface, or class can be _generic_, which means it is a template or recipe for a _concrete_ method, interface or class. What makes them generic is that they have a list of type parameters, and the user must apply a matching number of type arguments to get a concrete version. In the case of methods, it is not always necessary to apply type arguments, as the .NET interface can sometimes perform [type inference](#type-inference) to deduce the type arguments from the types of the method arguments.
+In .NET, a method, interface, or class can be _generic_, which means that it is a template or recipe for a _concrete_ method, interface or class. What makes them generic is that they have a list of type parameters, and the user must apply a matching number of type arguments to create a concrete version. In the case of methods, it is not always necessary to apply type arguments, as the .NET interface can sometimes perform [type inference](#type-inference) to deduce the type arguments from the types of the method arguments.
 
 The syntax used to apply type arguments to methods, classes, and interfaces, is square brackets, for example `G[T]` where `G` is the generic entity, and `T` is a .NET type, or a vector of .NET types. These types themselves might be the result of applying types to a generic .NET class.
 
@@ -245,7 +245,7 @@ Applying type arguments to generic interfaces looks just like with generic class
 ```
 
 ### Multiple Overloads of .NET Classes and Interfaces
-Some .NET classes and interfaces have multiple overloads, varying in the number of generic type parameters. The display form of the type makes this clear, and the the .NET interface will automatically use the appropriate overload based on context.
+Some .NET classes and interfaces have multiple overloads, varying in the number of generic type parameters. The display form of the type makes this clear, and the .NET interface will automatically use the appropriate overload based on context.
 
 ```apl
       ⎕USING←'System'
@@ -345,7 +345,7 @@ However when no type arguments are applied, in some cases [type inference](#type
 
 #### Type Inference
 
-If the arguments to a generic method have a concrete .NET type, then their type information might be enough for the .NET bridge to unambiguously select a method overload, and to automatically apply the needed type arguments. But if there is any doubt about the type, such as when the arguments are regular APL arrays, such as the scalar `0`, which can be converted into a number of different .NET types, type inference will not take place.
+If the arguments to a generic method have a concrete .NET type, then their type information might be enough for the .NET bridge to unambiguously select a method overload, and to automatically apply the needed type arguments. But if there is any doubt about the type, such as when the arguments are regular APL arrays, for example the scalar `0`, which can be converted into a number of different .NET types, type inference will not take place.
 
 ```
       ⎕USING←'System' 'System.Threading.Tasks'
