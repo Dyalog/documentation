@@ -14,7 +14,8 @@ This function imports and exports data in [JavaScript Object Notation](https://w
 JSON supports a limited number of data types and there is not a direct correspondence between JSON and APL data structures. In particular:
 
 - JSON does not support arrays with rank &gt;1.
-- JSON standard includes Boolean values `true` and `false` which are distinct from numeric values `1` and `0`, and have no direct APL equivalent.
+- JSON does not support nested scalars.
+- JSON includes Boolean values `true` and `false` which are distinct from numeric values `1` and `0` and have no direct APL equivalent.
 - The [JSON5](https://json5.org/) standard includes numeric constants `Infinity`, `-Infinity`, `NaN` and `-NaN` which have no direct APL equivalent.
 - JSON object members are named and these names might not be valid names in APL.
 
@@ -73,7 +74,7 @@ The `Null` variant option can be used to select how JSON `null` is represented i
 | `⊂'null'` { .shaded } | Rejected (`DOMAIN ERROR`). |
 | `'⎕NULL'` | Allowed. |
 
-Note that `Null` `⎕NULL` will still let `⊂'null'` be exported as `null`. See [Raw Text](#raw-text).
+Note that `Null` being `⎕NULL` will still let `⊂'null'` be exported as raw text. See [Wrapper code 1](#wrapper-code-1-raw-text).
 
 **Examples**
 
@@ -102,7 +103,7 @@ The content of the result `R` depends upon the `Format` variant, which can be`'D
 
 The JSON standard says that members of a JSON object should have unique names and that different implementations behave differently when there are duplicates. Dyalog does not error on duplicate names, but the behaviour depends on the `Format` variant.
 
-### Import as Data (`Format` `'D'`)
+### Import as Data (`Format` is `'D'`)
 
 If `Format` is`'D'` (which stands for "Data") the JSON in `Y` is converted to APL data and `R` is an array or a namespace containing arrays and sub-namespaces.
 
@@ -174,28 +175,28 @@ e
       0(⎕JSON⍠'Null'⎕NULL)'[null,2,3]'
  [Null]  2 3
 ```
-### Import as Matrix (`Format` `'M'`)
+### Import as Matrix (`Format` is `'M'`)
 
 If `Format` is`'M'` (which stands for "Matrix") the result `R` is a matrix whose columns contain the following:
 
 |------------|--------------------------------|
-| [;1]       | Depth                          |
-| [;2]       | Name (for JSON object members) |
-| [;3]       | APL value                      |
-| [;4]       | JSON type (integer: see below) |
+| `[;1]`     | Depth                          |
+| `[;2]`     | Name (for JSON object members) |
+| `[;3]`     | APL value                      |
+| `[;4]`     | JSON type (integer: see below) |
 
-- JSON `true` and `false` and, if the `Dialect` variant option is `'JSON5'`, the JSON5 numeric constants `Infinity`, `-Infinity`, `NaN`, and `-NaN` are converted to enclosed character vectors `⊂'true'`,`⊂'false'`, and so forth.
-- Object member names are reported as specified in the JSON text (they are not mangled as they are for `Format` `'D'`).
+- JSON values that lack an APL equivalent, `true` and `false`, and, if `Dialect` is `'JSON5'`, the JSON5 numeric constants `Infinity`, `-Infinity`, `NaN`, and `-NaN` are converted to enclosed character vectors `⊂'true'`,`⊂'false'`, and so forth.
+- Object member names are reported as specified in the JSON text (they are not mangled as when `Format` is `'D'`).
 - If duplicate names are found, all duplicate members are recorded in the result matrix.
 
-| `Y[;4]` (Type) | `Y[;3]` (APL value) | Corresponding JSON value |
+| `Y[;4]` (JSON type) | `Y[;3]` (APL value) | Corresponding JSON value |
 |------|-----------------------------|---------------------------|
-| 1    | Namespace                   | Object                    |
-| 2    | Vector                      | Array                     |
-| 3    | Number                      | Number                    |
-| 4    | Character vector            | String                    |
-| 5    | Specified by `Null` variant | Null                      |
-| 6    | Enclosed character vector   | Lacking APL equivalent    |
+| `1`  | Namespace                   | Object                    |
+| `2`  | Vector                      | Array                     |
+| `3`  | Number                      | Number                    |
+| `4`  | Character vector            | String                    |
+| `5`  | Specified by `Null` variant | Null                      |
+| `6`  | Enclosed character vector   | Lacking APL equivalent    |
 
 **Example**
 
@@ -257,18 +258,18 @@ If `Format` is`'M'` (which stands for "Matrix") the result `R` is a matrix whose
 
 ## JSON Export (`X` is `1`)
 
-`Y` is the data to be exported as JSON. What constitutes a valid value of `Y` depends upon the `Format` variant, which can be`'D'` (the default) or`'M'`. If `Format` is `'M'`, `Y` must be a matrix representation of JSON such as would have been produced by JSON Import with `Format` `'M'`; otherwise it must be an array or namespace that can be represented as JSON (subject to the `HighRank` variant option).
+`Y` is the data to be exported as JSON. What constitutes a valid value of `Y` depends upon the `Format` variant, which can be`'D'` (the default) or`'M'`. If `Format` is `'M'`, `Y` must be a matrix representation of JSON such as would have been produced by JSON Import with `Format` being `'M'`; otherwise it must be an array or namespace that can be represented as JSON (subject to the `HighRank` variant option).
 
 `⎕JSON` will signal `DOMAIN ERROR` if `Y` is incompatible with the specified (or implied) value of `Format`.
 
 `R` is a character vector whose content depends upon the value of the `Compact` variant, see below.
 
-### Export Data (`Format` `'D'`)
+### Export Data (`Format` is `'D'`)
 
 If `Format` is`'D'` (which stands for "Data") the APL value in `Y` is converted to JSON.
 
 - APL namespaces are converted to JSON objects.
-- Enclosed character vectors are inserted as raw text. See [Raw Text](#raw-text).
+- Enclosed character vectors are inserted as raw text. See [Wrapper code 1](#wrapper-code-1-raw-text).
 - If a namespace member name is mangled such as would have been produced by JSON name mangling, it is demangled. See [JSON Name Mangling](#json-name-mangling). `7162⌶` can be used to obtain the original name. See [JSON Translate Name](../primitive-operators/i-beam/json-translate-name.md).
 
 **Example**
@@ -296,31 +297,33 @@ If `Format` is`'D'` (which stands for "Data") the APL value in `Y` is converted 
 {"a":{"b":["charvec 1","charvec 2"],"c":true,"d":{"e":false,"f⍺":["charvec 3",123,1000.2,null]}}}
 ```
 
-### Export Matrix (`Format` `'M'`)
+### Export Matrix (`Format` is `'M'`)
 
 If `Format` is`'M'` (which stands for "Matrix"), `Y` must be a matrix whose columns contain the following:
 
 |------------|---------------------------------------|
-| [;1]       | Depth                                 |
-| [;2]       | Name (for JSON object members)        |
-| [;3]       | APL value                             |
-| [;4]       | JSON type (integer: see below)        |
+| `[;1]`     | Depth                                 |
+| `[;2]`     | Name (for JSON object members)        |
+| `[;3]`     | APL value                             |
+| `[;4]`     | JSON type (integer: see below)        |
 
-| `Y[;4]` (Type) | `Y[;3]` (APL value)       | Corresponding JSON value |
+| `Y[;4]` (JSON type) | `Y[;3]` (APL value)       | Corresponding JSON value |
 |----------------|---------------------------|--------------------------|
-| 1              | Empty array               | Object                   |
-| 2              | Empty array               | Array                    |
-| 3              | Numeric scalar            | Numeric                  |
-| 4              | Character vector          | String                   |
-| 5              | Null                      | Null                     |
-| 6              | Enclosed character vector | Raw text (see [Raw Text](#raw-text) |
-| 7              | Enclosed character vector | JavaScript object        |
+| `1`            | Empty array               | Object                   |
+| `2`            | Empty array               | Array                    |
+| `3`            | Numeric scalar            | Number                   |
+| `4`            | Character vector          | String                   |
+| `5`            | Null                      | Null                     |
+| `6`            | Enclosed character vector | Lacking APL equivalent   |
+| `7`            | Enclosed character vector | Raw text (see [Wrapper code 1](#wrapper-code-1-raw-text) |
+
+The difference between JSON types `6` and `7` is that `6` only allows the special values that can be imported, while `7` allows any text whatsoever.
 
 If there are any mismatches between the values in `Y[;3]` and the types in `Y[;4]`, `⎕JSON` will signal `DOMAIN ERROR` and report the first row where there is a mismatch (`⎕IO` sensitive) as illustrated in the following example.
 
 **Example**
 
-```apl      
+```apl
       M←0(⎕JSON⍠'Format' 'M')'{"values": [ 75, 300 ]}'
       M
 ┌─┬──────┬───┬─┐
@@ -359,8 +362,8 @@ The `Compact` variant option can be used to make it easer for humans to read and
 
 | Compact | Description                                                        |
 |---------|--------------------------------------------------------------------|
-| 0       | The JSON text is padded with spaces and line breaks for readability. |
-| 1 { .shaded } | The JSON text is compacted into its minimal form.                  |
+| `0`     | The JSON text is padded with spaces and line breaks for readability. |
+| `1` { .shaded } | The JSON text is compacted into its minimal form.                  |
 
 **Example**
 
@@ -417,8 +420,8 @@ The `Charset` variant option can be used to restrict the output to ASCII charact
 
 | Charset    | Description     |
 |------------|-----------------|
-| 'Unicode' { .shaded } | All Unicode characters in `Y` are passed unchanged in the result `R`. |
-| 'ASCII' | Non-ASCII characters are converted to an encoded string of the form `\uNNNN` where `NNNN` is the upper-case hexadecimal value of the character in the Unicode system. For example, `é` (e-acute) is converted to `\u00E9`. Furthermore, if `Dialect` is `'JSON5'`, values less than hexadecimal 100 (`⎕UCS 256`) are converted to the form `\xNN`. |
+| `'Unicode'` { .shaded } | All Unicode characters in `Y` are passed unchanged in the result `R`. |
+| `'ASCII'` | Non-ASCII characters are converted to an encoded string of the form `\uNNNN` where `NNNN` is the upper-case hexadecimal value of the character in the Unicode system. For example, `é` (e-acute) is converted to `\u00E9`. Furthermore, if `Dialect` is `'JSON5'`, values less than hexadecimal 100 (`⎕UCS 256`) are converted to the form `\xNN`. |
 
 **Example**
 
@@ -438,8 +441,8 @@ The `HighRank` variant option can be used to instruct `⎕JSON` to pre-process h
 
 | HighRank | Description                                        |
 |----------|----------------------------------------------------|
-| 'Split'  | High-rank data is split into nested vectors.       |
-| 'Error' { .shaded } | High-rank data is rejected (`DOMAIN ERROR`)        |
+| `'Split'` | High-rank data is split into nested vectors.       |
+| `'Error'` { .shaded } | High-rank data is rejected (`DOMAIN ERROR`) |
 
 **Example**
 
@@ -463,37 +466,6 @@ DOMAIN ERROR: JSON export: the right argument cannot be converted (⎕IO=1)
 [[[1,2,3],[4,5,6]],[[[1,0.5],[0.3333333333333333,0.25]],[[0.2,0.1666666666666667],[0.1428571428571428,0.125]]]]
 ```
 
-### Raw Text
-
-An enclosed character vector is inserted into the result of JSON export as raw text. This feature can be used to export special JSON values such as `null`, `true` and `false`. Without the extra enclosure, the character vectors are exported as strings:
-
-**Example**
-
-```apl
-      1 ⎕JSON 'null' 'true' 'false'
-["null","true","false"]
-      1 ⎕JSON ⊂¨'null' 'true' 'false'
-[null,true,false]
-```
-
-The same mechanism can be used to inject any raw text, although unless this is valid JSON it cannot then be re-imported.
-
-The following example illustrates how JavaScript objects can be exported. In the example, the object is a JavaScript function which is specified by the contents of an enclosed character vector.
-
-**Example**
-
-```apl
-      slider←(
-          range:⊂'true'
-          min:0
-          max:500
-          values:75 300
-          slide:⊂' function( event, ui ) {$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );}'
-      )
-      1 ⎕JSON slider
-{"max":500,"min":0,"range":true,"slide": function( event, ui ) {$( \"#amount\" ).val( \"$\" + ui.values[ 0 ] + \" - $\" + ui.values[ 1 ] );},"values":[75,300]}
-```
-
 ### Wrappers
 
 A wrapper is an enclosed vector of the form:
@@ -502,11 +474,11 @@ A wrapper is an enclosed vector of the form:
       ⊂code special
 ```
 
-This structure has been chosen to identify special treatment because a scalar enclosure cannot be represented in JSON/JavaScript. A wrapper can be specified directly in the right argument to `⎕JSON` and/or as part of the array structure specified by the right argument, as a sub-array or in a namespace. This allows a special array to be processed appropriately as part of a general data structure that is to be rendered as JSON.
+This structure has been chosen to identify special treatment because a nested scalar cannot be represented in JSON or JavaScript. A wrapper can be specified directly in the right argument to `⎕JSON` and/or as part of the array structure specified by the right argument, as a sub-array or in a namespace. This allows a special array to be processed appropriately as part of a general data structure that is to be rendered as JSON.
 
-The nature of the `special` data structure is identified within the wrapper by a leading numeric code. Code 1 identifies JSON values such as `null`, `true` and `false`. Codes 2, 3 and 4 identify various representations of a *dataset*.
+The structure of the `special` array is specified within the wrapper by a leading numeric code. Code `1` (the default) allows insertion of raw text, including JSON values such as `null` and `true`. Codes `2`, `3` and `4` identify various representations of a *dataset*.
 
-The term dataset is used here to mean a collection of data, usually presented in tabular form. Each named column (also called a *field*) represents a particular variable. Each row (also called a *record*) corresponds to a given member of the dataset in question, listing its value for each of the variables, such as price and quantity of an item.
+The term *dataset* is used here to mean a collection of data, usually presented in tabular form. Each named column (also called a *field*) represents a particular variable. Each row (also called a *record*) corresponds to a given member of the dataset in question, listing its value for each of the variables, such as price and quantity of an item.
 
 In APL, a dataset is traditionally represented as a collection of variables:
 
@@ -517,7 +489,7 @@ In APL, a dataset is traditionally represented as a collection of variables:
       qty←23 45 67
 ```
 
-However, when a single array is needed, it is commonly represented as either a single mixed-type matrix, a value mixed-type matrix with a separate header vector, or an inverted table with a separate header vector.
+However, when a single array is needed, it is commonly represented as either a single mixed-type matrix that includes headers, a mixed-type matrix of values with a separate header vector, or an inverted table of values with a separate header vector.
 
 In JSON, a dataset is almost universally represented as an *array of objects* (JavaScript nomenclature for APL's *vector of namespaces*):
 
@@ -548,20 +520,57 @@ Note that the JSON structure can be represented in APL:
  #.[Namespace]  #.[Namespace]  #.[Namespace] 
 ```
 
-If such a representation is already used in an APL application, then no special handling is necessary to generate the corresponding JSON. However, transforming a dataset into a vector of namespaces, just for export to JSON, can be expensive and cumbersome. `⎕JSON`'s wrapper codes 2, 3, and 4, provide a quick and efficient way to transform the common APL representations of a dataset directly into a JSON array of objects.
+If such a representation is already used in an APL application, then no special handling is necessary to generate the corresponding JSON. However, transforming a dataset into a vector of namespaces, just for export to JSON, can be expensive and cumbersome. `⎕JSON`'s wrapper codes `2`, `3`, and `4`, provide a quick and efficient way to transform the common APL representations of a dataset directly into a JSON array of objects.
 
-#### Wrapper code 1: Special JSON values
+#### Wrapper code `1`: Raw Text
 
-Special JSON values such as `null`, `true` and `false` do not directly correspond to specific APL values and therefore require special handling.  This is provided by wrapper code 1, but this mechanism is entirely equivalent to the use of enclosed character vectors (see [Raw Text](#raw-text)):
+Special JSON values such as `null`, `true` and `false` do not directly correspond to specific APL values and therefore require special handling. This is provided by wrapper code `1`:
 
 ```apl
       1 ⎕JSON 42 'text'(⊂1 'null')(⊂1 'true')(⊂1 'false')
 [42,"text",null,true,false]
+```
+The code number can be omitted:
+```apl
       1 ⎕JSON 42 'text'(⊂'null')(⊂'true')(⊂'false')
 [42,"text",null,true,false]
 ```
 
-#### Wrapper code 2: Single Mixed-Type Matrix
+This feature can be used to inject any raw text, although unless it is valid JSON it cannot then be re-imported.
+
+!!! Warning "Warning"
+    Out of convenience, it is common to initialise a list using a scalar rather than a one-element vector. Doing so for an eventual vector of character vectors will fail if the value is exported before a subsequent element is added:
+    ```apl
+          list←⊂'foo'
+          1 ⎕JSON list
+    foo
+          1 ⎕JSON list,'bar' 'baz'
+    ["foo","bar","baz"]
+    ```
+    It is therefore important to initialise as a proper vector:
+    ```apl
+          list←,⊂'foo'
+          1 ⎕JSON list
+    ["foo"]
+    ```
+
+The following example illustrates how JavaScript objects can be exported. In the example, the object contains a JavaScript function which is specified by the contents of an enclosed character vector.
+
+**Example**
+
+```apl
+      slider←(
+          range:⊂'true'
+          min:0
+          max:500
+          values:75 300
+          slide:⊂' function( event, ui ) {$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );}'
+      )
+      1 ⎕JSON slider
+{"max":500,"min":0,"range":true,"slide": function( event, ui ) {$( \"#amount\" ).val( \"$\" + ui.values[ 0 ] + \" - $\" + ui.values[ 1 ] );},"values":[75,300]}
+```
+
+#### Wrapper code `2`: Single Mixed-Type Matrix
 
 A dataset can be represented as a single mixed-type matrix:
 
@@ -594,7 +603,7 @@ Note that the APL structure *can* be represented in JSON, though this is not a c
 [["Item","Price","Qty"],["Knife",3,23],["Fork",4,45],["Spoon",4,67]]
 ```
 
-#### Wrapper code 3: Value matrix with separate header vector
+#### Wrapper code `3`: Value matrix with separate header vector
 
 A dataset can be represented as a value matrix with a separate header vector:
 
@@ -627,7 +636,7 @@ Note that the APL structure *can* be represented in JSON, though this is not a c
 [[["Knife",3,23],["Fork",4,45],["Spoon",4,67]],["Item","Price","Qty"]]
 ```
 
-#### Wrapper code 4: Inverted table with a separate header vector
+#### Wrapper code `4`: Inverted table with a separate header vector
 
 A dataset can be represented as an inverted table (vector of column vectors) together with a separate header vector:
 
