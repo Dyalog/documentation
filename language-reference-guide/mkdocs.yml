@@ -27,7 +27,7 @@ plugins:
         enable: true
         start_index: 1
         increment_index: 1
-        position: bottom
+        position: top
         reference_text: 'Table {index}'
         caption_prefix: 'Table {index}:'
 extra:
