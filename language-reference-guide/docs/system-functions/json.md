@@ -9,6 +9,9 @@ search:
 
 <h1 class="heading"><span class="name">JSON Convert</span> <span class="command">R←{X}⎕JSON Y</span></h1>
 
+!!! Warning "Warning"
+    The default for `X` depends on the type of `Y`, and Dyalog Ltd strongly recommends not relying on that.
+
 This function imports and exports data in [JavaScript Object Notation](https://www.json.org/json-en.html) (JSON) Data Interchange Format.
 
 JSON supports a limited number of data types and there is not a direct correspondence between JSON and APL data structures. In particular:
@@ -23,11 +26,17 @@ These differences are catered for in various ways as discussed below.
 
 If specified, `X` must be a numeric scalar with the value `0` (import JSON) or `1` (export JSON). Dyalog Ltd strongly recommends that `X` should always be used, however, if `X` is not specified and `Y` is a character array, `X` is assumed to be `0` (import); otherwise it is assumed to be `1` (export).
 
+JSON Import (`X=0`) converts a JSON (in the form of an APL character array) to a corresponding APL array. JSON Export (`X=1`) converts an APL array to the corresponding JSON (in the form of an APL character array).
+
 Other options for `⎕JSON` are `Format`, `Compact`, `Null`, `HighRank`, `Charset` and `Dialect` which are specified using `⍠` (see [Variant operator](../primitive-operators/variant.md)). The Principal Option is `Format`.
 
 ## Variant Options Common to both Import and Export
 
 The following variant options pertain equally to both import and export. Variant options specific to import or export are tolerated for the other operation even if they have no effect.
+
+### Format Option
+
+The `Format` variant option determines if the imported or exported APL array is the closest APL equivalent to the corresponding JSON data or if it is a matrix that encodes the JSON data.
 
 ### Dialect Option
 
@@ -35,7 +44,7 @@ The `Dialect` variant option can be used to enable [JSON5](https://json5.org/) e
 
 | Dialect | Effect on import     | Effect on export |
 |------------|-----------------|-----------------|
-| `'JSON'` { .shaded } | JSON5 extensions are allowed. | Object member names that are valid ECMAScript 5.1 identifiers are exported without quotes, single quotes (`'`) are used if it makes the result shorter, trailing comma (`,`) is added after the last array element and object member if `Compact` is `0`, character escape values less than hexadecimal 100 (`⎕UCS 256`) are converted to the form `\xNN`.
+| `'JSON'` { .shaded } | JSON5 extensions are allowed. | Object member names that are valid ECMAScript 5.1 identifiers are exported without quotes, single quotes (`'`) are used if it makes the result shorter, trailing comma (`,`) is added after the last array element and object member if `Compact` is `0`, character escape values less than hexadecimal 100 (`⎕UCS 256`) are converted to the form `\xNN`. |
 | `'JSON5'` | JSON5 extensions are rejected (`DOMAIN ERROR`). | Object member names are always quoted, only double quotes (`"`) are used, no trailing comma is added to arrays or objects, character escapes only use the form `\uNNNN`. |
 
 **Examples**
@@ -55,11 +64,11 @@ The `Dialect` variant option can be used to enable [JSON5](https://json5.org/) e
 }
 
       0(⎕JSON⍠'Dialect' 'JSON5')['["a\'
-                                 'bc",'
-                                 '//:)'
-                                 '+.1,'
-                                 '/**/'
-                                 '0xf]']
+                                  'bc",'
+                                  '//:)'
+                                  '+.1,'
+                                  '/**/'
+                                  '0xf]']
 ┌───┬───┬──┐
 │abc│0.1│15│
 └───┴───┴──┘
@@ -70,11 +79,11 @@ The `Dialect` variant option can be used to enable [JSON5](https://json5.org/) e
 The `Null` variant option can be used to select how JSON `null` is represented in APL.
 
 | Null  | Exporting `⎕NULL` |
-|------------|-----------------|-
+|------------|-----------------|
 | `⊂'null'` { .shaded } | Rejected (`DOMAIN ERROR`). |
-| `'⎕NULL'` | Allowed. |
+| `⎕NULL` | Allowed. |
 
-Note that `Null` being `⎕NULL` will still let `⊂'null'` be exported as raw text. See [Wrapper code 1](#wrapper-code-1-raw-text).
+Note that `Null` being `⎕NULL` will still let `⊂'null'` be exported, as it will be interpreter as wrapper (mechanism for special handling) of raw text. See [Wrapper code 1](#wrapper-code-1-raw-text).
 
 **Examples**
 
@@ -99,7 +108,7 @@ DOMAIN ERROR: JSON export: item "[1]" of the right argument (⎕IO=1) cannot be 
 ## JSON Import (`X` is `0`)
 `Y` is a character vector or matrix in JSON format. There is an implied newline character between each row of a matrix.
 
-The content of the result `R` depends upon the `Format` variant, which can be`'D'` (the default) or`'M'`.
+The content of the result `R` depends upon the `Format` variant, which can be `'D'` (the default) or`'M'`.
 
 The JSON standard says that members of a JSON object should have unique names and that different implementations behave differently when there are duplicates. Dyalog does not error on duplicate names, but the behaviour depends on the `Format` variant.
 
@@ -109,7 +118,7 @@ If `Format` is`'D'` (which stands for "Data") the JSON in `Y` is converted to AP
 
 - JSON objects are converted into APL namespaces.
 - JSON `true` and `false` and, if the `Dialect` variant option is `'JSON5'`, the JSON5 numeric constants `Infinity`, `-Infinity`, `NaN`, and `-NaN` are converted to enclosed character vectors `⊂'true'`,`⊂'false'`, and so forth.
-- If the JSON source contains object member names which are not valid APL names they are converted to APL namespace members with mangled names. See [JSON Name Mangling](#json-name-mangling). `7162⌶` can be used to obtain the original name. See [JSON Translate Name](../primitive-operators/i-beam/json-translate-name.md).
+- If the JSON source contains object member names which are not valid APL names they are converted to APL namespace members with mangled names using a translation mechanism. See [JSON Name Mangling](#json-name-mangling). `7162⌶` can be used to obtain the original name. See [JSON Translate Name](../primitive-operators/i-beam/json-translate-name.md).
 - If duplicate names are found, the last member encountered is used and all previous members with the same name are discarded.
 
 **Examples**
@@ -177,7 +186,7 @@ e
 ```
 ### Import as Matrix (`Format` is `'M'`)
 
-If `Format` is`'M'` (which stands for "Matrix") the result `R` is a matrix whose columns contain the following:
+If `Format` is `'M'` (which stands for "Matrix") the result `R` is a matrix whose columns contain the following:
 
 |------------|--------------------------------|
 | `[;1]`     | Depth                          |
@@ -189,7 +198,7 @@ If `Format` is`'M'` (which stands for "Matrix") the result `R` is a matrix whose
 - Object member names are reported as specified in the JSON text (they are not mangled as when `Format` is `'D'`).
 - If duplicate names are found, all duplicate members are recorded in the result matrix.
 
-| `Y[;4]` (JSON type) | `Y[;3]` (APL value) | Corresponding JSON value |
+| `R[;4]` (JSON type) | `R[;3]` (APL value) | Corresponding JSON value |
 |------|-----------------------------|---------------------------|
 | `1`  | Namespace                   | Object                    |
 | `2`  | Vector                      | Array                     |
@@ -258,7 +267,7 @@ If `Format` is`'M'` (which stands for "Matrix") the result `R` is a matrix whose
 
 ## JSON Export (`X` is `1`)
 
-`Y` is the data to be exported as JSON. What constitutes a valid value of `Y` depends upon the `Format` variant, which can be`'D'` (the default) or`'M'`. If `Format` is `'M'`, `Y` must be a matrix representation of JSON such as would have been produced by JSON Import with `Format` being `'M'`; otherwise it must be an array or namespace that can be represented as JSON (subject to the `HighRank` variant option).
+`Y` is the data to be exported as JSON. What constitutes a valid value of `Y` depends upon the `Format` variant, which can be`'D'` (the default) or `'M'`. If `Format` is `'M'`, `Y` must be a matrix representation of JSON such as would have been produced by JSON Import with `Format` being `'M'`; otherwise it must be an array or namespace that can be represented as JSON (subject to the `HighRank` variant option).
 
 `⎕JSON` will signal `DOMAIN ERROR` if `Y` is incompatible with the specified (or implied) value of `Format`.
 
@@ -266,11 +275,11 @@ If `Format` is`'M'` (which stands for "Matrix") the result `R` is a matrix whose
 
 ### Export Data (`Format` is `'D'`)
 
-If `Format` is`'D'` (which stands for "Data") the APL value in `Y` is converted to JSON.
+If `Format` is `'D'` (which stands for "Data") the APL value in `Y` is converted to JSON.
 
 - APL namespaces are converted to JSON objects.
-- Enclosed character vectors are inserted as raw text. See [Wrapper code 1](#wrapper-code-1-raw-text).
-- If a namespace member name is mangled such as would have been produced by JSON name mangling, it is demangled. See [JSON Name Mangling](#json-name-mangling). `7162⌶` can be used to obtain the original name. See [JSON Translate Name](../primitive-operators/i-beam/json-translate-name.md).
+- Enclosed vectors are wrappers (mechanisms for special handling). See [Wrappers](#wrappers).
+- If a namespace member name is mangled (made into a valid APL) such as would have been produced by JSON name mangling (a translation mechanism), it is demangled. See [JSON Name Mangling](#json-name-mangling). `7162⌶` can be used to obtain the original name. See [JSON Translate Name](../primitive-operators/i-beam/json-translate-name.md).
 
 **Example**
 
@@ -299,7 +308,7 @@ If `Format` is`'D'` (which stands for "Data") the APL value in `Y` is converted 
 
 ### Export Matrix (`Format` is `'M'`)
 
-If `Format` is`'M'` (which stands for "Matrix"), `Y` must be a matrix whose columns contain the following:
+If `Format` is `'M'` (which stands for "Matrix"), `Y` must be a matrix whose columns contain the following:
 
 |------------|---------------------------------------|
 | `[;1]`     | Depth                                 |
@@ -358,7 +367,7 @@ DOMAIN ERROR: JSON export: value does not match the specified type in row 3 (⎕
 
 ### Compact Option
 
-The `Compact` variant option can be used to make it easer for humans to read and edit the generated JSON.
+The `Compact` variant option can be used to make it easier for humans to read and edit the generated JSON.
 
 | Compact | Description                                                        |
 |---------|--------------------------------------------------------------------|
@@ -386,10 +395,10 @@ The `Compact` variant option can be used to make it easer for humans to read and
               )
           )
       )
-      ⍴json←1 ⎕JSON j
-94
+      ⍴json←1 ⎕JSON ns
+97
       json
-{"a":{"b":["string 1","string 2"],"c":true,"d":{"e":false,"f⍺":["string 3",123,1000.2,null]}}}
+{"a":{"b":["charvec 1","charvec 2"],"c":true,"d":{"e":false,"f⍺":["charvec 3",123,1000.2,null]}}}
 
       ⍴json←1(⎕JSON⍠'Compact' 0)ns
 208
@@ -397,14 +406,14 @@ The `Compact` variant option can be used to make it easer for humans to read and
 {
   "a": {
     "b": [
-      "string 1",
-      "string 2"
+      "charvec 1",
+      "charvec 2"
     ],
     "c": true,
     "d": {
       "e": false,
-      "f⍙9082⍙": [
-        "string 3",
+      "f⍺": [
+        "charvec 3",
         123,
         1000.2,
         null
@@ -516,7 +525,7 @@ In JSON, a dataset is almost universally represented as an *array of objects* (J
 Note that the JSON structure can be represented in APL:
 
 ```apl
-      ⎕←Fields{()⎕VSET(↑⍺)⍵}⍤1⍉↑Items Price Qty
+      ⎕←Fields{()⎕VSET(↑⍺)⍵}⍤1⍉↑items price qty
  #.[Namespace]  #.[Namespace]  #.[Namespace] 
 ```
 
@@ -567,7 +576,7 @@ The following example illustrates how JavaScript objects can be exported. In the
           slide:⊂' function( event, ui ) {$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );}'
       )
       1 ⎕JSON slider
-{"max":500,"min":0,"range":true,"slide": function( event, ui ) {$( \"#amount\" ).val( \"$\" + ui.values[ 0 ] + \" - $\" + ui.values[ 1 ] );},"values":[75,300]}
+{"max":500,"min":0,"range":true,"slide":function(event,ui){$("#amount").val("$"+ui.values[0] + " - $" + ui.values[1]);},"values":[75,300]}
 ```
 
 #### Wrapper code `2`: Single Mixed-Type Matrix
@@ -577,7 +586,7 @@ A dataset can be represented as a single mixed-type matrix:
 ```apl
       ⎕←singleMatrix←fields⍪⍉↑items price qty
 ┌─────┬─────┬───┐
-│Item │Price│Qty│
+│item │price│qty│
 ├─────┼─────┼───┤
 │Knife│3    │23 │
 ├─────┼─────┼───┤
@@ -593,14 +602,14 @@ The advantage of this structure is that it preserves visual fidelity with a prin
 
 ```apl
       1 ⎕JSON⊂2 singleMatrix
-[{"Item":"Knife","Price":3,"Qty":23},{"Item":"Fork","Price":4,"Qty":45},{"Item":"Spoon","Price":4,"Qty":67}]
+[{"item":"Knife","price":3,"qty":23},{"item":"Fork","price":4,"qty":45},{"item":"Spoon","Price":5,"qty":67}]
 ```
 
 Note that the APL structure *can* be represented in JSON, though this is not a common way to represent a dataset:
 
 ```apl
       1(⎕JSON⍠'HighRank' 'Split')singleMatrix
-[["Item","Price","Qty"],["Knife",3,23],["Fork",4,45],["Spoon",4,67]]
+[["item","Price","qty"],["Knife",3,23],["Fork",4,45],["Spoon",5,67]]
 ```
 
 #### Wrapper code `3`: Value matrix with separate header vector
@@ -611,11 +620,11 @@ A dataset can be represented as a value matrix with a separate header vector:
       ⎕←valueMatrix_header←(⍉↑items price qty)fields
 ┌────────────┬────────────────┐
 │┌─────┬─┬──┐│┌────┬─────┬───┐│
-││Knife│3│23│││Item│Price│Qty││
+││Knife│3│23│││item│Price│qty││
 │├─────┼─┼──┤│└────┴─────┴───┘│
 ││Fork │4│45││                │
 │├─────┼─┼──┤│                │
-││Spoon│4│67││                │
+││Spoon│5│67││                │
 │└─────┴─┴──┘│                │
 └────────────┴────────────────┘
 ```
@@ -626,14 +635,14 @@ The advantage of this structure is that it allows indexing into the rows and col
 
 ```apl
       1 ⎕JSON⊂3 valueMatrix_header
-[{"Item":"Knife","Price":3,"Qty":23},{"Item":"Fork","Price":4,"Qty":45},{"Item":"Spoon","Price":4,"Qty":67}]
+[{"item":"Knife","Price":3,"qty":23},{"item":"Fork","Price":4,"qty":45},{"item":"Spoon","Price":5,"qty":67}]
 ```
 
 Note that the APL structure *can* be represented in JSON, though this is not a common way to represent a dataset:
 
 ```apl
       1(⎕JSON⍠'HighRank' 'Split')valueMatrix_header
-[[["Knife",3,23],["Fork",4,45],["Spoon",4,67]],["Item","Price","Qty"]]
+[[["Knife",3,23],["Fork",4,45],["Spoon",5,67]],["item","Price","qty"]]
 ```
 
 #### Wrapper code `4`: Inverted table with a separate header vector
@@ -644,7 +653,7 @@ A dataset can be represented as an inverted table (vector of column vectors) tog
       ⎕←invertedTable_header←(items price qty)fields
 ┌───────────────────────────────────┬────────────────┐
 │┌──────────────────┬─────┬────────┐│┌────┬─────┬───┐│
-││┌─────┬────┬─────┐│3 4 4│23 45 67│││Item│Price│Qty││
+││┌─────┬────┬─────┐│3 4 5│23 45 67│││item│Price│qty││
 │││Knife│Fork│Spoon││     │        ││└────┴─────┴───┘│
 ││└─────┴────┴─────┘│     │        ││                │
 │└──────────────────┴─────┴────────┘│                │
@@ -657,14 +666,14 @@ The advantage of this structure is that it can consume significantly less memory
 
 ```apl
       1 ⎕JSON⊂4 invertedTable_header
-[{"Item":"Knife","Price":3,"Qty":23},{"Item":"Fork","Price":4,"Qty":45},{"Item":"Spoon","Price":4,"Qty":67}]
+[{"item":"Knife","Price":3,"qty":23},{"item":"Fork","Price":4,"qty":45},{"item":"Spoon","Price":5,"qty":67}]
 ```
 
 Note that the APL structure *can* be represented in JSON, though this is not a common way to represent a dataset:
 
 ```apl
       1 ⎕JSON invertedTable_header
-[[["Knife","Fork","Spoon"],[3,4,4],[23,45,67]],["Item","Price","Qty"]]
+[[["Knife","Fork","Spoon"],[3,4,5],[23,45,67]],["item","Price","qty"]]
 ```
 
 If `HighRank` is `1`, character columns can also be stored as character matrices:
@@ -717,21 +726,21 @@ The following example selects the second record (Fork):
 
 ```apl
       1 ⎕JSON⊂4 invertedTable_header 2
-[{"Item":"Fork","Price":4,"Qty":45}]
+[{"item":"Fork","Price":4,"qty":45}]
 ```
 
-The following example selects the first and third fields (Item and Qty):
+The following example selects the first and third fields (`item` and `qty`):
 
 ```apl
       1 ⎕JSON⊂4 invertedTable_header(⊂⍬)(1 3)
-[{"Item":"Knife","Qty":23},{"Item":"Fork","Qty":45},{"Item":"Spoon","Qty":67}]
+[{"item":"Knife","qty":23},{"item":"Fork","qty":45},{"item":"Spoon","qty":67}]
 ```
 
-The following example selects the second record (Fork) and the first and third fields (Item and Qty):
+The following example selects the second record (Fork) and the first and third fields (item and qty):
 
 ```apl
       1 ⎕JSON⊂4 invertedTable_header 2(1 3)
-[{"Item":"Fork","Qty":45}]
+[{"item":"Fork","qty":45}]
 ```
 
 #### Namespaces and Sub-Arrays
@@ -742,7 +751,7 @@ Wrappers in namespaces and sub-arrays are recognised for special treatment.
 
 ```apl
       1 ⎕JSON(test:⊂2 matrix)(⊂2 matrix)
-[{"test":[{"Item":"Knife","Price":3,"Qty":23},{"Item":"Fork","Price":4,"Qty":45},{"Item":"Spoon","Price":4,"Qty":67}]},[{"Item":"Knife","Price":3,"Qty":23},{"Item":"Fork","Price":4,"Qty":45},{"Item":"Spoon","Price":4,"Qty":67}]]
+[{"test":[{"item":"Knife","Price":3,"qty":23},{"item":"Fork","Price":4,"qty":45},{"item":"Spoon","Price":5,"qty":67}]},[{"item":"Knife","Price":3,"qty":23},{"item":"Fork","Price":4,"qty":45},{"item":"Spoon","Price":5,"qty":67}]]
 ```
 
 ## JSON Name Mangling
