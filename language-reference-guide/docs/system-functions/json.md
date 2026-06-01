@@ -36,7 +36,7 @@ The following variant options pertain equally to both import and export. Variant
 
 ### Format Option
 
-The `Format` variant option determines if the imported or exported APL array is the closest APL equivalent to the corresponding JSON data or if it is a matrix that encodes the JSON data.
+The `Format` variant option determines if the imported or exported APL array is the closest APL equivalent to the corresponding JSON data or if it is a matrix that encodes the JSON data. It is treated under separate headings for import and export.
 
 ### Dialect Option
 
