@@ -36,7 +36,7 @@ The following variant options pertain equally to both import and export. Variant
 
 ### Format Option
 
-The `Format` variant option determines if the imported or exported APL array is the closest APL equivalent to the corresponding JSON data or if it is a matrix that encodes the JSON data. It is treated under separate headings for import and export.
+The `Format` variant option determines if the imported or exported APL array is the closest APL equivalent to the corresponding JSON (`'D`' for "Data, the default) or if it is a matrix that encodes the JSON (`'M'` for "Matrix"). The per-direction details are under [Import as Data](#import-as-data-format-is-d) / [Import as Matrix](#import-as-matrix-format-is-M) and [Export Data](#export-data-format-is-D) / [Export Matrix](#export-data-format-is -m).
 
 ### Dialect Option
 
@@ -83,7 +83,7 @@ The `Null` variant option can be used to select how JSON `null` is represented i
 | `⊂'null'` { .shaded } | Rejected (`DOMAIN ERROR`). |
 | `⎕NULL` | Allowed. |
 
-Note that `Null` being `⎕NULL` will still let `⊂'null'` be exported, as it will be interpreter as wrapper (mechanism for special handling) of raw text. See [Wrapper code 1](#wrapper-code-1-raw-text).
+Note that `Null` being `⎕NULL` will still let `⊂'null'` be exported, as it will be interpreted as wrapper (mechanism for special handling) of raw text. See [Wrapper code 1](#wrapper-code-1-raw-text).
 
 **Examples**
 
@@ -188,6 +188,7 @@ e
 
 If `Format` is `'M'` (which stands for "Matrix") the result `R` is a matrix whose columns contain the following:
 
+| Column     | Contents                       |
 |------------|--------------------------------|
 | `[;1]`     | Depth                          |
 | `[;2]`     | Name (for JSON object members) |
@@ -310,6 +311,7 @@ If `Format` is `'D'` (which stands for "Data") the APL value in `Y` is converted
 
 If `Format` is `'M'` (which stands for "Matrix"), `Y` must be a matrix whose columns contain the following:
 
+| Column     | Contents                              |
 |------------|---------------------------------------|
 | `[;1]`     | Depth                                 |
 | `[;2]`     | Name (for JSON object members)        |
@@ -573,10 +575,10 @@ The following example illustrates how JavaScript objects can be exported. In the
           min:0
           max:500
           values:75 300
-          slide:⊂' function( event, ui ) {$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );}'
+          slide:⊂'function(event,ui){$("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);}'
       )
       1 ⎕JSON slider
-{"max":500,"min":0,"range":true,"slide":function(event,ui){$("#amount").val("$"+ui.values[0] + " - $" + ui.values[1]);},"values":[75,300]}
+{"max":500,"min":0,"range":true,"slide":function(event,ui){$("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);},"values":[75,300]}
 ```
 
 #### Wrapper code `2`: Single Mixed-Type Matrix
@@ -602,14 +604,14 @@ The advantage of this structure is that it preserves visual fidelity with a prin
 
 ```apl
       1 ⎕JSON⊂2 singleMatrix
-[{"item":"Knife","price":3,"qty":23},{"item":"Fork","price":4,"qty":45},{"item":"Spoon","Price":5,"qty":67}]
+[{"item":"Knife","price":3,"qty":23},{"item":"Fork","price":4,"qty":45},{"item":"Spoon","price":5,"qty":67}]
 ```
 
 Note that the APL structure *can* be represented in JSON, though this is not a common way to represent a dataset:
 
 ```apl
       1(⎕JSON⍠'HighRank' 'Split')singleMatrix
-[["item","Price","qty"],["Knife",3,23],["Fork",4,45],["Spoon",5,67]]
+[["item","price","qty"],["Knife",3,23],["Fork",4,45],["Spoon",5,67]]
 ```
 
 #### Wrapper code `3`: Value matrix with separate header vector
@@ -620,7 +622,7 @@ A dataset can be represented as a value matrix with a separate header vector:
       ⎕←valueMatrix_header←(⍉↑items price qty)fields
 ┌────────────┬────────────────┐
 │┌─────┬─┬──┐│┌────┬─────┬───┐│
-││Knife│3│23│││item│Price│qty││
+││Knife│3│23│││item│price│qty││
 │├─────┼─┼──┤│└────┴─────┴───┘│
 ││Fork │4│45││                │
 │├─────┼─┼──┤│                │
@@ -635,14 +637,14 @@ The advantage of this structure is that it allows indexing into the rows and col
 
 ```apl
       1 ⎕JSON⊂3 valueMatrix_header
-[{"item":"Knife","Price":3,"qty":23},{"item":"Fork","Price":4,"qty":45},{"item":"Spoon","Price":5,"qty":67}]
+[{"item":"Knife","price":3,"qty":23},{"item":"Fork","price":4,"qty":45},{"item":"Spoon","price":5,"qty":67}]
 ```
 
 Note that the APL structure *can* be represented in JSON, though this is not a common way to represent a dataset:
 
 ```apl
       1(⎕JSON⍠'HighRank' 'Split')valueMatrix_header
-[[["Knife",3,23],["Fork",4,45],["Spoon",5,67]],["item","Price","qty"]]
+[[["Knife",3,23],["Fork",4,45],["Spoon",5,67]],["item","price","qty"]]
 ```
 
 #### Wrapper code `4`: Inverted table with a separate header vector
@@ -653,7 +655,7 @@ A dataset can be represented as an inverted table (vector of column vectors) tog
       ⎕←invertedTable_header←(items price qty)fields
 ┌───────────────────────────────────┬────────────────┐
 │┌──────────────────┬─────┬────────┐│┌────┬─────┬───┐│
-││┌─────┬────┬─────┐│3 4 5│23 45 67│││item│Price│qty││
+││┌─────┬────┬─────┐│3 4 5│23 45 67│││item│price│qty││
 │││Knife│Fork│Spoon││     │        ││└────┴─────┴───┘│
 ││└─────┴────┴─────┘│     │        ││                │
 │└──────────────────┴─────┴────────┘│                │
@@ -666,17 +668,17 @@ The advantage of this structure is that it can consume significantly less memory
 
 ```apl
       1 ⎕JSON⊂4 invertedTable_header
-[{"item":"Knife","Price":3,"qty":23},{"item":"Fork","Price":4,"qty":45},{"item":"Spoon","Price":5,"qty":67}]
+[{"item":"Knife","price":3,"qty":23},{"item":"Fork","price":4,"qty":45},{"item":"Spoon","price":5,"qty":67}]
 ```
 
 Note that the APL structure *can* be represented in JSON, though this is not a common way to represent a dataset:
 
 ```apl
       1 ⎕JSON invertedTable_header
-[[["Knife","Fork","Spoon"],[3,4,5],[23,45,67]],["item","Price","qty"]]
+[[["Knife","Fork","Spoon"],[3,4,5],[23,45,67]],["item","price","qty"]]
 ```
 
-If `HighRank` is `1`, character columns can also be stored as character matrices:
+If `HighRank` is `'Split'`, character columns can also be stored as character matrices:
 
 ```apl
       ⎕←invertedTable2_header←(↑¨items price qty)fields
@@ -726,7 +728,7 @@ The following example selects the second record (Fork):
 
 ```apl
       1 ⎕JSON⊂4 invertedTable_header 2
-[{"item":"Fork","Price":4,"qty":45}]
+[{"item":"Fork","price":4,"qty":45}]
 ```
 
 The following example selects the first and third fields (`item` and `qty`):
@@ -751,7 +753,7 @@ Wrappers in namespaces and sub-arrays are recognised for special treatment.
 
 ```apl
       1 ⎕JSON(test:⊂2 matrix)(⊂2 matrix)
-[{"test":[{"item":"Knife","Price":3,"qty":23},{"item":"Fork","Price":4,"qty":45},{"item":"Spoon","Price":5,"qty":67}]},[{"item":"Knife","Price":3,"qty":23},{"item":"Fork","Price":4,"qty":45},{"item":"Spoon","Price":5,"qty":67}]]
+[{"test":[{"item":"Knife","price":3,"qty":23},{"item":"Fork","price":4,"qty":45},{"item":"Spoon","price":5,"qty":67}]},[{"item":"Knife","price":3,"qty":23},{"item":"Fork","price":4,"qty":45},{"item":"Spoon","price":5,"qty":67}]]
 ```
 
 ## JSON Name Mangling
