@@ -28,7 +28,7 @@ plugins:
         enable: true
         start_index: 1
         increment_index: 1
-        position: bottom
+        position: top
 extra:
   version_maj: 21
   version_majmin: 21.0
