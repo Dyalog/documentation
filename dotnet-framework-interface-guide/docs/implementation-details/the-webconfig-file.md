@@ -14,13 +14,13 @@ The **web.config** file provided with Dyalog is located in **[DYALOG]\Samples\as
 
 <code class="language-nonAPL">DyalogCompilerOptions</code> – defines options for the script compiler, for example, to set `⎕WX`to 1, use "`/wx:1`"
 
-<code class="language-nonAPL">DyalogCompilerEmitPragmas</code> – set to "true" if you are using workspace behind (for more information on workspace behind, see [Section ](workspace-behind.md))
+<code class="language-nonAPL">DyalogCompilerEmitPragmas</code> – set to "true" if you are using workspace behind (for more information on workspace behind, see [xxx](workspace-behind.md))
 
 - <code class="language-nonAPL">debug</code> – "true" (default)  to bind the script to the Development DLL, or "false" to bind the script to the run-time DLL
 - <code class="language-nonAPL">DyalogCompilerEncoding</code> – "classic" or "unicode"
 - <code class="language-nonAPL">DyalogCompilerOptions</code> – defines options for the script compiler, for example, to set `⎕WX`to `1`, use "`/wx:1`"
-- <code class="language-nonAPL">DyalogCompilerEmitPragmas</code> – set to "true" if you are using workspace behind (for more information on workspace behind, see [Section ](workspace-behind.md))
+- <code class="language-nonAPL">DyalogCompilerEmitPragmas</code> – set to "true" if you are using workspace behind (for more information on workspace behind, see [xxx](workspace-behind.md))
 
-- <code class="language-nonAPL">DyalogIsolationMode</code><br />This parameter specifies the isolation method. For more information on isolation modes, see [Section .](isolation-mode.md)
+- <code class="language-nonAPL">DyalogIsolationMode</code><br />This parameter specifies the isolation method. For more information on isolation modes, see [Isolation Mode](isolation-mode.md)
 
 - <code class="language-nonAPL">DyalogCacheDirectory</code><br />This parameter defines the directory in which to save cached files.

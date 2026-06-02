@@ -4,7 +4,7 @@ Dyalog's .NET Framework Interface features include:
 
 - the ability to create and use objects that are instances of .NET classes.
 
-    The .NET Framework defines a _Common Type System_. This provides a set of data types, permitted values, and permitted operations. All co‑operating languages are supposed to use these types so that operations and values can be checked (by the Common Language Runtime) at run time. The .NET Framework provides its own built-in class library that provides all the primitive data types, together with higher-level classes that perform useful operations.
+    The .NET Framework defines a [_Common Type System_](https://learn.microsoft.com/en-us/dotnet/standard/base-types/common-type-system). This provides a set of data types, permitted values, and permitted operations. All co‑operating languages are supposed to use these types so that operations and values can be checked (by the Common Language Runtime) at run time. The .NET Framework provides its own built-in class library that provides all the primitive data types, together with higher-level classes that perform useful operations.
 
 - the ability to define new .NET classes in Dyalog that can then be used from other .NET languages such as C# and VB.NET.
 
