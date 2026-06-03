@@ -13,27 +13,31 @@ Each time `13⌶` is called, the new list of features replaces the existing list
 
 <p class="example">Example</p>
 
-<pre class="highlight"><code class="language-apl">⍝ Specify the name of the log file
-      'C:/Users/fiona/deprecated_log.txt'(109⌶)0
+<div class="language-apl highlight"><pre><span></span><code><span class="c1">⍝ Specify the name of the log file</span>
+<span class="w">      </span><span class="s1">&#39;C:/Users/fiona/deprecated_log.txt&#39;</span><span class="p">(</span><span class="m">109</span><span class="na">⌶</span><span class="p">)</span><span class="m">0</span>
 
-⍝ Select the features to log
-      13⌶ 'J0C0' 'S32'  </code></pre>
+<span class="c1">⍝ Select the features to log</span>
+<span class="w">      </span><span class="m">13</span><span class="na">⌶</span><span class="w"> </span><span class="s1">&#39;J0C0&#39;</span><span class="w"> </span><span class="s1">&#39;S32&#39;</span><span class="w">  </span>
+</code></pre></div>
 
 After logging has been enabled, every subsequent use of the specified deprecated features is logged. Each line in the log file contains a complete JSON5 object, which includes a description of the deprecated feature and the SI Stack at the point it was called. The log file can be examined using any text editor or from within a Dyalog Session. For example:
 
-<pre class="highlight"><code class="language-apl">      log_entries←0⎕JSON⍠'Dialect' 'JSON5'¨⊃⎕NGET 'C:/Users/fiona/deprecated_log.txt' 1
-      '⋄'⎕ED'log_entries'</code></pre>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="nv">log_entries</span><span class="kd">←</span><span class="m">0</span><span class="nf">⎕JSON</span><span class="na">⍠</span><span class="s1">&#39;Dialect&#39;</span><span class="w"> </span><span class="s1">&#39;JSON5&#39;</span><span class="na">¨</span><span class="o">⊃</span><span class="nf">⎕NGET</span><span class="w"> </span><span class="s1">&#39;C:/Users/fiona/deprecated_log.txt&#39;</span><span class="w"> </span><span class="m">1</span>
+<span class="w">      </span><span class="s1">&#39;⋄&#39;</span><span class="nf">⎕ED</span><span class="s1">&#39;log_entries&#39;</span>
+</code></pre></div>
 If an error occurs when writing to the log file, further logging is suspended. The log file status can be queried at any time by calling `109⌶` with a right argument of `1`; the result is a numeric status code (`0` indicates no error) and a character vector describing the error that was encountered (empty if no error). For example:
 
-<pre class="highlight"><code class="language-apl">      (109⌶)1
-┌─┬┐
-│0││
-└─┴┘</code></pre>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="m">109</span><span class="na">⌶</span><span class="p">)</span><span class="m">1</span>
+<span class="err">┌─┬┐</span>
+<span class="err">│</span><span class="m">0</span><span class="err">││</span>
+<span class="err">└─┴┘</span>
+</code></pre></div>
 or:
-<pre class="highlight"><code class="language-apl">      (109⌶)1
-┌─┬──────────────────────────────────────────┐
-│3│The system cannot find the path specified.│
-└─┴──────────────────────────────────────────┘</code></pre>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="p">(</span><span class="m">109</span><span class="na">⌶</span><span class="p">)</span><span class="m">1</span>
+<span class="err">┌─┬──────────────────────────────────────────┐</span>
+<span class="err">│</span><span class="m">3</span><span class="err">│</span><span class="nv">The</span><span class="w"> </span><span class="nv">system</span><span class="w"> </span><span class="nv">cannot</span><span class="w"> </span><span class="nv">find</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">path</span><span class="w"> </span><span class="nv">specified</span><span class="na">.</span><span class="err">│</span>
+<span class="err">└─┴──────────────────────────────────────────┘</span>
+</code></pre></div>
 
 ### Identifying Files Pertaining to Deprecated Functionality
 
@@ -51,9 +55,10 @@ For Dyalog v20.0, the following labels can be returned:
 
 <p class="example">Example</p>
 
-<pre class="highlight"><code class="language-apl">      1(3535⌶)'.'
- ./J0C0.dcf             J0C0
- ./ws2000.dws           OLDWS
- ./subdir/S32J0C0.dcf   J0C0  S32</code></pre>
+<div class="language-apl highlight"><pre><span></span><code><span class="w">      </span><span class="m">1</span><span class="p">(</span><span class="m">3535</span><span class="na">⌶</span><span class="p">)</span><span class="s1">&#39;.&#39;</span>
+<span class="w"> </span><span class="na">./</span><span class="nv">J0C0</span><span class="na">.</span><span class="nv">dcf</span><span class="w">             </span><span class="nv">J0C0</span>
+<span class="w"> </span><span class="na">./</span><span class="nv">ws2000</span><span class="na">.</span><span class="nv">dws</span><span class="w">           </span><span class="nv">OLDWS</span>
+<span class="w"> </span><span class="na">./</span><span class="nv">subdir</span><span class="na">/</span><span class="nv">S32J0C0</span><span class="na">.</span><span class="nv">dcf</span><span class="w">   </span><span class="nv">J0C0</span><span class="w">  </span><span class="nv">S32</span>
+</code></pre></div>
 
---> </article> </div> <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script> </div> </main> <footer class=md-footer> <nav class="md-footer__inner md-grid" aria-label=Footer> <a href=../ class="md-footer__link md-footer__link--prev" aria-label="Previous: Announcements"> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> </div> <div class=md-footer__title> <span class=md-footer__direction> Previous </span> <div class=md-ellipsis> Announcements </div> </div> </a> <a href=../../new-enhanced/ class="md-footer__link md-footer__link--next" aria-label="Next: New and Enhanced Features"> <div class=md-footer__title> <span class=md-footer__direction> Next </span> <div class=md-ellipsis> New and Enhanced Features </div> </div> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg> </div> </a> </nav> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br>Copyright &copy; 1982-2026 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (<a href=# class=copy onclick="navigator.clipboard.writeText(innerText);return false" title="Click to copy!">2026-06-03 main:cc932c5777</a>).<br>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence. </div> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.path", "navigation.indexes", "navigation.sections", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script> <script src=../../../assets/javascripts/bundle.79ae519e.min.js></script> <script src=../../../javascripts/mathjax.js></script> <script src="../../../assets/external/unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script> <script src="../../../assets/external/unpkg.com/mermaid@11/dist/mermaid.min.js"></script> </body> </html>
+--> </article> </div> <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script> </div> </main> <footer class=md-footer> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br>Copyright &copy; 1982-2026 <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (<a href=# class=copy onclick="navigator.clipboard.writeText(innerText);return false" title="Click to copy!">2026-06-03 main:d3fccd6232</a>).<br>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence. </div> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.path", "navigation.indexes", "navigation.sections"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script> <script src=../../../assets/javascripts/bundle.79ae519e.min.js></script> <script src=../../../javascripts/mathjax.js></script> <script src="../../../assets/external/unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script> <script src="../../../assets/external/unpkg.com/mermaid@11/dist/mermaid.min.js"></script> </body> </html>
