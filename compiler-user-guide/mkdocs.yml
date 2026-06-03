@@ -43,6 +43,7 @@ markdown_extensions:
       generic: true
   - pymdownx.highlight:
       use_pygments: false
+      pygments_lang_class: true
   - attr_list
   - abbr
   - footnotes
