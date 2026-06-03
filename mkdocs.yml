@@ -12,6 +12,7 @@ theme:
     - navigation.path
     - navigation.indexes
     - navigation.sections
+    - navigation.footer
   name: material
   font:
       text: Be Vietnam Pro
