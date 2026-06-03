@@ -40,6 +40,7 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.superfences
   - pymdownx.highlight:
+      use_pygments: false
       pygments_lang_class: true
   - pymdownx.arithmatex:
       generic: true

@@ -39,6 +39,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.highlight:
+      use_pygments: false
   - attr_list
   - abbr
   - footnotes
