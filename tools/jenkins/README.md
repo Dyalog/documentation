@@ -1,5 +1,9 @@
 # Jenkins Pipelines: MkDocs Site Deployment and Restore
 
+> **Operator procedures** (how to publish to staging, push a live preview,
+> release to production, and rotate versions) live in [`RELEASE.md`](RELEASE.md).
+> This file describes the pipeline *architecture*.
+
 ## Purpose
 
 Deploy the [MkDocs](https://www.mkdocs.org/) website which uses the [mike](https://github.com/jimporter/mike) tool for versioning. 
