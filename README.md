@@ -48,7 +48,10 @@ git config --global http.postBuffer 524288000"
    
 ## Publish
 
-[For the person responsible for publishing]
+For the person responsible for publishing: see the **[Release Runbook](tools/jenkins/RELEASE.md)**
+for the full procedures (publish to staging, push a live preview, release to
+production, and version rotation). The low-level `mike` commands behind the
+publish workflow are:
 
 ```
 mike set-default --push 20.0  # only needed once
