@@ -97,9 +97,10 @@ pipeline {
 
         // ============================================================
         // PRODUCTION_VERSIONS: Space-separated list of versions to deploy
-        // Add '21.0' when v21 is ready for production release
+        // 21.0 is published as a live preview (reachable at /21.0/);
+        // 20.0 remains the default (set_as_latest stays unchecked).
         // ============================================================
-        PRODUCTION_VERSIONS = '20.0'
+        PRODUCTION_VERSIONS = '20.0 21.0'
 
         // The "development" version currently on trunk in SVN.
         // When v21 is released and v22 development starts, update this to '22.0'.
