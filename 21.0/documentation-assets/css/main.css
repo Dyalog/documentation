@@ -56,7 +56,7 @@ body {
 code, .command, .Dyalog {
     font-family: APL;
 }
-code[class^="language-"] {
+code[class^="language-"], div[class^="language-"] pre code {
     font-family: "Go Mono", "Courier New", monospace;
     font-size: 1em;
 }
