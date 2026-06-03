@@ -73,7 +73,7 @@ The first few lines of the function are listed below. If the argument is `1`, li
 
 The following image illustrates the user interface provided by `GOLF`. In this example, the user has typed the names of two golfers (one rather more famous than the other).
 
-![Dyalog APL Tee Reservation Service dialog box](../img/s-golfservice-reservation-dialogbox.png)
+![Dyalog APL Tee Reservation Service dialog box](img/s-golfservice-reservation-dialogbox.png)
 
 When the **Book it!** button is pressed, the `BOOK` callback function is triggered:
 
@@ -99,7 +99,7 @@ When the **Book it!** button is pressed, the `BOOK` callback function is trigger
 
 Line `[6]` calls the `MakeBooking` method of the `GS` object, passing it the data entered by the user. The result, a `Booking` object, is assigned to `BOOKING`. Line `[8]` checks its `OK` field to determine whether the reservation was successful. If it was, lines `[9-11]` display the message box shown below – notice how the various fields are extracted and how the `ToLongDateString` and `ToShortTimeString` methods are employed.
 
-![Reservation confirmation message](../img/s-golfservice-reservation-confirmation.png)
+![Reservation confirmation message](img/s-golfservice-reservation-confirmation.png)
 
 When the **Starting Sheet** button is pressed, the `SS` callback function is triggered:
 ```apl
@@ -127,7 +127,7 @@ When the **Starting Sheet** button is pressed, the `SS` callback function is tri
 
 Line `[3]` calls the `GetStartingSheet` method of the `GS` object. The result, a `StartingSheet` object, is assigned to `SHEET`. Line `[4]` checks its `OK` field to determine whether the call was successful. If it was, lines `[5-12]` display the result in a Grid:
 
-![Starting Sheet grid](../img/s-golfservice-startinggrid.png)
+![Starting Sheet grid](img/s-golfservice-startinggrid.png)
 
 ## Exploring Web Services
 
@@ -137,11 +137,11 @@ You can use the Workspace Explorer to browse the proxy class associated with a w
 
 The structure of the <code class="language-nonAPL">LoanResult</code> class is:
 
-![Structure of the LoanResult class](../img/s-loanservice-structure.png)
+![Structure of the LoanResult class](img/s-loanservice-structure.png)
 
 In addition to <code class="language-nonAPL">CalcPayments</code>, which was written in an APL source file, there are a large number of other methods that have been inherited from the base class. The methods exposed by <code class="language-nonAPL">LoanService</code> are:
 
-![Methods exposed by LoanService](../img/s-loanservice-methods.png)
+![Methods exposed by LoanService](img/s-loanservice-methods.png)
 
 ## Asynchronous Use
 
@@ -151,7 +151,7 @@ Each method is exposed as a function with the same name (the synchronous version
 
 The `Beginxxx` functions take two additional parameters; a delegate class that represents a callback function, and a state parameter.
 
-To initiate the call, execute the `Beginxxx` method using the standard parameters followed by two objects. The first is an object of type <code class="language-nonAPL">System.AsyncCallback</code>, representing an asynchronous callback, that is, a callback to be invoked when the asynchronous call is complete. The second is an object that is used to supply extra information. See [xxx](xxx.md) for information on how callbacks are used. If you are not using a callback, these items should be null object references. You can specify a reference to a null object using the expression `(⎕NS'')`. For example, using the <code class="language-nonAPL">LoanService</code> sample:
+To initiate the call, execute the `Beginxxx` method using the standard parameters followed by two objects. The first is an object of type <code class="language-nonAPL">System.AsyncCallback</code>, representing an asynchronous callback, that is, a callback to be invoked when the asynchronous call is complete. The second is an object that is used to supply extra information. See [Using a Callback](#using-a-callback) for information on how callbacks are used. If you are not using a callback, these items should be null object references. You can specify a reference to a null object using the expression `(⎕NS'')`. For example, using the <code class="language-nonAPL">LoanService</code> sample:
 ```apl
       A←LN.BeginCalcPayments 10000 16 10 12 9(⎕NS'')(⎕NS'')
 ```
@@ -184,7 +184,7 @@ LoanResult
 
 ### Using a Callback
 
-The simple approach described in [xxx](xxx) is not always practical. If it can take a significant amount of time for the web service to respond, you might prefer to have the system notify you (using a callback function) when the result from the method is available.
+The simple approach described in [Asynchronous Use](#asynchronous-use) is not always practical. If it can take a significant amount of time for the web service to respond, you might prefer to have the system notify you (using a callback function) when the result from the method is available.
 
 The example function `TestAsyncLoan` in the supplied workspace **[DYALOG]\Samples\asp.net\webservices\webservices.dws** shows how you can do this. It is somewhat artificial, but explains the mechanism that is involved.
 

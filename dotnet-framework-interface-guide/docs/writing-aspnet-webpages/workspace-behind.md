@@ -8,16 +8,16 @@ A similar technique is employed when the code behind the web page is implemented
 
 The two workspaces are called **actfns.dws** and **proj.dws**. The original code used the Dyalog GUI to display an input form, collect and validate the user's input, and calculate and display the results. The original logic supported field level validation, and results were immediately recalculated whenever any field was changed. With some exceptions, this has been changed so that the user must press a button to tell the system to recalculate the results. This approach is more appropriate in an Internet application, especially when connection speed is low. Apart from this change, the applications run approximately as originally designed.
 
-![Structure of the web application](../../img/d-actfns-structure.png){ #structure }
+![Structure of the web application](../img/d-actfns-structure.png){ #structure }
 
 [](#structure) illustrates the structure of the web application and the various files involved. The starting page, **actfns.htm**, provides a menu of options that link to various **.aspx** web pages. These pages are linked to one of the two workspaces through the <code class="language-nonAPL">src=""</code> declaration.
 
 The **actfns.htm** start page offers three application choices:
 
-![actfns.htm start page showing the three options](../../img/s-actfns-startpage.png)
+![actfns.htm start page showing the three options](../img/s-actfns-startpage.png)
 
 When the first option is selected, the system loads **sla_tab.aspx**. This defines the screen layout in terms of ASP.NET controls, including the <code class="language-nonAPL">DataGrid</code> control for tabulating the results. **sla_tab.aspx** contains the declaration <code class="language-nonAPL">Inherits="actuarial" src="actfns.dws"</code>, so ASP.NET loads the actuarial class from this workspace (using a call to Dyalog). When the page is loaded, it generates a <code class="language-nonAPL">Page_Load</code> event, which calls its <code class="language-nonAPL">Page_Load</code> method. This populates the ASP controls with data; the resulting web page is shown in [](#selectionresults).
 
-![The page displayed when <strong>Tabulate single life insurance and annuity values</strong> is selected](../../img/s-actfns-selectionresults.png){ #selectionresults }
+![The page displayed when <strong>Tabulate single life insurance and annuity values</strong> is selected](../img/s-actfns-selectionresults.png){ #selectionresults }
 
 The mechanisms involved are described in [Converting an Existing Workspace](converting-an-existing-workspace.md).

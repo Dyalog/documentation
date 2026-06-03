@@ -23,9 +23,9 @@ There are several ways to specify which of the two versions of the Dyalog DLL (f
 
 If an APL error occurs in an APL .NET object, a suspension will occur and the Session will be available for debugging. It is possible to force this to happen so that you can trace your code.
 
-If your APL class is built directly from a workspace, you can force a suspension by setting stops in your code before using Export to build the DLL. If your class is a web page or web service where the code is contained in a workspace using the _workspace behind_ technique (see [Section ](workspace-behind.md)), you can set stops in this workspace before you `)SAVE` it.
+If your APL class is built directly from a workspace, you can force a suspension by setting stops in your code before using Export to build the DLL. If your class is a web page or web service where the code is contained in a workspace using the _workspace behind_ technique (see [Workspace Behind](../writing-aspnet-webpages/workspace-behind.md)), you can set stops in this workspace before you `)SAVE` it.
 
-If your APL class is defined entirely in a web page, web service, or APL Source file, the only way to set a break point is to insert a line that sets a stop explicitly using `⎕STOP`. It is essential that this line appears after the definition of the function in the script. For example, to set a stop in the web page example from [Section ](your-first-apl-web-page.md) (code is **[DYALOG]\Samples\asp.net\tutorial\intro1.aspx**), the script section would be amended as follows:
+If your APL class is defined entirely in a web page, web service, or APL Source file, the only way to set a break point is to insert a line that sets a stop explicitly using `⎕STOP`. It is essential that this line appears after the definition of the function in the script. For example, to set a stop in the web page example from [Your First APL Web Page](../writing-aspnet-webpages/your-first-apl-web-page.md) (code is **[DYALOG]\Samples\asp.net\tutorial\intro1.aspx**), the script section would be amended as follows:
 ```apl
 <script language="dyalog" runat="server">
 

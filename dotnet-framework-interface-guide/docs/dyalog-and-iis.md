@@ -36,10 +36,10 @@ Internet Information Services (IIS) Manager is a tool for managing IIS. If you a
 
 Following a successful installation of Dyalog, the **dyalog.net** application should appear in the Internet Information Services (IIS) Manager:
 
-![The Internet Information Services (IIS) Manager: dyalog.net application](../img/s-iis-manager.png)
+![The Internet Information Services (IIS) Manager: dyalog.net application](img/s-iis-manager.png)
 
 The **golf**, **temp**, **tutorial**, and **webservices** nodes in the **dyalog.net** application represent separate IIS applications.
 
 The dyalog application pool will appear in the list of **Applications Pools**:
 
-![The Internet Information Services (IIS) Manager: Application Pools](../img/s-iis-application-pools.png)
+![The Internet Information Services (IIS) Manager: Application Pools](img/s-iis-application-pools.png)

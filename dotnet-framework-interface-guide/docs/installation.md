@@ -60,8 +60,8 @@ The **[DYALOG]/Samples** directory contains several sub-directories relating to 
 
 - **aplclasses** – a sub-directory that contains examples of .NET classes written in APL.
 - **bound_exe** – a sub-directory that contains APL source file examples.
-- **asp.net** – a sub-directory that is mapped to the IIS Virtual Directory **dyalog.net** and contains various sample APL web applications, as well as:**web.config** – a file that specifies Dyalog configuration parameters for ASP.NET (see [xxx](the-web-config-file.md)).
-- **web.config** – a file that specifies Dyalog configuration parameters for ASP.NET (see [Section ](the-web-config-file.md)).
+- **asp.net** – a sub-directory that is mapped to the IIS Virtual Directory **dyalog.net** and contains various sample APL web applications, as well as: 
+    - **web.config** – a file that specifies Dyalog configuration parameters for ASP.NET (see [The web.config File](/implementation-details/the-webconfig-file/)).
 - **winforms** – a sub-directory that contains sample applications that use the <code class="language-nonAPL">System.Windows.Forms</code> GUI classes.
 
 ## Enabling the .NET Framework Interface

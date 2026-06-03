@@ -19,9 +19,9 @@ The code must be contained within `:NameSpace` and `:EndNamespace` statements, a
 
 This is compiled to a Windows executable (**.exe**) using **dyalogc** and run from the same command window (see [](#eg1apln)).
 
-![Compiling and running APL Source file <strong>eg1.apln</strong>](../../img/s-aplscript-eg1.png){ #eg1apln }
+![Compiling and running APL Source file <strong>eg1.apln</strong>](../img/s-aplscript-eg1.png){ #eg1apln }
 
-!["Hello World" Message Box (<strong>eg1.exe</strong>)](../../img/s-aplscript-eg1-output.png)
+!["Hello World" Message Box (<strong>eg1.exe</strong>)](../img/s-aplscript-eg1-output.png)
 
 The resulting executable can be associated with a desktop icon, and will run without a command prompt window. Any default APL output that would normally be displayed in the session window will be ignored.
 
@@ -41,7 +41,7 @@ The code must be contained within `:NameSpace` and `:EndNamespace` statements, a
 
 This  is compiled to a Windows executable (**.exe**) using **dyalogc** and run from the same command window (see [](#eg2apln)). The `/console` flag instructs the Dyalog .NET Compiler to create a console application that runs from a command prompt. In this case, default APL output that would normally be displayed in the Session window is instead displayed in the command window from which the program was run.
 
-![Compiling and running APL Source file <strong>eg2.apln</strong>](../../img/s-aplscript-eg2.png){ #eg2apln }
+![Compiling and running APL Source file <strong>eg2.apln</strong>](../img/s-aplscript-eg2.png){ #eg2apln }
 
 ## Defining Namespaces
 

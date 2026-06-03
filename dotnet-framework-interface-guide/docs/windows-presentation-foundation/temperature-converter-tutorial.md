@@ -1,4 +1,4 @@
-# Temperature Converter Tutorial
+<h1 class="heading"><span class="name">Temperature Converter Tutorial</span></h1>
 
 This tutorial illustrates how to develop a simple WPF application in Dyalog. It is functionally identical to the GUI tutorial example that illustrates how to develop a GUI application using the built-in Dyalog APL Graphical User Interface provided in the _Dyalog for Microsoft Windows Interface Guide_.
 
@@ -65,7 +65,7 @@ The XAML for the Temperature Converter is:
 
 ```
 
-![The WPF Temperature Converter](../../img/s-wpf-tempcontrol-1.png)
+![The WPF Temperature Converter](../img/s-wpf-tempcontrol-1.png)
 
 The image above shows the window defined by this XAML. Let us examine the XAML, component by component.
 
@@ -147,7 +147,7 @@ The attachment of a particular child control is specified by setting its <code c
     </Menu>
 ```
 
-![The WPF Temperature Converter with expanded Scale menu](../../img/s-wpf-tempcontrol-2.png)
+![The WPF Temperature Converter with expanded Scale menu](../img/s-wpf-tempcontrol-2.png)
 
 This XAML extract defines a <code class="language-nonAPL">Menu</code>. Setting <code class="language-nonAPL">Dock</code> to "Top" causes the <code class="language-nonAPL">Menu</code> as a whole to be docked, so that it appears like a menubar along the top of the <code class="language-nonAPL">DockPanel</code>. The <code class="language-nonAPL">Menu</code> contains a single <code class="language-nonAPL">MenuItem</code> labelled **Scale**, which itself contains two sub-items labelled **Fahrenheit** and **Centigrade**. The <code class="language-nonAPL">IsCheckable</code> property specifies whether the user can check the <code class="language-nonAPL">MenuItem</code>, and the <code class="language-nonAPL">IsChecked</code> property sets and reports its checked state. The underscore characters (for example, as in "`_Scale`") identify the following character as a keyboard shortcut.
 
@@ -401,7 +401,7 @@ To run the example:
       WPF.UsingCode.TempConverter
 ```
 
-The function `TempConverter` performs the same task of defining and manipulating the user interface for the Temperature Converter as the XAML example in [Section ](using-xaml.md). The callback functions it uses are identical.
+The function `TempConverter` performs the same task of defining and manipulating the user interface for the Temperature Converter as the [XAML example](#using-xaml). The callback functions it uses are identical.
 ```apl
 
      ∇ TempConverter;⎕USING;win;dp;mnu;mnuFahrenheit;mnuCentigrade;gr;tn;rd1;rd2;rd3;rc1;rc2;rc3;l1;l2;txtFahrenheit;txtCentigrade;btnF2C;btnC2F;btnQuit;sink;mnuScale;scrTemp

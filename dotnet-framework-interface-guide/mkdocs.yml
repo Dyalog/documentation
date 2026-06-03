@@ -7,6 +7,7 @@ theme:
     - navigation.tracking
     - navigation.path
     - navigation.indexes
+    - navigation.footer
   name: material
   font:
     text: Be Vietnam Pro
@@ -40,6 +41,9 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.highlight:
+      use_pygments: false
+      pygments_lang_class: true
   - attr_list
   - abbr
   - footnotes
@@ -74,7 +78,22 @@ nav:
       - General Principles of APL Source Files: apl-source-files/general-principles-of-apl-source-files.md
       - Creating Programs (.exe Files) with APL Source Files: apl-source-files/creating-programs-with-apl-source-files.md
       - Creating ASP.NET Classes with APL Source Files: apl-source-files/creating-aspnet-classes-with-apl-source-files.md
+  - Writing .NET Classes:
+      - writing-dotnet-classes/index.md
+      - Assemblies, Namespaces, and Classes: writing-dotnet-classes/assemblies-namespaces-and-classes.md
+      - Tutorial: writing-dotnet-classes/tutorial.md
+      - Interfaces: writing-dotnet-classes/interfaces.md
+      - Creating .NET Classes within APL Source Files: writing-dotnet-classes/creating-dotnet-classes-within-apl-source-files.md
   - Dyalog and IIS: dyalog-and-iis.md
+  - Writing Web Services:
+      - writing-web-services/index.md
+      - xxx: writing-web-services/xxx.md
+      - Compilation: writing-web-services/compilation.md
+      - xxx: writing-web-services/xxx.md
+      - xxx: writing-web-services/xxx.md
+      - xxx: writing-web-services/xxx.md
+      - xxx: writing-web-services/xxx.md
+      - xxx: writing-web-services/xxx.md
   - Calling Web Services: calling-web-services.md
   - Writing ASP.NET Web Pages:
       - writing-aspnet-webpages/index.md
@@ -83,6 +102,12 @@ nav:
       - Code-Behind: writing-aspnet-webpages/code-behind.md
       - Workspace Behind: writing-aspnet-webpages/workspace-behind.md
       - Converting an Existing Workspace: writing-aspnet-webpages/converting-an-existing-workspace.md
+  - Writing Custom Controls for ASP.NET:
+      - writing-custom-aspnet-controls/index.md
+      - "Example: The SimpleCtl Control": writing-custom-aspnet-controls/example-the-simplectl-control.md
+      - "Example: The TemperatureConverterCtl1 Control": writing-custom-aspnet-controls/example-the-temperatureconverterctl1-control.md
+      - "Example: The TemperatureConverterCtl2 Control": writing-custom-aspnet-controls/example-the-temperatureconverterctl2-control.md
+      - "Example: The TemperatureConverterCtl3 Control": writing-custom-aspnet-controls/example-the-temperatureconverterctl3-control.md
   - Implementation Details:
       - implementation-details/index.md
       - Isolation Mode: implementation-details/isolation-mode.md

@@ -2,7 +2,7 @@
 
 <code class="language-nonAPL">System.Windows.Forms</code> is a .NET namespace that provides a set of classes for creating the GUI for Microsoft Windows applications.
 
-As an alternative to the built-in Dyalog GUI, Windows Forms has been superseded by Windows Presentation Foundation (see [xxx](xxx.md)). This page is included to support existing Dyalog applications that make use of Windows Forms.
+As an alternative to the built-in Dyalog GUI, Windows Forms has been superseded by [Windows Presentation Foundation](windows-presentation-foundation/index.md). This page is included to support existing Dyalog applications that make use of Windows Forms.
 
 ## Creating GUI Objects
 

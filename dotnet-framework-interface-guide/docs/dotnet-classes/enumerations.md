@@ -4,7 +4,7 @@ An _enumeration_ is a set of named constants that can apply to a particular oper
 
 In the.NET Framework, enums are implemented as classes that inherit from the <code class="language-nonAPL">System.Enum</code> base class. The class as a whole represents a set of enumerated constants; each of the constants is represented by a static field within the class.
 
-[xxx](using-windows-forms.md) (and its sub-sections) describes the use of <code class="language-nonAPL">System.Windows.Forms</code> to create and manipulate the user interface. The classes in this .NET namespace use enums extensively. For example, the <code class="language-nonAPL">System.Windows.Forms.FormBorderStyle</code> class contains a set of static fields named <code class="language-nonAPL">None</code>, <code class="language-nonAPL">FixedDialog</code>, <code class="language-nonAPL">Sizeable</code>, and so on. These fields have specific integer values, but the values themselves are of no interest to the programmer.
+[Using Windows Forms](../using-windows-forms.md) (and its sub-sections) describes the use of <code class="language-nonAPL">System.Windows.Forms</code> to create and manipulate the user interface. The classes in this .NET namespace use enums extensively. For example, the <code class="language-nonAPL">System.Windows.Forms.FormBorderStyle</code> class contains a set of static fields named <code class="language-nonAPL">None</code>, <code class="language-nonAPL">FixedDialog</code>, <code class="language-nonAPL">Sizeable</code>, and so on. These fields have specific integer values, but the values themselves are of no interest to the programmer.
 
 Typically, an enumerated constant would be used as a parameter to a method or to specify the value of a property.
 

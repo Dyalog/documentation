@@ -111,17 +111,17 @@ The following expressions can be used to explore the effect of data binding:
       Text 'Hello World'
 ```
 
-![](../../img/s-data-binding-eg1-1.png)
+![](../img/s-data-binding-eg1-1.png)
 
 ```apl
       txtSource←⌽txtSource
 ```
 
-![](../../img/s-data-binding-eg1-2.png)
+![](../img/s-data-binding-eg1-2.png)
 
 Typing into the TextBox changes the value of the bound variable:
 
-![](../../img/s-data-binding-eg1-3.png)
+![](../img/s-data-binding-eg1-3.png)
 ```apl
       txtSource
 What is in txtSource now?
@@ -193,7 +193,7 @@ The key difference is in line `[8]`. Here, the left argument of `(2015⌶)` is `
       FontSize 12
 ```
 
-![](../../img/s-data-binding-eg2-1.png)
+![](../img/s-data-binding-eg2-1.png)
 
 ```apl
       sizeSource
@@ -201,7 +201,7 @@ The key difference is in line `[8]`. Here, the left argument of `(2015⌶)` is `
       sizeSource←30
 ```
 
-![](../../img/s-data-binding-eg2-2.png)
+![](../img/s-data-binding-eg2-2.png)
 
 
 ## Example 3: Specification using APL
@@ -301,17 +301,17 @@ As in [Example 2](#the-apl-code_1), the left-argument to `(2015⌶)` specifies t
       TextFontSize 'Hello World' 30
 ```
 
-![](../../img/s-data-binding-eg3-1.png)
+![](../img/s-data-binding-eg3-1.png)
 
 ```apl
       txtSource sizeSource←(⌽txtSource) 18
 ```
 
-![](../../img/s-data-binding-eg3-2.png)
+![](../img/s-data-binding-eg3-2.png)
 
 As in previous examples, when the user changes the text, the new text appears in `txtSource`:
 
-![](../../img/s-data-binding-eg3-3.png)
+![](../img/s-data-binding-eg3-3.png)
 ```apl
       txtSource
 Learn to play the bouzouki!
@@ -393,21 +393,20 @@ The left argument  of `(2015⌶)` is optional. Without it, the namespace will ex
       TextFontSize'Hello World' 30
 ```
 
-![](../../img/s-data-binding-eg3-1.png)
+![](../img/s-data-binding-eg3-1.png)
 
 ```apl
       src.(txtSource sizeSource←(⌽txtSource) 18)
 ```
 
-![](../../img/s-data-binding-eg3-2.png)
+![](../img/s-data-binding-eg3-2.png)
 
 When the user changes the text, the new text appears in `txtSource`:
 
-![](../../img/s-data-binding-eg3-3.png)
+![](../img/s-data-binding-eg3-3.png)
 ```apl
       src.txtSource
-Learn to play the bouzouki!
-			
+Learn to play the bouzouki!			
 ```
 
 ## Example 5: Vector of Character Vectors
@@ -490,7 +489,7 @@ The `DataContext` property is inherited by all child controls, so they all share
       DataBinding.FilteredList.FilteredList
 ```
 
-![](../../img/s-data-binding-eg5-1.png)
+![](../img/s-data-binding-eg5-1.png)
 
 If the user types a single character, in this case "e", into the <code class="language-nonAPL">TextBox</code>, this fires a <code class="language-nonAPL">TextChanged</code> event which in turn fires the callback function shown:
 ```apl
@@ -503,7 +502,7 @@ If the user types a single character, in this case "e", into the <code class="la
 
 When the callback runs, the variable `MySource.Filter`, which is bound to the <code class="language-nonAPL">Text</code> property of the <code class="language-nonAPL">TextBox</code>, will contain "e". The function calculates a mask `hits`, which identifies which members of the variable `DyalogNames`  contain this string. It then assigns that subset to the variable `MySource.FilteredList`. This is bound to the <code class="language-nonAPL">ItemsSource</code> property of the right-hand <code class="language-nonAPL">ListBox</code>, so the result is:
 
-![](../../img/s-data-binding-eg5-2.png)
+![](../img/s-data-binding-eg5-2.png)
 
 The list of results can be further reduced by typing additional characters into the TextBox.
 
@@ -581,7 +580,7 @@ Then, Line `[5]` creates a binding source object from this array and assigns it 
 
 ```
 
-![](../../img/s-data-binding-eg6-1.png)
+![](../img/s-data-binding-eg6-1.png)
 
 ## Example 7: Data Conversion
 
@@ -638,7 +637,7 @@ Lines `[4-5]` create a vector of integer vectors each of which species the time 
       DataBinding.NetObjects.Tides
 ```
 
-![](../../img/s-data-binding-eg7-1.png)
+![](../img/s-data-binding-eg7-1.png)
 
 ## Example 8: Vector of Namespaces
 
@@ -697,14 +696,14 @@ The global variable `Wines` contains a vector of character vectors, each of whic
       Grid
 ```
 
-![](../../img/s-data-binding-eg8-1.png)
+![](../img/s-data-binding-eg8-1.png)
 
 The prices can be rounded to the nearest $5:
 ```apl
  winelist.Price←5×⌊0.5+winelist.Price÷5
 ```
 
-![](../../img/s-data-binding-eg8-2.png)
+![](../img/s-data-binding-eg8-2.png)
 
 ## Example 9: Matrix of Namespaces
 
@@ -770,14 +769,14 @@ As in [Example 8](#the-apl-code_7), the global variable `Wines` contains a vecto
       Grid
 ```
 
-![](../../img/s-data-binding-eg9-1.png)
+![](../img/s-data-binding-eg9-1.png)
 
 The prices can be rounded to the nearest $5:
 ```apl
  winelist[;2]←5×⌊0.5+winelist[;2]÷5
 ```
 
-![](../../img/s-data-binding-eg9-2.png)
+![](../img/s-data-binding-eg9-2.png)
 
 ### Using Code
 

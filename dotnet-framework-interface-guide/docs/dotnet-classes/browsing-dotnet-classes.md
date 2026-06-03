@@ -25,7 +25,7 @@ Within the tree structure of the **mscorlib.dll** Assembly, navigate to **Namesp
 
 Open the **Constructors** directory.
 
-![Workspace Tree displaying the System.DateTime constructors](../../img/s-browsing-classes-systemdatetimeconstructors.png)
+![Workspace Tree displaying the System.DateTime constructors](../img/s-browsing-classes-systemdatetimeconstructors.png)
 
 The image above shows the different constructors that are available when creating a new <code class="language-nonAPL">DateTime</code> instance. From these constructors, it can be deduced that <code class="language-nonAPL">DateTime.New</code> can be called with three numeric (<code class="language-nonAPL">Int32</code>) parameters, or six numeric (<code class="language-nonAPL">Int32</code>) parameters, or any of several other options.
 
@@ -39,7 +39,7 @@ This means that the following statement can be used to create a new instance of 
 
 Open the **Properties** directory.
 
-![Workspace Tree displaying the System.DateTime properties](../../img/s-browsing-classes-systemdatetimeproperties.png)
+![Workspace Tree displaying the System.DateTime properties](../img/s-browsing-classes-systemdatetimeproperties.png)
 
 The image above shows the different properties and their data type, for example, the <code class="language-nonAPL">DayOfYear</code> property is of type <code class="language-nonAPL">Int32</code>.
 
@@ -59,7 +59,7 @@ The data types of some properties are not simple data types, but are .NET Classe
 
 Open the **Methods** directory.
 
-![Workspace Tree displaying the System.DateTime methods](../../img/s-browsing-classes-systemdatetimemethods.png)
+![Workspace Tree displaying the System.DateTime methods](../img/s-browsing-classes-systemdatetimemethods.png)
 
 The image above shows the  data type of the result of the method, followed by the name of the method and the types of its arguments, for example, the <code class="language-nonAPL">IsLeapYear</code> method takes an <code class="language-nonAPL">Int32</code> parameter (year) and returns a Boolean result:
 ```apl
@@ -75,8 +75,8 @@ Value Tips can be used to view the syntax of external functions. If you hover ov
 
 For example, the following image shows the mouse hovered over the external function `dt.AddMonths`, which reveals that it requires a single integer as its argument.
 
-![Function signature – single integer argument](../../img/s-value-tips-single.png)
+![Function signature – single integer argument](../img/s-value-tips-single.png)
 
 If an external function provides more than one signature, then they are all shown in the Value Tip. For example, the figure below shows that the function `ToString` has four different overloads).
 
-![Function signature – multiple arguments](../../img/s-value-tips-multiple.png)
+![Function signature – multiple arguments](../img/s-value-tips-multiple.png)
