@@ -1,16 +1,6 @@
 name: Convert MkDocs to PDF and CHM
 
 on:
-  workflow_dispatch:
-    inputs:
-      generate_pdf:
-        description: 'Generate PDF documentation'
-        type: boolean
-        default: true
-      generate_chm:
-        description: 'Generate CHM help file'
-        type: boolean
-        default: true
   workflow_call:
     inputs:
       generate_pdf:
