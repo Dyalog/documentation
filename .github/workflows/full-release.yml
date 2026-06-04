@@ -15,9 +15,8 @@ permissions:
 
 jobs:
   build-assets:
-    uses: ./.github/workflows/mkdocs-pdf.yml
+    uses: ./.github/workflows/mkdocs-chm.yml
     with:
-      generate_pdf: true
       generate_chm: true
       publish_release: true
     secrets: inherit

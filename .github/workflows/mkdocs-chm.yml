@@ -1,21 +1,14 @@
-name: Convert MkDocs to PDF and CHM
+name: Convert MkDocs to CHM
 
 on:
   workflow_dispatch:
     inputs:
-      generate_pdf:
-        description: 'Generate PDF documentation'
-        type: boolean
-        default: true
       generate_chm:
         description: 'Generate CHM help file'
         type: boolean
         default: true
   workflow_call:
     inputs:
-      generate_pdf:
-        type: boolean
-        default: true
       generate_chm:
         type: boolean
         default: true
@@ -50,15 +43,7 @@ jobs:
     - name: Install system dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y \
-          libcairo2-dev \
-          libpango1.0-dev \
-          libgdk-pixbuf2.0-dev \
-          libffi-dev \
-          shared-mime-info \
-          fonts-liberation \
-          fonts-dejavu \
-          fpc               # for "chmcmd", part of Free Pascal
+        sudo apt-get install -y fpc   # for "chmcmd", part of Free Pascal
 
     - name: Install Python dependencies
       run: |
@@ -67,52 +52,12 @@ jobs:
 
     - name: Prepare directories
       run: |
-        # Ensure output directories exist with proper permissions
-        mkdir -p pdf/output
-        chmod 755 pdf/output
-
+        # Ensure output directory exists with proper permissions
         mkdir -p chm/output
         chmod 755 chm/output
-        
-        # List directory structure for debugging
-        echo "Directory structure:"
-        ls -la pdf/
-        ls -la chm/
 
-    - name: Convert MkDocs to PDF
-      if: ${{ inputs.generate_pdf }}
-      env:
-        GIT_INFO: ${{ steps.git-info.outputs.GIT_INFO }}
-        BUILD_DATE: ${{ steps.git-info.outputs.DATE }}
-      working-directory: ${{ github.workspace }}
-      run: |
-        # Verify required files and directories exist
-        [ -f "pdf/mkdocs2pdf.py" ] || { echo "pdf/mkdocs2pdf.py not found"; exit 1; }
-        [ -f "mkdocs.yml" ] || { echo "mkdocs.yml not found in repository root"; exit 1; }
-        [ -d "pdf/assets" ] || { echo "pdf/assets directory not found"; exit 1; }
-        [ -f "pdf/config.json" ] || { echo "Error: pdf/config.json not found"; exit 1; }
-        [ -d "object-reference" ] || { echo "Error: object-reference directory not found"; exit 1; }
-        [ -f "pdf/fix_objref.py" ] || { echo "Error: pdf/fix_objref.py not found"; exit 1; }
-        
-        # Make scripts executable
-        chmod +x pdf/mkdocs2pdf.py
-        chmod +x pdf/fix_objref.py
-        
-        # Run the fix_objref.py script to transform markdown files
-        python pdf/fix_objref.py --dir "object-reference"
-        
-        # Check the exit status of the previous command
-        if [ $? -ne 0 ]; then
-          echo "Error: fix_objref.py failed"
-          exit 1
-        fi
-        
-        # Run the conversion script
-        python pdf/mkdocs2pdf.py \
-          --mkdocs-yml mkdocs.yml \
-          --config pdf/config.json \
-          --project-dir pdf/output \
-          --assets-dir pdf/assets
+        echo "Directory structure:"
+        ls -la chm/
 
     - name: Convert MkDocs to CHM
       if: ${{ inputs.generate_chm }}
@@ -207,10 +152,6 @@ jobs:
         # Collect assets based on what was generated
         ASSETS=""
         PARTS=""
-        if ${{ inputs.generate_pdf }}; then
-          ASSETS="$ASSETS pdf/output/*.pdf"
-          PARTS="$PARTS PDFs"
-        fi
         if ${{ inputs.generate_chm }}; then
           ASSETS="$ASSETS chm/output/*.chm"
           PARTS="$PARTS CHM"

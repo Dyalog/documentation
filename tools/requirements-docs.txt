@@ -1,4 +1,4 @@
-# Documentation build dependencies for the mkdocs-publish and mkdocs-pdf workflows.
+# Documentation build dependencies for the mkdocs-publish and mkdocs-chm workflows.
 #
 # Pins match the versions installed in the last successful CI runs
 # (2026-04-22). Refresh this file deliberately by a PR that bumps versions
@@ -18,7 +18,9 @@ mkdocs-minify-plugin==0.8.0
 markdown-tables-extended==0.1.3
 pymdown-extensions==10.21.2
 
-# PDF/CHM build dependencies (used by mkdocs-pdf workflow only)
+# CHM build dependencies (used by mkdocs-chm workflow only).
+# weasyprint is retained for parity with the v20 branch's PDF build; the
+# mkdocs-chm workflow on main no longer builds PDFs.
 weasyprint==68.1
 beautifulsoup4==4.14.3
 markdown==3.10.2
