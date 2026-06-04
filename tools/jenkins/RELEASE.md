@@ -179,7 +179,8 @@ When N is released and N+1 development begins. This is the heavyweight
 | Symptom | Cause | Fix |
 |---------|-------|-----|
 | Jenkins: `No release found matching v<ver>.*` | No non-draft GitHub release for that version | Publish a `v<ver>.*` release (not draft) |
-| Jenkins `Get files from svn/docbin` bails | Trunk/branch docbin checkout doesn't match `filelist.txt` | Reconcile SVN docbin content for that version |
+| Jenkins `get_svn_docbin` bails: `SVN includes files that are not in ./filelist.txt` (lists a file) | A file was added to that version's SVN docbin but not to its `filelist.txt` (common on `trunk` when promoting the dev version) | Add the listed file to `filelist.txt` in the version's docbin (`docbin/trunk/documentation` for the trunk version, `docbin/branches/<ver>/documentation` otherwise) as a **tab-separated** line, e.g. `./File.pdf<TAB>web` (`web` = publish; non-`web` = keep out of the site). Commit to SVN, then re-run the build. |
+| Jenkins `get_svn_docbin` bails: `filelist.txt includes files which are not in SVN` (lists a file) | `filelist.txt` references a file that was removed from the docbin | Remove the stale entry from `filelist.txt` (or restore the file in SVN). Commit, then re-run the build. |
 | Version deployed but missing from live dropdown | Production-root `versions.json` not synced (expected for previews) | Update root `versions.json` on the server, or promote via [Procedure D](#d-promote-the-upcoming-version-to-full-production) |
 | Version published to staging but not live | Not in `PRODUCTION_VERSIONS`, or still listed in `.rsync-exclude` | Add to `PRODUCTION_VERSIONS` / remove from `.rsync-exclude` on `main`, then publish |
 | Fixed config but Jenkins still skips deploy | `.git-hash` on server matches last commit ("no changes") | `rm .git-hash` in `WEB_ROOT` to force redeploy |
