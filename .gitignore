@@ -91,3 +91,7 @@ docs/_build/
 
 .cache
 .env
+
+# Claude Code
+CLAUDE.md
+.claude/
