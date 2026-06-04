@@ -46,7 +46,7 @@ publish it to the live site — see [Procedure C](#c-publish-the-upcoming-versio
 | `TRUNK_VERSION` | `Jenkinsfile` | Which version maps to the SVN *trunk* (vs `branches/<ver>/`). Equals **N** while N is in development. |
 | `.rsync-exclude` | `.rsync-exclude` | Defence-in-depth backstop. A version listed here is skipped by `rsync` even if it is in `PRODUCTION_VERSIONS`. |
 | `set_as_latest` | workflow input | When ticked, `mike` repoints the default/`latest` alias (and the root redirect) to the version being published. |
-| GitHub release `v<ver>.*` | (GitHub Releases) | Jenkins' `getVersionedReleaseAssets` downloads PDF/CHM from the newest non-draft release whose tag starts `v<ver>.`. |
+| GitHub release `v<ver>.*` | (GitHub Releases) | Jenkins' `getVersionedReleaseAssets` downloads the release assets from the newest non-draft release whose tag starts `v<ver>.` (CHM for all versions; PDFs only on v20 and earlier). |
 
 > The `Jenkinsfile` and `.rsync-exclude` that Jenkins actually runs live at the
 > root of `gh-pages`, and [`mkdocs-publish.yml`](../../.github/workflows/mkdocs-publish.yml)
@@ -61,13 +61,15 @@ publish it to the live site — see [Procedure C](#c-publish-the-upcoming-versio
 Routine update to the version that is already live and the default.
 
 1. Merge the content PR into the `vM.0` branch.
-2. If PDF/CHM changed: run **Full Release** (or `mkdocs-pdf.yml`) from `vM.0`
-   and publish the resulting GitHub release (not draft).
-3. Run **Publish MkDocs Documentation** from `vM.0`:
-   - leave `version_override` empty (auto-detected as `M` from `mkdocs.yml`);
-   - leave `set_as_latest` **ticked only if M is still the default** (normally
-     yes, until N is promoted).
-4. Jenkins deploys to `docs.dyalog.com/M/` because **M** is in
+2. Publish from `vM.0`. Leave `set_as_latest` **ticked only if M is still the
+   default** (normally yes, until N is promoted):
+   - If the PDF/CHM assets changed, run **Full Release**. It rebuilds the
+     assets, publishes them as a non-draft GitHub release, and republishes the
+     site in one run.
+   - If only content changed, run **Publish MkDocs Documentation** (leave
+     `version_override` empty, auto-detected as `M`) to republish the site
+     against the existing release assets.
+3. Jenkins deploys to `docs.dyalog.com/M/` because **M** is in
    `PRODUCTION_VERSIONS`.
 
 ---
@@ -94,7 +96,7 @@ remains the default. **No `vN.0` git or SVN branch is required** — N stays on
 
 **Prerequisites**
 
-- A **non-draft** GitHub release tagged `vN.*` exists with the PDF/CHM assets.
+- A **non-draft** GitHub release tagged `vN.*` exists with the CHM asset.
   Without it, Jenkins' `getVersionedReleaseAssets` aborts the build with
   `No release found matching vN.*`. Produce one via **Full Release** from
   `main` and publish it.
