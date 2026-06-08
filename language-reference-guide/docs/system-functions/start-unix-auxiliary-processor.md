@@ -19,7 +19,8 @@ search:
 Used dyadically, `⎕SH` starts an Auxiliary Processor. The effect, as far as the APL user is concerned, is identical under both Windows and UNIX although there are differences in the method of implementation. `⎕SH` is a synonym of `⎕CMD` Either function may be used in either environment (UNIX or Windows) with exactly the same effect. This section describes the behaviour of `⎕SH` and `⎕CMD` under UNIX. See [Start Windows Auxiliary Processor](start-windows-auxiliary-processor.md) for a discussion of the behaviour of these system functions under Windows.
 
 
-Although it is still possible for users to create their own APs, Dyalog strongly recommends creating shared libraries/DLLs instead.
+!!! Hint "Hints and Recommendations"
+	Although it is still possible for users to create their own APs, Dyalog strongly recommends creating shared libraries/DLLs instead.
 
 
 
