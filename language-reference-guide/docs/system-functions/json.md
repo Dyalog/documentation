@@ -115,20 +115,20 @@ This object has a member name with a character (`ý`; `⎕UCS 253`) that is not 
 
 Table: Variant options overview { #variant-table }
 
-| Variant Option                             | Value       | Effect on Import                                      | Effect on Export |
-|--------------------------------------------|:-----------:|-------------------------------------------------------|------------------|
-| [**`Format`**](#variant-option-format)     | `'D'`       | `R` is an APL array or namespace corresponding to `Y` | `Y` is an APL array or namespace |
-|_-                                        -_| `'M'`       | `R` is an APL matrix encoding of `Y`                  | `Y` is a 4-column APL matrix as from import with `'M'` |
-| [**`Dialect`**](#variant-option-dialect)   | `'JSON'`    | Only strict JSON syntax is accepted                   | Only strict JSON syntax is produced |
-|_-                                        -_| `'JSON5'`   | [JSON5](https://json5.org/) extensions are accepted   | JSON5 features are used to improve readability and editability, and/or shorten output |
-| [**`Null`**](#variant-option-null)         | `⊂'null'`   | JSON `null` becomes APL `⊂'null'`                     | APL `⊂'null'` becomes JSON `null` |
-|_-                                        -_| `⎕NULL`     | JSON `null` becomes APL `⎕NULL`                       | APL `⎕NULL` becomes JSON `null` |
-| [**`Compact`**](#variant-option-compact)   | `1`         | None                                                  | `R` has no whitespace outside quotes |
-|_-                                        -_| `0`         |_-                                                   -_| `R` has whitespace for readability and, if `Dialect` is `'JSON5'`, trailing commas after final elements and members |
-| [**`Charset`**](#variant-option-charset)   | `'Unicode'` | None                                                  | Unicode characters in `Y` are included verbatim when JSON standard allows |
-|_-                                        -_| `'ASCII'`   |_-                                                   -_| Non-ASCII characters are converted to the hexadecimal form `\uNNNN`, and if `Dialect` is `'JSON5'`, also `\xNN` |
-| [**`HighRank`**](#variant-option-highrank) | `'Error'`   | None                                                  | High-rank arrays are rejected |
-|_-                                        -_| `'Split'`   |_-                                                   -_| High-rank arrays are split and [inverted table wrappers](#dataset-wrappers) accept text columns as matrices |
+| Variant Option                             | Value                                 | Effect on Import                                      | Effect on Export |
+|--------------------------------------------|:-------------------------------------:|-------------------------------------------------------|------------------|
+| [**`Format`**](#variant-option-format)     | `'D'`<br><small>default</small>       | `R` is an APL array or namespace corresponding to `Y` | `Y` is an APL array or namespace |
+|_-                                        -_| `'M'`                                 | `R` is an APL matrix encoding of `Y`                  | `Y` is a 4-column APL matrix as from import with `'M'` |
+| [**`Dialect`**](#variant-option-dialect)   | `'JSON'`<br><small>default</small>    | Only strict JSON syntax is accepted                   | Only strict JSON syntax is produced |
+|_-                                        -_| `'JSON5'`                             | [JSON5](https://json5.org/) extensions are accepted   | JSON5 features are used to improve readability and editability, and/or shorten output |
+| [**`Null`**](#variant-option-null)         | `⊂'null'`<br><small>default</small>   | JSON `null` becomes APL `⊂'null'`                     | APL `⊂'null'` becomes JSON `null` |
+|_-                                        -_| `⎕NULL`                               | JSON `null` becomes APL `⎕NULL`                       | APL `⎕NULL` becomes JSON `null` |
+| [**`Compact`**](#variant-option-compact)   | `1`<br><small>default</small>         | None                                                  | `R` has no whitespace outside quotes |
+|_-                                        -_| `0`                                   |_-                                                   -_| `R` has whitespace for readability and, if `Dialect` is `'JSON5'`, trailing commas after final elements and members |
+| [**`Charset`**](#variant-option-charset)   | `'Unicode'`<br><small>default</small> | None                                                  | Unicode characters in `Y` are included verbatim when JSON standard allows |
+|_-                                        -_| `'ASCII'`                             |_-                                                   -_| Non-ASCII characters are converted to the hexadecimal form `\uNNNN`, and if `Dialect` is `'JSON5'`, also `\xNN` |
+| [**`HighRank`**](#variant-option-highrank) | `'Error'`<br><small>default</small>   | None                                                  | High-rank arrays are rejected |
+|_-                                        -_| `'Split'`                             |_-                                                   -_| High-rank arrays are split and [inverted table wrappers](#dataset-wrappers) accept text columns as matrices |
 
 ### Variant Option: Format
 
@@ -140,8 +140,8 @@ If `Format` is `'D'` (which stands for "Data", the default) the JSON document in
 
 - JSON arrays are converted into APL vectors.
 - JSON objects are converted into APL namespaces.
-- JSON `true` and `false` and, if the `Dialect` variant option is `'JSON5'`, the JSON5 numeric constants `Infinity`, `-Infinity`, and `NaN`, are converted to enclosed character vectors `⊂'true'`, `⊂'false'`, and so forth.
-- JSON `null` is converted into the specified (or implied) value of `Null` (`⊂'null'`, the default, or `⎕NULL`).
+- JSON `true` and `false` and, if the [**`Dialect`**](#variant-option-dialect) variant option is `'JSON5'`, the JSON5 numeric constants `Infinity`, `-Infinity`, and `NaN`, are converted to enclosed character vectors `⊂'true'`, `⊂'false'`, and so forth.
+- JSON `null` is converted into the specified (or implied) value of [**`Null`**](#variant-option-null) (`⊂'null'`, the default, or `⎕NULL`).
 - If the JSON source contains object member names which are not valid APL names they are converted to APL namespace members with mangled names. See [Name Mangling](#name-mangling). `7162⌶` can be used to obtain the original name. See [JSON Translate Name](../primitive-operators/i-beam/json-translate-name.md).
 - If duplicate names are found, the last member encountered is used and all previous members with the same name are discarded.
 
@@ -238,7 +238,7 @@ Table: JSON types { #import-types-table }
 Note that:
 
 - JSON values that lack an APL equivalent, `true` and `false`, and, if `Dialect` is `'JSON5'`, the JSON5 numeric constants `Infinity`, `-Infinity`, and `NaN`, are converted to enclosed character vectors `⊂'true'`, `⊂'false'`, and so forth.
-- JSON `null` is converted into the specified (or implied) value of `Null`; `⊂'null'` (the default) or `⎕NULL`.
+- JSON `null` is converted into the specified (or implied) value of [**`Null`**](#variant-option-null); `⊂'null'` (the default) or `⎕NULL`.
 - Object member names are reported as specified in the JSON text; they are not mangled as when `Format` is `'D'`.
 - If duplicate names are found, all duplicate members are recorded in the result matrix.
 
@@ -305,7 +305,7 @@ Note that:
 If `Format` is `'D'` (which stands for "Data"), the APL value `Y` is converted to a corresponding JSON document `R` as follows:
 
 - APL vectors are converted to JSON arrays.
-- APL arrays of higher rank are recursively split if `HighRank` is `'Split'`, otherwise `⎕JSON` will signal `DOMAIN ERROR`.
+- APL arrays of higher rank are recursively split if [**`HighRank`**](#variant-option-highrank) is `'Split'`, otherwise `⎕JSON` will signal `DOMAIN ERROR`.
 - APL namespaces are converted to JSON objects.
 - Enclosed vectors whose leading element is a wrapper code are interpreted as [wrappers](#wrappers) (mechanisms for special handling).
 - If a namespace member name appears to be mangled (has a form that would have been produced by [name mangling](#name-mangling)), it is demangled.
@@ -405,7 +405,7 @@ DOMAIN ERROR: JSON export: value does not match the specified type in row 3 (⎕
 
 If the `Dialect` variant option (default: `'JSON'`) is `'JSON5'`, [JSON5](https://json5.org/) extensions are enabled on import and export: Comments, hexadecimal literals, leading/trailing decimal points, character escapes of the form `\xNN`, trailing commas, unquoted ECMAScript 5.1 identifiers as object member names, single-quoted strings, and `Infinity`/`-Infinity`/`NaN` are accepted and/or produced.
 
-On export, identifiers without quotes, single quotes (`'`), and character escapes of the form `\xNN` (for values less than hexadecimal 100, that is, `⎕UCS 256`) are used to shorten the result. A trailing comma (`,`) is added after the last array element and object member if `Compact` is `0`.
+On export, identifiers without quotes, single quotes (`'`), and character escapes of the form `\xNN` (for values less than hexadecimal 100, that is, `⎕UCS 256`) are used to shorten the result. A trailing comma (`,`) is added after the last array element and object member if [**`Compact`**](#variant-option-compact) is `0`.
 
 <h4 class="example">Examples</h4>
 
@@ -468,7 +468,7 @@ With `Compact` being `0`:
 - Line breaks are inserted after opening brackets `[` and `{` and before closing brackets `]` and `}`
 - Each array element and object member is on its own line, indented with two spaces relative to its container array or object
 - A space is inserted after `:` separating member name and value
-- If `Dialect` is `'JSON5'`, a trailing comma (`,`) is added after the last array element and object member
+- If [**`Dialect`**](#variant-option-dialect) is `'JSON5'`, a trailing comma (`,`) is added after the last array element and object member
 
 <h4 class="example">Example</h4>
 
@@ -521,7 +521,7 @@ With `Compact` being `0`:
 
 ### Variant Option: Charset
 
-The `Charset` variant option can be used to either allow Unicode in the generated JSON (`'Unicode'`, the default) or restrict the output to ASCII characters (`'ASCII'`). When necessary, characters are converted to the hexadecimal form `\uNNNN`. If `Dialect` is `'JSON5'`, the form `\xNN` is used for values up to hexadecimal `FF` (`⎕UCS 255`).
+The `Charset` variant option can be used to either allow Unicode in the generated JSON (`'Unicode'`, the default) or restrict the output to ASCII characters (`'ASCII'`). When necessary, characters are converted to the hexadecimal form `\uNNNN`. If [**`Dialect`**](#variant-option-dialect) is `'JSON5'`, the form `\xNN` is used for values up to hexadecimal `FF` (`⎕UCS 255`).
 
 <h4 class="example">Example</h4>
 
@@ -676,7 +676,7 @@ Table: Wrapper codes { #wrapper-codes-table }
 | `3`          | Two-element nested vector: value matrix and header vector                              | Allows indexing into the rows and columns of the data |
 | `4`          | Two-element nested vector: inverted table (vector of column vectors) and header vector | Less memory and faster lookups |
 
-For wrapper code `4`, if `HighRank` is `'Split'`, character columns can also be stored as character matrices rather than vectors of character vectors, providing even better performance, but note that `⎕JSON` will preserve trailing spaces.
+For wrapper code `4`, if [**`HighRank`**](#variant-option-highrank) is `'Split'`, character columns can also be stored as character matrices rather than vectors of character vectors, providing even better performance, but note that `⎕JSON` will preserve trailing spaces.
 
 <h4 class="example">Examples</h4>
 
@@ -747,7 +747,7 @@ Without their wrappers, each APL structure *can* be represented in JSON, though 
 
 ### Selection of a Subset
 
-A subset of a dataset's records (rows) and fields (columns) can be selected, with each subset being specified as a vector of indices and `⊂⍬` meaning "all" records (and/or fields):
+A subset of a dataset's records (rows) and fields (columns) can be selected, with each subset being specified as a vector of strictly ascending indices and `⊂⍬` meaning "all" records (and/or fields):
 
 Table: Wrappers forms for selecting dataset subsets { #subset-table }
 
