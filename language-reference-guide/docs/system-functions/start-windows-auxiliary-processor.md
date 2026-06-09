@@ -18,8 +18,10 @@ search:
 
 Used dyadically, `⎕CMD` starts an Auxiliary Processor.  The effect, as far as the APL workspace is concerned, is identical under both Windows and UNIX, although the method of implementation differs.  `⎕CMD` is a synonym of `⎕SH`.  Either function may be used in either environment (Windows or UNIX) with exactly the same effect.  `⎕CMD` is probably more natural for the Windows user.  This section describes the behaviour of `⎕CMD` and `⎕SH` under Windows.  See ["Examples"](start-unix-auxiliary-processor.md) for a discussion of the behaviour of these system functions under UNIX.
 
+!!! Hint "Hints and Recommendations"
+	Although it is still possible for users to create their own APs, Dyalog Ltd. strongly recommends creating shared libraries/DLLs instead.
 
-`X` must be a simple character vector containing the name (or pathname) of a Dyalog APL Auxiliary Processor (AP). Although it is possible for users to create their own APs, Dyalog recommends that user write their own DLLs/shared libraries instead.
+`X` must be a simple character vector containing the name (or pathname) of a Dyalog APL Auxiliary Processor (AP).
 
 
 `Y` may be a simple character scalar or vector, or a vector of character vectors.  Under Windows the contents of `Y` are ignored.
