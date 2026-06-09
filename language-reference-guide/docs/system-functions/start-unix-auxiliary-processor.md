@@ -20,7 +20,7 @@ Used dyadically, `⎕SH` starts an Auxiliary Processor. The effect, as far as th
 
 
 !!! Hint "Hints and Recommendations"
-	Although it is still possible for users to create their own APs, Dyalog strongly recommends creating shared libraries/DLLs instead.
+	Although it is still possible for users to create their own APs, Dyalog Ltd. strongly recommends creating shared libraries/DLLs instead.
 
 
 
