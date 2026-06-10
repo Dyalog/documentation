@@ -201,7 +201,7 @@ Functions `EG2` and `EG2A` illustrate how the _each_ operator (`¨`) and the ext
 
 ## Non-Modal Forms
 
-Non-modal forms are displayed using the <code class="language-nonAPL">Run</code> method of the <code class="language-nonAPL">System.Windows.Forms.Application</code> object. This method is designed to be called once, and only once, during the life of an application, which seems problematic for during APL development. Fortunately, in practice the restriction is that <code class="language-nonAPL">Application.Run</code> can only be run once on a single system thread but it can be run successively on different system threads. During development, you can, therefore, test a function that calls <code class="language-nonAPL">Application.Run</code> by running it on a new APL thread using _spawn_ (`&`) see [xxx](xxx.md) for further details.
+Non-modal forms are displayed using the <code class="language-nonAPL">Run</code> method of the <code class="language-nonAPL">System.Windows.Forms.Application</code> object. This method is designed to be called once, and only once, during the life of an application, which seems problematic for during APL development. Fortunately, in practice the restriction is that <code class="language-nonAPL">Application.Run</code> can only be run once on a single system thread but it can be run successively on different system threads. During development, you can, therefore, test a function that calls <code class="language-nonAPL">Application.Run</code> by running it on a new APL thread using _spawn_ (`&`) see [Threading](implementation-details/threading.md) for further details.
 
 There are several examples of non-modal forms in **[DYALOG]\Samples\**:
 
@@ -221,7 +221,7 @@ QuickStart\winforms\samples\Data\Grid\vb\Grid.vb
 
 - tetris workspace<br />The **[DYALOG]\Samples\winforms\tetris.dws** workspace contains a sample that demonstrates the use of graphics. It is a direct translation into APL from a C# sample (WinForms-Graphics-Tetris) that was distributed on the Visual Studio .NET Beta 2 Resource CD.
 
-- webservices workspace<br />The `WFGOLF` function in the **[DYALOG]\Samples\asp.net\webservices\webservices.dws** workspace performs the same task as the `GOLF` function in the same workspace, but it uses <code class="language-nonAPL">Windows.Forms</code> instead of the built-in Dyalog GUI.<br />`WFGOLF` and its callback functions `WFBOOK` and `WFSS` perform exactly the same task, with almost identical dialog box appearance, as `GOLF` and its callbacks `BOOK` and `SS` (described in [xxx](xxx.md)).
+- webservices workspace<br />The `WFGOLF` function in the **[DYALOG]\Samples\asp.net\webservices\webservices.dws** workspace performs the same task as the `GOLF` function in the same workspace, but it uses <code class="language-nonAPL">Windows.Forms</code> instead of the built-in Dyalog GUI.<br />`WFGOLF` and its callback functions `WFBOOK` and `WFSS` perform exactly the same task, with almost identical dialog box appearance, as `GOLF` and its callbacks `BOOK` and `SS` (described in [Using GolfService from Dyalog](../calling-web-services/#using-golfservice-from-dyalog)).
 
     !!! Info "Information"
         When you run `WFGOLF` or `GOLF` for the first time, you must supply an argument of `1` to force the creation of the proxy class for the <code class="language-nonAPL">GolfService</code> web service.

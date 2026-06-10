@@ -23,8 +23,7 @@ The .NET Framework provides a set of standard operators (methods) that are suppo
 ```apl
       DT1←⎕NEW DateTime (2008 4 30)
       DT2←⎕NEW DateTime (2008 1 1)
-```
-```apl
+
       ⍝ Is DT1 equal to DT2 ?
       DateTime.op_Equality DT1 DT2
 0
@@ -35,17 +34,14 @@ The <code class="language-nonAPL">op_Addition</code> and <code class="language-n
       DT3←DateTime.Now
       DT3
 18/03/2020 11:15:10
-```
-```apl
+
       TS←⎕NEW TimeSpan (1 1 1)
       TS
 01:01:01
-```
-```apl
+
       DateTime.op_Addition DT3 TS
 07/11/2008 12:34:46
-```
-```apl
+
       DateTime.op_Subtraction DT3 TS
 07/11/2008 10:32:44
 ```
@@ -221,7 +217,7 @@ To rectify the situation, APL must be told to cast the argument to a Boolean:
 1
 ```
 
-#'' Overloaded Constructors
+### Overloaded Constructors
 
 If a class provides constructor overloads, then a similar mechanism is used to specify which of the constructors is to be used when an instance of the class is created using `⎕NEW`.
 

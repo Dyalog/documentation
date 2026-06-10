@@ -2,7 +2,7 @@
 
 This section provides some simple examples of WPF data binding using Dyalog. Each example builds upon the previous ones, so it is advisable to work through them in order.
 
-The example code used in throughout section is included in the **[DYALOG]\ws\wpfintro.dws** workspace.
+The example code on this page is included in the **[DYALOG]\ws\wpfintro.dws** workspace.
 
 ## Example 1: Basic Data Binding
 

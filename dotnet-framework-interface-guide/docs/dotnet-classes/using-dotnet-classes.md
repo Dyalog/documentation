@@ -4,7 +4,7 @@ To create a Dyalog object as an instance of a .NET class, the `⎕NEW` system fu
 
 If the argument is a scalar or a 1-element vector, an instance of the class is created using the constructor overload that takes no argument.
 
-If the argument is a 2-element vector, an instance of the class is created using the constructor overload  (see [xxx](#xxx)) whose argument matches the disclosed second element.
+If the argument is a 2-element vector, an instance of the class is created using the [constructor overload](#constructors-and-overloading)) whose argument matches the disclosed second element.
 
 <h4 class="example">Example</h4>
 
@@ -21,7 +21,7 @@ The result of `⎕NEW` is an reference to the newly-created instance:
 9.2
 ```
 
-When a reference to a .NET object is formatted, APL calls its <code class="language-nonAPL">ToString</code> method to obtain a useful description or identification of the object (this topic is discussed in more detail in [xxx](#xxx)):
+When a reference to a .NET object is formatted, APL calls its <code class="language-nonAPL">ToString</code> method to obtain a useful description or identification of the object (this topic is discussed in more detail in [Displaying a .NET Object](#displaying-a-net-object)):
 ```apl
       mydt
 30/04/2008 00:00:00

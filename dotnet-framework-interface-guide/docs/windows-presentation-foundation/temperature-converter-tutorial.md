@@ -197,7 +197,7 @@ Here the XAML specifies <code class="language-nonAPL">Label</code> objects <code
 
 The XAML specifies two <code class="language-nonAPL">TextBox</code> objects called <code class="language-nonAPL">txtFahrenheit</code> and <code class="language-nonAPL">txtCentigrade</code> respectively. Setting <code class="language-nonAPL">Margin</code> to "5" means that a margin of 5px is applied around each edge; otherwise the text boxes would occupy the entire width of the column (80px). The effective width of each <code class="language-nonAPL">TextBox</code> will be 70px (80-2×5).
 
-## The Button Objects (Column 3)
+### The Button Objects (Column 3)
 ```nonAPL
     <Button Name="btnF2C" Grid.Row="0" Grid.Column="2" Content="F>C" Margin="5"/>
     <Button Name="btnC2F" Grid.Row="1" Grid.Column="2" Content="C>F" Margin="5"/>

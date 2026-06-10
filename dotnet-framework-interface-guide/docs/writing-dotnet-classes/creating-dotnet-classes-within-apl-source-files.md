@@ -34,7 +34,7 @@ The declaration statements for public functions perform the same task for APL so
 
 ## Example: Creating A .NET Class Using an APL Source File
 
-The following code illustrates how you may create a .NET Class using an APL source file. The example class is the same as in [xxx](xxx.md). The code (available in **[DYALOG]\Samples\aplclasses\aplclasses6.apln**) is:
+The following code illustrates how you may create a .NET Class using an APL source file. The example class is the same as in [Example 1](../tutorial/#example-1). The code (available in **[DYALOG]\Samples\aplclasses\aplclasses6.apln**) is:
 ```apl
 :Namespace APLClasses
 
@@ -64,7 +64,7 @@ APLClasses>
 
 [](#classes6ildasm) shows a view of the resulting **aplclasses6.dll** using ILDASM.
 
-![ILDASM view of <strong>aplclasses6.dll</strong> structure](../../img/s-idslam-aplclasses6.png){ #classes6ildasm }
+![ILDASM view of <strong>aplclasses6.dll</strong> structure](../img/s-ildasm-aplclasses6.png){ #classes6ildasm }
 
 As with other .NET classes, this .NET class can be called from APL. For example:
 ```apl
@@ -135,7 +135,7 @@ io←⎕IO
 
 [](#classes7ildasm) shows the ILDASM view of the new **aplclasses7.dll**, including the new `IndexOrigin` property.
 
-![ILDASM view of <strong>aplclasses7.dll</strong> structure](../../img/s-idslam-aplclasses7.png){ #classes7ildasm }
+![ILDASM view of <strong>aplclasses7.dll</strong> structure](../img/s-ildasm-aplclasses7.png){ #classes7ildasm }
 
 As with other .NET classes, this .NET class can be called from APL. For example:
 ```apl

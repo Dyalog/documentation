@@ -56,7 +56,7 @@ The workspace **[DYALOG]\Samples\asp.net\webservices\webservices.dws** contains 
 The `GOLF` function accesses <code class="language-nonAPL">GolfService</code> through a proxy class. `GOLF` is called with an argument of `0` or `1`. Use 1 to force `GOLF` to create or rebuild the proxy class, which it does by calling `MakeProxy`. You must use an argument of `1` the first time you call `GOLF`, or if you ever change the `GolfService` APL code.
 
 !!! Info "Information"
-    You cannot make the proxy for <code class="language-nonAPL">GolfService</code> unless the web server class has been compiled on the server. At present, the only way to trigger the compilation of **golf.asmx** into a web service is to visit the page once using your preferred browser, as described in [xxx](xxx.md) and its sub-sections.
+    You cannot make the proxy for <code class="language-nonAPL">GolfService</code> unless the web server class has been compiled on the server. At present, the only way to trigger the compilation of **golf.asmx** into a web service is to visit the page once using your preferred browser, as described in [Writing Web Services](writing-web-services/index.md) and its sub-sections.
 
 The first few lines of the function are listed below. If the argument is `1`, line `[2]` makes the proxy class **GolfService.DLL** in the current directory; if not, it is assumed to be there already. Line `[6]` defines `⎕USING` to use it, and line `[7]` creates a new instance assigned to `GS`. Line `[8]` calls the `GetCourses` method, which returns a vector of `GolfCourse` objects. The namespace reference array expansion is used to extract the course codes and names from the `Code` and `Name` fields respectively:
 ```apl

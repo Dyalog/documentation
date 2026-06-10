@@ -65,7 +65,7 @@ nav:
       - Enumerations: dotnet-classes/enumerations.md
       - Handling Pointers with Dyalog.ByRef: dotnet-classes/handling-pointers-with-dyalogbyref.md
       - DECF Conversion: dotnet-classes/decf-conversion.md
-  - Using Windows Forms: using-windows-forms
+  - Using Windows Forms: using-windows-forms.md
   - Windows Presentation Foundation:
       - windows-presentation-foundation/index.md
       - Temperature Converter Tutorial: windows-presentation-foundation/temperature-converter-tutorial.md
@@ -87,13 +87,13 @@ nav:
   - Dyalog and IIS: dyalog-and-iis.md
   - Writing Web Services:
       - writing-web-services/index.md
-      - xxx: writing-web-services/xxx.md
+      - Web Service (.asmx) Scripts: writing-web-services/web-service-asmx-scripts.md
       - Compilation: writing-web-services/compilation.md
-      - xxx: writing-web-services/xxx.md
-      - xxx: writing-web-services/xxx.md
-      - xxx: writing-web-services/xxx.md
-      - xxx: writing-web-services/xxx.md
-      - xxx: writing-web-services/xxx.md
+      - Exporting Methods: writing-web-services/exporting-methods.md
+      - Web Service Data Types: writing-web-services/web-service-data-types.md
+      - Execution: writing-web-services/execution.md      
+      - Global.asax, and Application and Session Objects: writing-web-services/global-asax-and-application-and-session-objects.md
+      - Sample Web Services: writing-web-services/sample-web-services.md
   - Calling Web Services: calling-web-services.md
   - Writing ASP.NET Web Pages:
       - writing-aspnet-webpages/index.md

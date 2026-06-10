@@ -6,4 +6,4 @@ The Development DLL (the full developer version of the Dyalog DLL) contains the 
 
 The Run-Time DLL (the re-distributable run-time version of the Dyalog DLL) contains no debugging facilities.
 
-For the names of these files corresponding to the version of Dyalog that you are using, see [xxx](../../windows-installation-and-configuration-guide/files-and-directories/#files).
+For the names of these files corresponding to the version of Dyalog that you are using, see [Files](../../windows-installation-and-configuration-guide/files-and-directories/#files).
