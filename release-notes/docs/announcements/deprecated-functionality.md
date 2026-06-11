@@ -1,7 +1,5 @@
 # Deprecated Functionality
 
-<p style="color:red;">This document is currently being developed and will not be finalised until nearer the release of Dyalog v21.0.</p>
-
 Over time, certain functionality (such as language elements, development environment features, or supplied samples or tools) can become obsolete or cease to be useful. There are many reasons why this might happen. For example:
 
 * a superior alternative has been introduced.<br />For example, `⎕UCS` has superseded `⎕TC` (which generates only the newline, backspace, and tabstop characters).
@@ -27,11 +25,11 @@ To enable logging of deprecated features:
 
 For Dyalog v21.0, the following names are valid:
 
-<!--
-
-* `J0C0` – component files that have both journalling (J) and checksum (C) properties set to `0`
+* `1200⌶` – format date-time
+* `739⌶` – temporary directory
 * `S32` – small-span component files
 * `⎕XT` – external variables
+* `43⌶632` – monadic operator generator: generics operator
 
 In addition, there are two reserved names than can be used:  
 
@@ -47,7 +45,7 @@ Each time `13⌶` is called, the new list of features replaces the existing list
       'C:/Users/fiona/deprecated_log.txt'(109⌶)0
 	  
 ⍝ Select the features to log
-      13⌶ 'J0C0' 'S32'  
+      13⌶ '1200⌶' 'S32'  
 ```
 
 After logging has been enabled, every subsequent use of the specified deprecated features is logged. Each line in the log file contains a complete JSON5 object, which includes a description of the deprecated feature and the SI Stack at the point it was called. The log file can be examined using any text editor or from within a Dyalog Session. For example:
@@ -76,7 +74,7 @@ or:
 
 A directory can be scanned for deprecated functionality using [`3535⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/scan-for-deprecated-files/) with a right argument of the directory to be scanned. If the left argument is set to `1`, sub-directories will also be scanned. The names of any files that pertain to deprecated functionality are returned, with labels specifying the reason for identification.
 
-For Dyalog v20.0, the following labels can be returned: 
+For Dyalog v21.0, the following labels can be returned: 
 
 | Label | Meaning |
 |-------|---------|
@@ -94,5 +92,3 @@ For Dyalog v20.0, the following labels can be returned:
  ./ws2000.dws           OLDWS
  ./subdir/S32J0C0.dcf   J0C0  S32
 ```
-
--->
