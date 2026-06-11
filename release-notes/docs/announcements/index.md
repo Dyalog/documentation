@@ -44,7 +44,7 @@ The next version of Dyalog (Dyalog v22.0) is expected to be supported on the fol
 - Linux (including Raspberry Pi):
     - x86_64: Built on Ubuntu 22.04
     - ARM64: Built on Debian GNU/Linux 13
-- macOS (ARM-based, Apple M1 or later):
+- macOS (Apple Silicon):
     - macOS 26.3 (Tahoe) onwards
 - Microsoft Windows:
     - Windows 11 2H24 onwards (Windows Server 2016 onwards)
