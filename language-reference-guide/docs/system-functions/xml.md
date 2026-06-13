@@ -188,9 +188,7 @@ The remainder of XML markup, including document type declarations,  XML declarat
 
 ## Conversion from XML
 
-- The level number in the first column of the result `R` is 0 for the outermost level and subsequent levels are represented by an increase of 1 for each level. Thus, for
-- <xml><document id="001">An introduction to XML </document></xml>
-- The *xml* element is at level 0 and the *document id* element is at level 1. The text within the *document id* element is at level 2.
+- The level number in the first column of the result `R` is 0 for the outermost level and subsequent levels are represented by an increase of 1 for each level. Thus, for <xml><document id="001">An introduction to XML </document></xml> the *xml* element is at level 0 and the *document id* element is at level 1. The text within the *document id* element is at level 2.
 - Each tag in the XML contains an element name and zero or more attribute name and value pairs, delimited by '<' and '>' characters. The delimiters are not included in the result matrix. The element name of a tag is stored in column 2 and the attribute(s) in column 4.
 - All XML markup other than tags are delimited by either '<!' and '>', or '<?' and '>' characters. By default these are not stored in the result matrix but the **markup** option may be used to specify that they are. The elements are stored in their entirety, except for the leading and trailing '<' and '>' characters, in column 2. Nested constructs are treated as a single block. Because the leading and trailing '<' and '>' characters are stripped, such entries will always have either '!' or '&' as the first character.
 - Character data itself has no tag name or attributes. As an optimisation, when character data is the sole content of an element, it is included with its parent rather than as a separate row in the result. Note that when this happens, the level number stored is that of the parent; the data itself implicitly has a level number one greater.
