@@ -85,7 +85,7 @@ For conversion *to* XML, `Y` is a 3, 4 or 5 column matrix and the result `R` is 
 ## Introduction to XML and Glossary of Terms
 
 
-XML is an open standard, designed to allow exchange of data between applications. The full specification [^1] describes functionality, including processing directives and other directives, which can transform XML data as it is read, and which a full XML processor would be expected to handle.
+XML is an open standard, designed to allow exchange of data between applications. The [full specification](http://www.w3.org/TR/2008/REC-xml-20081126/) describes functionality, including processing directives and other directives, which can transform XML data as it is read, and which a full XML processor would be expected to handle.
 
 
 The `⎕XML` function is designed to handle XML to the extent required to import and export APL data. It favours speed over complexity - some markup is tolerated but largely ignored, and there are no XML query or validation features. APL applications which require processing, querying or validation will need to call external tools for this, and finally call `⎕XML` on the resulting XML to perform the transformation into APL arrays.
@@ -501,8 +501,3 @@ When converting from XML, this option determines what happens when an unknown en
 |Converting to XML                                                                                                                ||
 |Replace (replace)   |Esc ( `⎕UCS 27` ) is preserved                                                                               |
 |`Preserve(preserve)`|Esc ( `⎕UCS 27` ) is replaced by '&'                                                                         |
-
-
-
-
-[^1]: http://www.w3.org/TR/2008/REC-xml-20081126/

@@ -31,7 +31,7 @@ This function provides information about a name in a workspace, including its us
 |Restrictions|30|Source can be displayed|`¯1`|
 |            |31|Execution can be suspended mid-execution|`¯1`|
 |_          _|32|Responds to weak interrupt|`¯1`|
-|Class[^1]|40|Syntactic supra-class ( `¯1` : invalid name, `0` : undefined, `1` : label, `2` : variable, `3` : function, `4` : operator, `8` : event, `9` : object)|`¯1`|
+|Class |40|Syntactic supra-class ( `¯1` : invalid name, `0` : undefined, `1` : label, `2` : variable, `3` : function, `4` : operator, `8` : event, `9` : object)|`¯1`|
 |      |41|Syntactic sub-class ( `0` : none, `1` : traditional/plain, `2` : field/dynamic/instance, `3` : property/derived/primitive, `4` : class, `5` : interface, `6` : external, `7` : external interface)|`0`|
 |_     _|42|Full syntactic class (sum of supra- and sub-class)|`¯1`|
 |Source|50|File name|`''`|
@@ -44,7 +44,8 @@ This function provides information about a name in a workspace, including its us
 |          |61|Normalised source (with AUTOFORMAT=1 and TABSTOPS=4)|`0⍴⊂''`|
 |_        _|62|Most precise available source (verbatim with fallback to normalised)|`0⍴⊂''`|
 
-
+!!! Warning "Warning"
+    Names in the Class group that can return `¯1` (meaning "invalid name") might return a different value in future versions of Dyalog, including values that are not currently possible and ones that deviate from the current `⎕NC` values.
 
 `R` depends on the combination of `X` and `Y`:
 
@@ -116,5 +117,3 @@ This function provides information about a name in a workspace, including its us
 │└────────────┴─────────────┘│└────────────┘│
 └────────────────────────────┴──────────────┘
 ```
-
-[^1]: Names in the Class group that can return `¯1` (meaning "invalid name") might return a different value in future versions of Dyalog, including values that are not currently possible and ones that deviate from the current `⎕NC` values.

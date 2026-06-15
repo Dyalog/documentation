@@ -16,8 +16,7 @@ search:
 
 
 
-`⎕OR` converts a defined function, defined operator or namespace to a special form, described as its *object representation*, that may be assigned to a variable and/or stored on a component file[^1]. Classes and Instances are however outside the domain of `⎕OR`.
-
+`⎕OR` converts a defined function, defined operator or namespace to a special form, described as its *object representation*, that may be assigned to a variable and/or stored on a component file. Classes and Instances are however outside the domain of `⎕OR`.
 
 Taking the `⎕OR` of a defined function or operator is an extremely fast operation as it simply changes the type information in the object's header, leaving its internal structure unaltered.  Converting the object representation back to an executable function or operator using `⎕FX` is also very fast.
 
@@ -27,7 +26,8 @@ However, the saved results of `⎕OR` which were produced on a different hardwar
 
 `⎕OR` may also be used to convert a namespace (either a plain namespace or a named GUI object created by `⎕WC`) into a form that can be stored in a variable or on a component file.  The namespace may be reconstructed using `⎕NS` or `⎕WC` with its original name or with a new one.  `⎕OR` may therefore be used to *clone* a namespace or GUI object.
 
-
+!!! Warning "Warning"
+    ⎕OR and GUI objects stored in workspaces or in component files are not portable between 32-bit and 64-bit versions of Dyalog nor between different implementations (platforms) and are not backwards compatible.
 
 `Y` must be a simple character scalar or vector which contains the name of an APL object.
 
@@ -151,8 +151,3 @@ This example illustrates how `⎕OR` can be used to clone a GUI object; in this 
 
 
 Note too that `⎕WC` and `⎕NS` may be used interchangeably to rebuild *pure* namespaces or GUI namespaces from a `⎕OR` object.  You may therefore use `⎕NS` to rebuild a Form or use `⎕WC` to rebuild a pure namespace that has no GUI components.
-
-
-
-
-[^1]: ⎕OR and GUI objects stored in workspaces or in component files are not portable between 32-bit and 64-bit versions of Dyalog nor between different implementations (platforms) and are not backwards compatible

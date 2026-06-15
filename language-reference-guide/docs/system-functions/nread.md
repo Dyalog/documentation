@@ -49,7 +49,7 @@ Table: Unicode Edition: Conversion Codes
 |-------|--------------------|-----------------|------------|
 |11     |count               |1 bit Boolean    |8 `×` count |
 |80     |count               |8 bits character |count       |
-|82 [^1]|count               |8 bits character |count       |
+|82     |count               |8 bits character |count       |
 |83     |count               |8 bits integer   |count       |
 |160    |2 `×` count         |16-bits character|count       |
 |163    |2 `×` count         |16 bits integer  |count       |
@@ -59,7 +59,8 @@ Table: Unicode Edition: Conversion Codes
 |1287   |16 `×` count        |128 bits decimal |count       |
 |1289   |16 `×` count        |128 bits complex |count       |
 
-
+!!! Legacy "Legacy"
+    Conversion code 82 is permitted in the Unicode Edition for compatibility and causes 1-byte data on file to be translated (according to [⎕NXLATE](./nxlate.md)) from [⎕AV](./av.md) indices into normal (Unicode) characters of type 80, 160 or 320.
 
 
 Table: Classic Edition: Conversion Codes
@@ -85,8 +86,3 @@ Table: Classic Edition: Conversion Codes
       DATA←⎕NREAD ¯1 82 ¯1 0       ⍝ Shorter version
 
 ```
-
-
-
-
-[^1]: Conversion code 82 is permitted in the Unicode Edition for compatibility and causes 1-byte data on file to be translated (according to ⎕NXLATE ) from ⎕AV indices into normal (Unicode) characters of type 80, 160 or 320.

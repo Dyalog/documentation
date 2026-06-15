@@ -19,10 +19,10 @@ search:
 The value of `⎕FR` determines the way that floating-point operations are performed.
 
 
-If `⎕FR` is 645, all floating-point calculations are performed using IEEE 754 64-bit floating-point operations and the results of these operations are represented internally using *binary64*[^1] floating-point format.
+If `⎕FR` is 645, all floating-point calculations are performed using IEEE 754 64-bit floating-point operations and the results of these operations are represented internally using [*binary64*](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) floating-point format.
 
 
-If `⎕FR` is 1287, all floating-point calculations are performed using IEEE 754-2008 128-bit decimal floating-point operations and the results of these operations are represented internally using *decimal128*[^2] format.
+If `⎕FR` is 1287, all floating-point calculations are performed using IEEE 754-2008 128-bit decimal floating-point operations and the results of these operations are represented internally using [*decimal128*](https://en.wikipedia.org/wiki/Decimal128_floating-point_format) format.
 
 
 
@@ -112,10 +112,3 @@ WARNING: The use of COMPLEX numbers when `⎕FR` is 1287 is not recommended, bec
 
 - any 128-bit decimal array into which a complex number is inserted or appended will be forced in its entirety into complex representation, potentially losing precision.
 - All comparisons are done using `⎕DCT` when `⎕FR` is 1287, and the default value of `1E¯28` is equivalent to 0 for complex numbers.
-
-
-
-
-
-[^1]: https://en.wikipedia.org/wiki/Double_precision_floating-point_format
-[^2]: https://en.wikipedia.org/wiki/Decimal128_floating-point_format
