@@ -15,7 +15,7 @@ search:
     - a Shared Library (.so or .dylib) under Linux or macOS
     - a static library (.a) under AIX
 
-A DLL[^1] is a collection of functions typically written in C (or C++) each of which may take arguments and return a result.
+A library, refered to here generically as a DLL, is a collection of functions typically written in C (or C++) each of which may take arguments and return a result.
 
 Instructional examples using `⎕NA` can be found in the supplied workspace `quadna`.
 
@@ -124,11 +124,11 @@ The options are summarised in the following table and their functions detailed b
 |Type       |`I`     |int                                                                                                    |
 |           |`U`     |unsigned int                                                                                           |
 |           |`C`     |char                                                                                                   |
-|           |`T`     |char [^1]                                                                                              |
+|           |`T`     |char                                                                                                   |
 |           |`F`     |float                                                                                                  |
 |           |`D`     |decimal                                                                                                |
 |           |`J`     |complex                                                                                                |
-|           |`P`     |uintptr-t [^2]                                                                                         |
+|           |`P`     |uintptr-t (equivalent to U4 on 32-bit versions and U8 on 64-bit)                                       |
 |           |`A`     |APL array                                                                                              |
 |_         _|`Z`     |APL array with header (as passed to a TCP/IP socket)                                                   |
 |Width      |`1`     |1-byte                                                                                                 |
@@ -953,6 +953,3 @@ A result is returned from the function *only* if all the calls are successful Ot
 ⎕NA'I4 winnm    |sndPlaySound         <0T U4'
 
 ```
-
-[^1]: Classic Edition:  - translated to/from ANSI
-[^2]: equivalent to U4 on 32-bit versions and U8 on 64-bit versions
