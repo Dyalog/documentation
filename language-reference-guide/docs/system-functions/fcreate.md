@@ -15,14 +15,15 @@ search:
 
 <h1 class="heading"><span class="name">File Create</span> <span class="command">{R}←X ⎕FCREATE Y</span></h1>
 
+`Y` must be a simple integer scalar or a 1 or 2 element vector:  
 
-
-`Y` must be a simple integer scalar or a 1 or 2 element vector. The first element is the *file tie number*. The second element, if specified, must be 64.
-
+- The first element is the *file tie number*.
+- The second element, if specified, must be `64`. 
 
 The *file tie number* must not be the tie number associated with another tied file.
 
-
+!!! Legacy "Legacy"
+    The second element of Y sets the span of the file which in earlier Versions of Dyalog APL could be 32 or 64. Small-span (32-bit) component files may no longer be created and this element is retained only for backwards compatibility of code.
 
 `X` must be either:
 
@@ -37,10 +38,6 @@ The newly created file is tied for exclusive use.
 
 
 The shy result of `⎕FCREATE` is the tie number of the new file.
-
-!!! Legacy "Legacy"
-    The second element of Y sets the span of the file which in earlier Versions of Dyalog APL could be 32 or 64. Small-span (32-bit) component files may no longer be created and this element is retained only for backwards compatibility of code.
-
 
 ## Automatic Tie Number Allocation
 

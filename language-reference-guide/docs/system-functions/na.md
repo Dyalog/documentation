@@ -11,11 +11,11 @@ search:
 
 `⎕NA` provides access from APL to compiled functions within a library. A library is implemented according to the Operating System as follows:
 
-    - a Dynamic Link Library(DLL) under Windows
-    - a Shared Library (.so or .dylib) under Linux or macOS
-    - a static library (.a) under AIX
+- a Dynamic Link Library(**.dll**) under Windows
+- a Shared Library (**.so** or **.dylib**) under Linux or macOS
+- a static library (**.a**) under AIX
 
-A library, refered to here generically as a DLL, is a collection of functions typically written in C (or C++) each of which may take arguments and return a result.
+A library, referred to here generically as a a Dynamic Link Library (DLL), is a collection of functions typically written in C (or C++) each of which may take arguments and return a result.
 
 Instructional examples using `⎕NA` can be found in the supplied workspace `quadna`.
 
@@ -124,11 +124,11 @@ The options are summarised in the following table and their functions detailed b
 |Type       |`I`     |int                                                                                                    |
 |           |`U`     |unsigned int                                                                                           |
 |           |`C`     |char                                                                                                   |
-|           |`T`     |char                                                                                                   |
+|           |`T`     |char  (Classic Edition: translated to/from ANSI)                                                       |
 |           |`F`     |float                                                                                                  |
 |           |`D`     |decimal                                                                                                |
 |           |`J`     |complex                                                                                                |
-|           |`P`     |uintptr-t (equivalent to U4 on 32-bit versions and U8 on 64-bit)                                       |
+|           |`P`     |uintptr-t (equivalent to U4 and U8 on 32-bit and 64-bit widths respectively)                           |
 |           |`A`     |APL array                                                                                              |
 |_         _|`Z`     |APL array with header (as passed to a TCP/IP socket)                                                   |
 |Width      |`1`     |1-byte                                                                                                 |

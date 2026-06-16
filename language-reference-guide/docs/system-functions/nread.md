@@ -60,7 +60,7 @@ Table: Unicode Edition: Conversion Codes
 |1289   |16 `×` count        |128 bits complex |count       |
 
 !!! Legacy "Legacy"
-    Conversion code 82 is permitted in the Unicode Edition for compatibility and causes 1-byte data on file to be translated (according to [⎕NXLATE](./nxlate.md)) from [⎕AV](./av.md) indices into normal (Unicode) characters of type 80, 160 or 320.
+    Conversion code 82 is permitted in the Unicode edition for backwards compatibility purposes and causes 1-byte data on file to be translated (according to [⎕NXLATE](./nxlate.md)) from [⎕AV](./av.md) indices into normal (Unicode) characters of type 80, 160 or 320.
 
 
 Table: Classic Edition: Conversion Codes

@@ -25,7 +25,7 @@ If `Y[2]` is omitted, the system tries to open the file with the default value o
 
 |Needed from existing users                     ||Granted to subsequent users                     ||
 |--------------------------|---------------------|---------------------------|---------------------|
-|0                         |read access          |0                          |see note             |
+|0                         |read access          |0                          |no access (exclusive)|
 |1                         |write access         |16                         |no access (exclusive)|
 |2                         |read and write access|32                         |read access          |
 |&nbsp;                    |&nbsp;               |48                         |write access         |
@@ -34,11 +34,10 @@ If `Y[2]` is omitted, the system tries to open the file with the default value o
 
 On UNIX systems, the second column has no meaning and only the first code (`16|mode`) is passed to the `open(2)` call as the access parameter. See include file `fcntl.h` for details. See also [Native File Lock](nlock.md) which is not platform dependent.
 
-`R` is the tie number by which the file may subsequently be referred. If `Y[1]` is a negative integer, then `R` is a shy result; if `Y[1]` is 0, `R` is an explicit result.
-
 !!! Legacy "Legacy"
-    The original meaning of `Y[2]` granting subsequent users a value 0 is no longer relevant. 0 now means the same as 16 (no access).
+    The original objective of this value (granting subsequent users a value of 0) is no longer relevant, and 0 now means the same as 16. The option remains for backwards compatibility purposes.
 
+`R` is the tie number by which the file may subsequently be referred. If `Y[1]` is a negative integer, then `R` is a shy result; if `Y[1]` is 0, `R` is an explicit result.
 
 ## Automatic Tie Number Allocation
 

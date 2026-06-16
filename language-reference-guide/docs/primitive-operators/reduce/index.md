@@ -62,8 +62,7 @@ Table: Identity Elements {: #IdentityElements }
 |Expand|`\⍀`| `1`      |
 |Rotate|`⌽⊖`| `0`      |
 
-!!! Info "Information"
-    `M` represents the largest representable value: typically this is 1.7E308, unless [`⎕FR`](../../system-functions/fr.md) is 1287, when the value is 1E6145.
+In [](#IdentityElements), `M` represents the largest representable value. Typically this is 1.7E308, unless [`⎕FR`](../../system-functions/fr.md) is `1287`, in which case it becomes 1E6145
 
 <h2 class="example">Examples</h2>
 ```apl

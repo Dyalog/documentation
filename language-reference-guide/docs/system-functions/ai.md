@@ -38,5 +38,5 @@ Elements beyond 4 are not defined but reserved.
     Under UNIX, `⎕AI[1]` is the effective UID of the account whereas [`⎕AN`](./an.md) returns the real name.
 
 !!! windows "Dyalog on Microsoft Windows"
-    Under Window, `⎕AI[1]` is the aplnid (network ID from configuration dialog box).
+    Under Microsoft Windows, `⎕AI[1]` is the aplnid (network ID from configuration dialog box).
 
