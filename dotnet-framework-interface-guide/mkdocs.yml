@@ -1,0 +1,118 @@
+site_name: .NET Framework Interface Guide
+theme:
+  favicon: documentation-assets/images/favicon-32.png
+  logo: documentation-assets/images/dyalog-logo_white.svg
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.path
+    - navigation.indexes
+    - navigation.footer
+  name: material
+  font:
+    text: Be Vietnam Pro
+extra_css:
+  - documentation-assets/css/main.css
+  - documentation-assets/css/extra.css
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+plugins:
+  - privacy
+  - search
+  - macros
+  - site-urls
+  - caption:
+      table:
+        enable: true
+        start_index: 1
+        increment_index: 1
+        position: bottom
+        reference_text: 'Table {index}'
+        caption_prefix: 'Table {index}:' 
+extra:
+  version_maj: 21
+  version_majmin: 21.0
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      use_pygments: false
+      pygments_lang_class: true
+  - attr_list
+  - abbr
+  - footnotes
+  - md_in_html
+  - markdown_tables_extended
+  - toc:
+      title: On this page
+nav:
+  - index.md
+  - Introduction: introduction.md
+  - Installation: installation.md
+  - .NET Classes:
+      - dotnet-classes/index.md
+      - Locating .NET Classes and Assemblies: dotnet-classes/locating-dotnet-classes-and-assemblies.md
+      - Using .NET Classes: dotnet-classes/using-dotnet-classes.md
+      - Browsing .NET Classes: dotnet-classes/browsing-dotnet-classes.md
+      - Advanced Techniques: dotnet-classes/advanced-techniques.md
+      - Example Usage: dotnet-classes/example-usage.md
+      - Enumerations: dotnet-classes/enumerations.md
+      - Handling Pointers with Dyalog.ByRef: dotnet-classes/handling-pointers-with-dyalogbyref.md
+      - DECF Conversion: dotnet-classes/decf-conversion.md
+  - Using Windows Forms: using-windows-forms.md
+  - Windows Presentation Foundation:
+      - windows-presentation-foundation/index.md
+      - Temperature Converter Tutorial: windows-presentation-foundation/temperature-converter-tutorial.md
+      - Data Binding: windows-presentation-foundation/data-binding.md
+  - APL Source Files:
+      - apl-source-files/index.md
+      - The Dyalog .NET Compiler: apl-source-files/the-dyalog-dotnet-compiler.md
+      - Creating an APL Source File: apl-source-files/creating-an-apl-source-file.md
+      - Copying Code from the Dyalog Session: apl-source-files/copying-code-from-the-dyalog-session.md
+      - General Principles of APL Source Files: apl-source-files/general-principles-of-apl-source-files.md
+      - Creating Programs (.exe Files) with APL Source Files: apl-source-files/creating-programs-with-apl-source-files.md
+      - Creating ASP.NET Classes with APL Source Files: apl-source-files/creating-aspnet-classes-with-apl-source-files.md
+  - Writing .NET Classes:
+      - writing-dotnet-classes/index.md
+      - Assemblies, Namespaces, and Classes: writing-dotnet-classes/assemblies-namespaces-and-classes.md
+      - Tutorial: writing-dotnet-classes/tutorial.md
+      - Interfaces: writing-dotnet-classes/interfaces.md
+      - Creating .NET Classes within APL Source Files: writing-dotnet-classes/creating-dotnet-classes-within-apl-source-files.md
+  - Dyalog and IIS: dyalog-and-iis.md
+  - Writing Web Services:
+      - writing-web-services/index.md
+      - Web Service (.asmx) Scripts: writing-web-services/web-service-asmx-scripts.md
+      - Compilation: writing-web-services/compilation.md
+      - Exporting Methods: writing-web-services/exporting-methods.md
+      - Web Service Data Types: writing-web-services/web-service-data-types.md
+      - Execution: writing-web-services/execution.md      
+      - Global.asax, and Application and Session Objects: writing-web-services/global-asax-and-application-and-session-objects.md
+      - Sample Web Services: writing-web-services/sample-web-services.md
+  - Calling Web Services: calling-web-services.md
+  - Writing ASP.NET Web Pages:
+      - writing-aspnet-webpages/index.md
+      - Your First APL Web Page: writing-aspnet-webpages/your-first-apl-web-page.md
+      - The Page_Load Event: writing-aspnet-webpages/the-page-load-event.md
+      - Code-Behind: writing-aspnet-webpages/code-behind.md
+      - Workspace Behind: writing-aspnet-webpages/workspace-behind.md
+      - Converting an Existing Workspace: writing-aspnet-webpages/converting-an-existing-workspace.md
+  - Writing Custom Controls for ASP.NET:
+      - writing-custom-aspnet-controls/index.md
+      - "Example: The SimpleCtl Control": writing-custom-aspnet-controls/example-the-simplectl-control.md
+      - "Example: The TemperatureConverterCtl1 Control": writing-custom-aspnet-controls/example-the-temperatureconverterctl1-control.md
+      - "Example: The TemperatureConverterCtl2 Control": writing-custom-aspnet-controls/example-the-temperatureconverterctl2-control.md
+      - "Example: The TemperatureConverterCtl3 Control": writing-custom-aspnet-controls/example-the-temperatureconverterctl3-control.md
+  - Implementation Details:
+      - implementation-details/index.md
+      - Isolation Mode: implementation-details/isolation-mode.md
+      - Workspace Size: implementation-details/workspace-size.md
+      - Structure of the Active Workspace: implementation-details/structure-of-the-active-workspace.md
+      - Threading: implementation-details/threading.md
+      - Debugging an APL .NET Class: implementation-details/debugging-an-apldotnet-class.md
+      - The web.config File: implementation-details/the-webconfig-file.md
+  

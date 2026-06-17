@@ -1,0 +1,13 @@
+<h1 class="heading"><span class="name">Writing ASP.NET Web Pages</span></h1>
+
+Under Microsoft IIS, a _static_ web page is defined by a simple text file with the extension **.htm** or **.html** that contains simple HTML. When a browser requests such a page, IIS reads it and sends its content back to the client. The contents of a static web page are constant and, until somebody changes it, the page appears the same to all users at all times.
+
+A _dynamic_ web page is represented by a simple text file with the extension **.aspx**. Such a file can contain a mixture of (static) HTML, ASP.NET objects and a _server-side script_. ASP.NET objects are built-in .NET classes that generate HTML when the page is processed. Scripts contain functions and subroutines that are invoked by events (such as the [Page_Load](the-page-load-event.md) event) or by user interaction.
+
+Typically, a script will generate HTML dynamically when the page is loaded. For example, a script could perform a database operation and return an HTML table containing a list of products and prices. A script might also contain code to process user interaction, for example, to process the contents of a form that is completed and then submitted by the user. These scripts are referred to as server-side scripts as they are executed on the server. The browser sees only the results produced by the scripts and not the scripts themselves. Code in a server-side script always involves the generation of a new page by the server for display in the browser.
+
+The first time ASP.NET processes a .NET web page, it compiles the entire page into a .NET assembly. Subsequently, it calls the code in the assembly directly. The language used to compile the page is defined in the &lt;script> section, which is usually defined at the top of the page. If the &lt;script> section is omitted, or if it fails to explicitly specify the language attribute, then the page is compiled using the default scripting language – this is configurable, but is typically VB or C#.
+
+Writing ASP.NET web pages is best illustrated using examples; the source code for the examples listed below is supplied in the **[DYALOG]\Samples\asp.net\\** directory and its sub‑directories. This directory is mapped as an IIS virtual directory named **dyalog.net**, so you can execute the examples by specifying the URL "http://localhost/dyalog.net.18.2.unicode.64/" followed by the name of the sub‑directory and page. You can get an overview of the samples by going to [http://localhost/dyalog.net.18.2.unicode.64/index.htm](http://localhost/dyalog.net.18.2.unicode.64/index.htm) and following the links.
+
+To use APL effectively in web pages, you need to have a thorough understanding of how ASP.NET works.
