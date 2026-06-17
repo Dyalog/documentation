@@ -66,7 +66,7 @@ R←⍳N
 
 `Primitives` contains one public method/function, called `IndexGen`.
 
-The public characteristics for the exported method are included in the definition of the class and its functions, as specified in the [`:Signature`](../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/signature/) statement. This has the following syntax:
+The public characteristics for the exported method are included in the definition of the class and its functions, as specified in the [`:Signature`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/signature/) statement. This has the following syntax:
 ```apl
 :Signature [rslttype←] name [arg1type [arg1name] [,argNtype [argNname]]*]
 ```
