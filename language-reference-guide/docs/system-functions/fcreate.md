@@ -15,14 +15,13 @@ search:
 
 <h1 class="heading"><span class="name">File Create</span> <span class="command">{R}←X ⎕FCREATE Y</span></h1>
 
+`Y` must be a simple integer scalar or a 1 or 2 element vector:  
 
+- The first element is the *file tie number*. The *file tie number* must not be the tie number associated with another tied file.
+- The second element, if specified, must be `64`. 
 
-`Y` must be a simple integer scalar or a 1 or 2 element vector. The first element is the *file tie number*. The second element, if specified, must be 64[^1].
-
-
-The *file tie number* must not be the tie number associated with another tied file.
-
-
+!!! Legacy "Legacy"
+    The second element of `Y` sets the span of the file which in earlier versions of Dyalog could be `32` or `64`. Small-span (32-bit) component files can no longer be created; this element is retained for backwards compatibility purposes.
 
 `X` must be either:
 
@@ -120,13 +119,6 @@ will name a variant of `⎕FCREATE` which will create component file with level 
       'newfile'JFCREATE 0
 1
 ```
-
-
-
-
-
-
-[^1]: This element sets the span of the file which in earlier Versions of Dyalog APL could be 32 or 64. Small-span (32-bit) component files may no longer be created and this element is retained only for backwards compatibility of code.
 
 !!! Info "Information"
     Component files that have both journalling and checksum properties set to `0` have been deprecated; from Dyalog v21.0 it will not be possible to create files with this combination of properties. For information on how to identify code that creates component files that have both journalling and checksum properties set to `0` in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).

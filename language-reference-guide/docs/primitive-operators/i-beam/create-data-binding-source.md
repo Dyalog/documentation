@@ -21,8 +21,7 @@ search:
     **.NET Framework only**
 
 
-Creates an object that may be used as a data source for WPF data binding. [^1]
-
+Creates an object that may be used as a data source for WPF data binding. For more information on the concepts of WPF data binding, see [Microsoft Developer Network's Data Binding Overview](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/data/).
 
 This function connects a *Binding Target* to a *Binding Source*. In WPF a Binding Target is a particular property of a user interface object; for example, the Text property of a TextBox object. A Binding Source is  a *Path* to a value in a data object (which may contain other values). The value of the Binding Source determines the value of the Binding Target. If two-way binding is in place, a change in a user-interface component causes the bound data value to change accordingly. In the example of the TextBox, the value in the Binding Source changes as the user types into the TextBox.
 
@@ -408,8 +407,3 @@ If Reason is `'CellChanged'`, Path is the row and column number (in origin 0) of
 
 
 If Reason is `'RowDeleted'` or `'RowInserted'`, Path is the number of the row that has been added or removed (in origin 0) and Value is `⎕NULL`.
-
-
-
-
-[^1]: It is beyond the scope of this document to fully explain the concepts of WPF data binding. See Microsoft Developer Network, Data Binding Overview.

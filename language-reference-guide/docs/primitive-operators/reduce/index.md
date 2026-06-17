@@ -44,7 +44,7 @@ Table: Identity Elements {: #IdentityElements }
 |Multiply|`×`| `1`      |
 |Divide|`÷`| `1`      |
 |Residue|`| `        |`0`|
-|Minimum|`⌊`| `M`[^1]  |
+|Minimum|`⌊`| `M`    |
 |Maximum|`⌈`| `-M`     |
 |Power|`*`| `1`      |
 |Binomial|`!`| `1`      |
@@ -61,6 +61,8 @@ Table: Identity Elements {: #IdentityElements }
 |Replicate|`/⌿`| `1`      |
 |Expand|`\⍀`| `1`      |
 |Rotate|`⌽⊖`| `0`      |
+
+In [](#IdentityElements), `M` represents the largest representable value. Typically this is 1.7E308, unless [`⎕FR`](../../system-functions/fr.md) is `1287`, in which case it becomes 1E6145
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -122,5 +124,3 @@ For backwards compatibility reasons, `+/` and `×/` of simple vectors are still 
 0
 ```
 This also applies to `+⌿` and `×⌿`.
-
-[^1]: `M` represents the largest representable value: typically this is 1.7E308, unless `⎕FR` is 1287, when the value is 1E6145.

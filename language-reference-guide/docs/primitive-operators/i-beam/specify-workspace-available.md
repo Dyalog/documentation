@@ -17,7 +17,7 @@ search:
 
 
 
-This function is identical to the system function `⎕WA` except that it provides the means to specify the amount of memory [^1]  that is *committed* for the workspace rather than have it assigned by the internal algorithm. Committed memory is memory that is allocated to a specific process and thereby reduces the amount of memory available for other applications. See also [Workspace Management](../../../../windows-installation-and-configuration-guide/workspace-management).
+This function is identical to the system function `⎕WA` except that it provides the means to specify the amount of memory that is *committed* for the workspace rather than have it assigned by the internal algorithm. Committed memory is memory that is allocated to a specific process and thereby reduces the amount of memory available for other applications. See also [Workspace Management](../../../../windows-installation-and-configuration-guide/workspace-management). The memory committed for the workspace includes the virtual memory required for memory mapped to disk.
 
 
 Like `⎕WA`,  `2002⌶` compacts the workspace so that it occupies the minimum number of bytes possible, adds an *extra amount*, and then de-commits all the remaining memory that it is currently using, allowing it to be allocated by the operating system for use by other applications.
@@ -44,4 +44,3 @@ Note that this function does not change the size of the *extra amount* that will
 
 
 
-[^1]: The term memory here means virtual memory which includes memory mapped to disk.
