@@ -1,3 +1,0 @@
-<h1 class="heading"><span class="name">Object Hierarchy</span></h1>
-
-The most striking difference between the `Windows.Forms` GUI and the Dyalog GUI is that in `Windows.Forms` the container hierarchy represented by forms, group boxes, and controls is not represented by an object hierarchy. Instead, objects that represent GUI controls are created stand-alone (that is, without a parent) and then associated with a container, such as a `Form`, by calling the `Add` method of the parent’s Controls collection. Notice too that `Windows.Forms` objects are associated with APL symbols that are namespace references, but `Windows.Forms` objects do not have implicit names.

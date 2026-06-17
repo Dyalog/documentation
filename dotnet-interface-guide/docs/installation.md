@@ -85,7 +85,7 @@ The components used to support the .NET interface are summarised below. Differen
 
 ## Enabling the .NET Interface
 
-The .NET interface is enabled when the DYALOG_NETCORE configuration parameter is set to `1`; this is the default setting on Linux (including the Raspberry Pi) and macOS. On Microsoft Windows the default setting is `0` for backwards compatibility (a setting of `0` enables the [.NET Framework interface](../../net-framework-interface-guide/)).
+The .NET interface is enabled when the DYALOG_NETCORE configuration parameter is set to `1`; this is the default setting on Linux (including the Raspberry Pi) and macOS. On Microsoft Windows the default setting is `0` for backwards compatibility (a setting of `0` enables the [.NET Framework interface](../../dotnet-framework-interface-guide/)).
 
 !!! Info "Information"
     The .NET interface and the .NET Framework interface cannot be enabled simultaneously.
