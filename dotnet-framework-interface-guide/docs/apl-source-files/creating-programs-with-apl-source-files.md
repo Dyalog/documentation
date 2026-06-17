@@ -27,7 +27,7 @@ The resulting executable can be associated with a desktop icon, and will run wit
 
 ## Example: Simple Console
 
-The following APL source file (**eg2.apln**) illustrates the simplest possible application that displays the text "Hello World".:
+The following APL source file (**eg2.apln**) illustrates the simplest possible application that displays the text "Hello World":
 ```apl
 :Namespace N
 ⎕LX←'N.RUN'

@@ -141,7 +141,7 @@ HeaderText="Please enter a value in the following fields"
 
 The <code class="language-nonAPL">ValidationSummary</code> control collects error messages from all the other validation controls on the page, and displays them together. In this example, a pop-up message box is used. One advantage of this approach is that this type of validation can be carried out client-side by local JavaScript that is generated automatically on the server and incorporated in the HTML that is sent to the browser.
 
-Logical field validation for this page is carried out on the server by APL functions that are attached to <code class="language-nonAPL">CustomValidatorM/code> controls. For example:
+Logical field validation for this page is carried out on the server by APL functions that are attached to <code class="language-nonAPL">CustomValidator</code> controls. For example:
 ```nonAPL
 <asp:CustomValidator id="CustomValidator_INT" 
      OnServerValidate="VALIDATE_INT"
@@ -234,7 +234,7 @@ At this stage it is worth reviewing the sequence of events that occurs when a us
 6. After all the control events have been raised and processed the <code class="language-nonAPL">Page_UnLoad</code> event is raised and the associated function (if any) is invoked. This function is a practical place to implement termination code, such as closing a component file or data source.
 7. The instance of the page is destroyed. Any global variables in the namespace that were defined by the <code class="language-nonAPL">Page_Load</code> function, the validation functions, and the callback function, are lost because the clone of the `actuarial` namespace disappears.
 
-This means that, within the life of the cloned instance of the `actuarial` namespace, the system runs the `Page_Load` function followed `by VALIDATE_INT`, followed by `VALIDATE_AGE`, `VALIDATE_TERM`, `VALIDATE_DUR`, and so on to `CALC_FSLTAB_RESULTS`. These functions take their input from the values passed in their arguments (as in the case of the `VALIDATE_xxx` functions) or from the properties of any of the controls on the Page. They perform output by modifying these properties or by invoking standard methods on the Page.
+This means that, within the life of the cloned instance of the `actuarial` namespace, the system runs the `Page_Load` function followed by `VALIDATE_INT`, followed by `VALIDATE_AGE`, `VALIDATE_TERM`, `VALIDATE_DUR`, and so on to `CALC_FSLTAB_RESULTS`. These functions take their input from the values passed in their arguments (as in the case of the `VALIDATE_xxx` functions) or from the properties of any of the controls on the Page. They perform output by modifying these properties or by invoking standard methods on the Page.
 
 If successful, the `VALIDATE_INT` function set up a global variable (strictly, only global within the current instance of the actuarial namespace) called `INT` that contains the value in the **Interest Rate** field. Similarly, `VALIDATE_AGE` defines a variable called `AGE`. These variables are subsequently available for use by the calculation function.
 
@@ -285,7 +285,7 @@ Validation controls are automatically invoked when the user activates a Button c
 
 ```
 
-A <code class="language-nonAPL">RadioButtonList</code> control does not cause validation to occur, so this must be done explicitly. This is easily achieved by calling the <code class="language-nonAPL">Validate</code> method of the Page itself as shown in line `[11]`:
+A <code class="language-nonAPL">RadioButtonList</code> control does not cause validation to occur, so this must be done explicitly. This is easily achieved by calling the <code class="language-nonAPL">Validate</code> method of the Page itself as shown in line `[13]`:
 ```apl
      ∇ CHANGE_TABLES ARGS;TableNames;TableName;OPTSMORT; MORT_OPTION;RUN_OPTION
 [1]   :Access public

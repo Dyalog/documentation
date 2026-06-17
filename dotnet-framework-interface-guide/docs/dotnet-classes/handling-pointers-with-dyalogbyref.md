@@ -29,13 +29,10 @@ The <code class="language-nonAPL">ByRef</code> class has a single property calle
 ```apl
       ptr2.Value
 0
-```
-```apl
 
       ptr3.Value
 1 2 3 4 5 6 7 8 9 10
-```
-```apl
+
       ptr4.Value
 30/04/2000 00:00:00
 ```
@@ -59,8 +56,6 @@ Returning to the example, the <code class="language-nonAPL">DivRem</code> method
 VALUE ERROR
       remptr.Value
      ^
-```
-```apl
 
       Math.DivRem 311 99 remptr
 3
@@ -74,13 +69,10 @@ Sometimes a .NET method can take a parameter that is an array, and the method ex
       fs←⎕NEW FileStream ('c:\tmp\jd.txt' FileMode.Open) 
       fs.Length
 25
-```
-```apl
 
       fs.Read(arg←⎕NEW ByRef,⊂⊂25⍴0)0 25
 25
-```
-```apl
+
       arg.Value
 104 101 108 108 111 32 102 114 111 109 32 106 111 104 110 32 100 97 105 110 116 114 101 101 10
 ```

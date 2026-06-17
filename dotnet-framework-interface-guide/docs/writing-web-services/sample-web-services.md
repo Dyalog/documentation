@@ -132,7 +132,7 @@ Each golf course managed by the application has a unique code (integer) and a na
 
 - `GetStartingSheet(CourseCode,Date)` returns the starting sheet for a specified golf course on a given day. A starting sheet is a list of starting times with a list of the golfers booked to start their round at that time. The result of this method is a `StartingSheet` object.
 
-- `MakeBooking(CourseCode,TeeTime,GimmeNearest,Name1,Name2,Name3,Name4))` requests a tee reservation at the course specified by `CourseCode`. All parameters are required. `TeeTime` is a `DateTime` object that specifies the requested date and time. `GimmeNearest` is `Boolean` – `1` means request the nearest tee-time to that specified, and `0` means request only the specified tee-time. `Name1-4` are strings specifying the names of up to four players. The result of this method is a `Booking` object.
+- `MakeBooking(CourseCode,TeeTime,GimmeNearest,Name1,Name2,Name3,Name4)` requests a tee reservation at the course specified by `CourseCode`. All parameters are required. `TeeTime` is a `DateTime` object that specifies the requested date and time. `GimmeNearest` is `Boolean` – `1` means request the nearest tee-time to that specified, and `0` means request only the specified tee-time. `Name1-4` are strings specifying the names of up to four players. The result of this method is a `Booking` object.
 
 ### Global.asax
 
@@ -610,7 +610,7 @@ When you click **Save**, the **Status** window displays the information shown in
 
 In your prefered browser, navigate to [http://localhost/dyalog.net.15.0.unicode.32/webservices/eg2.asmx](http://localhost/dyalog.net.15.0.unicode.32/webservices/eg2.asmx). The page fabricated by ASP.NET is shown in [](#eg2b1).
 
-![Browser page fabricated by ASP.NET for <strong>g2.asmx</strong>](../img/s-samplews-eg2-browser1.png){ #eg2b1 }
+![Browser page fabricated by ASP.NET for <strong>eg2.asmx</strong>](../img/s-samplews-eg2-browser1.png){ #eg2b1 }
 
 This shows that the web service is called `Example`, and that it exports a single method called `Add` which takes two parameters called `arg1` and `arg2`.
 

@@ -1,6 +1,6 @@
-<h1 class="heading"><span class="name">Debugging an APL.NET Class</span></h1>
+<h1 class="heading"><span class="name">Debugging an APL .NET Class</span></h1>
 
-All DYALOG.NET objects are executed by the Dyalog DLL. The full development version of the Dyalog DLL contains all of the development and debug facilities of the APL Session, including the **Editor** windows and **Trace** window. The run-time version contains no debugging facilities. The choice of which version of the Dyalog DLL is used is made when the assembly is exported from APL using the **File|Export** menu or compiled using **dyalogc.exe**:
+All APL .NET objects are executed by the Dyalog DLL. The full development version of the Dyalog DLL contains all of the development and debug facilities of the APL Session, including the **Editor** windows and **Trace** window. The run-time version contains no debugging facilities. The choice of which version of the Dyalog DLL is used is made when the assembly is exported from APL using the **File|Export** menu or compiled using **dyalogc.exe**:
 
 - If an APL .NET object that is bound to the full development version generates an untrapped APL error (such as a `VALUE ERROR`) and the client application is configured so that it is allowed to interact with the desktop, then the APL code will suspend and the APL Session window will be displayed. Otherwise, an exception is generated.
 
@@ -8,7 +8,7 @@ All DYALOG.NET objects are executed by the Dyalog DLL. The full development vers
 
 ## Specifying the DLL
 
-There are several ways to specify which of the two versions of the Dyalog DLL (full development or run-time) your DYALOG.NET class will be bound:
+There are several ways to specify which of the two versions of the Dyalog DLL (full development or run-time) your APL .NET class will be bound:
 
 !!! Info "Information"
     The appropriate DLL must be available when the class is subsequently invoked – if the DLL to which the APL .NET class is bound is not present, then an exception will be generated.
@@ -49,12 +49,12 @@ Finally, you can usually force a suspension by generating a weak interrupt. This
 !!! Info "Information"
     In this section, a reference to terminating the client application means that APL executes <code class="language-nonAPL">Application.Exit()</code>. This might cause the application to terminate cleanly (as with ASP.NET) or it could cause it to crash.
 
-When an DYALOG.NET object suspends execution, all other active APL .NET objects bound to the full development version of the Dyalog DLL that are currently being executed by the same client application will also suspend. In addition, all the classes currently being hosted by the Dyalog DLL are visible to the APL developer whether active (an instance is currently being executed) or not.
+When an APL .NET object suspends execution, all other active APL .NET objects bound to the full development version of the Dyalog DLL that are currently being executed by the same client application will also suspend. In addition, all the classes currently being hosted by the Dyalog DLL are visible to the APL developer whether active (an instance is currently being executed) or not.
 
 !!! Info "Information"
     If a client application, such as ASP.NET, is also hosting APL .NET objects bound to the  run-time version of the Dyalog DLL, these objects will be hosted in a separate workspace attached to the run-time version of the Dyalog DLL and will not be visible to the developer.
 
-Debugging a running DYALOG.NET object is mostly the same process as debugging a stand-alone multi-threaded APL application. However, there are some important things to remember:
+Debugging a running APL .NET object is mostly the same process as debugging a stand-alone multi-threaded APL application. However, there are some important things to remember:
 
 - The namespace structure above your APL class should be treated as being inviolate. There is nothing to prevent you from deleting namespaces, renaming namespaces, or creating new ones in the workspace, but this should not be done.
 - You should not alter, delete or rename any functions that have been automatically generated on your behalf by the Dyalog .NET Compiler; these functions should also be treated as being inviolate.

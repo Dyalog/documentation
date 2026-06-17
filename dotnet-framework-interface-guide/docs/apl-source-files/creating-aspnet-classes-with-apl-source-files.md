@@ -4,7 +4,7 @@ One of the purposes of APL Source files is to provide the ability to write ASP.N
 
 ## Web Page Layout
 
-An ASP.NET web page typically consists of a mixture of HTML and code written in a scripting language. The script code is separated from the HTML by being embedded within <code class="language-nonAPL"><script>...</script></code> tags, and normally appears in the <code class="language-nonAPL"><head>...<head></code> section of the page. Only one block of script is allowed in a page. The script block normally consists of a collection of functions, which are invoked by some event on the page, or on an element of the page.
+An ASP.NET web page typically consists of a mixture of HTML and code written in a scripting language. The script code is separated from the HTML by being embedded within <code class="language-nonAPL">&lt;script>...&lt;/script></code> tags, and normally appears in the <code class="language-nonAPL">&lt;head>...&lt;/head></code> section of the page. Only one block of script is allowed in a page. The script block normally consists of a collection of functions, which are invoked by some event on the page, or on an element of the page.
 
 APL source file code starts with a statement:
 ```apl

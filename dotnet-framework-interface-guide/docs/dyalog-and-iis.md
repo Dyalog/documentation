@@ -6,7 +6,7 @@ IIS includes Active Server Page (ASP) technology, which permits web pages to be 
 
 ASP.NET is a new version of ASP and is based upon the Microsoft .NET Framework technology. It offers significantly better performance and a host of new features including support for web services.
 
-# IIS Installation Dependency
+## IIS Installation Dependency
 
 During installation, Dyalog registers itself with ASP.NET as an ASP.NET programming language. Among other things, this allows ASP.NET web pages to be written using Dyalog. The Dyalog installation program  also registers the Dyalog asp.net sample applications as IIS _virtual directories_.
 
@@ -15,11 +15,11 @@ It is not practical for the Dyalog **setup.exe** to perform these tasks unless I
 !!! Info "Information"
     If IIS is installed after Dyalog, it is necessary to uninstall and then re-install Dyalog to enable the registration of Dyalog as an ASP.NET programming language to occur, and for the **Samples/asp.net** sub-directory to be copied onto the system and the samples registered as IIS virtual directories.
 
-# IIS Applications, Virtual Directories, and Application Pools
+## IIS Applications, Virtual Directories, and Application Pools
 
 IIS supports the concept of an _application_. An application is a logically-separate service or web site. IIS can run any number of applications concurrently. The files associated with an application are stored in a physical directory on disk, which is linked to an IIS virtual directory. The name of the virtual directory is the name of the application or web site.
 
-The **[DYALOG]\Samples\asp.net** directory and its sub-directories contain sample applications. When installing Dyalog, these are automatically registered as IIS virtual directories, under a common root that has the name  **dyalog.net.<version>.<edition>.<width>**. For example, the 64‑bit Unicode edition of Dyalog version 18.0 will have the common root **dyalog.net.18.0.unicode.64**. This common root is referred to in this documentation as **dyalog.net**.
+The **[DYALOG]\Samples\asp.net** directory and its sub-directories contain sample applications. When installing Dyalog, these are automatically registered as IIS virtual directories, under a common root that has the name  **dyalog.net.&lt;version>.&lt;edition>.&lt;width>**. For example, the 64‑bit Unicode edition of Dyalog version 18.0 will have the common root **dyalog.net.18.0.unicode.64**. This common root is referred to in this documentation as **dyalog.net**.
 
 !!! Legacy "Legacy"
     Prior to Dyalog v11.0, virtual directories were created in the **apl.net** directory.
@@ -30,7 +30,7 @@ Each **dyalog.net** application is associated with an application pool called Dy
 
 When you want to run the web services and web page examples, go to [http://localhost/dyalog.net.18.2.unicode.64/index.htm](http://localhost/dyalog.net.18.2.unicode.64/index.htm) and select from the menu on the left-hand side.
 
-# Internet Information Services (IIS) Manager
+## Internet Information Services (IIS) Manager
 
 Internet Information Services (IIS) Manager is a tool for managing IIS. If you are developing web pages/services, you will use this tool a lot.
 

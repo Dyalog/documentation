@@ -1,11 +1,11 @@
 <h1 class="heading"><span class="name">Tutorial</span></h1>
 
 !!! Legacy "Legacy"
-    This tutorial was originally designed (for Dyalog v10.0) to be exercised in a console window, with the user invoking the C# compiler directly using a command-line interface. It was originally envisaged to be run within the **[DYALOG]\Samples\aplclasses\** directory, but this directory is now read-only.In addition, dependent Dyalog DLLs must now reside in the same directory as the host program. The tutorial has, therefore, been re-factored to use command line tools in a writeable directory.
+    This tutorial was originally designed (for Dyalog v10.0) to be exercised in a console window, with the user invoking the C# compiler directly using a command-line interface. It was originally envisaged to be run within the **[DYALOG]\Samples\aplclasses\\** directory, but this directory is now read-only. In addition, dependent Dyalog DLLs must now reside in the same directory as the host program. The tutorial has, therefore, been re-factored to use command line tools in a writeable directory.
 
 All the examples in this tutorial are to be executed as simple console applications written in C# in the framework of _Microsoft Visual Studio Professional 2022_ (hereafter referred to as VS); to run this tutorial you should install VS.
 
-Start VS and create a new _C# Console Application (.NET Framework)_ – this creates a project for creating a command-line application. You can chose the name and location; this tutorial chooses the name **DyApp** and the directory **C:\**, so VS creates a directory called **C:\DyApp** containing several other files and directories.
+Start VS and create a new _C# Console Application (.NET Framework)_ – this creates a project for creating a command-line application. You can chose the name and location; this tutorial chooses the name **DyApp** and the directory **C:\\**, so VS creates a directory called **C:\DyApp** containing several other files and directories.
 
 When the application is executed (in debug mode) by VS it will be run in the application's **bin\Debug** sub‑directory.
 
@@ -33,7 +33,7 @@ Following these steps, the contents of the **C:\DyApp\bin\Debug** sub-directory 
 13/09/2022  19:19            19,456 dyalognet.dll
 ```
 
-The code for all of the examples is provided in the **[DYALOG]\Samples\aplclasses\** directory:
+The code for all of the examples is provided in the **[DYALOG]\Samples\aplclasses\\** directory:
 
 - **aplclassesN.dws** – workspaces containing the source code for the Dyalog classes
 
@@ -66,7 +66,7 @@ R←⍳N
 
 `Primitives` contains one public method/function, called `IndexGen`.
 
-The public characteristics for the exported method are included in the definition of the class and its functions, as specified in the `:Signature` statement. This has the following syntax:
+The public characteristics for the exported method are included in the definition of the class and its functions, as specified in the [`:Signature`](../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/signature/) statement. This has the following syntax:
 ```apl
 :Signature [rslttype←] name [arg1type [arg1name] [,argNtype [argNname]]*]
 ```
@@ -78,9 +78,6 @@ where:
 - `name` is the exported name (it can be different from the APL function name but it must be provided) – in the example, the name of the exported method is `IndexGen`
 
 - `argNtype [argNname]` are any arguments are to be supplied, each type-name pair separated from the next by a comma. In this example, the function takes a single integer as its argument.
-
-!!! Info "Information"
-    For more information on `:Signature`, see the _Dyalog Programming Reference Guide_.
 
 When the class is fixed, APL will try to find the .NET data types that have been specified for the result and for the parameters. If one or more of the data types are not recognised as available .NET types, then a warning will be displayed in the status window and APL will not fix the class. If you see such a warning, you have either entered an incorrect data type name, or you have not set `:using` correctly, or some other syntax problem has been detected (for example, the function could be missing a terminating `∇`). In this example, the only data type used is `System.Int32`; as `:using System` is included in the definition, `Int32` is correctly located.
 
@@ -108,7 +105,7 @@ The C# source code (**[DYALOG]\Samples\aplclasses\aplclasses1\net\project\Progra
           }
 ```
 
-In VS, select **Project** > **Add Existing Item...** and add **[DYALOG]\Samples\aplclasses\aplfns1.cs**. Use the **Solution Explorer* to rename **aplfns1.cs** to **aplfns.cs** and delete the dummy program **Program.cs** (this prevents there being two <code class="language-nonAPL">Main()</code> entry-points in the application.
+In VS, select **Project** > **Add Existing Item...** and add **[DYALOG]\Samples\aplclasses\aplfns1.cs**. Use the **Solution Explorer** to rename **aplfns1.cs** to **aplfns.cs** and delete the dummy program **Program.cs** (this prevents there being two <code class="language-nonAPL">Main()</code> entry-points in the application.
 
 Open **aplfns.cs** in the VS code editor (double-click its name in the **Solution Explorer**) and add the following two lines of code:
 ```nonAPL
@@ -159,7 +156,7 @@ This version of `Primitives` contains a constructor function called `CTOR` which
 
 Using this version, build a new .NET assembly called **aplclasses.dll** by selecting **File** > **Export…** – this displays the **Create bound file** dialog box as before. As in [Example 1](#example-1), set the **File name** to _aplclasses_ and ensure that the **Runtime application** checkbox is cleared.
 
-### aplfclasses2.cs
+### aplclasses2.cs
 
 The C# source code (**[DYALOG]\Samples\aplclasses\aplclasses2\net\project\Program.cs**) can be used to call the new version of the Dyalog .NET class:
 ```nonAPL
@@ -291,20 +288,19 @@ public class MainClass
     {
     public static void Main()
         {
-try
-    {
-        Primitives apl = new Primitives(2);
-        int[] rslt = apl.IndexGen(10);
+        try
+            {
+                Primitives apl = new Primitives(2);
+                int[] rslt = apl.IndexGen(10);
 
-        for (int i=0;i<rslt.Length;i++)
-        Console.WriteLine(rslt[i]);
-}
-catch (Exception e)
-    {
-    Console.WriteLine(e.Message);
-    }
+                for (int i=0;i<rslt.Length;i++)
+                Console.WriteLine(rslt[i]);
+            }
+        catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
-
     }	
 ```
 

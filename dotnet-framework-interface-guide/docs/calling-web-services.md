@@ -131,7 +131,7 @@ Line `[3]` calls the `GetStartingSheet` method of the `GS` object. The result, a
 
 ## Exploring Web Services
 
-You can use the Workspace Explorer to browse the proxy class associated with a web service in the same way that you can browse any other .NETassembly. The following screenshots show the <code class="language-nonAPL">Metadata</code> for <code class="language-nonAPL">LoanService</code>, loaded from the **LoanService.dll** proxy.
+You can use the Workspace Explorer to browse the proxy class associated with a web service in the same way that you can browse any other .NET assembly. The following screenshots show the <code class="language-nonAPL">Metadata</code> for <code class="language-nonAPL">LoanService</code>, loaded from the **LoanService.dll** proxy.
 
 <code class="language-nonAPL">LoanService</code> was written in an APL source file but it appears and behaves the same as any other .NET class.
 
@@ -156,7 +156,7 @@ To initiate the call, execute the `Beginxxx` method using the standard parameter
       A←LN.BeginCalcPayments 10000 16 10 12 9(⎕NS'')(⎕NS'')
 ```
 
-The result is an object of type <code class="language-nonAPL">WebClientAsynchResult</code>:
+The result is an object of type <code class="language-nonAPL">WebClientAsyncResult</code>:
 ```apl
       A
 System.IAsyncResult ⎕CLASS System.Web.Services.Protocols.WebClientAsyncResult

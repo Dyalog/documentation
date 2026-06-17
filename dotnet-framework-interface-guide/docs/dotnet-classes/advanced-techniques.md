@@ -120,20 +120,14 @@ For example, if you attempt to create an instance of a <code class="language-non
 EXCEPTION
       DT←⎕NEW DateTime (100000 0 0)
          ^
-```
-```apl
 
       ⎕EN
 90
       ⎕EXCEPTION.Message
 Year, Month, and Day parameters describe an un-representable DateTime.
-```
-```apl
 
       ⎕EXCEPTION.Source
 mscorlib
-```
-```apl
 
       ⎕EXCEPTION.StackTrace
 at System.DateTime.DateToTicks(Int32 year, Int32 month, Int32 day)
@@ -148,7 +142,7 @@ Occasionally it might be desirable to override this mechanism and explicitly spe
 
 These requirements can be met by calling the function and specifying the _variant_ operator (`⍠`) with the `OverloadTypes` or the `CastToTypes` option respectively. Each option takes an array of references to .NET types, of the same length as the number of parameters to the function.
 
-<h4 class="example">Example (using OverLoadTypes option)</h4>
+<h4 class="example">Example (using OverloadTypes option)</h4>
 
 To force APL to call the double version of function `foo()` irrespective of the type of the argument `val`, enter:
 ```apl
@@ -168,7 +162,7 @@ where `Double` is a reference to the .NET type <code class="language-nonAPL">Sys
 ```
 
 Taking this a stage further, suppose that `foo()` is defined with 5 overloads, specifically:
-```
+```apl
 foo()
 foo(int i)
 foo(double d)
@@ -177,7 +171,7 @@ foo(double[] d)
 
 ```
 
-The following statements will call the niladic, double, (double, int) and double`[]` overloads respectively:
+The following statements will call the `niladic`, `double`, `double,int`, and `double[]` overloads respectively:
 ```apl
 (foo ⍠ (⊂⍬)) ⍬                               ⍝ niladic
 (foo ⍠ Double) 1                             ⍝ double
@@ -194,12 +188,11 @@ The .NET function <code class="language-nonAPL">Array.SetValue()</code> sets the
 ```apl
       ⎕USING←'System'
 
-      ⍝ create a Boolean  array with 2 elements
+      ⍝ create a Boolean array with 2 elements
       BA←Array.CreateInstance Boolean 2
       BA.GetValue 0 ⍝ get the 0th element
 0
-```
-```apl
+
       ⍝ attempt to set the 0th element to 1 (AKA true)
       BA.SetValue 1 0
 EXCEPTION: Cannot widen from source type to target type

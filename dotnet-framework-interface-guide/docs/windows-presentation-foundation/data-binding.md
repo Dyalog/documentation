@@ -29,7 +29,7 @@ The data binding expression
 
 ```
 
-specifies that the <code class="language-nonAPL">Text</code> property of the <code class="language-nonAPL">TextBox</code> is bound to a value in the <code class="language-nonAPL">Binding Source</code> (which has yet to be defined) whose path is <code class="language-nonAPL">txtSource</code>. The binding mode is set to <code class="language-nonAPL">TwoWay</code>, which means that any change in the <code class="language-nonAPL">TextBox</code> will be reflected in a new value in the <code class="language-nonAPL">Binding Source</code>, and any change in the <code class="language-nonAPL">Binding Source</code> will be reflected in the <code class="language-nonAPL">TextBox</code>. The value in the <code class="language-nonAPL">Binding Source</code> will be updated when the property (in this case the <code class="language-nonAPL">Text</code> property) changes.
+specifies that the <code class="language-nonAPL">Text</code> property of the <code class="language-nonAPL">TextBox</code> is bound to a value in the Binding Source (which has yet to be defined) whose path is <code class="language-nonAPL">txtSource</code>. The binding mode is set to <code class="language-nonAPL">TwoWay</code>, which means that any change in the <code class="language-nonAPL">TextBox</code> will be reflected in a new value in the Binding Source, and any change in the Binding Source will be reflected in the <code class="language-nonAPL">TextBox</code>. The value in the Binding Source will be updated when the property (in this case the <code class="language-nonAPL">Text</code> property) changes.
 
 ### The APL Code
 
@@ -273,7 +273,7 @@ Line `[21]` sets the `Mode` property of the `Binding` object to `TwoWay` (a fiel
 ```apl
 [21]   win.txtbinding.Mode←Data.BindingMode.TwoWay
 ```
-Line [22] sets the `UpdateSourceTrigger` property of the `Binding` object to `PropertyChanged` (a field of the <code class="language-nonAPL">UpdateSourceTrigger</code> Type). This causes the value in the Binding Source (in this case, `txtSource`) to be changed whenever the property (in this case, the `Text` property) of the `TextBox` changes. This will occur on every keystroke:
+Line `[22]` sets the `UpdateSourceTrigger` property of the `Binding` object to `PropertyChanged` (a field of the <code class="language-nonAPL">UpdateSourceTrigger</code> Type). This causes the value in the Binding Source (in this case, `txtSource`) to be changed whenever the property (in this case, the `Text` property) of the `TextBox` changes. This will occur on every keystroke:
 ```apl
 [22]   win.txtbinding.UpdateSourceTrigger←Data.UpdateSourceTrigger.PropertyChanged
 ```
@@ -423,7 +423,7 @@ The <code class="language-nonAPL">ItemsSource</code> property overrides the <cod
 
 ### The XAML
 
-The variable `XAML_FilteredList` contains XAML to specify a a <code class="language-nonAPL">Window</code> containing a <code class="language-nonAPL">StackPanel</code>. The <code class="language-nonAPL">StackPanel</code> control is a WPF layout control that organises child controls in a single line, vertically by default. In this example, the <code class="language-nonAPL">StackPanel</code> contains a <code class="language-nonAPL">TextBox</code> and, below it, a <code class="language-nonAPL">WrapPanel</code>, and below that a <code class="language-nonAPL">TextBlock</code>. The <code class="language-nonAPL">WrapPanel</code> is also a layout control that organises its child controls sequentially from left to right. The <code class="language-nonAPL">WrapPanel</code> contains two <code class="language-nonAPL">ListBox</code> controls.
+The variable `XAML_FilteredList` contains XAML to specify a <code class="language-nonAPL">Window</code> containing a <code class="language-nonAPL">StackPanel</code>. The <code class="language-nonAPL">StackPanel</code> control is a WPF layout control that organises child controls in a single line, vertically by default. In this example, the <code class="language-nonAPL">StackPanel</code> contains a <code class="language-nonAPL">TextBox</code> and, below it, a <code class="language-nonAPL">WrapPanel</code>, and below that a <code class="language-nonAPL">TextBlock</code>. The <code class="language-nonAPL">WrapPanel</code> is also a layout control that organises its child controls sequentially from left to right. The <code class="language-nonAPL">WrapPanel</code> contains two <code class="language-nonAPL">ListBox</code> controls.
 ```xml
 <Window 
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -732,7 +732,7 @@ The XAML describes a <code class="language-nonAPL">Window</code> containing a <c
 
 The phrase <code class="language-nonAPL">ItemsSource="{Binding}"</code> states that the content of the <code class="language-nonAPL">DataGrid</code> is bound to a data source, which in this case will be inherited from the <code class="language-nonAPL">DataContext</code> property of the parent <code class="language-nonAPL">Window</code>.
 
-<code class="language-nonAPL">Binding="{Binding Name}"</code> specifies that the contents of the first column are bound to a <code class="language-nonAPL">Path</code> called <code class="language-nonAPL">Name</code> in the data source.
+<code class="language-nonAPL">Binding="{Binding Name}"</code> specifies that the contents of the first column are bound to a Path called **Name** in the data source.
 
 Similarly, <code class="language-nonAPL">Binding="{Binding Price, StringFormat=C}"</code> specifies that the Path for the second column is **Price** (<code class="language-nonAPL">StringFormat=C</code> specifies the default currency format).
 

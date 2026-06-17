@@ -114,7 +114,7 @@ The `F2CconvertBtn_Click` callback function converts from Fahrenheit to Centigra
 
 ## Using the TemperatureConverterCtl1 Control on a Page
 
-The text of the script file **samples\temp\temp1.aspx** is shown below. There is no difference between this example and the **simple.aspx** described in [Example: The SimpleCtl Control](example-the-simplectl-control/#using-the-simplectl-control).
+The text of the script file **[DYALOG]\Samples\asp.net\temp\temp1.aspx** is shown below. There is no difference between this example and the **simple.aspx** described in [Example: The SimpleCtl Control](example-the-simplectl-control/#using-the-simplectl-control).
 ```nonAPL
 <%@ Register TagPrefix="Dyalog" Namespace="DyalogSamples" Assembly="temp" %>
 

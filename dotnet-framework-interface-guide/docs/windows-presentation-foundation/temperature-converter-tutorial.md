@@ -253,26 +253,26 @@ The variable `XAML` (a character vector) contains the XAML described previously
 
 Apart from the names given to the objects by the XAML and used by the function, the XAML and the code are independent.
 
-Lines `[7-8]` create a <code class="language-nonAPL">XamlReader</code> object from the character vector through <code class="language-nonAPL">StringReader</code> and <code class="language-nonAPL">XmlTextReader</code> objects:
+Lines `[7-8]` create a `XamlReader` object from the character vector through `StringReader` and `XmlTextReader` objects:
 ```apl
 
 [7]    str←⎕NEW StringReader(⊂XAML)
 [8]    xml←⎕NEW XmlTextReader str
 ```
 
-Line `[9]` instantiates the XAML content by calling its <code class="language-nonAPL">Load</code> method, which returns a reference <code class="language-nonAPL">win</code> to the top-level control (in this case a Window) defined therein. The Window is not yet visible:
+Line `[9]` instantiates the XAML content by calling its `Load` method, which returns a reference `win` to the top-level control (in this case a Window) defined therein. The Window is not yet visible:
 ```apl
 [9]    win←XamlReader.Load xml
 ```
 
-Earlier, it was explained that objects defined by the XAML must be named so that they can be referenced (used) by the code. This is achieved by calling the <code class="language-nonAPL">FindName</code> method of the Window, which returns a reference to the specified (named) object. The statements:
+Earlier, it was explained that objects defined by the XAML must be named so that they can be referenced (used) by the code. This is achieved by calling the `FindName` method of the Window, which returns a reference to the specified (named) object. The statements:
 ```apl
 
 [11]   txtFahrenheit←win.FindName⊂'txtFahrenheit'
 [12]   txtCentigrade←win.FindName⊂'txtCentigrade'
 ```
 
-obtain refs (in this case named <code class="language-nonAPL">txtFahrenheit</code> and <code class="language-nonAPL">txtCentigrade</code>) to  objects named <code class="language-nonAPL">txtFahrenheit</code> and <code class="language-nonAPL">txtCentigrade</code>. It is convenient (but not essential) to use the same name for the ref as is used for the control.
+obtain refs (in this case named `txtFahrenheit` and `txtCentigrade`) to  objects named `txtFahrenheit` and `txtCentigrade`. It is convenient (but not essential) to use the same name for the ref as is used for the control.
 
 Most of the remaining statements obtain refs to the <code class="language-nonAPL">MenuItem</code>, <code class="language-nonAPL">Button</code>, and <code class="language-nonAPL">ScrollBar</code> objects, and attach callback functions to their <code class="language-nonAPL">Click</code> and <code class="language-nonAPL">Scroll</code> events respectively:
 ```apl
@@ -286,7 +286,7 @@ Most of the remaining statements obtain refs to the <code class="language-nonAPL
 [20]   (scrTemp←win.FindName⊂'scrTemp').onScroll←'F2C'
 ```
 
-Finally the code displays the Window and hands it over to the user by calling the <code class="language-nonAPL">ShowDialog</code> method of the top-level Window:
+Finally the code displays the Window and hands it over to the user by calling the `ShowDialog` method of the top-level Window:
 ```apl
 
 [21]   sink←win.ShowDialog
@@ -294,11 +294,11 @@ Finally the code displays the Window and hands it over to the user by calling th
 
 <code class="language-nonAPL">ShowDialog</code> displays the Window _modally_; that is, until it is closed the user can interact only with that Window. It is equivalent to `⎕DQ win` or `win.Wait` in the Dyalog built-in GUI.
 
-### The CallBack Functions
+### The Callback Functions
 
 The callback functions are given the same names in this example as they are in the basic GUI tutorial in the _Dyalog for Microsoft Windows Interface Guide_, and are remarkably similar.
 
-Callback function `f2c`, which is attached to the <code class="language-nonAPL">Click</code> event of the `btnF2C` button (labelled **F>C**), reads the character string in the `txtFahrenheit` <code class="language-nonAPL">TextBox</code>, converts it to a number using `Text2Num`, calculates the equivalent temperature in Centigrade, then displays the result in the ``txtCentigrade`` <code class="language-nonAPL">TextBox</code>:
+Callback function `f2c`, which is attached to the `Click` event of the `btnF2C` button (labelled **F>C**), reads the character string in the `txtFahrenheit` <code class="language-nonAPL">TextBox</code>, converts it to a number using `Text2Num`, calculates the equivalent temperature in Centigrade, then displays the result in the ``txtCentigrade`` <code class="language-nonAPL">TextBox</code>:
 ```apl
      ∇ f2c;value
 [1]    ⍝ Callback to convert Fahrenheit to Centigrade
@@ -531,7 +531,7 @@ Although this approach appears to be more verbose than when using XAML (a 120‑
 
 This code can be examined line-by-line.
 
-`TempConverter[2-5]` define `⎕USING` so that the appropriate .NET assemblies are on the search-path. The <code class="language-nonAPL">ScrollBar</code> control is in <code class="language-nonAPL">System.Windows.Controls.Primitives</code> and not <code class="language-nonAPL">System.Windows.Controls</code> like the others.
+Lines `[2 5]` define `⎕USING` so that the appropriate .NET assemblies are on the search-path. The <code class="language-nonAPL">ScrollBar</code> control is in <code class="language-nonAPL">System.Windows.Controls.Primitives</code> and not <code class="language-nonAPL">System.Windows.Controls</code> like the others.
 ```apl
 
 [2]    ⎕USING←,⊂'System.Windows.Controls,WPF/PresentationFramework.dll'
@@ -540,7 +540,7 @@ This code can be examined line-by-line.
 [5]    ⎕USING,←⊂'System.Windows,WPF/PresentationCore.dll'
 ```
 
-Lines `[7-9]` create a `Window` and sets its `SizeToContent` and `Title` properties as in the XAML example. However, whereas with XAML the string `SizeToContent="WidthandHeight"` is sufficient, when using code it is necessary to get the `Type` correct. In this example, the `SizeToContent` property must be set to a specific member (`WidthAndHeight`) of the <code class="language-nonAPL">System.Windows.SizeToContent</code> enumeration. Other members of this Type are `Width`, `Height`, and `Manual` (the default).
+Lines `[7-9]` create a `Window` and sets its `SizeToContent` and `Title` properties as in the XAML example. However, whereas with XAML the string `SizeToContent="WidthandHeight"` is sufficient, when using code it is necessary to get the Type correct. In this example, the `SizeToContent` property must be set to a specific member (`WidthAndHeight`) of the <code class="language-nonAPL">System.Windows.SizeToContent</code> enumeration. Other members of this Type are `Width`, `Height`, and `Manual` (the default).
 ```apl
 [7]    win←⎕NEW Window
 [8]    win.SizeToContent←SizeToContent.WidthAndHeight

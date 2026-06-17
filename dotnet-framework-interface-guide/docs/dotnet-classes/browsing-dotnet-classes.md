@@ -61,7 +61,7 @@ Open the **Methods** directory.
 
 ![Workspace Tree displaying the System.DateTime methods](../img/s-browsing-classes-systemdatetimemethods.png)
 
-The image above shows the  data type of the result of the method, followed by the name of the method and the types of its arguments, for example, the <code class="language-nonAPL">IsLeapYear</code> method takes an <code class="language-nonAPL">Int32</code> parameter (year) and returns a Boolean result:
+The image above shows the  data type of the result of the method, followed by the name of the method and the types of its arguments, for example, the <code class="language-nonAPL">IsLeapYear</code> method takes an <code class="language-nonAPL">Int32</code> parameter (year) and returns a <code class="language-nonAPL">Boolean</code> result:
 ```apl
       mydt.IsLeapYear 2000
 1

@@ -4,7 +4,7 @@
 
 The .NET Namespace <code class="language-nonAPL">System.IO</code> (in the <code class="language-nonAPL">mscorlib</code> assembly) provides some useful facilities for manipulating files. For example, you can create a <code class="language-nonAPL">DirectoryInfo</code> object associated with a particular directory on your computer, call its <code class="language-nonAPL">GetFiles</code> method to obtain a list of files, and then get their <code class="language-nonAPL">Name</code> and <code class="language-nonAPL">CreationTime</code> properties:
 ```apl
-      ⎕USING←,⊂'System.IO
+      ⎕USING←,⊂'System.IO'
       d←⎕NEW DirectoryInfo (⊂'C:\Dyalog')
 ```
 
@@ -66,7 +66,7 @@ This example will only work if your computer is configured to allow you to send 
       SmtpMail.Send m
 ```
 
-However, the <code class="language-nonAPL">Send</code> method of the <code class="language-nonAPL">SmtpMail</code> object is overloaded; it could be called with a single parameter of type <code class="language-nonAPL">System.Web.Mail.MailMessage</code> as above, or four parameters of type <code class="language-nonAPL">System.String</code>. To avoid this, an alternative is:
+However, the <code class="language-nonAPL">Send</code> method of the <code class="language-nonAPL">SmtpMail</code> object is overloaded; it could be called with a single parameter of type <code class="language-nonAPL">System.Web.Mail.MailMessage</code> as above, or four parameters of type <code class="language-nonAPL">System.String</code>. An alternative is:
 ```apl
       SmtpMail.Send 'tony.blair@uk.gov'
                     'sales@dyalog.com'
@@ -85,7 +85,7 @@ Start by defining `⎕USING` so that it specifies all of the necessary .NET name
       ⎕USING←'System,System.dll' 'System.Net' 'System.IO'
 ```
 
-The <code class="language-nonAPL">WebRequest</code> class in the <code class="language-nonAPL">System.Net</code> .NET namespace implements the.NET Framework's request/response model for accessing data from the internet. For this example, a <code class="language-nonAPL">WebRequest</code> object needs to be associated with the URI `http://www.dyalog.com` (<code class="language-nonAPL">WebRequest</code> is an example of a static class – its methods can be used without creating instances of it):
+The <code class="language-nonAPL">WebRequest</code> class in the <code class="language-nonAPL">System.Net</code> .NET namespace implements the .NET Framework's request/response model for accessing data from the internet. For this example, a <code class="language-nonAPL">WebRequest</code> object needs to be associated with the URI `http://www.dyalog.com` (<code class="language-nonAPL">WebRequest</code> is an example of a static class – its methods can be used without creating instances of it):
 ```apl
       wrq←WebRequest.Create ⊂'http://www.dyalog.com'
 ```
