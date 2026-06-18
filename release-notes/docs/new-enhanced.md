@@ -22,14 +22,14 @@ The following system functions have been added:
 
 The following system functions have been enhanced:
 
-- T.B.A.
+- [`⎕CSV`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/csv) – Comma Separated Values<br />A new variant option, **ForceQuotes**, has been added. This specifies when exported data has quotes around character/numeric fields.
 
 ### I-beams
 
 !!! Warning "Warning"  
-    Any service provided using an I&#8209;Beam should be considered as "experimental" and subject to change – without notice - from one release to the next. Any use of I&#8209;Beams in applications should, therefore, be carefully isolated in cover-functions that can be adjusted if necessary.
+    Any service provided using an I-Beam should be considered as "experimental" and subject to change – without notice - from one release to the next. Any use of I&#8209;Beams in applications should, therefore, be carefully isolated in cover-functions that can be adjusted if necessary.
 
-The following I&#8209;beams have been added:
+The following I-beams have been added:
 
 - T.B.A.
 
