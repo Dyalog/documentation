@@ -22,7 +22,7 @@ The following system functions have been added:
 
 The following system functions have been enhanced:
 
-- T.B.A.
+- [`⎕CSV`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/csv) – Comma Separated Values<br />A new variant option, **ForceQuotes**, has been added to the dyadic form of ⎕CSV. This specifies whether data that is imported to a Session from a CSV file has quotes around character/numeric fields.
 
 ### I-beams
 
