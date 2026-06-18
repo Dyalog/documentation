@@ -7,24 +7,13 @@ search:
   ⎕CSV CSV
 </div>
 
-
-
-
-
-
 <h1 class="heading"><span class="name">Comma Separated Values</span> <span class="command">{R}←{X} ⎕CSV Y</span></h1>
-
-
 
 This function imports and exports Comma Separated Value (CSV) data.
 
-
 Monadic `⎕CSV` imports data from a CSV file or converts data from CSV format to an internal format. Dyadic `⎕CSV` exports data to a CSV file or converts data from internal format to a CSV format.
 
-
-
 ## Internal Format
-
 
 Arrays that result from importing CSV data or arrays that are suitable for exporting as CSV data are represented by 3 possible structures:
 
@@ -32,38 +21,25 @@ Arrays that result from importing CSV data or arrays that are suitable for expo
 - A vector, each of whose items contain field (column) values. Character field values are character matrices; numeric field values are numeric vectors.
 - A vector, each of whose items contain field (column) values. Character field values are vectors of character vectors; numeric field values are numeric vectors.
 
-
 Note that when importing CSV data, all fields are assumed to be character fields unless otherwise specified (see *Column Types* below). A field that contains only "numbers" will not be converted to numeric data unless specified as being numeric.
-
-
 
 ## MetaCharacters
 
-
-Some characters in a CSV file are metacharacters which define the structure of the data; for example, the field separator character between fields. Characters which are not metacharacters are literal characters. The  variant options QuoteChar, EscapeChar and DoubleQuote make it possible to interpret metacharacters as literal characters and thus permit fields to contain field separator characters, leading and trailing spaces, and line-endings.
-
-
+Some characters in a CSV file are metacharacters that define the structure of the data; for example, the field separator character between fields. Characters that are not metacharacters are literal characters. The variant options QuoteChar, EscapeChar, and DoubleQuote make it possible to interpret metacharacters as literal characters, and thus permit fields to contain field separator characters, leading and trailing spaces, and line-endings.
 
 Fixed-width fields do not require these options and they are ignored if fixed-width fields are being processed.
 
-
 # Monadic `⎕CSV`
-
 
 `R←⎕CSV Y`
 
-
 `Y` is an array that specifies just the source of the CSV data (see below) or a 1,2,3 or 4-element vector containing:
-
 
 |-----|---------------------------|
 |`[1]`|Source of CSV Data         |
 |`[2]`|Description of the CSV data|
 |`[3]`|Column Types               |
 |`[4]`|Header Row Indicator       |
-
-
-
 
 *Source* may be one of:
 
@@ -72,126 +48,78 @@ Fixed-width fields do not require these options and they are ignored if fixed-wi
 - a character vector or scalar containing CSV data with embedded newline characters. To avoid this source being interpreted as a file name, `Y[2]` must be specified as `'S'`. 
 - a vector of character vectors and/or scalars containing CSV data with implicit newlines after each character vector or scalar
 
-
-
-
 *Description*
 
-
-If `Y[1]`  is a file name or tie number *Description* may be one of:
+If `Y[1]` is a file name or tie number *Description* may be one of:
 
 - a character vector specifying the file encoding such as `'UTF-8'` (see [File Encodings](nget.md)).
-- a 256-element numeric vector that maps each possible byte value (0-255) to a  Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value may appear in the table more than once.
-
-
+- a 256-element numeric vector that maps each possible byte value (0-255) to a Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value may appear in the table more than once.
 
 If omitted or empty, the file encoding is deduced (see below).
 
-
 If `Y[1]` is a character array containing CSV data *Description* is a character scalar `'S'` (simple) or `'N'` (nested). The default is `'N'`
-
-
-
 
 *Column Types*
 
-
 This is a scalar numeric code or vector of numeric codes that specifies the field types from the list below. If *Column Types* is zilde or omitted, the default is 1 (all fields are character).
-
 
 |---|---|
 |`0`|The field is ignored.|
 |`1`|The field contains character data.|
 |`2`|The field is to be interpreted as being numeric. Empty cells and cells which cannot be converted to numeric values are not tolerated and cause an error to be signalled.|
-|`3`|The field is to be interpreted as being numeric but invalid numeric values are tolerated. Empty fields and fields which cannot be converted to numeric values are replaced with the  Fill variant option (default 0).|
+|`3`|The field is to be interpreted as being numeric but invalid numeric values are tolerated. Empty fields and fields which cannot be converted to numeric values are replaced with the Fill variant option (default 0).|
 |`4`|The field is to be interpreted numeric data but invalid numeric data is tolerated. Empty fields and fields which cannot be converted to numeric values are returned instead as character data; this type is disallowed when variant option Invert is set to 1.|
 |`5`|The field is to be interpreted as being numeric but empty fields are tolerated and are replaced with the Fill variant option (default 0). Non-empty cells which cannot be converted to numeric values are not tolerated and cause an error to be signalled.|
 
-
 Note that if *Column Types* is specified by a scalar 4, all numeric data in all fields will be converted to numbers.
-
-
-
 
 *Header Row Indicator*
 
-
-This is a Boolean value (default 0) to specify whether or not the first record in a CSV file is  a list of column labels. If  *Header Row Indicator* is 1, the first record (the *header row*) is treated differently from other records. It is assumed to contain character data (labels) regardless of `Y[3]` and is returned separately in the result.
-
-
+This is a Boolean value (default 0) to specify whether or not the first record in a CSV file is a list of column labels. If *Header Row Indicator* is 1, the first record (the *header row*) is treated differently from other records. It is assumed to contain character data (labels) regardless of `Y[3]` and is returned separately in the result.
 
 ## Variant options
 
-
 Monadic `⎕CSV` may be applied using the  Variant operator with the following options. The Principal option is Invert.
 
-
-|Name       |Meaning                                                                                                                                                    |Default|
-|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|-------|
-|Invert     |0, 1 or 2 (see below)                                                                                                                                      |`0`    |
-|Separator  |The field separator, any single character. If Widths  is other than `⍬` , Separator is ignored.                                                            |`','`  |
-|Widths     |A vector of numeric values describing the width (in  characters) of the corresponding columns in the CSV source, or `⍬` for variable width delimited fields|`⍬`    |
-|Decimal    |The decimal mark in numeric fields - one of `'.'` or `','`                                                                                                 |`'.'`  |
-|Thousands  |The thousands separator in numeric fields, which may be  specified as an empty character vector (meaning no separator is defined) or a  character scalar   |`''`   |
-|Trim       |A Boolean specifying whether undelimited/unescaped  whitespace is trimmed at the beginning and end of fields                                               |`1`    |
-|Ragged     |A Boolean specifying whether records with varying numbers  of fields are allowed; see notes below                                                          |`0`    |
-|Fill       |The numeric value substituted for invalid numeric data in  columns of type 3                                                                               |`0`    |
-|Records    |The maximum number of records to process or 0 for no limit.                                                                                                |`0`    |
+|Name       |Meaning                                     |Default|
+|-----------|--------------------------------------------|-------|
+|Decimal    |The decimal mark in numeric fields - one of `'.'` or `','` |   `'.'`|
+|DoubleQuote|A Boolean that indicates whether (`1`) or not (`0`) a quote character within a quoted field is represented by two consecutive quote characters     |`1`    |
+|EscapeChar |The escape character, which may be specified as an empty character vector (meaning none is defined) or a character scalar                |`''`   |
+|Fill       |The numeric value substituted for invalid numeric data in  columns of type 3   |`0`    |
+|Invert     |A number specifying how the CSV data should be returned. Possible values are:<ul><li>`0` – A table (a matrix whose elements are character vectors or scalars or numbers).</li><li>`1` – A vector, each of whose items contain field (column) values. Character field values are character matrices; numeric field values are numeric vectors.</li><li>`2` – A vector, each of whose items contain field (column) values. Character field values are vectors of character vectors; numeric field values are numeric vectors.</li></ul>    |`0`    |
 |QuoteChar  |The field quote character (delimiter), which may be specified as an empty character vector (meaning none is defined) or a character scalar                 |`"`    |
-|EscapeChar |The escape character, which may be specified as an empty character vector (meaning none is defined) or a character scalar                                  |`''`   |
-|DoubleQuote|A Boolean which indicates whether (1) or not (0) a quote character within a quoted field is represented by two consecutive quote characters                |`1`    |
+|Ragged     |A Boolean specifying whether records with varying numbers  of fields are allowed; see notes below                                                          |`0`    |
+|Records    |The maximum number of records to process or 0 for no limit.                    |`0`    |
+|Separator  |The field separator, any single character. If Widths is other than `⍬`, Separator is ignored.                                                            |`','`  |
+|Thousands  |The thousands separator in numeric fields, which can be specified as an empty character vector (meaning no separator is defined) or a character scalar   |`''`   |
+|Trim       |A Boolean specifying whether undelimited/unescaped whitespace is trimmed at the beginning and end of fields            |`1`    |
+|Widths     |A vector of numeric values describing the width (in characters) of the corresponding columns in the CSV source, or `⍬` for variable width delimited fields|`⍬`    |
 
-
-
-The Separator, QuoteChar and EscapeChar characters, when defined, must be different.
-
+The Separator, QuoteChar, and EscapeChar characters, when defined, must be different.
 
 Other options defined for export are also accepted but ignored.
 
-
-### Invert Option
-
-
-This option specifies how the CSV data should be returned as follows:
-
-
-|---|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|0  |A table (a matrix whose elements are character vectors or scalars or numbers).                                                                                 |
-|`1`|A vector, each of whose items contain field (column) values. Character field values are character matrices; numeric field values are numeric vectors.          |
-|`2`|A vector, each of whose items contain field (column) values. Character field values are vectors of character vectors; numeric field values are numeric vectors.|
-
-
-
-### QuoteChar, EscapeChar and DoubleQuote Options
-
+### QuoteChar, EscapeChar, and DoubleQuote Options
 
 If EscapeChar is set then any character may be prefixed by the escape character. The escape character is typically defined as `'\'`. The escape character immediately followed by the character `c` is the literal character `c` even if `c` alone would have been a metacharacter.
 
-
 If QuoteChar is set then fields may be delimited by the specified quote character. Within quoted fields all characters except the quote character, and the escape character if defined, are literal characters.
-
 
 If DoubleQuote is set to 1 then two consecutive quote characters within a quoted field are interpreted as the single literal quote character.
 
-
-
 ## Result
-
 
 The result `R` contains the imported data.
 
-
 If `Y[4]` does not specify that the data contains a header then `R` contains the entire data in the form specified by the Invert variant option.
-
 
 If `Y[4]` does specify that the data contains a header then `R` is a 2-element vector where:
 
 - `R[1]` is the imported data excluding the header.
 - `R[2]` is a vector of character vectors containing the header record.
 
-
 <h2 class="example">Examples</h2>
-
 
 ![csv_excel](../img/csv-excel.png)
 ```apl
@@ -204,8 +132,6 @@ If `Y[4]` does specify that the data contains a header then `R` is a 2-element v
 │                                                │
 └────────────────────────────────────────────────┘
 
-```
-```apl
       ⎕CSV CSVFile
 ┌→───────────────────┐
 ↓ ┌→──────┐  ┌→────┐ │
@@ -222,8 +148,6 @@ If `Y[4]` does specify that the data contains a header then `R` is a 2-element v
 │ └────────┘ └───┘   │
 └∊───────────────────┘
 
-```
-```apl
       ⎕CSV CSVFile'' ⍬ 1 ⍝ Header row
 ┌→────────────────────────────────────────────┐
 │ ┌→──────────────────┐ ┌→──────────────────┐ │
@@ -239,8 +163,6 @@ If `Y[4]` does specify that the data contains a header then `R` is a 2-element v
 │ └∊──────────────────┘                       │
 └∊────────────────────────────────────────────┘
 
-```
-```apl
       ⎕CSV CSVFile''(1 2)1 ⍝ Fields are Char, Num
 ┌→──────────────────────────────────────────┐
 │ ┌→────────────────┐ ┌→──────────────────┐ │
@@ -256,8 +178,6 @@ If `Y[4]` does specify that the data contains a header then `R` is a 2-element v
 │ └∊────────────────┘                       │
 └∊──────────────────────────────────────────┘
 
-```
-```apl
       (⎕CSV⍠'Invert' 1)CSVFile'' (1 2) 1    ⍝ Invert 1
 ┌→────────────────────────────────────────────────────┐
 │ ┌→──────────────────────────┐ ┌→──────────────────┐ │
@@ -268,8 +188,7 @@ If `Y[4]` does specify that the data contains a header then `R` is a 2-element v
 │ │ └────────┘                │                       │
 │ └∊──────────────────────────┘                       │
 └∊────────────────────────────────────────────────────┘
-```
-```apl
+
       ⊃(⎕CSV⍠'Invert' 2)CSVFile'' (1 2) 1    ⍝ Invert 2
 ┌→──────────────────────────────────────────────────┐
 │ ┌→───────────────────────────────┐ ┌→───────────┐ │
@@ -316,7 +235,7 @@ Note that:
 
 The left argument `X` is either:
 
-- a matrix or a vector of vectors/matrices  containing the data to be converted to CSV format.
+- a matrix or a vector of vectors/matrices containing the data to be converted to CSV format.
 - or a 2-element vector containing a matrix or vector of vectors/matrices containing the data to be converted to CSV format, and a vector of character vectors containing the header record.
 
 `Y` is a 1 or 2-element vector containing:
@@ -333,55 +252,43 @@ The left argument `X` is either:
 
 *Description*
 
-If `Y[1]`  is a file name or tie number, *Description* may be:
+If `Y[1]` is a file name or tie number, *Description* may be:
 
 - a character vector specifying the file encoding such as `'UTF-8'` (see [File Encodings](nget.md)).
-- a 256-element numeric vector that maps each possible byte value (0-255) to a  Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value may appear in the table more than once.
-
-
+- a 256-element numeric vector that maps each possible byte value (0-255) to a Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value may appear in the table more than once.
 
 If `Y[1]` is empty, *Description* may be a character scalar `'S'` (simple) or `'N'` (nested). If omitted, the default is `'S'`
 
-
-
 ## Variant options
 
-
-Dyadic `⎕CSV` may be applied using the  Variant operator with the following options.
-
+Dyadic `⎕CSV` may be applied using the _variant_ operator with the following options.
 
 |Name|Meaning|Default|
 |---|---|---|
-|IfExists|a character vector `'Error'` or `'Replace'` which specifies, when creating a named file  which already exists, whether to overwrite it ( `'Replace'` ) or signal an error ( `'Error'` )|`'Error'`|
-|Separator|the field separator, any single character. If Widths is other than `⍬` , Separator is ignored.|`','`|
-|Widths|a vector of numeric values describing the width (in  characters) of the corresponding columns in the CSV source, or `⍬` for variable width delimited fields|`⍬`|
 |Decimal|the decimal mark in numeric fields - one of `'.'` or `','`|`'.'`|
-|Thousands|the thousands separator in numeric fields, which may be  specified as an empty character vector (meaning no separator is defined) or a  character scalar|`''`|
-|Trim|a Boolean specifying whether whitespace is trimmed at the  beginning and end of character fields|`1`|
+|DoubleQuote|A Boolean which indicates whether (`1`) or not (`0`) a quote character within a quoted field is represented by two consecutive quote characters|`1`|
+|EscapeChar|The escape character, which may be specified as an empty character vector (meaning none is defined) or a character scalar|`0`|
+|ForceQuotes|A number specifying the degree to which quotes are applied around fields even if not strictly required. Possible values are:<ul><li>`0` – add only if required</li><li>`1` – add to all fields containing character data and to fields containing numeric data if required</li><li>`2` – add to all fields even if not required</li></ul>If ForceQuotes is a scalar, the value applies to all columns; if it is a vector of values then each value applies to the corresponding column.|`0`|
+|IfExists|a character vector `'Error'` or `'Replace'` which specifies, when creating a named file which already exists, whether to overwrite it ( `'Replace'` ) or signal an error ( `'Error'` )|`'Error'`|
 |LineEnding|the line ending sequence - see [Line separators:](nget.md)|(13 10) on Windows; 10 on other platforms|
 |QuoteChar|The field quote character (delimiter), which may be specified as an empty character vector (meaning none is defined) or a character scalar|`"`|
-|EscapeChar|The escape character, which may be specified as an empty character vector (meaning none is defined) or a character scalar|`''`|
-|DoubleQuote|A Boolean which indicates whether (1) or not (0) a quote character within a quoted field is represented by two consecutive quote characters|`1`|
+|Separator|the field separator, any single character. If Widths is other than `⍬` , Separator is ignored.|`','`|
+|Thousands|the thousands separator in numeric fields, which can be specified as an empty character vector (meaning no separator is defined) or a character scalar|`''`|
+|Trim|a Boolean specifying whether whitespace is trimmed at the beginning and end of character fields|`1`|
+|Widths|a vector of numeric values describing the width (in characters) of the corresponding columns in the CSV source, or `⍬` for variable width delimited fields|`⍬`|
 
-
-
-The Separator, QuoteChar and EscapeChar characters, when defined, must be different. Other options defined for import are also accepted but ignored.
-
+The Separator, QuoteChar, and EscapeChar characters, when defined, must be different. Other options defined for import are also accepted but ignored.
 
 The Overwrite variant option (Boolean) from Version 16.0 remains supported but is deprecated in favour of IfExists.
 
-
-### QuoteChar, EscapeChar and DoubleQuote options
+### QuoteChar, EscapeChar, and DoubleQuote options
 
 - The CSV text will be generated such that it can be read back according to the corresponding rules for import.
 - If these options do not permit this (for example, a field contains the quote character and neither DoubleQuote or EscapeChar are set) an error is signalled.
 - Quoting and Escaping is used as conservatively as possible.
 - If both QuoteChar and EscapeChar are set, quoting is favoured.
 
-
-
 If `Y` specifies that the CSV data is written to a file then `R` is the number of bytes (not characters) written, and is shy.
-
 
 Otherwise, `R` is the CSV data in the format specified in Y, and is not shy.
 
@@ -403,8 +310,6 @@ Otherwise, `R` is the CSV data in the format specified in Y, and is not shy.
 │ └∊────────────────┘                       │
 └∊──────────────────────────────────────────┘
 
-```
-```apl
      DATA⍪←'Gizmos' 23
       DATA HDR ⎕CSV''
 ┌→────────────┐
@@ -421,8 +326,6 @@ Otherwise, `R` is the CSV data in the format specified in Y, and is not shy.
 │             │
 └─────────────┘
 
-```
-```apl
        CSVFile1←'c:\Dyalog16.0\sales1.csv'
        ⎕←DATA HDR ⎕CSV CSVFile1
   
@@ -438,7 +341,6 @@ FILE NAME ERROR: Unable to create file ("The file exists.")
 
 ```
 
-
 ![csv_excel1](../img/csv-excel1.png)
 
 ## Notes
@@ -448,6 +350,4 @@ FILE NAME ERROR: Unable to create file ("The file exists.")
 - If the file encoding specifies that a BOM is required and output is to a native file, it will only be written if the file position is initially at 0 - that is, the start of the file is being written.
 - When fixed width fields are written, character data shorter than the specified width is padded with spaces to the right and character data longer than the specified width signals an error. Numeric data is converted to character data as far as possible so that it fits into the specified width. If this is not possible, an error is signalled.
 - Tab-separated fields may be exported by specifying `'Separator' (⎕UCS 9)`.
-- Fields containing a single embedded new line are supported.  On export, line feed characters are mapped back to the defined line ending sequence.
-
-
+- Fields containing a single embedded new line are supported. On export, line feed characters are mapped back to the defined line ending sequence.
