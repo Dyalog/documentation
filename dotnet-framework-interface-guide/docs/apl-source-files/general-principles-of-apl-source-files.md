@@ -9,22 +9,20 @@ Assignment statements are used to configure system variables, such as `⎕ML`, `
       ⎕ML←2
       ⎕IO←0
       ⎕USING∪←⊂'System.Data'
-```
-```apl
+
       A←88
       B←'Hello World'
-```
-```apl
+
       ⎕CY'MYWS'
 ```
 
-These statements are extracted from the APL source file and executed by the compiler in the order in which they appear.
+These statements are extracted from the APL source file and executed by the Dyalog .NET Compiler in the order in which they appear.
 
 !!! Info "Information"
     The statements are executed at compile time, and not at run-time, and can, therefore, only be used for initialisation.
 
 It is acceptable to execute [`⎕CY`](../../language-reference-guide/system-functions/cy/) to bring functions and variables that are to be incorporated into the code in from a workspace. This is especially useful to import a set of utilities. It is also possible to export these functions as methods of .NET classes if the functions contain the appropriate colon statements.
 
-The Dyalog .NET Compiler will execute any valid APL expression that you include. However, the results might not be useful and could terminate the compiler. For example, it is not sensible to execute statements such as [`⎕LOAD`](../../language-reference-guide/system-functions/load/) or [`⎕OFF`](../../language-reference-guide/system-functions/off/).
+The Dyalog .NET Compiler will execute any valid APL expression that you include. However, the results might not be useful and could terminate the Dyalog .NET Compiler. For example, it is not sensible to execute statements such as [`⎕LOAD`](../../language-reference-guide/system-functions/load/) or [`⎕OFF`](../../language-reference-guide/system-functions/off/).
 
 Function bodies are defined between opening and closing _del_ (`∇`) characters. These are fixed by the Dyalog .NET Compiler using [`⎕FX`](../../language-reference-guide/system-functions/fx/). Line numbers and white space formatting are ignored.

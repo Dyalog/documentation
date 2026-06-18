@@ -7,7 +7,7 @@ The first statement in the script file declares the language and the name of the
 <%@ WebService Language="Dyalog" Class="GolfService" %>
 ```
 
-<code class="language-nonAPL">Language="Dyalog"</code> is specifically connected to the Dyalog script compiler through the application's **web.config** file or through the global **ASP.NET** system file **Machine.config**.
+<code class="language-nonAPL">Language="Dyalog"</code> is specifically connected to the Dyalog .NET Compiler through the application's **web.config** file or through the global **ASP.NET** system file **Machine.config**.
 
 !!! Legacy "Legacy"
     Prior to Dyalog v11.0, <code class="language-nonAPL">Language="APL"</code> was used instead.
