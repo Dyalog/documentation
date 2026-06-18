@@ -18,7 +18,20 @@ T.B.A.
 	
 Some of the tools that are supplied with Dyalog or can be downloaded separately have independent version numbers; new versions of some of these tools are released in parallel with new versions of the interpreter. For Dyalog v21.0, these include:
 
-T.B.A.
+- Conga v3.7
+- HTTPCommand v5.11
+    - GitHub repository – [https://github.com/Dyalog/HttpCommand](https://github.com/Dyalog/HttpCommand/)
+	- Documentation – [https://dyalog.github.io/HttpCommand/5.11](https://dyalog.github.io/HttpCommand/5.11/)
+- Link v4.2
+    - GitHub repository – [https://github.com/Dyalog/link](https://github.com/Dyalog/link/)
+	- Documentation – [https://dyalog.github.io/link/4.2](https://dyalog.github.io/link/4.2/)
+- Ride v4.6
+    - GitHub repository – [https://github.com/Dyalog/ride](https://github.com/Dyalog/ride/)
+	- Documentation – [https://dyalog.github.io/ride/4.6](https://dyalog.github.io/ride/4.6/)
+- SALT v2.9
+- SQAPL v6.7
+- User Commands v2.8
+
 
 Changes to tools are not included within these Release Notes.
 
