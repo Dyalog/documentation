@@ -232,7 +232,7 @@ The square bracket syntax means that working with generics in Dyalog APL and C# 
 new System.Collections.Generic.List<System.Int32>();
 
 // Call a concrete version of a generic method in C#
-System.Decimal.CreateChecked<System.Int32>(5);
+System.Tuple.Create<System.Int32>(5);
 ```
 
 The corresponding APL is:
@@ -241,7 +241,7 @@ The corresponding APL is:
 ⎕NEW System.Collections.Generic.List[System.Int32]
 
 ⍝ Call a concrete version of a generic method in APL
-System.Decimal.CreateChecked[System.Int32] 5
+System.Tuple.Create[System.Int32] 5
 ```
 
 ### Creating a Concrete Version of a Generic Class
@@ -294,7 +294,7 @@ LENGTH ERROR: No overload of the type expects the given number (3) of generic ty
 Applying type arguments to generic interfaces closely resembles applying type arguments to generic classes. The example below defines a function `IsBoolCollection`. This checks whether a given .NET type implements the concrete version `ICollection[Boolean]` of the generic <code class="language-nonAPL">ICollection</code> interface, which is often implemented by data structures that act as collections of elements of a specific type.
 
 ```apl
-      ⎕USING←'System' 'System.Collections.Generic'
+      ⎕USING←'System' 'System.Collections.Generic' 'System.Collections.Generic,System.Core.dll'
 
       IsBoolCollection←{ICollection[Boolean]∊∊⎕CLASS ⍵}
 
@@ -338,24 +338,28 @@ The <code class="language-nonAPL">ValueTuple</code> class has one non-generic ov
 
 Generic methods have a display form with a generic type parameter list shown in square brackets. For example:
 ```apl
-    ⎕USING←''
-    System.Decimal.CreateChecked
-System.Decimal CreateChecked[TOther](TOther)
+      ⎕USING←''
+      System.Tuple.Create
+...
+System.Tuple`1[T1] Create[T1](T1)
+...
 ```
 
-The <code class="language-nonAPL">CreateChecked</code> function has one type parameter, shown in square brackets, and one regular parameter, shown in parentheses.
+The <code class="language-nonAPL">Create</code> function has one type parameter, shown in square brackets, and one regular parameter, shown in parentheses.
 
 The generic type argument can be applied using square brackets, and the result is a concrete version of the generic method. The method can either be given a name or evaluated directly. The display form indicates that the type parameters have been replaced to form a concrete function.
 
 ```apl
       ⎕USING←'System'
-      fn←Decimal.CreateChecked[Int32]
+      fn←Tuple.Create[Int32]
       fn
-System.Decimal CreateChecked[Int32](Int32)
+System.Tuple`1[System.Int32] Create[Int32](Int32)
+
       fn 10
-10
-      Decimal.CreateChecked[Int32] 50
-50
+(10)
+
+      Tuple.Create[Int32] 50
+(50)
 ```
 
 If a generic method has overloads with different numbers of type parameters, applying type arguments will narrow down the list of overloads that are applicable. For example, when having only one overload means that a single type argument is expected:
@@ -392,15 +396,15 @@ Applying an incorrect number of type arguments to a method will generate an erro
 
 ```apl
       ⎕USING←'System'
-      Decimal.CreateChecked 50
+      Tuple.Create 50
 LENGTH ERROR: No overload of the method expects the given number (0) of generic type arguments
-      Decimal.CreateChecked 50
+      Tuple.Create 50
       ∧
 
       ValueTuple.Create[10⍴Int32]
 LENGTH ERROR: No overload of the method expects the given number (10) of generic type arguments
       ValueTuple.Create[10⍴Int32]
-                                ∧
+                           ∧
 ```
 
 #### Type Inference
@@ -418,17 +422,17 @@ LENGTH ERROR: No overload of the method expects the given number (0) of generic 
       ∧
 
       ⍝ Explicitly apply type arguments
-      Task.FromResult[Int128] 123
-System.Threading.Tasks.Task`1[System.Int128]
+      Task.FromResult[Int32] 123
+System.Threading.Tasks.Task`1[System.Int32]
 
       ⍝ Explicitly apply type arguments, and pass in a .NET object of that type
-      i128←Int128.Parse ⊂'123'
-      Task.FromResult[Int128] i128
-System.Threading.Tasks.Task`1[System.Int128]
+      i64←Int64.Parse ⊂'123'
+      Task.FromResult[Int64] i64
+System.Threading.Tasks.Task`1[System.Int64]
 
       ⍝ Let the bridge infer the type argument from argument's .NET type
-      Task.FromResult i128
-System.Threading.Tasks.Task`1[System.Int128]
+      Task.FromResult i64
+System.Threading.Tasks.Task`1[System.Int64]
 ```
 
 Type inference can remove the need for additional code (as shown in the last lines of the example above), but manually applying type arguments is also permitted.
@@ -440,8 +444,8 @@ If the user has [specified an overload](#specifying-overloads), then the type in
       Task.FromResult
 System.Threading.Tasks.Task`1[TResult] FromResult[TResult](TResult)
 
-      Task.FromResult⍠Int128⊢123
-System.Threading.Tasks.Task`1[System.Int128]
+      Task.FromResult⍠Int32⊢123
+System.Threading.Tasks.Task`1[System.Int32]
 ```
 
-This works because we tell the .NET bridge that we want the overload that takes an <code class="language-nonAPL">Int128</code> as its argument, which means the type parameter `TResult` *must* be <code class="language-nonAPL">Int128</code>; it is, therefore, not necessary to explicitly apply the type arguments using square brackets.
+This works because we tell the .NET bridge that we want the overload that takes an <code class="language-nonAPL">Int32</code> as its argument, which means the type parameter `TResult` *must* be <code class="language-nonAPL">Int32</code>; it is, therefore, not necessary to explicitly apply the type arguments using square brackets.
