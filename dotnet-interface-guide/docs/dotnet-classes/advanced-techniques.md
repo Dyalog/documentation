@@ -283,7 +283,7 @@ System.Decimal CreateChecked[TOther](TOther)
 
 The <code class="language-nonAPL">CreateChecked</code> function has one type parameter, shown in square brackets, and one regular parameter, shown in parentheses.
 
-The generic type argument can be applied using square brackets, and the result is a concrete version of the generic method. The method can either be given a name, or evaluated directly. The display form indicates that the type parameters have been replaced to form a concrete function.
+The generic type argument can be applied using square brackets, and the result is a concrete version of the generic method. The method can either be given a name or evaluated directly. The display form indicates that the type parameters have been replaced to form a concrete function.
 
 ```apl
       ⎕USING←'System'
@@ -296,7 +296,7 @@ System.Decimal CreateChecked[Int32](Int32)
 50
 ```
 
-If a generic method has overloads with different numbers of type parameters, applying type arguments will narrow down the list of overloads which are applicable, as in the example below where only one overload expects a single type argument.
+If a generic method has overloads with different numbers of type parameters, applying type arguments will narrow down the list of overloads that are applicable. For example, when having only one overload means that a single type argument is expected:
 
 ```apl
       ⎕USING←'System'
@@ -311,7 +311,7 @@ System.ValueTuple`3[T1,T2,T3] Create[T1,T2,T3](T1, T2, T3)
 System.ValueTuple`1[System.Boolean] Create[Boolean](Boolean)
 ```
 
-.NET methods with only a single overload which expects no arguments, are usually imported into APL as niladic functions, but when they are generic, they are imported as monadic functions so that the type arguments can be applied.
+.NET methods with only a single overload that expects no arguments are usually imported into APL as niladic functions. However, when they are generic, they are imported as monadic functions so that the type arguments can be applied. For example:
 
 ```apl
       ⎕USING←'System'
@@ -343,7 +343,7 @@ LENGTH ERROR: No overload of the method expects the given number (10) of generic
 
 #### Type Inference
 
-If the arguments to a generic method have a concrete .NET type, then their type information might be enough for the .NET bridge to unambiguously select a method overload, and to automatically apply the needed type arguments. But if there is any doubt about the type, such as when the arguments are regular APL arrays, for example the scalar `0`, which can be converted into a number of different .NET types, type inference will not take place.
+If the arguments to a generic method have a concrete .NET type, then their type information might be sufficient for the .NET bridge to unambiguously select a method overload and to automatically apply the needed type arguments. If there is any ambiguity about the type, such as when the arguments are regular APL arrays (for example the scalar `0`, which can be converted into a number of different .NET types), type inference will not take place. For example:
 
 ```
       ⎕USING←'System' 'System.Threading.Tasks'
@@ -369,9 +369,9 @@ System.Threading.Tasks.Task`1[System.Int128]
 System.Threading.Tasks.Task`1[System.Int128]
 ```
 
-Type inference can save the programmer from doing unnecessary typing, as shown in the last lines of the example above, but it is still allowed to manually apply type arguments.
+Type inference can remove the need for additional code (as shown in the last lines of the example above), but manually applying type arguments is also permitted.
 
-If the user has [specified an overload](#specifying-overloads), the type information is taken into account, which means another way of doing the above would be:
+If the user has [specified an overload](#specifying-overloads), then the type information is taken into account. This means that an alternative way of coding the above would be:
 
 ```apl
       ⎕USING←'System' 'System.Threading.Tasks'
@@ -382,4 +382,4 @@ System.Threading.Tasks.Task`1[TResult] FromResult[TResult](TResult)
 System.Threading.Tasks.Task`1[System.Int128]
 ```
 
-which works because we tell the .NET bridge that we want the overload that takes an <code class="language-nonAPL">Int128</code> as its argument, which means the type parameter `TResult` *must* be <code class="language-nonAPL">Int128</code>, and therefore there is no need to explicitly apply the type arguments using square brackets.
+This works because we tell the .NET bridge that we want the overload that takes an <code class="language-nonAPL">Int128</code> as its argument, which means the type parameter `TResult` *must* be <code class="language-nonAPL">Int128</code>; it is, therefore, not necessary to explicitly apply the type arguments using square brackets.
