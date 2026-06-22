@@ -218,3 +218,230 @@ For example, if <code class="language-nonAPL">MyClass</code> is a .NET class wit
 ```apl
       (⎕NEW ⍠ (⊂Double Int32)) MyClass (1 1)
 ```
+
+## Generics
+
+In .NET, a method, interface, or class can be _generic_, which means that it is a template or recipe for a _concrete_ method, interface, or class. What makes them generic is that they have a list of _type parameters_; the user must apply a matching number of _type arguments_ to create a concrete version. In the case of methods, it is not always necessary to apply type arguments, as the .NET interface can sometimes perform [type inference](#type-inference) to deduce the type arguments from the types of the method arguments.
+
+The syntax used to apply type arguments to methods, classes, and interfaces, is square brackets, for example `G[T]` where `G` is the generic entity, and `T` is a .NET type or a vector of .NET types. The types could be the result of applying types to a generic .NET class.
+
+The square bracket syntax means that working with generics in Dyalog APL and C# looks visually similar, except that C# uses angle brackets, as illustrated by the example below:
+
+```C#
+// Instantiate a concrete version of a generic class in C#
+new System.Collections.Generic.List<System.Int32>();
+
+// Call a concrete version of a generic method in C#
+System.Decimal.CreateChecked<System.Int32>(5);
+```
+
+The corresponding APL is:
+```apl
+⍝ Instantiate a concrete version of a generic class in APL
+⎕NEW System.Collections.Generic.List[System.Int32]
+
+⍝ Call a concrete version of a generic method in APL
+System.Decimal.CreateChecked[System.Int32] 5
+```
+
+### Creating a Concrete Version of a Generic Class
+
+The class <code class="language-nonAPL">System.Collections.Generic.List</code> is a generic class with one type parameter, which is the type of the elements of the list. The display form of the type indicates that it is generic:
+
+```apl
+      ⎕USING←''
+      System.Collections.Generic.List
+(System.Collections.Generic.List[T])
+```
+
+A concrete version of the <code class="language-nonAPL">List</code> class can be created using square brackets. For example, a list class that contains integers can be created as follows:
+```apl
+	  ⎕USING←''
+      IntList←System.Collections.Generic.List[System.Int32]
+      IntList
+(System.Collections.Generic.List[System.Int32])
+```
+
+The shared members of the `IntList` class can then be accessed, and the class instantiated using `⎕NEW`.
+
+It is not necessary to give the constructed class a name before creating instances of it. Multiple type arguments can also be specified. For example:
+```apl
+	  ⎕USING←''
+      types←System.Char System.Int32
+      ⎕NEW System.Collections.Generic.Dictionary[types]
+System.Collections.Generic.Dictionary`2[System.Char,System.Int32]
+```
+
+Attempting to instantiate a generic class without the expected number of type arguments generates an error. For example:
+```apl
+      ⎕USING←''
+      ⎕NEW System.Collections.Generic.List
+LENGTH ERROR: No overload of the type expects the given number (0) of generic type arguments
+      ⎕NEW System.Collections.Generic.List
+      ∧
+```
+
+Similarly, applying too many type arguments also results in an error:
+
+```apl
+      ⎕USING←''
+      System.Collections.Generic.List[3⍴System.Int32]
+LENGTH ERROR: No overload of the type expects the given number (3) of generic type arguments
+      System.Collections.Generic.List[3⍴System.Int32]
+```
+### Creating a Concrete Version of a Generic Interface
+
+Applying type arguments to generic interfaces closely resembles applying type arguments to generic classes. The example below defines a function `IsBoolCollection`. This checks whether a given .NET type implements the concrete version `ICollection[Boolean]` of the generic <code class="language-nonAPL">ICollection</code> interface, which is often implemented by data structures that act as collections of elements of a specific type.
+
+```apl
+      ⎕USING←'System' 'System.Collections.Generic'
+
+      IsBoolCollection←{ICollection[Boolean]∊∊⎕CLASS ⍵}
+
+      a←⎕NEW HashSet[Int32]
+      b←⎕NEW List[Boolean]
+      c←⎕NEW Dictionary[Int32 Boolean]
+
+      IsBoolCollection¨a b c
+0 1 0
+```
+
+### Multiple Overloads of .NET Classes and Interfaces
+Some .NET classes and interfaces have multiple overloads, varying in the number of generic type parameters. The display form of the type makes this clear, and the .NET interface will automatically use the appropriate overload based on context.
+
+```apl
+      ⎕USING←'System'
+      ValueTuple
+(System.ValueTuple)
+(System.ValueTuple[T1])
+(System.ValueTuple[T1,T2])
+(System.ValueTuple[T1,T2,T3])
+(System.ValueTuple[T1,T2,T3,T4])
+(System.ValueTuple[T1,T2,T3,T4,T5])
+(System.ValueTuple[T1,T2,T3,T4,T5,T6])
+(System.ValueTuple[T1,T2,T3,T4,T5,T6,T7])
+(System.ValueTuple[T1,T2,T3,T4,T5,T6,T7,TRest])
+```
+
+The <code class="language-nonAPL">ValueTuple</code> class has one non-generic overload and eight generic overloads.
+
+```apl
+      ⎕USING←'System'
+      ValueTuple[Int32]         ⍝ Create concrete version of overload with 1 generic parameter
+(System.ValueTuple[System.Int32])
+
+      ValueTuple[Int32 Boolean] ⍝ Create concrete version of overload with 2 generic parameters
+(System.ValueTuple[System.Int32,System.Boolean])
+```
+
+### Calling a Generic Method
+
+Generic methods have a display form with a generic type parameter list shown in square brackets. For example:
+```apl
+    ⎕USING←''
+    System.Decimal.CreateChecked
+System.Decimal CreateChecked[TOther](TOther)
+```
+
+The <code class="language-nonAPL">CreateChecked</code> function has one type parameter, shown in square brackets, and one regular parameter, shown in parentheses.
+
+The generic type argument can be applied using square brackets, and the result is a concrete version of the generic method. The method can either be given a name or evaluated directly. The display form indicates that the type parameters have been replaced to form a concrete function.
+
+```apl
+      ⎕USING←'System'
+      fn←Decimal.CreateChecked[Int32]
+      fn
+System.Decimal CreateChecked[Int32](Int32)
+      fn 10
+10
+      Decimal.CreateChecked[Int32] 50
+50
+```
+
+If a generic method has overloads with different numbers of type parameters, applying type arguments will narrow down the list of overloads that are applicable. For example, when having only one overload means that a single type argument is expected:
+
+```apl
+      ⎕USING←'System'
+      ValueTuple.Create
+System.ValueTuple Create()
+System.ValueTuple`1[T1] Create[T1](T1)
+System.ValueTuple`2[T1,T2] Create[T1,T2](T1, T2)
+System.ValueTuple`3[T1,T2,T3] Create[T1,T2,T3](T1, T2, T3)
+...
+
+      ValueTuple.Create[Boolean]
+System.ValueTuple`1[System.Boolean] Create[Boolean](Boolean)
+```
+
+.NET methods with only a single overload that expects no arguments are usually imported into APL as niladic functions. However, when they are generic, they are imported as monadic functions so that the type arguments can be applied. For example:
+
+```apl
+      ⎕USING←'System'
+      Array.Empty
+T[] Empty[T]()
+
+      Array.Empty[Int32]
+Int32[] Empty[Int32]()
+
+      r←Array.Empty[Int32] ⍬
+      r≡⍬
+1
+```
+
+Applying an incorrect number of type arguments to a method will generate an error:
+
+```apl
+      ⎕USING←'System'
+      Decimal.CreateChecked 50
+LENGTH ERROR: No overload of the method expects the given number (0) of generic type arguments
+      Decimal.CreateChecked 50
+      ∧
+
+      ValueTuple.Create[10⍴Int32]
+LENGTH ERROR: No overload of the method expects the given number (10) of generic type arguments
+      ValueTuple.Create[10⍴Int32]
+                                ∧
+```
+
+#### Type Inference
+
+If the arguments to a generic method have a concrete .NET type, then their type information might be sufficient for the .NET bridge to unambiguously select a method overload and to automatically apply the needed type arguments. If there is any ambiguity about the type, such as when the arguments are regular APL arrays (for example the scalar `0`, which can be converted into a number of different .NET types), type inference will not take place. For example:
+
+```
+      ⎕USING←'System' 'System.Threading.Tasks'
+      Task.FromResult
+System.Threading.Tasks.Task`1[TResult] FromResult[TResult](TResult)
+
+      Task.FromResult 123
+LENGTH ERROR: No overload of the method expects the given number (0) of generic type arguments
+      Task.FromResult 123
+      ∧
+
+      ⍝ Explicitly apply type arguments
+      Task.FromResult[Int128] 123
+System.Threading.Tasks.Task`1[System.Int128]
+
+      ⍝ Explicitly apply type arguments, and pass in a .NET object of that type
+      i128←Int128.Parse ⊂'123'
+      Task.FromResult[Int128] i128
+System.Threading.Tasks.Task`1[System.Int128]
+
+      ⍝ Let the bridge infer the type argument from argument's .NET type
+      Task.FromResult i128
+System.Threading.Tasks.Task`1[System.Int128]
+```
+
+Type inference can remove the need for additional code (as shown in the last lines of the example above), but manually applying type arguments is also permitted.
+
+If the user has [specified an overload](#specifying-overloads), then the type information is taken into account. This means that an alternative way of coding the above would be:
+
+```apl
+      ⎕USING←'System' 'System.Threading.Tasks'
+      Task.FromResult
+System.Threading.Tasks.Task`1[TResult] FromResult[TResult](TResult)
+
+      Task.FromResult⍠Int128⊢123
+System.Threading.Tasks.Task`1[System.Int128]
+```
+
+This works because we tell the .NET bridge that we want the overload that takes an <code class="language-nonAPL">Int128</code> as its argument, which means the type parameter `TResult` *must* be <code class="language-nonAPL">Int128</code>; it is, therefore, not necessary to explicitly apply the type arguments using square brackets.
