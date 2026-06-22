@@ -345,7 +345,7 @@ However when no type arguments are applied, in some cases [type inference](#type
 
 #### Type Inference
 
-If the arguments to a generic method have a concrete .NET type, then their type information might be enough for the .NET bridge to unambiguously select a method overload, and to automatically apply the needed type arguments. But if there is any doubt about the type, such as when the arguments are regular APL arrays, for example the scalar `0`, which can be converted into a number of different .NET types, type inference will not take place.
+If the arguments to a generic method have a concrete .NET type, then their type information might be sufficient for the .NET bridge to unambiguously select a method overload and to automatically apply the needed type arguments. If there is any ambiguity about the type, such as when the arguments are regular APL arrays (for example the scalar `0`, which can be converted into a number of different .NET types), type inference will not take place. For example:
 
 ```
       ⎕USING←'System' 'System.Threading.Tasks'
