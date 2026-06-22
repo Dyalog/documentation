@@ -404,7 +404,7 @@ LENGTH ERROR: No overload of the method expects the given number (0) of generic 
       ValueTuple.Create[10⍴Int32]
 LENGTH ERROR: No overload of the method expects the given number (10) of generic type arguments
       ValueTuple.Create[10⍴Int32]
-                           ∧
+                                ∧
 ```
 
 #### Type Inference
