@@ -200,7 +200,7 @@ A concrete version of the <code class="language-nonAPL">List</code> class can be
 (System.Collections.Generic.List[System.Int32])
 ```
 
-The shared members of the <code class="language-nonAPL">IntList</code> class can then be accessed, and the class instantiated using `⎕NEW`.
+The shared members of the `IntList` class can then be accessed, and the class instantiated using `⎕NEW`.
 
 It is not necessary to give the constructed class a name before creating instances of it. Multiple type arguments can also be specified. For example:
 ```apl
@@ -340,8 +340,6 @@ LENGTH ERROR: No overload of the method expects the given number (10) of generic
       ValueTuple.Create[10⍴Int32]
                                 ∧
 ```
-
-However when no type arguments are applied, in some cases [type inference](#type-inference) can take place, and no error will be generated.
 
 #### Type Inference
 
