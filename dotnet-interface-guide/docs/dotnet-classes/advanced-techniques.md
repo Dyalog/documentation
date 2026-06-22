@@ -173,7 +173,7 @@ new System.Collections.Generic.List<System.Int32>();
 System.Decimal.CreateChecked<System.Int32>(5);
 ```
 
-And the corresponding APL
+The corresponding APL is:
 ```apl
 ⍝ Instantiate a concrete version of a generic class in APL
 ⎕NEW System.Collections.Generic.List[System.Int32]
