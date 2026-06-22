@@ -373,7 +373,7 @@ System.Threading.Tasks.Task`1[System.Int128]
 
 Type inference can remove the need for additional code (as shown in the last lines of the example above), but manually applying type arguments is also permitted.
 
-If the user has [specified an overload](#specifying-overloads), the type information is taken into account, which means another way of doing the above would be:
+If the user has [specified an overload](#specifying-overloads), then the type information is taken into account. This means that an alternative way of coding the above would be:
 
 ```apl
       ⎕USING←'System' 'System.Threading.Tasks'
