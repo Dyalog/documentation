@@ -261,7 +261,7 @@ Some .NET classes and interfaces have multiple overloads, varying in the number 
 (System.ValueTuple[T1,T2,T3,T4,T5,T6,T7,TRest])
 ```
 
-The <code class="language-nonAPL">ValueTuple</code> class has one non-generic overload, and 8 generic overloads.
+The <code class="language-nonAPL">ValueTuple</code> class has one non-generic overload and eight generic overloads.
 
 ```apl
       ⎕USING←'System'
