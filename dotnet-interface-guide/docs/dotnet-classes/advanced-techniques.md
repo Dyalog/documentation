@@ -161,7 +161,7 @@ For example, if <code class="language-nonAPL">MyClass</code> is a .NET class wit
 
 In .NET, a method, interface, or class can be _generic_, which means that it is a template or recipe for a _concrete_ method, interface, or class. What makes them generic is that they have a list of _type parameters_; the user must apply a matching number of _type arguments_ to create a concrete version. In the case of methods, it is not always necessary to apply type arguments, as the .NET interface can sometimes perform [type inference](#type-inference) to deduce the type arguments from the types of the method arguments.
 
-The syntax used to apply type arguments to methods, classes, and interfaces, is square brackets, for example `G[T]` where `G` is the generic entity, and `T` is a .NET type, or a vector of .NET types. These types themselves might be the result of applying types to a generic .NET class.
+The syntax used to apply type arguments to methods, classes, and interfaces, is square brackets, for example `G[T]` where `G` is the generic entity, and `T` is a .NET type or a vector of .NET types. The types could be the result of applying types to a generic .NET class.
 
 The square bracket syntax means that working with generics in Dyalog APL and C# looks visually similar, except that C# uses angle brackets, as illustrated by the example below:
 
