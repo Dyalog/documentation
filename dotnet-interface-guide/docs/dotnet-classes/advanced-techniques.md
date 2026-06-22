@@ -283,7 +283,7 @@ System.Decimal CreateChecked[TOther](TOther)
 
 The <code class="language-nonAPL">CreateChecked</code> function has one type parameter, shown in square brackets, and one regular parameter, shown in parentheses.
 
-The generic type argument can be applied using square brackets, and the result is a concrete version of the generic method. The method can either be given a name, or evaluated directly. The display form indicates that the type parameters have been replaced to form a concrete function.
+The generic type argument can be applied using square brackets, and the result is a concrete version of the generic method. The method can either be given a name or evaluated directly. The display form indicates that the type parameters have been replaced to form a concrete function.
 
 ```apl
       ⎕USING←'System'
