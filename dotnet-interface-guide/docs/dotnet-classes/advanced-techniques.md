@@ -384,4 +384,4 @@ System.Threading.Tasks.Task`1[TResult] FromResult[TResult](TResult)
 System.Threading.Tasks.Task`1[System.Int128]
 ```
 
-which works because we tell the .NET bridge that we want the overload that takes an <code class="language-nonAPL">Int128</code> as its argument, which means the type parameter `TResult` *must* be <code class="language-nonAPL">Int128</code>, and therefore there is no need to explicitly apply the type arguments using square brackets.
+This works because we tell the .NET bridge that we want the overload that takes an <code class="language-nonAPL">Int128</code> as its argument, which means the type parameter `TResult` *must* be <code class="language-nonAPL">Int128</code>; it is, therefore, not necessary to explicitly apply the type arguments using square brackets.
