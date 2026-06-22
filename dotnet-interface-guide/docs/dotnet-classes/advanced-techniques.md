@@ -371,7 +371,7 @@ System.Threading.Tasks.Task`1[System.Int128]
 System.Threading.Tasks.Task`1[System.Int128]
 ```
 
-Type inference can save the programmer from doing unnecessary typing, as shown in the last lines of the example above, but it is still allowed to manually apply type arguments.
+Type inference can remove the need for additional code (as shown in the last lines of the example above), but manually applying type arguments is also permitted.
 
 If the user has [specified an overload](#specifying-overloads), the type information is taken into account, which means another way of doing the above would be:
 
