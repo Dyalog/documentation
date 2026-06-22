@@ -229,7 +229,7 @@ LENGTH ERROR: No overload of the type expects the given number (3) of generic ty
 ```
 ### Creating a Concrete Version of a Generic Interface
 
-Applying type arguments to generic interfaces looks just like with generic classes. The example below defines a function `IsBoolCollection`, which checks whether a given .NET type implements the concrete version `ICollection[Boolean]` of the generic `ICollection` interface, which is often implemented by data structures that act as collections of elements of a specific type.
+Applying type arguments to generic interfaces closely resembles applying type arguments to generic classes. The example below defines a function `IsBoolCollection`. This checks whether a given .NET type implements the concrete version `ICollection[Boolean]` of the generic <code class="language-nonAPL">ICollection</code> interface, which is often implemented by data structures that act as collections of elements of a specific type.
 
 ```apl
       ⎕USING←'System' 'System.Collections.Generic'
