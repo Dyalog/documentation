@@ -311,7 +311,7 @@ System.ValueTuple`3[T1,T2,T3] Create[T1,T2,T3](T1, T2, T3)
 System.ValueTuple`1[System.Boolean] Create[Boolean](Boolean)
 ```
 
-.NET methods with only a single overload which expects no arguments, are usually imported into APL as niladic functions, but when they are generic, they are imported as monadic functions so that the type arguments can be applied.
+.NET methods with only a single overload that expects no arguments are usually imported into APL as niladic functions. However, when they are generic, they are imported as monadic functions so that the type arguments can be applied. For example:
 
 ```apl
       ⎕USING←'System'
