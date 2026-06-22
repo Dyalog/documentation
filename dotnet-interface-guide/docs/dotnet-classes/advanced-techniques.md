@@ -296,7 +296,7 @@ System.Decimal CreateChecked[Int32](Int32)
 50
 ```
 
-If a generic method has overloads with different numbers of type parameters, applying type arguments will narrow down the list of overloads which are applicable, as in the example below where only one overload expects a single type argument.
+If a generic method has overloads with different numbers of type parameters, applying type arguments will narrow down the list of overloads that are applicable. For example, when having only one overload means that a single type argument is expected:
 
 ```apl
       ⎕USING←'System'
