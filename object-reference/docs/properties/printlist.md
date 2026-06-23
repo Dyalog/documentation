@@ -16,7 +16,7 @@ PrintList is a vector of character vectors. Each item in PrintList contains the 
 ```apl
       ⍴'.'⎕WG'PrintList'
 6
-      ]display ⊃'.'⎕WG'PrintList'
+      ]Display ⊃'.'⎕WG'PrintList'
 ┌→─────────────────────┐
 │KODAK ESP-3 AiO,USB001│
 └──────────────────────┘
