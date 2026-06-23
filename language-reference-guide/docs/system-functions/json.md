@@ -57,7 +57,7 @@ If `X` is `0`, the JSON document `Y` is converted to the corresponding APL data 
 
 By default, `R` is APL data, possibly containing sub-arrays and/or sub-namespaces. If the variant option [`Format`](#variant-option-format) is set to `'M'`, `R` is instead a matrix that represents the JSON structure.
 
-The [JSON standard says](https://www.rfc-editor.org/info/rfc8259/#section-4) that members of a JSON object should have unique names and that implementations vary in how they treat duplicates. Dyalog does not error on duplicates, but their handling depends on the `Format` variant.
+The [JSON standard](https://www.rfc-editor.org/info/rfc8259/#section-4) states that members of a JSON object should have unique names and that implementations vary in how they treat duplicates. Dyalog does not error on duplicates, but their handling depends on the `Format` variant option.
 
 <h3 class="example">Example</h3>
 
