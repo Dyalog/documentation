@@ -39,7 +39,7 @@ If `X` is not specified (that is, `⎕JSON` is called monadically), its assumed 
 
 ## Limitations
 
-JSON supports a limited number of data types and there is not a direct correspondence between JSON and APL data structures. In particular:
+JSON supports a limited number of data types, and there is no direct correspondence between JSON and APL data structures. In particular:
 
 - JSON does not support arrays with rank &gt; 1.
 - JSON does not support nested scalars.
