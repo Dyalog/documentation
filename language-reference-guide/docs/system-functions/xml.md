@@ -56,7 +56,7 @@ These values are additive. For example, a value of 5 in column 5 means that the 
       x,←'</document></xml>'
 ```
 ```apl
-      ]display v←⎕XML x
+      ]Display v←⎕XML x
 ┌→───────────────────────────────────────────────────────┐
 ↓   ┌→──┐      ┌⊖┐                      ┌→────────┐      │
 │ 0 │xml│      │ │                      ⌽ ┌⊖┐ ┌⊖┐ │    3 │
@@ -244,7 +244,7 @@ Note that the default value is shown first, and that the option names and values
 If options are specified using the optional left argument,  `X` specifies a set of option/value pairs, each of which is a character vector. `X` can be a 2-element vector, or a vector of 2-element character vectors. In the examples below, this method is illustrated by the equivalent expression written as a comment, following the recommended approach using the Variant operator `⍠`:
 ```apl
 
-      ]display (⎕XML⍠'Whitespace' 'Strip')eg
+      ]Display (⎕XML⍠'Whitespace' 'Strip')eg
       ⍝      'whitespace' 'strip' ⎕XML eg
 ```
 
@@ -268,7 +268,7 @@ When converting from XML `Whitespace` specifies the default handling of white sp
 |`Preserve(preserve)`|White space in the data is preserved as given, except that line endings are represented by Linefeed 				( `⎕UCS 10` ). XML is generated with no formatting and indentation other than that which is contained within the data|
 ```apl
 
-      ]display eg
+      ]Display eg
 ┌→───────────────────┐
 │<xml>               │
 │  <a>               │
@@ -285,7 +285,7 @@ When converting from XML `Whitespace` specifies the default handling of white sp
 ```
 ```apl
  
-      ]display (⎕XML⍠'Whitespace' 'Strip')eg
+      ]Display (⎕XML⍠'Whitespace' 'Strip')eg
       ⍝      'whitespace' 'strip' ⎕XML eg
 ┌→────────────────────────────────────────┐
 ↓   ┌→──┐ ┌⊖┐           ┌→────────┐       │
@@ -323,7 +323,7 @@ When converting from XML `Whitespace` specifies the default handling of white sp
 
 ```
 ```apl
-      ]display (⎕XML⍠'Whitespace' 'Preserve')eg
+      ]Display (⎕XML⍠'Whitespace' 'Preserve')eg
       ⍝         'whitespace' 'preserve' ⎕XML eg
 ┌→──────────────────────────────────────┐
 ↓   ┌→──┐ ┌⊖┐         ┌→────────┐       │
@@ -388,7 +388,7 @@ When converting from XML, `Markup` determines whether markup (other than entity 
 |`Preserve(preserve)`|Markup text appears in the output array, without the leading '<' and trailing '>' in the tag (2 <sup>nd</sup> ) column|
 ```apl
   
-      ]display eg
+      ]Display eg
 ┌→───────────────────┐
 │<xml>               │
 │  <a>               │
@@ -405,7 +405,7 @@ When converting from XML, `Markup` determines whether markup (other than entity 
 ```
 ```apl
 
-      ]display (⎕XML⍠'Markup' 'Strip')eg
+      ]Display (⎕XML⍠'Markup' 'Strip')eg
       ⍝      'markup' 'strip' ⎕XML eg
 ┌→────────────────────────────────────────┐
 ↓   ┌→──┐ ┌⊖┐           ┌→────────┐       │
@@ -442,7 +442,7 @@ When converting from XML, `Markup` determines whether markup (other than entity 
 
 ```
 ```apl
-      ]display (⎕XML⍠'Markup' 'Preserve')eg
+      ]Display (⎕XML⍠'Markup' 'Preserve')eg
       ⍝         'markup' 'preserve' ⎕XML eg
 ┌→──────────────────────────────────────────────┐
 ↓   ┌→──┐            ┌⊖┐     ┌→────────┐        │

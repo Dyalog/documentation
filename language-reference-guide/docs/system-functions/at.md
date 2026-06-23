@@ -65,7 +65,7 @@ The following values correspond to the syntax shown alongside:
 ```apl
 
 
-      ]display ⎕AT 'myop' 'foo' 'util' 'util2'
+      ]Display ⎕AT 'myop' 'foo' 'util' 'util2'
 .→--------------------------------------------.
 ↓ .→------. .→-----------------.     .→---.   |
 | |¯1 ¯2 1| |1996 8 2 2 13 56 0|   0 |john|   |

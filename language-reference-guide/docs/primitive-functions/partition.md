@@ -28,14 +28,14 @@ Note that if `⎕ML≥3`, the symbol `⊂` means the same as `⊆`.
 ```apl
       ⎕ML←3
  
-      ]display 1 1 1 2 2 3 3 3⊆'NOWISTHE'
+      ]Display 1 1 1 2 2 3 3 3⊆'NOWISTHE'
 ┌→─────────────────┐
 │ ┌→──┐ ┌→─┐ ┌→──┐ │
 │ │NOW│ │IS│ │THE│ │
 │ └───┘ └──┘ └───┘ │
 └∊─────────────────┘
  
-      ]display 1 1 1 0 0 3 3 3⊆'NOWISTHE'
+      ]Display 1 1 1 0 0 3 3 3⊆'NOWISTHE'
 ┌→────────────┐
 │ ┌→──┐ ┌→──┐ │
 │ │NOW│ │THE│ │
@@ -43,7 +43,7 @@ Note that if `⎕ML≥3`, the symbol `⊂` means the same as `⊆`.
 └∊────────────┘
  
       TEXT←'   NOW     IS      THE      TIME    '
-      ]display (' '≠TEXT)⊆TEXT
+      ]Display (' '≠TEXT)⊆TEXT
 ┌→────────────────────────┐
 │ ┌→──┐ ┌→─┐ ┌→──┐ ┌→───┐ │
 │ │NOW│ │IS│ │THE│ │TIME│ │
@@ -53,7 +53,7 @@ Note that if `⎕ML≥3`, the symbol `⊂` means the same as `⊆`.
 ```
 ```apl
 
-      ]display CMAT←⎕FMT(' ',ROWS),COLS⍪NMAT
+      ]Display CMAT←⎕FMT(' ',ROWS),COLS⍪NMAT
 ┌→─────────────────────────┐
 ↓           Jan   Feb  Mar │
 │ Cakes       0   100  150 │
@@ -64,7 +64,7 @@ Note that if `⎕ML≥3`, the symbol `⊂` means the same as `⊆`.
 ```
 ```apl
 
-      ]display (∨⌿' '≠CMAT)⊆CMAT   ⍝ Split at blank cols.
+      ]Display (∨⌿' '≠CMAT)⊆CMAT   ⍝ Split at blank cols.
 ┌→──────────────────────────────┐
 ↓ ┌→───────┐ ┌→──┐ ┌→───┐ ┌→──┐ │
 │ │        │ │Jan│ │ Feb│ │Mar│ │
@@ -80,7 +80,7 @@ Note that if `⎕ML≥3`, the symbol `⊂` means the same as `⊆`.
 │ └────────┘ └───┘ └────┘ └───┘ │
 └∊──────────────────────────────┘
  
-      ]display N←4 4⍴⍳16
+      ]Display N←4 4⍴⍳16
 ┌→──────────┐
 ↓ 1  2  3  4│
 │ 5  6  7  8│
@@ -88,7 +88,7 @@ Note that if `⎕ML≥3`, the symbol `⊂` means the same as `⊆`.
 │13 14 15 16│
 └~──────────┘
  
-      ]display 1 1 0 1⊆N
+      ]Display 1 1 0 1⊆N
 ┌→─────────────┐
 ↓ ┌→──┐   ┌→┐  │
 │ │1 2│   │4│  │
@@ -107,7 +107,7 @@ Note that if `⎕ML≥3`, the symbol `⊂` means the same as `⊆`.
 ```
 ```apl
  
-      ]display 1 1 0 1⊆[1]N
+      ]Display 1 1 0 1⊆[1]N
 ┌→────────────────────────┐
 ↓ ┌→──┐ ┌→──┐ ┌→──┐ ┌→──┐ │
 │ │1 5│ │2 6│ │3 7│ │4 8│ │

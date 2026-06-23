@@ -32,7 +32,7 @@ If `X` is a higher-rank array, each axis of `X` represents a grading attribute i
       (2 2⍴'ABBA') ⍋ 'AB'[?5 2⍴2] ⍝ A and B are equivalent
 1 2 3 4 5
  
-        ]display A←2 14⍴' abcdegiklmnrt ABCDEGIKLMNRT'
+        ]Display A←2 14⍴' abcdegiklmnrt ABCDEGIKLMNRT'
 ┌→─────────────┐
 ↓ abcdegiklmnrt│
 │ ABCDEGIKLMNRT│
@@ -42,7 +42,7 @@ If `X` is a higher-rank array, each axis of `X` represents a grading attribute i
       V,←'Abelian' 'black' 'blackball' 'black belt'
       V,←'blacking' 'Black Mass'
  
-      ]display M←↑V
+      ]Display M←↑V
 ┌→──────────┐
 ↓Ab         │
 │AB         │
@@ -61,7 +61,7 @@ If `X` is a higher-rank array, each axis of `X` represents a grading attribute i
 ```apl
 
  
-      ]display M (M[(,A)⍋M;]) (M[(,⍉A)⍋M;]) (M[A⍋M;])
+      ]Display M (M[(,A)⍋M;]) (M[(,⍉A)⍋M;]) (M[A⍋M;])
 ┌→────────────────────────────────────────────────────────┐
 │ ┌→──────────┐ ┌→──────────┐ ┌→──────────┐ ┌→──────────┐ │
 │ ↓Ab         │ ↓aba        │ ↓aba        │ ↓Ab         │ │

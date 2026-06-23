@@ -780,7 +780,7 @@ was CLEAR WS
 
 Then retrieve the new caption (max length 255) using window handle `HNDL` from the previous example:
 ```apl
-      ]display GetWindowText HNDL 255 255
+      ]Display GetWindowText HNDL 255 255
 .→-------------------------.
 |    .→------------------. |
 | 19 |MYWS - Dyalog APL/W| |
@@ -800,7 +800,7 @@ For example:
 ```apl
       ⎕NA 'I User32|GetWindowText* P =0T I'
  
-      ]display GetWindowText HNDL (255⍴' ') 255
+      ]Display GetWindowText HNDL (255⍴' ') 255
 .→-------------------------.
 |    .→------------------. |
 | 19 |MYWS - Dyalog APL/W| |
@@ -824,7 +824,7 @@ The following statements provide access to this routine through an APL function 
  
      'Prin'⎕WC'Printer'
  
-      ]display GetCharWidth ('Prin' ⎕WG 'Handle') 65 67 3 
+      ]Display GetCharWidth ('Prin' ⎕WG 'Handle') 65 67 3 
 .→-------------.
 |   .→-------. |
 | 1 |50 50 50| |

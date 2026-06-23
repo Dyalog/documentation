@@ -84,7 +84,7 @@ If `Y` is a name assigned to a derived function, `R` is a vector whose elements 
  2 2 ∘⍴
       ⍴F
 3
-      ]display F
+      ]Display F
 .→----------.
 | .→--.     |
 | |2 2| ∘ ⍴ |
