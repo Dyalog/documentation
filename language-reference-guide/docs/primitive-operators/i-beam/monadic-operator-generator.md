@@ -19,7 +19,7 @@ As `R` is a monadic operator, Dyalog Ltd recommends that the evaluation of this 
 
 | `Y` | Returned Operator | Notes |
 |---|---                |---|
-|632|[Generics Operator](#632-generics-operator)| Requires .NET. |
+|632|[Generics Operator](#632-generics-operator)| Requires .NET or .NET framework. |
 
 
 !!! warning
@@ -27,7 +27,11 @@ As `R` is a monadic operator, Dyalog Ltd recommends that the evaluation of this 
 
 
 ### 632 - Generics Operator
-The generics operator can create concrete versions of generic classes and execute generic methods. For more information, see the *.NET Interface Guide*.
+
+!!! Info "Information"
+    Support for `43⌶632` has been deprecated, and it is scheduled for removal in Dyalog v22.0. For information on how to identify uses of `43⌶632` in your existing codebase, see the [Release Notes](../../../../release-notes/announcements/deprecated-functionality/).
+	
+The generics operator can create concrete versions of generic classes and execute generic methods. For more information, see [Generics (.NET)](../../../../net-interface-guide/dotnet-classes/advanced-techniques/#generics) or [Generics (.NET Framework)](../../../../net-framework-interface-guide/dotnet-classes/advanced-techniques/#generics).
 
 <h3 class="example">Example</h3>
 
