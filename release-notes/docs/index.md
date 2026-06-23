@@ -1,7 +1,4 @@
 # Introduction
-
-
-<p style="color:red;">This document is currently being developed and will not be finalised until nearer the release of Dyalog v21.0.</p>
 	
 This document describes the requirements for installing Dyalog v21.0 and the functionality changes in Dyalog v21.0 compared with Dyalog v20.0.
 
@@ -11,8 +8,11 @@ This document describes the requirements for installing Dyalog v21.0 and the fun
 ## Release Highlights
 
 Key enhancements in Dyalog v21.0 include the following:
- 
-T.B.A.
+
+- `⎕DT` has been extended to validate and parse text-format datetimes. It now also includes formatting features prototyped as `1200⌶`.
+- `⎕SYSTEM` provides information about Dyalog and the environment, including the operating system, important library versions, and the current/initial/temporary directories.
+- .NET generics are now fully supported for both .NET and .NET Framework, enabling the creation and instantiation of concrete versions of generic classes and calling of generic methods.
+- A complete Software Bill of Materials is now included, making it easier to document files that are included when redistributing solutions built on Dyalog.
 	
 ## Tools
 	
