@@ -82,7 +82,7 @@ Note also that with successive expansions `(u v).(x y z).` ..., the final number
       (⊃EMP).Children.(FirstName Age)
   Andy  23   Katherine  19
  
-      ]display (2⊃EMP).Children.(FirstName Age)
+      ]Display (2⊃EMP).Children.(FirstName Age)
 ┌→────────────────────────────┐
 │ ┌→─────────┐ ┌→───────────┐ │
 │ │ ┌→──┐    │ │ ┌→────┐    │ │

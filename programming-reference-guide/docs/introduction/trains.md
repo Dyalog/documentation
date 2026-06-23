@@ -127,7 +127,7 @@ f g h i j k →   f(g h(i j k))       ⍝ atop(fork(fork))
       6(⌽+,-,×,÷)2     ⍝ atop: ⌽ (6+2), ...
 3 12 4 8
 
-      ]boxing on
+      ]Boxing on
 Was OFF
 ```
 ```apl
@@ -152,7 +152,7 @@ Was OFF
 └─┴───────────────────┘
 ```
 ```apl
-      ]boxing -trains=tree
+      ]Boxing -trains=tree
 Was -trains=box
       +,-,×,÷          ⍝ boxed (tree) display of fork
 ┌─┼───┐      
