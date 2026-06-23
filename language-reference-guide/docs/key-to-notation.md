@@ -15,4 +15,4 @@ The following definitions and conventions apply throughout this section:
 |`{X}` |The left argument of a function is optional.                                 |
 |`{R}←`|The function may or may not return a result, or the result may be suppressed.|
 
-*function* may refer to a primitive function, a system function, a defined (canonical, dfn or assigned) function or a derived (from an operator) function.
+A _function_ can be a primitive function, a system function, a defined (canonical, dfn, or assigned) function, or a derived (from an operator) function.

@@ -19,7 +19,7 @@ As `R` is a monadic operator, Dyalog Ltd recommends that the evaluation of this 
 
 | `Y` | Returned Operator | Notes |
 |---|---                |---|
-|632|[Generics Operator](#632-generics-operator)| Requires .NET or .NET framework. |
+|632|[Generics Operator](#632-generics-operator)| Requires .NET or .NET Framework. |
 
 
 !!! warning
