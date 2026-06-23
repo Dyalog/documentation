@@ -83,8 +83,8 @@
 
 |Glyph|Glyph Name|Uses
 |---|---|---|
-|`[`…`]`|Brackets|[Indexing](other-syntax/indexing.md), [literal array of rank 2 or higher](../../programming-reference-guide/introduction/arrays/array-notation)
-|…`[`…`]`|Brackets|[Axis with Dyadic Operand](other-syntax/axis/axis-with-dyadic-operand.md), [Axis with Monadic Operand](other-syntax/axis/axis-with-monadic-operand.md)
+|`[`…`]`|Brackets|[Indexing](other-syntax/indexing.md), [literal array of rank 2 or higher](../../programming-reference-guide/introduction/arrays/array-notation), [apply generic type arguments](../../net-interface-guide/dotnet-classes/advanced-techniques/#generics)
+|…`[`…`]`|Brackets|[Axis with Dyadic Operand](other-syntax/axis/axis-with-dyadic-operand.md), [Axis with Monadic Operand](other-syntax/axis/axis-with-monadic-operand.md), [apply generic type arguments](../../net-interface-guide/dotnet-classes/advanced-techniques/#generics)
 |`[`…`]←`|Brackets with Left Arrow|[Indexed Assignment](other-syntax/assignment/assignment-indexed.md)
 |`[`…`]`…`←`|Brackets with Left Arrow|[Modified Indexed Assignment](other-syntax/assignment/assignment-indexed-modified.md)
 |`]`|Right Bracket|[user command help](../../windows-ui-guide/user-commands)
