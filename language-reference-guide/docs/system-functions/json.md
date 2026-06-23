@@ -72,7 +72,7 @@ For details and more examples, see [Import to Data](#import-to-data) and [Import
 
 If `X` is `1`, the APL data `Y` is converted to a corresponding JSON document `R`.
 
-`Y` is the data to be exported. By default, `Y` must be APL data that can be represented as JSON (subject to the [`HighRank`](#variant-option-highrank) option). With [`Format`](#variant-option-format) being `'M'`, `Y` must instead be a matrix representation such as would have been produced by importing JSON with `Format` being `'M'`. `⎕JSON` will signal `DOMAIN ERROR` if `Y` is incompatible with the specified (or implied) value of `Format`.
+`Y` is the data to be exported. By default, `Y` must be APL data that can be represented as JSON (subject to the [`HighRank`](#variant-option-highrank) variant option). If the [`Format`](#variant-option-format) variant option is set to `'M'`, `Y` must instead be a matrix representation such as would have been produced by importing JSON with `Format` being `'M'`. `⎕JSON` will signal `DOMAIN ERROR` if `Y` is incompatible with the specified (or implied) value of `Format`.
 
 `R` is a character vector whose content depends upon the values of the [`Compact`](#variant-option-compact), [`Dialect`](#variant-option-dialect), and [`Charset`](#variant-option-charset) variants.
 
