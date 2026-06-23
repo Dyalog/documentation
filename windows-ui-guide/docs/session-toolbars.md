@@ -50,7 +50,7 @@ If Native Look and Feel is enabled all three bitmap resources are mapped to a di
 | ![](img/print-object-icon.png) ![](img/nlf-disabled/print-object-icon.png) | Print Object | Executes the system operation `[ObjPrint]` . Prints the current object. Note that if the object is being edited, the version of the object displayed in the edit window is printed. |
 | ![](img/edit-object-icon.png) ![](img/nlf-disabled/edit-object-icon.png) | Edit Object  | Executes the system operation `[Edit]` which edits the current object using the standard system editor |
 | ![](img/edit-array-icon.png)  | Edit using Array Notation | Edits the object using [array notation](../../programming-reference-guide/introduction/arrays/array-notation). (With Native Look and Feel disabled the button is blank.)|
-| ![](img/sharpplot-icon.png) ![](img/nlf-disabled/sharpplot-icon.jpg) | SharpPlot    | Executes a defined function in `⎕SE` that runs the Chart Wizard to plot the current object using the `]chart` User Command. |
+| ![](img/sharpplot-icon.png) ![](img/nlf-disabled/sharpplot-icon.jpg) | SharpPlot    | Executes a defined function in `⎕SE` that runs the Chart Wizard to plot the current object using the `]Chart` User Command. |
 
 
 ## Tools
@@ -76,6 +76,6 @@ If Native Look and Feel is enabled all three bitmap resources are mapped to a di
 | Button  | Operation  | Description |
 | --- | ---  | --- |
 | ![](img/load-workspace-icon.png) ![](img/nlf-disabled/load-session-icon.png) | Load Session | Executes the system operation `[SELoad]` which displays a file selection dialog box and loads the selected Session File |
-| ![](img/boxing-icon.png) ![](img/nlf-disabled/boxing-icon.png) | Boxing On/Off | Executes the user command `]boxing` to toggle boxing on/off. |
+| ![](img/boxing-icon.png) ![](img/nlf-disabled/boxing-icon.png) | Boxing On/Off | Executes the user command `]Boxing` to toggle boxing on/off. |
 | ![](img/select-font-combo.png) | Select Font | Selects the font to be used in the Session window |
 | ![](img/select-fontsize-spinner.png) | Select Font Size | Selects the size of the font to be used in the Session window |
