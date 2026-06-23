@@ -237,7 +237,7 @@ e
 │        │   │      │└────┘│
 └────────┴───┴──────┴──────┘
 ```
-The two ways to represent JSON `null`s:
+The two ways to represent JSON <code class="language-nonAPL">null</code>s:
 ```apl
       0 ⎕JSON'[null,2,3]'
 ┌──────┬─┬─┐
@@ -482,7 +482,7 @@ On export, the result is shortened by usage of identifiers without quotes, singl
 The **Null** variant option selects how JSON <code class="language-nonAPL">null</code> is represented in APL, and must be either `⊂'null'` (the default) or `⎕NULL`:
 
 - If **Null** is `⊂'null'`, `⎕NULL` causes `DOMAIN ERROR`.
-- If **Null** is `⎕NULL`, `⊂'null'` is still exported as `null` because it is interpreted as [raw text](#raw-text-wrapper).
+- If **Null** is `⎕NULL`, `⊂'null'` is still exported as <code class="language-nonAPL">null</code> because it is interpreted as [raw text](#raw-text-wrapper).
 
 <h4 class="example">Examples</h4>
 
