@@ -22,7 +22,7 @@ The following system functions have been added:
 
 The following system functions have been enhanced:
 
-- [`⎕CSV`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/csv) – Comma Separated Values<br />A new variant option, **ForceQuotes**, has been added. This specifies when exported data has quotes around character/numeric fields.
+- [`⎕CSV`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/csv/) – Comma Separated Values<br />A new variant option, **ForceQuotes**, has been added. This specifies when exported data has quotes around character/numeric fields.
 
 ### I-beams
 
@@ -74,10 +74,8 @@ The following changes have been made to the TTY interface:
 
 ### .NET Interface
 
-Square brqcket (`[...]`) are now used to apply type arguments when instantiating generic methods, classes, and interfaces; this supersedes the I-beam that was used previously. For more information, see [Generics](https://docs.dyalog.com/21.0/net-interface-guide/dotnet-classes/advanced-techniques/#syntax).
+Square brackets (`[...]`) are now used to apply type arguments when instantiating generic methods, classes, and interfaces; this supersedes the I-beam that was used previously. For more information, see [Generics](https://docs.dyalog.com/21.0/net-interface-guide/dotnet-classes/advanced-techniques/#syntax).
 
 ### .NET Framework Interface
 
-In .NET, a method, interface, or class can be _generic_, which means that it is a template or recipe for a concrete method, interface, or class. What makes them generic is that they have a list of type parameters; the user must apply a matching number of type arguments to create a concrete version.
-
-The .NET Framework Interface now supports creating concrete versions of generic classes, instantiating them, and calling generic methods. For more information, see [Generics](https://docs.dyalog.com/21.0/net-framework-interface-guide/dotnet-classes/advanced-techniques/#syntax).
+Support for.NET _generics_ was previously only available for the .NET Interface – it is now also available in the .NET Framework Interface. This means that the .NET Framework Interface now supports creating concrete versions of generic classes, instantiating them, and calling generic methods. For more information, see [Generics](https://docs.dyalog.com/21.0/net-framework-interface-guide/dotnet-classes/advanced-techniques/#generics).
