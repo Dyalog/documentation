@@ -683,6 +683,7 @@ As `1` is the default code number, it can be omitted:
 
 This feature can be used to inject any raw text, although unless it is valid JSON it cannot then be re-imported.
 
+
 !!! Warning "Warning"
     It is common practice to initialise a list using a scalar rather than a one-element vector. However, this will be interpreted as raw text if no subsequent elements are added:
     ```apl
@@ -692,7 +693,9 @@ This feature can be used to inject any raw text, although unless it is valid JSO
           1 ⎕JSON list,'bar' 'baz'
     ["foo","bar","baz"]
     ```
+
     It is, therefore, important to convert to a vector before initialising:
+
     ```apl
           list←,⊂'foo'
           1 ⎕JSON list
