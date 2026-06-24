@@ -13,6 +13,8 @@ Key enhancements in Dyalog v21.0 include the following:
 - `⎕SYSTEM` provides information about Dyalog and the environment, including the operating system, important library versions, and the current/initial/temporary directories.
 - .NET generics are now fully supported for both .NET and .NET Framework, enabling the creation and instantiation of concrete versions of generic classes and calling of generic methods.
 - A complete Software Bill of Materials is now included, making it easier to document files that are included when redistributing solutions built on Dyalog.
+
+For more information on these and other changes introduced in Dyalog v21.0, see [New and Enhanced Features](new-enhanced.md).
 	
 ## Tools
 	
