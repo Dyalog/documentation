@@ -22,6 +22,9 @@ T.B.A.
 
 ## Notice of Removals in Future Releases
 
+### `43⌶` – Monadic Operator Generator  
+This I-beam has been deprecated. It is scheduled for removal in Dyalog v22.0; it could be reintroduced in a later release.
+
 T.B.A.
 
 ## Updates on Dyalog v20.0 Announcements
