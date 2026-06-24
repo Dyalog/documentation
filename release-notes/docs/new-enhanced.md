@@ -33,6 +33,11 @@ The following I-beams have been added:
 
 - T.B.A.
 
+The following I-beams have been deprecated:
+
+- `43⌶` – Monadic Operator Generator (introduced in Dyalog v20.0)  
+The functionality provided by `43⌶632` is now provided by a new `[...]` mechanism – see [Generics (.NET)](https://docs.dyalog.com/21.0/net-interface-guide/dotnet-classes/advanced-techniques/#generics) and [Generics (.NET Framework)](https://docs.dyalog.com/21.0/net-framework-interface-guide/dotnet-classes/advanced-techniques/#generics). As alternative values of `Y` are not available, the I-beam has been deprecated and scheduled for removal in Dyalog v22.0; it could be reintroduced with new `Y` values in a later release.
+
 The following I-beams have been removed:
 
 - T.B.A.
@@ -65,12 +70,14 @@ The following changes have been made to the TTY interface:
 
 - T.B.A.
 
-## Interfaces and Libraries
+## Interfaces
 
-### PCRE Library
-
-T.B.A.
-	
 ### .NET Interface
 
-T.B.A.
+Square brqcket (`[...]`) are now used to apply type arguments when instantiating generic methods, classes, and interfaces; this supersedes the I-beam that was used previously. For more information, see [Generics](https://docs.dyalog.com/21.0/net-interface-guide/dotnet-classes/advanced-techniques/#syntax).
+
+### .NET Framework Interface
+
+In .NET, a method, interface, or class can be _generic_, which means that it is a template or recipe for a concrete method, interface, or class. What makes them generic is that they have a list of type parameters; the user must apply a matching number of type arguments to create a concrete version.
+
+The .NET Framework Interface now supports creating concrete versions of generic classes, instantiating them, and calling generic methods. For more information, see [Generics](https://docs.dyalog.com/21.0/net-framework-interface-guide/dotnet-classes/advanced-techniques/#syntax).
