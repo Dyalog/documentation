@@ -692,7 +692,9 @@ This feature can be used to inject any raw text, although unless it is valid JSO
           1 ⎕JSON list,'bar' 'baz'
     ["foo","bar","baz"]
     ```
+
     It is, therefore, important to convert to a vector before initialising:
+
     ```apl
           list←,⊂'foo'
           1 ⎕JSON list
