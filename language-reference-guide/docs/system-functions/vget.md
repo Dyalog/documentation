@@ -220,7 +220,7 @@ DOMAIN ERROR: Divide by zero
 Name matrix and value vector:
 
 ```apl
-      ]Box on
+      ]Boxing on
 Was OFF
       (name1 name2 name3)←'APL' (1 2 3) ⎕SE
       ⎕VGET 2 9
