@@ -619,7 +619,7 @@ Note that the effect of this is dependent on the input format
 Character vector input results in a single character vector output with embedded newlines:
 
 ```apl
-      ]display ('\s+' ⎕R '\r') 'To be or not to be, that is the question'
+      ]Display ('\s+' ⎕R '\r') 'To be or not to be, that is the question'
 ┌→───────┐
 │To      │
 │be      │
@@ -636,7 +636,7 @@ Character vector input results in a single character vector output with embedded
 
 A vector of two character vectors as input results in a vector of 10 character vectors output:
 ```apl
-      ]display ('\s+' ⎕R '\r') 'To be or not to be,' 'that is the question'
+      ]Display ('\s+' ⎕R '\r') 'To be or not to be,' 'that is the question'
 ┌→─────────────────────────────────────────────────────────────┐
 │ ┌→─┐ ┌→─┐ ┌→─┐ ┌→──┐ ┌→─┐ ┌→──┐ ┌→───┐ ┌→─┐ ┌→──┐ ┌→───────┐ │
 │ │To│ │be│ │or│ │not│ │to│ │be,│ │that│ │is│ │the│ │question│ │

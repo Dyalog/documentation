@@ -18,9 +18,9 @@ In addition, two items are added to the Windows Explorer context menu for direct
 
 For more information about Link, see [https://dyalog.github.io/link/](https://dyalog.github.io/link/).
 
-The `]fileAssociations` user command may be employed to alter these settings. For details, enter:
+The `]FileAssociations` user command may be employed to alter these settings. For details, enter:
 ```apl
-      ]fileassociations -?
+      ]FileAssociations -?
 ```
 
 ## Browsing Workspaces and Source Files

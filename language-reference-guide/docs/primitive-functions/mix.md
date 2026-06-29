@@ -92,7 +92,7 @@ If the items of `Y` are unequal in shape, the shorter ones are extended:
 
 # More Simple Vector Examples
 ```apl
-      ]box on
+      ]Boxing on
 Was OFF
        'Andy' 'Geoff' 'Pauline'
 ┌────┬─────┬───────┐

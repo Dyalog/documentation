@@ -23,7 +23,7 @@ The shape of each element of `R` is the shape of the `K`th axes of `Y`:
 
 <h2 class="example">Examples</h2>
 ```apl
-      ]display A←2 3 4⍴'DUCKSWANBIRDWORMCAKESEED'
+      ]Display A←2 3 4⍴'DUCKSWANBIRDWORMCAKESEED'
 ┌┌→───┐
 ↓↓DUCK│
 ││SWAN│
@@ -36,7 +36,7 @@ The shape of each element of `R` is the shape of the `K`th axes of `Y`:
 
 ```
 ```apl
-      ]display ⊂[3]A
+      ]Display ⊂[3]A
 ┌→─────────────────────┐
 ↓ ┌→───┐ ┌→───┐ ┌→───┐ │
 │ │DUCK│ │SWAN│ │BIRD│ │
@@ -48,7 +48,7 @@ The shape of each element of `R` is the shape of the `K`th axes of `Y`:
 
 ```
 ```apl
-      ]display ⊂[2 3]A
+      ]Display ⊂[2 3]A
 ┌→──────────────┐
 │ ┌→───┐ ┌→───┐ │
 │ ↓DUCK│ ↓WORM│ │
@@ -57,7 +57,7 @@ The shape of each element of `R` is the shape of the `K`th axes of `Y`:
 │ └────┘ └────┘ │
 └∊──────────────┘
  
-      ]display ⊂[1 3]A
+      ]Display ⊂[1 3]A
 ┌→─────────────────────┐
 │ ┌→───┐ ┌→───┐ ┌→───┐ │
 │ ↓DUCK│ ↓SWAN│ ↓BIRD│ │

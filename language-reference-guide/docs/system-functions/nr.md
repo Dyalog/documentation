@@ -36,7 +36,7 @@ If `Y` is the name of a variable, a locked function or operator, an external fun
  
       ⍴F
 2
-      ]display F
+      ]Display F
 .→----------------------------------------.
 | .→---------------------.  .→----------. |
 | | R←MEAN X    ⍝ Average|  | R←(+/X)÷⍴X| |
@@ -56,7 +56,7 @@ The definition of `⎕NR` has been extended to names assigned to functions by sp
  
       ⍴F
 3
-      ]display F
+      ]Display F
 .→------------------------------------------------.
 | .→----------------------------------------.     |
 | | .→---------------------.  .→----------. | ∘ , |
