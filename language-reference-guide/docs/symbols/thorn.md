@@ -39,7 +39,7 @@ N.B. depends on `⎕PP`
 Dyadic Thorn means
 
 
-[Format By Specification](../primitive-functions/format-by-Specification.md)
+[Format By Specification](../primitive-functions/format-by-specification.md)
 ```apl
 
 Field-width and number of decimal places:
