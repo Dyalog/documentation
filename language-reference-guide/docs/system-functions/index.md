@@ -89,12 +89,12 @@ Dyalog includes a collection of built-in facilities that provide various service
 |[`⎕LOAD`](load.md)  |Load a saved WS            |Function|
 |[`⎕LOCK`](lock.md)   |Lock a function       |Ambivalent function|
 |[`⎕LX`](lx.md)    |Latent Expression        |Variable|
-|[`⎕MAP`](map.md)  |Map a file                                              |Abivalent function|
+|[`⎕MAP`](map.md)  |Map a file                                              |Ambivalent function|
 |[`⎕MKDIR`](mkdir.md)   |Create a directory                                           |Ambivalent function|
 |[`⎕ML`](ml.md) |Migration Level              |Variable|
 |[`⎕MONITOR`](query-monitor.md)|Monitor query|Monadic function|
 |[`⎕MONITOR`](set-monitor.md)|Monitor set    |Dyadic function|
-|[`⎕NA`](na.md)   |Declare a DLL function                                  |Abivalent function|
+|[`⎕NA`](na.md)   |Declare a DLL function                                  |Ambivalent function|
 |[`⎕NAPPEND`](nappend.md) |Append to File                                               |Dyadic function|
 |[`⎕NC`](nc.md)    |Name Classification      |Monadic function|
 |[`⎕NCOPY`](ncopy.md)   |Copy files and directories                                   |Dyadic function|
@@ -106,7 +106,7 @@ Dyalog includes a collection of built-in facilities that provide various service
 |[`⎕NGET`](nget.md)    |Read Text File                                               |Ambivalent function|
 |[`⎕NINFO`](ninfo.md)   |Query or set information about one or more files and/or directories|Ambivalent function|
 |[`⎕NL`](nl.md)    |Name List                |Monadic function|
-|[`⎕NLOCK`](nlock.md)   |Lock a region of a file                                      |Ambivalent function|
+|[`⎕NLOCK`](nlock.md)   |Lock a region of a file                                      |Dyadic function|
 |[`⎕NMOVE`](nmove.md)   |Move files and directories                                   |Dyadic function|
 |[`⎕NNAMES`](nnames.md)  |Names of tied Files                                          |Constant|
 |[`⎕NNUMS`](nnums.md)   |Tie Numbers of tied Files                                    |Constant|
@@ -133,7 +133,7 @@ Dyalog includes a collection of built-in facilities that provide various service
 |[`⎕PP`](pp.md) |Print Precision              |Variable|
 |[`⎕PROFILE`](profile.md)|Profile Application|Ambivalent function|
 |[`⎕R`](r.md)    |Replace                                                 |Dyadic operator|
-|[`⎕REFS`](refs.md)   |Local References      |Ambivalent function|
+|[`⎕REFS`](refs.md)   |Local References      |Monadic function|
 |[`⎕RL`](rl.md) |Random Link                  |Variable|
 |[`⎕RSI`](rsi.md)   |Space Indicator          |Constant|
 |[`⎕RTL`](rtl.md)   |Response Time Limit   |Variable|
@@ -162,7 +162,6 @@ Dyalog includes a collection of built-in facilities that provide various service
 |[`⎕SVQ`](svq.md)|Shared Variable Query      |Monadic function|
 |[`⎕SVR`](svr.md)|Retract offer              |Monadic function|
 |[`⎕SVS`](svs.md)|Query Shared Variable State|Monadic function|
-|[`⎕TALLOC`](talloc.md) |Allocate Token Range         |Abivalent function|
 |[`⎕TALLOC`](talloc.md)|Allocate Token Range|Ambivalent function|
 |[`⎕TC`](tc.md)   |Terminal Control           |Constant|
 |[`⎕TCNUMS`](tcnums.md) |Thread Child Numbers         |Monadic function|
