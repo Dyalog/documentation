@@ -53,7 +53,7 @@ These are tools that allow you perform development environment actions under pro
 |[`⎕MONITOR`](query-monitor.md)|Monitor query|Monadic function|
 |[`⎕OR`](or.md)     |Object Representation   |Monadic function|
 |[`⎕PROFILE`](profile.md)|Profile Application|Ambivalent function|
-|[`⎕REFS`](refs.md)   |Local References      |Ambivalent function|
+|[`⎕REFS`](refs.md)   |Local References      |Monadic function|
 |[`⎕STOP`](set-stop.md)   |Set Stop vector   |Dyadic function|
 |[`⎕STOP`](query-stop.md)   |Query Stop vector|Monadic function|
 |[`⎕TRACE`](set-trace.md)  |Set Trace vector  |Dyadic function|
@@ -186,8 +186,8 @@ These are APL interfaces to various facilities outside Dyalog.
 
 |Name    |Description                                             |Form|
 |--------|--------------------------------------------------------|----|
-|[`⎕MAP`](map.md)  |Map a file                                              |Abivalent function|
-|[`⎕NA`](na.md)   |Declare a DLL function                                  |Abivalent function|
+|[`⎕MAP`](map.md)  |Map a file                                              |Ambivalent function|
+|[`⎕NA`](na.md)   |Declare a DLL function                                  |Ambivalent function|
 |[`⎕R`](r.md)    |Replace                                                 |Dyadic operator|
 |[`⎕S`](s.md)    |Search                                                  |Dyadic operator|
 |[`⎕SHELL`](shell.md)|Execute a shell command or another program              |Monadic function|
@@ -239,7 +239,7 @@ These create and manipulate files of any type as well as directories.
 |[`⎕NEXISTS`](nexists.md) |Discover whether or not a file or directory exists           |Monadic function|
 |[`⎕NGET`](nget.md)    |Read Text File                                               |Ambivalent function|
 |[`⎕NINFO`](ninfo.md)   |Query or set information about one or more files and/or directories|Ambivalent function|
-|[`⎕NLOCK`](nlock.md)   |Lock a region of a file                                      |Ambivalent function|
+|[`⎕NLOCK`](nlock.md)   |Lock a region of a file                                      |Dyadic function|
 |[`⎕NMOVE`](nmove.md)   |Move files and directories                                   |Dyadic function|
 |[`⎕NNAMES`](nnames.md)  |Names of tied Files                                          |Constant|
 |[`⎕NNUMS`](nnums.md)   |Tie Numbers of tied Files                                    |Constant|
@@ -259,7 +259,7 @@ These are facilities to handle threads such as those created by [Spawn](../../pr
 
 |Name     |Description                  |Form|
 |---------|-----------------------------|-----|
-|[`⎕TALLOC`](talloc.md) |Allocate Token Range         |Abivalent function|
+|[`⎕TALLOC`](talloc.md) |Allocate Token Range         |Ambivalent function|
 |[`⎕TCNUMS`](tcnums.md) |Thread Child Numbers         |Monadic function|
 |[`⎕TID`](tid.md)   |Current Thread Identity      |Constant|
 |[`⎕TKILL`](tkill.md) |Kill Threads        |Ambivalent function|
