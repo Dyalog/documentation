@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">RowHiddenDepth</span> <span class="right">Property</span></h1>
+# <span>RowHiddenDepth</span> <span>Property</span>
 
 
 

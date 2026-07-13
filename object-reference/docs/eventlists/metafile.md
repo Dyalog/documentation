@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Metafile Events</span></h1>
+# Metafile Events
 
 |-----------------------------------|-------------------------------------|-------------------------------------|
 |[Close](../methodorevents/close.md)|[Create](../methodorevents/create.md)|[Select](../methodorevents/select.md)|

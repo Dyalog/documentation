@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">HasLines</span> <span class="right">Property</span></h1>
+# <span>HasLines</span> <span>Property</span>
 
 
 

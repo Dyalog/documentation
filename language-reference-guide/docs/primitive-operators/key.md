@@ -7,7 +7,7 @@ search:
   key
 </div>
 
-<h1 class="heading"><span class="name">Key</span> <span class="command">R←{X}f⌸Y</span></h1>
+# <span>Key</span> `R←{X}f⌸Y`{{key}}
 
 !!! note "Classic Edition"
     The symbol `⌸` is not available in Classic Edition, and the Key operator is instead represented by `⎕U2338`.

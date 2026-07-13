@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">HTMLRenderer Methods</span></h1>
+# HTMLRenderer Methods
 
 |-----------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------|
 |[Detach](../methodorevents/detach.md)                      |[SetZoomLevel](../methodorevents/setzoomlevel.md)    |[GetZoomLevel](../methodorevents/getzoomlevel.md)|

@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Nested Representation</span> <span class="command">R←⎕NR Y</span></h1>
+# <span>Nested Representation</span> `R←⎕NR Y`{{key}}
 
 
 

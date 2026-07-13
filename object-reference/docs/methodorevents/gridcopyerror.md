@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GridCopyError</span> <span class="right">Event 196</span></h1>
+# <span>GridCopyError</span> <span>Event 196</span>
 
 
 

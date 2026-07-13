@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">ws not found</span></h1>
+# ws not found
 
 
 

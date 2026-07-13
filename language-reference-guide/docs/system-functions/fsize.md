@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">File Size</span> <span class="command">R←⎕FSIZE Y</span></h1>
+# <span>File Size</span> `R←⎕FSIZE Y`{{key}}
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Search Functions and Hash Tables</span></h1>
+# Search Functions and Hash Tables
 
 Primitive dyadic *search* functions, such as `⍳` (index of) and `∊` (membership) have a *principal* argument in which items of the other *subject* argument are located.
 

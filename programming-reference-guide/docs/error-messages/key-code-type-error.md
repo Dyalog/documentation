@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">KEY CODE TYPE ERROR</span> <span class="command">63</span></h1>
+# <span>KEY CODE TYPE ERROR</span> `63`
 
 
 

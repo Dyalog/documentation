@@ -52,6 +52,7 @@ extra:
   version:
     provider: mike
   generator: false
+  key: "[🛈](https://docs.dyalog.com/21.0/language-reference-guide/key-to-notation)"
 
 markdown_extensions:
   - admonition

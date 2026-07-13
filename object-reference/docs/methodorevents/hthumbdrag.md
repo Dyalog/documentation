@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">HThumbDrag</span> <span class="right">Event 442</span></h1>
+# <span>HThumbDrag</span> <span>Event 442</span>
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">LicenseKey</span> <span class="right">Property</span></h1>
+# <span>LicenseKey</span> <span>Property</span>
 
 
 

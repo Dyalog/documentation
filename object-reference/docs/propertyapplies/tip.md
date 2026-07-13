@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Tip Property</span></h1>
+# Tip Property
 
 |------------------------------------------|----------------------------------------------|----------------------------------------|
 |[Animation](../objects/animation.md)      |[Button](../objects/button.md)                |[ButtonEdit](../objects/buttonedit.md)  |

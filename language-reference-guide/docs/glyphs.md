@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Glyphs</span></h1>
+# Glyphs
 
 ## Overview
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">The Workspace Explorer Tool</span></h1>
+# The Workspace Explorer Tool
 
 The Explorer tool is a modeless dialog box that may be toggled on and off by the system action `[Explorer]`. In a default Session, this is attached to a MenuItem in the *Tools* menu and a Button on the session toolbar.
 

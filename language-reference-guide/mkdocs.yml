@@ -33,7 +33,8 @@ plugins:
         caption_prefix: 'Table {index}:'
 extra:
   version_maj: 20
-  version_majmin: 20.0
+  version_majmin: "20.0"
+  key: "[🛈](https://docs.dyalog.com/21.0/language-reference-guide/key-to-notation)"
 markdown_extensions:
   - admonition
   - pymdownx.details

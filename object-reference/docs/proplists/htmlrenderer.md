@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">HTMLRenderer Properties</span></h1>
+# HTMLRenderer Properties
 
 |-----------------------------------------------------|-------------------------------------------|-----------------------------------------|
 |[Type](../properties/type.md)                        |[HTML](../properties/html.md)              |[Posn](../properties/posn.md)            |

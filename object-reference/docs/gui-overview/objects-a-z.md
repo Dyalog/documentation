@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Objects A-Z</span></h1>
+# Objects A-Z
 
 [Objects: Categorised](objects-categorised.md)
 

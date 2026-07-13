@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">EndSplit</span> <span class="right">Event 282</span></h1>
+# <span>EndSplit</span> <span>Event 282</span>
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Text</span> <span class="right">Object</span></h1>
+# <span>Text</span> <span>Object</span>
 
 [Parents](../parentlists/text.md), [Children](../childlists/text.md), [Properties](../proplists/text.md), [Methods](../methodlists/text.md), [Events](../eventlists/text.md)
 

@@ -6,7 +6,7 @@ search:
   ⍴ rho reshape
 </div>
 
-<h1 class="heading"><span class="name">Reshape</span> <span class="command">R←X⍴Y</span></h1>
+# <span>Reshape</span> `R←X⍴Y`{{key}}
 
 
 

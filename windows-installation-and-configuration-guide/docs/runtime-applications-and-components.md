@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Run-Time Applications and Components</span></h1>
+# Run-Time Applications and Components
 
 Using Dyalog APL you may create different types of run-time applications and components. Note that the distribution of run-time applications and components requires a Dyalog APL Run-Time Agreement. Please contact Dyalog or your distributor, or see the Dyalog web page for more information.
 

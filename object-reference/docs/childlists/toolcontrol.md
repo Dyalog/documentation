@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">ToolControl Children</span></h1>
+# ToolControl Children
 
 |--------------------------------------|----------------------------------------|----------------------------------|
 |[Bitmap](../objects/bitmap.md)        |[BrowseBox](../objects/browsebox.md)    |[Button](../objects/button.md)    |

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Sizeable</span> <span class="right">Property</span></h1>
+# <span>Sizeable</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/sizeable.md)
 

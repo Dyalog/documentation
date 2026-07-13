@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ImageCount</span> <span class="right">Property</span></h1>
+# <span>ImageCount</span> <span>Property</span>
 
 
 

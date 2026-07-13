@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Wait for Threads to Terminate</span> <span class="command">R←⎕TSYNC Y</span></h1>
+# <span>Wait for Threads to Terminate</span> `R←⎕TSYNC Y`{{key}}
 
 
 

@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">FILE ERROR 26 Text file busy</span> <span class="command">126</span></h1>
+# <span>FILE ERROR 26 Text file busy</span> `126`
 
 
 

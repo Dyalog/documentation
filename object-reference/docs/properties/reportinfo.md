@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ReportInfo</span> <span class="right">Property</span></h1>
+# <span>ReportInfo</span> <span>Property</span>
 
 
 

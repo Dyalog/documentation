@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">UpperCase</span> <span class="right">Property</span></h1>
+# <span>UpperCase</span> <span>Property</span>
 
 
 

@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Hold Statement</span> <span class="command">:Hold tkns</span></h1>
+# <span>Hold Statement</span> `:Hold tkns`
 
 
 

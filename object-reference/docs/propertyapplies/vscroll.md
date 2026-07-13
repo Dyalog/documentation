@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">VScroll Property</span></h1>
+# VScroll Property
 
 |------------------------------------|----------------------------------|------------------------------|
 |[Combo](../objects/combo.md)        |[ComboEx](../objects/comboex.md)  |[Edit](../objects/edit.md)    |

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Marker</span> <span class="right">Object</span></h1>
+# <span>Marker</span> <span>Object</span>
 
 [Parents](../parentlists/marker.md), [Children](../childlists/marker.md), [Properties](../proplists/marker.md), [Methods](../methodlists/marker.md), [Events](../eventlists/marker.md)
 

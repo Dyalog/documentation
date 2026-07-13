@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">warning unmatched brackets</span></h1>
+# warning unmatched brackets
 
 
 

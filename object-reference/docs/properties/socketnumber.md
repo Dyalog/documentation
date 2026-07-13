@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SocketNumber</span> <span class="right">Property</span></h1>
+# <span>SocketNumber</span> <span>Property</span>
 
 
 

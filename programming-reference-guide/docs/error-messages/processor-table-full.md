@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">PROCESSOR TABLE FULL</span> <span class="command">76</span></h1>
+# <span>PROCESSOR TABLE FULL</span> `76`
 
 
 

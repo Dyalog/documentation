@@ -7,7 +7,7 @@ search:
   ⎕NREPLACE NREPLACE
 </div>
 
-<h1 class="heading"><span class="name">Native File Replace</span> <span class="command">{R}←X ⎕NREPLACE Y</span></h1>
+# <span>Native File Replace</span> `{R}←X ⎕NREPLACE Y`{{key}}
 
 `⎕NREPLACE` is used to write data to a native file, replacing data which is already there.
 

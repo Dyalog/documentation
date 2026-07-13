@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Divider</span> <span class="right">Property</span></h1>
+# <span>Divider</span> <span>Property</span>
 
 
 

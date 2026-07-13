@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">List Properties</span> <span class="command">)PROPS</span></h1>
+# <span>List Properties</span> `)PROPS`
 
 
 

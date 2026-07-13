@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Wait</span> <span class="right">Method 147</span></h1>
+# <span>Wait</span> <span>Method 147</span>
 
 [**Applies To**](../methodoreventapplies/wait.md)
 

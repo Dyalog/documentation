@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">HTTPRequest</span> <span class="right">Event 840</span></h1>
+# <span>HTTPRequest</span> <span>Event 840</span>
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Specification of Variables</span></h1>
+# Specification of Variables
 
 A variable is a named array.  An undefined name or an existing variable may be assigned an array by specification with the left arrow (`←`).
 

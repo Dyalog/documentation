@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">WorkspaceLoaded</span> <span class="command">Event 525</span></h1>
+# <span>WorkspaceLoaded</span> `Event 525`
 
 
 

@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Greatest Common Divisor/OR</span> <span class="command">R←X∨Y</span></h1>
+# <span>Greatest Common Divisor/OR</span> `R←X∨Y`{{key}}
 
 
 ## Case 1: Greatest Common Divisor – `X` and `Y` are numeric (non-Boolean)

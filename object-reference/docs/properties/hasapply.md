@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">HasApply</span> <span class="right">Property</span></h1>
+# <span>HasApply</span> <span>Property</span>
 
 
 

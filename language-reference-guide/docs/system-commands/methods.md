@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">List Methods</span> <span class="command">)METHODS</span></h1>
+# <span>List Methods</span> `)METHODS`
 
 
 

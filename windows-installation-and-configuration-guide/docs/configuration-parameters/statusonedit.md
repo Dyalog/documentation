@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">StatusOnEdit</span></h1>
+# StatusOnEdit
 
 Specifies whether or not a status bar is displayed at the bottom of an Edit window.
 

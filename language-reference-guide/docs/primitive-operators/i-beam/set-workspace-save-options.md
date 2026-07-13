@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Set Workspace Save Options</span> <span class="command">R←2400⌶Y</span></h1>
+# <span>Set Workspace Save Options</span> `R←2400⌶Y`{{key}}
 
 
 

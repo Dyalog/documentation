@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">APLMON output</span></h1>
+# APLMON output
 
 The output file is a CSV matrix with values  separated by commas. Fields can be empty. The file may be read by `⎕CSV` and applications such as Microsoft Excel.
 

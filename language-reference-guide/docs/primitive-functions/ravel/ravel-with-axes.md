@@ -6,7 +6,7 @@ search:
   , ravel
 </div>
 
-<h1 class="heading"><span class="name">Ravel with Axes</span> <span class="command">R←,[K]Y</span></h1>
+# <span>Ravel with Axes</span> `R←,[K]Y`{{key}}
 
 
 

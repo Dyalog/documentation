@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">FILE TIED</span> <span class="command">24</span></h1>
+# <span>FILE TIED</span> `24`
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GetCellRect</span> <span class="right">Method 201</span></h1>
+# <span>GetCellRect</span> <span>Method 201</span>
 
 
 

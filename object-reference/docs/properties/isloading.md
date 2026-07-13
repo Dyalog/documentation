@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">IsLoading</span> <span class="right">Property</span></h1>
+# <span>IsLoading</span> <span>Property</span>
 
 
 

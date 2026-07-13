@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GetDayStates</span> <span class="right">Event 266</span></h1>
+# <span>GetDayStates</span> <span>Event 266</span>
 
 
 

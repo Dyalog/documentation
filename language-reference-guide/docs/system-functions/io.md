@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Index Origin</span> <span class="command">⎕IO</span></h1>
+# <span>Index Origin</span> `⎕IO`
 
 
 

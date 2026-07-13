@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Advanced Techniques</span></h1>
+# Advanced Techniques
 
 ## Shared Members
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">DragItems</span> <span class="right">Property</span></h1>
+# <span>DragItems</span> <span>Property</span>
 
 
 

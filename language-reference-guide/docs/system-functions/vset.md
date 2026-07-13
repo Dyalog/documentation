@@ -7,7 +7,7 @@ search:
   ⎕VSET VSET
 </div>
 
-<h1 class="heading"><span class="name">Value Set</span> <span class="command">{R}←{X}⎕VSET Y</span></h1>
+# <span>Value Set</span> `{R}←{X}⎕VSET Y`{{key}}
 
 `⎕VSET` enables values to be set for names in a target namespace or target namespaces.
 

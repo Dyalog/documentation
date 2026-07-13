@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">RowSetVisibleDepth</span> <span class="right">Method 173</span></h1>
+# <span>RowSetVisibleDepth</span> <span>Method 173</span>
 
 
 

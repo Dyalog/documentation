@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Terminal Control</span> <span class="command">(⎕ML)</span></h1>
+# <span>Terminal Control</span> `(⎕ML)`
 
 
 

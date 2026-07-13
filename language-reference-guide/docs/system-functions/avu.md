@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Atomic Vector - Unicode</span> <span class="command">⎕AVU</span></h1>
+# <span>Atomic Vector - Unicode</span> `⎕AVU`
 
 
 

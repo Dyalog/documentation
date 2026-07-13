@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ActivateApp</span> <span class="right">Event 139</span></h1>
+# <span>ActivateApp</span> <span>Event 139</span>
 
 
 

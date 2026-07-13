@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Announcements</span></h1>
+# Announcements
 
 ## Supported Versions
 

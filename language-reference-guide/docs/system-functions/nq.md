@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Enqueue Event</span> <span class="command">{R}←{X}⎕NQ Y</span></h1>
+# <span>Enqueue Event</span> `{R}←{X}⎕NQ Y`{{key}}
 
 
 

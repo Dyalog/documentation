@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Use Separate Thread For .NET</span> <span class="command">R←2520⌶Y</span></h1>
+# <span>Use Separate Thread For .NET</span> `R←2520⌶Y`{{key}}
 
 
 

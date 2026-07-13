@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Up Shoe</span> <span class="command">∩</span></h1>
+# <span>Up Shoe</span> `∩`
 
 Monadic Up Shoe is not defined
 

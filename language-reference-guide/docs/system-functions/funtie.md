@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">File Untie</span> <span class="command">{R}←⎕FUNTIE Y</span></h1>
+# <span>File Untie</span> `{R}←⎕FUNTIE Y`{{key}}
 
 
 

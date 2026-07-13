@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Trace_First_X</span></h1>
+# Trace_First_X
 
 This parameters specifies the initial horizontal position on the screen of the *first* trace window in character units. Subsequent trace windows will be staggered. This applies only if **ClassicMode** is 1.
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">MultiSelect</span> <span class="right">Property</span></h1>
+# <span>MultiSelect</span> <span>Property</span>
 
 
 

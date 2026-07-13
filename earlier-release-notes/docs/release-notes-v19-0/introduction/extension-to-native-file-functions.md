@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Extension to Native File Functions</span></h1>
+# Extension to Native File Functions
 
 `⎕NMOVE` and `⎕NCOPY` now provide a feature to run an APL function as a callback during processing. This is implemented by the ProgressCallback Variant option.
 

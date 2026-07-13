@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Text Properties</span></h1>
+# Text Properties
 
 |-------------------------------------------|-------------------------------------------|---------------------------------------|
 |[Type](../properties/type.md)              |[Text](../properties/text.md)              |[Points](../properties/points.md)      |

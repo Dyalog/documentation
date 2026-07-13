@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Printer Properties</span></h1>
+# Printer Properties
 
 |-------------------------------------------|-------------------------------------------|---------------------------------------------|
 |[Type](../properties/type.md)              |[PName](../properties/pname.md)            |[DevCaps](../properties/devcaps.md)          |

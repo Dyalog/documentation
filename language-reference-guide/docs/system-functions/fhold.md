@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">File Hold</span> <span class="command">{R}←{X} ⎕FHOLD Y</span></h1>
+# <span>File Hold</span> `{R}←{X} ⎕FHOLD Y`{{key}}
 
 
 ## Access code 2048

@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Random Link</span> <span class="command">⎕RL</span></h1>
+# <span>Random Link</span> `⎕RL`
 
 
 

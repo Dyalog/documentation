@@ -7,7 +7,7 @@ search:
   ⎕DT DT
 </div>
 
-<h1 class="heading"><span class="name">Date-time</span> <span class="command">R←X ⎕DT Y</span></h1>
+# <span>Date-time</span> `R←X ⎕DT Y`{{key}}
 
 This function validates date-times or converts date-times between one format and another.
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Arrays</span></h1>
+# Arrays
 
 A Dyalog APL data structure is called an array.  An array is a rectangular arrangement of items, each of which may be a single number, a single character, a namespace reference (ref), another array, or the `⎕OR` of an object.  An array which is part of another array is also known as a subarray.
 

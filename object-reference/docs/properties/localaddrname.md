@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">LocalAddrName</span> <span class="right">Property</span></h1>
+# <span>LocalAddrName</span> <span>Property</span>
 
 
 

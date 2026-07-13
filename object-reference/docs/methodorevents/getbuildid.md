@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GetBuildID</span> <span class="right">Method 992</span></h1>
+# <span>GetBuildID</span> <span>Method 992</span>
 
 
 

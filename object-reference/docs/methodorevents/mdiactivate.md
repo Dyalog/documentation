@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">MDIActivate</span> <span class="right">Event 42</span></h1>
+# <span>MDIActivate</span> <span>Event 42</span>
 
 
 

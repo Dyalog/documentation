@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Window Set Property</span> <span class="command">{R}←{X}⎕WS Y</span></h1>
+# <span>Window Set Property</span> `{R}←{X}⎕WS Y`{{key}}
 
 
 

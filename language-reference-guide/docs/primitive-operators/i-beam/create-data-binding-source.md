@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Create Data Binding Source</span> <span class="command">R←{X}2015⌶Y</span></h1>
+# <span>Create Data Binding Source</span> `R←{X}2015⌶Y`{{key}}
 
 
 

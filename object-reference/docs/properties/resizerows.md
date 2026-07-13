@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ResizeRows</span> <span class="right">Property</span></h1>
+# <span>ResizeRows</span> <span>Property</span>
 
 
 

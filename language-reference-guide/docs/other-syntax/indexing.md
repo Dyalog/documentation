@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-<h1 class="heading"><span class="name">Indexing</span> <span class="command">R←X[Y]</span></h1>
+# <span>Indexing</span> `R←X[Y]`{{key}}
 
 `X` may be  any array. `Y` must be a valid index specification. `R` is an array composed of elements indexed from `X` and the shape of `R` is determined by the index specification.
 

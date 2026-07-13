@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Type Information</span></h1>
+# Type Information
 
 In general, it is a requirement that all COM objects provide *Type Information*. This is commonly provided in a type library file (extension .TLB) or is included in the object's .EXE or .DLL file. Type Information includes the names of the methods, events and properties exported by the object, together with descriptions of the arguments to each method and descriptions of the data types of each property. Type Information is necessary for the COM object to be properly recognised by object browsers and by application development systems.
 

@@ -2,7 +2,7 @@
 
 
 
-<h1 class="heading"><span class="name">PropertyGet Function</span> <span class="command">R←Get {ipa}</span></h1>
+# <span>PropertyGet Function</span> `R←Get {ipa}`
 
 
 

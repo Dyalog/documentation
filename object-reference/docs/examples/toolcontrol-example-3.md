@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">ToolControl</span> <span class="right">Example 3</span></h1>
+# <span>ToolControl</span> <span>Example 3</span>
 
 
 ```apl

@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Overwrite Free Pockets</span> <span class="command">R←127⌶Y</span></h1>
+# <span>Overwrite Free Pockets</span> `R←127⌶Y`{{key}}
 
 
 

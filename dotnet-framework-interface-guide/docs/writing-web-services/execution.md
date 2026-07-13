@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Execution</span></h1>
+# Execution
 
 When your web service (or page) is invoked, ASP.NET requests an instance of the corresponding class from the assembly (DLL) that was created when it was compiled. The first time this happens for any Dyalog web service or web page, the Dyalog DLL is loaded into the ASP.NET host process and the namespace corresponding to your web service class is `)COPY`ed from the assembly. The Dyalog DLL then delivers an instance of this namespace to the client (calling) process. See [Implementation Details](../implementation-details/index.md) for further details.
 

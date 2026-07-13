@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Discard Parked Threads</span> <span class="command">R←2502⌶Y</span></h1>
+# <span>Discard Parked Threads</span> `R←2502⌶Y`{{key}}
 
 
 

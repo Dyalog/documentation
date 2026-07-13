@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Input Tab (Classic Edition Only)</span></h1>
+# Input Tab (Classic Edition Only)
 
 ![configuration dialog input tab](../../img/configuration-dialog-input-tab.png)
 

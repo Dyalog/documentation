@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GetTipText</span> <span class="right">Event 325</span></h1>
+# <span>GetTipText</span> <span>Event 325</span>
 
 
 

@@ -7,7 +7,7 @@ search:
   rank
 </div>
 
-<h1 class="heading"><span class="name">Rank</span> <span class="command">R←{X}(f⍤B)Y</span></h1>
+# <span>Rank</span> `R←{X}(f⍤B)Y`{{key}}
 
 !!! note "Classic Edition"
     The symbol `⍤` is not available in Classic Edition, and the Rank operator is instead represented by `⎕U2364`.

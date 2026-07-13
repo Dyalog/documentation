@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Interval</span> <span class="right">Property</span></h1>
+# <span>Interval</span> <span>Property</span>
 
 
 

@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Unsqueezed Type</span> <span class="command">R←181⌶Y</span></h1>
+# <span>Unsqueezed Type</span> `R←181⌶Y`{{key}}
 
 
 

@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">ActiveXControl Children</span></h1>
+# ActiveXControl Children
 
 |--------------------------------------------------|------------------------------------------|----------------------------------------------|
 |[ActiveXContainer](../objects/activexcontainer.md)|[Animation](../objects/animation.md)      |[Bitmap](../objects/bitmap.md)                |

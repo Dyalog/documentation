@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Indents</span> <span class="right">Property</span></h1>
+# <span>Indents</span> <span>Property</span>
 
 
 

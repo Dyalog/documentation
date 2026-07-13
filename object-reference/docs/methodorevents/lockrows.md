@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">LockRows</span> <span class="right">Method 226</span></h1>
+# <span>LockRows</span> <span>Method 226</span>
 
 
 

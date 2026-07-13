@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SetItemImage</span> <span class="right">Method 315</span></h1>
+# <span>SetItemImage</span> <span>Method 315</span>
 
 
 

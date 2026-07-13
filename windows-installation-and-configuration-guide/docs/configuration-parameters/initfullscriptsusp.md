@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">InitFullScriptSusp</span></h1>
+# InitFullScriptSusp
 
 When using the Editor to edit  a script such as a Class or Namespace you can specify whether, when you Fix the script and Exit  the Editor, just the functions in the script are re-fixed, or whether the whole script is re-executed, thereby re-initialising any Fields or variables defined within.
 

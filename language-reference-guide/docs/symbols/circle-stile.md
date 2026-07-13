@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Circle Stile</span> <span class="command">⌽</span></h1>
+# <span>Circle Stile</span> `⌽`
 
 Monadic Circle Stile means
 [Reverse](../primitive-functions/reverse.md)

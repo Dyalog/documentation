@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">INTERNAL ERROR</span> <span class="command">99</span></h1>
+# <span>INTERNAL ERROR</span> `99`
 
 
 

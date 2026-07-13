@@ -7,7 +7,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Thorn</span> <span class="command">⍕</span></h1>
+# <span>Thorn</span> `⍕`
 
 
 Monadic Thorn means

@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Workspace Identification</span> <span class="command">)WSID {ws}</span></h1>
+# <span>Workspace Identification</span> `)WSID {ws}`
 
 
 

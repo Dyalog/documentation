@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">APLVersion</span> <span class="right">Property</span></h1>
+# <span>APLVersion</span> <span>Property</span>
 
 
 

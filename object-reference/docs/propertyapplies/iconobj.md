@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">IconObj Property</span></h1>
+# IconObj Property
 
 |------------------------------|------------------------------------------|----------------------------------------|
 |[Form](../objects/form.md)    |[HTMLRenderer](../objects/htmlrenderer.md)|[MDIClient](../objects/mdiclient.md)    |

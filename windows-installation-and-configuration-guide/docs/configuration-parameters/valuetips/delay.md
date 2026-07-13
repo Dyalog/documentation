@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ValueTips/Delay</span></h1>
+# ValueTips/Delay
 
 This parameter specifies the delay before a Value Tip is displayed  when the user hovers the mouse over a name.
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Function Composition</span></h1>
+# Function Composition
 
 Function composition refers to the "gluing" together of two functions using a dyadic operator such that the functions are applied to the argument(s) as normal, but in a particular pattern specific to the operator that is being used. The term _function composition_ comes from traditional mathematics, where it is used for a function `h(x)=f(g(x))` when written as  `h(x)=(f∘g)(x)` APL generalises this idea to dyadic functions, allowing various patterns of application in addition to the simple application of one monadic function to the result of another monadic function. The four main patterns, represented by [_atop_](./atop.md), [_behind_](./behind.md), [_beside_](./beside.md), and [_over_](./over.md), can be visualised as shown below.
 

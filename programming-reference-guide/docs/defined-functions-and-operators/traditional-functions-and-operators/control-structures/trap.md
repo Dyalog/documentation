@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Trap Statement</span> <span class="command">:Trap ecode</span></h1>
+# <span>Trap Statement</span> `:Trap ecode`
 
 
 

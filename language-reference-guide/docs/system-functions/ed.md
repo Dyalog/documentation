@@ -7,7 +7,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Edit Object</span> <span class="command">{R}←{X}⎕ED Y</span></h1>
+# <span>Edit Object</span> `{R}←{X}⎕ED Y`{{key}}
 
 
 

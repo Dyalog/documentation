@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">WSPath</span></h1>
+# WSPath
 
 This parameter defines the workspace path. This is a list of directories that are searched in the order specified when you `)LOAD` or `)COPY` a workspace and when you start an Auxiliary Processor without explicitly specifying a path in the name. The directory paths are specified using Operating System specific conventions and separated by ";" (Windows) or ":" (UNIX).
 

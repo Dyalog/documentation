@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">High-Priority Callback Functions</span></h1>
+# High-Priority Callback Functions
 
 A high-priority callback function is one that is  invoked by a high-priority
 event which demands that Dyalog must return a result to the operating system before it

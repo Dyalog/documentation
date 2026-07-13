@@ -7,7 +7,7 @@ search:
   ⎕PATH PATH
 </div>
 
-<h1 class="heading"><span class="name">Search Path</span> <span class="command">⎕PATH</span></h1>
+# <span>Search Path</span> `⎕PATH`
 
 `⎕PATH` is a simple character vector representing a blank-separated list of namespaces.  It is approximately analogous to the PATH variable in Windows or UNIX.
 

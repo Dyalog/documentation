@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">FieldType</span> <span class="right">Property</span></h1>
+# <span>FieldType</span> <span>Property</span>
 
 
 

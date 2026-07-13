@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">PageActive</span> <span class="right">Property</span></h1>
+# <span>PageActive</span> <span>Property</span>
 
 
 

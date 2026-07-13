@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">CheckBoxes</span> <span class="right">Property</span></h1>
+# <span>CheckBoxes</span> <span>Property</span>
 
 **Applies To:** [ListView](../objects/listview.md), [TreeView](../objects/treeview.md)
 

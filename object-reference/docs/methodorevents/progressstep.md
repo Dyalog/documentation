@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ProgressStep</span> <span class="right">Method 250</span></h1>
+# <span>ProgressStep</span> <span>Method 250</span>
 
 
 

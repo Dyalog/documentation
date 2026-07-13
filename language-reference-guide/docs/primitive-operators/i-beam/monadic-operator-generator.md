@@ -8,7 +8,7 @@ search:
   43⌶
 </div>
 
-<h1 class="heading"><span class="name">Monadic Operator Generator</span> <span class="command">R←43⌶Y</span></h1>
+# <span>Monadic Operator Generator</span> `R←43⌶Y`{{key}}
 
 Returns a monadic operator, with functionality determined by the value of `Y`.
 

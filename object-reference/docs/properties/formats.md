@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Formats</span> <span class="right">Property</span></h1>
+# <span>Formats</span> <span>Property</span>
 
 
 

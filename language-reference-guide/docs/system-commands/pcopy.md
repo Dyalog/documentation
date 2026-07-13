@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Protected Copy</span> <span class="command">)PCOPY {ws {nms}}</span></h1>
+# <span>Protected Copy</span> `)PCOPY {ws {nms}}`
 
 
 

@@ -7,7 +7,7 @@ search:
   ⎕EN EN
 </div>
 
-<h1 class="heading"><span class="name">Event Number</span> <span class="command">R←⎕EN</span></h1>
+# <span>Event Number</span> `R←⎕EN`{{key}}
 
 This simple integer scalar reports the identification number for the most recent event which occurred, caused by an APL action or by an interrupt or by the `⎕SIGNAL` system function.  Its value in a clear workspace is `0`.
 

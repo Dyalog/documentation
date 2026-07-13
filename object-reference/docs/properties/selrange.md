@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SelRange</span> <span class="right">Property</span></h1>
+# <span>SelRange</span> <span>Property</span>
 
 
 

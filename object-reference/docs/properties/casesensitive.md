@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">CaseSensitive</span> <span class="right">Property</span></h1>
+# <span>CaseSensitive</span> <span>Property</span>
 
 
 

@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Get Tokens</span> <span class="command">{R}←{X} ⎕TGET Y</span></h1>
+# <span>Get Tokens</span> `{R}←{X} ⎕TGET Y`{{key}}
 
 
 

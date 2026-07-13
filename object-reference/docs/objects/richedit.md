@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">RichEdit</span> <span class="right">Object</span></h1>
+# <span>RichEdit</span> <span>Object</span>
 
 
 

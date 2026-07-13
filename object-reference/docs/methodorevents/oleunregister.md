@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">OLEUnregister</span> <span class="right">Method 531</span></h1>
+# <span>OLEUnregister</span> <span>Method 531</span>
 
 
 

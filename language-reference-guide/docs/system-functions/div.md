@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Division Method</span> <span class="command">⎕DIV</span></h1>
+# <span>Division Method</span> `⎕DIV`
 
 
 

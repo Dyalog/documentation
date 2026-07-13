@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Tutorial</span></h1>
+# Tutorial
 
 All the examples in this tutorial are to be executed as simple console applications written in C#.
 

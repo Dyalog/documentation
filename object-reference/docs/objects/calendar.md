@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Calendar</span> <span class="right">Object</span></h1>
+# <span>Calendar</span> <span>Object</span>
 
 
 

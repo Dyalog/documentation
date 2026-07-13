@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">LockColumns</span> <span class="right">Method 227</span></h1>
+# <span>LockColumns</span> <span>Method 227</span>
 
 
 

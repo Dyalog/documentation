@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SetRowSize</span> <span class="right">Event 175</span></h1>
+# <span>SetRowSize</span> <span>Event 175</span>
 
 
 

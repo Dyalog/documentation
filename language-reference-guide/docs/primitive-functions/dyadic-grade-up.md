@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Dyadic Grade Up</span> <span class="command">R←X⍋Y</span></h1>
+# <span>Dyadic Grade Up</span> `R←X⍋Y`{{key}}
 
 
 

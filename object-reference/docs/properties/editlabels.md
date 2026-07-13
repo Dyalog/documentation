@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">EditLabels</span> <span class="right">Property</span></h1>
+# <span>EditLabels</span> <span>Property</span>
 
 
 

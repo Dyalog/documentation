@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">AutoBrowse</span> <span class="right">Property</span></h1>
+# <span>AutoBrowse</span> <span>Property</span>
 
 
 

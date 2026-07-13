@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name"> Including Namespaces in Classes</span></h1>
+#  Including Namespaces in Classes
 
 A Class may import methods from one or more plain Namespaces. This allows several Classes to share a common set of methods, and provides a degree of multiple inheritance.
 

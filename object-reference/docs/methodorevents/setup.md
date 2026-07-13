@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Setup</span> <span class="right">Method 101</span></h1>
+# <span>Setup</span> <span>Method 101</span>
 
 
 

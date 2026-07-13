@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">AnimPlay</span> <span class="right">Method 292</span></h1>
+# <span>AnimPlay</span> <span>Method 292</span>
 
 
 

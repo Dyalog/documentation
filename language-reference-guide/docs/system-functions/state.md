@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">State of Object</span> <span class="command">R←⎕STATE Y</span></h1>
+# <span>State of Object</span> `R←⎕STATE Y`{{key}}
 
 
 

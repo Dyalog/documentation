@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">PropList</span> <span class="right">Property</span></h1>
+# <span>PropList</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/proplist.md)
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">CurCell</span> <span class="right">Property</span></h1>
+# <span>CurCell</span> <span>Property</span>
 
 
 

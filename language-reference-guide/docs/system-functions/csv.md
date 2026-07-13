@@ -7,7 +7,7 @@ search:
   ⎕CSV CSV
 </div>
 
-<h1 class="heading"><span class="name">Comma Separated Values</span> <span class="command">{R}←{X} ⎕CSV Y</span></h1>
+# <span>Comma Separated Values</span> `{R}←{X} ⎕CSV Y`{{key}}
 
 This function imports and exports Comma Separated Value (CSV) data.
 

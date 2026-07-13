@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SplitObj2</span> <span class="right">Property</span></h1>
+# <span>SplitObj2</span> <span>Property</span>
 
 
 

@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Query Degree of Coupling</span> <span class="command">R←⎕SVO Y</span></h1>
+# <span>Query Degree of Coupling</span> `R←⎕SVO Y`{{key}}
 
 
 

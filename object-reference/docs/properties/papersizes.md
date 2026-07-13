@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">PaperSizes</span> <span class="right">Property</span></h1>
+# <span>PaperSizes</span> <span>Property</span>
 
 
 

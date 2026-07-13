@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">RunMode</span> <span class="right">Property</span></h1>
+# <span>RunMode</span> <span>Property</span>
 
 
 

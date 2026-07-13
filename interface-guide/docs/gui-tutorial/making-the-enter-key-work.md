@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Making the Enter Key Work</span></h1>
+# Making the Enter Key Work
 
 Ok, so the basic application works. Let's look at what we can do to improve it.
 

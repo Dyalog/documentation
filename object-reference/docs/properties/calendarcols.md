@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">CalendarCols</span> <span class="right">Property</span></h1>
+# <span>CalendarCols</span> <span>Property</span>
 
 
 

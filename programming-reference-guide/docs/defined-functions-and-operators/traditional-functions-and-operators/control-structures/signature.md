@@ -8,7 +8,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Signature Statement</span> <span class="command">:Signature</span></h1>
+# <span>Signature Statement</span> `:Signature`
 
 ```apl
 :Signature <rslttype←><name><arg1type arg1name>,...

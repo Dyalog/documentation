@@ -6,7 +6,7 @@ search:
   , catenate
 </div>
 
-<h1 class="heading"><span class="name">Catenate/Laminate</span> <span class="command">R←X,[K]Y</span></h1>
+# <span>Catenate/Laminate</span> `R←X,[K]Y`{{key}}
 
 
 

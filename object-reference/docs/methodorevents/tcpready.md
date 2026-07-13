@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">TCPReady</span> <span class="right">Event 379</span></h1>
+# <span>TCPReady</span> <span>Event 379</span>
 
 
 

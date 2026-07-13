@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">List Events</span> <span class="command">)EVENTS</span></h1>
+# <span>List Events</span> `)EVENTS`
 
 
 

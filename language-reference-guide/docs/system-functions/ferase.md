@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">File Erase</span> <span class="command">{R}←X ⎕FERASE Y</span></h1>
+# <span>File Erase</span> `{R}←X ⎕FERASE Y`{{key}}
 
 
 ## Access code 4

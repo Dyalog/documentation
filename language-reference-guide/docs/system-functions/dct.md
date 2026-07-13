@@ -7,7 +7,7 @@ search:
   ⎕DCT DCT
 </div>
 
-<h1 class="heading"><span class="name">Decimal Comparison Tolerance</span> <span class="command">⎕DCT</span></h1>
+# <span>Decimal Comparison Tolerance</span> `⎕DCT`
 
 The value of `⎕DCT` determines the precision with which two numbers are judged to be equal when the value of `⎕FR` is 1287. If `⎕FR` is 645, the system uses `⎕CT`.
 

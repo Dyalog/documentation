@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">TreeView</span> <span class="right">Object</span></h1>
+# <span>TreeView</span> <span>Object</span>
 
 [Parents](../parentlists/treeview.md), [Children](../childlists/treeview.md), [Properties](../proplists/treeview.md), [Methods](../methodlists/treeview.md), [Events](../eventlists/treeview.md)
 

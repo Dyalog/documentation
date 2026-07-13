@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GridLineFCol</span> <span class="right">Property</span></h1>
+# <span>GridLineFCol</span> <span>Property</span>
 
 
 

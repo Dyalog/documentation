@@ -6,7 +6,7 @@ search:
   ⊥ decode base
 </div>
 
-<h1 class="heading"><span class="name">Decode</span> <span class="command">R←X⊥Y</span></h1>
+# <span>Decode</span> `R←X⊥Y`{{key}}
 
 `Y` must be a simple numeric array.  `X` must be a simple numeric array.  `R` is the numeric array which results from
 the evaluation of `Y` in the number system with radix `X`.

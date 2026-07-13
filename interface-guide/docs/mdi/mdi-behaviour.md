@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">MDI Behaviour</span></h1>
+# MDI Behaviour
 
 - All child forms are displayed within the MDIClient. Forms may be moved and resized but they are restricted to the MDIClient and will be clipped if they extend beyond it.
 - When a child form is minimised, its icon appears on the MDIClient rather than on the desktop.

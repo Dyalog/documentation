@@ -7,7 +7,7 @@ search:
   ⎕LC LC
 </div>
 
-<h1 class="heading"><span class="name">Line Count</span> <span class="command">R←⎕LC</span></h1>
+# <span>Line Count</span> `R←⎕LC`{{key}}
 
 This is a simple vector of line numbers drawn from the state indicator. The most recently activated line is shown first. If a value corresponds to a defined function in the state indicator, it represents the current line number where the function is either suspended or pendent.
 

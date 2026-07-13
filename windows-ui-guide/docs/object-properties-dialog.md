@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Object Properties Dialog Box</span></h1>
+# Object Properties Dialog Box
 
 The Object Properties dialog box displays detailed information for an APL object. It is displayed by executing the system action `[ObjProps]`. In a default Session, this is provided in the *Tools* menu, the Session popup menu and from the Explorer. An example (for a function) is shown below.
 

@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Start Windows Auxiliary Processor</span> <span class="command">{R}←X ⎕CMD Y</span></h1>
+# <span>Start Windows Auxiliary Processor</span> `{R}←X ⎕CMD Y`{{key}}
 
 
 

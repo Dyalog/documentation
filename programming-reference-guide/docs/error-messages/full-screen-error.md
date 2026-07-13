@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">FULL SCREEN ERROR</span> <span class="command">60</span></h1>
+# <span>FULL SCREEN ERROR</span> `60`
 
 
 

@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Extended State Indicator</span> <span class="command">R←⎕XSI</span></h1>
+# <span>Extended State Indicator</span> `R←⎕XSI`{{key}}
 
 
 

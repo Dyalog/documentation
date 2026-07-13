@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">NetType</span> <span class="right">Object</span></h1>
+# <span>NetType</span> <span>Object</span>
 
 
 

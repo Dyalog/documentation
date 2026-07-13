@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Docked</span> <span class="right">Property</span></h1>
+# <span>Docked</span> <span>Property</span>
 
 
 

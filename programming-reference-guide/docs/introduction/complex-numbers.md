@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Complex Numbers</span></h1>
+# Complex Numbers
 
 A complex number is a number consisting of a real and an imaginary part which is usually written in the form a+ bi, where a and b are real numbers, and i is the standard imaginary unit with the property i<sup>2</sup>= −1.
 

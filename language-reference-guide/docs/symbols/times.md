@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Times</span> <span class="command">×</span></h1>
+# <span>Times</span> `×`
 
 Monadic Times means
 [Direction](../primitive-functions/direction.md)

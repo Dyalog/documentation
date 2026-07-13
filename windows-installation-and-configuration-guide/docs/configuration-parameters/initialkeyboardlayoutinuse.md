@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">InitialKeyboardLayoutInUse</span></h1>
+# InitialKeyboardLayoutInUse
 
 **Unicode Edition only.**
 

@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">PName Property</span></h1>
+# PName Property
 
 |--------------------------|--------------------------------|------|
 |[Font](../objects/font.md)|[Printer](../objects/printer.md)|&nbsp;|

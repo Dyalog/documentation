@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Exponential</span> <span class="command">R←*Y</span></h1>
+# <span>Exponential</span> `R←*Y`{{key}}
 
 
 

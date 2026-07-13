@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Namespace does not exist</span></h1>
+# Namespace does not exist
 
 
 

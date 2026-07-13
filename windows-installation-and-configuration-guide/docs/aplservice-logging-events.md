@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">APLService Logging Events</span></h1>
+# APLService Logging Events
 
 The `aplservice` workspace contains the class `SysLog` which can be used to log events to the Windows Event Log.  These events can be accessed programmatically or viewed using the Windows Event Viewer found in the Windows Administrative Tools.
 

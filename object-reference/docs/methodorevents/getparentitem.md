@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GetParentItem</span> <span class="right">Method 312</span></h1>
+# <span>GetParentItem</span> <span>Method 312</span>
 
 
 

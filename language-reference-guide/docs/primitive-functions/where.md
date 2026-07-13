@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Where</span> <span class="command">R←⍸Y</span></h1>
+# <span>Where</span> `R←⍸Y`{{key}}
 
 
 

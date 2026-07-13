@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">MDIClient</span> <span class="right">Object</span></h1>
+# <span>MDIClient</span> <span>Object</span>
 
 
 

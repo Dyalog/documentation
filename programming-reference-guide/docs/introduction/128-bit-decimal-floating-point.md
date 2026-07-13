@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">128 Bit Decimal Floating-Point Support</span></h1>
+# 128 Bit Decimal Floating-Point Support
 
 ## Introduction
 

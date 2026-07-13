@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">PropertySet Function</span> <span class="command">Set ipa</span></h1>
+# <span>PropertySet Function</span> `Set ipa`
 
 
 

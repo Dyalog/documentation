@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Star</span> <span class="command">*</span></h1>
+# <span>Star</span> `*`
 
 
 Monadic Star means

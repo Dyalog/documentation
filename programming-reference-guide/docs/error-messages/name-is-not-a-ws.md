@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">name is not a ws</span></h1>
+# name is not a ws
 
 
 

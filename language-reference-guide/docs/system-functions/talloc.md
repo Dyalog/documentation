@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Allocate Token Range</span> <span class="command">{R}←{X} ⎕TALLOC Y</span></h1>
+# <span>Allocate Token Range</span> `{R}←{X} ⎕TALLOC Y`{{key}}
 
 
 

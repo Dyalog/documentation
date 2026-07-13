@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Load Workspace</span> <span class="command">⎕LOAD Y</span></h1>
+# <span>Load Workspace</span> `⎕LOAD Y`{{key}}
 
 
 

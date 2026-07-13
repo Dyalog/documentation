@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">COM data types</span></h1>
+# COM data types
 
 
 

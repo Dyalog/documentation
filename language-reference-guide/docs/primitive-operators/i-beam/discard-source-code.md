@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Discard Source Code</span> <span class="command">R←5172⌶Y</span></h1>
+# <span>Discard Source Code</span> `R←5172⌶Y`{{key}}
 
 
 

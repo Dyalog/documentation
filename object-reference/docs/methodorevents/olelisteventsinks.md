@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">OLEListEventSinks</span> <span class="right">Method 542</span></h1>
+# <span>OLEListEventSinks</span> <span>Method 542</span>
 
 
 

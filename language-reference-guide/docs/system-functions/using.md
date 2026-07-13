@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Using (Microsoft .NET Search Path)</span> <span class="command">⎕USING</span></h1>
+# <span>Using (Microsoft .NET Search Path)</span> `⎕USING`
 
 
 

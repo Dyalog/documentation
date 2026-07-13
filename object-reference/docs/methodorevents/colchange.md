@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ColChange</span> <span class="right">Method 159</span></h1>
+# <span>ColChange</span> <span>Method 159</span>
 
 
 

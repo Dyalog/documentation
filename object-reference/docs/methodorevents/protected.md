@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Protected</span> <span class="right">Event 470</span></h1>
+# <span>Protected</span> <span>Event 470</span>
 
 
 

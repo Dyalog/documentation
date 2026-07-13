@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Stream Sockets</span></h1>
+# Stream Sockets
 
 
 

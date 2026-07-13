@@ -2,7 +2,7 @@
 
 
 
-<h1 class="heading"><span class="name">FILE NAME QUOTA USED UP</span> <span class="command">32</span></h1>
+# <span>FILE NAME QUOTA USED UP</span> `32`
 
 
 

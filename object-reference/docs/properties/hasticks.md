@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">HasTicks</span> <span class="right">Property</span></h1>
+# <span>HasTicks</span> <span>Property</span>
 
 
 

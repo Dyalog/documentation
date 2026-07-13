@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Some Concepts</span></h1>
+# Some Concepts
 
 ## Objects
 

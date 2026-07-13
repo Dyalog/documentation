@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">WebSocketUpgrade</span> <span class="right">Event 841</span></h1>
+# <span>WebSocketUpgrade</span> <span>Event 841</span>
 
 
 

@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Trap Event</span> <span class="command">⎕TRAP</span></h1>
+# <span>Trap Event</span> `⎕TRAP`
 
 
 

@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Cue Property</span></h1>
+# Cue Property
 
 |--------------------------------------|--------------------------|------|
 |[ButtonEdit](../objects/buttonedit.md)|[Edit](../objects/edit.md)|&nbsp;|

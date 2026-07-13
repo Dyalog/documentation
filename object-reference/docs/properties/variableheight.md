@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">VariableHeight</span> <span class="right">Property</span></h1>
+# <span>VariableHeight</span> <span>Property</span>
 
 
 

@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Execute Unix Command</span> <span class="command">{R}←⎕SH Y</span></h1>
+# <span>Execute Unix Command</span> `{R}←⎕SH Y`{{key}}
 
 
 

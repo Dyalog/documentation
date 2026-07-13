@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Private Fields</span></h1>
+# Private Fields
 
 A Private Field may only be referenced by code running inside the Class or an Instance of the Class. Furthermore, Private Fields are not inherited.
 

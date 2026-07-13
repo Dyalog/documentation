@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Value Tips for External Functions</span></h1>
+# Value Tips for External Functions
 
 Value Tips can also be used to investigate the syntax of external functions. If you hover over the name of an external function, the Value Tip displays its Function Signature.
 

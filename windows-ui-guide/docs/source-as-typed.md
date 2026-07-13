@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Source as Typed</span></h1>
+# Source as Typed
 
 ## Historical Introduction
 

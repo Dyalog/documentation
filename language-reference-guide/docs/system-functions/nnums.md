@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Native File Numbers</span> <span class="command">R←⎕NNUMS</span></h1>
+# <span>Native File Numbers</span> `R←⎕NNUMS`{{key}}
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GridPaste</span> <span class="right">Event 192</span></h1>
+# <span>GridPaste</span> <span>Event 192</span>
 
 
 

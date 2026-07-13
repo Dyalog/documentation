@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Return Statement</span> <span class="command">:Return</span></h1>
+# <span>Return Statement</span> `:Return`
 
 
 

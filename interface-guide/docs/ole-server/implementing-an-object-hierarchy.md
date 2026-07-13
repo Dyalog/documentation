@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Implementing an Object Hierarchy</span></h1>
+# Implementing an Object Hierarchy
 
 Despite the close correspondence between the object model and Dyalog APL namespace technology, there is one significant difference. OLE does not support object hierarchies in the sense that one object *contains* or *owns* another.
 

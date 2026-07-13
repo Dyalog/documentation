@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">HTMLRenderer</span> <span class="right">Object</span></h1>
+# <span>HTMLRenderer</span> <span>Object</span>
 
 [Parents](../parentlists/htmlrenderer.md), [Children](../childlists/htmlrenderer.md), [Properties](../proplists/htmlrenderer.md), [Methods](../methodlists/htmlrenderer.md), [Events](../eventlists/htmlrenderer.md)
 

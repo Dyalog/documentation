@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Slash Bar</span> <span class="command">⌿</span></h1>
+# <span>Slash Bar</span> `⌿`
 
 # Used as a Function
 

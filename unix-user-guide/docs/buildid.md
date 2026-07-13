@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">BuildID</span></h1>
+# BuildID
 
 Each interpreter has its own unique  BuildID. This is a 32-bit checksum of the program file which is the Dyalog APL interpreter. This checksum allows Dyalog Ltd. support staff to uniquely identify the interpreter and from that determine the version, edition, platform etc. of the interpreter.
 

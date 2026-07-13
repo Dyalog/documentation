@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Installing .NET Framework</span></h1>
+# Installing .NET Framework
 
 Microsoft .NET Framework is usually included with a Microsoft Windows installation. If it is not already installed, it can be downloaded from [https://www.microsoft.com/en-gb/download/details.aspx?id=17851](https://www.microsoft.com/en-gb/download/details.aspx?id=17851).
 

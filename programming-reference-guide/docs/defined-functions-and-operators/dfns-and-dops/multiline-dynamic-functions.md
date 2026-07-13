@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Multi-Line Dfns</span></h1>
+# Multi-Line Dfns
 
 The single expression which provides the result of the dfn may be preceded by any number of assignment statements. Each such statement introduces a name which is local to the function.
 

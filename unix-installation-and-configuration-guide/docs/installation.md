@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Installation</span></h1>
+# Installation
 
 This manual covers the installation of the non-GUI version of Dyalog APL on AIX, and on Linux distributions which use either .rpm or .deb files for installing software. If you are using a Linux distribution which uses some other method, or you wish to have a non-default installation, then there are some suggestions about how such an installation might be completed.
 

@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">INTERRUPT</span> <span class="command">1003</span></h1>
+# <span>INTERRUPT</span> `1003`
 
 
 

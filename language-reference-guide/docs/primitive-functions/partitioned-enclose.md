@@ -6,7 +6,7 @@ search:
   ⊂
 </div>
 
-<h1 class="heading"><span class="name">Partitioned Enclose</span> <span class="command">(⎕ML<3) R←X⊂[K]Y</span></h1>
+# <span>Partitioned Enclose</span> `R←X⊂[K]Y`{{key}}
 
 `Y` may be any array.  `X` must be a simple integer scalar or vector. If `X` is a scalar it is extended to `(≢Y)⍴X`.
 

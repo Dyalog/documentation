@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Performance</span></h1>
+# Performance
 
 The main purpose of shared code files is to reduce the [code execution](#code-execution) time and memory consumption on [loading](#loading) of APL applications.
 

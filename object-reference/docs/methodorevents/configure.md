@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Configure</span> <span class="right">Event 31</span></h1>
+# <span>Configure</span> <span>Event 31</span>
 
 [**Applies To**](../methodoreventapplies/configure.md)
 

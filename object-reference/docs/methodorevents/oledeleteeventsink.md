@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">OLEDeleteEventSink</span> <span class="right">Method 541</span></h1>
+# <span>OLEDeleteEventSink</span> <span>Method 541</span>
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">File permissions and <span class="command">⎕FSTAC</span></span></h1>
+# File permissions and `⎕FSTAC`
 
 Dyalog APL is a well behaved UNIX program and honours all standard UNIX file permissions. Commands such as `⎕FLIB` and `)LIB` read the magic number (the first few bytes) of each file in the directory in order to determine whether each file is a component file or workspace respectively; if the APL process cannot read those bytes, then it will assume that the file is not a component file or workspace.
 

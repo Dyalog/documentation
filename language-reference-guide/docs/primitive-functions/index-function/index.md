@@ -6,7 +6,7 @@ search:
   ⌷ index squad
 </div>
 
-<h1 class="heading"><span class="name">Index</span> <span class="command">R←X⌷Y</span></h1>
+# <span>Index</span> `R←X⌷Y`{{key}}
 
 `X` must be a scalar or vector of depth `≤2` of integers each `≥⎕IO`. `Y` may be any array. In general, the result `R` is similar to that obtained by square-bracket indexing in that:
 ```apl

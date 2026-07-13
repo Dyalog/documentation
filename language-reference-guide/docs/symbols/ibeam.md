@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">I-Beam</span> <span class="command">⌶</span></h1>
+# <span>I-Beam</span> `⌶`
 
 
 I-Beam is a monadic operator that provides a range of system related services.

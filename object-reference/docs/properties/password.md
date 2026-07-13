@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Password</span> <span class="right">Property</span></h1>
+# <span>Password</span> <span>Property</span>
 
 
 

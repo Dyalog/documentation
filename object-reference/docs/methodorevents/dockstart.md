@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">DockStart</span> <span class="right">Event 480</span></h1>
+# <span>DockStart</span> <span>Event 480</span>
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Integrity and Security</span></h1>
+# Integrity and Security
 
 The structure of component files, the asynchronous nature of the buffering performed by APL, by the Operating System, and by the external device sub-system, introduces the potential danger that a component file might become damaged. To prevent this happening, the component file system includes optional journaling and check-sum features. These are optional because the additional security these features provide comes at the cost of reduced performance. You can choose the level of security that is appropriate for your application.
 

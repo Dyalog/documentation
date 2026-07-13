@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">DockCancel</span> <span class="right">Event 485</span></h1>
+# <span>DockCancel</span> <span>Event 485</span>
 
 
 

@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">OLEClient Properties</span></h1>
+# OLEClient Properties
 
 |-------------------------------------------|---------------------------------------------|-----------------------------------------|
 |[Type](../properties/type.md)              |[ClassName](../properties/classname.md)      |[Event](../properties/event.md)          |

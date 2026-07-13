@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Introduction</span></h1>
+# Introduction
 
 Most languages store programs and data separately. APL is unusual in that it allows you to store programs and data together in a workspace.
 

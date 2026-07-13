@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Stile</span> <span class="command">|</span></h1>
+# <span>Stile</span> `|`
 
 
 Monadic Stile means

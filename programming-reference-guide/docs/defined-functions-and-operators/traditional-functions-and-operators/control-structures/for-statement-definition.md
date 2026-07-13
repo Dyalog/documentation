@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">:For Statement</span></h1>
+# :For Statement
 
 ```
  

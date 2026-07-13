@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">FormatString</span> <span class="right">Property</span></h1>
+# <span>FormatString</span> <span>Property</span>
 
 
 

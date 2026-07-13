@@ -8,7 +8,7 @@ search:
   1159⌶
 </div>
 
-<h1 class="heading"><span class="name">Update Function Time and User Stamp</span> <span class="command">{R}←X(1159⌶)Y</span></h1>
+# <span>Update Function Time and User Stamp</span> `{R}←X(1159⌶)Y`{{key}}
 
 
 

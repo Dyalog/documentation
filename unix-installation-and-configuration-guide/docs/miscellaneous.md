@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Session logfile</span></h1>
+# Session logfile
 
 By default the session logfile is called default.dlf. By default this file is created as ~/.dyalog/default.dlf on Linux, AIX and macOS, and in ~/.config/dyalog/default.dlf on the Pi. This can be overridden by setting the environment variable **LOGFILE**.
 

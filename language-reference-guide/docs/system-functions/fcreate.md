@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">File Create</span> <span class="command">{R}←X ⎕FCREATE Y</span></h1>
+# <span>File Create</span> `{R}←X ⎕FCREATE Y`{{key}}
 
 `Y` must be a simple integer scalar or a 1 or 2 element vector:  
 

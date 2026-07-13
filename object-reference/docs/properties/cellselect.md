@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">CellSelect</span> <span class="right">Property</span></h1>
+# <span>CellSelect</span> <span>Property</span>
 
 **Applies To:** [Grid](../objects/grid.md)
 

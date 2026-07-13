@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Label Events</span></h1>
+# Label Events
 
 |-----------------------------------------------|---------------------------------------------|---------------------------------------------------|
 |[Close](../methodorevents/close.md)            |[Create](../methodorevents/create.md)        |[FontOK](../methodorevents/fontok.md)              |

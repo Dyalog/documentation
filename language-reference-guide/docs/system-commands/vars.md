@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">List Global Defined Variables</span> <span class="command">)VARS {nm}</span></h1>
+# <span>List Global Defined Variables</span> `)VARS {nm}`
 
 
 

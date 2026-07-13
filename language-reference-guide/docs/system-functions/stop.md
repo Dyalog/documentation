@@ -7,7 +7,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Stop Controls</span> <span class="command">⎕STOP</span></h1>
+# <span>Stop Controls</span> `⎕STOP`
 
 
 ## Dyadic `⎕STOP` means

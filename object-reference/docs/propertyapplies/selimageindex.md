@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">SelImageIndex Property</span></h1>
+# SelImageIndex Property
 
 |--------------------------------|----------------------------------|------|
 |[ComboEx](../objects/comboex.md)|[TreeView](../objects/treeview.md)|&nbsp;|

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Active</span> <span class="right">Property</span></h1>
+# <span>Active</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/active.md)
 

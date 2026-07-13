@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">bad ws</span></h1>
+# bad ws
 
 
 

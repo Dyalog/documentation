@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">FileMode</span> <span class="right">Property</span></h1>
+# <span>FileMode</span> <span>Property</span>
 
 
 

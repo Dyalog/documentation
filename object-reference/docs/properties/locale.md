@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Locale</span> <span class="right">Property</span></h1>
+# <span>Locale</span> <span>Property</span>
 
 
 

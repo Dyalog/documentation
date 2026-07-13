@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Drop Workspace</span> <span class="command">)DROP {ws}</span></h1>
+# <span>Drop Workspace</span> `)DROP {ws}`
 
 
 

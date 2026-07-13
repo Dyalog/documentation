@@ -2,7 +2,7 @@
 search:
   boost: 2
 ---
-<h1 class="heading"><span class="name">Generate UUID</span> <span class="command">R←120⌶Y</span></h1>
+# <span>Generate UUID</span> `R←120⌶Y`{{key}}
 
 This function generates a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) (**U**niversally **U**nique **ID**entifier) according to the [RFC 9562](https://datatracker.ietf.org/doc/html/rfc9562) specification. In this system, the string representation of each UUID comprises multiple groups of hexadecimal characters separated by single dashes/hyphens.
 

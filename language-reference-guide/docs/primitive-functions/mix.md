@@ -6,7 +6,7 @@ search:
   ⊃ mix
 </div>
 
-<h1 class="heading"><span class="name">Mix</span> <span class="command">(⎕ML) R←↑[K]Y or R←⊃[K]Y</span></h1>
+# <span>Mix</span> `(⎕ML) R←↑[K]Y or R←⊃[K]Y`{{key}}
 
 The symbol chosen to represent Mix depends on the current Migration Level.
 

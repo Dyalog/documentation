@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">INDEX ERROR</span> <span class="command">3</span></h1>
+# <span>INDEX ERROR</span> `3`
 
 
 

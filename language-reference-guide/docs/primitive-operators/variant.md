@@ -7,7 +7,7 @@ search:
   variant
 </div>
 
-<h1 class="heading"><span class="name">Variant</span> <span class="command">{R}←{X}(f⍠B)Y</span></h1>
+# <span>Variant</span> `{R}←{X}(f⍠B)Y`{{key}}
 
 !!! note "Classic Edition"
     The symbol `⍠` is not available in Classic Edition, and the Variant operator is instead represented by `⎕U2360`. Note too that `⍠` and `⎕OPT` are synonymous though only the latter is available in the Classic Edition.

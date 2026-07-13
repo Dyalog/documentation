@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Clear State Indicator</span> <span class="command">)SIC</span></h1>
+# <span>Clear State Indicator</span> `)SIC`
 
 
 

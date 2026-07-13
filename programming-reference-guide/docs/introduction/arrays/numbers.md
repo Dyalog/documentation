@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Numbers</span></h1>
+# Numbers
 
 Dyalog APL supports both real numbers and complex numbers.
 

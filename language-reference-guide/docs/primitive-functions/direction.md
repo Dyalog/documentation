@@ -6,7 +6,7 @@ search:
   × direction
 </div>
 
-<h1 class="heading"><span class="name">Direction (Signum)</span> <span class="command">R←×Y</span></h1>
+# <span>Direction (Signum)</span> `R←×Y`{{key}}
 
 `Y` may be any numeric array.
 

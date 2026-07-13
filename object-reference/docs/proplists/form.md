@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Form Properties</span></h1>
+# Form Properties
 
 |---------------------------------------------|-----------------------------------------------|---------------------------------------------------|
 |[Type](../properties/type.md)                |[Caption](../properties/caption.md)            |[Posn](../properties/posn.md)                      |

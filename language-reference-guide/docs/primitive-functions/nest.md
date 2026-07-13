@@ -6,7 +6,7 @@ search:
   ⊆ nest
 </div>
 
-<h1 class="heading"><span class="name">Nest</span> <span class="command">R←⊆Y</span></h1>
+# <span>Nest</span> `R←⊆Y`{{key}}
 
 
 

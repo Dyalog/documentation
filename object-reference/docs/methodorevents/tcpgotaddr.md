@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">TCPGotAddr</span> <span class="right">Event 377</span></h1>
+# <span>TCPGotAddr</span> <span>Event 377</span>
 
 
 

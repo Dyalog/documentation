@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Environment Variables</span></h1>
+# Environment Variables
 
 Environment variables are used to configure various aspects of Dyalog APL. The complete list appears in the *Dyalog for Microsoft Windows Installation and Configuration Guide: Configuration Parameters*; this section discusses those variables which are of particular importance to the Non-GUI versions of Dyalog APL, and lists those that have meaning to the UNIX versions. Additionally there some non-GUI-specific variables which are described below and some which either do not apply, or may not work as the user might at first expect.
 

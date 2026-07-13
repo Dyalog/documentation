@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Unique Mask</span> <span class="command">R←≠Y</span></h1>
+# <span>Unique Mask</span> `R←≠Y`{{key}}
 
 
 

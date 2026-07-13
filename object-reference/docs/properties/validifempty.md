@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ValidIfEmpty</span> <span class="right">Property</span></h1>
+# <span>ValidIfEmpty</span> <span>Property</span>
 
 
 

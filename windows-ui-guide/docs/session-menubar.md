@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">The Session MenuBar</span></h1>
+# The Session MenuBar
 
 The Session MenuBar  (`⎕SE.mb`) contains a set of menus as follows. Note that, unless specified, the descriptions refer to the Unicode Edition and the keyboard short-cuts will be different in Classic Edition.
 

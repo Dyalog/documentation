@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Yield</span> <span class="right">Property</span></h1>
+# <span>Yield</span> <span>Property</span>
 
 
 

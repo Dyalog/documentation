@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Introduction</span></h1>
+# Introduction
 
 When the APL interpreter executes a user-defined function, it spends most of its time performing two separate actions:
 

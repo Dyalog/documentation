@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">KEY CODE UNRECOGNISED</span> <span class="command">61</span></h1>
+# <span>KEY CODE UNRECOGNISED</span> `61`
 
 
 

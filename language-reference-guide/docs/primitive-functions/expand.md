@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Expand</span> <span class="command">R←X\[K]Y</span></h1>
+# <span>Expand</span> `R←X\[K]Y`{{key}}
 
 
 

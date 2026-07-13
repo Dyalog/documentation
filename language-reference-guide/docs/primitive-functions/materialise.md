@@ -7,7 +7,7 @@ search:
 </div>
 
 
-<h1 class="heading"><span class="name">Materialise</span> <span class="command">R←⌷Y</span></h1>
+# <span>Materialise</span> `R←⌷Y`{{key}}
 
 
 

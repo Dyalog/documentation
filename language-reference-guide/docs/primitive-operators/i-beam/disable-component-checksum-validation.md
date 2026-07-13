@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Disable Component Checksum Validation</span> <span class="command">{R}←3002⌶Y</span></h1>
+# <span>Disable Component Checksum Validation</span> `{R}←3002⌶Y`{{key}}
 
 
 

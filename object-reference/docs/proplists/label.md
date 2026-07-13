@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Label Properties</span></h1>
+# Label Properties
 
 |---------------------------------------------|-------------------------------------------|-------------------------------------------|
 |[Type](../properties/type.md)                |[Caption](../properties/caption.md)        |[Posn](../properties/posn.md)              |

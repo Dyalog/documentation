@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">OCXClass Properties</span></h1>
+# OCXClass Properties
 
 |-----------------------------------------------|-----------------------------------------|-------------------------------------------|
 |[Type](../properties/type.md)                  |[ClassName](../properties/classname.md)  |[Event](../properties/event.md)            |

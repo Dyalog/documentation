@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">MDIDeactivate</span> <span class="right">Event 43</span></h1>
+# <span>MDIDeactivate</span> <span>Event 43</span>
 
 
 

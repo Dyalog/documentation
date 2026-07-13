@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">List Loaded Libraries</span> <span class="command">R←950⌶Y</span></h1>
+# <span>List Loaded Libraries</span> `R←950⌶Y`{{key}}
 
 
 

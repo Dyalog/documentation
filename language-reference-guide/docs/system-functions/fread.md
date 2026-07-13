@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">File Read Components</span> <span class="command">R←⎕FREAD Y</span></h1>
+# <span>File Read Components</span> `R←⎕FREAD Y`{{key}}
 
 
 ## Access code 1

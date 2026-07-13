@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">TCPConnect</span> <span class="right">Event 372</span></h1>
+# <span>TCPConnect</span> <span>Event 372</span>
 
 
 

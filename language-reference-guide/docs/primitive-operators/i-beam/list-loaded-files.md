@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">List Loaded Files</span> <span class="command">R←5176⌶Y</span></h1>
+# <span>List Loaded Files</span> `R←5176⌶Y`{{key}}
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">CharSet</span> <span class="right">Property</span></h1>
+# <span>CharSet</span> <span>Property</span>
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">OCXClass</span> <span class="right">Object</span></h1>
+# <span>OCXClass</span> <span>Object</span>
 
 [Parents](../parentlists/ocxclass.md), [Properties](../proplists/ocxclass.md), [Methods](../methodlists/ocxclass.md), [Events](../eventlists/ocxclass.md)
 

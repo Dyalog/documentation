@@ -8,7 +8,7 @@ search:
   2014⌶
 </div>
 
-<h1 class="heading"><span class="name">Remove Data Binding</span> <span class="command">R←2014⌶Y</span></h1>
+# <span>Remove Data Binding</span> `R←2014⌶Y`{{key}}
 
 !!! note
     **.NET Framework only**

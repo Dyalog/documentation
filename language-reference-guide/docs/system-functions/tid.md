@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Current Thread Identity</span> <span class="command">R←⎕TID</span></h1>
+# <span>Current Thread Identity</span> `R←⎕TID`{{key}}
 
 
 

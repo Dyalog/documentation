@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">TabIndex</span> <span class="right">Property</span></h1>
+# <span>TabIndex</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/tabindex.md)
 

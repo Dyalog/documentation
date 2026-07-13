@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Right</span> <span class="command">R←X⊢Y</span></h1>
+# <span>Right</span> `R←X⊢Y`{{key}}
 
 
 

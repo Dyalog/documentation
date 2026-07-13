@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Introduction</span></h1>
+# Introduction
 
 This manual is designed to assist users of Dyalog APL on platforms other than Microsoft Windows. For further information, see[ the Dyalog UNIX and Linux forum](https://forums.dyalog.com/viewforum.php?f=20).
 

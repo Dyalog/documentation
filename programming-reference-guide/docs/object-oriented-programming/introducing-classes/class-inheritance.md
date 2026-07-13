@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Inheritance</span></h1>
+# Inheritance
 
 If you want a Class to derive from another Class, you simply add the name of that Class to the `:Class` statement using colon+space as a separator.
 

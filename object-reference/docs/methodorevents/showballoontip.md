@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ShowBalloonTip</span> <span class="right">Method 860</span></h1>
+# <span>ShowBalloonTip</span> <span>Method 860</span>
 
 
 

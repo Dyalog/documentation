@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Constructor Overloading</span></h1>
+# Constructor Overloading
 
 NameList header syntax is used to define different versions of a Constructor each with a different number of parameters, referred to as its *signature*. See [Namelists](../../defined-functions-and-operators/traditional-functions-and-operators/namelists.md) for details. The [Clover Class](constructor-overload-example-class.md){: .noprint } illustrates this principle.
 

@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Caption Property</span></h1>
+# Caption Property
 
 |------------------------------------------|--------------------------------------------|----------------------------------------|
 |[BrowseBox](../objects/browsebox.md)      |[Button](../objects/button.md)              |[ColorButton](../objects/colorbutton.md)|

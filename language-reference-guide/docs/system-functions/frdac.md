@@ -7,7 +7,7 @@ search:
   ⎕FRDAC FRDAC
 </div>
 
-<h1 class="heading"><span class="name">File Read Access</span> <span class="command">R←⎕FRDAC Y</span></h1>
+# <span>File Read Access</span> `R←⎕FRDAC Y`{{key}}
 
 ## Access code 4096
 

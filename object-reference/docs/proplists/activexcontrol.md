@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">ActiveXControl Properties</span></h1>
+# ActiveXControl Properties
 
 |-------------------------------------------|-------------------------------------------|-----------------------------------------------|
 |[Type](../properties/type.md)              |[ClassName](../properties/classname.md)    |[Posn](../properties/posn.md)                  |

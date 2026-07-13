@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Browsing .NET Classes</span></h1>
+# Browsing .NET Classes
 
 Microsoft supplies a tool for browsing .NET Class libraries called **Ildasm.exe** (this can be found in the .NET SDK and is distributed with Microsoft Visual Studio). Dyalog's Workspace Explorer has been extended to perform a similar task  to ILDSAM so that the information is available within the context of the APL environment.
 

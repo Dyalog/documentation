@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">AlwaysShowBorder</span> <span class="right">Property</span></h1>
+# <span>AlwaysShowBorder</span> <span>Property</span>
 
 
 

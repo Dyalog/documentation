@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ScrollOpposite</span> <span class="right">Property</span></h1>
+# <span>ScrollOpposite</span> <span>Property</span>
 
 
 

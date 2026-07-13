@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">AutoExpand</span> <span class="right">Property</span></h1>
+# <span>AutoExpand</span> <span>Property</span>
 
 
 

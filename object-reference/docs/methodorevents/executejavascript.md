@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ExecuteJavaScript</span> <span class="right">Method 839</span></h1>
+# <span>ExecuteJavaScript</span> <span>Method 839</span>
 
 
 

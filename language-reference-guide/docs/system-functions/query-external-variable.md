@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Query External Variable</span> <span class="command">R←⎕XT Y</span></h1>
+# <span>Query External Variable</span> `R←⎕XT Y`{{key}}
 
 
 

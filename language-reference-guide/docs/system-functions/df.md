@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Display Form</span> <span class="command">{R}←⎕DF Y</span></h1>
+# <span>Display Form</span> `{R}←⎕DF Y`{{key}}
 
 
 

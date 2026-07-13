@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">FILE TIE ERROR</span> <span class="command">18</span></h1>
+# <span>FILE TIE ERROR</span> `18`
 
 
 

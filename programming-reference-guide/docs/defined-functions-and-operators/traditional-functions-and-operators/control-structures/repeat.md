@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Repeat Statement</span> <span class="command">:Repeat</span></h1>
+# <span>Repeat Statement</span> `:Repeat`
 
 
 

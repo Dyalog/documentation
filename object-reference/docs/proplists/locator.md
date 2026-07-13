@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Locator Properties</span></h1>
+# Locator Properties
 
 |-------------------------------------------|-----------------------------------------|-------------------------------------------|
 |[Type](../properties/type.md)              |[Posn](../properties/posn.md)            |[Size](../properties/size.md)              |

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">UseExternalHelpURL</span></h1>
+# UseExternalHelpURL
 
 This parameter specifies whether or not Dyalog attempts to use the Microsoft Document Explorer and online help to display help for external objects, such as .Net Types. See [ ExternalHelpURL](externalhelpurl.md).
 

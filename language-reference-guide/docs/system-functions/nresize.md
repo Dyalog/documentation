@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Native File Resize</span> <span class="command">{R}←X ⎕NRESIZE Y</span></h1>
+# <span>Native File Resize</span> `{R}←X ⎕NRESIZE Y`{{key}}
 
 
 

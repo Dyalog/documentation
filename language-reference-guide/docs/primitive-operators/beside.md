@@ -7,7 +7,7 @@ search:
   beside
 </div>
 
-<h1 class="heading"><span class="name">Beside</span> <span class="command">{R}←{X}f∘gY</span></h1>
+# <span>Beside</span> `{R}←{X}f∘gY`{{key}}
 
 The _beside_ operator allows functions to be *glued* together to build up more complex functions. For further information, see [Function Composition](./function-composition.md).
 

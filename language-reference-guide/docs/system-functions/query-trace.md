@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Query Trace</span> <span class="command">R←⎕TRACE Y</span></h1>
+# <span>Query Trace</span> `R←⎕TRACE Y`{{key}}
 
 
 

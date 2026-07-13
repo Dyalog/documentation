@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">UnicodeToClipboard</span></h1>
+# UnicodeToClipboard
 
 **Classic Edition only.**
 

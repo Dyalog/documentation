@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">ImageList Parents</span></h1>
+# ImageList Parents
 
 |----------------------------------------------|--------------------------------------|------------------------------------------|
 |[ActiveXControl](../objects/activexcontrol.md)|[ButtonEdit](../objects/buttonedit.md)|[CoolBand](../objects/coolband.md)        |

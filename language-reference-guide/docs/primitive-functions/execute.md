@@ -6,7 +6,7 @@ search:
   ⍎ execute
 </div>
 
-<h1 class="heading"><span class="name">Execute</span> <span class="command">R←⍎Y</span></h1>
+# <span>Execute</span> `R←⍎Y`{{key}}
 
 !!! Warning "Warning"
     If the argument to _execute_ could include user input, then there is a risk to data and systems. To reduce this risk, a system function might be more appropriate than the _execute_ function. For example:

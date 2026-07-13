@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Globally Unique Identifier (GUID)</span></h1>
+# Globally Unique Identifier (GUID)
 
 
 

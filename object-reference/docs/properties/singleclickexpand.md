@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SingleClickExpand</span> <span class="right">Property</span></h1>
+# <span>SingleClickExpand</span> <span>Property</span>
 
 
 

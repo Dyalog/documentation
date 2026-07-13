@@ -7,7 +7,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Format</span> <span class="command">⎕FMT</span></h1>
+# <span>Format</span> `⎕FMT`
 
 
 ## Monadic `⎕FMT` means

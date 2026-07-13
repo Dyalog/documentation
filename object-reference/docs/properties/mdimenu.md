@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">MDIMenu</span> <span class="right">Property</span></h1>
+# <span>MDIMenu</span> <span>Property</span>
 
 
 

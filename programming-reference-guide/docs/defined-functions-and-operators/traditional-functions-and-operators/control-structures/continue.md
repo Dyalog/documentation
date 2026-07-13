@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Continue Statement</span> <span class="command">:Continue</span></h1>
+# <span>Continue Statement</span> `:Continue`
 
 
 

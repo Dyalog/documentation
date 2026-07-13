@@ -7,7 +7,7 @@ search:
   ⎕NPUT NPUT
 </div>
 
-<h1 class="heading"><span class="name">Write Text File</span> <span class="command">{R}←X ⎕NPUT Y</span></h1>
+# <span>Write Text File</span> `{R}←X ⎕NPUT Y`{{key}}
 
 This function writes character data to a text file. See also [Read Text File](nget.md).
 

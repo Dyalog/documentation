@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SetZoomLevel</span> <span class="command">Method</span></h1>
+# <span>SetZoomLevel</span> `Method`
 
 |-----------|--------------------------------------------------------------|
 |Applies To:|[HTMLRenderer](https://help.dyalog.com/19.0/index.htm#GUI/Objects/HTMLRenderer.htm)|

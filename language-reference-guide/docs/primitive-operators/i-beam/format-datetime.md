@@ -7,7 +7,7 @@ search:
   1200⌶
 </div>
 
-<h1 class="heading"><span class="name">Format Date-time</span><span class="command">R←X(1200⌶)Y</span></h1>
+# <span>Format Date-time</span> `R←X(1200⌶)Y`{{key}}
 
 `Y` is a numeric array of any shape, where every element contains a Dyalog Date Number that represents a date between 1
 January 0001 and 31 December 9999 in the [Proleptic Gregorian Calendar](https://en.wikipedia.org/wiki/Proleptic_Gregorian_calendar).

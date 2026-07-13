@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Metafile Properties</span></h1>
+# Metafile Properties
 
 |-------------------------------------------|-----------------------------------------|-------------------------------------------|
 |[Type](../properties/type.md)              |[File](../properties/file.md)            |[Size](../properties/size.md)              |

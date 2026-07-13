@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Native File Copy</span> <span class="command">{R}←X ⎕NCOPY Y</span></h1>
+# <span>Native File Copy</span> `{R}←X ⎕NCOPY Y`{{key}}
 
 
 

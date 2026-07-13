@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Native File Untie</span> <span class="command">{R}←⎕NUNTIE Y</span></h1>
+# <span>Native File Untie</span> `{R}←⎕NUNTIE Y`{{key}}
 
 
 

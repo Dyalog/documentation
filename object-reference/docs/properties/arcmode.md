@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ArcMode</span> <span class="right">Property</span></h1>
+# <span>ArcMode</span> <span>Property</span>
 
 
 

@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Same</span> <span class="command">R←⊣YR←⊢Y</span></h1>
+# <span>Same</span> `R←⊣YR←⊢Y`{{key}}
 
 
 

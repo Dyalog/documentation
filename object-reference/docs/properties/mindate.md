@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">MinDate</span> <span class="right">Property</span></h1>
+# <span>MinDate</span> <span>Property</span>
 
 
 

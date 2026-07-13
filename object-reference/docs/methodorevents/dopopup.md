@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">DoPopup</span> <span class="right">Event 846</span></h1>
+# <span>DoPopup</span> <span>Event 846</span>
 
 **Applies To:** [HTMLRenderer](../objects/htmlrenderer.md)
 

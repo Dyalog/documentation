@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">PageHelp</span> <span class="right">Event 352</span></h1>
+# <span>PageHelp</span> <span>Event 352</span>
 
 
 

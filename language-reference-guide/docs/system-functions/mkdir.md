@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Make Directory</span> <span class="command">{R}←{X}⎕MKDIR Y</span></h1>
+# <span>Make Directory</span> `{R}←{X}⎕MKDIR Y`{{key}}
 
 
 

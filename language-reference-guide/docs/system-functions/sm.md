@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Screen Map</span> <span class="command">⎕SM</span></h1>
+# <span>Screen Map</span> `⎕SM`
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ProgressStyle</span> <span class="right">Property</span></h1>
+# <span>ProgressStyle</span> <span>Property</span>
 
 
 

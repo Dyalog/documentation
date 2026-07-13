@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">List Classes</span> <span class="command">)CLASSES</span></h1>
+# <span>List Classes</span> `)CLASSES`
 
 
 

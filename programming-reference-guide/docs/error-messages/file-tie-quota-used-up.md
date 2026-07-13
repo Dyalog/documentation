@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">FILE TIE QUOTA USED UP</span> <span class="command">31</span></h1>
+# <span>FILE TIE QUOTA USED UP</span> `31`
 
 
 

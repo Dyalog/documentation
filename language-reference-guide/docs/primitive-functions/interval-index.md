@@ -6,7 +6,7 @@ search:
   ⍸
 </div>
 
-<h1 class="heading"><span class="name">Interval Index</span> <span class="command">R←X⍸Y</span></h1>
+# <span>Interval Index</span> `R←X⍸Y`{{key}}
 
 !!! note "Classic Edition"
     The symbol `⍸` (Iota Underbar) is not available in Classic Edition, and Interval Index is instead represented by `⎕U2378`.

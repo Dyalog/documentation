@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">MaxDate</span> <span class="right">Property</span></h1>
+# <span>MaxDate</span> <span>Property</span>
 
 
 

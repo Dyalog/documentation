@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Dockable</span> <span class="right">Property</span></h1>
+# <span>Dockable</span> <span>Property</span>
 
 
 

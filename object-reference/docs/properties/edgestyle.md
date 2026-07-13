@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">EdgeStyle</span> <span class="right">Property</span></h1>
+# <span>EdgeStyle</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/edgestyle.md)
 

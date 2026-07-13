@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Greater Than Or Equal To</span> <span class="command">R←X≥Y</span></h1>
+# <span>Greater Than Or Equal To</span> `R←X≥Y`{{key}}
 
 
 

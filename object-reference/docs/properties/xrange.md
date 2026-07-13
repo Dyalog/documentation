@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">XRange</span> <span class="right">Property</span></h1>
+# <span>XRange</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/xrange.md)
 

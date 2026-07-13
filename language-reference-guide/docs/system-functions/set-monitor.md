@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Set Monitor</span> <span class="command">{R}←X ⎕MONITOR Y</span></h1>
+# <span>Set Monitor</span> `{R}←X ⎕MONITOR Y`{{key}}
 
 
 

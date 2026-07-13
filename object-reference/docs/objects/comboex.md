@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ComboEx</span> <span class="right">Object</span></h1>
+# <span>ComboEx</span> <span>Object</span>
 
 
 

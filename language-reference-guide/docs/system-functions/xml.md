@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">XML Convert</span> <span class="command">R←{X} ⎕XML Y</span></h1>
+# <span>XML Convert</span> `R←{X} ⎕XML Y`{{key}}
 
 
 

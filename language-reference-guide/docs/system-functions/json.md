@@ -7,7 +7,7 @@ search:
   ⎕JSON JSON
 </div>
 
-<h1 class="heading"><span class="name">JSON Convert</span> <span class="command">R←{X}⎕JSON Y</span></h1>
+# <span>JSON Convert</span> `R←{X}⎕JSON Y`{{key}}
 
 This function imports and exports data in [JavaScript Object Notation](https://www.json.org/json-en.html) (JSON) data interchange format.
 

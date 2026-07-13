@@ -9,7 +9,7 @@ search:
   ⎕NTIE NTIE
 </div>
 
-<h1 class="heading"><span class="name">Native File Tie</span> <span class="command">{R}←X ⎕NTIE Y</span></h1>
+# <span>Native File Tie</span> `{R}←X ⎕NTIE Y`{{key}}
 
 `⎕NTIE` opens a native file.
 

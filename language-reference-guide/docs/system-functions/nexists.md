@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Native File Exists</span> <span class="command">R←⎕NEXISTS Y</span></h1>
+# <span>Native File Exists</span> `R←⎕NEXISTS Y`{{key}}
 
 
 

@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Window Create Object</span> <span class="command">{R}←{X}⎕WC Y</span></h1>
+# <span>Window Create Object</span> `{R}←{X}⎕WC Y`{{key}}
 
 
 

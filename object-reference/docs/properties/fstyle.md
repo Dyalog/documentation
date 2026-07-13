@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">FStyle</span> <span class="right">Property</span></h1>
+# <span>FStyle</span> <span>Property</span>
 
 
 

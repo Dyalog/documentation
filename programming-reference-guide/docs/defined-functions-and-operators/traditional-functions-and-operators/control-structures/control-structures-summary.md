@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Introduction</span></h1>
+# Introduction
 
 Control Structures are blocks of code in which the execution of APL statements follows certain rules and conditions.  Control structures are implemented using a set of *control words* that all start with the colon symbol (:).  Control Words are case-insensitive.
 

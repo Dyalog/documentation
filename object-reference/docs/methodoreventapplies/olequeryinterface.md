@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">OLEQueryInterface Method</span></h1>
+# OLEQueryInterface Method
 
 |--------------------------------------------------|------------------------------------|------|
 |[ActiveXContainer](../objects/activexcontainer.md)|[OLEClient](../objects/oleclient.md)|&nbsp;|

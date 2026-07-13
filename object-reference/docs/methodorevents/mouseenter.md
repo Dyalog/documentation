@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">MouseEnter</span> <span class="right">Event 6</span></h1>
+# <span>MouseEnter</span> <span>Event 6</span>
 
 [**Applies To**](../methodoreventapplies/mouseenter.md)
 

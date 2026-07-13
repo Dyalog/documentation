@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Print Precision</span> <span class="command">⎕PP</span></h1>
+# <span>Print Precision</span> `⎕PP`
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Encoding</span> <span class="right">Property</span></h1>
+# <span>Encoding</span> <span>Property</span>
 
 **Applies To:** [TCPSocket](../objects/tcpsocket.md)
 

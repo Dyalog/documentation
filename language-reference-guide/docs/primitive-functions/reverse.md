@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Reverse</span> <span class="command">R←⌽[K]Y</span></h1>
+# <span>Reverse</span> `R←⌽[K]Y`{{key}}
 
 
 

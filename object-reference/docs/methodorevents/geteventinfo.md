@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GetEventInfo</span> <span class="right">Method 551</span></h1>
+# <span>GetEventInfo</span> <span>Method 551</span>
 
 
 

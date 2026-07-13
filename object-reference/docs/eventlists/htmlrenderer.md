@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">HTMLRenderer Events</span></h1>
+# HTMLRenderer Events
 
 |-----------------------------------------------------|---------------------------------------------------------|-----------------------------------------------------------|
 |[Close](../methodorevents/close.md)                  |[Create](../methodorevents/create.md)                    |[LoadEnd](../methodorevents/loadend.md)                    |

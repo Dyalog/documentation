@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Set Shell Script Debug Options</span> <span class="command">R←{X}(1010⌶)Y</span></h1>
+# <span>Set Shell Script Debug Options</span> `R←{X}(1010⌶)Y`{{key}}
 
 
 

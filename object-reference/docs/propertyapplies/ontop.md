@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">OnTop Property</span></h1>
+# OnTop Property
 
 |--------------------------------------------|--------------------------------|--------------------------------|
 |[Circle](../objects/circle.md)              |[Ellipse](../objects/ellipse.md)|[Form](../objects/form.md)      |

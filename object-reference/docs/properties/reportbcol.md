@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ReportBCol</span> <span class="right">Property</span></h1>
+# <span>ReportBCol</span> <span>Property</span>
 
 
 

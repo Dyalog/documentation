@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SetZoomLevel</span> <span class="right">Method</span></h1>
+# <span>SetZoomLevel</span> <span>Method</span>
 
 
 

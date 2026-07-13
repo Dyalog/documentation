@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Component File Library</span> <span class="command">R←⎕FLIB Y</span></h1>
+# <span>Component File Library</span> `R←⎕FLIB Y`{{key}}
 
 
 

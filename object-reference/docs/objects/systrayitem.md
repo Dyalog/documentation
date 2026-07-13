@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SysTrayItem</span> <span class="right">Object</span></h1>
+# <span>SysTrayItem</span> <span>Object</span>
 
 
 

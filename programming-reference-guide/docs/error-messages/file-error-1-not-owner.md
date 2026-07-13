@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">FILE ERROR 1 Not owner</span> <span class="command">101</span></h1>
+# <span>FILE ERROR 1 Not owner</span> `101`
 
 
 

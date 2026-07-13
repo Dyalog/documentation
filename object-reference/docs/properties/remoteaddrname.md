@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">RemoteAddrName</span> <span class="right">Property</span></h1>
+# <span>RemoteAddrName</span> <span>Property</span>
 
 
 

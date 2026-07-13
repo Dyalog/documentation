@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Backslash</span> <span class="command">\</span></h1>
+# <span>Backslash</span> `\`
 
 # Used as a Function
 

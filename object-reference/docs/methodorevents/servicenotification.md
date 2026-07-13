@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ServiceNotification</span> <span class="right">Event 94</span></h1>
+# <span>ServiceNotification</span> <span>Event 94</span>
 
 
 

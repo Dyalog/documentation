@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">PageDeactivate</span> <span class="right">Event 361</span></h1>
+# <span>PageDeactivate</span> <span>Event 361</span>
 
 
 

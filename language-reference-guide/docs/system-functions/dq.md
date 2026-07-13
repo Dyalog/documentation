@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Dequeue Events</span> <span class="command">{R}←⎕DQ Y</span></h1>
+# <span>Dequeue Events</span> `{R}←⎕DQ Y`{{key}}
 
 
 

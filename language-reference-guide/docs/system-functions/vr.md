@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Vector Representation</span> <span class="command">R←⎕VR Y</span></h1>
+# <span>Vector Representation</span> `R←⎕VR Y`{{key}}
 
 
 

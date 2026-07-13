@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Identify .NET Type</span> <span class="command">R←2017⌶Y</span></h1>
+# <span>Identify .NET Type</span> `R←2017⌶Y`{{key}}
 
 
 

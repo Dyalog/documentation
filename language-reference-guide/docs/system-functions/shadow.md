@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Shadow Name</span> <span class="command">{R}←⎕SHADOW Y</span></h1>
+# <span>Shadow Name</span> `{R}←⎕SHADOW Y`{{key}}
 
 
 

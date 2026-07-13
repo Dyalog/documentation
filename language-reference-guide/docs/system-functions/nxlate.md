@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Native File Translate</span> <span class="command">{R}←{X}⎕NXLATE Y</span></h1>
+# <span>Native File Translate</span> `{R}←{X}⎕NXLATE Y`{{key}}
 
 
 

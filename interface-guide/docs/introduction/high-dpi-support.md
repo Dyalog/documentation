@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">High DPI Support</span></h1>
+# High DPI Support
 
 Modern high resolution screens  present some practical challenges to a Graphical User Interface that was designed when lower-resolution screens were the norm. When you increase resolution you inherently decrease the size of each pixel (assuming same display size). By decreasing the size of each pixel the content shown on the display appears smaller. When display Dots-Per-Inch (DPI) gets sufficiently dense this shrinking effect can make content hard to see and user interface components such as menus and buttons, difficult to click/tap.
 

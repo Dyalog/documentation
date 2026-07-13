@@ -8,7 +8,7 @@ search:
 </div>
 
 
-<h1 class="heading"><span class="name">Branch</span> <span class="command">→Y</span></h1>
+# <span>Branch</span> `→Y`{{key}}
 
 `Y` may be a scalar or vector which, if not empty, has a simple numeric scalar as its first element.  The function has no explicit result.  It is used to modify the normal sequence of execution of expressions or to resume execution after a statement has been interrupted. Branch is not in the function domain of operators.
 

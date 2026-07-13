@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Not Match</span> <span class="command">R←X≢Y</span></h1>
+# <span>Not Match</span> `R←X≢Y`{{key}}
 
 
 

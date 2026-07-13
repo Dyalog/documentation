@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ItemGroups</span> <span class="right">Property</span></h1>
+# <span>ItemGroups</span> <span>Property</span>
 
 **Applies To:** [ListView](../objects/listview.md)
 

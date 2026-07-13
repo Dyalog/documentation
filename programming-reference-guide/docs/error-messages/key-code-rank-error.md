@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">KEY CODE RANK ERROR</span> <span class="command">62</span></h1>
+# <span>KEY CODE RANK ERROR</span> `62`
 
 
 

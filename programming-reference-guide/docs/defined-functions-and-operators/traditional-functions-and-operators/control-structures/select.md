@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Select Statement</span> <span class="command">:Select aexp</span></h1>
+# <span>Select Statement</span> `:Select aexp`
 
 
 

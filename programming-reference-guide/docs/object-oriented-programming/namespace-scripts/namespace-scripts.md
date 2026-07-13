@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Namespace Scripts</span></h1>
+# Namespace Scripts
 
 A Namespace Script is a script that begins with a `:Namespace` statement and ends with a `:EndNamespace` statement. When a Namespace Script is fixed, it establishes an entire namespace that may contain other namespaces, functions, variables and classes.
 

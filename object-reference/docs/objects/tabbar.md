@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">TabBar</span> <span class="right">Object</span></h1>
+# <span>TabBar</span> <span>Object</span>
 
 
 

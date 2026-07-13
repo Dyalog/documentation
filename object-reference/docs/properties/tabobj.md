@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">TabObj</span> <span class="right">Property</span></h1>
+# <span>TabObj</span> <span>Property</span>
 
 
 

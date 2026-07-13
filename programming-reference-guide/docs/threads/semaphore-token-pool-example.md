@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Semaphore Example</span></h1>
+# Semaphore Example
 
 A *semaphore* to control a number of resources can be implemented by keeping that number of tokens in the pool. Each thread will take a token while processing, and return it to the pool when it has finished.
 

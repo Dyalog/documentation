@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">FileRead</span> <span class="right">Method 90</span></h1>
+# <span>FileRead</span> <span>Method 90</span>
 
 
 

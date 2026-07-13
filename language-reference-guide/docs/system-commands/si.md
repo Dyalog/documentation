@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">State Indicator</span> <span class="command">)SI {n} {-tid=tn}</span></h1>
+# <span>State Indicator</span> `)SI {n} {-tid=tn}`
 
 
 

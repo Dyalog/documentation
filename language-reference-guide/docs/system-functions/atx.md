@@ -7,7 +7,7 @@ search:
   ⎕ATX ATX
 </div>
 
-<h1 class="heading"><span class="name">Extended Attributes</span> <span class="command">R←X ⎕ATX Y</span></h1>
+# <span>Extended Attributes</span> `R←X ⎕ATX Y`{{key}}
 
 This function provides information about a name in a workspace, including its usage, history, restrictions, role and origin.
 

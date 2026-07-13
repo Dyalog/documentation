@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">HTML</span> <span class="right">Property</span></h1>
+# <span>HTML</span> <span>Property</span>
 
 **Applies To:** [HTMLRenderer](../objects/htmlrenderer.md)
 

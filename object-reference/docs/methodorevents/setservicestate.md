@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SetServiceState</span> <span class="right">Method 93</span></h1>
+# <span>SetServiceState</span> <span>Method 93</span>
 
 
 

@@ -7,7 +7,7 @@ search:
 </div>
 
 
-<h1 class="heading"><span class="name">Conjugate</span> <span class="command">R←+Y</span></h1>
+# <span>Conjugate</span> `R←+Y`{{key}}
 
 If `Y` is complex, `R` is `Y` with the imaginary part of all elements negated.
 

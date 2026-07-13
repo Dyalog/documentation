@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">FILE TIED REMOTELY</span> <span class="command">25</span></h1>
+# <span>FILE TIED REMOTELY</span> `25`
 
 
 

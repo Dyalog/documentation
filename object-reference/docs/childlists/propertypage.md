@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">PropertyPage Children</span></h1>
+# PropertyPage Children
 
 |----------------------------------------------|------------------------------------------|----------------------------------------|
 |[Animation](../objects/animation.md)          |[Bitmap](../objects/bitmap.md)            |[BrowseBox](../objects/browsebox.md)    |

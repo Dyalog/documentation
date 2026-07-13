@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SetItemState</span> <span class="right">Method 307</span></h1>
+# <span>SetItemState</span> <span>Method 307</span>
 
 **Applies To:** [ListView](../objects/listview.md), [TreeView](../objects/treeview.md)
 

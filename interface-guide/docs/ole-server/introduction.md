@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Introduction</span></h1>
+# Introduction
 
 This chapter describes how you can write an OLE Automation Server in Dyalog APL.
 

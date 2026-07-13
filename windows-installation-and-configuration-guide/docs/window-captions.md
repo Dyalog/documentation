@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Window Captions</span></h1>
+# Window Captions
 
 The captions of the various windows that comprise the Dyalog Integrated Development Environment (IDE) are user-configurable and defined by entries in the Windows registry in the *Captions* subkey of the main Dyalog key.
 

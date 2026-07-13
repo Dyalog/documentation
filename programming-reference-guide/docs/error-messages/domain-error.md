@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">DOMAIN ERROR</span> <span class="command">11</span></h1>
+# <span>DOMAIN ERROR</span> `11`
 
 
 

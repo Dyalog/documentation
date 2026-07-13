@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">File Resize</span> <span class="command">{R}←{X}⎕FRESIZE Y</span></h1>
+# <span>File Resize</span> `{R}←{X}⎕FRESIZE Y`{{key}}
 
 
 ## Access code 1024

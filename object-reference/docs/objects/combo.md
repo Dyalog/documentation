@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Combo</span> <span class="right">Object</span></h1>
+# <span>Combo</span> <span>Object</span>
 
 [Parents](../parentlists/combo.md), [Children](../childlists/combo.md), [Properties](../proplists/combo.md), [Methods](../methodlists/combo.md), [Events](../eventlists/combo.md)
 

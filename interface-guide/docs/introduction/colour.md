@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Colour</span></h1>
+# Colour
 
 Colours are specified using the FCol (foreground colour) and BCol (background colour) properties. Graphical objects have an additional FillCol (fill colour) property.
 

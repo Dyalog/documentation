@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Orientation</span> <span class="right">Property</span></h1>
+# <span>Orientation</span> <span>Property</span>
 
 
 

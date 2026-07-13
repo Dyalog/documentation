@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Debugging</span></h1>
+# Debugging
 
 Four features are built into the system to assist in developing and debugging GUI applications.
 

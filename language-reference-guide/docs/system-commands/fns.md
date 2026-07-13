@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">List Global Defined Functions</span> <span class="command">)FNS {nm}</span></h1>
+# <span>List Global Defined Functions</span> `)FNS {nm}`
 
 
 

@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Window Get Property</span> <span class="command">R←{X}⎕WG Y</span></h1>
+# <span>Window Get Property</span> `R←{X}⎕WG Y`{{key}}
 
 
 

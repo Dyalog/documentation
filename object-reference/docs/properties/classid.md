@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ClassID</span> <span class="right">Property</span></h1>
+# <span>ClassID</span> <span>Property</span>
 
 
 

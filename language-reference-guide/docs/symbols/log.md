@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Log</span> <span class="command">⍟</span></h1>
+# <span>Log</span> `⍟`
 
 Monadic Log means
 [Natural Logarithm](../primitive-functions/natural-logarithm.md)

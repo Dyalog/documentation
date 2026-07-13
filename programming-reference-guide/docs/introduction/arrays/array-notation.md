@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Array Notation</span></h1>
+# Array Notation
 
 
 Array notation extends [vector notation](vector-notation.md) to define arrays of higher rank, and namespaces, and lets these definitions span multiple lines:

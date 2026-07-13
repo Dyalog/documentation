@@ -6,7 +6,7 @@ search:
   ⍉ transpose
 </div>
 
-<h1 class="heading"><span class="name">Transpose (Dyadic)</span> <span class="command">R←X⍉Y</span></h1>
+# <span>Transpose (Dyadic)</span> `R←X⍉Y`{{key}}
 
 `Y` may be any array.  `X` must be a simple scalar or vector whose elements are included in the set `⍳⍴⍴Y`.  Integer values in `X` may be repeated but all integers in the set `⍳⌈/X` must be included.  The length of `X` must equal the rank of `Y`.
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Benefits Offered by Shared Code Files</span></h1>
+# Benefits Offered by Shared Code Files
 
 Many large applications are currently forced to load more code than is necessary because it is difficult to predict precisely what code will be used. The main benefit of shared code files is that applications only load code and data on demand.
 

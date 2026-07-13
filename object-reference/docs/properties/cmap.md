@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">CMap</span> <span class="right">Property</span></h1>
+# <span>CMap</span> <span>Property</span>
 
 
 

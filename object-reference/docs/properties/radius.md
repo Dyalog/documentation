@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Radius</span> <span class="right">Property</span></h1>
+# <span>Radius</span> <span>Property</span>
 
 
 

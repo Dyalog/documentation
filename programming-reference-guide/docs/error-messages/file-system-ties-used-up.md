@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">FILE SYSTEM TIES USED UP</span> <span class="command">30</span></h1>
+# <span>FILE SYSTEM TIES USED UP</span> `30`
 
 
 

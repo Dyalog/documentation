@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Each (with Dyadic Operand)</span> <span class="command">{R}←Xf¨Y</span></h1>
+# <span>Each (with Dyadic Operand)</span> `{R}←Xf¨Y`{{key}}
 
 
 

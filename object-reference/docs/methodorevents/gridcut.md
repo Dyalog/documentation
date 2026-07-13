@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GridCut</span> <span class="right">Event 190</span></h1>
+# <span>GridCut</span> <span>Event 190</span>
 
 
 

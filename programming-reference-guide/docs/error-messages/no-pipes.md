@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">NO PIPES</span> <span class="command">72</span></h1>
+# <span>NO PIPES</span> `72`
 
 
 

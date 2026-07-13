@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">TextSize Property</span></h1>
+# TextSize Property
 
 |----------------------------------------------|------------------------------|------------------------------------|
 |[ActiveXControl](../objects/activexcontrol.md)|[Bitmap](../objects/bitmap.md)|[Edit](../objects/edit.md)          |

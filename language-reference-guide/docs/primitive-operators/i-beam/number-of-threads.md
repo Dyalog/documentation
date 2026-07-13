@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Number of Threads</span> <span class="command">R←1111⌶Y</span></h1>
+# <span>Number of Threads</span> `R←1111⌶Y`{{key}}
 
 
 

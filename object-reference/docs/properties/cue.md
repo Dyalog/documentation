@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Cue</span> <span class="right">Property</span></h1>
+# <span>Cue</span> <span>Property</span>
 
 **Applies To:** [ButtonEdit](../objects/buttonedit.md), [Edit](../objects/edit.md)
 

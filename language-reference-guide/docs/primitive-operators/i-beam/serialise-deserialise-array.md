@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Serialise/Deserialise Array</span> <span class="command">R←X(220⌶)Y</span></h1>
+# <span>Serialise/Deserialise Array</span> `R←X(220⌶)Y`{{key}}
 
 
 

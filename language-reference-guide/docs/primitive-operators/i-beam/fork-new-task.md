@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Fork New Task</span> <span class="command">R←4000⌶Y</span></h1>
+# <span>Fork New Task</span> `R←4000⌶Y`{{key}}
 
 
 
