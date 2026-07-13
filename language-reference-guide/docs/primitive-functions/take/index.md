@@ -6,26 +6,15 @@ search:
   ↑ take
 </div>
 
-
-
-
-
-
 # <span>Take</span> `R←X↑Y`{{key}}
-
-
 
 `Y` may be any array.  `X` must be a simple integer scalar or vector.
 
-
 If `Y` is a scalar, it is treated as a one-element array of shape `(⍴,X)⍴1`.  The length of `X` must be the same as or less than the rank of `Y`. If the length of `X` is less than the rank of `Y`, the missing elements of `X` default to the length of the corresponding axis of `Y`.
-
 
 `R` is an array of the same rank as `Y` (after possible extension), and of shape `|X`.  If `X[I]` (an element of `X`) is positive, then `X[I]` sub-arrays are taken from the beginning of the `I`<sup>th</sup> axis of `Y`.  If `X[I]` is negative, then `X[I]` sub-arrays are taken from the end of the `I`<sup>th</sup> axis of `Y`.
 
-
 If more elements are taken than exist on axis `I`, the extra positions in `R` are filled with the fill element of `Y` (`⊂∊⊃Y` with `⎕ML←0`).
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -63,5 +52,3 @@ MNOP
 QRST
 UVWX
 ```
-
-

@@ -5,7 +5,6 @@ search:
 
 # Object Management Functions
 
-
 | Symbol | Name | Description |
 |---------|------|-------------|
 | [`⎕DQ`](../../../language-reference-guide/system-functions/dq/) | Dequeue | processes user actions, invoking callbacks |

@@ -8,30 +8,19 @@ search:
   2250⌶
 </div>
 
-
-
-
-
-
 # <span>Verify .NET Interface</span> `R←2250⌶Y`{{key}}
-
-
 
 This function provides information about the Dyalog interface to .NET. The system attempts to load the Bridge DLL and reports the status of the .NET interface. It can be used to determine whether your .NET-related code can run, and also what sort of .NET support you have. It also means that you can suppress all messages that `⎕USING` would otherwise generate
 
-
 The right argument `Y` is zero:
 
-
 The result `R` is a 3-element nested array:
-
 
 |Item  |Description                                                                                                                                                                       |
 |------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |`R[1]`|Numeric. <br>¯1: the interface is not supported. <br>0: the interface is not configured. <br>1: the interface is configured to use .NET. <br>2: the interface is configured to use the .NET Framework.|
 |`R[2]`|Boolean 0 or 1. <br>1 : the Bridge DLL was successfully loaded. <br>0 : the Bridge DLL failed to load, or was not attempted.                                                              |
 |`R[3]`|A character vector containing error messages generated during load.                                                                                                               |
-
 
 ## Examples (Windows)
 ```apl
@@ -57,7 +46,4 @@ The result `R` is a 3-element nested array:
 
 ## Implementation Note
 
-
 The underlying code is run once only and the results cached, so all subsequent calls to `2250⌶` will return the same result as the first time.
-
-

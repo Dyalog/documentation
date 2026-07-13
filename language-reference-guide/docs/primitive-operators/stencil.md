@@ -14,19 +14,13 @@ search:
 
 Stencil is used in image processing, artificial neural networks, computational fluid dynamics, cellular automata, and many other fields of application. The computation is sometimes referred to as tessellation, moving window, or [stencil code](https://en.wikipedia.org/wiki/Stencil_code). This operator applies the left operand function `f` to a series of (possibly overlapping) rectangles in the array `Y`.
 
-
-
 In general, the right operand `g` is a 2- row matrix of positive non-zero integers with up to `⍴⍴Y` columns. The first row contains the rectangle sizes, the second row the *movements* that is, how much to move the rectangle in each step. If `g` is a scalar or vector it specifies the rectangle size and the movement defaults to 1.
-
 
 The predominant case uses a rectangle size which is odd and a movement of 1.
 
-
 Rectangles are *centred* on successive elements of `Y` and (unless the rectangle size is 1), padded with fill elements.
 
-
 The first rectangle is centred on the first element of `Y` preceded by the appropriate number of fill elements. Subsequent rectangles are centred on subsequent elements of `Y` according to the size of the movement, and padded before or after as appropriate. When the movement is 1, each element of `Y` in its turn is the middle of a rectangle.
-
 
 `f` is invoked dyadically with a vector left argument indicating for each axis the number of fill elements and on what side; positive values mean that the padding precedes the array values,
 negative values mean that the padding follows the array values.
@@ -64,12 +58,9 @@ negative values mean that the padding follows the array values.
 
 ```
 
-
 In the first expression above, the left operand function `{⊂⍺ ⍵}` simply displays its left and right arguments to illustrate the mechanics of the operation. The right operand `(3 3)` specifies that each rectangle contains 3 rows and 3 columns, and the movement is 1.
 
-
 In order for the first element of `Y` (1) to be centred, the first rectangle is padded with a row above and a column to the left, as indicated by the left argument `(1 1)` to the function.
-
 
 Another way to think about the way Stencil operates is that it portions the array into sections or neighbourhoods in which elements can be analysed with respect to their immediate neighbours. Stencil  has uses in image processing applications.
 
@@ -137,11 +128,9 @@ Another way to think about the way Stencil operates is that it portions the arra
 
 ```
 
-
 You can see that the result identifies where there are clusters in `y`.
 
 ## Examples (odd rectangle, movement not 1)
-
 
 If the movement is greater than one, corresponding portions are skipped as shown below.
 ```apl
@@ -173,7 +162,6 @@ If the movement is greater than one, corresponding portions are skipped as shown
 ```
 
 ## Even Rectangle Size
-
 
 For even rectangle sizes, the "middle" consists of two elements which are moved according to the movement parameter (equal to 1 in these examples).
 
@@ -241,5 +229,3 @@ For even rectangle sizes, the "middle" consists of two elements which are moved 
 ⍝        ↑ ↑ middle
 
 ```
-
-

@@ -6,14 +6,7 @@ search:
   ⍲ nand
 </div>
 
-
-
-
-
-
 # <span>NAND</span> `R←X⍲Y`{{key}}
-
-
 
 `Y` must be a Boolean array. `X` must be a Boolean array. `R` is Boolean. The value of `R` is the truth value of the proposition "not both `X` and `Y`", and is determined as follows:
 ```apl
@@ -30,6 +23,3 @@ search:
       (0 1)(1 0) ⍲ (0 0)(1 1)
  1 1  0 1
 ```
-
-
-

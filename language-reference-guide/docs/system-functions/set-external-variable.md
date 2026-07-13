@@ -7,29 +7,18 @@ search:
   ⎕XT XT
 </div>
 
-
-
-
-
-
 # <span>Set External Variable</span> `{R}←X ⎕XT Y`{{key}}
-
-
 
 `Y` must be a simple character scalar or vector which is taken to be a variable name.  `X` must be a simple character scalar or vector which is taken to be a file reference.  The name given by `Y` is identified as an EXTERNAL VARIABLE associated with an EXTERNAL ARRAY whose value may be stored in file identified by `X`. The shy result `R` has the same value as `X`.
 
-
 If `Y` is the name of a defined function or operator, a label or a namespace in the active workspace, a `DOMAIN ERROR` is reported.
 
-
 Attempts to assign namespace references or the `⎕OR` of namespaces to an external array will result in a `DOMAIN ERROR`.
-
 
 <h2 class="example">Example</h2>
 ```apl
       'EXT\ARRAY' ⎕XT 'V'
 ```
-
 
 If the file reference does not exist, the external variable has no value until a value is assigned:
 ```apl
@@ -38,7 +27,6 @@ VALUE ERROR
       V
       ^
 ```
-
 
 A value assigned to an external variable is stored in file space, not within the workspace:
 ```apl
@@ -50,7 +38,6 @@ A value assigned to an external variable is stored in file space, not within the
       ⎕WA
 2261186
 ```
-
 
 There are no specific restrictions placed on the use of external variables.  They must conform to the normal requirements when used as arguments of functions or as operands of operators.  The essential difference between a variable and an external variable is that an external variable requires only temporary workspace for an operation to accommodate (usually) a part of its value.
 
@@ -68,7 +55,6 @@ There are no specific restrictions placed on the use of external variables.  The
       ⍴¨V
      3
 ```
-
 
 Assignment allows the structure or the value of an external variable to be changed without fully defining the external array in the workspace.
 
@@ -90,7 +76,6 @@ Assignment allows the structure or the value of an external variable to be chang
                    50 60 70 80
 ```
 
-
 An external array is (usually) preserved in file space when the name of the external variable is disassociated from the file.  It may be re-associated with any valid variable name.
 
 <h2 class="example">Example</h2>
@@ -103,7 +88,6 @@ An external array is (usually) preserved in file space when the name of the exte
 10 20  ABC  40 50  10 20 30 40
                    50 60 70 80
 ```
-
 
 In UNIX versions, if `X` is an empty vector, the external array is associated with a temporary file which is erased when the array is disassociated.
 
@@ -119,9 +103,7 @@ In UNIX versions, if `X` is an empty vector, the external array is associated wi
       ⎕EX'TEMP'
 ```
 
-
 An external array may be erased using the native file function: `⎕NERASE`.
-
 
 In a multi-user environment (UNIX or a Windows LAN) a new file associated with an external array is created with access permission for owner read/write.  An existing file is opened for exclusive use (by the owner) if the permissions remain at this level.  If the access permissions allow any other users to read and write to the file, the file is opened for shared use.  In UNIX versions, access permissions may be modified using the appropriate Operating System command, or in Windows using the supplied function `XVAR` from the UTIL workspace.
 

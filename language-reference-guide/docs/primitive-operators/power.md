@@ -7,20 +7,11 @@ search:
   power
 </div>
 
-
-
-
-
-
 # <span>Power</span> `{R}←{X}(f⍣g)Y`{{key}}
-
-
 
 If right operand `g` is a numeric integer scalar, power applies its left operand function `f` cumulatively `g` times to its argument. In particular, `g` may be Boolean 0 or 1 for conditional function application.
 
-
 If right operand `g` is a scalar-returning dyadic *function*, then left operand function `f` is applied repeatedly **until** `((f Y) g Y)` or until a strong interrupt occurs. Notice that power calls its dyadic right operand `g` with the next `(f Y)` and current `(Y)` values of the iteration as left and right arguments. In particular, if `g` is `=` or `≡`, the result is sometimes termed a *fixpoint* of `f`.
-
 
 If a left argument `X` is present, it is bound as left argument to left operand function `f`:
 ```apl
@@ -113,5 +104,3 @@ One can ensure that weak interrupts and `⎕TKILL` can interrupt by packaging th
 
       ⎕TKILL tnum
 ```
-
-

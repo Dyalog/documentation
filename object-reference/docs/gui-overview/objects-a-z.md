@@ -7,7 +7,6 @@ search:
 
 [Objects: Categorised](objects-categorised.md)
 
-
 |Object                                            |Description                                                                                                              |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
 |[ActiveXContainer](../objects/activexcontainer.md)|represents the application hosting a Dyalog APL       ActiveXControl                                                     |
@@ -87,5 +86,3 @@ search:
 |[TrackBar](../objects/trackbar.md)                |slider control for analogue input/output                                                                                 |
 |[TreeView](../objects/treeview.md)                |displays a hierarchical list of items                                                                                    |
 |[UpDown](../objects/updown.md)                    |a pair of arrow buttons                                                                                                  |
-
-

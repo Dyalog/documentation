@@ -6,14 +6,7 @@ search:
   ! factorial
 </div>
 
-
-
-
-
-
 # <span>Factorial</span> `R←!Y`{{key}}
-
-
 
 `Y` must be numeric excluding negative integers.  `R` is numeric.  `R` is the product of the first `Y` integers for positive integer values of `Y`. In general, `!Y` is gamma `Y+1`.
 
@@ -28,6 +21,3 @@ search:
       !0j1 1j2
 0.4980156681J¯0.1549498283 0.1122942423J0.3236128855
 ```
-
-
-

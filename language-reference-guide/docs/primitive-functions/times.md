@@ -6,17 +6,9 @@ search:
   × times multiply
 </div>
 
-
-
-
-
-
 # <span>Times</span> `R←X×Y`{{key}}
 
-
-
 `Y` may be any numeric array. `X` may be any numeric array. `R` is the arithmetic product of `X` and `Y`.
-
 
 This function is also known as Multiply.
 
@@ -28,6 +20,3 @@ This function is also known as Multiply.
        2j3×.3j.5 1j2 3j4 .5
 ¯0.9J1.9 ¯4J7 ¯6J17 1J1.5
 ```
-
-
-

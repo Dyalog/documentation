@@ -7,11 +7,6 @@ search:
   ⎕NS NS
 </div>
 
-
-
-
-
-
 # <span>Namespace</span> `{R}←{X}⎕NS Y`{{key}}
 
 The `⎕NS` system function makes it possible to create namespaces, copy elements from one namespace to another, and clone namespaces.

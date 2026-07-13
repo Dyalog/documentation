@@ -43,5 +43,3 @@ Table: System Commands {: #SystemCommands }
 |[`)WSID {Y}`](wsid.md)                                                       |Workspace Identification                   |
 |[`)XLOAD Y`](xload.md)                                                        |Load a workspace; do not execute `⎕LX`     |
 |`{ }` indicates that the parameter(s) denoted by `Y` are optional.                                           ||
-
-

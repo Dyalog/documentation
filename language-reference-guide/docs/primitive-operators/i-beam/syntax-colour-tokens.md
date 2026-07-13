@@ -8,31 +8,19 @@ search:
   201⌶
 </div>
 
-
-
-
-
-
 # <span>Syntax Colour Tokens</span> `R←201⌶Y`{{key}}
-
-
 
 This function provides a description of the syntax colour tokens reported by `200⌶`. See [Syntax Colouring](syntax-colouring.md).
 
-
 `Y` is `⍬` (zilde).
 
-
 `R` is a 4-column matrix that describes the syntax colouring tokens as follows:
-
 
 |-------|--------------------|
 |`R[;1]`|Token type          |
 |`R[;2]`|Token Value         |
 |`R[;3]`|Internal description|
 |`R[;4]`|Colour index        |
-
-
 
 The 4th column is intended for the benefit of non-Windows users using the tty interface and indicates the video/foreground/background colour index. These indices appear in the output translate tables found in `$DYALOG/apltrans`, and are used to define the colours used in the tty interface.
 
@@ -50,5 +38,3 @@ The 4th column is intended for the benefit of non-Windows users using the tty in
 └────────────┴─┴────────────┴───┘
 
 ```
-
-

@@ -7,20 +7,11 @@ search:
   inner
 </div>
 
-
-
-
-
-
 # <span>Inner Product</span> `R←Xf.gY`{{key}}
-
-
 
 `f` and `g` are dyadic functions. The last axis of `X` must have the same length as the first axis of `Y`, or one of `X` and `Y` is single (`^/1=⍴X` or `^/1=⍴Y`).
 
-
 The result of the derived function has shape `(¯1↓⍴X),1↓⍴Y`; each item is `f/x g¨y` where `x` and `y` are vectors taken from all the combinations of vectors along the last axis of `X` and the first axis of `Y`.
-
 
 !!! note
     - `g` must return a result.
@@ -44,5 +35,3 @@ SEBASTIAN
       NAMES^.='WILLIAM  '
 0 1 0 0
 ```
-
-

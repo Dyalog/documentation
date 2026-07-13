@@ -39,5 +39,3 @@ Dyadic Comma Bar means
 7 8 9
 ```
 [Language Elements](../glyphs.md)
-
-

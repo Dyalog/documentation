@@ -492,7 +492,6 @@ In the following examples:
       fmt (1200⌶⍠'Dictionary' dict) tn
  Dydd Mercher, 13eg chwefror 2019; 10:16:56 
 
-
       '__cy__%DateVerbose%' (1200⌶⍠'Dictionary' dict) tn
  the date is 13 Chw 2019
 ```

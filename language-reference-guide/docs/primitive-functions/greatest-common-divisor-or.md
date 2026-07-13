@@ -6,16 +6,9 @@ search:
   ∨ gcd or
 </div>
 
-
-
-
-
-
 # <span>Greatest Common Divisor/OR</span> `R←X∨Y`{{key}}
 
-
 ## Case 1: Greatest Common Divisor – `X` and `Y` are numeric (non-Boolean)
-
 
 R is the Greatest Common Divisor of `X` and `Y`. Note that in this case, `⎕CT` and `⎕DCT` are implicit arguments.
 
@@ -31,9 +24,7 @@ R is the Greatest Common Divisor of `X` and `Y`. Note that in this case, `⎕CT`
 10000 5000  50 1 2 3
 ```
 
-
 ## Case 2: OR – `X` and `Y` are Boolean
-
 
 R is Boolean and is determined as follows:
 ```apl
@@ -50,5 +41,3 @@ R is Boolean and is determined as follows:
       0 0 1 1 ∨ 0 1 0 1
 0 1 1 1
 ```
-
-

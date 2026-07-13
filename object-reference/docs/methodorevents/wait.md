@@ -4,9 +4,7 @@
 
 **Description**
 
-
 The Wait method is the same as executing `⎕DQ` on the object.
-
 
 The Wait method is niladic.
 ```apl
@@ -14,6 +12,3 @@ The Wait method is niladic.
 ...
       Z←F.Wait
 ```
-
-
-

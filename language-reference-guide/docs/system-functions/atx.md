@@ -49,14 +49,12 @@ This function provides information about a name in a workspace, including its us
 
 `R` depends on the combination of `X` and `Y`:
 
-
 |&nbsp;                            ||`X`                                                                                                   ||
 |-----------------------------------|------------------------------|---------------------------------------------|--------------------------|
 |&nbsp;                            ||Scalar                        | Vector |
 |`Y`                                |Simple character scalar/vector|Requested value (not enclosed)               |Vector of requested values|
 |                                   |Enclosed character vector     |Requested value (enclosed)                   |Scalar containing vector of requested values|
 |_-                               -_|Vector of character scalars/vectors|Vector of requested values              |Outer shape from `⍴⍺` , inner shape from `⍴⍵`|
-
 
 <h2 class="example">Examples</h2>
 ```apl

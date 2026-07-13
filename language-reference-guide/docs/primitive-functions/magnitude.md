@@ -57,6 +57,3 @@ Note that the magnitude of a complex number <math xmlns="http://www.w3.org/1998/
 ```
 
 `⎕IO` is an implicit argument of magnitude.
-
-
-

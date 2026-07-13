@@ -28,5 +28,3 @@ Dyadic Circle Backslash means
 1 5
 ```
 [Language Elements](../glyphs.md)
-
-

@@ -29,6 +29,3 @@ Note that `:Access WebMethod` is equivalent to:
 :Access Public
 :Attribute System.Web.Services.WebMethodAttribute
 ```
-
-
-

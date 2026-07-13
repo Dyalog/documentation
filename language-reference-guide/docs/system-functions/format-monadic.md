@@ -7,17 +7,9 @@ search:
   ⎕FMT FMT
 </div>
 
-
-
-
-
-
 # <span>Format (Monadic)</span> `R←⎕FMT Y`{{key}}
 
-
-
 `Y` may be any array.  `R` is a simple character matrix which appears the same as the default display of `Y`.  If `Y` contains control characters from `⎕TC`, they will be resolved.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -47,5 +39,3 @@ search:
       ⍴B
 3 12
 ```
-
-

@@ -10,6 +10,3 @@ See also: [URL](url.md).
 
 !!! note
     Typically, you will need to UTF-8 encode any text outside the Unicode range 0-127.
-
-
-

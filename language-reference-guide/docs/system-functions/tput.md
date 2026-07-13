@@ -7,23 +7,13 @@ search:
   ⎕TPUT TPUT
 </div>
 
-
-
-
-
-
 # <span>Put Tokens</span> `{R}←{X} ⎕TPUT Y`{{key}}
-
-
 
 `Y` must be a simple numeric scalar or vector of non-zero token types. Non-integer values in `Y` must fall within a range that has been allocated using `⎕TALLOC`.
 
-
 `X` is an optional array of values to be stored in each of the tokens specified by `Y`.
 
-
 Shy result `R` is a vector of thread numbers (if any) unblocked by the `⎕TPUT`.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -37,10 +27,6 @@ Shy result `R` is a vector of thread numbers (if any) unblocked by the `⎕TPUT`
                         with the value 'Hello'.
 ```
 
-
 If `X` is omitted, the *value* associated with each of the tokens added to the pool is the same as its *type*.
 
-
 Note that you cannot put a 0-token into the pool; 0-s are removed from `Y`.
-
-

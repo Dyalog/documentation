@@ -1,22 +1,14 @@
 # <span>ButtonEdit</span> <span>Object</span>
 
-
-
 [Parents](../parentlists/buttonedit.md), [Children](../childlists/buttonedit.md), [Properties](../proplists/buttonedit.md), [Methods](../methodlists/buttonedit.md), [Events](../eventlists/buttonedit.md)
-
-
 
 **Purpose:** Allows user to enter or edit data.
 
 **Description**
 
-
 The ButtonEdit object combines a single-line input field with a customisable button. It provides the same user and programmer interfaces as an [Edit](edit.md) object (Style `'Single'`).
 
-
-
 The appearance of the button, which is displayed to the right of the input field, is determined by the [ImageListObj](../properties/imagelistobj.md) property. When clicked, the object generates a [DropDown](../methodorevents/dropdown.md) event. There is no default processing for this event; it is up to the programmer to take the appropriate action via a callback function.
-
 
 The following picture illustrates two ButtonEdit objects
 ```apl
@@ -41,18 +33,13 @@ The following picture illustrates two ButtonEdit objects
 [18]   F.BE2.onDropDown←'Rotate'
      ∇
 
-
      ∇ Rotate msg
 [1]    (⊃msg).Text←⌽(⊃msg).Text
      ∇
 
-
 ```
-
 
 ![](../img/buttonedit.png)
 
 !!! note
     For full functionality (in particular, for the [Cue](../properties/cue.md) property to apply), the ButtonEdit object requires that [Native Look and Feel](../miscellaneous/windows-xp-look-and-feel.md) is enabled.
-
-

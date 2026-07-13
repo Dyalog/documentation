@@ -10,6 +10,3 @@ search:
 # <span>Search</span> `R←{X}(A ⎕S B) Y`{{key}}
 
 See [Replace](r.md).
-
-
-

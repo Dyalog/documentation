@@ -7,17 +7,9 @@ search:
   ⎕ML ML
 </div>
 
-
-
-
-
-
 # <span>Migration Level</span> `⎕ML`
 
-
-
 `⎕ML` determines the degree of migration of the Dyalog APL language towards IBM's APL2.  Setting this variable to other than its default value of `1` changes the interpretation of certain symbols and language constructs. `⎕ML` has Namespace scope.
-
 
 |-------|----------|-----------------------------------------------------------------------------------------------------|
 |`⎕ML←0`|&nbsp;    |Original Native Dyalog                                                                               |
@@ -28,9 +20,7 @@ search:
 |`⎕ML←3`|`R←X⊂[K]Y`|Dyadic `'⊂'` follows the APL2 (rather than the original Dyalog APL) convention.                      |
 |&nbsp; |`⎕TC`     |The order of the elements of `⎕TC` is the same as in APL2.                                           |
 
-
 Subsequent versions of Dyalog APL may provide further migration levels.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -76,5 +66,3 @@ Subsequent versions of Dyalog APL may provide further migration levels.
 2
 
 ```
-
-

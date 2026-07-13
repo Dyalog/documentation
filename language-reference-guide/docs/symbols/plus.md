@@ -24,5 +24,3 @@ Dyadic Plus means
 6
 ```
 [Language Elements](../glyphs.md)
-
-

@@ -6,32 +6,19 @@ search:
   ⍳
 </div>
 
-
-
-
-
-
 # <span>Index Of</span> `R←X⍳Y`{{key}}
-
-
 
 `Y` may be any array. `X` may be any array of rank 1 or more.
 
-
 In general, the function locates the first occurrence of sub-arrays in `Y` which match major cells of  `X`, where a major cell is  a sub-array on the leading dimension of `X` with shape `1↓⍴X`. The shape of the result `R` is `(1-⍴⍴X)↓⍴Y`.
-
 
 If a sub-array of `Y` cannot be found in `X`, then the corresponding element of `R` will be `⎕IO+⊃⍴X`.
 
-
 In particular, if `X` is a vector, the result `R` is a simple integer array with the same shape as `Y` identifying where elements of `Y` are first found in `X`. If an element of `Y` cannot be found in `X`, then the corresponding element of `R` will be `⎕IO+⊃⍴X`.
-
 
 Elements of `X` and `Y` are considered the same if `X≡Y` returns 1 for those elements.
 
-
 `⎕IO`,  `⎕CT` and `⎕DCT` are implicit arguments of Index Of.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -131,8 +118,6 @@ Deutschland
 
 ```
 
-
-
 Note that the expression `y⍳x` signals a `LENGTH ERROR` because it looks for major cells in the left argument, whose shape is `5 14` (that is `1↓⍴y`), which is not the same as the trailing shape of `x`.
 ```apl
 
@@ -142,8 +127,4 @@ LENGTH ERROR
      ∧
 ```
 
-
 For performance information, see [Programmer's Guide: "Search Functions and Hash Tables"](../../../programming-reference-guide/introduction/search-functions-and-hash).
-
-
-

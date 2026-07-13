@@ -7,14 +7,7 @@ search:
   ⎕AN AN
 </div>
 
-
-
-
-
-
 # <span>Account Name</span> `R←⎕AN`{{key}}
-
-
 
 This is a simple character vector containing the user (login) name. Under UNIX and Linux this is the real user name, whereas `⎕AI` returns the effective user id.
 
@@ -26,6 +19,3 @@ Pete
       ⍴⎕AN
 4
 ```
-
-
-

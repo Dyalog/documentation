@@ -33,5 +33,3 @@ Index with Axes means
 2 6 10
 ```
 [Language Elements](../glyphs.md)
-
-

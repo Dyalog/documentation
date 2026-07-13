@@ -7,27 +7,15 @@ search:
   ⎕INSTANCES INSTANCES
 </div>
 
-
-
-
-
-
 # <span>Instances</span> `R←⎕INSTANCES Y`{{key}}
-
-
 
 `⎕INSTANCES` returns a list all the current instances of the Class specified by `Y`.
 
-
 `Y` must be a reference.
-
 
 If `Y` is a reference to a Class, `R` is a vector of references to all existing Class Instances of  `Y`. Otherwise, `R` is empty.
 
-
-
 <h2 class="example">Examples</h2>
-
 
 This example illustrates a simple inheritance tree or Class hierarchy. There are 3 Classes, namely:
 ```apl
@@ -74,5 +62,3 @@ Animal
       ⎕INSTANCES Animal
  eeyore  robin  polly 
 ```
-
-

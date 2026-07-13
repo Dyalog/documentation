@@ -1,9 +1,6 @@
 # COM data types
 
-
-
 The table below shows the correspondence between COM data types and APL arrays.
-
 
 |----------------|----------------------------------|
 |**OLE DataType**|APL array                         |
@@ -21,11 +18,6 @@ The table below shows the correspondence between COM data types and APL arrays.
 |VT_DISPATCH     |`⎕OR` of a namespace              |
 |VT_COLOR        |3-element RGB                     |
 
-
-
 APL vectors may be described by pre-fixing the data type string with `'VT_ARRAY OF '`. For example `'VT_ARRAY OF BSTR'` specifies a vector of character vectors.
 
-
 If the APL array is the `⎕OR` of a namespace, its data type should be specified as `'VT_DISPATCH'`.
-
-

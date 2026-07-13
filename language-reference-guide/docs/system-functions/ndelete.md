@@ -75,12 +75,8 @@ FILE ACCESS ERROR: temp1: Unable to delete directory ("The directory is not empt
 
 ```
 
-
 If the file is in use or the current user is not authorised to delete it, `⎕NDELETE` will not succeed but will instead generate a `FILE ACCESS ERROR`.
 
 ## Note
 
-
 When multiple names are specified they are processed in the order given. If an error occurs at any point whilst deleting files or directories, processing will immediately stop and an error will be signalled. The operation is not atomic; the directory contents may be partially deleted before this happens. In the event of an error there will be no result and therefore no indication of how many files were deleted before the error occurred.
-
-

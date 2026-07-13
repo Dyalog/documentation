@@ -23,5 +23,3 @@ Dyadic Tilde means
 └──┴──┘
 ```
 [Language Elements](../glyphs.md)
-
-

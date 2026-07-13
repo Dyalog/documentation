@@ -22,5 +22,3 @@ Dyadic Domino means
 ¯4 4.5
 ```
 [Language Elements](../glyphs.md)
-
-

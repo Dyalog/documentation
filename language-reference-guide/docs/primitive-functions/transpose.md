@@ -6,14 +6,7 @@ search:
   ⍉ transpose
 </div>
 
-
-
-
-
-
 # <span>Transpose (Monadic)</span> `R←⍉Y`{{key}}
-
-
 
 `Y` may be any array.  `R` is an array of shape `⌽⍴Y`, similar to `Y` with the order of the axes reversed.
 
@@ -63,5 +56,3 @@ search:
 4 3 2
 
 ```
-
-

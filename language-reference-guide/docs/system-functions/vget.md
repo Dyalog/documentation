@@ -48,7 +48,6 @@ The fallback values must be one of the following:
 * a vector with as many elements as there are names in the matrix.
 * a scalar value that is the fallback value for all names.
 
-
 The result `R` is a vector of the values from the corresponding names or fallback values.
 
 <h3 class="example">Examples</h3>

@@ -1,11 +1,8 @@
 # <span>ColTitleDepth</span> <span>Property</span>
 
-
-
 **Applies To:** [Grid](../objects/grid.md)
 
 **Description**
-
 
 ColTitleDepth specifies the structure of a set of hierarchical column titles.
 It is an integer vector with the same length as the [ColTitles](coltitles.md) property. A value of 0 indicates that the corresponding element of [ColTitles](coltitles.md) is a top-level title. A value of 1 indicates that the corresponding title is a
@@ -30,12 +27,7 @@ whose ColTitleDepth is 1, and so forth. For example:
       'F.G'⎕WS('ColTitles'CT)('ColTitleDepth'CD)  
 ```
 
-
 ![](../img/gridct.gif)
-
 
 Note that the [LockColumns](../methodorevents/lockcolumns.md) method is
 not supported in combination with hierarchical column titles.
-
-
-

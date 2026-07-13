@@ -1,28 +1,18 @@
 # <span>DrawMode</span> <span>Property</span>
 
-
-
 **Applies To:** [Circle](../objects/circle.md), [Ellipse](../objects/ellipse.md), [Marker](../objects/marker.md), [Poly](../objects/poly.md), [Rect](../objects/rect.md), [Text](../objects/text.md)
 
 **Description**
 
-
 The DrawMode property provides direct control over the low-level drawing operation performed by graphical objects.
-
-
 
 The DrawMode property specifies the current foreground mix mode. The Windows GDI uses the foreground mix mode to combine pens and interiors of filled objects with the colours already on the screen. The foreground mix mode defines how colours from the brush or pen and the colours in the existing image are to be combined.
 
-
 DrawMode affects every drawing operation performed by Dyalog APL and not just the initial drawing operation when the object is created. Many of the drawing modes are additive (the result depends not just on what is being drawn, but on what is already there) and the effects may therefore vary. For this reason, DrawMode should normally be used only with un-named graphical objects.
-
 
 You could use DrawMode to move or animate graphical objects in circumstances where the standard Dyalog APL behaviour was not ideal.
 
-
-
 DrawMode is an integer with one of the following values:
-
 
 |Value|Name            |Resulting Pixel Colour                                                                     |
 |-----|----------------|-------------------------------------------------------------------------------------------|
@@ -42,6 +32,3 @@ DrawMode is an integer with one of the following values:
 |14   |`R2_MERGEPENNOT`|Pixel is a combination of the pen colour and the inverse of the screen colour.             |
 |15   |`R2_MERGEPEN`   |Pixel is a combination of the pen colour and the screen colour.                            |
 |16   |`R2_WHITE`      |Pixel is always 1.                                                                         |
-
-
-

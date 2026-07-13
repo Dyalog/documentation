@@ -51,5 +51,3 @@ UVWX
 ABCD
 EFGH
 ```
-
-

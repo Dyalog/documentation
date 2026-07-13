@@ -7,17 +7,9 @@ search:
   ⎕NLOCK NLOCK
 </div>
 
-
-
-
-
-
 # <span>Native File Lock</span> `{R}←X ⎕NLOCK Y`{{key}}
 
-
-
 This function assists the controlled update of shared native files by locking a range of bytes.
-
 
 Locking enables controlled update of native files by co-operating users. A process requesting a lock on a region of a file will be *blocked* until that region becomes available. A *write-lock* is exclusive, whereas a *read-lock* is shared. In other words, any byte in a file may be in one of only three states:
 
@@ -25,20 +17,16 @@ Locking enables controlled update of native files by co-operating users. A proce
 - Write-locked by exactly one process.
 - Read-locked by any number of processes.
 
-
-
 `Y` must be a simple integer scalar or vector containing 1, 2 or 3 items namely:
 
 1. Tie number
 2. Offset (from 0) of first byte of region. Defaults to 0
 3. Number of bytes to lock. Defaults to maximum possible file size
 
-
 `X` must be a simple integer scalar or vector containing 1 or 2 items, namely:
 
 1. Type: 0: Unlock, 1:Read lock, 2:Write lock.
 2. Timeout: Number of seconds to wait for lock before generating a `TIMEOUT` error. Defaults to indefinite wait.
-
 
 The shy result `R` is `Y`. To unlock the file, this value should subsequently be supplied in the right argument to `0 ⎕NLOCK`.
 
@@ -57,8 +45,6 @@ The shy result `R` is `Y`. To unlock the file, this value should subsequently be
     0 ⎕NLOCK ¯1 12 1   ⍝ remove lock from byte 12.
 ```
 
-
-
 To lock the region immediately beyond the end of the file prior extending it:
 ```apl
    ⎕←region←2 ⎕NLOCK ¯1, ⎕NSIZE ¯1 ⍝ write-lock from EOF.
@@ -69,13 +55,10 @@ To lock the region immediately beyond the end of the file prior extending it:
    0 ⎕NLOCK region                 ⍝ release lock.
 ```
 
-
-
 The left argument may have a second optional item that specifies a *timeout* value. If a lock has not been acquired within this number of seconds, the acquisition is abandoned and a `TIMEOUT` error reported.
 ```apl
     2 10 ⎕NLOCK ¯1      ⍝ wait up to 10 seconds for lock.
 ```
-
 
 ## Notes
 
@@ -84,14 +67,9 @@ The left argument may have a second optional item that specifies a *timeout* val
 - All locks on a file will be removed by `⎕NUNTIE`.
 - Blocked locking requests can be freed by a strong interrupt. Under Windows, this operation is performed from the Dyalog APL pop-up menu in the system tray.
 
-
-
 ### Errors
 
 - In this release, an attempt to unlock a region that contains bytes that have not been locked results in a `DOMAIN ERROR`.
 - A `LIMIT ERROR` results if the operating system lock daemon has insufficient resources to honour the locking request.
 - Some systems support only write locks. In this case an attempt to set a read lock will generate a `DOMAIN ERROR`, and it may be appropriate for the APL programmer to trap the error and apply a write lock.
 - No attempt will be made to detect deadlock. Some servers do this and if such a condition is detected, a `DEADLOCK` error (1008) will be reported.
-
-
-

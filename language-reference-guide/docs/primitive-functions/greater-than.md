@@ -6,17 +6,9 @@ search:
   > greater
 </div>
 
-
-
-
-
-
 # <span>Greater Than</span> `R←X>Y`{{key}}
 
-
-
 `Y` must be numeric. `X` must be numeric. `R` is Boolean. `R` is 1 if `X` is greater than `Y` and `X=Y` is 0. Otherwise `R` is 0.
-
 
 `⎕CT` and `⎕DCT` are  implicit arguments of Greater Than.
 
@@ -30,6 +22,3 @@ search:
       1 1.00000000001 1.000000001 > 1
 0 0 1
 ```
-
-
-

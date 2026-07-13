@@ -220,7 +220,6 @@ Index generator functions return indices that can then be used directly or to se
 |`⍒Y`&emsp;|[Grade Down](grade-down.md)|
 |`X⍒Y`&emsp;|[Dyadic Grade Down](dyadic-grade-down.md)|
 
-
 ## Structural Functions
 Structural functions modify the structure or shape of their right argument (including omitting values) but they do not otherwise change any scalar values.
 

@@ -5,7 +5,6 @@ search:
 
 # <span>Splitter</span> <span>Example 3</span>
 
-
 ```apl
 'F'⎕WC'Form' 'Multiple Splitters: hierarchical using SubForms'('Size' 25 50)
 'F.E1'⎕WC'Edit'(10 6⍴'Edit 1')('Style' 'Multi')
@@ -16,13 +15,8 @@ search:
 'F.SF1.S1'⎕WC'Splitter' 'F.SF1.E1' 'F.SF1.E2'
 ```
 
-
 ![](../img/split3.gif)
-
 
 ![](../img/split3a.gif)
 
-
 After dragging the first Splitter to the left.
-
-

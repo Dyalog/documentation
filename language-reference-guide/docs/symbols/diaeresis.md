@@ -26,5 +26,3 @@ Operator Diaeresis means
 └────┴────┴────┘
 ```
 [Language Elements](../glyphs.md)
-
-

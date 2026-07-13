@@ -8,10 +8,7 @@ search:
 
 # <span>Ravel with Axes</span> `R←,[K]Y`{{key}}
 
-
-
 `Y` may be any array.
-
 
 `K` is either:
 
@@ -19,12 +16,9 @@ search:
 - A simple integer scalar or vector of axes of `Y`, or
 - An empty vector
 
-
 Ravel with axis can be used with selective specification.
 
-
 `R` depends on the case of `K` above.
-
 
 If `K` is a fraction, the result `R` is an array of the same shape as `Y`, but with a new axis of length 1 inserted at the `K`th position.
 
@@ -56,12 +50,10 @@ C
 3 4 1
 ```
 
-
 If `K` is an integer scalar or vector of axes of `Y`, then:
 
 - `K` must contain contiguous axes of `Y` in ascending order
 - `R` contains the elements of `Y` ravelled along the indicated axes
-
 
 Note that if `K` is a scalar or single element vector, `R ←→ Y`.
 
@@ -104,7 +96,6 @@ Note that if `K` is a scalar or single element vector, `R ←→ Y`.
 2 12
 ```
 
-
 If `K` is an empty vector a new last axis of length 1 is created.
 
 ```apl
@@ -135,7 +126,4 @@ If `K` is an empty vector a new last axis of length 1 is created.
 └∊───────────┘
 ```
 
-
 See also: [Ravel](index.md).
-
-

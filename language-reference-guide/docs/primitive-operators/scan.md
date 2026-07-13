@@ -7,26 +7,15 @@ search:
   scan
 </div>
 
-
-
-
-
-
 # <span>Scan</span> `R←f\[K]Y`{{key}}
-
-
 
 `f` may be any dyadic function that returns a result.  `Y` may be any array whose items in the sub-arrays along the `K`th axis are appropriate to the function `f`.
 
-
 The axis specification is optional.  If present, `K` must identify an axis of `Y`.  If absent, the last axis of `Y` is implied.  The form `R←f⍀Y` implies the first axis of `Y`.
-
 
 `R` is an array formed by successive reductions along the `K`th axis of `Y`.  If `V` is a typical vector taken from the `K`th axis of `Y`, then the `I`<sup>th</sup> element of the result is determined as `f/I↑V`.
 
-
 The shape of `R` is the same as the shape of `Y`.  If `Y` is an empty array, then `R` is the same empty array.
-
 
 <h2 class="example">Examples</h2>
 ```apl

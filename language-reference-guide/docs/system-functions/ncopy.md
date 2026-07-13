@@ -7,54 +7,35 @@ search:
   ⎕NCOPY NCOPY
 </div>
 
-
-
-
-
-
 # <span>Native File Copy</span> `{R}←X ⎕NCOPY Y`{{key}}
-
-
 
 This function copies native files and directories from one or more sources specified by `Y` to a destination specified by `X`. `⎕NCOPY` is similar to `⎕NMOVE` (see [Native File Move](nmove.md)).
 
-
 `X` is a character vector that specifies the name of the destination.
-
 
 `Y` is a character vector that specifies the name of the source, or a vector of character vectors containing zero or more sources.
 
-
 Source and destination path names may be full or relative (to the current working directory) path names which adhere to the operating system conventions.
 
-
-
 If `X` specifies an existent directory then each source in `Y` is copied into that directory, otherwise `X` specifies the name of the copy. `X` must specify an existent directory if the source contains multiple names or if the **Wildcard** option is set.
-
 
 The shy result `R` contains count(s) of top-level items copied. If `Y` is a single source name, `R` is a scalar otherwise it is a vector of the same length as `Y`.
 
 ## Variant Options
 
-
 `⎕NCOPY` may be applied using the _variant_ operator with the options **Wildcard** (the Principal option), **IfExists**, **PreserveAttributes** and **ProgressCallback**.
 
 ## Wildcard Option (Boolean)
-
 
 |---|---|
 |0 { .shaded } |The name or names in `Y` identifies a specific file name.|
 |`1`|The name or names in `Y` that specify the *base name* and *extension* (see [NParts](./nparts.md) ), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
 
-
 Note that when **Wildcard** is 1, element(s) of `R` can  be 0, 1 or `>1`. If **Wildcard** is 0, elements of `R` are always 1.
-
 
 ## IfExists Option
 
-
 The **IfExists** variant option determines what happens when a source file is to be copied to a target file that already exists. It does not apply to directories, only to the files within them.
-
 
 |Value             |Description                                                                                        |
 |------------------|---------------------------------------------------------------------------------------------------|
@@ -63,8 +44,6 @@ The **IfExists** variant option determines what happens when a source file is to
 |`'Replace'`       |Existing files will be overwritten.                                                                                                                               |
 |`'ReplaceIfNewer'`|Existing files may be overwritten if, and only if, the corresponding source file is newer (more recently modified) than the existing one, otherwise it is skipped.|
 
-
-
 The following cases cause an error to be signalled regardless of the value of the **IfExists** variant.
 
 - If the source specifies a directory and the destination specifies an existing file.
@@ -72,25 +51,19 @@ The following cases cause an error to be signalled regardless of the value of th
 
 ## PreserveAttributes Option (Boolean)
 
-
 The **PreserveAttributes** variant option determines whether or not file attributes are preserved. It does not apply to directories, only to files.
-
 
 |---|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |0 { .shaded } |file attributes are not preserved.                                                                                                                                                         |
 |`1`|where possible, copied files will be given at least the same modification time as the source. Other file attributes will be preserved as permitted by the operating system and file system.|
 
-
 Note also that when files are copied across file systems, the different file systems may have different timestamp granularity and the timestamps may not be exactly the same.
 
-
 <h2 class="example">Examples</h2>
-
 
 There are a number of possibilities which are illustrated below. In all cases,  if the source is a file, a copy of the file is created. If the source is a directory, a copy of the directory and all its contents is created.
 
 ### Examples (single source, Wildcard is 0)
-
 
 - The source name must be an existent file or directory.
 - If the destination name does not exist but its path name does exist, the source is copied to the destination name.
@@ -113,7 +86,6 @@ i:/Documents/Dyalog APL-64 17.0 Unicode Files/
       ↑⊃0 (⎕NINFO⍠1) 'backups\*'
 backups/default.dlf  
 ```
-
 
 ### Examples (single source, Wildcard is 1)
 
@@ -139,8 +111,6 @@ backups/UserCommand20.cache
 
 ```
 
-
-
 ### Examples (multiple sources, Wildcard is 0)
 
 - Each source name must specify a single file or directory which must exist. The destination name must be an existing directory.
@@ -159,8 +129,6 @@ backups/default.dlf
 backups/def_uk.dse 
 
 ```
-
-
 
 ### Examples (multiple sources, Wildcard is 1)
 

@@ -18,5 +18,3 @@ Branching is superseded by the more modern
 control structures such as :If ... :EndIf
 ```
 [Language Elements](../glyphs.md)
-
-

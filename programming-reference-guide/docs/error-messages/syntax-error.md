@@ -1,11 +1,6 @@
 
 
-
-
-
 # <span>SYNTAX ERROR</span> `2`
-
-
 
 This report is given when a line of characters does not constitute a meaningful statement.  This condition occurs when either:
 
@@ -40,6 +35,3 @@ SYNTAX ERROR
       A.+1 2 3
       ^
 ```
-
-
-

@@ -447,7 +447,6 @@ and fixes as
 └─────┘
 ```
 
-
 ### Editing Classes
 
 The picture below shows the result of opening the `ComponentFile` class. Notice how each function is delineated separately and that each function is individually line-numbered.

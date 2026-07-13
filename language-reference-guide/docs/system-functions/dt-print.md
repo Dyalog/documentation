@@ -88,7 +88,6 @@ If a value in `X` is positive it indicates that a time number type is expected i
    hour:minute:second) is encoded as 131756. The date must be between 1 January 0001 and 31 December 9999 in the
    Proleptic Gregorian Calendar.
 
-
 ## Time Stamps
 
 If a value in `X` is negative it indicates that a timestamp type is expected in `Y` or generated in `R`, as follows:
@@ -219,4 +218,3 @@ Note that the resolutions of system clocks vary by platform.
       ¯30 0 ⎕DT⊂32000 15 10 0
 1
 ```
-

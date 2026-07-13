@@ -8,24 +8,13 @@ search:
   2000⌶
 </div>
 
-
-
-
-
-
 # <span>Memory Manager Statistics</span> `R←{X}(2000⌶)Y`{{key}}
-
-
 
 This function returns information about the state of the workspace and provides a means to reset certain statistics and to control workspace allocation. This I-Beam is provided for performance tuning and is VERY LIKELY to change in the next release. See also [Workspace Management](../../../../windows-installation-and-configuration-guide/workspace-management).
 
-
 `Y` is a simple integer scalar or vector containing values listed in the table below.
 
-
-
 If `X` is omitted, the result `R` is an array with the same structure as `Y`, but with values in `Y` replaced by the following statistics.  For any value in `Y` outside those listed below, the result is undefined.
-
 
 |Value|Description                                                                                                                                                      |
 |-----|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,9 +37,7 @@ If `X` is omitted, the result `R` is an array with the same structure as `Y`, bu
 |23   |The total number of `WS FULL` errors that have occurred.                                                                                                         |
 |24   |The total number of `WS FULL` errors that have been trapped.                                                                                                     |
 
-
 Note: While all other operations are relatively fast, the operation to count the number of garbage pockets (4) may take a noticeable amount of time, depending upon the size and state of the workspace.
-
 
 See also [Specify Workspace Available](specify-workspace-available.md).
 
@@ -62,10 +49,7 @@ See also [Specify Workspace Available](specify-workspace-available.md).
 1.02004292E11 1181312 1 1 0 ¯1 ¯1 ¯1 ¯1 78 13280 ¯1 1180800 1595016496 1595042464 0 1.020054733E11
 ```
 
-
-
 If `X` is specified, it must be either a simple integer scalar, or a vector of the same length as `Y`, and the result `R` is `⍬`. In this case, the value in `Y` specifies the item to be set and `X` specifies its new value according to the table below.
-
 
 |Value|Description|
 |---|---|
@@ -77,14 +61,11 @@ If `X` is specified, it must be either a simple integer scalar, or a vector of t
 |19|0 resets the compaction count; no other values allowed.|
 |20|Sets the requested size of the `WS Full Buffer` to the value specified by `X` . The actual space allocated may be less than that requested.|
 
-
-
 ## Notes
 
 - The workspace allocation high-water mark indicates a minimum value for **MAXWS**.
 - Limiting the maximum workspace allocation can be used to prevent code that reserves as much workspace as it can from skewing the peak usage result.
 - Limiting the minimum workspace allocation can avoid repeatedly committing and releasing memory to the Operating System when memory usage is fluctuating.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -125,27 +106,18 @@ If `X` is specified, it must be either a simple integer scalar, or a vector of t
 1962856 1962856
 ```
 
-
 ## WS Full Handling
-
 
 Potentially, a `WS FULL` error represents a terminal condition that would prevent a program from continuing because the process has, quite literally, run out of memory.
 
-
 To alleviate the problem,. Dyalog reserves a special *WS Full Buffer* for handling `WS FULL` errors. The default size of this buffer is `(1MB)⌊(0.01×⎕WA)`.
-
-
 
 In simple terms, when a `WS FULL` error occurs that triggers a handler, that is, an expression executed via `⎕TRAP` or `:Trap`,  the reserved workspace in the *WS Full Buffer* is released to provide additional memory space for that expression to execute. When the expression terminates, the system removes the memory that it had previously released, reserving it once more for another potential `WS FULL`.
 
-
 Note that until a `WS FULL` handler starts, the memory allocated to the *WS Full Buffer* is unavailable and inaccessible for any other purpose, thereby reducing the amount of active workspace available (`⎕WA`).
-
 
 Further considerations are:
 
 - Multiple `WS FULL` handlers can run concurrently as a result of muti-threading or nesting (when a `WS FULL` handler itself generates a `WS FULL` error).
 - When the `WS Full Buffer` is restored when the handler (more accurately, the last handler) terminates, or when a saved workspace is re-loaded, there may be insufficient memory available. In these circumstances, the system allocates a reduced amount, without reporting an error. However, the system will later try to reclaim more (up to the desired amount), if more workspace has become free. The desired and actual sizes of the `WS Full Buffer` are reported by `(2000⌶)20` and `(2000⌶)21` respectively.
 - When a `WS FULL` handler is activated and the `WS Full Buffer` is freed, `(2000⌶)21` will return 0 until the handler terminates.
-
-

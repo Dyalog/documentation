@@ -12,7 +12,6 @@ search:
 
 Where an element of `Y` is real, the corresponding element of `R` is an integer whose value indicates whether the value is negative (`¯1`), zero (`0`) or positive (`1`).
 
-
 Where an element of `Y` is complex, the corresponding element of `R` is a number with the same phase but with magnitude (absolute value) 1. It is equivalent to `Y÷|Y`.
 
 <h2 class="example">Examples</h2>
@@ -29,6 +28,3 @@ Where an element of `Y` is complex, the corresponding element of `R` is a number
       |×3j4 4j5
 1 1
 ```
-
-
-

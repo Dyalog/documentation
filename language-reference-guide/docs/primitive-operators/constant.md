@@ -7,14 +7,7 @@ search:
   constant
 </div>
 
-
-
-
-
-
 # <span>Constant</span> `R←{X}(A⍨)Y`{{key}}
-
-
 
 `A`,  `X` and `Y` are arrays. The Constant operator returns array `A`.
 
@@ -30,6 +23,3 @@ mu
 ¯1 ¯1 ¯1
 
 ```
-
-
-

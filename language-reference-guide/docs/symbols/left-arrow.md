@@ -25,5 +25,3 @@ Operator Left Arrow means
 
 ```
 [Language Elements](../other-syntax/assignment/index.md)
-
-

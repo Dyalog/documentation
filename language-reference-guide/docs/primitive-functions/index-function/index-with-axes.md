@@ -6,29 +6,19 @@ search:
   ⌷ index squad
 </div>
 
-
-
-
-
-
 # <span>Index with Axes</span> `R←{X}⌷[K]Y`{{key}}
-
-
 
 `X` must be a scalar or vector of depth `≤2`, of integers each `≥⎕IO`. `Y` may be any array. `K` is a simple scalar or vector specifying axes of `Y`. The length of `K` must be the same as the length of `X`:
 ```apl
       (⍴,X) ≡ ⍴,K
 ```
 
-
 In general, the result `R` is similar to that obtained by square-bracket indexing with elided subscripts. Items of `K` distribute items of `X` along the axes of `Y`. For example:
 ```apl
       I J ⌷[1 3] Y  ←→  Y[I;;J] 
 ```
 
-
 Note that index with axis may be used with selective specification. `⎕IO` is an implicit argument of index with axis.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -72,5 +62,3 @@ Note that index with axis may be used with selective specification. `⎕IO` is a
   0 222   0 224
   0 232   0 234
 ```
-
-

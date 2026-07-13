@@ -64,7 +64,6 @@ The following values correspond to the syntax shown alongside:
 ```
 ```apl
 
-
       ]Display ⎕AT 'myop' 'foo' 'util' 'util2'
 .→--------------------------------------------.
 ↓ .→------. .→-----------------.     .→---.   |
@@ -82,7 +81,6 @@ The following values correspond to the syntax shown alongside:
 '∊--------------------------------------------'
 ```
 ## Dyadic Use
-
 
 The dyadic form of `⎕AT` emulates APL2. It returns the same rank and shape result containing information that matches the APL2 implementation as closely as possible.
 

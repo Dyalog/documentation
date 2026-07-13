@@ -22,6 +22,3 @@ For details see [File Access Control](../../../programming-reference-guide/compo
  0 2073 16385
 31   ¯1     0
 ```
-
-
-
