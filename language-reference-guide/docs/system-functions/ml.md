@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Migration Level</span> <span class="command">⎕ML</span></h1>
+# <span>Migration Level</span> `⎕ML`
 
 
 

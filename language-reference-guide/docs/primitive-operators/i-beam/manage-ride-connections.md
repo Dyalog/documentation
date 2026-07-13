@@ -8,7 +8,7 @@ search:
   3502⌶
 </div>
 
-<h1 class="heading"><span class="name">Manage Ride Connections</span> <span class="command">R←3502⌶Y</span></h1>
+# <span>Manage Ride Connections</span> `R←3502⌶Y`{{key}}
 
 `3502⌶` gives control over Ride connections to the interpreter. More details about Ride can be found in the [Ride User Guide](https://dyalog.github.io/ride).
 

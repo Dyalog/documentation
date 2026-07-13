@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">TypeLibFile</span> <span class="right">Property</span></h1>
+# <span>TypeLibFile</span> <span>Property</span>
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Standard Error Action</span></h1>
+# Standard Error Action
 
 The standard system action in the event of an error or interrupt whilst executing an expression is to suspend execution and display an error report.  If necessary, the state indicator is cut back to a statement such that there is no halted locked function visible in the state indicator.
 

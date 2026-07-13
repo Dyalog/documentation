@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Index</span> <span class="right">Property</span></h1>
+# <span>Index</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/index-property.md)
 

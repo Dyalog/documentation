@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Restrictions</span></h1>
+# Restrictions
 
 - Dfns need not return a result. However even a non-result-returning expression will terminate the function, so you can't, for example, call a non-result-returning function from the middle of a dfn.
 - You can trace a dfn **only** if it is defined on more than one line. Otherwise it is executed atomically in the same way as an execute (`⍎`) expression. This deliberate restriction is intended to avoid the confusion caused by tracing a line and seeing nothing change on the screen.

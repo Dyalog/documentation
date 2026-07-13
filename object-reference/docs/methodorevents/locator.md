@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Locator</span> <span class="right">Event 80</span></h1>
+# <span>Locator</span> <span>Event 80</span>
 
 
 

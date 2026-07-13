@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">DateTimePicker</span> <span class="right">Object</span></h1>
+# <span>DateTimePicker</span> <span>Object</span>
 
 
 

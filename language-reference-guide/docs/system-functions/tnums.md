@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Thread Numbers</span> <span class="command">R←⎕TNUMS</span></h1>
+# <span>Thread Numbers</span> `R←⎕TNUMS`{{key}}
 
 
 

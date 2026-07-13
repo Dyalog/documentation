@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Section Statement</span> <span class="command">:Section</span></h1>
+# <span>Section Statement</span> `:Section`
 
 
 

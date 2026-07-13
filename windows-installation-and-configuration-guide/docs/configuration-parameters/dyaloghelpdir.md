@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">DyalogHelpDir</span></h1>
+# DyalogHelpDir
 
 This parameter specifies identifies the location of the HTML-based help that is used for a request for help (from the Help menu or pressing `F1`) from the Session. It may be:
 

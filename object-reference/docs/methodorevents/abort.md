@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Abort</span> <span class="right">Method 103</span></h1>
+# <span>Abort</span> <span>Method 103</span>
 
 
 

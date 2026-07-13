@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Expunge Object</span> <span class="command">{R}←⎕EX Y</span></h1>
+# <span>Expunge Object</span> `{R}←⎕EX Y`{{key}}
 
 
 

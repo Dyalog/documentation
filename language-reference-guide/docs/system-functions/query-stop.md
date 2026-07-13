@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Query Stop</span> <span class="command">R←⎕STOP Y</span></h1>
+# <span>Query Stop</span> `R←⎕STOP Y`{{key}}
 
 
 

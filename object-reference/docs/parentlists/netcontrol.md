@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">NetControl Parents</span></h1>
+# NetControl Parents
 
 |------------------------------------------|--------------------------------|----------------------------|
 |[Form](../objects/form.md)                |[Grid](../objects/grid.md)      |[Group](../objects/group.md)|

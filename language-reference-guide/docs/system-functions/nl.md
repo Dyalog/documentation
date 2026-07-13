@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Name List</span> <span class="command">R←{X}⎕NL Y</span></h1>
+# <span>Name List</span> `R←{X}⎕NL Y`{{key}}
 
 
 

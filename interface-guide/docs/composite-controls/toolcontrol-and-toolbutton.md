@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">The ToolControl and ToolButton Objects</span></h1>
+# The ToolControl and ToolButton Objects
 
 The ToolControl object is normally used in conjunction with ToolButtons, although it may also act as a parent for other objects, including a MenuBar.
 

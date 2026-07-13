@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Auxiliary Processors</span></h1>
+# Auxiliary Processors
 
 ## Introduction
 

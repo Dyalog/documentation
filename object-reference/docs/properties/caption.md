@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Caption</span> <span class="right">Property</span></h1>
+# <span>Caption</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/caption.md)
 

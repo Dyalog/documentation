@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ShowThumb</span> <span class="right">Property</span></h1>
+# <span>ShowThumb</span> <span>Property</span>
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GridDelete</span> <span class="right">Event 193</span></h1>
+# <span>GridDelete</span> <span>Event 193</span>
 
 
 

@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Maximum</span> <span class="command">R←X⌈Y</span></h1>
+# <span>Maximum</span> `R←X⌈Y`{{key}}
 
 
 

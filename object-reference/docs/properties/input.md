@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Input</span> <span class="right">Property</span></h1>
+# <span>Input</span> <span>Property</span>
 
 
 

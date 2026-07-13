@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Traditional Functions and Operators</span></h1>
+# Traditional Functions and Operators
 
 *Traditional* Functions and Operators are the original user-defined functions and operators that are part of the APL standard. They are referred to herein as *Traditional* or *TradFns* to distinguish them from Dfns and Dops which are unique to Dyalog.
 

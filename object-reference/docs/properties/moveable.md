@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Moveable</span> <span class="right">Property</span></h1>
+# <span>Moveable</span> <span>Property</span>
 
 
 

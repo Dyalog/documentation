@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Class Identifier (CLSID)</span></h1>
+# Class Identifier (CLSID)
 
 
 

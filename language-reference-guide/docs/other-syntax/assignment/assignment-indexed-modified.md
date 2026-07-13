@@ -7,7 +7,7 @@ search:
   ← gets
 </div>
 
-<h1 class="heading"><span class="name">Assignment (Indexed Modified)</span> <span class="command">{R}←X[I]f←Y</span></h1>
+# <span>Assignment (Indexed Modified)</span> `{R}←X[I]f←Y`{{key}}
 
 `f` may be any dyadic function which returns an explicit result.  `Y` may be any array whose items are appropriate to function `f`.  `X` must be the *name* of an existing array.  `I` must be a valid index specification.  The items of the indexed portion of `X` must be appropriate to function `f`.
 

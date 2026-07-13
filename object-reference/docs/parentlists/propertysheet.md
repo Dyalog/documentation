@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">PropertySheet Parents</span></h1>
+# PropertySheet Parents
 
 |----------------------------------------------|--------------------------------|------------------------------------|
 |[ActiveXControl](../objects/activexcontrol.md)|[Form](../objects/form.md)      |[OLEServer](../objects/oleserver.md)|

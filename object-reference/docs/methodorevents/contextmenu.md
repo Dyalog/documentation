@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ContextMenu</span> <span class="right">Event 410</span></h1>
+# <span>ContextMenu</span> <span>Event 410</span>
 
 [**Applies To**](../methodoreventapplies/contextmenu.md)
 

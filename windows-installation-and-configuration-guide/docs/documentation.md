@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Documentation</span></h1>
+# Documentation
 
 The documentation set for Dyalog is installed in the `help` sub-directory of the main Dyalog installation directory.
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Instances</span></h1>
+# Instances
 
 A Class is generally used as a blueprint or model from which one or more Instances of the Class are constructed. Note however that a class can have Shared members which can be used directly without first creating an instance.
 

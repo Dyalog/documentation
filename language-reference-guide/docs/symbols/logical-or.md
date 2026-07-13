@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Logical OR</span> <span class="command">∨</span></h1>
+# <span>Logical OR</span> `∨`
 
 Monadic Logical OR is not defined.
 

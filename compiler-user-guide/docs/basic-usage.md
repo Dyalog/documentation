@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Basic Usage</span></h1>
+# Basic Usage
 
 Theoretically (although there are some [restrictions](restrictions.md)), every defined function in a workspace can have a compiled bytecode form. This bytecode is saved and loaded as part of the workspace, and will be copied along with the function on [`⎕CY`](../../language-reference-guide/system-functions/cy) or [`)COPY`](../../language-reference-guide/system-commands/copy) or the [`⎕OR`](../../language-reference-guide/system-functions/or) of a compiled function.
 

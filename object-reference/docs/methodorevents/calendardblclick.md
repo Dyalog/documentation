@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">CalendarDblClick</span> <span class="right">Event 273</span></h1>
+# <span>CalendarDblClick</span> <span>Event 273</span>
 
 
 

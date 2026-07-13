@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">OLEClient Methods</span></h1>
+# OLEClient Methods
 
 |-----------------------------------------------------------|-------------------------------------------------------------|-----------------------------------------------------------|
 |[Browse](../methodorevents/browse.md)                      |[Detach](../methodorevents/detach.md)                        |[GetEventInfo](../methodorevents/geteventinfo.md)          |

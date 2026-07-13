@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Using an OLE Server</span></h1>
+# Using an OLE Server
 
 You can access an OLE Automation Server (also known as COM Server) using the OLEClient object. When you create an OLEClient, you specify the name of the Server as the ClassName property for the object.
 

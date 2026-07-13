@@ -7,7 +7,7 @@ search:
   ⎕STOP STOP
 </div>
 
-<h1 class="heading"><span class="name">Set Stop</span> <span class="command">{R}←X ⎕STOP Y</span></h1>
+# <span>Set Stop</span> `{R}←X ⎕STOP Y`{{key}}
 
 `Y` must be a simple character scalar or vector which is taken to be the name of a visible defined function or operator.  `X` must be a simple non-negative integer scalar or vector.  `R` is a simple integer vector of non-negative elements.  `X` identifies the numbers of lines in the function or operator named by `Y` on which a stop control is to be placed.  Numbers outside the range of line numbers in the function or operator (other than 0) are ignored.  The number 0 indicates that a stop control is to be placed immediately prior to exit from the function or operator.  If `X` is empty, all existing stop controls are cancelled.  The value of `X` is independent of `⎕IO`.
 

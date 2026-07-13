@@ -6,7 +6,7 @@ search:
   ⌹
 </div>
 
-<h1 class="heading"><span class="name">Matrix Inverse</span> <span class="command">R←⌹Y</span></h1>
+# <span>Matrix Inverse</span> `R←⌹Y`{{key}}
 
 
 

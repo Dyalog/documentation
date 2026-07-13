@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">URLHighlight</span></h1>
+# URLHighlight
 
 Specifies whether or not URLs and links are highlighted in Session and Edit windows. Its value is either 1 (highlight) or 0. The default is 0.
 

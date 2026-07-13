@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">About</span></h1>
+# About
 
 The _.NET Interface Guide_ describes the Dyalog interface to Microsoft .NET, the cross-platform (Microsoft Windows, Linux, and macOS) successor to Microsoft's .NET Framework. It does not attempt to explain the features of .NET, except in terms of their APL interfaces.
 

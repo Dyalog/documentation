@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Source</span> <span class="command">R←⎕SRC Y</span></h1>
+# <span>Source</span> `R←⎕SRC Y`{{key}}
 
 
 

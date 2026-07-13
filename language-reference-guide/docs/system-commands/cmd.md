@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Windows Command Processor</span> <span class="command">)CMD cmd</span></h1>
+# <span>Windows Command Processor</span> `)CMD cmd`
 
 This command allows Windows Command Processor or UNIX shell commands to be given from APL.  `)CMD` is a synonym of `)SH`.  Either command may be given in either environment (Windows or UNIX) with exactly the same effect.  `)CMD` is probably more natural for the Windows user.  This section describes the behaviour of `)CMD` and `)SH` under Windows.  See [Execute (UNIX) Command](sh.md) for a discussion of the behaviour of these commands under UNIX.
 

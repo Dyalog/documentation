@@ -34,6 +34,7 @@ plugins:
 extra:
   version_maj: 20
   version_majmin: 20.0
+  key: "[🛈](/key-to-notation)"
 markdown_extensions:
   - admonition
   - pymdownx.details

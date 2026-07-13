@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Grid</span> <span class="right">Object</span></h1>
+# <span>Grid</span> <span>Object</span>
 
 
 

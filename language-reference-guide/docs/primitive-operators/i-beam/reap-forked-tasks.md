@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Reap Forked Tasks</span> <span class="command">R←4002⌶Y</span></h1>
+# <span>Reap Forked Tasks</span> `R←4002⌶Y`{{key}}
 
 
 

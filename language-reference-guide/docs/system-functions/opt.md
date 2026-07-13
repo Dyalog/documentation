@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Variant</span> <span class="command">{R}←{X}(f ⎕OPT B)Y</span></h1>
+# <span>Variant</span> `{R}←{X}(f ⎕OPT B)Y`{{key}}
 
 
 

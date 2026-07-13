@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">AllowContextMenu</span> <span class="command">Property</span></h1>
+# <span>AllowContextMenu</span> `Property`
 
 |-----------|--------------------------------------------------------------|
 |Applies To:|[HTMLRenderer](https://help.dyalog.com/19.0/index.htm#GUI/Objects/HTMLRenderer.htm)|

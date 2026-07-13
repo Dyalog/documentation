@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">incorrect command</span></h1>
+# incorrect command
 
 
 

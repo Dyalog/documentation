@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">ListView Children</span></h1>
+# ListView Children
 
 |------------------------------------|------------------------------|------------------------------|
 |[Bitmap](../objects/bitmap.md)      |[Circle](../objects/circle.md)|[Cursor](../objects/cursor.md)|

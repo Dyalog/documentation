@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ExportedVars</span> <span class="right">Property</span></h1>
+# <span>ExportedVars</span> <span>Property</span>
 
 
 

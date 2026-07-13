@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">TipObj</span> <span class="right">Property</span></h1>
+# <span>TipObj</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/tipobj.md)
 

@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">cannot create name</span></h1>
+# cannot create name
 
 
 

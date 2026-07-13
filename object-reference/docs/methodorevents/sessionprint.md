@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">SessionPrint</span> <span class="right">Event 526</span></h1>
+# <span>SessionPrint</span> <span>Event 526</span>
 
 
 

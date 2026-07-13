@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">DockShowCaption</span> <span class="right">Property</span></h1>
+# <span>DockShowCaption</span> <span>Property</span>
 
 
 

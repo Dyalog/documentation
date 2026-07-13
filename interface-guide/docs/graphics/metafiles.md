@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Metafiles</span></h1>
+# Metafiles
 
 A Windows metafile is a mechanism for representing a picture as a collection of graphics commands. Once a metafile has been created, the picture that it represents can be drawn repeatedly from it. Metafiles are device-independent, so the picture can be reproduced on different devices. Unlike bitmaps, metafiles can be scaled accurately and are therefore particularly useful for passing graphical information between different applications. Note that some other applications only support *placeable* metafiles. See RealSize property for details.
 

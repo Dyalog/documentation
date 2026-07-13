@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">TipField Parents</span></h1>
+# TipField Parents
 
 |----------------------------------------------|------------------------------------|------------------------------------------|
 |[ActiveXControl](../objects/activexcontrol.md)|[CoolBand](../objects/coolband.md)  |[Form](../objects/form.md)                |

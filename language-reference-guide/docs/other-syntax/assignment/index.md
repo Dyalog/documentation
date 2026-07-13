@@ -7,7 +7,7 @@ search:
   ← gets
 </div>
 
-<h1 class="heading"><span class="name">Assignment</span> <span class="command">X←Y</span></h1>
+# <span>Assignment</span> `X←Y`{{key}}
 
 Assignment  allocates the result of the expression `Y` to the *name* or *names* in `X`.
 

@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Query Monitor</span> <span class="command">R←⎕MONITOR Y</span></h1>
+# <span>Query Monitor</span> `R←⎕MONITOR Y`{{key}}
 
 
 

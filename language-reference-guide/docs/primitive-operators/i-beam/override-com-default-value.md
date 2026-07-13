@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Override COM Default Value</span> <span class="command">R←{X}(2041⌶)Y</span></h1>
+# <span>Override COM Default Value</span> `R←{X}(2041⌶)Y`{{key}}
 
 
 

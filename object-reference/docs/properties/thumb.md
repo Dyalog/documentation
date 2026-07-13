@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Thumb</span> <span class="right">Property</span></h1>
+# <span>Thumb</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/thumb.md)
 

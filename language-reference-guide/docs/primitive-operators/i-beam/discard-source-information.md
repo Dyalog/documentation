@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Discard Source Information</span> <span class="command">R←5171⌶Y</span></h1>
+# <span>Discard Source Information</span> `R←5171⌶Y`{{key}}
 
 
 

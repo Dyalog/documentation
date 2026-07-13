@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Editing Classes</span></h1>
+# Editing Classes
 
 Between the `:Class` and `:EndClass` statements, you may insert any number of function bodies, Property definitions, and other elements. When you fix the Class Script from the editor, these items will be fixed inside the Class namespace.
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ColorChange</span> <span class="right">Event 430</span></h1>
+# <span>ColorChange</span> <span>Event 430</span>
 
 
 

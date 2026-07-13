@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Windows Presentation Foundation</span></h1>
+# Windows Presentation Foundation
 
 Windows Presentation Foundation (WPF) is a graphical system that includes a programmable Graphical User Interface. It is supplied as a set of Microsoft .NET assemblies, and is supported on all current Microsoft Windows platforms.
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Additional Interfaces</span></h1>
+# Additional Interfaces
 
 Most COM objects and their sub-objects provide information about their methods and properties through the IDispatch interface which is the normal interface used for OLE Automation. When you create an instance of an OLEClient object or an OCXClass object, Dyalog APL uses this interface to gain the information it requires.
 

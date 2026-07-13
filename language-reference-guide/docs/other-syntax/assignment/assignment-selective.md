@@ -7,7 +7,7 @@ search:
   ← gets
 </div>
 
-<h1 class="heading"><span class="name">Assignment (Selective)</span> <span class="command">(EXP X)←Y</span></h1>
+# <span>Assignment (Selective)</span> `(EXP X)←Y`{{key}}
 
 `X` is the *name* of a variable in the workspace, possibly modified by the indexing function `(EXP X[I])←Y`, see [Assignment (Indexed)](assignment-indexed.md).  `EXP` is an expression that **selects** elements of `X`.  `Y` is an array expression. The result of the expression `Y` is allocated to the elements of `X` selected by `EXP`. Note that `X` may refer to a single name only.
 

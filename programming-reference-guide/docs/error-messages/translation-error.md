@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">TRANSLATION ERROR</span> <span class="command">92</span></h1>
+# <span>TRANSLATION ERROR</span> `92`
 
 
 

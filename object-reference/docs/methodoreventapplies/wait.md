@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Wait Method</span></h1>
+# Wait Method
 
 |------------------------------------|------------------------------------------|--------------------------------------------|
 |[BrowseBox](../objects/browsebox.md)|[Clipboard](../objects/clipboard.md)      |[FileBox](../objects/filebox.md)            |

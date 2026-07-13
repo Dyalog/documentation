@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">LWidth</span> <span class="right">Property</span></h1>
+# <span>LWidth</span> <span>Property</span>
 
 
 

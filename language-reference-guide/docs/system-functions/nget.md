@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Read Text File</span> <span class="command">R←{X} ⎕NGET Y</span></h1>
+# <span>Read Text File</span> `R←{X} ⎕NGET Y`{{key}}
 
 
 

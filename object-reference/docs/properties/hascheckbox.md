@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">HasCheckBox</span> <span class="right">Property</span></h1>
+# <span>HasCheckBox</span> <span>Property</span>
 
 
 

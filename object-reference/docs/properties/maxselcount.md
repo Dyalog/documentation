@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">MaxSelCount</span> <span class="right">Property</span></h1>
+# <span>MaxSelCount</span> <span>Property</span>
 
 
 

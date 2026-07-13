@@ -7,7 +7,7 @@ search:
   ⎕S
 </div>
 
-<h1 class="heading"><span class="name">Search</span> <span class="command">R←{X}(A ⎕S B) Y</span></h1>
+# <span>Search</span> `R←{X}(A ⎕S B) Y`{{key}}
 
 See [Replace](r.md).
 

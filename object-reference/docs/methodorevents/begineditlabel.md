@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">BeginEditLabel</span> <span class="right">Event 300</span></h1>
+# <span>BeginEditLabel</span> <span>Event 300</span>
 
 
 

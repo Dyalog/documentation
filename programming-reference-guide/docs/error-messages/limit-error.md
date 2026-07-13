@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">LIMIT ERROR</span> <span class="command">10</span></h1>
+# <span>LIMIT ERROR</span> `10`
 
 
 

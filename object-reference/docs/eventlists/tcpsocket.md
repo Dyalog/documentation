@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">TCPSocket Events</span></h1>
+# TCPSocket Events
 
 |-------------------------------------------|---------------------------------------------|---------------------------------------------|
 |[Close](../methodorevents/close.md)        |[Create](../methodorevents/create.md)        |[TCPError](../methodorevents/tcperror.md)    |

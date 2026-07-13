@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">FieldType Property</span></h1>
+# FieldType Property
 
 |--------------------------------------|----------------------------------------------|--------------------------|
 |[ButtonEdit](../objects/buttonedit.md)|[DateTimePicker](../objects/datetimepicker.md)|[Edit](../objects/edit.md)|

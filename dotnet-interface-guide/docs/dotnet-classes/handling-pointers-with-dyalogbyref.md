@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Handling Pointers with Dyalog.ByRef</span></h1>
+# Handling Pointers with Dyalog.ByRef
 
 Certain .NET methods take parameters that are pointers, for example, the <code class="language-nonAPL">DivRem method</code> that is provided by the <code class="language-nonAPL">System.Math</code> class. This method performs an integer division, returning the quotient as its result, and the remainder in an address specified as a pointer by the calling program.
 

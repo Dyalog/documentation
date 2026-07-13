@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GolfService Example</span></h1>
+# GolfService Example
 
 The [GolfService Example Class](golfservice-example-class.md) illustrates the use of nested classes. [GolfService](golfservice-example-class.md) was originally developed as a Web Service for Dyalog.NET and is one of the samples distributed in samples\asp.net\webservices. This version has been reconstructed as a stand-alone APL Class.
 

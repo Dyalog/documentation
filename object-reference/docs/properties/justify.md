@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Justify</span> <span class="right">Property</span></h1>
+# <span>Justify</span> <span>Property</span>
 
 
 

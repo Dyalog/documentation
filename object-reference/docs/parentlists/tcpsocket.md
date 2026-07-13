@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">TCPSocket Parents</span></h1>
+# TCPSocket Parents
 
 |----------------------------------------------|------------------------------------|------------------------------------------|
 |[ActiveXControl](../objects/activexcontrol.md)|[Calendar](../objects/calendar.md)  |[CoolBand](../objects/coolband.md)        |

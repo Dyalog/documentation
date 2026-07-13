@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Latent Expression</span> <span class="command">⎕LX</span></h1>
+# <span>Latent Expression</span> `⎕LX`
 
 
 

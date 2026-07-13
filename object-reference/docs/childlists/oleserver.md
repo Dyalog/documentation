@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">OLEServer Children</span></h1>
+# OLEServer Children
 
 |----------------------------------|--------------------------------------------|------------------------------------|
 |[Bitmap](../objects/bitmap.md)    |[BrowseBox](../objects/browsebox.md)        |[Clipboard](../objects/clipboard.md)|

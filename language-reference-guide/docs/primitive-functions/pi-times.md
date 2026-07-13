@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Pi Times</span> <span class="command">R←○Y</span></h1>
+# <span>Pi Times</span> `R←○Y`{{key}}
 
 
 

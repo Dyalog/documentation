@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">UseXCV</span></h1>
+# UseXCV
 
 This Boolean parameter specifies how the commonly used keystrokes for copy (ctrl+c), cut Ctrl+x) and paste (ctrl+v) are processed.
 

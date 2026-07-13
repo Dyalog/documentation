@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Global & Local Names</span></h1>
+# Global & Local Names
 
 The following names, if present, are local to the defined operation:
 

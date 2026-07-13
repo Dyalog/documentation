@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">File History</span> <span class="command">R←⎕FHIST Y</span></h1>
+# <span>File History</span> `R←⎕FHIST Y`{{key}}
 
 
 ## Access code 16384

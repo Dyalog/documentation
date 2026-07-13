@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">LastError</span> <span class="right">Property</span></h1>
+# <span>LastError</span> <span>Property</span>
 
 
 

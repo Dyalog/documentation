@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SALT Tab</span></h1>
+# SALT Tab
 
 SALT is the Simple APL Library Toolkit, a simple source code management system for Classes and script-based Namespaces. SPICE uses SALT to manage development tools which "plug in" to the Dyalog session
 

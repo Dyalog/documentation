@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Native File Read</span> <span class="command">R←⎕NREAD Y</span></h1>
+# <span>Native File Read</span> `R←⎕NREAD Y`{{key}}
 
 
 

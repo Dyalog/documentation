@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ItemGroupMetrics</span> <span class="right">Property</span></h1>
+# <span>ItemGroupMetrics</span> <span>Property</span>
 
 
 

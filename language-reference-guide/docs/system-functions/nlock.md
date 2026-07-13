@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Native File Lock</span> <span class="command">{R}←X ⎕NLOCK Y</span></h1>
+# <span>Native File Lock</span> `{R}←X ⎕NLOCK Y`{{key}}
 
 
 

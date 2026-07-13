@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Bitmap</span> <span class="right">Object</span></h1>
+# <span>Bitmap</span> <span>Object</span>
 
 
 

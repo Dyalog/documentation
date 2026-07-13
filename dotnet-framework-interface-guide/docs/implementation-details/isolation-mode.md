@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Isolation Mode</span></h1>
+# Isolation Mode
 
 For each application that uses a class written in Dyalog, at least one copy of the development or run-time version of the Dyalog DLL will be started to host and execute the appropriate APL code. Each of these _engines_ will have an APL workspace associated with it, and this workspace will contain classes and instances of these classes. The number of engines (and associated workspaces) that are started depends on the _isolation mode_ that was selected when the APL assemblies used by the application were generated. When running under IIS, it is also possible to specify the isolation mode by setting the <code class="language-nonAPL">DyalogIsolationMode</code> key to the appropriate value in the <code class="language-nonAPL">AppSettings</code> part of the **web.config** file for the web application.
 

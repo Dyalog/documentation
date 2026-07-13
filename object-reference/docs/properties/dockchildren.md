@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">DockChildren</span> <span class="right">Property</span></h1>
+# <span>DockChildren</span> <span>Property</span>
 
 
 

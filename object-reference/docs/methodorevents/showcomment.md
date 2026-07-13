@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ShowComment</span> <span class="right">Event 223</span></h1>
+# <span>ShowComment</span> <span>Event 223</span>
 
 
 

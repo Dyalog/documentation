@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">CornerTitleBCol</span> <span class="right">Property</span></h1>
+# <span>CornerTitleBCol</span> <span>Property</span>
 
 
 

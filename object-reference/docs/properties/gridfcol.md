@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GridFCol</span> <span class="right">Property</span></h1>
+# <span>GridFCol</span> <span>Property</span>
 
 
 

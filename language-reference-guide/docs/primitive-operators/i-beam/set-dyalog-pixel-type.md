@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Set Dyalog Pixel Type</span> <span class="command">R←2035⌶Y</span></h1>
+# <span>Set Dyalog Pixel Type</span> `R←2035⌶Y`{{key}}
 
 
 

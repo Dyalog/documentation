@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Configuration Parameters</span></h1>
+# Configuration Parameters
 
 Dyalog can be customised using configuration parameters. These can be set in various ways; if a configuration parameter is set in multiple places the following descending order of precedence applies:
 

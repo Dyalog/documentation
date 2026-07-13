@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ToolboxBitmap</span> <span class="right">Property</span></h1>
+# <span>ToolboxBitmap</span> <span>Property</span>
 
 
 

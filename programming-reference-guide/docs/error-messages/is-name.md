@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">is name</span></h1>
+# is name
 
 
 

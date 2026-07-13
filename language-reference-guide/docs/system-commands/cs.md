@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Change Space</span> <span class="command">)CS {nm}</span></h1>
+# <span>Change Space</span> `)CS {nm}`
 
 
 

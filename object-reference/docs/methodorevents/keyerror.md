@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">KeyError</span> <span class="right">Event 23</span></h1>
+# <span>KeyError</span> <span>Event 23</span>
 
 
 

@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">ButtonEdit Children</span></h1>
+# ButtonEdit Children
 
 |------------------------------------|--------------------------------|----------------------------|
 |[Circle](../objects/circle.md)      |[Ellipse](../objects/ellipse.md)|[Font](../objects/font.md)  |

@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Save Continuation</span> <span class="command">)CONTINUE</span></h1>
+# <span>Save Continuation</span> `)CONTINUE`
 
 
 

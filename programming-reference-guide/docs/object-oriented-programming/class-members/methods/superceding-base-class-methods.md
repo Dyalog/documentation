@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Superseding Base Class Methods</span></h1>
+# Superseding Base Class Methods
 
 Normally, a Method defined in a higher Class supersedes the Method of the same name that is defined in its Base Class, but only for calls made from above or within the higher Class itself (or an Instance of the higher Class). The base method remains available **in the Base Class** and is invoked by a reference to it *from within the Base Class*. This behaviour can be altered using the Overridable and Override key words in the `:Access` statement but only applies to Instance Methods.
 

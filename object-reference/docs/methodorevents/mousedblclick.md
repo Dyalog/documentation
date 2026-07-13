@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">MouseDblClick</span> <span class="right">Event 5</span></h1>
+# <span>MouseDblClick</span> <span>Event 5</span>
 
 [**Applies To**](../methodoreventapplies/mousedblclick.md)
 

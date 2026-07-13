@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Dops</span></h1>
+# Dops
 
 The operator equivalent of a dfn is distinguished by the presence of  either of the compound symbols `⍺⍺` or `⍵⍵` anywhere in its definition.
 

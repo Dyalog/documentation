@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">ToolBar Children</span></h1>
+# ToolBar Children
 
 |----------------------------------------|------------------------------------|----------------------------------------------|
 |[Bitmap](../objects/bitmap.md)          |[BrowseBox](../objects/browsebox.md)|[Button](../objects/button.md)                |

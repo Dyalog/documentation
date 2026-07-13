@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">AnimStop</span> <span class="right">Method 293</span></h1>
+# <span>AnimStop</span> <span>Method 293</span>
 
 
 

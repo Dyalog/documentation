@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SetSpinnerText</span> <span class="right">Event 421</span></h1>
+# <span>SetSpinnerText</span> <span>Event 421</span>
 
 
 

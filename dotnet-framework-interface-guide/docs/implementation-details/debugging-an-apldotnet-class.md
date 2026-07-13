@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Debugging an APL .NET Class</span></h1>
+# Debugging an APL .NET Class
 
 All APL .NET objects are executed by the Dyalog DLL. The full development version of the Dyalog DLL contains all of the development and debug facilities of the APL Session, including the **Editor** windows and **Trace** window. The run-time version contains no debugging facilities. The choice of which version of the Dyalog DLL is used is made when the assembly is exported from APL using the **File|Export** menu or compiled using **dyalogc.exe**:
 

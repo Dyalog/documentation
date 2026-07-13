@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ThumbRect</span> <span class="right">Property</span></h1>
+# <span>ThumbRect</span> <span>Property</span>
 
 
 

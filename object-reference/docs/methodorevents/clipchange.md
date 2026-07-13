@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ClipChange</span> <span class="right">Event 120</span></h1>
+# <span>ClipChange</span> <span>Event 120</span>
 
 
 

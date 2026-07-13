@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">NewLine</span> <span class="right">Property</span></h1>
+# <span>NewLine</span> <span>Property</span>
 
 
 

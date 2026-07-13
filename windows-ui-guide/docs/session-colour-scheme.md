@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">The Session Colour Scheme</span></h1>
+# The Session Colour Scheme
 
 Within the Development Environment, different colours are used to identify different types of information. These colours are normally defined by registry entries and may be changed using the Colour Configuration dialog box as described later in this chapter.
 

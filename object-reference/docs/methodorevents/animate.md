@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Animate</span> <span class="right">Method 29</span></h1>
+# <span>Animate</span> <span>Method 29</span>
 
 [**Applies To**](../methodoreventapplies/animate.md)
 

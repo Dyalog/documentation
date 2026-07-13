@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Lock Definition</span> <span class="command">{R}←{X}⎕LOCK Y</span></h1>
+# <span>Lock Definition</span> `{R}←{X}⎕LOCK Y`{{key}}
 
 
 

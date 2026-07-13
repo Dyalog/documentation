@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Start Unix Auxiliary Processor</span> <span class="command">{R}←X ⎕SH Y</span></h1>
+# <span>Start Unix Auxiliary Processor</span> `{R}←X ⎕SH Y`{{key}}
 
 
 

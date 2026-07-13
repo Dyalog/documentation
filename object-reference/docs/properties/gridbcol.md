@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GridBCol</span> <span class="right">Property</span></h1>
+# <span>GridBCol</span> <span>Property</span>
 
 
 

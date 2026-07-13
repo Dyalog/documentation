@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">FirstDay</span> <span class="right">Property</span></h1>
+# <span>FirstDay</span> <span>Property</span>
 
 
 

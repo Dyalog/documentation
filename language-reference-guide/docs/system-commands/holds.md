@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Display Held Tokens</span> <span class="command">)HOLDS</span></h1>
+# <span>Display Held Tokens</span> `)HOLDS`
 
 
 

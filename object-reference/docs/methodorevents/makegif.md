@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">MakeGIF</span> <span class="right">Method 261</span></h1>
+# <span>MakeGIF</span> <span>Method 261</span>
 
 
 

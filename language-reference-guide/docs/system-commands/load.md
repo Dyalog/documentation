@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Load Workspace</span> <span class="command">)LOAD {ws}</span></h1>
+# <span>Load Workspace</span> `)LOAD {ws}`
 
 
 

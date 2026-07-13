@@ -7,6 +7,6 @@ search:
   reduce
 </div>
 
-<h1 class="heading"><span class="name">Reduce First</span> <span class="command">R←f⌿Y</span></h1>
+# <span>Reduce First</span> `R←f⌿Y`{{key}}
 
 The form `R←f⌿Y` implies reduction along the first axis of `Y`. See [Reduce](../reduce/index.md) above.

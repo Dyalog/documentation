@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Initialising Fields</span></h1>
+# Initialising Fields
 
 A Field may be assigned an initial value. This can be specified by an arbitrary expression that is executed when the Class is fixed by the Editor or by `⎕FIX`.
 

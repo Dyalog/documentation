@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SelectionBorderWidth</span> <span class="right">Property</span></h1>
+# <span>SelectionBorderWidth</span> <span>Property</span>
 
 
 

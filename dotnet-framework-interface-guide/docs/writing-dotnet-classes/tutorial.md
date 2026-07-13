@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Tutorial</span></h1>
+# Tutorial
 
 !!! Legacy "Legacy"
     This tutorial was originally designed (for Dyalog v10.0) to be exercised in a console window, with the user invoking the C# compiler directly using a command-line interface. It was originally envisaged to be run within the **[DYALOG]\Samples\aplclasses\\** directory, but this directory is now read-only. In addition, dependent Dyalog DLLs must now reside in the same directory as the host program. The tutorial has, therefore, been re-factored to use command line tools in a writeable directory.

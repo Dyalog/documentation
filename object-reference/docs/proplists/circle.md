@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Circle Properties</span></h1>
+# Circle Properties
 
 |-------------------------------------------|---------------------------------------|-------------------------------------------|
 |[Type](../properties/type.md)              |[Points](../properties/points.md)      |[Radius](../properties/radius.md)          |

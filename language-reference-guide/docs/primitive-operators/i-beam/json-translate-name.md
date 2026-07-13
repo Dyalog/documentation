@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">JSON Translate Name</span> <span class="command">R←X(7162⌶)Y</span></h1>
+# <span>JSON Translate Name</span> `R←X(7162⌶)Y`{{key}}
 
 
 

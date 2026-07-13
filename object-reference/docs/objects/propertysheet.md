@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">PropertySheet</span> <span class="right">Object</span></h1>
+# <span>PropertySheet</span> <span>Object</span>
 
 
 

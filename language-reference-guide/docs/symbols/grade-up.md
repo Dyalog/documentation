@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Grade Up</span> <span class="command">⍋</span></h1>
+# <span>Grade Up</span> `⍋`
 
 Monadic Grade Up means
 [Grade Up](../primitive-functions/grade-up.md)

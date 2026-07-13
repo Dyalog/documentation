@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Factorial</span> <span class="command">R←!Y</span></h1>
+# <span>Factorial</span> `R←!Y`{{key}}
 
 
 

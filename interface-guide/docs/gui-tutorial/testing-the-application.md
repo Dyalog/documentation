@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Testing the Application</span></h1>
+# Testing the Application
 
 Before we test our application, it would be a good idea to `)SAVE` the workspace. If you remember, the `QUIT` callback calls `⎕OFF`, so if we don't want to lose our work...
 ```apl

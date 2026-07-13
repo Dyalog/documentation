@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Bitmap Methods</span></h1>
+# Bitmap Methods
 
 |---------------------------------------|-----------------------------------------|-----------------------------------------------|
 |[Detach](../methodorevents/detach.md)  |[FileRead](../methodorevents/fileread.md)|[FileWrite](../methodorevents/filewrite.md)    |

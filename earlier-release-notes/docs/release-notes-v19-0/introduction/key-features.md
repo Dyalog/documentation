@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Key Features</span></h1>
+# Key Features
 
 ## Upgrading from Version 17.1 to Version 19.0
 

@@ -6,7 +6,7 @@ search:
   ⍎ execute
 </div>
 
-<h1 class="heading"><span class="name">Dyadic Execute</span> <span class="command">R←X⍎Y</span></h1>
+# <span>Dyadic Execute</span> `R←X⍎Y`{{key}}
 
 !!! Warning "Warning"
     If the right argument to _dyadic execute_ could include user input, then there is a risk to data and systems. To reduce this risk, a system function might be more appropriate than the _dyadic execute_ function. For example:

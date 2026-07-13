@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">MultiColumn Property</span></h1>
+# MultiColumn Property
 
 |--------------------------|------|------|
 |[List](../objects/list.md)|&nbsp;|&nbsp;|

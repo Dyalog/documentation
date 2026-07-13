@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">APL Exit Codes</span></h1>
+# APL Exit Codes
 
 When APL or a bound .EXE terminates, it returns an exit code to the calling environment. If APL is started from a desktop icon, the return code is ignored. However, if APL is started from a script (UNIX) or a command processor, the exit code is available and may be used to determine whether or not to continue with other processing tasks. The return codes are:
 

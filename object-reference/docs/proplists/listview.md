@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">ListView Properties</span></h1>
+# ListView Properties
 
 |-----------------------------------------------------------|-----------------------------------------------|-----------------------------------------------------|
 |[Type](../properties/type.md)                              |[Items](../properties/items.md)                |[Posn](../properties/posn.md)                        |

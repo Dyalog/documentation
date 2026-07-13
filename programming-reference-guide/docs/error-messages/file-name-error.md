@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">FILE NAME ERROR</span> <span class="command">22</span></h1>
+# <span>FILE NAME ERROR</span> `22`
 
 
 

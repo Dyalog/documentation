@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">HOLD ERROR</span> <span class="command">12</span></h1>
+# <span>HOLD ERROR</span> `12`
 
 
 

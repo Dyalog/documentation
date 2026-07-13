@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Space Indicator</span> <span class="command">R←⎕RSI</span></h1>
+# <span>Space Indicator</span> `R←⎕RSI`{{key}}
 
 
 

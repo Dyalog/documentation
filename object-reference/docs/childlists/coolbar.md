@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">CoolBar Children</span></h1>
+# CoolBar Children
 
 |----------------------------------|------------------------------------|--------------------------|
 |[CoolBand](../objects/coolband.md)|[ImageList](../objects/imagelist.md)|[Menu](../objects/menu.md)|

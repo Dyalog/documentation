@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Sample Probability Distribution</span> <span class="command">R←X(16808⌶)Y</span></h1>
+# <span>Sample Probability Distribution</span> `R←X(16808⌶)Y`{{key}}
 
 
 

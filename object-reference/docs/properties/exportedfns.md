@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ExportedFns</span> <span class="right">Property</span></h1>
+# <span>ExportedFns</span> <span>Property</span>
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">TCPError</span> <span class="right">Event 370</span></h1>
+# <span>TCPError</span> <span>Event 370</span>
 
 
 

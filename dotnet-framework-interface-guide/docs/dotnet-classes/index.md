@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">.NET Classes</span></h1>
+# .NET Classes
 
 .NET classes are implemented as part of the Common Type System. _Types_ include interfaces, value types, and classes. The .NET Framework provides built-in primitive types as well as higher-level types that are useful in building applications.
 

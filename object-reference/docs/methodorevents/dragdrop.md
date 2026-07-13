@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">DragDrop</span> <span class="right">Event 11</span></h1>
+# <span>DragDrop</span> <span>Event 11</span>
 
 [**Applies To**](../methodoreventapplies/dragdrop.md)
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">PrintRange</span> <span class="right">Property</span></h1>
+# <span>PrintRange</span> <span>Property</span>
 
 
 

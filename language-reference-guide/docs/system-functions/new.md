@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">New Instance</span> <span class="command">R←⎕NEW Y</span></h1>
+# <span>New Instance</span> `R←⎕NEW Y`{{key}}
 
 
 

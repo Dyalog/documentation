@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Print Width</span> <span class="command">⎕PW</span></h1>
+# <span>Print Width</span> `⎕PW`
 
 
 

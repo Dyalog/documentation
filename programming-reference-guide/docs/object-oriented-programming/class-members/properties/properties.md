@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Properties</span></h1>
+# Properties
 
 A Property behaves in a very similar way to an ordinary APL variable. To obtain the value of a Property, you simply reference its name. To change the value of a Property, you assign a new value to the name.
 

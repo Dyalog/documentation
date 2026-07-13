@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">MenuBar Properties</span></h1>
+# MenuBar Properties
 
 |-------------------------------------------|-----------------------------------------|---------------------------------------|
 |[Type](../properties/type.md)              |[Visible](../properties/visible.md)      |[Event](../properties/event.md)        |

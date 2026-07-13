@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">OLEQueryInterface</span> <span class="right">Method 543</span></h1>
+# <span>OLEQueryInterface</span> <span>Method 543</span>
 
 
 

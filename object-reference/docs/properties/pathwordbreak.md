@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">PathWordBreak</span> <span class="right">Property</span></h1>
+# <span>PathWordBreak</span> <span>Property</span>
 
 
 

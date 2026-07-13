@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Transpose (Monadic)</span> <span class="command">R←⍉Y</span></h1>
+# <span>Transpose (Monadic)</span> `R←⍉Y`{{key}}
 
 
 

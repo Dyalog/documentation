@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Window Child Names</span> <span class="command">R←{X}⎕WN Y</span></h1>
+# <span>Window Child Names</span> `R←{X}⎕WN Y`{{key}}
 
 
 

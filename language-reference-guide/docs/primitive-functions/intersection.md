@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Intersection</span> <span class="command">R←X∩Y</span></h1>
+# <span>Intersection</span> `R←X∩Y`{{key}}
 
 
 

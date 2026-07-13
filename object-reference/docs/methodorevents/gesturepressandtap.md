@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GesturePressAndTap</span> <span class="right">Event 497</span></h1>
+# <span>GesturePressAndTap</span> <span>Event 497</span>
 
 [**Applies To**](../methodoreventapplies/gesturepressandtap.md)
 

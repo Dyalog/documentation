@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Temporary Directory</span> <span class="command">R←739⌶Y</span></h1>
+# <span>Temporary Directory</span> `R←739⌶Y`{{key}}
 
 
 

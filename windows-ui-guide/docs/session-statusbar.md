@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">The Session Status Bar</span></h1>
+# The Session Status Bar
 
 The session status bar is represented by two CoolBands each of which contains a StatusBar object. There are a number of StatusFields as illustrated below. Your own status bar may be configured differently.
 

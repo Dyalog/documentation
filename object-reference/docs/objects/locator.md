@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Locator</span> <span class="right">Object</span></h1>
+# <span>Locator</span> <span>Object</span>
 
 
 

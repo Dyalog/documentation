@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Copying Code from the Dyalog Session</span></h1>
+# Copying Code from the Dyalog Session
 
 You might find it easy to write APL code using the Dyalog Session's function/class editor, or you might already have code in a workspace that you want to copy into an APL Source file. In either case, you can transfer code from the Session into your editor (for example, Notepad) using the clipboard.
 

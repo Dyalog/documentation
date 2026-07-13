@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GridKeyPress</span> <span class="right">Event 24</span></h1>
+# <span>GridKeyPress</span> <span>Event 24</span>
 
 
 

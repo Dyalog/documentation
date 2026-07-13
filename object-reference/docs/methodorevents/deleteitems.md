@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">DeleteItems</span> <span class="right">Method 309</span></h1>
+# <span>DeleteItems</span> <span>Method 309</span>
 
 
 

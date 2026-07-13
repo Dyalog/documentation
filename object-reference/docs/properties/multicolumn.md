@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">MultiColumn</span> <span class="right">Property</span></h1>
+# <span>MultiColumn</span> <span>Property</span>
 
 
 

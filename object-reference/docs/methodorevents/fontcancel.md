@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">FontCancel</span> <span class="right">Event 242</span></h1>
+# <span>FontCancel</span> <span>Event 242</span>
 
 [**Applies To**](../methodoreventapplies/fontcancel.md)
 

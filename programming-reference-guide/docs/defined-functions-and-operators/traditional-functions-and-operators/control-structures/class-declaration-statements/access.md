@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">:Access Statement</span></h1>
+# :Access Statement
 
 ```apl
 :Access <Private|Public><Instance|Shared><Overridable>

@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Copy Workspace</span> <span class="command">)COPY {ws {nms}}</span></h1>
+# <span>Copy Workspace</span> `)COPY {ws {nms}}`
 
 
 

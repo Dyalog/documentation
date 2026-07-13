@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ToolBar</span> <span class="right">Object</span></h1>
+# <span>ToolBar</span> <span>Object</span>
 
 
 

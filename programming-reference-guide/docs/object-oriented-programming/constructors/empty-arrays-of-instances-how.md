@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Empty Arrays of Instances: How?</span></h1>
+# Empty Arrays of Instances: How?
 
 To cater for the need to handle empty arrays of Instances as easily as non-empty arrays, a reference to an empty array of Class Instances is handled in a special way.
 

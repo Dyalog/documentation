@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">DuplicateRow</span> <span class="right">Method 177</span></h1>
+# <span>DuplicateRow</span> <span>Method 177</span>
 
 
 

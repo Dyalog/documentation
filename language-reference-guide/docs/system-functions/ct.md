@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Comparison Tolerance</span> <span class="command">⎕CT</span></h1>
+# <span>Comparison Tolerance</span> `⎕CT`
 
 
 

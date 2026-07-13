@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">warning label name present</span></h1>
+# warning label name present
 
 
 

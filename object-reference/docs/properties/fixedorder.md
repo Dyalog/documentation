@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">FixedOrder</span> <span class="right">Property</span></h1>
+# <span>FixedOrder</span> <span>Property</span>
 
 
 

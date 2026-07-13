@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Floating-Point Representation</span> <span class="command">⎕FR</span></h1>
+# <span>Floating-Point Representation</span> `⎕FR`
 
 
 

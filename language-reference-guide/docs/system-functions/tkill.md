@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Kill Thread</span> <span class="command">{R}←{X}⎕TKILL Y</span></h1>
+# <span>Kill Thread</span> `{R}←{X}⎕TKILL Y`{{key}}
 
 
 

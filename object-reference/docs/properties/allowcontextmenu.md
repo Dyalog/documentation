@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">AllowContextMenu</span> <span class="right">Property</span></h1>
+# <span>AllowContextMenu</span> <span>Property</span>
 
 **Applies To:** [HTMLRenderer](../objects/htmlrenderer.md)
 

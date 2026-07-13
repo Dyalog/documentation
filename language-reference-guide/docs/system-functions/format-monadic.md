@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Format (Monadic)</span> <span class="command">R←⎕FMT Y</span></h1>
+# <span>Format (Monadic)</span> `R←⎕FMT Y`{{key}}
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ColLineTypes</span> <span class="right">Property</span></h1>
+# <span>ColLineTypes</span> <span>Property</span>
 
 
 

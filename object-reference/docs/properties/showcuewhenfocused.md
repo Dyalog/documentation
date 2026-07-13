@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ShowCueWhenFocused</span> <span class="right">Property</span></h1>
+# <span>ShowCueWhenFocused</span> <span>Property</span>
 
 
 

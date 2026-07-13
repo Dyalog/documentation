@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">AnimStarted</span> <span class="right">Event 294</span></h1>
+# <span>AnimStarted</span> <span>Event 294</span>
 
 
 

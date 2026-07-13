@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">CancelToClose</span> <span class="right">Method 367</span></h1>
+# <span>CancelToClose</span> <span>Method 367</span>
 
 
 

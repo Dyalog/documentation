@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Workspace Size</span></h1>
+# Workspace Size
 
 By default, there is no limit on the size of the workspace used by the Dyalog DLL, and it will grow (and shrink) according to user demand.
 

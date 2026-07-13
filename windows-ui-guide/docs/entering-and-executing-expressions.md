@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Entering and Executing Expressions</span></h1>
+# Entering and Executing Expressions
 
 ## Introduction
 

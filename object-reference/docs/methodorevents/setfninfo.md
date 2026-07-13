@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SetFnInfo</span> <span class="right">Method 545</span></h1>
+# <span>SetFnInfo</span> <span>Method 545</span>
 
 
 

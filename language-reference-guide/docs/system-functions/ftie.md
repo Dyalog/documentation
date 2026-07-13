@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Exclusive File Tie</span> <span class="command">{R}←X ⎕FTIE Y</span></h1>
+# <span>Exclusive File Tie</span> `{R}←X ⎕FTIE Y`{{key}}
 
 
 ## Access code 2

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Locating .NET Classes and Assemblies</span></h1>
+# Locating .NET Classes and Assemblies
 
 .NET assemblies and the classes they contain are generally self-contained independent entities (although they can be based upon classes in other assemblies). This means that a class can be installed by copying the assembly file onto hard disk and uninstalled by erasing the file.
 

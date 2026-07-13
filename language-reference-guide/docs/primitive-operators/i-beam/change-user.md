@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Change User</span> <span class="command">R←4001⌶Y</span></h1>
+# <span>Change User</span> `R←4001⌶Y`{{key}}
 
 
 

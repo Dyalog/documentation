@@ -6,7 +6,7 @@ search:
   ⍳ iota interval
 </div>
 
-<h1 class="heading"><span class="name">Index Generator</span> <span class="command">R←⍳Y</span></h1>
+# <span>Index Generator</span> `R←⍳Y`{{key}}
 
 
 

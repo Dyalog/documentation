@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">PrintToPDF</span> <span class="right">Method 845</span></h1>
+# <span>PrintToPDF</span> <span>Method 845</span>
 
 
 

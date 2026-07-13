@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SetWizard</span> <span class="right">Event 365</span></h1>
+# <span>SetWizard</span> <span>Event 365</span>
 
 
 

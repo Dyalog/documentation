@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Collections</span></h1>
+# Collections
 
 A collection is a special type of object that represents a set of other objects. Collections are typically implemented as properties. For example, the Excel Sheet object has a property named Sheets whose value is a collection object that represents a set of worksheets. Collections typically have a property called Count, which tells you how many objects there are, and a Default Property named Item that provides access to each member of the set. Item typically accepts a number or a name as an index and returns a reference to an object.
 

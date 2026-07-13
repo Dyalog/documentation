@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Configuring an out-of-process OLEServer for DCOM</span></h1>
+# Configuring an out-of-process OLEServer for DCOM
 
 ## Introduction
 

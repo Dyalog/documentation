@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">While Statement</span> <span class="command">:While bexp</span></h1>
+# <span>While Statement</span> `:While bexp`
 
 
 

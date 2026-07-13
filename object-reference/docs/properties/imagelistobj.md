@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ImageListObj</span> <span class="right">Property</span></h1>
+# <span>ImageListObj</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/imagelistobj.md)
 

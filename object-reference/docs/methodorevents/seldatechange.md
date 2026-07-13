@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SelDateChange</span> <span class="right">Event 265</span></h1>
+# <span>SelDateChange</span> <span>Event 265</span>
 
 
 

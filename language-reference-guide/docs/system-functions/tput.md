@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Put Tokens</span> <span class="command">{R}←{X} ⎕TPUT Y</span></h1>
+# <span>Put Tokens</span> `{R}←{X} ⎕TPUT Y`{{key}}
 
 
 

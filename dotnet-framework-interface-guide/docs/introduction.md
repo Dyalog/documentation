@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Introduction</span></h1>
+# Introduction
 
 Dyalog's .NET Framework Interface features include:
 

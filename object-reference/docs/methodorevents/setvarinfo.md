@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SetVarInfo</span> <span class="right">Method 546</span></h1>
+# <span>SetVarInfo</span> <span>Method 546</span>
 
 
 

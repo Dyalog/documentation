@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Grade Down</span> <span class="command">R←⍒Y</span></h1>
+# <span>Grade Down</span> `R←⍒Y`{{key}}
 
 
 

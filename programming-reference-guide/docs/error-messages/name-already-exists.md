@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Name already exists</span></h1>
+# Name already exists
 
 
 

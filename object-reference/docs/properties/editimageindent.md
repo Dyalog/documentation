@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">EditImageIndent</span> <span class="right">Property</span></h1>
+# <span>EditImageIndent</span> <span>Property</span>
 
 
 

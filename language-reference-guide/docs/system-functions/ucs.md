@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Unicode Convert</span> <span class="command">R←{X} ⎕UCS Y</span></h1>
+# <span>Unicode Convert</span> `R←{X} ⎕UCS Y`{{key}}
 
 
 

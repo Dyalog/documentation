@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Border</span> <span class="right">Property</span></h1>
+# <span>Border</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/border.md)
 

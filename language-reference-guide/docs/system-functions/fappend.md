@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">File Append Component</span> <span class="command">{R}←X ⎕FAPPEND Y</span></h1>
+# <span>File Append Component</span> `{R}←X ⎕FAPPEND Y`{{key}}
 
 
 ## Access code 8

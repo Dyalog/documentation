@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">File Explorer Integration</span></h1>
+# File Explorer Integration
 
 ## File Associations
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Browsing Classes</span></h1>
+# Browsing Classes
 
 Classes are represented by ![](img/ws-explorer-class-icon.png) icons. The picture below shows 3 classes: `Bird`, `Parrot` and `DomesticParrot`.
 

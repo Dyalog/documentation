@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Spin</span> <span class="right">Event 420</span></h1>
+# <span>Spin</span> <span>Event 420</span>
 
 
 

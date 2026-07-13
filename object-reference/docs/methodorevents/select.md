@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Select</span> <span class="right">Event 30</span></h1>
+# <span>Select</span> <span>Event 30</span>
 
 [**Applies To**](../methodoreventapplies/select.md)
 

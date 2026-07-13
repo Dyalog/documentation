@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ExitApp</span> <span class="right">Event 132</span></h1>
+# <span>ExitApp</span> <span>Event 132</span>
 
 
 

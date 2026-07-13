@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">WeekNumbers</span> <span class="right">Property</span></h1>
+# <span>WeekNumbers</span> <span>Property</span>
 
 
 

@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Account Name</span> <span class="command">R←⎕AN</span></h1>
+# <span>Account Name</span> `R←⎕AN`{{key}}
 
 
 

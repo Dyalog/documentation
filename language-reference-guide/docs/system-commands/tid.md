@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Thread Identity</span> <span class="command">)TID {tid}</span></h1>
+# <span>Thread Identity</span> `)TID {tid}`
 
 
 

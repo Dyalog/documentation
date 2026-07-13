@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Status Window</span></h1>
+# Status Window
 
 The Status window is used to display system messages and supplementary information. These include the operations that take place when you register an OLEServer or ActiveXControl.
 

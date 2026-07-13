@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Example: The SimpleCtl Control</span></h1>
+# Example: The SimpleCtl Control
 
 The `SimpleCtl` class is:
 ```apl

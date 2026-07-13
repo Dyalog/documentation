@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Upstile</span> <span class="command">⌈</span></h1>
+# <span>Upstile</span> `⌈`
 
 Monadic Upstile means
 [Ceiling](../primitive-functions/ceiling.md)

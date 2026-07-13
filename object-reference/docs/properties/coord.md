@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Coord</span> <span class="right">Property</span></h1>
+# <span>Coord</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/coord.md)
 

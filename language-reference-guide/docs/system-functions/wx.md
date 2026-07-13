@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Window Expose</span> <span class="command">⎕WX</span></h1>
+# <span>Window Expose</span> `⎕WX`
 
 
 

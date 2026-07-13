@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">File</span> <span class="right">Property</span></h1>
+# <span>File</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/file.md)
 

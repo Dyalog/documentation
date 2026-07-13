@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Destructors</span></h1>
+# Destructors
 
 A *Destructor* is a function that is called just before an Instance of a Class ceases to exist and is typically used to close files or release external resources associated with an Instance.
 

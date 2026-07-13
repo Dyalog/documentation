@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">SelText Property</span></h1>
+# SelText Property
 
 |--------------------------------------|----------------------------------|--------------------------------|
 |[ButtonEdit](../objects/buttonedit.md)|[Combo](../objects/combo.md)      |[ComboEx](../objects/comboex.md)|

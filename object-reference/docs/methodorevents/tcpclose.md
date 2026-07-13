@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">TCPClose</span> <span class="right">Event 374</span></h1>
+# <span>TCPClose</span> <span>Event 374</span>
 
 
 

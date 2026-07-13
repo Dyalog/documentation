@@ -4,7 +4,7 @@
 
 
 
-<h1 class="heading"><span class="name">If Statement</span> <span class="command">:If bexp</span></h1>
+# <span>If Statement</span> `:If bexp`
 
 
 

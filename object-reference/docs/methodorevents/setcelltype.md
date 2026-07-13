@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SetCellType</span> <span class="right">Method 156</span></h1>
+# <span>SetCellType</span> <span>Method 156</span>
 
 
 

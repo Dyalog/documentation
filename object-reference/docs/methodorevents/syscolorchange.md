@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SysColorChange</span> <span class="right">Event 134</span></h1>
+# <span>SysColorChange</span> <span>Event 134</span>
 
 
 

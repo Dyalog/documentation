@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Load without Latent Expression</span> <span class="command">)XLOAD {ws}</span></h1>
+# <span>Load without Latent Expression</span> `)XLOAD {ws}`
 
 
 

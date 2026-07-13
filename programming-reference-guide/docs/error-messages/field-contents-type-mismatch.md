@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">FIELD CONTENTS TYPE MISMATCH</span> <span class="command">56</span></h1>
+# <span>FIELD CONTENTS TYPE MISMATCH</span> `56`
 
 
 

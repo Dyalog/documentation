@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Translate Property</span></h1>
+# Translate Property
 
 |----------------------------------------------|----------------------------------------------|--------------------------------------------|
 |[ActiveXControl](../objects/activexcontrol.md)|[Animation](../objects/animation.md)          |[Bitmap](../objects/bitmap.md)              |

@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Signal Event</span> <span class="command">{R}←{X}⎕SIGNAL Y</span></h1>
+# <span>Signal Event</span> `{R}←{X}⎕SIGNAL Y`{{key}}
 
 
 

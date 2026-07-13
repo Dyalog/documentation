@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Rotate</span> <span class="command">R←X⌽[K]Y</span></h1>
+# <span>Rotate</span> `R←X⌽[K]Y`{{key}}
 
 
 

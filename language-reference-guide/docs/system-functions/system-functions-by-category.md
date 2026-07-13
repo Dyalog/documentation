@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">System Functions (by Category)</span></h1>
+# System Functions (by Category)
 
 ## System Functions by Subject
 

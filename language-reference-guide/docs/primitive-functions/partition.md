@@ -7,7 +7,7 @@ search:
    ⊆ partition
 </div>
 
-<h1 class="heading"><span class="name">Partition</span> <span class="command">R←X⊆[K]Y</span></h1>
+# <span>Partition</span> `R←X⊆[K]Y`{{key}}
 
 !!! note "Classic Edition"
     The symbol `⊆` (Left Shoe Underbar) is not available in Classic Edition, and Partition is instead represented by `⎕U2286`.

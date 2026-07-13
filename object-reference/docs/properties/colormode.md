@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ColorMode</span> <span class="right">Property</span></h1>
+# <span>ColorMode</span> <span>Property</span>
 
 
 

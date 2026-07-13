@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Circle</span> <span class="command">○</span></h1>
+# <span>Circle</span> `○`
 
 Monadic Circle means
 [Pi Times](../primitive-functions/pi-times.md)

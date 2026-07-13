@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ShowSession</span> <span class="right">Property</span></h1>
+# <span>ShowSession</span> <span>Property</span>
 
 
 

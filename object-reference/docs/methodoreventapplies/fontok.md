@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">FontOK Event</span></h1>
+# FontOK Event
 
 |----------------------------------------------|--------------------------------------------|--------------------------------------|
 |[ActiveXControl](../objects/activexcontrol.md)|[Button](../objects/button.md)              |[ButtonEdit](../objects/buttonedit.md)|

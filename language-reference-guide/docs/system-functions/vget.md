@@ -7,7 +7,7 @@ search:
   ⎕VGET VGET
 </div>
 
-<h1 class="heading"><span class="name">Value Get</span> <span class="command">R←{X}⎕VGET Y</span></h1>
+# <span>Value Get</span> `R←{X}⎕VGET Y`{{key}}
 
 `⎕VGET` enables values to be read for names in a source namespace or source namespaces. Optionally, a fallback value can be used if the name requested is undefined.
 

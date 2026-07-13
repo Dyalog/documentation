@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">HighlightHeaders</span> <span class="right">Property</span></h1>
+# <span>HighlightHeaders</span> <span>Property</span>
 
 
 

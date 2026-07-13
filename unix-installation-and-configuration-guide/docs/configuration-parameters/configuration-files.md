@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Configuration Files</span></h1>
+# Configuration Files
 
 A configuration file is a text file containing configuration parameters and values. It can cascade, that is, it can extend (inherit) configuration values from other configuration files, and supplement and/or override them. Configuration files use JSON5 (a superset of standard JSON) syntax and are portable across all systems supported by Dyalog.
 

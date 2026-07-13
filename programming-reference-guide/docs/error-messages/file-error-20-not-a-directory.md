@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">FILE ERROR 20 Not a directory</span> <span class="command">120</span></h1>
+# <span>FILE ERROR 20 Not a directory</span> `120`
 
 
 

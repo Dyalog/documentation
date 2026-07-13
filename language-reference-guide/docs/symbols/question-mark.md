@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Question Mark</span> <span class="command">?</span></h1>
+# <span>Question Mark</span> `?`
 
 Monadic Question Mark means
 [Roll](../primitive-functions/roll.md)

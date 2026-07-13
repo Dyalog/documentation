@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Export Object</span> <span class="command">{R}←{X}⎕EXPORT Y</span></h1>
+# <span>Export Object</span> `{R}←{X}⎕EXPORT Y`{{key}}
 
 
 

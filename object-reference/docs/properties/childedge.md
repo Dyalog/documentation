@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ChildEdge</span> <span class="right">Property</span></h1>
+# <span>ChildEdge</span> <span>Property</span>
 
 
 

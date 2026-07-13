@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Response Time Limit</span> <span class="command">⎕RTL</span></h1>
+# <span>Response Time Limit</span> `⎕RTL`
 
 
 

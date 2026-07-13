@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">MaxButton</span> <span class="right">Property</span></h1>
+# <span>MaxButton</span> <span>Property</span>
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Data Binding</span></h1>
+# Data Binding
 
 This section provides some simple examples of WPF data binding using Dyalog. Each example builds upon the previous ones, so it is advisable to work through them in order.
 

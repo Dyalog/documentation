@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Limitations</span></h1>
+# Limitations
 
 ## Fundamental Limitations
 

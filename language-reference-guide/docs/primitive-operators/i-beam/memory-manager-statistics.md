@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Memory Manager Statistics</span> <span class="command">R←{X}(2000⌶)Y</span></h1>
+# <span>Memory Manager Statistics</span> `R←{X}(2000⌶)Y`{{key}}
 
 
 

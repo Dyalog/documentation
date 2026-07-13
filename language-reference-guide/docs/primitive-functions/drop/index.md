@@ -6,7 +6,7 @@ search:
   ↓ drop
 </div>
 
-<h1 class="heading"><span class="name">Drop</span> <span class="command">R←X↓Y</span></h1>
+# <span>Drop</span> `R←X↓Y`{{key}}
 
 `Y` may be any array.  `X` must be a simple scalar or vector of integers. If `X` is a scalar, it is treated as a one-element vector.  If `Y` is a scalar, it is treated as an array whose shape is `(⍴X)⍴1`. After any scalar extensions, the shape of `X` must be less than or equal to the rank of `Y`. Any missing trailing items in `X` default to 0.
 

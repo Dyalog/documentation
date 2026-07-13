@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">File Share Tie</span> <span class="command">{R}←X ⎕FSTIE Y</span></h1>
+# <span>File Share Tie</span> `{R}←X ⎕FSTIE Y`{{key}}
 
 
 

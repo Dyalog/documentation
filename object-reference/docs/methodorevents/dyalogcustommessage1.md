@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">DyalogCustomMessage1</span> <span class="right">Event 95</span></h1>
+# <span>DyalogCustomMessage1</span> <span>Event 95</span>
 
 
 

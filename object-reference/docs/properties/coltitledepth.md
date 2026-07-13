@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ColTitleDepth</span> <span class="right">Property</span></h1>
+# <span>ColTitleDepth</span> <span>Property</span>
 
 
 

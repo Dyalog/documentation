@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">VALUE ERROR</span> <span class="command">6</span></h1>
+# <span>VALUE ERROR</span> `6`
 
 
 

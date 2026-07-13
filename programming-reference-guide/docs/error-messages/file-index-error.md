@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">FILE INDEX ERROR</span> <span class="command">20</span></h1>
+# <span>FILE INDEX ERROR</span> `20`
 
 
 

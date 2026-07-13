@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Load</span></h1>
+# Load
 
 This parameter is a character string that specifies the name of a workspace, or a directory or text file containing APL source code, to be loaded when Dyalog starts.
 

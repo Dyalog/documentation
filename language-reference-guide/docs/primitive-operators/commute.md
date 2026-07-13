@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Commute</span> <span class="command">{R}←{X}f⍨Y</span></h1>
+# <span>Commute</span> `{R}←{X}f⍨Y`{{key}}
 
 
 

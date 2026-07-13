@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">FORMAT FILE ERROR</span> <span class="command">71</span></h1>
+# <span>FORMAT FILE ERROR</span> `71`
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Web Service (.asmx) Scripts</span></h1>
+# Web Service (.asmx) Scripts
 
 Web services can be written in a variety of languages, including the scripting version of Dyalog APL. For more information on APL source files, see [APL Source Files](../../apl-source-files/).
 

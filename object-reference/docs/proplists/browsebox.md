@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">BrowseBox Properties</span></h1>
+# BrowseBox Properties
 
 |-------------------------------------------|-----------------------------------------|---------------------------------------|
 |[Type](../properties/type.md)              |[Caption](../properties/caption.md)      |[BrowseFor](../properties/browsefor.md)|

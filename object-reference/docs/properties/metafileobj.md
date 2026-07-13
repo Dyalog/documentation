@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">MetafileObj</span> <span class="right">Property</span></h1>
+# <span>MetafileObj</span> <span>Property</span>
 
 
 

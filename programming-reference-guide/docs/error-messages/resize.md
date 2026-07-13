@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">RESIZE</span> <span class="command">1007</span></h1>
+# <span>RESIZE</span> `1007`
 
 
 

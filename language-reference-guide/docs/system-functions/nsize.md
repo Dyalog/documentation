@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Native File Size</span> <span class="command">R←⎕NSIZE Y</span></h1>
+# <span>Native File Size</span> `R←⎕NSIZE Y`{{key}}
 
 
 

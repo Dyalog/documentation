@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">HotSpot</span> <span class="right">Property</span></h1>
+# <span>HotSpot</span> <span>Property</span>
 
 
 

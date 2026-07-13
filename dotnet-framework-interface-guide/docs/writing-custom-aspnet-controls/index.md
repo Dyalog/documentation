@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Writing Custom Controls for ASP.NET</span></h1>
+# Writing Custom Controls for ASP.NET
 
 [Writing ASP.NET Web Pages](../writing-aspnet-webpages/index.md) showed how you can build ASP.NET web pages by combining APL code with the web controls provided in the .NET namespace <code class="language-nonAPL">System.Web.UI.WebControls</code>. These controls are just ordinary .NET classes. In particular, they are extensible components that can be used to develop more complex controls that encapsulate additional functionality.
 

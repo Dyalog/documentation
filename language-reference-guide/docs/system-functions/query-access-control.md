@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Query Access Control</span> <span class="command">R←⎕SVC Y</span></h1>
+# <span>Query Access Control</span> `R←⎕SVC Y`{{key}}
 
 
 

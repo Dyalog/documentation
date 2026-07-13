@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">WebSocketSend</span> <span class="right">Method 847</span></h1>
+# <span>WebSocketSend</span> <span>Method 847</span>
 
 
 

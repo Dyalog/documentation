@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Map File</span> <span class="command">R←{X}⎕MAP Y</span></h1>
+# <span>Map File</span> `R←{X}⎕MAP Y`{{key}}
 
 
 

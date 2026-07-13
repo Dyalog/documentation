@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">MsgBox Properties</span></h1>
+# MsgBox Properties
 
 |-------------------------------------------|-----------------------------------------|---------------------------------------|
 |[Type](../properties/type.md)              |[Caption](../properties/caption.md)      |[Text](../properties/text.md)          |

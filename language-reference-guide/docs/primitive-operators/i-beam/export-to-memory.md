@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Export To Memory</span> <span class="command">R←2100⌶Y</span></h1>
+# <span>Export To Memory</span> `R←2100⌶Y`{{key}}
 
 
 

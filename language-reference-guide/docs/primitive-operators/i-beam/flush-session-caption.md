@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Flush Session Caption</span> <span class="command">R←2022⌶Y</span></h1>
+# <span>Flush Session Caption</span> `R←2022⌶Y`{{key}}
 
 
 

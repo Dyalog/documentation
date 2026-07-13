@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">TRAP ERROR</span> <span class="command">84</span></h1>
+# <span>TRAP ERROR</span> `84`
 
 
 

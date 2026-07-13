@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">URL</span> <span class="right">Property</span></h1>
+# <span>URL</span> <span>Property</span>
 
 
 

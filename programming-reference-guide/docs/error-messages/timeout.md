@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">TIMEOUT</span> <span class="command">1006</span></h1>
+# <span>TIMEOUT</span> `1006`
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Decimals</span> <span class="right">Property</span></h1>
+# <span>Decimals</span> <span>Property</span>
 
 
 

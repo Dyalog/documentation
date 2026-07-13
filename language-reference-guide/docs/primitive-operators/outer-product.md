@@ -7,7 +7,7 @@ search:
   outer
 </div>
 
-<h1 class="heading"><span class="name">Outer Product</span> <span class="command">{R}←X∘.gY</span></h1>
+# <span>Outer Product</span> `{R}←X∘.gY`{{key}}
 
 `g` may be any dyadic function.  The left operand of the operator is the symbol `∘`.  `X` and `Y` may be any arrays whose elements are appropriate to the function `g`.
 

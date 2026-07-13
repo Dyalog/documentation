@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">AlphaBlend</span> <span class="right">Property</span></h1>
+# <span>AlphaBlend</span> <span>Property</span>
 
 
 

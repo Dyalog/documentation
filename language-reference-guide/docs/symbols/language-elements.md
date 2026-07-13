@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Language Elements</span></h1>
+# Language Elements
 
 Primitive Functions
 

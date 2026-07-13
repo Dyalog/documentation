@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Unicode Input Tab (Unicode Edition Only)</span></h1>
+# Unicode Input Tab (Unicode Edition Only)
 
 Unicode Edition can optionally select your APL keyboard each time you start APL. To choose this option, select one of your installed APL keyboards, enable the *Activate selected keyboard* checkbox, then click *OK*
 

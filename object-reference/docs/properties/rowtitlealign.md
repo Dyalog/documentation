@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">RowTitleAlign</span> <span class="right">Property</span></h1>
+# <span>RowTitleAlign</span> <span>Property</span>
 
 
 

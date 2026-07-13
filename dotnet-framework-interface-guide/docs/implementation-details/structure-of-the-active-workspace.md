@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Structure of the Active Workspace</span></h1>
+# Structure of the Active Workspace
 
 Each engine has a workspace associated with it that contains all the APL objects it is currently hosting.
 

@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Downstile</span> <span class="command">⌊</span></h1>
+# <span>Downstile</span> `⌊`
 
 Monadic Downstile means
 [Floor](../primitive-functions/floor.md)

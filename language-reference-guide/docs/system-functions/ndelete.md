@@ -7,7 +7,7 @@ search:
   ⎕NDELETE NDELETE
 </div>
 
-<h1 class="heading"><span class="name">Native File Delete</span> <span class="command">{R}←{X}⎕NDELETE Y</span></h1>
+# <span>Native File Delete</span> `{R}←{X}⎕NDELETE Y`{{key}}
 
 This function deletes files and directories.
 

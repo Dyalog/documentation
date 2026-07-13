@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Marker Properties</span></h1>
+# Marker Properties
 
 |-------------------------------------------|-------------------------------------------|---------------------------------------|
 |[Type](../properties/type.md)              |[Points](../properties/points.md)          |[Style](../properties/style.md)        |

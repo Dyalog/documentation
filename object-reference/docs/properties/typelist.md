@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">TypeList</span> <span class="right">Property</span></h1>
+# <span>TypeList</span> <span>Property</span>
 
 
 

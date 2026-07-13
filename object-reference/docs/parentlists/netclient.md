@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">NetClient Parents</span></h1>
+# NetClient Parents
 
 |--------------------------------|--------------------------|------|
 |[NetType](../objects/nettype.md)|[Root](../objects/root.md)|&nbsp;|

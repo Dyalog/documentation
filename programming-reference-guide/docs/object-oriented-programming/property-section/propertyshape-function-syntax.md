@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">PropertyShape Function</span> <span class="command">R←Shape {ipa}</span></h1>
+# <span>PropertyShape Function</span> `R←Shape {ipa}`
 
 
 

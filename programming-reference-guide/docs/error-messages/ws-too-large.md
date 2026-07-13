@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">ws too large</span></h1>
+# ws too large
 
 
 

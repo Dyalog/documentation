@@ -7,13 +7,7 @@ search:
   bind
 </div>
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Bind</span> <span class="command">{R}←A∘fY<br/>{R}←(f∘B)Y</span></h1>
-
+# <span>Bind</span> <code>{R}←A∘fY<br>{R}←(f∘B)Y</code>{{key}}
 
 
 The Bind operator binds an array `A` or `B` to a dyadic function `f` either as its left or its right argument respectively. The former may be described as left argument currying and the latter as right argument currying.

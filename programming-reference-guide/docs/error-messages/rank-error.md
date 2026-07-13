@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">RANK ERROR</span> <span class="command">4</span></h1>
+# <span>RANK ERROR</span> `4`
 
 
 

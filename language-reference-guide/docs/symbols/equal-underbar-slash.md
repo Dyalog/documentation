@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Equal Underbar Slash</span> <span class="command">≢</span></h1>
+# <span>Equal Underbar Slash</span> `≢`
 
 Monadic Not Equal Underbar means
 [Tally](../primitive-functions/tally.md)

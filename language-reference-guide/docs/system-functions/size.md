@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Size of Object</span> <span class="command">R←⎕SIZE Y</span></h1>
+# <span>Size of Object</span> `R←⎕SIZE Y`{{key}}
 
 
 

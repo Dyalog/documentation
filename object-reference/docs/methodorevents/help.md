@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Help</span> <span class="right">Event 400</span></h1>
+# <span>Help</span> <span>Event 400</span>
 
 [**Applies To**](../methodoreventapplies/help.md)
 

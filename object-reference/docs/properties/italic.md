@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Italic</span> <span class="right">Property</span></h1>
+# <span>Italic</span> <span>Property</span>
 
 
 

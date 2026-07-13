@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">ClassName Property</span></h1>
+# ClassName Property
 
 |----------------------------------------------|----------------------------------|------------------------------------|
 |[ActiveXControl](../objects/activexcontrol.md)|[OCXClass](../objects/ocxclass.md)|[OLEClient](../objects/oleclient.md)|

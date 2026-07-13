@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Fix Definition</span> <span class="command">{R}←⎕FX Y</span></h1>
+# <span>Fix Definition</span> `{R}←⎕FX Y`{{key}}
 
 
 

@@ -7,7 +7,7 @@ search:
   ⎕AT
 </div>
 
-<h1 class="heading"><span class="name">Attributes</span> <span class="command">R←{X} ⎕AT Y</span></h1>
+# <span>Attributes</span> `R←{X} ⎕AT Y`{{key}}
 
 `Y` can be a simple character scalar, vector or matrix, or a vector of character vectors representing the names of 0 or more defined functions or operators. Used dyadically, this function closely emulates the APL2 implementation. Used monadically, it returns information that is more appropriate for Dyalog APL.
 

@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Shared Variable State</span> <span class="command">R←⎕SVS Y</span></h1>
+# <span>Shared Variable State</span> `R←⎕SVS Y`{{key}}
 
 
 

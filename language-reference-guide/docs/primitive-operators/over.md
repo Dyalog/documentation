@@ -7,7 +7,7 @@ search:
   over
 </div>
 
-<h1 class="heading"><span class="name">Over</span> <span class="command">{R}←{X}f⍥gY</span></h1>
+# <span>Over</span> `{R}←{X}f⍥gY`{{key}}
 
 !!! Info "Information"
     The `⍥` glyph is not available in Classic Edition, and the _behind_ operator is instead represented by `⎕U2365`.

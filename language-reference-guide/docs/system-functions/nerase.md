@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Native File Erase</span> <span class="command">{R}←X ⎕NERASE Y</span></h1>
+# <span>Native File Erase</span> `{R}←X ⎕NERASE Y`{{key}}
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Attach</span> <span class="right">Property</span></h1>
+# <span>Attach</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/attach.md)
 

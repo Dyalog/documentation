@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">PageActivate</span> <span class="right">Event 360</span></h1>
+# <span>PageActivate</span> <span>Event 360</span>
 
 
 

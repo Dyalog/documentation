@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">DeleteTypeLib</span> <span class="right">Method 521</span></h1>
+# <span>DeleteTypeLib</span> <span>Method 521</span>
 
 
 

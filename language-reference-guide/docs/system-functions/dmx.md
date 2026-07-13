@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Extended Diagnostic Message</span> <span class="command">R←⎕DMX</span></h1>
+# <span>Extended Diagnostic Message</span> `R←⎕DMX`{{key}}
 
 
 

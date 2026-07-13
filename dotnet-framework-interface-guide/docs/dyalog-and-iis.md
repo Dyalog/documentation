@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Dyalog and IIS</span></h1>
+# Dyalog and IIS
 
 Microsoft Internet Information Services (IIS) is a comprehensive web server software package that allows you to publish information on your intranet or the internet. IIS is included with Professional and Server versions of all recent Microsoft Windows operating systems (all you need to add is a network connection to run your own website).
 

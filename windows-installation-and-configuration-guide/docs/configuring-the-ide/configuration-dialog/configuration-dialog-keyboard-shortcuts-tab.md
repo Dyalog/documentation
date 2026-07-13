@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Keyboard Shortcuts Tab</span></h1>
+# Keyboard Shortcuts Tab
 
 ![configuration dialog keyboard shortcuts tab](../../img/configuration-dialog-keyboard-shortcuts-tab.png)
 

@@ -9,7 +9,7 @@ search:
 </div>
 
 
-<h1 class="heading"><span class="name">Hash Array</span> <span class="command">R←{X}1500⌶Y</span></h1>
+# <span>Hash Array</span> `R←{X}1500⌶Y`{{key}}
 
 
 This function creates a hashed array, returns an unhashed copy of an array or reports the state of hashing of an array.

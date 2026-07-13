@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SetColSize</span> <span class="right">Event 176</span></h1>
+# <span>SetColSize</span> <span>Event 176</span>
 
 
 

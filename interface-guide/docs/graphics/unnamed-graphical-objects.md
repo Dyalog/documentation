@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Unnamed Graphical Objects</span></h1>
+# Unnamed Graphical Objects
 
 When using the seven graphical output objects, you can optionally omit the final part of the name. For example, the following expression is valid:
 ```apl

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ColSorted</span> <span class="right">Method 174</span></h1>
+# <span>ColSorted</span> <span>Method 174</span>
 
 
 

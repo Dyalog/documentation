@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Calendar Children</span></h1>
+# Calendar Children
 
 |------------------------------|------------------------------------|----------------------------|
 |[Cursor](../objects/cursor.md)|[Font](../objects/font.md)          |[Menu](../objects/menu.md)  |

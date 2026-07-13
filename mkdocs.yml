@@ -52,6 +52,7 @@ extra:
   version:
     provider: mike
   generator: false
+  key: "[🛈](/key-to-notation)"
 
 markdown_extensions:
   - admonition

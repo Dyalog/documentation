@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Erase Object</span> <span class="command">)ERASE nms</span></h1>
+# <span>Erase Object</span> `)ERASE nms`
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ColumnClick</span> <span class="right">Event 320</span></h1>
+# <span>ColumnClick</span> <span>Event 320</span>
 
 
 

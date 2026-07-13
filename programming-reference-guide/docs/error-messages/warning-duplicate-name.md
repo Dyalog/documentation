@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">warning duplicate name</span></h1>
+# warning duplicate name
 
 
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Shared Methods</span></h1>
+# Shared Methods
 
 A Shared method runs in the Class namespace and may be called via an Instance or via the Class. However, a Shared method that is called via an Instance does not have direct access to the Fields and Properties of that Instance.
 

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">CellHeights</span> <span class="right">Property</span></h1>
+# <span>CellHeights</span> <span>Property</span>
 
 
 

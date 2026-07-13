@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Down Shoe</span> <span class="command">∪</span></h1>
+# <span>Down Shoe</span> `∪`
 
 Monadic Down Shoe means
 [Unique](../primitive-functions/unique.md)

@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">XRange Property</span></h1>
+# XRange Property
 
 |----------------------------------------------|------------------------------------|------------------------------------|
 |[ActiveXControl](../objects/activexcontrol.md)|[Bitmap](../objects/bitmap.md)      |[Form](../objects/form.md)          |

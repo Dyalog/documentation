@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ResizeColTitles</span> <span class="right">Property</span></h1>
+# <span>ResizeColTitles</span> <span>Property</span>
 
 
 

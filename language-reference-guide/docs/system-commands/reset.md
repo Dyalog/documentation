@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Reset State Indicator</span> <span class="command">)RESET {n}</span></h1>
+# <span>Reset State Indicator</span> `)RESET {n}`
 
 
 

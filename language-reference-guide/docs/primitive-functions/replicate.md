@@ -6,7 +6,7 @@ search:
   / replicate
 </div>
 
-<h1 class="heading"><span class="name">Replicate</span> <span class="command">R←X/[K]Y</span></h1>
+# <span>Replicate</span> `R←X/[K]Y`{{key}}
 
 `Y` may be any array.  `X` is a simple integer vector or scalar.
 

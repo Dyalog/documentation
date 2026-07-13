@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Writing Web Services</span></h1>
+# Writing Web Services
 
 A web service can be thought of as a Remote Procedure Call. However, it is a remote procedure call that can be made over the Internet using character-based messages.
 

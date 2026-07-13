@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">In-process OLE Servers</span></h1>
+# In-process OLE Servers
 
 ## Exporting
 

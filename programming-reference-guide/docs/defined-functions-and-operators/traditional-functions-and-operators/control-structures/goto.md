@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GoTo Statement</span> <span class="command">:GoTo aexp</span></h1>
+# <span>GoTo Statement</span> `:GoTo aexp`
 
 A `:GoTo` statement is a direct alternative to `→` (branch) and causes execution to jump to the line specified by the first element of `aexp`.
 

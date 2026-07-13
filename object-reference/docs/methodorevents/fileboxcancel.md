@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">FileBoxCancel</span> <span class="right">Event 72</span></h1>
+# <span>FileBoxCancel</span> <span>Event 72</span>
 
 
 

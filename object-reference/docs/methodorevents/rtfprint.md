@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">RTFPrint</span> <span class="right">Method 461</span></h1>
+# <span>RTFPrint</span> <span>Method 461</span>
 
 
 

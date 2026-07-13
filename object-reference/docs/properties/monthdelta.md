@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">MonthDelta</span> <span class="right">Property</span></h1>
+# <span>MonthDelta</span> <span>Property</span>
 
 
 

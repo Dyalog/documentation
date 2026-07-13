@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">General Principles of APL Source Files</span></h1>
+# General Principles of APL Source Files
 
 The layout of an APL source file differs according to whether the script defines a web page, a web service, a .NET class, or an APL application that might have nothing to do with the .NET Framework. However, within the APL source file, the code layout rules are basically the same.
 

@@ -7,7 +7,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Character Input/Output</span> <span class="command">⍞</span></h1>
+# <span>Character Input/Output</span> `⍞`
 
 
 

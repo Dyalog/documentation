@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Special syntax</span></h1>
+# Special syntax
 
 APL has some special syntax that is treated in a special way by APLMON.
 

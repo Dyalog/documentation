@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Adding a Menu</span></h1>
+# Adding a Menu
 
 It would also be helpful if you could use the scrollbar to calculate in the reverse direction, from Fahrenheit to Centigrade. Let's add this facility, and give you the ability to choose to which scale the scrollbar applies through a menu.
 

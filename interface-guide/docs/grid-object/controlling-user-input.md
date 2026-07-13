@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Controlling User Input</span></h1>
+# Controlling User Input
 
 The Grid object is designed to allow you to implement simple applications with very little programming effort. You merely present the data to be edited by setting the Values property and then get it back again once the user has signalled completion. The validation imposed by the associated Edit object(s) will prevent the user from entering invalid data and your program can leave the user interaction to be managed entirely by APL. However, for more sophisticated applications, the Grid triggers events which allow your program to respond dynamically to user actions.
 

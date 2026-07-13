@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Align</span> <span class="right">Property</span></h1>
+# <span>Align</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/align.md)
 

@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Metafile Methods</span></h1>
+# Metafile Methods
 
 |-------------------------------------|-----------------------------------------|-------------------------------------------|
 |[Detach](../methodorevents/detach.md)|[FileRead](../methodorevents/fileread.md)|[FileWrite](../methodorevents/filewrite.md)|

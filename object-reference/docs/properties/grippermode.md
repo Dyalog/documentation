@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GripperMode</span> <span class="right">Property</span></h1>
+# <span>GripperMode</span> <span>Property</span>
 
 
 

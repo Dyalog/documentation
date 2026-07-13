@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Edit_Offset_Y</span></h1>
+# Edit_Offset_Y
 
 This parameter specify the number of characters by which an edit window is staggered vertically from the previous one.
 

@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">LStyle Property</span></h1>
+# LStyle Property
 
 |------------------------------|--------------------------------|--------------------------------|
 |[Circle](../objects/circle.md)|[Ellipse](../objects/ellipse.md)|[Locator](../objects/locator.md)|

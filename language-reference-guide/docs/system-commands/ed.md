@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Edit Object</span> <span class="command">)ED nms</span></h1>
+# <span>Edit Object</span> `)ED nms`
 
 `)ED` invokes the Dyalog editor and opens an Edit window for each of the objects specified in `nms`.
 

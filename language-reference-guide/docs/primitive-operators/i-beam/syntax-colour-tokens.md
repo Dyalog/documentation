@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Syntax Colour Tokens</span> <span class="command">R←201⌶Y</span></h1>
+# <span>Syntax Colour Tokens</span> `R←201⌶Y`{{key}}
 
 
 

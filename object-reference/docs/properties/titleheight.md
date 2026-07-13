@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">TitleHeight</span> <span class="right">Property</span></h1>
+# <span>TitleHeight</span> <span>Property</span>
 
 
 

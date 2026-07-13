@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Undo</span> <span class="right">Method 170</span></h1>
+# <span>Undo</span> <span>Method 170</span>
 
 
 

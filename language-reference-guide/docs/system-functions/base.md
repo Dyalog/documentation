@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Base Class</span> <span class="command">R←⎕BASE.Y</span></h1>
+# <span>Base Class</span> `R←⎕BASE.Y`{{key}}
 
 
 

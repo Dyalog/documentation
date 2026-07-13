@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GetCommandLineArgs</span> <span class="right">Method 148</span></h1>
+# <span>GetCommandLineArgs</span> <span>Method 148</span>
 
 
 

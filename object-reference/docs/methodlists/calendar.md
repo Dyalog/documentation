@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Calendar Methods</span></h1>
+# Calendar Methods
 
 |-----------------------------------------------|-------------------------------------------------------|-----------------------------------------------|
 |[Detach](../methodorevents/detach.md)          |[ChooseFont](../methodorevents/choosefont.md)          |[GetTextSize](../methodorevents/gettextsize.md)|

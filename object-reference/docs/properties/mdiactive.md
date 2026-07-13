@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">MDIActive</span> <span class="right">Property</span></h1>
+# <span>MDIActive</span> <span>Property</span>
 
 
 

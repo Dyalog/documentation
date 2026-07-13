@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Divider Property</span></h1>
+# Divider Property
 
 |----------------------------------------|------|------|
 |[ToolControl](../objects/toolcontrol.md)|&nbsp;|&nbsp;|

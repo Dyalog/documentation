@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Creating Programs (.exe) with APL Source Files</span></h1>
+# Creating Programs (.exe) with APL Source Files
 
 The following examples, which illustrate how you can create an executable program (**.exe**) directly from an APL source file, can be found in the **[DYALOG]\Samples\bound_exe** directory.
 

@@ -1,3 +1,3 @@
-<h1 class="heading"><span class="name">DyalogWebSite</span></h1>
+# DyalogWebSite
 
 This parameter specifies the URL for the Dyalog web site.

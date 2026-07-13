@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Parallel Execution Threshold</span> <span class="command">R←1112⌶Y</span></h1>
+# <span>Parallel Execution Threshold</span> `R←1112⌶Y`{{key}}
 
 
 

@@ -3,7 +3,7 @@
   dyalogscript
 </div>
 
-<h1 class="heading"><span class="name">Shell Scripts</span></h1>
+# Shell Scripts
 
 Shell scripts are typically executed  from a terminal (or *shell*).
 

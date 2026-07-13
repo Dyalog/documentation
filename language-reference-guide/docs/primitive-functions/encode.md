@@ -6,7 +6,7 @@ search:
   ⊤ encode
 </div>
 
-<h1 class="heading"><span class="name">Encode</span> <span class="command">R←X⊤Y</span></h1>
+# <span>Encode</span> `R←X⊤Y`{{key}}
 
 
 

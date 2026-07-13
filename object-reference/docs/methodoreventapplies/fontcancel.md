@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">FontCancel Event</span></h1>
+# FontCancel Event
 
 |----------------------------------------------|--------------------------------------------|--------------------------------------|
 |[ActiveXControl](../objects/activexcontrol.md)|[Button](../objects/button.md)              |[ButtonEdit](../objects/buttonedit.md)|

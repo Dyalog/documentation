@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Workspace Identification</span> <span class="command">⎕WSID</span></h1>
+# <span>Workspace Identification</span> `⎕WSID`
 
 
 

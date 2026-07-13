@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">WS FULL</span> <span class="command">1</span></h1>
+# <span>WS FULL</span> `1`
 
 
 

@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Membership</span> <span class="command">R←X∊Y</span></h1>
+# <span>Membership</span> `R←X∊Y`{{key}}
 
 
 

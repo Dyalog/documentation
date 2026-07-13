@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Splitter</span> <span class="right">Object</span></h1>
+# <span>Splitter</span> <span>Object</span>
 
 
 

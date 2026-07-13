@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Create Namespace</span> <span class="command">)NS {nm}</span></h1>
+# <span>Create Namespace</span> `)NS {nm}`
 
 
 

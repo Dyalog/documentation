@@ -8,7 +8,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Implements Statement</span> <span class="command">:Implements</span></h1>
+# <span>Implements Statement</span> `:Implements`
 
 
 

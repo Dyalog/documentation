@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Root Methods</span></h1>
+# Root Methods
 
 |-------------------------------------------------------|-------------------------------------------------------|-------------------------------------------------------------|
 |[ChooseFont](../methodorevents/choosefont.md)          |[Flush](../methodorevents/flush.md)                    |[NameFromHandle](../methodorevents/namefromhandle.md)        |

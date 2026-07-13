@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">QueueEvents</span> <span class="right">Property</span></h1>
+# <span>QueueEvents</span> <span>Property</span>
 
 
 

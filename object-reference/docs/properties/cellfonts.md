@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">CellFonts</span> <span class="right">Property</span></h1>
+# <span>CellFonts</span> <span>Property</span>
 
 
 

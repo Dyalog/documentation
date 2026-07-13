@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">APL Source Files</span></h1>
+# APL Source Files
 
 APL Source files contain definitions (the "source") of one or more named APL objects, that is, functions, operators, namespaces, classes, interfaces and arrays. They cannot contain anything else. They are not workspace-oriented (although you can call workspaces from them) but are simply character files containing function bodies and expressions. This means that they would be valid right arguments to `2 ⎕FIX`.
 

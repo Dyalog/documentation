@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">The Session Object</span></h1>
+# The Session Object
 
 |---|---|
 |Purpose:|The Session object `⎕SE` is a special system object that represents the session window and acts as a parent for the session menus, tool bar(s) and status bar.|

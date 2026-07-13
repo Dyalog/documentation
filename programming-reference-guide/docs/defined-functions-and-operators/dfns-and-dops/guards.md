@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Guards</span></h1>
+# Guards
 
 A Guard is a Boolean-single valued expression followed on the right by a `':'`. For example:
 ```apl

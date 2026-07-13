@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Image Parents</span></h1>
+# Image Parents
 
 |----------------------------------------------|------------------------------------------|----------------------------------|
 |[ActiveXControl](../objects/activexcontrol.md)|[Bitmap](../objects/bitmap.md)            |[Form](../objects/form.md)        |

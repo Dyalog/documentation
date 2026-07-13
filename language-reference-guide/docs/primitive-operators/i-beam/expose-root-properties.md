@@ -13,7 +13,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Expose Root Properties</span> <span class="command">R←2401⌶Y</span></h1>
+# <span>Expose Root Properties</span> `R←2401⌶Y`{{key}}
 
 
 

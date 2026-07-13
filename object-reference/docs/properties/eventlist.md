@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">EventList</span> <span class="right">Property</span></h1>
+# <span>EventList</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/eventlist.md)
 

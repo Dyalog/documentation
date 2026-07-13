@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">VScroll</span> <span class="right">Property</span></h1>
+# <span>VScroll</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/vscroll.md)
 

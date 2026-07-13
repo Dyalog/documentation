@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">PropertySheet Children</span></h1>
+# PropertySheet Children
 
 |------------------------------------------|------------------------------------|----------------------------------|
 |[Bitmap](../objects/bitmap.md)            |[BrowseBox](../objects/browsebox.md)|[Circle](../objects/circle.md)    |

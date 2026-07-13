@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">ActiveXContainer Properties</span></h1>
+# ActiveXContainer Properties
 
 |-------------------------------------------|-----------------------------------------|---------------------------------------|
 |[Type](../properties/type.md)              |[Event](../properties/event.md)          |[FontObj](../properties/fontobj.md)    |

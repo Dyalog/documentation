@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">BCol</span> <span class="right">Property</span></h1>
+# <span>BCol</span> <span>Property</span>
 
 [**Applies To**](../propertyapplies/bcol.md)
 

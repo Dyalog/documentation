@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">not copied name</span></h1>
+# not copied name
 
 
 

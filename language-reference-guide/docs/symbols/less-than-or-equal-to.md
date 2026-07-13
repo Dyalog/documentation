@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Less Than Or Equal To</span> <span class="command">≤</span></h1>
+# <span>Less Than Or Equal To</span> `≤`
 
 Monadic Less Than Or Equal To is not defined
 

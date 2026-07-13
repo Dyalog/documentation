@@ -6,7 +6,7 @@ search:
   ⌹
 </div>
 
-<h1 class="heading"><span class="name">Matrix Divide</span> <span class="command">R←X⌹Y</span></h1>
+# <span>Matrix Divide</span> `R←X⌹Y`{{key}}
 
 `Y` must be a simple numeric array of rank 2 or less.  `X` must be a simple numeric array of rank 2 or less.  `Y` must be non-singular.  A scalar argument is treated as a matrix with one-element.  If `Y` is a vector, it is treated as a single column matrix.  If `X` is a vector, it is treated as a single column matrix.  The number of rows in `X` and `Y` must be the same.  `Y` must have at least the same number of rows as columns.
 

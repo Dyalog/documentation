@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">AcceptFiles Property</span></h1>
+# AcceptFiles Property
 
 |----------------------------------------------|------------------------------------------|----------------------------------|
 |[ActiveXControl](../objects/activexcontrol.md)|[Animation](../objects/animation.md)      |[Button](../objects/button.md)    |

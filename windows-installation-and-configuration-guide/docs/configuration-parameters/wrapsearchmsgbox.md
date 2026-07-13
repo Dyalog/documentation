@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">WrapSearchMsgBox</span></h1>
+# WrapSearchMsgBox
 
 Specifies whether or not a message box is displayed to inform the user when the search wraps.
 

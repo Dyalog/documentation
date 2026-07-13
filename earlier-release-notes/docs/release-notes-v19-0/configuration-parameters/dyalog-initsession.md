@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">DYALOG_INITSESSION</span></h1>
+# DYALOG_INITSESSION
 
 This Boolean parameter governs whether (1) or not (0) Dyalog performs Session Initialisation on start-up. See [Session Initialisation](https://help.dyalog.com/19.0/index.htm#UserGuide/The%20APL%20Environment/Session%20Initialisation.htm).
 

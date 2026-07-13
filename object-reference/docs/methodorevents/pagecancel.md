@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">PageCancel</span> <span class="right">Event 351</span></h1>
+# <span>PageCancel</span> <span>Event 351</span>
 
 
 

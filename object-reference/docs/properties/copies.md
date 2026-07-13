@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Copies</span> <span class="right">Property</span></h1>
+# <span>Copies</span> <span>Property</span>
 
 
 

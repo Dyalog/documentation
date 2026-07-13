@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Natural Logarithm</span> <span class="command">R←⍟Y</span></h1>
+# <span>Natural Logarithm</span> `R←⍟Y`{{key}}
 
 
 

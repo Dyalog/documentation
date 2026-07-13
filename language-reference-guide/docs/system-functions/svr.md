@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Shared Variable Retract Offer</span> <span class="command">R←⎕SVR Y</span></h1>
+# <span>Shared Variable Retract Offer</span> `R←⎕SVR Y`{{key}}
 
 
 

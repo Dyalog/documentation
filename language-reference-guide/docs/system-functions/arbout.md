@@ -12,7 +12,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Arbitrary Output</span> <span class="command">{R}←X ⎕ARBOUT Y</span></h1>
+# <span>Arbitrary Output</span> `{R}←X ⎕ARBOUT Y`{{key}}
 
 
 

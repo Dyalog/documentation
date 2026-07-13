@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">The web.config File</span></h1>
+# The web.config File
 
 ASP.NET configuration parameters are defined in a file called **web.config** located in or above the root directory of an ASP.NET application. Parameters defined in these files supplement or override ASP.NET parameters that are defined system-wide.
 

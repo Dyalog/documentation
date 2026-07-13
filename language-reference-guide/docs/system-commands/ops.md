@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">List Global Defined Operators</span> <span class="command">)OPS {nm}</span></h1>
+# <span>List Global Defined Operators</span> `)OPS {nm}`
 
 
 

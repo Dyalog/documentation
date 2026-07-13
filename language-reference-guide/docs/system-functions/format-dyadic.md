@@ -7,7 +7,7 @@ search:
   ⎕FMT FMT
 </div>
 
-<h1 class="heading"><span class="name">Format (Dyadic)</span> <span class="command">R←X ⎕FMT Y</span></h1>
+# <span>Format (Dyadic)</span> `R←X ⎕FMT Y`{{key}}
 
 `Y` must be a simple array of rank not exceeding two, or a non-simple scalar or vector whose items are simple arrays of rank not exceeding two.  The simple arrays in `Y` must be homogeneous, either character or numeric. All numeric values in `Y` must be simple; if `Y` contains any complex numbers, dyadic `⎕FMT` will generate a `DOMAIN ERROR`. `X` must be a simple character vector.  `R` is a simple character matrix.
 

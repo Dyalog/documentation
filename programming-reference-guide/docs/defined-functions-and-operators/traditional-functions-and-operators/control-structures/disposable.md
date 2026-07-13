@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">Disposable Statement</span> <span class="command">:Disposable</span></h1>
+# <span>Disposable Statement</span> `:Disposable`
 
 
 

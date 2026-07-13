@@ -11,7 +11,7 @@ search:
 
 
 
-<h1 class="heading"><span class="name">Shape</span> <span class="command">R←⍴Y</span></h1>
+# <span>Shape</span> `R←⍴Y`{{key}}
 
 
 

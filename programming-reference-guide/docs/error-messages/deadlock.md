@@ -3,7 +3,7 @@
 
 
 
-<h1 class="heading"><span class="name">DEADLOCK</span> <span class="command">1008</span></h1>
+# <span>DEADLOCK</span> `1008`
 
 
 

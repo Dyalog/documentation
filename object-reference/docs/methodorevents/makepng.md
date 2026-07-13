@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">MakePNG</span> <span class="right">Method 260</span></h1>
+# <span>MakePNG</span> <span>Method 260</span>
 
 
 

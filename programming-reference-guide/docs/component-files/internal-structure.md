@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Internal Structure</span></h1>
+# Internal Structure
 
 If you are going to make a lot of use of APL files in your systems, it is useful for you to have a rough idea of how Dyalog APL organises and manages the disk area used by such files.
 

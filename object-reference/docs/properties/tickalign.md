@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">TickAlign</span> <span class="right">Property</span></h1>
+# <span>TickAlign</span> <span>Property</span>
 
 
 

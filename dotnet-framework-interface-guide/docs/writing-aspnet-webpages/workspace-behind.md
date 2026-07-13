@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Workspace Behind</span></h1>
+# Workspace Behind
 
 [Code-Behind](code-behind.md) discusses how APL logic can be separated from page layout by placing it in a separate APL Source file which is referred to from the **.aspx** web page. It is also possible to have the code reside in a separate workspace. This allows you to develop web pages using a traditional workspace approach, and it is probably the quickest way to give an HTML front-end to an existing Dyalog application. 
 
