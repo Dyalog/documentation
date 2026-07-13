@@ -85,4 +85,3 @@ Value Tips.
 ### WindowRects
 
 This contains entries to maintain the position of various Session tool windows so that they remain consistent between successive invocations of APL.
-
