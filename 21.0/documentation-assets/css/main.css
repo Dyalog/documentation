@@ -18,14 +18,10 @@ body {
   color: var(--dyalog-body-text-color);
 }
 
-.md-typeset h1 {
-    overflow-x: auto;
-}
-
-.md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4 {
+.md-typeset h2, .md-typeset h3, .md-typeset h4 {
   color: var(--dyalog-body-text-color);
 }
-.md-typeset h1 code, .md-typeset h2 code, .md-typeset h3 code, .md-typeset h4 code {
+.md-typeset h2 code, .md-typeset h3 code, .md-typeset h4 code {
     font-size: inherit;
 }
 
@@ -53,7 +49,7 @@ body {
     line-height: 1.2rem;
     background: none;
 }
-code, .command, .Dyalog {
+code, .Dyalog {
     font-family: APL;
 }
 code[class^="language-"], div[class^="language-"] pre code {
@@ -142,6 +138,14 @@ th[align="right"], td[align="right"] {
     font-size: 0.8rem;
 }
 
+.md-typeset td[valign=middle] {
+    vertical-align: middle !important;
+}
+
+.md-typeset td[valign=bottom] {
+    vertical-align: bottom !important;
+}
+
 /* Grid cards used on the home page */
 .md-typeset .grid.cards > ul > li {
     padding: 0;
@@ -176,29 +180,35 @@ th[align="right"], td[align="right"] {
 }
 
 /* Style the heading container for the Language Reference */
-.heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.md-typeset h1 {
     background-color: #FF6A13;
     padding: 5px 10px; /* Adjusted padding for less vertical whitespace */
     border-radius: 5px; /* Rounded corners */
-    font-size: 0.9em;
-}
-
+    color: white;
+    overflow-x: auto;
+    &:has(span) {
+        display: flex;
+        justify-content: space-between;
+    }
+    & code {
+        color: inherit;
+        font-size: 1.1em;
+        line-height: inherit;
+    }
 /* Style the left-aligned name */
-.name {
-    flex-grow: 1;
-    /* Take up available space */
-    color: white;
-}
-
+    & > span:first-child {
+        flex-grow: 1;    /* Take up available space */
 /* Style the right-aligned command */
-.command {
-    text-align: right;
-    color: white;
-    font-family: APL;
-    white-space: pre;
+        & + code, & + span {
+            text-align: right;
+            white-space: pre;
+            & + a {
+                color: inherit;
+                font-variant-position: super;
+                margin-left: 0.5ex;
+            }
+        }
+    }
 }
 
 /* List styles */
