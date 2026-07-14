@@ -39,5 +39,6 @@ C:/Users/Pete/AppData/Local/Temp
 		
 ```
 
-
+!!! Info "Information"
+    `739⌶` is deprecated, and is scheduled for removal in a future release. Use `⎕SYSTEM.Directories.Temp` which gives an equivalent result but using the operating system's preferred directory separator.
 

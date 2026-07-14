@@ -162,6 +162,7 @@ Dyalog includes a collection of built-in facilities that provide various service
 |[`⎕SVQ`](svq.md)|Shared Variable Query      |Monadic function|
 |[`⎕SVR`](svr.md)|Retract offer              |Monadic function|
 |[`⎕SVS`](svs.md)|Query Shared Variable State|Monadic function|
+|[`⎕SYSTEM`](system.md)|System Information|Reference|
 |[`⎕TALLOC`](talloc.md)|Allocate Token Range|Ambivalent function|
 |[`⎕TC`](tc.md)   |Terminal Control           |Constant|
 |[`⎕TCNUMS`](tcnums.md) |Thread Child Numbers         |Monadic function|
