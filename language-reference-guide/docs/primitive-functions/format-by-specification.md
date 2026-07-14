@@ -6,22 +6,15 @@ search:
   ⍕ format
 </div>
 
-
 # <span>Format by Specification</span> `R←X⍕Y`{{key}}
-
-
 
 `Y` must be a simple real (non-complex) numeric array. `X` must be a simple integer scalar or vector.  `R` is a character array displaying the array `Y` according to the specification `X`. `R` has rank `1⌈⍴⍴Y` and `¯1↓⍴R` is `¯1↓⍴Y`. If any element of `Y` is complex, dyadic `⍕` reports a `DOMAIN ERROR`.
 
-
 Conformability requires that if `X` has more than two elements, then `⍴X` must be `2×¯1↑⍴Y`. If `X` contains one element, it is extended to `(2×¯1↑⍴Y)⍴0,X`.  If `X` contains 2 elements, it is extended to `(2×¯1↑⍴Y)⍴X`.
-
 
 `X` specifies two numbers (possibly after extension) for each column in `Y`.  For this purpose, scalar `Y` is treated as a one-element vector.  Each pair of numbers in `X` identifies a format width (`W`) and a format precision (`P`).
 
-
 If `P` is 0, the column is to be formatted as integers.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -35,7 +28,6 @@ If `P` is 0, the column is to be formatted as integers.
 
 <h2 class="example">Example</h2>
 
-
 If `P` is positive, the format is floating point with `P` significant digits to be displayed after the decimal point.
 ```apl
       4 1⍕1.1 2 ¯4 2.547
@@ -44,7 +36,6 @@ If `P` is positive, the format is floating point with `P` significant digits to 
 
 <h2 class="example">Example</h2>
 
-
 If `P` is negative, scaled format is used with `|P` digits in the mantissa.
 ```apl
       7 ¯3⍕5 15 155 1555
@@ -52,7 +43,6 @@ If `P` is negative, scaled format is used with `|P` digits in the mantissa.
 ```
 
 <h2 class="example">Example</h2>
-
 
 If `W` is 0 or absent, then the width of the corresponding columns of `R` are determined by the maximum width required by any element in the corresponding columns of `Y`, plus one separating space.
 ```apl
@@ -63,7 +53,6 @@ If `W` is 0 or absent, then the width of the corresponding columns of `R` are de
 
 <h2 class="example">Example</h2>
 
-
 If a formatted element exceeds its specified field width when `W>`0, the field width for that element is filled with asterisks.
 ```apl
       3 0 6 2 ⍕ 3 2⍴10.1 15 1001 22.357 101 1110.1
@@ -73,7 +62,6 @@ If a formatted element exceeds its specified field width when `W>`0, the field w
 ```
 
 <h2 class="example">Example</h2>
-
 
 If the format precision exceeds the internal precision, low order digits are replaced by the symbol '`_`'.
 ```apl
@@ -90,13 +78,8 @@ If the format precision exceeds the internal precision, low order digits are rep
  3.333333333333333____E¯1
 ```
 
-
-
 The shape of `R` is the same as the shape of `Y` except that the last dimension of `R` is the sum of the field widths specified in `X` or deduced by the function.  If `Y` is a scalar, the shape of `R` is the field width.
 ```apl
       ⍴5 2 ⍕ 2 3 4⍴⍳24
 2 3 20
 ```
-
-
-

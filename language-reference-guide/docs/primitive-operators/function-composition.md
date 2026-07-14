@@ -14,7 +14,6 @@ _Behind_: `{R}←{X}f⍛g Y`
 
 ![Function composition diagram for monadic behind](../img/behind-monadic-composition.png){: style="max-height: 16em"}
 
-
 ![Function composition diagram for dyadic behind](../img/behind-dyadic-composition.png){: style="max-height: 16em"}
 
 _Beside_: `{R}←{X}f∘g Y`

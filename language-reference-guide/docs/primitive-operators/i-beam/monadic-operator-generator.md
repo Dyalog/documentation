@@ -21,10 +21,8 @@ As `R` is a monadic operator, Dyalog Ltd recommends that the evaluation of this 
 |---|---                |---|
 |632|[Generics Operator](#632-generics-operator)| Requires .NET or .NET Framework. |
 
-
 !!! warning
 	The set of supported values for `Y` might change, with existing values being withdrawn as well as new ones being added. This means that saving the resulting operator in a workspace and attempting to run it in a later release might result in a `DOMAIN ERROR` if support has been withdrawn.
-
 
 ### 632 - Generics Operator
 

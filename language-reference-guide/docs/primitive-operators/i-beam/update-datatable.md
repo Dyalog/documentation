@@ -121,6 +121,3 @@ Sometimes, you may have read a very large number of rows from a DataTable, but o
 
 !!! warning
     If you are experimenting with writing to a DataTable, note that you should call `dt.Rows.Clear` each time to clear the current contents of the table. Otherwise you will end up with a very large number of rows after a while.
-
-
-

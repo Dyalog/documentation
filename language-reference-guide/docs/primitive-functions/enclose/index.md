@@ -47,6 +47,3 @@ A
 ```
 
 See also: [Enclose with Axes](enclose-with-axes.md).
-
-
-

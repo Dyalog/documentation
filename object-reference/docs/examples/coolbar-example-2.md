@@ -5,7 +5,6 @@ search:
 
 # <span>CoolBar</span> <span>Example 2</span>
 
-
 ```apl
 'F'⎕WC'Form' 'CoolBar Object with simple controls'('Size' 25 40)
 'F'⎕WS'Coord' 'Pixel'
@@ -25,7 +24,4 @@ search:
 :EndWith
 ```
 
-
 ![](../img/cool2.gif)
-
-

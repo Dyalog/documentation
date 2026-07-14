@@ -7,23 +7,13 @@ search:
   ⎕MONITOR MONITOR
 </div>
 
-
-
-
-
-
 # <span>Query Monitor</span> `R←⎕MONITOR Y`{{key}}
-
-
 
 `Y` must be a simple character scalar or vector which is taken to be the name of a visible defined function or operator.
 
-
 Note that `⎕MONITOR` does not apply to  dfns or dops.
 
-
 `R` is a simple non-negative integer matrix of 5 columns with one row for each line in the function or operator `Y` which has the monitor set, giving:
-
 
 |--------|-------------------------------------|
 |Column 1|Line number                          |
@@ -32,9 +22,7 @@ Note that `⎕MONITOR` does not apply to  dfns or dops.
 |Column 4|Elapsed time in milliseconds         |
 |Column 5|Reserved                             |
 
-
 The value of `0` in column one indicates that the monitor is set on the function or operator as a whole. `R` will be empty for dfns and dops.
-
 
 <h2 class="example">Example</h2>
 ```apl
@@ -58,5 +46,3 @@ The value of `0` in column one indicates that the monitor is set on the function
 4 1  467 1000 0
 5 1  100    0 0
 ```
-
-

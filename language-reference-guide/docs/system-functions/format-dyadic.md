@@ -27,7 +27,6 @@ The **format specification** consists of a series of control phrases, with adjac
 |`Xn`          |Relative tabulation|
 |`⍞t⍞`         |Text insertion     |
 
-
 (Alternative surrounding pairs for Pattern or Text insertion are   `< >, ⊂ ⊃, ⎕ ⎕`  or `¨ ¨`.)
 
 **where**
@@ -42,10 +41,7 @@ The **format specification** consists of a series of control phrases, with adjac
 |`t`|is any arbitrary text excluding the surrounding character pair.  Double quotes imply a single quote in the result.|
 |`pattern`|see following section **G format**|
 
-
-
 **Qualifiers q are as follows**
-
 
 |---|---|
 |`B`|leaves the field blank if the result would otherwise be zero.|
@@ -57,9 +53,7 @@ The **format specification** consists of a series of control phrases, with adjac
 |`Z`|fills unused leading positions in the result with zeros (and commas if `C` is also specified).|
 |`9`|digit selector|
 
-
 **Affixtures are as follows**
-
 
 |---|---|
 |`M⍞t⍞`|prefixes negative results with the text t instead of the negative sign.|

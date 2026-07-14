@@ -12,6 +12,3 @@ Note that the default value of `KeepOnClose` depends upon the way in which a GUI
 
 !!! note
     The use of `KeepOnClose` is deprecated; Dyalog may at some point remove this Property or disable its functionality.
-
-
-

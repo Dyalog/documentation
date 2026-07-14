@@ -23,8 +23,4 @@ WASHOUT
  ONE  TWO  THREE
 ```
 
-
 For performance information, see [Programmer's Guide: "Search Functions and Hash Tables"](../../../programming-reference-guide/introduction/search-functions-and-hash).
-
-
-

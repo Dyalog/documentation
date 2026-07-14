@@ -55,5 +55,3 @@ For further information, see [The Options Menu](../../../windows-ui-guide/sessio
 
 1. When Root members are exposed, the first reference or assignment to a member, associates that name (with a nameclass of `¯2.6` or `¯3.6`) with that member. If, having referenced a member in this way, you subsequently hide Root members using `(2401⌶0)`, that name remains connected to that member and the member remains exposed. This association may however be removed by erasing the name.
 2. If Root members are not exposed, you are free to define an APL object with the same name as one of the members. If you subsequently expose Root members using `(2401⌶1)`, the name remains associated with the APL object and not with a member of Root. If you then erase the name and re-reference or re-assign it, the name will be associated with the corresponding member.
-
-

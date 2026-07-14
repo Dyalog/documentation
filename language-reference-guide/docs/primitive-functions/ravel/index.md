@@ -32,6 +32,3 @@ ABCDEFGHIJKL
 ```
 
 See also: [Ravel with Axes](ravel-with-axes.md).
-
-
-

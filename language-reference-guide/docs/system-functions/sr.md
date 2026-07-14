@@ -7,7 +7,6 @@ search:
   ⎕SR SR
 </div>
 
-
 # <span>Screen Read</span> `R←{X}⎕SR Y`{{key}}
 
 `⎕SR` is a system function that allows the user to edit or otherwise interact with the form defined by `⎕SM`.
@@ -65,9 +64,7 @@ This is a vector of between 3 and 6 elements with the following meanings and def
 |5      |(ignored)                    |N/A    |
 |6      |Changed Field Flags          |0      |
 
-
 Structure of INITIAL_CONTEXT
-
 
 `INITIAL_CONTEXT[1]` specifies the field in which the cursor is to be placed.  It is an integer scalar or vector, and must be a member of `Y`.  It must not specify a field which has `BUTTON` behaviour (64), as the cursor is not allowed to enter such a field.
 
@@ -117,5 +114,3 @@ Structure of the Result of `⎕SR`
 
 !!! note
     This function is disabled and instead generates a `DOMAIN ERROR` if the RIDE_SPAWNED parameter is non-zero. This is designed to prevent it being invoked from a Ride session which does not support this type of user interface. For further details, see the [Ride User Guide](https://dyalog.github.io/ride).
-
-

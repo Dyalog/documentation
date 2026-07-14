@@ -203,7 +203,6 @@ The key difference is in line `[8]`. Here, the left argument of `(2015⌶)` is `
 
 ![](../img/s-data-binding-eg2-2.png)
 
-
 ## Example 3: Specification using APL
 
 This example uses APL code to both build the user interface (instead of using XAML) and handle the data binding. Both the <code class="language-nonAPL">Text</code> and the <code class="language-nonAPL">FontSize</code> properties are bound to APL variables.

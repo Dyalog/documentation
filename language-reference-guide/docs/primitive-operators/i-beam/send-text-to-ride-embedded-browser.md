@@ -18,7 +18,3 @@ The result `R` identifies whether the write to Ride was successful. Possible val
 
 - `0` : the write to the Ride client was successful
 - `¯1` : the write to the Ride client was not successful
-
-
-
-

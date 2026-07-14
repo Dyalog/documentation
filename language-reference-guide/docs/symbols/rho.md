@@ -37,5 +37,3 @@ Dyadic Rho means
 7 1 2 3
 ```
 [Language Elements](../glyphs.md)
-
-

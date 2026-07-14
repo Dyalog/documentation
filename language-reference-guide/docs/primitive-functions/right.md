@@ -6,14 +6,7 @@ search:
   ⊢ right tack
 </div>
 
-
-
-
-
-
 # <span>Right</span> `R←X⊢Y`{{key}}
-
-
 
 `X` and `Y` may be any arrays. The result `R` is the right argument `Y`.
 
@@ -37,8 +30,6 @@ search:
 
 ```
 
-
-
 When `⊢` is applied using reduction, the derived function selects the last sub-array of the array along the specified dimension. This is implemented as an idiom.
 
 <h2 class="example">Examples</h2>
@@ -56,5 +47,3 @@ tenet
  9 10 11 12
 21 22 23 24
 ```
-
-

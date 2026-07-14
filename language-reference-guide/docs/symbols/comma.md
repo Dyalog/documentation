@@ -46,5 +46,3 @@ Dyadic Comma means
 4 5 6 
 ```
 [Language Elements](../glyphs.md)
-
-

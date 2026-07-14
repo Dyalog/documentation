@@ -7,14 +7,7 @@ search:
   ⎕TID TID
 </div>
 
-
-
-
-
-
 # <span>Current Thread Identity</span> `R←⎕TID`{{key}}
-
-
 
 `R` is a simple integer scalar whose value is the number of the current thread.
 
@@ -26,6 +19,3 @@ search:
       ⍎&'⎕TID' ⍝ Thread number of async ⍎.
 1
 ```
-
-
-

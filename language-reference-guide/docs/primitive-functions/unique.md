@@ -6,20 +6,11 @@ search:
   ∪ unique
 </div>
 
-
-
-
-
-
 # <span>Unique</span> `R←∪Y`{{key}}
-
-
 
 `Y` may be any array. `R` is a vector of the unique major cells of `Y` (the unique items of a vector, the unique rows of a matrix and so forth), in the order in which they first appear in `Y`.  For further information, see [Major Cells](../../../programming-reference-guide/introduction/arrays/cells-and-subarrays).
 
-
 `⎕CT` and `⎕DCT` are  implicit arguments of Unique.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -68,5 +59,3 @@ DUCK
 16 17 18 19 20
 
 ```
-
-

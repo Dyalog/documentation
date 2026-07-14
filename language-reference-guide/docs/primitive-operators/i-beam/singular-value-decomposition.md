@@ -31,6 +31,3 @@ For further information, see Wikipedia's article on [Singular Value Decompositio
 
 !!! note
     This function signals `DOMAIN ERROR` if `⎕FR` is 1287. See [Floating-Point Representation ](../../system-functions/fr.md).
-
-
-

@@ -7,12 +7,6 @@ search:
   ⎕FCREATE FCREATE
 </div>
 
-
-
-
-
-
-
 # <span>File Create</span> `{R}←X ⎕FCREATE Y`{{key}}
 
 `Y` must be a simple integer scalar or a 1 or 2 element vector:  
@@ -29,20 +23,13 @@ search:
 2. a vector of length 1 or 2 whose items are:- a simple character scalar or vector as above.
 - an integer scalar specifying the file size limit in bytes.
 
-
-
-
 The newly created file is tied for exclusive use.
-
 
 The shy result of `⎕FCREATE` is the tie number of the new file.
 
 ## Automatic Tie Number Allocation
 
-
 A tie number of 0 as argument to a create or tie operation, allocates, and returns as an explicit result, the first (closest to zero) available tie number. This allows you to simplify code. For example:
-
-
 
 from:
 ```apl
@@ -52,13 +39,11 @@ from:
 
 ```
 
-
 to:
 ```apl
 
       tie←file ⎕FCREATE 0 ⍝ Create with first available..
 ```
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -70,9 +55,7 @@ to:
 
 ```
 
-
 ## File Properties
-
 
 `⎕FCREATE` allows you to specify properties for the newly created file via the variant operator `⍠` used with the following options:
 
@@ -82,9 +65,6 @@ to:
 - `'U'` - Unicode; 0 or 1
 - `'S'` - File Size (span); 64
 
-
-
-
 The Principal Option is  as follows:
 
 - 0 - sets `('J' 0) ('C' 0)`
@@ -92,10 +72,7 @@ The Principal Option is  as follows:
 - 2 - sets `('J' 2) ('C' 1)`
 - 3 - sets `('J' 3) ('C' 1)`
 
-
 See also: [File Properties ](fprops.md).
-
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -106,13 +83,10 @@ See also: [File Properties ](fprops.md).
 
 ```
 
-
-
 Alternatively:
 ```apl
       JFCREATE←⎕FCREATE ⍠ 3
 ```
-
 
 will name a variant of `⎕FCREATE` which will create component file with level 3 journaling, and checksum enabled. Then:
 ```apl

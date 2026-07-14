@@ -2,7 +2,6 @@
 
 [Parents](../parentlists/cursor.md), [Children](../childlists/cursor.md), [Properties](../proplists/cursor.md), [Methods](../methodlists/cursor.md), [Events](../eventlists/cursor.md)
 
-
 **Purpose:** This object defines a cursor.
 
 **Description**
@@ -21,5 +20,3 @@ The [Bits](../properties/bits.md) and [Mask](../properties/mask.md) properties d
 The [HotSpot](../properties/hotspot.md) property determines the point within the cursor that registers its position over another object.
 
 A Cursor is **used** by setting the [CursorObj](../properties/cursorobj.md) property of another object to its name or ref.
-
-

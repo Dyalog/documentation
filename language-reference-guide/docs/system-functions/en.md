@@ -21,11 +21,7 @@ DOMAIN ERROR: Divide by zero
 11
 ```
 
-
 See [APL Error Messages](../../../programming-reference-guide/error-messages/apl-errors).
 
 !!! note
     `⎕SIGNAL` can be used to reset the value of this system constant.
-
-
-

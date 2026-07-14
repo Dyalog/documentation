@@ -7,23 +7,13 @@ search:
   ⎕NSI NSI
 </div>
 
-
-
-
-
-
 # <span>Namespace Indicator</span> `R←⎕NSI`{{key}}
-
-
 
 `R` is a nested vector of character vectors containing the names of the spaces from which functions in the state indicator were called (`⍴⎕NSI``←→⍴⎕RSI``←→⍴⎕SI`).
 
-
 `⎕RSI` and `⎕NSI` are identical except that `⎕RSI` returns refs to the spaces whereas `⎕NSI` returns their names. Put another way:  `⎕NSI←→⍕¨⎕RSI``.`
 
-
 Note that `⎕NSI` contains the names of spaces *from which* functions were called not those *in which* they are currently running.
-
 
 <h2 class="example">Example</h2>
 ```apl
@@ -52,5 +42,3 @@ xx      yy
 │ └───┘ └────┘ │
 └∊─────────────┘
 ```
-
-

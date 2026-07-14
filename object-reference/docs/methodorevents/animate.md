@@ -4,24 +4,15 @@
 
 **Description**
 
-
 The Animate method enables you to produce special effects when showing or hiding objects. There are three types of animation: roll, slide, and alpha-blended fade.
 
-
-
-
 The argument to Animate is a 1 or 2-element array as follows:
-
 
 |-----|---------|-------|
 |`[1]`|Effects  |integer|
 |`[2]`|Play time|integer|
 
-
-
-
 The value of the *Effects* parameter is the sum of the following flags:
-
 
 |Flag           |Value |Description                                                                                                                                    |
 |---------------|------|-----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -33,8 +24,4 @@ The value of the *Effects* parameter is the sum of the following flags:
 |AW_SLIDE       |262144|Uses slide animation. By default, roll animation is used. This flag is meaningless on its own but is ignored when used with the AW_CENTER flag.|
 |AW_BLEND       |524288|Uses a fade effect. This flag can be used only for a Form.                                                                                     |
 
-
-
 The Playtime parameter is optional and specifies the length of time over which the animation is played in milliseconds. The default value depends upon the animation but is typically 200 milliseconds.
-
-

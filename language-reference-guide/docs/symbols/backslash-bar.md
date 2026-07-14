@@ -4,7 +4,6 @@ search:
 ---
 # <span>Backslash Bar</span> `⍀`
 
-
 # Used as a Function
 
 Monadic Backslash Bar is not defined
@@ -39,5 +38,3 @@ Operator Backslash Bar means
 15 18 21 24 
 ```
 [Language Elements](../glyphs.md)
-
-

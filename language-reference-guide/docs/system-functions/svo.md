@@ -7,15 +7,9 @@ search:
   ⎕SVO SVO
 </div>
 
-
-
-
-
 # <span>Shared Variable Offer</span> `⎕SVO`
 
-
 ## Dyadic `⎕SVO` means
-
 
 [Shared Variable Offer](shared-variable-offer.md)
 ```apl
@@ -25,7 +19,6 @@ search:
 ```
 
 ## Monadic `⎕SVO` means
-
 
 [Query Degree of Coupling](query-degree-of-coupling.md)
 ```apl

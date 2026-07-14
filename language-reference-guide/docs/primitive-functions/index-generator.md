@@ -8,16 +8,12 @@ search:
 
 # <span>Index Generator</span> `R←⍳Y`{{key}}
 
-
-
 `Y` must be a simple scalar or vector array of non-negative numbers. `R` is a numeric array composed of the set of all possible coordinates of an array of shape `Y`. The shape of `R` is `Y` and each element of `R` occurs in its self-indexing position in `R`. In particular, the following identity holds:
 ```apl
       ⍳Y ←→ (⍳Y)[⍳Y]
 ```
 
-
 `⎕IO` is an implicit argument of Index Generator. This function is also known as Interval.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -53,5 +49,3 @@ EXIT
 MAIN
 EXIT
 ```
-
-

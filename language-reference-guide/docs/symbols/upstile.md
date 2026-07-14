@@ -21,5 +21,3 @@ Dyadic Upstile means
 4
 ```
 [Language Elements](../glyphs.md)
-
-

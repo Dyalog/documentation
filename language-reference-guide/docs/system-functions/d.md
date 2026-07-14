@@ -7,14 +7,7 @@ search:
   ⎕D
 </div>
 
-
-
-
-
-
 # <span>Digits</span> `R←⎕D`{{key}}
-
-
 
 This is a simple character vector of the digits from 0 to 9.
 
@@ -23,6 +16,3 @@ This is a simple character vector of the digits from 0 to 9.
       ⎕D
 0123456789
 ```
-
-
-

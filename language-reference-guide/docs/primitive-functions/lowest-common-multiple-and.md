@@ -8,9 +8,7 @@ search:
 
 # <span>Lowest Common Multiple/AND</span> `R←X∧Y`{{key}}
 
-
 ## Case 1: Lowest Common Multiple – either or both X and Y are numeric (non-Boolean)
-
 
 `R` is the lowest common multiple of `X` and `Y`. Note that in this case, `⎕CT` and `⎕DCT` are implicit arguments.
 
@@ -28,7 +26,6 @@ search:
 
 ## Case 2: AND – `X` and `Y` are Boolean
 
-
 `R` is Boolean is determined as follows:
 ```apl
              X   Y     R
@@ -39,15 +36,10 @@ search:
              1   1     1
 ```
 
-
-
 Note that the ASCII caret (`^`) will also be interpreted as an APL **And** (`∧`).
-
 
 <h2 class="example">Example</h2>
 ```apl
       0 1 0 1 ^ 0 0 1 1
 0 0 0 1
 ```
-
-

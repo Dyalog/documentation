@@ -8,25 +8,13 @@ search:
   5177⌶
 </div>
 
-
-
-
-
-
 # <span>List Loaded File Objects</span> `R←5177⌶Y`{{key}}
-
-
 
 The editor may be used to edit Dyalog script files (*.dyalog* files) and general text files and to save the contents in the workspace. Additionally `⎕FIX` can be used to fix scripts held in files. This I-Beam returns details about all of the objects in the workspace that are associated with such files.
 
-
 `Y` must be an empty array.
 
-
-
-
 `R` is a vector of 8-element vectors, one vector per object in the workspace that is associated with a file.
-
 
 |Element|Contains                                                         |
 |-------|-----------------------------------------------------------------|
@@ -38,8 +26,6 @@ The editor may be used to edit Dyalog script files (*.dyalog* files) and general
 |6      |Line count (number of lines in file occupied by the object)      |
 |7      |File Checksum                                                    |
 |8      |File modification time ( `⎕TS` format)                           |
-
-
 
 If an object occupies a file in its entirety, both *Start line* and *Line count* will be 0.
 
@@ -72,5 +58,3 @@ clear ws
 └─────────────┴─────────────┴─┴──┴──┴────────┴──────────────────┘
 	
 ```
-
-

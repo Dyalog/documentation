@@ -5,7 +5,6 @@ search:
 
 # <span>ToolControl</span> <span>Example 3</span>
 
-
 ```apl
 'F'⎕WC'Form' 'ToolControl: Transparent 1)'('Size' 10 40)
 'F.BM'⎕WC'Bitmap' 'C:\WINDOWS\WINLOGO'
@@ -21,7 +20,4 @@ search:
 'F.TB.B3'⎕WC'ToolButton' 'Save'('ImageIndex' 9)
 ```
 
-
 ![](../img/tool8.gif)
-
-

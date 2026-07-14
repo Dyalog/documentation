@@ -1,11 +1,6 @@
 
 
-
-
-
 # <span>VALUE ERROR</span> `6`
-
-
 
 This report is given when either:
 
@@ -29,6 +24,3 @@ VALUE ERROR
      2+HELLO
       ^
 ```
-
-
-

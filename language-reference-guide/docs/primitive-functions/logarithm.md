@@ -6,17 +6,9 @@ search:
   ⍟ log logarithm
 </div>
 
-
-
-
-
-
 # <span>Logarithm</span> `R←X⍟Y`{{key}}
 
-
-
 `X` and `Y` must be numeric arrays. `X` cannot be 1 unless `Y` is also 1. `R` is the base `X` logarithm of `Y`.
-
 
 Note that Logarithm (dyadic `⍟`) is defined in terms of Natural Logarithm (monadic `⍟`) as:
 ```apl
@@ -36,6 +28,3 @@ Note that Logarithm (dyadic `⍟`) is defined in terms of Natural Logarithm (mon
       2 ⍟ 1
 0
 ```
-
-
-

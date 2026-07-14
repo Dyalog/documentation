@@ -12,6 +12,3 @@ The event message reported as the result of [`⎕DQ`](../../../language-referenc
 |`[1]`|Object      |ref or character vector                                                             |
 |`[2]`|Event       |`'StateChange'` or 35                                                               |
 |`[3]`|Window state|0 (about to be restored)<br/>1 (about to be minimised)<br/>2 (about to be maximised)|
-
-
-

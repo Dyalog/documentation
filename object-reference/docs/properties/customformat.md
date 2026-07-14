@@ -45,5 +45,3 @@ To include a single quote in your body text, use two consecutive single quotes. 
 
 !!! note
     Non-format characters that are not delimited by single quotes will result in unpredictable display by the [DateTimePicker](../objects/datetimepicker.md) object.
-
-

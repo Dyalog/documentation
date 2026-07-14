@@ -6,17 +6,9 @@ search:
   ≤
 </div>
 
-
-
-
-
-
 # <span>Less Than Or Equal To</span> `R←X≤Y`{{key}}
 
-
-
 `Y` may be any numeric array. `X` may be any numeric array. `R` is Boolean. `R` is 1 if `X` is less than `Y` or `X=Y`. Otherwise `R` is 0.
-
 
 `⎕CT` and `⎕DCT` are  implicit arguments of Less Than Or Equal To.
 
@@ -30,6 +22,3 @@ search:
       1  1.00000000001 1.00000001 ≤ 1
 1 1 0
 ```
-
-
-

@@ -12,12 +12,9 @@ search:
 
 `R` is the result of matrix division of `X` by `Y`.  That is, the matrix product `Y+.×R` is `X`.
 
-
 `R` is determined such that `(X-Y+.×R)*2` is minimised.
 
-
 The shape of `R` is `(1↓⍴Y),1↓⍴X`.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -42,7 +39,6 @@ The shape of `R` is `(1↓⍴Y),1↓⍴X`.
 8.2111 7.1222
 5.0889 5.5778
 ```
-
 
 If there are more rows than columns in the right argument, the least squares solution results.  In the following example, the constants a and b which provide the best fit for the set of equations represented by P = a + bQ are determined:
 ```apl
@@ -75,7 +71,6 @@ If there are more rows than columns in the right argument, the least squares sol
       ⍝ that is, y⌹x recovered the coefficients 3 4 5 6
 ```
 
-
 ## Additional Information
 ```apl
 
@@ -83,14 +78,9 @@ If there are more rows than columns in the right argument, the least squares sol
 
 ```
 
-
 (Use `+⍉` instead of `⍉` for complex `y`.)
-
 
 This equivalence, familiar to mathematicians and statisticians, explains
 
 - the conformability requirements for `⌹`
 - how to compute the result for tall matrices from the better known square matrix case
-
-
-

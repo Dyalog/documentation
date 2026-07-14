@@ -7,23 +7,13 @@ search:
   ⎕RSI RSI
 </div>
 
-
-
-
-
-
 # <span>Space Indicator</span> `R←⎕RSI`{{key}}
-
-
 
 `R` is a vector of refs to the spaces from which functions in the state indicator were called `(⍴⎕RSI←→⍴⎕NSI←→⍴⎕SI)`.
 
-
 `⎕RSI` and `⎕NSI` are identical except that `⎕RSI` returns refs to the spaces whereas `⎕NSI` returns their names. Put another way: `⎕NSI←→⍕¨⎕RSI``.`
 
-
 Note that `⎕RSI` returns refs to the spaces *from which* functions were called not those *in which* they are currently running.
-
 
 <h2 class="example">Example</h2>
 ```apl
@@ -52,5 +42,3 @@ xx      yy
 │ └───┘      │
 └∊───────────┘
 ```
-
-

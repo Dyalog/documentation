@@ -3,15 +3,9 @@ search:
   exclude: true
 ---
 
-
-
-
-
 # <span>Format</span> `⎕FMT`
 
-
 ## Monadic `⎕FMT` means
-
 
 [Display Form](format-monadic.md)
 ```apl
@@ -22,7 +16,6 @@ search:
 ```
 
 ## Dyadic `⎕FMT` means
-
 
 [Format](format-dyadic.md)
 ```apl

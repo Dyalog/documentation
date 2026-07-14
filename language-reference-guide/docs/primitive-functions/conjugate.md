@@ -6,11 +6,9 @@ search:
   + conjugate
 </div>
 
-
 # <span>Conjugate</span> `R←+Y`{{key}}
 
 If `Y` is complex, `R` is `Y` with the imaginary part of all elements negated.
-
 
 If `Y` is real or non-numeric, `R` is the same array unchanged, although `⊢` is faster. See [Same](same.md).
 
@@ -32,6 +30,3 @@ If `Y` is real or non-numeric, `R` is the same array unchanged, although `⊢` i
       +⎕EX'A'
 1
 ```
-
-
-

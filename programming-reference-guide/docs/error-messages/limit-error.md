@@ -1,11 +1,6 @@
 
 
-
-
-
 # <span>LIMIT ERROR</span> `10`
-
-
 
 This report is given when a system limit is exceeded.  System limits are installation dependent.
 
@@ -16,6 +11,3 @@ LIMIT ERROR
       (16⍴1)⍴1
       ^
 ```
-
-
-

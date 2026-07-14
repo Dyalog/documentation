@@ -73,7 +73,6 @@ __Only certain content can be saved in a shared code files__
 
 The content of a shared code file is limited to namespaces, nested arrays, simple arrays, tradfns, tradops, dfns, dops and derived functions (futures and external variables are instantiated and become arrays). If other content (for example, .NET objects, shared variables and COM objects) is present in a workspace then that workspace cannot be [saved](../../../language-reference-guide/primitive-operators/i-beam/save-shared-code-files/) as a shared code file.
 
-
 ## Summary of Limitations
 
 Fundamental limitations:

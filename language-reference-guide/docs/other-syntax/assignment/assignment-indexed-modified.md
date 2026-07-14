@@ -34,7 +34,6 @@ The operator loops through the indices specified by `I` in ravel order. For each
 1 3 1.5 5 5
 ```
 
-
 As the operator performs a loop, if an index in `I` is repeated, function `f` will be applied that number of times and successively to the same item of `X`.
 
 <h2 class="example">Example</h2>

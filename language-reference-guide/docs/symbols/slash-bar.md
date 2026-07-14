@@ -37,5 +37,3 @@ Operator Slash Bar means
 14 16 18 20
 ```
 [Language Elements](../glyphs.md)
-
-

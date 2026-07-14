@@ -5,7 +5,6 @@ search:
 
 # GUI Overview
 
-
 The Dyalog GUI is based upon the concepts of *objects*, *properties*, *events* and *methods*.
 
 ## [Objects](objects-categorised.md)
@@ -29,5 +28,3 @@ Methods are effectively functions that an object provides; they are things that 
 ## [Object Management Functions](object-management-functions.md)
 
 This is a set of system functions used to create objects, set properties, respond to events, and call methods.
-
-

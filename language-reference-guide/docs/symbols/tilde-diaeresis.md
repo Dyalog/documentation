@@ -28,5 +28,3 @@ mu
 ¯1 ¯1 ¯1
 ```
 [Language Elements](../glyphs.md)
-
-

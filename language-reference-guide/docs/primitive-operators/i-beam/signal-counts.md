@@ -22,6 +22,3 @@ Each element is a count of the number of signals that have been generated since 
 Each time the function is called it zeros the counts; it is therefore inadvisable to call it in more than one APL thread.
 
 Currently, only SIGHUP, SIGINT, SIGQUIT, SIGTERM and SIGWINCH are counted and all other corresponding elements of `R` are 0.
-
-
-

@@ -5,7 +5,6 @@ search:
 
 # <span>ToolControl</span> <span>Example 2</span>
 
-
 ```apl
 'F'⎕WC'Form' 'ToolControl: MultiLine 0'('Size' 20 36)
 'F.TB'⎕WC'ToolControl'('Style' 'List')
@@ -22,14 +21,10 @@ search:
 'F.TB.B6'⎕WC'ToolButton' 'Delete'('ImageIndex' 6)
 ```
 
-
 ![](../img/tool6.gif)
-
 
 ![](../img/tool7.gif)
 
 ```apl
 'F.TB'⎕WC'ToolControl'('MultiLine' 1)('Style' 'List')
 ```
-
-

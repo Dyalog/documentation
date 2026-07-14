@@ -40,7 +40,6 @@ If `X` is specified, the following cases are supported:
 
 <h2 class="example">Example</h2>
 
-
 Greek has two forms of lower-case Sigma, namely "σ" and "ς" but a single upper-case Sigma "Σ". Each lower-case form remains unchanged when mapped to lower-case, but both fold to "σ", while "Σ" is mapped to lower-case "σ" .
 ```apl
       ⎕C 'ίσως'
@@ -54,5 +53,3 @@ Greek has two forms of lower-case Sigma, namely "σ" and "ς" but a single upper
 
 !!! note
     Refs in `Y` are not followed but just returned unchanged.
-
-

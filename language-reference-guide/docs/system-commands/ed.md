@@ -1,8 +1,5 @@
 
 
-
-
-
 # <span>Edit Object</span> `)ED nms`
 
 `)ED` invokes the Dyalog editor and opens an Edit window for each of the objects specified in `nms`.
@@ -30,10 +27,8 @@ If an existing object is named, any type specification in the command is ignored
 If the type is `⋄` and the name is either undefined or of an array, the Editor opens in array-notation mode.
 The resulting array can be of any type or structure.
 
-
 The first object named becomes the top window on the stack.
 See the *Dyalog for Microsoft Windows UI Guide* or the *Dyalog for UNIX UI Guide* for details.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -46,8 +41,4 @@ See the *Dyalog for Microsoft Windows UI Guide* or the *Dyalog for UNIX UI Guide
 
 ```
 
-
 Objects specified in `nms` that cannot be edited are silently ignored. Objects qualified with a namespace path  (for example, `a.b.c.foo`) are silently ignored if the namespace does not exist.
-
-
-

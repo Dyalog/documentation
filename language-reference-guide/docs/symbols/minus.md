@@ -21,5 +21,3 @@ Dyadic Minus means
 3 ¯2 0
 ```
 [Language Elements](../glyphs.md)
-
-

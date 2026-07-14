@@ -35,5 +35,3 @@ Used with Jot in place of the left operand Jot Dot means
     Dot is also used as a decimal point and as a name separator in namespace reference syntax.
 
 [Language Elements](../glyphs.md)
-
-

@@ -131,4 +131,3 @@ with the first expression highlighted (red outline). Enter **&lt;ER&gt;** (<kbd>
 The second expression is now highlighted. Enter **&lt;ER&gt;** (<kbd>enter</kbd>) again to execute the second expression, then enter **&lt;IT&gt;** (<kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>enter</kbd>) to start tracing the primitives in the third expression:
 
 ![](../img/tbt-diamond3.png)
-

@@ -101,4 +101,3 @@ git branch -d 5-document-shell  # or whatever your issue branch was called
 ```
 
 The `--ff-only` will protect you from unintended consequences, meaning that git will terminate instead of generating merge conflicts. Together with always branching before making modifications, this should mean you never see a merge conflict.
-

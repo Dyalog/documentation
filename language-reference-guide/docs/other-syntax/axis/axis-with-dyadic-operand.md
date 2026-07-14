@@ -1,13 +1,11 @@
 
 # <span>Axis (with Dyadic Operand)</span> `R←Xf[B]Y`{{key}}
 
-
 `f` must be a dyadic primitive scalar function, or a dyadic primitive mixed function taken from [](#DyadicMixed) below. `B` must be a numeric scalar or vector. `X` and `Y` may be any arrays whose items are appropriate to function `f`.
 
 For an alternative method of applying any function to a subset of axes, see [Rank](../../primitive-operators/rank.md).
 
 Table: Primitive dyadic mixed functions with optional axis. {: #DyadicMixed }
-
 
 |Function|Name|Range of B|
 |---|---|---|
@@ -21,12 +19,9 @@ Table: Primitive dyadic mixed functions with optional axis. {: #DyadicMixed }
 |`↓`|Drop|one or more axes of `Y`|
 |`⌷`|Index|one or more axes of `Y`|
 
-
 In most cases, `B` must be an integer value identifying the axis of `X` and `Y` along which function `f` is to be applied.
 
-
 Exceptionally, `B` must be a fractional value for the Laminate function (`,`) whose upper and lower integer bounds identify a pair of axes or an extreme axis of `X` and `Y`. For Take (`↑`) and Drop (`↓`), `B` can be a **vector** of two or more axes.
-
 
 `⎕IO` is an implicit argument of the derived function which determines the meaning of `B`.
 
@@ -60,12 +55,9 @@ ABC
 
 ## Axis with Scalar Dyadic Functions
 
-
 Axis `[X]` can take a scalar dyadic function as operand. This has the effect of "stretching" a lower rank array to fit a higher rank one. The arguments must be conformable along the specified axis (or axes) with elements of the lower rank array being replicated along the other axes.
 
-
 For example, if `H` is the higher rank array, `L` the lower rank one, `X` is an axis specification, and `f` a scalar dyadic function, then the expressions `Hf[X]L` and `Lf[X]H` are conformable if `(⍴L)←→(⍴H)[X]`. Each element of L is replicated along the remaining `(⍴H)~X` axes of `H`.
-
 
 In the special case where both arguments have the same rank, the right one will play the role of the higher rank array. If `R` is the right argument, `L` the left argument, `X` is an axis specification and `f` a scalar dyadic function, then the expression `Lf[X]R` is conformable if `(⍴L)←→(⍴R)[X]`.
 
@@ -120,5 +112,3 @@ In the special case where both arguments have the same rank, the right one will 
  740  850  960
 1040 1150 1260
 ```
-
-

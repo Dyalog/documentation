@@ -34,7 +34,6 @@ Some of the tools that are supplied with Dyalog or can be downloaded separately 
 - SQAPL v6.7
 - User Commands v2.8
 
-
 Changes to tools are not included within these Release Notes.
 
 !!! Info "Information"

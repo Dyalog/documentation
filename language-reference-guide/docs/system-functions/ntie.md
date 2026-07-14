@@ -31,7 +31,6 @@ If `Y[2]` is omitted, the system tries to open the file with the default value o
 |&nbsp;                    |&nbsp;               |48                         |write access         |
 |&nbsp;                    |&nbsp;               |64                         |read and write access|
 
-
 On UNIX systems, the second column has no meaning and only the first code (`16|mode`) is passed to the `open(2)` call as the access parameter. See include file `fcntl.h` for details. See also [Native File Lock](nlock.md) which is not platform dependent.
 
 !!! Legacy "Legacy"
@@ -49,7 +48,6 @@ from:
       file ⎕NTIE tie       ⍝ ... tie file.
 ```
 
-
 to:
 ```apl
       tie←file ⎕NTIE 0     ⍝ Tie with first available no.
@@ -65,4 +63,3 @@ ntie←{                  ⍝ tie file and return tie no.
 
 !!! note
     If the native file is already tied, executing `⎕NTIE` with the same or a different tie number simply re-ties it with the same or the new tie number. Re-tying a file with a tie number of 0, re-ties it with the same tie number. This feature can be used to re-tie the file using a different mode.
-

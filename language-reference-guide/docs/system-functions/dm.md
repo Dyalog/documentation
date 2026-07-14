@@ -7,14 +7,7 @@ search:
   ⎕DM DM
 </div>
 
-
-
-
-
-
 # <span>Diagnostic Message</span> `R←⎕DM`{{key}}
-
-
 
 This niladic function returns the last reported APL error as a three-element vector, giving error message, line in error and position of caret pointer.
 
@@ -30,8 +23,4 @@ DOMAIN ERROR
  DOMAIN ERROR        2÷0       ^
 ```
 
-
 Note: `⎕SIGNAL` can be used to reset the value of this system constant.
-
-
-

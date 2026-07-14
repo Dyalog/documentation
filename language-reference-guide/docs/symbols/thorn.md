@@ -3,15 +3,9 @@ search:
   exclude: true
 ---
 
-
-
-
-
 # <span>Thorn</span> `⍕`
 
-
 Monadic Thorn means
-
 
 [Format](../primitive-functions/format.md)
 ```apl
@@ -33,11 +27,9 @@ NB: In the following examples space characters
 4·5·6
 ```
 
-
 N.B. depends on `⎕PP`
 
 Dyadic Thorn means
-
 
 [Format By Specification](../primitive-functions/format-by-specification.md)
 ```apl
@@ -56,5 +48,3 @@ Field-width and number of decimal places:
 
 ```
 [Language Elements](../glyphs.md)
-
-

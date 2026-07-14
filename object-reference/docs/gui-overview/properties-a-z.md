@@ -302,5 +302,3 @@ search:
 |[XRange](../properties/xrange.md)|specifies origin and scale on the x-axis|
 |[Yield](../properties/yield.md)|specifies how frequently Dyalog APL/W yields control|
 |[YRange](../properties/yrange.md)|specifies origin and scale on the y-axis|
-
-

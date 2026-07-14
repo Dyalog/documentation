@@ -1,11 +1,6 @@
 
 
-
-
-
 # warning unmatched brackets
-
-
 
 This report is given after adding or editing a function line in definition mode when it is found that there is not an opening bracket to match a closing bracket, or vice versa, in an expression.  This is a warning message only.  The function line will be accepted even though syntactically incorrect.
 
@@ -15,6 +10,3 @@ This report is given after adding or editing a function line in definition mode 
 warning unmatched brackets
 [4]
 ```
-
-
-

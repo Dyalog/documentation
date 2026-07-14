@@ -41,7 +41,6 @@ This function is sometimes called Compress when `X` is Boolean.
 4 5 6
 ```
 
-
 If `Y` is a singleton `(1=×/⍴,Y)` its value is notionally extended to the length of `X` along the specified axis.
 ```apl
       1 0 1/4

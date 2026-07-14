@@ -49,5 +49,3 @@ Before execution, the argument is prefixed and postfixed with strings defined by
 
 !!! note
     note This function is disabled and instead generates a `DOMAIN ERROR` if the RIDE_SPAWNED parameter is non-zero. This is designed to prevent it being invoked from a Ride session which does not support this type of user interface. For further details, see the [Ride User Guide](https://dyalog.github.io/ride).
-
-

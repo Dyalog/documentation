@@ -45,6 +45,3 @@ and similarly for altering the Ride settings in an active APL session.
     In 14.1 and earlier `3502⌶⍬` was used to enable Ride; this value is still valid, albeit deprecated: code should call `3502⌶1` instead.
 
 Enabling Ride to access applications that use the run-time interpreter means that the APL code of those applications can be accessed. The I-beam mechanism described above means that the APL code itself must grant the right for a Ride client to connect to the run‑time interpreter. Although Dyalog Ltd might change the details of this mechanism, the APL code will **always** need to grant connection rights. In particular, no mechanism that is only dependent on configuration parameters will be implemented.
-
-
-

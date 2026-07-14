@@ -1,14 +1,8 @@
 
 
-
-
-
 # <span>Repeat Statement</span> `:Repeat`
 
-
-
 [Formal Definition](repeat-statement-definition.md){: .noprint }
-
 
 The simplest type of `:Repeat` loop is as follows.  This example executes lines `[3-5]` 100 times.  Notice that as there is no conditional test at the beginning of a `:Repeat` structure, its code statements are executed at least once.
 ```apl
@@ -20,8 +14,6 @@ The simplest type of `:Repeat` loop is as follows.  This example executes lines
 [6]   :Until I=100
 ```
 
-
-
 You can have multiple conditional tests at the end of the loop by adding `:AndIf` or `:OrIf` expressions.  The following example will read data from a native file as 80-character records until it reaches one beginning with the text string `'Widget'` or reaches the end of the file.
 ```apl
 [1]   :Repeat
@@ -29,7 +21,6 @@ You can have multiple conditional tests at the end of the loop by adding `:AndIf
 [3]   :Until 'Widget'≡6⍴REC
 [4]   :OrIf 0=⍴REC
 ```
-
 
 A `:Repeat` structure may be terminated by an `:EndRepeat` (or `:End`) statement in place of a conditional expression.  If so, your code must explicitly jump out of the loop using a `:Leave` statement or by branching.  For example:
 ```apl
@@ -41,8 +32,3 @@ A `:Repeat` structure may be terminated by an `:EndRepeat` (or `:End`) statement
 [6]      :EndIf
 [7]   :EndRepeat
 ```
-
-
-
-
-

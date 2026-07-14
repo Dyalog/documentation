@@ -17,7 +17,6 @@ Three forms of indexing are permitted. The form used is determined by context.
 
 For vector `X`, `Y` is a simple integer array composed of items from the set `⍳⍴X`.
 
-
 `R` consists of elements selected according to index positions in `Y`. `R` has the same shape as `Y`.
 
 <h2 class="example">Examples</h2>
@@ -35,7 +34,6 @@ For vector `X`, `Y` is a simple integer array composed of items from the set `�
  TWO
 ```
 
-
 For matrix `X`, `Y` is composed of two simple integer arrays separated by the semicolon character (`;`). The arrays select indices from the rows and columns of `X` respectively.
 
 <h2 class="example">Examples</h2>
@@ -47,7 +45,6 @@ For matrix `X`, `Y` is composed of two simple integer arrays separated by the se
       M[2;3]
 70
 ```
-
 
 For higher-rank array `X`, `Y` is composed of a simple integer array for each axis of `X` with adjacent arrays separated by a single semicolon character (`;`). The arrays select indices from the respective axes of `X`, taken in row-major order.
 
@@ -69,7 +66,6 @@ For higher-rank array `X`, `Y` is composed of a simple integer array for each ax
 240 210
 200 170
 ```
-
 
 If an indexing array is omitted for the `K`th axis, the index vector `⍳(⍴X)[K]` is assumed for that axis.
 
@@ -96,7 +92,6 @@ If an indexing array is omitted for the `K`th axis, the index vector `⍳(⍴X)[
 
 ## Choose Indexing
 
-
 The index specification `Y` is a non-simple array. Each item identifies a single element of `X` by a set of indices with one element per axis of `X` in row-major order.
 
 <h2 class="example">Examples</h2>
@@ -116,14 +111,12 @@ The index specification `Y` is a non-simple array. Each item identifies a single
 50 20
 ```
 
-
 A scalar may be indexed by the enclosed empty vector:
 ```apl
       S←'Z'
       S[3⍴⊂⍳0]
 ZZZ
 ```
-
 
 Simple and Choose indexing are indistinguishable for vector `X`:
 ```apl

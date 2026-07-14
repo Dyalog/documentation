@@ -40,7 +40,6 @@ Note also that although the file need not be tied exclusively, the `⎕FCOPY` f
 
 If `X` specifies the name of an existing file, the operation fails with a `FILE NAME ERROR`.
 
-
 !!! note
     This operation is atomic. If an error occurs during the copy operation (such as disk full) or if a strong interrupt is issued, the copy will be aborted and the new file `X` will not be created.
 

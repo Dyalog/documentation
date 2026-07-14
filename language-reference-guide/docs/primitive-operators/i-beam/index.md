@@ -36,7 +36,6 @@ Key to restrictions in the following table:
 - X: AIX/Linux/macOS only
 - 64U: 64-bit Unicode only
 
-
 |`A`      |Derived Function                                                                      |Restrictions |
 |-------|--------------------------------------------------------------------------------------|------|
 |`8`    |[Inverted Table Index-of](./inverted-table-index-of.md)                               |&nbsp;|

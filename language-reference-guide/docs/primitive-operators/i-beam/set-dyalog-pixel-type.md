@@ -8,27 +8,16 @@ search:
   2035⌶
 </div>
 
-
-
-
-
-
 # <span>Set Dyalog Pixel Type</span> `R←2035⌶Y`{{key}}
-
-
 
 !!! note
     **Windows only**
 
-
 Determines how Coord `'Pixel'` is interpreted. This is determined initially by the value of the DYALOG_PIXEL_TYPE parameter and, when altered by this function,  applies to all subsequent GUI operations.
-
 
 `Y` is a character vector that is either `'ScaledPixel'` or `'RealPixel'`. Any other value will cause a `DOMAIN ERROR`.
 
-
 The result `R` is the previous value.
-
 
 <h2 class="example">Example</h2>
 ```apl
@@ -43,5 +32,3 @@ DOMAIN ERROR
      ∧
 
 ```
-
-

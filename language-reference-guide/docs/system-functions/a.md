@@ -7,14 +7,7 @@ search:
   ⎕A
 </div>
 
-
-
-
-
-
 # <span>Alphabetic Characters</span> `R←⎕A`{{key}}
-
-
 
 This is a simple character vector, composed of the letters of the alphabet.
 
@@ -23,6 +16,3 @@ This is a simple character vector, composed of the letters of the alphabet.
       ⎕A
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
 ```
-
-
-

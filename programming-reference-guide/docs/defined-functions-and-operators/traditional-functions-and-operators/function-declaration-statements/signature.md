@@ -30,7 +30,6 @@ The next statement specifies that the function is exported as a method named `Ca
                               ...Object Arg1, Object Arg2
 ```
 
-
 The next statement specifies that the function is exported as a method named `IndexGen` whose result is an array of type `System.Int32` and which takes 2 parameters. The first parameter is of type `System.Int32` and is named `N`. The second is of type `System.Int32` and is named `Origin`.
 ```apl
       :Signature Int32[]←IndexGen Int32 N, Int32 Origin
@@ -47,5 +46,3 @@ The next block of statements specifies that the function is exported as a method
       :Signature Double[,]←Mix Double Dimension, ...
             ... Double[] Vec1, Double[] Vec2, Double[] Vec3
 ```
-
-

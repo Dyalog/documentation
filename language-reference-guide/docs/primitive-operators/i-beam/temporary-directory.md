@@ -8,20 +8,11 @@ search:
   739⌶
 </div>
 
-
-
-
-
-
 # <span>Temporary Directory</span> `R←739⌶Y`{{key}}
-
-
 
 Returns the name of a system temporary directory suitable for user files, as a character vector. The name reported does not include a trailing directory separator
 
-
 `Y` is 0.
-
 
 The result `R` is a character vector.
 
@@ -41,4 +32,3 @@ C:/Users/Pete/AppData/Local/Temp
 
 !!! Info "Information"
     `739⌶` is deprecated, and is scheduled for removal in a future release. Use `⎕SYSTEM.Directories.Temp` which gives an equivalent result but using the operating system's preferred directory separator.
-
