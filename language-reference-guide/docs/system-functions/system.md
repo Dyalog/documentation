@@ -80,7 +80,7 @@ This namespace provides information about the specific interpreter instance wher
 Indicates whether the interpreter is a 64- or 32-bit application.
 
 !!! Warning "Warning"
-    Do not confuse this with the bit width of the operating system; 64-bit operating systems can run 32-bit interpreters (but not vice versa).
+    Do not confuse this with the bit width of the operating system; 64-bit operating systems can run 32-bit interpreters (but not the other way round).
 
 #### Executable.BuildTarget
 _For Dyalog internal use only._
@@ -195,7 +195,7 @@ This namespace provides information about the operating system.
 Indicates whether a 64- or 32-bit architecture.
 
 !!! Warning "Warning"
-    Do not confuse this with the bit width of the executable system; 64-bit operating systems can run 32-bit interpreters (but not vice versa).
+    Do not confuse this with the bit width of the executable system; 64-bit operating systems can run 32-bit interpreters (but not the other way round).
 
 #### OS.Description
 One of `'Windows'`, `'macOS'`, `'AIX'` or `'Linux'`.
