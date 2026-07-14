@@ -24,5 +24,3 @@ Dyadic Times means
 24
 ```
 [Language Elements](../glyphs.md)
-
-

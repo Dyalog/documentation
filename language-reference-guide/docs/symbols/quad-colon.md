@@ -47,12 +47,9 @@ The modified function may itself be modified, in this case to revert to a case s
 4
 ```
 
-
 This is equivalent to:
 ```apl
       (f1 ⍠ 1 ⍠ 0) 'The variant Variant operator'
 4
 ```
 [Language Elements](../glyphs.md)
-
-

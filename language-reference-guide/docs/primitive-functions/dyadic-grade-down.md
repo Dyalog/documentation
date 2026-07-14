@@ -82,7 +82,6 @@ That is, the order of rows is 4 2 1 3 which corresponds to a descending row sort
  abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
 ```
 
-
 The following results are tabulated for comparison:
 ```
 X       X[S1⍒X;]    X[S2⍒X;]    X[S3⍒X;]    X[S4⍒X;]
@@ -99,5 +98,3 @@ RAT       FIRST       FIRST       FIRST       fIRST
 ```
 
 `⎕IO` is an implicit argument of Grade Down.
-
-

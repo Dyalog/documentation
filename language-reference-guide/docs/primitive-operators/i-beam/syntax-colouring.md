@@ -8,20 +8,11 @@ search:
   200⌶
 </div>
 
-
-
-
-
-
 # <span>Syntax Colouring</span> `R←200⌶Y`{{key}}
-
-
 
 This function obtains syntax colouring information for a function.
 
-
 `Y` is a vector of character vectors containing the `⎕NR` representation of a function or operator.
-
 
 `R` is a vector of integer vectors with the same shape and structure of `Y` in which each number identifies the syntax colour element associated with the corresponding character in `Y`.
 
@@ -41,10 +32,7 @@ This function obtains syntax colouring information for a function.
 
 ```
 
-
-
 In this example:
-
 
 |---|-------------------------------------------------|
 |21 |is the syntax identifier for "character constant"|
@@ -54,8 +42,4 @@ In this example:
 |7  |is the syntax identifier for "global name"       |
 |23 |is the syntax identifier for "idiom"             |
 
-
-
 The list of syntax colour elements supported by the current interpreter is given by `201⌶`. It is important to note that the values may change within a release, and are very likely to change across releases .. you should always call `201⌶` rather than relying the results from a different interpreter. See [Syntax Colour Tokens](syntax-colour-tokens.md).
-
-

@@ -5,7 +5,6 @@ search:
 
 # <span>Splitter</span> <span>Example 5</span>
 
-
 ```apl
 'F'⎕WC'Form' 'Combining Horizontal and Vertical Splitters'
 'F.E1'⎕WC'Edit'(20 6⍴'Edit 1')('Style' 'Multi')
@@ -20,7 +19,4 @@ search:
 'F.S4'⎕WC'Splitter' 'F.E4' 'F.E5'('Style' 'Horz')
 ```
 
-
 ![](../img/split5.gif)
-
-

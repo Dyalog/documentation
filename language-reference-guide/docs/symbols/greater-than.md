@@ -17,5 +17,3 @@ Dyadic Greater Than means
 
 ```
 [Language Elements](../glyphs.md)
-
-

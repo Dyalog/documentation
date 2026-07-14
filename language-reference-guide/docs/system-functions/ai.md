@@ -7,24 +7,15 @@ search:
   ⎕AI AI
 </div>
 
-
-
-
-
-
 # <span>Account Information</span> `R←⎕AI`{{key}}
 
-
-
 This is a simple integer vector, whose four elements are:
-
 
 |--------|-------------------------------------------------|
 |`⎕AI[1]`|user identification.                             |
 |`⎕AI[2]`|compute time for the APL session in milliseconds.|
 |`⎕AI[3]`|connect time for the APL session in milliseconds.|
 |`⎕AI[4]`|keying time for the APL session in milliseconds. |
-
 
 Elements beyond 4 are not defined but reserved.
 
@@ -39,4 +30,3 @@ Elements beyond 4 are not defined but reserved.
 
 !!! windows "Dyalog on Microsoft Windows"
     Under Microsoft Windows, `⎕AI[1]` is the aplnid (network ID from configuration dialog box).
-

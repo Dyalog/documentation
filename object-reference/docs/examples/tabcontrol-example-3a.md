@@ -5,8 +5,6 @@ search:
 
 # <span>TabControl</span> <span>Example 3a</span>
 
-
-
 Note that the icons used in this example are provided in the `ws` sub-directory.
 ```apl
 icodir←(2 ⎕NQ'.' 'GetEnvironment' 'Dyalog'),'\ws\'
@@ -26,7 +24,4 @@ icodir←(2 ⎕NQ'.' 'GetEnvironment' 'Dyalog'),'\ws\'
 'F1.TC.T3'⎕WC'TabButton' 'Three'('ImageIndex' 3)
 ```
 
-
 ![](../img/tab3a.gif)
-
-

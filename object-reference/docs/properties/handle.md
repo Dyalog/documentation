@@ -4,12 +4,9 @@
 
 **Description**
 
-
 This is a read-only property that reports the *handle* associated with an object. For a visual object, such as a [Form](../objects/form.md) or a [Button](../objects/button.md), this is the window handle. For a [Printer](../objects/printer.md), it is the *printer device context*.
 
-
 This handle allows you to access the corresponding object directly with Windows API functions via `⎕NA`. This facility must be used with care and the responsibility for its behaviour is entirely yours. Do NOT use it to delete an object. This will cause APL to crash.
-
 
 An example of the use of the Handle property is to set tab stops in a [List](../objects/list.md) object. This is illustrated by the following function:
 ```apl
@@ -30,6 +27,3 @@ An example of the use of the Handle property is to set tab stops in a [List](../
 [14]   obj ⎕WS'Items'I
      ∇
 ```
-
-
-

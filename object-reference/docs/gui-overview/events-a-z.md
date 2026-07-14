@@ -5,8 +5,6 @@ search:
 
 # Events A-Z
 
-
-
 |Event|Num|Description|
 |---|---|---|
 |All|0|This is shorthand for "all events".  It is not an event in its own right. See [Special Case for All events](../properties/event.md) .|
@@ -158,5 +156,3 @@ search:
 |[WebSocketReceive](../methodorevents/websocketreceive.md)|842|triggered when data is received over a WebSocket|
 |[WebSocketUpgrade](../methodorevents/websocketupgrade.md)|841|reported when the client component of an [HTMLRenderer](../objects/htmlrenderer.md) object opens a WebSocket|
 |[WinIniChange](../methodorevents/wininichange.md)|133|WIN.INI has changed|
-
-

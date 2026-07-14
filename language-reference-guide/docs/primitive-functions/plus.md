@@ -6,14 +6,7 @@ search:
   + plus add
 </div>
 
-
-
-
-
-
 # <span>Plus</span> `R←X+Y`{{key}}
-
-
 
 `Y` must be numeric. `X` must be numeric. `R` is the arithmetic sum of `X` and `Y`. `R` is numeric. This function is also known as Add.
 
@@ -31,6 +24,3 @@ search:
       ¯5 + 4J4 5J5
 ¯1J4 0J5
 ```
-
-
-

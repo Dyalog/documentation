@@ -1,24 +1,16 @@
 # <span>ColSortImages</span> <span>Property</span>
 
-
-
 **Applies To:** [Grid](../objects/grid.md)
 
 **Description**
 
-
 The ColSortImages property identifies the names of, or refs to, up to three [Bitmap](../objects/bitmap.md) objects that are used to specify the sort images for a [Grid](../objects/grid.md) object.
-
-
 
 If ColSortImages is not specified, default images are used.
 
-
 The [Bitmap](../objects/bitmap.md) specified by the 1st element of ColSortImages is used to display columns that are sorted down.
 
-
 The [Bitmap](../objects/bitmap.md) specified by the 2nd element of ColSortImages is used to display columns that are unsorted.
-
 
 The [Bitmap](../objects/bitmap.md) specified by the 3rd element of ColSortImages is used to display columns that are sorted up.
 ```apl
@@ -46,7 +38,4 @@ The [Bitmap](../objects/bitmap.md) specified by the 3rd element of ColSortImages
  F.G.ColSorted 3 1
 ```
 
-
 ![](../img/colsortimages.png)
-
-

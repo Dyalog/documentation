@@ -8,38 +8,25 @@ search:
   16808⌶
 </div>
 
-
-
-
-
-
 # <span>Sample Probability Distribution</span> `R←X(16808⌶)Y`{{key}}
-
-
 
 This function generates an array of random numbers from a named probability distribution.  Note that this is not currently implemented for AIX.
 
-
 `Y` is a 2-item vector containing the name of the probability distribution from those listed in the table below, and the shape of the result.
 
-
 `X` is a scalar or 1 or 2 element numeric vector that specifies parameters.
-
 
 For example to get an array with shape (3 5 7) of uniform random numbers for the interval from ¯17.3 to 12.7, you’d enter
 ```apl
       ¯17.3 12.7 (16808 ⌶) 'Uniform' (3 5 7)
 ```
 
-
 If you wanted a vector of 100,000 uniform random numbers for that interval, you’d enter
 ```apl
       ¯17.3 12.7 (16808 ⌶) 'Uniform' 100000
 ```
 
-
 The domain rules for the distributions currently  implemented are as follows:
-
 
 |Distribution     |X[1]             |X[2]       |Domain Rules                                                               |
 |-----------------|-----------------|-----------|---------------------------------------------------------------------------|
@@ -61,15 +48,11 @@ The domain rules for the distributions currently  implemented are as follows:
 |`'Student T'`    |degree of freedom|&nbsp;     |degree of freedom ≥eps where eps is smallest non-zero positive float number|
 |`'Weibull'`      |a                |b          |a ≥  eps AND b ≥ eps ; eps is smallest non-zero positive float number      |
 
-
-
 Each of those distributions has a corresponding Wikipedia entry with a description of its theoretical foundation and usually graphs of the probability density functions and cumulative distribution functions for interesting sets of parameter values.
 
 <h2 class="example">Example</h2>
 
-
 The probability density function for the Beta distribution (see ) with the parameter vector (2 5) has an interesting shape.
-
 
 `BucketCount` counts random numbers that fall into a sequence of evenly distributed bucket intervals:
 ```apl
@@ -83,7 +66,6 @@ The probability density function for the Beta distribution (see ) with the param
 
 ```
 
-
 So then we can create 100,000 samples and calculate values for a density graph with 1,000 evenly spaced buckets by:
 ```apl
 
@@ -91,10 +73,6 @@ So then we can create 100,000 samples and calculate values for a density graph w
       bc←1000 BucketCounts rv
 ```
 
-
 Using the Chart Wizard ![sharpplot icon](../../img/sharpplot-icon.png) we can plot `(⊂2)⌷⍉bc` against `(⊂1)⌷⍉bc` to get the graph:
 
-
 ![beta distribution](../../img/beta-distribution.png)
-
-

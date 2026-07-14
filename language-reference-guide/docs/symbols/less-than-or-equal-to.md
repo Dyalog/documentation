@@ -15,5 +15,3 @@ Dyadic Less Than or Equal To means
 1 1 0
 ```
 [Language Elements](../glyphs.md)
-
-

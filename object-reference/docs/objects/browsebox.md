@@ -1,45 +1,33 @@
 # <span>BrowseBox</span> <span>Object</span>
 
-
-
 [Parents](../parentlists/browsebox.md), [Children](../childlists/browsebox.md), [Properties](../proplists/browsebox.md), [Methods](../methodlists/browsebox.md), [Events](../eventlists/browsebox.md)
-
-
 
 **Purpose:** The BrowseBox object allows the user to browse for and select a folder         or other resource.
 
 **Description**
 
-
 The BrowseBox object is a dialog box that allows the user to browse for and
 			select a folder (directory) or other resource.
-
-
 
 **For full functionality as described here, the BrowseBox object requires
 the Windows Shell Library SHELL32.DLL Version 4.71 or higher. The BrowseBox
 object also supports the enhanced functionality provided by SHELL32.DLL Version
 5 (Windows 2000) if present.**
 
-
 The [BrowseFor](../properties/browsefor.md) property specifies the
 type of resource and may be `'Directory'`(the default), `'File'`, `'Computer'` or `'Printer'`.
 
-
 The [StartIn](../properties/startin.md) property specifies the path
 name where browsing should start.
-
 
 The [HasEdit](../properties/hasedit.md) property specifies whether
 or not the dialog box contains an edit field into which the user can type the
 name of the folder or other resource, rather than browsing for it. The default
 is 0.
 
-
 A BrowseBox may only be used by the execution of a modal `⎕DQ`.
 The action code for the FileBoxOK and FileBoxCancel events must be set to 1 so
 that the appropriate result is returned by the modal `⎕DQ`.
-
 
 After the user has pressed OK or Cancel, the [Target](../properties/target.md) property contains the name of the chosen folder or other resource.
 
@@ -68,5 +56,3 @@ After the user has pressed OK or Cancel, the [Target](../properties/target.md) p
 [20]   :EndWith
      ∇
 ```
-
-

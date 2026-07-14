@@ -7,17 +7,9 @@ search:
   ⎕NREAD NREAD
 </div>
 
-
-
-
-
-
 # <span>Native File Read</span> `R←⎕NREAD Y`{{key}}
 
-
-
 This monadic function reads data from a native file. `Y` is a 3- or 4-element integer vector whose elements are as follows:
-
 
 |---|---|
 |`[1]`|negative tie number,|
@@ -25,25 +17,17 @@ This monadic function reads data from a native file. `Y` is a 3- or 4-element in
 |`[3]`|count. If this value is `¯1` , all of the elements defined by `Y[2]` are read from the position specified by `Y[4]` to the end of the file. This may result in the last few bytes in the file being ignored if they do not form a complete element.|
 |`[4]`|start byte, counting from 0. If this value omitted or is `¯1` , data is read starting from the current position in the file (initially `0` ).|
 
-
 ## Notes
-
 
 `8 ⎕NINFO ⊃Y` can be used to report the current position of the file pointer.
 
-
 `Y[2]` specifies conversion to an APL internal form as follows. Note that the internal formats for character arrays differ between the Unicode and Classic Editions.
-
 
 If both `Y[3]` and `Y[4]` have the value `¯1`, then `⎕NREAD` reads data from the current position in the file to the end of the file.
 
-
 `⎕NREAD` can be used with any file. However, calling `⎕NREAD` with at least one of `Y[3 4]` set to `¯1` is intended for regular files only; using on pipes, FIFOs or other special types of file is not recommended.
 
-
-
 Table: Unicode Edition: Conversion Codes
-
 
 |Value  |Number of bytes read|Result Type      |Result shape|
 |-------|--------------------|-----------------|------------|
@@ -62,9 +46,7 @@ Table: Unicode Edition: Conversion Codes
 !!! Legacy "Legacy"
     Conversion code 82 is permitted in the Unicode edition for backwards compatibility purposes and causes 1-byte data on file to be translated (according to [⎕NXLATE](./nxlate.md)) from [⎕AV](./av.md) indices into normal (Unicode) characters of type 80, 160 or 320.
 
-
 Table: Classic Edition: Conversion Codes
-
 
 |Value|Number of bytes read|Result Type     |Result shape|
 |-----|--------------------|----------------|------------|
@@ -76,7 +58,6 @@ Table: Classic Edition: Conversion Codes
 |645  |8 `×` count         |64 bits floating|count       |
 |1287 |16 `×` count        |128 bits decimal|count       |
 |1289 |16 `×` count        |128 bits complex|count       |
-
 
 <h2 class="example">Example</h2>
 ```apl

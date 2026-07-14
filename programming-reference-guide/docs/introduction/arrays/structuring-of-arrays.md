@@ -15,7 +15,6 @@ Primitive functions that restructure arrays:
 |`⊂` |[enclose](../../../../language-reference-guide/primitive-functions/enclose)|[partitioned enclose](../../../../language-reference-guide/primitive-functions/partitioned-enclose)|
 |`⊆` |[nest](../../../../language-reference-guide/primitive-functions/nest)|[partition](../../../../language-reference-guide/primitive-functions/partition)|
 
-
 <h2 class="example">Examples</h2>
 ```apl
       ⊢m←2 2⍴1 2 3 4                   ⍝ reshape
@@ -72,4 +71,3 @@ MNOP
 │1 2│3 4 5│
 └───┴─────┘
 ```
-

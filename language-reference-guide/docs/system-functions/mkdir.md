@@ -7,20 +7,11 @@ search:
   ⎕MKDIR MKDIR
 </div>
 
-
-
-
-
-
 # <span>Make Directory</span> `{R}←{X}⎕MKDIR Y`{{key}}
-
-
 
 This function creates new directories.
 
-
 `Y` is a character vector or scalar containing a single directory name, or a vector of character vectors containing zero or more directory names. Names must conform to the naming rules of the host Operating System.
-
 
 By default, for each name in `Y` the path must exist and the base name must not exist (see [File Name Parts](nparts.md)), otherwise an error is signalled. The optional left argument `X` and the variant option **Unique** can be used to amend this behaviour.
 
@@ -87,5 +78,3 @@ FILE NAME ERROR: /Users/Pete/Documents/temp/t1/t2: Already exists
 
 !!! note
     When multiple names are specified they are processed in the order given. If an error occurs at any point whilst creating directories, processing will immediately stop and an error will be signalled. The operation is not atomic; some directories may be created before this happens. In the event of an error there will be no result and therefore no indication of how many directories were created before the error occurred.
-
-

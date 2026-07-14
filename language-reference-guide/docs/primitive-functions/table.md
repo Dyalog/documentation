@@ -6,17 +6,9 @@ search:
   ⍪ table
 </div>
 
-
-
-
-
-
 # <span>Table</span> `R←⍪Y`{{key}}
 
-
-
 `Y` may be any array. `R` is a 2-dimensional matrix of the elements of `Y` taken in row-major order, preserving the shape of the first dimension of `Y` if it exists
-
 
 *Table* has been implemented according to the Extended APL Standard (*ISO/IEC 13751:2001).*
 
@@ -48,6 +40,3 @@ search:
 │ └~──────────────────────────────────┘        │
 └∊─────────────────────────────────────────────┘
 ```
-
-
-

@@ -8,29 +8,17 @@ search:
   85⌶
 </div>
 
-
-
-
-
-
 # <span>Execute Expression</span> `R←X(85⌶)Y`{{key}}
-
-
 
 Executes an expression.
 
-
 `Y` is a character vector containing an APL expression.
-
 
 The function executes the expression in `Y` exactly as it would be executed by the monadic Execute primitive function `⍎`, but handles shy results  of the execution rather differently.
 
-
 The left argument `X` determines how a shy result from the execution of `Y` is treated and is either 0 or 1.
 
-
 If `X` is 1, and the expression in `Y` returns an explicit result, `R` is that result. If the expression in `Y` returns no result or returns a shy result, the function signals `ERROR 85`. Effectively, a shy result is discarded.
-
 
 If `X` is 0, and the expression in `Y` returns an explicit result or a shy result, `R` is that result (but is no longer shy). If the expression in `Y` returns no result, the function signals `ERROR 85`.
 
@@ -48,5 +36,3 @@ ERROR 85
      ∧
 
 ```
-
-

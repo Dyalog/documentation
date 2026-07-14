@@ -8,26 +8,15 @@ search:
   2400⌶
 </div>
 
-
-
-
-
-
 # <span>Set Workspace Save Options</span> `R←2400⌶Y`{{key}}
-
-
 
 This function sets a flag in the workspace that determines what happens when it is saved. The flag itself is part of the workspace and is saved with it.
 
-
 If the flag is set, all Trace, Stop and Monitor settings will be cleared whenever the workspace is saved, whether by `)SAVE`, `⎕SAVE` or by *File/Save* from the Session menubar.
-
 
 `Y` must be 1 (set the flag) or 0 (clear the flag).
 
-
 The result `R` is the previous value of the flag.
-
 
 This function may be extended in the future and a left-argument may be added.
 
@@ -43,6 +32,3 @@ This function may be extended in the future and a left-argument may be added.
 temp saved Sat Apr 05 17:01:30 2014
 
 ```
-
-
-

@@ -10,6 +10,3 @@ If the argument to the OLERegister method is a simple character vector, this is 
 
 !!! note 
     It is currently necessary to run the APL from which this method is called with Administrator privileges.
-
-
-

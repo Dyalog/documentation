@@ -158,4 +158,3 @@ The left argument to `2011⌶` allows you to flag columns which should be return
 ```
 
 Depending on your application, you may need to process the text in the fourth column in some way – but the overall performance will probably still be very much better than it would be if DateTime objects were used.
-

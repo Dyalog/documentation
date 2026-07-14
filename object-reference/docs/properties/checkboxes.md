@@ -27,6 +27,3 @@ method will have the 13<sup>th</sup> bit set if the item is checked.
 The picture below illustrates the effect on the appearance of a [ListView](../objects/listview.md) object, of setting CheckBoxes to 1.
 
 ![](../img/lv-cb.gif)
-
-
-

@@ -8,26 +8,15 @@ search:
   127⌶
 </div>
 
-
-
-
-
-
 # <span>Overwrite Free Pockets</span> `R←127⌶Y`{{key}}
-
-
 
 Overwrites all free pockets in the workspace.
 
-
 Some applications (cryptography for example) make use of secure data during execution. The nature of the APL workspace is such that remnants of this secure data may persist in the workspace (and thus the process memory) even after the relevant APL variables have been expunged. This function overwrites all unused data pockets in the workspace so that any potentially secure data is removed.
-
 
 `Y` is any empty array, preferably `⍬`(zilde). `R` is always 1.
 
-
 It is the responsibility of the programmer to ensure that there are no USED pockets in the workspace that reference the data.
-
 
 <h2 class="example">Example</h2>
 ```apl
@@ -56,5 +45,3 @@ It is the responsibility of the programmer to ensure that there are no USED pock
      ∇
 
 ```
-
-

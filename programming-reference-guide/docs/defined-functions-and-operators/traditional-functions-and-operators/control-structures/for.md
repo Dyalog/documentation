@@ -1,16 +1,10 @@
 
 
-
-
-
 # <span>For Statement</span> `:For var :In[Each] aexp`
-
-
 
 [Formal Definition](for-statement-definition.md){: .noprint }
 
 ## Single Control Variable
-
 
 The `:For` loop is used to execute a block of code for a series of values of a particular control variable.  For example, the following would execute lines `[2-3]` successively for values of `I` from 3 to 5 inclusive:
 ```apl
@@ -20,13 +14,9 @@ The `:For` loop is used to execute a block of code for a series of values of a p
 [4]   :EndFor
 ```
 
-
-
 The way a `:For` loop operates is as follows.  On encountering the `:For`, the expression to the right of `:In` is evaluated and the result stored.  This is the *control array*.  The *control variable*, named to the right of the `:For`, is then assigned the first value in the control array, and the code between `:For` and `:EndFor` is executed.  On encountering the `:EndFor`, the control variable is assigned the next value of the control array and execution of the code is performed again, starting at the first line after the `:For`.  This process is repeated for each value in the control array.
 
-
 Note that if the control array is empty, the code in the `:For` structure is not executed.  Note too that the control array may be any rank and shape, but that its elements are assigned to the control variable in ravel order.
-
 
 The control array may contain any type of data.  For example, the following code resizes (and compacts) all your component files
 ```apl
@@ -36,7 +26,6 @@ The control array may contain any type of data.  For example, the following cod
 [4]       ⎕FUNTIE 1
 [5]   :EndFor
 ```
-
 
 You may also nest `:For` loops.  For example, the following expression finds the timestamp of the most recently updated component in all your component files.
 ```apl
@@ -53,28 +42,20 @@ You may also nest `:For` loops.  For example, the following expression finds th
 
 ## Multiple Control Variables
 
-
 The `:For` control structure can also take multiple variables. This has the effect of doing a strand assignment each time around the loop.
-
 
 For example `:For a b c :in (1 2 3)(4 5 6)`, sets `a b c←1 2 3`, first time around the loop and `a b c←4 5 6`, the second time.
 
-
 Another example is `:For i j :In ⍳⍴Matrix`, which sets `i` and `j` to each row and column index of `Matrix`.
-
 
 ## :InEach Control Word
 ```apl
       :For var ... :InEach value ...
 ```
 
-
 In a `:For` control structure, the keyword `:InEach` is an alternative to `:In`.
 
-
 For a single control variable, the effect of the keywords is identical but for multiple control variables the values vector is inverted.
-
-
 
 The distinction is best illustrated by the following equivalent examples:
 ```apl
@@ -87,7 +68,6 @@ The distinction is best illustrated by the following equivalent examples:
       :EndFor
 ```
 
-
 In each case, the output from the loop is:
 ```apl
 1 2 3
@@ -96,7 +76,6 @@ In each case, the output from the loop is:
 7 8 9
 ```
 
-
 Notice that in the second case, the number of items in the values vector is the same as the number of control variables. A more typical example might be.
 ```apl
       :For a b c :InEach avec bvec cvec
@@ -104,7 +83,4 @@ Notice that in the second case, the number of items in the values vector is the 
       :EndFor
 ```
 
-
 Here, each time around the loop, control variable `a` is set to the next item of `avec`, `b` to the next item of `bvec` and `c` to the next item of `cvec`.
-
-

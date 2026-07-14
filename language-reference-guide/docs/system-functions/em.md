@@ -20,6 +20,3 @@ See [APL Error Messages](../../../programming-reference-guide/error-messages/apl
       ⎕EM 11
 DOMAIN ERROR
 ```
-
-
-

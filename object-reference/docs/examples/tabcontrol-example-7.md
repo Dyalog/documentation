@@ -5,8 +5,6 @@ search:
 
 # <span>TabControl</span> <span>Example 7</span>
 
-
-
 Note that the icons used in this example are provided in the `ws` sub-directory.
 ```apl
 icodir←(2 ⎕NQ'.' 'GetEnvironment' 'Dyalog'),'\ws\'
@@ -33,7 +31,4 @@ icodir←(2 ⎕NQ'.' 'GetEnvironment' 'Dyalog'),'\ws\'
 'F.TC.S4'⎕WC'SubForm'('TabObj' 'F.TC.T4')
 ```
 
-
 ![](../img/tab7.gif)
-
-

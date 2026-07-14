@@ -7,14 +7,7 @@ search:
   ⎕FNUMS FNUMS
 </div>
 
-
-
-
-
-
 # <span>File Numbers</span> `R←⎕FNUMS`{{key}}
-
-
 
 The result is an integer vector of the *file tie number* of all tied files.  If no files are tied, the result is empty.  The elements of the result are in the order in which the files were tied.
 
@@ -39,6 +32,3 @@ The result is an integer vector of the *file tie number* of all tied files.  If 
       ⍴⎕FNUMS
 0
 ```
-
-
-

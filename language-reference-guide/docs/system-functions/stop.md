@@ -3,15 +3,9 @@ search:
   exclude: true
 ---
 
-
-
-
-
 # <span>Stop Controls</span> `⎕STOP`
 
-
 ## Dyadic `⎕STOP` means
-
 
 [Set Stop Controls](set-stop.md)
 ```apl
@@ -20,7 +14,6 @@ search:
 ```
 
 ## Monadic `⎕STOP` means
-
 
 [Query Stop Controls](query-stop.md)
 ```apl

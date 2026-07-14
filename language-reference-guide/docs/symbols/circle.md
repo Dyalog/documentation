@@ -36,5 +36,3 @@ Dyadic Circle means
 
 ```
 [Language Elements](../glyphs.md)
-
-

@@ -7,26 +7,15 @@ search:
   ⎕FRENAME FRENAME
 </div>
 
-
-
-
-
-
 # <span>File Rename</span> `{R}←X ⎕FRENAME Y`{{key}}
-
 
 ## Access code 128
 
-
 `Y` must be a simple 1 or 2 element integer vector containing a file tie number and an optional passnumber.  If the passnumber is omitted it is assumed to be zero.
-
 
 `X` must be a simple character scalar or vector containing the new name of the file.  This name must be in accordance with the operating system's conventions, and may be specified with a relative or absolute pathname. If no file extension is supplied, the first extension specified by the   **CFEXT** parameter will be added. See [ CFEXT](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters).
 
-
-
 The file being renamed must be tied exclusively.
-
 
 The shy result of `⎕FRENAME` is the tie number of the file.
 
@@ -52,5 +41,3 @@ Rename←{
     ⎕FUNTIE to ⎕FRENAME fm ⎕FTIE 0
 }
 ```
-
-

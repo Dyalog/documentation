@@ -23,5 +23,3 @@ For further information, see [Comparison Tolerance](ct.md).
       1.00000000001 1.0000001 = 1
 1 0
 ```
-
-

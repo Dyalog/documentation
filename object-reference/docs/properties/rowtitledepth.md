@@ -1,15 +1,10 @@
 # <span>RowTitleDepth</span> <span>Property</span>
 
-
-
 **Applies To:** [Grid](../objects/grid.md)
 
 **Description**
 
-
 RolTitleDepth specifies the structure of a set of hierarchical row titles.
-
-
 
 It
 is an integer vector with the same length as the RowTitles property. A value of
@@ -37,11 +32,7 @@ is 1, and so forth. For example:
       'F.G'⎕WS'RowTitleAlign' 'Centre'
 ```
 
-
 ![](../img/gridrt.gif)
-
 
 Note that the [LockRows](../methodorevents/lockrows.md) method is not
 supported in combination with hierarchical row titles.
-
-

@@ -33,5 +33,3 @@ Dyadic Not Equal Underbar means
 1
 ```
 [Language Elements](../glyphs.md)
-
-

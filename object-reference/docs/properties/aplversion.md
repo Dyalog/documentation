@@ -1,15 +1,11 @@
 # <span>APLVersion</span> <span>Property</span>
 
-
-
 **Applies To:** [Root](../objects/root.md)
 
 **Description**
 
-
 This is a read-only property that provides information about the Version of Dyalog APL that you are using. It is
 a 4-element vector of character vectors as described in the table below. In future releases these values may change, be removed, or new ones added.
-
 
 |Index|Description              |Possible Values  |
 |-----|-------------------------|-----------------|
@@ -26,6 +22,3 @@ a 4-element vector of character vectors as described in the table below. In futu
 └──────────┴────────────┴─┴───────────┘
 
 ```
-
-
-

@@ -7,22 +7,11 @@ search:
   ⎕DR DR
 </div>
 
-
-
-
-
-
 # <span>Data Representation (Monadic)</span> `R←⎕DR Y`{{key}}
-
-
 
 Monadic `⎕DR` returns the type of its argument `Y`.  The result `R` is an integer scalar containing one of the following values. Note that the internal representation and data types for character data differ between the Unicode and Classic Editions.
 
-
-
-
 Table: Unicode Edition
-
 
 |Value|Data Type                                |
 |-----|-----------------------------------------|
@@ -38,11 +27,7 @@ Table: Unicode Edition
 |1287 |128 bits Decimal                         |
 |1289 |128 bits Complex                         |
 
-
-
-
 Table: Classic Edition
-
 
 |Value|Data Type                                 |
 |-----|------------------------------------------|
@@ -55,6 +40,3 @@ Table: Classic Edition
 |645  |64 bits Floating                          |
 |1287 |128 bits Decimal                          |
 |1289 |128 bits Complex                          |
-
-
-

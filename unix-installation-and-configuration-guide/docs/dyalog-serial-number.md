@@ -25,7 +25,6 @@ or
       ⎕SE.Dyalog.Serial ''
 ```
 
-
 !!! note
     Using or entering a serial number other than the one issued to you is not permitted. Transferring the serial number to anyone else is not permitted. For the full licence terms and conditions, see: [https://www.dyalog.com/uploads/documents/Terms_and_Conditions.pdf](https://www.dyalog.com/uploads/documents/Terms_and_Conditions.pdf)
 

@@ -42,6 +42,5 @@ If `Y` is `⍬`, then `R` is a numeric vector containing all the process IDs of 
 
 `R` is a Boolean scalar indicating whether the signal was successfully sent (`1`), as reported by the operating-system.
 
-
 !!! windows "Dyalog on Microsoft Windows"
 	On Microsoft Windows, the only valid value for `X` is `9`, which makes the I-beam call `TerminateProcess()` on the child process.

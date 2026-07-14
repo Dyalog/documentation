@@ -46,5 +46,3 @@ Similarly to GUI objects, `⎕EXCEPTION` is not preserved across a save/load cy
 
 !!! note
     `⎕SIGNAL` can be used to reset the value of this system constant.
-
-

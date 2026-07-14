@@ -8,7 +8,6 @@
 
 Deploy the [MkDocs](https://www.mkdocs.org/) website which uses the [mike](https://github.com/jimporter/mike) tool for versioning. 
 
-
 ## Overview
 
 ### Deployment Pipeline (`Jenkinsfile`)

@@ -6,14 +6,7 @@ search:
   ○ pi
 </div>
 
-
-
-
-
-
 # <span>Pi Times</span> `R←○Y`{{key}}
-
-
 
 `Y` may be any numeric array. `R` is numeric. The value of `R` is the product of the mathematical constant *π=3.14159...* (Pi), and `Y`.
 
@@ -28,6 +21,3 @@ search:
       *○0J1 ⍝ Euler
 ¯1
 ```
-
-
-

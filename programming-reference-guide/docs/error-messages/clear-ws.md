@@ -1,11 +1,6 @@
 
 
-
-
-
 # clear ws
-
-
 
 This message is displayed when the system command `)CLEAR` is issued.
 
@@ -14,6 +9,3 @@ This message is displayed when the system command `)CLEAR` is issued.
       )CLEAR
 clear ws
 ```
-
-
-

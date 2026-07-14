@@ -6,14 +6,7 @@ search:
   ~ not
 </div>
 
-
-
-
-
-
 # <span>NOT</span> `R←~Y`{{key}}
-
-
 
 `Y` must be a Boolean array. `R` is Boolean. The value of `R` is 0 if `Y` is 1, and `R` is 1 if `Y` is 0.
 
@@ -22,6 +15,3 @@ search:
       ~0 1
 1 0
 ```
-
-
-

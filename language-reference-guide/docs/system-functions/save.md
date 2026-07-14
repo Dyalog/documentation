@@ -42,7 +42,4 @@ ACTIVE WS
 SAVED WS
 ```
 
-
 Additional operations may be performed before saving the workspace. For further information, see [Set Workspace Save Options](../primitive-operators/i-beam/set-workspace-save-options.md).
-
-

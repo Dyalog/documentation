@@ -7,40 +7,25 @@ search:
   ⎕NEXISTS NEXISTS
 </div>
 
-
-
-
-
-
 # <span>Native File Exists</span> `R←⎕NEXISTS Y`{{key}}
-
-
 
 This function reports whether or not files and directories exist.
 
-
 `Y` is a character vector or scalar containing a single file/directory name, or a vector of character vectors containing zero or more file/directory names.
-
 
 If `Y` specifies a single name, the result `R` is a scalar 1 if a file or directory exists or 0 if not. If `Y` is a vector of character vectors, `R` is a vector of 1s and 0s with the same length as `Y`.
 
-
-
 ## Variant Options
-
 
 `⎕NEXISTS` may be applied using the  Variant operator with the Wildcard option.
 
 ## Wildcard Option (Boolean)
 
-
 |---|---|
 |0|The name or names in `Y` identifies a specific file name.|
 |`1`|The name or names in `Y` that specify the *base name* and *extension* (see [NParts](./nparts.md) ), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
 
-
 If the Wildcard option is 1, `R` indicates whether or not one or more matches to the corresponding pattern in `Y` exist.
-
 
 <h2 class="example">Example</h2>
 ```apl
@@ -63,5 +48,3 @@ If the Wildcard option is 1, `R` indicates whether or not one or more matches to
 
 !!! note
     If `Y` is a symbolic link, `⎕NEXISTS` will return 1 whether or not the target of the symbolic link exists.
-
-

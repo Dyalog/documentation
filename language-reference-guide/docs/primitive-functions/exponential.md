@@ -6,14 +6,7 @@ search:
   * exponential
 </div>
 
-
-
-
-
-
 # <span>Exponential</span> `R←*Y`{{key}}
-
-
 
 `Y` must be numeric. `R` is numeric and is the `Y`th power of *e*, the base of natural logarithms.
 
@@ -28,6 +21,3 @@ search:
       1+*○0j1 ⍝ Euler Identity
 0
 ```
-
-
-

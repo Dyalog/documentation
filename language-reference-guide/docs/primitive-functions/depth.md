@@ -49,5 +49,3 @@ If `⎕ML<2` and `Y` is not of uniform depth then `R` is negated (therefore, whe
       ≡¨¨A
  0 0  0 1
 ```
-
-

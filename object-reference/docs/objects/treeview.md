@@ -38,5 +38,3 @@ The [SelItems](../properties/selitems.md) property is a Boolean vector that indi
 
 !!! warning
     Due to the limitations of the Win32 TreeView object, it is necessary to query the state of each item in a TreeView in order to obtain the value of the [SelItems](../properties/selitems.md) property, making it a comparatively slow operation if there are a lot of [Items](../properties/items.md).
-
-

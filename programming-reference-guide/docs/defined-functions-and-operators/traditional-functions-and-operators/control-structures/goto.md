@@ -2,7 +2,6 @@
 
 A `:GoTo` statement is a direct alternative to `→` (branch) and causes execution to jump to the line specified by the first element of `aexp`.
 
-
 The following are equivalent.  See [Branch](../../../../../language-reference-guide/other-syntax/branch) for further details.
 ```apl
       →Exit

@@ -8,16 +8,11 @@ search:
 
 # <span>Matrix Inverse</span> `R←⌹Y`{{key}}
 
-
-
 `Y` must be a simple array of rank 2 or less.  `Y` must be non-singular.  If `Y` is a scalar, it is treated as a one-element matrix.  If `Y` is a vector, it is treated as a single-column matrix.  `Y` must have at least the same number of rows as columns.
-
 
 `R` is the inverse of `Y` if `Y` is a square matrix, or the left inverse of `Y` if `Y` is not a square matrix.  That is, `R+.×Y` is an identity matrix.
 
-
 The shape of `R` is `⌽⍴Y`.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -29,7 +24,6 @@ The shape of `R` is `⌽⍴Y`.
  0.3125 0.09375
 ¯0.125  0.0625
 ```
-
 
 Within calculation accuracy, `A+.×M` is the identity matrix.
 ```apl
@@ -52,5 +46,3 @@ Within calculation accuracy, `A+.×M` is the identity matrix.
       ⌈/,| (id 1↑⍴x) - x+.×⌹x
 3.66384E¯16
 ```
-
-

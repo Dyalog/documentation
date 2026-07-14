@@ -1,11 +1,6 @@
 
 
-
-
-
 # warning pendent operation
-
-
 
 This report is given on opening and closing definition mode when attempting to edit a pendant function or operator.
 
@@ -31,6 +26,3 @@ warning pendent operation
 [2]   ∇
 warning pendent operation
 ```
-
-
-

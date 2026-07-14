@@ -52,7 +52,6 @@ If Native Look and Feel is enabled all three bitmap resources are mapped to a di
 | ![](img/edit-array-icon.png)  | Edit using Array Notation | Edits the object using [array notation](../../programming-reference-guide/introduction/arrays/array-notation). (With Native Look and Feel disabled the button is blank.)|
 | ![](img/sharpplot-icon.png) ![](img/nlf-disabled/sharpplot-icon.jpg) | SharpPlot    | Executes a defined function in `⎕SE` that runs the Chart Wizard to plot the current object using the `]Chart` User Command. |
 
-
 ## Tools
 
 | Button  | Operation  | Description |

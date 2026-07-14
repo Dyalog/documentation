@@ -73,7 +73,6 @@ The NEOL variant option specifies how embedded line separators are treated.
 |`2` |every embedded line separator character is replaced by `newline`                                             |
 |`¯1`|same as 0 except that a `newline` is not added to the last line                                              |
 
-
 ## Embedded line-separator examples
 
 ```apl
@@ -99,5 +98,3 @@ In the third example, all of the line endings are normalised so the written file
 ## Note
 
 If two or more APL processes separately write to a file using `⎕NPUT` the behaviour is undefined. In particular, if multiple APLs use `⎕NPUT` with flags set to 2 (append), it is not guaranteed that each `⎕NPUT` operation will be atomic and all the text written to the file will be complete and/or contiguous.
-
-

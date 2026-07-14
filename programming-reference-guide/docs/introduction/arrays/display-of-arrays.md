@@ -104,9 +104,7 @@ Multi-dimensional arrays are displayed in rectangular planes.  Planes are separa
       3 1 1 3⍴'THEREDFOX'
 THE
 
-
 RED
-
 
 FOX
 ```
@@ -277,4 +275,3 @@ Was ON
  ABC  1 2 3 4
 ```
 Information about all the options and explanation of the symbols that appear in the borders can be seen by running `]Display -??`
-

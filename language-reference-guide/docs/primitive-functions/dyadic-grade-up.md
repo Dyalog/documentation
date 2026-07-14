@@ -6,26 +6,16 @@ search:
   ⍋ grade
 </div>
 
-
-
-
-
-
 # <span>Dyadic Grade Up</span> `R←X⍋Y`{{key}}
 
-
-
 `Y` must be a simple character array of rank greater than 0. `X` must be a simple character array of rank 1 or greater. `R` is a simple integer vector being the permutation of `⍳1↑⍴Y` that places the sub-arrays of `Y` along the first axis in ascending order according to the collation sequence `X`.
-
 
 If `X` is a vector, the following identity holds:
 ```apl
       X⍋Y ←→ ⍋X⍳Y
 ```
 
-
 If `X` is a higher-rank array, each axis of `X` represents a grading attribute in increasing order of importance (the first axis is the least significant and the last axis is the most significant).  If a character is repeated in `X`, it is treated as though it were located at the position in the array determined by the lowest index in each axis for all occurrences of the character.  The character has the same weighting as the character located at the derived position in `X`.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -87,5 +77,3 @@ If `X` is a higher-rank array, each axis of `X` represents a grading attribute i
 │ └───────────┘ └───────────┘ └───────────┘ └───────────┘ │
 └∊────────────────────────────────────────────────────────┘'
 ```
-
-

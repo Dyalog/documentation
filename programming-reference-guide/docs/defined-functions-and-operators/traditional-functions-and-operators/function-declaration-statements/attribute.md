@@ -18,6 +18,3 @@ Attributes are descriptive tags that provide additional information about progra
       :Attribute ObsoleteAttribute
       :Attribute ObsoleteAttribute 'Don''t use' 1
 ```
-
-
-

@@ -7,17 +7,9 @@ search:
   ⎕TCNUMS TCNUMS
 </div>
 
-
-
-
-
-
 # <span>Thread Child Numbers</span> `R←⎕TCNUMS Y`{{key}}
 
-
-
 `Y` must be a simple array of integers representing thread numbers.
-
 
 The result `R` is a simple integer vector of the child threads of each thread of `Y`.
 
@@ -29,6 +21,3 @@ The result `R` is a simple integer vector of the child threads of each thread of
       ⎕TCNUMS 2 3
 4 5 6 7 8 9
 ```
-
-
-

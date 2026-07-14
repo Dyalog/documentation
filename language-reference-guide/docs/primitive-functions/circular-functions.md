@@ -8,13 +8,9 @@ search:
 
 # <span>Circular Functions</span> `R←X○Y`{{key}}
 
-
-
 `Y` must be numeric. `X` must be an integer in the range `¯12 ≤ X ≤ 12`. `R` is numeric.
 
-
 `X` determines which of a family of trigonometric, hyperbolic, Pythagorean, and complex functions to apply to `Y`, from the following table. Note that when `Y` is complex, `a` and  `b` are used to represent its real and imaginary parts, while `θ` represents its phase.
-
 
 |(-X) ○ Y|X|X ○ Y|
 |---|---|---|
@@ -31,7 +27,6 @@ search:
 |`+Y`|`10`|`|Y`|
 |`Y×0J1`|`11`|`b`|
 |`*Y×0J1`|`12`|`θ`|
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -56,5 +51,3 @@ search:
       ¯4○¯1
 0
 ```
-
-

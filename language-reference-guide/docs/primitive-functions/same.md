@@ -6,17 +6,9 @@ search:
   ⊢ same tack 
 </div>
 
-
-
-
-
-
 # <span>Same</span> `R←⊣YR←⊢Y`{{key}}
 
-
-
 `Y` may be any array.
-
 
 The result `R` is the argument `Y`.
 
@@ -35,6 +27,3 @@ at      1764
 avl    17476
 
 ```
-
-
-

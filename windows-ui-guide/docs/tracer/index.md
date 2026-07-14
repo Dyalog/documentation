@@ -155,5 +155,3 @@ Breakpoints are defined by `⎕STOP` and may be toggled on and off in an Edit or
 <span class="toolbar-icon" style="background-position: -144px 0"></span>
 
 You can clear all breakpoints by pressing the above button in the Trace Tools window. This in fact resets `⎕STOP` for all functions in the workspace.
-
-

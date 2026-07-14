@@ -3,15 +3,9 @@ search:
   exclude: true
 ---
 
-
-
-
-
 # <span>Shared Variable Access Control</span> `⎕SVC`
 
-
 ## Dyadic `⎕SVC` means
-
 
 [Set Access Control](set-access-control.md)
 ```apl
@@ -21,7 +15,6 @@ search:
 ```
 
 ## Monadic `⎕SVC` means
-
 
 [Query Access Control](query-access-control.md)
 ```apl

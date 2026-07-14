@@ -1,11 +1,6 @@
 
 
-
-
-
 # warning unmatched parentheses
-
-
 
 This report is given after adding or editing a function line in definition mode when it is found that there is not an opening parenthesis to match a closing parenthesis, or vice versa, in an expression.  This is a warning message only.  The function line will be accepted even though syntactically incorrect.
 
@@ -15,9 +10,3 @@ This report is given after adding or editing a function line in definition mode 
 warning unmatched parentheses
 [5]
 ```
-
-
-
-
-
-

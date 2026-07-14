@@ -7,20 +7,11 @@ search:
   ⎕NC NC
 </div>
 
-
-
-
-
-
 # <span>Name Classification</span> `R←⎕NC Y`{{key}}
-
-
 
 `Y` must be a simple  character scalar, vector, matrix, or vector of vectors that specifies a list of names. `R` is a simple numeric vector containing one element per name in `Y`. Each element of `R` is the name class of the active referent to the object named in `Y`.
 
-
 If `Y` is **simple**, a name class may be:
-
 
 |Name Class|Description                       |
 |----------|----------------------------------|
@@ -33,10 +24,7 @@ If `Y` is **simple**, a name class may be:
 |`8`       |Event                             |
 |`9`       |Object (GUI, namespace, COM, .NET)|
 
-
-
 If `Y` is **nested** a more precise analysis of name class is obtained whereby different types  are identified by a decimal extension. For example, defined functions have name class 3.1, dfns have name class 3.2, and so forth. The complete set of name classification is as follows:
-
 
 |&nbsp;|Array (2)      |Function (3)        |Operator (4)        |Namespace (9)                           |
 |------|---------------|--------------------|--------------------|----------------------------------------|
@@ -48,11 +36,9 @@ If `Y` is **nested** a more precise analysis of name class is obtained whereby d
 |n.6   |External Shared|External            |&nbsp;              |External Class                          |
 |n.7   |&nbsp;         |&nbsp;              |&nbsp;              |External Interface                      |
 
-
 In addition, values in `R` are negative to identify names of methods, properties and events that are inherited through the *class hierarchy* of the current class or instance.
 
 ## Variable (Name-Class 2.1)
-
 
 Conventional APL arrays have name-class 2.1.
 ```apl
@@ -75,7 +61,6 @@ Conventional APL arrays have name-class 2.1.
 
 ## Field (Name-Class 2.2)
 
-
 Fields defined by APL Classes have name-class 2.2.
 ```apl
 :Class nctest
@@ -92,14 +77,11 @@ Fields defined by APL Classes have name-class 2.2.
       ncinst←⎕NEW nctest
 ```
 
-
 The name-class of a Field, whether Public or Private, viewed from a Method that is executing within the Instance Space, is 2.2.
 ```apl
       ncinst.NameClass'pubFld' 'pvtFld'
 2.2 2.2
 ```
-
-
 
 Note that an internal Method sees both Public and Private Fields in the Class Instance. However, when viewed from *outside* the instance, only public fields are visible
 ```apl
@@ -107,14 +89,11 @@ Note that an internal Method sees both Public and Private Fields in the Class In
 ¯2.2 0
 ```
 
-
-
 In this case, the name-class is negative to indicate that the name has been exposed by the class hierarchy, rather than existing in the associated namespace which APL has created to contain the instance. The same result is returned if `⎕NC` is executed inside this space:
 ```apl
       ncinst.⎕NC'pubFld' 'pvtFld'
 ¯2.2 0
 ```
-
 
 Note that the names of Fields are reported as being *unused* if the argument to `⎕NC` is simple.
 ```apl
@@ -123,7 +102,6 @@ Note that the names of Fields are reported as being *unused* if the argument to 
 ```
 
 ## Property (Name-Class 2.3)
-
 
 Properties defined by APL Classes have name-class 2.3.
 ```apl
@@ -153,7 +131,6 @@ Properties defined by APL Classes have name-class 2.3.
       ncinst←⎕NEW nctest
 ```
 
-
 The name-class of a Property, whether Public or Private, *viewed from a Method that is executing within the Instance Space*, is 2.3.
 ```apl
       ncinst.NameClass'pubProp' 'pvtProp'
@@ -161,22 +138,17 @@ The name-class of a Property, whether Public or Private, *viewed from a Method t
  
 ```
 
-
-
 Note that an internal Method sees both Public and Private Properties in the Class Instance. However, when viewed from *outside* the instance, only Public Properties are visible
 ```apl
       ⎕NC 'ncinst.pubProp' 'ncinst.pvtProp'
 ¯2.3 0
 ```
 
-
-
 In this case, the name-class is negative to indicate that the name has been exposed by the class hierarchy, rather than existing in the associated namespace which APL has created to contain the instance. The same result is returned if `⎕NC` is executed inside this space:
 ```apl
       ncinst.⎕NC 'pubProp' 'pvtProp'
 ¯2.3 0
 ```
-
 
 Note that the names of Properties are reported as being *unused* if the argument to `⎕NC` is simple.
 ```apl
@@ -185,7 +157,6 @@ Note that the names of Properties are reported as being *unused* if the argument
 ```
 
 ## External Property (Name-Class 2.6)
-
 
 Properties exposed by external objects (.NET and COM and the APL GUI) have name-class `¯2.6`.
 ```apl
@@ -203,16 +174,13 @@ Properties exposed by external objects (.NET and COM and the APL GUI) have name-
 ¯2.6 ¯2.6
 ```
 
-
 Note that the names of such Properties are reported as being *unused* if the argument to `⎕NC` is simple.
 ```apl
       f.⎕NC 2 7⍴'CaptionSize   '
 0 0
 ```
 
-
 ## Defined Function (Name-Class 3.1)
-
 
 Traditional APL defined functions have name-class 3.1.
 ```apl
@@ -237,15 +205,12 @@ Traditional APL defined functions have name-class 3.1.
 3.1
 ```
 
-
-
 Note that a function that is simply cloned from a defined function by assignment retains its name-class.
 ```apl
       MEAN←AVG
       ⎕NC'AVG' 'MEAN'
 3.1 3.1
 ```
-
 
 Whereas, the name of a function that amalgamates a defined function with any other functions has the name-class of a Derived Function, that is, 3.3.
 ```apl
@@ -254,11 +219,7 @@ Whereas, the name of a function that amalgamates a defined function with any oth
 3.1 3.3
 ```
 
-
-
-
 ## Dfn (Name-Class 3.2)
-
 
 Dfns have name-class 3.2
 ```apl
@@ -270,9 +231,7 @@ Dfns have name-class 3.2
 3.2
 ```
 
-
 ## Derived Function (Name-Class 3.3)
-
 
 Names that reference a primitive or derived function have a name-class of 3.3.
 ```apl
@@ -284,8 +243,6 @@ Names that reference a primitive or derived function have a name-class of 3.3.
       ⎕NC 3 4⍴'PLUSSUM CUM '
 3 3 3
 ```
-
-
 
 Note the difference between the name-class of a name referring to a defined function (3.1) and that of a name referring to a defined function bound with an operator to form a derived function (3.3). Trains, being derived functions, also have  nameclass 3.3.
 ```apl
@@ -304,7 +261,6 @@ Note the difference between the name-class of a name referring to a defined func
 ```
 
 ## External Function (Name-Class 3.6)
-
 
 Methods exposed by the Dyalog APL GUI and COM and .NET objects have name-class `¯3.6`. Methods exposed by External Functions created using `⎕NA` and `⎕SH` all have name-class `3.6`.
 ```apl
@@ -338,7 +294,6 @@ avx     box     dbr     getenv  hex     ltom    ltov    mtol    ss      vtol
 3.6 3.6 
 ```
 
-
 Note that the names of such Methods are reported as being *unused* if the argument to `⎕NC` is simple.
 ```apl
       'F'⎕WC'Form'
@@ -347,7 +302,6 @@ Note that the names of such Methods are reported as being *unused* if the argume
 ```
 
 ## Operator (Name-Class 4.1)
-
 
 Traditional Defined Operators have name-class 4.1.
 ```apl
@@ -364,7 +318,6 @@ Traditional Defined Operators have name-class 4.1.
 
 ## Dop (Name-Class 4.2)
 
-
 Dops have name-class 4.2.
 ```apl
      pred←{⎕IO ⎕ML←1 3   ⍝ Partitioned reduction.
@@ -380,15 +333,12 @@ Dops have name-class 4.2.
 4.2
 ```
 
-
 ## Derived Operator (Name-Class 4.3)
-
 
 Derived operators include:
 
 - A name referring to a monadic operator.
 - A dyadic operator curried with its right-operand. 
-
 
 <h2 class="example">Example</h2>
 ```apl
@@ -414,7 +364,6 @@ Derived operators include:
 
 ## External Event (Name-Class 8.6)
 
-
 Events exposed by Dyalog APL GUI objects, COM and .NET objects have name-class `¯8.6`.
 ```apl
       f←⎕NEW'Form'('Caption' 'Dyalog GUI Form')
@@ -435,9 +384,7 @@ Events exposed by Dyalog APL GUI objects, COM and .NET objects have name-class `
  Activated  BackgroundImageChanged  BackColorChanged ...
 ```
 
-
 ## Namespace (Name-Class 9.1)
-
 
 Plain namespaces created using `⎕`NS, or fixed from a `:Namespace` script, have name-class 9.1.
 ```apl
@@ -447,8 +394,6 @@ Plain namespaces created using `⎕`NS, or fixed from a `:Namespace` script, hav
       ⎕NC⊂'MYSPACE'
 9.1
 ```
-
-
 
 Note however that a namespace created by cloning, where the right argument to `⎕NS` is a `⎕OR` of a namespace, retains the name-class of the original space.
 ```apl
@@ -461,7 +406,6 @@ Note however that a namespace created by cloning, where the right argument to `�
 9.1 9.2
 ```
 
-
 The Name-Class of .NET namespaces (visible through `⎕USING`) is also 9.1
 ```apl
       ⎕USING←''
@@ -470,7 +414,6 @@ The Name-Class of .NET namespaces (visible through `⎕USING`) is also 9.1
 ```
 
 ## Instance (Name-Class 9.2)
-
 
 Instances of Classes created using `⎕NEW`, and GUI objects created using `⎕WC` all have name-class 9.2.
 ```apl
@@ -498,7 +441,6 @@ Instances of Classes created using `⎕NEW`, and GUI objects created using `⎕W
 9.2
 ```
 
-
 Instances of COM Objects whether created using `⎕WC` or `⎕NEW` also have name-class 9.2.
 ```apl
       xl←⎕NEW'OLEClient'(⊂'ClassName' 'Excel.Application')
@@ -506,7 +448,6 @@ Instances of COM Objects whether created using `⎕WC` or `⎕NEW` also have nam
       ⎕NC'xl' 'XL'
 9.2 9.2
 ```
-
 
 The same is true of Instances of .NET Classes (Types) whether created using `⎕NEW` or `.New`.
 ```apl
@@ -517,14 +458,12 @@ The same is true of Instances of .NET Classes (Types) whether created using `⎕
 9.2 9.2
 ```
 
-
 Note that if you remove the GUI component of a GUI object, using the Detach method, it reverts to a plain namespace.
 ```apl
       F.Detach
       ⎕NC⊂,'F'
 9.1
 ```
-
 
 Correspondingly, if you attach a GUI component to a plain namespace using the monadic form of `⎕WC`, it morphs into a GUI object
 ```apl
@@ -533,9 +472,7 @@ Correspondingly, if you attach a GUI component to a plain namespace using the mo
 9.2
 ```
 
-
 ## Class (Name-Class 9.4)
-
 
 Classes created using the editor or `⎕FIX` have name-class 9.4.
 ```apl
@@ -560,8 +497,6 @@ Classes created using the editor or `⎕FIX` have name-class 9.4.
 9.4 9.4
 ```
 
-
-
 Note that the name of the Class is visible to a Public Method in that Class, or an Instance of that Class.
 ```apl
       MyClass.NameClass'MyClass'
@@ -571,7 +506,6 @@ Note that the name of the Class is visible to a Public Method in that Class, or 
 ```
 
 ## Interface (Name-Class 9.5)
-
 
 Interfaces, defined by `:Interface ... :EndInterface` clauses, have name-class 9.5.
 ```apl
@@ -594,10 +528,7 @@ Interfaces, defined by `:Interface ... :EndInterface` clauses, have name-class 9
 9.5
 ```
 
-
-
 ## External Class (Name-Class 9.6)
-
 
 External Classes (Types) exposed by .NET have name-class 9.6.
 ```apl
@@ -607,12 +538,9 @@ External Classes (Types) exposed by .NET have name-class 9.6.
 9.6 9.6 9.6
 ```
 
-
 Note that referencing a .NET class (type) with `⎕NC`, fixes the name of that class in the workspace and obviates the need for APL to repeat the task of searching for and loading the class when the name is next used.
 
-
 ## External Interface (Name-Class 9.7)
-
 
 External Interfaces exposed by .NET have name-class 9.7.
 
@@ -623,9 +551,4 @@ External Interfaces exposed by .NET have name-class 9.7.
 9.7 9.7
 ```
 
-
-
 Note that referencing a .NET Interface with `⎕NC`, fixes the name of that Interface in the workspace and obviates the need for APL to repeat the task of searching for and loading the Interface when the name is next used.
-
-
-

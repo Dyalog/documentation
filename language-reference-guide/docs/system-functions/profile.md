@@ -122,7 +122,6 @@ clear ws
 
 Syntax: `data←{X} ⎕PROFILE 'data'`
 
-
 Retrieves the collected profiling data and returns it in flat form. If the `X` is omitted, the result is a matrix with the following columns:
 
 - `[;1]` – function name

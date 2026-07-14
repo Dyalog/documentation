@@ -20,5 +20,3 @@ L
 1
 ```
 [Language Elements](../glyphs.md)
-
-

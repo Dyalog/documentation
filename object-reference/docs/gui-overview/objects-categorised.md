@@ -7,7 +7,6 @@ search:
 
 [Objects: A-Z](objects-a-z.md)
 
-
 |System Objects                                                                                                            ||
 |--------------------------------------------------|------------------------------------------------------------------------|
 |[Root](../objects/root.md)                        |system-level object                                                     |
@@ -95,5 +94,3 @@ search:
 |[OLEServer](../objects/oleserver.md)              |enables APL to act as an OLE Automation server                          |
 |[SM](../objects/sm.md)                            |specifies a window for `⎕SM` (character mode interface)                 |
 |[TCPSocket](../objects/tcpsocket.md)              |provides an interface to TCP/IP sockets                                 |
-
-

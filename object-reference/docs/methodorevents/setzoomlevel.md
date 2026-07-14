@@ -1,17 +1,12 @@
 # <span>SetZoomLevel</span> <span>Method</span>
 
-
-
 **Applies To:** [HTMLRenderer](../objects/htmlrenderer.md)
 
 **Description**
 
-
 Sets the CEF ZoomLevel. The default (unzoomed) level is 0. Setting a positive value will increase the zoom, whereas setting a negative will decrease the zoom. The zoom scale is not linear; rather the effective scaling is approximately 1.2*level, so, setting the ZoomLevel to 1 will result in an approximate 20% size increase. ZoomLevel affects all instances of HTMLRenderer windows; it is not possible to have different ZoomLevels for individual windows.
 
-
 The argument to SetZoomLevel is a single numeric value:
-
 
 |-----|---------|-------|
 |`[1]`|ZoomLevel|Numeric|
@@ -33,20 +28,17 @@ The argument to SetZoomLevel is a single numeric value:
       hr Zoom 0
 ```
 
-
 ![](../img/zoomlevel-0.png)
 
 ```apl
       hr Zoom 1
 ```
 
-
 ![](../img/zoomlevel-1.png)
 
 ```apl
       hr Zoom 2
 ```
-
 
 ![](../img/zoomlevel-2.png)
 
@@ -55,4 +47,3 @@ The argument to SetZoomLevel is a single numeric value:
 ```
 
 ![](../img/zoomlevel-neg1.png)
-

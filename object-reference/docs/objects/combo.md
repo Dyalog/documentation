@@ -2,7 +2,6 @@
 
 [Parents](../parentlists/combo.md), [Children](../childlists/combo.md), [Properties](../proplists/combo.md), [Methods](../methodlists/combo.md), [Events](../eventlists/combo.md)
 
-
 **Purpose:** This object combines an input area with a list box and allows the user to enter a selection by typing text or by choosing an item from the list.
 
 **Description**

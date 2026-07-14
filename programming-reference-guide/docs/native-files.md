@@ -37,49 +37,35 @@ If this option is enabled, the system function invokes an APL callback function 
 
 Each file operation has four distinct stages:
 
-
 1. The start of the operation. The callback is invoked before any directories are scanned or files are processed. This gives the application the opportunity to set parameters that control the frequency of callbacks during the operation itself.
 2. The optional scan phase during which the system function enumerates the files that will be involved in the copy or move operation. The file count obtained is used to set the `Limit` field. The application may use this subsequently to indicate the degree of progress.
 3. The main processing of the files.
 4. The end of the operation.
 
-
 The callback function is invoked once at the start of the operation, during the (optional) scan and processing stages, and finally once at the end of the operation. During the scan and processing stages, the `Skip` and `Delay` options provide alternative ways to control the frequency with which the function is invoked.
-
 
 If both options are 0, the callback will be invoked after every file is processed. However, if there are a large number of small files involved, and you simply want to update a progress bar, this may prove to be unnecessarily  frequent, and will increase the total time required to complete the operation.
 
-
 If you want to update a progress bar regularly (for example every second), the `Delay` option (1000 = 1 second) is the better choice.  In other circumstances, you might choose to use `Skip`.
-
 
 If you use both options, the callback will be invoked when *both* apply, so if you set `Skip` to 10 and `Delay` to 5000, the callback will be invoked after at least 10 files have been processed and at least 5 seconds have elapsed since the previous invocation of the callback.
 
-
 The value of the **ProgressCallback** variant option may be:
-
 
 |---------|------------------------------------------------------------------------------------------------------------------------|
 |`fn`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|The name of the callback function.                                                                                      |
 |`fn data`|The name of the callback function, and an array or namespace which is to be passed to the callback in its left argument.|
 
-
-
 The right argument given to the callback function is a 3-element vector:
-
 
 |-----|--------|------------------------------------------------------------------------------------------------------------------------|
 |`[1]`|Function|Character vector which identifies the function that caused the callback to be executed.                                 |
 |`[2]`|Event   |Character vector describing the event that lead to the callback being executed. See below.                              |
 |`[3]`|Info    |Reference to a namespace containing information about the event. See below.                                             |
 
-
 ### Event
 
-
-
 Event is a character vector which indicates the stage of the copy or move operation.
-
 
 |---|---|
 |`'Start'`|Reported by the first invocation of the callback which occurs before any files are scanned or processed. This may be used to set the parameters that control the operation. See **Options** .|
@@ -87,16 +73,11 @@ Event is a character vector which indicates the stage of the copy or move operat
 |`'Progress'`|Indicates that the system function is at the main stage of the operation and is processing the files.|
 |`'Done'`|Indicates that all files have been processed.|
 
-
-
 Note that there will always be at least 2 invocations of the callback, to indicate the start and end of the operation.
-
 
 ### Info
 
-
 Info is a reference to a namespace that contains information about the event. This namespace persists for the duration of the execution of the system function and contains the following fields:
-
 
 |---|---|
 |`Progress`|A number between `0` and `Limit`. When the event code is `'Start'`, `Progress` is `0`. Every time a file or directory is processed, `Progress` is increased by 1. Finally when the  event code is `'Done'`, `Progress` will be equal to `Limit`.|
@@ -105,13 +86,9 @@ Info is a reference to a namespace that contains information about the event. Th
 |`Data`|A field that is reserved for the user to store data which persists between invocations of the callback. It could for example be used to keep a sequence number, to count the number of times the callback had been run.|
 |`Options`|This is a namespace which contains the information that controls the future execution of the callback and it is described below.|
 
-
-
 ### Options
 
-
 This Namespace contains options that control future invocations of the callback. The options persist between these invocations, so there is no need to set them again unless they should be changed. The fields and their default values are:
-
 
 |Field|Default|Description|
 |---|---|---|
@@ -120,11 +97,8 @@ This Namespace contains options that control future invocations of the callback.
 |`Skip`|0|Specifies a number of files to skip between invocations of the callback function. If you are only interested in getting a callback for each tenth file, you should set this option to 9, for example.|
 |`LastFileCount`|1|An integer, specifying the maximum number of the latest filenames to be stored in the `Last` field. The default is to only store the last file processed, but if `Delay` or `Skip` are non-zero, multiple files could have been processed between calls to the callback function. A value of 5 for example, will make sure that the five last files processed before calling the callback, will have their names in the `Last` field. The `Last` field might have fewer elements than `LastFileCount`, if the number of files processed since the last call is less than `LastFileCount`. The value `¯1` indicates that the `Last` field should contain **all** the last files since the last call (no limit).|
 
-
 The result of the callback function is a Boolean scalar indicating whether the system function should continue or stop:
 
-
 1: Execution should continue.
-
 
 0: Execution should stop. In this case, an `INTERRUPT` (event 1003) is signalled.

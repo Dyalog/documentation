@@ -23,5 +23,3 @@ Dyadic Divide means
 
 ```
 [Language Elements](../glyphs.md)
-
-

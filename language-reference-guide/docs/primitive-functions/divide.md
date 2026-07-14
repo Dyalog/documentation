@@ -6,20 +6,11 @@ search:
   ÷ divide
 </div>
 
-
-
-
-
-
 # <span>Divide</span> `R←X÷Y`{{key}}
-
-
 
 `Y` must be a numeric array.  `X` must be a numeric array.  `R` is the numeric array resulting from `X` divided by `Y`.  System variable `⎕DIV` is an implicit argument of Divide.
 
-
 If `⎕DIV=0` and `Y=0` then if `X=0`, the result of `X÷Y` is 1; if `X≠0` then `X÷Y` is a `DOMAIN ERROR.`
-
 
 If `⎕DIV=1` and `Y=0`, the result of `X÷Y` is `0` for all values of `X`.
 
@@ -35,6 +26,3 @@ If `⎕DIV=1` and `Y=0`, the result of `X÷Y` is `0` for all values of `X`.
       2 0 5÷4 0 0
 0.5 0 0
 ```
-
-
-

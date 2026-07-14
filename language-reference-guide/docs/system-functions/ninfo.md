@@ -86,7 +86,6 @@ When using the **Wildcard** option, matching of names is done case insensitively
 |`0`|the properties reported are those of the symbolic link itself                           |
 |1 { .shaded } |the properties reported for a symbolic link are those of the target of the symbolic link|
 
-
 ### ProgressCallback Option
 
 The **ProgressCallback** variant option is described in the [Dyalog Programming Reference Guide](../../../programming-reference-guide/native-files#progress-callbacks). The following is specific to `⎕NINFO`:

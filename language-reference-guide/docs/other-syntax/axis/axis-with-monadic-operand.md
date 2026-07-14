@@ -1,13 +1,11 @@
 
 # <span>Axis (with Monadic Operand)</span> `R←f[B]Y`{{key}}
 
-
 `f` must be a monadic primitive mixed function taken from those shown in [](#MonadicMixed) below, or a function derived from the operators Reduction (`/`) or Scan (`\`). `B` must be a numeric scalar or vector. `Y` may be any array whose items are appropriate to function `f`.
 
 For an alternative method of applying any function to a subset of axes, see [Rank](../../primitive-operators/rank.md).
 
 Table: Primitive monadic mixed functions with optional axis. {: #MonadicMixed }
-
 
 |Function|Name|Range of B|
 |---|---|---|
@@ -17,12 +15,9 @@ Table: Primitive monadic mixed functions with optional axis. {: #MonadicMixed }
 |`,`|Ravel|fraction, or zero or more axes of `Y`|
 |`⊂`|Enclose|`(B≡⍳0)∨(^/B∊⍳⍴⍴Y)`|
 
-
 In most cases, `B` must be an integer which identifies a specific axis of `Y`. However, when  `f` is the Mix function (`↑`),   `B` can be a fractional value whose lower and upper integer bounds select an adjacent pair of axes of `Y` or an extreme axis of `Y`.
 
-
 For Ravel (`,`) and Enclose (`⊂`), `B` can be a **vector** of two or more axes.
-
 
 `⎕IO` is an implicit argument of the derived function which determines the meaning of `B`.
 
@@ -37,5 +32,3 @@ OT
 NW
 EO
 ```
-
-

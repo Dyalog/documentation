@@ -44,5 +44,3 @@ Operator Backslash means
 15 18 21 24
 ```
 [Language Elements](../glyphs.md)
-
-

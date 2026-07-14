@@ -6,14 +6,7 @@ search:
   ⍴ rho shape
 </div>
 
-
-
-
-
-
 # <span>Shape</span> `R←⍴Y`{{key}}
-
-
 
 `Y` may be any array.  `R` is a non-negative integer vector whose elements are the dimensions of `Y`.  If `Y` is a scalar, then `R` is an empty vector.  The rank of `Y` is given by `⍴⍴Y`.
 
@@ -43,6 +36,3 @@ search:
       ⍴¨¨G
           3  5  4
 ```
-
-
-

@@ -28,5 +28,3 @@ Dyadic Epsilon Underbar means
 
 ```
 [Language Elements](../glyphs.md)
-
-
