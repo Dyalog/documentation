@@ -222,6 +222,7 @@ nav:
       - Depth Property: properties/depth.md
       - DevCaps Property: properties/devcaps.md
       - Directory Property: properties/directory.md
+      - Dirty Property: properties/dirty.md
       - Divider Property: properties/divider.md
       - DockChildren Property: properties/dockchildren.md
       - DockShowCaption Property: properties/dockshowcaption.md
@@ -352,6 +353,7 @@ nav:
       - PName Property: properties/pname.md
       - PageActive Property: properties/pageactive.md
       - PageActiveObject Property: properties/pageactiveobject.md
+      - PagesBeginDirty Property: properties/pagesbegindirty.md
       - PageSize Property: properties/pagesize.md
       - PageWidth Property: properties/pagewidth.md
       - PaperSize Property: properties/papersize.md
@@ -888,6 +890,7 @@ nav:
       - Detach Method: methodorevents/detach.md
       - DevCaps Property: properties/devcaps.md
       - Directory Property: properties/directory.md
+      - Dirty Property: properties/dirty.md
       - DisplayChange Event: methodorevents/displaychange.md
       - Divider Property: properties/divider.md
       - Dockable Property: properties/dockable.md
@@ -1166,6 +1169,7 @@ nav:
       - PageFinish Event: methodorevents/pagefinish.md
       - PageHelp Event: methodorevents/pagehelp.md
       - PageNext Event: methodorevents/pagenext.md
+      - PagesBeginDirty Property: properties/pagesbegindirty.md
       - PageSize Property: properties/pagesize.md
       - PageWidth Property: properties/pagewidth.md
       - PaperSize Property: properties/papersize.md

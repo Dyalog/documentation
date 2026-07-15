@@ -16,4 +16,5 @@ search:
 |[ColorMode](../properties/colormode.md)    |[Resolution](../properties/resolution.md)  |[Resolutions](../properties/resolutions.md)  |
 |[Duplex](../properties/duplex.md)          |[Translate](../properties/translate.md)    |[Accelerator](../properties/accelerator.md)  |
 |[KeepOnClose](../properties/keeponclose.md)|[MethodList](../properties/methodlist.md)  |[ChildList](../properties/childlist.md)      |
-|[EventList](../properties/eventlist.md)    |[PropList](../properties/proplist.md)      |&nbsp;                                       |
+|[EventList](../properties/eventlist.md)    |[PropList](../properties/proplist.md)      |[Dirty](../properties/dirty.md)                         |
+|[PagesBeginDirty](../properties/pagesbegindirty.md)    |&nbsp;      |&nbsp;                      |
