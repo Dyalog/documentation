@@ -85,6 +85,7 @@ These are facilities for dealing with built-in objects. They mostly represent Mi
 |---------|---------------------------|-----|
 |[`⎕DQ`](dq.md)    |Await and process events   |Monadic function|
 |[`⎕NQ`](nq.md)    |Place an event on the Queue|Ambivalent function|
+|[`⎕SE`](se.md)    |Session Namespace          |Reference|
 |[`⎕WC`](wc.md)    |Create GUI object          |Ambivalent function|
 |[`⎕WG`](wg.md)    |Get GUI object properties  |Ambivalent function|
 |[`⎕WN`](wn.md)    |Query GUI object Names     |Ambivalent function|
