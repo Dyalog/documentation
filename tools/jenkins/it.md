@@ -16,16 +16,20 @@ The Jenkinsfile on `gh-pages` (which Jenkins monitors) will be updated automatic
 v21 is the current development version, so it reads from trunk -- same paths Jenkins already uses:
 - `docbin/trunk/documentation`
 - `dyalog/trunk/svn/docs/readmes`
+- `dyalog/trunk/svn/docs/licences` (third-party licences docx; 21.0 onwards)
 
 v20.0 reads from branches (already exist):
 - `docbin/branches/20.0/documentation`
 - `dyalog/branches/20.0/svn/docs/readmes`
+
+v20.0 has no licences checkout: its third-party licences docx still ships inside docbin, so `20.0` is listed in the Jenkinsfile `LICENCES_IN_DOCBIN` variable.
 
 Future action (when v21 releases and v22 development starts):
 
 Create these SVN branches before updating `TRUNK_VERSION` to `22.0`:
 - `docbin/branches/21.0/documentation`
 - `dyalog/branches/21.0/svn/docs/readmes`
+- `dyalog/branches/21.0/svn/docs/licences`
 
 ## gitdocs2svn -- no changes needed
 

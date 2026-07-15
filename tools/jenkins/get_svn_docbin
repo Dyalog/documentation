@@ -32,7 +32,14 @@ SHARPPLOTCHM="sharpplot.chm"
 READMEDIR="./readmes"
 SETUPREADME="setup_readme.htm"
 DYALOGREADME="dyalog_readme.htm"
+LICENCESDIR="./licences"
+LICENCESFILE="Licences for third-party components.docx"
 FILELISTFILE="./filelist.txt"
+
+# Set when the licences docx is taken from a separate checkout (the dyalog
+# repo) rather than from within docbin. Empty for versions that still ship it
+# inside docbin, where it is already tracked in $FILELISTFILE.
+LICENCESMOVED=""
 
 TMPFILE="$(basename $0).$$"
 TMPFILELIST="$TMPFILE.filelist.$$"
@@ -40,8 +47,9 @@ TMPFILELIST="$TMPFILE.filelist.$$"
 [ $# -ne 1 ] && Exit 1 "Usage: $0 version"
 VERSION=$1
 
-# 1. move sharplot.chm up one level and delete .svn, readmes and sharpplot directories
-echo "Move sharplot.chm, setup_readme and dyalog_readme  up one level and delete .svn, readmes and sharpplot directories .."
+# 1. move sharpplot.chm, the readmes (and, when present, the licences docx) up
+#    one level and delete the .svn, sharpplot, readmes and licences directories
+echo "Move sharpplot.chm, setup_readme, dyalog_readme (and licences, if present) up one level and clean up directories .."
 cd $FILESDIR || Exit 2 "Unable to cd to $FILESDIR after exporting from svn"
 [ ! -f $SHARPPLOTDIR/$SHARPPLOTCHM ] && Exit 2 "No $SHARPPLOTDIR/$SHARPPLOTCHM file exists; bailing"
 [ ! -f $READMEDIR/$SETUPREADME ] && Exit 2 "No $READMEDIR/$SETUPREADME file exists; bailing"
@@ -50,13 +58,25 @@ cd $FILESDIR || Exit 2 "Unable to cd to $FILESDIR after exporting from svn"
 mv $SHARPPLOTDIR/$SHARPPLOTCHM $READMEDIR/$SETUPREADME $READMEDIR/$DYALOGREADME .
 rm -rf .svn $SHARPPLOTDIR $READMEDIR
 
+# The licences directory is only checked out for versions whose third-party
+# licences file lives in the dyalog repo. When present, promote the docx to
+# $FILESDIR (where the site links to it) and drop the checkout directory.
+if [ -d "$LICENCESDIR" ]; then
+	[ ! -f "$LICENCESDIR/$LICENCESFILE" ] && Exit 2 "No $LICENCESDIR/$LICENCESFILE file exists; bailing"
+	mv "$LICENCESDIR/$LICENCESFILE" .
+	rm -rf "$LICENCESDIR"
+	LICENCESMOVED=yes
+fi
+
 # 2. Sanity check: all files in the file list should be present
 echo "Check that all files in filelist are present .."
-# We have to cope with $SHARPPLOTCHM, $SETUPREADME and $DYALOGREADME.  The simplest way is to add them to
+# We have to cope with $SHARPPLOTCHM, $SETUPREADME and $DYALOGREADME (and, when it
+# came from the dyalog repo, $LICENCESFILE).  The simplest way is to add them to
 # $FILELISTFILE at this point ..
 echo "./$SHARPPLOTCHM\tweb" >>$FILELISTFILE
 echo "./$SETUPREADME\tweb" >>$FILELISTFILE
 echo "./$DYALOGREADME\tweb" >>$FILELISTFILE
+[ -n "$LICENCESMOVED" ] && echo "./$LICENCESFILE\tweb" >>$FILELISTFILE
 egrep -v "^#|^$|^[ 	]*$" $FILELISTFILE >$TMPFILE && mv $TMPFILE $FILELISTFILE
 [ 0 -eq $(wc -l $FILELISTFILE | awk '{print $1}') ] && Exit 2 "$FILELISTFILE is empty"
 
