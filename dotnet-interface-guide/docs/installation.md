@@ -45,7 +45,7 @@ This is only an example of code that worked on a specific configuration in our t
 
 #### Upgrading .NET Support
 
-Dyalog v{{ version_majmin }} supports .NET v10.0 and later, but is configured to support .NET v10.0 by default. To support a later version of .NET, the following files need to be amended (this requires administrator rights) – in each case, the reference to "10.0" or "10.0.0" should be updated to the correct major version number:
+Dyalog v{{ version_majmin }} supports .NET v10.0 and later, but is configured to support .NET v10.0 by default. To support a later version of .NET, the following files need to be amended (this might require raised privileges) – in each case, the reference to "10.0" or "10.0.0" should be updated to the correct version number:
 
 - **[DYALOG]/Dyalog.Net.Bridge.deps.json**
 
@@ -67,7 +67,7 @@ Dyalog v{{ version_majmin }} supports .NET v10.0 and later, but is configured to
 			"version": "10.0.0"
     ```
 
-The replacement version number can also be that of a .NET Release Candidate or Preview. For example, if you have downloaded .NET 11.0.0-rpreview.5, the version number in the aforementioned locations should be set to:
+The replacement version number can also be that of a .NET Release Candidate or Preview. For example, if you have downloaded .NET 11.0.0-preview.5, the version number in the aforementioned locations should be set to:
 
 - 11.0 instead of 10.0 (three occurrences)
 
