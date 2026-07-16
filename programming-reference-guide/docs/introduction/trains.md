@@ -51,13 +51,14 @@ A train is syntactically equivalent to a function and so, in common with any oth
 
 In particular, trains may be applied to a single array (monadic use) or between 2 arrays (dyadic use), providing  six new constructs.
 ```apl
-    X(f g h)Y ←→ (X f Y) g (X h Y)   ⍝ dyadic (fgh) fork
-    X(A g h)Y ←→    A    g (X h Y)   ⍝ dyadic (Agh) fork
+     (  g h)Y ←→         g (  h Y)   ⍝ monadic       atop
     X(  g h)Y ←→         g (X h Y)   ⍝ dyadic       atop
 
      (f g h)Y ←→ (  f Y) g (  h Y)   ⍝ monadic (fgh) fork
+    X(f g h)Y ←→ (X f Y) g (X h Y)   ⍝ dyadic (fgh) fork
+
      (A g h)Y ←→    A    g (  h Y)   ⍝ monadic (Agh) fork
-     (  g h)Y ←→         g (  h Y)   ⍝ monadic       atop
+    X(A g h)Y ←→    A    g (X h Y)   ⍝ dyadic  (Agh) fork
 ```
 
 ## Identifying a Train
