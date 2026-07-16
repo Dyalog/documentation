@@ -101,9 +101,15 @@ remains the default. **No `vN.0` git or SVN branch is required** — N stays on
   `No release found matching vN.*`. Produce one via **Full Release** from
   `main` and publish it.
 - The SVN trunk docbin (`docbin/trunk/documentation`) is fully populated for N
-  — `filelist.txt`, `theme/`, plus the sharpplot and readmes checkouts. The
-  `Get files from svn/docbin` stage bails if the filelist and checkout disagree.
-  (`get_svn_docbin` itself is version-agnostic; this is a content check.)
+  — `filelist.txt`, `theme/`, plus the sharpplot, readmes and licences
+  checkouts. The `Get files from svn/docbin` stage bails if the filelist and
+  checkout disagree. (`get_svn_docbin` itself is version-agnostic; this is a
+  content check.)
+- The third-party licences docx (`Licences for third-party components.docx`)
+  exists at `dyalog/trunk/svn/docs/licences`. From 21.0 onwards it is sourced
+  from the dyalog repo, not docbin; `get_svn_docbin` promotes it into `files/`
+  and registers it in the working `filelist.txt`. Versions listed in
+  `LICENCES_IN_DOCBIN` (currently `20.0`) instead ship it inside docbin.
 
 **Steps** (on `main`)
 
@@ -171,7 +177,9 @@ When N is released and N+1 development begins. This is the heavyweight
 3. In `Jenkinsfile`, set `TRUNK_VERSION = 'N+1'`. The SVN helpers then resolve
    N+1 to trunk and N to `branches/N/`.
 4. **Before** this switch, the SVN branches for the now-released N must exist:
-   `docbin/branches/N/documentation` and `dyalog/branches/N/svn/docs/readmes`.
+   `docbin/branches/N/documentation`, `dyalog/branches/N/svn/docs/readmes` and
+   `dyalog/branches/N/svn/docs/licences` (the last only for versions not listed
+   in `LICENCES_IN_DOCBIN`).
 5. Add `N+1` to `.rsync-exclude` as the new development version's backstop.
 
 ---
@@ -182,6 +190,8 @@ When N is released and N+1 development begins. This is the heavyweight
 |---------|-------|-----|
 | Jenkins: `No release found matching v<ver>.*` | No non-draft GitHub release for that version | Publish a `v<ver>.*` release (not draft) |
 | Jenkins `get_svn_docbin` bails: `SVN includes files that are not in ./filelist.txt` (lists a file) | A file was added to that version's SVN docbin but not to its `filelist.txt` (common on `trunk` when promoting the dev version) | Add the listed file to `filelist.txt` in the version's docbin (`docbin/trunk/documentation` for the trunk version, `docbin/branches/<ver>/documentation` otherwise) as a **tab-separated** line, e.g. `./File.pdf<TAB>web` (`web` = publish; non-`web` = keep out of the site). Commit to SVN, then re-run the build. |
+| Jenkins `get_svn_docbin` bails: `filelist.txt includes files which are not in SVN` listing `Licences for third-party components.docx` | The docx still lives in the version's docbin `filelist.txt` after the move to the dyalog repo, so it is registered twice | Remove the docx and its `filelist.txt` entry from that version's docbin (it now lives in `dyalog/.../svn/docs/licences`). Alternatively, if the version predates the move, add it to `LICENCES_IN_DOCBIN`. |
+| Jenkins `get_svn_docbin` bails: `No ./licences/Licences for third-party components.docx file exists` | The version is sourced from the dyalog repo but the docx is missing or misnamed at `dyalog/.../svn/docs/licences` | Ensure the docx exists there under exactly that name (the site links to it by that name). Commit to SVN, then re-run. |
 | Jenkins `get_svn_docbin` bails: `filelist.txt includes files which are not in SVN` (lists a file) | `filelist.txt` references a file that was removed from the docbin | Remove the stale entry from `filelist.txt` (or restore the file in SVN). Commit, then re-run the build. |
 | Version deployed but missing from live dropdown | Production-root `versions.json` not synced (expected for previews) | Update root `versions.json` on the server, or promote via [Procedure D](#d-promote-the-upcoming-version-to-full-production) |
 | Version published to staging but not live | Not in `PRODUCTION_VERSIONS`, or still listed in `.rsync-exclude` | Add to `PRODUCTION_VERSIONS` / remove from `.rsync-exclude` on `main`, then publish |

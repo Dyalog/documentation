@@ -17,6 +17,11 @@ on:
         required: true
         default: '21.0'
         type: string
+      licences_in_docbin:
+        description: 'Versions whose licences docx ships inside docbin (simulates LICENCES_IN_DOCBIN)'
+        required: true
+        default: '20.0'
+        type: string
 
 jobs:
   simulate-jenkins:
@@ -188,6 +193,7 @@ jobs:
       env:
         TRUNK_VERSION: ${{ inputs.trunk_version }}
         PRODUCTION_VERSIONS: ${{ inputs.production_versions }}
+        LICENCES_IN_DOCBIN: ${{ inputs.licences_in_docbin }}
       run: |
         echo "=== SVN path mapping ==="
 
@@ -195,14 +201,21 @@ jobs:
           if [ "${VERSION}" = "${TRUNK_VERSION}" ]; then
             DOCBIN="docbin/trunk/documentation"
             README="dyalog/trunk/svn/docs/readmes"
+            LICENCES="dyalog/trunk/svn/docs/licences"
           else
             DOCBIN="docbin/branches/${VERSION}/documentation"
             README="dyalog/branches/${VERSION}/svn/docs/readmes"
+            LICENCES="dyalog/branches/${VERSION}/svn/docs/licences"
           fi
           echo "Version ${VERSION}:"
           echo "  docbin:  ${DOCBIN}"
           echo "  readmes: ${README}"
           echo "  sharpplot: dyalogtools/Causeway/trunk/release"
+          if echo " ${LICENCES_IN_DOCBIN} " | grep -q " ${VERSION} "; then
+            echo "  licences: (shipped inside docbin)"
+          else
+            echo "  licences: ${LICENCES}"
+          fi
         done
 
     - name: Test rsync-exclude
