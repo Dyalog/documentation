@@ -32,15 +32,12 @@ Whereas, without the parentheses to identify the function train, the expression 
 ## Forks and Atops
 
 The following trains are currently supported where `f`, `g` and `h` are functions and `A` is an array:
-```apl
-      f g h
-      A g h
-        g h
-```apl
-        g h
-      f g h
-      A g h
 
+```apl
+        g h
+      f g h
+      A g h
+```
 The 2-item train `(g h)` is termed an *atop* and the 3-item trains `(f g h)` and `(A g h)` are termed *forks*. To distinguish the two styles of *fork*, we can use the terms *fgh-fork* or *Agh-fork*.
 
 ## Trains as Functions
