@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SYSTEM SYSTEM
-</div>
 
 # <span>System Information</span> `R←⎕SYSTEM`{{key}}
 
@@ -254,3 +250,8 @@ The fully qualified path of the file or directory loaded at startup. This is set
 
 #### Process.ParentId
 non-negative integer [process identifier](https://en.wikipedia.org/wiki/Process_identifier) of the process that launched the interpreter. Always `¯1` on Microsoft Windows.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SYSTEM SYSTEM
+</div>
