@@ -46,7 +46,7 @@ This namespace provides information about the command line expression used to st
 The command line used to start the current executable, split on unquoted space sequences into a vector of character vectors.
 
 #### CommandLine.CodeArgs
-This member is intended to ease usage of APL shell scripts. It is equivalent to [CommandLink.Args](#[Args](#commandline-args) but omits everything up to and including `-script`. If Dyalog is started without `-script` then nothing is omitted.
+This member is intended to ease usage of APL shell scripts. It is equivalent to [CommandLink.Args](#commandline-args) but omits everything up to and including `-script`. If Dyalog is started without `-script` then nothing is omitted.
 
 #### CommandLine.Full
 The full command line used to start the current executable as a simple character vector.
