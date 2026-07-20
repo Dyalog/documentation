@@ -50,16 +50,35 @@ A train is syntactically equivalent to a function and so, in common with any oth
 - and so forth.
 
 In particular, trains may be applied to a single array (monadic use) or between 2 arrays (dyadic use), providing  six new constructs.
-```apl
-     (  g h)Y ←→         g (  h Y)   ⍝ monadic       atop
-    X(  g h)Y ←→         g (X h Y)   ⍝ dyadic        atop
 
-     (f g h)Y ←→ (  f Y) g (  h Y)   ⍝ monadic (fgh) fork
-    X(f g h)Y ←→ (X f Y) g (X h Y)   ⍝ dyadic  (fgh) fork
+<style id="ID">
+.md-typeset #ID+div table {
+  margin-left: 2em;
+  & tr:nth-child(2n) td {
+    padding-bottom: 1em!important;
+  }
+  & td {
+    border: none;
+	&:nth-child(2) {
+	  padding: 0 1em !important;
+	}
+	&:last-child {
+	  padding-left: 1em !important;
+	}
+    & code {
+      white-space:pre;
+    }
+  } 
+}
+</style>
 
-     (A g h)Y ←→    A    g (  h Y)   ⍝ monadic (Agh) fork
-    X(A g h)Y ←→    A    g (X h Y)   ⍝ dyadic  (Agh) fork
-```
+|------------:|:-:|-------------------:|----------|
+|  `(  g h) Y`| ⇔ |        `g (  h Y)` | atop     |
+|`X (  g h) Y`| ⇔ |        `g (X h Y)` | atop     |
+|  `(f g h) Y`| ⇔ |`(  f Y) g (  h Y)` | fgh-fork |
+|`X (f g h) Y`| ⇔ |`(X f Y) g (X h Y)` | fgh-fork |
+|  `(A g h) Y`| ⇔ |      `A g (  h Y)` | Agh-fork |
+|`X (A g h) Y`| ⇔ |      `A g (X h Y)` | Agh-fork |
 
 ## Identifying a Train
 
