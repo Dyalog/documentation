@@ -82,10 +82,10 @@ If a value in `X` is negative it indicates that a timestamp type is expected in 
 | APL 7-element vector   | `¯1`  | Millisecond precision (`⎕TS`)                | 7            | Year, month, day-of-month, hour, minute, second, millisecond | `1 1 1 0 0 0 0`                            |
 |                        | `¯2`  | Microsecond precision                        | 7            | Year, month, day-of-month, hour, minute, second, microsecond | `1 1 1 0 0 0 0`                            |
 |_                      _| `¯3`  | Nanosecond precision (J expanded digit time) | 7            | Year, month, day-of-month, hour, minute, second, nanosecond  | `1 1 1 0 0 0 0`                            |
-| ISO components         | `¯10` | ISO day-of-year components                   | 6            | Year, day-of-year, hour, minute, second, microsecond         | `1 1 0 0 0 0 0`                            |
-|_                      _| `¯11` | ISO day-of-week components                   | 7            | Year, week, day-of-week, hour, minute, second, microsecond   | `1 1 0 0 0 0`                              |
-| Decimal encoded[^2]    | `¯20` | Decimal encoded date and time                | 2            | Decimal encoded date, decimal encoded time                   | `1 0 1 0 1 0`                              |
-| DateTimePicker         | `¯30` | DateTime format                              | 7            | International Day Number, hour, minute, second               | `1 1 1 0 0 0`                              |
+| ISO components         | `¯10` | ISO day-of-year components                   | 6            | Year, day-of-year, hour, minute, second, microsecond         | `1 1 0 0 0 0`                              |
+|_                      _| `¯11` | ISO day-of-week components                   | 7            | Year, week, day-of-week, hour, minute, second, microsecond   | `1 1 1 0 0 0 0`                            |
+| Decimal encoded[^2]    | `¯20` | Decimal encoded date and time                | 2            | Decimal encoded date, decimal encoded time                   | `10101 0 `                                 |
+| DateTimePicker         | `¯30` | DateTime format                              | 4            | International Day Number, hour, minute, second               | `0 0 0 0`.                                 |
 
 ## Military time zone characters
 
