@@ -103,7 +103,7 @@ The originator of the interpreter, that is, `'Dyalog'`.
 The interpreter's full version number as three integers indicating the major release, minor release, and build number, for example, `21 0 53977`
 
 #### Executable.VersionMoniker
-A six-character shorthand for the for `Version`'s first two elements together with `Unicode` and `Bits`, for example `210U64`.
+A six-character shorthand for the `Version`'s first two elements together with `Unicode` and `Bits`, for example `210U64`.
 
 !!! Hint "Hints and Recommendations"
     This is useful for example to find out the where the [Session Initialisation](../../windows-ui-guide/the-session-object/session-initialisation) looks for a **StartupSession** directory on Unix, namely in `'dyalog.',Executable.VersionMoniker,'.files'` inside the user's home directory (`$HOME`).
