@@ -173,10 +173,10 @@ The [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_
 A character vector which on Windows is the [Security Identifier](https://en.wikipedia.org/wiki/Security_Identifier) (with the [relative identifier](https://en.wikipedia.org/wiki/Relative_identifier) section removed) and on Unix is the [Group identifier](https://en.wikipedia.org/wiki/Group_identifier).
 
 #### Host.GroupName
-The name associated with the current group identifier. Always `''` on Microsoft Windows.
+The character vector group identifier on Unix and `''` on Microsoft Windows.
 
 #### Host.NetBIOSDomainName
-The NetBIOS domain name. Always `''` on Unix.
+The character vector NetBIOS domain name on Windows and `''` on Unix.
 
 #### Host.UserId
 On Microsoft Windows, this is the [relative identifier](https://en.wikipedia.org/wiki/Relative_identifier). On Unix, the identifier of the currently logged-in user. Note that this is always a character vector, even on Unix where the value looks like a number.
@@ -203,7 +203,7 @@ The preferred character separating file paths – either `'/'` or `'\'`.
 Either `'Windows'` or `'Unix'`.
 
 #### OS.LibcPath
-The location of the [C standard library](https://en.wikipedia.org/wiki/C_standard_library). Always `''` on Microsoft Windows.
+The character vector location of the [C standard library](https://en.wikipedia.org/wiki/C_standard_library) on Unix and `''` on Microsoft Windows.
 
 #### OS.Newline
 Numeric vector of Unicode code points for the operating system's newline sequence – either `(10 ⋄)` or `13 10`.
