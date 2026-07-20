@@ -215,7 +215,7 @@ Numeric vector of Unicode code points for the operating system's newline sequenc
 The filename associated with the [null device](https://en.wikipedia.org/wiki/Null_device).
 
 #### OS.PathSeparator
-The character used to separate multiple filenames in a single character vector, namely `';'`  on Microsoft Windows and `':'` on Unix.
+The character used to separate multiple filenames in a single character vector. This is `';'`  on Microsoft Windows and `':'` on Unix.
 
 #### OS.SharedLibraryExtension
 The preferred file extension for [shared libraries](https://en.wikipedia.org/wiki/Shared_library) – one of `'.dll'` (Microsoft Windows), `'.dylib'` (macOS), or `'.so'` (Linux).
