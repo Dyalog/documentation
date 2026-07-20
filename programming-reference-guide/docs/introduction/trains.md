@@ -32,13 +32,13 @@ Whereas, without the parentheses to identify the function train, the expression 
 ## Forks and Atops
 
 The following trains are currently supported where `f`, `g` and `h` are functions and `A` is an array:
+
 ```apl
+        g h
       f g h
       A g h
-        g h
 ```
-
-The 3-item trains `(f g h)` and `(A g h)` are termed *forks* while the 2-item train `(g h)` is termed an *atop*. To distinguish the two styles of *fork*, we can use the terms *fgh-fork* or *Agh-fork*.
+The 2-item train `(g h)` is termed an *atop* and the 3-item trains `(f g h)` and `(A g h)` are termed *forks*. To distinguish the two styles of *fork*, we can use the terms *fgh-fork* or *Agh-fork*.
 
 ## Trains as Functions
 
@@ -49,16 +49,36 @@ A train is syntactically equivalent to a function and so, in common with any oth
 - consumed by operators as an operand
 - and so forth.
 
-In particular, trains may be applied to a single array (monadic use) or between 2 arrays (dyadic use), providing  six new constructs.
-```apl
-    ⍺(f g h)⍵ ←→ (⍺ f ⍵) g (⍺ h ⍵)   ⍝ dyadic (fgh) fork
-    ⍺(A g h)⍵ ←→    A    g (⍺ h ⍵)   ⍝ dyadic (Agh) fork
-    ⍺(  g h)⍵ ←→         g (⍺ h ⍵)   ⍝ dyadic       atop
+In particular, trains can be applied to a single array (monadic use) or between two arrays (dyadic use), providing six new constructs:
 
-     (f g h)⍵ ←→ (  f ⍵) g (  h ⍵)   ⍝ monadic (fgh) fork
-     (A g h)⍵ ←→    A    g (  h ⍵)   ⍝ monadic (Agh) fork
-     (  g h)⍵ ←→         g (  h ⍵)   ⍝ monadic       atop
-```
+<style id="ID">
+.md-typeset #ID+div table {
+  margin-left: 2em;
+  & tr:nth-child(2n) td {
+    padding-bottom: 1em!important;
+  }
+  & td {
+    border: none;
+	&:nth-child(2) {
+	  padding: 0 1em !important;
+	}
+	&:last-child {
+	  padding-left: 1em !important;
+	}
+    & code {
+      white-space:pre;
+    }
+  } 
+}
+</style>
+
+|------------:|:-:|-------------------:|----------|
+|  `(  g h) Y`| ⇔ |        `g (  h Y)` | atop     |
+|`X (  g h) Y`| ⇔ |        `g (X h Y)` | atop     |
+|  `(f g h) Y`| ⇔ |`(  f Y) g (  h Y)` | fgh-fork |
+|`X (f g h) Y`| ⇔ |`(X f Y) g (X h Y)` | fgh-fork |
+|  `(A g h) Y`| ⇔ |      `A g (  h Y)` | Agh-fork |
+|`X (A g h) Y`| ⇔ |      `A g (X h Y)` | Agh-fork |
 
 ## Identifying a Train
 

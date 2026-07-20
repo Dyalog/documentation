@@ -23,6 +23,9 @@ Dyalog v20.0 was the last release to be built for 32-bit Raspberry Pis; Dyalog v
 ### `43⌶` – Monadic Operator Generator  
 This I-beam has been deprecated. It is scheduled for removal in Dyalog v22.0; it could be reintroduced in a later release.
 
+### `739⌶` – Temporary Directory  
+This I-beam has been deprecated. It is scheduled for removal in 2029.
+
 ### Legacy Workspaces
 Dyalog v21.0 is the last major version that will support workspaces saved using Dyalog v11.0 or Dyalog v12.0 (workspaces saved using earlier versions are already unsupported). From Dyalog v22.0, the minimum version of a workspace that can be loaded will be v12.1.
 

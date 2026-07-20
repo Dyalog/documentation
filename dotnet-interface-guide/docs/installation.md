@@ -7,7 +7,7 @@ See [Microsoft's .NET webpages](https://dotnet.microsoft.com/) for information o
 !!! Info "Information"
     .NET is not available for IBM AIX and is not supported on the Raspberry Pi models Zero, 1, or 2. 
 
-The Dyalog v{{ version_majmin }} .NET interface requires .NET v8.0 or later – it does not work with earlier versions of .NET.
+The Dyalog v{{ version_majmin }} .NET interface requires .NET v10.0 or later – it does not work with earlier versions of .NET.
 
 The .NET interface only works with the Unicode edition of Dyalog; the Classic edition is not supported.
 
@@ -33,11 +33,11 @@ On Raspberry Pi Bookworm, do not use the Microsoft-supplied <code class="languag
 
 <h4 class="example">Example</h4>
 
-This example shows the steps taken on Linux to download the runtime to **/tmp/dotnet-runtime-8.0.0-linux-x64.tar.gz** – following these instructions it should not be necessary to define DOTNET_ROOT.
+This example shows the steps taken on Linux to download the runtime to **/tmp/dotnet-runtime-10.0.0-linux-x64.tar.gz** – following these instructions it should not be necessary to define DOTNET_ROOT.
 ```nonAPL
 sudo mkdir -p /usr/share/dotnet
 cd /usr/share/dotnet
-sudo tar -zxvf /tmp/dotnet-runtime-8.0.0-linux-x64.tar.gz
+sudo tar -zxvf /tmp/dotnet-runtime-10.0.0-linux-x64.tar.gz
 sudo  /usr/share/dotnet/dotnet /usr/bin/dotnet
 ```
 
@@ -45,33 +45,33 @@ This is only an example of code that worked on a specific configuration in our t
 
 #### Upgrading .NET Support
 
-Dyalog v{{ version_majmin }} supports .NET v8.0 and later, but is configured to support .NET v8.0 by default. To support a later version of .NET, the following files need to be amended (this requires administrator rights) – in each case, the reference to "8.0" or "8.0.0" should be updated to the correct major version number:
+Dyalog v{{ version_majmin }} supports .NET v10.0 and later, but is configured to support .NET v10.0 by default. To support a later version of .NET, the following files need to be amended (this might require raised privileges) – in each case, the reference to "10.0" or "10.0.0" should be updated to the correct version number:
 
 - **[DYALOG]/Dyalog.Net.Bridge.deps.json**
 
     ```json
     "runtimeTarget": {  
-        "name": ".NETCoreApp,Version=v8.0",
+        "name": ".NETCoreApp,Version=v10.0",
 
     "targets": {  
-        ".NETCoreApp,Version=v8.0": {
+        ".NETCoreApp,Version=v10.0": {
     ```
 
 - **[DYALOG]/Dyalog.Net.Bridge.runtimeconfig.json**
 
     ```json
     "runtimeOptions": {  
-	    "tfm": "net8.0",  
+	    "tfm": "net10.0",  
 		"framework": {  
 		    "name": "Microsoft.NETCore.App",  
-			"version": "8.0.0"
+			"version": "10.0.0"
     ```
 
-The replacement version number can also be that of a .NET Release Candidate. For example, if you have downloaded .NET 10.0.0-rc.2, the version number in the aforementioned locations should be set to:
+The replacement version number can also be that of a .NET Release Candidate or Preview. For example, if you have downloaded .NET 11.0.0-preview.5, the version number in the aforementioned locations should be set to:
 
-- 10.0 instead of 8.0 (three occurrences)
+- 11.0 instead of 10.0 (three occurrences)
 
-- 10.0.0-rc.2.25502.107 instead of 8.0.0 (one occurrence).
+- 11.0.100-preview.5.26302.115 instead of 10.0.0 (one occurrence).
 
 ## Files Installed with Dyalog
 

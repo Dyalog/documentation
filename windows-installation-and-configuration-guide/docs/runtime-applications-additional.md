@@ -55,16 +55,16 @@ Simply copy the `vc_redistx86.exe` (32-bit version) or `vc_redistx64.exe` (64-bi
 
 An alternative is to install the UCRT components into the same directory as your Dyalog run-time application. There are two ways to obtain these files.
 
-### Either
+Either:
 
 Install the Dyalog development package (ideally onto a separate system just for this purpose) without administrator rights. This will perform an App-local installation of Dyalog itself. Then copy the UCRT files into your installation package. These files are:
 
-- those beginning with `api-ms*`
-- `ucrtbase.dll`
-- `vcruntime140.dll`
+- those beginning with **api-ms**
+- **ucrtbase.dll**
+- **vcruntime140.dll**
 
-### Or
+or
 
-Download and install the Windows 10 SDK from: [https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk), and follow the instructions in the link below. [https://blogs.msdn.microsoft.com/vcblog/2015/03/03/introducing-the-universal-crt](https://blogs.msdn.microsoft.com/vcblog/2015/03/03/introducing-the-universal-crt)
+Download and install the Windows 10 SDK from [https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk), and follow the instructions in the link below. [https://blogs.msdn.microsoft.com/vcblog/2015/03/03/introducing-the-universal-crt](https://blogs.msdn.microsoft.com/vcblog/2015/03/03/introducing-the-universal-crt)
 
 Finally, modify your installer to add these files to the same folder as your Dyalog run-time application.

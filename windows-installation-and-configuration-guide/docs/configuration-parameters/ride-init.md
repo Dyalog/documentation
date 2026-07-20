@@ -17,7 +17,7 @@ The format of the value is:
 - poll – try to connect to the specified Ride at regular intervals and reconnect if the connection is lost
 - config - specifies the name of the Ride ini file to be used
 
-For serve and http, <address> is a list of IPv4 or IPv6 addresses and/or DNS names of interfaces in the machine where the APL process is running, and specifies the interfaces through which incoming requests to connect are accepted. If <address> is empty, incoming requests are accepted only from the machine itself (the interpreter will listen on the loopback addresses only). If <address> is set to “*” then the interpreter will listen for requests through all the available interfaces in the local machine.
+For serve and http, &lt;address> is a list of IPv4 or IPv6 addresses and/or DNS names of interfaces in the machine where the APL process is running, and specifies the interfaces through which incoming requests to connect are accepted. If &lt;address> is empty, incoming requests are accepted only from the machine itself (the interpreter will listen on the loopback addresses only). If &lt;address> is set to “*” then the interpreter will listen for requests through all the available interfaces in the local machine.
 
 If *setting* is `serve` or `http` then *address*  is a list of IPv4 or IPv6 addresses and/or DNS names of interfaces in the machine where the APL process is running, and specifies the interfaces through which incoming requests to connect are accepted. If *address* is empty, incoming requests are accepted only from the machine itself (the interpreter will listen on the loopback addresses only). If *address* is set to “*” then the interpreter will listen for requests through all the available interfaces in the local machine.
 

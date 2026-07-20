@@ -20,6 +20,20 @@ def getSvnReadmeUrl(String version) {
     return "dyalog/branches/${version}/svn/docs/readmes"
 }
 
+def getSvnLicencesUrl(String version) {
+    if (version == env.TRUNK_VERSION) {
+        return "dyalog/trunk/svn/docs/licences"
+    }
+    return "dyalog/branches/${version}/svn/docs/licences"
+}
+
+// True when the third-party licences docx for this version is sourced
+// from the dyalog repo (svn/docs/licences) rather than from within the
+// docbin checkout. Versions listed in LICENCES_IN_DOCBIN predate the move.
+def licencesFromDyalogRepo(String version) {
+    return !env.LICENCES_IN_DOCBIN.split(' ').contains(version)
+}
+
 /**
  * Download release assets for a specific documentation version.
  * Finds the latest non-draft release whose tag starts with "v{version}."
@@ -105,6 +119,12 @@ pipeline {
         // The "development" version currently on trunk in SVN.
         // When v21 is released and v22 development starts, update this to '22.0'.
         TRUNK_VERSION = '21.0'
+
+        // Versions whose "Licences for third-party components.docx" still lives
+        // inside the docbin checkout. 21.0 onwards sources it from the dyalog
+        // repo (svn/docs/licences); 20.0 predates the move. Drop a version from
+        // this list once its licences file has moved to the dyalog repo.
+        LICENCES_IN_DOCBIN = '20.0'
 
         GITDOCURL       = 'documentation'
 
@@ -209,6 +229,9 @@ pipeline {
                                     doSvnCheckout(getSvnDocbinUrl(version), "files", true, 'svncom')
                                     doSvnCheckout(env.SVNSHARPPLOTURL, "files/sharpplot", true, 'svncom')
                                     doSvnCheckout(getSvnReadmeUrl(version), "files/readmes", true, 'svncom')
+                                    if (licencesFromDyalogRepo(version)) {
+                                        doSvnCheckout(getSvnLicencesUrl(version), "files/licences", true, 'svncom')
+                                    }
                                     sh "\$WORKSPACE/get_svn_docbin ${version}"
                                 }
                             }
