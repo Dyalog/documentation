@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕DT DT
-</div>
 
 # <span>Date-time</span> `R←X ⎕DT Y`{{key}}
 
@@ -208,3 +204,8 @@ The resolutions of system clocks vary by platform.
 [^11]: All dates must be between 1 January 0001 and 28 February 4000 in the Proleptic Gregorian Calendar.
 [^12]: Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020/01/23 (year/month/day) is encoded as 20200123, and 13:17:56 (hour:minute:second) is encoded as 131756.
 [^13]: If a timestamp has fewer than the maximum number of elements, the remaining elements take the default values shown.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕DT DT
+</div>

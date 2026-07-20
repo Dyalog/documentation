@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⊤ encode
-</div>
 
 # <span>Encode</span> `R←X⊤Y`{{key}}
 
@@ -68,3 +65,8 @@ This example shows binary, octal and hexadecimal representations of the decimal 
 ```
 
 `⎕IO` is not an implicit argument of encode.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⊤ encode
+</div>

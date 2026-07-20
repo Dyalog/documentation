@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  /
-  reduce
-</div>
 
 # <span>Reduce</span> `R←f/[K]Y`{{key}}
 
@@ -124,3 +120,9 @@ For backwards compatibility reasons, `+/` and `×/` of simple vectors are still 
 0
 ```
 This also applies to `+⌿` and `×⌿`.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  /
+  reduce
+</div>

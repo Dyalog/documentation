@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕LOAD LOAD
-</div>
 
 # <span>Load Workspace</span> `⎕LOAD Y`{{key}}
 
@@ -20,3 +16,8 @@ The workspace identification and time-stamp when saved is not displayed.
 If the workspace contains any GUI objects whose `Visible` property is 1, these objects will be displayed.  If the workspace contains a non-empty `⎕SM` but does not contain an SM GUI object, the form defined by `⎕SM` will be displayed in a window on the screen.
 
 The system switches to the namespace that was the current namespace when the workspace was saved.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕LOAD LOAD
+</div>

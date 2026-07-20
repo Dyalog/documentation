@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⌸
-  key
-</div>
 
 # <span>Key</span> `R←{X}f⌸Y`{{key}}
 
@@ -190,3 +186,9 @@ Given a list of names and scores., the problem is to sum the scores for each uni
       names {+/⍵}⌸ scores
 399 85 71 109
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌸
+  key
+</div>

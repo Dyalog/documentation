@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⊢ same tack 
-</div>
 
 # <span>Same</span> `R←⊣YR←⊢Y`{{key}}
 
@@ -27,3 +24,8 @@ at      1764
 avl    17476
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⊢ same tack 
+</div>

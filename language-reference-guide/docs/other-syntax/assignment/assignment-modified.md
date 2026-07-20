@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<div style="display: none;">
-  ← gets
-</div>
-
 # <span>Assignment (Modified)</span> `{R}←Xf←Y`{{key}}
 
 `f` may be any dyadic function which returns an explicit result.  `Y` may be any array  appropriate to function `f`.  `X` must be the *name* of an existing array appropriate to function `f`.
@@ -35,3 +31,8 @@ The effect of the derived function is to reset the value of the array named by `
       vec/⍨←vec>0 ⋄vec
 3 5 1 4 2
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ← gets
+</div>

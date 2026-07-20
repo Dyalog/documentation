@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  50100⌶
-</div>
 
 # <span>Line Count</span> `R←50100⌶Y`{{key}}
 
@@ -40,3 +36,8 @@ The result R is the same as `⎕LC`, but truncated to the number of stack levels
 6 10 10 10
 7 10 10 10
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  50100⌶
+</div>

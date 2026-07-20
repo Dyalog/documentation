@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕DF DF
-</div>
 
 # <span>Display Form</span> `{R}←⎕DF Y`{{key}}
 
@@ -135,3 +131,8 @@ This is X
       X.Y
 #.X.Y
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕DF DF
+</div>

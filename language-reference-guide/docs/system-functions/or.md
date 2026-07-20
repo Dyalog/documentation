@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕OR OR
-</div>
 
 # <span>Object Representation</span> `R←⎕OR Y`{{key}}
 
@@ -130,3 +126,8 @@ This example illustrates how `⎕OR` can be used to clone a GUI object; in this 
 ```
 
 Note too that `⎕WC` and `⎕NS` may be used interchangeably to rebuild *pure* namespaces or GUI namespaces from a `⎕OR` object.  You may therefore use `⎕NS` to rebuild a Form or use `⎕WC` to rebuild a pure namespace that has no GUI components.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕OR OR
+</div>

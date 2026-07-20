@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍒ grade
-</div>
 
 # <span>Dyadic Grade Down</span> `R←X⍒Y`{{key}}
 
@@ -98,3 +95,8 @@ RAT       FIRST       FIRST       FIRST       fIRST
 ```
 
 `⎕IO` is an implicit argument of Grade Down.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍒ grade
+</div>

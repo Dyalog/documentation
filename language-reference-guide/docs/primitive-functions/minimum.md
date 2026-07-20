@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⌊ min minimum
-</div>
 
 # <span>Minimum</span> `R←X⌊Y`{{key}}
 
@@ -15,3 +12,8 @@ search:
       ¯2.1 0.1 15.3 ⌊ ¯3.2 1 22
 ¯3.2 0.1 15.3
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌊ min minimum
+</div>

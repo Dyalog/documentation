@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕TRACE TRACE
-</div>
 
 # <span>Set Trace</span> `{R}←X ⎕TRACE Y`{{key}}
 
@@ -77,3 +73,8 @@ For each traced line, the output from `⎕TRACE` is displayed as a two element v
  DSL[0]   one   two
  one  two
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕TRACE TRACE
+</div>

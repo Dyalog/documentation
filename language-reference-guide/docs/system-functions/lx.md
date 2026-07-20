@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕LX LX
-</div>
 
 # <span>Latent Expression</span> `⎕LX`
 
@@ -24,3 +20,8 @@ GREETING saved Tue Sep 8 10:49:29 1998
 ./GREETING saved Tue Sep 8 10:49:29 1998
 GOOD MORNING PETE
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕LX LX
+</div>

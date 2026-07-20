@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  , ravel
-</div>
 
 # <span>Ravel with Axes</span> `R←,[K]Y`{{key}}
 
@@ -127,3 +124,8 @@ If `K` is an empty vector a new last axis of length 1 is created.
 ```
 
 See also: [Ravel](index.md).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  , ravel
+</div>

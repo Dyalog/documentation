@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕DCT DCT
-</div>
 
 # <span>Decimal Comparison Tolerance</span> `⎕DCT`
 
@@ -23,3 +19,8 @@ For further information, see [Comparison Tolerance](ct.md).
       1.00000000001 1.0000001 = 1
 1 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕DCT DCT
+</div>

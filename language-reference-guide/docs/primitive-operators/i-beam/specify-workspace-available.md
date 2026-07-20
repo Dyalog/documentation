@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2002⌶
-</div>
 
 # <span>Specify Workspace Available</span> `R←2002⌶Y`{{key}}
 
@@ -25,3 +21,8 @@ If the size of the committed workspace would be smaller than the minimum value (
 See also [Memory Manager Statistics:](memory-manager-statistics.md).
 
 Note that this function does not change the size of the *extra amount* that will be applied subsequently by `⎕WA` or by an automatic compaction.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2002⌶
+</div>

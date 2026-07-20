@@ -1,7 +1,3 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  dyalogscript
-</div>
 
 # Shell Scripts
 
@@ -101,3 +97,8 @@ Note that the interpreter reads both of these locations, the command line in the
 ### Debugging
 
 It is not currently possible to use Ride to debug APL shell scripts. However there is an I-beam function, which can be used to provide some simple debugging/diagnostic information.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  dyalogscript
+</div>

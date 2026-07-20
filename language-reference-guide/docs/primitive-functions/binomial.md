@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ! binomial
-</div>
 
 # <span>Binomial</span> `R←X!Y`{{key}}
 
@@ -33,3 +30,8 @@ For positive integer arguments, `R` is the number of selections of `X` things fr
       2!3j2
 1J5
 ```   
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ! binomial
+</div>

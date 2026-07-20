@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NPARTS NPARTS
-</div>
 
 # <span>File Name Parts</span> `R←{X} ⎕NPARTS Y`{{key}}
 
@@ -78,3 +74,8 @@ Note that `⊃1 ⎕NPARTS ''` returns the current working directory.
 └──────────────┘
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NPARTS NPARTS
+</div>

@@ -2,9 +2,6 @@
 search:
   boost: 99
 ---
-<div style="display: none;">
-  at @
-</div>
 
 # <span>At</span> `R←{X}(f@g)Y`{{key}}
 
@@ -163,3 +160,8 @@ Replace odd items of `⍳5` with themselves reversed:
       ⌽@(2∘|)⍳5
 5 2 3 4 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  at @
+</div>

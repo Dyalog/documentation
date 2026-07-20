@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ○ circular
-</div>
 
 # <span>Circular Functions</span> `R←X○Y`{{key}}
 
@@ -51,3 +48,8 @@ search:
       ¯4○¯1
 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ○ circular
+</div>

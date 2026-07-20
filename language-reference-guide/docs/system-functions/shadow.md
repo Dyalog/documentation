@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SHADOW SHADOW
-</div>
 
 # <span>Shadow Name</span> `{R}←⎕SHADOW Y`{{key}}
 
@@ -46,3 +42,8 @@ VALUE ERROR
       FOO
       ^
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SHADOW SHADOW
+</div>

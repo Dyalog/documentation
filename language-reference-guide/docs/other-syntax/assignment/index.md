@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<div style="display: none;">
-  ← gets
-</div>
-
 # <span>Assignment</span> `X←Y`{{key}}
 
 Assignment  allocates the result of the expression `Y` to the *name* or *names* in `X`.
@@ -123,3 +119,8 @@ A name that already exists may be assigned a new value if the assignment will no
 |Variable|Yes   |Yes     |&nbsp;  |&nbsp;  |
 |Function|&nbsp;|&nbsp;  |Yes     |Yes     |
 |Operator|&nbsp;|&nbsp;  |Yes     |Yes     |
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ← gets
+</div>

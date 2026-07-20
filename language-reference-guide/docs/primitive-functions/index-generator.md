@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍳ iota interval
-</div>
 
 # <span>Index Generator</span> `R←⍳Y`{{key}}
 
@@ -49,3 +46,8 @@ EXIT
 MAIN
 EXIT
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍳ iota interval
+</div>

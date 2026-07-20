@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NR NR
-</div>
 
 # <span>Nested Representation</span> `R←⎕NR Y`{{key}}
 
@@ -54,3 +50,8 @@ The definition of `⎕NR` has been extended to names assigned to functions by sp
 | '∊----------------------------------------'     |
 '∊------------------------------------------------'
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NR NR
+</div>

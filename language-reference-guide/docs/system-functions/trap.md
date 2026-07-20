@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕TRAP TRAP
-</div>
 
 # <span>Trap Event</span> `⎕TRAP`
 
@@ -154,3 +150,8 @@ User-defined events may be signalled through the `⎕SIGNAL` system function.  
       ⎕SIGNAL 500
 USER EVENT 500 - TRAPPED
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕TRAP TRAP
+</div>

@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  × direction
-</div>
 
 # <span>Direction (Signum)</span> `R←×Y`{{key}}
 
@@ -28,3 +25,8 @@ Where an element of `Y` is complex, the corresponding element of `R` is a number
       |×3j4 4j5
 1 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  × direction
+</div>

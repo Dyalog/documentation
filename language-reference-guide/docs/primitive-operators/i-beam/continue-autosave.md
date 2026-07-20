@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2704⌶
-</div>
 
 # <span>Continue Autosave</span> `{R}←2704⌶Y`{{key}}
 
@@ -26,3 +22,8 @@ The shy result `R` is the previous value of this setting.
 Circumstances when Dyalog automatically saves a `CONTINUE` workspace include:
 
 - a run-time violation. This is most frequently caused by an untrapped APL error which causes Dyalog to return to session-input mode (that is, an application programming fault), and APL was started with the "+q" command line option or input and output were redirected at the command line.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2704⌶
+</div>

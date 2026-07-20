@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⌶
-</div>
 
 # <span>I-Beam</span> `R←{X}(A⌶)Y`{{key}}
 
@@ -111,3 +108,8 @@ Key to restrictions in the following table:
 |`8667` |[Save Shared Code Files](./save-shared-code-files.md)                                 |64U   |
 |`16808`|[Sample Probability Distribution](./sample-probability-distribution.md)               |LiW|
 |`50100`|[Line Count](./line-count.md)                                                         |&nbsp;|
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌶
+</div>

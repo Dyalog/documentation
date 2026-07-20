@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  1111⌶
-</div>
 
 # <span>Number of Threads</span> `R←1111⌶Y`{{key}}
 
@@ -26,3 +22,8 @@ To set the number of threads to be the same as the number of virtual processors,
 ```
 
 See [Parallel Execution](../../../../programming-reference-guide/introduction/parallel-execution) and [Parallel Execution Threshold](parallel-execution-threshold.md).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  1111⌶
+</div>

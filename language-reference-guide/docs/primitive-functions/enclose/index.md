@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⊂ enclose
-</div>
 
 # <span>Enclose</span> `R←⊂Y`{{key}}
 
@@ -47,3 +44,8 @@ A
 ```
 
 See also: [Enclose with Axes](enclose-with-axes.md).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⊂ enclose
+</div>

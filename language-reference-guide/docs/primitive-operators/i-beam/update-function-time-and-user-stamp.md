@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  1159⌶
-</div>
 
 # <span>Update Function Time and User Stamp</span> `{R}←X(1159⌶)Y`{{key}}
 
@@ -39,3 +35,8 @@ Note that the last item of the function timestamp must be set to 0 otherwise `11
 │0 0 0│2012 12 25 11 59 0 0│0│Santa│
 └~───→┴~──────────────────→┴─┴────→┘
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  1159⌶
+</div>

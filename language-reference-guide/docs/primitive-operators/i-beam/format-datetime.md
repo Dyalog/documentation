@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  1200⌶
-</div>
 
 # <span>Format Date-time</span> `R←X(1200⌶)Y`{{key}}
 
@@ -495,3 +491,8 @@ In the following examples:
       '__cy__%DateVerbose%' (1200⌶⍠'Dictionary' dict) tn
  the date is 13 Chw 2019
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  1200⌶
+</div>

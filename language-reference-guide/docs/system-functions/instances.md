@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕INSTANCES INSTANCES
-</div>
 
 # <span>Instances</span> `R←⎕INSTANCES Y`{{key}}
 
@@ -62,3 +58,8 @@ Animal
       ⎕INSTANCES Animal
  eeyore  robin  polly 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕INSTANCES INSTANCES
+</div>

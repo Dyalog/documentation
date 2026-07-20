@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕ 
-</div>
 
 # <span>Evaluated Input/Output</span> `⎕`
 
@@ -80,3 +76,8 @@ ERROR
 ```
 
 A time limit set in system variable `⎕RTL` has no effect whilst awaiting input in response to a `⎕:` prompt.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕ 
+</div>

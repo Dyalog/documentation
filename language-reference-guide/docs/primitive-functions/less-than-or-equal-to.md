@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ≤
-</div>
 
 # <span>Less Than Or Equal To</span> `R←X≤Y`{{key}}
 
@@ -22,3 +19,8 @@ search:
       1  1.00000000001 1.00000001 ≤ 1
 1 1 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ≤
+</div>

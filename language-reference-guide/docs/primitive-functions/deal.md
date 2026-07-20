@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ? deal
-</div>
 
 # <span>Deal</span> `R←X?Y`{{key}}
 
@@ -23,3 +20,8 @@ search:
 ```
 
 `⎕IO` and `⎕RL` are implicit arguments of Deal. A side effect of Deal is to change the value of `⎕RL`. See [Random Number Seed](../system-functions/rl.md/#random-number-seed).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ? deal
+</div>

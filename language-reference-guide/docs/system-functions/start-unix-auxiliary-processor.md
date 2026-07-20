@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SH SH
-</div>
 
 # <span>Start Unix Auxiliary Processor</span> `{R}←X ⎕SH Y`{{key}}
 
@@ -41,3 +37,8 @@ The syntax of dyadic `⎕SH` is similar to the UNIX execl(2) system call, where 
 !!! Warning "Warning"
 
 	Under macOS and Linux, if the configuration parameter **ENABLE_CEF** is 1, Auxiliary Processors cannot be used (they hang on error). The default value is 1 unless you are not running under a desktop (for example, you are running Dyalog in a PuTTY session when the default is 0).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SH SH
+</div>

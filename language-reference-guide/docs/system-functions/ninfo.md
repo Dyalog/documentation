@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NINFO NINFO
-</div>
 
 # <span>Native File Information</span> `R←{X}⎕NINFO Y`{{key}}
 
@@ -203,3 +199,8 @@ The following expression "touches" files, that is, it sets their last modificati
 
 !!! note
     Of the file timestamps which are reported by the operating system, only the last modification time should be considered reliable and portable. Neither the access time or creation time are well supported across all platforms. Furthermore, they may not accurately reflect the actual time that the operation occurred.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NINFO NINFO
+</div>

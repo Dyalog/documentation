@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NPUT NPUT
-</div>
 
 # <span>Write Text File</span> `{R}←X ⎕NPUT Y`{{key}}
 
@@ -98,3 +94,8 @@ In the third example, all of the line endings are normalised so the written file
 ## Note
 
 If two or more APL processes separately write to a file using `⎕NPUT` the behaviour is undefined. In particular, if multiple APLs use `⎕NPUT` with flags set to 2 (append), it is not guaranteed that each `⎕NPUT` operation will be atomic and all the text written to the file will be complete and/or contiguous.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NPUT NPUT
+</div>

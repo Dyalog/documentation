@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2502⌶
-</div>
 
 # <span>Discard Parked Threads</span> `R←2502⌶Y`{{key}}
 
@@ -14,3 +10,8 @@ APL threads that Dyalog creates to serve incoming .NET requests are not terminat
 
 `(2502⌶0)`
  removes all parked threads from the workspace.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2502⌶
+</div>

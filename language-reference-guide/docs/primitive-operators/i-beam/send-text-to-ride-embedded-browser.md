@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  3500⌶
-</div>
 
 # <span>Send Text to Ride-embedded Browser</span> `R←{X}(3500⌶)Y`{{key}}
 
@@ -18,3 +14,8 @@ The result `R` identifies whether the write to Ride was successful. Possible val
 
 - `0` : the write to the Ride client was successful
 - `¯1` : the write to the Ride client was not successful
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  3500⌶
+</div>

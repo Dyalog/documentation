@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕IO IO
-</div>
 
 # <span>Index Origin</span> `⎕IO`
 
@@ -32,3 +28,8 @@ search:
 ABC
 ===
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕IO IO
+</div>

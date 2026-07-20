@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2017⌶
-</div>
 
 # <span>Identify .NET Type</span> `R←2017⌶Y`{{key}}
 
@@ -25,3 +21,8 @@ If the object is identified in the current AppDomain, the result `R` is its Type
       2017⌶'DateTime'
 System.DateTime
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2017⌶
+</div>

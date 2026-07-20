@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NREPLACE NREPLACE
-</div>
 
 # <span>Native File Replace</span> `{R}←X ⎕NREPLACE Y`{{key}}
 
@@ -63,3 +59,8 @@ abc
 ```
 
 For compatibility with old files, you may specify that the data be converted to type 82 on output. The conversion (to `⎕AV` indices) will be determined by the local value of `⎕AVU`.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NREPLACE NREPLACE
+</div>

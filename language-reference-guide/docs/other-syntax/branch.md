@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<div style="display: none;">
-  →
-</div>
-
 # <span>Branch</span> `→Y`{{key}}
 
 `Y` may be a scalar or vector which, if not empty, has a simple numeric scalar as its first element.  The function has no explicit result.  It is used to modify the normal sequence of execution of expressions or to resume execution after a statement has been interrupted. Branch is not in the function domain of operators.
@@ -99,3 +95,8 @@ The system constant `⎕LC` returns a vector of the line numbers of statement li
 ```apl
       →⎕LC
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  →
+</div>

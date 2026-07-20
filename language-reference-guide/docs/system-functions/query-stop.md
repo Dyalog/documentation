@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕STOP STOP
-</div>
 
 # <span>Query Stop</span> `R←⎕STOP Y`{{key}}
 
@@ -16,3 +12,8 @@ search:
       ⎕STOP'FOO'
 0 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕STOP STOP
+</div>

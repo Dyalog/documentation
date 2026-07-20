@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ~ not
-</div>
 
 # <span>NOT</span> `R←~Y`{{key}}
 
@@ -15,3 +12,8 @@ search:
       ~0 1
 1 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ~ not
+</div>

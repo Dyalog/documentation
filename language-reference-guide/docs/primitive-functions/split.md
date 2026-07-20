@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ↓ split
-</div>
 
 # <span>Split</span> `R←↓[K]Y`{{key}}
 
@@ -23,3 +20,8 @@ The items of `R` are the sub-arrays of `Y` along the `K`th axis.  `R` is a scala
       ↓[1]2 5⍴⍳10
  1 6  2 7  3 8  4 9  5 10
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ↓ split
+</div>

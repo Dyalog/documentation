@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SVO SVO
-</div>
 
 # <span>Query Degree of Coupling</span> `R←⎕SVO Y`{{key}}
 
@@ -24,3 +20,8 @@ If `Y` specifies a single name, the result `R` is a 1-element vector whose value
       ⎕SVO ↑'X SALES' 'Y' 'JUNK'
 2 1 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SVO SVO
+</div>

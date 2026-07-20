@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  5171⌶
-</div>
 
 # <span>Discard Source Information</span> `R←5171⌶Y`{{key}}
 
@@ -21,3 +17,8 @@ This function discards source code and file information for scripted objects, na
 - `5171⌶ # ⎕SE` discards source code and file information from the workspace and from  `⎕SE`.
 
 For further information, see [Source as Typed](../../../../earlier-release-notes/release-notes-v19-0/introduction/source-as-typed).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  5171⌶
+</div>

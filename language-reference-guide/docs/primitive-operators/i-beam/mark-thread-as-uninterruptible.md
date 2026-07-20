@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2503⌶
-</div>
 
 # <span>Mark Thread as Uninterruptible</span> `R←2503⌶Y`{{key}}
 
@@ -22,3 +18,8 @@ The result `R` is an integer value that indicates the previous state of the thre
 In many multi-threaded applications a large proportion of the threads are used for communication mechanisms (`⎕DQ` on TCPSockets, Conga, isolates); but most of the "real work" is done in thread zero.
 
 It is undesirable that a weak interrupt interrupts a seemingly random thread. The mechanism to prevent a thread from being (weak) interrupted allows an application to be configured so that only specific threads would respond to a weak interrupt.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2503⌶
+</div>

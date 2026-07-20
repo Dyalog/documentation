@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NAPPEND NAPPEND
-</div>
 
 # <span>Native File Append</span> `{R}←X ⎕NAPPEND Y`{{key}}
 
@@ -48,3 +44,8 @@ To write 2 or more lines, you must insert appropriate end-of-line codes.
       ('hello',(⎕UCS 13 10),'world')⎕NAPPEND ¯1 ⍝ Windows
       ('hello',(⎕UCS 10),'world')⎕NAPPEND ¯1    ⍝ Other
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NAPPEND NAPPEND
+</div>

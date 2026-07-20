@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2015⌶
-</div>
 
 # <span>Create Data Binding Source</span> `R←{X}2015⌶Y`{{key}}
 
@@ -321,3 +317,8 @@ EventArgs is an instance of the internal class `Dyalog.Data.ElementChangedEventA
 If Reason is `'CellChanged'`, Path is the row and column number (in origin 0) of the cell that was changed and Value is its new value.
 
 If Reason is `'RowDeleted'` or `'RowInserted'`, Path is the number of the row that has been added or removed (in origin 0) and Value is `⎕NULL`.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2015⌶
+</div>

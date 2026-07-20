@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2016⌶
-</div>
 
 # <span>Create .NET Delegate</span> `R←2016⌶Y`{{key}}
 
@@ -33,3 +29,8 @@ System.EventHandler
 ```
 
 Then, when calling a .NET method that requires a Delegate of type System.Eventhandler, but whose signature is imprecise in this respect, the object `del` should be used instead.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2016⌶
+</div>

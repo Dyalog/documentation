@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  219⌶
-</div>
 
 # <span>Compress/Decompress Vector of Short Integers</span> `R←X(219⌶)Y`{{key}}
 
@@ -70,3 +66,8 @@ empty←⍬
       utf8 256| ¯1(219⌶)2⊃comp
 empty←⍬					  
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  219⌶
+</div>

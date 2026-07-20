@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  1010⌶
-</div>
 
 # <span>Set Shell Script Debug Options</span> `R←{X}(1010⌶)Y`{{key}}
 
@@ -19,3 +15,8 @@ If `Y` is 2, the effect is as if `⎕TRACE` was set for every line of every func
 If `Y` is 3, it specifies a combination of the above.
 
 The result `R` is the previous value of the debug options.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  1010⌶
+</div>

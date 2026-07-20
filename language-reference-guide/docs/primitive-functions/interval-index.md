@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍸
-</div>
 
 # <span>Interval Index</span> `R←X⍸Y`{{key}}
 
@@ -305,3 +302,8 @@ Another card, the 10 of diamonds is dealt. Where must it go in the hand ?
 ```
 
 Note that if `(∧/Y∊X)` and `X` is sorted and `⎕CT=0` ,then `x⍸y` is the same as `x⍳y`.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍸
+</div>

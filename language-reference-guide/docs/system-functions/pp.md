@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕PP PP
-</div>
 
 # <span>Print Precision</span> `⎕PP`
 
@@ -28,3 +24,8 @@ search:
 ```
 
 If `⎕PP` is set to a value `≥17` (when `⎕FR` is 645) or 34 (when `⎕FR` is 1287), floating-point numbers may be converted between binary and character representation without loss of precision. Then, if  `⎕CT` is 0 (to ensure exact comparison), for any floating-point number `N` the expression `N=⍎⍕N` is true.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕PP PP
+</div>

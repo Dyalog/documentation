@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕CT CT
-</div>
 
 # <span>Comparison Tolerance</span> `⎕CT`
 
@@ -25,3 +21,8 @@ If [`⎕FR`](fr.md) is 1287, the system uses `⎕DCT`. See [Decimal Comparison T
       1.00000000001 1.0000001 = 1
 1 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕CT CT
+</div>

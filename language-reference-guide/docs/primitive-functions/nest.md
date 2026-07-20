@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⊆ nest
-</div>
 
 # <span>Nest</span> `R←⊆Y`{{key}}
 
@@ -34,3 +31,8 @@ If `Y` is simple, `R` is a scalar array whose item is the array `Y`.  If `Y` is 
 └──────┴───┘
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⊆ nest
+</div>

@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  127⌶
-</div>
 
 # <span>Overwrite Free Pockets</span> `R←127⌶Y`{{key}}
 
@@ -45,3 +41,8 @@ It is the responsibility of the programmer to ensure that there are no USED pock
      ∇
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  127⌶
+</div>

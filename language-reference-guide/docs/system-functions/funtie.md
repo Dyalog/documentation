@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FUNTIE FUNTIE
-</div>
 
 # <span>File Untie</span> `{R}←⎕FUNTIE Y`{{key}}
 
@@ -21,3 +17,8 @@ The shy result of `⎕FUNTIE` is a vector of tie numbers of the files **actually
  
       ⎕FUNTIE ⍬      ⍝ Flushes all buffers to disk
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FUNTIE FUNTIE
+</div>

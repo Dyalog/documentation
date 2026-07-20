@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕RTL RTL
-</div>
 
 # <span>Response Time Limit</span> `⎕RTL`
 
@@ -18,3 +14,8 @@ FUEL QUANTITY?
 TIMEOUT
       ⎕RTL←5 ⋄ ⍞←'FUEL QUANTITY?' ⋄ R←⍞
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕RTL RTL
+</div>

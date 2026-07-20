@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  85⌶
-</div>
 
 # <span>Execute Expression</span> `R←X(85⌶)Y`{{key}}
 
@@ -36,3 +32,8 @@ ERROR 85
      ∧
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  85⌶
+</div>

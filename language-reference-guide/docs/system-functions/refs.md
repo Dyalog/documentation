@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕REFS REFS
-</div>
 
 # <span>Cross References</span> `R←⎕REFS Y`{{key}}
 
@@ -45,3 +41,8 @@ OPTIONS
 ```
 
 If `Y` is the name of a primitive, external or derived function, `R` is an empty matrix with shape 0 0.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕REFS REFS
+</div>

@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕EN EN
-</div>
 
 # <span>Event Number</span> `R←⎕EN`{{key}}
 
@@ -25,3 +21,8 @@ See [APL Error Messages](../../../programming-reference-guide/error-messages/apl
 
 !!! note
     `⎕SIGNAL` can be used to reset the value of this system constant.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕EN EN
+</div>

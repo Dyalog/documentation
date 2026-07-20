@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕CLEAR CLEAR
-</div>
 
 # <span>Clear Workspace</span> `⎕CLEAR`
 
@@ -20,3 +16,8 @@ Apart from .NET objects, the contents of the session namespace `⎕SE` are not a
       ⎕WSID
 CLEAR WS
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕CLEAR CLEAR
+</div>

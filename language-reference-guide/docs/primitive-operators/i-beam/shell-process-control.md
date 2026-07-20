@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  8373⌶
-</div>
 
 # <span>Shell Process Control</span> `R←{X}(8373⌶)Y`{{key}}
 
@@ -44,3 +40,8 @@ If `Y` is `⍬`, then `R` is a numeric vector containing all the process IDs of 
 
 !!! windows "Dyalog on Microsoft Windows"
 	On Microsoft Windows, the only valid value for `X` is `9`, which makes the I-beam call `TerminateProcess()` on the child process.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  8373⌶
+</div>
