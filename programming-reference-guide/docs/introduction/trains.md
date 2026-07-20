@@ -41,7 +41,7 @@ The following trains are currently supported where `f`, `g` and `h` are function
       f g h
       A g h
 
-The 3-item trains `(f g h)` and `(A g h)` are termed *forks* while the 2-item train `(g h)` is termed an *atop*. To distinguish the two styles of *fork*, we can use the terms *fgh-fork* or *Agh-fork*.
+The 2-item train `(g h)` is termed an *atop* and the 3-item trains `(f g h)` and `(A g h)` are termed *forks*. To distinguish the two styles of *fork*, we can use the terms *fgh-fork* or *Agh-fork*.
 
 ## Trains as Functions
 
