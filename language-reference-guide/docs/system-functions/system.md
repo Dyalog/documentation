@@ -132,7 +132,7 @@ Boolean indicating whether (`1`) or not (`0`) [Dynamic Data Exchange](../../inte
 Full version number of the available .NET (possibly .NET Framework) as three integers indicating the major release, minor release, and build number, for example, `4 8 9325`. If no .NET is available, this is `0 0 0`.
 
 !!! Hint "Hints and Recommendations"
-    Whether (`1`) or not (`0`) .NET Framework is in use is given by `4=⊃⎕SYSTEM.Features.DotNet`.
+    Whether (`1`) or not (`0`) a .NET is available is given by `0≠⊃⎕SYSTEM.Features.DotNet`. Whether (`1`) or not (`0`) .NET Framework is in use is given by `4=⊃⎕SYSTEM.Features.DotNet`. Whether (`1`) or not (`0`) .NET is in use is given by `5≤⊃⎕SYSTEM.Features.DotNet`.
 
 #### Features.Interactive
 Boolean indicating whether (`1`) or not (`0`) an interactive session is available.
