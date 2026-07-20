@@ -67,10 +67,10 @@ The directory from which Dyalog was started.
 The operating system's recommended location for temporary files.
 
 !!! Info "Information"
-    This location is per-user and can get cleaned up without warning, so use it only as a place to put files that will immediately be used and will not be needed later. It is good practice to [delete](ndelete.md) such files when no longer needed.
+    This location is for an individual user and can be cleaned up without warning, so use it only as a place to put files that will immediately be used and will not be needed later. It is good practice to [delete](ndelete.md) such files when no longer needed.
 
 ### Executable
-This namespace provides information about the specific interpreter instance wherein `⎕SYSTEM` was called.
+This namespace provides information about the specific interpreter instance in which `⎕SYSTEM` was called.
 
 #### Executable.Bits
 Indicates whether the interpreter is a 64- or 32-bit application.
@@ -100,13 +100,13 @@ Boolean indicating whether (`1`) or not (`0`) the interpreter can represent char
 The originator of the interpreter, that is, `'Dyalog'`.
 
 #### Executable.Version
-The interpreter's full version number as three integers indicating the major release, minor release, and build number, for example, `21 0 53977`
+The interpreter's full version number as three integers indicating the major release, minor release, and build number. For example, `21 0 53977`
 
 #### Executable.VersionMoniker
 A six-character shorthand for the `Version`'s first two elements together with `Unicode` and `Bits`, for example `210U64`.
 
 !!! Hint "Hints and Recommendations"
-    This is useful for example to find out the where the [Session Initialisation](../../windows-ui-guide/the-session-object/session-initialisation) looks for a **StartupSession** directory on Unix, namely in `'dyalog.',Executable.VersionMoniker,'.files'` inside the user's home directory (`$HOME`).
+    This is particularly useful to find out where the [Session Initialisation](../../windows-ui-guide/the-session-object/session-initialisation) looks for a **StartupSession** directory on Unix, namely in `'dyalog.',Executable.VersionMoniker,'.files'` inside the user's home directory (<code class="language-nonAPL">$HOME</code>).
 
 #### Executable.VersionNumber
 The version number as a single number, for example, `21.3`.
@@ -147,7 +147,7 @@ Boolean indicating whether (`1`) or not (`0`) [Object Linking and Embedding](../
 Full version of the built-in [Perl Compatible Regular Expressions](../pcre-specifications) engine, for example `10 47`.
 
 !!! Hint "Hints and Recommendations"
-    Whether (`1`) or not (`0`) PCRE2 is in use is given by `10≤⎕SYSTEM.Features.PCRE`, though Dyalog's switch from PCRE to PCRE2 precedes the addition of `⎕SYSTEM`.
+    Whether (`1`) or not (`0`) PCRE2 is in use is given by `10≤⎕SYSTEM.Features.PCRE`.
 
 ### Host
 This namespace provides information about network identity.
@@ -191,13 +191,13 @@ This namespace provides information about the operating system.
 Indicates whether a 64- or 32-bit architecture.
 
 !!! Warning "Warning"
-    Do not confuse this with the bit width of the executable system; 64-bit operating systems can run 32-bit interpreters (but not the other way round).
+    This is not necessarily the same as the bit width of the executable system; 64-bit operating systems can run 32-bit interpreters (but not the other way round).
 
 #### OS.Description
-One of `'Windows'`, `'macOS'`, `'AIX'` or `'Linux'`.
+One of `'Windows'`, `'macOS'`, `'AIX'`, or `'Linux'`.
 
 #### OS.DirectorySeparator
-The preferred character separating file paths – either `'/'` or `'\'`.
+The preferred separator character used in file paths – either `'/'` or `'\'`.
 
 #### OS.Family
 Either `'Windows'` or `'Unix'`.
@@ -209,7 +209,7 @@ The character vector location of the [C standard library](https://en.wikipedia.o
 Numeric vector of Unicode code points for the operating system's newline sequence – either `(10 ⋄)` or `13 10`.
 
 !!! Hint "Hints and Recommendations"
-    Convert this to a character vector with `⎕UCS ⎕SYSTEM.OS.Newline`.
+    This can be converted to a character vector with `⎕UCS ⎕SYSTEM.OS.Newline`.
 
 #### OS.NullDevice
 The filename associated with the [null device](https://en.wikipedia.org/wiki/Null_device).
@@ -218,10 +218,10 @@ The filename associated with the [null device](https://en.wikipedia.org/wiki/Nul
 The character used to separate multiple filenames in a single character vector, namely `';'`  on Microsoft Windows and `':'` on Unix.
 
 #### OS.SharedLibraryExtension
-The preferred file extension for [shared libraries](https://en.wikipedia.org/wiki/Shared_library) – one of `'.dll'`, `'.dyllb'`, or `'.so'`.
+The preferred file extension for [shared libraries](https://en.wikipedia.org/wiki/Shared_library) – one of `'.dll'` (Microsoft Windows), `'.dylib'` (macOS), or `'.so'` (Linux).
 
 #### OS.UTCOffset
-Number of hours that the local time zone is offset from [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
+The number of hours by which the local time zone is offset from [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
 
 !!! Hint "Hints and Recommendations"
     A positive number means the local time zone is ahead of UTC. A negative number means behind UTC. For example, if `⎕OS.UTCOffset` is `10`, then when it is noon UTC (12:00), it is 10 PM local time (`12+10`, that is, 22:00).
@@ -246,10 +246,10 @@ This namespace provides information about the interpreter's operating system pro
 Non-negative integer [process identifier](https://en.wikipedia.org/wiki/Process_identifier) (PID) of the interpreter.
 
 #### Process.LaunchTarget
-The fully qualified path of the file or directory loaded at startup. This is set by either a workspace name on the [APL command line](../../windows-installation-and-configuration-guide/apl-command-line) or using the [LOAD parameter](indows-installation-and-configuration-guide/configuration-parameters/load/).
+The fully qualified path of the file or directory loaded at startup. This is set by either a workspace name on the [APL command line](../../windows-installation-and-configuration-guide/apl-command-line) or using the [LOAD configuration parameter](windows-installation-and-configuration-guide/configuration-parameters/load/).
 
 #### Process.ParentId
-non-negative integer [process identifier](https://en.wikipedia.org/wiki/Process_identifier) of the process that launched the interpreter. Always `¯1` on Microsoft Windows.
+Non-negative integer [process identifier](https://en.wikipedia.org/wiki/Process_identifier) of the process that launched the interpreter. Always `¯1` on Microsoft Windows.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

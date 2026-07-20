@@ -31,4 +31,6 @@ C:/Users/Pete/AppData/Local/Temp
 ```
 
 !!! Info "Information"
-    `739⌶` is deprecated, and is scheduled for removal in a future release. Use `⎕SYSTEM.Directories.Temp` which gives an equivalent result but using the operating system's preferred directory separator.
+    `739⌶` is deprecated, and is scheduled for removal in a future release. For information on how to identify code that calls `739⌶` see the [Release Notes](https://docs.dyalog.com/21.0/release-notes/announcements/deprecated-functionality/#identifying-deprecated-functionality-in-executed-code). 
+    
+    The functionality provided by `739⌶0` is now provided by `⎕SYSTEM.Directories.Temp` – this returns an equivalent result, but uses the operating system's preferred directory separator.  
