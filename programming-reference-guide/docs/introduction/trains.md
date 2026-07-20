@@ -49,7 +49,7 @@ A train is syntactically equivalent to a function and so, in common with any oth
 - consumed by operators as an operand
 - and so forth.
 
-In particular, trains may be applied to a single array (monadic use) or between 2 arrays (dyadic use), providing  six new constructs.
+In particular, trains can be applied to a single array (monadic use) or between two arrays (dyadic use), providing six new constructs:
 
 <style id="ID">
 .md-typeset #ID+div table {
