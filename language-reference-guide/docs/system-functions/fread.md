@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FREAD FREAD
-</div>
 
 # <span>File Read Components</span> `R←⎕FREAD Y`{{key}}
 
@@ -40,3 +36,8 @@ GetFile←{⎕IO←0                ⍝ Extract contents.
     cvec⊣⎕FUNTIE tie        ⍝ ... untie and return.
 }
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FREAD FREAD
+</div>

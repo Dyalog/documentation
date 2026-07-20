@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍥
-  over
-</div>
 
 # <span>Over</span> `{R}←{X}f⍥gY`{{key}}
 
@@ -32,3 +28,9 @@ The derived function is equivalent to `fgY` or `(gX)f(gY)` and need not return a
      (weights×scores)÷⍥(+/)weights ⍝ Weighted average
 82.1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍥
+  over
+</div>

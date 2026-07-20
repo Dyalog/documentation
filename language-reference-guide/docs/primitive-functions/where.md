@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍸ where
-</div>
 
 # <span>Where</span> `R←⍸Y`{{key}}
 
@@ -54,3 +51,8 @@ If `Y` is Boolean, `R` is a vector of the indices of all the 1s in `Y`. If `Y` i
 └───┴───┴───┴───┴───┴───┘
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍸ where
+</div>

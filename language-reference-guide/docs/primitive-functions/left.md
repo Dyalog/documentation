@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⊣ tack left
-</div>
 
 # <span>Left</span> `R←X⊣Y`{{key}}
 
@@ -52,3 +49,8 @@ scent
 scent
 scent
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⊣ tack left
+</div>

@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍤
-  rank
-</div>
 
 # <span>Rank</span> `R←{X}(f⍤B)Y`{{key}}
 
@@ -126,3 +122,9 @@ Note that a right operand of `¯1` applies the function between the major cells 
 │30│8 9 10 11│
 └──┴─────────┘
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍤
+  rank
+</div>

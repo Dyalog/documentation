@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ≡ match
-</div>
 
 # <span>Match</span> `R←X≡Y`{{key}}
 
@@ -45,3 +42,8 @@ WORD
       ' '=⊃0⍴A
 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ≡ match
+</div>

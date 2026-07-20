@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ! factorial
-</div>
 
 # <span>Factorial</span> `R←!Y`{{key}}
 
@@ -21,3 +18,8 @@ search:
       !0j1 1j2
 0.4980156681J¯0.1549498283 0.1122942423J0.3236128855
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ! factorial
+</div>

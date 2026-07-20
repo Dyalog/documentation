@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕DIV DIV
-</div>
 
 # <span>Division Method</span> `⎕DIV`
 
@@ -37,3 +33,8 @@ DOMAIN ERROR
       1 0 2 ÷ 0 0 4
 0 0 0.5
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕DIV DIV
+</div>

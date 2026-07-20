@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍟ log logarithm
-</div>
 
 # <span>Logarithm</span> `R←X⍟Y`{{key}}
 
@@ -28,3 +25,8 @@ Note that Logarithm (dyadic `⍟`) is defined in terms of Natural Logarithm (mon
       2 ⍟ 1
 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍟ log logarithm
+</div>

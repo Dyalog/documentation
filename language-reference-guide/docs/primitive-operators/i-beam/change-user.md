@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  4001⌶
-</div>
 
 # <span>Change User</span> `R←4001⌶Y`{{key}}
 
@@ -25,3 +21,8 @@ If the argument is not the name of a valid user the function generates a `FILE E
 If the argument is the same name as the current effective user, then the function returns that name, but has no effect.
 
 If the argument is a valid name other than the name of the effective user id of the current process, and that effective user id is not root the function generates a `FILE ERROR 1 Not owner`.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  4001⌶
+</div>

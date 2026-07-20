@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⌹
-</div>
 
 # <span>Matrix Inverse</span> `R←⌹Y`{{key}}
 
@@ -46,3 +43,8 @@ Within calculation accuracy, `A+.×M` is the identity matrix.
       ⌈/,| (id 1↑⍴x) - x+.×⌹x
 3.66384E¯16
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌹
+</div>

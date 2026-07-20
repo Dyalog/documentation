@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕DL DL
-</div>
 
 # <span>Delay</span> `{R}←⎕DL Y`{{key}}
 
@@ -14,3 +10,8 @@ search:
 The shy result `R` is a scalar numeric value indicating the length of the pause in seconds.
 
 The pause may be interrupted by a weak or strong interrupt.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕DL DL
+</div>

@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  3002⌶
-</div>
 
 # <span>Disable Component Checksum Validation</span> `{R}←3002⌶Y`{{key}}
 
@@ -24,3 +20,8 @@ Although not recommended, applications which favour performance over security ma
 |1    |`⎕FREAD` will validate checksums when they are present. This is the default.|
 
 The shy result `R` is the previous value of this setting.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  3002⌶
+</div>

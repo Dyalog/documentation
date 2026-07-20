@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕AN AN
-</div>
 
 # <span>Account Name</span> `R←⎕AN`{{key}}
 
@@ -19,3 +15,8 @@ Pete
       ⍴⎕AN
 4
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕AN AN
+</div>

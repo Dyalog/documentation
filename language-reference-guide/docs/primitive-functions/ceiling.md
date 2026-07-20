@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⌈ ceiling
-</div>
 
 # <span>Ceiling</span> `R←⌈Y`{{key}}
 
@@ -28,3 +25,8 @@ If an element of `Y` is complex, the corresponding element of `R` depends on the
 For further explanation, see [Floor](floor.md).
 
 `⎕CT` is an implied argument of Ceiling.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌈ ceiling
+</div>

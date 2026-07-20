@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  180⌶
-</div>
 
 # <span>Canonical Representation</span> `R←180⌶Y`{{key}}
 
@@ -28,3 +24,8 @@ C:\Program Files\Dyalog\Dyalog APL-64 15.0 Unicode\...
  :EndIf                         
   
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  180⌶
+</div>

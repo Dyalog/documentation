@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  43⌶
-</div>
 
 # <span>Monadic Operator Generator</span> `R←43⌶Y`{{key}}
 
@@ -43,3 +39,8 @@ The generics operator can create concrete versions of generic classes and execut
       GenOp←43⌶632
       CharList←System.Collections.Generic.List GenOp System.Char
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  43⌶
+</div>

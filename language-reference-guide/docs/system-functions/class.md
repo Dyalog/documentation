@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕CLASS CLASS
-</div>
 
 # <span>Class</span> `R←{X}⎕CLASS Y`{{key}}
 
@@ -104,3 +100,8 @@ Squark!
       (Bird ⎕CLASS Polly).Speak
 Tweet, tweet!
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕CLASS CLASS
+</div>

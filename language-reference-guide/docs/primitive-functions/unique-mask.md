@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ≠ nubsieve unique mask
-</div>
 
 # <span>Unique Mask</span> `R←≠Y`{{key}}
 
@@ -37,3 +34,8 @@ DUCK
 1 1 0 1 0 0
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ≠ nubsieve unique mask
+</div>

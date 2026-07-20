@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ≡ depth
-</div>
 
 # <span>Depth</span> `(⎕ML) R←≡Y`{{key}}
 
@@ -49,3 +46,8 @@ If `⎕ML<2` and `Y` is not of uniform depth then `R` is negated (therefore, whe
       ≡¨¨A
  0 0  0 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ≡ depth
+</div>

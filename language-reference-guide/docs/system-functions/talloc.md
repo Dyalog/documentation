@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕TALLOC TALLOC
-</div>
 
 # <span>Allocate Token Range</span> `{R}←{X} ⎕TALLOC Y`{{key}}
 
@@ -70,3 +66,8 @@ DOMAIN ERROR
       1 ⎕TALLOC ¯1 ⍝ De-allocation now works   
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕TALLOC TALLOC
+</div>

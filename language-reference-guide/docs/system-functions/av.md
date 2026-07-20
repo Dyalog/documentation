@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕AV AV
-</div>
 
 # <span>Atomic Vector</span> `R←⎕AV`{{key}}
 
@@ -30,3 +26,8 @@ In the Unicode Edition, the contents of `⎕AV` are defined by the system variab
 ┘┐┌└┼─├┤┴┬│@ùúû^ü`∣¶:⍷¿¡⋄←→⍝)] §⎕⍞⍣%'⍺⍵_abcdefghijk
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕AV AV
+</div>

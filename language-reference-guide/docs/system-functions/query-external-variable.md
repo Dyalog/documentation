@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕XT XT
-</div>
 
 # <span>Query External Variable</span> `R←⎕XT Y`{{key}}
 
@@ -23,3 +19,8 @@ EXT\ARRAY
 
 !!! Info "Information"
     Support for external variables has been deprecated, and they are scheduled for removal in a future release. For information on how to identify uses of external variables in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕XT XT
+</div>

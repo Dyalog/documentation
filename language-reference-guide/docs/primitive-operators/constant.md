@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍨
-  constant
-</div>
 
 # <span>Constant</span> `R←{X}(A⍨)Y`{{key}}
 
@@ -23,3 +19,9 @@ mu
 ¯1 ¯1 ¯1
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍨
+  constant
+</div>

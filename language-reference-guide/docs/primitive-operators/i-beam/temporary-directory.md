@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  739⌶
-</div>
 
 # <span>Temporary Directory</span> `R←739⌶Y`{{key}}
 
@@ -29,3 +25,8 @@ C:/Users/Pete/AppData/Local/Temp
 /tmp
 		
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  739⌶
+</div>

@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NSI NSI
-</div>
 
 # <span>Namespace Indicator</span> `R←⎕NSI`{{key}}
 
@@ -42,3 +38,8 @@ xx      yy
 │ └───┘ └────┘ │
 └∊─────────────┘
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NSI NSI
+</div>

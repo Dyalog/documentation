@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ← gets
-</div>
 
 # <span>Assignment (Indexed)</span> `{R}←X[I]←Y`{{key}}
 
@@ -208,3 +204,8 @@ Instead of `X` being a name, it may be a selection from a named array, and the s
  H#l#o  #o#l#  H#l#o 
  #o#l#  H#l#o  #o#l# 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ← gets
+</div>

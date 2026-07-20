@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕WSID WSID
-</div>
 
 # <span>Workspace Identification</span> `⎕WSID`
 
@@ -28,3 +24,8 @@ CLEAR WS
       ⎕WSID←'B:\WS\MYWORK'   (Windows)
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕WSID WSID
+</div>

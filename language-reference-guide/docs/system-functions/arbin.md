@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕ARBIN ARBIN
-</div>
 
 # <span>Arbitrary Input</span> `R←X ⎕ARBIN Y`{{key}}
 
@@ -76,3 +72,8 @@ The operation will fail with a `DOMAIN ERROR` if  `Y` contains anything other th
 10
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕ARBIN ARBIN
+</div>

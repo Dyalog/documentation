@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕TKILL TKILL
-</div>
 
 # <span>Kill Thread</span> `{R}←{X}⎕TKILL Y`{{key}}
 
@@ -25,3 +21,8 @@ The **base thread** 0 is always excluded from the cull.
  
       ⎕TKILL ⎕TCNUMS ⎕TID ⍝ Kill descendants.
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕TKILL TKILL
+</div>

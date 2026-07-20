@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  - negate
-</div>
 
 # <span>Negate</span> `R←-Y`{{key}}
 
@@ -18,3 +15,8 @@ search:
       -1j2 ¯2J3 4J¯5
 ¯1J¯2 2J¯3 ¯4J5
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  - negate
+</div>

@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕AVU AVU
-</div>
 
 # <span>Atomic Vector - Unicode</span> `⎕AVU`
 
@@ -64,3 +60,8 @@ When the Unicode Edition exports APL objects to a non-Unicode destination, such 
 When the Classic Edition exports APL objects to a Unicode destination, such as a Unicode Component File or Unicode TCPSocket Object, function comments (in `⎕OR`s) and character data of type 82 are converted to Unicode using the local value of `⎕AVU`.
 
 In all cases, if a character to be translated is not defined in `⎕AVU`, a `TRANSLATION ERROR` (event number 92) will be signalled.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕AVU AVU
+</div>

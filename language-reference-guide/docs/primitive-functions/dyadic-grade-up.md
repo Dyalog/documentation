@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍋ grade
-</div>
 
 # <span>Dyadic Grade Up</span> `R←X⍋Y`{{key}}
 
@@ -77,3 +74,8 @@ If `X` is a higher-rank array, each axis of `X` represents a grading attribute i
 │ └───────────┘ └───────────┘ └───────────┘ └───────────┘ │
 └∊────────────────────────────────────────────────────────┘'
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍋ grade
+</div>

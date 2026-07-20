@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NS NS
-</div>
 
 # <span>Namespace</span> `{R}←{X}⎕NS Y`{{key}}
 
@@ -169,3 +165,8 @@ The value must be a Boolean scalar. The default is 0, meaning that triggers are 
       ⎕THIS ⎕NS⍠'Trigger' 1⊢newValues
 Running trigger for: Y
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NS NS
+</div>

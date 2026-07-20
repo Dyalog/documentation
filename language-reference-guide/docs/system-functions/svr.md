@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SVR SVR
-</div>
 
 # <span>Shared Variable Retract Offer</span> `R←⎕SVR Y`{{key}}
 
@@ -16,3 +12,8 @@ This system function terminates communication via one or more shared variables, 
 The result `R` is vector whose length corresponds to the number of names specified by Y, indicating the level of sharing of each variable after retraction.
 
 See [Shared Variable State](svs.md) for further information on the possible states of a shared variable.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SVR SVR
+</div>

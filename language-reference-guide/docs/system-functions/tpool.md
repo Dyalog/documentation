@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕TPOOL TPOOL
-</div>
 
 # <span>Token Pool</span> `R←⎕TPOOL`{{key}}
 
@@ -29,3 +25,8 @@ The following (`⎕ML=0`) function returns a 2-column snapshot of the contents o
 ```
 
 See also: [Querying  the Token Pool (Y is 2)](talloc.md).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕TPOOL TPOOL
+</div>

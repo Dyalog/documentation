@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  4002⌶
-</div>
 
 # <span>Reap Forked Tasks</span> `R←4002⌶Y`{{key}}
 
@@ -82,3 +78,8 @@ struct rusage {
 [26]   :EndFor
      ∇
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  4002⌶
+</div>

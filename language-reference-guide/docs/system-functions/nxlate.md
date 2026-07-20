@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NXLATE NXLATE
-</div>
 
 # <span>Native File Translate</span> `{R}←{X}⎕NXLATE Y`{{key}}
 
@@ -28,3 +24,8 @@ The default translation vector established at `⎕NTIE` or `⎕NCREATE` time  is
 `⎕NXLATE` is relevant in the Unicode Edition only to process Native Files that contain characters expressed as indices into `⎕AV`, such as files written by the Classic Edition.
 
 In the Unicode Edition, when reading data from a Native File using conversion code 82, incoming bytes are translated first to `⎕AV` indices using the translation table specified by `⎕NXLATE`, and then to type 80, 160 or 320 using `⎕AVU`. When writing data to a Native File using conversion code 82, characters are converted using these two translation tables in reverse.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NXLATE NXLATE
+</div>

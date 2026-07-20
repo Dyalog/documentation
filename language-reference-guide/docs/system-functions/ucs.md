@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕UCS UCS
-</div>
 
 # <span>Unicode Convert</span> `R←{X} ⎕UCS Y`{{key}}
 
@@ -93,3 +89,8 @@ Because integers are *signed*, numbers greater than 127 will be represented as 2
 ## Translation Error
 
 `⎕UCS` will generate a `DOMAIN ERROR` if the argument cannot be converted. Additionally, in the Classic Edition, a `TRANSLATION ERROR` is generated if the result is not in `⎕AV` or the numeric argument is not in `⎕AVU`.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕UCS UCS
+</div>

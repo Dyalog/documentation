@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⊃ pick
-</div>
 
 # <span>Pick</span> `R←X⊃Y`{{key}}
 
@@ -43,3 +40,8 @@ K
 10
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⊃ pick
+</div>

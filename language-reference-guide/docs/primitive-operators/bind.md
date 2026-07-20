@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ∘
-  bind
-</div>
 
 # <span>Bind</span> <code>{R}←A∘fY<br>{R}←(f∘B)Y</code>{{key}}
 
@@ -51,3 +47,9 @@ PLUS
 [1]    R←A+B
      ∇
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ∘
+  bind
+</div>

@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SIZE SIZE
-</div>
 
 # <span>Size of Object</span> `R←⎕SIZE Y`{{key}}
 
@@ -31,3 +27,8 @@ Note: Wherever possible, Dyalog APL *shares* the whole or part of a workspace ob
       ⎕SIZE 'A' 'FOO' 'E' 'UND'
 28 76 120 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SIZE SIZE
+</div>

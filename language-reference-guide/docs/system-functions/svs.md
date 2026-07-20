@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SVS SVS
-</div>
 
 # <span>Shared Variable State</span> `R←⎕SVS Y`{{key}}
 
@@ -33,3 +29,8 @@ There are four possible shared variable states:
 1 0 1 0
 0 0 0 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SVS SVS
+</div>

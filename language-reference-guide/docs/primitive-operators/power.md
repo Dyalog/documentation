@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍣
-  power
-</div>
 
 # <span>Power</span> `{R}←{X}(f⍣g)Y`{{key}}
 
@@ -104,3 +100,9 @@ One can ensure that weak interrupts and `⎕TKILL` can interrupt by packaging th
 
       ⎕TKILL tnum
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍣
+  power
+</div>

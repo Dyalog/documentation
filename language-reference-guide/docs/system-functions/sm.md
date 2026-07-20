@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SM SM
-</div>
 
 # <span>Screen Map</span> `⎕SM`
 
@@ -94,3 +90,8 @@ The user may edit the form defined by `⎕SM` using the system function `⎕SR`.
 |Column 1 |Field Contents                                   |
 |Column 10|Home Element - Row (by scrolling vertically)     |
 |Column 11|Home Element - Column (by scrolling horizontally)|
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SM SM
+</div>

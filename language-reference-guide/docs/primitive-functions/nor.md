@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍱ nor
-</div>
 
 # <span>NOR</span> `R←X⍱Y`{{key}}
 
@@ -23,3 +20,8 @@ search:
       0 0 1 1 ⍱ 0 1 0 1
 1 0 0 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍱ nor
+</div>

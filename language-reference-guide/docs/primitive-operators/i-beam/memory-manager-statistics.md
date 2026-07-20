@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2000⌶
-</div>
 
 # <span>Memory Manager Statistics</span> `R←{X}(2000⌶)Y`{{key}}
 
@@ -121,3 +117,8 @@ Further considerations are:
 - Multiple `WS FULL` handlers can run concurrently as a result of muti-threading or nesting (when a `WS FULL` handler itself generates a `WS FULL` error).
 - When the `WS Full Buffer` is restored when the handler (more accurately, the last handler) terminates, or when a saved workspace is re-loaded, there may be insufficient memory available. In these circumstances, the system allocates a reduced amount, without reporting an error. However, the system will later try to reclaim more (up to the desired amount), if more workspace has become free. The desired and actual sizes of the `WS Full Buffer` are reported by `(2000⌶)20` and `(2000⌶)21` respectively.
 - When a `WS FULL` handler is activated and the `WS Full Buffer` is freed, `(2000⌶)21` will return 0 until the handler terminates.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2000⌶
+</div>

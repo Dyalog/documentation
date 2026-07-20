@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕RL RL
-</div>
 
 # <span>Random Link</span> `⎕RL`
 
@@ -157,3 +153,8 @@ When you set the seed to zilde, you get the same random initialisation as settin
 ││0│
 └┴─┘
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕RL RL
+</div>

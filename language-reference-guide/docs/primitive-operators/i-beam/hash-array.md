@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  1500⌶
-</div>
 
 # <span>Hash Array</span> `R←{X}1500⌶Y`{{key}}
 
@@ -71,3 +67,8 @@ If `R` is a hashed array then certain forms of modified assignment will preserve
 ```
 
 The *hashed* property survives `)SAVE`/`)LOAD` and `)SAVE`/`)COPY`. It does not currently survive writing to a component file and reading back again.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  1500⌶
+</div>

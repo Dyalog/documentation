@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NULL NULL
-</div>
 
 # <span>Null Item</span> `R←⎕NULL`{{key}}
 
@@ -47,3 +43,8 @@ To determine which of the cells are filled, you can compare the array with `⎕N
 0 0 0 0 0
 1 1 1 1 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NULL NULL
+</div>

@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ≥ greater
-</div>
 
 # <span>Greater Than Or Equal To</span> `R←X≥Y`{{key}}
 
@@ -28,3 +25,8 @@ search:
       1≥1.00000001
 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ≥ greater
+</div>

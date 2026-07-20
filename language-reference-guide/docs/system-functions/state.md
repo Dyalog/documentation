@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕STATE STATE
-</div>
 
 # <span>State of Object</span> `R←⎕STATE Y`{{key}}
 
@@ -46,3 +42,8 @@ search:
  1 1  0 0  ¯1 ¯1  0 1 
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕STATE STATE
+</div>

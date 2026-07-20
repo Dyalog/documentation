@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SIGNAL SIGNAL
-</div>
 
 # <span>Signal Event</span> `{R}←{X}⎕SIGNAL Y`{{key}}
 
@@ -149,3 +145,8 @@ DOMAIN ERROR: Unexpected name in signalled ⎕DMX specification
      ∧
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SIGNAL SIGNAL
+</div>

@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕USING USING
-</div>
 
 # <span>Using (Microsoft .NET Search Path)</span> `⎕USING`
 
@@ -51,3 +47,8 @@ An Assembly may contain top-level classes which are not packaged into .NET Names
 ```apl
   ⎕USING←,⊂',.\LoanService.dll'
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕USING USING
+</div>

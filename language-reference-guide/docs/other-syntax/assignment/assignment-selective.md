@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<div style="display: none;">
-  ← gets
-</div>
-
 # <span>Assignment (Selective)</span> `(EXP X)←Y`{{key}}
 
 `X` is the *name* of a variable in the workspace, possibly modified by the indexing function `(EXP X[I])←Y`, see [Assignment (Indexed)](assignment-indexed.md).  `EXP` is an expression that **selects** elements of `X`.  `Y` is an array expression. The result of the expression `Y` is allocated to the elements of `X` selected by `EXP`. Note that `X` may refer to a single name only.
@@ -101,3 +97,8 @@ Bracket indexing may also be applied to the expression on the left of the assign
  Wor$$  Hello  Wor$$ 
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ← gets
+</div>

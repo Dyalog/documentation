@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ? roll
-</div>
 
 # <span>Roll</span> `R←?Y`{{key}}
 
@@ -27,3 +24,8 @@ Note that different random number generators are available; see `⎕RL` for more
 0.3205466592 0.3772891947 0.5456603511
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ? roll
+</div>

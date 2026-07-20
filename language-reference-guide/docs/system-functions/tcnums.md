@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕TCNUMS TCNUMS
-</div>
 
 # <span>Thread Child Numbers</span> `R←⎕TCNUMS Y`{{key}}
 
@@ -21,3 +17,8 @@ The result `R` is a simple integer vector of the child threads of each thread of
       ⎕TCNUMS 2 3
 4 5 6 7 8 9
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕TCNUMS TCNUMS
+</div>

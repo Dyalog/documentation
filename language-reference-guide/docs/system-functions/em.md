@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕EM EM
-</div>
 
 # <span>Event Message</span> `R←⎕EM Y`{{key}}
 
@@ -20,3 +16,8 @@ See [APL Error Messages](../../../programming-reference-guide/error-messages/apl
       ⎕EM 11
 DOMAIN ERROR
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕EM EM
+</div>

@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ÷ reciprocal
-</div>
 
 # <span>Reciprocal</span> `R←÷Y`{{key}}
 
@@ -24,3 +21,8 @@ search:
       ÷0 0.5
 0 2
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ÷ reciprocal
+</div>

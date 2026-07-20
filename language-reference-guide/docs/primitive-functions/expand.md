@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  \ expand
-</div>
 
 # <span>Expand</span> `R←X\[K]Y`{{key}}
 
@@ -43,3 +40,8 @@ A  AAA    AAAAA
       1 ¯2 1\(1 2)(3 4 5)
  1 2  0 0  0 0  3 4 5
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  \ expand
+</div>

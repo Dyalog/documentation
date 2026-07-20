@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕AT
-</div>
 
 # <span>Attributes</span> `R←{X} ⎕AT Y`{{key}}
 
@@ -113,3 +109,8 @@ If `X` is 3, `R` specifies *execution properties* and contains 4 elements (or co
 |4  |&nbsp;                  |(always 0)                                                                             |
 
 If `X` is 4, `R` specifies *object size* and contains 2 elements (or columns) that both report the `⎕SIZE` of the object.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕AT
+</div>

@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  | magnitude
-</div>
 
 # <span>Magnitude</span> `R←|Y`{{key}}
 
@@ -57,3 +54,8 @@ Note that the magnitude of a complex number <math xmlns="http://www.w3.org/1998/
 ```
 
 `⎕IO` is an implicit argument of magnitude.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  | magnitude
+</div>

@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕PFKEY PFKEY
-</div>
 
 # <span>Program Function Key</span> `R←{X}⎕PFKEY Y`{{key}}
 
@@ -51,3 +47,8 @@ The following expression defines the action for F12 to be "move the text to the 
 └──┴──┴──┴──┘
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕PFKEY PFKEY
+</div>

@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FNAMES FNAMES
-</div>
 
 # <span>File Names</span> `R←⎕FNAMES`{{key}}
 
@@ -33,3 +29,8 @@ PROFIT
  2 ../budget/COSTFILE
  5 PROFIT
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FNAMES FNAMES
+</div>

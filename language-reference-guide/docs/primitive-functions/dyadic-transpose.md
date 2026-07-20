@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍉ transpose
-</div>
 
 # <span>Transpose (Dyadic)</span> `R←X⍉Y`{{key}}
 
@@ -80,3 +77,8 @@ From the above it can be seen that:
 
 - the rank of `R` is `0⌈1+⌈/X`
 - the shape of R is `(⍴Y)⌊.+(⌈/⍴Y)×X∘.≠⍳0⌈1+⌈/X`
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍉ transpose
+</div>

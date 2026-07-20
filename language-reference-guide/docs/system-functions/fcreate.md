@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FCREATE FCREATE
-</div>
 
 # <span>File Create</span> `{R}←X ⎕FCREATE Y`{{key}}
 
@@ -96,3 +92,8 @@ will name a variant of `⎕FCREATE` which will create component file with level 
 
 !!! Info "Information"
     Component files that have both journalling and checksum properties set to `0` have been deprecated; from Dyalog v21.0 it will not be possible to create files with this combination of properties. For information on how to identify code that creates component files that have both journalling and checksum properties set to `0` in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FCREATE FCREATE
+</div>

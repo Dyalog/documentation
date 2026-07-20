@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕TID TID
-</div>
 
 # <span>Current Thread Identity</span> `R←⎕TID`{{key}}
 
@@ -19,3 +15,8 @@ search:
       ⍎&'⎕TID' ⍝ Thread number of async ⍎.
 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕TID TID
+</div>

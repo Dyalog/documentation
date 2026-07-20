@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NGET NGET
-</div>
 
 # <span>Read Text File</span> `R←{X} ⎕NGET Y`{{key}}
 
@@ -68,3 +64,8 @@ Table: Line separators: {: #Line_Separators }
 |12                             |`FF`  |Form Feed (U+000C)                   |
 |8232                           |`LS`  |Line Separator (U+2028)              |
 |8233                           |`PS`  |Paragraph Separator (U+2029)         |
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NGET NGET
+</div>

@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NMOVE NMOVE
-</div>
 
 # <span>Native File Move</span> `{R}←X ⎕NMOVE Y`{{key}}
 
@@ -157,3 +153,8 @@ When `⎕NMOVE` copies and deletes files:
 - File modification times will be preserved but other attributes such as file ownership may be changed.
 - Read permissions will be needed on all files within a directory which is moved.
 - If the operation fails at any point and an error is signalled it is possible that there may be files and/or directories left duplicated in both the source and destination. It is not possible that a file or directory may be removed from the source without having been copied to the destination.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NMOVE NMOVE
+</div>

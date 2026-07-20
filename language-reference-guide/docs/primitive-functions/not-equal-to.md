@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ≠ neq
-</div>
 
 # <span>Not Equal To</span> `R←X≠Y`{{key}}
 
@@ -35,3 +32,8 @@ For Boolean `X` and `Y`, the value of `R` is the exclusive or (XOR)  result, det
       1 2 3 ≠'CAT'
 1 1 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ≠ neq
+</div>

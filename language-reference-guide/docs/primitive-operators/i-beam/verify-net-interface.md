@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2250⌶
-</div>
 
 # <span>Verify .NET Interface</span> `R←2250⌶Y`{{key}}
 
@@ -47,3 +43,8 @@ The result `R` is a 3-element nested array:
 ## Implementation Note
 
 The underlying code is run once only and the results cached, so all subsequent calls to `2250⌶` will return the same result as the first time.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2250⌶
+</div>

@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SAVE SAVE
-</div>
 
 # <span>Save Workspace</span> `{R}←{X}⎕SAVE Y`{{key}}
 
@@ -43,3 +39,8 @@ SAVED WS
 ```
 
 Additional operations may be performed before saving the workspace. For further information, see [Set Workspace Save Options](../primitive-operators/i-beam/set-workspace-save-options.md).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SAVE SAVE
+</div>

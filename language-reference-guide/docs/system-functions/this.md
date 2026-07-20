@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕THIS THIS
-</div>
 
 # <span>This Space</span> `R←⎕THIS`{{key}}
 
@@ -45,3 +41,8 @@ or a function (such as a Constructor or Destructor) may identify or enumerate al
       Polly.(⍴⎕INSTANCES⊃⊃⎕CLASS ⎕THIS)
 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕THIS THIS
+</div>

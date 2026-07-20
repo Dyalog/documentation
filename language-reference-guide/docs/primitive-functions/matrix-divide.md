@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⌹
-</div>
 
 # <span>Matrix Divide</span> `R←X⌹Y`{{key}}
 
@@ -84,3 +81,8 @@ This equivalence, familiar to mathematicians and statisticians, explains
 
 - the conformability requirements for `⌹`
 - how to compute the result for tall matrices from the better known square matrix case
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌹
+</div>

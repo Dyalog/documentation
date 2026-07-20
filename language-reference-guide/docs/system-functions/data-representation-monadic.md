@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕DR DR
-</div>
 
 # <span>Data Representation (Monadic)</span> `R←⎕DR Y`{{key}}
 
@@ -40,3 +36,8 @@ Table: Classic Edition
 |645  |64 bits Floating                          |
 |1287 |128 bits Decimal                          |
 |1289 |128 bits Complex                          |
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕DR DR
+</div>

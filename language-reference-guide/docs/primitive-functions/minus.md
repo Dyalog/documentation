@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  - minus subtract
-</div>
 
 # <span>Minus</span> `R←X-Y`{{key}}
 
@@ -20,3 +17,8 @@ This function is also known as Subtract.
       2j3-.3j5  ⍝ (a+bi)-(c+di) = (a-c)+(b-d)i
 1.7J¯2
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  - minus subtract
+</div>

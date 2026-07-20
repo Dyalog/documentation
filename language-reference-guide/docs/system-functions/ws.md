@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕WS WS
-</div>
 
 # <span>Window Set Property</span> `{R}←{X}⎕WS Y`{{key}}
 
@@ -45,3 +41,8 @@ DOMAIN ERROR
       'F1' ⎕WS 'MaxButton' 0
 DOMAIN ERROR
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕WS WS
+</div>

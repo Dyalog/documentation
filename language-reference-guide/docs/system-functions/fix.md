@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FIX FIX
-</div>
 
 # <span>Fix Script</span> `{R}←{X}⎕FIX Y`{{key}}
 
@@ -263,3 +259,8 @@ Whilst the next set of tables show the same for Class `Jill`.
 |Katherine|&nbsp;|&nbsp;|&nbsp;|&nbsp;   |&nbsp;|&nbsp;|
 |Woody    |&nbsp;|&nbsp;|&nbsp;|&nbsp;   |&nbsp;|&nbsp;|
 |George   |&nbsp;|&nbsp;|&nbsp;|&nbsp;   |&nbsp;|&nbsp;|
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FIX FIX
+</div>

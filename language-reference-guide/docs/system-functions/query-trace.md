@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕TRACE TRACE
-</div>
 
 # <span>Query Trace</span> `R←⎕TRACE Y`{{key}}
 
@@ -17,3 +13,8 @@ search:
       ⎕TRACE'DSL'
 0 1 2 3 4 5 6
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕TRACE TRACE
+</div>

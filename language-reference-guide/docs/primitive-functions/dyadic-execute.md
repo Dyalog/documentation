@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍎ execute
-</div>
 
 # <span>Dyadic Execute</span> `R←X⍎Y`{{key}}
 
@@ -65,3 +62,8 @@ Using a reference:
           space ⎕VGET'nums'
     1 2 3 4 5 6
     ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍎ execute
+</div>

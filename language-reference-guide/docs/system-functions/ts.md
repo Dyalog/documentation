@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕TS TS
-</div>
 
 # <span>Timestamp</span> `R←⎕TS`{{key}}
 
@@ -27,3 +23,8 @@ This is a seven element vector which identifies the clock time set on the partic
 ```
 
 Note that on some systems, where time is maintained only to the nearest second, a zero is returned for the seventh (millisecond) field.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕TS TS
+</div>

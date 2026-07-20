@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍤
-  atop
-</div>
 
 # <span>Atop</span> `{R}←{X}f⍤gY`{{key}}
 
@@ -31,3 +27,9 @@ The derived function is equivalent to `fgY` or `fXgY` and need not return a resu
 0 0 1 0 1
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍤
+  atop
+</div>

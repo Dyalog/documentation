@@ -3,11 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-
-<div style="display: none;">
-  ⎕NTIE NTIE
-</div>
 
 # <span>Native File Tie</span> `{R}←X ⎕NTIE Y`{{key}}
 
@@ -63,3 +58,8 @@ ntie←{                  ⍝ tie file and return tie no.
 
 !!! note
     If the native file is already tied, executing `⎕NTIE` with the same or a different tie number simply re-ties it with the same or the new tie number. Re-tying a file with a tie number of 0, re-ties it with the same tie number. This feature can be used to re-tie the file using a different mode.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NTIE NTIE
+</div>

@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⌷ index squad
-</div>
 
 # <span>Index with Axes</span> `R←{X}⌷[K]Y`{{key}}
 
@@ -62,3 +59,8 @@ Note that index with axis may be used with selective specification. `⎕IO` is a
   0 222   0 224
   0 232   0 234
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌷ index squad
+</div>

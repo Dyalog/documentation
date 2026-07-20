@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕CY CY
-</div>
 
 # <span>Copy Workspace</span> `{R}←{X}⎕CY Y`{{key}}
 
@@ -79,3 +75,8 @@ A copied object may have the same name as an object being executed.  If so, the 
 10
  
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕CY CY
+</div>

@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NEXISTS NEXISTS
-</div>
 
 # <span>Native File Exists</span> `R←⎕NEXISTS Y`{{key}}
 
@@ -48,3 +44,8 @@ If the Wildcard option is 1, `R` indicates whether or not one or more matches to
 
 !!! note
     If `Y` is a symbolic link, `⎕NEXISTS` will return 1 whether or not the target of the symbolic link exists.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NEXISTS NEXISTS
+</div>

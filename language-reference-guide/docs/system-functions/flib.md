@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FLIB FLIB
-</div>
 
 # <span>Component File Library</span> `R←⎕FLIB Y`{{key}}
 
@@ -30,3 +26,8 @@ COSTS
 ../budget/SALES.85
 ../budget/COSTS.85
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FLIB FLIB
+</div>

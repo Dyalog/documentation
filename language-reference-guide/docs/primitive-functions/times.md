@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  × times multiply
-</div>
 
 # <span>Times</span> `R←X×Y`{{key}}
 
@@ -20,3 +17,8 @@ This function is also known as Multiply.
        2j3×.3j.5 1j2 3j4 .5
 ¯0.9J1.9 ¯4J7 ¯6J17 1J1.5
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  × times multiply
+</div>

@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕CMD CMD
-</div>
 
 # <span>Start Windows Auxiliary Processor</span> `{R}←X ⎕CMD Y`{{key}}
 
@@ -27,3 +23,8 @@ The effect of starting an AP is that one or more **external functions** are defi
 When an external function is used in an expression, the argument(s) (if any) are passed to the AP for processing via the communications area described above.  APL halts whilst the AP is processing, and waits for a result.  Under Windows, unlike under UNIX, it is not possible for external functions to run in parallel with APL.
 
 Although it is still possible for users to create their own APs, Dyalog strongly recommends creating shared libraries/DLLs instead.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕CMD CMD
+</div>

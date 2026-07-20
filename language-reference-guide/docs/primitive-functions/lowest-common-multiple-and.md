@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ^ lcm and
-</div>
 
 # <span>Lowest Common Multiple/AND</span> `R←X∧Y`{{key}}
 
@@ -43,3 +40,8 @@ Note that the ASCII caret (`^`) will also be interpreted as an APL **And** (`∧
       0 1 0 1 ^ 0 0 1 1
 0 0 0 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ^ lcm and
+</div>

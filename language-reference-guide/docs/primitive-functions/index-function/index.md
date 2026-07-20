@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⌷ index squad
-</div>
 
 # <span>Index</span> `R←X⌷Y`{{key}}
 
@@ -90,3 +87,8 @@ MNOP
 QRST
 UVWX
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌷ index squad
+</div>

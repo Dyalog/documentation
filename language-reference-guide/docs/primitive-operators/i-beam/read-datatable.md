@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2011⌶
-</div>
 
 # <span>Read DataTable</span> `R←{X}2011⌶Y`{{key}}
 
@@ -158,3 +154,8 @@ The left argument to `2011⌶` allows you to flag columns which should be return
 ```
 
 Depending on your application, you may need to process the text in the fourth column in some way – but the overall performance will probably still be very much better than it would be if DateTime objects were used.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2011⌶
+</div>

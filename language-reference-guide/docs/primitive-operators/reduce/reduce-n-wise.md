@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  /
-  reduce
-</div>
 
 # <span>Reduce N-Wise</span> `R←Xf/[K]Y`{{key}}
 
@@ -44,3 +40,9 @@ If `X` is negative, each sub-vector is reversed before being reduced.
       ¯2,/⍳4   ⍝ (2,1) (3,2) (4,3)
  2 1  3 2  4 3 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  /
+  reduce
+</div>
