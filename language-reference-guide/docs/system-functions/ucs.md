@@ -73,13 +73,29 @@ Dyadic `⎕UCS` is used to translate between Unicode characters and one of three
 947 949 953 945 32 963 959 965
 ```
 
-Because integers are *signed*, numbers greater than 127 will be represented as 2-byte integers (type 163), and are thus not suitable for writing directly to a native file. To write the above data to file, the easiest solution is to use  `⎕UCS` to convert the data to 1-byte characters and append this data to the file:
-```apl
+### UTF-8 Signed Integers
 
-      (⎕UCS 'UTF-8' ⎕UCS 'ABCÆØÅ') ⎕NAPPEND tn
+Because integers are *signed*, numbers greater than 127 will be represented as 2-byte integers (type 163) which both double memory usage and are not suitable for writing directly to a native file without a costly conversion to 1-byte integers (type 83). In addition, reading such bytes from a native file can give negative numbers that are not suitable for direct consumption by `⎕UCS`. However, if `X` is `'UTF-8' 83`, `⎕UCS` will convert UTF-8 text by directly producing and consuming 1-byte integers (type 83) without passing through 2-byte integers. For example:
+
+```apl
+      'UTF-8' 83 ⎕UCS 'ABCÆØÅ'
+65 66 67 ¯61 ¯122 ¯61 ¯104 ¯61 ¯123
+      'UTF-8' 83 ⎕UCS ¯61 ¯122, ¯61 ¯104, ¯61 ¯123
+ÆØÅ
+      'UTF-8' 83 ⎕UCS 'γεια σου'
+¯50 ¯77 ¯50 ¯75 ¯50 ¯71 ¯50 ¯79 32 ¯49 ¯125 ¯50 ¯65 ¯49 ¯123
+```
+This facilitates storing Unicode text in native files as UTF-8. For example:
+```apl
+      tn←'letters.txt' ⎕NCREATE 0
+      ('UTF-8' 83 ⎕UCS 'ABCÆØÅ') ⎕NAPPEND tn
+      'UTF-8' 83 ⎕UCS ⎕NREAD tn 83 ¯1 0
+ABCÆØÅ
 ```
 
-**Note regarding UTF-16:** For most characters in the first plane of Unicode (0000-FFFF), UTF-16 and UCS-2 are identical. However, UTF-16 has the potential to encode all Unicode characters, by using more than 2 bytes for characters outside plane 1.
+### UTF-16 and UCS-2
+
+For most characters in the first plane of Unicode (0000-FFFF), UTF-16 and UCS-2 are identical. However, UTF-16 has the potential to encode all Unicode characters, by using more than 2 bytes for characters outside plane 1.
 ```apl
 
       'UTF-16' ⎕UCS 'ABCÆØÅ⍒⍋'
