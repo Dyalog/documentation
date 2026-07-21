@@ -15,7 +15,7 @@ The following system functions have been added:
 The following system functions have been enhanced:
 
 - [`⎕CSV`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/csv/) – Comma Separated Values<br />A new variant option, **ForceQuotes**, has been added. This specifies when exported data has quotes around character/numeric fields.
-- [`UCS`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/ucs/) – Unicode Convert<br />The optional left argument `X` can now be a 2-element nested array when performing UTF-8 conversions; setting `[2;]` to `83` enables the direct creation and consumption of 8-bit integers.
+- [`UCS`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/ucs/) – Unicode Convert<br />The optional left argument `X` can now be a 2-element nested array when performing UTF-8 conversions; setting the second element to `83` enables the direct creation and consumption of 8-bit integers.
 
 ### I-beams
 
