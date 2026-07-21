@@ -28,7 +28,7 @@ If `X` is specified, `Y` must be a simple character or integer vector, and the r
 
 ## Monadic `⎕UCS`
 
-Used monadically, `⎕UCS` simply converts characters to Unicode code points and vice-versa.
+Monadic `⎕UCS` converts any character array to a numeric array of the same shape, or any numeric array to a character array of the same shape. When doing this, characters are converted to Unicode code points and Unicode code points are converted to characters.
 
 With a few exceptions, the first 256 Unicode code points correspond to the ANSI character set.
 ```apl
@@ -59,7 +59,7 @@ Unicode also contains the APL character set. For example:
 
 ## Dyadic `⎕UCS`
 
-Dyadic `⎕UCS` is used to translate between Unicode characters and one of three standard variable-length Unicode encoding schemes, UTF-8, UTF-16 and UTF-32. These represent a Unicode character string as a vector of 1-byte (UTF-8), 2-byte (UTF-16) and 4-byte (UTF-32) signed integer values respectively.
+Dyadic `⎕UCS` translates between Unicode characters and one of three standard variable-length Unicode encoding schemes – UTF-8, UTF-16, or UTF-32. These represent a Unicode character string as a vector of 1-byte (UTF-8), 2-byte (UTF-16) and 4-byte (UTF-32) signed integer values respectively.
 ```apl
 
       'UTF-8' ⎕UCS 'ABC'
