@@ -11,16 +11,15 @@ search:
 
 `⎕UCS` converts (Unicode) characters into integers and vice versa.
 
-The optional left argument `X` must be one of:
+The optional left argument `X` is a one- or two-element vector. The first element is the name of a variable-length Unicode encoding scheme and must be one of:
 
 - `'UTF-8'`
-- `'UTF-8' 83`
 - `'UTF-16'`
 - `'UTF-32'`
 
-The character vector is the name of a variable-length Unicode encoding scheme and `83` specifies use of 1-byte integers (type 83) in result or right argument (whichever is numeric).
+The second element is either `0` (the default) to consume and return byte values as positive integers or `83` to use 1-byte integers (type 83). `83` can currently only be used with `'UTF-8'`.
 
-In any other case, a `DOMAIN ERROR` is issued.
+If `X` does not abide by the above restrictions, a `DOMAIN ERROR` is issued.
 
 If `X` is omitted, `Y` is a simple character or integer array, and the result `R` is a simple integer or character array with the same rank and shape as `Y`.
 
@@ -78,7 +77,7 @@ Dyadic `⎕UCS` translates between Unicode characters and one of three standard 
 
 ### UTF-8 Signed Integers
 
-Because integers are *signed*, numbers greater than 127 will be represented as 2-byte integers (type 163) which both double memory usage and are not suitable for writing directly to a native file without a costly conversion to 1-byte integers (type 83). In addition, reading such bytes from a native file can give negative numbers that are not suitable for direct consumption by `⎕UCS`. However, if `X` is `'UTF-8' 83`, `⎕UCS` will convert UTF-8 text by directly producing and consuming 1-byte integers (type 83) without passing through 2-byte integers. For example:
+By default, `⎕UCS` consumes and returns unsigned integers.  Numbers greater than 127 will be represented as 2-byte integers (type 163) which use twice as much memory and are not suitable for writing directly to a native file. In addition, reading such numbers from a native file will give negative numbers that are not suitable for direct consumption by `⎕UCS`. Conversion to and from 1-byte signed integers (type 83) is complicated and costly. For UTF-8 only, `⎕UCS` can directly produce and consume such integers with by using the left argument `'UTF-8' 83`. For example:
 
 ```apl
       'UTF-8' 83 ⎕UCS 'ABCÆØÅ'
