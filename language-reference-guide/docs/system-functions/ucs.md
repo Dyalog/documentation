@@ -11,13 +11,16 @@ search:
 
 `⎕UCS` converts (Unicode) characters into integers and vice versa.
 
-The optional left argument `X` is a character vector containing the name of a variable-length Unicode encoding scheme which must be one of:
+The optional left argument `X` must be one of:
 
-- 'UTF-8'
-- 'UTF-16'
-- 'UTF-32'
+- `'UTF-8'`
+- `'UTF-8' 83`
+- `'UTF-16'`
+- `'UTF-32'`
 
-If not, a `DOMAIN ERROR` is issued.
+The character vector is the name of a variable-length Unicode encoding scheme and `83` specifies use of 1-byte integers (type 83) in result or right argument (whichever is numeric).
+
+In any other case, a `DOMAIN ERROR` is issued.
 
 If `X` is omitted, `Y` is a simple character or integer array, and the result `R` is a simple integer or character array with the same rank and shape as `Y`.
 
