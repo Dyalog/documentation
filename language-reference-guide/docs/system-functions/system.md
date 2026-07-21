@@ -132,7 +132,12 @@ Boolean indicating whether (`1`) or not (`0`) [Dynamic Data Exchange](../../inte
 Full version number of the available .NET (possibly .NET Framework) as three integers indicating the major release, minor release, and build number, for example, `4 8 9325`. If no .NET is available, this is `0 0 0`.
 
 !!! Hint "Hints and Recommendations"
-    Whether (`1`) or not (`0`) a .NET is available is given by `0≠⊃⎕SYSTEM.Features.DotNet`. Whether (`1`) or not (`0`) .NET Framework is in use is given by `4=⊃⎕SYSTEM.Features.DotNet`. Whether (`1`) or not (`0`) .NET is in use is given by `5≤⊃⎕SYSTEM.Features.DotNet`.
+    Related indications whether (`1`) or not (`0`):
+    
+    - .NET/.NET Framework is available: `0≠⊃⎕SYSTEM.Features.DotNet`
+    - .NET Framework is in use: `4=⊃⎕SYSTEM.Features.DotNet`
+    - .NET (non-Framework) is in use: `5≤⊃⎕SYSTEM.Features.DotNet`
+
 
 #### Features.Interactive
 Boolean indicating whether (`1`) or not (`0`) an interactive session is available.
@@ -170,13 +175,13 @@ The [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_
 
 #### Host.GroupId
 
-A character vector which on Windows is the [Security Identifier](https://en.wikipedia.org/wiki/Security_Identifier) (with the [relative identifier](https://en.wikipedia.org/wiki/Relative_identifier) section removed) and on Unix is the [Group identifier](https://en.wikipedia.org/wiki/Group_identifier).
+A character vector which on Microsoft Windows is the [Security Identifier](https://en.wikipedia.org/wiki/Security_Identifier) (with the [relative identifier](https://en.wikipedia.org/wiki/Relative_identifier) section removed) and on Unix is the [Group identifier](https://en.wikipedia.org/wiki/Group_identifier).
 
 #### Host.GroupName
 The character vector group identifier on Unix and `''` on Microsoft Windows.
 
 #### Host.NetBIOSDomainName
-The character vector NetBIOS domain name on Windows and `''` on Unix.
+The character vector NetBIOS domain name on Microsoft Windows and `''` on Unix.
 
 #### Host.UserId
 On Microsoft Windows, this is the [relative identifier](https://en.wikipedia.org/wiki/Relative_identifier). On Unix, the identifier of the currently logged-in user. Note that this is always a character vector, even on Unix where the value looks like a number.
