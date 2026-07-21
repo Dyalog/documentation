@@ -17,7 +17,7 @@ The optional left argument `X` is a one- or two-element vector. The first elemen
 - `'UTF-16'`
 - `'UTF-32'`
 
-The second element is either `0` (the default) to consume and return byte values as positive integers or `83` to use 1-byte integers (type 83). `83` can currently only be used with `'UTF-8'`.
+The second element is either `0` (the default) to consume and return byte values as positive integers or `83` to use 1-byte integers (type 83). `83` can only be used with `'UTF-8'`.
 
 If `X` does not abide by the above restrictions, a `DOMAIN ERROR` is issued.
 
@@ -77,7 +77,7 @@ Dyadic `⎕UCS` translates between Unicode characters and one of three standard 
 
 ### UTF-8 Signed Integers
 
-By default, `⎕UCS` consumes and returns unsigned integers.  Numbers greater than 127 will be represented as 2-byte integers (type 163) which use twice as much memory and are not suitable for writing directly to a native file. In addition, reading such numbers from a native file will give negative numbers that are not suitable for direct consumption by `⎕UCS`. Conversion to and from 1-byte signed integers (type 83) is complicated and costly. For UTF-8 only, `⎕UCS` can directly produce and consume such integers with by using the left argument `'UTF-8' 83`. For example:
+By default, `⎕UCS` consumes and returns unsigned integers. Numbers greater than 127 will be represented as 2-byte integers (type 163); these use twice as much memory as 1-byte integers and are not suitable for writing directly to a native file. In addition, reading such numbers from a native file will give negative numbers that are not suitable for direct consumption by `⎕UCS`. Conversion to and from 1-byte signed integers (type 83) is complicated and costly. For UTF-8 only, `⎕UCS` can directly produce and consume such integers by using the left argument `'UTF-8' 83`. For example:
 
 ```apl
       'UTF-8' 83 ⎕UCS 'ABCÆØÅ'
@@ -97,7 +97,7 @@ ABCÆØÅ
 
 ### UTF-16 and UCS-2
 
-For most characters in the first plane of Unicode (0000-FFFF), UTF-16 and UCS-2 are identical. However, UTF-16 has the potential to encode all Unicode characters, by using more than 2 bytes for characters outside plane 1.
+For most characters in the [first plane of Unicode (0000-FFFF)](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane), UTF-16 and UCS-2 are identical. However, UTF-16 can potentially encode all Unicode characters by using more than 2 bytes for characters outside the first plane.
 ```apl
 
       'UTF-16' ⎕UCS 'ABCÆØÅ⍒⍋'
