@@ -59,7 +59,7 @@ Unicode also contains the APL character set. For example:
 
 ## Dyadic `⎕UCS`
 
-Dyadic `⎕UCS` translates between Unicode characters and one of three standard variable-length Unicode encoding schemes – UTF-8, UTF-16, or UTF-32. These represent a Unicode character string as a vector of 1-byte (UTF-8), 2-byte (UTF-16) and 4-byte (UTF-32) signed integer values respectively.
+Dyadic `⎕UCS` translates between Unicode characters and one of three standard variable-length Unicode encoding schemes – UTF-8, UTF-16, or UTF-32. These represent a Unicode character string as a vector of 1-byte (UTF-8), 2-byte (UTF-16) and 4-byte (UTF-32) integer values respectively. In the case of 1-byte integers, they can be specified to be signed or unsigned.
 ```apl
 
       'UTF-8' ⎕UCS 'ABC'
