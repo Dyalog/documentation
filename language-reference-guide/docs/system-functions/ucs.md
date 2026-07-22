@@ -58,9 +58,8 @@ Unicode also contains the APL character set. For example:
 
 ## Dyadic `⎕UCS`
 
-Dyadic `⎕UCS` translates between Unicode characters and one of three standard variable-length Unicode encoding schemes – UTF-8, UTF-16, or UTF-32. These represent a Unicode character string as a vector of 1-byte (UTF-8), 2-byte (UTF-16) and 4-byte (UTF-32) integer values respectively. In the case of 1-byte integers, they can be specified to be signed or unsigned.
+Dyadic `⎕UCS` translates between vectors of Unicode characters and one of three standard Unicode encoding schemes – UTF-8, UTF-16, or UTF-32. These represent a character vector as a vector of integers. In the case of UTF-8, the integers can be specified to be unsigned (the default) or signed.
 ```apl
-
       'UTF-8' ⎕UCS 'ABC'
 65 66 67
       'UTF-8' ⎕UCS 'ABCÆØÅ'
@@ -77,7 +76,7 @@ Dyadic `⎕UCS` translates between Unicode characters and one of three standard 
 
 ### UTF-8 Signed Integers
 
-By default, `⎕UCS` uses unsigned integers. For UTF-8 only, if `X` is `'UTF-8' 83`, `⎕UCS` will instead use signed integers. For example:
+By default, `⎕UCS` uses unsigned integers. For UTF-8 only, if `X` is `'UTF-8' 83`, `⎕UCS` will instead use signed integers which are then represented as single bytes (type 83). For example:
 
 ```apl
       'UTF-8' 83 ⎕UCS 'ABCÆØÅ'
@@ -97,7 +96,7 @@ ABCÆØÅ
 
 ### UTF-16 and UCS-2
 
-For most characters in the [first plane of Unicode (0000-FFFF)](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane), UTF-16 and UCS-2 are identical. However, UTF-16 can potentially encode all Unicode characters by using more than 2 bytes for characters outside the first plane.
+For most characters in the [first plane of Unicode (0000-FFFF)](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane), UTF-16 and UCS-2 are identical. However, UTF-16 can encode all Unicode characters by using up to two code units for each character.
 ```apl
 
       'UTF-16' ⎕UCS 'ABCÆØÅ⍒⍋'
