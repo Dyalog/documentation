@@ -23,7 +23,7 @@ A date-time is a date and time of day represented by a *timestamp*, a *time numb
 - an integer *date-time code* (see [](#timenumbers))
 - a character vector containing a *pattern* that describes how a datetime is formatted as text (see [Formatting patterns](#formatting-patterns).
 
-When <code>X<sub>R</sub></code> is an integer it must be either `0` or a date-time code listed in the tables below. `0` specifies that the elements of `Y` are to be validated; a non-zero value specifies the date-time representation to which the elements of `Y` are to be converted. When <code>X<sub>R</sub></code> is a pattern, the elements of `R` are character vectors, each derived by formatting the corresponding element of `Y` as text according to the pattern.
+When <code>X<sub>R</sub></code> is an integer it must be either `0` or a code from [](#timenumbers) or [](#timestamps). `0` specifies that the elements of `Y` are to be validated; a non-zero value specifies the date-time representation to which the elements of `Y` are to be converted. When <code>X<sub>R</sub></code> is a pattern, the elements of `R` are character vectors, each derived by formatting the corresponding element of `Y` as text according to the pattern.
 
 <code>X<sub>Y</sub></code> can be omitted only when the elements of `Y` are Dyalog Date Numbers, `⎕TS`-style timestamps, or military time zone characters. When <code>X<sub>Y</sub></code> is omitted, the numeric elements of `Y` are interpreted as follows:
 
@@ -32,7 +32,7 @@ When <code>X<sub>R</sub></code> is an integer it must be either `0` or a date-ti
 
 When <code>X<sub>Y</sub></code> is an integer date-time code it explicitly specifies the date-time representation of the numeric elements of `Y`. When <code>X<sub>Y</sub></code> is a pattern, the corresponding character vectors in `Y` are matched against the pattern and the resulting date-times are returned in the representation given by <code>X<sub>R</sub></code> (see [Pattern matching rules](#pattern-matching-rules)). A pattern <code>X<sub>Y</sub></code> cannot be omitted, even when the elements of `Y` are character vectors that could unambiguously be assumed to be text-formatted datetimes.
 
-Text-formatted datetimes and patterns are character vectors; no scalar extension occurs when character scalars appear in `X` or `Y`. A single text-formatted datetime in `Y` must be enclosed (nested); an unenclosed character vector in `Y` is interpreted as a vector of military time zone characters. As a convenience, a simple (not nested) character vector `X` is implicitly enclosed and processed as <code>X<sub>R</sub></code>, so a pattern can be supplied on its own to format datetimes as text.
+Text-formatted datetimes and patterns are character vectors; no scalar extension occurs when character scalars appear in `X` or `Y`. A single text-formatted datetime in `Y` must be enclosed (nested); an unenclosed character vector in `Y` is interpreted as a vector of military time zone characters. As a convenience, a simple (not nested) character vector `X` is implicitly enclosed and processed as <code>X<sub>R</sub></code> meaning that a single pattern can be supplied on its own to format datetimes as text.
 
 Character scalars in `Y` are always interpreted as meaning "now".
 
