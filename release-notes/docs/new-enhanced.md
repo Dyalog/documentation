@@ -166,6 +166,13 @@ When the cursor is placed in a line in the Session:
 
 Pressing <kbd>Home</kbd> or <kbd>End</kbd> multiple times progresses through the list in the order shown.
 
+### APL Exit Codes
+
+Two new APL exit codes have been added:
+
+- 12: HMON load failure
+- 13: HMON initialisation failure
+
 ### Microsoft Windows IDE
 
 The following changes have been made to the Microsoft Windows IDE:
