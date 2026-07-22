@@ -12,7 +12,7 @@ A date-time is a date and time of day represented by a *timestamp*, a *time numb
 - A *timestamp* is a date-time expressed as a multiple element numeric vector, of which there are several different sorts (principally `⎕TS` format).
 - A *time number* is a date-time expressed as a scalar numeric value, of which there are several different sorts.
 - A *military time zone character* is a scalar character that represents the current date-time ("now") in a particular time zone. For example, `'A'` represents the current date-time (UTC) + 1 hour.
-- A *text-formatted datetime* is a date-time expressed as a character vector, formatted according to a *pattern* (see [Formatting patterns](#formatting-patterns) below).
+- A *text-formatted datetime* is a date-time expressed as a character vector, formatted according to a [formatting *pattern*](#formatting-patterns).
 
 `Y` is an array of any shape whose elements contain a timestamp, time number, military time zone character, or text-formatted datetime, in any combination.
 
@@ -38,7 +38,7 @@ Character scalars in `Y` are always interpreted as meaning "now".
 
 `R` is an array of the same shape as `Y`, where each element is a timestamp, time number, character vector or Boolean value, as determined by <code>X<sub>R</sub></code> (the second or only element of `X`).
 
-Time numbers in `R` can be of type DECF even when `⎕FR` is `645` if their magnitude could be too great to store precisely in a double. See the table below for the type numbers where this is so.
+Time numbers in `R` can be of type DECF even when `⎕FR` is `645` if their magnitude could be too great to store precisely in a double. See [](#timenumbers) for the type numbers where this is so.
 
 ## Time Numbers
 
@@ -306,7 +306,7 @@ If the namespace contains a definition that is supplied built into the interpret
 
 If a dictionary is incomplete (for example, is missing one of the expected named items, or one of the named items contains too few elements), an error is signalled if the missing content would be needed.
 
-See the [Dictionary](#dictionary) example below.
+See the [Dictionary example](#dictionary).
 
 ## Examples
 
