@@ -45,6 +45,7 @@ Time numbers in `R` can be of type DECF even when `⎕FR` is `645` if their magn
 If a value in `X` is positive it indicates that a time number type is expected in `Y` or generated in `R`, as follows. Note that the last column indicated whether (Yes) or not (No) negative numbers are allowed.
 
 Table: Time numbers { #timenumbers }
+
 |Group|Code|Description|Category|Date and time[^1] represented by 0 (Epoch)|Negative values allowed?[^8]|
 |---|---|---|---|---|---|
 |Dyalog APL              | `1` |Dyalog Date Number|Day count with fractional part|1899-12-31 00:00|Yes|
@@ -85,6 +86,7 @@ Table: Time numbers { #timenumbers }
 If a value in `X` is negative it indicates that a timestamp type is expected in `Y` or generated in `R`, as follows:
 
 Table: Time stamps { #timestamps }
+
 | Group                  | Code  | Description                                  | Max elements | Element contents[^11]                                        | Elided element implicit values (in Y)[^13] |
 |------------------------|-------|----------------------------------------------|--------------|--------------------------------------------------------------|--------------------------------------------|
 | APL 7-element vector   | `¯1`  | Millisecond precision (`⎕TS`)                | 7            | Year, month, day-of-month, hour, minute, second, millisecond | `1 1 1 0 0 0 0`                            |
@@ -100,6 +102,7 @@ Table: Time stamps { #timestamps }
 Any element in `Y` can be specified as a military time zone character and is implicitly replaced by the current time in the time zone they represent. The time zones and their characters are detailed in [](#timezones).
 
 Table: Military time zones { #timezones }
+
 |Character|Time zone name|Time zone |
 |---------|--------------|----------|
 |A        |Alpha         |UTC +1    |
@@ -189,6 +192,7 @@ The upper and lower case letters, underscore `_`, dollar `$`, and percent `%` ar
 Unless overridden, English is used for text substitutions. Different languages can be selected using the [**Language** variant option](#language-variant-option) and/or the use of language specifiers within the format pattern. In either case, the language is specified as either a two letter [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code in lower case (for example, `en`) or as a five character language with an additional underscore and two character region in upper case (for example, `en_GB`). Within the format pattern, `__xx__` (where `xx` is the two or five character specifier) will switch the language of the subsequent generated or matched text. { #languages } shows the languages that are built into the interpreter.
 
 Table: Built-in languages { #languages }
+
 | ISO 639-1 | Language |
 | --- | ---  |
 | da | Danish |
