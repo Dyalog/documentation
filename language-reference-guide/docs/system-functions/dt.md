@@ -7,43 +7,44 @@ search:
 
 This function validates date-times, converts date-times between one representation and another, and converts date-times to and from text.
 
-A date-time is a date and time of day represented by a *timestamp*, a *time number*, a *military time-zone character* or a *text-formatted datetime*.
+A date-time is a date and time of day represented by a *timestamp*, a *time number*, a *military time-zone character*, or a *text-formatted datetime*.
 
 - A *timestamp* is a date-time expressed as a multiple element numeric vector, of which there are several different sorts (principally `⎕TS` format).
 - A *time number* is a date-time expressed as a scalar numeric value, of which there are several different sorts.
 - A *military time zone character* is a scalar character that represents the current date-time ("now") in a particular time zone. For example, `'A'` represents the current date-time (UTC) + 1 hour.
 - A *text-formatted datetime* is a date-time expressed as a character vector, formatted according to a *pattern* (see [Formatting patterns](#formatting-patterns) below).
 
-`Y` is an array of any shape whose elements contain a timestamp, time number, military time zone character or text-formatted datetime, in any combination.
+`Y` is an array of any shape whose elements contain a timestamp, time number, military time zone character, or text-formatted datetime, in any combination.
 
-`X` describes the representation to which the elements of `Y` are to be converted (the output format) and, optionally, the representation of the elements of `Y` (the input format). For convenience these are referred to below as <code>X<sub>R</sub></code> and <code>X<sub>Y</sub></code>, respectively.
+`X` describes the representation to which the elements of `Y` are to be converted (the output format) and, optionally, the representation of the elements of `Y` (the input format). For convenience these are referred to below as <code>X<sub>R</sub></code> and <code>X<sub>Y</sub></code> respectively.
 
 `X` can be a single element (<code>X<sub>R</sub></code>) or a 2-element vector (<code>X<sub>Y</sub> X<sub>R</sub></code>). Each of <code>X<sub>Y</sub></code> and <code>X<sub>R</sub></code> can be:
 
-- an integer *date-time code* (see the tables below), or
-- a character vector containing a *pattern* that describes how a datetime is formatted as text (see [Formatting patterns](#formatting-patterns) below).
+- an integer *date-time code* (see [](#timenumbers))
+- a character vector containing a *pattern* that describes how a datetime is formatted as text (see [Formatting patterns](#formatting-patterns).
 
 When <code>X<sub>R</sub></code> is an integer it must be either `0` or a date-time code listed in the tables below. `0` specifies that the elements of `Y` are to be validated; a non-zero value specifies the date-time representation to which the elements of `Y` are to be converted. When <code>X<sub>R</sub></code> is a pattern, the elements of `R` are character vectors, each derived by formatting the corresponding element of `Y` as text according to the pattern.
 
-<code>X<sub>Y</sub></code> can be omitted only when the elements of `Y` are Dyalog Date Numbers, `⎕TS`-style timestamps or military time zone characters. When <code>X<sub>Y</sub></code> is omitted, the numeric elements of `Y` are interpreted as follows:
+<code>X<sub>Y</sub></code> can be omitted only when the elements of `Y` are Dyalog Date Numbers, `⎕TS`-style timestamps, or military time zone characters. When <code>X<sub>Y</sub></code> is omitted, the numeric elements of `Y` are interpreted as follows:
 
 - scalars are assumed to be time numbers of type Dyalog Date Number (code `1`)
 - vectors are assumed to be `⎕TS` timestamps (code `¯1`)
 
-When <code>X<sub>Y</sub></code> is an integer date-time code it explicitly specifies the date-time representation of the numeric elements of `Y`. When <code>X<sub>Y</sub></code> is a pattern, the corresponding character vectors in `Y` are matched against the pattern and the resulting date-times are returned in the representation given by <code>X<sub>R</sub></code> (see [Pattern matching rules](#pattern-matching-rules) below). A pattern <code>X<sub>Y</sub></code> cannot be omitted, even when the elements of `Y` are character vectors that could unambiguously be assumed to be text-formatted datetimes.
+When <code>X<sub>Y</sub></code> is an integer date-time code it explicitly specifies the date-time representation of the numeric elements of `Y`. When <code>X<sub>Y</sub></code> is a pattern, the corresponding character vectors in `Y` are matched against the pattern and the resulting date-times are returned in the representation given by <code>X<sub>R</sub></code> (see [Pattern matching rules](#pattern-matching-rules)). A pattern <code>X<sub>Y</sub></code> cannot be omitted, even when the elements of `Y` are character vectors that could unambiguously be assumed to be text-formatted datetimes.
 
 Text-formatted datetimes and patterns are character vectors; no scalar extension occurs when character scalars appear in `X` or `Y`. A single text-formatted datetime in `Y` must be enclosed (nested); an unenclosed character vector in `Y` is interpreted as a vector of military time zone characters. As a convenience, a simple (not nested) character vector `X` is implicitly enclosed and processed as <code>X<sub>R</sub></code>, so a pattern can be supplied on its own to format datetimes as text.
 
 Character scalars in `Y` are always interpreted as meaning "now".
 
-`R` is an array of the same shape as `Y`, where each element is a timestamp, time number, character vector or Boolean value as determined by <code>X<sub>R</sub></code> (the second or only element of `X`).
+`R` is an array of the same shape as `Y`, where each element is a timestamp, time number, character vector or Boolean value, as determined by <code>X<sub>R</sub></code> (the second or only element of `X`).
 
-Time numbers in `R` can be of type DECF even if `⎕FR` is `645` if their magnitude can be too great to store precisely in a double. See the table below for the type numbers where this is so.
+Time numbers in `R` can be of type DECF even when `⎕FR` is `645` if their magnitude could be too great to store precisely in a double. See the table below for the type numbers where this is so.
 
 ## Time Numbers
 
 If a value in `X` is positive it indicates that a time number type is expected in `Y` or generated in `R`, as follows. Note that the last column indicated whether (Yes) or not (No) negative numbers are allowed.
 
+Table: Time numbers { #timenumbers }
 |Group|Code|Description|Category|Date and time[^1] represented by 0 (Epoch)|Negative values allowed?[^8]|
 |---|---|---|---|---|---|
 |Dyalog APL              | `1` |Dyalog Date Number|Day count with fractional part|1899-12-31 00:00|Yes|
@@ -83,6 +84,7 @@ If a value in `X` is positive it indicates that a time number type is expected i
 
 If a value in `X` is negative it indicates that a timestamp type is expected in `Y` or generated in `R`, as follows:
 
+Table: Time stamps { #timestamps }
 | Group                  | Code  | Description                                  | Max elements | Element contents[^11]                                        | Elided element implicit values (in Y)[^13] |
 |------------------------|-------|----------------------------------------------|--------------|--------------------------------------------------------------|--------------------------------------------|
 | APL 7-element vector   | `¯1`  | Millisecond precision (`⎕TS`)                | 7            | Year, month, day-of-month, hour, minute, second, millisecond | `1 1 1 0 0 0 0`                            |
@@ -93,10 +95,11 @@ If a value in `X` is negative it indicates that a timestamp type is expected in 
 | Decimal encoded[^2]    | `¯20` | Decimal encoded date and time                | 2            | Decimal encoded date, decimal encoded time                   | `10101 0`                              |
 | DateTimePicker         | `¯30` | DateTime format                              | 4            | International Day Number, hour, minute, second               | `0 0 0 0`                              |
 
-## Military time zone characters
+## Military Time Zone Characters
 
-Any element in `Y` can be specified as a military time zone character and is implicitly replaced by the current time in the time zone they represent. The time zones are as follows:
+Any element in `Y` can be specified as a military time zone character and is implicitly replaced by the current time in the time zone they represent. The time zones and their characters are detailed in [](#timezones).
 
+Table: Military time zones { #timezones }
 |Character|Time zone name|Time zone |
 |---------|--------------|----------|
 |A        |Alpha         |UTC +1    |
@@ -128,15 +131,15 @@ Any element in `Y` can be specified as a military time zone character and is imp
 
 The resolutions of system clocks vary by platform.
 
-## Formatting patterns
+## Formatting Patterns
 
 Either or both of <code>X<sub>R</sub></code> and <code>X<sub>Y</sub></code> can be a character vector containing a *pattern* which describes how a datetime is, or is to be, formatted as text.
 
-When used as <code>X<sub>R</sub></code>, the pattern controls how each element of `Y` is formatted into a character vector in `R`. When used as <code>X<sub>Y</sub></code>, the same pattern describes the text supplied in `Y` and controls how it is matched and decoded into the representation given by <code>X<sub>R</sub></code> (see [Pattern matching rules](#pattern-matching-rules) below).
+When used as <code>X<sub>R</sub></code>, the pattern controls how each element of `Y` is formatted into a character vector in `R`. When used as <code>X<sub>Y</sub></code>, the same pattern describes the text supplied in `Y` and controls how it is matched and decoded into the representation given by <code>X<sub>R</sub></code> (see [Pattern matching rules](#pattern-matching-rules)).
 
-The formatting pattern allows a datetime to be converted to a highly user-configurable, plain text format. When a datetime is formatted, elements in the result are copies of the format pattern with format sequences replaced by the elements they represent.
+The formatting pattern allows a datetime to be converted to a user-configurable plain-text format. When a datetime is formatted, elements in the result are copies of the format pattern with format sequences replaced by the elements they represent.
 
-The format sequences are intended to be visually reminiscent of the generated text. They use alphabetic characters easily associated with the substitution (for example `D`, `M` and `Y` for Day, Month and Year respectively) repeated one or more times to indicate format. Some sequences allow the first character to be replaced by a `_`, or the casing to be altered.
+The format sequences are intended to be visually reminiscent of the generated text. They use alphabetic characters easily associated with the substitution (for example `D`, `M`, and `Y` for Day, Month, and Year respectively) repeated one or more times to indicate format. Some sequences allow the first character to be replaced by a `_`, or the casing to be altered.
 
 | Format letter | Length | Meaning | Variations | Example |
 |---|---|---|---|---|
@@ -176,14 +179,16 @@ The format sequences are intended to be visually reminiscent of the generated te
 | AM/<u>P</u>M Indicator | `P` | Short | `P`<br>`p` | `A`<br>`a` |
 |_   _| `PP` | Full | `PP`<br>`pp` | `AM`<br>`am` |
 
-The upper and lower case letters, underscore `_`, dollar `$` and percent `%` are all reserved for introducing format sequences, even though not all currently have meaning. The remaining, non-reserved, characters are copied to the result unchanged, thus the format string `hh:mm` represents the hour of the day and minute of the hour with a colon between (for example `12:00`). All characters or sequences of characters can be delimited by `"` or `'` at any point in the format string to prevent them being interpreted as a part of a format sequence, and, within these delimiters, two adjacent delimiter characters produce a single delimiter.
+The upper and lower case letters, underscore `_`, dollar `$`, and percent `%` are all reserved for introducing format sequences, even though not all currently have meaning. The remaining, non-reserved, characters are copied to the result unchanged; this means that the format string `hh:mm` represents the hour of the day and minute of the hour, separated by a colon (for example `12:00`). All characters or sequences of characters can be delimited by `"` or `'` at any point in the format string to prevent them from being interpreted as a part of a format sequence, and, within these delimiters, two adjacent delimiter characters produce a single delimiter.
 
-Note: The characters `AaaaBbbb` consist of two adjacent format sequences because there is a sequence of As followed by a sequence of Bs. The characters `AaaaAaaa` consist of one format sequence because it only contains `A`s. It can be separated into two format sequences by inserting an empty `"` or `'` - delimited string, for example `Aaaa""Aaaa`.
+!!! Info "Information"
+    The characters `AaaaBbbb` consist of two adjacent format sequences because there is a sequence of As followed by a sequence of Bs. The characters `AaaaAaaa` consist of one format sequence because it only contains `A`s. It can be separated into two format sequences by inserting an empty `"` or `'` - delimited string, for example, `Aaaa""Aaaa`.
 
 ## Language
 
-Unless overridden, English is used for text substitutions. Different languages can be selected using the [Language variant option](#language-variant-option) and/or the use of language specifiers within the format pattern. In either case, the language is specified as either a two letter [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code in lower case (for example `en`) or as a five character language with an additional underscore and two character region in upper case (for example `en_GB`). Within the format pattern, `__xx__` (where `xx` is the two or five character specifier) will switch the language of the subsequent generated or matched text. Dictionaries for the following languages are built in:
+Unless overridden, English is used for text substitutions. Different languages can be selected using the [**Language** variant option](#language-variant-option) and/or the use of language specifiers within the format pattern. In either case, the language is specified as either a two letter [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code in lower case (for example, `en`) or as a five character language with an additional underscore and two character region in upper case (for example, `en_GB`). Within the format pattern, `__xx__` (where `xx` is the two or five character specifier) will switch the language of the subsequent generated or matched text. { #languages } shows the languages that are built into the interpreter.
 
+Table: Built-in languages { #languages }
 | ISO 639-1 | Language |
 | --- | ---  |
 | da | Danish |
@@ -204,7 +209,7 @@ Unless overridden, English is used for text substitutions. Different languages c
 | sv | Swedish |
 | zh | Chinese |
 
-## Predefined patterns
+## Predefined Patterns
 
 Any pattern can contain (in part or in whole) a named predefined pattern, which allows common date and time formats to be specified in abbreviated form. Predefined patterns can be specified on a per-language basis, allowing patterns to be tailored for the selected language.
 
@@ -220,15 +225,15 @@ This list can be expanded in future.
 
 Additional predefined patterns can be defined using the [Dictionary variant option](#dictionary-variant-option). Predefined patterns must not contain references to other predefined patterns.
 
-## Pattern matching rules
+## Pattern-matching Rules
 
 When <code>X<sub>Y</sub></code> is a pattern, the corresponding character vectors in `Y` are matched against it and decoded into date-times. The following additional rules apply to the matching.
 
-### Two digit years
+### Two-digit Years
 
 Two digit years (i.e. those corresponding to the formatting pattern elements `YY` and `WW`) are by default interpreted according to the same rules used for `⎕SM` and GUI edit fields, which are configurable using the `YY_WINDOW` configuration parameter and described with [its documentation](../../windows-installation-and-configuration-guide/configuration-parameters/yy-window/).
 
-### Ambiguities and precision
+### Ambiguities and Precision
 
 Formatting *to* a text-formatted datetime can be lossy — that is, the formatted text does not necessarily contain sufficient information to regenerate the original datetime. A pattern used to convert *from* a text-formatted datetime is not permitted to be ambiguous such that it would be possible to deduce multiple disjoint datetimes from text generated by it (for example, a pattern which contains a year and a day-of-month but no month, because there could be twelve disjoint dates for which the pattern would generate identical text). Such a pattern is rejected.
 
@@ -261,11 +266,11 @@ The formatted text is parsed and used to compute a datetime according to the giv
 
 If a pattern is rejected, or a text-formatted datetime cannot be matched against the pattern for any of the reasons above, a `DOMAIN ERROR` is signalled and an explanatory message is included.
 
-## Variant options
+## Variant Options
 
 `⎕DT` supports the `Language` and `Dictionary` variant options, specified using the [variant operator `⍠`](../primitive-operators/variant.md). Both apply only when <code>X<sub>Y</sub></code> and/or <code>X<sub>R</sub></code> are patterns.
 
-### Language variant option
+### Variant Option: Language
 
 The `Language` variant option specifies the language used for formatting and matching datetimes and defaults to `'en'` (English). A language is named by a two or five character value (for example `'en'` or `'en_GB'`). The option value can be:
 
@@ -274,7 +279,7 @@ The `Language` variant option specifies the language used for formatting and mat
 
 The setting can be explicitly overridden within a format pattern using the `__xx__` specifier described under [Language](#language) above.
 
-### Dictionary variant option
+### Variant Option: Dictionary
 
 The `Dictionary` variant option specifies a namespace which contains additional or replacement names for the months etc. and/or predefined patterns, for languages and language regions. If <code>X<sub>Y</sub></code> and <code>X<sub>R</sub></code> are both patterns, the dictionary is applied to both.
 

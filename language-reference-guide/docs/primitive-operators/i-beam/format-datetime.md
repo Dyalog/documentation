@@ -10,7 +10,7 @@ search:
 # <span>Format Date-time</span> `R←X(1200⌶)Y`{{key}}
 
 !!! Info "Information"
-    `1200⌶` has been deprecated and is scheduled for removal in a future release. Its functionality has been folded into [`⎕DT`](../../system-functions/dt.md). For information on how to identify uses `1200⌶` in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
+    `1200⌶` has been deprecated and is scheduled for removal in a future release; its functionality can instead be achieved using [`⎕DT`](../../system-functions/dt.md). For information on how to identify uses of  `1200⌶` in your existing codebase, see the [Release Notes](../../..//release-notes/announcements/deprecated-functionality/#identifying-deprecated-functionality-in-executed-code)..
 
 
 `Y` is a numeric array of any shape, where every element contains a Dyalog Date Number that represents a date between 1
