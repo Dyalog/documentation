@@ -227,8 +227,6 @@ Table: Predefined patterns built into the interpreter { #patterns }
 | ---  | ---            |
 | `ISO`  | `YYYY-MM-DD"T"hh:mm:ss` |
 
-This list can be expanded in future.
-
 Additional predefined patterns can be defined using the [**Dictionary** variant option](#dictionary-variant-option). Predefined patterns must not contain references to other predefined patterns.
 
 ## Pattern-matching Rules
@@ -362,17 +360,10 @@ dict←(
 
 In the above example:
 
-- the predefined pattern `ISOweek` is defined globally and is not redefined. This means that it has the same
-  value for all languages. Similarly, `DateCompact` has the same value for all languages, but although the definition is
-  global, it contains the pattern `MMM` and this will be substituted with the month name in the selected language.
-- The predefined patterns `DateVerbose` is defined globally, and redefined for languages `fr` and `en_US`. The global
-  definition will be used when any language other than `fr` and `en_US` is selected. If there was no global definition
-  it would only be defined for `fr`, all regional variations of `fr`, and `en_US`.
-- There is no explicit definition of patterns or names for language region `en_GB`. If this language is selected, the
-  definitions for `en` will be used.
-- There is an explicit definition for `ShortMonthNames` for language region `en_US`. If this language is selected, the
-  definition of `ShortMonthNames` is as defined, and as for `en` for other names. As `en` is not defined in the
-  dictionary, the built-in defaults are used.
+- the predefined pattern `ISOweek` is defined globally and is not redefined. This means that it has the same value for all languages. Similarly, `DateCompact` has the same value for all languages, but although the definition is global, it contains the pattern `MMM` and this will be substituted with the month name in the selected language.
+- The predefined patterns `DateVerbose` is defined globally, and redefined for languages `fr` and `en_US`. The global definition will be used when any language other than `fr` and `en_US` is selected. If there was no global definition it would only be defined for `fr`, all regional variations of `fr`, and `en_US`.
+- There is no explicit definition of patterns or names for language region `en_GB`. If this language is selected, the definitions for `en` will be used.
+- There is an explicit definition for `ShortMonthNames` for language region `en_US`. If this language is selected, the definition of `ShortMonthNames` is as defined, and as for `en` for other names. As `en` is not defined in the dictionary, the built-in defaults are used.
 
 ### Timestamp to time number { .example }
 ```apl
