@@ -46,30 +46,30 @@ If a value in `X` is positive it indicates that a time number type is expected i
 
 Table: Time numbers { #timenumbers }
 
-|Group|Code|Description|Category|Date and time[^1] represented by 0 (Epoch)|Negative values allowed?[^8]|
+|Group|Code|Description|Category|Date and time[^1] represented by 0 (Epoch)|Negative values allowed?[^2]|
 |---|---|---|---|---|---|
 |Dyalog APL              | `1` |Dyalog Date Number|Day count with fractional part|1899-12-31 00:00|Yes|
-|_                      _| `2` |Dyalog component file time|Tick count 1÷60s ticks[^2]|1970-01-01 00:00|Yes|
-|Other languages         | `10` |J (J nanosecond time)|Tick count[^3] 1ns ticks [^2]|2000-01-01 00:00|Yes|
-|                        | `11` |Shakti K7|Tick count 1ms ticks[^2]|2024-01-01 00:00|Yes|
-|                        | `12` |JavaScript / D / Q / Go UnixMilli |Tick count 1ms ticks[^2]|1970-01-01 00:00|Yes|
+|_                      _| `2` |Dyalog component file time|Tick count 1÷60s ticks[^3]|1970-01-01 00:00|Yes|
+|Other languages         | `10` |J (J nanosecond time)|Tick count[^4] 1ns ticks [^3]|2000-01-01 00:00|Yes|
+|                        | `11` |Shakti K7|Tick count 1ms ticks[^3]|2024-01-01 00:00|Yes|
+|                        | `12` |JavaScript / D / Q / Go UnixMilli |Tick count 1ms ticks[^3]|1970-01-01 00:00|Yes|
 |                        | `13` |R (R chron format)|Day count with fractional part|1970-01-01 00:00|Yes|
-|                        | `14` |Shakti K9|Tick count 1ms ticks[^2]|2001-01-01 00:00|Yes|
-|                        | `15` |Go UnixMicro|Tick count 1µs ticks[^2]|1970-01-01 00:00|Yes|
-|                        | `16` |Go UnixNano|Tick count 1ns ticks[^2]|1970-01-01 00:00|Yes|
-|_                      _| `17` |APL+Win and APL64 workspace timestamp|Tick count 1μs ticks[^2]|1900-01-01 00:00|No|
-|UNIX                    | `20` |Unix time|Tick count 1s ticks[^2]|1970-01-01 00:00|Yes|
-|                        | `21` |Apollo NCS UUID|Tick count 4µs ticks[^2]|1980-01-01 00:00|No|
-|_                      _| `22` |OSF DCE UUID|Tick count 1ns ticks[^2]|1582-10-15 00:00|No|
+|                        | `14` |Shakti K9|Tick count 1ms ticks[^3]|2001-01-01 00:00|Yes|
+|                        | `15` |Go UnixMicro|Tick count 1µs ticks[^3]|1970-01-01 00:00|Yes|
+|                        | `16` |Go UnixNano|Tick count 1ns ticks[^3]|1970-01-01 00:00|Yes|
+|_                      _| `17` |APL+Win and APL64 workspace timestamp|Tick count 1μs ticks[^3]|1900-01-01 00:00|No|
+|UNIX                    | `20` |Unix time|Tick count 1s ticks[^3]|1970-01-01 00:00|Yes|
+|                        | `21` |Apollo NCS UUID|Tick count 4µs ticks[^3]|1980-01-01 00:00|No|
+|_                      _| `22` |OSF DCE UUID|Tick count 1ns ticks[^3]|1582-10-15 00:00|No|
 |Microsoft Windows       | `30` |Microsoft DOS date/time|Encoded broken-down time 2s resolution|N/A|No|
-|                        | `31` |Microsoft Win32 FILETIME|Tick count[^3] 100ns ticks|1601-01-01 00:00|No|
-|                        | `32` |Microsoft CLR DateTime (.NET)(Ticks property thereof)|Tick count [^3] 100ns ticks|0001-01-01 00:00|No|
-|_                      _| `33` |Microsoft OLE Automation Date(also known as Variant Time)|Day count with fractional part|1899-12-30 00:00|Yes [^10]|
-|Application             | `40` |Excel (1900 Date System)[^4] / Lotus 1-2-3|Day count with fractional part[^5]|1899-12-31 00:00[^6]|No|
-|                        | `41` |Excel (1904 Date System)[^4]|Day count with fractional part|1904-01-01 00:00|No|
-|                        | `42` |Stata statistics package|Tick count 1ms ticks[^2]|1960-01-01 00:00|Yes|
-|                        | `43` |SPSS statistics package|Tick count 1s ticks[^2]|1582-10-14 00:00|No|
-|_                      _| `44` |SAS|Tick count 1s ticks[^2]|1960-01-01 00:00|Yes|
+|                        | `31` |Microsoft Win32 FILETIME|Tick count[^4] 100ns ticks|1601-01-01 00:00|No|
+|                        | `32` |Microsoft CLR DateTime (.NET)(Ticks property thereof)|Tick count [^4] 100ns ticks|0001-01-01 00:00|No|
+|_                      _| `33` |Microsoft OLE Automation Date(also known as Variant Time)|Day count with fractional part|1899-12-30 00:00|Yes [^5]|
+|Application             | `40` |Excel (1900 Date System)[^6] / Lotus 1-2-3|Day count with fractional part[^7]|1899-12-31 00:00[^8]|No|
+|                        | `41` |Excel (1904 Date System)[^6]|Day count with fractional part|1904-01-01 00:00|No|
+|                        | `42` |Stata statistics package|Tick count 1ms ticks[^3]|1960-01-01 00:00|Yes|
+|                        | `43` |SPSS statistics package|Tick count 1s ticks[^3]|1582-10-14 00:00|No|
+|_                      _| `44` |SAS|Tick count 1s ticks[^3]|1960-01-01 00:00|Yes|
 |Julian Date and variants| `50` |Julian Date|Day count with fractional part|¯4717-11-24 12:00|No|
 |                        | `51` |J (J dayno)|Day count with fractional part|1800-01-01 00:00|No|
 |                        | `52` |Reduced Julian Date|Day count with fractional part|1858-11-16 12:00|Yes|
@@ -79,7 +79,7 @@ Table: Time numbers { #timenumbers }
 |_                      _| `56` |CCSDS Julian Date|Day count with fractional part|1958-01-01 00:00|Yes|
 |Decimal encoded[^9]     | `60` |Floating-point decimal encoded format Digits take the form yyyymmdd.hhmmss|Encoded broken-down time 1s resolution|N/A|No|
 |_                      _| `61` |Integer decimal encoded format Digits take the form yyyymmddhhmmss(J digit time)|Encoded broken-down time 1s resolution|N/A|No|
-|Misc. Operating Systems | `70` |AmigaOS|Tick count 1ms ticks[^2]|1978-01-01 00:00|No|
+|Misc. Operating Systems | `70` |AmigaOS|Tick count 1ms ticks[^3]|1978-01-01 00:00|No|
 
 ## Time Stamps
 
@@ -87,14 +87,14 @@ If a value in `X` is negative it indicates that a timestamp type is expected in 
 
 Table: Time stamps { #timestamps }
 
-| Group                  | Code  | Description                                  | Max elements | Element contents[^11]                                        | Elided element implicit values (in Y)[^13] |
+| Group                  | Code  | Description                                  | Max elements | Element contents[^10]                                        | Elided element implicit values (in Y)[^11] |
 |------------------------|-------|----------------------------------------------|--------------|--------------------------------------------------------------|--------------------------------------------|
 | APL 7-element vector   | `¯1`  | Millisecond precision (`⎕TS`)                | 7            | Year, month, day-of-month, hour, minute, second, millisecond | `1 1 1 0 0 0 0`                            |
 |                        | `¯2`  | Microsecond precision                        | 7            | Year, month, day-of-month, hour, minute, second, microsecond | `1 1 1 0 0 0 0`                            |
 |_                      _| `¯3`  | Nanosecond precision (J expanded digit time) | 7            | Year, month, day-of-month, hour, minute, second, nanosecond  | `1 1 1 0 0 0 0`                            |
 | ISO components         | `¯10` | ISO day-of-year components                   | 6            | Year, day-of-year, hour, minute, second, microsecond         | `1 1 0 0 0 0`                            |
 |_                      _| `¯11` | ISO day-of-week components                   | 7            | Year, week, day-of-week, hour, minute, second, microsecond   | `1 1 1 0 0 0 0`                              |
-| Decimal encoded[^2]    | `¯20` | Decimal encoded date and time                | 2            | Decimal encoded date, decimal encoded time                   | `10101 0`                              |
+| Decimal encoded[^3]    | `¯20` | Decimal encoded date and time                | 2            | Decimal encoded date, decimal encoded time                   | `10101 0`                              |
 | DateTimePicker         | `¯30` | DateTime format                              | 4            | International Day Number, hour, minute, second               | `0 0 0 0`                              |
 
 ## Military Time Zone Characters
@@ -150,8 +150,8 @@ The format sequences are intended to be visually reminiscent of the generated te
 |_   _| `YYYY` | With century | `YYYY` | `2019` |
 | <u>M</u>onth | `M` | 1 or 2 digit numeric | `M` | `3` |
 | | `MM` | 2 character numeric | `MM`<br>`_M` | `03`<br>` 3` |
-| | `MMM` | Abbreviated name | `MMM`<br>`Mmm`<br>`mmm`<br>`_mm`[^14] | `MAR`<br>`Mar`<br>`mar`<br>`Mar` |
-|_   _| `MMMM` | Full name | `MMMM`<br>`Mmmm`<br>`mmmm`<br>`_mmm`[^14] | `MARCH`<br>`March`<br>`march`<br>`March` |
+| | `MMM` | Abbreviated name | `MMM`<br>`Mmm`<br>`mmm`<br>`_mm`[^12] | `MAR`<br>`Mar`<br>`mar`<br>`Mar` |
+|_   _| `MMMM` | Full name | `MMMM`<br>`Mmmm`<br>`mmmm`<br>`_mmm`[^12] | `MARCH`<br>`March`<br>`march`<br>`March` |
 | <u>D</u>ay of month | `D` | 1 or 2 digit numeric | `D` | `4` |
 |_   _| `DD` | 2 character numeric | `DD`<br>`_D` | `04`<br>` 4` |
 | <u>h</u>ours | `h` | 1 or 2 digit numeric | `h` | `8` |
@@ -167,15 +167,15 @@ The format sequences are intended to be visually reminiscent of the generated te
 | | `fffff` | 5 digit precision | `fffff` | `55555` |
 |_   _| `ffffff` | 6 digit precision | `ffffff` | `555555` |
 | <u>d</u>ay of week | `d` | Numeric (1-7) | `d` | `1` |
-| | `ddd` | Abbreviated name | `DDD`<br>`Ddd`<br>`ddd`<br>`_dd`[^14] | `MON`<br>`Mon`<br>`mon`<br>`Mon` |
-|_   _| `dddd` | Full name | `DDDD`<br>`Dddd`<br>`dddd`<br>`_ddd`[^14] | `MONDAY`<br>`Monday`<br>`monday`<br>`Monday` |
+| | `ddd` | Abbreviated name | `DDD`<br>`Ddd`<br>`ddd`<br>`_dd`[^12] | `MON`<br>`Mon`<br>`mon`<br>`Mon` |
+|_   _| `dddd` | Full name | `DDDD`<br>`Dddd`<br>`dddd`<br>`_ddd`[^12] | `MONDAY`<br>`Monday`<br>`monday`<br>`Monday` |
 | ISO <u>w</u>eek number | `w` | 1 or 2 digit numeric | `w` | `10` |
 |_   _| `ww` | 2 character numeric | `ww`<br>`_w` | `10`<br>`10` |
-| year of ISO <u>W</u>eek number[^15] | `WW` | Without century | `WW` | `19` |
+| year of ISO <u>W</u>eek number[^13] | `WW` | Without century | `WW` | `19` |
 |_   _| `WWWW` | With century | `WWWW` | `2019` |
 | day of <u>y</u>ear | `y` | 1 to 3 digit numeric | `y` | `63` |
 |_   _| `yy` | 3 character numeric | `yy`<br>`_y` | `063`<br>` 63` |
-| <u>O</u>rdinal indicator[^16] for day of month | `O` | Short | `O`<br>`o` | `T`<br>`t` |
+| <u>O</u>rdinal indicator[^14] for day of month | `O` | Short | `O`<br>`o` | `T`<br>`t` |
 |_   _| `OO` | Full | `OO`<br>`Oo`<br>`oo` | `TH`<br>`Th`<br>`th` |
 | hours in <u>t</u>welve hour clock | `t` | 1 or 2 digit numeric | `t` | `8` |
 |_   _| `tt` | 2 character numeric | `tt`<br>`_t` | `08`<br>` 8` |
@@ -507,21 +507,21 @@ In the above example:
 ```
 
 [^1]: In the Proleptic Gregorian Calendar.
-[^2]: There are the same number of ticks per day regardless of leap seconds.
-[^3]: Generated as DECF values regardless of the setting of ⎕FR due to their magnitude.
-[^4]: Excel supports two time number conventions. On Windows the 1900 Date System is the default and on macOS the 1904 Date System is the default. Both systems can use either convention and the convention in use is stored in the worksheet so that the platforms interoperate.
-[^5]: Count includes the invalid date 1900-02-29.
-[^6]: Microsoft Excel converts day 0 to the invalid date 1900-01-00.
-[^7]: For negative numbers, the integral part counts backward from 1899-12-30 and the fractional part counts forward from  the date so reached.
-[^8]: No date-time can represent a date earlier than ¯4713-01-01 00:00.
+[^2]: No date-time can represent a date earlier than ¯4713-01-01 00:00.
+[^3]: There are the same number of ticks per day regardless of leap seconds.
+[^4]: Generated as DECF values regardless of the setting of ⎕FR due to their magnitude.
+[^5]: For negative numbers, the integral part counts backward from 1899-12-30 and the fractional part counts forward from the date so reached.
+[^6]: Excel supports two time number conventions. On Windows the 1900 Date System is the default and on macOS the 1904 Date System is the default. Both systems can use either convention and the convention in use is stored in the worksheet so that the platforms interoperate.
+[^7]: Count includes the invalid date 1900-02-29.
+[^8]: Microsoft Excel converts day 0 to the invalid date 1900-01-00.
 [^9]: Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020/01/23 (year/month/day) is encoded as 20200123, and 13:17:56 (hour:minute:second) is encoded as 131756. The date must be between 1 January 0001 and 31 December 9999 in the Proleptic Gregorian Calendar.
-[^10]: For negative numbers, the integral part counts backward from 1899-12-30 and the fractional part counts forward from the date so reached.
-[^11]: All dates must be between 1 January 0001 and 28 February 4000 in the Proleptic Gregorian Calendar.
-[^12]: Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020/01/23 (year/month/day) is encoded as 20200123, and 13:17:56 (hour:minute:second) is encoded as 131756.
-[^13]: If a timestamp has fewer than the maximum number of elements, the remaining elements take the default values shown.
-[^14]: Natural sentence case, which can be specified for `M` (month name) and `d` (day name) only, causes the text to be substituted in the case which is natural for the language; some languages (for example, English) always capitalise the first letter of day and month names whereas others (for example, French) do not.
-[^15]: Dates at the start of the year can be in the final week of the previous year, and dates at the end of the year can be in the first week of the following year.
-[^16]: An ordinal indicator is a character or group of characters following a numeral, such as (in English) the suffixes -st, -nd, -rd, -th as in 1st, 2nd, 3rd, 4th.
+[^10]: All dates must be between 1 January 0001 and 28 February 4000 in the Proleptic Gregorian Calendar.
+[^11]: If a timestamp has fewer than the maximum number of elements, the remaining elements take the default values shown.
+[^12]: Natural sentence case, which can be specified for `M` (month name) and `d` (day name) only, causes the text to be substituted in the case which is natural for the language; some languages (for example, English) always capitalise the first letter of day and month names whereas others (for example, French) do not.
+[^13]: Dates at the start of the year can be in the final week of the previous year, and dates at the end of the year can be in the first week of the following year.
+[^14]: An ordinal indicator is a character or group of characters following a numeral, such as (in English) the suffixes -st, -nd, -rd, -th as in 1st, 2nd, 3rd, 4th.
+[^15]: For negative numbers, the integral part counts backward from 1899-12-30 and the fractional part counts forward from  the date so reached.
+[^16]: Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020/01/23 (year/month/day) is encoded as 20200123, and 13:17:56 (hour:minute:second) is encoded as 131756.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
