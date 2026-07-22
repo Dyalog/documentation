@@ -11,13 +11,15 @@ search:
 
 `⎕UCS` converts (Unicode) characters into integers and vice versa.
 
-The optional left argument `X` is a character vector containing the name of a variable-length Unicode encoding scheme which must be one of:
+The optional left argument `X` is either a simple character vector or a one- or two-element nested vector. `X` or its first element is the name of a variable-length Unicode encoding scheme and must be one of:
 
-- 'UTF-8'
-- 'UTF-16'
-- 'UTF-32'
+- `'UTF-8'`
+- `'UTF-16'`
+- `'UTF-32'`
 
-If not, a `DOMAIN ERROR` is issued.
+The second element (if present) is either `0` (the default) to consume and return byte values as positive integers or `83` to use 1-byte integers (type 83). `83` can only be used with `'UTF-8'`.
+
+If `X` does not abide by the above restrictions, a `DOMAIN ERROR` is issued.
 
 If `X` is omitted, `Y` is a simple character or integer array, and the result `R` is a simple integer or character array with the same rank and shape as `Y`.
 
@@ -25,7 +27,7 @@ If `X` is specified, `Y` must be a simple character or integer vector, and the r
 
 ## Monadic `⎕UCS`
 
-Used monadically, `⎕UCS` simply converts characters to Unicode code points and vice-versa.
+Monadic `⎕UCS` converts any character array to a numeric array of the same shape, or any numeric array to a character array of the same shape. When doing this, characters are converted to Unicode code points and Unicode code points are converted to characters.
 
 With a few exceptions, the first 256 Unicode code points correspond to the ANSI character set.
 ```apl
@@ -56,9 +58,8 @@ Unicode also contains the APL character set. For example:
 
 ## Dyadic `⎕UCS`
 
-Dyadic `⎕UCS` is used to translate between Unicode characters and one of three standard variable-length Unicode encoding schemes, UTF-8, UTF-16 and UTF-32. These represent a Unicode character string as a vector of 1-byte (UTF-8), 2-byte (UTF-16) and 4-byte (UTF-32) signed integer values respectively.
+Dyadic `⎕UCS` translates between vectors of Unicode characters and one of three standard Unicode encoding schemes – UTF-8, UTF-16, or UTF-32. These represent a character vector as a vector of integers. In the case of UTF-8, the integers can be specified to be unsigned (the default) or signed.
 ```apl
-
       'UTF-8' ⎕UCS 'ABC'
 65 66 67
       'UTF-8' ⎕UCS 'ABCÆØÅ'
@@ -73,13 +74,29 @@ Dyadic `⎕UCS` is used to translate between Unicode characters and one of three
 947 949 953 945 32 963 959 965
 ```
 
-Because integers are *signed*, numbers greater than 127 will be represented as 2-byte integers (type 163), and are thus not suitable for writing directly to a native file. To write the above data to file, the easiest solution is to use  `⎕UCS` to convert the data to 1-byte characters and append this data to the file:
-```apl
+### UTF-8 Signed Integers
 
-      (⎕UCS 'UTF-8' ⎕UCS 'ABCÆØÅ') ⎕NAPPEND tn
+By default, `⎕UCS` uses unsigned integers. For UTF-8 only, if `X` is `'UTF-8' 83`, `⎕UCS` will instead use signed integers which are then represented as single bytes (type 83). For example:
+
+```apl
+      'UTF-8' 83 ⎕UCS 'ABCÆØÅ'
+65 66 67 ¯61 ¯122 ¯61 ¯104 ¯61 ¯123
+      'UTF-8' 83 ⎕UCS ¯61 ¯122, ¯61 ¯104, ¯61 ¯123
+ÆØÅ
+      'UTF-8' 83 ⎕UCS 'γεια σου'
+¯50 ¯77 ¯50 ¯75 ¯50 ¯71 ¯50 ¯79 32 ¯49 ¯125 ¯50 ¯65 ¯49 ¯123
+```
+This facilitates storing Unicode text in native files as UTF-8. For example:
+```apl
+      tn←'letters.txt' ⎕NCREATE 0
+      ('UTF-8' 83 ⎕UCS 'ABCÆØÅ') ⎕NAPPEND tn
+      'UTF-8' 83 ⎕UCS ⎕NREAD tn 83 ¯1 0
+ABCÆØÅ
 ```
 
-**Note regarding UTF-16:** For most characters in the first plane of Unicode (0000-FFFF), UTF-16 and UCS-2 are identical. However, UTF-16 has the potential to encode all Unicode characters, by using more than 2 bytes for characters outside plane 1.
+### UTF-16 and UCS-2
+
+For most characters in the [first plane of Unicode (0000-FFFF)](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane), UTF-16 and UCS-2 are identical. However, UTF-16 can encode all Unicode characters by using up to two code units for each character.
 ```apl
 
       'UTF-16' ⎕UCS 'ABCÆØÅ⍒⍋'

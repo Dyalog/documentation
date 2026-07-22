@@ -55,18 +55,16 @@ The second, optional, element of `X` specifies the length of the uncompressed da
 `X` may not be a two item vector whose first item has the value 0.
 
 <h1 class="example">Examples</h1>
-```apl
 
-      sint←{⍵-256×⍵>127}
-      utf8←'UTF-8'∘⎕UCS
+```apl
       str←'empty←⍬'
-      ⊣v←sint utf8  str
-101 109 112 116 121 ¯30 ¯122 ¯112 ¯30 ¯115 ¯84			
-      ⊣comp←1 (219⌶) v
-8 ¯55 1 0 0 0 0 11  ¯80 101 109 112 116 121 ¯30 ¯122 ¯112 ¯30 ¯115 ¯84			
-      
-      utf8 256| 0(219⌶)comp
+      ⎕←v←'UTF-8' 83 ⎕UCS str
+101 109 112 116 121 ¯30 ¯122 ¯112 ¯30 ¯115 ¯84
+      ⎕←comp←1 (219⌶) v
+ 8 ¯55 1 0 0 0 0 11  ¯80 101 109 112 116 121 ¯30 ¯122 ¯112 ¯30 ¯115 ¯84
+
+      'UTF-8' 83 ⎕UCS 0(219⌶)comp
 empty←⍬
-      utf8 256| ¯1(219⌶)2⊃comp
-empty←⍬					  
+      'UTF-8' 83 ⎕UCS ¯1(219⌶)2⊃comp
+empty←⍬
 ```
