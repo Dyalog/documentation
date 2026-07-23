@@ -29,7 +29,6 @@ If `X` is specified, `Y` must be a simple character or integer vector, and the r
 
 Monadic `⎕UCS` converts any character array to a numeric array of the same shape, or any numeric array to a character array of the same shape. When doing this, characters are converted to Unicode code points and Unicode code points are converted to characters.
 
-With a few exceptions, the first 256 Unicode code points correspond to the ANSI character set.
 ```apl
 
       ⎕UCS 'Hello World'
