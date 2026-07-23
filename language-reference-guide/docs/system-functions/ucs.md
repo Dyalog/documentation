@@ -41,7 +41,6 @@ If `X` is specified, `Y` must be a simple character or integer vector, and the r
 Used monadically, `⎕UCS` simply converts characters to Unicode code points and vice-versa.
 
 
-With a few exceptions, the first 256 Unicode code points correspond to the ANSI character set.
 ```apl
 
       ⎕UCS 'Hello World'
