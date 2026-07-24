@@ -607,6 +607,7 @@ def convert_to_html(
         body = fix_links_html(body, version=version)
         body = remove_footnote_backlinks(body)
         body = make_footnote_urls_clickable(body)
+        body = fix_key_notation_link(body, newname)
         body = fix_external_links(body)
         body = fix_apl_root_namespace_highlighting(body)
 
@@ -1180,6 +1181,32 @@ def make_footnote_urls_clickable(html: str) -> str:
                     content.replace_with(*new_contents)
 
     return str(soup)
+
+
+def fix_key_notation_link(html: str, page: str) -> str:
+    """
+    Point the key-notation marker at the in-CHM page and make it superscript.
+
+    The {{key}} macro renders as an anchor whose text is the U+1F6C8 glyph,
+    linking to the key-to-notation page on the website. In the CHM it must be a
+    relative link to the bundled page so it navigates in-place, and the marker
+    reads as a superscript. `page` is the anchor's project-relative .htm path,
+    used to resolve the link. Runs before fix_external_links so the now-internal
+    link is not given target="_blank".
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    relative = os.path.relpath(
+        "language-reference-guide/key-to-notation.htm", os.path.dirname(page)
+    )
+    changed = False
+    for anchor in soup.find_all("a"):
+        if anchor.get_text() == "\U0001f6c8":
+            anchor["href"] = relative
+            if anchor.has_attr("target"):
+                del anchor["target"]
+            anchor.wrap(soup.new_tag("sup"))
+            changed = True
+    return str(soup) if changed else html
 
 
 def fix_external_links(html: str) -> str:
