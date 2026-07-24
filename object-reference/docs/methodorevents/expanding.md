@@ -1,7 +1,5 @@
 # <span>Expanding</span> <span>Event 302</span>
 
-**Applies To:** [Grid](../objects/grid.md), [TreeView](../objects/treeview.md)
-
 **Description**
 
 If enabled, this event is reported by a [Grid](../objects/grid.md) or a [TreeView](../objects/treeview.md) object just before it is about to expand to show additional rows or children of the current item.
@@ -20,3 +18,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |`[1]`|Object     |ref or character vector               |
 |`[2]`|Event      |`'Expanding'` or 302                  |
 |`[3]`|Item number|Integer. The index of the row or item.|
+
+**Application**
+
+Objects: [Grid](../objects/grid.md), [TreeView](../objects/treeview.md)

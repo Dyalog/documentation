@@ -1,7 +1,5 @@
 # <span>Printer</span> <span>Object</span>
 
-[Parents](../parentlists/printer.md), [Children](../childlists/printer.md), [Properties](../proplists/printer.md), [Methods](../methodlists/printer.md), [Events](../eventlists/printer.md)
-
 **Purpose:** To provide printer output.
 
 **Description**
@@ -68,3 +66,15 @@ Spool output
 ```apl
       ⎕EX 'PR1'
 ```
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [OLEServer](../objects/oleserver.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Root](../objects/root.md), [TCPSocket](../objects/tcpsocket.md)
+
+Children: [Bitmap](../objects/bitmap.md), [Circle](../objects/circle.md), [Ellipse](../objects/ellipse.md), [Font](../objects/font.md), [Icon](../objects/icon.md), [Image](../objects/image.md), [Marker](../objects/marker.md), [Metafile](../objects/metafile.md), [Poly](../objects/poly.md), [Rect](../objects/rect.md), [Text](../objects/text.md), [Timer](../objects/timer.md)
+
+Properties: [Accelerator](../properties/accelerator.md), [ChildList](../properties/childlist.md), [Collate](../properties/collate.md), [ColorMode](../properties/colormode.md), [Coord](../properties/coord.md), [Copies](../properties/copies.md), [Data](../properties/data.md), [DevCaps](../properties/devcaps.md), [Duplex](../properties/duplex.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FontList](../properties/fontlist.md), [FontObj](../properties/fontobj.md), [Handle](../properties/handle.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Orientation](../properties/orientation.md), [PaperSize](../properties/papersize.md), [PaperSizes](../properties/papersizes.md), [PaperSource](../properties/papersource.md), [PaperSources](../properties/papersources.md), [PName](../properties/pname.md), [PrintRange](../properties/printrange.md), [PropList](../properties/proplist.md), [Resolution](../properties/resolution.md), [Resolutions](../properties/resolutions.md), [TextSize](../properties/textsize.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [XRange](../properties/xrange.md), [YRange](../properties/yrange.md)
+
+Methods: [Abort](../methodorevents/abort.md), [Detach](../methodorevents/detach.md), [GetTextSize](../methodorevents/gettextsize.md), [NewPage](../methodorevents/newpage.md), [Print](../methodorevents/print.md), [RTFPrintSetup](../methodorevents/rtfprintsetup.md), [Setup](../methodorevents/setup.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [Select](../methodorevents/select.md)

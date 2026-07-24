@@ -1,7 +1,5 @@
 # <span>CBits</span> <span>Property</span>
 
-**Applies To:** [Bitmap](../objects/bitmap.md), [Clipboard](../objects/clipboard.md), [Icon](../objects/icon.md)
-
 **Description**
 
 The CBits property represents the pixels that make up a picture..
@@ -16,3 +14,7 @@ For a [Bitmap](../objects/bitmap.md), the colour value of each pixel is obtained
 ```
 
 where `RED`, `GREEN` and `BLUE` are numbers in the range 0-255.
+
+**Application**
+
+Objects: [Bitmap](../objects/bitmap.md), [Clipboard](../objects/clipboard.md), [Icon](../objects/icon.md)

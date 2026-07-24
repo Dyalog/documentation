@@ -1,7 +1,5 @@
 # <span>PaperSize</span> <span>Property</span>
 
-**Applies To:** [Printer](../objects/printer.md)
-
 **Description**
 
 The PaperSize property specifies the size of paper to be used for printing
@@ -11,3 +9,7 @@ PaperSize may be a character vector containing the name of the paper size (for e
 The default value of PaperSize is the name of the paper size associated with the current printer settings.
 
 You can obtain a list of supported paper sizes from the [PaperSizes](papersizes.md) property.
+
+**Application**
+
+Objects: [Printer](../objects/printer.md)

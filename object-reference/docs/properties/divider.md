@@ -1,7 +1,5 @@
 # <span>Divider</span> <span>Property</span>
 
-**Applies To:** [ToolControl](../objects/toolcontrol.md)
-
 **Description**
 
 The Divider property controls the presence or absence of a recessed line drawn above, below, to the left of, or to the right of a [ToolControl](../objects/toolcontrol.md) object.
@@ -13,3 +11,7 @@ The pictures below illustrates a [ToolControl](../objects/toolcontrol.md) drawn 
 ![](../img/tool1.gif)
 
 ![](../img/tool5.gif)
+
+**Application**
+
+Objects: [ToolControl](../objects/toolcontrol.md)

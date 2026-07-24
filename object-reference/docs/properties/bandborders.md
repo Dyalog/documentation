@@ -1,7 +1,5 @@
 # <span>BandBorders</span> <span>Property</span>
 
-**Applies To:** [CoolBar](../objects/coolbar.md)
-
 **Description**
 
 The BandBorders property specifies whether or not narrow lines are drawn to separate adjacent bands in a [CoolBar](../objects/coolbar.md).
@@ -13,3 +11,7 @@ The effect of BandBorders is illustrated below.
 ![](../img/cool2.gif)
 
 ![](../img/cool3.gif)
+
+**Application**
+
+Objects: [CoolBar](../objects/coolbar.md)

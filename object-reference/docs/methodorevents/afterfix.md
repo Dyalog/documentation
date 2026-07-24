@@ -5,8 +5,6 @@ search:
 
 # <span>AfterFix</span> <span>Event 822</span>
 
-**Applies To:** [Editor](../../../windows-ui-guide/the-session-object/session-object)
-
 **Description**
 
 If enabled, this event is reported immediately after the Editor has successfully fixed a new object, or a new version of an object, in the workspace.
@@ -23,3 +21,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |`[5]`|Old Name |a character vector containing the original name of the object when it was opened by the Editor                   |
 |`[6]`|New Name |a character vector containing the  name of the object which was fixed. This is empty if the object is a variable.|
 |`[7]`|File Name|a character vector containing the name of the file (if any) associated with the object.                          |
+
+**Application**
+
+Objects: [Editor](../../../windows-ui-guide/the-session-object/session-object)

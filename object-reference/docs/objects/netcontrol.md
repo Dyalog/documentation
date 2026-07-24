@@ -1,8 +1,5 @@
 # <span>NetControl</span> <span>Object</span>
 
-|---------------------------------------|---------------------------------------|----------------------------------------|
-|[Parents](../parentlists/netcontrol.md)|[Children](../childlists/netcontrol.md)|[Properties](../proplists/netcontrol.md)|
-
 **Purpose:** The NetControl object provides the means to instantiate a .NET control         in the Dyalog GUI.
 
 **Description**
@@ -79,3 +76,11 @@ In most cases, you may use a NetControl in the cells of a [ Grid](grid.md) objec
 
 Implementation note: The instance of the .NET control is actually placed inside an instance of the .NET class System.Windows.Forms.ContainerControl. This ContainerControl is then embedded in the Dyalog parent, such as a
 [Form](form.md). This "extra level" should have no effect on how the control is used or on how it behaves.
+
+**Application**
+
+Parents: [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md)
+
+Children: [NetClient](../objects/netclient.md), [OLEClient](../objects/oleclient.md), [Timer](../objects/timer.md)
+
+Properties: [Attach](../properties/attach.md), [ChildList](../properties/childlist.md), [ClassName](../properties/classname.md), [Coord](../properties/coord.md), [EventList](../properties/eventlist.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Type](../properties/type.md)

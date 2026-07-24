@@ -1,7 +1,5 @@
 # <span>Bitmap</span> <span>Object</span>
 
-[Parents](../parentlists/bitmap.md), [Children](../childlists/bitmap.md), [Properties](../proplists/bitmap.md), [Methods](../methodlists/bitmap.md), [Events](../eventlists/bitmap.md)
-
 **Purpose:** A graphical object used to represent a bitmap which may be used both to display a picture or as a pattern (brush) used to fill other objects.
 
 **Description**
@@ -45,3 +43,15 @@ The [Picture](../properties/picture.md) property specifies the name of a Bitmap 
 The [BtnPix](../properties/btnpix.md) property specifies three Bitmaps to be used to represent the 3 states of a [Button](button.md), [Menu](menu.md) or [MenuItem](menuitem.md).
 
 The [FStyle](../properties/fstyle.md) property specifies the name of a Bitmap to be used as a pattern to fill a [Poly](poly.md), [Ellipse](ellipse.md) or [Rect](rect.md) object.
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/animation.md), [Button](../objects/button.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [ImageList](../objects/imagelist.md), [ListView](../objects/listview.md), [Menu](../objects/menu.md), [MenuBar](../objects/menubar.md), [MenuItem](../objects/menuitem.md), [NetType](../objects/nettype.md), [OLEServer](../objects/oleserver.md), [Printer](../objects/printer.md), [ProgressBar](../objects/progressbar.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [RichEdit](../objects/richedit.md), [Root](../objects/root.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolButton](../objects/toolbutton.md), [ToolControl](../objects/toolcontrol.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)
+
+Children: [Circle](../objects/circle.md), [Ellipse](../objects/ellipse.md), [Font](../objects/font.md), [Image](../objects/image.md), [Marker](../objects/marker.md), [Metafile](../objects/metafile.md), [Poly](../objects/poly.md), [Rect](../objects/rect.md), [Text](../objects/text.md), [Timer](../objects/timer.md)
+
+Properties: [Accelerator](../properties/accelerator.md), [Bits](../properties/bits.md), [CBits](../properties/cbits.md), [ChildList](../properties/childlist.md), [CMap](../properties/cmap.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [File](../properties/file.md), [FontObj](../properties/fontobj.md), [KeepBits](../properties/keepbits.md), [KeepOnClose](../properties/keeponclose.md), [MaskCol](../properties/maskcol.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [TextSize](../properties/textsize.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [XRange](../properties/xrange.md), [YRange](../properties/yrange.md)
+
+Methods: [Detach](../methodorevents/detach.md), [FileRead](../methodorevents/fileread.md), [FileWrite](../methodorevents/filewrite.md), [GetTextSize](../methodorevents/gettextsize.md), [MakeGIF](../methodorevents/makegif.md), [MakePNG](../methodorevents/makepng.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [Select](../methodorevents/select.md)

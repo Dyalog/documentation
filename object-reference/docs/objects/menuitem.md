@@ -1,7 +1,5 @@
 # <span>MenuItem</span> <span>Object</span>
 
-[Parents](../parentlists/menuitem.md), [Children](../childlists/menuitem.md), [Properties](../proplists/menuitem.md), [Methods](../methodlists/menuitem.md), [Events](../eventlists/menuitem.md)
-
 **Purpose:** This object allows the user to initiate an action or to select an option from a menu.
 
 **Description**
@@ -23,3 +21,15 @@ Alternatively, you may display an image alongside the [Caption](../properties/ca
 [EdgeStyle](../properties/edgestyle.md), [BtnPix](../properties/btnpix.md), [FontObj](../properties/fontobj.md), [FCol](../properties/fcol.md) and [BCol](../properties/bcol.md) are not effective if the MenuItem is the direct child of a [MenuBar](menubar.md).
 
 A MenuItem generates a [Select](../methodorevents/select.md) event (if enabled) when the user chooses it.
+
+**Application**
+
+Parents: [Menu](../objects/menu.md), [MenuBar](../objects/menubar.md)
+
+Children: [Bitmap](../objects/bitmap.md), [Timer](../objects/timer.md)
+
+Properties: [Accelerator](../properties/accelerator.md), [Active](../properties/active.md), [Align](../properties/align.md), [BCol](../properties/bcol.md), [BtnPix](../properties/btnpix.md), [Caption](../properties/caption.md), [Checked](../properties/checked.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FontObj](../properties/fontobj.md), [Hint](../properties/hint.md), [HintObj](../properties/hintobj.md), [ImageIndex](../properties/imageindex.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Style](../properties/style.md), [Tip](../properties/tip.md), [TipObj](../properties/tipobj.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
+
+Methods: [Detach](../methodorevents/detach.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [Select](../methodorevents/select.md)

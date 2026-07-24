@@ -1,7 +1,5 @@
 # <span>CharSet</span> <span>Property</span>
 
-**Applies To:** [Font](../objects/font.md)
-
 **Description**
 
 CharSet is an integer that specifies the character encoding of the [Font](../objects/font.md) object.
@@ -59,3 +57,7 @@ according to the value of CharSet.
 
 !!! note
     Setting Translate to 'ANSI' means that characters entered into the Edit fields using a corresponding  National Language keyboard (Greek and Arabic) will appear in that language as intended.
+
+**Application**
+
+Objects: [Font](../objects/font.md)

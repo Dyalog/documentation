@@ -1,7 +1,5 @@
 # <span>ExitApp</span> <span>Event 132</span>
 
-**Applies To:** [Root](../objects/root.md)
-
 **Description**
 
 If enabled, this event is reported when the user attempts to terminate a Dyalog APL/W application from the Windows Task List.
@@ -17,3 +15,7 @@ The event message reported as the result of [`⎕DQ`](../../../language-referenc
 |-----|------|-----------------------|
 |`[1]`|Object|ref or character vector|
 |`[2]`|Event |`'ExitApp'` or 132     |
+
+**Application**
+
+Objects: [Root](../objects/root.md)

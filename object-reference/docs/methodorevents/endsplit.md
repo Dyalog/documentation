@@ -1,7 +1,5 @@
 # <span>EndSplit</span> <span>Event 282</span>
 
-**Applies To:** [Splitter](../objects/splitter.md)
-
 **Description**
 
 If enabled, this event is reported when the user releases the left mouse button to signify the end of a drag operation on a [Splitter](../objects/splitter.md) object.
@@ -19,3 +17,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |`[6]`|W     |width of the Splitter        |
 
 See also [StartSplit](./startsplit.md), [Splitting](./splitting.md).
+
+**Application**
+
+Objects: [Splitter](../objects/splitter.md)

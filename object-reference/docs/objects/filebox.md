@@ -1,7 +1,5 @@
 # <span>FileBox</span> <span>Object</span>
 
-[Parents](../parentlists/filebox.md), [Children](../childlists/filebox.md), [Properties](../proplists/filebox.md), [Methods](../methodlists/filebox.md), [Events](../eventlists/filebox.md)
-
 **Purpose:** Prompts user to select a file.
 
 **Description**
@@ -29,3 +27,15 @@ The [Index](../properties/index-property.md) property determines which of the fi
 Note that when [`⎕DQ`](../../../language-reference-guide/system-functions/dq) terminates with [FileBoxOK](../methodorevents/fileboxok.md), the [File](../properties/file.md), [Directory](../properties/directory.md), and [Index](../properties/index-property.md) properties are updated to reflect the contents of the fields within the FileBox.
 
 The operating system imposes limits on both the length of the name of the file, and on the total path length. In version {{ version_majmin }}attempting to set the `File` or `Directory` Properties to too long a name will generate a DOMAIN ERROR, while attempting to use too long a File name within the FileBox will result in the appearence of an error MessageBox.
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [OLEServer](../objects/oleserver.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Root](../objects/root.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
+
+Children: [Timer](../objects/timer.md)
+
+Properties: [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Directory](../properties/directory.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [File](../properties/file.md), [FileMode](../properties/filemode.md), [Filters](../properties/filters.md), [Index](../properties/index-property.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Style](../properties/style.md), [Type](../properties/type.md)
+
+Methods: [Detach](../methodorevents/detach.md), [Wait](../methodorevents/wait.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [FileBoxCancel](../methodorevents/fileboxcancel.md), [FileBoxOK](../methodorevents/fileboxok.md), [Select](../methodorevents/select.md)

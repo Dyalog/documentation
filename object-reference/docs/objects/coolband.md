@@ -1,7 +1,5 @@
 # <span>CoolBand</span> <span>Object</span>
 
-[Parents](../parentlists/coolband.md), [Children](../childlists/coolband.md), [Properties](../proplists/coolband.md), [Methods](../methodlists/coolband.md), [Events](../eventlists/coolband.md)
-
 **Purpose:** The CoolBand object represents an area in a CoolBar that contains a         child window.
 
 **Description**
@@ -70,3 +68,15 @@ the [Index](../properties/index-property.md) and [NewLine](../properties/newline
 If you wish to remember the user's chosen layout when your application
 terminates, you must store the values of [Index](../properties/index-property.md), [Size](../properties/size.md) and [NewLine](../properties/newline.md) for each of the CoolBands. When your application is next started, you must
 re-create the CoolBands with the same values of these properties.
+
+**Application**
+
+Parents: [CoolBar](../objects/coolbar.md)
+
+Children: [Bitmap](../objects/bitmap.md), [BrowseBox](../objects/browsebox.md), [Button](../objects/button.md), [Clipboard](../objects/clipboard.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [Cursor](../objects/cursor.md), [Edit](../objects/edit.md), [FileBox](../objects/filebox.md), [Font](../objects/font.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [Icon](../objects/icon.md), [ImageList](../objects/imagelist.md), [Label](../objects/label.md), [List](../objects/list.md), [ListView](../objects/listview.md), [Menu](../objects/menu.md), [Metafile](../objects/metafile.md), [MsgBox](../objects/msgbox.md), [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md), [Printer](../objects/printer.md), [ProgressBar](../objects/progressbar.md), [RichEdit](../objects/richedit.md), [Scroll](../objects/scroll.md), [Spinner](../objects/spinner.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TabControl](../objects/tabcontrol.md), [TCPSocket](../objects/tcpsocket.md), [Timer](../objects/timer.md), [TipField](../objects/tipfield.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)
+
+Properties: [BCol](../properties/bcol.md), [Caption](../properties/caption.md), [ChildEdge](../properties/childedge.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Dockable](../properties/dockable.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [GripperMode](../properties/grippermode.md), [ImageIndex](../properties/imageindex.md), [Index](../properties/index-property.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [NewLine](../properties/newline.md), [Picture](../properties/picture.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Type](../properties/type.md), [UndocksToRoot](../properties/undockstoroot.md), [Visible](../properties/visible.md)
+
+Methods: [Detach](../methodorevents/detach.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [DockAccept](../methodorevents/dockaccept.md), [DockCancel](../methodorevents/dockcancel.md), [DockEnd](../methodorevents/dockend.md), [DockMove](../methodorevents/dockmove.md), [DockRequest](../methodorevents/dockrequest.md), [DockStart](../methodorevents/dockstart.md)

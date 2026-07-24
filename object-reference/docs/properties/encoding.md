@@ -1,7 +1,5 @@
 # <span>Encoding</span> <span>Property</span>
 
-**Applies To:** [TCPSocket](../objects/tcpsocket.md)
-
 **Description**
 
 The Encoding property is a character vector that specifies how character data
@@ -46,3 +44,7 @@ Char  None
       s0.(Style Encoding)
 Apl  Classic
 ```
+
+**Application**
+
+Objects: [TCPSocket](../objects/tcpsocket.md)

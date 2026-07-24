@@ -1,7 +1,5 @@
 # <span>CellError</span> <span>Event 157</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 If enabled, this event is reported when the user inserts invalid data into the [Edit](../objects/edit.md) object associated with a cell in a [Grid](../objects/grid.md) object and then attempts to move to another cell or to another control outside the [Grid](../objects/grid.md). It is also reported if the user selects a [MenuItem](../objects/menuitem.md).
@@ -25,3 +23,7 @@ If the user moves to another cell in the [Grid](../objects/grid.md), the 6th ele
 If the user switches the input focus to another control or selects a [MenuItem](../objects/menuitem.md), the 6th element of the event message contains the name of that control or [MenuItem](../objects/menuitem.md). If the user switches to another application, the 6th element of the event message is an empty character vector. In all these cases, the 7th and 8th elements are 0.
 
 The 5th element of the event message contains the character vector in the [Text](../objects/text.md) property of the associated [Edit](../objects/edit.md) object which is inconsistent with its [FieldType](../properties/fieldtype.md).
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

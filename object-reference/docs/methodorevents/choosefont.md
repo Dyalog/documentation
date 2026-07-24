@@ -1,7 +1,5 @@
 # <span>ChooseFont</span> <span>Method 240</span>
 
-[**Applies To**](../methodoreventapplies/choosefont.md)
-
 **Description**
 
 This method is used to display the standard Windows font selection dialog box.
@@ -29,3 +27,7 @@ When the user presses the "OK" button, the "Cancel" button or closes the dialog 
 |`[8]`|Character set (see [CharSet](../properties/charset.md) )|
 
 If the modify flag was 1, the [Font](../objects/font.md) object is redefined to match the user's selections and all the objects that reference the [Font](../objects/font.md) are redrawn.
+
+**Application**
+
+Objects: [ActiveXControl](../objects/activexcontrol.md), [Button](../objects/button.md), [ButtonEdit](../objects/buttonedit.md), [Calendar](../objects/calendar.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [DateTimePicker](../objects/datetimepicker.md), [Edit](../objects/edit.md), [Font](../objects/font.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [Label](../objects/label.md), [List](../objects/list.md), [ListView](../objects/listview.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [RichEdit](../objects/richedit.md), [Root](../objects/root.md), [Spinner](../objects/spinner.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TabBtn](../objects/tabbtn.md), [Text](../objects/text.md), [TipField](../objects/tipfield.md), [TreeView](../objects/treeview.md)

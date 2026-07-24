@@ -1,7 +1,5 @@
 # <span>TCPClose</span> <span>Event 374</span>
 
-**Applies To:** [TCPSocket](../objects/tcpsocket.md)
-
 **Description**
 
 If enabled, this event is reported when the remote end of a TCP/IP connection breaks the connection.
@@ -13,3 +11,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |-----|------|-----------------------|
 |`[1]`|Object|ref or character vector|
 |`[2]`|Event |`'TCPClose'` or 374    |
+
+**Application**
+
+Objects: [TCPSocket](../objects/tcpsocket.md)

@@ -1,7 +1,5 @@
 # <span>MultiColumn</span> <span>Property</span>
 
-**Applies To:** [List](../objects/list.md)
-
 **Description**
 
 MultiColumn is Boolean and specifies whether or not a List object displays its items in a single column (0, the default) or in multiple columns (1). MultiColumn may only be set by `⎕WC` and cannot be changed using `⎕WS` after the object has been created. Note that a MultiColumn List will use the minimum number of columns that are required to make the items fit within it and will reconfigure itself automatically when resized.
@@ -13,3 +11,7 @@ The following example illustrates its use.
 ```
 
 ![](../img/multicol.gif)
+
+**Application**
+
+Objects: [List](../objects/list.md)

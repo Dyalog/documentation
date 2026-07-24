@@ -1,7 +1,5 @@
 # <span>HTMLRenderer</span> <span>Object</span>
 
-[Parents](../parentlists/htmlrenderer.md), [Children](../childlists/htmlrenderer.md), [Properties](../proplists/htmlrenderer.md), [Methods](../methodlists/htmlrenderer.md), [Events](../eventlists/htmlrenderer.md)
-
 **Purpose:** The HTMLRenderer Object is a cross-platform mechanism for producing Graphical User Interfaces (GUI), based on HyperText Markup Language (HTML).
 
 **Description**
@@ -90,3 +88,15 @@ When the HTMLRenderer is displayed in its own window, the  window caption is set
 ![](../img/htmlrenderer1.png)
 
 For more information on the HTMLRenderer, see the [_HTMLRenderer User Guide_](../../../files/HTMLRenderer_User_Guide.pdf).
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [Root](../objects/root.md), [SubForm](../objects/subform.md)
+
+Children: [Timer](../objects/timer.md)
+
+Properties: [Active](../properties/active.md), [AllowContextMenu](../properties/allowcontextmenu.md), [AsChild](../properties/aschild.md), [Attach](../properties/attach.md), [Border](../properties/border.md), [Caption](../properties/caption.md), [CEFVersion](../properties/cefversion.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [HTML](../properties/html.md), [IconObj](../properties/iconobj.md), [InterceptedURLs](../properties/interceptedurls.md), [IsLoading](../properties/isloading.md), [KeepOnClose](../properties/keeponclose.md), [MaxButton](../properties/maxbutton.md), [MethodList](../properties/methodlist.md), [MinButton](../properties/minbutton.md), [Moveable](../properties/moveable.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Sizeable](../properties/sizeable.md), [SysMenu](../properties/sysmenu.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [URL](../properties/url.md), [Visible](../properties/visible.md)
+
+Methods: [Detach](../methodorevents/detach.md), [ExecuteJavaScript](../methodorevents/executejavascript.md), [GetZoomLevel](../methodorevents/getzoomlevel.md), [PrintToPDF](../methodorevents/printtopdf.md), [SetZoomLevel](../methodorevents/setzoomlevel.md), [ShowDevTools](../methodorevents/showdevtools.md), [Wait](../methodorevents/wait.md), [WebSocketClose](../methodorevents/websocketclose.md), [WebSocketSend](../methodorevents/websocketsend.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [DoPopup](../methodorevents/dopopup.md), [HTTPRequest](../methodorevents/httprequest.md), [LoadEnd](../methodorevents/loadend.md), [SelectCertificate](../methodorevents/selectcertificate.md), [WebSocketError](../methodorevents/websocketerror.md), [WebSocketReceive](../methodorevents/websocketreceive.md), [WebSocketUpgrade](../methodorevents/websocketupgrade.md)

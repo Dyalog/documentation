@@ -1,7 +1,5 @@
 # <span>SelectCertificate</span> <span>Event 848</span>
 
-**Applies To:** [HTMLRenderer](../objects/htmlrenderer.md)
-
 **Description**
 
 This event is triggered when [HTMLRenderer](../objects/htmlrenderer.md) requests a resource from a server that requires a certificate.
@@ -44,3 +42,7 @@ The application should respond to this event by selecting a certficate from the 
 [2]    arg[3]←0 ⍝ Select the first certificate
      ∇
 ```
+
+**Application**
+
+Objects: [HTMLRenderer](../objects/htmlrenderer.md)

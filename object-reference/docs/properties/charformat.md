@@ -1,7 +1,5 @@
 # <span>CharFormat</span> <span>Property</span>
 
-**Applies To:** [RichEdit](../objects/richedit.md)
-
 **Description**
 
 The CharFormat property describes or applies formatting to the currently selected text in a [RichEdit](../objects/richedit.md) object. If the selection is empty, it reports or specifies the default character formatting for the object. It is a 5-element nested array structured as follows:
@@ -24,3 +22,7 @@ You need only specify the number of elements required, but you must insert prope
 If there is no text selected, CharFormat specifies the *default* character format, that is, the format that will be used to draw the next (and subsequent) characters that the user enters. If there *is* text selected it specifies the format of the selected block of text. If the format is not strictly homogeneous, `⎕WG` may report the format of the first character in the selected block, or, if the block contains characters which use completely different fonts, the result of `(⎕WG 'CharFormat')` will be empty.
 
 `(⎕WS 'CharFormat' ...)` will set the format of the currently selected block of text. To set the format of an arbitrary block of text you must select it first using `(⎕WS 'SelText' ...)`.
+
+**Application**
+
+Objects: [RichEdit](../objects/richedit.md)

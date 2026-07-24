@@ -1,7 +1,5 @@
 # <span>TCPRecv</span> <span>Event 373</span>
 
-**Applies To:** [TCPSocket](../objects/tcpsocket.md)
-
 **Description**
 
 If enabled, this event is reported when data is received by a [TCPSocket](../objects/tcpsocket.md) object.
@@ -31,3 +29,7 @@ this information will be identical to the values of the [RemoteAddr](../properti
 If the [SocketType](../properties/sockettype.md) is `'UDP'` and there is potentially more than one partner sending you data, the IP address
 and port number information provided by the TCPRecv event is more reliable than
 the current values of [RemoteAddr](../properties/remoteaddr.md) and [RemotePort](../properties/remoteport.md) as these may already have changed.
+
+**Application**
+
+Objects: [TCPSocket](../objects/tcpsocket.md)

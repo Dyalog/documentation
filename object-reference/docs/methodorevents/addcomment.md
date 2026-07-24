@@ -1,7 +1,5 @@
 # <span>AddComment</span> <span>Method 220</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 This method is used to add a new comment to a [Grid](../objects/grid.md).
@@ -32,3 +30,7 @@ You can use a dfn to add several comments in one statement; for example:
 Note that just before the comment is displayed, the [Grid](../objects/grid.md) generates a [ShowComment](./showcomment.md) event which gives you the opportunity to (temporarily) change the text and/or window size of a comment dynamically.
 
 The comment text specified by the 5th element of the argument to [`⎕NQ`](../../../language-reference-guide/system-functions/nq) must be a simple character scalar, vector, matrix or vector of vectors. Text specified by a simple character vector will be wrapped automatically if necessary. A matrix or vector of vectors may be used to explicitly specify multi-line text. If the array is a vector whose first element is an opening brace ({), the text is assumed to be in rich-text format (RTF) and is displayed accordingly. Note that there is no way for the user to scroll the text in the comment window and it is entirely your responsibility to ensure that the size of the window is appropriate for its contents.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

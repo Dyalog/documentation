@@ -1,7 +1,5 @@
 # <span>LocalAddr</span> <span>Property</span>
 
-**Applies To:** [TCPSocket](../objects/tcpsocket.md)
-
 **Description**
 
 The LocalAddr property is a character vector that specifies the IP address of your computer. Its default value is `'0.0.0.0'`.
@@ -11,3 +9,7 @@ Unless your computer has more than one network adapter each identified by a diff
 Note that you may also set the value of LocalAddr to an empty character vector. In this case, the value returned by `⎕WG` will be `'0.0.0.0'`.
 
 LocalAddr may only be specified in the `⎕WC` statement that creates the [TCPSocket](../objects/tcpsocket.md) and may not subsequently be changed using `⎕WS`.
+
+**Application**
+
+Objects: [TCPSocket](../objects/tcpsocket.md)

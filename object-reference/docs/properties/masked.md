@@ -1,7 +1,5 @@
 # <span>Masked</span> <span>Property</span>
 
-**Applies To:** [ImageList](../objects/imagelist.md)
-
 **Description**
 
 The Masked property specifies whether or not the [ImageList](../objects/imagelist.md) will contain opaque or transparent images. It may be 0, 1(the default), 2, or 3.
@@ -17,3 +15,7 @@ If Masked is 2,  the [ImageList](../objects/imagelist.md) expects [Bitmap](../ob
 If Masked is 3 and [Native Look and Feel ](../miscellaneous/windows-xp-look-and-feel.md)
 
  is enabled, the behaviour is the same as if Masked were 2. If Native Look and Feel is not enabled, it behaves as if Masked were 1. This setting provides the greatest degree of portability for applications whose users may or may not have Native Look and Feel enabled. This value is used for the ImageLists on the Dyalog Session CoolBars.
+
+**Application**
+
+Objects: [ImageList](../objects/imagelist.md)

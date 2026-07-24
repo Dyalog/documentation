@@ -1,7 +1,5 @@
 # <span>Locale</span> <span>Property</span>
 
-**Applies To:** [OLEClient](../objects/oleclient.md)
-
 **Description**
 
 The Locale property specifies the language in which the OLE server, attached to an OLEClient, exposes its methods (functions) and properties (variables).
@@ -29,3 +27,7 @@ Note that Dyalog cannot guarantee that you will actually be given the Locale you
 |Russian   |25    |
 |Spanish   |10    |
 |Swedish   |29    |
+
+**Application**
+
+Objects: [OLEClient](../objects/oleclient.md)

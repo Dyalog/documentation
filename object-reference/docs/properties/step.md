@@ -1,7 +1,5 @@
 # <span>Step</span> <span>Property</span>
 
-[**Applies To**](../propertyapplies/step.md)
-
 **Description**
 
 This property determines the size of changes reported when the user clicks a scroll arrow (small change) or clicks on the body of the scrollbar (large change). The object's [Thumb](thumb.md) property increases or decreases by this amount.
@@ -13,3 +11,7 @@ For a [Form](../objects/form.md) or [SubForm](../objects/subform.md), Step is a 
 For the above objects, values of Step must be between 1 and the value of the [Range](range.md) property.
 
 For a [Locator](../objects/locator.md) object, Step is a 2-element integer vector (default value 1 1) that specifies the increments (in pixels) by which the size or position of the [Locator](../objects/locator.md) changes in the Y and X directions respectively as the user moves the [Locator](../objects/locator.md).
+
+**Application**
+
+Objects: [Form](../objects/form.md), [Locator](../objects/locator.md), [ProgressBar](../objects/progressbar.md), [Scroll](../objects/scroll.md), [Spinner](../objects/spinner.md), [SubForm](../objects/subform.md), [TrackBar](../objects/trackbar.md), [UpDown](../objects/updown.md)

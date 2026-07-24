@@ -1,7 +1,5 @@
 # <span>HasClearButton</span> <span>Property</span>
 
-**Applies To:** [ButtonEdit](../objects/buttonedit.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [Edit](../objects/edit.md)
-
 **Description**
 
 Specifies whether or not a ![](../img/clearbutton.png) button is displayed in the right-hand end of an edit box. Clicking this button clears the text from the field.
@@ -14,3 +12,7 @@ HasClearButton is Boolean. 1 means that a ![](../img/clearbutton.png) button wil
 HasClearButton is only effective for Edit objects with Style Single; it is silently ignored for other Styles of Edit objects.
 
 ![](../img/hasclearbutton.png)
+
+**Application**
+
+Objects: [ButtonEdit](../objects/buttonedit.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [Edit](../objects/edit.md)

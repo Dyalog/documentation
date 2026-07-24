@@ -1,7 +1,5 @@
 # <span>Picture</span> <span>Property</span>
 
-[**Applies To**](../propertyapplies/picture.md)
-
 **Description**
 
 The Picture property specifies a bitmap, icon, or other image for an object.
@@ -29,3 +27,7 @@ Note that if Picture is set on a [Button](../objects/button.md) whose [Style](st
 For an [Image](../objects/image.md) object, the Picture property specifies the name of, or ref to, a [Bitmap](../objects/bitmap.md), [Icon](../objects/icon.md) or [Metafile](../objects/metafile.md) object to be drawn, or a vector of names or refs. The [Image](../objects/image.md) is a graphical object and is drawn *on top of* the background. It does not support the drawmode options provided by the objects in which Picture specifies the background.
 
 For the [Clipboard](../objects/clipboard.md) object, Picture is a "set-only" property that allows you to place a specified [Bitmap](../objects/bitmap.md) object into the Windows clipboard. To place a [Metafile](../objects/metafile.md) object into the clipboard, use its [Metafile](../objects/metafile.md) property.
+
+**Application**
+
+Objects: [ActiveXControl](../objects/activexcontrol.md), [Button](../objects/button.md), [Clipboard](../objects/clipboard.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Group](../objects/group.md), [Image](../objects/image.md), [MDIClient](../objects/mdiclient.md), [SM](../objects/sm.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [StatusField](../objects/statusfield.md), [SubForm](../objects/subform.md), [TabBar](../objects/tabbar.md), [ToolBar](../objects/toolbar.md)
