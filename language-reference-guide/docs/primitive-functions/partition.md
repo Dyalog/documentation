@@ -27,32 +27,32 @@ Note that if `⎕ML≥3`, the symbol `⊂` means the same as `⊆`.
 <h2 class="example">Examples</h2>
 ```apl
       ⎕ML←3
- 
-      ]Display 1 1 1 2 2 3 3 3⊆'NOWISTHE'
-┌→─────────────────┐
-│ ┌→──┐ ┌→─┐ ┌→──┐ │
-│ │NOW│ │IS│ │THE│ │
-│ └───┘ └──┘ └───┘ │
-└∊─────────────────┘
- 
-      ]Display 1 1 1 0 0 3 3 3⊆'NOWISTHE'
-┌→────────────┐
-│ ┌→──┐ ┌→──┐ │
-│ │NOW│ │THE│ │
-│ └───┘ └───┘ │
-└∊────────────┘
- 
+      ]Boxing ON
+Was OFF
+      1 1 1 2 2 3 3 3⊆'NOWISTHE'
+┌───┬──┬───┐
+│NOW│IS│THE│
+└───┴──┴───┘
+      1 1 1 0 0 3 3 3⊆'NOWISTHE'
+┌───┬───┐
+│NOW│THE│
+└───┴───┘
       TEXT←'   NOW     IS      THE      TIME    '
-      ]Display (' '≠TEXT)⊆TEXT
-┌→────────────────────────┐
-│ ┌→──┐ ┌→─┐ ┌→──┐ ┌→───┐ │
-│ │NOW│ │IS│ │THE│ │TIME│ │
-│ └───┘ └──┘ └───┘ └────┘ │
-└∊────────────────────────┘
- 
+      (' '≠TEXT)⊆TEXT
+┌───┬──┬───┬────┐
+│NOW│IS│THE│TIME│
+└───┴──┴───┴────┘
 ```
-```apl
 
+
+```apl
+      NMAT←[
+      0  100 150
+      0    0 350
+      0 1000 500
+      ]
+      COLS←'Jan' 'Feb' 'Mar'
+      ROWS←'Cakes' 'Biscuits' 'Buns'
       ]Display CMAT←⎕FMT(' ',ROWS),COLS⍪NMAT
 ┌→─────────────────────────┐
 ↓           Jan   Feb  Mar │
@@ -60,9 +60,6 @@ Note that if `⎕ML≥3`, the symbol `⊂` means the same as `⊆`.
 │ Biscuits    0     0  350 │
 │ Buns        0  1000  500 │
 └──────────────────────────┘
-
-```
-```apl
 
       ]Display (∨⌿' '≠CMAT)⊆CMAT   ⍝ Split at blank cols.
 ┌→──────────────────────────────┐
@@ -104,9 +101,6 @@ Note that if `⎕ML≥3`, the symbol `⊂` means the same as `⊆`.
 │ └~────┘ └~─┘ │
 └∊─────────────┘
 
-```
-```apl
- 
       ]Display 1 1 0 1⊆[1]N
 ┌→────────────────────────┐
 ↓ ┌→──┐ ┌→──┐ ┌→──┐ ┌→──┐ │
