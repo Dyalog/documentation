@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍪ table
-</div>
 
 # <span>Table</span> `R←⍪Y`{{key}}
 
@@ -40,3 +37,8 @@ search:
 │ └~──────────────────────────────────┘        │
 └∊─────────────────────────────────────────────┘
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍪ table
+</div>

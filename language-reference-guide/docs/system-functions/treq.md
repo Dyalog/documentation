@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕TREQ TREQ
-</div>
 
 # <span>Token Requests</span> `R←⎕TREQ Y`{{key}}
 
@@ -17,3 +13,8 @@ search:
 ```apl
     ⎕TREQ ⎕TNUMS    ⍝ tokens required by all threads.
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕TREQ TREQ
+</div>

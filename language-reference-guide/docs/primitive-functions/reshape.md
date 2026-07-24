@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍴ rho reshape
-</div>
 
 # <span>Reshape</span> `R←X⍴Y`{{key}}
 
@@ -24,3 +21,8 @@ search:
 0 0 0
 0 0 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍴ rho reshape
+</div>

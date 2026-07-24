@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕TSYNC TSYNC
-</div>
 
 # <span>Wait for Threads to Terminate</span> `R←⎕TSYNC Y`{{key}}
 
@@ -75,3 +71,8 @@ or
 ```
 
 or by error-trapping the `VALUE ERROR`.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕TSYNC TSYNC
+</div>

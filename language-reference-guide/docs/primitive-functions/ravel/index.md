@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  , ravel
-</div>
 
 # <span>Ravel</span> `R←,Y`{{key}}
 
@@ -32,3 +29,8 @@ ABCDEFGHIJKL
 ```
 
 See also: [Ravel with Axes](ravel-with-axes.md).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  , ravel
+</div>

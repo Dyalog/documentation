@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕BASE BASE
-</div>
 
 # <span>Base Class</span> `R←⎕BASE.Y`{{key}}
 
@@ -41,3 +37,8 @@ Squark!
       Polly.Speak
 Squark! Who's a pretty boy, then!
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕BASE BASE
+</div>

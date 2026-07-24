@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NCREATE NCREATE
-</div>
 
 # <span>Native File Create</span> `{R}←X ⎕NCREATE Y`{{key}}
 
@@ -63,3 +59,8 @@ FILE NAME ERROR: myfile: Unable to create file ("The file exists.")
 
 - Setting IfExists to `Replace` has no effect when Unique is 1, because the file cannot already exist.
 - The IfExists option does not affect the operation of *slippery ties*.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NCREATE NCREATE
+</div>

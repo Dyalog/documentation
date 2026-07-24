@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NA NA
-</div>
 
 # <span>Name Association</span> `{R}←{X}⎕NA Y`{{key}}
 
@@ -953,3 +949,8 @@ A result is returned from the function *only* if all the calls are successful Ot
 ⎕NA'I4 winnm    |sndPlaySound         <0T U4'
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NA NA
+</div>

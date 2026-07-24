@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FMT FMT
-</div>
 
 # <span>Format (Monadic)</span> `R←⎕FMT Y`{{key}}
 
@@ -39,3 +35,8 @@ search:
       ⍴B
 3 12
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FMT FMT
+</div>

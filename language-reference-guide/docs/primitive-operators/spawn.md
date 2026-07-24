@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  &
-  spawn
-</div>
 
 # <span>Spawn</span> `{R}←{X}f&Y`{{key}}
 
@@ -40,3 +36,9 @@ Note that `&` can be used in conjunction with the **each** operator `¨` to laun
  
       PRT&¨↓⎕NL 9 ⍝ PRT spaces in parallel.
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  &
+  spawn
+</div>

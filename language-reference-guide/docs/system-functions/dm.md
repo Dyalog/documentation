@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕DM DM
-</div>
 
 # <span>Diagnostic Message</span> `R←⎕DM`{{key}}
 
@@ -24,3 +20,8 @@ DOMAIN ERROR
 ```
 
 Note: `⎕SIGNAL` can be used to reset the value of this system constant.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕DM DM
+</div>

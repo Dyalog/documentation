@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  = equals
-</div>
 
 # <span>Equal To</span> `R←X=Y`{{key}}
 
@@ -52,3 +49,8 @@ For complex numbers `X=Y` is 1 if the magnitude of `X-Y` does not exceed `⎕CT`
 0
  
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  = equals
+</div>

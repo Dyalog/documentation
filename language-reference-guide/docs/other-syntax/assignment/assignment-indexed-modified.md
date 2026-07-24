@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<div style="display: none;">
-  ← gets
-</div>
-
 # <span>Assignment (Indexed Modified)</span> `{R}←X[I]f←Y`{{key}}
 
 `f` may be any dyadic function which returns an explicit result.  `Y` may be any array whose items are appropriate to function `f`.  `X` must be the *name* of an existing array.  `I` must be a valid index specification.  The items of the indexed portion of `X` must be appropriate to function `f`.
@@ -46,3 +42,8 @@ As the operator performs a loop, if an index in `I` is repeated, function `f` wi
 1 0 2 0 1
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ← gets
+</div>

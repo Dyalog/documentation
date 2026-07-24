@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕CS CS
-</div>
 
 # <span>Change Space</span> `{R}←{X}⎕CS Y`{{key}}
 
@@ -104,3 +100,8 @@ This example uses `⎕CS` to explore a namespace tree and display the structure.
 
 !!! note
     `⎕CS` is not permitted in a dfn or dop. If used therein it will cause a `NONCE ERROR`.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕CS CS
+</div>

@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FDROP FDROP
-</div>
 
 # <span>File Drop Component</span> `{R}←⎕FDROP Y`{{key}}
 
@@ -39,3 +35,8 @@ Note that the result vector, though potentially large, is generated only on requ
 4 19 5436 4294967295
  
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FDROP FDROP
+</div>

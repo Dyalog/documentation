@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕WA WA
-</div>
 
 # <span>Workspace Available</span> `R←⎕WA`{{key}}
 
@@ -25,3 +21,8 @@ A side effect of using `⎕WA` is an internal reorganisation of the workspace an
 ```
 
 See also: [Specify Workspace Available](../primitive-operators/i-beam/specify-workspace-available.md)
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕WA WA
+</div>

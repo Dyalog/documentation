@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕WX WX
-</div>
 
 # <span>Window Expose</span> `⎕WX`
 
@@ -38,3 +34,8 @@ The value of `⎕WX` in a clear workspace is defined by the default_wx parameter
 
 - The visibility of the properties and methods of the Root object are not controlled by `⎕WX` but by the **PropertyExposeRoot** parameter. For further information, see [ PropertyExposeRoot](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters).
 - `⎕WX` is retained for backwards compatibility and should be considered as deprecated. Dyalog recommends  `⎕WX` be set to 3 and never changed.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕WX WX
+</div>

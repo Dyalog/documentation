@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕RSI RSI
-</div>
 
 # <span>Space Indicator</span> `R←⎕RSI`{{key}}
 
@@ -42,3 +38,8 @@ xx      yy
 │ └───┘      │
 └∊───────────┘
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕RSI RSI
+</div>

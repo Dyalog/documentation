@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SVO SVO
-</div>
 
 # <span>Shared Variable Offer</span> `R←X ⎕SVO Y`{{key}}
 
@@ -56,3 +52,8 @@ A special syntax is used to provide a mechanism for sending `DDE_EXECUTE` messag
       X
 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SVO SVO
+</div>

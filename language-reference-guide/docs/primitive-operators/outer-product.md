@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  .
-  outer
-</div>
 
 # <span>Outer Product</span> `{R}←X∘.gY`{{key}}
 
@@ -36,3 +32,9 @@ If `X` or `Y` is empty, the result `R` is a conformable empty array, and the ope
 0 1 0
 0 0 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  .
+  outer
+</div>

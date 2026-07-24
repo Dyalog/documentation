@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕TGET TGET
-</div>
 
 # <span>Get Tokens</span> `{R}←{X} ⎕TGET Y`{{key}}
 
@@ -56,3 +52,8 @@ BE
 ```
 
 Note too that if a thread waiting to `⎕TGET` tokens is `⎕TKILL`ed, the thread disappears without removing any tokens from the pool. Conversely, if a thread that has removed tokens from the pools is `⎕TKILL`ed, the tokens are not returned to the pool.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕TGET TGET
+</div>

@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕VFI VFI
-</div>
 
 # <span>Verify & Fix Input</span> `R←{X}⎕VFI Y`{{key}}
 
@@ -35,3 +31,8 @@ The length of the items of `R` is the same as the number of identifiable strings
       (⍬ ⍬)≡⎕VFI''
 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕VFI VFI
+</div>

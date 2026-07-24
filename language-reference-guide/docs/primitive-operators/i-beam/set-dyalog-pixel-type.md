@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2035⌶
-</div>
 
 # <span>Set Dyalog Pixel Type</span> `R←2035⌶Y`{{key}}
 
@@ -32,3 +28,8 @@ DOMAIN ERROR
      ∧
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2035⌶
+</div>

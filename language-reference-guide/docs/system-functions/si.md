@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SI SI
-</div>
 
 # <span>State Indicator</span> `R←⎕SI`{{key}}
 
@@ -54,3 +50,8 @@ To check if the function `∆N` is pendent:
 ```
 
 See also [Extended State Indicator](xsi.md).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SI SI
+</div>

@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FHOLD FHOLD
-</div>
 
 # <span>File Hold</span> `{R}←{X} ⎕FHOLD Y`{{key}}
 
@@ -62,3 +58,8 @@ TIMEOUT
       3000 ⎕FHOLD 1
            ∧
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FHOLD FHOLD
+</div>

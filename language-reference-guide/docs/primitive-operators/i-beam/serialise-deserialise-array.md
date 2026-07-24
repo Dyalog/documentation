@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  220⌶
-</div>
 
 # <span>Serialise/Deserialise Array</span> `R←X(220⌶)Y`{{key}}
 
@@ -42,3 +38,8 @@ The following identity holds true:
 1	 
      
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  220⌶
+</div>

@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕LOCK LOCK
-</div>
 
 # <span>Lock Definition</span> `{R}←{X}⎕LOCK Y`{{key}}
 
@@ -45,3 +41,8 @@ A `DOMAIN ERROR` is reported if `Y` is ill-formed.
       ≢62 ⎕ATX'foo'
 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕LOCK LOCK
+</div>

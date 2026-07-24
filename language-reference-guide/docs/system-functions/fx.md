@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FX FX
-</div>
 
 # <span>Fix Definition</span> `{R}←⎕FX Y`{{key}}
 
@@ -24,3 +20,8 @@ If the function or operator is successfully fixed, `R` is a simple character vec
     Before Dyalog v20.0, it was possible to define dfns with unmatched parentheses and brackets. These are now rejected. TradFns will continue to fix as before, but subtle differences in how the code behaves might not be backwards-compatible and could have unexpected results.
 
 Functions and operators which are pendent, that is, in the state indicator without a suspension mark (`*`), retain their original definition until they complete, or are cleared from the state indicator.  All other occurrences of the function or operator assume the new definition.  The function or operator will fail to fix if it has the same name as an existing variable, or a visible label.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FX FX
+</div>

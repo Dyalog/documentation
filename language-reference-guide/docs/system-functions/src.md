@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SRC SRC
-</div>
 
 # <span>Source</span> `R←⎕SRC Y`{{key}}
 
@@ -44,3 +40,8 @@ r←1+arg
 
 !!! note
     The only two ways to permanently alter the source of a scripted object are to change the object in the editor, or by refixing it using `⎕FIX`. A useful technique to ensure that a scripted object is in sync with its source is to `⎕FIX ⎕SRC ref`, where `ref` is an object reference.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SRC SRC
+</div>

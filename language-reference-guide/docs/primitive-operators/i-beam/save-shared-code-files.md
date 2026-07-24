@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  8667⌶
-</div>
 
 # <span>Save Shared Code Files</span> `{R}←{X} (8667⌶) Y`{{key}}
 
@@ -28,3 +24,8 @@ Optionally, `X` is a vector of character vectors or a matrix specifying the name
 
 !!! windows "Dyalog on Microsoft Windows"
     A multi-user development team might need a strategy for creating (and [attaching](../attach-assimilate-detach-shared-code-files/#attach-shared-code-files) cycles of shared code files as shared code files could remain in use for some time by members of the development team. This should not be an issue with distributed applications.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  8667⌶
+</div>

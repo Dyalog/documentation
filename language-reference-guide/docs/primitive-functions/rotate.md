@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⌽ rotate
-</div>
 
 # <span>Rotate</span> `R←X⌽[K]Y`{{key}}
 
@@ -55,3 +52,8 @@ The value of `K` must be an axis of `Y`.  If absent, the last axis of `Y` is imp
 15 16 13 14
  
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌽ rotate
+</div>

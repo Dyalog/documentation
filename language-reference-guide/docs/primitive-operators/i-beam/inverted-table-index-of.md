@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  8⌶
-</div>
 
 # <span>Inverted Table Index-of</span> `R←X(8⌶)Y`{{key}}
 
@@ -82,3 +78,8 @@ Each un-inverted table requires considerably more workspace than its inverted fo
       X (8⌶) Y
 3 1 4 1 5 9
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  8⌶
+</div>

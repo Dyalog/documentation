@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕VGET VGET
-</div>
 
 # <span>Value Get</span> `R←{X}⎕VGET Y`{{key}}
 
@@ -229,3 +225,8 @@ Was OFF
 │name3│└───┴─────┴─────┘│
 └─────┴─────────────────┘
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕VGET VGET
+</div>

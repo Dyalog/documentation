@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕WG WG
-</div>
 
 # <span>Window Get Property</span> `R←{X}⎕WG Y`{{key}}
 
@@ -47,3 +43,8 @@ TEST
 │ └────┘   └~────┘ │
 └∊─────────────────┘
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕WG WG
+</div>

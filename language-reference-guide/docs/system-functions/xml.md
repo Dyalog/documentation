@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕XML XML
-</div>
 
 # <span>XML Convert</span> `R←{X} ⎕XML Y`{{key}}
 
@@ -442,3 +438,8 @@ When converting from XML, this option determines what happens when an unknown en
 |Converting to XML                                                                                                                ||
 |Replace (replace)   |Esc ( `⎕UCS 27` ) is preserved                                                                               |
 |`Preserve(preserve)`|Esc ( `⎕UCS 27` ) is replaced by '&'                                                                         |
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕XML XML
+</div>

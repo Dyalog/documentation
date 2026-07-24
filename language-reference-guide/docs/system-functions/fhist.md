@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FHIST FHIST
-</div>
 
 # <span>File History</span> `R←⎕FHIST Y`{{key}}
 
@@ -72,3 +68,8 @@ In the examples that follow, the `FHist` function is used below to format the re
  Undefined     0     1970-01-01 00:00:00  
  Last Updated  0     2012-01-14 12:29:55  
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FHIST FHIST
+</div>

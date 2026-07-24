@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕STACK STACK
-</div>
 
 # <span>State Indicator Stack</span> `R←⎕STACK`{{key}}
 
@@ -65,3 +61,8 @@ To display the version of `MATDIV` currently pendent on the stack:
 [4]    D←⌊0.5+A PLUS.TIMES B
      ∇
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕STACK STACK
+</div>

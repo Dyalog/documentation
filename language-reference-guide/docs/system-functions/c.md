@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕C
-</div>
 
 # <span>Case Convert</span> `R←{X}⎕C Y`{{key}}
 
@@ -53,3 +49,8 @@ Greek has two forms of lower-case Sigma, namely "σ" and "ς" but a single upper
 
 !!! note
     Refs in `Y` are not followed but just returned unchanged.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕C
+</div>

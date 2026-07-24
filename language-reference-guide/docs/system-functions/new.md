@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NEW NEW
-</div>
 
 # <span>New Instance</span> `R←⎕NEW Y`{{key}}
 
@@ -96,3 +92,8 @@ Note that as `⎕NEW` provides no facility to *name* a GUI object, the Event pr
 ```
 
 Note that you may not create an instance of OCXClass using `⎕NEW`.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NEW NEW
+</div>

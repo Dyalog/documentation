@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  8659⌶
-</div>
 
 # <span>List Shared Code Files/Attached Names</span> `{R}←{X} (8659⌶) Y`{{key}}
 
@@ -38,3 +34,8 @@ Lists the names in the shared code file identified by the specified memory addre
 `X` is the slot identifier (an integer in the range 1-8) for the unique fixed virtual memory address of the shared code file.
 
 `R` lists the names in the shared code file identified by slot. If any element of `Y` is negative, then positive values in `Y` are treated as if they were negative and `R` is a vector of character vectors. Otherwise, `R` is a simple character matrix.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  8659⌶
+</div>

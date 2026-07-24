@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕VSET VSET
-</div>
 
 # <span>Value Set</span> `{R}←{X}⎕VSET Y`{{key}}
 
@@ -115,3 +111,8 @@ Running trigger for: name3
 Running trigger for: name1
 Running trigger for: name3
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕VSET VSET
+</div>

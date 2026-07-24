@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕LC LC
-</div>
 
 # <span>Line Count</span> `R←⎕LC`{{key}}
 
@@ -33,3 +29,8 @@ The value of `⎕LC` in a clear workspace is the null vector.
       ⍴⎕LC
 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕LC LC
+</div>

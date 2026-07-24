@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NCOPY NCOPY
-</div>
 
 # <span>Native File Copy</span> `{R}←X ⎕NCOPY Y`{{key}}
 
@@ -161,3 +157,8 @@ The **ProgressCallback** variant option is described in the [Dyalog Programming 
 - If any source name is a symbolic link it is dereferenced; that is, the source or directory it references is copied rather than the link itself.
 - In the result `R`, a directory together with all its contents is counted once. A directory may be partially copied if the **IfExists** option is set to `'Replace'` or `'ReplaceIfNewer'`).
 - If an error occurs during the copy process then processing will immediately stop and an error will be signalled. The operation is not atomic; some items may be copied before this happens. In the event of an error there will be no result and therefore no indication of how many names were copied before the error occurred.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NCOPY NCOPY
+</div>

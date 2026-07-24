@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⊢ right tack
-</div>
 
 # <span>Right</span> `R←X⊢Y`{{key}}
 
@@ -47,3 +44,8 @@ tenet
  9 10 11 12
 21 22 23 24
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⊢ right tack
+</div>

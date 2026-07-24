@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SVC SVC
-</div>
 
 # <span>Query Access Control</span> `R←⎕SVC Y`{{key}}
 
@@ -22,3 +18,8 @@ For further information, see the preceding section on setting the access control
       ⎕SVC 'X'
 0 0 0 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SVC SVC
+</div>

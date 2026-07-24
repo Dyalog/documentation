@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ∪ unique
-</div>
 
 # <span>Unique</span> `R←∪Y`{{key}}
 
@@ -59,3 +56,8 @@ DUCK
 16 17 18 19 20
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ∪ unique
+</div>

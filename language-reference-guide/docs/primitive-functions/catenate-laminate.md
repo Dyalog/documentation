@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  , catenate
-</div>
 
 # <span>Catenate/Laminate</span> `R←X,[K]Y`{{key}}
 
@@ -65,3 +62,8 @@ T*
 HEADING
 -------
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  , catenate
+</div>

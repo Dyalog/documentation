@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2101⌶
-</div>
 
 # <span>Close .NET AppDomain</span> `R←2101⌶Y`{{key}}
 
@@ -20,3 +16,8 @@ This function closes the current .NET AppDomain.
 The result `R` is 0 if the operation succeeded or a non-zero integer if it failed.
 
 This I-Beam is very likely to be changed in future.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2101⌶
+</div>

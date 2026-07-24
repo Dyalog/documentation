@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕PROFILE PROFILE
-</div>
 
 # <span>Profile Application</span> `{R}←{X}⎕PROFILE Y`{{key}}
 
@@ -253,3 +249,8 @@ The timing data collected by `⎕PROFILE` is not adjusted for the timer's call t
 ## The `]Profile` User Command
 
 The `]Profile` user command implements a high-level interface to `⎕PROFILE`, and provides reporting and analysis tools that act on the profiling data. For more information, see the [_Application Tuning Guide_](https://docs.dyalog.com/20.0/files/Application_Tuning_Guide.pdf).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕PROFILE PROFILE
+</div>

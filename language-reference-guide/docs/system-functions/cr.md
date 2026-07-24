@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕CR CR
-</div>
 
 # <span>Canonical Representation</span> `R←⎕CR Y`{{key}}
 
@@ -89,3 +85,8 @@ If `Y` is a name assigned to a defined function, `R` is the `⎕CR` of the defin
 R←MEAN X    ⍝ Arithmetic mean
 R←(+/X)÷⍴X
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕CR CR
+</div>

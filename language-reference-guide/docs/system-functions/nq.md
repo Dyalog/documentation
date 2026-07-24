@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NQ NQ
-</div>
 
 # <span>Enqueue Event</span> `{R}←{X}⎕NQ Y`{{key}}
 
@@ -75,3 +71,8 @@ If the left argument is 2, `⎕NQ` returns either the value 1 or a value that is
       +2 ⎕NQ'.' 'GetEnvironment' 'DYALOG'
 C:\Program Files\Dyalog\Dyalog APL-64 15.0 Unicode
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NQ NQ
+</div>

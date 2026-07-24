@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FNUMS FNUMS
-</div>
 
 # <span>File Numbers</span> `R←⎕FNUMS`{{key}}
 
@@ -32,3 +28,8 @@ The result is an integer vector of the *file tie number* of all tied files.  If 
       ⍴⎕FNUMS
 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FNUMS FNUMS
+</div>

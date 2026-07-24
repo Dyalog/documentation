@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍕ format
-</div>
 
 # <span>Format</span> `R←⍕Y`{{key}}
 
@@ -164,3 +161,8 @@ By replacing spaces with `^`, it is clearer to see how the result of `⍕` is fo
 ```
 
 `⎕PP` is an implicit argument of Format.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍕ format
+</div>

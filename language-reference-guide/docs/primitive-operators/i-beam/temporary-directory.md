@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  739⌶
-</div>
 
 # <span>Temporary Directory</span> `R←739⌶Y`{{key}}
 
@@ -35,3 +31,7 @@ C:/Users/Pete/AppData/Local/Temp
     
     The functionality provided by `739⌶0` is now provided by `⎕SYSTEM.Directories.Temp` – this returns an equivalent result, but uses the operating system's preferred directory separator.  
 
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  739⌶
+</div>

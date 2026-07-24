@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  5176⌶
-</div>
 
 # <span>List Loaded Files</span> `R←5176⌶Y`{{key}}
 
@@ -43,3 +39,8 @@ clear ws
 
 			
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  5176⌶
+</div>

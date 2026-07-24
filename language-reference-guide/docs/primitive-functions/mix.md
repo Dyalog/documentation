@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⊃ mix
-</div>
 
 # <span>Mix</span> `(⎕ML) R←↑[K]Y or R←⊃[K]Y`{{key}}
 
@@ -217,3 +214,8 @@ If the items of `Y` are unequal in rank, the lower rank items are extended in ra
 ```
 
 In the above example, the first item (1) becomes (`1 1⍴1`) to conform with the 3rd item which is rank 2. It is then extended in shape to become `(2 4↑1 1⍴1)` to conform with the 2-row 3rd item, and 4-column 2nd item.. Likewise, the 2nd item becomes a 2-row matrix, and the 3rd item gains another column.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⊃ mix
+</div>

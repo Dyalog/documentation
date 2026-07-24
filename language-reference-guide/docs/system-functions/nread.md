@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NREAD NREAD
-</div>
 
 # <span>Native File Read</span> `R←⎕NREAD Y`{{key}}
 
@@ -67,3 +63,8 @@ Table: Classic Edition: Conversion Codes
       DATA←⎕NREAD ¯1 82 ¯1 0       ⍝ Shorter version
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NREAD NREAD
+</div>

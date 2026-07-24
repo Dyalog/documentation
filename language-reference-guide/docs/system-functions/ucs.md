@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕UCS UCS
-</div>
 
 # <span>Unicode Convert</span> `R←{X} ⎕UCS Y`{{key}}
 
@@ -109,3 +105,8 @@ For most characters in the [first plane of Unicode (0000-FFFF)](https://en.wikip
 ## Translation Error
 
 `⎕UCS` will generate a `DOMAIN ERROR` if the argument cannot be converted. Additionally, in the Classic Edition, a `TRANSLATION ERROR` is generated if the result is not in `⎕AV` or the numeric argument is not in `⎕AVU`.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕UCS UCS
+</div>

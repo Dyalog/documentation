@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2401⌶
-</div>
 
 # <span>Expose Root Properties</span> `R←2401⌶Y`{{key}}
 
@@ -43,3 +39,8 @@ VALUE ERROR
      ∧
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2401⌶
+</div>

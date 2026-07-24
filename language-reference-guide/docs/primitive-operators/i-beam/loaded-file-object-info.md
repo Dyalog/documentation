@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  5179⌶
-</div>
 
 # <span>Loaded File Object Info</span> `R←5179⌶Y`{{key}}
 
@@ -50,3 +46,8 @@ If an object occupies a file in its entirety, both *Start line* and *Line count*
 └┴────────┴─┴┴─┴─┴────────┴─────────────┘
 	
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  5179⌶
+</div>

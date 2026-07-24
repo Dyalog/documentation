@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ∘
-  beside
-</div>
 
 # <span>Beside</span> `{R}←{X}f∘gY`{{key}}
 
@@ -43,3 +39,9 @@ The derived function is equivalent to `fgY` or `XfgY` and need not return a resu
       0,∘⍳¨⍳5
 0 1  0 1 2  0 1 2 3  0 1 2 3 4  0 1 2 3 4 5
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ∘
+  beside
+</div>

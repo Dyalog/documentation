@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕PW PW
-</div>
 
 # <span>Print Width</span> `⎕PW`
 
@@ -27,3 +23,8 @@ Note that if the Auto_PW parameter (*Options/Configure/Session/Auto PW*) is set 
 0.3333333333 0.3333333333 0.3333333333
       0.3333333333
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕PW PW
+</div>

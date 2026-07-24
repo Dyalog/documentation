@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  + conjugate
-</div>
 
 # <span>Conjugate</span> `R←+Y`{{key}}
 
@@ -30,3 +27,8 @@ If `Y` is real or non-numeric, `R` is the same array unchanged, although `⊢` i
       +⎕EX'A'
 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  + conjugate
+</div>

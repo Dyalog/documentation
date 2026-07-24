@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NC NC
-</div>
 
 # <span>Name Classification</span> `R←⎕NC Y`{{key}}
 
@@ -552,3 +548,8 @@ External Interfaces exposed by .NET have name-class 9.7.
 ```
 
 Note that referencing a .NET Interface with `⎕NC`, fixes the name of that Interface in the workspace and obviates the need for APL to repeat the task of searching for and loading the Interface when the name is next used.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NC NC
+</div>

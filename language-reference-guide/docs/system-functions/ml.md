@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕ML ML
-</div>
 
 # <span>Migration Level</span> `⎕ML`
 
@@ -66,3 +62,8 @@ Subsequent versions of Dyalog APL may provide further migration levels.
 2
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕ML ML
+</div>

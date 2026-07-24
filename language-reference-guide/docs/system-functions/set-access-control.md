@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SVC SVC
-</div>
 
 # <span>Set Access Control</span> `R←X ⎕SVC Y`{{key}}
 
@@ -41,3 +37,8 @@ The result `R` is a Boolean vector or matrix, corresponding to the structure of 
 1 1 1 1
 0 1 1 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SVC SVC
+</div>

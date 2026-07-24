@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ∊ member membership
-</div>
 
 # <span>Membership</span> `R←X∊Y`{{key}}
 
@@ -24,3 +21,8 @@ An element of `X` is considered identical to an element in `Y` if `X≡Y` return
 ```
 
 For performance information, see [Programmer's Guide: "Search Functions and Hash Tables"](../../../programming-reference-guide/introduction/search-functions-and-hash).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ∊ member membership
+</div>

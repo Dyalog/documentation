@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  * power
-</div>
 
 # <span>Power</span> `R←X*Y`{{key}}
 
@@ -31,3 +28,8 @@ In general, `X*Y` is defined as `*Y×⍟X`. If `X` is negative, the result `R` i
 1J1.732050808
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  * power
+</div>

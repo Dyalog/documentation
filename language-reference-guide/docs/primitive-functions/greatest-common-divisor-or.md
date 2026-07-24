@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ∨ gcd or
-</div>
 
 # <span>Greatest Common Divisor/OR</span> `R←X∨Y`{{key}}
 
@@ -41,3 +38,8 @@ R is Boolean and is determined as follows:
       0 0 1 1 ∨ 0 1 0 1
 0 1 1 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ∨ gcd or
+</div>

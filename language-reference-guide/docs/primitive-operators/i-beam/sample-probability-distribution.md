@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  16808⌶
-</div>
 
 # <span>Sample Probability Distribution</span> `R←X(16808⌶)Y`{{key}}
 
@@ -76,3 +72,8 @@ So then we can create 100,000 samples and calculate values for a density graph w
 Using the Chart Wizard ![sharpplot icon](../../img/sharpplot-icon.png) we can plot `(⊂2)⌷⍉bc` against `(⊂1)⌷⍉bc` to get the graph:
 
 ![beta distribution](../../img/beta-distribution.png)
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  16808⌶
+</div>

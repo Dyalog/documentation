@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕AI AI
-</div>
 
 # <span>Account Information</span> `R←⎕AI`{{key}}
 
@@ -30,3 +26,8 @@ Elements beyond 4 are not defined but reserved.
 
 !!! windows "Dyalog on Microsoft Windows"
     Under Microsoft Windows, `⎕AI[1]` is the aplnid (network ID from configuration dialog box).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕AI AI
+</div>

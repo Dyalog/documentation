@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍎ execute
-</div>
 
 # <span>Execute</span> `R←⍎Y`{{key}}
 
@@ -50,3 +47,8 @@ VALUE ERROR: No result was provided when the context expected one
       A←⍎''
         ∧
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍎ execute
+</div>

@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FRDCI FRDCI
-</div>
 
 # <span>File Read Component Information</span> `R←⎕FRDCI Y`{{key}}
 
@@ -24,3 +20,8 @@ The result is a 3 element numeric vector containing the following information:
       ⎕FRDCI 1 13
 2200 207 3.702094494E10
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FRDCI FRDCI
+</div>

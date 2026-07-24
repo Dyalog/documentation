@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  950⌶
-</div>
 
 # <span>List Loaded Libraries</span> `R←950⌶Y`{{key}}
 
@@ -47,3 +43,8 @@ clear ws
       950⌶⍬
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  950⌶
+</div>

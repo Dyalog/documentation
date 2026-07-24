@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  4000⌶
-</div>
 
 # <span>Fork New Task</span> `R←4000⌶Y`{{key}}
 
@@ -41,3 +37,8 @@ Note that External Functions established using `⎕NA` are replicated in the chi
 The function will fail with a `DOMAIN ERROR` if there is more than one APL thread running.
 
 The function will fail with a `FILE ERROR 11 Resource temporarily unavailable` if an attempt is made to exceed the maximum number of processes allowed per user.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  4000⌶
+</div>

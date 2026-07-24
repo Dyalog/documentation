@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕MONITOR MONITOR
-</div>
 
 # <span>Set Monitor</span> `{R}←X ⎕MONITOR Y`{{key}}
 
@@ -39,3 +35,8 @@ All monitors may be cancelled by supplying an empty vector:
 ```
 
 Monitors may be set on a locked function or operator, but no information will be reported.  Monitors are saved with the workspace.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕MONITOR MONITOR
+</div>

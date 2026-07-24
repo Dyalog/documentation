@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  600⌶
-</div>
 
 # <span>Disable Traps</span> `R←600⌶Y`{{key}}
 
@@ -25,3 +21,8 @@ This function is used to temporarily disable the error trapping mechanism used b
 Note that the *Disable traps in session* option of the Session *Options* menu performs the same tasks as `(600⌶0)` and `(600⌶2)`.
 
 For  error-guards in dfns `600⌶0` and `600⌶2` are equivalent; in neither case is an error generated in the session caught by an error guard in a suspended dfn.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  600⌶
+</div>

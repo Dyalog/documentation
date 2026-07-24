@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2520⌶
-</div>
 
 # <span>Use Separate Thread For .NET</span> `R←2520⌶Y`{{key}}
 
@@ -26,3 +22,8 @@ By default, the base APL thread (thread 0) runs .NET code in the same system thr
 For this reason, Dyalog recommends that APL code that creates instances of .NET objects that generate events (such as Windows Presentation Foundation objects) are run in a separate APL thread.
 
 Where this is not possible, `2520⌶1` may be used to force Dyalog to use a unique system thread for .NET that is associated with APL thread 0. If so,  it is recommended that `2520⌶1` is called at application start-up time.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2520⌶
+</div>

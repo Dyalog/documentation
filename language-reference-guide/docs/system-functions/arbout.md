@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕ARBOUT ARBOUT
-</div>
 
 # <span>Arbitrary Output</span> `{R}←X ⎕ARBOUT Y`{{key}}
 
@@ -41,3 +37,8 @@ Append the string `'Κάλο Πάσχα'` to the same file, and close it:
       ¯1 ⎕ARBOUT 'UTF-8' ⎕UCS'Κάλο Πάσχα' 
       ⎕NUNTIE ¯1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕ARBOUT ARBOUT
+</div>

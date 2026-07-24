@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕WN WN
-</div>
 
 # <span>Window Child Names</span> `R←{X}⎕WN Y`{{key}}
 
@@ -46,3 +42,8 @@ GUI objects are named **relative** to the current namespace.  The following exa
       'Button' ⎕WN f
  #.[Form].b1  #.[Form].[Button]
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕WN WN
+</div>

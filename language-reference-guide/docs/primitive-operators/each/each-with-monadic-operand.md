@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ¨
-  each
-</div>
 
 # <span>Each (with Monadic Operand)</span> `{R}←f¨Y`{{key}}
 
@@ -29,3 +25,9 @@ If `Y` is empty, the prototype of `R` is determined by applying the operand func
       +⎕FX¨('FOO1' 'A←1')('FOO2' 'A←2')
  FOO1 FOO2
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ¨
+  each
+</div>

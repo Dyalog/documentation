@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕JSON JSON
-</div>
 
 # <span>JSON Convert</span> `R←{X}⎕JSON Y`{{key}}
 
@@ -832,3 +828,8 @@ To select the second record (Fork) and the first and third fields (`item` and `q
       1 ⎕JSON⊂4(invertedTable header)2(1 3)
 [{"item":"Fork","qty":45}]
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕JSON JSON
+</div>

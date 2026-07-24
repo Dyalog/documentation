@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕MONITOR MONITOR
-</div>
 
 # <span>Query Monitor</span> `R←⎕MONITOR Y`{{key}}
 
@@ -46,3 +42,8 @@ The value of `0` in column one indicates that the monitor is set on the function
 4 1  467 1000 0
 5 1  100    0 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕MONITOR MONITOR
+</div>

@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍴ rho shape
-</div>
 
 # <span>Shape</span> `R←⍴Y`{{key}}
 
@@ -36,3 +33,8 @@ search:
       ⍴¨¨G
           3  5  4
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍴ rho shape
+</div>

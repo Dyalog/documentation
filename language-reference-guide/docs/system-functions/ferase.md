@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FERASE FERASE
-</div>
 
 # <span>File Erase</span> `{R}←X ⎕FERASE Y`{{key}}
 
@@ -28,3 +24,8 @@ FILE NAME ERROR
       ⎕←'.\temp'⎕FERASE 1 ⍝ Works with / or \
 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FERASE FERASE
+</div>

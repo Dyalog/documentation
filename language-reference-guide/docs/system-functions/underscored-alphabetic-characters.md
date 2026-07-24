@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕ 
-</div>
 
 # <span>Underscored Alphabetic Characters</span> `R←⎕Ⓐ`{{key}}
 
@@ -26,3 +22,8 @@ For compatibility with previous versions of Dyalog APL, functions that contain r
       ⎕Á
 ÁÂÃÇÈÊËÌÍÎÏÐÒÓÔÕÙÚÛÝþãìðòõ
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕ 
+</div>

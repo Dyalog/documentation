@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ∊ enlist
-</div>
 
 # <span>Enlist</span> `(⎕ML≥1) R←∊Y`{{key}}
 
@@ -29,3 +26,8 @@ MISSISSIPPI
       ∊M
 1 2 3 4 5 6 7 8
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ∊ enlist
+</div>

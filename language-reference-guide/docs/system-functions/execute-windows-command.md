@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕CMD CMD
-</div>
 
 # <span>Execute Windows Command</span> `{R}←⎕CMD Y`{{key}}
 
@@ -153,3 +149,8 @@ Either form of `⎕CMD` may be used to execute a program. The difference is that
 ### Note
 
 This function is disabled and instead generates a `DOMAIN ERROR` if the RIDE_SPAWNED parameter is non-zero. This is designed to prevent it being invoked from a Ride session which does not support this type of user interface. For further details, see the [Ride User Guide](https://dyalog.github.io/ride).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕CMD CMD
+</div>

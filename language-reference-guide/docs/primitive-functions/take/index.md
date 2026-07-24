@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ↑ take
-</div>
 
 # <span>Take</span> `R←X↑Y`{{key}}
 
@@ -52,3 +49,8 @@ MNOP
 QRST
 UVWX
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ↑ take
+</div>

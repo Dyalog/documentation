@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2041⌶
-</div>
 
 # <span>Override COM Default Value</span> `R←{X}(2041⌶)Y`{{key}}
 
@@ -26,3 +22,8 @@ If `Y` is `2`, then `X` specifies the value that is returned when the COM object
 In both cases, omitting `X` results in the default behaviour being restored.
 
 `R` is the previous value specified; if there was no previous value then this function will perform its task but generate a `VALUE ERROR`.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2041⌶
+</div>

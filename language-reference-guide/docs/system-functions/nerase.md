@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NERASE NERASE
-</div>
 
 # <span>Native File Erase</span> `{R}←X ⎕NERASE Y`{{key}}
 
@@ -17,3 +13,8 @@ The shy result of `⎕NERASE` is the tie number that the erased file had.
 ```apl
       file ⎕NERASE file ⎕NTIE 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NERASE NERASE
+</div>

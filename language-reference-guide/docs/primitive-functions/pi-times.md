@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ○ pi
-</div>
 
 # <span>Pi Times</span> `R←○Y`{{key}}
 
@@ -21,3 +18,8 @@ search:
       *○0J1 ⍝ Euler
 ¯1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ○ pi
+</div>

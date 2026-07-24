@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕TNUMS TNUMS
-</div>
 
 # <span>Thread Numbers</span> `R←⎕TNUMS`{{key}}
 
@@ -18,3 +14,8 @@ search:
       ⎕TNUMS
 0 2 4 5 6 3 7 8 9
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕TNUMS TNUMS
+</div>

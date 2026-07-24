@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕MAP MAP
-</div>
 
 # <span>Map File</span> `R←{X}⎕MAP Y`{{key}}
 
@@ -88,3 +84,8 @@ If you fail to specify the shape of the data, the data on file will be mapped as
 In the Unicode Edition `⎕MAP` will fail with a `TRANSLATION ERROR` (event number 92) if you attempt to map an APL file which contains character data type 82.
 
 In order for the Unicode Edition to correctly interpret data in a raw file that was written using data type 82, the file may be mapped with data type 83 and the characters extracted by indexing into `⎕AVU`.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕MAP MAP
+</div>

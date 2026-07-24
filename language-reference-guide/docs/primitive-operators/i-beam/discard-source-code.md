@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  5172⌶
-</div>
 
 # <span>Discard Source Code</span> `R←5172⌶Y`{{key}}
 
@@ -21,3 +17,8 @@ If `Y` is 1, source code is not retained in the workspace when an object is fixe
 In all case the result `R` is the previous setting (0 or 1).
 
 For further information, see [Source as Typed](../../../../earlier-release-notes/release-notes-v19-0/introduction/source-as-typed).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  5172⌶
+</div>

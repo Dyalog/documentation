@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕TNAME TNAME
-</div>
 
 # <span>Current Thread Name</span> `⎕TNAME`
 
@@ -21,3 +17,8 @@ You may set `⎕TNAME` to any valid character vector, but it is recommended that
       ⎕TNAME
 Dylan
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕TNAME TNAME
+</div>

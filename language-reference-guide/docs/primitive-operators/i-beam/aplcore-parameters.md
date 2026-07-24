@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  1302⌶
-</div>
 
 # <span>aplcore Parameters</span> `R←1302⌶Y`{{key}}
 
@@ -24,3 +20,8 @@ Sets the aplcore parameters **AplCoreName** and/or **MaxAplCores** for the curre
 If `Y` is empty, the function simply returns the values of these parameters without changing them.
 
 See also: [AplCoreName](../../../../windows-installation-and-configuration-guide/configuration-parameters/aplcorename) and [MaxAplCores.](../../../../windows-installation-and-configuration-guide/configuration-parameters/maxaplcores)
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  1302⌶
+</div>

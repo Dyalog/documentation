@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕DMX DMX
-</div>
 
 # <span>Extended Diagnostic Message</span> `R←⎕DMX`{{key}}
 
@@ -198,3 +194,8 @@ In the third case a `SYNTAX ERROR` (2) is raised on `goo[2]`. Since the `⎕TR
  End foo:  0
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕DMX DMX
+</div>

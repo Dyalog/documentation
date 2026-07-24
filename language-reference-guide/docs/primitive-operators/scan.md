@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  \
-  scan
-</div>
 
 # <span>Scan</span> `R←f\[K]Y`{{key}}
 
@@ -83,3 +79,9 @@ For backwards compatibility reasons, `+\` and `×\` of simple vectors are still 
 1E100 0 0
 ```
 This also applies to `+⍀` and `×⍀`.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  \
+  scan
+</div>

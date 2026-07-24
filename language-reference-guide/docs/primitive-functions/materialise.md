@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⌷ materialise materialize
-</div>
 
 # <span>Materialise</span> `R←⌷Y`{{key}}
 
@@ -69,3 +66,8 @@ Note that similarly, the expression
 ```
 
 would call the PropertyGet function 10000 times, on repeated indices if `CompFile` has less than 10000 elements. The deferral of access function calls is intended to be an optimisation, but can have the opposite effect. You can avoid unnecessary repetitive calls by assigning the result of `⌷` to a temporary variable.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌷ materialise materialize
+</div>

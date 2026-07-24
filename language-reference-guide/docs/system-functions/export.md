@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕EXPORT EXPORT
-</div>
 
 # <span>Export Object</span> `{R}←{X}⎕EXPORT Y`{{key}}
 
@@ -35,3 +31,8 @@ Warning: The left domain of `⎕EXPORT` may be extended in future to include ext
 ```
 
 `⎕EXPORT` does not support derived functions and will not be extended to support them; nor will it be extended to support other types of functions that may be developed in the future. `⎕EXPORT` may therefore be considered an archaic feature.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕EXPORT EXPORT
+</div>

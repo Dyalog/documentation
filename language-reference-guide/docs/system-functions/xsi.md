@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕XSI XSI
-</div>
 
 # <span>Extended State Indicator</span> `R←⎕XSI`{{key}}
 
@@ -31,3 +27,8 @@ x.foo[1]
 This can be used for example, to edit all functions in the stack, irrespective of the current namespace by typing:    `⎕ED ⎕XSI`
 
 See also [State Indicator](si.md).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕XSI XSI
+</div>

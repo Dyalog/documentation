@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  5178⌶
-</div>
 
 # <span>Remove Loaded File Object Info</span> `R←5178⌶Y`{{key}}
 
@@ -31,3 +27,8 @@ Note that the workspace object itself remains in the workspace; just the informa
 0
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  5178⌶
+</div>

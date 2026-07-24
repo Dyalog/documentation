@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FR FR
-</div>
 
 # <span>Floating-Point Representation</span> `⎕FR`
 
@@ -80,3 +76,8 @@ WARNING: The use of COMPLEX numbers when `⎕FR` is 1287 is not recommended, bec
 
 - any 128-bit decimal array into which a complex number is inserted or appended will be forced in its entirety into complex representation, potentially losing precision.
 - All comparisons are done using `⎕DCT` when `⎕FR` is 1287, and the default value of `1E¯28` is equivalent to 0 for complex numbers.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FR FR
+</div>

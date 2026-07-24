@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  181⌶
-</div>
 
 # <span>Unsqueezed Type</span> `R←181⌶Y`{{key}}
 
@@ -25,3 +21,8 @@ The result `R` is an integer scalar containing an integer value which indicates 
       (181⌶) 1↑1 1000
 163
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  181⌶
+</div>

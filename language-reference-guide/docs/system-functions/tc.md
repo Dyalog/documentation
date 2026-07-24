@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕ML ML
-</div>
 
 # <span>Terminal Control</span> `(⎕ML)`
 
@@ -38,3 +34,8 @@ With the introduction of `⎕UCS` in Version 12.0, the use of `⎕TC` is discour
 |Backspace        |`⎕TC[1]`                      |`⎕UCS 8` |
 |Linefeed         |`⎕TC[2] (⎕ML<3)`<br>`⎕TC[3] (⎕ML≥3)`|`⎕UCS 10`|
 |Newline          |`⎕TC[3] (⎕ML<3)`<br>`⎕TC[2] (⎕ML≥3)`|`⎕UCS 13`|
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕ML ML
+</div>

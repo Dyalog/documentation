@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍋ grade
-</div>
 
 # <span>Grade Up</span> `R←⍋Y`{{key}}
 
@@ -104,3 +101,8 @@ Porridge</code></pre></td>
       ⍋pb
 2 4 3 1 6 5
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍋ grade
+</div>

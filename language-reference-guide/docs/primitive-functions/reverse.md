@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⌽ reverse
-</div>
 
 # <span>Reverse</span> `R←⌽[K]Y`{{key}}
 
@@ -30,3 +27,8 @@ search:
 4 5 6
 1 2 3
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌽ reverse
+</div>

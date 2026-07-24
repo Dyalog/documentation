@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FCOPY FCOPY
-</div>
 
 # <span>File Copy</span> `R←X ⎕FCOPY Y`{{key}}
 
@@ -84,3 +80,8 @@ will name a variant of `⎕FCREATE` which will create component file with level 
 
 !!! Info "Information"
     Small-span (32-bit) component files are currently read-only; Dyalog Ltd recommends using `⎕FCOPY` to convert any such files to large-span (64-bit). This ability is scheduled for removal in a future release. For information on how to identify calls to small-span component files in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FCOPY FCOPY
+</div>

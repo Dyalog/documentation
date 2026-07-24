@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ∊ type
-</div>
 
 # <span>Type</span> `(⎕ML<1) R←∊Y`{{key}}
 
@@ -21,3 +18,8 @@ Migration level must be such that `⎕ML<1` (otherwise `∊` means Enlist. See [
       ' '=∊'X'
 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ∊ type
+</div>

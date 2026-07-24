@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  200⌶
-</div>
 
 # <span>Syntax Colouring</span> `R←200⌶Y`{{key}}
 
@@ -43,3 +39,8 @@ In this example:
 |23 |is the syntax identifier for "idiom"             |
 
 The list of syntax colour elements supported by the current interpreter is given by `201⌶`. It is important to note that the values may change within a release, and are very likely to change across releases .. you should always call `201⌶` rather than relying the results from a different interpreter. See [Syntax Colour Tokens](syntax-colour-tokens.md).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  200⌶
+</div>

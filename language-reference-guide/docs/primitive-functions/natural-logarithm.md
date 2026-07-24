@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍟ log logarithm
-</div>
 
 # <span>Natural Logarithm</span> `R←⍟Y`{{key}}
 
@@ -19,3 +16,8 @@ search:
 0.000000000J1.570796327  0.8047189562J1.107148718
 1.282474679J0.9827937232 1.6094379120J0.927295218
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍟ log logarithm
+</div>

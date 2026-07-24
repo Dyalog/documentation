@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ¨
-  each
-</div>
 
 # <span>Each (with Dyadic Operand)</span> `{R}←Xf¨Y`{{key}}
 
@@ -34,3 +30,9 @@ If `X` or `Y` is empty, the operand function is applied *once* between the proto
       'ABC',¨'XYZ'
  AX  BY  CZ
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ¨
+  each
+</div>

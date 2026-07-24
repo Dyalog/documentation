@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕ATX ATX
-</div>
 
 # <span>Extended Attributes</span> `R←X ⎕ATX Y`{{key}}
 
@@ -115,3 +111,8 @@ This function provides information about a name in a workspace, including its us
 │└────────────┴─────────────┘│└────────────┘│
 └────────────────────────────┴──────────────┘
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕ATX ATX
+</div>

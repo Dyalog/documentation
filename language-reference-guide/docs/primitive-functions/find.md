@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍷ find
-</div>
 
 # <span>Find</span> `R←X⍷Y`{{key}}
 
@@ -40,3 +37,8 @@ ISN'T
 0 0 0 1 0 0 0 0 0
 0 0 0 0 0 0 0 0 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍷ find
+</div>

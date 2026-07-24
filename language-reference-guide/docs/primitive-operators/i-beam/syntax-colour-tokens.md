@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  201⌶
-</div>
 
 # <span>Syntax Colour Tokens</span> `R←201⌶Y`{{key}}
 
@@ -38,3 +34,8 @@ The 4th column is intended for the benefit of non-Windows users using the tty in
 └────────────┴─┴────────────┴───┘
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  201⌶
+</div>

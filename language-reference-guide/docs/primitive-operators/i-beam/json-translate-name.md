@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  7162⌶
-</div>
 
 # <span>JSON Translate Name</span> `R←X(7162⌶)Y`{{key}}
 
@@ -41,3 +37,8 @@ foo
 ```
 
 For further details, see [JSON Name Mangling](../../system-functions/json.md).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  7162⌶
+</div>

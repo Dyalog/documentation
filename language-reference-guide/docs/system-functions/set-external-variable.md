@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕XT XT
-</div>
 
 # <span>Set External Variable</span> `{R}←X ⎕XT Y`{{key}}
 
@@ -109,3 +105,8 @@ In a multi-user environment (UNIX or a Windows LAN) a new file associated with a
 
 !!! Info "Information"
     Support for external variables has been deprecated, and they are scheduled for removal in a future release. For information on how to identify uses of external variables in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕XT XT
+</div>

@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍕ format
-</div>
 
 # <span>Format by Specification</span> `R←X⍕Y`{{key}}
 
@@ -83,3 +80,8 @@ The shape of `R` is the same as the shape of `Y` except that the last dimension 
       ⍴5 2 ⍕ 2 3 4⍴⍳24
 2 3 20
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍕ format
+</div>

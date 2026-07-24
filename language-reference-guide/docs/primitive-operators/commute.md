@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍨
-  commute
-</div>
 
 # <span>Commute</span> `{R}←{X}f⍨Y`{{key}}
 
@@ -42,3 +38,9 @@ The following statements are equivalent:
 ```
 
 Commute often eliminates the need for parentheses
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍨
+  commute
+</div>

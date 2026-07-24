@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2022⌶
-</div>
 
 # <span>Flush Session Caption</span> `R←2022⌶Y`{{key}}
 
@@ -24,3 +20,8 @@ This I-Beam causes the Session Caption to be updated (flushed) when called. Note
 
       2022⌶0    
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2022⌶
+</div>

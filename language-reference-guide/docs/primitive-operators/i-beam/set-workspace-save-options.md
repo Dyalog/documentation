@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2400⌶
-</div>
 
 # <span>Set Workspace Save Options</span> `R←2400⌶Y`{{key}}
 
@@ -32,3 +28,8 @@ This function may be extended in the future and a left-argument may be added.
 temp saved Sat Apr 05 17:01:30 2014
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2400⌶
+</div>

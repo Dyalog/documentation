@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FRDAC FRDAC
-</div>
 
 # <span>File Read Access</span> `R←⎕FRDAC Y`{{key}}
 
@@ -22,3 +18,8 @@ For details see [File Access Control](../../../programming-reference-guide/compo
  0 2073 16385
 31   ¯1     0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FRDAC FRDAC
+</div>

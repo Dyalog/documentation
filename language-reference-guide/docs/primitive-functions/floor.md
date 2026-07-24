@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⌊ floor
-</div>
 
 # <span>Floor</span> `R←⌊Y`{{key}}
 
@@ -50,3 +47,8 @@ The following (deliberately) simple function illustrates one way to express the 
 ```
 
 `⎕CT` and `⎕DCT` are  implicit arguments of Floor.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌊ floor
+</div>

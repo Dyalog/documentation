@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  < less
-</div>
 
 # <span>Less Than</span> `R←X&lt;Y`{{key}}
 
@@ -22,3 +19,8 @@ search:
       1 0.99999999999 0.9999999999<1
 0 0 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  < less
+</div>

@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  400⌶
-</div>
 
 # <span>Compiler Control</span> `R←{X}(400⌶)Y`{{key}}
 
@@ -106,3 +102,8 @@ The result `R` is a matrix of diagnostic information or, if `Y` was either a mat
 - `[;4]` – the error message   
 
 If the matrix has zero rows then the compilation was successful.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  400⌶
+</div>

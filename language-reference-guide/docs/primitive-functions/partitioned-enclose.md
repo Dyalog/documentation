@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⊂
-</div>
 
 # <span>Partitioned Enclose</span> `R←X⊂[K]Y`{{key}}
 
@@ -53,3 +50,8 @@ The above examples may be explained pictorially by the diagram below.
 │9 10 11│12│
 └───────┴──┘
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⊂
+</div>

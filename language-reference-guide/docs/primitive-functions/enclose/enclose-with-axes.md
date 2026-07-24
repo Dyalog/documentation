@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⊂ enclose
-</div>
 
 # <span>Enclose with Axes</span> `R←⊂[K]Y`{{key}}
 
@@ -62,3 +59,8 @@ The shape of each element of `R` is the shape of the `K`th axes of `Y`:
 │ └────┘ └────┘ └────┘ │
 └∊─────────────────────┘
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⊂ enclose
+</div>

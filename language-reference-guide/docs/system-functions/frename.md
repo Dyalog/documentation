@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FRENAME FRENAME
-</div>
 
 # <span>File Rename</span> `{R}←X ⎕FRENAME Y`{{key}}
 
@@ -41,3 +37,8 @@ Rename←{
     ⎕FUNTIE to ⎕FRENAME fm ⎕FTIE 0
 }
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FRENAME FRENAME
+</div>

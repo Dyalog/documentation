@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕WC WC
-</div>
 
 # <span>Window Create Object</span> `{R}←{X}⎕WC Y`{{key}}
 
@@ -108,3 +104,8 @@ Monadic `⎕WC` is used to *attach* a GUI component to an existing object.  The
 #
       F.⎕WC'Form' ⍝ Attach a Form to namespace F
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕WC WC
+</div>

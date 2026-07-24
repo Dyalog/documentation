@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍳
-</div>
 
 # <span>Index Of</span> `R←X⍳Y`{{key}}
 
@@ -128,3 +125,8 @@ LENGTH ERROR
 ```
 
 For performance information, see [Programmer's Guide: "Search Functions and Hash Tables"](../../../programming-reference-guide/introduction/search-functions-and-hash).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍳
+</div>

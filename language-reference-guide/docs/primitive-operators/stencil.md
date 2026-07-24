@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⌺
-  stencil
-</div>
 
 # <span>Stencil</span> `R←(f⌺g)Y`{{key}}
 
@@ -229,3 +225,9 @@ For even rectangle sizes, the "middle" consists of two elements which are moved 
 ⍝        ↑ ↑ middle
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌺
+  stencil
+</div>

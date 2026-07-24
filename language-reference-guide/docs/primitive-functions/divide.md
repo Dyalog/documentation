@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ÷ divide
-</div>
 
 # <span>Divide</span> `R←X÷Y`{{key}}
 
@@ -26,3 +23,8 @@ If `⎕DIV=1` and `Y=0`, the result of `X÷Y` is `0` for all values of `X`.
       2 0 5÷4 0 0
 0.5 0 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ÷ divide
+</div>

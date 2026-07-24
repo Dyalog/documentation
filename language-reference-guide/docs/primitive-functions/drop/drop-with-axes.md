@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ↓
-  drop
-</div>
 
 # <span>Drop with Axes</span> `R←X↓[K]Y`{{key}}
 
@@ -57,3 +53,9 @@ The size of each axis of `R` is determined by the corresponding element of `X`:
 19 20
 23 24
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ↓
+  drop
+</div>

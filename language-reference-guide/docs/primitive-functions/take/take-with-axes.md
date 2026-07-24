@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ↑ take
-</div>
 
 # <span>Take with Axes</span> `R←X↑[K]Y`{{key}}
 
@@ -57,3 +54,8 @@ The size of each axis of `R` is determined by the corresponding element of `X`:
 17 18
 21 22
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ↑ take
+</div>

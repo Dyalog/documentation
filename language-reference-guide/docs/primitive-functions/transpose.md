@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ⍉ transpose
-</div>
 
 # <span>Transpose (Monadic)</span> `R←⍉Y`{{key}}
 
@@ -56,3 +53,8 @@ search:
 4 3 2
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍉ transpose
+</div>

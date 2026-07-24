@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2023⌶
-</div>
 
 # <span>Close All Windows</span> `R←2023⌶Y`{{key}}
 
@@ -20,3 +16,8 @@ Under non-Windows operating systems this is the only mechanism for closing all s
 ```apl
       2023⌶0    
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2023⌶
+</div>

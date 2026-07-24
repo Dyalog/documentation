@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  / replicate
-</div>
 
 # <span>Replicate</span> `R←X/[K]Y`{{key}}
 
@@ -52,3 +49,8 @@ If `Y` is a singleton `(1=×/⍴,Y)` its value is notionally extended to the len
  
  
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  / replicate
+</div>

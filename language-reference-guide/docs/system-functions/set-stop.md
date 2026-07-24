@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕STOP STOP
-</div>
 
 # <span>Set Stop</span> `{R}←X ⎕STOP Y`{{key}}
 
@@ -66,3 +62,8 @@ FOO[0]
       →⎕LC
 10
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕STOP STOP
+</div>

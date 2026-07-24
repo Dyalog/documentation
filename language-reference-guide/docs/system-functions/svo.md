@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SVO SVO
-</div>
 
 # <span>Shared Variable Offer</span> `⎕SVO`
 
@@ -25,3 +21,8 @@ search:
       ⎕SVO 'DATA'
 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SVO SVO
+</div>

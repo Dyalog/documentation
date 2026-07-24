@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NL NL
-</div>
 
 # <span>Name List</span> `R←{X}⎕NL Y`{{key}}
 
@@ -136,3 +132,8 @@ Once a reference to a COM object has been obtained, `⎕NL` may be used to obtai
       ⎕NL -9
  xl
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NL NL
+</div>

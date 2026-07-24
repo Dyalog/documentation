@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  900⌶
-</div>
 
 # <span>Called Monadically?</span> `R←900⌶Y`{{key}}
 
@@ -27,3 +23,8 @@ The result `R` is Boolean. 1 means that the nearest tradfn was called monadicall
 0
 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  900⌶
+</div>

@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  8415⌶
-</div>
 
 # <span>Singular Value Decomposition</span> `R←(8415⌶)Y`{{key}}
 
@@ -31,3 +27,8 @@ For further information, see Wikipedia's article on [Singular Value Decompositio
 
 !!! note
     This function signals `DOMAIN ERROR` if `⎕FR` is 1287. See [Floating-Point Representation ](../../system-functions/fr.md).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  8415⌶
+</div>

@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2014⌶
-</div>
 
 # <span>Remove Data Binding</span> `R←2014⌶Y`{{key}}
 
@@ -27,3 +23,8 @@ The result `R` is always 1.
       2014⌶'txtSource'
 1    
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2014⌶
+</div>

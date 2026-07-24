@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  | residue mod
-</div>
 
 # <span>Residue</span> `R←X|Y`{{key}}
 
@@ -32,3 +29,8 @@ For other argument values, `R` is given by the expression `Y-X×⌊Y÷X+0=X`. Th
 ```
 
 Note that the ASCII Broken Bar (`⎕UCS 166`, U+00A6) is not interpreted as Residue.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  | residue mod
+</div>

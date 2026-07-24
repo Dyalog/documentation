@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕DQ DQ
-</div>
 
 # <span>Dequeue Events</span> `{R}←⎕DQ Y`{{key}}
 
@@ -71,3 +67,8 @@ Firstly, `⎕DQ` terminates when an event occurs whose "action code" is 1.  In 
 Thirdly, `⎕DQ` terminates if the object named in its right argument is a special *modal* object, such as a `MsgBox`, `FileBox` or `Locator`, and the user has finished interacting with the object (for example, by pressing an "OK" button).  The return value of `⎕DQ` in this case depends on the action code of the event.
 
 Finally, `⎕DQ` terminates with a `VALUE ERROR` if it attempts to execute a callback function that is undefined.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕DQ DQ
+</div>

@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ↓ drop
-</div>
 
 # <span>Drop</span> `R←X↓Y`{{key}}
 
@@ -51,3 +48,8 @@ UVWX
 ABCD
 EFGH
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ↓ drop
+</div>

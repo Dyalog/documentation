@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FPROPS FPROPS
-</div>
 
 # <span>File Properties</span> `R←X ⎕FPROPS Y`{{key}}
 
@@ -122,3 +118,8 @@ Compression is not supported for files in which both Journalling and Checksum ar
 
 !!! Info "Information"
     Component files that have both journalling and checksum properties set to `0` have been deprecated; from Dyalog v21.0, component files with this combination of properties will be read-only. Dyalog Ltd recommends using `⎕FPROPS` to convert any such files to have different properties. For information on how to identify component files that have both journalling and checksum properties set to `0` in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/). Be aware that converting from non-checksummed components to checksummed components can take a significant amount of time.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FPROPS FPROPS
+</div>

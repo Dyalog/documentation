@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  * exponential
-</div>
 
 # <span>Exponential</span> `R←*Y`{{key}}
 
@@ -21,3 +18,8 @@ search:
       1+*○0j1 ⍝ Euler Identity
 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  * exponential
+</div>

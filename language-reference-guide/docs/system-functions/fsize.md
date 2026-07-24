@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FSIZE FSIZE
-</div>
 
 # <span>File Size</span> `R←⎕FSIZE Y`{{key}}
 
@@ -23,3 +19,8 @@ search:
       ⎕FSIZE 1
 1 21 65271 4294967295
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FSIZE FSIZE
+</div>

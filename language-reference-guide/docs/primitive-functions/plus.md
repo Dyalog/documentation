@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  + plus add
-</div>
 
 # <span>Plus</span> `R←X+Y`{{key}}
 
@@ -24,3 +21,8 @@ search:
       ¯5 + 4J4 5J5
 ¯1J4 0J5
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  + plus add
+</div>

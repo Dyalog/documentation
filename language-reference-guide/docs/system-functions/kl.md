@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕KL KL
-</div>
 
 # <span>Key Label</span> `R←⎕KL Y`{{key}}
 
@@ -30,3 +26,8 @@ Right
           ⎕KL '⌸'
     Control+Shift+K
     ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕KL KL
+</div>

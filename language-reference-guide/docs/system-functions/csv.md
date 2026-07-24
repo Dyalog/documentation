@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕CSV CSV
-</div>
 
 # <span>Comma Separated Values</span> `{R}←{X} ⎕CSV Y`{{key}}
 
@@ -351,3 +347,8 @@ FILE NAME ERROR: Unable to create file ("The file exists.")
 - When fixed width fields are written, character data shorter than the specified width is padded with spaces to the right and character data longer than the specified width signals an error. Numeric data is converted to character data as far as possible so that it fits into the specified width. If this is not possible, an error is signalled.
 - Tab-separated fields may be exported by specifying `'Separator' (⎕UCS 9)`.
 - Fields containing a single embedded new line are supported. On export, line feed characters are mapped back to the defined line ending sequence.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕CSV CSV
+</div>

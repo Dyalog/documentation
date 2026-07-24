@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FMT FMT
-</div>
 
 # <span>Format (Dyadic)</span> `R←X ⎕FMT Y`{{key}}
 
@@ -249,3 +245,8 @@ NIL
 ```
 
 `⎕CT` and `⎕DCT` are  implicit arguments of `⎕FMT` with the O format qualifier.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FMT FMT
+</div>

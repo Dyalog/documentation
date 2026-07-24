@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ↑ first
-</div>
 
 # <span>First</span> `(⎕ML) R←⊃Y or R←↑Y`{{key}}
 
@@ -41,3 +38,8 @@ MONDAY
       ⊃1↓⊂1,⊂2 3
 0  0 0
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ↑ first
+</div>

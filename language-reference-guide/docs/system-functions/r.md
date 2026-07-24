@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕R
-</div>
 
 # <span>Replace</span> `R←{X}(A ⎕R B) Y`{{key}}
 
@@ -722,3 +718,8 @@ Whether 'tis nobler in the mind \u0 suffer
 The slings and arrows of outrageous fortune,
 Or \u0 take arms against a sea of troubles
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕R
+</div>

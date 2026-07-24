@@ -2,9 +2,6 @@
 search:
   boost: 2
 ---
-<div style="display: none;">
-  ≢
-</div>
 
 # <span>Not Match</span> `R←X≢Y`{{key}}
 
@@ -37,3 +34,8 @@ Non-empty arrays are identical if they have the same structure and the same valu
       (1↑0⍴A)≢⊂(0 0 0) '   '
 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ≢
+</div>

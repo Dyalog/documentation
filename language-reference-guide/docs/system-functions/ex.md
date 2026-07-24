@@ -2,10 +2,6 @@
 search:
   boost: 2
 ---
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕EX EX
-</div>
 
 # <span>Expunge Object</span> `{R}←⎕EX Y`{{key}}
 
@@ -64,3 +60,8 @@ If the named object is the last remaining external function of an auxiliary proc
 If the named object is the last reference into a dynamic link library, the DLL is freed.
 
 If the named object is a [Trigger](../../programming-reference-guide/triggers/triggers.md), the name is disconnected from the Trigger Function and the Trigger Function will not be invoked when the Trigger is reassigned. The connection can be re-established by re-fixing the Trigger Function.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕EX EX
+</div>

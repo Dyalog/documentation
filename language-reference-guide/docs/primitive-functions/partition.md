@@ -3,10 +3,6 @@ search:
   boost: 2
 ---
 
-<div style="display: none;">
-   ⊆ partition
-</div>
-
 # <span>Partition</span> `R←X⊆[K]Y`{{key}}
 
 !!! note "Classic Edition"
@@ -117,3 +113,8 @@ Note that if `⎕ML≥3`, the symbol `⊂` means the same as `⊆`.
 │ └~─┘  └~─┘  └~─┘  └~─┘  │
 └∊────────────────────────┘
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+   ⊆ partition
+</div>
