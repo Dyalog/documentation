@@ -2,7 +2,7 @@
 
 `⎕NA` is fully supported under UNIX; the Conga communications package for example is a shared library on all platforms.
 
-`⎕NA` supports user-written shared libraries and also system-supplied shared libraries. Dyalog APL under UNIX is supplied with a shared library, dyalog32.so or dyalog64.so which contains the same functions as the DLLs which are described in the `⎕NA` documentation in the *Dyalog Language Reference Guide*. Additionally, the function `getlasterror` is included; this returns the error code at the point when the called function failed (which may be different from its value at the point where a previous error occurred).
+`⎕NA` supports user-written shared libraries and also system-supplied shared libraries. Dyalog APL under Non-Windows platforms is supplied with a shared library, dyalog32.so or dyalog64.so which contains the same functions as the DLLs which are described in the `⎕NA` documentation in the *Dyalog Language Reference Guide*. Additionally, the function `getlasterror` is included; this returns the error code at the point when the called function failed (which may be different from its value at the point where a previous error occurred).
 
 It is necessary to specify the complete name of the file containing the shared library, no extension is added by Dyalog APL.
 
@@ -24,7 +24,7 @@ On Linux, it is a little more difficult to locate the libc.so file; the function
 
 ### Definitions
 
-In the remainder of this section references are made to the APL variables `sharedlib` and `dyalib`; the definitions for both vary  between AIX and Linux, and between 32 and 64 bit interpreters.
+In the remainder of this section references are made to the APL variables `sharedlib` and `dyalib`; the definitions for both vary between operating system, and between 32 and 64 bit interpreters.
 
 Under AIX, `sharedlib` is defined as:
 ```apl
@@ -38,16 +38,28 @@ Under Linux, it is necessary to identify the shared library:
       sharedlib←libc ⍬
 ```
 
-For all UNIX platforms, the dyalog shared library is identified as
+Under macOS, `sharedlib` is defined as:
+```apl
+      sharedlib←'libc.dylib'
+```
+
+For AIX and all Linux platforms, the dyalog shared library is identified as
 ```apl
       dyalib←'dyalog64.so'         ⍝ 64 bit
       dyalib←'dyalog32.so'         ⍝ 32 bit
 	
 ```
 
+For macOS, the dyalog shared library is identified as 
+```apl
+      dyalib←dyalog64.dylib
+```
+
+The Setup function in the NonWindows namespace in the quadna workspace can be used to set both sharedlib and dyalib for all supported non-Windows platforms.
+
 ## Example 1
 
-getpid() is common to all UNIX platforms; it returns an int which is the process ID of the current process. It is defined to be
+getpid() is common to all Non-Windows platforms platforms; it returns an int which is the process ID of the current process. It is defined to be
 
 pid_t getpid(void)
 
@@ -87,7 +99,7 @@ char *getenv(const char *name)
 
 ## geterrno
 
-The dyalog shared libary under UNIX includes the function `geterrno`. This returns the current value of errno; be aware that it may not have the same value as at the point when the error was raised. To use this function:
+The dyalog shared libary under Non-Windows platforms includes the function `geterrno`. This returns the current value of errno; be aware that it may not have the same value as at the point when the error was raised. To use this function:
 ```apl
 
       ⎕NA 'I ',dyalib,'|geterrno'
