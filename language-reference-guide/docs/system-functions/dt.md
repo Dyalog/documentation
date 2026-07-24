@@ -3,34 +3,34 @@ search:
   boost: 2
 ---
 
-# <span>Date-time</span> `R←X ⎕DT Y`{{key}}
+# <span>Datetime</span> `R←X ⎕DT Y`{{key}}
 
-This function validates date-times, converts date-times between one representation and another, and converts date-times to and from text.
+This function validates datetimes, converts datetimes between one representation and another, and converts datetimes to and from text.
 
-A date-time is a date and time of day represented by a *timestamp*, a *time number*, a *military time-zone character*, or a *text-formatted datetime*.
+A *datetime* is a date and time of day represented by a *time number*, a *timestamp*, a *military time-zone character*, or a *text-formatted datetime*.
 
-- A *timestamp* is a date-time expressed as a multiple element numeric vector, of which there are several different sorts (principally [`⎕TS`](ts.md) format).
-- A *time number* is a date-time expressed as a scalar numeric value, of which there are several different sorts.
-- A *military time zone character* is a scalar character that represents the current date-time ("now") in a particular time zone. For example, `'A'` represents the current date-time (UTC) + 1 hour.
-- A *text-formatted datetime* is a date-time expressed as a character vector, formatted according to a [formatting *pattern*](#formatting-patterns).
+- A [*time number*](#time-numbers) is a datetime expressed as a scalar numeric value, of which there are several different sorts (principally a [Dyalog Date Number](#timenumbers)).
+- A [*timestamp*](#timestamps) is a datetime expressed as a multiple element numeric vector, of which there are several different sorts (principally [`⎕TS`](ts.md) format).
+- A [*military time zone character*](#military-time-zone-characters) is a scalar character that represents the current datetime ("now") in a particular time zone. For example, `'A'` represents the current datetime ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) + 1 hour.
+- A *text-formatted datetime* is a datetime expressed as a character vector, formatted according to a [*formatting pattern*](#formatting-patterns).
 
-`Y` is an array of any shape whose elements contain a timestamp, time number, military time zone character, or text-formatted datetime, in any combination.
+`Y` is an array of any shape whose elements contain a time number, timestamp, military time zone character, or text-formatted datetime, in any combination.
 
 `X` describes the representation to which the elements of `Y` are to be converted (the output format) and, optionally, the representation of the elements of `Y` (the input format). These are referred to below as <code>X<sub>R</sub></code> and <code>X<sub>Y</sub></code> respectively.
 
 `X` can be a single element (<code>X<sub>R</sub></code>) or a 2-element vector (<code>X<sub>Y</sub> X<sub>R</sub></code>). Each of <code>X<sub>Y</sub></code> and <code>X<sub>R</sub></code> can be:
 
-- an integer *date-time code* (see [](#timenumbers))
+- an integer *datetime code* (see [](#time-numbers) and [](#timestamps))
 - a character vector containing a *pattern* that describes how a datetime is formatted as text (see [Formatting Patterns](#formatting-patterns)).
 
-When <code>X<sub>R</sub></code> is an integer it must be either `0` or a code from [](#timenumbers) or [](#timestamps). `0` specifies that the elements of `Y` are to be validated; a non-zero value specifies the date-time representation to which the elements of `Y` are to be converted. When <code>X<sub>R</sub></code> is a pattern, the elements of `R` are character vectors, each derived by formatting the corresponding element of `Y` as text according to the pattern.
+When <code>X<sub>R</sub></code> is an integer it must be either `0` or a code from [](#timenumbers) or [](#timestamps). `0` specifies that the elements of `Y` are to be validated; a non-zero value specifies the datetime representation to which the elements of `Y` are to be converted. When <code>X<sub>R</sub></code> is a pattern, the elements of `R` are character vectors, each derived by formatting the corresponding element of `Y` as text according to the pattern.
 
 <code>X<sub>Y</sub></code> can be omitted only when the elements of `Y` are Dyalog Date Numbers, `⎕TS`-style timestamps, or military time zone characters. When <code>X<sub>Y</sub></code> is omitted, the numeric elements of `Y` are interpreted as follows:
 
 - scalars are assumed to be time numbers of type Dyalog Date Number (code `1`)
 - vectors are assumed to be `⎕TS` timestamps (code `¯1`)
 
-When <code>X<sub>Y</sub></code> is an integer date-time code it explicitly specifies the date-time representation of the numeric elements of `Y`. When <code>X<sub>Y</sub></code> is a pattern, the corresponding character vectors in `Y` are matched against the pattern and the resulting date-times are returned in the representation given by <code>X<sub>R</sub></code> (see [Pattern matching rules](#pattern-matching-rules)). A pattern <code>X<sub>Y</sub></code> cannot be omitted, even when the elements of `Y` are character vectors that could unambiguously be assumed to be text-formatted datetimes.
+When <code>X<sub>Y</sub></code> is an integer datetime code it explicitly specifies the datetime representation of the numeric elements of `Y`. When <code>X<sub>Y</sub></code> is a pattern, the corresponding character vectors in `Y` are matched against the pattern and the resulting datetime are returned in the representation given by <code>X<sub>R</sub></code> (see [Pattern matching rules](#pattern-matching-rules)). A pattern <code>X<sub>Y</sub></code> cannot be omitted, even when the elements of `Y` are character vectors that could unambiguously be assumed to be text-formatted datetimes.
 
 Text-formatted datetimes and patterns are character vectors; no scalar extension occurs when character scalars appear in `X` or `Y`. A single text-formatted datetime in `Y` must be enclosed (nested); an unenclosed character vector in `Y` is interpreted as a vector of military time zone characters. As a convenience, a simple (not nested) character vector `X` is implicitly enclosed and processed as <code>X<sub>R</sub></code> meaning that a single pattern can be supplied on its own to format datetimes as text.
 
@@ -46,40 +46,48 @@ If a value in `X` is positive it indicates that a time number type is expected i
 
 Table: Time numbers { #timenumbers }
 
-|Group|Code|Description|Category|Date and time[^1] represented by 0 (Epoch)|Negative values allowed?[^2]|
-|---|---|---|---|---|---|
-|Dyalog APL              | `1` |Dyalog Date Number|Day count with fractional part|1899-12-31 00:00|Yes|
-|_                      _| `2` |Dyalog component file time|Tick count 1÷60s ticks[^3]|1970-01-01 00:00|Yes|
-|Other languages         | `10` |J (J nanosecond time)|Tick count[^4] 1ns ticks [^3]|2000-01-01 00:00|Yes|
-|                        | `11` |Shakti K7|Tick count 1ms ticks[^3]|2024-01-01 00:00|Yes|
-|                        | `12` |JavaScript / D / Q / Go UnixMilli |Tick count 1ms ticks[^3]|1970-01-01 00:00|Yes|
-|                        | `13` |R (R chron format)|Day count with fractional part|1970-01-01 00:00|Yes|
-|                        | `14` |Shakti K9|Tick count 1ms ticks[^3]|2001-01-01 00:00|Yes|
-|                        | `15` |Go UnixMicro|Tick count 1µs ticks[^3]|1970-01-01 00:00|Yes|
-|                        | `16` |Go UnixNano|Tick count 1ns ticks[^3]|1970-01-01 00:00|Yes|
-|_                      _| `17` |APL+Win and APL64 workspace timestamp|Tick count 1μs ticks[^3]|1900-01-01 00:00|No|
-|UNIX                    | `20` |Unix time|Tick count 1s ticks[^3]|1970-01-01 00:00|Yes|
-|                        | `21` |Apollo NCS UUID|Tick count 4µs ticks[^3]|1980-01-01 00:00|No|
-|_                      _| `22` |OSF DCE UUID|Tick count 1ns ticks[^3]|1582-10-15 00:00|No|
-|Microsoft Windows       | `30` |Microsoft DOS date/time|Encoded broken-down time 2s resolution|N/A|No|
-|                        | `31` |Microsoft Win32 FILETIME|Tick count[^4] 100ns ticks|1601-01-01 00:00|No|
-|                        | `32` |Microsoft CLR DateTime (.NET)(Ticks property thereof)|Tick count [^4] 100ns ticks|0001-01-01 00:00|No|
-|_                      _| `33` |Microsoft OLE Automation Date(also known as Variant Time)|Day count with fractional part|1899-12-30 00:00|Yes [^5]|
-|Application             | `40` |Excel (1900 Date System)[^6] / Lotus 1-2-3|Day count with fractional part[^7]|1899-12-31 00:00[^8]|No|
-|                        | `41` |Excel (1904 Date System)[^6]|Day count with fractional part|1904-01-01 00:00|No|
-|                        | `42` |Stata statistics package|Tick count 1ms ticks[^3]|1960-01-01 00:00|Yes|
-|                        | `43` |SPSS statistics package|Tick count 1s ticks[^3]|1582-10-14 00:00|No|
-|_                      _| `44` |SAS|Tick count 1s ticks[^3]|1960-01-01 00:00|Yes|
-|Julian Date and variants| `50` |Julian Date|Day count with fractional part|¯4717-11-24 12:00|No|
-|                        | `51` |J (J dayno)|Day count with fractional part|1800-01-01 00:00|No|
-|                        | `52` |Reduced Julian Date|Day count with fractional part|1858-11-16 12:00|Yes|
-|                        | `53` |Modified Julian Date|Day count with fractional part|1858-11-17 00:00|Yes|
-|                        | `54` |Dublin Julian Date|Day count with fractional part|1899-12-31 12:00|Yes|
-|                        | `55` |CNES Julian Date|Day count with fractional part|1950-01-01 00:00|Yes|
-|_                      _| `56` |CCSDS Julian Date|Day count with fractional part|1958-01-01 00:00|Yes|
-|Decimal encoded[^9]     | `60` |Floating-point decimal encoded format Digits take the form yyyymmdd.hhmmss|Encoded broken-down time 1s resolution|N/A|No|
-|_                      _| `61` |Integer decimal encoded format Digits take the form yyyymmddhhmmss(J digit time)|Encoded broken-down time 1s resolution|N/A|No|
-|Misc. Operating Systems | `70` |AmigaOS|Tick count 1ms ticks[^3]|1978-01-01 00:00|No|
+|Code|Description|Category|Epoch[^1]|<0?[^2]|
+|---|---|---|---|---|
+|Dyalog APL|||||
+| `1` |Dyalog Date Number|Day count with fractional part|1899-12-31 00:00|Yes|
+| `2` |Dyalog component file time|Tick count 1÷60&nbsp;s ticks[^3]|1970-01-01 00:00|Yes|
+|Other languages|||||
+| `10` |J (J nanosecond time)|Tick count[^4] 1&nbsp;ns ticks[^3]|2000-01-01 00:00|Yes|
+| `11` |Shakti K7|Tick count 1&nbsp;ms ticks[^3]|2024-01-01 00:00|Yes|
+| `12` |JavaScript / D / Q / Go UnixMilli |Tick count 1&nbsp;ms ticks[^3]|1970-01-01 00:00|Yes|
+| `13` |R (R chron format)|Day count with fractional part|1970-01-01 00:00|Yes|
+| `14` |Shakti K9|Tick count 1&nbsp;ms ticks[^3]|2001-01-01 00:00|Yes|
+| `15` |Go UnixMicro|Tick count 1&nbsp;µs ticks[^3]|1970-01-01 00:00|Yes|
+| `16` |Go UnixNano|Tick count 1&nbsp;ns ticks[^3]|1970-01-01 00:00|Yes|
+| `17` |APL+Win and APL64 workspace timestamp|Tick count 1μs ticks[^3]|1900-01-01 00:00|No|
+|UNIX|||||
+| `20` |Unix time|Tick count 1&nbsp;s ticks[^3]|1970-01-01 00:00|Yes|
+| `21` |Apollo NCS UUID|Tick count 4µs ticks[^3]|1980-01-01 00:00|No|
+| `22` |OSF DCE UUID|Tick count 1&nbsp;ns ticks[^3]|1582-10-15 00:00|No|
+|Microsoft Windows|||||
+| `30` |Microsoft DOS date/time|Encoded broken-down time 2&nbsp;s resolution|N/A|No|
+| `31` |Microsoft Win32 FILETIME|Tick count[^4] 100&nbsp;ns ticks|1601-01-01 00:00|No|
+| `32` |Microsoft CLR DateTime (.NET)(Ticks property thereof)|Tick count [^4] 100&nbsp;ns ticks|0001-01-01 00:00|No|
+| `33` |Microsoft OLE Automation Date (also known as Variant Time)|Day count with fractional part|1899-12-30 00:00|Yes [^5]|
+|Application|||||
+| `40` |Excel (1900 Date System)[^6] / Lotus 1-2-3|Day count with fractional part[^7]|1899-12-31 00:00[^8]|No|
+| `41` |Excel (1904 Date System)[^6]|Day count with fractional part|1904-01-01 00:00|No|
+| `42` |Stata statistics package|Tick count 1&nbsp;ms ticks[^3]|1960-01-01 00:00|Yes|
+| `43` |SPSS statistics package|Tick count 1&nbsp;s ticks[^3]|1582-10-14 00:00|No|
+| `44` |SAS|Tick count 1&nbsp;s ticks[^3]|1960-01-01 00:00|Yes|
+|Julian Date and variants|||||
+| `50` |Julian Date|Day count with fractional part|¯4717-11-24 12:00|No|
+| `51` |J (J dayno)|Day count with fractional part|1800-01-01 00:00|No|
+| `52` |Reduced Julian Date|Day count with fractional part|1858-11-16 12:00|Yes|
+| `53` |Modified Julian Date|Day count with fractional part|1858-11-17 00:00|Yes|
+| `54` |Dublin Julian Date|Day count with fractional part|1899-12-31 12:00|Yes|
+| `55` |CNES Julian Date|Day count with fractional part|1950-01-01 00:00|Yes|
+| `56` |CCSDS Julian Date|Day count with fractional part|1958-01-01 00:00|Yes|
+|Decimal encoded[^9]|||||
+| `60` |Floating-point decimal encoded format Digits take the form yyyymmdd.hhmmss|Encoded broken-down time 1&nbsp;s resolution|N/A|No|
+| `61` |Integer decimal encoded format Digits take the form yyyymmddhhmmss (J digit time)|Encoded broken-down time 1&nbsp;s resolution|N/A|No|
+|Misc. Operating Systems|||||
+| `70` |AmigaOS|Tick count 1&nbsp;ms ticks[^3]|1978-01-01 00:00|No|
 
 ## Timestamps
 
@@ -87,15 +95,19 @@ If a value in `X` is negative it indicates that a timestamp type is expected in 
 
 Table: Timestamps { #timestamps }
 
-| Group                  | Code  | Description                                  | Max elements | Element contents[^10]                                        | Elided element implicit values (in Y)[^11] |
-|------------------------|-------|----------------------------------------------|--------------|--------------------------------------------------------------|--------------------------------------------|
-| APL 7-element vector   | `¯1`  | Millisecond precision (`⎕TS`)                | 7            | Year, month, day-of-month, hour, minute, second, millisecond | `1 1 1 0 0 0 0`                            |
-|                        | `¯2`  | Microsecond precision                        | 7            | Year, month, day-of-month, hour, minute, second, microsecond | `1 1 1 0 0 0 0`                            |
-|_                      _| `¯3`  | Nanosecond precision (J expanded digit time) | 7            | Year, month, day-of-month, hour, minute, second, nanosecond  | `1 1 1 0 0 0 0`                            |
-| ISO components         | `¯10` | ISO day-of-year components                   | 6            | Year, day-of-year, hour, minute, second, microsecond         | `1 1 0 0 0 0`                            |
-|_                      _| `¯11` | ISO day-of-week components                   | 7            | Year, week, day-of-week, hour, minute, second, microsecond   | `1 1 1 0 0 0 0`                              |
-| Decimal encoded[^3]    | `¯20` | Decimal encoded date and time                | 2            | Decimal encoded date, decimal encoded time                   | `10101 0`                              |
-| DateTimePicker         | `¯30` | DateTime format                              | 4            | International Day Number, hour, minute, second               | `0 0 0 0`                              |
+| Code  | Description                                  | Max elements | Element contents[^10]                                        | Elided elements[^11] |
+|-------|----------------------------------------------|--------------|--------------------------------------------------------------|--------------------------------------------|
+| APL 7-element vector ||||
+| `¯1`  | Millisecond precision (`⎕TS`)                | 7            | Year, month, day-of-month, hour, minute, second, millisecond | `1 1 1 0 0 0 0`                            |
+| `¯2`  | Microsecond precision                        | 7            | Year, month, day-of-month, hour, minute, second, microsecond | `1 1 1 0 0 0 0`                            |
+| `¯3`  | Nanosecond precision (J expanded digit time) | 7            | Year, month, day-of-month, hour, minute, second, nanosecond  | `1 1 1 0 0 0 0`                            |
+| ISO components ||||
+| `¯10` | ISO day-of-year components                   | 6            | Year, day-of-year, hour, minute, second, microsecond         | `1 1 0 0 0 0`                            |
+| `¯11` | ISO day-of-week components                   | 7            | Year, week, day-of-week, hour, minute, second, microsecond   | `1 1 1 0 0 0 0`                              |
+| Decimal encoded[^3] ||||
+| `¯20` | Decimal encoded date and time                | 2            | Decimal encoded date, decimal encoded time                   | `10101 0`                              |
+| DateTimePicker ||||
+| `¯30` | DateTime format                              | 4            | International Day Number, hour, minute, second               | `0 0 0 0`                              |
 
 ## Military Time Zone Characters
 
@@ -105,32 +117,32 @@ Table: Military time zones { #timezones }
 
 |Character|Time zone name|Time zone |
 |---------|--------------|----------|
-|A        |Alpha         |UTC +1    |
-|B        |Bravo         |UTC +2    |
-|C        |Charlie       |UTC +3    |
-|D        |Delta         |UTC +4    |
-|E        |Echo          |UTC +5    |
-|F        |Foxtrot       |UTC +6    |
-|G        |Golf          |UTC +7    |
-|H        |Hotel         |UTC +8    |
-|I        |India         |UTC +9    |
+|A        |Alpha         |UTC+1    |
+|B        |Bravo         |UTC+2    |
+|C        |Charlie       |UTC+3    |
+|D        |Delta         |UTC+4    |
+|E        |Echo          |UTC+5    |
+|F        |Foxtrot       |UTC+6    |
+|G        |Golf          |UTC+7    |
+|H        |Hotel         |UTC+8    |
+|I        |India         |UTC+9    |
 |J        |Juliet        |Local time|
-|K        |Kilo          |UTC +10   |
-|L        |Lima          |UTC +11   |
-|M        |Mike          |UTC +12   |
-|N        |November      |UTC -1    |
-|O        |Oscar         |UTC -2    |
-|P        |Papa          |UTC -3    |
-|Q        |Quebec        |UTC -4    |
-|R        |Romeo         |UTC -5    |
-|S        |Sierra        |UTC -6    |
-|T        |Tango         |UTC -7    |
-|U        |Uniform       |UTC -8    |
-|V        |Victor        |UTC -9    |
-|W        |Whisky        |UTC -10   |
-|X        |X-ray         |UTC -11   |
-|Y        |Yankee        |UTC -12   |
-|Z        |Zulu          |UTC +0    |
+|K        |Kilo          |UTC+10   |
+|L        |Lima          |UTC+11   |
+|M        |Mike          |UTC+12   |
+|N        |November      |UTC-1    |
+|O        |Oscar         |UTC-2    |
+|P        |Papa          |UTC-3    |
+|Q        |Quebec        |UTC-4    |
+|R        |Romeo         |UTC-5    |
+|S        |Sierra        |UTC-6    |
+|T        |Tango         |UTC-7    |
+|U        |Uniform       |UTC-8    |
+|V        |Victor        |UTC-9    |
+|W        |Whisky        |UTC-10   |
+|X        |X-ray         |UTC-11   |
+|Y        |Yankee        |UTC-12   |
+|Z        |Zulu          |UTC      |
 
 The resolutions of system clocks vary by platform.
 
@@ -233,7 +245,7 @@ Additional predefined patterns can be defined using the [**Dictionary** variant 
 
 ## Pattern-matching Rules
 
-When <code>X<sub>Y</sub></code> is a pattern, the corresponding character vectors in `Y` are matched against it and decoded into date-times. The following additional rules apply to the matching.
+When <code>X<sub>Y</sub></code> is a pattern, the corresponding character vectors in `Y` are matched against it and decoded into datetime. The following additional rules apply to the matching.
 
 ### Two-digit Years
 
@@ -312,7 +324,7 @@ See the [Dictionary example](#dictionary).
 
 ## Examples
 
-### Dictionary { .example }
+### Creating a Dictionary { .example }
 
 The following creates a dictionary defined by the namespace `dict`. See [formatting examples](#formatting-datetimes) for uses of this dictionary.
 
@@ -367,25 +379,18 @@ In the above example:
 - There is no explicit definition of patterns or names for language region `en_GB`. If this language is selected, the definitions for `en` will be used.
 - There is an explicit definition for `ShortMonthNames` for language region `en_US`. If this language is selected, the definition of `ShortMonthNames` is as defined, and as for `en` for other names. As `en` is not defined in the dictionary, the built-in defaults are used.
 
-### Timestamp to time number { .example }
+### Time Number to Time Number { .example }
 ```apl
-      ¯1 1 ⎕DT ⊂⎕TS
-43886.48039
-      1 ⎕DT ⊂⎕TS
-43886.48039
-      1 ⎕DT ⎕TS 'J'
-43886.48039 43886.48039
-
-      1 ⎕DT ⊂⍬ ⍝ cf Elided element implicit values
-¯693594
-      1 ⎕DT ⊂1 1 1 0 0 0 0
-¯693594
-       ¯30 1 ⎕DT⊂(44217 15 13 54)
-44217.63465
-
+      2 1 ⎕DT 3⊃⎕FRDCI 1 1
+43886.48188
+      1 ⎕DT 'J'
+43886.48371
+      ⍝ Local time is UTC-05:00
+      3600÷⍨-/20 ⎕DT 'JZ'
+¯5
 ```
 
-### Time number to timestamp { .example }
+### Time Number to Timestamp { .example }
 ```apl
       1 ¯1 ⎕DT 0 43508.42843
 ┌──────────────────┬──────────────────────┐
@@ -405,18 +410,25 @@ In the above example:
 └──────────────┘
 ```
 
-### Time number to time number { .example }
+### Timestamp to Time Number { .example }
 ```apl
-      2 1 ⎕DT 3⊃⎕FRDCI 1 1
-43886.48188
-      1 ⎕DT 'J'
-43886.48371
-      ⍝ Local time is UTC-05:00
-      3600÷⍨-/20 ⎕DT 'JZ'
-¯5
+      ¯1 1 ⎕DT ⊂⎕TS
+43886.48039
+      1 ⎕DT ⊂⎕TS
+43886.48039
+      1 ⎕DT ⎕TS 'J'
+43886.48039 43886.48039
+
+      1 ⎕DT ⊂⍬ ⍝ cf Elided element implicit values
+¯693594
+      1 ⎕DT ⊂1 1 1 0 0 0 0
+¯693594
+       ¯30 1 ⎕DT⊂44217 15 13 54
+44217.63465
+
 ```
 
-### Timestamp to timestamp { .example }
+### Timestamp to Timestamp { .example }
 ```apl
       ¯30 ⎕DT ⊂⎕TS
 ┌─────────────┐
@@ -429,7 +441,7 @@ In the above example:
 └───────────────────┘
 ```
 
-### Formatting datetimes { .example }
+### Formatting Datetimes { .example }
 ```apl
       dt←1 ⎕DT ⊂2019 2 13 10 16 56
       dt
@@ -452,7 +464,7 @@ In the above example:
 └───────────────────────┘
 ```
 
-### Parsing text formats { .example }
+### Parsing Text Formats { .example }
 ```apl
       'DD/MM/YYYY' 1 ⎕DT ⊂'13/02/2019'
 43508
@@ -468,7 +480,7 @@ In the above example:
 43508
 ```
 
-### Languages and dictionaries { .example }
+### Languages and Dictionaries { .example }
 ```apl
       '__da__Dddd, DDoo mmmm YYYY; hh:mm:ss' ⎕DT dt
 ┌──────────────────────────────────┐
@@ -493,7 +505,7 @@ In the above example:
 └───────────────────────┘
 ```
 
-### Validation { .example }
+### Validating Datetimes { .example }
 ```apl
       0 ⎕DT ⎕TS (2020 13 1) 'J' 'DT' #
 1 0 1 0 0
@@ -508,22 +520,22 @@ In the above example:
 0 1
 ```
 
-[^1]: In the Proleptic Gregorian Calendar.
-[^2]: No date-time can represent a date earlier than ¯4713-01-01 00:00.
+[^1]: The epoch is the datetime represented by 0 in the [proleptic Gregorian calendar](https://en.wikipedia.org/wiki/Proleptic_Gregorian_calendar).
+[^2]: Are negative values allowed? No datetime can represent a date earlier than ¯4713-01-01 00:00:00.
 [^3]: There are the same number of ticks per day regardless of leap seconds.
-[^4]: Generated as DECF values regardless of the setting of ⎕FR due to their magnitude.
+[^4]: Generated as DECF values regardless of the setting of `⎕FR` due to their magnitude.
 [^5]: For negative numbers, the integral part counts backward from 1899-12-30 and the fractional part counts forward from the date so reached.
 [^6]: Excel supports two time number conventions. On Windows the 1900 Date System is the default and on macOS the 1904 Date System is the default. Both systems can use either convention and the convention in use is stored in the worksheet so that the platforms interoperate.
 [^7]: Count includes the invalid date 1900-02-29.
 [^8]: Microsoft Excel converts day 0 to the invalid date 1900-01-00.
-[^9]: Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020/01/23 (year/month/day) is encoded as 20200123, and 13:17:56 (hour:minute:second) is encoded as 131756. The date must be between 1 January 0001 and 31 December 9999 in the Proleptic Gregorian Calendar.
-[^10]: All dates must be between 1 January 0001 and 28 February 4000 in the Proleptic Gregorian Calendar.
-[^11]: If a timestamp has fewer than the maximum number of elements, the remaining elements take the default values shown.
+[^9]: Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020-01-23 is encoded as 20200123, and 13:17:56 is encoded as 131756. The date must be between 1 January 0001 and 31 December 9999 in the proleptic Gregorian calendar.
+[^10]: All dates must be between 1 January 0001 and 28 February 4000 in the proleptic Gregorian calendar.
+[^11]: If a timestamp in `Y` has fewer than the maximum number of elements, the remaining elements take the default values shown.
 [^12]: Natural sentence case, which can be specified for `M` (month name) and `d` (day name) only, causes the text to be substituted in the case which is natural for the language; some languages (for example, English) always capitalise the first letter of day and month names whereas others (for example, French) do not.
 [^13]: Dates at the start of the year can be in the final week of the previous year, and dates at the end of the year can be in the first week of the following year.
 [^14]: An ordinal indicator is a character or group of characters following a numeral, such as (in English) the suffixes -st, -nd, -rd, -th as in 1st, 2nd, 3rd, 4th.
 [^15]: For negative numbers, the integral part counts backward from 1899-12-30 and the fractional part counts forward from  the date so reached.
-[^16]: Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020/01/23 (year/month/day) is encoded as 20200123, and 13:17:56 (hour:minute:second) is encoded as 131756.
+[^16]: Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020-01-23 is encoded as 20200123, and 13:17:56 is encoded as 131756.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
