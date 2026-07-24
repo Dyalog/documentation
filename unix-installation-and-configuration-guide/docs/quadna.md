@@ -24,7 +24,7 @@ On Linux, it is a little more difficult to locate the libc.so file; the function
 
 ### Definitions
 
-In the remainder of this section references are made to the APL variables `sharedlib` and `dyalib`; the definitions for both vary  between AIX and Linux, and between 32 and 64 bit interpreters.
+In the remainder of this section references are made to the APL variables `sharedlib` and `dyalib`; the definitions for both vary between operating system, and between 32 and 64 bit interpreters.
 
 Under AIX, `sharedlib` is defined as:
 ```apl
@@ -55,6 +55,7 @@ For macOS, the dyalog shared library is identified as
       dyalib←dyalog64.dylib
 ```
 
+The Setup function in the NonWindows namespace in the quadna workspace can be used to set both sharedlib and dyalib for all supported non-Windows platforms.
 
 ## Example 1
 
