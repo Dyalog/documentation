@@ -425,9 +425,6 @@ hr+pre>code {
     & * {
         color: inherit;
     }
-    & mark {
-        text-decoration: underline;
-    }
 }
 
 .md-typeset .footnote code {
