@@ -251,7 +251,7 @@ This namespace provides information about the interpreter's operating system pro
 Non-negative integer [process identifier](https://en.wikipedia.org/wiki/Process_identifier) (PID) of the interpreter.
 
 #### Process.LaunchTarget
-The fully qualified path of the file or directory loaded at startup. This is set by either a workspace name on the [APL command line](../../windows-installation-and-configuration-guide/apl-command-line) or using the [LOAD configuration parameter](windows-installation-and-configuration-guide/configuration-parameters/load/).
+The fully qualified path of the file or directory loaded at startup. This is set by either a workspace name on the [APL command line](../../windows-installation-and-configuration-guide/apl-command-line) or using the [LOAD configuration parameter](../../windows-installation-and-configuration-guide/configuration-parameters/load/).
 
 #### Process.ParentId
 Non-negative integer [process identifier](https://en.wikipedia.org/wiki/Process_identifier) of the process that launched the interpreter. Always `¯1` on Microsoft Windows.

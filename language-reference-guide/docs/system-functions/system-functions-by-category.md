@@ -257,7 +257,7 @@ These create and manipulate files of any type as well as directories.
 
 ### Threads
 
-These are facilities to handle threads such as those created by [Spawn](../../primitive-operators/spawn.md) (`&`).
+These are facilities to handle threads such as those created by [Spawn](../primitive-operators/spawn.md) (`&`).
 
 |Name     |Description                  |Form|
 |---------|-----------------------------|-----|
@@ -271,7 +271,7 @@ These are facilities to handle threads such as those created by [Spawn](../../pr
 
 ### Synchronisation
 
-These are facilities to ensure proper timing in the relationship between threads such as those created by [Spawn](../../primitive-operators/spawn.md) (`&`).
+These are facilities to ensure proper timing in the relationship between threads such as those created by [Spawn](../primitive-operators/spawn.md) (`&`).
 
 |Name     |Description         |Form|
 |---------|--------------------|-----|
@@ -311,7 +311,7 @@ These are facilities to catch, cause, and investigate error events and interrupt
 
 ### Shared Variables
 
-These constitute the [shared variable](../../../interface-guide/dde/shared-variable-principles.md) interface.
+These constitute the [shared variable](../../interface-guide/dde/shared-variable-principles.md) interface.
 
 |Name  |Description                |Form|
 |------|---------------------------|-----|
