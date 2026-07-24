@@ -51,6 +51,9 @@ body {
 }
 code, .Dyalog {
     font-family: APL;
+    & sub, & sup {
+        -webkit-text-stroke: 0.01em;
+    }
 }
 code[class^="language-"], div[class^="language-"] pre code {
     font-family: "Go Mono", "Courier New", monospace;
@@ -415,4 +418,18 @@ hr+pre>code {
             mask-repeat: no-repeat;
     -webkit-mask-position: center;
             mask-position: center;
+}
+
+.md-search-result .md-typeset h1 {
+    color: white;
+    & * {
+        color: inherit;
+    }
+    & mark {
+        text-decoration: underline;
+    }
+}
+
+.md-typeset .footnote code {
+  font-size: 110%;
 }
