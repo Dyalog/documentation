@@ -9,19 +9,19 @@ This function validates date-times, converts date-times between one representati
 
 A date-time is a date and time of day represented by a *timestamp*, a *time number*, a *military time-zone character*, or a *text-formatted datetime*.
 
-- A *timestamp* is a date-time expressed as a multiple element numeric vector, of which there are several different sorts (principally `⎕TS` format).
+- A *timestamp* is a date-time expressed as a multiple element numeric vector, of which there are several different sorts (principally [`⎕TS`](ts.md) format).
 - A *time number* is a date-time expressed as a scalar numeric value, of which there are several different sorts.
 - A *military time zone character* is a scalar character that represents the current date-time ("now") in a particular time zone. For example, `'A'` represents the current date-time (UTC) + 1 hour.
 - A *text-formatted datetime* is a date-time expressed as a character vector, formatted according to a [formatting *pattern*](#formatting-patterns).
 
 `Y` is an array of any shape whose elements contain a timestamp, time number, military time zone character, or text-formatted datetime, in any combination.
 
-`X` describes the representation to which the elements of `Y` are to be converted (the output format) and, optionally, the representation of the elements of `Y` (the input format). For convenience these are referred to below as <code>X<sub>R</sub></code> and <code>X<sub>Y</sub></code> respectively.
+`X` describes the representation to which the elements of `Y` are to be converted (the output format) and, optionally, the representation of the elements of `Y` (the input format). These are referred to below as <code>X<sub>R</sub></code> and <code>X<sub>Y</sub></code> respectively.
 
 `X` can be a single element (<code>X<sub>R</sub></code>) or a 2-element vector (<code>X<sub>Y</sub> X<sub>R</sub></code>). Each of <code>X<sub>Y</sub></code> and <code>X<sub>R</sub></code> can be:
 
 - an integer *date-time code* (see [](#timenumbers))
-- a character vector containing a *pattern* that describes how a datetime is formatted as text (see [Formatting patterns](#formatting-patterns).
+- a character vector containing a *pattern* that describes how a datetime is formatted as text (see [Formatting Patterns](#formatting-patterns)).
 
 When <code>X<sub>R</sub></code> is an integer it must be either `0` or a code from [](#timenumbers) or [](#timestamps). `0` specifies that the elements of `Y` are to be validated; a non-zero value specifies the date-time representation to which the elements of `Y` are to be converted. When <code>X<sub>R</sub></code> is a pattern, the elements of `R` are character vectors, each derived by formatting the corresponding element of `Y` as text according to the pattern.
 
@@ -38,7 +38,7 @@ Character scalars in `Y` are always interpreted as meaning "now".
 
 `R` is an array of the same shape as `Y`, where each element is a timestamp, time number, character vector or Boolean value, as determined by <code>X<sub>R</sub></code> (the second or only element of `X`).
 
-Time numbers in `R` can be of type DECF even when `⎕FR` is `645` if their magnitude could be too great to store precisely in a double. See [](#timenumbers) for the type numbers where this is so.
+Time numbers in `R` can be of type DECF even when [`⎕FR`](fr.md) is `645` if their magnitude could be too great to store precisely in a double. See [](#timenumbers) for the type numbers where this is so.
 
 ## Time Numbers
 
@@ -81,11 +81,11 @@ Table: Time numbers { #timenumbers }
 |_                      _| `61` |Integer decimal encoded format Digits take the form yyyymmddhhmmss(J digit time)|Encoded broken-down time 1s resolution|N/A|No|
 |Misc. Operating Systems | `70` |AmigaOS|Tick count 1ms ticks[^3]|1978-01-01 00:00|No|
 
-## Time Stamps
+## Timestamps
 
 If a value in `X` is negative it indicates that a timestamp type is expected in `Y` or generated in `R`, as follows:
 
-Table: Time stamps { #timestamps }
+Table: Timestamps { #timestamps }
 
 | Group                  | Code  | Description                                  | Max elements | Element contents[^10]                                        | Elided element implicit values (in Y)[^11] |
 |------------------------|-------|----------------------------------------------|--------------|--------------------------------------------------------------|--------------------------------------------|
@@ -138,11 +138,13 @@ The resolutions of system clocks vary by platform.
 
 Either or both of <code>X<sub>R</sub></code> and <code>X<sub>Y</sub></code> can be a character vector containing a *pattern* which describes how a datetime is, or is to be, formatted as text.
 
-When used as <code>X<sub>R</sub></code>, the pattern controls how each element of `Y` is formatted into a character vector in `R`. When used as <code>X<sub>Y</sub></code>, the same pattern describes the text supplied in `Y` and controls how it is matched and decoded into the representation given by <code>X<sub>R</sub></code> (see [Pattern matching rules](#pattern-matching-rules)).
+When used as <code>X<sub>R</sub></code>, the pattern controls how each element of `Y` is formatted into a character vector in `R`. When used as <code>X<sub>Y</sub></code>, the same pattern describes the text supplied in `Y` and controls how it is matched and decoded into the representation given by <code>X<sub>R</sub></code> (see [Pattern-matching Rules](#pattern-matching-rules)).
 
 The formatting pattern allows a datetime to be converted to a user-configurable plain-text format. When a datetime is formatted, elements in the result are copies of the format pattern with format sequences replaced by the elements they represent.
 
 The format sequences are intended to be visually reminiscent of the generated text. They use alphabetic characters easily associated with the substitution (for example `D`, `M`, and `Y` for Day, Month, and Year respectively) repeated one or more times to indicate format. Some sequences allow the first character to be replaced by a `_`, or the casing to be altered.
+
+Table: Formatting sequences { #formatseq }
 
 | Format letter | Length | Meaning | Variations | Example |
 |---|---|---|---|---|
