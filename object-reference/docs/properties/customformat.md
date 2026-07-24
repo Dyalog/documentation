@@ -1,7 +1,5 @@
 # <span>CustomFormat</span> <span>Property</span>
 
-**Applies To:** [DateTimePicker](../objects/datetimepicker.md)
-
 **Description**
 
 Specifies a custom format for the date/time display in a [DateTimePicker](../objects/datetimepicker.md).
@@ -45,3 +43,7 @@ To include a single quote in your body text, use two consecutive single quotes. 
 
 !!! note
     Non-format characters that are not delimited by single quotes will result in unpredictable display by the [DateTimePicker](../objects/datetimepicker.md) object.
+
+**Application**
+
+Objects: [DateTimePicker](../objects/datetimepicker.md)

@@ -1,7 +1,5 @@
 # <span>MDITile</span> <span>Method 111</span>
 
-**Applies To:** [MDIClient](../objects/mdiclient.md)
-
 **Description**
 
 This method causes the [MDIClient](../objects/mdiclient.md) object to organise its child [Form](../objects/form.md)s as a row or column. To permit the user to carry out this action, it is recommended that a suitable callback function or expression is attached to a [MenuItem](../objects/menuitem.md) or [Button](../objects/button.md). The callback function or expression should then call the MDITile method.
@@ -14,3 +12,7 @@ The argument to MDITile is `⍬`, or a single item as follows:
 |`[1]`|Tile Mode|0 (vertical)<br/>1 (horizontal)|
 
 If the argument is `⍬`, the *Tile Mode* defaults to 0.
+
+**Application**
+
+Objects: [MDIClient](../objects/mdiclient.md)

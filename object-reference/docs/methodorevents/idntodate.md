@@ -1,7 +1,5 @@
 # <span>IDNToDate</span> <span>Method 263</span>
 
-**Applies To:** [Calendar](../objects/calendar.md), [DateTimePicker](../objects/datetimepicker.md), [Root](../objects/root.md)
-
 **Description**
 
 This method is used to convert a date from an [IDN](../miscellaneous/international-day-number.md) into `⎕TS` format (year, month, day). The corresponding day of the week is also obtained.
@@ -21,3 +19,7 @@ The value of the 4<sup>th</sup> element, weekday, is an integer in the range 0-6
       F.C.IDNToDate 36048
 1998 9 11 4
 ```
+
+**Application**
+
+Objects: [Calendar](../objects/calendar.md), [DateTimePicker](../objects/datetimepicker.md), [Root](../objects/root.md)

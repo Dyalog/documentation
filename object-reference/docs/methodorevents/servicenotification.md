@@ -1,7 +1,5 @@
 # <span>ServiceNotification</span> <span>Event 94</span>
 
-**Applies To:** [Root](../objects/root.md)
-
 **Description**
 
 This event is generated in an APL service whenever the Windows Service Control Manager (SCM) requests a change of state. See [APL Application as a Service](../../../windows-installation-and-configuration-guide/apl-application-as-a-service).
@@ -21,3 +19,7 @@ The state of a Windows service is determined by the user and the Windows Service
 When the SCM requests a change of state, the APL interpreter responds by setting its state to the corresponding *pending* level (SERVICE_STOPPED_PENDING, SERVICE_RUNNING_PENDING or SERVICE_PAUSED_PENDING) and then generates a [ServiceNotification](./servicenotification.md) event.
 
 It is the responsibility of the APL service to process this event, perform the appropriate application tasks, and then respond (to the SCM) by calling the [SetServiceState](./setservicestate.md) method to confirm that the service has reached the desired state.
+
+**Application**
+
+Objects: [Root](../objects/root.md)

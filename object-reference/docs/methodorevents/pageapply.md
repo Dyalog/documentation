@@ -1,7 +1,5 @@
 # <span>PageApply</span> <span>Event 350</span>
 
-**Applies To:** [PropertyPage](../objects/propertypage.md)
-
 **Description**
 
 If enabled, this event is reported when the user clicks the Apply button in a [PropertySheet](../objects/propertysheet.md). Note however, that the event is actually reported by each of its [PropertyPage](../objects/propertypage.md) objects whose Changed property is currently 1, that is, the event is reported by each of the pages that the user has changed.
@@ -13,3 +11,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |-----|------|-----------------------|
 |`[1]`|Object|ref or character vector|
 |`[2]`|Event |`'PageApply'` or 350   |
+
+**Application**
+
+Objects: [PropertyPage](../objects/propertypage.md)

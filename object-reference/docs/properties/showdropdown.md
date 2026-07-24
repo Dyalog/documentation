@@ -1,7 +1,5 @@
 # <span>ShowDropDown</span> <span>Property</span>
 
-**Applies To:** [ColorButton](../objects/colorbutton.md), [ToolControl](../objects/toolcontrol.md)
-
 **Description**
 
 The ShowDropDown property specifies whether or not a drop-down menu symbol is drawn in a [ColorButton](../objects/colorbutton.md) or alongside [ToolButton](../objects/toolbutton.md) objects which have [Style ](style.md)`'DropDown'`.
@@ -17,3 +15,7 @@ If the ShowDropDown  property of the parent [ToolControl](../objects/toolcontrol
 The following picture illustrates a [ToolControl](../objects/toolcontrol.md) with ShowDropDown set to 1:
 
 ![](../img/tool9.gif)
+
+**Application**
+
+Objects: [ColorButton](../objects/colorbutton.md), [ToolControl](../objects/toolcontrol.md)

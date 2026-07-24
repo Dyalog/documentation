@@ -1,7 +1,5 @@
 # <span>Locator</span> <span>Object</span>
 
-[Parents](../parentlists/locator.md), [Children](../childlists/locator.md), [Properties](../proplists/locator.md), [Methods](../methodlists/locator.md), [Events](../eventlists/locator.md)
-
 **Purpose:** Allows the user to input a point, ellipse, line or rectangle.
 
 **Description**
@@ -67,3 +65,15 @@ The Locator is normally initiated from a [MouseDown](../methodorevents/mousedown
 However, if you are using rubberbanding, you will normally want to have the
 cursor appear at the end or corner of the Locator that moves. If you start with a non-zero sized Locator, you must set [Posn](../properties/posn.md) (which defines the **fixed** end or corner) to the current cursor position
 minus [Size](../properties/size.md) to achieve this effect.
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Root](../objects/root.md), [Static](../objects/static.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
+
+Children: [Timer](../objects/timer.md)
+
+Properties: [Accelerator](../properties/accelerator.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [CursorObj](../properties/cursorobj.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [KeepOnClose](../properties/keeponclose.md), [LStyle](../properties/lstyle.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Sizeable](../properties/sizeable.md), [Step](../properties/step.md), [Style](../properties/style.md), [Type](../properties/type.md)
+
+Methods: [Detach](../methodorevents/detach.md), [Wait](../methodorevents/wait.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [Locator](../methodorevents/locator.md), [Select](../methodorevents/select.md)

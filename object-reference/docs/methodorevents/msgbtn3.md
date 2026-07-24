@@ -1,7 +1,5 @@
 # <span>MsgBtn3</span> <span>Event 63</span>
 
-**Applies To:** [MsgBox](../objects/msgbox.md)
-
 **Description**
 
 If enabled, this event is reported when the user responds to a [MsgBox](../objects/msgbox.md) object by clicking its third (from the left) button. The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 2-element vector as follows:
@@ -9,3 +7,7 @@ If enabled, this event is reported when the user responds to a [MsgBox](../objec
 |-----|------|-----------------------|
 |`[1]`|Object|ref or character vector|
 |`[2]`|Event |`'MsgBtn3'` or 63      |
+
+**Application**
+
+Objects: [MsgBox](../objects/msgbox.md)

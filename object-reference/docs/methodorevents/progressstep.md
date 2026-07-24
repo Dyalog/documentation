@@ -1,7 +1,5 @@
 # <span>ProgressStep</span> <span>Method 250</span>
 
-**Applies To:** [ProgressBar](../objects/progressbar.md)
-
 **Description**
 
 This method is used to increment the thumb in a [ProgressBar](../objects/progressbar.md) object.
@@ -21,3 +19,7 @@ if Wrap is 1:
 ```apl
       LIMITS[1]+(1+LIMITS[2]-LIMITS[1])|THUMB+STEP-LIMITS[1]
 ```
+
+**Application**
+
+Objects: [ProgressBar](../objects/progressbar.md)

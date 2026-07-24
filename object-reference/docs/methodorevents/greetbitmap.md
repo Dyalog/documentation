@@ -1,7 +1,5 @@
 # <span>GreetBitmap</span> <span>Method 138</span>
 
-**Applies To:** [Root](../objects/root.md)
-
 **Description**
 
 This method is used to display or remove a bitmap, typically during
@@ -25,3 +23,7 @@ c:\myapp\dyalogrt greet_bitmap=mylogo myws
 The image is displayed until either an untrapped error occurs, causing the
 interpreter to (attempt to) display the session window, or the GreetBitmap
 method is called.
+
+**Application**
+
+Objects: [Root](../objects/root.md)

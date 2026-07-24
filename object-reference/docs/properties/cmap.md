@@ -1,7 +1,5 @@
 # <span>CMap</span> <span>Property</span>
 
-**Applies To:** [Bitmap](../objects/bitmap.md), [Clipboard](../objects/clipboard.md), [Cursor](../objects/cursor.md), [Icon](../objects/icon.md)
-
 **Description**
 
 This property defines the table of colours (the colour map) used by a [Bitmap](../objects/bitmap.md) or [Icon](../objects/icon.md) object or by a bitmap stored in the Windows clipboard. Its value is a 3-column integer matrix of numbers in the range 0-255. Each row represents a separate colour which is indexed (0-origin) by values in the [Bits](bits.md) property. The 3 columns refer to the intensities of the red, green and blue components of colour respectively.
@@ -36,3 +34,7 @@ Table: The default 16-colour CMap { #default-16-colour-cmap }
 |16    |255 |255|255|White       |
 
 If you are using a 256-colour set-up, the first 9 and the last 7 entries of the 256-colour CMap are the same as the first 9 and last 7 entries of the 16-colour CMap shown above. The intervening entries represent additional colours or are initially unused (0 0 0). New colours that you specify will be allocated to unused entries until the table is full.
+
+**Application**
+
+Objects: [Bitmap](../objects/bitmap.md), [Clipboard](../objects/clipboard.md), [Cursor](../objects/cursor.md), [Icon](../objects/icon.md)

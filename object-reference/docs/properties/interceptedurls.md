@@ -1,7 +1,5 @@
 # <span>InterceptedURLs</span> <span>Property</span>
 
-**Applies To:** [HTMLRenderer](../objects/htmlrenderer.md)
-
 **Description**
 
 The InterceptedURLs property is a 2-column matrix that specifies whether the [HTMLRenderer](../objects/htmlrenderer.md) will attempt to satisfy a request for a resource from the workspace or, via the CEF, from the internet. If directed to the workspace, the request will trigger an [HTTPRequest](../methodorevents/httprequest.md) event if the protocol is `http`, or a [WebSocketUpgrade](../methodorevents/websocketupgrade.md) event if the protocol is `ws`.
@@ -41,3 +39,7 @@ The following will attempt to retrieve from the net URLs containing `'.dyalog.co
 ```apl
       InterceptedURLs ← 2 2⍴'*.dyalog.com*' 0 '*' 1
 ```
+
+**Application**
+
+Objects: [HTMLRenderer](../objects/htmlrenderer.md)

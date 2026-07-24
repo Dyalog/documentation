@@ -1,7 +1,5 @@
 # <span>Bits</span> <span>Property</span>
 
-**Applies To:** [Bitmap](../objects/bitmap.md), [Clipboard](../objects/clipboard.md), [Cursor](../objects/cursor.md), [Icon](../objects/icon.md)
-
 **Description**
 
 This property defines the pattern in a [Bitmap](../objects/bitmap.md), [Cursor](../objects/cursor.md), or [Icon](../objects/icon.md) object, or the pattern of a bitmap stored in the Windows clipboard.
@@ -13,3 +11,7 @@ Please note that Bits and [CMap](cmap.md) may **only** be used to represent an i
 For a [Cursor](../objects/cursor.md), Bits is a Boolean matrix which specifies the shape of the cursor. For a [Cursor](../objects/cursor.md) and [Icon](../objects/icon.md), Bits is used in conjunction with the [Mask](mask.md) property.
 
 See [CMap](cmap.md) for further details.
+
+**Application**
+
+Objects: [Bitmap](../objects/bitmap.md), [Clipboard](../objects/clipboard.md), [Cursor](../objects/cursor.md), [Icon](../objects/icon.md)

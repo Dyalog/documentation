@@ -1,7 +1,5 @@
 # <span>DropDown</span> <span>Event 45</span>
 
-[**Applies To**](../methodoreventapplies/dropdown.md)
-
 **Description**
 
 If enabled, this event is reported when the user clicks the drop-down button in a  [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [ColorButton](../objects/colorbutton.md), [DateTimePicker](../objects/datetimepicker.md) or [Menu](../objects/menu.md) object, just before the drop-down list, colour selection, calendar or -menu is displayed.
@@ -19,3 +17,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 This event is reported for information only and cannot be disabled or modified in any way.
 
 The associated callback is run **immediately** while the windows notification is still on the stack. See [High-Priority Callback Functions](../../../interface-guide/introduction/high-priority-callbacks).
+
+**Application**
+
+Objects: [Button](../objects/button.md), [ButtonEdit](../objects/buttonedit.md), [ColorButton](../objects/colorbutton.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [DateTimePicker](../objects/datetimepicker.md), [Menu](../objects/menu.md)

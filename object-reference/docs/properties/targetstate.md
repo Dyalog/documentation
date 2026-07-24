@@ -1,7 +1,5 @@
 # <span>TargetState</span> <span>Property</span>
 
-**Applies To:** [TCPSocket](../objects/tcpsocket.md)
-
 **Description**
 
 The TargetState property reflects the intended final state of a [TCPSocket](../objects/tcpsocket.md) object. Its possible values are as follows:
@@ -22,3 +20,7 @@ To control socket closure, you may execute the following steps:
     1. continue processing **or**
     2. wait (using `⎕DQ`) for the [TCPSocket](../objects/tcpsocket.md) to disappear **or**
     3. wait (using `⎕DQ`) for the [TCPClose](../methodorevents/tcpclose.md) event
+
+**Application**
+
+Objects: [TCPSocket](../objects/tcpsocket.md)

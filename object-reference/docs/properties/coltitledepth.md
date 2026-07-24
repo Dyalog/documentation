@@ -1,7 +1,5 @@
 # <span>ColTitleDepth</span> <span>Property</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 ColTitleDepth specifies the structure of a set of hierarchical column titles.
@@ -31,3 +29,7 @@ whose ColTitleDepth is 1, and so forth. For example:
 
 Note that the [LockColumns](../methodorevents/lockcolumns.md) method is
 not supported in combination with hierarchical column titles.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

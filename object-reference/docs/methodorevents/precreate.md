@@ -1,7 +1,5 @@
 # <span>PreCreate</span> <span>Event 534</span>
 
-**Applies To:** [ActiveXControl](../objects/activexcontrol.md)
-
 **Description**
 
 If enabled, this event is reported when an instance of an [ActiveXControl](../objects/activexcontrol.md) is created. The PreCreate event is generated at the point the *instance* is made.
@@ -17,3 +15,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |-----|------|-----------------------|
 |`[1]`|Object|ref or character vector|
 |`[2]`|Event |`'PreCreate'` or 534   |
+
+**Application**
+
+Objects: [ActiveXControl](../objects/activexcontrol.md)

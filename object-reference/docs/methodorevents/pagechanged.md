@@ -1,7 +1,5 @@
 # <span>PageChanged</span> <span>Event 356</span>
 
-**Applies To:** [PropertyPage](../objects/propertypage.md)
-
 **Description**
 
 If enabled, this event is reported when the [Changed](../properties/changed.md) property of a [PropertyPage](../objects/propertypage.md) is altered by user action. It is *not* reported if you reset the [Changed](../properties/changed.md) property using `⎕WS`.
@@ -16,3 +14,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |`[1]`|Object       |ref or character vector                                                 |
 |`[2]`|Event        |`'PageChanged'` or 356                                                  |
 |`[3]`|Changed value|New value for the [Changed](../properties/changed.md) property (0 or 1).|
+
+**Application**
+
+Objects: [PropertyPage](../objects/propertypage.md)

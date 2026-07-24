@@ -1,7 +1,5 @@
 # <span>Change</span> <span>Event 36</span>
 
-**Applies To:** [ButtonEdit](../objects/buttonedit.md), [Combo](../objects/combo.md), [Edit](../objects/edit.md), [RichEdit](../objects/richedit.md), [Spinner](../objects/spinner.md)
-
 **Description**
 
 If enabled, this event is reported when the user alters the text in a [Combo](../objects/combo.md) or [Edit](../objects/edit.md) object (by typing). The event is not applicable for a [Combo](../objects/combo.md) with [Style](../properties/style.md)`'Drop'` because this [Style](../properties/style.md) does not allow the user to alter data. The Change event is not reported repeatedly as the user edits the data. Instead, it is reported when the user indicates that he has finished with the field by :
@@ -50,3 +48,7 @@ The following function illustrates how Change events can be processed. The `Chec
 [19]
 [20] Exit:
 ```
+
+**Application**
+
+Objects: [ButtonEdit](../objects/buttonedit.md), [Combo](../objects/combo.md), [Edit](../objects/edit.md), [RichEdit](../objects/richedit.md), [Spinner](../objects/spinner.md)

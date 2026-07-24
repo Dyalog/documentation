@@ -1,7 +1,5 @@
 # <span>ImageListObj</span> <span>Property</span>
 
-[**Applies To**](../propertyapplies/imagelistobj.md)
-
 **Description**
 
 The ImageListObj property is a simple character vector or a ref, or a vector of character vectors or refs that specifies [ImageList](../objects/imagelist.md) objects that are associated with an object.
@@ -15,3 +13,7 @@ For a [ToolControl](../objects/toolcontrol.md), ImageListObj may specify up to t
 In all these cases, individual images are mapped to the child objects by their [ImageIndex](imageindex.md) property.
 
 For a [ListView](../objects/listview.md) either one or two [ImageList](../objects/imagelist.md) objects may be specified. The first [ImageList](../objects/imagelist.md) contains the *large icon* set of images. the second contains the *small icon* set. The set that is used is determined by the value of the [View](view.md) property. The mapping between the set of images in the [ImageList](../objects/imagelist.md) and items in the object is determined by the [ImageIndex](imageindex.md) property.
+
+**Application**
+
+Objects: [ButtonEdit](../objects/buttonedit.md), [ComboEx](../objects/comboex.md), [CoolBar](../objects/coolbar.md), [ListView](../objects/listview.md), [Menu](../objects/menu.md), [TabControl](../objects/tabcontrol.md), [ToolControl](../objects/toolcontrol.md), [TreeView](../objects/treeview.md)

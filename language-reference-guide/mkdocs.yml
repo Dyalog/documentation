@@ -444,6 +444,7 @@ nav:
           - '<code>⎕SVQ</code>: Shared Variable Query': system-functions/svq.md
           - '<code>⎕SVR</code>: Shared Variable Retract Offer': system-functions/svr.md
           - '<code>⎕SVS</code>: Shared Variable State': system-functions/svs.md
+          - '<code>⎕SYSTEM</code>: System Information': system-functions/system.md
           - '<code>⎕TALLOC</code>: Allocate Token Range': system-functions/talloc.md
           - '<code>⎕TC</code>: Terminal Control': system-functions/tc.md
           - '<code>⎕TCNUMS</code>: Thread Child Numbers': system-functions/tcnums.md

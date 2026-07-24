@@ -1,7 +1,5 @@
 # <span>HideComment</span> <span>Event 224</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 If enabled, a HideComment event is generated just before a comment window is hidden as a result of the user moving the mouse-pointer away from a commented cell.
@@ -24,3 +22,7 @@ Invoked as a method, HideComment is used to hide a comment that has previously b
 ```
 
 If HideComment is called with an argument of `⍬`, all comments are hidden.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

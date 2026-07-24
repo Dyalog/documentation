@@ -1,7 +1,5 @@
 # <span>ColorButton</span> <span>Object</span>
 
-[Parents](../parentlists/colorbutton.md), [Properties](../proplists/colorbutton.md), [Methods](../methodlists/colorbutton.md), [Events](../eventlists/colorbutton.md)
-
 **Purpose:** The ColorButton object allows the user to select a colour.
 
 **Description**
@@ -25,3 +23,15 @@ The [ShowDropDown](../properties/showdropdown.md) property is Boolean (default 1
 When the user clicks a ColorButton with the left mouse button, the object generates a [DropDown](../methodorevents/dropdown.md) event just before it displays the colour selection drop-down. This event may be used to set the [DefaultColors](../properties/defaultcolors.md) and/or [CustomColors](../properties/customcolors.md) properties dynamically.
 
 When the user selects a new colour, the ColorButton generates a [ColorChange](../methodorevents/colorchange.md) event.
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md)
+
+Children: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md)
+
+Properties: [Accelerator](../properties/accelerator.md), [Active](../properties/active.md), [Attach](../properties/attach.md), [AutoConf](../properties/autoconf.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [CurrentColor](../properties/currentcolor.md), [CursorObj](../properties/cursorobj.md), [CustomColors](../properties/customcolors.md), [Data](../properties/data.md), [DefaultColors](../properties/defaultcolors.md), [Dragable](../properties/dragable.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [Handle](../properties/handle.md), [Hint](../properties/hint.md), [HintObj](../properties/hintobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [OtherButton](../properties/otherbutton.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Redraw](../properties/redraw.md), [ShowDropDown](../properties/showdropdown.md), [Size](../properties/size.md), [Sizeable](../properties/sizeable.md), [TabIndex](../properties/tabindex.md), [Tip](../properties/tip.md), [TipObj](../properties/tipobj.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
+
+Methods: [Animate](../methodorevents/animate.md), [Detach](../methodorevents/detach.md), [GetFocus](../methodorevents/getfocus.md), [GetFocusObj](../methodorevents/getfocusobj.md), [GetTextSize](../methodorevents/gettextsize.md)
+
+Events: [Close](../methodorevents/close.md), [ColorChange](../methodorevents/colorchange.md), [Configure](../methodorevents/configure.md), [ContextMenu](../methodorevents/contextmenu.md), [Create](../methodorevents/create.md), [DragDrop](../methodorevents/dragdrop.md), [DropDown](../methodorevents/dropdown.md), [DropFiles](../methodorevents/dropfiles.md), [DropObjects](../methodorevents/dropobjects.md), [Expose](../methodorevents/expose.md), [GesturePan](../methodorevents/gesturepan.md), [GesturePressAndTap](../methodorevents/gesturepressandtap.md), [GestureRotate](../methodorevents/gesturerotate.md), [GestureTwoFingerTap](../methodorevents/gesturetwofingertap.md), [GestureZoom](../methodorevents/gesturezoom.md), [GotFocus](../methodorevents/gotfocus.md), [Help](../methodorevents/help.md), [KeyPress](../methodorevents/keypress.md), [LostFocus](../methodorevents/lostfocus.md), [MouseDblClick](../methodorevents/mousedblclick.md), [MouseDown](../methodorevents/mousedown.md), [MouseEnter](../methodorevents/mouseenter.md), [MouseLeave](../methodorevents/mouseleave.md), [MouseMove](../methodorevents/mousemove.md), [MouseUp](../methodorevents/mouseup.md), [MouseWheel](../methodorevents/mousewheel.md)

@@ -1,7 +1,5 @@
 # <span>MapCols</span> <span>Property</span>
 
-**Applies To:** [ImageList](../objects/imagelist.md)
-
 **Description**
 
 The MapCols property specifies whether or not the button colours in bitmaps and icons in an [ImageList](../objects/imagelist.md) are re-mapped to reflect the users colour preferences. If your bitmaps and icons represent buttons using the standard windows button colours, this property causes those colours to be changed to suit the user's own colour scheme.
@@ -17,3 +15,7 @@ If MapCols is 1, the following colour mappings are performed:
 |`191 191 191`|Light grey |Button Face     |
 |`192 192 192`|Light grey |Button Face     |
 |`255 255 255`|White      |Button Highlight|
+
+**Application**
+
+Objects: [ImageList](../objects/imagelist.md)

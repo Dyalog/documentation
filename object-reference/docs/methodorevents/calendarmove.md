@@ -1,7 +1,5 @@
 # <span>CalendarMove</span> <span>Event 274</span>
 
-**Applies To:** [Calendar](../objects/calendar.md)
-
 **Description**
 
 If enabled, this event is reported when the user moves the left mouse button
@@ -23,3 +21,7 @@ vector as follows :
 |`[6]`|Element Type|integer                                           |
 
 For the meaning of elements 3 and 6, see [CalendarDown](./calendardown.md).
+
+**Application**
+
+Objects: [Calendar](../objects/calendar.md)

@@ -1,7 +1,5 @@
 # <span>BrowseBox</span> <span>Object</span>
 
-[Parents](../parentlists/browsebox.md), [Children](../childlists/browsebox.md), [Properties](../proplists/browsebox.md), [Methods](../methodlists/browsebox.md), [Events](../eventlists/browsebox.md)
-
 **Purpose:** The BrowseBox object allows the user to browse for and select a folder         or other resource.
 
 **Description**
@@ -56,3 +54,15 @@ After the user has pressed OK or Cancel, the [Target](../properties/target.md) p
 [20]   :EndWith
      ∇
 ```
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [OLEServer](../objects/oleserver.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Root](../objects/root.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
+
+Children: [Timer](../objects/timer.md)
+
+Properties: [BrowseFor](../properties/browsefor.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [HasEdit](../properties/hasedit.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [StartIn](../properties/startin.md), [Target](../properties/target.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
+
+Methods: [Detach](../methodorevents/detach.md), [Wait](../methodorevents/wait.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [FileBoxCancel](../methodorevents/fileboxcancel.md), [FileBoxOK](../methodorevents/fileboxok.md)

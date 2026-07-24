@@ -1,7 +1,5 @@
 # <span>Splitter</span> <span>Object</span>
 
-[Parents](../parentlists/splitter.md), [Children](../childlists/splitter.md), [Properties](../proplists/splitter.md), [Methods](../methodlists/splitter.md), [Events](../eventlists/splitter.md)
-
 **Purpose:** The Splitter object divides a container into resizable panes.
 
 **Description**
@@ -67,3 +65,15 @@ Notice that in this example, with the exception of the last Splitter `F.S4`, it 
 If you have two or more vertical Splitters or two or more horizontal Splitters in the same parent object, it is possible for the user to make the Splitters *collide*. This can occur by dragging one of the Splitters into the other, or, unless both Splitters have Align set to `'None'`, by shrinking the parent.
 
 When Splitters collide, the object being dragged by the user (a Splitter or a border of the parent) takes precedence over the setting of Align, and temporarily *pushes* other Splitters along in its direction of travel. If and when the operation is reversed, the other Splitters are *pulled* back to their original positions.
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md)
+
+Children: [Timer](../objects/timer.md)
+
+Properties: [Active](../properties/active.md), [Align](../properties/align.md), [BCol](../properties/bcol.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [CursorObj](../properties/cursorobj.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [SplitObj1](../properties/splitobj1.md), [SplitObj2](../properties/splitobj2.md), [Style](../properties/style.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
+
+Methods: [Detach](../methodorevents/detach.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [EndSplit](../methodorevents/endsplit.md), [Splitting](../methodorevents/splitting.md), [StartSplit](../methodorevents/startsplit.md)

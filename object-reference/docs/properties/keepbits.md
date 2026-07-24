@@ -1,7 +1,5 @@
 # <span>KeepBits</span> <span>Property</span>
 
-**Applies To:** [Bitmap](../objects/bitmap.md), [Cursor](../objects/cursor.md), [Icon](../objects/icon.md)
-
 **Description**
 
 This property is be used to control the way that [Bitmap](../objects/bitmap.md), [Cursor](../objects/cursor.md) and [Icon](../objects/icon.md) objects are stored in the workspace.
@@ -11,3 +9,7 @@ When you create a [Bitmap](../objects/bitmap.md), [Icon](../objects/icon.md) or 
 If KeepBits is 0 the values of the *image properties* are **not** stored internally in your workspace. If you save a workspace containing a [Bitmap](../objects/bitmap.md), [Cursor](../objects/cursor.md) or [Icon](../objects/icon.md) object, the corresponding Windows resource is automatically re-allocated when the workspace is loaded by referring to the associated file. This is the file whose full pathname is defined by the value of the object's [File](file.md) property. It follows that if you adopt this strategy, you must ensure that the [File](file.md) property is set correctly. If APL cannot find the file when the workspace is `)LOAD`ed, it cannot re-create the object, and you will get a `VALUE ERROR` when you subsequently refer to it. A further consideration is the effect on `⎕WG`. If KeepBits is 0, and you execute `⎕WG 'CBits'` or `'Bits'` or `'CMap'` or `'Mask'`, APL obtains these values by requesting the data from Windows.
 
 If KeepBits is set to 1, the contents of the *image properties* are stored in the workspace, thus duplicating the information which is held by Windows itself. If you save a workspace containing a [Bitmap](../objects/bitmap.md), [Cursor](../objects/cursor.md) or [Icon](../objects/icon.md) the corresponding Windows resource is automatically re-allocated from the *image properties* when the workspace is loaded. The value of the [File](file.md) property is ignored. When you execute `⎕WG 'CBits'` or `'Bits'` or `'CMap'` or `'Mask'`, APL generates the result directly from the stored values held (internally) in the workspace.
+
+**Application**
+
+Objects: [Bitmap](../objects/bitmap.md), [Cursor](../objects/cursor.md), [Icon](../objects/icon.md)

@@ -1,7 +1,5 @@
 # <span>BtnPix</span> <span>Property</span>
 
-**Applies To:** [Button](../objects/button.md), [Menu](../objects/menu.md), [MenuItem](../objects/menuitem.md)
-
 **Description**
 
 This property is used to customise the appearance of a [Button](../objects/button.md), [Menu](../objects/menu.md) or [MenuItem](../objects/menuitem.md). It specifies the names of or refs to up to 3 [Bitmap](../objects/bitmap.md) objects to be used to display the object under different circumstances. In general, BtnPix is a 3-element vector of character vectors or refs. However, if it defines a single [Bitmap](../objects/bitmap.md), it may be a single ref, a simple character scalar or vector, or an enclosed character vector.
@@ -17,3 +15,7 @@ For example, to have a [Button](../objects/button.md) that displays a "Tick" or 
       'f1.r1' ⎕WC 'Button'('Style' 'Check')
                           ('BtnPix' 'YES' 'NO')
 ```
+
+**Application**
+
+Objects: [Button](../objects/button.md), [Menu](../objects/menu.md), [MenuItem](../objects/menuitem.md)

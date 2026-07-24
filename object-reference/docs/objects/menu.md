@@ -1,7 +1,5 @@
 # <span>Menu</span> <span>Object</span>
 
-[Parents](../parentlists/menu.md), [Children](../childlists/menu.md), [Properties](../proplists/menu.md), [Methods](../methodlists/menu.md), [Events](../eventlists/menu.md)
-
 **Purpose:** This is a pop-up object which allows the user to initiate an action or         to select an option using a "menu".
 
 **Description**
@@ -60,3 +58,15 @@ the [EdgeStyle](../properties/edgestyle.md) property **must** be set
 to something other than `'None'` if you want
 its children Menu and [MenuItem](menuitem.md) objects to
 have a 3-dimensional appearance.
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [Calendar](../objects/calendar.md), [CoolBand](../objects/coolband.md), [CoolBar](../objects/coolbar.md), [DateTimePicker](../objects/datetimepicker.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Menu](../objects/menu.md), [MenuBar](../objects/menubar.md), [OLEServer](../objects/oleserver.md), [Root](../objects/root.md), [StatusField](../objects/statusfield.md), [SubForm](../objects/subform.md), [SysTrayItem](../objects/systrayitem.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
+
+Children: [Bitmap](../objects/bitmap.md), [Menu](../objects/menu.md), [MenuItem](../objects/menuitem.md), [Separator](../objects/separator.md), [Timer](../objects/timer.md)
+
+Properties: [Accelerator](../properties/accelerator.md), [Active](../properties/active.md), [Align](../properties/align.md), [BCol](../properties/bcol.md), [BtnPix](../properties/btnpix.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FontObj](../properties/fontobj.md), [Handle](../properties/handle.md), [ImageIndex](../properties/imageindex.md), [ImageListObj](../properties/imagelistobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
+
+Methods: [Detach](../methodorevents/detach.md), [Wait](../methodorevents/wait.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [DropDown](../methodorevents/dropdown.md), [Select](../methodorevents/select.md)

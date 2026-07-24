@@ -1,7 +1,5 @@
 # <span>ProgressStyle</span> <span>Property</span>
 
-**Applies To:** [ProgressBar](../objects/progressbar.md)
-
 **Description**
 
 The ProgressStyle property specifies the appearance of a [ProgressBar](../objects/progressbar.md) control.
@@ -32,3 +30,7 @@ ProgressStyle Smooth (Windows Classic Theme only)
 ![](../img/progressstyle-marquee.png)
 
 ProgressStyle Marquee (requires Native Look and Feel)
+
+**Application**
+
+Objects: [ProgressBar](../objects/progressbar.md)

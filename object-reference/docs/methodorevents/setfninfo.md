@@ -1,7 +1,5 @@
 # <span>SetFnInfo</span> <span>Method 545</span>
 
-**Applies To:** [ActiveXControl](../objects/activexcontrol.md), [OLEServer](../objects/oleserver.md)
-
 **Description**
 
 This method is used to describe an APL function that is to be exported as a method, a Property Get Function, or a Property Put Function of an [ActiveXControl](../objects/activexcontrol.md) or [OLEServer](../objects/oleserver.md) object.
@@ -66,3 +64,7 @@ This specifies the type of function being exported. This is an integer with one 
 In both these last two cases, the name of the property, which is totally independent of the name of the APL function, is given as *Property name*.
 
 If omitted, the function type is *method*.
+
+**Application**
+
+Objects: [ActiveXControl](../objects/activexcontrol.md), [OLEServer](../objects/oleserver.md)

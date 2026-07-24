@@ -1,7 +1,5 @@
 # <span>CellSet</span> <span>Property</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 This property identifies which cells in a [Grid](../objects/grid.md) are *set* (that is, have values) and which are empty. Its purpose is to allow large numeric matrices containing blank cells to be displayed and edited efficiently.
@@ -13,3 +11,7 @@ A more direct way to handle empty cells is to set  the corresponding elements of
 Note that if the [Values](values.md) property contains text and is therefore nested anyway, the CellSet property is not helpful in conserving workspace, although it may still be useful to separate empty cells from real data.
 
 You can dynamically change a single element of CellSet using the [SetCellSet](../methodorevents/setcellset.md) method.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

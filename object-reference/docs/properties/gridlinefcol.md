@@ -1,7 +1,5 @@
 # <span>GridLineFCol</span> <span>Property</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 The GridLineFCol property specifies the colours of the grid lines in a [Grid](../objects/grid.md) object. GridLineFCol should be used if different coloured grid lines are required. If all the grid lines are the same colour, use [GridFCol](gridfcol.md).
@@ -15,3 +13,7 @@ Unlike [GridFCol](gridbcol.md), setting GridLineFCol overrides the colour which 
 Elements of GridLineFCol are allocated to individual grid lines via the [RowLineTypes](rowlinetypes.md) and [ColLineTypes](collinetypes.md) properties.
 
 See also: [GridLineWidth](gridlinewidth.md).
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

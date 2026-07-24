@@ -1,7 +1,5 @@
 # <span>DyalogCustomMessage1</span> <span>Event 95</span>
 
-**Applies To:** [Form](../objects/form.md)
-
 **Description**
 
 This event allows external applications and dynamic link libraries to insert
@@ -42,3 +40,7 @@ vector as follows :
 |`[2]`|Event |`'DyalogCustomMessage1'` or 95|
 |`[3]`|wparam|integer                       |
 |`[4]`|lparam|integer                       |
+
+**Application**
+
+Objects: [Form](../objects/form.md)

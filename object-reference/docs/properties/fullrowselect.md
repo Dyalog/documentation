@@ -1,7 +1,5 @@
 # <span>FullRowSelect</span> <span>Property</span>
 
-**Applies To:** [ListView](../objects/listview.md), [TreeView](../objects/treeview.md)
-
 **Description**
 
 The FullRowSelect property specifies whether or not the entire row is highlighted when an item in a [ListView](../objects/listview.md) or a [TreeView](../objects/treeview.md) is selected.
@@ -13,3 +11,7 @@ For a [ListView](../objects/listview.md), FullRowSelect only applies if its [Vie
 The picture below illustrates the effect on the appearance of a [ListView](../objects/listview.md) object, of setting FullRowSelect to 1.
 
 ![](../img/listview-fullrowselect.png)
+
+**Application**
+
+Objects: [ListView](../objects/listview.md), [TreeView](../objects/treeview.md)

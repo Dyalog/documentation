@@ -1,7 +1,5 @@
 # <span>CornerTitleBCol</span> <span>Property</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 This property specifies the colour used to fill  the area in the left corner  a [Grid](../objects/grid.md) . This is the rectangle above the row titles and to the left of the column titles.
@@ -14,3 +12,7 @@ CornerTitleBCol may be a 3-element vector of integer values  in the range 0-255 
 ```
 
 ![](../img/cornertitlebcol.png)
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

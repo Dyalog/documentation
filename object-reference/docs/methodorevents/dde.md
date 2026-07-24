@@ -1,7 +1,5 @@
 # <span>DDE</span> <span>Event 50</span>
 
-**Applies To:** [Root](../objects/root.md)
-
 **Description**
 
 If enabled, a DDE event is generated whenever a DDE message is received by Dyalog APL. This will occur whenever a server notifies APL that the value of a shared variable has changed, and whenever a client application requests data from APL. If you have several shared variables, you can determine which of them has changed or whose value has been requested using `⎕SVS`.
@@ -23,3 +21,7 @@ The event message reported as the result of [`⎕DQ`](../../../language-referenc
 
 !!! note
     Due to the nature of DDE "conversations" messages may be received when in fact no change in the value of any shared variables has occurred. Your application code must therefore be prepared to cater for this situation.
+
+**Application**
+
+Objects: [Root](../objects/root.md)

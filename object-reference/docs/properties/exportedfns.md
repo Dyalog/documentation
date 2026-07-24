@@ -1,7 +1,5 @@
 # <span>ExportedFns</span> <span>Property</span>
 
-**Applies To:** [OLEServer](../objects/oleserver.md)
-
 **Description**
 
 This property specifies the functions to be exposed as methods by an [OLEServer](../objects/oleserver.md) object.
@@ -17,3 +15,7 @@ Furthermore, you may not export defined operators, dfns, external functions, or 
 Finally, OLE does not support the concept of a dyadic function, so your exported functions must be niladic, monadic, or take an optional left argument; they may not be explicitly dyadic.
 
 If you wish to export a new function from your [OLEServer](../objects/oleserver.md), and ExportedFns is not 1, you must explicitly reset the value of the ExportedFns property before you re-save the workspace.
+
+**Application**
+
+Objects: [OLEServer](../objects/oleserver.md)

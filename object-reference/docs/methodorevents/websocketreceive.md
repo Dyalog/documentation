@@ -1,7 +1,5 @@
 # <span>WebSocketReceive</span> <span>Event 842</span>
 
-**Applies To:** [HTMLRenderer](../objects/htmlrenderer.md)
-
 **Description**
 
 This event is triggered when data is received over a WebSocket. This event is reported for information only. The result (if any) of a callback function will be ignored.
@@ -26,3 +24,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 │      └────────────────┘ └───────────────┘ └───────────┘     │
 └∊────────────────────────────────────────────────────────────┘
 ```
+
+**Application**
+
+Objects: [HTMLRenderer](../objects/htmlrenderer.md)

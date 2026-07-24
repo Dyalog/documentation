@@ -1,7 +1,5 @@
 # <span>KeyError</span> <span>Event 23</span>
 
-**Applies To:** [ButtonEdit](../objects/buttonedit.md), [Edit](../objects/edit.md), [Spinner](../objects/spinner.md)
-
 **Description**
 
 If enabled, this event is generated when the user presses and releases a key
@@ -41,3 +39,7 @@ numbers :
 Thus a Shift State of 3 indicates that the user has pressed the key in
 conjunction with both the Shift and Ctrl keys. A Shift State of 0 indicates that
 the user pressed the key on its own.
+
+**Application**
+
+Objects: [ButtonEdit](../objects/buttonedit.md), [Edit](../objects/edit.md), [Spinner](../objects/spinner.md)

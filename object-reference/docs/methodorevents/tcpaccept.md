@@ -1,7 +1,5 @@
 # <span>TCPAccept</span> <span>Event 371</span>
 
-**Applies To:** [TCPSocket](../objects/tcpsocket.md)
-
 **Description**
 
 If enabled, this event is reported when a client connects to a server [TCPSocket](../objects/tcpsocket.md) object.
@@ -22,3 +20,7 @@ If you want your server to remain available for other clients, you must create a
 The default processing for this event is to close the socket handle reported by the 3<sup>rd</sup> element of the event message **unless** it has been associated with a new [TCPSocket](../objects/tcpsocket.md) object by the callback function as described above. You may prevent this from occurring by returning 0 from a callback function. This may be necessary in a multithreaded application.
 
 You may not call TCPClose as a method or generate this event artificially using `⎕NQ`.
+
+**Application**
+
+Objects: [TCPSocket](../objects/tcpsocket.md)

@@ -1,7 +1,5 @@
 # <span>HScroll</span> <span>Property</span>
 
-[**Applies To**](../propertyapplies/hscroll.md)
-
 **Description**
 
 For most objects to which it applies, this property determines whether or not a horizontal scrollbar is provided.
@@ -17,3 +15,7 @@ For a [Scroll](../objects/scroll.md) object, the scrollbar is horizontal if HScr
 For a [StatusBar](../objects/statusbar.md), [TabBar](../objects/tabbar.md) or [ToolBar](../objects/toolbar.md) with [Align](align.md) set to Top or Bottom, HScroll determines whether or not a horizontal scrollbar is provided and how the object positions its children. If HScroll is 0 (the default) the object organises its children in multiple rows and does not provide a scrollbar. If HScroll is `¯1` or `¯2`, the object organises its children in a single row and provides a mini scrollbar to allow those positioned beyond the right edge of the object to be scrolled into view. If HScroll is `¯1`, the scrollbar is always shown. If HScroll is `¯2`, it is only shown when needed.
 
 For a [Grid](../objects/grid.md), HScroll may be `0` (no horizontal scrollbar), `¯1` (scrollbar is displayed when required), `¯2` (same as `¯1`) or `¯3` (scrollbar is always displayed).
+
+**Application**
+
+Objects: [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [Edit](../objects/edit.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [ListView](../objects/listview.md), [RichEdit](../objects/richedit.md), [Scroll](../objects/scroll.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TabBar](../objects/tabbar.md), [ToolBar](../objects/toolbar.md), [TrackBar](../objects/trackbar.md), [UpDown](../objects/updown.md)

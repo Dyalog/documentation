@@ -1,7 +1,5 @@
 # <span>DevCaps</span> <span>Property</span>
 
-**Applies To:** [Printer](../objects/printer.md), [Root](../objects/root.md)
-
 **Description**
 
 This property reports the device capabilities of the screen or printer. It is a 4-element nested vector as follows:
@@ -23,3 +21,7 @@ This property is useful if you want to make objects of a specific physical size.
 - the physical size reported for the screen is typically only a *nominal* size, because, if you use a generic video driver, Windows has no way to tell what size of screen is attached to your computer.
 - The number of colours is reported only if the device has a colour depth of no more than 8 bits per pixel. For devices with greater colour depths, `¯1` is returned.
 - new elements may be added to DevCaps in future releases.
+
+**Application**
+
+Objects: [Printer](../objects/printer.md), [Root](../objects/root.md)

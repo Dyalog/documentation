@@ -1,7 +1,5 @@
 # <span>CalendarCols</span> <span>Property</span>
 
-**Applies To:** [Calendar](../objects/calendar.md), [DateTimePicker](../objects/datetimepicker.md)
-
 **Description**
 
 The CalendarCols property specifies the colours used for various elements in the [Calendar](../objects/calendar.md) object.
@@ -19,3 +17,7 @@ CalendarCols is a 6-element integer vector whose elements specify the colours as
 Each element of CalendarCols may be 0 (which means default colour), a negative singleton that specifies a particular Windows colour, or a 3-element integer vector of RGB values.
 
 Note: At the time of writing, setting the first element of CalendarCols has no effect. Dyalog believes this to be a Windows problem that may be corrected in due course.
+
+**Application**
+
+Objects: [Calendar](../objects/calendar.md), [DateTimePicker](../objects/datetimepicker.md)

@@ -1,7 +1,5 @@
 # <span>DuplicateRow</span> <span>Method 177</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 This method is used to duplicate a row in a [Grid](../objects/grid.md) object.
@@ -20,3 +18,7 @@ If the *Comment flag* is 1 (the default), any Comments associated with cells in 
 If the *Lock flag* is 1 (the default), the lock state of the row is duplicated; otherwise, the new row is not locked.
 
 If the *Undo flag* is 1, the row may subsequently be restored by invoking the Undo method. If this element is omitted or is 0, the operation may not be undone.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

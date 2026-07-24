@@ -1,7 +1,5 @@
 # <span>WebSocketUpgrade</span> <span>Event 841</span>
 
-**Applies To:** [HTMLRenderer](../objects/htmlrenderer.md)
-
 **Description**
 
 This event is reported when the client component of an [HTMLRenderer](../objects/htmlrenderer.md) object opens a WebSocket and the requested URL matches a pattern specified by the [InterceptedURLs](../properties/interceptedurls.md) property. If there is no match, the connection request is processed as an external request by the [Chromium Embedded Framework (CEF).](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework)
@@ -35,3 +33,7 @@ Note that several WebSocket connections may be made concurrently.
 └∊────────────────────────────────────────────────────────┘
 
 ```
+
+**Application**
+
+Objects: [HTMLRenderer](../objects/htmlrenderer.md)

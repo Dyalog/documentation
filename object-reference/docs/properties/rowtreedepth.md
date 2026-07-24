@@ -1,7 +1,5 @@
 # <span>RowTreeDepth</span> <span>Property</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 The RowTreeDepth property specifies the structure of the rows in a [Grid](../objects/grid.md) object. It is either a scalar 0 or an integer vector of the same length as the number of rows in the [Grid](../objects/grid.md). RowTreeDepth is similar to the [Depth](depth.md) property of the [TreeView](../objects/treeview.md) object.
@@ -24,3 +22,7 @@ The [RowSetVisibleDepth](../methodorevents/rowsetvisibledepth.md) method can be 
 The user can interact with the tree images to expand and contract rows of the [Grid](../objects/grid.md).
 
 ![](../img/gridtree2.gif)
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

@@ -1,7 +1,5 @@
 # <span>TabJustify</span> <span>Property</span>
 
-**Applies To:** [TabControl](../objects/tabcontrol.md)
-
 **Description**
 
 The TabJustify property specifies, the positions at which the picture and caption are drawn within each tab or button implemented by a [TabButton](../objects/tabbutton.md) in a TabControl object.
@@ -21,3 +19,7 @@ If TabJustify is set to `'IconEdge'`, the caption is drawn centrally and only pi
 ![](../img/tab15.gif)
 
 TabJustify is only honoured if fixed size tabs are in effect.
+
+**Application**
+
+Objects: [TabControl](../objects/tabcontrol.md)

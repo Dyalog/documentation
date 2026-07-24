@@ -1,7 +1,5 @@
 # <span>PrintRange</span> <span>Property</span>
 
-**Applies To:** [Printer](../objects/printer.md)
-
 **Description**
 
 The PrintRange property specifies the range of pages to be printed.
@@ -19,3 +17,7 @@ Alternatively, PrintRange may be a 3 or 4-element nested array whose items are:
 In this case, printing starts at the page specified to be 
 the Start page, and ends at the page specified by End page or after the Maximum 
 number of pages has been reached, whichever is sooner.
+
+**Application**
+
+Objects: [Printer](../objects/printer.md)

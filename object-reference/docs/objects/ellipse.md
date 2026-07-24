@@ -1,7 +1,5 @@
 # <span>Ellipse</span> <span>Object</span>
 
-[Parents](../parentlists/ellipse.md), [Children](../childlists/ellipse.md), [Properties](../proplists/ellipse.md), [Methods](../methodlists/ellipse.md), [Events](../eventlists/ellipse.md)
-
 **Purpose:** A Graphical object to draw ellipses, arcs, and pie-slices.
 
 **Description**
@@ -181,3 +179,15 @@ Each of the 4 pie-slices is bounded by a black line :
                   ('FCol' (⊂0 0 0))('FStyle' PATS)
                   ('FillCol' COLS)
 ```
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/animation.md), [Bitmap](../objects/bitmap.md), [Button](../objects/button.md), [ButtonEdit](../objects/buttonedit.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [Edit](../objects/edit.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [Label](../objects/label.md), [List](../objects/list.md), [ListView](../objects/listview.md), [MDIClient](../objects/mdiclient.md), [Metafile](../objects/metafile.md), [Printer](../objects/printer.md), [ProgressBar](../objects/progressbar.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [RichEdit](../objects/richedit.md), [Scroll](../objects/scroll.md), [Spinner](../objects/spinner.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TabBar](../objects/tabbar.md), [TipField](../objects/tipfield.md), [ToolBar](../objects/toolbar.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)
+
+Children: [Timer](../objects/timer.md)
+
+Properties: [Accelerator](../properties/accelerator.md), [ArcMode](../properties/arcmode.md), [AutoConf](../properties/autoconf.md), [BCol](../properties/bcol.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [CursorObj](../properties/cursorobj.md), [Data](../properties/data.md), [Dragable](../properties/dragable.md), [DrawMode](../properties/drawmode.md), [End](../properties/end.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FillCol](../properties/fillcol.md), [FStyle](../properties/fstyle.md), [KeepOnClose](../properties/keeponclose.md), [LStyle](../properties/lstyle.md), [LWidth](../properties/lwidth.md), [MethodList](../properties/methodlist.md), [OnTop](../properties/ontop.md), [Points](../properties/points.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Start](../properties/start.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
+
+Methods: [Detach](../methodorevents/detach.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [DragDrop](../methodorevents/dragdrop.md), [Help](../methodorevents/help.md), [MouseDblClick](../methodorevents/mousedblclick.md), [MouseDown](../methodorevents/mousedown.md), [MouseMove](../methodorevents/mousemove.md), [MouseUp](../methodorevents/mouseup.md), [Select](../methodorevents/select.md)

@@ -1,7 +1,5 @@
 # <span>GetMethodInfo</span> <span>Method 552</span>
 
-**Applies To:** [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md)
-
 **Description**
 
 This method is used to obtain information about a particular method or set of methods supported by a COM object.
@@ -31,3 +29,7 @@ The result is a nested vector with one element per method name. Each element of 
 │ └─┘ └───────┘ │
 └∊──────────────┘
 ```
+
+**Application**
+
+Objects: [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md)

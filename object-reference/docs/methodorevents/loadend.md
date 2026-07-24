@@ -1,7 +1,5 @@
 # <span>LoadEnd</span> <span>Event 836</span>
 
-**Applies To:** [HTMLRenderer](../objects/htmlrenderer.md)
-
 **Description**
 
 A LoadEnd event is raised when a particular frame has finished loading. Multiple frames may be loading at the same time. Sub-frames may start or continue to load even after the main frame has finished loading.
@@ -18,3 +16,7 @@ The event message reported as the result of [`⎕DQ`](../../../language-referenc
 |`[3]`|url   |The URL of the loaded frame                           |
 |`[4]`|Flag  |1 if the loaded frame is the "main" frame, 0 otherwise|
 |`[5]`|Code  |The HTTP status code as a result of loading the frame |
+
+**Application**
+
+Objects: [HTMLRenderer](../objects/htmlrenderer.md)

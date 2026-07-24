@@ -1,7 +1,5 @@
 # <span>CellSelect</span> <span>Property</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 The [Grid](../objects/grid.md) supports the selection of a contiguous block of cells by the user, using the mouse and/or the keyboard. The ability to select a range of cells is determined by the CellSelect property.
@@ -47,3 +45,7 @@ When the user places the mouse pointer over any of the four edges of a selected 
 These operations generate a [GridDropSel](../methodorevents/griddropsel.md) event. You may prevent the user from moving and copying blocks of cells by disabling this event (by setting its event action code to `¯1`) or you may control these operations selectively with a callback function. Note that although the operation of *inserting* cells (using Ctrl+Shift) has not been implemented, you may provide this facility yourself with the information provided by the event message.
 
 You may also move or copy a block of cells (which need not necessarily be selected) under program control by calling [GridDropSel](../methodorevents/griddropsel.md) event as a method.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

@@ -1,7 +1,5 @@
 # <span>ShowComment</span> <span>Event 223</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 If enabled, a [Grid](../objects/grid.md) will generate a ShowComment event when the user rests the mouse pointer over a commented cell. You may use this event to modify the appearance of the comment dynamically.
@@ -25,3 +23,7 @@ Note that if the comment window relates to a row or column *title*, the value re
 You may display the comment associated with a particular cell under program control by calling ShowComment as a method. In this case, only the *Cell row* and *Cell column* parameters need be specified. If however, you wish to override the comment text and/or its window size, you may do so (temporarily) by specifying the corresponding parameters. By default, a comment displayed under program control does not exhibit tip behaviour but remains visible until it is explicitly removed using the HideComment method.
 
 Note that a comment will only be displayed if the specified cell is marked as a commented cell.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

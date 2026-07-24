@@ -1,7 +1,5 @@
 # <span>RTFPrintSetup</span> <span>Method 460</span>
 
-**Applies To:** [Printer](../objects/printer.md), [RichEdit](../objects/richedit.md)
-
 **Description**
 
 This method is used to display a print set-up dialog box. The dialog box allows the user to select a particular printer, the pages to be printed and other information. The user's choices are returned in the result.
@@ -40,3 +38,7 @@ If the user presses OK, the result is a 4-element vector containing the user's c
       F.T.RTFPrintSetup ('All' 1 1 'PR')
  IBM 4039 LaserPrinter PS   Pages  2 3 3  1 0
 ```
+
+**Application**
+
+Objects: [Printer](../objects/printer.md), [RichEdit](../objects/richedit.md)

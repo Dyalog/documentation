@@ -1,7 +1,5 @@
 # <span>RTFPrint</span> <span>Method 461</span>
 
-**Applies To:** [RichEdit](../objects/richedit.md)
-
 **Description**
 
 This method is used to print the contents ([RTFText](../properties/rtftext.md)) of a [RichEdit](../objects/richedit.md) object.
@@ -23,3 +21,7 @@ The argument to RTFPrint is `⍬`, or a 1 to 4-element array as follows:
 |`[2]`|Start page (integer)                  |
 |`[3]`|End page (integer)                    |
 |`[4]`|Maximum pages (ignored)               |
+
+**Application**
+
+Objects: [RichEdit](../objects/richedit.md)

@@ -1,7 +1,5 @@
 # <span>PrintList</span> <span>Property</span>
 
-**Applies To:** [Root](../objects/root.md)
-
 **Description**
 
 This property provides a list of the printers that are installed on your computer system, that is, those listed when you select "printers" from the MS-Windows Control Panel. It is a "read-only" property of the [Root](../objects/root.md) object `'.'`.
@@ -25,3 +23,7 @@ Fax,SHRFAX:
 Auto Canon MP600 Printer on DIMENSION5150,\\DIMENSION5150\Canon               
 
 ```
+
+**Application**
+
+Objects: [Root](../objects/root.md)

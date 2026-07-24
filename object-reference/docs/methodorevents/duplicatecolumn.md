@@ -1,7 +1,5 @@
 # <span>DuplicateColumn</span> <span>Method 178</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 This method is used to duplicate a column in a [Grid](../objects/grid.md) object.
@@ -20,3 +18,7 @@ If the *Comment flag* is 1 (the default), any Comments associated with cells in 
 If the *Lock flag* is 1 (the default), the lock state of the column is duplicated; otherwise, the new column is not locked.
 
 If the *Undo flag* is 1, the column may subsequently be restored by invoking the Undo method. If this element is omitted or is 0, the operation may not be undone.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

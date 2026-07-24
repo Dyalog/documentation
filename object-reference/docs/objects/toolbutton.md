@@ -1,7 +1,5 @@
 # <span>ToolButton</span> <span>Object</span>
 
-[Parents](../parentlists/toolbutton.md), [Children](../childlists/toolbutton.md), [Properties](../proplists/toolbutton.md), [Methods](../methodlists/toolbutton.md), [Events](../eventlists/toolbutton.md)
-
 **Purpose:** The ToolButton object represents a button in a ToolControl.
 
 **Description**
@@ -52,3 +50,15 @@ The following example illustrates the use of DropDown buttons:
 ```
 
 ![](../img/tool9.gif)
+
+**Application**
+
+Parents: [ToolControl](../objects/toolcontrol.md)
+
+Children: [Bitmap](../objects/bitmap.md), [Timer](../objects/timer.md)
+
+Properties: [Accelerator](../properties/accelerator.md), [Active](../properties/active.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [Hint](../properties/hint.md), [HintObj](../properties/hintobj.md), [ImageIndex](../properties/imageindex.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Popup](../properties/popup.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [State](../properties/state.md), [Style](../properties/style.md), [Tip](../properties/tip.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
+
+Methods: [Detach](../methodorevents/detach.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [Help](../methodorevents/help.md), [MouseDblClick](../methodorevents/mousedblclick.md), [MouseDown](../methodorevents/mousedown.md), [MouseMove](../methodorevents/mousemove.md), [MouseUp](../methodorevents/mouseup.md), [Select](../methodorevents/select.md)

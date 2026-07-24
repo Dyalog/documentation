@@ -1,7 +1,5 @@
 # <span>MenuBar</span> <span>Object</span>
 
-[Parents](../parentlists/menubar.md), [Children](../childlists/menubar.md), [Properties](../proplists/menubar.md), [Methods](../methodlists/menubar.md), [Events](../eventlists/menubar.md)
-
 **Purpose:** Specifies a horizontal menu bar displayed at the top of a [Form](form.md) .
 
 **Description**
@@ -31,3 +29,15 @@ Note that putting a [Separator](separator.md) (either [Style](../properties/styl
 The [EdgeStyle](../properties/edgestyle.md) property has no effect on the appearance of a MenuBar or of a direct child of a MenuBar. However, if you want the sub-menus to have a 3-dimensional appearance, you **must** set the [EdgeStyle](../properties/edgestyle.md) property of the MenuBar to something other than `'None'`.
 
 If the MenuBar is owned by a [Form](form.md) that is the parent of an [MDIClient](mdiclient.md), you can set the [MDIMenu](../properties/mdimenu.md) property to the name of the [Menu](menu.md) you wish to nominate as the *window*  menu. This menu will automatically be updated with the [Caption](../properties/caption.md)s of the child [SubForm](subform.md) and may be used to select the currently active one.
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [SubForm](../objects/subform.md), [ToolControl](../objects/toolcontrol.md)
+
+Children: [Bitmap](../objects/bitmap.md), [Menu](../objects/menu.md), [MenuItem](../objects/menuitem.md), [Separator](../objects/separator.md), [Timer](../objects/timer.md)
+
+Properties: [ChildList](../properties/childlist.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FontObj](../properties/fontobj.md), [Handle](../properties/handle.md), [KeepOnClose](../properties/keeponclose.md), [MDIMenu](../properties/mdimenu.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
+
+Methods: [Detach](../methodorevents/detach.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md)

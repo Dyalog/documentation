@@ -1,7 +1,5 @@
 # <span>CellUp</span> <span>Event 162</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 If enabled, this event is reported when the user **releases** a mouse button down whilst over a cell in a [Grid](../objects/grid.md). This event is a companion to the [CellDown](./celldown.md) event and could be used to hide a pop-up which was displayed in response to the [CellDown](./celldown.md). The CellUp event performs no default action and may not be disabled.
@@ -26,3 +24,7 @@ The cell row and column are `⎕IO` dependent.
 If the user clicks over a row *title*, the value reported for the column is `¯1`, and the value reported for Title index is the index of that row title in [RowTitles](../properties/rowtitles.md), or, if [RowTitles](../properties/rowtitles.md) is not defined, the row number. Column titles are handled in a similar fashion.
 
 An application **can** position the user on a particular cell in a [Grid](../objects/grid.md) by calling [CellDown](./celldown.md) event as a method, but it is recommended that a [CellMove](./cellmove.md) event is used instead.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

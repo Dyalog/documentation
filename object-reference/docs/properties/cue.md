@@ -1,7 +1,5 @@
 # <span>Cue</span> <span>Property</span>
 
-**Applies To:** [ButtonEdit](../objects/buttonedit.md), [Edit](../objects/edit.md)
-
 **Description**
 
 This  property specifies optional text to be displayed when a [ButtonEdit](../objects/buttonedit.md) or an [Edit](../objects/edit.md) object is empty. For an [Edit](../objects/edit.md) object it applies only if the Style of the [Edit](../objects/edit.md) object is `'Single'`.
@@ -20,3 +18,7 @@ The Boolean property [ShowCueWhenFocused](showcuewhenfocused.md)  determines whe
 ```
 
 ![](../img/cue-property.png)
+
+**Application**
+
+Objects: [ButtonEdit](../objects/buttonedit.md), [Edit](../objects/edit.md)

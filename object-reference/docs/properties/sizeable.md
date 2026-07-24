@@ -1,7 +1,5 @@
 # <span>Sizeable</span> <span>Property</span>
 
-[**Applies To**](../propertyapplies/sizeable.md)
-
 **Description**
 
 This property determines whether or not an object can be directly resized by the user once it has been created by [`⎕WC`](../../../language-reference-guide/system-functions/wc).
@@ -15,3 +13,7 @@ For other objects, the default value of the Sizeable property is 0. However, set
 In all these cases, when the user resizes an object, the object will generate a [Configure](../methodorevents/configure.md) (31) event.
 
 Sizeable also applies to the [Locator](../objects/locator.md) object. In this case, a value of 1 implies "rubberbanding" and a value of 0 means "no rubberbanding". See [Locator](../objects/locator.md) object for further details.
+
+**Application**
+
+Objects: [Animation](../objects/animation.md), [Button](../objects/button.md), [ButtonEdit](../objects/buttonedit.md), [Calendar](../objects/calendar.md), [ColorButton](../objects/colorbutton.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [DateTimePicker](../objects/datetimepicker.md), [Edit](../objects/edit.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [HTMLRenderer](../objects/htmlrenderer.md), [Label](../objects/label.md), [List](../objects/list.md), [ListView](../objects/listview.md), [Locator](../objects/locator.md), [ProgressBar](../objects/progressbar.md), [RichEdit](../objects/richedit.md), [Scroll](../objects/scroll.md), [SM](../objects/sm.md), [Spinner](../objects/spinner.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [StatusField](../objects/statusfield.md), [SubForm](../objects/subform.md), [TabBar](../objects/tabbar.md), [ToolBar](../objects/toolbar.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)

@@ -1,7 +1,5 @@
 # <span>GridFCol</span> <span>Property</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 The GridFCol property specifies the colour of the grid lines in a [Grid](../objects/grid.md) object.
@@ -13,3 +11,7 @@ The grid lines may be removed by setting GridFCol to the same colour as the back
 Finer control of the colour of the grid lines can be achieved by using [GridLineFCol](gridlinefcol.md) instead.
 
 Unlike [GridLineFCol](gridlinefcol.md), the value of GridFCol is ignored when *Native Look and Feel* is enabled; the colour is taken from the current theme.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

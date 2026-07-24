@@ -1,7 +1,5 @@
 # <span>FStyle</span> <span>Property</span>
 
-**Applies To:** [Circle](../objects/circle.md), [Ellipse](../objects/ellipse.md), [Poly](../objects/poly.md), [Rect](../objects/rect.md)
-
 **Description**
 
 This property determines how a graphics object is filled. It takes one of the following values, or, if the object has more than one component, a vector of such values.
@@ -21,3 +19,7 @@ This property determines how a graphics object is filled. It takes one of the fo
 For example, to fill an object with criss-crossing diagonal lines you would specify `('FStyle' 6)`. If the object contained two components, you could fill the first one with criss-crossing diagonal lines, and the second one with a [Bitmap](../objects/bitmap.md) called `'YES'`, with the specification `('FStyle' 6 'YES')`
 
 If the size of the [Bitmap](../objects/bitmap.md) is 8x8 APL uses a Windows "brush" to fill the object. If not, it uses "tiling". Filling with a brush is faster.
+
+**Application**
+
+Objects: [Circle](../objects/circle.md), [Ellipse](../objects/ellipse.md), [Poly](../objects/poly.md), [Rect](../objects/rect.md)

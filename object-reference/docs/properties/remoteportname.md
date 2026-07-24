@@ -1,7 +1,5 @@
 # <span>RemotePortName</span> <span>Property</span>
 
-**Applies To:** [TCPSocket](../objects/tcpsocket.md)
-
 **Description**
 
 The RemotePortName property is a character vector that specifies the port name of the remote service to which you wish to make a connection.
@@ -13,3 +11,7 @@ When the specified port name has been resolved to a port number, the [TCPSocket]
 Note that you may use *either* [RemotePort ](remoteport.md)*or* RemotePortName to identify the remote service. If you know the port number, it is normally quicker to specify [RemotePort](remoteport.md). However unless it is a *well known port number*, the use of a port name is generally more flexible. If you specify both properties, the value of RemotePortName will be ignored.
 
 For a server [TCPSocket](../objects/tcpsocket.md), you may not specify RemotePortName and `⎕WG` returns an empty character vector.
+
+**Application**
+
+Objects: [TCPSocket](../objects/tcpsocket.md)

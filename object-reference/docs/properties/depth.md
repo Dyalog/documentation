@@ -1,7 +1,5 @@
 # <span>Depth</span> <span>Property</span>
 
-**Applies To:** [TreeView](../objects/treeview.md)
-
 **Description**
 
 The Depth property specifies the structure of the items in a [TreeView](../objects/treeview.md) object. It is either a scalar 0 or an integer vector of the same length as the Items property.
@@ -35,3 +33,7 @@ For example:
 ```
 
 ![](../img/tv1.gif)
+
+**Application**
+
+Objects: [TreeView](../objects/treeview.md)

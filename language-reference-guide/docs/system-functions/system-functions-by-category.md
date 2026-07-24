@@ -16,13 +16,14 @@ These provide information on, or control, the execution environment.
 
 |Name                   |Description                |Form|
 |-----------------------|---------------------------|----|
-|[`⎕AI`](ai.md)      |Account Information        |Constant|
-|[`⎕AN`](an.md)      |Account Name               |Constant|
-|[`⎕CLEAR`](clear.md)|Clear workspace (WS)       |Constant|
-|[`⎕CY`](cy.md)      |Copy objects into active WS|Function|
-|[`⎕LOAD`](load.md)  |Load a saved WS            |Function|
-|[`⎕OFF`](off.md)    |End the session            |Constant|
-|[`⎕SAVE`](save.md)  |Save the active WS         |Function|
+|[`⎕AI`](ai.md)         |Account Information        |Constant|
+|[`⎕AN`](an.md)         |Account Name               |Constant|
+|[`⎕CLEAR`](clear.md)   |Clear workspace (WS)       |Constant|
+|[`⎕CY`](cy.md)         |Copy objects into active WS|Function|
+|[`⎕LOAD`](load.md)     |Load a saved WS            |Function|
+|[`⎕OFF`](off.md)       |End the session            |Constant|
+|[`⎕SAVE`](save.md)     |Save the active WS         |Function|
+|[`⎕SYSTEM`](system.md) |System Information         |Reference|
 
 ### Workspace
 
@@ -256,7 +257,7 @@ These create and manipulate files of any type as well as directories.
 
 ### Threads
 
-These are facilities to handle threads such as those created by [Spawn](../../primitive-operators/spawn.md) (`&`).
+These are facilities to handle threads such as those created by [Spawn](../primitive-operators/spawn.md) (`&`).
 
 |Name     |Description                  |Form|
 |---------|-----------------------------|-----|
@@ -270,7 +271,7 @@ These are facilities to handle threads such as those created by [Spawn](../../pr
 
 ### Synchronisation
 
-These are facilities to ensure proper timing in the relationship between threads such as those created by [Spawn](../../primitive-operators/spawn.md) (`&`).
+These are facilities to ensure proper timing in the relationship between threads such as those created by [Spawn](../primitive-operators/spawn.md) (`&`).
 
 |Name     |Description         |Form|
 |---------|--------------------|-----|
@@ -310,7 +311,7 @@ These are facilities to catch, cause, and investigate error events and interrupt
 
 ### Shared Variables
 
-These constitute the [shared variable](../../../interface-guide/dde/shared-variable-principles.md) interface.
+These constitute the [shared variable](../../interface-guide/dde/shared-variable-principles.md) interface.
 
 |Name  |Description                |Form|
 |------|---------------------------|-----|

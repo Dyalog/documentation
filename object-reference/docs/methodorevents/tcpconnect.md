@@ -1,7 +1,5 @@
 # <span>TCPConnect</span> <span>Event 372</span>
 
-**Applies To:** [TCPSocket](../objects/tcpsocket.md)
-
 **Description**
 
 If enabled, this event is reported when a server accepts the connection of a client [TCPSocket](../objects/tcpsocket.md) object and is reported by the client.
@@ -13,3 +11,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |-----|------|-----------------------|
 |`[1]`|Object|ref or character vector|
 |`[2]`|Event |`'TCPConnect'` or 372  |
+
+**Application**
+
+Objects: [TCPSocket](../objects/tcpsocket.md)

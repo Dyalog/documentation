@@ -1,7 +1,5 @@
 # <span>ShowInput</span> <span>Property</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 This property specifies whether or not the cells in a [Grid](../objects/grid.md) are displayed using their associated input objects.
@@ -15,3 +13,7 @@ The example below illustrates the appearance of a [Grid](../objects/grid.md) in 
 The appearance of the same [Grid](../objects/grid.md) but with ShowInput set to 0 throughout is illustrated below:
 
 ![](../img/show2.gif)
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

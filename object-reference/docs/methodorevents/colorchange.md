@@ -1,7 +1,5 @@
 # <span>ColorChange</span> <span>Event 430</span>
 
-**Applies To:** [ColorButton](../objects/colorbutton.md)
-
 **Description**
 
 If enabled, this event is reported by a [ColorButton](../objects/colorbutton.md) object when the user chooses a colour from the colour selection drop-down.
@@ -18,3 +16,7 @@ The 3<sup>rd</sup> element of the event message contains the RGB value for the s
 Note that the event is reported when the user chooses a colour, whether or not the newly selected colour differs from the one that was previously selected.
 
 This event is reported for information only and cannot be disabled or modified in any way.
+
+**Application**
+
+Objects: [ColorButton](../objects/colorbutton.md)

@@ -1,7 +1,5 @@
 # <span>ShowBalloonTip</span> <span>Method 860</span>
 
-**Applies To:** [SysTrayItem](../objects/systrayitem.md)
-
 **Description**
 
 The ShowBalloonTip method displays a BalloonTip in a [SysTrayItem](../objects/systrayitem.md) object.
@@ -29,3 +27,7 @@ If the *Icon* parameter is an integer, it means:
 Other values represent the name or a ref to an [Icon](../objects/icon.md) object. If the *Icon* parameter is omitted, no icon is displayed in the BalloonTip.
 
 If the *Icon* parameter specifies a *large* Icon object (32 x 32 bits) the Flags parameter must be 32. Otherwise this parameter is not used.
+
+**Application**
+
+Objects: [SysTrayItem](../objects/systrayitem.md)

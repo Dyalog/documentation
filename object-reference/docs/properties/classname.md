@@ -1,7 +1,5 @@
 # <span>ClassName</span> <span>Property</span>
 
-**Applies To:** [ActiveXControl](../objects/activexcontrol.md), [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md), [OLEServer](../objects/oleserver.md)
-
 **Description**
 
 For an [OLEClient](../objects/oleclient.md), the ClassName property specifies the name of the OLE object to which an [OLEClient](../objects/oleclient.md) object named by the left argument of `⎕WC` is to be connected.
@@ -19,3 +17,7 @@ For example, to load one of the standard .NET controls:
 ```apl
       ⎕USING,←⊂'System.Windows.Forms,system.windows.forms.dll'
 ```
+
+**Application**
+
+Objects: [ActiveXControl](../objects/activexcontrol.md), [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md), [OLEServer](../objects/oleserver.md)

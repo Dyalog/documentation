@@ -1,7 +1,5 @@
 # <span>CheckBoxes</span> <span>Property</span>
 
-**Applies To:** [ListView](../objects/listview.md), [TreeView](../objects/treeview.md)
-
 **Description**
 
 The CheckBoxes property specifies whether or not check boxes are displayed
@@ -27,3 +25,7 @@ method will have the 13<sup>th</sup> bit set if the item is checked.
 The picture below illustrates the effect on the appearance of a [ListView](../objects/listview.md) object, of setting CheckBoxes to 1.
 
 ![](../img/lv-cb.gif)
+
+**Application**
+
+Objects: [ListView](../objects/listview.md), [TreeView](../objects/treeview.md)

@@ -1,7 +1,5 @@
 # <span>SetMethodInfo</span> <span>Method 556</span>
 
-**Applies To:** [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md)
-
 **Description**
 
 This method is used to redefine the arguments or data types associated with a method that is exported by a COM object. SetMethodInfo is used to override the information provided by the object's Type Library.
@@ -51,3 +49,7 @@ Unless you are going to call the method using the names of its arguments, these 
       methodinfo← 'VT_R8' 'VT_R8'
       EX.SetMethodInfo 'InchesToPoints' methodinfo 
 ```
+
+**Application**
+
+Objects: [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md)

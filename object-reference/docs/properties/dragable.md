@@ -1,7 +1,5 @@
 # <span>Dragable</span> <span>Property</span>
 
-[**Applies To**](../propertyapplies/dragable.md)
-
 **Description**
 
 This property determines whether or not an object may be the subject of a "drag and drop" operation.
@@ -17,3 +15,7 @@ If the object under the mouse pointer is the parent of the object that has been 
 If the object under the mouse pointer is not the parent of the object being dragged, the default action is for the system to ignore the operation. However, by enabling the [DragDrop](../methodorevents/dragdrop.md) event, your application can of course take whatever action is appropriate, including perhaps moving the dragged object to a new parent.
 
 Note that a Dragable object does not generate a [Configure](../methodorevents/configure.md) (31) event when it is dragged and dropped.
+
+**Application**
+
+Objects: [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/animation.md), [Button](../objects/button.md), [ButtonEdit](../objects/buttonedit.md), [Calendar](../objects/calendar.md), [Circle](../objects/circle.md), [ColorButton](../objects/colorbutton.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [DateTimePicker](../objects/datetimepicker.md), [Edit](../objects/edit.md), [Ellipse](../objects/ellipse.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [Image](../objects/image.md), [Label](../objects/label.md), [List](../objects/list.md), [ListView](../objects/listview.md), [Marker](../objects/marker.md), [Poly](../objects/poly.md), [ProgressBar](../objects/progressbar.md), [Rect](../objects/rect.md), [RichEdit](../objects/richedit.md), [Scroll](../objects/scroll.md), [SM](../objects/sm.md), [Spinner](../objects/spinner.md), [Static](../objects/static.md), [StatusField](../objects/statusfield.md), [Text](../objects/text.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)

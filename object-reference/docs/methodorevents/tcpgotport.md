@@ -1,7 +1,5 @@
 # <span>TCPGotPort</span> <span>Event 378</span>
 
-**Applies To:** [TCPSocket](../objects/tcpsocket.md)
-
 **Description**
 
 If enabled, this event is reported when a port name (specified by the [RemotePortName](../properties/remoteportname.md) or [LocalPortName](../properties/localportname.md) property) is resolved to a port number.
@@ -15,3 +13,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |`[2]`|Event |`'TCPGotPort'` or 378  |
 
 Note that the port number is not reported in the event message but may be obtained from [RemotePort](../properties/remoteport.md) or [LocalPort](../properties/localport.md) as appropriate.
+
+**Application**
+
+Objects: [TCPSocket](../objects/tcpsocket.md)

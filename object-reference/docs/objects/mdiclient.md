@@ -1,7 +1,5 @@
 # <span>MDIClient</span> <span>Object</span>
 
-[Parents](../parentlists/mdiclient.md), [Children](../childlists/mdiclient.md), [Properties](../proplists/mdiclient.md), [Methods](../methodlists/mdiclient.md), [Events](../eventlists/mdiclient.md)
-
 **Purpose:** Implements Multiple Document Interface (MDI) behaviour.
 
 **Description**
@@ -24,3 +22,15 @@ You can call methods which cause the MDIClient to organise its child [SubForm](s
 |[MDICascade](../methodorevents/mdicascade.md)|Causes the MDIClient to organise its child Forms in an overlapping manner.                                |
 |[MDITile](../methodorevents/mditile.md)      |Causes the MDIClient to arrange its child Forms as a row or column.                                       |
 |[MDIArrange](../methodorevents/mdiarrange.md)|Causes the MDIClient to arrange the icons associated with any minimised child Forms in an orderly fashion.|
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [SubForm](../objects/subform.md)
+
+Children: [Circle](../objects/circle.md), [Ellipse](../objects/ellipse.md), [Font](../objects/font.md), [Marker](../objects/marker.md), [Poly](../objects/poly.md), [Rect](../objects/rect.md), [SubForm](../objects/subform.md), [Text](../objects/text.md), [Timer](../objects/timer.md)
+
+Properties: [Accelerator](../properties/accelerator.md), [Attach](../properties/attach.md), [BCol](../properties/bcol.md), [Border](../properties/border.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [CursorObj](../properties/cursorobj.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [Handle](../properties/handle.md), [Hint](../properties/hint.md), [HintObj](../properties/hintobj.md), [IconObj](../properties/iconobj.md), [KeepOnClose](../properties/keeponclose.md), [MDIActive](../properties/mdiactive.md), [MDIActiveObject](../properties/mdiactiveobject.md), [MethodList](../properties/methodlist.md), [Picture](../properties/picture.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Redraw](../properties/redraw.md), [Size](../properties/size.md), [TabIndex](../properties/tabindex.md), [Tip](../properties/tip.md), [TipObj](../properties/tipobj.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [XRange](../properties/xrange.md), [YRange](../properties/yrange.md)
+
+Methods: [Animate](../methodorevents/animate.md), [Detach](../methodorevents/detach.md), [GetFocus](../methodorevents/getfocus.md), [GetFocusObj](../methodorevents/getfocusobj.md), [GetTextSize](../methodorevents/gettextsize.md), [MDIArrange](../methodorevents/mdiarrange.md), [MDICascade](../methodorevents/mdicascade.md), [MDITile](../methodorevents/mditile.md)
+
+Events: [Close](../methodorevents/close.md), [Configure](../methodorevents/configure.md), [ContextMenu](../methodorevents/contextmenu.md), [Create](../methodorevents/create.md), [DragDrop](../methodorevents/dragdrop.md), [DropFiles](../methodorevents/dropfiles.md), [DropObjects](../methodorevents/dropobjects.md), [Expose](../methodorevents/expose.md), [GesturePan](../methodorevents/gesturepan.md), [GesturePressAndTap](../methodorevents/gesturepressandtap.md), [GestureRotate](../methodorevents/gesturerotate.md), [GestureTwoFingerTap](../methodorevents/gesturetwofingertap.md), [GestureZoom](../methodorevents/gesturezoom.md), [GotFocus](../methodorevents/gotfocus.md), [Help](../methodorevents/help.md), [KeyPress](../methodorevents/keypress.md), [LostFocus](../methodorevents/lostfocus.md), [MouseDblClick](../methodorevents/mousedblclick.md), [MouseDown](../methodorevents/mousedown.md), [MouseEnter](../methodorevents/mouseenter.md), [MouseLeave](../methodorevents/mouseleave.md), [MouseMove](../methodorevents/mousemove.md), [MouseUp](../methodorevents/mouseup.md), [MouseWheel](../methodorevents/mousewheel.md), [Select](../methodorevents/select.md)

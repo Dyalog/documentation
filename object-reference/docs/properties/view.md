@@ -1,7 +1,5 @@
 # <span>View</span> <span>Property</span>
 
-**Applies To:** [ListView](../objects/listview.md)
-
 **Description**
 
 The View property specifies how the items in a [ListView](../objects/listview.md) object are displayed. It is a character vector which may have one of the following values; `'Icon'` (the default), `'SmallIcon'`, `'List'` or `'Report'`.
@@ -13,3 +11,7 @@ When View is `'Icon'` or `'SmallIcon'`, the items are arranged *row-wise* with l
 ![](../img/listview-list.png)
 
 ![](../img/listview-report.png)
+
+**Application**
+
+Objects: [ListView](../objects/listview.md)

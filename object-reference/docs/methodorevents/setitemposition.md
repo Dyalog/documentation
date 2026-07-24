@@ -1,7 +1,5 @@
 # <span>SetItemPosition</span> <span>Event 322</span>
 
-**Applies To:** [ListView](../objects/listview.md)
-
 **Description**
 
 If enabled, this event is reported when the user drag-drops an item within a [ListView](../objects/listview.md) object. This operation may be disabled by returning 0 from a callback function.
@@ -16,3 +14,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |`[5]`|X-position   |Integer. New x-position of the item.                                                                             |
 |`[6]`|Button number|Integer. The mouse button used to perform the drag.                                                              |
 |`[7]`|Shift State  |Integer: Sum of shift key codes (number)<br/>1 = Shift key is down<br/>2 = Ctrl key is down<br/>4 = Alt key is down|
+
+**Application**
+
+Objects: [ListView](../objects/listview.md)

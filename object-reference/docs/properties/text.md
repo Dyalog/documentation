@@ -1,7 +1,5 @@
 # <span>Text</span> <span>Property</span>
 
-[**Applies To**](../propertyapplies/text.md)
-
 **Description**
 
 This property is associated with the text contents of an object and is a character array.
@@ -19,3 +17,7 @@ In general, the value of Text returned by [`⎕WG`](../../../language-reference-
 You can copy text into the Windows [Clipboard](../objects/clipboard.md) by using [`⎕WS`](../../../language-reference-guide/system-functions/ws) to set Text for a [Clipboard](../objects/clipboard.md) object. In this case you may specify a simple character scalar, vector or matrix, or a vector of character vectors. If you are retrieving data from the clipboard that has been stored by another application, Text will be either a character vector or a vector of character vectors.
 
 The Text property of a [StatusField](../objects/statusfield.md) is updated automatically if its [Style](style.md) property is set to monitor the status of a key.
+
+**Application**
+
+Objects: [ButtonEdit](../objects/buttonedit.md), [Clipboard](../objects/clipboard.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [Edit](../objects/edit.md), [MsgBox](../objects/msgbox.md), [RichEdit](../objects/richedit.md), [Spinner](../objects/spinner.md), [StatusField](../objects/statusfield.md), [Text](../objects/text.md)

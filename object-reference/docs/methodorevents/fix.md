@@ -5,8 +5,6 @@ search:
 
 # <span>Fix</span> <span>Event 820</span>
 
-**Applies To:** [Editor](../../../windows-ui-guide/the-session-object/session-object)
-
 **Description**
 
 If enabled, this event is reported when the user attempts to fix an object from the Editor window. It is reported immediately, before the user's action is processed in any way by the Editor.
@@ -29,3 +27,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |`[7]`|File Name|a character vector containing the name of the file (if any) associated with the object.              |
 
 For objects whose names are part of the content of the Edit window, this event is not reported if the name is missing or invalid. Instead the system will display an error dialog box.
+
+**Application**
+
+Objects: [Editor](../../../windows-ui-guide/the-session-object/session-object)

@@ -1,7 +1,5 @@
 # <span>TCPGetHostID</span> <span>Method 376</span>
 
-**Applies To:** [Root](../objects/root.md), [TCPSocket](../objects/tcpsocket.md)
-
 **Description**
 
 This method is used to obtain the IP Address of your PC.
@@ -16,3 +14,7 @@ For example:
       TCPCetHostID
 193.32.236.43
 ```
+
+**Application**
+
+Objects: [Root](../objects/root.md), [TCPSocket](../objects/tcpsocket.md)

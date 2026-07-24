@@ -1,7 +1,5 @@
 # <span>RowLineTypes</span> <span>Property</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 This property specifies the appearance of the horizontal grid lines in a [Grid](../objects/grid.md) object.
@@ -15,3 +13,7 @@ Note that RowLineTypes is not `⎕IO` dependent, and the value 0 is treated the 
 The default value of RowLineTypes is an empty numeric vector (`⍬`). If so, all horizontal grid lines are drawn using the first element of [GridLineFCol](gridlinefcol.md) and [GridLineWidth](gridlinewidth.md).
 
 A horizontal grid line is drawn along the bottom edge of its associated row. One pixel is drawn *inside* the row of cells; additional pixels (if any) are drawn *between* that row of cells and the next one below.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

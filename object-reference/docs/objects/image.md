@@ -1,7 +1,5 @@
 # <span>Image</span> <span>Object</span>
 
-[Parents](../parentlists/image.md), [Children](../childlists/image.md), [Properties](../proplists/image.md), [Methods](../methodlists/image.md), [Events](../eventlists/image.md)
-
 **Purpose:** Positions bitmaps and icons within an object.
 
 **Description**
@@ -49,3 +47,15 @@ Display the "YES" [Bitmap](bitmap.md) at (20,10) and the "NO" [Bitmap](bitmap.md
 ```apl
       'F.I' ⎕WC'Image'(20(10 50))('Picture' 'YES' 'NO')
 ```
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [Bitmap](../objects/bitmap.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [Metafile](../objects/metafile.md), [Printer](../objects/printer.md), [PropertyPage](../objects/propertypage.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
+
+Children: [Timer](../objects/timer.md)
+
+Properties: [Accelerator](../properties/accelerator.md), [AcceptFiles](../properties/acceptfiles.md), [AutoConf](../properties/autoconf.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Dragable](../properties/dragable.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [OnTop](../properties/ontop.md), [Picture](../properties/picture.md), [Points](../properties/points.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
+
+Methods: [Detach](../methodorevents/detach.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [DragDrop](../methodorevents/dragdrop.md), [Help](../methodorevents/help.md), [MouseDblClick](../methodorevents/mousedblclick.md), [MouseDown](../methodorevents/mousedown.md), [MouseMove](../methodorevents/mousemove.md), [MouseUp](../methodorevents/mouseup.md), [Select](../methodorevents/select.md)

@@ -1,7 +1,5 @@
 # <span>Cursor</span> <span>Object</span>
 
-[Parents](../parentlists/cursor.md), [Children](../childlists/cursor.md), [Properties](../proplists/cursor.md), [Methods](../methodlists/cursor.md), [Events](../eventlists/cursor.md)
-
 **Purpose:** This object defines a cursor.
 
 **Description**
@@ -20,3 +18,15 @@ The [Bits](../properties/bits.md) and [Mask](../properties/mask.md) properties d
 The [HotSpot](../properties/hotspot.md) property determines the point within the cursor that registers its position over another object.
 
 A Cursor is **used** by setting the [CursorObj](../properties/cursorobj.md) property of another object to its name or ref.
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/animation.md), [Button](../objects/button.md), [Calendar](../objects/calendar.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [CoolBand](../objects/coolband.md), [DateTimePicker](../objects/datetimepicker.md), [Edit](../objects/edit.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [ImageList](../objects/imagelist.md), [Label](../objects/label.md), [List](../objects/list.md), [ListView](../objects/listview.md), [OLEServer](../objects/oleserver.md), [ProgressBar](../objects/progressbar.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [RichEdit](../objects/richedit.md), [Root](../objects/root.md), [Scroll](../objects/scroll.md), [SM](../objects/sm.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)
+
+Children: [Timer](../objects/timer.md)
+
+Properties: [Accelerator](../properties/accelerator.md), [Bits](../properties/bits.md), [ChildList](../properties/childlist.md), [CMap](../properties/cmap.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [File](../properties/file.md), [Handle](../properties/handle.md), [HotSpot](../properties/hotspot.md), [KeepBits](../properties/keepbits.md), [KeepOnClose](../properties/keeponclose.md), [Mask](../properties/mask.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Type](../properties/type.md)
+
+Methods: [Detach](../methodorevents/detach.md), [FileRead](../methodorevents/fileread.md), [FileWrite](../methodorevents/filewrite.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [Select](../methodorevents/select.md)

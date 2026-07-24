@@ -1,7 +1,5 @@
 # <span>AddChildren</span> <span>Method 310</span>
 
-**Applies To:** [TreeView](../objects/treeview.md)
-
 **Description**
 
 This method is used to add child items to an item in a [TreeView](../objects/treeview.md) object
@@ -24,3 +22,7 @@ The argument to AddChildren is a 3, 4 or 5 element array as follows:
 *Picture vector* and *Selected picture vector* are optional and specify values of [ImageIndex](../properties/imageindex.md) and [SelImageIndex](../properties/selimageindex.md) respectively for each of the new items.
 
 The result is the index at which the first new item has been inserted.
+
+**Application**
+
+Objects: [TreeView](../objects/treeview.md)

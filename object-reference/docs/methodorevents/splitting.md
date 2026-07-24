@@ -1,7 +1,5 @@
 # <span>Splitting</span> <span>Event 281</span>
 
-**Applies To:** [Splitter](../objects/splitter.md)
-
 **Description**
 
 If enabled, this event is reported while a [Splitter](../objects/splitter.md) object is being dragged, between a [StartSplit](./startsplit.md) and an [EndSplit](./endsplit.md). This event is only reported if full-drag is enabled.
@@ -19,3 +17,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |`[6]`|W     |width of the Splitter        |
 
 See also [StartSplit](./startsplit.md), [EndSplit](./endsplit.md).
+
+**Application**
+
+Objects: [Splitter](../objects/splitter.md)

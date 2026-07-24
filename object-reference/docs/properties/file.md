@@ -1,7 +1,5 @@
 # <span>File</span> <span>Property</span>
 
-[**Applies To**](../propertyapplies/file.md)
-
 **Description**
 
 Specifies the name of a file associated with an object.
@@ -15,3 +13,7 @@ If it is nested, the first element specifies the name of a DLL or ([Icon](../obj
 For a [Metafile](../objects/metafile.md) object, File must be simple and specifies the name of a metafile (.WMF) file. For a [RichEdit](../objects/richedit.md) object, File must be simple and specifies the name of a Rich text Format (.RTF) file.
 
 When applied to a [FileBox](../objects/filebox.md) object, File contains the name (or names) of the selected file (or files) depending upon the value of its [Style](style.md) (`'Single'` or `'Multi').`
+
+**Application**
+
+Objects: [Animation](../objects/animation.md), [Bitmap](../objects/bitmap.md), [Cursor](../objects/cursor.md), [FileBox](../objects/filebox.md), [Icon](../objects/icon.md), [Metafile](../objects/metafile.md), [RichEdit](../objects/richedit.md)

@@ -1,7 +1,5 @@
 # <span>CalendarDown</span> <span>Event 271</span>
 
-**Applies To:** [Calendar](../objects/calendar.md)
-
 **Description**
 
 If enabled, this event is reported when the user depresses the left mouse
@@ -37,3 +35,7 @@ If the value of the 6<sup>th</sup> element of the event message is 6
 (leftmost) day in the corresponding week, reported as an [IDN](../miscellaneous/international-day-number.md).
 
 Otherwise, the 3<sup>rd</sup> element of the event message is 0.
+
+**Application**
+
+Objects: [Calendar](../objects/calendar.md)

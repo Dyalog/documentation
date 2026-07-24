@@ -1,7 +1,5 @@
 # <span>TabBtn</span> <span>Object</span>
 
-[Parents](../parentlists/tabbtn.md), [Children](../childlists/tabbtn.md), [Properties](../proplists/tabbtn.md), [Methods](../methodlists/tabbtn.md), [Events](../eventlists/tabbtn.md)
-
 **Purpose:** To tab a [SubForm](subform.md) .
 
 **Description**
@@ -15,3 +13,15 @@ The appearance of a TabBtn is determined by its [EdgeStyle](../properties/edgest
 The position of a TabBtn is normally determined by its parent [TabBar](tabbar.md) and its default size is fixed (22 x 80 pixels), and not related to the size of its [Caption](../properties/caption.md). These defaults can be overridden using the [Posn](../properties/posn.md) and [Size](../properties/size.md) properties.
 
 A [SubForm](subform.md) is associated with a TabBtn by setting the [TabObj](../properties/tabobj.md) property of the [*SubForm*](subform.md) to the name of, or ref to, the TabBtn. The [TabObj](../properties/tabobj.md) property of the TabBtn is a read-only property that contains the name of, or ref to, the associated [SubForm](subform.md).
+
+**Application**
+
+Parents: [TabBar](../objects/tabbar.md)
+
+Children: [Timer](../objects/timer.md)
+
+Properties: [Accelerator](../properties/accelerator.md), [Active](../properties/active.md), [Align](../properties/align.md), [Attach](../properties/attach.md), [AutoConf](../properties/autoconf.md), [BCol](../properties/bcol.md), [Border](../properties/border.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FontObj](../properties/fontobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [TabObj](../properties/tabobj.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
+
+Methods: [ChooseFont](../methodorevents/choosefont.md), [Detach](../methodorevents/detach.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [DropObjects](../methodorevents/dropobjects.md), [FontCancel](../methodorevents/fontcancel.md), [FontOK](../methodorevents/fontok.md), [MouseDblClick](../methodorevents/mousedblclick.md), [MouseDown](../methodorevents/mousedown.md), [MouseMove](../methodorevents/mousemove.md), [MouseUp](../methodorevents/mouseup.md), [Select](../methodorevents/select.md)

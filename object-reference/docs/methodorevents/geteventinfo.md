@@ -1,7 +1,5 @@
 # <span>GetEventInfo</span> <span>Method 551</span>
 
-**Applies To:** [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md)
-
 **Description**
 
 This method is used to obtain information about a particular event or set of events supported by a COM object.
@@ -37,3 +35,7 @@ The result is a nested vector with one element per event name. Each element of t
 ```
 
 Note that if the event does not produce a result, the data type of the result is reported as `'VT_VOID'`.
+
+**Application**
+
+Objects: [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md)

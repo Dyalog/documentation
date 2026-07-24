@@ -1,7 +1,5 @@
 # <span>TabSize</span> <span>Property</span>
 
-**Applies To:** [TabControl](../objects/tabcontrol.md)
-
 **Description**
 
 The TabSize property specifies the size of fixed size tabs or buttons in a TabControl object.
@@ -13,3 +11,7 @@ TabSize is a 2-element numeric vector that specifies the height and width of the
 To obtain fixed sized tabs with [MultiLine](multiline.md) set to 1, you must however also set the Justify property to `'None'`.
 
 If [MultiLine](multiline.md) is 1 and Justify is `'Right'`, TabSize is ignored.
+
+**Application**
+
+Objects: [TabControl](../objects/tabcontrol.md)

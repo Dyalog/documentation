@@ -1,7 +1,5 @@
 # <span>SetPropertyInfo</span> <span>Method 554</span>
 
-**Applies To:** [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md)
-
 **Description**
 
 This method is used to redefine a property that is exported by a COM object. SetPropertyInfo is used to override the information provided by the object's Type Library.
@@ -26,3 +24,7 @@ For example, the following statement declares the PropertyGet function for the I
 ```apl
       Fields.SetPropertyInfo 'Item'('VT_DISPATCH' 'VT_I4')2
 ```
+
+**Application**
+
+Objects: [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md)

@@ -1,7 +1,5 @@
 # <span>TabControl</span> <span>Object</span>
 
-[Parents](../parentlists/tabcontrol.md), [Children](../childlists/tabcontrol.md), [Properties](../proplists/tabcontrol.md), [Methods](../methodlists/tabcontrol.md), [Events](../eventlists/tabcontrol.md)
-
 **Purpose:** The TabControl object provides access to the native Windows tab         control.
 
 **Description**
@@ -139,3 +137,15 @@ default), `'Never'` or `'ButtonDown'`.
 The [HotTrack](../properties/hottrack.md) property specifies whether
 or not the tabs or buttons are automatically highlighted by the mouse pointer.
 The default is 0 (no highlighting).
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [SubForm](../objects/subform.md)
+
+Children: [ImageList](../objects/imagelist.md), [SubForm](../objects/subform.md), [TabButton](../objects/tabbutton.md), [Timer](../objects/timer.md)
+
+Properties: [Align](../properties/align.md), [Attach](../properties/attach.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FlatSeparators](../properties/flatseparators.md), [FontObj](../properties/fontobj.md), [Handle](../properties/handle.md), [HotTrack](../properties/hottrack.md), [ImageListObj](../properties/imagelistobj.md), [Justify](../properties/justify.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [MultiLine](../properties/multiline.md), [MultiSelect](../properties/multiselect.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [ScrollOpposite](../properties/scrollopposite.md), [Size](../properties/size.md), [Style](../properties/style.md), [TabFocus](../properties/tabfocus.md), [TabJustify](../properties/tabjustify.md), [TabObj](../properties/tabobj.md), [TabSize](../properties/tabsize.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
+
+Methods: [Animate](../methodorevents/animate.md), [Detach](../methodorevents/detach.md), [GetFocus](../methodorevents/getfocus.md), [GetFocusObj](../methodorevents/getfocusobj.md), [GetTextSize](../methodorevents/gettextsize.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md)

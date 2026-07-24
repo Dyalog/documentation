@@ -1,7 +1,5 @@
 # <span>CellMove</span> <span>Event 151</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 If enabled, this event is reported when the user attempts to position the cursor over a cell in a [Grid](../objects/grid.md) by clicking the left mouse button or by pressing a cursor movement key. The purpose of this event is to allow an application to perform some action prior to the user entering a cell,  to inhibit entry to a cell, or to deny exit from the current cell.
@@ -34,3 +32,7 @@ The 9<sup>th</sup> element of the event message is the intended new value in the
 The CellMove event may be used to validate and refuse changes as the user navigates between cells.  See also [CellChange](cellchange.md).
 
 An application can position the user on a particular cell in a [Grid](../objects/grid.md) by calling CellMove as a method. If so, the argument need contain only the *New cell row* and *New cell column* parameters.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

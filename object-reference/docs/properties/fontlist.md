@@ -1,7 +1,5 @@
 # <span>FontList</span> <span>Property</span>
 
-**Applies To:** [Printer](../objects/printer.md), [Root](../objects/root.md)
-
 **Description**
 
 The FontList property is a read-only property (you cannot set its value) that
@@ -40,3 +38,7 @@ Note that the list of fonts obtained from FontList for a [Printer](../objects/pr
 fonts. FontList for [Root](../objects/root.md) will include TrueType
 fonts and screen fonts, but exclude printer-only fonts. The two lists will
 therefore (typically) be different.
+
+**Application**
+
+Objects: [Printer](../objects/printer.md), [Root](../objects/root.md)

@@ -1,7 +1,5 @@
 # <span>TCPError</span> <span>Event 370</span>
 
-**Applies To:** [TCPSocket](../objects/tcpsocket.md)
-
 **Description**
 
 This event is generated when a fatal TCP/IP error occurs and is reported by a [TCPSocket](../objects/tcpsocket.md) object.
@@ -15,3 +13,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |`[2]`|Event     |`'TCPError'` or 370    |
 |`[3]`|Error code|a number               |
 |`[4]`|Error text|a character vector     |
+
+**Application**
+
+Objects: [TCPSocket](../objects/tcpsocket.md)

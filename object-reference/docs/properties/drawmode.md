@@ -1,7 +1,5 @@
 # <span>DrawMode</span> <span>Property</span>
 
-**Applies To:** [Circle](../objects/circle.md), [Ellipse](../objects/ellipse.md), [Marker](../objects/marker.md), [Poly](../objects/poly.md), [Rect](../objects/rect.md), [Text](../objects/text.md)
-
 **Description**
 
 The DrawMode property provides direct control over the low-level drawing operation performed by graphical objects.
@@ -32,3 +30,7 @@ DrawMode is an integer with one of the following values:
 |14   |`R2_MERGEPENNOT`|Pixel is a combination of the pen colour and the inverse of the screen colour.             |
 |15   |`R2_MERGEPEN`   |Pixel is a combination of the pen colour and the screen colour.                            |
 |16   |`R2_WHITE`      |Pixel is always 1.                                                                         |
+
+**Application**
+
+Objects: [Circle](../objects/circle.md), [Ellipse](../objects/ellipse.md), [Marker](../objects/marker.md), [Poly](../objects/poly.md), [Rect](../objects/rect.md), [Text](../objects/text.md)
