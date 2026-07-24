@@ -2,7 +2,7 @@
 
 `⎕NA` is fully supported under UNIX; the Conga communications package for example is a shared library on all platforms.
 
-`⎕NA` supports user-written shared libraries and also system-supplied shared libraries. Dyalog APL under UNIX is supplied with a shared library, dyalog32.so or dyalog64.so which contains the same functions as the DLLs which are described in the `⎕NA` documentation in the *Dyalog Language Reference Guide*. Additionally, the function `getlasterror` is included; this returns the error code at the point when the called function failed (which may be different from its value at the point where a previous error occurred).
+`⎕NA` supports user-written shared libraries and also system-supplied shared libraries. Dyalog APL under Non-Windows platforms is supplied with a shared library, dyalog32.so or dyalog64.so which contains the same functions as the DLLs which are described in the `⎕NA` documentation in the *Dyalog Language Reference Guide*. Additionally, the function `getlasterror` is included; this returns the error code at the point when the called function failed (which may be different from its value at the point where a previous error occurred).
 
 It is necessary to specify the complete name of the file containing the shared library, no extension is added by Dyalog APL.
 
@@ -59,7 +59,7 @@ The Setup function in the NonWindows namespace in the quadna workspace can be us
 
 ## Example 1
 
-getpid() is common to all UNIX platforms; it returns an int which is the process ID of the current process. It is defined to be
+getpid() is common to all Non-Windows platforms platforms; it returns an int which is the process ID of the current process. It is defined to be
 
 pid_t getpid(void)
 
@@ -99,7 +99,7 @@ char *getenv(const char *name)
 
 ## geterrno
 
-The dyalog shared libary under UNIX includes the function `geterrno`. This returns the current value of errno; be aware that it may not have the same value as at the point when the error was raised. To use this function:
+The dyalog shared libary under Non-Windows platforms includes the function `geterrno`. This returns the current value of errno; be aware that it may not have the same value as at the point when the error was raised. To use this function:
 ```apl
 
       ⎕NA 'I ',dyalib,'|geterrno'
