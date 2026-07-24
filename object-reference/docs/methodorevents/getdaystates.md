@@ -1,7 +1,5 @@
 # <span>GetDayStates</span> <span>Event 266</span>
 
-**Applies To:** [Calendar](../objects/calendar.md)
-
 **Description**
 
 If enabled, this event is reported when a [Calendar](../objects/calendar.md) object requires the APL program to provide *day state* information for the range of dates it is about to display.
@@ -60,3 +58,7 @@ To *clear* the bold attribute for the same day:
 ```
 
 Note that the [Calendar](../objects/calendar.md) object will ignore any IDNs you specify that are outside the range of dates that it is currently displaying.
+
+**Application**
+
+Objects: [Calendar](../objects/calendar.md)

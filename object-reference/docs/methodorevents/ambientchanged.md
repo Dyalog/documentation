@@ -1,7 +1,5 @@
 # <span>AmbientChanged</span> <span>Event 533</span>
 
-**Applies To:** [ActiveXContainer](../objects/activexcontainer.md), [ActiveXControl](../objects/activexcontrol.md)
-
 **Description**
 
 If enabled, this event is reported when any of the ambient properties change in an application hosting an [ActiveXControl](../objects/activexcontrol.md) object. The new values of the ambient properties are available from the [FontObj](../properties/fontobj.md), [BCol](../properties/fcol.md) and [FCol](../properties/bcol.md) properties of the [ActiveXContainer](../objects/activexcontainer.md).
@@ -26,3 +24,7 @@ For properties supported by Dyalog APL, Property code and Description may be one
 |`¯1`         |DISPID_AMBIENT_UNKNOWN  |Unknown         |
 
 Note that other ambient properties may be reported, although these have no corresponding Dyalog APL property.
+
+**Application**
+
+Objects: [ActiveXContainer](../objects/activexcontainer.md), [ActiveXControl](../objects/activexcontrol.md)

@@ -1,7 +1,5 @@
 # <span>FillCol</span> <span>Property</span>
 
-**Applies To:** [Circle](../objects/circle.md), [Ellipse](../objects/ellipse.md), [Poly](../objects/poly.md), [Rect](../objects/rect.md)
-
 **Description**
 
 This property defines the fill colour in a graphics object.
@@ -31,3 +29,7 @@ yellow. Note that the colour realised depends upon the capabilities of the
 display adapter and driver, and the current Windows colour map.
 
 FillCol may also be a vector of 3-element vectors specifying a set of colours for the constituent parts of the object. For example, a [Poly](../objects/poly.md) object consisting of four polygons, may have a FillCol property of four 3-element vectors.
+
+**Application**
+
+Objects: [Circle](../objects/circle.md), [Ellipse](../objects/ellipse.md), [Poly](../objects/poly.md), [Rect](../objects/rect.md)

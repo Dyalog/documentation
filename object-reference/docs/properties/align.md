@@ -1,7 +1,5 @@
 # <span>Align</span> <span>Property</span>
 
-[**Applies To**](../propertyapplies/align.md)
-
 **Description**
 
 For an [Animation](../objects/animation.md), the Align property may be `'None'` or `'Centre'` (`'Center'`). If Align is `'None'`, the [Animation](../objects/animation.md) window is automatically resized to fit the AVI being played. If Align is `'Centre'`, the AVI is centred in the [Animation](../objects/animation.md) window. If the window is too small, the AVI is clipped.
@@ -35,3 +33,7 @@ For a [Scroll](../objects/scroll.md) object, Align also determines the direction
 
 !!! note
     The value of the Align property may **only** be assigned by [`⎕WC`](../../../language-reference-guide/system-functions/wc) and may **not** be changed using [`⎕WS`](../../../language-reference-guide/system-functions/ws).
+
+**Application**
+
+Objects: [Animation](../objects/animation.md), [Button](../objects/button.md), [ButtonEdit](../objects/buttonedit.md), [CoolBar](../objects/coolbar.md), [DateTimePicker](../objects/datetimepicker.md), [Edit](../objects/edit.md), [ListView](../objects/listview.md), [Menu](../objects/menu.md), [MenuItem](../objects/menuitem.md), [Scroll](../objects/scroll.md), [Spinner](../objects/spinner.md), [Splitter](../objects/splitter.md), [StatusBar](../objects/statusbar.md), [TabBar](../objects/tabbar.md), [TabBtn](../objects/tabbtn.md), [TabControl](../objects/tabcontrol.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)

@@ -1,7 +1,5 @@
 # <span>RowHiddenDepth</span> <span>Property</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 The RowHiddenDepth property is read-only and identifies which rows of a Grid are currently hidden.
@@ -35,3 +33,7 @@ The next picture shows the Grid after the user has opened nodes 5,6 and 9.
 0 1 2 3 0 0 0 1 0 0
 
 ```
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

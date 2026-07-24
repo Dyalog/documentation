@@ -1,7 +1,5 @@
 # <span>CellChanged</span> <span>Event 164</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 If enabled, this event is reported after the user has changed the contents of a cell in a [Grid](../objects/grid.md) object and then moved to another cell or to another control outside the [Grid](../objects/grid.md). The purpose of this event is to give the application the opportunity to perform calculations, and perhaps to update other cells in the [Grid](../objects/grid.md) as a result of the change.
@@ -20,3 +18,7 @@ The event message reported as the result of [`⎕DQ`](../../../language-referenc
 The 5th element of the event message contains the data value that has been used to update the [Values](../properties/values.md) property. This will be numeric if the [FieldType](../properties/fieldtype.md) of the associated Edit object is Numeric, LongNumeric, Date, LongDate or Time. Otherwise, it will be a character array.
 
 If you want to update an individual cell under program control, you may call [CellChange](./cellchange.md), but not CellChanged, as a method.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

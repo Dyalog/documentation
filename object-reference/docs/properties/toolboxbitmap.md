@@ -1,7 +1,5 @@
 # <span>ToolboxBitmap</span> <span>Property</span>
 
-**Applies To:** [ActiveXControl](../objects/activexcontrol.md), [OCXClass](../objects/ocxclass.md)
-
 **Description**
 
 For an [ActiveXControl](../objects/activexcontrol.md), the ToolboxBitmap property is a character vector or ref that specifies the name of, or ref to, a [Bitmap](../objects/bitmap.md) object that may be used by a host application to represent the [ActiveXControl](../objects/activexcontrol.md) when its complete visual appearance is not required. For example, if you add an ActiveX control to the Microsoft Visual Basic development environment, its bitmap is added to the toolbox. The Bitmap should therefore be of an appropriate size, usually 24 x 24 pixels.
@@ -14,3 +12,7 @@ Thus you can construct a Bitmap object directly from this property with an expre
 ```
 
 where `GAUGE` is the name of an [OCXClass](../objects/ocxclass.md).
+
+**Application**
+
+Objects: [ActiveXControl](../objects/activexcontrol.md), [OCXClass](../objects/ocxclass.md)

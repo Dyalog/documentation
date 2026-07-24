@@ -1,7 +1,5 @@
 # <span>Text</span> <span>Object</span>
 
-[Parents](../parentlists/text.md), [Children](../childlists/text.md), [Properties](../proplists/text.md), [Methods](../methodlists/text.md), [Events](../eventlists/text.md)
-
 **Purpose:** Writes text.
 
 **Description**
@@ -91,3 +89,15 @@ Write `'Hello'` at (10,20) and `'World'` at (30,40)
 ```apl
       'g.t1' ⎕WC 'Text' ('Hello' 'World')((10 30)(20 40))
 ```
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/animation.md), [Bitmap](../objects/bitmap.md), [Button](../objects/button.md), [ButtonEdit](../objects/buttonedit.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [Edit](../objects/edit.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [Label](../objects/label.md), [List](../objects/list.md), [ListView](../objects/listview.md), [MDIClient](../objects/mdiclient.md), [Metafile](../objects/metafile.md), [Printer](../objects/printer.md), [ProgressBar](../objects/progressbar.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [RichEdit](../objects/richedit.md), [Scroll](../objects/scroll.md), [Spinner](../objects/spinner.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TabBar](../objects/tabbar.md), [TipField](../objects/tipfield.md), [ToolBar](../objects/toolbar.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)
+
+Children: [Timer](../objects/timer.md)
+
+Properties: [Accelerator](../properties/accelerator.md), [Active](../properties/active.md), [AutoConf](../properties/autoconf.md), [BCol](../properties/bcol.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [CursorObj](../properties/cursorobj.md), [Data](../properties/data.md), [Dragable](../properties/dragable.md), [DrawMode](../properties/drawmode.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FontObj](../properties/fontobj.md), [HAlign](../properties/halign.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [OnTop](../properties/ontop.md), [Points](../properties/points.md), [PropList](../properties/proplist.md), [Text](../properties/text.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [VAlign](../properties/valign.md), [Visible](../properties/visible.md)
+
+Methods: [ChooseFont](../methodorevents/choosefont.md), [Detach](../methodorevents/detach.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [DragDrop](../methodorevents/dragdrop.md), [FontCancel](../methodorevents/fontcancel.md), [FontOK](../methodorevents/fontok.md), [Help](../methodorevents/help.md), [MouseDblClick](../methodorevents/mousedblclick.md), [MouseDown](../methodorevents/mousedown.md), [MouseMove](../methodorevents/mousemove.md), [MouseUp](../methodorevents/mouseup.md), [Select](../methodorevents/select.md)

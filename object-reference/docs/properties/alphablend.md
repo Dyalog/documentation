@@ -1,7 +1,5 @@
 # <span>AlphaBlend</span> <span>Property</span>
 
-**Applies To:** [Form](../objects/form.md)
-
 **Description**
 
 The AlphaBlend property specifies a level of translucency which allows the
@@ -17,3 +15,7 @@ Furthermore, mouse events over the Form will not be reported by the Form itself
 but will be passed to any other windows underneath the Form.
 
 Values in between specify varying levels of translucency.
+
+**Application**
+
+Objects: [Form](../objects/form.md)

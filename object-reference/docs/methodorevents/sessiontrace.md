@@ -7,8 +7,6 @@ search:
 
 **Applies To:** [Session](../../../windows-ui-guide/the-session-object/session-object)
 
-**Applies To:** [Session](../../../windows-ui-guide/the-session-object/session-object)
-
 |[Session](../../../windows-ui-guide/the-session-object/session-object)|&nbsp;|&nbsp;|||
 
 **Description**
@@ -62,3 +60,7 @@ If the expression has no value, then the callback function will be called monadi
 The result (if any) of the callback function is ignored.
 
 You may not disable the event (by setting its action to `¯1`), nor generate the event using `⎕NQ`, nor call it as a method.
+
+**Application**
+
+Objects: [Session](../../../windows-ui-guide/the-session-object/session-object)

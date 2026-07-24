@@ -1,7 +1,5 @@
 # <span>FormatString</span> <span>Property</span>
 
-**Applies To:** [ButtonEdit](../objects/buttonedit.md), [Edit](../objects/edit.md), [Grid](../objects/grid.md), [Label](../objects/label.md), [Spinner](../objects/spinner.md)
-
 **Description**
 
 The FormatString property specifies one or more `⎕FMT` format specifications to be used to format data in an Grid or single-line Edit. When applied to a Grid, it is either a simple character vector that specifies the format specification for the entire Grid, or a vector of character vectors. If it is a vector, its elements are mapped to individual cells via the CellTypes property. When applied to an Edit object, FormatString must be a simple character vector.
@@ -19,3 +17,7 @@ In a Grid, formatted data may be aligned vertically using the [AlignChar](alignc
 ```
 
 ![](../img/gridfmt.gif)
+
+**Application**
+
+Objects: [ButtonEdit](../objects/buttonedit.md), [Edit](../objects/edit.md), [Grid](../objects/grid.md), [Label](../objects/label.md), [Spinner](../objects/spinner.md)

@@ -1,7 +1,5 @@
 # <span>ColSorted</span> <span>Method 174</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 This method is used to specify that an image is to be displayed in a [Grid](../objects/grid.md) column title to indicate the column has been sorted.
@@ -41,3 +39,7 @@ If you wish to use your own images, you may specify them using the [ColSortImage
 ```
 
 ![](../img/colsorted2.png)
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

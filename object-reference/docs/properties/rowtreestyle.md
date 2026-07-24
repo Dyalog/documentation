@@ -1,7 +1,5 @@
 # <span>RowTreeStyle</span> <span>Property</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 RowTreeStyle specifies the visible attributes of the tree displayed in the Row titles of a [Grid](../objects/grid.md).
@@ -50,3 +48,7 @@ f.g.RowTreeStyle←'AllImagesAndLines'
 ```
 
 ![](../img/gridtree7.gif)
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

@@ -1,7 +1,5 @@
 # <span>Undo</span> <span>Method 170</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 This method is used to undo the previous change in a [Grid](../objects/grid.md) object.
@@ -18,3 +16,7 @@ The argument to Undo is `⍬`, or a single item as follows :
 |`[1]`|Number of changes|integer|
 
 If called with an argument of `⍬`, the default value for the *Number of changes* is 1. This restores the most recent change.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

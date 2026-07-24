@@ -1,7 +1,5 @@
 # <span>WebSocketClose</span> <span>Event 843</span>
 
-**Applies To:** [HTMLRenderer](../objects/htmlrenderer.md)
-
 **Description**
 
 This event is triggered when the [HTMLRenderer](../objects/htmlrenderer.md) client closes the WebSocket.  It is for notification only.
@@ -22,3 +20,7 @@ When called as a method, the result is 0.
     hr.WebSocketClose '223d0f781e95113'
 
 ```
+
+**Application**
+
+Objects: [HTMLRenderer](../objects/htmlrenderer.md)

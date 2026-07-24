@@ -1,7 +1,5 @@
 # <span>TCPSendPicture</span> <span>Method 380</span>
 
-**Applies To:** [TCPSocket](../objects/tcpsocket.md)
-
 **Description**
 
 This method is used to transmit a picture represented by a [Bitmap](../objects/bitmap.md) object to a TCP/IP socket. The picture may be transmitted in GIF or in PNG format.
@@ -28,3 +26,7 @@ The (shy) result of the method is an integer that reports the number of bytes th
     Although PNG is recognised as the latest graphics standard for displaying pictures, not all Web browsers support it.
 
 See also: [MakeGIF](./makegif.md), [MakePNG](./makepng.md)
+
+**Application**
+
+Objects: [TCPSocket](../objects/tcpsocket.md)

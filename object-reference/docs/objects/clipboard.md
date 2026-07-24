@@ -1,7 +1,5 @@
 # <span>Clipboard</span> <span>Object</span>
 
-[Parents](../parentlists/clipboard.md), [Children](../childlists/clipboard.md), [Properties](../proplists/clipboard.md), [Methods](../methodlists/clipboard.md), [Events](../eventlists/clipboard.md)
-
 **Purpose:** This object provides access to the Windows clipboard.
 
 **Description**
@@ -50,3 +48,15 @@ Note that if you use the latter method, you must set **both** properties in one 
 The [Metafile](../properties/metafileobj.md) property allows graphical information to be restored in and retrieved from the clipboard in Windows Metafile format. See the description of the [Metafile](../properties/metafileobj.md) property for details.
 
 A [ClipChange](../methodorevents/clipchange.md) (120) event is generated when another application places data in the clipboard.
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [OLEServer](../objects/oleserver.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Root](../objects/root.md), [TCPSocket](../objects/tcpsocket.md)
+
+Children: [Timer](../objects/timer.md)
+
+Properties: [Accelerator](../properties/accelerator.md), [Array](../properties/array.md), [Bits](../properties/bits.md), [CBits](../properties/cbits.md), [ChildList](../properties/childlist.md), [CMap](../properties/cmap.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [Formats](../properties/formats.md), [KeepOnClose](../properties/keeponclose.md), [MetafileObj](../properties/metafileobj.md), [MethodList](../properties/methodlist.md), [Picture](../properties/picture.md), [PropList](../properties/proplist.md), [RTFText](../properties/rtftext.md), [Text](../properties/text.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
+
+Methods: [Detach](../methodorevents/detach.md), [Wait](../methodorevents/wait.md)
+
+Events: [ClipChange](../methodorevents/clipchange.md), [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [Select](../methodorevents/select.md)

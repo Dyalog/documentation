@@ -1,7 +1,5 @@
 # <span>Icon</span> <span>Object</span>
 
-[Parents](../parentlists/icon.md), [Children](../childlists/icon.md), [Properties](../proplists/icon.md), [Methods](../methodlists/icon.md), [Events](../eventlists/icon.md)
-
 **Purpose:** This object defines an icon.
 
 **Description**
@@ -30,3 +28,15 @@ If an element of [Mask](../properties/mask.md) is 0, the corresponding element o
 The size of [Bits](../properties/bits.md) is restricted by the capabilities of the current display driver. [Mask](../properties/mask.md) must have the same shape as [Bits](../properties/bits.md).
 
 An Icon is **used** by setting the [IconObj](../properties/iconobj.md) property or [Picture](../properties/picture.md) property of another object to its name or ref.
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [ImageList](../objects/imagelist.md), [ListView](../objects/listview.md), [OLEServer](../objects/oleserver.md), [Printer](../objects/printer.md), [ProgressBar](../objects/progressbar.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [RichEdit](../objects/richedit.md), [Root](../objects/root.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [SysTrayItem](../objects/systrayitem.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)
+
+Children: [Timer](../objects/timer.md)
+
+Properties: [Accelerator](../properties/accelerator.md), [Bits](../properties/bits.md), [CBits](../properties/cbits.md), [ChildList](../properties/childlist.md), [CMap](../properties/cmap.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [File](../properties/file.md), [Handle](../properties/handle.md), [KeepBits](../properties/keepbits.md), [KeepOnClose](../properties/keeponclose.md), [Mask](../properties/mask.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Style](../properties/style.md), [Type](../properties/type.md)
+
+Methods: [Detach](../methodorevents/detach.md), [FileRead](../methodorevents/fileread.md), [FileWrite](../methodorevents/filewrite.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [Select](../methodorevents/select.md)

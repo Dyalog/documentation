@@ -1,7 +1,5 @@
 # <span>DockChildren</span> <span>Property</span>
 
-**Applies To:** [CoolBar](../objects/coolbar.md), [Form](../objects/form.md), [SubForm](../objects/subform.md)
-
 **Description**
 
 The DockChildren property specifies the names of client objects that may be docked in a host object.
@@ -30,3 +28,7 @@ The third, `c3`, is created initially as a child of another Form, `h2`. When doc
 
       h1.DockChildren←'c1' 'c2' 'c3'
 ```
+
+**Application**
+
+Objects: [CoolBar](../objects/coolbar.md), [Form](../objects/form.md), [SubForm](../objects/subform.md)

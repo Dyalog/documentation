@@ -1,7 +1,5 @@
 # <span>GridKeyPress</span> <span>Event 24</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 If enabled, this event is generated when the user presses and releases a key in a [Grid](../objects/grid.md) cell.
@@ -24,3 +22,7 @@ For a full description of elements [3-6], see [KeyPress](./keypress.md) event.
 The 7<sup>th</sup> element of the event message contains either a reference to, or the name of the Input object associated with the current cell and on which the corresponding [KeyPress](./keypress.md) event has been reported.
 
 The default action of the GridKeyPress event is to pass a [KeyPress](keypress.md) event message back to the appropriate Input object to be actioned. The GridKeyPress is reported on the Grid, after the [KeyPress](keypress.md) event on the Input object. If a callback on the Input object's [KeyPress](keypress.md) event returns 0 or if a callback on GridKeyPress returns 0, the keystroke will be ignored.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

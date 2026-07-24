@@ -1,7 +1,5 @@
 # <span>MsgBox</span> <span>Object</span>
 
-[Parents](../parentlists/msgbox.md), [Children](../childlists/msgbox.md), [Properties](../proplists/msgbox.md), [Methods](../methodlists/msgbox.md), [Events](../eventlists/msgbox.md)
-
 **Purpose:** Provides a "modal" dialog box for displaying messages, errors, warnings and other information. The dialog box has a title, one or more lines of text, and up to three buttons.
 
 **Description**
@@ -74,3 +72,15 @@ The MsgBox object generates one of three events; [MsgBtn1](../methodorevents/msg
    B←'ABORT' 'RETRY' 'IGNORE'
    'Msg' ⎕WC 'MsgBox' Caption Text 'Info' B ⋄ ⎕DQ 'Msg'
 ```
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [Calendar](../objects/calendar.md), [CoolBand](../objects/coolband.md), [DateTimePicker](../objects/datetimepicker.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [OLEServer](../objects/oleserver.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Root](../objects/root.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
+
+Children: [Timer](../objects/timer.md)
+
+Properties: [Btns](../properties/btns.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Default](../properties/default.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Style](../properties/style.md), [Text](../properties/text.md), [Type](../properties/type.md)
+
+Methods: [Detach](../methodorevents/detach.md), [Wait](../methodorevents/wait.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [MsgBtn1](../methodorevents/msgbtn1.md), [MsgBtn2](../methodorevents/msgbtn2.md), [MsgBtn3](../methodorevents/msgbtn3.md)

@@ -1,7 +1,5 @@
 # <span>ColSortImages</span> <span>Property</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 The ColSortImages property identifies the names of, or refs to, up to three [Bitmap](../objects/bitmap.md) objects that are used to specify the sort images for a [Grid](../objects/grid.md) object.
@@ -39,3 +37,7 @@ The [Bitmap](../objects/bitmap.md) specified by the 3rd element of ColSortImages
 ```
 
 ![](../img/colsortimages.png)
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

@@ -1,7 +1,5 @@
 # <span>FCol</span> <span>Property</span>
 
-[**Applies To**](../propertyapplies/fcol.md)
-
 **Description**
 
 This property defines the foreground colour(s) of an object.
@@ -64,3 +62,7 @@ colour in which the markers are drawn. For the graphics objects [Ellipse](../obj
 FCol may be a vector of 3-element vectors specifying a set of colours for the
 constituent parts of the object. For example, a [Poly](../objects/poly.md) object consisting of four polygons, may have a FCol property of four 3-element
 vectors. In addition, for graphics objects, FCol is used in place of [FillCol](fillcol.md) if the latter is not specified.
+
+**Application**
+
+Objects: [ActiveXContainer](../objects/activexcontainer.md), [ActiveXControl](../objects/activexcontrol.md), [Button](../objects/button.md), [ButtonEdit](../objects/buttonedit.md), [Circle](../objects/circle.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [CoolBand](../objects/coolband.md), [CoolBar](../objects/coolbar.md), [Edit](../objects/edit.md), [Ellipse](../objects/ellipse.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [Label](../objects/label.md), [List](../objects/list.md), [ListView](../objects/listview.md), [Marker](../objects/marker.md), [Menu](../objects/menu.md), [MenuItem](../objects/menuitem.md), [Poly](../objects/poly.md), [Rect](../objects/rect.md), [RichEdit](../objects/richedit.md), [Separator](../objects/separator.md), [Spinner](../objects/spinner.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [StatusField](../objects/statusfield.md), [TabBtn](../objects/tabbtn.md), [Text](../objects/text.md), [TipField](../objects/tipfield.md), [ToolBar](../objects/toolbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)

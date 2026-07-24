@@ -1,7 +1,5 @@
 # <span>ChildEdge</span> <span>Property</span>
 
-**Applies To:** [CoolBand](../objects/coolband.md)
-
 **Description**
 
 The ChildEdge property specifies whether or not the [CoolBand](../objects/coolband.md) leaves space above and below its child window.
@@ -13,3 +11,7 @@ The following pictures illustrate the effect of the ChildEdge property.
 ![](../img/cool2.gif)
 
 ![](../img/cool4.gif)
+
+**Application**
+
+Objects: [CoolBand](../objects/coolband.md)

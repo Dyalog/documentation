@@ -1,7 +1,5 @@
 # <span>GotFocus</span> <span>Event 40</span>
 
-[**Applies To**](../methodoreventapplies/gotfocus.md)
-
 **Description**
 
 If enabled, this event is generated when the user has moved the keyboard focus to a new object by clicking the left mouse button, pressing TAB, or using a cursor key.
@@ -16,3 +14,7 @@ The event message reported as the result of [`⎕DQ`](../../../language-referenc
 The third element (object name) is empty if the focus was obtained from another application window.
 
 The GotFocus event is generated **after** the focus has changed. The default processing is therefore to take no action. However, if you disable the event by setting its action code to `¯1`, or inhibit it by returning a 0 from your callback function, the focus is automatically restored to the object (or external application) that had lost it.
+
+**Application**
+
+Objects: [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/animation.md), [Button](../objects/button.md), [ButtonEdit](../objects/buttonedit.md), [Calendar](../objects/calendar.md), [ColorButton](../objects/colorbutton.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [DateTimePicker](../objects/datetimepicker.md), [Edit](../objects/edit.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [List](../objects/list.md), [ListView](../objects/listview.md), [MDIClient](../objects/mdiclient.md), [ProgressBar](../objects/progressbar.md), [PropertyPage](../objects/propertypage.md), [RichEdit](../objects/richedit.md), [Scroll](../objects/scroll.md), [Spinner](../objects/spinner.md), [SubForm](../objects/subform.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md)

@@ -1,7 +1,5 @@
 # <span>LocalPortName</span> <span>Property</span>
 
-**Applies To:** [TCPSocket](../objects/tcpsocket.md)
-
 **Description**
 
 The LocalPortName property is a character vector that specifies the port name of the local service that you wish to offer as a server.
@@ -13,3 +11,7 @@ LocalPortName may be specified only by the process that is initiating the connec
 When the specified port name has been resolved to a port number, the [TCPSocket](../objects/tcpsocket.md) will generate a [TCPGotPort](../methodorevents/tcpgotport.md) event and update the value of [LocalPort](localport.md) accordingly.
 
 For a client [TCPSocket](../objects/tcpsocket.md), you may not specify LocalPortName and `⎕WG` returns an empty character vector.
+
+**Application**
+
+Objects: [TCPSocket](../objects/tcpsocket.md)

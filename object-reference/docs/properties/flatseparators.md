@@ -1,7 +1,5 @@
 # <span>FlatSeparators</span> <span>Property</span>
 
-**Applies To:** [TabControl](../objects/tabcontrol.md)
-
 **Description**
 
 The FlatSeparators property specifies whether or not separators are drawn between buttons in a [TabControl](../objects/tabcontrol.md) object. FlatSeparators only affects a [TabControl](../objects/tabcontrol.md) if [Style](style.md) is `'FlatButtons'` and is otherwise ignored.
@@ -13,3 +11,7 @@ The pictures below illustrate the effect of FlatSeparators on the appearance of 
 ![](../img/tab3.gif)
 
 ![](../img/tab3a.gif)
+
+**Application**
+
+Objects: [TabControl](../objects/tabcontrol.md)

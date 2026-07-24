@@ -1,7 +1,5 @@
 # <span>AsChild</span> <span>Property</span>
 
-**Applies To:** [HTMLRenderer](../objects/htmlrenderer.md)
-
 **Description**
 
 The AsChild property is a Boolean (default 0) indicating how the [HTMLRenderer](../objects/htmlrenderer.md) object is displayed. AsChild must be set when the object is created and may not subsequently be changed.
@@ -11,3 +9,7 @@ If AsChild is 0 (the default) the [HTMLRenderer](../objects/htmlrenderer.md) is 
 If AsChild is 1, the [HTMLRenderer](../objects/htmlrenderer.md) must be created as a child of a valid parent type other than Root (which is not supported) and is displayed in a sub-window within its parent.
 
 This property only applies to Microsoft Windows. On other platforms it is ignored.
+
+**Application**
+
+Objects: [HTMLRenderer](../objects/htmlrenderer.md)

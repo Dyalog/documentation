@@ -1,7 +1,5 @@
 # <span>AddItems</span> <span>Method 308</span>
 
-**Applies To:** [TreeView](../objects/treeview.md)
-
 **Description**
 
 This method is used to add items to a [TreeView](../objects/treeview.md) object
@@ -26,3 +24,7 @@ The argument to AddItems is a 3, 4 or 5-element array as follows:
 The new items are inserted with the first one being placed at the same level in the hierarchy as the item specified in element [1].
 
 The result is an integer that reports the index position at which the first of the new items has been inserted.
+
+**Application**
+
+Objects: [TreeView](../objects/treeview.md)

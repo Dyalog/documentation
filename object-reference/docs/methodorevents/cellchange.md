@@ -1,7 +1,5 @@
 # <span>CellChange</span> <span>Event 150</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 If enabled, this event is reported when the user changes the contents of a cell in a [Grid](../objects/grid.md) object and then attempts to move to another cell or to another control outside the [Grid](../objects/grid.md).
@@ -29,3 +27,7 @@ If the user switches the input focus to another control or selects a [MenuItem](
 The 5th element of the event message contains the data value that will be used to update the [Values](../properties/values.md) property. This will be numeric if the [FieldType](../properties/fieldtype.md) of the associated [Edit](../objects/edit.md) object is Numeric, LongNumeric, Date, LongDate or Time. Otherwise, it will be a character array.
 
 An application can update an individual cell in the Grid under program control by calling CellChange as a method. If so, the *New object*, *New cell row* and *New cell column* parameters may be omitted.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

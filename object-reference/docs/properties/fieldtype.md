@@ -1,7 +1,5 @@
 # <span>FieldType</span> <span>Property</span>
 
-**Applies To:** [ButtonEdit](../objects/buttonedit.md), [DateTimePicker](../objects/datetimepicker.md), [Edit](../objects/edit.md), [Label](../objects/label.md), [Spinner](../objects/spinner.md)
-
 **Description**
 
 The FieldType property controls data conversion, formatting and validation.
@@ -49,3 +47,7 @@ If the FieldType is `'Time'`, the [Value](value.md) property represents the numb
 When the user attempts to move the input focus away from the object, the contents are validated. If they cannot be converted to a valid number, date, or time, the object generates a [BadValue](../methodorevents/badvalue.md) event, or, if the object is associated with a [Grid](../objects/grid.md), the [Grid](../objects/grid.md) (and not the [Edit](../objects/edit.md) object) generates a [CellError](../methodorevents/cellerror.md) event. See the descriptions of these events for further details.
 
 Note that for [Edit](../objects/edit.md), [Label](../objects/label.md) and [Spinner](../objects/spinner.md) objects, FieldType may only be specified when you create an object using `⎕WC`.
+
+**Application**
+
+Objects: [ButtonEdit](../objects/buttonedit.md), [DateTimePicker](../objects/datetimepicker.md), [Edit](../objects/edit.md), [Label](../objects/label.md), [Spinner](../objects/spinner.md)

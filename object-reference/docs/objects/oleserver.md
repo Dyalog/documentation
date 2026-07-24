@@ -1,7 +1,5 @@
 # <span>OLEServer</span> <span>Object</span>
 
-[Parents](../parentlists/oleserver.md), [Children](../childlists/oleserver.md), [Properties](../proplists/oleserver.md), [Methods](../methodlists/oleserver.md), [Events](../eventlists/oleserver.md)
-
 **Purpose:** The OLEServer object is used to establish a namespace as an OLE Server         object that can be used by an OLE Automation client.
 
 **Description**
@@ -43,3 +41,15 @@ The [ShowSession](../properties/showsession.md) property is either 0
 displayed when the first instance of the OLEServer is created.
 
 [RunMode](../properties/runmode.md) and [ShowSession](../properties/showsession.md) apply only to *out-of-process* OLEServers.
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [OLEServer](../objects/oleserver.md), [Root](../objects/root.md)
+
+Children: [Bitmap](../objects/bitmap.md), [BrowseBox](../objects/browsebox.md), [Clipboard](../objects/clipboard.md), [Cursor](../objects/cursor.md), [FileBox](../objects/filebox.md), [Font](../objects/font.md), [Form](../objects/form.md), [Icon](../objects/icon.md), [ImageList](../objects/imagelist.md), [Menu](../objects/menu.md), [Metafile](../objects/metafile.md), [MsgBox](../objects/msgbox.md), [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md), [OLEServer](../objects/oleserver.md), [Printer](../objects/printer.md), [PropertySheet](../objects/propertysheet.md), [TCPSocket](../objects/tcpsocket.md), [Timer](../objects/timer.md), [TipField](../objects/tipfield.md)
+
+Properties: [ChildList](../properties/childlist.md), [ClassID](../properties/classid.md), [ClassName](../properties/classname.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [ExportedFns](../properties/exportedfns.md), [ExportedVars](../properties/exportedvars.md), [Handle](../properties/handle.md), [KeepOnClose](../properties/keeponclose.md), [LastError](../properties/lasterror.md), [LateBind](../properties/latebind.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [RunMode](../properties/runmode.md), [ServerVersion](../properties/serverversion.md), [ShowSession](../properties/showsession.md), [Type](../properties/type.md), [TypeLibFile](../properties/typelibfile.md), [TypeLibID](../properties/typelibid.md)
+
+Methods: [Detach](../methodorevents/detach.md), [OLERegister](../methodorevents/oleregister.md), [OLEUnregister](../methodorevents/oleunregister.md), [SetEventInfo](../methodorevents/seteventinfo.md), [SetFnInfo](../methodorevents/setfninfo.md), [SetVarInfo](../methodorevents/setvarinfo.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md)

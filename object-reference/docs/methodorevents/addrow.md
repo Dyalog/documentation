@@ -1,7 +1,5 @@
 # <span>AddRow</span> <span>Event 152</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 If enabled, this event is reported by the [Grid](../objects/grid.md) object if the user presses the Cursor Down key, and the current cell ([CurCell](../properties/curcell.md))
@@ -50,3 +48,7 @@ row may subsequently be undone by an [Undo](./undo.md) event.
 To insert a new row before the first one, you must specify the *Row number* as 1 (or 0 if `⎕IO` is 0). To add a new row
 after the last one, you may specify any number greater than the current number
 of rows. The data in the new row will be set to 0 if the [Values](../properties/values.md) property is numeric, or to an empty character vector otherwise.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

@@ -1,7 +1,5 @@
 # <span>Items</span> <span>Property</span>
 
-**Applies To:** [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [List](../objects/list.md), [ListView](../objects/listview.md), [Spinner](../objects/spinner.md), [TreeView](../objects/treeview.md)
-
 **Description**
 
 This property specifies the list of items from which the user may choose.
@@ -13,3 +11,7 @@ An empty character vector is treated the same as a vector of blanks, and represe
 A zero-length vector of vectors or an empty matrix represents 0 items. The default value for Items is an empty matrix.
 
 `⎕WG 'Items'` returns an array of the same structure as was assigned by [`⎕WC`](../../../language-reference-guide/system-functions/wc) or [`⎕WS`](../../../language-reference-guide/system-functions/ws).
+
+**Application**
+
+Objects: [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [List](../objects/list.md), [ListView](../objects/listview.md), [Spinner](../objects/spinner.md), [TreeView](../objects/treeview.md)

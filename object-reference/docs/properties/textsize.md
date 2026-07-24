@@ -1,7 +1,5 @@
 # <span>TextSize</span> <span>Property</span>
 
-[**Applies To**](../propertyapplies/textsize.md)
-
 **Description**
 
 This property has been replaced by the [GetTextSize](../methodorevents/gettextsize.md) method, which should be used instead. TextSize is retained only for compatibility with previous versions of Dyalog.
@@ -23,3 +21,7 @@ When you query TextSize you give the text item in whose size you are interested 
       '.' ⎕WG ('TextSize' (3 11⍴'Hello World')) 'Coord'
 39 55  Pixel
 ```
+
+**Application**
+
+Objects: [ActiveXControl](../objects/activexcontrol.md), [Bitmap](../objects/bitmap.md), [Edit](../objects/edit.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Printer](../objects/printer.md), [Root](../objects/root.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TabBar](../objects/tabbar.md), [ToolBar](../objects/toolbar.md)

@@ -1,7 +1,5 @@
 # <span>LockRows</span> <span>Method 226</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 This method is used to lock one or more Rows of a [Grid](../objects/grid.md).
@@ -75,3 +73,7 @@ P←R-(⊃GRID ⎕WG 'Index')-⎕IO
 
 Furthermore, the position of a locked row given by the result of the LockRows
 method changes (with the Index property) as the Grid is scrolled.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

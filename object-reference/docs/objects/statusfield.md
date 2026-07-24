@@ -1,7 +1,5 @@
 # <span>StatusField</span> <span>Object</span>
 
-[Parents](../parentlists/statusfield.md), [Children](../childlists/statusfield.md), [Properties](../proplists/statusfield.md), [Methods](../methodlists/statusfield.md), [Events](../eventlists/statusfield.md)
-
 **Purpose:** This object is used to display information for the user.
 
 **Description**
@@ -28,3 +26,15 @@ If  [Style](../properties/style.md) is InsRep, the StatusField displays either "
 If [Style](../properties/style.md) is KeyMode, the StatusField displays the name for the current keyboard mode which is defined in the input table being used. For the 2-mode tables APL_US.DIN, APL_UK.DIN etc., the mode name displayed is either "Apl" or "Asc".  The unified tables have no modes so a StatusField with this [Style](../properties/style.md) does nothing.
 
 If [Style](../properties/style.md) is set to one of the above, you may still use the [Caption](../properties/caption.md) property to give the StatusField a title. You may even set the value of the [Text](../properties/text.md) property, but be aware that this value will be reset when the user next presses the key the StatusField is monitoring.
+
+**Application**
+
+Parents: [StatusBar](../objects/statusbar.md)
+
+Children: [Menu](../objects/menu.md), [Timer](../objects/timer.md)
+
+Properties: [Accelerator](../properties/accelerator.md), [Attach](../properties/attach.md), [AutoConf](../properties/autoconf.md), [BCol](../properties/bcol.md), [Border](../properties/border.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Dragable](../properties/dragable.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FontObj](../properties/fontobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Picture](../properties/picture.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Sizeable](../properties/sizeable.md), [Style](../properties/style.md), [Text](../properties/text.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
+
+Methods: [Detach](../methodorevents/detach.md)
+
+Events: [Close](../methodorevents/close.md), [Create](../methodorevents/create.md), [DropObjects](../methodorevents/dropobjects.md), [MouseDblClick](../methodorevents/mousedblclick.md), [MouseDown](../methodorevents/mousedown.md), [MouseMove](../methodorevents/mousemove.md), [MouseUp](../methodorevents/mouseup.md), [Select](../methodorevents/select.md)

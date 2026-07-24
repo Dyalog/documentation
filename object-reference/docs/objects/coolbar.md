@@ -1,7 +1,5 @@
 # <span>CoolBar</span> <span>Object</span>
 
-[Parents](../parentlists/coolbar.md), [Children](../childlists/coolbar.md), [Properties](../proplists/coolbar.md), [Methods](../methodlists/coolbar.md), [Events](../eventlists/coolbar.md)
-
 **Purpose:** The CoolBar object acts as a container for CoolBand objects.
 
 **Description**
@@ -103,3 +101,15 @@ will change to reflect its new position.
 
 If you wish to display pictures in one or more of the [CoolBands](coolband.md) owned by a CoolBar, you do so by setting the [ImageListObj](../properties/imagelistobj.md) property to the name of an [ImageList](imagelist.md) object
 which contains the pictures. Pictures are allocated to individual [CoolBands](coolband.md) via their ImageIndex properties.
+
+**Application**
+
+Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md)
+
+Children: [CoolBand](../objects/coolband.md), [ImageList](../objects/imagelist.md), [Menu](../objects/menu.md), [Timer](../objects/timer.md)
+
+Properties: [Align](../properties/align.md), [Attach](../properties/attach.md), [BandBorders](../properties/bandborders.md), [BCol](../properties/bcol.md), [ChildList](../properties/childlist.md), [CursorObj](../properties/cursorobj.md), [Data](../properties/data.md), [DblClickToggle](../properties/dblclicktoggle.md), [DockChildren](../properties/dockchildren.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FixedOrder](../properties/fixedorder.md), [Handle](../properties/handle.md), [ImageListObj](../properties/imagelistobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Redraw](../properties/redraw.md), [Size](../properties/size.md), [Type](../properties/type.md), [VariableHeight](../properties/variableheight.md)
+
+Methods: [Animate](../methodorevents/animate.md), [Detach](../methodorevents/detach.md), [GetFocus](../methodorevents/getfocus.md), [GetFocusObj](../methodorevents/getfocusobj.md), [GetTextSize](../methodorevents/gettextsize.md)
+
+Events: [Close](../methodorevents/close.md), [Configure](../methodorevents/configure.md), [ContextMenu](../methodorevents/contextmenu.md), [Create](../methodorevents/create.md), [DockAccept](../methodorevents/dockaccept.md), [DockCancel](../methodorevents/dockcancel.md), [DockEnd](../methodorevents/dockend.md), [DockMove](../methodorevents/dockmove.md), [DockRequest](../methodorevents/dockrequest.md), [DockStart](../methodorevents/dockstart.md), [DragDrop](../methodorevents/dragdrop.md), [DropFiles](../methodorevents/dropfiles.md), [DropObjects](../methodorevents/dropobjects.md), [Expose](../methodorevents/expose.md), [Help](../methodorevents/help.md)

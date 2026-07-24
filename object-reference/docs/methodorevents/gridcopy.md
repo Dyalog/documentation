@@ -1,7 +1,5 @@
 # <span>GridCopy</span> <span>Event 191</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 If enabled, this event is reported when the user presses Ctrl+Insert and there are selected cells in the [Grid](../objects/grid.md). The default action of the event is to copy the contents of the selected block of cells to the clipboard. You may disable this effect entirely by setting the action code of the event to `¯1`. You may also disable the copy operation by returning 0 from a callback function.
@@ -32,3 +30,7 @@ If you omit these parameters, the currently selected block of cells will be copi
 ```
 
 The data copied to the clipboard is registered in Dyalog (APL internal), Wk3 (Lotus), XlTable (Excel) and tab/new-line delimited text formats.
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

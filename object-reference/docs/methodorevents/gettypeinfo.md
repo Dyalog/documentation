@@ -1,7 +1,5 @@
 # <span>GetTypeInfo</span> <span>Method 553</span>
 
-**Applies To:** [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md)
-
 **Description**
 
 This method is used to obtain information about a type list supported by a COM object.
@@ -21,3 +19,7 @@ The result is a nested vector with one element per [Type List](../properties/typ
 |`[1]`|Name of Constant|character vector |
 |`[2]`|Value           |(usually) numeric|
 |`[3]`|Description     |character vector |
+
+**Application**
+
+Objects: [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md)

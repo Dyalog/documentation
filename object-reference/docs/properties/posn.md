@@ -1,7 +1,5 @@
 # <span>Posn</span> <span>Property</span>
 
-[**Applies To**](../propertyapplies/posn.md)
-
 **Description**
 
 With the exception of [Menu](../objects/menu.md), [MenuItem](../objects/menuitem.md) and [Separator](../objects/separator.md) objects, Posn is a 2-element numeric vector specifying the y-position and x-position respectively of the top-left corner of the object relative to its parent. For a [Form](../objects/form.md), Posn specifies its position on the screen. The units are defined by the [Coord](coord.md) property.
@@ -11,3 +9,7 @@ When specifying Posn for [`⎕WC`](../../../language-reference-guide/system-func
 Using [`⎕WS`](../../../language-reference-guide/system-functions/ws), if you want to set the y-position, but not the x-position, or vice-versa, you should specify `⍬` for the item you don't want to change.
 
 For [Menu](../objects/menu.md), [MenuItem](../objects/menuitem.md) and [Separator](../objects/separator.md) objects, Posn is a single integer that specifies the position at which the object is to be **inserted** in its parent. For example, to add a new [MenuItem](../objects/menuitem.md) between the third and fourth items in an existing [Menu](../objects/menu.md), you would specify its Posn as 4. For these objects, the value of Posn returned by [`⎕WG`](../../../language-reference-guide/system-functions/wg) is the current index of the object within its parent.
+
+**Application**
+
+Objects: [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/animation.md), [Button](../objects/button.md), [ButtonEdit](../objects/buttonedit.md), [Calendar](../objects/calendar.md), [ColorButton](../objects/colorbutton.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [CoolBand](../objects/coolband.md), [CoolBar](../objects/coolbar.md), [DateTimePicker](../objects/datetimepicker.md), [Edit](../objects/edit.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [HTMLRenderer](../objects/htmlrenderer.md), [Label](../objects/label.md), [List](../objects/list.md), [ListView](../objects/listview.md), [Locator](../objects/locator.md), [MDIClient](../objects/mdiclient.md), [Menu](../objects/menu.md), [MenuItem](../objects/menuitem.md), [ProgressBar](../objects/progressbar.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [RichEdit](../objects/richedit.md), [Root](../objects/root.md), [Scroll](../objects/scroll.md), [Separator](../objects/separator.md), [SM](../objects/sm.md), [Spinner](../objects/spinner.md), [Splitter](../objects/splitter.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [StatusField](../objects/statusfield.md), [SubForm](../objects/subform.md), [TabBar](../objects/tabbar.md), [TabBtn](../objects/tabbtn.md), [TabButton](../objects/tabbutton.md), [TabControl](../objects/tabcontrol.md), [ToolBar](../objects/toolbar.md), [ToolButton](../objects/toolbutton.md), [ToolControl](../objects/toolcontrol.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)

@@ -1,7 +1,5 @@
 # <span>OverflowChar</span> <span>Property</span>
 
-**Applies To:** [Grid](../objects/grid.md)
-
 **Description**
 
 The OverflowChar property specifies the character to be displayed in place of the digits when a numeric value cannot be displayed in its entirety in a Grid cell.
@@ -23,3 +21,7 @@ If the value of OverflowChar is an empty vector (the default) the data in a nume
 The same Grid without OverflowChar being defined appears as follows. Notice how the numbers have been truncated
 
 ![](../img/gridovno.gif)
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)
