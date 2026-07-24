@@ -38,12 +38,23 @@ Under Linux, it is necessary to identify the shared library:
       sharedlib←libc ⍬
 ```
 
-For all UNIX platforms, the dyalog shared library is identified as
+Under macOS, `sharedlib` is defined as:
+```apl
+      sharedlib←'libc.dylib'
+```
+
+For AIX and all Linux platforms, the dyalog shared library is identified as
 ```apl
       dyalib←'dyalog64.so'         ⍝ 64 bit
       dyalib←'dyalog32.so'         ⍝ 32 bit
 	
 ```
+
+For macOS, the dyalog shared library is identified as 
+```apl
+      dyalib←dyalog64.dylib
+```
+
 
 ## Example 1
 
