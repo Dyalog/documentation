@@ -707,48 +707,64 @@ def static_assets(
 
 def extract_h1(data: str, for_title: bool = False) -> str:
     """
-    Extract text from the first h1 tag, handling special styling with spans.
+    Return the name from the first h1, cleaned for use as a title or index entry.
+
+    Current headers render as `<h1><span>Name</span> <code>command</code>
+    <a>...</a></h1>`: the command comes from backticks and the trailing link from
+    the {{key}} macro. Both carry UTF-8 the Windows CHM index and title bar cannot
+    display, so the name is the h1 text with <code> and <a> elements removed.
+    Headers without those (e.g. Object Reference "Name Type") keep their full text.
+
+    Legacy <span class="name">/<span class="command"> markup is still honoured,
+    where for_title selects the name alone versus "name command".
     """
     soup = BeautifulSoup(data, "html.parser")
-    if h1 := soup.find("h1"):
-        if name_span := h1.find("span", class_="name"):
-            # If for_title is True, return only the name
-            if for_title:
-                return name_span.get_text().strip().replace('"', "").replace("`", "")
+    h1 = soup.find("h1")
+    if not h1:
+        return ""
 
-            # Otherwise, return name + command if command exists
-            command_span = h1.find("span", class_="command")
-            if command_span:
-                return f"{name_span.get_text()} {command_span.get_text()}".strip()
-            else:
-                return name_span.get_text().strip().replace('"', "").replace("`", "")
-        else:
-            # No special spans, just return the full h1 text
-            return h1.get_text().strip().replace('"', "").replace("`", "")
-    return ""
+    if name_span := h1.find("span", class_="name"):
+        name = name_span.get_text().strip()
+        command_span = h1.find("span", class_="command")
+        if for_title or not command_span:
+            return name.replace('"', "").replace("`", "")
+        return f"{name} {command_span.get_text()}".strip().replace('"', "").replace("`", "")
+
+    for tag in h1.find_all(["code", "a"]):
+        tag.decompose()
+    return re.sub(r"\s+", " ", h1.get_text()).strip().replace('"', "").replace("`", "")
 
 
 def extract_headers(filename: str) -> List[str]:
     """
-    Find all headers -- Markdown headers are lines that start with one or more '#'.
-    Some files will also have a raw HTML <h1> for styling reasons. The headers will
-    be used as entries in the CHM index file.
-    """
-    results: List[str] = []
+    Return a page's title (name) for the CHM keyword index, cleaned to plain text.
 
+    Only the page title is indexed; sub-headings ("Introduction", "Examples", ...)
+    are not distinguishing keywords. The title comes from a literal HTML <h1> or,
+    for markdown pages, the first `# ` heading. The {{key}} macro, the backtick
+    command and HTML tags are stripped so the entry is the plain-text name and
+    carries no UTF-8 the Windows CHM index display cannot cope with.
+    """
     with open(filename, "r", encoding="utf-8") as f:
         data = f.read()
 
-    # Note: extract headers, but discard the command span, as the Windows search
-    # results list display cannot cope with UTF8...
-    h1 = extract_h1(data, for_title=True)
-    if h1:
-        results.append(h1)
+    # Legacy pages with a literal HTML <h1>.
+    if h1 := extract_h1(data, for_title=True):
+        return [h1]
 
-    headers = re.findall(r"^#+\s+(.+)$", data)
-    results.extend(headers)
+    _, body = parse_frontmatter(data)
+    body = re.sub(r"^```.*?^```", "", body, flags=re.DOTALL | re.MULTILINE)
+    match = re.search(r"^#\s+(.+?)\s*$", body, flags=re.MULTILINE)
+    if not match:
+        return []
 
-    return results
+    title = re.sub(r"\{\{.*?\}\}", "", match.group(1))  # drop macros e.g. {{key}}
+    title = re.sub(r"`[^`]*`", "", title)  # drop a backtick command
+    soup = BeautifulSoup(title, "html.parser")
+    for tag in soup.find_all(["code", "a"]):  # drop a literal <code> command / key link
+        tag.decompose()
+    title = re.sub(r"\s+", " ", soup.get_text()).strip().strip('"').strip("`").strip()
+    return [title] if title else []
 
 
 def generate_index_data(files: List[str]) -> List[Tuple[str, str]]:
@@ -945,6 +961,9 @@ def table_captions(body: str) -> str:
 
         Table: caption_text {: #anchor_name }
 
+    where the attr-list colon is optional ({ #anchor_name } is also accepted, as
+    the web caption plugin accepts both).
+
     References are links to the anchor name, but without a link text:
 
         [](#anchor_name)
@@ -976,7 +995,7 @@ def table_captions(body: str) -> str:
 
     # Rework caption ids.
     body = re.sub(
-        r"Table:\s*(.*?)\s*\{:\s*#(\S+)\s*\}",
+        r"Table:\s*(.*?)\s*\{:?\s*#(\S+)\s*\}",
         lambda match: replace_table_captions(match, idx_list),
         body,
     )
