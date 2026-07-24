@@ -27,16 +27,17 @@ When attempting to use the I-beam operator with an unsupported operation value `
 
 This allows the user to distinguish between operation values that have never been used, those that have been used in earlier versions but are no longer included in the current version, and those that are valid in other editions or on other platforms.
 
-Key to restrictions in the following table:
+Key to notes in the following table:
 
 - AIX: AIX only
+- Dep: Deprecated
 - LiW: Linux/Windows only
 - WF: Microsoft .NET Framework only
 - WIN: Microsoft Windows only
 - X: AIX/Linux/macOS only
 - 64U: 64-bit Unicode only
 
-|`A`      |Derived Function                                                                      |Restrictions |
+|`A`      |Derived Function                                                                      |Notes |
 |-------|--------------------------------------------------------------------------------------|------|
 |`8`    |[Inverted Table Index-of](./inverted-table-index-of.md)                               |&nbsp;|
 |`13`   |[Log Use of Deprecated Features](./log-use-of-deprecated-features.md)                 |&nbsp;|
@@ -60,7 +61,7 @@ Key to restrictions in the following table:
 |`1111` |[Number of Threads](./number-of-threads.md)                                           |&nbsp;|
 |`1112` |[Parallel Execution Threshold](./parallel-execution-threshold.md)                     |&nbsp;|
 |`1159` |[Update Function Time and User Stamp](./update-function-time-and-user-stamp.md)       |&nbsp;|
-|`1200` |[Format Date-time](./format-datetime.md)                                              |&nbsp;|
+|`1200` |[Format Date-time](./format-datetime.md)                                              |Dep|
 |`1302` |[aplcore Parameters](./aplcore-parameters.md)                                         |&nbsp;|
 |`1500` |[Hash Array](./hash-array.md)                                                         |&nbsp;|
 |`2000` |[Memory Manager Statistics](./memory-manager-statistics.md)                           |&nbsp;|
