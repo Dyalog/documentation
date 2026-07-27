@@ -9,7 +9,7 @@ search:
 
 `⎕IO` may be assigned the value 0 or 1.  The value in a clear workspace is 1. `⎕IO` has Namespace scope.
 
-`⎕IO` is an implicit argument of any function derived from the bracket axis (`[K]`), of the monadic functions Fix (`⎕FX`), Grade Down (`⍒`), Grade Up (`⍋`), Index Generator (`⍳`), Roll (`?`), and Where (`⍸`), and of the dyadic functions Deal (`?`), Grade Down (`⍒`), Grade Up (`⍋`), Index (`⌷`), Index Of (`⍳`), Indexed Assignment, Indexing, Pick (`⊃`), Transpose (`⍉`), Interval Index (`⍸`), and Dyadic Format (`⎕FMT`).
+`⎕IO` is an implicit argument of any function derived from the bracket axis (`[K]`), of the monadic functions _fix_ (`⎕FX`), _grade down_ (`⍒`), _grade up_ (`⍋`), _index generator_ (`⍳`), _roll_ (`?`), and _where_ (`⍸`), of the dyadic functions _deal_ (`?`), _dyadic grade down_ (`⍒`), _dyadic grade up_ (`⍋`), _index_ (`⌷`), _index of_ (`⍳`), indexed assignment, indexing, _pick_ (`⊃`), _dyadic transpose_ (`⍉`), _interval index_ (`⍸`), and of the system function _extended diagnostic message_ (`⎕DMX`).
 
 <h2 class="example">Examples</h2>
 ```apl
