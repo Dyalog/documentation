@@ -2,7 +2,7 @@
 
 `⎕NA` is fully supported under all supported non-Windows platforms; the Conga communications package for example is a shared library on all platforms.
 
-`⎕NA` supports user-written shared libraries and also system-supplied shared libraries. Dyalog APL under Non-Windows platforms is supplied with a shared library, dyalog32 or dyalog64 which contains the same functions as the dyalog32.dll and dyalog64.dll as described in the [`⎕NA` documentation](../../language-reference-guide/system-functions/na#the-dyalog-dll). The file extension of the shared library is operating system dependent. Additionally, the function `getlasterror` is included; this returns the error code at the point when the called function failed (which may be different from its value at the point where a previous error occurred).
+`⎕NA` supports user-written shared libraries and system-supplied shared libraries. Under non-windows platforms, Dyalog is supplied with a shared library, **dyalog32** or **dyalog64**, that contains the same functions as **dyalog32.dll** and **dyalog64.dll** (as described in [`⎕NA`: The Dyalog DLL](../../language-reference-guide/system-functions/na#the-dyalog-dll)); the file extension of the shared library is operating-system dependent. The function `getlasterror` is also included – this returns the error code at the point when the called function failed, which can be different from its value at the point when a previous error occurred).
 
 It is necessary to specify the complete name of the file containing the shared library, no extension is added by Dyalog APL.
 
