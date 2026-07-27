@@ -9,6 +9,8 @@ This function imports and exports Comma Separated Value (CSV) data.
 
 Monadic `⎕CSV` imports data from a CSV file or converts data from CSV format to an internal format. Dyadic `⎕CSV` exports data to a CSV file or converts data from internal format to a CSV format.
 
+`⎕CSV` output is not affected by [`⎕PP`](pp); numeric values are always represented with full precision.
+
 ## Internal Format
 
 Arrays that result from importing CSV data or arrays that are suitable for exporting as CSV data are represented by 3 possible structures:
