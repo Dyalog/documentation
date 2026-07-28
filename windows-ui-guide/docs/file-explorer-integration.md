@@ -14,7 +14,7 @@ During installation, Dyalog establishes the following file associations:
 
 When you double-click on a file with one of the above extensions, the file is opened with the corresponding application.
 
-In addition, two items are added to the Windows Explorer context menu for directories, namely *Load with Dyalog* and *Run with Dyalog*. Both these items start Dyalog and attempt to import code from the corresponding directory using Link. The *Run with Dyalog* option also calls the function named `Run` if it exists. See [Load Parameter](../../windows-installation-and-configuration-guide/configuration-parameters/load).
+In addition, two items are added to the Windows Explorer context menu for directories, namely *Load with Dyalog* and *Run with Dyalog*. Both these items start Dyalog and attempt to import code from the corresponding directory using Link. The *Run with Dyalog* option also calls the function named `Run` if it exists. See [Load Parameter](../../dyalog-configuration-guide/configuration-parameters/load).
 
 For more information about Link, see [https://dyalog.github.io/link/](https://dyalog.github.io/link/).
 
