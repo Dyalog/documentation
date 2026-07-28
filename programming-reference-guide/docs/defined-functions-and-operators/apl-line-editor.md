@@ -4,7 +4,7 @@ The APL Line Editor described herein is included for completeness and for adhere
 
 Using the APL Line Editor, functions and operators are defined by entering Definition Mode.  This mode is opened and closed by the Del symbol, `∇`.  Within this mode, all evaluation of input is deferred.  The standard APL line editor (described below) is used to create and edit operations within definition mode.
 
-Operations may also be defined using the system function `⎕FX` (implicit in a `⎕ED` fix) which acts upon the canonical (character), vector, nested or object representation form of an operation. (See [Fix Definition ](../../../../language-reference-guide/system-functions/fx) for details.)
+Operations may also be defined using the system function `⎕FX` (implicit in a `⎕ED` fix) which acts upon the canonical (character), vector, nested or object representation form of an operation. (See [Fix Definition ](../../../language-reference-guide/system-functions/fx) for details.)
 
 Functions may also be created dynamically or by function assignment.
 
