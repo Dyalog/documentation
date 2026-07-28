@@ -46,7 +46,7 @@ VALUE ERROR: No result was provided when the context expected one
 
 ## Dfns and Dops
 
-The result of a [dfn](../defined-functions-and-operators/dfns-and-dops/dynamic-functions-and-operators.md) is the value of the first statement it evaluates that is not an assignment; that result is explicit. If every statement it evaluates is an assignment, the value of the last one is returned as a shy result. A dfn that evaluates no value-yielding statement, such as the empty dfn `{}`, returns no result.
+The result of a [dfn](../defined-functions-and-operators/dfns-and-dops/dynamic-functions-and-operators.md) is the value of the first [statement](../defined-functions-and-operators/dfns-and-dops/statements.md) it evaluates that is not an assignment; that result is explicit. If every statement it evaluates is an assignment, the value of the last one is returned as a shy result. A dfn that evaluates no value-yielding statement, such as the empty dfn `{}`, returns no result.
 
 The idiomatic way to give a dfn a shy result is to assign the result on the final line, guarded so that it is the last statement evaluated. This is the [shy-result idiom](../defined-functions-and-operators/dfns-and-dops/shy-result.md):
 ```apl
