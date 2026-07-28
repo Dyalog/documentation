@@ -1,5 +1,11 @@
 # Trace_First_Y
 
-This parameters specifies the initial vertical position on the screen of the *first* trace window in character units. Subsequent trace windows will be staggered. This applies only if **ClassicMode** is 1.
+The initial vertical position, in character units, of the first Trace window; subsequent Trace windows are staggered from it. Applies only when [`ClassicMode`](classicmode.md) is `1`.
 
-See also [Y Pos](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-windows-tab.md).
+Valid values are an integer number of character units.
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+Related parameters: [Trace_First_X](trace-first-x.md), [Trace_Offset_Y](trace-offset-y.md).
+
+See also the [Windows tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-windows-tab.md) of the Windows Configuration Dialog.

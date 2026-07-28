@@ -1,6 +1,14 @@
 # SessionOnTop
 
-Specifies whether or not the Session may appear on top of Edit and Trace Windows in Classic Dyalog mode. 
- This applies only if **ClassicMode** is 1.  See [ ClassicMode](./classicmode.md).
+Whether the Session can appear on top of Edit and Trace windows in Classic Dyalog mode. Applies only when [`ClassicMode`](classicmode.md) is `1`.
 
-See also [Allow session above edit windows](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md).
+Valid values are:
+
+- `0` : the Session cannot appear on top of Edit and Trace windows
+- `1` : the Session can appear on top of Edit and Trace windows
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+Related parameters: [ClassicMode](classicmode.md).
+
+See also the [Trace/Edit tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md) of the Windows Configuration Dialog.

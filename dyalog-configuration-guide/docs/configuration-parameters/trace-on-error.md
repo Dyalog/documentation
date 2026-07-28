@@ -1,5 +1,17 @@
 # Trace_On_Error
 
-This parameter is either 0 (the default) or 1. If set to 1, **Trace_On_Error** specifies that the Tracer is automatically deployed when execution of a defined function halts with an error. A stack of Trace windows is immediately displayed, with the top Trace window receiving the input focus.
+Whether the Tracer is deployed automatically when execution of a defined function halts with an untrapped error. When enabled, a stack of Trace windows is displayed immediately, with the top window receiving the input focus.
 
-See also [Show trace stack on error](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md).
+Valid values are:
+
+- `0` : the Tracer is not deployed automatically
+- `1` : the Tracer is deployed automatically on an untrapped error
+
+Default depends on operating system:
+
+- Microsoft Windows: `0`
+- UNIX and macOS: `1`
+
+Related parameters: [Trace_Level_Warn](trace-level-warn.md).
+
+See also the [Trace/Edit tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md) of the Windows Configuration Dialog.

@@ -1,6 +1,14 @@
 # SingleTrace
 
-Specifies whether there is a single Trace window, or one Trace window per function. 
- This applies only if **ClassicMode** is 1.  See [ ClassicMode](./classicmode.md).
+Whether there is a single Trace window or one Trace window per function. Applies only when [`ClassicMode`](classicmode.md) is `1`.
 
-See also [Single trace window](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md).
+Valid values are:
+
+- `0` : one Trace window per function
+- `1` : a single Trace window
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+Related parameters: [ClassicMode](classicmode.md), [Trace_Level_Warn](trace-level-warn.md).
+
+See also the [Trace/Edit tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md) of the Windows Configuration Dialog.

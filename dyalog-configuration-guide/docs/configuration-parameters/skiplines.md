@@ -1,8 +1,13 @@
 # SkipLines
 
-This parameter causes the Tracer to automatically skip lines that contain no executable statement, with the exception of the first line in the function, and in the case of a traditional function (not a dfn), the last line if it is a comment. SkipLines is an integer made up of the sum of the following values:
+Causes the Tracer to skip lines that contain no executable statement, with the exception of the first line of the function and, in a traditional function (not a dfn), the last line if it is a comment.
 
-|---|----------------------------------------------------------------------------------------------------------------------------------------------------|
-|1  |Skip blank lines. See also [Skip blank lines when tracing](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md) .    |
-|2  |Skip comment lines. See also [Skip comment lines when tracing](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md) .|
-|4  |Skip locals lines.  See also [Skip locals lines when tracing](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md) . |
+The value is the sum of the following:
+
+- `1` : skip blank lines
+- `2` : skip comment lines
+- `4` : skip locals lines
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+See also the [Trace/Edit tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md) of the Windows Configuration Dialog.
