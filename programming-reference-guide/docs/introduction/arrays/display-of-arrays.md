@@ -132,7 +132,7 @@ The power of this form of display is made apparent when formatting informal repo
 
 ## Array Notation
 
-Arrays (including namespaces) can be displayed in the session using [array notation](array-notation.md). This mode is enabled using the `]APLAN.Output` user command. For example:
+Arrays (including namespaces) can be displayed in the session using [array notation](array-notation.md). This mode is enabled using the `]APLAN.Output` user command. When array notation output is active, [`⎕PP`](../../../../language-reference-guide/system-functions/pp/) does not apply to numeric output. For example:
 ```apl
       SALES
   50  5.25   75
@@ -152,6 +152,17 @@ Arrays (including namespaces) can be displayed in the session using [array notat
 In the [Microsoft Windows IDE](../../../../windows-ui-guide) it can also be toggled on and off using the ![](../../img/session_arraynotation.png){width=20 height=20 vertical-align:text-bottom} icon on the Session toolbar.
 
 To enable the display of output using array notation when starting a Dyalog session, set the [APLAN_FOR_OUTPUT](../../../../windows-installation-and-configuration-guide/configuration-parameters/aplan-for-output) configuration parameter to `1`.
+
+## Obtaining Textual Representations
+
+The following approaches produce character data from an array rather than displaying it in the session:
+
+| Method | Description | [`⎕PP`](pp.md) applies? |
+|--------|-------------|------------------------|
+| [`⍕`](format.md) | Character array identical to normal session display using `⎕←` | Yes |
+| ([`⎕FMT`](format-monadic.md)) | Character matrix similar to session display using `⍞←` | Yes |
+| [`⎕JSON`](json.md) export | Conversion to a JSON character vector | No |
+| [`⎕CSV`](csv.md) export | Conversion to a CSV array or file | No |
 
 ## Print Width
 

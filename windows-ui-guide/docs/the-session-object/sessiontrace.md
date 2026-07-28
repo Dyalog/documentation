@@ -20,7 +20,7 @@ The attachment of a callback function intercepts and annuls the normal display o
 !!! note 
     Note that this event may be extended in the future; in particular the number of elements in the event message may be increased. You should therefore allow for such extensions in any code which refers to SessionTrace.
 
-When the event is generated, the left argument of the callback function contains the result value of the expression, if any. The callback function may display this or any other value, using default output or by assignment to `⎕`. If so, this output will be processed normally, without generating any SessionTrace or [SessionPrint](sessionprint.md) events. If the callback fails to explicitly display anything, nothing will appear in the Session.
+When the event is generated, the left argument of the callback function contains the result value of the expression, if any. The callback function may display this or any other value, using [implicit output](../../../programming-reference-guide/introduction/output) or by assignment to `⎕`. If so, this output will be processed normally, without generating any SessionTrace or [SessionPrint](sessionprint.md) events. If the callback fails to explicitly display anything, nothing will appear in the Session.
 
 If the expression has no value, then the callback function will be called monadically. It is therefore required that the callback function is ambivalent (can be called both monadically and dyadically).
 

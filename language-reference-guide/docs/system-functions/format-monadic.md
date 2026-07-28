@@ -7,6 +7,8 @@ search:
 
 `Y` may be any array.  `R` is a simple character matrix which appears the same as the default display of `Y`.  If `Y` contains control characters from `⎕TC`, they will be resolved.
 
+[`⎕PP`](pp) is an implicit argument of `⎕FMT`.
+
 <h2 class="example">Examples</h2>
 ```apl
       A←⎕FMT '∩' ,⎕TC[1],'∘'
@@ -35,6 +37,11 @@ search:
       ⍴B
 3 12
 ```
+
+## See Also
+
+- [Display of Arrays](../../programming-reference-guide/introduction/arrays/display-of-arrays) – how arrays appear in the session
+- [`⍕`](format) – Format: returns a character array (vector or matrix depending on input rank)
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

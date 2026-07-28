@@ -6,4 +6,6 @@ APL also reports messages originating from the Operating System (WINDOWS or UNIX
 
 Most errors may be trapped using the system variable `⎕TRAP`, thereby retaining control and inhibiting the standard system action and error report.  The table, [Trappable Event Codes](../../../language-reference-guide/system-functions/trap) identifies the error code for trappable errors.  The error code is also identified in the heading block for each error message when applicable.
 
+Error messages appear in the Session log interactively, or on the [stderr stream](../introduction/output.md) when the interpreter is attached to operating-system streams.
+
 See *Dyalog Programming Reference Guide* for a full description of the Error Handling facilities in Dyalog APL.

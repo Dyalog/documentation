@@ -160,7 +160,12 @@ By replacing spaces with `^`, it is clearer to see how the result of `⍕` is fo
 ^^^^^^^^^^^^LMN^
 ```
 
-`⎕PP` is an implicit argument of Format.
+[`⎕PP`](pp) is an implicit argument of Format.
+
+## See Also
+
+- [Display of Arrays](../../programming-reference-guide/introduction/arrays/display-of-arrays) – how arrays appear in the session
+- [`⎕FMT`](format-monadic) – Format (Monadic): returns a character matrix
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
