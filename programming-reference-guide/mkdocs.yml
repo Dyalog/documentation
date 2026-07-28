@@ -161,7 +161,7 @@ nav:
           - Introduction: defined-functions-and-operators/dfns-and-dops/dynamic-functions-and-operators.md
           - Model Syntax: defined-functions-and-operators/dfns-and-dops/model-syntax.md
           - Statements: defined-functions-and-operators/dfns-and-dops/statements.md
-          - MultiLine Dfns: defined-functions-and-operators/dfns-and-dops/multiline-dynamic-functions.md
+          - Multi-line Dfns: defined-functions-and-operators/dfns-and-dops/multiline-dynamic-functions.md
           - Arguments: defined-functions-and-operators/dfns-and-dops/arguments.md
           - Default Left Argument: defined-functions-and-operators/dfns-and-dops/default-left-argument.md
           - Guards: defined-functions-and-operators/dfns-and-dops/guards.md

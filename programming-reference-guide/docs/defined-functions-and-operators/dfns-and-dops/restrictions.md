@@ -2,7 +2,7 @@
 
 A dfn or dop is subject to the following restrictions.
 
-- A dfn need not return a result, but any expression that does not produce a result still terminates the dfn. You therefore cannot call a no-result function from the middle of a dfn and carry on, because evaluation stops at that expression.
+- A dfn need not return a [result](../../introduction/results.md), but any expression that does not produce a result still terminates the dfn. You therefore cannot call a no-result function from the middle of a dfn and carry on, because evaluation stops at that expression.
 - Normal tracing (`<TC>`) steps over a single-line dfn, executing it atomically like an [Execute](../../../../language-reference-guide/primitive-functions/execute) (`⍎`) expression. This deliberate restriction avoids the confusion of tracing a line and seeing nothing change. Inline Tracing (`<IT>`) can step through the functions called within a single-line dfn, and a multi-line dfn traces normally.
 - [`⎕CS`](../../../../language-reference-guide/system-functions/cs) is not supported inside a dfn and signals a `NONCE ERROR`.
 - [`⎕MONITOR`](../../../../language-reference-guide/system-functions/set-monitor), [`⎕TRACE`](../../../../language-reference-guide/system-functions/set-trace), and [`⎕LOCK`](../../../../language-reference-guide/system-functions/lock) do not apply to dfns or dops.

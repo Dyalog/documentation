@@ -28,4 +28,4 @@ A dfn is a value like any other function, so it can be named by ordinary assignm
 
 A dfn is ambivalent, and its valence is not declared: it follows from whether the body refers to `⍺`, and from whether the dfn is applied with one argument or two. When a dfn that refers to `⍺` is called monadically, `⍺` has no value unless a default is supplied on the first line with `⍺←` (see [Default Left Argument](default-left-argument.md)). Likewise a dop is a monadic or dyadic operator according to whether it refers to `⍵⍵`.
 
-The layout of a multi-line dfn, and the role of each line, are covered under [Statements](statements.md) and [MultiLine Dfns](multiline-dynamic-functions.md).
+The layout of a multi-line dfn, and the role of each line, are covered under [Statements](statements.md) and [Multi-line Dfns](multiline-dynamic-functions.md).
