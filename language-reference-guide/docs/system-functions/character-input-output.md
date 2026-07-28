@@ -15,9 +15,9 @@ When `⍞` is assigned with a vector or a scalar, the array is displayed without
 2+2=4
 ```
 
-Output through `⍞` is independent of the print width in `⎕PW`.  The way in which lines exceeding the print width of the terminal are treated is dependent on the characteristics of the terminal.  Numeric output is formatted in the same manner as direct output (see [Programmer's Guide: "Display of Arrays"](../../../programming-reference-guide/introduction/arrays/display-of-arrays)).
+Output through `⍞` is independent of the print width in `⎕PW`.  The way in which lines exceeding the print width of the terminal are treated is dependent on the characteristics of the terminal.  Numeric output is formatted in the same manner as [implicit output](../../../programming-reference-guide/introduction/output) (see [Programmer's Guide: "Display of Arrays"](../../../programming-reference-guide/introduction/arrays/display-of-arrays)).
 
-When `⍞` is assigned with a higher-rank array, the output is displayed in the same manner as for direct output except that the print width `⎕PW` is ignored.
+When `⍞` is assigned with a higher-rank array, the output is displayed in the same manner as for implicit output except that the print width `⎕PW` is ignored.
 
 When `⍞` is referenced, terminal input is expected without any specific prompt, and the response is returned as a character vector.
 

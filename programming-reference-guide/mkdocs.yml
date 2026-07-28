@@ -69,6 +69,7 @@ nav:
           - Prototypes and Fill Items: introduction/arrays/prototypes-and-fill-items.md
           - Cells and Subarrays: introduction/arrays/cells-and-subarrays.md
       - Expressions: introduction/expressions.md
+      - Output: introduction/output.md
       - Functions: introduction/functions.md
       - Operators: introduction/operators.md
       - Binding Strength: introduction/binding-strength.md
