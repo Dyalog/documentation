@@ -21,7 +21,7 @@ If `Y` is empty, the branch function has no effect.  The next expression is exec
 The `:GoTo` statement may be used in place of Branch in a defined function.
 
 !!! note
-    Branch is not available for flow control in a dfn or dop. A monadic branch (`→` to a line) is not supported, whereas a niladic branch, that is abort (`→`), terminates the dfn.
+    Branch is not available for flow control in a dfn or dop. A monadic branch (`→` to a line) is not supported. A niladic branch, that is [abort](abort.md), does work: it clears the most recently suspended statement and all of its pendent statements from the state indicator.
 
 <h2 class="example">Example</h2>
 ```apl
