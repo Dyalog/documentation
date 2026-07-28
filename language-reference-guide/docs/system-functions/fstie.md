@@ -11,7 +11,7 @@ search:
 
 The file must exist and be accessible by the user.  If it is already tied by another task, it must not be tied exclusively.
 
-The shy result of `⎕FSTIE` is the tie number of the file.
+The [shy](../../../programming-reference-guide/introduction/results) result of `⎕FSTIE` is the tie number of the file.
 
 ## Automatic Tie Number Allocation
 

@@ -26,7 +26,7 @@ VALUE ERROR
 
 Methods may also be called using `⎕NQ` with a left argument of 2, indeed if `⎕WX` is 0, this is the only way to call a method.
 
-The result of the method is returned by `⎕NQ`. Note however that the result is *shy*.
+The result of the method is returned by `⎕NQ`. Note however that the result is *[shy](../../../programming-reference-guide/introduction/results)*.
 
 For example, for a TreeView object you can obtain status information about a particular item in the object using the GetItemState method:
 ```apl

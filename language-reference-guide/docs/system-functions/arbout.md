@@ -14,7 +14,7 @@ search:
 
 If `Y` is an empty vector, no codes are sent to the output device.
 
-The shy result `R` is `⍬`.
+The [shy](../../../programming-reference-guide/introduction/results) result `R` is `⍬`.
 
 The operation will fail with a `DOMAIN ERROR` if  `Y` contains anything other than numbers in the range 0-255 or tie numbers associated with currently open native files, or  if the current process does not have permission to write to the specified device.
 

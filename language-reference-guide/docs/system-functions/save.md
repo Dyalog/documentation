@@ -20,7 +20,7 @@ A `DOMAIN ERROR` is reported if the name in `Y` :
 - refers to an unauthorised directory
 - specifies an existing file that does not already contain a Dyalog workspace or session file
 
-The shy result `R` is a simple Boolean scalar 1. However, when the  workspace is subsequently loaded using `⎕LOAD` and execution restarts, the result is 0, as described below.
+The [shy](../../../programming-reference-guide/introduction/results) result `R` is a simple Boolean scalar 1. However, when the  workspace is subsequently loaded using `⎕LOAD` and execution restarts, the result is 0, as described below.
 
 The optional left argument `X` is either 0 or 1. If `X` is omitted or 1, the saved version of the workspace has execution suspended at the point of exit from the `⎕SAVE` function.  If the saved workspace is subsequently loaded by `⎕LOAD`, execution is resumed, and the value 0 is returned if the result is used or assigned, or otherwise the result is shy. In this case, the latent expression value (`⎕LX`) is ignored.
 

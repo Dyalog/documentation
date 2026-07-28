@@ -21,7 +21,7 @@ search:
 
 The newly created file is tied for exclusive use.
 
-The shy result of `⎕FCREATE` is the tie number of the new file.
+The [shy](../../../programming-reference-guide/introduction/results) result of `⎕FCREATE` is the tie number of the new file.
 
 ## Automatic Tie Number Allocation
 

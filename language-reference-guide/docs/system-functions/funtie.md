@@ -9,7 +9,7 @@ search:
 
 If `Y` is empty, no files are untied, but all the interpreter's internal file buffers are flushed and the operating system is asked to flush all file updates  to disk.  This special facility allows the programmer to add extra security (at the expense of performance) for application data files.
 
-The shy result of `⎕FUNTIE` is a vector of tie numbers of the files **actually untied**.
+The [shy](../../../programming-reference-guide/introduction/results) result of `⎕FUNTIE` is a vector of tie numbers of the files **actually untied**.
 
 <h2 class="example">Example</h2>
 ```apl

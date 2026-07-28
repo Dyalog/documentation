@@ -18,7 +18,7 @@ search:
 
 See [Native File Read](nread.md) for a list of valid conversion codes.
 
-The shy result is the location of the internal file pointer which will be pointing to the end of the newly written data. Used, for example, in:
+The [shy](../../../programming-reference-guide/introduction/results) result is the location of the internal file pointer which will be pointing to the end of the newly written data. Used, for example, in:
 ```apl
 
       ⍝ Replace sequentially from indx.

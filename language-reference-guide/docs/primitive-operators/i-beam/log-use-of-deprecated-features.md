@@ -16,7 +16,7 @@ The result `R` is a vector of zero or more names, as described in the table belo
 
 |Value(s) in `Y`|Meaning                                          |Value(s) in `R`                                           |
 |---------------|-----------------------------------------------|--------------------------------------------------------|
-|*Feature names*|Enable logging of the specified features       |Names of features for which logging is enabled (shy)    |
+|*Feature names*|Enable logging of the specified features       |Names of features for which logging is enabled ([shy](../../../../programming-reference-guide/introduction/results))    |
 |`'All'`        |Enable logging of all deprecated features      |Names of features for which logging is enabled (non-shy)|
 |`'None'`       |Disable logging of deprecated features         |                                                        |
 |`'Enabled'`    |List all features for which logging is enabled |_                                                      _|

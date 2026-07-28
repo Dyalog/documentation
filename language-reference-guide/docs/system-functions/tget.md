@@ -17,7 +17,7 @@ A request (`⎕TGET`) for a *positive* token will be satisfied by the presence o
 
 A request for a negative token type will only be satisfied by the presence of a negative token type in the pool, and that token will be removed.
 
-If, when a thread calls `⎕TGET`, the token pool satisfies **all** of the tokens specified by `Y`, the function returns immediately with a (shy) result that contains the values associated with the pool tokens. Otherwise, the function will block (wait) until **all** of the requested tokens are present or until a time-out (as specified by `X`) or a weak interrupt occurs.
+If, when a thread calls `⎕TGET`, the token pool satisfies **all** of the tokens specified by `Y`, the function returns immediately with a ([shy](../../../programming-reference-guide/introduction/results)) result that contains the values associated with the pool tokens. Otherwise, the function will block (wait) until **all** of the requested tokens are present or until a time-out (as specified by `X`) or a weak interrupt occurs.
 
 For example, if the pool contains only tokens of type 2:
 ```apl

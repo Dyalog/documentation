@@ -19,7 +19,7 @@ Although not recommended, applications which favour performance over security ma
 |0    |`⎕FREAD` will not validate checksums.                                       |
 |1    |`⎕FREAD` will validate checksums when they are present. This is the default.|
 
-The shy result `R` is the previous value of this setting.
+The [shy](../../../../programming-reference-guide/introduction/results) result `R` is the previous value of this setting.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

@@ -28,7 +28,7 @@ to:
       tie←file ⎕FTIE 0 ⍝ Tie with first available number.
 ```
 
-The shy result of `⎕FTIE` is the tie number of the file.
+The [shy](../../../programming-reference-guide/introduction/results) result of `⎕FTIE` is the tie number of the file.
 
 <h2 class="example">Examples</h2>
 ```apl

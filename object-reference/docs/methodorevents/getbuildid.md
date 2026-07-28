@@ -10,7 +10,7 @@ single item as follows:
 |-----|---------|----------------|
 |`[1]`|File name|character vector|
 
-The (shy) result is an 8-element character vector of hexadecimal digits that
+The ([shy](../../../programming-reference-guide/introduction/results)) result is an 8-element character vector of hexadecimal digits that
 represents the Build ID.
 
 If the argument is `⍬`, the build id is

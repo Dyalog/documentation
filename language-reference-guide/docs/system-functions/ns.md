@@ -18,7 +18,7 @@ If specified, `X` must be an array that identifies one or more namespaces. This 
 * a reference to a namespace.
 * an array where each item is one of the above. If `X` refers to multiple namespaces, then `⎕NS` processes each item of `X` in ravel order, using the entire argument `Y`; this is equivalent to `X ⎕NS¨⊂Y`. If `X` is empty, no action is taken.
 
-The result `R` is shy when the system function is invoked dyadically, otherwise its contents are determined by the value of `Y`.
+The result `R` is [shy](../../../programming-reference-guide/introduction/results) when the system function is invoked dyadically, otherwise its contents are determined by the value of `Y`.
 
 ## Usage
 

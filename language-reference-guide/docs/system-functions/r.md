@@ -119,7 +119,7 @@ Note that the shape of the output document may be significantly different to tha
 
 If the ResultText option is specified, the output type may be forced to be a **character vector** or **vector of character vectors** as described above, regardless of the input document.
 
-With an output stream specified the text is appended to the stream. If the appended text does not end with a line ending character then the line ending character specified by the EOL option is also appended. The resulting length of the file  is returned as a shy result.
+With an output stream specified the text is appended to the stream. If the appended text does not end with a line ending character then the line ending character specified by the EOL option is also appended. The resulting length of the file  is returned as a [shy](../../../programming-reference-guide/introduction/results) result.
 
 ## `⎕S`
 

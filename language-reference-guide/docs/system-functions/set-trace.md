@@ -37,7 +37,7 @@ Attempts to set trace controls in a locked function or operator are ignored.
 
 The effect of trace controls when a function or operator is invoked is to display the result of each complete expression for lines with trace controls as they are executed, and the result of the function if trace control 0 is set.  If a line contains expressions separated by `⋄`, the result of each complete expression is displayed for that line after execution.
 
-The result of a complete expression is displayed even where the result would normally be shy.  In particular:
+The result of a complete expression is displayed even where the result would normally be [shy](../../../programming-reference-guide/introduction/results).  In particular:
 
 - the result of a branch statement is displayed;
 - the result (*pass-through value*) of assignment is displayed;

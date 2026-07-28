@@ -16,7 +16,7 @@ Used dyadically, `⎕CMD` starts an Auxiliary Processor.  The effect, as far as 
 
 `⎕CMD` loads the Auxiliary Processor into memory.  If no other APs are currently running, `⎕CMD` also allocates an area of memory for communication between APL and its APs.
 
-The shy result `R` is the process id of the Auxiliary Processor task.
+The [shy](../../../programming-reference-guide/introduction/results) result `R` is the process id of the Auxiliary Processor task.
 
 The effect of starting an AP is that one or more **external functions** are defined in the workspace.  These appear as locked functions and may be used in exactly the same way as regular defined functions.
 

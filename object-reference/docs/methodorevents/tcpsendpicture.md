@@ -14,7 +14,7 @@ If *Picture format* is omitted, the default is GIF format.
 
 Note that the [Style](../properties/style.md) of the [TCPSocket](../objects/tcpsocket.md) object must be set to `'Raw'` before you execute the TCPSendPicture method.
 
-The (shy) result of the method is an integer that reports the number of bytes that were transmitted.
+The ([shy](../../../programming-reference-guide/introduction/results)) result of the method is an integer that reports the number of bytes that were transmitted.
 
 <h2 class="example">Example</h2>
 ```apl

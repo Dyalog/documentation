@@ -16,7 +16,7 @@ search:
 
 A scalar or 1-element-vector type is replicated to conform with a multi-name list.
 
-The result `R` is a vector that reports the export type of the functions and operators named in `Y`.  When used dyadically to set export type, the result is shy.
+The result `R` is a vector that reports the export type of the functions and operators named in `Y`.  When used dyadically to set export type, the result is [shy](../../../programming-reference-guide/introduction/results).
 
 When the path mechanism locates a referenced function (or operator) in the list of namespaces in the `⎕PATH` system variable, it examines the function's export type:
 

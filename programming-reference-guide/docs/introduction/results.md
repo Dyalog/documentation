@@ -6,7 +6,7 @@ A function may return a value, known as its *result*. Not every function returns
 - a *shy result*: a value that is returned but not displayed, although it can still be assigned or used; or
 - *no result*: no value is returned, so using the application where a value is required signals a [`VALUE ERROR`](../error-messages/value-error.md).
 
-An explicit result that is not consumed by the rest of the expression is displayed in the same form as any other value (see [Display of Arrays](arrays/display-of-arrays.md)).
+An explicit result that is not consumed by the rest of the expression is displayed in the same form as any other value, following the rules for the [display of arrays](arrays/display-of-arrays.md).
 
 Assignment is itself an operation that returns a result: the *pass-through* value, that is, the value assigned. This result is shy, so a plain assignment displays nothing, whereas using the assignment within a larger expression makes the value available:
 ```apl
@@ -44,11 +44,11 @@ VALUE ERROR: No result was provided when the context expected one
         ∧
 ```
 
-## Dynamic Functions and Operators
+## Dfns and Dops
 
-The result of a [dynamic function](../defined-functions-and-operators/dfns-and-dops/dynamic-functions-and-operators.md) is the value of the first statement it evaluates that is not an assignment; that result is explicit. If every statement it evaluates is an assignment, the value of the last one is returned as a shy result. A dynamic function that evaluates no value-yielding statement, such as the empty function `{}`, returns no result.
+The result of a [dfn](../defined-functions-and-operators/dfns-and-dops/dynamic-functions-and-operators.md) is the value of the first statement it evaluates that is not an assignment; that result is explicit. If every statement it evaluates is an assignment, the value of the last one is returned as a shy result. A dfn that evaluates no value-yielding statement, such as the empty dfn `{}`, returns no result.
 
-The idiomatic way to give a dynamic function a shy result is therefore to assign the result on the final line, guarded so that it is the last statement evaluated (see [Shy Result](../defined-functions-and-operators/dfns-and-dops/shy-result.md)):
+The idiomatic way to give a dfn a shy result is to assign the result on the final line, guarded so that it is the last statement evaluated. This is the [shy-result idiom](../defined-functions-and-operators/dfns-and-dops/shy-result.md):
 ```apl
       log←{
           tie←⍺ ⎕FSTIE 0
@@ -57,7 +57,7 @@ The idiomatic way to give a dynamic function a shy result is therefore to assign
           1:r←cno            ⍝ component number, shy result
       }
 ```
-Whether a dynamic function returns a value, and whether that value is shy, can thus depend on the path taken through it.
+Whether a dfn returns a value, and whether that value is shy, can thus depend on the path taken through it.
 
 ## Traditional Functions and Operators
 
@@ -71,7 +71,7 @@ If the header names a result but the function exits without assigning it, the ap
 
 ### Namelists
 
-If the result is declared as a *namelist*, a parenthesised, blank-delimited list of names, the values of those names are stranded together into the result when the function exits (see [Namelists](../defined-functions-and-operators/traditional-functions-and-operators/namelists.md)).
+If the result is declared as a [namelist](../defined-functions-and-operators/traditional-functions-and-operators/namelists.md), a parenthesised, blank-delimited list of names, the values of those names are stranded together into the result when the function exits.
 
 ## System Functions
 
@@ -86,5 +86,7 @@ A primitive operator applies to one or two operand functions and produces a deri
       {1:r←⍵+1}¨1 2 3       ⍝ shy operand, shy derived result (not displayed)
 ```
 With [Each (`¨`)](../../../language-reference-guide/primitive-operators/each/each-with-monadic-operand) the derived result matches its operand. With a composition such as [Beside (`∘`)](../../../language-reference-guide/primitive-operators/beside), the outermost function determines the kind: `f∘g` returns whatever kind `f` returns.
+
+Where an operator assembles several partial results, one per item, the kinds combine across them. If any one partial result is shy, the whole result is shy; if any one partial result is missing, there is no overall result.
 
 A few primitive operators return a shy result of their own, whatever their operand. The [Spawn (`&`)](../../../language-reference-guide/primitive-operators/spawn) operator returns the number of the newly created thread as a shy result.

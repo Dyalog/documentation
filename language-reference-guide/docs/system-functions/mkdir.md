@@ -15,7 +15,7 @@ The result `R` depends on the value of the variant option **Unique**. If  **Uniq
 
 | Unique | Result `R` |
 |--------|------------|
-|` 0`    | If `Y` specifies a single name, the shy result `R` is a scalar `1` if a directory was created or `0` if not. If `Y` is a vector of character vectors, `R` is a vector of `1`s and `0`s with the same length as `Y`. |
+|` 0`    | If `Y` specifies a single name, the [shy](../../../programming-reference-guide/introduction/results) result `R` is a scalar `1` if a directory was created or `0` if not. If `Y` is a vector of character vectors, `R` is a vector of `1`s and `0`s with the same length as `Y`. |
 | `1`    | If `Y` specifies a single name, the shy result `R` is a character vector containing the name of the directory that was created. If `Y` is a vector of character vectors, `R` is a vector of character vectors with the same length as `Y`. |
 
 The optional left argument `X` is a numeric scalar that modifies the default behaviour when the base name in `Y` already exists and/or the path in `Y` does not already exist. If omitted, it is assumed to be 0. Possible values and the effect that they have on the default behaviour are:

@@ -17,7 +17,7 @@ In this case, the optional `Y[2]` is an arbitrary character vector that serves a
 
 ## De-allocation (`Y` is `¯1`)
 
-If `Y` is `¯1`, `⎕TALLOC` releases a previously allocated range of tokens identified by the left-argument `X`. The result `R` is a shy `⍬`.
+If `Y` is `¯1`, `⎕TALLOC` releases a previously allocated range of tokens identified by the left-argument `X`. The result `R` is a [shy](../../../programming-reference-guide/introduction/results) `⍬`.
 
 To succeed, this range must have previously been allocated, not freed by de-allocation, and must be inactive, that is, its tokens must not currently be  in the token pool or in use by a `⎕TGET`. If not, `⎕TALLOC` will signal a `DOMAIN ERROR`.
 

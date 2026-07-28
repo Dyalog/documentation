@@ -26,7 +26,7 @@ is equivalent to:
       3 ⎕LOCK'FOO'
 ```
 
-The shy result `R` is the lock state (`1`, `2`, or `3`) of `Y`.
+The [shy](../../../programming-reference-guide/introduction/results) result `R` is the lock state (`1`, `2`, or `3`) of `Y`.
 
 A `DOMAIN ERROR` is reported if `Y` is ill-formed.
 
