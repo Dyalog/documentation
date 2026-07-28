@@ -1,13 +1,16 @@
 # Log_File
 
-This parameter specifies the path (absolute or relative to the working directory) and name of the Session log file.
+The path (absolute, or relative to the working directory) and name of the Session log file.
 
-Session log files are not interchangeable between different versions/editions/widths of Dyalog. In addition, starting multiple instances of a Dyalog interpreter with the same log file name will only create a log file for the first instance started.
+Session log files are not interchangeable between different versions, editions, or widths of Dyalog. Starting a second instance of the same interpreter with the same log file name would normally fail to create a log for that instance, so the default name includes a `*` character: at start-up Dyalog replaces the `*` with an increasing integer, beginning at `000`, and opens and locks the first name it can (for example `log*.dlfx` yields `log000.dlfx`, `log001.dlfx`, and so on). Closing an instance frees its number for reuse. The process fails, and no log is used, if the number would exceed `999`.
 
-This is mitigated by including a __\*__ character in the default Session log’s filename, for example, __log.\*.dlfx__ or __log\*.dlfx__. In this situation, at start-up, Dyalog attempts to open, and then lock, a file in which the __\*__ is replaced with an increasing integer value starting from __000__, for example, __log\*.dlfx__ results in files called __log000.dlfx__, __log001.dlfx__, and so on. If a file cannot be opened and locked, the value is incremented. This means that starting multiple instances of the same interpreter simultaneously will create and open multiple log files with different values. If one or more instances are then closed, starting a new instance will re-open the closed log file for that interpreter that has the lowest value. The process fails, and no log will be created or used, if the value would exceed __999__.
+The `LogFile` property of `⎕SE` reports the name of the log file in use.
 
-NOTE: The LogFile property of `⎕SE` reports the name of the log file that is being used.
+Default depends on operating system:
 
-The default is __<DocumentsDirectory\>\Dyalog APL-<bits\> <DyalogMajor\><DyalogMinor\> <Unicode|Classic\> Files\default_\*.dlfx__, for example, __C:\Users\Bob\Documents\Dyalog APL-64 20.0 Unicode Files\default_\*.dlfx__
+- Microsoft Windows: `<DocumentsDirectory>\Dyalog APL-<bits> <DyalogMajor><DyalogMinor> <Unicode|Classic> Files\default_*.dlfx`, for example `C:\Users\Bob\Documents\Dyalog APL-64 21.0 Unicode Files\default_*.dlfx`
+- UNIX and macOS: `$HOME/.dyalog/session_log_<DyalogMajor><DyalogMinor><U|C><bits>_*.dlf`, for example `$HOME/.dyalog/session_log_210U64_*.dlf`
 
-See also [Use log file](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab.md).
+Related parameters: [Log_File_InUse](log-file-inuse.md), [Log_Size](log-size.md).
+
+See also the [Session tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab.md) of the Windows Configuration Dialog.
