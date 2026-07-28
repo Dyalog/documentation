@@ -1,5 +1,11 @@
 # Edit_Cols
 
-This parameter specifies the initial width of an edit window in character units.
+The initial width of an edit window, in character units.
 
-See also [Width](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-windows-tab.md).
+Valid values are a positive integer number of character units.
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+Related parameters: [Edit_Rows](edit-rows.md).
+
+See also the [Windows tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-windows-tab.md) of the Windows Configuration Dialog.
