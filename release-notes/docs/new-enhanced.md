@@ -34,9 +34,10 @@ The functionality provided by `739⌶` is now provided by `⎕SYSTEM` (specifica
 
 The following objects have been enhanced:
 
+- [Form](https://docs.dyalog.com/21.0/object-reference/objects/form/) object – four properties can now be changed after creation using `⎕WS`. These are [HelpButton](https://docs.dyalog.com/21.0/object-reference/properties/helpbutton/), [MaxButton](https://docs.dyalog.com/21.0/object-reference/properties/maxbutton/), [MinButton](https://docs.dyalog.com/21.0/object-reference/properties/minbutton/), and [SysMenu](https://docs.dyalog.com/21.0/object-reference/properties/sysmenu/).
 - [Printer](https://docs.dyalog.com/21.0/object-reference/objects/printer/) object – two new properties have been added:
-  - The [Dirty](https://docs.dyalog.com/21.0/object-reference/properties/dirty/) property indicates whether the current page is considered to have content.
-  - The [PagesBeginDirty](https://docs.dyalog.com/21.0/object-reference/properties/pagesbegindirty/) property indicates whether a new page in a document will be printed even if it has no content.
+    - The [Dirty](https://docs.dyalog.com/21.0/object-reference/properties/dirty/) property indicates whether the current page is considered to have content.
+    - The [PagesBeginDirty](https://docs.dyalog.com/21.0/object-reference/properties/pagesbegindirty/) property indicates whether a new page in a document will be printed even if it has no content.
 
 ## Interfaces
 
