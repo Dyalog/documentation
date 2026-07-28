@@ -1,8 +1,8 @@
 # APL Line Editor
 
-The APL Line Editor described herein is included for completeness and for adherence to the ISO APL standard.  Dyalog recommends the use of the more powerful Editor and Tracer in preference to the APL Line Editor. Full details of these facilities can be found in the UI Guides for your version of Dyalog APL, as well as in the descriptions of `⎕ED` and `)ED` which appear in the *Dyalog APL Language Reference Guide.*
+The APL Line Editor described herein is included for completeness and for adherence to the ISO APL standard.  Dyalog recommends the use of the more powerful Editor and Tracer in preference to the APL Line Editor. Full details of these facilities can be found in the UI Guides for your version of Dyalog APL, as well as in the descriptions of `⎕ED` and `)ED` which appear in the *Dyalog APL Language Reference Guide.*
 
-Using the APL Line Editor, functions and operators are defined by entering Definition Mode.  This mode is opened and closed by the Del symbol, `∇`.  Within this mode, all evaluation of input is deferred.  The standard APL line editor (described below) is used to create and edit operations within definition mode.
+Using the APL Line Editor, functions and operators are defined by entering Definition Mode.  This mode is opened and closed by the Del symbol, `∇`.  Within this mode, all evaluation of input is deferred.  The standard APL line editor (described below) is used to create and edit operations within definition mode.
 
 Operations may also be defined using the system function `⎕FX` (implicit in a `⎕ED` fix) which acts upon the canonical (character), vector, nested or object representation form of an operation. (See [Fix Definition ](../../../language-reference-guide/system-functions/fx) for details.)
 
@@ -12,50 +12,50 @@ The line editor recognises three forms for the opening request.
 
 ## Creating Defined Operation
 
-The opening `∇` symbol is followed by the header line of a defined operation.  Redundant blanks in the request are permitted except within names.  If acceptable, the editor prompts for the first statement of the operation body with the line-number 1 enclosed in brackets.  On successful completion of editing, the defined operation becomes the active definition in the workspace.
+The opening `∇` symbol is followed by the header line of a defined operation.  Redundant blanks in the request are permitted except within names.  If acceptable, the editor prompts for the first statement of the operation body with the line-number 1 enclosed in brackets.  On successful completion of editing, the defined operation becomes the active definition in the workspace.
 
 <h3 class="example">Example</h3>
 ```apl
-      ∇R←FOO
-[1]  R←10
-[2]  ∇
- 
-      FOO
+      ∇R←FOO
+[1]  R←10
+[2]  ∇
+ 
+      FOO
 10
 ```
 
 The given operation name must not have an active referent in the workspace, otherwise the system reports `defn error` and the system editor is not invoked:
 ```apl
-      )VARS
-SALES  X  Y
- 
-      ∇R←SALES Y
+      )VARS
+SALES  X  Y
+ 
+      ∇R←SALES Y
 defn error
 ```
 
 The header line of the operation must be syntactically correct, otherwise the system reports `defn error` and the system editor is not invoked:
 ```apl
-      ∇R←A B C D:G
+      ∇R←A B C D:G
 defn error
 ```
 
 ## Listing Defined Operation
 
-The `∇` symbol followed by the name of a defined operation and then by a closing `∇`, causes the display of the named operation.  Omitting the function name causes the suspended operation (that is, the one at the top of the state indicator) to be displayed and opened for editing.
+The `∇` symbol followed by the name of a defined operation and then by a closing `∇`, causes the display of the named operation.  Omitting the function name causes the suspended operation (that is, the one at the top of the state indicator) to be displayed and opened for editing.
 
 <h4 class="example">Example</h4>
 ```apl
-      ∇FOO∇
-     ∇ R←FOO
-[1]    R←10
-     ∇
- 
-      )SI
+      ∇FOO∇
+     ∇ R←FOO
+[1]    R←10
+     ∇
+ 
+      )SI
 #.FOO[1] *
- 
-     ∇
-     ∇ R←FOO
-[1]    R←10
+ 
+     ∇
+     ∇ R←FOO
+[1]    R←10
 [2]
 ```
 
@@ -63,19 +63,19 @@ The `∇` symbol followed by the name of a defined operation and then by a closi
 
 Definition mode is entered by typing `∇` followed optionally by a name and editing directive.
 
-The `∇` symbol on its own causes the suspended operation (that is,  the one at the top of the state indicator) to be displayed.  The editor then prompts for a statement or editing directive with a line-number one greater than the highest line-number in the function.  If the state indicator is empty, the system reports `defn error` and definition mode is not entered.
+The `∇` symbol on its own causes the suspended operation (that is,  the one at the top of the state indicator) to be displayed.  The editor then prompts for a statement or editing directive with a line-number one greater than the highest line-number in the function.  If the state indicator is empty, the system reports `defn error` and definition mode is not entered.
 
-The `∇` symbol followed by the name of an active defined operation causes the display of the named operation.  The editor then prompts for input as described above.  If the name given is not the name of an active referent in the workspace, the opening request is taken to be the creation of a new operation as described in paragraph 1.  If the name refers to a pendent operation, the editor issues the message `warning pendent operation` prior to displaying the operation.  If the name refers to a locked operation, the system reports defn error and definition mode is not entered.
+The `∇` symbol followed by the name of an active defined operation causes the display of the named operation.  The editor then prompts for input as described above.  If the name given is not the name of an active referent in the workspace, the opening request is taken to be the creation of a new operation as described in paragraph 1.  If the name refers to a pendent operation, the editor issues the message `warning pendent operation` prior to displaying the operation.  If the name refers to a locked operation, the system reports defn error and definition mode is not entered.
 
-The `∇` symbol followed by the name of an active defined operation and an editing directive causes the operation to be opened for editing and the editing directive actioned.  If the editing directive is invalid, it is ignored by the editor which then prompts with a line-number one greater than the highest line-number in the operation.  If the name refers to a pendent operation, the editor issues the message  `warning pendent operation` prior to actioning the editing directive.  If the name refers to a locked operation, the system reports `defn error` and definition mode is not entered.
+The `∇` symbol followed by the name of an active defined operation and an editing directive causes the operation to be opened for editing and the editing directive actioned.  If the editing directive is invalid, it is ignored by the editor which then prompts with a line-number one greater than the highest line-number in the operation.  If the name refers to a pendent operation, the editor issues the message  `warning pendent operation` prior to actioning the editing directive.  If the name refers to a locked operation, the system reports `defn error` and definition mode is not entered.
 
-On successful completion of editing, the defined operation becomes the active definition in the workspace which may replace an existing version of the function.  Monitors, and stop and trace vectors are removed.
+On successful completion of editing, the defined operation becomes the active definition in the workspace which may replace an existing version of the function.  Monitors, and stop and trace vectors are removed.
 
 <h2 class="example">Example</h2>
 ```apl
-      ∇FOO[2]
-[2]  R←R*2
-[3]  ∇
+      ∇FOO[2]
+[2]  R←R*2
+[3]  ∇
 ```
 
 ## Editing Directives
@@ -96,20 +96,20 @@ Editing directives, summarised in Figure 2(iv) are permitted as the first non-bl
 
 ## Line Numbers
 
-Line numbers are associated with lines in the operation.  Initially, numbers are assigned as consecutive integers, beginning with `[0]` for the header line.  The number associated with an operation line remains the same for the duration of the definition mode unless altered by editing directives.  Additional lines may be inserted by decimal numbering.  Up to three places of decimal are permitted.  On closing definition mode, operation lines are re-numbered as consecutive integers.
+Line numbers are associated with lines in the operation.  Initially, numbers are assigned as consecutive integers, beginning with `[0]` for the header line.  The number associated with an operation line remains the same for the duration of the definition mode unless altered by editing directives.  Additional lines may be inserted by decimal numbering.  Up to three places of decimal are permitted.  On closing definition mode, operation lines are re-numbered as consecutive integers.
 
-The editor always prompts with a line number.  The response may be a statement line or an editing directive.  A statement line replaces the existing line (if there is one) or becomes an additional line in the operation:
+The editor always prompts with a line number.  The response may be a statement line or an editing directive.  A statement line replaces the existing line (if there is one) or becomes an additional line in the operation:
 ```apl
-      ∇R←A PLUS B
-[1]  R←A+B
+      ∇R←A PLUS B
+[1]  R←A+B
 [2]
 ```
 
 ## Position
 
-The editing directive `[n]`, where n is a line number, causes the editor to prompt for input at that line number.  A statement or another editing directive may be entered.  If a statement is entered, the next line number to be prompted is the previous number incremented by a unit of the display form of the last decimal digit.  Trailing zeros are not displayed in the fractional part of a line number:
+The editing directive `[n]`, where n is a line number, causes the editor to prompt for input at that line number.  A statement or another editing directive may be entered.  If a statement is entered, the next line number to be prompted is the previous number incremented by a unit of the display form of the last decimal digit.  Trailing zeros are not displayed in the fractional part of a line number:
 ```apl
-[2]   [0.8]
+[2]   [0.8]
 [0.8] ⍝ MONADIC OR DYADIC +
 [0.9] ⍝ A ←→ OPTIONAL ARGUMENT
 [1]
@@ -123,11 +123,11 @@ The editing directive `[n]`s, where `n` is a line number and s is a statement, c
 
 ## Delete
 
-The editing directive `[∆n]`, where `n` is a line number, causes the statement line to be deleted.  The form `[n∆m]`, where `n` is a line number and `m` is a positive integer, causes `m` consecutive statement lines starting from line number `n` to be deleted.
+The editing directive `[∆n]`, where `n` is a line number, causes the statement line to be deleted.  The form `[n∆m]`, where `n` is a line number and `m` is a positive integer, causes `m` consecutive statement lines starting from line number `n` to be deleted.
 
 ## Edit
 
-The editing directive `[n⎕m]`, where `n` is a line number and `m` is an integer number, causes line number `n` to be displayed and the cursor placed beneath the `m`{th} character on a new line for editing.  The response is taken to be edit control symbols selected from:
+The editing directive `[n⎕m]`, where `n` is a line number and `m` is an integer number, causes line number `n` to be displayed and the cursor placed beneath the `m`{th} character on a new line for editing.  The response is taken to be edit control symbols selected from:
 
 |---|---|
 |`/`|to delete the character immediately above the symbol.|
@@ -136,19 +136,19 @@ The editing directive `[n⎕m]`, where `n` is a line number and `m` is an intege
 |`,`|to insert the text after the comma, including explicitly entered trailing spaces, prior to the character above the comma, and then re-display the line for further editing with the text inserted and any preceding deletions or space insertions also effected.|
 |`.`|to insert the text after the comma, including explicitly entered trailing spaces, prior to the character above the comma, and then complete the edit of the line with the text inserted and any preceding deletions or space insertions also effected.|
 
-Invalid edit symbols are ignored.  If there are no valid edit symbols entered, or if there are only deletion or space insertion symbols, the statement line is re-displayed with characters deleted and spaces inserted as specified.  The cursor is placed at the first inserted space position or at the end of the line if none.  Characters may be added to the line which is then interpreted as seen.
+Invalid edit symbols are ignored.  If there are no valid edit symbols entered, or if there are only deletion or space insertion symbols, the statement line is re-displayed with characters deleted and spaces inserted as specified.  The cursor is placed at the first inserted space position or at the end of the line if none.  Characters may be added to the line which is then interpreted as seen.
 
 The line number may be edited.
 
 <h2 class="example">Examples</h2>
 ```apl
-[1]   [1⎕7]
-[1]   R←A+B
-     ,→(0=⎕NC'A')⍴1←⎕LC ⋄
-[1]   →(0=⎕NC'A')⍴1←⎕LC ⋄ R←A+B
-                               .⋄→END
-[2]   R←B
-[3]   END:
+[1]   [1⎕7]
+[1]   R←A+B
+     ,→(0=⎕NC'A')⍴1←⎕LC ⋄
+[1]   →(0=⎕NC'A')⍴1←⎕LC ⋄ R←A+B
+                               .⋄→END
+[2]   R←B
+[3]   END:
 [4]
 ```
 
@@ -156,17 +156,17 @@ The form `[n⎕0]` causes the line number `n` to be displayed and the cursor to 
 
 ## Display
 
-The editing directive `[⎕]` causes the entire operation to be displayed.  The form `[⎕n]` causes all lines from line number n to be displayed.  The form `[n⎕]` causes only line number `n` to be displayed:
+The editing directive `[⎕]` causes the entire operation to be displayed.  The form `[⎕n]` causes all lines from line number n to be displayed.  The form `[n⎕]` causes only line number `n` to be displayed:
 ```apl
-[4]   [0⎕]
-[0]   R←{A} PLUS B
+[4]   [0⎕]
+[0]   R←{A} PLUS B
 [0]
-[0]   [⎕]
-[0]   R←{A} PLUS B
+[0]   [⎕]
+[0]   R←{A} PLUS B
 [0.1] ⍝ MONADIC OR DYADIC +
-[1]   →(0=⎕NC'A')⍴1+⎕LC ⋄ R←A+B ⋄→END
-[2]   R←B
-[3]   'END:
+[1]   →(0=⎕NC'A')⍴1+⎕LC ⋄ R←A+B ⋄→END
+[2]   R←B
+[3]   'END:
 [4]
 ```
 
@@ -216,4 +216,4 @@ Local names may be repeated.  However, the line editor reports warning messages 
 
 ## Quit Definition Mode
 
-The user may quit definition mode by typing the INTERRUPT character.  The active version of the operation (if any) remains unchanged.
+The user may quit definition mode by typing the INTERRUPT character.  The active version of the operation (if any) remains unchanged.
