@@ -1,5 +1,9 @@
 # Default_PP
 
-This parameter specifies the value of `⎕PP` in a clear workspace. Its default value is 10.
+The value of [`⎕PP`](../../../language-reference-guide/system-functions/pp) (print precision) in a clear workspace.
 
-See also [⎕PP](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab.md).
+Valid values are those of `⎕PP`: an integer from `1` to `34`.
+
+Default is `10`.
+
+See also the [Session tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab.md) of the Windows Configuration Dialog.

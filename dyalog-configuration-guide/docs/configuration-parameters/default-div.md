@@ -1,5 +1,9 @@
 # Default_DIV
 
-This parameter specifies the value of `⎕DIV` in a clear workspace. Its default value is 0.
+The value of [`⎕DIV`](../../../language-reference-guide/system-functions/div) in a clear workspace.
 
-See also [⎕DIV](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab.md).
+Valid values are those of `⎕DIV`: `0` or `1`.
+
+Default is `0`.
+
+See also the [Session tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab.md) of the Windows Configuration Dialog.

@@ -1,5 +1,9 @@
 # Default_IO
 
-This parameter specifies the value of `⎕IO` in a clear workspace. Its default value is 1.
+The value of [`⎕IO`](../../../language-reference-guide/system-functions/io) in a clear workspace.
 
-See also [⎕IO](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab.md).
+Valid values are those of `⎕IO`: `0` or `1`.
+
+Default is `1`.
+
+See also the [Session tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab.md) of the Windows Configuration Dialog.
