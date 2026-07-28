@@ -53,3 +53,14 @@ markdown_extensions:
       title: On this page
 nav:
   - index.md
+  - Introduction: introduction.md
+  - How to Set Configuration Parameters:
+      - Overview: how-to-set/overview.md
+      - Order of Precedence: how-to-set/order-of-precedence.md
+      - Command Line: how-to-set/command-line.md
+      - Application Configuration Files: how-to-set/application-configuration-files.md
+      - Environment Variables: how-to-set/environment-variables.md
+      - User Configuration Files: how-to-set/user-configuration-files.md
+      - Windows Registry: how-to-set/registry.md
+      - Built-in Defaults: how-to-set/built-in-defaults.md
+      - Configuration File Structure: how-to-set/configuration-file-structure.md
