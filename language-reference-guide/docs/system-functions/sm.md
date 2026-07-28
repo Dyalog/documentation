@@ -54,7 +54,7 @@ Note that Ride does not directly support `⎕SM`, although it is possible to dis
 
 If the USER screen is current, any change in the value of `⎕SM` is immediately reflected by a corresponding change in the appearance of the display.  However, an assignment to `⎕SM` that leaves its value unchanged has no effect.
 
-Dyalog APL automatically switches to the SESSION screen for default output, if it enters immediate input mode (6-space prompt), or through use of `⎕` or `⍞`.  This means that typing
+Dyalog APL automatically switches to the SESSION screen for [implicit output](../../../programming-reference-guide/introduction/output), if it enters immediate input mode (6-space prompt), or through use of `⎕` or `⍞`.  This means that typing
 ```apl
       ⎕SM ← expression
 ```

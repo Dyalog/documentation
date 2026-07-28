@@ -26,7 +26,7 @@ Any content that follows  the `#!` line (if present) is used as input into a Dya
 
 ## Input and Output
 
-`⎕` and `⍞` input are taken from characters typed by the user into the terminal or shell (Standard input or *stdin* for short).  Anything assigned to `⎕` and `⍞` will be displayed in the terminal window using streams Standard output (*stdout*) and Standard error (*stderr*) respectively. Note that default output, that is, output to the session without assignment to `⎕` or `⍞` is NOT displayed. Redirections of *stdin*, *stdout*, and *stderr* are supported.
+`⎕` and `⍞` input are taken from characters typed by the user into the terminal or shell (Standard input or *stdin* for short).  Anything assigned to `⎕` and `⍞` will be displayed in the terminal window using streams Standard output (*stdout*) and Standard error (*stderr*) respectively. Note that [implicit output](../../programming-reference-guide/introduction/output), that is, output to the session without assignment to `⎕` or `⍞` is NOT displayed. Redirections of *stdin*, *stdout*, and *stderr* are supported.
 
 <h3 class="example">Examples</h3>
 
