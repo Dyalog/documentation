@@ -39,7 +39,6 @@ The following script redirects the two streams to separate destinations, sending
 ⎕←'to stdout'
 ⍞←'to stderr'
 ```
-redirecting the two streams to separate destinations sends each message to its own destination.
 
 !!! Info "Information"
     In a non-interactive shell script, implicit output is suppressed and only output through `⎕` and `⍞` is written. When the interpreter is attached to a terminal interactively, implicit output is written to stdout.
