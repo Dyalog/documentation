@@ -9,3 +9,5 @@ Dfns are usually 'pure' functions that take arguments and return explicit result
           1:rslt←cno          ⍝ comp number, shy result.
       }
 ```
+
+For an overview of the kinds of result a function can return, see [Results](../../introduction/results.md).

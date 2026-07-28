@@ -7,7 +7,7 @@ search:
 
 `Y` must be a simple character scalar or vector which is taken to be the name of a visible defined function or operator.  `X` must be a simple non-negative integer scalar or vector.  `R` is a simple integer vector of non-negative elements.  `X` identifies the numbers of lines in the function or operator named by `Y` on which a stop control is to be placed.  Numbers outside the range of line numbers in the function or operator (other than 0) are ignored.  The number 0 indicates that a stop control is to be placed immediately prior to exit from the function or operator.  If `X` is empty, all existing stop controls are cancelled.  The value of `X` is independent of `⎕IO`.
 
-`R` is a vector of the line numbers on which a stop control has been placed in ascending order.  The result is suppressed unless it is explicitly used or assigned.
+`R` is a vector of the line numbers on which a stop control has been placed in ascending order.  The result is shy.
 
 <h2 class="example">Examples</h2>
 ```apl

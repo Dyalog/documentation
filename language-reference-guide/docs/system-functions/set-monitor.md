@@ -13,7 +13,7 @@ Note that `⎕MONITOR` does not apply to  dfns or dops.
 
 `X` identifies the numbers of lines in the function or operator named by `Y` on which a monitor is to be placed.  Numbers outside the range of line numbers in the function or operator (other than `0`) are ignored.  The number `0` indicates that a monitor is to be placed on the function or operator as a whole.  The value of `X` is independent of `⎕IO`.
 
-`R` is a vector of numbers on which a monitor has been placed in ascending order.  The result is suppressed unless it is explicitly used or assigned. `R` will be empty for dfns and dops.
+`R` is a vector of numbers on which a monitor has been placed in ascending order.  The result is shy. `R` will be empty for dfns and dops.
 
 The effect of `⎕MONITOR` is to accumulate timing statistics for the lines for which the monitor has been set.  See [Query Monitor](query-monitor.md) for details.
 

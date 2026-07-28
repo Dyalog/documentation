@@ -22,7 +22,7 @@ A `DOMAIN ERROR` is reported if the name in `Y` :
 
 The shy result `R` is a simple Boolean scalar 1. However, when the  workspace is subsequently loaded using `⎕LOAD` and execution restarts, the result is 0, as described below.
 
-The optional left argument `X` is either 0 or 1. If `X` is omitted or 1, the saved version of the workspace has execution suspended at the point of exit from the `⎕SAVE` function.  If the saved workspace is subsequently loaded by `⎕LOAD`, execution is resumed, and the value 0 is returned if the result is used or assigned, or otherwise the result is suppressed. In this case, the latent expression value (`⎕LX`) is ignored.
+The optional left argument `X` is either 0 or 1. If `X` is omitted or 1, the saved version of the workspace has execution suspended at the point of exit from the `⎕SAVE` function.  If the saved workspace is subsequently loaded by `⎕LOAD`, execution is resumed, and the value 0 is returned if the result is used or assigned, or otherwise the result is shy. In this case, the latent expression value (`⎕LX`) is ignored.
 
 If `X` is 0, the workspace is saved without any state indicator in effect. The effect is the same as if you first executed `)RESET` and then `)SAVE`. In this case, when the workspace is subsequently loaded, the value of the latent expression (`⎕LX`) is honoured if applicable.
 

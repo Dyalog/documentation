@@ -9,7 +9,7 @@ search:
 
 Each name in `Y` is disassociated from its value if the active referent for the name is a defined function, operator, variable or namespace.
 
-The value of an element of `R` is 1 if the corresponding name in `Y` is now available for use.  This does not necessarily mean that the existing value was erased for that name.  A value of  0 is returned for an ill-formed name or for a distinguished name in `Y`.  The result is suppressed if not used or assigned.
+The value of an element of `R` is 1 if the corresponding name in `Y` is now available for use.  This does not necessarily mean that the existing value was erased for that name.  A value of  0 is returned for an ill-formed name or for a distinguished name in `Y`.  The result is shy.
 
 <h2 class="example">Examples</h2>
 ```apl
