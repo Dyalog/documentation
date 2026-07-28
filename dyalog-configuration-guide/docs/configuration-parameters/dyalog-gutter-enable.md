@@ -1,8 +1,13 @@
 # DYALOG_GUTTER_ENABLE
 
-This Boolean parameter specifies whether (1) or not (0) a Gutter is displayed in the left-most column of the Session window. This gutter is used to display:
+Whether a gutter is displayed in the left-most column of the Session window. The gutter shows:
 
-- A small red circle. This indicator is used on every line that is modified in the session, including old ones (for example, if you move up the session and modify them, without pressing `<ER>`) . The indicators show which session lines will be re-executed when you subsequently press `<ER>`.
-- A left bracket `[` to identify groups of [implicit output](../../../programming-reference-guide/introduction/output). Note that other forms of output are not identified in this way.
+- a small red circle on every line that has been modified in the Session (including older lines moved to and edited without pressing `<ER>`), indicating which lines will be re-executed when `<ER>` is next pressed;
+- a left bracket `[` identifying groups of [implicit output](../../../programming-reference-guide/introduction/output). Other forms of output are not marked in this way.
 
-The default value is 0 for the TTY interface, and 1 otherwise.
+Valid values are:
+
+- `0` : no gutter is displayed
+- `1` : the gutter is displayed
+
+Default depends on the interface: `0` for the TTY interface, `1` otherwise.

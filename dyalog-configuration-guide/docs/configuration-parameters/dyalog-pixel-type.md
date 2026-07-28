@@ -1,5 +1,15 @@
 # Dyalog_Pixel_Type
 
-When the Coord property is set to `'Pixel'` , this parameter specifies how it is interpreted. If the value of **Dyalog_Pixel_Type** is RealPixel or if Dyalog_Pixel_Type is undefined, the object behaves as if Coord was `'RealPixel'` . If the value of **Dyalog_Pixel_Type** is ScaledPixel, the object behaves as if Coord were `'ScaledPixel'`. See [Coord](../../../object-reference/properties/coord).
+!!! Info "Information"
+    This configuration parameter is only relevant on the Microsoft Windows operating system.
 
-See also [Enable DPI scaling of GUI application](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-general-tab.md).
+How the value `'Pixel'` of the [`Coord`](../../../object-reference/properties/coord) property is interpreted.
+
+Valid values are:
+
+- `RealPixel` : the object behaves as if `Coord` were `'RealPixel'` (also the behaviour when the parameter is undefined)
+- `ScaledPixel` : the object behaves as if `Coord` were `'ScaledPixel'`
+
+Default is `RealPixel`.
+
+See also the [General tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-general-tab.md) of the Windows Configuration Dialog.

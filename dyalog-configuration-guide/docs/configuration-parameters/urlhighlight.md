@@ -1,16 +1,12 @@
 # URLHighlight
 
-Specifies whether or not URLs and links are highlighted in Session and Edit windows. Its value is either 1 (highlight) or 0. The default is 0.
+Whether URLs and links are highlighted in Session and Edit windows. When enabled, a valid URL under the mouse pointer is underscored, the relevant Session pop-up menu items (open the link, copy it to the clipboard) are activated, and the link can be opened with Ctrl+Click. A URL is recognised as a string beginning with `http://`, `https://`, `www.`, or `mailto:`.
 
-If this option is selected, valid URLs are identified when the cursor is in the Session or in an Edit or Trace window. When the mouse pointer is over a URL, the URL is underscored and the appropriate items in the Session Popup menu are activated. These allow you to open the link or copy it to the clipboard.
+Valid values are:
 
-You may also open a URL using Ctrl+Click (Left Mouse button).
+- `0` : URLs and links are not highlighted
+- `1` : URLs and links are highlighted
 
-Currently a URL string is defined to be a string starting with any of the following strings:
+Default is `0`.
 
-- http://
-- https://
-- www.
-- mailto:
-
-See also [Underline URLs and links](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-general-tab.md).
+See also the [General tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-general-tab.md) of the Windows Configuration Dialog.

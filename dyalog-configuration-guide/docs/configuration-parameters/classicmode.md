@@ -1,7 +1,12 @@
 # ClassicMode
 
-This parameter specifies whether or not the Session operates in *Dyalog Classic mode* . The default is 0. If this parameter is set to 1, the Editor and Tracer behave in a manner that is consistent with earlier versions of Dyalog APL.
+Whether the Session operates in *Dyalog Classic mode*, in which the Editor and Tracer behave as they did in earlier versions of Dyalog. In this mode a maximum of 50 Trace windows can be displayed.
 
-Note that in this mode, a maximum of 50 Trace windows may be displayed.
+Valid values are:
 
-See also [Classic Dyalog mode](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md).
+- `0` : the Session uses the modern Editor and Tracer
+- `1` : the Session operates in Classic mode
+
+Default is `0`.
+
+See also the [Trace/Edit tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md) of the Windows Configuration Dialog.

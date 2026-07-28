@@ -1,5 +1,14 @@
 # StatusOnEdit
 
-Specifies whether or not a status bar is displayed at the bottom of an Edit window.
+Whether a status bar is displayed along the bottom of individual Edit windows.
 
-See also [Show status bars](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md).
+Valid values are:
+
+- `0` : no status bar is displayed
+- `1` : a status bar is displayed
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+Related parameters: [ToolBarsOnEdit](toolbarsonedit.md).
+
+See also the [Trace/Edit tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md) of the Windows Configuration Dialog.

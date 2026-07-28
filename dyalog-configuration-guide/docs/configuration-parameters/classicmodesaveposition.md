@@ -1,8 +1,14 @@
 # ClassicModeSavePosition
 
-This parameter specifies whether or not the current size and location of the first of the editor and tracer windows are remembered for next time. 
- This applies only if **ClassicMode** is 1.  See [ ClassicMode](./classicmode.md).
+Whether the current size and location of the first editor and tracer windows are remembered for next time (saved in the Registry sub-folders `WindowRects/EditWindow` and `WindowRects/TraceWindow`). Applies only when [`ClassicMode`](classicmode.md) is `1`.
 
-The size and location of the windows are saved in the registry in the subfolder WindowRects/EditWindow and TraceWindow.
+Valid values are:
 
-See also [Remember previous window position](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md).
+- `0` : window size and position are not remembered
+- `1` : window size and position are remembered
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+Related parameters: [ClassicMode](classicmode.md).
+
+See also the [Trace/Edit tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md) of the Windows Configuration Dialog.
