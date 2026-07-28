@@ -30,6 +30,14 @@ The functionality provided by `43⌶632` is now provided by a new `[...]` mechan
 - [`739⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/temporary-directory/) – Temporary Directory (introduced in Dyalog v17.0)  
 The functionality provided by `739⌶` is now provided by `⎕SYSTEM` (specifically, `⎕SYSTEM.Directories.Temp` replaces `739⌶0`). It is scheduled for removal in 2029.
 
+## Objects
+
+The following objects have been enhanced:
+
+- [Printer](https://docs.dyalog.com/21.0/object-reference/objects/printer/) object – two new properties have been added:
+  - The [Dirty](https://docs.dyalog.com/21.0/object-reference/properties/dirty/) property indicates whether the current page is considered to have content.
+  - The [PagesBeginDirty](https://docs.dyalog.com/21.0/object-reference/properties/pagesbegindirty/) property indicates whether a new page in a document will be printed even if it has no content.
+
 ## Interfaces
 
 ### .NET Interface
