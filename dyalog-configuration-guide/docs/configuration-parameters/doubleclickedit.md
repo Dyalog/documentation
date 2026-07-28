@@ -1,5 +1,12 @@
 # DoubleClickEdit
 
-This parameter specifies whether or not double-clicking over a name invokes the editor. Its default is 1. If DoubleClickEdit is set to 0, double-clicking selects a word and triple-clicking selects the entire line.
+Whether double-clicking over a name invokes the editor.
 
-See also [Double-click to Edit](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md).
+Valid values are:
+
+- `0` : double-clicking selects a word, and triple-clicking selects the entire line
+- `1` : double-clicking over a name invokes the editor
+
+Default is `1`.
+
+See also the [Trace/Edit tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md) of the Windows Configuration Dialog.

@@ -1,5 +1,14 @@
 # AutoFormat
 
-This parameter specifies whether or not you want automatic formatting of Control Structures in functions. The default value is 1 which means that formatting is done automatically for you when a function is opened for editing or converted to text by `⎕CR`,  `⎕NR` and `⎕VR`. Automatic formatting first discards all leading spaces in the function body. It then prefixes all lines with a single space except those beginning with a label or a comment symbol (this has the effect of making labels and comments stand out). The third step is to indent Control Structures. The size of the indent depends upon the **TabStops** parameter. To turn off automatic formatting, set **AutoFormat** to 0.
+Whether Control Structures are formatted automatically when a function is opened for editing or converted to text by `⎕CR`, `⎕NR`, or `⎕VR`. Automatic formatting discards leading spaces in the function body, prefixes each line with a single space except those beginning with a label or comment symbol (so that labels and comments stand out), and indents Control Structures by the width given in [`TabStops`](tabstops.md).
 
-See also [Autoformat functions](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md).
+Valid values are:
+
+- `0` : no automatic formatting
+- `1` : Control Structures are formatted automatically
+
+Default is `1`.
+
+Related parameters: [TabStops](tabstops.md), [AutoIndent](autoindent.md).
+
+See also the [Trace/Edit tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md) of the Windows Configuration Dialog.

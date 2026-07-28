@@ -1,5 +1,14 @@
 # WrapSearch
 
-This parameter specifies whether or not Search/Replace in the Editor stops at the bottom or top of the text (depending upon the direction of the search), or continues the search from the start or end as appropriate.
+Whether Search/Replace in the editor stops at the top or bottom of the text (according to the direction of the search), or continues from the other end.
 
-See also: [Allow search to wrap](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md).
+Valid values are:
+
+- `0` : the search stops at the top or bottom of the text
+- `1` : the search continues from the start or end as appropriate
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+Related parameters: [WrapSearchMsgBox](wrapsearchmsgbox.md).
+
+See also the [Trace/Edit tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md) of the Windows Configuration Dialog.
