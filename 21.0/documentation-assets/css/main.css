@@ -205,11 +205,6 @@ th[align="right"], td[align="right"] {
         & + code, & + span {
             text-align: right;
             white-space: pre;
-            & + a {
-                color: inherit;
-                font-variant-position: super;
-                margin-left: 0.5ex;
-            }
         }
     }
 }
