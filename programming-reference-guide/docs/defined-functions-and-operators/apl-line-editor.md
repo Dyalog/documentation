@@ -172,47 +172,47 @@ The editing directive `[⎕]` causes the entire operation to be displayed.  The
 
 ## Close Definition Mode
 
-The editing directive `∇` causes definition mode to be closed.  The new definition of the operation becomes the active version in the workspace.  If the name in the operation header (which may or may not be the name used to enter definition mode) refers to a pendent operation, the editor issues the message `warning pendent operation` before exiting.  The new definition becomes the active version, but the original one will continue to be referenced until the operation completes or is cleared from the state indicator.
+The editing directive `∇` causes definition mode to be closed.  The new definition of the operation becomes the active version in the workspace.  If the name in the operation header (which may or may not be the name used to enter definition mode) refers to a pendent operation, the editor issues the message `warning pendent operation` before exiting.  The new definition becomes the active version, but the original one will continue to be referenced until the operation completes or is cleared from the state indicator.
 
-If the name in the operation header is the name of a visible variable or label, the editor reports `defn error` and remains in definition mode.  It is then necessary to edit the header line or quit.
-
-If the header line is changed such that it is syntactically incorrect, the system reports `defn error`, and re-displays the line leaving the cursor beyond the end of the text on the line.  Backspace/linefeed editing may be used to alter or cancel the change:
+If the header line is changed such that it is syntactically incorrect, the system reports `defn error`, and re-displays the line leaving the cursor beyond the end of the text on the line.  Backspace/linefeed editing may be used to alter or cancel the change:
 ```apl
-[3]   [0⎕]             - display line 0
-[0]   R←{A} PLUS B
-[0]   R←{A} PLUS B:G;H - put syntax error in line 0
+[3]   [0⎕]             - display line 0
+[0]   R←{A} PLUS B
+[0]   R←{A} PLUS B:G;H - put syntax error in line 0
 defn error
-[0]   R←{A} PLUS B:G;H - line redisplayed
-                  ;G;H - backspace/linefeed editing
+[0]   R←{A} PLUS B:G;H - line redisplayed
+                  ;G;H - backspace/linefeed editing
 [1]
 ```
 
-Local names may be repeated.  However, the line editor reports warning messages as follows:
-
-1. If a name is repeated in the header line, the system reports "warning duplicate name" immediately.
-2. If a label has the same name as a name in the header line, the system reports "warning label name present in line 0" on closing definition mode.
-3. If a label has the same name as another label, the system reports "warning duplicate label" on closing definition mode.
-
-1. If a name is repeated in the header line, the system reports "warning duplicate name" immediately.
-2. If a label has the same name as a name in the header line, the system reports "warning label name present in line 0" on closing definition mode.
-3. If a label has the same name as another label, the system reports "warning duplicate label" on closing definition mode.
-
 Improper syntax in expressions within statement lines of the function is not detected by the system editor with the following exceptions:
 
-- If the number of opening parentheses in each entire expression does not equal the number of closing parentheses, the system reports "warning unmatched parentheses", but accepts the line.
-- If the number of opening brackets in each entire expression does not equal the number of closing brackets, the system reports "warning unmatched brackets", but accepts the line.
+- If the number of opening parentheses in each entire expression does not equal the number of closing parentheses, the system reports [`warning unmatched parentheses`](../error-messages/warning-unmatched-parentheses.md), but accepts the line.
+- If the number of opening brackets in each entire expression does not equal the number of closing brackets, the system reports [`warning unmatched brackets`](../error-messages/warning-unmatched-brackets.md), but accepts the line.
 
-These errors are not detected if they occur in a comment or within quotes.  Other syntactical errors in statement lines will remain undetected until the operation is executed.
+These errors are not detected if they occur in a comment or within quotes.  Other syntactical errors in statement lines will remain undetected until the operation is executed.
 
 <h2 class="example">Example</h2>
 ```apl
-[4]   R←(A[;1)=2)⌿⍎EXP,'×2
+[4]   R←(A[;1)=2)⌿⍎EXP,'×2
 warning unmatched parentheses
 warning unmatched brackets
 [5]
 ```
 
-Note that there is an imbalance in the number of quotes.  This will result in a `SYNTAX ERROR` when this operation is executed.
+Note that there is an imbalance in the number of quotes.  This will result in a `SYNTAX ERROR` when this operation is executed.
+
+### Traditional Functions and Operators
+
+These considerations apply only to traditional functions and operators, whose header declares [local names](traditional-functions-and-operators/global-local-names.md) and whose body can contain [labels](traditional-functions-and-operators/statements.md).
+
+If the name in the operation header is the name of a visible variable or label, the editor reports `defn error` and remains in definition mode.  It is then necessary to edit the header line or quit.
+
+Local names may be repeated.  However, the line editor reports warning messages as follows:
+
+1. If a name is repeated in the header line, the system reports [`warning duplicate name`](../error-messages/warning-duplicate-name.md) immediately.
+2. If a label has the same name as a name in the header line, the system reports [`warning label name present in line 0`](../error-messages/warning-label-name-present.md) on closing definition mode.
+3. If a label has the same name as another label, the system reports [`warning duplicate label`](../error-messages/warning-duplicate-label.md) on closing definition mode.
 
 ## Quit Definition Mode
 
