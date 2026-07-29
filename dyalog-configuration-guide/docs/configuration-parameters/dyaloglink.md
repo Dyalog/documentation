@@ -1,7 +1,9 @@
 # DyalogLink
 
-This parameter specifies the name of the directory containing the code for Link. The default is `[DYALOG]/StartupSession/Link`.
+The directory containing the code for Link. Link is required for Session initialisation.
 
-Note that Link is required for Session initialisation.
+Valid values are a directory path.
 
-For further information, see [https://dyalog.github.io/link/4.0/Usage/Installation](https://dyalog.github.io/link/4.0/Usage/Installation).
+Default is `[DYALOG]/StartupSession/Link`.
+
+For more information, see the [Link installation instructions](https://dyalog.github.io/link/4.0/Usage/Installation).
