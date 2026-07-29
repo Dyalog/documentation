@@ -27,7 +27,7 @@ This allows the user to distinguish between operation values that have never bee
 Key to notes in the following table:
 
 - AIX: AIX only
-- Dep: Deprecated
+- Depr: Deprecated
 - LiW: Linux/Windows only
 - WF: Microsoft .NET Framework only
 - WIN: Microsoft Windows only
@@ -38,7 +38,7 @@ Key to notes in the following table:
 |-------|--------------------------------------------------------------------------------------|------|
 |`8`    |[Inverted Table Index-of](./inverted-table-index-of.md)                               |&nbsp;|
 |`13`   |[Log Use of Deprecated Features](./log-use-of-deprecated-features.md)                 |&nbsp;|
-|`43`   |[Monadic Operator Generator](./monadic-operator-generator.md)                         |&nbsp;|
+|`43`   |[Monadic Operator Generator](./monadic-operator-generator.md)                         |Depr|
 |`85`   |[Execute Expression](./execute-expression.md)                                         |&nbsp;|
 |`109`  |[Log File for Deprecations](./log-file-for-deprecations.md)                           |&nbsp;|
 |`120`  |[Generate UUID](./generate-uuid.md)                                                   |&nbsp;|
@@ -51,14 +51,14 @@ Key to notes in the following table:
 |`220`  |[Serialise/Deserialise Array](./serialise-deserialise-array.md)                                   |&nbsp;|
 |`400`  |[Compiler Control](./compiler-control.md)                                             |&nbsp;|
 |`600`  |[Disable Traps](./disable-traps.md)                                                     |&nbsp;|
-|`739`  |[Temporary Directory](./temporary-directory.md)                                       |&nbsp;|
+|`739`  |[Temporary Directory](./temporary-directory.md)                                       |Depr|
 |`900`  |[Called Monadically?](./called-monadically.md)                                         |&nbsp;|
 |`950`  |[List Loaded Libraries](./list-loaded-libraries.md)                                   |&nbsp;|
 |`1010` |[Set Shell Script Debug Options](./set-shell-script-debug-options.md)                 |&nbsp;|
 |`1111` |[Number of Threads](./number-of-threads.md)                                           |&nbsp;|
 |`1112` |[Parallel Execution Threshold](./parallel-execution-threshold.md)                     |&nbsp;|
 |`1159` |[Update Function Time and User Stamp](./update-function-time-and-user-stamp.md)       |&nbsp;|
-|`1200` |[Format Date-time](./format-datetime.md)                                              |Dep|
+|`1200` |[Format Date-time](./format-datetime.md)                                              |Depr|
 |`1302` |[aplcore Parameters](./aplcore-parameters.md)                                         |&nbsp;|
 |`1500` |[Hash Array](./hash-array.md)                                                         |&nbsp;|
 |`2000` |[Memory Manager Statistics](./memory-manager-statistics.md)                           |&nbsp;|
