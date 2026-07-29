@@ -8,15 +8,15 @@ At the end of the initialisation, the function defined by the `.aplf` file (or t
 
 ## Implementation
 
-Code to be installed in `⎕SE` is specified in APL source code files contained in *Session initialisation* directories identified by the **DyalogStartupSE** parameter. If this parameter is not specified, the default is a directory named `StartupSession` located in three standard locations as described below. See  [DyalogStartupSE](../../../windows-installation-and-configuration-guide/configuration-parameters/dyalogstartupse) for more details. 
+Code to be installed in `⎕SE` is specified in APL source code files contained in *Session initialisation* directories identified by the **DyalogStartupSE** parameter. If this parameter is not specified, the default is a directory named `StartupSession` located in three standard locations as described below. See  [DyalogStartupSE](../../../dyalog-configuration-guide/configuration-parameters/dyalogstartupse) for more details. 
 
 Only content stored in files matching the wildcard patterns `*.dyalog` and `*.apl?` will be loaded. All such files must be appropriate for `⎕FIX`.
 
 For each subdirectory in a Session initialisation directory, a corresponding namespace is created in `⎕SE`. Any source code files in these subdirectories will be fixed in their respective corresponding namespaces, and nested subdirectories become nested namespaces, recursively
 
-Every top-level directory that is loaded as a namespace in `⎕SE` can have a `Run` function which (depending on the value of the **DyalogStartup_X** parameter, will be called after everything has been loaded. This does not apply to sub-namespaces. See [DyalogStartup_X](../../../windows-installation-and-configuration-guide/configuration-parameters/dyalogstartup-x).
+Every top-level directory that is loaded as a namespace in `⎕SE` can have a `Run` function which (depending on the value of the **DyalogStartup_X** parameter, will be called after everything has been loaded. This does not apply to sub-namespaces. See [DyalogStartup_X](../../../dyalog-configuration-guide/configuration-parameters/dyalogstartup-x).
 
-This requires Link which is available by default. A custom version of Link can be used. See [DyalogLink](../../../windows-installation-and-configuration-guide/configuration-parameters/dyaloglink).
+This requires Link which is available by default. A custom version of Link can be used. See [DyalogLink](../../../dyalog-configuration-guide/configuration-parameters/dyaloglink).
 
 The Session initialisation directories are processed in alphabetical order and code defined in each directory will replace code with the same name defined previously. In effect, this means that user-supplied content can replace content supplied by Dyalog Ltd. and version-specific content can replace version-agnostic content.
 

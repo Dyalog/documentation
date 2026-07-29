@@ -20,7 +20,7 @@ The characteristics of the font are specified by its properties as follows :
 
 The [Coord](../properties/coord.md) property may be set to  `'Pixel'`, `'ScaledPixel'` or `'RealPixel'` when the object is created, but [Coord](../properties/coord.md) may not subsequently be changed.
 
-If Coord is `'Pixel'`, it is interpreted as either `'RealPixel'` or `'ScaledPixel'` according to the value of the **Dyalog_Pixel_Type** parameter, which is either ScaledPixel or RealPixel. See [Dyalog_Pixel_Type](../../../windows-installation-and-configuration-guide/configuration-parameters/dyalog-pixel-type).
+If Coord is `'Pixel'`, it is interpreted as either `'RealPixel'` or `'ScaledPixel'` according to the value of the **Dyalog_Pixel_Type** parameter, which is either ScaledPixel or RealPixel. See [Dyalog_Pixel_Type](../../../dyalog-configuration-guide/configuration-parameters/dyalog-pixel-type).
 
 **If this parameter is not specified, the default is RealPixel. So by default, when you set Coord to Pixel, it will be treated as RealPixel.**
 

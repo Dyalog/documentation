@@ -5,7 +5,7 @@ search:
 
 # <span>Load Workspace</span> `⎕LOAD Y`{{key}}
 
-`Y` must be a simple character scalar or vector containing the name of a file that contains a saved workspace. . If no file extension is given it is implied. See [WSEXT](../../../windows-installation-and-configuration-guide/configuration-parameters/wsext).
+`Y` must be a simple character scalar or vector containing the name of a file that contains a saved workspace. . If no file extension is given it is implied. See [WSEXT](../../../dyalog-configuration-guide/configuration-parameters/wsext).
 
 If `Y` is ill-formed or does not identify a saved workspace or the user account does not have access permission to the workspace, a `DOMAIN ERROR` is reported.
 
