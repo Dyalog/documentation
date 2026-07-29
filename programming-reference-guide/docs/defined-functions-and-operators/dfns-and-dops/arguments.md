@@ -3,7 +3,7 @@
 Within a dfn the arguments are referred to by fixed names, not declared in a header.
 
 - `⍵` is the right argument, and is always available.
-- `⍺` is the left argument. A dfn is ambivalent: when it is called monadically, `⍺` has no value, unless the first line supplies a default with `⍺←` (see [Default Left Argument](default-left-argument.md)).
+- `⍺` is the left argument. A dfn is ambivalent: when it is called monadically, `⍺` has no value until a statement beginning `⍺←` supplies a [default left argument](default-left-argument.md).
 
 <h2 class="example">Examples</h2>
 ```apl

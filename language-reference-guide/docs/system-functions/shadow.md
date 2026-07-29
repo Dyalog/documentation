@@ -7,7 +7,7 @@ search:
 
 `Y` must be a simple character scalar, vector, or matrix, or a nested vector of character vectors or scalar characters, identifying one or more APL names.  For a simple vector `Y`, names are separated by one or more blanks.  For a matrix `Y`, each row is taken to be a single name.
 
-Each valid name in `Y` is shadowed in the most recently invoked defined function or operator, as though it were included in the list of local names in the function or operator header.  The class of the name becomes 0 (undefined).  The name ceases to be shadowed when execution of the shadowing function or operator is completed.  Shadow has no effect when the state indicator is empty.
+Each valid name in `Y` is shadowed in the most recently invoked defined function or operator in the current thread, as though it were included in the list of local names in the function or operator header.  The class of the name becomes 0 (undefined).  The name ceases to be shadowed when execution of the shadowing function or operator is completed.  Shadow has no effect when the state indicator is empty.
 
 !!! note
     `⎕SHADOW` skips dfns and dops: when the most recently invoked defined function is a dfn or dop, the name is shadowed in the nearest tradfn further down the stack.

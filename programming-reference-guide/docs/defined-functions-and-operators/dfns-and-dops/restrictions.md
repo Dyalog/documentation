@@ -10,9 +10,3 @@ A dfn or dop is subject to the following restrictions.
 - Control structures and other `:`-keywords, such as `:If` and `:Return`, are unavailable; a dfn expresses conditions through guards instead.
 - Monadic branch (`→` given a line number, equivalent to `:GoTo`) is not supported. Niladic branch, that is [abort](../../../../language-reference-guide/other-syntax/abort) (`→`), does work: it clears the most recently suspended statement and all of its pendent statements from the state indicator.
 - Modified assignment (`X f←Y`) and use of the pass-through value of an assignment (as in `X f Y←Z`) behave as expected when `f` is a primitive, but in a dfn a named function is instead read as part of a multiple assignment, so `X plus←10` assigns `10` to both `X` and `plus`. Insert `∘⊢` to force the intended reading: `X plus∘⊢←10` for the modified assignment, and `1 plus∘⊢a←10` (or simply `1 plus⊢a←10`) for the pass-through.
-
-## Supplied Workspaces
-
-You can find many samples of dfns and dops in utility workspace `dfns.dws` in the `ws` sub-directory.
-
-Additional examples are in workspaces: `min.dws`, `max.dws`, `tube.dws` and `eval.dws`.
