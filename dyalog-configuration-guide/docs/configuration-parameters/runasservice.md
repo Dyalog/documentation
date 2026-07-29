@@ -1,3 +1,14 @@
 # RunAsService
 
-When RunAsService is set to 1 or 2 (the default is 0) Dyalog APL will not prompt for confirmation when the user logs off, and the interpreter will continue to run across the logoff /logon process. The value 2 reduces the resources used by a Dyalog service by disabling the graphical user-interface features. In this mode, `⎕WC object` will fail with a `LIMIT ERROR` unles the object is Timer, which is the only one that remains enabled.
+!!! Info "Information"
+    This configuration parameter is only relevant on the Microsoft Windows operating system.
+
+Whether Dyalog runs as a service: it does not prompt for confirmation when the user logs off, and the interpreter continues to run across the logoff/logon process.
+
+Valid values are:
+
+- `0` : Dyalog does not run as a service
+- `1` : Dyalog runs as a service
+- `2` : as `1`, but graphical user-interface features are disabled to reduce resource use; `⎕WC` then fails with a `LIMIT ERROR` for every object except Timer
+
+Default is `0`.

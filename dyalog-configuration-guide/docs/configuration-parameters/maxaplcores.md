@@ -1,11 +1,11 @@
 # MaxAplCores
 
-This parameter is used in conjunction with the **AplCoreName** parameter to control the maximum number of*aplcore* files that are saved. It applies when the string specified by **AplCoreName** ends with an asterisk (*). If so, when saving an *aplcore* file, Dyalog performs the following steps:
+The maximum number of *aplcore* files retained. It applies, in conjunction with [`AplCoreName`](aplcorename.md), when the string given by `AplCoreName` ends with an asterisk (`*`). When saving an aplcore, Dyalog finds the highest-numbered matching file (or `0` if none), increments it, saves the new aplcore with that number, and deletes lower-numbered files so that at most this many are kept.
 
-1. Identifies the highest number ending of those files that match the directory/name pattern specified by **AplCoreName** . If none, assume 0.
-2. Increments that number, then saves the *aplcore* in a new file ending with the new number.
-3. If necessary, deletes lower-numbered files to retain only the maximum number of files specified by **MaxAplCores** .
+Valid values are a positive integer.
 
-See also: [AplCoreName](aplcorename.md).
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+Related parameters: [AplCoreName](aplcorename.md).
 
 See also [aplcore Parameters](../../../language-reference-guide/primitive-operators/i-beam/aplcore-parameters).

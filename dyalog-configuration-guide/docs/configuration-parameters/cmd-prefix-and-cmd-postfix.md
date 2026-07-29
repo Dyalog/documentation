@@ -1,5 +1,10 @@
 # CMD_PREFIX and CMD_POSTFIX
 
-These parameters defines strings within which operating system commands specified as the arguments to `⎕CMD` and `⎕SH` , and `)CMD` and `)SH` , are wrapped. Its purpose is to run the command arguments under a non-standard command shell. This applies to Windows only.
+!!! Info "Information"
+    This configuration parameter is only relevant on the Microsoft Windows operating system.
 
-See [Windows Command](../../../language-reference-guide/system-functions/cmd) for implementation details.
+Strings within which operating-system commands given as the arguments to `⎕CMD`, `⎕SH`, `)CMD`, and `)SH` are wrapped, so that the command arguments run under a non-standard command shell.
+
+Valid values are a string.
+
+For implementation details, see [Windows Command (`⎕CMD`)](../../../language-reference-guide/system-functions/cmd).
