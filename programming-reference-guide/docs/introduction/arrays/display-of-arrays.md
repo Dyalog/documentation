@@ -157,12 +157,12 @@ To enable the display of output using array notation when starting a Dyalog sess
 
 The following approaches produce character data from an array rather than displaying it in the session:
 
-| Method | Description | [`⎕PP`](pp.md) applies? |
+| Method | Description | [`⎕PP`](../../../../language-reference-guide/system-functions/pp/) applies? |
 |--------|-------------|------------------------|
-| [`⍕`](format.md) | Character array identical to normal session display using `⎕←` | Yes |
-| ([`⎕FMT`](format-monadic.md)) | Character matrix similar to session display using `⍞←` | Yes |
-| [`⎕JSON`](json.md) export | Conversion to a JSON character vector | No |
-| [`⎕CSV`](csv.md) export | Conversion to a CSV array or file | No |
+| [`⍕`](../../../../language-reference-guide/primitive-functions/format/) | Character array identical to normal session display using `⎕←` | Yes |
+| ([`⎕FMT`](../../../../language-reference-guide/system-functions/format-monadic/)) | Character matrix similar to session display using `⍞←` | Yes |
+| [`⎕JSON`](../../../../language-reference-guide/system-functions/json/) export | Conversion to a JSON character vector | No |
+| [`⎕CSV`](../../../../language-reference-guide/system-functions/csv/) export | Conversion to a CSV array or file | No |
 
 ## Print Width
 
