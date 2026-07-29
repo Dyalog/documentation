@@ -1,5 +1,14 @@
 # PropertyExposeRoot
 
-Each workspace contains a flag that specifies whether or not the names of Properties, Methods and Events of the Root object are exposed. If set, you may query/set the Properties of Root and invoke the Root Methods directly as if they were variables and functions respectively. As a consequence, these names may not be used for global variables in your workspace. This parameter determines the default value of the flag in a `CLEAR WS`.
+The default value, in a clear workspace, of the flag that specifies whether the names of the properties, methods, and events of the Root object are exposed. When set, the properties of Root can be queried and set, and its methods invoked, as if they were variables and functions, so those names cannot also be used for global variables in the workspace.
 
-See also [Expose properties of Root](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-object-syntax-tab.md).
+Valid values are:
+
+- `0` : the names are not exposed
+- `1` : the names are exposed
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+Related parameters: [PropertyExposeSE](propertyexposese.md), [Default_WX](default-wx.md).
+
+See also the [Object Syntax tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-object-syntax-tab.md) of the Windows Configuration Dialog.

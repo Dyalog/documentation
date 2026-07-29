@@ -1,7 +1,10 @@
 # aplnid
 
-Under Windows, this parameter specifies the *user number* that is used by the component file system to control file sharing and security. If you wish to share component files and/or external variables in a network it is essential that each user has a unique **aplnid** parameter. It may be any integer in the range 0 to 65535. Note that an **aplnid** value of 0 causes the user to bypass APL's access control matrix mechanism.
+The *user number* used by the component file system to control file sharing and security. When a user creates a component file, their user number is recorded in the file to identify them as its owner.
 
-Under UNIX, the *user number* is obtained from the Operating System (UID) and **aplnid** is not used. If the user is "root", APL's access control mechanism is ignored.
+Valid values, and how the user number is obtained, depend on the operating system:
 
-When a user creates a component file, his *user number* is recorded in the file to identify him as its owner.
+- Microsoft Windows: **aplnid** is an integer from `0` to `65535`. To share component files or external variables across a network, each user must have a unique **aplnid**. A value of `0` causes the user to bypass APL's access-control-matrix mechanism.
+- UNIX and macOS: the user number is obtained from the operating system (UID) and **aplnid** is not used. If the user is `root`, APL's access-control mechanism is ignored.
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->

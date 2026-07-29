@@ -1,14 +1,14 @@
 # InitFullScriptNormal
 
-When using the Editor to edit  a script such as a Class or Namespace you can specify whether, when you Fix the script and Exit  the Editor, just the functions in the script are re-fixed, or whether the whole script is re-executed, thereby re-initialising any Fields or variables defined within.
+When the Editor is used to edit a script (such as a Class or Namespace) that is **not suspended**, this controls whether fixing the script and exiting the Editor re-fixes just the functions in the script, or re-executes the whole script (re-initialising any fields or variables defined within it). It determines the action associated with the `<EP>` (Esc) key; the other action remains available on the Editor File menu (and can be assigned to `<S1>` in the Keyboard Shortcuts tab).
 
-These two actions always appear in the Editor File menu, but you can specify which is associated with the <EP> (Esc) key by selecting the appropriate option in the drop-downs labelled:
+Valid values are:
 
-- Exit and save changes (EP) in a suspended class or namespace should fix:
-- If not suspended fix:
+- `Only Functions` : only the functions in the script are re-fixed
+- `Everything` : the whole script is re-executed
 
-In both cases, you may select either  *Only Functions* or         *Everything*.
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
 
-The label for the corresponding items on the Editor File menu (see  Editor (The File Menu, editing a script)) will change according to which behaviour applies. Note that if you specify a keystroke for <S1> in the *Keyboard Shortcuts* tab, this will be associated with the unselected action.
+Related parameters: [InitFullScriptSusp](initfullscriptsusp.md).
 
-See also [If not ...](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md).
+See also the [Trace/Edit tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md) of the Windows Configuration Dialog.
