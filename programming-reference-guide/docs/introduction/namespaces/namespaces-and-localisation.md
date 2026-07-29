@@ -83,3 +83,9 @@ The above diagram represents the SI stack, growing upwards from two namespaces `
         [1]   a+b+c
     ```
     The interpreter looks down the stack and finds local name `a` in `h`'s header; `b` in `f`'s header; and `c` in namespace `X`.
+
+## Qualified Names
+
+A name qualified by a namespace path is resolved in the namespace that the path names, by the same rules. Assignment to such a name is therefore not subject to the localisation of the function that performs it: it reaches the named namespace even from a function that would otherwise localise the name automatically, such as a [dfn](../../defined-functions-and-operators/dfns-and-dops/global-local-names.md), and it creates the name if it does not already exist.
+
+The name is still resolved against those lines of the state indicator which belong to the target namespace. Where a function on the stack whose home is that namespace has localised the name, a qualified assignment updates that localised instance rather than the namespace-global one.

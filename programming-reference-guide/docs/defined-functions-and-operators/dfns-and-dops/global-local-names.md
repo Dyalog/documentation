@@ -17,17 +17,29 @@ There is no header in which to localise names, and none is needed: automatic loc
 
 ## Assigning to a Name in the Enclosing Environment
 
-Because plain assignment always creates a local, a dfn changes a name in the enclosing environment through *modified assignment*, which updates an existing name in place instead of creating a new one. With [Right](../../../../language-reference-guide/primitive-functions/right) (`⊢`) as the modifying function, the value is replaced outright:
+Plain assignment always creates a local, so a dfn reaches a name outside itself in one of two ways.
+
+*Modified assignment* updates an existing name in place instead of creating a new one. With [Right](../../../../language-reference-guide/primitive-functions/right) (`⊢`) as the modifying function, the value is replaced outright:
 
 <h3 class="example">Example</h3>
 ```apl
       x←99
-      {x⊢←1 ⋄ x} 0     ⍝ the global x is updated
+      {x⊢←1 ⋄ x} 0        ⍝ the global x is updated
 1
       x
 1
 ```
 
-The name must already have a value; modified assignment to an undefined name signals a `VALUE ERROR`. Where the name is local to an enclosing dfn, it is that local which is updated, following [Lexical Name Scope](static-name-scope.md).
+The name must already have a value; modified assignment to an undefined name signals a `VALUE ERROR`. Note also that a named function cannot be used as the modifying function in a dfn without `∘⊢`; see [Restrictions](restrictions.md).
 
-Note that a named function cannot be used as the modifying function in a dfn without `∘⊢`; see [Restrictions](restrictions.md).
+Qualifying the name with a namespace path is the more general mechanism, because it also creates a name that does not yet exist. [`⎕THIS`](../../../../language-reference-guide/system-functions/this) names the dfn's own home namespace:
+
+<h3 class="example">Example</h3>
+```apl
+      {⎕THIS.y←1 ⋄ 0} 0   ⍝ y need not exist beforehand
+0
+      y
+1
+```
+
+Either way, where the name is local to an enclosing dfn, it is that local which is updated, following [Lexical Name Scope](static-name-scope.md). [Namespaces and Localisation](../../introduction/namespaces/namespaces-and-localisation.md) describes how a qualified name is resolved.
