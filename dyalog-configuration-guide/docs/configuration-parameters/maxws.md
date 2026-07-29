@@ -1,20 +1,12 @@
 # MaxWS
 
-This parameter determines your workspace size and is the amount of memory allocated to the workspace at APL start-up. See [Specifying Size-related Parameters](./configuration-parameters.md) for further details about defining a valid value for this parameter.
+The amount of memory allocated to the workspace at start-up. See [Specifying Size-related Parameters](configuration-parameters.md) for how to give a valid size; for example `MAXWS=4G` requests a 4 GiB workspace. Values less than `4M` are ignored, and the maximum is `15E`.
 
-The default value is 256M (256MiB), with the exception of the Raspberry Pi where the default is 64M. Values less than 4M are ignored, and the maximum value is 15E.
+Default depends on platform:
 
-For example, to get a 4GiB workspace, set:
-```apl
-        MAXWS=4G
-```
+- Raspberry Pi: `64M`
+- all other platforms: `256M`
 
-Dyalog APL places no implicit restriction on workspace size, and the virtual memory capability of the underlying operating system allows you to access more memory than you have physically installed. However if you use a workspace that **greatly** exceeds your physical memory you will encounter excessive *paging* and your APL programs will run slowly. You may also cause the system to crash.
+The memory used for the workspace must be contiguous. Dyalog places no implicit restriction on workspace size, and virtual memory allows more than the physically installed memory to be addressed; however, a workspace that greatly exceeds physical memory causes excessive paging. 32-bit versions are typically limited to 1.3-1.9 GiB (a limitation of the operating system on 32-bit processes, not of Dyalog); 64-bit versions have no such limit.
 
-Note that the memory used for the workspace must be *contiguous* .
-
-32-bit versions of Dyalog APL are typically limited to between 1.3GiB to 1.9GiB under Windows, and 1.9GiB under UNIX. These are operating system limitations imposed on 32-bit processes rather than ones imposed by Dyalog APL, and are affected by the number and size of DLLs/shared libraries that are loaded into the process space.
-
-64-bit versions of Dyalog APL have no such limitations; Dyalog has used workspaces of 96GiB on various platforms.
-
-See also [Maximum workspace size](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-workspace-tab.md).
+See also the [Workspace tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-workspace-tab.md) of the Windows Configuration Dialog.

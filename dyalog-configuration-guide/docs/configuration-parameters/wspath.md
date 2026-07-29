@@ -1,12 +1,11 @@
 # WSPath
 
-This parameter defines the workspace path. This is a list of directories that are searched in the order specified when you `)LOAD` or `)COPY` a workspace and when you start an Auxiliary Processor without explicitly specifying a path in the name. The directory paths are specified using Operating System specific conventions and separated by ";" (Windows) or ":" (UNIX).
+The workspace search path: a list of directories searched, in order, when you `)LOAD` or `)COPY` a workspace, or start an Auxiliary Processor, without giving an explicit path. To load workspaces from the current directory, include `.` in the list.
 
-Note that  to load workspaces from the current directory, "." must be included in the list defined by **WSPath**..
+Valid values are a list of directory paths, separated by `;` (Windows) or `:` (UNIX and macOS).
 
-The following Windows example causes `)COPY` , `)LOAD` and `)LIB` to look first in the current directory, then in `D:\MYWS` .
-```apl
-WSPath=.;D:\MYWS
-```
+For example, on Windows `WSPath=.;D:\MYWS` causes `)COPY`, `)LOAD`, and `)LIB` to look first in the current directory, then in `D:\MYWS`.
 
-See also [Workspace search path](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-workspace-tab.md).
+Related parameters: [WSEXT](wsext.md).
+
+See also the [Workspace tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-workspace-tab.md) of the Windows Configuration Dialog.

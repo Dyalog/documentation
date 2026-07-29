@@ -1,36 +1,19 @@
 # DyalogStartupSE
 
-This parameter specifies one or more *Session initialisation* directories that contain APL code to be installed in `⎕SE`.  If this parameter is not specified, the default is a directory named `StartupSession` located in three standard locations.
+One or more *Session initialisation* directories containing APL code to be installed in `⎕SE`.
 
-Under Windows these might be:
+Valid values are a list of directory names, separated by `;` (Windows) or `:` (UNIX and macOS). If the value begins with the separator, the default list is *extended* rather than *replaced*.
 
-1. `C:\Program Files\Dyalog\Dyalog APL-64 19.0 Unicode`
+Default is a directory named `StartupSession` in the standard locations. On Windows these might be:
 
-2. `C:\Users\Pete\Documents\Dyalog APL Files`
+1. `C:\Program Files\Dyalog\Dyalog APL-64 21.0 Unicode`
+2. `C:\Users\Bob\Documents\Dyalog APL Files`
+3. `C:\Users\Bob\Documents\Dyalog APL-64 21.0 Unicode Files`
 
-3. `C:\Users\Pete\Documents\Dyalog APL-64 19.0 Unicode Files`
+where the version-specific name has the form `Dyalog APL{bit} {version} {edition}` (`{bit}` is `-64` for a 64-bit version, otherwise nothing; `{version}` is the major and secondary version numbers separated by a period; `{edition}` is `Unicode` for the Unicode edition, otherwise nothing).
 
-The version-specific name is :
-```apl
-     Dyalog APL{bit} {version} {edition}
-```
+The effective sequence of directories is stored as a vector of character vectors in `⎕SE.Dyalog.StartupSession.AllPaths`. When the parameter is unset or extended, the `StartupSession` directory in the installation directory, the version-agnostic directory, and the version-specific directory are available as `⎕SE.Dyalog.StartupSession.Dyalog`, `.VerAgno`, and `.VerSpec` respectively.
 
-where:
+Related parameters: [DyalogStartup_X](dyalogstartup-x.md).
 
-- {bit} is "`-64`" if 64-bit version, otherwise nothing
-- {version} is the main and secondary version numbers of dyalog.exe separated by ".".
-- {edition} is "`Unicode`" for the Unicode Edition, otherwise nothing
-
-The parameter is a string containing the list of directory names separated by ";" on Windows, ":" elsewhere.
-
-If DyalogStartupSE begins with the specified separator, the default list is *extended* rather than *replaced*.
-
-Note that the effective sequence of directories specified by this parameter is converted to a vector of character vectors and stored in  `⎕SE.Dyalog.StartupSession.AllPaths`.
-
-If unset or extended (that is, starts with a : separator):
-
-- the effective StartupSession directory in [DYALOG] is available as `⎕SE.Dyalog.StartupSession.Dyalog`.
-- the StartupSession directory in the version-agnostic directory is available as `⎕SE.Dyalog.StartupSession.VerAgno`.
-- the StartupSession directory in the version-specific directory is available as `⎕SE.Dyalog.StartupSession.VerSpec`.
-
-See also [Implementation](../../../windows-ui-guide/the-session-object/session-initialisation).
+For more information, see [Session Initialisation](../../../windows-ui-guide/the-session-object/session-initialisation).

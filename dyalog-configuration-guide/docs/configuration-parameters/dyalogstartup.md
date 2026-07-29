@@ -1,5 +1,9 @@
 # DyalogStartup
 
-This parameter specifies the name of a file that contains APL code to be run each time Dyalog starts. If this is undefined, the default file is named `SessionStartup` with the file extension `.aplf`, .`apln` or `.aplc`, in the `Dyalog` directory.
+The name of a file containing APL code to be run each time Dyalog starts.
 
-See also [Introduction](../../../windows-ui-guide/the-session-object/session-initialisation).
+Valid values are a file name.
+
+Default is a file named `SessionStartup`, with the extension `.aplf`, `.apln`, or `.aplc`, in the Dyalog directory.
+
+For more information, see [Session Initialisation](../../../windows-ui-guide/the-session-object/session-initialisation).

@@ -1,3 +1,7 @@
 # ConfigFile
 
-This parameter specifies the name of the Application Configuration file. See [Configuration Files](../../../windows-installation-and-configuration-guide/configuration-files.md).
+The name of the [application configuration file](../how-to-set/application-configuration-files.md).
+
+Valid values are a file name.
+
+Related parameters: [UserConfigFile](userconfigfile.md).
