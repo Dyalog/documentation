@@ -1,13 +1,5 @@
 # Configuration Parameters
 
-Dyalog can be customised using configuration parameters. These can be set in various ways; if a configuration parameter is set in multiple places the following descending order of precedence applies:
+Dyalog is customised using configuration parameters. The parameters, the ways to set them (the command line, application and user configuration files, environment variables, and built-in defaults), and the order of precedence when a parameter is set in more than one place are documented, for all platforms, in the [Dyalog Configuration Guide](../../../dyalog-configuration-guide/introduction).
 
-1. command line settings
-2. application configuration file settings
-3. environment variable settings
-4. user configuration file settings
-5. built-in defaults
-
-This provides a great deal of flexibility, enabling a user to override one setting with another. For example, a "usual" workspace size (**MAXWS**) can be defined in the user configuration file, but be temporarily superseded by entering a different value when starting a Dyalog Session from the command line.
-
-For more information on configuration files, see [Configuration Files](configuration-files.md). For more information on environment variables, see [Environment Variables](environment-variables.md).
+The parameters that apply only to UNIX and macOS, and the platform-specific defaults and behaviour of the shared parameters, are noted on the individual parameter pages there.
