@@ -21,8 +21,8 @@ precedence. The user may obtain help by clicking on the Question (?) button and
 then on a control in the Form. It is up to you to provide the help by responding
 to the [Help](../methodorevents/help.md) event on the control.
 
-!!! note
-    If [MinButton](../properties/minbutton.md) or [MaxButton](../properties/maxbutton.md) is `1`, then [HelpButton](../properties/helpbutton.md) is always hidden, whatever its value. This is a Microsoft Windows limitation.
+!!! Info "Information"
+    If either [MinButton](../properties/minbutton.md) or [MaxButton](../properties/maxbutton.md) is `1`, then [HelpButton](../properties/helpbutton.md) is always hidden, irrespective of its value. This is a Microsoft Windows limitation.
 
 By default, a Form may be moved and resized using the mouse. These actions
 are achieved by dragging on the title bar and border respectively. It follows

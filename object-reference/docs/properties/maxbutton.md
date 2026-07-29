@@ -6,8 +6,7 @@ This property determines whether or not an object has a "maximise" button. Press
 
 Note that MaxButton is independent of [Sizeable](sizeable.md), that is, you can define an object that can be maximised but not resized. If any of the properties MaxButton, [MinButton](minbutton.md), [SysMenu](sysmenu.md) and [Sizeable](sizeable.md) are set to 1, the object will have a title bar.
 
-!!! note
-    If MaxButton or [MinButton](minbutton.md) is `1`, then [HelpButton](helpbutton.md) is always hidden, whatever its value. This is a Microsoft Windows limitation.
+If either [MinButton](minbutton.md) or MaxButton is `1`, then [HelpButton](helpbutton.md) is always hidden, irrespective of its value. This is a Microsoft Windows limitation.
 
 **Application**
 
