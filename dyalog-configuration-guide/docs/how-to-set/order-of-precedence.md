@@ -2,12 +2,12 @@
 
 When a configuration parameter is set in more than one place, Dyalog applies the following order of precedence. Each source overrides those below it:
 
-1. [Command line](command-line.md) settings, which override
-2. [Application configuration file](application-configuration-files.md) settings, which override
-3. [Environment variable](environment-variables.md) settings, which override
-4. [User configuration file](user-configuration-files.md) settings, which override
-5. [Windows Registry](registry.md) settings (Microsoft Windows only), which override
-6. [Built-in defaults](built-in-defaults.md).
+1. [Command line](command-line.md)
+2. [Application configuration file](application-configuration-files.md)
+3. [Environment variable](environment-variables.md)
+4. [User configuration file](user-configuration-files.md)
+5. [Windows Registry](registry.md) (Microsoft Windows only)
+6. [Built-in defaults](built-in-defaults.md)
 
 !!! Info "Information"
     The Registry step applies to Microsoft Windows only. On UNIX and macOS there is no Registry, so a user configuration file setting is overridden only by the sources above it.
