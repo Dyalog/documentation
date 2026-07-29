@@ -1,5 +1,11 @@
 # AutoComplete/Cols
 
-This parameter specifies the maximum number of columns (width) in the Auto Complete pop-up suggestions box.
+The maximum number of columns (width) in the AutoComplete pop-up suggestion box.
 
-See also [Show up to](../../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-auto-complete-tab.md).
+Valid values are a positive integer.
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+Related parameters: [AutoComplete/Rows](rows.md).
+
+See also the [Auto Complete tab](../../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-auto-complete-tab.md) of the Windows Configuration Dialog.

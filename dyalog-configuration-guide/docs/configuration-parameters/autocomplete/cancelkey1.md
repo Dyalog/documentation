@@ -1,5 +1,11 @@
 # AutoComplete/CancelKey1
 
-Specifies the first of two possible keys that may be used to cancel (hide) the Auto Cancel suggestion box.
+The first of two possible keys that cancel (hide) the AutoComplete suggestion box.
 
-See also [Cancel Key](../../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-auto-complete-tab.md).
+Valid values are a key code.
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+Related parameters: [AutoComplete/CancelKey2](cancelkey2.md).
+
+See also the [Auto Complete tab](../../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-auto-complete-tab.md) of the Windows Configuration Dialog.

@@ -1,5 +1,11 @@
 # AutoComplete/CompleteKey2
 
-Specifies the second of two possible keys that may be used to select the current option from the Auto Complete suggestion box.
+The second of two possible keys that select the current option from the AutoComplete suggestion box.
 
-See also [OK Key](../../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-auto-complete-tab.md).
+Valid values are a key code.
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+Related parameters: [AutoComplete/CompleteKey1](completekey1.md).
+
+See also the [Auto Complete tab](../../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-auto-complete-tab.md) of the Windows Configuration Dialog.

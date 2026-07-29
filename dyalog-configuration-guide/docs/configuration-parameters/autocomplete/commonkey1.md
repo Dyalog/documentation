@@ -1,5 +1,9 @@
 # AutoComplete/CommonKey1
 
-Specifies the key that will auto-complete the *common prefix*. This is defined to be the longest string of leading characters in the currently selected name that is shared by at least one other name in the Auto Complete suggestion box.
+The key that auto-completes the *common prefix*: the longest string of leading characters of the currently selected name that is shared by at least one other name in the AutoComplete suggestion box.
 
-See also [Common Key](../../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-auto-complete-tab.md).
+Valid values are a key code.
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+See also the [Auto Complete tab](../../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-auto-complete-tab.md) of the Windows Configuration Dialog.
