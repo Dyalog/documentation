@@ -2,9 +2,9 @@
 
 The Session toolbars are contained by four separate CoolBand objects, allowing you to configure their order in whichever way you choose. The tool buttons appear differently according to whether or not Native Look and Feel is enabled.
 
-The bitmaps for the buttons displayed on the session tool bar are implemented by three ImageList objects owned by the CoolBar `⎕SE.cbtop`. These represent the ToolButton images in their normal, highlighted and inactive states and are named `iln`, `ilh` and `ili` respectively. These images derive from three bitmap resources contained in `dyalog.exe` named `tb_normal`, `tb_hot` and `tb_inactive`.
+The bitmaps for the buttons displayed on the session tool bar are implemented by three ImageList objects owned by the CoolBar `⎕SE.cbtop`. These represent the ToolButton images in their normal, highlighted, and inactive states and are named `iln`, `ilh`, and `ili` respectively. These images derive from three bitmap resources contained in **dyalog.exe** named `tb_normal`, `tb_hot`, and `tb_inactive`.
 
-If Native Look and Feel is enabled all three bitmap resources are mapped to a different set of images which are capable of  reflecting the *Visual Styles* in use.
+If Native Look and Feel is enabled, all three bitmap resources are mapped to a different set of images which are capable of reflecting the *Visual Styles* in use.
 
 ## Native Look and Feel Enabled
 
@@ -39,7 +39,8 @@ If Native Look and Feel is enabled all three bitmap resources are mapped to a di
 | ![](img/copy-workspace-icon.png) ![](img/nlf-disabled/copy-workspace-icon.png) | Copy Workspace   | Executes the system operation `[WSCopy]` which displays a file selection dialog box and copies the (entire) selected workspace |
 | ![](img/save-workspace-icon.png) ![](img/nlf-disabled/save-workspace-icon.png) | Save Workspace   | Executes the system operation `[WSSaveas]` which displays a file selection dialog box and saves the workspace in the selected file |
 | ![](img/export-workspace-icon.png) ![](img/nlf-disabled/reexport-workspace-icon.png) | Export Workspace | Executes the system operation `[MakeExe]` which re-exports the workspace using the settings, parameters and options that were previously selected using the *Create Bound File* dialog |
-<!-- | ![](img/print-functions-icon.png) ![](img/nlf-disabled/print-workspace-icon.png) | Print Functions  | Executes the system operation `[PrintFnsInNS]` that prints all the functions and operators in the current namespace | -->
+| ![](img/print-functions-icon.png) ![](img/nlf-disabled/print-workspace-icon.png) | Print Functions  | Executes the system operation `[PrintFnsInNS]` that prints all the functions and operators in the current namespace |
+
 
 ## Object Operations
 
@@ -58,8 +59,7 @@ If Native Look and Feel is enabled all three bitmap resources are mapped to a di
 | --- | ---  | --- |
 | ![](img/search-icon.png) ![](img/nlf-disabled/search-icon.png) | Search | Executes the system operation `[WSSearch]` which displays the *Workspace Search* tool |
 | ![](img/explorer-icon.png) ![](img/nlf-disabled/explorer-icon.png) | Explorer | Executes the system operation `[Explorer]` which displays the *Workspace Explorer* tool |
-| ![](img/clear-all-stops-icon.png) ![](img/nlf-disabled/clear-all-stops-icon.png) | Clear all Stops | Executes the system operation `[ClearTSM]` which clears all `⎕STOP` , `⎕MONITOR` and `⎕TRACE` settings |
-<!-- | ![](img/line-numbers-icon.png) ![](img/nlf-disabled/line-numbers-icon.png) | Line Numbers | Executes the system operation `[LineNumbers]` which toggles the display of line numbers in edit and trace windows on and off | -->
+| ![](img/clear-all-stops-icon.png) ![](img/nlf-disabled/clear-all-stops-icon.png) | Clear all Stops | Executes the system operation `[ClearTSM]` which clears all `⎕STOP`, `⎕MONITOR`, and `⎕TRACE` settings |
 
 ## Edit Operations
 
