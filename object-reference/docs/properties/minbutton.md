@@ -8,6 +8,9 @@ Note that MinButton is independent of [Sizeable](sizeable.md), that is, you can 
 
 If any of the properties MinButton, [MaxButton](maxbutton.md), [SysMenu](sysmenu.md), and [Moveable](moveable.md) are set to 1, the object will have a title bar.
 
+!!! note
+    If MinButton or [MaxButton](maxbutton.md) is `1`, then [HelpButton](helpbutton.md) is always hidden, whatever its value. This is a Microsoft Windows limitation.
+
 **Application**
 
 Objects: [Form](../objects/form.md), [HTMLRenderer](../objects/htmlrenderer.md), [SubForm](../objects/subform.md)
