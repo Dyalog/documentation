@@ -1,3 +1,9 @@
 # APL_FCREATE_PROPS_C
 
-This parameter specifies the default checksum level for newly-created component files. If unspecified, the default checksum level is 1.
+The default checksum level for newly-created component files.
+
+Valid values are a checksum level.
+
+Default is `1`.
+
+Related parameters: [APL_FCREATE_PROPS_J](apl-fcreate-props-j.md).

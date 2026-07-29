@@ -1,7 +1,11 @@
 # AplCoreName
 
-This parameter specifies the directory and name of the file in which *aplcore* should be saved. The optional wild-card character (`*`) is replaced by a number when the file is written. If there is more than one `*` in **AplCoreName**, the string is used as is; no substitution is made. For more details, including how to prevent aplcore files from being generated, see [MaxAplCores](maxaplcores.md).
+The directory and name of the file in which an *aplcore* is saved. An optional wild-card character (`*`) is replaced by a number when the file is written; if there is more than one `*`, the string is used as is, with no substitution. Dyalog terminates with an exit code of `3` when an aplcore is generated.
 
-Note that APL terminates with an exit code of 3 when an aplcore file is generated.
+Valid values are a file path, optionally containing a single `*`.
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+Related parameters: [MaxAplCores](maxaplcores.md) (including how to prevent aplcore files being generated).
 
 See also [aplcore Parameters](../../../language-reference-guide/primitive-operators/i-beam/aplcore-parameters).

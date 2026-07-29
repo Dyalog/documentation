@@ -1,15 +1,10 @@
 # APL_FAST_FCHK
 
-This parameter specifies whether Dyalog APL should optimise `⎕FCHK` by allowing it to reliably determine whether a component file had been properly untied and therefore does not need to be checked (this is overridable using the `⎕FCHK` option force).
+Whether `⎕FCHK` is optimised so that it can reliably determine that a component file was properly untied and so need not be checked (this can be overridden with the `⎕FCHK` `force` option). The optimisation has a performance cost on `⎕FUNTIE`, so it is best switched off in applications that frequently tie and untie files. It affects only component files with journaling enabled.
 
-Optimising `⎕FCHK` in this way has a performance impact on `⎕FUNTIE` and it is recommended this optimisation is switched off if your application frequently ties and unties files.
+Valid values are:
 
-Note: this only affects component files with journaling enabled.
+- `0` : do not optimise `⎕FCHK` (optimise `⎕FUNTIE` instead)
+- `1` : optimise `⎕FCHK`
 
-The values of the parameter are:
-
-|---|----------------------------------------------------|
-|0  |Do not optimise `⎕FCHK` (optimise `⎕FUNTIE` instead)|
-|1  |Optimise `⎕FCHK`                                    |
-
-The default value of the parameter is 0 on all platforms. On Windows, setting the value 1 has no effect.
+Default is `0` on all platforms. On Microsoft Windows, setting the value `1` has no effect.

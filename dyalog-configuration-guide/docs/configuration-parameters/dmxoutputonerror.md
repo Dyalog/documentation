@@ -1,5 +1,12 @@
 # DMXOutputOnError
 
-This parameter specifies in which windows DMX error messages are displayed. It is an integer whose value is the sum of the specified windows where 1 = Status Window and 2 = Session Window.
+Which windows `⎕DMX` error messages are displayed in. The value is the sum of the codes for the chosen windows.
 
-See also [DMX messages should go to](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-help-dmx-tab.md).
+The value is the sum of the following:
+
+- `1` : Status window
+- `2` : Session window
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+See also the [Help/DMX tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-help-dmx-tab.md) of the Windows Configuration Dialog.
