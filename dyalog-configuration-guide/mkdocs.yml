@@ -66,6 +66,7 @@ nav:
       - Configuration File Structure: how-to-set/configuration-file-structure.md
   - Configuration Parameters:
       - Introduction: configuration-parameters/configuration-parameters.md
+      - By Category: configuration-parameters/configuration-parameters-by-category.md
       - AddClassHeaders: configuration-parameters/addclassheaders.md
       - APLAN_FOR_EDITOR: configuration-parameters/aplan-for-editor.md
       - APLAN_FOR_OUTPUT: configuration-parameters/aplan-for-output.md
