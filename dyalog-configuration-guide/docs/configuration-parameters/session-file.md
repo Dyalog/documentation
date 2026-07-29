@@ -6,4 +6,4 @@ Default is `[DYALOG]/default.dse` (the `default.dse` file in the Dyalog installa
 
 <!-- REVIEW(default): confirmed for UNIX/macOS from the Unix guide ($DYALOG/default.dse); confirm the Microsoft Windows default. -->
 
-See also the [Session tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab.md) of the Windows Configuration Dialog.
+See also the [Session tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab) of the Windows Configuration Dialog.

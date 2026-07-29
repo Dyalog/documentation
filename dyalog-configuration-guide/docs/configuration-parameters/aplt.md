@@ -12,4 +12,4 @@ Default is `WIN.DOT` on Microsoft Windows, where there is rarely a need to alter
 
 Related parameters: [APLTrans](apltrans.md).
 
-See also the [Output tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-output-tab-classic-edition-only.md) of the Windows Configuration Dialog.
+See also the [Output tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-output-tab-classic-edition-only) of the Windows Configuration Dialog.

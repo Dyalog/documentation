@@ -11,4 +11,4 @@ Valid values are the name of an installed keyboard layout.
 
 Related parameters: [InitialKeyboardLayoutInUse](initialkeyboardlayoutinuse.md), [InitialKeyboardLayoutShowAll](initialkeyboardlayoutshowall.md).
 
-See also the [Unicode Input tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-unicode-input-tab-unicode-edition-only.md) of the Windows Configuration Dialog.
+See also the [Unicode Input tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-unicode-input-tab-unicode-edition-only) of the Windows Configuration Dialog.

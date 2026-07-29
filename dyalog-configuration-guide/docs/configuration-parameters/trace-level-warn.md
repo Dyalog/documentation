@@ -8,4 +8,4 @@ Default is `16`.
 
 Related parameters: [Trace_On_Error](trace-on-error.md), [SingleTrace](singletrace.md), [ClassicMode](classicmode.md).
 
-See also the [Trace/Edit tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md) of the Windows Configuration Dialog.
+See also the [Trace/Edit tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab) of the Windows Configuration Dialog.

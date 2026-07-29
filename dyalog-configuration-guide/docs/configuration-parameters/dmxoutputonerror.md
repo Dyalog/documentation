@@ -9,4 +9,4 @@ The value is the sum of the following:
 
 <!-- REVIEW(default): default value not present in the migrated source; confirm. -->
 
-See also the [Help/DMX tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-help-dmx-tab.md) of the Windows Configuration Dialog.
+See also the [Help/DMX tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-help-dmx-tab) of the Windows Configuration Dialog.

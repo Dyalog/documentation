@@ -6,4 +6,4 @@ Valid values are those of `⎕IO`: `0` or `1`.
 
 Default is `1`.
 
-See also the [Session tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab.md) of the Windows Configuration Dialog.
+See also the [Session tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab) of the Windows Configuration Dialog.

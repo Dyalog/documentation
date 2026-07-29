@@ -8,4 +8,4 @@ For example, on Windows `WSPath=.;D:\MYWS` causes `)COPY`, `)LOAD`, and `)LIB` t
 
 Related parameters: [WSEXT](wsext.md).
 
-See also the [Workspace tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-workspace-tab.md) of the Windows Configuration Dialog.
+See also the [Workspace tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-workspace-tab) of the Windows Configuration Dialog.

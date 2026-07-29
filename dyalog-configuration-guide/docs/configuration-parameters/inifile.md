@@ -20,4 +20,4 @@ Default depends on edition (64-bit and 32-bit versions respectively):
   Software\Dyalog\Dyalog APL/W {{ version_majmin }}
   ```
 
-See also the [General tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-general-tab.md) of the Windows Configuration Dialog.
+See also the [General tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-general-tab) of the Windows Configuration Dialog.

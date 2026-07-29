@@ -11,4 +11,4 @@ Default is the `aplkeys` sub-directory of the Dyalog installation directory (giv
 
 Related parameters: [APLK](aplk.md), [Dyalog](dyalog.md).
 
-See also the [Input tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-input-tab-classic-edition-only.md) of the Windows Configuration Dialog.
+See also the [Input tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-input-tab-classic-edition-only) of the Windows Configuration Dialog.

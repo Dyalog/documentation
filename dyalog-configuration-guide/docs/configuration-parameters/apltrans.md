@@ -11,4 +11,4 @@ Default is the `apltrans` sub-directory of the Dyalog installation directory (gi
 
 Related parameters: [APLT](aplt.md), [Dyalog](dyalog.md).
 
-See also the [Output tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-output-tab-classic-edition-only.md) of the Windows Configuration Dialog.
+See also the [Output tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-output-tab-classic-edition-only) of the Windows Configuration Dialog.

@@ -18,7 +18,7 @@ All but the first of these are made using the *Export* dialog box accessed from 
 
 ## Configuration Parameters
 
-Configuration parameters for these run-time applications, both for the Dyalog engine and for your own application settings, may be specified in a number of ways. See [Configuration Parameters](../../dyalog-configuration-guide/configuration-parameters/configuration-parameters.md).
+Configuration parameters for these run-time applications, both for the Dyalog engine and for your own application settings, may be specified in a number of ways. See [Configuration Parameters](../../dyalog-configuration-guide/configuration-parameters/configuration-parameters).
 
 Nevertheless, it is strongly recommended that you use Configuration files. In this section we will discuss only Application Configuration files, although User Configuration files may be used as well.
 
@@ -54,7 +54,7 @@ The application starts by running `⎕LX` in `myapp.dws`. If a configuration fil
      dyalogrt.exe Load=myfn.aplf
 ```
 
-The application loads the file named `myfn.aplf` which contains the source code for a function, and executes the expression `(myfn 0⍴⊂'')` (see [Load](../../dyalog-configuration-guide/configuration-parameters/load.md)).  If a configuration file named `myfn.dcfg` in the same directory, it is loaded and applied.
+The application loads the file named `myfn.aplf` which contains the source code for a function, and executes the expression `(myfn 0⍴⊂'')` (see [Load](../../dyalog-configuration-guide/configuration-parameters/load)).  If a configuration file named `myfn.dcfg` in the same directory, it is loaded and applied.
 
 If your application uses any component of the Microsoft .NET Framework, you must distribute the Bridge DLL and DyalogNet DLLs. These DLLs must be placed in the same directory as your EXE.
 

@@ -14,4 +14,4 @@ Valid values are:
 
 Related parameters: [InitialKeyboardLayout](initialkeyboardlayout.md).
 
-See also the [Unicode Input tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-unicode-input-tab-unicode-edition-only.md) of the Windows Configuration Dialog.
+See also the [Unicode Input tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-unicode-input-tab-unicode-edition-only) of the Windows Configuration Dialog.

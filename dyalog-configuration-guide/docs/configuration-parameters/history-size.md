@@ -6,4 +6,4 @@ The size of the buffer used to store previously entered (input) lines in the Ses
 
 Related parameters: [Input_Size](input-size.md).
 
-See also the [Session tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab.md) of the Windows Configuration Dialog.
+See also the [Session tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab) of the Windows Configuration Dialog.

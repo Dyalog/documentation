@@ -8,4 +8,4 @@ Valid values are a key code.
 
 Related parameters: [AutoComplete/CompleteKey1](completekey1.md).
 
-See also the [Auto Complete tab](../../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-auto-complete-tab.md) of the Windows Configuration Dialog.
+See also the [Auto Complete tab](../../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-auto-complete-tab) of the Windows Configuration Dialog.

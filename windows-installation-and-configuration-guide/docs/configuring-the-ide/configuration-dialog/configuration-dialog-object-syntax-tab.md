@@ -8,6 +8,6 @@ Table: Configuration dialog: Object Syntax
 
 |Label|Parameter|Description|
 |---|---|---|
-|Expose properties of GUI Namespaces|[Default_WX](../../../../dyalog-configuration-guide/configuration-parameters/default-wx.md)|Specifies the value of `⎕WX` in a clear workspace.|
-|Expose properties of Root|[PropertyExposeRoot](../../../../dyalog-configuration-guide/configuration-parameters/propertyexposeroot.md)|Specifies whether or not the names of properties, methods and events of the Root object are exposed.|
-|Expose properties of Session Namespace|[PropertyExposeSE](../../../../dyalog-configuration-guide/configuration-parameters/propertyexposese.md)|Specifies whether or not the names of properties, methods and events of the Session object are exposed.|
+|Expose properties of GUI Namespaces|[Default_WX](../../../../dyalog-configuration-guide/configuration-parameters/default-wx)|Specifies the value of `⎕WX` in a clear workspace.|
+|Expose properties of Root|[PropertyExposeRoot](../../../../dyalog-configuration-guide/configuration-parameters/propertyexposeroot)|Specifies whether or not the names of properties, methods and events of the Root object are exposed.|
+|Expose properties of Session Namespace|[PropertyExposeSE](../../../../dyalog-configuration-guide/configuration-parameters/propertyexposese)|Specifies whether or not the names of properties, methods and events of the Session object are exposed.|

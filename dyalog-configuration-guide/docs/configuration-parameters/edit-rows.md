@@ -8,4 +8,4 @@ Valid values are a positive integer number of character units.
 
 Related parameters: [Edit_Cols](edit-cols.md).
 
-See also the [Windows tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-windows-tab.md) of the Windows Configuration Dialog.
+See also the [Windows tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-windows-tab) of the Windows Configuration Dialog.

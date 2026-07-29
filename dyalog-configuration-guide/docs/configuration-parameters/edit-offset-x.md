@@ -8,4 +8,4 @@ Valid values are an integer number of character units.
 
 Related parameters: [Edit_Offset_Y](edit-offset-y.md), [Edit_First_X](edit-first-x.md).
 
-See also the [Windows tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-windows-tab.md) of the Windows Configuration Dialog.
+See also the [Windows tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-windows-tab) of the Windows Configuration Dialog.

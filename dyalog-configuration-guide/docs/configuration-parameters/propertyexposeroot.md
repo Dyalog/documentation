@@ -11,4 +11,4 @@ Valid values are:
 
 Related parameters: [PropertyExposeSE](propertyexposese.md), [Default_WX](default-wx.md).
 
-See also the [Object Syntax tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-object-syntax-tab.md) of the Windows Configuration Dialog.
+See also the [Object Syntax tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-object-syntax-tab) of the Windows Configuration Dialog.

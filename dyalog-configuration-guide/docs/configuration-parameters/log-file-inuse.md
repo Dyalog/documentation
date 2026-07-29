@@ -11,4 +11,4 @@ Default is `1`.
 
 Related parameters: [Log_File](log-file.md), [Log_Size](log-size.md).
 
-See also the [Session tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab.md) of the Windows Configuration Dialog.
+See also the [Session tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab) of the Windows Configuration Dialog.
