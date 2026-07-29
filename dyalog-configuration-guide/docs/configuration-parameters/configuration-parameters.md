@@ -1,41 +1,26 @@
 # Configuration Parameters
 
-## Introduction
+This section documents each Dyalog configuration parameter on its own page. A parameter page states what the parameter does, its valid values, its default (noting any difference between operating systems), and related parameters.
 
-Dyalog APL is customised using a set of **configuration parameters**. These may be defined  in a number of ways, which take precedence as follows:
+The parameters are listed alphabetically in the navigation pane. For a subject-based overview, see [Configuration Parameters by Category](configuration-parameters-by-category.md).
 
-- Command-line settings
-- Application configuration file settings
-- Environment variable settings
-- User configuration file settings
-- Settings in the registry section defined by the **IniFile** parameter (Windows only)
-- Built-in defaults
+For how to give a parameter a value – on the command line, in a configuration file, as an environment variable, or in the Windows Registry – and for the order of precedence when a parameter is set in more than one place, see [How to Set Configuration Parameters](../how-to-set/overview.md).
 
-This scheme provides a great deal of flexibility, and a system whereby you can override one setting with another. For example, you can define your normal workspace size (*maxws*) in the Registry, but override it with a new value specified on the APL command line. The way this is done is described in the following section.
+You are not limited to the parameters used by Dyalog itself; you can also define parameters of your own.
 
-Furthermore, you are not limited to the set of parameters employed by APL itself as you may add parameters of your own choosing.
+## Specifying size-related parameters
 
-Although for clarity parameter names are given here in mixed case, they are case-independent under Windows. Under UNIX and Linux, if Dyalog parameters are specified as environment variables they must be named entirely in upper-case.
+Several configuration parameters define a size, such as [maxws](maxws.md) or [log_size](log-size.md).
 
-Note that the value of a parameter obtained by the GetEnvironment method (see [GetEnvironment](../../../object-reference/methodorevents/getenvironment)) uses exactly the same set of rules.
+The value of such a parameter is an integer, optionally followed immediately by a single character that denotes the units:
 
-The following section details those parameters that are implemented by Registry Values in the top-level folder identified by **IniFile**. Values that are implemented in sub-folders are *mainly* internal and are not described in detail here. However, any Value that is maintained via a configuration dialog box will be named and described in the documentation for that dialog box in The APL Environment.
+| Character | Units |
+|-----------|-------|
+| `K`       | KiB   |
+| `M`       | MiB   |
+| `G`       | GiB   |
+| `T`       | TiB   |
+| `P`       | PiB   |
+| `E`       | EiB   |
 
-## Specifying Size-related Parameters
-
-Several of the configuration parameters define sizes.
-
-The value of the parameter must consist of an integer value, optionally followed immediately by a single character which denotes the units to be used. If the value contains no character the units are assumed to be KiB.
-
-Valid values for units are:
-
-K(KiB), M(MiB), G(GiB), T(TiB), P(PiB) and E(EiB).
-
-Specifying an invalid value will prevent Dyalog APL from starting.
-
-## Changing parameter values in the Registry
-
-You can change parameters in the Registry in one of two ways:
-
-- Using the Configuration dialog box that is obtained by selecting *Configure* from the *Options* menu on the Dyalog APL/W session. See ["The Configuration Dialog Box"](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-general-tab.md) for details.
-- By directly editing the Windows Registry using `REGEDIT.EXE` or `REGEDIT32.EXE`. This is necessary for parameters that are not editable via the Configuration dialog box.
+If no character is given, the units are assumed to be KiB. Specifying an invalid value prevents Dyalog from starting.
