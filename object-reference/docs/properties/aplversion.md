@@ -9,7 +9,7 @@ a 4-element vector of character vectors as described in the table below. In futu
 |-----|-------------------------|-----------------|
 |`[1]`|Target Environment       |Windows<br/>Windows-64<br/>Windows Mobile<br/>Linux<br/>Linux-64<br/>AIX<br/>AIX-64<br/>Mac-64<br/>Solaris<br/>Solaris-64|
 |`[2]`|Version Number           |&nbsp;|
-|`[3]`|Version Type             |`W` Windows<br/>`S` Server (terminal) version<br/>`M` Motif |
+|`[3]`|Version Type             |`W` Windows<br/>`S` Server (terminal) version|
 |`[4]`|Program Type             |Development<br/>Runtime<br/>DLL<br/>DLLRT|
 
 <h2 class="example">Example</h2>
