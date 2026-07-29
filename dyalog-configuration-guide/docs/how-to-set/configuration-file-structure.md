@@ -39,7 +39,12 @@ If the referenced parameter is not defined, no substitution takes place and the 
 
 ## File Names
 
-Path names in configuration files should use portable forward slashes (`/`) rather than back-slashes (`\`), because JSON uses the back-slash as an escape character. For example, `WSPATH: ["c:/Dyalog21.0"]` (or `["c:\\Dyalog21.0"]`) specifies `c:\Dyalog21.0`, whereas `["c:\Dyalog21.0"]` means `c:Dyalog21.0`.
+Path names in configuration files should use portable forward slashes (`/`) rather than back-slashes (`\`), because JSON uses the back-slash as an escape character. For example, `WSPATH: ["c:/Dyalog21.0"]` (or `["c:\\Dyalog21.0"]`) specifies `c:\Dyalog21.0`.
+
+An unescaped back-slash is not reported as an error. The file is accepted, and the resulting value silently differs from the path intended:
+
+- `["c:\Dyalog21.0"]` gives `c:Dyalog21.0`. Because `\D` is not a recognised escape sequence, the back-slash is discarded, and an absolute path becomes a drive-relative one.
+- `["c:\temp"]` gives `c:`, followed by a tab character, followed by `emp`, because `\t` is the escape sequence for a tab.
 
 ## Nested Structures
 
