@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Signalling Events</span></h1>
+# Signalling Events
 
 It would be useful to be able to employ the idea of cutting back the stack and taking an alternative route through the code, when a condition other than an APL error occurs. To achieve this, we must be able to trap on errors other than APL errors, and we must be able to define these errors to APL. We do the former by using error codes in the range 500 to 999, and the latter by using `⎕SIGNAL`.
 

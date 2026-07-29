@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">The APL Command Line</span></h1>
+# The APL Command Line
 
 The command line for Dyalog APL is described below; the command line for non-Windows versions of Dyalog APL is very similar and is also documented in *Dyalog for UNIX UI Guide: Starting APL*.
 

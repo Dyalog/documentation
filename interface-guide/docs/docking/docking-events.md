@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Docking Events</span></h1>
+# Docking Events
 
 An object (the client) may be docked in another object (the host) if the Dockable property of the client is set to `'Always'` and the name of the client is included in the host object's DockChildren property. This property defines the list of names that the host will accept. Docking a Form or re-docking an already docked object behave in essentially the same way.
 

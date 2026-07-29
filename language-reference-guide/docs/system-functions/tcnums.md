@@ -1,19 +1,11 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕TCNUMS TCNUMS
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Thread Child Numbers</span> <span class="command">R←⎕TCNUMS Y</span></h1>
-
-
+# <span>Thread Child Numbers</span> `R←⎕TCNUMS Y`{{key}}
 
 `Y` must be a simple array of integers representing thread numbers.
-
 
 The result `R` is a simple integer vector of the child threads of each thread of `Y`.
 
@@ -26,5 +18,7 @@ The result `R` is a simple integer vector of the child threads of each thread of
 4 5 6 7 8 9
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕TCNUMS TCNUMS
+</div>

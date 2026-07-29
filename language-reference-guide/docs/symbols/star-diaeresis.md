@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Star Diaeresis</span> <span class="command">⍣</span></h1>
+# <span>Star Diaeresis</span> `⍣`
 
 Star Diaeresis is a dyadic operator with an ambivalent left operand and an integer or dyadic right operand
 
@@ -42,5 +42,3 @@ GH
 1.61803
 ```
 [Language Elements](../glyphs.md)
-
-

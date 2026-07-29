@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Defining a Window Menu</span></h1>
+# Defining a Window Menu
 
 Most MDI applications incorporate a Window menu. This is a special menu that displays the captions of all open SubForms as shown below. The caption of the SubForm which currently has the focus is checked and the user can switch focus to another SubForm by selecting it from the Window menu.
 

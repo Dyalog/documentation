@@ -1,9 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FCHK FCHK
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">File Check and Repair</span> <span class="command">R←{X} ⎕FCHK Y</span></h1>
+# <span>File Check and Repair</span> `R←{X} ⎕FCHK Y`{{key}}
 
 `⎕FCHK` validates and repairs component files, and validates files associated with external variables, following an abnormal termination of the APL process or operating system.
 
@@ -88,3 +88,8 @@ Following a *repair* of the file, the result indicates those components that cou
 Repair can recover only check-summed components from the file, that is, only those components that were written with the checksum option enabled (see [File Properties](fprops.md)).
 
 Following an operating system crash, repair may result in one or more individual components being rolled back to a previous version or not recovered at all, unless Journaling levels 2 or 3 were also set when these components were written.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FCHK FCHK
+</div>

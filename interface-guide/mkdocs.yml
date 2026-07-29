@@ -7,6 +7,7 @@ theme:
     - navigation.tracking
     - navigation.path
     - navigation.indexes
+    - navigation.footer
   name: material
   font:
     text: Be Vietnam Pro
@@ -27,7 +28,9 @@ plugins:
         enable: true
         start_index: 1
         increment_index: 1
-        position: bottom
+        position: top
+        reference_text: 'Table {index}'
+        caption_prefix: 'Table {index}:' 
 extra:
   version_maj: 20
   version_majmin: 20.0
@@ -36,8 +39,12 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.keys
   - pymdownx.superfences
+  - pymdownx.highlight:
+      pygments_lang_class: true
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.highlight:
+      use_pygments: false
   - attr_list
   - abbr
   - footnotes
@@ -46,6 +53,7 @@ markdown_extensions:
   - toc:
       title: On this page
 nav:
+  - index.md
   - Introduction:
       - Overview: introduction/overview.md
       - Concepts: introduction/concepts.md

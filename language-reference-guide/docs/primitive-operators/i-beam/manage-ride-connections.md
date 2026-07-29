@@ -1,10 +1,10 @@
+---
+search:
+  boost: 2
+---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  3502⌶
-</div>
 
-<h1 class="heading"><span class="name">Manage Ride Connections</span> <span class="command">R←3502⌶Y</span></h1>
+# <span>Manage Ride Connections</span> `R←3502⌶Y`{{key}}
 
 `3502⌶` gives control over Ride connections to the interpreter. More details about Ride can be found in the [Ride User Guide](https://dyalog.github.io/ride).
 
@@ -42,5 +42,7 @@ and similarly for altering the Ride settings in an active APL session.
 
 Enabling Ride to access applications that use the run-time interpreter means that the APL code of those applications can be accessed. The I-beam mechanism described above means that the APL code itself must grant the right for a Ride client to connect to the run‑time interpreter. Although Dyalog Ltd might change the details of this mechanism, the APL code will **always** need to grant connection rights. In particular, no mechanism that is only dependent on configuration parameters will be implemented.
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  3502⌶
+</div>

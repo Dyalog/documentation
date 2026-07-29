@@ -1,10 +1,10 @@
+---
+search:
+  boost: 2
+---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  3012⌶
-</div>
 
-<h1 class="heading"><span class="name">Enable Compression of Large Components</span> <span class="command">{R}←3012⌶Y</span></h1>
+# <span>Enable Compression of Large Components</span> `{R}←3012⌶Y`{{key}}
 
 Specifies whether large components (>2GB) may be compressed.
 
@@ -16,3 +16,8 @@ Specifies whether large components (>2GB) may be compressed.
 | 1     | Large components will be compressed if Z property is 1 (see [File Properties](../../system-functions/fprops.md)), but versions of Dyalog prior to v19.0 will not be able to read them.|
 
 The shy result `R` is the previous value of this setting.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  3012⌶
+</div>

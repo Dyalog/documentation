@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Grade Down</span> <span class="command">⍒</span></h1>
+# <span>Grade Down</span> `⍒`
 
 Monadic Grade Down means
 [Grade Down](../primitive-functions/grade-down.md)
@@ -34,5 +34,3 @@ Provide collating sequence for character data.
 1 3 5 2 4 6
 ```
 [Language Elements](../glyphs.md)
-
-

@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">Index</span> <span class="right">Property</span></h1>
-
-[**Applies To**](../propertyapplies/index-property.md)
+# <span>Index</span> <span>Property</span>
 
 **Description**
 
@@ -15,3 +13,7 @@ For a [FileBox](../objects/filebox.md), the Index property determines which of t
 For a [CoolBand](../objects/coolband.md), the Index property specifies the position of the [CoolBand](../objects/coolband.md) within its parent [CoolBar](../objects/coolbar.md), relative to the other [CoolBands](../objects/coolband.md) in the [CoolBar](../objects/coolbar.md).
 
 The value of Index is dependent on `⎕IO`, and its default value is equal to `⎕IO`.
+
+**Application**
+
+Objects: [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [CoolBand](../objects/coolband.md), [FileBox](../objects/filebox.md), [Grid](../objects/grid.md), [List](../objects/list.md), [TreeView](../objects/treeview.md)

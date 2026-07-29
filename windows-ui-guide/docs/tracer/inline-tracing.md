@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Inline Tracing</span></h1>
+# Inline Tracing
 
 *Inline Tracing* is an extension to the Tracer that allows you to step through the execution of individual primitives within expressions, examining intermediate results and arguments of sub-expressions. It enables an in-depth inspection of complex expressions typed directly into the session, and can be used in conjunction with the traditional tracing mode to skip over lines you're not interested in and step through primitive-by-primitive in complex expressions where required.
 
@@ -131,4 +131,3 @@ with the first expression highlighted (red outline). Enter **&lt;ER&gt;** (<kbd>
 The second expression is now highlighted. Enter **&lt;ER&gt;** (<kbd>enter</kbd>) again to execute the second expression, then enter **&lt;IT&gt;** (<kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>enter</kbd>) to start tracing the primitives in the third expression:
 
 ![](../img/tbt-diamond3.png)
-

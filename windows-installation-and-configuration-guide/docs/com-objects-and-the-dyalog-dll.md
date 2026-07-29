@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">COM Objects and the Dyalog APL DLL</span></h1>
+# COM Objects and the Dyalog APL DLL
 
 ## Introduction
 

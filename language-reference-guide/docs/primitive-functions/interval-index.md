@@ -1,8 +1,9 @@
-<div style="display: none;">
-  ⍸
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Interval Index</span> <span class="command">R←X⍸Y</span></h1>
+# <span>Interval Index</span> `R←X⍸Y`{{key}}
 
 !!! note "Classic Edition"
     The symbol `⍸` (Iota Underbar) is not available in Classic Edition, and Interval Index is instead represented by `⎕U2378`.
@@ -301,3 +302,8 @@ Another card, the 10 of diamonds is dealt. Where must it go in the hand ?
 ```
 
 Note that if `(∧/Y∊X)` and `X` is sorted and `⎕CT=0` ,then `x⍸y` is the same as `x⍳y`.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍸
+</div>

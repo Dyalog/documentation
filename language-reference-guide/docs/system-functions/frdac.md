@@ -1,9 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FRDAC FRDAC
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">File Read Access</span> <span class="command">R←⎕FRDAC Y</span></h1>
+# <span>File Read Access</span> `R←⎕FRDAC Y`{{key}}
 
 ## Access code 4096
 
@@ -19,5 +19,7 @@ For details see [File Access Control](../../../programming-reference-guide/compo
 31   ¯1     0
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FRDAC FRDAC
+</div>

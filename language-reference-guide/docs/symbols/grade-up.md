@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Grade Up</span> <span class="command">⍋</span></h1>
+# <span>Grade Up</span> `⍋`
 
 Monadic Grade Up means
 [Grade Up](../primitive-functions/grade-up.md)
@@ -32,5 +32,3 @@ Dyadic Grade Up means
 2 4 6 3 5 1
 ```
 [Language Elements](../glyphs.md)
-
-

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Including Script Files in Scripts</span></h1>
+# Including Script Files in Scripts
 
 A Class or Namespace script in the workspace or in a script file may specify that other  script files are to be loaded prior to the fixing of the script itself. To do so, it must begin with one or more `:Require` statements, with the following syntax:
 ```apl

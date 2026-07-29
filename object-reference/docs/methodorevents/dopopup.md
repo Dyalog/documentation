@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">DoPopup</span> <span class="right">Event 846</span></h1>
-
-**Applies To:** [HTMLRenderer](../objects/htmlrenderer.md)
+# <span>DoPopup</span> <span>Event 846</span>
 
 **Description**
 
@@ -98,3 +96,7 @@ The example function show above will display a new window when the button labell
 ```apl
       DoPopupDemo ''
 ```
+
+**Application**
+
+Objects: [HTMLRenderer](../objects/htmlrenderer.md)

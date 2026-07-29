@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Up Arrow</span> <span class="command">↑</span></h1>
+# <span>Up Arrow</span> `↑`
 
 Monadic Up Arrow means
 

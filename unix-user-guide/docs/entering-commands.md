@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name"> Entering Commands</span></h1>
+#  Entering Commands
 
 Commands are either entered using the keys on the keyboard in conjunction with 0 or more metakeys, or when using the keyboard in different modes. A separate keystroke is used to move from one mode to the next; by default this is defined to be <kbd>Ctrl</kbd>+<kbd>x</kbd>. When Dyalog APL is started, you are in mode 0. Except Move/Resize in the editor/tracer, all mode changes are effective for one keystroke only.
 

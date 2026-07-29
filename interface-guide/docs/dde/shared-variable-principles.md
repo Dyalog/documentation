@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Shared Variable Principles</span></h1>
+# Shared Variable Principles
 
 Shared Variables are part of the APL standard, although strictly speaking as an optional facility. They provide a comprehensive mechanism for communicating between two APL workspaces, or between APL and a co-operating non-APL application. Despite some conflicts between Shared Variable concepts and DDE, this standard APL mechanism has overriding advantages as the basis for a DDE interface. The main benefit is that Shared Variables provide a **general** basis for developing communications using a variety of protocols, of which DDE is but a single example. Dyalog APL communications are not therefore designed for and limited to DDE, but can be extended to other protocols which are appropriate in different environments.
 

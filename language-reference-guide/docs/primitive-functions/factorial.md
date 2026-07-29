@@ -1,15 +1,9 @@
-<div style="display: none;">
-  !
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Factorial</span> <span class="command">R←!Y</span></h1>
-
-
+# <span>Factorial</span> `R←!Y`{{key}}
 
 `Y` must be numeric excluding negative integers.  `R` is numeric.  `R` is the product of the first `Y` integers for positive integer values of `Y`. In general, `!Y` is gamma `Y+1`.
 
@@ -25,5 +19,7 @@
 0.4980156681J¯0.1549498283 0.1122942423J0.3236128855
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ! factorial
+</div>

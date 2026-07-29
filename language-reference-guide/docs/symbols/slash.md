@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Slash</span> <span class="command">/</span></h1>
+# <span>Slash</span> `/`
 
 # Used as a Function
 
@@ -23,7 +23,7 @@ Hat
 Slash is a monadic operator with a dyadic operand
 
 Operator Slash means
-[Reduce](../primitive-operators/reduce.md), [N-Wise Reduce](../primitive-operators/reduce/reduce-n-wise.md)
+[Reduce](../primitive-operators/reduce/index.md), [N-Wise Reduce](../primitive-operators/reduce/reduce-n-wise.md)
 ```apl
       +/ 1 2 3 4 5
 15
@@ -54,5 +54,3 @@ Operator Slash means
 
 ```
 [Language Elements](../glyphs.md)
-
-

@@ -1,18 +1,11 @@
-<div style="display: none;">
-  ⍕
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Format</span> <span class="command">R←⍕Y</span></h1>
-
-
+# <span>Format</span> `R←⍕Y`{{key}}
 
 `Y` may be any array. `R` is a simple character array which will display identically to the display produced by `Y`. The result is independent of `⎕PW`.  If `Y` is a simple character array, then `R` is `Y`.
-
 
 <h2 class="example">Example</h2>
 ```apl
@@ -23,7 +16,6 @@ PEOPLE
       B ≡ A
 1
 ```
-
 
 If `Y` is a simple numeric scalar, then `R` is a vector containing the formatted number without any spaces.  A floating point number is formatted according to the system variable `⎕PP`.  `⎕PP` is ignored when formatting integers.
 
@@ -53,7 +45,6 @@ If `Y` is a simple numeric scalar, then `R` is a vector containing the formatted
 123.46
 ```
 
-
 Scaled notation is used if the magnitude of the non-integer number is too large to represent with `⎕PP` significant digits or if the number requires more than five leading zeroes after the decimal point.
 
 <h2 class="example">Examples</h2>
@@ -64,7 +55,6 @@ Scaled notation is used if the magnitude of the non-integer number is too large 
       ⍕0.0000001234
 1.234E¯7
 ```
-
 
 If `Y` is a simple numeric vector, then `R` is a character vector in which each element of `Y` is independently formatted with a single separating space between formatted elements.
 
@@ -77,8 +67,6 @@ If `Y` is a simple numeric vector, then `R` is a character vector in which each 
 ¯1.2346E5 1 22.5 ¯6.67E¯7 5
 ```
 
-
-
 If `Y` is a simple numeric array rank higher than one, `R` is a character array with the same shape as `Y` except that the last dimension of `Y` is determined by the length of the formatted data.  The format width is determined independently for each column of `Y`, such that:
 
 1. the decimal points for floating point or scaled formats are aligned.
@@ -86,7 +74,6 @@ If `Y` is a simple numeric array rank higher than one, `R` is a character array 
 3. integer formats are aligned to the left of the decimal point column, if any, or right-adjusted in the field otherwise.
 4. each formatted column is separated from its neighbours by a single blank column.
 5. the exponent values in scaled formats are left-adjusted to remove any blanks.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -102,7 +89,6 @@ If `Y` is a simple numeric array rank higher than one, `R` is a character array 
    0     2.2000E1  ¯1.2300E¯7
    2.34 ¯2.1200E2   1.2346E5
 ```
-
 
 If `Y` is non-simple, and all items of `Y` at any depth are scalars or vectors, then `R` is a vector.
 
@@ -127,12 +113,10 @@ If `Y` is non-simple, and all items of `Y` at any depth are scalars or vectors, 
  ABC  100  1 2  3 4 5   10
 ```
 
-
 By replacing spaces with `^`, it is clearer to see how the result of `⍕` is formed:
 ```apl
 ^ABC^^100^^1^2^^3^4^5^^^10
 ```
-
 
 If `Y` is non-simple, and all items of `Y` at any depth are not scalars, then `R` is a matrix.
 
@@ -167,8 +151,6 @@ If `Y` is non-simple, and all items of `Y` at any depth are not scalars, then `R
 1
 ```
 
-
-
 By replacing spaces with `^`, it is clearer to see how the result of `⍕` is formed:
 ```apl
 1^^AB^^2^3^^CDE^
@@ -178,8 +160,14 @@ By replacing spaces with `^`, it is clearer to see how the result of `⍕` is fo
 ^^^^^^^^^^^^LMN^
 ```
 
+[`⎕PP`](../system-functions/pp) is an implicit argument of Format.
 
-`⎕PP` is an implicit argument of Format.
+## See Also
 
+- [Display of Arrays](../../../programming-reference-guide/introduction/arrays/display-of-arrays) – how arrays appear in the session
+- [`⎕FMT`](../system-functions/format-monadic) – Format (Monadic): returns a character matrix
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍕ format
+</div>

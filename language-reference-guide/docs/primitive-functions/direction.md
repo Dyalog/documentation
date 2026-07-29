@@ -1,21 +1,13 @@
-<div style="display: none;">
-  ×
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Direction (Signum)</span> <span class="command">R←×Y</span></h1>
-
-
+# <span>Direction (Signum)</span> `R←×Y`{{key}}
 
 `Y` may be any numeric array.
 
-
 Where an element of `Y` is real, the corresponding element of `R` is an integer whose value indicates whether the value is negative (`¯1`), zero (`0`) or positive (`1`).
-
 
 Where an element of `Y` is complex, the corresponding element of `R` is a number with the same phase but with magnitude (absolute value) 1. It is equivalent to `Y÷|Y`.
 
@@ -34,5 +26,7 @@ Where an element of `Y` is complex, the corresponding element of `R` is a number
 1 1
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  × direction
+</div>

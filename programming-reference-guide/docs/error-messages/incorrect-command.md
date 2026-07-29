@@ -1,11 +1,6 @@
 
 
-
-
-
-<h1 class="heading"><span class="name">incorrect command</span></h1>
-
-
+# incorrect command
 
 This report is given when an unrecognised system command is entered.
 
@@ -14,6 +9,3 @@ This report is given when an unrecognised system command is entered.
       )CLERA
 incorrect command
 ```
-
-
-

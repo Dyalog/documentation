@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Niladic (Default) Constructors</span></h1>
+# Niladic (Default) Constructors
 
 A Class may define a niladic Constructor and/or one or more Monadic Constructors. The niladic Constructor acts as the default Constructor that is used when `⎕NEW` is invoked without arguments and when APL needs a [fill item](../../introduction/arrays/prototypes-and-fill-items.md).
 ```apl

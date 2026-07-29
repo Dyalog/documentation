@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">DDE</span> <span class="right">Event 50</span></h1>
-
-**Applies To:** [Root](../objects/root.md)
+# <span>DDE</span> <span>Event 50</span>
 
 **Description**
 
@@ -23,3 +21,7 @@ The event message reported as the result of [`⎕DQ`](../../../language-referenc
 
 !!! note
     Due to the nature of DDE "conversations" messages may be received when in fact no change in the value of any shared variables has occurred. Your application code must therefore be prepared to cater for this situation.
+
+**Application**
+
+Objects: [Root](../objects/root.md)

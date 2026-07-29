@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Simple Instance Properties</span></h1>
+# Simple Instance Properties
 
 A Simple Instance Property is one whose value is accessed (by APL) in its entirety and re-assigned (by APL) in its entirety. The following examples are taken from the [ComponentFile Class](component-file-class-example.md){: .noprint }.
 

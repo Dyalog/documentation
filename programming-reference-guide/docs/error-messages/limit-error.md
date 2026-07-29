@@ -1,11 +1,6 @@
 
 
-
-
-
-<h1 class="heading"><span class="name">LIMIT ERROR</span> <span class="command">10</span></h1>
-
-
+# <span>LIMIT ERROR</span> `10`
 
 This report is given when a system limit is exceeded.  System limits are installation dependent.
 
@@ -16,6 +11,3 @@ LIMIT ERROR
       (16⍴1)⍴1
       ^
 ```
-
-
-

@@ -1,24 +1,14 @@
-
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  8⌶
-</div>
-
+---
+search:
+  boost: 2
+---
 
 
-
-
-
-<h1 class="heading"><span class="name">Inverted Table Index-of</span> <span class="command">R←X(8⌶)Y</span></h1>
-
-
+# <span>Inverted Table Index-of</span> `R←X(8⌶)Y`{{key}}
 
 This function computes `X` index-of `Y` (viz. `X⍳Y`) where `X` and `Y` are compatible inverted tables. `R` is the indices of `Y` in `X`.
 
-
 An inverted table is a (nested) vector all of whose items have the same number of major cells. That is, `1=⍴⍴⍵` and `(≢⊃⍵)=≢¨⍵`. An inverted table representation of relational data is more efficient in time and space than other representations.
-
-
 
 The following is an example of an inverted table:
 ```apl
@@ -38,7 +28,6 @@ The following is an example of an inverted table:
 └───┴───────────────────┴──────────┘
 ```
 
-
 Using inverted tables, it is often necessary to perform a table look-up to find the "row" indices of one in another. Suppose there is a second table `Y`:
 ```apl
 
@@ -51,8 +40,6 @@ Using inverted tables, it is often necessary to perform a table look-up to find 
  MNO                      
  YZA  
 ```
-
-
 
 To compute the indices of   `Y` in `X`  using dyadic `⍳`, it is necessary to first un-invert each of the tables in order to create nested matrices that `⍳` can handle.
 ```apl
@@ -84,11 +71,7 @@ To compute the indices of   `Y` in `X`  using dyadic `⍳`, it is necessary to f
 3 1 4 1 5 9
 ```
 
-
-
-
 Each un-inverted table requires considerably more workspace than its inverted form, so if the inverted tables are large, this operation is potentially expensive in terms of both time and workspace.
-
 
 `8⌶` is an optimised version of the above expression.
 ```apl
@@ -96,5 +79,7 @@ Each un-inverted table requires considerably more workspace than its inverted fo
 3 1 4 1 5 9
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  8⌶
+</div>

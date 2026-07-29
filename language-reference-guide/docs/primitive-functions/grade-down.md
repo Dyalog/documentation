@@ -1,21 +1,13 @@
-<div style="display: none;">
-  ⍒
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Grade Down</span> <span class="command">R←⍒Y</span></h1>
-
-
+# <span>Grade Down</span> `R←⍒Y`{{key}}
 
 `Y` may be any array of rank greater than 0 but may not contain namespaces. `R` is an integer vector being the permutation of `⍳1↑⍴Y` that places the sub-arrays along the first axis in descending order. For the rules for comparing items of `Y` with one another, see [Grade Up](grade-up.md).
 
-
 `⎕IO` is an implicit argument of Grade Down.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -37,8 +29,6 @@
 1 3 2
 
 ```
-
-
 
 !!! note
     Character arrays sort differently in the Unicode and Classic Editions.
@@ -78,7 +68,6 @@ porridge
 </tr>
 </table>
 
-
 ```apl
       ⍴pb
 6 3
@@ -101,4 +90,7 @@ porridge
 
 ```
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍒ grade
+</div>

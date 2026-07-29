@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Arranging Child Forms and Icons</span></h1>
+# Arranging Child Forms and Icons
 
 Another common feature of MDI applications is that the user can ask for the SubForms to be displayed in a particular way, or that any SubForm icons are arranged in an orderly fashion. This is implemented in Dyalog APL/W by your application invoking an method using `⎕NQ`. The MDIClient recognises three different methods, namely MDICascade (110), MDITile (111) and MDIArrange (112).
 

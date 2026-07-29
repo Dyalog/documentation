@@ -1,8 +1,9 @@
-<div style="display: none;">
-  |
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Magnitude</span> <span class="command">R←|Y</span></h1>
+# <span>Magnitude</span> `R←|Y`{{key}}
 
 `Y` may be any numeric array. `R` is numeric composed of the absolute (unsigned) values of `Y`.
 
@@ -54,5 +55,7 @@ Note that the magnitude of a complex number <math xmlns="http://www.w3.org/1998/
 
 `⎕IO` is an implicit argument of magnitude.
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  | magnitude
+</div>

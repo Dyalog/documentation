@@ -1,26 +1,16 @@
-
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  5176⌶
-</div>
-
+---
+search:
+  boost: 2
+---
 
 
-
-
-
-<h1 class="heading"><span class="name">List Loaded Files</span> <span class="command">R←5176⌶Y</span></h1>
-
-
+# <span>List Loaded Files</span> `R←5176⌶Y`{{key}}
 
 The editor may be used to edit Dyalog script files (*.dyalog* files) and general text files and to save the contents in the workspace. Additionally `⎕FIX` can be used to fix scripts held in files. This I-Beam returns a list of all of the files which are associated with objects in the workspace, together with information about each file.
 
-
 `Y` may be any value.
 
-
 `R` is a vector of vectors, one element per associated file. Each element is a 5 element vector:
-
 
 |Element|Contains |
 |-------|---------|
@@ -30,9 +20,7 @@ The editor may be used to edit Dyalog script files (*.dyalog* files) and general
 |4      |Newline  |
 |5      |Flags    |
 
-
 Encoding, newline and flags are defined the same as for `⎕NGET`. See [File Encodings](../../system-functions/nget.md). Checksum is an 8-character hexadecimal value, see [GetBuildID](../../../../object-reference/methodorevents/getbuildid)  for more information.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -52,4 +40,7 @@ clear ws
 			
 ```
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  5176⌶
+</div>

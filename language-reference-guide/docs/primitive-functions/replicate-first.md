@@ -1,7 +1,13 @@
-<div style="display: none;">
-  ⌿
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Replicate First</span> <span class="command">R←X⌿[K]Y</span></h1>
+# <span>Replicate First</span> `R←X⌿[K]Y`{{key}}
 
 The form `R←X⌿Y` implies replication along the first axis of `Y`.  See [Replicate](replicate.md).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌿ replicate
+</div>

@@ -1,22 +1,13 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FNAMES FNAMES
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">File Names</span> <span class="command">R←⎕FNAMES</span></h1>
-
-
+# <span>File Names</span> `R←⎕FNAMES`{{key}}
 
 The result is a character matrix containing the names of all tied files, with one file name per row.  The number of columns is that required by the longest file name.
 
-
 A file name is returned precisely as it was specified when the file was tied, except that the directory delimiter `\` is replaced by `/`.  If no files are tied, the result is a character matrix with 0 rows and 0 columns.  The rows of the result are in the order in which the files were tied.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -39,4 +30,7 @@ PROFIT
  5 PROFIT
 ```
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FNAMES FNAMES
+</div>

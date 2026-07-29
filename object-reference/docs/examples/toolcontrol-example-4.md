@@ -3,8 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">ToolControl</span> <span class="right">Example 4</span></h1>
-
+# <span>ToolControl</span> <span>Example 4</span>
 
 ```apl
 'F'⎕WC'Form' 'ToolControl with MenuBar'('Size' 20 40)
@@ -26,7 +25,4 @@ search:
 :EndWith
 ```
 
-
 ![](../img/tool10.gif)
-
-

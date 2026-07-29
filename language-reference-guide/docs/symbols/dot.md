@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Dot</span> <span class="command">.</span></h1>
+# <span>Dot</span> `.`
 Dot can be used as a dyadic operator with dyadic operands
 
 Operator Dot means
@@ -35,5 +35,3 @@ Used with Jot in place of the left operand Jot Dot means
     Dot is also used as a decimal point and as a name separator in namespace reference syntax.
 
 [Language Elements](../glyphs.md)
-
-

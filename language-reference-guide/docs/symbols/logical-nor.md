@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Logical NOR</span> <span class="command">⍱</span></h1>
+# <span>Logical NOR</span> `⍱`
 
 Monadic Logical NOR is not defined
 
@@ -13,5 +13,3 @@ Dyadic Logical NOR means
 1 0 0 0
 ```
 [Language Elements](../glyphs.md)
-
-

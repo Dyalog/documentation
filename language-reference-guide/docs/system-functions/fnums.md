@@ -1,16 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FNUMS FNUMS
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">File Numbers</span> <span class="command">R←⎕FNUMS</span></h1>
-
-
+# <span>File Numbers</span> `R←⎕FNUMS`{{key}}
 
 The result is an integer vector of the *file tie number* of all tied files.  If no files are tied, the result is empty.  The elements of the result are in the order in which the files were tied.
 
@@ -36,5 +29,7 @@ The result is an integer vector of the *file tie number* of all tied files.  If 
 0
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FNUMS FNUMS
+</div>

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Overview</span></h1>
+# Overview
 
 Dyalog APL was originally written for use with serially attached character based terminals, which had a fixed-sized viewing window, and a limited number of keystrokes.
 

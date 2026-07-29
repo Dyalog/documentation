@@ -1,25 +1,15 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕AV AV
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Atomic Vector</span> <span class="command">R←⎕AV</span></h1>
-
-
+# <span>Atomic Vector</span> `R←⎕AV`{{key}}
 
 `⎕AV` is a deprecated feature and is replaced by `⎕UCS`.
 
-
 This is a simple character vector of all 256 characters in the Classic Dyalog APL character.
 
-
 In the Classic Edition the contents of `⎕AV` are defined by the Output Translate Table.
-
 
 In the Unicode Edition, the contents of `⎕AV` are defined by the system variable `⎕AVU`.
 
@@ -37,5 +27,7 @@ In the Unicode Edition, the contents of `⎕AV` are defined by the system variab
 
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕AV AV
+</div>

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Overview</span></h1>
+# Overview
 
 ## What is an ActiveX Control ?
 

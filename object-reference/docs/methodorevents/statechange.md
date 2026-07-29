@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">StateChange</span> <span class="right">Event 35</span></h1>
-
-**Applies To:** [Form](../objects/form.md), [SubForm](../objects/subform.md)
+# <span>StateChange</span> <span>Event 35</span>
 
 **Description**
 
@@ -13,5 +11,6 @@ The event message reported as the result of [`⎕DQ`](../../../language-referenc
 |`[2]`|Event       |`'StateChange'` or 35                                                               |
 |`[3]`|Window state|0 (about to be restored)<br/>1 (about to be minimised)<br/>2 (about to be maximised)|
 
+**Application**
 
-
+Objects: [Form](../objects/form.md), [SubForm](../objects/subform.md)

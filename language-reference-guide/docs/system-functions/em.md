@@ -1,9 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕EM EM
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Event Message</span> <span class="command">R←⎕EM Y</span></h1>
+# <span>Event Message</span> `R←⎕EM Y`{{key}}
 
 `Y` must be a simple non-negative integer scalar or vector of event codes.  If `Y` is a scalar, `R` is a simple character vector containing the associated event message.  If `Y` is a vector, `R` is a vector of character vectors containing the corresponding event messages.
 
@@ -17,5 +17,7 @@ See [APL Error Messages](../../../programming-reference-guide/error-messages/apl
 DOMAIN ERROR
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕EM EM
+</div>

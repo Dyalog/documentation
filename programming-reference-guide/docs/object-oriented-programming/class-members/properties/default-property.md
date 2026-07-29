@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">The Default Property</span></h1>
+# The Default Property
 
 A single Numbered Property may be identified as the *Default* Property for the Class. If a Class has a Default Property, indexing with the `⌷` primitive function and `[...]` indexing may be applied to the Property directly via a reference to the Class or Instance.
 

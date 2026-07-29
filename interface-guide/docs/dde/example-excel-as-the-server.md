@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Example: Excel as the Server</span></h1>
+# Example: Excel as the Server
 
 The following instructions will allow you to explore the DDE interface with another application (in this case Microsoft Excel) acting as the server.
 

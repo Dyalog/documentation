@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Dyalog APL, RDP and VNC</span></h1>
+# Dyalog APL, RDP and VNC
 
 Due to the different ways that Microsoft Windows and Linux/UNIX handle keyboards, it is not possible to use RDP or VNC or X-Windows from a Windows client to control a Dyalog APL session running under a UNIX window manager. In particular, all of the X-Window clients that Dyalog is aware of do not  fully support xkb key mappings.
 

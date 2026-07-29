@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">DockMove</span> <span class="right">Event 481</span></h1>
-
-**Applies To:** [CoolBand](../objects/coolband.md), [CoolBar](../objects/coolbar.md), [Form](../objects/form.md), [SubForm](../objects/subform.md), [ToolControl](../objects/toolcontrol.md)
+# <span>DockMove</span> <span>Event 481</span>
 
 **Description**
 
@@ -28,3 +26,7 @@ If a callback function returns 0, the system displays the bounding rectangle and
 A callback function may modify the event message to cause a different sized docking zone to be displayed, or to force docking along a particular edge.
 
 The DockMove event is generated repeatedly as the docking object is dragged.
+
+**Application**
+
+Objects: [CoolBand](../objects/coolband.md), [CoolBar](../objects/coolbar.md), [Form](../objects/form.md), [SubForm](../objects/subform.md), [ToolControl](../objects/toolcontrol.md)

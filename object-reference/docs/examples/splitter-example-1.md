@@ -3,8 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Splitter</span> <span class="right">Example 1</span></h1>
-
+# <span>Splitter</span> <span>Example 1</span>
 
 ```apl
 'F'⎕WC'Form' 'Vertical Splitter'('Size' 25 25)
@@ -13,7 +12,4 @@ search:
 'F.S'⎕WC'Splitter' 'F.E1' 'F.E2'
 ```
 
-
 ![](../img/split1.gif)
-
-

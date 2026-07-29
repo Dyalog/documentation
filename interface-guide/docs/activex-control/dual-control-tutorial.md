@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">The Dual Control Tutorial</span></h1>
+# The Dual Control Tutorial
 
 The ActiveX control we will use in this example is deliberately an extremely simple one; so that the intricacies of the control itself do not get in the way of the principles involved. In practice, there are actually very few restrictions concerning the complexity of the ActiveX control, and it is perfectly possible to package complete multiple-window Dyalog APL applications in this way.
 

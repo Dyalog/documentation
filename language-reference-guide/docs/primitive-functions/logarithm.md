@@ -1,18 +1,11 @@
-<div style="display: none;">
-  ⍟
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Logarithm</span> <span class="command">R←X⍟Y</span></h1>
-
-
+# <span>Logarithm</span> `R←X⍟Y`{{key}}
 
 `X` and `Y` must be numeric arrays. `X` cannot be 1 unless `Y` is also 1. `R` is the base `X` logarithm of `Y`.
-
 
 Note that Logarithm (dyadic `⍟`) is defined in terms of Natural Logarithm (monadic `⍟`) as:
 ```apl
@@ -33,5 +26,7 @@ Note that Logarithm (dyadic `⍟`) is defined in terms of Natural Logarithm (mon
 0
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍟ log logarithm
+</div>

@@ -1,9 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FCOPY FCOPY
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">File Copy</span> <span class="command">R←X ⎕FCOPY Y</span></h1>
+# <span>File Copy</span> `R←X ⎕FCOPY Y`{{key}}
 
 ## Access Code: 4609
 
@@ -35,7 +35,6 @@ Note also that although the file need not be tied exclusively, the `⎕FCOPY` f
 ```
 
 If `X` specifies the name of an existing file, the operation fails with a `FILE NAME ERROR`.
-
 
 !!! note
     This operation is atomic. If an error occurs during the copy operation (such as disk full) or if a strong interrupt is issued, the copy will be aborted and the new file `X` will not be created.
@@ -81,3 +80,8 @@ will name a variant of `⎕FCREATE` which will create component file with level 
 
 !!! Info "Information"
     Small-span (32-bit) component files are currently read-only; Dyalog Ltd recommends using `⎕FCOPY` to convert any such files to large-span (64-bit). This ability is scheduled for removal in a future release. For information on how to identify calls to small-span component files in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FCOPY FCOPY
+</div>

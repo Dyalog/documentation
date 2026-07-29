@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">APL_CODE_E_MAGNITUDE</span></h1>
+# APL_CODE_E_MAGNITUDE
 
 The introduction of decimal floating point numbers lead to the maximum allowable print precision being increased from 17 to 34, which resulted in a change in the way numbers in the range `(10*17) to (10*34)` in function bodies are descanned[^1]. For example, the number one sextillion (10<sup>21</sup>) in a function is descanned by Version 12.1 as `1E21` and by Version 13.0 as `1000000000000000000000`.
 

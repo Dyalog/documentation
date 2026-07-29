@@ -1,9 +1,11 @@
-<h1 class="heading"><span class="name">Objects Categorised</span></h1>
+---
+search:
+  exclude: true
+---
 
-
+# Objects Categorised
 
 [Objects: A-Z](objects-a-z.md)
-
 
 |System Objects                                                                                                            ||
 |--------------------------------------------------|------------------------------------------------------------------------|
@@ -92,5 +94,3 @@
 |[OLEServer](../objects/oleserver.md)              |enables APL to act as an OLE Automation server                          |
 |[SM](../objects/sm.md)                            |specifies a window for `⎕SM` (character mode interface)                 |
 |[TCPSocket](../objects/tcpsocket.md)              |provides an interface to TCP/IP sockets                                 |
-
-

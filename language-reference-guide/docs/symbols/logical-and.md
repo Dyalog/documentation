@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Logical AND</span> <span class="command">∧</span></h1>
+# <span>Logical AND</span> `∧`
 
 Monadic Logical AND is not defined.
 
@@ -17,5 +17,3 @@ Dyadic Logical AND means
 
 ```
 [Language Elements](../glyphs.md)
-
-

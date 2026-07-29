@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">The cfiles Workspace</span></h1>
+# The cfiles Workspace
 
 `cfiles.dws` contains a single OLEServer namespace called `CFiles` which implements a basic object-oriented interface to Dyalog APL component files.
 

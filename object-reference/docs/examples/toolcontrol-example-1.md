@@ -3,8 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">ToolControl</span> <span class="right">Example 1</span></h1>
-
+# <span>ToolControl</span> <span>Example 1</span>
 
 ```apl
 'F'⎕WC'Form' 'ToolControl: FlatButtons Style (default)'('Size' 10 40)
@@ -19,9 +18,7 @@ search:
 'F.TB.B3'⎕WC'ToolButton' 'Save'('ImageIndex' 9)
 ```
 
-
 ![](../img/tool1.gif)
-
 
 ![](../img/tool2.gif)
 
@@ -29,18 +26,14 @@ search:
 'F.TB'⎕WC'ToolControl'('Style' 'Buttons')
 ```
 
-
 ![](../img/tool3.gif)
 
 ```apl
 'F.TB'⎕WC'ToolControl'('Style' 'FlatList')
 ```
 
-
 ![](../img/tool4.gif)
 
 ```apl
 'F.TB'⎕WC'ToolControl'('Style' 'List')
 ```
-
-

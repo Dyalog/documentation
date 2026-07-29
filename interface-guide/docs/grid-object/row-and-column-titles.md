@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Row and Column Titles</span></h1>
+# Row and Column Titles
 
 Row and column titles are defined by the RowTitles and ColTitles properties, each of which is a vector of character arrays. An element of RowTitles and ColTitles may be a character vector specifying a 1-row title, or a matrix or vector of vectors which specify multi-row titles.
 

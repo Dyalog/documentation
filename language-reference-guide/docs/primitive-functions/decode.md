@@ -1,8 +1,9 @@
-<div style="display: none;">
-  ⊥
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Decode</span> <span class="command">R←X⊥Y</span></h1>
+# <span>Decode</span> `R←X⊥Y`{{key}}
 
 `Y` must be a simple numeric array.  `X` must be a simple numeric array.  `R` is the numeric array which results from
 the evaluation of `Y` in the number system with radix `X`.
@@ -145,4 +146,7 @@ Extension along a unit axis may be applied:
 0 1 10 11 100 101 110 111
 ```
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⊥ decode base
+</div>

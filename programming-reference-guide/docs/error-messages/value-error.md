@@ -1,11 +1,6 @@
 
 
-
-
-
-<h1 class="heading"><span class="name">VALUE ERROR</span> <span class="command">6</span></h1>
-
-
+# <span>VALUE ERROR</span> `6`
 
 This report is given when either:
 
@@ -29,6 +24,3 @@ VALUE ERROR
      2+HELLO
       ^
 ```
-
-
-

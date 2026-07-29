@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Empty Arrays of Instances: Why?</span></h1>
+# Empty Arrays of Instances: Why?
 
 In APL it is natural to use *arrays* of Instances. For example, consider the following example.
 ```apl

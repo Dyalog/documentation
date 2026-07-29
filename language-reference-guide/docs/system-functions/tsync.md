@@ -1,22 +1,13 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕TSYNC TSYNC
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Wait for Threads to Terminate</span> <span class="command">R←⎕TSYNC Y</span></h1>
-
-
+# <span>Wait for Threads to Terminate</span> `R←⎕TSYNC Y`{{key}}
 
 `Y` must be a simple array of thread numbers.
 
-
 If `Y` is a simple scalar, `R` is an array, the result (if any) of the thread.
-
 
 If `Y` is a simple non-scalar, `R` has the same shape as `Y`, and result is an array of enclosed thread results.
 
@@ -41,10 +32,7 @@ If `Y` is a simple non-scalar, `R` has the same shape as `Y`, and result is an a
  1 1  2 2  3 3 
 ```
 
-
-
 ### Deadlock
-
 
 The interpreter detects a potential deadlock if a number of threads wait for each other in a cyclic dependency. In this case, the thread that attempts to cause the deadlock issues error number `1008: DEADLOCK`.
 ```apl
@@ -57,9 +45,7 @@ DEADLOCK
 1008
 ```
 
-
 ### Potential Value Error
-
 
 If any item of `Y` does not correspond to the thread number of an active thread, or if any subject thread terminates without returning a result, then `⎕TSYNC` does not return a result. This means that, if the calling context of the `⎕TSYNC` requires a result, for example: `rslt←⎕TSYNC tnums`, a `VALUE ERROR` will be generated. This situation can occur if threads have completed before `⎕TSYNC` is called.
 ```apl
@@ -74,21 +60,19 @@ VALUE ERROR
 VALUE ERROR
 ```
 
-
-
 Coding would normally avoid such an inconvenient `VALUE ERROR` either by arranging that the thread-spawning and `⎕TSYNC` were on the same line:
 ```apl
       rslt ← ⎕TSYNC myfn&¨ argvec
 ```
-
 
 or
 ```apl
       tnums←myfn&¨ argvec ⋄ rslt←⎕TSYNC tnums
 ```
 
-
 or by error-trapping the `VALUE ERROR`.
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕TSYNC TSYNC
+</div>

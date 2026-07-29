@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Trigger Fields</span></h1>
+# Trigger Fields
 
 A field may act as a [Trigger](../../../triggers/triggers.md) so that a function may be invoked whenever the value of the Field is changed.
 

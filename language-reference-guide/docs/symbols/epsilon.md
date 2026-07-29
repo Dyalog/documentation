@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Epsilon</span> <span class="command">∊</span></h1>
+# <span>Epsilon</span> `∊`
 
 Monadic Epsilon means
 
@@ -36,5 +36,3 @@ Dyadic Epsilon means
 1 0 1
 ```
 [Language Elements](../glyphs.md)
-
-

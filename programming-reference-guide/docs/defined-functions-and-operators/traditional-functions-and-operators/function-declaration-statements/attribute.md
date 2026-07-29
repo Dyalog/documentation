@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Attribute Statement</span> <span class="command">:Attribute</span></h1>
+# <span>Attribute Statement</span> `:Attribute`
 
 ```apl
 :Attribute <Name> [ConstructorArgs]
@@ -18,6 +18,3 @@ Attributes are descriptive tags that provide additional information about progra
       :Attribute ObsoleteAttribute
       :Attribute ObsoleteAttribute 'Don''t use' 1
 ```
-
-
-

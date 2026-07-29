@@ -1,22 +1,14 @@
-<div style="display: none;">
-  ≠
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Unique Mask</span> <span class="command">R←≠Y</span></h1>
-
-
+# <span>Unique Mask</span> `R←≠Y`{{key}}
 
 `Y` may be any array.
 
-
 `R` is a Boolean vector whose length is the number of major cells
 in `Y`. For each major cell of `Y`, the corresponding element of  `R` is 1 if it is the first occurrence of that value, and 0 if it is a duplicate of an earlier major cell.
-
 
 `⎕CT` and `⎕DCT` are  implicit arguments of Unique.
 
@@ -43,5 +35,7 @@ DUCK
 
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ≠ nubsieve unique mask
+</div>

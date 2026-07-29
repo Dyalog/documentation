@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Up Tack</span> <span class="command">⊥</span></h1>
+# <span>Up Tack</span> `⊥`
 
 Monadic Up Tack is not defined
 
@@ -19,5 +19,3 @@ Dyadic Up Tack means
 10000
 ```
 [Language Elements](../glyphs.md)
-
-

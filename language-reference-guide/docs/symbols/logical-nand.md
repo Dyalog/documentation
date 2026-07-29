@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Logical NAND</span> <span class="command">⍲</span></h1>
+# <span>Logical NAND</span> `⍲`
 
 Monadic Logical NAND is not defined
 
@@ -13,5 +13,3 @@ Dyadic Logical NAND means
 1 1 1 0
 ```
 [Language Elements](../glyphs.md)
-
-

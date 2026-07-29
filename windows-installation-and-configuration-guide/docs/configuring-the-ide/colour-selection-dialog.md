@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Colour Selection Dialog</span></h1>
+# Colour Selection Dialog
 
 ![colour selection dialog](../img/colour-selection-dialog.png)
 

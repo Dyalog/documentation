@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Squad</span> <span class="command">⌷</span></h1>
+# <span>Squad</span> `⌷`
 
 Squad means
 [Materialise](../primitive-functions/materialise.md)
@@ -33,5 +33,3 @@ Index with Axes means
 2 6 10
 ```
 [Language Elements](../glyphs.md)
-
-

@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Plus</span> <span class="command">+</span></h1>
+# <span>Plus</span> `+`
 
 Monadic Plus means
 [Conjugate](../primitive-functions/conjugate.md)
@@ -24,5 +24,3 @@ Dyadic Plus means
 6
 ```
 [Language Elements](../glyphs.md)
-
-

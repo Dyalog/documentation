@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Default Left Argument</span></h1>
+# Default Left Argument
 
 The special  syntax: `⍺←expr` is used to give a default value to the left argument if a dfn is called monadically. For example:
 ```apl

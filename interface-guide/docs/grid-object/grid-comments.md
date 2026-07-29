@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Grid Comments</span></h1>
+# Grid Comments
 
 ## Introduction
 

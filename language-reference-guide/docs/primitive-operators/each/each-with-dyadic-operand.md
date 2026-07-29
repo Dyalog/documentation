@@ -1,24 +1,15 @@
-<div style="display: none;">
-  ¨
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Each (with Dyadic Operand)</span> <span class="command">{R}←Xf¨Y</span></h1>
-
-
+# <span>Each (with Dyadic Operand)</span> `{R}←Xf¨Y`{{key}}
 
 `f` may be any dyadic function.  `X` and `Y` may be any arrays whose corresponding items (after scalar extension) are appropriate to function `f` when applied separately.
 
-
 The derived function is applied separately to each pair of corresponding elements of `X` and `Y`.  If `X` or `Y` is a scalar or single-element array, it will be extended to conform with the other argument.  The derived function need not produce an explicit result.  If a result is returned, `R` has the same shape as `Y` (after possible scalar extension) whose elements are the items produced by the application of the derived function to the corresponding items of `X` and `Y`.
 
-
 If `X` or `Y` is empty, the operand function is applied *once* between the prototypes of `X` and `Y` to determine the prototype of `R`.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -40,4 +31,8 @@ If `X` or `Y` is empty, the operand function is applied *once* between the proto
  AX  BY  CZ
 ```
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ¨
+  each
+</div>

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Keyed Properties Example 1</span></h1>
+# Keyed Properties Example 1
 
 The Sparse2 Class illustrates the implementation and use of a Keyed Property.
 

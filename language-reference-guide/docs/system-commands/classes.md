@@ -1,11 +1,6 @@
 
 
-
-
-
-<h1 class="heading"><span class="name">List Classes</span> <span class="command">)CLASSES</span></h1>
-
-
+# <span>List Classes</span> `)CLASSES`
 
 This command lists the names of APL Classes in the active workspace.
 
@@ -31,6 +26,3 @@ MyClass YourClass
       ⎕NC 'MyClass' 'YourClass'
 9.4 9.4
 ```
-
-
-

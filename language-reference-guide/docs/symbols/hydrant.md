@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Hydrant</span> <span class="command">⍎</span></h1>
+# <span>Hydrant</span> `⍎`
 
 Monadic Hydrant means
 [Execute expression](../primitive-functions/execute.md)
@@ -16,7 +16,7 @@ Monadic Hydrant means
 ```
 
 Dyadic Hydrant means
-[Execute expression in given namespace](../primitive-functions/execute.md)
+[Execute expression in given namespace](../primitive-functions/dyadic-execute.md)
 ```apl
       '#' ⍎ '⎕PP ⎕CT ⎕RL'
 ┌──┬─────┬────┐
@@ -27,5 +27,3 @@ Dyadic Hydrant means
 
 ```
 [Language Elements](../glyphs.md)
-
-

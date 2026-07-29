@@ -1,22 +1,13 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SRC SRC
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Source</span> <span class="command">R←⎕SRC Y</span></h1>
-
-
+# <span>Source</span> `R←⎕SRC Y`{{key}}
 
 `⎕SRC` returns the script that defines the scripted object   `Y`.
 
-
 `Y` must be a reference to a scripted object. Scripted objects include Classes, Interfaces and scripted Namespaces.
-
 
 `R` is a vector of character vectors containing the script that was used to define `Y`.
 
@@ -47,8 +38,10 @@ r←1+arg
  :EndClass
 ```
 
-
 !!! note
     The only two ways to permanently alter the source of a scripted object are to change the object in the editor, or by refixing it using `⎕FIX`. A useful technique to ensure that a scripted object is in sync with its source is to `⎕FIX ⎕SRC ref`, where `ref` is an object reference.
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SRC SRC
+</div>

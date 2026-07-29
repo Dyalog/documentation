@@ -1,17 +1,10 @@
-<h1 class="heading"><span class="name">DisplayChange</span> <span class="right">Event 137</span></h1>
-
-
-
-**Applies To:** [Root](../objects/root.md)
+# <span>DisplayChange</span> <span>Event 137</span>
 
 **Description**
 
-
 If enabled, this event is reported when the user changes the screen resolution or number of colours. The event is reported for information only; you cannot prevent the change from occurring.
 
-
 The event message reported as the result of `⎕DQ`, or supplied as the right argument to your callback function, is a 5-element vector as follows :
-
 
 |-----|-----------------|--------------------------------------------|
 |`[1]`|Object           |ref or character vector                     |
@@ -20,5 +13,6 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |`[4]`|Width            |Integer. Number of pixels in the x-direction|
 |`[5]`|Number of colours|Integer.                                    |
 
+**Application**
 
-
+Objects: [Root](../objects/root.md)

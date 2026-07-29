@@ -1,15 +1,9 @@
-<div style="display: none;">
-  ⍴
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Reshape</span> <span class="command">R←X⍴Y</span></h1>
-
-
+# <span>Reshape</span> `R←X⍴Y`{{key}}
 
 `Y` may be any array.  `X` must be a simple scalar or vector of non-negative integers.  `R` is an array of shape `X` whose elements are taken from `Y` in row-major sequence and repeated cyclically if required.  If `Y` is empty, `R` is composed of fill elements of `Y` (`⊂∊⊃Y` with `⎕ML←0`).  If `X` contains at least one zero, then `R` is empty.  If `X` is an empty vector, then `R` is scalar.
 
@@ -28,5 +22,7 @@
 0 0 0
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍴ rho reshape
+</div>

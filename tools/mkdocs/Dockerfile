@@ -4,14 +4,8 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     git
 
-RUN pip install \
-    mkdocs-material \
-    mkdocs-macros-plugin \
-    mkdocs-monorepo-plugin \
-    mkdocs-site-urls \
-    mkdocs-caption \
-    markdown-tables-extended \
-    mkdocs-minify-plugin
+COPY requirements-docs.txt /requirements-docs.txt
+RUN pip install -r /requirements-docs.txt
 
 RUN pip install --force-reinstall click==8.2.1
 

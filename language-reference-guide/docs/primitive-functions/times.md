@@ -1,18 +1,11 @@
-<div style="display: none;">
-  ×
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Times</span> <span class="command">R←X×Y</span></h1>
-
-
+# <span>Times</span> `R←X×Y`{{key}}
 
 `Y` may be any numeric array. `X` may be any numeric array. `R` is the arithmetic product of `X` and `Y`.
-
 
 This function is also known as Multiply.
 
@@ -25,5 +18,7 @@ This function is also known as Multiply.
 ¯0.9J1.9 ¯4J7 ¯6J17 1J1.5
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  × times multiply
+</div>

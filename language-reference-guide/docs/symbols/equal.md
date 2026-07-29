@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Equal</span> <span class="command">=</span></h1>
+# <span>Equal</span> `=`
 
 Monadic Equal is not defined
 
@@ -22,5 +22,3 @@ Dyadic Equal means
 0
 ```
 [Language Elements](../glyphs.md)
-
-

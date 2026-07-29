@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">IniFile</span></h1>
+# IniFile
 
 This parameter specifies the name of the Windows Registry folder that contains the configuration parameters described in this section. For example,
 ```apl

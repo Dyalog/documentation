@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Gestures</span></h1>
+# Gestures
 
 ## Introduction
 

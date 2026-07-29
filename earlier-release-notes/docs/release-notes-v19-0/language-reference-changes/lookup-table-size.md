@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Lookup Table Size</span> <span class="command">R←8469⌶Y</span></h1>
+# <span>Lookup Table Size</span> `R←8469⌶Y`
 
 Increases the maximum amount of workspace allocated to internal lookup tables. These tables are created when a set primitive is executed. Lookup tables are faster than hash tables, and are used when hashing is not required.
 

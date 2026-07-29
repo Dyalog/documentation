@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Session Initialisation</span></h1>
+# Session Initialisation
 
 ## Introduction
 

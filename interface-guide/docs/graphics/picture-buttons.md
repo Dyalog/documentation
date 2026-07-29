@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Picture Buttons</span></h1>
+# Picture Buttons
 
 Picture buttons in *toolbars* are most conveniently represented by ToolButtons in ToolControls (see Chapter 4). Pictures on stand-alone buttons or buttons used in the (superseded) ToolBar object, may be created using Bitmap, Icon and Metafile objects and there are two different methods provided. The first (and the simplest) is to use the Picture property which applies to all 3 types of image,(Bitmap, Icon or Metafile). The second method is to use the BtnPix property. This requires rather more effort, and only draws Bitmaps, and not Icons or Metafiles. However, the BtnPix property gives you total control over the appearance of a Button which the Picture property does not.
 

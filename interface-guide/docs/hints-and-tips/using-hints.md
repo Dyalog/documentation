@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Using Hints</span></h1>
+# Using Hints
 
 All of the GUI objects supported by Dyalog APL that have a visible presence on the screen have a Hint property and a HintObj property. Quite simply, when the user moves the mouse pointer over the object the contents of its Hint property are displayed in the object referenced by its HintObj property. When the user moves the mouse pointer away from the object, its Hint disappears. If an object has a Hint, but its HintObj property is empty, the system uses the HintObj defined for its parent, or for its parent's parent, and so forth up the tree. If there is no HintObj defined, the Hint is simply not displayed. This mechanism has two useful attributes:
 

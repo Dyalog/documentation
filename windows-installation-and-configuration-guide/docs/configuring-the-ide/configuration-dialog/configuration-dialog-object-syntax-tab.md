@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Object Syntax Tab</span></h1>
+# Object Syntax Tab
 
 ![configuration dialog object syntax tab](../../img/configuration-dialog-object-syntax-tab.png)
 

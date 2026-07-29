@@ -1,27 +1,17 @@
-<div style="display: none;">
-  ?
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Roll</span> <span class="command">R←?Y</span></h1>
-
-
+# <span>Roll</span> `R←?Y`{{key}}
 
 `Y` may be any non-negative integer array. `R` has the same shape as `Y` at each depth.
 
-
 For each positive element of `Y` the corresponding element of `R` is an integer, pseudo-randomly selected from the integers `⍳Y` with each integer in this population having an equal chance of being selected.
-
 
 For each zero element of `Y`, the corresponding element of `R` is a pseudo-random floating-point value in the range 0 - 1, but excluding 0 and 1, that is, `(0<R[I]<1)`.
 
-
 `⎕IO` and `⎕RL` are implicit arguments of Roll. A side effect of Roll is to change the value of `⎕RL`.
-
 
 Note that different random number generators are available; see `⎕RL` for more information.
 
@@ -35,5 +25,7 @@ Note that different random number generators are available; see `⎕RL` for more
 
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ? roll
+</div>

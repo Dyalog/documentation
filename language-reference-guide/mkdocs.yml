@@ -7,6 +7,7 @@ theme:
     - navigation.tracking
     - navigation.path
     - navigation.indexes
+    - navigation.footer
   name: material
   font:
     text: Be Vietnam Pro
@@ -27,16 +28,20 @@ plugins:
         enable: true
         start_index: 1
         increment_index: 1
-        position: bottom
+        position: top
+        reference_text: 'Table {index}'
+        caption_prefix: 'Table {index}:'
 extra:
   version_maj: 20
-  version_majmin: 20.0
+  version_majmin: "20.0"
+  key: '[<svg xmlns="http://www.w3.org/2000/svg" fill="white" height="32" viewBox="-4 0 16 24" width="32"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></svg>](/key-to-notation)'
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.keys
   - pymdownx.superfences
   - pymdownx.highlight:
+      use_pygments: false
       pygments_lang_class: true
   - pymdownx.arithmatex:
       generic: true
@@ -48,12 +53,13 @@ markdown_extensions:
   - toc:
       title: On this page
 nav:
+  - index.md
   - Key to Notation: key-to-notation.md
   - Glyphs: glyphs.md
   - Primitive Functions:
       - Primitive Functions: primitive-functions/index.md
       - Notes: primitive-functions/notes.md
-      - Primitive Functions (by category): primitive-functions/primitive-functions-by-category.md
+      - Primitive Functions (by Category): primitive-functions/primitive-functions-by-category.md
       - Primitive Functions (A-Z):
           - Binomial: primitive-functions/binomial.md
           - Catenate Laminate: primitive-functions/catenate-laminate.md
@@ -69,6 +75,7 @@ nav:
           - Drop:
               - Drop: primitive-functions/drop/index.md
               - Drop with Axes: primitive-functions/drop/drop-with-axes.md
+          - Dyadic Execute: primitive-functions/dyadic-execute.md
           - Dyadic Grade Down: primitive-functions/dyadic-grade-down.md
           - Dyadic Grade Up: primitive-functions/dyadic-grade-up.md
           - Dyadic Transpose: primitive-functions/dyadic-transpose.md
@@ -286,7 +293,6 @@ nav:
       - System Functions: system-functions/index.md
       - System Functions (by Category): system-functions/system-functions-by-category.md
       - System Functions (A-Z):
-          - Introduction: system-functions/system-functions-and-variables-colwise.md
           - Character Input Output: system-functions/character-input-output.md
           - Evaluated Input Output: system-functions/evaluated-input-output.md
           - Underscored Alphabetic Characters: system-functions/underscored-alphabetic-characters.md
@@ -417,8 +423,8 @@ nav:
           - '<code>⎕SAVE</code>: Save Workspace': system-functions/save.md
           - '<code>⎕SD</code>: Screen Dimensions': system-functions/sd.md
           - '<code>⎕SE</code>: Session Namespace': system-functions/se.md
-          - '<code>⎕SH</code>: Execute UNIX Command': system-functions/execute-unix-command.md
-          - '<code>⎕SH</code>: Start UNIX Auxiliary Processor': system-functions/start-unix-auxiliary-processor.md
+          - '<code>⎕SH</code>: Execute Unix Command': system-functions/execute-unix-command.md
+          - '<code>⎕SH</code>: Start Unix Auxiliary Processor': system-functions/start-unix-auxiliary-processor.md
           - '<code>⎕SHADOW</code>: Shadow Name': system-functions/shadow.md
           - '<code>⎕SHELL</code>: Execute external program': system-functions/shell.md
           - '<code>⎕SI</code>: State Indicator': system-functions/si.md
@@ -438,6 +444,7 @@ nav:
           - '<code>⎕SVQ</code>: Shared Variable Query': system-functions/svq.md
           - '<code>⎕SVR</code>: Shared Variable Retract Offer': system-functions/svr.md
           - '<code>⎕SVS</code>: Shared Variable State': system-functions/svs.md
+          - '<code>⎕SYSTEM</code>: System Information': system-functions/system.md
           - '<code>⎕TALLOC</code>: Allocate Token Range': system-functions/talloc.md
           - '<code>⎕TC</code>: Terminal Control': system-functions/tc.md
           - '<code>⎕TCNUMS</code>: Thread Child Numbers': system-functions/tcnums.md

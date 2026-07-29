@@ -1,9 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NREPLACE NREPLACE
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Native File Replace</span> <span class="command">{R}←X ⎕NREPLACE Y</span></h1>
+# <span>Native File Replace</span> `{R}←X ⎕NREPLACE Y`{{key}}
 
 `⎕NREPLACE` is used to write data to a native file, replacing data which is already there.
 
@@ -59,3 +59,8 @@ abc
 ```
 
 For compatibility with old files, you may specify that the data be converted to type 82 on output. The conversion (to `⎕AV` indices) will be determined by the local value of `⎕AVU`.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NREPLACE NREPLACE
+</div>

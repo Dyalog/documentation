@@ -1,17 +1,10 @@
-<h1 class="heading"><span class="name">GetCommandLineArgs</span> <span class="right">Method 148</span></h1>
-
-
-
-**Applies To:** [Root](../objects/root.md)
+# <span>GetCommandLineArgs</span> <span>Method 148</span>
 
 **Description**
 
-
 The GetCommandLineArgs method returns the command and the arguments to the command that was used to start the current Dyalog APL session or application.
 
-
 The GetCommandLineArgs method is niladic.
-
 
 The result is a vector of character vectors. For example:
 ```apl
@@ -27,5 +20,6 @@ The result is a vector of character vectors. For example:
 └∊───────────────────────────────────────────────┘
 ```
 
+**Application**
 
-
+Objects: [Root](../objects/root.md)

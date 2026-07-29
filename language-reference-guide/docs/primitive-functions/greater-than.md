@@ -1,18 +1,11 @@
-<div style="display: none;">
-  >
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Greater Than</span> <span class="command">R←X>Y</span></h1>
-
-
+# <span>Greater Than</span> `R←X>Y`{{key}}
 
 `Y` must be numeric. `X` must be numeric. `R` is Boolean. `R` is 1 if `X` is greater than `Y` and `X=Y` is 0. Otherwise `R` is 0.
-
 
 `⎕CT` and `⎕DCT` are  implicit arguments of Greater Than.
 
@@ -27,5 +20,7 @@
 0 0 1
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  > greater
+</div>

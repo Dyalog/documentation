@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Trigger Example</span></h1>
+# Trigger Example
 
 The following function displays information when the value of variables `A` or `B` changes.
 ```apl

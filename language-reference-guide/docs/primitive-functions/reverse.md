@@ -1,18 +1,11 @@
-<div style="display: none;">
-  ⌽
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Reverse</span> <span class="command">R←⌽[K]Y</span></h1>
-
-
+# <span>Reverse</span> `R←⌽[K]Y`{{key}}
 
 `Y` may be any array.  The axis specification is optional.  If present, `K` must be an integer scalar or one-element vector.  The value of `K` must be an axis of `Y`.  If absent, the last axis is implied.  The form `R←⊖Y` implies the first axis.
-
 
 `R` is the array `Y` reversed on the `K`th or implied axis.
 
@@ -35,5 +28,7 @@
 1 2 3
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌽ reverse
+</div>

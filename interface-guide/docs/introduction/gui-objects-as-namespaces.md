@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">GUI Objects as Namespaces</span></h1>
+# GUI Objects as Namespaces
 
 GUI objects are a special type of namespace and this has several useful implications. Firstly, instead of creating the children of an object from *outside* in the workspace, you can use `)CS` to change to an object and create them from within. The only restriction is that you can only create GUI objects that are valid as children of the current object. A second benefit is that you can put the callback functions, together with any global variables they require, into the objects to which they apply. Consider the following example.
 

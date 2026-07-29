@@ -29,12 +29,16 @@ MANIFEST
 # Virtual environment
 env/
 venv/
+docs-venv/
 ENV/
 env.bak/
 venv.bak/
 
 # MkDocs output
 /site/
+
+# CHM build output
+/chm/output/
 
 # mkdocs configuration files
 *.lock
@@ -91,3 +95,7 @@ docs/_build/
 
 .cache
 .env
+
+# Claude Code
+CLAUDE.md
+.claude/

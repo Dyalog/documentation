@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">KeyboardInputDelay</span></h1>
+# KeyboardInputDelay
 
 This parameter specifies the delay (in milliseconds) before the system reacts to a user keystroke by:
 

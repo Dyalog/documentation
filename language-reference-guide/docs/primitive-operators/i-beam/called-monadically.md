@@ -1,23 +1,14 @@
-
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  900⌶
-</div>
-
+---
+search:
+  boost: 2
+---
 
 
-
-
-
-<h1 class="heading"><span class="name">Called Monadically?</span> <span class="command">R←900⌶Y</span></h1>
-
-
+# <span>Called Monadically?</span> `R←900⌶Y`{{key}}
 
 Identifies how the current function was called. It reports whether the nearest tradfn on the stack was called without a left argument or not.
 
-
 `Y` may be any array.
-
 
 The result `R` is Boolean. 1 means that the nearest tradfn was called monadically; 0 means that it wasn't. If there is no function on the stack, the result is 0.
 
@@ -33,5 +24,7 @@ The result `R` is Boolean. 1 means that the nearest tradfn was called monadicall
 
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  900⌶
+</div>

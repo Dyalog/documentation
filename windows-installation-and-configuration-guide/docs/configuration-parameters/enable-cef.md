@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Enable_CEF</span></h1>
+# Enable_CEF
 
 This parameter is a Boolean value with a default value of 1. If set to 0, it disables the [Chromium Embedded Framework (CEF).](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework) and an attempt to create an [HTMLRenderer](../../../object-reference/objects/htmlrenderer) object will fail with an error message.
 

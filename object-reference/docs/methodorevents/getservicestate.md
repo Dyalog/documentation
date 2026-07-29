@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">GetServiceState</span> <span class="right">Method 92</span></h1>
-
-**Applies To:** [Root](../objects/root.md)
+# <span>GetServiceState</span> <span>Method 92</span>
 
 **Description**
 
@@ -22,3 +20,7 @@ typedef struct _SERVICE_STATUS {
 ```
 
 For further details, see the on-line documentation for `SERVICE_STATE` and the function `HashDefine` in the sample workspace `aplservice`.
+
+**Application**
+
+Objects: [Root](../objects/root.md)

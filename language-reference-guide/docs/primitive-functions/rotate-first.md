@@ -1,10 +1,13 @@
-<div style="display: none;">
-  ⊖
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Rotate First</span> <span class="command">R←X⊖[K]Y</span></h1>
+# <span>Rotate First</span> `R←X⊖[K]Y`{{key}}
 
 The form `R←X⊖Y` implies rotation along the first axis.  See [Rotate](rotate.md).
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⊖ rotate
+</div>

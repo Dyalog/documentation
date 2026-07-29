@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">SkipLines</span></h1>
+# SkipLines
 
 This parameter causes the Tracer to automatically skip lines that contain no executable statement, with the exception of the first line in the function, and in the case of a traditional function (not a dfn), the last line if it is a comment. SkipLines is an integer made up of the sum of the following values:
 

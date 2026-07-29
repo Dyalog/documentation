@@ -1,26 +1,16 @@
-
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  950⌶
-</div>
-
+---
+search:
+  boost: 2
+---
 
 
-
-
-
-<h1 class="heading"><span class="name">List Loaded Libraries</span> <span class="command">R←950⌶Y</span></h1>
-
-
+# <span>List Loaded Libraries</span> `R←950⌶Y`{{key}}
 
 Reports the names of the dynamic link libraries that are currently loaded as a result of executing `⎕NA`.
 
-
 `Y` is an empty vector.
 
-
 The result `R` is a vector of character vectors containing  the names of all the DLLs or shared libraries that have been explicitly loaded by `⎕NA` and are still loaded by virtue of the presence of at least one external function reference.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -52,7 +42,9 @@ Ulok    copy
 clear ws
       950⌶⍬
 
-
 ```
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  950⌶
+</div>

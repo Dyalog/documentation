@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Core and aplcore files</span></h1>
+# Core and aplcore files
 
 When Dyalog APL encounters an unexpected problem it is likely that the interpreter will terminate and generate either a core file or an aplcore file. Under Linux core files are not created by default; it is necessary to enable their creation.
 

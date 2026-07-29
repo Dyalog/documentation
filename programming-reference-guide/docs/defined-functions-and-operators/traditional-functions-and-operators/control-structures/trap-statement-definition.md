@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">:Trap Statement</span></h1>
+# :Trap Statement
 
 ```
  

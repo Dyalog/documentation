@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">State and Access Control</span></h1>
+# State and Access Control
 
 Earlier, we have seen how shared variable state and access controls are used to ensure effective communication between two APL tasks. How do these concepts apply in the DDE environment when APL is using shared variables to communicate via DDE with both other APL workspaces, and with non-APL applications?
 
@@ -176,7 +176,6 @@ Let's see what this means if two APL workspaces are involved.
         <td>0 0 1 1  ⍝ We both know</td>
     </tr>
 </table>
-
 
 As you can see, this has the desired effect, namely that an APL workspace sets the value of a shared variable by assignment to it and **uses** it by reference to it. The mechanism of using the DATA and ACK messages to imply **set** and **use** also works with non-APL applications which do not (in general) support these concepts.
 

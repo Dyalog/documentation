@@ -1,15 +1,9 @@
-<div style="display: none;">
-  ⌈
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Maximum</span> <span class="command">R←X⌈Y</span></h1>
-
-
+# <span>Maximum</span> `R←X⌈Y`{{key}}
 
 `Y` may be any numeric array.  `X` may be any numeric array.  `R` is numeric.  `R` is the larger of the numbers `X` and `Y`.
 
@@ -19,5 +13,7 @@
 ¯2.01 0.1 22.7
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌈ max maximum
+</div>

@@ -2,8 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Backslash Bar</span> <span class="command">⍀</span></h1>
-
+# <span>Backslash Bar</span> `⍀`
 
 # Used as a Function
 
@@ -39,5 +38,3 @@ Operator Backslash Bar means
 15 18 21 24 
 ```
 [Language Elements](../glyphs.md)
-
-

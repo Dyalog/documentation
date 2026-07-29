@@ -3,8 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">ToolControl</span> <span class="right">Example 3</span></h1>
-
+# <span>ToolControl</span> <span>Example 3</span>
 
 ```apl
 'F'⎕WC'Form' 'ToolControl: Transparent 1)'('Size' 10 40)
@@ -21,7 +20,4 @@ search:
 'F.TB.B3'⎕WC'ToolButton' 'Save'('ImageIndex' 9)
 ```
 
-
 ![](../img/tool8.gif)
-
-

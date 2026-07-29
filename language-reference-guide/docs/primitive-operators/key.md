@@ -1,8 +1,9 @@
-<div style="display: none;">
-  ⌸
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Key</span> <span class="command">R←{X}f⌸Y</span></h1>
+# <span>Key</span> `R←{X}f⌸Y`{{key}}
 
 !!! note "Classic Edition"
     The symbol `⌸` is not available in Classic Edition, and the Key operator is instead represented by `⎕U2338`.
@@ -169,7 +170,7 @@ Given a list of names and scores., the problem is to sum the scores for each uni
 66 75 71 100 22 10 67 77 55 42 1 78
 
       b←↓(∪names)∘.≡names
-      ]disp b/¨⊂⍳12
+      ]Disp b/¨⊂⍳12
 ┌→──────────────┬───┬─┬────┐
 │1 4 5 8 9 11 12│2 6│3│7 10│
 └~─────────────→┴~─→┴→┴~──→┘
@@ -177,7 +178,7 @@ Given a list of names and scores., the problem is to sum the scores for each uni
       +/¨b/¨⊂scores
 399 85 71 109
 
-      ]disp {⊂⍵}⌸ names
+      ]Disp {⊂⍵}⌸ names
 ┌→──────────────┬───┬─┬────┐
 │1 4 5 8 9 11 12│2 6│3│7 10│
 └~─────────────→┴~─→┴→┴~──→┘
@@ -185,3 +186,9 @@ Given a list of names and scores., the problem is to sum the scores for each uni
       names {+/⍵}⌸ scores
 399 85 71 109
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌸
+  key
+</div>

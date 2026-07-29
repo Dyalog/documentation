@@ -1,9 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕FMT FMT
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Format (Dyadic)</span> <span class="command">R←X ⎕FMT Y</span></h1>
+# <span>Format (Dyadic)</span> `R←X ⎕FMT Y`{{key}}
 
 `Y` must be a simple array of rank not exceeding two, or a non-simple scalar or vector whose items are simple arrays of rank not exceeding two.  The simple arrays in `Y` must be homogeneous, either character or numeric. All numeric values in `Y` must be simple; if `Y` contains any complex numbers, dyadic `⎕FMT` will generate a `DOMAIN ERROR`. `X` must be a simple character vector.  `R` is a simple character matrix.
 
@@ -23,7 +23,6 @@ The **format specification** consists of a series of control phrases, with adjac
 |`Xn`          |Relative tabulation|
 |`⍞t⍞`         |Text insertion     |
 
-
 (Alternative surrounding pairs for Pattern or Text insertion are   `< >, ⊂ ⊃, ⎕ ⎕`  or `¨ ¨`.)
 
 **where**
@@ -38,10 +37,7 @@ The **format specification** consists of a series of control phrases, with adjac
 |`t`|is any arbitrary text excluding the surrounding character pair.  Double quotes imply a single quote in the result.|
 |`pattern`|see following section **G format**|
 
-
-
 **Qualifiers q are as follows**
-
 
 |---|---|
 |`B`|leaves the field blank if the result would otherwise be zero.|
@@ -49,13 +45,11 @@ The **format specification** consists of a series of control phrases, with adjac
 |`Km`|scales numeric values by `1Em` where m is an integer; negation may be indicated by `¯` or - preceding the number.|
 |`L`|left justifies the result in the field width.|
 |`Ov⍞t⍞`|replaces specific numeric value `v` with the text `t` .|
-|`S⍞p⍞`|substitutes standard characters.  p is a string of pairs of symbols enclosed between any of the Text Insertion delimiters.  The first of each pair is the standard symbol and the second is the symbol to be substituted.  Standard symbols are: `*` overflow fill character `.` decimal point `,` triad separator for `C` qualifier `0` fill character for `Z` qualifier `_` loss of precision character `¯` high minus symbol|
+|`S⍞p⍞`|substitutes standard characters. `p` is a string of pairs of symbols enclosed between any of the Text Insertion delimiters; the first of each pair is the standard symbol, and the second is the symbol to be substituted. Standard symbols are:<br>`*` overflow fill character<br>`.` decimal point<br>`,` triad separator for `C` qualifier<br>`0` fill character for `Z` qualifier<br>`_` loss of precision character<br>`¯` high minus symbol|
 |`Z`|fills unused leading positions in the result with zeros (and commas if `C` is also specified).|
 |`9`|digit selector|
 
-
 **Affixtures are as follows**
-
 
 |---|---|
 |`M⍞t⍞`|prefixes negative results with the text t instead of the negative sign.|
@@ -251,3 +245,8 @@ NIL
 ```
 
 `⎕CT` and `⎕DCT` are  implicit arguments of `⎕FMT` with the O format qualifier.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕FMT FMT
+</div>

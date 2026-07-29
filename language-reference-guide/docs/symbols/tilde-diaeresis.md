@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Tilde Diaeresis</span> <span class="command">⍨</span></h1>
+# <span>Tilde Diaeresis</span> `⍨`
 
 Tilde Diaeresis is a monadic operator with a dyadic operand
 
@@ -28,5 +28,3 @@ mu
 ¯1 ¯1 ¯1
 ```
 [Language Elements](../glyphs.md)
-
-

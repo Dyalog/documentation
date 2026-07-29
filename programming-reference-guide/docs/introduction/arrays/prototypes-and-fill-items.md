@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Prototypes and Fill Items</span></h1>
+# Prototypes and Fill Items
 
 Every array has an associated *prototype* which is derived from the array's first item.
 

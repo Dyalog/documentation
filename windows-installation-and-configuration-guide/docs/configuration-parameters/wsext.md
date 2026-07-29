@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">WSEXT</span></h1>
+# WSEXT
 
 This parameter specifies workspace filename extensions. It complements the **WSPATH** parameter in that together they determine the file search order to satisfy `)LOAD` or `)COPY`; it also specifies the filename extension to add on `)SAVE` or `)CONTINUE` if none is explicitly provided.
 

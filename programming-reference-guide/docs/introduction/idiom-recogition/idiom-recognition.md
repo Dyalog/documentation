@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Idiom Recognition</span></h1>
+# Idiom Recognition
 
 *Idioms* are commonly used expressions that are recognised and evaluated internally, providing a significant performance improvement.
 

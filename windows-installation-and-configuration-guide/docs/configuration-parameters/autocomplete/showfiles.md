@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">AutoComplete/ShowFiles</span></h1>
+# AutoComplete/ShowFiles
 
 Specifies whether or not Auto Completion suggests directory and file names for `)LOAD`, `)COPY` and `)DROP` system commands.
 

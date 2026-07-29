@@ -1,30 +1,19 @@
-<div style="display: none;">
-  ⍸
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Where</span> <span class="command">R←⍸Y</span></h1>
-
-
+# <span>Where</span> `R←⍸Y`{{key}}
 
 **Classic Edition:**  the symbol `⍸` (Iota Underbar) is not available in Classic Edition, and Where is instead represented by `⎕U2378`.
 
-
 `Y` must be a simple Boolean or numeric array of non-negative integers.
-
 
 The model for Where can be expressed as `{(,⍵)/,⍳⍴⍵}`.
 
-
 If `Y` is Boolean, `R` is a vector of the indices of all the 1s in `Y`. If `Y` is all zeros, `R` is an empty vector.
 
-
 `⎕IO` is an implicit argument of Where.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -63,4 +52,7 @@ If `Y` is Boolean, `R` is a vector of the indices of all the 1s in `Y`. If `Y` i
 
 ```
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍸ where
+</div>

@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">Cue</span> <span class="right">Property</span></h1>
-
-**Applies To:** [ButtonEdit](../objects/buttonedit.md), [Edit](../objects/edit.md)
+# <span>Cue</span> <span>Property</span>
 
 **Description**
 
@@ -20,3 +18,7 @@ The Boolean property [ShowCueWhenFocused](showcuewhenfocused.md)  determines whe
 ```
 
 ![](../img/cue-property.png)
+
+**Application**
+
+Objects: [ButtonEdit](../objects/buttonedit.md), [Edit](../objects/edit.md)

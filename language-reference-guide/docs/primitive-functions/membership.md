@@ -1,21 +1,13 @@
-<div style="display: none;">
-  ∊
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Membership</span> <span class="command">R←X∊Y</span></h1>
-
-
+# <span>Membership</span> `R←X∊Y`{{key}}
 
 `Y` may be any array.  `X` may be any array.  `R` is Boolean. An element of `R` is 1 if the corresponding element of `X` can be found in `Y`.
 
-
 An element of `X` is considered identical to an element in `Y` if `X≡Y` returns 1 for those elements.
-
 
 `⎕CT` and `⎕DCT` are  implicit arguments of Membership.
 
@@ -28,8 +20,9 @@ An element of `X` is considered identical to an element in `Y` if `X≡Y` return
 1 1 0
 ```
 
-
 For performance information, see [Programmer's Guide: "Search Functions and Hash Tables"](../../../programming-reference-guide/introduction/search-functions-and-hash).
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ∊ member membership
+</div>

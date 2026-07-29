@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Jot Underbar</span> <span class="command">⍛</span></h1>
+# <span>Jot Underbar</span> `⍛`
 
 Jot Underbar is a dyadic operator
 

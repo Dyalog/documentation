@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Simple Shared Properties</span></h1>
+# Simple Shared Properties
 
 The [ComponentFile Class](component-file-class-example.md){: .noprint }  specifies a Simple Shared Property named `Files` which returns the names of all the Component Files in the current directory.
 

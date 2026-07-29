@@ -1,10 +1,15 @@
-<h1 class="heading"><span class="name"> Operators Summarised</span></h1>
+---
+search:
+  exclude: true
+---
 
-[](#MonadicOperators) and [](#DyadicOperators) below summarise the Monadic and Dyadic primitive operators whose detailed descriptions  follow in alphabetical order in this section.
+#  Operators Summarised
+
+[](#monadic-operators) and [](#dyadic-operators) below summarise the Monadic and Dyadic primitive operators whose detailed descriptions  follow in alphabetical order in this section.
 
 Some operators may include an axis specification (indicated `[]`in the tables). Note that in these case `⎕IO` is an implicit argument of the derived function.
 
-Table: Monadic Primitive Operators {: #MonadicOperators }
+Table: Monadic Primitive Operators { #monadic-operators }
 
 |Name                           |Producing Monadic derived function|Producing Dyadic derived function|
 |-------------------------------|----------------------------------|---------------------------------|
@@ -21,7 +26,7 @@ Table: Monadic Primitive Operators {: #MonadicOperators }
 |Scan First                     |`f⍀Y  [ ]`                        |&nbsp;                           |
 |Spawn                          |`f&Y`                             |`Xf&Y`                           |
 
-Table: Dyadic Primitive Operators {: #DyadicOperators }
+Table: Dyadic Primitive Operators { #dyadic-operators }
 
 | Name         |Producing Monadic derived function| Producing Dyadic derived function |
 |--------------|----------------------------------|-----------------------------------|

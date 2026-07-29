@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ComponentFile Class</span></h1>
+# ComponentFile Class
 
 ```apl
 :Class ComponentFile

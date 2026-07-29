@@ -1,20 +1,12 @@
-<h1 class="heading"><span class="name">ListTypeLibs</span> <span class="right">Method 520</span></h1>
-
-
-
-**Applies To:** [Root](../objects/root.md)
+# <span>ListTypeLibs</span> <span>Method 520</span>
 
 **Description**
 
-
 The ListTypeLibs method reports the names and CLSIDs of all the loaded Type Libraries.
-
 
 The ListTypeLibs method is niladic.
 
-
 The result is a nested vector with one element per loaded Type Library.
-
 
 Each element is a vector of 2-element characater vectors. The first is the name of the Type Library; the second is its class identifier or CLSID.
 
@@ -33,5 +25,6 @@ Microsoft Visual Basic for Applications Extensibility 5.3
 Microsoft Office 9.0 Object Library                      
 ```
 
+**Application**
 
-
+Objects: [Root](../objects/root.md)

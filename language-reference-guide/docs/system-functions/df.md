@@ -1,25 +1,15 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕DF DF
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Display Form</span> <span class="command">{R}←⎕DF Y</span></h1>
-
-
+# <span>Display Form</span> `{R}←⎕DF Y`{{key}}
 
 `⎕DF` sets the *Display Form* of a namespace, a GUI object, a Class, or an Instance of a Class.
 
-
 `Y` must be `⎕NULL` or a simple character array that specifies the display form of a namespace. If defined, this array will be returned by the *format* functions and `⎕FMT` instead of the default for the object in question. This also applies to the string that is displayed when the name is referenced but not assigned (the *default display*). If `Y` is  `⎕NULL`, `⎕DF` resets the Display Form to the default.
 
-
 The result `R` is the previous value of the Display Form which initially is `⎕NULL`.
-
 
 <h2 class="example">Example</h2>
 ```apl
@@ -47,8 +37,6 @@ Pete's Form
 1 11
 ```
 
-
-
 Notice that `⎕DF` will accept any character array, but `⎕FMT` always returns a matrix.
 ```apl
 
@@ -75,8 +63,6 @@ PQRST
 5 5
 ```
 
-
-
 Note that `⎕DF` defines the Display Form statically, rather than dynamically.
 ```apl
 
@@ -94,9 +80,6 @@ This is the Caption
 This is the Caption
 ```
 
-
-
-
 You may use the Constructor function to assign the Display Form to an Instance of a Class. For example:
 ```apl
 
@@ -112,10 +95,6 @@ You may use the Constructor function to assign the Display Form to an Instance o
       PD
 Pete
 ```
-
-
-
-
 
 It is possible to set the Display Form for the Root and for `⎕SE`
 ```apl
@@ -135,10 +114,6 @@ CLEAR WS
 Session
 ```
 
-
-
-
-
 Note that `⎕DF` applies directly to the object in question and is not automatically applied in a hierarchical fashion.
 ```apl
 
@@ -157,5 +132,7 @@ This is X
 #.X.Y
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕DF DF
+</div>

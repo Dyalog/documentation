@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">GetItemState</span> <span class="right">Method 306</span></h1>
-
-**Applies To:** [ListView](../objects/listview.md), [TreeView](../objects/treeview.md)
+# <span>GetItemState</span> <span>Method 306</span>
 
 **Description**
 
@@ -24,3 +22,7 @@ The result indicates the state of the item as the sum of one or more of the foll
 |32  |Item is expanded                                              |
 |64  |Item is or has been expanded                                  |
 |4096|Item is checked. See [CheckBoxes](../properties/checkboxes.md)|
+
+**Application**
+
+Objects: [ListView](../objects/listview.md), [TreeView](../objects/treeview.md)

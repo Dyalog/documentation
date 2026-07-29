@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Operator Syntax</span></h1>
+# Operator Syntax
 
 Operators take one or two operands.  An operator with one operand is monadic.  The operand of a monadic operator is to the left of the operator.  An operator with two operands is dyadic.  Both operands are required for a dyadic operator.
 

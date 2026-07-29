@@ -1,15 +1,9 @@
-<div style="display: none;">
-  ⍟
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Natural Logarithm</span> <span class="command">R←⍟Y</span></h1>
-
-
+# <span>Natural Logarithm</span> `R←⍟Y`{{key}}
 
 `Y` must be a numeric array. `R` is numeric.  `R` is the natural (or Napierian) logarithm of `Y` whose base is the mathematical constant *e=2.71828...*.
 
@@ -23,5 +17,7 @@
 1.282474679J0.9827937232 1.6094379120J0.927295218
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍟ log logarithm
+</div>

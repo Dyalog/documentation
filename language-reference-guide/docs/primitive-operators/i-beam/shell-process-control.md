@@ -1,18 +1,18 @@
+---
+search:
+  boost: 2
+---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  8373⌶
-</div>
 
-<h1 class="heading"><span class="name">Shell Process Control</span> <span class="command">R←{X}(8373⌶)Y</span></h1>
+# <span>Shell Process Control</span> `R←{X}(8373⌶)Y`{{key}}
 
-This function provides a way to determine the process IDs of processes started by [`⎕SHELL`](../../../system-functions/shell.md), as well as enabling the sending of signals to any of those processes.
+This function provides a way to determine the process IDs of processes started by [`⎕SHELL`](../../system-functions/shell.md), as well as enabling the sending of signals to any of those processes.
 
 ## Monadic Use: Query Process IDs
 
 If `Y` is a positive integer that identifies an APL thread number, and that thread is currently running `⎕SHELL`, then `R` is the child process ID.
 
-If `Y` is `⍬`, then `R` is a numeric vector containing all the process IDs of the processes that remained running after `⎕SHELL` completed (due to timeouts or interrupts for example - see [`⎕SHELL`](../system-functions/shell.md) for more information). Any call to `8373⌶` starts by removing the "dead" processes from the list; dead processes are ones that are no longer running but their ID is still reserved so that it is not reused by a different process.
+If `Y` is `⍬`, then `R` is a numeric vector containing all the process IDs of the processes that remained running after `⎕SHELL` completed (due to timeouts or interrupts for example - see [`⎕SHELL`](../../system-functions/shell.md) for more information). Any call to `8373⌶` starts by removing the "dead" processes from the list; dead processes are ones that are no longer running but their ID is still reserved so that it is not reused by a different process.
 
 ### Example { .example }
 ```apl
@@ -38,6 +38,10 @@ If `Y` is `⍬`, then `R` is a numeric vector containing all the process IDs of 
 
 `R` is a Boolean scalar indicating whether the signal was successfully sent (`1`), as reported by the operating-system.
 
-
 !!! windows "Dyalog on Microsoft Windows"
 	On Microsoft Windows, the only valid value for `X` is `9`, which makes the I-beam call `TerminateProcess()` on the child process.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  8373⌶
+</div>

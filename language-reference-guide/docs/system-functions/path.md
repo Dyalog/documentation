@@ -1,9 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕PATH PATH
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Search Path</span> <span class="command">⎕PATH</span></h1>
+# <span>Search Path</span> `⎕PATH`
 
 `⎕PATH` is a simple character vector representing a blank-separated list of namespaces.  It is approximately analogous to the PATH variable in Windows or UNIX.
 
@@ -64,4 +64,7 @@ Note that `⎕PATH` is a *session* variable.  This means that it is workspace-wi
 
 `⎕PATH` does not support derived functions and will not be extended to support them; nor will it be extended to support other types of functions that may be developed in the future. `⎕PATH` may therefore be considered an archaic feature.
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕PATH PATH
+</div>

@@ -1,4 +1,8 @@
-<h1 class="heading"><span class="name">Unicode Normalisation</span> <span class="command">R←X(5581⌶)Y</span></h1>
+---
+search:
+  boost: 2
+---
+# <span>Unicode Normalisation</span> `R←X(5581⌶)Y`{{key}}
 
 Converts characters in an array to one of four Unicode Normal Forms.
 
@@ -62,4 +66,3 @@ BrandTM
 1
 
 ```
-

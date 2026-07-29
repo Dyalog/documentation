@@ -3,8 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Splitter</span> <span class="right">Example 5</span></h1>
-
+# <span>Splitter</span> <span>Example 5</span>
 
 ```apl
 'F'⎕WC'Form' 'Combining Horizontal and Vertical Splitters'
@@ -20,7 +19,4 @@ search:
 'F.S4'⎕WC'Splitter' 'F.E4' 'F.E5'('Style' 'Horz')
 ```
 
-
 ![](../img/split5.gif)
-
-

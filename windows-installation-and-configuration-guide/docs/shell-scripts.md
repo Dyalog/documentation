@@ -1,9 +1,5 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  dyalogscript
-</div>
 
-<h1 class="heading"><span class="name">Shell Scripts</span></h1>
+# Shell Scripts
 
 Shell scripts are typically executed  from a terminal (or *shell*).
 
@@ -30,7 +26,7 @@ Any content that follows  the `#!` line (if present) is used as input into a Dya
 
 ## Input and Output
 
-`⎕` and `⍞` input are taken from characters typed by the user into the terminal or shell (Standard input or *stdin* for short).  Anything assigned to `⎕` and `⍞` will be displayed in the terminal window using streams Standard output (*stdout*) and Standard error (*stderr*) respectively. Note that default output, that is, output to the session without assignment to `⎕` or `⍞` is NOT displayed. Redirections of *stdin*, *stdout*, and *stderr* are supported.
+`⎕` and `⍞` input are taken from characters typed by the user into the terminal or shell (Standard input or *stdin* for short).  Anything assigned to `⎕` and `⍞` will be displayed in the terminal window using streams Standard output (*stdout*) and Standard error (*stderr*) respectively. Note that [implicit output](../../programming-reference-guide/introduction/output), that is, output to the session without assignment to `⎕` or `⍞` is NOT displayed. Redirections of *stdin*, *stdout*, and *stderr* are supported.
 
 <h3 class="example">Examples</h3>
 
@@ -101,3 +97,8 @@ Note that the interpreter reads both of these locations, the command line in the
 ### Debugging
 
 It is not currently possible to use Ride to debug APL shell scripts. However there is an I-beam function, which can be used to provide some simple debugging/diagnostic information.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  dyalogscript
+</div>

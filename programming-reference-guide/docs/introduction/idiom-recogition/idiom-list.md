@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Idiom List</span></h1>
+# Idiom List
 
 In the following table, arguments to the idiom have types and ranks as follows:
 

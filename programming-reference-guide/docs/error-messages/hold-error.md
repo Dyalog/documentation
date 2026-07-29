@@ -1,11 +1,6 @@
 
 
-
-
-
-<h1 class="heading"><span class="name">HOLD ERROR</span> <span class="command">12</span></h1>
-
-
+# <span>HOLD ERROR</span> `12`
 
 This report is given when an attempt is made to save a workspace using the system function `⎕SAVE` if any external arrays or component files are currently held (as a result of a prior use of the system function `⎕FHOLD`).
 
@@ -23,6 +18,3 @@ HOLD ERROR
 HOLD∆SAVE[2] ⎕SAVE'TEST'
              ^
 ```
-
-
-

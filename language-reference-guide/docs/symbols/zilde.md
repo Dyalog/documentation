@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Zilde</span> <span class="command">⍬</span></h1>
+# <span>Zilde</span> `⍬`
 
 Niladic Zilde is
 [Zilde](../other-syntax/zilde.md)
@@ -17,5 +17,3 @@ Niladic Zilde is
 0
 ```
 [Language Elements](../glyphs.md)
-
-

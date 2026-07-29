@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">MDITile</span> <span class="right">Method 111</span></h1>
-
-**Applies To:** [MDIClient](../objects/mdiclient.md)
+# <span>MDITile</span> <span>Method 111</span>
 
 **Description**
 
@@ -14,3 +12,7 @@ The argument to MDITile is `⍬`, or a single item as follows:
 |`[1]`|Tile Mode|0 (vertical)<br/>1 (horizontal)|
 
 If the argument is `⍬`, the *Tile Mode* defaults to 0.
+
+**Application**
+
+Objects: [MDIClient](../objects/mdiclient.md)

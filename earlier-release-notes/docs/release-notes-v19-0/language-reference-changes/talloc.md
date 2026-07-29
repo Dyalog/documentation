@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Allocate Token Range</span> <span class="command">{R}←{X} ⎕TALLOC Y</span></h1>
+# <span>Allocate Token Range</span> `{R}←{X} ⎕TALLOC Y`
 
 `Y` is either a single integer or a 2-element vector. The first (or only) item in `Y` is 0, 1, 2 or ¯1 and indicates the type of operation to perform. If it is 1, then the optional second item is a character vector.
 

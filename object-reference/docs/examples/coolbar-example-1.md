@@ -3,8 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">CoolBar</span> <span class="right">Example 1</span></h1>
-
+# <span>CoolBar</span> <span>Example 1</span>
 
 ```apl
 'F'⎕WC'Form' 'CoolBar Object with ToolControls'('Size' 25 50)
@@ -30,25 +29,16 @@ search:
 :EndWith
 ```
 
-
 ![](../img/cool1.gif)
-
 
 ![](../img/cool1a.gif)
 
-
 after user has moved band 2 into row 1
-
 
 ![](../img/cool1b.gif)
 
-
 after user has maximised band 1
-
 
 ![](../img/cool1c.gif)
 
-
 after user has maximised band 2
-
-

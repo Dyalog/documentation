@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Circle Diaeresis</span> <span class="command">⍥</span></h1>
+# <span>Circle Diaeresis</span> `⍥`
 
 Circle Diaeresis is a dyadic operator with an ambivalent left operand
 
@@ -19,5 +19,3 @@ Operator Circle Diaeresis means
 0
 ```
 [Language Elements](../glyphs.md)
-
-

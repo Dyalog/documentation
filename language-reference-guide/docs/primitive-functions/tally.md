@@ -1,8 +1,9 @@
-<div style="display: none;">
-  ≢
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Tally</span> <span class="command">R←≢Y</span></h1>
+# <span>Tally</span> `R←≢Y`{{key}}
 
 `Y` may be any array.  `R` is a simple numeric scalar.
 
@@ -22,5 +23,7 @@ This can also be expressed as the length of the leading axis or 1 if `Y` is a sc
 
 Note that `≢V` is useful for returning the length of vector `V` as a scalar.  (In contrast, `⍴V` is a one-element vector.)
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ≢ tally
+</div>

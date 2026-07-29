@@ -1,8 +1,9 @@
-<div style="display: none;">
-  ⊃
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Mix</span> <span class="command">(⎕ML) R←↑[K]Y or R←⊃[K]Y</span></h1>
+# <span>Mix</span> `(⎕ML) R←↑[K]Y or R←⊃[K]Y`{{key}}
 
 The symbol chosen to represent Mix depends on the current Migration Level.
 
@@ -88,7 +89,7 @@ If the items of `Y` are unequal in shape, the shorter ones are extended:
 
 # More Simple Vector Examples
 ```apl
-      ]box on
+      ]Boxing on
 Was OFF
        'Andy' 'Geoff' 'Pauline'
 ┌────┬─────┬───────┐
@@ -213,3 +214,8 @@ If the items of `Y` are unequal in rank, the lower rank items are extended in ra
 ```
 
 In the above example, the first item (1) becomes (`1 1⍴1`) to conform with the 3rd item which is rank 2. It is then extended in shape to become `(2 4↑1 1⍴1)` to conform with the 2-row 3rd item, and 4-column 2nd item.. Likewise, the 2nd item becomes a 2-row matrix, and the 3rd item gains another column.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⊃ mix
+</div>

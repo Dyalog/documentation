@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Down Tack</span> <span class="command">⊤</span></h1>
+# <span>Down Tack</span> `⊤`
 
 Monadic Down Tack is not defined
 
@@ -23,5 +23,3 @@ Dyadic Down Tack means
 
 ```
 [Language Elements](../glyphs.md)
-
-

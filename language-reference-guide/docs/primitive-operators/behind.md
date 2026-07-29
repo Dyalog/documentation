@@ -1,11 +1,14 @@
-<div style="display: none;">
-  ⍛
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Behind</span> <span class="command">{R}←{X}f⍛gY</span></h1>
+# <span>Behind</span> `{R}←{X}f⍛gY`{{key}}
 
 !!! Info "Information"
     The `⍛` glyph is not available in Classic Edition, and the _behind_ operator is instead represented by `⎕U235B`.
+
+The _behind_ operator allows functions to be *glued* together to build up more complex functions. For further information, see [Function Composition](./function-composition.md).
 
 `f` can be any monadic function that returns a result; the result must be suitable as the left argument to the function `g`.
 
@@ -17,8 +20,6 @@ If `X` is omitted, `Y` must also be suitable as the right argument to the functi
 `X` can be any array that is suitable as the right argument to the function `f`.
 
 The derived function is equivalent to either `(f Y) g Y` or `(f X) g Y`, depending on whether `X` is specified or not.
-
-The _behind_ operator allows functions to be *glued* together to build up more complex functions. For further information, see [Function Composition](./operator-syntax.md).
 
 <h2 class="example">Examples: Monadic Application of Derived Function</h2>
 
@@ -175,8 +176,14 @@ Split a vector with a function that can be applied either monadically (in which 
 ┌───┬───────┬─────┐
 │I S│EAT ING│RATES│
 └───┴───────┴─────┘
-      ' 'SPLIT TEXT  ⍝ Split at occurences of left argument
+      ' 'Split Text  ⍝ Split at occurences of left argument
 ┌──┬─────┬─────────┐
 │,I│S,EAT│ING,RATES│
 └──┴─────┴─────────┘
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍛
+  behind
+</div>

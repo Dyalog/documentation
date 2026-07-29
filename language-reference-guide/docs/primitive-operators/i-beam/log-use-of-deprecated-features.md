@@ -1,4 +1,8 @@
-<h1 class="heading"><span class="name">Log Use of Deprecated Features</span> <span class="command">{R}←(13⌶)Y</span></h1>
+---
+search:
+  boost: 2
+---
+# <span>Log Use of Deprecated Features</span> `{R}←(13⌶)Y`{{key}}
 
 Controls which deprecated features are logged when logging is enabled. For an overview of deprecated features and this I-beam's role in identifying them within your code, see [Deprecated functionality](../../../../programming-reference-guide/deprecated-functionality).
 

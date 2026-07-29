@@ -1,16 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕D
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Digits</span> <span class="command">R←⎕D</span></h1>
-
-
+# <span>Digits</span> `R←⎕D`{{key}}
 
 This is a simple character vector of the digits from 0 to 9.
 
@@ -20,5 +13,7 @@ This is a simple character vector of the digits from 0 to 9.
 0123456789
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕D
+</div>

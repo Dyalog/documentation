@@ -1,16 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕TID TID
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Current Thread Identity</span> <span class="command">R←⎕TID</span></h1>
-
-
+# <span>Current Thread Identity</span> `R←⎕TID`{{key}}
 
 `R` is a simple integer scalar whose value is the number of the current thread.
 
@@ -23,5 +16,7 @@
 1
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕TID TID
+</div>

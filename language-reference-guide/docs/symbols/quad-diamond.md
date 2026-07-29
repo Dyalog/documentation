@@ -2,8 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Quad Diamond</span> <span class="command">⌺</span></h1>
-
+# <span>Quad Diamond</span> `⌺`
 
 Quad Diamond is a dyadic operator
 
@@ -43,5 +42,3 @@ Operator Quad Diamond means
 46 72 78 54
 ```
 [Language Elements](../glyphs.md)
-
-

@@ -1,16 +1,11 @@
-<div style="display: none;">
-  ^
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-<h1 class="heading"><span class="name">Lowest Common Multiple/AND</span> <span class="command">R←X∧Y</span></h1>
-
+# <span>Lowest Common Multiple/AND</span> `R←X∧Y`{{key}}
 
 ## Case 1: Lowest Common Multiple – either or both X and Y are numeric (non-Boolean)
-
 
 `R` is the lowest common multiple of `X` and `Y`. Note that in this case, `⎕CT` and `⎕DCT` are implicit arguments.
 
@@ -28,7 +23,6 @@
 
 ## Case 2: AND – `X` and `Y` are Boolean
 
-
 `R` is Boolean is determined as follows:
 ```apl
              X   Y     R
@@ -39,10 +33,7 @@
              1   1     1
 ```
 
-
-
 Note that the ASCII caret (`^`) will also be interpreted as an APL **And** (`∧`).
-
 
 <h2 class="example">Example</h2>
 ```apl
@@ -50,4 +41,7 @@ Note that the ASCII caret (`^`) will also be interpreted as an APL **And** (`∧
 0 0 0 1
 ```
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ^ lcm and
+</div>

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Base Constructors</span></h1>
+# Base Constructors
 
 Constructors in a Class hierarchy are not inherited in the same way as other members. However, there is a mechanism for all the Classes in the Class inheritance tree to participate in the initialisation of an Instance.
 

@@ -1,9 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕EXCEPTION EXCEPTION
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Exception</span> <span class="command">R←⎕EXCEPTION</span></h1>
+# <span>Exception</span> `R←⎕EXCEPTION`{{key}}
 
 This is a system object that identifies the most recent *Exception* thrown by a Microsoft .NET object.
 
@@ -43,4 +43,7 @@ Similarly to GUI objects, `⎕EXCEPTION` is not preserved across a save/load cy
 !!! note
     `⎕SIGNAL` can be used to reset the value of this system constant.
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕EXCEPTION EXCEPTION
+</div>

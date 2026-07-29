@@ -1,8 +1,9 @@
-<div style="display: none;">
-  ⍠
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Variant</span> <span class="command">{R}←{X}(f⍠B)Y</span></h1>
+# <span>Variant</span> `{R}←{X}(f⍠B)Y`{{key}}
 
 !!! note "Classic Edition"
     The symbol `⍠` is not available in Classic Edition, and the Variant operator is instead represented by `⎕U2360`. Note too that `⍠` and `⎕OPT` are synonymous though only the latter is available in the Classic Edition.
@@ -174,4 +175,10 @@ A modified version of `⎕JSON` ...
 
 ## Variant and .NET
 
-The Variant operator may also be used in conjunction with .NET classes; it can used to cast an array into a specific .NET data type, and to specify which constructor should be used when creating a new instance of a .NET class which has overloaded constructors. For further information, see [Advanced Techniques](../../../net-framework-interface-guide/accessing-net-classes/advanced-techniques).
+The Variant operator may also be used in conjunction with .NET classes; it can used to cast an array into a specific .NET data type, and to specify which constructor should be used when creating a new instance of a .NET class which has overloaded constructors. For further information, see [Advanced Techniques](../../../dotnet-framework-interface-guide/dotnet-classes/advanced-techniques).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍠
+  variant
+</div>

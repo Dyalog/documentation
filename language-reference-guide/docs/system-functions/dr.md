@@ -3,15 +3,9 @@ search:
   exclude: true
 ---
 
-
-
-
-
-<h1 class="heading"><span class="name">Data Representation</span> <span class="command">⎕DR</span></h1>
-
+# <span>Data Representation</span> `⎕DR`
 
 ## Monadic `⎕DR` means
-
 
 [Query Data Type](data-representation-monadic.md)
 ```apl
@@ -23,7 +17,6 @@ search:
 
 ## Dyadic `⎕DR` means
 
-
 [Change Data Type](data-representation-dyadic.md)
 ```apl
       A←10
@@ -31,8 +24,3 @@ search:
 0 0 0 0 1 0 1 0
 
 ```
-
-
-[Language Elements](../symbols/language-elements.md)
-
-

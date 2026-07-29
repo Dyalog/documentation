@@ -1,24 +1,15 @@
-<div style="display: none;">
-  ⍉
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Transpose (Dyadic)</span> <span class="command">R←X⍉Y</span></h1>
-
-
+# <span>Transpose (Dyadic)</span> `R←X⍉Y`{{key}}
 
 `Y` may be any array.  `X` must be a simple scalar or vector whose elements are included in the set `⍳⍴⍴Y`.  Integer values in `X` may be repeated but all integers in the set `⍳⌈/X` must be included.  The length of `X` must equal the rank of `Y`.
 
-
 `R` is an array formed by the transposition of the axes of `Y` as specified by `X`.  The `I`<sup>th</sup> element of `X` gives the new position for the `I`<sup>th</sup> axis of `Y`.  If `X` repositions two or more axes of `Y` to the same axis, the elements used to fill this axis are those whose indices on the relevant axes of `Y` are equal.
 
-
 `⎕IO` is an implicit argument of Dyadic Transpose.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -52,9 +43,7 @@
 17 18 19 20
 ```
 
-
 ## Alternative Explanation
-
 
 Assign a distinct letter for each unique integer in `X` :
 ```apl
@@ -62,9 +51,7 @@ Assign a distinct letter for each unique integer in `X` :
 i j k l
 ```
 
-
 If `R←X⍉Y`, then `R[i;j;k;…]` equals `Y` indexed by the letters corresponding to elements of `X` .
-
 
 ## For example
 ```apl
@@ -86,10 +73,12 @@ If `R←X⍉Y`, then `R[i;j;k;…]` equals `Y` indexed by the letters correspond
 1
 ```
 
-
 From the above it can be seen that:
 
 - the rank of `R` is `0⌈1+⌈/X`
 - the shape of R is `(⍴Y)⌊.+(⌈/⍴Y)×X∘.≠⍳0⌈1+⌈/X`
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍉ transpose
+</div>

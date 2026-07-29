@@ -1,9 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕DR DR
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Data Representation (Dyadic)</span> <span class="command">R←X ⎕DR Y</span></h1>
+# <span>Data Representation (Dyadic)</span> `R←X ⎕DR Y`{{key}}
 
 Dyadic `⎕DR` converts the data type of its argument `Y` according to the type specification `X`. See [Data Representation (Monadic)](data-representation-monadic.md) for a list of data types but note that 1287 is not a permitted value in `X`.
 
@@ -53,3 +53,8 @@ Conversion to and from character (data type 82) uses the translate vector given 
 
 - The internal representation of data may be modified during workspace compaction. For example, numeric arrays and (in the Unicode Edition) character arrays will, if possible, be squeezed to occupy the least possible amount of memory. However, the internal representation of the result `R` is guaranteed to remain unmodified until it is re-assigned (or partially re-assigned) with the result of any function.
 - The precise operation of dyadic `⎕DR` depends upon the byte-ordering scheme of the computer system.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕DR DR
+</div>

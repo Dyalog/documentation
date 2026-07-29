@@ -1,10 +1,10 @@
+---
+search:
+  boost: 2
+---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  4007⌶
-</div>
 
-<h1 class="heading"><span class="name">Signal Counts</span> <span class="command">R←4007⌶Y</span></h1>
+# <span>Signal Counts</span> `R←4007⌶Y`{{key}}
 
 !!! note
     **UNIX, Linux and macOS only.**
@@ -19,5 +19,7 @@ Each time the function is called it zeros the counts; it is therefore inadvisabl
 
 Currently, only SIGHUP, SIGINT, SIGQUIT, SIGTERM and SIGWINCH are counted and all other corresponding elements of `R` are 0.
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  4007⌶
+</div>

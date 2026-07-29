@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">SetItemState</span> <span class="right">Method 307</span></h1>
-
-**Applies To:** [ListView](../objects/listview.md), [TreeView](../objects/treeview.md)
+# <span>SetItemState</span> <span>Method 307</span>
 
 **Description**
 
@@ -23,3 +21,7 @@ The status of an item is calculated as the sum of one or more of the following s
 |32  |Item is expanded                                                |
 |64  |Item is or has been expanded                                    |
 |4096|Item is checked. See [CheckBoxes](../properties/checkboxes.md)  |
+
+**Application**
+
+Objects: [ListView](../objects/listview.md), [TreeView](../objects/treeview.md)

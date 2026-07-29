@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">The CoolBar and CoolBand Objects</span></h1>
+# The CoolBar and CoolBand Objects
 
 A CoolBar contains one or more bands (CoolBands). Each band can have any combination of a gripper bar, a bitmap, a text label, and a single child object.
 

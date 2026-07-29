@@ -1,9 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SHELL SHELL
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Execute External Program</span> <span class="command">R←⎕SHELL Y</span></h1>
+# <span>Execute External Program</span> `R←⎕SHELL Y`{{key}}
 
 `⎕SHELL` executes an external program, either directly or using the operating system's shell.
 
@@ -304,3 +304,11 @@ The default redirections for the two output streams are:
 The default for the input stream is
 
 - `(0 'Null')`: Provide no data on standard input.
+
+!!! unix "Dyalog on AIX"
+    The performance of `⎕SHELL` on AIX can be improved using the [`DYALOG_SHELL_SUBPROCESS`](../../../unix-installation-and-configuration-guide/configuration-parameters/environment-variables/#_table-4) configuration parameter; this configuration parameter is active by default.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SHELL SHELL
+</div>

@@ -3,15 +3,9 @@ search:
   exclude: true
 ---
 
-
-
-
-
-<h1 class="heading"><span class="name">Monitor Controls</span> <span class="command">⎕MONITOR</span></h1>
-
+# <span>Monitor Controls</span> `⎕MONITOR`
 
 ## Dyadic `⎕MONITOR` means
-
 
 [Set Monitor Controls](set-monitor.md)
 ```apl
@@ -20,7 +14,6 @@ search:
 ```
 
 ## Monadic `⎕MONITOR` means
-
 
 [Query Monitor Controls](query-monitor.md)
 ```apl
@@ -33,8 +26,3 @@ search:
 4 1  467 1000 0
 5 1  100    0 0
 ```
-
-
-[Language Elements](../symbols/language-elements.md)
-
-

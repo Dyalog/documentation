@@ -1,9 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕VGET VGET
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Value Get</span> <span class="command">R←{X}⎕VGET Y</span></h1>
+# <span>Value Get</span> `R←{X}⎕VGET Y`{{key}}
 
 `⎕VGET` enables values to be read for names in a source namespace or source namespaces. Optionally, a fallback value can be used if the name requested is undefined.
 
@@ -39,11 +39,10 @@ Names are specified as rows in a character matrix.
 * a character matrix, where each row is a name.
 * a two element vector, where the first item is a character matrix of names and the second item is a specification of fallback values.
 
-The fallback values must one of the following:
+The fallback values must be one of the following:
 
 * a vector with as many elements as there are names in the matrix.
 * a scalar value that is the fallback value for all names.
-
 
 The result `R` is a vector of the values from the corresponding names or fallback values.
 
@@ -63,7 +62,7 @@ longer_name
  1 2 3  #.[Namespace]  APL  42
 ```
 
-Multiple names with different fallback for each name:
+Multiple names with a different fallback for each name:
 
 ```apl
       name2←100
@@ -157,7 +156,7 @@ Multiple names with fallback for some:
 1 123 3
 ```
 
-Multiple names with different fallback for each of them:
+Multiple names with a different fallback for each of them:
 ```apl
       name2←100
       ⎕VGET ('name1' 1) ('name2' 2) ('name3' 3)
@@ -216,7 +215,7 @@ DOMAIN ERROR: Divide by zero
 Name matrix and value vector:
 
 ```apl
-      ]box on
+      ]Boxing on
 Was OFF
       (name1 name2 name3)←'APL' (1 2 3) ⎕SE
       ⎕VGET 2 9
@@ -226,3 +225,8 @@ Was OFF
 │name3│└───┴─────┴─────┘│
 └─────┴─────────────────┘
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕VGET VGET
+</div>

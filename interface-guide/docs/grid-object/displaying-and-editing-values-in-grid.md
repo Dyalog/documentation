@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Displaying and Editing Values in Grid Cells</span></h1>
+# Displaying and Editing Values in Grid Cells
 
 The Grid can display the value in a cell directly (as illustrated by [The Components of the Grid Object](using-the-grid-object.md)) or indirectly via an *associated object*. You do not (as you might first expect) define input and validation characteristics for the cells directly, instead you do so *indirectly* through associated objects. Objects are associated with Grid cells by the Input property. If a cell has an associated object, its value is displayed and edited using that object. Several types of object may be associated with Grid cells, including Edit, Label, Button (Push, Radio and Check), and Combo objects. You can use a single associated object for the entire Grid, or you can associate different objects with individual cells.
 

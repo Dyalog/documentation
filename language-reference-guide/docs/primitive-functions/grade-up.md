@@ -1,8 +1,9 @@
-<div style="display: none;">
-  ⍋
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Grade Up</span> <span class="command">R←⍋Y</span></h1>
+# <span>Grade Up</span> `R←⍋Y`{{key}}
 
 `Y` may be any array of rank greater than 0 but may not contain namespaces. `R` is an integer vector being the permutation of `⍳1↑⍴Y` that places the sub-arrays along the first axis in ascending order. The rules for comparing items of `Y` with one another are as follows:
 
@@ -100,3 +101,8 @@ Porridge</code></pre></td>
       ⍋pb
 2 4 3 1 6 5
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍋ grade
+</div>

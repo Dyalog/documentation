@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">:Namespace Statement</span></h1>
+# :Namespace Statement
 
 ```apl
  :Namespace <namespace name>

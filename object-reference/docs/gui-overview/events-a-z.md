@@ -1,6 +1,9 @@
-<h1 class="heading"><span class="name">Events A-Z</span></h1>
+---
+search:
+  exclude: true
+---
 
-
+# Events A-Z
 
 |Event|Num|Description|
 |---|---|---|
@@ -153,5 +156,3 @@
 |[WebSocketReceive](../methodorevents/websocketreceive.md)|842|triggered when data is received over a WebSocket|
 |[WebSocketUpgrade](../methodorevents/websocketupgrade.md)|841|reported when the client component of an [HTMLRenderer](../objects/htmlrenderer.md) object opens a WebSocket|
 |[WinIniChange](../methodorevents/wininichange.md)|133|WIN.INI has changed|
-
-

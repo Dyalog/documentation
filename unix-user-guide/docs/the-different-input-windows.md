@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">The Different Types of Input Windows</span></h1>
+# The Different Types of Input Windows
 
 The tty version of Dyalog APL comprises of four different types of window:
 

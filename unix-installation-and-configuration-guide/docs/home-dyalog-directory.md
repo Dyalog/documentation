@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">The Directory ~/.dyalog</span></h1>
+# The Directory ~/.dyalog
 
 In Version {{ version_majmin }} Dyalog APL by default creates a directory to hold various configuration and log files; in previous versions these files were located in differing directories. The contents of this directory are expected to be extended in future versions of Dyalog APL, and allow for multiple versions and editions of Dyalog APL to be run concurrently.
 

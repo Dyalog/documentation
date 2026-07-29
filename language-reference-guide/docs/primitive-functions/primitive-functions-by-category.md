@@ -1,4 +1,8 @@
-<h1 class="heading"><span class="name">Primitive Functions (by Category)</span></h1>
+---
+search:
+  exclude: true
+---
+# Primitive Functions (by Category)
 
 The primitive functions can be grouped together into categories that exhibit common behaviours or goals. Functions can be in multiple categories.
 
@@ -142,7 +146,7 @@ Selection functions restrict the parts of their arguments that are propagated in
 
 |Syntax|Meaning|
 |---:|---|
-|`X⌷Y`&emsp;|[Index](index-function.md)|
+|`X⌷Y`&emsp;|[Index](index-function/index.md)|
 |`⊃Y`&emsp;|[First](first.md)|
 |`X⊃Y`&emsp;|[Pick](pick.md)|
 |`X/Y`&emsp;|[Replicate](replicate.md)|
@@ -150,8 +154,8 @@ Selection functions restrict the parts of their arguments that are propagated in
 |`X\Y`&emsp;|[Expand](expand.md)|
 |`X⍀Y`&emsp;|[Expand First](expand-first.md)|
 |`X⍉Y`&emsp;|[Dyadic Transpose](dyadic-transpose.md)|
-|`X↑Y`&emsp;|[Take](take.md)|
-|`X↓Y`&emsp;|[Drop](drop.md)|
+|`X↑Y`&emsp;|[Take](take/index.md)|
+|`X↓Y`&emsp;|[Drop](drop/index.md)|
 |`X∩Y`&emsp;|[Intersection](intersection.md)|
 |`∪Y`&emsp;|[Unique](unique.md)|
 |`X∪Y`&emsp;|[Union](union.md)|
@@ -216,14 +220,13 @@ Index generator functions return indices that can then be used directly or to se
 |`⍒Y`&emsp;|[Grade Down](grade-down.md)|
 |`X⍒Y`&emsp;|[Dyadic Grade Down](dyadic-grade-down.md)|
 
-
 ## Structural Functions
 Structural functions modify the structure or shape of their right argument (including omitting values) but they do not otherwise change any scalar values.
 
 |Syntax|Meaning|
 |---:|---|
 |`X⍴Y`&emsp;|[Reshape](reshape.md)|
-|`,Y`&emsp;|[Ravel](ravel.md)|
+|`,Y`&emsp;|[Ravel](ravel/index.md)|
 |`X,Y`&emsp;|[Catenate/Laminate](catenate-laminate.md)|
 |`⍪Y`&emsp;|[Table](table.md)|
 |`X⍪Y`&emsp;|[Catenate First/Laminate](catenate-first.md)|
@@ -234,10 +237,10 @@ Structural functions modify the structure or shape of their right argument (incl
 |`⊖Y`&emsp;|[Reverse First](reverse-first.md)|
 |`X⊖Y`&emsp;|[Rotate First](rotate-first.md)|
 |`↑Y`&emsp;|[Mix](mix.md)|
-|`X↑Y`&emsp;|[Take](take.md)|
+|`X↑Y`&emsp;|[Take](take/index.md)|
 |`↓Y`&emsp;|[Split](split.md)|
-|`X↓Y`&emsp;|[Drop](drop.md)|
-|`⊂Y`&emsp;|[Enclose](enclose.md)|
+|`X↓Y`&emsp;|[Drop](drop/index.md)|
+|`⊂Y`&emsp;|[Enclose](enclose/index.md)|
 |`X⊂Y`&emsp;|[Partitioned Enclose](partitioned-enclose.md)|
 |`⊆Y`&emsp;|[Nest](nest.md)|
 |`X⊆Y`&emsp;|[Partition](partition.md)|

@@ -1,31 +1,24 @@
-<div style="display: none;">
-  ⍪
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Table</span> <span class="command">R←⍪Y</span></h1>
-
-
+# <span>Table</span> `R←⍪Y`{{key}}
 
 `Y` may be any array. `R` is a 2-dimensional matrix of the elements of `Y` taken in row-major order, preserving the shape of the first dimension of `Y` if it exists
-
 
 *Table* has been implemented according to the Extended APL Standard (*ISO/IEC 13751:2001).*
 
 <h2 class="example">Examples</h2>
 ```apl
-      ]display {⍵ (⍴⍵)} ⍪'a'
+      ]Display {⍵ (⍴⍵)} ⍪'a'
 ┌→──────────┐
 │ ┌→┐ ┌→──┐ │
 │ ↓a│ │1 1│ │
 │ └─┘ └~──┘ │
 └∊──────────┘
  
-      ]display {⍵ (⍴⍵)} ⍪'hello'
+      ]Display {⍵ (⍴⍵)} ⍪'hello'
 ┌→──────────┐
 │ ┌→┐ ┌→──┐ │
 │ ↓h│ │5 1│ │
@@ -36,7 +29,7 @@
 │ └─┘       │
 └∊──────────┘
  
-      ]display {⍵ (⍴⍵)} ⍪2 3 4⍴⍳24
+      ]Display {⍵ (⍴⍵)} ⍪2 3 4⍴⍳24
 ┌→─────────────────────────────────────────────┐
 │ ┌→──────────────────────────────────┐ ┌→───┐ │
 │ ↓ 1  2  3  4  5  6  7  8  9 10 11 12│ │2 12│ │
@@ -45,5 +38,7 @@
 └∊─────────────────────────────────────────────┘
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍪ table
+</div>

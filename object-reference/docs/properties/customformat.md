@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">CustomFormat</span> <span class="right">Property</span></h1>
-
-**Applies To:** [DateTimePicker](../objects/datetimepicker.md)
+# <span>CustomFormat</span> <span>Property</span>
 
 **Description**
 
@@ -46,4 +44,6 @@ To include a single quote in your body text, use two consecutive single quotes. 
 !!! note
     Non-format characters that are not delimited by single quotes will result in unpredictable display by the [DateTimePicker](../objects/datetimepicker.md) object.
 
+**Application**
 
+Objects: [DateTimePicker](../objects/datetimepicker.md)

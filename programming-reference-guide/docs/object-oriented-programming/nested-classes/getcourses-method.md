@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">GetCourses Method</span></h1>
+# GetCourses Method
 
 ```apl
 

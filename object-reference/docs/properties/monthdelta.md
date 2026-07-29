@@ -1,16 +1,11 @@
-<h1 class="heading"><span class="name">MonthDelta</span> <span class="right">Property</span></h1>
-
-
-
-**Applies To:** [Calendar](../objects/calendar.md), [DateTimePicker](../objects/datetimepicker.md)
+# <span>MonthDelta</span> <span>Property</span>
 
 **Description**
 
-
 The MonthDelta property specifies the number of months by which a [Calendar](../objects/calendar.md) object scrolls when the user clicks its scroll buttons.
-
 
 MonthDelta is an integer or an empty vector (zilde). The latter means that the [Calendar](../objects/calendar.md) object scrolls by the number of months that are currently displayed in its window. This is the default.
 
+**Application**
 
-
+Objects: [Calendar](../objects/calendar.md), [DateTimePicker](../objects/datetimepicker.md)

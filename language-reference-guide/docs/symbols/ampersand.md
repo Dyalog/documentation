@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Ampersand</span> <span class="command">&</span></h1>
+# <span>Ampersand</span> `&`
 
 Ampersand is a monadic operator with an ambivalent operand
 

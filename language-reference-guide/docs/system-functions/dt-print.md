@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Date-time</span> <span class="command">R←X ⎕DT Y</span></h1>
+# <span>Date-time</span> `R←X ⎕DT Y`{{key}}
 
 This function validates date-times or converts date-times between one format and another.
 
@@ -87,7 +87,6 @@ If a value in `X` is positive it indicates that a time number type is expected i
    the most significant decimal digit, for example 2020/01/23 (year/month/day) is encoded as 20200123, and 13:17:56 (
    hour:minute:second) is encoded as 131756. The date must be between 1 January 0001 and 31 December 9999 in the
    Proleptic Gregorian Calendar.
-
 
 ## Time Stamps
 
@@ -219,4 +218,3 @@ Note that the resolutions of system clocks vary by platform.
       ¯30 0 ⎕DT⊂32000 15 10 0
 1
 ```
-

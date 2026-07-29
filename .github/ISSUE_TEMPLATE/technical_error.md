@@ -21,7 +21,7 @@ If applicable, add screenshots to help explain your problem.
 **Platform on which you are seeing the error**
 
 Desktop (please complete the following information):  
- - OS: [for example, Microsoft WIndows]
+ - OS: [for example, Microsoft Windows]
  - Version [for example, 10]
  - Browser [for example, Firefox, Bing]
 

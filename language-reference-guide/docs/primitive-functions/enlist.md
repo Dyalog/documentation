@@ -1,8 +1,9 @@
-<div style="display: none;">
-  ∊
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Enlist</span> <span class="command">(⎕ML≥1) R←∊Y</span></h1>
+# <span>Enlist</span> `(⎕ML≥1) R←∊Y`{{key}}
 
 Migration level must be such that `⎕ML≥1` (otherwise see [Type](type.md)).
 
@@ -26,5 +27,7 @@ MISSISSIPPI
 1 2 3 4 5 6 7 8
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ∊ enlist
+</div>

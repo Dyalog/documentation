@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Namespaces</span></h1>
+# Namespaces
 
 Namespace is a (class 9) object in Dyalog APL. Namespaces are analogous to
 nested workspaces.

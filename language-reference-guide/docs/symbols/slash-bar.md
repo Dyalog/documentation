@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Slash Bar</span> <span class="command">⌿</span></h1>
+# <span>Slash Bar</span> `⌿`
 
 # Used as a Function
 
@@ -27,7 +27,7 @@ Dyadic Slash Bar means
 Slash Bar is a monadic operator with a dyadic operand
 
 Operator Slash Bar means
-[Reduce First,  Reduce First N-Wise ](../primitive-operators/reduce-first.md)
+[Reduce First,  Reduce First N-Wise ](../primitive-operators/reduce-first/index.md)
 ```apl
       +⌿ mat
 15 18 21 24
@@ -37,5 +37,3 @@ Operator Slash Bar means
 14 16 18 20
 ```
 [Language Elements](../glyphs.md)
-
-

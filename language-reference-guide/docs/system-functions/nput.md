@@ -1,9 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NPUT NPUT
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Write Text File</span> <span class="command">{R}←X ⎕NPUT Y</span></h1>
+# <span>Write Text File</span> `{R}←X ⎕NPUT Y`{{key}}
 
 This function writes character data to a text file. See also [Read Text File](nget.md).
 
@@ -69,7 +69,6 @@ The NEOL variant option specifies how embedded line separators are treated.
 |`2` |every embedded line separator character is replaced by `newline`                                             |
 |`¯1`|same as 0 except that a `newline` is not added to the last line                                              |
 
-
 ## Embedded line-separator examples
 
 ```apl
@@ -96,4 +95,7 @@ In the third example, all of the line endings are normalised so the written file
 
 If two or more APL processes separately write to a file using `⎕NPUT` the behaviour is undefined. In particular, if multiple APLs use `⎕NPUT` with flags set to 2 (append), it is not guaranteed that each `⎕NPUT` operation will be atomic and all the text written to the file will be complete and/or contiguous.
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NPUT NPUT
+</div>

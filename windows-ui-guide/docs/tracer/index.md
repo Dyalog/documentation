@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">The Tracer</span></h1>
+# The Tracer
 
 The Tracer is a visual debugging aid that allows you to step through an application line by line. During a Trace you can track the path taken through your code, display variables in edit windows and watch them change, skip forwards and backwards in a function. You can cutback the stack to a calling function and use the Session and Editor to experiment with and correct your code. The Tracer may be invoked in several ways as discussed below.
 
@@ -155,5 +155,3 @@ Breakpoints are defined by `⎕STOP` and may be toggled on and off in an Edit or
 <span class="toolbar-icon" style="background-position: -144px 0"></span>
 
 You can clear all breakpoints by pressing the above button in the Trace Tools window. This in fact resets `⎕STOP` for all functions in the workspace.
-
-

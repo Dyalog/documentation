@@ -1,15 +1,9 @@
-<div style="display: none;">
-  ⌊
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Minimum</span> <span class="command">R←X⌊Y</span></h1>
-
-
+# <span>Minimum</span> `R←X⌊Y`{{key}}
 
 `Y` may be any numeric array.  `X` may be any numeric array.  `R` is numeric.  `R` is the smaller of `X` and `Y`.
 
@@ -19,5 +13,7 @@
 ¯3.2 0.1 15.3
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌊ min minimum
+</div>

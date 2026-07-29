@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">APLMON output</span></h1>
+# APLMON output
 
 The output file is a CSV matrix with values  separated by commas. Fields can be empty. The file may be read by `⎕CSV` and applications such as Microsoft Excel.
 
@@ -67,8 +67,6 @@ The each will not appear in the log, but only the primitives called by `foo`, me
       +.×/(N⍴1
 ```
 
-The `/` will not be measured, but `+.×` will appeared as called `(N-1)` times.
-
-This ensures that time measurements do not overlap, and can therefore be compared.
+The `/` will not be measured, but `+.×` will appeared as called `(N-1)` times. This ensures that time measurements do not overlap, and can therefore be compared.
 
 However, some non-atomic expressions are logged, and the non-primitive parts are logged as non primitive.

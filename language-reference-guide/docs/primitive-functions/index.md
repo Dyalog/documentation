@@ -1,4 +1,8 @@
-<h1 class="heading"><span class="name">Primitive Functions</span></h1>
+---
+search:
+  exclude: true
+---
+# Primitive Functions
 
 |Glyph|Glyph Name|Monadic Function|Dyadic Function|
 |---|---|---|---|
@@ -52,7 +56,7 @@
 |`⌹`|Domino|[Matrix Inverse](matrix-inverse.md)|[Matrix Divide](matrix-divide.md)|
 |`⊢`|Right Tack|[Same](same.md)|[Right](right.md)|
 |`⊣`|Left Tack|[Same](same.md)|[Left](left.md)|
-|`⍕`|Hydrant|[Format](format.md)|[Format by Specification](format-by-specification.md)
+|`⍎`|Hydrant|[Execute](execute.md)|[Dyadic Execute](dyadic-execute.md)
 |`⍕`|Thorn|[Format](format.md)|[Format by Specification](format-by-specification.md)|
 |`/`|Slash|&nbsp;|[Replicate](replicate.md)
 |`⌿`|Slash Bar|&nbsp;|[Replicate First](replicate-first.md)

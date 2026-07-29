@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Legal Names</span></h1>
+# Legal Names
 
 APL objects may be given names. A name may be any sequence of characters, starting with a non-numeric character, selected from the following:
 

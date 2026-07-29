@@ -1,11 +1,6 @@
 
 
-
-
-
-<h1 class="heading"><span class="name">not found name</span></h1>
-
-
+# not found name
 
 This report is given when either:
 
@@ -21,6 +16,3 @@ not found ⎕IO
 WS/UTILITY saved Mon Nov 1 13:11:19 1993
 not found UND
 ```
-
-
-

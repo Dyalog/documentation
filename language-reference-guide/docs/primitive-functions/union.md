@@ -1,21 +1,13 @@
-<div style="display: none;">
-  ∪
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Union</span> <span class="command">R←X∪Y</span></h1>
-
-
+# <span>Union</span> `R←X∪Y`{{key}}
 
 `Y` must be a vector.  `X` must be a vector.  If either argument is a scalar, it is treated as a one-element vector.  `R` is a vector of the elements of `X` catenated with the elements of `Y` which are not found in `X`.
 
-
 Items in `X` and `Y` are considered the same if `X≡Y` returns 1 for those items.
-
 
 `⎕CT` and `⎕DCT` are  implicit arguments of Union.
 
@@ -28,8 +20,9 @@ WASHOUT
  ONE  TWO  THREE
 ```
 
-
 For performance information, see [Programmer's Guide: "Search Functions and Hash Tables"](../../../programming-reference-guide/introduction/search-functions-and-hash).
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ∪ union
+</div>

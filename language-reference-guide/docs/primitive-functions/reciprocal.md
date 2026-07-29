@@ -1,18 +1,11 @@
-<div style="display: none;">
-  ÷
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Reciprocal</span> <span class="command">R←÷Y</span></h1>
-
-
+# <span>Reciprocal</span> `R←÷Y`{{key}}
 
 `Y` must be a numeric array.  `R` is numeric.  `R` is the reciprocal of `Y`; that is `1÷Y`.  If `⎕DIV=0`, `÷0` results in a `DOMAIN ERROR`.  If `⎕DIV=1`, `÷0` returns 0.
-
 
 `⎕DIV` is an implicit argument of Reciprocal.
 
@@ -29,5 +22,7 @@
 0 2
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ÷ reciprocal
+</div>

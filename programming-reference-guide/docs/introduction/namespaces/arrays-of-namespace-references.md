@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Arrays of Namespace References</span></h1>
+# Arrays of Namespace References
 
 You can construct arrays of refs using strand notation, array notation, catenate (`,`), reshape (`⍴`) and other structural primitives, as well as certain system functions.
 ```apl
@@ -82,7 +82,7 @@ Note also that with successive expansions `(u v).(x y z).` ..., the final number
       (⊃EMP).Children.(FirstName Age)
   Andy  23   Katherine  19
  
-      ]display (2⊃EMP).Children.(FirstName Age)
+      ]Display (2⊃EMP).Children.(FirstName Age)
 ┌→────────────────────────────┐
 │ ┌→─────────┐ ┌→───────────┐ │
 │ │ ┌→──┐    │ │ ┌→────┐    │ │

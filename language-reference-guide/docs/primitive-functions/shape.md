@@ -1,15 +1,9 @@
-<div style="display: none;">
-  ⍴
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Shape</span> <span class="command">R←⍴Y</span></h1>
-
-
+# <span>Shape</span> `R←⍴Y`{{key}}
 
 `Y` may be any array.  `R` is a non-negative integer vector whose elements are the dimensions of `Y`.  If `Y` is a scalar, then `R` is an empty vector.  The rank of `Y` is given by `⍴⍴Y`.
 
@@ -40,5 +34,7 @@
           3  5  4
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍴ rho shape
+</div>

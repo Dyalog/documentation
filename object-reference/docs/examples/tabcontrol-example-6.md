@@ -3,9 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">TabControl</span> <span class="right">Example 6</span></h1>
-
-
+# <span>TabControl</span> <span>Example 6</span>
 
 Note that the icons used in this example are provided in the `ws` sub-directory.
 ```apl
@@ -31,7 +29,4 @@ icodir←(2 ⎕NQ'.' 'GetEnvironment' 'Dyalog'),'\ws\'
 'F.TC.S3'⎕WC'SubForm'('TabObj' 'F.TC.T3')
 ```
 
-
 ![](../img/tab6.gif)
-
-

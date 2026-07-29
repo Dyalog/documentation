@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Booking Class</span></h1>
+# Booking Class
 
 ```apl
     :Class Booking

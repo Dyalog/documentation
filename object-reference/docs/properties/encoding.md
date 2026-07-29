@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">Encoding</span> <span class="right">Property</span></h1>
-
-**Applies To:** [TCPSocket](../objects/tcpsocket.md)
+# <span>Encoding</span> <span>Property</span>
 
 **Description**
 
@@ -46,3 +44,7 @@ Char  None
       s0.(Style Encoding)
 Apl  Classic
 ```
+
+**Application**
+
+Objects: [TCPSocket](../objects/tcpsocket.md)

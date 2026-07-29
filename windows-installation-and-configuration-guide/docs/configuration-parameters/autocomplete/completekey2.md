@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">AutoComplete/CompleteKey2</span></h1>
+# AutoComplete/CompleteKey2
 
 Specifies the second of two possible keys that may be used to select the current option from the Auto Complete suggestion box.
 

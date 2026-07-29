@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Hints and Tips Combined</span></h1>
+# Hints and Tips Combined
 
 There is no reason why you cannot provide Hints *and* Tips. The next example shows how an object, in this case a Combo, can have both defined.
 

@@ -1,15 +1,9 @@
-<div style="display: none;">
-  +
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Plus</span> <span class="command">R←X+Y</span></h1>
-
-
+# <span>Plus</span> `R←X+Y`{{key}}
 
 `Y` must be numeric. `X` must be numeric. `R` is the arithmetic sum of `X` and `Y`. `R` is numeric. This function is also known as Add.
 
@@ -28,5 +22,7 @@
 ¯1J4 0J5
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  + plus add
+</div>

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Cells and Sub-arrays</span></h1>
+# Cells and Sub-arrays
 
 Certain functions and operators operate on particular cells or sub-arrays of an array, which are identified and described as follows.
 

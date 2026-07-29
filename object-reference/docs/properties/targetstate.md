@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">TargetState</span> <span class="right">Property</span></h1>
-
-**Applies To:** [TCPSocket](../objects/tcpsocket.md)
+# <span>TargetState</span> <span>Property</span>
 
 **Description**
 
@@ -23,6 +21,6 @@ To control socket closure, you may execute the following steps:
     2. wait (using `⎕DQ`) for the [TCPSocket](../objects/tcpsocket.md) to disappear **or**
     3. wait (using `⎕DQ`) for the [TCPClose](../methodorevents/tcpclose.md) event
 
+**Application**
 
-
-
+Objects: [TCPSocket](../objects/tcpsocket.md)

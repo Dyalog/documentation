@@ -1,8 +1,9 @@
-<div style="display: none;">
-  ,
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Ravel</span> <span class="command">R←,Y</span></h1>
+# <span>Ravel</span> `R←,Y`{{key}}
 
 `Y` may be any array.  `R` is a vector of the elements of `Y` taken in row-major order.
 
@@ -29,5 +30,7 @@ ABCDEFGHIJKL
 
 See also: [Ravel with Axes](ravel-with-axes.md).
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  , ravel
+</div>

@@ -1,9 +1,10 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ← gets
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Assignment (Indexed)</span> <span class="command">{R}←X[I]←Y</span></h1>
+
+# <span>Assignment (Indexed)</span> `{R}←X[I]←Y`{{key}}
 
 Indexed Assignment is the Assignment function modified by the Indexing function.  The phrase `[I]←` is treated as the function for descriptive purposes.
 
@@ -204,4 +205,7 @@ Instead of `X` being a name, it may be a selection from a named array, and the s
  #o#l#  H#l#o  #o#l# 
 ```
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ← gets
+</div>

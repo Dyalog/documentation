@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">ValueTips/ColourScheme</span></h1>
+# ValueTips/ColourScheme
 
 This parameter specifies the colour scheme used to display a Value Tip   when the user hovers the mouse over a name.
 

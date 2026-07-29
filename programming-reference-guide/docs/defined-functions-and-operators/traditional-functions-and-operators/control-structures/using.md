@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">:Using Statement</span></h1>
+# :Using Statement
 
 ```apl
 :Using <NameSpace[,Assembly]>

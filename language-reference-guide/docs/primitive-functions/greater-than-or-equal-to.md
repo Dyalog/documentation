@@ -1,18 +1,11 @@
-<div style="display: none;">
-  ≥
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Greater Than Or Equal To</span> <span class="command">R←X≥Y</span></h1>
-
-
+# <span>Greater Than Or Equal To</span> `R←X≥Y`{{key}}
 
 `Y` must be numeric. `X` must be numeric. `R` is Boolean. `R` is 1 if `X` is greater than `Y` or `X=Y`. Otherwise `R` is 0.
-
 
 `⎕CT` and `⎕DCT` are  implicit arguments of Greater Than Or Equal To.
 
@@ -33,5 +26,7 @@
 0
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ≥ greater
+</div>

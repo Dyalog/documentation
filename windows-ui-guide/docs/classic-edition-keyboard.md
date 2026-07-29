@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Classic Edition Keyboard</span></h1>
+# Classic Edition Keyboard
 
 The standard Classic Edition keyboard tables are files supplied in the aplkeys sub-directory named cc.din where cc is the standard 2-character country code, for example, `uk.din`.
 

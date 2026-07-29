@@ -3,15 +3,9 @@ search:
   exclude: true
 ---
 
-
-
-
-
-<h1 class="heading"><span class="name">Windows Command</span> <span class="command">⎕CMD</span></h1>
-
+# <span>Windows Command</span> `⎕CMD`
 
 ## Monadic `⎕CMD` means
-
 
 [Execute Windows Command](execute-windows-command.md)
 ```apl
@@ -33,7 +27,6 @@ search:
 
 ## Dyadic `⎕CMD` means
 
-
 [Start Windows Auxiliary Processor](start-windows-auxiliary-processor.md)
 ```apl
       )CLEAR
@@ -44,7 +37,4 @@ avx     box     dbr     getenv  hex     ltom    ltov    mtol    ss      vtol
 
 ```
 
-
 [Language Elements](../symbols/language-elements.md)
-
-

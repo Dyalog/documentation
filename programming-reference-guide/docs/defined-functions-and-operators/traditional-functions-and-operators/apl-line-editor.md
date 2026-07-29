@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">APL Line Editor</span></h1>
+# APL Line Editor
 
 The APL Line Editor described herein is included for completeness and for adherence to the ISO APL standard.  Dyalog recommends the use of the more powerful Editor and Tracer in preference to the APL Line Editor. Full details of these facilities can be found in the UI Guides for your version of Dyalog APL, as well as in the descriptions of `⎕ED` and `)ED` which appear in the *Dyalog APL Language Reference Guide.*
 

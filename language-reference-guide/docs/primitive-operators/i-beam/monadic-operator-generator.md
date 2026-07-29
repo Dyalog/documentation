@@ -1,29 +1,31 @@
+---
+search:
+  boost: 2
+---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  43⌶
-</div>
 
-<h1 class="heading"><span class="name">Monadic Operator Generator</span> <span class="command">R←43⌶Y</span></h1>
+# <span>Monadic Operator Generator</span> `R←43⌶Y`{{key}}
 
 Returns a monadic operator, with functionality determined by the value of `Y`.
 
 `Y` is a scalar integer. Possible values for `Y` are shown in the table below. If an undefined value is specified, a `DOMAIN ERROR` is generated.
 
 `R` is a monadic operator with functionality determined by the value of `Y`.
-As `R`is a monadic operator, Dyalog Ltd recommends that the evaluation of this I-Beam is either parenthesised or named.
+As `R` is a monadic operator, Dyalog Ltd recommends that the evaluation of this I-Beam is either parenthesised or named.
 
 | `Y` | Returned Operator | Notes |
 |---|---                |---|
-|632|[Generics Operator](#632-generics-operator)| Requires .NET. |
-
+|632|[Generics Operator](#632-generics-operator)| Requires .NET or .NET Framework. |
 
 !!! warning
 	The set of supported values for `Y` might change, with existing values being withdrawn as well as new ones being added. This means that saving the resulting operator in a workspace and attempting to run it in a later release might result in a `DOMAIN ERROR` if support has been withdrawn.
 
-
 ### 632 - Generics Operator
-The generics operator can create concrete versions of generic classes and execute generic methods. For more information, see the *.NET Interface Guide*.
+
+!!! Info "Information"
+    Support for `43⌶632` has been deprecated, and it is scheduled for removal in Dyalog v22.0. For information on how to identify uses of `43⌶632` in your existing codebase, see the [Release Notes](../../../../release-notes/announcements/deprecated-functionality/).
+	
+The generics operator can create concrete versions of generic classes and execute generic methods. For more information, see [Generics (.NET)](../../../../net-interface-guide/dotnet-classes/advanced-techniques/#generics) or [Generics (.NET Framework)](../../../../net-framework-interface-guide/dotnet-classes/advanced-techniques/#generics).
 
 <h3 class="example">Example</h3>
 
@@ -37,3 +39,8 @@ The generics operator can create concrete versions of generic classes and execut
       GenOp←43⌶632
       CharList←System.Collections.Generic.List GenOp System.Char
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  43⌶
+</div>

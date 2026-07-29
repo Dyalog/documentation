@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Minus</span> <span class="command">-</span></h1>
+# <span>Minus</span> `-`
 
 Monadic Minus means
 [Negate](../primitive-functions/negate.md)
@@ -21,5 +21,3 @@ Dyadic Minus means
 3 ¯2 0
 ```
 [Language Elements](../glyphs.md)
-
-

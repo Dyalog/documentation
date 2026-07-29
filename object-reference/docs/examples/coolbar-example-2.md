@@ -3,8 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">CoolBar</span> <span class="right">Example 2</span></h1>
-
+# <span>CoolBar</span> <span>Example 2</span>
 
 ```apl
 'F'⎕WC'Form' 'CoolBar Object with simple controls'('Size' 25 40)
@@ -25,7 +24,4 @@ search:
 :EndWith
 ```
 
-
 ![](../img/cool2.gif)
-
-

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Files and Directories</span></h1>
+# Files and Directories
 
 ## Unicode and Classic Editions
 
@@ -24,20 +24,20 @@ This section lists the files that are included with Dyalog for Microsoft Windows
 The following files have names that are consistent between editions; differences in names for the different widths are indicated by **&lt;width>**, which can be either **32** or **64**):  
 
 * **dyascript.exe**
-* **dyalogrt.exe**
+* **dyalogrt.exe** (runtime interpreter)
 * **dyalog&lt;width>.dll**
 * **dyares{{ version_condensed }}_&lt;width>.dll**
 * **dyalogprovider.dll** (.NET Framework Interface)
 * **dyalognet.dll** (.NET Framework Interface)
 * **conga{{ conga_version_condensed }}ssl&lt;width>.dll** (Conga and Ride)
 * **conga{{ conga_version_condensed }}_&lt;width>.dll** (Conga and Ride)
-* **exestub.dll**
+* **exestub.exe**
 * **dllstub.dll**
-* **sqapl.ini**
-* **sqapl.err**
-* **aplunicd.ini**
-* **sharpplot.dll**
-* **sharpplot.xml**
+* **sqapl.ini** (SQAPL)
+* **sqapl.err** (SQAPL)
+* **aplunicd.ini** (SQAPL and, optionally, Conga)
+* **sharpplot.dll** (SharpPlot)
+* **sharpplot.xml** (SharpPlot)
 
 The following files relate to the .NET Interface, and are only available in Unicode editions:  
 
@@ -49,25 +49,25 @@ The following files relate to the .NET Interface, and are only available in Unic
 The following files have names that change between editions and widths:  
 
 * 64-bit Unicode:  
-    * **dyalog{{ version_condensed }}_64rt_unicode.dll**
-    * **bridge{{ version_condensed }}-64_unicode.dll**
-    * **dyalogc64_unicode.exe**
-    * **cwdya64u64w.dll**
+    * **dyalog{{ version_condensed }}_64rt_unicode.dll** (Dyalog interpreter)
+    * **bridge{{ version_condensed }}-64_unicode.dll** (.NET Framework Interface)
+    * **dyalogc64_unicode.exe** (Dyalog .NET Compiler/APLScript Compiler – .NET Interface and .NET Framework Interface)
+    * **cwdya64u64w.dll** (SQL interface)
 * 32-bit Unicode:  
-    * **dyalog{{ version_condensed }}rt_unicode.dll**
-    * **bridge{{ version_condensed }}_unicode.dll**
-    * **dyalogc_unicode.exe**
-    * **cwdya64u32w.dll**
+    * **dyalog{{ version_condensed }}rt_unicode.dll** (Dyalog interpreter)
+    * **bridge{{ version_condensed }}_unicode.dll** (.NET Framework Interface)
+    * **dyalogc_unicode.exe** (Dyalog .NET Compiler/APLScript Compiler – .NET Interface and .NET Framework Interface)
+    * **cwdya64u32w.dll** (SQL interface)
 * 64-bit Classic:  
-    * **dyalog{{ version_condensed }}_64rt.dll**
-    * **bridge{{ version_condensed }}-64.dll**
-    * **dyalogc64.exe**
-    * **cwdya64c64w.dll**
+    * **dyalog{{ version_condensed }}_64rt.dll** (Dyalog interpreter)
+    * **bridge{{ version_condensed }}-64.dll** (.NET Framework Interface)
+    * **dyalogc64.exe** (APLScript Compiler – .NET Framework Interface)
+    * **cwdya64c64w.dll** (SQL interface)
 * 32-bit Classic:  
-    * **dyalog{{ version_condensed }}rt.dll**
-    * **bridge{{ version_condensed }}.dll**
-    * **dyalogc.exe**
-    * **cwdya64c32w.dll**
+    * **dyalog{{ version_condensed }}rt.dll** (Dyalog interpreter)
+    * **bridge{{ version_condensed }}.dll** (.NET Framework Interface)
+    * **dyalogc.exe** (APLScript Compiler – .NET Framework Interface)
+    * **cwdya64c32w.dll** (SQL interface)
 
 ### Non-Distributable Development Components
 

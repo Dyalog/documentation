@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">The Editor</span></h1>
+# The Editor
 
 ## Invoking the Editor
 
@@ -440,7 +440,6 @@ and fixes as
 │world│
 └─────┘
 ```
-
 
 ### Editing Classes
 

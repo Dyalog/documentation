@@ -1,8 +1,9 @@
-<div style="display: none;">
-  /
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Reduce N-Wise</span> <span class="command">R←Xf/[K]Y</span></h1>
+# <span>Reduce N-Wise</span> `R←Xf/[K]Y`{{key}}
 
 `f` must be a dyadic function. `X` must be a simple scalar or one-item integer array. `Y` may be any array whose sub-arrays along the `K`th axis are appropriate to function `f`.
 
@@ -39,3 +40,9 @@ If `X` is negative, each sub-vector is reversed before being reduced.
       ¯2,/⍳4   ⍝ (2,1) (3,2) (4,3)
  2 1  3 2  4 3 
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  /
+  reduce
+</div>

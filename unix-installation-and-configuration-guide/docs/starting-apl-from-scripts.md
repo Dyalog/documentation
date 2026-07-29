@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Miscellaneous</span></h1>
+# Miscellaneous
 
 ## Running from scripts
 

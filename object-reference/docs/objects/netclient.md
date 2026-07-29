@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">NetClient</span> <span class="right">Object</span></h1>
-
-[Parents](../parentlists/netclient.md), [Children](../childlists/netclient.md)
+# <span>NetClient</span> <span>Object</span>
 
 **Purpose:** The NetClient object represents an instance of a Microsoft .NET class.
 
@@ -23,3 +21,9 @@ If, for any reason, you are unable to use the `New` method, you may create a Net
       DT2.(Type ClassName ConstructorArgs)
  NetClient  System.DateTime  1949 4 30
 ```
+
+**Application**
+
+Parents: [NetType](../objects/nettype.md), [Root](../objects/root.md)
+
+Children: [Timer](../objects/timer.md)

@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">OverflowChar</span> <span class="right">Property</span></h1>
-
-**Applies To:** [Grid](../objects/grid.md)
+# <span>OverflowChar</span> <span>Property</span>
 
 **Description**
 
@@ -23,3 +21,7 @@ If the value of OverflowChar is an empty vector (the default) the data in a nume
 The same Grid without OverflowChar being defined appears as follows. Notice how the numbers have been truncated
 
 ![](../img/gridovno.gif)
+
+**Application**
+
+Objects: [Grid](../objects/grid.md)

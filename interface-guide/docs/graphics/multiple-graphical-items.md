@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Multiple Graphical Items</span></h1>
+# Multiple Graphical Items
 
 All graphical output objects (Circle, Ellipse, Image, Marker, Poly, Text and Rect) permit nested arguments so that you can draw several items with a single object. This feature has several advantages. Firstly, it allows you to treat related graphical items as a single object with a single name. This reduces the potential number of objects in existence and reduces the number of program statements needed to draw them. For example, sets of tick marks or grid lines do not have to be drawn separately, but can be represented by one object. Furthermore, because a set of lines can be embodied in a single object, you can erase them, replace them or drag/drop them as a unit. A further consideration is performance. A set of graphical items represented by a single object will normally be drawn faster than if each item was represented by separate objects.
 

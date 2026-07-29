@@ -1,11 +1,6 @@
 
 
-
-
-
-<h1 class="heading"><span class="name">INDEX ERROR</span> <span class="command">3</span></h1>
-
-
+# <span>INDEX ERROR</span> `3`
 
 This report is given when either:
 
@@ -28,6 +23,3 @@ INDEX ERROR
       ↑ [2]'ABC' 'DEF'
       ^
 ```
-
-
-

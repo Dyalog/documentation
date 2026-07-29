@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Comma Bar</span> <span class="command">⍪</span></h1>
+# <span>Comma Bar</span> `⍪`
 
 Monadic Comma Bar means
 [Table](../primitive-functions/table.md)
@@ -39,5 +39,3 @@ Dyadic Comma Bar means
 7 8 9
 ```
 [Language Elements](../glyphs.md)
-
-

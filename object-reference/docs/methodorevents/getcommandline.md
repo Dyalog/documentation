@@ -1,17 +1,10 @@
-<h1 class="heading"><span class="name">GetCommandLine</span> <span class="right">Method 145</span></h1>
-
-
-
-**Applies To:** [Root](../objects/root.md)
+# <span>GetCommandLine</span> <span>Method 145</span>
 
 **Description**
 
-
 The GetCommandLine method returns the command line that was used to start the current Dyalog APL session or application.
 
-
 The GetCommandLine method is niladic.
-
 
 The result is a character vector.
 
@@ -27,7 +20,8 @@ The result is a character vector.
 
 ## Note
 
-
 GetCommandLine only works on Windows, and its use is deprecated in favour of [GetCommandLineArgs](getcommandlineargs.md), which works on all platforms.
 
+**Application**
 
+Objects: [Root](../objects/root.md)

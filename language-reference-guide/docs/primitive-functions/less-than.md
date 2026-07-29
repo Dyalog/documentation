@@ -1,8 +1,9 @@
-<div style="display: none;">
-  <
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Less Than</span> <span class="command">R←X&lt;Y</span></h1>
+# <span>Less Than</span> `R←X&lt;Y`{{key}}
 
 `Y` may be any numeric array. `X` may be any numeric array. `R` is Boolean. `R` is 1 if `X` is less than `Y` and `X=Y` is 0. Otherwise `R` is 0.
 
@@ -18,3 +19,8 @@
       1 0.99999999999 0.9999999999<1
 0 0 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  < less
+</div>

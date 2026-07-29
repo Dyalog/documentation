@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">LoadEnd</span> <span class="command">Event 836</span></h1>
+# <span>LoadEnd</span> `Event 836`
 
 |-----------|--------------------------------------------------------------|
 |Applies To:|[HTMLRenderer](https://help.dyalog.com/19.0/index.htm#GUI/Objects/HTMLRenderer.htm)|

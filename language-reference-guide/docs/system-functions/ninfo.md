@@ -1,9 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NINFO NINFO
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Native File Information</span> <span class="command">R←{X}⎕NINFO Y</span></h1>
+# <span>Native File Information</span> `R←{X}⎕NINFO Y`{{key}}
 
 This function queries or sets information about one or more files or directories. `Y` may be:
 
@@ -81,7 +81,6 @@ When using the **Wildcard** option, matching of names is done case insensitively
 |---|----------------------------------------------------------------------------------------|
 |`0`|the properties reported are those of the symbolic link itself                           |
 |1 { .shaded } |the properties reported for a symbolic link are those of the target of the symbolic link|
-
 
 ### ProgressCallback Option
 
@@ -200,3 +199,8 @@ The following expression "touches" files, that is, it sets their last modificati
 
 !!! note
     Of the file timestamps which are reported by the operating system, only the last modification time should be considered reliable and portable. Neither the access time or creation time are well supported across all platforms. Furthermore, they may not accurately reflect the actual time that the operation occurred.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NINFO NINFO
+</div>

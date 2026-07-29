@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">HTML</span> <span class="right">Property</span></h1>
-
-**Applies To:** [HTMLRenderer](../objects/htmlrenderer.md)
+# <span>HTML</span> <span>Property</span>
 
 **Description**
 
@@ -11,5 +9,6 @@ See also: [URL](url.md).
 !!! note
     Typically, you will need to UTF-8 encode any text outside the Unicode range 0-127.
 
+**Application**
 
-
+Objects: [HTMLRenderer](../objects/htmlrenderer.md)

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Synchronising Threads</span></h1>
+# Synchronising Threads
 
 Threads may be synchronised using *tokens* and a *token pool*.
 

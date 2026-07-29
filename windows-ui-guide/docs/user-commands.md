@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">User Commands</span></h1>
+# User Commands
 
 Dyalog includes a mechanism to define *User Commands*.
 
@@ -8,7 +8,7 @@ A User Command is a name prefixed by a closing square bracket, which may be nila
 
 By default, the existing SPICE command processor is hooked up to the user command mechanism, and a number of new SPICE commands have been added. For example:
 ```apl
-      ]display 'hello' (⍪'world')
+      ]Display 'hello' (⍪'world')
 ┌→────────────┐
 │ ┌→────┐ ┌→┐ │
 │ │hello│ ↓w│ │

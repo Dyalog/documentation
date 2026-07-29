@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Closing the Application Window</span></h1>
+# Closing the Application Window
 
 Then we need something to allow our user to terminate our application. He will expect the application to terminate when he closes the window. We will implement this by having a callback function called `QUIT` which will simply call `⎕OFF`, that is:
 ```apl

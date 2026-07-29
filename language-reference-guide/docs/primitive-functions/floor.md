@@ -1,18 +1,11 @@
-<div style="display: none;">
-  ⌊
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Floor</span> <span class="command">R←⌊Y</span></h1>
-
-
+# <span>Floor</span> `R←⌊Y`{{key}}
 
 `Y` must be numeric.
-
 
 For real numbers, `R` is the largest integer value less than or equal to `Y` within the comparison tolerance `⎕CT`.
 
@@ -25,17 +18,13 @@ For real numbers, `R` is the largest integer value less than or equal to `Y` wit
 0 1 1
 ```
 
-
 For complex numbers, `R` depends on the relationship between the real and imaginary parts of the numbers in `Y`.
 ```apl
       ⌊1j3.2 3.3j2.5 ¯3.3j¯2.5
 1J3 3J2 ¯3J¯3
 ```
 
-
-
 ## Complex Floor
-
 
 The following (deliberately) simple function illustrates one way to express the rules for evaluating complex Floor.
 ```apl
@@ -57,8 +46,9 @@ The following (deliberately) simple function illustrates one way to express the 
 1J3 3J2 ¯3J¯3
 ```
 
-
 `⎕CT` and `⎕DCT` are  implicit arguments of Floor.
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⌊ floor
+</div>

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Methods</span></h1>
+# Methods
 
 Methods are implemented as regular defined functions, but with some special attributes that control how they are called and where they are executed.
 

@@ -1,15 +1,9 @@
-<div style="display: none;">
-  ~
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">NOT</span> <span class="command">R←~Y</span></h1>
-
-
+# <span>NOT</span> `R←~Y`{{key}}
 
 `Y` must be a Boolean array. `R` is Boolean. The value of `R` is 0 if `Y` is 1, and `R` is 1 if `Y` is 0.
 
@@ -19,5 +13,7 @@
 1 0
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ~ not
+</div>

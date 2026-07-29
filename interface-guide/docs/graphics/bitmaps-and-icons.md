@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Bitmaps and Icons</span></h1>
+# Bitmaps and Icons
 
 Bitmaps and icons are implemented as separate objects that you can create and destroy. Once you have created such an object you can reference it as many times as you wish. For example, you can use the same bitmap in several Buttons or associate the same icon with several Forms.
 

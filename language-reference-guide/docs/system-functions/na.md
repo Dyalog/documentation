@@ -1,17 +1,17 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NA NA
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Name Association</span> <span class="command">{R}←{X}⎕NA Y</span></h1>
+# <span>Name Association</span> `{R}←{X}⎕NA Y`{{key}}
 
 `⎕NA` provides access from APL to compiled functions within a library. A library is implemented according to the Operating System as follows:
 
-    - a Dynamic Link Library(DLL) under Windows
-    - a Shared Library (.so or .dylib) under Linux or macOS
-    - a static library (.a) under AIX
+- a Dynamic Link Library(**.dll**) under Windows
+- a Shared Library (**.so** or **.dylib**) under Linux or macOS
+- a static library (**.a**) under AIX
 
-A DLL[^1] is a collection of functions typically written in C (or C++) each of which may take arguments and return a result.
+A library, referred to here generically as a a Dynamic Link Library (DLL), is a collection of functions typically written in C (or C++) each of which may take arguments and return a result.
 
 Instructional examples using `⎕NA` can be found in the supplied workspace `quadna`.
 
@@ -120,11 +120,11 @@ The options are summarised in the following table and their functions detailed b
 |Type       |`I`     |int                                                                                                    |
 |           |`U`     |unsigned int                                                                                           |
 |           |`C`     |char                                                                                                   |
-|           |`T`     |char [^1]                                                                                              |
+|           |`T`     |char  (Classic Edition: translated to/from ANSI)                                                       |
 |           |`F`     |float                                                                                                  |
 |           |`D`     |decimal                                                                                                |
 |           |`J`     |complex                                                                                                |
-|           |`P`     |uintptr-t [^2]                                                                                         |
+|           |`P`     |uintptr-t (equivalent to U4 and U8 on 32-bit and 64-bit widths respectively)                           |
 |           |`A`     |APL array                                                                                              |
 |_         _|`Z`     |APL array with header (as passed to a TCP/IP socket)                                                   |
 |Width      |`1`     |1-byte                                                                                                 |
@@ -776,7 +776,7 @@ was CLEAR WS
 
 Then retrieve the new caption (max length 255) using window handle `HNDL` from the previous example:
 ```apl
-      ]display GetWindowText HNDL 255 255
+      ]Display GetWindowText HNDL 255 255
 .→-------------------------.
 |    .→------------------. |
 | 19 |MYWS - Dyalog APL/W| |
@@ -796,7 +796,7 @@ For example:
 ```apl
       ⎕NA 'I User32|GetWindowText* P =0T I'
  
-      ]display GetWindowText HNDL (255⍴' ') 255
+      ]Display GetWindowText HNDL (255⍴' ') 255
 .→-------------------------.
 |    .→------------------. |
 | 19 |MYWS - Dyalog APL/W| |
@@ -820,7 +820,7 @@ The following statements provide access to this routine through an APL function 
  
      'Prin'⎕WC'Printer'
  
-      ]display GetCharWidth ('Prin' ⎕WG 'Handle') 65 67 3 
+      ]Display GetCharWidth ('Prin' ⎕WG 'Handle') 65 67 3 
 .→-------------.
 |   .→-------. |
 | 1 |50 50 50| |
@@ -950,5 +950,7 @@ A result is returned from the function *only* if all the calls are successful Ot
 
 ```
 
-[^1]: Classic Edition:  - translated to/from ANSI
-[^2]: equivalent to U4 on 32-bit versions and U8 on 64-bit versions
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NA NA
+</div>

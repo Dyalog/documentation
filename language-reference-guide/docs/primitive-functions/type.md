@@ -1,8 +1,9 @@
-<div style="display: none;">
-  ∊
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Type</span> <span class="command">(⎕ML<1) R←∊Y</span></h1>
+# <span>Type</span> `(⎕ML<1) R←∊Y`{{key}}
 
 Migration level must be such that `⎕ML<1` (otherwise `∊` means Enlist. See [Enlist](enlist.md)).
 
@@ -18,5 +19,7 @@ Migration level must be such that `⎕ML<1` (otherwise `∊` means Enlist. See [
 1
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ∊ type
+</div>

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Model Syntax</span></h1>
+# Model Syntax
 
 The model for the defined operation identifies the name of the operation, its valence, and whether or not an explicit result may be returned.  Valence is the number of explicit arguments or operands, either 0, 1 or 2; whence the operation is termed NILADIC, MONADIC or DYADIC respectively.  Only a defined function may be niladic.  There is no relationship between the valence of a defined operator, and the valence of the derived function which it produces.  Defined functions and derived functions produced by defined operators may be ambivalent, that is,  may be executed monadically with one argument, or dyadically with two.  An ambivalent operation is identified in its model by enclosing the left argument in braces.
 

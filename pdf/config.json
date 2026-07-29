@@ -5,7 +5,7 @@
             "subtitle": "Reference Guide",
             "filename": "Dyalog_APL_Language_Reference_Guide.pdf"
         },
-        "dotnet-framework-interface": {
+        "net-framework-interface-guide": {
             "title": "Dyalog for Microsoft Windows",
             "subtitle": ".NET Framework Interface Guide",
             "filename": "Dyalog_for_Microsoft_Windows_dotNET_Framework_Interface_Guide.pdf"

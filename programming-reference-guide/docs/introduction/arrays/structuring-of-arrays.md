@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Structuring of Arrays</span></h1>
+# Structuring of Arrays
 
 Primitive functions that restructure arrays:
 
@@ -14,7 +14,6 @@ Primitive functions that restructure arrays:
 |`∊` |[enlist](../../../../language-reference-guide/primitive-functions/enlist)| |
 |`⊂` |[enclose](../../../../language-reference-guide/primitive-functions/enclose)|[partitioned enclose](../../../../language-reference-guide/primitive-functions/partitioned-enclose)|
 |`⊆` |[nest](../../../../language-reference-guide/primitive-functions/nest)|[partition](../../../../language-reference-guide/primitive-functions/partition)|
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -72,4 +71,3 @@ MNOP
 │1 2│3 4 5│
 └───┴─────┘
 ```
-

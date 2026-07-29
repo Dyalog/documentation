@@ -1,9 +1,11 @@
-<h1 class="heading"><span class="name">Objects A-Z</span></h1>
+---
+search:
+  exclude: true
+---
 
-
+# Objects A-Z
 
 [Objects: Categorised](objects-categorised.md)
-
 
 |Object                                            |Description                                                                                                              |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
@@ -84,5 +86,3 @@
 |[TrackBar](../objects/trackbar.md)                |slider control for analogue input/output                                                                                 |
 |[TreeView](../objects/treeview.md)                |displays a hierarchical list of items                                                                                    |
 |[UpDown](../objects/updown.md)                    |a pair of arrow buttons                                                                                                  |
-
-

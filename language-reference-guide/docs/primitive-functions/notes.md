@@ -1,4 +1,8 @@
-<h1 class="heading"><span class="name">Notes</span></h1>
+---
+search:
+  exclude: true
+---
+# Notes
 
 ## Conformability
 

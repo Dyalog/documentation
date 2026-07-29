@@ -1,19 +1,13 @@
-<h1 class="heading"><span class="name">DefaultColors</span> <span class="right">Property</span></h1>
-
-
-
-**Applies To:** [ColorButton](../objects/colorbutton.md)
+# <span>DefaultColors</span> <span>Property</span>
 
 **Description**
 
-
 The DefaultColors property is a nested matrix which specifies the RGB values of the colours shown in the colour selection drop-down displayed by a [ColorButton](../objects/colorbutton.md) object.
-
 
 The shape of DefaultColors determines the number of rows and columns in the colour selection drop-down.
 
-
 Each element of DefaultColors is a 3-element integer vector specifying an RGB colour value.
 
+**Application**
 
-
+Objects: [ColorButton](../objects/colorbutton.md)

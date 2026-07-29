@@ -1,18 +1,11 @@
-<div style="display: none;">
-  ≤
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Less Than Or Equal To</span> <span class="command">R←X≤Y</span></h1>
-
-
+# <span>Less Than Or Equal To</span> `R←X≤Y`{{key}}
 
 `Y` may be any numeric array. `X` may be any numeric array. `R` is Boolean. `R` is 1 if `X` is less than `Y` or `X=Y`. Otherwise `R` is 0.
-
 
 `⎕CT` and `⎕DCT` are  implicit arguments of Less Than Or Equal To.
 
@@ -27,5 +20,7 @@
 1 1 0
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ≤
+</div>

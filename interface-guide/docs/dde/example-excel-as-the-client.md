@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Example: Excel as the Client</span></h1>
+# Example: Excel as the Client
 
 The following instructions will allow you to explore the DDE interface with APL acting as the server to another application; in this case Microsoft Excel.
 

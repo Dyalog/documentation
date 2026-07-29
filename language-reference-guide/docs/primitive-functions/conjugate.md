@@ -1,18 +1,11 @@
-<div style="display: none;">
-  +
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Conjugate</span> <span class="command">R←+Y</span></h1>
-
-
+# <span>Conjugate</span> `R←+Y`{{key}}
 
 If `Y` is complex, `R` is `Y` with the imaginary part of all elements negated.
-
 
 If `Y` is real or non-numeric, `R` is the same array unchanged, although `⊢` is faster. See [Same](same.md).
 
@@ -35,5 +28,7 @@ If `Y` is real or non-numeric, `R` is the same array unchanged, although `⊢` i
 1
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  + conjugate
+</div>

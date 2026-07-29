@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">APLK</span></h1>
+# APLK
 
 **Classic Edition only.**
 

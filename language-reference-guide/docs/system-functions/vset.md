@@ -1,9 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕VSET VSET
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Value Set</span> <span class="command">{R}←{X}⎕VSET Y</span></h1>
+# <span>Value Set</span> `{R}←{X}⎕VSET Y`{{key}}
 
 `⎕VSET` enables values to be set for names in a target namespace or target namespaces.
 
@@ -111,3 +111,8 @@ Running trigger for: name3
 Running trigger for: name1
 Running trigger for: name3
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕VSET VSET
+</div>

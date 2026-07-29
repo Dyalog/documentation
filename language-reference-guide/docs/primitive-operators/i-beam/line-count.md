@@ -1,23 +1,14 @@
-
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  50100⌶
-</div>
-
+---
+search:
+  boost: 2
+---
 
 
-
-
-
-<h1 class="heading"><span class="name">Line Count</span> <span class="command">R←50100⌶Y</span></h1>
-
-
+# <span>Line Count</span> `R←50100⌶Y`{{key}}
 
 This function is a compact version of the system function `⎕LC`. If an expression requires only the  most recent line(s) in the function calling stack, this is a more efficient alternative to using `⎕LC`.
 
-
 `Y` may be an integer specifying the depth of the function calling stack that is required in the result.
-
 
 The result R is the same as `⎕LC`, but truncated to the number of stack levels specified by `Y`.
 
@@ -46,5 +37,7 @@ The result R is the same as `⎕LC`, but truncated to the number of stack levels
 7 10 10 10
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  50100⌶
+</div>

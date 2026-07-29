@@ -2,8 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Left Shoe Underbar</span> <span class="command">⊆</span></h1>
-
+# <span>Left Shoe Underbar</span> `⊆`
 
 Monadic Left Shoe Underbar means
 [Nest](../primitive-functions/nest.md)
@@ -35,5 +34,3 @@ Dyadic Left Shoe Underbar means
 └────┴─┴────┘
 ```
 [Language Elements](../glyphs.md)
-
-

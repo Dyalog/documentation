@@ -1,15 +1,9 @@
-<div style="display: none;">
-  ○
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Pi Times</span> <span class="command">R←○Y</span></h1>
-
-
+# <span>Pi Times</span> `R←○Y`{{key}}
 
 `Y` may be any numeric array. `R` is numeric. The value of `R` is the product of the mathematical constant *π=3.14159...* (Pi), and `Y`.
 
@@ -25,5 +19,7 @@
 ¯1
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ○ pi
+</div>

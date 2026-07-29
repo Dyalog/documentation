@@ -1,15 +1,8 @@
-<h1 class="heading"><span class="name">RowHiddenDepth</span> <span class="right">Property</span></h1>
-
-
-
-**Applies To:** [Grid](../objects/grid.md)
+# <span>RowHiddenDepth</span> <span>Property</span>
 
 **Description**
 
-
 The RowHiddenDepth property is read-only and identifies which rows of a Grid are currently hidden.
-
-
 
 RowHiddenDepth is an integer vector with the same number of elements as there are rows in the Grid. The values in RowHiddenDepth indicate the current depth of the row in the visible hierarchy; that is, number of nodes that must be opened to display it. The value 0 means that the corresponding row is visible. The value 1 means that 1 node must be opened to display it; 2 means 2 nodes, and so forth.
 
@@ -23,10 +16,7 @@ RowHiddenDepth is an integer vector with the same number of elements as there ar
 
 ```
 
-
 ![](../img/rowhiddendepth0.png)
-
-
 
 With all nodes closed, RowHiddenDepth is the same as RowTreeDepth.
 ```apl
@@ -35,11 +25,7 @@ With all nodes closed, RowHiddenDepth is the same as RowTreeDepth.
 
 ```
 
-
-
-
 The next picture shows the Grid after the user has opened nodes 5,6 and 9.
-
 
 ![](../img/rowhiddendepth1.png)
 ```apl
@@ -48,5 +34,6 @@ The next picture shows the Grid after the user has opened nodes 5,6 and 9.
 
 ```
 
+**Application**
 
-
+Objects: [Grid](../objects/grid.md)

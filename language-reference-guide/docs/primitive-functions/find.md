@@ -1,27 +1,17 @@
-<div style="display: none;">
-  ⍷
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Find</span> <span class="command">R←X⍷Y</span></h1>
-
-
+# <span>Find</span> `R←X⍷Y`{{key}}
 
 `X` and `Y` may be any arrays.  `R` is a simple Boolean array the same shape as Y which identifies occurrences of `X` within `Y`.
 
-
 If the rank of `X` is smaller than the rank of `Y`, `X` is treated as if it were the same rank with leading axes of size 1.  For example a vector is treated as a 1-row matrix.
-
 
 If the rank of `X` is larger than the rank of `Y`, no occurrences of `X` are found in `Y`.
 
-
 `⎕CT` and `⎕DCT` are implicit arguments of Find.
-
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -48,4 +38,7 @@ ISN'T
 0 0 0 0 0 0 0 0 0
 ```
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍷ find
+</div>

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Statements</span></h1>
+# Statements
 
 A statement is a line of characters understood by APL.  It may be composed of:
 

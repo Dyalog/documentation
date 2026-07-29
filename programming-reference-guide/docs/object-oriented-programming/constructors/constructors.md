@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Constructors</span></h1>
+# Constructors
 
 A Constructor is a special function defined in the Class script that is to be run when an Instance of the Class is created by `⎕NEW`. Typically, the job of a Constructor is to initialise the new Instance in some way.
 

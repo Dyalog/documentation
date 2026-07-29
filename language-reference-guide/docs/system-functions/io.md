@@ -1,24 +1,15 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕IO IO
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Index Origin</span> <span class="command">⎕IO</span></h1>
-
-
+# <span>Index Origin</span> `⎕IO`
 
 `⎕IO` determines the index of the first element of a non-empty vector.
 
-
 `⎕IO` may be assigned the value 0 or 1.  The value in a clear workspace is 1. `⎕IO` has Namespace scope.
 
-
-`⎕IO` is an implicit argument of any function derived from the Axis operator (`[K]`), of the monadic functions Fix (`⎕FX`), Grade Down (`⍒`), Grade Up (`⍋`), Index Generator (`⍳`), Roll (`?`), and of the dyadic functions Deal (`?`), Grade Down (`⍒`), Grade Up (`⍋`), Index (`⌷`), Index Of (`⍳`), Indexed Assignment, Indexing, Pick (`⊃`) and Transpose (`⍉`).
+`⎕IO` is an implicit argument of any function derived from the bracket axis (`[K]`), of the monadic functions _fix_ (`⎕FX`), _grade down_ (`⍒`), _grade up_ (`⍋`), _index generator_ (`⍳`), _roll_ (`?`), and _where_ (`⍸`), of the dyadic functions _deal_ (`?`), _dyadic grade down_ (`⍒`), _dyadic grade up_ (`⍋`), _index_ (`⌷`), _index of_ (`⍳`), indexed assignment, indexing, _pick_ (`⊃`), _dyadic transpose_ (`⍉`), _interval index_ (`⍸`), and of the system function _extended diagnostic message_ (`⎕DMX`).
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -38,5 +29,7 @@ ABC
 ===
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕IO IO
+</div>

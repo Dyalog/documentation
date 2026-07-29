@@ -1,16 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SI SI
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">State Indicator</span> <span class="command">R←⎕SI</span></h1>
-
-
+# <span>State Indicator</span> `R←⎕SI`{{key}}
 
 `R` is a nested vector of vectors giving the names of the functions or operators in the execution stack.
 
@@ -31,8 +24,6 @@
 1
 ```
 
-
-
 If execution stops in a callback function, `⎕DQ` will appear on the stack, and may occur more than once
 ```apl
       )SI
@@ -43,25 +34,24 @@ If execution stops in a callback function, `⎕DQ` will appear on the stack, and
 #.MAIN
 ```
 
-
 To edit the function on the top of the stack:
 ```apl
       ⎕ED ⊃⎕SI
 ```
-
 
 The name of the function which called this one:
 ```apl
       ⊃1↓⎕SI
 ```
 
-
 To check if the function `∆N` is pendent:
 ```apl
      ((⊂∆N)∊1↓⎕SI)/'Warning : ',∆N,' is pendent'
 ```
 
-
 See also [Extended State Indicator](xsi.md).
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SI SI
+</div>

@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-<h1 class="heading"><span class="name">Control Structures</span></h1>
+# Control Structures
 
 Control structures provide a means to control the flow of execution in your APL programs.
 

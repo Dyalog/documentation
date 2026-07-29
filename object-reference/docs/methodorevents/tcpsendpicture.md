@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">TCPSendPicture</span> <span class="right">Method 380</span></h1>
-
-**Applies To:** [TCPSocket](../objects/tcpsocket.md)
+# <span>TCPSendPicture</span> <span>Method 380</span>
 
 **Description**
 
@@ -28,3 +26,7 @@ The (shy) result of the method is an integer that reports the number of bytes th
     Although PNG is recognised as the latest graphics standard for displaying pictures, not all Web browsers support it.
 
 See also: [MakeGIF](./makegif.md), [MakePNG](./makepng.md)
+
+**Application**
+
+Objects: [TCPSocket](../objects/tcpsocket.md)

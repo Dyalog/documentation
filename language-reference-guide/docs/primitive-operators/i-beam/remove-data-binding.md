@@ -1,22 +1,19 @@
+---
+search:
+  boost: 2
+---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  2014⌶
-</div>
 
-<h1 class="heading"><span class="name">Remove Data Binding</span> <span class="command">R←2014⌶Y</span></h1>
+# <span>Remove Data Binding</span> `R←2014⌶Y`{{key}}
 
 !!! note
     **.NET Framework only**
 
 This function disassociates a data-bound variable from its data binding source.
 
-
 `Y` is any array.
 
-
 If `Y` or an element of `Y` is a character vector that contains the name of a data-bound variable, that variable is dissociated from its data binding source.
-
 
 The result `R` is always 1.
 
@@ -27,5 +24,7 @@ The result `R` is always 1.
 1    
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  2014⌶
+</div>

@@ -1,9 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕NMOVE NMOVE
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Native File Move</span> <span class="command">{R}←X ⎕NMOVE Y</span></h1>
+# <span>Native File Move</span> `{R}←X ⎕NMOVE Y`{{key}}
 
 This function moves native files and directories from one or more sources specified by `Y` to a destination specified by  `X`. `⎕NMOVE` is similar to `⎕NCOPY` (see [Native File Copy ](ncopy.md)).
 
@@ -153,3 +153,8 @@ When `⎕NMOVE` copies and deletes files:
 - File modification times will be preserved but other attributes such as file ownership may be changed.
 - Read permissions will be needed on all files within a directory which is moved.
 - If the operation fails at any point and an error is signalled it is possible that there may be files and/or directories left duplicated in both the source and destination. It is not possible that a file or directory may be removed from the source without having been copied to the destination.
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕NMOVE NMOVE
+</div>

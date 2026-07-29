@@ -1,17 +1,13 @@
-<div style="display: none;">
-  ⍀
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Expand First</span> <span class="command">R←X⍀Y</span></h1>
-
-
+# <span>Expand First</span> `R←X⍀Y`{{key}}
 
 The form `R←X⍀Y` implies expansion along the first axis whereas the form `R←X\Y` implies expansion along the last axis (columns).  See [Expand](expand.md).
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍀ expand
+</div>

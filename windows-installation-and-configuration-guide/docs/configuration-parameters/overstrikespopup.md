@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">OverstrikesPopup</span></h1>
+# OverstrikesPopup
 
 **Unicode Edition only.**
 

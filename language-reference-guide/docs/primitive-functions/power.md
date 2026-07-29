@@ -1,24 +1,15 @@
-<div style="display: none;">
-  *
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Power</span> <span class="command">R←X*Y</span></h1>
-
-
+# <span>Power</span> `R←X*Y`{{key}}
 
 `Y` must be a numeric array.  `X` must be a numeric array.  `R` is numeric.  The value of `R` is `X` raised to the power of `Y`.
 
-
 If `Y` is zero, `R` is defined to be 1.
 
-
 If `X` is zero, `Y` must be non-negative.
-
 
 In general, `X*Y` is defined as `*Y×⍟X`. If `X` is negative, the result `R` is likely to be complex.
 
@@ -38,5 +29,7 @@ In general, `X*Y` is defined as `*Y×⍟X`. If `X` is negative, the result `R` i
 
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  * power
+</div>

@@ -1,7 +1,15 @@
-<div style="display: none;">
-  ⍀
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Scan First</span> <span class="command">R←f⍀Y</span></h1>
+# <span>Scan First</span> `R←f⍀Y`{{key}}
 
 The form `R←f⍀Y` implies scan along the first axis of `Y`.  See [Scan](scan.md).
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍀
+  scan
+  scan first
+</div>

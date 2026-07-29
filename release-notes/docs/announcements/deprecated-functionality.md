@@ -20,14 +20,16 @@ Dyalog can be configured to log use of a deprecated feature when it is encounter
 
 To enable logging of deprecated features:
 
-1. Specify the name of the file into which the JSON5 log messages will be written (using [`109⌶`](../../../language-reference-guide/primitive-operators/i-beam/log-file-for-deprecations/) with a right argument of `0`). By default, the file is created in the current working directory; if you do not have write permission for the current working directory, you will also need to include a path. If a filename is not set, then all logging information will be silently discarded.
-2. Specify which deprecated features should be logged (using [`13⌶`](../../../language-reference-guide/primitive-operators/i-beam/log-use-of-deprecated-features/) with a right argument of the names identifying the deprecated features of interest).
+1. Specify the name of the file into which the JSON5 log messages will be written (using [`109⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/log-file-for-deprecations/) with a right argument of `0`). By default, the file is created in the current working directory; if you do not have write permission for the current working directory, you will also need to include a path. If a filename is not set, then all logging information will be silently discarded.
+2. Specify which deprecated features should be logged (using [`13⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/log-use-of-deprecated-features/) with a right argument of the names identifying the deprecated features of interest).
 
-For Dyalog v20.0, the following names are valid:
+For Dyalog v21.0, the following names are valid:
 
-* `J0C0` – component files that have both journalling (J) and checksum (C) properties set to `0`
+* `1200⌶` – format date-time
+* `739⌶` – temporary directory
 * `S32` – small-span component files
 * `⎕XT` – external variables
+* `43⌶632` – monadic operator generator: generics operator
 
 In addition, there are two reserved names than can be used:  
 
@@ -43,7 +45,7 @@ Each time `13⌶` is called, the new list of features replaces the existing list
       'C:/Users/fiona/deprecated_log.txt'(109⌶)0
 	  
 ⍝ Select the features to log
-      13⌶ 'J0C0' 'S32'  
+      13⌶ '1200⌶' 'S32'  
 ```
 
 After logging has been enabled, every subsequent use of the specified deprecated features is logged. Each line in the log file contains a complete JSON5 object, which includes a description of the deprecated feature and the SI Stack at the point it was called. The log file can be examined using any text editor or from within a Dyalog Session. For example:
@@ -70,9 +72,9 @@ or:
 
 ### Identifying Files Pertaining to Deprecated Functionality
 
-A directory can be scanned for deprecated functionality using [`3535⌶`](../../../language-reference-guide/primitive-operators/i-beam/scan-for-deprecated-files/) with a right argument of the directory to be scanned. If the left argument is set to `1`, sub-directories will also be scanned. The names of any files that pertain to deprecated functionality are returned, with labels specifying the reason for identification.
+A directory can be scanned for deprecated functionality using [`3535⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/scan-for-deprecated-files/) with a right argument of the directory to be scanned. If the left argument is set to `1`, sub-directories will also be scanned. The names of any files that pertain to deprecated functionality are returned, with labels specifying the reason for identification.
 
-For Dyalog v20.0, the following labels can be returned: 
+For Dyalog v21.0, the following labels can be returned: 
 
 | Label | Meaning |
 |-------|---------|

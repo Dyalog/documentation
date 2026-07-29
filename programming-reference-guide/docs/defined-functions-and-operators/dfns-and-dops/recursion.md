@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Recursion</span></h1>
+# Recursion
 
 A recursive dfn can refer to itself using its name explicitly, but because we allow unnamed functions, we also need a special symbol for implicit self-reference: `'∇'`. For example:
 ```apl

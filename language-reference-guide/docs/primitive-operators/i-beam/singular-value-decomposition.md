@@ -1,10 +1,10 @@
+---
+search:
+  boost: 2
+---
 
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  8415⌶
-</div>
 
-<h1 class="heading"><span class="name">Singular Value Decomposition</span> <span class="command">R←(8415⌶)Y</span></h1>
+# <span>Singular Value Decomposition</span> `R←(8415⌶)Y`{{key}}
 
 `Y` is a simple numeric matrix. `⎕FR` must be 645.
 
@@ -28,5 +28,7 @@ For further information, see Wikipedia's article on [Singular Value Decompositio
 !!! note
     This function signals `DOMAIN ERROR` if `⎕FR` is 1287. See [Floating-Point Representation ](../../system-functions/fr.md).
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  8415⌶
+</div>

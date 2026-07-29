@@ -1,29 +1,17 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕INSTANCES INSTANCES
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Instances</span> <span class="command">R←⎕INSTANCES Y</span></h1>
-
-
+# <span>Instances</span> `R←⎕INSTANCES Y`{{key}}
 
 `⎕INSTANCES` returns a list all the current instances of the Class specified by `Y`.
 
-
 `Y` must be a reference.
-
 
 If `Y` is a reference to a Class, `R` is a vector of references to all existing Class Instances of  `Y`. Otherwise, `R` is empty.
 
-
-
 <h2 class="example">Examples</h2>
-
 
 This example illustrates a simple inheritance tree or Class hierarchy. There are 3 Classes, namely:
 ```apl
@@ -71,4 +59,7 @@ Animal
  eeyore  robin  polly 
 ```
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕INSTANCES INSTANCES
+</div>

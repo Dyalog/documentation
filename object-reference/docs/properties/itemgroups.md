@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">ItemGroups</span> <span class="right">Property</span></h1>
-
-**Applies To:** [ListView](../objects/listview.md)
+# <span>ItemGroups</span> <span>Property</span>
 
 **Description**
 
@@ -38,3 +36,7 @@ For example, the following expressions executed in the WTUTOR95 workspace will r
 ![](../img/lvsg1.gif)
 
 You can control the appearance of the groupings using the [ItemGroupMetrics](itemgroupmetrics.md) property.
+
+**Application**
+
+Objects: [ListView](../objects/listview.md)

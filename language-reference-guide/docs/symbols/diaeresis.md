@@ -2,7 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Diaeresis</span> <span class="command">¨</span></h1>
+# <span>Diaeresis</span> `¨`
 
 Diaeresis is a monadic operator with an ambivalent operand
 
@@ -26,5 +26,3 @@ Operator Diaeresis means
 └────┴────┴────┘
 ```
 [Language Elements](../glyphs.md)
-
-

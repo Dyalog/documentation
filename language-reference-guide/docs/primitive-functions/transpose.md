@@ -1,15 +1,9 @@
-<div style="display: none;">
-  ⍉
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Transpose (Monadic)</span> <span class="command">R←⍉Y</span></h1>
-
-
+# <span>Transpose (Monadic)</span> `R←⍉Y`{{key}}
 
 `Y` may be any array.  `R` is an array of shape `⌽⍴Y`, similar to `Y` with the order of the axes reversed.
 
@@ -60,4 +54,7 @@
 
 ```
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍉ transpose
+</div>

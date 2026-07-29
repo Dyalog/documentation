@@ -1,9 +1,9 @@
-<!-- Hidden search keywords -->
-<div style="display: none;">
-  ⎕SAVE SAVE
-</div>
+---
+search:
+  boost: 2
+---
 
-<h1 class="heading"><span class="name">Save Workspace</span> <span class="command">{R}←{X}⎕SAVE Y</span></h1>
+# <span>Save Workspace</span> `{R}←{X}⎕SAVE Y`{{key}}
 
 `Y` must be a simple character scalar or vector that identifies a  full or relative path name to the file in which the workspace will be written.
 
@@ -38,7 +38,9 @@ ACTIVE WS
 SAVED WS
 ```
 
-
 Additional operations may be performed before saving the workspace. For further information, see [Set Workspace Save Options](../primitive-operators/i-beam/set-workspace-save-options.md).
 
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SAVE SAVE
+</div>

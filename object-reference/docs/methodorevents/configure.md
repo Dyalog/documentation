@@ -1,38 +1,27 @@
-<h1 class="heading"><span class="name">Configure</span> <span class="right">Event 31</span></h1>
-
-[**Applies To**](../methodoreventapplies/configure.md)
+# <span>Configure</span> <span>Event 31</span>
 
 **Description**
-
 
 If enabled, this event is generated when the configuration of an object
 (position and/or size) is about to change.
 
-
-
 For a [Form](../objects/form.md), the event is generated when the [Form](../objects/form.md) is resized or moved by the user.
-
 
 For any object other than a [Form](../objects/form.md), it can
 occur in one of two ways. Firstly, whenever a [Form](../objects/form.md) is resized, the system (by default) re-arranges its children so as to maintain
 their relative position and size. This generates a Configure event (if enabled)
 for each one of them.
 
-
 Secondly, it can occur as a result of the user resizing the object directly.
 This facility is enabled by setting the object's [Sizeable](../properties/sizeable.md) property to 1.
-
 
 Note that a Configure event is **not** reported when an object is moved
 using "drag & drop". See [Dragable](../properties/dragable.md) (property) and [DragDrop](./dragdrop.md) (event) for details
 of this operation.
 
-
-
 The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq),
 or supplied as the right argument to your callback function, is a 6-element
 vector as follows :
-
 
 |-----|------|-----------------------------|
 |`[1]`|Object|ref or character vector      |
@@ -42,22 +31,17 @@ vector as follows :
 |`[5]`|H     |height of object             |
 |`[6]`|W     |width of object              |
 
-
-
 For any object, the operation can be prevented by returning a scalar 0 from
 the callback function associated with the Configure event.
 
 ## Full-Drag Considerations
 
-
 The user may choose a system option, described here as *full-drag*,
 whereby the contents of the window are re-arranged during a resize operation.
-
 
 If you manage the geometry of your controls using the Attach property, APL
 honours *full drag* during resize, changing the size and position of your
 controls dynamically for you.
-
 
 However, if you manage the geometry of controls using Configure event
 callbacks, you should consider the following.
@@ -84,10 +68,11 @@ callbacks, you should consider the following.
 6. It is not possible to save a workspace from within a Configure Callback in
     *full drag* mode.
 
-
 The above restrictions apply to Configure events when *full drag* is
 enabled, but *only* when *full drag* is enabled. The behaviour of
 Configure callbacks with *full drag* disabled is the same as for other
 events.
 
+**Application**
 
+Objects: [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/animation.md), [Button](../objects/button.md), [ButtonEdit](../objects/buttonedit.md), [Calendar](../objects/calendar.md), [ColorButton](../objects/colorbutton.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [CoolBar](../objects/coolbar.md), [DateTimePicker](../objects/datetimepicker.md), [Edit](../objects/edit.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [Label](../objects/label.md), [List](../objects/list.md), [ListView](../objects/listview.md), [MDIClient](../objects/mdiclient.md), [ProgressBar](../objects/progressbar.md), [PropertyPage](../objects/propertypage.md), [RichEdit](../objects/richedit.md), [Scroll](../objects/scroll.md), [SM](../objects/sm.md), [Spinner](../objects/spinner.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TabBar](../objects/tabbar.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)

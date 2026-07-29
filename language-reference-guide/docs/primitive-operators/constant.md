@@ -1,15 +1,9 @@
-<div style="display: none;">
-  ⍨
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Constant</span> <span class="command">R←{X}(A⍨)Y</span></h1>
-
-
+# <span>Constant</span> `R←{X}(A⍨)Y`{{key}}
 
 `A`,  `X` and `Y` are arrays. The Constant operator returns array `A`.
 
@@ -26,5 +20,8 @@ mu
 
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⍨
+  constant
+</div>

@@ -2,8 +2,7 @@
 search:
   exclude: true
 ---
-<h1 class="heading"><span class="name">Star</span> <span class="command">*</span></h1>
-
+# <span>Star</span> `*`
 
 Monadic Star means
 [Exponential](../primitive-functions/exponential.md)
@@ -19,5 +18,3 @@ Dyadic Star means
 7 25 0J2
 ```
 [Language Elements](../glyphs.md)
-
-

@@ -1,15 +1,9 @@
-<div style="display: none;">
-  *
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Exponential</span> <span class="command">R←*Y</span></h1>
-
-
+# <span>Exponential</span> `R←*Y`{{key}}
 
 `Y` must be numeric. `R` is numeric and is the `Y`th power of *e*, the base of natural logarithms.
 
@@ -25,5 +19,7 @@
 0
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  * exponential
+</div>

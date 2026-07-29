@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">OLERegister</span> <span class="right">Method 530</span></h1>
-
-**Applies To:** [OLEServer](../objects/oleserver.md)
+# <span>OLERegister</span> <span>Method 530</span>
 
 **Description**
 
@@ -11,5 +9,6 @@ If the argument to the OLERegister method is a simple character vector, this is 
 !!! note 
     It is currently necessary to run the APL from which this method is called with Administrator privileges.
 
+**Application**
 
-
+Objects: [OLEServer](../objects/oleserver.md)

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">DMXOutputOnError</span></h1>
+# DMXOutputOnError
 
 This parameter specifies in which windows DMX error messages are displayed. It is an integer whose value is the sum of the specified windows where 1 = Status Window and 2 = Session Window.
 

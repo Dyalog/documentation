@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Access Control for External Variables</span></h1>
+# Access Control for External Variables
 
 External variables may be EXCLUSIVE or SHARED. An exclusive variable can only be accessed by the owner of the file. If you are on a Local Area Network (LAN) a shared external variable may be accessed (concurrently) by other users. The exclusive or shared status of an external variable is set by the `XVAR` function in the UTIL workspace.
 

@@ -1,17 +1,10 @@
-<h1 class="heading"><span class="name">MakeGIF</span> <span class="right">Method 261</span></h1>
-
-
-
-**Applies To:** [Bitmap](../objects/bitmap.md)
+# <span>MakeGIF</span> <span>Method 261</span>
 
 **Description**
 
-
 This method is used to generate a  GIF representation of a picture from a Bitmap object suitable for display by a Web browser.
 
-
 The MakeGIF method is niladic.
-
 
 The result is an integer vector containing the encoded GIF image.
 
@@ -21,5 +14,6 @@ The result is an integer vector containing the encoded GIF image.
 19620
 ```
 
+**Application**
 
-
+Objects: [Bitmap](../objects/bitmap.md)

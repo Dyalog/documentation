@@ -3,17 +3,11 @@ search:
   exclude: true
 ---
 
-
-
-
-
-<h1 class="heading"><span class="name">UNIX Shell</span> <span class="command">⎕SH</span></h1>
-
+# <span>Unix Shell</span> `⎕SH`
 
 ## Monadic `⎕SH` means
 
-
-[Execute UNIX Command](execute-unix-command.md)
+[Execute Unix Command](execute-unix-command.md)
 ```apl
        ⎕SH'ls'
 FILES WS temp
@@ -21,8 +15,7 @@ FILES WS temp
 
 ## Dyadic `⎕SH` means
 
-
-[Start UNIX Auxiliary Processor](start-unix-auxiliary-processor.md)
+[Start Unix Auxiliary Processor](start-unix-auxiliary-processor.md)
 ```apl
       )CLEAR
 clear ws
@@ -31,8 +24,3 @@ clear ws
 avx     box     dbr     getenv  hex     ltom    ltov    mtol    ss      vtol
 
 ```
-
-
-[Language Elements](../symbols/language-elements.md)
-
-

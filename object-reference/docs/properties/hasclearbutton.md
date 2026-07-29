@@ -1,6 +1,4 @@
-<h1 class="heading"><span class="name">HasClearButton</span> <span class="right">Property</span></h1>
-
-**Applies To:** [ButtonEdit](../objects/buttonedit.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [Edit](../objects/edit.md)
+# <span>HasClearButton</span> <span>Property</span>
 
 **Description**
 
@@ -14,3 +12,7 @@ HasClearButton is Boolean. 1 means that a ![](../img/clearbutton.png) button wil
 HasClearButton is only effective for Edit objects with Style Single; it is silently ignored for other Styles of Edit objects.
 
 ![](../img/hasclearbutton.png)
+
+**Application**
+
+Objects: [ButtonEdit](../objects/buttonedit.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [Edit](../objects/edit.md)

@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Edit_Rows</span></h1>
+# Edit_Rows
 
 This parameter specifies the initial height of an edit window in character units.
 

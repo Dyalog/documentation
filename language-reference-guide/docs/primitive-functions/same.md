@@ -1,18 +1,11 @@
-<div style="display: none;">
-  ⊢
-</div>
+---
+search:
+  boost: 2
+---
 
-
-
-
-
-
-<h1 class="heading"><span class="name">Same</span> <span class="command">R←⊣YR←⊢Y</span></h1>
-
-
+# <span>Same</span> `R←⊣YR←⊢Y`{{key}}
 
 `Y` may be any array.
-
 
 The result `R` is the argument `Y`.
 
@@ -32,5 +25,7 @@ avl    17476
 
 ```
 
-
-
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⊢ same tack 
+</div>

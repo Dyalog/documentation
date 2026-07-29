@@ -1,4 +1,4 @@
-<h1 class="heading"><span class="name">Instance Methods</span></h1>
+# Instance Methods
 
 An Instance method runs in the Instance namespace and may only be called via the instance itself. An Instance method has direct access to Fields and Properties, both Private and Public, in the Instance in which it runs.
 

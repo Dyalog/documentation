@@ -1,13 +1,9 @@
-<h1 class="heading"><span class="name">Array</span> <span class="right">Property</span></h1>
-
-
-
-**Applies To:** [Clipboard](../objects/clipboard.md)
+# <span>Array</span> <span>Property</span>
 
 **Description**
 
-
 This property may be used to set or retrieve the contents of the Windows clipboard as a Dyalog APL array.
 
+**Application**
 
-
+Objects: [Clipboard](../objects/clipboard.md)
