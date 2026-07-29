@@ -1,13 +1,15 @@
 # UseXCV
 
-This Boolean parameter specifies how the commonly used keystrokes for copy (ctrl+c), cut Ctrl+x) and paste (ctrl+v) are processed.
+!!! Info "Information"
+    This configuration parameter is only relevant on the Microsoft Windows operating system. It is defined for the Unicode IME in the Registry section `HKEY_CURRENT_USER\Software\Dyalog\UnicodeIME\`.
 
-0 = process  normally (via the appropriate .DIN file)1 = pass  untranslated to the host application
+How the common copy (Ctrl+C), cut (Ctrl+X), and paste (Ctrl+V) keystrokes are processed.
 
-The **UseXCV** parameter is defined for the IME in the Registry section `HKEY_CURRENT_USER\Software\Dyalog\UnicodeIME\`
+Valid values are:
 
-When **UseXCV** is 1, the keystrokes Ctrl+X, Ctrl+C and Ctrl+V are passed untranslated to `dyalog.exe` which treats them as CT, CP and PT respectively. This is likely to be true for other host applications using the Dyalog keyboard.
+- `0` : processed normally, through the appropriate `.DIN` file
+- `1` : passed untranslated to the host application (`dyalog.exe` treats Ctrl+X, Ctrl+C, and Ctrl+V as CT, CP, and PT respectively)
 
-The standard Dyalog keyboard (*.din) files map  Shift+Del to CT, Ctrl+Ins to CP, and Shift+Ins to PT. These will therefore work independently of the **UseXCV** option.
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
 
-The standard Dyalog keyboard (*.din) files map BOTH Ctrl+X and Ctrl+Shift+Xto `⊃` So if **UseXCV** is set to 1, you must use Ctrl+Shift+X to obtain `⊃`. Likewise for C and V.
+The standard Dyalog keyboard (`*.din`) files map Shift+Del to CT, Ctrl+Ins to CP, and Shift+Ins to PT, so these work regardless of this setting. Those files also map both Ctrl+X and Ctrl+Shift+X to `⊃`, so when this parameter is `1` you must use Ctrl+Shift+X to obtain `⊃` (and likewise for C and V).

@@ -1,7 +1,14 @@
 # APLK
 
-**Classic Edition only.**
+!!! Info "Information"
+    This configuration parameter is only relevant when using the Classic edition of Dyalog.
 
-This parameter specifies the name of your Input Translate Table, which defines your keyboard layout. The keyboard combo in the *Configure* dialog box displays all the files with the .DIN extension in the directory specified by the **APLKEYS** parameter. You may choose any one of the supplied tables, and you may add your own to the directory. Note that the FILE.DIN table is intended for input from **file** , and should not normally be chosen as a keyboard table.
+The name of the Input Translate Table, which defines the keyboard layout. The keyboard list in the Configuration dialog shows every `.DIN` file in the directory given by [`APLKeys`](aplkeys.md); any of the supplied tables can be chosen, and you can add your own. The `FILE.DIN` table is intended for input from file and should not normally be chosen as a keyboard table.
 
-See also [Input table file](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-input-tab-classic-edition-only.md).
+Valid values are the name of a `.DIN` input translate table.
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+Related parameters: [APLKeys](aplkeys.md).
+
+See also the [Input tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-input-tab-classic-edition-only.md) of the Windows Configuration Dialog.

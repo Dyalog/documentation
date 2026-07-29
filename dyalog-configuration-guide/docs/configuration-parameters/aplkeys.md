@@ -1,7 +1,14 @@
 # APLKeys
 
-**Classic Edition only.**
+!!! Info "Information"
+    This configuration parameter is only relevant when using the Classic edition of Dyalog.
 
-This parameter specifies a search path for the Input Translate Table and is useful for configuring a run-time application. The directory paths are specified using Operating System specific conventions and separated by ";" (Windows) or ":" (UNIX). Its default value is the `aplkeys` sub-directory of the directory in which Dyalog APL/W is installed (defined by **Dyalog** ).
+A search path for the Input Translate Table, useful when configuring a run-time application. Directory paths use the operating system's conventions and are separated by `;` (Windows) or `:` (UNIX and macOS).
 
-See also [Input table search path](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-input-tab-classic-edition-only.md).
+Valid values are a list of directory paths.
+
+Default is the `aplkeys` sub-directory of the Dyalog installation directory (given by [`Dyalog`](dyalog.md)).
+
+Related parameters: [APLK](aplk.md), [Dyalog](dyalog.md).
+
+See also the [Input tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-input-tab-classic-edition-only.md) of the Windows Configuration Dialog.

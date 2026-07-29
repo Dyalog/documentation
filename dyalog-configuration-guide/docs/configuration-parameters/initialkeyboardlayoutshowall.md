@@ -1,7 +1,17 @@
 # InitialKeyboardLayoutShowAll
 
-**Unicode Edition only.**
+!!! Info "Information"
+    This configuration parameter is only relevant when using the Unicode edition of Dyalog.
 
-This Boolean parameter specifies whether or not all installed keyboards are listed in the choice of keyboards in the Configuration dialog box (Unicode Input tab).
+Whether all installed keyboards are listed in the choice of keyboards on the Unicode Input tab of the Configuration dialog.
 
-See also [Show keyboards for all Languages](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-unicode-input-tab-unicode-edition-only.md).
+Valid values are:
+
+- `0` : only Dyalog keyboards are listed
+- `1` : all installed keyboards are listed
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+Related parameters: [InitialKeyboardLayout](initialkeyboardlayout.md).
+
+See also the [Unicode Input tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-unicode-input-tab-unicode-edition-only.md) of the Windows Configuration Dialog.

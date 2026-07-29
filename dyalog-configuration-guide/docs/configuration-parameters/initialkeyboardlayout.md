@@ -1,7 +1,14 @@
 # InitialKeyboardLayout
 
-**Unicode Edition only.**
+!!! Info "Information"
+    This configuration parameter is only relevant when using the Unicode edition of Dyalog.
 
-This parameter specifies the name of the keyboard to be selected on startup. When you start an APL session, this layout will automatically be selected as the current keyboard layout if the value of **InitialKeyboardLayoutInUse** is 1.
+The name of the keyboard to be selected on start-up. When an APL Session starts, this layout becomes the current keyboard layout if [`InitialKeyboardLayoutInUse`](initialkeyboardlayoutinuse.md) is `1`.
 
-See also [Keyboard](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-unicode-input-tab-unicode-edition-only.md).
+Valid values are the name of an installed keyboard layout.
+
+<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+
+Related parameters: [InitialKeyboardLayoutInUse](initialkeyboardlayoutinuse.md), [InitialKeyboardLayoutShowAll](initialkeyboardlayoutshowall.md).
+
+See also the [Unicode Input tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-unicode-input-tab-unicode-edition-only.md) of the Windows Configuration Dialog.
