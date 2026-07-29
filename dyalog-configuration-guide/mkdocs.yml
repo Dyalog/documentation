@@ -72,9 +72,12 @@ nav:
       - APLAN_FOR_OUTPUT: configuration-parameters/aplan-for-output.md
       - AplCoreName: configuration-parameters/aplcorename.md
       - aplk: configuration-parameters/aplk.md
+      - APLK0: configuration-parameters/aplk0.md
       - aplkeys: configuration-parameters/aplkeys.md
       - aplnid: configuration-parameters/aplnid.md
+      - APLSTATUSFD: configuration-parameters/aplstatusfd.md
       - aplt: configuration-parameters/aplt.md
+      - APLTn: configuration-parameters/apltn.md
       - apltrans: configuration-parameters/apltrans.md
       - APL_CODE_E_MAGNITUDE: configuration-parameters/apl-code-e-magnitude.md
       - APL_COMPLEX_AS_V12: configuration-parameters/apl-complex-as-v12.md
@@ -137,6 +140,9 @@ nav:
       - DYALOG_NOPOPUPS: configuration-parameters/dyalog-nopopups.md
       - DYALOG_PIXEL_TYPE: configuration-parameters/dyalog-pixel-type.md
       - DYALOG_SERIAL: configuration-parameters/dyalog-serial.md
+      - DYALOG_SERIALFILE: configuration-parameters/dyalog-serialfile.md
+      - DYALOG_SHELL_SUBPROCESS: configuration-parameters/dyalog-shell-subprocess.md
+      - EDITOR_COLUMNS: configuration-parameters/editor-columns.md
       - EditorState: configuration-parameters/editorstate.md
       - Edit_Cols: configuration-parameters/edit-cols.md
       - Edit_First_X: configuration-parameters/edit-first-x.md

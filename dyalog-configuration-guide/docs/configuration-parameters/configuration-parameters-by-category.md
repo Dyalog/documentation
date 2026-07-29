@@ -270,6 +270,19 @@ These control the user-command framework.
 |----|-----------|
 |[`UCMDCacheFile`](ucmdcachefile.md)|The name of the User Command cache file|
 
+## UNIX and macOS specific
+
+These parameters are only relevant on the UNIX and macOS operating systems.
+
+|Name|Description|
+|----|-----------|
+|[`APLSTATUSFD`](aplstatusfd.md)|The output stream on which Status window messages are written|
+|[`APLK0`](aplk0.md)|An input translate table that overrides `APLK` (Classic edition)|
+|[`APLTn`](apltn.md)|An output translate table that overrides `APLT` (Classic edition)|
+|[`DYALOG_SERIALFILE`](dyalog-serialfile.md)|The path to the file containing your Dyalog serial number|
+|[`DYALOG_SHELL_SUBPROCESS`](dyalog-shell-subprocess.md)|Whether a child process handles `⎕SHELL` calls (AIX)|
+|[`EDITOR_COLUMNS`](editor-columns.md)|The columns shown in the Editor for each type of object|
+
 ## Miscellaneous
 
 |Name|Description|
