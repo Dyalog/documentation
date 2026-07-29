@@ -242,6 +242,7 @@ nav:
               - '4001: Change User': primitive-operators/i-beam/change-user.md
               - '4002: Reap Forked Tasks': primitive-operators/i-beam/reap-forked-tasks.md
               - '4007: Signal Counts': primitive-operators/i-beam/signal-counts.md
+              - '4061: Thread Discrepancy Counts': primitive-operators/i-beam/thread-discrepancy-counts.md
               - '5171: Discard Source Information': primitive-operators/i-beam/discard-source-information.md
               - '5172: Discard Source Code': primitive-operators/i-beam/discard-source-code.md
               - '5176: List Loaded Files': primitive-operators/i-beam/list-loaded-files.md

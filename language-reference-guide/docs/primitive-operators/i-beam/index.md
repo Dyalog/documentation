@@ -94,6 +94,7 @@ Key to notes in the following table:
 |`4001` |[Change User](./change-user.md)                                                       |X     |
 |`4002` |[Reap Forked Tasks](./reap-forked-tasks.md)                                           |AIX   |
 |`4007` |[Signal Counts](./signal-counts.md)                                                   |X     |
+|`4061` |[Thread Discrepancy Counts](./thread-discrepancy-counts.md)                           |&nbsp;|
 |`5171` |[Discard Source Information](./discard-source-information.md)                         |&nbsp;|
 |`5172` |[Discard Source Code](./discard-source-code.md)                                       |&nbsp;|
 |`5176` |[List Loaded Files](./list-loaded-files.md)                                           |&nbsp;|
