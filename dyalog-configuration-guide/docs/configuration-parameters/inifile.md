@@ -1,22 +1,23 @@
 # IniFile
 
-This parameter specifies the name of the Windows Registry folder that contains the configuration parameters described in this section. For example,
-```apl
-INIFILE=Software\Dyalog\mysettings
-```
+!!! Info "Information"
+    This configuration parameter is only relevant on the Microsoft Windows operating system.
 
-The default values for **IniFile**, for the 64-bit and 32-bit versions respectively, are:
+The name of the Windows Registry folder that holds the configuration parameters. For example, `INIFILE=Software\Dyalog\mysettings`.
 
-## Unicode Edition
-```apl
-    Software\Dyalog\Dyalog APL/W-64 {{ version_majmin }} Unicode 
-    Software\Dyalog\Dyalog APL/W {{ version_majmin }} Unicode
-```
+Valid values are a Registry folder path.
 
-## Classic Edition
-```apl
-    Software\Dyalog\Dyalog APL/W-64 {{ version_majmin }}
-    Software\Dyalog\Dyalog APL/W {{ version_majmin }}
-```
+Default depends on edition (64-bit and 32-bit versions respectively):
 
-See also [Configuration saved in](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-general-tab.md).
+- Unicode edition:
+  ```
+  Software\Dyalog\Dyalog APL/W-64 {{ version_majmin }} Unicode
+  Software\Dyalog\Dyalog APL/W {{ version_majmin }} Unicode
+  ```
+- Classic edition:
+  ```
+  Software\Dyalog\Dyalog APL/W-64 {{ version_majmin }}
+  Software\Dyalog\Dyalog APL/W {{ version_majmin }}
+  ```
+
+See also the [General tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-general-tab.md) of the Windows Configuration Dialog.

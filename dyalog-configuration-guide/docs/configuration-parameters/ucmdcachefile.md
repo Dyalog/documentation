@@ -1,10 +1,7 @@
 # UCMDCacheFile
 
-This parameter specifies the name of the User Command cache file.
+The name of the User Command cache file.
 
-The default value is:
-```apl
-UserCommand{UcmdMajor}{UcmdMinor}.{DyalogMajor}{DyalogMinor}{U|C}{bits}.cache
-```
+Valid values are a file name.
 
-For example, `UserCommand25.182U64.cache`
+Default is `UserCommand{UcmdMajor}{UcmdMinor}.{DyalogMajor}{DyalogMinor}{U|C}{bits}.cache`, for example `UserCommand25.182U64.cache`.
