@@ -233,6 +233,8 @@ These control component-file defaults and the interoperability of code and data 
 |[`APL_FCREATE_PROPS_J`](apl-fcreate-props-j.md)|The default journaling level for newly-created component files|
 |[`APL_FAST_FCHK`](apl-fast-fchk.md)|Whether `⎕FCHK` is optimised so that it can reliably determine that a component file was properly untied and so need not be checked (this can be overridden with the `⎕FCHK` `force` option)|
 |[`CFEXT`](cfext.md)|Component file filename extensions, determining the file search order when a component file is tied|
+|[`DYALOG_EXTVAR_SUPPORTED`](dyalog-extvar-supported.md)|Whether support for external variables is enabled|
+|[`DYALOG_S32_SUPPORTED`](dyalog-s32-supported.md)|Whether support for small-span (32-bit) component files is enabled|
 |[`APL_CODE_E_MAGNITUDE`](apl-code-e-magnitude.md)|The magnitude at or above which numbers in function bodies are descanned (written out as their character representation, for example by `⎕CR`) in exponential format|
 |[`APL_COMPLEX_AS_V12`](apl-complex-as-v12.md)|Whether code developed with Version 12.1 or earlier keeps its original behaviour with respect to complex numbers|
 |[`File_Stack_Size`](file-stack-size.md)|The number of most-recently-used workspaces displayed in the Session File menu|
