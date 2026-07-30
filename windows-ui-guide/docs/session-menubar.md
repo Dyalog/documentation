@@ -163,15 +163,15 @@ Table: Threads Menu Operations {: #threads-menu-operations }
 
 ## The Layout Menu
 
-The *Layout* menu (`⎕SE.mb.layout`) provides layout options for the Debugger.
+The *Layout* menu (`⎕SE.mb.layout`) selects between Standard and Classic mode, and, in Standard mode, the position of the Debugger. See [The Editor](editor.md) for the window management that each mode provides.
 
 Table: Layout Menu Operations {: #debugger-layout-menu-operations }
 
 |Item                   |Action             |Description                                        |
 |-----------------------|-------------------|---------------------------------------------------|
-|Classic                |APL callback       |Detaches the Debugger window                       |
-|Debugger at the bottom |APL callback       |Docks the Debugger at the bottom (default)         |
-|Debugger on the left   |APL callback       |Docks the Debugger on the left                     |
+|Classic                |APL callback       |Selects Classic mode, in which Edit and Trace windows are free-floating|
+|Debugger at the bottom |APL callback       |Selects Standard mode, with the Debugger docked at the bottom (default)|
+|Debugger on the left   |APL callback       |Selects Standard mode, with the Debugger docked on the left|
 
 The selected option does *not* persist if you restart the session.
 
