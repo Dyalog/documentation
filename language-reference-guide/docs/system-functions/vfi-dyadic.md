@@ -14,22 +14,11 @@ The length of the items of `R` is the same as the number of identifiable strings
 <h2 class="example">Examples</h2>
 ```apl
 
-      ⎕VFI '2 -2 ¯2'
- 1 0 1  2 0 ¯2
- 
-      ⎕VFI '12.1 1E1 1A1 ¯10'
- 1 1 0 1  12.1 10 0 ¯10
- 
-      ⊃(//⎕VFI'12.1 1E1 1A1 ¯10')
-12.1 10 ¯10
- 
       ','⎕VFI'3.9,2.4,,76,'
  1 1 1 1 1  3.9 2.4 0 76 0
  
       '⋄'⎕VFI'1 ⋄ 2 3 ⋄ 4 '
  1 0 1  1 0 4
-      (⍬ ⍬)≡⎕VFI''
-1
 ```
 
 <!-- Hidden search keywords -->

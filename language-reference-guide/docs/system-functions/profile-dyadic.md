@@ -48,35 +48,17 @@ Turns profiling on using the specified timer, or resumes profiling if it was sto
 
 The first time a particular timer is chosen, `⎕PROFILE` will spend 1,000 milliseconds (1 second) to approximate the call time bias and granularity for that timer.
 
-<h3 class="example">Example</h3>
-```apl
-      ⊢⎕PROFILE 'start' 'CPU'
- active  CPU  0.000489407284 0
-```
-
 ### Suspend Data Collection
 
 Suspends the collection of profiling data
 
 Syntax: `{state}←⎕PROFILE 'stop'`
 
-<h3 class="example">Example</h3>
-```apl
-      ⊢⎕PROFILE 'stop'
- inactive  CPU  0.000489407284 0
-```
-
 ### Turn Profiling Off
 
 Syntax: `{state}←⎕PROFILE 'clear'`
 
 Clears any collected profiling data and, if profiling is active, places profiling into an inactive state.
-
-<h3 class="example">Example</h3>
-```apl
-      ⊢⎕PROFILE 'clear'
- inactive    0 0
-```
 
 ### Calibrate Profiling Timer
 
@@ -89,30 +71,11 @@ Causes `⎕PROFILE` to perform a 1,000 millisecond calibration to approximate th
 
 `⎕PROFILE` will retain the lesser of the current timer values compared to the new values computed by the calibration. This ensures that the smallest possible values of which we can be certain is used.
 
-<h3 class="example">Example</h3>
-```apl
-      ⊢⎕PROFILE'calibrate'
- active  CPU  0.000489407284 0
-```
-
 ### Query Profiling State
 
 Syntax: `state←⎕PROFILE 'state'`
 
 Queries and returns the current profiling state.
-
-<h3 class="example">Example</h3>
-```apl
-      )CLEAR
-clear ws
-      ⎕PROFILE 'state'
- inactive    0 0
- 
-      ⊢⎕PROFILE 'start' 'CPU'
- active  CPU  0.000489407284 0
-      ⎕PROFILE 'state'
- active  CPU  0.000489407284 0
-```
 
 ### Retrieve Data (Flat Form)
 
@@ -130,17 +93,6 @@ Retrieves the collected profiling data and returns it in flat form. If the `X` i
 
 <h3 class="example">Example</h3>
 Numbers in this example have been truncated for formatting purposes.
-```apl
-      ⎕PROFILE 'data'
-#.foo             1  1.04406  39347.64945   503 4080803
-#.foo      1      1  0.12488     0.124887     1       1
-#.foo      2    100  0.58851 39347.193900   200 4080500
-#.foo      3    100  0.21340     0.213406   100     100
-#.NS1.goo       100 99.44404   39346.6053 50300 4080300
-#.NS1.goo  1    100  0.61679     0.616793   100     100
-#.NS1.goo  2  10000 67.80292   39314.9642 20000 4050000
-#.NS1.goo  3  10000 19.60274      19.6027 10000   10000
-```
 
 `X` must be a simple vector of column indices. The result `R` has the same shape as `X`, and is a vector of the specified column vectors.
 
@@ -167,21 +119,6 @@ Retrieves the collected profiling data and returns it in tree form. If the `X` i
 
 <h2 class="example">Example</h2>
 Numbers in this example have been truncated for formatting purposes.
-```apl
-      ⎕PROFILE 'tree'
-0  #.foo               1     1.04406 39347.64945     503 4080803
-1  #.foo      1        1     0.12488     0.12488       1       1
-1  #.foo      2      100     0.58851 39347.19390     200 4080500
-2  #.NS1.goo         100    99.44404 39346.60538   50300 4080300
-3  #.NS1.goo  1      100     0.61679     0.61679     100     100
-3  #.NS1.goo  2    10000    67.80292 39314.96426   20000 4050000
-4  #.NS2.moo       10000 39247.16133 39247.16133 4030000 4030000
-5  #.NS2.moo  1    10000    39.28315    39.28315   10000   10000
-5  #.NS2.moo  2  1000000 36430.65236 36430.65236 1000000 1000000
-5  #.NS2.moo  3  1000000  1645.36214  1645.36214 1000000 1000000
-3  #.NS1.goo  3    10000    19.60274    19.60274   10000   10000
-1  #.foo      3      100     0.21340     0.21340     100     100
-```
 
 Rows with an even depth level in `[;1]` represent function summary entries; odd depth level rows are function line entries. Recursive functions generate separate rows for each level of recursion.
 
@@ -238,13 +175,6 @@ To identify items that take more than 1% of the run time, or to focus on elapsed
 ### Advanced Profiling
 
 The timing data collected by `⎕PROFILE` is not adjusted for the timer's call time bias; this means that the times reported by `⎕PROFILE` include the time spent calling the timer function. One effect of this is that "cheap" lines that are called many times appear to consume more resource. If you require more accurate profiling measurements, or if your application takes a short amount of time to run, you might want to adjust for the timer call time bias. To do so, subtract from the timing data the timer's' call time bias multiplied by the number of times the timer was called.
-
-<h4 class="example">Example</h4>
-```apl
-      CallTimeBias←3⊃⎕PROFILE 'state'
-      RawTimes←⎕PROFILE 'data'
-      Adjusted←RawTimes[;4 5]-RawTimes[;6 7]×CallTimeBias
-```
 
 ## The `]Profile` User Command
 

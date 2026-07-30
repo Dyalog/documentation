@@ -23,37 +23,13 @@ The names in the error specification must all  appear in a system-generated `⎕
 
 Dyalog may enhance `⎕DMX` in future, thus potentially altering the list of valid and/or assignable names.
 
-
 The effect of the system function is to interrupt execution.  The state indicator is cut back to exit from the function or operator containing the line that invoked `⎕SIGNAL`, or is cut back to exit the Execute (`⍎`) expression that invoked `⎕SIGNAL`. If executed within a nested dfn, the state indicator is cut back to exit from the capsule containing the line that invoked `⎕SIGNAL`. An error is then generated.
 
 An error interrupt may be trapped if the system variable `⎕TRAP` is set to intercept the event.  Otherwise, the standard system action is taken (which may involve cutting back the state indicator further if there are locked functions or operators in the state indicator).
 
 <h2 class="example">Example</h2>
-```apl
-      ⎕VR'DIVIDE'
-     ∇ R←A DIVIDE B;⎕TRAP
-[1]    ⎕TRAP←11 'E' '→ERR'
-[2]    R←A÷B ⋄ →0
-[3]   ERR:'DIVISION ERROR' ⎕SIGNAL 11
-     ∇
- 
-      2 4 6 DIVIDE 0
-DIVISION ERROR
-      2 4 6 DIVIDE 0
-     ^
-```
 
 If you are using the Microsoft .NET Framework, you may use `⎕SIGNAL` to throw an exception by specifying a value of 90 in `Y`. In this case, it must be a reference to a .NET object that is or derives from the Microsoft .NET class System.Exception. The following example illustrates a *constructor* function `CTOR` that expects to be called with a value for `⎕IO` (0 or 1)
-```apl
-     ∇ CTOR IO;EX
-[1]    :If IO∊0 1
-[2]        ⎕IO←IO
-[3]    :Else
-[4]        EX←ArgumentException.New'IO must be 0 or 1'
-[5]        EX ⎕SIGNAL 90
-[6]    :EndIf
-     ∇
-```
 
 ## `⎕SIGNAL 0`: Reset error-related system constants
 
@@ -86,20 +62,6 @@ DOMAIN ERROR: Divide by zero
 ## Example 1
 ```apl
 
-      'Hello'⎕SIGNAL 200
-Hello
-      'Hello'⎕SIGNAL 200
-     ∧
-      ⎕DMX
- EM       Hello 
- Message            
-
-      ⎕DM
- Hello        'Hello'⎕SIGNAL 200       ∧ 
-
-```
-```apl
-
       ⎕SIGNAL⊂⊂('EN' 200)
 ERROR 200
       ⎕SIGNAL⊂⊂('EN' 200)
@@ -108,9 +70,6 @@ ERROR 200
       ⎕DMX
  EM       ERROR 200 
  Message    
-
-      ⎕DM
- ERROR 200        ⎕SIGNAL⊂⊂('EN' 200)       ∧ 
 
 ```
 

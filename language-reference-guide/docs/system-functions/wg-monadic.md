@@ -14,35 +14,8 @@ The object is the one in the namespace in which the function is being evaluated.
 If `Y` refers to a non-existent property, or to a property that is not defined for the type of the object, a `DOMAIN ERROR` is reported.
 
 GUI objects are named **relative** to the current namespace. The following examples are equivalent:
-```apl
-
-      'F1.B1' ⎕WG 'Caption'
-      'B1' F1.⎕WG 'Caption'
-      '' F1.B1.⎕WG 'Caption'
-      F1.B1.⎕WG 'Caption'
-```
 
 <h2 class="example">Examples</h2>
-```apl
-
-      'F1' ⎕WC 'Form' 'TEST'
-
-      'F1' ⎕WG 'Caption'
-TEST
-
-      'F1' ⎕WG 'MaxButton'
-1
-
-      'F1' ⎕WG 'Size'
-50 50
-
-      ]Display 'F1' ⎕WG 'Caption' 'MaxButton' 'Size'
-┌→─────────────────┐
-│ ┌→───┐   ┌→────┐ │
-│ │TEST│ 1 │50 50│ │
-│ └────┘   └~────┘ │
-└∊─────────────────┘
-```
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

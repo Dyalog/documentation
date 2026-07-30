@@ -89,21 +89,6 @@ Otherwise, `R` is the CSV data in the format specified in Y, and is not shy.
 <h3 class="example">Examples</h3>
 ```apl
        CSVFile←'c:\Dyalog16.0\sales.csv'
-       ⎕←DATA HDR←⎕CSV CSVFile''(1 2)1
-┌→──────────────────────────────────────────┐
-│ ┌→────────────────┐ ┌→──────────────────┐ │
-│ ↓ ┌→──────┐       │ │ ┌→──────┐ ┌→────┐ │ │
-│ │ │Widgets│  1912 │ │ │Product│ │Sales│ │ │
-│ │ └───────┘       │ │ └───────┘ └─────┘ │ │
-│ │ ┌→──────┐       │ └∊──────────────────┘ │
-│ │ │Gimlets│  205  │                       │
-│ │ └───────┘       │                       │
-│ │ ┌→───────┐      │                       │
-│ │ │Dingbats│ 189  │                       │
-│ │ └────────┘      │                       │
-│ └∊────────────────┘                       │
-└∊──────────────────────────────────────────┘
-
      DATA⍪←'Gizmos' 23
       DATA HDR ⎕CSV''
 ┌→────────────┐
@@ -129,10 +114,6 @@ Otherwise, `R` is the CSV data in the format specified in Y, and is not shy.
 FILE NAME ERROR: Unable to create file ("The file exists.")
        ⎕←DATA HDR ⎕CSV CSVFile1
       ∧
-       ⎕←DATA HDR(⎕CSV⍠'IfExists' 'Replace')CSVFile1
-  
-80 
-
 ```
 
 ![csv_excel1](../img/csv-excel1.png)

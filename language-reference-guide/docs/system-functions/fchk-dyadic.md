@@ -60,14 +60,8 @@ Default values are highlighted thus{ .shaded }  in the above tables.
 <h2 class="example">Examples</h2>
 
 To check a file and attempt to fix it if damage is found:
-```apl
-      (⎕FCHK ⍠ 1)'suspect.dcf'
-```
 
 To forcibly check a file and attempt to fix it if damage is found:
-```apl
-      (⎕FCHK ⍠ ('Repair' 1)('Force'1))'suspect.dcf'
-```
 
 ### Specifying options using a left argument
 

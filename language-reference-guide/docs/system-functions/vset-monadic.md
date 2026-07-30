@@ -34,7 +34,6 @@ Name value pairs:
 1 2  hello
 
       (ns1 ns2 ns3)←()()()
-      ns1 'ns2' ns3 ⎕VSET ('X1' 'X value') ('Y1' 'Y value')
       (ns1 ns2 ns3).(X1 Y1)
   X value  Y value    X value  Y value    X value  Y value
 ```

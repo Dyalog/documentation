@@ -60,28 +60,6 @@ If you are using the Microsoft .NET Framework, you may use `⎕SIGNAL` to throw 
 
 If `Y` is a simple integer with the value 0, `⎕SIGNAL` does not interrupt execution, but merely returns the value 0. The side effect of calling `⎕SIGNAL 0` is to reset the values of `⎕DM`, `⎕DMX`, `⎕EN` and `⎕EXCEPTION` to their default values. `⎕SIGNAL 0` is the only form of `⎕SIGNAL` which can be used to reset the aforementioned system constants; including a left argument or using a name/value pair right argument of `⎕SIGNAL` will result in a `DOMAIN ERROR`.
 
-<h2 class="example">Example</h2>
-```apl
-
-      ÷0
-DOMAIN ERROR: Divide by zero
-      ÷0
-     ∧
-      ⎕DM ⎕EN ⎕DMX
-┌──────────────────────────────┬──┬─────────────────────────┐
-│┌────────────┬────────┬──────┐│11│ EM       DOMAIN ERROR   │
-││DOMAIN ERROR│      ÷0│     ∧││  │ Message  Divide by zero │
-│└────────────┴────────┴──────┘│  │                         │
-└──────────────────────────────┴──┴─────────────────────────┘
-      ⊢⎕SIGNAL 0
-0
-      ⎕DM ⎕EN ⎕DMX
-┌┬─┬┐
-││0││
-└┴─┴┘
-
-```
-
 ## Further examples
 
 ## Example 1
@@ -101,10 +79,6 @@ Hello
 ```
 ```apl
 
-      ⎕SIGNAL⊂⊂('EN' 200)
-ERROR 200
-      ⎕SIGNAL⊂⊂('EN' 200)
-     ∧
 
       ⎕DMX
  EM       ERROR 200 
@@ -116,14 +90,6 @@ ERROR 200
 ```
 
 ## Example 2
-```apl
-
-      ⎕SIGNAL⊂('EN' 200)('Vendor' 'Andy')('Message' 'My error')
-ERROR 200: My error
-      ⎕SIGNAL⊂('EN' 200)('Vendor' 'Andy')('Message' 'My error')
-     ∧
-
-```
 ```apl
       ⎕DMX
  EM       ERROR 200 
@@ -137,14 +103,6 @@ ERROR 200: My error
 ```
 
 Be aware of the following case, in which the argument has not been sufficiently nested:
-```apl
-
-      ⎕SIGNAL⊂('EN' 200)
-DOMAIN ERROR: Unexpected name in signalled ⎕DMX specification
-      ⎕SIGNAL⊂('EN' 200)
-     ∧
-
-```
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

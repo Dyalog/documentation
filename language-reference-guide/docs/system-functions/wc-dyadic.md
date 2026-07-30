@@ -96,8 +96,6 @@ Monadic `⎕WC` is used to *attach* a GUI component to an existing object.  The
 ```apl
       )CS F
 #.F
-      ⎕WC 'Form'  ⍝ Attach a Form to this namespace
- 
       )CS
 #
       F.⎕WC'Form' ⍝ Attach a Form to namespace F

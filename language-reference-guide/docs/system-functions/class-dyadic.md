@@ -14,9 +14,6 @@ In this case, `R` is a reference to the implementation of Interface `X` by Insta
 Once again, the Penguin Class example (see[Programmer's Guide: "Penguin Class Example"](../../../programming-reference-guide/object-oriented-programming/interfaces/interface-example)) is used to illustrate the use of Interfaces.
 ```apl
       Pingo←⎕NEW Penguin
-      ⎕CLASS Pingo
-  #.Penguin  #.FishBehaviour  #.BirdBehaviour    #.Animal
- 
       (FishBehaviour ⎕CLASS Pingo).Swim
 I can dive and swim like a fish
       (BirdBehaviour ⎕CLASS Pingo).Fly

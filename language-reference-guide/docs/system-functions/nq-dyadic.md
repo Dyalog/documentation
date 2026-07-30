@@ -44,14 +44,8 @@ If the left argument is 2, `⎕NQ` returns either the value 1 or a value that is
 <h2 class="example">Examples</h2>
 ```apl
       ⍝ Send a keystroke ("A") to an Edit Field
-      ⎕NQ TEST.ED 'KeyPress' 'A'
-
       ⍝ Iconify all top-level Forms
-      {⎕NQ ⍵ 'StateChange' 1}¨'Form'⎕WN'.'
-
       ⍝ Set the focus to a particular field
-      ⎕NQ TEST.ED3 40
-
       ⍝ Throw a new page on a printer
       1 ⎕NQ PR1 'NewPage'
 
@@ -61,8 +55,6 @@ If the left argument is 2, `⎕NQ` returns either the value 1 or a value that is
       ...
       ⎕DQ 'TEST'
       ...
-      ⎕NQ TEST 1001  ⍝ From a callback
-
       ⍝ Call GetItemState method for a TreeView F.TV
       +2 ⎕NQ F.TV 'GetItemState' 6
 96

@@ -107,26 +107,6 @@ In the Classic Edition, offending bytes are replaced by the `?` symbol, which me
 
 ```
 ```apl
-      ⊃1⎕NPARTS '' ⍝ current working directory
-c:/Users/Pete/
-      (⎕NINFO⍠1)'D*'
-┌─────────────────────────────────────┐
-│┌───────┬─────────┬─────────┬───────┐│
-││Desktop│Documents│Downloads│Dropbox││
-│└───────┴─────────┴─────────┴───────┘│
-└─────────────────────────────────────┘
-
-```
-```apl
-      (⎕NINFO⍠1)'Documents/*.zip'
-┌──────────────────────┐
-│┌────────────────────┐│
-││Documents/dyalog.zip││
-│└────────────────────┘│
-└──────────────────────┘
-
-```
-```apl
       ⍪ (0,⍳6) ⎕NINFO 'Documents/dyalog.zip'
 ┌──────────────────────────────────────────────┐
 │Documents/dyalog.zip                          │
@@ -145,55 +125,12 @@ c:/Users/Pete/
 └──────────────────────────────────────────────┘
 
 ```
-```apl
-      ⊃1⎕NPARTS '' ⍝ current working directory
-C:/Users/Pete/Documents/Dyalog APL-64 16.0 Unicode Files/
-      (⎕NINFO⍠1)'*.*'
-┌──────────────────────────────────────────────────────┐
-│┌───────────┬──────────┬─────────┬───────────────────┐│
-││default.dlf│def_uk.dse│jsonx.dws│UserCommand20.cache││
-│└───────────┴──────────┴─────────┴───────────────────┘│
-└──────────────────────────────────────────────────────┘
-
-```
-```apl
-      ⊢ ⎕MKDIR 'd1' 'd2'
-1 1
-      'a'∘⎕NPUT¨'find' 'd1/find' 'd1/nofind' 'd2/find'
-      (⎕NINFO⍠'Recurse' 1)'find'
-┌──────────────────────┐
-│┌───────┬───────┬────┐│
-││d1/find│d2/find│find││
-│└───────┴───────┴────┘│
-└──────────────────────┘
-```
 
 The next set of examples illustrates the use of the **Recurse** variant option to limit the sub-directory depth.
-```apl
-      Y←'d:\bouzouki\*.*'
-      ⍴⊃0(⎕NINFO⍠('Wildcard' 1)('Recurse' 0))Y
-355
-      ⍴⊃0(⎕NINFO⍠('Wildcard' 1)('Recurse' (1 0)))Y
-355
-      ⍴⊃0(⎕NINFO⍠('Wildcard' 1)('Recurse' (1 1)))Y
-1333
-      ⍴⊃0(⎕NINFO⍠('Wildcard' 1)('Recurse' (1 3)))Y
-4223
-```
 
 The following expression will return all Microsoft Word documents (`.docx` and `.doc`) in the current directory, searching recursively through any sub-directories:
-```apl
-     (⎕NINFO⍠('Recurse' 1)('Wildcard' 1))'*.docx' '*.doc'
-```
 
 The following expression "touches" files, that is, it sets their last modification time to the current UTC time:
-
-```apl
-      (⊂13(1 ⎕DT'Z'))(⎕NINFO⍠1)'*.txt'
-┌───────────────────────┐
-│45719.53226 45719.53226│
-└───────────────────────┘
-```
 
 !!! note
     Of the file timestamps which are reported by the operating system, only the last modification time should be considered reliable and portable. Neither the access time or creation time are well supported across all platforms. Furthermore, they may not accurately reflect the actual time that the operation occurred.

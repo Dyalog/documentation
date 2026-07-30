@@ -31,7 +31,6 @@ See also [`⎕VGET`](vget-monadic.md).
 Name value pairs:
 
 ```apl
-      ⎕VSET ('name1' 123) ('name2' (1 2 'hello'))
       name1
 123
       name2
@@ -45,70 +44,16 @@ Name value pairs:
 
 Name matrix and value vector:
 
-```apl
-      names←↑'name1' 'name2' 'name3'
-      names
-name1
-name2
-name3
-      values←1 2 3
-      ⎕VSET names values
-      name1 name2 name3
-1 2 3
-```
-
 Single name-value pair:
-
-```apl
-      ⎕VSET ⊂'name1' (10 20 30)
-      ⎕VSET ,⊂'name2' (40 50 60)
-      name1
-10 20 30
-      name2
-40 50 60
-```
 
 Multiple names, with a single value:
 
-```apl
-      names←↑'name1' 'name2' 'name3'
-      value←'APL'
-
-      ⎕VSET names (⊂value)
-      name1 name2 name3
- APL  APL  APL
-```
 ## Variant Option: Trigger
 
 The `Trigger` variant option specifies whether any [triggers](../../../programming-reference-guide/triggers/triggers) should be run for the modified variables in the target namespace that have triggers attached.
 The value must be a Boolean scalar. The default is `1`, meaning that triggers are run.
 
 <h4 class="example">Example</h4>
-```apl
-      ⎕VR 'trigger'
-     ∇trigger arg
-[1]   :Implements Trigger name1,name3
-[2]   ⎕←'Running trigger for: ',arg.Name
-     ∇
-
-      ⍝ name1 has a trigger, name2 does not
-      name1←1
-Running trigger for: name1
-      name2←2
-
-      ⍝ With the trigger option disabled, triggers are not run
-      ⎕VSET⍠'Trigger' 0⊢('name1' 1) ('name2' 2) ('name3' 3)
-
-      ⍝ With the trigger option enabled, triggers are run
-      ⎕VSET⍠'Trigger' 1⊢('name1' 1) ('name2' 2) ('name3' 3)
-Running trigger for: name1
-Running trigger for: name3
-
-      ⍝ Without the trigger option, triggers are run (the default)
-      ⎕VSET ('name1' 1) ('name2' 2) ('name3' 3)
-Running trigger for: name1
-Running trigger for: name3
-```
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

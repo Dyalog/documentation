@@ -48,31 +48,7 @@ The result `R` is a vector of the values from the corresponding names or fallbac
 
 Multiple names without fallback:
 
-```apl
-      (name1 name2 name3 longer_name)←(1 2 3) () 'APL' 42
-      names←↑'name1' 'name2' 'name3' 'longer_name'
-      names
-name1
-name2
-name3
-longer_name
-      ⎕VGET names
- 1 2 3  #.[Namespace]  APL  42
-```
-
 Multiple names with a different fallback for each name:
-
-```apl
-      name2←100
-      names←↑'name1' 'name2' 'name3'
-      names
-name1
-name2
-name3
-      defaults←1 2 3
-      ⎕VGET names defaults
-1 100 3
-```
 
 Multiple names with the same fallback for all of them:
 
@@ -121,21 +97,8 @@ ABC
 ```
 
 Single name enclosed:
-```apl
-      name1←'APL'
-      ⎕VGET ⊂'name1'
- APL
-      ≢⍴⎕VGET ⊂'name1'
-0
-```
 
 Multiple names without fallback:
-```apl
-      (name1 name2 name3)←(1 2 3) () 'APL'
-
-      ⎕VGET 'name1' 'name2' 'name3'
- 1 2 3  #.[Namespace]  APL
-```
 
 Single name with fallback:
 ```apl
@@ -145,21 +108,8 @@ default
 ```
 
 Multiple names with fallback for some:
-```apl
-      (name1 name2)←'APL' 123
-      ⎕VGET ('name1' 1) 'name2' ('name3' 3)
- APL  123 3
-      ⎕EX'name1'
-      ⎕VGET ('name1' 1) 'name2' ('name3' 3)
-1 123 3
-```
 
 Multiple names with a different fallback for each of them:
-```apl
-      name2←100
-      ⎕VGET ('name1' 1) ('name2' 2) ('name3' 3)
-1 100 3
-```
 
 See [Case 1: Name Matrix](#case-1-name-matrix) for an example of multiple names with the same fallback value for all of them.
 
@@ -211,18 +161,6 @@ DOMAIN ERROR: Divide by zero
 ```
 
 Name matrix and value vector:
-
-```apl
-      ]Boxing on
-Was OFF
-      (name1 name2 name3)←'APL' (1 2 3) ⎕SE
-      ⎕VGET 2 9
-┌─────┬─────────────────┐
-│name1│┌───┬─────┬─────┐│
-│name2││APL│1 2 3│ ⎕SE ││
-│name3│└───┴─────┴─────┘│
-└─────┴─────────────────┘
-```
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

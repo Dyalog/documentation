@@ -34,17 +34,7 @@ The result `R` is a vector of 2-element vectors identifying the range and descri
       
       ⎕TGET trg+.1 .2 .3 .9
  
-      1 ⎕TALLOC ¯1 ⍝ Try to de-allocate the range     
-DOMAIN ERROR
-      1 ⎕TALLOC ¯1 
-        ∧
-      1 ⎕TALLOC 2  ⍝ Failed due to ¯1.9 token
-¯1.9
       ⎕TGET ¯1.9   ⍝ Remove the inexhaustible ¯1.9 token
-      1 ⎕TALLOC 2
-
-      1 ⎕TALLOC ¯1 ⍝ De-allocation now works   
-
 ```
 
 <!-- Hidden search keywords -->

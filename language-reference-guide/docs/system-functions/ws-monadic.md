@@ -16,31 +16,8 @@ If `Y` refers to a non-existent property, or to a property that is not defined f
 The shy result `R` contains the previous values of the properties specified in `Y`.
 
 GUI objects are named **relative** to the current namespace.  The following examples are equivalent:
-```apl
-      'F1.B1' ⎕WS 'Caption' '&Ok'
-      'B1' F1.⎕WS 'Caption' '&Ok'
-      '' F1.B1.⎕WS 'Caption' '&Ok'
-      F1.B1.⎕WS 'Caption' '&Ok'
-```
 
 <h2 class="example">Examples</h2>
-```apl
-      'F1' ⎕WC 'Form'  ⍝ A default Form
- 
-      'F1' ⎕WS 'Active' 0
- 
-      'F1' ⎕WS 'Caption' 'My Application'
- 
-      'F1' ⎕WS 'Posn' 0 0
- 
-      'F1' ⎕WS ('Active' 1)('Event' 'Configure' 'FOO')
- 
-      'F1' ⎕WS 'Junk' 10
-DOMAIN ERROR
- 
-      'F1' ⎕WS 'MaxButton' 0
-DOMAIN ERROR
-```
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

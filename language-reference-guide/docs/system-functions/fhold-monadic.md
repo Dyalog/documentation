@@ -49,10 +49,6 @@ If `Y` is a matrix, the shy result `R` is `Y[1;]`. Otherwise, the  shy result `R
  
       ⎕FHOLD 1 'XTVAR'
 
-      3000 ⎕FHOLD 1
-TIMEOUT
-      3000 ⎕FHOLD 1
-           ∧
 ```
 
 <!-- Hidden search keywords -->

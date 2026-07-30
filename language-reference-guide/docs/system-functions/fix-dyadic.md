@@ -31,25 +31,10 @@ In this case,  the shy result `R` is a vector of character vectors, containing t
 ## Example 1
 
 In the first example, the Class specified by `Y` is *named* (`MyClass`) but the result of `⎕FIX` is discarded. The end-result is that `MyClass` is established in the workspace as a Class.
-```apl
-      ⎕←⎕FIX ':Class MyClass' ':EndClass'
-#.MyClass
-```
 
 ## Example 2
 
 In the second example, the Class specified by `Y` is *named* (`MyClass`) and the result of `⎕FIX` is assigned to a different name (`MYREF`). The end-result is that a Class named `MyClass` is established in the workspace, and `MYREF` is a reference to it.
-```apl
-      MYREF←⎕FIX ':Class MyClass' ':EndClass'
-      )CLASSES
-MyClass MYREF
-      ⎕NC'MyClass' 'MYREF'
-9.4 9.4
-      MYREF
-#.MyClass
-      MYREF≡MyClass
-1
-```
 
 ## Example 3
 
@@ -65,17 +50,6 @@ MYREF
 ## Example 4
 
 The fourth example illustrates the use of un-named Classes.
-```apl
-      src←':Class' '∇Make n'
-      src,←'Access Public' 'Implements Constructor'
-      src,←'⎕DF n' '∇' ':EndClass'
-      MYREF←⎕FIX src
-      )CLASSES
-MYREF
-      MYINST←⎕NEW MYREF'Pete'
-      MYINST
-Pete
-```
 
 ## Example 5
 
@@ -96,13 +70,6 @@ In the final example, the left argument of `2` allows a script containing multip
 ## Restrictions
 
 `⎕FIX` is unable to fix a namespace from `Y` when `Y` specifies a multi-line dfn which is preceded by a `⋄` (diamond separator).
-```apl
-      ⎕FIX':Namespace iaK' 'a←1 ⋄ adfn←{' '⍵' ' }' ':EndNamespace'
-DOMAIN ERROR: There were errors processing the script
-      ⎕FIX':Namespace iaK' 'a←1 ⋄ adfn←{' '⍵' ' }' ':EndNamespace'
-      ∧
-
-```
 
 !!! Legacy "Legacy"
     Before Dyalog v20.0, it was possible to define dfns with unmatched parentheses and brackets. These are now rejected. TradFns will continue to fix as before, but subtle differences in how the code behaves might not be backwards-compatible and could have unexpected results.
@@ -185,18 +152,12 @@ While the scripted tree for `Jill` has a parent Class:
 ```
 
 Using the `Pete` Namespace, after executing the expression:
-```apl
-      2(⎕FIX⍠'InjectReferences' 'All')⎕SRC Pete
-```
 
 - Code in `Pete` may refer to `Aisha`    , `Andy`     , `George`   , `Katherine`, and `Woody`
 - Code in `Andy` may refer to `Aisha`    and `Katherine`
 - ... and so forth.
 
 But after executing:
-```apl
-      2(⎕FIX⍠'InjectReferences' 'InClasses')⎕SRC Pete
-```
 
 - Code in `Pete` may refer only to `Andy` and  `Katherine`
 - Code in `Andy` may refer only to `Aisha`

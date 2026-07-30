@@ -31,7 +31,6 @@ FILE FULL
       (10 1000⍴1.1)⎕FAPPEND 1
      ∧
  
-      ⎕FRESIZE 1      ⍝ Force file compaction.
 ```
 
 !!! Info "Information"

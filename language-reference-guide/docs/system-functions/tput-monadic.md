@@ -14,10 +14,8 @@ Shy result `R` is a vector of thread numbers (if any) unblocked by the `⎕TPUT`
     ⎕TPUT 2 3 2       ⍝ put a 2-token, a 3-token and
                         another 2-token into the pool.
  
-    88 ⎕TPUT 2        ⍝ put another 2-token into the pool
                         this token has the value 88.
  
-    'Hello'⎕TPUT ¯1.9 ⍝ put a ¯1.9-token into the pool
                         with the value 'Hello'.
 ```
 

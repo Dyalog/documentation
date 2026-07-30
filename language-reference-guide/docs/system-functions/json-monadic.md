@@ -12,15 +12,7 @@ This function imports and exports data in [JavaScript Object Notation](https://w
 <h3 class="example">Examples</h3>
 
 Importing a JSON document to APL:
-```apl
-      0 ⎕JSON'[1,-2,3]'
-1 ¯2 3
-```
 Exporting APL data to JSON:
-```apl
-      1 ⎕JSON 1 ¯2 3
-[1,-2,3]
-```
 
 !!! Hint "Hints and Recommendations"
 Whether `⎕JSON` imports or exports depends on `Y`: if `Y` is a character array it is imported, that is, converted from JSON; otherwise it is exported, that is, converted to JSON.
@@ -52,11 +44,6 @@ The [JSON standard](https://www.rfc-editor.org/info/rfc8259/#section-4) states t
 
 <h3 class="example">Example</h3>
 
-```apl
-      0 ⎕JSON'[1,-2,3]'
-1 ¯2 3
-```
-
 For details and more examples, see [Import to Data](#import-to-data) and [Import to Matrix](#import-to-matrix).
 
 ## JSON Export
@@ -73,11 +60,6 @@ Some JSON values lack a direct APL equivalent (<code class="language-nonAPL">tru
 
 <h3 class="example">Example</h3>
 
-```apl
-      1 ⎕JSON 1 ¯2 3
-[1,-2,3]
-```
-
 For details and more examples, see [Export from Data](#export-from-data) and [Export from Matrix](#export-from-matrix).
 
 ## Name Mangling
@@ -92,17 +74,8 @@ In this example, the JSON document describes an object containing two numeric it
 ```
 
 When the object is imported (as a namespace), `⎕JSON` renames `2a` to a valid APL name:
-```apl
-      (0 ⎕JSON'{"a": 1, "2a": 2}').⎕NL 2
-a  
-⍙2a
-```
 
 When the namespace is exported, `⎕JSON` reverses the mangling:
-```apl
-      1 ⎕JSON (a:1 ⋄ ⍙2a:2)
-{"a":1,"2a":2}
-```
 
 <h3 class="example">Example</h3>
 
@@ -111,10 +84,6 @@ This object has a member name with a character (`ý`; `⎕UCS 253`) that is not 
 {"sýn":"vision"}
 ```
 The `ý` is replaced with `⍙253⍙` ("253" is the Unicode decimal character code for this character):
-```apl
-      (0 ⎕JSON'{"sýn":"vision"}').⎕NL 2
-⍙s⍙253⍙n
-```
 
 ### Name Mangling Algorithm
 
@@ -194,11 +163,6 @@ The following JSON document is stored as the character vector `json`:
 }
 ```
 The JSON document is converted to APL data as a namespace:
-```apl
-      j←0 ⎕JSON json
-      j
-#.[JSON object]
-```
 Listing the sub-namespace and its members:
 ```apl
       j.⎕NL 9
@@ -231,12 +195,6 @@ e
 ```
 The two ways to represent JSON <code class="language-nonAPL">null</code>s:
 ```apl
-      0 ⎕JSON'[null,2,3]'
-┌──────┬─┬─┐
-│┌────┐│2│3│
-││null││ │ │
-│└────┘│ │ │
-└──────┴─┴─┘
       0(⎕JSON⍠'Null'⎕NULL)'[null,2,3]'
  [Null]  2 3
 ```
@@ -343,31 +301,6 @@ If **Format** is `'D'` (which stands for "Data"), the APL value `Y` is converted
 - Enclosed vectors whose leading element is a wrapper code are interpreted as [wrappers](#wrappers) (mechanisms for special handling).
 - If a namespace member name appears to be mangled (has a form that would have been produced by [name mangling](#name-mangling)), it is demangled.
 
-<h5 class="example">Example</h5>
-
-```apl
-      ns←(
-          a:(
-              b:(
-                  'charvec 1'
-                  'charvec 2'
-              )
-              c:⊂'true'
-              d:(
-                  e:⊂'false'
-                  ⍙f⍙9082⍙:(
-                      'charvec 3'
-                      123
-                      1000.2
-                      ⊂'null'
-                  )
-              )
-          )
-      )
-      1 ⎕JSON ns
-{"a":{"b":["charvec 1","charvec 2"],"c":true,"d":{"e":false,"f⍺":["charvec 3",123,1000.2,null]}}}
-```
-
 #### Export from Matrix
 
 If **Format** is `'M'` (which stands for "Matrix"), the APL array `Y` is converted to a corresponding JSON document `R` and `Y` must be a matrix whose columns are as follows:
@@ -444,8 +377,6 @@ On export, the result is shortened by usage of identifiers without quotes, singl
 <h4 class="example">Examples</h4>
 
 ```apl
-      1 ⎕JSON(a:'é"')
-{"a":"é\""}
       1(⎕JSON⍠'Dialect' 'JSON5')(a:'é"')
 {a:'é"'}
 
@@ -479,19 +410,9 @@ The **Null** variant option selects how JSON <code class="language-nonAPL">null<
 <h4 class="example">Examples</h4>
 
 ```apl
-      0 ⎕JSON'[null,null]'
-┌──────┬──────┐
-│┌────┐│┌────┐│
-││null│││null││
-│└────┘│└────┘│
-└──────┴──────┘
       0(⎕JSON⍠'Null'⎕NULL)'[null,null]'
  [Null]  [Null] 
 
-      1 ⎕JSON ⎕NULL ⎕NULL
-DOMAIN ERROR: JSON export: item "[1]" of the right argument (⎕IO=1) cannot be converted
-      1 ⎕JSON ⎕NULL ⎕NULL
-        ∧
       1(⎕JSON⍠'Null'⎕NULL)⎕NULL ⎕NULL
 [null,null]
 ```
@@ -531,12 +452,6 @@ The following examples use this namespace as APL data:
       )
 ```
 Conversion to compact JSON:
-```apl
-      ⍴json←1 ⎕JSON ns
-97
-      json
-{"a":{"b":["charvec 1","charvec 2"],"c":true,"d":{"e":false,"f⍺":["charvec 3",123,1000.2,null]}}}
-```
 Non-compact JSON takes more than twice as much space, but is more readable, and easier for humans to edit:
 ```apl
       ⍴json←1(⎕JSON⍠'Compact' 0)ns
@@ -572,8 +487,6 @@ The **Charset** variant option can be used to either allow Unicode in the genera
       ns←(dé:'DÉ')
       ns.dé
 DÉ
-      1 ⎕JSON ns
-{"dé":"DÉ"}
       1(⎕JSON⍠'Charset' 'ASCII')ns
 {"d\u00E9":"D\u00C9"}
 ```
@@ -599,10 +512,6 @@ If **HighRank** is `'Error'` (the default), `⎕JSON` will signal a `DOMAIN ERRO
 │     │49 64│
 └─────┴─────┘
 
-      1 ⎕JSON d
-DOMAIN ERROR: JSON export: the right argument cannot be converted (⎕IO=1)
-      1 ⎕JSON d
-      ∧
       1(⎕JSON⍠'HighRank' 'Split')d
 [[[[1,2],"AB"],["ABC","DEF"]],[[[1,2,3],[4,5,6]],[[[1,4],[9,16]],[[25,36],[49,64]]]]]
 ```
@@ -663,51 +572,19 @@ If such a representation is already used in an APL application, then no special 
 
 Special JSON values such as <code class="language-nonAPL">null</code>, <code class="language-nonAPL">true</code> and <code class="language-nonAPL">false</code> do not directly correspond to specific APL values and, therefore, require special handling. This is provided by wrapper code `1`:
 
-```apl
-      1 ⎕JSON 42 'text'(⊂1 'null')(⊂1 'true')(⊂1 'false')
-[42,"text",null,true,false]
-```
 As `1` is the default code number, it can be omitted:
-```apl
-      1 ⎕JSON 42 'text'(⊂'null')(⊂'true')(⊂'false')
-[42,"text",null,true,false]
-```
 
 This feature can be used to inject any raw text, although unless it is valid JSON it cannot then be re-imported.
 
 !!! Warning "Warning"
     It is common practice to initialise a list using a scalar rather than a one-element vector. However, this will be interpreted as raw text if no subsequent elements are added:
-    ```apl
-          list←⊂'foo'
-          1 ⎕JSON list
-    foo
-          1 ⎕JSON list,'bar' 'baz'
-    ["foo","bar","baz"]
-    ```
-
+    
     It is, therefore, important to convert to a vector before initialising:
 
-    ```apl
-          list←,⊂'foo'
-          1 ⎕JSON list
-    ["foo"]
-    ```
-
+    
 <h4 class="example">Example</h4>
 
 This example illustrates how JavaScript objects can be exported; the object contains a JavaScript function that is specified by the contents of an enclosed character vector:
-
-```apl
-      slider←(
-          range:⊂'true'
-          min:0
-          max:500
-          values:75 300
-          slide:⊂'function(event,ui){$("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);}'
-      )
-      1 ⎕JSON slider
-{"max":500,"min":0,"range":true,"slide":function(event,ui){$("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);},"values":[75,300]}
-```
 
 ### Dataset Wrappers
 
@@ -767,12 +644,6 @@ The data arrays are defined as follows:
 All wrapper invocations produce the same array of objects (except for trailing spaces when using a character matrix to represent a text field):
 
 ```apl
-      1 ⎕JSON⊂2 singleMatrix
-[{"item":"Knife","price":3,"qty":23},{"item":"Fork","price":4,"qty":45},{"item":"Spoon","price":5,"qty":67}]
-      1 ⎕JSON⊂3(valueMatrix header)
-[{"item":"Knife","price":3,"qty":23},{"item":"Fork","price":4,"qty":45},{"item":"Spoon","price":5,"qty":67}]
-      1 ⎕JSON⊂4(invertedTable header)
-[{"item":"Knife","price":3,"qty":23},{"item":"Fork","price":4,"qty":45},{"item":"Spoon","price":5,"qty":67}]
       1(⎕JSON⍠'HighRank' 'Split')⊂4(invertedTable2 header)
 [{"item":"Knife","price":3,"qty":23},{"item":"Fork ","price":4,"qty":45},{"item":"Spoon","price":5,"qty":67}]
 ```
@@ -784,8 +655,6 @@ Without their wrappers, each APL structure *can* be represented in JSON, though 
 [["item","price","qty"],["Knife",3,23],["Fork",4,45],["Spoon",5,67]]
       1(⎕JSON⍠'HighRank' 'Split')valueMatrix header
 [[["Knife",3,23],["Fork",4,45],["Spoon",5,67]],["item","price","qty"]]
-      1 ⎕JSON invertedTable header
-[[["Knife","Fork","Spoon"],[3,4,5],[23,45,67]],["item","price","qty"]]
       1(⎕JSON⍠'HighRank' 'Split')invertedTable2 header
 [[["Knife","Fork ","Spoon"],[3,4,5],[23,45,67]],["item","price","qty"]]
 ```
@@ -806,24 +675,9 @@ Table: Wrappers forms for selecting dataset subsets { #subset-table }
 
 To select the second record (Fork):
 
-```apl
-      1 ⎕JSON⊂4(invertedTable header)2
-[{"item":"Fork","price":4,"qty":45}]
-```
-
 To select the first and third fields (`item` and `qty`):
 
-```apl
-      1 ⎕JSON⊂4(invertedTable header)(⊂⍬)(1 3)
-[{"item":"Knife","qty":23},{"item":"Fork","qty":45},{"item":"Spoon","qty":67}]
-```
-
 To select the second record (Fork) and the first and third fields (`item` and `qty`):
-
-```apl
-      1 ⎕JSON⊂4(invertedTable header)2(1 3)
-[{"item":"Fork","qty":45}]
-```
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

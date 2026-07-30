@@ -35,62 +35,12 @@ If `Y` refers to a non-existent property, or to a property that is not defined f
 A "top-level" object created by `⎕WC` whose name is localised in a function/operator header, is deleted on exit from the function/operator.  All objects, including sub-objects, can be deleted using `⎕EX`.
 
 GUI objects are named **relative** to the current namespace, so the following examples are equivalent:
-```apl
-      'F1.B1' ⎕WC 'Button'
-```
 
 is equivalent to :
-```apl
-      )CS F1
-#.F1
-      'B1' ⎕WC 'Button'
-      )CS
-#
-```
 
 is equivalent to :
-```apl
-      'B1' F1.⎕WC 'Button'
-```
 
 <h2 class="example">Examples</h2>
-```apl
-⍝ Create a default Form called F1
- 
-      'F1' ⎕WC 'Form'
- 
-⍝ Create a Form with specified properties (by position)
-⍝   Caption = "My Application"  (Title)
-⍝   Posn    = 10 30  (10% down, 30% across)
-⍝   Size    = 80 60  (80% high, 60% wide)
- 
-      'F1' ⎕WC 'Form' 'My Application' (10 30)(80 60)
- 
-
-```
-```apl
-⍝ Create a Form with specified properties (by keyword)
-⍝   Caption = "My Application"  (Title)
-⍝   Posn    = 10 30  (10% down, 30% across)
-⍝   Size    = 80 60  (80% high, 60% wide)
- 
-      PROPS←⊂'Type' 'Form'
-      PROPS,←⊂'Caption' 'My Application'
-      PROPS,←⊂'Posn' 10 30
-      PROPS,←⊂'Size' 80 60
-      'F1' ⎕WC PROPS
- 
-⍝ Create a default Button (a pushbutton) in the Form F1
- 
-      'F1.BTN' ⎕WC 'Button'
- 
-⍝ Create a pushbutton labelled "Ok"
-⍝ 10% down and 10% across from the start of the FORM
-⍝ with callback function FOO associated with EVENT 30
-⍝ (this event occurs when the user presses the button)
- 
-      'F1.BTN'⎕WC'Button' '&Ok' (10 10)('Event' 30 'FOO')
-```
 
 Monadic `⎕WC` is used to *attach* a GUI component to an existing object.  The existing object must be a pure namespace or a GUI object.  The operation may be performed by changing space to the object or by running `⎕WC` *inside* the object using the *dot* syntax.  For example, the following statements are equivalent.
 ```apl
@@ -100,7 +50,6 @@ Monadic `⎕WC` is used to *attach* a GUI component to an existing object.  The
  
       )CS
 #
-      F.⎕WC'Form' ⍝ Attach a Form to namespace F
 ```
 
 <!-- Hidden search keywords -->

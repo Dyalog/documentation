@@ -24,8 +24,6 @@ Note that `⎕WN` reports **only** those child objects visible from the current 
 GUI objects are named **relative** to the current namespace.  The following examples are equivalent:
 ```apl
       ⎕WN 'F1.B1'
-      F1.⎕WN 'B1'
-      F1.B1.⎕WN ''    
 ```
 
 <h2 class="example">Example</h2>
@@ -39,8 +37,6 @@ GUI objects are named **relative** to the current namespace.  The following exa
  [Form].b1
       ⎕WN f
  #.[Form].[Label]  #.[Form].b1  #.[Form].[Button]
-      'Button' ⎕WN f
- #.[Form].b1  #.[Form].[Button]
 ```
 
 <!-- Hidden search keywords -->

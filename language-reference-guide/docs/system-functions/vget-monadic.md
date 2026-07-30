@@ -68,28 +68,6 @@ name3
 
 Multiple names with the same fallback for all of them:
 
-```apl
-      persons←(
-        (name: 'Jack' ⋄ age: 36)
-        (name: 'Peter' ⋄ email: 'peter@example.com')
-        (phone: 12345678 ⋄ email: 'susan@example.com')
-      )
-      persons
- #.[Namespace]  #.[Namespace]  #.[Namespace]
-      names←↑'name' 'age' 'email' 'phone'
-      names
-name
-age
-email
-phone
-
-      ⍝ Lookup information about each person, with a default for missing data
-      ↑persons ⎕VGET names (⊂'<no data>')
- Jack              36  <no data>          <no data>
- Peter      <no data>  peter@example.com  <no data>
- <no data>  <no data>  susan@example.com   12345678
-```
-
 ## Case 2: Vector of Names
 
 Names are specified as character vectors or scalars. `Y` must be one of the following:
@@ -102,15 +80,6 @@ Names are specified as character vectors or scalars. `Y` must be one of the foll
 <h3 class="example">Examples</h3>
 
 Single name:
-```apl
-      (ns1 ns2)←()()
-      (ns1 ns2).name1←'ABC' 'DEF'
-
-      ns1 ⎕VGET 'name1'
-ABC
-      ns1 'ns2' ⎕VGET 'name1'
- ABC  DEF
-```
 
 Single name enclosed:
 ```apl
@@ -130,11 +99,6 @@ Multiple names without fallback:
 ```
 
 Single name with fallback:
-```apl
-      ns←()
-      ns ⎕VGET ⊂'name1' 'default'
-default
-```
 
 Multiple names with fallback for some:
 ```apl
@@ -165,42 +129,6 @@ If any of the numbers in `Y` are negative, the result `R` is a vector of name-va
 
 <h3 class="example">Examples</h3>
 Name value pairs:
-
-```apl
-      ns←()
-      ns.ns1←⎕SE
-      ns.ns2←#
-      ns.a1←1 2 3
-      ns.a2←'APL'
-      ns ⎕VGET ¯2
-  a1  1 2 3    a2  APL
-      ns ⎕VGET ¯2 ¯9
-  a1  1 2 3    a2  APL    ns1  ⎕SE    ns2  #
-      ↑⎕SE ⎕VGET ¯8
- onClose            0
- onCreate            Dyalog.Callbacks.SECreate
- onFontOK           0
- onFontCancel       0
- onWorkspaceLoaded   Dyalog.Callbacks.WSLoaded
- onSessionPrint     0
- onSessionTrace     0
-
-      ÷0
-DOMAIN ERROR: Divide by zero
-      ÷0
-      ∧
-      ↑⎕DMX ⎕VGET ¯2
- Category                                             General
- DM                          DOMAIN ERROR        ÷0        ∧
- EM                                              DOMAIN ERROR
- EN                                                        11
- ENX                                                        1
- HelpURL           https://help.dyalog.com/dmx/20.0/General/1
- InternalLocation                              scalm.cpp  356
- Message                                       Divide by zero
- OSError                                               0 0
- Vendor                                                Dyalog
-```
 
 Name matrix and value vector:
 

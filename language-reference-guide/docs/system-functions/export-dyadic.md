@@ -25,10 +25,6 @@ When the path mechanism locates a referenced function (or operator) in the list 
 |1|This instance of the function is executed in the namespace in which it was found and the search terminated.  The effect is exactly as if the function had been referenced by its full path name.|
 
 Warning: The left domain of `⎕EXPORT` might be extended in future to include extra types 2, 3,... (for example, to change the behaviour of the function).  This means that, while `⎕EXPORT` returns a Boolean result in the first version, this might not be the case in the future.  If you need a Boolean result, use `0≠` or an equivalent.
-```apl
-   (0≠⎕EXPORT ⎕NL 3 4)⌿⎕NL 3 4  ⍝ list of exported
-                                ⍝ functions and ops.
-```
 
 `⎕EXPORT` does not support derived functions and will not be extended to support them; nor will it be extended to support other types of functions that may be developed in the future. `⎕EXPORT` may therefore be considered an archaic feature.
 

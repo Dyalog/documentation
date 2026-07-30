@@ -43,16 +43,6 @@ If `Y` is a matrix, the shy result `R` is `Y[1;]`. Otherwise, the  shy result `R
 
 <h1 class="example">Examples</h1>
 ```apl
-      ⎕FHOLD 1
- 
-      ⎕FHOLD ⍬
- 
-      ⎕FHOLD ⊂'XTVAR'
- 
-      ⎕FHOLD 1 2,[0.5]0 16385
- 
-      ⎕FHOLD 1 'XTVAR'
-
       3000 ⎕FHOLD 1
 TIMEOUT
       3000 ⎕FHOLD 1

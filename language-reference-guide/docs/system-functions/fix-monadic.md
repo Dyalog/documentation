@@ -48,13 +48,6 @@ MyClass MYREF
 ## Example 3
 
 In the third example, the left-argument of `0` causes the named Class `MyClass` to be visible only via the reference to it (`MYREF`). It is there, but hidden.
-```apl
-      MYREF←0 ⎕FIX ':Class MyClass' ':EndClass'
-      )CLASSES
-MYREF
-      MYREF
-#.MyClass
-```
 
 ## Example 4
 
@@ -74,18 +67,6 @@ Pete
 ## Example 5
 
 In the final example, the left argument of `2` allows a script containing multiple objects to be fixed:
-
-```apl
-
-      src←':Namespace andys' '∇foo' '2' '∇'
-      src,←':EndNamespace' 'dfn←{⍺ ⍵}' '∇r←tfn'
-      src,←'r←33' '∇' ':Class c1' '∇goo' '1'
-      src,←'∇' ':EndClass'
-      ≢⎕←2⎕FIX src
- c1  tfn  dfn  andys 
-4
-
-```
 
 ## Restrictions
 

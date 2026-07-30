@@ -45,31 +45,13 @@ If a directory cannot be created (for example, if a directory with that name alr
 
       ⎕NEXISTS '/Users/Pete/Documents/temp'
 0
-      ⎕←⎕MKDIR '/Users/Pete/Documents/temp'
-1
-      ⎕←⎕MKDIR '/Users/Pete/Documents/temp'
-FILE NAME ERROR: Directory exists
-      ⎕←⎕MKDIR'/Users/Pete/Documents/temp'
      ∧
 
-      ⎕←⎕MKDIR'/Users/Pete/Documents/temp/t1/t2'
-FILE NAME ERROR: Unable to create directory ("The system cannot find the path specified.")
-      ⎕←⎕MKDIR'/Users/Pete/Documents/temp/t1/t2'
-     ∧
 
       ⎕←2 ⎕MKDIR'/Users/Pete/Documents/temp/t1/t2'
 1
 
-      ⎕←⎕MKDIR'/Users/Pete/Documents/temp/t1/t2'
-FILE NAME ERROR: /Users/Pete/Documents/temp/t1/t2: Already exists
-      ⎕←⎕MKDIR'/Users/Pete/Documents/temp/t1/t2'
-        ∧
 
-      ⎕←(⎕MKDIR⍠'Unique'1)'/Users/Pete/Documents/temp/t1/t2'
-/Users/Pete/Documents/temp/t1/t2djM0X8
-
-      ⊢⎕MKDIR'temp1' 'temp2'
-1 1
 ```
 
 !!! note

@@ -69,13 +69,6 @@ The result `R` is the full name (starting with `#.` or `⎕SE.`) of the namespac
 ```
 
 ```apl
-      NONAME←⎕NS ''           ⍝ Create unnamed namespace
-      NONAME
-#.[Namespace]
-```
-
-```apl
-      DATA←⎕NS¨3⍴⊂''         ⍝ Create 3-element vector of
                              ⍝ distinct unnamed nspaces
       DATA
  #.[Namespace]  #.[Namespace]  #.[Namespace]
@@ -100,12 +93,10 @@ If `Y` does not contain a reference to, or a `⎕OR` of, a *GUI* object, the res
 <h4 class="example">Examples</h4>
 
 ```apl
-      original←⎕NS⍬
       original.(A B C)←1 2 3
       'new' ⎕NS ⎕OR'original'  ⍝ cloning a namespace from ⎕OR
       new.A
 1
-      cloned←⎕NS original  ⍝ cloning a namespace from reference
       cloned.D←4
 
       original.⎕NL ¯2

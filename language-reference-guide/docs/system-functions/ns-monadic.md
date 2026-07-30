@@ -29,28 +29,6 @@ The result `R` is a namespace reference to an unnamed namespace.
 <h4 class="example">Examples</h4>
 
 ```apl
-      ⎕←'X'⎕NS''                 ⍝ Create namespace X
-#.X
-      ⎕←'X'⎕NS'VEC' 'UTIL.DISP'  ⍝ Copy VEC and DISP to X
-#.X
-      )CS X                      ⍝ Change to namespace X
-#.X
-      ⎕←'Y'⎕NS'#.MAT' '##.VEC'   ⍝ Create #.X.Y and copy in
-#.X.Y
-      ⎕←'#.UTIL'⎕NS'Y.MAT'       ⍝ Copy MAT from Y to UTIL #.UTIL
-#.UTIL
-      ⎕←'#'⎕NS'Y'                ⍝ Copy namespace Y to root
-#
-```
-
-```apl
-      ⎕←''⎕NS'#.MAT'           ⍝ Copy MAT to current space
-#.X
-      ⎕←''⎕NS''                ⍝ Display current space
-#.X
-```
-
-```apl
       NONAME←⎕NS ''           ⍝ Create unnamed namespace
       NONAME
 #.[Namespace]
@@ -61,7 +39,6 @@ The result `R` is a namespace reference to an unnamed namespace.
                              ⍝ distinct unnamed nspaces
       DATA
  #.[Namespace]  #.[Namespace]  #.[Namespace]
-      'one' 'two' ⎕NS 'DATA'
       one.⎕NL ¯2
  DATA
 ```
@@ -79,7 +56,6 @@ A new namespace is created as a complete copy (clone) of the original namespace 
 ```apl
       original←⎕NS⍬
       original.(A B C)←1 2 3
-      'new' ⎕NS ⎕OR'original'  ⍝ cloning a namespace from ⎕OR
       new.A
 1
       cloned←⎕NS original  ⍝ cloning a namespace from reference
@@ -91,57 +67,12 @@ A new namespace is created as a complete copy (clone) of the original namespace 
  A  B  C  D
 ```
 
-```apl
-      defaults←(
-        name: '<no name>'
-        age: '<no age>'
-        phone: '<no phone>'
-        email: '<no email>'
-      )
-      jack←(name: 'Jack' ⋄ email: 'jack@example.com')
-      person←(age: 42 ⋄ phone: 12345678)
-      show←⎕JSON⍠'Compact' 0
-
-      show ⎕NS defaults jack  ⍝ merge defaults and jack
-{
-  "age": "<no age>",
-  "email": "jack@example.com",
-  "name": "Jack",
-  "phone": "<no phone>"
-}
-      show ⎕NS defaults person  ⍝ merge defaults and person
-{
-  "age": 42,
-  "email": "<no email>",
-  "name": "<no name>",
-  "phone": 12345678
-}
-
-```
 ### Variant Option: Trigger
 
 The `Trigger` variant option specifies whether any [triggers](../../../programming-reference-guide/triggers/triggers) should be run for the modified variables in the target namespace that have triggers attached.
 The value must be a Boolean scalar. The default is 0, meaning that triggers are not run.
 
 <h4 class="example">Example</h4>
-
-```apl
-      ⎕VR 'trigger'
-     ∇trigger arg
-[1]   :Implements Trigger X,Y
-[2]   ⎕←'Running trigger for: ',arg.Name
-     ∇
-
-      newValues←(Y: 1 ⋄ Z: 2)
-
-      ⍝ ⎕NS without running triggers
-      ⎕THIS ⎕NS newValues
-      ⎕THIS ⎕NS⍠'Trigger' 0⊢newValues
-
-      ⍝ ⎕NS running triggers
-      ⎕THIS ⎕NS⍠'Trigger' 1⊢newValues
-Running trigger for: Y
-```
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

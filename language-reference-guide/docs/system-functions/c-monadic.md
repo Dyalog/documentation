@@ -16,11 +16,6 @@ For a discussion of case folding and case conversion (mapping), see [Character P
 
       ⎕C 42 'Pete' 'Πέτρος'
 42  pete  πέτροσ 
-      1 ⎕C 42 'Pete' 'Πέτρος'
-42  PETE  ΠΈΤΡΟΣ 
-      ¯1 ⎕C 42 'Pete' 'Πέτρος'
-42  pete  πέτρος
-
       (⊂'pete'){⍺≡⎕C ⍵}¨'PETE' 'Pete' 'pEte'
 1 1 1
 
@@ -32,11 +27,6 @@ Greek has two forms of lower-case Sigma, namely "σ" and "ς" but a single upper
 ```apl
       ⎕C 'ίσως'
 ίσωσ
-      1 ⎕C 'ίσως'
-ΊΣΩΣ
-      ¯1⎕C 1 ⎕C 'ίσως'
-ίσωσ
-
 ```
 
 !!! note

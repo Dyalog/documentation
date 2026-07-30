@@ -41,8 +41,6 @@ If the left argument is 2, `⎕NQ` returns either the value 1 or a value that is
       ⎕NQ TEST.ED3 40
 
       ⍝ Throw a new page on a printer
-      1 ⎕NQ PR1 'NewPage'
-
       ⍝ Terminate ⎕DQ under program control
 
       'TEST'⎕WC 'Form' ... ('Event' 1001 1)
@@ -52,12 +50,7 @@ If the left argument is 2, `⎕NQ` returns either the value 1 or a value that is
       ⎕NQ TEST 1001  ⍝ From a callback
 
       ⍝ Call GetItemState method for a TreeView F.TV
-      +2 ⎕NQ F.TV 'GetItemState' 6
-96
-			
       ⍝ Report where APL is installed
-      +2 ⎕NQ'.' 'GetEnvironment' 'DYALOG'
-C:\Program Files\Dyalog\Dyalog APL-64 15.0 Unicode
 ```
 
 <!-- Hidden search keywords -->

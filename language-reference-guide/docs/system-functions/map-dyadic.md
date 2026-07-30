@@ -61,9 +61,6 @@ Put simple 4-byte integer array on disk ready for mapping:
 ```
 
 Then, map a read-write variable:
-```apl
-      var←⎕MAP'c:\myvar' 'w' 
-```
 
 Note that a mapped array need not be *named*. In the following example, a 'raw' file is mapped, summed and released, all in a single expression:
 ```apl

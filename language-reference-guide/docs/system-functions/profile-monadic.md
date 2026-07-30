@@ -142,10 +142,6 @@ Numbers in this example have been truncated for formatting purposes.
 #.NS1.goo  3  10000 19.60274      19.6027 10000   10000
 ```
 
-```apl
-X ⎕PROFILE 'data' ←→ ↓[⎕IO](⎕PROFILE 'data')[;X]
-```
-
 If `[;2]` is included in the result, then the value `¯1` is used instead of `⍬` to indicate a whole-function entry.
 
 ### Retrieve Data (Tree Form)
@@ -182,10 +178,6 @@ Numbers in this example have been truncated for formatting purposes.
 ```
 
 Rows with an even depth level in `[;1]` represent function summary entries; odd depth level rows are function line entries. Recursive functions generate separate rows for each level of recursion.
-
-```apl
-X ⎕PROFILE 'tree' ←→ ↓[⎕IO](⎕PROFILE 'tree')[;X]
-```
 
 ## Profile Data Entry Types
 

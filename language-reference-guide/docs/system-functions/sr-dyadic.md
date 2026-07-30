@@ -21,8 +21,6 @@ The result `R` is the `EXIT_CONTEXT`.
 
 Thus the 3 uses of `⎕SR` are:
 ```apl
-     EXIT_CONTEXT←⎕SR FIELDS
- 
      EXIT_CONTEXT←(⊂EXIT_KEYS)⎕SR FIELDS
  
      EXIT_CONTEXT←(EXIT_KEYS)(INITIAL_CONTEXT)⎕SR FIELDS

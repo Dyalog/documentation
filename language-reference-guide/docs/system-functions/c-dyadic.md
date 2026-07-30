@@ -20,15 +20,10 @@ The following cases are supported:
 <h2 class="example">Examples</h2>
 ```apl
 
-      ⎕C 42 'Pete' 'Πέτρος'
-42  pete  πέτροσ 
       1 ⎕C 42 'Pete' 'Πέτρος'
 42  PETE  ΠΈΤΡΟΣ 
       ¯1 ⎕C 42 'Pete' 'Πέτρος'
 42  pete  πέτρος
-
-      (⊂'pete'){⍺≡⎕C ⍵}¨'PETE' 'Pete' 'pEte'
-1 1 1
 
 ```
 
@@ -36,8 +31,6 @@ The following cases are supported:
 
 Greek has two forms of lower-case Sigma, namely "σ" and "ς" but a single upper-case Sigma "Σ". Each lower-case form remains unchanged when mapped to lower-case, but both fold to "σ", while "Σ" is mapped to lower-case "σ" .
 ```apl
-      ⎕C 'ίσως'
-ίσωσ
       1 ⎕C 'ίσως'
 ΊΣΩΣ
       ¯1⎕C 1 ⎕C 'ίσως'

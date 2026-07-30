@@ -37,14 +37,6 @@ Descriptions that were not defined are returned as empty character vectors.
 
 <h2 class="example">Examples</h2>
 ```apl
-       ⎕←trg←⎕TALLOC 1 'cats'
-1
-       ⎕TALLOC 0
-┌────────┐
-│┌─┬────┐│
-││1│cats││
-│└─┴────┘│
-└────────┘
       ⎕TPUT trg+.1 .2 .3
       ⎕TPUT -trg+.9
       ⎕TPOOL             

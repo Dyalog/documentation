@@ -18,31 +18,8 @@ Note that key definitions can reference other function keys, such as "F1" or "F1
 The size of the buffer associated with `⎕PFKEY` is specified by the *pfkey_size* parameter.
 
 <h2 class="example">Examples</h2>
-```apl
-       (')FNS',⊂'ER')⎕PFKEY 1
-┌─┬─┬─┬─┬──┐
-│)│F│N│S│ER│
-└─┴─┴─┴─┴──┘
-       (')VARS',⊂'ER')⎕PFKEY 2
-┌─┬─┬─┬─┬─┬──┐
-│)│V│A│R│S│ER│
-└─┴─┴─┴─┴─┴──┘
-      'F1' 'F2' ⎕PFKEY 3 ⍝ Does )FNS and )VARS
-┌──┬──┐
-│F1│F2│
-└──┴──┘
-
-```
 
 The following expression defines the action for F12 to be "move the text to the right of the cursor to the left of the cursor".
-```apl
-   
-      'Rl' 'CT' 'LL' 'PT'⎕PFKEY 12
-┌──┬──┬──┬──┐
-│Rl│CT│LL│PT│
-└──┴──┴──┴──┘
-
-```
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

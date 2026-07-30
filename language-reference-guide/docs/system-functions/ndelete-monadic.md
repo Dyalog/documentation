@@ -42,8 +42,6 @@ FILE NAME ERROR: Invalid file or directory name ("The system cannot find the fil
 ```
 ```apl
 
-      ⊢1 ⎕NDELETE'/Users/Pete/Documents/temp/t1/t2'
-0
       ⊢⎕NDELETE 'temp1' 'temp2'
 1 1
       ⊢⎕MKDIR'temp1' 'temp2'
@@ -60,9 +58,6 @@ FILE NAME ERROR: Invalid file or directory name ("The system cannot find the fil
 FILE ACCESS ERROR: temp1: Unable to delete directory ("The directory is not empty.")
       ⊢⎕NDELETE'temp1'
        ∧
-      ⊢2 ⎕NDELETE 'temp1'
-1
-
 ```
 
 If the file is in use or the current user is not authorised to delete it, `⎕NDELETE` will not succeed but will instead generate a `FILE ACCESS ERROR`.

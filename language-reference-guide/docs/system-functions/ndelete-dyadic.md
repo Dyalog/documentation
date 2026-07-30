@@ -36,35 +36,16 @@ If `Y` specifies the name of a  symbolic link, `⎕NDELETE` deletes that symboli
 <h2 class="example">Examples</h2>
 ```apl
 
-      ⎕NEXISTS'/Users/Pete/Documents/temp/t1/t2'
-1
-      ⊢⎕NDELETE'/Users/Pete/Documents/temp/t1/t2'
-1
-      ⊢⎕NDELETE'/Users/Pete/Documents/temp/t1/t2'
-FILE NAME ERROR: Invalid file or directory name ("The system cannot find the file specified.")
-      ⊢⎕NDELETE'/Users/Pete/Documents/temp/t1/t2'
-     ∧
-
-```
-```apl
-
       ⊢1 ⎕NDELETE'/Users/Pete/Documents/temp/t1/t2'
 0
-      ⊢⎕NDELETE 'temp1' 'temp2'
-1 1
       ⊢⎕MKDIR'temp1' 'temp2'
 1 1
-       ⊢(⎕NDELETE⍠1)'t*'
-2
 ```
 ```apl
       ⊢⎕MKDIR'temp1'
 1
       ⊢'Hello World' ⎕NPUT 'temp1/hw.txt'
 13
-      ⊢⎕NDELETE 'temp1'
-FILE ACCESS ERROR: temp1: Unable to delete directory ("The directory is not empty.")
-      ⊢⎕NDELETE'temp1'
        ∧
       ⊢2 ⎕NDELETE 'temp1'
 1

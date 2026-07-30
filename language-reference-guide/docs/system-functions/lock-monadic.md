@@ -17,14 +17,8 @@ The function code is hidden to extent `3`. The extents are:
 - `3`: Both `1` and `2` apply. You can neither display the locked object nor suspend execution within it.
 
 Locks are additive, so that
-```apl
-      1 ⎕LOCK'FOO' ⋄ 2 ⎕LOCK'FOO'
-```
 
 is equivalent to:
-```apl
-      3 ⎕LOCK'FOO'
-```
 
 The shy result `R` is the lock state (`1`, `2`, or `3`) of `Y`.
 

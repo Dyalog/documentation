@@ -23,7 +23,6 @@ Note that `⎕WN` reports **only** those child objects visible from the current 
 
 GUI objects are named **relative** to the current namespace.  The following examples are equivalent:
 ```apl
-      ⎕WN 'F1.B1'
       F1.⎕WN 'B1'
       F1.B1.⎕WN ''    
 ```
@@ -35,10 +34,6 @@ GUI objects are named **relative** to the current namespace.  The following exa
       f.l←f.⎕NEW⊂'Label'         ⍝ A reference to a Label
       'f.b1'⎕WC'Button'          ⍝ A named Button
       f.(b2←⎕NEW ⊂'Button')      ⍝ A reference to a Button
-      ⎕WN 'f'
- [Form].b1
-      ⎕WN f
- #.[Form].[Label]  #.[Form].b1  #.[Form].[Button]
       'Button' ⎕WN f
  #.[Form].b1  #.[Form].[Button]
 ```

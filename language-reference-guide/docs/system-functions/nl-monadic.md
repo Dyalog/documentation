@@ -27,10 +27,6 @@ FIND
 FOO
 V
 
-      'AV' ⎕NL 2 3
-A
-V
-
       ⎕NL ¯9
  Animal  Bird  BirdBehaviour  Coin  Cylinder  DomesticParrot  Eeyore  FishBehaviour  Nickel  Parrot  Penguin  Polly  Robin 
       ⎕NL ¯9.3 ⍝ Instances
@@ -46,18 +42,6 @@ V
 ### Dyalog GUI Objects
 
 `⎕NL` may be used to obtain lists of the Methods, Properties and Events provided by Dyalog APL GUI Objects.
-```apl
-
-      'F' ⎕WC 'Form'
-      F.⎕NL -2 ⍝ Properties
- Accelerator AcceptFiles  Active  AlphaBlend  AutoConf  Border  BCol  Caption ...
-
-      F.⎕NL -3 ⍝ Methods
- Animate  ChooseFont  Detach  GetFocus  GetTextSize  ShowSIP  Wait
-
-      F.⎕NL -8 ⍝ Events
-Close  Create  DragDrop  Configure  ContextMenu  DropFiles  DropObjects  Expose  Help ...
-```
 
 ### .NET Classes (Types)
 
@@ -76,20 +60,9 @@ When a reference is made to an undefined name, and `⎕USING` is set, APL attemp
 ```
 
 The names of the Properties and Methods of a .NET Type may then be obtained using `⎕NL`.
-```apl
-
-      DateTime.⎕NL -2 ⍝ Properties
- MaxValue  MinValue  Now  Today  UtcNow 
-
-      DateTime.⎕NL -3 ⍝ Methods
- get_Now  get_Today  get_UtcNow  op_Addition  op_Equality  ...
-```
 
 In fact it is not necessary to make a separate reference first, because the expression `Type.⎕NL` (where `Type` is a .NET Type) is itself a reference to Type. So, (with `⎕USING` still set to `'System'`):
 ```apl
-
-      Array.⎕NL -3
- BinarySearch  Clear  Copy  CreateInstance  IndexOf  LastIndexOf  Reverse  Sort
 
       ⎕NL -9
  Array  DateTime
@@ -99,9 +72,6 @@ Another use for `⎕NL` is to examine .NET *enumerations*. For example:
 ```apl
 
       ⎕USING←'System.Windows.Forms,system.windows.forms.dll'
-
-      FormBorderStyle.⎕NL -2
-Fixed3D  FixedDialog  FixedSingle  FixedToolWindow  None  Sizable  SizableToolWindow 
 
       FormBorderStyle.FixedDialog.value__
 3
@@ -122,12 +92,6 @@ Once a reference to a COM object has been obtained, `⎕NL` may be used to obtai
 ```apl
 
       xl←⎕NEW'OLEClient'(⊂'ClassName' 'Excel.Application')
-
-      xl.⎕NL -2 ⍝ Properties
- _Default  ActiveCell  ActiveChart  ActiveDialog  ActiveMenuBar  ActivePrinter  ActiveSheet  ActiveWindow ...
-
-      xl.⎕NL -3 ⍝ Methods
- _Evaluate  _FindFile  _Run2  _Wait  _WSFunction  ActivateMicrosoftApp  AddChartAutoFormat  AddCustomList  Browse  Calculate ...
 
       ⎕NL -9
  xl

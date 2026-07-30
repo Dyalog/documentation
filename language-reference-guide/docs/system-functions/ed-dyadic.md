@@ -57,17 +57,8 @@ There is no Principal Option.
 ```
 
 In the first example, `⎕ED` will display the contents of `A` as an editable character array which the user may change. The user can double-click on *Hello* to open an edit window on an object named `Hello` (which will be a new function if `Hello` is currently undefined). Furthermore, the user can enter any arbitrary name and double-click to edit it. This may be undesirable in an application.
-```apl
-      ⎕ED A
-```
 
 In the second example, the Edit window will display the contents of `A` as a ReadOnly Character array. The user can still open a new edit by double-clicking *Hello* or *World* but nothing else.
-```apl
-      (⎕ED ⍠ 'ReadOnly' 1) 'A'
-```
 
 In the final example, the Edit window will display the contents of `A` as a ReadOnly Character array and the user cannot open a new edit window.
-```apl
-      (⎕ED ⍠('ReadOnly' 1)('EditName' 'Disallow'))'A'
-```
 

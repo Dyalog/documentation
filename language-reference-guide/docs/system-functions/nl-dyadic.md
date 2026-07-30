@@ -20,25 +20,10 @@ If an element of `Y` is an integer, the names of all of the corresponding sub-na
 <h2 class="example">Examples</h2>
 ```apl
 
-      ⎕NL 2 3
-A
-FAST
-FIND
-FOO
-V
-
       'AV' ⎕NL 2 3
 A
 V
 
-      ⎕NL ¯9
- Animal  Bird  BirdBehaviour  Coin  Cylinder  DomesticParrot  Eeyore  FishBehaviour  Nickel  Parrot  Penguin  Polly  Robin 
-      ⎕NL ¯9.3 ⍝ Instances
- Eeyore  Nickel  Polly  Robin 
-      ⎕NL ¯9.4 ⍝ Classes
- Animal  Bird  Coin  Cylinder  DomesticParrot  Parrot  Penguin
-      ⎕NL ¯9.5 ⍝ Interfaces
- BirdBehaviour  FishBehaviour
 ```
 
 `⎕NL` can also be used to explore Dyalog GUI Objects, .NET types and COM objects.
@@ -64,16 +49,6 @@ Close  Create  DragDrop  Configure  ContextMenu  DropFiles  DropObjects  Expose 
 `⎕NL` can be used to explore .NET types.
 
 When a reference is made to an undefined name, and `⎕USING` is set, APL attempts to load the Type from the appropriate .NET Assemblies. If successful, the name is entered into the symbol table with name-class 9.6.
-```apl
-
-      ⎕USING←'System'
-      DateTime
-(System.DateTime)
-      ⎕NL -9
- DateTime
-      ⎕NC,⊂'DateTime'
-9.6
-```
 
 The names of the Properties and Methods of a .NET Type may then be obtained using `⎕NL`.
 ```apl
@@ -91,8 +66,6 @@ In fact it is not necessary to make a separate reference first, because the expr
       Array.⎕NL -3
  BinarySearch  Clear  Copy  CreateInstance  IndexOf  LastIndexOf  Reverse  Sort
 
-      ⎕NL -9
- Array  DateTime
 ```
 
 Another use for `⎕NL` is to examine .NET *enumerations*. For example:
@@ -106,14 +79,6 @@ Fixed3D  FixedDialog  FixedSingle  FixedToolWindow  None  Sizable  SizableToolWi
       FormBorderStyle.FixedDialog.value__
 3
 
-      FormBorderStyle.({⍵,[1.5]⍎¨⍵,¨⊂'.value__'}⎕NL -2)
- Fixed3D            2
- FixedDialog        3
- FixedSingle        1
- FixedToolWindow    5
- None               0
- Sizable            4
- SizableToolWindow  6
 ```
 
 ### COM Objects
@@ -129,8 +94,6 @@ Once a reference to a COM object has been obtained, `⎕NL` may be used to obtai
       xl.⎕NL -3 ⍝ Methods
  _Evaluate  _FindFile  _Run2  _Wait  _WSFunction  ActivateMicrosoftApp  AddChartAutoFormat  AddCustomList  Browse  Calculate ...
 
-      ⎕NL -9
- xl
 ```
 
 <!-- Hidden search keywords -->

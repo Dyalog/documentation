@@ -31,16 +31,6 @@ The shy result `R` is the lock state (`1`, `2`, or `3`) of `Y`.
 A `DOMAIN ERROR` is reported if `Y` is ill-formed.
 
 <h2 class="example">Examples</h2>
-```apl
-      ⎕FX'r←foo' 'r←10'
-      62 ⎕ATX'foo'  
-  r←foo   r←10 
-      ≢62 ⎕ATX'foo'
-2
-      ⎕LOCK'foo'
-      ≢62 ⎕ATX'foo'
-0
-```
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

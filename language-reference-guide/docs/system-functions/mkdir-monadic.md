@@ -49,9 +49,6 @@ FILE NAME ERROR: Unable to create directory ("The system cannot find the path sp
       ⎕←⎕MKDIR'/Users/Pete/Documents/temp/t1/t2'
      ∧
 
-      ⎕←2 ⎕MKDIR'/Users/Pete/Documents/temp/t1/t2'
-1
-
       ⎕←⎕MKDIR'/Users/Pete/Documents/temp/t1/t2'
 FILE NAME ERROR: /Users/Pete/Documents/temp/t1/t2: Already exists
       ⎕←⎕MKDIR'/Users/Pete/Documents/temp/t1/t2'

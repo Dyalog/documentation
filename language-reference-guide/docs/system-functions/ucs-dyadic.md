@@ -62,8 +62,6 @@ For most characters in the [first plane of Unicode (0000-FFFF)](https://en.wikip
 
       'UTF-16' ⎕UCS 'ABCÆØÅ⍒⍋'
 65 66 67 198 216 197 9042 9035
-      ⎕←unihan←⎕UCS (2×2*16)+⍳3 ⍝ x20001-x20003
-
       'UTF-16' ⎕UCS unihan
 55360 56321 55360 56322 55360 56323
 ```

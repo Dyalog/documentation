@@ -35,9 +35,6 @@ which means that it expects two long (4-byte) integer arguments and returns a do
 ```
 
 So to associate the APL name `div` with this external function:
-```apl
-      'div' ⎕NA 'F8 math|divide I4 I4'
-```
 
 where `F8` and `I4`, specify the types of the result and arguments expected by `divide`. The association has the effect of establishing a new function: `div` in the workspace, which when called, passes its arguments to `divide` and returns the result.
 ```apl
@@ -259,10 +256,6 @@ Confusion sometimes arises over a difference in the declaration syntax between C
 ```
 
 However, from APL's point of view, these two cases are distinct and if the function is to be called with the address of (pointer to) a *scalar*, it must be declared: `'<T'`. Otherwise, to be called with the address of an *array*, it must be declared: `'<T[]'`. Note that it is perfectly acceptable in such circumstances to define more than one name association to the same DLL function specifying different argument types:
-```apl
-      'FooScalar'⎕NA'mydll|foo <T'   ⋄ FooScalar'a'
-      'FooVector'⎕NA'mydll|foo <T[]' ⋄ FooVector'abc'
-```
 
 ### Structures
 
@@ -420,9 +413,6 @@ Two common cases occur where it is necessary to pass a pointer explicitly. The f
 In both cases, the pointer argument should be coded as `P`. This causes APL to pass the pointer unchanged, *by value*, to the DLL function.
 
 In the previous example, to pass a null pointer, (or one returned from another DLL function), you must code a separate `⎕NA` definition.
-```apl
-      'fun_null'⎕NA'mydll|fun I P' ⋄ fun_null 42 0
-```
 
 Now APL passes the *value* of the second argument (in this case 0 - the null pointer), rather than its address.
 
@@ -564,10 +554,6 @@ void *MEMCPY(     // copy memory
 <h3 class="example">Example</h3>
 
 Suppose a global buffer (at address: `addr`) contains (`numb`) double floating point numbers. To copy these to an APL array, we could define the association:
-```apl
-      'doubles' ⎕NA 'dyalog32|MEMCPY >F8[] I4 U4'
-      doubles numb addr (numb×8)
-```
 
 Notice that:
 
@@ -586,10 +572,6 @@ typedef struct {
 ```
 
 Then, having previously allocated memory (`addr`) to receive the record, we can define:
-```apl
-      'prec' ⎕NA 'dyalog64|MEMCPY P <{P F4 T[20]} P'
-      prec addr(99 12345.60 'Charlie Brown')(4+4+20)
-```
 
 ### STRNCPY
 
@@ -621,22 +603,10 @@ typedef struct {     // null-terminated strings:
 ```
 
 To copy the names *from* the structure:
-```apl
-      'get'⎕NA'dyalog64|STRNCPY >0T1[] P U4'
-      get 20 addr 20
-Charlie
-      get 20 (addr+20) 20
-Brown
-```
 
 Note that (as this is a 64-bit example), `⎕FR` must be 1287 for the addition to be reliable.
 
 To copy data *from* the workspace *into* an already allocated (`new`) structure:
-```apl
-      'put'⎕NA'dyalog32|STRNCPY I4 <0T[] U4'
-      put new 'Bo' 20
-      put (new+4) 'Peep' 20
-```
 
 Notice in this example that you must ensure that names no longer than 19 characters are passed to `put`. More than 19 characters would not leave `STRNCPY` enough space to include the trailing null, which would probably cause the application to fail.
 
@@ -661,12 +631,6 @@ size_t STRLEN(       // calculate length of string
 Suppose that a database application returns a pointer (`addr`) to a null-terminated string and you do not know the upper bound on the length of the string.
 
 To copy the string into the workspace:
-```apl
-      'len'⎕NA'P dyalog32|STRLEN P'
-      'cpy'⎕NA'dyalog32|MEMCPY >T[] P P'
-      cpy l addr (l←len addr)
-Bartholemew
-```
 
 ## Examples
 
@@ -690,11 +654,6 @@ The following statements would provide access to this routine through an APL fun
 ```
 
 The following statement would achieve the same thing, but using an APL function called `BLINK`.
-```apl
-      'BLINK' ⎕NA 'U user32|GetCaretBlinkTime'
-      BLINK
-530
-```
 
 ### SetCaretBlinkTime()
 
@@ -744,10 +703,6 @@ HWND FindWindow(LPCSTR, LPCSTR);
 ```
 
 The following statement associates the APL function `FW` with the second variant of the FindWindow call, where the class name is specified as a NULL pointer.  To indicate that APL is to pass the *value* of the NULL pointer, rather than its address, we need to code this argument as `I4`.
-
-```apl
-      'FW' ⎕NA 'P user32|FindWindow* P <0T'
-```
 
 To obtain the handle of the window entitled "CLEAR WS - Dyalog APL/W":
 ```apl
@@ -845,38 +800,6 @@ In advanced DLL programming, it is often necessary to administer memory outside 
 7. Free the memory.
 
 Notice that steps 1 and 7 and steps 2 and 6 complement each other. That is, if you allocate global system memory, you must free it after you have finished using it. If you continue to use global memory without freeing it, your system will gradually run out of resources. Similarly, if you lock memory (which you must do before using it), then you should unlock it before freeing it. Although on some versions of Windows, freeing the memory will include unlocking it, in the interests of good style, maintaining the symmetry is probably a good thing.
-
-```apl
-    ∇ version←DllVersion file;Alloc;Free;Lock;Unlock;Size
-                  ;Info;Value;Copy;size;hndl;addr;buff;ok
-[1]
-[2]  'Alloc'⎕NA'P kernel32|GlobalAlloc U4 P'
-[3]   'Free'⎕NA'P kernel32|GlobalFree P'
-[4]   'Lock'⎕NA'P kernel32|GlobalLock P'
-[5] 'Unlock'⎕NA'U4 kernel32|GlobalUnlock P'
-[6]
-[7]  'Size'⎕NA'U4 version|GetFileVersionInfoSize* <0T >U4'
-[8]  'Info'⎕NA'U4 version|GetFileVersionInfo*<0T U4 U4 P'
-[9] 'Value'⎕NA'U4 version|VerQueryValue* P <0T >P >U4'
-[10]
-[11] 'Copy'⎕NA'dyalog64|MEMCPY >U4[] P P'
-[12]
-[13]  :If ×size←⊃Size file 0               ⍝ Size of info
-[14]  :AndIf ×hndl←Alloc 0 size            ⍝ Alloc memory
-[15]    :If ×addr←Lock hndl                ⍝ Lock memory
-[16]      :If ×Info file 0 size addr       ⍝ Version info
-[17]        ok buff size←Value addr'\' 0 0 ⍝ Version value
-[18]        :If ok
-[19]          buff←Copy(size÷4)buff size   ⍝ Copy info
-[20]          version←(2/2*16)⊤⊃2↓buff     ⍝ Split version
-[21]        :EndIf
-[22]      :EndIf
-[23]      ok←Unlock hndl                   ⍝ Unlock memory
-[24]    :EndIf
-[25]    ok←Free hndl                       ⍝ Free memory
-[26]  :EndIf
-    ∇
-```
 
 Lines [2-11] associate APL function names with the DLL functions that will be used.
 
