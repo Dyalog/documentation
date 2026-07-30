@@ -7,7 +7,7 @@ search:
 
 `Y` is either a single integer or a 2-element vector. The first (or only) item in `Y` is 0, 1, 2 or ¯1 and indicates the type of operation to perform. If it is 1, then the optional second item is a character vector.
 
-The optional left argument  `X` identifies an existing allocated range of token numbers `n`. `X` must be a scalar greater than or equal to `n`, but must be less than `n+1`.
+The left argument  `X` identifies an existing allocated range of token numbers `n`. `X` must be a scalar greater than or equal to `n`, but must be less than `n+1`.
 
 ## Allocation (First element of `Y` is 1)
 
@@ -28,8 +28,6 @@ A de-allocated range becomes free for subsequent re-allocation by `⎕TALLOC`.
 `Y` is 0, `⎕TALLOC` returns a non-shy result `R` containing the description for a currently allocated range of tokens identified by the left-argument `X`.
 
 If `X` does not represent a currently allocated range, `⎕TALLOC` will signal a `DOMAIN ERROR`.
-
-If `X` is omitted, the result `R` is a vector of 2-element vectors identifying the range and description of all currently allocated ranges.
 
 Descriptions that were not defined are returned as empty character vectors.
 

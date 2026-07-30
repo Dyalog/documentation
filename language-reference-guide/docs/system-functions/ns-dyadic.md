@@ -12,7 +12,7 @@ The `⎕NS` system function makes it possible to create namespaces, copy element
 * an vector of zero or more objects to be copied.
 * an array containing references to, and/or [`⎕OR`](or.md)s of, one or more namespaces.
 
-If specified, `X` must be an array that identifies one or more namespaces. This means `X` must be one of:
+`X` must be an array that identifies one or more namespaces. This means `X` must be one of:
 
 * a simple character scalar or vector identifying the name of a namespace.
 * a reference to a namespace.
@@ -42,7 +42,7 @@ The treatment of `X` varies:
 
 The objects identified in the list `Y` are copied into the namespace `X`.
 
-If `X` is specified, the result `R` is the full name (starting with `#.` or `⎕SE.`) of the namespace `X`. If `X` is omitted, the result `R` is a namespace reference to an unnamed namespace.
+The result `R` is the full name (starting with `#.` or `⎕SE.`) of the namespace `X`.
 
 <h4 class="example">Examples</h4>
 

@@ -15,7 +15,7 @@ If `Y` is a vector of more than one element, all but the first element are ignor
 
 `Y=0` is a special form of `⎕SIGNAL`, the side effect of which is to reset the values of certain system constants. It is described further down this section.
 
-If the first element of `Y` is a simple integer it is taken to be an event number. Permitted values are 0, 1-999 and 1006.  `X` is an optional text message.   If present, `X` must be a simple character scalar or vector, or an object reference. If `X` is omitted or is  empty, the standard event message for the corresponding event number  is assumed. See ["APL Error Messages"](../../../programming-reference-guide/error-messages/apl-errors). If there is no standard message, a message of the form `ERROR NUMBER n` is composed, where `n` is the event number in `Y`. Values outside the permitted range will result in a `DOMAIN ERROR`.
+If the first element of `Y` is a simple integer it is taken to be an event number. Permitted values are 0, 1-999 and 1006.  `X` is a text message.   If present, `X` must be a simple character scalar or vector, or an object reference. If `X` is empty, the standard event message for the corresponding event number  is assumed. See ["APL Error Messages"](../../../programming-reference-guide/error-messages/apl-errors). If there is no standard message, a message of the form `ERROR NUMBER n` is composed, where `n` is the event number in `Y`. Values outside the permitted range will result in a `DOMAIN ERROR`.
 
 If the first element of `Y` is a 2 column matrix or a vector of 2 element vectors of name/values pairs, then it is considered to be a set of values to be used to override the default values in a new instance of `⎕DMX`. Any other value for the first element of `Y` will result in a `DOMAIN ERROR`.
 
@@ -44,7 +44,7 @@ DIVISION ERROR
      ^
 ```
 
-If you are using the Microsoft .NET Framework, you may use `⎕SIGNAL` to throw an exception by specifying a value of 90 in `Y`. In this case, if you specify the optional left argument `X`, it must be a reference to a .NET object that is or derives from the Microsoft .NET class System.Exception. The following example illustrates a *constructor* function `CTOR` that expects to be called with a value for `⎕IO` (0 or 1)
+If you are using the Microsoft .NET Framework, you may use `⎕SIGNAL` to throw an exception by specifying a value of 90 in `Y`. In this case, if you specify the left argument `X`, it must be a reference to a .NET object that is or derives from the Microsoft .NET class System.Exception. The following example illustrates a *constructor* function `CTOR` that expects to be called with a value for `⎕IO` (0 or 1)
 ```apl
      ∇ CTOR IO;EX
 [1]    :If IO∊0 1

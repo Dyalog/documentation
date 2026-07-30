@@ -11,12 +11,10 @@ This function queries or sets information about one or more files or directories
 - a character vector or scalar containing a file or directory name that conforms to the naming rules of the host Operating System.
 - a vector of character vectors and/or tie numbers
 
-Optionally, `X` specifies properties of the files/directories identifed in `Y`. `X` can be an array of any shape; the shape determines whether the specified properties are queried or set:
+`X` specifies properties of the files/directories identifed in `Y`. `X` can be an array of any shape; the shape determines whether the specified properties are queried or set:
 
 - If `X` is a simple numeric array, the properties are queried. In this case, the values of `X` correspond to properties of the file/directory specified in `Y` that are to be queried, as defined in the following table.
 - If some or all of the elements in `X` are nested vectors, the properties are set. In this case, the values of `X` correspond to properties of the file/directory specified in `Y` that are to be set, as defined in the following table, with appropriate corresponding values to which those properties should be set. Not all file properties are settable. 
-
-If `X` is not defined, it is assumed to be `0`.
 
 |`X`|Property|Default|Settable|
 |---|---|---|---|

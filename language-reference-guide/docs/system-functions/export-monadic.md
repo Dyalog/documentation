@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Set Export Type</span> `{R}←⎕EXPORT Y`{{key}}
+# <span>Query Export Type</span> `{R}←⎕EXPORT Y`{{key}}
 
 `⎕EXPORT` is used to query the export type of a defined function (or operator) referenced by the `⎕PATH` mechanism.
 

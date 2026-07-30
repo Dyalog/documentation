@@ -11,7 +11,7 @@ search:
 
 For files associated with external variables, any filename extension must be specified even if `⎕XT` would not require it. The file must exist and must not currently be associated with an external variable.
 
-Options for `⎕FCHK` are specified using the Variant operator `⍠` or by the optional left argument `X`. The former is recommended but the older mechanism using the left argument is still supported.
+Options for `⎕FCHK` are specified using the Variant operator `⍠` or by the left argument `X`. The former is recommended but the older mechanism using the left argument is still supported.
 
 In either case, the default behaviour is as follows:
 
@@ -71,7 +71,7 @@ To forcibly check a file and attempt to fix it if damage is found:
 
 ### Specifying options using a left argument
 
-Using the optional left-argument, `X` must be a vector of zero or more character vectors from among `'force'`, `'repair'` and `'rebuild'`, which determine the detailed operation of the function. Note that these options are case-insensitive.
+Using the left argument, `X` must be a vector of zero or more character vectors from among `'force'`, `'repair'` and `'rebuild'`, which determine the detailed operation of the function. Note that these options are case-insensitive.
 
 - If `X` contains `'force'`, `⎕FCHK` will validate the file even if it appears to have been cleanly untied.
 - If `X` contains `'repair'`, `⎕FCHK` will repair the file, following validation, if it appears to be damaged. This option may be used in conjunction with `'force'`.

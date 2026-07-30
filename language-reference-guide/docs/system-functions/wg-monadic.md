@@ -11,7 +11,7 @@ This system function returns property values for a GUI object.
 
 The object is the one in the namespace in which the function is being evaluated. `Y` is a character vector or a vector of character vectors containing the name(s) of the properties whose values are required. The result `R` contains the current values of the specified properties. If `Y` specifies a single property name, a single property value is returned. If `Y` specifies more than one property, `R` is a vector with one element per name in `Y`.
 
-If `X` refers to a non-existent GUI name, a `VALUE ERROR` is reported. If `Y` refers to a non-existent property, or to a property that is not defined for the type of object `X`, a `DOMAIN ERROR` is reported.
+If `Y` refers to a non-existent property, or to a property that is not defined for the type of the object, a `DOMAIN ERROR` is reported.
 
 GUI objects are named **relative** to the current namespace. The following examples are equivalent:
 ```apl

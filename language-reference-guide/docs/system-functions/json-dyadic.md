@@ -9,7 +9,7 @@ This function imports and exports data in [JavaScript Object Notation](https://w
 
 ## Syntax
 
-If `X` is specified (that is, `⎕JSON` is called dyadically), it must be a numeric scalar with the value `0` for import or `1` for export.
+`X` must be a numeric scalar with the value `0` for import or `1` for export.
 
 <h3 class="example">Examples</h3>
 
@@ -26,8 +26,6 @@ Exporting APL data to JSON:
 
 !!! Hint "Hints and Recommendations"
     As a mnemonic, think of `X` as specifying the desired "JSON-ness": `0` means "no JSON", that is, converting away from JSON; `1` means "yes JSON", that is, converting towards JSON.
-
-If `X` is not specified (that is, `⎕JSON` is called monadically), its assumed value depends on `Y`:  If `Y` is a character array, `X` is assumed to be `0`; otherwise it is assumed to be `1`.
 
 !!! Warning "Warning"
     Dyalog Ltd strongly recommends that `X` should always be specified to avoid code that seemingly works, only to fail on specific values.

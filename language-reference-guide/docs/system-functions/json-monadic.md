@@ -9,8 +9,6 @@ This function imports and exports data in [JavaScript Object Notation](https://w
 
 ## Syntax
 
-If `X` is specified (that is, `⎕JSON` is called dyadically), it must be a numeric scalar with the value `0` for import or `1` for export.
-
 <h3 class="example">Examples</h3>
 
 Importing a JSON document to APL:
@@ -25,13 +23,9 @@ Exporting APL data to JSON:
 ```
 
 !!! Hint "Hints and Recommendations"
-    As a mnemonic, think of `X` as specifying the desired "JSON-ness": `0` means "no JSON", that is, converting away from JSON; `1` means "yes JSON", that is, converting towards JSON.
-
-If `X` is not specified (that is, `⎕JSON` is called monadically), its assumed value depends on `Y`:  If `Y` is a character array, `X` is assumed to be `0`; otherwise it is assumed to be `1`.
+Whether `⎕JSON` imports or exports depends on `Y`: if `Y` is a character array it is imported, that is, converted from JSON; otherwise it is exported, that is, converted to JSON.
 
 !!! Warning "Warning"
-    Dyalog Ltd strongly recommends that `X` should always be specified to avoid code that seemingly works, only to fail on specific values.
-
 `⎕JSON` has six [variant options](#variant-options): **Format**, **Compact**, **Null**, **HighRank**, **Charset**, and **Dialect**, specified using [`⍠`](../primitive-operators/variant.md). The principal option is **Format**.
 
 ## Limitations
@@ -48,7 +42,7 @@ These differences are catered for in various ways as discussed below.
 
 ## JSON Import
 
-If `X` is `0`, the JSON document `Y` is converted to the corresponding APL data `R`.
+When importing, the JSON document `Y` is converted to the corresponding APL data `R`.
 
 `Y` is a character scalar, vector, or matrix in JSON format. There is an implied newline character between each row of a matrix.
 
@@ -67,7 +61,7 @@ For details and more examples, see [Import to Data](#import-to-data) and [Import
 
 ## JSON Export
 
-If `X` is `1`, the APL data `Y` is converted to a corresponding JSON document `R`.
+When exporting, the APL data `Y` is converted to a corresponding JSON document `R`.
 
 `Y` is the data to be exported. By default, `Y` must be APL data that can be represented as JSON (subject to the [**HighRank**](#variant-option-highrank) variant option). If the [**Format**](#variant-option-format) variant option is set to `'M'`, `Y` must instead be a matrix representation such as would have been produced by importing JSON with **Format** being `'M'`. `⎕JSON` will signal `DOMAIN ERROR` if `Y` is incompatible with the specified (or implied) value of **Format**.
 

@@ -7,8 +7,8 @@ search:
 
 ## Monadic `⎕EXPORT` means
 
-[Set Export Type](export-monadic.md)
+[Query Export Type](export-monadic.md)
 
 ## Dyadic `⎕EXPORT` means
 
-[Query Export Type](export-dyadic.md)
+[Set Export Type](export-dyadic.md)

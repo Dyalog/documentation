@@ -5,52 +5,13 @@ search:
 
 # <span>Native File Name</span> `R←⎕NINFO Y`{{key}}
 
-This function queries or sets information about one or more files or directories. `Y` may be:
+This function returns the name of one or more files or directories. `Y` may be:
 
 - a numeric scalar containing the tie number of a native file
 - a character vector or scalar containing a file or directory name that conforms to the naming rules of the host Operating System.
 - a vector of character vectors and/or tie numbers
 
-Optionally, `X` specifies properties of the files/directories identifed in `Y`. `X` can be an array of any shape; the shape determines whether the specified properties are queried or set:
-
-- If `X` is a simple numeric array, the properties are queried. In this case, the values of `X` correspond to properties of the file/directory specified in `Y` that are to be queried, as defined in the following table.
-- If some or all of the elements in `X` are nested vectors, the properties are set. In this case, the values of `X` correspond to properties of the file/directory specified in `Y` that are to be set, as defined in the following table, with appropriate corresponding values to which those properties should be set. Not all file properties are settable. 
-
-If `X` is not defined, it is assumed to be `0`.
-
-|`X`|Property|Default|Settable|
-|---|---|---|---|
-|`0`|Name of the file or directory, as a character vector. If `Y` is a tie number then this is the name which the file was tied.|&nbsp;|No|
-|`1`|Type, as a numeric scalar: 0=Not known 1=Directory 2=Regular file 3=Character device 4=Symbolic link (only when Follow is 0) 5=Block device 6=FIFO (not Windows) 7=Socket (not Windows)|`0`|No|
-|`2`|Size in bytes, as a numeric scalar|`0`|Yes|
-|`3`|Last modification time, as a timestamp in `⎕TS` format|`7⍴0`|No|
-|`4`|Owner user id, as a character vector – on Windows a SID, on other platforms a numeric userid converted to character format|`''`|No|
-|`5`|Owner name, as a character vector|`''`|No|
-|`6`|Whether the file or directory is hidden (1) or not (0), as a numeric scalar. On Windows, file properties include a "hidden" attribute; on non-Windows platforms a file or directory is implicitly considered to be hidden if its name begins with a "."|`¯1`|Windows only|
-|`7`|Target of symbolic link (when Type is 4)|`''`|No|
-|`8`|Current position in the file. This identifies where `⎕NREAD` would next read from or `⎕NAPPEND` would next write to, and is only pertinent when the corresponding value in `Y` is a tie number. It is reported as `0` for named files and directories.|`0`|Yes|
-|`9`|Last access time  in `⎕TS` format, when available|`7⍴0`|No|
-|`10`|Creation time if available, otherwise the time of the last file status change in `⎕TS` format|`7⍴0`|No|
-|`11`|Whether the file or directory can (1) or cannot (0) be read ( `¯1` if unknown)|`¯1`|No|
-|`12`|Whether the file or directory can (1) or cannot (0) be written  ( `¯1` if unknown or for a directory under Windows)|`¯1`|No|
-|`13`|Last modification time, as a UTC  Dyalog Date Number.|`0`|Yes|
-|`14`|Last access time, as a UTC Dyalog Date Number, when available.|`0`|Yes|
-|`15`|Creation time if available, otherwise the time of the last file status change  as a UTC Dyalog Date  Number.|`0`|Windows only|
-
-The values in `X` are processed in ravel order. Duplicates are allowed.
-
-The returned value `R` has the same shape as `X` (if the **Wildcard** variant option has been specified, the depth will change – see below). The content of `R` depends on whether properties were queried or set:
-
-- If properties were queried:
-    - each element of `R` is the value of the property identified by the corresponding value of `X`.
-    - if a value in `X` is not defined in the table above, the corresponding `R` value is `⍬` (Zilde).
-    - if more than one file/directory is specified in `Y`, the element of `R` corresponding to each element of `X` contains the property values for each of the files/directories specified in `Y`.
-- If properties were set:
-    - each element of `R` is the new value of the property identified by the corresponding value of `X`.
-    - if the value in `X` does not specify a property that is defined in the table above and settable, or if the new value specified for the property is not valid, an error will be signalled.
-    - if more than one file/directory is specified in `Y`, the element of `R` corresponding to each element of `X` contains the new property values for each of the files/directories specified in `Y`.
-
-If a property value cannot be obtained, the default value (shown in the table above) is returned for that property.
+`R` is the name of the file or directory, as a character vector. If `Y` is a tie number, this is the name by which the file was tied.
 
 If the Wildcard option is not enabled (the default) then `Y` specifies exactly one file or directory and must exist. In this case each element in `R` is a single property value for that file. If the name in `Y` does not exist, the function signals an error. On non-Windows platforms "*" and "?" are treated as normal characters. On Microsoft Windows an error will be signalled since neither are valid characters for file or directory names.
 

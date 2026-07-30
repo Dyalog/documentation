@@ -337,8 +337,8 @@ nav:
           - '<code>⎕EN</code>: Event Number': system-functions/en.md
           - '<code>⎕EX</code>: Expunge Object': system-functions/ex.md
           - '<code>⎕EXCEPTION</code>: Exception': system-functions/exception.md
-          - '<code>⎕EXPORT</code>: Set Export Type': system-functions/export-monadic.md
-          - '<code>⎕EXPORT</code>: Query Export Type': system-functions/export-dyadic.md
+          - '<code>⎕EXPORT</code>: Query Export Type': system-functions/export-monadic.md
+          - '<code>⎕EXPORT</code>: Set Export Type': system-functions/export-dyadic.md
           - '<code>⎕FAPPEND</code>: File Append Component': system-functions/fappend.md
           - '<code>⎕FAVAIL</code>: File System Available': system-functions/favail.md
           - '<code>⎕FCHK</code>: Check/Repair Component File': system-functions/fchk-monadic.md

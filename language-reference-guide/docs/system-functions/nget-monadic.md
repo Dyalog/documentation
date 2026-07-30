@@ -11,29 +11,7 @@ This function reads the contents of the specified text file. See also [Write Tex
 
 - if `flags` is `0` then `R[1]` is a character vector. This is the default.
 - if `flags` is `1` then `R[1]` is a nested array of character vectors.
-- if `flags` is `2` then `R[1]` is a matrix, with each row corresponding to a line in the text file specified within `X`.
-
-The optional left-argument `X` is either
-
-- a character vector that specifies the file-encoding as shown in the table below.
-- a 256-element numeric vector that maps each possible byte value (0-255) to a  Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value may appear in the table more than once.
-
-Table: File Encodings {: #Encodings }
-
-|Encoding      |Description                                                                                                            |
-|--------------|-----------------------------------------------------------------------------------------------------------------------|
-|`UTF-8`       |The data is encoded as UTF-8 format.                                                                                   |
-|`UTF-16LE`    |The data is encoded as UTF-16 little-endian format.                                                                    |
-|`UTF-16BE`    |The data is encoded as UTF-16 big-endian format.                                                                       |
-|`UTF-16`      |The data is encoded as UTF-16 with the endianness of the host system (currently BE on AIX platforms, LE on all others).|
-|`UTF-32LE`    |The data is encoded as UTF-32 little-endian format.                                                                    |
-|`UTF-32BE`    |The data is encoded as UTF-32 big-endian format.                                                                       |
-|`UTF-32`      |The data is encoded as UTF-32 with the endianness of the host system (currently BE on AIX platforms, LE on all others).|
-|`ASCII`       |The data is encoded as 7-bit ASCII format.                                                                             |
-|`Windows-1252`|The data is encoded as 8-bit Windows-1252 format.                                                                      |
-|`ANSI`        |ANSI is a synonym of Windows-1252.                                                                                     |
-
-The above UTF formats may be qualified with -BOM or -NOBOM (for example, UTF-8-BOM). See [Write Text File](nput.md).
+- if `flags` is `2` then `R[1]` is a matrix, with each row corresponding to a line in the text file.
 
 If the start of the file contains a recognised Byte Order Mark (BOM), the file is decoded according to the BOM. Otherwise, the file is examined to try to decide its encoding and is decoded accordingly.
 

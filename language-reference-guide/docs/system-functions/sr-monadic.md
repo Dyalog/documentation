@@ -92,7 +92,7 @@ Structure of the Result of `⎕SR`
 
 `EXIT_CONTEXT[2 3]` are integer scalars which specify the row and column position of the cursor within the field `EXIT_CONTEXT[1]` when `⎕SR` terminated.
 
-`EXIT_CONTEXT[4]` is a 2-element character vector specifying the last keystroke pressed by the user before `⎕SR` terminated.  Unless `⎕SR` terminated due to an event, `EXIT_CONTEXT[4]` will contain one of the exit keys defined by `X`.  The keystroke is defined in terms of an Input Translate Table code.
+`EXIT_CONTEXT[4]` is a 2-element character vector specifying the last keystroke pressed by the user before `⎕SR` terminated.  Unless `⎕SR` terminated due to an event, `EXIT_CONTEXT[4]` will contain one of the exit keys.  The keystroke is defined in terms of an Input Translate Table code.
 
 `EXIT_CONTEXT[5]` contains the **sum** of the event codes that caused `⎕SR` to terminate.  For example, if the user pressed a mouse button on a `BUTTON` field (event code 64) **and** the current field has `MODIFIED` behaviour (event code 2) `EXIT_CONTEXT[5]` will have the value 66.
 

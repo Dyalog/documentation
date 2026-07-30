@@ -12,37 +12,19 @@ The `⎕NS` system function makes it possible to create namespaces, copy element
 * an vector of zero or more objects to be copied.
 * an array containing references to, and/or [`⎕OR`](or.md)s of, one or more namespaces.
 
-If specified, `X` must be an array that identifies one or more namespaces. This means `X` must be one of:
-
-* a simple character scalar or vector identifying the name of a namespace.
-* a reference to a namespace.
-* an array where each item is one of the above. If `X` refers to multiple namespaces, then `⎕NS` processes each item of `X` in ravel order, using the entire argument `Y`; this is equivalent to `X ⎕NS¨⊂Y`. If `X` is empty, no action is taken.
-
 The result `R` is shy when the system function is invoked dyadically, otherwise its contents are determined by the value of `Y`.
 
 ## Usage
 
 `⎕NS` is used to create or populate one or more namespaces based on either a list of members to be copied into the target namespace(s), or a list of objects to be merged into the target namespace(s).
 
-For simplicity, `X` is treated in the following as if it refers to only a single namespace, but is subject to the aforementioned equivalence of `X ⎕NS¨⊂Y`.
-
 ### Case 1: Create or Populate Namespace from Member List
 
-`Y` must be a simple character scalar, vector, matrix, or a nested vector of character vectors identifying zero or more workspace objects to be copied into `X`. The identifiers in `X` and `Y` can be simple names or compound names separated by `'.'` and including the names of the special namespaces `'#'`, `'##'` and `'⎕SE'`.
+`Y` must be a simple character scalar, vector, matrix, or a nested vector of character vectors identifying zero or more workspace objects to be copied into the new namespace. The identifiers in `Y` can be simple names or compound names separated by `'.'` and including the names of the special namespaces `'#'`, `'##'` and `'⎕SE'`.
 
-The treatment of `X` varies:
+The objects identified in the list `Y` are copied into the new namespace.
 
-| `X` | Treatment |
-| ---| ---|
-| Omitted (monadic `⎕NS`) | Anonymous namespace created |
-| Not in use | Namespace `X` created |
-| Existing object | Used as-is |
-| Existing non-object variable | Variable replaced with new namespace |
-| Existing non-variable | `DOMAIN ERROR` |
-
-The objects identified in the list `Y` are copied into the namespace `X`.
-
-If `X` is specified, the result `R` is the full name (starting with `#.` or `⎕SE.`) of the namespace `X`. If `X` is omitted, the result `R` is a namespace reference to an unnamed namespace.
+The result `R` is a namespace reference to an unnamed namespace.
 
 <h4 class="example">Examples</h4>
 
@@ -88,12 +70,7 @@ If `X` is specified, the result `R` is the full name (starting with `#.` or `⎕
 
 `Y` is one or more references to, or `⎕OR`s of, namespaces.
 
-If `Y` contains a reference to, or a `⎕OR` of, a *GUI* object, `X` must be a valid parent for the GUI object represented by `Y`, or the operation will fail with a `DOMAIN ERROR`. A maximum of one element of `Y` can represent a GUI object or the operation will fail with a `NONCE ERROR`.
-
-If `Y` does not contain a reference to, or a `⎕OR` of, a *GUI* object, the result of the operation depends upon the existence of `X`:
-
-- If `X` does not currently exist (name class is 0), `X` is created as a complete copy (clone) of the original namespace represented by `Y`. If `Y` contains a reference to, or the `⎕OR` of, a GUI object or of a namespace containing GUI objects, the corresponding GUI components of `Y` will be instantiated in `X`.
-- If `X` is the name of an existing namespace (name class 9), the contents of `Y`, including any GUI components, are merged into `X`. Any items in `X` with corresponding names in `Y` (names with the same path in both `Y` and `X`) will be replaced by the names in `Y`, unless they have a conflicting name class in which case the existing items in `X` will remain unchanged. However, all GUI spaces in `X` will be stripped of their GUI components prior to the merge operation.
+A new namespace is created as a complete copy (clone) of the original namespace represented by `Y`.
 
 `Y` can also be a vector of namespaces, in which case each item of `Y` is processed as explained above, in ravel order. The effect is that the contents of all the namespaces are merged into the target namespace.
 

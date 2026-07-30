@@ -118,7 +118,7 @@ clear ws
 
 Syntax: `data←{X} ⎕PROFILE 'data'`
 
-Retrieves the collected profiling data and returns it in flat form. If the `X` is omitted, the result is a matrix with the following columns:
+Retrieves the collected profiling data and returns it in flat form. The result is a matrix with the following columns:
 
 - `[;1]` – function name
 - `[;2]` – function line number or `⍬` for a whole function entry
@@ -142,8 +142,6 @@ Numbers in this example have been truncated for formatting purposes.
 #.NS1.goo  3  10000 19.60274      19.6027 10000   10000
 ```
 
-If `X` is specified, it must be a simple vector of column indices. The result `R` has the same shape as `X`, and is a vector of the specified column vectors.
-
 ```apl
 X ⎕PROFILE 'data' ←→ ↓[⎕IO](⎕PROFILE 'data')[;X]
 ```
@@ -154,7 +152,7 @@ If `[;2]` is included in the result, then the value `¯1` is used instead of `�
 
 Syntax: `data←{X} ⎕PROFILE 'tree'`
 
-Retrieves the collected profiling data and returns it in tree form. If the `X` is omitted, the result is a matrix with the following columns: 
+Retrieves the collected profiling data and returns it in tree form. The result is a matrix with the following columns: 
 
 - `[;1]` – depth level
 - `[;2]` – function name
@@ -184,8 +182,6 @@ Numbers in this example have been truncated for formatting purposes.
 ```
 
 Rows with an even depth level in `[;1]` represent function summary entries; odd depth level rows are function line entries. Recursive functions generate separate rows for each level of recursion.
-
-If `X` is specified, it must be a simple vector of column indices. The result `R` has the same shape as `X`, and is a vector of the specified column vectors.
 
 ```apl
 X ⎕PROFILE 'tree' ←→ ↓[⎕IO](⎕PROFILE 'tree')[;X]
