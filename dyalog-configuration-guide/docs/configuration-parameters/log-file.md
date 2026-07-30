@@ -8,7 +8,7 @@ The `LogFile` property of `⎕SE` reports the name of the log file in use.
 
 Default depends on operating system:
 
-- Microsoft Windows: `<DocumentsDirectory>\Dyalog APL-<bits> <DyalogMajor><DyalogMinor> <Unicode|Classic> Files\default_*.dlfx`, for example `C:\Users\Bob\Documents\Dyalog APL-64 21.0 Unicode Files\default_*.dlfx`
+- Microsoft Windows: `<DocumentsDirectory>\Dyalog APL[-64] <DyalogMajor>.<DyalogMinor> [Unicode ]Files\default_*.dlfx`, for example `C:\Users\Bob\Documents\Dyalog APL-64 21.0 Unicode Files\default_*.dlfx`
 - UNIX and macOS: `$HOME/.dyalog/session_log_<DyalogMajor><DyalogMinor><U|C><bits>_*.dlf`, for example `$HOME/.dyalog/session_log_210U64_*.dlf`
 
 Related parameters: [Log_File_InUse](log-file-inuse.md), [Log_Size](log-size.md).
