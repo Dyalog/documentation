@@ -92,8 +92,6 @@ nav:
       - AutoIndent: configuration-parameters/autoindent.md
       - auto_pw: configuration-parameters/auto-pw.md
       - CFEXT: configuration-parameters/cfext.md
-      - ClassicMode: configuration-parameters/classicmode.md
-      - ClassicModeSavePosition: configuration-parameters/classicmodesaveposition.md
       - CMD_PREFIX and CMD_POSTFIX: configuration-parameters/cmd-prefix-and-cmd-postfix.md
       - ConfigFile: configuration-parameters/configfile.md
       - confirm_abort: configuration-parameters/confirm-abort.md
@@ -173,7 +171,6 @@ nav:
       - SaveLogOnExit: configuration-parameters/savelogonexit.md
       - SaveSessionOnExit: configuration-parameters/savesessiononexit.md
       - Serial: configuration-parameters/serial.md
-      - SessionOnTop: configuration-parameters/sessionontop.md
       - session_file: configuration-parameters/session-file.md
       - ShowStatusOnError: configuration-parameters/showstatusonerror.md
       - SingleTrace: configuration-parameters/singletrace.md

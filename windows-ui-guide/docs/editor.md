@@ -42,14 +42,11 @@ The picture below shows the effect of maximising the Editor. The `BUILD_SESSION`
 
 Note that when the Editor has the focus, the Editor menubar is displayed in place of the Session menubar.
 
-## Window Management (Classic)
+## Window Management (Classic Dyalog mode)
 
-In Classic mode, which is selected with *Classic* from the *Layout* menu, each Edit window is a top-level window created as a child of the Session window. This means that normally Edit windows appear on top of the Session. However, if the **SessionOnTop** parameter is set, the Session window, when given the focus, will appear on top of Edit windows.
+In Classic Dyalog mode, which is selected with *Classic* from the *Layout* menu, each Edit window is a top-level window created as a child of the Session window. This means that normally Edit windows appear on top of the Session.
 
-When the first Edit window is opened, its position is determined as follows:
-
-- If the **ClassicModeSavePosition** parameter is set, the first Edit window is displayed at the position that was previously occupied by the most recently saved Edit window.
-- If not, the first edit window is created at the position specified by the **edit_first_y** and **edit_first_x** parameters which  are specified in terms of the size of a character in the current font relative to the top-left corner of the screen.
+The first Edit window is created at the position specified by the **edit_first_y** and **edit_first_x** parameters which  are specified in terms of the size of a character in the current font relative to the top-left corner of the screen.
 
 The initial size of an edit window is specified by the **edit_rows** and **edit_cols** parameters.
 
