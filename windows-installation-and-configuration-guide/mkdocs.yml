@@ -173,7 +173,6 @@ nav:
       - Serial: configuration-parameters/serial.md
       - session_file: configuration-parameters/session-file.md
       - ShowStatusOnError: configuration-parameters/showstatusonerror.md
-      - SingleTrace: configuration-parameters/singletrace.md
       - SkipLines: configuration-parameters/skiplines.md
       - SM_Cols: configuration-parameters/sm-cols.md
       - SM_Rows: configuration-parameters/sm-rows.md

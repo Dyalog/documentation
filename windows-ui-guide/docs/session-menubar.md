@@ -169,9 +169,9 @@ Table: Layout Menu Operations {: #debugger-layout-menu-operations }
 
 |Item                   |Action             |Description                                        |
 |-----------------------|-------------------|---------------------------------------------------|
-|Classic                |APL callback       |Selects Classic mode, in which Edit and Trace windows are free-floating|
-|Debugger at the bottom |APL callback       |Selects Standard mode, with the Debugger docked at the bottom (default)|
-|Debugger on the left   |APL callback       |Selects Standard mode, with the Debugger docked on the left|
+|Classic                |&nbsp;             |Selects Classic mode, in which Edit and Trace windows are free-floating|
+|Debugger at the bottom |&nbsp;             |Selects Standard mode, with the Debugger docked at the bottom (default)|
+|Debugger on the left   |&nbsp;             |Selects Standard mode, with the Debugger docked on the left|
 
 The selected option does *not* persist if you restart the session.
 

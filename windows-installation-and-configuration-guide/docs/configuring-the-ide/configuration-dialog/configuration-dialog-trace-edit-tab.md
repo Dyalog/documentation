@@ -6,7 +6,6 @@ Table: Configuration dialog: Trace/Edit
 
 |Label|Parameter|Description|
 |---|---|---|
-|Single trace window|[ SingleTrace](../../configuration-parameters/singletrace.md)|Specifies whether or not there is a single Trace window|
 |Allow floating edit windows|[DockableEditWindows](../../configuration-parameters/dockableeditwindows.md)|Allows individual Edit windows to be undocked from (and re-docked in) the main Edit window|
 |Show status bars|[ StatusOnEdit](../../configuration-parameters/statusonedit.md)|Specifies whether or not status bars are displayed along the bottom of individual Edit windows|
 |Show tool bars|[ ToolBarsOnEdit](../../configuration-parameters/toolbarsonedit.md)|Specifies whether or not tool bars are displayed along the top of individual Edit windows|
