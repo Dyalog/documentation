@@ -10,7 +10,11 @@ T.B.A.
 
 ## Changes
 
-T.B.A.
+### APL Thread Scheduler
+
+The APL thread scheduler is being enhanced over several releases. It is likely that the scheduling order will change in Dyalog v22.0; this will not affect most applications.
+
+If deprecated features are being logged (using [`109⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/log-file-for-deprecations/) with a right argument of `0` – see [Deprecated Functionality](https://docs.dyalog.com/21.0/release-notes/announcements/deprecated-functionality/#identifying-deprecated-functionality-in-executed-code)), relevant thread-switching warnings will be output to the specified log file.
 
 ## Removals (Previously Announced)
 
