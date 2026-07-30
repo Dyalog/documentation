@@ -16,7 +16,7 @@ If the name is followed by a line-number in square brackets, for example, `MyFn[
 
 ## Window Management (Standard)
 
-In Standard mode, which is selected with either *Debugger at the bottom* or *Debugger on the left* from the *Layout* menu, the Editor is a Multiple Document Interface (MDI) window that may be a stand-alone window, or be docked in the Session window. Each of the objects being edited is displayed in a separate sub-window. Individual edit windows are managed using standard MDI facilities.
+In Standard mode (either **Debugger at the bottom** or **Debugger on the left** are selected from the **Layout** menu), the Editor is a Multiple Document Interface (MDI) window that can be either a stand-alone window or docked in the Session window. Each of the objects being edited is displayed in a separate sub-window. Individual Edit windows are managed using standard MDI facilities.
 
 ![](img/editor-2.png)
 
@@ -44,9 +44,9 @@ Note that when the Editor has the focus, the Editor menubar is displayed in plac
 
 ## Window Management (Classic Dyalog mode)
 
-In Classic Dyalog mode, which is selected with *Classic* from the *Layout* menu, each Edit window is a top-level window created as a child of the Session window. This means that normally Edit windows appear on top of the Session.
+In Classic Dyalog mode (**Classic** is selected from the **Layout** menu), each Edit window is a top-level window created as a child of the Session window. Edit windows usually appear on top of the Session window.
 
-The first Edit window is created at the position specified by the **edit_first_y** and **edit_first_x** parameters which  are specified in terms of the size of a character in the current font relative to the top-left corner of the screen.
+The first Edit window is created at the position specified by the edit_first_y and edit_first_x configuration parameters; these are specified in terms of the size of a character in the current font relative to the top-left corner of the screen.
 
 The initial size of an edit window is specified by the **edit_rows** and **edit_cols** parameters.
 
