@@ -10,12 +10,22 @@ This page describes the changes and new features in Dyalog v21.0 compared with D
 
 The following system functions have been added:
 
-- [`⎕SYSTEM`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/system/) – System Information<br />This returns a namespace providing information about the current Dyalog interpreter and the host environment.
+- [`⎕SYSTEM`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/system/) – System Information  
+This returns a namespace providing information about the current Dyalog interpreter and the host environment.
 
 The following system functions have been enhanced:
 
-- [`⎕CSV`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/csv/) – Comma Separated Values<br />A new variant option, **ForceQuotes**, has been added. This specifies when exported data has quotes around character/numeric fields.
-- [`UCS`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/ucs/) – Unicode Convert<br />The optional left argument `X` can now be a 2-element nested array when performing UTF-8 conversions; setting the second element to `83` enables the direct creation and consumption of 8-bit integers.
+- [`⎕CSV`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/csv/) – Comma Separated Values  
+A new variant option, **ForceQuotes**, has been added. This specifies when exported data has quotes around character/numeric fields.
+- [`⎕DT`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/dt/) – Datetime  
+The functionality previously provided by [`1200⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/format-datetime/) is now available using `⎕DT`:
+    - The left argument `X` has been extended; its single element or either/both of the elemnts in its 2-element vector can now also be character vectors (not scalars) comprising patterns that describe how a datetime is, or is to be, formatted as text. 
+	- The right argument `Y` has been extended; it can now be a character vector, formatted according to a *formatting pattern* (known as by a *text-formatted datetime*).
+    - Two new variant options have been added:
+	    - **Dictionary** specifies a namespace that contains additional or replacement names for the months (and so on) and/or predefined patterns, for languages and language regions.
+		- **Language** specifies the language used for formatting and matching datetimes.
+- [`⎕UCS`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/ucs/) – Unicode Convert  
+The optional left argument `X` can now be a 2-element nested array when performing UTF-8 conversions; setting the second element to `83` enables the direct creation and consumption of 8-bit integers.
 
 ### I-beams
 
@@ -33,6 +43,8 @@ The following I-beams have been deprecated:
 The functionality provided by `43⌶632` is now provided by a new `[...]` mechanism – see [Generics (.NET)](https://docs.dyalog.com/21.0/net-interface-guide/dotnet-classes/advanced-techniques/#generics) and [Generics (.NET Framework)](https://docs.dyalog.com/21.0/net-framework-interface-guide/dotnet-classes/advanced-techniques/#generics). As alternative values of `Y` are not available, the I-beam has been deprecated and scheduled for removal in Dyalog v22.0; it could be reintroduced with new `Y` values in a later release.
 - [`739⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/temporary-directory/) – Temporary Directory (introduced in Dyalog v17.0)  
 The functionality provided by `739⌶` is now provided by `⎕SYSTEM` (specifically, `⎕SYSTEM.Directories.Temp` replaces `739⌶0`). It is scheduled for removal in 2029.
+- [`1200⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/format-datetime/) – Format Date-Time (introduced in Dyalog v18.0)  
+The functionality provided by `1200⌶` is now provided by `⎕DT`. It is scheduled for removal in 2029.
 
 ## Objects
 
