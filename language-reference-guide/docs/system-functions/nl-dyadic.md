@@ -7,13 +7,13 @@ search:
 
 `Y` must be a simple numeric scalar or vector containing one or more of the values for name-class.  See also [Name Classification](nc.md).
 
-`X` is optional. If present, it must be a simple character scalar or vector. `R` is a list of the names of active objects whose name-class is included in `Y` in standard sorted order.
+`X` must be a simple character scalar or vector. `R` is a list of the names of active objects whose name-class is included in `Y` in standard sorted order.
 
 If *any* element of `Y` is negative, positive values in `Y` are treated as if they were negative, and R is a vector of character vectors. Otherwise, `R` is simple character matrix.
 
 Furthermore, if `⎕NL` is being evaluated inside the namespace associated with a Class or an Instance of a Class, and any element of `Y` is negative, `R` includes the Public names exposed by the Base Class (if any) and all other Classes in the Class hierarchy.
 
-If `X` is supplied, `R` contains only those names which begin with any character of `X`. Standard sorted order is in Unicode point order for Unicode editions, and in the collation order of `⎕AV` for Classic editions.
+`R` contains only those names which begin with any character of `X`. Standard sorted order is in Unicode point order for Unicode editions, and in the collation order of `⎕AV` for Classic editions.
 
 If an element of `Y` is an integer, the names of all of the corresponding sub-name-classes are included in `R`. For example, if `Y` contains the value 2, the names of all variables (name-class 2.1), fields (2.2), properties (2.3) and external or shared variables (2.6) are obtained. Otherwise, only the names of members of the corresponding sub-name-class are obtained.
 

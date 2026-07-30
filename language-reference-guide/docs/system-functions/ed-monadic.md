@@ -7,23 +7,6 @@ search:
 
 `⎕ED` invokes the Editor.  `Y` is a simple character vector, a simple character matrix, or a vector of character vectors, containing the name(s) of objects to be edited.
 
-The optional left argument `X` is a character scalar or character vector (where `=/≢X Y`) which specifies the type(s) of the corresponding (new) object(s) named in `Y` as:
-
-|---|---------------------------|
-|`∇`|function/operator          |
-|`→`|simple character vector    |
-|`∊`|vector of character vectors|
-|`-`|character matrix           |
-|`⍟`|Namespace script           |
-|`○`|Class script               |
-|`∘`|Interface                  |
-|`⋄`|array: use array notation  |
-
-If `Y` names an existing object, the type specification for that name in `X` is ignored, unless `X` is `⋄`.
-
-If `X` is `⋄`, `Y` must be undefined or an array.
-The Editor opens in array-notation mode; the resulting array can be of any type or structure.
-
 If `⎕ED` is called from the Session, it opens Edit windows for the object(s) named in `Y` and returns a null result.  The cursor is positioned in the first of the Edit windows opened by `⎕ED`, but may be moved to the Session or to any other window which is currently open.  The effect is almost identical to using `)ED`.
 
 If `⎕ED` is called from a defined function or operator, its behaviour is different. On asynchronous terminals, the Edit windows are automatically displayed in "full-screen" mode (ZOOMED). In all implementations, the user is restricted to those windows named in `Y`. The user may not skip to the Session even though the Session may be visible.
@@ -70,3 +53,4 @@ In the final example, the Edit window will display the contents of `A` as a Read
 ```apl
       (⎕ED ⍠('ReadOnly' 1)('EditName' 'Disallow'))'A'
 ```
+

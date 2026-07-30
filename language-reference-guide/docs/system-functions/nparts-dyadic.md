@@ -11,7 +11,7 @@ Splits a file or directory name into its constituent parts.
 
 The file(s) need not exist; indeed this system function makes no attempt to identify or locate it/them.
 
-The optional left-argument `X` specifies whether or not the name or names specified by `Y` are *normalised* before being processed. The default value 0 means no normalisation; 1 means normalise as follows:
+The left-argument `X` specifies whether or not the name or names specified by `Y` are *normalised* before being processed. The default value 0 means no normalisation; 1 means normalise as follows:
 
 - Pathnames are made absolute.
 - On Windows, all "\" directory separators are changed to "/".

@@ -11,7 +11,7 @@ This system function generates an event or invokes a method.
 
 While APL is executing, events occur "naturally" as a result of user action or of communication with other applications.  These events are added to the event queue as and when they occur, and are subsequently removed and processed one by one by `⎕DQ`.  `⎕NQ` provides an "artificial" means to generate an event and is analogous to `⎕SIGNAL`.
 
-If the left argument `X` is omitted or is 0, `⎕NQ` adds the event specified by `Y` to the bottom of the event queue. The event will subsequently be processed by `⎕DQ` when it reaches the top of the queue.
+If `X` is 0, `⎕NQ` adds the event specified by `Y` to the bottom of the event queue. The event will subsequently be processed by `⎕DQ` when it reaches the top of the queue.
 
 If `X` is 1, the event is actioned **immediately** by `⎕NQ` itself and is processed in exactly the same way as it would be processed by `⎕DQ`.  For example, if the event has a callback function attached, `⎕NQ` will invoke it directly. See [Dequeue Events](dq.md) for further details. If the event generates any subsidiary events (for example, a KeyPress might generate a GotFocus), the subsidiary events are added to the event queue rather than being executed immediately.
 

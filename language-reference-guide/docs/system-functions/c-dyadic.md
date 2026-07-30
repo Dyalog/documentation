@@ -9,9 +9,7 @@ search:
 
 For a discussion of case folding and case conversion (mapping), see [Character Properties, Case Mappings & Names FAQ](https://unicode.org/faq/casemap_charprop.html).
 
-If the optional left-argument `X` is omitted, `R` is a copy of `Y` with character arrays folded, for case-less comparison.
-
-If `X` is specified, the following cases are supported:
+The following cases are supported:
 
 |X   |Description                                                                                                     |
 |----|----------------------------------------------------------------------------------------------------------------|

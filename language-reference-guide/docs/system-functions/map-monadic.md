@@ -11,7 +11,7 @@ Two types of mapped files are supported; *APL* and *raw*. An *APL* mapped file c
 
 A *raw* mapped file is an arbitrary collection of bytes. When you map a raw file, you must specify the characteristics of the APL array to be associated with this data. In particular, the data type and its shape.
 
-The type of mapping is determined by the presence (raw) or absence (APL) of the left argument to `⎕MAP`.
+The file is assumed to contain a simple APL array.
 
 The right argument `Y` specifies the name of the file to be mapped and, optionally, the access type and a start byte in the file. `Y` may be a simple character vector, or a 2 or 3-element nested vector containing:
 
@@ -21,17 +21,7 @@ The right argument `Y` specifies the name of the file to be mapped and, optional
 
 If you map a file with read-only access you may modify the corresponding array in the workspace, however your changes are not written back to the file.
 
-If `X` is specified, it defines the type and shape to be associated with *raw* data on file. `X` must be an integer scalar or vector. The first item of `X` specifies the data type and must be one of the following values:
-
-|---------------|-------------------------------------|
-|Classic Edition|11, 82, 83, 163, 323 or 645          |
-|Unicode Edition|11, 80, 83, 160, 163, 320, 323 or 645|
-
-The values are more fully explained in [Data Representation (Monadic)](data-representation-monadic.md).
-
-Following items determine the shape of the mapped array. A value of `¯1` on any (but normally the first) axis in the shape is replaced by the system to mean: read as many complete records from the file as possible. Only one axis may be specified in this way. Note that if    `X` is a singleton, the data on the file is mapped as a scalar and only the first value on the file is accessible.
-
-If no left argument is given, file is assumed to contain a simple APL array, complete with header information (type, rank, shape, etc.). Such mapped files may only be updated by changing the associated array using indexed/pick assignment: `var[a]←b`, the new values must be of the same type as the originals.
+The file contains a simple APL array, complete with header information (type, rank, shape, etc.). Such mapped files may only be updated by changing the associated array using indexed/pick assignment: `var[a]←b`, the new values must be of the same type as the originals.
 
 Note that a *raw* mapped file may be updated *only* if its *file offset* is 0. Note also that Windows does not support mapped files of zero length.
 

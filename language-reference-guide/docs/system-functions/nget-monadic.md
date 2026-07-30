@@ -35,13 +35,13 @@ Table: File Encodings {: #Encodings }
 
 The above UTF formats may be qualified with -BOM or -NOBOM (for example, UTF-8-BOM). See [Write Text File](nput.md).
 
-Whether or not `X` is specified, if the start of the file contains a recognised   Byte Order Mark (BOM), the file is decoded according to the BOM. Otherwise, if `X` is specified the file is decoded according to the value of `X`. Otherwise, the file is examined to try to decide its encoding and is decoded accordingly.
+If the start of the file contains a recognised Byte Order Mark (BOM), the file is decoded according to the BOM. Otherwise, the file is examined to try to decide its encoding and is decoded accordingly.
 
 The result `R` is a 3-element vector comprising `(content) (encoding) (newline)`  where:
 
 |---|---|
 |`content`|A simple character vector, or a vector of character vectors, according to the value of `flags` .|
-|`encoding`|The encoding that was actually used to read the file. If this is a UTF format, it will always include the appropriate endianness (except for UTF-8 to which endianness doesn't apply) and a -BOM or -NOBOM suffix to indicate whether or not a BOM is actually present in the file. For example, UTF-16LE-BOM. If `X` specified a user-defined encoding as a 256-element numeric vector, `encoding` will be that same vector.|
+|`encoding`|The encoding that was actually used to read the file. If this is a UTF format, it will always include the appropriate endianness (except for UTF-8 to which endianness doesn't apply) and a -BOM or -NOBOM suffix to indicate whether or not a BOM is actually present in the file. For example, UTF-16LE-BOM.|
 |`newline`|Determined by the first occurrence in the file of one of the newline characters identified in the line separator table, or `⍬` if no such line separator is found.|
 
 If `content` is simple then all its line separators (listed in the table below) are replaced by (normalised to) `⎕UCS 10`, which in the Classic Edition must be in `⎕AVU` (else `TRANSLATION ERROR`).

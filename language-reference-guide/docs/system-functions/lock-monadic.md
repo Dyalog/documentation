@@ -9,7 +9,7 @@ search:
 
 The active referent to the name in the workspace is locked.  Stop, trace and monitor settings, established by the `⎕STOP`, `⎕TRACE` and `⎕MONITOR` functions, are cancelled.
 
-The optional left argument `X` specifies to what extent the function code is hidden. `X` can be `0`, `1`, `2`, or `3` (the default) with the following meaning:
+The function code is hidden to extent `3`. The extents are:
 
 - `0`: The argument is well-formed, but could not be locked (for example, it is a dfn).
 - `1`: The object may not be displayed and you may not obtain its character form using `⎕ATX`, `⎕CR`, `⎕NR`, or `⎕VR`.

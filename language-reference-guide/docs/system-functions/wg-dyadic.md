@@ -13,7 +13,7 @@ This system function returns property values for a GUI object.
 
 If `X` refers to a non-existent GUI name, a `VALUE ERROR` is reported. If `Y` refers to a non-existent property, or to a property that is not defined for the type of object `X`, a `DOMAIN ERROR` is reported.
 
-GUI objects are named **relative** to the current namespace. A null value of `X` (referring to the namespace in which the function is being evaluated) may be omitted. The following examples are equivalent:
+GUI objects are named **relative** to the current namespace. A null value of `X` refers to the namespace in which the function is being evaluated. The following examples are equivalent:
 ```apl
 
       'F1.B1' ⎕WG 'Caption'

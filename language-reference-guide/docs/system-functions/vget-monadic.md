@@ -15,17 +15,7 @@ search:
 
 All specified names must be either undefined, or have an array value in the source namespace(s). If `Y` specifies a matrix or a vector of names, fallback values to use in cases where a name has no value can also be specified to prevent a `VALUE ERROR` from being generated.
 
-If specified, `X` must be an array that identifies one or more source namespaces. This means that `X` must be one of:
-
-* a simple character scalar or vector identifying the name of a namespace.
-* a reference to a namespace.
-* an array in which each item is one of the above. If `X` refers to multiple namespaces, then `⎕VGET` processes each item of `X` in ravel order, using the entire right argument `Y`; this is equivalent to  `X ⎕VGET¨⊂Y`.
-
-When `X` is an empty array, the prototype of the empty result `R` depends on the fallback values, if specified. If the prototype of `X` is an instance of a class that can be instantiated, such as an instance of a class with a niladic or no constructors, then a new instance of the class is made and the prototype of the result is determined by the values found within the new instance.
-
-The namespace(s) referenced must already exist, or a `VALUE ERROR` is generated.  
-
-If `X` is not specified, the source namespace is the current namespace.
+The source namespace is the current namespace.
 
 The result `R` depends on the format of `Y`.
 

@@ -7,8 +7,6 @@ search:
 
 `Y` must be a simple numeric scalar or vector that specifies one or more tokens, each with a specific non-zero token type, that are to be retrieved from the pool. Non-integer values in `Y` must fall within a range that has been allocated using `⎕TALLOC`.
 
-`X` is an optional time-out value in seconds.
-
 Shy result `R` is a scalar or vector containing the values of the tokens of type `Y` that have been retrieved from the token pool.
 
 Note that types of the tokens in the pool may be positive or negative, and the elements of `Y` may also be positive or negative.
@@ -44,7 +42,7 @@ AC
 BE
 ```
 
-`R` is an empty numeric vector `⍬` (zilde) if a timeout or a weak interrupt occurs.
+`R` is an empty numeric vector `⍬` (zilde) if a weak interrupt occurs.
 
 **Beware** - the following statement will wait forever and can only be terminated by an interrupt.
 ```apl

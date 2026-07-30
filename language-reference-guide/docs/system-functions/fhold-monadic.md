@@ -21,10 +21,6 @@ The effect is as follows:
 2. Execution is suspended until the designated files are free of holds by any other task.
 3. When all the designated files are free, execution proceeds.  Until the hold is released, other tasks using `⎕FHOLD` on any of the designated files will wait.
 
-The optional left argument `X` is a non-negative integer that specifies a time-out in milliseconds. If step 2 (see above) does not complete before the time-out value specified by `X`, `⎕FHOLD` times out and signals a `TIMEOUT` error (1006) after releasing any holds that have succeeded.
-
-A time-out value of 0 indicates that the `⎕FHOLD` should time out at once without waiting if it cannot immediately acquire all holds. If `X` is `¯1`, `⎕FHOLD` behaves as the monadic case, and does not time out.
-
 If `Y` is empty, all of the user's preceding holds (if any) are released, and execution continues.
 
 A hold is released by any of the following:

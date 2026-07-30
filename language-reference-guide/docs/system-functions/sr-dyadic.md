@@ -15,7 +15,7 @@ In versions of Dyalog APL with GUI support, a single SM object may be defined. 
 
 `Y` is an integer vector that specifies the fields which the user may visit.  In versions with GUI support, `Y` may additionally contain the names of GUI objects with which the user may also interact.
 
-If specified, `X` may be an enclosed vector of character vectors defining `EXIT_KEYS` or a 2-element nested vector defining `EXIT_KEYS` and the `INITIAL_CONTEXT`.
+`X` can be an enclosed vector of character vectors defining `EXIT_KEYS` or a 2-element nested vector defining `EXIT_KEYS` and the `INITIAL_CONTEXT`.
 
 The result `R` is the `EXIT_CONTEXT`.
 

@@ -7,7 +7,7 @@ search:
 
 `⎕UCS` converts (Unicode) characters into integers and vice versa.
 
-The optional left argument `X` is either a simple character vector or a one- or two-element nested vector. `X` or its first element is the name of a variable-length Unicode encoding scheme and must be one of:
+The left argument `X` is either a simple character vector or a one- or two-element nested vector. `X` or its first element is the name of a variable-length Unicode encoding scheme and must be one of:
 
 - `'UTF-8'`
 - `'UTF-16'`
@@ -17,41 +17,7 @@ The second element (if present) is either `0` (the default) to consume and retur
 
 If `X` does not abide by the above restrictions, a `DOMAIN ERROR` is issued.
 
-If `X` is omitted, `Y` is a simple character or integer array, and the result `R` is a simple integer or character array with the same rank and shape as `Y`.
-
-If `X` is specified, `Y` must be a simple character or integer vector, and the result `R` is a simple integer or character vector.
-
-## Monadic `⎕UCS`
-
-Monadic `⎕UCS` converts any character array to a numeric array of the same shape, or any numeric array to a character array of the same shape. When doing this, characters are converted to Unicode code points and Unicode code points are converted to characters.
-
-```apl
-
-      ⎕UCS 'Hello World'
-72 101 108 108 111 32 87 111 114 108 100
-
-      ⎕UCS 2 11⍴72 101 108 108 111 32 87 111 114 108 100
-Hello World
-Hello World
-```
-
-The code points for the Greek alphabet are situated in the 900's:
-```apl
-
-      ⎕UCS 'καλημέρα'
-954 945 955 951 956 941 961 945
-
-```
-
-Unicode also contains the APL character set. For example:
-```apl
-
-      ⎕UCS 123 40 43 47 9077 41 247 9076 9077 125
-{(+/⍵)÷⍴⍵}
-
-```
-
-## Dyadic `⎕UCS`
+`Y` must be a simple character or integer vector, and the result `R` is a simple integer or character vector.
 
 Dyadic `⎕UCS` translates between vectors of Unicode characters and one of three standard Unicode encoding schemes – UTF-8, UTF-16, or UTF-32. These represent a character vector as a vector of integers. In the case of UTF-8, the integers can be specified to be unsigned (the default) or signed.
 ```apl
@@ -69,7 +35,7 @@ Dyadic `⎕UCS` translates between vectors of Unicode characters and one of thre
 947 949 953 945 32 963 959 965
 ```
 
-### UTF-8 Signed Integers
+## UTF-8 Signed Integers
 
 By default, `⎕UCS` uses unsigned integers. For UTF-8 only, if `X` is `'UTF-8' 83`, `⎕UCS` will instead use signed integers which are then represented as single bytes (type 83). For example:
 
@@ -89,7 +55,7 @@ This facilitates storing Unicode text in native files as UTF-8. For example:
 ABCÆØÅ
 ```
 
-### UTF-16 and UCS-2
+## UTF-16 and UCS-2
 
 For most characters in the [first plane of Unicode (0000-FFFF)](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane), UTF-16 and UCS-2 are identical. However, UTF-16 can encode all Unicode characters by using up to two code units for each character.
 ```apl

@@ -14,15 +14,13 @@ search:
 
 All names must have nameclass 0, 2, 8 or 9 in the target namespace(s). For more information on nameclasses, see [`⎕NC`](nc.md).
 
-If specified, `X` must be an array that references one or more namespaces. This means that `X` must be one of:
+`X` must be an array that references one or more namespaces. This means that `X` must be one of:
 
 * a simple character scalar or vector identifying the name of a namespace.
 * a reference to a namespace.
 * an array in which each item is one of the above. If `X` refers to multiple namespaces, then `⎕VSET` processes each item of `X` in ravel order, using the entire right argument `Y`; this is equivalent to `X ⎕VSET¨⊂Y`.
 
 The namespace(s) referenced must already exist, or a `VALUE ERROR` is generated.
-
-If `X` is not specified, the target namespace is the current namespace.
 
 The result `R` is a shy reference to the target namespace(s).
 

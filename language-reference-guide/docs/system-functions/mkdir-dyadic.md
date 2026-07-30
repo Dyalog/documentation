@@ -9,7 +9,7 @@ This function creates new directories.
 
 `Y` is a character vector or scalar containing a single directory name, or a vector of character vectors containing zero or more directory names. Names must conform to the naming rules of the host Operating System.
 
-By default, for each name in `Y` the path must exist and the base name must not exist (see [File Name Parts](nparts.md)), otherwise an error is signalled. The optional left argument `X` and the variant option **Unique** can be used to amend this behaviour.
+By default, for each name in `Y` the path must exist and the base name must not exist (see [File Name Parts](nparts.md)), otherwise an error is signalled. The left argument `X` and the variant option **Unique** can be used to amend this behaviour.
 
 The result `R` depends on the value of the variant option **Unique**. If  **Unique** is not present, it is assumed to have a value of `0`.
 
@@ -18,7 +18,7 @@ The result `R` depends on the value of the variant option **Unique**. If  **Uniq
 |` 0`    | If `Y` specifies a single name, the shy result `R` is a scalar `1` if a directory was created or `0` if not. If `Y` is a vector of character vectors, `R` is a vector of `1`s and `0`s with the same length as `Y`. |
 | `1`    | If `Y` specifies a single name, the shy result `R` is a character vector containing the name of the directory that was created. If `Y` is a vector of character vectors, `R` is a vector of character vectors with the same length as `Y`. |
 
-The optional left argument `X` is a numeric scalar that modifies the default behaviour when the base name in `Y` already exists and/or the path in `Y` does not already exist. If omitted, it is assumed to be 0. Possible values and the effect that they have on the default behaviour are:
+The left argument `X` is a numeric scalar that modifies the default behaviour when the base name in `Y` already exists and/or the path in `Y` does not already exist. Possible values and the effect that they have on the default behaviour are:
 
 |---|---|
 | `0` {.shaded} | The base name in `Y` must not exist and the path in `Y` must exist, otherwise an error is signalled.                                                                           |

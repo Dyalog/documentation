@@ -7,7 +7,7 @@ search:
 
 `⎕ED` invokes the Editor.  `Y` is a simple character vector, a simple character matrix, or a vector of character vectors, containing the name(s) of objects to be edited.
 
-The optional left argument `X` is a character scalar or character vector (where `=/≢X Y`) which specifies the type(s) of the corresponding (new) object(s) named in `Y` as:
+The left argument `X` is a character scalar or character vector (where `=/≢X Y`) which specifies the type(s) of the corresponding (new) object(s) named in `Y` as:
 
 |---|---------------------------|
 |`∇`|function/operator          |
@@ -70,3 +70,4 @@ In the final example, the Edit window will display the contents of `A` as a Read
 ```apl
       (⎕ED ⍠('ReadOnly' 1)('EditName' 'Disallow'))'A'
 ```
+

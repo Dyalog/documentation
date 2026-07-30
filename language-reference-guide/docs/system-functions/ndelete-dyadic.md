@@ -9,7 +9,7 @@ This function deletes files and directories.
 
 `Y` is a character vector or scalar containing a single file or directory name, or a vector of character vectors containing zero or more file or directory names. Names must conform to the naming rules of the host Operating System.
 
-The optional left argument `X` is a numeric scalar; valid values are  shown in the following table. If omitted, its default value is 0.
+The left argument `X` is a numeric scalar; valid values are  shown in the following table.
 
 |---|------------------------------------------------------------------------------------------|
 |0 { .shaded } |Each file or directory with the given name must exist.                                    |

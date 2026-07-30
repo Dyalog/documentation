@@ -17,7 +17,7 @@ Instructional examples using `⎕NA` can be found in the supplied workspace `qua
 
 The DLL may be part of the standard operating system software, a library purchased from a third party supplier, or one that you have written yourself.
 
-The right argument `Y` is a character vector that identifies the name and syntax of the function to be associated. The left argument `X` is a character vector that contains the name to be associated with the external function. If the `⎕NA` is successful, a function (name class 3) is established in the active workspace with name `X`. If `X` is omitted, the name of the external function itself is used for the association.
+The right argument `Y` is a character vector that identifies the name and syntax of the function to be associated. The left argument `X` is a character vector that contains the name to be associated with the external function. If the `⎕NA` is successful, a function (name class 3) is established in the active workspace with name `X`.
 
 The shy result `R` is a character vector containing the name of the external function that was fixed.
 

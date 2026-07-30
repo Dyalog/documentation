@@ -13,7 +13,7 @@ If `Y` is a name (that is, is a character vector) then the result `R` is a vect
 
 If `Y` is a reference  then the result `R` is a vector of references to  the direct GUI children of `Y`, named or otherwise.
 
-The optional left argument `X` is a character vector which specifies the `Type` of GUI object to be reported; if `X` is not specified, no such filtering is performed.
+No filtering by the `Type` of GUI object is performed.
 
 Names of objects further down the tree are not returned, but can be obtained by recursive use of `⎕WN`.
 

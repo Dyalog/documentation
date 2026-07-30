@@ -9,17 +9,11 @@ search:
 
 In this section, the term *namespace* covers scripted Namespaces, Classes and Interfaces.
 
-`Y` may be a simple character vector, or  a vector of character vectors or character scalars. The value of `X` determines what `Y` may contain.
+`Y` may be a simple character vector, or  a vector of character vectors or character scalars. What `Y` may contain.
 
 If `Y` is a simple character vector, it must start with `file://`, followed by the name of a file which must exist. The contents of the file must follow the same rules that apply to `Y` when `Y` is a vector of character vectors or scalars. The file name can be relative or absolute; when considering cross-platform portability, using "/" as the directory delimiter is recommended, although "\" is also valid under Windows.
 
-If specified, `X` must be a numeric scalar. It may currently take the value `0`, `1` or `2`. If not specified, the value is assumed to be `1`.
-
-If `X` is `0`, `Y` must specify a single valid *namespace* which may or may not be named, or a file containing such a definition. If so, the shy result `R` contains a reference to the *namespace*. Even if the *namespace* is named, it is not established *per se*, although it will exist for as long as at least one reference to it exists.
-
-If `X` is `1`, `Y` must specify a single valid *namespace* which may or may not be named, or a file containing such a definition.  If so, the shy result `R` contains a reference to the *namespace*. If `Y` contains the definition of a named *namespace*, the *namespace* is established in the workspace.
-
-If `X` is `2`, `Y` is either a character vector containing the name of a script file, or a vector of character vectors that represents a script.
+`Y` must specify a single valid *namespace* which may or may not be named, or a file containing such a definition.  If so, the shy result `R` contains a reference to the *namespace*. If `Y` contains the definition of a named *namespace*, the *namespace* is established in the workspace.
 
 `Y` may specify a series of **named** *namespaces* or function definitions,   or a combination of functions and namespaces.
 
