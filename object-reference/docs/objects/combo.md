@@ -17,7 +17,7 @@ Note that if the user first selects an item from the list box, then changes it i
 !!! warning
     Windows truncates the contents of the edit field (reflected in the value of the Text property) to 510 characters.
 
-For a Combo with [Style ](../properties/style.md)`'Simple'`, the [Index](../properties/index-property.md) property specifies or reports the position of [Items](../properties/items.md) in the list box as a positive integer value. If [Index](../properties/index-property.md) has the value "n", it means that the "n<sup>th</sup>" item in [Items](../properties/items.md) is displayed on the top line in the list box. Note that [Index](../properties/index-property.md) can only be set using [`⎕WS`](../../../language-reference-guide/system-functions/ws) and **not** by [`⎕WC`](../../../language-reference-guide/system-functions/wc) and is ignored if all the [Items](../properties/items.md) fit in the list box. The default value for [Index](../properties/index-property.md) is `⎕IO`.
+For a Combo with [Style ](../properties/style.md)`'Simple'`, the [Index](../properties/index-property.md) property specifies or reports the position of [Items](../properties/items.md) in the list box as a positive integer value. If [Index](../properties/index-property.md) has the value "n", it means that the "n<sup>th</sup>" item in [Items](../properties/items.md) is displayed on the top line in the list box. Note that [Index](../properties/index-property.md) can only be set using [`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic) and **not** by [`⎕WC`](../../../language-reference-guide/system-functions/wc-dyadic) and is ignored if all the [Items](../properties/items.md) fit in the list box. The default value for [Index](../properties/index-property.md) is `⎕IO`.
 
 The [SelText](../properties/seltext.md) property identifies the portion of the edit field that is highlighted. It is not applicable to a Combo with [Style ](../properties/style.md)`'Drop'` as the user cannot enter or change data in its edit field.
 
@@ -29,7 +29,7 @@ If the [Style](../properties/style.md) is `'Simple'` or `'DropEdit'`, the [HScro
 
 [VScroll](../properties/vscroll.md) and [HScroll](../properties/hscroll.md) may only be set when the object is created and may not subsequently be changed.
 
-Note that when you change the [Items](../properties/items.md) property using [`⎕WS`](../../../language-reference-guide/system-functions/ws), the [Text](text.md), [SelItems](../properties/selitems.md) and [SelText](../properties/seltext.md) properties are all reset to their default values.
+Note that when you change the [Items](../properties/items.md) property using [`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic), the [Text](text.md), [SelItems](../properties/selitems.md) and [SelText](../properties/seltext.md) properties are all reset to their default values.
 
 The Combo object will report a [Select](../methodorevents/select.md) event (if enabled) when the user chooses an item from the list box. It will generate a [Change](../methodorevents/change.md) event (if enabled) when the user manually alters the contents of the edit field and then changes the focus to another object.
 

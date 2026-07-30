@@ -8,8 +8,8 @@ search:
 !!! Warning "Warning"
     If the right argument to _dyadic execute_ could include user input, then there is a risk to data and systems. To reduce this risk, a system function might be more appropriate than the _dyadic execute_ function. For example:
 
-	* use [`⎕VGET`](../system-functions/vget.md) or [`⎕VSET`](../system-functions/vset.md) to get or set the value of one or more variables named within one or more character vectors.
-	* use [`⎕VFI`](../system-functions/vfi.md), [`⎕JSON`](../system-functions/json.md), or [`⎕CSV`](../system-functions/csv.md) to make numbers in text form into actual numbers.
+	* use [`⎕VGET`](../system-functions/vget-monadic.md) or [`⎕VSET`](../system-functions/vset-monadic.md) to get or set the value of one or more variables named within one or more character vectors.
+	* use [`⎕VFI`](../system-functions/vfi-monadic.md), [`⎕JSON`](../system-functions/json-monadic.md), or [`⎕CSV`](../system-functions/csv-monadic.md) to make numbers in text form into actual numbers.
     * use [`⎕OR`](../system-functions/or.md) to call a function by name; exact usage depends on valency. For example, in the namespace with the reference `nsRef`:
       * niladic – `(nsRef.⎕OR fnName)nsRef.{⍺⍺})⍬`
       * monadic – `(nsRef.⎕OR fnName)nsRef.{⍺⍺ ⍵}Y`

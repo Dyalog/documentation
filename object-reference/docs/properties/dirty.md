@@ -2,7 +2,7 @@
 
 **Description**
 
-The Dirty property indicates whether the current page is considered to have content (either because [`⎕WC`](../../../language-reference-guide/system-functions/wc) has been used to write to it, or [PagesBeginDirty](pagesbegindirty.md) is set to `1`).
+The Dirty property indicates whether the current page is considered to have content (either because [`⎕WC`](../../../language-reference-guide/system-functions/wc-dyadic) has been used to write to it, or [PagesBeginDirty](pagesbegindirty.md) is set to `1`).
 
 Dirty can be set to `1` to force an otherwise empty page to be printed (for example, if PagesBeginDirty has been set to `0`).
 

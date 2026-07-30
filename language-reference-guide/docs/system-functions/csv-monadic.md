@@ -48,7 +48,7 @@ Fixed-width fields do not require these options and they are ignored if fixed-wi
 
 If `Y[1]` is a file name or tie number *Description* may be one of:
 
-- a character vector specifying the file encoding such as `'UTF-8'` (see [File Encodings](nget.md)).
+- a character vector specifying the file encoding such as `'UTF-8'` (see [File Encodings](nget-dyadic.md)).
 - a 256-element numeric vector that maps each possible byte value (0-255) to a Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value may appear in the table more than once.
 
 If omitted or empty, the file encoding is deduced (see below).
@@ -212,7 +212,7 @@ If `Y[4]` does specify that the data contains a header then `R` is a 2-element v
 
 Data may be read from a named file or a tied native file. A tied native file may be read in sections by repeatedly invoking `⎕CSV` for a specified maximum number of records (specified by the Records variant) until no more data is read.
 
-In all cases the files must contain text using one of the supported encodings (see [File Encodings](nget.md)). The method used to determine the file encoding is as follows:
+In all cases the files must contain text using one of the supported encodings (see [File Encodings](nget-dyadic.md)). The method used to determine the file encoding is as follows:
 
 - If a Byte Order Mark (BOM) is encountered at the start of the file, it is used regardless of `Y[2]` (if specified). Note, however, that the BOM can only be encountered if the file is read from the start - specifically, if a native file is read in sections, any BOM present will only be encountered when the first section is read.
 - Otherwise, the file will be read and decoded according to the file encoding in `Y[2]` if specified.

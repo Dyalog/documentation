@@ -82,7 +82,7 @@ For details and more examples, see [Export from Data](#export-from-data) and [Ex
 
 ## Name Mangling
 
-When `⎕JSON` converts a JSON document to APL data and a member of a JSON object has a name that is not a valid APL name, the member is renamed using a name mangling algorithm. This results in a name that begins with `⍙`. Any characters that cannot be part of an APL name are replaced with their [decimal Unicode code point](ucs.md#monadic-ucs) surrounded by `⍙`s.
+When `⎕JSON` converts a JSON document to APL data and a member of a JSON object has a name that is not a valid APL name, the member is renamed using a name mangling algorithm. This results in a name that begins with `⍙`. Any characters that cannot be part of an APL name are replaced with their [decimal Unicode code point](ucs-monadic.md) surrounded by `⍙`s.
 
 <h3 class="example">Example</h3>
 

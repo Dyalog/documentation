@@ -28,8 +28,8 @@ If `⎕PP` is set to a value `≥17` (when `⎕FR` is 645) or 34 (when `⎕FR` i
 `⎕PP` does **not** apply in the following contexts:
 
 - [Array notation output](display-of-arrays.md#array-notation) (when `]APLAN.Output` is on)
-- [`⎕JSON`](json.md) export
-- [`⎕CSV`](csv.md) export
+- [`⎕JSON`](json-monadic.md) export
+- [`⎕CSV`](csv-monadic.md) export
 
 ## See Also
 

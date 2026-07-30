@@ -9,7 +9,7 @@ This function creates new directories.
 
 `Y` is a character vector or scalar containing a single directory name, or a vector of character vectors containing zero or more directory names. Names must conform to the naming rules of the host Operating System.
 
-By default, for each name in `Y` the path must exist and the base name must not exist (see [File Name Parts](nparts.md)), otherwise an error is signalled. The variant option **Unique** can be used to amend this behaviour.
+By default, for each name in `Y` the path must exist and the base name must not exist (see [File Name Parts](nparts-monadic.md)), otherwise an error is signalled. The variant option **Unique** can be used to amend this behaviour.
 
 The result `R` depends on the value of the variant option **Unique**. If  **Unique** is not present, it is assumed to have a value of `0`.
 
@@ -23,7 +23,7 @@ The result `R` depends on the value of the variant option **Unique**. If  **Uniq
 `⎕MKDIR` may be applied using the variant operator with the option **Unique**. There is no primary option.
 
 ## Unique Option (Boolean)
-The **Unique** option specifies whether the base name (see [File Name Parts](nparts.md)) in `Y` is modified so that the name is unique (does not already exist).
+The **Unique** option specifies whether the base name (see [File Name Parts](nparts-monadic.md)) in `Y` is modified so that the name is unique (does not already exist).
 
 | Unique            | Effect on Behaviour  |
 |-------------------|----------------------|

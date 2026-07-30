@@ -7,7 +7,7 @@ search:
 
 `⎕PATH` is a simple character vector representing a blank-separated list of namespaces.  It is approximately analogous to the PATH variable in Windows or UNIX.
 
-The `⎕PATH` variable can be used to identify a namespace in which commonly used utility functions reside.  Functions or operators (**NOT** variables) which are copied into this namespace and *exported* (see [Export Object](export.md)) can then be used directly from anywhere in the workspace without giving their full path names. `⎕PATH` has Session scope.
+The `⎕PATH` variable can be used to identify a namespace in which commonly used utility functions reside.  Functions or operators (**NOT** variables) which are copied into this namespace and *exported* (see [Export Object](export-dyadic.md)) can then be used directly from anywhere in the workspace without giving their full path names. `⎕PATH` has Session scope.
 
 <h2 class="example">Example</h2>
 
@@ -22,7 +22,7 @@ To make the `DISPLAY` function available directly from within any namespace.
 
 In detail, `⎕PATH` works as follows:
 
-When a reference to a name cannot be found in the current namespace, the system searches for it from left to right in the list of namespaces indicated by `⎕PATH`.  In each namespace, if the name references a defined function (or operator) *and* the export type of that function is non-zero (see [Export Object](export.md) ), then it is used to satisfy the reference.  If the search exhausts all the namespaces in `⎕PATH` without finding a qualifying reference, the system issues a `VALUE ERROR` in the normal manner.
+When a reference to a name cannot be found in the current namespace, the system searches for it from left to right in the list of namespaces indicated by `⎕PATH`.  In each namespace, if the name references a defined function (or operator) *and* the export type of that function is non-zero (see [Export Object](export-dyadic.md) ), then it is used to satisfy the reference.  If the search exhausts all the namespaces in `⎕PATH` without finding a qualifying reference, the system issues a `VALUE ERROR` in the normal manner.
 
 The special character `↑` stands for the list of namespace ancestors:
 ```apl

@@ -120,7 +120,7 @@ perform these corresponding operations.
 
 The Grid object maintains a buffer of the most recent 8 changes made by the
 user since the [Values](../properties/values.md) property was last set
-by [`⎕WC`](../../../language-reference-guide/system-functions/wc) or [`⎕WS`](../../../language-reference-guide/system-functions/ws).
+by [`⎕WC`](../../../language-reference-guide/system-functions/wc-dyadic) or [`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic).
 Your application can restore these changes one by one by calling the [Undo](../methodorevents/undo.md) method. The [Undo](../methodorevents/undo.md) method restores the most recent
 change made by the user and removes that change from the undo stack. It is
 therefore not possible to "undo an undo".

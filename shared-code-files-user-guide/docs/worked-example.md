@@ -91,7 +91,7 @@ X
 _fk
 ```
 
-Finally, verify that the result of [`⎕NL`](../../language-reference-guide/system-functions/nl) and the names exposed by the shared code file are identical (the only difference should be the three names defined since the [`)CLEAR`](../../language-reference-guide/system-commands/clear) operation):
+Finally, verify that the result of [`⎕NL`](../../language-reference-guide/system-functions/nl-monadic) and the names exposed by the shared code file are identical (the only difference should be the three names defined since the [`)CLEAR`](../../language-reference-guide/system-commands/clear) operation):
 ```apl
       (⎕NL ⍳10)≡1 listDWX ⍳10
 0

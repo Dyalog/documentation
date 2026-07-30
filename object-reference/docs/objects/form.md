@@ -60,7 +60,7 @@ refer to the horizontal scrollbar. The [Thumb](../properties/thumb.md) property 
 thumb in the vertical and horizontal scrollbars respectively. When the user
 attempts to move the thumb in one of the scrollbars, the Form generates a [VScroll](../methodorevents/vscroll.md) or [HScroll](../methodorevents/hscroll.md) event.
 
-[VScroll](../methodorevents/vscroll.md) and [HScroll](../methodorevents/hscroll.md) cannot be changed using [`⎕WS`](../../../language-reference-guide/system-functions/ws).
+[VScroll](../methodorevents/vscroll.md) and [HScroll](../methodorevents/hscroll.md) cannot be changed using [`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic).
 However, you can make a scrollbar disappear by setting the corresponding element
 of [Range](../properties/range.md) to 1, thus allowing you to
 dynamically switch the scrollbar off and on. Note however that doing so will

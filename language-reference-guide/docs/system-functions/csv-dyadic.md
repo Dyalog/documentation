@@ -48,7 +48,7 @@ The left argument `X` is either:
 
 If `Y[1]` is a file name or tie number, *Description* may be:
 
-- a character vector specifying the file encoding such as `'UTF-8'` (see [File Encodings](nget.md)).
+- a character vector specifying the file encoding such as `'UTF-8'` (see [File Encodings](nget-dyadic.md)).
 - a 256-element numeric vector that maps each possible byte value (0-255) to a Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value may appear in the table more than once.
 
 If `Y[1]` is empty, *Description* may be a character scalar `'S'` (simple) or `'N'` (nested). If omitted, the default is `'S'`
@@ -64,7 +64,7 @@ Dyadic `⎕CSV` may be applied using the _variant_ operator with the following o
 |EscapeChar|The escape character, which may be specified as an empty character vector (meaning none is defined) or a character scalar|`0`|
 |ForceQuotes|A number specifying the degree to which quotes are applied around fields even if not strictly required. Possible values are:<ul><li>`0` – add only if required</li><li>`1` – add to all fields containing character data and to fields containing numeric data if required</li><li>`2` – add to all fields even if not required</li></ul>If ForceQuotes is a scalar, the value applies to all columns; if it is a vector of values then each value applies to the corresponding column.|`0`|
 |IfExists|a character vector `'Error'` or `'Replace'` which specifies, when creating a named file which already exists, whether to overwrite it ( `'Replace'` ) or signal an error ( `'Error'` )|`'Error'`|
-|LineEnding|the line ending sequence - see [Line separators:](nget.md)|(13 10) on Windows; 10 on other platforms|
+|LineEnding|the line ending sequence - see [Line separators:](nget-monadic.md)|(13 10) on Windows; 10 on other platforms|
 |QuoteChar|The field quote character (delimiter), which may be specified as an empty character vector (meaning none is defined) or a character scalar|`"`|
 |Separator|the field separator, any single character. If Widths is other than `⍬` , Separator is ignored.|`','`|
 |Thousands|the thousands separator in numeric fields, which can be specified as an empty character vector (meaning no separator is defined) or a character scalar|`''`|

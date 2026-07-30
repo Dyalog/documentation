@@ -6,7 +6,7 @@ search:
 
 # <span>Update Function Time and User Stamp</span> `{R}←X(1159⌶)Y`{{key}}
 
-`Y` is an array of function names in the same format as the right argument of `⎕AT`. For further information, see [Attributes](../../system-functions/at.md).
+`Y` is an array of function names in the same format as the right argument of `⎕AT`. For further information, see [Attributes](../../system-functions/at-monadic.md).
 
 `X` is an array of function attributes in the same format as the output of `⎕AT`.
 

@@ -8,11 +8,11 @@ When an application places data in the Windows clipboard, it may store it in one
 
 In addition, the [Array](../properties/array.md) property may be used to set or retrieve clipboard contents in Dyalog APL array format.
 
-Data is read from the clipboard using [`⎕WG`](../../../language-reference-guide/system-functions/wg), specifying the name of the appropriate property for the data that you want.
+Data is read from the clipboard using [`⎕WG`](../../../language-reference-guide/system-functions/wg-dyadic), specifying the name of the appropriate property for the data that you want.
 
-If the data has been stored in CF_Text format, the value of [Formats](../properties/formats.md) will include `'Text'` and you may retrieve the data by querying the value of the [Text](../properties/text.md) property with [`⎕WG`](../../../language-reference-guide/system-functions/wg).
+If the data has been stored in CF_Text format, the value of [Formats](../properties/formats.md) will include `'Text'` and you may retrieve the data by querying the value of the [Text](../properties/text.md) property with [`⎕WG`](../../../language-reference-guide/system-functions/wg-dyadic).
 
-If the data has been stored in **device-independent** bitmap format, the value of [Formats](../properties/formats.md) will include `'CBits'`, `'Bits'` and `'CMap'`. To retrieve the bitmap pattern and colour map, you may query the values of the [CBits](../properties/cbits.md), or [Bits](../properties/bits.md) and [CMap](../properties/cmap.md) properties using [`⎕WG`](../../../language-reference-guide/system-functions/wg).
+If the data has been stored in **device-independent** bitmap format, the value of [Formats](../properties/formats.md) will include `'CBits'`, `'Bits'` and `'CMap'`. To retrieve the bitmap pattern and colour map, you may query the values of the [CBits](../properties/cbits.md), or [Bits](../properties/bits.md) and [CMap](../properties/cmap.md) properties using [`⎕WG`](../../../language-reference-guide/system-functions/wg-dyadic).
 
 If the data has been stored in **device-dependent** bitmap format, only the bitmap pattern is available and [Formats](../properties/formats.md) will contain `'Bits'` but not `'CMap'`. In this case you can query the [Bits](../properties/bits.md) property but not [CMap](../properties/cmap.md) without which you cannot realise the bitmap. However, if data was posted in this format, it is highly probable that the current Windows colour map applies to it. For a standard 16-colour device this is given under the description of the [CMap](../properties/cmap.md) property.
 
@@ -27,7 +27,7 @@ The next example retrieves a bitmap from the clipboard and defines it as a [Bitm
       'BM' ⎕WC 'Bitmap' '', 'CL' ⎕WG 'Bits' 'CMap'
 ```
 
-Data may be placed in the clipboard using [`⎕WC`](../../../language-reference-guide/system-functions/wc) or [`⎕WS`](../../../language-reference-guide/system-functions/ws). To store text, you simply set the [Text](../properties/text.md) property. You may use a simple character vector or matrix, or a vector of character vectors. For example :
+Data may be placed in the clipboard using [`⎕WC`](../../../language-reference-guide/system-functions/wc-dyadic) or [`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic). To store text, you simply set the [Text](../properties/text.md) property. You may use a simple character vector or matrix, or a vector of character vectors. For example :
 ```apl
       'CL' ⎕WS 'Text' 'Hello World'
 ```
@@ -43,7 +43,7 @@ or
       'CL' ⎕WS ('Bits' Bits)('CMap' CMap)
 ```
 
-Note that if you use the latter method, you must set **both** properties in one [`⎕WS`](../../../language-reference-guide/system-functions/ws) statement. This is also true if you wish to store data in both Text and Bitmap formats together.
+Note that if you use the latter method, you must set **both** properties in one [`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic) statement. This is also true if you wish to store data in both Text and Bitmap formats together.
 
 The [Metafile](../properties/metafileobj.md) property allows graphical information to be restored in and retrieved from the clipboard in Windows Metafile format. See the description of the [Metafile](../properties/metafileobj.md) property for details.
 

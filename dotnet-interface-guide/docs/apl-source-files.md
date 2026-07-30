@@ -183,7 +183,7 @@ This is compiled to a Windows executable (**.exe**) using **make.bat** and run f
 
 ### Defining Namespaces
 
-At least one namespace must be specified in an APL Source file. Namespaces are specified in an APL Source file using the `:Namespace` and `:EndNamespace` statements. Although you can use [`⎕NS`](../../language-reference-guide/system-functions/ns/) and [`⎕CS`](../../language-reference-guide/system-functions/cs/) within functions inside an APL Source file, you should not use these system functions outside function bodies; such use is not prevented, but the results will be unpredictable.
+At least one namespace must be specified in an APL Source file. Namespaces are specified in an APL Source file using the `:Namespace` and `:EndNamespace` statements. Although you can use [`⎕NS`](../../language-reference-guide/system-functions/nns-dyadic) and [`⎕CS`](../../language-reference-guide/system-functions/cs/) within functions inside an APL Source file, you should not use these system functions outside function bodies; such use is not prevented, but the results will be unpredictable.
 
 `:Namespace Name` introduces a new namespace  relative to the current namespace called `Name`.
 

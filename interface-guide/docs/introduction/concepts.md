@@ -113,10 +113,10 @@ The Dyalog APL GUI is implemented by the following system functions :
 
 |--------------------------------------------------------------|---------------|--------------------------------------------|
 |[`⎕DQ`](../../../language-reference-guide/system-functions/dq)|Dequeue        |processes user actions, invoking callbacks  |
-|[`⎕NQ`](../../../language-reference-guide/system-functions/nq)|Enqueue        |generates an event under program control    |
-|[`⎕WC`](../../../language-reference-guide/system-functions/wc)|Create Object  |creates new object with specified properties|
-|[`⎕WG`](../../../language-reference-guide/system-functions/wg)|Get Properties |gets values of properties from an object    |
-|[`⎕WN`](../../../language-reference-guide/system-functions/wn)|Object Names   |reports names of all children of an object  |
-|[`⎕WS`](../../../language-reference-guide/system-functions/ws)|Set Properties |sets values of properties for an object     |
+|[`⎕NQ`](../../../language-reference-guide/system-functions/nq-monadic)|Enqueue        |generates an event under program control    |
+|[`⎕WC`](../../../language-reference-guide/system-functions/wc-dyadic)|Create Object  |creates new object with specified properties|
+|[`⎕WG`](../../../language-reference-guide/system-functions/wg-dyadic)|Get Properties |gets values of properties from an object    |
+|[`⎕WN`](../../../language-reference-guide/system-functions/wn-monadic)|Object Names   |reports names of all children of an object  |
+|[`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic)|Set Properties |sets values of properties for an object     |
 
 GUI Objects are a special type of *namespace* and have a name class of 9. They may therefore be managed like any other workspace object. This means that they can be localised in function headers and erased with `⎕EX`. GUI objects are saved with your workspace and reappear when it is loaded or copied.

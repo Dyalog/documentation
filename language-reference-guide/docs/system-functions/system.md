@@ -32,7 +32,7 @@ Getting the currently running APL interpreter's version number:
 The result `R` is a namespace in the root of the namespace where `⎕SYSTEM` was called (`#` or `⎕SE`) and contains only namespace members. Each sub-namespace contains only variable members.
 
 !!! Info "Information"
-    More members might be added in a future release of Dyalog, but `R` will remain serialisable using [`1⎕JSON`](json.md).
+    More members might be added in a future release of Dyalog, but `R` will remain serialisable using [`1⎕JSON`](json-dyadic.md).
 
 !!! Warning "Warning"
     Do attempt to add or modify members as changes will not be persisted. Instead, clone the namespace using `⎕NS ⎕SYSTEM` and modify the result, but note that this locks down dynamic values like `⎕SYSTEM.Directories.Current` and `⎕SYSTEM.OS.UTCOffset`.
@@ -58,7 +58,7 @@ This namespace provides pertinent locations in the file system.
 The current working directory.
 
 !!! Hint "Hints and Recommendations"
-    This can be changed using the `]CD` user command, but doing so after [tying component files](ftie.md) or [native files](ntie.md) or [associating external functions](na.md) can lead to data loss.
+    This can be changed using the `]CD` user command, but doing so after [tying component files](ftie.md) or [native files](ntie.md) or [associating external functions](na-dyadic.md) can lead to data loss.
 
 #### Directories.Initial
 The directory from which Dyalog was started.
@@ -67,7 +67,7 @@ The directory from which Dyalog was started.
 The operating system's recommended location for temporary files.
 
 !!! Info "Information"
-    This location is for an individual user and can be cleaned up without warning, so use it only as a place to put files that will immediately be used and will not be needed later. It is good practice to [delete](ndelete.md) such files when no longer needed.
+    This location is for an individual user and can be cleaned up without warning, so use it only as a place to put files that will immediately be used and will not be needed later. It is good practice to [delete](ndelete-monadic.md) such files when no longer needed.
 
 ### Executable
 This namespace provides information about the specific interpreter instance in which `⎕SYSTEM` was called.

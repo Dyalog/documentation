@@ -24,7 +24,7 @@ The namespace(s) referenced must already exist, or a `VALUE ERROR` is generated.
 
 The result `R` is a shy reference to the target namespace(s).
 
-See also [`⎕VGET`](vget.md).
+See also [`⎕VGET`](vget-monadic.md).
 
 ## Examples
 

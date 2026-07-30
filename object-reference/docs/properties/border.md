@@ -8,7 +8,7 @@ For a [Form](../objects/form.md) or [SubForm](../objects/subform.md), the value 
 
 ## Note
 
-The value of the Border property may only be assigned by [`⎕WC`](../../../language-reference-guide/system-functions/wc) and may **not** be changed using [`⎕WS`](../../../language-reference-guide/system-functions/ws).
+The value of the Border property may only be assigned by [`⎕WC`](../../../language-reference-guide/system-functions/wc-dyadic) and may **not** be changed using [`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic).
 
 **Application**
 

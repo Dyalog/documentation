@@ -20,7 +20,7 @@ The target namespace is the current namespace.
 
 The result `R` is a shy reference to the target namespace(s).
 
-See also [`⎕VGET`](vget.md).
+See also [`⎕VGET`](vget-monadic.md).
 
 ## Examples
 
