@@ -163,17 +163,18 @@ Table: Threads Menu Operations {: #threads-menu-operations }
 
 ## The Layout Menu
 
-The *Layout* menu (`⎕SE.mb.layout`) provides layout options for the Debugger.
+The *Layout* menu (`⎕SE.mb.layout`) selects the layout of the Session and of the tools that are docked in it, including the Editor and the Debugger.
 
 Table: Layout Menu Operations {: #debugger-layout-menu-operations }
 
-|Item                   |Action             |Description                                        |
-|-----------------------|-------------------|---------------------------------------------------|
-|Classic                |APL callback       |Detaches the Debugger window                       |
-|Debugger at the bottom |APL callback       |Docks the Debugger at the bottom (default)         |
-|Debugger on the left   |APL callback       |Docks the Debugger on the left                     |
+|Item                                |Action      |Description                                                                                                                                              |
+|------------------------------------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Open…                               |APL callback|Displays the *Open Session layout* dialog box, from which a Session layout file (*.layout*) can be selected                                                 |
+|Classic                             |APL callback|Selects Classic Dyalog mode, in which the Debugger is a separate window containing the Tracer, with the Left Argument pane docked to its left and the Right Argument pane docked to its right|
+|Debugger at the bottom              |APL callback|Docks the Debugger at the bottom of the Session window (default)                                                                                          |
+|Classic with Vertical Inline Tracing|APL callback|As *Classic*, but with the Left Argument pane docked above the Tracer and the Right Argument pane docked below it                                          |
 
-The selected option does *not* persist if you restart the session.
+The selected layout is saved when Dyalog exits and is restored the next time it starts; see the [LAYOUT_FILE](../../windows-installation-and-configuration-guide/configuration-parameters/layout-file) parameter.
 
 ## The Help Menu
 
