@@ -169,10 +169,10 @@ Table: Layout Menu Operations {: #debugger-layout-menu-operations }
 
 |Item                                |Action      |Description                                                                                                                                              |
 |------------------------------------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-|Open…                               |APL callback|Displays the *Open Session layout* dialog box, from which a Session layout file (*.layout*) can be selected                                                 |
-|Classic                             |APL callback|Selects Classic Dyalog mode, in which the Debugger is a separate window containing the Tracer, with the Left Argument pane docked to its left and the Right Argument pane docked to its right|
-|Debugger at the bottom              |APL callback|Docks the Debugger at the bottom of the Session window (default)                                                                                          |
-|Classic with Vertical Inline Tracing|APL callback|As *Classic*, but with the Left Argument pane docked above the Tracer and the Right Argument pane docked below it                                          |
+|Open…                               |&nbsp;      |Displays the *Open Session layout* dialog box, from which a Session layout file (*.layout*) can be selected                                                 |
+|Classic                             |&nbsp;      |Selects Classic Dyalog mode, in which the Debugger is a separate window containing the Tracer, with the Left Argument pane docked to its left and the Right Argument pane docked to its right|
+|Debugger at the bottom              |&nbsp;      |Docks the Debugger at the bottom of the Session window (default)                                                                                          |
+|Classic with Vertical Inline Tracing|&nbsp;      |As *Classic*, but with the Left Argument pane docked above the Tracer and the Right Argument pane docked below it                                          |
 
 The selected layout is saved when Dyalog exits and is restored the next time it starts; see the [LAYOUT_FILE](../../windows-installation-and-configuration-guide/configuration-parameters/layout-file) parameter.
 
