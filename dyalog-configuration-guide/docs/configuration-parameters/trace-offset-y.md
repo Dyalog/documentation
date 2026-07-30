@@ -1,6 +1,6 @@
 # Trace_Offset_Y
 
-The number of characters by which a Trace window is staggered vertically from the previous one. Applies only when [`ClassicMode`](classicmode.md) is `1` and [`SingleTrace`](singletrace.md) is `0`.
+The number of characters by which a Trace window is staggered vertically from the previous one. Applies only in Classic Dyalog mode.
 
 Valid values are an integer number of character units.
 

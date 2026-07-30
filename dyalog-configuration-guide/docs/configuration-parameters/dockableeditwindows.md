@@ -1,6 +1,6 @@
 # DockableEditWindows
 
-Whether individual edit windows can be undocked from (and docked back into) the MDI Editor window. This applies only when [`ClassicMode`](classicmode.md) is `1`.
+Whether individual edit windows can be undocked from (and docked back into) the MDI Editor window. This applies only in Classic Dyalog mode.
 
 Valid values are:
 
@@ -9,6 +9,5 @@ Valid values are:
 
 Default is `0`.
 
-Related parameters: [ClassicMode](classicmode.md).
 
 See also the [Trace/Edit tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab) of the Windows Configuration Dialog.

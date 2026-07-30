@@ -16,7 +16,7 @@ If the name is followed by a line-number in square brackets, for example, `MyFn[
 
 ## Window Management (Standard)
 
-Unless *Classic Dyalog mode* is selected (*Options/Configure/Trace/Edit*), the Editor is a Multiple Document Interface (MDI) window that may be a stand-alone window, or be docked in the Session window. Each of the objects being edited is displayed in a separate sub-window. Individual edit windows are managed using standard MDI facilities.
+Unless Classic Dyalog mode is selected from the *Layout* menu, the Editor is a Multiple Document Interface (MDI) window that may be a stand-alone window, or be docked in the Session window. Each of the objects being edited is displayed in a separate sub-window. Individual edit windows are managed using standard MDI facilities.
 
 ![](img/editor-2.png)
 
@@ -44,12 +44,9 @@ Note that when the Editor has the focus, the Editor menubar is displayed in plac
 
 ## Window Management (Classic Dyalog mode)
 
-If *Classic Dyalog mode* is selected (*Options/Configure/Trace/Edit*) each Edit window is a top-level window created as a child of the Session window. This means that normally Edit windows appear on top of the Session. However, if the **SessionOnTop** parameter is set, the Session window, when given the focus, will appear on top of Edit windows.
+If Classic Dyalog mode is selected from the [Layout menu](session-menubar.md#the-layout-menu), each Edit window is a top-level window created as a child of the Session window. This means that normally Edit windows appear on top of the Session.
 
-When the first Edit window is opened, its position is determined as follows:
-
-- If the **ClassicModeSavePosition** parameter is set, the first Edit window is displayed at the position that was previously occupied by the most recently saved Edit window.
-- If not, the first edit window is created at the position specified by the **edit_first_y** and **edit_first_x** parameters which  are specified in terms of the size of a character in the current font relative to the top-left corner of the screen.
+The first Edit window is created at the position specified by the **edit_first_y** and **edit_first_x** parameters which  are specified in terms of the size of a character in the current font relative to the top-left corner of the screen.
 
 The initial size of an edit window is specified by the **edit_rows** and **edit_cols** parameters.
 

@@ -1,6 +1,6 @@
 # Trace_First_X
 
-The initial horizontal position, in character units, of the first Trace window; subsequent Trace windows are staggered from it. Applies only when [`ClassicMode`](classicmode.md) is `1`.
+The initial horizontal position, in character units, of the first Trace window; subsequent Trace windows are staggered from it. Applies only in Classic Dyalog mode.
 
 Valid values are an integer number of character units.
 

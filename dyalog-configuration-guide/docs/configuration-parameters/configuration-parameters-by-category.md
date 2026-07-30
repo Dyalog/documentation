@@ -16,6 +16,7 @@ These control the Session log and the buffers that hold input and function-key d
 |[`Log_File_InUse`](log-file-inuse.md)|Whether the Session log is saved to the Session log file and reloaded the next time a Session is started|
 |[`Log_Size`](log-size.md)|The size of the Session log buffer|
 |[`Session_File`](session-file.md)|The name of the file from which the Session (`⎕SE`) is loaded when Dyalog starts|
+|[`LAYOUT_FILE`](layout-file.md)|The Session layout file, recording the docking layout of the Session|
 |[`History_Size`](history-size.md)|The size of the buffer used to store previously entered (input) lines in the Session|
 |[`Input_Size`](input-size.md)|The size of the buffer used to store marked lines (lines awaiting execution) in the Session|
 |[`PFKey_Size`](pfkey-size.md)|The size of the buffer used to store programmable function key definitions (see Program Function Key (`⎕PFKEY`))|
@@ -34,9 +35,6 @@ These control how the Session window looks and behaves.
 |[`ToolBarsOnEdit`](toolbarsonedit.md)|Whether tool bars are displayed along the top of individual Edit windows|
 |[`AutoDPI`](autodpi.md)|Whether Dyalog registers the application as DPI-aware when it initialises, and so performs auto-scaling itself|
 |[`Dyalog_Pixel_Type`](dyalog-pixel-type.md)|How the value `'Pixel'` of the `Coord` property is interpreted|
-|[`ClassicMode`](classicmode.md)|Whether the Session operates in *Dyalog Classic mode*, in which the Editor and Tracer behave as they did in earlier versions of Dyalog|
-|[`ClassicModeSavePosition`](classicmodesaveposition.md)|Whether the current size and location of the first editor and tracer windows are remembered for next time (saved in the Registry sub-folders `WindowRects/EditWindow` and `WindowRects/TraceWindow`)|
-|[`SessionOnTop`](sessionontop.md)|Whether the Session can appear on top of Edit and Trace windows in Classic Dyalog mode|
 |[`Dyalog_LineEditor_Mode`](dyalog-lineeditor-mode.md)|Whether multi-line input is enabled in the Session|
 |[`DYALOG_NOPOPUPS`](dyalog-nopopups.md)|Whether a message box appears when Dyalog terminates unexpectedly|
 |[`XPLookAndFeel`](xplookandfeel.md)|Whether *Native Look and Feel* is used, affecting the appearance of user-interface controls such as buttons|
@@ -90,7 +88,6 @@ These control the behaviour of the Tracer.
 |[`AddClassHeaders`](addclassheaders.md)|What the Tracer displays when tracing the execution of a function defined in a script|
 |[`Trace_On_Error`](trace-on-error.md)|Whether the Tracer is deployed automatically when execution of a defined function halts with an untrapped error|
 |[`Trace_Level_Warn`](trace-level-warn.md)|The maximum number of Trace windows displayed when an error occurs and `Trace_On_Error` is `1`|
-|[`SingleTrace`](singletrace.md)|Whether there is a single Trace window or one Trace window per function|
 |[`SkipLines`](skiplines.md)|Causes the Tracer to skip lines that contain no executable statement, with the exception of the first line of the function and, in a traditional function (not a dfn), the last line if it is a comment|
 |[`TraceStopMonitor`](tracestopmonitor.md)|Which of the `⎕TRACE`, `⎕STOP`, and `⎕MONITOR` columns are displayed in Trace and Edit windows|
 
