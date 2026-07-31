@@ -41,7 +41,7 @@ search:
 ## See Also
 
 - [Display of Arrays](../../programming-reference-guide/introduction/arrays/display-of-arrays) – how arrays appear in the session
-- [`⍕`](format) – Format: returns a character array (vector or matrix depending on input rank)
+- [`⍕`](../primitive-functions/format.md) – Format: returns a character array (vector or matrix depending on input rank)
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
