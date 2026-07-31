@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Create/Clone Custom Namespaces</span> `{R}←X⎕NS Y`{{key}}
+# <span>Create/Clone Custom Namespaces</span> `{R}←X ⎕NS Y`{{key}}
 
 The `⎕NS` system function makes it possible to create namespaces, copy elements from one namespace to another, and clone namespaces.
 

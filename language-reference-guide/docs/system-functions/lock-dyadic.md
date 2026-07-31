@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Custom Lock Function</span> `{R}←X⎕LOCK Y`{{key}}
+# <span>Custom Lock Function</span> `{R}←X ⎕LOCK Y`{{key}}
 
 `Y` must be a simple character scalar, or vector which is taken to be the name of a defined function or operator in the active workspace. `⎕LOCK` does not apply to dfns or derived functions.
 

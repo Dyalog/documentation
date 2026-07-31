@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Convert JSON</span> `R←X⎕JSON Y`{{key}}
+# <span>Convert JSON</span> `R←X ⎕JSON Y`{{key}}
 
 This function imports and exports data in [JavaScript Object Notation](https://www.json.org/json-en.html) (JSON) data interchange format.
 

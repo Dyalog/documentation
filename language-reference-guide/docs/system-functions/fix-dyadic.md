@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Define Objects</span> `{R}←X⎕FIX Y`{{key}}
+# <span>Define Objects</span> `{R}←X ⎕FIX Y`{{key}}
 
 `⎕FIX` establishes Namespaces, Classes, Interfaces and functions from the script specified by `Y` in the workspace.
 

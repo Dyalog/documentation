@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Set Native File Translation Vector</span> `{R}←X⎕NXLATE Y`{{key}}
+# <span>Set Native File Translation Vector</span> `{R}←X ⎕NXLATE Y`{{key}}
 
 This associates a character translation vector with a native file or, if `Y` is 0, with the use by `⎕DR`.
 

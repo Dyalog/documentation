@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Resize Component File</span> `{R}←X⎕FRESIZE Y`{{key}}
+# <span>Resize Component File</span> `{R}←X ⎕FRESIZE Y`{{key}}
 
 ## Access code 1024
 

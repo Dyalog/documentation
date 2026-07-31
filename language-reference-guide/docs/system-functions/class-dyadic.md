@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Get Class/Interface Implementation</span> `R←X⎕CLASS Y`{{key}}
+# <span>Get Class/Interface Implementation</span> `R←X ⎕CLASS Y`{{key}}
 
 `Y` must be a reference to an Instance of a Class and `X` is a reference to an Interface that is supported by Instance `Y` or to a Class upon which Instance `Y` is based.
 

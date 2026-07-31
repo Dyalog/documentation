@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Custom Create Directory</span> `{R}←X⎕MKDIR Y`{{key}}
+# <span>Custom Create Directory</span> `{R}←X ⎕MKDIR Y`{{key}}
 
 This function creates new directories.
 

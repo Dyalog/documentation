@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Signal Event with Custom Name</span> `{R}←X⎕SIGNAL Y`{{key}}
+# <span>Signal Event with Custom Name</span> `{R}←X ⎕SIGNAL Y`{{key}}
 
 `Y` must be a scalar or vector.
 

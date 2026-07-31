@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Program Function Key</span> `R←X⎕PFKEY Y`{{key}}
+# <span>Program Function Key</span> `R←X ⎕PFKEY Y`{{key}}
 
 `⎕PFKEY` is a system function that sets or queries the programmable function keys.  `⎕PFKEY` associates a sequence of keystrokes with a function key.  When the user subsequently presses the key, it is as if he had typed the associated keystrokes one by one.
 

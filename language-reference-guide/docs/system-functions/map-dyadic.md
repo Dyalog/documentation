@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Map Raw Data File</span> `R←X⎕MAP Y`{{key}}
+# <span>Map Raw Data File</span> `R←X ⎕MAP Y`{{key}}
 
 `⎕MAP` function associates a mapped file with an APL array in the workspace.
 

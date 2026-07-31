@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Get Value from Namespace</span> `R←X⎕VGET Y`{{key}}
+# <span>Get Value from Namespace</span> `R←X ⎕VGET Y`{{key}}
 
 `⎕VGET` enables values to be read for names in a source namespace or source namespaces. Optionally, a fallback value can be used if the name requested is undefined.
 

@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Associate External Function with Custom Name</span> `{R}←X⎕NA Y`{{key}}
+# <span>Associate External Function with Custom Name</span> `{R}←X ⎕NA Y`{{key}}
 
 `⎕NA` provides access from APL to compiled functions within a library. A library is implemented according to the Operating System as follows:
 

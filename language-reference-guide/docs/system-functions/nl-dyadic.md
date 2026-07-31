@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>List Object Names with Filter</span> `R←X⎕NL Y`{{key}}
+# <span>List Object Names with Filter</span> `R←X ⎕NL Y`{{key}}
 
 `Y` must be a simple numeric scalar or vector containing one or more of the values for name-class.  See also [Name Classification](nc.md).
 

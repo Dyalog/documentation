@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Custom Screen Read</span> `R←X⎕SR Y`{{key}}
+# <span>Custom Screen Read</span> `R←X ⎕SR Y`{{key}}
 
 `⎕SR` is a system function that allows the user to edit or otherwise interact with the form defined by `⎕SM`.
 

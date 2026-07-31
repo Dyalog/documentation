@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Set Value in Namespace</span> `{R}←X⎕VSET Y`{{key}}
+# <span>Set Value in Namespace</span> `{R}←X ⎕VSET Y`{{key}}
 
 `⎕VSET` enables values to be set for names in a target namespace or target namespaces.
 

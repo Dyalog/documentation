@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Kill Threads and Descendants</span> `{R}←X⎕TKILL Y`{{key}}
+# <span>Kill Threads and Descendants</span> `{R}←X ⎕TKILL Y`{{key}}
 
 `Y` must be a simple array of integers representing thread numbers to be terminated. `X` is a Boolean single that indicates whether all descendant threads should also be terminated.
 

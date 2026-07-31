@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Filter Profile Data</span> `{R}←X⎕PROFILE Y`{{key}}
+# <span>Filter Profile Data</span> `{R}←X ⎕PROFILE Y`{{key}}
 
 `⎕PROFILE` facilitates the profiling of CPU consumption, code coverage, or elapsed time for a workspace. It does so by retaining time measurements collected for APL functions/operators and function/operator lines. `⎕PROFILE` is used to both control the state of profiling and retrieve the collected profiling data.
 

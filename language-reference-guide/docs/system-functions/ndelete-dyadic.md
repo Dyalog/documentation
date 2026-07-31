@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Custom Delete Native File</span> `{R}←X⎕NDELETE Y`{{key}}
+# <span>Custom Delete Native File</span> `{R}←X ⎕NDELETE Y`{{key}}
 
 This function deletes files and directories.
 

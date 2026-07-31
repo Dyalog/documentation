@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Edit Objects with Type</span> `{R}←X⎕ED Y`{{key}}
+# <span>Edit Objects with Type</span> `{R}←X ⎕ED Y`{{key}}
 
 `⎕ED` invokes the Editor.  `Y` is a simple character vector, a simple character matrix, or a vector of character vectors, containing the name(s) of objects to be edited.
 

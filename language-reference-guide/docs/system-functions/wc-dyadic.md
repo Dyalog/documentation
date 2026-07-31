@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Create GUI Object</span> `{R}←X⎕WC Y`{{key}}
+# <span>Create GUI Object</span> `{R}←X ⎕WC Y`{{key}}
 
 **Windows only.**
 

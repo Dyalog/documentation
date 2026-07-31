@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Native File Information</span> `R←X⎕NINFO Y`{{key}}
+# <span>Native File Information</span> `R←X ⎕NINFO Y`{{key}}
 
 This function queries or sets information about one or more files or directories. `Y` may be:
 

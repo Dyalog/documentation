@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Parse Numbers with Separators</span> `R←X⎕VFI Y`{{key}}
+# <span>Parse Numbers with Separators</span> `R←X ⎕VFI Y`{{key}}
 
 `Y` must be a simple character scalar or vector. `X` must be a simple character scalar or vector.  `R` is a nested vector of length two whose first item is a simple logical vector and whose second item is a simple numeric vector of the same length as the first item of `R`.
 

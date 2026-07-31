@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Get GUI Child Names in Parent Object</span> `R←X⎕WN Y`{{key}}
+# <span>Get GUI Child Names in Parent Object</span> `R←X ⎕WN Y`{{key}}
 
 **Windows only.**
 

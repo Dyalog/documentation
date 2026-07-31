@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Case Map</span> `R←X⎕C Y`{{key}}
+# <span>Case Map</span> `R←X ⎕C Y`{{key}}
 
 `Y` is any array. `R` is an identical array except that character arrays within it are either folded for case-less comparison, or mapped to upper or lower case.
 

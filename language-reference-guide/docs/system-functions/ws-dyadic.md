@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Set Properties of GUI Object</span> `{R}←X⎕WS Y`{{key}}
+# <span>Set Properties of GUI Object</span> `{R}←X ⎕WS Y`{{key}}
 
 **Windows only.**
 

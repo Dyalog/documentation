@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Custom Enqueue Event</span> `{R}←X⎕NQ Y`{{key}}
+# <span>Custom Enqueue Event</span> `{R}←X ⎕NQ Y`{{key}}
 
 **Windows only.**
 
