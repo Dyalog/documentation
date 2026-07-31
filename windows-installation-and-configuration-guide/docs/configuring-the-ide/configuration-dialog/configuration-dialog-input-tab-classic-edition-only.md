@@ -6,5 +6,5 @@ Table: Configuration dialog: Keyboard
 
 |Label                  |Parameter                                           |Description                                                       |
 |-----------------------|----------------------------------------------------|------------------------------------------------------------------|
-|Input table search path|[APLKeys](../../configuration-parameters/aplkeys.md)|A list of directories to be searched for the specified input table|
-|Input table file       |[APLK](../../configuration-parameters/aplk.md)      |The name of the input table file (.DIN)                           |
+|Input table search path|[APLKeys](../../../../dyalog-configuration-guide/configuration-parameters/aplkeys)|A list of directories to be searched for the specified input table|
+|Input table file       |[APLK](../../../../dyalog-configuration-guide/configuration-parameters/aplk)      |The name of the input table file (.DIN)                           |

@@ -249,7 +249,7 @@ When <code>X<sub>Y</sub></code> is a pattern, the corresponding character vector
 
 ### Two-digit Years
 
-Two digit years (that is, those corresponding to the formatting pattern elements `YY` and `WW`) are, by default, interpreted according to the same rules used for `⎕SM` and GUI edit fields, which are configurable using the [`YY_WINDOW`](../../windows-installation-and-configuration-guide/configuration-parameters/yy-window/) configuration parameter.
+Two digit years (that is, those corresponding to the formatting pattern elements `YY` and `WW`) are, by default, interpreted according to the same rules used for `⎕SM` and GUI edit fields, which are configurable using the [`YY_WINDOW`](../../../dyalog-configuration-guide/configuration-parameters/yy-window/) configuration parameter.
 
 ### Ambiguities and Precision
 

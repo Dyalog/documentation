@@ -17,7 +17,7 @@ Is the location of the Dyalog executable. Usually this is the full pathname, sur
 **[options]**
 
 |---|---|
-|-x|Disables the execution of the `⎕LX` expression and the derived expression when code is loaded from a source code file or directory.  This applies only at start-up and does not apply to workspaces or source files that are loaded subsequently. See [Latent Expression](../../language-reference-guide/system-functions/lx) and [Load](configuration-parameters/load.md)|
+|-x|Disables the execution of the `⎕LX` expression and the derived expression when code is loaded from a source code file or directory.  This applies only at start-up and does not apply to workspaces or source files that are loaded subsequently. See [Latent Expression](../../language-reference-guide/system-functions/lx) and [Load](../../dyalog-configuration-guide/configuration-parameters/load)|
 |-a|Start in USER mode.|
 |-b|Suppress the banner in the Session..|
 |-s|Disable the Session. This option is ignored in Windows versions.|
@@ -41,10 +41,10 @@ The name of a Dyalog APL workspace to be loaded. Unless specified, on Windows th
 
 **[param]**
 
-A parameter name followed by an equals sign (`=`) and a value. The parameter name may be one of the standard APL parameters (see [Configuration Parameters](configuration-parameters/configuration-parameters.md) ) or a name and value of your own choosing (see [GetEnvironment](../../object-reference/methodorevents/getenvironment) ) . If the parameter is in a registry sub-folder (see [Registry Sub-Folders](registry-subfolders.md) ), its name must be preceded by the name of the sub-folder, followed by a backslash (`\`) or underscore (`_`).
+A parameter name followed by an equals sign (`=`) and a value. The parameter name may be one of the standard APL parameters (see [Configuration Parameters](../../dyalog-configuration-guide/configuration-parameters/configuration-parameters) ) or a name and value of your own choosing (see [GetEnvironment](../../object-reference/methodorevents/getenvironment) ) . If the parameter is in a registry sub-folder (see [Registry Sub-Folders](registry-subfolders.md) ), its name must be preceded by the name of the sub-folder, followed by a backslash (`\`) or underscore (`_`).
 
 !!! note
-    Instead of  a loading a workspace specified by the **ws** option, APL can be instructed to load a program from a script file. For further information, see [Load](configuration-parameters/load.md).
+    Instead of  a loading a workspace specified by the **ws** option, APL can be instructed to load a program from a script file. For further information, see [Load](../../dyalog-configuration-guide/configuration-parameters/load).
 
 <h2 class="example">Examples</h2>
 

@@ -15,7 +15,7 @@ search:
 
 `X` must be either:
 
-1. a simple character scalar or vector which specifies the name of the file to be created. If no file extension is supplied, the first extension specified by the   **CFEXT** parameter will be added. See [ CFEXT](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters).
+1. a simple character scalar or vector which specifies the name of the file to be created. If no file extension is supplied, the first extension specified by the   **CFEXT** parameter will be added. See [ CFEXT](../../../dyalog-configuration-guide/configuration-parameters/configuration-parameters).
 2. a vector of length 1 or 2 whose items are:- a simple character scalar or vector as above.
 - an integer scalar specifying the file size limit in bytes.
 
@@ -91,7 +91,7 @@ will name a variant of `⎕FCREATE` which will create component file with level 
 ```
 
 !!! Info "Information"
-    Component files that have both journalling and checksum properties set to `0` have been deprecated; from Dyalog v21.0 it will not be possible to create files with this combination of properties. For information on how to identify code that creates component files that have both journalling and checksum properties set to `0` in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
+    Component files that have both journalling and checksum properties set to `0` have been deprecated, and it is no longer possible to create files with this combination of properties. For information on how to identify code that creates component files that have both journalling and checksum properties set to `0` in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
