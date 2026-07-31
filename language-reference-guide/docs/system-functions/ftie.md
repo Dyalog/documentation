@@ -63,7 +63,7 @@ FILE ACCESS ERROR: cf.dcf: File is not writable
 ```
 
 !!! Info "Information"
-    Small-span (32-bit) component files are currently read-only; this support is scheduled for removal in a future release, after which it will not be possible to tie small-span component files. Setting the [DYALOG_S32_SUPPORTED](../../../windows-installation-and-configuration-guide/configuration-parameters/dyalog-s32-supported) configuration parameter to `0` disables the support now, which identifies whether an application still depends on it. Dyalog Ltd recommends using `⎕FCOPY` to convert any such files to large-span (64-bit). For information on how to identify calls to small-span component files in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
+    Small-span (32-bit) component files are currently read-only; this support is scheduled for removal in a future release, after which it will not be possible to tie small-span component files. Dyalog Ltd recommends using `⎕FCOPY` to convert any such files to large-span (64-bit). For information on how to identify calls to small-span component files in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

@@ -133,7 +133,6 @@ nav:
       - Dyalog_NETCore: configuration-parameters/dyalog-netcore.md
       - DYALOG_NOPOPUPS: configuration-parameters/dyalog-nopopups.md
       - DYALOG_PIXEL_TYPE: configuration-parameters/dyalog-pixel-type.md
-      - DYALOG_S32_SUPPORTED: configuration-parameters/dyalog-s32-supported.md
       - DYALOG_SERIAL: configuration-parameters/dyalog-serial.md
       - EditorState: configuration-parameters/editorstate.md
       - Edit_Cols: configuration-parameters/edit-cols.md

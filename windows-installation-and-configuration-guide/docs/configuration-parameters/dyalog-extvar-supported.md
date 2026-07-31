@@ -8,7 +8,7 @@ The values of the parameter are:
 |0  |Support for external variables is disabled|
 |1  |Support for external variables is enabled |
 
-The default value of the parameter is 1.
+The default value of the parameter is 0.
 
 !!! Info "Information"
-    Support for external variables has been deprecated and is scheduled for removal in a future release. Setting this parameter to 0 identifies whether an application still depends on them.
+    Support for external variables has been deprecated and is scheduled for removal in a future release. External variables are not supported by default; setting this parameter to 1 reinstates support for the time being.
