@@ -18,7 +18,7 @@ EXT\ARRAY
 ```
 
 !!! Info "Information"
-    Support for external variables has been deprecated: they are read-only, it is not possible to create new ones, and support is scheduled for removal in a future release. For information on how to identify uses of external variables in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
+    Support for external variables has been deprecated: they are not supported by default, and support is scheduled for removal in a future release. Setting the [DYALOG_EXTVAR_SUPPORTED](../../../dyalog-configuration-guide/configuration-parameters/dyalog-extvar-supported) configuration parameter to `1` reinstates support for the time being. For information on how to identify uses of external variables in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
