@@ -13,6 +13,9 @@ The optional left argument `X` is either a simple character vector or a one- or 
 - `'UTF-16'`
 - `'UTF-32'`
 
+!!! Warning "Warning"
+    Note, the encoding scheme value must be in specified upper case.
+
 The second element (if present) is either `0` (the default) which causes ⎕UCS to consume and return integers between 0 and 255 or `83` which causes ⎕UCS to consume and return integers between `¯128` and `+127`. `83` can only be used with `'UTF-8'`.  See [`⎕DR`](dr.md) for more information about type 83 values.
 
 If `X` is any other value, a `DOMAIN ERROR` is generated.
