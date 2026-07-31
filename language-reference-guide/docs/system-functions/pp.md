@@ -7,7 +7,7 @@ search:
 
 `⎕PP` is the number of significant digits in the display of numeric output. `⎕PP` may be assigned any integer value in the range 1 to 34. `⎕PP` has Namespace scope.
 
-`⎕PP` is used to format numbers displayed directly. It is an implicit argument of monadic function [Format (`⍕`)](../primitive-functions/format.md), [monadic `⎕FMT`](format-monadic), and for display of numbers using [`⎕`](../system-functions/evaluated-input-output) and [`⍞`](../system-functions/character-input-output) output. `⎕PP` is ignored for the display of integers.
+`⎕PP` is used to format numbers displayed directly. It is an implicit argument of monadic function [_format_ (`⍕`)](../primitive-functions/format.md), [monadic `⎕FMT`](format-monadic), and for display of numbers using [`⎕`](../system-functions/evaluated-input-output) and [`⍞`](../system-functions/character-input-output) output. `⎕PP` is ignored for the display of integers.
 
 <h2 class="example">Examples</h2>
 ```apl
