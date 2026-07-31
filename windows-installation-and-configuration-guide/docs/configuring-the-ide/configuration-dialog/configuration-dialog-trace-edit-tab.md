@@ -6,10 +6,10 @@ Table: Configuration dialog: Trace/Edit
 
 |Label|Parameter|Description|
 |---|---|---|
-|Classic Dyalog mode|[ClassicMode](../../configuration-parameters/classicmode.md)|Selects pre-Version 9 behaviour for Edit and Trace windows.|
-|Allow session above edit windows|[SessionOnTop](../../configuration-parameters/sessionontop.md)|Specifies whether or not the Session may appear on top of Edit and Trace Windows|
-|Single trace window|[ SingleTrace](../../configuration-parameters/singletrace.md)|Specifies whether or not there is a single Trace window|
-|Remember previous window position|[ClassicModeSavePosition](../../configuration-parameters/classicmodesaveposition.md)|Specifies whether or not the current size and location of the first of the editor and tracer windows are remembered in the registry for next time.|
+|<s>Classic Dyalog mode</s>| | These options have been replaced with a pre-configuration of the Default mode, giving a similar experience. You can activate this configuration via **Layout**>**Classic**, but note that you must  save the session for the changes to be saved. |
+|<s>Allow session above edit windows</s>| | |
+|<s>Single trace window</s>| | |
+|<s>Remember previous window position</s>| |_ - _|
 |Allow floating edit windows|[DockableEditWindows](../../configuration-parameters/dockableeditwindows.md)|Allows individual Edit windows to be undocked from (and re-docked in) the main Edit window|
 |Show status bars|[ StatusOnEdit](../../configuration-parameters/statusonedit.md)|Specifies whether or not status bars are displayed along the bottom of individual Edit windows|
 |Show tool bars|[ ToolBarsOnEdit](../../configuration-parameters/toolbarsonedit.md)|Specifies whether or not tool bars are displayed along the top of individual Edit windows|
