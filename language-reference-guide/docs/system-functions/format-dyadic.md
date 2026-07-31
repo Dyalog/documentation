@@ -60,6 +60,10 @@ The **format specification** consists of a series of control phrases, with adjac
 
 The surrounding affixture delimiters may be replaced by the alternative pairs described for Text Insertion.
 
+!!! Warning "Warning"
+    Note, the affixtures, qualifiers and control phrases must be specified in upper case.
+
+
 <h2 class="example">Examples</h2>
 
 A vector is treated as a column:
