@@ -30,8 +30,6 @@ The shy result `R` is the lock state (`1`, `2`, or `3`) of `Y`.
 
 A `DOMAIN ERROR` is reported if `Y` is ill-formed.
 
-<h2 class="example">Examples</h2>
-
 <!-- Hidden search keywords -->
 <div style="display: none;">
   ⎕LOCK LOCK

@@ -27,16 +27,10 @@ Note that a *raw* mapped file may be updated *only* if its *file offset* is 0. N
 
 <h2 class="example">Examples</h2>
 
-Map raw file as a read-only *vector* of doubles:
-
-Map raw file as a 20-column read-write *matrix* of 1-byte integers:
-
 Replace some items in mapped file:
 ```apl
       mat[2 3;4 5]←2 2⍴⍳4
 ```
-
-Map bytes 100-160 in raw file as a `5×2` read-only matrix of doubles:
 
 Put simple 4-byte integer array on disk ready for mapping:
 ```apl
@@ -48,9 +42,7 @@ Then, map a read-write variable:
       var←⎕MAP'c:\myvar' 'w' 
 ```
 
-Note that a mapped array need not be *named*. In the following example, a 'raw' file is mapped, summed and released, all in a single expression:
-
-If you fail to specify the shape of the data, the data on file will be mapped as a scalar and only the first value in the file will be accessible:
+Note that a mapped array need not be *named*.
 
 ## Compatibility between Editions
 

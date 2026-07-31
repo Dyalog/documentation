@@ -72,8 +72,6 @@ A new namespace is created as a complete copy (clone) of the original namespace 
 The `Trigger` variant option specifies whether any [triggers](../../../programming-reference-guide/triggers/triggers) should be run for the modified variables in the target namespace that have triggers attached.
 The value must be a Boolean scalar. The default is 0, meaning that triggers are not run.
 
-<h4 class="example">Example</h4>
-
 <!-- Hidden search keywords -->
 <div style="display: none;">
   ⎕NS NS

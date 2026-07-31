@@ -7,17 +7,26 @@ search:
 
 This function imports and exports data in [JavaScript Object Notation](https://www.json.org/json-en.html) (JSON) data interchange format.
 
+!!! Warning "Warning"
+    Dyalog Ltd strongly recommends [specifying the direction explicitly](json-dyadic.md) to avoid code that seemingly works, only to fail on specific values.
+
 ## Syntax
+
+The direction of conversion depends on `Y`: if `Y` is a character array it is imported, that is, converted from JSON; otherwise it is exported, that is, converted to JSON.
 
 <h3 class="example">Examples</h3>
 
 Importing a JSON document to APL:
+```apl
+      ⎕JSON'[1,-2,3]'
+1 ¯2 3
+```
 Exporting APL data to JSON:
+```apl
+      ⎕JSON 1 ¯2 3
+[1,-2,3]
+```
 
-!!! Hint "Hints and Recommendations"
-Whether `⎕JSON` imports or exports depends on `Y`: if `Y` is a character array it is imported, that is, converted from JSON; otherwise it is exported, that is, converted to JSON.
-
-!!! Warning "Warning"
 `⎕JSON` has six [variant options](#variant-options): **Format**, **Compact**, **Null**, **HighRank**, **Charset**, and **Dialect**, specified using [`⍠`](../primitive-operators/variant.md). The principal option is **Format**.
 
 ## Limitations
@@ -44,6 +53,11 @@ The [JSON standard](https://www.rfc-editor.org/info/rfc8259/#section-4) states t
 
 <h3 class="example">Example</h3>
 
+```apl
+      ⎕JSON'[1,-2,3]'
+1 ¯2 3
+```
+
 For details and more examples, see [Import to Data](#import-to-data) and [Import to Matrix](#import-to-matrix).
 
 ## JSON Export
@@ -60,6 +74,11 @@ Some JSON values lack a direct APL equivalent (<code class="language-nonAPL">tru
 
 <h3 class="example">Example</h3>
 
+```apl
+      ⎕JSON 1 ¯2 3
+[1,-2,3]
+```
+
 For details and more examples, see [Export from Data](#export-from-data) and [Export from Matrix](#export-from-matrix).
 
 ## Name Mangling
@@ -74,8 +93,17 @@ In this example, the JSON document describes an object containing two numeric it
 ```
 
 When the object is imported (as a namespace), `⎕JSON` renames `2a` to a valid APL name:
+```apl
+      (⎕JSON'{"a": 1, "2a": 2}').⎕NL 2
+a  
+⍙2a
+```
 
 When the namespace is exported, `⎕JSON` reverses the mangling:
+```apl
+      ⎕JSON (a:1 ⋄ ⍙2a:2)
+{"a":1,"2a":2}
+```
 
 <h3 class="example">Example</h3>
 
@@ -84,6 +112,10 @@ This object has a member name with a character (`ý`; `⎕UCS 253`) that is not 
 {"sýn":"vision"}
 ```
 The `ý` is replaced with `⍙253⍙` ("253" is the Unicode decimal character code for this character):
+```apl
+      (⎕JSON'{"sýn":"vision"}').⎕NL 2
+⍙s⍙253⍙n
+```
 
 ### Name Mangling Algorithm
 
@@ -163,6 +195,11 @@ The following JSON document is stored as the character vector `json`:
 }
 ```
 The JSON document is converted to APL data as a namespace:
+```apl
+      j←⎕JSON json
+      j
+#.[JSON object]
+```
 Listing the sub-namespace and its members:
 ```apl
       j.⎕NL 9
@@ -452,6 +489,12 @@ The following examples use this namespace as APL data:
       )
 ```
 Conversion to compact JSON:
+```apl
+      ⍴json←⎕JSON ns
+97
+      json
+{"a":{"b":["charvec 1","charvec 2"],"c":true,"d":{"e":false,"f⍺":["charvec 3",123,1000.2,null]}}}
+```
 Non-compact JSON takes more than twice as much space, but is more readable, and easier for humans to edit:
 ```apl
       ⍴json←1(⎕JSON⍠'Compact' 0)ns
@@ -571,8 +614,16 @@ If such a representation is already used in an APL application, then no special 
 ### Raw Text Wrapper
 
 Special JSON values such as <code class="language-nonAPL">null</code>, <code class="language-nonAPL">true</code> and <code class="language-nonAPL">false</code> do not directly correspond to specific APL values and, therefore, require special handling. This is provided by wrapper code `1`:
+```apl
+      ⎕JSON 42 'text'(⊂1 'null')(⊂1 'true')(⊂1 'false')
+[42,"text",null,true,false]
+```
 
 As `1` is the default code number, it can be omitted:
+```apl
+      ⎕JSON 42 'text'(⊂'null')(⊂'true')(⊂'false')
+[42,"text",null,true,false]
+```
 
 This feature can be used to inject any raw text, although unless it is valid JSON it cannot then be re-imported.
 
@@ -585,6 +636,17 @@ This feature can be used to inject any raw text, although unless it is valid JSO
 <h4 class="example">Example</h4>
 
 This example illustrates how JavaScript objects can be exported; the object contains a JavaScript function that is specified by the contents of an enclosed character vector:
+```apl
+      slider←(
+          range:⊂'true'
+          min:0
+          max:500
+          values:75 300
+          slide:⊂'function(event,ui){$("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);}'
+      )
+      ⎕JSON slider
+{"max":500,"min":0,"range":true,"slide":function(event,ui){$("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);},"values":[75,300]}
+```
 
 ### Dataset Wrappers
 
@@ -674,10 +736,22 @@ Table: Wrappers forms for selecting dataset subsets { #subset-table }
 <h4 class="example">Examples</h4>
 
 To select the second record (Fork):
+```apl
+      ⎕JSON⊂4(invertedTable header)2
+[{"item":"Fork","price":4,"qty":45}]
+```
 
 To select the first and third fields (`item` and `qty`):
+```apl
+      ⎕JSON⊂4(invertedTable header)(⊂⍬)(1 3)
+[{"item":"Knife","qty":23},{"item":"Fork","qty":45},{"item":"Spoon","qty":67}]
+```
 
 To select the second record (Fork) and the first and third fields (`item` and `qty`):
+```apl
+      ⎕JSON⊂4(invertedTable header)2(1 3)
+[{"item":"Fork","qty":45}]
+```
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

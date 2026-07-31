@@ -19,17 +19,13 @@ A request for a negative token type will only be satisfied by the presence of a 
 
 If, when a thread calls `⎕TGET`, the token pool satisfies **all** of the tokens specified by `Y`, the function returns immediately with a (shy) result that contains the values associated with the pool tokens. Otherwise, the function will block (wait) until **all** of the requested tokens are present or until a time-out (as specified by `X`) or a weak interrupt occurs.
 
-For example, if the pool contains only tokens of type 2:
-
 The `⎕TGET` operation is atomic in the sense that no tokens are taken from the pool until **all** of the requested types are present. While this last example is waiting for a 4-token, other threads could take any of the remaining 2-tokens.
 
-Note also, that repeated items in the right argument are distinct. The following will block until there are at least 3 `×` 1.9-tokens in the pool:
+Note also, that repeated items in the right argument are distinct.
 
-The pool is administered on a first-in-first-out basis. This is significant only if tokens of the same type are given distinct values. For example:
+The pool is administered on a first-in-first-out basis. This is significant only if tokens of the same type are given distinct values.
 
 `R` is an empty numeric vector `⍬` (zilde) if a timeout or a weak interrupt occurs.
-
-**Beware** - the following statement will wait forever and can only be terminated by an interrupt.
 
 Note too that if a thread waiting to `⎕TGET` tokens is `⎕TKILL`ed, the thread disappears without removing any tokens from the pool. Conversely, if a thread that has removed tokens from the pools is `⎕TKILL`ed, the tokens are not returned to the pool.
 

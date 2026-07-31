@@ -27,9 +27,6 @@ Exporting APL data to JSON:
 !!! Hint "Hints and Recommendations"
     As a mnemonic, think of `X` as specifying the desired "JSON-ness": `0` means "no JSON", that is, converting away from JSON; `1` means "yes JSON", that is, converting towards JSON.
 
-!!! Warning "Warning"
-    Dyalog Ltd strongly recommends that `X` should always be specified to avoid code that seemingly works, only to fail on specific values.
-
 `⎕JSON` has six [variant options](#variant-options): **Format**, **Compact**, **Null**, **HighRank**, **Charset**, and **Dialect**, specified using [`⍠`](../primitive-operators/variant.md). The principal option is **Format**.
 
 ## Limitations
@@ -278,6 +275,61 @@ Note that:
 
 <h5 class="example">Example</h5>
 This example uses the character vector `json` from the previous example:
+```apl
+      json
+{                  
+  "a": {           
+    "b": [         
+      "string 1",  
+      "string 2"   
+    ],             
+    "c": true,     
+    "d": {         
+      "e": false,  
+      "f⍺": [      
+        "string 3",
+        123,       
+        1000.2,    
+        null       
+      ]            
+    }              
+  }                
+}                  
+      0(⎕JSON⍠'M')json
+┌─┬──┬────────┬─┐
+│0│  │        │1│
+├─┼──┼────────┼─┤
+│1│a │        │1│
+├─┼──┼────────┼─┤
+│2│b │        │2│
+├─┼──┼────────┼─┤
+│3│  │string 1│4│
+├─┼──┼────────┼─┤
+│3│  │string 2│4│
+├─┼──┼────────┼─┤
+│2│c │┌────┐  │6│
+│ │  ││true│  │ │
+│ │  │└────┘  │ │
+├─┼──┼────────┼─┤
+│2│d │        │1│
+├─┼──┼────────┼─┤
+│3│e │┌─────┐ │6│
+│ │  ││false│ │ │
+│ │  │└─────┘ │ │
+├─┼──┼────────┼─┤
+│3│f⍺│        │2│
+├─┼──┼────────┼─┤
+│4│  │string 3│4│
+├─┼──┼────────┼─┤
+│4│  │123     │3│
+├─┼──┼────────┼─┤
+│4│  │1000.2  │3│
+├─┼──┼────────┼─┤
+│4│  │┌────┐  │5│
+│ │  ││null│  │ │
+│ │  │└────┘  │ │
+└─┴──┴────────┴─┘
+```
 
 #### Export from Data
 
@@ -348,6 +400,23 @@ If there are any mismatches between the values in `Y[;3]` and the types in `Y[;4
 <h5 class="example">Example</h5>
 
 To illustrate type mismatches, the above matrix is modified by replacing one number with a character vector that looks the same:
+```apl
+      m[3;3]←⊂'75'
+      m
+┌─┬──────┬───┬─┐
+│0│      │   │1│
+├─┼──────┼───┼─┤
+│1│values│   │2│
+├─┼──────┼───┼─┤
+│2│      │75 │3│
+├─┼──────┼───┼─┤
+│2│      │300│3│
+└─┴──────┴───┴─┘
+      1(⎕JSON⍠'M')m
+DOMAIN ERROR: JSON export: value does not match the specified type in row 3 (⎕IO=1)
+      1(⎕JSON⍠'M')m
+      ∧
+```
 
 ### Variant Option: Dialect
 
@@ -436,6 +505,29 @@ Conversion to compact JSON:
 {"a":{"b":["charvec 1","charvec 2"],"c":true,"d":{"e":false,"f⍺":["charvec 3",123,1000.2,null]}}}
 ```
 Non-compact JSON takes more than twice as much space, but is more readable, and easier for humans to edit:
+```apl
+      ⍴json←1(⎕JSON⍠'Compact' 0)ns
+208
+      1(⎕JSON⍠'Compact' 0)ns
+{
+  "a": {
+    "b": [
+      "charvec 1",
+      "charvec 2"
+    ],
+    "c": true,
+    "d": {
+      "e": false,
+      "f⍺": [
+        "charvec 3",
+        123,
+        1000.2,
+        null
+      ]
+    }
+  }
+}
+```
 
 ### Variant Option: Charset
 

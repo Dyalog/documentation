@@ -102,8 +102,6 @@ Hello
       Andy 
 ```
 
-Be aware of the following case, in which the argument has not been sufficiently nested:
-
 <!-- Hidden search keywords -->
 <div style="display: none;">
   ⎕SIGNAL SIGNAL

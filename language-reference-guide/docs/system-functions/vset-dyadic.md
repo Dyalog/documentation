@@ -42,18 +42,10 @@ Name value pairs:
   X value  Y value    X value  Y value    X value  Y value
 ```
 
-Name matrix and value vector:
-
-Single name-value pair:
-
-Multiple names, with a single value:
-
 ## Variant Option: Trigger
 
 The `Trigger` variant option specifies whether any [triggers](../../../programming-reference-guide/triggers/triggers) should be run for the modified variables in the target namespace that have triggers attached.
 The value must be a Boolean scalar. The default is `1`, meaning that triggers are run.
-
-<h4 class="example">Example</h4>
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

@@ -16,10 +16,6 @@ The function code is hidden to extent `3`. The extents are:
 - `2`: If an error or exception occurs that would normally cause a suspension of execution within the locked function or operator, the state indicator is cut back to the statement that called it and the suspension is triggered there instead.
 - `3`: Both `1` and `2` apply. You can neither display the locked object nor suspend execution within it.
 
-Locks are additive, so that
-
-is equivalent to:
-
 The shy result `R` is the lock state (`1`, `2`, or `3`) of `Y`.
 
 A `DOMAIN ERROR` is reported if `Y` is ill-formed.

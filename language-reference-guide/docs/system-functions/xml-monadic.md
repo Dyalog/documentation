@@ -185,10 +185,6 @@ The values of each option are tabulated below. In each case the value of the opt
 
 Note that the default value is shown first, and that the option names and values are case-sensitive.
 
-      ]Display (⎕XML⍠'Whitespace' 'Strip')eg
-      ⍝      'whitespace' 'strip' ⎕XML eg
-```
-
 Errors detected in the input arrays or options will all cause `DOMAIN ERROR`.
 
 ### Whitespace (whitespace)

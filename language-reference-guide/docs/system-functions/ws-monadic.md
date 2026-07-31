@@ -17,8 +17,6 @@ The shy result `R` contains the previous values of the properties specified in `
 
 GUI objects are named **relative** to the current namespace.  The following examples are equivalent:
 
-<h2 class="example">Examples</h2>
-
 <!-- Hidden search keywords -->
 <div style="display: none;">
   ⎕WS WS

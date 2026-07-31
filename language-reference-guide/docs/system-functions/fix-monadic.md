@@ -47,10 +47,6 @@ MyClass MYREF
 
 ## Example 3
 
-In the third example, the left-argument of `0` causes the named Class `MyClass` to be visible only via the reference to it (`MYREF`). It is there, but hidden.
-
-## Example 4
-
 The fourth example illustrates the use of un-named Classes.
 ```apl
       src←':Class' '∇Make n'
@@ -63,10 +59,6 @@ MYREF
       MYINST
 Pete
 ```
-
-## Example 5
-
-In the final example, the left argument of `2` allows a script containing multiple objects to be fixed:
 
 ## Restrictions
 

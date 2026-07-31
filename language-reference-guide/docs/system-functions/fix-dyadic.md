@@ -30,14 +30,6 @@ In this case,  the shy result `R` is a vector of character vectors, containing t
 
 ## Example 1
 
-In the first example, the Class specified by `Y` is *named* (`MyClass`) but the result of `⎕FIX` is discarded. The end-result is that `MyClass` is established in the workspace as a Class.
-
-## Example 2
-
-In the second example, the Class specified by `Y` is *named* (`MyClass`) and the result of `⎕FIX` is assigned to a different name (`MYREF`). The end-result is that a Class named `MyClass` is established in the workspace, and `MYREF` is a reference to it.
-
-## Example 3
-
 In the third example, the left-argument of `0` causes the named Class `MyClass` to be visible only via the reference to it (`MYREF`). It is there, but hidden.
 ```apl
       MYREF←0 ⎕FIX ':Class MyClass' ':EndClass'
@@ -47,11 +39,7 @@ MYREF
 #.MyClass
 ```
 
-## Example 4
-
-The fourth example illustrates the use of un-named Classes.
-
-## Example 5
+## Example 2
 
 In the final example, the left argument of `2` allows a script containing multiple objects to be fixed:
 
@@ -152,12 +140,18 @@ While the scripted tree for `Jill` has a parent Class:
 ```
 
 Using the `Pete` Namespace, after executing the expression:
+```apl
+      2(⎕FIX⍠'InjectReferences' 'All')⎕SRC Pete
+```
 
 - Code in `Pete` may refer to `Aisha`    , `Andy`     , `George`   , `Katherine`, and `Woody`
 - Code in `Andy` may refer to `Aisha`    and `Katherine`
 - ... and so forth.
 
 But after executing:
+```apl
+      2(⎕FIX⍠'InjectReferences' 'InClasses')⎕SRC Pete
+```
 
 - Code in `Pete` may refer only to `Andy` and  `Katherine`
 - Code in `Andy` may refer only to `Aisha`

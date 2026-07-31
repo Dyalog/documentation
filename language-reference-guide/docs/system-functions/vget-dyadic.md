@@ -46,10 +46,6 @@ The result `R` is a vector of the values from the corresponding names or fallbac
 
 <h3 class="example">Examples</h3>
 
-Multiple names without fallback:
-
-Multiple names with a different fallback for each name:
-
 Multiple names with the same fallback for all of them:
 
 ```apl
@@ -96,20 +92,12 @@ ABC
  ABC  DEF
 ```
 
-Single name enclosed:
-
-Multiple names without fallback:
-
 Single name with fallback:
 ```apl
       ns←()
       ns ⎕VGET ⊂'name1' 'default'
 default
 ```
-
-Multiple names with fallback for some:
-
-Multiple names with a different fallback for each of them:
 
 See [Case 1: Name Matrix](#case-1-name-matrix) for an example of multiple names with the same fallback value for all of them.
 
@@ -159,8 +147,6 @@ DOMAIN ERROR: Divide by zero
  OSError                                               0 0
  Vendor                                                Dyalog
 ```
-
-Name matrix and value vector:
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

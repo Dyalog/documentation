@@ -34,11 +34,7 @@ If `Y` refers to a non-existent property, or to a property that is not defined f
 
 A "top-level" object created by `⎕WC` whose name is localised in a function/operator header, is deleted on exit from the function/operator.  All objects, including sub-objects, can be deleted using `⎕EX`.
 
-GUI objects are named **relative** to the current namespace, so the following examples are equivalent:
-
-is equivalent to :
-
-is equivalent to :
+GUI objects are named **relative** to the current namespace.
 
 <h2 class="example">Examples</h2>
 

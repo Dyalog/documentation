@@ -34,8 +34,6 @@ which means that it expects two long (4-byte) integer arguments and returns a do
     APL:  'div' ⎕NA 'F8    math|divide       I4        I4 '
 ```
 
-So to associate the APL name `div` with this external function:
-
 where `F8` and `I4`, specify the types of the result and arguments expected by `divide`. The association has the effect of establishing a new function: `div` in the workspace, which when called, passes its arguments to `divide` and returns the result.
 ```apl
       )FNS
@@ -255,7 +253,7 @@ Confusion sometimes arises over a difference in the declaration syntax between C
    foo(ptr);// call with address of array.
 ```
 
-However, from APL's point of view, these two cases are distinct and if the function is to be called with the address of (pointer to) a *scalar*, it must be declared: `'<T'`. Otherwise, to be called with the address of an *array*, it must be declared: `'<T[]'`. Note that it is perfectly acceptable in such circumstances to define more than one name association to the same DLL function specifying different argument types:
+However, from APL's point of view, these two cases are distinct and if the function is to be called with the address of (pointer to) a *scalar*, it must be declared: `'<T'`. Otherwise, to be called with the address of an *array*, it must be declared: `'<T[]'`.
 
 ### Structures
 
@@ -315,6 +313,16 @@ A library designer tries to avoid defining structures that induce padding.
 If a definition includes multiple adjacent occurrences of the same item, the count syntax may be used rather than explicitly repeating the same definition.
 
 For example:
+```apl
+      ⎕NA 'I User32|GetWindowText* P =0T I'
+ 
+      ]Display GetWindowText HNDL (255⍴' ') 255
+.→-------------------------.
+|    .→------------------. |
+| 19 |MYWS - Dyalog APL/W| |
+|    '-------------------' |
+'∊-------------------------'
+```
 
 `>I8[3]` rather than `>I8 >I8 >I8`
 
@@ -411,10 +419,6 @@ The interpreter passes the *value* of the first argument and the *address* of th
 Two common cases occur where it is necessary to pass a pointer explicitly. The first is if the DLL function requires a *null pointer*, and the second is where you want to pass on a pointer which itself is a result from a DLL function.
 
 In both cases, the pointer argument should be coded as `P`. This causes APL to pass the pointer unchanged, *by value*, to the DLL function.
-
-In the previous example, to pass a null pointer, (or one returned from another DLL function), you must code a separate `⎕NA` definition.
-
-Now APL passes the *value* of the second argument (in this case 0 - the null pointer), rather than its address.
 
 Note that by using P, which is 4-byte for 32-bit processes and 8-byte for 64-bit processes, you will ensure that the code will run unchanged under both 32-bit and 64-bit versions of Dyalog APL.
 
@@ -553,8 +557,6 @@ void *MEMCPY(     // copy memory
 
 <h3 class="example">Example</h3>
 
-Suppose a global buffer (at address: `addr`) contains (`numb`) double floating point numbers. To copy these to an APL array, we could define the association:
-
 Notice that:
 
 - As the first argument to `doubles` is an output argument, we must supply the number of elements to reserve for the output data.
@@ -570,8 +572,6 @@ typedef struct {
     char name[20]; // name.
 } person;
 ```
-
-Then, having previously allocated memory (`addr`) to receive the record, we can define:
 
 ### STRNCPY
 
@@ -602,13 +602,7 @@ typedef struct {     // null-terminated strings:
 } name;
 ```
 
-To copy the names *from* the structure:
-
 Note that (as this is a 64-bit example), `⎕FR` must be 1287 for the addition to be reliable.
-
-To copy data *from* the workspace *into* an already allocated (`new`) structure:
-
-Notice in this example that you must ensure that names no longer than 19 characters are passed to `put`. More than 19 characters would not leave `STRNCPY` enough space to include the trailing null, which would probably cause the application to fail.
 
 ### STRNCPYA
 
@@ -630,8 +624,6 @@ size_t STRLEN(       // calculate length of string
 
 Suppose that a database application returns a pointer (`addr`) to a null-terminated string and you do not know the upper bound on the length of the string.
 
-To copy the string into the workspace:
-
 ## Examples
 
 The following examples all use functions from the Microsoft Windows `user32.dll`.
@@ -652,8 +644,6 @@ The following statements would provide access to this routine through an APL fun
       GetCaretBlinkTime
 530
 ```
-
-The following statement would achieve the same thing, but using an APL function called `BLINK`.
 
 ### SetCaretBlinkTime()
 
@@ -701,8 +691,6 @@ The Microsoft Windows function `FindWindow` obtains the window handle of a windo
 ```c
 HWND FindWindow(LPCSTR, LPCSTR);
 ```
-
-The following statement associates the APL function `FW` with the second variant of the FindWindow call, where the class name is specified as a NULL pointer.  To indicate that APL is to pass the *value* of the NULL pointer, rather than its address, we need to code this argument as `I4`.
 
 To obtain the handle of the window entitled "CLEAR WS - Dyalog APL/W":
 ```apl

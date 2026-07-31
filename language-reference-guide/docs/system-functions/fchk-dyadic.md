@@ -57,12 +57,6 @@ Using Variant, the options are as follows:
 
 Default values are highlighted thus{ .shaded }  in the above tables.
 
-<h2 class="example">Examples</h2>
-
-To check a file and attempt to fix it if damage is found:
-
-To forcibly check a file and attempt to fix it if damage is found:
-
 ### Specifying options using a left argument
 
 Using the left argument, `X` must be a vector of zero or more character vectors from among `'force'`, `'repair'` and `'rebuild'`, which determine the detailed operation of the function. Note that these options are case-insensitive.

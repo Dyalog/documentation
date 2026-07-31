@@ -17,10 +17,6 @@ Note that key definitions can reference other function keys, such as "F1" or "F1
 
 The size of the buffer associated with `⎕PFKEY` is specified by the *pfkey_size* parameter.
 
-<h2 class="example">Examples</h2>
-
-The following expression defines the action for F12 to be "move the text to the right of the cursor to the left of the cursor".
-
 <!-- Hidden search keywords -->
 <div style="display: none;">
   ⎕PFKEY PFKEY

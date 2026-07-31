@@ -127,10 +127,25 @@ In the Classic Edition, offending bytes are replaced by the `?` symbol, which me
 ```
 
 The next set of examples illustrates the use of the **Recurse** variant option to limit the sub-directory depth.
-
-The following expression will return all Microsoft Word documents (`.docx` and `.doc`) in the current directory, searching recursively through any sub-directories:
+```apl
+      Y←'d:\bouzouki\*.*'
+      ⍴⊃0(⎕NINFO⍠('Wildcard' 1)('Recurse' 0))Y
+355
+      ⍴⊃0(⎕NINFO⍠('Wildcard' 1)('Recurse' (1 0)))Y
+355
+      ⍴⊃0(⎕NINFO⍠('Wildcard' 1)('Recurse' (1 1)))Y
+1333
+      ⍴⊃0(⎕NINFO⍠('Wildcard' 1)('Recurse' (1 3)))Y
+4223
+```
 
 The following expression "touches" files, that is, it sets their last modification time to the current UTC time:
+```apl
+      (⊂13(1 ⎕DT'Z'))(⎕NINFO⍠1)'*.txt'
+┌───────────────────────┐
+│45719.53226 45719.53226│
+└───────────────────────┘
+```
 
 !!! note
     Of the file timestamps which are reported by the operating system, only the last modification time should be considered reliable and portable. Neither the access time or creation time are well supported across all platforms. Furthermore, they may not accurately reflect the actual time that the operation occurred.

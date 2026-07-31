@@ -15,8 +15,6 @@ If `Y` refers to a non-existent property, or to a property that is not defined f
 
 GUI objects are named **relative** to the current namespace. The following examples are equivalent:
 
-<h2 class="example">Examples</h2>
-
 <!-- Hidden search keywords -->
 <div style="display: none;">
   ⎕WG WG

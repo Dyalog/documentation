@@ -92,8 +92,6 @@ Retrieves the collected profiling data and returns it in flat form. If the `X` i
 - `[;7]` – number of times the timer function was called for the inclusive time
 
 <h3 class="example">Example</h3>
-Numbers in this example have been truncated for formatting purposes.
-
 `X` must be a simple vector of column indices. The result `R` has the same shape as `X`, and is a vector of the specified column vectors.
 
 ```apl
@@ -118,8 +116,6 @@ Retrieves the collected profiling data and returns it in tree form. If the `X` i
 - `[;8]` – number of times the timer function was called for the inclusive time
 
 <h2 class="example">Example</h2>
-Numbers in this example have been truncated for formatting purposes.
-
 Rows with an even depth level in `[;1]` represent function summary entries; odd depth level rows are function line entries. Recursive functions generate separate rows for each level of recursion.
 
 `X` must be a simple vector of column indices. The result `R` has the same shape as `X`, and is a vector of the specified column vectors.

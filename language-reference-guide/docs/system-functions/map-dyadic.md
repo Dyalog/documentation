@@ -60,8 +60,6 @@ Put simple 4-byte integer array on disk ready for mapping:
       (⊃83 323 ⎕DR 2 3 4⍴⍳24)∆MPUT'c:\myvar'
 ```
 
-Then, map a read-write variable:
-
 Note that a mapped array need not be *named*. In the following example, a 'raw' file is mapped, summed and released, all in a single expression:
 ```apl
       +/163 ¯1 ⎕MAP'c:\shorts.dat'
