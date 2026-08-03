@@ -10,7 +10,7 @@ search:
 The left argument `X` is a character scalar or character vector (where `(≢X)∊1,≢Y`) which specifies the type(s) of the corresponding (new) object(s) named in `Y` as:
 
 |---|---------------------------|
-|`∇`|function/operator          |
+|`∇`|function/operator ([default](ed-monadic.md))|
 |`→`|simple character vector    |
 |`∊`|vector of character vectors|
 |`-`|character matrix           |

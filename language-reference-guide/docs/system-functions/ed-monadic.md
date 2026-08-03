@@ -7,6 +7,8 @@ search:
 
 `⎕ED` invokes the Editor.  `Y` is a simple character vector, a simple character matrix, or a vector of character vectors, containing the name(s) of objects to be edited.
 
+If a name in `Y` is not already defined, the Editor assumes the new object to be a function or operator; [dyadic `⎕ED`](ed-dyadic.md) can specify other types.
+
 If `⎕ED` is called from the Session, it opens Edit windows for the object(s) named in `Y` and returns a null result.  The cursor is positioned in the first of the Edit windows opened by `⎕ED`, but may be moved to the Session or to any other window which is currently open.  The effect is almost identical to using `)ED`.
 
 If `⎕ED` is called from a defined function or operator, its behaviour is different. On asynchronous terminals, the Edit windows are automatically displayed in "full-screen" mode (_zoomed_). In all implementations, the user is restricted to those windows named in `Y`. The user may not skip to the Session even though the Session may be visible.
