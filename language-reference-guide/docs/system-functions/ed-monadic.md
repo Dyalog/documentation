@@ -44,12 +44,12 @@ In the first example, `⎕ED` will display the contents of `A` as an editable ch
       ⎕ED A
 ```
 
-In the second example, the Edit window will display the contents of `A` as a ReadOnly Character array. The user can still open a new edit by double-clicking `Hello` or `World` but nothing else.
+In the second example, the Edit window will display the contents of `A` as a read-only character array. The user can still open a new edit by double-clicking `Hello` or `World` but nothing else.
 ```apl
       (⎕ED ⍠ 'ReadOnly' 1) 'A'
 ```
 
-In the final example, the Edit window will display the contents of `A` as a ReadOnly Character array and the user cannot open a new edit window.
+In the final example, the Edit window will display the contents of `A` as a read-only character array and the user cannot open a new edit window.
 ```apl
       (⎕ED ⍠('ReadOnly' 1)('EditName' 'Disallow'))'A'
 ```
