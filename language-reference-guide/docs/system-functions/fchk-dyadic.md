@@ -42,6 +42,18 @@ Repair can recover only check-summed components from the file, that is, only tho
 
 Following an operating system crash, repair may result in one or more individual components being rolled back to a previous version or not recovered at all, unless Journaling levels 2 or 3 were also set when these components were written.
 
+<h2 class="example">Examples</h2>
+
+To check a file and attempt to fix it if damage is found:
+```apl
+      'repair' ⎕FCHK ⍠ 1 'suspect.dcf'
+```
+
+To forcibly check a file and attempt to fix it if damage is found:
+```apl
+      'repair' 'force' ⎕FCHK 'suspect.dcf'
+```
+
 <!-- Hidden search keywords -->
 <div style="display: none;">
   ⎕FCHK FCHK
