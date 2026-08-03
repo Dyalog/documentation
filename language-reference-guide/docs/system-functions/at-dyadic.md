@@ -20,7 +20,19 @@ If `X` is 1, `R` specifies *valences* and contains 3 elements (or columns) whose
 |2  |Function valence|0 if the object is a niladic function or not a function 1 if the object is a monadic function 2 if the object is an ambivalent function|
 |3  |Operator valence|0 if the object is not an operator 1 if the object is a monadic operator 2 if the object is a dyadic operator                          |
 
-If `X` is 2, `R` specifies *fix times* (the time the object was last updated) for functions and operators named in `Y`. The time is reported as 7 integer elements (or columns) whose meaning is as follows. The fix time reported for names in `Y` which are not defined functions or operators is 0.
+<h4 class="example">Example</h4>
+
+The following values correspond to the syntax shown alongside:
+
+| `R` | Syntax |
+|-----|--------|
+| `0 0 0` | `∇ FOO` |
+| `1 0 0` | `∇ Z←FOO` |
+| `1 0 0` | `∇ {Z}←FOO` |
+| `0 2 0` | `∇ {A} FOO B` |
+| `1 1 2` | `∇ {Z}←(F OP G)B` |
+
+If `X` is 2, `R` specifies *fix times* (the time the object was last updated) for functions and operators named in `Y`. The time is reported as 7 integer elements (or columns) in the same form as `⎕TS`, whose meaning is as follows. The fix time reported for names in `Y` which are not defined functions or operators is 0.
 
 |---|-------------------------------------------|
 |1  |Year                                       |

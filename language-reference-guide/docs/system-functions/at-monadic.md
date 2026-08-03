@@ -11,26 +11,37 @@ search:
 
 `R` is a 4-element vector or a 4 column matrix with the same number of rows as names in `Y` containing the following attribute information:
 
-`R[1]` or `R[;1]`: Each item is a 3-element integer vector representing the function header syntax:
+`R[1]` or `R[;1]`: Each item specifies *valences*: a 3-element integer vector representing the function header syntax:
 
 |---|---|---|
 |1|Function result|0 if the function has no result 1 if the function has an explicit result `¯1` if the function has a shy result|
 |2|Function valence|0 if the object is a niladic function or not a function 1 if the object is a monadic function 2 if the object is a dyadic function `¯2` if the object is an ambivalent 				function|
 |3|Operator valence|0 if the object is not an operator 1 if the object is a monadic operator 2 if the object is a dyadic operator|
 
+<h4 class="example">Example</h4>
+
 The following values correspond to the syntax shown alongside:
-```apl
 
-        0  0  0     ∇ FOO
-        1  0  0     ∇ Z←FOO
-       ¯1  0  0     ∇ {Z}←FOO
-        0 ¯2  0     ∇ {A} FOO B
-       ¯1  1  2     ∇ {Z}←(F OP G)B
-```
+| `R[1]` | Syntax |
+|--------|--------|
+| `0 0 0` | `∇ FOO` |
+| `1 0 0` | `∇ Z←FOO` |
+| `¯1 0 0` | `∇ {Z}←FOO` |
+| `0 ¯2 0` | `∇ {A} FOO B` |
+| `¯1 1 2` | `∇ {Z}←(F OP G)B` |
 
-`R[2]` or `R[;2]`: Each item is the (`⎕TS` form) timestamp of the time the function was last fixed.
+`R[2]` or `R[;2]`: Each item specifies *fix times*: the time the function was last fixed, reported as 7 integer elements in the same form as `⎕TS`. The fix time reported for names in `Y` which are not defined functions or operators is 0.
 
-`R[3]` or `R[;3]`: Each item is an integer reporting the current `⎕LOCK` state of the function:
+|---|-------------------------------------------|
+|1  |Year                                       |
+|2  |Month                                      |
+|3  |Day                                        |
+|4  |Hour                                       |
+|5  |Minute                                     |
+|6  |Second                                     |
+|7  |Milliseconds (this is always reported as 0)|
+
+`R[3]` or `R[;3]`: Each item specifies *execution properties*: an integer reporting the current `⎕LOCK` state of the function:
 
 |---|-------------------------|
 |`0`|Not locked               |
