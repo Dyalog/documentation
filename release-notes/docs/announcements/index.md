@@ -30,7 +30,7 @@ This I-beam has been deprecated. It is scheduled for removal in Dyalog v22.0; it
 ### `739⌶` – Temporary Directory  
 This I-beam has been deprecated. It is scheduled for removal in 2029.
 
-### `1200⌶` – Temporary Directory  
+### `1200⌶` – Format Date-time  
 This I-beam has been deprecated. It is scheduled for removal in 2029.
 
 ### Legacy Workspaces

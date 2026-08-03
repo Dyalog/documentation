@@ -18,7 +18,7 @@ The following system functions have been enhanced:
 - [`⎕CSV`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/csv/) – Comma Separated Values  
 A new variant option, **ForceQuotes**, has been added. This specifies when exported data has quotes around character/numeric fields.
 - [`⎕DT`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/dt/) – Datetime  
-The functionality previously provided by [`1200⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/format-datetime/) is now available using `⎕DT`:
+The ability to extract datetimes from text-formatted datetimes, as well as the functionality previously provided by [`1200⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/format-datetime/), has been added:
     - The left argument `X` has been extended; its single element or either/both of the elements in its 2-element vector can now also be character vectors (not scalars) comprising patterns that describe how a datetime is, or is to be, formatted as text. 
 	- The right argument `Y` has been extended; it can now be a character vector, formatted according to a *formatting pattern* (known as by a *text-formatted datetime*).
     - Two new variant options have been added:
