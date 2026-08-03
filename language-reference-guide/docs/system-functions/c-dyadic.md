@@ -31,7 +31,7 @@ Greek has two forms of lowercase Sigma, namely "σ" and "ς", but a single upper
 ```apl
       1 ⎕C 'ίσως'
 ΊΣΩΣ
-      ¯1⎕C 1 ⎕C 'ίσως'
+      ¯1 ⎕C 'ίσως'
 ίσως
 
 ```
