@@ -21,6 +21,8 @@ The effect is as follows:
 2. Execution is suspended until the designated files are free of holds by any other task.
 3. When all the designated files are free, execution proceeds.  Until the hold is released, other tasks using `⎕FHOLD` on any of the designated files will wait.
 
+Use [dyadic `⎕FHOLD`](fhold-dyadic.md) to include a timeout.
+
 If `Y` is empty, all of the user's preceding holds (if any) are released, and execution continues.
 
 A hold is released by any of the following:
@@ -37,7 +39,7 @@ Note that a hold is not released by a request for input through `⎕` or `⍞`.
 
 If `Y` is a matrix, the shy result `R` is `Y[1;]`. Otherwise, the  shy result `R` is `Y`.
 
-<h1 class="example">Examples</h1>
+<h2 class="example">Examples</h2>
 ```apl
       ⎕FHOLD 1
  

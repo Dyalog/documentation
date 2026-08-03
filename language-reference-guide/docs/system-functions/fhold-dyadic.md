@@ -21,9 +21,9 @@ The effect is as follows:
 2. Execution is suspended until the designated files are free of holds by any other task.
 3. When all the designated files are free, execution proceeds.  Until the hold is released, other tasks using `⎕FHOLD` on any of the designated files will wait.
 
-The left argument `X` is a non-negative integer that specifies a time-out in milliseconds. If step 2 (see above) does not complete before the time-out value specified by `X`, `⎕FHOLD` times out and signals a `TIMEOUT` error (1006) after releasing any holds that have succeeded.
+The left argument `X` is a non-negative integer that specifies a timeout in milliseconds. If step 2 (see above) does not complete before the timeout value specified by `X`, `⎕FHOLD` times out and signals a `TIMEOUT` error (1006) after releasing any holds that have succeeded.
 
-A time-out value of 0 indicates that the `⎕FHOLD` should time out at once without waiting if it cannot immediately acquire all holds. If `X` is `¯1`, `⎕FHOLD` behaves as the monadic case, and does not time out.
+A timeout value of 0 indicates that the `⎕FHOLD` should time out at once without waiting if it cannot immediately acquire all holds. If `X` is `¯1`, `⎕FHOLD` behaves as [the monadic case](fhold-monadic.md), and does not time out.
 
 If `Y` is empty, all of the user's preceding holds (if any) are released, and execution continues.
 
@@ -41,7 +41,7 @@ Note that a hold is not released by a request for input through `⎕` or `⍞`.
 
 If `Y` is a matrix, the shy result `R` is `Y[1;]`. Otherwise, the  shy result `R` is `Y`.
 
-<h1 class="example">Examples</h1>
+<h2 class="example">Examples</h2>
 ```apl
       3000 ⎕FHOLD 1
 TIMEOUT
