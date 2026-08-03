@@ -11,18 +11,17 @@ search:
 
 `R` is a 4-element vector or a 4 column matrix with the same number of rows as names in `Y` containing the following attribute information:
 
-`R[1]` or `R[;1]`: Each item specifies *valences*: a 3-element integer vector representing the function header syntax:
+`R[1]` or `R[;1]`: Each item specifies _valences_: a 3-element integer vector representing the function header syntax:
 
 |---|---|---|
 |1|Function result|0 if the function has no result 1 if the function has an explicit result `¯1` if the function has a shy result|
-|2|Function valence|0 if the object is a niladic function or not a function 1 if the object is a monadic function 2 if the object is a dyadic function `¯2` if the object is an ambivalent 				function|
+|2|Function valence|0 if the object is a niladic function or not a function 1 if the object is a monadic function 2 if the object is a dyadic function `¯2` if the object is an ambivalent function|
 |3|Operator valence|0 if the object is not an operator 1 if the object is a monadic operator 2 if the object is a dyadic operator|
 
 <h4 class="example">Example</h4>
 
 The following values correspond to the syntax shown alongside:
 
-| `R[1]` | Syntax |
 |--------|--------|
 | `0 0 0` | `∇ FOO` |
 | `1 0 0` | `∇ Z←FOO` |
@@ -30,60 +29,61 @@ The following values correspond to the syntax shown alongside:
 | `0 ¯2 0` | `∇ {A} FOO B` |
 | `¯1 1 2` | `∇ {Z}←(F OP G)B` |
 
-`R[2]` or `R[;2]`: Each item specifies *fix times*: the time the function was last fixed, reported as 7 integer elements in the same form as `⎕TS`. The fix time reported for names in `Y` which are not defined functions or operators is 0.
+`R[2]` or `R[;2]`: Each item specifies _fix times_: the time the function was last fixed, reported as 7 integer elements in the same form as `⎕TS`. The fix time reported for names in `Y` which are not defined functions or operators is 0.
 
 |---|-------------------------------------------|
-|1  |Year                                       |
-|2  |Month                                      |
-|3  |Day                                        |
-|4  |Hour                                       |
-|5  |Minute                                     |
-|6  |Second                                     |
-|7  |Milliseconds (this is always reported as 0)|
+|1 |Year |
+|2 |Month |
+|3 |Day |
+|4 |Hour |
+|5 |Minute |
+|6 |Second |
+|7 |Milliseconds (this is always reported as 0)|
 
-`R[3]` or `R[;3]`: Each item specifies *execution properties*: an integer reporting the current `⎕LOCK` state of the function:
+`R[3]` or `R[;3]`: Each item specifies _execution properties_: an integer reporting the current [`⎕LOCK`](lock-disambiguation.md) state of the function:
 
 |---|-------------------------|
-|`0`|Not locked               |
-|`1`|Cannot display function  |
-|`2`|Cannot suspend function  |
+|`0`|Not locked |
+|`1`|Cannot display function |
+|`2`|Cannot suspend function |
 |`3`|Cannot display or suspend|
 
-`R[4]` or `R[;4]`: Each item is a character vector - the network ID of the user who last fixed (edited) the function.
+`R[4]` or `R[;4]`: Each item specifies the _author_: a character vector - the user name of the user who last fixed (defined) the function.
 
-<h2 class="example">Example</h2>
+<h2 class="example">Examples</h2>
+
 ```apl
-
     ∇ {z}←{l}(fn myop)r
-[1]   ...
+
+[1] ...
 
     ∇ z←foo
-[1]   ...
+
+[1] ...
 
     ∇ z←{larg}util rarg
-[1]   ...
+
+[1] ...
 
       ⎕LOCK'foo'
 
       util2←util
-```
-```apl
 
       ]Display ⎕AT 'myop' 'foo' 'util' 'util2'
-.→--------------------------------------------.
-↓ .→------. .→-----------------.     .→---.   |
-| |¯1 ¯2 1| |1996 8 2 2 13 56 0|   0 |john|   |
-| '~------' '~-----------------'     '----'   |
-| .→----.   .→------------.          .⊖.      |
-| |1 0 0|   |0 0 0 0 0 0 0|        3 | |      |
-| '~----'   '~------------'          '-'      |
-| .→-----.  .→------------------.    .→---.   |
-| |1 ¯2 0|  |1996 3 1 14 12 10 0|  0 |pete|   |
-| '~-----'  '~------------------'    '----'   |
-| .→-----.  .→-------------------.   .→-----. |
-| |1 ¯2 0|  |1998 8 26 16 16 42 0| 0 |graeme| |
-| '~-----'  '~-------------------'   '------' |
-'∊--------------------------------------------'
+┌→────────────────────────────────────────────┐
+↓ ┌→──────┐ ┌→─────────────────┐     ┌→───┐   │
+│ │¯1 ¯2 1│ │1996 8 2 2 13 56 0│   0 │john│   │
+│ └~──────┘ └~─────────────────┘     └────┘   │
+│ ┌→────┐   ┌→────────────┐          ┌⊖┐      │
+│ │1 0 0│   │0 0 0 0 0 0 0│        3 │ │      │
+│ └~────┘   └~────────────┘          └─┘      │
+│ ┌→─────┐  ┌→──────────────────┐    ┌→───┐   │
+│ │1 ¯2 0│  │1996 3 1 14 12 10 0│  0 │pete│   │
+│ └~─────┘  └~──────────────────┘    └────┘   │
+│ ┌→─────┐  ┌→───────────────────┐   ┌→─────┐ │
+│ │1 ¯2 0│  │1998 8 26 16 16 42 0│ 0 │graeme│ │
+│ └~─────┘  └~───────────────────┘   └──────┘ │
+└∊────────────────────────────────────────────┘
 ```
 
 <!-- Hidden search keywords -->
