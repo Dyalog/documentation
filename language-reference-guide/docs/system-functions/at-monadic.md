@@ -40,7 +40,7 @@ The following values correspond to the syntax shown alongside:
 |6 |Second |
 |7 |Milliseconds (this is always reported as 0)|
 
-`R[3]` or `R[;3]`: Each item specifies _execution properties_: an integer reporting the current [`⎕LOCK`](lock-disambiguation.md) state of the function:
+`R[3]` or `R[;3]`: Each item specifies _execution properties_: an integer reporting the current [`⎕LOCK`](lock-monadic.md) state of the function:
 
 |---|-------------------------|
 |`0`|Not locked |
