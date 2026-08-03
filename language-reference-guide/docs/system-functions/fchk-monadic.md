@@ -21,9 +21,9 @@ The default behaviour is as follows:
 The result `R` is a vector of the numbers of missing or damaged components. `R` may include non-positive numbers of "pseudo components" that indicate damage to parts of the file other than in specific components:
 
 |----|---------------------|
-|`0` |ACCESS MATRIX.       |
-|`¯1`|Free-block tree.     |
-|`¯2`|Component index tree.|
+|`0` |access matrix       |
+|`¯1`|Free-block tree     |
+|`¯2`|Component index tree|
 
 Other negative numbers represent damage to the file metadata; this set may be extended in the future.
 
