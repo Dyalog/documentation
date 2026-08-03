@@ -61,14 +61,14 @@ The following objects have been enhanced:
 
 The following configuration parameters have been added:
 
-- `LAYOUT_FILE`  
+- [`LAYOUT_FILE`](https://docs.dyalog.com/21.0/windows-installation-and-configuration-guide/docs/configuration-parameters/layout-file/) (Microsoft Windows only)  
 This specifies the path (absolute or relative to the working directory) and name of the Session layout file.
 
 ### Microsoft Windows IDE
 
 The following changes have been made to the Microsoft Windows IDE:
 
-- The purpose and items in the **Layout** menu have been changed:
+- The purpose and items in the [**Layout** menu](https://docs.dyalog.com/21.0/windows-ui-guide/session-menubar/#the-layout-menu) have been changed:
     - Selections from the **Layout** menu now apply to the layout of the Session and of the tools that are docked in it, including the Editor and the Debugger, rather than only to the Debugger.
 	- The **Debugger on the left** item has been removed.
 	- A new item, **Open...**, displays the **Open Session layout** dialog box.
