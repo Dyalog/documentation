@@ -55,6 +55,26 @@ The following objects have been enhanced:
     - The [Dirty](https://docs.dyalog.com/21.0/object-reference/properties/dirty/) property indicates whether the current page is considered to have content.
     - The [PagesBeginDirty](https://docs.dyalog.com/21.0/object-reference/properties/pagesbegindirty/) property indicates whether a new page in a document will be printed even if it has no content.
 
+## Development Environment Changes
+
+### Configuration Parameters
+
+The following configuration parameters have been added:
+
+- `LAYOUT_FILE`  
+This specifies the path (absolute or relative to the working directory) and name of the Session layout file.
+
+### Microsoft Windows IDE
+
+The following changes have been made to the Microsoft Windows IDE:
+
+- The purpose and items in the **Layout** menu have been changed:
+    - Selections from the **Layout** menu now apply to the layout of the Session and of the tools that are docked in it, including the Editor and the Debugger, rather than only to the Debugger.
+	- The **Debugger on the left** item has been removed.
+	- A new item, **Open...**, displays the **Open Session layout** dialog box.
+    - A new item, **Classic with Vertical Inline Tracing**, configures the Session as with Classic Dyalog mode but with the Left Argument pane docked above the Tracer and the Right Argument pane docked below it. 	
+- A new **Open Session layout** dialog box has been added. This enables the selection of a Session layout file (that is, a **.layout** file).
+	
 ## Interfaces
 
 ### .NET Interface
