@@ -12,13 +12,13 @@ search:
 `X` is an integer scalar or vector (one per name in the namelist) indicating the export type.  `X` can currently be one of the values:
 
 - 0 - not exported.
-- 1 - exported (default).
+- 1 - exported (initial value).
 
 A scalar or 1-element-vector type is replicated to conform with a multi-name list.
 
 The shy result `R` is a vector that reports the export type of the functions and operators named in `Y`.
 
-When the path mechanism locates a referenced function (or operator) in the list of namespaces in the `⎕PATH` system variable, it examines the function's export type:
+When the path mechanism locates a referenced function (or operator) in the list of namespaces in the `⎕PATH` system variable, it examines [the function's export type](export-monadic.md):
 
 |---|---|
 |0|This instance of the function is ignored and the search is resumed at the next namespace in the `⎕PATH` list.  Type-0 is typically used for functions residing in a utility namespace which are not themselves utilities, for example the private sub-function of a utility function.|

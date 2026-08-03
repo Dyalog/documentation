@@ -11,7 +11,7 @@ search:
 
 The result `R` is a vector that reports the export type of the functions and operators named in `Y`.
 
-When the path mechanism locates a referenced function (or operator) in the list of namespaces in the `⎕PATH` system variable, it examines the function's export type:
+When the path mechanism locates a referenced function (or operator) in the list of namespaces in the `⎕PATH` system variable, it examines [the function's export type](export-dyadic.md):
 
 |---|---|
 |0|This instance of the function is ignored and the search is resumed at the next namespace in the `⎕PATH` list.  Type-0 is typically used for functions residing in a utility namespace which are not themselves utilities, for example the private sub-function of a utility function.|
