@@ -9,14 +9,6 @@ Dyadic `⎕CSV` exports Comma Separated Value (CSV) data to a CSV file, or conve
 
 `⎕CSV` output is not affected by [`⎕PP`](pp); numeric values are always represented with full precision.
 
-## Internal Format
-
-Arrays that are suitable for exporting as CSV data are represented by 3 possible structures:
-
-- A table (a matrix whose elements are character vectors or scalars, or numbers).
-- A vector, each of whose items contain field (column) values. Character field values are character matrices; numeric field values are numeric vectors.
-- A vector, each of whose items contain field (column) values. Character field values are vectors of character vectors; numeric field values are numeric vectors.
-
 The left argument `X` is either:
 
 - a matrix or a vector of vectors/matrices containing the data to be converted to CSV format.
@@ -81,6 +73,14 @@ The Overwrite variant option (Boolean) from Version 16.0 remains supported but i
 If `Y` specifies that the CSV data is written to a file then `R` is the number of bytes (not characters) written, and is shy.
 
 Otherwise, `R` is the CSV data in the format specified in Y, and is not shy.
+
+## Internal Format
+
+Arrays that are suitable for exporting as CSV data are represented by 3 possible structures:
+
+- A table (a matrix whose elements are character vectors or scalars, or numbers).
+- A vector, each of whose items contain field (column) values. Character field values are character matrices; numeric field values are numeric vectors.
+- A vector, each of whose items contain field (column) values. Character field values are vectors of character vectors; numeric field values are numeric vectors.
 
 <h3 class="example">Examples</h3>
 ```apl

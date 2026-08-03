@@ -7,16 +7,6 @@ search:
 
 Monadic `⎕CSV` imports Comma Separated Value (CSV) data from a CSV file, or converts data from CSV format to an internal format.
 
-## Internal Format
-
-Arrays that result from importing CSV data are represented by 3 possible structures:
-
-- A table (a matrix whose elements are character vectors or scalars, or numbers).
-- A vector, each of whose items contain field (column) values. Character field values are character matrices; numeric field values are numeric vectors.
-- A vector, each of whose items contain field (column) values. Character field values are vectors of character vectors; numeric field values are numeric vectors.
-
-Note that when importing CSV data, all fields are assumed to be character fields unless otherwise specified (see *Column Types* below). A field that contains only "numbers" will not be converted to numeric data unless specified as being numeric.
-
 `Y` is an array that specifies just the source of the CSV data (see below) or a 1,2,3 or 4-element vector containing:
 
 |-----|---------------------------|
@@ -108,6 +98,16 @@ If `Y[4]` does specify that the data contains a header then `R` is a 2-element v
 
 - `R[1]` is the imported data excluding the header.
 - `R[2]` is a vector of character vectors containing the header record.
+
+## Internal Format
+
+Arrays that result from importing CSV data are represented by 3 possible structures:
+
+- A table (a matrix whose elements are character vectors or scalars, or numbers).
+- A vector, each of whose items contain field (column) values. Character field values are character matrices; numeric field values are numeric vectors.
+- A vector, each of whose items contain field (column) values. Character field values are vectors of character vectors; numeric field values are numeric vectors.
+
+Note that when importing CSV data, all fields are assumed to be character fields unless otherwise specified (see *Column Types* below). A field that contains only "numbers" will not be converted to numeric data unless specified as being numeric.
 
 <h2 class="example">Examples</h2>
 
