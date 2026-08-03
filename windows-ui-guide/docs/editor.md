@@ -46,7 +46,7 @@ Note that when the Editor has the focus, the Editor menubar is displayed in plac
 
 If Classic Dyalog mode is selected from the [Layout menu](session-menubar.md#the-layout-menu), each Edit window is a top-level window created as a child of the Session window. This means that normally Edit windows appear on top of the Session.
 
-The first Edit window is created at the position specified by the **edit_first_y** and **edit_first_x** parameters which  are specified in terms of the size of a character in the current font relative to the top-left corner of the screen.
+The first Edit window is created at the position specified by the **edit_first_y** and **edit_first_x** parameters, which are specified in terms of the size of a character in the current font relative to the top-left corner of the screen.
 
 The initial size of an edit window is specified by the **edit_rows** and **edit_cols** parameters.
 
