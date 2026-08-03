@@ -5,13 +5,13 @@ search:
 
 # <span>Get Class/Interface Implementation</span> `R←X ⎕CLASS Y`{{key}}
 
+Dyadic `⎕CLASS` returns a reference to the implementation of Interface `X` by Instance `Y`, or to the implementation of (Base) Class `X` by Instance `Y`, and is used as a *cast* in order to access members of `Y` that correspond to members of Interface of (Base) Class `X`.
+
 `Y` must be a reference to an Instance of a Class and `X` is a reference to an Interface that is supported by Instance `Y` or to a Class upon which Instance `Y` is based.
 
-In this case, `R` is a reference to the implementation of Interface `X` by Instance `Y`, or to the implementation of (Base) Class `X` by Instance `Y`, and is used as a *cast* in order to access members of `Y` that correspond to members of Interface of (Base) Class `X`.
+<h2 class="example">Examples</h2>
 
-## Example 1
-
-Once again, the Penguin Class example (see[Programmer's Guide: "Penguin Class Example"](../../../programming-reference-guide/object-oriented-programming/interfaces/interface-example)) is used to illustrate the use of Interfaces.
+The [Penguin Class example](../../../programming-reference-guide/object-oriented-programming/interfaces/interface-example) is used to illustrate the use of Interfaces.
 ```apl
       Pingo←⎕NEW Penguin
       (FishBehaviour ⎕CLASS Pingo).Swim
@@ -23,8 +23,6 @@ I lay one egg every year         
       (BirdBehaviour ⎕CLASS Pingo).Sing
 Croak, Croak!           
 ```
-
-## Example 2
 
 This example illustrates the use of dyadic `⎕CLASS` to cast an Instance to a lower Class and thereby access a member in the lower Class that has been superseded by another Class higher in the tree.
 ```apl

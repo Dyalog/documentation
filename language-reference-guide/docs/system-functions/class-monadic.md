@@ -11,7 +11,7 @@ Monadic `⎕CLASS` returns a list of references to Classes and Interfaces that s
 
 `R` is a vector of vectors whose items represent nodes in the Class hierarchy of `Y`. Each item of `R` is a vector whose first item is a Class reference and whose subsequent items (if any) are references to the Interfaces supported by that Class.
 
-## Example 1
+<h2 class="example">Examples</h2>
 
 This example illustrates a simple inheritance tree or Class hierarchy. There are 3 Classes, namely:
 ```apl
@@ -44,9 +44,7 @@ Animal
    #.Parrot    #.Bird    #.Animal      #.Animal
 ```
 
-### Example 2
-
-The Penguin Class example (see[Programmer's Guide: "Penguin Class Example"](../../../programming-reference-guide/object-oriented-programming/interfaces/interface-example)) illustrates the use of Interfaces.
+The [Penguin Class example](../../../programming-reference-guide/object-oriented-programming/interfaces/interface-example) illustrates the use of Interfaces.
 
 In this case, the `Penguin` Class derives from `Animal` (as above) but additionally supports the `BirdBehaviour` and `FishBehaviour` Interfaces, thereby inheriting members from both.
 ```apl
