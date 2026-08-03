@@ -5,27 +5,17 @@ search:
 
 # <span>Export CSV</span> `{R}←X ⎕CSV Y`{{key}}
 
-This function imports and exports Comma Separated Value (CSV) data.
-
-Monadic `⎕CSV` imports data from a CSV file or converts data from CSV format to an internal format. Dyadic `⎕CSV` exports data to a CSV file or converts data from internal format to a CSV format.
+Dyadic `⎕CSV` exports Comma Separated Value (CSV) data to a CSV file, or converts data from an internal format to CSV format.
 
 `⎕CSV` output is not affected by [`⎕PP`](pp); numeric values are always represented with full precision.
 
 ## Internal Format
 
-Arrays that result from importing CSV data or arrays that are suitable for exporting as CSV data are represented by 3 possible structures:
+Arrays that are suitable for exporting as CSV data are represented by 3 possible structures:
 
 - A table (a matrix whose elements are character vectors or scalars, or numbers).
 - A vector, each of whose items contain field (column) values. Character field values are character matrices; numeric field values are numeric vectors.
 - A vector, each of whose items contain field (column) values. Character field values are vectors of character vectors; numeric field values are numeric vectors.
-
-Note that when importing CSV data, all fields are assumed to be character fields unless otherwise specified (see *Column Types* below). A field that contains only "numbers" will not be converted to numeric data unless specified as being numeric.
-
-## MetaCharacters
-
-Some characters in a CSV file are metacharacters that define the structure of the data; for example, the field separator character between fields. Characters that are not metacharacters are literal characters. The variant options QuoteChar, EscapeChar, and DoubleQuote make it possible to interpret metacharacters as literal characters, and thus permit fields to contain field separator characters, leading and trailing spaces, and line-endings.
-
-Fixed-width fields do not require these options and they are ignored if fixed-width fields are being processed.
 
 The left argument `X` is either:
 
@@ -53,7 +43,13 @@ If `Y[1]` is a file name or tie number, *Description* may be:
 
 If `Y[1]` is empty, *Description* may be a character scalar `'S'` (simple) or `'N'` (nested). If omitted, the default is `'S'`
 
-## Variant options
+## MetaCharacters
+
+Some characters in a CSV file are metacharacters that define the structure of the data; for example, the field separator character between fields. Characters that are not metacharacters are literal characters. The variant options QuoteChar, EscapeChar, and DoubleQuote make it possible to interpret metacharacters as literal characters, and thus permit fields to contain field separator characters, leading and trailing spaces, and line-endings.
+
+Fixed-width fields do not require these options and they are ignored if fixed-width fields are being processed.
+
+## Variant Options
 
 Dyadic `⎕CSV` may be applied using the _variant_ operator with the following options.
 
@@ -88,8 +84,8 @@ Otherwise, `R` is the CSV data in the format specified in Y, and is not shy.
 
 <h3 class="example">Examples</h3>
 ```apl
-       CSVFile←'c:\Dyalog16.0\sales.csv'
-     DATA⍪←'Gizmos' 23
+      CSVFile←'c:\Dyalog16.0\sales.csv'
+      DATA⍪←'Gizmos' 23
       DATA HDR ⎕CSV''
 ┌→────────────┐
 │Product,Sales│
