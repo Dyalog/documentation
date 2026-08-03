@@ -35,6 +35,14 @@ If `Y[1]` is a file name or tie number, *Description* may be:
 
 If `Y[1]` is empty, *Description* may be a character scalar `'S'` (simple) or `'N'` (nested). If omitted, the default is `'S'`
 
+## Internal Format
+
+Arrays that are suitable for exporting as CSV data are represented by 3 possible structures:
+
+- A table (a matrix whose elements are character vectors or scalars, or numbers).
+- A vector, each of whose items contain field (column) values. Character field values are character matrices; numeric field values are numeric vectors.
+- A vector, each of whose items contain field (column) values. Character field values are vectors of character vectors; numeric field values are numeric vectors.
+
 ## MetaCharacters
 
 Some characters in a CSV file are metacharacters that define the structure of the data; for example, the field separator character between fields. Characters that are not metacharacters are literal characters. The variant options QuoteChar, EscapeChar, and DoubleQuote make it possible to interpret metacharacters as literal characters, and thus permit fields to contain field separator characters, leading and trailing spaces, and line-endings.
@@ -73,14 +81,6 @@ The Overwrite variant option (Boolean) from Version 16.0 remains supported but i
 If `Y` specifies that the CSV data is written to a file then `R` is the number of bytes (not characters) written, and is shy.
 
 Otherwise, `R` is the CSV data in the format specified in Y, and is not shy.
-
-## Internal Format
-
-Arrays that are suitable for exporting as CSV data are represented by 3 possible structures:
-
-- A table (a matrix whose elements are character vectors or scalars, or numbers).
-- A vector, each of whose items contain field (column) values. Character field values are character matrices; numeric field values are numeric vectors.
-- A vector, each of whose items contain field (column) values. Character field values are vectors of character vectors; numeric field values are numeric vectors.
 
 <h3 class="example">Examples</h3>
 ```apl

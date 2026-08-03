@@ -51,6 +51,16 @@ Note that if *Column Types* is specified by a scalar 4, all numeric data in all 
 
 This is a Boolean value (default 0) to specify whether or not the first record in a CSV file is a list of column labels. If *Header Row Indicator* is 1, the first record (the *header row*) is treated differently from other records. It is assumed to contain character data (labels) regardless of `Y[3]` and is returned separately in the result.
 
+## Internal Format
+
+Arrays that result from importing CSV data are represented by 3 possible structures:
+
+- A table (a matrix whose elements are character vectors or scalars, or numbers).
+- A vector, each of whose items contain field (column) values. Character field values are character matrices; numeric field values are numeric vectors.
+- A vector, each of whose items contain field (column) values. Character field values are vectors of character vectors; numeric field values are numeric vectors.
+
+Note that when importing CSV data, all fields are assumed to be character fields unless otherwise specified (see *Column Types* below). A field that contains only "numbers" will not be converted to numeric data unless specified as being numeric.
+
 ## MetaCharacters
 
 Some characters in a CSV file are metacharacters that define the structure of the data; for example, the field separator character between fields. Characters that are not metacharacters are literal characters. The variant options QuoteChar, EscapeChar, and DoubleQuote make it possible to interpret metacharacters as literal characters, and thus permit fields to contain field separator characters, leading and trailing spaces, and line-endings.
@@ -98,16 +108,6 @@ If `Y[4]` does specify that the data contains a header then `R` is a 2-element v
 
 - `R[1]` is the imported data excluding the header.
 - `R[2]` is a vector of character vectors containing the header record.
-
-## Internal Format
-
-Arrays that result from importing CSV data are represented by 3 possible structures:
-
-- A table (a matrix whose elements are character vectors or scalars, or numbers).
-- A vector, each of whose items contain field (column) values. Character field values are character matrices; numeric field values are numeric vectors.
-- A vector, each of whose items contain field (column) values. Character field values are vectors of character vectors; numeric field values are numeric vectors.
-
-Note that when importing CSV data, all fields are assumed to be character fields unless otherwise specified (see *Column Types* below). A field that contains only "numbers" will not be converted to numeric data unless specified as being numeric.
 
 <h2 class="example">Examples</h2>
 
