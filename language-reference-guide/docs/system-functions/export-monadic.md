@@ -5,13 +5,13 @@ search:
 
 # <span>Query Export Type</span> `{R}←⎕EXPORT Y`{{key}}
 
-`⎕EXPORT` is used to query the export type of a defined function (or operator) referenced by the `⎕PATH` mechanism.
+`⎕EXPORT` is used to query the export type of a defined function (or operator) referenced by the `⎕PATH` mechanism, as [set by dyadic `⎕EXPORT`](export-dyadic.md).
 
 `Y` is a character matrix or vector-of-vectors representing the names of functions and operators whose export type is to be queried.
 
 The result `R` is a vector that reports the export type of the functions and operators named in `Y`.
 
-When the path mechanism locates a referenced function (or operator) in the list of namespaces in the `⎕PATH` system variable, it examines [the function's export type](export-dyadic.md):
+When the path mechanism locates a referenced function (or operator) in the list of namespaces in the `⎕PATH` system variable, it examines the function's export type:
 
 |---|---|
 |0|This instance of the function is ignored and the search is resumed at the next namespace in the `⎕PATH` list.  Type-0 is typically used for functions residing in a utility namespace which are not themselves utilities, for example the private sub-function of a utility function.|
