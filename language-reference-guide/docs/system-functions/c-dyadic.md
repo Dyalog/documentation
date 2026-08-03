@@ -5,17 +5,17 @@ search:
 
 # <span>Case Map</span> `R←X ⎕C Y`{{key}}
 
-`Y` is any array. `R` is an identical array except that character arrays within it are either folded for case-less comparison, or mapped to upper or lower case.
+`Y` is any array. `R` is an identical array except that character arrays within it are either folded for case-less comparison, or mapped to upper- or lowercase.
 
 For a discussion of case folding and case conversion (mapping), see [Character Properties, Case Mappings & Names FAQ](https://unicode.org/faq/casemap_charprop.html).
 
 The following cases are supported:
 
-|X   |Description                                                                                                     |
-|----|----------------------------------------------------------------------------------------------------------------|
-|`1` |`R` is a copy of `Y` with character arrays mapped to upper case.                                                |
-|`¯1`|`R` is a copy of `Y` with character arrays mapped to lower case.                                                |
-|`¯3`|`R` is a copy of `Y` with character arrays folded, for case-less comparison (this is equivalent to monadic use).|
+|X|Description|
+|---|---|
+|`1`|`R` is a copy of `Y` with character arrays mapped to uppercase.|
+|`¯1`|`R` is a copy of `Y` with character arrays mapped to lowercase.|
+|`¯3`|`R` is a copy of `Y` with character arrays folded, for case-less comparison (this is equivalent to monadic [`⎕C`](c-monadic.md)).|
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -27,14 +27,12 @@ The following cases are supported:
 
 ```
 
-<h2 class="example">Example</h2>
-
-Greek has two forms of lower-case Sigma, namely "σ" and "ς" but a single upper-case Sigma "Σ". Each lower-case form remains unchanged when mapped to lower-case, but both fold to "σ", while "Σ" is mapped to lower-case "σ" .
+Greek has two forms of lowercase Sigma, namely "σ" and "ς", but a single uppercase Sigma "Σ". Each lowercase form remains unchanged when mapped to lowercase, but both map to uppercase "Σ".
 ```apl
       1 ⎕C 'ίσως'
 ΊΣΩΣ
       ¯1⎕C 1 ⎕C 'ίσως'
-ίσωσ
+ίσως
 
 ```
 

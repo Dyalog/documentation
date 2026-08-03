@@ -5,11 +5,9 @@ search:
 
 # <span>Case Fold</span> `R←⎕C Y`{{key}}
 
-`Y` is any array. `R` is an identical array except that character arrays within it are either folded for case-less comparison, or mapped to upper or lower case.
+`Y` is any array. `R` is a copy of `Y` with character arrays folded, for case-less comparison.
 
 For a discussion of case folding and case conversion (mapping), see [Character Properties, Case Mappings & Names FAQ](https://unicode.org/faq/casemap_charprop.html).
-
-`R` is a copy of `Y` with character arrays folded, for case-less comparison.
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -21,9 +19,7 @@ For a discussion of case folding and case conversion (mapping), see [Character P
 
 ```
 
-<h2 class="example">Example</h2>
-
-Greek has two forms of lower-case Sigma, namely "σ" and "ς" but a single upper-case Sigma "Σ". Each lower-case form remains unchanged when mapped to lower-case, but both fold to "σ", while "Σ" is mapped to lower-case "σ" .
+Greek has two forms of lowercase Sigma, namely "σ" and "ς", but a single uppercase Sigma "Σ". Each lowercase form remains unchanged when mapped to lowercase, but both fold to "σ", while "Σ" is mapped to lowercase "σ".
 ```apl
       ⎕C 'ίσως'
 ίσωσ
