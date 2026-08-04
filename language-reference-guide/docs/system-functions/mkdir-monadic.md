@@ -9,28 +9,14 @@ This function creates new directories.
 
 `Y` is a character vector or scalar containing a single directory name, or a vector of character vectors containing zero or more directory names. Names must conform to the naming rules of the host Operating System.
 
-By default, for each name in `Y` the path must exist and the base name must not exist (see [File Name Parts](nparts-monadic.md)), otherwise an error is signalled. The variant option **Unique** can be used to amend this behaviour.
+For each name in `Y` the path must exist and the base name must not exist (see [File Name Parts](nparts-monadic.md)), otherwise an error is signalled. Use the variant option **Unique** or [dyadic `⎕MKDIR`](mkdir-dyadic.md) to handle these cases.
 
-An error is signalled if the base name already exists, or if any part of the path does not already exist; use [dyadic `⎕MKDIR`](mkdir-dyadic.md) to handle these cases.
+The **Unique** option specifies whether the base name (see [File Name Parts](nparts-monadic.md)) in `Y` is modified so that the name is unique (does not already exist). The result `R` depends on the value of **Unique**; if **Unique** is not present, it is assumed to have a value of `0`.
 
-The result `R` depends on the value of the variant option **Unique**. If  **Unique** is not present, it is assumed to have a value of `0`.
-
-| Unique | Result `R` |
-|--------|------------|
-|` 0`    | If `Y` specifies a single name, the shy result `R` is a scalar `1` if a directory was created or `0` if not. If `Y` is a vector of character vectors, `R` is a vector of `1`s and `0`s with the same length as `Y`. |
-| `1`    | If `Y` specifies a single name, the shy result `R` is a character vector containing the name of the directory that was created. If `Y` is a vector of character vectors, `R` is a vector of character vectors with the same length as `Y`. |
-
-## Variant Options
-
-`⎕MKDIR` may be applied using the variant operator with the option **Unique**. There is no primary option.
-
-## Unique Option (Boolean)
-The **Unique** option specifies whether the base name (see [File Name Parts](nparts-monadic.md)) in `Y` is modified so that the name is unique (does not already exist).
-
-| Unique            | Effect on Behaviour  |
-|-------------------|----------------------|
-|` 0` (default) | The directory named in `Y` will be created. |
-| `1`               | The name in `Y` is modified by extending the base name with random characters and the directory is created. The name of the directory is returned in the result `R`. |
+| Unique | Effect on Behaviour | Result `R` |
+|--------|---------------------|------------|
+| `0` (default) | The directory named in `Y` will be created. | If `Y` specifies a single name, the shy result `R` is a scalar `1` if a directory was created or `0` if not. If `Y` is a vector of character vectors, `R` is a vector of `1`s and `0`s with the same length as `Y`. |
+| `1` | The name in `Y` is modified by extending the base name with random characters and the directory is created. The name of the directory is returned in the result `R`. | If `Y` specifies a single name, the shy result `R` is a character vector containing the name of the directory that was created. If `Y` is a vector of character vectors, `R` is a vector of character vectors with the same length as `Y`. |
 
 If a directory cannot be created (for example, if a directory with that name already exists, or write access is denied) then an error is signalled.
 
