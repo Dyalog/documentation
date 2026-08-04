@@ -21,8 +21,6 @@ If you map a file with read-only access you may modify the corresponding array i
 
 The file contains a simple APL array, complete with header information (type, rank, shape, etc.). Such mapped files may only be updated by changing the associated array using indexed/pick assignment: `var[a]←b`, the new values must be of the same type as the originals.
 
-Note that Windows does not support mapped files of zero length.
-
 <h2 class="example">Examples</h2>
 
 Replace some items in mapped file:
