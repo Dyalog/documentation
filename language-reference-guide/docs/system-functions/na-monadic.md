@@ -17,7 +17,7 @@ Instructional examples using `⎕NA` can be found in the supplied workspace `qua
 
 The DLL may be part of the standard operating system software, a library purchased from a third party supplier, or one that you have written yourself.
 
-The right argument `Y` is a character vector that identifies the name and syntax of the function to be associated. If the `⎕NA` is successful, a function (name class 3) is established in the active workspace under the name of the external function itself.
+The right argument `Y` is a character vector that identifies the name and syntax of the function to be associated. The name of the external function itself is also used on the APL side for the association. Use [dyadic `⎕NA`](na-dyadic.md) to associate a custom name instead. If the `⎕NA` is successful, a function (name class 3) is established in the active workspace under the name of the external function itself.
 
 The shy result `R` is a character vector containing the name of the external function that was fixed.
 
@@ -25,20 +25,38 @@ For example, `math.dll` might be a library of mathematical functions containing 
 
 In a compiled language such as C, the types of arguments and results of functions must be declared explicitly. Typically, these types will be published with the documentation that accompanies the DLL. For example, function `divide` might be declared:
 ```c
- double divide(int32_t, int32_t);
+double divide(int32_t, int32_t);
 ```
 
 which means that it expects two long (4-byte) integer arguments and returns a double (8-byte) floating point result. Notice the correspondence between the C declaration and the right argument of `⎕NA`:
-```
-    C:             double    divide       (int32_t,  int32_t);
-    APL:  'div' ⎕NA 'F8    math|divide       I4        I4 '
+
+<table>
+<tr><th>C</th><td>
+
+```c
+   double    divide       (int32_t,  int32_t);
 ```
 
-where `F8` and `I4`, specify the types of the result and arguments expected by `divide`. The association has the effect of establishing a new function: `div` in the workspace, which when called, passes its arguments to `divide` and returns the result.
+</td></tr>
+<tr><th>APL</th><td>
+
+```apl
+⎕NA 'F8    math|divide       I4        I4'
+```
+
+</td></tr>
+</table>
+
+So to associate the APL name `divide` with this external function:
+```apl
+      ⎕NA 'F8 math|divide I4 I4'
+```
+
+where `F8` and `I4`, specify the types of the result and arguments expected by `divide`. The association has the effect of establishing a new function: `divide` in the workspace, which when called, passes its arguments to the C `divide` and returns the result.
 ```apl
       )FNS
-div
-      div 10 4
+divide
+      divide 10 4
 2.5
 ```
 
@@ -247,13 +265,13 @@ could be coded as:
 
 Confusion sometimes arises over a difference in the declaration syntax between C and `⎕NA`. In C, an argument declaration may be given to receive a pointer to either a single scalar item, or to the first element of an array. This is because in C, the address of an array is deemed to be the address of its first element.
 ```c
-   void foo (char *string);
-   char ch = 'a', ptr = "abc";
-   foo(&ch);// call with address of scalar.
-   foo(ptr);// call with address of array.
+void foo (char *string);
+char ch = 'a', ptr = "abc";
+foo(&ch);// call with address of scalar.
+foo(ptr);// call with address of array.
 ```
 
-However, from APL's point of view, these two cases are distinct and if the function is to be called with the address of (pointer to) a *scalar*, it must be declared: `'<T'`. Otherwise, to be called with the address of an *array*, it must be declared: `'<T[]'`.
+However, from APL's point of view, these two cases are distinct and if the function is to be called with the address of (pointer to) a *scalar*, it must be declared: `'<T'`. Otherwise, to be called with the address of an *array*, it must be declared: `'<T[]'`. To enable calling both forms, multiple name associations must be set up using [custom names](na-dyadic.md).
 
 ### Structures
 
@@ -312,18 +330,6 @@ A library designer tries to avoid defining structures that induce padding.
 
 If a definition includes multiple adjacent occurrences of the same item, the count syntax may be used rather than explicitly repeating the same definition.
 
-For example:
-```apl
-      ⎕NA 'I User32|GetWindowText* P =0T I'
- 
-      ]Display GetWindowText HNDL (255⍴' ') 255
-.→-------------------------.
-|    .→------------------. |
-| 19 |MYWS - Dyalog APL/W| |
-|    '-------------------' |
-'∊-------------------------'
-```
-
 `>I8[3]` rather than `>I8 >I8 >I8`
 
 `{I8 U8 I8 P}[2]` rather than `{I8 U8 I8 P} {I8 U8 I8 P}`
@@ -370,10 +376,7 @@ C++ and some other languages will by default mangle (or decorate) function names
 
 ### Call by Ordinal Number
 
-Under Windows, a DLL may associate an *ordinal number* with any of its functions. This number may then be used to call the function as an alternative to calling it by name. Using `⎕NA` to call by ordinal number uses the same syntax but with the function name replaced with its ordinal number. For example:
-```apl
-      ⎕NA'... mydll|57 ...'
-```
+Under Windows, a DLL may associate an *ordinal number* with any of its functions. This number may then be used to call the function as an alternative to calling it by name. Using `⎕NA` to call by ordinal number uses the same syntax but with the function name replaced with its ordinal number. To use such functions, supply a [custom name](na-dyadic.md).
 
 ### Pointer Arguments
 
@@ -383,14 +386,14 @@ When passing pointer arguments there are three cases to consider.
 
 In this case you must supply the data array itself as argument to the function. A pointer to its first element is then passed to the DLL function.
 ```apl
-      fn2 ⊂'hello'
+      myfn2 ⊂'hello'
 ```
 
 ### `>` Output pointer
 
 Here, you must supply the **number of elements** that the output will need in order for APL to allocate memory to accommodate the resulting array.
 ```apl
-      fn6 10 'world'  ⍝ 1st arg needs space for 10 ints.
+      myfn6 10 'world'  ⍝ 1st arg needs space for 10 ints.
 ```
 
 Note that if you were to reserve fewer elements than the DLL function actually used, the DLL function would write beyond the end of the reserved array and may cause the interpreter to crash with a System Error (syserror 999 on Windows or SIGSEGV on UNIX, Linux or macOS).
@@ -399,7 +402,7 @@ Note that if you were to reserve fewer elements than the DLL function actually u
 
 As with the input-only case, a pointer to the first element of the argument is passed to the DLL function. The DLL function then overwrites some or all of the elements of the array, and the new value is passed back as part of the result of the call. As with the output pointer case, if the input array were too short, so that the DLL wrote beyond the end of the array, the interpreter would almost certainly crash.
 ```apl
-      fn3 '.....' 'hello'
+      myfn3 '.....' 'hello'
 ```
 
 ### Specifying Pointers Explicitly
@@ -420,7 +423,7 @@ Two common cases occur where it is necessary to pass a pointer explicitly. The f
 
 In both cases, the pointer argument should be coded as `P`. This causes APL to pass the pointer unchanged, *by value*, to the DLL function.
 
-Note that by using P, which is 4-byte for 32-bit processes and 8-byte for 64-bit processes, you will ensure that the code will run unchanged under both 32-bit and 64-bit versions of Dyalog APL.
+In the previous example, to pass a null pointer, (or one returned from another DLL function), you must code a separate [`⎕NA` definition with a custom name](na-dyadic.md).
 
 ### Result Vector
 
@@ -557,9 +560,15 @@ void *MEMCPY(     // copy memory
 
 <h3 class="example">Example</h3>
 
+Suppose a global buffer (at address: `addr`) contains (`numb`) double floating point numbers. To copy these to an APL array, we could define the association:
+```apl
+      ⎕NA 'dyalog32|MEMCPY >F8[] I4 U4'
+      MEMCPY numb addr (numb×8)
+```
+
 Notice that:
 
-- As the first argument to `doubles` is an output argument, we must supply the number of elements to reserve for the output data.
+- As the first argument to `MEMCPY` is an output argument, we must supply the number of elements to reserve for the output data.
 - `MEMCPY` is defined to take the number of *bytes* to copy, so we must multiply the number of elements by the element size in bytes.
 
 <h3 class="example">Example</h3>
@@ -602,7 +611,27 @@ typedef struct {     // null-terminated strings:
 } name;
 ```
 
+To copy the names *from* the structure:
+```apl
+      ⎕NA'dyalog64|STRNCPY >0T1[] P U4'
+      STRNCPY 20 addr 20
+Charlie
+      STRNCPY 20 (addr+20) 20
+Brown
+```
+
 Note that (as this is a 64-bit example), `⎕FR` must be 1287 for the addition to be reliable.
+
+To copy data *from* the workspace *into* an already allocated (`new`) structure:
+```apl
+      ⎕NA'dyalog32|STRNCPY I4 <0T[] U4'
+      STRNCPY new 'Bo' 20
+      STRNCPY (new+4) 'Peep' 20
+```
+
+Notice in this example that you must ensure that names no longer than 19 characters are passed to `STRNCPY`. More than 19 characters would not leave `STRNCPY` enough space to include the trailing null, which would probably cause the application to fail.
+
+To make both these functionalities available simultaneously, [associate each with a custom name](na-dyadic.md).
 
 ### STRNCPYA
 
@@ -624,6 +653,14 @@ size_t STRLEN(       // calculate length of string
 
 Suppose that a database application returns a pointer (`addr`) to a null-terminated string and you do not know the upper bound on the length of the string.
 
+To copy the string into the workspace:
+```apl
+      ⎕NA'P dyalog32|STRLEN P'
+      ⎕NA'dyalog32|MEMCPY >T[] P P'
+      MEMCPY l addr (l←STRLEN addr)
+Bartholemew
+```
+
 ## Examples
 
 The following examples all use functions from the Microsoft Windows `user32.dll`.
@@ -638,7 +675,7 @@ The Windows function `GetCaretBlinkTime` retrieves the caret blink rate.  It ta
 UINT GetCaretBlinkTime(void);
 ```
 
-The following statements would provide access to this routine through an APL function of the same name.
+The following statement would provide access to this routine through an APL function of the same name.
 ```apl
       ⎕NA 'U user32|GetCaretBlinkTime'
       GetCaretBlinkTime
@@ -667,7 +704,7 @@ The Microsoft Windows function `MessageBox` displays a standard dialog box on th
 int MessageBox(HWND, LPCSTR, LPCSTR, UINT);
 ```
 
-The following statements provide access to this routine through an APL function of the same name. Note that the 2nd and 3rd arguments are both coded as input pointers to type T null-terminated character arrays which ensures portability between Editions.
+The following statement provides access to this routine through an APL function of the same name. Note that the 2nd and 3rd arguments are both coded as input pointers to type T null-terminated character arrays which ensures portability between Editions.
 ```apl
       ⎕NA 'I user32|MessageBox* P <0T <0T U'
 ```
@@ -692,9 +729,15 @@ The Microsoft Windows function `FindWindow` obtains the window handle of a windo
 HWND FindWindow(LPCSTR, LPCSTR);
 ```
 
+The following statement associates the second variant of the FindWindow call, where the class name is specified as a NULL pointer.  To indicate that APL is to pass the *value* of the NULL pointer, rather than its address, we need to code this argument as `I4`.
+
+```apl
+      ⎕NA 'P user32|FindWindow* P <0T'
+```
+
 To obtain the handle of the window entitled "CLEAR WS - Dyalog APL/W":
 ```apl
-      ⎕←HNDL←FW 0 'CLEAR WS - Dyalog APL/W'
+      ⎕←HNDL←FindWindow 0 'CLEAR WS - Dyalog APL/W'
 59245156
 ```
 
@@ -720,11 +763,11 @@ was CLEAR WS
 Then retrieve the new caption (max length 255) using window handle `HNDL` from the previous example:
 ```apl
       ]Display GetWindowText HNDL 255 255
-.→-------------------------.
-|    .→------------------. |
-| 19 |MYWS - Dyalog APL/W| |
-|    '-------------------' |
-'∊-------------------------'
+┌→─────────────────────────┐
+│    ┌→──────────────────┐ │
+│ 19 │MYWS - Dyalog APL/W│ │
+│    └───────────────────┘ │
+└∊─────────────────────────┘
 ```
 
 There are three points to note.
@@ -740,11 +783,11 @@ For example:
       ⎕NA 'I User32|GetWindowText* P =0T I'
  
       ]Display GetWindowText HNDL (255⍴' ') 255
-.→-------------------------.
-|    .→------------------. |
-| 19 |MYWS - Dyalog APL/W| |
-|    '-------------------' |
-'∊-------------------------'
+┌→─────────────────────────┐
+│    ┌→──────────────────┐ │
+│ 19 │MYWS - Dyalog APL/W│ │
+│    └───────────────────┘ │
+└∊─────────────────────────┘
 ```
 
 In this case, the second argument is coded as `=0T`, so when the function is called an array of the appropriate size must be supplied.  This method uses more space in the workspace, although for small arrays (as in this case) the real impact of doing so is negligible.
@@ -761,53 +804,17 @@ The following statements provide access to this routine through an APL function 
 ```apl
       ⎕NA 'U4 gdi32|GetCharWidth* P U U >I[]'
  
-     'Prin'⎕WC'Printer'
+      'Prin'⎕WC'Printer'
  
       ]Display GetCharWidth ('Prin' ⎕WG 'Handle') 65 67 3 
-.→-------------.
-|   .→-------. |
-| 1 |50 50 50| |
-|   '~-------' |
-'∊-------------'
+┌→─────────────┐
+│   ┌→───────┐ │
+│ 1 │50 50 50│ │
+│   └~───────┘ │
+└∊─────────────┘
 ```
 
 Note: `'Prin'⎕WG'Handle'` returns a handle which is represented as a number. The number will be in the range (0 - 2*32] on a 32-bit version and (0 - 2*64] on a 64-bit version. These can be passed to a P type parameter. Older versions used a 32-bit signed integer.
-
-### The `quadna` workspace
-
-The following example from the supplied workspace: quadna.dws. `quadna` illustrates several techniques which are important in advanced `⎕NA` programming. Function `DllVersion` returns the major and minor version number for a given DLL. Note that this example assumes that the computer is running the 64-bit version of Dyalog.
-
-In advanced DLL programming, it is often necessary to administer memory outside APL's workspace. In general, the procedure for such use is:
-
-1. Allocate global memory.
-2. Lock the memory.
-3. Copy any DLL input information from workspace into memory.
-4. Call the DLL function.
-5. Copy any DLL output information from memory to workspace.
-6. Unlock the memory.
-7. Free the memory.
-
-Notice that steps 1 and 7 and steps 2 and 6 complement each other. That is, if you allocate global system memory, you must free it after you have finished using it. If you continue to use global memory without freeing it, your system will gradually run out of resources. Similarly, if you lock memory (which you must do before using it), then you should unlock it before freeing it. Although on some versions of Windows, freeing the memory will include unlocking it, in the interests of good style, maintaining the symmetry is probably a good thing.
-
-Lines [2-11] associate APL function names with the DLL functions that will be used.
-
-Lines [2-5] associate functions to administer global memory.
-
-Lines [7-9] associate functions to extract version information from a DLL.
-
-Line[11] associates `Copy` with `MEMCPY` function from **dyalog64.dll**.
-
-Lines [13-26] call the DLL functions.
-
-Line [13] requests the size of buffer required to receive version information for the DLL. A size of 0 will be returned if the DLL does not contain version information.
-
-**Notice that** care is taken to balance memory allocation and release:
-
-On line [14], the :If clause is taken only if the global memory allocation is successful, in which case (and only then) a corresponding Free is called on line [25].
-
-Unlock on line[23] is called if  and only if the call to Lock on line [15] succeeds.
-
-A result is returned from the function *only* if all the calls are successful Otherwise, the calling environment will sustain a `VALUE ERROR`.
 
 ### More Examples
 
@@ -858,7 +865,6 @@ A result is returned from the function *only* if all the calls are successful Ot
 ⎕NA'P  user32   |SetFocus             P'
 ⎕NA'I4 user32   |WinHelp*             P <0T U4 P'
 ⎕NA'I4 winnm    |sndPlaySound         <0T U4'
-
 ```
 
 <!-- Hidden search keywords -->
