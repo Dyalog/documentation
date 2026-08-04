@@ -729,7 +729,7 @@ The Microsoft Windows function `FindWindow` obtains the window handle of a windo
 HWND FindWindow(LPCSTR, LPCSTR);
 ```
 
-The following statement associates the second variant of the FindWindow call, where the class name is specified as a NULL pointer.  To indicate that APL is to pass the *value* of the NULL pointer, rather than its address, we need to code this argument as `I4`.
+The following statement associates the second variant of the FindWindow call, where the class name is specified as a NULL pointer.  To indicate that APL is to pass the *value* of the NULL pointer, rather than its address, we need to code this argument as `P`.
 
 ```apl
       ⎕NA 'P user32|FindWindow* P <0T'
