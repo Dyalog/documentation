@@ -1,8 +1,6 @@
 # <span>Grid</span> <span>Object</span>
 
-**Purpose:** Spreadsheet object for displaying and editing data.
-
-**Description**
+Spreadsheet object for displaying and editing data.
 
 The [Values](../properties/values.md) property is a matrix whose
 elements are displayed in the cells of the Grid. An element (and therefore a
@@ -232,7 +230,7 @@ The Grid generates [Expanding](../methodorevents/expanding.md) and [Retracting](
 The [RowSetVisibleDepth](../methodorevents/rowsetvisibledepth.md) method
 can be used to set the visible depth of the tree.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md)
 

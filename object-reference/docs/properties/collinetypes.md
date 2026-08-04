@@ -1,7 +1,5 @@
 # <span>ColLineTypes</span> <span>Property</span>
 
-**Description**
-
 This property specifies the appearance of the vertical grid lines in a [Grid](../objects/grid.md) object.
 
 ColLineTypes is an integer vector, whose length is normally equal to the number of columns in the [Grid](../objects/grid.md). Each element in ColLineTypes specifies an index into the [GridLineFCol](gridlinefcol.md) and [GridLineWidth](gridlinewidth.md) properties, thus selecting the colour and width of the vertical grid lines.
@@ -14,6 +12,6 @@ The default value of ColLineTypes is an empty numeric vector (`⍬`). If so, all
 
 A vertical grid line is drawn down the right edge of its associated column. One pixel is drawn *inside* the column of cells; additional pixels (if any) are drawn *between* that column of cells and the next one to its right.
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

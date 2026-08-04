@@ -1,7 +1,5 @@
 # <span>RowTitleDepth</span> <span>Property</span>
 
-**Description**
-
 RolTitleDepth specifies the structure of a set of hierarchical row titles.
 
 It
@@ -35,6 +33,6 @@ is 1, and so forth. For example:
 Note that the [LockRows](../methodorevents/lockrows.md) method is not
 supported in combination with hierarchical row titles.
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

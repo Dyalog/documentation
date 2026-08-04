@@ -1,8 +1,6 @@
 # <span>TabBar</span> <span>Object</span>
 
-**Purpose:** To manage a set of [TabBtn](tabbtn.md) objects.
-
-**Description**
+To manage a set of [TabBtn](tabbtn.md) objects.
 
 The TabBar object manages a group of [TabBtn](tabbtn.md) objects. These are associated with a set of [SubForm](subform.md) objects which are positioned on top of one another. When the user clicks on a [TabBtn](tabbtn.md),
 the corresponding [SubForm](subform.md) is brought to the
@@ -60,7 +58,7 @@ default position from the previous one. Thus if you wish to group your [TabBtn](
 together with spaces between the groups, you need only specify the position of
 the first one in each group.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [SubForm](../objects/subform.md)
 

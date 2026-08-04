@@ -1,7 +1,5 @@
 # <span>ColTitleAlign</span> <span>Property</span>
 
-**Description**
-
 The ColTitleAlign property specifies the alignment of column titles. For a [ListView](../objects/listview.md) object this is only relevant only when the [View](view.md) property is set to `'Report'`. ColTitleAlign is either a simple character vector, or a vector of character vectors with one element per column.
 
 For a [Grid](../objects/grid.md), ColTitleAlign may be:'Top', `'Bottom'`, `'Left'`, `'Right'`, `'Centre'`, `'TopLeft'`, `'TopRight'`, `'BottomLeft'`, or `'BottomRight'`.
@@ -10,6 +8,6 @@ For a [ListView](../objects/listview.md) object, ColTitleAlign may be `'Left'`, 
 
 Note that both spellings `'Centre'` and `'Center'` are accepted.
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md), [ListView](../objects/listview.md)

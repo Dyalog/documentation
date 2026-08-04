@@ -1,8 +1,6 @@
 # <span>Edit</span> <span>Object</span>
 
-**Purpose:** Allows user to enter or edit data.
-
-**Description**
+Allows user to enter or edit data.
 
 The value of the [Style](../properties/style.md) property, which may be `'Single'` or `'Multi'`, determines whether the object presents a single-line data entry field or an area for viewing and editing a large block of text.
 
@@ -50,7 +48,7 @@ For full functionality (in particular, for the [Cue](../properties/cue.md) prope
 
  is enabled.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

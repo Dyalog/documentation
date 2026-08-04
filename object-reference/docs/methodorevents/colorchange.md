@@ -1,7 +1,5 @@
 # <span>ColorChange</span> <span>Event 430</span>
 
-**Description**
-
 If enabled, this event is reported by a [ColorButton](../objects/colorbutton.md) object when the user chooses a colour from the colour selection drop-down.
 
 The event message reported as the result of `⎕DQ`, or supplied as the right argument to your callback function, is a 3-element vector as follows :
@@ -17,6 +15,6 @@ Note that the event is reported when the user chooses a colour, whether or not t
 
 This event is reported for information only and cannot be disabled or modified in any way.
 
-**Application**
+## Application
 
 Objects: [ColorButton](../objects/colorbutton.md)

@@ -1,7 +1,5 @@
 # <span>DockChildren</span> <span>Property</span>
 
-**Description**
-
 The DockChildren property specifies the names of client objects that may be docked in a host object.
 
 DockChildren may be a single ref or simple character scalar or vector, or a vector of refs or character vectors. Each item represents an object that may be docked. Notice that if you use a name, you must specify the simple name of the object, excluding any part of its full pathname that refers to a parent; that is, the specified names must not contain any leading pathname information.
@@ -29,6 +27,6 @@ The third, `c3`, is created initially as a child of another Form, `h2`. When doc
       h1.DockChildren←'c1' 'c2' 'c3'
 ```
 
-**Application**
+## Application
 
 Objects: [CoolBar](../objects/coolbar.md), [Form](../objects/form.md), [SubForm](../objects/subform.md)

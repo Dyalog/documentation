@@ -1,8 +1,6 @@
 # <span>Ellipse</span> <span>Object</span>
 
-**Purpose:** A Graphical object to draw ellipses, arcs, and pie-slices.
-
-**Description**
+A Graphical object to draw ellipses, arcs, and pie-slices.
 
 This object duplicates much of the functionality of the [Circle](circle.md) object, but differs in two major respects. Firstly, ellipses, circles, and arcs
 are specified in terms of their **bounding rectangles**, rather than in terms
@@ -180,7 +178,7 @@ Each of the 4 pie-slices is bounded by a black line :
                   ('FillCol' COLS)
 ```
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/animation.md), [Bitmap](../objects/bitmap.md), [Button](../objects/button.md), [ButtonEdit](../objects/buttonedit.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [Edit](../objects/edit.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [Label](../objects/label.md), [List](../objects/list.md), [ListView](../objects/listview.md), [MDIClient](../objects/mdiclient.md), [Metafile](../objects/metafile.md), [Printer](../objects/printer.md), [ProgressBar](../objects/progressbar.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [RichEdit](../objects/richedit.md), [Scroll](../objects/scroll.md), [Spinner](../objects/spinner.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TabBar](../objects/tabbar.md), [TipField](../objects/tipfield.md), [ToolBar](../objects/toolbar.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)
 

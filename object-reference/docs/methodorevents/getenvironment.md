@@ -1,7 +1,5 @@
 # <span>GetEnvironment</span> <span>Method 510</span>
 
-**Description**
-
 This method is used to obtain information about one or more parameters that were specified in the Dyalog command line, your Windows registry, or defined as environment variables. If a value is defined in several places (for example, MAXWS in the command line overriding MAXWS in the registry), GetEnvironment follows exactly the same logic as is used by Dyalog APL itself and so obtains the same value.
 
 The argument to GetEnvironment is a single item as follows:
@@ -26,6 +24,6 @@ Note that you may use GetEnvironment to obtain the values of your own arbitrary 
 
 GetEnvironment is not supported by DYALOG.DLL because it does not use parameters.
 
-**Application**
+## Application
 
 Objects: [Root](../objects/root.md)

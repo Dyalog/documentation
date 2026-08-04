@@ -1,7 +1,5 @@
 # <span>WebSocketReceive</span> <span>Event 842</span>
 
-**Description**
-
 This event is triggered when data is received over a WebSocket. This event is reported for information only. The result (if any) of a callback function will be ignored.
 
 Note that the WebSocket protocol provides for the possibility for the data to be sent in chunks, causing a succession of WebSocketReceive events. The FIN bit of the last chunk will be 1. The CEF does not currently implement "chunking", so FIN will always be 1.
@@ -25,6 +23,6 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 └∊────────────────────────────────────────────────────────────┘
 ```
 
-**Application**
+## Application
 
 Objects: [HTMLRenderer](../objects/htmlrenderer.md)

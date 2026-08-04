@@ -1,7 +1,5 @@
 # <span>CellOver</span> <span>Event 160</span>
 
-**Description**
-
 If enabled, this event is reported when the user moves the mouse pointer whilst over a cell in a [Grid](../objects/grid.md).
 
 There is no default action for this event.
@@ -25,6 +23,6 @@ The cell row and column are `⎕IO` dependent
 
 If the user moves the mouse pointer over a row *title*, the value reported for the column is `¯1`, and the value reported for Title index is the index of that row title in [RowTitles](../properties/rowtitles.md), or, if [RowTitles](../properties/rowtitles.md) is not defined, the row number. Column titles are handled in a similar fashion.
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

@@ -1,7 +1,5 @@
 # <span>GetEventInfo</span> <span>Method 551</span>
 
-**Description**
-
 This method is used to obtain information about a particular event or set of events supported by a COM object.
 
 For each event supported by a COM object, the author will have registered the data type of its result (if it has a result), a help message or description of the event (optional) and the name and data type of each of its parameters. These event parameters make up the array returned by `⎕DQ` or supplied as an argument to your callback function. The GetEventInfo method returns this information.
@@ -36,6 +34,6 @@ The result is a nested vector with one element per event name. Each element of t
 
 Note that if the event does not produce a result, the data type of the result is reported as `'VT_VOID'`.
 
-**Application**
+## Application
 
 Objects: [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md)

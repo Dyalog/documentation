@@ -1,7 +1,5 @@
 # <span>ClassName</span> <span>Property</span>
 
-**Description**
-
 For an [OLEClient](../objects/oleclient.md), the ClassName property specifies the name of the OLE object to which an [OLEClient](../objects/oleclient.md) object named by the left argument of `⎕WC` is to be connected.
 Similarly, for a [NetControl](../objects/netcontrol.md) the ClassName property specifies the name of the .NET class to be instantiated.
 Note that ClassName is mandatory for `⎕WC` and may not subsequently be changed using `⎕WS`.
@@ -18,6 +16,6 @@ For example, to load one of the standard .NET controls:
       ⎕USING,←⊂'System.Windows.Forms,system.windows.forms.dll'
 ```
 
-**Application**
+## Application
 
 Objects: [ActiveXControl](../objects/activexcontrol.md), [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md), [OLEServer](../objects/oleserver.md)

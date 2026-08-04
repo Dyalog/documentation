@@ -1,8 +1,6 @@
 # <span>DateTimePicker</span> <span>Object</span>
 
-**Purpose:** The DateTimePicker object is an editable date/time field with an         optional drop-down Calendar.
-
-**Description**
+The DateTimePicker object is an editable date/time field with an         optional drop-down Calendar.
 
 The DateTimePicker object represents the built-in Windows date and time
 picker control. For most purposes, the DateTimePicker supersedes the use of
@@ -43,7 +41,7 @@ Boolean value (default 0) that specifies whether or not a checkbox is displayed
 in the object. This allows the user to specify whether or not the date/time
 displayed in the DateTimePicker is applicable.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md)
 

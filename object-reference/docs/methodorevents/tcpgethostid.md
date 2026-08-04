@@ -1,7 +1,5 @@
 # <span>TCPGetHostID</span> <span>Method 376</span>
 
-**Description**
-
 This method is used to obtain the IP Address of your PC.
 
 The TCPGetHostID method is niladic.
@@ -15,6 +13,6 @@ For example:
 193.32.236.43
 ```
 
-**Application**
+## Application
 
 Objects: [Root](../objects/root.md), [TCPSocket](../objects/tcpsocket.md)

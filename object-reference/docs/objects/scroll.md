@@ -1,8 +1,6 @@
 # <span>Scroll</span> <span>Object</span>
 
-**Purpose:** Provides a vertical or horizontal scrollbar.
-
-**Description**
+Provides a vertical or horizontal scrollbar.
 
 The Scroll object provides a vertical or horizontal scrollbar that can be used as a "free-standing" object or can be "attached" to the side of its parent.
 
@@ -60,7 +58,7 @@ Scrolling is controlled by the [Thumb](../properties/thumb.md), [Range](../prope
                   ('Align' 'None')('HScroll' ¯1)
 ```
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

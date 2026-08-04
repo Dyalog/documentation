@@ -1,8 +1,6 @@
 # <span>Metafile</span> <span>Object</span>
 
-**Purpose:** This object represents a picture in Windows Metafile format.
-
-**Description**
+This object represents a picture in Windows Metafile format.
 
 The Windows Metafile is a mechanism for representing a picture in terms of a collection of graphical components. Windows Metafiles are distributed in special files (.WMF) from which they are loaded into memory for use by an application. Once loaded a Metafile is a Windows "resource" that can be used in a variety of ways. The Metafile object represents this resource.
 
@@ -41,7 +39,7 @@ The [Size](../properties/size.md) property determines the granularity of  the Me
 
 The [RealSize](../properties/realsize.md) property specifies the suggested size of a Metafile in units of 0.01mm. Setting [RealSize](../properties/realsize.md) has the effect of making the Metafile *placeable*. Certain programs (such as Word for Windows) only support placeable metafiles.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Bitmap](../objects/bitmap.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Group](../objects/group.md), [OLEServer](../objects/oleserver.md), [Printer](../objects/printer.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Root](../objects/root.md), [Static](../objects/static.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

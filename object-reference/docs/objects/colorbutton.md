@@ -1,8 +1,6 @@
 # <span>ColorButton</span> <span>Object</span>
 
-**Purpose:** The ColorButton object allows the user to select a colour.
-
-**Description**
+The ColorButton object allows the user to select a colour.
 
 The ColorButton object displays a coloured box, with an optional drop down button. When the user clicks the ColorButton with the left mouse button, a colour selection drop-down appears below it, allowing the user to select a new colour.
 
@@ -24,7 +22,7 @@ When the user clicks a ColorButton with the left mouse button, the object genera
 
 When the user selects a new colour, the ColorButton generates a [ColorChange](../methodorevents/colorchange.md) event.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md)
 

@@ -1,7 +1,5 @@
 # <span>DevCaps</span> <span>Property</span>
 
-**Description**
-
 This property reports the device capabilities of the screen or printer. It is a 4-element nested vector as follows:
 
 |-----|-----------------------------------------------------------------------------------------------------------------------------------------------|------|
@@ -22,6 +20,6 @@ This property is useful if you want to make objects of a specific physical size.
 - The number of colours is reported only if the device has a colour depth of no more than 8 bits per pixel. For devices with greater colour depths, `¯1` is returned.
 - new elements may be added to DevCaps in future releases.
 
-**Application**
+## Application
 
 Objects: [Printer](../objects/printer.md), [Root](../objects/root.md)

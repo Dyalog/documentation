@@ -1,7 +1,5 @@
 # <span>ExitApp</span> <span>Event 132</span>
 
-**Description**
-
 If enabled, this event is reported when the user attempts to terminate a Dyalog APL/W application from the Windows Task List.
 
 The Windows Task list displays the names of all running applications. The name displayed for a Dyalog APL/W application is defined by the [Caption](../properties/caption.md) property of the system object `Root`. If you fail to define this property, there will be no entry for the application in the Task List.
@@ -16,6 +14,6 @@ The event message reported as the result of [`⎕DQ`](../../../language-referenc
 |`[1]`|Object|ref or character vector|
 |`[2]`|Event |`'ExitApp'` or 132     |
 
-**Application**
+## Application
 
 Objects: [Root](../objects/root.md)
