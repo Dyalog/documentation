@@ -23,9 +23,9 @@ The file contains a simple APL array, complete with header information (type, ra
 
 <h2 class="example">Examples</h2>
 
-Replace some items in mapped file:
+First, copy the `∆MPUT` utility from the `util` workspace:
 ```apl
-      mat[2 3;4 5]←2 2⍴⍳4
+      '∆MPUT' ⎕CY 'util'
 ```
 
 Put simple 4-byte integer array on disk ready for mapping:
