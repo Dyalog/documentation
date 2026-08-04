@@ -25,7 +25,7 @@ The ability to extract datetimes from text-formatted datetimes, as well as the f
 	    - **Dictionary** specifies a namespace that contains additional or replacement names for the months (and so on) and/or predefined patterns, for languages and language regions.
 		- **Language** specifies the language used for formatting and matching datetimes.
 - [`⎕UCS`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/ucs/) – Unicode Convert  
-The optional left argument `X` can now be a 2-element nested array when performing UTF-8 conversions; setting the second element to `83` enables the direct creation and consumption of 8-bit integers.
+The optional left argument `X` can now be a 2-element nested array when performing UTF-8 conversions; setting the second element to `83` enables the direct creation and consumption of integers in the range `¯128` to `+127`.
 
 ### I-beams
 
