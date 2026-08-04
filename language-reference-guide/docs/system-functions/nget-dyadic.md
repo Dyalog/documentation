@@ -11,12 +11,12 @@ This function reads the contents of the specified text file. See also [Write Tex
 
 - if `flags` is `0` then `R[1]` is a character vector. This is the default.
 - if `flags` is `1` then `R[1]` is a nested array of character vectors.
-- if `flags` is `2` then `R[1]` is a matrix, with each row corresponding to a line in the text file specified within `X`.
+- if `flags` is `2` then `R[1]` is a matrix, with each row corresponding to a line in the text file specified within `Y`.
 
-The left-argument `X` is either
+The left-argument `X` specifies the file encoding. (Use [monadic `⎕NGET`](nget-monadic.md) to let the APL interpreter try to decide the file encoding.) `X` is either
 
 - a character vector that specifies the file-encoding as shown in the table below.
-- a 256-element numeric vector that maps each possible byte value (0-255) to a  Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value may appear in the table more than once.
+- a 256-element numeric vector that maps each possible byte value (`0`-`255`) to a  Unicode code point (1st element = Unicode code point corresponding to byte value `0`, and so on). `¯1` indicates that the corresponding byte value is not mapped to any character. Apart from `¯1`, no value may appear in the table more than once.
 
 Table: File Encodings {: #Encodings }
 
@@ -41,7 +41,7 @@ The result `R` is a 3-element vector comprising `(content) (encoding) (newline)`
 
 |---|---|
 |`content`|A simple character vector, or a vector of character vectors, according to the value of `flags` .|
-|`encoding`|The encoding that was actually used to read the file. If this is a UTF format, it will always include the appropriate endianness (except for UTF-8 to which endianness doesn't apply) and a -BOM or -NOBOM suffix to indicate whether or not a BOM is actually present in the file. For example, UTF-16LE-BOM. If `X` specified a user-defined encoding as a 256-element numeric vector, `encoding` will be that same vector.|
+|`encoding`|The encoding that was used to read the file. If this is a UTF format, it will always include the appropriate endianness (except for UTF-8 to which endianness doesn't apply) and a -BOM or -NOBOM suffix to indicate whether or not a BOM is actually present in the file. For example, UTF-16LE-BOM. If `X` specified a user-defined encoding as a 256-element numeric vector, `encoding` will be that same vector.|
 |`newline`|Determined by the first occurrence in the file of one of the newline characters identified in the line separator table, or `⍬` if no such line separator is found.|
 
 If `content` is simple then all its line separators (listed in the table below) are replaced by (normalised to) `⎕UCS 10`, which in the Classic Edition must be in `⎕AVU` (else `TRANSLATION ERROR`).

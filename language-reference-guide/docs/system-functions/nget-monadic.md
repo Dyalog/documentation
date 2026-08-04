@@ -11,9 +11,9 @@ This function reads the contents of the specified text file. See also [Write Tex
 
 - if `flags` is `0` then `R[1]` is a character vector. This is the default.
 - if `flags` is `1` then `R[1]` is a nested array of character vectors.
-- if `flags` is `2` then `R[1]` is a matrix, with each row corresponding to a line in the text file.
+- if `flags` is `2` then `R[1]` is a matrix, with each row corresponding to a line in the text file specified within `Y`.
 
-If the start of the file contains a recognised Byte Order Mark (BOM), the file is decoded according to the BOM. Otherwise, the file is examined to try to decide its encoding and is decoded accordingly.
+If the start of the file contains a recognised Byte Order Mark (BOM), the file is decoded according to the BOM. Otherwise, the file is examined to try to decide its encoding and is decoded accordingly. Use [dyadic `⎕NGET`](nget-dyadic.md) to specify the encoding manually.
 
 The result `R` is a 3-element vector comprising `(content) (encoding) (newline)`  where:
 
