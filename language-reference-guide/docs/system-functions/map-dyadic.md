@@ -7,9 +7,9 @@ search:
 
 `⎕MAP` function associates a mapped file with an APL array in the workspace.
 
-A *raw* mapped file is an arbitrary collection of bytes. When you map a raw file, you must specify the characteristics of the APL array to be associated with this data. In particular, the data type and its shape.
+A raw mapped file is an arbitrary collection of bytes. When you map a raw file, you must specify the characteristics of the APL array to be associated with this data. In particular, the data type and its shape.
 
-The file is mapped as *raw* data.
+The file is mapped as raw data.
 
 The right argument `Y` specifies the name of the file to be mapped and, optionally, the access type and a start byte in the file. `Y` may be a simple character vector, or a 2 or 3-element nested vector containing:
 
@@ -19,7 +19,7 @@ The right argument `Y` specifies the name of the file to be mapped and, optional
 
 If you map a file with read-only access you may modify the corresponding array in the workspace, however your changes are not written back to the file.
 
-`X` defines the type and shape to be associated with *raw* data on file. `X` must be an integer scalar or vector. The first item of `X` specifies the data type and must be one of the following values:
+`X` defines the type and shape to be associated with raw data on file. `X` must be an integer scalar or vector. The first item of `X` specifies the data type and must be one of the following values:
 
 |---------------|-------------------------------------|
 |Classic Edition|11, 82, 83, 163, 323 or 645          |
@@ -29,7 +29,7 @@ The values are more fully explained in [Data Representation (Monadic)](data-repr
 
 Following items determine the shape of the mapped array. A value of `¯1` on any (but normally the first) axis in the shape is replaced by the system to mean: read as many complete records from the file as possible. Only one axis may be specified in this way. Note that if    `X` is a singleton, the data on the file is mapped as a scalar and only the first value on the file is accessible.
 
-Note that a *raw* mapped file may be updated *only* if its *file offset* is 0. Note also that Windows does not support mapped files of zero length.
+Note that a raw mapped file may be updated *only* if its *file offset* is 0. Note also that Windows does not support mapped files of zero length.
 
 <h2 class="example">Examples</h2>
 
