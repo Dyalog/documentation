@@ -7,9 +7,7 @@ search:
 
 `⎕MAP` function associates a mapped file with an APL array in the workspace.
 
-Two types of mapped files are supported; *APL* and *raw*. An *APL* mapped file contains the binary representation of a Dyalog APL array, including its header. A file of this type must be created using the  utility function `∆MPUT` (supplied in the `util` workspace). When you map an APL file, the rank, shape and data type of the array is obtained from the information on the file.
-
-A *raw* mapped file is an arbitrary collection of bytes. When you map a raw file, you must specify the characteristics of the APL array to be associated with this data. In particular, the data type and its shape.
+An *APL* mapped file contains the binary representation of a Dyalog APL array, including its header. A file of this type must be created using the  utility function `∆MPUT` (supplied in the `util` workspace). When you map an APL file, the rank, shape and data type of the array is obtained from the information on the file.
 
 The file is assumed to contain a simple APL array.
 
@@ -23,7 +21,7 @@ If you map a file with read-only access you may modify the corresponding array i
 
 The file contains a simple APL array, complete with header information (type, rank, shape, etc.). Such mapped files may only be updated by changing the associated array using indexed/pick assignment: `var[a]←b`, the new values must be of the same type as the originals.
 
-Note that a *raw* mapped file may be updated *only* if its *file offset* is 0. Note also that Windows does not support mapped files of zero length.
+Note that Windows does not support mapped files of zero length.
 
 <h2 class="example">Examples</h2>
 
@@ -47,8 +45,6 @@ Note that a mapped array need not be *named*.
 ## Compatibility between Editions
 
 In the Unicode Edition `⎕MAP` will fail with a `TRANSLATION ERROR` (event number 92) if you attempt to map an APL file which contains character data type 82.
-
-In order for the Unicode Edition to correctly interpret data in a raw file that was written using data type 82, the file may be mapped with data type 83 and the characters extracted by indexing into `⎕AVU`.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

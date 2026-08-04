@@ -7,8 +7,6 @@ search:
 
 `⎕MAP` function associates a mapped file with an APL array in the workspace.
 
-Two types of mapped files are supported; *APL* and *raw*. An *APL* mapped file contains the binary representation of a Dyalog APL array, including its header. A file of this type must be created using the  utility function `∆MPUT` (supplied in the `util` workspace). When you map an APL file, the rank, shape and data type of the array is obtained from the information on the file.
-
 A *raw* mapped file is an arbitrary collection of bytes. When you map a raw file, you must specify the characteristics of the APL array to be associated with this data. In particular, the data type and its shape.
 
 The file is mapped as *raw* data.
@@ -55,11 +53,6 @@ Map bytes 100-160 in raw file as a `5×2` read-only matrix of doubles:
       dat←645 5 2 ⎕MAP'c:\myfile' 'R' 80
 ```
 
-Put simple 4-byte integer array on disk ready for mapping:
-```apl
-      (⊃83 323 ⎕DR 2 3 4⍴⍳24)∆MPUT'c:\myvar'
-```
-
 Note that a mapped array need not be *named*. In the following example, a 'raw' file is mapped, summed and released, all in a single expression:
 ```apl
       +/163 ¯1 ⎕MAP'c:\shorts.dat'
@@ -73,8 +66,6 @@ If you fail to specify the shape of the data, the data on file will be mapped as
 ```
 
 ## Compatibility between Editions
-
-In the Unicode Edition `⎕MAP` will fail with a `TRANSLATION ERROR` (event number 92) if you attempt to map an APL file which contains character data type 82.
 
 In order for the Unicode Edition to correctly interpret data in a raw file that was written using data type 82, the file may be mapped with data type 83 and the characters extracted by indexing into `⎕AVU`.
 
