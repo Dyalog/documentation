@@ -232,7 +232,7 @@ e
 ```
 The two ways to represent JSON <code class="language-nonAPL">null</code>s:
 ```apl
-      0(⎕JSON⍠'Null'⎕NULL)'[null,2,3]'
+      (⎕JSON⍠'Null'⎕NULL)'[null,2,3]'
  [Null]  2 3
 ```
 
@@ -292,7 +292,7 @@ This example uses the character vector `json` from the previous example:
     }              
   }                
 }                  
-      0(⎕JSON⍠'M')json
+      (⎕JSON⍠'M')json
 ┌─┬──┬────────┬─┐
 │0│  │        │1│
 ├─┼──┼────────┼─┤
@@ -372,7 +372,7 @@ If there are any mismatches between the values in `Y[;3]` and the types in `Y[;4
 <h5 class="example">Example</h5>
 
 ```apl
-      m←0(⎕JSON⍠'M')'{"values": [ 75, 300 ]}'
+      m←(⎕JSON⍠'M')'{"values": [ 75, 300 ]}'
       m
 ┌─┬──────┬───┬─┐
 │0│      │   │1│
@@ -397,9 +397,9 @@ To illustrate type mismatches, the above matrix is modified by replacing one num
 ├─┼──────┼───┼─┤
 │2│      │300│3│
 └─┴──────┴───┴─┘
-      1(⎕JSON⍠'M')m
+      (⎕JSON⍠'M')m
 DOMAIN ERROR: JSON export: value does not match the specified type in row 3 (⎕IO=1)
-      1(⎕JSON⍠'M')m
+      (⎕JSON⍠'M')m
       ∧
 ```
 
@@ -414,19 +414,19 @@ On export, the result is shortened by usage of identifiers without quotes, singl
 <h4 class="example">Examples</h4>
 
 ```apl
-      1(⎕JSON⍠'Dialect' 'JSON5')(a:'é"')
+      (⎕JSON⍠'Dialect' 'JSON5')(a:'é"')
 {a:'é"'}
 
-      1(⎕JSON⍠'Charset' 'ASCII'⍠'Compact' 0)(a:'é"')
+      (⎕JSON⍠'Charset' 'ASCII'⍠'Compact' 0)(a:'é"')
 {
   "a": "\u00E9\""
 }
-      1(⎕JSON⍠'Charset' 'ASCII'⍠'Compact' 0⍠'Dialect' 'JSON5')(a:'é"')
+      (⎕JSON⍠'Charset' 'ASCII'⍠'Compact' 0⍠'Dialect' 'JSON5')(a:'é"')
 {
   a: '\xE9"',
 }
 
-      0(⎕JSON⍠'Dialect' 'JSON5')['["a\'
+      (⎕JSON⍠'Dialect' 'JSON5')['["a\'
                                   'bc",'
                                   '//:)'
                                   '+.1,'
@@ -447,10 +447,10 @@ The **Null** variant option selects how JSON <code class="language-nonAPL">null<
 <h4 class="example">Examples</h4>
 
 ```apl
-      0(⎕JSON⍠'Null'⎕NULL)'[null,null]'
+      (⎕JSON⍠'Null'⎕NULL)'[null,null]'
  [Null]  [Null] 
 
-      1(⎕JSON⍠'Null'⎕NULL)⎕NULL ⎕NULL
+      (⎕JSON⍠'Null'⎕NULL)⎕NULL ⎕NULL
 [null,null]
 ```
 
@@ -497,9 +497,9 @@ Conversion to compact JSON:
 ```
 Non-compact JSON takes more than twice as much space, but is more readable, and easier for humans to edit:
 ```apl
-      ⍴json←1(⎕JSON⍠'Compact' 0)ns
+      ⍴json←(⎕JSON⍠'Compact' 0)ns
 208
-      1(⎕JSON⍠'Compact' 0)ns
+      (⎕JSON⍠'Compact' 0)ns
 {
   "a": {
     "b": [
@@ -530,7 +530,7 @@ The **Charset** variant option can be used to either allow Unicode in the genera
       ns←(dé:'DÉ')
       ns.dé
 DÉ
-      1(⎕JSON⍠'Charset' 'ASCII')ns
+      (⎕JSON⍠'Charset' 'ASCII')ns
 {"d\u00E9":"D\u00C9"}
 ```
 
@@ -555,7 +555,7 @@ If **HighRank** is `'Error'` (the default), `⎕JSON` will signal a `DOMAIN ERRO
 │     │49 64│
 └─────┴─────┘
 
-      1(⎕JSON⍠'HighRank' 'Split')d
+      (⎕JSON⍠'HighRank' 'Split')d
 [[[[1,2],"AB"],["ABC","DEF"]],[[[1,2,3],[4,5,6]],[[[1,4],[9,16]],[[25,36],[49,64]]]]]
 ```
 
@@ -706,18 +706,18 @@ The data arrays are defined as follows:
 All wrapper invocations produce the same array of objects (except for trailing spaces when using a character matrix to represent a text field):
 
 ```apl
-      1(⎕JSON⍠'HighRank' 'Split')⊂4(invertedTable2 header)
+      (⎕JSON⍠'HighRank' 'Split')⊂4(invertedTable2 header)
 [{"item":"Knife","price":3,"qty":23},{"item":"Fork ","price":4,"qty":45},{"item":"Spoon","price":5,"qty":67}]
 ```
 
 Without their wrappers, each APL structure *can* be represented in JSON, though this is not a common way to represent a dataset:
 
 ```apl
-      1(⎕JSON⍠'HighRank' 'Split')singleMatrix
+      (⎕JSON⍠'HighRank' 'Split')singleMatrix
 [["item","price","qty"],["Knife",3,23],["Fork",4,45],["Spoon",5,67]]
-      1(⎕JSON⍠'HighRank' 'Split')valueMatrix header
+      (⎕JSON⍠'HighRank' 'Split')valueMatrix header
 [[["Knife",3,23],["Fork",4,45],["Spoon",5,67]],["item","price","qty"]]
-      1(⎕JSON⍠'HighRank' 'Split')invertedTable2 header
+      (⎕JSON⍠'HighRank' 'Split')invertedTable2 header
 [[["Knife","Fork ","Spoon"],[3,4,5],[23,45,67]],["item","price","qty"]]
 ```
 
