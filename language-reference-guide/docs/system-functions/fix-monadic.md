@@ -84,7 +84,7 @@ DOMAIN ERROR: There were errors processing the script
 
 |---|---------------------------------------------------------------------------------------------------------------------|
 |`0` (default)|`⎕FIX` will only fix a class whose Base class (if specified) is defined in the script or is present in the workspace.|
-|`1`|`⎕FIX` will fixes a class whose Base class is neither defined in the script nor present in the workspace.            |
+|`1`|`⎕FIX` will fix a class whose Base class is neither defined in the script nor present in the workspace.            |
 
 ## InjectReferences Option
 

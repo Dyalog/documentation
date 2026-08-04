@@ -15,11 +15,11 @@ If `Y` is a simple character vector, it must be the name of a file which must ex
 
 `X` is a numeric scalar, `0`, `1` or `2`. The default, `1`, is equivalent to [monadic `⎕FIX`](fix-monadic.md). The result `R` is shy.
 
-| `X` | `Y` | `R` |
+| `X` | `Y` value or content of file `Y` | `R` |
 |-----|-----|-----|
-| `0` | a single valid *namespace*, which might or might not be named, or a file containing such a definition | a reference to the *namespace*. Even if the *namespace* is named, it is not established *per se*, although it will exist for as long as at least one reference to it exists |
-| `1` | a single valid *namespace*, which might or might not be named, or a file containing such a definition | a reference to the *namespace*. If `Y` contains the definition of a named *namespace*, the *namespace* is established in the workspace |
-| `2` | a character vector containing the name of a script file, or a vector of character vectors that represents a script, specifying a series of **named** *namespaces* or function definitions, or a combination of functions and namespaces. If the script contains more than one item, tradfn definitions must be delimited by `∇` symbols. Derived and assigned functions can be specified only within namespaces | a vector of character vectors, containing the names of all of the objects that have been established in the workspace; the order of the names in `R` is not defined. Currently `2 ⎕FIX` is not certain to be an atomic operation, although this might change in future versions |
+| `0` | a single valid *namespace*, which might or might not be named | a reference to the *namespace*. Even if the *namespace* is named, it is not established *per se*, although it will exist for as long as at least one reference to it exists |
+| `1` | a single valid *namespace*, which might or might not be named | a reference to the *namespace*. If `Y` contains the definition of a named *namespace*, the *namespace* is established in the workspace |
+| `2` | a series of **named** *namespaces* or function definitions, or a combination of functions and namespaces. If the script contains more than one item, tradfn definitions must be delimited by `∇` symbols. Derived and assigned functions can be specified only within namespaces | a vector of character vectors, containing the names of all of the objects that have been established in the workspace; the order of the names in `R` is not defined. Currently `2 ⎕FIX` is not certain to be an atomic operation, although this might change in future versions |
 
 <h2 class="example">Examples</h2>
 
@@ -74,7 +74,7 @@ In the second example, the left argument of `2` allows a script containing multi
 
 |---|---------------------------------------------------------------------------------------------------------------------|
 |`0` (default)|`⎕FIX` will only fix a class whose Base class (if specified) is defined in the script or is present in the workspace.|
-|`1`|`⎕FIX` will fixes a class whose Base class is neither defined in the script nor present in the workspace.            |
+|`1`|`⎕FIX` will fix a class whose Base class is neither defined in the script nor present in the workspace.            |
 
 ## InjectReferences Option
 
