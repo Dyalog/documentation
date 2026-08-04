@@ -20,7 +20,7 @@ Under Windows, the Btns property may specify one of **six** sets of buttons as f
 
 - `'ABORT  'RETRY' 'IGNORE'`
 
-If any other combination is specified, [`⎕WC`](../../../language-reference-guide/system-functions/wc) and [`⎕WS`](../../../language-reference-guide/system-functions/ws) will report a `DOMAIN ERROR`. The names of the buttons are however case-insensitive, so the system will accept `'ok'`, `'Ok'`, `'oK'` or `'OK'`.
+If any other combination is specified, [`⎕WC`](../../../language-reference-guide/system-functions/wc-dyadic) and [`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic) will report a `DOMAIN ERROR`. The names of the buttons are however case-insensitive, so the system will accept `'ok'`, `'Ok'`, `'oK'` or `'OK'`.
 
 If the Btns property is not specified, it assumes a default according to [Style](style.md) as follows :
 

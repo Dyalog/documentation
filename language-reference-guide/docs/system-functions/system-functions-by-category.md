@@ -35,7 +35,8 @@ These provide information on, and control, the current workspace and its content
 |[`⎕EX`](ex.md)     |Expunge objects         |Monadic function|
 |[`⎕LX`](lx.md)    |Latent Expression        |Variable|
 |[`⎕NC`](nc.md)    |Name Classification      |Monadic function|
-|[`⎕NL`](nl.md)    |Name List                |Monadic function|
+|[`⎕NL`](nl-monadic.md)|List Object Names        |Monadic function|
+|[`⎕NL`](nl-dyadic.md)|List Object Names with Filter|Dyadic function |
 |[`⎕SHADOW`](shadow.md)|Shadow names         |Monadic function|
 |[`⎕SIZE`](size.md)  |Size of objects        |Monadic function|
 |[`⎕WA`](wa.md)    |Workspace Available      |Constant|
@@ -47,13 +48,16 @@ These are tools that allow you perform development environment actions under pro
 
 |Name      |Description             |Form|
 |----------|------------------------|-----|
-|[`⎕ED`](ed.md)     |Edit one or more objects|Ambivalent function|
+|[`⎕ED`](ed-monadic.md)|Edit Objects            |Monadic function   |
+|[`⎕ED`](ed-dyadic.md)|Edit Objects with Type  |Dyadic function    |
 |[`⎕EX`](ex.md)     |Expunge objects         |Monadic function|
-|[`⎕LOCK`](lock.md)   |Lock a function       |Ambivalent function|
+|[`⎕LOCK`](lock-monadic.md)|Lock Function         |Monadic function   |
+|[`⎕LOCK`](lock-dyadic.md)|Custom Lock Function  |Dyadic function    |
 |[`⎕MONITOR`](set-monitor.md)|Monitor set    |Dyadic function|
 |[`⎕MONITOR`](query-monitor.md)|Monitor query|Monadic function|
 |[`⎕OR`](or.md)     |Object Representation   |Monadic function|
-|[`⎕PROFILE`](profile.md)|Profile Application|Ambivalent function|
+|[`⎕PROFILE`](profile-monadic.md)|Profile Code       |Monadic function   |
+|[`⎕PROFILE`](profile-dyadic.md)|Filter Profile Data|Dyadic function    |
 |[`⎕REFS`](refs.md)   |Local References      |Monadic function|
 |[`⎕STOP`](set-stop.md)   |Set Stop vector   |Dyadic function|
 |[`⎕STOP`](query-stop.md)   |Query Stop vector|Monadic function|
@@ -67,16 +71,21 @@ These are facilities to create, manipulate, and navigate namespaces and other ob
 |Name        |Description   |Form|
 |------------|--------------|-----|
 |[`⎕BASE`](base.md)     |Base Class   |Reference|
-|[`⎕CLASS`](class.md)    |Class       |Monadic function|
+|[`⎕CLASS`](class-monadic.md)|Class Hierarchy|Monadic function|
+|[`⎕CLASS`](class-dyadic.md)|Get Class/Interface Implementation|Dyadic function |
 |[`⎕CS`](cs.md)       |Change Space   |Monadic function|
 |[`⎕DF`](df.md)       |Display Format |Monadic function|
-|[`⎕FIX`](fix.md)      |Fix           |Ambivalent function|
+|[`⎕FIX`](fix-monadic.md)|Define Namespace|Monadic function   |
+|[`⎕FIX`](fix-dyadic.md)|Define Objects|Dyadic function    |
 |[`⎕INSTANCES`](instances.md)|Instances|Monadic function|
 |[`⎕NEW`](new.md)      |New Instance  |Monadic function|
-|[`⎕NS`](ns.md)       |Namespace      |Ambivalent function|
+|[`⎕NS`](ns-monadic.md)|Create/Clone Namespace|Monadic function   |
+|[`⎕NS`](ns-dyadic.md)|Create/Clone Custom Namespaces|Dyadic function    |
 |[`⎕THIS`](this.md)     |Self-reference|Reference|
-|[`⎕VGET`](vget.md)     |Value Get    |Ambivalent function|
-|[`⎕VSET`](vset.md)     |Value Set    |Ambivalent function|
+|[`⎕VGET`](vget-monadic.md)|Get Value from Current Namespace|Monadic function   |
+|[`⎕VGET`](vget-dyadic.md)|Get Value from Namespace|Dyadic function    |
+|[`⎕VSET`](vset-monadic.md)|Set Value in Current Namespace|Monadic function   |
+|[`⎕VSET`](vset-dyadic.md)|Set Value in Namespace|Dyadic function    |
 
 ### Built-in Objects and Windows GUI
 
@@ -85,12 +94,17 @@ These are facilities for dealing with built-in objects. They mostly represent Mi
 |Name     |Description                |Form|
 |---------|---------------------------|-----|
 |[`⎕DQ`](dq.md)    |Await and process events   |Monadic function|
-|[`⎕NQ`](nq.md)    |Place an event on the Queue|Ambivalent function|
+|[`⎕NQ`](nq-monadic.md)|Enqueue Event              |Monadic function   |
+|[`⎕NQ`](nq-dyadic.md)|Custom Enqueue Event       |Dyadic function    |
 |[`⎕SE`](se.md)    |Session Namespace          |Reference|
-|[`⎕WC`](wc.md)    |Create GUI object          |Ambivalent function|
-|[`⎕WG`](wg.md)    |Get GUI object properties  |Ambivalent function|
-|[`⎕WN`](wn.md)    |Query GUI object Names     |Ambivalent function|
-|[`⎕WS`](ws.md)    |Set GUI object properties  |Ambivalent function|
+|[`⎕WC`](wc-monadic.md)|Convert Namespace to GUI Object|Monadic function   |
+|[`⎕WC`](wc-dyadic.md)|Create GUI Object          |Dyadic function    |
+|[`⎕WG`](wg-monadic.md)|Get Properties of Current GUI Object|Monadic function   |
+|[`⎕WG`](wg-dyadic.md)|Get Properties of GUI Object|Dyadic function    |
+|[`⎕WN`](wn-monadic.md)|Get GUI Child Names in Current Object|Monadic function   |
+|[`⎕WN`](wn-dyadic.md)|Get GUI Child Names in Parent Object|Dyadic function    |
+|[`⎕WS`](ws-monadic.md)|Set Properties of Current GUI Object|Monadic function   |
+|[`⎕WS`](ws-dyadic.md)|Set Properties of GUI Object|Dyadic function    |
 |[`⎕WX`](wx.md)    |Expose GUI property names  |Variable|
 
 ### Modifying Language Behaviour
@@ -152,18 +166,24 @@ These are tools to convert between common representations of data.
 
 |Name    |Description                                             |Form|
 |--------|--------------------------------------------------------|----|
-|[`⎕C`](c.md)    |Case Convert                                           |Ambivalent function|
-|[`⎕CSV`](csv.md)  |Comma Separated Values                               |Ambivalent function|
+|[`⎕C`](c-monadic.md)|Case Fold                                              |Monadic function   |
+|[`⎕C`](c-dyadic.md)|Case Map                                               |Dyadic function    |
+|[`⎕CSV`](csv-monadic.md)|Import CSV                                           |Monadic function   |
+|[`⎕CSV`](csv-dyadic.md)|Export CSV                                           |Dyadic function    |
 |[`⎕DR`](data-representation-monadic.md)   |Data Representation          |Monadic function|
 |[`⎕DR`](data-representation-dyadic.md)   |Data Representation           |Dyadic function|
 |[`⎕DT`](dt.md)   |Datetime                                              |Dyadic function|
 |[`⎕FMT`](format-monadic.md)  |Resolve display                           |Monadic function|
 |[`⎕FMT`](format-dyadic.md)  |Format array                               |Dyadic function|
-|[`⎕JSON`](json.md) |JSON Convert                                        |Ambivalent function|
+|[`⎕JSON`](json-monadic.md)|Auto-convert JSON                                   |Monadic function   |
+|[`⎕JSON`](json-dyadic.md)|Convert JSON                                        |Dyadic function    |
 |[`⎕TS`](ts.md)      |Timestamp                                          |Constant|
-|[`⎕UCS`](ucs.md)  |Unicode Convert                                      |Ambivalent function|
-|[`⎕VFI`](vfi.md)  |Verify and Fix numeric                               |Ambivalent function|
-|[`⎕XML`](xml.md)  |XML Convert                                          |Ambivalent function|
+|[`⎕UCS`](ucs-monadic.md)|Convert Unicode Code Point                           |Monadic function   |
+|[`⎕UCS`](ucs-dyadic.md)|Convert Unicode Representation                       |Dyadic function    |
+|[`⎕VFI`](vfi-monadic.md)|Parse Numbers                                        |Monadic function   |
+|[`⎕VFI`](vfi-dyadic.md)|Parse Numbers with Separators                        |Dyadic function    |
+|[`⎕XML`](xml-monadic.md)|Convert XML                                          |Monadic function   |
+|[`⎕XML`](xml-dyadic.md)|Custom Convert XML                                   |Dyadic function    |
 
 ### Input and Output
 
@@ -176,11 +196,13 @@ These are communication facilities.
 |[`⎕ARBIN`](arbin.md) |Arbitrary Input       |Dyadic function|
 |[`⎕ARBOUT`](arbout.md)|Arbitrary Output      |Dyadic function|
 |[`⎕KL`](kl.md)   |Key Labels                       |Monadic function|
-|[`⎕PFKEY`](pfkey.md)|Programmable Function Keys    |Ambivalent function|
+|[`⎕PFKEY`](pfkey-monadic.md)|Query Programmable Function Key|Monadic function   |
+|[`⎕PFKEY`](pfkey-dyadic.md)|Program Function Key          |Dyadic function    |
 |[`⎕RTL`](rtl.md)   |Response Time Limit   |Variable|
 |[`⎕SD`](sd.md)   |Screen Dimensions                |Constant|
 |[`⎕SM`](sm.md)   |Screen Map                       |Variable|
-|[`⎕SR`](sr.md)   |Screen Read                      |Ambivalent function|
+|[`⎕SR`](sr-monadic.md)|Screen Read                      |Monadic function   |
+|[`⎕SR`](sr-dyadic.md)|Custom Screen Read               |Dyadic function    |
 
 ### External Utilities
 
@@ -188,8 +210,10 @@ These are APL interfaces to various facilities outside Dyalog.
 
 |Name    |Description                                             |Form|
 |--------|--------------------------------------------------------|----|
-|[`⎕MAP`](map.md)  |Map a file                                              |Ambivalent function|
-|[`⎕NA`](na.md)   |Declare a DLL function                                  |Ambivalent function|
+|[`⎕MAP`](map-monadic.md)|Map Array File                                          |Monadic function   |
+|[`⎕MAP`](map-dyadic.md)|Map Raw Data File                                       |Dyadic function    |
+|[`⎕NA`](na-monadic.md)|Associate External Function with Own Name               |Monadic function   |
+|[`⎕NA`](na-dyadic.md)|Associate External Function with Custom Name            |Dyadic function    |
 |[`⎕R`](r.md)    |Replace                                                 |Dyadic operator|
 |[`⎕S`](s.md)    |Search                                                  |Dyadic operator|
 |[`⎕SHELL`](shell.md)|Execute a shell command or another program              |Monadic function|
@@ -203,13 +227,15 @@ These create, control, and manipulate component files.
 |-----------|---------------------------|-----|
 |[`⎕FAPPEND`](fappend.md) |Append a component to File |Dyadic function|
 |[`⎕FAVAIL`](favail.md)  |File system Availability   |Constant|
-|[`⎕FCHK`](fchk.md)    |File Check and Repair      |Ambivalent function|
+|[`⎕FCHK`](fchk-monadic.md)|Check/Repair Component File|Monadic function   |
+|[`⎕FCHK`](fchk-dyadic.md)|Custom Check/Repair Component File|Dyadic function    |
 |[`⎕FCOPY`](fcopy.md)   |Copy a File                |Dyadic function|
 |[`⎕FCREATE`](fcreate.md) |Create a File              |Dyadic function|
 |[`⎕FDROP`](fdrop.md)   |Drop a block of components |Dyadic function|
 |[`⎕FERASE`](ferase.md)  |Erase a File               |Dyadic function|
 |[`⎕FHIST`](fhist.md)   |File History               |Monadic function|
-|[`⎕FHOLD`](fhold.md)   |File Hold                  |Ambivalent function|
+|[`⎕FHOLD`](fhold-monadic.md)|Component File Hold        |Monadic function   |
+|[`⎕FHOLD`](fhold-dyadic.md)|Component File Hold with Timeout|Dyadic function    |
 |[`⎕FLIB`](flib.md)    |List File Library          |Monadic function|
 |[`⎕FNAMES`](fnames.md)  |Names of tied Files        |Constant|
 |[`⎕FNUMS`](fnums.md)   |Tie Numbers of tied Files  |Constant|
@@ -219,7 +245,8 @@ These create, control, and manipulate component files.
 |[`⎕FREAD`](fread.md)   |Read a component from File |Monadic function|
 |[`⎕FRENAME`](frename.md) |Rename a File              |Dyadic function|
 |[`⎕FREPLACE`](freplace.md)|Replace a component on File|Dyadic function|
-|[`⎕FRESIZE`](fresize.md) |File Resize                |Ambivalent function|
+|[`⎕FRESIZE`](fresize-monadic.md)|Compact Component File     |Monadic function   |
+|[`⎕FRESIZE`](fresize-dyadic.md)|Resize Component File      |Dyadic function    |
 |[`⎕FSIZE`](fsize.md)   |File Size                  |Monadic function|
 |[`⎕FSTAC`](fstac.md)   |Set File Access matrix     |Dyadic function|
 |[`⎕FSTIE`](fstie.md)   |Share-Tie a File           |Dyadic function|
@@ -232,20 +259,25 @@ These create and manipulate files of any type as well as directories.
 
 |Name       |Description                                                  |Form|
 |-----------|-------------------------------------------------------------|----|
-|[`⎕MKDIR`](mkdir.md)   |Create a directory                                           |Ambivalent function|
+|[`⎕MKDIR`](mkdir-monadic.md)|Create Directory                                             |Monadic function   |
+|[`⎕MKDIR`](mkdir-dyadic.md)|Custom Create Directory                                      |Dyadic function    |
 |[`⎕NAPPEND`](nappend.md) |Append to File                                               |Dyadic function|
 |[`⎕NCOPY`](ncopy.md)   |Copy files and directories                                   |Dyadic function|
 |[`⎕NCREATE`](ncreate.md) |Create a File                                                |Dyadic function|
-|[`⎕NDELETE`](ndelete.md) |Delete a File or Directory                                   |Ambivalent function|
+|[`⎕NDELETE`](ndelete-monadic.md)|Delete Native File                                           |Monadic function   |
+|[`⎕NDELETE`](ndelete-dyadic.md)|Custom Delete Native File                                    |Dyadic function    |
 |[`⎕NERASE`](nerase.md)  |Erase a File                                                 |Dyadic function|
 |[`⎕NEXISTS`](nexists.md) |Discover whether or not a file or directory exists           |Monadic function|
-|[`⎕NGET`](nget.md)    |Read Text File                                               |Ambivalent function|
-|[`⎕NINFO`](ninfo.md)   |Query or set information about one or more files and/or directories|Ambivalent function|
+|[`⎕NGET`](nget-monadic.md)|Get Text File Content                                        |Monadic function   |
+|[`⎕NGET`](nget-dyadic.md)|Decode Text File Content                                     |Dyadic function    |
+|[`⎕NINFO`](ninfo-monadic.md)|Native File Name                                                   |Monadic function   |
+|[`⎕NINFO`](ninfo-dyadic.md)|Native File Information                                            |Dyadic function    |
 |[`⎕NLOCK`](nlock.md)   |Lock a region of a file                                      |Dyadic function|
 |[`⎕NMOVE`](nmove.md)   |Move files and directories                                   |Dyadic function|
 |[`⎕NNAMES`](nnames.md)  |Names of tied Files                                          |Constant|
 |[`⎕NNUMS`](nnums.md)   |Tie Numbers of tied Files                                    |Constant|
-|[`⎕NPARTS`](nparts.md)  |Split a file name into its constituent parts.                |Ambivalent function|
+|[`⎕NPARTS`](nparts-monadic.md)|File Name Parts                                              |Monadic function   |
+|[`⎕NPARTS`](nparts-dyadic.md)|Normalised File Name Parts                                   |Dyadic function    |
 |[`⎕NPUT`](nput.md)    |Write Text File                                              |Dyadic function|
 |[`⎕NREAD`](nread.md)   |Read from File                                               |Monadic function|
 |[`⎕NRENAME`](nrename.md) |Rename a File                                                |Dyadic function|
@@ -261,10 +293,12 @@ These are facilities to handle threads such as those created by [Spawn](../primi
 
 |Name     |Description                  |Form|
 |---------|-----------------------------|-----|
-|[`⎕TALLOC`](talloc.md) |Allocate Token Range         |Ambivalent function|
+|[`⎕TALLOC`](talloc-monadic.md)|Allocate New Token Range     |Monadic function   |
+|[`⎕TALLOC`](talloc-dyadic.md)|Allocate Existing Token Range|Dyadic function    |
 |[`⎕TCNUMS`](tcnums.md) |Thread Child Numbers         |Monadic function|
 |[`⎕TID`](tid.md)   |Current Thread Identity      |Constant|
-|[`⎕TKILL`](tkill.md) |Kill Threads        |Ambivalent function|
+|[`⎕TKILL`](tkill-monadic.md)|Kill Threads        |Monadic function   |
+|[`⎕TKILL`](tkill-dyadic.md)|Kill Threads and Descendants|Dyadic function    |
 |[`⎕TNAME`](tname.md) |Current Thread Name          |Variable|
 |[`⎕TNUMS`](tnums.md) |Thread Numbers               |Constant|
 |[`⎕TSYNC`](tsync.md) |Wait for Threads to Terminate|Monadic function|
@@ -276,10 +310,13 @@ These are facilities to ensure proper timing in the relationship between threads
 |Name     |Description         |Form|
 |---------|--------------------|-----|
 |[`⎕DL`](dl.md)      |Delay execution            |Function|
-|[`⎕TALLOC`](talloc.md)|Allocate Token Range|Ambivalent function|
-|[`⎕TGET`](tget.md)  |Get Tokens          |Ambivalent function|
+|[`⎕TALLOC`](talloc-monadic.md)|Allocate New Token Range|Monadic function   |
+|[`⎕TALLOC`](talloc-dyadic.md)|Allocate Existing Token Range|Dyadic function    |
+|[`⎕TGET`](tget-monadic.md)|Get Tokens          |Monadic function   |
+|[`⎕TGET`](tget-dyadic.md)|Get Tokens with Timeout|Dyadic function    |
 |[`⎕TPOOL`](tpool.md) |Token Pool          |Monadic function|
-|[`⎕TPUT`](tput.md)  |Put Tokens          |Ambivalent function|
+|[`⎕TPUT`](tput-monadic.md)|Put Tokens          |Monadic function   |
+|[`⎕TPUT`](tput-dyadic.md)|Put Tokens with Values|Dyadic function    |
 |[`⎕TREQ`](treq.md)  |Token Requests      |Monadic function|
 
 ### Stack
@@ -306,7 +343,8 @@ These are facilities to catch, cause, and investigate error events and interrupt
 |[`⎕DMX`](dmx.md)      |Extended Diagnostic Message                     |Reference|
 |[`⎕EM`](em.md)       |Event Messages                                  |Monadic function|
 |[`⎕EXCEPTION`](exception.md)|Reports the most recent Microsoft .NET Exception|Reference|
-|[`⎕SIGNAL`](signal.md)   |Signal event                                    |Ambivalent function|
+|[`⎕SIGNAL`](signal-monadic.md)|Signal Default/Custom Event                     |Monadic function   |
+|[`⎕SIGNAL`](signal-dyadic.md)|Signal Event with Custom Name                   |Dyadic function    |
 |[`⎕TRAP`](trap.md)     |Event Trap                                      |Variable|
 
 ### Shared Variables
@@ -329,7 +367,8 @@ These are relevant only for the Classic (non-Unicode) edition and dealing with i
 
 |Name     |Description                |Form|
 |---------|---------------------------|-----|
-|[`⎕NXLATE`](nxlate.md)  |Specify Translation Table |Ambivalent function|
+|[`⎕NXLATE`](nxlate-monadic.md)|Query Native File Translation Vector|Monadic function   |
+|[`⎕NXLATE`](nxlate-dyadic.md)|Set Native File Translation Vector|Dyadic function    |
 |[`⎕Ⓐ` or `⎕Á`](underscored-alphabetic-characters.md) |Underscored Alphabetic Characters|Constant|
 |[`⎕AV`](av.md)   |Atomic Vector              |Constant|
 |[`⎕AVU`](avu.md)  |Atomic Vector - Unicode         |Variable|
@@ -340,13 +379,15 @@ These are deprecated facilities that are still supported for legacy purposes; Dy
 
 |Name    |Description                      |Form|Alternative|
 |--------|---------------------------------|----|-----------|
-|[`⎕AT`](at.md)     |Object Attributes       |Ambivalent function|`⎕ATX` supports many more attributes|
+|[`⎕AT`](at-monadic.md)|Object Attributes       |Monadic function   |`⎕ATX` supports many more attributes|
+|[`⎕AT`](at-dyadic.md)|Object Attributes for APL2|Dyadic function    |`⎕ATX` supports many more attributes|
 |[`⎕CMD`](execute-windows-command.md)  |Execute the Windows Command Processor or another program|Monadic function|`⎕SHELL` is interruptible, can separate output streams, and has lots of advanced options|
 |[`⎕CMD`](start-windows-auxiliary-processor.md)  |Start a Windows Auxiliary Processor|Dyadic function|DLL/shared libraries via `⎕NA`|
 |[`⎕CR`](cr.md)     |Canonical Representation|Monadic function|`⎕ATX` can provide source as typed|
 |[`⎕DM`](dm.md)       |Diagnostic Message    |Constant|`⎕DMX.DM` is thread-safe|
 |[`⎕EN`](en.md)       |Event Number          |Constant|`⎕DMX.EN` is thread-safe|
-|[`⎕EXPORT`](export.md)|Export objects       |Ambivalent function|Use full (absolute or relative) namespace paths|
+|[`⎕EXPORT`](export-monadic.md)|Query Export Type    |Monadic function   |Use full (absolute or relative) namespace paths|
+|[`⎕EXPORT`](export-dyadic.md)|Set Export Type      |Dyadic function    |Use full (absolute or relative) namespace paths|
 |[`⎕FX`](fx.md)     |Fix definition          |Monadic function|`⎕FIX` saves source as typed|
 |[`⎕NR`](nr.md)     |Nested Representation   |Monadic function|`⎕ATX` can provide source as typed|
 |[`⎕PATH`](path.md)  |Search Path            |Variable|Use full (absolute or relative) namespace paths|

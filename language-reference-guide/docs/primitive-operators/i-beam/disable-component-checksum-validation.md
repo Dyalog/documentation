@@ -6,7 +6,7 @@ search:
 
 # <span>Disable Component Checksum Validation</span> `{R}←3002⌶Y`{{key}}
 
-Checksums allow component files to be validated and repaired using [`⎕FCHK`](../../system-functions/fchk.md).
+Checksums allow component files to be validated and repaired using [`⎕FCHK`](../../system-functions/fchk-monadic.md).
 
 From Version 13.1 onwards, components which contain checksums are also validated on every component read.
 

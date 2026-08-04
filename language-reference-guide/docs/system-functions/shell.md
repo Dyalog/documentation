@@ -99,7 +99,7 @@ In practice, the child process often closes shortly after without the need for i
 ## Thread Switching
 `⎕SHELL` is a thread switch point, which means the interpreter will run other APL threads while a long-running `⎕SHELL` call is in progress.
 
-When an APL thread running `⎕SHELL` is terminated by [`⎕TKILL`](tkill.md) or [`)RESET`](../system-commands/reset.md), the child process might be left running, as if `⎕SHELL` was interrupted.
+When an APL thread running `⎕SHELL` is terminated by [`⎕TKILL`](tkill-monadic.md) or [`)RESET`](../system-commands/reset.md), the child process might be left running, as if `⎕SHELL` was interrupted.
 
 ## Variant Options
 `⎕SHELL` supports the following variant options to control certain parts of the program execution context.
@@ -123,8 +123,8 @@ Any output the child process produces on its stream `Stream` will go to the spec
 | `('File' n)` | Redirect the output to an open native file with tie number `n`. The file must be writable. |
 | `('File' path)` | Redirect the output to an existing file with a path described by the character vector `path`. The output is appended to the end of the file. |
 | `('Array' type)` | Redirect the output to the interpreter, which will convert it into a vector with data type `type`, and include it in the result of `⎕SHELL`. For example, to get standard output as a Boolean vector, the variant value would be `(1 ('Array' 11))`. |
-| `'Array'` | Redirect the output to the interpreter, which will convert it to a vector of character vectors, split into the separate lines of text. Note that the line endings and text encoding are determined automatically, like when reading files using monadic [`⎕NGET`](nget.md). The nested array is included as part of the result of `⎕SHELL`. |
-| `('Array' textEncoding)` | Redirect the output to the interpreter like with the `'Array'` format above, but use a specific text encoding, described by the character vector `textEncoding`. The possible values for `textEncodings` are those which are allowed as the left argument to dyadic [`⎕NGET`](nget.md). |
+| `'Array'` | Redirect the output to the interpreter, which will convert it to a vector of character vectors, split into the separate lines of text. Note that the line endings and text encoding are determined automatically, like when reading files using monadic [`⎕NGET`](nget-monadic.md). The nested array is included as part of the result of `⎕SHELL`. |
+| `('Array' textEncoding)` | Redirect the output to the interpreter like with the `'Array'` format above, but use a specific text encoding, described by the character vector `textEncoding`. The possible values for `textEncodings` are those which are allowed as the left argument to dyadic [`⎕NGET`](nget-monadic.md). |
 | `'Null'` | Redirect the output to the operating-system's null device, which effectively means the output is ignored. |
 | `('Callback' fn encodingOrType)` | Redirect the output to the interpreter, which periodically will turn the data produced into an array, and run a callback function specified in `fn`. `fn` can either be a character vector, in which case it is the name of the function to run, or it can be a 2-element vector where the first element is the function name, and the second element is some arbitrary data which will be passed as the left argument to the callback function. When `encodingOrType` is a scalar integer, the conversion behaves as with `('Array' type)`, and otherwise it behaves as `('Array' textEncoding)`. |
 | `('Callback' fn)` | This is identical to the other callback format, with the difference that the data is converted into lines of text in the same way as when the `'Array'` format is used, using heuristics to determine the line endings and text encoding. |
@@ -181,7 +181,7 @@ Any input the child process tries to read on its stream `Stream` will come from 
 | `('Array' Data Encoding)` | This is similar to `('Array' Data Type)`, but `Data` must be either a character vector, or a vector of character vectors. Each character vector is converted to text in the given `Encoding`, and terminated by a newline character/character sequence. The `Encoding` must be one of those supported by [`⎕NPUT`](nput.md). |
 | `('Array' Data Encoding Newline)` | Similar to `('Array' Data Encoding)`, but provides explicit control over the newline character/sequence. `Newline` must be one of the values supported by [`⎕NPUT`](nput.md). |
 | `'Null'` | Input comes from the operating-system's null device, which effectively means no input is provided. |
-| `('Token' n)` | `⎕SHELL` will periodically see if any tokens are available on the token number `n`, such as those produced by `X ⎕TPUT n`. When one becomes available, the token data `X` is parsed as one of the `('Array' ...)` sources, and appended to a buffer of data that the child process then sees on the specified stream. A token with no data, as constructed by a monadic [`⎕TPUT`](tput.md) call, closes the stream. This, combined with running `⎕SHELL` on its own APL thread, provides a mechanism for feeding a child process input input dynamically. |
+| `('Token' n)` | `⎕SHELL` will periodically see if any tokens are available on the token number `n`, such as those produced by `X ⎕TPUT n`. When one becomes available, the token data `X` is parsed as one of the `('Array' ...)` sources, and appended to a buffer of data that the child process then sees on the specified stream. A token with no data, as constructed by a monadic [`⎕TPUT`](tput-monadic.md) call, closes the stream. This, combined with running `⎕SHELL` on its own APL thread, provides a mechanism for feeding a child process input input dynamically. |
 
 The default is `0 2⍴0`, but see [Default Redirections](#default-redirections).
 

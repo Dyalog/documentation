@@ -1,0 +1,33 @@
+---
+search:
+  boost: 2
+---
+
+# <span>Parse Numbers</span> `R←⎕VFI Y`{{key}}
+
+`Y` must be a simple character scalar or vector. `R` is a nested vector of length two whose first item is a simple logical vector and whose second item is a simple numeric vector of the same length as the first item of `R`.
+
+`Y` is the character representation of a series of numeric constants.  Adjacent numeric strings are separated by one or more blanks.  Leading and trailing blanks and separating blanks in excess of one are redundant and ignored.  Blanks in leading and trailing positions in `Y` are redundant and ignored.  The character 0 is implied in `Y` before a leading character, after a trailing character.
+
+The length of the items of `R` is the same as the number of identifiable strings (or implied strings) in `Y` separated by a blank.  An element of the first item of `R` is 1 where the corresponding string in `Y` is a valid numeric representation, or 0 otherwise.  An element of the second item of `R` is the numeric value of the corresponding string in `Y` if it is a valid numeric representation, or 0 otherwise.
+
+<h2 class="example">Examples</h2>
+```apl
+
+      ⎕VFI '2 -2 ¯2'
+ 1 0 1  2 0 ¯2
+ 
+      ⎕VFI '12.1 1E1 1A1 ¯10'
+ 1 1 0 1  12.1 10 0 ¯10
+ 
+      ⊃(//⎕VFI'12.1 1E1 1A1 ¯10')
+12.1 10 ¯10
+ 
+      (⍬ ⍬)≡⎕VFI''
+1
+```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕VFI VFI
+</div>

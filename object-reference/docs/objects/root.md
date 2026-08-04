@@ -4,13 +4,13 @@
 
 **Description**
 
-There is a single Root object called `'.'` which is always present. It cannot be created using [`⎕WC`](../../../language-reference-guide/system-functions/wc) nor can it be destroyed.
+There is a single Root object called `'.'` which is always present. It cannot be created using [`⎕WC`](../../../language-reference-guide/system-functions/wc-dyadic) nor can it be destroyed.
 
 The [Caption](../properties/caption.md) and [IconObj](../properties/iconobj.md) properties of `'.'` are used to identify a Dyalog APL/W application as distinct from the APL Session. The [Caption](../properties/caption.md) property specifies the application name that is displayed when you cycle through running applications using Alt+Tab and by the Windows Task List. The [IconObj](../properties/iconobj.md) property specifies the name of an [Icon](icon.md) object that is displayed alongside the application name in the box displayed by Alt+Tab. For these to take effect, your application must have at least one visible and active [Form](form.md).
 
 For the Root object, the value of [Posn](../properties/posn.md) is (0,0). The value of [Size](../properties/size.md) is either (100,100) if [Coord](../properties/coord.md) is `'Prop'`, or the size of the screen in pixels if [Coord](../properties/coord.md) is `'Pixel'`. [XRange](../properties/xrange.md) and [YRange](../properties/yrange.md) both have the value (0,100). The [DevCaps](../properties/devcaps.md) property reports the physical size of the screen in terms of both pixels and millimetres. It also reports the number of colours available.
 
-The [FontList](../properties/fontlist.md) property provides a list of all the character fonts that are available. The [PrintList](../properties/printlist.md) property provides a list of all the installed printers. These properties are *read-only* and may not be changed using [`⎕WS`](../../../language-reference-guide/system-functions/ws)
+The [FontList](../properties/fontlist.md) property provides a list of all the character fonts that are available. The [PrintList](../properties/printlist.md) property provides a list of all the installed printers. These properties are *read-only* and may not be changed using [`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic)
 
 As the default value of [Coord](../properties/coord.md) is `'Inherit'` for all other objects, the value of [Coord](../properties/coord.md) for `'.'` defines the default co-ordinate system. It may be either `'Prop'` (the default) or `'Pixel'`. `'Inherit'` and `'User'` are not allowed.
 

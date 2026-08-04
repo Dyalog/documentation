@@ -301,19 +301,23 @@ nav:
           - '<code>⎕AN</code>: Account Name': system-functions/an.md
           - '<code>⎕ARBIN</code>: Arbitrary Input': system-functions/arbin.md
           - '<code>⎕ARBOUT</code>: Arbitrary Output': system-functions/arbout.md
-          - '<code>⎕AT</code>: Attributes': system-functions/at.md
+          - '<code>⎕AT</code>: Object Attributes': system-functions/at-monadic.md
+          - '<code>⎕AT</code>: Object Attributes for APL2': system-functions/at-dyadic.md
           - '<code>⎕ATX</code>: Extended Attributes': system-functions/atx.md
           - '<code>⎕AV</code>: Atomic Vector': system-functions/av.md
           - '<code>⎕AVU</code>: Atomic Vector Unicode': system-functions/avu.md
           - '<code>⎕BASE</code>: Base Class': system-functions/base.md
-          - '<code>⎕C</code>: Case Convert': system-functions/c.md
-          - '<code>⎕CLASS</code>: Class': system-functions/class.md
+          - '<code>⎕C</code>: Case Fold': system-functions/c-monadic.md
+          - '<code>⎕C</code>: Case Map': system-functions/c-dyadic.md
+          - '<code>⎕CLASS</code>: Class Hierarchy': system-functions/class-monadic.md
+          - '<code>⎕CLASS</code>: Get Class/Interface Implementation': system-functions/class-dyadic.md
           - '<code>⎕CLEAR</code>: Clear Workspace': system-functions/clear.md
           - '<code>⎕CMD</code>: Execute Windows Command': system-functions/execute-windows-command.md
           - '<code>⎕CMD</code>: Start Windows Auxiliary Processor': system-functions/start-windows-auxiliary-processor.md
           - '<code>⎕CR</code>: Canonical Representation': system-functions/cr.md
           - '<code>⎕CS</code>: Change Space': system-functions/cs.md
-          - '<code>⎕CSV</code>: Comma Separated Values': system-functions/csv.md
+          - '<code>⎕CSV</code>: Import CSV': system-functions/csv-monadic.md
+          - '<code>⎕CSV</code>: Export CSV': system-functions/csv-dyadic.md
           - '<code>⎕CT</code>: Comparison Tolerance': system-functions/ct.md
           - '<code>⎕CY</code>: Copy Workspace': system-functions/cy.md
           - '<code>⎕D</code>: Digits': system-functions/d.md
@@ -327,22 +331,27 @@ nav:
           - '<code>⎕DR</code>: Data Representation Monadic': system-functions/data-representation-monadic.md
           - '<code>⎕DR</code>: Data Representation Dyadic': system-functions/data-representation-dyadic.md
           - '<code>⎕DT</code>: Datetime': system-functions/dt.md
-          - '<code>⎕ED</code>: Edit Object': system-functions/ed.md
+          - '<code>⎕ED</code>: Edit Objects': system-functions/ed-monadic.md
+          - '<code>⎕ED</code>: Edit Objects with Type': system-functions/ed-dyadic.md
           - '<code>⎕EM</code>: Event Message': system-functions/em.md
           - '<code>⎕EN</code>: Event Number': system-functions/en.md
           - '<code>⎕EX</code>: Expunge Object': system-functions/ex.md
           - '<code>⎕EXCEPTION</code>: Exception': system-functions/exception.md
-          - '<code>⎕EXPORT</code>: Export Object': system-functions/export.md
+          - '<code>⎕EXPORT</code>: Query Export Type': system-functions/export-monadic.md
+          - '<code>⎕EXPORT</code>: Set Export Type': system-functions/export-dyadic.md
           - '<code>⎕FAPPEND</code>: File Append Component': system-functions/fappend.md
           - '<code>⎕FAVAIL</code>: File System Available': system-functions/favail.md
-          - '<code>⎕FCHK</code>: File Check and Repair': system-functions/fchk.md
+          - '<code>⎕FCHK</code>: Check/Repair Component File': system-functions/fchk-monadic.md
+          - '<code>⎕FCHK</code>: Custom Check/Repair Component File': system-functions/fchk-dyadic.md
           - '<code>⎕FCOPY</code>: File Copy': system-functions/fcopy.md
           - '<code>⎕FCREATE</code>: File Create': system-functions/fcreate.md
           - '<code>⎕FDROP</code>: File Drop Component': system-functions/fdrop.md
           - '<code>⎕FERASE</code>: File Erase': system-functions/ferase.md
           - '<code>⎕FHIST</code>: File History': system-functions/fhist.md
-          - '<code>⎕FHOLD</code>: File Hold': system-functions/fhold.md
-          - '<code>⎕FIX</code>: Fix Script': system-functions/fix.md
+          - '<code>⎕FHOLD</code>: Component File Hold': system-functions/fhold-monadic.md
+          - '<code>⎕FHOLD</code>: Component File Hold with Timeout': system-functions/fhold-dyadic.md
+          - '<code>⎕FIX</code>: Define Namespace': system-functions/fix-monadic.md
+          - '<code>⎕FIX</code>: Define Objects': system-functions/fix-dyadic.md
           - '<code>⎕FLIB</code>: Component File Library': system-functions/flib.md
           - '<code>⎕FMT</code>: Format Monadic': system-functions/format-monadic.md
           - '<code>⎕FMT</code>: Format Dyadic': system-functions/format-dyadic.md
@@ -355,7 +364,8 @@ nav:
           - '<code>⎕FREAD</code>: File Read Component': system-functions/fread.md
           - '<code>⎕FRENAME</code>: File Rename': system-functions/frename.md
           - '<code>⎕FREPLACE</code>: File Replace Component': system-functions/freplace.md
-          - '<code>⎕FRESIZE</code>: File Resize': system-functions/fresize.md
+          - '<code>⎕FRESIZE</code>: Compact Component File': system-functions/fresize-monadic.md
+          - '<code>⎕FRESIZE</code>: Resize Component File': system-functions/fresize-dyadic.md
           - '<code>⎕FSIZE</code>: File Size': system-functions/fsize.md
           - '<code>⎕FSTAC</code>: File Set Access': system-functions/fstac.md
           - '<code>⎕FSTIE</code>: File Share Tie': system-functions/fstie.md
@@ -364,55 +374,70 @@ nav:
           - '<code>⎕FX</code>: Fix Definition': system-functions/fx.md
           - '<code>⎕INSTANCES</code>: Instances': system-functions/instances.md
           - '<code>⎕IO</code>: Index Origin': system-functions/io.md
-          - '<code>⎕JSON</code>: JSON Convert': system-functions/json.md
+          - '<code>⎕JSON</code>: Auto-convert JSON': system-functions/json-monadic.md
+          - '<code>⎕JSON</code>: Convert JSON': system-functions/json-dyadic.md
           - '<code>⎕KL</code>: Key Label': system-functions/kl.md
           - '<code>⎕LC</code>: Line Count': system-functions/lc.md
           - '<code>⎕LOAD</code>: Load Workspace': system-functions/load.md
-          - '<code>⎕LOCK</code>: Lock Definition': system-functions/lock.md
+          - '<code>⎕LOCK</code>: Lock Function': system-functions/lock-monadic.md
+          - '<code>⎕LOCK</code>: Custom Lock Function': system-functions/lock-dyadic.md
           - '<code>⎕LX</code>: Latent Expression': system-functions/lx.md
-          - '<code>⎕MAP</code>: Map File': system-functions/map.md
-          - '<code>⎕MKDIR</code>: Make Directory': system-functions/mkdir.md
+          - '<code>⎕MAP</code>: Map Array File': system-functions/map-monadic.md
+          - '<code>⎕MAP</code>: Map Raw Data File': system-functions/map-dyadic.md
+          - '<code>⎕MKDIR</code>: Create Directory': system-functions/mkdir-monadic.md
+          - '<code>⎕MKDIR</code>: Custom Create Directory': system-functions/mkdir-dyadic.md
           - '<code>⎕ML</code>: Migration Level': system-functions/ml.md
           - '<code>⎕MONITOR</code>: Set Monitor': system-functions/set-monitor.md
           - '<code>⎕MONITOR</code>: Query Monitor': system-functions/query-monitor.md
-          - '<code>⎕NA</code>: Name Association': system-functions/na.md
+          - '<code>⎕NA</code>: Associate External Function with Own Name': system-functions/na-monadic.md
+          - '<code>⎕NA</code>: Associate External Function with Custom Name': system-functions/na-dyadic.md
           - '<code>⎕NAPPEND</code>: Native File Append': system-functions/nappend.md
           - '<code>⎕NC</code>: Name Classification': system-functions/nc.md
           - '<code>⎕NCOPY</code>: Native File Copy': system-functions/ncopy.md
           - '<code>⎕NCREATE</code>: Native File Create': system-functions/ncreate.md
-          - '<code>⎕NDELETE</code>: Native File Delete': system-functions/ndelete.md
+          - '<code>⎕NDELETE</code>: Delete Native File': system-functions/ndelete-monadic.md
+          - '<code>⎕NDELETE</code>: Custom Delete Native File': system-functions/ndelete-dyadic.md
           - '<code>⎕NERASE</code>: Native File Erase': system-functions/nerase.md
           - '<code>⎕NEW</code>: New Instance': system-functions/new.md
           - '<code>⎕NEXISTS</code>: Native File Exists': system-functions/nexists.md
-          - '<code>⎕NGET</code>: Read Text File': system-functions/nget.md
-          - '<code>⎕NINFO</code>: Native File Information': system-functions/ninfo.md
-          - '<code>⎕NL</code>: Name List': system-functions/nl.md
+          - '<code>⎕NGET</code>: Get Text File Content': system-functions/nget-monadic.md
+          - '<code>⎕NGET</code>: Decode Text File Content': system-functions/nget-dyadic.md
+          - '<code>⎕NINFO</code>: Native File Name': system-functions/ninfo-monadic.md
+          - '<code>⎕NINFO</code>: Native File Information': system-functions/ninfo-dyadic.md
+          - '<code>⎕NL</code>: List Object Names': system-functions/nl-monadic.md
+          - '<code>⎕NL</code>: List Object Names with Filter': system-functions/nl-dyadic.md
           - '<code>⎕NLOCK</code>: Native File Lock': system-functions/nlock.md
           - '<code>⎕NMOVE</code>: Native File Move': system-functions/nmove.md
           - '<code>⎕NNAMES</code>: Native File Names': system-functions/nnames.md
           - '<code>⎕NNUMS</code>: Native File Numbers': system-functions/nnums.md
-          - '<code>⎕NPARTS</code>: File Name Parts': system-functions/nparts.md
+          - '<code>⎕NPARTS</code>: File Name Parts': system-functions/nparts-monadic.md
+          - '<code>⎕NPARTS</code>: Normalised File Name Parts': system-functions/nparts-dyadic.md
           - '<code>⎕NPUT</code>: Write Text File': system-functions/nput.md
-          - '<code>⎕NQ</code>: Enqueue Event': system-functions/nq.md
+          - '<code>⎕NQ</code>: Enqueue Event': system-functions/nq-monadic.md
+          - '<code>⎕NQ</code>: Custom Enqueue Event': system-functions/nq-dyadic.md
           - '<code>⎕NR</code>: Nested Representation': system-functions/nr.md
           - '<code>⎕NREAD</code>: Native File Read': system-functions/nread.md
           - '<code>⎕NRENAME</code>: Native File Rename': system-functions/nrename.md
           - '<code>⎕NREPLACE</code>: Native File Replace': system-functions/nreplace.md
           - '<code>⎕NRESIZE</code>: Native File Resize': system-functions/nresize.md
-          - '<code>⎕NS</code>: Namespace': system-functions/ns.md
+          - '<code>⎕NS</code>: Create/Clone Namespace': system-functions/ns-monadic.md
+          - '<code>⎕NS</code>: Create/Clone Custom Namespaces': system-functions/ns-dyadic.md
           - '<code>⎕NSI</code>: Namespace Indicator': system-functions/nsi.md
           - '<code>⎕NSIZE</code>: Native File Size': system-functions/nsize.md
           - '<code>⎕NTIE</code>: Native File Tie': system-functions/ntie.md
           - '<code>⎕NULL</code>: Null Item': system-functions/null.md
           - '<code>⎕NUNTIE</code>: Native File Untie': system-functions/nuntie.md
-          - '<code>⎕NXLATE</code>: Native File Translate': system-functions/nxlate.md
+          - '<code>⎕NXLATE</code>: Query Native File Translation Vector': system-functions/nxlate-monadic.md
+          - '<code>⎕NXLATE</code>: Set Native File Translation Vector': system-functions/nxlate-dyadic.md
           - '<code>⎕OFF</code>: Sign Off APL': system-functions/off.md
           - '<code>⎕OPT</code>: Variant': system-functions/opt.md
           - '<code>⎕OR</code>: Object Representation': system-functions/or.md
           - '<code>⎕PATH</code>: Search Path': system-functions/path.md
-          - '<code>⎕PFKEY</code>: Program Function Key': system-functions/pfkey.md
+          - '<code>⎕PFKEY</code>: Query Programmable Function Key': system-functions/pfkey-monadic.md
+          - '<code>⎕PFKEY</code>: Program Function Key': system-functions/pfkey-dyadic.md
           - '<code>⎕PP</code>: Print Precision': system-functions/pp.md
-          - '<code>⎕PROFILE</code>: Profile Application': system-functions/profile.md
+          - '<code>⎕PROFILE</code>: Profile Code': system-functions/profile-monadic.md
+          - '<code>⎕PROFILE</code>: Filter Profile Data': system-functions/profile-dyadic.md
           - '<code>⎕PW</code>: Print Width': system-functions/pw.md
           - '<code>⎕R</code>: Replace': system-functions/r.md
           - '<code>⎕REFS</code>: Cross References': system-functions/refs.md
@@ -428,10 +453,12 @@ nav:
           - '<code>⎕SHADOW</code>: Shadow Name': system-functions/shadow.md
           - '<code>⎕SHELL</code>: Execute external program': system-functions/shell.md
           - '<code>⎕SI</code>: State Indicator': system-functions/si.md
-          - '<code>⎕SIGNAL</code>: Signal Event': system-functions/signal.md
+          - '<code>⎕SIGNAL</code>: Signal Default/Custom Event': system-functions/signal-monadic.md
+          - '<code>⎕SIGNAL</code>: Signal Event with Custom Name': system-functions/signal-dyadic.md
           - '<code>⎕SIZE</code>: Size of Object': system-functions/size.md
           - '<code>⎕SM</code>: Screen Map': system-functions/sm.md
-          - '<code>⎕SR</code>: Screen Read': system-functions/sr.md
+          - '<code>⎕SR</code>: Screen Read': system-functions/sr-monadic.md
+          - '<code>⎕SR</code>: Custom Screen Read': system-functions/sr-dyadic.md
           - '<code>⎕SRC</code>: Source': system-functions/src.md
           - '<code>⎕STACK</code>: State Indicator Stack': system-functions/stack.md
           - '<code>⎕STATE</code>: State of Object': system-functions/state.md
@@ -445,37 +472,50 @@ nav:
           - '<code>⎕SVR</code>: Shared Variable Retract Offer': system-functions/svr.md
           - '<code>⎕SVS</code>: Shared Variable State': system-functions/svs.md
           - '<code>⎕SYSTEM</code>: System Information': system-functions/system.md
-          - '<code>⎕TALLOC</code>: Allocate Token Range': system-functions/talloc.md
+          - '<code>⎕TALLOC</code>: Allocate New Token Range': system-functions/talloc-monadic.md
+          - '<code>⎕TALLOC</code>: Allocate Existing Token Range': system-functions/talloc-dyadic.md
           - '<code>⎕TC</code>: Terminal Control': system-functions/tc.md
           - '<code>⎕TCNUMS</code>: Thread Child Numbers': system-functions/tcnums.md
-          - '<code>⎕TGET</code>: Get Tokens': system-functions/tget.md
+          - '<code>⎕TGET</code>: Get Tokens': system-functions/tget-monadic.md
+          - '<code>⎕TGET</code>: Get Tokens with Timeout': system-functions/tget-dyadic.md
           - '<code>⎕THIS</code>: This Space': system-functions/this.md
           - '<code>⎕TID</code>: Current Thread Identity': system-functions/tid.md
-          - '<code>⎕TKILL</code>: Kill Thread': system-functions/tkill.md
+          - '<code>⎕TKILL</code>: Kill Threads': system-functions/tkill-monadic.md
+          - '<code>⎕TKILL</code>: Kill Threads and Descendants': system-functions/tkill-dyadic.md
           - '<code>⎕TNAME</code>: Current Thread Name': system-functions/tname.md
           - '<code>⎕TNUMS</code>: Thread Numbers': system-functions/tnums.md
           - '<code>⎕TPOOL</code>: Token Pool': system-functions/tpool.md
-          - '<code>⎕TPUT</code>: Put Tokens': system-functions/tput.md
+          - '<code>⎕TPUT</code>: Put Tokens': system-functions/tput-monadic.md
+          - '<code>⎕TPUT</code>: Put Tokens with Values': system-functions/tput-dyadic.md
           - '<code>⎕TRACE</code>: Set Trace': system-functions/set-trace.md
           - '<code>⎕TRACE</code>: Query Trace': system-functions/query-trace.md
           - '<code>⎕TRAP</code>: Trap Event': system-functions/trap.md
           - '<code>⎕TREQ</code>: Token Requests': system-functions/treq.md
           - '<code>⎕TS</code>: Timestamp': system-functions/ts.md
           - '<code>⎕TSYNC</code>: Wait for Threads to Terminate': system-functions/tsync.md
-          - '<code>⎕UCS</code>: Unicode Convert': system-functions/ucs.md
+          - '<code>⎕UCS</code>: Convert Unicode Code Point': system-functions/ucs-monadic.md
+          - '<code>⎕UCS</code>: Convert Unicode Representation': system-functions/ucs-dyadic.md
           - '<code>⎕USING</code>: Using Microsoft Net Search Path': system-functions/using.md
-          - '<code>⎕VFI</code>: Verify Fix Input': system-functions/vfi.md
-          - '<code>⎕VGET</code>: Value Get': system-functions/vget.md
+          - '<code>⎕VFI</code>: Parse Numbers': system-functions/vfi-monadic.md
+          - '<code>⎕VFI</code>: Parse Numbers with Separators': system-functions/vfi-dyadic.md
+          - '<code>⎕VGET</code>: Get Value from Current Namespace': system-functions/vget-monadic.md
+          - '<code>⎕VGET</code>: Get Value from Namespace': system-functions/vget-dyadic.md
           - '<code>⎕VR</code>: Vector Representation': system-functions/vr.md
-          - '<code>⎕VSET</code>: Value Set': system-functions/vset.md
+          - '<code>⎕VSET</code>: Set Value in Current Namespace': system-functions/vset-monadic.md
+          - '<code>⎕VSET</code>: Set Value in Namespace': system-functions/vset-dyadic.md
           - '<code>⎕WA</code>: Workspace Available': system-functions/wa.md
-          - '<code>⎕WC</code>: Windows Create Object': system-functions/wc.md
-          - '<code>⎕WG</code>: Windows Get Property': system-functions/wg.md
-          - '<code>⎕WN</code>: Windows Child Names': system-functions/wn.md
-          - '<code>⎕WS</code>: Windows Set Property': system-functions/ws.md
+          - '<code>⎕WC</code>: Convert Namespace to GUI Object': system-functions/wc-monadic.md
+          - '<code>⎕WC</code>: Create GUI Object': system-functions/wc-dyadic.md
+          - '<code>⎕WG</code>: Get Properties of Current GUI Object': system-functions/wg-monadic.md
+          - '<code>⎕WG</code>: Get Properties of GUI Object': system-functions/wg-dyadic.md
+          - '<code>⎕WN</code>: Get GUI Child Names in Current Object': system-functions/wn-monadic.md
+          - '<code>⎕WN</code>: Get GUI Child Names in Parent Object': system-functions/wn-dyadic.md
+          - '<code>⎕WS</code>: Set Properties of Current GUI Object': system-functions/ws-monadic.md
+          - '<code>⎕WS</code>: Set Properties of GUI Object': system-functions/ws-dyadic.md
           - '<code>⎕WSID</code>: Workspace Identification': system-functions/wsid.md
           - '<code>⎕WX</code>: Window Expose': system-functions/wx.md
-          - '<code>⎕XML</code>: XML Convert': system-functions/xml.md
+          - '<code>⎕XML</code>: Convert XML': system-functions/xml-monadic.md
+          - '<code>⎕XML</code>: Custom Convert XML': system-functions/xml-dyadic.md
           - '<code>⎕XSI</code>: Extended State Indicator': system-functions/xsi.md
           - '<code>⎕XT</code>: Set External Variable': system-functions/set-external-variable.md
           - '<code>⎕XT</code>: Query External Variable': system-functions/query-external-variable.md

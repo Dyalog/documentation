@@ -29,7 +29,7 @@ The rows of the matrix (one row for each shared code file) are ordered to corres
 
 Lists the names in the shared code file identified by the specified memory address.
 
-`Y` is an integer vector that would be a valid right argument to [`⎕NL`](../../../system-functions/nl/); it identifies the nameclasses and subclasses for which the names should be listed.
+`Y` is an integer vector that would be a valid right argument to [`⎕NL`](../../../system-functions/nl-monadic/); it identifies the nameclasses and subclasses for which the names should be listed.
 
 `X` is the slot identifier (an integer in the range 1-8) for the unique fixed virtual memory address of the shared code file.
 

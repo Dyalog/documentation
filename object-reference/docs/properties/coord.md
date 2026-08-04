@@ -10,7 +10,7 @@ string with one of the following values; `'Inherit'`,
 If Coord is `'Inherit'`, the co-ordinate
 system for the object is **inherited** from its parent. Note that the default
 value of Coord for the system object `'.'` is `'Prop'`, so by default all objects
-created by [`⎕WC`](../../../language-reference-guide/system-functions/wc) inherit `'Prop'`.
+created by [`⎕WC`](../../../language-reference-guide/system-functions/wc-dyadic) inherit `'Prop'`.
 
 If Coord is `'Prop'`, the origin of the
 object's parent is deemed to be at its top left interior corner, and the scale
