@@ -9,14 +9,9 @@ search:
 
 The active referent to the name in the workspace is locked.  Stop, trace and monitor settings, established by the `⎕STOP`, `⎕TRACE` and `⎕MONITOR` functions, are cancelled.
 
-The function code is hidden to extent `3`. The extents are:
+The function code is hidden and suspension within it is prevented.
 
-- `0`: The argument is well-formed, but could not be locked (for example, it is a dfn).
-- `1`: The object may not be displayed and you may not obtain its character form using `⎕ATX`, `⎕CR`, `⎕NR`, or `⎕VR`.
-- `2`: If an error or exception occurs that would normally cause a suspension of execution within the locked function or operator, the state indicator is cut back to the statement that called it and the suspension is triggered there instead.
-- `3`: Both `1` and `2` apply. You can neither display the locked object nor suspend execution within it.
-
-The shy result `R` is the lock state (`1`, `2`, or `3`) of `Y`.
+The shy result `R` is the [lock state](lock-dyadic.md) (`1`, `2`, or `3`) of `Y`.
 
 A `DOMAIN ERROR` is reported if `Y` is ill-formed.
 
