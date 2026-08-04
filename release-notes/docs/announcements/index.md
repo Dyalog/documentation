@@ -4,10 +4,6 @@
 
 Notice of new and planned additions, changes, removals, and deprecations in Dyalog v21.0 compared with Dyalog v20.0.
 
-## Additions
-
-T.B.A.
-
 ## Changes
 
 ### APL Thread Scheduler
@@ -20,7 +16,7 @@ If deprecated features are being logged (using [`109⌶`](https://docs.dyalog.co
 
 ### Raspberry Pi Platform
 
-Dyalog v20.0 was the last release to be built for 32-bit Raspberry Pis; Dyalog v21.0 is only supported on 64-bit Raspberry Pis.
+Dyalog v20.0 was the last release to be built for 32-bit Raspberry Pis. To run Dyalog v21.0 on 64-bit Raspberry Pis, use Dyalog for Linux (aarch64/DEB).
 
 ## Notice of Removals in Future Releases
 
@@ -80,4 +76,4 @@ The next version of Dyalog (Dyalog v22.0) is expected to be supported on the fol
 - Microsoft Windows:
     - Windows 11 2H24 onwards (Windows Server 2016 onwards)
 
-This list is not definitive and is subject to change.
+This list is likely to change before Dyalog v22.0 is released (more recent operating system versions are likely to be required).
