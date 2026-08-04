@@ -28,7 +28,7 @@ If a directory cannot be created (for example, if a directory with that name alr
       ⎕←⎕MKDIR '/Users/Pete/Documents/temp'
 1
       ⎕←⎕MKDIR '/Users/Pete/Documents/temp'
-FILE NAME ERROR: Already exists
+FILE NAME ERROR: /Users/Pete/Documents/temp: Already exists
       ⎕←⎕MKDIR'/Users/Pete/Documents/temp'
         ∧
 
