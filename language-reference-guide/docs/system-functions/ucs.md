@@ -53,7 +53,7 @@ Unicode also contains the APL character set. For example:
 
 ## Dyadic `⎕UCS`
 
-Dyadic `⎕UCS` translates between vectors of Unicode characters and one of three standard Unicode encoding schemes – UTF-8, UTF-16, or UTF-32. These represent a character vector as a vector of integers. In the case of UTF-8, the integers can be specified to be in the range `0` to `255` (when `X[2]` is `0`) or the range `¯128` to `+127`(when `X[2]` is `83`).
+Dyadic `⎕UCS` translates between vectors of Unicode characters and one of three standard Unicode encoding schemes – UTF-8, UTF-16, or UTF-32. These represent a character vector as a vector of integers. See the following section for details that are specific to UTF-8.
 ```apl
       'UTF-8' ⎕UCS 'ABC'
 65 66 67
@@ -77,7 +77,7 @@ Dyadic `⎕UCS` translates between vectors of Unicode characters and one of thre
 
 ### UTF-8 and Integer Ranges
 
-By default `⎕UCS` consumes and returns positive integers. In the case of `X` having the value `'UTF-8'` or `'UTF-8' 0` `⎕UCS will consume and return integers in the range `0` to `255. In the case of `X` having the value `'UTF-8' 83`, `⎕UCS` will instead consume and return integers in the range `¯128` to `+127`. For example:
+By default `⎕UCS` consumes and returns positive integers. In the case of `X` having the value `'UTF-8'` or `'UTF-8' 0`, `⎕UCS will consume and return integers in the range `0` to `255. In the case of `X` having the value `'UTF-8' 83`, `⎕UCS` will instead consume and return integers in the range `¯128` to `+127`. For example:
 
 ```apl
       'UTF-8' 83 ⎕UCS 'ABCÆØÅ'
