@@ -9,7 +9,7 @@ This function deletes files and directories.
 
 `Y` is a character vector or scalar containing a single file or directory name, or a vector of character vectors containing zero or more file or directory names. Names must conform to the naming rules of the host Operating System.
 
-Each file or directory named in `Y` must exist.
+Each file or directory named in `Y` must exist, and directories to be deleted must be empty. Use [dyadic `⎕NDELETE`](ndelete-dyadic.md) when these conditions might not be fulfilled.
 
 `R` is a numeric count of top-level entities deleted when processing the corresponding name in `Y`. If `Y` specifies a single name,  `R` is a scalar. If `Y` is a vector of character vectors   `R` is a vector  with the same length as `Y`.
 
@@ -20,7 +20,7 @@ Each file or directory named in `Y` must exist.
 ## Wildcard Option (Boolean)
 
 |---|---|
-|0 { .shaded } |The name or names in `Y` identifies a specific file name.|
+|`0` (default) |The name or names in `Y` identifies a specific file name.|
 |`1`|The name or names in `Y` that specify the *base name* and *extension* (see [File Name Parts](./nparts-monadic.md)), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
 
 Note that when Wildcard is 1, element(s) of `R` can  be 0 or `>1`. If Wildcard is 0, elements of `R` are always 1.
@@ -28,8 +28,8 @@ Note that when Wildcard is 1, element(s) of `R` can  be 0 or `>1`. If Wildcard i
 If `Y` specifies the name of a  symbolic link, `⎕NDELETE` deletes that symbolic link;   the target of the symbolic link is unaffected.
 
 <h2 class="example">Examples</h2>
-```apl
 
+```apl
       ⎕NEXISTS'/Users/Pete/Documents/temp/t1/t2'
 1
       ⊢⎕NDELETE'/Users/Pete/Documents/temp/t1/t2'
@@ -37,19 +37,15 @@ If `Y` specifies the name of a  symbolic link, `⎕NDELETE` deletes that symboli
       ⊢⎕NDELETE'/Users/Pete/Documents/temp/t1/t2'
 FILE NAME ERROR: Invalid file or directory name ("The system cannot find the file specified.")
       ⊢⎕NDELETE'/Users/Pete/Documents/temp/t1/t2'
-     ∧
-
-```
-```apl
+       ∧
 
       ⊢⎕NDELETE 'temp1' 'temp2'
 1 1
       ⊢⎕MKDIR'temp1' 'temp2'
 1 1
-       ⊢(⎕NDELETE⍠1)'t*'
+      ⊢(⎕NDELETE⍠1)'t*'
 2
-```
-```apl
+
       ⊢⎕MKDIR'temp1'
 1
       ⊢'Hello World' ⎕NPUT 'temp1/hw.txt'
