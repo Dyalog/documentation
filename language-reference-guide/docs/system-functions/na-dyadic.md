@@ -889,8 +889,6 @@ On line [15], the `:If` clause is taken only if the global memory allocation is 
 
 A result is returned from the function *only* if all the calls are successful Otherwise, the calling environment will sustain a `VALUE ERROR`.
 
-### More Examples
-
 <!-- Hidden search keywords -->
 <div style="display: none;">
   ⎕NA NA
