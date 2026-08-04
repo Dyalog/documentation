@@ -7,9 +7,7 @@ search:
 
 `⎕MAP` function associates a mapped file with an APL array in the workspace.
 
-An APL mapped file contains the binary representation of a Dyalog APL array, including its header. A file of this type must be created using the  utility function `∆MPUT` (supplied in the `util` workspace). When you map an APL file, the rank, shape and data type of the array is obtained from the information on the file.
-
-The file is assumed to contain a simple APL array.
+An APL mapped file contains the binary representation of a simple Dyalog APL array, including its header. A file of this type must be created using the  utility function `∆MPUT` (supplied in the `util` workspace). When you map an APL file, the rank, shape and data type of the array is obtained from the information on the file.
 
 The right argument `Y` specifies the name of the file to be mapped and, optionally, the access type and a start byte in the file. `Y` may be a simple character vector, or a 2 or 3-element nested vector containing:
 
