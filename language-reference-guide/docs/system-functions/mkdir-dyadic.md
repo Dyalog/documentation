@@ -18,10 +18,10 @@ The result `R` depends on the value of the variant option **Unique**. If  **Uniq
 |` 0`    | If `Y` specifies a single name, the shy result `R` is a scalar `1` if a directory was created or `0` if not. If `Y` is a vector of character vectors, `R` is a vector of `1`s and `0`s with the same length as `Y`. |
 | `1`    | If `Y` specifies a single name, the shy result `R` is a character vector containing the name of the directory that was created. If `Y` is a vector of character vectors, `R` is a vector of character vectors with the same length as `Y`. |
 
-The left argument `X` is a numeric scalar that modifies the default behaviour when the base name in `Y` already exists and/or the path in `Y` does not already exist. Possible values and the effect that they have on the default behaviour are:
+The left argument `X` is a numeric scalar that modifies the default behaviour when the base name in `Y` already exists and/or the path in `Y` does not already exist. The default value is `0`, which is equivalent to [monadic `⎕MKDIR`](mkdir-monadic.md). Possible values and the effect that they have on the default behaviour are:
 
 |---|---|
-| `0` {.shaded} | The base name in `Y` must not exist and the path in `Y` must exist, otherwise an error is signalled.                                                                           |
+| `0` | The base name in `Y` must not exist and the path in `Y` must exist, otherwise an error is signalled.                                                                           |
 |`1`|No action is taken if a directory specified by `Y` already exists (the return value indicates whether a new directory was created). Has no effect when the variant option **Unique** is set.|
 |`2`|Any part of the *paths* specified in `Y` which does not already exist will be created in preparation of creating the corresponding directory.                                               |
 |`3`|Combination of 1 and 2.                                                                                                                                                                     |
@@ -35,7 +35,7 @@ The **Unique** option specifies whether the base name (see [File Name Parts](npa
 
 | Unique            | Effect on Behaviour  |
 |-------------------|----------------------|
-|` 0`   { .shaded } | The directory named in `Y` will be created. |
+|` 0` (default) | The directory named in `Y` will be created. |
 | `1`               | The name in `Y` is modified by extending the base name with random characters and the directory is created. The name of the directory is returned in the result `R`. |
 
 If a directory cannot be created (for example, if a directory with that name already exists, or write access is denied) then an error is signalled.

@@ -11,6 +11,8 @@ This function creates new directories.
 
 By default, for each name in `Y` the path must exist and the base name must not exist (see [File Name Parts](nparts-monadic.md)), otherwise an error is signalled. The variant option **Unique** can be used to amend this behaviour.
 
+An error is signalled if the base name already exists, or if any part of the path does not already exist; use [dyadic `⎕MKDIR`](mkdir-dyadic.md) to handle these cases.
+
 The result `R` depends on the value of the variant option **Unique**. If  **Unique** is not present, it is assumed to have a value of `0`.
 
 | Unique | Result `R` |
@@ -27,7 +29,7 @@ The **Unique** option specifies whether the base name (see [File Name Parts](npa
 
 | Unique            | Effect on Behaviour  |
 |-------------------|----------------------|
-|` 0`   { .shaded } | The directory named in `Y` will be created. |
+|` 0` (default) | The directory named in `Y` will be created. |
 | `1`               | The name in `Y` is modified by extending the base name with random characters and the directory is created. The name of the directory is returned in the result `R`. |
 
 If a directory cannot be created (for example, if a directory with that name already exists, or write access is denied) then an error is signalled.
