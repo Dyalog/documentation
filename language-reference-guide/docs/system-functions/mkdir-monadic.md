@@ -9,11 +9,11 @@ This function creates new directories.
 
 `Y` is a character vector or scalar containing a single directory name, or a vector of character vectors containing zero or more directory names. Names must conform to the naming rules of the host Operating System.
 
-For each name in `Y` the path must exist and the base name must not exist (see [File Name Parts](nparts-monadic.md)), otherwise an error is signalled. Use the variant option **Unique** or [dyadic `⎕MKDIR`](mkdir-dyadic.md) to handle these cases.
+For each name in `Y` the path must exist and the base name must not exist (see [Native File Exists](nexists.md)), otherwise an error is signalled. Use the variant option **Unique** or [dyadic `⎕MKDIR`](mkdir-dyadic.md) to handle these cases.
 
-The **Unique** option specifies whether the base name (see [File Name Parts](nparts-monadic.md)) in `Y` is modified so that the name is unique (does not already exist). The shy result `R` depends on the value of **Unique**; if **Unique** is not present, it is assumed to have a value of `0`.
+The **Unique** option specifies whether the base name (see [File Name Parts](nparts-monadic.md)) in `Y` is modified so that the name is unique (does not already exist). The shy result `R` depends on the value of **Unique**:
 
-| Unique | Effect on Behaviour | `R` when `Y` is Single Name | `R` when `Y` is Vector of names |
+| Unique | Effect on Behaviour | `R` when `Y` is Single Name | `R` when `Y` is Vector of Names |
 |--------|---------------------|-----------------------------|---------------------------------|
 | `0` (default) | The directory named in `Y` will be created. | a scalar `1` if a directory was created or `0` if not | a vector of `1`s and `0`s with the same length as `Y` |
 | `1` | The name in `Y` is modified by extending the base name with random characters and the directory is created. The name of the directory is returned in the result `R`. | a character vector containing the name of the directory that was created | a vector of character vectors with the same length as `Y` |
@@ -21,29 +21,19 @@ The **Unique** option specifies whether the base name (see [File Name Parts](npa
 If a directory cannot be created (for example, if a directory with that name already exists, or write access is denied) then an error is signalled.
 
 <h2 class="example">Examples</h2>
-```apl
 
+```apl
       ⎕NEXISTS '/Users/Pete/Documents/temp'
 0
       ⎕←⎕MKDIR '/Users/Pete/Documents/temp'
 1
       ⎕←⎕MKDIR '/Users/Pete/Documents/temp'
-FILE NAME ERROR: Directory exists
+FILE NAME ERROR: Already exists
       ⎕←⎕MKDIR'/Users/Pete/Documents/temp'
-     ∧
-
-      ⎕←⎕MKDIR'/Users/Pete/Documents/temp/t1/t2'
-FILE NAME ERROR: Unable to create directory ("The system cannot find the path specified.")
-      ⎕←⎕MKDIR'/Users/Pete/Documents/temp/t1/t2'
-     ∧
-
-      ⎕←⎕MKDIR'/Users/Pete/Documents/temp/t1/t2'
-FILE NAME ERROR: /Users/Pete/Documents/temp/t1/t2: Already exists
-      ⎕←⎕MKDIR'/Users/Pete/Documents/temp/t1/t2'
         ∧
 
-      ⎕←(⎕MKDIR⍠'Unique'1)'/Users/Pete/Documents/temp/t1/t2'
-/Users/Pete/Documents/temp/t1/t2djM0X8
+      ⎕←(⎕MKDIR⍠'Unique'1)'/Users/Pete/Documents/temp'
+/Users/Pete/Documents/tempdjM0X8
 
       ⊢⎕MKDIR'temp1' 'temp2'
 1 1
