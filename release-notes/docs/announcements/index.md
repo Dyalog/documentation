@@ -10,7 +10,7 @@ Notice of new and planned additions, changes, removals, and deprecations in Dyal
 
 The APL thread scheduler is being enhanced over several releases. It is likely that the scheduling order will change in Dyalog v22.0; this will not affect most applications.
 
-If deprecated features are being logged (using [`109⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/log-file-for-deprecations/) with a right argument of `0` – see [Deprecated Functionality](https://docs.dyalog.com/21.0/release-notes/announcements/deprecated-functionality/#identifying-deprecated-functionality-in-executed-code)), relevant thread-switching warnings will be output to the specified log file.
+The APL thread scheduler checks that its own record of each thread's scheduling status is consistent – these checks are always enabled. A temporary I-beam, `4061⌶0`, returns the number of inconsistent thread statuses (`R[1]`) and missed thread wakeups (`R[2]`) that have been detected. A non-zero count means that the interpreter detected an inconsistency in its own scheduling, not that the application is at fault. In this situation, logging can be enabled and the application re-run to capture the details; relevant thread-switching warnings will be written to the log file specified by [`109⌶0`](log-file-for-deprecations.md) (see [Deprecated Functionality](https://docs.dyalog.com/21.0/release-notes/announcements/deprecated-functionality/#identifying-deprecated-functionality-in-executed-code) for more information). If logging is not enabled, then the first time that a discrepancy is detected, a message is written to the Status window.
 
 ## Removals (Previously Announced)
 

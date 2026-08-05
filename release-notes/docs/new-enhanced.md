@@ -32,11 +32,6 @@ The optional left argument `X` can now be a 2-element nested array when performi
 !!! Warning "Warning"  
     Any service provided using an I-Beam should be considered as "experimental" and subject to change – without notice - from one release to the next. Any use of I&#8209;Beams in applications should, therefore, be carefully isolated in cover-functions that can be adjusted if necessary.
 	
-The following I-beams have been added:
-
-- [`4061⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/thread-discrepancy-counts/) – Thread Discrepancy Counts  
-Reports the number of inconsistent thread statuses and missed thread wakeups that have been detected by the APL thread scheduler.  
-
 The following I-beams have been deprecated:
 
 - [`43⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/monadic-operator-generator/) – Monadic Operator Generator (introduced in Dyalog v20.0)  
