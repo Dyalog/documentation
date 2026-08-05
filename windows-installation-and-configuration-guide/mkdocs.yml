@@ -125,6 +125,7 @@ nav:
       - DYALOG_DISCARD_FN_SOURCE: configuration-parameters/dyalog-discard-fn-source.md
       - DYALOG_EVENTLOGGINGLEVEL: configuration-parameters/dyalog-eventlogginglevel.md
       - DYALOG_EVENTLOGNAME: configuration-parameters/dyalog-eventlogname.md
+      - DYALOG_EXTVAR_SUPPORTED: configuration-parameters/dyalog-extvar-supported.md
       - DYALOG_GUTTER_ENABLE: configuration-parameters/dyalog-gutter-enable.md
       - Dyalog_LineEditor_Mode: configuration-parameters/dyalog-lineeditor-mode.md
       - Dyalog_NETCore: configuration-parameters/dyalog-netcore.md
