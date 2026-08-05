@@ -48,13 +48,13 @@ Dyalog v16.0 was the last major version to support creating and updating small-s
 
 The ability to create and update external variables will be removed in a future release (exact release to be decided, expected to be implemented by the year 2030).
 
-External variables are no longer supported by default; support can be enabled until external variables are removed by setting the [`DYALOG_EXTVAR_SUPPORTED`](https://docs.dyalog.com/21.0/windows-installation-and-configuration-guide/configuration-parameters/dyalog-extvar-supported/) configuration parameter to `1`.
+External variables are no longer supported by default; support for external variables can be re-enabled by setting the [`DYALOG_EXTVAR_SUPPORTED`](https://docs.dyalog.com/21.0/windows-installation-and-configuration-guide/configuration-parameters/dyalog-extvar-supported/) configuration parameter to `1`.
 
 ### J0C0 Component Files
 
-It is no longer possible to create component files that have both journalling and checksum properties set to `0`; the ability to read such files will be removed in a future release (exact release to be decided, expected to be implemented by the year 2040).
+Component files that have both journalling and checksum properties set to `0` can be tied and read, but cannot be created. The only amendments that are allowed to these files is to change the journalling and checksum properties using [⎕FPROPS](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/fprops/).
 
-The properties of component files that have both journalling and checksum properties set to `0` can be changed using [⎕FPROPS](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/fprops/)
+The ability to read component files that have both journalling and checksum properties set to `0` will be removed in a future release (exact release to be decided, expected to be implemented by the year 2040).
 
 ## Updates on Dyalog v20.0 Announcements
 
