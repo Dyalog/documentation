@@ -11,9 +11,9 @@ This function returns the name of one or more files or directories. `Y` may be:
 - a character vector or scalar containing a file or directory name that conforms to the naming rules of the host Operating System.
 - a vector of character vectors and/or tie numbers
 
-`R` is the name of the file or directory, as a character vector. If `Y` is a tie number, this is the name by which the file was tied.
+`R` is the name of the file or directory, as an enclosed character vector if `Y` refers to a single target or directory, or a vector of enclosed character vectors if `Y` refers to multiple targets. If `Y` contains a tie number, `R` contains the name by which the file was tied.
 
-The only information given in the result is the name; `⎕NINFO Y` is entirely equivalent to `0 ⎕NINFO Y`. Use [dyadic `⎕NINFO`](ninfo-dyadic.md) for other file properties.
+Use [dyadic `⎕NINFO`](ninfo-dyadic.md) to obtain additional file properties.
 
 If the Wildcard option is not enabled (the default) then `Y` specifies exactly one file or directory and must exist. In this case each element in `R` is the name of that file. If the name in `Y` does not exist, the function signals an error. On non-Windows platforms "*" and "?" are treated as normal characters. On Microsoft Windows an error will be signalled since neither are valid characters for file or directory names.
 
@@ -28,13 +28,20 @@ When using the **Wildcard** option, matching of names is done case insensitively
 ### Wildcard Option (Boolean)
 
 |---|---|
-|0 { .shaded } |The name or names in `Y` identifies a specific file name.|
+|`0` (default)|The name or names in `Y` identifies a specific file name.|
 |`1`|The name or names in `Y` that specify the *base name* and *extension* (see [NParts](./nparts-monadic.md) ), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
+
+!!! Hint "Hints and Recommendations"
+    On a case-insensitive file system (default on Microsoft Windows and macOS), the canonical capitalisation of a filename can be obtained with `⊃⊃(⎕NINFO⍠1)filename`, though only the leaf name is canonicalised. For example:
+    ```apl
+          ⊃⊃(⎕NINFO⍠1)'/windows/inboxapps'
+    /windows/InboxApps
+    ```
 
 ### Recurse Option
 
 |---|---|
-|0 { .shaded } |the name(s) in `Y` are searched for only in the corresponding specified directory.|
+|`0` (default)|the name(s) in `Y` are searched for only in the corresponding specified directory.|
 |`1`|the name(s) in `Y` are searched for in the corresponding specified directory as well as all sub-directories. If **Wildcard** is also 1, the wild card search is performed recursively.|
 |`1 n`|the name(s) in `Y` are searched for in the corresponding specified directory as well as its sub-directories to the n <sup>th</sup> -level sub-directory. If n is 0, no sub-directories are searched. If n is `¯1` all sub-directories are searched.|
 |`2 (n)`|same as 1 but if any unreadable directories are encountered they are skipped (whereas if **Recurse** is `1 (n)` , `⎕NINFO` stops and generates an error).|
@@ -115,13 +122,6 @@ The following expression will return all Microsoft Word documents (`.docx` and `
 ```apl
      (⎕NINFO⍠('Recurse' 1)('Wildcard' 1))'*.docx' '*.doc'
 ```
-
-!!! Hint "Hints and Recommendations"
-    On a case-insensitive file system (like Microsoft Windows), the canonical capitalisation of a filename can be obtained with `⊃⊃(⎕NINFO⍠1)filename`:
-    ```apl
-          ⊃⊃(⎕NINFO⍠1)'/windows/inboxapps'
-    /windows/InboxApps
-    ```
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
