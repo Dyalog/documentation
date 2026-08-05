@@ -16,11 +16,9 @@ This function queries or sets information about one or more files or directories
 - If `X` is a simple numeric array, the properties are queried. In this case, the values of `X` correspond to properties of the file/directory specified in `Y` that are to be queried, as defined in the following table.
 - If some or all of the elements in `X` are nested vectors, the properties are set. In this case, the values of `X` correspond to properties of the file/directory specified in `Y` that are to be set, as defined in the following table, with appropriate corresponding values to which those properties should be set. Not all file properties are settable. 
 
-Use [monadic `⎕NINFO`](ninfo-monadic.md) to obtain just the name.
-
 |`X`|Property|Default|Settable|
 |---|---|---|---|
-|`0`|Name of the file or directory, as a character vector. If `Y` is a tie number then this is the name which the file was tied.|&nbsp;|No|
+|`0`|Name of the file or directory, as a character vector. If `Y` is a tie number then this is the name which the file was tied. (Equivalent to [monadic `⎕NINFO`](ninfo-monadic.md).)|&nbsp;|No|
 |`1`|Type, as a numeric scalar: 0=Not known 1=Directory 2=Regular file 3=Character device 4=Symbolic link (only when Follow is 0) 5=Block device 6=FIFO (not Windows) 7=Socket (not Windows)|`0`|No|
 |`2`|Size in bytes, as a numeric scalar|`0`|Yes|
 |`3`|Last modification time, as a timestamp in `⎕TS` format|`7⍴0`|No|
@@ -52,11 +50,11 @@ The returned value `R` has the same shape as `X` (if the **Wildcard** variant op
 
 If a property value cannot be obtained, the default value (shown in the table above) is returned for that property.
 
-If the Wildcard option is not enabled (the default) then `Y` specifies exactly one file or directory and must exist. In this case each element in `R` is a single property value for that file. If the name in `Y` does not exist, the function signals an error. On non-Windows platforms "*" and "?" are treated as normal characters. On Microsoft Windows an error will be signalled since neither are valid characters for file or directory names.
+If the Wildcard option is not enabled (the default) then `Y` specifies exactly one file or directory and must exist. In this case each element in `R` is a single property value for that file. If the name in `Y` does not exist, the function signals an error. On non-Windows platforms `*` and `?` are treated as normal characters. On Microsoft Windows an error will be signalled since neither are valid characters for file or directory names.
 
 If the Wildcard option is enabled, zero or more files and/or directories may match the pattern in `Y`. In this case each element in `R` is a vector of property values for each of the files. Note that no error will be signalled if no files match the pattern.
 
-When using the **Wildcard** option, matching of names is done case insensitively on Windows and macOS, and case sensitively on other platforms. The names '.' and '..' are excluded from any matches. The order in which the names match is not defined.
+When using the **Wildcard** option, matching of names is done case insensitively on Windows and macOS, and case sensitively on other platforms. The names `.` and `..` are excluded from any matches. The order in which the names match is not defined.
 
 ## Variant Options
 
@@ -66,7 +64,7 @@ When using the **Wildcard** option, matching of names is done case insensitively
 
 |---|---|
 |`0` (default)|The name or names in `Y` identifies a specific file name.|
-|`1`|The name or names in `Y` that specify the *base name* and *extension* (see [`⎕NPARTS`](./nparts-monadic.md) ), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
+|`1`|The name or names in `Y` that specify the *base name* and *extension* (see [`⎕NPARTS`](./nparts-monadic.md) ), may also contain the wildcard characters `?` and `*`. An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
 
 ### Recurse Option
 
