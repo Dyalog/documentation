@@ -8,6 +8,6 @@ This is mitigated by including a __\*__ character in the default Session log’s
 
 NOTE: The LogFile property of `⎕SE` reports the name of the log file that is being used.
 
-The default is __<DocumentsDirectory\>\Dyalog APL-<bits\> <DyalogMajor\><DyalogMinor\> <Unicode|Classic\> Files\default_\*.dlfx__, for example, __C:\Users\Bob\Documents\Dyalog APL-64 20.0 Unicode Files\default_\*.dlfx__
+The default is __<DocumentsDirectory\>\Dyalog APL[-64] <DyalogMajor\>.<DyalogMinor\> [Unicode ]Files\default_\*.dlfx__, for example, __C:\Users\Bob\Documents\Dyalog APL-64 20.0 Unicode Files\default_\*.dlfx__
 
 See also [Use log file](../configuring-the-ide/configuration-dialog/configuration-dialog-session-tab.md).
