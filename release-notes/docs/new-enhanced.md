@@ -61,6 +61,9 @@ The following objects have been enhanced:
 
 The following configuration parameters have been added:
 
+- [`DYALOG_EXTVAR_SUPPORTED`](https://docs.dyalog.com/21.0/windows-installation-and-configuration-guide/configuration-parameters/dyalog-extvar-supported/)  
+This specifies whether support for external variables is enabled.
+
 - [`LAYOUT_FILE`](https://docs.dyalog.com/21.0/windows-installation-and-configuration-guide/docs/configuration-parameters/layout-file/) (Microsoft Windows only)  
 This specifies the path (absolute or relative to the working directory) and name of the Session layout file.
 

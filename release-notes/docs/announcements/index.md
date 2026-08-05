@@ -20,6 +20,9 @@ Dyalog v20.0 was the last release to be built for 32-bit Raspberry Pis. To run D
 
 ## Notice of Removals in Future Releases
 
+!!! Info "Information"
+    Dyalog Ltd strongly recommends identifying and replacing deprecated functioanlity at the earliest opportunity; see [Deprecated Functionality](https://docs.dyalog.com/21.0/release-notes/announcements/deprecated-functionality/) for information on how to identify deprecated functionality.
+
 ### `43⌶` – Monadic Operator Generator  
 This I-beam has been deprecated. It is scheduled for removal in Dyalog v22.0; it could be reintroduced in a later release.
 
@@ -45,9 +48,13 @@ Dyalog v16.0 was the last major version to support creating and updating small-s
 
 The ability to create and update external variables will be removed in a future release (exact release to be decided, expected to be implemented by the year 2030).
 
+External variables are no longer supported by default; support can be enabled until external variables are removed by setting the [`DYALOG_EXTVAR_SUPPORTED`](https://docs.dyalog.com/21.0/windows-installation-and-configuration-guide/configuration-parameters/dyalog-extvar-supported/) configuration parameter to `1`.
+
 ### J0C0 Component Files
 
-The ability to read component files that have both journalling and checksum properties set to `0` will be removed in a future release (exact release to be decided, expected to be implemented by the year 2040).
+It is no longer possible to create component files that have both journalling and checksum properties set to `0`; the ability to read such files will be removed in a future release (exact release to be decided, expected to be implemented by the year 2040).
+
+The properties of component files that have both journalling and checksum properties set to `0` can be changed using [⎕FPROPS](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/fprops/)
 
 ## Updates on Dyalog v20.0 Announcements
 
