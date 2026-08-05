@@ -13,15 +13,17 @@ This function returns the name of one or more files or directories. `Y` may be:
 
 `R` is the name of the file or directory, as a character vector. If `Y` is a tie number, this is the name by which the file was tied.
 
-If the Wildcard option is not enabled (the default) then `Y` specifies exactly one file or directory and must exist. In this case each element in `R` is a single property value for that file. If the name in `Y` does not exist, the function signals an error. On non-Windows platforms "*" and "?" are treated as normal characters. On Microsoft Windows an error will be signalled since neither are valid characters for file or directory names.
+The only information given in the result is the name; `⎕NINFO Y` is entirely equivalent to `0 ⎕NINFO Y`. Use [dyadic `⎕NINFO`](ninfo-dyadic.md) for other file properties.
 
-If the Wildcard option is enabled, zero or more files and/or directories may match the pattern in `Y`. In this case each element in `R` is a vector of property values for each of the files. Note that no error will be signalled if no files match the pattern.
+If the Wildcard option is not enabled (the default) then `Y` specifies exactly one file or directory and must exist. In this case each element in `R` is the name of that file. If the name in `Y` does not exist, the function signals an error. On non-Windows platforms "*" and "?" are treated as normal characters. On Microsoft Windows an error will be signalled since neither are valid characters for file or directory names.
+
+If the Wildcard option is enabled, zero or more files and/or directories may match the pattern in `Y`. In this case each element in `R` is a vector of the names of the matching files. Note that no error will be signalled if no files match the pattern.
 
 When using the **Wildcard** option, matching of names is done case insensitively on Windows and macOS, and case sensitively on other platforms. The names '.' and '..' are excluded from any matches. The order in which the names match is not defined.
 
 ## Variant Options
 
-`⎕NINFO` may be applied using the _variant_ operator with the options **Wildcard** (the Principal option), **Recurse**, **Follow** and **ProgressCallback**.
+`⎕NINFO` may be applied using the _variant_ operator with the options **Wildcard** (the Principal option), **Recurse** and **ProgressCallback**.
 
 ### Wildcard Option (Boolean)
 
@@ -37,18 +39,12 @@ When using the **Wildcard** option, matching of names is done case insensitively
 |`1 n`|the name(s) in `Y` are searched for in the corresponding specified directory as well as its sub-directories to the n <sup>th</sup> -level sub-directory. If n is 0, no sub-directories are searched. If n is `¯1` all sub-directories are searched.|
 |`2 (n)`|same as 1 but if any unreadable directories are encountered they are skipped (whereas if **Recurse** is `1 (n)` , `⎕NINFO` stops and generates an error).|
 
-### Follow Option (Boolean)
-
-|---|----------------------------------------------------------------------------------------|
-|`0`|the properties reported are those of the symbolic link itself                           |
-|1 { .shaded } |the properties reported for a symbolic link are those of the target of the symbolic link|
-
 ### ProgressCallback Option
 
 The **ProgressCallback** variant option is described in the [Dyalog Programming Reference Guide](../../../programming-reference-guide/native-files#progress-callbacks). The following is specific to `⎕NINFO`:
 
 * The first element of the right argument to the callback function is the character vector `'⎕NINFO'`.
-* The third element of the right argument (the information namespace) contains an extra field named `Info`, which is a vector with the same length as the `Last` field. Each element of the `Info` vector contains the information requested by the `⎕NINFO` call for the corresponding filename in `Last`.
+* The third element of the right argument (the information namespace) contains an extra field named `Info`, which is a vector with the same length as the `Last` field. Each element of the `Info` vector contains the name of the corresponding file in `Last`.
 
 ## Note
 
@@ -105,13 +101,13 @@ C:/Users/Pete/Documents/Dyalog APL-64 16.0 Unicode Files/
 The next set of examples illustrates the use of the **Recurse** variant option to limit the sub-directory depth.
 ```apl
       Y←'d:\bouzouki\*.*'
-      ⍴⊃0(⎕NINFO⍠('Wildcard' 1)('Recurse' 0))Y
+      ⍴⊃(⎕NINFO⍠('Wildcard' 1)('Recurse' 0))Y
 355
-      ⍴⊃0(⎕NINFO⍠('Wildcard' 1)('Recurse' (1 0)))Y
+      ⍴⊃(⎕NINFO⍠('Wildcard' 1)('Recurse' (1 0)))Y
 355
-      ⍴⊃0(⎕NINFO⍠('Wildcard' 1)('Recurse' (1 1)))Y
+      ⍴⊃(⎕NINFO⍠('Wildcard' 1)('Recurse' (1 1)))Y
 1333
-      ⍴⊃0(⎕NINFO⍠('Wildcard' 1)('Recurse' (1 3)))Y
+      ⍴⊃(⎕NINFO⍠('Wildcard' 1)('Recurse' (1 3)))Y
 4223
 ```
 
@@ -120,17 +116,12 @@ The following expression will return all Microsoft Word documents (`.docx` and `
      (⎕NINFO⍠('Recurse' 1)('Wildcard' 1))'*.docx' '*.doc'
 ```
 
-The following expression "touches" files, that is, it sets their last modification time to the current UTC time:
-
-```apl
-      (⊂13(1 ⎕DT'Z'))(⎕NINFO⍠1)'*.txt'
-┌───────────────────────┐
-│45719.53226 45719.53226│
-└───────────────────────┘
-```
-
-!!! note
-    Of the file timestamps which are reported by the operating system, only the last modification time should be considered reliable and portable. Neither the access time or creation time are well supported across all platforms. Furthermore, they may not accurately reflect the actual time that the operation occurred.
+!!! Hint "Hints and Recommendations"
+    On a case-insensitive file system (like Microsoft Windows), the canonical capitalisation of a filename can be obtained with `⊃⊃(⎕NINFO⍠1)filename`:
+    ```apl
+          ⊃⊃(⎕NINFO⍠1)'/windows/inboxapps'
+    /windows/InboxApps
+    ```
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
