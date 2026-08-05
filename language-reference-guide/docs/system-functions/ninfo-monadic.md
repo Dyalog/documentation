@@ -29,7 +29,7 @@ When using the **Wildcard** option, matching of names is done case insensitively
 
 |---|---|
 |`0` (default)|The name or names in `Y` identifies a specific file name.|
-|`1`|The name or names in `Y` that specify the *base name* and *extension* (see [NParts](./nparts-monadic.md) ), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
+|`1`|The name or names in `Y` that specify the *base name* and *extension* (see [`⎕NPARTS`](./nparts-monadic.md) ), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
 
 !!! Hint "Hints and Recommendations"
     On a case-insensitive file system (default on Microsoft Windows and macOS), the canonical capitalisation of a filename can be obtained with `⊃⊃(⎕NINFO⍠1)filename`, though only the leaf name is canonicalised. For example:

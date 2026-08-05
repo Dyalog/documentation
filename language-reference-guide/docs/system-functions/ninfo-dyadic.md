@@ -16,6 +16,8 @@ This function queries or sets information about one or more files or directories
 - If `X` is a simple numeric array, the properties are queried. In this case, the values of `X` correspond to properties of the file/directory specified in `Y` that are to be queried, as defined in the following table.
 - If some or all of the elements in `X` are nested vectors, the properties are set. In this case, the values of `X` correspond to properties of the file/directory specified in `Y` that are to be set, as defined in the following table, with appropriate corresponding values to which those properties should be set. Not all file properties are settable. 
 
+Use [monadic `⎕NINFO`](ninfo-monadic.md) to obtain just the name.
+
 |`X`|Property|Default|Settable|
 |---|---|---|---|
 |`0`|Name of the file or directory, as a character vector. If `Y` is a tie number then this is the name which the file was tied.|&nbsp;|No|
@@ -64,7 +66,7 @@ When using the **Wildcard** option, matching of names is done case insensitively
 
 |---|---|
 |`0` (default)|The name or names in `Y` identifies a specific file name.|
-|`1`|The name or names in `Y` that specify the *base name* and *extension* (see [NParts](./nparts-monadic.md) ), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
+|`1`|The name or names in `Y` that specify the *base name* and *extension* (see [`⎕NPARTS`](./nparts-monadic.md) ), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
 
 ### Recurse Option
 
