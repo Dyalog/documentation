@@ -239,7 +239,7 @@ A three-element integer vector:
 - AIX: version and release number, followed by a `0`
 
 !!! Warning "Warning"
-    Windows 11 identifies itself as "Windows 10". Whether (`1`) or not (`0`) Windows 10 is in use is given by `1 0 2≡10 12 21999⍸⎕SYSTEM.OS.Version`.
+    Windows 11 identifies itself as "Windows 10". Whether (`1`) or not (`0`) Windows 10 is in use is given by `1 0 2≡10 11 21999⍸⎕SYSTEM.OS.Version`.
 
 #### OS.VolumeSeparator
 The character used to separate the [volume](https://en.wikipedia.org/wiki/Volume_(computing)) from the rest of a file path – one of `'/'` or `':'`.
