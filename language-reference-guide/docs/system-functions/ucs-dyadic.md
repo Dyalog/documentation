@@ -15,7 +15,7 @@ The left argument `X` is either a simple character vector or a one- or two-eleme
 
 The second element (if present) is either `0` (the default) to consume and return byte values as positive integers or `83` to use 1-byte integers (type 83). `83` can only be used with `'UTF-8'`.
 
-If `X` does not abide by the above restrictions, a `DOMAIN ERROR` is issued.
+If `X` is any other value, a `DOMAIN ERROR` is generated.
 
 `Y` must be a simple character or integer vector, and the result `R` is a simple integer or character vector.
 
