@@ -8,6 +8,10 @@ and asking the live interpreter what members it has, so **it only runs on Window
 `objectmodel.json` in this directory is a capture of that model, so the discovery step does not have
 to be repeated on every machine. Regenerate it only when the object model itself changes.
 
+**What runs where.** Only the generation step below needs Windows. Everything else — reading the
+cached model, `objref_audit.py`, and the whole Markdown output path — runs on macOS and Linux too.
+If you are not regenerating the model, you do not need Windows and you do not need Dyalog.
+
 ## Generating `objectmodel.json`
 
 Requires Dyalog Unicode Edition **for Windows** (captured with 21.0.54393.0). This directory is
@@ -34,8 +38,8 @@ classes that cannot be instantiated, such as `OCXClass` and `OLEClient`) exporte
    Not optional. `MAKE_INSTANCE` maps the Root object to `#`, so `MAKEALL` reads `#.PropList`, which
    does not resolve unless Root properties are exposed. This setting lives in the workspace rather
    than in code — the old `GUIMaint.dws` had it set, which is why it was invisible until the
-   workspace was retired. Without it `MAKEALL` fails at line 15 with `VALUE ERROR: Undefined name:
-   PropList`.
+   workspace was retired. Without it `MAKEALL` fails at `Properties[I]←⊂ref.PropList` with
+   `VALUE ERROR: Undefined name: PropList`.
 
 3. **Build the model.** This instantiates every object in turn, so windows flicker on the desktop.
 
@@ -54,8 +58,11 @@ classes that cannot be instantiated, such as `OCXClass` and `OLEClient`) exporte
          model.(Properties Methods Events) ← Properties Methods Events
          json ← 1 ⎕JSON⍠'Compact' 0⊢model
          lines ← (⎕UCS 13) (≠⊆⊢) json    ⍝ ⎕JSON separates lines with CR
-         (lines 'UTF-8' 10) ⎕NPUT 'objectmodel.json' 1
+         (lines 'UTF-8' 10) ⎕NPUT '/path/to/tools/buildgui/objectmodel.json' 1
    ```
+
+   Give `⎕NPUT` the full path. A bare `'objectmodel.json'` lands in the interpreter's working
+   directory, which is wherever Dyalog was started, not this directory.
 
    `⍠'Compact' 0` pretty-prints, one member per line, so that a regenerated model
    produces a readable diff instead of one changed 54 KB line. The split is needed
@@ -63,14 +70,19 @@ classes that cannot be instantiated, such as `OCXClass` and `OLEClient`) exporte
    argument does not recognise — write it without splitting and the whole file
    lands on a single line.
 
-5. **Check the result** before committing. The v21.0 capture is 76 objects, a 76×76 `ParentMap`,
-   2247 properties, 416 methods and 1105 events. A diff against the previous `objectmodel.json`
-   should be empty unless the object model really changed.
+5. **Check the result** before committing. The v21.0 capture is 76 objects and a 76×76 `ParentMap`,
+   holding 2247 property, 416 method and 1105 event entries in total — that is the sum across all
+   objects, most of them shared, and it works out at 346 distinct properties, 102 methods and 147
+   events. `objref_audit.py` reports the distinct counts. A diff against the previous
+   `objectmodel.json` should be empty unless the object model really changed.
 
 ## Using the cached model
 
+Runs anywhere — this path needs no Windows and no GUI. Paths are relative to the interpreter's
+working directory, so give the full path if you did not start Dyalog in this directory.
+
 ```apl
-      model ← 0 ⎕JSON ⊃⎕NGET 'objectmodel.json'
+      model ← 0 ⎕JSON ⊃⎕NGET '/path/to/tools/buildgui/objectmodel.json'
       Objects ← model.Objects
       ParentMap ← ↑model.ParentMap
       Properties Methods Events ← {0=≢⍵: 0⍴⊂'' ⋄ ⍵}¨¨ model.(Properties Methods Events)
@@ -87,16 +99,21 @@ that compares with `≡`. With the normalisation the restore is `≡`-identical 
 ## Auditing the guide against the model
 
 `objref_audit.py` compares every cross-reference list, A-Z index and link in `object-reference/`
-against `objectmodel.json`. Standard library only, no dependencies.
+against `objectmodel.json`. Python 3 standard library only — no dependencies, no Dyalog, any
+platform. Run it from anywhere; it locates the repository relative to its own location.
 
 ```sh
-      python tools/buildgui/objref_audit.py                        # text report
-      python tools/buildgui/objref_audit.py --markdown -o audit.md # markdown document
+      python3 tools/buildgui/objref_audit.py                        # text report
+      python3 tools/buildgui/objref_audit.py --markdown -o audit.md # markdown document
+      python3 tools/buildgui/objref_audit.py --help                 # all options
 ```
+
+On Windows the interpreter is normally `python`; `python3` there is often a Microsoft Store stub
+that fails with "Python was not found".
 
 Exits 1 if it finds anything, 0 if clean, so it can gate CI. It applies the exclusion list below,
 and knows about the deliberate exceptions — `index-property.md`, the Session (`⎕SE`) member pages,
-`NetControl` — so a clean run means clean.
+`NetControl` — so a clean run means clean. The report is regenerable, so it is not committed.
 
 ## Do not document these
 
@@ -112,8 +129,7 @@ from the model must filter them out.
 `INDEX ERROR`. v21 introduced `WCPlugin`, a child of both `Root` and `Form`, absent from `Objects`
 and undocumented. Lines 4 and 6 therefore select with `∩Objects` rather than excluding known
 non-objects by name, which keeps the model to the documented set and tolerates future additions. If
-a new class *should* be documented, add it to `Objects` in the workspace rather than relaxing the
-intersection.
+a new class *should* be documented, add it to `Objects.apla` rather than relaxing the intersection.
 
 **`ASK_PARENT`** opens a modal dialogue for any object whose parent is neither derivable from
 `ParentMap` nor in its hard-coded `:Case` list. On the v21 model this branch is never reached and the
@@ -167,7 +183,9 @@ Not platform issues, but they stop the code running as checked in even on Window
 
 ## Changes from the original workspace
 
-1. Exported to text so it can be versioned.
+1. Exported to text so it can be versioned: functions as `.aplf`, and the two arrays the code cannot
+   regenerate — `Objects` and `#.ObjectMembers` — as Link `.apla`. `GUIMaint.dws` is retired; nothing
+   here needs it.
 2. `WriteFile.aplf` now creates any missing directories in its path.
 3. `MAKEALL.aplf` lines 4 and 6 select children with `∩Objects` instead of blacklisting names — see
    "New classes" above.

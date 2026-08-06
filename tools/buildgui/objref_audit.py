@@ -28,6 +28,16 @@ import re
 import sys
 from collections import defaultdict
 
+# The report contains APL glyphs (⎕SE). Windows consoles default to a legacy
+# code page, so printing them raises UnicodeEncodeError unless stdout is UTF-8.
+# Harmless where UTF-8 is already the default, as on macOS and Linux.
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        try:
+            _stream.reconfigure(encoding="utf-8")
+        except (AttributeError, ValueError):  # pragma: no cover - exotic streams
+            pass
+
 # --------------------------------------------------------------------------
 # Known-good exceptions. Each is a deliberate decision, not an oversight;
 # without them the report is noise. The reasons are data, not comments, so the
