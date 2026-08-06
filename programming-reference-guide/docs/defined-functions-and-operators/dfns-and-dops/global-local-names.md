@@ -21,9 +21,10 @@ Assignment always creates a local name. A dfn can call a name that exist outside
 
 *Modified assignment* updates an existing name in place instead of creating a new one. With _right_ ([`⊢`](../../../../language-reference-guide/primitive-functions/right)) as the modifying function, the value is replaced outright. For example:
 
-<h3 class="example">Example</h3>
 ```apl
       x←99
+      x
+99
       {x⊢←1 ⋄ x} 0        ⍝ the global x is updated
 1
       x
@@ -34,7 +35,6 @@ The name must already have a value; modified assignment to an undefined name sig
 
 Qualifying the name with a namespace path is the more general mechanism, because it also creates a name that does not yet exist. [`⎕THIS`](../../../../language-reference-guide/system-functions/this) names the dfn's own home namespace. For example:
 
-<h3 class="example">Example</h3>
 ```apl
       {⎕THIS.y←1 ⋄ 0} 0   ⍝ y need not exist beforehand
 0

@@ -15,7 +15,7 @@ Within a dfn/dop, arguments/operands are referred to by fixed names rather than 
 
 A dop refers to its operands:
 
-- `⍺⍺` is the left operand.
+- `⍺⍺` is the left operand, and is always available.
 - `⍵⍵` is the right operand, present only in a dyadic operator.
 
 An operand can be a function or an array.

@@ -21,4 +21,4 @@ Statements are separated by the diamond (`⋄`) character or by newlines. A dfn 
 ¯1
 ```
 
-[Control structures](../traditional-functions-and-operators/control-structures/control-structures-summary/) and labels are not part of a dfn; conditions are expressed with guards instead (see [Restrictions](restrictions.md)).
+[Control structures](../../traditional-functions-and-operators/control-structures/control-structures-summary/) and [labels](../../traditional-functions-and-operators/statements/) are not part of a dfn; conditions are expressed with guards instead (see [Restrictions](restrictions.md)).

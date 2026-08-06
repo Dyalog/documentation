@@ -11,7 +11,7 @@ A dfn is written as a sequence of one or more statements, separated by newlines 
 | `∇` | the dfn itself, for recursion |
 | `∇∇` | the dop itself, for recursion |
 
-These names are described under [Arguments](arguments.md).
+These names are described under [Arguments](arguments-and-operands.md).
 
 In its simplest form, a dfn is a single expression:
 ```apl
