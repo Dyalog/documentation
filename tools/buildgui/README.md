@@ -8,14 +8,14 @@ and asking the live interpreter what members it has, so **it only runs on Window
 `objectmodel.json` in this directory is a capture of that model, so the discovery step does not have
 to be repeated on every machine. Regenerate it only when the object model itself changes.
 
-**What runs where.** Only the generation step below needs Windows. Everything else — reading the
-cached model, `objref_audit.py`, and the whole Markdown output path — runs on macOS and Linux too.
+**What runs where.** Only the generation step below needs Windows. Everything else runs on macOS and
+Linux too: reading the cached model, `objref_audit.py`, and the whole Markdown output path.
 If you are not regenerating the model, you do not need Windows and you do not need Dyalog.
 
 ## Generating `objectmodel.json`
 
 Requires Dyalog Unicode Edition **for Windows** (captured with 21.0.54393.0). This directory is
-self-contained — it no longer needs `GUIMaint.dws`. Alongside the functions it holds `Objects.apla`
+self-contained and no longer needs `GUIMaint.dws`. Alongside the functions it holds `Objects.apla`
 and `ObjectMembers/`, the global `Objects` and the namespace `#.ObjectMembers` (member lists for
 classes that cannot be instantiated, such as `OCXClass` and `OLEClient`) exported as Link arrays.
 
@@ -37,7 +37,7 @@ classes that cannot be instantiated, such as `OCXClass` and `OLEClient`) exporte
 
    Not optional. `MAKE_INSTANCE` maps the Root object to `#`, so `MAKEALL` reads `#.PropList`, which
    does not resolve unless Root properties are exposed. This setting lives in the workspace rather
-   than in code — the old `GUIMaint.dws` had it set, which is why it was invisible until the
+   than in code. The old `GUIMaint.dws` had it set, which is why it stayed invisible until the
    workspace was retired. Without it `MAKEALL` fails at `Properties[I]←⊂ref.PropList` with
    `VALUE ERROR: Undefined name: PropList`.
 
@@ -67,18 +67,18 @@ classes that cannot be instantiated, such as `OCXClass` and `OLEClient`) exporte
    `⍠'Compact' 0` pretty-prints, one member per line, so that a regenerated model
    produces a readable diff instead of one changed 54 KB line. The split is needed
    because `⎕JSON` separates its lines with CR, which `⎕NPUT`'s LF line-ending
-   argument does not recognise — write it without splitting and the whole file
+   argument does not recognise. Write it without splitting and the whole file
    lands on a single line.
 
 5. **Check the result** before committing. The v21.0 capture is 76 objects and a 76×76 `ParentMap`,
-   holding 2247 property, 416 method and 1105 event entries in total — that is the sum across all
+   holding 2247 property, 416 method and 1105 event entries in total. That is the sum across all
    objects, most of them shared, and it works out at 346 distinct properties, 102 methods and 147
    events. `objref_audit.py` reports the distinct counts. A diff against the previous
    `objectmodel.json` should be empty unless the object model really changed.
 
 ## Using the cached model
 
-Runs anywhere — this path needs no Windows and no GUI. Paths are relative to the interpreter's
+Runs anywhere; this path needs no Windows and no GUI. Paths are relative to the interpreter's
 working directory, so give the full path if you did not start Dyalog in this directory.
 
 ```apl
@@ -89,8 +89,8 @@ working directory, so give the full path if you did not start Dyalog in this dir
 ```
 
 The `{0=≢⍵: 0⍴⊂'' ⋄ ⍵}¨¨` is needed because JSON `[]` carries no element type. Seven member lists are
-empty — `NetClient` has no properties, `NetClient` and `NetType` no methods, and those two plus
-`OCXClass` and `OLEClient` no events — and they restore as empty character vectors (`⎕DR` 83) where
+empty (`NetClient` has no properties, `NetClient` and `NetType` no methods, and those two plus
+`OCXClass` and `OLEClient` no events), and they restore as empty character vectors (`⎕DR` 83) where
 `MAKEALL` produced empty nested vectors (`⎕DR` 326). Both have shape 0, so it only matters to code
 that compares with `≡`. With the normalisation the restore is `≡`-identical to a live `MAKEALL`.
 
@@ -99,7 +99,7 @@ that compares with `≡`. With the normalisation the restore is `≡`-identical 
 ## Auditing the guide against the model
 
 `objref_audit.py` compares every cross-reference list, A-Z index and link in `object-reference/`
-against `objectmodel.json`. Python 3 standard library only — no dependencies, no Dyalog, any
+against `objectmodel.json`. Python 3 standard library only: no dependencies, no Dyalog, any
 platform. Run it from anywhere; it locates the repository relative to its own location.
 
 ```sh
@@ -112,8 +112,8 @@ On Windows the interpreter is normally `python`; `python3` there is often a Micr
 that fails with "Python was not found".
 
 Exits 1 if it finds anything, 0 if clean, so it can gate CI. It applies the exclusion list below,
-and knows about the deliberate exceptions — `index-property.md`, the Session (`⎕SE`) member pages,
-`NetControl` — so a clean run means clean. The report is regenerable, so it is not committed.
+and knows about the deliberate exceptions (`index-property.md`, the Session (`⎕SE`) member pages,
+`NetControl`), so a clean run means clean. The report is regenerable, so it is not committed.
 
 ## Do not document these
 
@@ -151,8 +151,8 @@ no cross-reference tables.
 | `ASK_PARENT.aplf` | 16 to 25 | `⎕WC` of Form, List and Button, then `⎕DQ'FF'` |
 
 `MAKEALL.aplf:16-20` reads `ref.PropList`, `ref.EventList`, `ref.MethodList` and `ref.ChildList`.
-These are properties of `⎕WC`-created objects and exist nowhere else — the premise of the whole tool,
-not portable in principle, only replaceable. `2031⌶0` at `BuildEvents.aplf:6` and
+These are properties of `⎕WC`-created objects and exist nowhere else. That is the premise of the
+whole tool: not portable in principle, only replaceable. `2031⌶0` at `BuildEvents.aplf:6` and
 `BuildMethods.aplf:6` supplies the event and method numbers; it is undocumented in v21 and returns
 the Windows GUI event numbering.
 
@@ -169,8 +169,8 @@ Not platform issues, but they stop the code running as checked in even on Window
 
 - `ExtractMethodOrEventDetails`, `ExtractList` and `ExtractDescription`
   (`ImportMethodsAndEvents.aplf:15,36,69`) are referenced but not exported.
-- `ImportMethodsAndEvents` is unreachable — `BuildGUI` calls `BuildProperties`, `BuildEvents` and
-  `BuildMethods` instead — and references `d` and `indir`, neither ever assigned.
+- `ImportMethodsAndEvents` is unreachable, since `BuildGUI` calls `BuildProperties`, `BuildEvents`
+  and `BuildMethods` instead. It also references `d` and `indir`, neither ever assigned.
 - `WriteUnicodeFile.aplf:4` signals `DOMAIN ERROR` unless `⎕DR chars` is 80 or 160, rejecting any
   character above U+FFFF.
 - `NewBuildGUI.aplf:13` computes `objfile` and never uses it. Lines 18, 33 and 37 build refs ending
@@ -184,10 +184,10 @@ Not platform issues, but they stop the code running as checked in even on Window
 ## Changes from the original workspace
 
 1. Exported to text so it can be versioned: functions as `.aplf`, and the two arrays the code cannot
-   regenerate — `Objects` and `#.ObjectMembers` — as Link `.apla`. `GUIMaint.dws` is retired; nothing
+   regenerate, `Objects` and `#.ObjectMembers`, as Link `.apla`. `GUIMaint.dws` is retired; nothing
    here needs it.
 2. `WriteFile.aplf` now creates any missing directories in its path.
-3. `MAKEALL.aplf` lines 4 and 6 select children with `∩Objects` instead of blacklisting names — see
+3. `MAKEALL.aplf` lines 4 and 6 select children with `∩Objects` instead of blacklisting names. See
    "New classes" above.
 4. Added `NewBuildGUI.aplf`, the entry point replacing `BuildGUI.aplf`, which does not write Table of
    Contents entries or stub entries for new objects.
