@@ -12,7 +12,7 @@ search:
 The effect of the derived function is to reset the value of the array named by `X` to the result of `XfY`.
 
 !!! Info "Information"
-    In a dfn or dop, modified assignment works only when `f` is a primitive. A named `f` is read as part of a multiple assignment, so `X plus←10` assigns `10` to both `X` and `plus`. Insert `∘⊢` to force modified assignment, as in `X plus∘⊢←10`.
+    In a dfn or dop, modified assignment works only when `f` is a primitive. A named `f` is read as part of a multiple assignment, so `X plus←10` assigns `10` to both `X` and `plus`. Instead, modified assignment can be achieved by inserting `∘⊢` , that is, `X plus∘⊢←10`  
 
 <h2 class="example">Examples</h2>
 ```apl
