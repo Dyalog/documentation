@@ -1,37 +1,131 @@
 # BuildGUI
 
-Note: 
+Originally the workspace `Core/ws/GUIMaint.dws`, now held as source: `.aplf` for the functions,
+`.apla` for the two arrays it cannot regenerate. Used to generate the cross-reference tables in the
+Object Reference Guide. It discovers the object model by instantiating every GUI object with `⎕WC`
+and asking the live interpreter what members it has, so **it only runs on Windows**.
 
-1. This code has been exported from the workspace `Core/ws/GUIMaint.dws`.
-2. The code can only be run on Windows.
+`objectmodel.json` in this directory is a capture of that model, so the discovery step does not have
+to be repeated on every machine. Regenerate it only when the object model itself changes.
 
-The main purpose of the code herein is to generate the crossreference tables present in the `Object Reference Guide`. In all likelihood, this is now fairly static, but changes do still happen. The code was written a long time ago, before Dyalog contained, for example, `⎕XML`.
+## Generating `objectmodel.json`
 
-The code has been left as-is, with the following exceptions:
+Requires Dyalog Unicode Edition **for Windows** (captured with 21.0.54393.0). This directory is
+self-contained — it no longer needs `GUIMaint.dws`. Alongside the functions it holds `Objects.apla`
+and `ObjectMembers/`, the global `Objects` and the namespace `#.ObjectMembers` (member lists for
+classes that cannot be instantiated, such as `OCXClass` and `OLEClient`) exported as Link arrays.
 
-1. The workspace has been exported to text, so that it can be versioned. 
-2. The function `WriteFile.aplf` now ensures that any directories not present in its path are created.
+1. **Load everything into a clear workspace.**
 
-Additionally, two new functions have been added:
+   ```apl
+         )CLEAR
+         ]LINK.Import # /path/to/tools/buildgui
+   ```
 
-1. `NewBuildGUI.aplf`: the new entry point, serving the same purpose as `BuildGUI.aplf`, but not writing entries into a Table of Contents file, and not writing stubbed entries of new object.
-2. `NewWriteMembers.aplf`: analogous to `WriteMembers.aplf`, creating the actual crossreference tables, but writing Markdown instead of XML. This function will sort the tables it generates in col-major order. The old code generated tables that were occasionally not sorted at all.
+   `Import` rather than `Create`: this is a one-shot load, and there is no reason to leave a watcher
+   writing session changes back into the repository.
 
-To run this code, say
+2. **Expose Root properties.**
+
+   ```apl
+         2401⌶1
+   ```
+
+   Not optional. `MAKE_INSTANCE` maps the Root object to `#`, so `MAKEALL` reads `#.PropList`, which
+   does not resolve unless Root properties are exposed. This setting lives in the workspace rather
+   than in code — the old `GUIMaint.dws` had it set, which is why it was invisible until the
+   workspace was retired. Without it `MAKEALL` fails at line 15 with `VALUE ERROR: Undefined name:
+   PropList`.
+
+3. **Build the model.** This instantiates every object in turn, so windows flicker on the desktop.
+
+   ```apl
+         MAKEALL
+   ```
+
+   It sets five globals: `Objects`, `ParentMap`, `Properties`, `Methods` and `Events`.
+
+4. **Serialise.**
+
+   ```apl
+         model ← ⎕NS ⍬
+         model.Objects ← Objects
+         model.ParentMap ← ↓ParentMap    ⍝ JSON has no rank > 1
+         model.(Properties Methods Events) ← Properties Methods Events
+         json ← 1 ⎕JSON⍠'Compact' 0⊢model
+         lines ← (⎕UCS 13) (≠⊆⊢) json    ⍝ ⎕JSON separates lines with CR
+         (lines 'UTF-8' 10) ⎕NPUT 'objectmodel.json' 1
+   ```
+
+   `⍠'Compact' 0` pretty-prints, one member per line, so that a regenerated model
+   produces a readable diff instead of one changed 54 KB line. The split is needed
+   because `⎕JSON` separates its lines with CR, which `⎕NPUT`'s LF line-ending
+   argument does not recognise — write it without splitting and the whole file
+   lands on a single line.
+
+5. **Check the result** before committing. The v21.0 capture is 76 objects, a 76×76 `ParentMap`,
+   2247 properties, 416 methods and 1105 events. A diff against the previous `objectmodel.json`
+   should be empty unless the object model really changed.
+
+## Using the cached model
 
 ```apl
-files ← NewBuildGUI '/some/path/to/your/project/dir/here'
+      model ← 0 ⎕JSON ⊃⎕NGET 'objectmodel.json'
+      Objects ← model.Objects
+      ParentMap ← ↑model.ParentMap
+      Properties Methods Events ← {0=≢⍵: 0⍴⊂'' ⋄ ⍵}¨¨ model.(Properties Methods Events)
 ```
 
-Note that the old `BuildGUI.aplf` also takes a left arg 0 for "run" and 1 for "dry run". The old version was intended to write straight to the documentation repository, but we probably don't need to do that with the new one: write out the files to a fresh directory, do a diff against the existing, and integrate manually in the rare cases that something changed. 
+The `{0=≢⍵: 0⍴⊂'' ⋄ ⍵}¨¨` is needed because JSON `[]` carries no element type. Seven member lists are
+empty — `NetClient` has no properties, `NetClient` and `NetType` no methods, and those two plus
+`OCXClass` and `OLEClient` no events — and they restore as empty character vectors (`⎕DR` 83) where
+`MAKEALL` produced empty nested vectors (`⎕DR` 326). Both have shape 0, so it only matters to code
+that compares with `≡`. With the normalisation the restore is `≡`-identical to a live `MAKEALL`.
 
-## Platform audit
+`NewBuildGUI` calls `MAKEALL` unconditionally, so running from the cache means dropping that call.
 
-What note 2 above actually rests on, checked against the v21 documentation in this repository.
+## Auditing the guide against the model
 
-### Hard Windows-only
+`objref_audit.py` compares every cross-reference list, A-Z index and link in `object-reference/`
+against `objectmodel.json`. Standard library only, no dependencies.
 
-`⎕WC`, `⎕WG` and `⎕DQ` are documented Windows only (`language-reference-guide/docs/system-functions/wc.md`, `wg.md`, `dq.md`).
+```sh
+      python tools/buildgui/objref_audit.py                        # text report
+      python tools/buildgui/objref_audit.py --markdown -o audit.md # markdown document
+```
+
+Exits 1 if it finds anything, 0 if clean, so it can gate CI. It applies the exclusion list below,
+and knows about the deliberate exceptions — `index-property.md`, the Session (`⎕SE`) member pages,
+`NetControl` — so a clean run means clean.
+
+## Do not document these
+
+`ShowSIP` (a method on 35 objects) and Form's `SIPMode`, `SIPResize` and `OKButton` are Windows
+CE-era vestiges, deliberately excluded from the Object Reference Guide. They are present in the
+interpreter's member lists and therefore in `objectmodel.json`. Anything generating documentation
+from the model must filter them out.
+
+## Gotchas
+
+**New classes.** `MAKEALL` indexes `ParentMap` with `Objects⍳`, so any class returned by
+`⎕WG'ChildList'` that is absent from `Objects` yields an index one past the end and signals
+`INDEX ERROR`. v21 introduced `WCPlugin`, a child of both `Root` and `Form`, absent from `Objects`
+and undocumented. Lines 4 and 6 therefore select with `∩Objects` rather than excluding known
+non-objects by name, which keeps the model to the documented set and tolerates future additions. If
+a new class *should* be documented, add it to `Objects` in the workspace rather than relaxing the
+intersection.
+
+**`ASK_PARENT`** opens a modal dialogue for any object whose parent is neither derivable from
+`ParentMap` nor in its hard-coded `:Case` list. On the v21 model this branch is never reached and the
+run completes unattended, but it remains a hazard if new objects appear.
+
+**`NetControl`** is documented and present in `#.ObjectMembers` but missing from `Objects`, so it gets
+no cross-reference tables.
+
+## Why Windows only
+
+`⎕WC`, `⎕WG` and `⎕DQ` are documented Windows-only
+(`language-reference-guide/docs/system-functions/wc.md`, `wg.md`, `dq.md`).
 
 | File | Lines | Use |
 |------|-------|-----|
@@ -40,75 +134,44 @@ What note 2 above actually rests on, checked against the v21 documentation in th
 | `MAKE_INSTANCE.aplf` | 4 to 29 | every `:Case` branch is a `⎕WC`, plus `PARENT ⎕WG'Container'` |
 | `ASK_PARENT.aplf` | 16 to 25 | `⎕WC` of Form, List and Button, then `⎕DQ'FF'` |
 
-`MAKEALL.aplf:16-20` then reads `ref.PropList`, `ref.EventList`, `ref.MethodList` and `ref.ChildList`. These are properties of `⎕WC`-created objects and exist nowhere else. This is the premise of the whole tool: it discovers the object model by instantiating every object and asking the live interpreter what members it has. Not portable in principle, only replaceable.
+`MAKEALL.aplf:16-20` reads `ref.PropList`, `ref.EventList`, `ref.MethodList` and `ref.ChildList`.
+These are properties of `⎕WC`-created objects and exist nowhere else — the premise of the whole tool,
+not portable in principle, only replaceable. `2031⌶0` at `BuildEvents.aplf:6` and
+`BuildMethods.aplf:6` supplies the event and method numbers; it is undocumented in v21 and returns
+the Windows GUI event numbering.
 
-`2031⌶0` at `BuildEvents.aplf:6` and `BuildMethods.aplf:6` supplies the event and method numbers. It does not appear in `language-reference-guide/docs/primitive-operators/i-beam/index.md`, so it is undocumented in v21 and carries no platform guarantee. What it returns is the Windows GUI event numbering.
+Everything downstream of `MAKEALL` is portable, which is what makes the cached model useful: the new
+Markdown path (`NewBuildGUI`, `NewWriteMembers`, `WriteFile`, `WriteUnicodeFile`) uses forward
+slashes, `⎕UCS 10` and UTF-8 throughout. Its only Windows dependency is the `MAKEALL` call at
+`NewBuildGUI.aplf:7`. The old Flare path (`BuildGUI`, `WriteMembers`, `BuildProperties`,
+`BuildEvents`, `BuildMethods`, `ImportMethodsAndEvents`) additionally hard-codes backslash separators
+and CRLF, and emits `.fltoc`/`.flsnp` for MadCap Flare, which is itself Windows-only.
 
-`MAKE_INSTANCE.aplf:14`, `MAKEALL.aplf:4,6` and `ASK_PARENT.aplf:3-4` name COM, OLE and ActiveX classes (`OCXClass`, `OLEClient`, `NetControl`, `ActiveXContainer` and so on), which are Windows technologies. The five at line 14 are never instantiated: `MAKEALL.aplf:14` falls back to `#.ObjectMembers`.
-
-### Windows conventions in strings and data
-
-These run elsewhere without signalling, and produce wrong output.
-
-Backslash path separators in `BuildGUI.aplf:21,22,26,53,152,161`, `WriteMembers.aplf:2,3`, `BuildProperties.aplf:13`, `BuildEvents.aplf:9`, `BuildMethods.aplf:9` and `ImportMethodsAndEvents.aplf:11,18`. Per `nparts.md`, "\" is a directory separator on Windows only. Elsewhere it is an ordinary filename character, so `3 ⎕MKDIR ⊃⎕NPARTS file` at `WriteFile.aplf:3` creates nothing useful and `⎕NCREATE` produces a single file named `Content\GUI\Objects\Button.htm` in the current directory.
-
-Hard-coded CRLF at `indent.aplf:3`, `⎕AV[4 3]`. By `tc.md`, `⎕TC≡⎕AV[1+⍳3]` and `⎕TC` is backspace, linefeed, newline, so `⎕AV[3]` is LF and `⎕AV[4]` is CR. This also assumes `⎕IO←1`, which `indent` does not localise, and a default `⎕AVU`.
-
-CRLF assumed on input: `BuildEvents.aplf:66`, `BuildMethods.aplf:65` and `BuildProperties.aplf:62` search for `'</div>',⎕UCS 13 10`. An LF file fails the `:ElseIf` and is silently left unmodified.
-
-The ANSI branch in `WriteUnicodeFile.aplf:17-18`, `ReadFile.aplf:11` and `ReadxmlFile.aplf:12`. ANSI here means a Windows code page, and in the Classic Edition the byte to character mapping runs through `⎕AV` and the output translate table. Only the read side is still reachable: `WriteFile.aplf:4` always passes `'UTF-8'`.
-
-### MadCap Flare output
-
-The old path emits `.fltoc` and `.flsnp` files, the `CatapultToc` root element, the `MadCap:` namespace and the `Default.ScreenOnly` / `Default.PrintOnly` conditions. Flare is Windows-only software, so the output is unusable elsewhere even though the code producing it is portable. Confined to `BuildGUI`, `WriteMembers`, `BuildProperties`, `BuildEvents`, `BuildMethods` and `ImportMethodsAndEvents`.
-
-### Portable despite appearances
-
-`⎕USING←'System' 'System.IO'` at `BuildGUI.aplf:23` and `NewBuildGUI.aplf:10`. .NET is cross-platform in v21, and `dotnet-interface-guide/docs/installation.md` has `DYALOG_NETCORE` defaulting to `1` on Linux and macOS against `0` on Windows. It is also dead on the new path: nothing there resolves a .NET name.
-
-The `(Windows)` comments at `ReadFile.aplf:2` and `WriteUnicodeFile.aplf:2` are inaccurate. `⎕NTIE`, `⎕NCREATE`, `⎕NAPPEND`, `⎕NREAD`, `⎕NSIZE`, `⎕NUNTIE` and `⎕NERASE` are all cross-platform, as are `⎕MKDIR`, `⎕NPARTS`, `⎕C`, `⎕R` and `⎕UCS`.
-
-So the new Markdown path is already clean: `NewBuildGUI`, `NewWriteMembers`, `WriteFile` and `WriteUnicodeFile` use forward slashes, `⎕UCS 10` and UTF-8 throughout. Its only Windows dependency is the `MAKEALL` call at `NewBuildGUI.aplf:7`.
-
-### Other gaps in this export
+## Known defects in this export
 
 Not platform issues, but they stop the code running as checked in even on Windows.
 
-- `Objects`, `#.ObjectMembers` (`MAKEALL.aplf:14`), `ExtractMethodOrEventDetails`, `ExtractList` and `ExtractDescription` (`ImportMethodsAndEvents.aplf:15,36,69`) are referenced but not exported.
-- `ImportMethodsAndEvents` is unreachable. `BuildGUI` calls `BuildProperties`, `BuildEvents` and `BuildMethods` instead. It also references `d` and `indir`, neither of which is ever assigned.
-- `WriteUnicodeFile.aplf:4` signals `DOMAIN ERROR` unless `⎕DR chars` is 80 or 160, so any character above U+FFFF (type 320) is rejected.
-- `NewBuildGUI.aplf:13` computes `objfile` and never uses it. Lines 18, 33 and 37 build refs ending `.md"` with a stray double quote inherited from the HTML path, which `NewWriteMembers.aplf:12` strips again; line 29 omits it.
-- The output shape no longer matches the guide. `NewBuildGUI` writes one file per object per member kind under `parentlists/`, `childlists/`, `proplists/`, `methodlists/` and `eventlists/`; `object-reference/docs/` has no such directories and carries the cross-references as inline link lists in each object page.
+- `ExtractMethodOrEventDetails`, `ExtractList` and `ExtractDescription`
+  (`ImportMethodsAndEvents.aplf:15,36,69`) are referenced but not exported.
+- `ImportMethodsAndEvents` is unreachable — `BuildGUI` calls `BuildProperties`, `BuildEvents` and
+  `BuildMethods` instead — and references `d` and `indir`, neither ever assigned.
+- `WriteUnicodeFile.aplf:4` signals `DOMAIN ERROR` unless `⎕DR chars` is 80 or 160, rejecting any
+  character above U+FFFF.
+- `NewBuildGUI.aplf:13` computes `objfile` and never uses it. Lines 18, 33 and 37 build refs ending
+  `.md"` with a stray double quote inherited from the HTML path, which `NewWriteMembers.aplf:12`
+  strips again; line 29 omits it.
+- The output shape no longer matches the guide. `NewBuildGUI` writes one file per object per member
+  kind under `parentlists/`, `childlists/`, `proplists/`, `methodlists/` and `eventlists/`;
+  `object-reference/docs/` has no such directories and carries the cross-references as inline link
+  lists in each object page.
 
-## Running it
+## Changes from the original workspace
 
-1. Dyalog Unicode Edition for Windows.
-2. `)LOAD Core/ws/GUIMaint.dws`. This directory is not self-contained. The global `Objects` and the namespace `#.ObjectMembers` (holding member lists for the classes that cannot be instantiated, such as `OCXClass` and `OLEClient`) live in the workspace.
-3. Bring the `.aplf` files from this directory into the workspace, replacing the workspace copies.
-4. `files ← NewBuildGUI '<output dir>'`, then diff `<output dir>` against `object-reference/docs/`.
-
-`ASK_PARENT` opens a modal dialogue for any object whose parent is neither derivable from `ParentMap` nor in its hard-coded `:Case` list, so the run is not unattended.
-
-## Caching the object model
-
-`MAKEALL` sets five globals. Capturing them while on Windows removes the need for a Windows machine until the object model itself changes:
-
-```apl
-      MAKEALL
-      model ← ⎕NS ⍬
-      model.Objects ← Objects
-      model.ParentMap ← ↓ParentMap    ⍝ JSON has no rank > 1
-      model.(Properties Methods Events) ← Properties Methods Events
-      ((1 ⎕JSON model) 'UTF-8' 10) ⎕NPUT 'objectmodel.json' 1
-```
-
-Restoring it anywhere:
-
-```apl
-      model ← 0 ⎕JSON ⊃⎕NGET 'objectmodel.json'
-      Objects ← model.Objects
-      ParentMap ← ↑model.ParentMap
-      Properties Methods Events ← model.(Properties Methods Events)
-```
-
-`NewBuildGUI` calls `MAKEALL` unconditionally, so running from a cached model means dropping that call.
+1. Exported to text so it can be versioned.
+2. `WriteFile.aplf` now creates any missing directories in its path.
+3. `MAKEALL.aplf` lines 4 and 6 select children with `∩Objects` instead of blacklisting names — see
+   "New classes" above.
+4. Added `NewBuildGUI.aplf`, the entry point replacing `BuildGUI.aplf`, which does not write Table of
+   Contents entries or stub entries for new objects.
+5. Added `NewWriteMembers.aplf`, replacing `WriteMembers.aplf`, writing Markdown instead of XML and
+   sorting the tables in col-major order. The old code produced tables that were sometimes unsorted.

@@ -1,9 +1,9 @@
  MAKEALL;NAME;P;T;F;I;OBJ;ref
  Events←Methods←Properties←(⍴Objects)⍴⊂''
  ParentMap←(2⍴⍴Objects)⍴0
- ParentMap[Objects⍳⊂'Root';Objects⍳('.'⎕WG'ChildList')~'Class' 'Session']←1
+ ParentMap[Objects⍳⊂'Root';Objects⍳('.'⎕WG'ChildList')∩Objects]←1
  'F'⎕WC'Form'
- ParentMap[Objects⍳⊂'Form';Objects⍳('F'⎕WG'ChildList')~'OCXControl' 'NetControl']←1
+ ParentMap[Objects⍳⊂'Form';Objects⍳('F'⎕WG'ChildList')∩Objects]←1
  ⎕EX'F'
  :For I :In ⍳⍴Objects
      NAME←MAKE_PARENT OBJ←I⊃Objects
