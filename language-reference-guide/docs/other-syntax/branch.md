@@ -20,7 +20,7 @@ If `Y` is empty, the branch function has no effect.  The next expression is exec
 
 The `:GoTo` statement may be used in place of Branch in a defined function.
 
-!!! note
+!!! Info "Information"
     Branch is not available for flow control in a dfn or dop: a monadic branch (`→` to a line) is not supported.
 
 <h2 class="example">Example</h2>

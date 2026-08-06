@@ -9,7 +9,7 @@ search:
 
 `X` identifies the numbers of lines in the function or operator named by `Y` on which a trace control is to be placed.  Numbers outside the range of line numbers in the function or operator (other than 0) are ignored.  The number 0 indicates that a trace control is to be placed immediately prior to exit from the function or operator.  The value of `X` is independent of `⎕IO`.
 
-!!! note
+!!! Info "Information"
     `⎕TRACE` does not apply to dfns or dops.
 
 `R` is a simple integer vector of non-negative elements indicating the lines in the function or operator on which a trace control has been placed.

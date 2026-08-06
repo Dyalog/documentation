@@ -1,6 +1,6 @@
 # Arguments and Operands
 
-Within a dfn the arguments are referred to by fixed names, not declared in a header.
+Within a dfn/dop, arguments/operands are referred to by fixed names rather than declared in a header as they are for [tradfns/tradops](../traditional-functions-and-operators/global-local-names.md).
 
 - `⍵` is the right argument, and is always available.
 - `⍺` is the left argument. A dfn is ambivalent: when it is called monadically, `⍺` has no value until a statement beginning `⍺←` supplies a [default left argument](default-left-argument.md).
@@ -26,7 +26,7 @@ An operand can be a function or an array.
 ¯5
 ```
 
-A dfn refers to itself as `∇`, and a dop as `∇∇`, which allows recursion without naming the operation (see [Recursion](recursion.md)).
+A dfn refers to itself as `∇`, and a dop as `∇∇`, which allows [recursion](recursion.md) without naming the operation.
 
 <h2 class="example">Example</h2>
 ```apl

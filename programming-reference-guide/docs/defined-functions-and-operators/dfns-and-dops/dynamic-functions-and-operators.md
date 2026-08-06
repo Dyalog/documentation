@@ -30,6 +30,6 @@ dfns can be defined and used in any context where an APL function may be found, 
 
 ## Supplied Workspaces
 
-Many samples of dfns and dops are in the utility workspace `dfns.dws` in the `ws` sub-directory. Further examples are in the workspaces `min.dws`, `max.dws`, `tube.dws`, and `eval.dws`.
+There are many samples of dfns and dops in **[DYALOG]/ws/**, for example, in the workspaces **min.dws**, **max.dws**, **tube.dws**, and **eval.dws**.
 
 [^1]: The terms dfn and dop refer to a special type of function (or operator) unique to Dyalog. They were originally named dynamic functions and dynamic operators, later abbreviated to Dfns and Dops or D-Fns and D-Ops, but all these terms have been dropped in favour of the current ones.
