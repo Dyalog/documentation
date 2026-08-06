@@ -1,6 +1,6 @@
 # <span>AmbientChanged</span> <span>Event 533</span>
 
-If enabled, this event is reported when any of the ambient properties change in an application hosting an [ActiveXControl](../objects/activexcontrol.md) object. The new values of the ambient properties are available from the [FontObj](../properties/fontobj.md), [BCol](../properties/fcol.md) and [FCol](../properties/bcol.md) properties of the [ActiveXContainer](../objects/activexcontainer.md).
+If enabled, this event is reported when any of the ambient properties change in an application hosting an [ActiveXControl](../objects/activexcontrol.md) object. The new values of the ambient properties are available from the [FontObj](../properties/fontobj.md), [BCol](../properties/bcol.md) and [FCol](../properties/fcol.md) properties of the [ActiveXContainer](../objects/activexcontainer.md).
 
 This event is reported for information alone. You may not disable or nullify the event by setting the action code for the event to `¯1` or by returning 0 from a callback function.
 
