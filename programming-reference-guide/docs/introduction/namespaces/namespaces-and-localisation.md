@@ -86,6 +86,6 @@ The above diagram represents the SI stack, growing upwards from two namespaces `
 
 ## Qualified Names
 
-A _qualified_ name, one written with a namespace path such as `ns.x`, is resolved in the target namespace according to the above rules. Assigning to a qualified name is therefore not subject to the automatic localisation of a [dfn](../../defined-functions-and-operators/dfns-and-dops/global-local-names.md), and the name is created there if it does not already exist.
+A _qualified_ name, that is, one written with a namespace path such as `ns.x`, is resolved in the target namespace according to the above rules. Assigning to a qualified name is, therefore, not subject to the automatic localisation of a [dfn](../../defined-functions-and-operators/dfns-and-dops/global-local-names.md), and the name is created in the target namespace if it does not already exist.
 
-Within the target namespace, the name is still resolved through the state indicator. Therefore, if a function in the target namespace is on the stack and has localised the name, a qualified assignment updates that local name rather than creating or modifying a global name.
+Names are always resolved according to the current stack. Therefore, if a function in the target namespace is on the stack and has localised the name, a qualified assignment updates that local name rather than creating or modifying a global name.
