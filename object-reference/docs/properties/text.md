@@ -1,7 +1,5 @@
 # <span>Text</span> <span>Property</span>
 
-**Description**
-
 This property is associated with the text contents of an object and is a character array.
 
 In a [ButtonEdit](../objects/buttonedit.md), [Combo](../objects/combo.md), [StatusField](../objects/statusfield.md), [Spinner](../objects/spinner.md), or a single-line [Edit](../objects/edit.md) object, Text may be a simple scalar or a simple vector.
@@ -18,6 +16,6 @@ You can copy text into the Windows [Clipboard](../objects/clipboard.md) by using
 
 The Text property of a [StatusField](../objects/statusfield.md) is updated automatically if its [Style](style.md) property is set to monitor the status of a key.
 
-**Application**
+## Application
 
 Objects: [ButtonEdit](../objects/buttonedit.md), [Clipboard](../objects/clipboard.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [Edit](../objects/edit.md), [MsgBox](../objects/msgbox.md), [RichEdit](../objects/richedit.md), [Spinner](../objects/spinner.md), [StatusField](../objects/statusfield.md), [Text](../objects/text.md)

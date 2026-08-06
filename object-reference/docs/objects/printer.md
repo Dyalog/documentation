@@ -1,8 +1,6 @@
 # <span>Printer</span> <span>Object</span>
 
-**Purpose:** To provide printer output.
-
-**Description**
+To provide printer output.
 
 The [PName](../properties/pname.md) property is a character vector which specifies the name of an installed printer and the device to which it is attached. The name and device are separated by a comma (,). All valid values of [PName](../properties/pname.md) can be obtained from the [PrintList](../properties/printlist.md) property of the [Root](root.md) object.
 
@@ -67,7 +65,7 @@ Spool output
       ⎕EX 'PR1'
 ```
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [OLEServer](../objects/oleserver.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Root](../objects/root.md), [TCPSocket](../objects/tcpsocket.md)
 

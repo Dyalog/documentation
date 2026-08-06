@@ -1,9 +1,5 @@
 # <span>BrowseBox</span> <span>Object</span>
 
-**Purpose:** The BrowseBox object allows the user to browse for and select a folder         or other resource.
-
-**Description**
-
 The BrowseBox object is a dialog box that allows the user to browse for and
 			select a folder (directory) or other resource.
 
@@ -55,7 +51,7 @@ After the user has pressed OK or Cancel, the [Target](../properties/target.md) p
      ∇
 ```
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [OLEServer](../objects/oleserver.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Root](../objects/root.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

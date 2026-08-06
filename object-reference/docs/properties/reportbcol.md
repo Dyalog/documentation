@@ -1,7 +1,5 @@
 # <span>ReportBCol</span> <span>Property</span>
 
-**Description**
-
 In Report View, the ReportBCol property is either a scalar or a matrix  that specifies the background colours for each item displayed in a [ListView](../objects/listview.md) object .
 
 Its first column refers to the [Items](items.md) themselves, and subsequent columns to the elements of [ReportInfo](reportinfo.md).
@@ -12,6 +10,6 @@ Each  element of ReportBCol is either an integer colour value or a 3-element of 
 
 For further information, see ["BCol"](bcol.md).
 
-**Application**
+## Application
 
 Objects: [ListView](../objects/listview.md)

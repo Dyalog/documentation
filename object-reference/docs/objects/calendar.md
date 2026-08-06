@@ -1,8 +1,6 @@
 # <span>Calendar</span> <span>Object</span>
 
-**Purpose:** The Calendar object provides an interface to the Month Calendar Control
-
-**Description**
+The Calendar object provides an interface to the Month Calendar Control
 
 The Calendar object displays a calendar and allows the user to select a date or range of dates. The following illustration shows a default Calendar object.
 
@@ -58,7 +56,7 @@ You may convert dates between [IDN](../miscellaneous/international-day-number.md
 
 The [GetVisibleRange](../methodorevents/getvisiblerange.md) method reports the range of dates that is currently visible in the Calendar object.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md)
 

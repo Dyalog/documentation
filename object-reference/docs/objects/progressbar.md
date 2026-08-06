@@ -1,9 +1,5 @@
 # <span>ProgressBar</span> <span>Object</span>
 
-**Purpose:** The ProgressBar object is used to indicate the progress of a lengthy operation.
-
-**Description**
-
 The ProgressBar object is a window that an application can use to indicate the progress of a lengthy operation. The appearance of the bar in the ProgressBar is determined by the [ProgressStyle](../properties/progressstyle.md) property.
 
 If ProgressStyle is `Normal` or `Smooth`, the  size of the bar, intended to indicate the amount of progress, is determined using the [Thumb](../properties/thumb.md) property in relation to its [Limits](../properties/limits.md) property, and/or using the [ProgressStep](../methodorevents/progressstep.md) method. This can be updated as appropriate in the application logic or by using a [Timer](timer.md).
@@ -20,7 +16,7 @@ where `THUMB` is the value to which you set the Thumb property and `LIMITS` is t
 
 If ProgressStyle is `Marquee`, the size of the bar is fixed and its position  changes with time according to the value of the [Interval](../properties/interval.md) property. The values of [Thumb](../properties/thumb.md), [Limits](../properties/limits.md), [Wrap](../properties/wrap.md) and [Step](../properties/step.md) are irrelevant.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

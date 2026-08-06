@@ -9,8 +9,6 @@ search:
 
 |[Session](../../../windows-ui-guide/the-session-object/session-object)|&nbsp;|&nbsp;|||
 
-**Description**
-
 If enabled, this event is reported when an expression is executed with trace control. See [Set Trace ](../../../language-reference-guide/system-functions/set-trace). Error messages and output from system commands do not generate this event.
 
 The event message reported as the result of `⎕DQ`, or supplied as the right argument to your callback function, is a 4-element vector as follows :
@@ -61,6 +59,6 @@ The result (if any) of the callback function is ignored.
 
 You may not disable the event (by setting its action to `¯1`), nor generate the event using `⎕NQ`, nor call it as a method.
 
-**Application**
+## Application
 
 Objects: [Session](../../../windows-ui-guide/the-session-object/session-object)

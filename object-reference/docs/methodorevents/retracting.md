@@ -1,7 +1,5 @@
 # <span>Retracting</span> <span>Event 304</span>
 
-**Description**
-
 If enabled, this event is reported by a [Grid](../objects/grid.md) or a [TreeView](../objects/treeview.md) object just before it is about to retract to hide the children of the current item.
 
 In a [Grid](../objects/grid.md), this occurs when the user clicks the picture or tree line in the row title.
@@ -19,6 +17,6 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |`[2]`|Event      |`'Retracting'` or 304          |
 |`[3]`|Item number|Integer. The index of the item.|
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md), [TreeView](../objects/treeview.md)

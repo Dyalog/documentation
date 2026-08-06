@@ -1,7 +1,5 @@
 # <span>DrawMode</span> <span>Property</span>
 
-**Description**
-
 The DrawMode property provides direct control over the low-level drawing operation performed by graphical objects.
 
 The DrawMode property specifies the current foreground mix mode. The Windows GDI uses the foreground mix mode to combine pens and interiors of filled objects with the colours already on the screen. The foreground mix mode defines how colours from the brush or pen and the colours in the existing image are to be combined.
@@ -31,6 +29,6 @@ DrawMode is an integer with one of the following values:
 |15   |`R2_MERGEPEN`   |Pixel is a combination of the pen colour and the screen colour.                            |
 |16   |`R2_WHITE`      |Pixel is always 1.                                                                         |
 
-**Application**
+## Application
 
 Objects: [Circle](../objects/circle.md), [Ellipse](../objects/ellipse.md), [Marker](../objects/marker.md), [Poly](../objects/poly.md), [Rect](../objects/rect.md), [Text](../objects/text.md)

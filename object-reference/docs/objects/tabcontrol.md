@@ -1,8 +1,6 @@
 # <span>TabControl</span> <span>Object</span>
 
-**Purpose:** The TabControl object provides access to the native Windows tab         control.
-
-**Description**
+The TabControl object provides access to the native Windows tab         control.
 
 The standard tab control is analogous to a set of dividers in a notebook and
 allows you to define a set of *pages* that occupy the same area of a window
@@ -138,7 +136,7 @@ The [HotTrack](../properties/hottrack.md) property specifies whether
 or not the tabs or buttons are automatically highlighted by the mouse pointer.
 The default is 0 (no highlighting).
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [SubForm](../objects/subform.md)
 

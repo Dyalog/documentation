@@ -1,8 +1,6 @@
 # <span>TipField</span> <span>Object</span>
 
-**Purpose:** To display pop-up help.
-
-**Description**
+To display pop-up help.
 
 The TipField is used to display pop-up help when the user moves the mouse pointer over an object.
 
@@ -12,7 +10,7 @@ The TipField is a simple box with a 1-pixel black border in which the text speci
 
 If you wish to display [Tip](../properties/tip.md)s for particular objects in different fonts and colours, you must create a separate TipField for each combination of colour and font you need.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Group](../objects/group.md), [OLEServer](../objects/oleserver.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Root](../objects/root.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md)
 

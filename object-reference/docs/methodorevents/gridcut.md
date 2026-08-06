@@ -1,7 +1,5 @@
 # <span>GridCut</span> <span>Event 190</span>
 
-**Description**
-
 If enabled, this event is reported when the user presses Shift+Delete and there are selected cells in the [Grid](../objects/grid.md). The default action of the event is to copy the contents of the selected block(s) of cells to the clipboard and then to empty the selected cells. You may disable this effect entirely by setting the action code of the event to `¯1`. You may also disable the cut operation by returning 0 from a callback function.
 
 The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 5-element vector as follows:
@@ -19,6 +17,6 @@ If more than one block of cells is selected, Start and End are matrices whose ro
 
 The data copied to the clipboard is registered in Dyalog (APL internal), Wk3 (Lotus), XlTable (Excel) and tab/new-line delimited text formats.
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

@@ -1,8 +1,6 @@
 # <span>Label</span> <span>Object</span>
 
-**Purpose:** Displays static text.
-
-**Description**
+Displays static text.
 
 This object displays a text label, a number, a date or a time value.
 
@@ -14,7 +12,7 @@ The [Border](../properties/border.md) property determines whether or not the lab
 
 By default, the value of the [EdgeStyle](../properties/edgestyle.md) property for a Label is `'None'` and the value of [BCol](../properties/bcol.md) is 0 which is normally white, or grey if the parent object has a 3-dimensional appearance. You can change its appearance by setting [EdgeStyle](../properties/edgestyle.md) and/or [BCol](../properties/bcol.md) to different values.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

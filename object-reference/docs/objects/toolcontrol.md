@@ -1,9 +1,5 @@
 # <span>ToolControl</span> <span>Object</span>
 
-**Purpose:** The ToolControl object provides a standard Windows ToolBar.
-
-**Description**
-
 The ToolControl object provides an interface to the native Windows ToolBar control and supersedes the Dyalog APL [ToolBar](toolbar.md) object.
 
 The tools on a ToolControl are normally represented by [ToolButton](toolbutton.md) objects, but the ToolControl may also act as a parent for other objects, including a [MenuBar](menubar.md) (see below).
@@ -118,7 +114,7 @@ Although nothing is done to prevent it, the use of other objects in a ToolContro
 
 ![](../img/tool10.gif)
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [SubForm](../objects/subform.md)
 

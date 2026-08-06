@@ -1,8 +1,6 @@
 # <span>StatusField</span> <span>Object</span>
 
-**Purpose:** This object is used to display information for the user.
-
-**Description**
+This object is used to display information for the user.
 
 The StatusField object provides an area for displaying context sensitive help messages, keyboard status, and other application dependent information.
 
@@ -27,7 +25,7 @@ If [Style](../properties/style.md) is KeyMode, the StatusField displays the name
 
 If [Style](../properties/style.md) is set to one of the above, you may still use the [Caption](../properties/caption.md) property to give the StatusField a title. You may even set the value of the [Text](../properties/text.md) property, but be aware that this value will be reset when the user next presses the key the StatusField is monitoring.
 
-**Application**
+## Application
 
 Parents: [StatusBar](../objects/statusbar.md)
 

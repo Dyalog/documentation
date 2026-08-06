@@ -1,7 +1,5 @@
 # <span>VScroll</span> <span>Property</span>
 
-**Description**
-
 This property determines whether or not an object has a vertical scrollbar. It is a single integer with the value `¯2`, `¯1`, or 0.
 
 **VScroll may only be set when the object is created with ⎕WC and may not subsequently be changed with ⎕WS or assignment.**
@@ -22,6 +20,6 @@ For a [StatusBar](../objects/statusbar.md), [TabBar](../objects/tabbar.md) or [T
 
 For a [Grid](../objects/grid.md), VScroll may be 0 (no vertical scrollbar), `¯1` (scrollbar is displayed when required), `¯2` (same as `¯1`) or `¯3` (scrollbar is always displayed).
 
-**Application**
+## Application
 
 Objects: [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [Edit](../objects/edit.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [List](../objects/list.md), [ListView](../objects/listview.md), [RichEdit](../objects/richedit.md), [Scroll](../objects/scroll.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TabBar](../objects/tabbar.md), [ToolBar](../objects/toolbar.md), [TrackBar](../objects/trackbar.md), [UpDown](../objects/updown.md)

@@ -1,8 +1,6 @@
 # <span>Group</span> <span>Object</span>
 
-**Purpose:** This object is used to group a related set of controls together         visually, and to impose "radio-button" behaviour.
-
-**Description**
+This object is used to group a related set of controls together         visually, and to impose "radio-button" behaviour.
 
 A Group is displayed as an empty box with a border around it whose appearance
 is defined by the [EdgeStyle](../properties/edgestyle.md) property. The
@@ -16,7 +14,7 @@ within it as before. The resizing of a Group and its children can be controlled
 using the [AutoConf](../properties/autoconf.md) property or by enabling
 the [Configure](../methodorevents/configure.md) event (31).
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

@@ -1,8 +1,6 @@
 # <span>MDIClient</span> <span>Object</span>
 
-**Purpose:** Implements Multiple Document Interface (MDI) behaviour.
-
-**Description**
+Implements Multiple Document Interface (MDI) behaviour.
 
 The multiple-document interface (MDI) is a document-oriented interface that is commonly used by word-processors, spreadsheets and other applications that deal with *documents*. An MDI application allows the user to display multiple documents at the same time, with each document displayed in its own window.
 
@@ -23,7 +21,7 @@ You can call methods which cause the MDIClient to organise its child [SubForm](s
 |[MDITile](../methodorevents/mditile.md)      |Causes the MDIClient to arrange its child Forms as a row or column.                                       |
 |[MDIArrange](../methodorevents/mdiarrange.md)|Causes the MDIClient to arrange the icons associated with any minimised child Forms in an orderly fashion.|
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [SubForm](../objects/subform.md)
 

@@ -1,8 +1,6 @@
 # <span>OCXClass</span> <span>Object</span>
 
-**Purpose:** This object provides access to OLE (ActiveX) Controls.
-
-**Description**
+This object provides access to OLE (ActiveX) Controls.
 
 This object loads an OLE Control into memory and defines a new class of object associated with it. The name of the new class is the name specified by the left argument of `⎕WC`  You may create an instance of the newly defined class using the name you assigned to the OCXClass object as the Type property.
 
@@ -14,7 +12,7 @@ The [QueueEvents](../properties/queueevents.md) property determines how events r
 
 To find out how to use the OLE control, you must consult the appropriate documentation. However, a great deal of information about it can be obtained using the [GetPropertyInfo](../methodorevents/getpropertyinfo.md), [GetEventInfo](../methodorevents/geteventinfo.md), and [GetMethodInfo](../methodorevents/getmethodinfo.md) methods.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [OLEServer](../objects/oleserver.md), [PropertyPage](../objects/propertypage.md), [Root](../objects/root.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

@@ -1,7 +1,5 @@
 # <span>AlphaBlend</span> <span>Property</span>
 
-**Description**
-
 The AlphaBlend property specifies a level of translucency which allows the
 area behind a Form to show through.
 
@@ -16,6 +14,6 @@ but will be passed to any other windows underneath the Form.
 
 Values in between specify varying levels of translucency.
 
-**Application**
+## Application
 
 Objects: [Form](../objects/form.md)

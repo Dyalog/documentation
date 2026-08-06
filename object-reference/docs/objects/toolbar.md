@@ -1,8 +1,6 @@
 # <span>ToolBar</span> <span>Object</span>
 
-**Purpose:** To manage a group of controls such as [Button](button.md) s.
-
-**Description**
+To manage a group of controls such as [Button](button.md) s.
 
 The ToolBar object is used to display and manage a set of controls. It is
 typically used to present a set of [Button](button.md)s
@@ -68,7 +66,7 @@ group.
 
 The ToolBar object was introduced in Dyalog APL before an appropriate standard Windows control existed. The ToolBar object should be considered as a legacy object and used only in old GUI applications. The [ToolControl](toolcontrol.md) object should be used instead.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [SubForm](../objects/subform.md)
 

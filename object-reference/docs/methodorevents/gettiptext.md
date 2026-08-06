@@ -1,7 +1,5 @@
 # <span>GetTipText</span> <span>Event 325</span>
 
-**Description**
-
 If enabled, this event is reported by a [TreeView](../objects/treeview.md) or [ListView](../objects/listview.md) object just before it displays a tip for a specific row.
 
 The event message reported as the result of `⎕DQ`, or supplied as the right argument to your callback function, is a 5-element vector as follows :
@@ -21,6 +19,6 @@ The default processing for the event is to display the default tip (if there is 
 
 The associated callback is run **immediately** while the windows notification is still on the stack. See [High-Priority Callback Functions](../../../interface-guide/introduction/high-priority-callbacks).
 
-**Application**
+## Application
 
 Objects: [ListView](../objects/listview.md), [TreeView](../objects/treeview.md)

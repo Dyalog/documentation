@@ -1,8 +1,6 @@
 # <span>StatusBar</span> <span>Object</span>
 
-**Purpose:** This object is used to manage [StatusField](statusfield.md) objects which display  information for the user.
-
-**Description**
+This object is used to manage [StatusField](statusfield.md) objects which display  information for the user.
 
 The StatusBar is a container object that manages [StatusField](statusfield.md)s. [StatusField](statusfield.md) objects display textual information and are typically used for help messages and for monitoring the status of an application. They can also be used to automatically report the status of the Caps Lock, Num Lock, Scroll Lock, and Insert keys.
  
@@ -27,7 +25,7 @@ If you attempt to add a [StatusField](statusfield.md) that would extend beyond t
 
 [VScroll](../properties/vscroll.md) and [HScroll](../properties/hscroll.md) may only be set when the object is created and may not subsequently be changed.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [SubForm](../objects/subform.md)
 

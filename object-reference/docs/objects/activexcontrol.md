@@ -1,9 +1,5 @@
 # <span>ActiveXControl</span> <span>Object</span>
 
-**Purpose:** The ActiveXControl object represents a Dyalog APL namespace as an ActiveX control.
-
-**Description**
-
 The ActiveXControl object represents a Dyalog APL namespace as an ActiveX control.
 
 During development, an ActiveXControl is a container object that is the child of a Form and acts as a wrapper for one or more other GUI objects.
@@ -42,7 +38,7 @@ The [Create](../methodorevents/create.md) event is generated at the point when t
 
 Host applications which support two different modes of operation, namely design mode and run mode, differ in the way that they create instances of ActiveX controls. Microsoft Access does not require an ActiveX control to appear properly in design mode. Instead, it draws a simple box containing just the name of the object. If your ActiveXControl is hosted by Microsoft Access, it will get a [PreCreate](../methodorevents/precreate.md) Event when an instance is created in design mode, and a [Create](../methodorevents/create.md) event only when it enters run mode. Microsoft Visual Basic, however, requires the object to draw itself immediately, even in design mode, and so a [Create](../methodorevents/create.md) event will be generated immediately after a [PreCreate](../methodorevents/precreate.md) event in this case.
 
-**Application**
+## Application
 
 Parents: [Form](../objects/form.md)
 

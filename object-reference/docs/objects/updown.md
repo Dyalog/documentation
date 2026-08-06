@@ -1,12 +1,10 @@
 # <span>UpDown</span> <span>Object</span>
 
-**Purpose:** The UpDown object is a pair of arrow buttons used to increment or decrement a value.
-
-**Description**
+The UpDown object is a pair of arrow buttons used to increment or decrement a value.
 
 An UpDown object is a pair of arrow buttons that the user can click to increment or decrement a value, such as a scroll position or a number displayed in a companion control. The [Spinner](spinner.md) object is actually a composite object consisting of an UpDown and a companion Edit.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

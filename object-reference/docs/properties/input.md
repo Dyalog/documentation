@@ -1,7 +1,5 @@
 # <span>Input</span> <span>Property</span>
 
-**Description**
-
 This property specifies objects to be associated with cells in a Grid.
 
 These
@@ -77,6 +75,6 @@ specified by the Input and [ShowInput](showinput.md) properties:
 
 ![](../img/input.gif)
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

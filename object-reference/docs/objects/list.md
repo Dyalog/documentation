@@ -1,8 +1,6 @@
 # <span>List</span> <span>Object</span>
 
-**Purpose:** Allows the user to select one or more items from a list.
-
-**Description**
+Allows the user to select one or more items from a list.
 
 The [Items](../properties/items.md) property is either a vector of character vectors or a character matrix, and determines the items in the List.
 
@@ -27,7 +25,7 @@ Note that data in a List is always scrollable if there are more items than will 
 
 The [MultiColumn](../properties/multicolumn.md) property is a Boolean value that specifies whether or not the List object displays its items in columns. The default is 0 which produces a single-column display. If [MultiColumn](../properties/multicolumn.md) is 1, the List object displays its items in columns whose width is defined by the [ColumnWidth](../properties/columnwidth.md) property.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

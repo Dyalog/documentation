@@ -1,8 +1,6 @@
 # <span>Clipboard</span> <span>Object</span>
 
-**Purpose:** This object provides access to the Windows clipboard.
-
-**Description**
+This object provides access to the Windows clipboard.
 
 When an application places data in the Windows clipboard, it may store it in one or more formats. An application wishing to retrieve data from the clipboard can then choose which format to read it in. Dyalog APL supports standard clipboard formats, including CF_TEXT, CF_BITMAP and CF_METAFILE. If there is any data in the clipboard, the [Formats](../properties/formats.md) property lists the formats in which it may be retrieved.
 
@@ -49,7 +47,7 @@ The [Metafile](../properties/metafileobj.md) property allows graphical informati
 
 A [ClipChange](../methodorevents/clipchange.md) (120) event is generated when another application places data in the clipboard.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [OLEServer](../objects/oleserver.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Root](../objects/root.md), [TCPSocket](../objects/tcpsocket.md)
 

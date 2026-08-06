@@ -1,9 +1,5 @@
 # <span>ToolButton</span> <span>Object</span>
 
-**Purpose:** The ToolButton object represents a button in a ToolControl.
-
-**Description**
-
 The ToolButton object represents a selectable button in a [ToolControl](toolcontrol.md) object.
 
 A ToolButton displays a text string, defined by its [Caption](../properties/caption.md) property, and an image defined by its [ImageIndex](../properties/imageindex.md) property. Apart from these characteristics, the appearance of a ToolButton is controlled by its parent [ToolControl](toolcontrol.md) object.
@@ -51,7 +47,7 @@ The following example illustrates the use of DropDown buttons:
 
 ![](../img/tool9.gif)
 
-**Application**
+## Application
 
 Parents: [ToolControl](../objects/toolcontrol.md)
 

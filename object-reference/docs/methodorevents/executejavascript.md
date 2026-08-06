@@ -1,7 +1,5 @@
 # <span>ExecuteJavaScript</span> <span>Method 839</span>
 
-**Description**
-
 This method is used to execute JavaScript in an [HTMLRenderer](../objects/htmlrenderer.md) object.
 
 The argument to ExecuteJavaScript is a single item as follows:
@@ -16,6 +14,6 @@ The shy result of ExecuteJavaScript is currently 1; this may change.
       hr.ExecuteJavaScript 'alert("Hello")'
 ```
 
-**Application**
+## Application
 
 Objects: [HTMLRenderer](../objects/htmlrenderer.md)

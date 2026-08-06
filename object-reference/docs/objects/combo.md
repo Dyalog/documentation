@@ -1,8 +1,6 @@
 # <span>Combo</span> <span>Object</span>
 
-**Purpose:** This object combines an input area with a list box and allows the user to enter a selection by typing text or by choosing an item from the list.
-
-**Description**
+This object combines an input area with a list box and allows the user to enter a selection by typing text or by choosing an item from the list.
 
 Three types of Combo box are provided by the [Style](../properties/style.md) property which may be `'Drop'` (the default), `'Simple'` or `'DropEdit'`.
 
@@ -33,7 +31,7 @@ Note that when you change the [Items](../properties/items.md) property using [`â
 
 The Combo object will report a [Select](../methodorevents/select.md) event (if enabled) when the user chooses an item from the list box. It will generate a [Change](../methodorevents/change.md) event (if enabled) when the user manually alters the contents of the edit field and then changes the focus to another object.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

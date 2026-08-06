@@ -1,8 +1,6 @@
 # <span>OLEServer</span> <span>Object</span>
 
-**Purpose:** The OLEServer object is used to establish a namespace as an OLE Server         object that can be used by an OLE Automation client.
-
-**Description**
+The OLEServer object is used to establish a namespace as an OLE Server         object that can be used by an OLE Automation client.
 
 The OLEServer object allows you to export an APL namespace so that its
 functions and variables become directly accessible to an OLE Automation client
@@ -42,7 +40,7 @@ displayed when the first instance of the OLEServer is created.
 
 [RunMode](../properties/runmode.md) and [ShowSession](../properties/showsession.md) apply only to *out-of-process* OLEServers.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [OLEServer](../objects/oleserver.md), [Root](../objects/root.md)
 

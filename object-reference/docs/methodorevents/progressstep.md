@@ -1,7 +1,5 @@
 # <span>ProgressStep</span> <span>Method 250</span>
 
-**Description**
-
 This method is used to increment the thumb in a [ProgressBar](../objects/progressbar.md) object.
 
 The ProgressStep method is niladic.
@@ -20,6 +18,6 @@ if Wrap is 1:
       LIMITS[1]+(1+LIMITS[2]-LIMITS[1])|THUMB+STEP-LIMITS[1]
 ```
 
-**Application**
+## Application
 
 Objects: [ProgressBar](../objects/progressbar.md)

@@ -1,8 +1,6 @@
 # <span>ListView</span> <span>Object</span>
 
-**Purpose:** The ListView object displays a collection of items.
-
-**Description**
+The ListView object displays a collection of items.
 
 The ListView object is a window that displays a collection of items, each item consisting of an icon and a label. The ListView provides several ways of
 arranging items and displaying individual items. For example, additional information about each item can be displayed in columns to the right of the icon
@@ -60,7 +58,7 @@ The [ItemGroups](../properties/itemgroups.md) and [ItemGroupMetrics](../properti
 
 ![](../img/lvsg1.gif)
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

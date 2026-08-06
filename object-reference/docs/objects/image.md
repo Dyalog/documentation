@@ -1,8 +1,6 @@
 # <span>Image</span> <span>Object</span>
 
-**Purpose:** Positions bitmaps and icons within an object.
-
-**Description**
+Positions bitmaps and icons within an object.
 
 The [Points](../properties/points.md) property specifies the co-ordinates of one or more points at which the specified graphical objects are to be drawn.
 
@@ -48,7 +46,7 @@ Display the "YES" [Bitmap](bitmap.md) at (20,10) and the "NO" [Bitmap](bitmap.md
       'F.I' ⎕WC'Image'(20(10 50))('Picture' 'YES' 'NO')
 ```
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Bitmap](../objects/bitmap.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [Metafile](../objects/metafile.md), [Printer](../objects/printer.md), [PropertyPage](../objects/propertypage.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

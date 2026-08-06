@@ -1,8 +1,6 @@
 # <span>SubForm</span> <span>Object</span>
 
-**Purpose:** This object represents a window that is owned by and constrained         within another [Form](form.md) or an [MDIClient](mdiclient.md) .
-
-**Description**
+This object represents a window that is owned by and constrained         within another [Form](form.md) or an [MDIClient](mdiclient.md) .
 
 If the SubForm is the child of a [Form](form.md), it is
 by default a simple featureless window that occupies the entire client area
@@ -30,7 +28,7 @@ A SubForm is constrained so that it cannot be moved outside its parent. In
 all other respects it behaves in a similar manner to a [Form](form.md) object. See [Form](form.md) object and the descriptions of
 its properties for further details.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Group](../objects/group.md), [MDIClient](../objects/mdiclient.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md), [TabControl](../objects/tabcontrol.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 
