@@ -10,7 +10,7 @@ Executes an expression.
 
 `Y` is a character vector containing an APL expression.
 
-The function executes the expression in `Y` exactly as it would be executed by the monadic Execute primitive function `⍎`, but handles [shy](../../../../programming-reference-guide/introduction/results) results  of the execution rather differently.
+The function executes the expression in `Y` exactly as it would be executed by the monadic Execute primitive function `⍎`, but handles [shy](../../../../programming-reference-guide/introduction/results#shy-results) results  of the execution rather differently.
 
 The left argument `X` determines how a shy result from the execution of `Y` is treated and is either 0 or 1.
 

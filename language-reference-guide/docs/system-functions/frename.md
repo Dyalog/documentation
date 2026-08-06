@@ -13,7 +13,7 @@ search:
 
 The file being renamed must be tied exclusively.
 
-The [shy](../../../programming-reference-guide/introduction/results) result of `⎕FRENAME` is the tie number of the file.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result of `⎕FRENAME` is the tie number of the file.
 
 <h2 class="example">Examples</h2>
 ```apl

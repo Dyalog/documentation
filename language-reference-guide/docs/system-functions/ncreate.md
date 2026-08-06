@@ -9,7 +9,7 @@ This function creates a new file. Under Windows the file is opened with mode 66 
 
 `Y` is 0 or a negative integer value that specifies an (unused) tie number by which the file may subsequently be referred. If `Y` is 0, the system allocates the first (closest to zero) available tie number which is returned as the result.
 
-The [shy](../../../programming-reference-guide/introduction/results) result of `⎕NCREATE` is the tie number of the new file.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result of `⎕NCREATE` is the tie number of the new file.
 
 ## Variant Options
 

@@ -9,7 +9,7 @@ The argument to ExecuteJavaScript is a single item as follows:
 |-----|----|-------------------------------------------|
 |`[1]`|Code|character vector containing JavaScript code|
 
-The [shy](../../../programming-reference-guide/introduction/results) result of ExecuteJavaScript is currently 1; this may change.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result of ExecuteJavaScript is currently 1; this may change.
 
 <h2 class="example">Example</h2>
 ```apl

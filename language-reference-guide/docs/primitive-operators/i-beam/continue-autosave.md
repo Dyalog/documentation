@@ -17,7 +17,7 @@ By default this is disabled when Dyalog starts and must be explicitly enabled us
 |0    |Disable the automatic saving of a `CONTINUE` workspace.                                                                                |
 |1    |Enable the automatic saving of a `CONTINUE` workspace. This setting applies only to the current session or until disabled by `2704⌶0` .|
 
-The [shy](../../../../programming-reference-guide/introduction/results) result `R` is the previous value of this setting.
+The [shy](../../../../programming-reference-guide/introduction/results#shy-results) result `R` is the previous value of this setting.
 
 Circumstances when Dyalog automatically saves a `CONTINUE` workspace include:
 

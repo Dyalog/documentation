@@ -15,7 +15,7 @@ If `Y` is a simple character vector, it must start with `file://`, followed by t
 
 If specified, `X` must be a numeric scalar. It may currently take the value `0`, `1` or `2`. If not specified, the value is assumed to be `1`.
 
-If `X` is `0`, `Y` must specify a single valid *namespace* which may or may not be named, or a file containing such a definition. If so, the [shy](../../../programming-reference-guide/introduction/results) result `R` contains a reference to the *namespace*. Even if the *namespace* is named, it is not established *per se*, although it will exist for as long as at least one reference to it exists.
+If `X` is `0`, `Y` must specify a single valid *namespace* which may or may not be named, or a file containing such a definition. If so, the [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` contains a reference to the *namespace*. Even if the *namespace* is named, it is not established *per se*, although it will exist for as long as at least one reference to it exists.
 
 If `X` is `1`, `Y` must specify a single valid *namespace* which may or may not be named, or a file containing such a definition.  If so, the shy result `R` contains a reference to the *namespace*. If `Y` contains the definition of a named *namespace*, the *namespace* is established in the workspace.
 

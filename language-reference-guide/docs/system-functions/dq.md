@@ -58,7 +58,7 @@ If `Action` is set to a character vector whose first element is the execute symb
 
 # The Result of `⎕DQ`
 
-`⎕DQ` terminates, returning the [shy](../../../programming-reference-guide/introduction/results) result `R`, in one of four instances.
+`⎕DQ` terminates, returning the [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R`, in one of four instances.
 
 Firstly, `⎕DQ` terminates when an event occurs whose "action code" is 1.  In this case, its result is a nested vector containing the **event message** associated with the event.  The structure of an event message varies according to the event type (see *Object Reference*).  However, an event message has at least two elements of which the first is a ref to the object or a character vector containing the name of the object, and the second is a character vector or numeric code which identifies the event type.
 

@@ -14,7 +14,7 @@ search:
 
 `⎕FX` attempts to create (fix) a function or operator in the workspace or current namespace from the definition given by `Y`.  `⎕IO` is an implicit argument of `⎕FX`. Note that `⎕FX` does not update the source of a scripted namespace, or of class or instance; the only two methods of updating the source of scripted objects is via the Editor, or by calling `⎕FIX`.
 
-If the function or operator is successfully fixed, `R` is a simple character vector containing its name and the result is [shy](../../../programming-reference-guide/introduction/results). Otherwise `R` is an integer scalar containing the (`⎕IO` dependent) index of the row of the canonical representation form in which the first error preventing its definition is detected. In this case the result `R` is **not shy**.
+If the function or operator is successfully fixed, `R` is a simple character vector containing its name and the result is [shy](../../../programming-reference-guide/introduction/results#shy-results). Otherwise `R` is an integer scalar containing the (`⎕IO` dependent) index of the row of the canonical representation form in which the first error preventing its definition is detected. In this case the result `R` is **not shy**.
 
 !!! Legacy "Legacy"
     Before Dyalog v20.0, it was possible to define dfns with unmatched parentheses and brackets. These are now rejected. TradFns will continue to fix as before, but subtle differences in how the code behaves might not be backwards-compatible and could have unexpected results.

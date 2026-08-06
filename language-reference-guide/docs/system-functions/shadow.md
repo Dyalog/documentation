@@ -9,7 +9,7 @@ search:
 
 Each valid name in `Y` is shadowed in the most recently invoked defined function or operator, as though it were included in the list of local names in the function or operator header.  The class of the name becomes 0 (undefined).  The name ceases to be shadowed when execution of the shadowing function or operator is completed.  Shadow has no effect when the state indicator is empty.
 
-The [shy](../../../programming-reference-guide/introduction/results) result `R` is a Boolean vector of 1s with the same length as the number of names in `Y`.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` is a Boolean vector of 1s with the same length as the number of names in `Y`.
 
 If a name is ill-formed, or if it is the name of a system constant or system function, `DOMAIN ERROR` is reported.
 

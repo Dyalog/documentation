@@ -14,7 +14,7 @@ Used dyadically, `⎕SH` starts an Auxiliary Processor. The effect, as far as th
 
 `⎕SH` loads the Auxiliary Processor from the file named by `X` using a search-path defined by the environment variable `WSPATH`.
 
-The [shy](../../../programming-reference-guide/introduction/results) result `R` is the process id of the Auxiliary Processor task.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` is the process id of the Auxiliary Processor task.
 
 The effect of starting an AP is that one or more **external functions** are defined in the workspace. These appear as locked functions and may be used in exactly the same way as regular defined functions.
 

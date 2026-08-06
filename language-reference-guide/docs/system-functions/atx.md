@@ -17,7 +17,7 @@ This function provides information about a name in a workspace, including its us
 |Group|`X`|Meaning|Default|
 |---|---|---|---|
 |Identity|0|Name|`''`|
-|Syntax|10|Function result ( `0` : none or not a function, `1` : explicit, `¯1` : [shy](../../../programming-reference-guide/introduction/results))|`0`|
+|Syntax|10|Function result ( `0` : none or not a function, `1` : explicit, `¯1` : [shy](../../../programming-reference-guide/introduction/results#shy-results))|`0`|
 |      |11|Function valence ( `0` : niladic, `1` : monadic, `2` : dyadic, `¯2` : ambivalent)|`0`|
 |_    _|12|Operator valence: ( `0` : not an operator, `1` : monadic, `2` : dyadic)|`0`|
 |Last edit|20|Author of last edit|`''`|

@@ -6,7 +6,7 @@ This method is used to obtain the minimum size that you must specify for a [Cale
 
 The GetMinSize method is niladic.
 
-The ([shy](../../../programming-reference-guide/introduction/results)) result of the method is a 2-element numeric vector containing the minimum height and width required for the object to display a complete month.
+The ([shy](../../../programming-reference-guide/introduction/results#shy-results)) result of the method is a 2-element numeric vector containing the minimum height and width required for the object to display a complete month.
 
 **Application**
 

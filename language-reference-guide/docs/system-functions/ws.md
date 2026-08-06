@@ -13,7 +13,7 @@ This system function resets property values for a GUI object.
 
 If `X` refers to a non-existent GUI name, a `VALUE ERROR` is reported.  If `Y` refers to a non-existent property, or to a property that is not defined for the type of object `X`, or to a property whose value may not be changed by `⎕WS`, a `DOMAIN ERROR` is reported.
 
-The [shy](../../../programming-reference-guide/introduction/results) result `R` contains the previous values of the properties specified in `Y`.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` contains the previous values of the properties specified in `Y`.
 
 GUI objects are named **relative** to the current namespace.  A null value of `X` (referring to the namespace in which the function is being evaluated) may be omitted.  The following examples are equivalent:
 ```apl
