@@ -123,7 +123,7 @@ LENGTH ERROR: Mismatched left and right argument shapes
 ```
 
 !!! Hint "Hints and Recommendations"
-    Singleton extension can lead to surprising or inconsistent results, and it is therefore best to rely on scalar extension only. In this example, `N←1` returns a matrix while all other values return a vector:
+    Singleton extension can lead to surprising or inconsistent results; it is, therefore, recommended to rely on scalar extension only. In this example, `N←1` returns a matrix while all other values return a vector:
     ```apl
           ⍴(1 1⍴10)+⍳N←3
     3
@@ -137,7 +137,7 @@ LENGTH ERROR: Mismatched left and right argument shapes
 
 ## Fill Elements and Prototypes
 
-Some primitive functions can include _fill elements_ in their result. The fill element for an array is the enclosed first _prototypical element_ or _prototype_ of the array. The _type_ function ([`∊`](type.md) with `⎕ML←0`) converts an array to consist entirely of prototypical elements; `⎕NULL`s stay, numbers become zeros, character become spaces, and instances are replaced with new instances of their classes (if they have niladic constructors). With `⎕ML←1` (the default), _type_ can be written as `⊃0⍴⊂` which exploits the prototype, since, if the array is empty, `⊃Y` gives the disclosed prototype of `Y`.
+Some primitive functions can include _fill elements_ in their result. The fill element for an array is the enclosed first _prototypical element_ or _prototype_ of the array. The _type_ function ([`∊`](type.md) with `⎕ML←0`) converts an array to consist entirely of prototypical elements; `⎕NULL`s remain unchanged, numbers become zeros, character become spaces, and instances are replaced with new instances of their classes (if they have niladic constructors). With `⎕ML←1` (the default), _type_ can be written as `⊃0⍴⊂` (this exploits the prototype, since, if the array is empty, `⊃Y` gives the disclosed prototype of `Y`).
 
 Primitive functions that can return an array including fill elements are _first_ ([`⊃`](first.md)), _expand_ ([`\`](expand.md) or [`⍀`](expand-first.md)), _replicate_ ([`/`](replicate.md) or [`⌿`](replicate-first.md)), _reshape_ ([`⍴`](reshape.md)), _mix_ ([`↑`](mix.md)), and _take_ ([`↑`](take/index.md)).
 
@@ -222,7 +222,7 @@ Some mixed primitive functions allow a vector axis value, indicating an operatio
 `⎕IO` is an [implicit argument](#implicit-arguments) of axis specification.
 
 !!! Hint "Hints and Recommendations"
-    Axis specification only applies to a specific set of primitives and never to defined functions. The [_rank operator_](../primitive-operators/rank.md) is a more general mechanism. If the function operates along the leading axis, then it can substitute for most axis specifications, espcially in combination with [`⍉`](transpose.md). For example:
+    Axis specification only applies to a specific set of primitives and never to defined functions. The [_rank_ operator](../primitive-operators/rank.md) is a more general mechanism. If the function operates along the leading axis, then it can substitute for most axis specifications, particularly in combination with [`⍉`](transpose.md). For example:
     ```apl
           1 0 1(⌿⍤1) 2 3⍴⍳6
     1 3
@@ -231,7 +231,7 @@ Some mixed primitive functions allow a vector axis value, indicating an operatio
     NAMES
     =====
     ```
-    If we wanted to replace `,` with a defined function that does something similar, then the surrounding code with be identical for the rank operator whereas axis specification would fail:
+    If we wanted to replace `,` with a defined function that does something similar, then the surrounding code would be identical for the _rank_ operator but axis specification would fail:
     ```apl
           'NAMES' (⍉{⍺,' ',⍵}⍤0) '='
     NAMES
