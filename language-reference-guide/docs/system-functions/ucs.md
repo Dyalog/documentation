@@ -15,7 +15,7 @@ The optional left argument `X` is either a simple character vector or a one- or 
 
 The second element (if present) is either `0` (the default) which causes ⎕UCS to consume and return integers between 0 and 255 or `83` which causes ⎕UCS to consume and return integers between `¯128` and `+127`. `83` can only be used with `'UTF-8'`.  See [`⎕DR`](dr.md) for more information about type 83 values.
 
-If `X` does not abide by the above restrictions, a `DOMAIN ERROR` is issued.
+If `X` is any other value, a `DOMAIN ERROR` is generated.
 
 If `X` is omitted, `Y` is a simple character or integer array, and the result `R` is a simple integer or character array with the same rank and shape as `Y`.
 
