@@ -1,15 +1,12 @@
 # Restrictions
 
-- Dfns need not return a result. However even a non-result-returning expression will terminate the function, so you can't, for example, call a non-result-returning function from the middle of a dfn.
-- You can trace a dfn **only** if it is defined on more than one line. Otherwise it is executed atomically in the same way as an execute (`⍎`) expression. This deliberate restriction is intended to avoid the confusion caused by tracing a line and seeing nothing change on the screen.
-- dfns do not currently support `⎕CS` which, if used, generates a `NONCE ERROR`.
-- `⎕SHADOW` ignores dfns when looking down the stack for a traditional function (tradfn) in which to make a new local name.
-- dfns do not support control structures or branch.
-- dfns do not support modified assignment such as  `X plus←10` where `X` is an array and `plus` is a function. In this example, both `X` and `plus` would be assigned the value 10.
-- `⎕MONITOR` does not apply to dfns and dops.
+The following restrictions apply to dfns and/or dops:
 
-## Supplied Workspaces
-
-You can find many samples of dfns and dops in utility workspace `dfns.dws` in the `ws` sub-directory.
-
-Additional examples are in workspaces: `min.dws`, `max.dws`, `tube.dws` and `eval.dws`.
+- A dfn does not need to return a [result](../../introduction/results.md). However, any expression that does not produce a result still terminates the dfn. This means that you cannot call a no-result function from the middle of a dfn and expect to continue after the dfn has been evaluated, as evaluation stops at that expression.
+- Normal tracing (command code **<TC>**) steps over a single-line dfn, executing it atomically like an _execute_ ([`⍎`](../../../../language-reference-guide/primitive-functions/execute)) expression. This deliberate restriction avoids the confusion of tracing a line and seeing nothing change. Inline tracing (command code **<IT>**) can step through the functions called within a single-line dfn, and a multi-line dfn traces normally.
+- [`⎕CS`](../../../../language-reference-guide/system-functions/cs) is not supported inside a dfn; attempting to call it generates a `NONCE ERROR`.
+- [`⎕MONITOR`](../../../../language-reference-guide/system-functions/set-monitor), [`⎕TRACE`](../../../../language-reference-guide/system-functions/set-trace), and [`⎕LOCK`](../../../../language-reference-guide/system-functions/lock) do not apply to dfns or dops.
+- [`⎕SHADOW`](../../../../language-reference-guide/system-functions/shadow) skips dfns when looking down the stack for a tradfn in which to make a new local name.
+- [Control structures](../../traditional-functions-and-operators/control-structures/control-structures-summary/) and other `:`-keywords, such as `:If` and `:Return`, cannot be used within a dfn. Instead, a dfn expresses conditions through [guards](guards.md).
+- Monadic branch (`→` given a line number, equivalent to `:GoTo`) is not supported. Niladic branch, that is [abort](../../../../language-reference-guide/other-syntax/abort) (`→`), does work: it clears the most recently suspended statement and all of its pendent statements from the state indicator.
+- Modified assignment (`X f←Y`) and use of the pass-through value of an assignment (that is, `X f Y←Z`) behave as expected when `f` is a primitive. However, in a dfn a named function is instead read as part of a multiple assignment, so `X plus←10` assigns `10` to both `X` and `plus`. Instead, modified assignment can be achieved by inserting `∘⊢`, that is, by using `X plus∘⊢←10`, and pass-through can be achieved by using `1 plus∘⊢a←10` or `1 plus⊢a←10`.
