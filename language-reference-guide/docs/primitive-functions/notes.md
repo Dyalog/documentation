@@ -9,7 +9,7 @@ search:
 _Implicit arguments_ are system functions that affect the result of a primitive function. They are all variables that have a global effect, only limited by the current namespace and function scope (if localised). Implicit argument propagate to newly created namespaces and defined functions at creation/definition time.
 
 !!! Hint "Hints and Recommendations"
-    Unexpected values of implicit arguments, especially `⎕IO` and `⎕ML`, are a frequent source of confusion. Keep deviations from the defaults limited and local. Check the implicit arguments if a primitive seems broken. The status bar of Ride and the Windows IDE highlight in red when the current value differs from the default as set by [DEFAULT_IO](../../windows-installation-and-configuration-guide/configuration-parameters/default-io.md) and [DEFAULT_ML](../../windows-installation-and-configuration-guide/configuration-parameters/default-ml.md). 
+    Unexpected values of implicit arguments, especially `⎕IO` and `⎕ML`, are a frequent source of confusion. Dyalog Ltd strongly recommends ensuring that deviations from the default values are limited and local. If a primitive function is not giving the expected result, check the values of its implicit arguments. The status bar of Ride and the Windows IDE shows the current value of `⎕IO` and `⎕ML` and highlights them if they differ from the default values as set by [DEFAULT_IO](../../windows-installation-and-configuration-guide/configuration-parameters/default-io.md) and [DEFAULT_ML](../../windows-installation-and-configuration-guide/configuration-parameters/default-ml.md).
 
 Table: Settings Affecting Behaviour of Primitive Functions { #sysvars }
 
