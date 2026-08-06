@@ -9,8 +9,8 @@ search:
 
 [Case Fold](c-monadic.md)
 ```apl
-      ⎕C 'Hello'
-hello
+      ⎕C 'Hello Ίσως'
+hello ίσωσ
 ```
 
 ## Dyadic `⎕C` means

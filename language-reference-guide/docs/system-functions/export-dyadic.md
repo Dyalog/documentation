@@ -5,7 +5,7 @@ search:
 
 # <span>Set Export Type</span> `{R}←X ⎕EXPORT Y`{{key}}
 
-`⎕EXPORT` is used to set the export type of a defined function (or operator) referenced by the `⎕PATH` mechanism.
+`⎕EXPORT` is used to set the export type of a defined function (or operator) referenced by the [`⎕PATH`](path.md) mechanism.
 
 `Y` is a character matrix or vector-of-vectors representing the names of functions and operators whose export type is to be set.
 
@@ -23,6 +23,21 @@ When the path mechanism locates a referenced function (or operator) in the list 
 |---|---|
 |0|This instance of the function is ignored and the search is resumed at the next namespace in the `⎕PATH` list.  Type-0 is typically used for functions residing in a utility namespace which are not themselves utilities, for example the private sub-function of a utility function.|
 |1|This instance of the function is executed in the namespace in which it was found and the search terminated.  The effect is exactly as if the function had been referenced by its full path name.|
+
+<h2 class="example">Example</h2>
+```apl
+      'utils' ⎕NS ⍬
+      utils.⎕FX 'r←MyUtil y' 'r←Sub y'
+      utils.⎕FX 'r←Sub y' 'r←y y'
+      0 utils.⎕EXPORT 'Sub'
+      ⎕PATH←'utils'
+      MyUtil 10
+10 10
+      Sub 10
+VALUE ERROR: Undefined name: Sub
+      Sub 10
+      ∧
+```
 
 !!! Warning "Warning"
     The left domain of `⎕EXPORT` might be extended in future to include extra types 2, 3,... (for example, to change the behaviour of the function).  This means that, while `⎕EXPORT` returns a Boolean result in the first version, this might not be the case in the future.  If you need a Boolean result, use `0=` or an equivalent.  For example, use `0=0 ⎕EXPORT Y` to verify that setting the export type to `0` succeeded.

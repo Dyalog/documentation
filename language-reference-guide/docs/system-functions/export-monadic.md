@@ -5,7 +5,7 @@ search:
 
 # <span>Query Export Type</span> `{R}←⎕EXPORT Y`{{key}}
 
-`⎕EXPORT` is used to query the export type of a defined function (or operator) referenced by the `⎕PATH` mechanism, as [set by dyadic `⎕EXPORT`](export-dyadic.md).
+`⎕EXPORT` is used to query the export type of a defined function (or operator) referenced by the [`⎕PATH`](path.md) mechanism, as [set by dyadic `⎕EXPORT`](export-dyadic.md).
 
 `Y` is a character matrix or vector-of-vectors representing the names of functions and operators whose export type is to be queried.
 
@@ -16,6 +16,16 @@ When the path mechanism locates a referenced function (or operator) in the list 
 |---|---|
 |0|This instance of the function is ignored and the search is resumed at the next namespace in the `⎕PATH` list.  Type-0 is typically used for functions residing in a utility namespace which are not themselves utilities, for example the private sub-function of a utility function.|
 |1|This instance of the function is executed in the namespace in which it was found and the search terminated.  The effect is exactly as if the function had been referenced by its full path name.|
+
+<h2 class="example">Example</h2>
+```apl
+      ⎕FX 'MyFn' 'r←42'
+      ⎕EXPORT 'MyFn'
+1
+      0 ⎕EXPORT 'MyFn'
+      ⎕EXPORT 'MyFn'
+0
+```
 
 !!! Warning "Warning"
     `⎕EXPORT` returns a Boolean result at present, but extra types 2, 3,... might be added in future.  This means that, while `⎕EXPORT` returns a Boolean result in the current version, this might not be the case in the future.  If you need a Boolean result, use `0≠` or an equivalent.  For example, use `(0≠⎕EXPORT ⎕NL 3 4)⌿⎕NL 3 4` to get a list of exported functions and operators.
