@@ -64,7 +64,7 @@ nav:
       - Configuration Files: configuration-parameters/configuration-files.md
       - Environment Variables: configuration-parameters/environment-variables.md
   - Configuring the Editor: configuring-the-editor.md
-  - Starting from scripts: starting-apl-from-scripts.md
+  - Starting APL from scripts: starting-apl-from-scripts.md
   - Magic: magic.md
   - SE and SALT: se-and-user-commands.md
   - HOME dyalog directory: home-dyalog-directory.md
