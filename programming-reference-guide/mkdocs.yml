@@ -156,8 +156,6 @@ nav:
                   defined-functions-and-operators/traditional-functions-and-operators/control-structures/section.md
               - Disposable Statement: 
                   defined-functions-and-operators/traditional-functions-and-operators/control-structures/disposable.md
-          - APL Line Editor: 
-              defined-functions-and-operators/traditional-functions-and-operators/apl-line-editor.md
       - Dfns and Dops:
           - Introduction: defined-functions-and-operators/dfns-and-dops/dynamic-functions-and-operators.md
           - Model Syntax: defined-functions-and-operators/dfns-and-dops/model-syntax.md
@@ -174,6 +172,7 @@ nav:
           - Tail Calls: defined-functions-and-operators/dfns-and-dops/tail-calls.md
           - Dops: defined-functions-and-operators/dfns-and-dops/dynamic-operators.md
           - Restrictions: defined-functions-and-operators/dfns-and-dops/restrictions.md
+      - APL Line Editor: defined-functions-and-operators/apl-line-editor.md
   - Object Oriented Programming:
       - Introducing Classes:
           - Introducing Classes: object-oriented-programming/introducing-classes/introducing-classes.md
