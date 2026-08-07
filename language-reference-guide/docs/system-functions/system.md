@@ -32,7 +32,7 @@ Getting the currently running APL interpreter's version number:
 The result `R` is a namespace in the root of the namespace where `⎕SYSTEM` was called (`#` or `⎕SE`) and contains only namespace members. Each sub-namespace contains only variable members.
 
 !!! Info "Information"
-    More members might be added in a future release of Dyalog, but `R` will remain serialisable using [`1⎕JSON`](json.md).
+    More members might be added in a future release of Dyalog, but `R` will remain serialisable using [`1∘⎕JSON`](json.md).
 
 !!! Warning "Warning"
     Do attempt to add or modify members as changes will not be persisted. Instead, clone the namespace using `⎕NS ⎕SYSTEM` and modify the result, but note that this locks down dynamic values like `⎕SYSTEM.Directories.Current` and `⎕SYSTEM.OS.UTCOffset`.
@@ -76,7 +76,7 @@ This namespace provides information about the specific interpreter instance in w
 Indicates whether the interpreter is a 64- or 32-bit application.
 
 !!! Warning "Warning"
-    Do not confuse this with the bit width of the operating system; 64-bit operating systems can run 32-bit interpreters (but not the other way round).
+    Do not confuse this with the bit width of the operating system; some 64-bit operating systems can run 32-bit interpreters (but not the other way round).
 
 #### Executable.BuildTarget
 _For Dyalog internal use only._
@@ -152,7 +152,7 @@ Boolean indicating whether (`1`) or not (`0`) [Object Linking and Embedding](../
 Full version of the built-in [Perl Compatible Regular Expressions](../pcre-specifications) engine, for example `10 47`.
 
 !!! Hint "Hints and Recommendations"
-    Whether (`1`) or not (`0`) PCRE2 is in use is given by `10≤⎕SYSTEM.Features.PCRE`.
+    Whether (`1`) or not (`0`) PCRE1 is in use is given by `8≥⊃⎕SYSTEM.Features.PCRE`.
 
 ### Host
 This namespace provides information about network identity.
@@ -226,10 +226,10 @@ The character used to separate multiple filenames in a single character vector. 
 The preferred file extension for [shared libraries](https://en.wikipedia.org/wiki/Shared_library) – one of `'.dll'` (Microsoft Windows), `'.dylib'` (macOS), or `'.so'` (Linux).
 
 #### OS.UTCOffset
-The number of hours by which the local time zone is offset from [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
+The number of hours by which the current local time zone (with [daylight saving time](https://en.wikipedia.org/wiki/Daylight_saving_time) taken into account) is offset from [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
 
 !!! Hint "Hints and Recommendations"
-    A positive number means the local time zone is ahead of UTC. A negative number means behind UTC. For example, if `⎕OS.UTCOffset` is `10`, then when it is noon UTC (12:00), it is 10 PM local time (`12+10`, that is, 22:00).
+    For example, if `⎕OS.UTCOffset` is `¯3`, then when it is 10:00 UTC, it is 07:00 local time (`10+¯3`).
 
 #### OS.Version
 A three-element integer vector:
@@ -239,7 +239,7 @@ A three-element integer vector:
 - AIX: version and release number, followed by a `0`
 
 !!! Warning "Warning"
-    Windows 11 identifies itself as "Windows 10". Whether (`1`) or not (`0`) Windows 10 is in use is given by `1 0 1≡10 22000⍸⎕SYSTEM.OS.Version`.
+    Windows 11 identifies itself as "Windows 10". Whether (`1`) or not (`0`) Windows 10 is in use is given by `1 0 2≡10 11 21999⍸⎕SYSTEM.OS.Version`.
 
 #### OS.VolumeSeparator
 The character used to separate the [volume](https://en.wikipedia.org/wiki/Volume_(computing)) from the rest of a file path – one of `'/'` or `':'`.
