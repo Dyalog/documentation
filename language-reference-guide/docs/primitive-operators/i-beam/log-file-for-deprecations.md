@@ -12,7 +12,7 @@ Manages the file used to log the use of deprecated features. For an overview of 
 
 If `X` is omitted, the result `R` is the name of the log file currently being written to. An empty character vector is returned if a name has not been set.
 
-Otherwise, `X` is a simple character scalar or vector containing a valid filename, or is empty. Any existing log file is closed and, if `X` is not empty, the specified file is opened and subsequent log messages will be appended to it. The shy result `R` is the previous name of the log file.
+Otherwise, `X` is a simple character scalar or vector containing a valid filename, or is empty. Any existing log file is closed and, if `X` is not empty, the specified file is opened and subsequent log messages will be appended to it. The [shy](../../../../programming-reference-guide/introduction/results#shy-results) result `R` is the previous name of the log file.
 
 An error will be signalled if the specified file cannot be opened in append mode. However, if messages cannot subsequently be written to it, the running application will continue uninterrupted and the messages will be silently discarded. The log file status can be queried at any time.
 

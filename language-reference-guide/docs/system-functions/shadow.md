@@ -12,7 +12,7 @@ Each valid name in `Y` is shadowed in the currently executing defined function o
 !!! Info "Information"
     `⎕SHADOW` skips dfns and dops: when it is invoked from a dfn or dop, the name is shadowed in the nearest tradfn further down the stack.
 
-The shy result `R` is a Boolean vector of 1s with the same length as the number of names in `Y`.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` is a Boolean vector of 1s with the same length as the number of names in `Y`.
 
 If a name is ill-formed, or if it is the name of a system constant or system function, `DOMAIN ERROR` is reported.
 

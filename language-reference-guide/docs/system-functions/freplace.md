@@ -11,7 +11,7 @@ search:
 
 `X` is any array (including, for example, the `⎕OR` of a namespace), and overwrites the value of the specified component.  The component information (see [File Read Component Information](frdci.md)) is also updated.
 
-The shy result of `⎕FREPLACE` is the file index (component number of replaced record).
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result of `⎕FREPLACE` is the file index (component number of replaced record).
 
 <h2 class="example">Example</h2>
 ```apl

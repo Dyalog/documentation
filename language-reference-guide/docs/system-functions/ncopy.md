@@ -15,7 +15,7 @@ Source and destination path names may be full or relative (to the current workin
 
 If `X` specifies an existent directory then each source in `Y` is copied into that directory, otherwise `X` specifies the name of the copy. `X` must specify an existent directory if the source contains multiple names or if the **Wildcard** option is set.
 
-The shy result `R` contains count(s) of top-level items copied. If `Y` is a single source name, `R` is a scalar otherwise it is a vector of the same length as `Y`.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` contains count(s) of top-level items copied. If `Y` is a single source name, `R` is a scalar otherwise it is a vector of the same length as `Y`.
 
 ## Variant Options
 

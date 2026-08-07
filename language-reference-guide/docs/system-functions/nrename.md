@@ -9,7 +9,7 @@ search:
 
 `Y` is a negative integer tie number associated with a tied native file.  `X` is a simple character vector or scalar containing a valid (and unused) file name.
 
-The shy result of `⎕NRENAME` is the tie number of the renamed file.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result of `⎕NRENAME` is the tie number of the renamed file.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

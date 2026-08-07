@@ -7,7 +7,7 @@ search:
 
 This function appends the ravel of its left argument `X` to the end of the designated native file.  `X` must be a simple homogeneous APL array.  `Y` is a 1- or 2-element integer vector.  `Y[1]` is a negative integer that specifies the tie number of a native file.  The optional second element `Y[2]` specifies the data type to which the array `X` is to be converted before it is written to the file.
 
-The shy result is the location of the internal file pointer which will be pointing to the end of the newly written data.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result is the location of the internal file pointer which will be pointing to the end of the newly written data.
 
 Note that `8 ⎕NINFO ⊃Y` can be used to report the current position of the file pointer.
 

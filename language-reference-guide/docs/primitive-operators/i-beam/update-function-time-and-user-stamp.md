@@ -10,7 +10,7 @@ search:
 
 `X` is an array of function attributes in the same format as the output of `⎕AT`.
 
-The shy result `R` is a vector of numeric items, one per each specified function containing the following values:
+The [shy](../../../../programming-reference-guide/introduction/results#shy-results) result `R` is a vector of numeric items, one per each specified function containing the following values:
 
 |---|----------------------------------------------------------------------------------|
 |`0`|No change was made; the name is not that of a function, or the function was locked|

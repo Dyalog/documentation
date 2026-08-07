@@ -5,7 +5,7 @@ search:
 
 # <span>Set External Variable</span> `{R}←X ⎕XT Y`{{key}}
 
-`Y` must be a simple character scalar or vector which is taken to be a variable name.  `X` must be a simple character scalar or vector which is taken to be a file reference.  The name given by `Y` is identified as an EXTERNAL VARIABLE associated with an EXTERNAL ARRAY whose value may be stored in file identified by `X`. The shy result `R` has the same value as `X`.
+`Y` must be a simple character scalar or vector which is taken to be a variable name.  `X` must be a simple character scalar or vector which is taken to be a file reference.  The name given by `Y` is identified as an EXTERNAL VARIABLE associated with an EXTERNAL ARRAY whose value may be stored in file identified by `X`. The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` has the same value as `X`.
 
 If `Y` is the name of a defined function or operator, a label or a namespace in the active workspace, a `DOMAIN ERROR` is reported.
 

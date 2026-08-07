@@ -67,7 +67,7 @@ A traditional defined function may be monadic, dyadic, or niladic. If dyadic, th
 
 Unless the callback function is niladic, it will be supplied a right argument (`⍵` for a dfn)  containing the *event message* and a left argument  (`⍺` for a dfn) of the value of the array *Arg* (if specified).
 
-The function may be defined to return no result, a result, or a shy result. The result determines how the event is handled.
+The function may be defined to return no result, a result, or a [shy](../../../programming-reference-guide/introduction/results#shy-results) result. The result determines how the event is handled.
 
 The *default processing* of the event is deferred until **after** the callback has been run, and may be inhibited or modified by its result. If the callback function returns no result, or returns a scalar 1, normal processing of the event is allowed to continue as soon as the callback completes. If the callback returns a scalar 0, normal processing of the event is inhibited and the effect
 is identical to setting *Action* to `¯1`. A callback function may also return an event message as its result. If so, `⎕DQ` will action *this* event rather than the original one that fired the callback.

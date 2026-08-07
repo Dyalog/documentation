@@ -17,7 +17,7 @@ Sources and destinations may be full or relative (to the current working directo
 
 If `Y` specifies more than one source, `X` must be a character vector  that specifies an existent directory to which each of the sources in `Y` is to be moved.
 
-The shy result `R` contains count(s) of top-level items moved. If `Y` is a single source name, `R` is a scalar otherwise it is a vector of the same length as `Y`.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` contains count(s) of top-level items moved. If `Y` is a single source name, `R` is a scalar otherwise it is a vector of the same length as `Y`.
 
 ## Variant Options
 
