@@ -113,7 +113,7 @@ Because certain markup which describes the format of allowable data (such as ele
 
 Attributes with names beginning **xml:** are reserved. Only **xml:space** is treated specially by `⎕XML`. When converting both from and to XML, the value for this attribute has the following effects on space normalization for the character data within this element and child elements within it (unless subsequently overridden):
 
-- **default** – space normalization is as determined by the **whitespace** option. 
+- **default** – space normalization is as determined by the `Whitespace` option. 
 - **preserve** - space normalization is disabled – all whitespace is preserved as given.
 - **any other value** – rejected.
 
@@ -146,7 +146,7 @@ The remainder of XML markup, including document type declarations,  XML declarat
 
 - The level number in the first column of the result `R` is 0 for the outermost level and subsequent levels are represented by an increase of 1 for each level. Thus, for "&lt;xml>&lt;document id="001">An introduction to XML &lt;/document>&lt;/xml>&lt;/code>" the _xml_ element is at level 0 and the _document id_ element is at level 1. The text within the _document id_ element is at level 2.
 - Each tag in the XML contains an element name and zero or more attribute name and value pairs, delimited by '<' and '>' characters. The delimiters are not included in the result matrix. The element name of a tag is stored in column 2 and the attribute(s) in column 4.
-- All XML markup other than tags are delimited by either '<!' and '>', or '<?' and '>' characters. By default these are not stored in the result matrix but the **markup** option may be used to specify that they are. The elements are stored in their entirety, except for the leading and trailing '<' and '>' characters, in column 2. Nested constructs are treated as a single block. Because the leading and trailing '<' and '>' characters are stripped, such entries will always have either '!' or '&' as the first character.
+- All XML markup other than tags are delimited by either '<!' and '>', or '<?' and '>' characters. By default these are not stored in the result matrix but the `Markup` option may be used to specify that they are. The elements are stored in their entirety, except for the leading and trailing '<' and '>' characters, in column 2. Nested constructs are treated as a single block. Because the leading and trailing '<' and '>' characters are stripped, such entries will always have either '!' or '&' as the first character.
 - Character data itself has no tag name or attributes. As an optimisation, when character data is the sole content of an element, it is included with its parent rather than as a separate row in the result. Note that when this happens, the level number stored is that of the parent; the data itself implicitly has a level number one greater.
 - Attribute name and value pairs associated with the element name are stored in the fourth column, in an (*n x 2*) matrix of character values, for the *n* (including zero) pairs.
 - Each row is further described in the fifth column as a convenience to simplify processing of the array (although this information could be deduced). Any given row may contain an entry for an element, character data, markup not otherwise defined, a comment or a processing instruction. Furthermore, an element will have zero or more of these as children. For all types except elements, the value in the fifth column is as shown above. For elements, the value is computed by adding together the value of the row itself (1) and those of its children. For example, the value for a row for an element which contains one or more sub-elements and character data is 7 – that is 1 (element) + 2 (child element) + 4 (character data). It should be noted that:
@@ -155,7 +155,7 @@ The remainder of XML markup, including document type declarations,  XML declarat
 - Only immediate children are considered when computing the value. For example, an element which contains a sub-element which in turn contains character data does not itself contain the character data.
 - The computed value is derived from what is actually preserved in the array. For example, if the source XML contains an element which contains a comment, but comments are being discarded, there will be no entry for the comment in the array and the fifth column for the element will not indicate that it has a child comment.
 
-### Conversion to XML
+## Conversion to XML
 
 Conversion to XML takes an array with the format described above and generates XML text from it. There are some simplifications to the array which are accepted:
 
@@ -171,17 +171,19 @@ The following validations are performed on the data in the array:
 
 Then, character references and entity references are emitted in place of characters where necessary, to ensure that valid XML is generated. However, markup, if present, is *not* validated and it is possible to generate invalid XML if care in not taken with markup constructs.
 
-### Options
+## Variant Options
 
-There are 3 options which may be specified using the Variant operator `⍠` (recommended) or by the optional left argument `X` (retained for backwards compatibility). The names are different and are case-sensitive; they must be spelled exactly as shown below.
+`⎕XML` supports three variant options, `Whitespace`, `Markup` and `UnknownEntity`, summarised in [](#variant-table) and described in detail beneath it. There is no principal option. Each option can also be specified through the optional left argument `X` (retained for backwards compatibility) using the alternative name shown in the table; the names are case-sensitive and must be spelled exactly as shown.
 
-|Option names for Variant|Option names for left argument|
-|------------------------|------------------------------|
-|Whitespace              |whitespace                    |
-|Markup                  |markup                        |
-|UnknownEntity           |unknown-entity                |
+Table: Variant options overview { #variant-table }
 
-The values of each option are tabulated below. In each case the value of the option for Variant is given first, followed by its equivalent for the optional left argument in brackets; for example, **UnknownEntity (unknown-entity)**.
+|Variant Option|Left-argument name|Values|Effect|
+|---|---|---|---|
+|[`Whitespace`](#variant-option-whitespace)|`whitespace`|`Strip` <small>(default)</small>, `Trim` or `Preserve`|Handling of white space in character data.|
+|[`Markup`](#variant-option-markup)|`markup`|`Strip` <small>(default)</small> or `Preserve`|Whether markup appears in the result (import only).|
+|[`UnknownEntity`](#variant-option-unknownentity)|`unknown-entity`|`Replace` <small>(default)</small> or `Preserve`|Handling of unknown entity and character references.|
+
+The values of each option are tabulated below. In each case the value of the option for Variant is given first, followed by its equivalent for the optional left argument in brackets; for example, `Strip` `(strip)`.
 
 Note that the default value is shown first, and that the option names and values are case-sensitive.
 
@@ -194,9 +196,9 @@ If options are specified using the optional left argument,  `X` specifies a set 
 
 Errors detected in the input arrays or options will all cause `DOMAIN ERROR`.
 
-### Whitespace (whitespace)
+### Variant Option: Whitespace
 
-When converting from XML `Whitespace` specifies the default handling of white space surrounding and within character data. When converting to XML `Whitespace` specifies the default formatting of the XML. Note that attribute values are not comprised of character data so white space in attribute values is always preserved.
+The left-argument name is `whitespace`. When converting from XML, `Whitespace` specifies the default handling of white space surrounding and within character data. When converting to XML `Whitespace` specifies the default formatting of the XML. Note that attribute values are not comprised of character data so white space in attribute values is always preserved.
 
 |Converting from XML||
 |---|---|
@@ -317,9 +319,9 @@ When converting from XML `Whitespace` specifies the default handling of white sp
 └∊──────────────────────────────────────┘
 ```
 
-### Markup (markup)
+### Variant Option: Markup
 
-When converting from XML, `Markup` determines whether markup (other than entity tags) appears in the output array or not. When converting to XML `Markup` has no effect.
+The left-argument name is `markup`. When converting from XML, `Markup` determines whether markup (other than entity tags) appears in the output array or not. When converting to XML `Markup` has no effect.
 
 |Converting from XML                                                                                                                       ||
 |--------------------|----------------------------------------------------------------------------------------------------------------------|
@@ -427,9 +429,9 @@ When converting from XML, `Markup` determines whether markup (other than entity 
 └∊──────────────────────────────────────────────┘
 ```
 
-### UnknownEntity (unknown-entity)
+### Variant Option: UnknownEntity
 
-When converting from XML, this option determines what happens when an unknown entity reference, or a character reference for a Unicode character which cannot be represented as an APL character, is encountered. In Classic versions of Dyalog APL that is any Unicode character which does not appear in `⎕AVU`. When converting to XML, this option determines what happens to Esc characters (`⎕UCS 27`) in data.
+The left-argument name is `unknown-entity`. When converting from XML, this option determines what happens when an unknown entity reference, or a character reference for a Unicode character which cannot be represented as an APL character, is encountered. In Classic versions of Dyalog APL that is any Unicode character which does not appear in `⎕AVU`. When converting to XML, this option determines what happens to Esc characters (`⎕UCS 27`) in data.
 
 |Converting from XML                                                                                                              ||
 |--------------------|-------------------------------------------------------------------------------------------------------------|
