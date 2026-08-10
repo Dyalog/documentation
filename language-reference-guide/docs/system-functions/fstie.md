@@ -35,6 +35,9 @@ to:
       '../budget/COSTS' ⎕FSTIE 2
 ```
 
+!!! Info "Information"
+    Small-span (32-bit) component files are currently read-only; this support is scheduled for removal in a future release, after which it will not be possible to tie small-span component files. Dyalog Ltd recommends using `⎕FCOPY` to convert any such files to large-span (64-bit). For information on how to identify calls to small-span component files in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
+
 ## Variant Options
 
 `⎕FSTIE` supports a single variant option, `Mode`, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md).
@@ -60,8 +63,6 @@ FILE ACCESS ERROR: cf.dcf: File is not writable
                 ∧
 ```
 
-!!! Info "Information"
-    Small-span (32-bit) component files are currently read-only; this support is scheduled for removal in a future release, after which it will not be possible to tie small-span component files. Dyalog Ltd recommends using `⎕FCOPY` to convert any such files to large-span (64-bit). For information on how to identify calls to small-span component files in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
