@@ -39,22 +39,28 @@ If `X` specifies the name of an existing file, the operation fails with a `FILE 
 !!! note
     This operation is atomic. If an error occurs during the copy operation (such as disk full) or if a strong interrupt is issued, the copy will be aborted and the new file `X` will not be created.
 
-## File Properties
+## Variant Options
 
-`⎕FCOPY` allows you to specify properties for the new file via the variant operator `⍠` used with the following options:
+`⎕FCOPY` sets the properties of the new file through variant options, summarised in [](#variant-table). These are the file properties described in [File Properties](fprops.md).
 
-- `'J'` - journaling level; a numeric value.
-- `'C'` - checksum level; 0 or 1.
-- `'Z'` - compression; 0 or 1.
-- `'U'` - Unicode; 0 or 1
-- `'S'` - File Size (span); 64
+Table: Variant options overview { #variant-table }
 
-The Principal Option is  as follows:
+|Variant Option|Value|Effect|
+|---|---|---|
+|`'J'`|a journaling level|Sets the journaling level.|
+|`'C'`|`0` or `1`|Sets the checksum level.|
+|`'Z'`|`0` or `1`|Sets compression.|
+|`'U'`|`0` or `1`|Sets Unicode support.|
+|`'S'`|`64`|Sets the file size (span).|
 
-- 0 - sets `('J' 0) ('C' 0)`
-- 1 - sets `('J' 1) ('C' 1)`
-- 2 - sets `('J' 2) ('C' 1)`
-- 3 - sets `('J' 3) ('C' 1)`
+The principal option is a number that sets journaling (`'J'`) and checksum (`'C'`) together:
+
+|Principal option|Effect|
+|---|---|
+|`0`|sets `('J' 0) ('C' 0)`|
+|`1`|sets `('J' 1) ('C' 1)`|
+|`2`|sets `('J' 2) ('C' 1)`|
+|`3`|sets `('J' 3) ('C' 1)`|
 
 <h2 class="example">Examples</h2>
 ```apl
