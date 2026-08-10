@@ -13,6 +13,9 @@ The file must exist and be accessible by the user.  If it is already tied by an
 
 The [shy](../../../programming-reference-guide/introduction/results#shy-results) result of `⎕FSTIE` is the tie number of the file.
 
+!!! Info "Information"
+    Small-span (32-bit) component files are currently read-only; this support is scheduled for removal in a future release, after which it will not be possible to tie small-span component files. Dyalog Ltd recommends using `⎕FCOPY` to convert any such files to large-span (64-bit). For information on how to identify calls to small-span component files in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
+
 ## Automatic Tie Number Allocation
 
 A tie number of 0 as argument to a create, share tie or exclusive tie operation, allocates the first (closest to zero) available tie number and returns it as an explicit result. This allows you to simplify code. For example:
@@ -34,9 +37,6 @@ to:
  
       '../budget/COSTS' ⎕FSTIE 2
 ```
-
-!!! Info "Information"
-    Small-span (32-bit) component files are currently read-only; this support is scheduled for removal in a future release, after which it will not be possible to tie small-span component files. Dyalog Ltd recommends using `⎕FCOPY` to convert any such files to large-span (64-bit). For information on how to identify calls to small-span component files in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
 
 ## Variant Options
 
@@ -62,7 +62,6 @@ FILE ACCESS ERROR: cf.dcf: File is not writable
       'cf'(⎕FSTIE⍠'Mode' 'W')1
                 ∧
 ```
-
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
