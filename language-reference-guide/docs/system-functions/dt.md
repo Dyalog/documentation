@@ -212,6 +212,15 @@ Table: Military time zones { #timezones }
 
 The resolutions of system clocks vary by platform.
 
+<h3 class="example">Example</h3>
+
+The following expression returns UTC in `⎕TS`-form (`⎕TS` gives local time):
+
+```apl
+      ⊃¯1 ⎕DT 'Z'
+2026 8 10 19 9 12 120
+```
+
 ## Formatting Patterns
 
 Either or both of <code>X<sub>R</sub></code> and <code>X<sub>Y</sub></code> can be a character vector containing a *pattern* which describes how a datetime is, or is to be, formatted as text.
