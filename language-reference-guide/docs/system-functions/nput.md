@@ -59,17 +59,21 @@ The [shy](../../../programming-reference-guide/introduction/results#shy-results)
 18                                         
 ```
 
-## NEOL Option
+## Variant Options
 
-The NEOL variant option specifies how embedded line separators are treated.
+`⎕NPUT` supports one variant option, `NEOL`.
+
+### Variant Option: NEOL
+
+The `NEOL` variant option specifies how embedded line separators are treated. The default is `1`.
 
 |----|-------------------------------------------------------------------------------------------------------------|
 |`0` |embedded line separator characters are preserved as is,and a `newline` is added to the last line if required.|
-|`1` {: .shaded} |every embedded LF is replaced by `newline`                                                                   |
+|`1` <small>(default)</small>|every embedded LF is replaced by `newline`                                                                   |
 |`2` |every embedded line separator character is replaced by `newline`                                             |
 |`¯1`|same as 0 except that a `newline` is not added to the last line                                              |
 
-## Embedded line-separator examples
+<h4 class="example">Examples</h4>
 
 ```apl
       LF CR←⎕UCS 10 13
@@ -85,7 +89,7 @@ The NEOL variant option specifies how embedded line separators are treated.
 
 `t` contains three lines each with different line endings: LF, CR and CRLF.
 
-In the first example (NEOL is by default 1), only the LF is normalised so the written file contains lines ending with CRLF, CR and CRLF.
+In the first example (`NEOL` is by default `1`), only the LF is normalised so the written file contains lines ending with CRLF, CR and CRLF.
 
 In the second example, none of the line endings are normalised so the written file contains lines ending with LF, CR and CRLF.
 
