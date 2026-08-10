@@ -27,35 +27,37 @@ The result `R` is a vector of the numbers of missing or damaged components. `R` 
 
 Other negative numbers represent damage to the file metadata; this set may be extended in the future.
 
-## Specifying options using Variant
+## Variant Options
 
-Using Variant, the options are as follows:
+`⎕FCHK` supports three variant options, `Task`, `Repair` and `Force`, summarised in [](#variant-table) and described in detail beneath it. The principal option is `Repair`.
 
-- Task
-- Repair
-- Force
+Table: Variant options overview { #variant-table }
 
-*Rebuild* causes the *file indices* to be discarded and rebuilt. *Repair* only takes place on files which have been checked and found to be damaged. It involves a rebuild, but that only takes place if it is needed. Note that Repair and Force only apply if Task is `'Scan'`.
+|Variant Option|Value|Effect|
+|---|---|---|
+|[`Task`](#variant-option-task)|`'Scan'` <small>(default)</small> or `'Rebuild'`|Whether to check (and optionally repair) the file, or unconditionally rebuild it.|
+|[`Repair`](#variant-option-repair)<br><small>principal</small>|`0` <small>(default)</small> or `1`|Whether a damaged file is repaired.|
+|[`Force`](#variant-option-force)|`0` <small>(default)</small> or `1`|Whether to validate a file that appears to have been properly closed.|
 
-### Task
+The `'Rebuild'` task causes the *file indices* to be discarded and rebuilt. `Repair` only takes place on files which have been checked and found to be damaged. It involves a rebuild, but that only takes place if it is needed. Note that `Repair` and `Force` only apply if `Task` is `'Scan'`.
+
+### Variant Option: Task
 
 |---------|----------------------------------------------------------------------------|
-|Scan { .shaded } |causes the file to be checked and optionally repaired (see `'Repair'` below)|
-|`Rebuild`|causes the file to be unconditionally rebuilt                               |
+|`'Scan'` <small>(default)</small>|causes the file to be checked and optionally repaired (see [`Repair`](#variant-option-repair) below)|
+|`'Rebuild'`|causes the file to be unconditionally rebuilt                               |
 
-### Repair (principle option)
+### Variant Option: Repair
 
 |---|-------------------------------------------------|
-|0 { .shaded }  |do not repair                                    |
+|`0` <small>(default)</small>|do not repair                                    |
 |`1`|causes the file to be repaired if damage is found|
 
-### Force
+### Variant Option: Force
 
 |---|-------------------------------------------------------------------|
-|0 { .shaded }   |do not validate the file if it appears to have been properly closed|
+|`0` <small>(default)</small>|do not validate the file if it appears to have been properly closed|
 |`1`|validate the file even if it appears to have been properly closed  |
-
-Default values are highlighted thus{ .shaded }  in the above tables.
 
 <h2 class="example">Examples</h2>
 
@@ -69,13 +71,9 @@ To forcibly check a file and attempt to fix it if damage is found:
       (⎕FCHK ⍠ ('Repair' 1)('Force'1))'suspect.dcf'
 ```
 
-### Specifying options using a left argument
+## Specifying Options Using a Left Argument
 
 Using the optional left-argument, `X` must be a vector of zero or more character vectors from among `'force'`, `'repair'` and `'rebuild'`, which determine the detailed operation of the function. Note that these options are case-insensitive.
-
-- If `X` contains `'force'`, `⎕FCHK` will validate the file even if it appears to have been cleanly untied.
-- If `X` contains `'repair'`, `⎕FCHK` will repair the file, following validation, if it appears to be damaged. This option may be used in conjunction with `'force'`.
-- If `X` contains `'rebuild'`, `⎕FCHK` will repair the file unconditionally.
 
 - If `X` contains `'force'`, `⎕FCHK` will validate the file even if it appears to have been cleanly untied.
 - If `X` contains `'repair'`, `⎕FCHK` will repair the file, following validation, if it appears to be damaged. This option may be used in conjunction with `'force'`.

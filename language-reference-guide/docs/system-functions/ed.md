@@ -32,24 +32,30 @@ If `⎕ED` is called from a defined function or operator, its behaviour is diffe
 
 Objects named in `Y` that cannot be edited are silently ignored. Objects qualified with a namespace path are (for example, `a.b.c.foo`) are silently ignored if the namespace does not exist.
 
-## Variants of Edit Object
+## Variant Options
 
-The behaviour of `⎕ED` may be modified using the variant operator `⍠` with the following options:
+`⎕ED` supports two variant options, `ReadOnly` and `EditName`, summarised in [](#variant-table) and described in detail beneath it. There is no principal option.
 
-- `'ReadOnly'` - 0 or 1
-- `'EditName'` - `'Default'`, `'Allow'` or `'Disallow'`.
+Table: Variant options overview { #variant-table }
 
-If `ReadOnly` is set to 1, the edit window and all edit windows opened from it will be read-only. Note that setting `ReadOnly` to 0 will have no effect if the edit window is inherently read-only due to the nature of its content.
+|Variant Option|Value|Effect|
+|---|---|---|
+|[`ReadOnly`](#variant-option-readonly)|`0` <small>(default)</small> or `1`|Whether the edit windows are read-only.|
+|[`EditName`](#variant-option-editname)|`'Default'` <small>(default)</small>, `'Allow'` or `'Disallow'`|Whether the user may open further edit windows by clicking a name.|
 
-The `'EditName'` option determines whether or not the user may open another edit window by clicking a name, and its values are interpreted as follows:
+### Variant Option: ReadOnly
+
+If `ReadOnly` is set to `1`, the edit window and all edit windows opened from it will be read-only. Note that setting `ReadOnly` to `0` will have no effect if the edit window is inherently read-only due to the nature of its content.
+
+### Variant Option: EditName
+
+The `EditName` option determines whether or not the user may open another edit window by clicking a name, and its values are interpreted as follows:
 
 |EditName    |`⎕ED` called from session|`⎕ED` called from function|
 |------------|-------------------------|--------------------------|
-|`'Default'` |Allow                    |Disallow                  |
+|`'Default'` <small>(default)</small>|Allow                    |Disallow                  |
 |`'Allow'`   |Allow                    |Allow                     |
 |`'Disallow'`|Disallow                 |Disallow                  |
-
-There is no Principal Option.
 
 <h2 class="example">Examples</h2>
 ```apl
