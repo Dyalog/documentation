@@ -7,6 +7,8 @@ search:
 
 `⎕UCS` converts (Unicode) characters into integers and vice versa.
 
+To convert between characters and Unicode code points, use [monadic `⎕UCS`](ucs-monadic.md).
+
 The left argument `X` is either a simple character vector or a one- or two-element nested vector. `X` or its first element is the name of a variable-length Unicode encoding scheme and must be one of:
 
 - `'UTF-8'`

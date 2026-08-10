@@ -7,6 +7,8 @@ search:
 
 Dyadic `⎕CLASS` returns a reference to the implementation of interface `X` by instance `Y`, or to the implementation of (base) class `X` by instance `Y`, and is used as a _cast_ in order to access members of `Y` that correspond to members of interface or (base) class `X`.
 
+To access the _entire_ class hierarchy of a class, use [monadic `⎕CLASS`](class-monadic.md).
+
 `Y` must be a reference to an instance of a class and `X` is a reference to an interface that is supported by instance `Y` or to a class upon which instance `Y` is based.
 
 <h2 class="example">Examples</h2>

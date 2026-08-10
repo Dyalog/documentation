@@ -7,6 +7,8 @@ search:
 
 Monadic `⎕CSV` imports Comma Separated Value (CSV) data from a CSV file, or converts data from CSV format to an internal format.
 
+To convert an array to CSV, use [dyadic `⎕CSV`](csv-dyadic.md).
+
 `Y` is an array that specifies just the source of the CSV data (see below) or a 1,2,3 or 4-element vector containing:
 
 |-----|---------------------------|

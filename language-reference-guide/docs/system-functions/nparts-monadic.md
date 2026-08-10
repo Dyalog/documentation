@@ -7,6 +7,8 @@ search:
 
 Splits a file or directory name into its constituent parts.
 
+To normalise the names before splitting them, use [dyadic `⎕NPARTS`](nparts-dyadic.md).
+
 `Y` is a character vector or scalar containing a single name, or a vector of character vectors containing zero or more names. Names must conform to the file-naming rules of the host Operating System.
 
 The file(s) need not exist; indeed this system function makes no attempt to identify or locate it/them.

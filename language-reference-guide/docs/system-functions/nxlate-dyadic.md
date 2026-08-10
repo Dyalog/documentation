@@ -7,6 +7,8 @@ search:
 
 This associates a character translation vector with a native file or, if `Y` is 0, with the use by `⎕DR`.
 
+To query the current translation vector, use [monadic `⎕NXLATE`](nxlate-monadic.md).
+
 A translate vector is a 256-element vector of integers from 0-255. Each element maps the corresponding `⎕AV` position onto an ANSI character code.
 
 For example, to map `⎕AV[17+⎕IO]` onto ANSI 'a' (code 97), element 17 of the translate vector is set to 97.

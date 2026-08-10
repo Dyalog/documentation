@@ -9,6 +9,8 @@ search:
 
 This system function returns property values for a GUI object.
 
+To read the properties of a named object, use [dyadic `⎕WG`](wg-dyadic.md).
+
 The object is the one in the namespace in which the function is being evaluated. `Y` is a character vector or a vector of character vectors containing the name(s) of the properties whose values are required. The result `R` contains the current values of the specified properties. If `Y` specifies a single property name, a single property value is returned. If `Y` specifies more than one property, `R` is a vector with one element per name in `Y`.
 
 If `Y` refers to a non-existent property, or to a property that is not defined for the type of the object, a `DOMAIN ERROR` is reported.

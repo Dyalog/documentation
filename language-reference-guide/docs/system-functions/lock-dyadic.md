@@ -7,6 +7,8 @@ search:
 
 `Y` must be a simple character scalar, or vector which is taken to be the name of a defined function or operator in the active workspace. `⎕LOCK` does not apply to dfns or derived functions.
 
+For the default degree of hiding, use [monadic `⎕LOCK`](lock-monadic.md).
+
 The active referent to the name in the workspace is locked.  Stop, trace and monitor settings, established by the `⎕STOP`, `⎕TRACE` and `⎕MONITOR` functions, are cancelled.
 
 The left argument `X` specifies to what extent the function code is hidden. `X` can be `0`, `1`, `2`, or `3` with the following meaning:

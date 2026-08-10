@@ -7,6 +7,8 @@ search:
 
 `⎕VSET` enables values to be set for names in a target namespace or target namespaces.
 
+To set values in the current namespace, use [monadic `⎕VSET`](vset-monadic.md).
+
 `Y` specifies the names and the values to set for them. It must be one of the following:
 
 * a nested vector or scalar, where each element is a name-value pair. The name must be a simple character vector.

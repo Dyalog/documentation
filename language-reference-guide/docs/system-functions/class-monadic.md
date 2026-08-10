@@ -7,6 +7,8 @@ search:
 
 Monadic `⎕CLASS` returns a list of references to classes and interfaces that specifies the class hierarchy for the class or instance specified by `Y`.
 
+To instead access the lower level implementations of a class, use [dyadic `⎕CLASS`](class-dyadic.md).
+
 `Y` must be a reference to a class or to an instance of a class.
 
 `R` is a vector of vectors whose items represent nodes in the class hierarchy of `Y`. Each item of `R` is a vector whose first item is a class reference and whose subsequent items (if any) are references to the interfaces supported by that class.

@@ -7,6 +7,8 @@ search:
 
 `Y` must be a simple numeric scalar or vector containing one or more of the values for name-class.  See also [Name Classification](nc.md).
 
+To restrict the result to names beginning with particular characters, use [dyadic `⎕NL`](nl-dyadic.md).
+
 `R` is a list of the names of active objects whose name-class is included in `Y` in standard sorted order.
 
 If *any* element of `Y` is negative, positive values in `Y` are treated as if they were negative, and R is a vector of character vectors. Otherwise, `R` is simple character matrix.

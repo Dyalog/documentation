@@ -7,6 +7,8 @@ search:
 
 `⎕PROFILE` facilitates the profiling of CPU consumption, code coverage, or elapsed time for a workspace. It does so by retaining time measurements collected for APL functions/operators and function/operator lines. `⎕PROFILE` is used to both control the state of profiling and retrieve the collected profiling data.
 
+To read only selected columns of the profile data, use [dyadic `⎕PROFILE`](profile-dyadic.md).
+
 `Y` specifies the action to perform and any options for that action, if applicable. `Y` is case-insensitive. The result `R` is, in some cases, shy.
 
 |Syntax                              |Description                                                                    |

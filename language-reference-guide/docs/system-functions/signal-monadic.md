@@ -7,6 +7,8 @@ search:
 
 `Y` must be a scalar or vector.
 
+To attach a custom message to the event, use [dyadic `⎕SIGNAL`](signal-dyadic.md).
+
 If `Y` is a an empty vector nothing is signalled.
 
 If `Y` is a vector of more than one element, all but the first element are ignored.

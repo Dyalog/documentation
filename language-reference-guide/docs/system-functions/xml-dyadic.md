@@ -7,6 +7,8 @@ search:
 
 `⎕XML` converts an XML string into an APL array or converts an APL array into an XML string.
 
+Specifying options with the Variant operator `⍠` on [monadic `⎕XML`](xml-monadic.md) is recommended instead.
+
 Options for `⎕XML` are specified using the Variant operator `⍠` or by the left argument `X`. The former is recommended but the older mechanism using the left argument is still supported.
 
 For conversion *from* XML, `Y` is a character vector containing an XML string. The result `R` is a 5 column matrix whose columns are made up as follows:

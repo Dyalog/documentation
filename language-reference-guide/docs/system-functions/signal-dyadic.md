@@ -7,6 +7,8 @@ search:
 
 `Y` must be a scalar or vector.
 
+To signal an event without a custom message, use [monadic `⎕SIGNAL`](signal-monadic.md).
+
 If `Y` is a an empty vector nothing is signalled.
 
 If `Y` is a vector of more than one element, all but the first element are ignored.

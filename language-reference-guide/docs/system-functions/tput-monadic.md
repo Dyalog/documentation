@@ -7,6 +7,8 @@ search:
 
 `Y` must be a simple numeric scalar or vector of non-zero token types. Non-integer values in `Y` must fall within a range that has been allocated using `⎕TALLOC`.
 
+To store a value in each token, use [dyadic `⎕TPUT`](tput-dyadic.md).
+
 Shy result `R` is a vector of thread numbers (if any) unblocked by the `⎕TPUT`.
 
 <h2 class="example">Examples</h2>

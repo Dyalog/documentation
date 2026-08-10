@@ -7,6 +7,8 @@ search:
 
 `⎕MAP` function associates a mapped file with an APL array in the workspace.
 
+To map a file that already holds an APL array, use [monadic `⎕MAP`](map-monadic.md).
+
 A raw mapped file is an arbitrary collection of raw data bytes. When you map a raw file, you must specify the characteristics of the APL array to be associated with this data. In particular, the data type and its shape.
 
 The right argument `Y` specifies the name of the file to be mapped and, optionally, the access type and a start byte in the file. `Y` may be a simple character vector, or a 2 or 3-element nested vector containing:

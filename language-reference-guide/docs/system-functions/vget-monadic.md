@@ -7,6 +7,8 @@ search:
 
 `⎕VGET` enables values to be read for names in a source namespace or source namespaces. Optionally, a fallback value can be used if the name requested is undefined.
 
+To read the values from one or more explicitly identified namespaces, use [dyadic `⎕VGET`](vget-dyadic.md).
+
 `Y` specifies the names. It must be one of the following:
 
 * a matrix of names or a matrix of names and a value vector – see [Case 1: Name Matrix](#case-1-name-matrix).

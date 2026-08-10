@@ -7,6 +7,8 @@ search:
 
 `Y` must be a simple array of integers representing thread numbers to be terminated. `X` is a Boolean single that indicates whether all descendant threads should also be terminated.
 
+To kill only the named threads, use [monadic `⎕TKILL`](tkill-monadic.md).
+
 The shy result `R` is a vector of the numbers of all threads that have been terminated.
 
 The **base thread** 0 is always excluded from the cull.

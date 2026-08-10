@@ -7,6 +7,8 @@ search:
 
 `⎕SR` is a system function that allows the user to edit or otherwise interact with the form defined by `⎕SM`.
 
+To define the exit keys and initial context, use [dyadic `⎕SR`](sr-dyadic.md).
+
 In versions of Dyalog APL that support asynchronous terminals, if the current screen is the SESSION screen, `⎕SR` immediately switches to the USER SCREEN and displays the form defined by `⎕SM`.
 
 In Dyalog APL/X, `⎕SR` causes the input cursor to be positioned in the USER window.  During execution of `⎕SR`, only the USER Window defined by `⎕SM` will accept input and respond to the keyboard or mouse.  The SESSION and any EDIT and TRACE Windows that may appear on the display are dormant.

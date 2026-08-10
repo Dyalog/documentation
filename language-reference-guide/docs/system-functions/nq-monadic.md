@@ -9,6 +9,8 @@ search:
 
 This system function generates an event or invokes a method.
 
+To choose how the event is queued and what is returned, use [dyadic `⎕NQ`](nq-dyadic.md).
+
 While APL is executing, events occur "naturally" as a result of user action or of communication with other applications.  These events are added to the event queue as and when they occur, and are subsequently removed and processed one by one by `⎕DQ`.  `⎕NQ` provides an "artificial" means to generate an event and is analogous to `⎕SIGNAL`.
 
 `⎕NQ` adds the event specified by `Y` to the bottom of the event queue. The event will subsequently be processed by `⎕DQ` when it reaches the top of the queue.

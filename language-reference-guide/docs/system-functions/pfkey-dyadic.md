@@ -7,6 +7,8 @@ search:
 
 `⎕PFKEY` is a system function that sets or queries the programmable function keys.  `⎕PFKEY` associates a sequence of keystrokes with a function key.  When the user subsequently presses the key, it is as if he had typed the associated keystrokes one by one.
 
+To query the current setting of a programmable function key, use [monadic `⎕PFKEY`](pfkey-monadic.md).
+
 Note that Ride does not currently support the use of `⎕PFKEY`; it is possible however to associate simple strings to function keys - see the [Ride User Guide](https://dyalog.github.io/ride) for more information.
 
 `Y` is an integer scalar in the range 0-255 specifying a programmable function key.  If the key has not been defined previously, the result is an empty character vector.

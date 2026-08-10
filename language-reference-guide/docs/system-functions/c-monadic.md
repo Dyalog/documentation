@@ -7,7 +7,7 @@ search:
 
 `Y` is any array. `R` is a copy of `Y` with character arrays folded, for case-less comparison.
 
-For a discussion of case folding and case conversion (mapping), see [Character Properties, Case Mappings & Names FAQ](https://unicode.org/faq/casemap_charprop.html).
+For a discussion of case folding and [case mapping](c-dyadic.md), see [Character Properties, Case Mappings & Names FAQ](https://unicode.org/faq/casemap_charprop.html).
 
 <h2 class="example">Examples</h2>
 ```apl

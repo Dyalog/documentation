@@ -7,6 +7,8 @@ search:
 
 `⎕UCS` converts (Unicode) characters into integers and vice versa.
 
+To convert using a named encoding scheme such as UTF-8, use [dyadic `⎕UCS`](ucs-dyadic.md).
+
 `Y` is a simple character or integer array, and the result `R` is a simple integer or character array with the same rank and shape as `Y`.
 
 Monadic `⎕UCS` converts any character array to a numeric array of the same shape, or any numeric array to a character array of the same shape. When doing this, characters are converted to Unicode code points and Unicode code points are converted to characters.

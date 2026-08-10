@@ -7,6 +7,8 @@ search:
 
 `Y` is either a single integer or a 2-element vector. The first (or only) item in `Y` is 0, 1, 2 or ¯1 and indicates the type of operation to perform. If it is 1, then the optional second item is a character vector.
 
+To allocate from an existing token range, use [dyadic `⎕TALLOC`](talloc-dyadic.md).
+
 ## Allocation (First element of `Y` is 1)
 
 If the first element of `Y` is 1,  the result `R` is a positive integer that identifies a range of numbers that may be used as token types for `⎕TPUT` and `⎕TGET`. That range is defined as the set of floating-point numbers between `R` and `R+1` (but not the integer end-points). Negated values of these number may also be used.

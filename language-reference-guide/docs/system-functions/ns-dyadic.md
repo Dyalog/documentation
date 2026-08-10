@@ -7,6 +7,8 @@ search:
 
 The `⎕NS` system function makes it possible to create namespaces, copy elements from one namespace to another, and clone namespaces.
 
+To create or clone a namespace in the current space, use [monadic `⎕NS`](ns-monadic.md).
+
 `Y` is one of the following:
 
 * an vector of zero or more objects to be copied.

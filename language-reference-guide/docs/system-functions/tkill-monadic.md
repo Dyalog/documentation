@@ -7,6 +7,8 @@ search:
 
 `Y` must be a simple array of integers representing thread numbers to be terminated. All descendant threads are also terminated.
 
+To also kill the descendants of the threads, use [dyadic `⎕TKILL`](tkill-dyadic.md).
+
 The shy result `R` is a vector of the numbers of all threads that have been terminated.
 
 The **base thread** 0 is always excluded from the cull.

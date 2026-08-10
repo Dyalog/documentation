@@ -7,6 +7,8 @@ search:
 
 `Y` must be a simple numeric scalar or vector of non-zero token types. Non-integer values in `Y` must fall within a range that has been allocated using `⎕TALLOC`.
 
+To put tokens that carry no value, use [monadic `⎕TPUT`](tput-monadic.md).
+
 `X` is an array of values to be stored in each of the tokens specified by `Y`.
 
 Shy result `R` is a vector of thread numbers (if any) unblocked by the `⎕TPUT`.
