@@ -132,6 +132,8 @@ Note that:
 - If the referenced configuration parameter is not defined then no substitution will take place; the reference, including square bracket delimiters, will remain in place.
 - To include square brackets in a string, prefix the '[' with a '\' character.
 
+`[=DOCUMENTS]` is a pre-defined substitution parameter that is replaced with the location of the user's Documents folder (for example, `C:\Users\Bob\Documents`).
+
 #### Nested Structures
 
 Some parameters are stored in sub-folders in the Windows Registry. Currently, all such parameters used by Dyalog APL itself relate to the Windows IDE, but you can create your own application-specific structures..
