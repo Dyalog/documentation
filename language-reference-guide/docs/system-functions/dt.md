@@ -23,7 +23,7 @@ A *datetime* is a date and time of day represented by a *time number*, a *timest
 - an integer *datetime code* (see [](#timenumbers) and [](#timestamps))
 - a character vector containing a *pattern* that describes how a datetime is formatted as text (see [Formatting Patterns](#formatting-patterns)).
 
-When <code>X<sub>R</sub></code> is an integer it must be either `0` or a code from [](#timenumbers) or [](#timestamps). `0` specifies that the elements of `Y` are to be validated; a non-zero value specifies the datetime representation to which the elements of `Y` are to be converted. When <code>X<sub>R</sub></code> is a pattern, the elements of `R` are character vectors, each derived by formatting the corresponding element of `Y` as text according to the pattern.
+When <code>X<sub>R</sub></code> is an integer it must be either `0` or a code from [](#timenumbers) or [](#timestamps). `0` specifies that the elements of `Y` are [to be validated](#validating-datetimes); a non-zero value specifies the datetime representation to which the elements of `Y` are to be converted. When <code>X<sub>R</sub></code> is a pattern, the elements of `R` are character vectors, each derived by formatting the corresponding element of `Y` as text according to the pattern.
 
 <code>X<sub>Y</sub></code> can be omitted only when the elements of `Y` are Dyalog Date Numbers, `⎕TS`-style timestamps, or military time zone characters. When <code>X<sub>Y</sub></code> is omitted, the numeric elements of `Y` are interpreted as follows:
 
@@ -89,7 +89,7 @@ Table: Time numbers { #timenumbers }
 |Misc. Operating Systems|||||
 | `70` |AmigaOS|Tick count 1&nbsp;ms ticks[^3]|1978-01-01 00:00|No|
 
-<h3 class="example">Example: Time number to time number</h3>
+<h3 class="example">Examples: Time number to time number</h3>
 
 ```apl
       2 1 ⎕DT 3⊃⎕FRDCI 1 1
@@ -101,7 +101,7 @@ Table: Time numbers { #timenumbers }
 ¯5
 ```
 
-<h3 class="example">Example: Time number to timestamp</h3>
+<h3 class="example">Examples: Time number to timestamp</h3>
 
 ```apl
       1 ¯1 ⎕DT 0 43508.42843
@@ -142,7 +142,7 @@ Table: Timestamps { #timestamps }
 | DateTimePicker ||||
 | `¯30` | DateTime format                              | 4            | International Day Number, hour, minute, second               | `0 0 0 0`                              |
 
-<h3 class="example">Example: Timestamp to time number</h3>
+<h3 class="example">Examples: Timestamp to time number</h3>
 
 ```apl
       ¯1 1 ⎕DT ⊂⎕TS
@@ -161,7 +161,7 @@ Table: Timestamps { #timestamps }
 
 ```
 
-<h3 class="example">Example: Timestamp to timestamp</h3>
+<h3 class="example">Examples: Timestamp to timestamp</h3>
 
 ```apl
       ¯30 ⎕DT ⊂⎕TS
@@ -444,7 +444,7 @@ If the namespace contains a definition that is supplied built into the interpret
 
 If a dictionary is incomplete (for example, is missing one of the expected named items, or one of the named items contains too few elements), an error is signalled if the missing content would be needed.
 
-<h4 class="example">Example: Creating a dictionary</h4>
+<h4 class="example">Example</h4>
 
 The following creates a dictionary defined by the namespace `dict`, used in the examples that follow.
 
@@ -499,16 +499,11 @@ In the above example:
 - There is no explicit definition of patterns or names for language region `en_GB`. If this language is selected, the definitions for `en` will be used.
 - There is an explicit definition for `ShortMonthNames` for language region `en_US`. If this language is selected, the definition of `ShortMonthNames` is as defined, and as for `en` for other names. As `en` is not defined in the dictionary, the built-in defaults are used.
 
-<h4 class="example">Example: Using a dictionary</h4>
-
 ```apl
       '%DateVerbose%'(⎕DT⍠'Dictionary'dict) dt
 ┌───────────────────────┐
 │the date is 13 Feb 2019│
 └───────────────────────┘
-```
-
-```apl
       '%DateVerbose%'(⎕DT⍠('Dictionary' dict)('Language' 'en_US')) dt
 ┌─────────────────────────┐
 │the date is Feb. 13, 2019│
@@ -524,6 +519,8 @@ In the above example:
 ```
 
 ## Validating Datetimes
+
+When <code>X<sub>R</sub></code> is `0`, `⎕DT` validates the elements of `Y` instead of converting them, interpreting each according to <code>X<sub>Y</sub></code> as described above. `R` is a Boolean with a `1` for each element of `Y` that represents a valid datetime and a `0` for each that does not.
 
 <h3 class="example">Examples</h3>
 
