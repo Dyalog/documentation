@@ -40,20 +40,23 @@ The [shy](../../../programming-reference-guide/introduction/results#shy-results)
 3
 ```
 
-# Variant Options
-## Mode
+## Variant Options
+
+`⎕FTIE` supports a single variant option, `Mode`, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md).
+
+### Variant Option: Mode
 
 Writing to a component file is not always permitted. For example, restrictions on writing to a component file might be imposed by operating system permissions, the host filesystem, or individual component file property settings.
 
-The **Mode** variant option specifies whether the file that is being tied will only be read or must be writeable. Possible values are:
+The `Mode` variant option specifies whether the file that is being tied will only be read or must be writeable. Possible values are:
 
 - `P` (tied as **p**ermitted) – the file will be tied for write access if possible, otherwise for read access only. If the file permissions do not allow the file to be written to, any subsequent attempt to write to it will fail. This is the default.
 - `R` (**r**ead mode) – the file will be tied for read access only; any subsequent attempt to write to it will fail.
 - `W` (**w**rite mode) – if the file permissions do not allow the file to be written to, the attempt to tie it will fail.
 
-The **Mode** variant option is independent of any [file access controls managed using an access matrix](../../../programming-reference-guide/component-files/component-files/#file-access-control).
+The `Mode` variant option is independent of any [file access controls managed using an access matrix](../../../programming-reference-guide/component-files/component-files/#file-access-control).
 
-<h3 class="example">Example</h3>
+<h4 class="example">Example</h4>
 
 ```apl
       'cf' (⎕FTIE⍠'Mode' 'W') 1
