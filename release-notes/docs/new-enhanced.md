@@ -2,8 +2,6 @@
 
 This page describes the changes and new features in Dyalog v21.0 compared with Dyalog v20.0.
 
-<p style="color:red;">This document is currently being developed and will not be finalised until nearer the release of Dyalog v21.0.</p>
-
 ## Language Changes
 
 ### System Functions
@@ -61,6 +59,13 @@ This specifies whether support for external variables is enabled.
 
 - [`LAYOUT_FILE`](https://docs.dyalog.com/21.0/windows-installation-and-configuration-guide/docs/configuration-parameters/layout-file/) (Microsoft Windows only)  
 This specifies the path (absolute or relative to the working directory) and name of the Session layout file.
+
+### Configuration Settings
+
+The following changes have been made to configuration settings:
+
+- Substitutions can now be made within any configuration settings; previously this only worked within configuration files. It remains unsupported beyond configuration settings, for example, `)LOAD [DYALOG]/myws.dws` is not valid. There is a small chance that existing configuration settings could now see unintended substitution; to ensure that this does not happen, when including literal square brackets in a string, the `[` should be prefixed with a backslash, that is `/[` (the backslash is removed from the subsequent value).
+- On Microsoft Windows, `[=DOCUMENTS]` is pre-defined to refer to the location of the user's Documents folder (for example, **C:\Users\Bob\Documents**).
 
 ### Microsoft Windows IDE
 
