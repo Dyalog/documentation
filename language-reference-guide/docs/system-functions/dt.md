@@ -89,7 +89,7 @@ Table: Time numbers { #timenumbers }
 |Misc. Operating Systems|||||
 | `70` |AmigaOS|Tick count 1&nbsp;ms ticks[^3]|1978-01-01 00:00|No|
 
-### Time Number to Time Number { .example }
+<h3 class="example">Example: Time number to time number</h3>
 
 ```apl
       2 1 ⎕DT 3⊃⎕FRDCI 1 1
@@ -101,7 +101,7 @@ Table: Time numbers { #timenumbers }
 ¯5
 ```
 
-### Time Number to Timestamp { .example }
+<h3 class="example">Example: Time number to timestamp</h3>
 
 ```apl
       1 ¯1 ⎕DT 0 43508.42843
@@ -142,7 +142,7 @@ Table: Timestamps { #timestamps }
 | DateTimePicker ||||
 | `¯30` | DateTime format                              | 4            | International Day Number, hour, minute, second               | `0 0 0 0`                              |
 
-### Timestamp to Time Number { .example }
+<h3 class="example">Example: Timestamp to time number</h3>
 
 ```apl
       ¯1 1 ⎕DT ⊂⎕TS
@@ -161,7 +161,7 @@ Table: Timestamps { #timestamps }
 
 ```
 
-### Timestamp to Timestamp { .example }
+<h3 class="example">Example: Timestamp to timestamp</h3>
 
 ```apl
       ¯30 ⎕DT ⊂⎕TS
@@ -267,7 +267,7 @@ The upper and lower case letters, underscore `_`, dollar `$`, and percent `%` ar
 !!! Info "Information"
     The characters `AaaaBbbb` consist of two adjacent format sequences because there is a sequence of As followed by a sequence of Bs. The characters `AaaaAaaa` consist of one format sequence because it only contains `A`s. It can be separated into two format sequences by inserting an empty `"` or `'` - delimited string, for example, `Aaaa""Aaaa`.
 
-### Formatting Datetimes { .example }
+<h3 class="example">Examples</h3>
 
 ```apl
       dt←1 ⎕DT ⊂2019 2 13 10 16 56
@@ -370,7 +370,7 @@ The formatted text is parsed and used to compute a datetime according to the giv
 
 If a pattern is rejected, or a text-formatted datetime cannot be matched against the pattern for any of the reasons above, a `DOMAIN ERROR` is signalled and an explanatory message is included.
 
-### Parsing Text Formats { .example }
+<h3 class="example">Examples</h3>
 
 ```apl
       'DD/MM/YYYY' 1 ⎕DT ⊂'13/02/2019'
@@ -444,7 +444,7 @@ If the namespace contains a definition that is supplied built into the interpret
 
 If a dictionary is incomplete (for example, is missing one of the expected named items, or one of the named items contains too few elements), an error is signalled if the missing content would be needed.
 
-<h4 class="example">Creating a Dictionary</h4>
+<h4 class="example">Example: Creating a dictionary</h4>
 
 The following creates a dictionary defined by the namespace `dict`, used in the examples that follow.
 
@@ -499,7 +499,7 @@ In the above example:
 - There is no explicit definition of patterns or names for language region `en_GB`. If this language is selected, the definitions for `en` will be used.
 - There is an explicit definition for `ShortMonthNames` for language region `en_US`. If this language is selected, the definition of `ShortMonthNames` is as defined, and as for `en` for other names. As `en` is not defined in the dictionary, the built-in defaults are used.
 
-<h4 class="example">Using a Dictionary</h4>
+<h4 class="example">Example: Using a dictionary</h4>
 
 ```apl
       '%DateVerbose%'(⎕DT⍠'Dictionary'dict) dt
@@ -524,6 +524,8 @@ In the above example:
 ```
 
 ## Validating Datetimes
+
+<h3 class="example">Examples</h3>
 
 ```apl
       0 ⎕DT ⎕TS (2020 13 1) 'J' 'DT' #
