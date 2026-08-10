@@ -113,7 +113,7 @@ The only parameters which may be defined as arrays are **WSPATH**, **WSEXT** and
 
 #### References to other Configuration Parameters
 
-Configuration parameters which are string values may include references to other configuration parameters (regardless of where they are defined) using square bracket delimiters. For example:
+Configuration parameters may include references to other configuration parameters (regardless of where they are defined) using square bracket delimiters. For example:
 ```apl
 MySetting: "[DYALOG]/MyFile"
 ```
