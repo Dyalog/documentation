@@ -37,6 +37,9 @@ If `X` is not defined, it is assumed to be `0`.
 |`14`|Last access time, as a UTC Dyalog Date Number, when available.|`0`|Yes|
 |`15`|Creation time if available, otherwise the time of the last file status change  as a UTC Dyalog Date  Number.|`0`|Windows only|
 
+!!! Info "Information"
+    Of the file timestamps which are reported by the operating system, only the last modification time should be considered reliable and portable. Neither the access time or creation time are well supported across all platforms. Furthermore, they may not accurately reflect the actual time that the operation occurred.
+
 The values in `X` are processed in ravel order. Duplicates are allowed.
 
 The returned value `R` has the same shape as `X` (if the `Wildcard` variant option has been specified, the depth will change – see below). The content of `R` depends on whether properties were queried or set:
@@ -57,6 +60,41 @@ If the Wildcard option is not enabled (the default) then `Y` specifies exactly o
 If the Wildcard option is enabled, zero or more files and/or directories may match the pattern in `Y`. In this case each element in `R` is a vector of property values for each of the files. Note that no error will be signalled if no files match the pattern.
 
 When using the `Wildcard` option, matching of names is done case insensitively on Windows and macOS, and case sensitively on other platforms. The names '.' and '..' are excluded from any matches. The order in which the names match is not defined.
+
+!!! Warning "Warning"
+    On platforms other than Microsoft Windows, file names are exposed by the operating system using UTF-8 encoding, which Dyalog translates internally to characters.
+    
+    In the Unicode Edition, if the UTF-8 encoding is invalid, Dyalog replaces each offending byte with a unique Unicode symbol (in the *Low Surrogate Area* of the Unicode charts) that is mapped back to the original byte by the other system functions (including `⎕NTIE` and `⎕NDELETE`) that take native file names as arguments. The display of a file name containing these mapped bytes may appear strange.
+    
+    In the Classic Edition, offending bytes are replaced by the `?` symbol, which means that the names reported do not accurately identify the files.
+
+<h2 class="example">Examples</h2>
+
+```apl
+      (0 1 2) ⎕NINFO 'c:/Users/Pete/Documents'
+┌→───────────────────────────────────┐
+│ ┌→──────────────────────┐          │
+│ │c:/Users/Pete/Documents│ 1 163840 │
+│ └───────────────────────┘          │
+└∊───────────────────────────────────┘
+
+      ⍪ (0,⍳6) ⎕NINFO 'Documents/dyalog.zip'
+┌──────────────────────────────────────────────┐
+│Documents/dyalog.zip                          │
+├──────────────────────────────────────────────┤
+│2                                             │
+├──────────────────────────────────────────────┤
+│3429284                                       │
+├──────────────────────────────────────────────┤
+│2016 1 22 16 43 58 0                          │
+├──────────────────────────────────────────────┤
+│S-1-5-21-2756282986-1198856910-2233986399-1001│
+├──────────────────────────────────────────────┤
+│HP/Pete                                       │
+├──────────────────────────────────────────────┤
+│0                                             │
+└──────────────────────────────────────────────┘
+```
 
 ## Variant Options
 
@@ -95,9 +133,6 @@ c:/Users/Pete/
 │└───────┴─────────┴─────────┴───────┘│
 └─────────────────────────────────────┘
 
-```
-
-```apl
       (⎕NINFO⍠1)'Documents/*.zip'
 ┌──────────────────────┐
 │┌────────────────────┐│
@@ -105,9 +140,6 @@ c:/Users/Pete/
 │└────────────────────┘│
 └──────────────────────┘
 
-```
-
-```apl
       ⊃1⎕NPARTS '' ⍝ current working directory
 C:/Users/Pete/Documents/Dyalog APL-64 16.0 Unicode Files/
       (⎕NINFO⍠1)'*.*'
@@ -116,7 +148,15 @@ C:/Users/Pete/Documents/Dyalog APL-64 16.0 Unicode Files/
 ││default.dlf│def_uk.dse│jsonx.dws│UserCommand20.cache││
 │└───────────┴──────────┴─────────┴───────────────────┘│
 └──────────────────────────────────────────────────────┘
+```
 
+The following expression "touches" files, that is, it sets their last modification time to the current UTC time:
+
+```apl
+      (⊂13(1 ⎕DT'Z'))(⎕NINFO⍠1)'*.txt'
+┌───────────────────────┐
+│45719.53226 45719.53226│
+└───────────────────────┘
 ```
 
 ### Variant Option: Recurse
@@ -177,59 +217,6 @@ The `ProgressCallback` variant option is described in the [Dyalog Programming Re
 
 * The first element of the right argument to the callback function is the character vector `'⎕NINFO'`.
 * The third element of the right argument (the information namespace) contains an extra field named `Info`, which is a vector with the same length as the `Last` field. Each element of the `Info` vector contains the information requested by the `⎕NINFO` call for the corresponding filename in `Last`.
-
-## Note
-
-On platforms other than Microsoft Windows, file names are exposed by the operating system using UTF-8 encoding, which Dyalog translates internally to characters.
-
-In the Unicode Edition, if the UTF-8 encoding is invalid, Dyalog replaces each offending byte with a unique Unicode symbol (in the *Low Surrogate Area* of the Unicode charts) that is mapped back to the original byte by the other system functions (including `⎕NTIE` and `⎕NDELETE`) that take native file names as arguments. The display of a file name containing these mapped bytes may appear strange.
-
-In the Classic Edition, offending bytes are replaced by the `?` symbol, which means that the names reported do not accurately identify the files.
-
-<h2 class="example">Examples</h2>
-
-```apl
-
-      (0 1 2) ⎕NINFO 'c:/Users/Pete/Documents'
-┌→───────────────────────────────────┐
-│ ┌→──────────────────────┐          │
-│ │c:/Users/Pete/Documents│ 1 163840 │
-│ └───────────────────────┘          │
-└∊───────────────────────────────────┘
-
-```
-
-```apl
-      ⍪ (0,⍳6) ⎕NINFO 'Documents/dyalog.zip'
-┌──────────────────────────────────────────────┐
-│Documents/dyalog.zip                          │
-├──────────────────────────────────────────────┤
-│2                                             │
-├──────────────────────────────────────────────┤
-│3429284                                       │
-├──────────────────────────────────────────────┤
-│2016 1 22 16 43 58 0                          │
-├──────────────────────────────────────────────┤
-│S-1-5-21-2756282986-1198856910-2233986399-1001│
-├──────────────────────────────────────────────┤
-│HP/Pete                                       │
-├──────────────────────────────────────────────┤
-│0                                             │
-└──────────────────────────────────────────────┘
-
-```
-
-The following expression "touches" files, that is, it sets their last modification time to the current UTC time:
-
-```apl
-      (⊂13(1 ⎕DT'Z'))(⎕NINFO⍠1)'*.txt'
-┌───────────────────────┐
-│45719.53226 45719.53226│
-└───────────────────────┘
-```
-
-!!! note
-    Of the file timestamps which are reported by the operating system, only the last modification time should be considered reliable and portable. Neither the access time or creation time are well supported across all platforms. Furthermore, they may not accurately reflect the actual time that the operation occurred.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
