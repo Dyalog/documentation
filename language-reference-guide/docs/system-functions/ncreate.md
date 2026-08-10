@@ -13,18 +13,30 @@ The [shy](../../../programming-reference-guide/introduction/results#shy-results)
 
 ## Variant Options
 
-`⎕NCREATE` may be applied using the  Variant operator with the options Unique and IfExists. There is no primary option.
+`⎕NCREATE` supports two variant options, `Unique` and `IfExists`, summarised in [](#variant-table) and described in detail beneath it. There is no principal option.
 
-## Unique Option (Boolean)
+Table: Variant options overview { #variant-table }
+
+|Variant Option|Value|Effect|
+|---|---|---|
+|[`Unique`](#variant-option-unique)|`0` <small>(default)</small> or `1`|Whether the created file is given a uniquely generated name.|
+|[`IfExists`](#variant-option-ifexists)|`'Error'` <small>(default)</small> or `'Replace'`|What happens when the named file already exists.|
+
+### Variant Option: Unique
+
+The `Unique` variant option (a Boolean) specifies whether a uniquely named file is created.
 
 |---|---|
-|0 { .shaded } |the file named by `X` will be created|
+|`0` <small>(default)</small>|the file named by `X` will be created|
 |`1`|a uniquely named file will be created by extending the base name (see [File Name Parts](nparts.md) ) with random characters. If a unique name cannot be created then an error will be signalled. The actual name of the file can be determined from `⎕NNAMES` or `⎕NINFO` .|
 
-## IfExists Option (character vector)
+### Variant Option: IfExists
 
-|------------------|----------------------------------------------------------------------------|
-|Error { .shaded } |`⎕NCREATE` will generate a `FILE NAME ERROR` if the file already exists     |
+The `IfExists` variant option (a character vector) specifies what happens when the named file already exists.
+
+|Value|Description|
+|---|---|
+|`'Error'` <small>(default)</small>|`⎕NCREATE` will generate a `FILE NAME ERROR` if the file already exists|
 |`Replace`         |`⎕NCREATE` will replace an existing file with an empty one of the same name.|
 
 <h2 class="example">Examples</h2>
@@ -57,8 +69,8 @@ FILE NAME ERROR: myfile: Unable to create file ("The file exists.")
 
 ## Notes
 
-- Setting IfExists to `Replace` has no effect when Unique is 1, because the file cannot already exist.
-- The IfExists option does not affect the operation of *slippery ties*.
+- Setting `IfExists` to `'Replace'` has no effect when `Unique` is `1`, because the file cannot already exist.
+- The `IfExists` option does not affect the operation of *slippery ties*.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

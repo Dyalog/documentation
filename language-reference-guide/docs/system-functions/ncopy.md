@@ -13,53 +13,68 @@ This function copies native files and directories from one or more sources speci
 
 Source and destination path names may be full or relative (to the current working directory) path names which adhere to the operating system conventions.
 
-If `X` specifies an existent directory then each source in `Y` is copied into that directory, otherwise `X` specifies the name of the copy. `X` must specify an existent directory if the source contains multiple names or if the **Wildcard** option is set.
+If `X` specifies an existent directory then each source in `Y` is copied into that directory, otherwise `X` specifies the name of the copy. `X` must specify an existent directory if the source contains multiple names or if the `Wildcard` option is set.
 
 The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` contains count(s) of top-level items copied. If `Y` is a single source name, `R` is a scalar otherwise it is a vector of the same length as `Y`.
 
 ## Variant Options
 
-`⎕NCOPY` may be applied using the _variant_ operator with the options **Wildcard** (the Principal option), **IfExists**, **PreserveAttributes** and **ProgressCallback**.
+`⎕NCOPY` supports four variant options, summarised in [](#variant-table) and described in detail beneath it. The principal option is `Wildcard`.
 
-## Wildcard Option (Boolean)
+Table: Variant options overview { #variant-table }
+
+|Variant Option|Value|Effect|
+|---|---|---|
+|[`Wildcard`](#variant-option-wildcard)<br><small>principal</small>|`0` <small>(default)</small> or `1`|Whether the names in `Y` are matched literally or as patterns.|
+|[`IfExists`](#variant-option-ifexists)|`'Error'` <small>(default)</small>, `'Skip'`, `'Replace'` or `'ReplaceIfNewer'`|What happens when a target file already exists.|
+|[`PreserveAttributes`](#variant-option-preserveattributes)|`0` <small>(default)</small> or `1`|Whether file attributes are preserved.|
+|[`ProgressCallback`](#variant-option-progresscallback)|a callback function|Reports progress during the copy.|
+
+### Variant Option: Wildcard
 
 |---|---|
-|0 { .shaded } |The name or names in `Y` identifies a specific file name.|
+|`0` <small>(default)</small>|The name or names in `Y` identifies a specific file name.|
 |`1`|The name or names in `Y` that specify the *base name* and *extension* (see [NParts](./nparts.md) ), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
 
-Note that when **Wildcard** is 1, element(s) of `R` can  be 0, 1 or `>1`. If **Wildcard** is 0, elements of `R` are always 1.
+Note that when `Wildcard` is `1`, element(s) of `R` can be `0`, `1` or `>1`. If `Wildcard` is `0`, elements of `R` are always `1`.
 
-## IfExists Option
+### Variant Option: IfExists
 
-The **IfExists** variant option determines what happens when a source file is to be copied to a target file that already exists. It does not apply to directories, only to the files within them.
+The `IfExists` variant option determines what happens when a source file is to be copied to a target file that already exists. It does not apply to directories, only to the files within them.
 
-|Value             |Description                                                                                        |
-|------------------|---------------------------------------------------------------------------------------------------|
-|'Error' { .shaded } |Existing files will not be overwritten and an error will be signalled. This is the default                                                                        |
+|Value|Description|
+|---|---|
+|`'Error'` <small>(default)</small>|Existing files will not be overwritten and an error will be signalled.|
 |`'Skip'`          |Existing files will not be overwritten but the corresponding copy operation will be skipped (ignored).                                                            |
 |`'Replace'`       |Existing files will be overwritten.                                                                                                                               |
 |`'ReplaceIfNewer'`|Existing files may be overwritten if, and only if, the corresponding source file is newer (more recently modified) than the existing one, otherwise it is skipped.|
 
-The following cases cause an error to be signalled regardless of the value of the **IfExists** variant.
+The following cases cause an error to be signalled regardless of the value of the `IfExists` variant.
 
 - If the source specifies a directory and the destination specifies an existing file.
 - If the source specifies a file and the same base name exists as a sub-directory in the destination.
 
-## PreserveAttributes Option (Boolean)
+### Variant Option: PreserveAttributes
 
-The **PreserveAttributes** variant option determines whether or not file attributes are preserved. It does not apply to directories, only to files.
+The `PreserveAttributes` variant option (a Boolean) determines whether or not file attributes are preserved. It does not apply to directories, only to files.
 
-|---|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|0 { .shaded } |file attributes are not preserved.                                                                                                                                                         |
+|---|---|
+|`0` <small>(default)</small>|file attributes are not preserved.                                                                                                                                                         |
 |`1`|where possible, copied files will be given at least the same modification time as the source. Other file attributes will be preserved as permitted by the operating system and file system.|
 
 Note also that when files are copied across file systems, the different file systems may have different timestamp granularity and the timestamps may not be exactly the same.
+
+### Variant Option: ProgressCallback
+
+The `ProgressCallback` variant option is described in the [Dyalog Programming Reference Guide](../../../programming-reference-guide/native-files#progress-callbacks). The following is specific to `⎕NCOPY`:
+
+* The first element of the right argument to the callback function is the character vector `'⎕NCOPY'`.
 
 <h2 class="example">Examples</h2>
 
 There are a number of possibilities which are illustrated below. In all cases,  if the source is a file, a copy of the file is created. If the source is a directory, a copy of the directory and all its contents is created.
 
-### Examples (single source, Wildcard is 0)
+### Examples: single source, `Wildcard` is `0` { .example }
 
 - The source name must be an existent file or directory.
 - If the destination name does not exist but its path name does exist, the source is copied to the destination name.
@@ -83,7 +98,7 @@ i:/Documents/Dyalog APL-64 17.0 Unicode Files/
 backups/default.dlf  
 ```
 
-### Examples (single source, Wildcard is 1)
+### Examples: single source, `Wildcard` is `1` { .example }
 
 - The source name may include wildcard characters which matches a number of existing files and/or directories. The destination name must be an existing directory.
 - The files and/or directories that match the pattern specified by the source name are copied into the destination directory. If there are no matches, zero copies are made.
@@ -107,7 +122,7 @@ backups/UserCommand20.cache
 
 ```
 
-### Examples (multiple sources, Wildcard is 0)
+### Examples: multiple sources, `Wildcard` is `0` { .example }
 
 - Each source name must specify a single file or directory which must exist. The destination name must be an existing directory.
 - Copies of each of the files and/or directories specified by the source base names are made in the destination directory.
@@ -126,7 +141,7 @@ backups/def_uk.dse
 
 ```
 
-### Examples (multiple sources, Wildcard is 1)
+### Examples: multiple sources, `Wildcard` is `1` { .example }
 
 - The destination name must be an existing directory.
 - Copies of each of the files and/or directories that match the patterns specified by the source names (if any) are made in the destination directory.
@@ -145,17 +160,11 @@ backups/def_uk.dse
 backups/UserCommand20.cache
 ```
 
-## ProgressCallback Option
-
-The **ProgressCallback** variant option is described in the [Dyalog Programming Reference Guide](../../../programming-reference-guide/native-files#progress-callbacks). following is specific to `⎕NCOPY`:
-
-* The first element of the right argument to the callback function is the character vector `'⎕NCOPY'`.
-
 ## Notes
 
 - The special directories `.` and `..` can never be copied into an existing directory.
 - If any source name is a symbolic link it is dereferenced; that is, the source or directory it references is copied rather than the link itself.
-- In the result `R`, a directory together with all its contents is counted once. A directory may be partially copied if the **IfExists** option is set to `'Replace'` or `'ReplaceIfNewer'`).
+- In the result `R`, a directory together with all its contents is counted once. A directory may be partially copied if the `IfExists` option is set to `'Replace'` or `'ReplaceIfNewer'`).
 - If an error occurs during the copy process then processing will immediately stop and an error will be signalled. The operation is not atomic; some items may be copied before this happens. In the event of an error there will be no result and therefore no indication of how many names were copied before the error occurred.
 
 <!-- Hidden search keywords -->

@@ -7,7 +7,7 @@ search:
 
 This function moves native files and directories from one or more sources specified by `Y` to a destination specified by  `X`. `⎕NMOVE` is similar to `⎕NCOPY` (see [Native File Copy ](ncopy.md)).
 
-When possible `⎕NMOVE` *renames* files and directories, which effects a fast move when the source and destination are on the same file system. By default (see **RenameOnly** option below), if `⎕NMOVE` is unable to rename files or directories, it instead copies them and deletes the originals.
+When possible `⎕NMOVE` *renames* files and directories, which effects a fast move when the source and destination are on the same file system. By default (see the `RenameOnly` option below), if `⎕NMOVE` is unable to rename files or directories, it instead copies them and deletes the originals.
 
 `X` is a character vector that specifies the name of the destination.
 
@@ -21,43 +21,58 @@ The [shy](../../../programming-reference-guide/introduction/results#shy-results)
 
 ## Variant Options
 
-`⎕NMOVE` may be applied using the _variant_ operator with the options **Wildcard** (the Principal option), **IfExists**, **RenameOnly** and **ProgressCallback**.
+`⎕NMOVE` supports four variant options, summarised in [](#variant-table) and described in detail beneath it. The principal option is `Wildcard`.
 
-## Wildcard Option (Boolean)
+Table: Variant options overview { #variant-table }
+
+|Variant Option|Value|Effect|
+|---|---|---|
+|[`Wildcard`](#variant-option-wildcard)<br><small>principal</small>|`0` <small>(default)</small> or `1`|Whether the names in `Y` are matched literally or as patterns.|
+|[`IfExists`](#variant-option-ifexists)|`'Error'` <small>(default)</small> or `'Skip'`|What happens when a target file already exists.|
+|[`RenameOnly`](#variant-option-renameonly)|`0` <small>(default)</small> or `1`|What happens when the source cannot be renamed.|
+|[`ProgressCallback`](#variant-option-progresscallback)|a callback function|Reports progress during the move.|
+
+### Variant Option: Wildcard
 
 |---|---|
-|0 { .shaded } |The name or names in `Y` identifies a specific file name.|
+|`0` <small>(default)</small>|The name or names in `Y` identifies a specific file name.|
 |`1`|The name or names in `Y` that specify the *base name* and *extension* (see [NParts](./nparts.md) ), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
 
-Note that when **Wildcard** is 1, element(s) of `R` can  be 0 or `>1`. If **Wildcard** is 0, elements of `R` are always 1.
+Note that when `Wildcard` is `1`, element(s) of `R` can be `0` or `>1`. If `Wildcard` is `0`, elements of `R` are always `1`.
 
-## IfExists Option
+### Variant Option: IfExists
 
-The **IfExists** variant option determines what happens when a source file is to be copied to a target file that already exists. It does not apply to directories, only to the files within them.
+The `IfExists` variant option determines what happens when a source file is to be moved to a target file that already exists. It does not apply to directories, only to the files within them.
 
-|Value   |Description                                                                                           |
-|--------|------------------------------------------------------------------------------------------------------|
-|'Error' { .shaded } |Existing files will not be overwritten and an error will be signalled.                                |
+|Value|Description|
+|---|---|
+|`'Error'` <small>(default)</small>|Existing files will not be overwritten and an error will be signalled.|
 |`'Skip'`|Existing files will not be overwritten but the corresponding copy operation will be skipped (ignored).|
 
-The following cases cause an error to be signalled  regardless of the value of the **IfExists** variant.
+The following cases cause an error to be signalled regardless of the value of the `IfExists` variant.
 
 - If the source specifies a directory and the destination specifies an existing file.
 - If the source specifies a file and the same base name exists as a sub-directory in the destination.
 
-## RenameOnly Option (Boolean)
+### Variant Option: RenameOnly
 
-The **RenameOnly** option  determines what happens when it is not possible to rename the source.
+The `RenameOnly` variant option (a Boolean) determines what happens when it is not possible to rename the source.
 
-|---|--------------------------------------------------|
-|0 { .shaded }  |The source will be copied and the original deleted|
+|---|---|
+|`0` <small>(default)</small>|The source will be copied and the original deleted|
 |`1`|The move will fail                                |
 
-## Examples
+### Variant Option: ProgressCallback
+
+The `ProgressCallback` variant option is described in the [Dyalog Programming Reference Guide](../../../programming-reference-guide/native-files#progress-callbacks). The following is specific to `⎕NMOVE`:
+
+* The first element of the right argument to the callback function is the character vector `'⎕NMOVE'`.
+
+<h2 class="example">Examples</h2>
 
 A number of possibilities exist, illustrated by the following examples. In all cases, if the source is a file, the file is moved. If the source is a directory, the directory and all of its contents are moved.
 
-### Single source, Wildcard is 0
+### Examples: single source, `Wildcard` is `0` { .example }
 
 - The source name must be an existent file or directory.
 - If the destination name does not exist but its path name does exist, the source is moved to the destination name.
@@ -79,7 +94,7 @@ i:/Documents/Dyalog APL-64 17.0 Unicode Files/
 backups/default.dlf  
 ```
 
-### Single source, Wildcard is 1
+### Examples: single source, `Wildcard` is `1` { .example }
 
 - The source name may include wildcard characters which matches a number of existing files and/or directories. The destination name must be an existing directory.
 - The files and/or directories that match the pattern specified by the source name are moved into the destination directory. If there are no matches, zero copies are made.
@@ -99,7 +114,7 @@ backups/def_uk.dse
 backups/UserCommand20.cache
 ```
 
-### Multiple sources, Wildcard is 0
+### Examples: multiple sources, `Wildcard` is `0` { .example }
 
 - Each source name must specify a single file or directory which must exist. The destination name must be an existing directory.
 - Each of the files and/or directories specified by the source base names are moved to the destination directory.
@@ -119,7 +134,7 @@ backups/default.dlf
 backups/def_uk.dse 
 ```
 
-### Multiple sources, Wildcard is 1
+### Examples: multiple sources, `Wildcard` is `1` { .example }
 
 - The destination name must be an existing directory.
 - Each of the files and/or directories that match the patterns specified by the source names (if any) are moved to the destination directory.
@@ -138,12 +153,6 @@ backups/default.dlf
 backups/def_uk.dse
 backups/UserCommand20.cache
 ```
-
-## ProgressCallback Option
-
-The **ProgressCallback** variant option is described in the [Dyalog Programming Reference Guide](../../../programming-reference-guide/native-files#progress-callbacks). The following is specific to `⎕NMOVE`:
-
-* The first element of the right argument to the callback function is the character vector `'⎕NMOVE'`.
 
 ## Note
 
