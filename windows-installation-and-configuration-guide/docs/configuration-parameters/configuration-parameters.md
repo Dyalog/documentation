@@ -49,7 +49,7 @@ MySetting: "[DYALOG]/MyFile"
 
 will replace `[DYALOG`] with the value of the **DYALOG** configuration value.
 
-If the string inside the `[]` delimiters is "`.`", the "`.`" is replaced is replaced with the path of the directory containing the configuration file itself. Therefore,
+If the string inside the `[]` delimiters is "`.`", the "`.`" is replaced with the path of the directory containing the configuration file itself. Therefore,
 ```apl
 FILENAME: "[.]/x.txt"
 ```
