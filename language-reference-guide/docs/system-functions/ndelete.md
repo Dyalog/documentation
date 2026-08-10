@@ -12,7 +12,7 @@ This function deletes files and directories.
 The optional left argument `X` is a numeric scalar; valid values are  shown in the following table. If omitted, its default value is 0.
 
 |---|------------------------------------------------------------------------------------------|
-|0 { .shaded } |Each file or directory with the given name must exist.                                    |
+|`0` <small>(default)</small>|Each file or directory with the given name must exist.                                    |
 |`1`|If the file or directory with the given name does not exist then no action is taken. The result `R` may be used to determine whether the file or directory was deleted or not.|
 |`2`|If a name identifies a non-empty directory it, and all its contents, are to be deleted.   |
 |`3`|Combination of 1 and 2.                                                                   |
@@ -21,15 +21,17 @@ The optional left argument `X` is a numeric scalar; valid values are  shown in t
 
 ## Variant Options
 
-`⎕NDELETE` may be applied using the  Variant operator with the Wildcard option.
+`⎕NDELETE` supports one variant option, `Wildcard`, which is the principal option.
 
-## Wildcard Option (Boolean)
+### Variant Option: Wildcard
+
+The `Wildcard` variant option (a Boolean, `0` by default) determines whether the names in `Y` are matched literally or treated as patterns.
 
 |---|---|
-|0 { .shaded } |The name or names in `Y` identifies a specific file name.|
+|`0` <small>(default)</small>|The name or names in `Y` identifies a specific file name.|
 |`1`|The name or names in `Y` that specify the *base name* and *extension* (see [File Name Parts](./nparts.md)), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
 
-Note that when Wildcard is 1, element(s) of `R` can  be 0 or `>1`. If Wildcard is 0, elements of `R` are always 1.
+Note that when `Wildcard` is `1`, element(s) of `R` can be `0` or `>1`. If `Wildcard` is `0`, elements of `R` are always `1`.
 
 If `Y` specifies the name of a  symbolic link, `⎕NDELETE` deletes that symbolic link;   the target of the symbolic link is unaffected.
 
