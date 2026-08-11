@@ -15,13 +15,13 @@ If `Y` specifies a single name, the result `R` is a scalar 1 if a file or direct
 
 `⎕NEXISTS` supports one variant option, `Wildcard`, which is the principal option.
 
-### Variant Option: Wildcard
+### Variant Option: `Wildcard`
 
 The `Wildcard` variant option (a Boolean, `0` by default) determines whether the names in `Y` are matched literally or treated as patterns.
 
 |---|---|
 |`0` <small>(default)</small>|The name or names in `Y` identifies a specific file name.|
-|`1`|The name or names in `Y` that specify the *base name* and *extension* (see [NParts](./nparts.md) ), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
+|`1`|The name or names in `Y` that specify the *base name* and *extension* (see [NParts](./nparts.md) ), can also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
 
 If the `Wildcard` option is `1`, `R` indicates whether or not one or more matches to the corresponding pattern in `Y` exist.
 

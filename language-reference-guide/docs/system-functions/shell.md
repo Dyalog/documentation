@@ -106,9 +106,9 @@ When an APL thread running `⎕SHELL` is terminated by [`⎕TKILL`](tkill.md) or
 
 ## Variant Options
 
-`⎕SHELL` supports ten variant options, summarised in [](#variant-table) and described in detail beneath it. There is no principal option. They control certain parts of the program execution context.
+`⎕SHELL` supports ten variant options, summarised in [](#variantoptionsforshell) and described in detail beneath it. There is no principal option. They control certain parts of the program execution context.
 
-Table: Variant options overview { #variant-table }
+Table: Variant options for `⎕SHELL` { #variantoptionsforshell }
 
 |Variant Option|Valid Values|Default|Effect|
 |---|---|---|---|
@@ -123,7 +123,7 @@ Table: Variant options overview { #variant-table }
 |[`Signal`](#variant-option-signal)|a signal number|operating-system specific|Signal sent to the child process when it is abandoned.|
 |[`Window`](#variant-option-window)|`'Hidden'` or another window mode|`'Hidden'`|Initial window mode (Microsoft Windows only).|
 
-### Variant Option: Output
+### Variant Option: `Output`
 The `Output` variant option controls output stream redirections. The value must describe a set of redirections, in one of the following formats:
 
 - a two-column matrix.
@@ -178,8 +178,8 @@ The callback is invoked when:
 
 Depending on the type or encoding, some of these conditions could happen when the buffer contains a number of bytes that do not make up a full item, such as when the buffer is full and the last byte is only one of multiple bytes needed to encode a UTF-8 character.
 
-### Variant Option: Input
-The Input variant option controls input stream redirections. The value must describe a set of redirections, in one of the following formats:
+### Variant Option: `Input`
+The `Input` variant option controls input stream redirections. The value must describe a set of redirections, in one of the following formats:
 
 - a two-column matrix.
 - a two-element vector.
@@ -204,17 +204,17 @@ Any input the child process tries to read on its stream `Stream` will come from 
 
 The default is `0 2⍴0`, but see [Default Redirections](#default-redirections).
 
-### Variant Option: WorkingDir
+### Variant Option: `WorkingDir`
 The `WorkingDir` variant option sets the working directory of the child process. The value must be a character vector that refers to a valid directory, such as `'/tmp/somedir'` on Linux, or `'C:\tmp\somedir'` on Microsoft Windows.
 
 The default is the current working directory of the interpreter.
 
-### Variant Option: InheritEnv
+### Variant Option: `InheritEnv`
 The `InheritEnv` variant option specifies whether the set of environment variables from the interpreter should be inherited by the child process. The value must be a Boolean scalar.
 
 The default is `1`.
 
-### Variant Option: Env
+### Variant Option: `Env`
 The `Env` variant option specifies any additional environment variables and their values. If an environment variable that already exists in the set of inherited variables (see [`InheritEnv`](#variant-option-inheritenv)) is specified here, the value from `Env` takes precedence. The option value must be one of the following:
 
 - a two-column matrix.
@@ -247,7 +247,7 @@ All the environment variable names must be unique within the scope of the call t
 
 The default is `0 2⍴⍬`.
 
-### Variant Option: Shell
+### Variant Option: `Shell`
 The `Shell` variant option sets the shell to be used when `Y` is a character vector.
 
 The value must be a character vector or a vector of character vectors with a length of at least 1.
@@ -282,19 +282,19 @@ There is no difference between the following two calls; the `Shell` variant opti
       ⎕SHELL⍠'Shell' ('/bin/bash' '-c')⊢'a b c'
 ```
 
-### Variant Option: ExitCheck
+### Variant Option: `ExitCheck`
 The `ExitCheck` variant option specifies whether `⎕SHELL` should convert abnormal exit reasons and exit codes into a `DOMAIN ERORR`. The value must be a boolean scalar; if set to 1, a `DOMAIN ERROR` is reported if `ExitReason` and `ExitCode` are not both 0.
 
 The default `0`.
 
-### Variant Option: Timeout
+### Variant Option: `Timeout`
 The `Timeout` variant option specifies an upper limit for the duration of the `⎕SHELL` call.
 The value must be a non-negative numeric scalar representing the number of milliseconds.
 The value `0` allows the `⎕SHELL` call to run for as long as it needs.
 
 The default is `0`.
 
-### Variant Option: Signal
+### Variant Option: `Signal`
 The `Signal` variant option specifies a signal to send to the child process when it is being abandoned by `⎕SHELL`.
 The value must be either an integer representing a valid signal number, or `0` (which means no signal should be sent).
 
@@ -306,7 +306,7 @@ The default depends on the operating-system:
 - Microsoft Windows: `0`.
 - Linux, macOS, AIX: the numeric value of `SIGTERM` which is the signal that asks the child process to shut itself down.
 
-### Variant Option: Window
+### Variant Option: `Window`
 !!! windows "Dyalog on Microsoft Windows"
     This option only has an effect on Windows.
 

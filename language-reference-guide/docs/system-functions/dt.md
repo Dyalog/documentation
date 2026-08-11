@@ -338,11 +338,11 @@ Table: Predefined patterns built into the interpreter { #patterns }
 
 Additional predefined patterns can be defined using the [`Dictionary` variant option](#variant-option-dictionary). Predefined patterns must not contain references to other predefined patterns.
 
-## Pattern-matching Rules
+## Pattern-Matching Rules
 
 When <code>X<sub>Y</sub></code> is a pattern, the corresponding character vectors in `Y` are matched against it and decoded into datetime. The following additional rules apply to the matching.
 
-### Two-digit Years
+### Two-Digit Years
 
 Two digit years (that is, those corresponding to the formatting pattern elements `YY` and `WW`) are, by default, interpreted according to the same rules used for `⎕SM` and GUI edit fields, which are configurable using the [`YY_WINDOW`](../../windows-installation-and-configuration-guide/configuration-parameters/yy-window/) configuration parameter.
 
@@ -398,16 +398,16 @@ If a pattern is rejected, or a text-formatted datetime cannot be matched against
 
 ## Variant Options
 
-`⎕DT` supports the `Language` and `Dictionary` variant options, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md) and summarised in [](#variant-table). These only apply when <code>X<sub>Y</sub></code> and/or <code>X<sub>R</sub></code> are patterns.
+`⎕DT` supports the `Language` and `Dictionary` variant options, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md) and summarised in [](#variantoptionsfordt). These only apply when <code>X<sub>Y</sub></code> and/or <code>X<sub>R</sub></code> are patterns.
 
-Table: Variant options overview { #variant-table }
+Table: Variant options for `⎕DT` { #variantoptionsfordt }
 
 |Variant Option|Valid Values|Effect|
 |---|---|---|
 |[`Language`](#variant-option-language)|`'en'` (Default), or another two- or five-character language name such as `'en_GB'`|The language used for formatting and matching datetimes.|
 |[`Dictionary`](#variant-option-dictionary)|a namespace|Additional or replacement month names and predefined patterns.|
 
-### Variant Option: Language
+### Variant Option: `Language`
 
 The `Language` variant option specifies the language used for formatting and matching datetimes and defaults to `'en'` (English). A language is named by a two or five character value (for example `'en'` or `'en_GB'`). The value can be one of the following:
 
@@ -430,7 +430,7 @@ The setting can be explicitly overridden within a format pattern using the `__xx
 └──────────────────────────────────┘
 ```
 
-### Variant Option: Dictionary
+### Variant Option: `Dictionary`
 
 The `Dictionary` variant option specifies a namespace that contains additional or replacement names for the months (and so on) and/or predefined patterns, for languages and language regions. If <code>X<sub>Y</sub></code> and <code>X<sub>R</sub></code> are both patterns, the dictionary is applied to both.
 

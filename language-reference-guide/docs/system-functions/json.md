@@ -142,9 +142,9 @@ The above name translations are verified using `7162⌶`:
 
 ## Variant Options
 
-`⎕JSON` is controlled by six variant options. [](#variant-table) summarises each option's effect on import from JSON to APL (`X=0`) and export from APL to JSON (`X=1`). Each option is described in finer detail, with examples, below the table. Variant options specific to one direction are tolerated for the other direction even if they have no effect.
+`⎕JSON` is controlled by six variant options. [](#variantoptionsforjson) summarises each option's effect on import from JSON to APL (`X=0`) and export from APL to JSON (`X=1`). Each option is described in finer detail, with examples, below the table. Variant options specific to one direction are tolerated for the other direction even if they have no effect.
 
-Table: Variant options overview { #variant-table }
+Table: Variant options for `⎕JSON` { #variantoptionsforjson }
 
 | Variant Option | Valid Values | Default | Effect on Import | Effect on Export |
 |---|:---:|:---:|---|---|
@@ -161,7 +161,7 @@ Table: Variant options overview { #variant-table }
 | [`HighRank`](#variant-option-highrank)                         | `'Error'` | `'Error'` | None                                                | High-rank arrays are rejected |
 |_-                                                                -_| `'Split'`                             |  | None                                                | High-rank arrays are split and [inverted table wrappers](#dataset-wrappers) accept text columns as matrices |
 
-### Variant Option: Format
+### Variant Option: `Format`
 
 The `Format` variant option, the principal option, determines whether `⎕JSON` works with a direct APL representation of the data (`'D'` for "Data", the default) or with a four-column matrix that encodes the JSON structure (`'M'` for "Matrix") as nodes with depth, name, value, and type.
 
@@ -439,7 +439,7 @@ DOMAIN ERROR: JSON export: value does not match the specified type in row 3 (⎕
       ∧
 ```
 
-### Variant Option: Dialect
+### Variant Option: `Dialect`
 
 If the `Dialect` variant option (default: `'JSON'`) is `'JSON5'`, [JSON5](https://json5.org/) extensions are enabled on import and export.
 
@@ -475,7 +475,7 @@ On export, the result is shortened by usage of identifiers without quotes, singl
 └───┴───┴──┘
 ```
 
-### Variant Option: Null
+### Variant Option: `Null`
 
 The `Null` variant option selects how JSON <code class="language-nonAPL">null</code> is represented in APL, and must be either `⊂'null'` (the default) or `⎕NULL`:
 
@@ -502,7 +502,7 @@ DOMAIN ERROR: JSON export: item "[1]" of the right argument (⎕IO=1) cannot be 
 [null,null]
 ```
 
-### Variant Option: Compact
+### Variant Option: `Compact`
 
 The `Compact` variant option can be used to generate JSON that is either dense (`1`, the default) or optimised for humans to read and edit (`0`).
 
@@ -568,7 +568,7 @@ Non-compact JSON takes more than twice as much space, but is more readable, and 
 }
 ```
 
-### Variant Option: Charset
+### Variant Option: `Charset`
 
 The `Charset` variant option can be used to either allow Unicode in the generated JSON (`'Unicode'`, the default) or restrict the output to ASCII characters (`'ASCII'`). When necessary, characters are converted to the hexadecimal form `\uNNNN`. If [`Dialect`](#variant-option-dialect) is `'JSON5'`, the form `\xNN` is used for values up to hexadecimal `FF` (`⎕UCS 255`).
 
@@ -584,7 +584,7 @@ DÉ
 {"d\u00E9":"D\u00C9"}
 ```
 
-### Variant Option: HighRank
+### Variant Option: `HighRank`
 
 If `HighRank` is `'Error'` (the default), `⎕JSON` will signal a `DOMAIN ERROR` upon encountering any arrays in `Y` of rank higher than 1. If `HighRank` is `'Split'`, `⎕JSON` will recursively split any such arrays as necessary; in addition, [datasets](#dataset-wrappers) as inverted tables can have text columns represented as matrices.
 

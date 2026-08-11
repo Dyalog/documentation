@@ -30,7 +30,7 @@ The optional left argument `X` is a numeric scalar that modifies the default beh
 
 `⎕MKDIR` supports one variant option, `Unique`. There is no principal option.
 
-### Variant Option: Unique
+### Variant Option: `Unique`
 
 The `Unique` variant option (a Boolean, `0` by default) specifies whether the base name (see [File Name Parts](nparts.md)) in `Y` is modified so that the name is unique (does not already exist).
 
@@ -74,7 +74,7 @@ FILE NAME ERROR: /Users/Pete/Documents/temp/t1/t2: Already exists
 ```
 
 !!! note
-    When multiple names are specified they are processed in the order given. If an error occurs at any point whilst creating directories, processing will immediately stop and an error will be signalled. The operation is not atomic; some directories may be created before this happens. In the event of an error there will be no result and therefore no indication of how many directories were created before the error occurred.
+    When multiple names are specified they are processed in the order given. If an error occurs at any point whilst creating directories, processing will immediately stop and an error will be signalled. The operation is not atomic; some directories might be created before this happens. In the event of an error there will be no result and therefore no indication of how many directories were created before the error occurred.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

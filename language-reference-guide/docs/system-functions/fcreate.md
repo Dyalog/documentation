@@ -53,9 +53,9 @@ to:
 
 ## Variant Options
 
-`⎕FCREATE` sets the properties of the newly created file through variant options, summarised in [](#variant-table). These are the file properties described in [File Properties](fprops.md).
+`⎕FCREATE` sets the properties of the newly created file through variant options, summarised in [](#variantoptionsforfcreate). These are the file properties described in [File Properties](fprops.md).
 
-Table: Variant options overview { #variant-table }
+Table: Variant options for `⎕FCREATE` { #variantoptionsforfcreate }
 
 |Variant Option|Valid Values|Default|Effect|
 |---|---|---|---|

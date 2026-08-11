@@ -9,22 +9,22 @@ search:
 
 In this section, the term *namespace* covers scripted Namespaces, Classes and Interfaces.
 
-`Y` may be a simple character vector, or  a vector of character vectors or character scalars. The value of `X` determines what `Y` may contain.
+`Y` can be a simple character vector, or  a vector of character vectors or character scalars. The value of `X` determines what `Y` can contain.
 
 If `Y` is a simple character vector, it must start with `file://`, followed by the name of a file which must exist. The contents of the file must follow the same rules that apply to `Y` when `Y` is a vector of character vectors or scalars. The file name can be relative or absolute; when considering cross-platform portability, using "/" as the directory delimiter is recommended, although "\" is also valid under Windows.
 
-If specified, `X` must be a numeric scalar. It may currently take the value `0`, `1` or `2`. If not specified, the value is assumed to be `1`.
+If specified, `X` must be a numeric scalar. It can currently take the value `0`, `1` or `2`. If not specified, the value is assumed to be `1`.
 
-If `X` is `0`, `Y` must specify a single valid *namespace* which may or may not be named, or a file containing such a definition. If so, the [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` contains a reference to the *namespace*. Even if the *namespace* is named, it is not established *per se*, although it will exist for as long as at least one reference to it exists.
+If `X` is `0`, `Y` must specify a single valid *namespace* which might or might not be named, or a file containing such a definition. If so, the [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` contains a reference to the *namespace*. Even if the *namespace* is named, it is not established *per se*, although it will exist for as long as at least one reference to it exists.
 
-If `X` is `1`, `Y` must specify a single valid *namespace* which may or may not be named, or a file containing such a definition.  If so, the shy result `R` contains a reference to the *namespace*. If `Y` contains the definition of a named *namespace*, the *namespace* is established in the workspace.
+If `X` is `1`, `Y` must specify a single valid *namespace* which might or might not be named, or a file containing such a definition.  If so, the shy result `R` contains a reference to the *namespace*. If `Y` contains the definition of a named *namespace*, the *namespace* is established in the workspace.
 
 If `X` is `2`, `Y` is either a character vector containing the name of a script file, or a vector of character vectors that represents a script.
 
-`Y` may specify a series of **named** *namespaces* or function definitions,   or a combination of functions and namespaces.
+`Y` can specify a series of **named** *namespaces* or function definitions,   or a combination of functions and namespaces.
 
 - If the script contains more than one item,  tradfn definitions must be delimited by `∇`symbols.
-- Derived and assigned functions may be specified only within namespaces.
+- Derived and assigned functions can be specified only within namespaces.
 
 In this case,  the shy result `R` is a vector of character vectors, containing the names of all of the objects that have been established in the workspace; the order of the names in `R` is not defined. Currently `2 ⎕FIX` is not certain to be an atomic operation, although this might change in future versions.
 
@@ -109,9 +109,9 @@ DOMAIN ERROR: There were errors processing the script
 
 ## Variant Options
 
-`⎕FIX` supports four variant options, `Quiet`, `FixWithErrors`, `AllowLateBinding` and `InjectReferences`, summarised in [](#variant-table) and described in detail beneath it. These options apply only to namespaces and classes specified by the script. There is no principal option.
+`⎕FIX` supports four variant options, `Quiet`, `FixWithErrors`, `AllowLateBinding` and `InjectReferences`, summarised in [](#variantoptionsforfix) and described in detail beneath it. These options apply only to namespaces and classes specified by the script. There is no principal option.
 
-Table: Variant options overview { #variant-table }
+Table: Variant options for `⎕FIX` { #variantoptionsforfix }
 
 |Variant Option|Valid Values|Default|Effect|
 |---|---|---|---|
@@ -120,7 +120,7 @@ Table: Variant options overview { #variant-table }
 |[`AllowLateBinding`](#variant-option-allowlatebinding)|`0` or `1`|`1`|Whether a Class with an undefined Base class is fixed.|
 |[`InjectReferences`](#variant-option-injectreferences)|`'All'`, `'InClasses'` or `'None'`|`'InClasses'`|How internal references are inserted to implement lexical scope.|
 
-### Variant Option: Quiet
+### Variant Option: `Quiet`
 
 Controls whether script errors are reported in the Status Window.
 
@@ -128,16 +128,16 @@ Controls whether script errors are reported in the Status Window.
 |`0` <small>(default)</small>|If the script contains errors, these are displayed in the Status Window.      |
 |`1`|If the script contains errors, the errors are not shown  in the Status Window.|
 
-### Variant Option: FixWithErrors
+### Variant Option: `FixWithErrors`
 
 Controls whether namespaces and classes that contain errors are fixed.
 
 |---|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |`0`|If the script contains errors, `⎕FIX` fails with `DOMAIN ERROR`.                                                                                                      |
-|`1` <small>(default)</small>|`⎕FIX` fixes all the namespaces and classes in the script regardless of any errors they may contain.                                                                   |
+|`1` <small>(default)</small>|`⎕FIX` fixes all the namespaces and classes in the script regardless of any errors they might contain.                                                                   |
 |`2`|If the script contains errors, `⎕FIX` displays a message box prompting the user to choose whether or not to fix all the offending namespaces and classes in the script.|
 
-### Variant Option: AllowLateBinding
+### Variant Option: `AllowLateBinding`
 
 Controls whether a Class whose Base class is not yet defined can be fixed.
 
@@ -145,7 +145,7 @@ Controls whether a Class whose Base class is not yet defined can be fixed.
 |`0`|`⎕FIX` will only fix a Class whose Base class (if specified) is defined in the script or is present in the workspace.|
 |`1` <small>(default)</small>|`⎕FIX` will fix a Class whose Base class is neither defined in the script nor present in the workspace.            |
 
-### Variant Option: InjectReferences
+### Variant Option: `InjectReferences`
 
 Controls how internal references are inserted to implement lexical scope.
 
@@ -206,8 +206,8 @@ Using the `Pete` Namespace, after executing the expression:
       2(⎕FIX⍠'InjectReferences' 'All')⎕SRC Pete
 ```
 
-- Code in `Pete` may refer to `Aisha`    , `Andy`     , `George`   , `Katherine`, and `Woody`
-- Code in `Andy` may refer to `Aisha`    and `Katherine`
+- Code in `Pete` can refer to `Aisha`    , `Andy`     , `George`   , `Katherine`, and `Woody`
+- Code in `Andy` can refer to `Aisha`    and `Katherine`
 - ... and so forth.
 
 But after executing:
@@ -215,8 +215,8 @@ But after executing:
       2(⎕FIX⍠'InjectReferences' 'InClasses')⎕SRC Pete
 ```
 
-- Code in `Pete` may refer only to `Andy` and  `Katherine`
-- Code in `Andy` may refer only to `Aisha`
+- Code in `Pete` can refer only to `Andy` and  `Katherine`
+- Code in `Andy` can refer only to `Aisha`
 - ... and so forth.
 
 The following tables show which objects in Namespace `Pete` can *see* (that is, refer to) which other objects representing members of the family, in each case; `All`, `InClasses` and `None`.

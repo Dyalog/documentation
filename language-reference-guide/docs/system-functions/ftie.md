@@ -5,13 +5,13 @@ search:
 
 # <span>Exclusive File Tie</span> `{R}←X ⎕FTIE Y`{{key}}
 
-## Access code 2
+## Access Code 2
 
 `Y` must be 0 or a simple 1 or 2 element integer vector containing an available file tie number to be associated with the file for further file operations, and an optional passnumber.  If the passnumber is omitted it is assumed to be zero.  The tie number must not already be associated with a share tied or exclusively tied file.
 
-`X` must be a simple character scalar or vector which specifies the name of the file to be exclusively tied.  The file must be named in accordance with the operating system's conventions, and may be a relative or absolute pathname. If no file extension is supplied, the set of extensions specified by the  **CFEXT** parameter are tried one after another until the file is found or the set of extensions is exhausted. See [ CFEXT](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters).
+`X` must be a simple character scalar or vector which specifies the name of the file to be exclusively tied.  The file must be named in accordance with the operating system's conventions, and can be a relative or absolute pathname. If no file extension is supplied, the set of extensions specified by the  **CFEXT** parameter are tried one after another until the file is found or the set of extensions is exhausted. See [ CFEXT](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters).
 
-The file must exist and  the user must have write access to it.  It may not already be tied by another user.
+The file must exist and  the user must have write access to it.  It cannot already be tied by another user.
 
 !!! Info "Information"
     Small-span (32-bit) component files are currently read-only; this support is scheduled for removal in a future release, after which it will not be possible to tie small-span component files. Dyalog Ltd recommends using `⎕FCOPY` to convert any such files to large-span (64-bit). For information on how to identify calls to small-span component files in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
@@ -47,7 +47,7 @@ The [shy](../../../programming-reference-guide/introduction/results#shy-results)
 
 `⎕FTIE` supports a single variant option, `Mode`, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md).
 
-### Variant Option: Mode
+### Variant Option: `Mode`
 
 Writing to a component file is not always permitted. For example, restrictions on writing to a component file might be imposed by operating system permissions, the host filesystem, or individual component file property settings.
 

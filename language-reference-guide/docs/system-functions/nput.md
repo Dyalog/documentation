@@ -23,8 +23,8 @@ The left-argument `X` is comprised of 1, 2 or 3 items which identify `(content) 
 
 If specified, `encoding` is either:
 
-- a character vector from the first column in the table [File Encodings](nget.md). If `encoding` specifies a UTF format, it may be qualified with -BOM  (for example, UTF-8-BOM), which causes a Byte Order Mark (BOM) to be written at the beginning of the file or -NOBOM which does not. If the -BOM or -NOBOM suffix is omitted, UTF-8 defaults to UTF-8-NOBOM, while the other UTF formats default to -BOM.
-- a 256-element numeric vector that maps each possible byte value (0-255) to a  Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value may appear in the table more than once.
+- a character vector from the first column in the table [File Encodings](nget.md). If `encoding` specifies a UTF format, it can be qualified with -BOM  (for example, UTF-8-BOM), which causes a Byte Order Mark (BOM) to be written at the beginning of the file or -NOBOM which does not. If the -BOM or -NOBOM suffix is omitted, UTF-8 defaults to UTF-8-NOBOM, while the other UTF formats default to -BOM.
+- a 256-element numeric vector that maps each possible byte value (0-255) to a  Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value can appear in the table more than once.
 
 If  omitted, `encoding` defaults to UTF-8-NOBOM.
 
@@ -39,7 +39,7 @@ In all cases, `newline` is appended if required to a simple vector or to each ve
 
 If content contains anything other than a character vector or scalar (or these, nested) then a `DOMAIN ERROR` is signalled.
 
-If both `encoding` and `newline` are omitted `X` specifies only `content` and may be a simple character vector or a vector of character vectors.
+If both `encoding` and `newline` are omitted `X` specifies only `content` and can be a simple character vector or a vector of character vectors.
 
 The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` is the number of bytes written to the file.
 
@@ -63,7 +63,7 @@ The [shy](../../../programming-reference-guide/introduction/results#shy-results)
 
 `⎕NPUT` supports one variant option, `NEOL`.
 
-### Variant Option: NEOL
+### Variant Option: `NEOL`
 
 The `NEOL` variant option specifies how embedded line separators are treated. The default is `1`.
 

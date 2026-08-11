@@ -84,7 +84,7 @@ Multiple names, with a single value:
 
 `⎕VSET` supports one variant option, `Trigger`.
 
-### Variant Option: Trigger
+### Variant Option: `Trigger`
 
 The `Trigger` variant option specifies whether any [triggers](../../../programming-reference-guide/triggers/triggers) should be run for the modified variables in the target namespace that have triggers attached.
 The value must be a Boolean scalar. The default is `1`, meaning that triggers are run.

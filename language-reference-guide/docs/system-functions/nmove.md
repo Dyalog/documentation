@@ -13,7 +13,7 @@ When possible `⎕NMOVE` *renames* files and directories, which effects a fast m
 
 `Y` is a character vector that specifies the name of the source, or a vector of character vectors containing zero or more sources.
 
-Sources and destinations may be full or relative (to the current working directory) path names adhering to the operating system convention.
+Sources and destinations can be full or relative (to the current working directory) path names adhering to the operating system convention.
 
 If `Y` specifies more than one source, `X` must be a character vector  that specifies an existent directory to which each of the sources in `Y` is to be moved.
 
@@ -60,9 +60,9 @@ backups/def_uk.dse
 
 ## Variant Options
 
-`⎕NMOVE` supports four variant options, summarised in [](#variant-table) and described in detail beneath it. The principal option is `Wildcard`.
+`⎕NMOVE` supports four variant options, summarised in [](#variantoptionsfornmove) and described in detail beneath it. The principal option is `Wildcard`.
 
-Table: Variant options overview { #variant-table }
+Table: Variant options for `⎕NMOVE` { #variantoptionsfornmove }
 
 |Variant Option|Valid Values|Default|Effect|
 |---|---|---|---|
@@ -71,17 +71,17 @@ Table: Variant options overview { #variant-table }
 |[`RenameOnly`](#variant-option-renameonly)|`0` or `1`|`0`|What happens when the source cannot be renamed.|
 |[`ProgressCallback`](#variant-option-progresscallback)|the name of a callback function|none|Reports progress during the move.|
 
-### Variant Option: Wildcard
+### Variant Option: `Wildcard`
 
 |---|---|
 |`0` <small>(default)</small>|The name or names in `Y` identifies a specific file name.|
-|`1`|The name or names in `Y` that specify the *base name* and *extension* (see [NParts](./nparts.md) ), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
+|`1`|The name or names in `Y` that specify the *base name* and *extension* (see [NParts](./nparts.md) ), can also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
 
 Note that when `Wildcard` is `1`, element(s) of `R` can be `0` or `>1`. If `Wildcard` is `0`, elements of `R` are always `1`.
 
 <h4 class="example">Examples</h4>
 
-The source name may include wildcard characters which matches a number of existing files and/or directories. The destination name must be an existing directory. The files and/or directories that match the pattern specified by the source name are moved into the destination directory. If there are no matches, zero copies are made.
+The source name can include wildcard characters which matches a number of existing files and/or directories. The destination name must be an existing directory. The files and/or directories that match the pattern specified by the source name are moved into the destination directory. If there are no matches, zero copies are made.
 
 ```apl
        ⊃1 ⎕NPARTS ''
@@ -115,7 +115,7 @@ backups/def_uk.dse
 backups/UserCommand20.cache
 ```
 
-### Variant Option: IfExists
+### Variant Option: `IfExists`
 
 The `IfExists` variant option determines what happens when a source file is to be moved to a target file that already exists. It does not apply to directories, only to the files within them.
 
@@ -129,7 +129,7 @@ The following cases cause an error to be signalled regardless of the value of th
 - If the source specifies a directory and the destination specifies an existing file.
 - If the source specifies a file and the same base name exists as a sub-directory in the destination.
 
-### Variant Option: RenameOnly
+### Variant Option: `RenameOnly`
 
 The `RenameOnly` variant option (a Boolean) determines what happens when it is not possible to rename the source.
 
@@ -137,7 +137,7 @@ The `RenameOnly` variant option (a Boolean) determines what happens when it is n
 |`0` <small>(default)</small>|The source will be copied and the original deleted|
 |`1`|The move will fail                                |
 
-### Variant Option: ProgressCallback
+### Variant Option: `ProgressCallback`
 
 The `ProgressCallback` variant option is described in the [Dyalog Programming Reference Guide](../../../programming-reference-guide/native-files#progress-callbacks). The following is specific to `⎕NMOVE`:
 
@@ -148,9 +148,9 @@ The `ProgressCallback` variant option is described in the [Dyalog Programming Re
 When `⎕NMOVE` copies and deletes files:
 
 - The operation will take longer to complete.
-- File modification times will be preserved but other attributes such as file ownership may be changed.
+- File modification times will be preserved but other attributes such as file ownership might be changed.
 - Read permissions will be needed on all files within a directory which is moved.
-- If the operation fails at any point and an error is signalled it is possible that there may be files and/or directories left duplicated in both the source and destination. It is not possible that a file or directory may be removed from the source without having been copied to the destination.
+- If the operation fails at any point and an error is signalled it is possible that there might be files and/or directories left duplicated in both the source and destination. It is not possible that a file or directory might be removed from the source without having been copied to the destination.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
