@@ -125,20 +125,20 @@ find opt/mdyalog -name make_scripts -exec {} \;
 
 This last step generates the mapl script; should you chose to move the installation directory, it will be necessary to re-run the make_scripts script so that the environment variable $DYALOG is set correctly.
 
-## Uninstalling Dyalog APL
+## Deinstalling Dyalog APL
 
 In the following examples, it is assumed that only Dyalog APL 14.0 64-bit Unicode is installed on the server; the commands to delete directories will need to be more specific if multiple versions of Dyalog APL are installed.
 
-Should it be necessary to uninstall Dyalog APL, then the process is:
+Should it be necessary to deinstall Dyalog APL, then the process is:
 
-## Uninstalling under AIX
+## Deinstalling under AIX
 ```apl
 su -
 cd /opt
 rm -rf mdyalog/14.0
 ```
 
-## Uninstalling on an RPM-based Linux Distribution
+## Deinstalling on an RPM-based Linux Distribution
 ```other
 su -
 rpm -e dyalog.32.classic-14.0-20090901
@@ -147,7 +147,7 @@ rm -rf mdyalog/14.0
 exit
 ```
 
-## Uninstalling on a DEB-based Linux Distribution
+## Deinstalling on a DEB-based Linux Distribution
 ```other
 sudo su -
 apt-get purge dyalog-unicode-140
