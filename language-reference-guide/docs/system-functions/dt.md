@@ -140,7 +140,7 @@ Table: Timestamps { #timestamps }
 | ISO components ||||
 | `¯10` | ISO day-of-year components                   | 6            | Year, day-of-year, hour, minute, second, microsecond         | `1 1 0 0 0 0`                            |
 | `¯11` | ISO day-of-week components                   | 7            | Year, week, day-of-week, hour, minute, second, microsecond   | `1 1 1 0 0 0 0`                              |
-| Decimal encoded[^3] ||||
+| Decimal encoded[^15] ||||
 | `¯20` | Decimal encoded date and time                | 2            | Decimal encoded date, decimal encoded time                   | `10101 0`                              |
 | DateTimePicker ||||
 | `¯30` | DateTime format                              | 4            | International Day Number, hour, minute, second               | `0 0 0 0`                              |
@@ -564,8 +564,7 @@ When <code>X<sub>R</sub></code> is `0`, `⎕DT` validates the elements of `Y` in
 [^12]: Natural sentence case, which can be specified for `M` (month name) and `d` (day name) only, causes the text to be substituted in the case which is natural for the language; some languages (for example, English) always capitalise the first letter of day and month names whereas others (for example, French) do not.
 [^13]: Dates at the start of the year can be in the final week of the previous year, and dates at the end of the year can be in the first week of the following year.
 [^14]: An ordinal indicator is a character or group of characters following a numeral, such as (in English) the suffixes -st, -nd, -rd, -th as in 1st, 2nd, 3rd, 4th.
-[^15]: For negative numbers, the integral part counts backward from 1899-12-30 and the fractional part counts forward from  the date so reached.
-[^16]: Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020-01-23 is encoded as 20200123, and 13:17:56 is encoded as 131756.
+[^15]: Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020-01-23 is encoded as 20200123, and 13:17:56 is encoded as 131756.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
