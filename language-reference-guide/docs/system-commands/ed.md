@@ -4,7 +4,7 @@
 
 `)ED` invokes the Dyalog editor and opens an Edit window for each of the objects specified in `nms`.
 
-If a name includes the slash character  (`\` or `/`) it is taken to be the name of a file. See [Editing Scripts and Text Files](../../../windows-ui-guide/editing-scripts-and-text-files).
+If a name includes the slash character  (`\` or `/`) it is taken to be the name of a file. See [Editing Scripts and Text Files](../../../windows-ui-guide/editor#editing-scripts-and-text-files).
 
 If a name is followed by a line number specified in square brackets, the Editor positions the cursor in the corresponding line. There must not be a space between the last character of the name and the `[`.
 
