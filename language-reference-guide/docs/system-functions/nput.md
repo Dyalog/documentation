@@ -39,7 +39,7 @@ In all cases, `newline` is appended if required to a simple vector or to each ve
 
 If content contains anything other than a character vector or scalar (or these, nested), then a `DOMAIN ERROR` is signalled.
 
-If both `encoding` and `newline` are omitted `X` specifies only `content` and can be a simple character vector or a vector of character vectors.
+If both `encoding` and `newline` are omitted `X` specifies only `content` and can be a simple character vector, a character matrix, or a vector of character vectors.
 
 The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` is the number of bytes written to the file.
 
