@@ -1,7 +1,5 @@
 # <span>GetMethodInfo</span> <span>Method 552</span>
 
-**Description**
-
 This method is used to obtain information about a particular method or set of methods supported by a COM object.
 
 For each method supported by a COM object the author will have registered a help message or description of the method (this is in fact optional), the data type of its result (if it has a result), and the name and data type of each of the parameters that must be supplied when you invoke it. The GetMethodInfo method returns this information.
@@ -30,6 +28,6 @@ The result is a nested vector with one element per method name. Each element of 
 └∊──────────────┘
 ```
 
-**Application**
+## Application
 
 Objects: [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md)

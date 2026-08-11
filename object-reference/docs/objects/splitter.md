@@ -1,8 +1,6 @@
 # <span>Splitter</span> <span>Object</span>
 
-**Purpose:** The Splitter object divides a container into resizable panes.
-
-**Description**
+The Splitter object divides a container into resizable panes.
 
 The Splitter divides the client area of a [Form](form.md) or [SubForm](subform.md) into resizable panes. Each pane created this way may be empty or be occupied by a single object. If the object in a pane is itself a container object, such as a [SubForm](subform.md), it may have a number of other controls within it.
 
@@ -66,7 +64,7 @@ If you have two or more vertical Splitters or two or more horizontal Splitters i
 
 When Splitters collide, the object being dragged by the user (a Splitter or a border of the parent) takes precedence over the setting of Align, and temporarily *pushes* other Splitters along in its direction of travel. If and when the operation is reversed, the other Splitters are *pulled* back to their original positions.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md)
 

@@ -1,7 +1,5 @@
 # <span>CustomFormat</span> <span>Property</span>
 
-**Description**
-
 Specifies a custom format for the date/time display in a [DateTimePicker](../objects/datetimepicker.md).
 
 CustomFormat is a character vector that may contain a mixture of date/time format elements and body text. The date/time elements are replaced  by the actual date/time values when the object is displayed. The body text is displayed *as-is*. Note that CustomFormat may only be specified when the [DateTimePicker](../objects/datetimepicker.md) object is created.
@@ -44,6 +42,6 @@ To include a single quote in your body text, use two consecutive single quotes. 
 !!! note
     Non-format characters that are not delimited by single quotes will result in unpredictable display by the [DateTimePicker](../objects/datetimepicker.md) object.
 
-**Application**
+## Application
 
 Objects: [DateTimePicker](../objects/datetimepicker.md)

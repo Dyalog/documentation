@@ -1,8 +1,6 @@
 # <span>SysTrayItem</span> <span>Object</span>
 
-**Purpose:** The SysTrayItem object represents an item that you can create in the Windows System Tray.
-
-**Description**
+The SysTrayItem object represents an item that you can create in the Windows System Tray.
 
 The SysTrayItem object appears as an icon in the Windows System Tray and allows the user to interact with your application even if it is minimised or has no other visible presence.
 
@@ -16,7 +14,7 @@ Unlike other popup menus, the SysTrayItem menu is not activated by an explicit (
 
 The Tip property specifies a character string to be displayed when the user hovers the mouse over the SysTrayItem. This is displayed using the user's current setting for Tip text and it is not possible to change this appearance.
 
-**Application**
+## Application
 
 Parents: [Form](../objects/form.md), [Root](../objects/root.md)
 

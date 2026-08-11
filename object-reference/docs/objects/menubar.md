@@ -1,8 +1,6 @@
 # <span>MenuBar</span> <span>Object</span>
 
-**Purpose:** Specifies a horizontal menu bar displayed at the top of a [Form](form.md) .
-
-**Description**
+Specifies a horizontal menu bar displayed at the top of a [Form](form.md) .
 
 Unless it is made invisible the MenuBar is always available to the user to initiate actions or to select options. A MenuBar has a fixed position and size.
 
@@ -30,7 +28,7 @@ The [EdgeStyle](../properties/edgestyle.md) property has no effect on the appear
 
 If the MenuBar is owned by a [Form](form.md) that is the parent of an [MDIClient](mdiclient.md), you can set the [MDIMenu](../properties/mdimenu.md) property to the name of the [Menu](menu.md) you wish to nominate as the *window*  menu. This menu will automatically be updated with the [Caption](../properties/caption.md)s of the child [SubForm](subform.md) and may be used to select the currently active one.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [SubForm](../objects/subform.md), [ToolControl](../objects/toolcontrol.md)
 

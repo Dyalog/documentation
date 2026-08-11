@@ -5,8 +5,6 @@ search:
 
 # <span>Format</span> <span>Event 821</span>
 
-**Description**
-
 If enabled, this event is reported when the user attempts to format an object in the Editor window.
 
 If the callback function returns 0, the contents of the Edit window are not reformatted.
@@ -23,6 +21,6 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |`[5]`|Old Name|a character vector containing the original name of the object when it was opened by the Editor      |
 |`[6]`|New Name|a character vector containing the new name of the object. This is empty if the object is a variable.|
 
-**Application**
+## Application
 
 Objects: [Editor](../../../windows-ui-guide/the-session-object/session-object)

@@ -111,7 +111,7 @@ If you simply wish to open a Command Prompt window, you may execute the command 
 
 ## Starting a Windows Program
 
-If `Y` is a 2-element vector of character vectors, `⎕CMD` starts the executable program named by `Y[1]` with the initial window parameter specified by `Y[2]`.  The shy result is an integer scalar containing the window handle allocated by the window manager. Note that in this case APL does not wait for the program specified by `Y` to finish, but returns immediately. The shy result `R` is the process identifier (PID).
+If `Y` is a 2-element vector of character vectors, `⎕CMD` starts the executable program named by `Y[1]` with the initial window parameter specified by `Y[2]`.  The [shy](../../../programming-reference-guide/introduction/results#shy-results) result is an integer scalar containing the window handle allocated by the window manager. Note that in this case APL does not wait for the program specified by `Y` to finish, but returns immediately. The shy result `R` is the process identifier (PID).
 
 `Y[1]` must specify the name or complete pathname of an executable program.  If the name alone is specified, Windows will search the following directories:
 

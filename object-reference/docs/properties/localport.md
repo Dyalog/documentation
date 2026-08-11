@@ -1,7 +1,5 @@
 # <span>LocalPort</span> <span>Property</span>
 
-**Description**
-
 The LocalPort property is a scalar integer in the range 1-65536 that
 identifies the [port number](../miscellaneous/port-number.md) associated with a [TCPSocket](../objects/tcpsocket.md)
  object.
@@ -28,6 +26,6 @@ For example:
 For a process that is completing a connection, LocalPort is allocated by the
 system and is effectively read-only.
 
-**Application**
+## Application
 
 Objects: [TCPSocket](../objects/tcpsocket.md)

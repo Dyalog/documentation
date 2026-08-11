@@ -72,6 +72,7 @@ nav:
       - Output: introduction/output.md
       - Functions: introduction/functions.md
       - Operators: introduction/operators.md
+      - Results: introduction/results.md
       - Binding Strength: introduction/binding-strength.md
       - Function Trains: introduction/trains.md
       - Search Functions and Hash Tables: introduction/search-functions-and-hash.md
@@ -155,20 +156,23 @@ nav:
                   defined-functions-and-operators/traditional-functions-and-operators/control-structures/section.md
               - Disposable Statement: 
                   defined-functions-and-operators/traditional-functions-and-operators/control-structures/disposable.md
-          - APL Line Editor: 
-              defined-functions-and-operators/traditional-functions-and-operators/apl-line-editor.md
       - Dfns and Dops:
           - Introduction: defined-functions-and-operators/dfns-and-dops/dynamic-functions-and-operators.md
-          - MultiLine Dfns: defined-functions-and-operators/dfns-and-dops/multiline-dynamic-functions.md
+          - Model Syntax: defined-functions-and-operators/dfns-and-dops/model-syntax.md
+          - Statements: defined-functions-and-operators/dfns-and-dops/statements.md
+          - Multi-line Dfns: defined-functions-and-operators/dfns-and-dops/multiline-dynamic-functions.md
+          - Arguments and Operands: defined-functions-and-operators/dfns-and-dops/arguments-and-operands.md
           - Default Left Argument: defined-functions-and-operators/dfns-and-dops/default-left-argument.md
           - Guards: defined-functions-and-operators/dfns-and-dops/guards.md
-          - Shy Result: defined-functions-and-operators/dfns-and-dops/shy-result.md
-          - Lexical Name Scope: defined-functions-and-operators/dfns-and-dops/static-name-scope.md
           - Error Guards: defined-functions-and-operators/dfns-and-dops/error-guards.md
-          - Dops: defined-functions-and-operators/dfns-and-dops/dynamic-operators.md
+          - Shy Result: defined-functions-and-operators/dfns-and-dops/shy-result.md
+          - Global and Local Names: defined-functions-and-operators/dfns-and-dops/global-local-names.md
+          - Lexical Name Scope: defined-functions-and-operators/dfns-and-dops/static-name-scope.md
           - Recursion: defined-functions-and-operators/dfns-and-dops/recursion.md
           - Tail Calls: defined-functions-and-operators/dfns-and-dops/tail-calls.md
+          - Dops: defined-functions-and-operators/dfns-and-dops/dynamic-operators.md
           - Restrictions: defined-functions-and-operators/dfns-and-dops/restrictions.md
+      - APL Line Editor: defined-functions-and-operators/apl-line-editor.md
   - Object Oriented Programming:
       - Introducing Classes:
           - Introducing Classes: object-oriented-programming/introducing-classes/introducing-classes.md

@@ -1,8 +1,6 @@
 # <span>Spinner</span> <span>Object</span>
 
-**Purpose:** The Spinner object allows the user to enter a value, using an [UpDown](updown.md) object to adjust it as required.
-
-**Description**
+The Spinner object allows the user to enter a value, using an [UpDown](updown.md) object to adjust it as required.
 
 The Spinner object is a special Dyalog APL composite object that consists of an edit field and a pair of spin buttons. The user may enter a value by typing in the edit field and may adjust the value with the spin buttons. The Spinner may cycle through a pre-defined set of values specified by the [Items](../properties/items.md) property or through a range of values specified by the [Limits](../properties/limits.md) property. The [FieldType](../properties/fieldtype.md) property supports all of the standard data types, that is, Char, Numeric, LongNumeric, Currency, Date, LongDate, and Time.
 
@@ -22,7 +20,7 @@ Like an [Edit](edit.md) object, the Spinner has a [Changed](../properties/change
 
 If [FieldType](../properties/fieldtype.md) is Numeric, LongNumeric, Currency, Date, LongDate or Time, the Spinner will generate a [BadValue](../methodorevents/badvalue.md) event when it loses the focus if the text in the edit field (that is, the Text property) is in conflict with the [FieldType](../properties/fieldtype.md) property and cannot be converted to an appropriate number, or is outside the range specified by the [Limits](../properties/limits.md) property. If the edit field is empty, a [BadValue](../methodorevents/badvalue.md) event will be generated if [ValidIfEmpty](../properties/validifempty.md) is 0, but not if it is set to 1.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

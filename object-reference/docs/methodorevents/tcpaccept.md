@@ -1,7 +1,5 @@
 # <span>TCPAccept</span> <span>Event 371</span>
 
-**Description**
-
 If enabled, this event is reported when a client connects to a server [TCPSocket](../objects/tcpsocket.md) object.
 
 You may not disable or nullify the operation by setting the action code for the event to `¯1` or by returning 0 from a callback function. You may also not call TCPAccept as a method or generate this event artificially using `⎕NQ`.
@@ -21,6 +19,6 @@ The default processing for this event is to close the socket handle reported by 
 
 You may not call TCPClose as a method or generate this event artificially using `⎕NQ`.
 
-**Application**
+## Application
 
 Objects: [TCPSocket](../objects/tcpsocket.md)

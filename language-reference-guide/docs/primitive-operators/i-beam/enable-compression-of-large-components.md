@@ -15,7 +15,7 @@ Specifies whether large components (>2GB) may be compressed.
 | 0     | Large components will not be compressed. |
 | 1     | Large components will be compressed if Z property is 1 (see [File Properties](../../system-functions/fprops.md)), but versions of Dyalog prior to v19.0 will not be able to read them.|
 
-The shy result `R` is the previous value of this setting.
+The [shy](../../../../programming-reference-guide/introduction/results#shy-results) result `R` is the previous value of this setting.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

@@ -21,7 +21,7 @@ search:
 
 The newly created file is tied for exclusive use.
 
-The shy result of `⎕FCREATE` is the tie number of the new file.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result of `⎕FCREATE` is the tie number of the new file.
 
 ## Automatic Tie Number Allocation
 
@@ -91,7 +91,7 @@ will name a variant of `⎕FCREATE` which will create component file with level 
 ```
 
 !!! Info "Information"
-    Component files that have both journalling and checksum properties set to `0` have been deprecated; from Dyalog v21.0 it will not be possible to create files with this combination of properties. For information on how to identify code that creates component files that have both journalling and checksum properties set to `0` in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
+    Component files that have both journalling and checksum properties set to `0` have been deprecated, and it is no longer possible to create files with this combination of properties. For information on how to identify code that creates component files that have both journalling and checksum properties set to `0` in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

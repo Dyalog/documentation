@@ -1,7 +1,5 @@
 # <span>FieldType</span> <span>Property</span>
 
-**Description**
-
 The FieldType property controls data conversion, formatting and validation.
 
 For [Edit](../objects/edit.md), [Label](../objects/label.md) and [Spinner](../objects/spinner.md) objects, FieldType controls how the [Value](value.md) property of these objects is interpreted.
@@ -48,6 +46,6 @@ When the user attempts to move the input focus away from the object, the content
 
 Note that for [Edit](../objects/edit.md), [Label](../objects/label.md) and [Spinner](../objects/spinner.md) objects, FieldType may only be specified when you create an object using `⎕WC`.
 
-**Application**
+## Application
 
 Objects: [ButtonEdit](../objects/buttonedit.md), [DateTimePicker](../objects/datetimepicker.md), [Edit](../objects/edit.md), [Label](../objects/label.md), [Spinner](../objects/spinner.md)

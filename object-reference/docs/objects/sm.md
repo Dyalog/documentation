@@ -1,8 +1,6 @@
 # <span>SM</span> <span>Object</span>
 
-**Purpose:** Defines a window for `⎕SM` / `⎕SR` .
-
-**Description**
+Defines a window for `⎕SM` / `⎕SR` .
 
 This object defines a window for `⎕SM`/`⎕SR` and allows you to combine the functionality of `⎕SM`/`⎕SR` with the "windows" GUI. For example, you can define a [Form](form.md) with a [MenuBar](menubar.md) at the top and a `⎕SM` window beneath it, with perhaps some [Button](button.md)s alongside.
 
@@ -35,7 +33,7 @@ The illustration shown below was produced as follows :
 
 ![](../img/sm-example.png)
 
-**Application**
+## Application
 
 Parents: [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

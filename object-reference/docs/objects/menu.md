@@ -1,8 +1,6 @@
 # <span>Menu</span> <span>Object</span>
 
-**Purpose:** This is a pop-up object which allows the user to initiate an action or         to select an option using a "menu".
-
-**Description**
+This is a pop-up object which allows the user to initiate an action or         to select an option using a "menu".
 
 For a Menu that is owned by a [MenuBar](menubar.md) or
 another Menu, the [Caption](../properties/caption.md) property
@@ -59,7 +57,7 @@ to something other than `'None'` if you want
 its children Menu and [MenuItem](menuitem.md) objects to
 have a 3-dimensional appearance.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Calendar](../objects/calendar.md), [CoolBand](../objects/coolband.md), [CoolBar](../objects/coolbar.md), [DateTimePicker](../objects/datetimepicker.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Menu](../objects/menu.md), [MenuBar](../objects/menubar.md), [OLEServer](../objects/oleserver.md), [Root](../objects/root.md), [StatusField](../objects/statusfield.md), [SubForm](../objects/subform.md), [SysTrayItem](../objects/systrayitem.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

@@ -1,7 +1,5 @@
 # <span>FillCol</span> <span>Property</span>
 
-**Description**
-
 This property defines the fill colour in a graphics object.
 
 If [FStyle](fstyle.md) is 0 (solid fill) FillCol defines the colour with which the object is filled. If [FStyle](fstyle.md) is in the range 1-6 (pattern fill) it defines the colour of the lines that make up the pattern. The areas between the lines are filled using the colour specified by [BCol](bcol.md), or are left undrawn (transparent) if [BCol](bcol.md) is not specified. If [FStyle](fstyle.md) contains the name of a [Bitmap](../objects/bitmap.md) object, the value of FillCol is ignored.
@@ -30,6 +28,6 @@ display adapter and driver, and the current Windows colour map.
 
 FillCol may also be a vector of 3-element vectors specifying a set of colours for the constituent parts of the object. For example, a [Poly](../objects/poly.md) object consisting of four polygons, may have a FillCol property of four 3-element vectors.
 
-**Application**
+## Application
 
 Objects: [Circle](../objects/circle.md), [Ellipse](../objects/ellipse.md), [Poly](../objects/poly.md), [Rect](../objects/rect.md)

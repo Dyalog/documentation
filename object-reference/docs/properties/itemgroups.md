@@ -1,7 +1,5 @@
 # <span>ItemGroups</span> <span>Property</span>
 
-**Description**
-
 This property specifies item groupings for a [ListView](../objects/listview.md) object.
 
 !!! note
@@ -37,6 +35,6 @@ For example, the following expressions executed in the WTUTOR95 workspace will r
 
 You can control the appearance of the groupings using the [ItemGroupMetrics](itemgroupmetrics.md) property.
 
-**Application**
+## Application
 
 Objects: [ListView](../objects/listview.md)

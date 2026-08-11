@@ -9,6 +9,9 @@ search:
 
 `X` identifies the numbers of lines in the function or operator named by `Y` on which a trace control is to be placed.  Numbers outside the range of line numbers in the function or operator (other than 0) are ignored.  The number 0 indicates that a trace control is to be placed immediately prior to exit from the function or operator.  The value of `X` is independent of `⎕IO`.
 
+!!! Info "Information"
+    `⎕TRACE` does not apply to dfns or dops.
+
 `R` is a simple integer vector of non-negative elements indicating the lines in the function or operator on which a trace control has been placed.
 
 <h2 class="example">Example</h2>
@@ -37,11 +40,11 @@ Attempts to set trace controls in a locked function or operator are ignored.
 
 The effect of trace controls when a function or operator is invoked is to display the result of each complete expression for lines with trace controls as they are executed, and the result of the function if trace control 0 is set.  If a line contains expressions separated by `⋄`, the result of each complete expression is displayed for that line after execution.
 
-The result of a complete expression is displayed even where the result would normally be suppressed.  In particular:
+The result of a complete expression is displayed even where the result would normally be [shy](../../../programming-reference-guide/introduction/results#shy-results).  In particular:
 
 - the result of a branch statement is displayed;
 - the result (*pass-through value*) of assignment is displayed;
-- the result of a function whose result would normally be suppressed is displayed;
+- the result of a function whose result would normally be shy is displayed;
 
 For each traced line, the output from `⎕TRACE` is displayed as a two element vector, the first element of which contains the function or operator name and line number, and the second element of which takes one of two forms.
 

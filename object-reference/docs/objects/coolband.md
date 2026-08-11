@@ -1,9 +1,5 @@
 # <span>CoolBand</span> <span>Object</span>
 
-**Purpose:** The CoolBand object represents an area in a CoolBar that contains a         child window.
-
-**Description**
-
 The CoolBand object is a container object that represents a band in a [CoolBar](coolbar.md).
 
 A CoolBand can have any combination of a gripper bar, a bitmap, a text label,
@@ -69,7 +65,7 @@ If you wish to remember the user's chosen layout when your application
 terminates, you must store the values of [Index](../properties/index-property.md), [Size](../properties/size.md) and [NewLine](../properties/newline.md) for each of the CoolBands. When your application is next started, you must
 re-create the CoolBands with the same values of these properties.
 
-**Application**
+## Application
 
 Parents: [CoolBar](../objects/coolbar.md)
 
