@@ -177,6 +177,7 @@ These control what is loaded and run when Dyalog starts, and where workspaces ar
 |[`DyalogStartup`](dyalogstartup.md)|The name of a file containing APL code to be run each time Dyalog starts|
 |[`DyalogStartupSE`](dyalogstartupse.md)|One or more *Session initialisation* directories containing APL code to be installed in `⎕SE`|
 |[`DyalogStartup_X`](dyalogstartup-x.md)|During Session initialisation, code is loaded from the directories given by `DyalogStartupSE` into a corresponding namespace tree in `⎕SE`, and is then optionally executed|
+|[`DYALOG_INITSESSION`](dyalog-initsession.md)|Whether Dyalog performs Session Initialisation on start-up|
 
 ## Interpreter and runtime
 
