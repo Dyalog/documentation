@@ -42,6 +42,29 @@ This assumes that `⎕USING` has been defined correctly – there must be a refe
 
 The rest of this page describes the mechanism by which Dyalog associates the class name with a class in a .NET namespace.
 
+## Using a User-Written Class
+
+The classes used above are supplied with .NET, but [`⎕USING`](../../../language-reference-guide/system-functions/using/) can also load your own compiled .NET assemblies. For example, suppose the following C# class is compiled into an assembly file named `testlib.dll`:
+```C#
+namespace Foobar
+{
+    public static class Adder
+    {
+        public static int AddInts(int x, int y)
+        {
+            return x + y;
+        }
+    }
+}
+```
+
+Set `⎕USING` to the .NET namespace (`Foobar`) and the assembly file (here given as a relative path), then call the method:
+```apl
+      ⎕USING←,⊂'Foobar,./testlib.dll'
+      Adder.AddInts 10 20
+30
+```
+
 ## Constructors and Overloading
 
 Each .NET class has one or more _constructor_ methods. These are called to initialise an instance of the class. Typically, a class will support several constructor methods, each with a different set of parameters. For example, <code class="language-nonAPL">System.DateTime</code> supports a constructor that takes three <code class="language-nonAPL">Int32</code> parameters (year, month, day), another that takes six <code class="language-nonAPL">Int32</code> parameters (year, month, day, hour, minute, second), and various other constructors. These different constructor methods are not distinguished by having different names but by the different sets of parameters that they accept.
