@@ -1,6 +1,6 @@
 # AplCoreName
 
-The directory and name of the file in which an *aplcore* is saved. An optional wild-card character (`*`) is replaced by a number when the file is written; if there is more than one `*`, the string is used as is, with no substitution. Dyalog terminates with an exit code of `3` when an aplcore is generated.
+The directory and name of the file in which an *aplcore* is saved. An optional wild-card character (`*`) is replaced by a number when the file is written; only one `*` can be used. If there is more than one `*`, the setting is ignored and the aplcore is named `aplcore`. Dyalog terminates with an exit code of `3` when an aplcore is generated.
 
 Valid values are a file path, optionally containing a single `*`.
 
