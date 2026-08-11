@@ -28,9 +28,6 @@ i:/Documents/Dyalog APL-64 17.0 Unicode Files/
  
 ⍝ Make a named back-up of the Session file
       ⊢'session.bak' ⎕NCOPY 'default.dlf'
-```
-```apl
-
 1
       ⊢ ⎕MKDIR 'backups' ⍝ Make a backups directory
 1
@@ -54,7 +51,6 @@ i:/Documents/Dyalog APL-64 17.0 Unicode Files/
       ↑⊃0 (⎕NINFO⍠1) 'backups\*'
 backups/default.dlf
 backups/def_uk.dse 
-
 ```
 
 ## Variant Options
@@ -90,15 +86,11 @@ i:/Documents/Dyalog APL-64 17.0 Unicode Files/
 ⍝ Copy all files to backups directory
       ⊢'backups'(⎕NCOPY⍠'Wildcard' 1)'*.*'
 3
-```
-```apl
 
       ↑⊃0 (⎕NINFO⍠1) 'backups\*'
 backups/default.dlf        
 backups/def_uk.dse         
 backups/UserCommand20.cache
-  
-
 ```
 
 The destination name must be an existing directory. Copies of each of the files and/or directories that match the patterns specified by the source names (if any) are made in the destination directory.
