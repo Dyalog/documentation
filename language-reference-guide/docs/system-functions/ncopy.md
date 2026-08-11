@@ -17,6 +17,53 @@ If `X` specifies an existent directory then each source in `Y` is copied into th
 
 The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` contains count(s) of top-level items copied. If `Y` is a single source name, `R` is a scalar otherwise it is a vector of the same length as `Y`.
 
+<h2 class="example">Examples</h2>
+
+There are a number of possibilities which are illustrated below. In all cases,  if the source is a file, a copy of the file is created. If the source is a directory, a copy of the directory and all its contents is created.
+
+### Examples: single source, `Wildcard` is `0` { .example }
+
+- The source name must be an existent file or directory.
+- If the destination name does not exist but its path name does exist, the source is copied to the destination name.
+- If the destination name is an existing directory the copy is created within that directory with the base name of the source.
+```apl
+       ⊃1 ⎕NPARTS ''
+i:/Documents/Dyalog APL-64 17.0 Unicode Files/
+ 
+⍝ Make a named back-up of the Session file
+      ⊢'session.bak' ⎕NCOPY 'default.dlf'
+```
+```apl
+
+1
+      ⊢ ⎕MKDIR 'backups' ⍝ Make a backups directory
+1
+ ⍝ Copy the Session file to backups directory
+      ⊢'backups'⎕NCOPY'default.dlf'
+1
+      ↑⊃0 (⎕NINFO⍠1) 'backups\*'
+backups/default.dlf  
+```
+
+### Examples: multiple sources, `Wildcard` is `0` { .example }
+
+- Each source name must specify a single file or directory which must exist. The destination name must be an existing directory.
+- Copies of each of the files and/or directories specified by the source base names are made in the destination directory.
+```apl
+       ⊃1 ⎕NPARTS ''
+i:/Documents/Dyalog APL-64 17.0 Unicode Files/
+
+      ⊢ ⎕MKDIR 'backups' ⍝ Make a backups directory
+1
+⍝ Copy 2 files to backups directory
+      ⊢'backups'⎕NCOPY'default.dlf' 'def_uk.dse'
+1 1
+      ↑⊃0 (⎕NINFO⍠1) 'backups\*'
+backups/default.dlf
+backups/def_uk.dse 
+
+```
+
 ## Variant Options
 
 `⎕NCOPY` supports four variant options, summarised in [](#variant-table) and described in detail beneath it. The principal option is `Wildcard`.
@@ -28,7 +75,7 @@ Table: Variant options overview { #variant-table }
 |[`Wildcard`](#variant-option-wildcard)<br><small>principal</small>|`0` or `1`|`0`|Whether the names in `Y` are matched literally or as patterns.|
 |[`IfExists`](#variant-option-ifexists)|`'Error'`, `'Skip'`, `'Replace'` or `'ReplaceIfNewer'`|`'Error'`|What happens when a target file already exists.|
 |[`PreserveAttributes`](#variant-option-preserveattributes)|`0` or `1`|`0`|Whether file attributes are preserved.|
-|[`ProgressCallback`](#variant-option-progresscallback)|a callback function||Reports progress during the copy.|
+|[`ProgressCallback`](#variant-option-progresscallback)|the name of a callback function|none|Reports progress during the copy.|
 
 ### Variant Option: Wildcard
 
@@ -37,6 +84,49 @@ Table: Variant options overview { #variant-table }
 |`1`|The name or names in `Y` that specify the *base name* and *extension* (see [NParts](./nparts.md) ), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
 
 Note that when `Wildcard` is `1`, element(s) of `R` can be `0`, `1` or `>1`. If `Wildcard` is `0`, elements of `R` are always `1`.
+
+#### Examples: single source, `Wildcard` is `1` { .example }
+
+- The source name may include wildcard characters which matches a number of existing files and/or directories. The destination name must be an existing directory.
+- The files and/or directories that match the pattern specified by the source name are copied into the destination directory. If there are no matches, zero copies are made.
+```apl
+       ⊃1 ⎕NPARTS ''
+i:/Documents/Dyalog APL-64 17.0 Unicode Files/
+
+      ⊢ ⎕MKDIR 'backups' ⍝ Make a backups directory
+1
+⍝ Copy all files to backups directory
+      ⊢'backups'(⎕NCOPY⍠'Wildcard' 1)'*.*'
+3
+```
+```apl
+
+      ↑⊃0 (⎕NINFO⍠1) 'backups\*'
+backups/default.dlf        
+backups/def_uk.dse         
+backups/UserCommand20.cache
+  
+
+```
+
+#### Examples: multiple sources, `Wildcard` is `1` { .example }
+
+- The destination name must be an existing directory.
+- Copies of each of the files and/or directories that match the patterns specified by the source names (if any) are made in the destination directory.
+```apl
+      ⊃1 ⎕NPARTS ''
+i:/Documents/Dyalog APL-64 17.0 Unicode Files/
+
+      ⊢ ⎕MKDIR 'backups' ⍝ Make a backups directory
+1
+⍝ Copy files to backups directory
+      ⊢'backups'(⎕NCOPY⍠1)'d*' 'UserCommand20.cache'
+2 1
+      ↑⊃0 (⎕NINFO⍠1) 'backups\*'
+backups/default.dlf
+backups/def_uk.dse
+backups/UserCommand20.cache
+```
 
 ### Variant Option: IfExists
 
@@ -69,96 +159,6 @@ Note also that when files are copied across file systems, the different file sys
 The `ProgressCallback` variant option is described in the [Dyalog Programming Reference Guide](../../../programming-reference-guide/native-files#progress-callbacks). The following is specific to `⎕NCOPY`:
 
 * The first element of the right argument to the callback function is the character vector `'⎕NCOPY'`.
-
-<h2 class="example">Examples</h2>
-
-There are a number of possibilities which are illustrated below. In all cases,  if the source is a file, a copy of the file is created. If the source is a directory, a copy of the directory and all its contents is created.
-
-### Examples: single source, `Wildcard` is `0` { .example }
-
-- The source name must be an existent file or directory.
-- If the destination name does not exist but its path name does exist, the source is copied to the destination name.
-- If the destination name is an existing directory the copy is created within that directory with the base name of the source.
-```apl
-       ⊃1 ⎕NPARTS ''
-i:/Documents/Dyalog APL-64 17.0 Unicode Files/
- 
-⍝ Make a named back-up of the Session file
-      ⊢'session.bak' ⎕NCOPY 'default.dlf'
-```
-```apl
-
-1
-      ⊢ ⎕MKDIR 'backups' ⍝ Make a backups directory
-1
- ⍝ Copy the Session file to backups directory
-      ⊢'backups'⎕NCOPY'default.dlf'
-1
-      ↑⊃0 (⎕NINFO⍠1) 'backups\*'
-backups/default.dlf  
-```
-
-### Examples: single source, `Wildcard` is `1` { .example }
-
-- The source name may include wildcard characters which matches a number of existing files and/or directories. The destination name must be an existing directory.
-- The files and/or directories that match the pattern specified by the source name are copied into the destination directory. If there are no matches, zero copies are made.
-```apl
-       ⊃1 ⎕NPARTS ''
-i:/Documents/Dyalog APL-64 17.0 Unicode Files/
-
-      ⊢ ⎕MKDIR 'backups' ⍝ Make a backups directory
-1
-⍝ Copy all files to backups directory
-      ⊢'backups'(⎕NCOPY⍠'Wildcard' 1)'*.*'
-3
-```
-```apl
-
-      ↑⊃0 (⎕NINFO⍠1) 'backups\*'
-backups/default.dlf        
-backups/def_uk.dse         
-backups/UserCommand20.cache
-  
-
-```
-
-### Examples: multiple sources, `Wildcard` is `0` { .example }
-
-- Each source name must specify a single file or directory which must exist. The destination name must be an existing directory.
-- Copies of each of the files and/or directories specified by the source base names are made in the destination directory.
-```apl
-       ⊃1 ⎕NPARTS ''
-i:/Documents/Dyalog APL-64 17.0 Unicode Files/
-
-      ⊢ ⎕MKDIR 'backups' ⍝ Make a backups directory
-1
-⍝ Copy 2 files to backups directory
-      ⊢'backups'⎕NCOPY'default.dlf' 'def_uk.dse'
-1 1
-      ↑⊃0 (⎕NINFO⍠1) 'backups\*'
-backups/default.dlf
-backups/def_uk.dse 
-
-```
-
-### Examples: multiple sources, `Wildcard` is `1` { .example }
-
-- The destination name must be an existing directory.
-- Copies of each of the files and/or directories that match the patterns specified by the source names (if any) are made in the destination directory.
-```apl
-      ⊃1 ⎕NPARTS ''
-i:/Documents/Dyalog APL-64 17.0 Unicode Files/
-
-      ⊢ ⎕MKDIR 'backups' ⍝ Make a backups directory
-1
-⍝ Copy files to backups directory
-      ⊢'backups'(⎕NCOPY⍠1)'d*' 'UserCommand20.cache'
-2 1
-      ↑⊃0 (⎕NINFO⍠1) 'backups\*'
-backups/default.dlf
-backups/def_uk.dse
-backups/UserCommand20.cache
-```
 
 ## Notes
 

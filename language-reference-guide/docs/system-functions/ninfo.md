@@ -102,15 +102,15 @@ When using the `Wildcard` option, matching of names is done case insensitively o
 
 Table: Variant options overview { #variant-table }
 
-|Variant Option|Valid Values|Default|Effect|
-|---|---|---|---|
-|[`Wildcard`](#variant-option-wildcard)<br><small>principal</small>|`0`|`0`|The names in `Y` identify specific files.|
-|_-                                    -_|`1`||The names in `Y` can contain the wildcard characters `?` and `*`.|
-|[`Recurse`](#variant-option-recurse)|`0`|`0`|Only the specified directory is searched.|
-|_-                                    -_|`1`||The specified directory and its sub-directories are searched.|
-|[`Follow`](#variant-option-follow)|`1`|`1`|For a symbolic link, the target's properties are reported.|
-|_-                                    -_|`0`||The symbolic link's own properties are reported.|
-|[`ProgressCallback`](#variant-option-progresscallback)|&nbsp;||A function is called periodically during a long operation.|
+|Variant Option|Valid Values|Effect|
+|---|---|---|
+|[`Wildcard`](#variant-option-wildcard)<br><small>principal</small>|`0` (Default)|The names in `Y` identify specific files.|
+|_-                                    -_|`1`|The names in `Y` can contain the wildcard characters `?` and `*`.|
+|[`Recurse`](#variant-option-recurse)|`0` (Default)|Only the specified directory is searched.|
+|_-                                    -_|`1`|The specified directory and its sub-directories are searched.|
+|[`Follow`](#variant-option-follow)|`1` (Default)|For a symbolic link, the target's properties are reported.|
+|_-                                    -_|`0`|The symbolic link's own properties are reported.|
+|[`ProgressCallback`](#variant-option-progresscallback)|the name of a callback function|A function is called periodically during a long operation.|
 
 ### Variant Option: Wildcard
 

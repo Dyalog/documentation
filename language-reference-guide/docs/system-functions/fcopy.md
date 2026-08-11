@@ -45,13 +45,13 @@ If `X` specifies the name of an existing file, the operation fails with a `FILE 
 
 Table: Variant options overview { #variant-table }
 
-|Variant Option|Valid Values|Default|Effect|
-|---|---|---|---|
-|`'J'`|a journaling level|as source|Sets the journaling level.|
-|`'C'`|`0` or `1`|as source|Sets the checksum level.|
-|`'Z'`|`0` or `1`|as source|Sets compression.|
-|`'U'`|`0` or `1`|as source|Sets Unicode support.|
-|`'S'`|`64`|`64`|Sets the file size (span).|
+|Variant Option|Valid Values|Effect|
+|---|---|---|
+|`'J'`|a journaling level|Sets the journaling level.|
+|`'C'`|`0` or `1`|Sets the checksum level.|
+|`'Z'`|`0` or `1`|Sets compression.|
+|`'U'`|`0` or `1`|Sets Unicode support.|
+|`'S'`|`64`|Sets the file size (span).|
 
 The principal option is a number that sets journaling (`'J'`) and checksum (`'C'`) together:
 

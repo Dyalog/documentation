@@ -30,7 +30,7 @@ Table: Variant options overview { #variant-table }
 |[`Wildcard`](#variant-option-wildcard)<br><small>principal</small>|`0` or `1`|`0`|Whether the names in `Y` are matched literally or as patterns.|
 |[`IfExists`](#variant-option-ifexists)|`'Error'` or `'Skip'`|`'Error'`|What happens when a target file already exists.|
 |[`RenameOnly`](#variant-option-renameonly)|`0` or `1`|`0`|What happens when the source cannot be renamed.|
-|[`ProgressCallback`](#variant-option-progresscallback)|a callback function||Reports progress during the move.|
+|[`ProgressCallback`](#variant-option-progresscallback)|the name of a callback function|none|Reports progress during the move.|
 
 ### Variant Option: Wildcard
 
