@@ -231,7 +231,7 @@
 |Glyph|Glyph Name|Uses
 |---|---|---|
 |`∆`|Delta|[name character](../../programming-reference-guide/introduction/names)
-|`∇`|Del|[dfn self-reference](../../programming-reference-guide/defined-functions-and-operators/dfns-and-dops/recursion), [delimit method](../../programming-reference-guide/object-oriented-programming/class-members/methods/methods/), [APL line editor](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/apl-line-editor/)
+|`∇`|Del|[dfn self-reference](../../programming-reference-guide/defined-functions-and-operators/dfns-and-dops/recursion), [delimit method](../../programming-reference-guide/object-oriented-programming/class-members/methods/methods/), [APL line editor](../../programming-reference-guide/defined-functions-and-operators/apl-line-editor/)
 |`∇∇`|Del Del|[dop self-reference](../../programming-reference-guide/defined-functions-and-operators/dfns-and-dops/recursion)
 |`⍋`|Grade Up|[Grade Up](primitive-functions/grade-up.md), [Dyadic Grade Up](primitive-functions/dyadic-grade-up.md)
 |`⍒`|Grade Down|[Grade Down](primitive-functions/grade-down.md), [Dyadic Grade Down](primitive-functions/dyadic-grade-down.md)

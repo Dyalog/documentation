@@ -39,7 +39,7 @@ Note that a hold is not released by a request for input through `⎕` or `⍞`.
 
 `⎕FHOLD` is generally useful only when called from a defined function, as holds set in immediate execution (desk calculator) mode are released immediately.
 
-If `Y` is a matrix, the shy result `R` is `Y[1;]`. Otherwise, the  shy result `R` is `Y`.
+If `Y` is a matrix, the [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` is `Y[1;]`. Otherwise, the  shy result `R` is `Y`.
 
 <h1 class="example">Examples</h1>
 ```apl

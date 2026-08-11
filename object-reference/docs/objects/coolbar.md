@@ -1,8 +1,6 @@
 # <span>CoolBar</span> <span>Object</span>
 
-**Purpose:** The CoolBar object acts as a container for CoolBand objects.
-
-**Description**
+The CoolBar object acts as a container for CoolBand objects.
 
 The CoolBar and [CoolBand](coolband.md) objects provide
 an interface to Windows *Rebar Controls*
@@ -102,7 +100,7 @@ will change to reflect its new position.
 If you wish to display pictures in one or more of the [CoolBands](coolband.md) owned by a CoolBar, you do so by setting the [ImageListObj](../properties/imagelistobj.md) property to the name of an [ImageList](imagelist.md) object
 which contains the pictures. Pictures are allocated to individual [CoolBands](coolband.md) via their ImageIndex properties.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md)
 

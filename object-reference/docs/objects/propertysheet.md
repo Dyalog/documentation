@@ -1,8 +1,6 @@
 # <span>PropertySheet</span> <span>Object</span>
 
-**Purpose:** The PropertySheet object represents a standard multi-page dialog box.
-
-**Description**
+The PropertySheet object represents a standard multi-page dialog box.
 
 There are two different kinds of PropertySheet which you select using the Style property. This may only be set when the PropertySheet is created using `⎕WC` and Style may not subsequently be changed using `⎕WS`.
 
@@ -20,7 +18,7 @@ The HasApply and HasHelp properties are Boolean and specify whether or not the P
 
 The FontObj and EdgeStyle properties have no effect on the appearance of the PropertySheet itself, but may be used to define the default appearance of its children.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [OLEServer](../objects/oleserver.md), [Root](../objects/root.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md)
 

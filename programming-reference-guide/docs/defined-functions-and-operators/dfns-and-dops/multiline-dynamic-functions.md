@@ -1,4 +1,4 @@
-# Multi-Line Dfns
+# Multi-line Dfns
 
 The single expression which provides the result of the dfn may be preceded by any number of assignment statements. Each such statement introduces a name which is local to the function.
 

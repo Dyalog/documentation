@@ -1,7 +1,5 @@
 # <span>MouseWheel</span> <span>Event 8</span>
 
-**Description**
-
 If enabled, this event is reported when the user rotates the mouse wheel.
 
 The event message reported as the result of `⎕DQ`, or supplied as the right argument to your callback function, is a 9-element vector as follows :
@@ -21,6 +19,6 @@ The value of *Delta* indicates the distance that the wheel is rotated,§ express
 
 *Lines* specifies the number of lines to scroll when the wheel is rotated by I *Mouse Delta* unit. A value of `¯1` indicates that a whole screen is to be scrolled. These values are defined by the user's preferences (*Control Panel/Mouse*).
 
-**Application**
+## Application
 
 Objects: [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/animation.md), [Button](../objects/button.md), [ButtonEdit](../objects/buttonedit.md), [Calendar](../objects/calendar.md), [ColorButton](../objects/colorbutton.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [DateTimePicker](../objects/datetimepicker.md), [Edit](../objects/edit.md), [Form](../objects/form.md), [Group](../objects/group.md), [Label](../objects/label.md), [List](../objects/list.md), [ListView](../objects/listview.md), [MDIClient](../objects/mdiclient.md), [ProgressBar](../objects/progressbar.md), [PropertyPage](../objects/propertypage.md), [RichEdit](../objects/richedit.md), [Scroll](../objects/scroll.md), [Spinner](../objects/spinner.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TabBar](../objects/tabbar.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md), [TreeView](../objects/treeview.md)

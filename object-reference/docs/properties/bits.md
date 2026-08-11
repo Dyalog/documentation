@@ -1,7 +1,5 @@
 # <span>Bits</span> <span>Property</span>
 
-**Description**
-
 This property defines the pattern in a [Bitmap](../objects/bitmap.md), [Cursor](../objects/cursor.md), or [Icon](../objects/icon.md) object, or the pattern of a bitmap stored in the Windows clipboard.
 
 For a [Bitmap](../objects/bitmap.md), [Clipboard](../objects/clipboard.md) or [Icon](../objects/icon.md), Bits is an integer matrix each of whose elements represents the colour of the corresponding pixel in the bitmap. The colours are specified as 0-origin indices into the [CMap](cmap.md) property, which itself defines the complete set of different colours (the colour map) used by the object.
@@ -12,6 +10,6 @@ For a [Cursor](../objects/cursor.md), Bits is a Boolean matrix which specifies t
 
 See [CMap](cmap.md) for further details.
 
-**Application**
+## Application
 
 Objects: [Bitmap](../objects/bitmap.md), [Clipboard](../objects/clipboard.md), [Cursor](../objects/cursor.md), [Icon](../objects/icon.md)

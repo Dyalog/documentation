@@ -45,7 +45,7 @@ Note: This includes support for the <code class="language-other">INotifyCollecti
 
 ## Chromium Embedded Framework (CEF)
 
-Dyalog v21.0 is supplied with CEF version 138 on all supported platforms.
+Dyalog v21.0 is supplied with CEF v144 on Microsoft Windows and v138 on all other supported platforms.
 
 In versions of CEF supplied with Dyalog v19.0 and earlier, pop-ups and light mode were enabled by default. This changed with Dyalog v20.0. To minimise differences between Dyalog v19.0 (and earlier) and Dyalog v20.0 (and later) when using CEF-based applications, two temporary environment variables (not configuration parameters) have been introduced to preserve these settings for Dyalog v20.0 (and later). These are:
 

@@ -5,8 +5,6 @@ search:
 
 # <span>WorkspaceLoaded</span> <span>Event 525</span>
 
-**Description**
-
 If enabled, this event is reported when a workspace is loaded or on a `clear ws`. You may not nullify or modify the event with a 0-returning callback, nor may you generate the event using `⎕NQ`, or call it as a method.
 
 The event message reported as the result of `⎕DQ`, or supplied as the right argument to your callback function, is a 2-element vector as follows :
@@ -19,6 +17,6 @@ This event is fired immediately after a workspace has been loaded and before the
 
 The callback function you attach should be defined in `⎕SE`.
 
-**Application**
+## Application
 
 Objects: [Session](../../../windows-ui-guide/the-session-object/session-object)

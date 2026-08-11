@@ -1,9 +1,5 @@
 # <span>ComboEx</span> <span>Object</span>
 
-**Purpose:** The ComboEx object is an extended version of the Combo object that provides additional features including item images
-
-**Description**
-
 The ComboEx object is a ComboBox that supports item images and indenting. It is a superset of the [Combo](combo.md) object and supports all its functionality. For further details, see ["Combo"](combo.md).
 
 For most purposes, you can use the ComboEx object in place of the [Combo](combo.md) object whether or not you make use of the extended features of the ComboEx.
@@ -28,7 +24,7 @@ There are certain restrictions that apply to a ComboEx object with Style `'Simpl
 |0|No images displayed, item text is indented as specified by [Indents](../properties/indents.md)|No images displayed, item text is indented as specified by [Indents](../properties/indents.md) plus the width of the images in ImageList|
 |1|No images displayed, item text is indented as specified by [Indents](../properties/indents.md)|Images are displayed, items are indented as specified by [Indents](../properties/indents.md)|
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

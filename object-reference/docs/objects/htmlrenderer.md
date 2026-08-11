@@ -1,8 +1,6 @@
 # <span>HTMLRenderer</span> <span>Object</span>
 
-**Purpose:** The HTMLRenderer Object is a cross-platform mechanism for producing Graphical User Interfaces (GUI), based on HyperText Markup Language (HTML).
-
-**Description**
+The HTMLRenderer Object is a cross-platform mechanism for producing Graphical User Interfaces (GUI), based on HyperText Markup Language (HTML).
 
 The HTMLRenderer object renders HTML in a window on the screen. It may appear as a top-level window, similar to a Form, or be displayed within another GUI object according to the value of the Boolean [AsChild](../properties/aschild.md) property which must be specified when the HTMLRenderer is created. Several HTMLRenderer objects may co-exist in the Dyalog application.
 
@@ -89,7 +87,7 @@ When the HTMLRenderer is displayed in its own window, the  window caption is set
 
 For more information on the HTMLRenderer, see the [_HTMLRenderer User Guide_](../../../files/HTMLRenderer_User_Guide.pdf).
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [Root](../objects/root.md), [SubForm](../objects/subform.md)
 

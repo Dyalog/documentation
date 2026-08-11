@@ -1,8 +1,6 @@
 # <span>Button</span> <span>Object</span>
 
-**Purpose:** Allows the user to initiate an action or to select an option using a button.
-
-**Description**
+Allows the user to initiate an action or to select an option using a button.
 
 The type of button displayed is determined by the [Style](../properties/style.md) property which may take the value `'Push'`, `'Radio'`, `'Check'`, `'Toggle'`, `'Split'` or `'CommandLink'`. Under Windows, `'Toggle'` and `'Check'` are treated identically.
 
@@ -48,7 +46,7 @@ The [ReadOnly](../properties/readonly.md) property is Boolean and specifies whet
 
 The user can interact with the [Button](button.md) by clicking it, which generates a [Select](../methodorevents/select.md) Event  or (Style `'Split'`) the drop-down which generates a [DropDown](../methodorevents/dropdown.md) Event.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

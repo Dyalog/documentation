@@ -5,7 +5,7 @@ search:
 
 # <span>Set External Variable</span> `{R}←X ⎕XT Y`{{key}}
 
-`Y` must be a simple character scalar or vector which is taken to be a variable name.  `X` must be a simple character scalar or vector which is taken to be a file reference.  The name given by `Y` is identified as an EXTERNAL VARIABLE associated with an EXTERNAL ARRAY whose value may be stored in file identified by `X`. The shy result `R` has the same value as `X`.
+`Y` must be a simple character scalar or vector which is taken to be a variable name.  `X` must be a simple character scalar or vector which is taken to be a file reference.  The name given by `Y` is identified as an EXTERNAL VARIABLE associated with an EXTERNAL ARRAY whose value may be stored in file identified by `X`. The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` has the same value as `X`.
 
 If `Y` is the name of a defined function or operator, a label or a namespace in the active workspace, a `DOMAIN ERROR` is reported.
 
@@ -104,7 +104,7 @@ An external array may be erased using the native file function: `⎕NERASE`.
 In a multi-user environment (UNIX or a Windows LAN) a new file associated with an external array is created with access permission for owner read/write.  An existing file is opened for exclusive use (by the owner) if the permissions remain at this level.  If the access permissions allow any other users to read and write to the file, the file is opened for shared use.  In UNIX versions, access permissions may be modified using the appropriate Operating System command, or in Windows using the supplied function `XVAR` from the UTIL workspace.
 
 !!! Info "Information"
-    Support for external variables has been deprecated, and they are scheduled for removal in a future release. For information on how to identify uses of external variables in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
+    Support for external variables has been deprecated. They are no longer supported by default, although setting the [DYALOG_EXTVAR_SUPPORTED](../../../windows-installation-and-configuration-guide/configuration-parameters/dyalog-extvar-supported) configuration parameter to `1` reinstates support (support is scheduled for removal in a future release). For information on how to identify uses of external variables in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

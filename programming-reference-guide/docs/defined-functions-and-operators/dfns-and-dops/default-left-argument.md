@@ -12,7 +12,7 @@ The expression to the right of  `⍺←` is evaluated *only* if its dfn is calle
 
 Note that the syntax must be exactly `⍺←`, that is, it cannot contain parentheses, and so on.
 
-`⍺←` must be the first tokens at the beginning of an expression.
+`⍺←` must be the first tokens at the beginning of an expression. That expression can appear anywhere in the body, not only on the first line, but `⍺` has no value until it is evaluated.
 
 **Ambivalence**
 

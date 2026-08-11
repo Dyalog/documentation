@@ -1,7 +1,5 @@
 # <span>CellChange</span> <span>Event 150</span>
 
-**Description**
-
 If enabled, this event is reported when the user changes the contents of a cell in a [Grid](../objects/grid.md) object and then attempts to move to another cell or to another control outside the [Grid](../objects/grid.md).
 
 The purpose of this event is to give the application the opportunity to perform additional validation before the update occurs (and to prevent it if necessary) or to update other cells in the [Grid](../objects/grid.md) as a result of the change.
@@ -28,6 +26,6 @@ The 5th element of the event message contains the data value that will be used t
 
 An application can update an individual cell in the Grid under program control by calling CellChange as a method. If so, the *New object*, *New cell row* and *New cell column* parameters may be omitted.
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

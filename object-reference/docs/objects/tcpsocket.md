@@ -1,8 +1,6 @@
 # <span>TCPSocket</span> <span>Object</span>
 
-**Purpose:** The TCPSocket object provides an interface to TCP/IP.
-
-**Description**
+The TCPSocket object provides an interface to TCP/IP.
 
 The TCPSocket object provides an event-driven mechanism to communicate with
 other programs (including Dyalog APL) via TCP sockets. Dyalog recommends that Conga is used in preference to TCPSockets in new applications.
@@ -34,7 +32,7 @@ Window handle of the socket attached to the TCPSocket object and is generally a
 read-only property. The only time that [SocketNumber](../properties/socketnumber.md) may be specified is when a server replicates (clones) a listening socket to
 which a client has just connected.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Calendar](../objects/calendar.md), [CoolBand](../objects/coolband.md), [DateTimePicker](../objects/datetimepicker.md), [Form](../objects/form.md), [NetType](../objects/nettype.md), [OLEClient](../objects/oleclient.md), [OLEServer](../objects/oleserver.md), [PropertyPage](../objects/propertypage.md), [Root](../objects/root.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md)
 

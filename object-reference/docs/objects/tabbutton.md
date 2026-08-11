@@ -1,9 +1,5 @@
 # <span>TabButton</span> <span>Object</span>
 
-**Purpose:** The TabButton object represents an individual tab or button in a [TabControl](tabcontrol.md)
-
-**Description**
-
 The TabButton object represents an individual tab or button in a [TabControl](tabcontrol.md)
 
 The position and size of a TabButton object are entirely determined by its parent [TabControl](tabcontrol.md) and may not be altered. For this reason, the [Posn](../properties/posn.md) and [Size](../properties/size.md) properties are read-only.
@@ -20,7 +16,7 @@ When used as a tab, a TabButton is normally attached to a [SubForm](subform.md) 
 
 The [State](../properties/state.md) property reports the (selected) state of a TabButton.
 
-**Application**
+## Application
 
 Parents: [TabControl](../objects/tabcontrol.md)
 

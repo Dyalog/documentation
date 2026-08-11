@@ -1,8 +1,6 @@
 # <span>Form</span> <span>Object</span>
 
-**Purpose:** This is a top-level window used to contain other objects (controls).
-
-**Description**
+This is a top-level window used to contain other objects (controls).
 
 The [Posn](../properties/posn.md) property specifies the location of
 the **internal** top-left corner of the window relative to the top-left
@@ -94,7 +92,7 @@ characteristics:
 Note that the [Posn](../properties/posn.md) and [Size](../properties/size.md) properties of a child Form are expressed in screen coordinates and are not given
 relative to its parent.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [OLEClient](../objects/oleclient.md), [OLEServer](../objects/oleserver.md), [Root](../objects/root.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md)
 

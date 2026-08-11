@@ -1,8 +1,6 @@
 # <span>Text</span> <span>Object</span>
 
-**Purpose:** Writes text.
-
-**Description**
+Writes text.
 
 The Text object is used to write arbitrary text. It can be used in a [Form](form.md), [SubForm](subform.md) or [Group](group.md) instead of a [Label](label.md). The main difference is that a [Label](label.md) is implemented as a true window object (thus consuming Windows resources). A Text object is not a window and consumes no MS-Windows resources. However, a [Label](label.md) supports [DragDrop](../methodorevents/dragdrop.md) events and has various
 useful properties that are not shared by the Text object.
@@ -90,7 +88,7 @@ Write `'Hello'` at (10,20) and `'World'` at (30,40)
       'g.t1' ⎕WC 'Text' ('Hello' 'World')((10 30)(20 40))
 ```
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/animation.md), [Bitmap](../objects/bitmap.md), [Button](../objects/button.md), [ButtonEdit](../objects/buttonedit.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [Edit](../objects/edit.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [Label](../objects/label.md), [List](../objects/list.md), [ListView](../objects/listview.md), [MDIClient](../objects/mdiclient.md), [Metafile](../objects/metafile.md), [Printer](../objects/printer.md), [ProgressBar](../objects/progressbar.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [RichEdit](../objects/richedit.md), [Scroll](../objects/scroll.md), [Spinner](../objects/spinner.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TabBar](../objects/tabbar.md), [TipField](../objects/tipfield.md), [ToolBar](../objects/toolbar.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)
 

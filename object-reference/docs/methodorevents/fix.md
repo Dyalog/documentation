@@ -5,8 +5,6 @@ search:
 
 # <span>Fix</span> <span>Event 820</span>
 
-**Description**
-
 If enabled, this event is reported when the user attempts to fix an object from the Editor window. It is reported immediately, before the user's action is processed in any way by the Editor.
 
 The default action is to check whether the object has changed. If not, no further action takes place. If the object has changed, the system validates the contents of the Edit window, and either displays an error dialog or fixes a new version of the object in the workspace. If the user action was to fix and exit (EP), the Edit window is closed unless the validation failed.
@@ -28,6 +26,6 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 
 For objects whose names are part of the content of the Edit window, this event is not reported if the name is missing or invalid. Instead the system will display an error dialog box.
 
-**Application**
+## Application
 
 Objects: [Editor](../../../windows-ui-guide/the-session-object/session-object)

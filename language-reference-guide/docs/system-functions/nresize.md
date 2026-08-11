@@ -11,7 +11,7 @@ This function changes the size of a native file.
 
 `X` is a single integer value that specifies the new size of the file in bytes.  If `X` is smaller than the current file size, the file is truncated.  If `X` is larger than the current file size, the file is extended and the value of additional bytes is undefined.
 
-The shy result of `⎕NRESIZE` is the tie number of the resized file.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result of `⎕NRESIZE` is the tie number of the resized file.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

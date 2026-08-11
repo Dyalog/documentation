@@ -24,7 +24,7 @@ The namespace(s) referenced must already exist, or a `VALUE ERROR` is generated.
 
 If `X` is not specified, the target namespace is the current namespace.
 
-The result `R` is a shy reference to the target namespace(s).
+The result `R` is a [shy](../../../programming-reference-guide/introduction/results#shy-results) reference to the target namespace(s).
 
 See also [`⎕VGET`](vget.md).
 
