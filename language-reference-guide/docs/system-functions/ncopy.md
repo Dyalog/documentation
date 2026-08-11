@@ -21,11 +21,7 @@ The [shy](../../../programming-reference-guide/introduction/results#shy-results)
 
 There are a number of possibilities which are illustrated below. In all cases,  if the source is a file, a copy of the file is created. If the source is a directory, a copy of the directory and all its contents is created.
 
-### Examples: single source, `Wildcard` is `0` { .example }
-
-- The source name must be an existent file or directory.
-- If the destination name does not exist but its path name does exist, the source is copied to the destination name.
-- If the destination name is an existing directory the copy is created within that directory with the base name of the source.
+The source name must be an existent file or directory. If the destination name does not exist but its path name does exist, the source is copied to the destination name. If the destination name is an existing directory the copy is created within that directory with the base name of the source.
 ```apl
        ⊃1 ⎕NPARTS ''
 i:/Documents/Dyalog APL-64 17.0 Unicode Files/
@@ -45,10 +41,7 @@ i:/Documents/Dyalog APL-64 17.0 Unicode Files/
 backups/default.dlf  
 ```
 
-### Examples: multiple sources, `Wildcard` is `0` { .example }
-
-- Each source name must specify a single file or directory which must exist. The destination name must be an existing directory.
-- Copies of each of the files and/or directories specified by the source base names are made in the destination directory.
+Each source name must specify a single file or directory which must exist. The destination name must be an existing directory. Copies of each of the files and/or directories specified by the source base names are made in the destination directory.
 ```apl
        ⊃1 ⎕NPARTS ''
 i:/Documents/Dyalog APL-64 17.0 Unicode Files/
@@ -85,10 +78,9 @@ Table: Variant options overview { #variant-table }
 
 Note that when `Wildcard` is `1`, element(s) of `R` can be `0`, `1` or `>1`. If `Wildcard` is `0`, elements of `R` are always `1`.
 
-#### Examples: single source, `Wildcard` is `1` { .example }
+<h4 class="example">Examples</h4>
 
-- The source name may include wildcard characters which matches a number of existing files and/or directories. The destination name must be an existing directory.
-- The files and/or directories that match the pattern specified by the source name are copied into the destination directory. If there are no matches, zero copies are made.
+The source name may include wildcard characters which matches a number of existing files and/or directories. The destination name must be an existing directory. The files and/or directories that match the pattern specified by the source name are copied into the destination directory. If there are no matches, zero copies are made.
 ```apl
        ⊃1 ⎕NPARTS ''
 i:/Documents/Dyalog APL-64 17.0 Unicode Files/
@@ -109,10 +101,7 @@ backups/UserCommand20.cache
 
 ```
 
-#### Examples: multiple sources, `Wildcard` is `1` { .example }
-
-- The destination name must be an existing directory.
-- Copies of each of the files and/or directories that match the patterns specified by the source names (if any) are made in the destination directory.
+The destination name must be an existing directory. Copies of each of the files and/or directories that match the patterns specified by the source names (if any) are made in the destination directory.
 ```apl
       ⊃1 ⎕NPARTS ''
 i:/Documents/Dyalog APL-64 17.0 Unicode Files/
