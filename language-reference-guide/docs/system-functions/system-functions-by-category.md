@@ -60,6 +60,18 @@ These are tools that allow you perform development environment actions under pro
 |[`⎕TRACE`](set-trace.md)  |Set Trace vector  |Dyadic function|
 |[`⎕TRACE`](query-trace.md)  |Query Trace vector|Monadic function|
 
+### Top-Level Namespaces
+
+These are namespace that are equal to their parent namespace (`##`).
+
+|Name      |Description             |Form|
+|----------|------------------------|-----|
+|[`⎕DMX`](dmx.md)      |Extended Diagnostic Message                     |Reference|
+|[`⎕SE`](se.md)    |Session Namespace          |Reference|
+|[`⎕SYSTEM`](system.md) |System Information         |Reference|
+
+The workspace root namespace, `#` is also its own parent.
+
 ### Namespaces and Objects
 
 These are facilities to create, manipulate, and navigate namespaces and other objects, and for object oriented programming.
