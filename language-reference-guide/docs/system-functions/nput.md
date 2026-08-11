@@ -37,7 +37,7 @@ If specified, `newline` is numeric and is either  `⍬` or a scalar or vector  f
 
 In all cases, `newline` is appended if required to a simple vector or to each vector in a vector of vectors.
 
-If content contains anything other than a character vector or scalar (or these, nested) then a `DOMAIN ERROR` is signalled.
+If content contains anything other than a character vector or scalar (or these, nested), then a `DOMAIN ERROR` is signalled.
 
 If both `encoding` and `newline` are omitted `X` specifies only `content` and can be a simple character vector or a vector of character vectors.
 

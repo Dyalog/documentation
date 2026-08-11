@@ -13,7 +13,7 @@ This function copies native files and directories from one or more sources speci
 
 Source and destination path names can be full or relative (to the current working directory) path names which adhere to the operating system conventions.
 
-If `X` specifies an existent directory then each source in `Y` is copied into that directory, otherwise `X` specifies the name of the copy. `X` must specify an existent directory if the source contains multiple names or if the `Wildcard` option is set.
+If `X` specifies an existent directory, then each source in `Y` is copied into that directory, otherwise `X` specifies the name of the copy. `X` must specify an existent directory if the source contains multiple names or if the `Wildcard` option is set.
 
 The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` contains count(s) of top-level items copied. If `Y` is a single source name, `R` is a scalar otherwise it is a vector of the same length as `Y`.
 
@@ -146,7 +146,7 @@ The `ProgressCallback` variant option is described in the [Dyalog Programming Re
 - The special directories `.` and `..` can never be copied into an existing directory.
 - If any source name is a symbolic link it is dereferenced; that is, the source or directory it references is copied rather than the link itself.
 - In the result `R`, a directory together with all its contents is counted once. A directory might be partially copied if the `IfExists` option is set to `'Replace'` or `'ReplaceIfNewer'`).
-- If an error occurs during the copy process then processing will immediately stop and an error will be signalled. The operation is not atomic; some items might be copied before this happens. In the event of an error there will be no result and therefore no indication of how many names were copied before the error occurred.
+- If an error occurs during the copy process, then processing will immediately stop and an error will be signalled. The operation is not atomic; some items might be copied before this happens. In the event of an error there will be no result and therefore no indication of how many names were copied before the error occurred.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

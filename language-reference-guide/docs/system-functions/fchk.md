@@ -9,7 +9,7 @@ search:
 
 `Y` must be a simple character scalar or vector which specifies the name of the file to be exclusively checked or repaired. For component files, the file must be named in accordance with the operating system's conventions, and can be a relative or absolute pathname. The file must exist and must not be tied. If no file extension is supplied, the set of extensions specified by the  **CFEXT** parameter are tried one after another until the file is found or the set of extensions is exhausted. See [CFEXT](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters).
 
-For files associated with external variables, any filename extension must be specified even if `⎕XT` would not require it. The file must exist and must not currently be associated with an external variable.
+For files associated with external variables, any filename extension must be specified, even if `⎕XT` would not require it. The file must exist and must not currently be associated with an external variable.
 
 Options for `⎕FCHK` are specified using the _variant_ operator `⍠` or by the optional left argument `X`. The former is recommended but the older mechanism using the left argument is still supported.
 
@@ -57,7 +57,7 @@ The `'Rebuild'` task causes the *file indices* to be discarded and rebuilt. `Rep
 
 |---|-------------------------------------------------------------------|
 |`0` <small>(default)</small>|do not validate the file if it appears to have been properly closed|
-|`1`|validate the file even if it appears to have been properly closed  |
+|`1`|validate the file, even if it appears to have been properly closed  |
 
 <h2 class="example">Examples</h2>
 
@@ -75,7 +75,7 @@ To forcibly check a file and attempt to fix it if damage is found:
 
 Using the optional left-argument, `X` must be a vector of zero or more character vectors from among `'force'`, `'repair'` and `'rebuild'`, which determine the detailed operation of the function. Note that these options are case-insensitive.
 
-- If `X` contains `'force'`, `⎕FCHK` will validate the file even if it appears to have been cleanly untied.
+- If `X` contains `'force'`, `⎕FCHK` will validate the file, even if it appears to have been cleanly untied.
 - If `X` contains `'repair'`, `⎕FCHK` will repair the file, following validation, if it appears to be damaged. This option can be used in conjunction with `'force'`.
 - If `X` contains `'rebuild'`, `⎕FCHK` will repair the file unconditionally.
 

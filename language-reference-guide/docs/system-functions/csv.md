@@ -102,19 +102,19 @@ Other options defined for export are also accepted but ignored.
 
 ### Variant Options: `QuoteChar`, `EscapeChar`, and `DoubleQuote`
 
-If `EscapeChar` is set then any character can be prefixed by the escape character. The escape character is typically defined as `'\'`. The escape character immediately followed by the character `c` is the literal character `c`, even if `c` alone would have been a metacharacter.
+If `EscapeChar` is set, then any character can be prefixed by the escape character. The escape character is typically defined as `'\'`. The escape character immediately followed by the character `c` is the literal character `c`, even if `c` alone would have been a metacharacter.
 
-If `QuoteChar` is set then fields can be delimited by the specified quote character. Within quoted fields all characters except the quote character, and the escape character if defined, are literal characters.
+If `QuoteChar` is set, then fields can be delimited by the specified quote character. Within quoted fields all characters except the quote character, and the escape character if defined, are literal characters.
 
-If `DoubleQuote` is set to `1` then two consecutive quote characters within a quoted field are interpreted as the single literal quote character.
+If `DoubleQuote` is set to `1`, then two consecutive quote characters within a quoted field are interpreted as the single literal quote character.
 
 ## Result
 
 The result `R` contains the imported data.
 
-If `Y[4]` does not specify that the data contains a header then `R` contains the entire data in the form specified by the `Invert` variant option.
+If `Y[4]` does not specify that the data contains a header, then `R` contains the entire data in the form specified by the `Invert` variant option.
 
-If `Y[4]` does specify that the data contains a header then `R` is a 2-element vector where:
+If `Y[4]` does specify that the data contains a header, then `R` is a 2-element vector where:
 
 - `R[1]` is the imported data excluding the header.
 - `R[2]` is a vector of character vectors containing the header record.
@@ -227,7 +227,7 @@ In all cases the files must contain text using one of the supported encodings (s
 Note that:
 
 - native files are read from the current file position. On successful completion, the file position will be at the first unprocessed character (end of file if the `Records` variant option is not specified). If an error is signalled the file position is undefined.
-- the result does not report the file encoding or line ending type as it does with `⎕NGET`. If this information is required then it must be obtained by other means.
+- the result does not report the file encoding or line ending type as it does with `⎕NGET`. If this information is required, then it must be obtained by other means.
 
 # Dyadic `⎕CSV`
 
@@ -270,7 +270,7 @@ Table: Variant options for `⎕CSV` { #variantoptionsforcsv2 }
 |`Decimal`|the decimal mark in numeric fields - one of `'.'` or `','`|`'.'`|
 |`DoubleQuote`|A Boolean which indicates whether (`1`) or not (`0`) a quote character within a quoted field is represented by two consecutive quote characters|`1`|
 |`EscapeChar`|The escape character, which can be specified as an empty character vector (meaning none is defined) or a character scalar|`0`|
-|`ForceQuotes`|A number specifying the degree to which quotes are applied around fields even if not strictly required. Possible values are:<ul><li>`0` – add only if required</li><li>`1` – add to all fields containing character data and to fields containing numeric data if required</li><li>`2` – add to all fields even if not required</li></ul>If `ForceQuotes` is a scalar, the value applies to all columns; if it is a vector of values then each value applies to the corresponding column.|`0`|
+|`ForceQuotes`|A number specifying the degree to which quotes are applied around fields, even if not strictly required. Possible values are:<ul><li>`0` – add only if required</li><li>`1` – add to all fields containing character data and to fields containing numeric data if required</li><li>`2` – add to all fields, even if not required</li></ul>If `ForceQuotes` is a scalar, the value applies to all columns; if it is a vector of values, then each value applies to the corresponding column.|`0`|
 |`IfExists`|a character vector `'Error'` or `'Replace'` which specifies, when creating a named file which already exists, whether to overwrite it ( `'Replace'` ) or signal an error ( `'Error'` )|`'Error'`|
 |`LineEnding`|the line ending sequence - see [Line separators:](nget.md)|(13 10) on Windows; 10 on other platforms|
 |`QuoteChar`|The field quote character (delimiter), which can be specified as an empty character vector (meaning none is defined) or a character scalar|`"`|
@@ -290,7 +290,7 @@ The `Overwrite` variant option (a Boolean) from Version 16.0 remains supported b
 - Quoting and Escaping is used as conservatively as possible.
 - If both `QuoteChar` and `EscapeChar` are set, quoting is favoured.
 
-If `Y` specifies that the CSV data is written to a file then `R` is the number of bytes (not characters) written, and is [shy](../../../programming-reference-guide/introduction/results#shy-results).
+If `Y` specifies that the CSV data is written to a file, then `R` is the number of bytes (not characters) written, and is [shy](../../../programming-reference-guide/introduction/results#shy-results).
 
 Otherwise, `R` is the CSV data in the format specified in Y, and is not shy.
 

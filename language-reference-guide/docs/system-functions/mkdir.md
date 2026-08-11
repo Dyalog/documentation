@@ -39,7 +39,7 @@ The `Unique` variant option (a Boolean, `0` by default) specifies whether the ba
 |`0` <small>(default)</small> | The directory named in `Y` will be created. |
 | `1`               | The name in `Y` is modified by extending the base name with random characters and the directory is created. The name of the directory is returned in the result `R`. |
 
-If a directory cannot be created (for example, if a directory with that name already exists, or write access is denied) then an error is signalled.
+If a directory cannot be created (for example, if a directory with that name already exists, or write access is denied), then an error is signalled.
 
 <h2 class="example">Examples</h2>
 ```apl

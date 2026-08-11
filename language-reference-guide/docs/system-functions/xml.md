@@ -159,8 +159,8 @@ The remainder of XML markup, including document type declarations,  XML declarat
 
 Conversion to XML takes an array with the format described above and generates XML text from it. There are some simplifications to the array which are accepted:
 
-- The fifth column is not needed for XML generation and is effectively ignored. Any numeric values are accepted, or the column can be omitted altogether. If the fifth column is omitted then the fourth column can also be omitted.
-- For the fourth column, if there are no attributes in a particular row then the `(0 2⍴⊂'')` can be abbreviated as `⍬` (zilde). If there is only one attribute then a 2-element vector can be specified.
+- The fifth column is not needed for XML generation and is effectively ignored. Any numeric values are accepted, or the column can be omitted altogether. If the fifth column is omitted, then the fourth column can also be omitted.
+- For the fourth column, if there are no attributes in a particular row, then the `(0 2⍴⊂'')` can be abbreviated as `⍬` (zilde). If there is only one attribute, then a 2-element vector can be specified.
 - Data in the third column and attribute values in the fourth column (if present) can be provided as either character vectors or numeric values. Numeric values are implicitly formatted as if `⎕PP` was set to 17.
 
 The following validations are performed on the data in the array:

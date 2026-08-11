@@ -142,7 +142,7 @@ The above name translations are verified using `7162⌶`:
 
 ## Variant Options
 
-`⎕JSON` is controlled by six variant options. [](#variantoptionsforjson) summarises each option's effect on import from JSON to APL (`X=0`) and export from APL to JSON (`X=1`). Each option is described in finer detail, with examples, below the table. Variant options specific to one direction are tolerated for the other direction even if they have no effect.
+`⎕JSON` is controlled by six variant options. [](#variantoptionsforjson) summarises each option's effect on import from JSON to APL (`X=0`) and export from APL to JSON (`X=1`). Each option is described in finer detail, with examples, below the table. Variant options specific to one direction are tolerated for the other direction, even if they have no effect.
 
 Table: Variant options for `⎕JSON` { #variantoptionsforjson }
 

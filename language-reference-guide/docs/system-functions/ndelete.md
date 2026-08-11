@@ -13,7 +13,7 @@ The optional left argument `X` is a numeric scalar; valid values are  shown in t
 
 |---|------------------------------------------------------------------------------------------|
 |`0` <small>(default)</small>|Each file or directory with the given name must exist.                                    |
-|`1`|If the file or directory with the given name does not exist then no action is taken. The result `R` can be used to determine whether the file or directory was deleted or not.|
+|`1`|If the file or directory with the given name does not exist, then no action is taken. The result `R` can be used to determine whether the file or directory was deleted or not.|
 |`2`|If a name identifies a non-empty directory it, and all its contents, are to be deleted.   |
 |`3`|Combination of 1 and 2.                                                                   |
 

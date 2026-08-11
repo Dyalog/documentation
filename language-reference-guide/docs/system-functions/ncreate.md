@@ -28,7 +28,7 @@ The `Unique` variant option (a Boolean) specifies whether a uniquely named file 
 
 |---|---|
 |`0` <small>(default)</small>|the file named by `X` will be created|
-|`1`|a uniquely named file will be created by extending the base name (see [File Name Parts](nparts.md) ) with random characters. If a unique name cannot be created then an error will be signalled. The actual name of the file can be determined from `⎕NNAMES` or `⎕NINFO` .|
+|`1`|a uniquely named file will be created by extending the base name (see [File Name Parts](nparts.md) ) with random characters. If a unique name cannot be created, then an error will be signalled. The actual name of the file can be determined from `⎕NNAMES` or `⎕NINFO` .|
 
 ### Variant Option: `IfExists`
 

@@ -20,7 +20,7 @@ If `X` is not defined, it is assumed to be `0`.
 
 |`X`|Property|Default|Settable|
 |---|---|---|---|
-|`0`|Name of the file or directory, as a character vector. If `Y` is a tie number then this is the name which the file was tied.|&nbsp;|No|
+|`0`|Name of the file or directory, as a character vector. If `Y` is a tie number, then this is the name which the file was tied.|&nbsp;|No|
 |`1`|Type, as a numeric scalar: 0=Not known 1=Directory 2=Regular file 3=Character device 4=Symbolic link (only when `Follow` is `0`) 5=Block device 6=FIFO (not Windows) 7=Socket (not Windows)|`0`|No|
 |`2`|Size in bytes, as a numeric scalar|`0`|Yes|
 |`3`|Last modification time, as a timestamp in `⎕TS` format|`7⍴0`|No|
@@ -55,7 +55,7 @@ The returned value `R` has the same shape as `X` (if the `Wildcard` variant opti
 
 If a property value cannot be obtained, the default value (shown in the table above) is returned for that property.
 
-If the `Wildcard` option is not enabled (the default) then `Y` specifies exactly one file or directory and must exist. In this case each element in `R` is a single property value for that file. If the name in `Y` does not exist, the function signals an error. On non-Windows platforms "*" and "?" are treated as normal characters. On Microsoft Windows an error will be signalled since neither are valid characters for file or directory names.
+If the `Wildcard` option is not enabled (the default), then `Y` specifies exactly one file or directory and must exist. In this case each element in `R` is a single property value for that file. If the name in `Y` does not exist, the function signals an error. On non-Windows platforms "*" and "?" are treated as normal characters. On Microsoft Windows an error will be signalled since neither are valid characters for file or directory names.
 
 If the `Wildcard` option is enabled, zero or more files and/or directories might match the pattern in `Y`. In this case each element in `R` is a vector of property values for each of the files. Note that no error will be signalled if no files match the pattern.
 
