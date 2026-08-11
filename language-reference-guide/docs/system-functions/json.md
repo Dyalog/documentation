@@ -146,20 +146,20 @@ The above name translations are verified using `7162⌶`:
 
 Table: Variant options overview { #variant-table }
 
-| Variant Option                                                     | Value                                 | Effect on Import                                    | Effect on Export |
-|--------------------------------------------------------------------|:-------------------------------------:|-----------------------------------------------------|------------------|
-| [`Format`](#variant-option-format)<br><small>principal</small> | `'D'`<br><small>default</small>       | `R` is APL data corresponding to `Y`                | `Y` is APL data |
-|_-                                                                -_| `'M'`                                 | `R` is an APL matrix encoding of `Y`                | `Y` is a 4-column APL matrix as from import with `'M'` |
-| [`Dialect`](#variant-option-dialect)                           | `'JSON'`<br><small>default</small>    | Only strict JSON syntax is accepted                 | Only strict JSON syntax is produced |
-|_-                                                                -_| `'JSON5'`                             | [JSON5](https://json5.org/) extensions are accepted | JSON5 features are used to improve readability and editability, and/or shorten output |
-| [`Null`](#variant-option-null)                                 | `⊂'null'`<br><small>default</small>   | JSON <code class="language-nonAPL">null</code> becomes APL `⊂'null'`                   | APL `⊂'null'` becomes JSON <code class="language-nonAPL">null</code> |
-|_-                                                                -_| `⎕NULL`                               | JSON <code class="language-nonAPL">null</code> becomes APL `⎕NULL`                     | APL `⎕NULL` becomes JSON <code class="language-nonAPL">null</code> |
-| [`Compact`](#variant-option-compact)                           | `1`<br><small>default</small>         | None                                                | `R` has no whitespace outside quotes |
-|_-                                                                -_| `0`                                   | None                                                | `R` has whitespace for readability and, if `Dialect` is `'JSON5'`, trailing commas after final elements and members |
-| [`Charset`](#variant-option-charset)                           | `'Unicode'`<br><small>default</small> | None                                                | Unicode characters in `Y` are used when JSON standard allows |
-|_-                                                                -_| `'ASCII'`                             | None                                                | Non-ASCII characters are converted to the hexadecimal form `\uNNNN`, and if `Dialect` is `'JSON5'`, also `\xNN` |
-| [`HighRank`](#variant-option-highrank)                         | `'Error'`<br><small>default</small>   | None                                                | High-rank arrays are rejected |
-|_-                                                                -_| `'Split'`                             | None                                                | High-rank arrays are split and [inverted table wrappers](#dataset-wrappers) accept text columns as matrices |
+| Variant Option | Valid Values | Default | Effect on Import | Effect on Export |
+|---|:---:|:---:|---|---|
+| [`Format`](#variant-option-format)<br><small>principal</small> | `'D'` | `'D'` | `R` is APL data corresponding to `Y`                | `Y` is APL data |
+|_-                                                                -_| `'M'`                                 |  | `R` is an APL matrix encoding of `Y`                | `Y` is a 4-column APL matrix as from import with `'M'` |
+| [`Dialect`](#variant-option-dialect)                           | `'JSON'` | `'JSON'` | Only strict JSON syntax is accepted                 | Only strict JSON syntax is produced |
+|_-                                                                -_| `'JSON5'`                             |  | [JSON5](https://json5.org/) extensions are accepted | JSON5 features are used to improve readability and editability, and/or shorten output |
+| [`Null`](#variant-option-null)                                 | `⊂'null'` | `⊂'null'` | JSON <code class="language-nonAPL">null</code> becomes APL `⊂'null'`                   | APL `⊂'null'` becomes JSON <code class="language-nonAPL">null</code> |
+|_-                                                                -_| `⎕NULL`                               |  | JSON <code class="language-nonAPL">null</code> becomes APL `⎕NULL`                     | APL `⎕NULL` becomes JSON <code class="language-nonAPL">null</code> |
+| [`Compact`](#variant-option-compact)                           | `1` | `1` | None                                                | `R` has no whitespace outside quotes |
+|_-                                                                -_| `0`                                   |  | None                                                | `R` has whitespace for readability and, if `Dialect` is `'JSON5'`, trailing commas after final elements and members |
+| [`Charset`](#variant-option-charset)                           | `'Unicode'` | `'Unicode'` | None                                                | Unicode characters in `Y` are used when JSON standard allows |
+|_-                                                                -_| `'ASCII'`                             |  | None                                                | Non-ASCII characters are converted to the hexadecimal form `\uNNNN`, and if `Dialect` is `'JSON5'`, also `\xNN` |
+| [`HighRank`](#variant-option-highrank)                         | `'Error'` | `'Error'` | None                                                | High-rank arrays are rejected |
+|_-                                                                -_| `'Split'`                             |  | None                                                | High-rank arrays are split and [inverted table wrappers](#dataset-wrappers) accept text columns as matrices |
 
 ### Variant Option: Format
 

@@ -402,10 +402,10 @@ If a pattern is rejected, or a text-formatted datetime cannot be matched against
 
 Table: Variant options overview { #variant-table }
 
-|Variant Option|Value|Effect|
-|---|---|---|
-|[`Language`](#variant-option-language)|`'en'` <small>(default)</small>, or another two- or five-character language name such as `'en_GB'`|The language used for formatting and matching datetimes.|
-|[`Dictionary`](#variant-option-dictionary)|a namespace|Additional or replacement month names and predefined patterns.|
+|Variant Option|Valid Values|Default|Effect|
+|---|---|---|---|
+|[`Language`](#variant-option-language)|`'en'`, or another two- or five-character language name such as `'en_GB'`|`'en'`|The language used for formatting and matching datetimes.|
+|[`Dictionary`](#variant-option-dictionary)|a namespace||Additional or replacement month names and predefined patterns.|
 
 ### Variant Option: Language
 

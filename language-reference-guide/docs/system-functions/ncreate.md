@@ -17,10 +17,10 @@ The [shy](../../../programming-reference-guide/introduction/results#shy-results)
 
 Table: Variant options overview { #variant-table }
 
-|Variant Option|Value|Effect|
-|---|---|---|
-|[`Unique`](#variant-option-unique)|`0` <small>(default)</small> or `1`|Whether the created file is given a uniquely generated name.|
-|[`IfExists`](#variant-option-ifexists)|`'Error'` <small>(default)</small> or `'Replace'`|What happens when the named file already exists.|
+|Variant Option|Valid Values|Default|Effect|
+|---|---|---|---|
+|[`Unique`](#variant-option-unique)|`0` or `1`|`0`|Whether the created file is given a uniquely generated name.|
+|[`IfExists`](#variant-option-ifexists)|`'Error'` or `'Replace'`|`'Error'`|What happens when the named file already exists.|
 
 ### Variant Option: Unique
 

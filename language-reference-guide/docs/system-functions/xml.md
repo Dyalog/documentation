@@ -177,11 +177,11 @@ Then, character references and entity references are emitted in place of charact
 
 Table: Variant options overview { #variant-table }
 
-|Variant Option|Left-argument name|Values|Effect|
-|---|---|---|---|
-|[`Whitespace`](#variant-option-whitespace)|`whitespace`|`Strip` <small>(default)</small>, `Trim` or `Preserve`|Handling of white space in character data.|
-|[`Markup`](#variant-option-markup)|`markup`|`Strip` <small>(default)</small> or `Preserve`|Whether markup appears in the result (import only).|
-|[`UnknownEntity`](#variant-option-unknownentity)|`unknown-entity`|`Replace` <small>(default)</small> or `Preserve`|Handling of unknown entity and character references.|
+|Variant Option|Left-argument name|Valid Values|Default|Effect|
+|---|---|---|---|---|
+|[`Whitespace`](#variant-option-whitespace)|`whitespace`|`Strip`, `Trim` or `Preserve`|`Strip`|Handling of white space in character data.|
+|[`Markup`](#variant-option-markup)|`markup`|`Strip` or `Preserve`|`Strip`|Whether markup appears in the result (import only).|
+|[`UnknownEntity`](#variant-option-unknownentity)|`unknown-entity`|`Replace` or `Preserve`|`Replace`|Handling of unknown entity and character references.|
 
 The values of each option are tabulated below. In each case the value of the option for Variant is given first, followed by its equivalent for the optional left argument in brackets; for example, `Strip` `(strip)`.
 

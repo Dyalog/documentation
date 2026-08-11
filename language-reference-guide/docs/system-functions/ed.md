@@ -38,10 +38,10 @@ Objects named in `Y` that cannot be edited are silently ignored. Objects qualifi
 
 Table: Variant options overview { #variant-table }
 
-|Variant Option|Value|Effect|
-|---|---|---|
-|[`ReadOnly`](#variant-option-readonly)|`0` <small>(default)</small> or `1`|Whether the edit windows are read-only.|
-|[`EditName`](#variant-option-editname)|`'Default'` <small>(default)</small>, `'Allow'` or `'Disallow'`|Whether the user may open further edit windows by clicking a name.|
+|Variant Option|Valid Values|Default|Effect|
+|---|---|---|---|
+|[`ReadOnly`](#variant-option-readonly)|`0` or `1`|`0`|Whether the edit windows are read-only.|
+|[`EditName`](#variant-option-editname)|`'Default'`, `'Allow'` or `'Disallow'`|`'Default'`|Whether the user may open further edit windows by clicking a name.|
 
 ### Variant Option: ReadOnly
 

@@ -113,12 +113,12 @@ DOMAIN ERROR: There were errors processing the script
 
 Table: Variant options overview { #variant-table }
 
-|Variant Option|Value|Effect|
-|---|---|---|
-|[`Quiet`](#variant-option-quiet)|`0` <small>(default)</small> or `1`|Whether script errors are shown in the Status Window.|
-|[`FixWithErrors`](#variant-option-fixwitherrors)|`0` <small>(default)</small>, `1` or `2`|Whether namespaces and classes containing errors are fixed.|
-|[`AllowLateBinding`](#variant-option-allowlatebinding)|`0` <small>(default)</small> or `1`|Whether a Class with an undefined Base class is fixed.|
-|[`InjectReferences`](#variant-option-injectreferences)|`'All'`, `'InClasses'` <small>(default)</small> or `'None'`|How internal references are inserted to implement lexical scope.|
+|Variant Option|Valid Values|Default|Effect|
+|---|---|---|---|
+|[`Quiet`](#variant-option-quiet)|`0` or `1`|`0`|Whether script errors are shown in the Status Window.|
+|[`FixWithErrors`](#variant-option-fixwitherrors)|`0`, `1` or `2`|`1`|Whether namespaces and classes containing errors are fixed.|
+|[`AllowLateBinding`](#variant-option-allowlatebinding)|`0` or `1`|`1`|Whether a Class with an undefined Base class is fixed.|
+|[`InjectReferences`](#variant-option-injectreferences)|`'All'`, `'InClasses'` or `'None'`|`'InClasses'`|How internal references are inserted to implement lexical scope.|
 
 ### Variant Option: Quiet
 
@@ -133,8 +133,8 @@ Controls whether script errors are reported in the Status Window.
 Controls whether namespaces and classes that contain errors are fixed.
 
 |---|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|`0` <small>(default)</small>|If the script contains errors, `⎕FIX` fails with `DOMAIN ERROR`.                                                                                                      |
-|`1`|`⎕FIX` fixes all the namespaces and classes in the script regardless of any errors they may contain.                                                                   |
+|`0`|If the script contains errors, `⎕FIX` fails with `DOMAIN ERROR`.                                                                                                      |
+|`1` <small>(default)</small>|`⎕FIX` fixes all the namespaces and classes in the script regardless of any errors they may contain.                                                                   |
 |`2`|If the script contains errors, `⎕FIX` displays a message box prompting the user to choose whether or not to fix all the offending namespaces and classes in the script.|
 
 ### Variant Option: AllowLateBinding
@@ -142,8 +142,8 @@ Controls whether namespaces and classes that contain errors are fixed.
 Controls whether a Class whose Base class is not yet defined can be fixed.
 
 |---|---------------------------------------------------------------------------------------------------------------------|
-|`0` <small>(default)</small>|`⎕FIX` will only fix a Class whose Base class (if specified) is defined in the script or is present in the workspace.|
-|`1`|`⎕FIX` will fixes a Class whose Base class is neither defined in the script nor present in the workspace.            |
+|`0`|`⎕FIX` will only fix a Class whose Base class (if specified) is defined in the script or is present in the workspace.|
+|`1` <small>(default)</small>|`⎕FIX` will fix a Class whose Base class is neither defined in the script nor present in the workspace.            |
 
 ### Variant Option: InjectReferences
 

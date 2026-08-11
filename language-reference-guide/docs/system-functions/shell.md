@@ -110,18 +110,18 @@ When an APL thread running `⎕SHELL` is terminated by [`⎕TKILL`](tkill.md) or
 
 Table: Variant options overview { #variant-table }
 
-|Variant Option|Value|Effect|
-|---|---|---|
-|[`Output`](#variant-option-output)|a set of redirections|Output stream redirections.|
-|[`Input`](#variant-option-input)|a set of redirections|Input stream redirections.|
-|[`WorkingDir`](#variant-option-workingdir)|a character vector|The child process's working directory (default: the interpreter's current directory).|
-|[`InheritEnv`](#variant-option-inheritenv)|`1` <small>(default)</small> or `0`|Whether the interpreter's environment variables are inherited.|
-|[`Env`](#variant-option-env)|environment-variable definitions|Additional environment variables (default: none).|
-|[`Shell`](#variant-option-shell)|a shell specification|The shell used when `Y` is a character vector (default: operating-system specific).|
-|[`ExitCheck`](#variant-option-exitcheck)|`0` <small>(default)</small> or `1`|Whether abnormal exit reasons and codes raise `DOMAIN ERROR`.|
-|[`Timeout`](#variant-option-timeout)|`0` <small>(default)</small> or a number of milliseconds|Upper limit on the duration of the call (`0` means no limit).|
-|[`Signal`](#variant-option-signal)|a signal number|Signal sent to the child process when it is abandoned (default: operating-system specific).|
-|[`Window`](#variant-option-window)|`'Hidden'` <small>(default)</small> or another window mode|Initial window mode (Microsoft Windows only).|
+|Variant Option|Valid Values|Default|Effect|
+|---|---|---|---|
+|[`Output`](#variant-option-output)|a set of redirections|`0 2⍴0`|Output stream redirections.|
+|[`Input`](#variant-option-input)|a set of redirections|`0 2⍴0`|Input stream redirections.|
+|[`WorkingDir`](#variant-option-workingdir)|a character vector|the interpreter's current directory|The child process's working directory.|
+|[`InheritEnv`](#variant-option-inheritenv)|`1` or `0`|`1`|Whether the interpreter's environment variables are inherited.|
+|[`Env`](#variant-option-env)|environment-variable definitions|none|Additional environment variables.|
+|[`Shell`](#variant-option-shell)|a shell specification|operating-system specific|The shell used when `Y` is a character vector.|
+|[`ExitCheck`](#variant-option-exitcheck)|`0` or `1`|`0`|Whether abnormal exit reasons and codes raise `DOMAIN ERROR`.|
+|[`Timeout`](#variant-option-timeout)|`0` or a number of milliseconds|`0`|Upper limit on the duration of the call (`0` means no limit).|
+|[`Signal`](#variant-option-signal)|a signal number|operating-system specific|Signal sent to the child process when it is abandoned.|
+|[`Window`](#variant-option-window)|`'Hidden'` or another window mode|`'Hidden'`|Initial window mode (Microsoft Windows only).|
 
 ### Variant Option: Output
 The `Output` variant option controls output stream redirections. The value must describe a set of redirections, in one of the following formats:

@@ -33,11 +33,11 @@ Other negative numbers represent damage to the file metadata; this set may be ex
 
 Table: Variant options overview { #variant-table }
 
-|Variant Option|Value|Effect|
-|---|---|---|
-|[`Task`](#variant-option-task)|`'Scan'` <small>(default)</small> or `'Rebuild'`|Whether to check (and optionally repair) the file, or unconditionally rebuild it.|
-|[`Repair`](#variant-option-repair)<br><small>principal</small>|`0` <small>(default)</small> or `1`|Whether a damaged file is repaired.|
-|[`Force`](#variant-option-force)|`0` <small>(default)</small> or `1`|Whether to validate a file that appears to have been properly closed.|
+|Variant Option|Valid Values|Default|Effect|
+|---|---|---|---|
+|[`Task`](#variant-option-task)|`'Scan'` or `'Rebuild'`|`'Scan'`|Whether to check (and optionally repair) the file, or unconditionally rebuild it.|
+|[`Repair`](#variant-option-repair)<br><small>principal</small>|`0` or `1`|`0`|Whether a damaged file is repaired.|
+|[`Force`](#variant-option-force)|`0` or `1`|`0`|Whether to validate a file that appears to have been properly closed.|
 
 The `'Rebuild'` task causes the *file indices* to be discarded and rebuilt. `Repair` only takes place on files which have been checked and found to be damaged. It involves a rebuild, but that only takes place if it is needed. Note that `Repair` and `Force` only apply if `Task` is `'Scan'`.
 

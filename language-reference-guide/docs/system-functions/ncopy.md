@@ -23,12 +23,12 @@ The [shy](../../../programming-reference-guide/introduction/results#shy-results)
 
 Table: Variant options overview { #variant-table }
 
-|Variant Option|Value|Effect|
-|---|---|---|
-|[`Wildcard`](#variant-option-wildcard)<br><small>principal</small>|`0` <small>(default)</small> or `1`|Whether the names in `Y` are matched literally or as patterns.|
-|[`IfExists`](#variant-option-ifexists)|`'Error'` <small>(default)</small>, `'Skip'`, `'Replace'` or `'ReplaceIfNewer'`|What happens when a target file already exists.|
-|[`PreserveAttributes`](#variant-option-preserveattributes)|`0` <small>(default)</small> or `1`|Whether file attributes are preserved.|
-|[`ProgressCallback`](#variant-option-progresscallback)|a callback function|Reports progress during the copy.|
+|Variant Option|Valid Values|Default|Effect|
+|---|---|---|---|
+|[`Wildcard`](#variant-option-wildcard)<br><small>principal</small>|`0` or `1`|`0`|Whether the names in `Y` are matched literally or as patterns.|
+|[`IfExists`](#variant-option-ifexists)|`'Error'`, `'Skip'`, `'Replace'` or `'ReplaceIfNewer'`|`'Error'`|What happens when a target file already exists.|
+|[`PreserveAttributes`](#variant-option-preserveattributes)|`0` or `1`|`0`|Whether file attributes are preserved.|
+|[`ProgressCallback`](#variant-option-progresscallback)|a callback function||Reports progress during the copy.|
 
 ### Variant Option: Wildcard
 

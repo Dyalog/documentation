@@ -25,12 +25,12 @@ The [shy](../../../programming-reference-guide/introduction/results#shy-results)
 
 Table: Variant options overview { #variant-table }
 
-|Variant Option|Value|Effect|
-|---|---|---|
-|[`Wildcard`](#variant-option-wildcard)<br><small>principal</small>|`0` <small>(default)</small> or `1`|Whether the names in `Y` are matched literally or as patterns.|
-|[`IfExists`](#variant-option-ifexists)|`'Error'` <small>(default)</small> or `'Skip'`|What happens when a target file already exists.|
-|[`RenameOnly`](#variant-option-renameonly)|`0` <small>(default)</small> or `1`|What happens when the source cannot be renamed.|
-|[`ProgressCallback`](#variant-option-progresscallback)|a callback function|Reports progress during the move.|
+|Variant Option|Valid Values|Default|Effect|
+|---|---|---|---|
+|[`Wildcard`](#variant-option-wildcard)<br><small>principal</small>|`0` or `1`|`0`|Whether the names in `Y` are matched literally or as patterns.|
+|[`IfExists`](#variant-option-ifexists)|`'Error'` or `'Skip'`|`'Error'`|What happens when a target file already exists.|
+|[`RenameOnly`](#variant-option-renameonly)|`0` or `1`|`0`|What happens when the source cannot be renamed.|
+|[`ProgressCallback`](#variant-option-progresscallback)|a callback function||Reports progress during the move.|
 
 ### Variant Option: Wildcard
 

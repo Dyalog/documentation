@@ -57,13 +57,13 @@ to:
 
 Table: Variant options overview { #variant-table }
 
-|Variant Option|Value|Effect|
-|---|---|---|
-|`'J'`|`0`, `1` <small>(default)</small>, `2` or `3`|Sets the journaling level.|
-|`'C'`|`0` or `1` <small>(default)</small>|Sets the checksum level.|
-|`'Z'`|`0` <small>(default)</small> or `1`|Sets compression.|
-|`'U'`|`0` or `1` <small>(default)</small>|Sets Unicode support.|
-|`'S'`|`64` <small>(default)</small>|Sets the file size (span).|
+|Variant Option|Valid Values|Default|Effect|
+|---|---|---|---|
+|`'J'`|`0`, `1`, `2` or `3`|`1`|Sets the journaling level.|
+|`'C'`|`0` or `1`|`1`|Sets the checksum level.|
+|`'Z'`|`0` or `1`|`0`|Sets compression.|
+|`'U'`|`0` or `1`|`1`|Sets Unicode support.|
+|`'S'`|`64`|`64`|Sets the file size (span).|
 
 The principal option is a number that sets journaling (`'J'`) and checksum (`'C'`) together:
 
