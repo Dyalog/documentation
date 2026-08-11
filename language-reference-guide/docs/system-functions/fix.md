@@ -118,7 +118,7 @@ Table: Variant options overview { #variant-table }
 |[`Quiet`](#variant-option-quiet)|`0` <small>(default)</small> or `1`|Whether script errors are shown in the Status Window.|
 |[`FixWithErrors`](#variant-option-fixwitherrors)|`0` <small>(default)</small>, `1` or `2`|Whether namespaces and classes containing errors are fixed.|
 |[`AllowLateBinding`](#variant-option-allowlatebinding)|`0` <small>(default)</small> or `1`|Whether a Class with an undefined Base class is fixed.|
-|[`InjectReferences`](#variant-option-injectreferences)|`'All'`, `'InClasses'` or `'None'`|How internal references are inserted to implement lexical scope.|
+|[`InjectReferences`](#variant-option-injectreferences)|`'All'`, `'InClasses'` <small>(default)</small> or `'None'`|How internal references are inserted to implement lexical scope.|
 
 ### Variant Option: Quiet
 
@@ -151,7 +151,7 @@ Controls how internal references are inserted to implement lexical scope.
 
 |-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 |`'All'`    |In order to implement lexical scope, `⎕FIX` will insert internal references into all objects in the script.                                          |
-|`'InClasses'`|In order to implement lexical scope, `⎕FIX` will insert internal references ONLY into Classes and sub-classes in the script, but not into namespaces.|
+|`'InClasses'` <small>(default)</small>|In order to implement lexical scope, `⎕FIX` will insert internal references ONLY into Classes and sub-classes in the script, but not into namespaces.|
 |`'None'`   |No internal references are inserted and lexical scope does not apply.                                                                                |
 
 See [Lexical Scope in Scripts](../../../earlier-release-notes/release-notes-v19-0/introduction/lexical-scope-in-scripts).

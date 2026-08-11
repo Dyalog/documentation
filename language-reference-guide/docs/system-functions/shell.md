@@ -20,7 +20,10 @@ The shell being used can be changed using the [`Shell`](#variant-option-shell) v
 - Microsoft Windows: `PowerShell`
 - Linux, macOS, AIX: `/bin/sh`
 
-#### Example ( Microsoft Windows) { .example }
+<h4 class="example">Example</h4>
+
+The following example is for Microsoft Windows only.
+
 ```apl
       ↑⊃⊃⎕SHELL 'Get-ChildItem -path C:\tmp'
       
@@ -46,7 +49,7 @@ If the command does not depend on any shell features, then direct execution shou
     This difference in performance can be very significant, especially under Microsoft Windows where PowerShell is the default.
     Direct calls can be 5-10x faster.
     
-    See [the example below](#example-using-cmdexe-microsoft-windows) for information about how to use `cmd.exe` instead of PowerShell.
+    See the examples under [the `Shell` variant option](#variant-option-shell) for information about how to use `cmd.exe` instead of PowerShell.
 
 ## Return Value
 
@@ -93,7 +96,7 @@ The  reasons why a call to `⎕SHELL` ends are described in the table below. `Ex
 
 Returning the exit code (instead of `⎕SHELL` producing some trappable error) makes it possible to access the other parts of the result, such as the error messages that were printed on the standard error stream. However, it is possible to turn non-successful exits into trappable errors using the [`ExitCheck`](#variant-option-exitcheck) variant.
 
-When the `ExitReason` is 2 or 3, the child process had not stopped running before `⎕SHELL` stopped, which means it might still be running, and require some appropriate cleanup (see [8373⌶](../../primitive-operators/i-beam/shell-process-control)).
+When the `ExitReason` is 2 or 3, the child process had not stopped running before `⎕SHELL` stopped, which means it might still be running, and require some appropriate cleanup (see [`8373⌶`](../../primitive-operators/i-beam/shell-process-control)).
 In practice, the child process often closes shortly after without the need for intervention, either due to the default signal being sent to it on non-Windows platforms (see the [`Signal`](#variant-option-signal) option), or because the connected streams are closed on the `⎕SHELL` end.
 
 ## Thread Switching
@@ -116,7 +119,7 @@ Table: Variant options overview { #variant-table }
 |[`Env`](#variant-option-env)|environment-variable definitions|Additional environment variables (default: none).|
 |[`Shell`](#variant-option-shell)|a shell specification|The shell used when `Y` is a character vector (default: operating-system specific).|
 |[`ExitCheck`](#variant-option-exitcheck)|`0` <small>(default)</small> or `1`|Whether abnormal exit reasons and codes raise `DOMAIN ERROR`.|
-|[`TimeOut`](#variant-option-timeout)|`0` <small>(default)</small> or a number of milliseconds|Upper limit on the duration of the call (`0` means no limit).|
+|[`Timeout`](#variant-option-timeout)|`0` <small>(default)</small> or a number of milliseconds|Upper limit on the duration of the call (`0` means no limit).|
 |[`Signal`](#variant-option-signal)|a signal number|Signal sent to the child process when it is abandoned (default: operating-system specific).|
 |[`Window`](#variant-option-window)|`'Hidden'` <small>(default)</small> or another window mode|Initial window mode (Microsoft Windows only).|
 
@@ -220,7 +223,9 @@ The `Env` variant option specifies any additional environment variables and thei
 
 Each row or two-element vector consists of an environment variable name and its value, both specified as character vectors.
 
-Example: Add three environment variables: `DAY=monday`, `MONTH=december`, and `WEEK=50`.
+<h4 class="example">Example</h4>
+
+Add three environment variables: `DAY=monday`, `MONTH=december`, and `WEEK=50`.
 
 ```apl
       ⍝ Using a two-column matrix and array notation
@@ -250,24 +255,6 @@ The value must be a character vector or a vector of character vectors with a len
 !!! info
     Shells typically takes some argument which specify that the next argument is a command to run, such as `/bin/bash -c` on Linux, but since the argument differs from shell to shell, it must be specified manually.
 
-#### Example using cmd.exe (Microsoft Windows) { .example }
-```apl
-      ⎕SHELL⍠'Shell' ('cmd.exe' '/C')⊢'someCmd'
-...
-```
-
-#### Example using bash (Linux) { .example }
-```apl
-      ⎕SHELL⍠'Shell' ('/bin/bash' '-c')⊢'someCmd'
-...
-```
-
-There is no difference between the following two calls; the `Shell` variant option is simply a convenience.
-```apl
-      ⎕SHELL'/bin/bash' '-c' 'a b c'
-      ⎕SHELL⍠'Shell' ('/bin/bash' '-c')⊢'a b c'
-```
-
 When the right argument of `⎕SHELL` is a nested vector, the `Shell` option has no effect.
 
 The default depends on the operating-system:
@@ -275,13 +262,33 @@ The default depends on the operating-system:
 - Microsoft Windows: `('C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe' '-Command')`.
 - Linux, macOS, AIX: `('/bin/sh' '-c')`.
 
+<h4 class="example">Examples</h4>
+
+Using `cmd.exe` on Microsoft Windows:
+```apl
+      ⎕SHELL⍠'Shell' ('cmd.exe' '/C')⊢'someCmd'
+...
+```
+
+Using `bash` on Linux:
+```apl
+      ⎕SHELL⍠'Shell' ('/bin/bash' '-c')⊢'someCmd'
+...
+```
+
+There is no difference between the following two calls; the `Shell` variant option is simply a convenience:
+```apl
+      ⎕SHELL'/bin/bash' '-c' 'a b c'
+      ⎕SHELL⍠'Shell' ('/bin/bash' '-c')⊢'a b c'
+```
+
 ### Variant Option: ExitCheck
 The `ExitCheck` variant option specifies whether `⎕SHELL` should convert abnormal exit reasons and exit codes into a `DOMAIN ERORR`. The value must be a boolean scalar; if set to 1, a `DOMAIN ERROR` is reported if `ExitReason` and `ExitCode` are not both 0.
 
 The default `0`.
 
-### Variant Option: TimeOut
-The `TimeOut` variant option specifies an upper limit for the duration of the `⎕SHELL` call.
+### Variant Option: Timeout
+The `Timeout` variant option specifies an upper limit for the duration of the `⎕SHELL` call.
 The value must be a non-negative numeric scalar representing the number of milliseconds.
 The value `0` allows the `⎕SHELL` call to run for as long as it needs.
 
@@ -307,7 +314,7 @@ The `Window` variant option specifies the initial window mode. The value must be
 
 The default is `'Hidden'`.
 
-See also [8373⌶](../../primitive-operators/i-beam/shell-process-control).
+See also [`8373⌶`](../../primitive-operators/i-beam/shell-process-control).
 
 ## Default Redirections
 Most programs assume that the three standard streams are configured when the program starts. For this reason, `⎕SHELL` always sets up some redirections for those three, even when variant options have explicitly only set up some of them. For example, when `⎕SHELL⍠'Output' (1 ('File' '/tmp/log.txt'))⊢cmd` is run, stream 0 and stream 2 are set up to their default values.
