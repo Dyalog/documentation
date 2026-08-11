@@ -5,7 +5,7 @@ search:
 
 # <span>Datetime</span> `R←X ⎕DT Y`{{key}}
 
-This function validates datetimes, converts datetimes between one representation and another, and converts datetimes to and from text.
+This function validates datetimes and converts datetimes between one representation and another, including textual representations.
 
 A *datetime* is a date and time of day represented by a *time number*, a *timestamp*, a *military time-zone character*, or a *text-formatted datetime*.
 
@@ -39,6 +39,9 @@ Character scalars in `Y` are always interpreted as meaning "now".
 `R` is an array of the same shape as `Y`, where each element is a timestamp, time number, character vector or Boolean value, as determined by <code>X<sub>R</sub></code> (the second or only element of `X`).
 
 Time numbers in `R` can be of type DECF even when [`⎕FR`](fr.md) is `645` if their magnitude could be too great to store precisely in a double. See [](#timenumbers) for the type numbers where this is so.
+
+!!! Warning "Warning"
+    Performing arithmetic on such time numbers while [`⎕FR`](fr.md) is `645` can lose precision or signal `DOMAIN ERROR`. To compute with them accurately, set `⎕FR` to `1287` (128-bit decimal) first.
 
 ## Time Numbers
 
