@@ -24,11 +24,11 @@ If `Y` names an existing object, the type specification for that name in `X` is 
 If `X` is `⋄`, `Y` must be undefined or an array.
 The Editor opens in array-notation mode; the resulting array can be of any type or structure.
 
-If `⎕ED` is called from the Session, it opens Edit windows for the object(s) named in `Y` and returns a null result.  The cursor is positioned in the first of the Edit windows opened by `⎕ED`, but can be moved to the Session or to any other window which is currently open.  The effect is almost identical to using `)ED`.
+If `⎕ED` is called from the Session, it opens Edit windows for the object(s) named in `Y` and immediately returns a null result.  The cursor is positioned in the first of the Edit windows opened by `⎕ED`, but can be moved to the Session or to any other window which is currently open.  The effect is almost identical to using `)ED`.
 
 If `⎕ED` is called from a defined function or operator, its behaviour is different. On asynchronous terminals, the Edit windows are automatically displayed in "full-screen" mode (ZOOMED). In all implementations, the user is restricted to those windows named in `Y`. The user cannot skip to the Session even though the Session might be visible.
 
-`⎕ED` terminates and returns a result ONLY when the user explicitly closes all the windows for the named objects. In this case the result contains the names of any objects which have been newly (re)fixed in the workspace as a result of the `⎕ED`, and has the same structure as `Y`.
+In this case, `⎕ED` terminates and returns a result only when the user explicitly closes all the windows for the named objects. The result contains the names of any objects which have been newly (re)fixed in the workspace as a result of the `⎕ED`, and has the same structure as `Y`.
 
 Objects named in `Y` that cannot be edited are silently ignored. Objects qualified with a namespace path are (for example, `a.b.c.foo`) are silently ignored if the namespace does not exist.
 
