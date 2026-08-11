@@ -5,3 +5,5 @@ Your Dyalog serial number. This must be set to the serial number issued to you; 
 Valid values are your issued serial number.
 
 For the full licence terms and conditions, see [https://www.dyalog.com/uploads/documents/Terms_and_Conditions.pdf](https://www.dyalog.com/uploads/documents/Terms_and_Conditions.pdf).
+
+Related parameters: [DYALOG_SERIALFILE](dyalog-serialfile.md).
