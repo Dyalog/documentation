@@ -1,8 +1,6 @@
 # <span>Bitmap</span> <span>Object</span>
 
-**Purpose:** A graphical object used to represent a bitmap which may be used both to display a picture or as a pattern (brush) used to fill other objects.
-
-**Description**
+A graphical object used to represent a bitmap which may be used both to display a picture or as a pattern (brush) used to fill other objects.
 
 A Bitmap may be created either from a file (.BMP, .GIF or .PNG) or from APL arrays. To create a Bitmap object using [`⎕WC`](../../../language-reference-guide/system-functions/wc), you can either specify the [File](../properties/file.md) property **or** the [CBits](../properties/cbits.md) property, **or** the [Bits](../properties/bits.md) and [CMap](../properties/cmap.md) properties.
 
@@ -44,7 +42,7 @@ The [BtnPix](../properties/btnpix.md) property specifies three Bitmaps to be use
 
 The [FStyle](../properties/fstyle.md) property specifies the name of a Bitmap to be used as a pattern to fill a [Poly](poly.md), [Ellipse](ellipse.md) or [Rect](rect.md) object.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/animation.md), [Button](../objects/button.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [ImageList](../objects/imagelist.md), [ListView](../objects/listview.md), [Menu](../objects/menu.md), [MenuBar](../objects/menubar.md), [MenuItem](../objects/menuitem.md), [NetType](../objects/nettype.md), [OLEServer](../objects/oleserver.md), [Printer](../objects/printer.md), [ProgressBar](../objects/progressbar.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [RichEdit](../objects/richedit.md), [Root](../objects/root.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolButton](../objects/toolbutton.md), [ToolControl](../objects/toolcontrol.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)
 

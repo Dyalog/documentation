@@ -1,8 +1,6 @@
 # <span>RichEdit</span> <span>Object</span>
 
-**Purpose:** The RichEdit object is a multi-line text editor that provides a wide range of word-processing capabilities.
-
-**Description**
+The RichEdit object is a multi-line text editor that provides a wide range of word-processing capabilities.
 
 A RichEdit object is a window in which the user can enter and edit text. The text can be assigned character and paragraph formatting. It is implemented using the Microsoft Windows RichEdit Version 1.0 control, although  embedded OLE objects are not supported.
 
@@ -36,7 +34,7 @@ If the user attempts to alter text that is protected (see[ CharFormat](../proper
 
 You may print the contents of a RichEdit object using the [RTFPrint](../methodorevents/rtfprint.md) method. You may display a print set-up dialog box using the [RTFPrintSetup](../methodorevents/rtfprintsetup.md) method.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

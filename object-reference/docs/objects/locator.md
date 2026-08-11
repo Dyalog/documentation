@@ -1,8 +1,6 @@
 # <span>Locator</span> <span>Object</span>
 
-**Purpose:** Allows the user to input a point, ellipse, line or rectangle.
-
-**Description**
+Allows the user to input a point, ellipse, line or rectangle.
 
 This object is used to obtain graphical input from the user. Like a pop-up
 menu or a [MsgBox](msgbox.md), the Locator is a *modal* object whose interaction with the user is initiated by a "local" [`⎕DQ`](../../../language-reference-guide/system-functions/dq).
@@ -66,7 +64,7 @@ However, if you are using rubberbanding, you will normally want to have the
 cursor appear at the end or corner of the Locator that moves. If you start with a non-zero sized Locator, you must set [Posn](../properties/posn.md) (which defines the **fixed** end or corner) to the current cursor position
 minus [Size](../properties/size.md) to achieve this effect.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Root](../objects/root.md), [Static](../objects/static.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

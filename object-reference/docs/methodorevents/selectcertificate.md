@@ -1,7 +1,5 @@
 # <span>SelectCertificate</span> <span>Event 848</span>
 
-**Description**
-
 This event is triggered when [HTMLRenderer](../objects/htmlrenderer.md) requests a resource from a server that requires a certificate.
 
 The event message reported as the result of `⎕DQ`, or supplied as the right argument to your callback function, is a 7-element vector as follows:
@@ -43,6 +41,6 @@ The application should respond to this event by selecting a certficate from the 
      ∇
 ```
 
-**Application**
+## Application
 
 Objects: [HTMLRenderer](../objects/htmlrenderer.md)

@@ -1,8 +1,6 @@
 # <span>MenuItem</span> <span>Object</span>
 
-**Purpose:** This object allows the user to initiate an action or to select an option from a menu.
-
-**Description**
+This object allows the user to initiate an action or to select an option from a menu.
 
 The [Caption](../properties/caption.md) property determines the text string that is displayed in its parent as the menu option. The size of a MenuItem is determined by the size of its [Caption](../properties/caption.md), or by the size of the largest object ([Menu](menu.md), MenuItem or [Separator](separator.md)) with the same parent. The position of the MenuItem is normally determined by the order in which it is created in relation to other objects with the same parent. However, you can use the [Posn](../properties/posn.md) property to **insert** a new MenuItem into an existing structure. For example, having defined three MenuItem objects as children of a [Menu](menu.md), you can insert a fourth one between the first and the second by specifying its [Posn](../properties/posn.md) to be 2. Note that the value of [Posn](../properties/posn.md) for the MenuItems that were previously second and third will then be reset to 3 and 4 respectively.
 
@@ -22,7 +20,7 @@ Alternatively, you may display an image alongside the [Caption](../properties/ca
 
 A MenuItem generates a [Select](../methodorevents/select.md) event (if enabled) when the user chooses it.
 
-**Application**
+## Application
 
 Parents: [Menu](../objects/menu.md), [MenuBar](../objects/menubar.md)
 

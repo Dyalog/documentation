@@ -1,7 +1,5 @@
 # <span>RowSetVisibleDepth</span> <span>Method 173</span>
 
-**Description**
-
 This method is used to set the maximum visible depth of data in rows of a [Grid](../objects/grid.md).
 
 The argument to RowSetVisibleDepth is a numeric scalar as follows
@@ -33,6 +31,6 @@ Note:[ Expanding](./expanding.md) and [Retracting](./retracting.md) events are n
 
 ![](../img/gridtree13.gif)
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

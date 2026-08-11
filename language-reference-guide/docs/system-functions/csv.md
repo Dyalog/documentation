@@ -286,7 +286,7 @@ The Overwrite variant option (Boolean) from Version 16.0 remains supported but i
 - Quoting and Escaping is used as conservatively as possible.
 - If both QuoteChar and EscapeChar are set, quoting is favoured.
 
-If `Y` specifies that the CSV data is written to a file then `R` is the number of bytes (not characters) written, and is shy.
+If `Y` specifies that the CSV data is written to a file then `R` is the number of bytes (not characters) written, and is [shy](../../../programming-reference-guide/introduction/results#shy-results).
 
 Otherwise, `R` is the CSV data in the format specified in Y, and is not shy.
 

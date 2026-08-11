@@ -1,7 +1,5 @@
 # <span>GetComment</span> <span>Method 222</span>
 
-**Description**
-
 This method is used to retrieve the comment associated with a cell in a [Grid](../objects/grid.md).
 
 The argument to GetComment is a 2-element array as follows:
@@ -20,6 +18,6 @@ Note that to retrieve a comment associated with a row or column *title*, the app
 
 If there is no comment associated with the specified cell, the result is a scalar 1.
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

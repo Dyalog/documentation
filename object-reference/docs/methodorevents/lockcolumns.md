@@ -1,7 +1,5 @@
 # <span>LockColumns</span> <span>Method 227</span>
 
-**Description**
-
 This method is used to lock one or more columns of a [Grid](../objects/grid.md) object. However, LockColumns is not supported in combination with hierarchical
 column titles as specified by the [ColTitleDepth](../properties/coltitledepth.md) property.
 
@@ -73,6 +71,6 @@ given column is to be locked, the value of the physical column `P` at which it w
 Furthermore, the position of a locked column given by the result of the
 LockColumns method changes (with the [Index](../properties/index-property.md) property) as the [Grid](../objects/grid.md) is scrolled.
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

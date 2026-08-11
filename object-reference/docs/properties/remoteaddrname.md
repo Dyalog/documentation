@@ -1,7 +1,5 @@
 # <span>RemoteAddrName</span> <span>Property</span>
 
-**Description**
-
 The RemoteAddrName property is a character vector that specifies the host name of the remote computer to which you wish to make a connection.
 
 RemoteAddrName may only be specified by a client [TCPSocket](../objects/tcpsocket.md) that is intended to make a connection with a server. Furthermore, it must be specified in the `⎕WC` statement that creates the [TCPSocket](../objects/tcpsocket.md) object and it may not subsequently be changed using `⎕WS`.
@@ -12,6 +10,6 @@ Note that you may use *either* [RemoteAddr ](remoteaddr.md)*or* RemoteAddrName t
 
 For a server [TCPSocket](../objects/tcpsocket.md), you may not specify RemoteAddrName and `⎕WG` returns an empty character vector.
 
-**Application**
+## Application
 
 Objects: [TCPSocket](../objects/tcpsocket.md)

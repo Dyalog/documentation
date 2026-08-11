@@ -1,7 +1,5 @@
 # <span>Step</span> <span>Property</span>
 
-**Description**
-
 This property determines the size of changes reported when the user clicks a scroll arrow (small change) or clicks on the body of the scrollbar (large change). The object's [Thumb](thumb.md) property increases or decreases by this amount.
 
 For a [Scroll](../objects/scroll.md) object, Step is a 2-element numeric vector whose first element specifies the value of the "small change" and whose second element specifies the value of the "large change".
@@ -18,6 +16,6 @@ For a [TrackBar](../objects/trackbar.md) object, Step is a 2-element integer vec
 
 For a [ProgressBar](../objects/progressbar.md) object, Step specifies the amount by which the [Thumb](thumb.md) is advanced each time the [ProgressStep](../methodorevents/progressstep.md) method is called.
 
-**Application**
+## Application
 
 Objects: [Form](../objects/form.md), [Locator](../objects/locator.md), [ProgressBar](../objects/progressbar.md), [Scroll](../objects/scroll.md), [Spinner](../objects/spinner.md), [SubForm](../objects/subform.md), [TrackBar](../objects/trackbar.md), [UpDown](../objects/updown.md)

@@ -1,7 +1,5 @@
 # <span>RunMode</span> <span>Property</span>
 
-**Description**
-
 This property specifies the way in which an [OLEServer](../objects/oleserver.md) object serves multiple clients.
 
 RunMode is a character vector and may be `'MultiUse'` (the default),  `'SingleUse'` or `'RunningObject'`.
@@ -14,6 +12,6 @@ If RunMode is `'SingleUse'`, OLE will load a separate copy of Dyalog and a separ
 
 If RunMode is `'RunningObject'`, OLE will load a single copy of Dyalog and the appropriate workspace into memory. All OLE client processes will communicate with the same Dyalog session and indeed with the same namespace. The namespace is not *instanced* and all objects, including exported variables, are shared by all clients.
 
-**Application**
+## Application
 
 Objects: [OLEServer](../objects/oleserver.md)

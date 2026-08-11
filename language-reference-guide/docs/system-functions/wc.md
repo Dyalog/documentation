@@ -15,7 +15,7 @@ If `Y` is a nested vector each element specifies a property.  The `Type` proper
 
 If `Y` is a ref or the result of `⎕OR`, the new object is a complete copy of the other, including any child objects, namespaces, functions and variables that it contained at that time.
 
-The shy result `R` is the full name (starting `#.` or   `⎕SE`.) of the namespace `X`.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` is the full name (starting `#.` or   `⎕SE`.) of the namespace `X`.
 
 An object's name is specified by giving its full pathname in the object hierarchy.  At the top of the hierarchy is the `Root` object whose name is "`.`".  Below "`.`" there may be one or more "top-level" objects.  The names of these objects follow the standard rules for other APL objects as described in [Legal Names](../../../programming-reference-guide/introduction/names)
 

@@ -1,7 +1,5 @@
 # <span>ItemGroupMetrics</span> <span>Property</span>
 
-**Description**
-
 This property is used to specify colours and spacing elements for a [ListView](../objects/listview.md) that is displaying its Items in groupings (see [ItemGroups](itemgroups.md)).
 
 **Note that this feature only applies if Native Look and Feel 
@@ -22,6 +20,6 @@ The following expression, coupled with the code shown in the SetGroups example, 
 
 ![](../img/lvsg2.gif)
 
-**Application**
+## Application
 
 Objects: [ListView](../objects/listview.md)

@@ -1,9 +1,5 @@
 # <span>Animation</span> <span>Object</span>
 
-**Purpose:** The Animation object displays simple animations from basic .AVI files or resources.
-
-**Description**
-
 The Animation object displays simple animations from basic .AVI files or resources.
 
 The Animation object can only play AVI files or resources that have no sound and can only display uncompressed AVI files or .AVI files that have been compressed using Run-Length Encoding (RLE).
@@ -22,7 +18,7 @@ The [AnimClose](../methodorevents/animclose.md) method closes the current AVI fi
 
 The [AnimStarted](../methodorevents/animstarted.md) and [AnimStopped](../methodorevents/animstopped.md) events are reported when the animation starts and stops respectively.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md)
 

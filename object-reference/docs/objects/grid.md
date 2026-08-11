@@ -1,8 +1,6 @@
 # <span>Grid</span> <span>Object</span>
 
-**Purpose:** Spreadsheet object for displaying and editing data.
-
-**Description**
+Spreadsheet object for displaying and editing data.
 
 The [Values](../properties/values.md) property is a matrix whose
 elements are displayed in the cells of the Grid. An element (and therefore a
@@ -24,7 +22,7 @@ height of the column headers. If this is set to 0, the column titles will not be
 displayed. Similarly, the [TitleWidth](../properties/titlewidth.md) property specifies the width of the row titles and again a value of zero
 disables the row titles.
 
-The [CornerTitleBCol](../properties/align.md) property specifies the background colour of the rectangle in the top-left corner of the Grid.
+The [CornerTitleBCol](../properties/cornertitlebcol.md) property specifies the background colour of the rectangle in the top-left corner of the Grid.
 
 The [FontObj](../properties/fontobj.md) property may be used to
 specify the font to be used for the Grid as a whole, including the titles. The [CellFonts](../properties/cellfonts.md) property may be used to specify fonts for individual cells.
@@ -232,7 +230,7 @@ The Grid generates [Expanding](../methodorevents/expanding.md) and [Retracting](
 The [RowSetVisibleDepth](../methodorevents/rowsetvisibledepth.md) method
 can be used to set the visible depth of the tree.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md)
 

@@ -1,7 +1,5 @@
 # <span>DyalogCustomMessage1</span> <span>Event 95</span>
 
-**Description**
-
 This event allows external applications and dynamic link libraries to insert
 events into the Dyalog APL/W message queue.
 
@@ -41,6 +39,6 @@ vector as follows :
 |`[3]`|wparam|integer                       |
 |`[4]`|lparam|integer                       |
 
-**Application**
+## Application
 
 Objects: [Form](../objects/form.md)

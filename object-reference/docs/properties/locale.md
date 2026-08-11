@@ -1,7 +1,5 @@
 # <span>Locale</span> <span>Property</span>
 
-**Description**
-
 The Locale property specifies the language in which the OLE server, attached to an OLEClient, exposes its methods (functions) and properties (variables).
 
 When you create an OLEClient object, Dyalog APL/W requests the default Type Library associated with the OLE server that you specify. Many OLE servers, such as Excel.Application, provide different names for the methods and properties they expose for different languages. Without Locale, it would be difficult to write an OLE client application that could run in different countries, as the names of the functions and variables may be unpredictable.
@@ -28,6 +26,6 @@ Note that Dyalog cannot guarantee that you will actually be given the Locale you
 |Spanish   |10    |
 |Swedish   |29    |
 
-**Application**
+## Application
 
 Objects: [OLEClient](../objects/oleclient.md)

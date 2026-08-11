@@ -24,7 +24,7 @@ Locking enables controlled update of native files by co-operating users. A proce
 1. Type: 0: Unlock, 1:Read lock, 2:Write lock.
 2. Timeout: Number of seconds to wait for lock before generating a `TIMEOUT` error. Defaults to indefinite wait.
 
-The shy result `R` is `Y`. To unlock the file, this value should subsequently be supplied in the right argument to `0 ⎕NLOCK`.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` is `Y`. To unlock the file, this value should subsequently be supplied in the right argument to `0 ⎕NLOCK`.
 
 <h2 class="example">Examples</h2>
 ```apl

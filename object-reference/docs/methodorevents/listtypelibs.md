@@ -1,7 +1,5 @@
 # <span>ListTypeLibs</span> <span>Method 520</span>
 
-**Description**
-
 The ListTypeLibs method reports the names and CLSIDs of all the loaded Type Libraries.
 
 The ListTypeLibs method is niladic.
@@ -25,6 +23,6 @@ Microsoft Visual Basic for Applications Extensibility 5.3
 Microsoft Office 9.0 Object Library                      
 ```
 
-**Application**
+## Application
 
 Objects: [Root](../objects/root.md)

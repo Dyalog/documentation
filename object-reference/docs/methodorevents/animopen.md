@@ -1,7 +1,5 @@
 # <span>AnimOpen</span> <span>Method 290</span>
 
-**Description**
-
 The AnimOpen method opens an AVI file in an Animation object.
 
 The argument to AnimOpen is a 1 or 2-element array as follows:
@@ -20,6 +18,6 @@ Note that the Animation object can only play AVI files or resources that have no
 
 *AVI file includes sound data or is in a format not supported by the Animation object*
 
-**Application**
+## Application
 
 Objects: [Animation](../objects/animation.md)

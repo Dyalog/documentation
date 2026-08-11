@@ -1,7 +1,5 @@
 # <span>DockShowCaption</span> <span>Property</span>
 
-**Description**
-
 The DockShowCaption property specifies whether or not a Form displays a title bar when it is docked as a SubForm.
 
 DockShowCaption is a single number with the value 0 or 1 (the default).
@@ -16,6 +14,6 @@ The next picture shows the same docked Form with DockShowCaption set to 0.
 
 ![](../img/dockeg21.gif)
 
-**Application**
+## Application
 
 Objects: [Form](../objects/form.md), [SubForm](../objects/subform.md)

@@ -1,8 +1,6 @@
 # <span>ColorButton</span> <span>Object</span>
 
-**Purpose:** The ColorButton object allows the user to select a colour.
-
-**Description**
+The ColorButton object allows the user to select a colour.
 
 The ColorButton object displays a coloured box, with an optional drop down button. When the user clicks the ColorButton with the left mouse button, a colour selection drop-down appears below it, allowing the user to select a new colour.
 
@@ -24,11 +22,9 @@ When the user clicks a ColorButton with the left mouse button, the object genera
 
 When the user selects a new colour, the ColorButton generates a [ColorChange](../methodorevents/colorchange.md) event.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md)
-
-Children: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md)
 
 Properties: [Accelerator](../properties/accelerator.md), [Active](../properties/active.md), [Attach](../properties/attach.md), [AutoConf](../properties/autoconf.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [CurrentColor](../properties/currentcolor.md), [CursorObj](../properties/cursorobj.md), [CustomColors](../properties/customcolors.md), [Data](../properties/data.md), [DefaultColors](../properties/defaultcolors.md), [Dragable](../properties/dragable.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [Handle](../properties/handle.md), [Hint](../properties/hint.md), [HintObj](../properties/hintobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [OtherButton](../properties/otherbutton.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Redraw](../properties/redraw.md), [ShowDropDown](../properties/showdropdown.md), [Size](../properties/size.md), [Sizeable](../properties/sizeable.md), [TabIndex](../properties/tabindex.md), [Tip](../properties/tip.md), [TipObj](../properties/tipobj.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
 

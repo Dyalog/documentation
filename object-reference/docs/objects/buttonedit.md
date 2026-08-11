@@ -1,8 +1,6 @@
 # <span>ButtonEdit</span> <span>Object</span>
 
-**Purpose:** Allows user to enter or edit data.
-
-**Description**
+Allows user to enter or edit data.
 
 The ButtonEdit object combines a single-line input field with a customisable button. It provides the same user and programmer interfaces as an [Edit](edit.md) object (Style `'Single'`).
 
@@ -42,7 +40,7 @@ The following picture illustrates two ButtonEdit objects
 !!! note
     For full functionality (in particular, for the [Cue](../properties/cue.md) property to apply), the ButtonEdit object requires that [Native Look and Feel](../miscellaneous/windows-xp-look-and-feel.md) is enabled.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md)
 

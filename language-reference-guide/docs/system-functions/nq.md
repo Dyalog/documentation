@@ -19,7 +19,7 @@ Note that it is not possible for one thread to use `1 ⎕NQ` to send an event to
 
 If `X` is 2 and the name supplied is the name of an event, `⎕NQ` performs the default processing for the event immediately, but does **not** invoke a callback function if there is one attached.
 
-If `X` is 2 and the name supplied is the name of a (Dyalog APL) method, `⎕NQ` invokes the method.  Its (shy) result is the result produced by the method.
+If `X` is 2 and the name supplied is the name of a (Dyalog APL) method, `⎕NQ` invokes the method.  Its ([shy](../../../programming-reference-guide/introduction/results#shy-results)) result is the result produced by the method.
 
 If `X` is 3, `⎕NQ` invokes a method in an OLE Control.  The (shy) result of `⎕NQ` is the result produced by the method.
 

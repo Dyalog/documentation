@@ -1,8 +1,6 @@
 # <span>TreeView</span> <span>Object</span>
 
-**Purpose:** The TreeView object displays a hierarchical list of items.
-
-**Description**
+The TreeView object displays a hierarchical list of items.
 
 A TreeView object displays a hierarchical list of items, such as the headings in a document, the entries in an index, or the files and directories on a disk. Each item consists of a label and an optional bitmapped image, and each item can have a list of sub-items associated with it. By clicking an item, the user can expand and collapse the associated list of sub-items.
 
@@ -37,7 +35,7 @@ The [SelItems](../properties/selitems.md) property is a Boolean vector that indi
 !!! warning
     Due to the limitations of the Win32 TreeView object, it is necessary to query the state of each item in a TreeView in order to obtain the value of the [SelItems](../properties/selitems.md) property, making it a comparatively slow operation if there are a lot of [Items](../properties/items.md).
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 

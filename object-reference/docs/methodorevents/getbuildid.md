@@ -1,7 +1,5 @@
 # <span>GetBuildID</span> <span>Method 992</span>
 
-**Description**
-
 This method is used to obtain the Build ID of a Dyalog executable or the checksum of a file.
 
 The argument to GetBuildID is `⍬` or a
@@ -10,7 +8,7 @@ single item as follows:
 |-----|---------|----------------|
 |`[1]`|File name|character vector|
 
-The (shy) result is an 8-element character vector of hexadecimal digits that
+The ([shy](../../../programming-reference-guide/introduction/results#shy-results)) result is an 8-element character vector of hexadecimal digits that
 represents the Build ID.
 
 If the argument is `⍬`, the build id is
@@ -32,6 +30,6 @@ cbf0d376
 
 Note that if the file does not exist, the result is 00000000.
 
-**Application**
+## Application
 
 Objects: [Root](../objects/root.md)

@@ -1,7 +1,5 @@
 # <span>CellSelect</span> <span>Property</span>
 
-**Description**
-
 The [Grid](../objects/grid.md) supports the selection of a contiguous block of cells by the user, using the mouse and/or the keyboard. The ability to select a range of cells is determined by the CellSelect property.
 
 CellSelect may be a character vector or a vector of character vectors comprising the following:
@@ -46,6 +44,6 @@ These operations generate a [GridDropSel](../methodorevents/griddropsel.md) even
 
 You may also move or copy a block of cells (which need not necessarily be selected) under program control by calling [GridDropSel](../methodorevents/griddropsel.md) event as a method.
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

@@ -1,6 +1,4 @@
-# <span>ClickComment</span> <span>Method 225</span>
-
-**Description**
+# <span>ClickComment</span> <span>Event 225</span>
 
 If enabled, a ClickComment event is generated when the user clicks the mouse in a comment window of a [Grid](../objects/grid.md).
 
@@ -16,6 +14,6 @@ The event message reports the co-ordinates of the cell. The default action is to
 
 Note that if the comment window relates to a row or column *title*, the value reported in element [3] or [4] of the event message is `¯1`.
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)
