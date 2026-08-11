@@ -1,7 +1,5 @@
 # Announcements
 
-<p style="color:red;">This document is currently being developed and will not be finalised until nearer the release of Dyalog v21.0.</p>
-
 Notice of new and planned additions, changes, removals, and deprecations in Dyalog v21.0 compared with Dyalog v20.0.
 
 ## Changes
@@ -10,7 +8,7 @@ Notice of new and planned additions, changes, removals, and deprecations in Dyal
 
 The APL thread scheduler is being enhanced over several releases. It is likely that the scheduling order will change in Dyalog v22.0; this will not affect most applications.
 
-The APL thread scheduler checks that its own record of each thread's scheduling status is consistent – these checks are always enabled. A temporary I-beam, `4061⌶0`, returns the number of inconsistent thread statuses (`R[1]`) and missed thread wakeups (`R[2]`) that have been detected. A non-zero count means that the interpreter detected an inconsistency in its own scheduling, not that the application is at fault. In this situation, logging can be enabled and the application re-run to capture the details; relevant thread-switching warnings will be written to the log file specified by [`109⌶0`](log-file-for-deprecations.md) (see [Deprecated Functionality](https://docs.dyalog.com/21.0/release-notes/announcements/deprecated-functionality/#identifying-deprecated-functionality-in-executed-code) for more information). If logging is not enabled, then the first time that a discrepancy is detected, a message is written to the Status window.
+The APL thread scheduler checks that its own record of each thread's scheduling status is consistent – these checks are always enabled. A temporary I-beam, `4061⌶0`, returns the number of inconsistent thread statuses (`R[1]`) and missed thread wakeups (`R[2]`) that have been detected. A non-zero count means that the interpreter detected an inconsistency in its own scheduling, not that the application is at fault. In this situation, logging can be enabled and the application re-run to capture the details; relevant thread-switching warnings will be written to the log file specified by [`109⌶0`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/log-file-for-deprecations/) (see [Deprecated Functionality](https://docs.dyalog.com/21.0/release-notes/announcements/deprecated-functionality/#identifying-deprecated-functionality-in-executed-code) for more information). If logging is not enabled, then the first time that a discrepancy is detected, a message is written to the Status window.
 
 ## Removals (Previously Announced)
 
@@ -52,7 +50,7 @@ External variables are no longer supported by default; support for external vari
 
 ### J0C0 Component Files
 
-Component files that have both journalling and checksum properties set to `0` can be tied and read, but cannot be created. The only amendments that are allowed to these files is to change the journalling and checksum properties using [⎕FPROPS](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/fprops/).
+Component files that have both journalling and checksum properties set to `0` can be tied and read, but cannot be created. The only amendments that are allowed to these files is to change the journalling and checksum properties using [`⎕FPROPS`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/fprops/).
 
 The ability to read component files that have both journalling and checksum properties set to `0` will be removed in a future release (exact release to be decided, expected to be implemented by the year 2040).
 
@@ -66,7 +64,9 @@ Dyalog v20.0 was announced as the last major version that would support workspac
 
 ### Documentation
 
-T.B.A.
+The process of moving documents from the [full documentation set](https://www.dyalog.com/documentation_210.htm) into an [open source GitHub project](https://github.com/Dyalog/documentation) is progressing.
+
+Documents that are included in this project are no longer available as PDF files.
 
 ## Next Dyalog Version
 

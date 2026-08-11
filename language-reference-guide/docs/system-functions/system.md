@@ -29,13 +29,12 @@ Getting the currently running APL interpreter's version number:
 21
 ```
 
-The result `R` is a namespace in the root of the namespace where `⎕SYSTEM` was called (`#` or `⎕SE`) and contains only namespace members. Each sub-namespace contains only variable members.
+The result `R` is a namespace in the root (`#` or `⎕SE`) of the current namespace. `R` contains only namespace members, each of which only contains variable members.
 
-!!! Info "Information"
-    More members might be added in a future release of Dyalog, but `R` will remain serialisable using [`1∘⎕JSON`](json.md).
+More members might be added in a future release of Dyalog, but `R` will remain serialisable using [`1∘⎕JSON`](json.md).
 
 !!! Warning "Warning"
-    Do attempt to add or modify members as changes will not be persisted. Instead, clone the namespace using `⎕NS ⎕SYSTEM` and modify the result, but note that this locks down dynamic values like `⎕SYSTEM.Directories.Current` and `⎕SYSTEM.OS.UTCOffset`.
+    Do not attempt to add or modify members (changes will not be persisted); only modify clones of the namespace (`⎕NS ⎕SYSTEM`). Note that this locks down dynamic values like `⎕SYSTEM.Directories.Current` and `⎕SYSTEM.OS.UTCOffset`.
 
 ## Members of the Result
 
@@ -57,17 +56,15 @@ This namespace provides pertinent locations in the file system.
 #### Directories.Current
 The current working directory.
 
-!!! Hint "Hints and Recommendations"
-    This can be changed using the `]CD` user command, but doing so after [tying component files](ftie.md) or [native files](ntie.md) or [associating external functions](na.md) can lead to data loss.
-
 #### Directories.Initial
 The directory from which Dyalog was started.
 
 #### Directories.Temp
 The operating system's recommended location for temporary files.
 
-!!! Info "Information"
-    This location is for an individual user and can be cleaned up without warning, so use it only as a place to put files that will immediately be used and will not be needed later. It is good practice to [delete](ndelete.md) such files when no longer needed.
+This location is for an individual user and can be cleaned up without warning, so use it only as a place to put files that will immediately be used and will not be needed later.
+
+It is good practice to [delete](ndelete.md) such files when no longer needed.
 
 ### Executable
 This namespace provides information about the specific interpreter instance in which `⎕SYSTEM` was called.
@@ -105,22 +102,20 @@ The interpreter's full version number as three integers indicating the major rel
 #### Executable.VersionMoniker
 A six-character shorthand for the `Version`'s first two elements together with `Unicode` and `Bits`, for example `210U64`.
 
-!!! Hint "Hints and Recommendations"
-    This is particularly useful to find out where the [Session Initialisation](../../windows-ui-guide/the-session-object/session-initialisation) looks for a **StartupSession** directory on Unix, namely in `'dyalog.',Executable.VersionMoniker,'.files'` inside the user's home directory (<code class="language-nonAPL">$HOME</code>).
+This is particularly useful to find out where the [Session Initialisation](../../windows-ui-guide/the-session-object/session-initialisation) looks for a **StartupSession** directory on Unix, namely in `'dyalog.',Executable.VersionMoniker,'.files'` inside the user's home directory (<code class="language-nonAPL">$HOME</code>).
 
 #### Executable.VersionNumber
 The version number as a single number, for example, `21.3`.
 
-!!! Hint "Hints and Recommendations"
-    This is useful for comparing version numbers to deal with varying feature sets. For example:
-    
-    ```apl
-    :If 22≤Executable.VersionNumber
-        source←⎕APLAN array
-    :Else
-        source←⎕SE.Dyalog.Array.Serialise array
-    :EndIf
-    ```
+This is useful for comparing version numbers to deal with varying feature sets. For example:
+
+```apl
+:If 22≤Executable.VersionNumber
+    source←⎕APLAN array
+:Else
+    source←⎕SE.Dyalog.Array.Serialise array
+:EndIf
+```
 
 ### Features
 This namespace provides information about optional or versioned functionality inside the interpreter.
@@ -131,28 +126,22 @@ Boolean indicating whether (`1`) or not (`0`) [Dynamic Data Exchange](../../inte
 #### Features.DotNet
 Full version number of the available .NET (possibly .NET Framework) as three integers indicating the major release, minor release, and build number, for example, `4 8 9325`. If no .NET is available, this is `0 0 0`.
 
-!!! Hint "Hints and Recommendations"
-    Related indications whether (`1`) or not (`0`):
-    
-    - .NET/.NET Framework is available: `0≠⊃⎕SYSTEM.Features.DotNet`
-    - .NET Framework is in use: `4=⊃⎕SYSTEM.Features.DotNet`
-    - .NET (non-Framework) is in use: `5≤⊃⎕SYSTEM.Features.DotNet`
+Related indications whether (`1`) or not (`0`):
 
+- .NET or .NET Framework is available: `0≠⊃⎕SYSTEM.Features.DotNet`
+- .NET Framework is in use: `4=⊃⎕SYSTEM.Features.DotNet`
+- .NET (non-Framework) is in use: `5≤⊃⎕SYSTEM.Features.DotNet`
 
 #### Features.Interactive
 Boolean indicating whether (`1`) or not (`0`) an interactive session is available.
 
-!!! Info "Information"
-    Examples of non-interactive interpreters include the runtime and shell script interpreters.
+Examples of non-interactive interpreters include the runtime and shell script interpreters.
 
 #### Features.OLE
 Boolean indicating whether (`1`) or not (`0`) [Object Linking and Embedding](../../interface-guide/ole-client/introduction) is available.
 
 #### Features.PCRE
 Full version of the built-in [Perl Compatible Regular Expressions](../pcre-specifications) engine, for example `10 47`.
-
-!!! Hint "Hints and Recommendations"
-    Whether (`1`) or not (`0`) PCRE1 is in use is given by `8≥⊃⎕SYSTEM.Features.PCRE`.
 
 ### Host
 This namespace provides information about network identity.
@@ -211,10 +200,7 @@ Either `'Windows'` or `'Unix'`.
 The character vector location of the [C standard library](https://en.wikipedia.org/wiki/C_standard_library) on Unix and `''` on Microsoft Windows.
 
 #### OS.Newline
-Numeric vector of Unicode code points for the operating system's newline sequence – either `(10 ⋄)` or `13 10`.
-
-!!! Hint "Hints and Recommendations"
-    This can be converted to a character vector with `⎕UCS ⎕SYSTEM.OS.Newline`.
+Numeric vector of Unicode code points for the operating system's newline sequence – either `(10 ⋄)` or `13 10`. It can be converted to a character vector with `⎕UCS ⎕SYSTEM.OS.Newline`.
 
 #### OS.NullDevice
 The filename associated with the [null device](https://en.wikipedia.org/wiki/Null_device).
@@ -228,8 +214,7 @@ The preferred file extension for [shared libraries](https://en.wikipedia.org/wik
 #### OS.UTCOffset
 The number of hours by which the current local time zone (with [daylight saving time](https://en.wikipedia.org/wiki/Daylight_saving_time) taken into account) is offset from [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
 
-!!! Hint "Hints and Recommendations"
-    For example, if `⎕OS.UTCOffset` is `¯3`, then when it is 10:00 UTC, it is 07:00 local time (`10+¯3`).
+For example, if the local time is 07:00 while UTC is 10:00, then `⎕OS.UTCOffset` is `¯3`.
 
 #### OS.Version
 A three-element integer vector:
@@ -239,7 +224,9 @@ A three-element integer vector:
 - AIX: version and release number, followed by a `0`
 
 !!! Warning "Warning"
-    Windows 11 identifies itself as "Windows 10". Whether (`1`) or not (`0`) Windows 10 is in use is given by `1 0 2≡10 11 21999⍸⎕SYSTEM.OS.Version`.
+    Microsoft has made both Windows 10 and Windows 11 identify themselves as "Windows 10".
+    
+    The following expression will determine whether a reported version 10 is truly 10: `((10=⊃)∧22000>⊢/)⎕SYSTEM.OS.Version`.
 
 #### OS.VolumeSeparator
 The character used to separate the [volume](https://en.wikipedia.org/wiki/Volume_(computing)) from the rest of a file path – one of `'/'` or `':'`.

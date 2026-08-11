@@ -1,8 +1,8 @@
 # <span>LicenseKey</span> <span>Property</span>
 
-The LicenseKey property is a character string that contains the license key for an ActiveX control.
+The LicenseKey property is a character string that contains the licence key for an ActiveX control.
 
-If an ActiveX control requires a license key, it must be specified by an application when it creates an instance of the control. Typically, the license key is *required* only by the run-time version of an ActiveX control, and is *made available* to an application by the development version of the control.
+If an ActiveX control requires a licence key, it must be specified by an application when it creates an instance of the control. Typically, the licence key is *required* only by the run-time version of an ActiveX control, and is *made available* to an application by the development version of the control.
 
 ## Application
 

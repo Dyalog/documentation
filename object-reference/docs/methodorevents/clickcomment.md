@@ -1,4 +1,4 @@
-# <span>ClickComment</span> <span>Method 225</span>
+# <span>ClickComment</span> <span>Event 225</span>
 
 If enabled, a ClickComment event is generated when the user clicks the mouse in a comment window of a [Grid](../objects/grid.md).
 

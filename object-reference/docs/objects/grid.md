@@ -22,7 +22,7 @@ height of the column headers. If this is set to 0, the column titles will not be
 displayed. Similarly, the [TitleWidth](../properties/titlewidth.md) property specifies the width of the row titles and again a value of zero
 disables the row titles.
 
-The [CornerTitleBCol](../properties/align.md) property specifies the background colour of the rectangle in the top-left corner of the Grid.
+The [CornerTitleBCol](../properties/cornertitlebcol.md) property specifies the background colour of the rectangle in the top-left corner of the Grid.
 
 The [FontObj](../properties/fontobj.md) property may be used to
 specify the font to be used for the Grid as a whole, including the titles. The [CellFonts](../properties/cellfonts.md) property may be used to specify fonts for individual cells.

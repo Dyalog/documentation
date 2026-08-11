@@ -15,7 +15,7 @@ An attempt to update a component file that would cause it to exceed its maximum 
 
 During compaction, the file is restructured by reordering the components and by amalgamating the free areas at the end of the file. The file is then truncated and excess disk space is released back to the operating system. For a large file with many components, this process may take a significant time.
 
-The shy result of `⎕FRESIZE` is the tie number of the file.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result of `⎕FRESIZE` is the tie number of the file.
 
 <h2 class="example">Example</h2>
 ```apl

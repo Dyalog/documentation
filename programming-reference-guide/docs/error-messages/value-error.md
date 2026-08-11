@@ -5,7 +5,7 @@
 This report is given when either:
 
 - There is no active definition for a name encountered in an expression.
-- A function does not return a result in a context where a result is required.
+- A function does not return a result (see [Results](../introduction/results.md#no-result)) in a context where a result is required.
 
 <h2 class="example">Examples</h2>
 ```apl

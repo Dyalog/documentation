@@ -1,0 +1,94 @@
+# Results
+
+A function can return a value, known as its *result*. Not every function returns one, and a result that is returned is not always displayed. Every function application produces one of three outcomes:
+
+- an *[explicit result](#explicit-results)*: a value that is returned and, at the Session prompt, displayed unless it is assigned or otherwise used.
+- a *[shy result](#shy-results)*: a value that is returned but not displayed, although it can still be assigned or used.
+- *[no result](#no-result)*: no value is returned, so using the application where a value is required signals a [`VALUE ERROR`](../error-messages/value-error.md).
+
+## Explicit Results
+
+An explicit result that is not consumed by the rest of the expression is displayed in the same form as any other value, following the rules for the [display of arrays](arrays/display-of-arrays.md).
+
+## Shy Results
+
+A *shy result* is returned but not automatically displayed, even when the function application forms the whole of an expression at the Session prompt. The value is still returned: it can be assigned to a name, passed as an argument, or otherwise used, exactly like an explicit result. Assigning or using a shy result makes it no longer shy.
+
+Assignment is an operation that returns a result: the *pass-through* value, that is, the value assigned. This result is shy, so a plain assignment displays nothing, whereas using the assignment within a larger expression makes the value available:
+```apl
+      a←42
+      ⎕←a←42
+42
+      (a←42)+1
+43
+```
+
+Shy results suit functions whose main purpose is a side effect, such as updating a file or fixing a function, but which still have a useful value to offer a caller that wants it. The system function [`⎕FX`](../../../language-reference-guide/system-functions/fx) is an example: it fixes a function and returns that function's name as a shy result.
+```apl
+      ⎕FX 'r←f x' 'r←x+1'
+      ⎕←⎕FX 'r←g x' 'r←x-1'
+g
+```
+
+## No Result
+
+A function application produces *no result* when the function returns no value. Using such an application where a value is required, for example as an argument or on the right of an assignment, signals a `VALUE ERROR`.
+```apl
+      ∇ greet name
+[1]     'Hello ',name
+      ∇
+      greet 'Ada'
+Hello Ada
+      x←greet 'Ada'
+Hello Ada
+VALUE ERROR: No result was provided when the context expected one
+      x←greet 'Ada'
+        ∧
+```
+
+## Dfns and Dops
+
+The result of a [dfn](../defined-functions-and-operators/dfns-and-dops/dynamic-functions-and-operators.md) is the value of the first [statement](../defined-functions-and-operators/dfns-and-dops/statements.md) it evaluates that is not an assignment; that result is explicit. If every statement it evaluates is an assignment, the value of the last one is returned as a shy result. A dfn that evaluates no value-yielding statement, such as the empty dfn `{}`, returns no result.
+
+The idiomatic way to give a dfn a shy result is to assign the result on the final line, [guarded](../defined-functions-and-operators/dfns-and-dops/guards.md) so that it is the last statement evaluated. This is the [shy-result idiom](../defined-functions-and-operators/dfns-and-dops/shy-result.md):
+```apl
+      log←{
+          tie←⍺ ⎕FSTIE 0
+          cno←⍵ ⎕FAPPEND tie
+          tie←⎕FUNTIE tie
+          1:r←cno            ⍝ component number, shy result
+      }
+```
+Whether a dfn returns a value, and whether that value is shy, can thus depend on the path taken through it.
+
+## Traditional Functions and Operators
+
+A traditional function or operator declares its result in the header. [Model Syntax](../defined-functions-and-operators/traditional-functions-and-operators/model-syntax.md) gives the three forms and the effect of each form on the result:
+
+- a header with no result name never returns a value.
+- an explicit result name, `R←`, returns the value of `R` when the function exits.
+- a braced result name, `{R}←`, returns the value of `R` as a shy result.
+
+If the header names a result but the function exits without assigning it, the application returns no result. A function can, therefore, have an optional result, returning a value on some paths and none on others.
+
+### Namelists
+
+If the result is declared as a [namelist](../defined-functions-and-operators/traditional-functions-and-operators/namelists.md), that is, a parenthesised, blank-delimited list of names, then the values of those names are stranded together into the result when the function exits.
+
+## System Functions
+
+Many system functions return shy results so that they can be used without cluttering the Session while still providing a value when one is wanted. Some are shy only in certain cases. For example, [`⎕FX`](../../../language-reference-guide/system-functions/fx) returns a shy result on success but an explicit result (the index of the offending line) on failure, and [`⎕NS`](../../../language-reference-guide/system-functions/ns) returns a shy result only when called dyadically.
+
+## Primitive Operators
+
+A primitive operator applies to one or two operand functions and produces a derived function. The result of that derived function takes the same form (explicit, shy, or none) as the operand function that produces the final value.
+```apl
+      {⍵+1}¨1 2 3           ⍝ explicit operand, explicit derived result
+2 3 4
+      {1:r←⍵+1}¨1 2 3       ⍝ shy operand, shy derived result (not displayed)
+```
+With _each_ ([`¨`](../../../language-reference-guide/primitive-operators/each/each-with-monadic-operand)), the derived result matches its operand. With a composition such as _beside_ ([`∘`](../../../language-reference-guide/primitive-operators/beside)), the outermost function determines the form of the result, for example, `f∘g` returns whatever the same form of result as `f` returns.
+
+Where an operator assembles several partial results, one for each item, the forms combine by precedence: if any partial result is missing, there is no overall result; otherwise, if any is shy, the whole result is shy; otherwise, the result is explicit.
+
+A few primitive operators return a shy result irrespective of their operand. For example, the _spawn_ ([`&`](../../../language-reference-guide/primitive-operators/spawn)) operator returns the number of the newly created thread as a shy result.
