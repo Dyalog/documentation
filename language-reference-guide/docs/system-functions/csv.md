@@ -100,7 +100,7 @@ The `Separator`, `QuoteChar`, and `EscapeChar` characters, when defined, must be
 
 Other options defined for export are also accepted but ignored.
 
-### Variant Option: `QuoteChar`, `EscapeChar`, and `DoubleQuote`
+### Variant Options: `QuoteChar`, `EscapeChar`, and `DoubleQuote`
 
 If `EscapeChar` is set then any character can be prefixed by the escape character. The escape character is typically defined as `'\'`. The escape character immediately followed by the character `c` is the literal character `c`, even if `c` alone would have been a metacharacter.
 
@@ -283,7 +283,7 @@ The `Separator`, `QuoteChar`, and `EscapeChar` characters, when defined, must be
 
 The `Overwrite` variant option (a Boolean) from Version 16.0 remains supported but is deprecated in favour of `IfExists`.
 
-### Variant Option: `QuoteChar`, `EscapeChar`, and `DoubleQuote`
+### Variant Options: `QuoteChar`, `EscapeChar`, and `DoubleQuote`
 
 - The CSV text will be generated such that it can be read back according to the corresponding rules for import.
 - If these options do not permit this (for example, a field contains the quote character and neither `DoubleQuote` or `EscapeChar` are set) an error is signalled.

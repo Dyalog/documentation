@@ -7,7 +7,7 @@ search:
 
 `⎕XML` converts an XML string into an APL array or converts an APL array into an XML string.
 
-Options for `⎕XML` are specified using the Variant operator `⍠` or by the optional left argument `X`. The former is recommended but the older mechanism using the left argument is still supported.
+Options for `⎕XML` are specified using the _variant_ operator `⍠` or by the optional left argument `X`. The former is recommended but the older mechanism using the left argument is still supported.
 
 For conversion *from* XML, `Y` is a character vector containing an XML string. The result `R` is a 5 column matrix whose columns are made up as follows:
 
@@ -183,11 +183,11 @@ Table: Variant options for `⎕XML` { #variantoptionsforxml }
 |[`Markup`](#variant-option-markup)|`markup`|`Strip` or `Preserve`|`Strip`|Whether markup appears in the result (import only).|
 |[`UnknownEntity`](#variant-option-unknownentity)|`unknown-entity`|`Replace` or `Preserve`|`Replace`|Handling of unknown entity and character references.|
 
-The values of each option are tabulated below. In each case the value of the option for Variant is given first, followed by its equivalent for the optional left argument in brackets; for example, `Strip` `(strip)`.
+The values of each option are tabulated below. In each case the value of the option for _variant_ is given first, followed by its equivalent for the optional left argument in brackets; for example, `Strip` `(strip)`.
 
 Note that the default value is shown first, and that the option names and values are case-sensitive.
 
-If options are specified using the optional left argument,  `X` specifies a set of option/value pairs, each of which is a character vector. `X` can be a 2-element vector, or a vector of 2-element character vectors. In the examples below, this method is illustrated by the equivalent expression written as a comment, following the recommended approach using the Variant operator `⍠`:
+If options are specified using the optional left argument,  `X` specifies a set of option/value pairs, each of which is a character vector. `X` can be a 2-element vector, or a vector of 2-element character vectors. In the examples below, this method is illustrated by the equivalent expression written as a comment, following the recommended approach using the _variant_ operator `⍠`:
 ```apl
 
       ]Display (⎕XML⍠'Whitespace' 'Strip')eg
