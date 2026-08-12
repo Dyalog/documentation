@@ -17,4 +17,4 @@ Note that the memory used for the workspace must be *contiguous* .
 
 64-bit versions of Dyalog APL have no such limitations; Dyalog has used workspaces of 96GiB on various platforms.
 
-See also [Maximum workspace size](../configuring-the-ide/configuration-dialog/configuration-dialog-workspace-tab.md).
+See also [Maximum workspace size](../configuring-the-ide/configuration-dialog.md#workspace-tab).

@@ -10,4 +10,4 @@ NOTE: The LogFile property of `⎕SE` reports the name of the log file that is b
 
 The default is __<DocumentsDirectory\>\Dyalog APL[-64] <DyalogMajor\>.<DyalogMinor\> [Unicode ]Files\default_\*.dlfx__, for example, __C:\Users\Bob\Documents\Dyalog APL-64 20.0 Unicode Files\default_\*.dlfx__
 
-See also [Use log file](../configuring-the-ide/configuration-dialog/configuration-dialog-session-tab.md).
+See also [Use log file](../configuring-the-ide/configuration-dialog.md#session-tab).
