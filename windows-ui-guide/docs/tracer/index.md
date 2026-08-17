@@ -176,7 +176,7 @@ To start inline tracing, position the cursor within an expression and do one of 
 
 The Tracer opens with primitive tracing activated.
 
-<h3 class="example">Example</h3>
+<h4 class="example">Example</h4>
 
 In a Session, enter the expression `(+/÷≢)⍳10` and start inline tracing.
 
