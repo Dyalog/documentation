@@ -1,6 +1,6 @@
 # The Configuration Dialog Box
 
-The *Configuration* dialog box is displayed from the Session by selecting *Configure* from the *Options* menu. It presents many of the interpreter's [configuration parameters](../configuration-parameters/configuration-parameters.md), grouped into tabs; changing a setting and clicking *OK* updates the corresponding parameter. Each tab is described in its own section.
+The **Configuration** dialog box is displayed from the Session by selecting **Configure** from the **Options** menu. It presents many of the interpreter's [configuration parameters](../configuration-parameters/configuration-parameters.md), grouped into tabs; changing a setting and clicking *OK* updates the corresponding parameter. Each tab is described in its own section.
 
 Some tabs are present only in the Unicode edition or only in the Classic edition, as noted in their headings.
 
@@ -23,7 +23,7 @@ Table: Configuration dialog: General
 
 ## Unicode Input Tab (Unicode)
 
-Unicode Edition can optionally select your APL keyboard each time you start APL. To choose this option, select one of your installed APL keyboards, enable the *Activate selected keyboard* checkbox, then click *OK*.
+Unicode Edition can optionally select your APL keyboard each time you start APL. To choose this option, select one of your installed APL keyboards, enable the **Activate selected keyboard** checkbox, then click *OK*.
 
 ![configuration dialog unicode input tab](../img/configuration-dialog-unicode-input-tab.png)
 
@@ -76,7 +76,7 @@ Table: Configuration dialog: Output
 
 ![configuration dialog keyboard shortcuts tab](../img/configuration-dialog-keyboard-shortcuts-tab.png)
 
-To alter the keystroke associated with a particular action, simply select the action required and press the keystroke. For example, to change the keystroke associated with the action **&lt;UA&gt;** (undo all changes) from (None) to <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>u</kbd>, simply select the corresponding row in the list and press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>u</kbd>. If *Confirm before Overwrite* is checked, you will be prompted to confirm or cancel before each and every change is written back to the registry.
+To alter the keystroke associated with a particular action, simply select the action required and press the keystroke. For example, to change the keystroke associated with the action **&lt;UA&gt;** (undo all changes) from (None) to <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>u</kbd>, simply select the corresponding row in the list and press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>u</kbd>. If **Confirm before Overwrite** is checked, you will be prompted to confirm or cancel before each and every change is written back to the registry.
 
 Note that clicking on the column headings will sort on that column; shift and mouse click will sort in reverse order.
 
@@ -177,7 +177,7 @@ Table: Configuration dialog: Trace/Edit
 |Show message box if text wraps|[ WrapSearchMsgBox](../configuration-parameters/wrapsearchmsgbox.md)|Specifies whether or not a message box is displayed to inform the user when the search wraps|
 |Warn if trace stack bigger than|[Trace_Level_Warn](../configuration-parameters/trace-level-warn.md)|Specifies the maximum stack size for automatic deployment of the Tracer|
 |Confirm edit window close on Close|[Confirm_Close](../configuration-parameters/confirm-close.md)|Specifies whether or not a confirmation dialog is displayed if the user alters the contents of an edit window, then closes it without saving|
-|Confirm edit window close on Edit (and Fix)|[Confirm_Fix](../configuration-parameters/confirm-fix.md)|Specifies whether or not a confirmation dialog is displayed if the user alters the contents of an edit window, then saves it using *Fix* or *Exit*|
+|Confirm edit window close on Edit (and Fix)|[Confirm_Fix](../configuration-parameters/confirm-fix.md)|Specifies whether or not a confirmation dialog is displayed if the user alters the contents of an edit window, then saves it using **Fix** or **Exit**|
 |Confirm edit window close on Abort|[Confirm_Abort](../configuration-parameters/confirm-abort.md)|Specifies whether or not a confirmation dialog is displayed if the user alters the contents of an edit window, then aborts using|
 |Autoformat functions|[ AutoFormat](../configuration-parameters/autoformat.md)|Selects automatic indentation for Control Structures when function is opened for editing|
 |Autoindent|[ AutoIndent](../configuration-parameters/autoindent.md)|Selects semi-automatic indentation for Control Structures while editing|
@@ -200,15 +200,15 @@ These two actions always appear in the Editor File menu, but you can specify whi
 - Exit and save changes **&lt;EP&gt;** in a suspended class or namespace should fix:
 - If not suspended fix:
 
-In both cases, you can select either *Only Functions* or *Everything*.
+In both cases, you can select either **Only Functions** or **Everything**.
 
-The label for the corresponding items on the Editor File menu (see  Editor (The File Menu, editing a script)) will change according to which behaviour applies. Note that if you specify a keystroke for **&lt;S1&gt;** in the *Keyboard Shortcuts* tab, this will be associated with the unselected action.
+The label for the corresponding items on the Editor File menu (see  Editor (The File Menu, editing a script)) will change according to which behaviour applies. Note that if you specify a keystroke for **&lt;S1&gt;** in the **Keyboard Shortcuts** tab, this will be associated with the unselected action.
 
 ## Auto Complete Tab
 
 ![configuration dialog auto complete tab](../img/configuration-dialog-auto-complete-tab.png)
 
-Note: To enter values in the *OK Key* and *Cancel Key* fields, click on the field with the mouse and then press the desired keystroke.
+Note: To enter values in the **OK Key** and **Cancel Key** fields, click on the field with the mouse and then press the desired keystroke.
 
 Table: Configuration dialog: Auto Complete
 
@@ -257,7 +257,7 @@ Table: Configuration dialog: User Commands
 
 ![configuration dialog object syntax tab](../img/configuration-dialog-object-syntax-tab.png)
 
-The *Object Syntax* tab of the *Configuration* dialog is used to set your *default preferences* for Object Syntax. Use *Options/Object Syntax* to change the settings for the current workspace.
+The **Object Syntax** tab of the **Configuration** dialog is used to set your *default preferences* for Object Syntax. Use **Options/Object Syntax** to change the settings for the current workspace.
 
 Table: Configuration dialog: Object Syntax
 
@@ -271,9 +271,9 @@ Table: Configuration dialog: Object Syntax
 
 ![configuration dialog saved responses tab](../img/configuration-dialog-saved-responses-tab.png)
 
-The *Saved Responses* tab of the *Configuration* dialog is used to remove preferences that the user has previously established.
+The **Saved Responses** tab of the **Configuration** dialog is used to remove preferences that the user has previously established.
 
-In this example, the user has at some point chosen to save a text file with a `.h` extension as text in the workspace and, by checking the option *Save this response for all files with a ".h" extension*, saved this as a preference for all such text files. Similarly, the user has checked the option *Do not show this message again* when responding to the warning dialog *Saving as text will ...*.
+In this example, the user has at some point chosen to save a text file with a `.h` extension as text in the workspace and, by checking the option **Save this response for all files with a ".h" extension**, saved this as a preference for all such text files. Similarly, the user has checked the option **Do not show this message again** when responding to the warning dialog **Saving as text will ...**.
 
 If the user wants to reverse these decisions, even temporarily, it is necessary to select the corresponding option /preference name(s) and click *Delete*. The names are intended to be self-explanatory and are not listed here.
 
