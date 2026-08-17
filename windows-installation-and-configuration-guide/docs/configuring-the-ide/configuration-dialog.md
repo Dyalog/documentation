@@ -1,6 +1,6 @@
 # The Configuration Dialog Box
 
-The *Configuration* dialog box is displayed from the Session by selecting *Configure* from the *Options* menu. It presents many of the interpreter's [configuration parameters](../configuration-parameters/configuration-parameters.md), grouped into tabs; changing a setting and clicking *OK* updates the corresponding parameter. Each tab is described in a section below.
+The *Configuration* dialog box is displayed from the Session by selecting *Configure* from the *Options* menu. It presents many of the interpreter's [configuration parameters](../configuration-parameters/configuration-parameters.md), grouped into tabs; changing a setting and clicking *OK* updates the corresponding parameter. Each tab is described in its own section.
 
 Some tabs are present only in the Unicode edition or only in the Classic edition, as noted in their headings.
 
@@ -23,7 +23,7 @@ Table: Configuration dialog: General
 
 ## Unicode Input Tab (Unicode)
 
-Unicode Edition can optionally select your APL keyboard each time you start APL. To choose this option, select one of your installed APL keyboards, enable the *Activate selected keyboard* checkbox, then click *OK*
+Unicode Edition can optionally select your APL keyboard each time you start APL. To choose this option, select one of your installed APL keyboards, enable the *Activate selected keyboard* checkbox, then click *OK*.
 
 ![configuration dialog unicode input tab](../img/configuration-dialog-unicode-input-tab.png)
 
@@ -34,7 +34,7 @@ Table: Configuration dialog: Unicode Input
 |Activate selected keyboard|[InitialKeyboardLayoutInUse](../configuration-parameters/initialkeyboardlayoutinuse.md)|If checked, the specified APL keyboard is activated on start-up|
 |Show keyboards for all Languages|[InitialKeyboardLayoutShowAll](../configuration-parameters/initialkeyboardlayoutshowall.md)|If checked, all installed keyboards are displayed. Otherwise, only Dyalog keyboards are shown|
 |Keyboard|[InitialKeyboardLayout](../configuration-parameters/initialkeyboardlayout.md)|The APL keyboard to be selected|
-|Configure Layout|&nbsp;|Displays the following dialog box|
+|Configure Layout|&nbsp;|Displays the [Input Method Editor Properties](#input-method-editor-properties) dialog box|
 
 ### Input Method Editor Properties
 
@@ -100,7 +100,7 @@ Table: Configuration dialog: Help/DMX
 |Label|Parameter|Description|
 |---|---|---|
 |DMX messages should go to|[DMXOutputOnError](../configuration-parameters/dmxoutputonerror.md)|If checked, these boxes cause APL to display [`⎕DMX`](../../../language-reference-guide/system-functions/dmx) messages in the corresponding window(s)|
-|Use Microsoft's documentation centre for non-Dyalog topics|[UseExternalHelpURL](../configuration-parameters/useexternalhelpurl.md)|If this option is checked, APL will look for help for external objects at Microsoft's documentation center, which is identified by the specified URL|
+|Use Microsoft's documentation centre for non-Dyalog topics|[UseExternalHelpURL](../configuration-parameters/useexternalhelpurl.md)|If this option is checked, APL will look for help for external objects at Microsoft's documentation centre, which is identified by the specified URL|
 |URL|[ExternalHelpURL](../configuration-parameters/externalhelpurl.md)|The URL for the documentation centre|
 
 ## Windows Tab
@@ -159,7 +159,7 @@ Table: Configuration dialog: Session
 |Use log file|[Log_File](../configuration-parameters/log-file.md)|The full pathname of the Session log file|
 |Multiline Input|[Dyalog_LineEditor_Mode](../configuration-parameters/dyalog-lineeditor-mode.md)|Specifies whether or not multi-line input is enabled in the Session|
 
-Note: The value of size-related values defined in the above table is specified as an integer value followed by one of K, M, G, T, P or E. The default, where no character is included, is K (Kilobytes).
+Note: The size-related values in the Session tab are specified as an integer value followed by one of K, M, G, T, P, or E. Where no character is included, the default is K (kilobytes).
 
 ## Trace/Edit Tab
 
@@ -188,8 +188,8 @@ Table: Configuration dialog: Trace/Edit
 |Limit tracer display to current function in script|[AddClassHeaders](../configuration-parameters/addclassheaders.md)|When Tracing the execution of a function in a script, the Tracer displays either just the first line of the script and the function in question (option enabled), or the entire script (option disabled)|
 |Paste text as Unicode (Classic Edition only)|[ UnicodeToClipboard](../configuration-parameters/unicodetoclipboard.md)|Specifies whether or not text transferred to and from the Windows clipboard is to be treated as Unicode|
 |Tab stops every|[ TabStops](../configuration-parameters/tabstops.md)|The number of spaces inserted by pressing Tab in an edit window|
-|Exit and fix ...|[ InitFullScriptSusp](../configuration-parameters/initfullscriptsusp.md)|See Fixing Scripts below|
-|If not ...|[InitFullScriptNormal](../configuration-parameters/initfullscriptnormal.md)|See Fixing Scripts below|
+|Exit and fix ...|[ InitFullScriptSusp](../configuration-parameters/initfullscriptsusp.md)|See [Fixing Scripts](#fixing-scripts)|
+|If not ...|[InitFullScriptNormal](../configuration-parameters/initfullscriptnormal.md)|See [Fixing Scripts](#fixing-scripts)|
 
 ### Fixing Scripts
 
@@ -200,7 +200,7 @@ These two actions always appear in the Editor File menu, but you can specify whi
 - Exit and save changes **&lt;EP&gt;** in a suspended class or namespace should fix:
 - If not suspended fix:
 
-In both cases, you may select either  *Only Functions* or         *Everything*.
+In both cases, you can select either *Only Functions* or *Everything*.
 
 The label for the corresponding items on the Editor File menu (see  Editor (The File Menu, editing a script)) will change according to which behaviour applies. Note that if you specify a keystroke for **&lt;S1&gt;** in the *Keyboard Shortcuts* tab, this will be associated with the unselected action.
 
@@ -208,7 +208,7 @@ The label for the corresponding items on the Editor File menu (see  Editor (The 
 
 ![configuration dialog auto complete tab](../img/configuration-dialog-auto-complete-tab.png)
 
-Note: To enter values in the *OK Key* and *Cancel Key*fields, click on the field with the mouse and then press the desired keystroke.
+Note: To enter values in the *OK Key* and *Cancel Key* fields, click on the field with the mouse and then press the desired keystroke.
 
 Table: Configuration dialog: Auto Complete
 
@@ -221,14 +221,14 @@ Table: Configuration dialog: Auto Complete
 |Show up to|[Cols](../configuration-parameters/autocomplete/cols.md)|Specifies the maximum number of columns (width) in the AutoComplete pop-up suggestion box|
 |Keep History|[History](../configuration-parameters/autocomplete/history.md)|Specifies whether or not AutoComplete maintains a list of previous AutoCompletions|
 |History Length|[HistorySize](../configuration-parameters/autocomplete/historysize.md)|Specifies the number of previous AutoCompletions that are maintained|
-|Include filenames|[ShowFiles](../configuration-parameters/autocomplete/showfiles.md)|Specifies whether or not AutoCompletion suggests directory and file names for `)LOAD` , `)COPY` and `)DROP` system commands|
-|OK Key|[CompleteKey1](../configuration-parameters/autocomplete/completekey1.md) [CompleteKey2](../configuration-parameters/autocomplete/completekey2.md)|Specifies two possible keys that may be used to select the current option from the Auto Complete suggestion box|
-|Cancel Key|[CancelKey1](../configuration-parameters/autocomplete/cancelkey1.md) [CancelKey2](../configuration-parameters/autocomplete/cancelkey2.md)|Specifies two possible keys that may be used to cancel (hide) the Auto Complete suggestion box|
+|Include filenames|[ShowFiles](../configuration-parameters/autocomplete/showfiles.md)|Specifies whether or not AutoCompletion suggests directory and file names for `)LOAD`, `)COPY`, and `)DROP` system commands|
+|OK Key|[CompleteKey1](../configuration-parameters/autocomplete/completekey1.md) [CompleteKey2](../configuration-parameters/autocomplete/completekey2.md)|Specifies two possible keys that can be used to select the current option from the Auto Complete suggestion box|
+|Cancel Key|[CancelKey1](../configuration-parameters/autocomplete/cancelkey1.md) [CancelKey2](../configuration-parameters/autocomplete/cancelkey2.md)|Specifies two possible keys that can be used to cancel (hide) the Auto Complete suggestion box|
 |Common Key|[CommonKey1](../configuration-parameters/autocomplete/commonkey1.md)|Specifies the key that will auto-complete the *common prefix*|
 
 ## SALT Tab
 
-SALT is the Simple APL Library Toolkit, a simple source code management system for Classes and script-based Namespaces. SPICE uses SALT to manage development tools which "plug in" to the Dyalog session
+SALT is the Simple APL Library Toolkit, a simple source code management system for Classes and script-based Namespaces. SPICE uses SALT to manage development tools that "plug in" to the Dyalog session.
 
 ![configuration dialog salt tab](../img/configuration-dialog-salt-tab.png)
 
@@ -237,7 +237,7 @@ Table: Configuration dialog: SALT
 |Label|Parameter|Description|
 |---|---|---|
 |Enable Salt|AddSALT|Specifies whether or not SALT is enabled|
-|Compare command line:|CompareCMD|The command line for a 3<sup>rd</sup> party file comparison tool to be used to compare two versions of a file. See note|
+|Compare command line:|CompareCMD|The command line for a third-party file comparison tool to be used to compare two versions of a file. See note|
 |Editor command line:|Editor|Name of the program to be used to edit script files (default "Notepad")|
 |Source folders:|SourceFolder|Sets the SALT working directory; a list of folders to be searched for source code. Include "." on a separate line to include source files from the current working directory|
 
@@ -273,9 +273,9 @@ Table: Configuration dialog: Object Syntax
 
 The *Saved Responses* tab of the *Configuration* dialog is used to remove preferences that the user has previously established.
 
-In the example illustrated above, the user has at some point chosen to save a text file with a `.h` extension as text in the workspace and, by checking the option *Save this response for all files with a ".h" extension*, saved this as a preference for all such text files. Similarly, the user has checked the option *Do not show this message again* when responding to the warning dialog *Saving as text will ...*.
+In this example, the user has at some point chosen to save a text file with a `.h` extension as text in the workspace and, by checking the option *Save this response for all files with a ".h" extension*, saved this as a preference for all such text files. Similarly, the user has checked the option *Do not show this message again* when responding to the warning dialog *Saving as text will ...*.
 
-If the user wishes to reverse these decisions, even temporarily, it is necessary to select the corresponding option /preference name(s) and click *Delete*. The names are intended to be self-explanatory and are not listed here.
+If the user wants to reverse these decisions, even temporarily, it is necessary to select the corresponding option /preference name(s) and click *Delete*. The names are intended to be self-explanatory and are not listed here.
 
 ![saved responses1](../img/saved-responses1.png)
 
