@@ -257,7 +257,7 @@ If `Y[1]` is a file name or tie number, *Description* can be:
 - a character vector specifying the file encoding such as `'UTF-8'` (see [File Encodings](nget.md)).
 - a 256-element numeric vector that maps each possible byte value (0-255) to a Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value can appear in the table more than once.
 
-If `Y[1]` is empty, *Description* can be a character scalar `'S'` (simple) or `'N'` (nested). If omitted, the default is `'S'`
+If `Y[1]` is empty, *Description* can be a character scalar `'S'` (simple) or `'N'` (nested). If omitted, the default is `'S'`.
 
 ## Variant Options
 

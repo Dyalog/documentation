@@ -69,7 +69,7 @@ XML is an open standard, designed to allow exchange of data between applications
 
 The `⎕XML` function is designed to handle XML to the extent required to import and export APL data. It favours speed over complexity - some markup is tolerated but largely ignored, and there are no XML query or validation features. APL applications which require processing, querying or validation will need to call external tools for this, and finally call `⎕XML` on the resulting XML to perform the transformation into APL arrays.
 
-XML grammar such as processing instructions, document type declarations etc. can optionally be stored in the APL array, but will not be processed or validated. This is principally to allow regeneration of XML from XML input which contains such structures, but an APL application could process the data if it chose to do so.
+XML grammar such as processing instructions and document type declarations can optionally be stored in the APL array, but will not be processed or validated. This is principally to allow regeneration of XML from XML input which contains such structures, but an APL application could process the data if it chose to do so.
 
 The XML definition uses specific terminology to describe its component parts. The following is a summary of the terms used in this section:
 

@@ -341,11 +341,11 @@ Table: Predefined patterns built into the interpreter { #patterns }
 
 Additional predefined patterns can be defined using the [`Dictionary` variant option](#variant-option-dictionary). Predefined patterns must not contain references to other predefined patterns.
 
-## Pattern-Matching Rules
+## Pattern-matching Rules
 
 When <code>X<sub>Y</sub></code> is a pattern, the corresponding character vectors in `Y` are matched against it and decoded into datetime. The following additional rules apply to the matching.
 
-### Two-Digit Years
+### Two-digit Years
 
 Two digit years (that is, those corresponding to the formatting pattern elements `YY` and `WW`) are, by default, interpreted according to the same rules used for `⎕SM` and GUI edit fields, which are configurable using the [`YY_WINDOW`](../../windows-installation-and-configuration-guide/configuration-parameters/yy-window/) configuration parameter.
 

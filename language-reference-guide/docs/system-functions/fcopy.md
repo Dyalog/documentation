@@ -41,7 +41,7 @@ If `X` specifies the name of an existing file, the operation fails with a `FILE 
 
 ## Variant Options
 
-`⎕FCOPY` sets the properties of the new file through variant options, summarised in [](#variantoptionsforfcopy). These are the file properties described in [File Properties](fprops.md). Unless a property is specified, the new file inherits it from the source, except `'S'` which is always `64`.
+`⎕FCOPY` sets the properties of the new file through variant options, summarised in [](#variantoptionsforfcopy). These are the file properties described in [File Properties](fprops.md). Unless a property is specified, the new file inherits it from the source, except `'S'`, which is always `64`.
 
 Table: Variant options for `⎕FCOPY` { #variantoptionsforfcopy }
 
