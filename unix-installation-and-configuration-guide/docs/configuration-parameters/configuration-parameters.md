@@ -12,7 +12,7 @@ This provides a great deal of flexibility, enabling a user to override one setti
 
 For more information on configuration files, see [Configuration Files](configuration-files.md). For more information on environment variables, see [Environment Variables](environment-variables.md).
 
-## References to other Configuration Parameters
+## References to Other Configuration Parameters
 
 Configuration parameters can include references to other configuration parameters (irrespective of where they are defined) using square bracket delimiters. For example, `MySetting: "[DYALOG]/MyFile"` will replace `[DYALOG]` with the value of the **DYALOG** configuration parameter.
 
