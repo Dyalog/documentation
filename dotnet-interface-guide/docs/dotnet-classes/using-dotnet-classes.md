@@ -35,10 +35,10 @@ When a reference to a .NET object is formatted, APL calls its <code class="langu
 30/04/2008 00:00:00
 ```
 
-## Using a User-Written Class
+## Using a User-written Class
 
-The classes used above are supplied with .NET, but [`⎕USING`](../../../language-reference-guide/system-functions/using/) can also load your own compiled .NET assemblies. For example, suppose the following C# class is compiled into an assembly file named `testlib.dll`:
-```C#
+The classes used in the previous examples are supplied with .NET, but `⎕USING` can also load your own compiled .NET assemblies. For example, suppose the following C# class is compiled into an assembly file named **testlib.dll**:
+```nonAPL
 namespace Foobar
 {
     public static class Adder
