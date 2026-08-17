@@ -16,13 +16,13 @@ If the name is followed by a line-number in square brackets, for example, `MyFn[
 
 ## Window Management
 
-By default, the Session has an Editor windows which is docked along the right edge of the Session window. When you edit a function, the Editor window automatically springs into view as illustrated below.
+By default, the Session has an Editor window that is docked along the right edge of the Session window. When you edit a function, the Editor window automatically springs into view as illustrated below.
 
 ![](img/editor-3.png)
 
 A functionally identical interface, especially suitable for wide screens, can be configured via **Layout**>**Debugger on the left**. As an alternative, **Layout**>**Classic** removes the Editor window, instead opening objects in individual edit windows. The default configuration can be restored via **Layout**>**Debugger at the bottom**. See below for details on the different configurations.
 
-Independently of the editing configuration, the first edited object opens in an edit window window at the position specified by the **edit_first_y** and **edit_first_x** parameters which  are specified in terms of the size of a character in the current font relative to the top-left corner of the main Editor window or, if this windows was removed, the screen. Subsequent ones are staggered according to the values of the **edit_offset_y** and **edit_offset_x** parameters.
+Independently of the editing configuration, the first edited object opens in an edit window at the position specified by the **edit_first_y** and **edit_first_x** parameters that are specified in terms of the size of a character in the current font relative to the top-left corner of the main Editor window or, if this window was removed, the screen. Subsequent ones are staggered according to the values of the **edit_offset_y** and **edit_offset_x** parameters.
 
 ![](img/editor-7.png)
 
@@ -36,7 +36,7 @@ This configuration is set via **Layout**>**Classic**. It removes the Editor wind
 
 ### Debugger at the bottom/on the left Layout
 
-These configurations are set via **Layout**>**Debugger at the bottom** and **Layout**>**Debugger on the left**. They provide a single Editor in the form of a Multiple Document Interface (MDI) window that may be a stand-alone window, or be docked in the Session window, as seen in the pictures below. Each of the objects being edited is displayed in a separate sub-window. Individual edit windows are managed using standard MDI facilities, and can be undocked and redocked in the Editor window, but not directly in the Session window.
+These configurations are set via **Layout**>**Debugger at the bottom** and **Layout**>**Debugger on the left**. They provide a single Editor in the form of a Multiple Document Interface (MDI) window that can be a stand-alone window, or be docked in the Session window, as seen in the pictures below. Each of the objects being edited is displayed in a separate sub-window. Individual edit windows are managed using standard MDI facilities, and can be undocked and redocked in the Editor window, but not directly in the Session window.
 
 ![](img/editor-2.png)
 
