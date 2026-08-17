@@ -4,4 +4,4 @@ This Boolean parameter governs whether (`1`) or not (`0`) Dyalog performs Sessio
 
 The default is `1` for interactive sessions, and `0` for executable scripts and run-time versions.
 
-Session initialisation makes Link, SALT and other things available. These features depend on DYALOG_INITSESSION being `1` (explicitly or by default).
+Session initialisation makes Link, SALT, and other things available. These features depend on DYALOG_INITSESSION being `1` (explicitly or by default).
