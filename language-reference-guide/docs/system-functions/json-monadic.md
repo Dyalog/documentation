@@ -36,7 +36,7 @@ JSON supports a limited number of data types, and there is no direct corresponde
 - JSON does not support arrays with rank &gt; 1.
 - JSON does not support nested scalars.
 - JSON includes Boolean values <code class="language-nonAPL">true</code> and <code class="language-nonAPL">false</code> which are distinct from numeric values <code class="language-nonAPL">1</code> and <code class="language-nonAPL">0</code>; these have no direct APL equivalent.
-- JSON object members are named and these names might not be [valid names in APL](../../programming-reference-guide/introduction/names/).
+- JSON object members are named and these names might not be [valid names in APL](../../../programming-reference-guide/introduction/names/).
 - The [JSON5](https://json5.org/) dialect includes numeric constants <code class="language-nonAPL">Infinity</code>, <code class="language-nonAPL">-Infinity</code>, and <code class="language-nonAPL">NaN</code>, which have no direct APL equivalent.
 
 These differences are catered for in various ways as discussed below.
