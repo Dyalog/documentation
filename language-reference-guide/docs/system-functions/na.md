@@ -15,7 +15,7 @@ A library, referred to here generically as a a Dynamic Link Library (DLL), is a 
 
 Instructional examples using `⎕NA` can be found in the supplied workspace `quadna`.
 
-For `⎕NA` on Linux, macOS and AIX, see also [`⎕NA` under UNIX](../../../unix-installation-and-configuration-guide/quadna).
+For `⎕NA` on Linux, macOS, and AIX, see also [`⎕NA` under UNIX](../../../unix-installation-and-configuration-guide/quadna).
 
 The DLL may be part of the standard operating system software, a library purchased from a third party supplier, or one that you have written yourself.
 
@@ -98,9 +98,9 @@ Under Windows, if the file extension is omitted, **.dll** is assumed. Note that 
       ⎕NA'... mydll.exe|foo ...'
 ```
 
-### Linux, macOS and AIX
+### Linux, macOS, and AIX
 
-On Linux, macOS and AIX, `⎕NA` supports both system-supplied and user-written shared libraries. Locating the system library (`libc`) and using the Dyalog-supplied shared library differ between platforms; for details and examples, see [`⎕NA` under UNIX](../../../unix-installation-and-configuration-guide/quadna).
+On Linux, macOS, and AIX, `⎕NA` supports both system-supplied and user-written shared libraries. Locating the system library (`libc`) and using the Dyalog-supplied shared library differ between platforms; for details and examples, see [`⎕NA` under UNIX](../../../unix-installation-and-configuration-guide/quadna).
 
 ## Data Type Coding Scheme
 
