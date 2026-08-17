@@ -22,7 +22,7 @@ The left argument `X` is either:
 |`[1]`|Destination of CSV Data (see below)    |
 |`[2]`|Description of the CSV data (see below)|
 
-*Destination* - may be one of:
+*Destination* – can be one of:
 
 - a character vector or scalar containing a file name
 - a native tie number
@@ -30,12 +30,12 @@ The left argument `X` is either:
 
 *Description*
 
-If `Y[1]` is a file name or tie number, *Description* may be:
+If `Y[1]` is a file name or tie number, *Description* can be:
 
 - a character vector specifying the file encoding such as `'UTF-8'` (see [File Encodings](nget-dyadic.md)).
-- a 256-element numeric vector that maps each possible byte value (0-255) to a Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value may appear in the table more than once.
+- a 256-element numeric vector that maps each possible byte value (0-255) to a Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value can appear in the table more than once.
 
-If `Y[1]` is empty, *Description* may be a character scalar `'S'` (simple) or `'N'` (nested). If omitted, the default is `'S'`
+If `Y[1]` is empty, *Description* can be a character scalar `'S'` (simple) or `'N'` (nested). If omitted, the default is `'S'`
 
 ## Internal Format
 
@@ -53,17 +53,17 @@ Fixed-width fields do not require these options and they are ignored if fixed-wi
 
 ## Variant Options
 
-Dyadic `⎕CSV` may be applied using the _variant_ operator with the following options.
+Dyadic `⎕CSV` can be applied using the _variant_ operator with the following options.
 
 |Name|Meaning|Default|
 |---|---|---|
-|Decimal|the decimal mark in numeric fields - one of `'.'` or `','`|`'.'`|
+|Decimal|the decimal mark in numeric fields – one of `'.'` or `','`|`'.'`|
 |DoubleQuote|A Boolean which indicates whether (`1`) or not (`0`) a quote character within a quoted field is represented by two consecutive quote characters|`1`|
-|EscapeChar|The escape character, which may be specified as an empty character vector (meaning none is defined) or a character scalar|`0`|
+|EscapeChar|The escape character, which can be specified as an empty character vector (meaning none is defined) or a character scalar|`0`|
 |ForceQuotes|A number specifying the degree to which quotes are applied around fields even if not strictly required. Possible values are:<ul><li>`0` – add only if required</li><li>`1` – add to all fields containing character data and to fields containing numeric data if required</li><li>`2` – add to all fields even if not required</li></ul>If ForceQuotes is a scalar, the value applies to all columns; if it is a vector of values then each value applies to the corresponding column.|`0`|
 |IfExists|a character vector `'Error'` or `'Replace'` which specifies, when creating a named file which already exists, whether to overwrite it ( `'Replace'` ) or signal an error ( `'Error'` )|`'Error'`|
-|LineEnding|the line ending sequence - see [Line separators:](nget-monadic.md)|(13 10) on Windows; 10 on other platforms|
-|QuoteChar|The field quote character (delimiter), which may be specified as an empty character vector (meaning none is defined) or a character scalar|`"`|
+|LineEnding|the line ending sequence – see [Line separators:](nget-monadic.md)|(13 10) on Windows; 10 on other platforms|
+|QuoteChar|The field quote character (delimiter), which can be specified as an empty character vector (meaning none is defined) or a character scalar|`"`|
 |Separator|the field separator, any single character. If Widths is other than `⍬` , Separator is ignored.|`','`|
 |Thousands|the thousands separator in numeric fields, which can be specified as an empty character vector (meaning no separator is defined) or a character scalar|`''`|
 |Trim|a Boolean specifying whether whitespace is trimmed at the beginning and end of character fields|`1`|
@@ -122,7 +122,7 @@ FILE NAME ERROR: Unable to create file ("The file exists.")
 - Native files are written from the current file position. On successful completion, the file position will be at the end of the written data. If an error is signalled the amount of data written is undefined.
 - If the file encoding specifies that a BOM is required and output is to a native file, it will only be written if the file position is initially at 0 - that is, the start of the file is being written.
 - When fixed width fields are written, character data shorter than the specified width is padded with spaces to the right and character data longer than the specified width signals an error. Numeric data is converted to character data as far as possible so that it fits into the specified width. If this is not possible, an error is signalled.
-- Tab-separated fields may be exported by specifying `'Separator' (⎕UCS 9)`.
+- Tab-separated fields can be exported by specifying `'Separator' (⎕UCS 9)`.
 - Fields containing a single embedded new line are supported. On export, line feed characters are mapped back to the defined line ending sequence.
 
 <!-- Hidden search keywords -->

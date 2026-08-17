@@ -5,13 +5,13 @@ search:
 
 # <span>Object Attributes for APL2</span> `R←X ⎕AT Y`{{key}}
 
-`Y` can be a simple character scalar, vector or matrix, or a vector of character vectors representing the names of 0 or more defined functions or operators. This function closely emulates the APL2 implementation; for the form that returns information more appropriate to Dyalog APL, see [Object Attributes](at-monadic.md).
+`Y` can be a simple character scalar, vector, or matrix, or a vector of character vectors representing the names of 0 or more defined functions or operators. This function closely emulates the APL2 implementation; for the form that returns information more appropriate to Dyalog APL, see [Object Attributes](at-monadic.md).
 
 `Y` specifies one or more names. If `Y` specifies a single name as a character scalar, a character vector, or as a scalar enclosed character vector, the result `R` is a vector. If `Y` specifies one or more names as a character matrix or as a vector of character vectors `R` is a matrix with one row per name in `Y`.
 
 It returns the same rank and shape result containing information that matches the APL2 implementation as closely as possible.
 
-The number of elements or columns in `R` and their meaning depends upon the value of `X` which may be 1, 2, 3 or 4.
+The number of elements or columns in `R` and their meaning depends upon the value of `X` which can be 1, 2, 3, or 4.
 
 If `X` is 1, `R` specifies _valences_ and contains 3 elements (or columns) whose meaning is as follows:
 

@@ -48,7 +48,7 @@ There are two special space names:
       UTIL.⍎STRING         ⍝ Execute STRING in UTIL space
 ```
 
-You may also reference a function or operator in a namespace *implicitly* using the mechanism provided by `⎕EXPORT` (See [Language Reference](../../../../language-reference-guide/system-functions/export-dyadic)) and `⎕PATH`. If you reference a name that is undefined in the current space, the system searches for it in the list of exported names defined for the namespaces specified by `⎕PATH`. See [Language Reference](../../../../language-reference-guide/system-functions/path) for further details.
+You can also reference a function or operator in a namespace *implicitly* using the mechanism provided by `⎕EXPORT` (See [Language Reference](../../../../language-reference-guide/system-functions/export-dyadic)) and `⎕PATH`. If you reference a name that is undefined in the current space, the system searches for it in the list of exported names defined for the namespaces specified by `⎕PATH`. See [Language Reference](../../../../language-reference-guide/system-functions/path) for further details.
 
 Notice that the expression to the right of a dot may be arbitrarily complex and will be executed within the namespace or ref to the left of the dot.
 ```apl

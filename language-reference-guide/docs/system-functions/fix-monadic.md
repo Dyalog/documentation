@@ -9,7 +9,7 @@ search:
 
 To restrict what the script is allowed to establish, use [dyadic `⎕FIX`](fix-dyadic.md).
 
-In this section, the term *namespace* covers scripted namespaces, classes and interfaces.
+In this section, the term *namespace* covers scripted namespaces, classes, and interfaces.
 
 `Y` can be a simple character vector, or  a vector of character vectors or character scalars.
 

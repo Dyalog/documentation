@@ -15,13 +15,13 @@ Each file or directory named in `Y` must exist, and directories to be deleted mu
 
 ## Variant Options
 
-`⎕NDELETE` may be applied using the  Variant operator with the Wildcard option.
+`⎕NDELETE` can be applied using the  Variant operator with the Wildcard option.
 
 ## Wildcard Option (Boolean)
 
 |---|---|
 |`0` (default) |The name or names in `Y` identifies a specific file name.|
-|`1`|The name or names in `Y` that specify the *base name* and *extension* (see [File Name Parts](./nparts-monadic.md)), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
+|`1`|The name or names in `Y` that specify the *base name* and *extension* (see [File Name Parts](./nparts-monadic.md)), can also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
 
 Note that when Wildcard is 1, element(s) of `R` can  be 0 or `>1`. If Wildcard is 0, elements of `R` are always 1.
 
@@ -60,7 +60,7 @@ If the file is in use or the current user is not authorised to delete it, `⎕ND
 
 ## Note
 
-When multiple names are specified they are processed in the order given. If an error occurs at any point whilst deleting files or directories, processing will immediately stop and an error will be signalled. The operation is not atomic; the directory contents may be partially deleted before this happens. In the event of an error there will be no result and therefore no indication of how many files were deleted before the error occurred.
+When multiple names are specified they are processed in the order given. If an error occurs at any point whilst deleting files or directories, processing will immediately stop and an error will be signalled. The operation is not atomic; the directory contents might be partially deleted before this happens. In the event of an error there will be no result and therefore no indication of how many files were deleted before the error occurred.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

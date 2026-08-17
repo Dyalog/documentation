@@ -35,4 +35,4 @@ VALUE ERROR: Undefined name: Sub
 ```
 
 !!! Legacy "Legacy"
-    `⎕EXPORT` does not support derived functions and will not be extended to support them; nor will it be extended to support other types of functions that may be developed in the future. `⎕EXPORT` may therefore be considered an archaic feature.
+    `⎕EXPORT` does not support derived functions and will not be extended to support them; nor will it be extended to support other types of functions that might be developed in the future. `⎕EXPORT` can therefore be considered an archaic feature.

@@ -25,7 +25,7 @@ The shy result `R` contains count(s) of top-level items copied. If `Y` is a sing
 
 |---|---|
 |0 { .shaded } |The name or names in `Y` identifies a specific file name.|
-|`1`|The name or names in `Y` that specify the *base name* and *extension* (see [NParts](./nparts-monadic.md) ), may also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
+|`1`|The name or names in `Y` that specify the *base name* and *extension* (see [NParts](./nparts-monadic.md) ), can also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
 
 Note that when **Wildcard** is 1, element(s) of `R` can  be 0, 1 or `>1`. If **Wildcard** is 0, elements of `R` are always 1.
 

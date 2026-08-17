@@ -5,7 +5,7 @@ search:
 
 # <span>List Object Names</span> `R←⎕NL Y`{{key}}
 
-`Y` must be a simple numeric scalar or vector containing one or more of the values for name-class.  See also [Name Classification](nc.md).
+`Y` must be a simple numeric scalar or vector containing one or more of the values for name-class. See also [Name Classification](nc.md).
 
 To restrict the result to names beginning with particular characters, use [dyadic `⎕NL`](nl-dyadic.md).
 
@@ -43,7 +43,7 @@ V
 
 ### Dyalog GUI Objects
 
-`⎕NL` may be used to obtain lists of the Methods, Properties and Events provided by Dyalog APL GUI Objects.
+`⎕NL` can be used to obtain lists of the Methods, Properties, and Events provided by Dyalog APL GUI Objects.
 
 ### .NET Classes (Types)
 
@@ -61,7 +61,7 @@ When a reference is made to an undefined name, and `⎕USING` is set, APL attemp
 9.6
 ```
 
-The names of the Properties and Methods of a .NET Type may then be obtained using `⎕NL`.
+The names of the Properties and Methods of a .NET Type can then be obtained using `⎕NL`.
 
 In fact it is not necessary to make a separate reference first, because the expression `Type.⎕NL` (where `Type` is a .NET Type) is itself a reference to Type. So, (with `⎕USING` still set to `'System'`):
 ```apl
@@ -90,7 +90,7 @@ Another use for `⎕NL` is to examine .NET *enumerations*. For example:
 
 ### COM Objects
 
-Once a reference to a COM object has been obtained, `⎕NL` may be used to obtain lists of its Methods, Properties and Events.
+Once a reference to a COM object has been obtained, `⎕NL` can be used to obtain lists of its Methods, Properties, and Events.
 ```apl
 
       xl←⎕NEW'OLEClient'(⊂'ClassName' 'Excel.Application')

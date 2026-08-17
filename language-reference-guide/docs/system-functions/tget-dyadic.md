@@ -13,7 +13,7 @@ To wait indefinitely for the tokens, use [monadic `⎕TGET`](tget-monadic.md).
 
 Shy result `R` is a scalar or vector containing the values of the tokens of type `Y` that have been retrieved from the token pool.
 
-Note that types of the tokens in the pool may be positive or negative, and the elements of `Y` may also be positive or negative.
+Note that types of the tokens in the pool can be positive or negative, and the elements of `Y` can also be positive or negative.
 
 A request (`⎕TGET`) for a *positive* token will be satisfied by the presence of a token in the pool with the same positive or negative type. If the pool token has a positive type, it will be removed from the pool. If the pool token has a negative type, it will remain in the pool. N*egatively* typed tokens will therefore satisfy an infinite number of requests for their positive equivalents. Note that a request for a positive token will remove one if it is present, before resorting to its negative equivalent
 

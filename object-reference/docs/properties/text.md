@@ -14,7 +14,7 @@ In a [Text](../objects/text.md) object, the value of the Text property may be a 
 
 In general, the value of Text returned by [`⎕WG`](../../../language-reference-guide/system-functions/wg-dyadic) has the same structure that was assigned to it by [`⎕WC`](../../../language-reference-guide/system-functions/wc-dyadic) or by the most recent call to [`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic). New-Line characters entered by the users are removed.
 
-You can copy text into the Windows [Clipboard](../objects/clipboard.md) by using [`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic) to set Text for a [Clipboard](../objects/clipboard.md) object. In this case you may specify a simple character scalar, vector or matrix, or a vector of character vectors. If you are retrieving data from the clipboard that has been stored by another application, Text will be either a character vector or a vector of character vectors.
+You can copy text into the Windows [Clipboard](../objects/clipboard.md) by using [`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic) to set Text for a [Clipboard](../objects/clipboard.md) object. In this case you can specify a simple character scalar, vector or matrix, or a vector of character vectors. If you are retrieving data from the clipboard that has been stored by another application, Text will be either a character vector or a vector of character vectors.
 
 The Text property of a [StatusField](../objects/statusfield.md) is updated automatically if its [Style](style.md) property is set to monitor the status of a key.
 

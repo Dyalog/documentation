@@ -147,7 +147,7 @@ The profiling data collected is stored outside the workspace and will not impact
 !!! Info "Information"
     Running your application with `⎕PROFILE` turned on incurs a significant processing overhead and will slow dwon your application.
 	
-If you choose to use `⎕PROFILE`, the following guidelines and information may be of use to you.
+If you choose to use `⎕PROFILE`, the following guidelines and information can be of use to you.
 
 ### Selecting a Timer
 

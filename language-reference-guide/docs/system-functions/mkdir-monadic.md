@@ -40,7 +40,7 @@ FILE NAME ERROR: /Users/Pete/Documents/temp: Already exists
 ```
 
 !!! note
-    When multiple names are specified they are processed in the order given. If an error occurs at any point whilst creating directories, processing will immediately stop and an error will be signalled. The operation is not atomic; some directories may be created before this happens. In the event of an error there will be no result and therefore no indication of how many directories were created before the error occurred.
+    When multiple names are specified they are processed in the order given. If an error occurs at any point whilst creating directories, processing will immediately stop and an error will be signalled. The operation is not atomic; some directories might be created before this happens. In the event of an error there will be no result and therefore no indication of how many directories were created before the error occurred.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

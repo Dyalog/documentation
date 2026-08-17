@@ -7,7 +7,7 @@ search:
 
 `⎕FIX` establishes namespaces, classes, interfaces and functions from the script specified by `Y` in the workspace.
 
-In this section, the term *namespace* covers scripted namespaces, classes and interfaces.
+In this section, the term *namespace* covers scripted namespaces, classes, and interfaces.
 
 `Y` can be a simple character vector, or  a vector of character vectors or character scalars. The value of `X` determines what `Y` can contain.
 

@@ -17,7 +17,7 @@ If `X` refers to a non-existent GUI name, a `VALUE ERROR` is reported.  If `Y` 
 
 The shy result `R` contains the previous values of the properties specified in `Y`.
 
-GUI objects are named **relative** to the current namespace.  A null value of `X` refers to the namespace in which the function is being evaluated.  The following examples are equivalent:
+GUI objects are named **relative** to the current namespace. A null value of `X` refers to the namespace in which the function is being evaluated.  The following examples are equivalent:
 ```apl
       'F1.B1' ⎕WS 'Caption' '&Ok'
       'B1' F1.⎕WS 'Caption' '&Ok'

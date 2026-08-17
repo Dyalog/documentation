@@ -14,8 +14,8 @@ The result `R` is a vector that reports the export type of the functions and ope
 When the path mechanism locates a referenced function (or operator) in the list of namespaces in the `⎕PATH` system variable, it examines the function's export type:
 
 |---|---|
-|0|This instance of the function is ignored and the search is resumed at the next namespace in the `⎕PATH` list.  Type-0 is typically used for functions residing in a utility namespace which are not themselves utilities, for example the private sub-function of a utility function.|
-|1|This instance of the function is executed in the namespace in which it was found and the search terminated.  The effect is exactly as if the function had been referenced by its full path name.|
+|0|This instance of the function is ignored and the search is resumed at the next namespace in the `⎕PATH` list. Type-0 is typically used for functions residing in a utility namespace which are not themselves utilities, for example the private sub-function of a utility function.|
+|1|This instance of the function is executed in the namespace in which it was found and the search terminated. The effect is exactly as if the function had been referenced by its full path name.|
 
 <h2 class="example">Example</h2>
 ```apl
@@ -28,10 +28,10 @@ When the path mechanism locates a referenced function (or operator) in the list 
 ```
 
 !!! Warning "Warning"
-    `⎕EXPORT` returns a Boolean result at present, but extra types 2, 3,... might be added in future.  This means that, while `⎕EXPORT` returns a Boolean result in the current version, this might not be the case in the future.  If you need a Boolean result, use `0≠` or an equivalent.  For example, use `(0≠⎕EXPORT ⎕NL 3 4)⌿⎕NL 3 4` to get a list of exported functions and operators.
+    `⎕EXPORT` returns a Boolean result at present, but extra types 2, 3,... might be added in future. This means that, while `⎕EXPORT` returns a Boolean result in the current version, this might not be the case in the future. If you need a Boolean result, use `0≠` or an equivalent. For example, use `(0≠⎕EXPORT ⎕NL 3 4)⌿⎕NL 3 4` to get a list of exported functions and operators.
 
 !!! Legacy "Legacy"
-    `⎕EXPORT` does not support derived functions and will not be extended to support them; nor will it be extended to support other types of functions that may be developed in the future. `⎕EXPORT` may therefore be considered an archaic feature.
+    `⎕EXPORT` does not support derived functions and will not be extended to support them; nor will it be extended to support other types of functions that might be developed in the future. `⎕EXPORT` can therefore be considered an archaic feature.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

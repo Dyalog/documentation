@@ -163,7 +163,7 @@ The following characters have special meaning:
 |\&          |represents the ampersand character                                                                                           |
 |\x{ *nnnn* }|represents a Unicode code point; *nnnn* is a hexadecimal sequence of characters yielding a value between 0x1 and 0x10FFFF.   |
 
-The above may be qualified so that matching text is folded, or mapped to upper- or lower-case, by using the **f**, **u**, and **l** modifiers respectively; the effect is as if the text was processed by `⎕C`. See [Case Convert](c-monadic.md).
+The above can be qualified so that matching text is folded, or mapped to upper- or lower-case, by using the **f**, **u**, and **l** modifiers respectively; the effect is as if the text was processed by `⎕C`. See [Case Convert](c-monadic.md).
 
 Character sequences beginning with the backslash place the modifier after the backslash; character sequences with no leading backslash add both a backslash and the modifier to the start of the sequence, for example:
 

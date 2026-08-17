@@ -13,13 +13,13 @@ To give the new object a name and position in the object hierarchy, use [dyadic 
 
 `⎕WC` attaches a GUI component to the current namespace, retaining any functions, variables and other namespaces that it can contain.  Monadic `⎕WC` is discussed in detail at the end of this section.
 
-If `Y` is a nested vector each element specifies a property.  The `Type` property (which specifies the class of the object) **must** be specified.  Most other properties take default values and need not be explicitly stated.  Properties (including `Type`) may be declared either positionally or with a keyword followed by a value. Note that `Type` must always be the first property specified. Properties are specified positionally by placing their values in `Y` in the order prescribed for an object of that type.
+If `Y` is a nested vector each element specifies a property.  The `Type` property (which specifies the class of the object) **must** be specified.  Most other properties take default values and need not be explicitly stated.  Properties (including `Type`) can be declared either positionally or with a keyword followed by a value. Note that `Type` must always be the first property specified. Properties are specified positionally by placing their values in `Y` in the order prescribed for an object of that type.
 
 If `Y` is a ref or the result of `⎕OR`, the new object is a complete copy of the other, including any child objects, namespaces, functions and variables that it contained at that time.
 
 The shy result `R` is the full name (starting `#.` or   `⎕SE`.) of the namespace.
 
-An object's name is specified by giving its full pathname in the object hierarchy.  At the top of the hierarchy is the `Root` object whose name is "`.`".  Below "`.`" there may be one or more "top-level" objects.  The names of these objects follow the standard rules for other APL objects as described in [Legal Names](../../../programming-reference-guide/introduction/names)
+An object's name is specified by giving its full pathname in the object hierarchy.  At the top of the hierarchy is the `Root` object whose name is "`.`".  Below "`.`" there can be one or more "top-level" objects.  The names of these objects follow the standard rules for other APL objects as described in [Legal Names](../../../programming-reference-guide/introduction/names)
 
 Names for sub-objects follow the same rules except that the character "`.`" is used as a delimiter to indicate parent/child relationships.
 
@@ -40,7 +40,7 @@ GUI objects are named **relative** to the current namespace.
 
 <h2 class="example">Examples</h2>
 
-Monadic `⎕WC` is used to *attach* a GUI component to an existing object.  The existing object must be a pure namespace or a GUI object.  The operation may be performed by changing space to the object or by running `⎕WC` *inside* the object using the *dot* syntax.  For example, the following statements are equivalent.
+Monadic `⎕WC` is used to *attach* a GUI component to an existing object.  The existing object must be a pure namespace or a GUI object.  The operation can be performed by changing space to the object or by running `⎕WC` *inside* the object using the *dot* syntax.  For example, the following statements are equivalent.
 ```apl
       )CS F
 #.F

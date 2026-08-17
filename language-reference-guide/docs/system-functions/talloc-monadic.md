@@ -11,7 +11,7 @@ To allocate from an existing token range, use [dyadic `⎕TALLOC`](talloc-dyadic
 
 ## Allocation (First element of `Y` is 1)
 
-If the first element of `Y` is 1,  the result `R` is a positive integer that identifies a range of numbers that may be used as token types for `⎕TPUT` and `⎕TGET`. That range is defined as the set of floating-point numbers between `R` and `R+1` (but not the integer end-points). Negated values of these number may also be used.
+If the first element of `Y` is 1,  the result `R` is a positive integer that identifies a range of numbers that can be used as token types for `⎕TPUT` and `⎕TGET`. That range is defined as the set of floating-point numbers between `R` and `R+1` (but not the integer end-points). Negated values of these number can also be used.
 
 In this case, the optional `Y[2]` is an arbitrary character vector that serves as a description for the allocated range of tokens.
 

@@ -29,7 +29,7 @@ The values are more fully explained in [Data Representation (Monadic)](data-repr
 
 Following items determine the shape of the mapped array. A value of `¯1` on any (but normally the first) axis in the shape is replaced by the system to mean: read as many complete records from the file as possible. Only one axis may be specified in this way. Note that if    `X` is a singleton, the data on the file is mapped as a scalar and only the first value on the file is accessible.
 
-Note that a raw mapped file may be updated *only* if its *file offset* is 0. Note also that Windows does not support mapped files of zero length.
+Note that a raw mapped file can be updated *only* if its *file offset* is 0. Note also that Windows does not support mapped files of zero length.
 
 <h2 class="example">Examples</h2>
 

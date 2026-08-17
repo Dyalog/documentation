@@ -27,11 +27,11 @@ Dyalog may enhance `⎕DMX` in future, thus potentially altering the list of val
 
 The effect of the system function is to interrupt execution.  The state indicator is cut back to exit from the function or operator containing the line that invoked `⎕SIGNAL`, or is cut back to exit the Execute (`⍎`) expression that invoked `⎕SIGNAL`. If executed within a nested dfn, the state indicator is cut back to exit from the capsule containing the line that invoked `⎕SIGNAL`. An error is then generated.
 
-An error interrupt may be trapped if the system variable `⎕TRAP` is set to intercept the event.  Otherwise, the standard system action is taken (which may involve cutting back the state indicator further if there are locked functions or operators in the state indicator).
+An error interrupt can be trapped if the system variable `⎕TRAP` is set to intercept the event.  Otherwise, the standard system action is taken (which might involve cutting back the state indicator further if there are locked functions or operators in the state indicator).
 
 <h2 class="example">Example</h2>
 
-If you are using the Microsoft .NET Framework, you may use `⎕SIGNAL` to throw an exception by specifying a value of 90 in `Y`. In this case, it must be a reference to a .NET object that is or derives from the Microsoft .NET class System.Exception. The following example illustrates a *constructor* function `CTOR` that expects to be called with a value for `⎕IO` (0 or 1)
+If you are using the Microsoft .NET Framework, you can use `⎕SIGNAL` to throw an exception by specifying a value of 90 in `Y`. In this case, it must be a reference to a .NET object that is or derives from the Microsoft .NET class System.Exception. The following example illustrates a *constructor* function `CTOR` that expects to be called with a value for `⎕IO` (0 or 1)
 
 ## `⎕SIGNAL 0`: Reset error-related system constants
 

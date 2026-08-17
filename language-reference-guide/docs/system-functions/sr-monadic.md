@@ -11,11 +11,11 @@ To define the exit keys and initial context, use [dyadic `⎕SR`](sr-dyadic.md).
 
 In versions of Dyalog APL that support asynchronous terminals, if the current screen is the SESSION screen, `⎕SR` immediately switches to the USER SCREEN and displays the form defined by `⎕SM`.
 
-In Dyalog APL/X, `⎕SR` causes the input cursor to be positioned in the USER window.  During execution of `⎕SR`, only the USER Window defined by `⎕SM` will accept input and respond to the keyboard or mouse.  The SESSION and any EDIT and TRACE Windows that may appear on the display are dormant.
+In Dyalog APL/X, `⎕SR` causes the input cursor to be positioned in the USER window.  During execution of `⎕SR`, only the USER Window defined by `⎕SM` will accept input and respond to the keyboard or mouse.  The SESSION and any EDIT and TRACE Windows that might appear on the display are dormant.
 
-In versions of Dyalog APL with GUI support, a single SM object may be defined.  This object defines the size and position of the `⎕SM` window, and allows `⎕SM` to be used in conjunctions with other GUI components.  In these versions, `⎕SR` acts as a superset of `⎕DQ` (see [Dequeue Events](dq.md)) but additionally controls the character-based user interface defined by `⎕SM`.
+In versions of Dyalog APL with GUI support, a single SM object can be defined.  This object defines the size and position of the `⎕SM` window, and allows `⎕SM` to be used in conjunctions with other GUI components.  In these versions, `⎕SR` acts as a superset of `⎕DQ` (see [Dequeue Events](dq.md)) but additionally controls the character-based user interface defined by `⎕SM`.
 
-`Y` is an integer vector that specifies the fields which the user may visit.  In versions with GUI support, `Y` may additionally contain the names of GUI objects with which the user may also interact.
+`Y` is an integer vector that specifies the fields which the user can visit.  In versions with GUI support, `Y` can additionally contain the names of GUI objects with which the user can also interact.
 
 The result `R` is the `EXIT_CONTEXT`.
 
@@ -31,7 +31,7 @@ If an element of `Y` is an integer scalar, it specifies a field as the index of 
 
 If an element of `Y` is an integer vector, it specifies a sub-field.  The first element in `Y` specifies the top-level field as above.  The next element is used to index a row in the form defined by `⊃⎕SM[Y[1];1]` and so forth.
 
-If an element of `Y` is a character scalar or vector, it specifies the name of a top-level GUI object with which the user may also interact.  Such an object must be a "top-level" object, that is, the `Root` object ('`.'`) or a `Form` or pop-up `Menu`.  This feature is implemented ONLY in versions of Dyalog APL with GUI support.
+If an element of `Y` is a character scalar or vector, it specifies the name of a top-level GUI object with which the user can also interact.  Such an object must be a "top-level" object, that is, the `Root` object ('`.'`) or a `Form` or pop-up `Menu`.  This feature is implemented ONLY in versions of Dyalog APL with GUI support.
 
 ## EXIT_KEYS
 

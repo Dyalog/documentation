@@ -15,7 +15,7 @@ For example, to map `⎕AV[17+⎕IO]` onto ANSI 'a' (code 97), element 17 of the
 
 `⎕NXLATE` is a non-Unicode (Classic Edition) feature and is retained in the Unicode Edition only for compatibility.
 
-`Y` is either a negative integer tie number associated with a tied native file or 0.  If `Y` is negative, `⎕NXLATE` returns the current translation vector associated with the corresponding native file.  If `Y` is 0, it refers to the translate vector used by `⎕DR` to convert to and from character data.
+`Y` is either a negative integer tie number associated with a tied native file or 0. If `Y` is negative, `⎕NXLATE` returns the current translation vector associated with the corresponding native file. If `Y` is 0, it refers to the translate vector used by `⎕DR` to convert to and from character data.
 
 The system treats a translate vector with value `(⍳256)-⎕IO` as meaning *no translation* and thus provides raw input/output bypassing the whole translation process.
 

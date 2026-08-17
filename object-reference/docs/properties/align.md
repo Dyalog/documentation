@@ -32,7 +32,7 @@ The default value of Align is `'Right'` for a vertical [Scroll](../objects/scrol
 For a [Scroll](../objects/scroll.md) object, Align also determines the direction of a [Scroll](../objects/scroll.md) object unless it is overridden by setting [HScroll](hscroll.md) or [VScroll](vscroll.md) directly. If neither [HScroll](hscroll.md) or VScroll is defined and Align is `'Top'` or `'Bottom'`, a horizontal scrollbar is provided. If neither [HScroll](hscroll.md) or [VScroll](vscroll.md) is defined and Align is `'None'`, `'Left'` or `'Right'`, a vertical scrollbar is provided.
 
 !!! note
-    The value of the Align property may **only** be assigned by [`⎕WC`](../../../language-reference-guide/system-functions/wc-dyadic) and may **not** be changed using [`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic).
+    The value of the Align property can **only** be assigned by [`⎕WC`](../../../language-reference-guide/system-functions/wc-dyadic) and **cannot** be changed using [`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic).
 
 **Application**
 

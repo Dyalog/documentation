@@ -376,7 +376,7 @@ C++ and some other languages will by default mangle (or decorate) function names
 
 ### Call by Ordinal Number
 
-Under Windows, a DLL may associate an *ordinal number* with any of its functions. This number may then be used to call the function as an alternative to calling it by name. Using `⎕NA` to call by ordinal number uses the same syntax but with the function name replaced with its ordinal number. To use such functions, supply a [custom name](na-dyadic.md).
+Under Windows, a DLL can associate an *ordinal number* with any of its functions. This number can then be used to call the function as an alternative to calling it by name. Using `⎕NA` to call by ordinal number uses the same syntax but with the function name replaced with its ordinal number. To use such functions, supply a [custom name](na-dyadic.md).
 
 ### Pointer Arguments
 

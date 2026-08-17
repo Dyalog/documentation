@@ -2,7 +2,7 @@
 
 **Description**
 
-This property determines the type of an object. Its value is a character vector containing a valid object type. The Type property is set by [`⎕WC`](../../../language-reference-guide/system-functions/wc-dyadic) and reported by [`⎕WG`](../../../language-reference-guide/system-functions/wg-dyadic), but may not be altered using [`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic).
+This property determines the type of an object. Its value is a character vector containing a valid object type. The Type property is set by [`⎕WC`](../../../language-reference-guide/system-functions/wc-dyadic) and reported by [`⎕WG`](../../../language-reference-guide/system-functions/wg-dyadic), but cannot be altered using [`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic).
 
 **Application**
 

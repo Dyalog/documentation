@@ -7,7 +7,7 @@ search:
 
 `Y` must be a simple character scalar, or vector which is taken to be the name of a defined function or operator in the active workspace. `⎕LOCK` does not apply to dfns or derived functions.
 
-The active referent to the name in the workspace is locked.  Stop, trace and monitor settings, established by the `⎕STOP`, `⎕TRACE` and `⎕MONITOR` functions, are cancelled.
+The active referent to the name in the workspace is locked. Stop, trace and monitor settings, established by the `⎕STOP`, `⎕TRACE` and `⎕MONITOR` functions, are cancelled.
 
 The function code is hidden and suspension within it is prevented.
 

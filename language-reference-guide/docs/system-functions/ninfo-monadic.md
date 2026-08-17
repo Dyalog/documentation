@@ -5,7 +5,7 @@ search:
 
 # <span>Native File Name</span> `R←⎕NINFO Y`{{key}}
 
-This function returns the name of one or more files or directories. `Y` may be:
+This function returns the name of one or more files or directories. `Y` can be:
 
 - a numeric scalar containing the tie number of a native file
 - a character vector or scalar containing a file or directory name that conforms to the naming rules of the host Operating System.
@@ -17,19 +17,19 @@ Use [dyadic `⎕NINFO`](ninfo-dyadic.md) to obtain additional file properties.
 
 If the Wildcard option is not enabled (the default) then `Y` specifies exactly one file or directory and must exist. In this case each element in `R` is the name of that file. If the name in `Y` does not exist, the function signals an error. On non-Windows platforms `*` and `?` are treated as normal characters. On Microsoft Windows an error will be signalled since neither are valid characters for file or directory names.
 
-If the Wildcard option is enabled, zero or more files and/or directories may match the pattern in `Y`. In this case each element in `R` is a vector of the names of the matching files. Note that no error will be signalled if no files match the pattern.
+If the Wildcard option is enabled, zero or more files and/or directories might match the pattern in `Y`. In this case each element in `R` is a vector of the names of the matching files. Note that no error will be signalled if no files match the pattern.
 
 When using the **Wildcard** option, matching of names is done case insensitively on Windows and macOS, and case sensitively on other platforms. The names `.` and `..` are excluded from any matches. The order in which the names match is not defined.
 
 ## Variant Options
 
-`⎕NINFO` may be applied using the _variant_ operator with the options **Wildcard** (the Principal option), **Recurse** and **ProgressCallback**.
+`⎕NINFO` can be applied using the _variant_ operator with the options **Wildcard** (the Principal option), **Recurse** and **ProgressCallback**.
 
 ### Wildcard Option (Boolean)
 
 |---|---|
 |`0` (default)|The name or names in `Y` identifies a specific file name.|
-|`1`|The name or names in `Y` that specify the *base name* and *extension* (see [`⎕NPARTS`](./nparts-monadic.md) ), may also contain the wildcard characters `?` and `*`. An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
+|`1`|The name or names in `Y` that specify the *base name* and *extension* (see [`⎕NPARTS`](./nparts-monadic.md) ), can also contain the wildcard characters `?` and `*`. An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
 
 !!! Hint "Hints and Recommendations"
     On a case-insensitive file system (default on Microsoft Windows and macOS), the canonical capitalisation of a filename can be obtained with `⊃⊃(⎕NINFO⍠1)filename`, though only the leaf name is canonicalised. For example:
@@ -57,7 +57,7 @@ The **ProgressCallback** variant option is described in the [Dyalog Programming 
 
 On platforms other than Microsoft Windows, file names are exposed by the operating system using UTF-8 encoding, which Dyalog translates internally to characters.
 
-In the Unicode Edition, if the UTF-8 encoding is invalid, Dyalog replaces each offending byte with a unique Unicode symbol (in the *Low Surrogate Area* of the Unicode charts) that is mapped back to the original byte by the other system functions (including `⎕NTIE` and `⎕NDELETE`) that take native file names as arguments. The display of a file name containing these mapped bytes may appear strange.
+In the Unicode Edition, if the UTF-8 encoding is invalid, Dyalog replaces each offending byte with a unique Unicode symbol (in the *Low Surrogate Area* of the Unicode charts) that is mapped back to the original byte by the other system functions (including `⎕NTIE` and `⎕NDELETE`) that take native file names as arguments. The display of a file name containing these mapped bytes might appear strange.
 
 In the Classic Edition, offending bytes are replaced by the `?` symbol, which means that the names reported do not accurately identify the files.
 

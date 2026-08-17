@@ -5,7 +5,7 @@ search:
 
 # <span>Object Attributes</span> `R←⎕AT Y`{{key}}
 
-`Y` can be a simple character scalar, vector or matrix, or a vector of character vectors representing the names of 0 or more defined functions or operators. This function returns information that is appropriate for Dyalog APL; for the form that emulates APL2, see [Object Attributes for APL2](at-dyadic.md).
+`Y` can be a simple character scalar, vector, or matrix, or a vector of character vectors representing the names of 0 or more defined functions or operators. This function returns information that is appropriate for Dyalog APL; for the form that emulates APL2, see [Object Attributes for APL2](at-dyadic.md).
 
 `Y` specifies one or more names. If `Y` specifies a single name as a character scalar, a character vector, or as a scalar enclosed character vector, the result `R` is a vector. If `Y` specifies one or more names as a character matrix or as a vector of character vectors `R` is a matrix with one row per name in `Y`.
 
@@ -48,7 +48,7 @@ The following values correspond to the syntax shown alongside:
 |`2`|Cannot suspend function |
 |`3`|Cannot display or suspend|
 
-`R[4]` or `R[;4]`: Each item specifies the _author_: a character vector - the user name of the user who last fixed (defined) the function.
+`R[4]` or `R[;4]`: Each item specifies the _author_: a character vector – the user name of the user who last fixed (defined) the function.
 
 <h2 class="example">Examples</h2>
 

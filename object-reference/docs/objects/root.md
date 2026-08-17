@@ -10,7 +10,7 @@ The [Caption](../properties/caption.md) and [IconObj](../properties/iconobj.md) 
 
 For the Root object, the value of [Posn](../properties/posn.md) is (0,0). The value of [Size](../properties/size.md) is either (100,100) if [Coord](../properties/coord.md) is `'Prop'`, or the size of the screen in pixels if [Coord](../properties/coord.md) is `'Pixel'`. [XRange](../properties/xrange.md) and [YRange](../properties/yrange.md) both have the value (0,100). The [DevCaps](../properties/devcaps.md) property reports the physical size of the screen in terms of both pixels and millimetres. It also reports the number of colours available.
 
-The [FontList](../properties/fontlist.md) property provides a list of all the character fonts that are available. The [PrintList](../properties/printlist.md) property provides a list of all the installed printers. These properties are *read-only* and may not be changed using [`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic)
+The [FontList](../properties/fontlist.md) property provides a list of all the character fonts that are available. The [PrintList](../properties/printlist.md) property provides a list of all the installed printers. These properties are *read-only* and cannot be changed using [`⎕WS`](../../../language-reference-guide/system-functions/ws-dyadic)
 
 As the default value of [Coord](../properties/coord.md) is `'Inherit'` for all other objects, the value of [Coord](../properties/coord.md) for `'.'` defines the default co-ordinate system. It may be either `'Prop'` (the default) or `'Pixel'`. `'Inherit'` and `'User'` are not allowed.
 

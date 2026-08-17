@@ -23,9 +23,9 @@ While APL is executing, events occur "naturally" as a result of user action or o
 
 `Y[1]` must specify an *existing* object.  If not, `⎕NQ` terminates with a `VALUE ERROR`.
 
-If `Y[2]` specifies a standard event type, subsequent elements must conform to the structure defined for that event type.  If not, `⎕NQ` terminates with a `SYNTAX ERROR`. If additional elements (beyond those defined for the event type) are supplied this will not cause an error, but is not recommended because Dyalog may extend the event message in the future.
+If `Y[2]` specifies a standard event type, subsequent elements must conform to the structure defined for that event type.  If not, `⎕NQ` terminates with a `SYNTAX ERROR`. If additional elements (beyond those defined for the event type) are supplied this will not cause an error, but is not recommended because Dyalog might extend the event message in the future.
 
-If `Y[2]` specifies a non-standard event type, `Y[3]` onwards (if present) may contain arbitrary information.  Although any event type not listed herein may be used, numbers in the range 0-1000 are reserved for future extensions.
+If `Y[2]` specifies a non-standard event type, `Y[3]` onwards (if present) can contain arbitrary information.  Although any event type not listed herein can be used, numbers in the range 0-1000 are reserved for future extensions.
 
 If `⎕NQ` is used monadically, or with a left argument of 0, its (shy) result is always an empty character vector.  If a left argument of 1 is specified, `⎕NQ` returns `Y` unchanged or a modified `Y` if the callback function returns its modified argument as a result.
 
