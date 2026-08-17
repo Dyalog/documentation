@@ -40,7 +40,7 @@ search:
 
 ## See Also
 
-- [Display of Arrays](../../programming-reference-guide/introduction/arrays/display-of-arrays) – how arrays appear in the session
+- [Display of Arrays](../../../programming-reference-guide/introduction/arrays/display-of-arrays) – how arrays appear in the session
 - [`⍕`](../primitive-functions/format.md) – Format: returns a character array (vector or matrix depending on input rank)
 
 <!-- Hidden search keywords -->
