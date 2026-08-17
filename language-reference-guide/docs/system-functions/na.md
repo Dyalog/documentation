@@ -47,7 +47,7 @@ div
 2.5
 ```
 
-It is imperative that care be taken when coding type declarations. A DLL *cannot* check types of data passed from APL. A wrong type declaration will lead to erroneous results or may even cause the workspace to become corrupted and crash. During development, you may wish to prevent this happening. See [ErrorOnExternalException](../../../dyalog-configuration-guide/configuration-parameters/configuration-parameters).
+It is imperative that care be taken when coding type declarations. A DLL *cannot* check types of data passed from APL. A wrong type declaration will lead to erroneous results or might even cause the workspace to become corrupted and crash. During development, you might want to prevent this happening. See [ErrorOnExternalException](../../../dyalog-configuration-guide/configuration-parameters/configuration-parameters).
 
 The full syntax for the right argument of `⎕NA` is:
 ```

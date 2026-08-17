@@ -16,7 +16,7 @@ If the name is followed by a line-number in square brackets, for example, `MyFn[
 
 ## Window Management (Standard)
 
-Unless Classic Dyalog mode is selected from the *Layout* menu, the Editor is a Multiple Document Interface (MDI) window that may be a stand-alone window, or be docked in the Session window. Each of the objects being edited is displayed in a separate sub-window. Individual edit windows are managed using standard MDI facilities.
+Unless Classic Dyalog mode is selected from the *Layout* menu, the Editor is a Multiple Document Interface (MDI) window that can be a stand-alone window, or be docked in the Session window. Each of the objects being edited is displayed in a separate sub-window. Individual edit windows are managed using standard MDI facilities.
 
 ![](img/editor-2.png)
 

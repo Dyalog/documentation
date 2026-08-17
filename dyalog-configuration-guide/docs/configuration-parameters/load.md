@@ -17,6 +17,6 @@ Having loaded the workspace or fixed the code, Dyalog executes the expression gi
 |`.aplc`|Class source code|`filename.Run 0⍴⊂''`|
 |`.apln`|Namespace source code|`filename.Run 0⍴⊂''`|
 
-where `filename` is the **Load** value without its extension. Nothing is executed for operator (`.aplo`) or interface (`.apli`) source files. (The argument `0⍴⊂''` may change in a future version.)
+where `filename` is the **Load** value without its extension. Nothing is executed for operator (`.aplo`) or interface (`.apli`) source files. (The argument `0⍴⊂''` might change in a future version.)
 
 Related parameters: [LX](lx.md).

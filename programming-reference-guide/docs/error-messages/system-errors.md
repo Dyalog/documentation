@@ -11,13 +11,13 @@ On Windows, if the **DYALOG_NOPOPUPS** parameter is 0 (the default), it will di
 
 ## aplcore file
 
-When a system error occurs, APL normally saves an *aplcore* file which may be sent to Dyalog for diagnosis. The name and location of the *aplcore* file may be specified by the [**AplCoreName**](../../../dyalog-configuration-guide/configuration-parameters/configuration-parameters) parameter. If this parameter is not specified, the *aplcore* file is named `aplcore` and is saved in the current working directory.
+When a system error occurs, APL normally saves an *aplcore* file which can be sent to Dyalog for diagnosis. The name and location of the *aplcore* file can be specified by the [**AplCoreName**](../../../dyalog-configuration-guide/configuration-parameters/configuration-parameters) parameter. If this parameter is not specified, the *aplcore* file is named `aplcore` and is saved in the current working directory.
 
 Normally a new *aplcore* will replace a file of the same name. However, if [**AplCoreName**](../../../dyalog-configuration-guide/configuration-parameters/configuration-parameters) contains an asterisk (*), the system will create a new file,  replacing the asterisk with a number incremented from the largest numbered file present.
 
 The number of *aplcore* files retained by the system is specified by the [**MaxAplCores**](../../../dyalog-configuration-guide/configuration-parameters/configuration-parameters) parameter. If [**MaxAplCores**](../../../dyalog-configuration-guide/configuration-parameters/configuration-parameters) is 0, the system will not save an *aplcore*. However, under Windows, if **DYALOG_NOPOPUPS** is 0, and the user checks the *Create an aplcore file* checkbox when the *System Error* dialog box is displayed, an *aplcore* will be saved regardless of the value of [**MaxAplCores**](../../../dyalog-configuration-guide/configuration-parameters/configuration-parameters). See **System Error Dialog Box**.
 
-Be aware that if your application contains any secure data, this data may be present in an *aplcore* file, and it may be appropriate to set both [**MaxAplCores**](../../../dyalog-configuration-guide/configuration-parameters/configuration-parameters) and **DYALOG_NOPOPUPS** to 0 to prevent such data being saved on disk.
+Be aware that if your application contains any secure data, this data might be present in an *aplcore* file, and it might be appropriate to set both [**MaxAplCores**](../../../dyalog-configuration-guide/configuration-parameters/configuration-parameters) and **DYALOG_NOPOPUPS** to 0 to prevent such data being saved on disk.
 
 Information that may prove useful in debugging the problem, including (where possible) the SI stack at the point where the *aplcore* was generated, is by default written to the end of *aplcore* files; the section begins with the string
 
@@ -137,7 +137,7 @@ goo[1]
 foo[1]
 ```
 
-Note: Dyalog recommends that enabling [**ErrorOnExternalException**](../../../dyalog-configuration-guide/configuration-parameters/configuration-parameters) should only be done while developing or debugging an application; ignoring such errors may result in corruption in the workspace which could result to unexpected errors later in the application.
+Note: Dyalog recommends that enabling [**ErrorOnExternalException**](../../../dyalog-configuration-guide/configuration-parameters/configuration-parameters) should only be done while developing or debugging an application; ignoring such errors might result in corruption in the workspace which could result to unexpected errors later in the application.
 
 ## What should I do if Dyalog hangs?
 

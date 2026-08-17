@@ -7,7 +7,7 @@ Whether text transferred to and from the Windows clipboard is treated as Unicode
 
 Valid values are:
 
-- `0` : the symbols in `⎕AV` are mapped to ASCII text (0-255); APL symbols are mapped to ASCII symbols by their position in the Dyalog APL font
+- `0` : the symbols in `⎕AV` are mapped to ASCII text (0–255); APL symbols are mapped to ASCII symbols by their position in the Dyalog APL font
 - `1` : the symbols in `⎕AV` are mapped to Unicode text; APL symbols are mapped to their genuine Unicode equivalents
 
 Default is `0`.
