@@ -117,21 +117,14 @@ For example, if you attempt to create an instance of a <code class="language-non
 ```apl
       ⎕USING←'System'
       DT←⎕NEW DateTime (100000 0 0)
-EXCEPTION
-      DT←⎕NEW DateTime (100000 0 0)
-         ^
-
-      ⎕EN
-90
-      ⎕EXCEPTION.Message
-Year, Month, and Day parameters describe an un-representable DateTime.
-
+EXCEPTION: Year, Month, and Day parameters describe an un-representable DateTime.
+      DT←⎕NEW DateTime(100000 0 0)
+         ∧
       ⎕EXCEPTION.Source
 mscorlib
-
       ⎕EXCEPTION.StackTrace
-at System.DateTime.DateToTicks(Int32 year, Int32 month, Int32 day)
-at System.DateTime..ctor(Int32 year, Int32 month, Int32 day)
+   at System.DateTime.DateToTicks(Int32 year, Int32 month, Int32 day)
+   at System.DateTime..ctor(Int32 year, Int32 month, Int32 day)
 ```
 
 ## Specifying Overloads

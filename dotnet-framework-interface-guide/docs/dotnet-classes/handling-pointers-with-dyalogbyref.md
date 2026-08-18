@@ -37,12 +37,10 @@ The <code class="language-nonAPL">ByRef</code> class has a single property calle
 30/04/2000 00:00:00
 ```
 
-If the <code class="language-nonAPL">Value</code> property is referenced without first setting it, a `VALUE ERROR` is returned:
+If the <code class="language-nonAPL">Value</code> property is referenced without first setting it, the result is `⎕NULL`:
 ```apl
       ptr1.Value
-VALUE ERROR
-      ptr1.Value
-     ^
+[Null]
 ```
 
 Returning to the example, the <code class="language-nonAPL">DivRem</code> method takes 3 parameters:
@@ -53,10 +51,7 @@ Returning to the example, the <code class="language-nonAPL">DivRem</code> method
 ```apl
       remptr←⎕NEW ByRef
       remptr.Value
-VALUE ERROR
-      remptr.Value
-     ^
-
+[Null]
       Math.DivRem 311 99 remptr
 3
       remptr.Value

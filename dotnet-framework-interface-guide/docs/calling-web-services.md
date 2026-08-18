@@ -103,8 +103,7 @@ Line `[6]` calls the `MakeBooking` method of the `GS` object, passing it the dat
 
 When the **Starting Sheet** button is pressed, the `SS` callback function is triggered:
 ```apl
-    ∇ SS;CCODE;YMD;M;SHEET;OK;COURSE;TEETIME;S;DATA;N
-        ;TIMES
+    ∇ SS;CCODE;YMD;M;SHEET;OK;COURSE;TEETIME;S;DATA;N;TIMES
 [1]    CCODE←⊃F.COURSE.SelItems/COURSECODES
 [2]    YMD←3↑F.DATE.(IDNToDate⊃DateTime)
 [3]    SHEET←GS.GetStartingSheet CCODE(⎕NEW DateTime YMD)

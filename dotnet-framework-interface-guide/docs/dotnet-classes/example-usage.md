@@ -5,48 +5,50 @@
 The .NET Namespace <code class="language-nonAPL">System.IO</code> (in the <code class="language-nonAPL">mscorlib</code> assembly) provides some useful facilities for manipulating files. For example, you can create a <code class="language-nonAPL">DirectoryInfo</code> object associated with a particular directory on your computer, call its <code class="language-nonAPL">GetFiles</code> method to obtain a list of files, and then get their <code class="language-nonAPL">Name</code> and <code class="language-nonAPL">CreationTime</code> properties:
 ```apl
       ⎕USING←,⊂'System.IO'
-      d←⎕NEW DirectoryInfo (⊂'C:\Dyalog')
+      d←⎕NEW DirectoryInfo (⊂2 ⎕NQ #'GetEnvironment' 'DYALOG')
+      d
+C:\Program Files\Dyalog\Dyalog APL-64 21.0 Unicode
 ```
 
-where `d` is an instance of the <code class="language-nonAPL">Directory</code> class, corresponding to the directory **[DYALOG]**.
+where `d` is an instance of the <code class="language-nonAPL">DirectoryInfo</code> class, corresponding to the Dyalog installation directory (**[DYALOG]**), here obtained from the <code class="language-nonAPL">DYALOG</code> environment variable.
 
 !!! Info "Information"
-    **[DYALOG]** refers to the directory in which Dyalog is installed; this example assumes **[DYALOG]** to be **C:\Dyalog**.
+    **[DYALOG]** refers to the directory in which Dyalog is installed.
 
 The <code class="language-nonAPL">GetFiles</code> method returns a list of files (more precisely, <code class="language-nonAPL">FileInfo</code> objects) that represent each of the files in the directory. Its optional argument specifies a filter. For example:
 ```apl
       d.GetFiles ⊂'*.exe'
-evalstub.exe	exestub.exe	dyalog.exe	dyalogrt.exe
-
+ bootstrap.exe  bootstrapc.exe  dyaedit.exe  dyalog.exe  dyalogc.exe  dyalogc64_unicode.exe  dyalogrt.exe  dyascript.exe
 ```
 
-The <code class="language-nonAPL">Name</code> property returns the name of the file associated with the <code class="language-nonAPL">File</code> object:
+The <code class="language-nonAPL">Name</code> property returns the name of the file associated with the <code class="language-nonAPL">FileInfo</code> object:
 ```apl
       (d.GetFiles ⊂'*.exe').Name
-evalstub.exe	exestub.exe	dyalog.exe	dyalogrt.exe
+┌─────────────┬──────────────┬───────────┬──────────┬───────────┬─────────────────────┬────────────┬─────────────┐
+│bootstrap.exe│bootstrapc.exe│dyaedit.exe│dyalog.exe│dyalogc.exe│dyalogc64_unicode.exe│dyalogrt.exe│dyascript.exe│
+└─────────────┴──────────────┴───────────┴──────────┴───────────┴─────────────────────┴────────────┴─────────────┘
 ```
 
 and the <code class="language-nonAPL">CreationTime</code> property returns its creation time, which is a <code class="language-nonAPL">DateTime</code> object:
 ```apl
-     (d.GetFiles ⊂'*.exe').CreationTime
- 05/03/2020 10:23:40  05/03/2020 10:23:28  14/11/2019 ...
+      (d.GetFiles ⊂'*.exe').CreationTime
+ 30/06/2026 09:16:40  30/06/2026 09:16:42  04/08/2026 19:49:30  04/08/2026 19:47:48  04/08/2026 19:49:28  04/08/2026 19:49:28  04/08/2026 19:46:38  04/08/2026 19:48:42
 ```
 
 Calling the <code class="language-nonAPL">GetFiles</code> overload that does not take any arguments (from Dyalog by supplying an argument of `⍬`) returns a complete list of files:
 ```apl
       files←d.GetFiles ⍬
-
 ```
 
 Taking advantage of namespace reference array expansion, an expression to display file names and their creation times is:
 ```apl
       files,[1.5]files.CreationTime
-relnotes.hlp	03/02/2004	11:47:02
-relnotes.cnt	03/02/2004	11:47:02
-def_uk.dse	22/03/2004	12:13:31
-DIALOGS.HLP	22/03/2004	12:13:31
-dyares32.dll	22/03/2004	12:13:40
-...
+ aplunicd.ini                          04/08/2026 19:11:22
+ bootstrap.exe                         30/06/2026 09:16:40
+ bootstrapc.exe                        30/06/2026 09:16:42
+ BottomRight.layout                    04/08/2026 19:49:26
+ bridge210-64_unicode.dll              04/08/2026 19:46:26
+ ...
 ```
 
 ## Sending an Email

@@ -380,13 +380,7 @@ The `MakeBooking` function checks that the requested tee-time is available (for 
     ∇ R←MakeBooking ARGS;CODE;COURSE;SLOT;TEETIME;GOLFID;COURSECODES;COURSES;INDEX;COURSEI;IDN;DATES;COMPS;IDATE;TEETIMES;GOLFERS;OLD;COMP;HOURS;MINUTES;NEAREST;TIME;NAMES;FREE;FREETIMES;I;J;DIFF
 [1]
 [2]   :Access WebMethod
-[3]   :Signature Booking←Int32 CourseCode,
-                         DateTime TeeTime,
-                         Boolean GimmeNearest,
-                         String Name1,
-                         String Name2,
-                         String Name3,
-                         String Name4
+[3]   :Signature Booking←Int32 CourseCode, DateTime TeeTime, Boolean GimmeNearest, String Name1, String Name2, String Name3, String Name4
 [4] 
 [5] 
 [6]  ⍝ If GimmeNearest=0, books (or fails) for specified time

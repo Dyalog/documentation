@@ -13,12 +13,13 @@ Typically, an enumerated constant would be used as a parameter to a method or to
 To create a Form with a particular border style, set its <code class="language-nonAPL">BorderStyle</code> property to one of the members of the <code class="language-nonAPL">FormBorderStyle</code> class:
 ```apl
       ⎕USING←'System'
-
       ⎕USING,←⊂'System.Windows.Forms,system.windows.forms.dll'
       f1←⎕NEW Form
       f1.BorderStyle←FormBorderStyle.FixedDialog
       FormBorderStyle.⎕NL ¯2 ⍝ List enum members
-      Fixed3D  FixedDialog  FixedSingle  FixedToolWindow  None  Sizable  SizableToolWindow
+┌───────┬───────────┬───────────┬───────────────┬────┬───────┬─────────────────┐
+│Fixed3D│FixedDialog│FixedSingle│FixedToolWindow│None│Sizable│SizableToolWindow│
+└───────┴───────────┴───────────┴───────────────┴────┴───────┴─────────────────┘
 ```
 
 An enum has a value that can be used instead of the enum itself when such usage is unambiguous. For example, the <code class="language-nonAPL">FormBorderStyle.Fixed3D</code> enum has an underlying value of <code class="language-nonAPL">2</code>:
