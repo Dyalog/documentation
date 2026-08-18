@@ -69,9 +69,9 @@ In [](#implicitargs):
 
 ## Conformability
 
-The arguments of a dyadic function _conform_ if the shape of each argument meets the requirements of the function, possibly after [singleton extension](#singleton-extension).
+The arguments of a dyadic function _conform_ if the shape of each argument meets the requirements of the function, possibly after [singleton extension](#scalar-and-singleton-extension).
 
-For a [dyadic scalar function](primitive-functions-by-category/#dyadic-scalar-functions), the arguments conform if they have the same shape, or if one of them is a [singleton](#singleton-extension) (in particular, a scalar), which is then extended to the shape of the other. Otherwise, the function signals a `RANK ERROR` if the arguments have different ranks, or a `LENGTH ERROR` if they have the same rank but different shapes.
+For a [dyadic scalar function](../primitive-functions-by-category/#dyadic-scalar-functions), the arguments conform if they have the same shape, or if one of them is a [singleton](#scalar-and-singleton-extension) (in particular, a scalar), which is then extended to the shape of the other. Otherwise, the function signals a `RANK ERROR` if the arguments have different ranks, or a `LENGTH ERROR` if they have the same rank but different shapes.
 
 Mixed (non-scalar) primitive functions impose their own conformance requirements, which are described with each function.
 
@@ -187,7 +187,7 @@ DE
 
 ## Axis Specification
 
-Axis specification can be applied to certain mixed primitive functions and to all [dyadic scalar functions](primitive-functions-by-category/#dyadic-scalar-functions). An integer axis identifies a specific axis along which the function is to be applied to one or both of its arguments. Mixed primitive functions have a default axis, either the first or last.
+Axis specification can be applied to certain mixed primitive functions and to all [dyadic scalar functions](../primitive-functions-by-category/#dyadic-scalar-functions). An integer axis identifies a specific axis along which the function is to be applied to one or both of its arguments. Mixed primitive functions have a default axis, either the first or last.
 
 <h2 class="example">Example</h2>
 ```apl

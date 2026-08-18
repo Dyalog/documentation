@@ -85,7 +85,7 @@ The assembly can now be created. This is done in one of the following ways:
 
 - Select **File** > **Export…** – this displays the **Create bound file** dialog box.<br />For this example, set the **File name** to _aplclasses_. The **Runtime application** checkbox allows you to choose to which of the two versions of the Dyalog dynamic link library the assembly will be bound – this example will use the Development version, so the checkbox should be cleared. The **Isolation Mode** drop-down list allows you to choose the [isolation mode](../implementation-details/isolation-mode.md)) – in this example, each host process will have a single workspace. Click **Save**. APL now makes the assembly; as it does this, information is displayed in the **Status** window. If any errors occur during this process, they will be reported in the **Status** window.
 
-- Use the [Bind method](../assemblies-namespaces-and-classes/#the-bind-method.md).
+- Use the [Bind method](../assemblies-namespaces-and-classes/#the-bind-method).
 
 ### aplclasses1.cs
 

@@ -1,4 +1,5 @@
 site_name: Documentation
+site_url: https://docs.dyalog.com/21.0/
 repo_url: https://github.com/dyalog/documentation
 copyright: Made with <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener"><strong>Material for MkDocs</strong></a><br/>Copyright &copy; 1982-$CURRENT_YEAR <strong><a href="https://dyalog.com" target="_blank" rel="noopener">Dyalog Limited</a></strong> (<a href="#" class="copy" onclick="navigator.clipboard.writeText(innerText);return false" title="Click to copy!">$BUILD_DATE $GIT_INFO</a>).<br/>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>Creative Commons Attribution 4.0 International</strong></a> licence.
 
@@ -22,10 +23,6 @@ extra_css:
   - documentation-assets/css/extra.css
   - documentation-assets/css/admonition-ucmdhelp.css
   - documentation-assets/css/windows-ui-guide.css
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-
 plugins:
   - privacy
   - search
@@ -59,8 +56,6 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.keys
   - pymdownx.superfences
-  - pymdownx.arithmatex:
-      generic: true
   - pymdownx.highlight:
       use_pygments: false
       pygments_lang_class: true
