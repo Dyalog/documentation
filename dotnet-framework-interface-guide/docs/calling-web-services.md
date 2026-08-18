@@ -89,7 +89,7 @@ When the **Book it!** button is pressed, the `BOOK` callback function is trigger
 [8]    :If BOOKING.OK
 [9]        M.Text←'Tee reserved for ',¯2↓⊃,/BOOKING.TeeTime.Players,¨⊂', '
 [10]       M.Text,←' at ',BOOKING.Course.Name
-[11]       M.Text,←' on ',BOOKING.TeeTime.Time. (ToLongDateString,' at ',ToShortTimeString)
+[11]       M.Text,←' on ',BOOKING.TeeTime.Time.(ToLongDateString,' at ',ToShortTimeString)
 [12]   :Else
 [13]       M.Text←BOOKING.(Course.Name,'', TeeTime.Time.(ToLongDateString, ' at ',ToShortTimeString),' ',Message)
 [14]   :EndIf
