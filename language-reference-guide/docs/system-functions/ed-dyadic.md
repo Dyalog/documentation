@@ -56,7 +56,7 @@ There is no Principal Option.
       A←3 11⍴'Hello World'
 ```
 
-In the first example, `⎕ED` will display the contents of `A` as [array notation](../../programming-reference-guide/introduction/arrays/array-notation.md) which the user can change. The user can double-click on `Hello` to open an edit window on an object named `Hello` (which will be a new function if `Hello` is currently undefined). Furthermore, the user can enter any arbitrary name and double-click to edit it. This might be undesirable in an application.
+In the first example, `⎕ED` will display the contents of `A` as [array notation](../../../programming-reference-guide/introduction/arrays/array-notation/) which the user can change. The user can double-click on `Hello` to open an edit window on an object named `Hello` (which will be a new function if `Hello` is currently undefined). Furthermore, the user can enter any arbitrary name and double-click to edit it. This might be undesirable in an application.
 ```apl
       '⋄' ⎕ED A
 ```

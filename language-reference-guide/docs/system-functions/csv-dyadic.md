@@ -9,7 +9,7 @@ Dyadic `⎕CSV` exports Comma Separated Value (CSV) data to a CSV file, or conve
 
 To convert CSV data into an array, use [monadic `⎕CSV`](csv-monadic.md).
 
-`⎕CSV` output is not affected by [`⎕PP`](pp); numeric values are always represented with full precision.
+`⎕CSV` output is not affected by [`⎕PP`](pp.md); numeric values are always represented with full precision.
 
 The left argument `X` is either:
 

@@ -68,7 +68,7 @@ When exporting, the APL data `Y` is converted to a corresponding JSON document `
 
 `R` is a character vector whose content depends upon the values of the [`Compact`](#variant-option-compact), [`Dialect`](#variant-option-dialect), and [`Charset`](#variant-option-charset) variant options.
 
-`⎕JSON` output is not affected by [`⎕PP`](pp); numbers are always represented with full precision.
+`⎕JSON` output is not affected by [`⎕PP`](pp.md); numbers are always represented with full precision.
 
 Some JSON values lack a direct APL equivalent (<code class="language-nonAPL">true</code>, <code class="language-nonAPL">false</code>, <code class="language-nonAPL">null</code>, JavaScript fragments), and some APL representations of datasets do not correspond to common JSON practice. Such cases are handled by [wrappers](#wrappers).
 
