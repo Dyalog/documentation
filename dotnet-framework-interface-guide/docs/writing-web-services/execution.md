@@ -1,6 +1,6 @@
 # Execution
 
-When your web service (or page) is invoked, ASP.NET requests an instance of the corresponding class from the assembly (DLL) that was created when it was compiled. The first time this happens for any Dyalog web service or web page, the Dyalog DLL is loaded into the ASP.NET host process and the namespace corresponding to your web service class is `)COPY`ed from the assembly. The Dyalog DLL then delivers an instance of this namespace to the client (calling) process. See [Implementation Details](../implementation-details/index.md) for further details.
+When your web service (or page) is invoked, ASP.NET requests an instance of the corresponding class from the assembly (DLL) that was created when it was compiled. The first time this happens for any Dyalog web service or web page, the Dyalog DLL is loaded into the ASP.NET host process and the namespace corresponding to your web service class is [`)COPY`](../../../language-reference-guide/system-commands/copy/)ed from the assembly. The Dyalog DLL then delivers an instance of this namespace to the client (calling) process. See [Implementation Details](../implementation-details/index.md) for further details.
 
 In general, every call on a method in a web service causes a new instance of the web server class to be created. If you need to maintain/update variables between calls, you need to write them to permanent storage.
 

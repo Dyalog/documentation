@@ -1,8 +1,8 @@
 # Interfaces
 
-_Interfaces_ define additional sets of functionality that classes can implement; however, interfaces contain no implementation except for static methods and static fields. An interface specifies a contract that a class implementing the interface must follow. Interfaces can contain shared (known as "static" in many compiled languages) or instance methods, shared fields, properties, and events. All interface members must be public. Interfaces cannot define constructors. The .NET runtime allows an interface to require that any class that implements it must also implement one or more other interfaces.
+_Interfaces_ define additional sets of functionality that classes can implement; however, interfaces contain no implementation except for static methods and static fields. An interface specifies a contract that a class implementing the interface must follow. Interfaces can contain shared (known as "static" in many compiled languages) or instance methods, shared fields, properties, and events. All interface members must be public. Interfaces cannot define constructors. The .NET Framework runtime allows an interface to require that any class that implements it must also implement one or more other interfaces.
 
-When you define a class, you list the interfaces which it supports following a colon after the class name. The value of `⎕USING` (possibly set by `:Using`) is used to locate interface names.
+When you define a class, you list the interfaces which it supports following a colon after the class name. The value of [`⎕USING`](../../../language-reference-guide/system-functions/using/) (possibly set by [`:Using`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/using/)) is used to locate interface names.
 
 If you specify that your class implements a certain interface, you must provide all of the members (methods, properties, and so on) defined for that interface. However, some interfaces are only marker interfaces and do not specify any members.
 

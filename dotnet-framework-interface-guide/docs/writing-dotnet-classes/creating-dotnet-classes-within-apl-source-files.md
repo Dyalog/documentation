@@ -2,7 +2,7 @@
 
 New .NET classes can be defined and used within an APL source file. This chapter provides a brief introduction to writing classes, aimed specifically at APL source files – see the _Dyalog APL Language Reference Guide_ for more information on writing classes in Dyalog.
 
-A class is defined by `:Class` and `:EndClass` statements:
+A class is defined by [`:Class`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class/) and `:EndClass` statements:
 
 - `:Class Name: Type` declares a new class called `Name`, which is based on the base class `Type`, which can be any valid .NET class.
 
@@ -10,9 +10,9 @@ A class is defined by `:Class` and `:EndClass` statements:
 
 The methods provided by the class are defined as function bodies enclosed within these statements. You can also define sub-classes or nested classes using nested `:Class` and `:EndClass` statements.
 
-A class specified in this way will automatically support the methods, properties and events that it inherits from its base class, together with any new public methods that are specified. However, the new class only inherits a default constructor (which is called with no parameters) and does not inherit all of the other private constructors from its base class. You can define a method to be a constructor using the `:Implements Constructor` declarative comment. Constructor overloading is supported, and you can define any number of different constructor functions in this way, but they must have unique parameter sets for the system to distinguish between them.
+A class specified in this way will automatically support the methods, properties, and events that it inherits from its base class, together with any new public methods that are specified. However, the new class only inherits a default constructor (which is called with no parameters) and does not inherit all of the other private constructors from its base class. You can define a method to be a constructor using the [`:Implements Constructor`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/implements/) declarative comment. Constructor overloading is supported, and you can define any number of different constructor functions in this way, but they must have unique parameter sets for the system to distinguish between them.
 
-You can create and use instances of a class by using the `⎕NEW` system function in statements elsewhere in the APL source file.
+You can create and use instances of a class by using the [`⎕NEW`](../../../language-reference-guide/system-functions/new/) system function in statements elsewhere in the APL source file.
 
 ## Exporting Functions as Methods
 
@@ -20,7 +20,7 @@ Within a `:Class` definition block, you can define private functions and public 
 
 The declaration statements for public functions perform the same task for APL source as is performed using the .NET Properties dialog box or by executing `SetMethodInfo` in the Dyalog Session prior to creating a .NET assembly. The following declaration statements can be used:
 
-- `:Access Public`<br />Specifies that the function is callable. This statement applies only to a .NET class or to a web page and is not applicable to a web service.
+- [`:Access Public`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/access/)<br />Specifies that the function is callable. This statement applies only to a .NET class or to a web page and is not applicable to a web service.
 
 - `:Access WebMethod`<br />Specifies that the function is callable as a web method. This statement applies only to a web service (**.asmx**). The statement is equivalent to:
 ```apl
@@ -30,11 +30,11 @@ The declaration statements for public functions perform the same task for APL so
 
 - `:Implements Constructor`<br />Specifies that the function is a constructor for a new .NET class. This function must appear between `:Class` and `:EndClass` statements and this applies only to a web page (**.aspx**). A constructor is called when you execute the `New` method in the class.
 
-- `:Signature result←fn type1 Name1, type2 Name2,...`<br />Declares the result of the method to have a given data type, if any. It also declares parameters to the method to have given data types and names. `Namex` is optional, and can be any well-formed name that identifies the parameter. This name will appear in the metadata and is made available to a client application as information. It is, therefore, sensible to choose meaningful names. The names you allocate to parameters have no other meaning and are not associated with the names of local variables that you might choose to receive them. However, it can be useful to use the same local names as the public names of your parameters.
+- [`:Signature result←fn type1 Name1, type2 Name2,...`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/signature/)<br />Declares the result of the method to have a given data type, if any. It also declares parameters to the method to have given data types and names. `Namex` is optional, and can be any well-formed name that identifies the parameter. This name will appear in the metadata and is made available to a client application as information. It is, therefore, sensible to choose meaningful names. The names you allocate to parameters have no other meaning and are not associated with the names of local variables that you might choose to receive them. However, it can be useful to use the same local names as the public names of your parameters.
 
 ## Example: Creating A .NET Class Using an APL Source File
 
-The following code illustrates how you may create a .NET Class using an APL source file. The example class is the same as in [Example 1](../tutorial/#example-1). The code (available in **[DYALOG]\Samples\aplclasses\aplclasses6.apln**) is:
+The following code illustrates how you can create a .NET Class using an APL source file. The example class is the same as in [Example 1](../tutorial/#example-1). The code (available in **[DYALOG]\Samples\aplclasses\aplclasses6.apln**) is:
 ```apl
 :Namespace APLClasses
 
@@ -57,8 +57,8 @@ This code defines a namespace called `APLClasses`. This namespace acts as a cont
 The following command shows how **aplclasses6.apln** is compiled to a .NET assembly using the <code class="language-nonAPL">/t:library</code> flag.
 ```nonAPL
 APLClasses>dyalogc /t:library aplclasses6.apln
-Dyalog Dyalog .NET Compiler 32bit Classic Mode Version 13.0.8690.0
-Copyright Dyalog Limited 2011
+Dyalog .NET component compiler 64 bit. Unicode Mode. Version 21.0.54393.0
+Copyright Dyalog Ltd 2000-2026
 APLClasses>
 ```
 
@@ -99,7 +99,7 @@ The `get` function is used to retrieve the value of the property and must be a n
 :EndProperty
 ```
 
-This declares a new property called `Name` whose data type is <code class="language-nonAPL">System.Double</code>. When defining a property, the data type can be any valid .NET type that can be located through `⎕USING`.
+This declares a new property called `Name` whose data type is <code class="language-nonAPL">System.Double</code>. When defining a property, the data type can be any valid .NET type that can be located through [`⎕USING`](../../../language-reference-guide/system-functions/using/).
 
 The following APL source file (**[DYALOG]\Samples\aplclasses\aplclasses7.apln**) shows how a property called `IndexOrigin` can be added to this example. Within the `:Property` block there are two functions called `get` and `set`; these functions use the previously‑described fixed names and syntax, and are used to reference and assign a new value respectively:
 ```apl

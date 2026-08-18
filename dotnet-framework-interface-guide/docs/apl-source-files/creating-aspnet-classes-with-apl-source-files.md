@@ -7,12 +7,12 @@ One of the purposes of APL Source files is to provide the ability to write ASP.N
 An ASP.NET web page typically consists of a mixture of HTML and code written in a scripting language. The script code is separated from the HTML by being embedded within <code class="language-nonAPL">&lt;script>...&lt;/script></code> tags, and normally appears in the <code class="language-nonAPL">&lt;head>...&lt;/head></code> section of the page. Only one block of script is allowed in a page. The script block normally consists of a collection of functions, which are invoked by some event on the page, or on an element of the page.
 
 APL source file code starts with a statement:
-```apl
+```nonAPL
 <script language="Dyalog" runat=server>
 ```
 
 and finishes with:
-```apl
+```nonAPL
 </script>
 
 ```
@@ -22,13 +22,13 @@ Typically, the APL source file code consists of callback functions that are atta
 ## Web Service Layout
 
 The first line in a web service script must be a declaration statement such as:
-```apl
+```nonAPL
 <%@ WebService Language="Dyalog" Class="ServiceName" %>
 ```
 
 where `ServiceName` is an arbitrary name that identifies your web service.
 
-The next statement must be a `:Class` statement that declares the name of the web service and the base class from which it inherits. The base class will normally be <code class="language-nonAPL">System.Web.Services.WebService</code>. For example:
+The next statement must be a [`:Class`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class/) statement that declares the name of the web service and the base class from which it inherits. The base class will normally be <code class="language-nonAPL">System.Web.Services.WebService</code>. For example:
 ```apl
 :Class ServiceName: System.Web.Services.WebService
 ```
@@ -48,11 +48,11 @@ The first time ASP.NET processes a script file, it first performs a compilation 
 
 ASP.NET associates the compiled assembly with the script file, and only recompiles it if/when it has changed.
 
-ASP.NET does not itself compile a script; it delegates this task to a specialised compiler that is associated with the language declared in the script. This association is made either in the application's **web.config** file or in the global **machine.config** file. Dyalog installs a default **web.config** file that includes these settings in the **[DYALOG]\Samples\asp.net** folder; for additional information, see [The web.config File](../../implementation-details/the-webconfig-file/).
+ASP.NET does not itself compile a script; it delegates this task to a specialised compiler that is associated with the language declared in the script. This association is made either in the application's **web.config** file or in the global **machine.config** file. Dyalog installs a default **web.config** file that includes these settings in the **[DYALOG]\Samples\asp.net** folder; for additional information, see [The web.config File](../implementation-details/the-webconfig-file.md).
 
 The Dyalog .NET Compiler is written in Dyalog.
 
-Although the compilation process takes some time, it is typically only performed once, so the performance of a web service or web page is not compromised. Once it has been compiled, ASP.NET redirects all subsequent requests for an APLsource file to its compiled assembly.
+Although the compilation process takes some time, it is typically only performed once, so the performance of a web service or web page is not compromised. Once it has been compiled, ASP.NET redirects all subsequent requests for an APL source file to its compiled assembly.
 
 !!! Info "Information"
     The word _compile_ in this process does not imply that your APL code is compiled into Microsoft Intermediate Language (MSIL). Although the process does generate some MSIL, your APL code will still be interpreted by the Dyalog DLL engine at run-time. The word _compile_ is used only to be consistent with the messages displayed by ASP.NET when it first processes the script.

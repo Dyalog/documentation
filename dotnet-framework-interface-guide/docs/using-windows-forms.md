@@ -24,7 +24,7 @@ The position of a form or a control is specified by its <code class="language-no
 
 Similarly, the size of an object is determined by its <code class="language-nonAPL">Size</code> property, which has a data type of <code class="language-nonAPL">System.Drawing.Size</code>. For this, you must create a <code class="language-nonAPL">System.Drawing.Size</code> object before assigning it to the <code class="language-nonAPL">Size</code> property of the control or form.
 
-Objects also have <code class="language-nonAPL">Top</code>(Y) and <code class="language-nonAPL">Left</code>(X) properties that can be specified or referenced  independently. These accept simple numeric values.
+Objects also have <code class="language-nonAPL">Top</code>(Y) and <code class="language-nonAPL">Left</code>(X) properties that can be specified or referenced independently. These accept simple numeric values.
 
 The position of a <code class="language-nonAPL">Form</code> can instead be determined by its <code class="language-nonAPL">DesktopLocation</code> property, which is specified relative to the taskbar. Another alternative is to set the <code class="language-nonAPL">StartPosition</code> property whose default setting is <code class="language-nonAPL">WindowsDefaultLocation</code>, which represents a computed best location.
 
@@ -42,19 +42,11 @@ The examples in this section can be found in the **[DYALOG]\Samples\winforms\WIN
 
 This example illustrates a simple modal dialog box.
 
-Function `EG1` illustrates how to create and use a simple modal dialog box. Much of the function is self-explanatory, but some points are noteworthy:
-
-- Lines `[1-2]` set `⎕USING` to include the .NET namespaces <code class="language-nonAPL">System.Windows.Forms</code> and <code class="language-nonAPL">System.Drawing</code>.
-
-- Lines `[6,8,9]` create a `Form` and two `Button` objects. As yet, they are unconnected. The constructor for both classes is defined to take no arguments, so the `⎕NEW` system function is only called with a class argument.
-
-- Lines `[14]` shows how the `Location` property is set by first creating a new `Point` object with a specific pair of (`x` and `y`) values.
-
-- Lines `[18]` computes the values for the `Point` object for `button2.Location`, from the values of the `Left`, `Height`, and `Top<` properties of `button1`; thus positioning `button2` relative to `button1`.
+Function `EG1` illustrates how to create and use a simple modal dialog box:
 
 ```apl
      ∇ EG1;form1;button1;button2;true;false;⎕USING;Z
-[1]    ⎕USING←,⊂'System.Windows.Forms, System.Windows.Forms.dll'
+[1]    ⎕USING←,⊂'System.Windows.Forms,System.Windows.Forms.dll'
 [2]    ⎕USING,←⊂'System.Drawing,System.Drawing.dll'
 [3]    true false←1 0
 [4]
@@ -71,19 +63,8 @@ Function `EG1` illustrates how to create and use a simple modal dialog box. Much
 [15]   ⍝ Set the text of button2 to "Cancel".
 [16]   button2.Text←'Cancel'
 [17]   ⍝ Set the position of the button relative to button1.
-[18]   button2.Location←⎕NEW Point, ⊂button1.Left button1. (Height+Top+10)
+[18]   button2.Location←⎕NEW Point,⊂button1.Left button1.(Height+Top+10)
 [19]
-```
-
-- Lines `[21,23]` sets the `DialogResult` property of `button1` and `button2` to `DialogResult.OK` and `DialogResult.Cancel` respectively. `DialogResult` is an enumeration with a predefined set of member values.
-
-- Similarly, lines `[32]` defines the `BorderStyle` property of the form using the <code class="language-nonAPL">FormBorderStyle</code> enumeration.
-
-- Lines `[38 40]` defines the `AcceptButton` and `CancelButton` properties of the `Form` to `button1` and `button2` respectively. These have the same effect as the Dyalog GUI _Default_ and _Cancel_ properties.
-
-- Lines `[42]` sets the `StartPosition` of the Form to be centre screen. This is specified using an enumeration; <code class="language-nonAPL">FormStartPosition</code>.
-
-```apl
 [20]   ⍝ Make button1's dialog result OK.
 [21]   button1.DialogResult←DialogResult.OK
 [22]   ⍝ Make button2's dialog result Cancel.
@@ -108,16 +89,6 @@ Function `EG1` illustrates how to create and use a simple modal dialog box. Much
 [41]   ⍝ Set start position of the form to centre of the screen.
 [42]   form1.StartPosition←FormStartPosition.CenterScreen
 [43]
-
-```
-
-- Lines `[45 46]` associate the buttons with the `Form`. The `Controls` property of the `Form` returns an object of type `Form.ControlCollection`. This class has an `Add` method that is used to add a control to the collection of controls that are owned by the `Form`.
-
-- Lines `[50]` calls the `ShowDialog` method (with no argument, hence the `⍬`). The result is an object of type <code class="language-nonAPL">Form.DialogResult</code>, which is an enumeration.
-
-- Lines `[52]` compares the result returned by `ShowDialog` with the enumeration member `DialogResult.OK` (the primitive function `=` has been extended to compare objects).
-
-```apl
 [44]   ⍝ Add button1 to the form.
 [45]   form1.Controls.Add button1
 [46]   ⍝ Add button2 to the form.
@@ -136,9 +107,33 @@ Function `EG1` illustrates how to create and use a simple modal dialog box. Much
      ∇
 ```
 
+Much of the function is self-explanatory, but some points are noteworthy:
+
+- Lines `[1-2]` set [`⎕USING`](../../language-reference-guide/system-functions/using/) to include the .NET namespaces <code class="language-nonAPL">System.Windows.Forms</code> and <code class="language-nonAPL">System.Drawing</code>.
+
+- Lines `[6,8,9]` create a `Form` and two `Button` objects. As yet, they are unconnected. The constructor for both classes is defined to take no arguments, so the [`⎕NEW`](../../language-reference-guide/system-functions/new/) system function is only called with a class argument.
+
+- Line `[14]` shows how the `Location` property is set by first creating a new `Point` object with a specific pair of (`x` and `y`) values.
+
+- Line `[18]` computes the values for the `Point` object for `button2.Location`, from the values of the `Left`, `Height`, and `Top` properties of `button1`; thus positioning `button2` relative to `button1`.
+
+- Lines `[21,23]` set the `DialogResult` property of `button1` and `button2` to `DialogResult.OK` and `DialogResult.Cancel` respectively. `DialogResult` is an enumeration with a predefined set of member values.
+
+- Similarly, line `[32]` defines the `BorderStyle` property of the form using the <code class="language-nonAPL">FormBorderStyle</code> enumeration.
+
+- Lines `[38 40]` define the `AcceptButton` and `CancelButton` properties of the `Form` to `button1` and `button2` respectively. These have the same effect as the Dyalog GUI _Default_ and _Cancel_ properties.
+
+- Line `[42]` sets the `StartPosition` of the Form to be centre screen. This is specified using an enumeration; <code class="language-nonAPL">FormStartPosition</code>.
+
+- Lines `[45 46]` associate the buttons with the `Form`. The `Controls` property of the `Form` returns an object of type `Form.ControlCollection`. This class has an `Add` method that is used to add a control to the collection of controls that are owned by the `Form`.
+
+- Line `[50]` calls the `ShowDialog` method (with no argument, hence the `⍬`). The result is an object of type <code class="language-nonAPL">Form.DialogResult</code>, which is an enumeration.
+
+- Line `[52]` compares the result returned by `ShowDialog` with the enumeration member `DialogResult.OK` (the primitive function `=` has been extended to compare objects).
+
 !!! Warning "Warning"
-    The use of modal forms in .NET can lead to problematic situations while debugging. As the control is passed to .NET the APL interpreter cannot regain control in the event of an unforeseen error. Dyalog Ltd recommends changing the code to something like the following until the code is fully tested:	
-	```apl
+    The use of modal forms in .NET Framework can lead to problematic situations while debugging. As the control is passed to .NET Framework the APL interpreter cannot regain control in the event of an unforeseen error. Dyalog Ltd recommends changing the code to something like the following until the code is fully tested:
+    ```apl
     [52]   form1.Visible←1
     [53]   :While form1.Visible ⋄ :endwhile
     ```
@@ -148,7 +143,7 @@ Function `EG1` illustrates how to create and use a simple modal dialog box. Much
 Functions `EG2` and `EG2A` illustrate how the _each_ operator (`¨`) and the extended namespace reference syntax in Dyalog can be used to produce more succinct, and no less readable, code:
 ```apl
      ∇ EG2;form1;label1;textBox1;true;false;⎕USING;Z
-[1]    ⎕USING←,⊂'System.Windows.Forms, System.Windows.Forms.dll'
+[1]    ⎕USING←,⊂'System.Windows.Forms,System.Windows.Forms.dll'
 [2]    ⎕USING,←⊂'System.Drawing,System.Drawing.dll'
 [3]    true false←1 0
 [4]
@@ -202,7 +197,7 @@ In `EG2A` (an "improved" version of `EG2`), line `[7]` takes advantage of the fa
 
 ## Non-Modal Forms
 
-Non-modal forms are displayed using the <code class="language-nonAPL">Run</code> method of the <code class="language-nonAPL">System.Windows.Forms.Application</code> object. This method is designed to be called once, and only once, during the life of an application, which seems problematic for during APL development. Fortunately, in practice the restriction is that <code class="language-nonAPL">Application.Run</code> can only be run once on a single system thread but it can be run successively on different system threads. During development, you can, therefore, test a function that calls <code class="language-nonAPL">Application.Run</code> by running it on a new APL thread using _spawn_ ([`&`](../language-reference-guide/primitive-operators/spawn/)) see [Threading](implementation-details/threading.md) for further details.
+Non-modal forms are displayed using the <code class="language-nonAPL">Run</code> method of the <code class="language-nonAPL">System.Windows.Forms.Application</code> object. This method is designed to be called once, and only once, during the life of an application, which seems problematic for during APL development. Fortunately, in practice the restriction is that <code class="language-nonAPL">Application.Run</code> can only be run once on a single system thread but it can be run successively on different system threads. During development, you can, therefore, test a function that calls <code class="language-nonAPL">Application.Run</code> by running it on a new APL thread using _spawn_ ([`&`](../../language-reference-guide/primitive-operators/spawn/)) see [Threading](implementation-details/threading.md) for further details.
 
 There are several examples of non-modal forms in **[DYALOG]\Samples**:
 
@@ -212,10 +207,13 @@ There are several examples of non-modal forms in **[DYALOG]\Samples**:
 
     - Function `Grid2` is an APL translation of the example given in the help file for the <code class="language-nonAPL">DataGrid</code> class in the .NET SDK Beta2.
 
-    - Function `Grid` is an APL translation of the example given in the file:<br />```nonAPL
-C:\Program Files\Microsoft.NET\SDK\v1.1\...
-QuickStart\winforms\samples\Data\Grid\vb\Grid.vb
-```
+    - Function `Grid` is an APL translation of the example given in the file:
+
+      ```nonAPL
+      C:\Program Files\Microsoft.NET\SDK\v1.1\...
+      QuickStart\winforms\samples\Data\Grid\vb\Grid.vb
+      ```
+
       This example uses Microsoft SQL Server 2000 to extract sample data from the sample NorthWind database. To run this example, you must have SQL Server running and you must modify function <code class="language-nonAPL">Grid_Load</code> to specify the name of your server.
 
 - GDIPLUS workspace<br />The **[DYALOG]\Samples\winforms\GDIPLUS.dws** workspace contains a sample that demonstrates the use of non-rectangular Forms. It is a direct translation into APL from a C# sample (WinForms-Graphics-GDIPlusShape) that was distributed on the Visual Studio .NET Beta 2 Resource CD.

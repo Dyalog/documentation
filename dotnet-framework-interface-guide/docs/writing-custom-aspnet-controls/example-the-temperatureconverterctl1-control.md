@@ -8,14 +8,14 @@ In this example, the `TemperatureConverterCtl1` control gathers together two tex
 
 The `TemperatureConverterCtl1` control contains other standard controls as child controls. A control that acts as a container must implement an interface called <code class="language-nonAPL">INamingContainer</code>.
 
-This interface does not require any methods; it merely acts as a marker. So the `:Class` statement specifies that it provides this interface:
+This interface does not require any methods; it merely acts as a marker. So the [`:Class`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class/) statement specifies that it provides this interface:
 ```apl
 :Class TemperatureConverterCtl1: Control, System.Web.UI.INamingContainer
 ```
 
 ## Child Controls
 
-Whenever ASP.NET initialises a <code class="language-nonAPL">Control</code>, it calls its <code class="language-nonAPL">CreateChildControls</code> method. The default <code class="language-nonAPL">CreateChildControls</code> method does not do anything, so we need to define a function called `CreateChildControls` with the appropriate public interface (no arguments and  no result):
+Whenever ASP.NET initialises a <code class="language-nonAPL">Control</code>, it calls its <code class="language-nonAPL">CreateChildControls</code> method. The default <code class="language-nonAPL">CreateChildControls</code> method does not do anything, so we need to define a function called `CreateChildControls` with the appropriate public interface (no arguments and no result):
 ```apl
      ∇ CreateChildControls
 [1]    :Access Public override
@@ -45,9 +45,9 @@ Whenever ASP.NET initialises a <code class="language-nonAPL">Control</code>, it 
      ∇
 ```
 
-Line `[4]` creates an instance of a <code class="language-nonAPL">LiteralControl</code> (a label) containing the text "Fahrenheit" with an HTML tag "<code class="language-nonAPL">&LT;h3></code>". <code class="language-nonAPL">Controls</code> is a property of the <code class="language-nonAPL">Control</code> class (from which TemperatureConverterCtl1 inherits) that returns a <code class="language-nonAPL">ControlCollection</code> object This has an <code class="language-nonAPL">Add</code> method whose job is to add the specified control to the list of child controls managed by the object.
+Line `[4]` creates an instance of a <code class="language-nonAPL">LiteralControl</code> (a label) containing the text "Fahrenheit" with an HTML tag "<code class="language-nonAPL">&LT;h3></code>". <code class="language-nonAPL">Controls</code> is a property of the <code class="language-nonAPL">Control</code> class (from which TemperatureConverterCtl1 inherits) that returns a <code class="language-nonAPL">ControlCollection</code> object. This has an <code class="language-nonAPL">Add</code> method whose job is to add the specified control to the list of child controls managed by the object.
 
-Lines `[5-6]` create a <code class="language-nonAPL">TextBox</code> child control containing the text "0", and  line `[7]` adds it to the child control list.
+Lines `[5-6]` create a <code class="language-nonAPL">TextBox</code> child control containing the text "0", and line `[7]` adds it to the child control list.
 
 Line `[8]` adds a second <code class="language-nonAPL">LiteralControl</code> to terminate the "<code class="language-nonAPL">&LT;h3></code>" tag.
 
@@ -56,7 +56,7 @@ Lines `[10-14]` do the same for "Centigrade".
 Lines `[16-17]` create a <code class="language-nonAPL">Button</code> control labelled "Fahrenheit To Centigrade". Line `[18]` associates the callback function `F2CConvertBtn_Click` with the button's <code class="language-nonAPL">onClick</code> event.
 
 !!! Info "Information"
-    `⎕OR`must be assigned to the function rather than its name.
+    `⎕OR` must be assigned to the function rather than its name.
 
 Line `[19]` adds the button to the list of child controls. Lines `[21-24]` create a "Centigrade To Fahrenheit" button in the same way.
 
@@ -114,7 +114,7 @@ The `F2CconvertBtn_Click` callback function converts from Fahrenheit to Centigra
 
 ## Using the TemperatureConverterCtl1 Control on a Page
 
-The text of the script file **[DYALOG]\Samples\asp.net\temp\temp1.aspx** is shown below. There is no difference between this example and the **simple.aspx** described in [Example: The SimpleCtl Control](example-the-simplectl-control/#using-the-simplectl-control).
+The text of the script file **[DYALOG]\Samples\asp.net\temp\temp1.aspx** is shown below. There is no difference between this example and the **simple.aspx** described in [Example: The SimpleCtl Control](example-the-simplectl-control.md#using-the-simplectl-control).
 ```nonAPL
 <%@ Register TagPrefix="Dyalog" Namespace="DyalogSamples" Assembly="temp" %>
 

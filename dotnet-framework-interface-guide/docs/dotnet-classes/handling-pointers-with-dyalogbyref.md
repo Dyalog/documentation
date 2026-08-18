@@ -2,9 +2,9 @@
 
 Certain .NET methods take parameters that are pointers, for example, the <code class="language-nonAPL">DivRem</code> method that is provided by the <code class="language-nonAPL">System.Math</code> class. This method performs an integer division, returning the quotient as its result, and the remainder in an address specified as a pointer by the calling program.
 
-APL does not have a mechanism for dealing with pointers, so Dyalog provides a .NET class for this purpose. This is the <code class="language-nonAPL">Dyalog.ByRef</code> class, which is provided by an Assembly that is automatically loaded by Dyalog).
+APL does not have a mechanism for dealing with pointers, so Dyalog provides a .NET class for this purpose. This is the <code class="language-nonAPL">Dyalog.ByRef</code> class, which is provided by an Assembly that is automatically loaded by Dyalog.
 
-To gain access to the Dyalog .NET namespace, it must be specified by `⎕USING`. The assembly (DLL) from which it is obtained (the **Dyalog.Net.Bridge.dll** file) does not need to be specified as it is automatically loaded when Dyalog starts:
+To gain access to the Dyalog .NET namespace, it must be specified by [`⎕USING`](../../../language-reference-guide/system-functions/using/). The assembly (DLL) from which it is obtained (the **Dyalog.Net.Bridge.dll** file) does not need to be specified as it is automatically loaded when Dyalog starts:
 ```apl
       ⎕USING←'System' 'Dyalog'
 ```
@@ -37,12 +37,10 @@ The <code class="language-nonAPL">ByRef</code> class has a single property calle
 30/04/2000 00:00:00
 ```
 
-If the <code class="language-nonAPL">Value</code> property is referenced without first setting it, a `VALUE ERROR` is returned:
+If the <code class="language-nonAPL">Value</code> property is referenced without first setting it, the result is `⎕NULL`:
 ```apl
       ptr1.Value
-VALUE ERROR
-      ptr1.Value
-     ^
+[Null]
 ```
 
 Returning to the example, the <code class="language-nonAPL">DivRem</code> method takes 3 parameters:
@@ -53,10 +51,7 @@ Returning to the example, the <code class="language-nonAPL">DivRem</code> method
 ```apl
       remptr←⎕NEW ByRef
       remptr.Value
-VALUE ERROR
-      remptr.Value
-     ^
-
+[Null]
       Math.DivRem 311 99 remptr
 3
       remptr.Value

@@ -6,7 +6,7 @@ The Dyalog .NET compiler creates a DLL containing a workspace, which itself cont
 
 <h4 class="example">Example</h4>
 
-The following script defines a class, instances of which would run using `⎕ML←2`, containing a single function `FOO` and a variable `X`.
+The following script defines a class, instances of which would run using [`⎕ML←2`](../../../language-reference-guide/system-functions/ml/), containing a single function `FOO` and a variable `X`.
 ```apl
 :Class MyClas
    ⎕ML←2
@@ -19,4 +19,4 @@ The following script defines a class, instances of which would run using `⎕ML�
 
 All expressions in the class script are executed by the Dyalog .NET Compiler when it creates the assembly. They are not executed when the web service is invoked.
 
-If your script contains a `⎕CY` statement, it will be executed by the Dyalog .NET Compiler when establishing the class. This can be used to import functions from other workspaces and remove the need to include them in the **.asmx** file.
+If your script contains a [`⎕CY`](../../../language-reference-guide/system-functions/cy/) statement, it will be executed by the Dyalog .NET Compiler when establishing the class. This can be used to import functions from other workspaces and remove the need to include them in the **.asmx** file.

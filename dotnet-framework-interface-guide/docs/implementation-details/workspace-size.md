@@ -5,12 +5,12 @@ By default, there is no limit on the size of the workspace used by the Dyalog DL
 The maximum workspace size can be specified by the MAXWS configuration parameter in both the development and run-time versions of Dyalog. The difference is that MAXWS must be specified for the host application, the application in which the Dyalog DLL is embedded.
 
 This is achieved by defining a Registry key named:
-```
+```nonAPL
 HKLM\Software\Dyalog\Embedded\<appname>
 ```
 
 or, for 32-bit Dyalog on 64-bit Windows only:
-```
+```nonAPL
 HKLM\Software\Wow6432Node\Dyalog\Embedded\<appname>
 ```
 

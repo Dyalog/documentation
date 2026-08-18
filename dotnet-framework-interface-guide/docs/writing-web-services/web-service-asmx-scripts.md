@@ -14,13 +14,13 @@ The first statement in the script file declares the language and the name of the
 
 The syntax of this first line is common to all web services, irrespective of the language in which they are written.
 
-A Dyalog web service script starts with a `:Class` statement and ends with an `:EndClass` statement. These statements are directives used by the Dyalog .NET Compiler and are specific to Dyalog.
+A Dyalog web service script starts with a [`:Class`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class/) statement and ends with an `:EndClass` statement. These statements are directives used by the Dyalog .NET Compiler and are specific to Dyalog.
 
 The `:Class` statement declares the name of the class (which must be the same as the name declared in the `WebService` statement) and the _base_ class from which it inherits, which is normally <code class="language-nonAPL">System.Web.Services.WebService</code>.
 ```apl
    :Class GolfService: System.Web.Services.WebService
 ```
 
-Following the `:Class` statement can be any number of APL expressions and function bodies, at the end of which must be an `:EndClass` statement. Internal sub-classes (nested classes) can be inlcuded within the main `:Class ... :EndClass` block.
+Following the `:Class` statement can be any number of APL expressions and function bodies, at the end of which must be an `:EndClass` statement. Internal sub-classes (nested classes) can be included within the main `:Class ... :EndClass` block.
 
-Functions usually take arguments and return results whose types must be known, therefore the statement `:Using System` must almost always appear immediately after the `:Class` statement to locate them.
+Functions usually take arguments and return results whose types must be known, therefore the statement [`:Using System`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/using/) must almost always appear immediately after the `:Class` statement to locate them.

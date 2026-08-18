@@ -14,7 +14,7 @@ A custom control is a .NET class that either inherits from the <code class="lang
 
 - The `TemperatureConverterCtl3` control illustrates how to generate events for the hosting page to catch and process (see [Example: The TemperatureConverterCtl3 Control](example-the-temperatureconverterctl3-control.md)).
 
-These examples, which are based on a series of articles called _Advanced ASP.NET Server-Side Controls_ by George Shepherd that appeared in the msdn magazine (October 2000, January 2001 and March 2001 issues), are implemented as Dyalog classes in a namespace called `DyalogSamples` in the workspace **[DYALOG]\Samples\asp.net\temp\bin\temp.dws**. The corresponding .NET assembly **[DYALOG]\Samples\asp.net\temp\bin\temp.dll**) was generated from this workspace.
+These examples, which are based on a series of articles called _Advanced ASP.NET Server-Side Controls_ by George Shepherd that appeared in the msdn magazine (October 2000, January 2001, and March 2001 issues), are implemented as Dyalog classes in a namespace called `DyalogSamples` in the workspace **[DYALOG]\Samples\asp.net\temp\bin\temp.dws**. The corresponding .NET assembly **[DYALOG]\Samples\asp.net\temp\bin\temp.dll** was generated from this workspace.
 ```apl
       )LOAD "C:\Program Files\Dyalog\Dyalog APL-64 18.2 Unicode\Samples\asp.net\temp\bin\temp.dws"
 C:\Program Files\Dyalog\Dyalog APL-64 18.2 Unicode\Samples\asp.net\temp\bin\temp.dws saved Tue Mar  8 13:20:48 2022

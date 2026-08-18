@@ -62,7 +62,7 @@ The HTML that is transmitted to the browser is:
 
 As expected, the contents of the <code class="language-nonAPL">&lt;script></code> section are not present. As both the Form and Button are intrinsic controls, ASP.NET has added certain attributes to the HTML that were not specified in the source code.
 
-The button now has the added attribute <code class="language-nonAPL">input type="submit"</code>, which means that pressing the button causes the contents of the Form to be transmitted back to the sever.
+The button now has the added attribute <code class="language-nonAPL">input type="submit"</code>, which means that pressing the button causes the contents of the Form to be transmitted back to the server.
 
 The Form now has <code class="language-nonAPL">method="post"</code> and <code class="language-nonAPL">action="intro1.aspx"</code> attributes, which means that, when the Form is submitted, the data is POSTed back to **intro1.aspx** (the page that generated the HTML).
 
@@ -79,14 +79,14 @@ When it is called, the argument supplied to `Reverse` contains two items. The fi
 ∇
 ```
 
-The code in the `Reverse` function is simple. The expression `(⊃args`) is a namespace reference (ref) to the button, and `(⊃args).Text` refers to its `Text` property whose value is reversed. `Reverse` could just as easily refer to the button by name, and use `Pressme.Text` instead.
+The code in the `Reverse` function is simple. The expression `(⊃args)` is a namespace reference (ref) to the button, and `(⊃args).Text` refers to its `Text` property whose value is reversed. `Reverse` could as easily refer to the button by name, and use `Pressme.Text` instead.
 
 [](#intro1afterbutton) shows the appearance of the web page after pressing the button.
 
 ![intro1 web page – after button is pressed](../img/s-firstwebpage-intro1-afterpress.png){ #intro1afterbutton }
 
 The HTML that is transmitted to the browser is:
-```
+```nonAPL
 <html>
 <body>
    <form name="ctrl1" method="post" action="intro1.aspx" id="ctrl1">
@@ -107,13 +107,13 @@ Returning to the `Reverse` function, note that the declaration statements at the
 ∇
 ```
 
-The `Reverse` function must be declared as a public member of the script. This is achieved with the statement `:Access Public`. The .NET runtime will only call the function if it possesses the correct signature, which is derived from its parameters and their types.
+The `Reverse` function must be declared as a public member of the script. This is achieved with the statement [`:Access Public`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/access/). The .NET Framework runtime will only call the function if it possesses the correct signature, which is derived from its parameters and their types.
 
-The required signature for a method connected to an event, such as the <code class="language-nonAPL">OnClick</code> event of a button, is that it takes two parameters; the first of which is of type <code class="language-nonAPL">System.Object</code> and the second of which is of type <code class="language-nonAPL">System.EventArgs</code>. The `Reverse` function declares its parameters with the statements `:Signature Reverse Object,EventArgs`
+The required signature for a method connected to an event, such as the <code class="language-nonAPL">OnClick</code> event of a button, is that it takes two parameters; the first of which is of type <code class="language-nonAPL">System.Object</code> and the second of which is of type <code class="language-nonAPL">System.EventArgs</code>. The `Reverse` function declares its parameters with the statements [`:Signature Reverse Object,EventArgs`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/signature/)
 
 !!! Info "Information"
-    The parameter declarations do not include the `System` prefix. This is because when the script is compiled the names are resolved using the current value of `⎕USING`. When the code is compiled, the default value for `⎕USING` is automatically defined to contain `System` along with most of the other namespaces that will be used when writing web pages. (Strictly, the first argument is expected to be of type <code class="language-nonAPL">System.Web.UI.WebControls.Button</code>, but as this type inherits ultimately from <code class="language-nonAPL">System.Object</code> the function signature is satisfied.)
+    The parameter declarations do not include the `System` prefix. This is because when the script is compiled the names are resolved using the current value of [`⎕USING`](../../../language-reference-guide/system-functions/using/). When the code is compiled, the default value for `⎕USING` is automatically defined to contain `System` along with most of the other namespaces that will be used when writing web pages. (Strictly, the first argument is expected to be of type <code class="language-nonAPL">System.Web.UI.WebControls.Button</code>, but as this type inherits ultimately from <code class="language-nonAPL">System.Object</code> the function signature is satisfied.)
 
 If the `Reverse` function is defined with a signature that does not match that expected signature for the `OnClick` callback, the function will not be run. In addition, if the function associated with the `OnClick` statement is not defined as a public method in the code, the page will appear to compile but the `Reverse` function will not get executed.
 
-Unlike web services, there is no requirement for a `:Class` or `:EndClass` statement in the script. This is because a file with an **.aspx** extension implicitly generates a class that inherits from <code class="language-nonAPL">System.Web.UI.Page</code>.
+Unlike web services, there is no requirement for a [`:Class`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class/) or `:EndClass` statement in the script. This is because a file with an **.aspx** extension implicitly generates a class that inherits from <code class="language-nonAPL">System.Web.UI.Page</code>.

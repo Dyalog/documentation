@@ -102,7 +102,7 @@ defines a <code class="language-nonAPL">Menu</code> that contains a <code class=
 
 ### Named and Un-named Controls
 
-Some objects are named, but others are not. For example: <code class="language-nonAPL">TextBox Name="txtFahrenheit"</code> defines a <code class="language-nonAPL">TextBox</code> called <code class="language-nonAPL">txtFahenheit</code>; whereas <code class="language-nonAPL">&lt;DockPanel ...></code> defines an unnamed <code class="language-nonAPL">DockPanel</code> object.
+Some objects are named, but others are not. For example: <code class="language-nonAPL">TextBox Name="txtFahrenheit"</code> defines a <code class="language-nonAPL">TextBox</code> called <code class="language-nonAPL">txtFahrenheit</code>; whereas <code class="language-nonAPL">&lt;DockPanel ...></code> defines an unnamed <code class="language-nonAPL">DockPanel</code> object.
 
 Objects are given names so that they can be referenced from the code that displays content in the user interface or handles the user actions. In this example, the code will read the content of the <code class="language-nonAPL">txtFahrenheit TextBox</code> but has no need to reference the <code class="language-nonAPL">DockPanel</code>.
 
@@ -122,7 +122,7 @@ This extract of XAML defines a Window control; a top-level window that is equiva
 
 The <code class="language-nonAPL">xmlns</code> attributes define the XML namespaces (effectively the vocabulary of the xml scheme) and are mandatory in an XAML document.
 
-The name of the <code class="language-nonAPL">TextBox</code> is <code class="language-nonAPL">Temp</code>, and its caption is **WFP Temperature Converter**. The <code class="language-nonAPL">SizeToContent</code> property is set to "WidthandHeight", which causes the <code class="language-nonAPL">TextBox</code> to automatically size itself to fit its content in both horizontal and vertical directions.
+The name of the <code class="language-nonAPL">Window</code> is <code class="language-nonAPL">Temp</code>, and its caption is **WPF Temperature Converter**. The <code class="language-nonAPL">SizeToContent</code> property is set to "WidthandHeight", which causes the <code class="language-nonAPL">Window</code> to automatically size itself to fit its content in both horizontal and vertical directions.
 
 ### The DockPanel
 ```xml
@@ -138,7 +138,7 @@ In this example, the <code class="language-nonAPL">DockPanel</code> is controlli
 The attachment of a particular child control is specified by setting its <code class="language-nonAPL">DockPanel.Dock</code> property. By default, the last control added to a <code class="language-nonAPL">DockPanel</code> is stretched to fill the remaining space when the window is expanded. In this example, the requirement is for a fixed-width scrollbar attached to the right edge, so the default is overridden by setting the <code class="language-nonAPL">LastChildFill</code> property to "False".
 
 ### The Menu
-```nonAPL
+```xml
     <Menu DockPanel.Dock="Top">
         <MenuItem Header="_Scale">
             <MenuItem Name="mnuFahrenheit" Header="_Fahrenheit" IsCheckable="True" IsChecked="True"/>
@@ -152,7 +152,7 @@ The attachment of a particular child control is specified by setting its <code c
 This XAML extract defines a <code class="language-nonAPL">Menu</code>. Setting <code class="language-nonAPL">Dock</code> to "Top" causes the <code class="language-nonAPL">Menu</code> as a whole to be docked, so that it appears like a menubar along the top of the <code class="language-nonAPL">DockPanel</code>. The <code class="language-nonAPL">Menu</code> contains a single <code class="language-nonAPL">MenuItem</code> labelled **Scale**, which itself contains two sub-items labelled **Fahrenheit** and **Centigrade**. The <code class="language-nonAPL">IsCheckable</code> property specifies whether the user can check the <code class="language-nonAPL">MenuItem</code>, and the <code class="language-nonAPL">IsChecked</code> property sets and reports its checked state. The underscore characters (for example, as in "`_Scale`") identify the following character as a keyboard shortcut.
 
 ### The Grid
-```nonAPL
+```xml
     <Grid Width="230" Margin="40,10,10,10">
     ...
     </Grid>
@@ -162,8 +162,8 @@ The <code class="language-nonAPL">Grid</code> object is another WPF layout contr
 
 The rows and columns of a <code class="language-nonAPL">Grid</code> are defined by collections of <code class="language-nonAPL">RowDefinition</code> and <code class="language-nonAPL">ColumnDefinition</code> objects.
 
-Here the XAML specifies that the Grid</code> contains three rows, each of which has a <code class="language-nonAPL">Height</code> set to "Auto", which means that its height depends upon the height of its content.
-```nonAPL
+Here the XAML specifies that the <code class="language-nonAPL">Grid</code> contains three rows, each of which has a <code class="language-nonAPL">Height</code> set to "Auto", which means that its height depends upon the height of its content.
+```xml
       <Grid.RowDefinitions>
         <RowDefinition Height="Auto"/>
         <RowDefinition Height="Auto"/>
@@ -171,8 +171,8 @@ Here the XAML specifies that the Grid</code> contains three rows, each of which 
       </Grid.RowDefinitions> 
 ```
 
-Similarly, there are three columns. The first column (which will contain labels) takes its width from its content, thatis, it will be just wide enough to display the longest label. The other columns for the edit boxes and buttons are specified to be 80px and 60px wide respectively. In this example, the content (<code class="language-nonAPL">TextBox</code> and <code class="language-nonAPL">Button</code> objects) will take their widths from that of the column:
-```nonAPL
+Similarly, there are three columns. The first column (which will contain labels) takes its width from its content, that is, it will be just wide enough to display the longest label. The other columns for the edit boxes and buttons are specified to be 80px and 60px wide respectively. In this example, the content (<code class="language-nonAPL">TextBox</code> and <code class="language-nonAPL">Button</code> objects) will take their widths from that of the column:
+```xml
      <Grid.ColumnDefinitions>
         <ColumnDefinition Width="Auto"/>
         <ColumnDefinition Width="80"/>
@@ -181,15 +181,15 @@ Similarly, there are three columns. The first column (which will contain labels)
 ```
 
 ### The Label Objects (Column 1)
-```nonAPL
+```xml
     <Label Grid.Row="0" Grid.Column="0" Content="Fahrenheit"/>
     <Label Grid.Row="1" Grid.Column="0" Content="Centigrade"/>
 ```
 
-Here the XAML specifies <code class="language-nonAPL">Label</code> objects <code class="language-nonAPL">Fahrenheit</code> and <code class="language-nonAPL">Centigrade</code>. Because they are defined within the<code class="language-nonAPL">&lt;Grid> ...&lt;/Grid></code> tags, they are child objects of the <code class="language-nonAPL">Grid</code>. It is necessary to specify in which cells they are displayed using their <code class="language-nonAPL">Grid.Row</code> and <code class="language-nonAPL">Grid.Column</code> properties. Cell co‑ordinates have zero origin.
+Here the XAML specifies <code class="language-nonAPL">Label</code> objects <code class="language-nonAPL">Fahrenheit</code> and <code class="language-nonAPL">Centigrade</code>. Because they are defined within the <code class="language-nonAPL">&lt;Grid> ...&lt;/Grid></code> tags, they are child objects of the <code class="language-nonAPL">Grid</code>. It is necessary to specify in which cells they are displayed using their <code class="language-nonAPL">Grid.Row</code> and <code class="language-nonAPL">Grid.Column</code> properties. Cell co‑ordinates have zero origin.
 
 ### The TextBox Objects (Column 2)
-```nonAPL
+```xml
     <TextBox Name="txtFahrenheit" Grid.Row="0" Grid.Column="1" Margin="5"/>
     <TextBox Name="txtCentigrade" Grid.Row="1" Grid.Column="1" Margin="5"/>
 
@@ -198,7 +198,7 @@ Here the XAML specifies <code class="language-nonAPL">Label</code> objects <code
 The XAML specifies two <code class="language-nonAPL">TextBox</code> objects called <code class="language-nonAPL">txtFahrenheit</code> and <code class="language-nonAPL">txtCentigrade</code> respectively. Setting <code class="language-nonAPL">Margin</code> to "5" means that a margin of 5px is applied around each edge; otherwise the text boxes would occupy the entire width of the column (80px). The effective width of each <code class="language-nonAPL">TextBox</code> will be 70px (80-2×5).
 
 ### The Button Objects (Column 3)
-```nonAPL
+```xml
     <Button Name="btnF2C" Grid.Row="0" Grid.Column="2" Content="F>C" Margin="5"/>
     <Button Name="btnC2F" Grid.Row="1" Grid.Column="2" Content="C>F" Margin="5"/>
     <Button Name="btnQuit" Grid.Row="2" Grid.Column="1" Content="Quit" Margin="5"/>
@@ -208,8 +208,8 @@ The XAML specifies three named <code class="language-nonAPL">Button</code> contr
 
 ### The ScrollBar Object
 
-This example uses a <code class="language-nonAPL">ScrollBar</code> that the user can use to scroll to input a value depending upon which of the two menu items (**Fahrenheit** or **Centigrade**) is checked. A <code class="language-nonAPL">ScrollBar</code> is not the ideal choice of control for this type of user interation, but this example is designed to look and behave like the original Dyalog GUI example, which was written for the original version of Dyalog APL for Windows.
-```nonAPL
+This example uses a <code class="language-nonAPL">ScrollBar</code> that the user can use to scroll to input a value depending upon which of the two menu items (**Fahrenheit** or **Centigrade**) is checked. A <code class="language-nonAPL">ScrollBar</code> is not the ideal choice of control for this type of user interaction, but this example is designed to look and behave like the original Dyalog GUI example, which was written for the original version of Dyalog APL for Windows.
+```xml
     <ScrollBar Name="scrTemp" DockPanel.Dock="Right"  Width="20" Orientation="Vertical" Minimum="1" Maximum="213">
     </ScrollBar>
 ```
@@ -531,7 +531,7 @@ Although this approach appears to be more verbose than when using XAML (a 120‑
 
 This code can be examined line-by-line.
 
-Lines `[2 5]` define `⎕USING` so that the appropriate .NET assemblies are on the search-path. The <code class="language-nonAPL">ScrollBar</code> control is in <code class="language-nonAPL">System.Windows.Controls.Primitives</code> and not <code class="language-nonAPL">System.Windows.Controls</code> like the others.
+Lines `[2 5]` define [`⎕USING`](../../../language-reference-guide/system-functions/using/) so that the appropriate .NET Framework assemblies are on the search-path. The <code class="language-nonAPL">ScrollBar</code> control is in <code class="language-nonAPL">System.Windows.Controls.Primitives</code> and not <code class="language-nonAPL">System.Windows.Controls</code> like the others.
 ```apl
 
 [2]    ⎕USING←,⊂'System.Windows.Controls,WPF/PresentationFramework.dll'
@@ -540,7 +540,7 @@ Lines `[2 5]` define `⎕USING` so that the appropriate .NET assemblies are on t
 [5]    ⎕USING,←⊂'System.Windows,WPF/PresentationCore.dll'
 ```
 
-Lines `[7-9]` create a `Window` and sets its `SizeToContent` and `Title` properties as in the XAML example. However, whereas with XAML the string `SizeToContent="WidthandHeight"` is sufficient, when using code it is necessary to get the Type correct. In this example, the `SizeToContent` property must be set to a specific member (`WidthAndHeight`) of the <code class="language-nonAPL">System.Windows.SizeToContent</code> enumeration. Other members of this Type are `Width`, `Height`, and `Manual` (the default).
+Lines `[7-9]` create a `Window` and set its `SizeToContent` and `Title` properties as in the XAML example. However, whereas with XAML the string `SizeToContent="WidthandHeight"` is sufficient, when using code it is necessary to get the Type correct. In this example, the `SizeToContent` property must be set to a specific member (`WidthAndHeight`) of the <code class="language-nonAPL">System.Windows.SizeToContent</code> enumeration. Other members of this Type are `Width`, `Height`, and `Manual` (the default).
 ```apl
 [7]    win←⎕NEW Window
 [8]    win.SizeToContent←SizeToContent.WidthAndHeight
@@ -606,7 +606,7 @@ Lines `[41-47]` create instances of 3 `RowDefinition` classes and add them to th
 [47]   gr.RowDefinitions.Add¨rd1 rd2 rd3
 ```
 
-Similarly, lines `[49-55]` create instances of 3 `ColumnDefinition` classes and add them to the `ColumnDefinitions` collection of the `Grid`. The `Width` property will not accept a simple numeric value, it must be a member of the `GridLength` structure. To set the `Width` to `80`, it is  necessary first to create an instance of a `GridLength` structure, giving this value as the argument to its constructor:
+Similarly, lines `[49-55]` create instances of 3 `ColumnDefinition` classes and add them to the `ColumnDefinitions` collection of the `Grid`. The `Width` property will not accept a simple numeric value, it must be a member of the `GridLength` structure. To set the `Width` to `80`, it is necessary first to create an instance of a `GridLength` structure, giving this value as the argument to its constructor:
 ```apl
 [49]   rc1←⎕NEW ColumnDefinition
 [50]   rc1.Width←GridLength.Auto
@@ -670,7 +670,7 @@ Lines `[114-115]` add the `ScrollBar` to the list of `Children` managed by the `
 [115]  dp.SetDock scrTemp Dock.Right
 ```
 
-Finally, the `DockPanel` is assigned to the `Content` property of the `Window`, and the `Window` displayed. A `Window` can contain just one control:
+Finally, the `DockPanel` is assigned to the `Content` property of the `Window`, and the `Window` displayed. A `Window` can contain only one control:
 ```apl
 
 [117]  win.Content←dp

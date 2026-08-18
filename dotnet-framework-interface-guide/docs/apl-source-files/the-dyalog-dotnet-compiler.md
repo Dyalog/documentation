@@ -11,7 +11,7 @@ Table: Version-specific Dyalog .NET Compilers { #Compilers }
 
 This program is called automatically by ASP.NET when a client application requests a web page (**.aspx**) or web service (.asmx) and, in these circumstances, always generates the corresponding .NET class. However, the Dyalog .NET Compiler can also be used to:
 
-- compile an APL source file into a workspace (**.dws**) – this can sunsequently be run using **dyalog.exe** or **dyalogrt.exe**.
+- compile an APL source file into a workspace (**.dws**) – this can subsequently be run using **dyalog.exe** or **dyalogrt.exe**.
 - compile an APL source file into a .NET class (**.dll**) – this can subsequently be used by any other .NET-compatible host language, such as C# or Visual Basic.
 - compile an APL source file into a native Microsoft Windows executable program (**.exe**), which can be run as a stand-alone executable. This program can be distributed (along with the Dyalog APL runtime DLL) as a packaged application, and does not require any of the additional support files and registry entries that are typically needed by the Dyalog run-time **dyalogrt.exe**. For more information, see the _Dyalog for Microsoft Windows Installation and Configuration Guide_.
     
@@ -22,42 +22,44 @@ This program is called automatically by ASP.NET when a client application reques
 
 The script is designed to be run from a command prompt. For example, if using the 64-bit Unicode edition, navigate to the appropriate directory and type `dyalogc64_unicode /?` to query its usage; the following output is displayed:
 ```nonAPL
-c:\Program Files\Dyalog\Dyalog APL-64 18.0 Unicode>dyalogc64_unicode /?
-Dyalog .NET Compiler 64 bit. Unicode Mode. Version 18.0.38524.0
-Copyright Dyalog Ltd 2000-2020
+C:\Program Files\Dyalog\Dyalog APL-64 21.0 Unicode>dyalogc64_unicode /?
+Dyalog .NET component compiler 64 bit. Unicode Mode. Version 21.0.54393.0
+Copyright Dyalog Ltd 2000-2026
 
 dyalogc.exe command line options:
 
-/?                Usage
-/r:file           Add reference to assembly
-/o[ut]:file       Output file name
-/res:file         Add resource to output file
-/icon:file        File containing main program icon
-/q                Operate quietly
-/v                Verbose
-/s                Treat warnings as errors
-/nonet            Creates a binary that does not use Microsoft .Net
-/runtime          Build a non-debuggable binary
-/lx:expression    Specify entry point (Latent Expression)
-/t:library        Build .Net library (.dll)
-/t:nativeexe      Build native executable (.exe). Default
-/t:workspace      Build dyalog workspace (.dws)
-/nomessages       Process does not use windows messages. Use when creating
-                  a process to run under IIS
-/console          Creates a console application
-/c                Creates a console application
-/multihost        Support multi-hosted interpreters
-/unicode          Creates an application that runs in a Unicode intepreter
-/wx:[0|1|3]       Sets ⎕WX for default code
-/a:file           Specifies a JSON file containing attributes to be attached
-       to the binary
-/i:Process        Set the isolation mode of a .NET Assembly
-/i:Assembly       Set the isolation mode of a .NET Assembly
-/i:AppDomain      Set the isolation mode of a .NET Assembly
-/i:Local          Set the isolation mode of a .NET Assembly
+-?                Usage
+-r:<file>         Add reference to assembly
+-o[ut]:<file>               Output file name
+-res:<file>                 Add resource to output file
+-icon:<file>                File containing main program icon
+-q                          Operate quietly
+-v                          Verbose
+-v2                         More verbose
+-s                          Treat warnings as errors
+-nonet                      Creates a binary that does not use Microsoft .NET
+-net                        Creates a binary that targets .NET Version>=5
+-framework                  Creates a binary that targets .NET Framework
+-runtime                    Build a non-debuggable binary
+-t:library                  Build .NET library (.dll)
+-t:workspace                Build dyalog workspace (.dws)
+-t:nativeexe                (Windows only) Build native executable (.exe). Default
+-t:standalonenativeexe      (Windows only) Build native executable (.exe). Default
+-lx:<text>                  (Windows only) Specify entry point (Latent Expression)
+-cmdline:<text>             Specify a command line to pass to the interpreter
+-nomessages                 (.NET Framework Only) Process does not use windows messages. Use when creating a process to run under IIS
+-console|-c                 Creates a console application
+-multihost                  Support multi-hosted interpreters
+-unicode                    Creates an application that runs in a Unicode interpreter
+-wx:[0|1|3]                 Sets ⎕WX for default code
+-a:file                     (.NET Framework Only) Specifies a JSON file containing attributes to be attached to the binary
+-i:Process                  (.NET Framework Only) Set the isolation mode of a .NET Assembly
+-i:Assembly                 (.NET Framework Only) Set the isolation mode of a .NET Assembly
+-i:AppDomain                (.NET Framework Only) Set the isolation mode of a .NET Assembly
+-i:Local                    (.NET Framework Only) Set the isolation mode of a .NET Assembly
 ```
 
-The <code class="language-nonAPL">/i</code> option specifies the [isolation mode](../implementation-details/isolation-mode/) – this overrides the setting in **web.config**.
+The <code class="language-nonAPL">/i</code> option specifies the [isolation mode](../implementation-details/isolation-mode.md) – this overrides the setting in **web.config**.
 
 The <code class="language-nonAPL">/a</code> option specifies the name of a JSON file that contains assembly information. For example:
 ```nonAPL

@@ -63,7 +63,7 @@ The utility function `LoadXAML` incorporates the 3 lines of code `[5-7]` used t
 
 ```
 
-Line `[1]` defines the .NET search path needed to access the WPF controls:
+Line `[1]` defines the .NET Framework search path needed to access the WPF controls:
 ```apl
 
 [1]    ⎕USING←,⊂'System.Windows.Controls,WPF/PresentationFramework.dll'
@@ -83,7 +83,7 @@ Lines `[5-6]` initialise a new global variable called `txtSource` to the value o
 [6]   txtSource←txt
 ```
 
-Line `[7]`creates a Binding Source object using [`2015⌶`](../../language-reference-guide/primitive-operators/i-beam/create-data-binding-source/) and assigns it to the `DataContext` property of the TextBox object. As it is a character vector, the exported Type for the bound variable `txtSource` is <code class="language-nonAPL">System.String</code>, which is appropriate for the <code class="language-nonAPL">Text</code> property of a <code class="language-nonAPL">TextBox</code>:
+Line `[7]` creates a Binding Source object using [`2015⌶`](../../../language-reference-guide/primitive-operators/i-beam/create-data-binding-source/) and assigns it to the `DataContext` property of the TextBox object. As it is a character vector, the exported Type for the bound variable `txtSource` is <code class="language-nonAPL">System.String</code>, which is appropriate for the <code class="language-nonAPL">Text</code> property of a <code class="language-nonAPL">TextBox</code>:
 ```apl
 
 [7]    win.txtBox.DataContext←2015⌶'txtSource'
@@ -150,7 +150,7 @@ The XAML describes the same <code class="language-nonAPL">Window</code> containi
 ```
 
 This time, the data binding expression
-```nonAPL
+```xml
       FontSize="{Binding sizeSource,Mode=OneWay}"/>
 ```
 
@@ -317,7 +317,7 @@ Learn to play the bouzouki!
 
 ```
 
-If you want to bind two properties of the same object to two APL variables, it has to be done by writing code as shown in this example, that is, using two separate Binding Source objects. This is because, using XAML, you can only associate a single Binding Source to an object. However, this minor restriction is easily surmounted by using an APL namespace as a Binding Source, as shown in [Example 4](#example-4-ui-specification-using-xaml).
+If you want to bind two properties of the same object to two APL variables, it has to be done by writing code as shown in this example, that is, using two separate Binding Source objects. This is because, using XAML, you can only associate a single Binding Source to an object. However, this minor restriction is easily surmounted by using an APL namespace as a Binding Source, as shown in [Example 4](#example-4-connected-properties).
 
 ## Example 4: Connected Properties
 
@@ -379,7 +379,7 @@ Line `[10]` creates a Binding Source object from the namespace `src` and a left 
 
 An alternative would be to assign it to the `DataContext` property of the `TextBox` object, but this would require one further line of code to identify it. The reason this works is that the `DataContext` property of a `TextBox` (and many other controls) is inherited from its parent `Window`. This feature allows a single Binding Source namespace to be used to specify data bindings between its component variables and any number of properties of any number of controls in the same `Window`.
 
-The left argument  of `(2015⌶)` is optional. Without it, the namespace will export all its variables using default binding types. In this case, because the binding type of `sizeSource` must be specified as <code class="language-nonAPL">Int32</code>, it is necessary to use a left argument, which means specifying all the variables involved.
+The left argument of `(2015⌶)` is optional. Without it, the namespace will export all its variables using default binding types. In this case, because the binding type of `sizeSource` must be specified as <code class="language-nonAPL">Int32</code>, it is necessary to use a left argument, which means specifying all the variables involved.
 
 ### Testing the Data Binding
 ```apl
@@ -471,15 +471,15 @@ Line `[8]` creates a Binding Source object and assigns it to the `DataContext` p
 The `DataContext` property is inherited by all child controls, so they all share the same Binding Source. Their different Paths to different values in the Binding Source are specified in the XAML:
 
 - The <code class="language-nonAPL">Text</code> property of the <code class="language-nonAPL">TextBox</code> called **filter** is bound to the variable <code class="language-nonAPL">Filter</code> by the expression <code class="language-nonAPL">Text="{Binding Filter,...</code>:
-    ```nonAPL
+    ```xml
     <TextBox Name="filter" Margin="5 Text="{Binding Filter,Mode=TwoWay,
     ```
 - The <code class="language-nonAPL">ItemsSource</code> property of the <code class="language-nonAPL">ListBox</code> called **all** is bound to the variable <code class="language-nonAPL">DyalogNames</code> by the expression <code class="language-nonAPL">ItemsSource="{Binding DyalogNames}"</code>:
-    ```
+    ```xml
     <ListBox Name="all" Width="135" Height="440" Margin="5" ItemsSource="{Binding DyalogNames}"/>
     ```
 - The <code class="language-nonAPL">ItemsSource</code> property of the <code class="language-nonAPL">ListBox</code> called **filtered** is bound to the variable <code class="language-nonAPL">FilteredList</code> by the expression <code class="language-nonAPL">ItemsSource="{Binding FilteredList}"</code>:
-    ```
+    ```xml
     <ListBox Name="filtered" Width="135" Height="440" Margin="5" ItemsSource="{Binding FilteredList}"/>
     ```
 
@@ -499,7 +499,7 @@ If the user types a single character, in this case "e", into the <code class="la
 
 ```
 
-When the callback runs, the variable `MySource.Filter`, which is bound to the <code class="language-nonAPL">Text</code> property of the <code class="language-nonAPL">TextBox</code>, will contain "e". The function calculates a mask `hits`, which identifies which members of the variable `DyalogNames`  contain this string. It then assigns that subset to the variable `MySource.FilteredList`. This is bound to the <code class="language-nonAPL">ItemsSource</code> property of the right-hand <code class="language-nonAPL">ListBox</code>, so the result is:
+When the callback runs, the variable `MySource.Filter`, which is bound to the <code class="language-nonAPL">Text</code> property of the <code class="language-nonAPL">TextBox</code>, will contain "e". The function calculates a mask `hits`, which identifies which members of the variable `DyalogNames` contain this string. It then assigns that subset to the variable `MySource.FilteredList`. This is bound to the <code class="language-nonAPL">ItemsSource</code> property of the right-hand <code class="language-nonAPL">ListBox</code>, so the result is:
 
 ![](../img/s-data-binding-eg5-2.png)
 
@@ -575,7 +575,7 @@ Then, Line `[5]` creates a binding source object from this array and assigns it 
 ### Testing the Data Binding
 ```apl
       )LOAD wpfintro
-      DataBinding.NETObjects.NETObjects
+      DataBinding.NetObjects.NetObjects
 
 ```
 
@@ -751,10 +751,10 @@ The function `Grid` is:
 
 ```
 
-As in [Example 8](#the-apl-code_7), the global variable `Wines` contains a vector of character vectors, each of which is the name of a wine. Lines `[2-4]` create a  matrix called `winelist` whose first column contains the names of the wines and whose column their (randomly generated) prices. As this is a global variable, the variable is expunged before being used to remove any previous data binding information that was associated with it.
+As in [Example 8](#the-apl-code_7), the global variable `Wines` contains a vector of character vectors, each of which is the name of a wine. Lines `[2-4]` create a matrix called `winelist` whose first column contains the names of the wines and whose second column contains their (randomly generated) prices. As this is a global variable, the variable is expunged before being used to remove any previous data binding information that was associated with it.
 
-`Grid[5]`creates the left argument for `(2015⌶)`, which defines the names and data types of the properties which the columns of the matrix `winelist` will be exposed as. In this case, the names of the paths are `Name` and `Price`, and their data types are both `System.Object`; this means that the first column will be exposed as `Name` and the second as `Price`, matching the path names specified in the XAML:
-```
+`Grid[5]` creates the left argument for `(2015⌶)`, which defines the names and data types of the properties which the columns of the matrix `winelist` will be exposed as. In this case, the names of the paths are `Name` and `Price`, and their data types are both `System.Object`; this means that the first column will be exposed as `Name` and the second as `Price`, matching the path names specified in the XAML:
+```xml
 <DataGridTextColumn Header="Wine" Binding="{Binding Name}"/>
 <DataGridTextColumn Header="Price" Binding="{Binding Price, StringFormat=C}" />
 ```

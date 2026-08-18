@@ -1,6 +1,6 @@
 # Implementation Details
 
-The Dyalog DLL is the Dyalog engine that hosts the execution of all .NET classes that have been written in Dyalog, including APL web bages and APL web services. The Dyalog DLL provides the interface between client applications (such as ASP.NET) and your APL code. It receives calls from client applications, and executes the appropriate APL code. It also works the other way, providing the interface between your APL code and any .NET classes that you call.
+The Dyalog DLL is the Dyalog engine that hosts the execution of all .NET classes that have been written in Dyalog, including APL web pages and APL web services. The Dyalog DLL provides the interface between client applications (such as ASP.NET) and your APL code. It receives calls from client applications, and executes the appropriate APL code. It also works the other way, providing the interface between your APL code and any .NET classes that you call.
 
 The Development DLL (the full developer version of the Dyalog DLL) contains the APL Session, Editor, Tracer and so on, and can be used to develop and debug an APL .NET class while it is executing. To gain access to the various workspace tools, such as the Workspace Explorer and the Search/Replace Dialog box, the corresponding DyaRes DLL must be present alongside (in the same directory as) the Development DLL.
 
