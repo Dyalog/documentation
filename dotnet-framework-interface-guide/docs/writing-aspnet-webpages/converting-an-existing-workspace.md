@@ -5,13 +5,13 @@ The **actfns.dws** workspace used in this example is supplied in the **[DYALOG]\
 **To convert an existing workspace**
 
 1. Replace the Dyalog GUI with the equivalent HTML Forms, as defined in one or more separate **.aspx** web pages.<br />For consistency, Dyalog Ltd recommends giving the ASP controls the same names as the GUI controls that they are replacing.
-2. Attach the names of APL callback functions to the appropriate ASP controls.This applies to any controls that will be involved in a postback operation, such as the **Submit** button. 
+2. Attach the names of APL callback functions to the appropriate ASP controls. This applies to any controls that will be involved in a postback operation, such as the **Submit** button. 
 3. Starting with a `CLEAR WS`, create a `Class` that represents a .NET class based upon <code class="language-nonAPL">System.Web.UI.Page</code>. For example, when converting **actfns.dws**, start by creating the class:
     ```apl
     )EDIT ○actuarial
     ```
 
-    then define `⎕USING` as follows:
+    then define [`⎕USING`](../../../language-reference-guide/system-functions/using/) as follows:
     ```apl
     :Using System
     :Using System.Web.UI,system.web.dll
@@ -38,7 +38,7 @@ The **actfns.dws** workspace used in this example is supplied in the **[DYALOG]\
 
 ## The Page_Load Function
 
-The `Page_Load` function must be declared as `:Access Public`. `Page_Load` must be spelt exactly as shown as it is this name that causes the function to supersede the base class <code class="language-nonAPL">Page_Load</code> method of the same name.
+The `Page_Load` function must be declared as [`:Access Public`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/access/). `Page_Load` must be spelt exactly as shown as it is this name that causes the function to supersede the base class <code class="language-nonAPL">Page_Load</code> method of the same name.
 
 For example, the `Page_Load` function of the actuarial class in **actfns.dws** is:
 ```apl
@@ -175,7 +175,7 @@ To make the `VALIDATE_INT` function available to the calling web page, it is exp
 
 Line `[4]` assigns its (2-element) argument to `source` and `args` respectively. Both are namespace references to .NET objects. `source` is the object that fired the event (<code class="language-nonAPL">CustomValidator_INT</code>). `args` is an object that represents the event. Its <code class="language-nonAPL">Value</code> property returns the text in the control being validated, in this case the control called <code class="language-nonAPL">EINT1</code>.
 
-Line `[6]` converts the text in the <code class="language-nonAPL">EINT</code> control to a number, using the <code class="language-nonAPL">ToDouble</code> method of the <code class="language-nonAPL">System.Convert</code> class. You could use `⎕VFI`, but the <code class="language-nonAPL">Convert</code> methods automatically cater for National Language numerical formats. This statement is executed within a `:Trap` control structure because the method will generate a .NET exception if the data in the field is not a valid number.
+Line `[6]` converts the text in the <code class="language-nonAPL">EINT</code> control to a number, using the <code class="language-nonAPL">ToDouble</code> method of the <code class="language-nonAPL">System.Convert</code> class. You could use `⎕VFI`, but the <code class="language-nonAPL">Convert</code> methods automatically cater for National Language numerical formats. This statement is executed within a [`:Trap`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/trap/) control structure because the method will generate a .NET exception if the data in the field is not a valid number.
 
 Lines `[8 11]` set the <code class="language-nonAPL">IsValid</code> property of the <code class="language-nonAPL">ServerValidateEventArgs</code> object `args` to `0` or `1` accordingly. This also sets the <code class="language-nonAPL">IsValid</code> property of the validation control represented by `source`. The system will automatically display the error message associated with any validation control whose `IsValid` property is 0. Furthermore, the page itself has an <code class="language-nonAPL">IsValid</code> property, which is the logical-AND of all the <code class="language-nonAPL">IsValid</code> properties of all the validation controls on the page. This is used later by the calculation function `CALC_FSLTAB_VALUES`.
 
@@ -200,7 +200,7 @@ All the `VALIDATE_xxx` functions have the same .NET signature as `VALIDATE_INT`.
      ∇
 ```
 
-`VALIDATE_TERM`, which validates the **Endowment Term** field, has two levels of checking. The first check – that the user has entered an integer number – is performed by lines `[10-15]` in the same way as in the previous examples, using the <code class="language-nonAPL">ToInt32</code> method of the <code class="language-nonAPL">System.Convert</code> class within a `:Trap` control structure. However, validation of the **Endowment Term** field depends upon the value of another field,that is, **Initial Age**. Not only must the user enter an integer, but also its value must be between 10 and (90-`AGE`) where `AGE` is the value in the **Initial Age** field. However, if the user has entered an incorrect value in the Initial Age field, then the second level of validation cannot be performed:
+`VALIDATE_TERM`, which validates the **Endowment Term** field, has two levels of checking. The first check – that the user has entered an integer number – is performed by lines `[10-15]` in the same way as in the previous examples, using the <code class="language-nonAPL">ToInt32</code> method of the <code class="language-nonAPL">System.Convert</code> class within a `:Trap` control structure. However, validation of the **Endowment Term** field depends upon the value of another field, that is, **Initial Age**. Not only must the user enter an integer, but also its value must be between 10 and (90-`AGE`) where `AGE` is the value in the **Initial Age** field. However, if the user has entered an incorrect value in the Initial Age field, then the second level of validation cannot be performed:
 ```apl
      ∇ VALIDATE_TERM MSG;source;args
 [1]    ⍝ Validates Endowment Term
@@ -228,7 +228,7 @@ At this stage it is worth reviewing the sequence of events that occurs when a us
 
 1. The page, including all the contents of its fields, is sent back to the ASP.NET server using an http <code class="language-nonAPL">POST</code> command.
 2. The postback causes the creation of a new instance of the page, which is represented by a new clone of the `actuarial` namespace.
-3. The creation of a new page instance raises the <code class="language-nonAPL">Page_Load</code> event, which invokes the <code class="language-nonAPL">Page_Load</code> method associated with the <code class="language-nonAPL">Page</code> class, or an override method is one is specified. In this example, it calls the `Page_Load` function in the newly-cloned instance of the `actuarial` namespace. The `Page_Load` function typically deals with initialisation, such as opening a component file or establishing a connection to a data source. In this example, it does nothing on a postback.
+3. The creation of a new page instance raises the <code class="language-nonAPL">Page_Load</code> event, which invokes the <code class="language-nonAPL">Page_Load</code> method associated with the <code class="language-nonAPL">Page</code> class, or an override method if one is specified. In this example, it calls the `Page_Load` function in the newly-cloned instance of the `actuarial` namespace. The `Page_Load` function typically deals with initialisation, such as opening a component file or establishing a connection to a data source. In this example, it does nothing on a postback.
 4. Because the **Calculate** button was pressed (see [Forcing Validation](#forcing-validation)), each of the <code class="language-nonAPL">CustomValidator</code> controls on the page raises an <code class="language-nonAPL">OnServerValidate</code> event, which calls the associated function in the current instance of the page. These events occur in the order the controls are defined within the page. Built-in validation controls, including any <code class="language-nonAPL">RequiredFieldValidator</code> controls, are invoked first, potentially in the browser prior to the postback.
 5. The control that caused the postback raises an appropriate event, which then fires the associated callback function.
 6. After all the control events have been raised and processed the <code class="language-nonAPL">Page_UnLoad</code> event is raised and the associated function (if any) is invoked. This function is a practical place to implement termination code, such as closing a component file or data source.

@@ -15,7 +15,7 @@ The following APL source file (**eg1.apln**) illustrates the simplest possible G
 :EndNamespace
 ```
 
-The code must be contained within `:NameSpace` and `:EndNamespace` statements, and must define a [`⎕LX`](../../language-reference-guide/system-functions/lx/) either in the code itself or as a parameter to the `dyalogc` command.
+The code must be contained within [`:NameSpace`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/namespace/) and `:EndNamespace` statements, and must define a [`⎕LX`](../../../language-reference-guide/system-functions/lx/) either in the code itself or as a parameter to the `dyalogc` command.
 
 This is compiled to a Windows executable (**.exe**) using **dyalogc** and run from the same command window (see [](#eg1apln)).
 
@@ -39,13 +39,13 @@ The following APL source file (**eg2.apln**) illustrates the simplest possible a
 
 The code must be contained within `:NameSpace` and `:EndNamespace` statements, and must define a `⎕LX` either in the code itself or as a parameter to the `dyalogc` command.
 
-This  is compiled to a Windows executable (**.exe**) using **dyalogc** and run from the same command window (see [](#eg2apln)). The `/console` flag instructs the Dyalog .NET Compiler to create a console application that runs from a command prompt. In this case, default APL output that would normally be displayed in the Session window is instead displayed in the command window from which the program was run.
+This is compiled to a Windows executable (**.exe**) using **dyalogc** and run from the same command window (see [](#eg2apln)). The `/console` flag instructs the Dyalog .NET Compiler to create a console application that runs from a command prompt. In this case, default APL output that would normally be displayed in the Session window is instead displayed in the command window from which the program was run.
 
 ![Compiling and running APL Source file <strong>eg2.apln</strong>](../img/s-aplscript-eg2.png){ #eg2apln }
 
 ## Defining Namespaces
 
-At least one namespace must specified in an APL source file. Namespaces are specified in an APL source file using the `:Namespace` and `:EndNamespace` statements. Although you can use [`⎕NS`](../../language-reference-guide/system-functions/ns/) and [`⎕CS`](../../language-reference-guide/system-functions/cs/) within functions inside an APL source file, you should not use these system functions outside function bodies; such use is not prevented, but the results will be unpredictable.
+At least one namespace must be specified in an APL source file. Namespaces are specified in an APL source file using the `:Namespace` and `:EndNamespace` statements. Although you can use [`⎕NS`](../../../language-reference-guide/system-functions/ns/) and [`⎕CS`](../../../language-reference-guide/system-functions/cs/) within functions inside an APL source file, you should not use these system functions outside function bodies; such use is not prevented, but the results will be unpredictable.
 
 `:Namespace Name` introduces a new namespace relative to the current namespace called `Name`.
 

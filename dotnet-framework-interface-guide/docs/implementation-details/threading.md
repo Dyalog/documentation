@@ -13,7 +13,7 @@ The way that system threads are allocated to APL threads differs between the cas
 
 In this case, all calls into the Dyalog DLL are initiated by Microsoft .NET.
 
-When a .NET system thread first needs to run an APL function, APL starts a new APL thread for it, and executes the function in that APL thread. For example, if the first call is a request to create a new instance of an APL .NET object, its constructor function will be run in APL thread 1. An entry is made in the internal thread table that associates the originating system thread with APL thread 1. When the constructor function terminates, the APL thread is retained so that it is available for a subsequent call on its associated system thread. In this respect, the automatically‑created APL thread differs from an APL thread that was created using the _spawn_ operator [`&`](../../language-reference-guide/primitive-operators/spawn/).
+When a .NET system thread first needs to run an APL function, APL starts a new APL thread for it, and executes the function in that APL thread. For example, if the first call is a request to create a new instance of an APL .NET object, its constructor function will be run in APL thread 1. An entry is made in the internal thread table that associates the originating system thread with APL thread 1. When the constructor function terminates, the APL thread is retained so that it is available for a subsequent call on its associated system thread. In this respect, the automatically‑created APL thread differs from an APL thread that was created using the _spawn_ operator [`&`](../../../language-reference-guide/primitive-operators/spawn/).
 
 When a subsequent call comes in, APL locates the originating system thread in its internal thread table, and runs the appropriate APL function in the corresponding APL thread. Once again, when the function terminates, the APL thread is retained for future use. If a call comes in on a new system thread, a new APL thread is created.
 
@@ -28,7 +28,7 @@ In these cases, all calls to Microsoft .NET are initiated by Dyalog. However, th
 
 When you make a .NET call from APL thread 0, the .NET call is run on the same system thread that is running APL itself.
 
-When you make a .NET call from any other APL thread, the .NET call is run on a different system thread. Once again, the correspondence between the APL thread number and the associated system thread is maintained (for the duration of the APL thread) so that there are no thread/GUI ownership problems. Furthermore, APL callbacks invoked by .NET calls back into APL will automatically be routed to the appropriate APL thread. Unlike a call to a DLL using `⎕NA`, there is no way to control whether the system uses a different system thread for a .NET call. It will always do so if called from an APL thread other than APL thread 0.
+When you make a .NET call from any other APL thread, the .NET call is run on a different system thread. Once again, the correspondence between the APL thread number and the associated system thread is maintained (for the duration of the APL thread) so that there are no thread/GUI ownership problems. Furthermore, APL callbacks invoked by .NET calls back into APL will automatically be routed to the appropriate APL thread. Unlike a call to a DLL using [`⎕NA`](../../../language-reference-guide/system-functions/na/), there is no way to control whether the system uses a different system thread for a .NET call. It will always do so if called from an APL thread other than APL thread 0.
 
 ## Thread Switching
 

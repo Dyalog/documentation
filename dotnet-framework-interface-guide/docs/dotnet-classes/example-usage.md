@@ -51,7 +51,7 @@ dyares32.dll	22/03/2004	12:13:40
 
 ## Sending an Email
 
-The .NET namespace <code class="language-nonAPL">System.Web.Mail</code> provides objects for handing email. You can create a new email message as an instance of the <code class="language-nonAPL">MailMessage</code> class, set its various properties and then send it using the <code class="language-nonAPL">SmtpMail</code> class.
+The .NET namespace <code class="language-nonAPL">System.Web.Mail</code> provides objects for handling email. You can create a new email message as an instance of the <code class="language-nonAPL">MailMessage</code> class, set its various properties and then send it using the <code class="language-nonAPL">SmtpMail</code> class.
 
 <h4 class="example">Example</h4>
 
@@ -74,13 +74,13 @@ However, the <code class="language-nonAPL">Send</code> method of the <code class
                     'Send me the goods'
 ```
 
-For more information on overloading, see [Overload Constructors](../advanced-techniques/#overloaded-constructors).
+For more information on overloading, see [Overload Constructors](advanced-techniques.md#overloaded-constructors).
 
 ## Web Scraping
 
 The .NET Framework provides a range of classes for accessing the internet from a program. This section works through an example that shows how to read the contents of a web page. It is complicated, but realistic (for example, it includes code to cater for a firewall/proxy connection to the internet). It is only 9 lines of APL code, but each line requires careful explanation.
 
-Start by defining `⎕USING` so that it specifies all of the necessary .NET namespaces and assemblies:
+Start by defining [`⎕USING`](../../../language-reference-guide/system-functions/using/) so that it specifies all of the necessary .NET namespaces and assemblies:
 ```apl
       ⎕USING←'System,System.dll' 'System.Net' 'System.IO'
 ```

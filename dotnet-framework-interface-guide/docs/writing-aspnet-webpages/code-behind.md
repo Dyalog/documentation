@@ -58,7 +58,7 @@ out.Text←'You selected ',list.SelectedItem.Text
 :EndClass
 ```
 
-The file requires `:Class` and `:EndClass` statements. These tell the Dyalog .NET Compiler the name of the class being defined and the name of its base class. When the source code is in a **.aspx** file, this information is provided automatically by the Dyalog .NET Compiler.
+The file requires [`:Class`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class/) and `:EndClass` statements. These tell the Dyalog .NET Compiler the name of the class being defined and the name of its base class. When the source code is in a **.aspx** file, this information is provided automatically by the Dyalog .NET Compiler.
 
 The name of the class (in this case, <code class="language-nonAPL">FruitSelection</code>) must be the same name as is referenced in the **.aspx** web page file (**intro5.aspx**). The base class must be <code class="language-nonAPL">System.Web.UI.Page</code>.
 

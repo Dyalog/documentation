@@ -4,14 +4,14 @@
 
 For TemperatureConverterCtl1, all the data transfers between the browser and the server, relating to the standard child controls that it contains, are handled automatically by the controls themselves. Rendered controls require more programming as it is the responsibility of the control developer to do the data transfer. The data transfer is managed through two interfaces, called <code class="language-nonAPL">IPostBackDataHandler</code> and <code class="language-nonAPL">IPostBackEventHandler</code>.
 
-The `:Class` statement for TemperatureConverterCtl2 specifies that it provides these interfaces:
+The [`:Class`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class/) statement for TemperatureConverterCtl2 specifies that it provides these interfaces:
 ```apl
 :Class TemperatureConverterCtl2: Control, System.Web.UI.IPostBackDataHandler, System.Web.UI.IPostBackEventHandler
 ```
 
 ## Fahrenheit and Centigrade Values
 
-[Example: The TemperatureConverterCtl1 Control](example-the-temperatureconverterctl1-control.md), the `TemperatureConverterCtl2` control maintains two public properties called `CentigradeValue` and `FahrenheitValue` using using _property get_ (or _accessor_) and _property set_ (or _mutator_) functions.
+As with [Example: The TemperatureConverterCtl1 Control](example-the-temperatureconverterctl1-control.md), the `TemperatureConverterCtl2` control maintains two public properties called `CentigradeValue` and `FahrenheitValue` using _property get_ (or _accessor_) and _property set_ (or _mutator_) functions.
 
 In this example, the `TemperatureConverterCtl2` control manages the current temperature values in two internal variables named `_CentigradeValue` and `_FahrenheitValue`, which we must initialise:
 ```apl
@@ -38,7 +38,7 @@ The `CentigradeValue`'s `set` function resets the value of `_CentigradeValue` to
        ∇
 ```
 
-The _property get_ and _property set_ functions for the `FahrenheitValue` property are similarly defined. The `:Signature`s for these functions are similar to those for the `CentigradeValue` functions.
+The _property get_ and _property set_ functions for the `FahrenheitValue` property are similarly defined. The [`:Signature`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/signature/)s for these functions are similar to those for the `CentigradeValue` functions.
 
 ## Rendering the Control
 
@@ -98,9 +98,9 @@ Once the server-side control has rendered the HTML for the browser, the user is 
 
 When the user presses a button, the browser runs the client-side JavaScript code that generates a postback to the server.
 
-The `:Class` statement for TemperatureConverterCtl2 specifies that it supports the <code class="language-nonAPL">IPostBackDataHandler</code> interface. This interface must be implemented by controls that want to receive postback data (that is, the contents of Form fields that the user might have entered or changed) <code class="language-nonAPL">IPostBackDataHandler</code> has two methods, <code class="language-nonAPL">LoadPostData</code> and <code class="language-nonAPL">RaisePostDataChangedEvent</code>. <code class="language-nonAPL">LoadPostData</code> is automatically invoked when a postback occurs, and the postback data is supplied as a parameter.
+The `:Class` statement for TemperatureConverterCtl2 specifies that it supports the <code class="language-nonAPL">IPostBackDataHandler</code> interface. This interface must be implemented by controls that want to receive postback data (that is, the contents of Form fields that the user might have entered or changed). <code class="language-nonAPL">IPostBackDataHandler</code> has two methods, <code class="language-nonAPL">LoadPostData</code> and <code class="language-nonAPL">RaisePostDataChangedEvent</code>. <code class="language-nonAPL">LoadPostData</code> is automatically invoked when a postback occurs, and the postback data is supplied as a parameter.
 
-When the postback occurs, the server reloads the original page and, because this is a postback situation and our control has advertised the fact that it implements <code class="language-nonAPL">IPostBackDataHandler</code>, ASP.NET invokes its <code class="language-nonAPL">LoadPostBack</code> method. This method is called with two parameters; the first is a key and the second is a collection of name/value pairs. This contains the names of all the Form fields on the page (there might be others not directly associated with our custom control) and the values that they had when the user pressed the button. The key provides the means to extract the relevant part of this collection. The `LoadPostData` function is:
+When the postback occurs, the server reloads the original page and, because this is a postback situation and our control has advertised the fact that it implements <code class="language-nonAPL">IPostBackDataHandler</code>, ASP.NET invokes its <code class="language-nonAPL">LoadPostData</code> method. This method is called with two parameters; the first is a key and the second is a collection of name/value pairs. This contains the names of all the Form fields on the page (there might be others not directly associated with our custom control) and the values that they had when the user pressed the button. The key provides the means to extract the relevant part of this collection. The `LoadPostData` function is:
 ```apl
      ∇ R←LoadPostData args;postDataKey;values;controlValues;new
 [1]    :Signature Boolean←IPostBackDataHandler.LoadPostData String postDataKey,NameValueCollection values

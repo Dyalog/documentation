@@ -20,13 +20,13 @@ This sample is supplied in **[DYALOG]\Samples\asp.net\webservices\eg1.asmx**, wh
 :EndClass
 ```
 
-The `Add` function is exported as a method that takes exactly (and only) two parameters of type `Int32` and returns a result of type `Int32`. This means that `R←+/args` could  be coded as `R←args[1]+args[2]`, because .NET guarantees that a client can only call the method by providing two 32-bit integers as parameters.
+The `Add` function is exported as a method that takes exactly (and only) two parameters of type `Int32` and returns a result of type `Int32`. This means that `R←+/args` could be coded as `R←args[1]+args[2]`, because .NET Framework guarantees that a client can only call the method by providing two 32-bit integers as parameters.
 
 ### Testing from a Browser
 
 If you connect to a URL that represents a web service, the browser displays a page that provides information about the service and the methods that it contains. In certain cases, the page also contains form fields that let you invoke a method from the browser.
 
-In your preferred browser, navigate to [http://localhost/dyalog.net.15.0.unicode.32/webservices/eg1.asmx](http://localhost/dyalog.net.15.0.unicode.32/webservices/eg1.asmx). The page fabricated by ASP.NET is shown in [](#eg1b1) .
+In your preferred browser, navigate to [http://localhost/dyalog.net.15.0.unicode.32/webservices/eg1.asmx](http://localhost/dyalog.net.15.0.unicode.32/webservices/eg1.asmx). The page fabricated by ASP.NET is shown in [](#eg1b1).
 
 ![Browser page fabricated by ASP.NET for <strong>eg1.asmx</strong>](../img/s-samplews-eg1-browser1.png){ #eg1b1 }
 
@@ -80,7 +80,7 @@ This sample defines a class called `LoanService` that is based on `System.Web.Se
 
 `CalcPayments` takes five integer parameters (described within the code) and returns an object of type `LoanResult`.
 
-The block of code that defines the sub-class `LoanResult` must be within the `:Class` and `:EndClass` statements of the main class, `LoanService`. You can define any number of internal classes in this way.
+The block of code that defines the sub-class `LoanResult` must be within the [`:Class`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class/) and `:EndClass` statements of the main class, `LoanService`. You can define any number of internal classes in this way.
 
 The `LoanResult` class only comprises fields, and it does not export any methods or properties. There are also no constructor methods defined, and it relies solely on its default constructor that is inherited from its base class, `System.Object`. The default constructor is called without any parameters and does nothing except create an instance of the class; the fields it contains initialised to zero. In this sample, that is sufficient, as all the fields will be filled in explicitly later.
 ```apl
@@ -98,13 +98,13 @@ The three `:Field` declaration statements specify the names and data types of th
 
 The `Periods` field is defined to be an array of integers, and the `InterestRates` field an array of `Double`. Both these arrays are 1‑dimensional, that is, vectors. These will contain the numbers of years and the different interest rates to which the repayments matrix applies.
 
-`Payments` is also defined to be 1‑dimensional even though it is, more naturally, a 2‑dimesional matrix. The reason for this is that web services do not currently support multi-dimensional arrays. This is a .NET restriction and not a Dyalog restriction.
+`Payments` is also defined to be 1‑dimensional even though it is, more naturally, a 2‑dimensional matrix. The reason for this is that web services do not currently support multi-dimensional arrays. This is a .NET Framework restriction and not a Dyalog restriction.
 
-Line `[13]` gets a new instance of the `LoanResult` class by doing `⎕New LoanResult`. It then assigns values to each of the three fields in lines `[14]`, `[15]`, and `[18]`.
+Line `[13]` gets a new instance of the `LoanResult` class by doing [`⎕New LoanResult`](../../../language-reference-guide/system-functions/new/). It then assigns values to each of the three fields in lines `[14]`, `[15]`, and `[18]`.
 
 ### Testing from a Browser
 
-In your prefered browser, navigate to [http://localhost/dyalog.net.15.0.unicode.32/loan/loan.asmx](http://localhost/dyalog.net.15.0.unicode.32/loan/loan.asmx). The page fabricated by ASP.NET is shown in [](#loanb1).
+In your preferred browser, navigate to [http://localhost/dyalog.net.15.0.unicode.32/loan/loan.asmx](http://localhost/dyalog.net.15.0.unicode.32/loan/loan.asmx). The page fabricated by ASP.NET is shown in [](#loanb1).
 
 ![Browser page fabricated by ASP.NET for <strong>loan.asmx</strong>](../img/s-samplews-loanservice-browser1.png){ #loanb1 }
 
@@ -157,7 +157,7 @@ The **[DYALOG]\samples\asp.net\golf\data\golfdata.dcf** file needs to be located
 </script>
 ```
 
-The `Application_Start` function is called when the <code class="language-nonAPL">GolfService</code> web service is invoked for the first time. It ties the `golfdata` component file, then stores the tie number in a new item called `GOLFID` in the`Application` object. This item is subsequently available to methods in `GolfService` for the duration of the application.
+The `Application_Start` function is called when the <code class="language-nonAPL">GolfService</code> web service is invoked for the first time. It ties the `golfdata` component file, then stores the tie number in a new item called `GOLFID` in the `Application` object. This item is subsequently available to methods in `GolfService` for the duration of the application.
 
 The `Application_End` function is invoked when the `GolfService` web service terminates. It unties the `golfdata` component file.
 
@@ -189,7 +189,7 @@ The `GolfCourse` class is effectively a structure with two fields, `Code` and `N
 :EndClass
 ```
 
-The `GolfCourse` class provides two constructors. The first, `ctor_def`, takes no arguments and, therefore, overrides the default constructor that is inherited from <code class="language-nonAPL">System.Object</code>. `ctor_def` calls `ctor` to initialise the instance with a code of  `¯1` and an empty `Name`.
+The `GolfCourse` class provides two constructors. The first, `ctor_def`, takes no arguments and, therefore, overrides the default constructor that is inherited from <code class="language-nonAPL">System.Object</code>. `ctor_def` calls `ctor` to initialise the instance with a code of `¯1` and an empty `Name`.
 
 The constructor `ctor` accepts two parameters, `CourseCode` (an integer) and `CourseName` (a string). It assigns these values into the corresponding fields.
 
@@ -286,7 +286,7 @@ The `StartingSheet` class represents the result of the `GetStartingSheet` method
 
 - If `OK` is false (`0`), the `Message` field (a string) indicates the reason for failure.
 
-- If `OK` is true (`1`) the `Course` field contains an instance of a `GolfCourse` object,  the `Date` field contains the date in question, and the `Slots` field contains an array of `Slot` objects. Each `Slot` object specifies a starting time, and the names of all the golfers who have been allocated that starting time and who will, therefore, play together.
+- If `OK` is true (`1`) the `Course` field contains an instance of a `GolfCourse` object, the `Date` field contains the date in question, and the `Slots` field contains an array of `Slot` objects. Each `Slot` object specifies a starting time, and the names of all the golfers who have been allocated that starting time and who will, therefore, play together.
 
 ```apl
 :Class StartingSheet
@@ -463,13 +463,13 @@ The `MakeBooking` function checks that the requested tee-time is available (for 
 
 `MakeBooking` first retrieves the tie number of the `GolfData` component file from the `Application` object and reads its first component.
 
-Lines `[13 14]` create instances of `GolfCourse` and `Slot` objects, which at this stage are not validated. Line`[15]` then initialises the result, `R`, a `Booking` object, that includes these instances. At this stage, `R.OK` is `0`, indicating failure.
+Lines `[13 14]` create instances of `GolfCourse` and `Slot` objects, which at this stage are not validated. Line `[15]` then initialises the result, `R`, a `Booking` object, that includes these instances. At this stage, `R.OK` is `0`, indicating failure.
 
 Line `[16]` validates the requested `CourseCode`, and, if invalid, sets `R.Message` and returns.
 
-Similarly, lines `[20 23]` check that the requested tee time is within the next 30 days from now. If not, the function assigns the appropriate error message to `R.Message` and returns. These two statements employ the primitive function `>` (rather that the `op_GreaterThan` method) to compare the requested tee time (a `DateTime` object) with a new `DateTime` object that represents `Now` and `Now+30 days` respectively.
+Similarly, lines `[20 23]` check that the requested tee time is within the next 30 days from now. If not, the function assigns the appropriate error message to `R.Message` and returns. These two statements employ the primitive function `>` (rather than the `op_GreaterThan` method) to compare the requested tee time (a `DateTime` object) with a new `DateTime` object that represents `Now` and `Now+30 days` respectively.
 
-Line`[24]` uses the `AddDays` method to create a new `DateTime` object that represents `Now+30 days`. An alternative expression to get `Now+30 days` is:
+Line `[24]` uses the `AddDays` method to create a new `DateTime` object that represents `Now+30 days`. An alternative expression to get `Now+30 days` is:
 ```apl
       TEETIME.Now+⎕NEW TimeSpan (30 0 0 0)
 ```
@@ -482,7 +482,7 @@ If an appropriate slot is found, lines `[72 73]` update the `Slot` object with t
 
 ### Testing from a Browser
 
-In your prefered browser, navigate to  [http://localhost/dyalog.net.15.0.unicode.32/Golf/Golf.asmx](http://localhost/dyalog.net.15.0.unicode.32/Golf/Golf.asmx). The page fabricated by ASP.NET is shown in [](#golfb1) – the three methods exposed by `GolfService` are listed.
+In your preferred browser, navigate to [http://localhost/dyalog.net.15.0.unicode.32/Golf/Golf.asmx](http://localhost/dyalog.net.15.0.unicode.32/Golf/Golf.asmx). The page fabricated by ASP.NET is shown in [](#golfb1) – the three methods exposed by `GolfService` are listed.
 
 ![Browser page fabricated by ASP.NET for <strong>Golf.asmx</strong>](../img/s-samplews-golfservice-browser1.png){ #golfb1 }
 
@@ -600,7 +600,7 @@ Within `APLServices.Example`, the function called `Add` represents the single me
 
 Fix the class, then click **File** > **Save As...** in the menu and save the workspace as **egs.dws** in **[DYALOG]\Samples\asp.net\webservices\bin**.
 
-Select **File** > **Export...** in the  menu, and save the assembly as **eg2.dll** in the same directory.
+Select **File** > **Export...** in the menu, and save the assembly as **eg2.dll** in the same directory.
 
 When you click **Save**, the **Status** window displays the information shown in [](#eg2status) to confirm that the assembly has been created correctly.
 
@@ -608,12 +608,12 @@ When you click **Save**, the **Status** window displays the information shown in
 
 ### Testing from a Browser
 
-In your prefered browser, navigate to [http://localhost/dyalog.net.15.0.unicode.32/webservices/eg2.asmx](http://localhost/dyalog.net.15.0.unicode.32/webservices/eg2.asmx). The page fabricated by ASP.NET is shown in [](#eg2b1).
+In your preferred browser, navigate to [http://localhost/dyalog.net.15.0.unicode.32/webservices/eg2.asmx](http://localhost/dyalog.net.15.0.unicode.32/webservices/eg2.asmx). The page fabricated by ASP.NET is shown in [](#eg2b1).
 
 ![Browser page fabricated by ASP.NET for <strong>eg2.asmx</strong>](../img/s-samplews-eg2-browser1.png){ #eg2b1 }
 
 This shows that the web service is called `Example`, and that it exports a single method called `Add` which takes two parameters called `arg1` and `arg2`.
 
-[](#eg2b1) shows the result of entering the values _123_ and _456_ into the form fields and then pressing the **Invoke** button. The method returns an `int` value of _579_.
+[](#eg2b2) shows the result of entering the values _123_ and _456_ into the form fields and then pressing the **Invoke** button. The method returns an `int` value of _579_.
 
 ![Result of invoking the <strong>eg2.asmx</strong> form](../img/s-samplews-eg2-browser2.png){ #eg2b2 }

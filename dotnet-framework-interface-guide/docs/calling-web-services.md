@@ -8,7 +8,7 @@ Microsoft provides a utility called **WSDL.EXE** that queries the metadata (Web 
 
 The `MakeProxy` function is provided in the supplied workspace **[DYALOG]\Samples\asp.net\webservices\webservices.dws**.
 
-`MakeProxy` is monadic, and its argument specifies the URL of the web service to which you want to connect. For example, the following expressions uses `MakeProxy` to connect to the LoanService sample web service provided with Dyalog .NET:
+`MakeProxy` is monadic, and its argument specifies the URL of the web service to which you want to connect. For example, the following expression uses `MakeProxy` to connect to the LoanService sample web service provided with Dyalog .NET:
 ```apl
       MakeProxy'http://localhost/dyalog.net/Loan/Loan.asmx'
 ```
@@ -151,7 +151,7 @@ Each method is exposed as a function with the same name (the synchronous version
 
 The `Beginxxx` functions take two additional parameters; a delegate class that represents a callback function, and a state parameter.
 
-To initiate the call, execute the `Beginxxx` method using the standard parameters followed by two objects. The first is an object of type <code class="language-nonAPL">System.AsyncCallback</code>, representing an asynchronous callback, that is, a callback to be invoked when the asynchronous call is complete. The second is an object that is used to supply extra information. See [Using a Callback](#using-a-callback) for information on how callbacks are used. If you are not using a callback, these items should be null object references. You can specify a reference to a null object using the expression `(⎕NS'')`. For example, using the <code class="language-nonAPL">LoanService</code> sample:
+To initiate the call, execute the `Beginxxx` method using the standard parameters followed by two objects. The first is an object of type <code class="language-nonAPL">System.AsyncCallback</code>, representing an asynchronous callback, that is, a callback to be invoked when the asynchronous call is complete. The second is an object that is used to supply extra information. See [Using a Callback](#using-a-callback) for information on how callbacks are used. If you are not using a callback, these items should be null object references. You can specify a reference to a null object using the expression [`(⎕NS'')`](../../language-reference-guide/system-functions/ns/). For example, using the <code class="language-nonAPL">LoanService</code> sample:
 ```apl
       A←LN.BeginCalcPayments 10000 16 10 12 9(⎕NS'')(⎕NS'')
 ```

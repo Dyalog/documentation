@@ -11,7 +11,7 @@ Table: Version-specific Dyalog .NET Compilers { #Compilers }
 
 This program is called automatically by ASP.NET when a client application requests a web page (**.aspx**) or web service (.asmx) and, in these circumstances, always generates the corresponding .NET class. However, the Dyalog .NET Compiler can also be used to:
 
-- compile an APL source file into a workspace (**.dws**) – this can sunsequently be run using **dyalog.exe** or **dyalogrt.exe**.
+- compile an APL source file into a workspace (**.dws**) – this can subsequently be run using **dyalog.exe** or **dyalogrt.exe**.
 - compile an APL source file into a .NET class (**.dll**) – this can subsequently be used by any other .NET-compatible host language, such as C# or Visual Basic.
 - compile an APL source file into a native Microsoft Windows executable program (**.exe**), which can be run as a stand-alone executable. This program can be distributed (along with the Dyalog APL runtime DLL) as a packaged application, and does not require any of the additional support files and registry entries that are typically needed by the Dyalog run-time **dyalogrt.exe**. For more information, see the _Dyalog for Microsoft Windows Installation and Configuration Guide_.
     
@@ -57,7 +57,7 @@ dyalogc.exe command line options:
 /i:Local          Set the isolation mode of a .NET Assembly
 ```
 
-The <code class="language-nonAPL">/i</code> option specifies the [isolation mode](../implementation-details/isolation-mode/) – this overrides the setting in **web.config**.
+The <code class="language-nonAPL">/i</code> option specifies the [isolation mode](../implementation-details/isolation-mode.md) – this overrides the setting in **web.config**.
 
 The <code class="language-nonAPL">/a</code> option specifies the name of a JSON file that contains assembly information. For example:
 ```nonAPL

@@ -1,6 +1,6 @@
 # Browsing .NET Classes
 
-Microsoft supplies a tool for browsing .NET Class libraries called **Ildasm.exe** (this can be found in the .NET SDK and is distributed with Microsoft Visual Studio). Dyalog's Workspace Explorer has been extended to perform a similar task  to ILDSAM so that the information is available within the context of the APL environment.
+Microsoft supplies a tool for browsing .NET Class libraries called **Ildasm.exe** (this can be found in the .NET Framework SDK and is distributed with Microsoft Visual Studio). Dyalog's Workspace Explorer has been extended to perform a similar task to ILDASM so that the information is available within the context of the APL environment.
 
 The information that describes .NET classes, which is known as its _Metadata_, is part of the definition of the class and is stored with it. Metadata corresponds to Type Information in COM, which is typically stored in a separate Type Library.
 
@@ -49,7 +49,7 @@ A property can be queried by direct reference:
 Monday
 ```
 
-The data types of some properties are not simple data types, but are .NET Classes. For example, the data type of the <code class="language-nonAPL">Now</code> property is <code class="language-nonAPL">SystemDateTime</code>. This means that references to the Now property return an object that represents an instance of the <code class="language-nonAPL">System.DateTime</code> object:
+The data types of some properties are not simple data types, but are .NET Classes. For example, the data type of the <code class="language-nonAPL">Now</code> property is <code class="language-nonAPL">System.DateTime</code>. This means that references to the Now property return an object that represents an instance of the <code class="language-nonAPL">System.DateTime</code> object:
 ```apl
       mydt.Now
 07/11/2001 11:30:48
@@ -61,7 +61,7 @@ Open the **Methods** directory.
 
 ![Workspace Tree displaying the System.DateTime methods](../img/s-browsing-classes-systemdatetimemethods.png)
 
-The image above shows the  data type of the result of the method, followed by the name of the method and the types of its arguments, for example, the <code class="language-nonAPL">IsLeapYear</code> method takes an <code class="language-nonAPL">Int32</code> parameter (year) and returns a <code class="language-nonAPL">Boolean</code> result:
+The image above shows the data type of the result of the method, followed by the name of the method and the types of its arguments, for example, the <code class="language-nonAPL">IsLeapYear</code> method takes an <code class="language-nonAPL">Int32</code> parameter (year) and returns a <code class="language-nonAPL">Boolean</code> result:
 ```apl
       mydt.IsLeapYear 2000
 1
@@ -77,6 +77,6 @@ For example, the following image shows the mouse hovered over the external funct
 
 ![Function signature – single integer argument](../img/s-value-tips-single.png)
 
-If an external function provides more than one signature, then they are all shown in the Value Tip. For example, the figure below shows that the function `ToString` has four different overloads).
+If an external function provides more than one signature, then they are all shown in the Value Tip. For example, the figure below shows that the function `ToString` has four different overloads.
 
 ![Function signature – multiple arguments](../img/s-value-tips-multiple.png)

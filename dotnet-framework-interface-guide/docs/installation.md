@@ -44,24 +44,24 @@ Other selections can be made too (and some might be selected by default).
 
 ## Files Installed with Dyalog
 
-The components used to support the .NET interface are:
+The components used to support the .NET Framework interface are:
 
 - The Bridge DLL – this is the interface library through which all calls between Dyalog and the .NET Framework are processed.
 - The DyalogProvider DLL – this DLL performs the initial processing of an APL source file.
 - The Dyalog .NET Compiler – this is written in Dyalog and packaged as an executable.
 - The DyalogNet DLL – a subsidiary library.
-- The Dyalog DLL – this is the engine that executes all APL code that is hosted by and called from another .NET application.
+- The Dyalog DLL – this is the engine that executes all APL code that is hosted by and called from another .NET Framework application.
 
-Different versions of each component are supplied  according to the target platform.
+Different versions of each component are supplied according to the target platform.
 
 For a list of the files associated with each of these components, see the _Dyalog for Microsoft Windows Installation and Configuration Guide_.
 
-The **[DYALOG]/Samples** directory contains several sub-directories relating to the .NET interface:
+The **[DYALOG]/Samples** directory contains several sub-directories relating to the .NET Framework interface:
 
 - **aplclasses** – a sub-directory that contains examples of .NET classes written in APL.
 - **bound_exe** – a sub-directory that contains APL source file examples.
 - **asp.net** – a sub-directory that is mapped to the IIS Virtual Directory **dyalog.net** and contains various sample APL web applications, as well as: 
-    - **web.config** – a file that specifies Dyalog configuration parameters for ASP.NET (see [The web.config File](/implementation-details/the-webconfig-file/)).
+    - **web.config** – a file that specifies Dyalog configuration parameters for ASP.NET (see [The web.config File](implementation-details/the-webconfig-file.md)).
 - **winforms** – a sub-directory that contains sample applications that use the <code class="language-nonAPL">System.Windows.Forms</code> GUI classes.
 
 ## Enabling the .NET Framework Interface
@@ -71,7 +71,7 @@ The .NET Framework interface is enabled when the DYALOG_NETCORE configuration pa
 !!! Info "Information"
     The .NET Framework interface and .NET interface cannot be enabled simultaneously.
 
-For information on how to set configuration parameters, see the _Dyalog for Microsoft Windows Installation and Configuration Guide_. To check the value of DYALOG_NETCORE, enter the following  when in a Session:
+For information on how to set configuration parameters, see the _Dyalog for Microsoft Windows Installation and Configuration Guide_. To check the value of DYALOG_NETCORE, enter the following when in a Session:
 ```apl
 +2⎕NQ'.' 'GetEnvironment' 'DYALOG_NETCORE'
 ```
@@ -87,7 +87,7 @@ VALUE ERROR: Undefined name: DateTime
 
 ```
 
-In this situation, ensure that the .NET Framework has been installed according to [Microsoft's .NET documentation](https://docs.microsoft.com/en-gb/dotnet/) and the .NET Framework interface has been enabled by setting DOTNET_NETCORE to `0` (see [Verifying the Installation](#verifying)).
+In this situation, ensure that the .NET Framework has been installed according to [Microsoft's .NET documentation](https://docs.microsoft.com/en-gb/dotnet/) and the .NET Framework interface has been enabled by setting DYALOG_NETCORE to `0` (see [Enabling the .NET Framework Interface](#enabling-the-net-framework-interface)).
 
 If everything has been installed and enabled correctly, then the version of .NET Framework in use will be returned by the following statement:
 ```apl
