@@ -57,8 +57,8 @@ This code defines a namespace called `APLClasses`. This namespace acts as a cont
 The following command shows how **aplclasses6.apln** is compiled to a .NET assembly using the <code class="language-nonAPL">/t:library</code> flag.
 ```nonAPL
 APLClasses>dyalogc /t:library aplclasses6.apln
-Dyalog Dyalog .NET Compiler 32bit Classic Mode Version 13.0.8690.0
-Copyright Dyalog Limited 2011
+Dyalog .NET component compiler 64 bit. Unicode Mode. Version 21.0.54393.0
+Copyright Dyalog Ltd 2000-2026
 APLClasses>
 ```
 
