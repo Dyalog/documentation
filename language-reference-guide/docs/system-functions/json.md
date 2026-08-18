@@ -41,7 +41,7 @@ JSON supports a limited number of data types, and there is no direct corresponde
 - JSON does not support arrays with rank &gt; 1.
 - JSON does not support nested scalars.
 - JSON includes Boolean values <code class="language-nonAPL">true</code> and <code class="language-nonAPL">false</code> which are distinct from numeric values <code class="language-nonAPL">1</code> and <code class="language-nonAPL">0</code>; these have no direct APL equivalent.
-- JSON object members are named and these names might not be [valid names in APL](../../programming-reference-guide/introduction/names/).
+- JSON object members are named and these names might not be [valid names in APL](../../../programming-reference-guide/introduction/names/).
 - The [JSON5](https://json5.org/) dialect includes numeric constants <code class="language-nonAPL">Infinity</code>, <code class="language-nonAPL">-Infinity</code>, and <code class="language-nonAPL">NaN</code>, which have no direct APL equivalent.
 
 These differences are catered for in various ways as discussed below.
@@ -73,7 +73,7 @@ If `X` is `1`, the APL data `Y` is converted to a corresponding JSON document `R
 
 `R` is a character vector whose content depends upon the values of the [**Compact**](#variant-option-compact), [**Dialect**](#variant-option-dialect), and [**Charset**](#variant-option-charset) variant options.
 
-`⎕JSON` output is not affected by [`⎕PP`](pp); numbers are always represented with full precision.
+`⎕JSON` output is not affected by [`⎕PP`](../pp/); numbers are always represented with full precision.
 
 Some JSON values lack a direct APL equivalent (<code class="language-nonAPL">true</code>, <code class="language-nonAPL">false</code>, <code class="language-nonAPL">null</code>, JavaScript fragments), and some APL representations of datasets do not correspond to common JSON practice. Such cases are handled by [wrappers](#wrappers).
 

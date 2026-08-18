@@ -203,7 +203,7 @@ The upper and lower case letters, underscore `_`, dollar `$`, and percent `%` ar
 
 ## Language
 
-Unless overridden, English is used for text substitutions. Different languages can be selected using the [**Language** variant option](#language-variant-option) and/or the use of language specifiers within the format pattern. In either case, the language is specified as either a two letter [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code in lower case (for example, `en`) or as a five character language with an additional underscore and two character region in upper case (for example, `en_GB`). Within the format pattern, `__xx__` (where `xx` is the two or five character specifier) will switch the language of the subsequent generated or matched text. { #languages } shows the languages that are built into the interpreter.
+Unless overridden, English is used for text substitutions. Different languages can be selected using the [**Language** variant option](#variant-option-language) and/or the use of language specifiers within the format pattern. In either case, the language is specified as either a two letter [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code in lower case (for example, `en`) or as a five character language with an additional underscore and two character region in upper case (for example, `en_GB`). Within the format pattern, `__xx__` (where `xx` is the two or five character specifier) will switch the language of the subsequent generated or matched text. { #languages } shows the languages that are built into the interpreter.
 
 Table: Built-in languages { #languages }
 
@@ -241,7 +241,7 @@ Table: Predefined patterns built into the interpreter { #patterns }
 | ---  | ---            |
 | `ISO`  | `YYYY-MM-DD"T"hh:mm:ss` |
 
-Additional predefined patterns can be defined using the [**Dictionary** variant option](#dictionary-variant-option). Predefined patterns must not contain references to other predefined patterns.
+Additional predefined patterns can be defined using the [**Dictionary** variant option](#variant-option-dictionary). Predefined patterns must not contain references to other predefined patterns.
 
 ## Pattern-matching Rules
 
@@ -249,7 +249,7 @@ When <code>X<sub>Y</sub></code> is a pattern, the corresponding character vector
 
 ### Two-digit Years
 
-Two digit years (that is, those corresponding to the formatting pattern elements `YY` and `WW`) are, by default, interpreted according to the same rules used for `⎕SM` and GUI edit fields, which are configurable using the [`YY_WINDOW`](../../windows-installation-and-configuration-guide/configuration-parameters/yy-window/) configuration parameter.
+Two digit years (that is, those corresponding to the formatting pattern elements `YY` and `WW`) are, by default, interpreted according to the same rules used for `⎕SM` and GUI edit fields, which are configurable using the [`YY_WINDOW`](../../../windows-installation-and-configuration-guide/configuration-parameters/yy-window/) configuration parameter.
 
 ### Ambiguities and Precision
 
@@ -320,7 +320,7 @@ If the namespace contains a definition that is supplied built into the interpret
 
 If a dictionary is incomplete (for example, is missing one of the expected named items, or one of the named items contains too few elements), an error is signalled if the missing content would be needed.
 
-See the [Dictionary example](#dictionary).
+See the [Dictionary example](#creating-a-dictionary).
 
 ## Examples
 
@@ -534,8 +534,6 @@ In the above example:
 [^12]: Natural sentence case, which can be specified for `M` (month name) and `d` (day name) only, causes the text to be substituted in the case which is natural for the language; some languages (for example, English) always capitalise the first letter of day and month names whereas others (for example, French) do not.
 [^13]: Dates at the start of the year can be in the final week of the previous year, and dates at the end of the year can be in the first week of the following year.
 [^14]: An ordinal indicator is a character or group of characters following a numeral, such as (in English) the suffixes -st, -nd, -rd, -th as in 1st, 2nd, 3rd, 4th.
-[^15]: For negative numbers, the integral part counts backward from 1899-12-30 and the fractional part counts forward from  the date so reached.
-[^16]: Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020-01-23 is encoded as 20200123, and 13:17:56 is encoded as 131756.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

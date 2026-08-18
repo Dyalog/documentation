@@ -83,7 +83,7 @@ Lines `[5-6]` initialise a new global variable called `txtSource` to the value o
 [6]   txtSource←txt
 ```
 
-Line `[7]`creates a Binding Source object using [`2015⌶`](../../language-reference-guide/primitive-operators/i-beam/create-data-binding-source/) and assigns it to the `DataContext` property of the TextBox object. As it is a character vector, the exported Type for the bound variable `txtSource` is <code class="language-nonAPL">System.String</code>, which is appropriate for the <code class="language-nonAPL">Text</code> property of a <code class="language-nonAPL">TextBox</code>:
+Line `[7]`creates a Binding Source object using [`2015⌶`](../../../language-reference-guide/primitive-operators/i-beam/create-data-binding-source/) and assigns it to the `DataContext` property of the TextBox object. As it is a character vector, the exported Type for the bound variable `txtSource` is <code class="language-nonAPL">System.String</code>, which is appropriate for the <code class="language-nonAPL">Text</code> property of a <code class="language-nonAPL">TextBox</code>:
 ```apl
 
 [7]    win.txtBox.DataContext←2015⌶'txtSource'
@@ -317,7 +317,7 @@ Learn to play the bouzouki!
 
 ```
 
-If you want to bind two properties of the same object to two APL variables, it has to be done by writing code as shown in this example, that is, using two separate Binding Source objects. This is because, using XAML, you can only associate a single Binding Source to an object. However, this minor restriction is easily surmounted by using an APL namespace as a Binding Source, as shown in [Example 4](#example-4-ui-specification-using-xaml).
+If you want to bind two properties of the same object to two APL variables, it has to be done by writing code as shown in this example, that is, using two separate Binding Source objects. This is because, using XAML, you can only associate a single Binding Source to an object. However, this minor restriction is easily surmounted by using an APL namespace as a Binding Source, as shown in [Example 4](#example-4-connected-properties).
 
 ## Example 4: Connected Properties
 
