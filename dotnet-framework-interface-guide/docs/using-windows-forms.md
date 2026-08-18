@@ -46,7 +46,7 @@ Function `EG1` illustrates how to create and use a simple modal dialog box:
 
 ```apl
      ∇ EG1;form1;button1;button2;true;false;⎕USING;Z
-[1]    ⎕USING←,⊂'System.Windows.Forms, System.Windows.Forms.dll'
+[1]    ⎕USING←,⊂'System.Windows.Forms,System.Windows.Forms.dll'
 [2]    ⎕USING,←⊂'System.Drawing,System.Drawing.dll'
 [3]    true false←1 0
 [4]
@@ -63,7 +63,7 @@ Function `EG1` illustrates how to create and use a simple modal dialog box:
 [15]   ⍝ Set the text of button2 to "Cancel".
 [16]   button2.Text←'Cancel'
 [17]   ⍝ Set the position of the button relative to button1.
-[18]   button2.Location←⎕NEW Point, ⊂button1.Left button1. (Height+Top+10)
+[18]   button2.Location←⎕NEW Point,⊂button1.Left button1.(Height+Top+10)
 [19]
 [20]   ⍝ Make button1's dialog result OK.
 [21]   button1.DialogResult←DialogResult.OK
@@ -143,7 +143,7 @@ Much of the function is self-explanatory, but some points are noteworthy:
 Functions `EG2` and `EG2A` illustrate how the _each_ operator (`¨`) and the extended namespace reference syntax in Dyalog can be used to produce more succinct, and no less readable, code:
 ```apl
      ∇ EG2;form1;label1;textBox1;true;false;⎕USING;Z
-[1]    ⎕USING←,⊂'System.Windows.Forms, System.Windows.Forms.dll'
+[1]    ⎕USING←,⊂'System.Windows.Forms,System.Windows.Forms.dll'
 [2]    ⎕USING,←⊂'System.Drawing,System.Drawing.dll'
 [3]    true false←1 0
 [4]
