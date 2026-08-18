@@ -6,9 +6,9 @@ search:
 # <span>Rank</span> `R←{X}(f⍤B)Y`{{key}}
 
 !!! note "Classic Edition"
-    The symbol `⍤` is not available in Classic Edition, and the Rank operator is instead represented by `⎕U2364`.
+    The symbol `⍤` is not available in Classic Edition, and the _rank_ operator is instead represented by `⎕U2364`.
 
-The Rank operator `⍤` applies monadic function `f` successively to sub-arrays of `Y`, or dyadic function `f` between sub-arrays of `X` and `Y`. Sub-arrays are selected by right operand `B`.
+The _rank_ operator `⍤` applies monadic function `f` successively to sub-arrays of `Y`, or dyadic function `f` between sub-arrays of `X` and `Y`. Sub-arrays are selected by right operand `B`.
 
 `B` is a numeric scalar or vector of up to three items, specifying the ranks of the cells to which `f` should be applied. The most general form is a three item vector `p q r`, where:
 
@@ -20,17 +20,17 @@ If `B` is a two item vector `q r`, it is implicitly extended to `r q r`. If  `B`
 
 If an item `k` of `B` is zero or positive it selects k-cells of the corresponding argument. If it is negative, it selects (r+k)-cells where `r` is the rank of the corresponding argument. A value of `¯1` selects major cells.  For further information, see [Cells and Sub-arrays](../../../programming-reference-guide/introduction/arrays/cells-and-subarrays).
 
-If `X` is omitted, `f` may be any monadic function that returns a result. `Y` may be any array. The Rank operator `⍤` applies function `f` successively to the sub-arrays in `Y` specified by `p` (that is, the first item of `B`, as specified or implicitly extended).
+If `X` is omitted, `f` may be any monadic function that returns a result. `Y` may be any array. The _rank_ operator `⍤` applies function `f` successively to the sub-arrays in `Y` specified by `p` (that is, the first item of `B`, as specified or implicitly extended).
 
-If `X` is specified, it may be any array and `f` may be any dyadic function that returns a result. `Y` may be any array. In this case, the Rank operator applies function `f` successively between the sub-arrays in `X` specified by `q` and the sub-arrays in `Y` specified by `r`.
+If `X` is specified, it may be any array and `f` may be any dyadic function that returns a result. `Y` may be any array. In this case, the _rank_ operator applies function `f` successively between the sub-arrays in `X` specified by `q` and the sub-arrays in `Y` specified by `r`.
 
-The sub-arrays of `R` are the results of the individual applications of `f`. If these results differ in rank or shape, they are extended to a common rank and shape in the manner of Mix. See [Mix](../primitive-functions/mix.md).
+The sub-arrays of `R` are the results of the individual applications of `f`. If these results differ in rank or shape, they are extended to a common rank and shape in the manner of _mix_. See [Mix](../primitive-functions/mix.md).
 
-Notice that it is necessary to prevent the right operand `k` binding to the right argument. This can be done using parentheses, for example, `(f⍤1)Y`. The same can be achieved using  `⊢`, for example, `f⍤1⊢Y` because `⍤` binds tighter to its right operand than `⊢` does to its left argument, and `⊢` therefore resolves to Identity.
+Notice that it is necessary to prevent the right operand `k` binding to the right argument. This can be done using parentheses, for example, `(f⍤1)Y`. The same can be achieved using  `⊢`, for example, `f⍤1⊢Y` because `⍤` binds tighter to its right operand than `⊢` does to its left argument, and `⊢` therefore resolves to _identity_.
 
 ## Monadic Examples
 
-Using enclose (`⊂`) as the left operand elucidates the workings of the rank operator.
+Using _enclose_ (`⊂`) as the left operand elucidates the workings of the _rank_ operator.
 ```apl
       Y
 36 99 20  5
@@ -66,7 +66,7 @@ The function `{(⊂⍋⍵)⌷⍵}` sorts a vector.
 1 1 2 3 4 5 5 6 9
 ```
 
-The rank operator can be used to apply the function to sub-arrays; in this case to sort the 1-cells (rows) of a 3-dimensional array.
+The _rank_ operator can be used to apply the function to sub-arrays; in this case to sort the 1-cells (rows) of a 3-dimensional array.
 ```apl
       Y
 36 99 20  5
@@ -97,7 +97,7 @@ The rank operator can be used to apply the function to sub-arrays; in this case 
 38 39 40 41
 ```
 
-Using the function `{⍺ ⍵}`  as the left operand demonstrates how the dyadic case of the rank operator works.
+Using the function `{⍺ ⍵}`  as the left operand demonstrates how the dyadic case of the _rank_ operator works.
 ```apl
 
       10 20 30 ({⍺ ⍵}⍤0 1)3 4⍴⍳12

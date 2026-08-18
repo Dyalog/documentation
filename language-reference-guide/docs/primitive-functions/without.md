@@ -9,7 +9,7 @@ search:
 
 Elements of `X` and `Y` are considered the same if `X≡Y` returns 1 for those elements.
 
-`⎕CT` and `⎕DCT` are  implicit arguments of Without. Without is also known as Excluding.
+`⎕CT` and `⎕DCT` are  implicit arguments of _without_. _Without_ is also known as Excluding.
 
 <h2 class="example">Examples</h2>
 ```apl

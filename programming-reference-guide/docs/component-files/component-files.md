@@ -193,7 +193,7 @@ Create a new file, giving the file name, and the number you wish to use to ident
 
 If the file already exists, or you have already used this tie number, then APL will respond with the appropriate error message.
 
-Now write the data to the file. We could write a function that loops to do this, but it is neater to take advantage of the fact that our data is a nested vector, and use each (`¨`).
+Now write the data to the file. We could write a function that loops to do this, but it is neater to take advantage of the fact that our data is a nested vector, and use _each_ (`¨`).
 ```apl
       DATA ⎕FAPPEND¨ 1
 ```

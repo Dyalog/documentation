@@ -31,7 +31,7 @@ The arithmetic primitive functions handle complex numbers in the appropriate way
 ¯0.9J1.9
 ```
 
-The absolute value, or magnitude of a complex number is naturally obtained using the Magnitude function
+The absolute value, or magnitude of a complex number is naturally obtained using the _magnitude_ function
 ```apl
       |3j4
 5

@@ -26,7 +26,7 @@ For complex numbers, `R` depends on the relationship between the real and imagin
 
 ## Complex Floor
 
-The following (deliberately) simple function illustrates one way to express the rules for evaluating complex Floor.
+The following (deliberately) simple function illustrates one way to express the rules for evaluating complex _floor_.
 ```apl
      ∇ fl←CpxFloor cpxs;a;b
 [1]   ⍝ Complex floor of scalar complex number (a+ib)
@@ -46,7 +46,7 @@ The following (deliberately) simple function illustrates one way to express the 
 1J3 3J2 ¯3J¯3
 ```
 
-`⎕CT` and `⎕DCT` are  implicit arguments of Floor.
+`⎕CT` and `⎕DCT` are  implicit arguments of _floor_.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

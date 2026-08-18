@@ -28,7 +28,7 @@ The optional left argument `X` is a numeric scalar that modifies the default beh
 
 ## Variant Options
 
-`⎕MKDIR` may be applied using the variant operator with the option **Unique**. There is no primary option.
+`⎕MKDIR` may be applied using the _variant_ operator with the option **Unique**. There is no primary option.
 
 ## Unique Option (Boolean)
 The **Unique** option specifies whether the base name (see [File Name Parts](nparts.md)) in `Y` is modified so that the name is unique (does not already exist).

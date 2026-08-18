@@ -105,7 +105,7 @@ The monadic forms of the _grade up_ (`⍋`), _grade down_ (`⍒`), _minimum_ (`�
 ```
 
 !!! Info "Information"
-    The argument(s) must be a homogeneous set of references to objects of the same .NET class and, for grade up and grade down, the argument must be a vector.
+    The argument(s) must be a homogeneous set of references to objects of the same .NET class and, for _grade up_ and _grade down_, the argument must be a vector.
 
 ## Exceptions
 

@@ -53,7 +53,7 @@ to:
 
 ## File Properties
 
-`⎕FCREATE` allows you to specify properties for the newly created file via the variant operator `⍠` used with the following options:
+`⎕FCREATE` allows you to specify properties for the newly created file via the _variant_ operator `⍠` used with the following options:
 
 - `'J'` - journaling level; a numeric value
 - `'C'` - checksum level; 0 or 1

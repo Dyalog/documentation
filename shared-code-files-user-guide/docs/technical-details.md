@@ -2,7 +2,7 @@
 
 ## Technical Reference
 
-The operations that comprise the shared code file mechanism are implemented using three I-Beams:
+The operations that comprise the shared code file mechanism are implemented using three _I-beams_:
 
 - [`8659⌶`](../../language-reference-guide/primitive-operators/i-beam/list-shared-code-files-attached-names) – List Shared Code Files/Attached Names
 	- syntax: `{R}←{X}(8659⌶)Y`

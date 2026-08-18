@@ -5,11 +5,11 @@ search:
 
 # <span>Mix</span> `(⎕ML) R←↑[K]Y or R←⊃[K]Y`{{key}}
 
-The symbol chosen to represent Mix depends on the current Migration Level.
+The symbol chosen to represent _mix_ depends on the current Migration Level.
 
-If `⎕ML<2`, Mix is represented by the symbol: `↑`.
+If `⎕ML<2`, _mix_ is represented by the symbol: `↑`.
 
-If `⎕ML≥2`, Mix is represented by the symbol: `⊃`.
+If `⎕ML≥2`, _mix_ is represented by the symbol: `⊃`.
 
 `Y` may be any array whose items may be uniform in rank and shape, or differ in rank and shape. If the items of `Y` are non-uniform, they are extended prior to the application of the function as follows:
 

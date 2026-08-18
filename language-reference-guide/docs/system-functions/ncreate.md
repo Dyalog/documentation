@@ -13,7 +13,7 @@ The [shy](../../../programming-reference-guide/introduction/results#shy-results)
 
 ## Variant Options
 
-`⎕NCREATE` may be applied using the  Variant operator with the options Unique and IfExists. There is no primary option.
+`⎕NCREATE` may be applied using the  _variant_ operator with the options Unique and IfExists. There is no primary option.
 
 ## Unique Option (Boolean)
 

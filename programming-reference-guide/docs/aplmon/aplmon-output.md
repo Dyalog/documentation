@@ -62,7 +62,7 @@ APLMON measures time only for the atomic calls (that is, not complex expressions
       foo←{1+⍵} ⋄ foo¨(N⍴1)
 ```
 
-The each will not appear in the log, but only the primitives called by `foo`, meaning that `+` will appear as being called `N` times
+The _each_ will not appear in the log, but only the primitives called by `foo`, meaning that `+` will appear as being called `N` times
 ```apl
       +.×/(N⍴1
 ```

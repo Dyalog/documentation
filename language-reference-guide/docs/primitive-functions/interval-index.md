@@ -6,7 +6,7 @@ search:
 # <span>Interval Index</span> `R←X⍸Y`{{key}}
 
 !!! note "Classic Edition"
-    The symbol `⍸` (Iota Underbar) is not available in Classic Edition, and Interval Index is instead represented by `⎕U2378`.
+    The symbol `⍸` (Iota Underbar) is not available in Classic Edition, and _interval index_ is instead represented by `⎕U2378`.
 
 `X` is an ordered non-scalar array that represents a set of intervals or ranges.
 
@@ -34,11 +34,11 @@ If `X` is `'AEIOU'` it defines 6 intervals numbered 0 to 5 as follows:
 
 The result `R` is an integer array that identifies into which interval  the corresponding value in `Y` falls.
 
-Like dyadic `⍳` (see [Index Of](index-of.md)), Interval Index works with major cells. For a vector these are its elements; for a matrix its rows, and so forth.
+Like dyadic `⍳` (see [Index Of](index-of.md)), _interval index_ works with major cells. For a vector these are its elements; for a matrix its rows, and so forth.
 
 `X` and `Y` are compared using  the same logic as monadic `⍋` (see [Grade Up](grade-up.md)) which is independent of `⎕CT` and `⎕DCT`.
 
-`⎕IO` is an implicit argument of Interval Index. In all the following examples, `⎕IO` is 1.
+`⎕IO` is an implicit argument of _interval index_. In all the following examples, `⎕IO` is 1.
 
 <h2 class="example">Example</h2>
 ```apl

@@ -131,7 +131,7 @@ It is acceptable to execute [`⎕CY`](../../language-reference-guide/system-func
 
 The Dyalog .NET Compiler will execute any valid APL expression that you include. However, the results might not be useful and could terminate the compiler. For example, it is not sensible to execute statements such as [`⎕LOAD`](../../language-reference-guide/system-functions/load/) or [`⎕OFF`](../../language-reference-guide/system-functions/off/).
 
-Function bodies are defined between opening and closing del (`∇`) characters. These are fixed by the Dyalog .NET Compiler using `⎕FX`. Line numbers and white space formatting are ignored.
+Function bodies are defined between opening and closing _del_ (`∇`) characters. These are fixed by the Dyalog .NET Compiler using `⎕FX`. Line numbers and white space formatting are ignored.
 
 ## Creating Programs (.exe) with APL Source Files
 

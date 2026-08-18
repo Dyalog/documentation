@@ -24,7 +24,7 @@ The assignment `⍺←⊢` allows an ambivalent function to call an ambivalent s
       }
 ```
 
-If `foo` is given a left argument, this is passed to `goo`. Otherwise, `⍺` is assigned `⊢` and the last line is `⊢ goo ⍵`, which is a monadic call on `goo` followed by the `⊢` (Right) of the result of `goo`, which is the same value.
+If `foo` is given a left argument, this is passed to `goo`. Otherwise, `⍺` is assigned `⊢` and the last line is `⊢ goo ⍵`, which is a monadic call on `goo` followed by the `⊢` (_right_) of the result of `goo`, which is the same value.
 
 The assignment `⍺←⍣0` allows an ambivalent operator to skip the application of an operand to a missing argument. For example in:
 ```apl

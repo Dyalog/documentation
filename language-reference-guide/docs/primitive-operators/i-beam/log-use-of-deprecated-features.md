@@ -4,7 +4,7 @@ search:
 ---
 # <span>Log Use of Deprecated Features</span> `{R}←(13⌶)Y`{{key}}
 
-Controls which deprecated features are logged when logging is enabled. For an overview of deprecated features and this I-beam's role in identifying them within your code, see [Deprecated functionality](../../../../programming-reference-guide/deprecated-functionality).
+Controls which deprecated features are logged when logging is enabled. For an overview of deprecated features and this _I-beam_'s role in identifying them within your code, see [Deprecated functionality](../../../../programming-reference-guide/deprecated-functionality).
 
 `Y` is a character vector, or a vector of character vectors, each containing the name of a deprecated feature, or one of the names defined in the table below. The names are release-dependent; for a list of valid names see the [Release Notes](../../../../release-notes/announcements/deprecated-functionality).
 

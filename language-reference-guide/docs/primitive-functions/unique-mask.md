@@ -10,7 +10,7 @@ search:
 `R` is a Boolean vector whose length is the number of major cells
 in `Y`. For each major cell of `Y`, the corresponding element of  `R` is 1 if it is the first occurrence of that value, and 0 if it is a duplicate of an earlier major cell.
 
-`⎕CT` and `⎕DCT` are  implicit arguments of Unique.
+`⎕CT` and `⎕DCT` are  implicit arguments of _unique_.
 
 <h2 class="example">Examples</h2>
 ```apl

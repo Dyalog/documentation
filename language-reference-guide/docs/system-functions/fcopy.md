@@ -41,7 +41,7 @@ If `X` specifies the name of an existing file, the operation fails with a `FILE 
 
 ## File Properties
 
-`⎕FCOPY` allows you to specify properties for the new file via the variant operator `⍠` used with the following options:
+`⎕FCOPY` allows you to specify properties for the new file via the _variant_ operator `⍠` used with the following options:
 
 - `'J'` - journaling level; a numeric value.
 - `'C'` - checksum level; 0 or 1.

@@ -6,9 +6,9 @@ search:
 # <span>Stencil</span> `R←(f⌺g)Y`{{key}}
 
 !!! note "Classic Edition"
-    The symbol `⌺` is not available in Classic Edition, and the Stencil operator is instead represented by `⎕U233A`.
+    The symbol `⌺` is not available in Classic Edition, and the _stencil_ operator is instead represented by `⎕U233A`.
 
-Stencil is used in image processing, artificial neural networks, computational fluid dynamics, cellular automata, and many other fields of application. The computation is sometimes referred to as tessellation, moving window, or [stencil code](https://en.wikipedia.org/wiki/Stencil_code). This operator applies the left operand function `f` to a series of (possibly overlapping) rectangles in the array `Y`.
+_Stencil_ is used in image processing, artificial neural networks, computational fluid dynamics, cellular automata, and many other fields of application. The computation is sometimes referred to as tessellation, moving window, or [stencil code](https://en.wikipedia.org/wiki/Stencil_code). This operator applies the left operand function `f` to a series of (possibly overlapping) rectangles in the array `Y`.
 
 In general, the right operand `g` is a 2- row matrix of positive non-zero integers with up to `⍴⍴Y` columns. The first row contains the rectangle sizes, the second row the *movements* that is, how much to move the rectangle in each step. If `g` is a scalar or vector it specifies the rectangle size and the movement defaults to 1.
 
@@ -58,7 +58,7 @@ In the first expression above, the left operand function `{⊂⍺ ⍵}` simply d
 
 In order for the first element of `Y` (1) to be centred, the first rectangle is padded with a row above and a column to the left, as indicated by the left argument `(1 1)` to the function.
 
-Another way to think about the way Stencil operates is that it portions the array into sections or neighbourhoods in which elements can be analysed with respect to their immediate neighbours. Stencil  has uses in image processing applications.
+Another way to think about the way _stencil_ operates is that it portions the array into sections or neighbourhoods in which elements can be analysed with respect to their immediate neighbours. _Stencil_  has uses in image processing applications.
 
 <h2 class="example">Examples</h2>
 ```apl

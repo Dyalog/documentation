@@ -14,15 +14,15 @@ For example, the following expression  comprises a function train `-,÷` that is
 
 and means:
 
-1. Calculate the reciprocal of 2
-2. Calculate the negation of 2
-3. Catenate these 2 results together
+1. Calculate the _reciprocal_ of 2
+2. Calculate the _negation_ of 2
+3. _Catenate_ these 2 results together
 
 Whereas, without the parentheses to identify the function train, the expression      means (as it did before):
 
-1. Calculate the reciprocal of 2
-2. Ravel the result of step 1
-3. Negate the result of step 2
+1. Calculate the _reciprocal_ of 2
+2. _Ravel_ the result of step 1
+3. _Negate_ the result of step 2
 ```apl
 
       -,÷ 2
@@ -103,7 +103,7 @@ Whereas, without these means to identify the sequence as a train, the expression
 ¯0.2
 ```
 
-means the negation of the ravel of the reciprocal of 5.
+means the _negation_ of the _ravel_ of the _reciprocal_ of 5.
 
 ## Idiom Recognition
 
@@ -203,7 +203,7 @@ The binding strength between the items of a train is less than that of operand-o
 └─────┴─┴─────┘
 ```
 
-This means that any of the four hybrid tokens `/ ⌿ \ ⍀` will not be interpreted as a function if there's a function to its left in the train. In order to fix one of these tokens as a replicate or expand function, it must be isolated from the function to its left:
+This means that any of the four hybrid tokens `/ ⌿ \ ⍀` will not be interpreted as a function if there's a function to its left in the train. In order to fix one of these tokens as a _replicate_ or _expand_ function, it must be isolated from the function to its left:
 ```apl
       (⍳/⍳)3        ⍝ → ⍳/ atop ⍳3 → RANK ERROR
 RANK ERROR

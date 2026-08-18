@@ -21,7 +21,7 @@ Table: Primitive dyadic mixed functions with optional axis. {: #DyadicMixed }
 
 In most cases, `B` must be an integer value identifying the axis of `X` and `Y` along which function `f` is to be applied.
 
-Exceptionally, `B` must be a fractional value for the Laminate function (`,`) whose upper and lower integer bounds identify a pair of axes or an extreme axis of `X` and `Y`. For Take (`↑`) and Drop (`↓`), `B` can be a **vector** of two or more axes.
+Exceptionally, `B` must be a fractional value for the _laminate_ function (`,`) whose upper and lower integer bounds identify a pair of axes or an extreme axis of `X` and `Y`. For _take_ (`↑`) and _drop_ (`↓`), `B` can be a **vector** of two or more axes.
 
 `⎕IO` is an implicit argument of the derived function which determines the meaning of `B`.
 

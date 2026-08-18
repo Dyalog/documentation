@@ -34,7 +34,7 @@ Objects named in `Y` that cannot be edited are silently ignored. Objects qualifi
 
 ## Variants of Edit Object
 
-The behaviour of `⎕ED` may be modified using the variant operator `⍠` with the following options:
+The behaviour of `⎕ED` may be modified using the _variant_ operator `⍠` with the following options:
 
 - `'ReadOnly'` - 0 or 1
 - `'EditName'` - `'Default'`, `'Allow'` or `'Disallow'`.

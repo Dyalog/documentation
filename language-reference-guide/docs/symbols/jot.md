@@ -6,7 +6,7 @@ search:
 
 Jot is a dyadic operator
 
-Operator Jot means Beside or Bind
+Operator Jot means _Beside_ or _Bind_
 
 [Beside](../primitive-operators/beside.md) (function composition)
 ```apl

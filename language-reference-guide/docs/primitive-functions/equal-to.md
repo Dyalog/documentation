@@ -7,7 +7,7 @@ search:
 
 `Y` may be any array. `X` may be any array. `R` is Boolean.
 
-`⎕CT` and `⎕DCT` are  implicit arguments of Equal To.
+`⎕CT` and `⎕DCT` are  implicit arguments of _equal to_.
 
 If `X` and `Y` are refs, then `R` is 1 if they are refs to the same object. If `X` is a ref and `Y` is not, or vice-versa, then `R` is 0.
 

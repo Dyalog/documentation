@@ -10,7 +10,7 @@ search:
       ⍳Y ←→ (⍳Y)[⍳Y]
 ```
 
-`⎕IO` is an implicit argument of Index Generator. This function is also known as Interval.
+`⎕IO` is an implicit argument of _index generator_. This function is also known as _interval_.
 
 <h2 class="example">Examples</h2>
 ```apl

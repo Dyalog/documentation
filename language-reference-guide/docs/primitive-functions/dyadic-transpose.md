@@ -9,7 +9,7 @@ search:
 
 `R` is an array formed by the transposition of the axes of `Y` as specified by `X`.  The `I`<sup>th</sup> element of `X` gives the new position for the `I`<sup>th</sup> axis of `Y`.  If `X` repositions two or more axes of `Y` to the same axis, the elements used to fill this axis are those whose indices on the relevant axes of `Y` are equal.
 
-`⎕IO` is an implicit argument of Dyadic Transpose.
+`⎕IO` is an implicit argument of dyadic _transpose_.
 
 <h2 class="example">Examples</h2>
 ```apl

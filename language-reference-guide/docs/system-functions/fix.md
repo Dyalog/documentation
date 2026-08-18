@@ -109,7 +109,7 @@ DOMAIN ERROR: There were errors processing the script
 
 ## Variant Options
 
-`⎕FIX` may be applied using the  Variant operator with the options Quiet, FixWithErrors,  AllowLateBinding and InjectReferences. These options apply only to namespaces and classes specified by the script. There is no principal option.
+`⎕FIX` may be applied using the  _variant_ operator with the options Quiet, FixWithErrors,  AllowLateBinding and InjectReferences. These options apply only to namespaces and classes specified by the script. There is no principal option.
 
 ## Quiet Option
 

@@ -160,7 +160,7 @@ By replacing spaces with `^`, it is clearer to see how the result of `⍕` is fo
 ^^^^^^^^^^^^LMN^
 ```
 
-[`⎕PP`](../system-functions/pp) is an implicit argument of Format.
+[`⎕PP`](../system-functions/pp) is an implicit argument of _format_.
 
 ## See Also
 

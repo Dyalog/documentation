@@ -77,7 +77,7 @@ This is a Boolean value (default 0) to specify whether or not the first record i
 
 ## Variant options
 
-Monadic `⎕CSV` may be applied using the  Variant operator with the following options. The Principal option is Invert.
+Monadic `⎕CSV` may be applied using the  _variant_ operator with the following options. The Principal option is Invert.
 
 |Name       |Meaning                                     |Default|
 |-----------|--------------------------------------------|-------|

@@ -21,7 +21,7 @@ The optional left argument `X` is a numeric scalar; valid values are  shown in t
 
 ## Variant Options
 
-`⎕NDELETE` may be applied using the  Variant operator with the Wildcard option.
+`⎕NDELETE` may be applied using the  _variant_ operator with the Wildcard option.
 
 ## Wildcard Option (Boolean)
 

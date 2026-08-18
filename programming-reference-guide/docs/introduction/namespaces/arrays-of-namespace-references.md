@@ -1,6 +1,6 @@
 # Arrays of Namespace References
 
-You can construct arrays of refs using strand notation, array notation, catenate (`,`), reshape (`⍴`) and other structural primitives, as well as certain system functions.
+You can construct arrays of refs using strand notation, array notation, _catenate_ (`,`), _reshape_ (`⍴`) and other structural primitives, as well as certain system functions.
 ```apl
       EMP←JOHN PAUL
       ⍴EMP
@@ -15,7 +15,7 @@ Like any other array, an array of refs has name class 2:
 2
 ```
 
-Expressions such as indexing and pick return refs that may in turn be used as follows:
+Expressions such as indexing and _pick_ return refs that may in turn be used as follows:
 ```apl
       EMP[1].FirstName
 John
@@ -23,7 +23,7 @@ John
 44
 ```
 
-The each (`¨`) operator may be used to apply a function to an array of refs:
+The _each_ (`¨`) operator may be used to apply a function to an array of refs:
 ```apl
       SHOW¨EMP
  John Smith is 50  Paul Brown is 44

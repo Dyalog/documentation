@@ -13,7 +13,7 @@ search:
 - A simple integer scalar or vector of axes of `Y`, or
 - An empty vector
 
-Ravel with axis can be used with selective specification.
+_Ravel_ with axis can be used with selective specification.
 
 `R` depends on the case of `K` above.
 

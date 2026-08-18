@@ -13,7 +13,7 @@ If `Y` specifies a single name, the result `R` is a scalar 1 if a file or direct
 
 ## Variant Options
 
-`⎕NEXISTS` may be applied using the  Variant operator with the Wildcard option.
+`⎕NEXISTS` may be applied using the  _variant_ operator with the Wildcard option.
 
 ## Wildcard Option (Boolean)
 

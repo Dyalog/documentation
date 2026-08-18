@@ -4,7 +4,7 @@ search:
 ---
 # <span>Log File for Deprecations</span> `{R}←{X} 109⌶Y`{{key}}
 
-Manages the file used to log the use of deprecated features. For an overview of deprecated features and this I-beam's role in identifying them within your code, see [Deprecated functionality](../../../../programming-reference-guide/deprecated-functionality).
+Manages the file used to log the use of deprecated features. For an overview of deprecated features and this _I-beam_'s role in identifying them within your code, see [Deprecated functionality](../../../../programming-reference-guide/deprecated-functionality).
 
 `Y` indicates the action to perform.
 
