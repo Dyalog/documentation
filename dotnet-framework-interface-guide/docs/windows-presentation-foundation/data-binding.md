@@ -317,7 +317,7 @@ Learn to play the bouzouki!
 
 ```
 
-If you want to bind two properties of the same object to two APL variables, it has to be done by writing code as shown in this example, that is, using two separate Binding Source objects. This is because, using XAML, you can only associate a single Binding Source to an object. However, this minor restriction is easily surmounted by using an APL namespace as a Binding Source, as shown in [Example 4](#example-4-ui-specification-using-xaml).
+If you want to bind two properties of the same object to two APL variables, it has to be done by writing code as shown in this example, that is, using two separate Binding Source objects. This is because, using XAML, you can only associate a single Binding Source to an object. However, this minor restriction is easily surmounted by using an APL namespace as a Binding Source, as shown in [Example 4](#example-4-connected-properties).
 
 ## Example 4: Connected Properties
 
