@@ -54,7 +54,7 @@ If the Wildcard option is not enabled (the default) then `Y` specifies exactly o
 
 If the Wildcard option is enabled, zero or more files and/or directories may match the pattern in `Y`. In this case each element in `R` is a vector of property values for each of the files. Note that no error will be signalled if no files match the pattern.
 
-When using the **Wildcard** option, matching of names is done case insensitively on Windows and macOS, and case sensitively on other platforms. The names `.` and `..` are excluded from any matches. The order in which the names match is not defined.
+When using the `Wildcard` option, matching of names is done case insensitively on Windows and macOS, and case sensitively on other platforms. The names `.` and `..` are excluded from any matches. The order in which the names match is not defined.
 
 ## Variant Options
 

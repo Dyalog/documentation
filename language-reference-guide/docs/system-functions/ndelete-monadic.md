@@ -15,7 +15,7 @@ Each file or directory named in `Y` must exist, and directories to be deleted mu
 
 ## Variant Options
 
-`⎕NDELETE` can be applied using the  Variant operator with the Wildcard option.
+`⎕NDELETE` can be applied using the _variant_ operator with the `Wildcard` option.
 
 ## Wildcard Option (Boolean)
 

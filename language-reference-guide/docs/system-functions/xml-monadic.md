@@ -7,7 +7,7 @@ search:
 
 `⎕XML` converts an XML string into an APL array or converts an APL array into an XML string.
 
-Options for `⎕XML` are specified using the Variant operator `⍠`.
+Options for `⎕XML` are specified using the _variant_ operator `⍠`.
 
 For conversion *from* XML, `Y` is a character vector containing an XML string. The result `R` is a 5 column matrix whose columns are made up as follows:
 
@@ -173,7 +173,7 @@ Then, character references and entity references are emitted in place of charact
 
 ### Options
 
-There are 3 options, which are specified using the Variant operator `⍠`. The names are different and are case-sensitive; they must be spelled exactly as shown below.
+There are 3 options, which are specified using the _variant_ operator `⍠`. The names are different and are case-sensitive; they must be spelled exactly as shown below.
 
 |Option names for Variant|Option names for left argument|
 |------------------------|------------------------------|

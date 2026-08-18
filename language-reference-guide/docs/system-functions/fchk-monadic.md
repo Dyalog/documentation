@@ -11,7 +11,7 @@ search:
 
 For files associated with external variables, any filename extension must be specified even if `⎕XT` would not require it. The file must exist and must not currently be associated with an external variable.
 
-Options for `⎕FCHK` are specified using the Variant operator `⍠`.
+Options for `⎕FCHK` are specified using the _variant_ operator `⍠`.
 
 The default behaviour is as follows:
 

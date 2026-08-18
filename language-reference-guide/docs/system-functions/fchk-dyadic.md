@@ -12,7 +12,7 @@ search:
 For files associated with external variables, any filename extension must be specified even if `⎕XT` would not require it. The file must exist and must not currently be associated with an external variable.
 
 !!! Legacy "Legacy"
-    Specifying options by the left argument `X` is still supported. [Using the Variant operator `⍠` with monadic `⎕FCHK`](fchk-monadic.md) is recommended instead.
+    Specifying options by the left argument `X` is still supported. [Using the _variant_ operator `⍠` with monadic `⎕FCHK`](fchk-monadic.md) is recommended instead.
 
 The default behaviour is as follows:
 

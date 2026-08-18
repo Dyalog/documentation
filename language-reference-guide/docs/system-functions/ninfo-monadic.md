@@ -19,11 +19,11 @@ If the Wildcard option is not enabled (the default) then `Y` specifies exactly o
 
 If the Wildcard option is enabled, zero or more files and/or directories might match the pattern in `Y`. In this case each element in `R` is a vector of the names of the matching files. Note that no error will be signalled if no files match the pattern.
 
-When using the **Wildcard** option, matching of names is done case insensitively on Windows and macOS, and case sensitively on other platforms. The names `.` and `..` are excluded from any matches. The order in which the names match is not defined.
+When using the `Wildcard` option, matching of names is done case insensitively on Windows and macOS, and case sensitively on other platforms. The names `.` and `..` are excluded from any matches. The order in which the names match is not defined.
 
 ## Variant Options
 
-`⎕NINFO` can be applied using the _variant_ operator with the options **Wildcard** (the Principal option), **Recurse** and **ProgressCallback**.
+`⎕NINFO` can be applied using the _variant_ operator with the options `Wildcard` (the principal option), `Recurse`, and `ProgressCallback`.
 
 ### Wildcard Option (Boolean)
 
@@ -42,13 +42,13 @@ When using the **Wildcard** option, matching of names is done case insensitively
 
 |---|---|
 |`0` (default)|the name(s) in `Y` are searched for only in the corresponding specified directory.|
-|`1`|the name(s) in `Y` are searched for in the corresponding specified directory as well as all sub-directories. If **Wildcard** is also 1, the wild card search is performed recursively.|
+|`1`|the name(s) in `Y` are searched for in the corresponding specified directory as well as all sub-directories. If `Wildcard` is also 1, the wild card search is performed recursively.|
 |`1 n`|the name(s) in `Y` are searched for in the corresponding specified directory as well as its sub-directories to the n <sup>th</sup> -level sub-directory. If n is 0, no sub-directories are searched. If n is `¯1` all sub-directories are searched.|
-|`2 (n)`|same as 1 but if any unreadable directories are encountered they are skipped (whereas if **Recurse** is `1 (n)` , `⎕NINFO` stops and generates an error).|
+|`2 (n)`|same as 1 but if any unreadable directories are encountered they are skipped (whereas if `Recurse` is `1 (n)`, `⎕NINFO` stops and generates an error).|
 
 ### ProgressCallback Option
 
-The **ProgressCallback** variant option is described in the [Dyalog Programming Reference Guide](../../../programming-reference-guide/native-files#progress-callbacks). The following is specific to `⎕NINFO`:
+The `ProgressCallback` variant option is described in the [Dyalog Programming Reference Guide](../../../programming-reference-guide/native-files#progress-callbacks). The following is specific to `⎕NINFO`:
 
 * The first element of the right argument to the callback function is the character vector `'⎕NINFO'`.
 * The third element of the right argument (the information namespace) contains an extra field named `Info`, which is a vector with the same length as the `Last` field. Each element of the `Info` vector contains the name of the corresponding file in `Last`.
@@ -105,7 +105,7 @@ C:/Users/Pete/Documents/Dyalog APL-64 16.0 Unicode Files/
 └──────────────────────┘
 ```
 
-The next set of examples illustrates the use of the **Recurse** variant option to limit the sub-directory depth.
+The next set of examples illustrates the use of the `Recurse` variant option to limit the sub-directory depth.
 ```apl
       Y←'d:\bouzouki\*.*'
       ⍴⊃(⎕NINFO⍠('Wildcard' 1)('Recurse' 0))Y

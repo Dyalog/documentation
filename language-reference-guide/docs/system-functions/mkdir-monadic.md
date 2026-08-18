@@ -9,9 +9,9 @@ This function creates new directories.
 
 `Y` is a character vector or scalar containing a single directory name, or a vector of character vectors containing zero or more directory names. Names must conform to the naming rules of the host Operating System.
 
-For each name in `Y` the path must exist and the base name must not exist (see [Native File Exists](nexists.md)), otherwise an error is signalled. Use the variant option **Unique** or [dyadic `⎕MKDIR`](mkdir-dyadic.md) to handle these cases.
+For each name in `Y` the path must exist and the base name must not exist (see [Native File Exists](nexists.md)), otherwise an error is signalled. Use the variant option `Unique` or [dyadic `⎕MKDIR`](mkdir-dyadic.md) to handle these cases.
 
-The **Unique** option specifies whether the base name (see [File Name Parts](nparts-monadic.md)) in `Y` is modified so that the name is unique (does not already exist). The shy result `R` depends on the value of **Unique**:
+The `Unique` option specifies whether the base name (see [File Name Parts](nparts-monadic.md)) in `Y` is modified so that the name is unique (does not already exist). The shy result `R` depends on the value of `Unique`:
 
 | Unique | Effect on Behaviour | `R` when `Y` is Single Name | `R` when `Y` is Vector of Names |
 |--------|---------------------|-----------------------------|---------------------------------|

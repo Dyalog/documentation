@@ -9,17 +9,17 @@ This function creates new directories.
 
 `Y` is a character vector or scalar containing a single directory name, or a vector of character vectors containing zero or more directory names. Names must conform to the naming rules of the host Operating System.
 
-By default, for each name in `Y` the path must exist and the base name must not exist (see [Native File Exists](nexists.md)), otherwise an error is signalled. The left argument `X` and the variant option **Unique** can be used to amend this behaviour.
+By default, for each name in `Y` the path must exist and the base name must not exist (see [Native File Exists](nexists.md)), otherwise an error is signalled. The left argument `X` and the variant option `Unique` can be used to amend this behaviour.
 
 The left argument `X` is a numeric scalar that modifies the default behaviour when the base name in `Y` already exists and/or the path in `Y` does not already exist. The default value is `0`, which is equivalent to [monadic `⎕MKDIR`](mkdir-monadic.md). Possible values and the effect that they have on the default behaviour are:
 
 |---|---|
 | `0` | The base name in `Y` must not exist and the path in `Y` must exist, otherwise an error is signalled.                                                                           |
-|`1`|No action is taken if a directory specified by `Y` already exists (the return value indicates whether a new directory was created). Has no effect when the variant option **Unique** is set.|
+|`1`|No action is taken if a directory specified by `Y` already exists (the return value indicates whether a new directory was created). Has no effect when the variant option `Unique` is set.|
 |`2`|Any part of the *paths* specified in `Y` which does not already exist will be created in preparation of creating the corresponding directory.                                               |
 |`3`|Combination of 1 and 2.                                                                                                                                                                     |
 
-The **Unique** option specifies whether the base name (see [File Name Parts](nparts-monadic.md)) in `Y` is modified so that the name is unique (does not already exist). The shy result `R` depends on the value of **Unique**:
+The `Unique` option specifies whether the base name (see [File Name Parts](nparts-monadic.md)) in `Y` is modified so that the name is unique (does not already exist). The shy result `R` depends on the value of `Unique`:
 
 | Unique | Effect on Behaviour | `R` when `Y` is Single Name | `R` when `Y` is Vector of Names |
 |--------|---------------------|-----------------------------|---------------------------------|

@@ -55,7 +55,7 @@ In the second example, the left argument of `2` allows a script containing multi
 
 ## Variant Options
 
-`⎕FIX` can be applied using the  Variant operator with the options Quiet, FixWithErrors,  AllowLateBinding and InjectReferences. These options apply only to namespaces and classes specified by the script. There is no principal option.
+`⎕FIX` can be applied using the _variant_ operator with the options `Quiet`, `FixWithErrors`, `AllowLateBinding`, and `InjectReferences`. These options apply only to namespaces and classes specified by the script. There is no principal option.
 
 ## Quiet Option
 

@@ -19,10 +19,10 @@ Objects named in `Y` that cannot be edited are silently ignored. Objects qualifi
 
 ## Variants of Edit Object
 
-The behaviour of `⎕ED` can be modified using the variant operator `⍠` with the following options:
+The behaviour of `⎕ED` can be modified using the _variant_ operator `⍠` with the following options:
 
 - `'ReadOnly'` - 0 or 1
-- `'EditName'` - `'Default'`, `'Allow'` or `'Disallow'`.
+- `'EditName'` - `'Default'`, `'Allow'`, or `'Disallow'`.
 
 If `ReadOnly` is set to 1, the edit window and all edit windows opened from it will be read-only. Note that setting `ReadOnly` to 0 will have no effect if the edit window is inherently read-only due to the nature of its content.
 
@@ -34,7 +34,7 @@ The `'EditName'` option determines whether or not the user can open another edit
 |`'Allow'`   |Allow                    |Allow                     |
 |`'Disallow'`|Disallow                 |Disallow                  |
 
-There is no Principal Option.
+There is no principal option.
 
 <h2 class="example">Examples</h2>
 ```apl
