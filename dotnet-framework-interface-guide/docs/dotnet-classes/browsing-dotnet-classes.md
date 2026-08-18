@@ -11,7 +11,7 @@ The information that describes .NET classes, which is known as its _Metadata_, i
 3. Select **Load** from the drop-down list.<br />The **Browse .NET Assembly** window is displayed.
 4. Navigate to and select the .NET assembly of interest, and click **Open**.<br />The tree structure for the selected .NET assembly is displayed in the **Workspace Tree**.
 
-The .NET classes provided with the .NET Framework are typically located in **C:\WINDOWS\Microsoft.NET\Framework64\V4.0.30319** (on a 64-bit computer) – the final directory in this path is the version number. The most commonly-used classes of the .NET namespace system are stored in this directory in a .NET assembly called **mscorlib.dll**.
+The .NET classes provided with the .NET Framework are typically located in **C:\Windows\Microsoft.NET\Framework64\v4.0.30319** (on a 64-bit computer) – the final directory in this path is the version number. The most commonly-used classes of the .NET namespace system are stored in this directory in a .NET assembly called **mscorlib.dll**.
 
 Opening the **mscorlib.dll** assembly displays an extensive hierarchy; its complexity is due to the structure of the Metadata. Within the **mscorlib.dll** assembly, opening **Namespaces** > **System** > **Classes** displays the list of classes contained in the System .NET namespace. Each class can be expanded to display multiple directories containing detailed information about the class. For example:
 

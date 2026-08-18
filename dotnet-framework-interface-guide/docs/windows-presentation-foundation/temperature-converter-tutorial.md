@@ -122,7 +122,7 @@ This extract of XAML defines a Window control; a top-level window that is equiva
 
 The <code class="language-nonAPL">xmlns</code> attributes define the XML namespaces (effectively the vocabulary of the xml scheme) and are mandatory in an XAML document.
 
-The name of the <code class="language-nonAPL">TextBox</code> is <code class="language-nonAPL">Temp</code>, and its caption is **WPF Temperature Converter**. The <code class="language-nonAPL">SizeToContent</code> property is set to "WidthandHeight", which causes the <code class="language-nonAPL">TextBox</code> to automatically size itself to fit its content in both horizontal and vertical directions.
+The name of the <code class="language-nonAPL">Window</code> is <code class="language-nonAPL">Temp</code>, and its caption is **WPF Temperature Converter**. The <code class="language-nonAPL">SizeToContent</code> property is set to "WidthandHeight", which causes the <code class="language-nonAPL">Window</code> to automatically size itself to fit its content in both horizontal and vertical directions.
 
 ### The DockPanel
 ```xml

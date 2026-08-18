@@ -25,7 +25,7 @@ The `MakeProxy'http://localhost/dyalog.net/Loan/Loan.asmx'` call creates a C# so
 
 You use this proxy class in the same way that you use any .NET class. For example:
 ```apl
-      ⎕USING ←,⊂',.\LoanService.dll
+      ⎕USING ←,⊂',.\LoanService.dll'
       LN←⎕NEW LoanService
       LN.CalcPayments 100000 20 10 15 2
 LoanResult

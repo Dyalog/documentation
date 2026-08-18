@@ -575,7 +575,7 @@ Then, Line `[5]` creates a binding source object from this array and assigns it 
 ### Testing the Data Binding
 ```apl
       )LOAD wpfintro
-      DataBinding.NETObjects.NETObjects
+      DataBinding.NetObjects.NetObjects
 
 ```
 
