@@ -60,7 +60,7 @@ backups/def_uk.dse
 
 ## Variant Options
 
-`⎕NMOVE` supports four variant options, summarised in [](#variantoptionsfornmove) and described in detail beneath it. The principal option is `Wildcard`.
+`⎕NMOVE` supports four variant options, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md), summarised in [](#variantoptionsfornmove), and described in detail beneath it. The principal option is `Wildcard`.
 
 Table: Variant options for `⎕NMOVE` { #variantoptionsfornmove }
 
@@ -73,15 +73,18 @@ Table: Variant options for `⎕NMOVE` { #variantoptionsfornmove }
 
 ### Variant Option: `Wildcard`
 
+The `Wildcard` variant option (a Boolean) determines whether the name or names in `Y` are matched literally or as wildcard patterns.
+
+|Value|Effect|
 |---|---|
 |`0` <small>(default)</small>|The name or names in `Y` identifies a specific file name.|
 |`1`|The name or names in `Y` that specify the *base name* and *extension* (see [NParts](./nparts.md) ), can also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
 
-Note that when `Wildcard` is `1`, element(s) of `R` can be `0` or `>1`. If `Wildcard` is `0`, elements of `R` are always `1`.
+When `Wildcard` is `1`, element(s) of `R` can be `0` or `>1`. If `Wildcard` is `0`, elements of `R` are always `1`.
 
 <h4 class="example">Examples</h4>
 
-The source name can include wildcard characters which matches a number of existing files and/or directories. The destination name must be an existing directory. The files and/or directories that match the pattern specified by the source name are moved into the destination directory. If there are no matches, zero copies are made.
+The source name can include wildcard characters that match a number of existing files and/or directories. The destination name must be an existing directory. The files and/or directories that match the pattern specified by the source name are moved into the destination directory. If there are no matches, zero copies are made.
 
 ```apl
        ⊃1 ⎕NPARTS ''

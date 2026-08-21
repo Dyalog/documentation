@@ -59,7 +59,7 @@ Table: Variant options for `⎕FCREATE` { #variantoptionsforfcreate }
 
 |Variant Option|Valid Values|Default|Effect|
 |---|---|---|---|
-|`'J'`|`0`, `1`, `2` or `3`|`1`|Sets the journaling level.|
+|`'J'`|`0`, `1`, `2`, or `3`|`1`|Sets the journaling level.|
 |`'C'`|`0` or `1`|`1`|Sets the checksum level.|
 |`'Z'`|`0` or `1`|`0`|Sets compression.|
 |`'U'`|`0` or `1`|`1`|Sets Unicode support.|

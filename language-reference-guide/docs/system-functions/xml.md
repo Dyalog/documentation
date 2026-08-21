@@ -7,7 +7,7 @@ search:
 
 `⎕XML` converts an XML string into an APL array or converts an APL array into an XML string.
 
-Options for `⎕XML` are specified using the _variant_ operator `⍠` or by the optional left argument `X`. The former is recommended but the older mechanism using the left argument is still supported.
+Options for `⎕XML` are specified using the _variant_ operator `⍠` or by the optional left argument `X`. The former is recommended but the optional left argument is supported.
 
 For conversion *from* XML, `Y` is a character vector containing an XML string. The result `R` is a 5 column matrix whose columns are made up as follows:
 
@@ -113,7 +113,7 @@ Because certain markup which describes the format of allowable data (such as ele
 
 Attributes with names beginning **xml:** are reserved. Only **xml:space** is treated specially by `⎕XML`. When converting both from and to XML, the value for this attribute has the following effects on space normalization for the character data within this element and child elements within it (unless subsequently overridden):
 
-- **default** – space normalization is as determined by the `Whitespace` option. 
+- **default** – space normalisation is as determined by the `Whitespace` variant option. 
 - **preserve** - space normalization is disabled – all whitespace is preserved as given.
 - **any other value** – rejected.
 
@@ -173,13 +173,13 @@ Then, character references and entity references are emitted in place of charact
 
 ## Variant Options
 
-`⎕XML` supports three variant options, `Whitespace`, `Markup` and `UnknownEntity`, summarised in [](#variantoptionsforxml) and described in detail beneath it. There is no principal option. Each option can also be specified through the optional left argument `X` (retained for backwards compatibility) using the alternative name shown in the table; the names are case-sensitive and must be spelled exactly as shown.
+`⎕XML` supports three variant options, `Whitespace`, `Markup`, and `UnknownEntity`, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md), summarised in [](#variantoptionsforxml), and described in detail beneath it. There is no principal option. Each option can also be specified through the optional left argument `X` (retained for backwards compatibility) using the alternative name shown in [](#variantoptionsforxml); the names are case-sensitive and must be written exactly as shown.
 
 Table: Variant options for `⎕XML` { #variantoptionsforxml }
 
 |Variant Option|Left-argument name|Valid Values|Default|Effect|
 |---|---|---|---|---|
-|[`Whitespace`](#variant-option-whitespace)|`whitespace`|`Strip`, `Trim` or `Preserve`|`Strip`|Handling of white space in character data.|
+|[`Whitespace`](#variant-option-whitespace)|`whitespace`|`Strip`, `Trim`, or `Preserve`|`Strip`|Handling of white space in character data.|
 |[`Markup`](#variant-option-markup)|`markup`|`Strip` or `Preserve`|`Strip`|Whether markup appears in the result (import only).|
 |[`UnknownEntity`](#variant-option-unknownentity)|`unknown-entity`|`Replace` or `Preserve`|`Replace`|Handling of unknown entity and character references.|
 
@@ -198,7 +198,9 @@ Errors detected in the input arrays or options will all cause `DOMAIN ERROR`.
 
 ### Variant Option: `Whitespace`
 
-The left-argument name is `whitespace`. When converting from XML, `Whitespace` specifies the default handling of white space surrounding and within character data. When converting to XML `Whitespace` specifies the default formatting of the XML. Note that attribute values are not comprised of character data so white space in attribute values is always preserved.
+The left-argument name is `whitespace`.
+
+When converting from XML, `Whitespace` specifies the default handling of white space surrounding and within character data. When converting to XML `Whitespace` specifies the default formatting of the XML. Note that attribute values are not comprised of character data, so white space in attribute values is always preserved.
 
 |Converting from XML||
 |---|---|
@@ -321,7 +323,9 @@ The left-argument name is `whitespace`. When converting from XML, `Whitespace` s
 
 ### Variant Option: `Markup`
 
-The left-argument name is `markup`. When converting from XML, `Markup` determines whether markup (other than entity tags) appears in the output array or not. When converting to XML `Markup` has no effect.
+The left-argument name is `markup`.
+
+When converting from XML, `Markup` determines whether markup (other than entity tags) appears in the output array. When converting to XML `Markup` has no effect.
 
 |Converting from XML                                                                                                                       ||
 |--------------------|----------------------------------------------------------------------------------------------------------------------|
@@ -431,7 +435,9 @@ The left-argument name is `markup`. When converting from XML, `Markup` determine
 
 ### Variant Option: `UnknownEntity`
 
-The left-argument name is `unknown-entity`. When converting from XML, this option determines what happens when an unknown entity reference, or a character reference for a Unicode character which cannot be represented as an APL character, is encountered. In Classic versions of Dyalog APL that is any Unicode character which does not appear in `⎕AVU`. When converting to XML, this option determines what happens to Esc characters (`⎕UCS 27`) in data.
+The left-argument name is `unknown-entity`.
+
+When converting from XML, this option determines what happens when an unknown entity reference, or a character reference for a Unicode character that cannot be represented as an APL character, is encountered. In Classic versions of Dyalog APL this is any Unicode character that does not appear in `⎕AVU`. When converting to XML, this option determines what happens to Esc characters (`⎕UCS 27`) in data.
 
 |Converting from XML                                                                                                              ||
 |--------------------|-------------------------------------------------------------------------------------------------------------|

@@ -31,7 +31,7 @@ The `Wildcard` variant option (a Boolean, `0` by default) determines whether the
 |`0` <small>(default)</small>|The name or names in `Y` identifies a specific file name.|
 |`1`|The name or names in `Y` that specify the *base name* and *extension* (see [File Name Parts](./nparts.md)), can also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
 
-Note that when `Wildcard` is `1`, element(s) of `R` can be `0` or `>1`. If `Wildcard` is `0`, elements of `R` are always `1`.
+When `Wildcard` is `1`, element(s) of `R` can be `0` or `>1`. If `Wildcard` is `0`, elements of `R` are always `1`.
 
 If `Y` specifies the name of a  symbolic link, `⎕NDELETE` deletes that symbolic link;   the target of the symbolic link is unaffected.
 

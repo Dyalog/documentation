@@ -106,7 +106,7 @@ When an APL thread running `⎕SHELL` is terminated by [`⎕TKILL`](tkill.md) or
 
 ## Variant Options
 
-`⎕SHELL` supports ten variant options, summarised in [](#variantoptionsforshell) and described in detail beneath it. There is no principal option. They control certain parts of the program execution context.
+`⎕SHELL` supports ten variant options, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md), summarised in [](#variantoptionsforshell), and described in detail beneath it. There is no principal option. They control certain parts of the program execution context.
 
 Table: Variant options for `⎕SHELL` { #variantoptionsforshell }
 
@@ -252,7 +252,7 @@ The `Shell` variant option sets the shell to be used when `Y` is a character vec
 
 The value must be a character vector or a vector of character vectors with a length of at least 1.
 
-!!! info
+!!! Info "Information"
     Shells typically takes some argument which specify that the next argument is a command to run, such as `/bin/bash -c` on Linux, but since the argument differs from shell to shell, it must be specified manually.
 
 When the right argument of `⎕SHELL` is a nested vector, the `Shell` option has no effect.
@@ -308,7 +308,7 @@ The default depends on the operating-system:
 
 ### Variant Option: `Window`
 !!! windows "Dyalog on Microsoft Windows"
-    This option only has an effect on Windows.
+    This option only has an effect on Microsoft Windows; it is ignored on other operating systems.
 
 The `Window` variant option specifies the initial window mode. The value must be a character vector containing one of the initial window parameters described on [`⎕CMD`](execute-windows-command.md#starting-a-windows-program).
 

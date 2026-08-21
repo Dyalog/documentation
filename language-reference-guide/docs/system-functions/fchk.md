@@ -7,7 +7,7 @@ search:
 
 `⎕FCHK` validates and repairs component files, and validates files associated with external variables, following an abnormal termination of the APL process or operating system.
 
-`Y` must be a simple character scalar or vector which specifies the name of the file to be exclusively checked or repaired. For component files, the file must be named in accordance with the operating system's conventions, and can be a relative or absolute pathname. The file must exist and must not be tied. If no file extension is supplied, the set of extensions specified by the  **CFEXT** parameter are tried one after another until the file is found or the set of extensions is exhausted. See [CFEXT](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters).
+`Y` must be a simple character scalar or vector which specifies the name of the file to be exclusively checked or repaired. For component files, the file must be named in accordance with the operating system's conventions, and can be a relative or absolute pathname. The file must exist and must not be tied. If no file extension is supplied, the set of extensions specified by the [CFEXT](../../../windows-installation-and-configuration-guide/configuration-parameters/cfext/) configuration parameter are tried one after another until the file is found or the set of extensions is exhausted.
 
 For files associated with external variables, any filename extension must be specified, even if `⎕XT` would not require it. The file must exist and must not currently be associated with an external variable.
 
@@ -29,7 +29,7 @@ Other negative numbers represent damage to the file metadata; this set might be 
 
 ## Variant Options
 
-`⎕FCHK` supports three variant options, `Task`, `Repair` and `Force`, summarised in [](#variantoptionsforfchk) and described in detail beneath it. The principal option is `Repair`.
+`⎕FCHK` supports three variant options, `Task`, `Repair`, and `Force`, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md), summarised in [](#variantoptionsforfchk), and described in detail beneath it. The principal option is `Repair`.
 
 Table: Variant options for `⎕FCHK` { #variantoptionsforfchk }
 

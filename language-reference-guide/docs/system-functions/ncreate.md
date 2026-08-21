@@ -13,7 +13,7 @@ The [shy](../../../programming-reference-guide/introduction/results#shy-results)
 
 ## Variant Options
 
-`⎕NCREATE` supports two variant options, `Unique` and `IfExists`, summarised in [](#variantoptionsforncreate) and described in detail beneath it. There is no principal option.
+`⎕NCREATE` supports two variant options, `Unique` and `IfExists`, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md), summarised in [](#variantoptionsforncreate), and described in detail beneath it. There is no principal option.
 
 Table: Variant options for `⎕NCREATE` { #variantoptionsforncreate }
 

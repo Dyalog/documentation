@@ -98,9 +98,9 @@ Table: Variant options for `⎕CSV` { #variantoptionsforcsv }
 
 The `Separator`, `QuoteChar`, and `EscapeChar` characters, when defined, must be different.
 
-Other options defined for export are also accepted but ignored.
+Other [variant options defined for export](#variantoptionsforcsv2) are also accepted but ignored.
 
-### Variant Options: `QuoteChar`, `EscapeChar`, and `DoubleQuote`
+### Variant Option: `QuoteChar`, `EscapeChar`, and `DoubleQuote`
 
 If `EscapeChar` is set, then any character can be prefixed by the escape character. The escape character is typically defined as `'\'`. The escape character immediately followed by the character `c` is the literal character `c`, even if `c` alone would have been a metacharacter.
 
@@ -214,7 +214,7 @@ If `Y[4]` does specify that the data contains a header, then `R` is a 2-element 
 
 ### File Handling
 
-Data can be read from a named file or a tied native file. A tied native file can be read in sections by repeatedly invoking `⎕CSV` for a specified maximum number of records (specified by the `Records` variant) until no more data is read.
+Data can be read from a named file or a tied native file. A tied native file can be read in sections by repeatedly invoking `⎕CSV` for a specified maximum number of records (specified by the `Records` variant option) until no more data is read.
 
 In all cases the files must contain text using one of the supported encodings (see [File Encodings](nget.md)). The method used to determine the file encoding is as follows:
 
@@ -279,11 +279,13 @@ Table: Variant options for `⎕CSV` { #variantoptionsforcsv2 }
 |`Trim`|a Boolean specifying whether whitespace is trimmed at the beginning and end of character fields|`1`|
 |`Widths`|a vector of numeric values describing the width (in characters) of the corresponding columns in the CSV source, or `⍬` for variable width delimited fields|`⍬`|
 
-The `Separator`, `QuoteChar`, and `EscapeChar` characters, when defined, must be different. Other options defined for import are also accepted but ignored.
+The `Separator`, `QuoteChar`, and `EscapeChar` characters, when defined, must be different.
 
-The `Overwrite` variant option (a Boolean) from Version 16.0 remains supported but is deprecated in favour of `IfExists`.
+Other [variant options defined for import](#variantoptionsforcsv) are also accepted but ignored.
 
-### Variant Options: `QuoteChar`, `EscapeChar`, and `DoubleQuote`
+The `Overwrite` variant option (a Boolean) remains supported but is deprecated in favour of `IfExists`.
+
+### Variant Option: `QuoteChar`, `EscapeChar`, and `DoubleQuote`
 
 - The CSV text will be generated such that it can be read back according to the corresponding rules for import.
 - If these options do not permit this (for example, a field contains the quote character and neither `DoubleQuote` or `EscapeChar` are set) an error is signalled.

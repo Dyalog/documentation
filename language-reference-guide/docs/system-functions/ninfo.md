@@ -57,9 +57,9 @@ If a property value cannot be obtained, the default value (shown in the table ab
 
 If the `Wildcard` option is not enabled (the default), then `Y` specifies exactly one file or directory and must exist. In this case each element in `R` is a single property value for that file. If the name in `Y` does not exist, the function signals an error. On non-Windows platforms "*" and "?" are treated as normal characters. On Microsoft Windows an error will be signalled since neither are valid characters for file or directory names.
 
-If the `Wildcard` option is enabled, zero or more files and/or directories might match the pattern in `Y`. In this case each element in `R` is a vector of property values for each of the files. Note that no error will be signalled if no files match the pattern.
+If the `Wildcard` option is enabled, zero or more files and/or directories might match the pattern in `Y`. In this case, each element in `R` is a vector of property values for each of the files. No error will be signalled if no files match the pattern.
 
-When using the `Wildcard` option, matching of names is done case insensitively on Windows and macOS, and case sensitively on other platforms. The names '.' and '..' are excluded from any matches. The order in which the names match is not defined.
+When using the `Wildcard` variant option, matching of names is done case insensitively on Microsoft Windows and macOS, and case sensitively on other platforms. The names '.' and '..' are excluded from any matches. The order in which the names match is not defined.
 
 !!! Warning "Warning"
     On platforms other than Microsoft Windows, file names are exposed by the operating system using UTF-8 encoding, which Dyalog translates internally to characters.
@@ -98,7 +98,7 @@ When using the `Wildcard` option, matching of names is done case insensitively o
 
 ## Variant Options
 
-`⎕NINFO` is controlled by four variant options, summarised in [](#variantoptionsforninfo) and described in detail beneath it.
+`⎕NINFO` is controlled by four variant options, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md), summarised in [](#variantoptionsforninfo), and described in detail beneath it.
 
 Table: Variant options for `⎕NINFO` { #variantoptionsforninfo }
 
@@ -160,6 +160,8 @@ The following expression "touches" files, that is, it sets their last modificati
 ```
 
 ### Variant Option: `Recurse`
+
+The `Recurse` variant option determines whether, and to how many levels, sub-directories are searched.
 
 |Value|Effect|
 |---|---|

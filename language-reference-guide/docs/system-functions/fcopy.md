@@ -47,7 +47,7 @@ Table: Variant options for `⎕FCOPY` { #variantoptionsforfcopy }
 
 |Variant Option|Valid Values|Effect|
 |---|---|---|
-|`'J'`|a journaling level|Sets the journaling level.|
+|`'J'`|`0`, `1`, `2`, or `3`|Sets the journaling level.|
 |`'C'`|`0` or `1`|Sets the checksum level.|
 |`'Z'`|`0` or `1`|Sets compression.|
 |`'U'`|`0` or `1`|Sets Unicode support.|
@@ -82,7 +82,7 @@ will name a variant of `⎕FCREATE` which will create component file with level 
 ```
 
 !!! note
-    Setting `('U' 0)` (no Unicode support) is discouraged as it might cause the copy to fail with a `TRANSLATION ERROR`. Similarly using a Classic interpreter to `⎕FCOPY` files might result in `TRANSLATION ERROR`s.
+    Setting `('U' 0)` (no Unicode support) is discouraged as it might cause the copy to fail with a `TRANSLATION ERROR`. Similarly, using a Classic interpreter to `⎕FCOPY` files might result in `TRANSLATION ERROR`s.
 
 !!! Info "Information"
     Small-span (32-bit) component files are currently read-only; Dyalog Ltd recommends using `⎕FCOPY` to convert any such files to large-span (64-bit). This ability is scheduled for removal in a future release. For information on how to identify calls to small-span component files in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).

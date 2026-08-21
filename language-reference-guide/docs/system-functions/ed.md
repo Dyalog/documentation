@@ -34,22 +34,22 @@ Objects named in `Y` that cannot be edited are silently ignored. Objects qualifi
 
 ## Variant Options
 
-`⎕ED` supports two variant options, `ReadOnly` and `EditName`, summarised in [](#variantoptionsfored) and described in detail beneath it. There is no principal option.
+`⎕ED` supports two variant options, `ReadOnly` and `EditName`, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md), summarised in [](#variantoptionsfored), and described in detail beneath it. There is no principal option.
 
 Table: Variant options for `⎕ED` { #variantoptionsfored }
 
 |Variant Option|Valid Values|Default|Effect|
 |---|---|---|---|
-|[`ReadOnly`](#variant-option-readonly)|`0` or `1`|`0`|Whether the edit windows are read-only.|
-|[`EditName`](#variant-option-editname)|`'Default'`, `'Allow'` or `'Disallow'`|`'Default'`|Whether the user can open further edit windows by clicking a name.|
+|[`ReadOnly`](#variant-option-readonly)|`0` or `1`|`0`|Whether the **Edit** windows are read-only.|
+|[`EditName`](#variant-option-editname)|`'Default'`, `'Allow'`, or `'Disallow'`|`'Default'`|Whether the user can open further **Edit** windows by clicking a name.|
 
 ### Variant Option: `ReadOnly`
 
-If `ReadOnly` is set to `1`, the edit window and all edit windows opened from it will be read-only. Note that setting `ReadOnly` to `0` will have no effect if the edit window is inherently read-only due to the nature of its content.
+If `ReadOnly` is set to `1`, the **Edit** window and all **Edit** windows opened from it will be read-only. Setting `ReadOnly` to `0` will have no effect if the **Edit** window is inherently read-only due to the nature of its content.
 
 ### Variant Option: `EditName`
 
-The `EditName` option determines whether or not the user can open another edit window by clicking a name, and its values are interpreted as follows:
+The `EditName` variant option determines whether the user can open another **Edit** window by clicking a name. Its values are interpreted as follows:
 
 |`EditName`|`⎕ED` called from session|`⎕ED` called from function|
 |------------|-------------------------|--------------------------|

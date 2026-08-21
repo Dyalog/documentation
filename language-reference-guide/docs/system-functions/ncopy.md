@@ -55,14 +55,14 @@ backups/def_uk.dse
 
 ## Variant Options
 
-`⎕NCOPY` supports four variant options, summarised in [](#variantoptionsforncopy) and described in detail beneath it. The principal option is `Wildcard`.
+`⎕NCOPY` supports four variant options, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md), summarised in [](#variantoptionsforncopy), and described in detail beneath it. The principal option is `Wildcard`.
 
 Table: Variant options for `⎕NCOPY` { #variantoptionsforncopy }
 
 |Variant Option|Valid Values|Default|Effect|
 |---|---|---|---|
 |[`Wildcard`](#variant-option-wildcard)<br><small>principal</small>|`0` or `1`|`0`|Whether the names in `Y` are matched literally or as patterns.|
-|[`IfExists`](#variant-option-ifexists)|`'Error'`, `'Skip'`, `'Replace'` or `'ReplaceIfNewer'`|`'Error'`|What happens when a target file already exists.|
+|[`IfExists`](#variant-option-ifexists)|`'Error'`, `'Skip'`, `'Replace'`, or `'ReplaceIfNewer'`|`'Error'`|What happens when a target file already exists.|
 |[`PreserveAttributes`](#variant-option-preserveattributes)|`0` or `1`|`0`|Whether file attributes are preserved.|
 |[`ProgressCallback`](#variant-option-progresscallback)|the name of a callback function|none|Reports progress during the copy.|
 
@@ -72,11 +72,11 @@ Table: Variant options for `⎕NCOPY` { #variantoptionsforncopy }
 |`0` <small>(default)</small>|The name or names in `Y` identifies a specific file name.|
 |`1`|The name or names in `Y` that specify the *base name* and *extension* (see [NParts](./nparts.md) ), can also contain the wildcard characters "?" and "*". An asterisk is a substitute for any 0 or more characters in a file name or extension; a question-mark is a substitute for any single character.|
 
-Note that when `Wildcard` is `1`, element(s) of `R` can be `0`, `1` or `>1`. If `Wildcard` is `0`, elements of `R` are always `1`.
+When `Wildcard` is `1`, element(s) of `R` can be `0`, `1`, or `>1`. If `Wildcard` is `0`, elements of `R` are always `1`.
 
 <h4 class="example">Examples</h4>
 
-The source name can include wildcard characters which matches a number of existing files and/or directories. The destination name must be an existing directory. The files and/or directories that match the pattern specified by the source name are copied into the destination directory. If there are no matches, zero copies are made.
+The source name can include wildcard characters that match a number of existing files and/or directories. The destination name must be an existing directory. The files and/or directories that match the pattern specified by the source name are copied into the destination directory. If there are no matches, zero copies are made.
 ```apl
        ⊃1 ⎕NPARTS ''
 i:/Documents/Dyalog APL-64 17.0 Unicode Files/
@@ -127,17 +127,17 @@ The following cases cause an error to be signalled regardless of the value of th
 
 ### Variant Option: `PreserveAttributes`
 
-The `PreserveAttributes` variant option (a Boolean) determines whether or not file attributes are preserved. It does not apply to directories, only to files.
+The `PreserveAttributes` variant option (a Boolean) determines whether file attributes are preserved. It does not apply to directories, only to files.
 
 |---|---|
 |`0` <small>(default)</small>|file attributes are not preserved.                                                                                                                                                         |
 |`1`|where possible, copied files will be given at least the same modification time as the source. Other file attributes will be preserved as permitted by the operating system and file system.|
 
-Note also that when files are copied across file systems, the different file systems might have different timestamp granularity and the timestamps might not be exactly the same.
+When files are copied across file systems, the different file systems might have different timestamp granularity therefore the timestamps might not be exactly the same.
 
 ### Variant Option: `ProgressCallback`
 
-The `ProgressCallback` variant option is described in the [Dyalog Programming Reference Guide](../../../programming-reference-guide/native-files#progress-callbacks). The following is specific to `⎕NCOPY`:
+The `ProgressCallback` variant option is described in the [_Dyalog Programming Reference Guide_](../../../programming-reference-guide/native-files#progress-callbacks). The following is specific to `⎕NCOPY`:
 
 * The first element of the right argument to the callback function is the character vector `'⎕NCOPY'`.
 

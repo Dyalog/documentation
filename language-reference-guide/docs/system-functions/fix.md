@@ -109,14 +109,14 @@ DOMAIN ERROR: There were errors processing the script
 
 ## Variant Options
 
-`⎕FIX` supports four variant options, `Quiet`, `FixWithErrors`, `AllowLateBinding` and `InjectReferences`, summarised in [](#variantoptionsforfix) and described in detail beneath it. These options apply only to namespaces and classes specified by the script. There is no principal option.
+`⎕FIX` supports four variant options, `Quiet`, `FixWithErrors`, `AllowLateBinding`, and `InjectReferences`, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md), summarised in [](#variantoptionsforfix), and described in detail beneath it. These options apply only to namespaces and classes specified by the script. There is no principal option.
 
 Table: Variant options for `⎕FIX` { #variantoptionsforfix }
 
 |Variant Option|Valid Values|Default|Effect|
 |---|---|---|---|
 |[`Quiet`](#variant-option-quiet)|`0` or `1`|`0`|Whether script errors are shown in the Status Window.|
-|[`FixWithErrors`](#variant-option-fixwitherrors)|`0`, `1` or `2`|`1`|Whether namespaces and classes containing errors are fixed.|
+|[`FixWithErrors`](#variant-option-fixwitherrors)|`0`, `1`, or `2`|`1`|Whether namespaces and classes containing errors are fixed.|
 |[`AllowLateBinding`](#variant-option-allowlatebinding)|`0` or `1`|`1`|Whether a Class with an undefined Base class is fixed.|
 |[`InjectReferences`](#variant-option-injectreferences)|`'All'`, `'InClasses'` or `'None'`|`'InClasses'`|How internal references are inserted to implement lexical scope.|
 
@@ -151,7 +151,7 @@ Controls how internal references are inserted to implement lexical scope.
 
 |-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 |`'All'`    |In order to implement lexical scope, `⎕FIX` will insert internal references into all objects in the script.                                          |
-|`'InClasses'` <small>(default)</small>|In order to implement lexical scope, `⎕FIX` will insert internal references ONLY into Classes and sub-classes in the script, but not into namespaces.|
+|`'InClasses'` <small>(default)</small>|To implement lexical scope, `⎕FIX` will insert internal references only into Classes and sub-classes in the script, but not into namespaces.|
 |`'None'`   |No internal references are inserted and lexical scope does not apply.                                                                                |
 
 See [Lexical Scope in Scripts](../../../earlier-release-notes/release-notes-v19-0/introduction/lexical-scope-in-scripts).
