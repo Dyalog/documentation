@@ -69,9 +69,9 @@ In [](#implicitargs):
 
 ## Conformability
 
-The arguments of a dyadic function _conform_ if the shape of each argument meets the requirements of the function, possibly after [singleton extension](#singleton-extension).
+The arguments of a dyadic function _conform_ if the shape of each argument meets the requirements of the function, possibly after [singleton extension](#scalar-and-singleton-extension).
 
-For a [dyadic scalar function](primitive-functions-by-category/#dyadic-scalar-functions), the arguments conform if they have the same shape, or if one of them is a [singleton](#singleton-extension) (in particular, a scalar), which is then extended to the shape of the other. Otherwise, the function signals a `RANK ERROR` if the arguments have different ranks, or a `LENGTH ERROR` if they have the same rank but different shapes.
+For a [dyadic scalar function](primitive-functions-by-category.md#dyadic-scalar-functions), the arguments conform if they have the same shape, or if one of them is a [singleton](#scalar-and-singleton-extension) (in particular, a scalar), which is then extended to the shape of the other. Otherwise, the function signals a `RANK ERROR` if the arguments have different ranks, or a `LENGTH ERROR` if they have the same rank but different shapes.
 
 Mixed (non-scalar) primitive functions impose their own conformance requirements, which are described with each function.
 
@@ -169,7 +169,7 @@ DE
 0 0 1
 ```
 
-!!! Warning "Warning"
+!!! Info "Information"
     The fill element only replaces simple scalars, but does not change lengths. For example, a vector of vectors fills with elements of the same length as the first element, not with empty vectors:
     ```apl
           4↑'Anna' 'Bob'
@@ -187,7 +187,7 @@ DE
 
 ## Axis Specification
 
-Axis specification can be applied to certain mixed primitive functions and to all [dyadic scalar functions](primitive-functions-by-category/#dyadic-scalar-functions). An integer axis identifies a specific axis along which the function is to be applied to one or both of its arguments. Mixed primitive functions have a default axis, either the first or last.
+Axis specification can be applied to certain mixed primitive functions and to all [dyadic scalar functions](primitive-functions-by-category.md#dyadic-scalar-functions). An integer axis identifies a specific axis along which the function is to be applied to one or both of its arguments. Mixed primitive functions have a default axis, either the first or last.
 
 <h2 class="example">Example</h2>
 ```apl
@@ -222,7 +222,7 @@ Some mixed primitive functions allow a vector axis value, indicating an operatio
 `⎕IO` is an [implicit argument](#implicit-arguments) of axis specification.
 
 !!! Hint "Hints and Recommendations"
-    Axis specification only applies to a specific set of primitives and never to defined functions. The [_rank_ operator](../primitive-operators/rank.md) is a more general mechanism. If the function operates along the leading axis, then it can substitute for most axis specifications, particularly in combination with [`⍉`](transpose.md). For example:
+    Axis specification only applies to a specific set of primitives and never to defined functions. The [_rank_ operator](../primitive-operators/rank.md) is a more general mechanism. If the function operates along the leading axis, then it can substitute for most axis specifications, particularly in combination with _transpose_ ([`⍉`](transpose.md)). For example:
     ```apl
           1 0 1(⌿⍤1) 2 3⍴⍳6
     1 3
