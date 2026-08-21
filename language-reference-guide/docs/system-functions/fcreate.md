@@ -69,7 +69,7 @@ The principal option is a number that sets journaling (`'J'`) and checksum (`'C'
 
 |Principal option|Effect|
 |---|---|
-|`0`|sets `('J' 0) ('C' 0)`|
+|`0`|sets `('J' 0) ('C' 0)`, which signals a `DOMAIN ERROR` as this combination is no longer supported|
 |`1`|sets `('J' 1) ('C' 1)`|
 |`2`|sets `('J' 2) ('C' 1)`|
 |`3`|sets `('J' 3) ('C' 1)`|
