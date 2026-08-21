@@ -40,16 +40,16 @@ Table: Variant options for `⎕ED` { #variantoptionsfored }
 
 |Variant Option|Valid Values|Default|Effect|
 |---|---|---|---|
-|[`ReadOnly`](#variant-option-readonly)|`0` or `1`|`0`|Whether the **Edit** windows are read-only.|
-|[`EditName`](#variant-option-editname)|`'Default'`, `'Allow'`, or `'Disallow'`|`'Default'`|Whether the user can open further **Edit** windows by clicking a name.|
+|[`ReadOnly`](#variant-option-readonly)|`0` or `1`|`0`|Whether the Edit windows are read-only.|
+|[`EditName`](#variant-option-editname)|`'Default'`, `'Allow'`, or `'Disallow'`|`'Default'`|Whether the user can open further Edit windows by clicking a name.|
 
 ### Variant Option: `ReadOnly`
 
-If `ReadOnly` is set to `1`, the **Edit** window and all **Edit** windows opened from it will be read-only. Setting `ReadOnly` to `0` will have no effect if the **Edit** window is inherently read-only due to the nature of its content.
+If `ReadOnly` is set to `1`, the Edit window and all Edit windows opened from it will be read-only. Setting `ReadOnly` to `0` will have no effect if the Edit window is inherently read-only due to the nature of its content.
 
 ### Variant Option: `EditName`
 
-The `EditName` variant option determines whether the user can open another **Edit** window by clicking a name. Its values are interpreted as follows:
+The `EditName` variant option determines whether the user can open another Edit window by clicking a name. Its values are interpreted as follows:
 
 |`EditName`|`⎕ED` called from session|`⎕ED` called from function|
 |------------|-------------------------|--------------------------|
