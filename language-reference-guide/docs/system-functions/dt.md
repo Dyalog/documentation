@@ -203,7 +203,7 @@ The upper and lower case letters, underscore `_`, dollar `$`, and percent `%` ar
 
 ## Language
 
-Unless overridden, English is used for text substitutions. Different languages can be selected using the [**Language** variant option](#variant-option-language) and/or the use of language specifiers within the format pattern. In either case, the language is specified as either a two letter [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code in lower case (for example, `en`) or as a five character language with an additional underscore and two character region in upper case (for example, `en_GB`). Within the format pattern, `__xx__` (where `xx` is the two or five character specifier) will switch the language of the subsequent generated or matched text. { #languages } shows the languages that are built into the interpreter.
+Unless overridden, English is used for text substitutions. Different languages can be selected using the [`Language` variant option](#variant-option-language) and/or the use of language specifiers within the format pattern. In either case, the language is specified as either a two letter [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code in lower case (for example, `en`) or as a five character language with an additional underscore and two character region in upper case (for example, `en_GB`). Within the format pattern, `__xx__` (where `xx` is the two or five character specifier) will switch the language of the subsequent generated or matched text. { #languages } shows the languages that are built into the interpreter.
 
 Table: Built-in languages { #languages }
 
@@ -241,7 +241,7 @@ Table: Predefined patterns built into the interpreter { #patterns }
 | ---  | ---            |
 | `ISO`  | `YYYY-MM-DD"T"hh:mm:ss` |
 
-Additional predefined patterns can be defined using the [**Dictionary** variant option](#variant-option-dictionary). Predefined patterns must not contain references to other predefined patterns.
+Additional predefined patterns can be defined using the [`Dictionary` variant option](#variant-option-dictionary). Predefined patterns must not contain references to other predefined patterns.
 
 ## Pattern-matching Rules
 
@@ -288,7 +288,7 @@ If a pattern is rejected, or a text-formatted datetime cannot be matched against
 
 `⎕DT` supports the **Language** and **Dictionary** variant options, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md). These only apply when <code>X<sub>Y</sub></code> and/or <code>X<sub>R</sub></code> are patterns.
 
-### Variant Option: Language
+### Variant Option: `Language`
 
 The **Language** variant option specifies the language used for formatting and matching datetimes and defaults to `'en'` (English). A language is named by a two or five character value (for example `'en'` or `'en_GB'`). The value can be one of the following:
 
@@ -297,7 +297,7 @@ The **Language** variant option specifies the language used for formatting and m
 
 The setting can be explicitly overridden within a format pattern using the `__xx__` specifier described under [Language](#language).
 
-### Variant Option: Dictionary
+### Variant Option: `Dictionary`
 
 The **Dictionary** variant option specifies a namespace that contains additional or replacement names for the months (and so on) and/or predefined patterns, for languages and language regions. If <code>X<sub>Y</sub></code> and <code>X<sub>R</sub></code> are both patterns, the dictionary is applied to both.
 
