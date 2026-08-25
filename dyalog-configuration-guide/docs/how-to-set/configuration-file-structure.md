@@ -31,6 +31,10 @@ If the same name is defined more than once within a file, the first definition i
 
 A value can be an array of strings, used mainly for file paths, for example `WSPATH: ["/dir1", "/dir2"]`. The only parameters that can be defined as arrays are **WSPATH**, **WSEXT**, and **CFEXT**.
 
+## References Relative to the Configuration File
+
+Within a configuration file, a [reference to another configuration parameter](overview.md#references-to-other-configuration-parameters) can also refer to the location of the file itself. If the string inside the `[]` delimiters is `.`, it is replaced with the path of the directory containing the configuration file. For example, `FILENAME: "[.]/x.txt"` sets **FILENAME** to a reference to a file called `x.txt` in the same directory as the configuration file defining it.
+
 ## File Names
 
 Path names in configuration files should use portable forward slashes (`/`) rather than back-slashes (`\`), because JSON uses the back-slash as an escape character. For example, `WSPATH: ["c:/Dyalog21.0"]` (or `["c:\\Dyalog21.0"]`) specifies `c:\Dyalog21.0`.

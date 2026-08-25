@@ -15,7 +15,7 @@ Dyalog Ltd recommends configuration files for all run-time applications, in pref
 
 ## References to Other Configuration Parameters
 
-A string value can refer to another configuration parameter, wherever it is defined, using square-bracket delimiters. For example, `MySetting: "[DYALOG]/MyFile"` replaces `[DYALOG]` with the value of the **DYALOG** parameter. If the string inside the brackets is `.`, it is replaced with the path of the directory containing the configuration file itself.
+A string value can refer to another configuration parameter using square-bracket delimiters. For example, `MySetting: "[DYALOG]/MyFile"` replaces `[DYALOG]` with the value of the **DYALOG** parameter.
 
 If the referenced parameter is not defined, no substitution takes place and the reference, including its brackets, remains in place. To include a literal square bracket in a string, prefix it with a `\` character.
 
