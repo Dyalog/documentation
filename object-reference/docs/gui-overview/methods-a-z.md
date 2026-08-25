@@ -94,6 +94,7 @@ search:
 |[SetPropertyInfo](../methodorevents/setpropertyinfo.md)|554|Used to describe a property that is exported by a COM object|
 |[Setup](../methodorevents/setup.md)|101|displays printer setup dialog box|
 |[SetVarInfo](../methodorevents/setvarinfo.md)|546|Used to describe an APL variable that is to be exported as a property of an [ActiveXControl](../objects/activexcontrol.md) object|
+|[SetWizard](../methodorevents/setwizard.md)|365|reports the state of the page-changing buttons when the user has clicked Next or Back in a Wizard-style [PropertySheet](../objects/propertysheet.md)|
 |[SetZoomLevel](../methodorevents/setzoomlevel.md)|&nbsp;|sets the CEF ZoomLevel of the [HTMLRenderer](../objects/htmlrenderer.md)|
 |[ShowBalloonTip](../methodorevents/showballoontip.md)|860|displays a BalloonTip|
 |[ShowDevTools](../methodorevents/showdevtools.md)|&nbsp;|shows or hides the CEF development tools window that displays information about [HTMLRenderer](../objects/htmlrenderer.md) content|
@@ -105,4 +106,5 @@ search:
 |[TCPSendPicture](../methodorevents/tcpsendpicture.md)|380|Transmits a picture represented by a [Bitmap](../objects/bitmap.md) object to a TCP/IP socket|
 |[Undo](../methodorevents/undo.md)|170|reverses last change made to a [Grid](../objects/grid.md) object|
 |[Wait](../methodorevents/wait.md)|147|same as executing `⎕DQ` on the object|
+|[WebSocketClose](../methodorevents/websocketclose.md)|843|closes a WebSocket; reported as a notification when the [HTMLRenderer](../objects/htmlrenderer.md) client closes it|
 |[WebSocketSend](../methodorevents/websocketsend.md)|847|sends data to a WebSocket|

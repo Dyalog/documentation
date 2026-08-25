@@ -81,4 +81,6 @@ Parents: [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../obje
 
 Children: [NetClient](../objects/netclient.md), [OLEClient](../objects/oleclient.md), [Timer](../objects/timer.md)
 
-Properties: [Attach](../properties/attach.md), [ChildList](../properties/childlist.md), [ClassName](../properties/classname.md), [Coord](../properties/coord.md), [EventList](../properties/eventlist.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Type](../properties/type.md)
+Properties (default order): [Type](../properties/type.md), [Posn](../properties/posn.md), [Size](../properties/size.md), [Coord](../properties/coord.md), [ClassName](../properties/classname.md), [Attach](../properties/attach.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Attach](../properties/attach.md), [ChildList](../properties/childlist.md), [ClassName](../properties/classname.md), [Coord](../properties/coord.md), [EventList](../properties/eventlist.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Type](../properties/type.md)

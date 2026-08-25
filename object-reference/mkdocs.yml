@@ -253,6 +253,7 @@ nav:
       - FlatSeparators Property: properties/flatseparators.md
       - FontList Property: properties/fontlist.md
       - FontObj Property: properties/fontobj.md
+      - ForceOnTaskbar Property: properties/forceontaskbar.md
       - FormatString Property: properties/formatstring.md
       - Formats Property: properties/formats.md
       - FullRowSelect Property: properties/fullrowselect.md
@@ -953,6 +954,7 @@ nav:
       - FontList Property: properties/fontlist.md
       - FontObj Property: properties/fontobj.md
       - FontOK Event: methodorevents/fontok.md
+      - ForceOnTaskbar Property: properties/forceontaskbar.md
       - Form Object: objects/form.md
       - Formats Property: properties/formats.md
       - FormatString Property: properties/formatstring.md

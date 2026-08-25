@@ -115,12 +115,35 @@ Exits 1 if it finds anything, 0 if clean, so it can gate CI. It applies the excl
 and knows about the deliberate exceptions (`index-property.md`, the Session (`⎕SE`) member pages,
 `NetControl`), so a clean run means clean. The report is regenerable, so it is not committed.
 
+## Regenerating the Properties lists
+
+GUI object properties have a positional ("default") order, reported by `PropList` and essential
+when reading and writing GUI code, so each object page lists them twice in its Application
+section: once in default order, once alphabetically. `regen_properties.py` generates both lines
+from `objectmodel.json`; NetControl's come from `ObjectMembers/NetControl/PropList.apla`, since
+it is outside the model. Methods and Events remain single alphabetical lists. Python 3 standard
+library only, any platform.
+
+The script never modifies the guide. It writes a complete copy of `object-reference/` to
+`--output`, identical except for the regenerated Properties lines; review the copy, then swap it
+in for `object-reference/`.
+
+```sh
+      python3 tools/buildgui/regen_properties.py -o objref-def-order
+```
+
+`--output` must not already exist. The run reports any membership drift it corrects and any
+listed property whose page is missing under `properties/`. `objref_audit.py` checks both lists,
+including their order, and flags any page still carrying the retired single-list entry.
+
 ## Do not document these
 
 `ShowSIP` (a method on 35 objects) and Form's `SIPMode`, `SIPResize` and `OKButton` are Windows
-CE-era vestiges, deliberately excluded from the Object Reference Guide. They are present in the
-interpreter's member lists and therefore in `objectmodel.json`. Anything generating documentation
-from the model must filter them out.
+CE-era vestiges, and Root's `EvaluationDays` is the PocketAPL evaluation-copy counter. All are
+deliberately excluded from the Object Reference Guide. They are present in the interpreter's
+member lists and therefore in `objectmodel.json`. Anything generating documentation from the
+model must filter them out; both `regen_properties.py` and `objref_audit.py` take the list from
+`EXCLUDED_MEMBERS` in `objref_audit.py`.
 
 ## Gotchas
 

@@ -20,7 +20,9 @@ Parents: [Form](../objects/form.md), [Root](../objects/root.md)
 
 Children: [Icon](../objects/icon.md), [Menu](../objects/menu.md), [Timer](../objects/timer.md)
 
-Properties: [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [IconObj](../properties/iconobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Popup](../properties/popup.md), [PropList](../properties/proplist.md), [Tip](../properties/tip.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
+Properties (default order): [Type](../properties/type.md), [Event](../properties/event.md), [IconObj](../properties/iconobj.md), [Data](../properties/data.md), [Tip](../properties/tip.md), [Translate](../properties/translate.md), [Popup](../properties/popup.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [IconObj](../properties/iconobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Popup](../properties/popup.md), [PropList](../properties/proplist.md), [Tip](../properties/tip.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
 
 Methods: [Detach](../methodorevents/detach.md), [ShowBalloonTip](../methodorevents/showballoontip.md), [Wait](../methodorevents/wait.md)
 

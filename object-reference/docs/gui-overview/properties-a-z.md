@@ -125,6 +125,7 @@ search:
 |[FlatSeparators](../properties/flatseparators.md)|specifies whether or not separators are drawn between buttons in a [TabControl](../objects/tabcontrol.md) object|
 |[FontList](../properties/fontlist.md)|provides a list of available fonts|
 |[FontObj](../properties/fontobj.md)|specifies the font to be used|
+|[ForceOnTaskbar](../properties/forceontaskbar.md)|applies to the [MsgBox](../objects/msgbox.md) object|
 |[Formats](../properties/formats.md)|data formats currently available from the [Clipboard](../objects/clipboard.md) object|
 |[FormatString](../properties/formatstring.md)|defines a `⎕FMT` specification to be used to format a numeric value|
 |[FStyle](../properties/fstyle.md)|specifies fill style|
