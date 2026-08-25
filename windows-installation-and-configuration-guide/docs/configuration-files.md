@@ -111,6 +111,15 @@ WSPATH: ["/dir1", "/dir2"]
 
 The only parameters which may be defined as arrays are **WSPATH**, **WSEXT** and **CFEXT**.
 
+## References Relative to the Configuration File
+
+Within a configuration file, a [reference to another configuration parameter](configuration-parameters/configuration-parameters.md#references-to-other-configuration-parameters) can also refer to the location of the file itself. If the string inside the `[]` delimiters is "`.`", the "`.`" is replaced with the path of the directory containing the configuration file. For example:
+```apl
+FILENAME: "[.]/x.txt"
+```
+
+will set the parameter **FILENAME** to a value that is a reference to a file called `x.txt` in the same directory as the configuration file defining it.
+
 #### Nested Structures
 
 Some parameters are stored in sub-folders in the Windows Registry. Currently, all such parameters used by Dyalog APL itself relate to the Windows IDE, but you can create your own application-specific structures..

@@ -42,19 +42,12 @@ You can change parameters in the Registry in one of two ways:
 
 ## References to Other Configuration Parameters
 
-Configuration parameters can include references to other configuration parameters (regardless of where they are defined) using square bracket delimiters. For example:
+Configuration parameters can include references to other configuration parameters using square bracket delimiters. For example:
 ```apl
 MySetting: "[DYALOG]/MyFile"
 ```
 
 will replace `[DYALOG]` with the value of the **DYALOG** configuration parameter.
-
-If the string inside the `[]` delimiters is "`.`", the "`.`" is replaced with the path of the directory containing the configuration file itself. Therefore,
-```apl
-FILENAME: "[.]/x.txt"
-```
-
-will set the parameter **FILENAME** to a value that is a reference to a file called `x.txt` in the same directory as the configuration file defining it.
 
 Note that:
 
