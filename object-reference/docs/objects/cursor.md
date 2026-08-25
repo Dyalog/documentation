@@ -23,7 +23,9 @@ Parents: [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/
 
 Children: [Timer](../objects/timer.md)
 
-Properties: [Accelerator](../properties/accelerator.md), [Bits](../properties/bits.md), [ChildList](../properties/childlist.md), [CMap](../properties/cmap.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [File](../properties/file.md), [Handle](../properties/handle.md), [HotSpot](../properties/hotspot.md), [KeepBits](../properties/keepbits.md), [KeepOnClose](../properties/keeponclose.md), [Mask](../properties/mask.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Type](../properties/type.md)
+Properties (default order): [Type](../properties/type.md), [File](../properties/file.md), [Bits](../properties/bits.md), [CMap](../properties/cmap.md), [Mask](../properties/mask.md), [HotSpot](../properties/hotspot.md), [KeepBits](../properties/keepbits.md), [Event](../properties/event.md), [Data](../properties/data.md), [Handle](../properties/handle.md), [Accelerator](../properties/accelerator.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Accelerator](../properties/accelerator.md), [Bits](../properties/bits.md), [ChildList](../properties/childlist.md), [CMap](../properties/cmap.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [File](../properties/file.md), [Handle](../properties/handle.md), [HotSpot](../properties/hotspot.md), [KeepBits](../properties/keepbits.md), [KeepOnClose](../properties/keeponclose.md), [Mask](../properties/mask.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Type](../properties/type.md)
 
 Methods: [Detach](../methodorevents/detach.md), [FileRead](../methodorevents/fileread.md), [FileWrite](../methodorevents/filewrite.md)
 

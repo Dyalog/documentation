@@ -1,4 +1,4 @@
-# <span>WebSocketClose</span> <span>Event 843</span>
+# <span>WebSocketClose</span> <span>Method 843</span>
 
 This event is triggered when the [HTMLRenderer](../objects/htmlrenderer.md) client closes the WebSocket.  It is for notification only.
 

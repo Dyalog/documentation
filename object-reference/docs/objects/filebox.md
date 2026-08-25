@@ -32,7 +32,9 @@ Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/c
 
 Children: [Timer](../objects/timer.md)
 
-Properties: [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Directory](../properties/directory.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [File](../properties/file.md), [FileMode](../properties/filemode.md), [Filters](../properties/filters.md), [Index](../properties/index-property.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Style](../properties/style.md), [Type](../properties/type.md)
+Properties (default order): [Type](../properties/type.md), [Caption](../properties/caption.md), [Directory](../properties/directory.md), [Filters](../properties/filters.md), [File](../properties/file.md), [FileMode](../properties/filemode.md), [Style](../properties/style.md), [Event](../properties/event.md), [Index](../properties/index-property.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Directory](../properties/directory.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [File](../properties/file.md), [FileMode](../properties/filemode.md), [Filters](../properties/filters.md), [Index](../properties/index-property.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Style](../properties/style.md), [Type](../properties/type.md)
 
 Methods: [Detach](../methodorevents/detach.md), [Wait](../methodorevents/wait.md)
 

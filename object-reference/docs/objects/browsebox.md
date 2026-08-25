@@ -57,7 +57,9 @@ Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/c
 
 Children: [Timer](../objects/timer.md)
 
-Properties: [BrowseFor](../properties/browsefor.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [HasEdit](../properties/hasedit.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [StartIn](../properties/startin.md), [Target](../properties/target.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
+Properties (default order): [Type](../properties/type.md), [Caption](../properties/caption.md), [BrowseFor](../properties/browsefor.md), [Target](../properties/target.md), [StartIn](../properties/startin.md), [HasEdit](../properties/hasedit.md), [Event](../properties/event.md), [Data](../properties/data.md), [Translate](../properties/translate.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [BrowseFor](../properties/browsefor.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [HasEdit](../properties/hasedit.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [StartIn](../properties/startin.md), [Target](../properties/target.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
 
 Methods: [Detach](../methodorevents/detach.md), [Wait](../methodorevents/wait.md)
 
