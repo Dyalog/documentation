@@ -49,8 +49,6 @@ The `:AndIf` and `:OrIf` control words may be used to define a block of conditio
 [6]   :Orif WINE.PRICE>100    
 [7]       'Almost as good'
 [8]   :Else
-```
-```apl
 [9]       'Everyday stuff'
 [10]  :EndIf
 ```
