@@ -27,8 +27,7 @@ Table: Trappable Event Codes {: #TrapEvents }
 |`N`|Next|The event is excluded from the current `⎕TRAP` definition.  The search will continue through further localised definitions of `⎕TRAP` .|
 |`S`|Stop|Stops the search and causes the normal APL action to be taken in the environment in which the event occurred.|
 
-!!! Warning "Warning"
-    Note, the ACTION codes must be specified in upper case.
+Note, the ACTION codes must be specified in upper case.
 
 |Code     |Event                                          |
 |---------|-----------------------------------------------|
