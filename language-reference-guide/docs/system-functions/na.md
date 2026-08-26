@@ -100,7 +100,7 @@ Under Windows, if the file extension is omitted, **.dll** is assumed. Note that 
 
 ### Linux, macOS, and AIX
 
-On Linux, macOS, and AIX, `⎕NA` supports both system-supplied and user-written shared libraries. Locating the system library (`libc`) and using the Dyalog-supplied shared library differ between platforms; for details and examples, see [`⎕NA` under UNIX](../../../unix-installation-and-configuration-guide/quadna).
+On Linux, macOS, and AIX, `⎕NA` supports both system-supplied and user-written shared libraries. There are platform-specific differences when in locating the system library (**libc**) and using the Dyalog-supplied shared library; for details and examples, see [`⎕NA` under UNIX](../../../unix-installation-and-configuration-guide/quadna).
 
 ## Data Type Coding Scheme
 
