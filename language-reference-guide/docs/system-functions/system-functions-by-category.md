@@ -62,7 +62,7 @@ These are tools that allow you perform development environment actions under pro
 
 ### Top-level Namespaces
 
-These are namespaces that are equal to their parent namespace (`##`).
+These are namespaces that are equal to their parent namespace (`##`), that is, for a namespace `ns`, `ns=ns.##`.
 
 |Name      |Description             |Form|
 |----------|------------------------|-----|
