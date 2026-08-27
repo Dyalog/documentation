@@ -4,7 +4,7 @@ The Dirty property indicates whether the current page is considered to have cont
 
 Dirty can be set to `1` to force an otherwise empty page to be printed (for example, if PagesBeginDirty has been set to `0`).
 
-However, setting Dirty to `0` will not prevent a single page from being printed; the operating system does not allow the cancellation of a single page, only of the entire document.
+However, once a page has content, setting Dirty to `0` does not stop that page from being printed. The operating system does not allow an individual page to be cancelled; the only way to prevent a single page from being printed is to cancel the entire document.
 
 ## Application
 
