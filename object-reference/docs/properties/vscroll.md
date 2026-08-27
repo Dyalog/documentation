@@ -20,6 +20,8 @@ For a [StatusBar](../objects/statusbar.md), [TabBar](../objects/tabbar.md) or [T
 
 For a [Grid](../objects/grid.md), VScroll may be 0 (no vertical scrollbar), `¯1` (scrollbar is displayed when required), `¯2` (same as `¯1`) or `¯3` (scrollbar is always displayed).
 
+For an [UpDown](../objects/updown.md) object, a value of `¯1` makes the arrows vertical (an up arrow above a down arrow). See also [HScroll](hscroll.md).
+
 ## Application
 
 Objects: [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [Edit](../objects/edit.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [List](../objects/list.md), [ListView](../objects/listview.md), [RichEdit](../objects/richedit.md), [Scroll](../objects/scroll.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TabBar](../objects/tabbar.md), [ToolBar](../objects/toolbar.md), [TrackBar](../objects/trackbar.md), [UpDown](../objects/updown.md)
