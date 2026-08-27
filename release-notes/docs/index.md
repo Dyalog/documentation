@@ -12,7 +12,7 @@ Key enhancements in Dyalog v21.0 include the following:
 - `⎕DT` has been extended to validate and parse text-format datetimes. It now also includes formatting features prototyped as `1200⌶`.
 - `⎕SYSTEM` provides information about Dyalog and the environment, including the operating system, important library versions, and the current/initial/temporary directories.
 - .NET generics are now fully supported for both .NET and .NET Framework, enabling the creation and instantiation of concrete versions of generic classes and calling of generic methods.
-- A complete Software Bill of Materials is now included, making it easier to document files that are included when redistributing solutions built on Dyalog.
+- A complete [Software Bill of Materials](https://en.wikipedia.org/wiki/Software_supply_chain) is now included.
 
 For more information on these and other changes introduced in Dyalog v21.0, see [New and Enhanced Features](new-enhanced.md).
 	
@@ -37,4 +37,4 @@ Some of the tools that are supplied with Dyalog or can be downloaded separately 
 Changes to tools are not included within these Release Notes.
 
 !!! Info "Information"
-     It is not necessary to keep tool versions synchronised with the interpreter version, but doing so will provide the optimal experience.
+     It is not necessary to keep tool versions synchronised with the interpreter version, but doing so is recommended.

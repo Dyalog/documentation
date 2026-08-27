@@ -17,18 +17,18 @@ The following system functions have been enhanced:
 A new variant option, **ForceQuotes**, has been added. This specifies when exported data has quotes around character/numeric fields.
 - [`⎕DT`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/dt/) – Datetime  
 The ability to extract datetimes from text-formatted datetimes, as well as the functionality previously provided by [`1200⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/format-datetime/), has been added:
-    - The left argument `X` has been extended; its single element or either/both of the elements in its 2-element vector can now also be character vectors (not scalars) comprising patterns that describe how a datetime is, or is to be, formatted as text. 
+    - The left argument `X` has been extended; its single element or either/both of the elements in its 2-element vector can now also contain character vectors (not scalars) comprising patterns that describe how a datetime is, or is to be, formatted as text. 
 	- The right argument `Y` has been extended; it can now be a character vector, formatted according to a *formatting pattern* (known as by a *text-formatted datetime*).
     - Two new variant options have been added:
 	    - **Dictionary** specifies a namespace that contains additional or replacement names for the months (and so on) and/or predefined patterns, for languages and language regions.
-		- **Language** specifies the language used for formatting and matching datetimes.
+		- **Language** specifies the default language used for formatting and matching datetimes.
 - [`⎕UCS`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/ucs/) – Unicode Convert  
 The optional left argument `X` can now be a 2-element nested array when performing UTF-8 conversions; setting the second element to `83` enables the direct creation and consumption of integers in the range `¯128` to `+127`.
 
 ### I-beams
 
 !!! Warning "Warning"  
-    Any service provided using an I-Beam should be considered as "experimental" and subject to change – without notice - from one release to the next. Any use of I&#8209;Beams in applications should, therefore, be carefully isolated in cover-functions that can be adjusted if necessary.
+    Any service provided using an I-Beam should be considered as "experimental" and subject to change from one release to the next. Any use of I&#8209;Beams in applications should, therefore, be carefully isolated in cover-functions that can be adjusted if necessary.
 	
 The following I-beams have been deprecated:
 
@@ -86,4 +86,4 @@ Square brackets (`[...]`) are now used to apply type arguments when instantiatin
 
 ### .NET Framework Interface
 
-Support for.NET _generics_ was previously only available for the .NET Interface – it is now also available in the .NET Framework Interface. This means that the .NET Framework Interface now supports creating concrete versions of generic classes, instantiating them, and calling generic methods. For more information, see [Generics](https://docs.dyalog.com/21.0/net-framework-interface-guide/dotnet-classes/advanced-techniques/#generics).
+Support for.NET generics was previously only available for the .NET Interface – it is now also available in the .NET Framework Interface. This means that the .NET Framework Interface now supports creating concrete versions of generic classes, instantiating them, and calling generic methods. For more information, see [Generics](https://docs.dyalog.com/21.0/net-framework-interface-guide/dotnet-classes/advanced-techniques/#generics).
