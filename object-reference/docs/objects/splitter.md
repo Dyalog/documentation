@@ -1,8 +1,6 @@
 # <span>Splitter</span> <span>Object</span>
 
-**Purpose:** The Splitter object divides a container into resizable panes.
-
-**Description**
+The Splitter object divides a container into resizable panes.
 
 The Splitter divides the client area of a [Form](form.md) or [SubForm](subform.md) into resizable panes. Each pane created this way may be empty or be occupied by a single object. If the object in a pane is itself a container object, such as a [SubForm](subform.md), it may have a number of other controls within it.
 
@@ -66,13 +64,15 @@ If you have two or more vertical Splitters or two or more horizontal Splitters i
 
 When Splitters collide, the object being dragged by the user (a Splitter or a border of the parent) takes precedence over the setting of Align, and temporarily *pushes* other Splitters along in its direction of travel. If and when the operation is reversed, the other Splitters are *pulled* back to their original positions.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [SubForm](../objects/subform.md)
 
 Children: [Timer](../objects/timer.md)
 
-Properties: [Active](../properties/active.md), [Align](../properties/align.md), [BCol](../properties/bcol.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [CursorObj](../properties/cursorobj.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [SplitObj1](../properties/splitobj1.md), [SplitObj2](../properties/splitobj2.md), [Style](../properties/style.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
+Properties (default order): [Type](../properties/type.md), [SplitObj1](../properties/splitobj1.md), [SplitObj2](../properties/splitobj2.md), [Posn](../properties/posn.md), [Size](../properties/size.md), [Style](../properties/style.md), [Coord](../properties/coord.md), [Align](../properties/align.md), [Active](../properties/active.md), [Visible](../properties/visible.md), [Event](../properties/event.md), [BCol](../properties/bcol.md), [CursorObj](../properties/cursorobj.md), [Data](../properties/data.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Active](../properties/active.md), [Align](../properties/align.md), [BCol](../properties/bcol.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [CursorObj](../properties/cursorobj.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [SplitObj1](../properties/splitobj1.md), [SplitObj2](../properties/splitobj2.md), [Style](../properties/style.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
 
 Methods: [Detach](../methodorevents/detach.md)
 

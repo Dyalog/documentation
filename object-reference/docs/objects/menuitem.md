@@ -1,8 +1,6 @@
 # <span>MenuItem</span> <span>Object</span>
 
-**Purpose:** This object allows the user to initiate an action or to select an option from a menu.
-
-**Description**
+This object allows the user to initiate an action or to select an option from a menu.
 
 The [Caption](../properties/caption.md) property determines the text string that is displayed in its parent as the menu option. The size of a MenuItem is determined by the size of its [Caption](../properties/caption.md), or by the size of the largest object ([Menu](menu.md), MenuItem or [Separator](separator.md)) with the same parent. The position of the MenuItem is normally determined by the order in which it is created in relation to other objects with the same parent. However, you can use the [Posn](../properties/posn.md) property to **insert** a new MenuItem into an existing structure. For example, having defined three MenuItem objects as children of a [Menu](menu.md), you can insert a fourth one between the first and the second by specifying its [Posn](../properties/posn.md) to be 2. Note that the value of [Posn](../properties/posn.md) for the MenuItems that were previously second and third will then be reset to 3 and 4 respectively.
 
@@ -22,13 +20,15 @@ Alternatively, you may display an image alongside the [Caption](../properties/ca
 
 A MenuItem generates a [Select](../methodorevents/select.md) event (if enabled) when the user chooses it.
 
-**Application**
+## Application
 
 Parents: [Menu](../objects/menu.md), [MenuBar](../objects/menubar.md)
 
 Children: [Bitmap](../objects/bitmap.md), [Timer](../objects/timer.md)
 
-Properties: [Accelerator](../properties/accelerator.md), [Active](../properties/active.md), [Align](../properties/align.md), [BCol](../properties/bcol.md), [BtnPix](../properties/btnpix.md), [Caption](../properties/caption.md), [Checked](../properties/checked.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FontObj](../properties/fontobj.md), [Hint](../properties/hint.md), [HintObj](../properties/hintobj.md), [ImageIndex](../properties/imageindex.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Style](../properties/style.md), [Tip](../properties/tip.md), [TipObj](../properties/tipobj.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
+Properties (default order): [Type](../properties/type.md), [Caption](../properties/caption.md), [Posn](../properties/posn.md), [Style](../properties/style.md), [Align](../properties/align.md), [Active](../properties/active.md), [Event](../properties/event.md), [Checked](../properties/checked.md), [FontObj](../properties/fontobj.md), [FCol](../properties/fcol.md), [BCol](../properties/bcol.md), [BtnPix](../properties/btnpix.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Hint](../properties/hint.md), [HintObj](../properties/hintobj.md), [Tip](../properties/tip.md), [TipObj](../properties/tipobj.md), [Translate](../properties/translate.md), [Accelerator](../properties/accelerator.md), [KeepOnClose](../properties/keeponclose.md), [ImageIndex](../properties/imageindex.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Accelerator](../properties/accelerator.md), [Active](../properties/active.md), [Align](../properties/align.md), [BCol](../properties/bcol.md), [BtnPix](../properties/btnpix.md), [Caption](../properties/caption.md), [Checked](../properties/checked.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FontObj](../properties/fontobj.md), [Hint](../properties/hint.md), [HintObj](../properties/hintobj.md), [ImageIndex](../properties/imageindex.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Style](../properties/style.md), [Tip](../properties/tip.md), [TipObj](../properties/tipobj.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
 
 Methods: [Detach](../methodorevents/detach.md)
 

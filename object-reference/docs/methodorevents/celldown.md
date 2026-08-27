@@ -1,7 +1,5 @@
 # <span>CellDown</span> <span>Event 161</span>
 
-**Description**
-
 If enabled, this event is reported when the user presses a mouse button down whilst over a cell in a [Grid](../objects/grid.md). The purpose of this event is to allow an application to display a pop-up [Menu](../objects/menu.md) or a [Locator](../objects/locator.md) over a cell in a [Grid](../objects/grid.md) or to take some other special action.
 
 The default action is to generate a [CellMove](./cellmove.md) event which will then position the user on the new cell. This action can be prevented by returning 0 from the callback function, in which case the normally ensuing [CellMove](./cellmove.md) event will not occur.
@@ -27,6 +25,6 @@ If the user clicks over a row *title*, the value reported for the column is `¯1
 
 An application **can** position the user on a particular cell in a [Grid](../objects/grid.md) by calling CellDown as a method, but it is recommended that a [CellMove](./cellmove.md) event is used instead.
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

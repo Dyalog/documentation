@@ -1,7 +1,5 @@
 # <span>LoadEnd</span> <span>Event 836</span>
 
-**Description**
-
 A LoadEnd event is raised when a particular frame has finished loading. Multiple frames may be loading at the same time. Sub-frames may start or continue to load even after the main frame has finished loading.
 
 A common technique is to wait for the main frame to finish loading before further interaction with the HTMLRenderer instance. In this case, you should set up an event handler on the LoadEnd event and check the 4th element which indicates if the loaded frame is the main frame.
@@ -17,6 +15,6 @@ The event message reported as the result of [`⎕DQ`](../../../language-referenc
 |`[4]`|Flag  |1 if the loaded frame is the "main" frame, 0 otherwise|
 |`[5]`|Code  |The HTTP status code as a result of loading the frame |
 
-**Application**
+## Application
 
 Objects: [HTMLRenderer](../objects/htmlrenderer.md)

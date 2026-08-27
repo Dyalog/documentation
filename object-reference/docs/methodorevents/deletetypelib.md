@@ -1,7 +1,5 @@
 # <span>DeleteTypeLib</span> <span>Method 521</span>
 
-**Description**
-
 The DeleteTypeLib method removes a loaded Type Library from the workspace.
 
 The argument to DeleteTypeLib is as follows:
@@ -19,6 +17,6 @@ If the specified Type Library is in use, no action is taken and the result is 0.
 
 If the argument is not the name or CLSID of a loaded Type Library, no action is taken and the result is `¯1`.
 
-**Application**
+## Application
 
 Objects: [Root](../objects/root.md)

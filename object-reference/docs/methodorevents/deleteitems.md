@@ -1,7 +1,5 @@
 # <span>DeleteItems</span> <span>Method 309</span>
 
-**Description**
-
 This method is used to delete items from a [TreeView](../objects/treeview.md) object.
 
 The argument to DeleteItems is a 2-element array as follows:
@@ -18,6 +16,6 @@ Note that any children of these items will also be removed.
 
 The result is an integer that indicates the total number of items, including children, that have been removed from the [TreeView](../objects/treeview.md).
 
-**Application**
+## Application
 
 Objects: [TreeView](../objects/treeview.md)

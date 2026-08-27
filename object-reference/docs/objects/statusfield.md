@@ -1,8 +1,6 @@
 # <span>StatusField</span> <span>Object</span>
 
-**Purpose:** This object is used to display information for the user.
-
-**Description**
+This object is used to display information for the user.
 
 The StatusField object provides an area for displaying context sensitive help messages, keyboard status, and other application dependent information.
 
@@ -27,13 +25,15 @@ If [Style](../properties/style.md) is KeyMode, the StatusField displays the name
 
 If [Style](../properties/style.md) is set to one of the above, you may still use the [Caption](../properties/caption.md) property to give the StatusField a title. You may even set the value of the [Text](../properties/text.md) property, but be aware that this value will be reset when the user next presses the key the StatusField is monitoring.
 
-**Application**
+## Application
 
 Parents: [StatusBar](../objects/statusbar.md)
 
 Children: [Menu](../objects/menu.md), [Timer](../objects/timer.md)
 
-Properties: [Accelerator](../properties/accelerator.md), [Attach](../properties/attach.md), [AutoConf](../properties/autoconf.md), [BCol](../properties/bcol.md), [Border](../properties/border.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Dragable](../properties/dragable.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FontObj](../properties/fontobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Picture](../properties/picture.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Sizeable](../properties/sizeable.md), [Style](../properties/style.md), [Text](../properties/text.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
+Properties (default order): [Type](../properties/type.md), [Caption](../properties/caption.md), [Text](../properties/text.md), [Posn](../properties/posn.md), [Size](../properties/size.md), [Style](../properties/style.md), [Coord](../properties/coord.md), [Border](../properties/border.md), [Visible](../properties/visible.md), [Event](../properties/event.md), [Sizeable](../properties/sizeable.md), [Dragable](../properties/dragable.md), [FontObj](../properties/fontobj.md), [FCol](../properties/fcol.md), [BCol](../properties/bcol.md), [Picture](../properties/picture.md), [AutoConf](../properties/autoconf.md), [Data](../properties/data.md), [Attach](../properties/attach.md), [EdgeStyle](../properties/edgestyle.md), [Translate](../properties/translate.md), [Accelerator](../properties/accelerator.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Accelerator](../properties/accelerator.md), [Attach](../properties/attach.md), [AutoConf](../properties/autoconf.md), [BCol](../properties/bcol.md), [Border](../properties/border.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Dragable](../properties/dragable.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FontObj](../properties/fontobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Picture](../properties/picture.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Sizeable](../properties/sizeable.md), [Style](../properties/style.md), [Text](../properties/text.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
 
 Methods: [Detach](../methodorevents/detach.md)
 

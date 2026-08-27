@@ -1,8 +1,6 @@
 # <span>FileBox</span> <span>Object</span>
 
-**Purpose:** Prompts user to select a file.
-
-**Description**
+Prompts user to select a file.
 
 The FileBox object implements the standard Windows FileSelection Dialog Box. This is a "modal" object. When you create a FileBox with [`⎕WC`](../../../language-reference-guide/system-functions/wc), it is initially invisible and the user cannot interact with it. To use it, you must execute [`⎕DQ`](../../../language-reference-guide/system-functions/dq) with the name of the FileBox as its right argument. This causes the FileBox to be displayed. During the "local" [`⎕DQ`](../../../language-reference-guide/system-functions/dq) the user may interact **only** with the FileBox, or with other applications. When the user terminates the operation (by pressing the "Save", "Open", or "Cancel" Buttons, or by closing the window) the "local" [`⎕DQ`](../../../language-reference-guide/system-functions/dq) terminates, and the FileBox disappears.
 
@@ -28,13 +26,15 @@ Note that when [`⎕DQ`](../../../language-reference-guide/system-functions/dq) 
 
 The operating system imposes limits on both the length of the name of the file, and on the total path length. In version {{ version_majmin }}attempting to set the `File` or `Directory` Properties to too long a name will generate a DOMAIN ERROR, while attempting to use too long a File name within the FileBox will result in the appearence of an error MessageBox.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [OLEServer](../objects/oleserver.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Root](../objects/root.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 
 Children: [Timer](../objects/timer.md)
 
-Properties: [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Directory](../properties/directory.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [File](../properties/file.md), [FileMode](../properties/filemode.md), [Filters](../properties/filters.md), [Index](../properties/index-property.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Style](../properties/style.md), [Type](../properties/type.md)
+Properties (default order): [Type](../properties/type.md), [Caption](../properties/caption.md), [Directory](../properties/directory.md), [Filters](../properties/filters.md), [File](../properties/file.md), [FileMode](../properties/filemode.md), [Style](../properties/style.md), [Event](../properties/event.md), [Index](../properties/index-property.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Directory](../properties/directory.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [File](../properties/file.md), [FileMode](../properties/filemode.md), [Filters](../properties/filters.md), [Index](../properties/index-property.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Style](../properties/style.md), [Type](../properties/type.md)
 
 Methods: [Detach](../methodorevents/detach.md), [Wait](../methodorevents/wait.md)
 

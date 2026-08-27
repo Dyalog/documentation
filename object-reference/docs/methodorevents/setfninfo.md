@@ -1,7 +1,5 @@
 # <span>SetFnInfo</span> <span>Method 545</span>
 
-**Description**
-
 This method is used to describe an APL function that is to be exported as a method, a Property Get Function, or a Property Put Function of an [ActiveXControl](../objects/activexcontrol.md) or [OLEServer](../objects/oleserver.md) object.
 
 An exported function must be a niladic or monadic defined function (dfns and derived functions are not allowed) and may optionally return a result. Ambivalent functions (functions with optional left argument) are allowed, but will be called monadically by the host application.
@@ -65,6 +63,6 @@ In both these last two cases, the name of the property, which is totally indepen
 
 If omitted, the function type is *method*.
 
-**Application**
+## Application
 
 Objects: [ActiveXControl](../objects/activexcontrol.md), [OLEServer](../objects/oleserver.md)

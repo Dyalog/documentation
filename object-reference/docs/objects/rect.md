@@ -1,8 +1,6 @@
 # <span>Rect</span> <span>Object</span>
 
-**Purpose:** A graphical object used to draw boxes.
-
-**Description**
+A graphical object used to draw boxes.
 
 The [Points](../properties/points.md) property specifies one or more sets of co-ordinates which define the position(s) of one or more rectangles. The position of a rectangle is defined to be the position of the corner that is **nearest** to the origin of its parent. The default is therefore its top-left corner. The [Size](../properties/size.md) property specifies the height and width of each rectangle, measuring away from the origin.
 
@@ -110,13 +108,15 @@ Ditto, but using red and blue lines respectively :
       'F.R1'⎕WC RC,⊂(255 0 0)(0 0 255)
 ```
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/animation.md), [Bitmap](../objects/bitmap.md), [Button](../objects/button.md), [ButtonEdit](../objects/buttonedit.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [Edit](../objects/edit.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [Label](../objects/label.md), [List](../objects/list.md), [ListView](../objects/listview.md), [MDIClient](../objects/mdiclient.md), [Metafile](../objects/metafile.md), [Printer](../objects/printer.md), [ProgressBar](../objects/progressbar.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [RichEdit](../objects/richedit.md), [Scroll](../objects/scroll.md), [Spinner](../objects/spinner.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TabBar](../objects/tabbar.md), [TipField](../objects/tipfield.md), [ToolBar](../objects/toolbar.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)
 
 Children: [Timer](../objects/timer.md)
 
-Properties: [Accelerator](../properties/accelerator.md), [AutoConf](../properties/autoconf.md), [BCol](../properties/bcol.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [CursorObj](../properties/cursorobj.md), [Data](../properties/data.md), [Dragable](../properties/dragable.md), [DrawMode](../properties/drawmode.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FillCol](../properties/fillcol.md), [FStyle](../properties/fstyle.md), [KeepOnClose](../properties/keeponclose.md), [LStyle](../properties/lstyle.md), [LWidth](../properties/lwidth.md), [MethodList](../properties/methodlist.md), [OnTop](../properties/ontop.md), [Points](../properties/points.md), [PropList](../properties/proplist.md), [Radius](../properties/radius.md), [Size](../properties/size.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
+Properties (default order): [Type](../properties/type.md), [Points](../properties/points.md), [Size](../properties/size.md), [Radius](../properties/radius.md), [FCol](../properties/fcol.md), [BCol](../properties/bcol.md), [LStyle](../properties/lstyle.md), [LWidth](../properties/lwidth.md), [FStyle](../properties/fstyle.md), [FillCol](../properties/fillcol.md), [Coord](../properties/coord.md), [Visible](../properties/visible.md), [Event](../properties/event.md), [Dragable](../properties/dragable.md), [OnTop](../properties/ontop.md), [CursorObj](../properties/cursorobj.md), [AutoConf](../properties/autoconf.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Accelerator](../properties/accelerator.md), [KeepOnClose](../properties/keeponclose.md), [DrawMode](../properties/drawmode.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Accelerator](../properties/accelerator.md), [AutoConf](../properties/autoconf.md), [BCol](../properties/bcol.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [CursorObj](../properties/cursorobj.md), [Data](../properties/data.md), [Dragable](../properties/dragable.md), [DrawMode](../properties/drawmode.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FillCol](../properties/fillcol.md), [FStyle](../properties/fstyle.md), [KeepOnClose](../properties/keeponclose.md), [LStyle](../properties/lstyle.md), [LWidth](../properties/lwidth.md), [MethodList](../properties/methodlist.md), [OnTop](../properties/ontop.md), [Points](../properties/points.md), [PropList](../properties/proplist.md), [Radius](../properties/radius.md), [Size](../properties/size.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
 
 Methods: [Detach](../methodorevents/detach.md)
 

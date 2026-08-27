@@ -16,7 +16,7 @@ If `X` is omitted, `R` is a 4-element vector or a 4 column matrix with the same 
 `R[1]` or `R[;1]`: Each item is a 3-element integer vector representing the function header syntax:
 
 |---|---|---|
-|1|Function result|0 if the function has no result 1 if the function has an explicit result `¯1` if the function has a shy result|
+|1|Function result|0 if the function has no result 1 if the function has an explicit result `¯1` if the function has a [shy](../../../programming-reference-guide/introduction/results#shy-results) result|
 |2|Function valence|0 if the object is a niladic function or not a function 1 if the object is a monadic function 2 if the object is a dyadic function `¯2` if the object is an ambivalent 				function|
 |3|Operator valence|0 if the object is not an operator 1 if the object is a monadic operator 2 if the object is a dyadic operator|
 

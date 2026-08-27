@@ -1,7 +1,5 @@
 # <span>Locator</span> <span>Event 80</span>
 
-**Description**
-
 If enabled, this event is generated when the user releases a mouse button, or presses any key (other than a cursor movement key) during a [`⎕DQ`](../../../language-reference-guide/system-functions/dq) on a [Locator](../objects/locator.md) object.
 
 The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 9-element vector as follows :
@@ -17,6 +15,6 @@ The event message reported as the result of [`⎕DQ`](../../../language-referenc
 |`[8]`|Keystroke   |character scalar or vector containing the "Input Code" for the key that terminated the operation                   |
 |`[9]`|Shift state |integer scalar                                                                                                     |
 
-**Application**
+## Application
 
 Objects: [Locator](../objects/locator.md)

@@ -1,8 +1,6 @@
 # <span>Metafile</span> <span>Object</span>
 
-**Purpose:** This object represents a picture in Windows Metafile format.
-
-**Description**
+This object represents a picture in Windows Metafile format.
 
 The Windows Metafile is a mechanism for representing a picture in terms of a collection of graphical components. Windows Metafiles are distributed in special files (.WMF) from which they are loaded into memory for use by an application. Once loaded a Metafile is a Windows "resource" that can be used in a variety of ways. The Metafile object represents this resource.
 
@@ -41,13 +39,15 @@ The [Size](../properties/size.md) property determines the granularity of  the Me
 
 The [RealSize](../properties/realsize.md) property specifies the suggested size of a Metafile in units of 0.01mm. Setting [RealSize](../properties/realsize.md) has the effect of making the Metafile *placeable*. Certain programs (such as Word for Windows) only support placeable metafiles.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Bitmap](../objects/bitmap.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Group](../objects/group.md), [OLEServer](../objects/oleserver.md), [Printer](../objects/printer.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Root](../objects/root.md), [Static](../objects/static.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 
 Children: [Circle](../objects/circle.md), [Ellipse](../objects/ellipse.md), [Font](../objects/font.md), [Image](../objects/image.md), [Marker](../objects/marker.md), [Poly](../objects/poly.md), [Rect](../objects/rect.md), [Text](../objects/text.md), [Timer](../objects/timer.md)
 
-Properties: [Accelerator](../properties/accelerator.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [File](../properties/file.md), [Handle](../properties/handle.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [RealSize](../properties/realsize.md), [Size](../properties/size.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [XRange](../properties/xrange.md), [YRange](../properties/yrange.md)
+Properties (default order): [Type](../properties/type.md), [File](../properties/file.md), [Size](../properties/size.md), [Coord](../properties/coord.md), [RealSize](../properties/realsize.md), [Event](../properties/event.md), [YRange](../properties/yrange.md), [XRange](../properties/xrange.md), [Data](../properties/data.md), [Handle](../properties/handle.md), [Translate](../properties/translate.md), [Accelerator](../properties/accelerator.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Accelerator](../properties/accelerator.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [File](../properties/file.md), [Handle](../properties/handle.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [RealSize](../properties/realsize.md), [Size](../properties/size.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [XRange](../properties/xrange.md), [YRange](../properties/yrange.md)
 
 Methods: [Detach](../methodorevents/detach.md), [FileRead](../methodorevents/fileread.md), [FileWrite](../methodorevents/filewrite.md)
 

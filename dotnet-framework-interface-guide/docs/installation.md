@@ -87,7 +87,7 @@ VALUE ERROR: Undefined name: DateTime
 
 ```
 
-In this situation, ensure that the .NET Framework has been installed according to [Microsoft's .NET documentation](https://docs.microsoft.com/en-gb/dotnet/) and the .NET Framework interface has been enabled by setting DOTNET_NETCORE to `0` (see [Verifying the Installation](#verifying)).
+In this situation, ensure that the .NET Framework has been installed according to [Microsoft's .NET documentation](https://docs.microsoft.com/en-gb/dotnet/) and the .NET Framework interface has been enabled by setting DOTNET_NETCORE to `0` (see [Verifying the Installation](#verifying-the-installation)).
 
 If everything has been installed and enabled correctly, then the version of .NET Framework in use will be returned by the following statement:
 ```apl

@@ -1,7 +1,5 @@
 # <span>PagesBeginDirty</span> <span>Property</span>
 
-**Description**
-
 The PagesBeginDirty property indicates whether a new page of a document will be printed even if it has no content.
 
 For example, with PagesBeingDirty set to `1` (the default), the following code prints an empty page following the page containing "hello":
@@ -19,6 +17,6 @@ p.NewPage  ⍝ prints the current page, does not mark the new page as "Dirty"
 ⎕EX 'p'    ⍝ does not print the new page because it is not marked as "Dirty"
 ```
 
-**Application** 
+## Application
 
 Objects: [Printer](../objects/printer.md)

@@ -1,8 +1,6 @@
 # <span>Clipboard</span> <span>Object</span>
 
-**Purpose:** This object provides access to the Windows clipboard.
-
-**Description**
+This object provides access to the Windows clipboard.
 
 When an application places data in the Windows clipboard, it may store it in one or more formats. An application wishing to retrieve data from the clipboard can then choose which format to read it in. Dyalog APL supports standard clipboard formats, including CF_TEXT, CF_BITMAP and CF_METAFILE. If there is any data in the clipboard, the [Formats](../properties/formats.md) property lists the formats in which it may be retrieved.
 
@@ -45,17 +43,19 @@ or
 
 Note that if you use the latter method, you must set **both** properties in one [`⎕WS`](../../../language-reference-guide/system-functions/ws) statement. This is also true if you wish to store data in both Text and Bitmap formats together.
 
-The [Metafile](../properties/metafileobj.md) property allows graphical information to be restored in and retrieved from the clipboard in Windows Metafile format. See the description of the [Metafile](../properties/metafileobj.md) property for details.
+The [MetafileObj](../properties/metafileobj.md) property allows graphical information to be restored in and retrieved from the clipboard in Windows Metafile format. See the description of the [MetafileObj](../properties/metafileobj.md) property for details.
 
 A [ClipChange](../methodorevents/clipchange.md) (120) event is generated when another application places data in the clipboard.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [OLEServer](../objects/oleserver.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Root](../objects/root.md), [TCPSocket](../objects/tcpsocket.md)
 
 Children: [Timer](../objects/timer.md)
 
-Properties: [Accelerator](../properties/accelerator.md), [Array](../properties/array.md), [Bits](../properties/bits.md), [CBits](../properties/cbits.md), [ChildList](../properties/childlist.md), [CMap](../properties/cmap.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [Formats](../properties/formats.md), [KeepOnClose](../properties/keeponclose.md), [MetafileObj](../properties/metafileobj.md), [MethodList](../properties/methodlist.md), [Picture](../properties/picture.md), [PropList](../properties/proplist.md), [RTFText](../properties/rtftext.md), [Text](../properties/text.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
+Properties (default order): [Type](../properties/type.md), [Event](../properties/event.md), [Data](../properties/data.md), [Formats](../properties/formats.md), [Text](../properties/text.md), [Bits](../properties/bits.md), [CMap](../properties/cmap.md), [CBits](../properties/cbits.md), [MetafileObj](../properties/metafileobj.md), [Picture](../properties/picture.md), [Array](../properties/array.md), [RTFText](../properties/rtftext.md), [Translate](../properties/translate.md), [Accelerator](../properties/accelerator.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Accelerator](../properties/accelerator.md), [Array](../properties/array.md), [Bits](../properties/bits.md), [CBits](../properties/cbits.md), [ChildList](../properties/childlist.md), [CMap](../properties/cmap.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [Formats](../properties/formats.md), [KeepOnClose](../properties/keeponclose.md), [MetafileObj](../properties/metafileobj.md), [MethodList](../properties/methodlist.md), [Picture](../properties/picture.md), [PropList](../properties/proplist.md), [RTFText](../properties/rtftext.md), [Text](../properties/text.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
 
 Methods: [Detach](../methodorevents/detach.md), [Wait](../methodorevents/wait.md)
 

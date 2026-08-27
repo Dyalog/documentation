@@ -1,7 +1,5 @@
 # <span>AddRow</span> <span>Event 152</span>
 
-**Description**
-
 If enabled, this event is reported by the [Grid](../objects/grid.md) object if the user presses the Cursor Down key, and the current cell ([CurCell](../properties/curcell.md))
 is within the last row on the [Grid](../objects/grid.md). The default
 action is to append a new row to the contents of the [Grid](../objects/grid.md).
@@ -49,6 +47,6 @@ To insert a new row before the first one, you must specify the *Row number* as 1
 after the last one, you may specify any number greater than the current number
 of rows. The data in the new row will be set to 0 if the [Values](../properties/values.md) property is numeric, or to an empty character vector otherwise.
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

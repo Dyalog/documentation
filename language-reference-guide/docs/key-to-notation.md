@@ -13,6 +13,6 @@ The following definitions and conventions apply throughout this section:
 |`[K]` |Axis specification.                                                          |
 |`[I]` |Index specification.                                                         |
 |`{X}` |The left argument of a function is optional.                                 |
-|`{R}←`|The function may or may not return a result, or the result may be suppressed.|
+|`{R}←`|The function may or may not return a result, or the result may be [shy](../../programming-reference-guide/introduction/results#shy-results).|
 
 A _function_ can be a primitive function, a system function, a defined (canonical, dfn, or assigned) function, or a derived (from an operator) function.

@@ -15,12 +15,15 @@ In practice, many command line tools that are useful when building cross-platfor
 
 ### Using the System's Shell
 When `Y` is a character vector, the contents are executed using the system's shell.
-The shell being used can be changed using the [`Shell`](#shell) variant. The defaults are:
+The shell being used can be changed using the [`Shell`](#variant-option-shell) variant. The defaults are:
 
 - Microsoft Windows: `PowerShell`
 - Linux, macOS, AIX: `/bin/sh`
 
-#### Example ( Microsoft Windows) { .example }
+<h4 class="example">Example</h4>
+
+The following example is for Microsoft Windows only.
+
 ```apl
       ↑⊃⊃⎕SHELL 'Get-ChildItem -path C:\tmp'
       
@@ -38,7 +41,7 @@ d-----        26-11-2024     12:56                ullu
 
 ### Direct Execution
 
-When `Y` is a vector of character vectors or an enclosed character vector, the first element of the array is treated as a program name, and the rest as individual arguments. The program is executed directly, without invoking the system's shell first. The program name can be an absolute path, a relative path, or the name of an executable in the current search path (operating-system specific). When the program is specified as a relative path, the name is resolved relative to the working directory, which can be set with the [`WorkingDir`](#workingdir) variant.
+When `Y` is a vector of character vectors or an enclosed character vector, the first element of the array is treated as a program name, and the rest as individual arguments. The program is executed directly, without invoking the system's shell first. The program name can be an absolute path, a relative path, or the name of an executable in the current search path (operating-system specific). When the program is specified as a relative path, the name is resolved relative to the working directory, which can be set with the [`WorkingDir`](#variant-option-workingdir) variant.
 
 If the command does not depend on any shell features, then direct execution should be used as it has lower overhead.
 
@@ -46,7 +49,7 @@ If the command does not depend on any shell features, then direct execution shou
     This difference in performance can be very significant, especially under Microsoft Windows where PowerShell is the default.
     Direct calls can be 5-10x faster.
     
-    See [the example below](#example-using-cmdexe-microsoft-windows) for information about how to use `cmd.exe` instead of PowerShell.
+    See the examples under [the `Shell` variant option](#variant-option-shell) for information about how to use `cmd.exe` instead of PowerShell.
 
 ## Return Value
 
@@ -71,9 +74,9 @@ A stream is a connection between the process and some resource, such as a file, 
 | 1 | Standard output | Output | Used to print regular output data. |
 | 2 | Standard error | Output | Used to print error messages or other information that is not part of the main output. |
 
-`⎕SHELL` provides great flexibility in what the streams should point to, by using the [`Output`](#output) and [`Input`](#input) variants. By default, the two output streams, 1 and 2, are configured such that the output produced on standard error is redirected to standard output and effectively merged together, and then turned into an APL array representing the lines of text.
+`⎕SHELL` provides great flexibility in what the streams should point to, by using the [`Output`](#variant-option-output) and [`Input`](#variant-option-input) variants. By default, the two output streams, 1 and 2, are configured such that the output produced on standard error is redirected to standard output and effectively merged together, and then turned into an APL array representing the lines of text.
 
-The StreamData and StreamIds vectors have the same length. The StreamIds are always sorted in ascending order. Each index describes one collected output stream; StreamIds contains the integer stream IDs, and the elements of StreamData depend on how the output is collected (see the [`Output`](#output) variant).
+The StreamData and StreamIds vectors have the same length. The StreamIds are always sorted in ascending order. Each index describes one collected output stream; StreamIds contains the integer stream IDs, and the elements of StreamData depend on how the output is collected (see the [`Output`](#variant-option-output) variant).
 
 By default, `⊃⊃⎕SHELL cmd` returns a vector of character vectors representing the lines of the collected output text from the child process (both standard output and standard error).
 
@@ -85,16 +88,16 @@ The  reasons why a call to `⎕SHELL` ends are described in the table below. `Ex
 | --- | --- | --- |
 | 0 | The child process finished and exited normally. | The non-negative exit code. |
 | 1 | The child process was terminated by a signal. | The negated signal number that caused the termination. |
-| 2 | `⎕SHELL` timed out before the child process exited (see the [`Timeout`](#timeout) option). | The constant `¯1006`. |
+| 2 | `⎕SHELL` timed out before the child process exited (see the [`Timeout`](#variant-option-timeout) option). | The constant `¯1006`. |
 | 3 | `⎕SHELL` was interrupted by a weak interrupt in the IDE. | The constant `¯1002`. |
 
 !!! windows "Dyalog on Microsoft Windows"
     `ExitReason` cannot be 1 on Microsoft Windows.
 
-Returning the exit code (instead of `⎕SHELL` producing some trappable error) makes it possible to access the other parts of the result, such as the error messages that were printed on the standard error stream. However, it is possible to turn non-successful exits into trappable errors using the [`ExitCheck`](#exitcheck) variant.
+Returning the exit code (instead of `⎕SHELL` producing some trappable error) makes it possible to access the other parts of the result, such as the error messages that were printed on the standard error stream. However, it is possible to turn non-successful exits into trappable errors using the [`ExitCheck`](#variant-option-exitcheck) variant.
 
-When the `ExitReason` is 2 or 3, the child process had not stopped running before `⎕SHELL` stopped, which means it might still be running, and require some appropriate cleanup (see [8373⌶](../../primitive-operators/i-beam/shell-process-control)).
-In practice, the child process often closes shortly after without the need for intervention, either due to the default signal being sent to it on non-Windows platforms (see the [`Signal`](#signal) option), or because the connected streams are closed on the `⎕SHELL` end.
+When the `ExitReason` is 2 or 3, the child process had not stopped running before `⎕SHELL` stopped, which means it might still be running, and require some appropriate cleanup (see [`8373⌶`](../primitive-operators/i-beam/shell-process-control.md)).
+In practice, the child process often closes shortly after without the need for intervention, either due to the default signal being sent to it on non-Windows platforms (see the [`Signal`](#variant-option-signal) option), or because the connected streams are closed on the `⎕SHELL` end.
 
 ## Thread Switching
 `⎕SHELL` is a thread switch point, which means the interpreter will run other APL threads while a long-running `⎕SHELL` call is in progress.
@@ -102,9 +105,25 @@ In practice, the child process often closes shortly after without the need for i
 When an APL thread running `⎕SHELL` is terminated by [`⎕TKILL`](tkill.md) or [`)RESET`](../system-commands/reset.md), the child process might be left running, as if `⎕SHELL` was interrupted.
 
 ## Variant Options
-`⎕SHELL` supports the following variant options to control certain parts of the program execution context.
 
-### Output
+`⎕SHELL` supports ten variant options, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md), summarised in [](#variantoptionsforshell), and described in detail beneath it. There is no principal option. They control certain parts of the program execution context.
+
+Table: Variant options for `⎕SHELL` { #variantoptionsforshell }
+
+|Variant Option|Valid Values|Default|Effect|
+|---|---|---|---|
+|[`Output`](#variant-option-output)|a set of redirections|`0 2⍴0`|Output stream redirections.|
+|[`Input`](#variant-option-input)|a set of redirections|`0 2⍴0`|Input stream redirections.|
+|[`WorkingDir`](#variant-option-workingdir)|a character vector|the interpreter's current directory|The child process's working directory.|
+|[`InheritEnv`](#variant-option-inheritenv)|`1` or `0`|`1`|Whether the interpreter's environment variables are inherited.|
+|[`Env`](#variant-option-env)|environment-variable definitions|none|Additional environment variables.|
+|[`Shell`](#variant-option-shell)|a shell specification|operating-system specific|The shell used when `Y` is a character vector.|
+|[`ExitCheck`](#variant-option-exitcheck)|`0` or `1`|`0`|Whether abnormal exit reasons and codes raise `DOMAIN ERROR`.|
+|[`Timeout`](#variant-option-timeout)|`0` or a number of milliseconds|`0`|Upper limit on the duration of the call (`0` means no limit).|
+|[`Signal`](#variant-option-signal)|a signal number|operating-system specific|Signal sent to the child process when it is abandoned.|
+|[`Window`](#variant-option-window)|`'Hidden'` or another window mode|`'Hidden'`|Initial window mode (Microsoft Windows only).|
+
+### Variant Option: `Output`
 The `Output` variant option controls output stream redirections. The value must describe a set of redirections, in one of the following formats:
 
 - a two-column matrix.
@@ -159,8 +178,8 @@ The callback is invoked when:
 
 Depending on the type or encoding, some of these conditions could happen when the buffer contains a number of bytes that do not make up a full item, such as when the buffer is full and the last byte is only one of multiple bytes needed to encode a UTF-8 character.
 
-### Input
-The Input variant option controls input stream redirections. The value must describe a set of redirections, in one of the following formats:
+### Variant Option: `Input`
+The `Input` variant option controls input stream redirections. The value must describe a set of redirections, in one of the following formats:
 
 - a two-column matrix.
 - a two-element vector.
@@ -185,18 +204,18 @@ Any input the child process tries to read on its stream `Stream` will come from 
 
 The default is `0 2⍴0`, but see [Default Redirections](#default-redirections).
 
-### WorkingDir
+### Variant Option: `WorkingDir`
 The `WorkingDir` variant option sets the working directory of the child process. The value must be a character vector that refers to a valid directory, such as `'/tmp/somedir'` on Linux, or `'C:\tmp\somedir'` on Microsoft Windows.
 
 The default is the current working directory of the interpreter.
 
-### InheritEnv
+### Variant Option: `InheritEnv`
 The `InheritEnv` variant option specifies whether the set of environment variables from the interpreter should be inherited by the child process. The value must be a Boolean scalar.
 
 The default is `1`.
 
-### Env
-The `Env` variant option specifies any additional environment variables and their values. If an environment variable that already exists in the set of inherited variables (see [`InheritEnv`](#inheritenv)) is specified here, the value from `Env` takes precedence. The option value must be one of the following:
+### Variant Option: `Env`
+The `Env` variant option specifies any additional environment variables and their values. If an environment variable that already exists in the set of inherited variables (see [`InheritEnv`](#variant-option-inheritenv)) is specified here, the value from `Env` takes precedence. The option value must be one of the following:
 
 - a two-column matrix.
 - a two-element vector.
@@ -204,7 +223,9 @@ The `Env` variant option specifies any additional environment variables and thei
 
 Each row or two-element vector consists of an environment variable name and its value, both specified as character vectors.
 
-Example: Add three environment variables: `DAY=monday`, `MONTH=december`, and `WEEK=50`.
+<h4 class="example">Example</h4>
+
+Add three environment variables: `DAY=monday`, `MONTH=december`, and `WEEK=50`.
 
 ```apl
       ⍝ Using a two-column matrix and array notation
@@ -226,31 +247,13 @@ All the environment variable names must be unique within the scope of the call t
 
 The default is `0 2⍴⍬`.
 
-### Shell
+### Variant Option: `Shell`
 The `Shell` variant option sets the shell to be used when `Y` is a character vector.
 
 The value must be a character vector or a vector of character vectors with a length of at least 1.
 
-!!! info
+!!! Info "Information"
     Shells typically takes some argument which specify that the next argument is a command to run, such as `/bin/bash -c` on Linux, but since the argument differs from shell to shell, it must be specified manually.
-
-#### Example using cmd.exe (Microsoft Windows) { .example }
-```apl
-      ⎕SHELL⍠'Shell' ('cmd.exe' '/C')⊢'someCmd'
-...
-```
-
-#### Example using bash (Linux) { .example }
-```apl
-      ⎕SHELL⍠'Shell' ('/bin/bash' '-c')⊢'someCmd'
-...
-```
-
-There is no difference between the following two calls; the `Shell` variant option is simply a convenience.
-```apl
-      ⎕SHELL'/bin/bash' '-c' 'a b c'
-      ⎕SHELL⍠'Shell' ('/bin/bash' '-c')⊢'a b c'
-```
 
 When the right argument of `⎕SHELL` is a nested vector, the `Shell` option has no effect.
 
@@ -259,19 +262,39 @@ The default depends on the operating-system:
 - Microsoft Windows: `('C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe' '-Command')`.
 - Linux, macOS, AIX: `('/bin/sh' '-c')`.
 
-### ExitCheck
+<h4 class="example">Examples</h4>
+
+Using `cmd.exe` on Microsoft Windows:
+```apl
+      ⎕SHELL⍠'Shell' ('cmd.exe' '/C')⊢'someCmd'
+...
+```
+
+Using `bash` on Linux:
+```apl
+      ⎕SHELL⍠'Shell' ('/bin/bash' '-c')⊢'someCmd'
+...
+```
+
+There is no difference between the following two calls; the `Shell` variant option is simply a convenience:
+```apl
+      ⎕SHELL'/bin/bash' '-c' 'a b c'
+      ⎕SHELL⍠'Shell' ('/bin/bash' '-c')⊢'a b c'
+```
+
+### Variant Option: `ExitCheck`
 The `ExitCheck` variant option specifies whether `⎕SHELL` should convert abnormal exit reasons and exit codes into a `DOMAIN ERORR`. The value must be a boolean scalar; if set to 1, a `DOMAIN ERROR` is reported if `ExitReason` and `ExitCode` are not both 0.
 
 The default `0`.
 
-### Timeout
-The `TimeOut` variant option specifies an upper limit for the duration of the `⎕SHELL` call.
+### Variant Option: `Timeout`
+The `Timeout` variant option specifies an upper limit for the duration of the `⎕SHELL` call.
 The value must be a non-negative numeric scalar representing the number of milliseconds.
 The value `0` allows the `⎕SHELL` call to run for as long as it needs.
 
 The default is `0`.
 
-### Signal
+### Variant Option: `Signal`
 The `Signal` variant option specifies a signal to send to the child process when it is being abandoned by `⎕SHELL`.
 The value must be either an integer representing a valid signal number, or `0` (which means no signal should be sent).
 
@@ -283,15 +306,15 @@ The default depends on the operating-system:
 - Microsoft Windows: `0`.
 - Linux, macOS, AIX: the numeric value of `SIGTERM` which is the signal that asks the child process to shut itself down.
 
-### Window
+### Variant Option: `Window`
 !!! windows "Dyalog on Microsoft Windows"
-    This option only has an effect on Windows.
+    This option only has an effect on Microsoft Windows; it is ignored on other operating systems.
 
 The `Window` variant option specifies the initial window mode. The value must be a character vector containing one of the initial window parameters described on [`⎕CMD`](execute-windows-command.md#starting-a-windows-program).
 
 The default is `'Hidden'`.
 
-See also [8373⌶](../../primitive-operators/i-beam/shell-process-control).
+See also [`8373⌶`](../primitive-operators/i-beam/shell-process-control.md).
 
 ## Default Redirections
 Most programs assume that the three standard streams are configured when the program starts. For this reason, `⎕SHELL` always sets up some redirections for those three, even when variant options have explicitly only set up some of them. For example, when `⎕SHELL⍠'Output' (1 ('File' '/tmp/log.txt'))⊢cmd` is run, stream 0 and stream 2 are set up to their default values.

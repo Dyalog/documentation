@@ -7,7 +7,7 @@ search:
 
 `Y` must be a simple array of integers representing thread numbers to be terminated. `X` is a Boolean single, defaulting to 1, which indicates that all descendant threads should also be terminated.
 
-The shy result `R` is a vector of the numbers of all threads that have been terminated.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` is a vector of the numbers of all threads that have been terminated.
 
 The **base thread** 0 is always excluded from the cull.
 

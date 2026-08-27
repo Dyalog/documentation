@@ -1,7 +1,5 @@
 # <span>SetServiceState</span> <span>Method 93</span>
 
-**Description**
-
 This method is used to set the state of a Dyalog APL service running under Windows. See [APL Application as a Service](../../../windows-installation-and-configuration-guide/apl-application-as-a-service).
 
 The argument to the SetServiceState method is the desired state of the service. This should be one of the following numeric values:
@@ -17,6 +15,6 @@ When the SCM requests a change of state, the APL interpreter responds by setting
 
 It is the responsibility of the APL service to process this event, perform the appropriate application tasks, and then respond (to the SCM) by calling the [SetServiceState](./setservicestate.md) method to confirm that the service has reached the desired state.
 
-**Application**
+## Application
 
 Objects: [Root](../objects/root.md)

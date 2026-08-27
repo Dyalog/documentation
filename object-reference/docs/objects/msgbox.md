@@ -1,8 +1,6 @@
 # <span>MsgBox</span> <span>Object</span>
 
-**Purpose:** Provides a "modal" dialog box for displaying messages, errors, warnings and other information. The dialog box has a title, one or more lines of text, and up to three buttons.
-
-**Description**
+Provides a "modal" dialog box for displaying messages, errors, warnings and other information. The dialog box has a title, one or more lines of text, and up to three buttons.
 
 The [Caption](../properties/caption.md) property determines the text displayed in the object's title bar.
 
@@ -73,13 +71,15 @@ The MsgBox object generates one of three events; [MsgBtn1](../methodorevents/msg
    'Msg' ⎕WC 'MsgBox' Caption Text 'Info' B ⋄ ⎕DQ 'Msg'
 ```
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Calendar](../objects/calendar.md), [CoolBand](../objects/coolband.md), [DateTimePicker](../objects/datetimepicker.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [OLEServer](../objects/oleserver.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Root](../objects/root.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 
 Children: [Timer](../objects/timer.md)
 
-Properties: [Btns](../properties/btns.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Default](../properties/default.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Style](../properties/style.md), [Text](../properties/text.md), [Type](../properties/type.md)
+Properties (default order): [Type](../properties/type.md), [Caption](../properties/caption.md), [Text](../properties/text.md), [Style](../properties/style.md), [Btns](../properties/btns.md), [Default](../properties/default.md), [Event](../properties/event.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [KeepOnClose](../properties/keeponclose.md), [ForceOnTaskbar](../properties/forceontaskbar.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Btns](../properties/btns.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Default](../properties/default.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [ForceOnTaskbar](../properties/forceontaskbar.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Style](../properties/style.md), [Text](../properties/text.md), [Type](../properties/type.md)
 
 Methods: [Detach](../methodorevents/detach.md), [Wait](../methodorevents/wait.md)
 

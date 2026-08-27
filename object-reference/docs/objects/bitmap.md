@@ -1,8 +1,6 @@
 # <span>Bitmap</span> <span>Object</span>
 
-**Purpose:** A graphical object used to represent a bitmap which may be used both to display a picture or as a pattern (brush) used to fill other objects.
-
-**Description**
+A graphical object used to represent a bitmap which may be used both to display a picture or as a pattern (brush) used to fill other objects.
 
 A Bitmap may be created either from a file (.BMP, .GIF or .PNG) or from APL arrays. To create a Bitmap object using [`⎕WC`](../../../language-reference-guide/system-functions/wc), you can either specify the [File](../properties/file.md) property **or** the [CBits](../properties/cbits.md) property, **or** the [Bits](../properties/bits.md) and [CMap](../properties/cmap.md) properties.
 
@@ -44,13 +42,15 @@ The [BtnPix](../properties/btnpix.md) property specifies three Bitmaps to be use
 
 The [FStyle](../properties/fstyle.md) property specifies the name of a Bitmap to be used as a pattern to fill a [Poly](poly.md), [Ellipse](ellipse.md) or [Rect](rect.md) object.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/animation.md), [Button](../objects/button.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [ImageList](../objects/imagelist.md), [ListView](../objects/listview.md), [Menu](../objects/menu.md), [MenuBar](../objects/menubar.md), [MenuItem](../objects/menuitem.md), [NetType](../objects/nettype.md), [OLEServer](../objects/oleserver.md), [Printer](../objects/printer.md), [ProgressBar](../objects/progressbar.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [RichEdit](../objects/richedit.md), [Root](../objects/root.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolButton](../objects/toolbutton.md), [ToolControl](../objects/toolcontrol.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)
 
 Children: [Circle](../objects/circle.md), [Ellipse](../objects/ellipse.md), [Font](../objects/font.md), [Image](../objects/image.md), [Marker](../objects/marker.md), [Metafile](../objects/metafile.md), [Poly](../objects/poly.md), [Rect](../objects/rect.md), [Text](../objects/text.md), [Timer](../objects/timer.md)
 
-Properties: [Accelerator](../properties/accelerator.md), [Bits](../properties/bits.md), [CBits](../properties/cbits.md), [ChildList](../properties/childlist.md), [CMap](../properties/cmap.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [File](../properties/file.md), [FontObj](../properties/fontobj.md), [KeepBits](../properties/keepbits.md), [KeepOnClose](../properties/keeponclose.md), [MaskCol](../properties/maskcol.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [TextSize](../properties/textsize.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [XRange](../properties/xrange.md), [YRange](../properties/yrange.md)
+Properties (default order): [Type](../properties/type.md), [File](../properties/file.md), [Bits](../properties/bits.md), [CMap](../properties/cmap.md), [KeepBits](../properties/keepbits.md), [Size](../properties/size.md), [Coord](../properties/coord.md), [Event](../properties/event.md), [FontObj](../properties/fontobj.md), [YRange](../properties/yrange.md), [XRange](../properties/xrange.md), [Data](../properties/data.md), [TextSize](../properties/textsize.md), [Translate](../properties/translate.md), [Accelerator](../properties/accelerator.md), [KeepOnClose](../properties/keeponclose.md), [CBits](../properties/cbits.md), [MaskCol](../properties/maskcol.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Accelerator](../properties/accelerator.md), [Bits](../properties/bits.md), [CBits](../properties/cbits.md), [ChildList](../properties/childlist.md), [CMap](../properties/cmap.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [File](../properties/file.md), [FontObj](../properties/fontobj.md), [KeepBits](../properties/keepbits.md), [KeepOnClose](../properties/keeponclose.md), [MaskCol](../properties/maskcol.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [TextSize](../properties/textsize.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [XRange](../properties/xrange.md), [YRange](../properties/yrange.md)
 
 Methods: [Detach](../methodorevents/detach.md), [FileRead](../methodorevents/fileread.md), [FileWrite](../methodorevents/filewrite.md), [GetTextSize](../methodorevents/gettextsize.md), [MakeGIF](../methodorevents/makegif.md), [MakePNG](../methodorevents/makepng.md)
 

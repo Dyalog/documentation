@@ -1,8 +1,6 @@
 # <span>ImageList</span> <span>Object</span>
 
-**Purpose:** The ImageList object represents a set of bitmapped images.
-
-**Description**
+The ImageList object represents a set of bitmapped images.
 
 An ImageList object represents an array of bitmapped images which are used to depict items in a [ListView](listview.md) or [TreeView](treeview.md) object, or the images in a [CoolBar](coolbar.md), [Menu](menu.md), [TabControl](tabcontrol.md) or [ToolControl](toolcontrol.md).
 
@@ -18,13 +16,15 @@ The [MapCols](../properties/mapcols.md) property, which must be specified at the
 
 An ImageList is *associated* with a [ListView](listview.md) or [TreeView](treeview.md) object by the [ImageListObj](../properties/imagelistobj.md) property. Each item in the [ListView](listview.md) or [TreeView](treeview.md) is then allocated a specific image in the ImageList by the [ImageIndex](../properties/imageindex.md) and [SelImageIndex](../properties/selimageindex.md) properties.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [ButtonEdit](../objects/buttonedit.md), [CoolBand](../objects/coolband.md), [CoolBar](../objects/coolbar.md), [Form](../objects/form.md), [Group](../objects/group.md), [ListView](../objects/listview.md), [OLEServer](../objects/oleserver.md), [PropertyPage](../objects/propertypage.md), [Root](../objects/root.md), [SubForm](../objects/subform.md), [TabControl](../objects/tabcontrol.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md), [TreeView](../objects/treeview.md)
 
 Children: [Bitmap](../objects/bitmap.md), [Cursor](../objects/cursor.md), [Icon](../objects/icon.md), [Timer](../objects/timer.md)
 
-Properties: [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [Handle](../properties/handle.md), [ImageCount](../properties/imagecount.md), [KeepOnClose](../properties/keeponclose.md), [MapCols](../properties/mapcols.md), [Masked](../properties/masked.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
+Properties (default order): [Type](../properties/type.md), [Size](../properties/size.md), [Event](../properties/event.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Handle](../properties/handle.md), [Translate](../properties/translate.md), [ImageCount](../properties/imagecount.md), [Masked](../properties/masked.md), [MapCols](../properties/mapcols.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [Handle](../properties/handle.md), [ImageCount](../properties/imagecount.md), [KeepOnClose](../properties/keeponclose.md), [MapCols](../properties/mapcols.md), [Masked](../properties/masked.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
 
 Methods: [Detach](../methodorevents/detach.md)
 

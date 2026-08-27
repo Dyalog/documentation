@@ -21,7 +21,7 @@ The result `R` is the file tie number associated with the new file `X`.
 
 Note that the Access Code is 4609, which is the sum of the Access Codes for `⎕FREAD` (1), `⎕FRDCI` (512) and `⎕FRDAC` (4096).
 
-Note also that although the file need not be tied exclusively, the `⎕FCOPY` function will not yield the file to other APL processes while it is running, and it may take some considerable time to run in the case of a large component file.
+Note also that although the file need not be tied exclusively, the `⎕FCOPY` function will not yield the file to other APL processes while it is running, and it might take some considerable time to run in the case of a large component file.
 
 <h2 class="example">Example</h2>
 ```apl
@@ -39,22 +39,28 @@ If `X` specifies the name of an existing file, the operation fails with a `FILE 
 !!! note
     This operation is atomic. If an error occurs during the copy operation (such as disk full) or if a strong interrupt is issued, the copy will be aborted and the new file `X` will not be created.
 
-## File Properties
+## Variant Options
 
-`⎕FCOPY` allows you to specify properties for the new file via the variant operator `⍠` used with the following options:
+`⎕FCOPY` sets the properties of the new file through variant options, summarised in [](#variantoptionsforfcopy). These are the file properties described in [File Properties](fprops.md). Unless a property is specified, the new file inherits it from the source, except `'S'`, which is always `64`.
 
-- `'J'` - journaling level; a numeric value.
-- `'C'` - checksum level; 0 or 1.
-- `'Z'` - compression; 0 or 1.
-- `'U'` - Unicode; 0 or 1
-- `'S'` - File Size (span); 64
+Table: Variant options for `⎕FCOPY` { #variantoptionsforfcopy }
 
-The Principal Option is  as follows:
+|Variant Option|Valid Values|Effect|
+|---|---|---|
+|`'J'`|`0`, `1`, `2`, or `3`|Sets the journaling level.|
+|`'C'`|`0` or `1`|Sets the checksum level.|
+|`'Z'`|`0` or `1`|Sets compression.|
+|`'U'`|`0` or `1`|Sets Unicode support.|
+|`'S'`|`64`|Sets the file size (span).|
 
-- 0 - sets `('J' 0) ('C' 0)`
-- 1 - sets `('J' 1) ('C' 1)`
-- 2 - sets `('J' 2) ('C' 1)`
-- 3 - sets `('J' 3) ('C' 1)`
+The principal option is a number that sets journaling (`'J'`) and checksum (`'C'`) together:
+
+|Principal option|Effect|
+|---|---|
+|`0`|sets `('J' 0) ('C' 0)`, which signals a `DOMAIN ERROR` as this combination is no longer supported|
+|`1`|sets `('J' 1) ('C' 1)`|
+|`2`|sets `('J' 2) ('C' 1)`|
+|`3`|sets `('J' 3) ('C' 1)`|
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -76,7 +82,7 @@ will name a variant of `⎕FCREATE` which will create component file with level 
 ```
 
 !!! note
-    Setting `('U' 0)` (no Unicode support) is discouraged as it may cause the copy to fail with a `TRANSLATION ERROR`. Similarly using a Classic interpreter to `⎕FCOPY` files may result in `TRANSLATION ERROR`s.
+    Setting `('U' 0)` (no Unicode support) is discouraged as it might cause the copy to fail with a `TRANSLATION ERROR`. Similarly, using a Classic interpreter to `⎕FCOPY` files might result in `TRANSLATION ERROR`s.
 
 !!! Info "Information"
     Small-span (32-bit) component files are currently read-only; Dyalog Ltd recommends using `⎕FCOPY` to convert any such files to large-span (64-bit). This ability is scheduled for removal in a future release. For information on how to identify calls to small-span component files in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).

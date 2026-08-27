@@ -1,7 +1,5 @@
 # <span>TCPSendPicture</span> <span>Method 380</span>
 
-**Description**
-
 This method is used to transmit a picture represented by a [Bitmap](../objects/bitmap.md) object to a TCP/IP socket. The picture may be transmitted in GIF or in PNG format.
 
 The argument to TCPSendPicture is a 1 or 2-element array as follows:
@@ -14,7 +12,7 @@ If *Picture format* is omitted, the default is GIF format.
 
 Note that the [Style](../properties/style.md) of the [TCPSocket](../objects/tcpsocket.md) object must be set to `'Raw'` before you execute the TCPSendPicture method.
 
-The (shy) result of the method is an integer that reports the number of bytes that were transmitted.
+The ([shy](../../../programming-reference-guide/introduction/results#shy-results)) result of the method is an integer that reports the number of bytes that were transmitted.
 
 <h2 class="example">Example</h2>
 ```apl
@@ -27,6 +25,6 @@ The (shy) result of the method is an integer that reports the number of bytes th
 
 See also: [MakeGIF](./makegif.md), [MakePNG](./makepng.md)
 
-**Application**
+## Application
 
 Objects: [TCPSocket](../objects/tcpsocket.md)

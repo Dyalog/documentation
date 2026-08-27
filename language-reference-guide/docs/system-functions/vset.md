@@ -24,7 +24,7 @@ The namespace(s) referenced must already exist, or a `VALUE ERROR` is generated.
 
 If `X` is not specified, the target namespace is the current namespace.
 
-The result `R` is a shy reference to the target namespace(s).
+The result `R` is a [shy](../../../programming-reference-guide/introduction/results#shy-results) reference to the target namespace(s).
 
 See also [`⎕VGET`](vget.md).
 
@@ -80,7 +80,11 @@ Multiple names, with a single value:
       name1 name2 name3
  APL  APL  APL
 ```
-## Variant Option: Trigger
+## Variant Options
+
+`⎕VSET` supports one variant option, `Trigger`.
+
+### Variant Option: `Trigger`
 
 The `Trigger` variant option specifies whether any [triggers](../../../programming-reference-guide/triggers/triggers) should be run for the modified variables in the target namespace that have triggers attached.
 The value must be a Boolean scalar. The default is `1`, meaning that triggers are run.

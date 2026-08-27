@@ -1,8 +1,6 @@
 # <span>TabControl</span> <span>Object</span>
 
-**Purpose:** The TabControl object provides access to the native Windows tab         control.
-
-**Description**
+The TabControl object provides access to the native Windows tab         control.
 
 The standard tab control is analogous to a set of dividers in a notebook and
 allows you to define a set of *pages* that occupy the same area of a window
@@ -138,13 +136,15 @@ The [HotTrack](../properties/hottrack.md) property specifies whether
 or not the tabs or buttons are automatically highlighted by the mouse pointer.
 The default is 0 (no highlighting).
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [SubForm](../objects/subform.md)
 
 Children: [ImageList](../objects/imagelist.md), [SubForm](../objects/subform.md), [TabButton](../objects/tabbutton.md), [Timer](../objects/timer.md)
 
-Properties: [Align](../properties/align.md), [Attach](../properties/attach.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FlatSeparators](../properties/flatseparators.md), [FontObj](../properties/fontobj.md), [Handle](../properties/handle.md), [HotTrack](../properties/hottrack.md), [ImageListObj](../properties/imagelistobj.md), [Justify](../properties/justify.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [MultiLine](../properties/multiline.md), [MultiSelect](../properties/multiselect.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [ScrollOpposite](../properties/scrollopposite.md), [Size](../properties/size.md), [Style](../properties/style.md), [TabFocus](../properties/tabfocus.md), [TabJustify](../properties/tabjustify.md), [TabObj](../properties/tabobj.md), [TabSize](../properties/tabsize.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
+Properties (default order): [Type](../properties/type.md), [Posn](../properties/posn.md), [Size](../properties/size.md), [Style](../properties/style.md), [Visible](../properties/visible.md), [Event](../properties/event.md), [ImageListObj](../properties/imagelistobj.md), [FontObj](../properties/fontobj.md), [Data](../properties/data.md), [Attach](../properties/attach.md), [Handle](../properties/handle.md), [TabObj](../properties/tabobj.md), [KeepOnClose](../properties/keeponclose.md), [MultiLine](../properties/multiline.md), [TabSize](../properties/tabsize.md), [Justify](../properties/justify.md), [TabJustify](../properties/tabjustify.md), [Align](../properties/align.md), [MultiSelect](../properties/multiselect.md), [TabFocus](../properties/tabfocus.md), [HotTrack](../properties/hottrack.md), [ScrollOpposite](../properties/scrollopposite.md), [FlatSeparators](../properties/flatseparators.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Align](../properties/align.md), [Attach](../properties/attach.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FlatSeparators](../properties/flatseparators.md), [FontObj](../properties/fontobj.md), [Handle](../properties/handle.md), [HotTrack](../properties/hottrack.md), [ImageListObj](../properties/imagelistobj.md), [Justify](../properties/justify.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [MultiLine](../properties/multiline.md), [MultiSelect](../properties/multiselect.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [ScrollOpposite](../properties/scrollopposite.md), [Size](../properties/size.md), [Style](../properties/style.md), [TabFocus](../properties/tabfocus.md), [TabJustify](../properties/tabjustify.md), [TabObj](../properties/tabobj.md), [TabSize](../properties/tabsize.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
 
 Methods: [Animate](../methodorevents/animate.md), [Detach](../methodorevents/detach.md), [GetFocus](../methodorevents/getfocus.md), [GetFocusObj](../methodorevents/getfocusobj.md), [GetTextSize](../methodorevents/gettextsize.md)
 

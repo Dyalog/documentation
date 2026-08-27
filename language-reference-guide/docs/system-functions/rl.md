@@ -5,7 +5,14 @@ search:
 
 # <span>Random Link</span> `⎕RL`
 
-`⎕RL` is a 2-element vector. Its first element contains the  base or *random number seed* and its second element is an integer that identifies the random number generator that is currently  in use. Together these items define how the system generates random numbers using [Roll](../primitive-functions/roll.md) and [Deal](../primitive-functions/deal.md).
+`⎕RL` defines how the system generates random numbers.
+
+`⎕RL` is an [implicit argument](../primitive-functions/notes.md#implicit-arguments) of:
+
+- monadic functions: [`?`](../primitive-functions/roll.md)
+- dyadic functions: [`?`](../primitive-functions/deal.md)
+
+`⎕RL` is a 2-element vector. Its first element contains the  base or *random number seed* and its second element is an integer that identifies the random number generator that is currently  in use.
 
 In a `clear ws` `⎕RL` is `(⍬ 1)`. `⎕RL` has Namespace scope.
 

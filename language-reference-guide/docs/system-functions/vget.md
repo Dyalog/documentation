@@ -212,6 +212,25 @@ DOMAIN ERROR: Divide by zero
  Vendor                                                Dyalog
 ```
 
+The following example lists the available line labels after a failed branch:
+```apl
+      ∇ foo
+[1]   l1:
+[2]   l2:
+[3]    :GoTo l3
+      ∇
+      foo
+VALUE ERROR: Undefined name: l3
+foo[3] :GoTo l3
+             ∧
+      ⎕VGET ¯1
+┌──────┬──────┐
+│┌──┬─┐│┌──┬─┐│
+││l1│1│││l2│2││
+│└──┴─┘│└──┴─┘│
+└──────┴──────┘
+```
+
 Name matrix and value vector:
 
 ```apl

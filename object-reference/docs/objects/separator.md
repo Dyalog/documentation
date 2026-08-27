@@ -1,8 +1,6 @@
 # <span>Separator</span> <span>Object</span>
 
-**Purpose:** A horizontal or vertical line used to separate items in a menu.
-
-**Description**
+A horizontal or vertical line used to separate items in a menu.
 
 This object provides a vertical or horizontal line to separate items in a [Menu](menu.md). It may also be used to split a [MenuBar](menubar.md) over more than one line.
 
@@ -16,13 +14,15 @@ Like other components of a menu, the position of a Separator is normally determi
 
 If you put a Separator (either [Style](../properties/style.md)) into a [MenuBar](menubar.md), it has the effect of adding another line to it. Any items added after the Separator will appear in the new line.
 
-**Application**
+## Application
 
 Parents: [Menu](../objects/menu.md), [MenuBar](../objects/menubar.md)
 
 Children: [Timer](../objects/timer.md)
 
-Properties: [BCol](../properties/bcol.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Style](../properties/style.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
+Properties (default order): [Type](../properties/type.md), [Posn](../properties/posn.md), [Style](../properties/style.md), [Event](../properties/event.md), [FCol](../properties/fcol.md), [BCol](../properties/bcol.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Translate](../properties/translate.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [BCol](../properties/bcol.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Style](../properties/style.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
 
 Methods: [Detach](../methodorevents/detach.md)
 

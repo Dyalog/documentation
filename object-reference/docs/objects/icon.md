@@ -1,8 +1,6 @@
 # <span>Icon</span> <span>Object</span>
 
-**Purpose:** This object defines an icon.
-
-**Description**
+This object defines an icon.
 
 The [File](../properties/file.md) property specifies the name of an icon  file (.ICO. .GIF or .PNG), or the name of a DLL or EXE file and the identity of the icon within it.
 
@@ -29,13 +27,15 @@ The size of [Bits](../properties/bits.md) is restricted by the capabilities of t
 
 An Icon is **used** by setting the [IconObj](../properties/iconobj.md) property or [Picture](../properties/picture.md) property of another object to its name or ref.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [ImageList](../objects/imagelist.md), [ListView](../objects/listview.md), [OLEServer](../objects/oleserver.md), [Printer](../objects/printer.md), [ProgressBar](../objects/progressbar.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [RichEdit](../objects/richedit.md), [Root](../objects/root.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [SysTrayItem](../objects/systrayitem.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)
 
 Children: [Timer](../objects/timer.md)
 
-Properties: [Accelerator](../properties/accelerator.md), [Bits](../properties/bits.md), [CBits](../properties/cbits.md), [ChildList](../properties/childlist.md), [CMap](../properties/cmap.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [File](../properties/file.md), [Handle](../properties/handle.md), [KeepBits](../properties/keepbits.md), [KeepOnClose](../properties/keeponclose.md), [Mask](../properties/mask.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Style](../properties/style.md), [Type](../properties/type.md)
+Properties (default order): [Type](../properties/type.md), [File](../properties/file.md), [Bits](../properties/bits.md), [CMap](../properties/cmap.md), [Mask](../properties/mask.md), [Style](../properties/style.md), [KeepBits](../properties/keepbits.md), [Size](../properties/size.md), [Event](../properties/event.md), [Data](../properties/data.md), [Handle](../properties/handle.md), [Accelerator](../properties/accelerator.md), [KeepOnClose](../properties/keeponclose.md), [CBits](../properties/cbits.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Accelerator](../properties/accelerator.md), [Bits](../properties/bits.md), [CBits](../properties/cbits.md), [ChildList](../properties/childlist.md), [CMap](../properties/cmap.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [File](../properties/file.md), [Handle](../properties/handle.md), [KeepBits](../properties/keepbits.md), [KeepOnClose](../properties/keeponclose.md), [Mask](../properties/mask.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Style](../properties/style.md), [Type](../properties/type.md)
 
 Methods: [Detach](../methodorevents/detach.md), [FileRead](../methodorevents/fileread.md), [FileWrite](../methodorevents/filewrite.md)
 

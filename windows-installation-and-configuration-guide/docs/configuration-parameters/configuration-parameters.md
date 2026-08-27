@@ -39,3 +39,19 @@ You can change parameters in the Registry in one of two ways:
 
 - Using the Configuration dialog box that is obtained by selecting *Configure* from the *Options* menu on the Dyalog APL/W session. See ["The Configuration Dialog Box"](../configuring-the-ide/configuration-dialog/configuration-dialog-general-tab.md) for details.
 - By directly editing the Windows Registry using `REGEDIT.EXE` or `REGEDIT32.EXE`. This is necessary for parameters that are not editable via the Configuration dialog box.
+
+## References to Other Configuration Parameters
+
+Configuration parameters can include references to other configuration parameters using square bracket delimiters. For example:
+```apl
+MySetting: "[DYALOG]/MyFile"
+```
+
+will replace `[DYALOG]` with the value of the **DYALOG** configuration parameter.
+
+Note that:
+
+- If the referenced configuration parameter is not defined then no substitution will take place; the reference, including square bracket delimiters, will remain in place.
+- To include square brackets in a string, prefix the `[` with a `\` character.
+
+`[=DOCUMENTS]` is a pre-defined substitution parameter that is replaced with the location of the user's Documents folder (for example, `C:\Users\Bob\Documents`).

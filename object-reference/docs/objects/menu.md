@@ -1,8 +1,6 @@
 # <span>Menu</span> <span>Object</span>
 
-**Purpose:** This is a pop-up object which allows the user to initiate an action or         to select an option using a "menu".
-
-**Description**
+This is a pop-up object which allows the user to initiate an action or         to select an option using a "menu".
 
 For a Menu that is owned by a [MenuBar](menubar.md) or
 another Menu, the [Caption](../properties/caption.md) property
@@ -59,13 +57,15 @@ to something other than `'None'` if you want
 its children Menu and [MenuItem](menuitem.md) objects to
 have a 3-dimensional appearance.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Calendar](../objects/calendar.md), [CoolBand](../objects/coolband.md), [CoolBar](../objects/coolbar.md), [DateTimePicker](../objects/datetimepicker.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Menu](../objects/menu.md), [MenuBar](../objects/menubar.md), [OLEServer](../objects/oleserver.md), [Root](../objects/root.md), [StatusField](../objects/statusfield.md), [SubForm](../objects/subform.md), [SysTrayItem](../objects/systrayitem.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 
 Children: [Bitmap](../objects/bitmap.md), [Menu](../objects/menu.md), [MenuItem](../objects/menuitem.md), [Separator](../objects/separator.md), [Timer](../objects/timer.md)
 
-Properties: [Accelerator](../properties/accelerator.md), [Active](../properties/active.md), [Align](../properties/align.md), [BCol](../properties/bcol.md), [BtnPix](../properties/btnpix.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FontObj](../properties/fontobj.md), [Handle](../properties/handle.md), [ImageIndex](../properties/imageindex.md), [ImageListObj](../properties/imagelistobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
+Properties (default order): [Type](../properties/type.md), [Caption](../properties/caption.md), [Posn](../properties/posn.md), [Coord](../properties/coord.md), [Align](../properties/align.md), [Active](../properties/active.md), [Event](../properties/event.md), [FontObj](../properties/fontobj.md), [FCol](../properties/fcol.md), [BCol](../properties/bcol.md), [BtnPix](../properties/btnpix.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Handle](../properties/handle.md), [Translate](../properties/translate.md), [Accelerator](../properties/accelerator.md), [KeepOnClose](../properties/keeponclose.md), [ImageListObj](../properties/imagelistobj.md), [ImageIndex](../properties/imageindex.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Accelerator](../properties/accelerator.md), [Active](../properties/active.md), [Align](../properties/align.md), [BCol](../properties/bcol.md), [BtnPix](../properties/btnpix.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FontObj](../properties/fontobj.md), [Handle](../properties/handle.md), [ImageIndex](../properties/imageindex.md), [ImageListObj](../properties/imagelistobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
 
 Methods: [Detach](../methodorevents/detach.md), [Wait](../methodorevents/wait.md)
 

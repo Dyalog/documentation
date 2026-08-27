@@ -12,7 +12,7 @@ The name of a non-niladic function is AMBIVALENT; that is, it potentially repres
 
 Functions have long SCOPE on the right; that is, the right argument of the function is the result of the entire expression to its right which must be an array.  A dyadic function has short scope on the left; that is, the left argument of the function is the array immediately to its left.  Left scope may be extended by enclosing an expression in parentheses whence the result must be an array.
 
-For some functions, the explicit result is suppressed if it would otherwise be displayed on completion of evaluation of the expression. This applies on assignment to a variable name.  It applies for certain system functions, and may also apply for defined functions.
+For some functions, the explicit result is [shy](results.md#shy-results); that is, it is not displayed on completion of evaluation of the expression, although it can still be assigned or used. This applies on assignment to a variable name.  It applies for certain system functions, and may also apply for defined functions.
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -32,7 +32,7 @@ For some functions, the explicit result is suppressed if it would otherwise be d
 
 Functions may be defined with the system function `⎕FX`, or with the function editor. A function consists of a HEADER which identifies the syntax of the function, and a BODY in which one or more APL statements are specified.
 
-The header syntax identifies the function name, its (optional) result and its (optional) arguments. If a function is ambivalent, it is defined with two arguments but with the left argument within braces (`{}`).  If an ambivalent function is called monadically, the left argument has no value inside the function.  If the explicit result is to be suppressed for display purposes, the result is shown within braces.  A function need not produce an explicit result.  Refer to *Chapter 2* for further details.
+The header syntax identifies the function name, its (optional) result and its (optional) arguments. If a function is ambivalent, it is defined with two arguments but with the left argument within braces (`{}`).  If an ambivalent function is called monadically, the left argument has no value inside the function.  If the explicit result is to be made shy, the result is shown within braces.  A function need not produce an explicit result.  Refer to *Chapter 2* for further details.
 
 <h3 class="example">Example</h3>
 ```apl

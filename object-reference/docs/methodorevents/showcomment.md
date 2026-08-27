@@ -1,7 +1,5 @@
 # <span>ShowComment</span> <span>Event 223</span>
 
-**Description**
-
 If enabled, a [Grid](../objects/grid.md) will generate a ShowComment event when the user rests the mouse pointer over a commented cell. You may use this event to modify the appearance of the comment dynamically.
 
 The event message reported as the result of `⎕DQ` or supplied as the right argument to your callback function is an 8-element vector containing the following:
@@ -24,6 +22,6 @@ You may display the comment associated with a particular cell under program cont
 
 Note that a comment will only be displayed if the specified cell is marked as a commented cell.
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

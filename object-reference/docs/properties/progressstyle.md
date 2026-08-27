@@ -1,7 +1,5 @@
 # <span>ProgressStyle</span> <span>Property</span>
 
-**Description**
-
 The ProgressStyle property specifies the appearance of a [ProgressBar](../objects/progressbar.md) control.
 
 ProgressStyle is a character vector that may be `'Normal'`, `'Smooth'` or `'Marquee'`. Its value is effective only when the object is created with `⎕WC`. Changing ProgressStyle with `⎕WS` has no effect on the appearance or behaviour of the [ProgressBar](../objects/progressbar.md).
@@ -31,6 +29,6 @@ ProgressStyle Smooth (Windows Classic Theme only)
 
 ProgressStyle Marquee (requires Native Look and Feel)
 
-**Application**
+## Application
 
 Objects: [ProgressBar](../objects/progressbar.md)

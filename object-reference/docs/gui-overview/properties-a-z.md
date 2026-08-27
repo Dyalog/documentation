@@ -8,29 +8,37 @@ search:
 |Property|Description|
 |---|---|
 |[Accelerator](../properties/accelerator.md)|specifies keystroke that will generate [Select](../methodorevents/select.md) event|
+|[AcceptFiles](../properties/acceptfiles.md)|specifies whether or not an object will accept a file drag/drop operation|
 |[Active](../properties/active.md)|determines whether object can generate events|
 |[Align](../properties/align.md)|determines the position of text or for [Scroll](../objects/scroll.md) object|
 |[AlignChar](../properties/alignchar.md)|specifies a character for column alignment in a [Grid](../objects/grid.md)|
+|[AllowContextMenu](../properties/allowcontextmenu.md)|controls whether the context menu is displayed in an [HTMLRenderer](../objects/htmlrenderer.md) when the user requests it|
+|[AlphaBlend](../properties/alphablend.md)|specifies a level of translucency that allows the area behind a [Form](../objects/form.md) to show through|
 |[AlwaysShowBorder](../properties/alwaysshowborder.md)|specifies how the current cell in a [Grid](../objects/grid.md) is displayed when the Grid loses focus|
 |[AlwaysShowSelection](../properties/alwaysshowselection.md)|specifies how the highlighted selection in an object is displayed when the object loses focus|
 |[APLVersion](../properties/aplversion.md)|reports the version of Dyalog being run|
 |[ArcMode](../properties/arcmode.md)|determines how arcs are drawn ( [Ellipse](../objects/ellipse.md) )|
+|[Array](../properties/array.md)|sets or retrieves the contents of the [Clipboard](../objects/clipboard.md) as a Dyalog APL array|
 |[AsChild](../properties/aschild.md)|determines if an [HTMLRenderer](../objects/htmlrenderer.md) object  is displayed in a separate top-level window or as a child of another object.|
 |[Attach](../properties/attach.md)|specifies how object is reconfigured when parent is resized|
 |[AutoArrange](../properties/autoarrange.md)|whether or not items in a [ListView](../objects/listview.md) are rearranged automatically|
 |[AutoBrowse](../properties/autobrowse.md)|specifies whether or not functions and variables are fixed when an [OLEClient](../objects/oleclient.md) is created|
 |[AutoConf](../properties/autoconf.md)|how a child reacts to its parent being resized|
 |[AutoExpand](../properties/autoexpand.md)|whether rows and columns are added to a [Grid](../objects/grid.md)|
+|[AutoPlay](../properties/autoplay.md)|specifies whether or not an AVI clip is played immediately when loaded in an [Animation](../objects/animation.md) object|
 |[BandBorders](../properties/bandborders.md)|Specifies whether or not narrow lines are drawn to separate adjacent bands in a [CoolBar](../objects/coolbar.md)|
+|[BaseClass](../properties/baseclass.md)|specifies the name of the .NET class upon which a [NetType](../objects/nettype.md) is based|
 |[BCol](../properties/bcol.md)|specifies background colour|
 |[Bits](../properties/bits.md)|defines the pattern for a [Bitmap](../objects/bitmap.md) , [Cursor](../objects/cursor.md) , or [Icon](../objects/icon.md)|
 |[Border](../properties/border.md)|determines whether or not an object has a border|
+|[BrowseFor](../properties/browsefor.md)|specifies the type of resource to be the target of a [BrowseBox](../objects/browsebox.md)|
 |[BtnPix](../properties/btnpix.md)|associates [Bitmap](../objects/bitmap.md) s with [Button](../objects/button.md) , [Menu](../objects/menu.md) and [MenuItem](../objects/menuitem.md) objects|
 |[Btns](../properties/btns.md)|determines the buttons shown in a [MsgBox](../objects/msgbox.md)|
 |[ButtonsAcceptFocus](../properties/buttonsacceptfocus.md)|affects the keyboard handling in a [ToolControl](../objects/toolcontrol.md)|
 |[CalendarCols](../properties/calendarcols.md)|Specifies the colours used for various elements in the Calendar object|
 |[Cancel](../properties/cancel.md)|used to associate the Esc key with a particular [Button](../objects/button.md)|
 |[Caption](../properties/caption.md)|specifies text in an object|
+|[CaseSensitive](../properties/casesensitive.md)|specifies whether or not string searches in a [ComboEx](../objects/comboex.md) are case sensitive|
 |[CBits](../properties/cbits.md)|represents the picture in a [Bitmap](../objects/bitmap.md) object|
 |[CEFVersion](../properties/cefversion.md)|reports the version of the Chromium Embedded Framework (CEF) that is being used.|
 |[CellFonts](../properties/cellfonts.md)|specifies fonts to be used by the cells in a [Grid](../objects/grid.md)|
@@ -38,7 +46,7 @@ search:
 |[CellSelect](../properties/cellselect.md)|specifies the type(s) of selection a user can perform in a [Grid](../objects/grid.md)|
 |[CellSet](../properties/cellset.md)|flags which cells in a [Grid](../objects/grid.md) have values and which are empty|
 |[CellTypes](../properties/celltypes.md)|specifies the type of the cells in a [Grid](../objects/grid.md)|
-|[Cells](../properties/cellwidths.md)|specifies the widths of cells in a [Grid](../objects/grid.md)|
+|[CellWidths](../properties/cellwidths.md)|specifies the widths of cells in a [Grid](../objects/grid.md)|
 |[Changed](../properties/changed.md)|flags whether or not data in an object has been changed|
 |[CharFormat](../properties/charformat.md)|specifies character formatting in a [RichEdit](../objects/richedit.md)|
 |[CharSet](../properties/charset.md)|specifies the character encoding of a [Font](../objects/font.md) object|
@@ -51,7 +59,9 @@ search:
 |[ClassName](../properties/classname.md)|specifies the name of the OLE object to which an [OLEClient](../objects/oleclient.md) object is to be connected|
 |[ClipCells](../properties/clipcells.md)|specifies whether or not columns of a [Grid](../objects/grid.md) are clipped|
 |[CMap](../properties/cmap.md)|defines a colour map for a [Bitmap](../objects/bitmap.md) or [Icon](../objects/icon.md)|
+|[Collate](../properties/collate.md)|specifies whether or not multiple copies of printer output are collated|
 |[ColLineTypes](../properties/collinetypes.md)|specifies the appearance of vertical grid lines in a [Grid](../objects/grid.md)|
+|[ColorMode](../properties/colormode.md)|specifies whether or not printing is done in colour|
 |[ColSortImages](../properties/colsortimages.md)|specifies the images to be used to display sort images in the column titles of a [Grid](../objects/grid.md)|
 |[ColTitle3D](../properties/coltitle3d.md)|specifies the appearance of column titles for a [ListView](../objects/listview.md)|
 |[ColTitleAlign](../properties/coltitlealign.md)|specifies the alignment of column titles|
@@ -59,9 +69,10 @@ search:
 |[ColTitleDepth](../properties/coltitledepth.md)|specifies the structure of hierarchical column titles for a [Grid](../objects/grid.md)|
 |[ColTitleFCol](../properties/coltitlefcol.md)|specifies the colour of the row titles in a [Grid](../objects/grid.md)|
 |[ColTitles](../properties/coltitles.md)|specifies the column titles for a [Grid](../objects/grid.md) or [ListView](../objects/listview.md)|
-|[Column](../properties/columnwidth.md)|specifies the width of columns for a multi-column [List](../objects/list.md)|
+|[ColumnWidth](../properties/columnwidth.md)|specifies the width of columns for a multi-column [List](../objects/list.md)|
 |[Container](../properties/container.md)|the Object Representation of an [ActiveXContainer](../objects/activexcontainer.md) object|
 |[Coord](../properties/coord.md)|specifies the coordinate system for an object|
+|[Copies](../properties/copies.md)|specifies the number of copies to be printed|
 |[CornerTitleBCol](../properties/cornertitlebcol.md)|specifies the background colour of the corner rectanglein a [Grid](../objects/grid.md)|
 |[Cue](../properties/cue.md)|specifies text displayed in an empty input field|
 |[CurCell](../properties/curcell.md)|identifies the current cell in a [Grid](../objects/grid.md)|
@@ -69,20 +80,33 @@ search:
 |[CurrentState](../properties/currentstate.md)|reports the current state of a [TCPSocket](../objects/tcpsocket.md) object|
 |[CursorObj](../properties/cursorobj.md)|associates a cursor with an object|
 |[CustomColors](../properties/customcolors.md)|Specifies the custom colors associated with a [ColorButton](../objects/colorbutton.md) object|
+|[CustomFormat](../properties/customformat.md)|specifies a custom format for the date/time display in a [DateTimePicker](../objects/datetimepicker.md)|
+|[Data](../properties/data.md)|associates arbitrary data with an object|
+|[DateTime](../properties/datetime.md)|specifies the value of date/time in a [DateTimePicker](../objects/datetimepicker.md)|
+|[DblClickToggle](../properties/dblclicktoggle.md)|specifies whether the user single-clicks or double-clicks to toggle a child [CoolBand](../objects/coolband.md) between maximised and minimised|
 |[Decimals](../properties/decimals.md)|specifies the number of decimal places for a Numeric field|
 |[Default](../properties/default.md)|nominates a [Button](../objects/button.md) to be selected with the Enter key|
 |[DefaultColors](../properties/defaultcolors.md)|Specifies the default colours associated with a [ColorButton](../objects/colorbutton.md) object|
 |[Depth](../properties/depth.md)|specifies the structure of items for a [TreeView](../objects/treeview.md)|
 |[DevCaps](../properties/devcaps.md)|reports the device capabilities of the screen or printer|
 |[Directory](../properties/directory.md)|specifies the directory for a [FileBox](../objects/filebox.md)|
+|[Dirty](../properties/dirty.md)|indicates whether the current page is considered to have content ( [Printer](../objects/printer.md) )|
 |[Divider](../properties/divider.md)|controls the presence or absence of a recessed line in a ToolControl object|
+|[Dockable](../properties/dockable.md)|specifies whether or not an object may be docked or undocked|
+|[DockChildren](../properties/dockchildren.md)|specifies the names of client objects that may be docked in a host object|
+|[Docked](../properties/docked.md)|indicates whether or not an object is currently docked|
+|[DockShowCaption](../properties/dockshowcaption.md)|specifies whether or not a [Form](../objects/form.md) displays a title bar when it is docked as a [SubForm](../objects/subform.md)|
 |[Dragable](../properties/dragable.md)|specifies whether user may drag an object with the mouse|
 |[DragItems](../properties/dragitems.md)|specifies whether user may drag/drop items in a [ListView](../objects/listview.md)|
 |[DrawMode](../properties/drawmode.md)|provides direct control over the low-level drawing operation performed by graphical objects|
+|[Duplex](../properties/duplex.md)|specifies whether pages are printed on separate sheets or back-to-back|
 |[EdgeStyle](../properties/edgestyle.md)|specifies 3-dimensional appearance|
+|[EditImage](../properties/editimage.md)|specifies whether or not the edit control portion of a [ComboEx](../objects/comboex.md) displays an image for selected items|
+|[EditImageIndent](../properties/editimageindent.md)|specifies whether or not item indents are honoured in the edit control portion of a [ComboEx](../objects/comboex.md)|
 |[EditLabels](../properties/editlabels.md)|specifies whether or not the user may edit the labels in a [ListView](../objects/listview.md) or [TreeView](../objects/treeview.md)|
 |[Elevated](../properties/elevated.md)|affects the appearance of a CommandLink [Button](../objects/button.md)|
 |[Encoding](../properties/encoding.md)|specifies how character data are encoded or translated for a [TCPSocket](../objects/tcpsocket.md)|
+|[End](../properties/end.md)|specifies end angles for arcs of [Circle](../objects/circle.md) and [Ellipse](../objects/ellipse.md) objects|
 |[EnterReadOnlyCells](../properties/enterreadonlycells.md)|specifies whether or not the user may visit read-only cells in a [Grid](../objects/grid.md)|
 |[Event](../properties/event.md)|associates an event with a callback function or [`⎕DQ`](../../../language-reference-guide/system-functions/dq) termination|
 |[EventList](../properties/eventlist.md)|reports names of events generated by an object|
@@ -94,12 +118,14 @@ search:
 |[File](../properties/file.md)|specifies a filename|
 |[FillCol](../properties/fillcol.md)|specifies fill colour|
 |[Filters](../properties/filters.md)|specifies file filters for a [FileBox](../objects/filebox.md)|
+|[FireOnce](../properties/fireonce.md)|specifies one-off behaviour for a [Timer](../objects/timer.md) object|
 |[FirstDay](../properties/firstday.md)|specifies the day that is considered to be the first day of the week for a [Calendar](../objects/calendar.md) object|
 |[Fixed](../properties/fixed.md)|specifies whether a font is fixed-width or proportional|
 |[FixedOrder](../properties/fixedorder.md)|specifies whether or not the [CoolBar](../objects/coolbar.md) displays [CoolBands](../objects/coolband.md) in the same order|
 |[FlatSeparators](../properties/flatseparators.md)|specifies whether or not separators are drawn between buttons in a [TabControl](../objects/tabcontrol.md) object|
 |[FontList](../properties/fontlist.md)|provides a list of available fonts|
 |[FontObj](../properties/fontobj.md)|specifies the font to be used|
+|[ForceOnTaskbar](../properties/forceontaskbar.md)|applies to the [MsgBox](../objects/msgbox.md) object|
 |[Formats](../properties/formats.md)|data formats currently available from the [Clipboard](../objects/clipboard.md) object|
 |[FormatString](../properties/formatstring.md)|defines a `⎕FMT` specification to be used to format a numeric value|
 |[FStyle](../properties/fstyle.md)|specifies fill style|
@@ -107,14 +133,16 @@ search:
 |[GridBCol](../properties/gridbcol.md)|specifies the background colour for a [Grid](../objects/grid.md)|
 |[GridFCol](../properties/gridfcol.md)|specifies the colour of (all) grid lines for a [Grid](../objects/grid.md)|
 |[GridLineFCol](../properties/gridlinefcol.md)|specifies grid line colours for a [Grid](../objects/grid.md)|
-|[GridLine](../properties/gridlinewidth.md)|specifies grid line widths for a [Grid](../objects/grid.md)|
+|[GridLineWidth](../properties/gridlinewidth.md)|specifies grid line widths for a [Grid](../objects/grid.md)|
 |[GridLines](../properties/gridlines.md)|specifies whether or not lines are displayed between items in a [ListView](../objects/listview.md) object|
 |[GripperMode](../properties/grippermode.md)|specifies whether or not a [CoolBand](../objects/coolband.md) has a gripper bar|
 |[HAlign](../properties/halign.md)|specifies horizontal text alignment|
 |[Handle](../properties/handle.md)|Returns the window handle of an object|
 |[HasApply](../properties/hasapply.md)|Specifies whether or not a [PropertySheet](../objects/propertysheet.md) has an Apply button|
 |[HasButtons](../properties/hasbuttons.md)|Specifies whether or not a [TreeView](../objects/treeview.md) object displays buttons|
+|[HasCheckBox](../properties/hascheckbox.md)|specifies whether or not a checkbox is displayed alongside the value in a [DateTimePicker](../objects/datetimepicker.md)|
 |[HasClearButton](../properties/hasclearbutton.md)|Specifies whether or not an [Edit](../objects/edit.md) object displays an ![](../img/clearbutton.png) button which may be used to clear the contents of the field.|
+|[HasEdit](../properties/hasedit.md)|specifies whether or not a [BrowseBox](../objects/browsebox.md) has an edit field|
 |[HasHelp](../properties/hashelp.md)|Specifies whether or not a Help button is displayed or active|
 |[HasLines](../properties/haslines.md)|Specifies whether or not a [TreeView](../objects/treeview.md) object displays tree lines|
 |[HasTicks](../properties/hasticks.md)|Specifies whether or not tick marks are displayed in a [TrackBar](../objects/trackbar.md)|
@@ -135,13 +163,16 @@ search:
 |[ImageCount](../properties/imagecount.md)|Reports the number of images in an [ImageList](../objects/imagelist.md)|
 |[ImageIndex](../properties/imageindex.md)|Maps images in an [ImageList](../objects/imagelist.md) to items in a [ListView](../objects/listview.md) or [TreeView](../objects/treeview.md)|
 |[ImageListObj](../properties/imagelistobj.md)|Associates an [ImageList](../objects/imagelist.md) with a [ListView](../objects/listview.md) or [TreeView](../objects/treeview.md)|
+|[Indents](../properties/indents.md)|specifies the amount by which items in a [ComboEx](../objects/comboex.md) object are indented|
 |[Index](../properties/index-property.md)|position of items in [Combo](../objects/combo.md) or [List](../objects/list.md) ,       or selected filter in a [FileBox](../objects/filebox.md)|
 |[Input](../properties/input.md)|names of objects associated with cells of [Grid](../objects/grid.md)|
 |[InputMode](../properties/inputmode.md)|specifies the behaviour of cursor keys etc. in a [Grid](../objects/grid.md)|
 |[InputModeKey](../properties/inputmodekey.md)|specifies the key used to switch to Incell editing in a [Grid](../objects/grid.md)|
 |[InputProperties](../properties/inputproperties.md)|Specifies the mapping between the Values property of a [Grid](../objects/grid.md) and properties of external objects (ActiveX controls and .NET classes) which are displayed in [Grid](../objects/grid.md) cells|
+|[InstanceMode](../properties/instancemode.md)|specifies how APL attempts to connect an [OLEClient](../objects/oleclient.md) to an OLE Server|
 |[InterceptedURLs](../properties/interceptedurls.md)|specifies whether an [HTMLRenderer](../objects/htmlrenderer.md) will trigger an [HTTPRequest](../methodorevents/httprequest.md) event for the requested URL or will attempt to satisfy the request from the internet|
 |[Interval](../properties/interval.md)|frequency with which a [Timer](../objects/timer.md) generates events|
+|[IsLoading](../properties/isloading.md)|reports whether the [HTMLRenderer](../objects/htmlrenderer.md) browser is currently loading|
 |[Italic](../properties/italic.md)|specifies whether or not a font is italic|
 |[Items](../properties/items.md)|list of items|
 |[ItemGroups](../properties/itemgroups.md)|specifies item groupings for a [ListView](../objects/listview.md) object|
@@ -151,6 +182,7 @@ search:
 |[KeepOnClose](../properties/keeponclose.md)|determines whether or not namespaces are retained when their GUI components are destroyed|
 |[LastError](../properties/lasterror.md)|provides information about the most recent error reported by OLE|
 |[LateBind](../properties/latebind.md)|specifies whether or not Type Information is read when an [OLEClient](../objects/oleclient.md) is instantiated, and when an [OLEServer](../objects/oleserver.md) hosts an external COM object|
+|[LicenseKey](../properties/licensekey.md)|contains the licence key for an ActiveX control|
 |[Limits](../properties/limits.md)|specifies minimum and maximum values for an object|
 |[LocalAddrName](../properties/localaddrname.md)|specifies the host name of your computer|
 |[LocalAddr](../properties/localaddr.md)|specifies the IP address of your computer|
@@ -160,6 +192,7 @@ search:
 |[LStyle](../properties/lstyle.md)|specifies line style|
 |[LWidth](../properties/lwidth.md)|specifies line width|
 |[MapCols](../properties/mapcols.md)|specifies whether button colours in bitmaps and icons in an [ImageList](../objects/imagelist.md) are re-mapped to reflect the users colour preferences|
+|[MaskCol](../properties/maskcol.md)|specifies the transparent colour for a [Bitmap](../objects/bitmap.md) or [Form](../objects/form.md)|
 |[Masked](../properties/masked.md)|specifies the type of image in an [ImageList](../objects/imagelist.md)|
 |[Mask](../properties/mask.md)|specifies the mask for a [Cursor](../objects/cursor.md) or [Icon](../objects/icon.md)|
 |[MaxButton](../properties/maxbutton.md)|determines whether or not a [Form](../objects/form.md) has a "maximize" button|
@@ -169,7 +202,7 @@ search:
 |[MDIActive](../properties/mdiactive.md)|specifies the name of the active [SubForm](../objects/subform.md) in an MDI application|
 |[MDIActiveObject](../properties/mdiactiveobject.md)|specifies a ref to the active [SubForm](../objects/subform.md) in an MDI application|
 |[MDIMenu](../properties/mdimenu.md)|nominates a particular [Menu](../objects/menu.md) to be the MDI application menu|
-|[Metafile](../properties/metafileobj.md)|accesses clipboard data in Windows [Metafile](../objects/metafile.md) format|
+|[MetafileObj](../properties/metafileobj.md)|accesses clipboard data in Windows [Metafile](../objects/metafile.md) format|
 |[MethodList](../properties/methodlist.md)|reports the names of methods provided by an OLE Control|
 |[MinButton](../properties/minbutton.md)|determines whether a [Form](../objects/form.md) has a "minimize" button|
 |[MinDate](../properties/mindate.md)|Specifies the smallest date that may be displayed by a [Calendar](../objects/calendar.md) object|
@@ -181,26 +214,35 @@ search:
 |[NewLine](../properties/newline.md)|specifies whether or not a [CoolBand](../objects/coolband.md) starts a new row in a [CoolBar](../objects/coolbar.md)|
 |[Note](../properties/note.md)|specifies additional text for a CommandLink [Button](../objects/button.md)|
 |[OLEControls](../properties/olecontrols.md)|reports the names of OLE Controls installed on the computer|
+|[OLEServers](../properties/oleservers.md)|reports the names and CLSIDs of all the OLE Automation servers installed on your computer|
 |[OnTop](../properties/ontop.md)|specifies that a [Form](../objects/form.md) is permanently raised to the front or specifies the level at which a graphic is drawn on a [Grid](../objects/grid.md)|
 |[Orientation](../properties/orientation.md)|specifies the orientation of the [Printer](../objects/printer.md)|
 |[OtherButton](../properties/otherbutton.md)|Specifies whether or not a [ColorButton](../objects/colorbutton.md) object displays an *Other* button, that allows access to custom colours|
 |[OverflowChar](../properties/overflowchar.md)|specifies the character to be displayed in a [Grid](../objects/grid.md) cell to indicate that its contents will not fit|
-|[Page](../properties/pagewidth.md)|specifies the width of the paper for a [RichEdit](../objects/richedit.md)|
+|[PagesBeginDirty](../properties/pagesbegindirty.md)|indicates whether a new page of a document will be printed even if it has no content|
+|[PageWidth](../properties/pagewidth.md)|specifies the width of the paper for a [RichEdit](../objects/richedit.md)|
 |[PageActive](../properties/pageactive.md)|specifies the name of the current [PropertyPage](../objects/propertypage.md) in a [PropertySheet](../objects/propertysheet.md)|
 |[PageActiveObject](../properties/pageactiveobject.md)|specifies a ref to the current [PropertyPage](../objects/propertypage.md) in a [PropertySheet](../objects/propertysheet.md)|
 |[PageSize](../properties/pagesize.md)|specifies the size of the thumb in a scrollbar|
+|[PaperSize](../properties/papersize.md)|specifies the size of paper to be used for printing|
+|[PaperSizes](../properties/papersizes.md)|reports the names and dimensions of the paper sizes supported by the printer|
+|[PaperSource](../properties/papersource.md)|specifies the name of the paper bin to be used as the paper source for printing|
+|[PaperSources](../properties/papersources.md)|reports the names of the paper bins installed on the printer|
 |[ParaFormat](../properties/paraformat.md)|specifies paragraph formatting for a [RichEdit](../objects/richedit.md)|
 |[Password](../properties/password.md)|specifies the symbol for a password field|
+|[PathWordBreak](../properties/pathwordbreak.md)|specifies whether the edit control portion of a [ComboEx](../objects/comboex.md) treats slashes and periods as word delimiters|
 |[Picture](../properties/picture.md)|specifies a Bitmap, [Icon](../objects/icon.md) or [Metafile](../objects/metafile.md) object to be drawn|
 |[PName](../properties/pname.md)|specifies the device for a [Printer](../objects/printer.md) object, or the face name for a [Font](../objects/font.md)|
 |[Points](../properties/points.md)|specifies points for graphical objects|
 |[Popup](../properties/popup.md)|specifies the name of a (popup) [Menu](../objects/menu.md) object that is associated with a [ToolButton](../objects/toolbutton.md)|
 |[Posn](../properties/posn.md)|specifies the position of an object within its parent|
 |[PrintList](../properties/printlist.md)|reports the list of installed printers|
+|[PrintRange](../properties/printrange.md)|specifies the range of pages to be printed|
 |[ProgressStyle](../properties/progressstyle.md)|specifies the appearance of a [ProgressBar](../objects/progressbar.md) control|
 |[PropList](../properties/proplist.md)|reports the list of properties applicable to the object|
 |[QueueEvents](../properties/queueevents.md)|specifies how events are handled for an instance of an OCXClass object (an ActiveX control)|
 |[Radius](../properties/radius.md)|specifies the radius for a [Circle](../objects/circle.md)|
+|[RadiusMode](../properties/radiusmode.md)|specifies whether or not a circle is adjusted by a single pixel so as to appear perfectly round|
 |[Range](../properties/range.md)|specifies the range of a scrollbar|
 |[ReadOnly](../properties/readonly.md)|specifies whether or not the user may change data in an [Edit](../objects/edit.md) or [Spinner](../objects/spinner.md) , or the [State](../properties/state.md) of a [Button](../objects/button.md)|
 |[RealSize](../properties/realsize.md)|specifies the size of a placeable [Metafile](../objects/metafile.md)|
@@ -216,6 +258,8 @@ search:
 |[ResizeColTitles](../properties/resizecoltitles.md)|specifies whether or not the user may alter the height of the column titles in a [Grid](../objects/grid.md) by dragging|
 |[ResizeRows](../properties/resizerows.md)|specifies whether or not the user may alter the height of rows in a [Grid](../objects/grid.md) by dragging|
 |[ResizeRowTitles](../properties/resizerowtitles.md)|specifies whether or not the user may alter the width of the row titles in a [Grid](../objects/grid.md) by dragging|
+|[Resolution](../properties/resolution.md)|determines the print resolution|
+|[Resolutions](../properties/resolutions.md)|reports the available printer resolutions|
 |[Rotate](../properties/rotate.md)|specifies the angle of rotation for a font|
 |[RowHiddenDepth](../properties/rowhiddendepth.md)|identifies which rows in a [Grid](../objects/grid.md) are hidden|
 |[RowLineTypes](../properties/rowlinetypes.md)|specifies the appearance of horizontal grid lines in a [Grid](../objects/grid.md)|
@@ -255,6 +299,7 @@ search:
 |[SplitObj1](../properties/splitobj1.md)|specifies the name of an object managed by a [Splitter](../objects/splitter.md)|
 |[SplitObj2](../properties/splitobj2.md)|specifies the name of an object managed by a [Splitter](../objects/splitter.md)|
 |[Start](../properties/start.md)|specifies start angles for arcs of [Circle](../objects/circle.md) and [Ellipse](../objects/ellipse.md) objects|
+|[StartIn](../properties/startin.md)|specifies the start point and root for a [BrowseBox](../objects/browsebox.md) object|
 |[State](../properties/state.md)|specifies the state of a [Button](../objects/button.md) or [Form](../objects/form.md)|
 |[Step](../properties/step.md)|increments for movement|
 |[Style](../properties/style.md)|specifies the style of an object|
@@ -264,6 +309,7 @@ search:
 |[TabJustify](../properties/tabjustify.md)|Specifies the positions at which the picture and caption are drawn within a TabButton|
 |[TabObj](../properties/tabobj.md)|specifies name of [SubForm](../objects/subform.md) associated with a [TabBtn](../objects/tabbtn.md)|
 |[TabSize](../properties/tabsize.md)|specifies the size of fixed size tabs or buttons in a [TabControl](../objects/tabcontrol.md) object|
+|[Target](../properties/target.md)|reports the folder or other resource selected by the user in a [BrowseBox](../objects/browsebox.md) object|
 |[TargetState](../properties/targetstate.md)|reports the intended final state of a [TCPSocket](../objects/tcpsocket.md) object|
 |[Text](../properties/text.md)|specifies/reports the text in an [Edit](../objects/edit.md) , [MsgBox](../objects/msgbox.md) ,       or [Combo](../objects/combo.md)|
 |[TextSize](../properties/textsize.md)|reports the bounding rectangle for text|
@@ -274,7 +320,7 @@ search:
 |[TipObj](../properties/tipobj.md)|specifies the object in which to display the [Tip](../properties/tip.md)|
 |[Tip](../properties/tip.md)|specifies the text for a pop-up help message|
 |[TitleHeight](../properties/titleheight.md)|specifies the height of the column titles in a [Grid](../objects/grid.md)|
-|[Title](../properties/titlewidth.md)|specifies the width of the row titles in a [Grid](../objects/grid.md)|
+|[TitleWidth](../properties/titlewidth.md)|specifies the width of the row titles in a [Grid](../objects/grid.md)|
 |[Today](../properties/today.md)|specifies today's date in a [Calendar](../objects/calendar.md) object|
 |[ToolboxBitmap](../properties/toolboxbitmap.md)|reports the bitmap image associated with an OLE Control|
 |[TrackRect](../properties/trackrect.md)|reports the extents of the slider in a [TrackBar](../objects/trackbar.md)|
@@ -285,6 +331,7 @@ search:
 |[TypeList](../properties/typelist.md)|reports the names of data types associated with an OLE Control|
 |[Type](../properties/type.md)|specifies the type of an object|
 |[Underline](../properties/underline.md)|specifies whether or not a font is underlined|
+|[UndocksToRoot](../properties/undockstoroot.md)|specifies the parent adopted by an object when it undocks and its Type changes to a Form|
 |[URL](../properties/url.md)|specifies the "root" url of the server component of the [HTMLRenderer](../objects/htmlrenderer.md) object for internal processing, or it specifies an external URL to be retrieved via the internet|
 |[ValidIfEmpty](../properties/validifempty.md)|specifies whether or not an empty [Edit](../objects/edit.md) object is deemed to be valid|
 |[VAlign](../properties/valign.md)|specifies vertical text alignment|
