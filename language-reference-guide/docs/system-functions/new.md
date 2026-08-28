@@ -13,7 +13,7 @@ The second item, if specified, contains the argument to be supplied to the Class
 
 The result `R` is a reference to a new instance of Class, Dyalog GUI object, or Type `Y`.
 
-For further information, see *Interface Guide*.
+For further information, see [Creating Objects using `⎕NEW`](../../../interface-guide/introduction/creating-objects-using-new).
 
 ## Class Example
 ```apl

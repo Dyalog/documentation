@@ -47,11 +47,11 @@ Enabling journaling on a component file will reduce performance of file updates;
 
 Journaling levels 2 and 3 cannot be set unless the checksum option is also enabled.
 
-The default level of journaling may be changed using the **APL_FCREATE_PROPS_J** parameter (see *Dyalog for Microsoft Windows Installation and Configuration Guide: Configuration Parameters* for more information).
+The default level of journaling may be changed using the [**APL_FCREATE_PROPS_J**](../../../windows-installation-and-configuration-guide/configuration-parameters/apl-fcreate-props-j) parameter.
 
 ## Checksum Option
 
-The checksum option is enabled by default. This  enables a damaged file to be repaired using `⎕FCHK`. It will however  reduce the performance of file updates slightly and result in larger component files. The default may be changed using the **APL_FCREATE_PROPS_C** parameter (See User Guide).
+The checksum option is enabled by default. This  enables a damaged file to be repaired using `⎕FCHK`. It will however  reduce the performance of file updates slightly and result in larger component files. The default may be changed using the [**APL_FCREATE_PROPS_C**](../../../windows-installation-and-configuration-guide/configuration-parameters/apl-fcreate-props-c) parameter.
 
 Enabling the checksum option on an existing non-empty component file will result in all previously written components without a checksum  being check-summed and converted. This operation which will take place when `⎕FPROPS` is changed, may not therefore be instantaneous.
 

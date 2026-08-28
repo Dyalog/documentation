@@ -1,6 +1,6 @@
 # Creating .NET Classes within APL Source Files
 
-New .NET classes can be defined and used within an APL source file. This chapter provides a brief introduction to writing classes, aimed specifically at APL source files – see the _Dyalog APL Language Reference Guide_ for more information on writing classes in Dyalog.
+New .NET classes can be defined and used within an APL source file. This chapter provides a brief introduction to writing classes, aimed specifically at APL source files – see the [_Dyalog APL Programming Reference Guide_](../../../programming-reference-guide/object-oriented-programming/introducing-classes/introducing-classes/) for more information on writing classes in Dyalog.
 
 A class is defined by `:Class` and `:EndClass` statements:
 

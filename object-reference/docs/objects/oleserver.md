@@ -6,9 +6,8 @@ The OLEServer object allows you to export an APL namespace so that its
 functions and variables become directly accessible to an OLE Automation client
 application such as Microsoft Visual Basic or Microsoft Excel.
 
-An OLEServer may be saved as an *out-of-process* OLE server (in a
-workspace) or as an *in-process* OLE server (in a DLL). See *Interface
-Guide* for details.
+An OLEServer may be saved as an [*out-of-process* OLE server](../../../interface-guide/ole-server/out-of-process-ole-servers) (in a
+workspace) or as an [*in-process* OLE server](../../../interface-guide/ole-server/in-process-ole-servers) (in a DLL).
 
 When you create an OLEServer object, APL allocates various OLE attributes to
 it. For example, the CLSID, which uniquely identifies the object, is assigned at

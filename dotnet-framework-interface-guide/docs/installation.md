@@ -54,7 +54,7 @@ The components used to support the .NET interface are:
 
 Different versions of each component are supplied  according to the target platform.
 
-For a list of the files associated with each of these components, see the _Dyalog for Microsoft Windows Installation and Configuration Guide_.
+For a [list of the files associated with each of these components](../../windows-installation-and-configuration-guide/files-and-directories/#files), see the _Dyalog for Microsoft Windows Installation and Configuration Guide_.
 
 The **[DYALOG]/Samples** directory contains several sub-directories relating to the .NET interface:
 
@@ -71,7 +71,7 @@ The .NET Framework interface is enabled when the DYALOG_NETCORE configuration pa
 !!! Info "Information"
     The .NET Framework interface and .NET interface cannot be enabled simultaneously.
 
-For information on how to set configuration parameters, see the _Dyalog for Microsoft Windows Installation and Configuration Guide_. To check the value of DYALOG_NETCORE, enter the following  when in a Session:
+For information on how to set [configuration parameters](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters/), see the _Dyalog for Microsoft Windows Installation and Configuration Guide_. To check the value of DYALOG_NETCORE, enter the following  when in a Session:
 ```apl
 +2⎕NQ'.' 'GetEnvironment' 'DYALOG_NETCORE'
 ```

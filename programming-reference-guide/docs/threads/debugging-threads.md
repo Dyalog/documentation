@@ -1,8 +1,8 @@
 # Debugging Threads
 
-If a thread sustains an untrapped error, its execution is *suspended* in the normal way. If the *Pause on Error* option  is set, all other threads are *paused*. If *Pause on Error* option  is not set, other threads will continue running and it is possible for another thread to encounter an error and suspend (see the *Dyalog for Microsoft Windows Installation and Configuration Guide*).
+If a thread sustains an untrapped error, its execution is *suspended* in the normal way. If the [*Pause on Error*](../../../windows-ui-guide/session-menubar#the-threads-menu) option  is set, all other threads are *paused*. If *Pause on Error* option  is not set, other threads will continue running and it is possible for another thread to encounter an error and suspend.
 
-Using the facilities provided by the Tracer and the Threads Tool (see the *Dyalog for Microsoft Windows UI Guide*) it is possible to interrupt (suspend) and restart individual threads, and to pause and resume individual threads, so any thread may be in one of three states - *running*, *suspended* or *paused*.
+Using the facilities provided by the [Tracer](../../../windows-ui-guide/tracer) and the [Threads Tool](../../../windows-ui-guide/threads-tool) it is possible to interrupt (suspend) and restart individual threads, and to pause and resume individual threads, so any thread may be in one of three states - *running*, *suspended* or *paused*.
 
 The Tracer and the Session may be connected with any suspended thread and you can switch the attention of the Session and the Tracer between suspended threads using `)TID` or by clicking on the appropriate tab in the Tracer. At this point, you may:
 

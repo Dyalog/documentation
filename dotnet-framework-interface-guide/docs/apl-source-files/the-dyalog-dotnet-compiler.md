@@ -13,7 +13,7 @@ This program is called automatically by ASP.NET when a client application reques
 
 - compile an APL source file into a workspace (**.dws**) – this can sunsequently be run using **dyalog.exe** or **dyalogrt.exe**.
 - compile an APL source file into a .NET class (**.dll**) – this can subsequently be used by any other .NET-compatible host language, such as C# or Visual Basic.
-- compile an APL source file into a native Microsoft Windows executable program (**.exe**), which can be run as a stand-alone executable. This program can be distributed (along with the Dyalog APL runtime DLL) as a packaged application, and does not require any of the additional support files and registry entries that are typically needed by the Dyalog run-time **dyalogrt.exe**. For more information, see the _Dyalog for Microsoft Windows Installation and Configuration Guide_.
+- compile an APL source file into a native Microsoft Windows executable program (**.exe**), which can be [run as a stand-alone executable](../../../windows-installation-and-configuration-guide/runtime-applications-and-components/#stand-alone-and-bound-run-times). This program can be distributed (along with the Dyalog APL runtime DLL) as a packaged application, and does not require any of the additional support files and registry entries that are typically needed by the Dyalog run-time **dyalogrt.exe**. For more information, see the _Dyalog for Microsoft Windows Installation and Configuration Guide_.
     
 	!!! Info "Information"
         The Dyalog APL dynamic link library does not use MAXWS, but instead allocates workspace dynamically as required.

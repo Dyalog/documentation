@@ -26,7 +26,7 @@ Data can be scrolled in a window using the mouse in conjunction with the scrollb
 
 ## Invoking the Editor
 
-The Editor can be invoked by placing the mouse pointer over the name of an editable object and double-clicking the left button on the mouse. If you double-click on the empty Input Line it acts as "Naked Edit" and opens an edit window for the suspended function (if any) on the APL stack. For further details, see [Invoking the Editor](editor.md). See also "Installation and Configuration Guide: DoubleClickEdit".
+The Editor can be invoked by placing the mouse pointer over the name of an editable object and double-clicking the left button on the mouse. If you double-click on the empty Input Line it acts as "Naked Edit" and opens an edit window for the suspended function (if any) on the APL stack. For further details, see [Invoking the Editor](editor.md). See also the [DoubleClickEdit](../../windows-installation-and-configuration-guide/configuration-parameters/doubleclickedit) configuration parameter.
 
 ## The Current Object
 
