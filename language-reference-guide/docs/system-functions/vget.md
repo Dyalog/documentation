@@ -169,6 +169,8 @@ See [Case 1: Name Matrix](#case-1-name-matrix) for an example of multiple names 
 
 `Y` must be a numeric scalar or vector, where each item is a nameclass (see [Name Classification](nc.md)).
 
+Only the nameclasses that identify names able to hold a value are valid: `1` (Label), `2` (Variable), `8` (Event), and `9` (Object). Their sub-classes (such as `2.2`, a Field) and the negatives of all of these are equally valid.
+
 If any of the numbers in `Y` are negative, the result `R` is a vector of name-value pairs, one for each existing name in the source namespace with a nameclass from `Y`. Otherwise, `R` is a 2-element nested vector, where the first element is a character matrix of names and the second element is a vector of values. In both cases, `R` is suitable as an argument for [`⎕VGET`](vget.md) and [`⎕VSET`](vset.md).
 
 [`⎕NC`](nc.md) always reports the names of fields in a class as having nameclass `2` (`2.2` with the sub-class), even when the name has no value (might expect `0`) or the field is a namespace reference (might expect `9`). [`⎕VGET`](vget.md) with a right argument of `2` will only include fields that have values that are not references, while a right argument of `9` will include fields that are references. With a right argument of `2.2`, [`⎕VGET`](vget.md) will return all fields that are not undefined.
