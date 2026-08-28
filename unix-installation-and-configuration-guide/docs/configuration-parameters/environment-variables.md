@@ -1,13 +1,13 @@
 # Environment Variables
 
-Environment variables are used to configure various aspects of Dyalog APL. The complete list appears in the *Dyalog for Microsoft Windows Installation and Configuration Guide: Configuration Parameters*; this section discusses those variables which are of particular importance to the Non-GUI versions of Dyalog APL, and lists those that have meaning to the UNIX versions. Additionally there some non-GUI-specific variables which are described below and some which either do not apply, or may not work as the user might at first expect.
+Environment variables are used to configure various aspects of Dyalog APL. The [complete list](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters) appears in the *Dyalog for Microsoft Windows Installation and Configuration Guide*; this section discusses those variables which are of particular importance to the Non-GUI versions of Dyalog APL, and lists those that have meaning to the UNIX versions. Additionally there some non-GUI-specific variables which are described below and some which either do not apply, or may not work as the user might at first expect.
 
 Under UNIX, all environment variables should appear in UPPER CASE. For example, to set the default value of `⎕ML` to 3, then
 ```
 $ export DEFAULT_ML=3
 ```
 
-If a configuration parameter described in the *Dyalog for Microsoft Windows Installation and Configuration Guide* has a backslash "\" in its name (strictly speaking, appears in a subkey of the Dyalog key in the Windows Registry), this should be replaced with an underscore in the equivalent environment variable. This applies for example to SALT\CommandFolder.
+If a [configuration parameter](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters) described in the *Dyalog for Microsoft Windows Installation and Configuration Guide* has a backslash "\" in its name (strictly speaking, appears in a subkey of the Dyalog key in the Windows Registry), this should be replaced with an underscore in the equivalent environment variable. This applies for example to SALT\CommandFolder.
 
 Many of these environment variables are set in the mapl script; their values are either appropriate for the installation location of Dyalog APL, or are set to define reasonable default values.
 
@@ -98,7 +98,7 @@ Table: Miscellaneous Variables used by non-GUI Dyalog APL
 |`DYALOG_EXTVAR_SUPPORTED`|This parameter is a Boolean value with a default value of `0`. If set to `1`, support for external variables is reinstated.|
 |`DYALOG_SHELL_SUBPROCESS`|On AIX, if `DYALOG_SHELL_SUBPROCESS` is `1` (the default on AIX), the interpreter starts a (small) child process that handles calls to `⎕SHELL`.|
 
-These are the remaining variables listed in the *Dyalog for Microsoft Windows Installation and Configuration Guide* which are effective in the non-GUI UNIX versions of Dyalog APL
+These are the [remaining variables listed](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters) in the *Dyalog for Microsoft Windows Installation and Configuration Guide* which are effective in the non-GUI UNIX versions of Dyalog APL
 
 Table: Editor-related environment variables
 

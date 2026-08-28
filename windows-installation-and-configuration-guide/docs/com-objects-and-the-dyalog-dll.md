@@ -6,7 +6,7 @@ Each different implementation of Dyalog contains two versions of the Dyalog APL 
 
 In the remainder of this section, the term *Dyalog APL DLL* is used to refer to any one of these DLLs. The term *COM object* is used to refer to a Dyalog APL in-process OLE Server (OLEServer object) or a Dyalog APL ActiveX Control (ActiveXControl object).
 
-The Dyalog APL DLL is used to host COM objects and .NET objects written in Dyalog APL. Although this section describes how it operates with COM objects, much of this also applies when it hosts .NET objects. Further information is provided in the *.NET Interface Guide*.
+The Dyalog APL DLL is used to host COM objects and [.NET objects written in Dyalog APL](../../net-interface-guide/writing-dotnet-classes/assemblies-namespaces-and-classes). Although this section describes how it operates with COM objects, much of this also applies when it hosts .NET objects.
 
 ## Classes, Instances and Namespace Cloning
 

@@ -5,7 +5,7 @@ search:
 
 # <span>Shared Variable Offer</span> `R←X ⎕SVO Y`{{key}}
 
-This system function offers to share one or more variables with another APL workspace or with another application.  Shared variables are implemented using Dynamic Data Exchange (**DDE**) and may be used to communicate with any other application that supports this protocol.  See *Interface Guide* for further details.
+This system function offers to share one or more variables with another APL workspace or with another application.  Shared variables are implemented using [Dynamic Data Exchange (**DDE**)](../../../interface-guide/dde/introduction) and may be used to communicate with any other application that supports this protocol.
 
 `Y` is a character scalar, vector or matrix.  If it is a vector it contains a name and optionally an external name or surrogate.  The first name is the name used internally in the current workspace.  The external name is the name used to make the connection with the partner and, if specified, must be separated from the internal name by one or more blanks.  If the partner is another application, the external name corresponds to the DDE **item** specified by that application.  If the external name is omitted, the internal name is used instead.  The internal name must be a valid APL name and be either undefined or be the name of a variable.  There are no such restrictions on the content of the external name.
 

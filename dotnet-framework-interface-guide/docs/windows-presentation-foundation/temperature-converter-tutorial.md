@@ -1,6 +1,6 @@
 # Temperature Converter Tutorial
 
-This tutorial illustrates how to develop a simple WPF application in Dyalog. It is functionally identical to the GUI tutorial example that illustrates how to develop a GUI application using the built-in Dyalog APL Graphical User Interface provided in the _Dyalog for Microsoft Windows Interface Guide_.
+This tutorial illustrates how to develop a simple WPF application in Dyalog. It is functionally identical to the [GUI tutorial example](../../../interface-guide/gui-tutorial/introduction/) that illustrates how to develop a GUI application using the built-in Dyalog APL Graphical User Interface provided in the _Dyalog for Microsoft Windows Interface Guide_.
 
 The example is a simple Temperature Converter – a user can enter a temperature value in either Fahrenheit or Centigrade and have it converted to the other scale. This is an elementary example, but illustrates the principles that are involved. The example code is included in the **[DYALOG]\ws\wpfintro.dws** workspace.
 
@@ -296,7 +296,7 @@ Finally the code displays the Window and hands it over to the user by calling th
 
 ### The Callback Functions
 
-The callback functions are given the same names in this example as they are in the basic GUI tutorial in the _Dyalog for Microsoft Windows Interface Guide_, and are remarkably similar.
+The callback functions are given the same names in this example as they are in the [basic GUI tutorial](../../../interface-guide/gui-tutorial/introduction/) in the _Dyalog for Microsoft Windows Interface Guide_, and are remarkably similar.
 
 Callback function `f2c`, which is attached to the `Click` event of the `btnF2C` button (labelled **F>C**), reads the character string in the `txtFahrenheit` <code class="language-nonAPL">TextBox</code>, converts it to a number using `Text2Num`, calculates the equivalent temperature in Centigrade, then displays the result in the ``txtCentigrade`` <code class="language-nonAPL">TextBox</code>:
 ```apl

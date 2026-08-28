@@ -28,7 +28,7 @@ If the type is `⋄` and the name is either undefined or of an array, the Editor
 The resulting array can be of any type or structure.
 
 The first object named becomes the top window on the stack.
-See the *Dyalog for Microsoft Windows UI Guide* or the *Dyalog for UNIX UI Guide* for details.
+For details, see the Editor descriptions for [Windows](../../../windows-ui-guide/editor) and [UNIX](../../../unix-user-guide/configuring-the-editor).
 
 <h2 class="example">Examples</h2>
 ```apl

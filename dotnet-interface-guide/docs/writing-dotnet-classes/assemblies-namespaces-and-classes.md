@@ -28,7 +28,7 @@ When a Dyalog .NET class is invoked by a host application, it automatically load
 
 ## The Bind Method
 
-The `Bind` method is described in the _Dyalog for Microsoft Windows Object Reference Guide_. A subset of the `Bind` method can be used on any supported platform to export .NET assemblies. Specifically, the expression:
+The [`Bind` method](../../../object-reference/methodorevents/bind) is described in the _Dyalog for Microsoft Windows Object Reference Guide_. A subset of the `Bind` method can be used on any supported platform to export .NET assemblies. Specifically, the expression:
 ```apl
       2 ⎕NQ '.' 'Bind' <filename> 'Library'
 ```

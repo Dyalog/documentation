@@ -9,7 +9,7 @@ search:
 !!! note
     **Windows only**
 
-Under Windows, the Session Caption displays information such as the name of the current workspace. The contents of the Caption can be modified: see *Window Captions* in the *Installation and Configuration Guide* for more details.
+Under Windows, the Session Caption displays information such as the name of the current workspace. The contents of the Caption can be modified as described under [Window Captions](../../../../windows-installation-and-configuration-guide/window-captions).
 
 However, the Caption is updated only at the six-space prompt; calling `⎕LOAD` for example from within a function will not result in the Caption being updated at the end of the `⎕LOAD`.
 

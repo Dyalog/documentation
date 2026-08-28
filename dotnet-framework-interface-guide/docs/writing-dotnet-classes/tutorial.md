@@ -18,7 +18,7 @@ First, copy the requisite Dyalog DLLs to the **bin\Debug** sub-directory. These 
 - Bridge DLL
 - DyalogNet DLL
 
-For the names of these files corresponding to the version of Dyalog that you are using, see the _Dyalog for Microsoft Windows Installation and Configuration Guide_.
+For the [names of these files](../../../windows-installation-and-configuration-guide/files-and-directories/#files) corresponding to the version of Dyalog that you are using, see the _Dyalog for Microsoft Windows Installation and Configuration Guide_.
 
 If you are running the 64-bit version of Dyalog, you must ensure that the **Platform target** is set to x64 in VS. To do this, select **Project** > **DyApp Properties**, go to the **Build** section, choose _x64_ from the **Platform target** drop-down list, and **Save** your changes.
 

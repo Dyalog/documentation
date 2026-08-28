@@ -67,7 +67,7 @@ The image above shows the  data type of the result of the method, followed by th
 1
 ```
 
-Many of the reported objects are listed as _Private_, which means that they are inaccessible to users of the class and cannot be called or have their value inspected. For more information about classes, see the _Dyalog APL Language Reference Guide_.
+Many of the reported objects are listed as _Private_, which means that they are inaccessible to users of the class and cannot be called or have their value inspected. For more information about [classes](../../../programming-reference-guide/object-oriented-programming/introducing-classes/introducing-classes/), see the _Dyalog APL Programming Reference Guide_.
 
 ## Value Tips for External Functions
 

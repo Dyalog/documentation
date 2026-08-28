@@ -308,12 +308,12 @@ When you position the caret over a name, control word, or simple text or to the 
 When you press the <AC> key, or select *Align Comments* in the Editor's context menu, the alignment of the comments in every line in the function will be changed so that the left-most comment (Lamp) symbol is in the same column as the cursor, except that:
 
 - Comment symbols that are preceded only by white space, that is, comments in lines that contain no code, are ignored and are not adjusted in any way.
-- Comment symbols that lie between the first column and the first tab stop will remain in or be moved to the first column. For information on setting tab stops, see _Dyalog for Microsoft Windows Installation and Configuration Reference Guide_: [Configuration Dialog (Edit/Trace Tab)](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab).
+- Comment symbols that lie between the first column and the first tab stop will remain in or be moved to the first column. For information on setting tab stops, see the [Configuration Dialog (Edit/Trace Tab)](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab) in the _Dyalog for Microsoft Windows Installation and Configuration Guide_.
 - Comment symbols will not move further left than the end of the statement.
 
 When a comment is re-aligned, text to the right of the left-most comment symbol (including spaces and other comment symbols) will remain fixed in relation to  that symbol.
 
-Note that there is no keystroke associated with this command by default; you must define one. See _Dyalog for Microsoft Windows Installation and Configuration Reference Guide_: [Configuration Dialog (Keyboard Shortcuts Tab)](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-keyboard-shortcuts-tab).
+Note that there is no keystroke associated with this command by default; you must define one using the [Configuration Dialog (Keyboard Shortcuts Tab)](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-keyboard-shortcuts-tab) in the _Dyalog for Microsoft Windows Installation and Configuration Guide_.
 
 ### Stop, Trace and Monitor Controls
 
