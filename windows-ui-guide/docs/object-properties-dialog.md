@@ -22,12 +22,12 @@ The *Monitor* tab applies only to a function and displays the result of `⎕MONI
 
 ## COM Properties Tab
 
-The *COM Properties* tab applies only to a function in an OLEServer or ActiveXControl namespace. The tab is used to define arguments and data types for an exported Method or Property. For further information, see *Interface Guide*.
+The *COM Properties* tab applies only to a function in an OLEServer or ActiveXControl namespace. The tab is used to define arguments and data types for an exported Method or Property.
 
 ![](img/object-properties-com-properties-tab.png)
 
-## Net Properties Tab
+## .NET Properties Tab
 
-The *Net Properties* tab applies only to a function in a NetType namespace. The tab is used to define arguments and data types for an exported Method or Property. For further information, see  .
+The *.NET Properties* tab applies only to a function in a NetType namespace. The tab is used to define arguments and data types for an exported Method or Property.
 
 ![](img/object-properties-net-properties-tab.png)
