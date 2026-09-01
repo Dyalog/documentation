@@ -50,7 +50,7 @@ If the callback function returns its event message with some of the parameters c
 
 ## Action = `⍎`expr
 
-If `Action` is set to a character vector whose first element is the execute symbol (`⍎`) the remaining string will be executed automatically whenever the event occurs.  The default processing for the event is performed first and may not be changed or inhibited in any way.
+If `Action` is set to a character vector whose first element is the _execute_ symbol (`⍎`) the remaining string will be executed automatically whenever the event occurs.  The default processing for the event is performed first and may not be changed or inhibited in any way.
 
 ## Action = fn& {larg}
 

@@ -55,7 +55,7 @@ Use function `DISPLAY` to show structure:
    └∊─────────────────────────────────────┘
 ```
 
-Mix (`↑`) of this vector produces a matrix that displays the same as the error message produced by APL:
+_Mix_ (`↑`) of this vector produces a matrix that displays the same as the error message produced by APL:
 ```apl
          ↑⎕DM
     DOMAIN ERROR

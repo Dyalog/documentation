@@ -118,7 +118,7 @@ A scalar may be indexed by the enclosed empty vector:
 5
 ```
 
-Choose Indexed Assignment may be used very effectively in conjunction with Index Generator (`⍳`) and Structural functions in order to assign into an array:
+Choose Indexed Assignment may be used very effectively in conjunction with _index generator_ (`⍳`) and Structural functions in order to assign into an array:
 ```apl
       C
 11 12 13 14

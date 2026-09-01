@@ -5,10 +5,10 @@ search:
 
 # <span>I-Beam</span> `R←{X}(A⌶)Y`{{key}}
 
-I-Beam is a monadic operator that provides a range of system-related services.
+_I-beam_ is a monadic operator that provides a range of system-related services.
 
 !!! Warning "Warning"
-    Any service provided using an I-beam should be considered as experimental and subject to change – without notice – from one release to the next. Any use of I&#8209;beams in applications should, therefore, be carefully isolated in cover-functions that can be adjusted if necessary.
+    Any service provided using an _I-beam_ should be considered as experimental and subject to change – without notice – from one release to the next. Any use of _I&#8209;beams_ in applications should, therefore, be carefully isolated in cover-functions that can be adjusted if necessary.
 
 `A` is an integer that specifies the type of operation to be performed – see the table below.
 
@@ -16,7 +16,7 @@ I-Beam is a monadic operator that provides a range of system-related services.
 
 `R` is the result.
 
-When attempting to use the I-beam operator with an unsupported operation value `A`, one of three different error messages will be reported:
+When attempting to use the _I-beam_ operator with an unsupported operation value `A`, one of three different error messages will be reported:
 
 - Invalid I-Beam function selection
 - I-Beam function A has been withdrawn

@@ -22,7 +22,7 @@ dimension. That is:
 For vector arguments, each element of `X` defines the ratio between the units for corresponding pairs of elements
 in `Y`. The first element of `X` has no effect on the result.
 
-This function is also known as Base Value.
+This function is also known as _base value_.
 
 <h2 class="example">Examples</h2>
 
@@ -42,7 +42,7 @@ This function is also known as Base Value.
 
 ## Polynomial Evaluation
 
-If `X` is a scalar and `Y` a vector of length n, decode evaluates the polynomial (Index origin 1):
+If `X` is a scalar and `Y` a vector of length n, _decode_ evaluates the polynomial (Index origin 1):
 
 <math xmlns="http://www.w3.org/1998/Math/MathML">
     <mrow>

@@ -7,7 +7,7 @@ search:
 
 `Y` must be numeric. `X` must be numeric. `R` is Boolean. `R` is 1 if `X` is greater than `Y` or `X=Y`. Otherwise `R` is 0.
 
-`⎕CT` and `⎕DCT` are  implicit arguments of Greater Than Or Equal To.
+`⎕CT` and `⎕DCT` are  implicit arguments of _greater than or equal to_.
 
 <h2 class="example">Examples</h2>
 ```apl

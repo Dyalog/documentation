@@ -1,6 +1,6 @@
 # Worked Example
 
-This annotated example demonstrates the use of some of the [I-Beam functions](../technical-details/#technical-reference) related to shared code files (examples of assimilate and detach are not included).
+This annotated example demonstrates the use of some of the [_I-beam_ functions](../technical-details/#technical-reference) related to shared code files (examples of assimilate and detach are not included).
 
 First, load the dfns workspace:
 ```apl

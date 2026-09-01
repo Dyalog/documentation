@@ -17,11 +17,11 @@ Note that in common with square-bracket indexing, items of the left argument `X`
       (⍴X⌷Y) ≡ ↑,/⍴¨X
 ```
 
-Index is sometimes referred to as *squad indexing*.
+_Index_ is sometimes referred to as *squad indexing*.
 
-Note that index may be used with selective specification.
+Note that _index_ may be used with selective specification.
 
-`⎕IO` is an implicit argument of index.
+`⎕IO` is an implicit argument of _index_.
 
 <h2 class="example">Examples</h2>
 ```apl

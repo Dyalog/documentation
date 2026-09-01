@@ -6,7 +6,7 @@ search:
 # <span>Partition</span> `R←X⊆[K]Y`{{key}}
 
 !!! note "Classic Edition"
-    The symbol `⊆` (Left Shoe Underbar) is not available in Classic Edition, and Partition is instead represented by `⎕U2286`.
+    The symbol `⊆` (Left Shoe Underbar) is not available in Classic Edition, and _partition_ is instead represented by `⎕U2286`.
 
 `Y` may be any non-scalar array.
 

@@ -11,7 +11,7 @@ For positive arguments, `R` is the remainder when `Y` is divided by `X`. If `X=0
 
 For other argument values, `R` is given by the expression `Y-X×⌊Y÷X+0=X`. This expression also applies when `X` and/or `Y` are complex if the simple `⌊` is replaced by the `CpxFloor` function. See [Complex Floor](floor.md).
 
-`⎕CT` and `⎕DCT` are  implicit arguments of Residue.
+`⎕CT` and `⎕DCT` are  implicit arguments of _residue_.
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -28,7 +28,7 @@ For other argument values, `R` is given by the expression `Y-X×⌊Y÷X+0=X`. Th
 1J1 ¯1J1 0J1
 ```
 
-Note that the ASCII Broken Bar (`⎕UCS 166`, U+00A6) is not interpreted as Residue.
+Note that the ASCII Broken Bar (`⎕UCS 166`, U+00A6) is not interpreted as _residue_.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

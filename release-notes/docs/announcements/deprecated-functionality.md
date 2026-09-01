@@ -3,7 +3,7 @@
 Over time, certain functionality (such as language elements, development environment features, or supplied samples or tools) can become obsolete or cease to be useful. There are many reasons why this might happen. For example:
 
 * a superior alternative has been introduced.<br />For example, `⎕UCS` has superseded `⎕TC` (which generates only the newline, backspace, and linefeed characters).
-* the feature was originally implemented as an I-beam but has since been superseded by a formal addition to Dyalog APL.<br />For example, `⎕JSON` replaced `7159⌶`.
+* the feature was originally implemented as an _I-beam_ but has since been superseded by a formal addition to Dyalog APL.<br />For example, `⎕JSON` replaced `7159⌶`.
 * the feature is associated with hardware or technology that is itself becoming obsolete.<br />For example, 32-bit processes and address spaces limited to 4GB in size.
 
 In these circumstances, the feature is classified as _deprecated_. This means that it is unlikely to be developed or extended further, and its use in new development work is discouraged. Some deprecated features remain for backwards compatibility reasons, but some are later removed in a pre-announced Dyalog version.

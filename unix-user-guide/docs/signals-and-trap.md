@@ -21,9 +21,9 @@ The mapping between these signals and the event issued is non-trivial:
 
 ## `4007⌶`
 
-To aid the programmer in determining which signal was issued, the newly implemented system operator, `⌶` (I-Beam) has been extended to report this information.
+To aid the programmer in determining which signal was issued, the newly implemented system operator, `⌶` (_I-beam_) has been extended to report this information.
 
-WARNING: Although documentation is provided for I-Beam functions, any service provided using I-Beam should be considered as "experimental" and subject to change - without notice - from one release to the next. Any use of I-Beams in applications should therefore be carefully isolated in cover-functions that can be adjusted if necessary.
+WARNING: Although documentation is provided for _I-beam_ functions, any service provided using _I-beam_ should be considered as "experimental" and subject to change - without notice - from one release to the next. Any use of _I-beams_ in applications should therefore be carefully isolated in cover-functions that can be adjusted if necessary.
 
 `4007⌶⍬` can be used to identify which signals have been received by the APL process and how many of them have been received. A side effect of calling `4007⌶⍬` is to reset all counters to 0.
 

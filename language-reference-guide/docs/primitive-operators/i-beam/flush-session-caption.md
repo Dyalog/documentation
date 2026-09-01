@@ -13,7 +13,7 @@ Under Windows, the Session Caption displays information such as the name of the 
 
 However, the Caption is updated only at the six-space prompt; calling `⎕LOAD` for example from within a function will not result in the Caption being updated at the end of the `⎕LOAD`.
 
-This I-Beam causes the Session Caption to be updated (flushed) when called. Note that this I-Beam does not alter the contents of the Caption.
+This _I-beam_ causes the Session Caption to be updated (flushed) when called. Note that this _I-beam_ does not alter the contents of the Caption.
 
 <h2 class="example">Example</h2>
 ```apl

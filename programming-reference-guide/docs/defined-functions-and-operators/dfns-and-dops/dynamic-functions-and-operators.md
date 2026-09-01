@@ -24,7 +24,7 @@ dfns can be defined and used in any context where an APL function may be found, 
 
 - In immediate execution mode as in the examples above.
 - Within a defined function or operator.
-- As the operand of an operator such as each (`¨`).
+- As the operand of an operator such as _each_ (`¨`).
 - Within another dfn.
 - The last point means that it is easy to define nested local functions.
 

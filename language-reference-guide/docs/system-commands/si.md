@@ -12,7 +12,7 @@ The list consists of a line for each suspended or pendent operation beginning wi
 
 - The name of a defined function or operator, followed by the line number at which the operation is halted, and followed by the `*` symbol if the operation is suspended. The name of the function or operator is its full pathname relative to the root namespace `#`. For example, `#.UTIL.PRINT`. In addition, the display of a function or operator which has dynamically changed space away from its origin is prefixed with its current space. For example, `[⎕SE] TRAV`.
 - A primitive operator symbol.
-- The Execute function symbol (`⍎`).
+- The _execute_ function symbol (`⍎`).
 - The Evaluated Input symbol (`⎕`).
 - The System Function `⎕DQ` or `⎕SR` (occurs when executing a callback function).
 
@@ -26,7 +26,7 @@ The list consists of a line for each suspended or pendent operation beginning wi
 ⍎
 ```
 
-This example indicates that at some point function `FOO` was executed and suspended on line 1. Subsequently, function `MATDIV` was invoked, with a function derived from the Inner Product or Outer Product operator (`.`) having defined function `PLUS` as an operand.
+This example indicates that at some point function `FOO` was executed and suspended on line 1. Subsequently, function `MATDIV` was invoked, with a function derived from the _inner product_ or _outer product_ operator (`.`) having defined function `PLUS` as an operand.
 
 In the following, function `foo` in namespace `x` has called `goo` in namespace `y`. Function `goo` has then changed space (`⎕CS`) to namespace `z` where it has been suspended:
 ```apl

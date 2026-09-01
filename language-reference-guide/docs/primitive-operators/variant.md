@@ -6,9 +6,9 @@ search:
 # <span>Variant</span> `{R}←{X}(f⍠B)Y`{{key}}
 
 !!! note "Classic Edition"
-    The symbol `⍠` is not available in Classic Edition, and the Variant operator is instead represented by `⎕U2360`. Note too that `⍠` and `⎕OPT` are synonymous though only the latter is available in the Classic Edition.
+    The symbol `⍠` is not available in Classic Edition, and the _variant_ operator is instead represented by `⎕U2360`. Note too that `⍠` and `⎕OPT` are synonymous though only the latter is available in the Classic Edition.
 
-The Variant operator `⍠` specifies the value of an *option* to be used by its left operand function `f`. An *option* is a named property of a function whose value in some way affects the operation of that function.
+The _variant_ operator `⍠` specifies the value of an *option* to be used by its left operand function `f`. An *option* is a named property of a function whose value in some way affects the operation of that function.
 
 For example, the Search and Replace operators include options named `IC` and `Mode` which respectively determine whether or not *case* is ignored and in what manner the input document is processed.
 
@@ -52,9 +52,9 @@ The order in which options are specified is typically irrelevant but if the same
       ⍠('IC' 0) ('IC' 1)
 ```
 
-The Variant operator generates a derived function `f⍠B` and may be assigned to a name. The derived function is effectively function `f` bound with the option values specified by `B`.
+The _variant_ operator generates a derived function `f⍠B` and may be assigned to a name. The derived function is effectively function `f` bound with the option values specified by `B`.
 
-The derived function may itself be used as a left operand to Variant to produce a second derived function whose options are further modified by the second application of the operator. The following sets the same options as the first example above:
+The derived function may itself be used as a left operand to _variant_ to produce a second derived function whose options are further modified by the second application of the operator. The following sets the same options as the first example above:
 ```apl
       ⍠'Mode' 'D'⍠'IC' 1⍠'EOL' 'LF'
 ```
@@ -101,7 +101,7 @@ This is equivalent to:
 
 ## Redundancy
 
-A function that has been modified by Variant may be used in a context where the option or options that have been modified are not relevant. This is illustrated by the following example.
+A function that has been modified by _variant_ may be used in a context where the option or options that have been modified are not relevant. This is illustrated by the following example.
 
 `JSON` is a character matrix that specifies 2 objects `a` and `b`.
 ```apl
@@ -175,7 +175,7 @@ A modified version of `⎕JSON` ...
 
 ## Variant and .NET
 
-The Variant operator may also be used in conjunction with .NET classes; it can used to cast an array into a specific .NET data type, and to specify which constructor should be used when creating a new instance of a .NET class which has overloaded constructors. For further information, see [Advanced Techniques](../../../net-framework-interface-guide/dotnet-classes/advanced-techniques/).
+The _variant_ operator may also be used in conjunction with .NET classes; it can used to cast an array into a specific .NET data type, and to specify which constructor should be used when creating a new instance of a .NET class which has overloaded constructors. For further information, see [Advanced Techniques](../../../net-framework-interface-guide/dotnet-classes/advanced-techniques/).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

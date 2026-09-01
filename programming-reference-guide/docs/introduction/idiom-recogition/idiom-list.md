@@ -84,7 +84,7 @@ For example: `NV`: numeric vector, `CM`: character matrix, `PV`: nested vector.
 
 `↓⍉↑` is special-cased only for a vector of nested vectors, each of whose items is of the same length.
 
-`{(↓⍺)⍳↓⍵}` can accommodate much larger matrices than its constituent primitives. It is particularly effective when bound with a left argument using the compose operator:
+`{(↓⍺)⍳↓⍵}` can accommodate much larger matrices than its constituent primitives. It is particularly effective when bound with a left argument using the _compose_ operator:
 ```apl
       find←mat∘{(↓⍺)⍳↓⍵}     ⍝ find rows in mat table
 ```

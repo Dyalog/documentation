@@ -1,6 +1,6 @@
 #  Threads & Niladic Functions
 
-In common with other operators, the spawn operator `&` may accept monadic or dyadic functions as operands, but not niladic functions. This means that, using spawn, you cannot start a thread that consists only of a niladic function
+In common with other operators, the _spawn_ operator `&` may accept monadic or dyadic functions as operands, but not niladic functions. This means that, using _spawn_, you cannot start a thread that consists only of a niladic function
 
 If you wish to invoke a niladic function asynchronously, you have the following choices:
 
@@ -25,4 +25,4 @@ Note that niladic functions *can* be invoked asynchronously as callback function
       ⎕WS'Event' 'Select' 'NIL&'
 ```
 
-will execute correctly as a thread, even though `NIL` is niladic. This is because callback functions are invoked directly by `⎕DQ` rather than as an operand to the spawn operator.
+will execute correctly as a thread, even though `NIL` is niladic. This is because callback functions are invoked directly by `⎕DQ` rather than as an operand to the _spawn_ operator.

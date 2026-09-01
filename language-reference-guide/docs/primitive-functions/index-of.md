@@ -15,7 +15,7 @@ In particular, if `X` is a vector, the result `R` is a simple integer array with
 
 Elements of `X` and `Y` are considered the same if `X≡Y` returns 1 for those elements.
 
-`⎕IO`,  `⎕CT` and `⎕DCT` are implicit arguments of Index Of.
+`⎕IO`,  `⎕CT` and `⎕DCT` are implicit arguments of _index of_.
 
 <h2 class="example">Examples</h2>
 ```apl
