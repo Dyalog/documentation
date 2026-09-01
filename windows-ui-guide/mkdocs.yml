@@ -83,7 +83,7 @@ nav:
   - Find Objects Tool: find-objects-tool.md
   - Object Properties Dialog Box: object-properties-dialog.md
   - The Editor: editor.md
-  - The Tracer: tracer/index.md
+  - The Tracer: tracer.md
   - The Threads Tool: threads-tool.md
   - Debugging Threads: debugging-threads.md
   - The Event Viewer: event-viewer.md

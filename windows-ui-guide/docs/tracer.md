@@ -34,15 +34,15 @@ The layout is a matter of preference; the functionality is the same. The default
 
 The **Floating** layout mode detaches the Tracer window, allowing it to be positioned according to preference. 
 
-![](../img/tbt-classic.png)
+![](img/tbt-classic.png)
 
 The **At the bottom** layout mode:
 
-![](../img/tbt-debugger-bottom.png)
+![](img/tbt-debugger-bottom.png)
 
 The **To the left** layout mode:
 
-![](../img/tbt-debugger-left.png)
+![](img/tbt-debugger-left.png)
 
 In the latter two layout modes, the Tracer is docked into the main window.
 
@@ -62,7 +62,7 @@ The Tracer is implemented as a single dockable window that displays the function
 
 In the default Session files, the Tracer is docked along the bottom edge of the Session window. When you invoke the Tracer, it springs up as illustrated below. In this example, the function being traced is `⎕SE.UCMD`, which is invoked by typing a user-command, in this case `]APLCart`.
 
-![](../img/tracer-1.png)
+![](img/tracer-1.png)
 
 In the default layout, the *SIstack* window is displayed alongside the main Tracer window, although this can be hidden or made to appear as a separate floating window, as required.
 
@@ -96,13 +96,13 @@ Using the Trace Tools, you can **single-step** through the function or operator 
 
 The illustration below shows the state of execution having clicked *Exec*, *Trace*, *Exec* 19 times:
 
-![](../img/tracer-2.png)
+![](img/tracer-2.png)
 
 The next illustration shows the result of clicking *Trace* at this point. This caused the system to trace into `⎕SE.Dyalog.APLCart`, the function called from `⎕SE.UCMD[35]`.
 
 Notice how each function call on the stack is represented by an item in the *SIstack* window.
 
-![](../img/tracer-4.png)
+![](img/tracer-4.png)
 
 At this stage, the state indicator is as follows:
 ```apl
@@ -146,7 +146,7 @@ It is possible to skip from the Tracer to the Session and then re-invoke the Tra
 
 Breakpoints are defined by `⎕STOP` and may be toggled on and off in an Edit or Trace window by clicking in the appropriate column. The example below illustrates a function with a `⎕STOP` breakpoint set on line `[5]`.
 
-![](../img/tracer-5.png)
+![](img/tracer-5.png)
 
 `⎕STOP` breakpoints set or cleared in an Edit window are not established until the function is fixed. `⎕STOP` breakpoints set or cleared in a Trace window are established immediately.
 
@@ -180,7 +180,7 @@ The Tracer opens with primitive tracing activated.
 
 In a Session, enter the expression `(+/÷≢)⍳10` and start inline tracing.
 
-![](../img/tp-start.png)
+![](img/tp-start.png)
 
 The red outline around the `⍳` in the Tracer shows the next primitive to be executed. Enter **&lt;IT&gt;** or click the **Next Primitive** icon in the Tracer toolbar to see how the execution progresses through the expression.
 
@@ -266,7 +266,7 @@ When a docked aspect pane is the focus, the Session's **Options** menu enables c
 
 The following screenshot illustrates the effect of choosing **Show functions as trees** on the **Current Function** pane:
 
-![](../img/tbt-current-fn-options-menu.png)
+![](img/tbt-current-fn-options-menu.png)
 
 ### Tracing Diamond-Separated Expressions
 
@@ -280,12 +280,12 @@ a ← 3 3⍴⍳9 ⋄ b ← ⍉a ⋄ a + b
 
 Enter the expressions in the Session, and start inline tracing. You should see:
 
-![](../img/tbt-diamond1.png)
+![](img/tbt-diamond1.png)
 
 with the first expression highlighted (red outline). Enter **&lt;ER&gt;** (<kbd>enter</kbd>) to execute the single expression before the first diamond separator:
 
-![](../img/tbt-diamond2.png)
+![](img/tbt-diamond2.png)
 
 The second expression is now highlighted. Enter **&lt;ER&gt;** (<kbd>enter</kbd>) again to execute the second expression, then enter **&lt;IT&gt;** (<kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>enter</kbd>) to start tracing the primitives in the third expression:
 
-![](../img/tbt-diamond3.png)
+![](img/tbt-diamond3.png)
