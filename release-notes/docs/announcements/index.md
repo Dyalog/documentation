@@ -25,10 +25,10 @@ Dyalog v20.0 was the last release to be built for 32-bit Raspberry Pis. To run D
 This _I-beam_ has been deprecated. It is scheduled for removal in Dyalog v22.0; it could be reintroduced in a later release.
 
 ### `739⌶` – Temporary Directory  
-This _I-beam_ has been deprecated; the functioanlity that it provided is now available using [`⎕SYSTEM`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/system/). It is scheduled for removal in 2029.
+This _I-beam_ has been deprecated; the functionality that it provided is now available using [`⎕SYSTEM`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/system/). It is scheduled for removal in 2029.
 
 ### `1200⌶` – Format Date-time  
-This _I-beam_ has been deprecated; the functioanlity that it provided is now available using [`⎕DT`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/dt/). It is scheduled for removal in 2029.
+This _I-beam_ has been deprecated; the functionality that it provided is now available using [`⎕DT`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/dt/). It is scheduled for removal in 2029.
 
 ### Legacy Workspaces
 Dyalog v21.0 is the last major version that will support workspaces saved using Dyalog v11.0 or Dyalog v12.0 (workspaces saved using earlier versions are already unsupported). From Dyalog v22.0, the minimum version of a workspace that can be loaded will be v12.1.
