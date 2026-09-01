@@ -1,6 +1,6 @@
 # Browsing .NET Classes
 
-Microsoft supplies a tool for browsing .NET Class libraries called `ILDASM.EXE`[^1].
+Microsoft supplies a tool for browsing .NET Class libraries called `ILDASM.EXE`, which can be found in the .NET SDK and is distributed with Visual Studio.
 
 As a convenience, the Dyalog APL Workspace Explorer has been extended to perform a similar task as `ILDASM` so that you can gain access to the information within the context of the APL environment.
 
@@ -69,5 +69,3 @@ The *Methods* folder lists the methods supported by the Class. The Explorer show
 Many of the reported objects are listed as *Private*, which means they are inaccessible to users of the class – you are not able to call them or inspect their value. For more information about classes, see  Object Oriented Programming[Introducing Classes](../../programming-reference-guide/object-oriented-programming/introducing-classes/introducing-classes).
 
 ![](img/browsing-net-classes-8.png)
-
-[^1]: ILDASM.EXE can be found in the .NET SDK and is distributed with Visual Studio

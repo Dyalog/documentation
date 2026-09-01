@@ -26,264 +26,47 @@ The format sequences are intended to be visually reminiscent of the generated te
 easily associated with the substitution (e.g. `D`, `M` and `Y` for Day, Month and Year respectively) repeated one or
 more times to indicate format. As noted below, some sequences allow the first character to be replaced by a `_`, or the casing to be altered.
 
-<table>
-    <thead>
-        <tr>
-            <th class="text-left">Format letter</th>
-            <th class="text-left">Length</th>
-            <th class="text-left">Meaning</th>
-            <th class="text-left">Variations</th>
-            <th class="text-left">Example</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan="2" style="vertical-align: middle;">
-                <ins>Y</ins>ear</td>
-            <td class="Dyalog">YY</td>
-            <td>Without century</td>
-            <td class="Dyalog">YY</td>
-            <td class="Dyalog">19</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">YYYY</td>
-            <td>With century</td>
-            <td class="Dyalog">YYYY</td>
-            <td class="Dyalog">2019</td>
-        </tr>
-        <tr>
-            <td rowspan="4" style="vertical-align: middle;">
-                <ins>M</ins>onth</td>
-            <td class="Dyalog">M</td>
-            <td>1 or 2 digit numeric</td>
-            <td class="Dyalog">M</td>
-            <td class="Dyalog">3</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">MM</td>
-            <td>2 character numeric</td>
-            <td class="Dyalog">MM<br />_M</td>
-            <td class="Dyalog">03<br />&nbsp;3</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">MMM</td>
-            <td>Abbreviated name</td>
-            <td class="Dyalog">MMM<br />Mmm<br />mmm<br />_mm<sup>1</sup></td>
-            <td class="Dyalog">MAR<br />Mar<br />mar<br />Mar</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">MMMM </td>
-            <td>Full name </td>
-            <td class="Dyalog">MMMM<br />Mmmm<br />mmmm<br />_mmm<sup>1</sup></td>
-            <td class="Dyalog">MARCH<br />March<br />march<br />March</td>
-        </tr>
-        <tr>
-            <td rowspan="2" style="vertical-align: middle;">
-                <ins>D</ins>ay of month</td>
-            <td class="Dyalog">D</td>
-            <td>1 or 2 digit numeric</td>
-            <td class="Dyalog">D</td>
-            <td class="Dyalog">4</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">DD</td>
-            <td>2 character numeric</td>
-            <td class="Dyalog">DD<br />_D</td>
-            <td class="Dyalog">04<br />&nbsp;4</td>
-        </tr>
-        <tr>
-            <td rowspan="2" style="vertical-align: middle;">
-                <ins>h</ins>ours</td>
-            <td class="Dyalog">h</td>
-            <td>1 or 2 digit numeric</td>
-            <td class="Dyalog">h</td>
-            <td class="Dyalog">8</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">hh</td>
-            <td>2 character numeric</td>
-            <td class="Dyalog">hh<br />_h</td>
-            <td class="Dyalog">08<br />&nbsp;8</td>
-        </tr>
-        <tr>
-            <td rowspan="2" style="vertical-align: middle;">
-                <ins>m</ins>inutes</td>
-            <td class="Dyalog">m </td>
-            <td>1 or 2 digit numeric</td>
-            <td class="Dyalog">m</td>
-            <td class="Dyalog">5</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">mm</td>
-            <td>2 character numeric</td>
-            <td class="Dyalog">mm<br />_m</td>
-            <td class="Dyalog">05<br />&nbsp;5</td>
-        </tr>
-        <tr>
-            <td rowspan="2" style="vertical-align: middle;">
-                <ins>s</ins>econds</td>
-            <td class="Dyalog">s</td>
-            <td>1 or 2 digit numeric </td>
-            <td class="Dyalog">s</td>
-            <td class="Dyalog">0</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">ss </td>
-            <td>2 character numeric </td>
-            <td class="Dyalog">ss<br />_s</td>
-            <td class="Dyalog">00<br />&nbsp;0</td>
-        </tr>
-        <tr>
-            <td rowspan="6" style="vertical-align: middle;">
-                <ins>f</ins>ractional seconds</td>
-            <td class="Dyalog">f</td>
-            <td>1 digit precision</td>
-            <td class="Dyalog">f</td>
-            <td class="Dyalog">5</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">ff</td>
-            <td>2 digit precision</td>
-            <td class="Dyalog">ff</td>
-            <td class="Dyalog">55</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">fff</td>
-            <td>3 digit precision</td>
-            <td class="Dyalog">fff</td>
-            <td class="Dyalog">555</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">ffff</td>
-            <td>4 digit precision</td>
-            <td class="Dyalog">ffff</td>
-            <td class="Dyalog">5555</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">fffff</td>
-            <td>5 digit precision</td>
-            <td class="Dyalog">fffff</td>
-            <td class="Dyalog">55555</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">ffffff</td>
-            <td>6 digit precision</td>
-            <td class="Dyalog">ffffff</td>
-            <td class="Dyalog">555555</td>
-        </tr>
-        <tr>
-            <td rowspan="3" style="vertical-align: middle;">
-                <ins>d</ins>ay of week</td>
-            <td class="Dyalog">d </td>
-            <td>Numeric (1-7)</td>
-            <td class="Dyalog">d</td>
-            <td class="Dyalog">1</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">ddd</td>
-            <td>Abbreviated name</td>
-            <td class="Dyalog">DDD<br />Ddd<br />ddd<br />_dd<sup>1</sup></td>
-            <td class="Dyalog">MON<br />Mon<br />mon<br />Mon</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">dddd</td>
-            <td>Full name</td>
-            <td class="Dyalog">DDDD<br />Dddd<br />dddd<br />_ddd<sup>1</sup></td>
-            <td class="Dyalog">MONDAY<br />Monday<br />monday<br />Monday</td>
-        </tr>
-        <tr>
-            <td rowspan="2" style="vertical-align: middle;">ISO <ins>w</ins>eek number</td>
-            <td class="Dyalog">w</td>
-            <td>1 or 2 digit numeric</td>
-            <td class="Dyalog">w</td>
-            <td class="Dyalog">10</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">ww</td>
-            <td>2 character numeric</td>
-            <td class="Dyalog">ww<br />_w</td>
-            <td class="Dyalog">10<br />10</td>
-        </tr>
-        <tr>
-            <td rowspan="2" style="vertical-align: middle;">year of ISO<br /><ins>W</ins>eek<br />number<sup>2</sup></td>
-            <td class="Dyalog">WW</td>
-            <td>Without century</td>
-            <td class="Dyalog">WW</td>
-            <td class="Dyalog">19</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">WWWW</td>
-            <td>With century</td>
-            <td class="Dyalog">WWWW</td>
-            <td class="Dyalog">2019</td>
-        </tr>
-        <tr>
-            <td rowspan="2" style="vertical-align: middle;">day of <ins>y</ins>ear</td>
-            <td class="Dyalog">y</td>
-            <td>1 to 3 digit numeric</td>
-            <td class="Dyalog">y</td>
-            <td class="Dyalog">63</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">yy</td>
-            <td>3 character numeric</td>
-            <td class="Dyalog">yy<br />_y</td>
-            <td class="Dyalog">063<br />&nbsp;63</td>
-        </tr>
-        <tr>
-            <td rowspan="2" style="vertical-align: middle;">
-                <ins>O</ins>rdinal indicator<sup>3</sup><br />for day of month</td>
-            <td class="Dyalog">O</td>
-            <td>Short</td>
-            <td class="Dyalog">O<br />o</td>
-            <td class="Dyalog">T<br />t</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">OO</td>
-            <td>Full</td>
-            <td class="Dyalog">OO<br />Oo<br />oo</td>
-            <td class="Dyalog">TH<br />Th<br />th</td>
-        </tr>
-        <tr>
-            <td rowspan="2" style="vertical-align: middle;">hours in <ins>t</ins>welve<br />hour clock</td>
-            <td class="Dyalog">t</td>
-            <td>1 or 2 digit numeric</td>
-            <td class="Dyalog">t</td>
-            <td class="Dyalog">8</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">tt</td>
-            <td>2 character numeric</td>
-            <td class="Dyalog">tt<br />_t</td>
-            <td class="Dyalog">08<br />&nbsp;8</td>
-        </tr>
-        <tr>
-            <td rowspan="2">AM/<ins>P</ins>M Indicator</td>
-            <td class="Dyalog">P</td>
-            <td>Short</td>
-            <td class="Dyalog">P<br />p</td>
-            <td class="Dyalog">A<br />a</td>
-        </tr>
-        <tr>
-            <td class="Dyalog">PP</td>
-            <td>Full</td>
-            <td class="Dyalog">PP<br />pp</td>
-            <td class="Dyalog">AM<br />am<br /></td>
-        </tr>
-    </tbody>
-</table>
+| Format letter | Length | Meaning | Variations | Example |
+|---|---|---|---|---|
+| <u>Y</u>ear | `YY` | Without century | `YY` | `19` |
+|_   _| `YYYY` | With century | `YYYY` | `2019` |
+| <u>M</u>onth | `M` | 1 or 2 digit numeric | `M` | `3` |
+| | `MM` | 2 character numeric | `MM`<br>`_M` | `03`<br>` 3` |
+| | `MMM` | Abbreviated name | `MMM`<br>`Mmm`<br>`mmm`<br>`_mm`[^1] | `MAR`<br>`Mar`<br>`mar`<br>`Mar` |
+|_   _| `MMMM` | Full name | `MMMM`<br>`Mmmm`<br>`mmmm`<br>`_mmm`[^1] | `MARCH`<br>`March`<br>`march`<br>`March` |
+| <u>D</u>ay of month | `D` | 1 or 2 digit numeric | `D` | `4` |
+|_   _| `DD` | 2 character numeric | `DD`<br>`_D` | `04`<br>` 4` |
+| <u>h</u>ours | `h` | 1 or 2 digit numeric | `h` | `8` |
+|_   _| `hh` | 2 character numeric | `hh`<br>`_h` | `08`<br>` 8` |
+| <u>m</u>inutes | `m` | 1 or 2 digit numeric | `m` | `5` |
+|_   _| `mm` | 2 character numeric | `mm`<br>`_m` | `05`<br>` 5` |
+| <u>s</u>econds | `s` | 1 or 2 digit numeric | `s` | `0` |
+|_   _| `ss` | 2 character numeric | `ss`<br>`_s` | `00`<br>` 0` |
+| <u>f</u>ractional seconds | `f` | 1 digit precision | `f` | `5` |
+| | `ff` | 2 digit precision | `ff` | `55` |
+| | `fff` | 3 digit precision | `fff` | `555` |
+| | `ffff` | 4 digit precision | `ffff` | `5555` |
+| | `fffff` | 5 digit precision | `fffff` | `55555` |
+|_   _| `ffffff` | 6 digit precision | `ffffff` | `555555` |
+| <u>d</u>ay of week | `d` | Numeric (1-7) | `d` | `1` |
+| | `ddd` | Abbreviated name | `DDD`<br>`Ddd`<br>`ddd`<br>`_dd`[^1] | `MON`<br>`Mon`<br>`mon`<br>`Mon` |
+|_   _| `dddd` | Full name | `DDDD`<br>`Dddd`<br>`dddd`<br>`_ddd`[^1] | `MONDAY`<br>`Monday`<br>`monday`<br>`Monday` |
+| ISO <u>w</u>eek number | `w` | 1 or 2 digit numeric | `w` | `10` |
+|_   _| `ww` | 2 character numeric | `ww`<br>`_w` | `10`<br>`10` |
+| year of ISO <u>W</u>eek number[^2] | `WW` | Without century | `WW` | `19` |
+|_   _| `WWWW` | With century | `WWWW` | `2019` |
+| day of <u>y</u>ear | `y` | 1 to 3 digit numeric | `y` | `63` |
+|_   _| `yy` | 3 character numeric | `yy`<br>`_y` | `063`<br>` 63` |
+| <u>O</u>rdinal indicator[^3] for day of month | `O` | Short | `O`<br>`o` | `T`<br>`t` |
+|_   _| `OO` | Full | `OO`<br>`Oo`<br>`oo` | `TH`<br>`Th`<br>`th` |
+| hours in <u>t</u>welve hour clock | `t` | 1 or 2 digit numeric | `t` | `8` |
+|_   _| `tt` | 2 character numeric | `tt`<br>`_t` | `08`<br>` 8` |
+| AM/<u>P</u>M Indicator | `P` | Short | `P`<br>`p` | `A`<br>`a` |
+|_   _| `PP` | Full | `PP`<br>`pp` | `AM`<br>`am` |
 
-**Footnotes**
-
-1. Natural sentence case, which may be specified for M(month name) and d(day
-name) only, causes the text to be substituted in the case which is natural for
-the language; some languages (for example, English) always capitalise the
-first letter of day and month names whereas others (for example, French) do
-not.
-2. Dates at the start of the year may be in the final week of the previous year,
-and dates at the end of the year may be in the first week of the following year.
-3. An ordinal indicator is a character or group of characters following a numeral,
-such as (in English) the suffixes -st, -nd, -rd, -th as in 1st, 2nd, 3rd, 4th.
+[^1]: Natural sentence case, which can be specified for `M` (month name) and `d` (day name) only, causes the text to be substituted in the case which is natural for the language; some languages (for example, English) always capitalise the first letter of day and month names whereas others (for example, French) do not.
+[^2]: Dates at the start of the year can be in the final week of the previous year, and dates at the end of the year can be in the first week of the following year.
+[^3]: An ordinal indicator is a character or group of characters following a numeral, such as (in English) the suffixes -st, -nd, -rd, -th as in 1st, 2nd, 3rd, 4th.
 
 The upper and lower case letters, underscore `_`, dollar `$` and percent `%` are all reserved for introducing format
 sequences, even though not all currently have meaning. The remaining, non-reserved, characters are copied to the result

@@ -6,7 +6,9 @@ The primary purpose of the session window is to provide a scrolling area within 
 
 ## Window Management
 
-When you start APL, the session is loaded from the file specified by the **session_file** parameter. The position and size of the session window are defined by the Posn and Size properties of the Session object `⎕SE`, which will be as they were when the session file was last saved.[^1]
+When you start APL, the session is loaded from the file specified by the **session_file** parameter. The position and size of the session window are defined by the Posn and Size properties of the Session object `⎕SE`, which will be as they were when the session file was last saved.
+
+In a Windows shortcut to an application, the Run: state may be one of "Normal window", "Minimised" and "Maximised". There are other states which can be set when a process is spawned. If the Run: state is Normal or Default, Dyalog uses the settings in the current session file to determine the state and size of the session on startup; for all other states (including Maximised and Minimised) these states are used, superseding the settings in the current session file.
 
 The name of the active workspace is shown in the title bar of the window, and changes if you rename the workspace or `)LOAD` another.
 
@@ -56,5 +58,3 @@ If you click the right mouse button over any window, its context menu is display
 The last picture shows the effect of using Hide Caption to remove the title bar. In this state, you can resize the pane with the mouse, but the Minimise, Maximise and Close buttons are not available. However, you can restore the object's title bar using its context menu.
 
 ![](img/session-docking-7.png)
-
-[^1]: In a Windows shortcut to an application,  the Run: state may be one of "Normal window", "Minimised" and "Maximised". There are other states which can be set when a process is spawned. If the Run: state is Normal or Default, Dyalog will use the settings in the current session file to determine the state and size of the session on startup; for all other states (including Maximised and Minimised) these states will be used, superseding the settings in the current session file.
