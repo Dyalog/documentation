@@ -22,7 +22,7 @@ The result `R` is a vector of zero or more names, as described in the table belo
 |`'Enabled'`|List the features for which logging is enabled|Names of the features for which logging is enabled, or `'All'`|No|
 |`'List'`|List the documented deprecated features|Names of the documented deprecated features|No|
 
-`13⌶'List'` reports only the deprecated features that are documented in the [Release Notes](../../../../release-notes/announcements/deprecated-functionality). `13⌶'All'` enables logging for all of these and for any further features that are not yet documented, so it is better to enable logging with `13⌶'All'` than with `13⌶ 13⌶'List'`. When `'All'` is selected, the set of enabled features is recorded as the character vector `'All'` rather than as the individual feature names; this value is returned by both `13⌶'All'` (shy) and a subsequent `13⌶'Enabled'`.
+`13⌶'List'` reports only the deprecated features that are documented in the [Release Notes](../../../../release-notes/announcements/deprecated-functionality). `13⌶'All'` enables logging for all of these and for any further features that are not yet documented; Dyalog Ltd recommends enabling logging with `13⌶'All'` rather than with `13⌶ 13⌶'List'`. When `'All'` is selected, the set of enabled features is recorded as the character vector `'All'` rather than as the individual feature names; this value is returned by both `13⌶'All'` (shy) and a subsequent `13⌶'Enabled'`.
 
 !!! Hint "Hints and Recommendations"
     If, after selecting `13⌶'All'`, you see logged messages that name features you do not recognise, you are using undocumented deprecated features and might want to contact [support@dyalog.com](mailto:support@dyalog.com) for help.
