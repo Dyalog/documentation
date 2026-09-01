@@ -14,10 +14,11 @@ case-insensitively, but the quoted title is mandatory and must match exactly;
 admonitions.
 
 Usage:
-    scripts/check-admonitions.py [PATH ...]   # files or directories; default: .
+    tools/utils/check_admonitions.py [PATH ...]   # files or directories; default: .
 
 Reports each offending line as "path:line: reason" and exits non-zero if any
-admonition is non-compliant.
+admonition is non-compliant. find_admonitions.py, in this directory, inventories
+the admonitions in use instead of checking them against the guidelines.
 """
 import os
 import re
