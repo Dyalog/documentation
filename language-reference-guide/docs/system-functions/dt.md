@@ -5,7 +5,7 @@ search:
 
 # <span>Datetime</span> `R←X ⎕DT Y`{{key}}
 
-This function validates datetimes, converts datetimes between one representation and another, and converts datetimes to and from text.
+This function validates datetimes and converts datetimes between one representation and another, including textual representations.
 
 A *datetime* is a date and time of day represented by a *time number*, a *timestamp*, a *military time-zone character*, or a *text-formatted datetime*.
 
@@ -23,7 +23,7 @@ A *datetime* is a date and time of day represented by a *time number*, a *timest
 - an integer *datetime code* (see [](#timenumbers) and [](#timestamps))
 - a character vector containing a *pattern* that describes how a datetime is formatted as text (see [Formatting Patterns](#formatting-patterns)).
 
-When <code>X<sub>R</sub></code> is an integer it must be either `0` or a code from [](#timenumbers) or [](#timestamps). `0` specifies that the elements of `Y` are to be validated; a non-zero value specifies the datetime representation to which the elements of `Y` are to be converted. When <code>X<sub>R</sub></code> is a pattern, the elements of `R` are character vectors, each derived by formatting the corresponding element of `Y` as text according to the pattern.
+When <code>X<sub>R</sub></code> is an integer it must be either `0` or a code from [](#timenumbers) or [](#timestamps). `0` specifies that the elements of `Y` are [to be validated](#validating-datetimes); a non-zero value specifies the datetime representation to which the elements of `Y` are to be converted. When <code>X<sub>R</sub></code> is a pattern, the elements of `R` are character vectors, each derived by formatting the corresponding element of `Y` as text according to the pattern.
 
 <code>X<sub>Y</sub></code> can be omitted only when the elements of `Y` are Dyalog Date Numbers, `⎕TS`-style timestamps, or military time zone characters. When <code>X<sub>Y</sub></code> is omitted, the numeric elements of `Y` are interpreted as follows:
 
@@ -39,6 +39,9 @@ Character scalars in `Y` are always interpreted as meaning "now".
 `R` is an array of the same shape as `Y`, where each element is a timestamp, time number, character vector or Boolean value, as determined by <code>X<sub>R</sub></code> (the second or only element of `X`).
 
 Time numbers in `R` can be of type DECF even when [`⎕FR`](fr.md) is `645` if their magnitude could be too great to store precisely in a double. See [](#timenumbers) for the type numbers where this is so.
+
+!!! Warning "Warning"
+    Performing arithmetic on such time numbers while [`⎕FR`](fr.md) is `645` can lose precision or signal `DOMAIN ERROR`. To compute with them accurately, set `⎕FR` to `1287` (128-bit decimal) first.
 
 ## Time Numbers
 
@@ -89,6 +92,39 @@ Table: Time numbers { #timenumbers }
 |Misc. Operating Systems|||||
 | `70` |AmigaOS|Tick count 1&nbsp;ms ticks[^3]|1978-01-01 00:00|No|
 
+<h3 class="example">Examples: Time number to time number</h3>
+
+```apl
+      2 1 ⎕DT 3⊃⎕FRDCI 1 1
+43886.48188
+      1 ⎕DT 'J'
+43886.48371
+      ⍝ Local time is UTC-05:00
+      3600÷⍨-/20 ⎕DT 'JZ'
+¯5
+```
+
+<h3 class="example">Examples: Time number to timestamp</h3>
+
+```apl
+      1 ¯1 ⎕DT 0 43508.42843
+┌──────────────────┬──────────────────────┐
+│1899 12 31 0 0 0 0│2019 2 13 10 16 56 352│
+└──────────────────┴──────────────────────┘
+      ¯1 ⎕DT 0 43508.42843
+┌──────────────────┬──────────────────────┐
+│1899 12 31 0 0 0 0│2019 2 13 10 16 56 352│
+└──────────────────┴──────────────────────┘
+      2 ¯1 ⎕DT 3⊃⎕FRDCI 1 1
+┌──────────────────────┐
+│2020 2 26 11 33 54 466│
+└──────────────────────┘
+      1 ¯30 ⎕DT 44217.63465
+┌──────────────┐
+│44217 15 13 53│
+└──────────────┘
+```
+
 ## Timestamps
 
 If a value in `X` is negative it indicates that a timestamp type is expected in `Y` or generated in `R`, as follows:
@@ -104,10 +140,43 @@ Table: Timestamps { #timestamps }
 | ISO components ||||
 | `¯10` | ISO day-of-year components                   | 6            | Year, day-of-year, hour, minute, second, microsecond         | `1 1 0 0 0 0`                            |
 | `¯11` | ISO day-of-week components                   | 7            | Year, week, day-of-week, hour, minute, second, microsecond   | `1 1 1 0 0 0 0`                              |
-| Decimal encoded[^3] ||||
+| Decimal encoded[^15] ||||
 | `¯20` | Decimal encoded date and time                | 2            | Decimal encoded date, decimal encoded time                   | `10101 0`                              |
 | DateTimePicker ||||
 | `¯30` | DateTime format                              | 4            | International Day Number, hour, minute, second               | `0 0 0 0`                              |
+
+<h3 class="example">Examples: Timestamp to time number</h3>
+
+```apl
+      ¯1 1 ⎕DT ⊂⎕TS
+43886.48039
+      1 ⎕DT ⊂⎕TS
+43886.48039
+      1 ⎕DT ⎕TS 'J'
+43886.48039 43886.48039
+
+      1 ⎕DT ⊂⍬ ⍝ cf Elided element implicit values
+¯693594
+      1 ⎕DT ⊂1 1 1 0 0 0 0
+¯693594
+       ¯30 1 ⎕DT⊂44217 15 13 54
+44217.63465
+
+```
+
+<h3 class="example">Examples: Timestamp to timestamp</h3>
+
+```apl
+      ¯30 ⎕DT ⊂⎕TS
+┌─────────────┐
+│44216 16 5 46│
+└─────────────┘
+      
+      ¯30 ¯1 ⎕DT⊂32000 15 10 0
+┌───────────────────┐
+│1987 8 12 15 10 0 0│
+└───────────────────┘
+```
 
 ## Military Time Zone Characters
 
@@ -145,6 +214,15 @@ Table: Military time zones { #timezones }
 |Z        |Zulu          |UTC      |
 
 The resolutions of system clocks vary by platform.
+
+<h3 class="example">Example</h3>
+
+The following expression returns UTC in `⎕TS`-form (`⎕TS` gives local time):
+
+```apl
+      ⊃¯1 ⎕DT 'Z'
+2026 8 10 19 9 12 120
+```
 
 ## Formatting Patterns
 
@@ -201,9 +279,29 @@ The upper and lower case letters, underscore `_`, dollar `$`, and percent `%` ar
 !!! Info "Information"
     The characters `AaaaBbbb` consist of two adjacent format sequences because there is a sequence of As followed by a sequence of Bs. The characters `AaaaAaaa` consist of one format sequence because it only contains `A`s. It can be separated into two format sequences by inserting an empty `"` or `'` - delimited string, for example, `Aaaa""Aaaa`.
 
+<h3 class="example">Examples</h3>
+
+```apl
+      dt←1 ⎕DT ⊂2019 2 13 10 16 56
+      dt
+43508.42843
+      'Dddd, DDoo Mmmm YYYY; hh:mm:ss' ⎕DT dt
+┌───────────────────────────────────────┐
+│Wednesday, 13th February 2019; 10:16:56│
+└───────────────────────────────────────┘
+      '__en__Dddd, DDoo Mmmm YYYY; hh:mm:ss' ⎕DT dt
+┌───────────────────────────────────────┐
+│Wednesday, 13th February 2019; 10:16:56│
+└───────────────────────────────────────┘
+      '"ISO date": %ISO%' ⎕DT dt
+┌─────────────────────────────┐
+│ISO date: 2019-02-13T10:16:56│
+└─────────────────────────────┘
+```
+
 ## Language
 
-Unless overridden, English is used for text substitutions. Different languages can be selected using the [**Language** variant option](#language-variant-option) and/or the use of language specifiers within the format pattern. In either case, the language is specified as either a two letter [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code in lower case (for example, `en`) or as a five character language with an additional underscore and two character region in upper case (for example, `en_GB`). Within the format pattern, `__xx__` (where `xx` is the two or five character specifier) will switch the language of the subsequent generated or matched text. { #languages } shows the languages that are built into the interpreter.
+Unless overridden, English is used for text substitutions. Different languages can be selected using the [`Language` variant option](#variant-option-language) and/or the use of language specifiers within the format pattern. In either case, the language is specified as either a two letter [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code in lower case (for example, `en`) or as a five character language with an additional underscore and two character region in upper case (for example, `en_GB`). Within the format pattern, `__xx__` (where `xx` is the two or five character specifier) will switch the language of the subsequent generated or matched text. { #languages } shows the languages that are built into the interpreter.
 
 Table: Built-in languages { #languages }
 
@@ -241,7 +339,7 @@ Table: Predefined patterns built into the interpreter { #patterns }
 | ---  | ---            |
 | `ISO`  | `YYYY-MM-DD"T"hh:mm:ss` |
 
-Additional predefined patterns can be defined using the [**Dictionary** variant option](#dictionary-variant-option). Predefined patterns must not contain references to other predefined patterns.
+Additional predefined patterns can be defined using the [`Dictionary` variant option](#variant-option-dictionary). Predefined patterns must not contain references to other predefined patterns.
 
 ## Pattern-matching Rules
 
@@ -249,7 +347,7 @@ When <code>X<sub>Y</sub></code> is a pattern, the corresponding character vector
 
 ### Two-digit Years
 
-Two digit years (that is, those corresponding to the formatting pattern elements `YY` and `WW`) are, by default, interpreted according to the same rules used for `⎕SM` and GUI edit fields, which are configurable using the [`YY_WINDOW`](../../windows-installation-and-configuration-guide/configuration-parameters/yy-window/) configuration parameter.
+Two digit years (that is, those corresponding to the formatting pattern elements `YY` and `WW`) are, by default, interpreted according to the same rules used for `⎕SM` and GUI edit fields, which are configurable using the [`YY_WINDOW`](../../../windows-installation-and-configuration-guide/configuration-parameters/yy-window/) configuration parameter.
 
 ### Ambiguities and Precision
 
@@ -284,22 +382,60 @@ The formatted text is parsed and used to compute a datetime according to the giv
 
 If a pattern is rejected, or a text-formatted datetime cannot be matched against the pattern for any of the reasons above, a `DOMAIN ERROR` is signalled and an explanatory message is included.
 
+<h3 class="example">Examples</h3>
+
+```apl
+      'DD/MM/YYYY' 1 ⎕DT ⊂'13/02/2019'
+43508
+      'DD/MM/YYYY' ¯1 ⎕DT ⊂'13/02/2019'
+┌─────────────────┐
+│2019 2 13 0 0 0 0│
+└─────────────────┘
+      'Dddd, DDoo Mmmm YYYY; hh:mm:ss' ¯1 ⎕DT ⊂'Wednesday, 13th February 2019; 10:16:56'
+┌────────────────────┐
+│2019 2 13 10 16 56 0│
+└────────────────────┘
+      '__da__Dddd, DDoo mmmm YYYY' 1 ⎕DT ⊂'Onsdag, 13. februar 2019'
+43508
+```
+
 ## Variant Options
 
-`⎕DT` supports the **Language** and **Dictionary** variant options, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md). These only apply when <code>X<sub>Y</sub></code> and/or <code>X<sub>R</sub></code> are patterns.
+`⎕DT` supports the `Language` and `Dictionary` variant options, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md) and summarised in [](#variantoptionsfordt). These only apply when <code>X<sub>Y</sub></code> and/or <code>X<sub>R</sub></code> are patterns.
 
-### Variant Option: Language
+Table: Variant options for `⎕DT` { #variantoptionsfordt }
 
-The **Language** variant option specifies the language used for formatting and matching datetimes and defaults to `'en'` (English). A language is named by a two or five character value (for example `'en'` or `'en_GB'`). The value can be one of the following:
+|Variant Option|Valid Values|Effect|
+|---|---|---|
+|[`Language`](#variant-option-language)|`'en'` (Default), or another two- or five-character language name such as `'en_GB'`|The language used for formatting and matching datetimes.|
+|[`Dictionary`](#variant-option-dictionary)|a namespace|Additional or replacement month names and predefined patterns.|
+
+### Variant Option: `Language`
+
+The `Language` variant option specifies the language used for formatting and matching datetimes and defaults to `'en'` (English). A language is named by a two or five character value (for example `'en'` or `'en_GB'`). The value can be one of the following:
 
 - a single character vector, which applies to whichever of <code>X<sub>Y</sub></code> and/or <code>X<sub>R</sub></code> are patterns.
 - A 2-element vector of two character vectors, which apply to <code>X<sub>Y</sub></code> and <code>X<sub>R</sub></code> respectively (each is used only if the corresponding value is a pattern).
 
 The setting can be explicitly overridden within a format pattern using the `__xx__` specifier described under [Language](#language).
 
-### Variant Option: Dictionary
+<h4 class="example">Examples</h4>
 
-The **Dictionary** variant option specifies a namespace that contains additional or replacement names for the months (and so on) and/or predefined patterns, for languages and language regions. If <code>X<sub>Y</sub></code> and <code>X<sub>R</sub></code> are both patterns, the dictionary is applied to both.
+```apl
+      '__da__Dddd, DDoo mmmm YYYY; hh:mm:ss' ⎕DT dt
+┌──────────────────────────────────┐
+│Onsdag, 13. februar 2019; 10:16:56│
+└──────────────────────────────────┘
+      fmt←'Dddd, DDoo mmmm YYYY; hh:mm:ss'
+      fmt(⎕DT⍠'Language' 'da') dt
+┌──────────────────────────────────┐
+│Onsdag, 13. februar 2019; 10:16:56│
+└──────────────────────────────────┘
+```
+
+### Variant Option: `Dictionary`
+
+The `Dictionary` variant option specifies a namespace that contains additional or replacement names for the months (and so on) and/or predefined patterns, for languages and language regions. If <code>X<sub>Y</sub></code> and <code>X<sub>R</sub></code> are both patterns, the dictionary is applied to both.
 
 At the top level there can be zero or more sub-namespaces with two or five character names, according to the rules for language and language regions. Within each of these, month names (and so on) are defined as shown in [](#names).
 
@@ -320,13 +456,9 @@ If the namespace contains a definition that is supplied built into the interpret
 
 If a dictionary is incomplete (for example, is missing one of the expected named items, or one of the named items contains too few elements), an error is signalled if the missing content would be needed.
 
-See the [Dictionary example](#dictionary).
+<h4 class="example">Example</h4>
 
-## Examples
-
-### Creating a Dictionary { .example }
-
-The following creates a dictionary defined by the namespace `dict`. See [formatting examples](#formatting-datetimes) for uses of this dictionary.
+The following creates a dictionary defined by the namespace `dict`, used in the examples that follow.
 
 ```apl
 dict←(
@@ -379,118 +511,11 @@ In the above example:
 - There is no explicit definition of patterns or names for language region `en_GB`. If this language is selected, the definitions for `en` will be used.
 - There is an explicit definition for `ShortMonthNames` for language region `en_US`. If this language is selected, the definition of `ShortMonthNames` is as defined, and as for `en` for other names. As `en` is not defined in the dictionary, the built-in defaults are used.
 
-### Time Number to Time Number { .example }
 ```apl
-      2 1 ⎕DT 3⊃⎕FRDCI 1 1
-43886.48188
-      1 ⎕DT 'J'
-43886.48371
-      ⍝ Local time is UTC-05:00
-      3600÷⍨-/20 ⎕DT 'JZ'
-¯5
-```
-
-### Time Number to Timestamp { .example }
-```apl
-      1 ¯1 ⎕DT 0 43508.42843
-┌──────────────────┬──────────────────────┐
-│1899 12 31 0 0 0 0│2019 2 13 10 16 56 352│
-└──────────────────┴──────────────────────┘
-      ¯1 ⎕DT 0 43508.42843
-┌──────────────────┬──────────────────────┐
-│1899 12 31 0 0 0 0│2019 2 13 10 16 56 352│
-└──────────────────┴──────────────────────┘
-      2 ¯1 ⎕DT 3⊃⎕FRDCI 1 1
-┌──────────────────────┐
-│2020 2 26 11 33 54 466│
-└──────────────────────┘
-      1 ¯30 ⎕DT 44217.63465
-┌──────────────┐
-│44217 15 13 53│
-└──────────────┘
-```
-
-### Timestamp to Time Number { .example }
-```apl
-      ¯1 1 ⎕DT ⊂⎕TS
-43886.48039
-      1 ⎕DT ⊂⎕TS
-43886.48039
-      1 ⎕DT ⎕TS 'J'
-43886.48039 43886.48039
-
-      1 ⎕DT ⊂⍬ ⍝ cf Elided element implicit values
-¯693594
-      1 ⎕DT ⊂1 1 1 0 0 0 0
-¯693594
-       ¯30 1 ⎕DT⊂44217 15 13 54
-44217.63465
-
-```
-
-### Timestamp to Timestamp { .example }
-```apl
-      ¯30 ⎕DT ⊂⎕TS
-┌─────────────┐
-│44216 16 5 46│
-└─────────────┘
-      
-      ¯30 ¯1 ⎕DT⊂32000 15 10 0
-┌───────────────────┐
-│1987 8 12 15 10 0 0│
-└───────────────────┘
-```
-
-### Formatting Datetimes { .example }
-```apl
-      dt←1 ⎕DT ⊂2019 2 13 10 16 56
-      dt
-43508.42843
-      'Dddd, DDoo Mmmm YYYY; hh:mm:ss' ⎕DT dt
-┌───────────────────────────────────────┐
-│Wednesday, 13th February 2019; 10:16:56│
-└───────────────────────────────────────┘
-      '__en__Dddd, DDoo Mmmm YYYY; hh:mm:ss' ⎕DT dt
-┌───────────────────────────────────────┐
-│Wednesday, 13th February 2019; 10:16:56│
-└───────────────────────────────────────┘
-      '"ISO date": %ISO%' ⎕DT dt
-┌─────────────────────────────┐
-│ISO date: 2019-02-13T10:16:56│
-└─────────────────────────────┘
       '%DateVerbose%'(⎕DT⍠'Dictionary'dict) dt
 ┌───────────────────────┐
 │the date is 13 Feb 2019│
 └───────────────────────┘
-```
-
-### Parsing Text Formats { .example }
-```apl
-      'DD/MM/YYYY' 1 ⎕DT ⊂'13/02/2019'
-43508
-      'DD/MM/YYYY' ¯1 ⎕DT ⊂'13/02/2019'
-┌─────────────────┐
-│2019 2 13 0 0 0 0│
-└─────────────────┘
-      'Dddd, DDoo Mmmm YYYY; hh:mm:ss' ¯1 ⎕DT ⊂'Wednesday, 13th February 2019; 10:16:56'
-┌────────────────────┐
-│2019 2 13 10 16 56 0│
-└────────────────────┘
-      '__da__Dddd, DDoo mmmm YYYY' 1 ⎕DT ⊂'Onsdag, 13. februar 2019'
-43508
-```
-
-### Languages and Dictionaries { .example }
-```apl
-      '__da__Dddd, DDoo mmmm YYYY; hh:mm:ss' ⎕DT dt
-┌──────────────────────────────────┐
-│Onsdag, 13. februar 2019; 10:16:56│
-└──────────────────────────────────┘
-      fmt←'Dddd, DDoo mmmm YYYY; hh:mm:ss'
-      fmt(⎕DT⍠'Language' 'da') dt
-┌──────────────────────────────────┐
-│Onsdag, 13. februar 2019; 10:16:56│
-└──────────────────────────────────┘
       '%DateVerbose%'(⎕DT⍠('Dictionary' dict)('Language' 'en_US')) dt
 ┌─────────────────────────┐
 │the date is Feb. 13, 2019│
@@ -505,7 +530,12 @@ In the above example:
 └───────────────────────┘
 ```
 
-### Validating Datetimes { .example }
+## Validating Datetimes
+
+When <code>X<sub>R</sub></code> is `0`, `⎕DT` validates the elements of `Y` instead of converting them, interpreting each according to <code>X<sub>Y</sub></code> as described above. `R` is a Boolean with a `1` for each element of `Y` that represents a valid datetime and a `0` for each that does not.
+
+<h3 class="example">Examples</h3>
+
 ```apl
       0 ⎕DT ⎕TS (2020 13 1) 'J' 'DT' #
 1 0 1 0 0
@@ -534,8 +564,7 @@ In the above example:
 [^12]: Natural sentence case, which can be specified for `M` (month name) and `d` (day name) only, causes the text to be substituted in the case which is natural for the language; some languages (for example, English) always capitalise the first letter of day and month names whereas others (for example, French) do not.
 [^13]: Dates at the start of the year can be in the final week of the previous year, and dates at the end of the year can be in the first week of the following year.
 [^14]: An ordinal indicator is a character or group of characters following a numeral, such as (in English) the suffixes -st, -nd, -rd, -th as in 1st, 2nd, 3rd, 4th.
-[^15]: For negative numbers, the integral part counts backward from 1899-12-30 and the fractional part counts forward from  the date so reached.
-[^16]: Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020-01-23 is encoded as 20200123, and 13:17:56 is encoded as 131756.
+[^15]: Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020-01-23 is encoded as 20200123, and 13:17:56 is encoded as 131756.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

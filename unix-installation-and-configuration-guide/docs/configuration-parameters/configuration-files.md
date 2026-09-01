@@ -40,14 +40,6 @@ If the same name is defined multiple times within a configuration file then the 
 
 An array can be used to define file paths, for example, `WSPATH: ["/dir1", "/dir2"]`. The only parameters which can be defined as arrays are **WSPATH**, **WSEXT** and **CFEXT**.
 
-## References to other Configuration Parameters
-
-Configuration parameters that are string values can include references to other configuration parameters (irrespective of where they are defined) using square bracket delimiters. For example, `MySetting: "[DYALOG]/MyFile"` will replace `[DYALOG]` with the value of the **DYALOG** configuration parameter.
-
-If the referenced configuration parameter is not defined then no substitution will take place; the reference, including the square bracket delimiters, will remain in place.
-
-To include literal square brackets in a string, prefix them with a `\` character.
-
 ## Nested Structures
 
 Configuration files support nested parameter structures by defining an object that corresponds to the structure. For example:

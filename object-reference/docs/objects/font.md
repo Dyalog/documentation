@@ -34,7 +34,9 @@ Parents: [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/
 
 Children: [Timer](../objects/timer.md)
 
-Properties: [CharSet](../properties/charset.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [EventList](../properties/eventlist.md), [Fixed](../properties/fixed.md), [Handle](../properties/handle.md), [Italic](../properties/italic.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PName](../properties/pname.md), [PropList](../properties/proplist.md), [Rotate](../properties/rotate.md), [Size](../properties/size.md), [Type](../properties/type.md), [Underline](../properties/underline.md), [Weight](../properties/weight.md)
+Properties (default order): [Type](../properties/type.md), [PName](../properties/pname.md), [Size](../properties/size.md), [Fixed](../properties/fixed.md), [Italic](../properties/italic.md), [Underline](../properties/underline.md), [Weight](../properties/weight.md), [Rotate](../properties/rotate.md), [CharSet](../properties/charset.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Handle](../properties/handle.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [CharSet](../properties/charset.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [EventList](../properties/eventlist.md), [Fixed](../properties/fixed.md), [Handle](../properties/handle.md), [Italic](../properties/italic.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PName](../properties/pname.md), [PropList](../properties/proplist.md), [Rotate](../properties/rotate.md), [Size](../properties/size.md), [Type](../properties/type.md), [Underline](../properties/underline.md), [Weight](../properties/weight.md)
 
 Methods: [ChooseFont](../methodorevents/choosefont.md), [Detach](../methodorevents/detach.md)
 

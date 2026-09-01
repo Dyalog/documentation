@@ -25,35 +25,35 @@ If both `Y[3]` and `Y[4]` have the value `¯1`, then `⎕NREAD` reads data from 
 
 Table: Unicode Edition: Conversion Codes
 
-|Value  |Number of bytes read|Result Type      |Result shape|
-|-------|--------------------|-----------------|------------|
-|11     |count               |1 bit Boolean    |8 `×` count |
-|80     |count               |8 bits character |count       |
-|82     |count               |8 bits character |count       |
-|83     |count               |8 bits integer   |count       |
-|160    |2 `×` count         |16-bits character|count       |
-|163    |2 `×` count         |16 bits integer  |count       |
-|320    |4 `×` count         |32-bits character|count       |
-|323    |4 `×` count         |32 bits integer  |count       |
-|645    |8 `×` count         |64 bits floating |count       |
-|1287   |16 `×` count        |128 bits decimal |count       |
-|1289   |16 `×` count        |128 bits complex |count       |
+|Value  |Number of bytes read|Result Type           |Result shape|
+|-------|--------------------|----------------------|------------|
+|11     |count               |1 bit Boolean         |8 `×` count |
+|80     |count               |8 bits character      |count       |
+|82     |count               |8 bits character      |count       |
+|83     |count               |8 bits signed integer |count       |
+|160    |2 `×` count         |16-bits character     |count       |
+|163    |2 `×` count         |16 bits signed integer|count       |
+|320    |4 `×` count         |32-bits character     |count       |
+|323    |4 `×` count         |32 bits signed integer|count       |
+|645    |8 `×` count         |64 bits floating      |count       |
+|1287   |16 `×` count        |128 bits decimal      |count       |
+|1289   |16 `×` count        |128 bits complex      |count       |
 
 !!! Legacy "Legacy"
     Conversion code 82 is permitted in the Unicode edition for backwards compatibility purposes and causes 1-byte data on file to be translated (according to [⎕NXLATE](./nxlate.md)) from [⎕AV](./av.md) indices into normal (Unicode) characters of type 80, 160 or 320.
 
 Table: Classic Edition: Conversion Codes
 
-|Value|Number of bytes read|Result Type     |Result shape|
-|-----|--------------------|----------------|------------|
-|11   |count               |1 bit Boolean   |8 `×` count |
-|82   |count               |8 bits character|count       |
-|83   |count               |8 bits integer  |count       |
-|163  |2 `×` count         |16 bits integer |count       |
-|323  |4 `×` count         |32 bits integer |count       |
-|645  |8 `×` count         |64 bits floating|count       |
-|1287 |16 `×` count        |128 bits decimal|count       |
-|1289 |16 `×` count        |128 bits complex|count       |
+|Value|Number of bytes read|Result Type           |Result shape|
+|-----|--------------------|----------------------|------------|
+|11   |count               |1 bit Boolean         |8 `×` count |
+|82   |count               |8 bits character      |count       |
+|83   |count               |8 bits signed integer |count       |
+|163  |2 `×` count         |16 bits signed integer|count       |
+|323  |4 `×` count         |32 bits signed integer|count       |
+|645  |8 `×` count         |64 bits floating      |count       |
+|1287 |16 `×` count        |128 bits decimal      |count       |
+|1289 |16 `×` count        |128 bits complex      |count       |
 
 <h2 class="example">Example</h2>
 ```apl

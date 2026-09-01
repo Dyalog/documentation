@@ -14,9 +14,6 @@ theme:
 extra_css:
   - documentation-assets/css/main.css
   - documentation-assets/css/extra.css
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 plugins:
   - privacy
   - search
@@ -40,8 +37,6 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.highlight:
       pygments_lang_class: true
-  - pymdownx.arithmatex:
-      generic: true
   - pymdownx.highlight:
       use_pygments: false
   - attr_list
@@ -258,6 +253,7 @@ nav:
       - FlatSeparators Property: properties/flatseparators.md
       - FontList Property: properties/fontlist.md
       - FontObj Property: properties/fontobj.md
+      - ForceOnTaskbar Property: properties/forceontaskbar.md
       - FormatString Property: properties/formatstring.md
       - Formats Property: properties/formats.md
       - FullRowSelect Property: properties/fullrowselect.md
@@ -958,6 +954,7 @@ nav:
       - FontList Property: properties/fontlist.md
       - FontObj Property: properties/fontobj.md
       - FontOK Event: methodorevents/fontok.md
+      - ForceOnTaskbar Property: properties/forceontaskbar.md
       - Form Object: objects/form.md
       - Formats Property: properties/formats.md
       - FormatString Property: properties/formatstring.md

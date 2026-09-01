@@ -111,26 +111,14 @@ WSPATH: ["/dir1", "/dir2"]
 
 The only parameters which may be defined as arrays are **WSPATH**, **WSEXT** and **CFEXT**.
 
-#### References to other Configuration Parameters
+## References Relative to the Configuration File
 
-Configuration parameters which are string values may include references to other configuration parameters (regardless of where they are defined) using square bracket delimiters. For example:
-```apl
-MySetting: "[DYALOG]/MyFile"
-```
-
-will replace `[DYALOG`] with the value of the **DYALOG** configuration value.
-
-If the string inside the `[]` delimiters is "`.`", the "`.`" is replaced is replaced with the path of the directory containing the configuration file itself. Therefore,
+Within a configuration file, a [reference to another configuration parameter](configuration-parameters/configuration-parameters.md#references-to-other-configuration-parameters) can also refer to the location of the file itself. If the string inside the `[]` delimiters is "`.`", the "`.`" is replaced with the path of the directory containing the configuration file. For example:
 ```apl
 FILENAME: "[.]/x.txt"
 ```
 
-will set the parameter **FILENAME** to a value which is a reference to a file called `x.txt` in the same directory as the configuration file defining it.
-
-Note that:
-
-- If the referenced configuration parameter is not defined then no substitution will take place; the reference, including square bracket delimiters, will remain in place.
-- To include square brackets in a string, prefix the '[' with a '\' character.
+will set the parameter **FILENAME** to a value that is a reference to a file called `x.txt` in the same directory as the configuration file defining it.
 
 #### Nested Structures
 

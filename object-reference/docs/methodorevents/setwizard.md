@@ -1,4 +1,4 @@
-# <span>SetWizard</span> <span>Event 365</span>
+# <span>SetWizard</span> <span>Method 365</span>
 
 If enabled, this event is reported when the user has clicked the Next or Back button in a [PropertySheet](../objects/propertysheet.md) with Style `'Wizard'`. This action also generates PageNext (or PageBack) and PageDeactivate and PageActivate events. The SetWizard event is the final event to be reported as a result of this action, and is the only one that is affected by the result of a callback function. The event message reports the active/inactive state of the 3 page changing buttons (Back, Next and Finish) that should result from the action. Note that the Next and Finish buttons occupy the same position and are mutually exclusive.
 

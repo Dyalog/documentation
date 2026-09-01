@@ -84,7 +84,7 @@ If `X` is specified, the result `R` is the full name (starting with `#.` or `⎕
  DATA
 ```
 
-## Case 2: Create or Populate Namespace from Object List
+### Case 2: Create or Populate Namespace from Object List
 
 `Y` is one or more references to, or `⎕OR`s of, namespaces.
 
@@ -141,10 +141,14 @@ If `Y` does not contain a reference to, or a `⎕OR` of, a *GUI* object, the res
 }
 
 ```
-### Variant Option: Trigger
+## Variant Options
+
+`⎕NS` supports one variant option, `Trigger`.
+
+### Variant Option: `Trigger`
 
 The `Trigger` variant option specifies whether any [triggers](../../../programming-reference-guide/triggers/triggers) should be run for the modified variables in the target namespace that have triggers attached.
-The value must be a Boolean scalar. The default is 0, meaning that triggers are not run.
+The value must be a Boolean scalar. The default is `0`, meaning that triggers are not run.
 
 <h4 class="example">Example</h4>
 

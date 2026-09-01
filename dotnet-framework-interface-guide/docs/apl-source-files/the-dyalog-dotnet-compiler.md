@@ -57,7 +57,7 @@ dyalogc.exe command line options:
 /i:Local          Set the isolation mode of a .NET Assembly
 ```
 
-The <code class="language-nonAPL">/i</code> option specifies the [isolation mode](../implementation-details/isolation-mode/) – this overrides the setting in **web.config**.
+The <code class="language-nonAPL">/i</code> option specifies the [isolation mode](../../implementation-details/isolation-mode/) – this overrides the setting in **web.config**.
 
 The <code class="language-nonAPL">/a</code> option specifies the name of a JSON file that contains assembly information. For example:
 ```nonAPL

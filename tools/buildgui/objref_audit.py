@@ -44,9 +44,12 @@ for _stream in (sys.stdout, sys.stderr):
 # generated report can declare exactly what it chose not to look at.
 # --------------------------------------------------------------------------
 
-# Windows CE-era vestiges. Present in the interpreter's member lists, and so in
-# objectmodel.json, but deliberately excluded from the guide. Do not document.
-EXCLUDED_MEMBERS = {"ShowSIP", "SIPMode", "SIPResize", "OKButton"}
+# Windows CE / PocketAPL-era vestiges. Present in the interpreter's member
+# lists, and so in objectmodel.json, but deliberately excluded from the guide.
+# Do not document. EvaluationDays (Root) is the PocketAPL evaluation-copy
+# counter; the others are Windows CE artefacts.
+EXCLUDED_MEMBERS = {"ShowSIP", "SIPMode", "SIPResize", "OKButton",
+                    "EvaluationDays"}
 
 # Members whose page is not named after them. 'Index' would collide with the
 # directory index, so the page is index-property.md.
@@ -62,12 +65,18 @@ SESSION_PAGES = {
 # gets no cross-reference tables. Pre-existing; see README.md.
 KNOWN_EXTRA_OBJECT_PAGES = {"netcontrol"}
 
+# The deployed site has a top-level files/ directory of downloadable assets
+# (PDFs and similar), populated at deploy time and absent from this
+# repository. Links into it cannot be verified here.
+DEPLOY_TIME_DIRS = {"files"}
+
 
 def exclusions():
     """The deliberate exceptions, as (reason, items) for reporting."""
     return [
         ("Members excluded from the guide; present in the interpreter and in "
-         "objectmodel.json, undocumented on purpose (Windows CE-era vestiges)",
+         "objectmodel.json, undocumented on purpose (Windows CE / "
+         "PocketAPL-era vestiges)",
          sorted(EXCLUDED_MEMBERS)),
         ("Members whose page is not named after them",
          [f"{k} -> {v}.md" for k, v in sorted(PAGE_ALIASES.items())]),
@@ -78,9 +87,24 @@ def exclusions():
          "#.ObjectMembers but missing from Objects, so they get no "
          "cross-reference tables",
          sorted(KNOWN_EXTRA_OBJECT_PAGES)),
+        ("Site directories populated at deploy time and absent from the "
+         "repository; links into them are not checked",
+         sorted(DEPLOY_TIME_DIRS)),
     ]
 
-SECTIONS = ("Parents", "Children", "Properties", "Methods", "Events")
+# Page label -> Model.members key for the cross-reference blocks on each
+# object page. Properties appears twice: once in the interpreter's positional
+# ("default") order, once alphabetically. A bare "Properties: " line is the
+# retired single-list format, reported as its own finding.
+SECTIONS = (
+    ("Parents", "Parents"),
+    ("Children", "Children"),
+    ("Properties (default order)", "PropertiesDefault"),
+    ("Properties (alphabetical order)", "Properties"),
+    ("Methods", "Methods"),
+    ("Events", "Events"),
+)
+LEGACY_PROPERTIES = "Properties: "
 SINGULAR = {"Objects": "object", "Properties": "property",
             "Methods": "method", "Events": "event"}
 AZ_INDEXES = {
@@ -108,8 +132,11 @@ class Model:
         self.index = {o: i for i, o in enumerate(self.objects)}
         pmap = raw["ParentMap"]
 
+        def keep_order(names):
+            return [n for n in names if n not in EXCLUDED_MEMBERS]
+
         def keep(names):
-            return sorted((n for n in names if n not in EXCLUDED_MEMBERS), key=str.lower)
+            return sorted(keep_order(names), key=str.lower)
 
         self.members = {}
         for o in self.objects:
@@ -118,6 +145,7 @@ class Model:
                 "Parents": keep(p for p in self.objects if pmap[self.index[p]][i]),
                 "Children": keep(c for c in self.objects if pmap[i][self.index[c]]),
                 "Properties": keep(raw["Properties"][i]),
+                "PropertiesDefault": keep_order(raw["Properties"][i]),
                 "Methods": keep(raw["Methods"][i]),
                 "Events": keep(raw["Events"][i]),
             }
@@ -206,31 +234,41 @@ def audit(root, guide="object-reference", model_path=None):
 
     # -- 2. cross-reference blocks on each object page ----------------------
     def sections_of(slug):
-        out = {}
+        out, legacy = {}, False
         for line in read(os.path.join(docs, "objects", slug + ".md")).splitlines():
-            for s in SECTIONS:
-                if line.startswith(s + ": "):
-                    out[s] = LINK_RE.findall(line[len(s) + 2:])
-        return out
+            if line.startswith(LEGACY_PROPERTIES):
+                legacy = True
+            for label, _ in SECTIONS:
+                if line.startswith(label + ": "):
+                    out[label] = LINK_RE.findall(line[len(label) + 2:])
+        return out, legacy
 
     for o in model.objects:
         slug = slugify(o)
         if slug not in object_pages:
             continue
-        found = sections_of(slug)
-        for s in SECTIONS:
-            expect = model.members[o][s]
-            got = [label for label, _ in found.get(s, [])]
+        found, legacy = sections_of(slug)
+        if legacy:
+            f["block-legacy"].append(
+                f"{slug}.md  single alphabetical Properties list; expected "
+                f"the default order / alphabetical order pair")
+        for label, key in SECTIONS:
+            # A legacy page has neither Properties list; the legacy finding
+            # already says so, so per-member noise helps nobody.
+            if legacy and label.startswith("Properties"):
+                continue
+            expect = model.members[o][key]
+            got = [l for l, _ in found.get(label, [])]
             if not expect and not got:
                 continue
             missing = [x for x in expect if x not in got]
             extra = [x for x in got if x not in expect]
             if missing:
-                f["block-missing"].append(f"{slug}.md  {s}: absent from page: {', '.join(missing)}")
+                f["block-missing"].append(f"{slug}.md  {label}: absent from page: {', '.join(missing)}")
             if extra:
-                f["block-extra"].append(f"{slug}.md  {s}: on page, not in model: {', '.join(extra)}")
+                f["block-extra"].append(f"{slug}.md  {label}: on page, not in model: {', '.join(extra)}")
             if not missing and not extra and got != expect:
-                f["block-order"].append(f"{slug}.md  {s}: correct members, wrong order")
+                f["block-order"].append(f"{slug}.md  {label}: correct members, wrong order")
 
         # Parents/Children duplication: a whole list copied from its sibling.
         par = [l for l, _ in found.get("Parents", [])]
@@ -340,6 +378,9 @@ def audit(root, guide="object-reference", model_path=None):
                 t = target.split("#")[0].split("?")[0]
                 if not t:
                     continue
+                site = [p for p in posixpath.normpath(posixpath.join(purl, t)).split("/") if p]
+                if site and site[0] in DEPLOY_TIME_DIRS:
+                    continue
                 if not resolve_link(root, guides, dirpath, purl, t):
                     f["broken-links"].append(
                         f"{rel.replace(os.sep, '/')}: [{label or 'image'}] -> {target}")
@@ -353,6 +394,7 @@ TITLES = {
     "duplicated-lists": "Parents and Children lists identical (likely a copy)",
     "block-missing": "Cross-reference lists missing members",
     "block-extra": "Cross-reference lists with members not in the model",
+    "block-legacy": "Properties entries in the retired single-list format",
     "block-order": "Cross-reference lists out of order",
     "missing-member-pages": "Members in the model with no page",
     "orphan-member-pages": "Member pages not in the model",
@@ -416,7 +458,7 @@ def report(model, f, markdown=False, out=sys.stdout):
 def main():
     here = os.path.dirname(os.path.abspath(__file__))
     default_root = os.path.abspath(os.path.join(here, "..", ".."))
-    ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[1],
+    ap = argparse.ArgumentParser(description=(__doc__ or "").split("\n\n")[1],
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dir", default=default_root,
                     help="repository root (defaults to two levels above this script)")

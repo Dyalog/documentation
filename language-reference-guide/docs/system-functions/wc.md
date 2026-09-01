@@ -5,7 +5,7 @@ search:
 
 # <span>Window Create Object</span> `{R}←{X}⎕WC Y`{{key}}
 
-**Windows only.**
+Most objects can be created on the Microsoft Windows operating system only. The exceptions are [`Timer`](../../../object-reference/objects/timer) and [`TCPSocket`](../../../object-reference/objects/tcpsocket) objects, which can be created on all platforms, and [`HTMLRenderer`](../../../object-reference/objects/htmlrenderer) objects, which can be created on any platform on which a GUI is available.
 
 This system function creates a GUI **object**.  `Y` is either a vector which specifies **properties** that determine the new object's appearance and behaviour, or a ref to or the `⎕OR` of a GUI object that exists or previously existed.  `X` is a character vector which specifies the name of the new object, and its position in the object hierarchy.
 

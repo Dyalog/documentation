@@ -18,7 +18,9 @@ Parents: [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/
 
 Children: [Timer](../objects/timer.md)
 
-Properties: [Active](../properties/active.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FireOnce](../properties/fireonce.md), [Interval](../properties/interval.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Type](../properties/type.md)
+Properties (default order): [Type](../properties/type.md), [Interval](../properties/interval.md), [Active](../properties/active.md), [Event](../properties/event.md), [Data](../properties/data.md), [KeepOnClose](../properties/keeponclose.md), [FireOnce](../properties/fireonce.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Active](../properties/active.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FireOnce](../properties/fireonce.md), [Interval](../properties/interval.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Type](../properties/type.md)
 
 Methods: [Detach](../methodorevents/detach.md), [Wait](../methodorevents/wait.md)
 

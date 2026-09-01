@@ -22,7 +22,9 @@ Parents: [ActiveXControl](../objects/activexcontrol.md), [ButtonEdit](../objects
 
 Children: [Bitmap](../objects/bitmap.md), [Cursor](../objects/cursor.md), [Icon](../objects/icon.md), [Timer](../objects/timer.md)
 
-Properties: [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [Handle](../properties/handle.md), [ImageCount](../properties/imagecount.md), [KeepOnClose](../properties/keeponclose.md), [MapCols](../properties/mapcols.md), [Masked](../properties/masked.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
+Properties (default order): [Type](../properties/type.md), [Size](../properties/size.md), [Event](../properties/event.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Handle](../properties/handle.md), [Translate](../properties/translate.md), [ImageCount](../properties/imagecount.md), [Masked](../properties/masked.md), [MapCols](../properties/mapcols.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [Handle](../properties/handle.md), [ImageCount](../properties/imagecount.md), [KeepOnClose](../properties/keeponclose.md), [MapCols](../properties/mapcols.md), [Masked](../properties/masked.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
 
 Methods: [Detach](../methodorevents/detach.md)
 

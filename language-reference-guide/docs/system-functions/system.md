@@ -45,7 +45,7 @@ This namespace provides information about the command line expression used to st
 The command line used to start the current executable, split on unquoted space sequences into a vector of character vectors.
 
 #### CommandLine.CodeArgs
-This member is intended to ease usage of APL shell scripts. It is equivalent to [CommandLink.Args](#commandline-args) but omits everything up to and including `-script`. If Dyalog is started without `-script` then nothing is omitted.
+This member is intended to ease usage of APL shell scripts. It is equivalent to [CommandLink.Args](#commandlineargs) but omits everything up to and including `-script`. If Dyalog is started without `-script` then nothing is omitted.
 
 #### CommandLine.Full
 The full command line used to start the current executable as a simple character vector.
@@ -102,7 +102,7 @@ The interpreter's full version number as three integers indicating the major rel
 #### Executable.VersionMoniker
 A six-character shorthand for the `Version`'s first two elements together with `Unicode` and `Bits`, for example `210U64`.
 
-This is particularly useful to find out where the [Session Initialisation](../../windows-ui-guide/the-session-object/session-initialisation) looks for a **StartupSession** directory on Unix, namely in `'dyalog.',Executable.VersionMoniker,'.files'` inside the user's home directory (<code class="language-nonAPL">$HOME</code>).
+This is particularly useful to find out where the [Session Initialisation](../../../windows-ui-guide/the-session-object/session-initialisation/) looks for a **StartupSession** directory on Unix, namely in `'dyalog.',Executable.VersionMoniker,'.files'` inside the user's home directory (<code class="language-nonAPL">$HOME</code>).
 
 #### Executable.VersionNumber
 The version number as a single number, for example, `21.3`.
@@ -121,7 +121,7 @@ This is useful for comparing version numbers to deal with varying feature sets. 
 This namespace provides information about optional or versioned functionality inside the interpreter.
 
 #### Features.DDE
-Boolean indicating whether (`1`) or not (`0`) [Dynamic Data Exchange](../../interface-guide/dde/introduction/) is available.
+Boolean indicating whether (`1`) or not (`0`) [Dynamic Data Exchange](../../../interface-guide/dde/introduction/) is available.
 
 #### Features.DotNet
 Full version number of the available .NET (possibly .NET Framework) as three integers indicating the major release, minor release, and build number, for example, `4 8 9325`. If no .NET is available, this is `0 0 0`.
@@ -138,10 +138,10 @@ Boolean indicating whether (`1`) or not (`0`) an interactive session is availabl
 Examples of non-interactive interpreters include the runtime and shell script interpreters.
 
 #### Features.OLE
-Boolean indicating whether (`1`) or not (`0`) [Object Linking and Embedding](../../interface-guide/ole-client/introduction) is available.
+Boolean indicating whether (`1`) or not (`0`) [Object Linking and Embedding](../../../interface-guide/ole-client/introduction/) is available.
 
 #### Features.PCRE
-Full version of the built-in [Perl Compatible Regular Expressions](../pcre-specifications) engine, for example `10 47`.
+Full version of the built-in [Perl Compatible Regular Expressions](../../pcre-specifications/) engine, for example `10 47`.
 
 ### Host
 This namespace provides information about network identity.
@@ -238,7 +238,7 @@ This namespace provides information about the interpreter's operating system pro
 Non-negative integer [process identifier](https://en.wikipedia.org/wiki/Process_identifier) (PID) of the interpreter.
 
 #### Process.LaunchTarget
-The fully qualified path of the file or directory loaded at startup. This is set by either a workspace name on the [APL command line](../../windows-installation-and-configuration-guide/apl-command-line) or using the [LOAD configuration parameter](../../windows-installation-and-configuration-guide/configuration-parameters/load/).
+The fully qualified path of the file or directory loaded at startup. This is set by either a workspace name on the [APL command line](../../../windows-installation-and-configuration-guide/apl-command-line/) or using the [LOAD configuration parameter](../../../windows-installation-and-configuration-guide/configuration-parameters/load/).
 
 #### Process.ParentId
 Non-negative integer [process identifier](https://en.wikipedia.org/wiki/Process_identifier) of the process that launched the interpreter. Always `¯1` on Microsoft Windows.

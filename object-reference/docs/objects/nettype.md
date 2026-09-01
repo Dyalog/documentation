@@ -12,4 +12,6 @@ Parents: [Root](../objects/root.md)
 
 Children: [Bitmap](../objects/bitmap.md), [NetClient](../objects/netclient.md), [TCPSocket](../objects/tcpsocket.md), [Timer](../objects/timer.md)
 
-Properties: [BaseClass](../properties/baseclass.md)
+Properties (default order): [BaseClass](../properties/baseclass.md)
+
+Properties (alphabetical order): [BaseClass](../properties/baseclass.md)
