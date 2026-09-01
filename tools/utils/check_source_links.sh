@@ -7,14 +7,17 @@
 # catches the ../ depth and #fragment mistakes that plain greps miss.
 #
 # Usage:
-#   scripts/check-links.sh                 # gate: fail on broken links/anchors in files changed vs origin/main
-#   scripts/check-links.sh --changed REF   # ... changed vs REF (a branch or commit)
-#   scripts/check-links.sh --all           # report every broken link/anchor in the whole monorepo
+#   tools/utils/check_source_links.sh                 # gate: fail on broken links/anchors in files changed vs origin/main
+#   tools/utils/check_source_links.sh --changed REF   # ... changed vs REF (a branch or commit)
+#   tools/utils/check_source_links.sh --all           # report every broken link/anchor in the whole monorepo
 #
 # The gate mode only fails on items whose SOURCE file is part of the change set,
 # so it flags regressions without tripping over the pre-existing backlog.
 #
 # ghost is found on PATH, or via $GHOST, or built from source with cargo if absent.
+#
+# This checks the links in the markdown source. check_links.py, in this directory,
+# spiders a deployed site over HTTP instead, so it needs a deployment to test.
 set -euo pipefail
 
 GHOST_VERSION="v0.2.0"
@@ -27,8 +30,8 @@ while [ $# -gt 0 ]; do
   case "$1" in
     --all)     mode="all" ;;
     --changed) mode="changed"; base="${2:-origin/main}"; shift ;;
-    -h|--help) sed -n '2,20p' "$0"; exit 0 ;;
-    *) echo "check-links: unknown argument '$1'" >&2; exit 2 ;;
+    -h|--help) awk 'NR>1 && /^#/ {print; next} NR>1 {exit}' "$0"; exit 0 ;;
+    *) echo "check_source_links: unknown argument '$1'" >&2; exit 2 ;;
   esac
   shift
 done
@@ -39,7 +42,7 @@ if [ -z "$ghost_bin" ]; then
   if command -v ghost >/dev/null 2>&1; then
     ghost_bin="ghost"
   else
-    echo "check-links: ghost not found; building ${GHOST_VERSION} with cargo..." >&2
+    echo "check_source_links: ghost not found; building ${GHOST_VERSION} with cargo..." >&2
     cargo install --git https://github.com/xpqz/ghost --tag "$GHOST_VERSION" ghost-cli >&2
     ghost_bin="$HOME/.cargo/bin/ghost"
   fi
@@ -71,7 +74,7 @@ fi
 # Gate mode: only fail on items whose source file changed vs $base.
 changed="$(git diff --name-only --diff-filter=d "$base"...HEAD -- '*.md' '*/mkdocs.yml' mkdocs.yml 2>/dev/null || true)"
 if [ -z "$changed" ]; then
-  echo "check-links: no changed markdown files vs $base; nothing to check."
+  echo "check_source_links: no changed markdown files vs $base; nothing to check."
   exit 0
 fi
 
@@ -101,4 +104,4 @@ EOF
   exit 1
 fi
 
-echo "check-links: no broken links or anchors in changed files (vs $base)."
+echo "check_source_links: no broken links or anchors in changed files (vs $base)."
