@@ -169,7 +169,7 @@ See [Case 1: Name Matrix](#case-1-name-matrix) for an example of multiple names 
 
 `Y` must be a numeric scalar or vector, where each item is a nameclass (see [Name Classification](nc.md)).
 
-Only the nameclasses that identify names able to hold a value are valid: `1` (Label), `2` (Variable), `8` (Event), and `9` (Object). Their sub-classes (such as `2.2`, a Field) and the negatives of all of these are equally valid.
+`⎕VGET` can only report names that hold a value, so each item of `Y` must be `1` (Label), `2` (Variable), `8` (Event), or `9` (Object); any other value causes a `DOMAIN ERROR`. An item can also include a sub-class, for example `2.2` (Field), and can be negative, for example `¯2` or `¯2.2`.
 
 If any of the numbers in `Y` are negative, the result `R` is a vector of name-value pairs, one for each existing name in the source namespace with a nameclass from `Y`. Otherwise, `R` is a 2-element nested vector, where the first element is a character matrix of names and the second element is a vector of values. In both cases, `R` is suitable as an argument for [`⎕VGET`](vget.md) and [`⎕VSET`](vset.md).
 
