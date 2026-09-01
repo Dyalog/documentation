@@ -31,7 +31,7 @@ VALID = {
     "Warning": {"Warning"},
     "Legacy": {"Legacy"},
     "linux": {"Dyalog on Linux"},
-    "unix": {"Dyalog on UNIX", "Dyalog on AIX"},
+    "unix": {"Dyalog on Unix", "Dyalog on AIX"},
     "macos": {"Dyalog on macOS"},
     "windows": {"Dyalog on Microsoft Windows"},
 }
