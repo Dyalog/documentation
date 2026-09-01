@@ -4,7 +4,7 @@ The tty version of Dyalog APL comprises of four different types of window:
 
 ## The Session window
 
-There is one and only one session window. It is always present (although may be obscured by other windows. It cannot be resized from within APL (the terminal window or PuTTY session can be resized, and APL will respond to the resize event. Note that the contents of the window, including the status bar, may not correctly update until input is next received by the interpreter).
+There is one and only one session window. It is always present (although may be obscured by other windows. It cannot be resized from within APL (the terminal window or PuTTY session can be resized, and APL will respond to the resize event. The contents of the window, including the status bar, may not correctly update until input is next received by the interpreter).
 
 ## Edit windows
 

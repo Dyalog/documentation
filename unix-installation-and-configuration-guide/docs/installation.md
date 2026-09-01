@@ -2,7 +2,7 @@
 
 This manual covers the installation of the non-GUI version of Dyalog APL on AIX, and on Linux distributions which use either .rpm or .deb files for installing software. If you are using a Linux distribution which uses some other method, or you wish to have a non-default installation, then there are some suggestions about how such an installation might be completed.
 
-Dyalog APL version {{ version_majmin }} is supplied in either 32 or 64 bit versions, and in either Classic or Unicode editions. The installation procedure for Dyalog APL is the same in each case. Note that the 64-bit versions of Dyalog APL will only run on a 64-bit operating systems; the 32-bit versions of Dyalog APL will run on both 32 and 64 bit operating systems.
+Dyalog APL version {{ version_majmin }} is supplied in either 32 or 64 bit versions, and in either Classic or Unicode editions. The installation procedure for Dyalog APL is the same in each case. The 64-bit versions of Dyalog APL will only run on a 64-bit operating systems; the 32-bit versions of Dyalog APL will run on both 32 and 64 bit operating systems.
 
 It is assumed that in all cases the installation image has been downloaded into /tmp on the local machine.
 
@@ -28,7 +28,7 @@ whereas on a Linux distribution the equivalent version would be installed in
 
 This naming convention began with Version 12.0, and is planned to continue into the future. This ensures that all versions and releases of Dyalog APL can be installed in parallel.
 
-As part of installing Dyalog on Linux (including Pi) the script /usr/bin/dyalog is created; this is a copy of the $DYALOG/mapl script and can be used to start Dyalog APL. Note that this script will start the most recently installed version of Dyalog APL. This script is used in the target of the Dyalog APL icon on Linux desktops. If preferable, Dyalog can be started by calling the script mapl in the appropriate Dyalog installation directory.
+As part of installing Dyalog on Linux (including Pi) the script /usr/bin/dyalog is created; this is a copy of the $DYALOG/mapl script and can be used to start Dyalog APL. This script will start the most recently installed version of Dyalog APL. This script is used in the target of the Dyalog APL icon on Linux desktops. If preferable, Dyalog can be started by calling the script mapl in the appropriate Dyalog installation directory.
 
 When supplying updates or fixes, Dyalog issues a full installation image; this means that any file under the installation subdirectory may be overwritten. It is therefore strongly recommended that users do not alter issued files, as those changes could be lost if an update is installed.
 
@@ -51,7 +51,7 @@ Dyalog APL is now installed. To run as any user, type
 $ /opt/mdyalog/{{ version_majmin }}/64/unicode/p6/mapl
 ```
 
-!!! note
+!!! Info "Information"
     Version {{ version_majmin }} is compiled on AIX6.1.
 
 ## Installing on an RPM-based Linux Distribution
@@ -69,7 +69,7 @@ or
 $ /opt/mdyalog/15.0/64/unicode/mapl
 ```
 
-!!! note
+!!! Info "Information"
     - It may be necessary to use the --force flag or equivalent if an earlier version of Dyalog APL is to be installed on the same server as a later version. This is safe since the versions have no files in common.
     - It has been noticed that in some circumstances the 32-bit installs fail on 64-bit operating systems due to a missing ncurses package. However, it appears that that package is indeed installed. What is required however is the 32-bit version: once installed, Dyalog APL will then install.
 
@@ -87,7 +87,7 @@ or
 $ /opt/mdyalog/15.0/64/unicode/mapl
 ```
 
-!!! note
+!!! Info "Information"
     - It may be necessary to use the --force flag or equivalent if an earlier version of Dyalog APL is to be installed on the same server as a later version. This is safe since the versions have no files in common.
     - If dpkg generates dependency errors, run  `apt-get install -f` (as root)
     - It has been noticed that in some circumstances the 32-bit installs fail on 64-bit operating systems due to a missing ncurses package. However, it appears that that package is indeed installed. What is required however is the 32-bit version: once installed, Dyalog APL will then install.
@@ -176,4 +176,4 @@ See https://packages.dyalog.com/ for details of updating on the Pi.
 
 ### Upgrading from an earlier version
 
-Newer versions of Dyalog APL will be placed in new subdirectories, rather than in the same location as the currently installed versions. This means that both old and new versions can be run in parallel, but extra disk space in /opt will be required to cater for the multiple releases. Note however that once a workspace has been saved in a later version of Dyalog APL, it is most likely that it will not be possible to `)LOAD` or `)COPY` the workspace by an earlier version. Once happy with the new version, then de-install the earlier version.
+Newer versions of Dyalog APL will be placed in new subdirectories, rather than in the same location as the currently installed versions. This means that both old and new versions can be run in parallel, but extra disk space in /opt will be required to cater for the multiple releases. However, once a workspace has been saved in a later version of Dyalog APL, it is most likely that it will not be possible to `)LOAD` or `)COPY` the workspace by an earlier version. Once happy with the new version, then de-install the earlier version.

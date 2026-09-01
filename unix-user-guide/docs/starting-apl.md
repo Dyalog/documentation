@@ -11,7 +11,7 @@ The mapl script is supplied so that the user can start to use Dyalog APL immedia
 
 The startup script usually sets a number of environment variables, and then calls the interpreter with one or more of its parameters. Although all the examples are written using the Korn shell, any shell can be used.
 
-Note that under Microsoft Windows parameters appear *after* the name of the executable; this is not supported under UNIX, where values must be passed as environment variables.
+Under Microsoft Windows parameters appear *after* the name of the executable; this is not supported under UNIX, where values must be passed as environment variables.
 
 The parameters are listed in the table below; the more frequently used environment variables are included in the following section.
 
@@ -20,11 +20,11 @@ Table: Parameters for the mapl or dyalog script:
 |Parameter|Purpose|
 |---|---|
 |-tty|Start APL using the terminal development environment. This is not necessary unless the wine (-wine) or MainWin (-mainwin) versions are installed too.|
-|-c -rt -server|Causes dyalog.rt (the server version) to be started. This parameter is for backwards compatibility; the use of the -rt or -server parameter is recommended. See also the Note at the bottom of this table.|
+|-c -rt -server|Causes dyalog.rt (the server version) to be started. This parameter is for backwards compatibility; the use of the -rt or -server parameter is recommended. See also the information below this table.|
 |-*|Any other parameter that starts with a "-" will be passed to the interpreter; all parameters that start with a "-" will be passed before any parameters that do not start with a "-".|
 |*|This is usually the name of the workspace that is to be loaded when the interpreter is started. Unless the "-x" flag is passed to the interpreter, the latent expression in the workspace will be executed once the workspace has been loaded.|
 
-!!! note
+!!! Info "Information"
     The -c parameter has different uses depending on whether it is passed to the mapl script, or to the dyalog executable.
 
 Table: Parameters for the Dyalog interpreter:
@@ -33,7 +33,7 @@ Table: Parameters for the Dyalog interpreter:
 |---|---|
 |-a|Start in "User mode". If not present, then APL will start in "Prog(rammer) mode". See the section on I/O for further details.|
 |-b|Suppress the banner in the session.|
-|-c|Comment: the "-c" and anything following it will be treated as a comment, but will show up in a long process listing. By adding a suitable comment the user or system administrator can uniquely identify the individual APL processes. See also the Note above this table.|
+|-c|Comment: the "-c" and anything following it will be treated as a comment, but will show up in a long process listing. By adding a suitable comment the user or system administrator can uniquely identify the individual APL processes. See also the information above this table.|
 |-Dw|Check workspace integrity on return to session input.|
 |-DW|Check workspace integrity after every line of APL (application will run slowly as a result)|
 |-DK|Log session keystrokes in (binary) file **./apllog** .|

@@ -6,7 +6,7 @@
 
 It is necessary to specify the complete name of the file containing the shared library, no extension is added by Dyalog APL.
 
-When developing code using `⎕NA` it may be useful to set the environment variable ERRORONEXTERNALEXCEPTION= 1. When this is set, Dyalog APL will generate an event 91, `EXTERNAL DLL EXCEPTION` rather than a syserror should a call on a functions defined by `⎕NA` be ill-specified. It should be noted however that the workspace may become corrupt, so it is not recommended to run in production with this variable set.
+When developing code using `⎕NA` it may be useful to set the environment variable ERRORONEXTERNALEXCEPTION= 1. When this is set, Dyalog APL will generate an event 91, `EXTERNAL DLL EXCEPTION` rather than a syserror should a call on a functions defined by `⎕NA` be ill-specified. However, the workspace may become corrupt, so it is not recommended to run in production with this variable set.
 
 ## System Shared Libraries
 
@@ -94,8 +94,7 @@ char *getenv(const char *name)
 4G	
 ```
 
-!!! note
-    The call to STRNCPY has been defined to return a vector of integers so that the result can be passed directly to `⎕UCS`.
+The call to STRNCPY has been defined to return a vector of integers so that the result can be passed directly to `⎕UCS`.
 
 ## geterrno
 
