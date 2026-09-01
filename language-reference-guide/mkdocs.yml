@@ -272,6 +272,7 @@ nav:
           - Stencil: primitive-operators/stencil.md
           - Variant: primitive-operators/variant.md
   - Other Syntax:
+          - Other Syntax: other-syntax/index.md
           - Abort: other-syntax/abort.md
           - Assignment:
               - Assignment: other-syntax/assignment/index.md

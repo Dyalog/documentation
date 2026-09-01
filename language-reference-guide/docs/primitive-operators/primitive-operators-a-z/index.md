@@ -6,13 +6,8 @@ search:
 
 |Operator|Glyph|Glyph Name|Syntax|
 |---|---|---|---|
-|[Assignment Indexed Modified](../../other-syntax/assignment/assignment-indexed-modified.md)|`[]←`|&nbsp;|`{R}←X[I]f←Y`|
-|[Assignment Modified](../../other-syntax/assignment/assignment-modified.md)|`←`|Left Arrow|`{R}←Xf←Y`|
-|[Assignment Selective Modified](../../other-syntax/assignment/assignment-selective-modified.md)|`←`|Left Arrow|`{R}←(EXP X)f←Y`|
 |[At](../at.md)|`@`|At|`R←{X}(f@g)Y`|
 |[Atop](../atop.md)|`⍤`|Jot Diaeresis|`{R}←{X}f⍤gY`|
-|[Axis with Dyadic Operand](../../other-syntax/axis/axis-with-dyadic-operand.md)|`[]`|&nbsp;|`R←Xf[B]Y`|
-|[Axis with Monadic Operand](../../other-syntax/axis/axis-with-monadic-operand.md)|`[]`|&nbsp;|`R←f[B]Y`|
 |[Behind](../behind.md)|`⍛`|Jot Underbar|`{R}←{X}f⍛gY`|
 |[Beside](../beside.md)|`∘`|Jot|`{R}←{X}f∘gY`|
 |[Bind](../bind.md)|`∘`|Jot|`{R}←A∘fY{R}←(f∘B)Y`|
