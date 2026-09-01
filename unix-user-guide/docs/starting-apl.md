@@ -11,7 +11,7 @@ The mapl script is supplied so that the user can start to use Dyalog APL immedia
 
 The startup script usually sets a number of environment variables, and then calls the interpreter with one or more of its parameters. Although all the examples are written using the Korn shell, any shell can be used.
 
-Under Microsoft Windows parameters appear *after* the name of the executable; this is not supported under UNIX, where values must be passed as environment variables.
+Under Microsoft Windows, parameters appear *after* the name of the executable; this is not supported under Unix, where values must be passed as environment variables.
 
 The parameters are listed in the table below; the more frequently used environment variables are included in the following section.
 
@@ -25,7 +25,7 @@ Table: Parameters for the mapl or dyalog script:
 |*|This is usually the name of the workspace that is to be loaded when the interpreter is started. Unless the "-x" flag is passed to the interpreter, the latent expression in the workspace will be executed once the workspace has been loaded.|
 
 !!! Info "Information"
-    The -c parameter has different uses depending on whether it is passed to the mapl script, or to the dyalog executable.
+    The -c parameter has different uses depending on whether it is passed to the mapl script or to the dyalog executable.
 
 Table: Parameters for the Dyalog interpreter:
 

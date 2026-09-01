@@ -40,12 +40,9 @@ Table: Commonly used Variables
 |`WSPATH`|Defines the search path for both workspaces and Auxiliary processors.<p/><p/>If unset, there is no default value. Workspaces and APs that are not on the `WSPATH` can be accessed using absolute or relative pathnames.|
 
 !!! Info "Information"
-    Currently the value of the **Enable_CEF** parameter defined in the Windows Registry or in a
-    Configuration file is ignored. Only the value set in the command line or as an
-    environment variable is honoured. If not defined in this way, the default value
-    is used.
+    The value of the **Enable_CEF** parameter defined in the Microsoft Windows Registry or in a configuration file is ignored; only the value set in the command line or as an environment variable is honoured. If not defined in this way, the default value is used.
 
-    Under macOS and Linux, if the configuration parameter **ENABLE_CEF** is 1, Auxiliary Processors cannot be used (they hang on error). The default value is 1 unless you are not running under a desktop (for example, you are running Dyalog in a PuTTY session when the default is 0).
+Under macOS and Linux, if the configuration parameter **ENABLE_CEF** is `1`, Auxiliary Processors cannot be used (they hang on error). The default value is `1` unless you are not running under a desktop (for example, you are running Dyalog in a PuTTY session when the default is `0`).
 
 Table: Default workspace values
 

@@ -23,8 +23,8 @@ Differences in behaviour between operating systems are identified as follows:
 !!! linux "Dyalog on Linux"
     Behaviour specific to Dyalog on Linux.
 	
-!!! unix "Dyalog on UNIX"
-    Behaviour specific to Dyalog on UNIX – unless otherwise specified, this means AIX, Linux (including Raspberry Pi OS), and macOS.
+!!! unix "Dyalog on Unix"
+    Behaviour specific to Dyalog on Unix – unless otherwise specified, this means AIX, Linux (including Raspberry Pi OS), and macOS.
 	
 !!! macos "Dyalog on macOS"
     Behaviour specific to Dyalog on macOS.

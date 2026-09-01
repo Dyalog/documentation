@@ -2,7 +2,7 @@
 
 This manual covers the installation of the non-GUI version of Dyalog APL on AIX, and on Linux distributions which use either .rpm or .deb files for installing software. If you are using a Linux distribution which uses some other method, or you wish to have a non-default installation, then there are some suggestions about how such an installation might be completed.
 
-Dyalog APL version {{ version_majmin }} is supplied in either 32 or 64 bit versions, and in either Classic or Unicode editions. The installation procedure for Dyalog APL is the same in each case. The 64-bit versions of Dyalog APL will only run on a 64-bit operating systems; the 32-bit versions of Dyalog APL will run on both 32 and 64 bit operating systems.
+Dyalog v{{ version_majmin }} is supplied in either 32 or 64 bit versions, and in either Classic or Unicode editions. The installation procedure for Dyalog is the same in each case. The 64-bit versions of Dyalog will only run on a 64-bit operating systems; the 32-bit versions of Dyalog APL will run on both 32 and 64 bit operating systems.
 
 It is assumed that in all cases the installation image has been downloaded into /tmp on the local machine.
 
