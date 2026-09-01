@@ -24,7 +24,7 @@ There are however other ways in which the methods, properties and events provide
 
 The first approach is to provide APL with the equivalent information using the SetPropertyInfo and SetMethodInfo methods of the OLEClient object. Corresponding mechanisms are provided for defining Events.
 
-The last resort is to rely on a secondary form of late binding[^1] in which APL requires only that the COM object confirms the existence of a given name as one that it exports, and then accesses it using a general mechanism. For further information, see [Using OLE Objects without Type Information](ole-objects-without-type-information.md).
+The last resort is to rely on a secondary form of late binding in which APL requires only that the COM object confirms the existence of a given name as one that it exports, and then accesses it using a general mechanism. Prior to Version 14.0, this was the only form of late binding provided by Dyalog APL. For further information, see [Using OLE Objects without Type Information](ole-objects-without-type-information.md).
 
 ## Identifying Properties, Methods and Events
 
@@ -215,5 +215,3 @@ C:\PROGRA~1\COMMON~1\MICROS~1\OFFICE12\dao360.chm
 ```
 
 For Office 2000 applications, you will need to install the MSDN to obtain the appropriate help files.
-
-[^1]: Prior to Version 14.0, this was the only form of late binding provided by Dyalog APL.

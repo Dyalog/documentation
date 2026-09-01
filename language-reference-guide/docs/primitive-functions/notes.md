@@ -32,19 +32,17 @@ Table: Implicit arguments { #implicitargs }
 |------|-----------------|-----------------------|
 |`⎕CT`, `⎕DCT`| [`⌈`](ceiling.md) [`⌊`](floor.md) [`∪`](unique.md) [`≠`](unique-mask.md) |[`~`](without.md) [`<`](less-than.md) [`≤`](less-than-or-equal-to.md) [`=`](equal-to.md) [`≥`](greater-than-or-equal-to.md) [`>`](greater-than.md) [`≠`](not-equal-to.md) [`≡`](match.md) [`≢`](not-match.md) [`⍳`](index-of.md) [`∊`](membership.md) [`∪`](union.md) [`∩`](intersection.md) [`⍷`](find.md) [`|`](magnitude.md) [`∨`](greatest-common-divisor-or.md) [`∧`](lowest-common-multiple-and.md)|
 |`⎕DIV`       | [`÷`](reciprocal.md)        | [`÷`](divide.md)|
-|`⎕FR`<sup>1</sup>  | [`÷`](reciprocal.md) [`*`](exponential.md) [`⍟`](natural-logarithm.md) [`!`](factorial.md) [`○`](pi-times.md) [`⌹`](matrix-inverse.md)| [`+`](plus.md) [`-`](minus.md) [`×`](times.md) [`÷`](divide.md) [`*`](power.md) [`⍟`](logarithm.md) [`|`](magnitude.md) [`!`](binomial.md) [`○`](circular-functions.md) [`∨`](greatest-common-divisor-or.md) [`∧`](lowest-common-multiple-and.md) [`⊥`](decode.md) [`⊤`](encode.md) [`⌹`](matrix-divide.md)|
-|`⎕FR`<sup>2</sup>  | [`⌈`](ceiling.md) [`⌊`](floor.md) [`∪`](unique.md)| [`~`](without.md) [`<`](less-than.md) [`≤`](less-than-or-equal-to.md) [`=`](equal-to.md) [`≥`](greater-than-or-equal-to.md) [`>`](greater-than.md) [`≠`](not-equal-to.md) [`≡`](match.md) [`≢`](not-match.md) [`⍳`](index-of.md) [`∊`](membership.md) [`∪`](union.md) [`∩`](intersection.md) [`⍷`](find.md)|
-|`⎕FR`<sup>3</sup>  | [`⍒`](grade-down.md) [`⍋`](grade-up.md)| [`⌈`](maximum.md) [`⌊`](minimum.md) [`⍒`](dyadic-grade-down.md) [`⍋`](dyadic-grade-up.md) [`⍸`](interval-index.md)|
+|`⎕FR`[^1]  | [`÷`](reciprocal.md) [`*`](exponential.md) [`⍟`](natural-logarithm.md) [`!`](factorial.md) [`○`](pi-times.md) [`⌹`](matrix-inverse.md)| [`+`](plus.md) [`-`](minus.md) [`×`](times.md) [`÷`](divide.md) [`*`](power.md) [`⍟`](logarithm.md) [`|`](magnitude.md) [`!`](binomial.md) [`○`](circular-functions.md) [`∨`](greatest-common-divisor-or.md) [`∧`](lowest-common-multiple-and.md) [`⊥`](decode.md) [`⊤`](encode.md) [`⌹`](matrix-divide.md)|
+|`⎕FR`[^2]  | [`⌈`](ceiling.md) [`⌊`](floor.md) [`∪`](unique.md)| [`~`](without.md) [`<`](less-than.md) [`≤`](less-than-or-equal-to.md) [`=`](equal-to.md) [`≥`](greater-than-or-equal-to.md) [`>`](greater-than.md) [`≠`](not-equal-to.md) [`≡`](match.md) [`≢`](not-match.md) [`⍳`](index-of.md) [`∊`](membership.md) [`∪`](union.md) [`∩`](intersection.md) [`⍷`](find.md)|
+|`⎕FR`[^3]  | [`⍒`](grade-down.md) [`⍋`](grade-up.md)| [`⌈`](maximum.md) [`⌊`](minimum.md) [`⍒`](dyadic-grade-down.md) [`⍋`](dyadic-grade-up.md) [`⍸`](interval-index.md)|
 |`⎕IO`        | [`⍳`](index-generator.md) [`?`](roll.md) [`⍒`](grade-down.md) [`⍋`](grade-up.md) [`⍸`](where.md)| [`⍳`](index-of.md) [`?`](deal.md) [`⍒`](dyadic-grade-down.md) [`⍋`](dyadic-grade-up.md) [`⍉`](dyadic-transpose.md) [`⊃`](pick.md) [`⌷`](index-function/index.md) [`⍸`](interval-index.md)|
 |`⎕ML`        | [`∊`](enlist.md) [`↑`](mix.md) [`⊃`](first.md) [`≡`](depth.md)| [`⊂`](partitioned-enclose.md)|
 |`⎕PP`        | [`⍕`](format.md)|  |
 |`⎕RL`        | [`?`](roll.md)| [`?`](deal.md)|
 
-In [](#implicitargs):
-
-- `⎕FR`<sup>1</sup> indicates functions that compute real numbers and whose precision depends on `⎕FR`
-- `⎕FR`<sup>2</sup> indicates functions that perform tolerant comparisons
-- `⎕FR`<sup>3</sup> indicates functions that perform intolerant comparisons.
+[^1]: Functions that compute real numbers and whose precision depends on `⎕FR`.
+[^2]: Functions that perform tolerant comparisons.
+[^3]: Functions that perform intolerant comparisons.
 
 !!! Info "Information"
     Tolerant comparisons depend on `⎕FR` to select which of `⎕CT` and `⎕DCT` is used; `⎕FR` also determines the precision of the comparison computation that can affect results. However, even primitives involving intolerant comparison (including the tolerant ones with all comparison tolerances set to `0`) can depend on `⎕FR` if the argument contains DECFs. This is because DECFs must be converted to doubles for comparison. If two DECFs are different but correspond to the same double, then they will be treated as intolerantly unequal when `⎕FR` is `1287` but equal when it is `645`.

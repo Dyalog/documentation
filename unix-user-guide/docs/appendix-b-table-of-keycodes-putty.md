@@ -58,7 +58,7 @@ Keycodes, their common keystrokes, and the keystrokes specific to the PuTTY term
 |RS     |Right Screen       |Shift+Right          |Ctrl+PgDn           |
 |RT     |Repeat (Do)        |Cmd d                |Shift+Ctrl+Down     |
 |SC     |Search             |Cmd s                |&nbsp;              |
-|SR     |Redraw Screen      |Ctrl+l <sup>(1)</sup>|&nbsp;              |
+|SR     |Redraw Screen      |Ctrl+l [^1]|&nbsp;              |
 |TB     |Tab Window         |Cmd Tab              |Ctrl+Tab            |
 |TC     |Trace              |Cmd Enter            |Ctrl+Enter          |
 |TG     |Tag                |Cmd t                |&nbsp;              |
@@ -69,6 +69,4 @@ Keycodes, their common keystrokes, and the keystrokes specific to the PuTTY term
 |US     |Up Screen          |Shift+Up             |PgUp                |
 |ZM     |Zoom               |Cmd z                |Shift+Ctrl+PgUp     |
 
-## Notes
-
-- If you are using PuTTY or another emulator that uses the Dyalog Unicode IME, it will be necessary to swap to a non-Dyalog APL keyboard before hitting Ctrl-l; hitting Ctrl-l while in a Dyalog APL keyboard will generate a Quad symbol.
+[^1]: If you are using PuTTY or another emulator that uses the Dyalog Unicode IME, it will be necessary to swap to a non-Dyalog APL keyboard before hitting Ctrl-l; hitting Ctrl-l while in a Dyalog APL keyboard will generate a Quad symbol.
