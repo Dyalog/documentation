@@ -106,7 +106,7 @@ To distribute an out-of-process COM Server, you need to supply and install the f
 4. a configuration file (optional)
 5. whatever additional files that may be required by your application
 
-To install an out-of-process COM Server you must set up the appropriate Windows registry entries. See Interface Guide for details.
+To install an out-of-process COM Server you must [set up the appropriate Windows registry entries](../../interface-guide/ole-server/out-of-process-ole-servers#registry-entries).
 
 ## In-process COM Server
 

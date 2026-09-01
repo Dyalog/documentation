@@ -22,7 +22,7 @@ The *Monitor* tab applies only to a function and displays the result of `⎕MONI
 
 ## COM Properties Tab
 
-The *COM Properties* tab applies only to a function in an OLEServer or ActiveXControl namespace. The tab is used to define arguments and data types for an exported Method or Property. For further information, see *Interface Guide*.
+The *COM Properties* tab applies only to a function in an OLEServer or ActiveXControl namespace. The tab is used to [define arguments and data types for an exported Method or Property](../../interface-guide/ole-server/introduction#writing-an-apl-ole-server).
 
 ![](img/object-properties-com-properties-tab.png)
 

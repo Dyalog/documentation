@@ -1,6 +1,6 @@
 # APL Line Editor
 
-The APL Line Editor described herein is included for completeness and for adherence to the ISO APL standard. Dyalog recommends the use of the more powerful Editor and Tracer in preference to the APL Line Editor. Full details of these facilities can be found in the UI Guides for your version of Dyalog APL, as well as in the descriptions of `⎕ED` and `)ED` which appear in the *Dyalog APL Language Reference Guide.*
+The APL Line Editor described herein is included for completeness and for adherence to the ISO APL standard. Dyalog recommends the use of the more powerful Editor and Tracer in preference to the APL Line Editor. Full details of these facilities can be found in the UI Guides for your version of Dyalog APL, as well as in the descriptions of [`⎕ED`](../../../language-reference-guide/system-functions/ed) and [`)ED`](../../../language-reference-guide/system-commands/ed).
 
 Using the APL Line Editor, functions and operators are defined by entering Definition Mode. This mode is opened and closed by the Del symbol, `∇`. Within this mode, all evaluation of input is deferred. The standard APL line editor (described below) is used to create and edit operations within definition mode.
 

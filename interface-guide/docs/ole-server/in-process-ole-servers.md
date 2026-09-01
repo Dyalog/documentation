@@ -14,7 +14,7 @@ If an in-process OLE Server, that is bound with the run-time Dyalog APL DLL gene
 
 If an in-process OLE Server, that is bound with the development Dyalog APL DLL generates an untrapped error, the APL Session will appear and you can use it to debug the problem and continue. Note that at this point, the development DLL will load your Session file so that all of your session tools are available during debugging. If your Session file runs any initialisation code that references external files, remember that this code will be executed in the current working directory of the host process.
 
-For further details, see Dyalog for Microsoft Windows Installation and Configuration Guide.
+For further details, see [COM Objects and the Dyalog APL DLL](../../../windows-installation-and-configuration-guide/com-objects-and-the-dyalog-dll).
 
 ## Registering and Unregistering In-Process OLE Servers
 

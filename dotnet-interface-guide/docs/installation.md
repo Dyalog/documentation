@@ -90,7 +90,7 @@ The .NET interface is enabled when the DYALOG_NETCORE configuration parameter is
 !!! Info "Information"
     The .NET interface and the .NET Framework interface cannot be enabled simultaneously.
 
-For information on how to set configuration parameters, see the appropriate _Dyalog for &lt;operating system&gt;  Installation and Configuration Guide_. To check the value of DYALOG_NETCORE, enter the following  when in a Session:
+For information on how to set configuration parameters, see the appropriate [Windows](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters/) or [UNIX](../../unix-installation-and-configuration-guide/configuration-parameters/configuration-parameters/) _Installation and Configuration Guide_. To check the value of DYALOG_NETCORE, enter the following  when in a Session:
 ```apl
 +2 ⎕NQ'.' 'GetEnvironment' 'DYALOG_NETCORE'
 ```
