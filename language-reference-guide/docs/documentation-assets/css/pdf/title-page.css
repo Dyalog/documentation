@@ -1,0 +1,232 @@
+@page title {
+    size: 192mm 252mm;
+    margin: 0;
+    background-color: white;
+
+    @top-left {
+        content: none;
+    }
+
+    @top-center {
+        content: none;
+    }
+
+    @top-right {
+        content: none;
+    }
+
+    @bottom-left {
+        content: none !important;
+    }
+
+    /* Override the build-info */
+    @bottom-center {
+        content: none;
+    }
+
+    @bottom-right {
+        content: none !important;
+    }
+
+    /* Override the page number */
+}
+
+/* Override any automatic numbering for title page headings */
+.title-page h1::before,
+.title-page h2::before {
+    content: none !important;
+}
+
+/* Title page container */
+.title-page {
+    page: title;
+    height: 252mm;
+    padding: 25mm;
+    padding-top: 35mm;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Header group container */
+.title-page .header-group {
+    float: right;
+    clear: right;
+    text-align: right;
+    margin: 0;
+    margin-right: -15mm;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+}
+
+/* Main title */
+.title-page h1 {
+    font-size: 20pt;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    display: block;
+    white-space: nowrap;
+}
+
+/* Subtitle */
+.title-page h2 {
+    font-size: 20pt;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    display: block;
+    white-space: nowrap;
+}
+
+/* Version text */
+.title-page .version {
+    font-size: 18pt;
+    margin-top: 0.75cm;
+    float: right;
+    clear: right;
+    text-align: right;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+    margin-right: -15mm;
+}
+
+/* Version number color */
+.title-page .version-number {
+    color: #FF6A13;
+}
+
+/* Background image */
+.title-background {
+    position: absolute;
+    left: -25mm;
+    right: -25mm;
+    top: 72mm;
+    height: 108mm;
+    background-image: url("../img/dyalog-20_keyImage_4536x2576_compressed.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -3;
+}
+
+/* White stripes */
+.title-stripe-top {
+    position: absolute;
+    left: -25mm;
+    right: -25mm;
+    top: 75mm;
+    height: 0.4mm;
+    background-color: #FFFFFF;
+    opacity: 1;
+    z-index: -2;
+}
+
+.title-stripe-bottom {
+    position: absolute;
+    left: -25mm;
+    right: -25mm;
+    top: 176.7mm;
+    height: 0.4mm;
+    background-color: #FFFFFF;
+    opacity: 1;
+    z-index: -2;
+}
+
+/* Bottom content container */
+.title-page .bottom-content {
+    position: absolute;
+    /* Back to absolute to keep it on title page only */
+    right: 5mm;
+    bottom: 15mm;
+    z-index: 1;
+    text-align: center;
+    page: title;
+    /* Explicitly bind to title page */
+}
+
+/* Bottom Dyalog logo */
+.title-page .doc-dyalog {
+    width: 50mm;
+    display: block;
+    margin-bottom: 0;
+}
+
+/* Tagline text */
+.title-page .tagline {
+    font-weight: bold;
+    white-space: nowrap;
+    font-family: 'Carlito', Arial, sans-serif;
+    font-size: 14pt;
+    margin: 0;
+    padding: 0;
+}
+
+/* Copyright page styling */
+@page copyright {
+    size: 192mm 252mm;
+    margin: 25mm;
+
+    @top-left {
+        content: none;
+    }
+
+    @top-center {
+        content: none;
+    }
+
+    @top-right {
+        content: none;
+    }
+
+    @bottom-left {
+        content: none;
+    }
+
+    @bottom-center {
+        content: none;
+    }
+
+    @bottom-right {
+        content: none;
+    }
+
+    /* Override running headers/footers explicitly */
+    @bottom-right {
+        content: '' !important;
+    }
+
+    /* Override page numbers */
+    @bottom-left {
+        content: '' !important;
+    }
+
+    /* Override build info */
+    @top-right {
+        content: '' !important;
+    }
+
+    /* Override running title */
+}
+
+.copyright-section {
+    page: copyright;
+    width: 100%;
+    page-break-after: avoid;
+    /* Override the default section break behavior */
+}
+
+.copyright-page {
+    font-size: 11pt;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.copyright-page p {
+    width: 100%;
+    margin: 1em 0;
+    white-space: normal;
+}

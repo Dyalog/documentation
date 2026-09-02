@@ -13,7 +13,7 @@ Dyalog APL places no implicit restriction on workspace size, and the virtual mem
 
 Note that the memory used for the workspace must be *contiguous* .
 
-32-bit versions of Dyalog APL are typically limited to between 1.3GiB to 1.9GiB under Windows, and 1.9GiB under UNIX. These are operating system limitations imposed on 32-bit processes rather than ones imposed by Dyalog APL, and are affected by the number and size of DLLs/shared libraries that are loaded into the process space.
+32-bit versions of Dyalog APL are typically limited to between 1.3GiB to 1.9GiB under Windows, and 1.9GiB under Unix. These are operating system limitations imposed on 32-bit processes rather than ones imposed by Dyalog APL, and are affected by the number and size of DLLs/shared libraries that are loaded into the process space.
 
 64-bit versions of Dyalog APL have no such limitations; Dyalog has used workspaces of 96GiB on various platforms.
 

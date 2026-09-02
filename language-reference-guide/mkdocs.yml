@@ -506,7 +506,7 @@ nav:
           - 'PROPS: List Properties': system-commands/props.md
           - 'RESET: Reset State Indicator': system-commands/reset.md
           - 'SAVE: Save Workspace': system-commands/save.md
-          - 'SH: Execute UNIX Command': system-commands/sh.md
+          - 'SH: Execute Unix Command': system-commands/sh.md
           - 'SI: State Indicator': system-commands/si.md
           - 'SIC: Clear State Indicator': system-commands/sic.md
           - 'SINL: State Indicator Name List': system-commands/sinl.md

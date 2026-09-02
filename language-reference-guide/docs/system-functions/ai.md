@@ -22,7 +22,7 @@ Elements beyond 4 are not defined but reserved.
 ```
 
 !!! unix "Dyalog on Unix"
-    Under UNIX, `⎕AI[1]` is the effective UID of the account whereas [`⎕AN`](./an.md) returns the real name.
+    Under Unix, `⎕AI[1]` is the effective UID of the account whereas [`⎕AN`](./an.md) returns the real name.
 
 !!! windows "Dyalog on Microsoft Windows"
     Under Microsoft Windows, `⎕AI[1]` is the aplnid (network ID from configuration dialog box).

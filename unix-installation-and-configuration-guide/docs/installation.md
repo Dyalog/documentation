@@ -94,9 +94,9 @@ $ /opt/mdyalog/15.0/64/unicode/mapl
 
 ## Installing in a non-default location
 
-It is possible to install Dyalog APL for UNIX in non-default locations, without the need for root privileges.
+It is possible to install Dyalog APL for Unix in non-default locations, without the need for root privileges.
 
-For all UNIXes,
+For all Unixes,
 
 ```other
 cd <directory under which I wish to install Dyalog APL>
@@ -118,7 +118,7 @@ For .rpm based Linux distributions
 ```other
 rpm2cpio installation_image.rpm | cpio -icdvum
 ```
-For all UNIXes:
+For all Unixes:
 ```other
 find opt/mdyalog -name make_scripts -exec {} \;
 ```
