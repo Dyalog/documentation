@@ -1,4 +1,4 @@
-# `⎕NA` under UNIX
+# `⎕NA` under Unix
 
 `⎕NA` is fully supported under all supported non-Windows platforms; the Conga communications package for example is a shared library on all platforms.
 

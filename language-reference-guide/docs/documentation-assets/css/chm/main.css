@@ -1,0 +1,701 @@
+.toolbar-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-image: url('../img/trace-theme-sprite-16.png');
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+/* Define the APL class to use the installed 'APL385 Unicode' font */
+.language-APL {
+    font-family: 'APL385 Unicode' !important;
+    line-height: 1.2em !important;
+}
+
+/* Style code elements */
+code,
+td.Dyalog {
+    font-family: 'APL385 Unicode';
+}
+
+/* Style the right-aligned command */
+.command {
+    float: right;
+    /* Align to the right */
+    color: black;
+    font-family: 'APL385 Unicode', 'Courier New', monospace;
+    /* Fallback font stack */
+}
+
+h2.example {
+    font-size: 1.2em;
+}
+
+.md-logo>img {
+    width: 7rem !important;
+    height: 1.2rem !important;
+}
+
+body {
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+    font-size: 10pt;
+    margin-left: 6pt;
+}
+
+@media screen and (max-width: 76.1875em) {
+    .md-logo>img {
+        width: 10rem !important;
+        height: 1.8rem !important;
+    }
+}
+
+/* Custom colors */
+:root {
+    --md-primary-fg-color: #ED7F00;
+    --md-primary-fg-color--dark: #563336;
+    --md-default-bg-color: #F8F8F8;
+}
+
+/* Reduce vertical table spacing, and put in a faint cell border */
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #eee;
+    padding: 4px !important;
+    text-align: left;
+}
+
+/* Style the heading container for the Language Reference */
+.heading {
+    overflow: hidden;
+    /* Clearfix for floated children */
+    background-color: #d9d9d9;
+    border: solid 1px #000000;
+    font-size: 14pt;
+    padding-left: 5pt;
+}
+
+/* Style the left-aligned name */
+.name {
+    float: left;
+    /* Align to the left */
+    color: black;
+}
+
+.right {
+    text-align: right;
+    color: black;
+}
+
+/* Compress lists a bit vertically */
+li {
+    margin-bottom: 0px !important;
+}
+
+pre+pre>button,
+pre+hr {
+    display: none !important;
+}
+
+pre>code {
+    padding-bottom: 1em !important;
+}
+
+hr+pre>button {
+    top: -0.2em !important;
+}
+
+pre+pre,
+hr+pre {
+    margin-top: -1.8em !important;
+}
+
+pre+pre>code,
+hr+pre>code {
+    padding-top: 0.2em !important;
+}
+
+.table-bordered {
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.table-bordered th.no-border,
+.table-bordered td.no-border {
+    border: none;
+}
+
+.table-bordered th {
+    text-align: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.flex-between span {
+    flex: 1;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+span.footnote {
+    font-size: smaller;
+    /* Makes the text slightly smaller than the surrounding text */
+    color: #555;
+    /* A lighter color for subtlety */
+    margin-left: 5px;
+    /* Adds space between the text and the footnote */
+}
+
+hr {
+    border: none;
+    /* Removes the default border */
+    height: 1px;
+    /* Sets the height of the <hr> */
+    background-color: #dcdcdc;
+    /* Light grey color */
+    box-shadow: none;
+    /* Ensures there is no drop shadow */
+}
+
+/* Main admonition container: warning */
+div.admonition.warning {
+    border: 1px solid #FF8600;
+    /* Darker orange border */
+    border-radius: 5px;
+    /* Rounded corners */
+    background-color: transparent;
+    /* Matches the document's background */
+    padding: 0;
+    /* No padding around the outer div */
+    margin: 20px 0;
+    /* Vertical margin for separation */
+    margin-left: 2%;
+    /* Left margin to make the div narrower */
+    margin-right: 2%;
+    /* Right margin to keep the width uniform */
+    color: inherit;
+    /* Inherits text color from the document */
+    width: 96%;
+    /* Makes the admonition box narrower than the body text */
+}
+
+/* Styling for the title within the admonition */
+div.admonition.warning .admonition-title {
+    margin: 0;
+    /* No outer margins to fit the header to the borders */
+    background-color: #F8EADA;
+    /* Light orange background for the heading */
+    color: #000000;
+    /* Black text for the heading */
+    padding: 5px 20px;
+    /* Reduced vertical padding, kept horizontal padding */
+    border-radius: 5px 5px 0 0;
+    /* Rounded top corners */
+    font-weight: bold;
+}
+
+/* Styling for paragraphs within the admonition */
+div.admonition.warning p:not(.admonition-title) {
+    margin: 0;
+    padding: 10px 20px;
+    /* Padding to prevent content from feeling squashed */
+    line-height: 1.6;
+    background-color: transparent;
+    /* Ensures background matches the document */
+}
+
+/* Main admonition container: note */
+div.admonition.note {
+    border: 1px solid #0D47A1;
+    /* Dark blue border */
+    border-radius: 5px;
+    /* Rounded corners */
+    background-color: transparent;
+    /* Matches the document's background */
+    padding: 0;
+    /* No padding around the outer div */
+    margin: 20px 0;
+    /* Vertical margin for separation */
+    margin-left: 2%;
+    /* Left margin to make the div narrower */
+    margin-right: 2%;
+    /* Right margin to keep the width uniform */
+    color: inherit;
+    /* Inherits text color from the document */
+    width: 96%;
+    /* Makes the admonition box narrower than the body text */
+}
+
+/* Styling for the title within the admonition */
+div.admonition.note .admonition-title {
+    margin: 0;
+    /* No outer margins to fit the header to the borders */
+    background-color: #E3F2FD;
+    /* Light blue background for the heading */
+    color: #000000;
+    /* Black text for the heading */
+    padding: 5px 20px;
+    /* Reduced vertical padding, kept horizontal padding */
+    border-radius: 5px 5px 0 0;
+    /* Rounded top corners */
+    font-weight: bold;
+}
+
+/* Styling for paragraphs within the admonition */
+div.admonition.note p:not(.admonition-title) {
+    margin: 0;
+    padding: 10px 20px;
+    /* Padding to prevent content from feeling squashed */
+    line-height: 1.6;
+    background-color: transparent;
+    /* Ensures background matches the document */
+}
+
+/* Collapsible blocks */
+
+details {
+    display: block;
+    border: 2px solid transparent;
+    /* Ensures the layout doesn't change on toggle */
+    border-radius: 8px;
+    /* Rounded corners */
+}
+
+details[open] {
+    border-color: #add8e6;
+    /* Light blue border for the open state */
+}
+
+details>summary {
+    display: block;
+    cursor: pointer;
+    background-color: #e0f2fd;
+    /* Light blue background */
+    padding: 0.5em 1em;
+    /* Padding for better spacing */
+    border-radius: 8px;
+    /* Rounded corners for the closed state */
+    margin: -2px;
+    /* Adjust margin to fit the border */
+}
+
+details[open]>summary {
+    border-radius: 8px 8px 0 0;
+    /* Rounded corners only at the top when open */
+}
+
+details>summary:focus {
+    outline: none;
+}
+
+details>summary::before {
+    content: "\25B6";
+    /* Right-pointing triangle */
+    padding-right: 0.5em;
+    font-size: 1.2em;
+    /* Larger icon */
+}
+
+details[open]>summary::before {
+    content: "\25BC";
+    /* Downward-pointing triangle */
+}
+
+details>summary::-webkit-details-marker {
+    display: none;
+    /* Hide default arrow */
+}
+
+/* CSS for browsers that do not support <details> */
+details.no-details:not([open])>* {
+    display: none;
+}
+
+details.no-details:not([open])>summary {
+    display: block;
+}
+
+.shaded {
+    background-color: rgb(220, 220, 220);
+    /* Light grey background */
+}
+
+/* Code highlighter: https://raw.githubusercontent.com/richleland/pygments-css/master/default.css */
+.highlight .hll {
+    background-color: #ffffcc
+}
+
+.highlight {
+    background: #f8f8f8;
+}
+
+.highlight .c {
+    color: #408080;
+    font-style: italic
+}
+
+/* Comment */
+/*.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k {
+    color: #008000;
+    font-weight: bold
+}
+
+/* Keyword */
+.highlight .o {
+    color: #666666
+}
+
+/* Operator */
+.highlight .ch {
+    color: #408080;
+    font-style: italic
+}
+
+/* Comment.Hashbang */
+.highlight .cm {
+    color: #408080;
+    font-style: italic
+}
+
+/* Comment.Multiline */
+.highlight .cp {
+    color: #BC7A00
+}
+
+/* Comment.Preproc */
+.highlight .cpf {
+    color: #408080;
+    font-style: italic
+}
+
+/* Comment.PreprocFile */
+.highlight .c1 {
+    color: #408080;
+    font-style: italic
+}
+
+/* Comment.Single */
+.highlight .cs {
+    color: #408080;
+    font-style: italic
+}
+
+/* Comment.Special */
+.highlight .gd {
+    color: #A00000
+}
+
+/* Generic.Deleted */
+.highlight .ge {
+    font-style: italic
+}
+
+/* Generic.Emph */
+.highlight .gr {
+    color: #FF0000
+}
+
+/* Generic.Error */
+.highlight .gh {
+    color: #000080;
+    font-weight: bold
+}
+
+/* Generic.Heading */
+.highlight .gi {
+    color: #00A000
+}
+
+/* Generic.Inserted */
+.highlight .go {
+    color: #888888
+}
+
+/* Generic.Output */
+.highlight .gp {
+    color: #000080;
+    font-weight: bold
+}
+
+/* Generic.Prompt */
+.highlight .gs {
+    font-weight: bold
+}
+
+/* Generic.Strong */
+.highlight .gu {
+    color: #800080;
+    font-weight: bold
+}
+
+/* Generic.Subheading */
+.highlight .gt {
+    color: #0044DD
+}
+
+/* Generic.Traceback */
+.highlight .kc {
+    color: #008000;
+    font-weight: bold
+}
+
+/* Keyword.Constant */
+/* .highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn {
+    color: #008000;
+    font-weight: bold
+}
+
+/* Keyword.Namespace */
+.highlight .kp {
+    color: #008000
+}
+
+/* Keyword.Pseudo */
+.highlight .kr {
+    color: #008000;
+    font-weight: bold
+}
+
+/* Keyword.Reserved */
+.highlight .kt {
+    color: #B00040
+}
+
+/* Keyword.Type */
+.highlight .m {
+    color: #666666
+}
+
+/* Literal.Number */
+.highlight .s {
+    color: #BA2121
+}
+
+/* Literal.String */
+.highlight .na {
+    color: #7D9029
+}
+
+/* Name.Attribute */
+.highlight .nb {
+    color: #008000
+}
+
+/* Name.Builtin */
+.highlight .nc {
+    color: #0000FF;
+    font-weight: bold
+}
+
+/* Name.Class */
+.highlight .no {
+    color: #880000
+}
+
+/* Name.Constant */
+.highlight .nd {
+    color: #AA22FF
+}
+
+/* Name.Decorator */
+.highlight .ni {
+    color: #999999;
+    font-weight: bold
+}
+
+/* Name.Entity */
+.highlight .ne {
+    color: #D2413A;
+    font-weight: bold
+}
+
+/* Name.Exception */
+.highlight .nf {
+    color: #0000FF
+}
+
+/* Name.Function */
+.highlight .nl {
+    color: #A0A000
+}
+
+/* Name.Label */
+.highlight .nn {
+    color: #0000FF;
+    font-weight: bold
+}
+
+/* Name.Namespace */
+.highlight .nt {
+    color: #008000;
+    font-weight: bold
+}
+
+/* Name.Tag */
+.highlight .nv {
+    color: #19177C
+}
+
+/* Name.Variable */
+.highlight .ow {
+    color: #AA22FF;
+    font-weight: bold
+}
+
+/* Operator.Word */
+.highlight .w {
+    color: #bbbbbb
+}
+
+/* Text.Whitespace */
+.highlight .mb {
+    color: #666666
+}
+
+/* Literal.Number.Bin */
+.highlight .mf {
+    color: #666666
+}
+
+/* Literal.Number.Float */
+.highlight .mh {
+    color: #666666
+}
+
+/* Literal.Number.Hex */
+.highlight .mi {
+    color: #666666
+}
+
+/* Literal.Number.Integer */
+.highlight .mo {
+    color: #666666
+}
+
+/* Literal.Number.Oct */
+.highlight .sa {
+    color: #BA2121
+}
+
+/* Literal.String.Affix */
+.highlight .sb {
+    color: #BA2121
+}
+
+/* Literal.String.Backtick */
+.highlight .sc {
+    color: #BA2121
+}
+
+/* Literal.String.Char */
+.highlight .dl {
+    color: #BA2121
+}
+
+/* Literal.String.Delimiter */
+.highlight .sd {
+    color: #BA2121;
+    font-style: italic
+}
+
+/* Literal.String.Doc */
+.highlight .s2 {
+    color: #BA2121
+}
+
+/* Literal.String.Double */
+.highlight .se {
+    color: #BB6622;
+    font-weight: bold
+}
+
+/* Literal.String.Escape */
+.highlight .sh {
+    color: #BA2121
+}
+
+/* Literal.String.Heredoc */
+.highlight .si {
+    color: #BB6688;
+    font-weight: bold
+}
+
+/* Literal.String.Interpol */
+.highlight .sx {
+    color: #008000
+}
+
+/* Literal.String.Other */
+.highlight .sr {
+    color: #BB6688
+}
+
+/* Literal.String.Regex */
+.highlight .s1 {
+    color: #BA2121
+}
+
+/* Literal.String.Single */
+.highlight .ss {
+    color: #19177C
+}
+
+/* Literal.String.Symbol */
+.highlight .bp {
+    color: #008000
+}
+
+/* Name.Builtin.Pseudo */
+.highlight .fm {
+    color: #0000FF
+}
+
+/* Name.Function.Magic */
+.highlight .vc {
+    color: #19177C
+}
+
+/* Name.Variable.Class */
+.highlight .vg {
+    color: #19177C
+}
+
+/* Name.Variable.Global */
+.highlight .vi {
+    color: #19177C
+}
+
+/* Name.Variable.Instance */
+.highlight .vm {
+    color: #19177C
+}
+
+/* Name.Variable.Magic */
+.highlight .il {
+    color: #666666
+}
+
+/* Literal.Number.Integer.Long */

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Workspaces and component files are stored on disk in a binary format (illegible to text editors). This format differs between machine architectures and among versions of Dyalog. For example, a file component written by a PC may well have an internal format that is different from one written by a UNIX machine. Similarly, a workspace saved from Dyalog Version {{ version_majmin }} will differ internally from one saved by a previous version of Dyalog APL.
+Workspaces and component files are stored on disk in a binary format (illegible to text editors). This format differs between machine architectures and among versions of Dyalog. For example, a file component written by a PC may well have an internal format that is different from one written by a Unix machine. Similarly, a workspace saved from Dyalog Version {{ version_majmin }} will differ internally from one saved by a previous version of Dyalog APL.
 
 It is convenient for versions of Dyalog APL running on different platforms to be able to
 *interoperate* by sharing workspaces and component files. From Version 11.0, component files and workspaces can generally be shared between Dyalog interpreters running on different platforms. However, this is not always possible and the following sections describe limitations in interoperability:

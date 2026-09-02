@@ -1,0 +1,86 @@
+
+#contents { /* Styling the TOC container */
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    /*max-width: 800px;*/
+    break-before: right;
+    break-after: left;
+    page: no-chapter;
+}
+
+#contents h2 { /* TOC header */
+    font-size: 18pt; /* Slightly smaller font size for the header */
+    font-weight: 400;
+    margin-bottom: 2cm; /* Slightly reduced margin */
+}
+
+#contents ul { /* TOC list */
+    list-style: none;
+    padding-left: 10px;
+    counter-reset: toc-item;
+}
+
+#contents li {
+    display: block;
+}
+
+#contents li:not(.front-matter) {
+    counter-increment: toc-item;
+}
+
+#contents li:not(.front-matter):before {
+    content: counters(toc-item, ".") " ";
+}
+
+#contents ul li { /* General TOC list items */
+    margin: 0.15cm 0; /* Reduced margin for tighter spacing */
+    font-size: 0.9em; /* Slightly smaller font size */
+}
+
+#contents ul ul { /* Nested TOC list items */
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+#contents > ul > li > ul { /* First-level nested TOC list */
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#contents a { /* TOC links */
+    text-decoration: none;
+    color: inherit;
+}
+
+#contents a:hover {
+    text-decoration: underline;
+}
+
+#contents {
+  page: clean;
+}
+
+#contents p {
+  margin: 2em 0;
+  text-indent: 0;
+}
+
+#contents ul {
+  display: block;
+  margin: 1em 0;
+  padding: 0;
+}
+
+#contents li {
+  display: block;
+}
+
+#contents a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#contents a::before {
+  content: target-text(attr(href)) ' ' leader('.') ' ' target-counter(attr(href), page);
+}

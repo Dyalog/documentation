@@ -1,8 +1,8 @@
 # Environment Variables
 
-Environment variables are used to configure various aspects of Dyalog APL. The complete list appears in the *Dyalog for Microsoft Windows Installation and Configuration Guide: Configuration Parameters*; this section discusses those variables which are of particular importance to the Non-GUI versions of Dyalog APL, and lists those that have meaning to the UNIX versions. Additionally there some non-GUI-specific variables which are described below and some which either do not apply, or may not work as the user might at first expect.
+Environment variables are used to configure various aspects of Dyalog APL. The complete list appears in the *Dyalog for Microsoft Windows Installation and Configuration Guide: Configuration Parameters*; this section discusses those variables which are of particular importance to the Non-GUI versions of Dyalog APL, and lists those that have meaning to the Unix versions. Additionally there some non-GUI-specific variables which are described below and some which either do not apply, or may not work as the user might at first expect.
 
-Under UNIX, all environment variables should appear in UPPER CASE. For example, to set the default value of `⎕ML` to 3, then
+Under Unix, all environment variables should appear in UPPER CASE. For example, to set the default value of `⎕ML` to 3, then
 ```
 $ export DEFAULT_ML=3
 ```
@@ -13,7 +13,7 @@ Many of these environment variables are set in the mapl script; their values are
 
 The environment variables are broken down into several tables:
 
-- [Table 1](#_table-1): The most commonly defined and used for non-GUI versions of Dyalog APL under UNIX. Most of these variables are essential for a usable APL session
+- [Table 1](#_table-1): The most commonly defined and used for non-GUI versions of Dyalog APL under Unix. Most of these variables are essential for a usable APL session
 - [Table 2](#_table-2): Variables used to control default values in the workspace
 - [Table 3](#_table-3): Variables used to configure the Session
 - [Table 4](#_table-4): Miscellaneous Variables used by non-GUI Dyalog APL
@@ -28,7 +28,7 @@ Table: Commonly used Variables
 |---|---|
 |TERM<br/>APLK<br/>APLK0<br/>APLT<br/>APLTn|Define the input and output translate tables used by Dyalog APL. The values of APLK0 and APLTn override the values of APLK and APLT if set, and they in turn override the value of (Unicode) *default*, or (Classic) TERM if set.<p/><p/>APLK is for input translation, APLT for output translation.<p/><p/>These are used in conjunction with ..|
 |`APLKEYS` `APLTTRANS`|Define the search path for the input and output translate tables respectively. If unset, the interpreter will default to `$DYALOG`; if `$DYALOG` too is not set, will default to `/usr/dyalog`.|
-|`APLNID`|This variable is ignored by the UNIX versions of Dyalog APL: `⎕AI` and `⎕AN` pick up their values from the user's uid and `/etc/passwd`.|
+|`APLNID`|This variable is ignored by the Unix versions of Dyalog APL: `⎕AI` and `⎕AN` pick up their values from the user's uid and `/etc/passwd`.|
 |`APLSTATUSFD`|If set, this defines the stream number on which all messages for the Status Window appear. It is then possible to redirect this output when APL is started.<p/><p/>If unset, the output will appear in the same terminal window as the APL session, although it is not part of the session; such output can be removed by hitting SR (Screen Redraw - often defined to be Ctrl-L).|
 |`DYALOG_NETCORE`|This parameter is a Boolean value with a default value of 1. If set to 0, it disables the .NET interface.|
 |`DYALOG_SERIAL`|This parameter contains your Dyalog serial number. This must be set to the serial number issued to you. If not set, then the software is unregistered. For the full licence terms and conditions, see [https://www.dyalog.com/uploads/documents/Terms_and_Conditions.pdf](https://www.dyalog.com/uploads/documents/Terms_and_Conditions.pdf) .|
@@ -52,9 +52,9 @@ Table: Default workspace values
 |`DEFAULT_IO`|Default value for `⎕IO` in a clear workspace.|
 |`DEFAULT_ML`|Default value for `⎕ML` in a clear workspace.|
 |`DEFAULT_PP`|Default value for `⎕PP` in a clear workspace.|
-|`AUTO_PW` `DEFAULT_PW`|`⎕PW` is set by the interpreter when it starts, or when the session window is resized. Under UNIX if the terminal window is resized, the session will be resized when the interpreter next checks for input.|
+|`AUTO_PW` `DEFAULT_PW`|`⎕PW` is set by the interpreter when it starts, or when the session window is resized. Under Unix if the terminal window is resized, the session will be resized when the interpreter next checks for input.|
 |`DEFAULT_RTL`|Default value for `⎕RTL` in a clear workspace.|
-|`DEFAULT_WX`|Default value for `⎕WX` in a clear workspace. Although the UNIX versions of Dyalog APL do not have GUI objects, `⎕SE` is present, and the value of `⎕WX` will affect the programmer's ability to run expressions such as `⎕SE.PropList`.|
+|`DEFAULT_WX`|Default value for `⎕WX` in a clear workspace. Although the Unix versions of Dyalog APL do not have GUI objects, `⎕SE` is present, and the value of `⎕WX` will affect the programmer's ability to run expressions such as `⎕SE.PropList`.|
 
 For numeric values, the interpreter takes the value of the environment variable, and prepends a "0" to that string. It then parses the string, accepting characters until the first non-digit character is reached.
 
@@ -94,7 +94,7 @@ Table: Miscellaneous Variables used by non-GUI Dyalog APL
 |`DYALOG_EXTVAR_SUPPORTED`|This parameter is a Boolean value with a default value of `0`. If set to `1`, support for external variables is reinstated.|
 |`DYALOG_SHELL_SUBPROCESS`|On AIX, if `DYALOG_SHELL_SUBPROCESS` is `1` (the default on AIX), the interpreter starts a (small) child process that handles calls to `⎕SHELL`.|
 
-These are the remaining variables listed in the *Dyalog for Microsoft Windows Installation and Configuration Guide* which are effective in the non-GUI UNIX versions of Dyalog APL
+These are the remaining variables listed in the *Dyalog for Microsoft Windows Installation and Configuration Guide* which are effective in the non-GUI Unix versions of Dyalog APL
 
 Table: Editor-related environment variables
 

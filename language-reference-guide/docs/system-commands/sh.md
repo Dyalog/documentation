@@ -1,10 +1,10 @@
-# <span>Execute (UNIX) Command</span> `)SH {cmd}`
+# <span>Execute (Unix) Command</span> `)SH {cmd}`
 
-This command allows WINDOWS or UNIX shell commands to be given from APL.  `)SH` is a synonym of `)CMD`. Either command may be given in either environment (Windows or UNIX) with exactly the same effect.  `)SH` is probably more natural for the UNIX user. This section describes the behaviour of `)SH` and `)CMD` under UNIX. See [Windows Command Processor](cmd.md) for a discussion of their behaviour under Windows.
+This command allows WINDOWS or Unix shell commands to be given from APL.  `)SH` is a synonym of `)CMD`. Either command may be given in either environment (Windows or Unix) with exactly the same effect.  `)SH` is probably more natural for the Unix user. This section describes the behaviour of `)SH` and `)CMD` under Unix. See [Windows Command Processor](cmd.md) for a discussion of their behaviour under Windows.
 
-The system functions [`⎕SH`](../system-functions/execute-unix-command.md) and [`⎕CMD`](../system-functions/execute-windows-command.md) provide similar facilities but may be executed from within APL code. For further information, see [Execute (UNIX) Command](../system-functions/execute-unix-command.md) and [Execute Windows Command](../system-functions/execute-windows-command.md).
+The system functions [`⎕SH`](../system-functions/execute-unix-command.md) and [`⎕CMD`](../system-functions/execute-windows-command.md) provide similar facilities but may be executed from within APL code. For further information, see [Execute Unix Command](../system-functions/execute-unix-command.md) and [Execute Windows Command](../system-functions/execute-windows-command.md).
 
-`)SH` allows UNIX shell commands to be given from APL. The argument must be entered in the appropriate case (usually lower-case).  The result of the command, if any, is displayed.
+`)SH` allows Unix shell commands to be given from APL. The argument must be entered in the appropriate case (usually lower-case).  The result of the command, if any, is displayed.
 
 `)SH` causes Dyalog to invoke the `system()` library call. The shell which is used to run the command is therefore the shell which `system()` is defined to call. For example, under AIX this would be `/usr/bin/sh`.
 

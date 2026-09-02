@@ -2,9 +2,9 @@
 
 ## Summary
 
-Support for user commands is included in non-Windows versions of Dyalog APL. Many of the user commands which were originally written for running under Microsoft Windows will run under the various flavours of UNIX.
+Support for user commands is included in non-Windows versions of Dyalog APL. Many of the user commands which were originally written for running under Microsoft Windows will run under the various flavours of Unix.
 
-Under UNIX there is no autocompletion of user command names.
+Under Unix there is no autocompletion of user command names.
 
 The SALT code resides in `⎕SE`, which is saved in a session file. The location of the session file is controlled by the environment variable SESSION_FILE; by default this file is $DYALOG/default.dse. Setting SESSION_FILE=/dev/null results in an empty `⎕SE` and SALT being disabled.
 
