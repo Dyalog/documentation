@@ -19,7 +19,7 @@ Table: File Menu Operations {: #file-menu-operations }
 |Export to Memory|`[MakeMemoryAssembly]`|Creates an *in-memory* .NET Assembly|
 |Close AppDomain|`[CloseAppDomain]`|Closes .NET App Domain|
 |Drop|`[WSDrop]`|Prompts for a workspace file name, then erases it|
-|Edit Text File|`[EditTextFile]`|Displays the *Open Source File* dialog to select Dyalog script file (*.dyalog*) or an arbitrary text file to open in the Editor. See [Editing Scripts and Text Files](editing-scripts-and-text-files.md)|
+|Edit Text File|`[EditTextFile]`|Displays the *Open Source File* dialog to select Dyalog script file (*.dyalog*) or an arbitrary text file to open in the Editor. See [Editing Scripts and Text Files](editor.md#editing-scripts-and-text-files)|
 |Print|`[PrintFnsInNS]`|Prints functions and operators in current namespace|
 |Print Setup|`[PrintSetup]`|Invokes the print set-up dialog box|
 |Continue|`[Continue]`|Saves the active workspace in CONTINUE.DWS and exits APL|
