@@ -1,6 +1,6 @@
 # <span>Execute (Unix) Command</span> `)SH {cmd}`
 
-This command allows WINDOWS or Unix shell commands to be given from APL.  `)SH` is a synonym of `)CMD`. Either command may be given in either environment (Windows or Unix) with exactly the same effect.  `)SH` is probably more natural for the Unix user. This section describes the behaviour of `)SH` and `)CMD` under Unix. See [Windows Command Processor](cmd.md) for a discussion of their behaviour under Windows.
+This command allows Windows or Unix shell commands to be given from APL.  `)SH` is a synonym of `)CMD`. Either command may be given in either environment (Windows or Unix) with exactly the same effect.  `)SH` is probably more natural for the Unix user. This section describes the behaviour of `)SH` and `)CMD` under Unix. See [Windows Command Processor](cmd.md) for a discussion of their behaviour under Windows.
 
 The system functions [`⎕SH`](../system-functions/execute-unix-command.md) and [`⎕CMD`](../system-functions/execute-windows-command.md) provide similar facilities but may be executed from within APL code. For further information, see [Execute Unix Command](../system-functions/execute-unix-command.md) and [Execute Windows Command](../system-functions/execute-windows-command.md).
 
@@ -8,7 +8,7 @@ The system functions [`⎕SH`](../system-functions/execute-unix-command.md) and 
 
 `)SH` causes Dyalog to invoke the `system()` library call. The shell which is used to run the command is therefore the shell which `system()` is defined to call. For example, under AIX this would be `/usr/bin/sh`.
 
-When the shell is closed, control returns to APL. See *Dyalog for UNIX UI Guide* for further information.
+When the shell is closed, control returns to APL. See *Dyalog for Unix UI Guide* for further information.
 
 The parameters CMD_PREFIX and CMD_POSTFIX may be used to execute a different shell under the shell associated with `system()`.
 
