@@ -1,4 +1,4 @@
-site_name: UNIX User Guide
+site_name: Unix User Guide
 theme:
   favicon: documentation-assets/images/favicon-32.png
   logo: documentation-assets/images/dyalog-logo_white.svg
@@ -56,7 +56,7 @@ nav:
   - Starting APL: starting-apl.md
   - Configuring the Editor: configuring-the-editor.md
   - File Permissions and FSTAC: file-permissions-and-fstac.md
-  - Calling UNIX Commands: calling-unix-commands.md
+  - Calling Unix Commands: calling-unix-commands.md
   - Signals and Trap: signals-and-trap.md
   - BuildID: buildid.md
   - Core and APLCore Files: core-and-aplcore-files.md
