@@ -56,6 +56,7 @@ nav:
       - Notes: primitive-functions/notes.md
       - Primitive Functions (by Category): primitive-functions/primitive-functions-by-category.md
       - Primitive Functions (A-Z):
+          - Primitive Functions (A-Z): primitive-functions/primitive-functions-a-z/index.md
           - Binomial: primitive-functions/binomial.md
           - Catenate Laminate: primitive-functions/catenate-laminate.md
           - Catenate First: primitive-functions/catenate-first.md
@@ -167,6 +168,7 @@ nav:
       - Function Composition: primitive-operators/function-composition.md
       - Operators Summarised: primitive-operators/operators-summarised.md
       - Operators A-Z:
+          - Operators A-Z: primitive-operators/primitive-operators-a-z/index.md
           - At: primitive-operators/at.md
           - Atop: primitive-operators/atop.md
           - Behind: primitive-operators/behind.md
@@ -270,6 +272,7 @@ nav:
           - Stencil: primitive-operators/stencil.md
           - Variant: primitive-operators/variant.md
   - Other Syntax:
+          - Other Syntax: other-syntax/index.md
           - Abort: other-syntax/abort.md
           - Assignment:
               - Assignment: other-syntax/assignment/index.md
@@ -288,6 +291,7 @@ nav:
       - System Functions: system-functions/index.md
       - System Functions (by Category): system-functions/system-functions-by-category.md
       - System Functions (A-Z):
+          - System Functions (A-Z): system-functions/system-functions-a-z/index.md
           - Character Input Output: system-functions/character-input-output.md
           - Evaluated Input Output: system-functions/evaluated-input-output.md
           - Underscored Alphabetic Characters: system-functions/underscored-alphabetic-characters.md
@@ -477,6 +481,7 @@ nav:
   - System Commands:
       - System Commands: system-commands/index.md
       - System Commands (A-Z):
+          - System Commands (A-Z): system-commands/system-commands-a-z/index.md
           - 'CLASSES: List Classes': system-commands/classes.md
           - 'CLEAR: Clear Workspace': system-commands/clear.md
           - 'CMD: Windows Command Processor': system-commands/cmd.md
