@@ -25,7 +25,7 @@ If your run-time application uses any of the bitmaps or other GUI resources that
 
 ### AUXILIARY PROCESSORS
 
-If you use any of the Auxiliary Processors (APs) included in the sub-directory `xutils`, you must include these with your application. Note that, like workspaces, Dyalog APL searches for APs using the **WSPATH** parameter. If your application uses APs, you must ensure that you specify **WSPATH** or that the default **WSPATH** is adequate for your application..
+If you use any of the Auxiliary Processors (APs) included in the sub-directory `xutils`, you must include these with your application. Like workspaces, Dyalog APL searches for APs using the **WSPATH** parameter. If your application uses APs, you must ensure that you specify **WSPATH** or that the default **WSPATH** is adequate for your application..
 
 ### DYALOG32 and/or DYALOG64
 

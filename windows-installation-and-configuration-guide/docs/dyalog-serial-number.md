@@ -23,7 +23,7 @@ or
       ⎕SE.Dyalog.Serial ''
 ```
 
-!!! note 
+!!! Warning "Warning"
     Using or entering a serial number other than the one issued to you is not permitted. Transferring the serial number to anyone else is not permitted. For the full licence terms and conditions, see: [Terms and Conditions](https://www.dyalog.com/uploads/documents/Terms_and_Conditions.pdf)
 
 [^1]: This string can also be set using regedit but Dyalog Ltd does not recommend this approach.

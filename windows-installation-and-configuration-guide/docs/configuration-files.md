@@ -56,7 +56,7 @@ The top-level object defines an optional key named **Extend** and an optional ob
 - A number
 - An array of strings
 
-The names and values correspond to configuration parameters, but names are not case sensitive. Any named values may be defined; an APL application may query the values using `+2⎕NQ'.' 'GetEnvironment' name`, or using the `]Config` user command. Note that `GetEnvironment` returns the value in use as defined by the precedence rules (see **Precedence above**).
+The names and values correspond to configuration parameters, but names are not case sensitive. Any named values may be defined; an APL application may query the values using `+2⎕NQ'.' 'GetEnvironment' name`, or using the `]Config` user command. `GetEnvironment` returns the value in use as defined by the precedence rules (see **Precedence above**).
 
 <h3 class="example">Example</h3>
 ```apl

@@ -30,14 +30,14 @@ If *setting* is `connect` or `poll` then *address* is an IP address or DNS name 
 
 *port* is the TCP port to listen on
 
-Settings specified by the **RIDE_Init** configuration parameter take precedence over the same setting specified in the Ride ini file. Note that the **RIDE_Init** configuration parameter can specify both *config* and one of *serve*, *http*, *connect* or *poll*. For example,
+Settings specified by the **RIDE_Init** configuration parameter take precedence over the same setting specified in the Ride ini file. The **RIDE_Init** configuration parameter can specify both *config* and one of *serve*, *http*, *connect*, or *poll*. For example,
 ```
 RIDE_INIT=serve:*:4502,config=/home/andys/.dyalog/secureride.ini
 ```
 
 This is most useful when multiple interpreters need to be run, each with its own Ride connection as each must have a separate port number.
 
-Note that the **RIDE_Init** configuration parameter is set automatically when launching a new Dyalog Session from Ride.
+The **RIDE_Init** configuration parameter is set automatically when launching a new Dyalog Session from Ride.
 
 <h2 class="example">Examples</h2>
 
