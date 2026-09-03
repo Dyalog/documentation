@@ -88,16 +88,14 @@ Documents that are included in this project are no longer available as PDF files
 ## Next Dyalog Version
 
 ### Expected Supported Platforms
-The next version of Dyalog (Dyalog v22.0) is expected to be supported on the following platforms/operating systems:  
+The next version of Dyalog (Dyalog v22.0) is expected to be supported on the following platforms/operating systems, although the minimum supported versions might be increased:  
 
 - IBM AIX:
     - AIX 7.3 SP4 onwards with a POWER9 chip or higher<br />NOTE: Minimum chip level might be revised upwards to POWER10
 - Linux (including Raspberry Pi):
-    - x86_64: Built on Ubuntu 22.04
+    - x86_64: Built on Ubuntu 26.04
     - ARM64: Built on Debian GNU/Linux 13
 - macOS (Apple Silicon):
     - macOS 26.3 (Tahoe) onwards
 - Microsoft Windows:
     - Windows 11 25H2 onwards (Windows Server 2016 onwards)
-
-This list is likely to change before Dyalog v22.0 is released (more recent operating system versions are likely to be required).
