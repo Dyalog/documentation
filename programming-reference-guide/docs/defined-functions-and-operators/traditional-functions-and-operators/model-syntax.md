@@ -14,7 +14,7 @@ The tables below show all possible models for defined functions and operators re
 |Explicit  |`R←f`  |`R←f Y`  |`R←X f Y`  |`R←{X} f Y`  |
 |Shy|`{R}←f`|`{R}←f Y`|`{R}←X f Y`|`{R}←{X} f Y`|
 
-Note: the right argument `Y` and/or the result `R` may be represented by a single name, or as a blank-delimited list of names surrounded by parentheses. For further details, see [Namelists](namelists.md).
+The right argument `Y` and/or the result `R` can be represented by a single name, or as a blank-delimited list of names surrounded by parentheses. For further details, see [Namelists](namelists.md).
 
 ## Derived Functions produced by Monadic Operator
 

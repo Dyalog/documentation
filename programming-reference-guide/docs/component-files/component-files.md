@@ -72,7 +72,7 @@ This is an integer representation of a Boolean mask. Each bit in the mask indica
 
 For example, if bits 1, 4 and 6 are set and all other relevant bits are zero only `⎕FREAD`, `⎕FAPPEND` and `⎕FDROP` are permitted. A convenient way to set up the mask is to sum the access codes associated with each operation.
 
-For example, the value 41 (1+8+32) authorises `⎕FREAD`, `⎕FAPPEND` and `⎕FDROP`. A value of `¯1` (all bits set) permits all operations. Thus by subtracting the access codes of operations to be forbidden, it is possible to permit all but certain types of access. For example, a value of `¯133` (`¯1- 4+128`) permits all operations except `⎕FERASE` and `⎕FRENAME`. Note that the value of unused bits is ignored. Any non-zero permission code allows `⎕FSTIE` and `⎕FSIZE`. `⎕FCREATE`, `⎕FUNTIE`, `⎕FLIB`, `⎕FNAMES` and `⎕FNUMS` are not subject to access control. Passnumbers may also be used to establish different levels of access for the same user.
+For example, the value 41 (1+8+32) authorises `⎕FREAD`, `⎕FAPPEND` and `⎕FDROP`. A value of `¯1` (all bits set) permits all operations. Thus by subtracting the access codes of operations to be forbidden, it is possible to permit all but certain types of access. For example, a value of `¯133` (`¯1- 4+128`) permits all operations except `⎕FERASE` and `⎕FRENAME`. The value of unused bits is ignored. Any non-zero permission code allows `⎕FSTIE` and `⎕FSIZE`. `⎕FCREATE`, `⎕FUNTIE`, `⎕FLIB`, `⎕FNAMES` and `⎕FNUMS` are not subject to access control. Passnumbers may also be used to establish different levels of access for the same user.
 
 When the user attempts to tie a file using `⎕FTIE` or `⎕FSTIE` a row of the access matrix is selected to control this and subsequent operations.
 

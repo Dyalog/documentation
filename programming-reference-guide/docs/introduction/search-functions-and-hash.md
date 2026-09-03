@@ -13,13 +13,13 @@ In the case of `⍳`, the principal argument is the one on the left and in the c
 |`P {(↓⍺)⍳↓⍵} s`|Matrix Iota (idiom)|
 |`P∘⍋ and P∘⍒`  |Grade              |
 
-The Dyalog APL implementation of these functions already uses a technique known as *hashing* to improve performance over a simple linear search. (Note that `⍷` (_find_) does not employ the same hashing technique, and is excluded from this discussion.)
+The Dyalog APL implementation of these functions already uses a technique known as *hashing* to improve performance over a simple linear search. (`⍷` (_find_) does not employ the same hashing technique, and is excluded from this discussion.)
 
 Building a *hash table* for the principal argument takes a significant time but is rewarded by a considerably quicker search for each item in the subject. Unfortunately, the hash table is discarded each time the function completes and must be reconstructed for a subsequent call (even if its principal argument is identical to that in the previous one).
 
 For optimal performance of *repeated* search operations, the hash table may be retained between calls, by binding the function with its principal argument using the primitive `∘` (_compose_) operator. The retained hash table is then used directly whenever this monadic derived function is applied to a subject argument.
 
-Notice that retaining the hash table pays off only on a second or subsequent application of the derived function. This usually occurs in one of two ways: either the derived function is named for later (and repeated) use, as in the first example below or it is applied repeatedly as the operand of a primitive or defined operator, as in the second example.
+Retaining the hash table pays off only on a second or subsequent application of the derived function. This usually occurs in one of two ways: either the derived function is named for later (and repeated) use, as in the first example below or it is applied repeatedly as the operand of a primitive or defined operator, as in the second example.
 
 ## Example: naming a derived function.
 ```apl

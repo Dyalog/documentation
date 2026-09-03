@@ -123,7 +123,7 @@ And finally, as promised, triples:
 
 ## A Larger Example
 
-Function `tokens` uses nested local dfns to split an APL expression into its constituent tokens. Note that all calls on the inner functions: `lex, acc`,  and the unnamed dfn in each token case, are *tail calls*. In fact, the *only* stack calls are those on function: `all`, and the unnamed function: `{⍵∨¯1⌽⍵}`, within the "Char literal" case.
+Function `tokens` uses nested local dfns to split an APL expression into its constituent tokens. All calls on the inner functions: `lex, acc`, and the unnamed dfn in each token case, are *tail calls*. In fact, the *only* stack calls are those on function: `all`, and the unnamed function: `{⍵∨¯1⌽⍵}`, within the "Char literal" case.
 
 ```apl
     tokens←{                        ⍝ Lex of APL src line.

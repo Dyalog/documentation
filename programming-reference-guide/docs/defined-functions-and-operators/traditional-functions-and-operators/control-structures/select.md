@@ -16,11 +16,11 @@ A `:Select` structure is used to execute alternative blocks of code depending up
 [8]   :EndSelect
 ```
 
-In this case, the system compares the value of the array expression to the right of the `:Select` statement with each of the expressions to the right of the `:Case` statements and executes the block of code following the one that matches.  If none match, it executes the code following the `:Else` (which is optional).  Note that comparisons are performed using the `≡` primitive function, so the arrays must match exactly.  Note also that not all of the `:Case` expressions are necessarily evaluated because the process stops as soon as a matching expression is found.
+In this case, the system compares the value of the array expression to the right of the `:Select` statement with each of the expressions to the right of the `:Case` statements and executes the block of code following the one that matches.  If none match, it executes the code following the `:Else` (which is optional). Comparisons are performed using the `≡` primitive function, so the arrays must match exactly. Not all of the `:Case` expressions are necessarily evaluated because the process stops as soon as a matching expression is found.
 
 Instead of a `:Case` statement, you may also use a `:CaseList` statement.  If so, the *enclose of* the array expression to the right of `:Select` is tested for membership of the array expression to the right of the `:CaseList` using the `∊` primitive function.
 
-Note also that any code placed between the `:Select` and the first `:Case` or `:CaseList` statements are unreachable; future versions of Dyalog APL may generate an error when attempting to fix functions which include such code.
+Any code placed between the `:Select` and the first `:Case` or `:CaseList` statements is unreachable; future versions of Dyalog APL might generate an error when attempting to fix functions which include such code.
 
 <h2 class="example">Example</h2>
 ```apl

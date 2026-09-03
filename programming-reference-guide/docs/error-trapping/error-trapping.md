@@ -80,7 +80,7 @@ Now, whenever *any* error occurs in one of the enclosed lines, or in a function 
    [2]   :Trap 11 2 3
 ```
 
-Notice that in this case, no extra lines are executed after an error. Control is passed to line `[6]` either when an error has occurred, *or* if all the lines have been executed without error. If you want to execute some code *only* after an error, you could re-code the example like this:
+In this case, no extra lines are executed after an error. Control is passed to line `[6]` either when an error has occurred, *or* if all the lines have been executed without error. If you want to execute some code *only* after an error, you could re-code the example like this:
 ```apl
  
    [1]   ...
@@ -110,7 +110,7 @@ The final refinement is that specific error cases can be accommodated using `:Ca
    [10]  :EndTrap
 ```
 
-Note that `:Trap` can be used in conjunction with `⎕SIGNAL` described below.
+`:Trap` can be used in conjunction with `⎕SIGNAL` described below.
 
 Traps can be nested. In the following example, code in the inner trap structure attempts to tie a component file, and if unsuccessful, tries to create one. In either case, the tie number is then passed to function `ProcessFile`. If an error other than 22 (`FILE NAME ERROR`) occurs in the inner trap structure, or an error occurs in function `ProcessFile` (or any of its called function), control passes to line immediately to line `[9]`.
 ```apl

@@ -16,7 +16,7 @@ The `:For` loop is used to execute a block of code for a series of values of a p
 
 The way a `:For` loop operates is as follows.  On encountering the `:For`, the expression to the right of `:In` is evaluated and the result stored.  This is the *control array*.  The *control variable*, named to the right of the `:For`, is then assigned the first value in the control array, and the code between `:For` and `:EndFor` is executed.  On encountering the `:EndFor`, the control variable is assigned the next value of the control array and execution of the code is performed again, starting at the first line after the `:For`.  This process is repeated for each value in the control array.
 
-Note that if the control array is empty, the code in the `:For` structure is not executed.  Note too that the control array may be any rank and shape, but that its elements are assigned to the control variable in ravel order.
+If the control array is empty, the code in the `:For` structure is not executed. The control array can be any rank and shape, but its elements are assigned to the control variable in ravel order.
 
 The control array may contain any type of data.  For example, the following code resizes (and compacts) all your component files
 ```apl
@@ -76,7 +76,7 @@ In each case, the output from the loop is:
 7 8 9
 ```
 
-Notice that in the second case, the number of items in the values vector is the same as the number of control variables. A more typical example might be.
+In the second case, the number of items in the values vector is the same as the number of control variables. A more typical example might be.
 ```apl
       :For a b c :InEach avec bvec cvec
           ...

@@ -31,7 +31,7 @@ Assignment always creates a local name. A dfn can call a name that exist outside
 1
 ```
 
-The name must already have a value; modified assignment to an undefined name signals a `VALUE ERROR`. Note also that a named function cannot be used as the modifying function in a dfn without `∘⊢`; see [Restrictions](restrictions.md).
+The name must already have a value; modified assignment to an undefined name signals a `VALUE ERROR`. A named function cannot be used as the modifying function in a dfn without `∘⊢`; see [Restrictions](restrictions.md).
 
 Qualifying the name with a namespace path is the more general mechanism, because it also creates a name that does not yet exist. [`⎕THIS`](../../../../language-reference-guide/system-functions/this) names the dfn's own home namespace. For example:
 

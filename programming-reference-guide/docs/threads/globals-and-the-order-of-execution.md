@@ -65,7 +65,7 @@ Even better, although less efficient, you can use `:Hold` to synchronise access 
 
 Now, although you still cannot be sure which of `FOO` and `GOO` will run first, you can be sure that `SEMI_GLOBAL` will not change (because `GOO` cuts in) within `FOO`.
 
-Note that the string used as the argument to `:Hold` is completely arbitrary, so long as threads competing for the same resource use the same string.
+The string used as the argument to `:Hold` is completely arbitrary, so long as threads competing for the same resource use the same string.
 
-!!! warning
-     These types of problems are inherent in all multithreading programming languages, and not just with Dyalog APL. *If you want to take advantage of the additional power provided by multithreading, it is advisable to think carefully about the potential interaction between different threads.*
+!!! Hint "Hints and Recommendations"
+    These types of problems are inherent in all multithreading programming languages, and not just with Dyalog APL. *If you want to take advantage of the additional power provided by multithreading, it is advisable to think carefully about the potential interaction between different threads.*

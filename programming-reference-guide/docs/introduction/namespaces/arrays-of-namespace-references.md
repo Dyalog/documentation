@@ -51,14 +51,14 @@ An array of refs to the left of an assignment arrow is expanded thus:
       (x y).a←c d → (x.a←c)(y.a←d)
 ```
 
-Note that the array of refs can be of any rank. In the limiting case of a simple scalar array, the array construct: `refs.exp` is identical to the scalar construct: `ref.exp`.
+The array of refs can be of any rank. In the limiting case of a simple scalar array, the array construct: `refs.exp` is identical to the scalar construct: `ref.exp`.
 
-Note that the expression to the right of the '`.`' pervades a nested array of refs to its left:
+The expression to the right of the '`.`' pervades a nested array of refs to its left:
 ```apl
       ((u v)(x y)).exp → ((u.exp)(v.exp))((x.exp)(y.exp))
 ```
 
-Note also that with successive expansions `(u v).(x y z).` ..., the final number of "leaf" terms is the product of the number of refs at each level.
+With successive expansions `(u v).(x y z).` ..., the final number of "leaf" terms is the product of the number of refs at each level.
 
 <h2 class="example">Examples</h2>
 ```apl

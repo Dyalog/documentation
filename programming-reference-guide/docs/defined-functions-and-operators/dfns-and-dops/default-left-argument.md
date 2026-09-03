@@ -10,7 +10,7 @@ The special  syntax: `⍺←expr` is used to give a default value to the left ar
 
 The expression to the right of  `⍺←` is evaluated *only* if its dfn is called with no left argument.
 
-Note that the syntax must be exactly `⍺←`, that is, it cannot contain parentheses, and so on.
+The syntax must be exactly `⍺←`, that is, it cannot contain parentheses, and so on.
 
 `⍺←` must be the first tokens at the beginning of an expression. That expression can appear anywhere in the body, not only on the first line, but `⍺` has no value until it is evaluated.
 

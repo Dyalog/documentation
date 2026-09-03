@@ -54,8 +54,6 @@ code            |       code            |
    </tr>
 </table>
 
-## Notes
-
 ## Code preceding `:OrIf` and `:AndIf`
 
 Code that precedes a `:OrIf` control statement, e.g. code placed between a `:If` statement and a subsequent `:OrIf`, will be executed only if the outer condition is false. If instead the outer condition is true, there is no need to execute the `:OrIf`statement , so it and any preceding lines of code are skipped.
@@ -73,7 +71,7 @@ A potential use for code before a `:OrIf` or `:AndIf` is to prepare for the cond
 :EndIf
 ```
 
-!!! warning
+!!! Warning "Warning"
     With the exception of a diamondised statement, a control statement that should **not** be followed by an expression will generate an error if an expression is supplied.
 
     A line in a function consisting of a control statement followed by a `⋄` and subsequent expression(s) is not **currently** disallowed but may exhibit unexpected behaviour. In particular, the line will not honour  `⎕STOP` and will not be metered by `⎕MONITOR`. This syntax is not recommended.

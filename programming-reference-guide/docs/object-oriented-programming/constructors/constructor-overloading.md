@@ -24,7 +24,7 @@ In the following examples, the `Make` function (see [Clover Class](constructor-o
 (see function make)
 ```
 
-Creating a new Instance of Clover with a 1-element vector as the Constructor argument, causes the system to choose the `Make1` Constructor. Note that, although the argument to `Make1` is a 1-element vector, this is disclosed as the list of arguments is unpacked into the (single) variable `arg1`.
+Creating a new Instance of Clover with a 1-element vector as the Constructor argument, causes the system to choose the `Make1` Constructor. Although the argument to `Make1` is a 1-element vector, this is disclosed as the list of arguments is unpacked into the (single) variable `arg1`.
 ```apl
       (⎕NEW Clover(,1)).Con
    Make1  1
@@ -47,7 +47,7 @@ Creating an Instance with any other Constructor argument causes the system to ch
                3 4
 ```
 
-Note that a scalar argument will call `MakeAny` and not `Make1`.
+A scalar argument calls `MakeAny` and not `Make1`.
 ```apl
       (⎕NEW Clover 1).Con
    MakeAny  1

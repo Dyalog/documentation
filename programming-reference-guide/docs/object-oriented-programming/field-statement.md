@@ -32,7 +32,7 @@ The following statement defines a Field called `Months`.
 
 ## Notes
 
-Note that Fields are initialised when a Class script is fixed by the editor or by `⎕FIX`. If the evaluation of `expr` causes an error (for example, a `VALUE ERROR`), an appropriate message will be displayed in the Status Window and `⎕FIX` will fail with a `DOMAIN ERROR`. Note that a ReadOnly Field may only be assigned a value by its `:Field` statement.
+Fields are initialised when a Class script is fixed by the editor or by `⎕FIX`. If the evaluation of `expr` causes an error (for example, a `VALUE ERROR`), an appropriate message will be displayed in the Status Window and `⎕FIX` will fail with a `DOMAIN ERROR`. A ReadOnly Field can only be assigned a value by its `:Field` statement.
 
 In the second example above, the expression will only succeed if `⎕USING` is set to the appropriate path, in this case System.Globalization.
 

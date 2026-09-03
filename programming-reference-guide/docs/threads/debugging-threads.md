@@ -40,7 +40,7 @@ Removing stack frames using *Quit* from the Tracer or `→` from the session aff
 
 `)RESET` removes all but the base thread.
 
-Note the distinction between a *suspended* thread and a *paused* thread.
+There is a distinction between a *suspended* thread and a *paused* thread.
 
 A *suspended* thread is stopped at the beginning of a line in a defined function or operator. It may be connected to the Session so that expressions executed in the Session do so in the context of that thread. It may be *restarted* by executing `→line` (typically, `→⎕LC`).
 
