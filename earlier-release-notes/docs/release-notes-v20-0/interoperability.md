@@ -110,4 +110,4 @@ A `TRANSLATION ERROR` will be generated if a Classic edition attempts to `)LOAD`
 Session files (**.dse**) can only be used on the platform on which they were created and saved. Under Microsoft Windows, Session files can only be used by an interpreter with the same architecture (32&#8209;bit/64&#8209;bit) as the interpreter that saved them.
 
 ## Log Files
-Log files (**.dlf**) can only be used by the version and edition of Dyalog with which they were created and saved. 
+Log files (**.dlfx**) can only be used by the version and edition of Dyalog with which they were created and saved. 

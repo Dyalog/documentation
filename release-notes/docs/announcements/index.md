@@ -2,6 +2,23 @@
 
 Notice of new and planned additions, changes, removals, and deprecations in Dyalog v21.0 compared with Dyalog v20.0.
 
+## Additions
+
+### Dark Mode (Microsoft Windows only)
+
+On Microsoft Windows, Dyalog v21.0 includes experimental support for dark mode. For information on how to enable dark mode and contribute to the evolution of this functionality, please send a message to [darkmode@dyalog.com](mailto:darkmode@dyalog.com) briefly describing the experiments that you would like to perform.
+
+### New APL Font
+
+The Dyalog v21.0 installation images include a preview of a new proportional font, currently called APL335. This is to APL333 as APL387 (introduced in Dyalog v20.0) is to APL385.
+
+The font can be explored within the Microsoft Windows IDE (it can be selected from the drop-down font selection list) or at [https://dyalog.github.io/APL387/335/](https://dyalog.github.io/APL387/335/).
+
+The design of APL335 has not yet been finalised, and feedback is welcome. Please email your feedback to [support@dyalog.com](mailto:support@dyalog.com) or raise issues in the APL387 GitHub project ([https://github.com/Dyalog/APL387](https://github.com/Dyalog/APL387)).
+
+!!! Info "Information"  
+    Although Dyalog Ltd has commissioned the font, we hope that it will become widely used by the APL community. It is intended to be vendor-agnostic, and we believe that it includes all the APL characters used by all APL dialects. It intentionally has, and will continue to have, an extremely permissive licence.
+
 ## Changes
 
 ### APL Thread Scheduler
@@ -21,8 +38,8 @@ Dyalog v20.0 was the last release to be built for 32-bit Raspberry Pis. To run D
 !!! Info "Information"
     Dyalog Ltd strongly recommends identifying and replacing deprecated functionality at the earliest opportunity; see [Deprecated Functionality](https://docs.dyalog.com/21.0/release-notes/announcements/deprecated-functionality/) for information on how to identify deprecated functionality.
 
-### `43⌶` – Monadic Operator Generator  
-This _I-beam_ has been deprecated. It is scheduled for removal in Dyalog v22.0; it could be reintroduced in a later release.
+### `43⌶632` – Generics Operator
+`43⌶632` has been deprecated; the functionality that it provided is now available using a new `[...]` mechanism – see [Generics (.NET)](https://docs.dyalog.com/21.0/net-interface-guide/dotnet-classes/advanced-techniques/#generics) and [Generics (.NET Framework)](https://docs.dyalog.com/21.0/net-framework-interface-guide/dotnet-classes/advanced-techniques/#generics). It is scheduled for removal in Dyalog v22.0.
 
 ### `739⌶` – Temporary Directory  
 This _I-beam_ has been deprecated; the functionality that it provided is now available using [`⎕SYSTEM`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/system/). It is scheduled for removal in 2029.
@@ -31,7 +48,7 @@ This _I-beam_ has been deprecated; the functionality that it provided is now ava
 This _I-beam_ has been deprecated; the functionality that it provided is now available using [`⎕DT`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/dt/). It is scheduled for removal in 2029.
 
 ### Legacy Workspaces
-Dyalog v21.0 is the last major version that will support workspaces saved using Dyalog v11.0 or Dyalog v12.0 (workspaces saved using earlier versions are already unsupported). From Dyalog v22.0, the minimum version of a workspace that can be loaded will be v12.1.
+Dyalog v21.0 is the last major version that will support workspaces saved using Dyalog v11.0 or Dyalog v12.0 (workspaces saved using earlier versions are already unsupported). From Dyalog v22.0, the minimum version of a workspace that Dyalog will be able to load will be v12.1.
 
 To update workspaces that were saved using Dyalog v11.0 or v12.0 so that they can be loaded using a future version of Dyalog, you can use `)XLOAD` and `)SAVE` in any version of Dyalog from v12.1 to v21.0 inclusive. 
 
