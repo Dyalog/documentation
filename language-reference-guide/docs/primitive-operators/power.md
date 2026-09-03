@@ -7,7 +7,7 @@ search:
 
 If right operand `g` is a numeric integer scalar, _power_ applies its left operand function `f` cumulatively `g` times to its argument. In particular, `g` may be Boolean 0 or 1 for conditional function application.
 
-If right operand `g` is a scalar-returning dyadic *function*, then left operand function `f` is applied repeatedly **until** `((f Y) g Y)` or until a strong interrupt occurs. Notice that _power_ calls its dyadic right operand `g` with the next `(f Y)` and current `(Y)` values of the iteration as left and right arguments. In particular, if `g` is `=` or `≡`, the result is sometimes termed a *fixpoint* of `f`.
+If right operand `g` is a scalar-returning dyadic *function*, then left operand function `f` is applied repeatedly **until** `((f Y) g Y)` or until a strong interrupt occurs. _Power_ calls its dyadic right operand `g` with the next `(f Y)` and current `(Y)` values of the iteration as left and right arguments. In particular, if `g` is `=` or `≡`, the result is sometimes termed a *fixpoint* of `f`.
 
 If a left argument `X` is present, it is bound as left argument to left operand function `f`:
 ```apl
@@ -84,7 +84,7 @@ If the function does not have an inverse, a negative argument `g` generates `DOM
  hw  eo  lr  ll  od
 ```
 
-!!! warning
+!!! Warning "Warning"
     Some expressions, such as the following, will cause an infinite internal loop and APL will appear to hang. In most cases this can be resolved by issuing a hard INTERRUPT.
     ```apl
       !⍣-1

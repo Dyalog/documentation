@@ -5,7 +5,7 @@ search:
 
 # <span>Rank</span> `R←{X}(f⍤B)Y`{{key}}
 
-!!! note "Classic Edition"
+!!! Info "Information"
     The symbol `⍤` is not available in Classic Edition, and the _rank_ operator is instead represented by `⎕U2364`.
 
 The _rank_ operator `⍤` applies monadic function `f` successively to sub-arrays of `Y`, or dyadic function `f` between sub-arrays of `X` and `Y`. Sub-arrays are selected by right operand `B`.
@@ -26,7 +26,7 @@ If `X` is specified, it may be any array and `f` may be any dyadic function that
 
 The sub-arrays of `R` are the results of the individual applications of `f`. If these results differ in rank or shape, they are extended to a common rank and shape in the manner of _mix_. See [Mix](../primitive-functions/mix.md).
 
-Notice that it is necessary to prevent the right operand `k` binding to the right argument. This can be done using parentheses, for example, `(f⍤1)Y`. The same can be achieved using  `⊢`, for example, `f⍤1⊢Y` because `⍤` binds tighter to its right operand than `⊢` does to its left argument, and `⊢` therefore resolves to _identity_.
+It is necessary to prevent the right operand `k` binding to the right argument. This can be done using parentheses, for example, `(f⍤1)Y`. The same can be achieved using  `⊢`, for example, `f⍤1⊢Y` because `⍤` binds tighter to its right operand than `⊢` does to its left argument, and `⊢` therefore resolves to _identity_.
 
 ## Monadic Examples
 
@@ -110,7 +110,7 @@ Using the function `{⍺ ⍵}`  as the left operand demonstrates how the dyadic 
 └──┴─────────┘
 ```
 
-Note that a right operand of `¯1` applies the function between the major cells (in this case *elements*) of the left argument, and the major cells (in this case *rows*) of the right argument.
+A right operand of `¯1` applies the function between the major cells (in this case *elements*) of the left argument, and the major cells (in this case *rows*) of the right argument.
 ```apl
 
       10 20 30 ({⍺ ⍵}⍤¯1)3 4⍴⍳12

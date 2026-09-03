@@ -15,7 +15,7 @@ In general, the result `R` is similar to that obtained by square-bracket indexin
       I J ⌷[1 3] Y  ←→  Y[I;;J] 
 ```
 
-Note that index with axis may be used with selective specification. `⎕IO` is an implicit argument of index with axis.
+Index with axis can be used with selective specification. `⎕IO` is an implicit argument of index with axis.
 
 <h2 class="example">Examples</h2>
 ```apl

@@ -402,7 +402,7 @@ A system variable can never be undefined. Default values are assigned to all sys
 |[`⎕WSID`](wsid.md)|Workspace ID                        |Workspace  |
 |[`⎕WX`](wx.md)    |Window Expose                       |Namespace  |
 
-Note that the value assigned to a system variable must be appropriate, otherwise an error will be reported immediately.
+The value assigned to a system variable must be appropriate, otherwise an error is reported immediately.
 
 <h2 class="example">Example</h2>
 

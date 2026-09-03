@@ -9,7 +9,7 @@ search:
 
 `⎕DQ` awaits and processes events.  `Y` specifies the GUI objects(s) for which events are to be processed.  Objects are identified by their names, as character scalars/vectors, or by namespace references. These may be objects of type Root, Form, Locator, FileBox, MsgBox, PropertySheet, TCPSocket, Timer, Clipboard and pop-up Menu. Sub-objects (children) of those named in `Y` are also included.  However, any objects which exist, but are not named in `Y`, are effectively disabled (do not respond to the user).
 
-If `Y` is `#`, `'#'`, or `'.'`, all objects currently owned and subsequently created by the current thread are included in the `⎕DQ`. Note that because the Root object is owned by thread 0, events on Root are reported only to thread 0.
+If `Y` is `#`, `'#'`, or `'.'`, all objects currently owned and subsequently created by the current thread are included in the `⎕DQ`. Because the Root object is owned by thread 0, events on Root are reported only to thread 0.
 
 If `Y` is empty it specifies the object associated with the current namespace and is only valid if the current space is one of the objects listed above.
 

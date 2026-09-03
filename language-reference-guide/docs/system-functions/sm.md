@@ -39,7 +39,7 @@ Elements in column 1 (Field Contents) may be:
 - A character scalar
 - A character vector
 - A character matrix (rank 2)
-- A nested matrix defining a sub-form whose structure and contents must conform to that defined for `⎕SM` as a whole.  This definition is recursive.  Note however that a sub-form must be a matrix - a vector is not allowed.
+- A nested matrix defining a sub-form whose structure and contents must conform to that defined for `⎕SM` as a whole.  This definition is recursive.  However, a sub-form must be a matrix - a vector is not allowed.
 
 Elements in column 8 (Video Attributes) may be:
 
@@ -50,7 +50,7 @@ Elements in column 8 (Video Attributes) may be:
 
 Dyalog APL for UNIX systems on tty devices (async terminals or on terminal emulators) manages two screens; the SESSION screen and the USER screen.  If the SESSION screen is current, an assignment to `⎕SM` causes the display to switch to the USER screen and show the form defined by `⎕SM`.
 
-Note that Ride does not directly support `⎕SM`, although it is possible to display `⎕SM` in the tty session to which a Ride client is connected.
+Ride does not directly support `⎕SM`, although it is possible to display `⎕SM` in the tty session to which a Ride client is connected.
 
 If the USER screen is current, any change in the value of `⎕SM` is immediately reflected by a corresponding change in the appearance of the display.  However, an assignment to `⎕SM` that leaves its value unchanged has no effect.
 

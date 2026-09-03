@@ -5,7 +5,7 @@ search:
 
 # <span>Partition</span> `R←X⊆[K]Y`{{key}}
 
-!!! note "Classic Edition"
+!!! Info "Information"
     The symbol `⊆` (Left Shoe Underbar) is not available in Classic Edition, and _partition_ is instead represented by `⎕U2286`.
 
 `Y` may be any non-scalar array.
@@ -18,7 +18,7 @@ The axis specification is optional.  If present, it must be a simple integer sca
 
 A new partition is started in the result whenever the corresponding element in `X` is greater than the previous one. Items in `Y` corresponding to `0`s in `X` are not included in the result.
 
-Note that if `⎕ML≥3`, the symbol `⊂` means the same as `⊆`.
+If `⎕ML≥3`, the symbol `⊂` means the same as `⊆`.
 
 <h2 class="example">Examples</h2>
 ```apl

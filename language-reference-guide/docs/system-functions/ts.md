@@ -22,7 +22,7 @@ This is a seven element vector which identifies the clock time set on the partic
 1989 7 11 10 42 59 123
 ```
 
-Note that on some systems, where time is maintained only to the nearest second, a zero is returned for the seventh (millisecond) field.
+On some systems, where time is maintained only to the nearest second, a zero is returned for the seventh (millisecond) field.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

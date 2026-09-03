@@ -19,9 +19,9 @@ Unless otherwise specified (see File Properties below) the new file `X` will hav
 
 The result `R` is the file tie number associated with the new file `X`.
 
-Note that the Access Code is 4609, which is the sum of the Access Codes for `⎕FREAD` (1), `⎕FRDCI` (512) and `⎕FRDAC` (4096).
+The Access Code is 4609, which is the sum of the Access Codes for `⎕FREAD` (1), `⎕FRDCI` (512) and `⎕FRDAC` (4096).
 
-Note also that although the file need not be tied exclusively, the `⎕FCOPY` function will not yield the file to other APL processes while it is running, and it might take some considerable time to run in the case of a large component file.
+Although the file need not be tied exclusively, the `⎕FCOPY` function does not yield the file to other APL processes while it is running, and it might take some considerable time to run in the case of a large component file.
 
 <h2 class="example">Example</h2>
 ```apl
@@ -36,8 +36,7 @@ Note also that although the file need not be tied exclusively, the `⎕FCOPY` f
 
 If `X` specifies the name of an existing file, the operation fails with a `FILE NAME ERROR`.
 
-!!! note
-    This operation is atomic. If an error occurs during the copy operation (such as disk full) or if a strong interrupt is issued, the copy will be aborted and the new file `X` will not be created.
+This operation is atomic. If an error occurs during the copy operation (such as disk full) or if a strong interrupt is issued, the copy is aborted and the new file `X` is not created.
 
 ## Variant Options
 
@@ -81,7 +80,7 @@ will name a variant of `⎕FCREATE` which will create component file with level 
 
 ```
 
-!!! note
+!!! Hint "Hints and Recommendations"
     Setting `('U' 0)` (no Unicode support) is discouraged as it might cause the copy to fail with a `TRANSLATION ERROR`. Similarly, using a Classic interpreter to `⎕FCOPY` files might result in `TRANSLATION ERROR`s.
 
 !!! Info "Information"

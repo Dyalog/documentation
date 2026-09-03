@@ -5,8 +5,8 @@ search:
 
 # <span>Variant</span> `{R}←{X}(f⍠B)Y`{{key}}
 
-!!! note "Classic Edition"
-    The symbol `⍠` is not available in Classic Edition, and the _variant_ operator is instead represented by `⎕U2360`. Note too that `⍠` and `⎕OPT` are synonymous though only the latter is available in the Classic Edition.
+!!! Info "Information"
+    The symbol `⍠` is not available in Classic Edition, and the _variant_ operator is instead represented by `⎕U2360`. `⍠` and `⎕OPT` are synonymous, though only the latter is available in Classic Edition.
 
 The _variant_ operator `⍠` specifies the value of an *option* to be used by its left operand function `f`. An *option* is a named property of a function whose value in some way affects the operation of that function.
 

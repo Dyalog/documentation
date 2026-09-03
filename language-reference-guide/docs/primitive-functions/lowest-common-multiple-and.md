@@ -7,7 +7,7 @@ search:
 
 ## Case 1: Lowest Common Multiple – either or both X and Y are numeric (non-Boolean)
 
-`R` is the lowest common multiple of `X` and `Y`. Note that in this case, `⎕CT` and `⎕DCT` are implicit arguments.
+`R` is the lowest common multiple of `X` and `Y`. In this case, `⎕CT` and `⎕DCT` are implicit arguments.
 
 <h2 class="example">Example</h2>
 ```apl
@@ -33,7 +33,7 @@ search:
              1   1     1
 ```
 
-Note that the ASCII caret (`^`) will also be interpreted as an APL **And** (`∧`).
+The ASCII caret (`^`) is also interpreted as an APL **And** (`∧`).
 
 <h2 class="example">Example</h2>
 ```apl

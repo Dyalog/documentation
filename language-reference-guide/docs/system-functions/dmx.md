@@ -7,7 +7,7 @@ search:
 
 `⎕DMX` is a system object that provides information about the last reported APL error. `⎕DMX` has *thread scope*, that is, its value differs according to the thread from which it is referenced. In a multi-threaded application therefore, each thread has its own value of `⎕DMX`.
 
-`⎕DMX` contains the following Properties (name class 2.6). Note that this list is likely to change. Your code should not assume that this list will remain unchanged. You should also not assume that the display form of `⎕DMX` will remain unchanged.
+`⎕DMX` contains the following Properties (name class 2.6). This list is likely to change. Your code should not assume that this list will remain unchanged. You should also not assume that the display form of `⎕DMX` will remain unchanged.
 
 |---|---|---|
 |`Category`|character vector|The category of the error|
@@ -90,7 +90,7 @@ The benefit of the localisation strategy is that code which uses error trapping 
 
 ```
 
-Note: `⎕SIGNAL` can be used to reset the value of this system constant.
+`⎕SIGNAL` can be used to reset the value of this system constant.
 
 The first time we run `NewFile 'pete'`, the file doesn't exist and  the `⎕FCREATE` in `NewFile[2]` succeeds.
 ```apl

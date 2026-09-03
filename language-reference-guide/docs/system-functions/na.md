@@ -56,7 +56,7 @@ The full syntax for the right argument of `⎕NA` is:
     [result] library|function [arg1] [arg2] ...
 ```
 
-Note that functions associated with DLLs are never dyadic. All arguments are passed as items of a (possibly nested) vector on the right of the function.
+Functions associated with DLLs are never dyadic. All arguments are passed as items of a (possibly nested) vector on the right of the function.
 
 ## Locating the DLL
 
@@ -93,7 +93,7 @@ VALUE ERROR
 
 ### File Extension
 
-Under Windows, if the file extension is omitted, **.dll** is assumed. Note that some DLLs are in fact **.exe** files, and in this case the extension must be specified explicitly:
+Under Windows, if the file extension is omitted, **.dll** is assumed. Some DLLs are in fact **.exe** files, and in this case the extension must be specified explicitly:
 ```apl
       ⎕NA'... mydll.exe|foo ...'
 ```
@@ -177,9 +177,9 @@ This means that where the C function indicates a *pointer type*, we must code th
 
 In C it is common to represent character strings as *null-terminated* or *byte counted* arrays. These special data types are indicated by inserting the symbol `0` (null-terminated) or `#` (byte counted) between the direction indicator (`<`, `>`, `=`) and the type (`T` or `C)` specification. For example, a pointer to a null-terminated input character string is coded as `<0T[]`, and an output one coded as `>0T[]`.
 
-Note that while appending the array specifier '`[]`' is formally correct, because the presence of the special qualifier (`0` or `#`) *implies* an array, the '`[]`' may be omitted: `<0T`, `>0T`, `=#C`, etc.
+While appending the array specifier '`[]`' is formally correct, because the presence of the special qualifier (`0` or `#`) *implies* an array, the '`[]`' can be omitted: `<0T`, `>0T`, `=#C`, etc.
 
-Note also that the 0 and # specifiers may be used with data of all types (excluding `A` and `Z`) and widths. For example, in the Classic Edition, `<0U2` may be useful for dealing with Unicode.
+The `0` and `#` specifiers can be used with data of all types (excluding `A` and `Z`) and widths. For example, in the Classic Edition, `<0U2` may be useful for dealing with Unicode.
 
 ### Type
 
@@ -228,7 +228,7 @@ The type specifier may be followed by the width of the value in bytes. For examp
 
 In the Unicode Edition, the default width is the width of a *wide character* according to the convention of the host operating system. This translates to T2 under Windows and T4 under UNIX, Linux or macOS.
 
-Note that 32-bit versions can support 64-bit integer *arguments*, but not 64-bit integer *results*.
+32-bit versions can support 64-bit integer *arguments*, but not 64-bit integer *results*.
 
 <h3 class="example">Examples</h3>
 
@@ -240,7 +240,7 @@ Note that 32-bit versions can support 64-bit integer *arguments*, but not 64-bit
 
 ### Arrays
 
-Arrays are specified by following the basic data type with `[n]` or `[]`, where `n` indicates the number of elements in the array. In the C declaration, the number of elements in an array may be specified explicitly at compile time, or determined dynamically at runtime. In the latter case, the size of the array is often passed along with the array, in a separate argument. In this case, `n`, the number of elements is omitted from the specification. Note that C deals only in scalars and rank 1 (vector) arrays.
+Arrays are specified by following the basic data type with `[n]` or `[]`, where `n` indicates the number of elements in the array. In the C declaration, the number of elements in an array may be specified explicitly at compile time, or determined dynamically at runtime. In the latter case, the size of the array is often passed along with the array, in a separate argument. In this case, `n`, the number of elements is omitted from the specification. C deals only in scalars and rank 1 (vector) arrays.
 ```c
 int vec[10];               // explicit vector length.
 unsigned size, list[];     // undetermined length. 
@@ -260,7 +260,7 @@ Confusion sometimes arises over a difference in the declaration syntax between C
    foo(ptr);// call with address of array.
 ```
 
-However, from APL's point of view, these two cases are distinct and if the function is to be called with the address of (pointer to) a *scalar*, it must be declared: `'<T'`. Otherwise, to be called with the address of an *array*, it must be declared: `'<T[]'`. Note that it is perfectly acceptable in such circumstances to define more than one name association to the same DLL function specifying different argument types:
+However, from APL's point of view, these two cases are distinct and if the function is to be called with the address of (pointer to) a *scalar*, it must be declared: `'<T'`. Otherwise, to be called with the address of an *array*, it must be declared: `'<T[]'`. It is perfectly acceptable in such circumstances to define more than one name association to the same DLL function specifying different argument types:
 ```apl
       'FooScalar'⎕NA'mydll|foo <T'   ⋄ FooScalar'a'
       'FooVector'⎕NA'mydll|foo <T[]' ⋄ FooVector'abc'
@@ -294,9 +294,9 @@ A call on the function with two arguments - a count followed by a vector of stru
       foo 4,⊂(1.4 3)(5.9 1)(6.5 2)(0 0)
 ```
 
-Notice that for the above call, APL converts the two Boolean `(0 0)` elements to an 8-byte float and a 2-byte int, respectively.
+For the above call, APL converts the two Boolean `(0 0)` elements to an 8-byte float and a 2-byte int, respectively.
 
-Note that if the C compiler would add extra space for alignment within a structure the `⎕NA` syntax will need to code that explicitly. For example:
+If the C compiler would add extra space for alignment within a structure, the `⎕NA` syntax will need to code that explicitly. For example:
 ```c
 typedef struct
 {
@@ -331,7 +331,7 @@ For example:
 
 ## Using a Function
 
-A DLL function may or may not return a result, and may take zero or more arguments. This syntax is reflected in the coding of the right argument of `⎕NA`. However, notice that the corresponding associated APL function is a result-returning niladic (if it takes no arguments) or monadic function. It cannot be dyadic and it must *always* return a vector result - a null one if there is no output from the DLL function. See Result Vector section below. Examples of the various combinations are:
+A DLL function may or may not return a result, and may take zero or more arguments. This syntax is reflected in the coding of the right argument of `⎕NA`. However, the corresponding associated APL function is a result-returning niladic (if it takes no arguments) or monadic function. It cannot be dyadic and it must *always* return a vector result - a null one if there is no output from the DLL function. See Result Vector section below. Examples of the various combinations are:
 
 ### DLL function Non-result-returning
 ```apl
@@ -354,7 +354,7 @@ When the external function is called, the number of elements in the argument mus
       fn3 'This' 'That'     ⍝ 2-element arg
 ```
 
-Note in the second example, that you must enclose the argument string to produce a single item (nested) array in order to match the declaration. Dyalog converts the type of a numeric argument if necessary, so for example in `fn5` defined above, a Boolean value would be converted to double floating point (F8) prior to being passed to the DLL function.
+In the second example, you must enclose the argument string to produce a single item (nested) array in order to match the declaration. Dyalog converts the type of a numeric argument if necessary, so for example in `fn5` defined above, a Boolean value would be converted to double floating point (F8) prior to being passed to the DLL function.
 
 ### Multi-Threading
 
@@ -394,7 +394,7 @@ Here, you must supply the **number of elements** that the output will need in or
       fn6 10 'world'  ⍝ 1st arg needs space for 10 ints.
 ```
 
-Note that if you were to reserve fewer elements than the DLL function actually used, the DLL function would write beyond the end of the reserved array and may cause the interpreter to crash with a System Error (syserror 999 on Windows or SIGSEGV on UNIX, Linux or macOS).
+If you were to reserve fewer elements than the DLL function actually used, the DLL function would write beyond the end of the reserved array and might cause the interpreter to crash with a System Error (syserror 999 on Microsoft Windows or SIGSEGV on UNIX, Linux, or macOS).
 
 ### `=`  Input/Output
 
@@ -428,7 +428,7 @@ In the previous example, to pass a null pointer, (or one returned from another D
 
 Now APL passes the *value* of the second argument (in this case 0 - the null pointer), rather than its address.
 
-Note that by using P, which is 4-byte for 32-bit processes and 8-byte for 64-bit processes, you will ensure that the code will run unchanged under both 32-bit and 64-bit versions of Dyalog APL.
+By using `P`, which is 4-byte for 32-bit processes and 8-byte for 64-bit processes, you ensure that the code runs unchanged under both 32-bit and 64-bit versions of Dyalog.
 
 ### Result Vector
 
@@ -447,7 +447,7 @@ The length of the result vector is therefore: 1 (if the function was declared to
 |`I4 mydll|fn5 F8`|`1`|`0`|`1`|
 |`I4 mydll|fn6 >I4[] <0T`|`1`|`1 0`|`2`|
 
-Note that the result vector from a function that is declared `void()` and has no output parameters is `⍬` (zilde).
+The result vector from a function that is declared `void()` and has no output parameters is `⍬` (zilde).
 
 As a convenience, if the result would otherwise be a 1-item vector, it is disclosed. Using the third example above:
 ```apl
@@ -571,7 +571,7 @@ Suppose a global buffer (at address: `addr`) contains (`numb`) double floating p
       doubles numb addr (numb×8)
 ```
 
-Notice that:
+In this example:
 
 - As the first argument to `doubles` is an output argument, we must supply the number of elements to reserve for the output data.
 - `MEMCPY` is defined to take the number of *bytes* to copy, so we must multiply the number of elements by the element size in bytes.
@@ -631,7 +631,7 @@ Charlie
 Brown
 ```
 
-Note that (as this is a 64-bit example), `⎕FR` must be 1287 for the addition to be reliable.
+As this is a 64-bit example, `⎕FR` must be 1287 for the addition to be reliable.
 
 To copy data *from* the workspace *into* an already allocated (`new`) structure:
 ```apl
@@ -640,7 +640,7 @@ To copy data *from* the workspace *into* an already allocated (`new`) structure:
       put (new+4) 'Peep' 20
 ```
 
-Notice in this example that you must ensure that names no longer than 19 characters are passed to `put`. More than 19 characters would not leave `STRNCPY` enough space to include the trailing null, which would probably cause the application to fail.
+In this example, you must ensure that names no longer than 19 characters are passed to `put`. More than 19 characters would not leave `STRNCPY` enough space to include the trailing null, which would probably cause the application to fail.
 
 ### STRNCPYA
 
@@ -720,7 +720,7 @@ The Microsoft Windows function `MessageBox` displays a standard dialog box on th
 int MessageBox(HWND, LPCSTR, LPCSTR, UINT);
 ```
 
-The following statements provide access to this routine through an APL function of the same name. Note that the 2nd and 3rd arguments are both coded as input pointers to type T null-terminated character arrays which ensures portability between Editions.
+The following statements provide access to this routine through an APL function of the same name. The 2nd and 3rd arguments are both coded as input pointers to type T null-terminated character arrays which ensures portability between Editions.
 ```apl
       ⎕NA 'I user32|MessageBox* P <0T <0T U'
 ```
@@ -735,7 +735,8 @@ The function works equally well in the Unicode Edition because the `<0T` specifi
       MessageBox 0 'Το Μήνυμα' 'Ο Τίτλος' 19
 ```
 
-Note that a simpler, portable (and safer) method for displaying a Message Box is to use Dyalog APL's primitive `MsgBox` object.
+!!! Hint "Hints and Recommendations"
+    A simpler, portable (and safer) method for displaying a Message Box is to use Dyalog's primitive `MsgBox` object.
 
 ### FindWindow()
 
@@ -765,7 +766,7 @@ The Microsoft Windows function `GetWindowText` retrieves the caption displayed i
 int GetWindowText(HWND, LPSTR, int);
 ```
 
-The following associates the "`GetWindowText`" DLL function with an APL function of the same name.  Note that the second argument is coded as "`>0T`" indicating that it is a pointer to a character output array.
+The following associates the "`GetWindowText`" DLL function with an APL function of the same name. The second argument is coded as "`>0T`" indicating that it is a pointer to a character output array.
 ```apl
       ⎕NA 'I user32|GetWindowText* P >0T I'
 ```
@@ -790,7 +791,7 @@ There are three points to note.
 
 1. Firstly, the number 255 is supplied as the second argument.  This instructs APL to allocate a buffer large enough for a 255-element character vector into which the DLL routine will write.
 2. Secondly, the result of the APL function is a nested vector of 2 elements.  The first element is the result of the DLL function.  The second element is the output character array. 
-3. Finally, notice that although we reserved space for 255 elements, the result reflects the length of the actual text (19).
+3. Finally, although we reserved space for 255 elements, the result reflects the length of the actual text (19).
 
 An alternative way of coding and using this function is to treat the second argument as an input/output array.
 
@@ -810,7 +811,7 @@ In this case, the second argument is coded as `=0T`, so when the function is cal
 
 ### GetCharWidth()
 
-The function `GetCharWidth` returns the width of each character in a given range. Its first argument is a device context (handle).  Its second and third arguments specify font positions (start and end).  The third argument is the resulting integer vector that contains the character widths (this is an example of an output array).  The function returns a Boolean value to indicate success or failure.  The function is defined as follows.  Note that this function is provided in the library: `gdi32.dll`.
+The function `GetCharWidth` returns the width of each character in a given range. Its first argument is a device context (handle).  Its second and third arguments specify font positions (start and end).  The third argument is the resulting integer vector that contains the character widths (this is an example of an output array).  The function returns a Boolean value to indicate success or failure.  The function is defined as follows. This function is provided in the library: `gdi32.dll`.
 
 ```c
 BOOL GetCharWidth(HDC, UINT, UINT, LPINT);
@@ -830,11 +831,11 @@ The following statements provide access to this routine through an APL function 
 '∊-------------'
 ```
 
-Note: `'Prin'⎕WG'Handle'` returns a handle which is represented as a number. The number will be in the range (0 - 2*32] on a 32-bit version and (0 - 2*64] on a 64-bit version. These can be passed to a P type parameter. Older versions used a 32-bit signed integer.
+`'Prin'⎕WG'Handle'` returns a handle which is represented as a number. The number will be in the range (0 - 2*32] on a 32-bit version and (0 - 2*64] on a 64-bit version. These can be passed to a P type parameter. Older versions used a 32-bit signed integer.
 
 ### The `quadna` workspace
 
-The following example from the supplied workspace: quadna.dws. `quadna` illustrates several techniques which are important in advanced `⎕NA` programming. Function `DllVersion` returns the major and minor version number for a given DLL. Note that this example assumes that the computer is running the 64-bit version of Dyalog.
+The following example from the supplied workspace: quadna.dws. `quadna` illustrates several techniques which are important in advanced `⎕NA` programming. Function `DllVersion` returns the major and minor version number for a given DLL. This example assumes that the computer is running the 64-bit version of Dyalog.
 
 In advanced DLL programming, it is often necessary to administer memory outside APL's workspace. In general, the procedure for such use is:
 
@@ -846,7 +847,7 @@ In advanced DLL programming, it is often necessary to administer memory outside 
 6. Unlock the memory.
 7. Free the memory.
 
-Notice that steps 1 and 7 and steps 2 and 6 complement each other. That is, if you allocate global system memory, you must free it after you have finished using it. If you continue to use global memory without freeing it, your system will gradually run out of resources. Similarly, if you lock memory (which you must do before using it), then you should unlock it before freeing it. Although on some versions of Windows, freeing the memory will include unlocking it, in the interests of good style, maintaining the symmetry is probably a good thing.
+Steps 1 and 7 and steps 2 and 6 complement each other. That is, if you allocate global system memory, you must free it after you have finished using it. If you continue to use global memory without freeing it, your system will gradually run out of resources. Similarly, if you lock memory (which you must do before using it), then you should unlock it before freeing it. Although on some versions of Windows, freeing the memory will include unlocking it, in the interests of good style, maintaining the symmetry is probably a good thing.
 
 ```apl
     ∇ version←DllVersion file;Alloc;Free;Lock;Unlock;Size
@@ -892,7 +893,7 @@ Lines [13-26] call the DLL functions.
 
 Line [13] requests the size of buffer required to receive version information for the DLL. A size of 0 will be returned if the DLL does not contain version information.
 
-**Notice that** care is taken to balance memory allocation and release:
+Care is taken to balance memory allocation and release:
 
 On line [14], the :If clause is taken only if the global memory allocation is successful, in which case (and only then) a corresponding Free is called on line [25].
 

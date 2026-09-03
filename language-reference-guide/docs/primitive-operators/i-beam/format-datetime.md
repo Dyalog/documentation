@@ -292,7 +292,7 @@ e.g. `12:00`). All characters or sequences of characters may be delimited by `"`
 string to prevent them being interpreted as a part of a format sequence, and, within these delimiters, two adjacent
 delimiter characters produce a single delimiter.
 
-Note: The characters `AaaaBbbb` consist of two adjacent format sequences because there is a sequence of As followed by a
+The characters `AaaaBbbb` consist of two adjacent format sequences because there is a sequence of As followed by a
 sequence of Bs. The characters `AaaaAaaa` consist of one format sequence because it only contains `A`s. It can be
 separated into two format sequences by insering an empty `"` or `'` - delimited string, e.g. `Aaaa""Aaaa`.
 

@@ -6,8 +6,8 @@ search:
 
 # <span>Reap Forked Tasks</span> `R←4002⌶Y`{{key}}
 
-!!! note
-    **AIX only**
+!!! unix "Dyalog on AIX"
+    This function is available only under AIX.
 
 Under UNIX, when a child process terminates, it signals to its parent that it has terminated and waits for the parent to acknowledge that signal. `4002⌶` is the mechanism to allow the APL programmer to issue such acknowledgements.
 
@@ -21,7 +21,7 @@ The result `R` is a matrix containing the list of the newly-terminated processes
 
 `R[;3]` is `¯1` if the child process terminated as the result of a signal, otherwise it is the exit code of the child process
 
-The remaining 15 columns are the contents of the `rusage` structure returned by the underlying `wait3()` system call. Note that the two timevalstructs are each returned as a floating point number.
+The remaining 15 columns are the contents of the `rusage` structure returned by the underlying `wait3()` system call. The two `timeval` structs are each returned as a floating point number.
 
 The current `rusage` structure contains:
 ```c

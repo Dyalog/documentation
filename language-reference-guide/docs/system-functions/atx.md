@@ -7,8 +7,7 @@ search:
 
 This function provides information about a name in a workspace, including its usage, history, restrictions, role and origin.
 
-!!! note
-    To retrieve this information for an unnamed value, wrap `⎕ATX` in a dfn and use the name `⍵`, for example `{60⎕ATX'⍵'}`
+To retrieve this information for an unnamed value, wrap `⎕ATX` in a dfn and use the name `⍵`, for example `{60⎕ATX'⍵'}`.
 
 `Y` can be a simple character scalar, a simple or enclosed character vector, or a vector of character scalars and vectors  (as least one must be a character vector) of the name(s) for which information is required.
 

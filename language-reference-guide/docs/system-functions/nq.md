@@ -15,7 +15,7 @@ If the left argument `X` is omitted or is 0, `⎕NQ` adds the event specified by
 
 If `X` is 1, the event is actioned **immediately** by `⎕NQ` itself and is processed in exactly the same way as it would be processed by `⎕DQ`.  For example, if the event has a callback function attached, `⎕NQ` will invoke it directly. See [Dequeue Events](dq.md) for further details. If the event generates any subsidiary events (for example, a KeyPress might generate a GotFocus), the subsidiary events are added to the event queue rather than being executed immediately.
 
-Note that it is not possible for one thread to use `1 ⎕NQ` to send an event to another thread.
+It is not possible for one thread to use `1 ⎕NQ` to send an event to another thread.
 
 If `X` is 2 and the name supplied is the name of an event, `⎕NQ` performs the default processing for the event immediately, but does **not** invoke a callback function if there is one attached.
 

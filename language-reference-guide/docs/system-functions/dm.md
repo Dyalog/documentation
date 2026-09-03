@@ -19,7 +19,7 @@ DOMAIN ERROR
  DOMAIN ERROR        2÷0       ^
 ```
 
-Note: `⎕SIGNAL` can be used to reset the value of this system constant.
+`⎕SIGNAL` can be used to reset the value of this system constant.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

@@ -5,7 +5,8 @@ search:
 
 # <span>Where</span> `R←⍸Y`{{key}}
 
-**Classic Edition:**  the symbol `⍸` (Iota Underbar) is not available in Classic Edition, and _where_ is instead represented by `⎕U2378`.
+!!! Info "Information"
+    The symbol `⍸` (Iota Underbar) is not available in Classic Edition, and _where_ is instead represented by `⎕U2378`.
 
 `Y` must be a simple Boolean or numeric array of non-negative integers.
 

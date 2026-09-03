@@ -172,7 +172,7 @@ The context of indexing is important.  In the last example, the indexing method 
       ⊂2 1 ←→ ⊂(⊂2),(⊂1)
 ```
 
-Note that for any array `A`, `A[⊂⍬]` represents a scalar quantity, which is the whole of `A`, so:
+For any array `A`, `A[⊂⍬]` represents a scalar quantity, which is the whole of `A`, so:
 ```apl
       A←5⍴0
       A

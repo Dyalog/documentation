@@ -5,7 +5,7 @@ search:
 
 # <span>Data Representation (Monadic)</span> `R←⎕DR Y`{{key}}
 
-Monadic `⎕DR` returns the type of its argument `Y`.  The result `R` is an integer scalar containing one of the following values. Note that the internal representation and data types for character data differ between the Unicode and Classic Editions.
+Monadic `⎕DR` returns the type of its argument `Y`.  The result `R` is an integer scalar containing one of the following values. The internal representation and data types for character data differ between the Unicode and Classic Editions.
 
 Table: Unicode Edition
 

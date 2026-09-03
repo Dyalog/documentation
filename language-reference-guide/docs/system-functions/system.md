@@ -34,7 +34,7 @@ The result `R` is a namespace in the root (`#` or `⎕SE`) of the current namesp
 More members might be added in a future release of Dyalog, but `R` will remain serialisable using [`1∘⎕JSON`](json.md).
 
 !!! Warning "Warning"
-    Do not attempt to add or modify members (changes will not be persisted); only modify clones of the namespace (`⎕NS ⎕SYSTEM`). Note that this locks down dynamic values like `⎕SYSTEM.Directories.Current` and `⎕SYSTEM.OS.UTCOffset`.
+    Do not attempt to add or modify members (changes will not be persisted); only modify clones of the namespace (`⎕NS ⎕SYSTEM`). This locks down dynamic values like `⎕SYSTEM.Directories.Current` and `⎕SYSTEM.OS.UTCOffset`.
 
 ## Members of the Result
 
@@ -173,7 +173,7 @@ The character vector group identifier on Unix and `''` on Microsoft Windows.
 The character vector NetBIOS domain name on Microsoft Windows and `''` on Unix.
 
 #### Host.UserId
-On Microsoft Windows, this is the [relative identifier](https://en.wikipedia.org/wiki/Relative_identifier). On Unix, the identifier of the currently logged-in user. Note that this is always a character vector, even on Unix where the value looks like a number.
+On Microsoft Windows, this is the [relative identifier](https://en.wikipedia.org/wiki/Relative_identifier). On Unix, the identifier of the currently logged-in user. This is always a character vector, even on Unix where the value looks like a number.
 
 #### Host.UserName
 The currently logged-in user.
