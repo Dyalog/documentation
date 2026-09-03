@@ -7,7 +7,7 @@ To create a menu structure in a bar along the top of a Form (as opposed to a *fl
       'TEMP.MB' ⎕WC 'MenuBar'
 ```
 
-Notice that, at this stage, there is no change in the appearance of the Form.
+At this stage, there is no change in the appearance of the Form.
 
 Then we can add a menu with the Caption `'Scale'`. The name of the menu is `'TEMP.MB.M'`. Adding the first menu causes the MenuBar to become visible.
 ```apl
@@ -16,9 +16,9 @@ Then we can add a menu with the Caption `'Scale'`. The name of the menu is `'TEM
 
 ![](../img/temperature-converter-11.png)
 
-Note that the ampersand (&) allows the user to select the menu quickly by pressing "Alt+S".
+The ampersand (&) allows the user to select the menu quickly by pressing "Alt+S".
 
-Now we can add the two options to the menu. Note that the MenuBar and Menu objects do not represent final choices, they merely specify a path to a choice which is represented by the MenuItem object. When either of these is chosen, we want to execute a callback function that will make the necessary changes to the scrollbar. The statements to create each of these MenuItems are broken into 3 only to fit them onto the page.
+Now we can add the two options to the menu. The MenuBar and Menu objects do not represent final choices, they merely specify a path to a choice which is represented by the MenuItem object. When either of these is chosen, we want to execute a callback function that will make the necessary changes to the scrollbar. The statements to create each of these MenuItems are broken into 3 only to fit them onto the page.
 
 First we create the Centigrade MenuItem...
 ```apl
@@ -36,7 +36,7 @@ Then the Fahrenheit MenuItem...
       'TEMP.MB.M.F' ⎕WC F
 ```
 
-Notice that as the default value of Checked is 0, we didn't really have to set it explicitly for Fahrenheit. Nevertheless, it will do no harm to do so, and improves clarity.
+As the default value of Checked is 0, you didn't really have to set it explicitly for Fahrenheit. Nevertheless, it will do no harm to do so, and improves clarity.
 
 The `SET_C` callback function is defined as follows:
 ```apl

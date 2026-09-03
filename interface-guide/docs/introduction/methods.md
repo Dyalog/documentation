@@ -26,7 +26,7 @@ VALUE ERROR
 
 Methods may also be called using `⎕NQ` with a left argument of 2, indeed if `⎕WX` is 0, this is the only way to call a method.
 
-The result of the method is returned by `⎕NQ`. Note however that the result is *[shy](../../../programming-reference-guide/introduction/results#shy-results)*.
+The result of the method is returned by `⎕NQ`. However, the result is *[shy](../../../programming-reference-guide/introduction/results#shy-results)*.
 
 For example, for a TreeView object you can obtain status information about a particular item in the object using the GetItemState method:
 ```apl
@@ -61,4 +61,4 @@ Or, using `2 ⎕NQ`
      2 ⎕NQ 'F' 'Configure' 10 10 30 20
 ```
 
-Notice that when you call an event as a method, you are executing the *default processing* associated with the event. The setting for the Event property is ignored and, in particular, any callback associated with the event is not executed.
+When you call an event as a method, you are executing the *default processing* associated with the event. The setting for the Event property is ignored and, in particular, any callback associated with the event is not executed.

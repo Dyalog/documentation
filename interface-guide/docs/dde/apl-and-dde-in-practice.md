@@ -6,7 +6,7 @@ The APL Shared Variable concept is based upon the *peer-to-peer* communications 
 
 An APL application registers itself as a potential server, or initiates a DDE conversation as a client, by making a Shared Variable offer using `⎕SVO`. The offer is either a general offer, which corresponds to a DDE server, or a specific offer which is a client.
 
-Note that, as mentioned in the introduction, DDE does not preclude two-way data transfer, despite its insistence on a client-server relationship. Thus the establishment of a shared variable as a server or as a client does not force the data transfer to be one-way. The choice of whether APL is to act as a server or as client may in practice be determined by convenience.
+As mentioned in the introduction, DDE does not preclude two-way data transfer, despite its insistence on a client-server relationship. Thus the establishment of a shared variable as a server or as a client does not force the data transfer to be one-way. The choice of whether APL is to act as a server or as client may in practice be determined by convenience.
 
 ## APL as the Client
 
@@ -29,7 +29,7 @@ For example, the following statement would associate the variable `SALES` with t
 2
 ```
 
-Note that the result of `⎕SVO` is the *degree of coupling*. This has the value 2 if the connection is complete (the server has responded) and 1 if it has not. In practice it is a little more complicated than this, because the result actually depends upon the type of DDE link that has been established.
+The result of `⎕SVO` is the *degree of coupling*. This has the value 2 if the connection is complete (the server has responded) and 1 if it has not. In practice it is a little more complicated than this, because the result actually depends upon the type of DDE link that has been established.
 
 In principle, the type of link is determined by the client. However, because the server may refuse to accept a particular type of link, it can actually be a result of *negotiation* between the two applications.
 
@@ -39,7 +39,7 @@ When the shared variable is offered as a client, APL **always** requests a warm 
 
 As mentioned in the Introduction, it is possible for a client to instruct a server to execute a command by sending it a DDE_EXECUTE message. This is intended to allow the client to condition the environment in which the server is operating and not (as one might first expect) to execute a command which directly returns a result. In fact the only response from a server to a DDE_EXECUTE message is a positive or negative acknowledgement, the meaning of which is application dependent.
 
-You can establish a shared variable as a channel for sending DDE_EXECUTE messages by assigning it a surrogate name of `'⍎'`, the APL _execute_ symbol. After sharing, you send commands to the server as DDE_EXECUTE messages by assigning them, as character vectors, to the shared variable. Following each such assignment, the value of the shared variable is reset to 1 if the server responded with a positive acknowledgement, or 0 if it responded with a negative acknowledgement. This should be interpreted with reference to the server application documentation. Note that most applications require that commands are surrounded by square brackets but several commands may be sent at a time. The following examples use Microsoft Excel Version 2.0 as the server :
+You can establish a shared variable as a channel for sending DDE_EXECUTE messages by assigning it a surrogate name of `'⍎'`, the APL _execute_ symbol. After sharing, you send commands to the server as DDE_EXECUTE messages by assigning them, as character vectors, to the shared variable. Following each such assignment, the value of the shared variable is reset to 1 if the server responded with a positive acknowledgement, or 0 if it responded with a negative acknowledgement. This should be interpreted with reference to the server application documentation. Most applications require that commands are surrounded by square brackets but several commands can be sent at a time. The following examples use Microsoft Excel Version 2.0 as the server :
 
 ## Establish a link to Excel's SYSTEM topic
 ```apl
@@ -83,7 +83,7 @@ where:
 |`var` |is the name of the APL variable.                                             |
 |`item`|is the name of the item with which the variable is to be associated (shared).|
 
-Notice that in this case, the left argument to `⎕SVO` specifies only the protocol, `'DDE'`. APL automatically defines the application name and topic to be `'DYALOG'` and `⎕WSID` respectively. The DDE *item* is specified in the right argument as either the name of the variable, or, optionally, as its external name or surrogate.
+In this case, the left argument to `⎕SVO` specifies only the protocol, `'DDE'`. APL automatically defines the application name and topic to be `'DYALOG'` and `⎕WSID` respectively. The DDE *item* is specified in the right argument as either the name of the variable, or, optionally, as its external name or surrogate.
 
 To allow another application to act as a client, you must have previously published the name(s) of the items which are supported. For example, if your APL application provides `SALES` information, the following statement could be used to establish it as a server for this item:
 ```apl

@@ -6,9 +6,9 @@ Functions exported by an OLEServer are executed (by the underlying OLE technolog
 
 In certain cases the client may not be interested in a result from a function and it may be desirable for client not to have to wait. For example, if a function updates files or performs a printing task, it would be nice for the client application to continue while the server performs this task in background, or indeed (using DCOM) on another computer.
 
-For an *out-of-process* OLE Server, this can be achieved by having the function that is called directly by the client *post* an event (using `⎕NQ`) onto the event queue and then return. When the function terminates, APL will take the next event from the queue and take the appropriate action. If the event has an associated callback function, APL will invoke it. Note that this happens immediately *after* the original function has terminated and a result (if any) has been returned to the client. This means that the APL OLEServer continues processing at the same time as the client application.
+For an *out-of-process* OLE Server, this can be achieved by having the function that is called directly by the client *post* an event (using `⎕NQ`) onto the event queue and then return. When the function terminates, APL will take the next event from the queue and take the appropriate action. If the event has an associated callback function, APL will invoke it. This happens immediately *after* the original function has terminated and a result (if any) has been returned to the client. This means that the APL OLEServer continues processing at the same time as the client application.
 
-Note however that while the OLEServer is processing, further OLE requests will be queued. For example, if the client were to call the same function again immediately, the function would not be invoked until the original processing has finished and the client would therefore wait (note that OLE itself will actually time-out after a certain period). Nevertheless, this technique is an effective way to offload batch processing tasks to a second (background) APL process or to one running on a different computer.
+However, while the OLEServer is processing, further OLE requests will be queued. For example, if the client were to call the same function again immediately, the function would not be invoked until the original processing has finished and the client would therefore wait (OLE itself will actually time-out after a certain period). Nevertheless, this technique is an effective way to offload batch processing tasks to a second (background) APL process or to one running on a different computer.
 
 ## The OLEASYNC Workspace
 
@@ -47,7 +47,7 @@ The actual printing is performed by `PRINT_CB` *after* `PRINT` has returned to t
      ∇
 ```
 
-Note that the client can (later) query `ERRCODE` to find out whether or not the operation succeeded. Indeed, referencing `ERRCODE` will synchronise the client and server because the server will have to wait until `PRINT_CB` completes before it can service the request for the value of `ERRCODE`.
+The client can (later) query `ERRCODE` to find out whether or not the operation succeeded. Indeed, referencing `ERRCODE` will synchronise the client and server because the server will have to wait until `PRINT_CB` completes before it can service the request for the value of `ERRCODE`.
 
 The `ASYNC` function illustrates a slightly different approach and may be used to execute any expression asynchronously. It simply associates its argument (a character vector) as an expression to be executed when (user-defined) event 3001 occurs. It then *posts* this event onto the queue as before.
 ```apl
@@ -98,7 +98,7 @@ The namespace contains a fourth function called `LPR` which is designed to be ca
      ∇
 ```
 
-Note that the number of copies to be printed is defined by the (global) variable `COPIES` whose default value is 1. This is done only to illustrate that `LPR` called via `DO` runs in the correct instance of the OLEServer (using *your* value of `COPIES`) as opposed to in the master OLEServer namespace itself.
+The number of copies to be printed is defined by the (global) variable `COPIES` whose default value is `1`. This is done only to illustrate that `LPR` called via `DO` runs in the correct instance of the OLEServer (using *your* value of `COPIES`) as opposed to in the master OLEServer namespace itself.
 
 ## Testing dyalog.Async
 
@@ -119,9 +119,12 @@ c:\MyWS\MYASYNC.dws saved Wed Jun  1 14:11:01 2016
 
 ```
 
-Finally, register the OLE Server using *File/Export*. **Note that dyalog.Async will only work as an out-of-process OLE Server.**
+Finally, register the OLE Server using *File/Export*.
 
-Now clear the workspace and test dyalog.Async using Dyalog APL as an OLE client application. You could also try calling it from Excel. Note that the results from the functions `PRINT` and `ASYNC` are returned immediately.
+!!! Info "Information"
+    dyalog.Async will only work as an out-of-process OLE Server.
+
+Now clear the workspace and test dyalog.Async using Dyalog APL as an OLE client application. You could also try calling it from Excel. The results from the functions `PRINT` and `ASYNC` are returned immediately.
 ```apl
       )CLEAR
 clear ws

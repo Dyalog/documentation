@@ -56,6 +56,6 @@ Follow the above instructions to establish a link from APL to cell A4 in your Ex
 
 Try changing some of the numbers in the spreadsheet and watch as APL re-calculates the sum.
 
-Try entering a character string in cell A1. Note that APL sends back a character string containing `DOMAIN ERROR`.
+Try entering a character string in cell A1. APL sends back a character string containing `DOMAIN ERROR`.
 
 Use Ctrl+Break or select "Interrupt" from the *Action* menu in the Session window to stop `⎕DQ`.

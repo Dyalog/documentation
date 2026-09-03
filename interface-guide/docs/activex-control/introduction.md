@@ -13,4 +13,4 @@ This chapter also includes a tutorial which teaches you how to:
 - Include your ActiveX control in a Visual basic application
 - Run your ActiveX control from a Web Browser.
 
-The examples described in this Chapter were developed and tested  using the 32-bit version of Dyalog APL 15.0 Unicode and Microsoft Visual Studio Community 2015. Note that the Visual Studio IDE does not support 64-bit ActiveX controls, so you cannot run the tutorial using the 64-bit version of Dyalog.
+The examples described in this Chapter were developed and tested  using the 32-bit version of Dyalog APL 15.0 Unicode and Microsoft Visual Studio Community 2015. The Visual Studio IDE does not support 64-bit ActiveX controls, so you cannot run the tutorial using the 64-bit version of Dyalog.

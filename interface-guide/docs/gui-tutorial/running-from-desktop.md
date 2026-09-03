@@ -44,8 +44,8 @@ Select "Next" and give the application a name, then select "Finish".
 
 ![](../img/temperature-converter-13.png)
 
-The resulting icon is shown below. Note that although by default you will get a standard Dyalog APL icon, you could of course select another one from elsewhere on your system.
+The resulting icon is shown below. Although by default you get a standard Dyalog APL icon, you can of course select another one from elsewhere on your system.
 
 ![](../img/temperature-converter-14.png)
 
-Clicking on this icon will start your application. Notice that the APL Session Window will NOT appear at any stage unless there is an error in your code. All the user will see is your "Temperature Converter" dialog box.
+Clicking on this icon will start your application. The APL Session Window will NOT appear at any stage unless there is an error in your code. All the user will see is your "Temperature Converter" dialog box.

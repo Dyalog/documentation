@@ -6,7 +6,7 @@ When you use File/Export to create an *out-of-process* OLE Server, the following
 
 APL first creates a single Type Library File that describes all the OLEServer objects in the workspace. It then registers your OLE Server by updating the Windows Registry with, among other things, the names and ClassIDs of your workspace and Type Library file.
 
-Note that the type information is taken from your active workspace and not the saved workspace. It is up to you to ensure that your saved workspace (which will actually be used when the OLE Server is invoked) is kept in step.
+The type information is taken from your active workspace and not the saved workspace. It is up to you to ensure that your saved workspace (which will actually be used when the OLE Server is invoked) is kept in step.
 
 For example, if you were subsequently to remove the OLEServer objects from your workspace and re-save it, or save a completely different workspace with the same pathname, your OLE Server would fail to start because the Type Library and Registry and no longer synchronised with your workspace.
 
@@ -40,7 +40,7 @@ All registry entries are written as sub-keys of the primary key `HKEY_LOCAL_MACH
 	4. **ProgID** has its *Default* value set to "dyalog.xxxx" where "xxxx" is the name of the OLEServer.
 	5. **TypeLib** has its *Default* value set to the GUID corresponding to the TypeLibID property of the OLEServer.
 	6. **VersionIndependentProgID** has its *Default* value set to "dyalog.xxxx" where "xxxx" is the name of the OLEServer (same as **ProgID**).
-	7. Note that for a sub-object (an OLEServer that is a child of another OLEServer) only the **InProcHandler32** key is required, although the other entries are created and are in fact redundant.
+	7. For a sub-object (an OLEServer that is a child of another OLEServer), only the **InProcHandler32** key is required, although the other entries are created and are in fact redundant.
 3. A sub-key named **TypeLib\xxxx** where **xxxx** is the GUID corresponding to the value of the TypeLib property of the OLEServer. This contains a sub-key named **1.0** (which refers to its version number). The *Default* value of **1.0** is "Type Library for xxxx" where "xxxx" is the name of the OLEServer. **1.0** contains three further sub-keys named **0**, **FLAGS** and **HELPDIR**.
 	1. **0** (this identifies the language id; 0 refers to *all* languages) contains a sub-key named **win32** whose *Default* value is the full path-name of the Type Library file associated with the OLE object; i.e. the value of the TypeLibFile property of the OLEServer.
 	2. **FLAGS** has a *Default* value of "0".

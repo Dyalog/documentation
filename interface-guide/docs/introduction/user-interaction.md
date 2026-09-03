@@ -2,7 +2,7 @@
 
 ## Giving Control to the User
 
-As we have seen, `⎕WC` and `⎕WS` are used to build up the definition of the user-interface as a hierarchy of **objects** with **properties**. Notice that the interface is defined not only in terms of its appearance and general behaviour, but also by specification of the Event property, in terms of how it reacts to user actions.
+As we have seen, `⎕WC` and `⎕WS` are used to build up the definition of the user-interface as a hierarchy of **objects** with **properties**. The interface is defined not only in terms of its appearance and general behaviour, but also by specification of the Event property, in terms of how it reacts to user actions.
 
 Once you have defined your interface, you are ready to give control to the user. This is simply done by calling `⎕DQ`. Alternatively, you may use the Wait method (if appropriate) which is identical to `⎕DQ` in its operation.
 
@@ -41,7 +41,7 @@ You can set the action for a single event by prefixing the Event name by "on". F
  #.UP
 ```
 
-Notice that the value returned (`#.UP`) is not necessarily exactly the same as you set it (`UP`).
+The value returned (`#.UP`) is not necessarily exactly the same as you set it (`UP`).
 
 If you reference the Event property, you will obtain all the current settings, reported in order of their internal event number. Notice the use of distributed strand notation to set more than one event in the same statement.
 ```apl
@@ -61,7 +61,7 @@ If you set the Event property using assignment, all the event actions are redefi
   onMouseMove  #.MOVE  
 ```
 
-The All event can also be set by assignment, and it too clears previous settings. Notice too that a subsequent reference to a specific event using the "on" prefix, will report the "All" setting, unless it is specifically reset.
+The All event can also be set by assignment, and it too clears previous settings. A subsequent reference to a specific event using the "on" prefix, will report the "All" setting, unless it is specifically reset.
 ```apl
       F.(onMouseUp onMouseDown)←'UP' ('DOWN' 42)
       F.Event
@@ -151,7 +151,7 @@ For example, consider a callback function attached to a KeyPress event in an Edi
 - If the callback function returns a value of 0, `⎕DQ` takes no further action and (unless code in the callback function actions the keystroke directly) the keystroke is ignored.
 - If the callback function modifies the event message and changes the key from an "a" to a "b", `⎕DQ` carries out the default processing associated with the *new* event, and displays a lower-case "b" instead.
 
-Note that asynchronous callback functions may not be used to modify or inhibit the default processing because their results are ignored.
+Asynchronous callback functions cannot be used to modify or inhibit the default processing because their results are ignored.
 
 See also: [High-Priority Callback Functions](high-priority-callbacks.md).
 

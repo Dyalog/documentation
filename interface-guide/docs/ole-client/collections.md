@@ -12,7 +12,7 @@ P&L
 2
 ```
 
-Note that in old versions of Dyalog APL (pre-Version 11.0) the Item property was exposed as a method. This old behaviour may be select by setting `⎕WX` to 0 or 1 when you create the object. In which case:
+In versions before Dyalog v11.0, the Item property was exposed as a method. You can select this old behaviour by setting `⎕WX` to `0` or `1` when you create the object. In which case:
 ```apl
       S1←Sheets.Item 1
       S1.Name
@@ -22,7 +22,7 @@ P&L
 2
 ```
 
-Note that some collections work in origin 0 and some in origin 1; there is no way to tell which applies except from the documentation. Furthermore, collections are used for all sorts of purposes, and may not necessarily permit the instantiation of more than one member of the set at the same time. Collections are *not* the same as arrays.
+Some collections work in origin 0 and some in origin 1; there is no way to tell which applies except from the documentation. Furthermore, collections are used for all sorts of purposes, and might not necessarily permit the instantiation of more than one member of the set at the same time. Collections are *not* the same as arrays.
 
 As mentioned above, the Item property is typically the Default Property (see Language reference) of a Collection, so indexing may be applied directly to the Collection object.
 ```apl

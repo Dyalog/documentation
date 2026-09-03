@@ -2,7 +2,7 @@
 
 The following instructions will allow you to explore the DDE interface with another application (in this case Microsoft Excel) acting as the server.
 
-Start Excel and enter some data into (say) the cells R1C1 to R4C3 of the spreadsheet "SHEET1". The data can be character strings and/or numbers. Note that if the spreadsheet is NOT called "SHEET1", the function RUN below should be changed accordingly.
+Start Excel and enter some data into (say) the cells R1C1 to R4C3 of the spreadsheet "SHEET1". The data can be character strings and/or numbers. If the spreadsheet is NOT called "SHEET1", the function RUN below should be changed accordingly.
 
 Start Dyalog APL/W (clear ws).
 
@@ -16,7 +16,7 @@ Type the following statement in the APL Session :
 
 The result should be 2. If not, please check that you have typed the expression correctly, and that the name of the topic (SHEET1) corresponds to the spreadsheet name displayed by Excel.
 
-Note that the character between "EXCEL" and "SHEET1" may be the ASCII *pipe* symbol or the APL stile. Also note that in some countries, you use Lnn instead of Rnn to refer to rows in Excel. You may therefore need to use the following expression instead:
+The character between "EXCEL" and "SHEET1" can be the ASCII *pipe* symbol or the APL stile. In some countries, you use Lnn instead of Rnn to refer to rows in Excel. You may therefore need to use the following expression instead:
 ```apl
       'DDE:EXCEL|SHEET1' ⎕SVO 'X L1C1:L4C3'
 2
@@ -34,7 +34,7 @@ Look at the state of the shared variable `X` using `⎕SVS`. It indicates that b
 0 0 1 1
 ```
 
-Now switch to Excel and change the data again. Repeat step 8. Note the result indicates that Excel has changed `X`, but you have not yet referenced it.
+Now switch to Excel and change the data again. Repeat step 8. The result indicates that Excel has changed `X`, but you have not yet referenced it.
 ```apl
       ⎕SVS 'X'
 0 1 0 1
@@ -46,7 +46,7 @@ Type the expressions :
       ⎕DQ'.'
 ```
 
-Now switch to Excel and change the data again. Note that the `⎕DQ` terminates and returns a result.
+Now switch to Excel and change the data again. The `⎕DQ` terminates and returns a result.
 ```apl
   . 50
 ```
@@ -65,6 +65,6 @@ Then type :
       ⎕DQ'.'
 ```
 
-Now switch back to Excel and change the data. Note that every time you change a cell, the DDE event fires your callback function `FOO`. In fact the function is fired twice because it itself alters the STATE of `X` by *referencing* it. This causes a second DDE event.
+Now switch back to Excel and change the data. Every time you change a cell, the DDE event fires your callback function `FOO`. In fact the function is fired twice because it itself alters the STATE of `X` by *referencing* it. This causes a second DDE event.
 
 Switch back to APL, and type Ctrl+Break or select "Interrupt" from the *Action* menu to interrupt `⎕DQ`.

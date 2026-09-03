@@ -96,7 +96,7 @@ Being based upon a top-level GUI object, the Temperature Converter may be used a
 :EndClass ⍝ Temp
 ```
 
-Notice that the `:Implements Constructor` statement of its Constructor `Make`:
+The `:Implements Constructor` statement of its Constructor `Make`:
 ```apl
 :Implements Constructor :Base (⊂'Caption' TITLE),pv,
                              ⊂('Size' (30 40))

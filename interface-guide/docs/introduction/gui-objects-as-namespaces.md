@@ -80,7 +80,7 @@ You can also make `CHANGE` a callback function for the two Buttons.
       DOWN.onSelect←'CHANGE' ¯1
 ```
 
-Notice that because you were in the `F1.CH` namespace when you made this association, the event will fire the function `CHANGE` in the `F1.CH` namespace and, furthermore, it will execute it within that namespace. Hence the names referenced by the function are the local names, that is, the variable `COUNT` and the Label `CTR`, within that namespace.
+Because you were in the `F1.CH` namespace when you made this association, the event will fire the function `CHANGE` in the `F1.CH` namespace and, furthermore, it will execute it within that namespace. Hence the names referenced by the function are the local names, that is, the variable `COUNT` and the Label `CTR`, within that namespace.
 
 So if you now switch back to the outer workspace
 ```apl
@@ -191,4 +191,4 @@ The result is illustrated below.
 
 ![](../img/cloning-example.png)
 
-Note that when a namespace is cloned in this way, the objects (functions, variables and other namespaces) within it are not necessarily duplicated. Instead, the objects in cloned namespaces are in effect just pointers to the original objects. However, if you subsequently change the clone, or the original object to which it refers, the two are de-coupled and a second *copy* ensues. This mechanism makes it possible to create large numbers of *instances* of a single *class* namespace without consuming an excessive amount of workspace.
+When a namespace is cloned in this way, the objects (functions, variables and other namespaces) within it are not necessarily duplicated. Instead, the objects in cloned namespaces are in effect just pointers to the original objects. However, if you subsequently change the clone, or the original object to which it refers, the two are de-coupled and a second *copy* ensues. This mechanism makes it possible to create large numbers of *instances* of a single *class* namespace without consuming an excessive amount of workspace.

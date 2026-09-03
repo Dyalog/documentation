@@ -16,7 +16,7 @@ The following example illustrates the effect of docking one Form in another.
 
 ![](../img/docking-form-client-0.png)
 
-Notice that a dockable Form is indistinguishable in appearance between any other top-level Form except that it has additional items in its pop-up context (right mouse button) menu as shown.
+A dockable Form is indistinguishable in appearance between any other top-level Form except that it has additional items in its pop-up context (right mouse button) menu as shown.
 
 The following picture shows the effect of dragging the `Client` Form to the top edge of the `Host`, just before the mouse button is released.
 

@@ -10,7 +10,7 @@ An ActiveX Control is usually stored in file with the extension .OCX. The functi
 
 An ActiveX Control written using Dyalog APL is also a file with a .OCX extension. The file combines a small dynamic link library *stub* and a workspace. The functionality of the control is provided by the functions and variables in the workspace combined with the dynamic link library version of Dyalog APL.
 
-Note that an ActiveX Control written in Dyalog APL is a GUI object that has a visible appearance and a user interface.
+An ActiveX Control written in Dyalog APL is a GUI object that has a visible appearance and a user interface.
 
 To write an ActiveX Control in Dyalog APL, you use `⎕WC` to create an ActiveXControl object, as a child of a Form. An ActiveXControl is a container object, akin to a Group or a SubForm, that may contain a whole range of other controls such as Edit, Combo, Button and Grid objects. You may populate your ActiveXControl with other objects at this stage and save them in the workspace. However, you may prefer to create these sub-objects when an instance of the ActiveXControl is created. This happens when your control is loaded by a host application.
 
@@ -18,9 +18,9 @@ All the functions and variables that represent methods and properties through wh
 
 You may turn a workspace containing one or more ActiveXControl objects into an installable OCX file by selecting the *Export* menu item  from the Session *File* menu.
 
-Note that a single OCX file can therefore contain a number of ActiveX Controls.
+A single OCX file can therefore contain a number of ActiveX Controls.
 
-When a Dyalog APL ActiveX Control is loaded by a host application, functions in the stub load the appropriate Dyalog APL dynamic link library (DyalogDLL for short) into the host application. Note that the Dyalog dll must either be on the system PATH or be in the same directory as the OCX file.
+When a Dyalog APL ActiveX Control is loaded by a host application, functions in the stub load the appropriate Dyalog APL dynamic link library (DyalogDLL for short) into the host application. The Dyalog dll must either be on the system PATH or be in the same directory as the OCX file.
 
 The Dyalog dll  copies the appropriate parts of the workspace from the .OCX. If the same host application starts a second (different) ActiveX Control written in Dyalog APL, the appropriate parts of the second workspace are merged with the first. For further details, see the section entitled Workspace Management.
 
