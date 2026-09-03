@@ -8,9 +8,9 @@ search:
 
 `Y` is a character vector that specifies a valid UNIX user name. The function changes the *userid (uid)* and *groupid (gid)* of the process to values that correspond to the specified user name.
 
-Note that it is only possible to change the user name if the *effective uid* is 0 (that is, the process has root privileges).
+It is only possible to change the user name if the *effective uid* is 0 (that is, the process has root privileges).
 
-If the operation is successful, `R` is the user name specified in `Y`. Note that the value of `⎕AN` will not be affected, but the value of `⊃⎕AI` will be.
+If the operation is successful, `R` is the user name specified in `Y`. The value of `⎕AN` is not affected, but the value of `⊃⎕AI` is.
 
 If the operation fails, the function generates a `FILE ERROR 1 Not Owner` error.
 

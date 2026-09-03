@@ -115,7 +115,7 @@ Deutschland
 
 ```
 
-Note that the expression `y⍳x` signals a `LENGTH ERROR` because it looks for major cells in the left argument, whose shape is `5 14` (that is `1↓⍴y`), which is not the same as the trailing shape of `x`.
+The expression `y⍳x` signals a `LENGTH ERROR` because it looks for major cells in the left argument, whose shape is `5 14` (that is `1↓⍴y`), which is not the same as the trailing shape of `x`.
 ```apl
 
       y⍳x

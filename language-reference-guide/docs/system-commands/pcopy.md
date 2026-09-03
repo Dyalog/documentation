@@ -28,5 +28,5 @@ not copied COPIED JOIN
 not found X
 ```
 
-!!! warning
+!!! Warning "Warning"
     If a workspace full condition occurs during the execution of `)PCOPY` the state of the active workspace is unpredictable.

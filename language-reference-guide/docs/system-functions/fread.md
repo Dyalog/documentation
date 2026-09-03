@@ -11,7 +11,7 @@ search:
 
 The second item in `Y` may be scalar which specifies a single component number or a vector of component numbers. If it is a scalar, the result is the value of the array that is stored in the specified component on the tied file. If it is a vector, the result is a vector of such arrays.
 
-Note that any invocation of  `⎕FREAD` is an atomic operation.  Thus if `compnos` is a vector, the statement:
+Any invocation of `⎕FREAD` is an atomic operation. Thus if `compnos` is a vector, the statement:
 ```apl
       ⎕FREAD tie compnos passno
 ```

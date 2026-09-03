@@ -28,9 +28,8 @@ bin:!:2:2::/bin:
       ⎕SH 'apl MYWS <inputfile >out1 2>out2 &'
 ```
 
-## Note
-
-This function is disabled and instead generates a `DOMAIN ERROR` if the RIDE_SPAWNED parameter is non-zero. This is designed to prevent it being invoked from a Ride session which does not support this type of user interface. For further details, see the [Ride User Guide](https://dyalog.github.io/ride).
+!!! Info "Information"
+    This function is disabled and instead generates a `DOMAIN ERROR` if the RIDE_SPAWNED parameter is non-zero. This is designed to prevent it being invoked from a Ride session which does not support this type of user interface. For further details, see the [Ride User Guide](https://dyalog.github.io/ride).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

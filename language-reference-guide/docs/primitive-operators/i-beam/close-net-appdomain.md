@@ -6,8 +6,8 @@ search:
 
 # <span>Close .NET AppDomain</span> `R←2101⌶Y`{{key}}
 
-!!! note
-    **.NET Framework only**
+!!! Info "Information"
+    This function is available only in the .NET Framework interface.
 
 This function closes the current .NET AppDomain.
 

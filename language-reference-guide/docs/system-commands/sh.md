@@ -23,5 +23,5 @@ The parameters CMD_PREFIX and CMD_POSTFIX may be used to execute a different she
   6179 11665660      -  0:00 sshd
 ```
 
-!!! note
+!!! Info "Information"
     This function is disabled and instead generates a `DOMAIN ERROR` if the RIDE_SPAWNED parameter is non-zero. This is designed to prevent it being invoked from a Ride session which does not support this type of user interface. For further details, see the [Ride User Guide](https://dyalog.github.io/ride).

@@ -79,7 +79,7 @@ The name-class of a Field, whether Public or Private, viewed from a Method that 
 2.2 2.2
 ```
 
-Note that an internal Method sees both Public and Private Fields in the Class Instance. However, when viewed from *outside* the instance, only public fields are visible
+An internal Method sees both Public and Private Fields in the Class Instance. However, when viewed from *outside* the instance, only public fields are visible
 ```apl
       ⎕NC 'ncinst.pubFld' 'ncinst.pvtFld'
 ¯2.2 0
@@ -91,7 +91,7 @@ In this case, the name-class is negative to indicate that the name has been expo
 ¯2.2 0
 ```
 
-Note that the names of Fields are reported as being *unused* if the argument to `⎕NC` is simple.
+The names of Fields are reported as being *unused* if the argument to `⎕NC` is simple.
 ```apl
       ncinst.⎕NC 2 6⍴'pubFldpvtFld'
 0 0
@@ -134,7 +134,7 @@ The name-class of a Property, whether Public or Private, *viewed from a Method t
  
 ```
 
-Note that an internal Method sees both Public and Private Properties in the Class Instance. However, when viewed from *outside* the instance, only Public Properties are visible
+An internal Method sees both Public and Private Properties in the Class Instance. However, when viewed from *outside* the instance, only Public Properties are visible
 ```apl
       ⎕NC 'ncinst.pubProp' 'ncinst.pvtProp'
 ¯2.3 0
@@ -146,7 +146,7 @@ In this case, the name-class is negative to indicate that the name has been expo
 ¯2.3 0
 ```
 
-Note that the names of Properties are reported as being *unused* if the argument to `⎕NC` is simple.
+The names of Properties are reported as being *unused* if the argument to `⎕NC` is simple.
 ```apl
       ncinst.⎕NC 2 6⍴'pubProppvtProp'
 0 0
@@ -170,7 +170,7 @@ Properties exposed by external objects (.NET and COM and the APL GUI) have name-
 ¯2.6 ¯2.6
 ```
 
-Note that the names of such Properties are reported as being *unused* if the argument to `⎕NC` is simple.
+The names of such Properties are reported as being *unused* if the argument to `⎕NC` is simple.
 ```apl
       f.⎕NC 2 7⍴'CaptionSize   '
 0 0
@@ -201,7 +201,7 @@ Traditional APL defined functions have name-class 3.1.
 3.1
 ```
 
-Note that a function that is simply cloned from a defined function by assignment retains its name-class.
+A function that is simply cloned from a defined function by assignment retains its name-class.
 ```apl
       MEAN←AVG
       ⎕NC'AVG' 'MEAN'
@@ -290,7 +290,7 @@ avx     box     dbr     getenv  hex     ltom    ltov    mtol    ss      vtol
 3.6 3.6 
 ```
 
-Note that the names of such Methods are reported as being *unused* if the argument to `⎕NC` is simple.
+The names of such Methods are reported as being *unused* if the argument to `⎕NC` is simple.
 ```apl
       'F'⎕WC'Form'
       F.⎕NC↑'GetTextSize' 'GetFocus'
@@ -391,7 +391,7 @@ Plain namespaces created using `⎕`NS, or fixed from a `:Namespace` script, hav
 9.1
 ```
 
-Note however that a namespace created by cloning, where the right argument to `⎕NS` is a `⎕OR` of a namespace, retains the name-class of the original space.
+However, a namespace created by cloning, where the right argument to `⎕NS` is a `⎕OR` of a namespace, retains the name-class of the original space.
 ```apl
       'CopyMYSPACE'⎕NS ⎕OR 'MYSPACE'
       'CopyF'⎕NS ⎕OR 'F'⎕WC'Form'
@@ -454,7 +454,7 @@ The same is true of Instances of .NET Classes (Types) whether created using `⎕
 9.2 9.2
 ```
 
-Note that if you remove the GUI component of a GUI object, using the Detach method, it reverts to a plain namespace.
+If you remove the GUI component of a GUI object, using the Detach method, it reverts to a plain namespace.
 ```apl
       F.Detach
       ⎕NC⊂,'F'
@@ -493,7 +493,7 @@ Classes created using the editor or `⎕FIX` have name-class 9.4.
 9.4 9.4
 ```
 
-Note that the name of the Class is visible to a Public Method in that Class, or an Instance of that Class.
+The name of the Class is visible to a Public Method in that Class, or an Instance of that Class.
 ```apl
       MyClass.NameClass'MyClass'
 9
@@ -534,7 +534,7 @@ External Classes (Types) exposed by .NET have name-class 9.6.
 9.6 9.6 9.6
 ```
 
-Note that referencing a .NET class (type) with `⎕NC`, fixes the name of that class in the workspace and obviates the need for APL to repeat the task of searching for and loading the class when the name is next used.
+Referencing a .NET class (type) with `⎕NC` fixes the name of that class in the workspace and obviates the need for APL to repeat the task of searching for and loading the class when the name is next used.
 
 ## External Interface (Name-Class 9.7)
 
@@ -547,7 +547,7 @@ External Interfaces exposed by .NET have name-class 9.7.
 9.7 9.7
 ```
 
-Note that referencing a .NET Interface with `⎕NC`, fixes the name of that Interface in the workspace and obviates the need for APL to repeat the task of searching for and loading the Interface when the name is next used.
+Referencing a .NET Interface with `⎕NC` fixes the name of that Interface in the workspace and obviates the need for APL to repeat the task of searching for and loading the Interface when the name is next used.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

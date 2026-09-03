@@ -12,14 +12,14 @@ search:
 
 The length of left argument `X` must be less than or equal to the rank of right argument `Y`. Any missing trailing items of `X` default to the index vector of the corresponding axis of `Y`.
 
-Note that in common with square-bracket indexing, items of the left argument `X` may be of any rank and that the shape of the result is the concatenation of the shapes of the items of the left argument:
+In common with square-bracket indexing, items of the left argument `X` can be of any rank, and the shape of the result is the concatenation of the shapes of the items of the left argument:
 ```apl
       (⍴X⌷Y) ≡ ↑,/⍴¨X
 ```
 
 _Index_ is sometimes referred to as *squad indexing*.
 
-Note that _index_ may be used with selective specification.
+_Index_ can be used with selective specification.
 
 `⎕IO` is an implicit argument of _index_.
 

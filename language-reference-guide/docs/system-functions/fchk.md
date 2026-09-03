@@ -39,7 +39,7 @@ Table: Variant options for `⎕FCHK` { #variantoptionsforfchk }
 |[`Repair`](#variant-option-repair)<br><small>principal</small>|`0` or `1`|`0`|Whether a damaged file is repaired.|
 |[`Force`](#variant-option-force)|`0` or `1`|`0`|Whether to validate a file that appears to have been properly closed.|
 
-The `'Rebuild'` task causes the *file indices* to be discarded and rebuilt. `Repair` only takes place on files which have been checked and found to be damaged. It involves a rebuild, but that only takes place if it is needed. Note that `Repair` and `Force` only apply if `Task` is `'Scan'`.
+The `'Rebuild'` task causes the *file indices* to be discarded and rebuilt. `Repair` only takes place on files which have been checked and found to be damaged. It involves a rebuild, but that only takes place if it is needed. `Repair` and `Force` only apply if `Task` is `'Scan'`.
 
 ### Variant Option: `Task`
 
@@ -73,7 +73,7 @@ To forcibly check a file and attempt to fix it if damage is found:
 
 ## Specifying Options Using a Left Argument
 
-Using the optional left-argument, `X` must be a vector of zero or more character vectors from among `'force'`, `'repair'` and `'rebuild'`, which determine the detailed operation of the function. Note that these options are case-insensitive.
+Using the optional left-argument, `X` must be a vector of zero or more character vectors from among `'force'`, `'repair'` and `'rebuild'`, which determine the detailed operation of the function. These options are case-insensitive.
 
 - If `X` contains `'force'`, `⎕FCHK` will validate the file, even if it appears to have been cleanly untied.
 - If `X` contains `'repair'`, `⎕FCHK` will repair the file, following validation, if it appears to be damaged. This option can be used in conjunction with `'force'`.

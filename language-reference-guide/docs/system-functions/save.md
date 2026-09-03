@@ -28,7 +28,7 @@ If `X` is 0, the workspace is saved without any state indicator in effect. The e
 
 As is the case for `)SAVE` (see [Save Workspace](../system-commands/save.md)), monadic `⎕SAVE` will fail and issue `DOMAIN ERROR` if any threads (other than the root thread 0) are running or if there are any Edit or Trace windows open. However, neither of these restrictions apply if the left argument `X` is 0.
 
-Note that the values of all system variables (including `⎕SM`) and all GUI objects are saved.
+The values of all system variables (including `⎕SM`) and all GUI objects are saved.
 
 <h2 class="example">Example</h2>
 ```apl

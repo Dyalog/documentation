@@ -91,7 +91,7 @@ Squark! Who's a pretty boy, then!
  
 ```
 
-Note that the `Speak` method invoked above is the `Speak` method defined by Class `DomesticParrot`, which supersedes the `Speak` methods of sub-classes `Parrot` and `Bird`.
+The `Speak` method invoked above is the `Speak` method defined by Class `DomesticParrot`, which supersedes the `Speak` methods of sub-classes `Parrot` and `Bird`.
 
 You may use a cast to access the (superseded) `Speak` method in the sub-classes `Parrot` and `Bird`.
 ```apl

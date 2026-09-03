@@ -5,7 +5,7 @@ search:
 
 # <span>Key</span> `R←{X}f⌸Y`{{key}}
 
-!!! note "Classic Edition"
+!!! Info "Information"
     The symbol `⌸` is not available in Classic Edition, and the _key_ operator is instead represented by `⎕U2338`.
 
 `f` may be any dyadic function that returns a result.

@@ -20,11 +20,11 @@ However, the saved results of `⎕OR` which were produced on a different hardwar
 
 If `Y` is the name of a variable, the result `R` is its value.  In this case, `R←⎕OR Y` is identical to `R←⍎Y`.
 
-Otherwise, `R` is a special form of the name `Y`, re-classified as a variable. The rank of `R` is 0 (`R` is scalar), and the depth of `R` is 1.  These unique characteristics distinguish the result of `⎕OR` from any other object.  The Type of `R` (`∊R`) is itself.  Note that although `R` is scalar, it may not be index assigned to an element of an array unless it is enclosed.
+Otherwise, `R` is a special form of the name `Y`, re-classified as a variable. The rank of `R` is 0 (`R` is scalar), and the depth of `R` is 1.  These unique characteristics distinguish the result of `⎕OR` from any other object.  The Type of `R` (`∊R`) is itself.  Although `R` is scalar, it cannot be index assigned to an element of an array unless it is enclosed.
 
 If `Y` is the name of a function or operator, `R` is in the domain of the monadic functions _same_ (`⊣` and `⊢`), _depth_ (`≡`), _disclose_ (`⊃`), _enclose_ (`⊂`), _rotate_ (`⌽`), _transpose_ (`⍉`), _index_ (`⌷`), _indexing_ (`[]`), _format_ (`⍕`), _identity_ (`+`), _shape_ (`⍴`), _type_ (`∊`), and _unique_ (`∪`), of the dyadic functions _left_ (`⊣`), _right_ (`⊢`), _without_ (`~`), _index of_ (`⍳`), _intersection_ (`∩`), _match_ (`≡`), _membership_ (`∊`), _not match_ (`≠`), and _union_ (`∪`), and of the monadic system functions Canonical Representation (`⎕CR`), Cross-Reference (`⎕REFS`), Fix (`⎕FX`), Format (`⎕FMT`), Nested Representation (`⎕NR`), and Vector Representation (`⎕VR`).
 
-Note that a `⎕OR` object can be transmitted through an 'APL-style' TCP socket. This technique may be used to transfer objects including namespaces between APL sessions.
+A `⎕OR` object can be transmitted through an 'APL-style' TCP socket. This technique may be used to transfer objects including namespaces between APL sessions.
 
 The object representation forms of namespaces produced by `⎕OR` may not be used as arguments to any primitive functions.  The only operations permitted for such objects (or arrays containing such objects) are `⎕EX`, `⎕FAPPEND`, `⎕FREPLACE`, `⎕NS`, and `⎕WC`.
 
@@ -114,7 +114,7 @@ clear ws
 #.NEWUTILS
 ```
 
-This example illustrates how `⎕OR` can be used to clone a GUI object; in this case a Group containing some Button objects.  Note that `⎕WC` will accept **only** a `⎕OR` object as its argument (or preceded by the "Type" keyword).  You may not specify any other properties in the same `⎕WC` statement, but you must instead use `⎕WS` to reset them afterwards.
+This example illustrates how `⎕OR` can be used to clone a GUI object; in this case a Group containing some Button objects.  `⎕WC` accepts **only** a `⎕OR` object as its argument (or preceded by the "Type" keyword).  You may not specify any other properties in the same `⎕WC` statement, but you must instead use `⎕WS` to reset them afterwards.
 ```apl
     'F'⎕WC'Form'
     'F.G1' ⎕WC 'Group' '&One' (10 10)(80 30)
@@ -125,7 +125,7 @@ This example illustrates how `⎕OR` can be used to clone a GUI object; in this 
     'F.G2' ⎕WS ('Caption' 'Two')('Posn' 10 60)
 ```
 
-Note too that `⎕WC` and `⎕NS` may be used interchangeably to rebuild *pure* namespaces or GUI namespaces from a `⎕OR` object.  You may therefore use `⎕NS` to rebuild a Form or use `⎕WC` to rebuild a pure namespace that has no GUI components.
+`⎕WC` and `⎕NS` can be used interchangeably to rebuild *pure* namespaces or GUI namespaces from a `⎕OR` object.  You may therefore use `⎕NS` to rebuild a Form or use `⎕WC` to rebuild a pure namespace that has no GUI components.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

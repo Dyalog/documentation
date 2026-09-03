@@ -19,7 +19,7 @@ Arrays that result from importing CSV data or arrays that are suitable for expo
 - A vector, each of whose items contain field (column) values. Character field values are character matrices; numeric field values are numeric vectors.
 - A vector, each of whose items contain field (column) values. Character field values are vectors of character vectors; numeric field values are numeric vectors.
 
-Note that when importing CSV data, all fields are assumed to be character fields unless otherwise specified (see *Column Types* below). A field that contains only "numbers" will not be converted to numeric data unless specified as being numeric.
+When importing CSV data, all fields are assumed to be character fields unless otherwise specified (see *Column Types* below). A field that contains only "numbers" will not be converted to numeric data unless specified as being numeric.
 
 ## MetaCharacters
 
@@ -69,7 +69,7 @@ This is a scalar numeric code or vector of numeric codes that specifies the fiel
 |`4`|The field is to be interpreted numeric data but invalid numeric data is tolerated. Empty fields and fields which cannot be converted to numeric values are returned instead as character data; this type is disallowed when variant option `Invert` is set to `1`.|
 |`5`|The field is to be interpreted as being numeric but empty fields are tolerated and are replaced with the `Fill` variant option (default `0`). Non-empty cells which cannot be converted to numeric values are not tolerated and cause an error to be signalled.|
 
-Note that if *Column Types* is specified by a scalar 4, all numeric data in all fields will be converted to numbers.
+If *Column Types* is specified by a scalar 4, all numeric data in all fields is converted to numbers.
 
 *Header Row Indicator*
 
@@ -218,13 +218,13 @@ Data can be read from a named file or a tied native file. A tied native file can
 
 In all cases the files must contain text using one of the supported encodings (see [File Encodings](nget.md)). The method used to determine the file encoding is as follows:
 
-- If a Byte Order Mark (BOM) is encountered at the start of the file, it is used regardless of `Y[2]` (if specified). Note, however, that the BOM can only be encountered if the file is read from the start - specifically, if a native file is read in sections, any BOM present will only be encountered when the first section is read.
+- If a Byte Order Mark (BOM) is encountered at the start of the file, it is used regardless of `Y[2]` (if specified). However, the BOM can only be encountered if the file is read from the start - specifically, if a native file is read in sections, any BOM present will only be encountered when the first section is read.
 - Otherwise, the file will be read and decoded according to the file encoding in `Y[2]` if specified.
 - Otherwise: 	Native files will be decoded as if `'UTF-8'` had been specified. 	Files specified by name will be examined and the likely file encoding will be deduced using the same heuristics performed by `⎕NGET`.
 - Native files will be decoded as if `'UTF-8'` had been specified.
 - Files specified by name will be examined and the likely file encoding will be deduced using the same heuristics performed by `⎕NGET`.
 
-Note that:
+In addition:
 
 - native files are read from the current file position. On successful completion, the file position will be at the first unprocessed character (end of file if the `Records` variant option is not specified). If an error is signalled the file position is undefined.
 - the result does not report the file encoding or line ending type as it does with `⎕NGET`. If this information is required, then it must be obtained by other means.

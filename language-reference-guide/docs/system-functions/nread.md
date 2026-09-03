@@ -17,7 +17,7 @@ This monadic function reads data from a native file. `Y` is a 3- or 4-element in
 
 `8 ⎕NINFO ⊃Y` can be used to report the current position of the file pointer.
 
-`Y[2]` specifies conversion to an APL internal form as follows. Note that the internal formats for character arrays differ between the Unicode and Classic Editions.
+`Y[2]` specifies conversion to an APL internal form as follows. The internal formats for character arrays differ between the Unicode and Classic Editions.
 
 If both `Y[3]` and `Y[4]` have the value `¯1`, then `⎕NREAD` reads data from the current position in the file to the end of the file.
 

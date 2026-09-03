@@ -10,12 +10,12 @@ This operator substitutes selected items in `Y` with new values or applies a fun
 The right operand `g`  identifies which items of array `Y` are to be substituted or modified. It is either:
 
 - an array that specifies a set of indices in `Y`. If `g` is a simple scalar or vector, it selects major cells in `Y`. If nested, it specifies indices for Choose or Reach indexing.
-- or a function that when applied to `Y` returns a Boolean array of the same shape as `Y` (a *mask*) in which a 1 indicates that the corresponding item of `Y` is to be substituted or modified. Note that the *ravel* of the mask selects from the *ravel* of the right argument's index array.
+- or a function that when applied to `Y` returns a Boolean array of the same shape as `Y` (a *mask*) in which a 1 indicates that the corresponding item of `Y` is to be substituted or modified. The *ravel* of the mask selects from the *ravel* of the right argument's index array.
 
 The left operand `f` is either:
 
 - an array that contains values to replace those items in `Y` identified by `g`
-- or a function to be applied to those items, the result of which is used to replace them. If this function is dyadic, its left argument is the array `X`. Note that the function is applied to the sub-array of `Y` selected by `g` *as a whole* and not to each item separately.
+- or a function to be applied to those items, the result of which is used to replace them. If this function is dyadic, its left argument is the array `X`. The function is applied to the sub-array of `Y` selected by `g` *as a whole* and not to each item separately.
 
 The result `R` is the same as `Y` but with the items specified by `g` substituted or modified by `f`.
 
@@ -132,7 +132,7 @@ Replace odd elements with 0:
 0 2 0 4 0
 ```
 
-Replace multiples of 3 (note that masked items are substituted in ravel order):
+Replace multiples of 3 (masked items are substituted in ravel order):
 ```apl
       'abcde'@{0=3|⍵} 4 4⍴⍳16
  1  2  a  4

@@ -6,8 +6,8 @@ search:
 
 # <span>Export To Memory</span> `R←2100⌶Y`{{key}}
 
-!!! note
-    **Windows only**
+!!! windows "Dyalog on Microsoft Windows"
+    This function is available only under Microsoft Windows.
 
 This function exports the current active workspace as an in-memory .NET Assembly.
 

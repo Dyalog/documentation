@@ -111,7 +111,7 @@ If you simply wish to open a Command Prompt window, you may execute the command 
 
 ## Starting a Windows Program
 
-If `Y` is a 2-element vector of character vectors, `⎕CMD` starts the executable program named by `Y[1]` with the initial window parameter specified by `Y[2]`.  The [shy](../../../programming-reference-guide/introduction/results#shy-results) result is an integer scalar containing the window handle allocated by the window manager. Note that in this case APL does not wait for the program specified by `Y` to finish, but returns immediately. The shy result `R` is the process identifier (PID).
+If `Y` is a 2-element vector of character vectors, `⎕CMD` starts the executable program named by `Y[1]` with the initial window parameter specified by `Y[2]`.  The [shy](../../../programming-reference-guide/introduction/results#shy-results) result is an integer scalar containing the window handle allocated by the window manager. In this case, APL does not wait for the program specified by `Y` to finish, but returns immediately. The shy result `R` is the process identifier (PID).
 
 `Y[1]` must specify the name or complete pathname of an executable program.  If the name alone is specified, Windows will search the following directories:
 
@@ -121,7 +121,7 @@ If `Y` is a 2-element vector of character vectors, `⎕CMD` starts the executabl
 4. the directories specified by the PATH variable,
 5. the list of directories mapped in a network.
 
-Note that `Y[1]` may contain the complete command line, including any suitable parameters for starting the program.  If Windows fails to find the executable program, `⎕CMD` will fail and report `FILE ERROR 2`.
+`Y[1]` can contain the complete command line, including any suitable parameters for starting the program.  If Windows fails to find the executable program, `⎕CMD` will fail and report `FILE ERROR 2`.
 
 `Y[2]` specifies the window parameter and may be one of the following.  If not, a `DOMAIN ERROR` is reported.
 
@@ -146,9 +146,8 @@ There is no way to terminate an application started by `⎕CMD` from APL; it wil
 
 Either form of `⎕CMD` may be used to execute a program. The difference is that when the program is executed via the Command Processor, APL waits for it to complete and returns any result that the program would have displayed in the Command Window had it been executed from a Command Window. In the second case, APL starts the program (in parallel).
 
-### Note
-
-This function is disabled and instead generates a `DOMAIN ERROR` if the RIDE_SPAWNED parameter is non-zero. This is designed to prevent it being invoked from a Ride session which does not support this type of user interface. For further details, see the [Ride User Guide](https://dyalog.github.io/ride).
+!!! Info "Information"
+    This function is disabled and instead generates a `DOMAIN ERROR` if the RIDE_SPAWNED parameter is non-zero. This is designed to prevent it being invoked from a Ride session which does not support this type of user interface. For further details, see the [Ride User Guide](https://dyalog.github.io/ride).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

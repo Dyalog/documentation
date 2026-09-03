@@ -21,7 +21,7 @@ This can also be expressed as the length of the leading axis or 1 if `Y` is a sc
 0
 ```
 
-Note that `≢V` is useful for returning the length of vector `V` as a scalar.  (In contrast, `⍴V` is a one-element vector.)
+`≢V` is useful for returning the length of vector `V` as a scalar. (In contrast, `⍴V` is a one-element vector.)
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

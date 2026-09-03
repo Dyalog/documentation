@@ -9,7 +9,7 @@ search:
 
 `⎕RSI` and `⎕NSI` are identical except that `⎕RSI` returns refs to the spaces whereas `⎕NSI` returns their names. Put another way:  `⎕NSI←→⍕¨⎕RSI``.`
 
-Note that `⎕NSI` contains the names of spaces *from which* functions were called not those *in which* they are currently running.
+`⎕NSI` contains the names of spaces *from which* functions were called not those *in which* they are currently running.
 
 <h2 class="example">Example</h2>
 ```apl

@@ -20,7 +20,7 @@ If the size of the committed workspace would be smaller than the minimum value (
 
 See also [Memory Manager Statistics:](memory-manager-statistics.md).
 
-Note that this function does not change the size of the *extra amount* that will be applied subsequently by `⎕WA` or by an automatic compaction.
+This function does not change the size of the *extra amount* that will be applied subsequently by `⎕WA` or by an automatic compaction.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

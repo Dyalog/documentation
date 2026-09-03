@@ -6,8 +6,8 @@ search:
 
 # <span>Remove Data Binding</span> `R←2014⌶Y`{{key}}
 
-!!! note
-    **.NET Framework only**
+!!! Info "Information"
+    This function is available only in the .NET Framework interface.
 
 This function disassociates a data-bound variable from its data binding source.
 

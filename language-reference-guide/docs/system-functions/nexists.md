@@ -44,8 +44,7 @@ If the `Wildcard` option is `1`, `R` indicates whether one or more matches to th
 
 ```
 
-!!! note
-    If `Y` is a symbolic link, `⎕NEXISTS` will return 1 whether or not the target of the symbolic link exists.
+If `Y` is a symbolic link, `⎕NEXISTS` returns 1 whether or not the target of the symbolic link exists.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
