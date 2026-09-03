@@ -9,7 +9,7 @@ The Dyalog support department (support@dyalog.com, other means of contact on the
       )COPY aplcore
 ```
 
-Note however that it is possible that the `)COPY` itself will cause another aplcore; it is best to rename the original aplcore before attempting this course of action.
+However, it is possible that the `)COPY` itself will cause another aplcore; it is best to rename the original aplcore before attempting this course of action.
 
 From Version 13.2 onwards in situations where a core file is generated, an aplcore file will be generated too; this is done by forking the failing APL process, so an additional APL process will appear in any process listing while the aplcore is being created. If the environment variable *APL_TEXTINAPLCORE* is set and has the value 1 then an "Interesting Information" section is appended to the aplcore which contains information such as the APL stack, the WSID of the originating workspace etc. This section can be extracted from an aplcore using
 ```apl

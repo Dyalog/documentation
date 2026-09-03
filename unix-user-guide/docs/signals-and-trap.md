@@ -10,7 +10,7 @@ Certain signals sent to a Dyalog APL process can be trapped and an event issued.
 |3  |SIGQUIT|
 |15 |SIGTERM|
 
-No other signal is trapped by the interpreter; their default action will occur. For example when a Dyalog APL process receives a SIGSEGV (11) then it will terminate with a segmentation fault. Note that SIG_USR1 is used by the interface between Dyalog APL and Auxiliary Processors: sending this signal to the interpreter may have "interesting" consequences.
+No other signal is trapped by the interpreter; their default action will occur. For example when a Dyalog APL process receives a SIGSEGV (11) then it will terminate with a segmentation fault. SIG_USR1 is used by the interface between Dyalog APL and Auxiliary Processors: sending this signal to the interpreter may have "interesting" consequences.
 
 The mapping between these signals and the event issued is non-trivial:
 
@@ -23,11 +23,12 @@ The mapping between these signals and the event issued is non-trivial:
 
 To aid the programmer in determining which signal was issued, the newly implemented system operator, `⌶` (_I-beam_) has been extended to report this information.
 
-WARNING: Although documentation is provided for _I-beam_ functions, any service provided using _I-beam_ should be considered as "experimental" and subject to change - without notice - from one release to the next. Any use of _I-beams_ in applications should therefore be carefully isolated in cover-functions that can be adjusted if necessary.
+!!! Warning "Warning"
+    Although documentation is provided for _I-beam_ functions, any service provided using _I-beam_ should be considered as "experimental" and subject to change - without notice - from one release to the next. Any use of _I-beams_ in applications should therefore be carefully isolated in cover-functions that can be adjusted if necessary.
 
 `4007⌶⍬` can be used to identify which signals have been received by the APL process and how many of them have been received. A side effect of calling `4007⌶⍬` is to reset all counters to 0.
 
-`4007⌶⍬` returns a vector of integers; the length is dependent on the APL interpreter and the operating system, but is typically 63 or 255 elements long. Each element is a count number of each signal received and processed by the interpreter. Note that when a SIGQUIT is received by APL the count for both SIGINT and SIGQUIT will be incremented by one.
+`4007⌶⍬` returns a vector of integers; the length is dependent on the APL interpreter and the operating system, but is typically 63 or 255 elements long. Each element is a count number of each signal received and processed by the interpreter. When a SIGQUIT is received by APL the count for both SIGINT and SIGQUIT will be incremented by one.
 
 <h3 class="example">Example</h3>
 ```apl

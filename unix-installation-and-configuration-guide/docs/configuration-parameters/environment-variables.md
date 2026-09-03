@@ -33,20 +33,16 @@ Table: Commonly used Variables
 |`DYALOG_NETCORE`|This parameter is a Boolean value with a default value of 1. If set to 0, it disables the .NET interface.|
 |`DYALOG_SERIAL`|This parameter contains your Dyalog serial number. This must be set to the serial number issued to you. If not set, then the software is unregistered. For the full licence terms and conditions, see [https://www.dyalog.com/uploads/documents/Terms_and_Conditions.pdf](https://www.dyalog.com/uploads/documents/Terms_and_Conditions.pdf) .|
 |`DYALOG_SERIALFILE`|This parameter specifies the full path to the text file containing your Dyalog serial number.|
-|`ENABLE_CEF`|This parameter is a Boolean value with a default value of 1. If set to 0, it disables the [Chromium Embedded Framework (CEF)](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework) and at attempt to create an HTMLRenderer object (see [HTMLRenderer](../../../object-reference/objects/htmlrenderer)) will fail with an error message. See Note (below).|
+|`ENABLE_CEF`|This parameter is a Boolean value with a default value of 1. If set to 0, it disables the [Chromium Embedded Framework (CEF)](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework) and at attempt to create an HTMLRenderer object (see [HTMLRenderer](../../../object-reference/objects/htmlrenderer)) will fail with an error message. See the information below.|
 |`ERRORONEXTERNALEXCEPTION`|By default, any error when calling `⎕NA` will result in APL terminating; if `ERRORONEXTERNALEXCEPTION` is set to 1, then APL will instead generate an event 91: `EXTERNAL DLL EXCEPTION` . Be aware however that the workspace may become corrupted. This is best used when developing `⎕NA` code rather than in production.|
 |`LIBPATH`|A suitable entry for the Conga libraries needs to be added to the `LIBPATH` variable if Conga is to be used. For more information see the *Conga Guide*.|
 |`MAXWS`|Defines the size of the workspace that will be presented to the user when Dyalog APL is started. A simple integer value will be treated as being in KB. K, M and G can be appended to the value to indicate KiB, MiB and GiB (binary) respectively. If unset, the default value is 256M.|
 |`WSPATH`|Defines the search path for both workspaces and Auxiliary processors.<p/><p/>If unset, there is no default value. Workspaces and APs that are not on the `WSPATH` can be accessed using absolute or relative pathnames.|
 
-## Note
+!!! Info "Information"
+    The value of the **Enable_CEF** parameter defined in the Microsoft Windows Registry or in a configuration file is ignored; only the value set in the command line or as an environment variable is honoured. If not defined in this way, the default value is used.
 
-Currently the value of the **Enable_CEF** parameter defined in the Windows Registry or in a
-Configuration file is ignored. Only the value set in the command line or as an
-environment variable is honoured. If not defined in this way, the default value
-is used.
-
-Under macOS and Linux, if the configuration parameter **ENABLE_CEF** is 1, Auxiliary Processors cannot be used (they hang on error). The default value is 1 unless you are not running under a desktop (for example, you are running Dyalog in a PuTTY session when the default is 0).
+Under macOS and Linux, if the configuration parameter **ENABLE_CEF** is `1`, Auxiliary Processors cannot be used (they hang on error). The default value is `1` unless you are not running under a desktop (for example, you are running Dyalog in a PuTTY session when the default is `0`).
 
 Table: Default workspace values
 
@@ -58,7 +54,7 @@ Table: Default workspace values
 |`DEFAULT_PP`|Default value for `⎕PP` in a clear workspace.|
 |`AUTO_PW` `DEFAULT_PW`|`⎕PW` is set by the interpreter when it starts, or when the session window is resized. Under UNIX if the terminal window is resized, the session will be resized when the interpreter next checks for input.|
 |`DEFAULT_RTL`|Default value for `⎕RTL` in a clear workspace.|
-|`DEFAULT_WX`|Default value for `⎕WX` in a clear workspace. Note that although the UNIX versions of Dyalog APL do not have GUI objects, `⎕SE` is present, and the value of `⎕WX` will affect the programmer's ability to run expressions such as `⎕SE.PropList`.|
+|`DEFAULT_WX`|Default value for `⎕WX` in a clear workspace. Although the UNIX versions of Dyalog APL do not have GUI objects, `⎕SE` is present, and the value of `⎕WX` will affect the programmer's ability to run expressions such as `⎕SE.PropList`.|
 
 For numeric values, the interpreter takes the value of the environment variable, and prepends a "0" to that string. It then parses the string, accepting characters until the first non-digit character is reached.
 
@@ -79,7 +75,7 @@ Table: Variables used to configure the Session
 |`PFKEY_SIZE`|The size of the buffer used to hold `PFKEY` definitions: if this is too small, an attempt to add a new definition will result in a `LIMIT ERROR`.|
 |`SESSION_FILE`|Defines the location of your session file; session file support was added in Dyalog 13.1. The default value is `$DYALOG/default.dse`|
 
-To set values, use K to indicate KB. Note that the buffers will contain other information, so the buffer size will not be exact. Note also that multibyte Unicode characters will take up more space than single byte characters, and that 32 and 64 bit versions of Dyalog APL can require different amounts of space for holding the same information.
+To set values, use K to indicate KB. The buffers will contain other information, so the buffer size will not be exact. Multibyte Unicode characters will take up more space than single byte characters, and 32 and 64 bit versions of Dyalog APL can require different amounts of space for holding the same information.
 
 Example:
 ```
