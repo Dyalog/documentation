@@ -224,7 +224,7 @@ Indicates whether a 64- or 32-bit architecture.
 
 The operating system's self-description ("pretty name"). For example, `Debian GNU/Linux 13 (trixie)` or `Microsoft Windows 11 Pro`.
 
-!!! Warning "Warning"
+!!! unix "Dyalog on AIX"
     This is slow on AIX because the operating system takes a significant amount of time to deliver its description.
 
 <h4>OS.DirectorySeparator</h4>
