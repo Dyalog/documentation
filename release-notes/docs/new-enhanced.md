@@ -34,11 +34,11 @@ The following _I-beams_ have been changed:
 
 - [`13⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/log-use-of-deprecated-features/) – Log Use of Deprecated Features  
 The shy result of `13⌶'All'` (and the subsequent non-shy result of `13⌶'Enabled'`) is now the character vector `'All'` rather than a vector of deprecated feature names.
+- [`43⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/monadic-operator-generator/) – Monadic Operator Generator 
+The functionality provided by `43⌶632` is now provided by a new `[...]` mechanism – see [Generics (.NET)](https://docs.dyalog.com/21.0/net-interface-guide/dotnet-classes/advanced-techniques/#generics) and [Generics (.NET Framework)](https://docs.dyalog.com/21.0/net-framework-interface-guide/dotnet-classes/advanced-techniques/#generics). `43⌶632` is scheduled for removal in Dyalog v22.0.
 
 The following _I-beams_ have been deprecated:
 
-- [`43⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/monadic-operator-generator/) – Monadic Operator Generator (introduced in Dyalog v20.0)  
-The functionality provided by `43⌶632` is now provided by a new `[...]` mechanism – see [Generics (.NET)](https://docs.dyalog.com/21.0/net-interface-guide/dotnet-classes/advanced-techniques/#generics) and [Generics (.NET Framework)](https://docs.dyalog.com/21.0/net-framework-interface-guide/dotnet-classes/advanced-techniques/#generics). As alternative values of `Y` are not available, the _I-beam_ has been deprecated and scheduled for removal in Dyalog v22.0; it could be reintroduced with new `Y` values in a later release.
 - [`739⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/temporary-directory/) – Temporary Directory (introduced in Dyalog v17.0)  
 The functionality provided by `739⌶` is now provided by `⎕SYSTEM` (specifically, `⎕SYSTEM.Directories.Temp` replaces `739⌶0`). It is scheduled for removal in 2029.
 - [`1200⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/format-datetime/) – Format Date-Time (introduced in Dyalog v18.0)  
