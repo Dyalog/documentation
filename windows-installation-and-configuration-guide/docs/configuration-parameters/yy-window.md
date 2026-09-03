@@ -12,7 +12,7 @@ You can use the **yy_window** parameter to cause your application to interpret 2
 
 Two schemes are in common use within the industry: Sliding or Fixed date windows.
 
-Use a Fixed window if there is a *specific year* , for example 1970, before which, dates are meaningless to your application. Note that with a fixed window, this date (say 1970) will still be the limit if your application is running in a hundred years' time.
+Use a Fixed window if there is a *specific year* , for example 1970, before which, dates are meaningless to your application. With a fixed window, this date (say 1970) will still be the limit if your application is running in a hundred years' time.
 
 Use a Sliding window if there is a *time period* , for example 30 years, before which dates are considered too old for your application. With a sliding window, you will always be able to enter dates up to (say) 30 years old, but after a while, specific years in the past (for example 1970) will become inaccessible.
 
@@ -54,7 +54,7 @@ This would establish a valid date window, ten years either side of the current y
 
 One way of looking at the **yy_window** variable is that it specifies a 2-element vector. If you supply only the first element, the second one defaults to the first element + 99.
 
-Note that the system uses only the number of digits in the year specification to determine whether it refers to a fixed (4-digits) or sliding (1-, or 2-digits) window. In fact you can have a fixed lower limit and a sliding upper limit, or vice versa.
+The system uses only the number of digits in the year specification to determine whether it refers to a fixed (4-digits) or sliding (1-, or 2-digits) window. In fact you can have a fixed lower limit and a sliding upper limit, or vice versa.
 
 YY_WINDOW=1990,10
 

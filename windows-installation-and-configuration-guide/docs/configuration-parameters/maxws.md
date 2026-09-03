@@ -11,7 +11,7 @@ For example, to get a 4GiB workspace, set:
 
 Dyalog APL places no implicit restriction on workspace size, and the virtual memory capability of the underlying operating system allows you to access more memory than you have physically installed. However if you use a workspace that **greatly** exceeds your physical memory you will encounter excessive *paging* and your APL programs will run slowly. You may also cause the system to crash.
 
-Note that the memory used for the workspace must be *contiguous* .
+The memory used for the workspace must be *contiguous*.
 
 32-bit versions of Dyalog APL are typically limited to between 1.3GiB to 1.9GiB under Windows, and 1.9GiB under UNIX. These are operating system limitations imposed on 32-bit processes rather than ones imposed by Dyalog APL, and are affected by the number and size of DLLs/shared libraries that are loaded into the process space.
 

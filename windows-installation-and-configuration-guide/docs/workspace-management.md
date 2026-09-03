@@ -21,7 +21,7 @@ When you erase objects or release symbols, areas of memory become free. APL mana
 4. In addition to any extra memory required to satisfy the original request, an additional amount of memory, equal to the workspace delta, is allocated. This will always cause the process size to increase (up to the **maxws** limit) but means that an application will typically achieve its working process size with at most 4+15 memory reorganisations.
 5. However, if after compaction, the amount of used workspace is less than 1/16 of the Maximum workspace size (**maxws**), the amount reserved for working memory is reduced to 1/64th **maxws**. This means that workspaces that are operating within 1/16th of **maxws** will be more frugal with memory
 
-Note that if you try to create an object which is larger than free space, APL reports `WS FULL`.
+If you try to create an object which is larger than free space, APL reports `WS FULL`.
 
 The following system function and commands force a workspace reorganisation as described above:
 ```apl
@@ -32,6 +32,6 @@ However, in contrast to the above, *any spare workspace above the workspace delt
 
 The system function `⎕WA` may therefore be used judiciously (workspace reorganisation takes time) to reduce the process size after a particularly memory-hungry operation.
 
-Note that in Dyalog APL, the SYMBOL TABLE is entirely dynamic and grows and shrinks in size automatically. There is no `SYMBOL TABLE FULL` condition.
+In Dyalog APL, the SYMBOL TABLE is entirely dynamic and grows and shrinks in size automatically. There is no `SYMBOL TABLE FULL` condition.
 
 Additional functions for managing the memory used by the workspace are described in [Memory Manager Statistics](../../language-reference-guide/primitive-operators/i-beam/memory-manager-statistics) and [Specify Workspace Available](../../language-reference-guide/primitive-operators/i-beam/specify-workspace-available).

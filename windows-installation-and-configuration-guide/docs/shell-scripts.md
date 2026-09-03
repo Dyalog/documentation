@@ -18,15 +18,16 @@ The script file must be executable. There are three execute bits relating to the
 
 On Windows systems a Dyalog APL shell script is a text file with a `.apls` file extension. An initial line beginning with `#!` is only required to include configuration parameters (see below), but if included it must include a file name even though that will be ignored. For portability it is recommended that you include the `#!` line.
 
-## Note
+## General
 
-Shell scripts are Unicode only and are not supported by the Classic Edition.
+!!! Info "Information"
+    Shell scripts are Unicode only and are not supported by the Classic Edition.
 
 Any content that follows  the `#!` line (if present) is used as input into a Dyalog session (as if the *Extended Multiline Input* feature has been enabled).
 
 ## Input and Output
 
-`⎕` and `⍞` input are taken from characters typed by the user into the terminal or shell (Standard input or *stdin* for short).  Anything assigned to `⎕` and `⍞` will be displayed in the terminal window using streams Standard output (*stdout*) and Standard error (*stderr*) respectively. Note that [implicit output](../../programming-reference-guide/introduction/output), that is, output to the session without assignment to `⎕` or `⍞` is NOT displayed. Redirections of *stdin*, *stdout*, and *stderr* are supported.
+`⎕` and `⍞` input are taken from characters typed by the user into the terminal or shell (Standard input or *stdin* for short).  Anything assigned to `⎕` and `⍞` will be displayed in the terminal window using streams Standard output (*stdout*) and Standard error (*stderr*) respectively. [Implicit output](../../programming-reference-guide/introduction/output), that is, output to the session without assignment to `⎕` or `⍞`, is NOT displayed. Redirections of *stdin*, *stdout*, and *stderr* are supported.
 
 <h3 class="example">Examples</h3>
 
@@ -92,7 +93,7 @@ Configuration parameters may be specified in a Configuration file located in the
 }}
 ```
 
-Note that the interpreter reads both of these locations, the command line in the script file overrides any setting in the .dcfg file.
+The interpreter reads both of these locations; the command line in the script file overrides any setting in the .dcfg file.
 
 ### Debugging
 

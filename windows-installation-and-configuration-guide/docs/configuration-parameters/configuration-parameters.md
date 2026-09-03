@@ -17,7 +17,7 @@ Furthermore, you are not limited to the set of parameters employed by APL itself
 
 Although for clarity parameter names are given here in mixed case, they are case-independent under Windows. Under UNIX and Linux, if Dyalog parameters are specified as environment variables they must be named entirely in upper-case.
 
-Note that the value of a parameter obtained by the GetEnvironment method (see [GetEnvironment](../../../object-reference/methodorevents/getenvironment)) uses exactly the same set of rules.
+The value of a parameter obtained by the GetEnvironment method (see [GetEnvironment](../../../object-reference/methodorevents/getenvironment)) uses exactly the same set of rules.
 
 The following section details those parameters that are implemented by Registry Values in the top-level folder identified by **IniFile**. Values that are implemented in sub-folders are *mainly* internal and are not described in detail here. However, any Value that is maintained via a configuration dialog box will be named and described in the documentation for that dialog box in The APL Environment.
 
@@ -49,7 +49,7 @@ MySetting: "[DYALOG]/MyFile"
 
 will replace `[DYALOG]` with the value of the **DYALOG** configuration parameter.
 
-Note that:
+In addition:
 
 - If the referenced configuration parameter is not defined then no substitution will take place; the reference, including square bracket delimiters, will remain in place.
 - To include square brackets in a string, prefix the `[` with a `\` character.
