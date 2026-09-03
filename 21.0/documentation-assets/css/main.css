@@ -396,8 +396,7 @@ hr+pre>code {
 	border-color: var(--md-admonition-color-windows);
 }
 
-/* External link icon — applied by javascripts/external-links.js */
-.md-typeset a[href^="http"]:not([href^="https://docs.dyalog.com"]):not([href^="https://dyalog.github.io/documentation/"]):not([href^="http://localhost"])::after {
+.md-typeset a[href^="http"]:not(.md-button):not([href^="https://docs.dyalog.com"]):not([href^="https://dyalog.github.io/documentation/"]):not([href^="http://localhost"])::after {
     content: "";
     display: inline-block;
     width: 0.75em;
