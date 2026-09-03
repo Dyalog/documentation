@@ -53,7 +53,7 @@ You may also move and copy objects using the *Edit* menu. To do so, select the o
 
 ## Editing and Renaming Objects
 
-You can open up an edit window for a function or variable by double-clicking its icon, or by selecting it and choosing *Edit* from the *Edit* menu or from the popup menu. You may rename an object by clicking its name (as opposed to its icon) and then editing this text. You may also select the object and choose *Rename* from the *Edit* menu or from the popup menu. Note that when you rename an object, the original name is discarded. Unlike changing a function name in the editor, this is not a copy operation.
+You can open up an edit window for a function or variable by double-clicking its icon, or by selecting it and choosing *Edit* from the *Edit* menu or from the popup menu. You may rename an object by clicking its name (as opposed to its icon) and then editing this text. You may also select the object and choose *Rename* from the *Edit* menu or from the popup menu. When you rename an object, the original name is discarded. Unlike changing a function name in the editor, this is not a copy operation.
 
 ## Using the Explorer as an Editor
 
@@ -72,7 +72,7 @@ You may also edit the function directly in the right (list view) pane before mov
 The *File* menu, illustrated above, provides the following actions. All but *Print setup*  and *Close* act on the object or objects that are currently selected in the ListView.
 
 |-----------|--------------------------------------------------------------------------------------------------------------------|
-|Print      |Prints the object(s). Note that if an object is open in the editor, the version shown in the edit window is printed.|
+|Print      |Prints the object(s). If an object is open in the editor, the version shown in the edit window is printed.|
 |Print setup|Displays the Print Configuration dialog box.                                                                        |
 |Delete     |Erases the object(s).                                                                                               |
 |Rename     |Renames the object. This option only applies when a single object is selected.                                      |

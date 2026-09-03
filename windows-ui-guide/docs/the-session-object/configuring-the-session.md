@@ -16,9 +16,10 @@ You may add additional toolbars.
 
 You may remove objects too; for example, you can remove fields from the StatusBar or even delete it entirely. Indeed, you may dispense with the menu bar and/or tool bar as well.
 
-This section illustrates how you can configure your session using worked examples. The examples are by no means exhaustive, but are designed to demonstrate the principles. Please note that the structure and names of the objects used in these examples may not be identical to your default session as supplied. Before you attempt to change your session, please check the structure and the object names using `⎕WN` and `⎕WG`. The supplied session was created using the function BUILD_SESSION in the workspace BUILDSE. If you wish to make substantial changes to your session, you may find it most convenient to edit the functions in this workspace, re-run BUILD_SESSION, and then save it.
+This section illustrates how you can configure your session using worked examples. The examples are by no means exhaustive, but are designed to demonstrate the principles. The structure and names of the objects used in these examples might not be identical to your default session as supplied. Before you attempt to change your session, please check the structure and the object names using `⎕WN` and `⎕WG`. The supplied session was created using the function BUILD_SESSION in the workspace BUILDSE. If you wish to make substantial changes to your session, you may find it most convenient to edit the functions in this workspace, re-run BUILD_SESSION, and then save it.
 
-Please note that these examples assume that *Expose Session Properties* is enabled.
+!!! Info "Information"
+    These examples assume that *Expose Session Properties* is enabled.
 
 ## Changing the Font
 
@@ -101,7 +102,7 @@ and the following statements add them to the *Search* menu:
 
 ## Adding your own MenuItem
 
-This example shows how you can add a menu item that executes an APL expression. In this case we will do something very simple; namely add a *Time* option to the Tools menu which will execute `⎕TS`. Notice that the statement also defines a Hint. This will be displayed when you select the option, prior to releasing the mouse button to action it.
+This example shows how you can add a menu item that executes an APL expression. In this case, add a *Time* option to the Tools menu which executes `⎕TS`. The statement also defines a Hint. This will be displayed when you select the option, prior to releasing the mouse button to action it.
 
 Once again, we will start by changing space into the *Tools* menu itself
 ```apl

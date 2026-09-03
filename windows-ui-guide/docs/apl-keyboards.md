@@ -22,7 +22,7 @@ The Dyalog Unicode IME defines the mapping of keystrokes to Unicode characters. 
 
 The Dyalog Unicode IME supplied with Version {{ version_majmin }} includes support for Belgian, Danish, Finnish, French, German, Italian, Spanish Swedish and British and American English keyboards, based on the Dyalog hardware keyboard layout; these keyboard layouts are described [here](https://dfns.dyalog.com/n_keyboards.htm). 
 
-Note that for Danish, British and American English keyboards the older layouts, based on the Dyalog APL Ctrl Keyboard, are included in the `UnicodeIME\aplkeys` directory.
+For Danish, British, and American English keyboards, the older layouts, based on the Dyalog APL Ctrl Keyboard, are included in the `UnicodeIME\aplkeys` directory.
 
 The default keyboard mapping for unsupported languages is American English.
 
@@ -32,13 +32,15 @@ These command keystroke mappings are ignored by applications unless the applicat
 
 In particular, Dyalog APL for Windows Unicode Edition does not use the mappings in the translate tables; the mappings are defined under `Options/Configure/Keyboard Shortcuts` (see [Keyboard Shortcuts Tab](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-keyboard-shortcuts-tab/)).
 
-Note that the Dyalog Unicode IME replaces any previous IME, as well as the Dyalog Ctrl and Dyalog AltGr keyboards.
+!!! Info "Information"
+    The Dyalog Unicode IME replaces any previous IME, as well as the Dyalog Ctrl and Dyalog AltGr keyboards.
 
 ## Unicode Edition and the Registry Keyboard
 
 The Registry Keyboard provides an alternative mechanism for the Unicode Edition. This feature maps keystrokes to APL characters using entries in the Windows Registry. Dyalog supports the mechanism but does not provide the mappings which must therefore be defined by the user.
 
-Note that the Dyalog IME is used if it is available; the Registry Keyboard mechanism is used only if the Dyalog IME is not installed.
+!!! Info "Information"
+    The Dyalog IME is used if it is available; the Registry Keyboard mechanism is used only if the Dyalog IME is not installed.
 
 The mappings are defined in the Registry sub-folder :
 ```

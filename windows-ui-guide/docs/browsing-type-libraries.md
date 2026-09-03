@@ -35,9 +35,9 @@ You can load a library shown in the tree view pane by selecting *Load* from its 
 
 In either case, a message box will appear asking you to confirm. The operation to load a Type Library may take a few moments to complete.
 
-Notice that if the selected Library references any other libraries, they too will be loaded. For example, loading the *Microsoft Excel 16.0 Object Library* brings in the *Microsoft Office 16.0 Object Library* and the *Microsoft Visual Basic for Applications Extensibility 5.3 Library* too. It also contains references to a general library called the *OLE Automation Type Library*, so this is also loaded.
+If the selected Library references any other libraries, they too are loaded. For example, loading the *Microsoft Excel 16.0 Object Library* brings in the *Microsoft Office 16.0 Object Library* and the *Microsoft Visual Basic for Applications Extensibility 5.3 Library* too. It also contains references to a general library called the *OLE Automation Type Library*, so this is also loaded.
 
-When you `)SAVE` your workspace, all of the Type Libraries that you have loaded will be saved with it. Note that type library information can take up a considerable amount of workspace.
+When you `)SAVE` your workspace, all of the Type Libraries that you have loaded will be saved with it. Type library information can take up a considerable amount of workspace.
 
 ## Browsing Loaded Libraries
 
@@ -47,7 +47,7 @@ The picture below illustrates the effect of having loaded the Microsoft Excel 16
 
 ![](img/browsing-loaded-libraries-1.png)
 
-Notice that any external references to other libraries causes these to be brought in too.
+Any external references to other libraries cause these to be brought in too.
 
 If you select a loaded Type Library, summary information is displayed in the list view pane.
 
@@ -79,7 +79,7 @@ If you open the *Methods* or *Properties* subfolder, you can display more detail
 
 ![](img/browsing-loaded-libraries-5.png)
 
-This tells you that the *SaveAs* method takes up to 10 parameters of which the first, Filename, is mandatory and is of data type VT_BSTR (a character string). Note that [in] indicates that the parameter is an *input* parameter.
+This tells you that the *SaveAs* method takes up to 10 parameters of which the first, Filename, is mandatory and is of data type VT_BSTR (a character string). `[in]` indicates that the parameter is an *input* parameter.
 
 Incidentally, the optional Fileformat parameter is an example of a parameter whose value must be one of a list of Enumerated Constants. Even without looking at the documentation, the possible values can be deduced by browsing the *Enums* folder, with the results shown below.
 

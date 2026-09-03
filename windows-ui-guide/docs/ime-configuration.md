@@ -31,8 +31,7 @@ In the original implementations of APL, many of the special symbols could only b
 
 In Dyalog, such symbols can be generated either by a single keystroke, or (in *Replace* mode) by overtyping one symbol with another. For example `⍋` may be generated using Shift+Ctrl+4, or by switching to *Replace* mode and typing the three keystrokes Ctrl+h, Left-Cursor, Ctrl+m.
 
-Using the Dyalog Unicode IME the character can also be entered by pressing Ctrl+Bksp, Ctrl+m, Ctrl+h. Note that Ctrl+Bksp is the default *Overstrike Introducer Key* (key code
-OS).
+Using the Dyalog Unicode IME the character can also be entered by pressing Ctrl+Bksp, Ctrl+m, Ctrl+h. Ctrl+Bksp is the default *Overstrike Introducer Key* (key code OS).
 
 ## Use Overstrike popup
 

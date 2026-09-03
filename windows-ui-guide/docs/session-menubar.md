@@ -1,6 +1,6 @@
 # The Session MenuBar
 
-The Session MenuBar  (`⎕SE.mb`) contains a set of menus as follows. Note that, unless specified, the descriptions refer to the Unicode Edition and the keyboard short-cuts will be different in Classic Edition.
+The Session MenuBar (`⎕SE.mb`) contains a set of menus as follows. Unless specified, the descriptions refer to the Unicode Edition, and the keyboard shortcuts are different in Classic Edition.
 
 ## The File Menu
 
@@ -65,7 +65,7 @@ Table: Window menu operations {: #window-menu-operations }
 |-----------------|------------|---------------------------------|
 |Close all Windows|`[CloseAll]`|Closes all Edit and Trace windows|
 
-Note that `[CloseAll]` removes all Trace windows but does *not* reset the state indicator.
+`[CloseAll]` removes all Trace windows but does *not* reset the state indicator.
 
 In addition, the *Window* menu will contain options to switch the focus to any subsidiary windows that are docked in the Session as illustrated above.
 
@@ -108,7 +108,7 @@ Table: Action menu operations {: #actions-menu-operations }
 |Execute     |`[Execute]`  |Executes the current line                                                                                                             |
 |Copy Object |`[ObjCopy]`  |Copies the contents of the current object to the clipboard                                                                            |
 |Paste Object|`[ObjPaste]` |Pastes the contents of the clipboard into the current object, replacing its previous value                                            |
-|Print Object|`[ObjPrint]` |Prints the current object. Note that if the object is being edited, the version of the object displayed in the edit window is printed |
+|Print Object|`[ObjPrint]` |Prints the current object. If the object is being edited, the version of the object displayed in the edit window is printed           |
 |Clear Stops |`[ClearTSM]` |Clears all `⎕STOP` , `⎕MONITOR` and `⎕TRACE` settings                                                                                 |
 |Interrupt   |`[Interrupt]`|Generates a weak interrupt                                                                                                            |
 |Reset       |`[Reset]`    |Performs `)RESET`                                                                                                                     |
@@ -192,6 +192,6 @@ Table: Help menu operations {: #help-menu-operations }
 |Dyalog Web Site|`[DyalogWeb]`|Opens your web browser on the Dyalog home page|
 |Email Dyalog|`[DyalogEmail]`|Opens your email client and creates a new message to Dyalog Support|
 |Latest Enhancements|`[RelNotes]`|Opens `help\dyalog.chm` , starting at the first topic in the Version {{ version_majmin }} Release Notes section. Previous Release Notes are also included for your convenience.|
-|Read Me|`[ReadMe]`|Opens `help\dyalog_readme.htm` in your default web browser. Note that setup_readme.htm is also included in this directory|
+|Read Me|`[ReadMe]`|Opens `help\dyalog_readme.htm` in your default web browser. `setup_readme.htm` is also included in this directory|
 |Third Party Licences|`[LicenceHelp]`|Opens `help\dyalog.chm` , starting at the first topic in the Licences for third-party components|
 |About|`[About]`|Displays an *About* dialog box|
