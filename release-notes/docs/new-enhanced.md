@@ -29,7 +29,12 @@ The optional left argument `X` can now be a 2-element nested array when performi
 
 !!! Warning "Warning"  
     Any service provided using an _I-beam_ should be considered as "experimental" and subject to change from one release to the next. Any use of _I&#8209;beams_ in applications should, therefore, be carefully isolated in cover-functions that can be adjusted if necessary.
-	
+
+The following _I-beams_ have been changed:
+
+- [`13⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/log-use-of-deprecated-features/) – Log Use of Deprecated Features  
+The shy result of `13⌶'All'` (and the subsequent non-shy result of `13⌶'Enabled'`) is now the character vector `'All'` rather than a vector of deprecated feature names.
+
 The following _I-beams_ have been deprecated:
 
 - [`43⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/monadic-operator-generator/) – Monadic Operator Generator (introduced in Dyalog v20.0)  
