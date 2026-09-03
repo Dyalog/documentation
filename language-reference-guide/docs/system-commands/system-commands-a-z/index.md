@@ -32,7 +32,7 @@ Table: System Commands {: #SystemCommands }
 |[`)PROPS`](../props.md)                                                          |List properties of GUI namespace or object |
 |[`)RESET`](../reset.md)                                                          |Reset the state indicator                  |
 |[`)SAVE {Y}`](../save.md)                                                       |Save the workspace                         |
-|[`)SH {Y}`](../sh.md)                                                         |Execute a (UNIX) Shell command             |
+|[`)SH {Y}`](../sh.md)                                                         |Execute a (Unix) Shell command             |
 |[`)SI`](../si.md)                                                             |State Indicator                            |
 |[`)SIC`](../sic.md)                                                            |Clear State Indicator                      |
 |[`)SINL`](../sinl.md)                                                           |State Indicator with local Name Lists      |
