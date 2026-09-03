@@ -1,6 +1,6 @@
 # <span>GridPaste</span> <span>Event 192</span>
 
-If enabled, this event is reported when the user presses Shift+Insert and there is data in the clipboard that is in a suitable format for the [Grid](../objects/grid.md). The default action of the event is to copy the contents of the clipboard into the currently selected block of cells, or, if no cells are selected, into the block of cells starting at the current cell (CurCell). If there is a selected range of cells and the shape of the data being pasted does not exactly match the size of the selected range, the system generates a [GridPasteError](./gridpasteerror.md) event in addition to the GridPaste event.
+If enabled, this event is reported when the user presses <kbd>Shift</kbd>+<kbd>Insert</kbd> and there is data in the clipboard that is in a suitable format for the [Grid](../objects/grid.md). The default action of the event is to copy the contents of the clipboard into the currently selected block of cells, or, if no cells are selected, into the block of cells starting at the current cell (CurCell). If there is a selected range of cells and the shape of the data being pasted does not exactly match the size of the selected range, the system generates a [GridPasteError](./gridpasteerror.md) event in addition to the GridPaste event.
 
 You may disable the paste facility entirely by setting the action code of the event to `¯1`. You may also disable an individual paste operation by returning 0 from a callback function.
 

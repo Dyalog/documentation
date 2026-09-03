@@ -1,6 +1,6 @@
 # <span>PageApply</span> <span>Event 350</span>
 
-If enabled, this event is reported when the user clicks the Apply button in a [PropertySheet](../objects/propertysheet.md). However, the event is actually reported by each of its [PropertyPage](../objects/propertypage.md) objects whose Changed property is currently 1, that is, the event is reported by each of the pages that the user has changed.
+If enabled, this event is reported when the user clicks the Apply button in a [PropertySheet](../objects/propertysheet.md). However, the event is reported by each of its [PropertyPage](../objects/propertypage.md) objects whose Changed property is currently 1, that is, the event is reported by each of the pages that the user has changed.
 
 The default processing for this event is to set the Changed property of the [PropertyPage](../objects/propertypage.md) to 0. If you disable the event or return a 0 from a callback function, the Changed property is not reset. The Apply button in a [PropertySheet](../objects/propertysheet.md) is active if the value of the Changed property of *any* of the [PropertyPage](../objects/propertypage.md) objects is 1.
 

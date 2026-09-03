@@ -15,7 +15,7 @@ CalendarCols is a 6-element integer vector whose elements specify the colours as
 Each element of CalendarCols may be 0 (which means default colour), a negative singleton that specifies a particular Windows colour, or a 3-element integer vector of RGB values.
 
 !!! Info "Information"
-    At the time of writing, setting the first element of CalendarCols has no effect. Dyalog Ltd believes this to be a Windows problem that might be corrected in due course.
+    Setting the first element of CalendarCols currently has no effect. Dyalog Ltd believes this to be a Microsoft Windows problem that might be corrected in due course.
 
 ## Application
 

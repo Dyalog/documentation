@@ -4,7 +4,7 @@ This property specifies whether or not an object is displayed with a border arou
 
 For a [Form](../objects/form.md) or [SubForm](../objects/subform.md), the value of the Border property is only relevant if [Sizeable](sizeable.md), [Moveable](moveable.md), [SysMenu](sysmenu.md), [MaxButton](maxbutton.md) and [MinButton](minbutton.md) are **all** 0.
 
-The value of the Border property can only be assigned by [`⎕WC`](../../../language-reference-guide/system-functions/wc) and **cannot** be changed using [`⎕WS`](../../../language-reference-guide/system-functions/ws).
+The value of the Border property can only be assigned by [`⎕WC`](../../../language-reference-guide/system-functions/wc) and cannot be changed using [`⎕WS`](../../../language-reference-guide/system-functions/ws).
 
 ## Application
 

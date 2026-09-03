@@ -1,6 +1,6 @@
 # <span>GridPasteError</span> <span>Event 194</span>
 
-If enabled, this event is reported when the user presses Shift+Insert and
+If enabled, this event is reported when the user presses <kbd>Shift</kbd>+<kbd>Insert</kbd> and
 there is data in the clipboard, but the system is unable to paste the data into
 the [Grid](../objects/grid.md). This occurs if there is a currently
 selected block of cells whose shape does not match the shape of the data in the

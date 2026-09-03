@@ -28,7 +28,7 @@ You can select a different cursor using the CursorObj property. Setting the Curs
 
 When the user depresses the mouse button, the Splitter generates a [StartSplit](../methodorevents/startsplit.md) event. When the user releases the mouse button, the Splitter generates an [EndSplit](../methodorevents/endsplit.md) event. If full-drag is in effect, the Splitter also reports [Splitting](../methodorevents/splitting.md) events as it is dragged. All these events report the new or current position of the Splitter object and are provided for information only.
 
-The objects named by [SplitObj1](../properties/splitobj1.md) and [SplitObj2](../properties/splitobj2.md) and any sub-objects they contain generate Configure events when they are resized by the Splitter.
+The objects named by [SplitObj1](../properties/splitobj1.md) and [SplitObj2](../properties/splitobj2.md), and any sub-objects they contain, generate Configure events when they are resized by the Splitter.
 
 ## Alignment
 

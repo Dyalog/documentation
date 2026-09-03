@@ -12,7 +12,7 @@ The HTMLRenderer is supported on the following platforms:
 
 It is not supported on the Raspberry Pi.
 
-The HTMLRenderer is implemented using the  [Chromium Embedded Framework (CEF).](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework) If the **ENABLE_CEF** parameter is set to `0` (its default value is `1`), the CEF is disabled and an attempt to create an HTMLRenderer object fails with an error message.
+The HTMLRenderer is implemented using the [Chromium Embedded Framework (CEF)](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework). If the **ENABLE_CEF** configuration parameter is set to `0` (its default value is `1`), the CEF is disabled and an attempt to create an HTMLRenderer object fails with an error message.
 
 The HTMLRenderer object can be considered as two components; a client implemented using CEF and an internal server which implements an interface from the APL workspace to the client.  The client may communicate with both the internal server and external servers on the web. Thus it can combine and display information from external and internal feeds.
 

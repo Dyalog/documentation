@@ -17,7 +17,7 @@ The result is a character vector.
 ```
 
 !!! Legacy "Legacy"
-    GetCommandLine only works on Microsoft Windows, and its use is deprecated in favour of [GetCommandLineArgs](getcommandlineargs.md), which works on all platforms.
+    GetCommandLine only works on Microsoft Windows; its use is deprecated in favour of [GetCommandLineArgs](getcommandlineargs.md), which works on all supported platforms.
 
 ## Application
 

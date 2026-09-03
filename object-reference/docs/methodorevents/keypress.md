@@ -28,9 +28,7 @@ or to a command, is performed using the Input Translate Table.
 
 In the Unicode Edition, the resolution is performed by the Operating System.
 However, if the keystroke resolves to a navigation or control key (such as
-Cursor Up or Enter), the same 2-character "command" is reported. Commands
-that are purely internal to Dyalog APL (such as Trace, commonly Ctrl+Enter)
-are not reported as such and the Input Code is empty.
+Cursor Up or Enter), the same 2-character "command" is reported. Commands that are purely internal to Dyalog (such as Trace, commonly <kbd>Ctrl</kbd>+<kbd>Enter</kbd>) are not reported as such, and the Input Code is empty.
 
 In the Unicode Edition, the Character Code is the Unicode code point of the
 character that the user entered. In the Classic Edition, it is a number in the

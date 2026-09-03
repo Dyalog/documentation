@@ -10,7 +10,7 @@ The [SelItems](../properties/selitems.md) property is a Boolean vector which spe
 
 If the [Style](../properties/style.md) is `'Simple'` or `'DropEdit'`, the user may type text into the edit field. In these cases, the contents of the edit field may also be specified or queried using the [Text](../properties/text.md) property.
 
-If the user first selects an item from the list box, then changes it in the edit field, the entry in the list box is automatically deselected. There is therefore no conflict between the value of [Text](text.md) and the value of [SelItems](../properties/selitems.md).
+If the user first selects an item from the list box, then changes it in the edit field, the entry in the list box is automatically deselected. There is, therefore, no conflict between the value of [Text](text.md) and the value of [SelItems](../properties/selitems.md).
 
 !!! Warning "Warning"
     Windows truncates the contents of the edit field (reflected in the value of the Text property) to 510 characters.

@@ -18,7 +18,7 @@ The event message reported as the result of [`⎕DQ`](../../../language-referenc
 |`[2]`|Event |`'DDE'` or 50          |
 
 !!! Info "Information"
-    Due to the nature of DDE "conversations" messages may be received when in fact no change in the value of any shared variables has occurred. Your application code must therefore be prepared to cater for this situation.
+    The nature of DDE "conversations" means that messages can be received when there has not been a change in the value of any shared variables. Your application code must, therefore, allow for this situation.
 
 ## Application
 

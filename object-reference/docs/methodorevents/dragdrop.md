@@ -14,7 +14,7 @@ The event message reported as the result of [`⎕DQ`](../../../language-referenc
 |`[7]`|W             |width of dragged object in the coordinate system of the target object                                                             |
 |`[8]`|Shift State   |numeric scalar containing the sum of the values associated with the Shift(1), Ctrl(2) and Alt(4) keys when the object was dropped.|
 
-Y, H, X and W are all reported relative to the target object.
+Y, H, X, and W are all reported relative to the target object.
 
 ## Application
 

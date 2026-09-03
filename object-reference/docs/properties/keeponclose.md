@@ -7,7 +7,7 @@ If `KeepOnClose` is 1 (for the object itself **and** for all its parents) when i
 The default value of `KeepOnClose` depends upon the way in which a GUI object was created with `⎕WC`. If a GUI object is created by dyadic `⎕WC`, KeepOnClose defaults to 0. If a GUI object is attached by monadic `⎕WC`, its KeepOnClose property defaults to 1.
 
 !!! Legacy "Legacy"
-    The use of `KeepOnClose` is deprecated; Dyalog might at some point remove this property or disable its functionality.
+    The use of `KeepOnClose` is deprecated; Dyalog Ltd might remove this property or disable its functionality.
 
 ## Application
 

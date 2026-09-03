@@ -11,7 +11,7 @@ The [Active](../properties/active.md) property determines whether or not the Tim
 The [FireOnce](../properties/fireonce.md) property may be used to implement a once-off Timer event and has the value 0, 1 or 2.
 
 !!! Warning "Warning"
-    If you create a Timer object whose [Timer](../methodorevents/timer.md) event generates an error (for example by attaching it to a non-existent callback), it might be very difficult or even impossible to type into the Session, because the error is displayed over and over again. Care is therefore recommended.
+    If you create a Timer object whose [Timer](../methodorevents/timer.md) event generates an error (for example, by attaching it to a non-existent callback), it could be very difficult or even impossible to type into the Session, because the error is displayed repeatedly. Care is, therefore, recommended.
 
 ## Application
 

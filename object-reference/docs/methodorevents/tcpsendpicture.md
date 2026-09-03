@@ -20,9 +20,6 @@ The ([shy](../../../programming-reference-guide/introduction/results#shy-results
 4930
 ```
 
-!!! Info "Information"
-    Although PNG is recognised as the latest graphics standard for displaying pictures, not all Web browsers support it.
-
 See also: [MakeGIF](./makegif.md), [MakePNG](./makepng.md)
 
 ## Application

@@ -14,8 +14,7 @@ represents the Build ID.
 If the argument is `⍬`, the build id is
 that of the current version of Dyalog that is running the expression.
 
-Although this method is designed to uniquely identify different
-versions of Dyalog by its checksum, it can be used to obtain a checksum
+Although this method is designed to uniquely identify different versions of Dyalog by the checksum, it can be used to obtain a checksum
 for *any* arbitrary file.
 
 <h2 class="example">Examples</h2>
