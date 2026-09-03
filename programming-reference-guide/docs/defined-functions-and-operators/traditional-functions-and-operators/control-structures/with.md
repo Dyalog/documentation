@@ -21,7 +21,7 @@
 - Global references from within the `:With` control structure are to names in the new space. 
 - Exiting the defined function from within a `:With` control structure causes the space to revert to the one from which the function was called.
 
-On leaving the `:With` control structure, execution reverts to the original namespace. Notice however that the interpreter does not detect branches (`→`) out of the control structure. `:With` control structures can be nested in the normal fashion:
+On leaving the `:With` control structure, execution reverts to the original namespace. However, the interpreter does not detect branches (`→`) out of the control structure. `:With` control structures can be nested in the normal fashion:
 ```apl
 [1]   :With 'x'           ⍝ Change to #.x
 [2]       :With 'y'       ⍝ Change to #.x.y

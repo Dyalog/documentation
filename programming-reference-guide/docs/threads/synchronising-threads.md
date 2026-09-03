@@ -23,7 +23,7 @@ A simple example of a thread synchronisation requirement occurs when you want on
 
 This can be achieved by having the first thread put a specific type of token into the pool using `⎕TPUT`. The second thread waits (if necessary) for the new value to be available by calling `⎕TGET` with the same token type.
 
-Notice that when `⎕TGET` returns, the specified tokens are *removed* from the pool. However, *negative* token types will satisfy an infinite number of requests for their positive equivalents.
+When `⎕TGET` returns, the specified tokens are *removed* from the pool. However, *negative* token types will satisfy an infinite number of requests for their positive equivalents.
 
 The system is designed to cater for more complex forms of synchronisation. For example, a *semaphore* to control a number of resources can be implemented by keeping that number of tokens in the pool. Each thread will take a token while processing, and return it to the pool when it has finished.
 

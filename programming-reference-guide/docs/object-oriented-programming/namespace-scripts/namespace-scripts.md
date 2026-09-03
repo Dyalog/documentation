@@ -47,14 +47,14 @@ For example:
  #.a.[b1]  #.a.[b2]
 ```
 
-Note that the names of Classes `b1` (`a.b.b1`) and `b2` (`a.b.b2`) are not visible from their "uncle" `a1` (`a.a1`).
+The names of Classes `b1` (`a.b.b1`) and `b2` (`a.b.b2`) are not visible from their "uncle" `a1` (`a.a1`).
 ```apl
       a.goo
 VALUE ERROR
 foo[2] r←⎕NEW¨b1 b2
 ```
 
-Notice that Classes in a Namespace Script are fixed before other objects (hence the assignments to `d` and `e` are evaluated *after* Classes `a1` and `bb2` are fixed), although the order in which Classes themselves are defined is still important if they reference one another during initialisation.
+Classes in a Namespace Script are fixed before other objects (hence the assignments to `d` and `e` are evaluated *after* Classes `a1` and `bb2` are fixed), although the order in which Classes themselves are defined is still important if they reference one another during initialisation.
 
 A practical example using `:Namespace` is given in the [next topic](namespace-script-example.md).
 
@@ -94,6 +94,6 @@ When you fix the script, the version of the function in the script will replace 
 
 ![changing scripts](../../img/changing-scripts.png)
 
-Note that the Editor displays the description `Unscripted Function` in the status bar of the window showing the new version of `foo`.
+The Editor displays the description `Unscripted Function` in the status bar of the window showing the new version of `foo`.
 
 Similarly, if you were to Trace the execution of `ns.foo`, the Tracer would display the current (`⎕FX`'ed) version of `foo`, with the same description in its status bar.

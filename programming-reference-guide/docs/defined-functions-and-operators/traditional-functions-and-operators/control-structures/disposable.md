@@ -12,7 +12,7 @@ The `:Disposable array` statement in Dyalog APL provides a similar facility to C
 
 When the block is exited, any .NET objects in `array` that implement IDisposable will have IDisposable.Dispose called on them.
 
-Note that exit includes normal exit as the code drops through `:EndDisposable`, or if an error occurs and is trapped, or if branch (`→`) is used to exit the block, or anything else.
+Exit includes normal exit as the code drops through `:EndDisposable`, or if an error occurs and is trapped, or if branch (`→`) is used to exit the block, or anything else.
 
 See also:  .Disposing of .NET Objects.
 

@@ -20,7 +20,7 @@ If you wish to invoke a niladic function asynchronously, you have the following 
     ⍎& 'NIL'
     ```
 
-Note that niladic functions *can* be invoked asynchronously as callback functions. For example, the statement:
+Niladic functions *can* be invoked asynchronously as callback functions. For example, the statement:
 ```apl
       ⎕WS'Event' 'Select' 'NIL&'
 ```

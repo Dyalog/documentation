@@ -6,7 +6,7 @@ To implement a Keyed Property, only a `get` and/or a `set` function are required
 
 However, APL **does** check that the rank and lengths of the indices correspond to the rank and lengths of the array to the right of the assignment (for an indexed assignment) and the array returned by the get function (for an indexed reference). If the rank or shape of these arrays fails to conform to the rank or shape of the indices, APL will issue a `RANK ERROR` or `LENGTH ERROR`.
 
-Note too that indices **may be elided**. If `KProp` is a Keyed Property of Instance `I1`, the following expressions are all valid.
+Indices **can be elided**. If `KProp` is a Keyed Property of Instance `I1`, the following expressions are all valid.
 ```apl
       I1.KProp
       I1.KProp[]←10

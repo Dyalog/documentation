@@ -24,7 +24,7 @@ Data variables for the second record, `PAUL`, can be established using strand, o
       PAUL.(FirstName LastName Age←'Paul' 'Brown' 44)
 ```
 
-The function `SHOW` can be used to display the data in each record (the function is split into 2 lines only to fit on the printed page). Notice that its argument is a ref.
+The function `SHOW` can be used to display the data in each record (the function is split into 2 lines only to fit on the printed page). Its argument is a ref.
 ```apl
      ∇ R←SHOW PERSON
 [1]    R←PERSON.FirstName,' ',PERSON.LastName

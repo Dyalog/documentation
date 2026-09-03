@@ -18,7 +18,7 @@ Class `Parrot` has a `Speak` method that does not require any information about 
  Squark!  Squark! 
 ```
 
-Note that `Parrot.Speak` may be executed directly from the Class and does not in fact require an Instance.
+`Parrot.Speak` can be executed directly from the Class and does not in fact require an Instance.
 ```apl
       Parrot.Speak 3
  Squark!  Squark!  Squark!

@@ -63,7 +63,7 @@ The famous Euler's Identityeiπ+1=0 may be expressed as follows:
 
 ## Circular functions
 
-The basic set of circular functions `X○Y` cater for complex values in `Y`, while the following extended functions provide specific features for complex arguments. Note that `a` and `b` are the real and imaginary parts of `Y` respectively and θ is the phase of `Y`..
+The basic set of circular functions `X○Y` cater for complex values in `Y`, while the following extended functions provide specific features for complex arguments. `a` and `b` are the real and imaginary parts of `Y` respectively and θ is the phase of `Y`.
 
 |---|---|---|
 |`(-X) ○ Y`|`X`|`X ○ Y`|
@@ -73,7 +73,7 @@ The basic set of circular functions `X○Y` cater for complex values in `Y`, whi
 |`Y×0J1`|`11`|`b`|
 |`*Y×0J1`|`12`|`θ`|
 
-Note that `9○Y` and `11○Y` return the real and imaginary parts of `Y` respectively:
+`9○Y` and `11○Y` return the real and imaginary parts of `Y` respectively:
 ```apl
       9 11○3.5J¯1.2
 3.5 ¯1.2
@@ -97,6 +97,6 @@ As with real values, complex values sufficiently close to Boolean or integral va
 0
 ```
 
-Note that Dyalog APL always stores complex numbers as a pair of 64-bit binary floating-point numbers, regardless of the setting of `⎕FR`. Comparisons between complex numbers and decimal floating-point numbers will require conversion of the decimal number to binary to allow the comparison. When `⎕FR=1287`, comparisons are always subject to `⎕DCT`, not `⎕CT` - regardless of the data type used to represent a number.
+Dyalog APL always stores complex numbers as a pair of 64-bit binary floating-point numbers, regardless of the setting of `⎕FR`. Comparisons between complex numbers and decimal floating-point numbers will require conversion of the decimal number to binary to allow the comparison. When `⎕FR=1287`, comparisons are always subject to `⎕DCT`, not `⎕CT` - regardless of the data type used to represent a number.
 
 This only really comes into play when determining whether the imaginary part of a complex number is so small that it can be considered to be on the real line. However, Dyalog recommends that you do not mix the use of complex and decimal numbers in the same component of an application.

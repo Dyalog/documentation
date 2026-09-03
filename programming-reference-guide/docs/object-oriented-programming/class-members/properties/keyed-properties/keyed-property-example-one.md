@@ -71,7 +71,7 @@ When an indexed assignment is made, the `set` function receives a list of keys (
 
 When an indexed reference is made, the `get` function receives a list of keys (indices) in `arg.Indexer`. The function uses these keys to retrieve the corresponding values, inserting 0s for non-existent keys.
 
-Note that in the expression:
+In the expression:
 ```apl
  SA1.Values['Widgets' 'Grommets';'Jan' 'Mar' 'Oct']
 ```

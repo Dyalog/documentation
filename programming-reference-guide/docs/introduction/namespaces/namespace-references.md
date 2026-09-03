@@ -47,7 +47,7 @@ You may use a ref to a namespace anywhere that you would use the namespace itsel
 4 5 6
 ```
 
-Notice that refs are references to namespaces, so that if you make a copy, it is the reference that is copied, not the namespace itself. This is sometimes referred to as a shallow as opposed to a deep copy. It means that if you change a ref, you actually change the namespace that it refers to.
+Refs are references to namespaces, so that if you make a copy, it is the reference that is copied, not the namespace itself. This is sometimes referred to as a shallow as opposed to a deep copy. It means that if you change a ref, you actually change the namespace that it refers to.
 ```apl
       X.A+←1
       X.A
@@ -72,7 +72,7 @@ Similarly, a ref passed to a defined function is call-by-reference, so that modi
 8 9 10
 ```
 
-Notice that the expression to the right of a dot may be arbitrarily complex and will be executed within the namespace or ref to the left of the dot.
+The expression to the right of a dot can be arbitrarily complex and is executed within the namespace or ref to the left of the dot.
 ```apl
       X.(C←A×B)
       X.C
