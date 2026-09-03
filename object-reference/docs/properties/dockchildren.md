@@ -2,7 +2,7 @@
 
 The DockChildren property specifies the names of client objects that may be docked in a host object.
 
-DockChildren may be a single ref or simple character scalar or vector, or a vector of refs or character vectors. Each item represents an object that may be docked. Notice that if you use a name, you must specify the simple name of the object, excluding any part of its full pathname that refers to a parent; that is, the specified names must not contain any leading pathname information.
+DockChildren may be a single ref or simple character scalar or vector, or a vector of refs or character vectors. Each item represents an object that may be docked. If you use a name, you must specify the simple name of the object, excluding any part of its full pathname that refers to a parent; that is, the specified names must not contain any leading pathname information.
 
 If the name of, or ref to, a [dockable](dockable.md) object occurs in the DockChildren property, the host object will generate DockMove events when the client is dragged over it, and will generate a DockAccept event when a docking operation takes place.
 

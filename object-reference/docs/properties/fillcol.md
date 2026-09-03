@@ -23,7 +23,7 @@ A single colour is represented by a single number which refers to a standard col
 If instead, FillCol contains a 3-element vector, it 
 specifies the intensity of the red, green and blue components of the colour as 
 values in the range 0-255. For example, (255 0 0) is red and (255 255 0) is 
-yellow. Note that the colour realised depends upon the capabilities of the 
+yellow. The colour realised depends upon the capabilities of the 
 display adapter and driver, and the current Windows colour map.
 
 FillCol may also be a vector of 3-element vectors specifying a set of colours for the constituent parts of the object. For example, a [Poly](../objects/poly.md) object consisting of four polygons, may have a FillCol property of four 3-element vectors.

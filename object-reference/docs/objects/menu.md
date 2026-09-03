@@ -21,8 +21,8 @@ If a Menu is owned by a [MenuBar](menubar.md) or by
 another Menu, its position within its parent is also calculated automatically,
 dependent on the order in which other related objects are established. The [Posn](../properties/posn.md) property may however be used to **insert** a new Menu into an existing
 structure. For example, having defined three Menu objects as children of a [MenuBar](menubar.md),
-you can insert a fourth one between the first and the second by specifying its [Posn](../properties/posn.md) to be 2. Note that the value of [Posn](../properties/posn.md) for the
-Menus that were previously second and third will then be reset to 3 and 4
+you can insert a fourth one between the first and the second by specifying its [Posn](../properties/posn.md) to be 2. The value of [Posn](../properties/posn.md) for the
+Menus that were previously second and third is then reset to 3 and 4
 respectively.
 
 If a Menu is a child of a [MenuBar](menubar.md) which is
@@ -43,7 +43,7 @@ it is displayed **on top of** the bitmaps.
 
 If the Menu is a submenu (owned by a Menu), you may set its [EdgeStyle](../properties/edgestyle.md) property to `'Plinth'`. This causes the Menu
 to take on an appearance that is similar to a pushbutton and be raised when not
-selected and recessed when selected. Note that to enable 3-dimensional
+selected and recessed when selected. To enable 3-dimensional
 appearance, you must set [EdgeStyle](../properties/edgestyle.md) to
 something other than `'None'` for all the
 objects above the Menu in the tree.

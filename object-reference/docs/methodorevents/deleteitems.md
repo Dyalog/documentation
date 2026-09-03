@@ -12,7 +12,7 @@ The argument to DeleteItems is a 2-element array as follows:
 
 *Number of items* specifies the number of items to be removed and refers to those items *at the same level* in the [TreeView](../objects/treeview.md) hierarchy as the *Item number*. *Number of items* is optional and defaults to 1.
 
-Note that any children of these items will also be removed.
+Any children of these items will also be removed.
 
 The result is an integer that indicates the total number of items, including children, that have been removed from the [TreeView](../objects/treeview.md).
 

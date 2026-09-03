@@ -6,7 +6,7 @@ Each element of CustomColors is a 3-element integer vector specifying an RGB col
 
 By default, each element of CustomColors is (0 0 0). If the user selects a new custom colour from the Windows colour selection dialog box, its value will be reported by CustomColors. CustomColors must always have shape (1 16).
 
-Note that CustomColors is maintained separately for each separate [ColorButton](../objects/colorbutton.md), and CustomColors defaults to `(1 16⍴⊂0 0 0)` for each new [ColorButton](../objects/colorbutton.md) that you create. If you want to maintain a global custom colour table for your application, you must do this yourself.
+CustomColors is maintained separately for each separate [ColorButton](../objects/colorbutton.md), and CustomColors defaults to `(1 16⍴⊂0 0 0)` for each new [ColorButton](../objects/colorbutton.md) that you create. If you want to maintain a global custom colour table for your application, you must do this yourself.
 
 ## Application
 

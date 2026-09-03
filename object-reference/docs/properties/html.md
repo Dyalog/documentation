@@ -4,7 +4,7 @@ The HTML property is a character vector that specifies the content to be rendere
 
 See also: [URL](url.md).
 
-!!! note
+!!! Info "Information"
     Typically, you will need to UTF-8 encode any text outside the Unicode range 0-127.
 
 ## Application

@@ -9,7 +9,7 @@ The argument to RowSetVisibleDepth is a numeric scalar as follows
 
 All rows in the grid that have a value of [RowTreeDepth](../properties/rowtreedepth.md) less than or equal to *Depth* are expanded. Rows with a value of [RowTreeDepth](../properties/rowtreedepth.md) greater than *Depth* are collapsed.
 
-Note:[ Expanding](./expanding.md) and [Retracting](./retracting.md) events are not generated when this method is called.
+[Expanding](./expanding.md) and [Retracting](./retracting.md) events are not generated when this method is called.
 
 <h2 class="example">Examples</h2>
 ```apl

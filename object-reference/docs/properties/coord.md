@@ -6,7 +6,7 @@ string with one of the following values; `'Inherit'`,
 `'RealPixel'`, `'ScaledPixel'`, `'User'` or `'Cell'` (graphics children of a [Grid](../objects/grid.md) only).
 
 If Coord is `'Inherit'`, the co-ordinate
-system for the object is **inherited** from its parent. Note that the default
+system for the object is **inherited** from its parent. The default
 value of Coord for the system object `'.'` is `'Prop'`, so by default all objects
 created by [`⎕WC`](../../../language-reference-guide/system-functions/wc) inherit `'Prop'`.
 
@@ -22,7 +22,7 @@ along its x- and y-axes is measured in physical pixel units. The object's positi
 and size ([Posn](posn.md) and [Size](size.md) properties) are therefore reported and set in physical pixel units. If you set
 Coord on the system object to `'Pixel'`, the
 value of its [Size](size.md) property gives you the
-resolution of your screen. Note that pixels are numbered from 0
+resolution of your screen. Pixels are numbered from 0
 to (Size -1).
 
 If Coord is `'ScaledPixel'`  the number of pixels specified for [Posn](posn.md), [Size](size.md),  and other such properties will be automatically scaled by Dyalog APL according to the user's chosen display scaling factor. So if you specify an Edit object to be 80 pixels wide and 20 pixels high, and the user's scaling factor is 150%, Dyalog will automatically draw it 120 pixels wide and 30 pixels high. Dyalog will also de-scale coordinate values reported by `⎕WG` and  event messages.
@@ -37,7 +37,7 @@ object**. Each of these is a 2-element numeric vector whose elements define
 the co-ordinates of top left and bottom right interior corners of the (parent)
 object respectively.
 
-Note that if Coord is `'User'` and you
+If Coord is `'User'` and you
 change the values of [YRange](yrange.md) and/or [XRange](xrange.md) of the parent, the object (and all its siblings with Coord `'User'`)
 are redrawn (and clipped) according to the new origin and scale defined for the
 parent. The values of their [Posn](posn.md), [Size](size.md) and [Points](points.md) properties are unaffected.

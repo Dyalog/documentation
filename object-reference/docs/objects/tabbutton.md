@@ -8,7 +8,7 @@ The [Caption](../properties/caption.md) property specifies the text that appears
 
 A picture is specified by setting the ImageIndex property of the TabButton. This is a number that points to a particular icon or bitmap defined in an [ImageList](imagelist.md) object whose name is specified by the [ImageListObj](../properties/imagelistobj.md) property of the parent [TabControl](tabcontrol.md).
 
-Note that all TabButton objects share the same font which is defined by the [FontObj](../properties/fontobj.md) property of the [TabControl](tabcontrol.md).
+All TabButton objects share the same font which is defined by the [FontObj](../properties/fontobj.md) property of the [TabControl](tabcontrol.md).
 
 The foreground and background colours of the TabButton object are fixed.
 

@@ -12,7 +12,7 @@ If the object under the mouse pointer is the parent of the object that has been 
 
 If the object under the mouse pointer is not the parent of the object being dragged, the default action is for the system to ignore the operation. However, by enabling the [DragDrop](../methodorevents/dragdrop.md) event, your application can of course take whatever action is appropriate, including perhaps moving the dragged object to a new parent.
 
-Note that a Dragable object does not generate a [Configure](../methodorevents/configure.md) (31) event when it is dragged and dropped.
+A Dragable object does not generate a [Configure](../methodorevents/configure.md) (31) event when it is dragged and dropped.
 
 ## Application
 

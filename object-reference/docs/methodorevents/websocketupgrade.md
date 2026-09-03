@@ -20,7 +20,7 @@ If Type is `'manual'`, a callback function for WebSocketUpgrade is mandatory and
 
 In both cases,  the WebSocket ID is subsequently required to send a message  by calling the [WebSocketSend](websocketsend.md) method or to close the connection using the   [WebSocketClose](websocketclose.md) method.
 
-Note that several WebSocket connections may be made concurrently.
+Several WebSocket connections can be made concurrently.
 
 <h2 class="example">Example</h2>
 ```apl

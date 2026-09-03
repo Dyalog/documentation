@@ -4,7 +4,7 @@ This object provides access to OLE (ActiveX) Controls.
 
 This object loads an OLE Control into memory and defines a new class of object associated with it. The name of the new class is the name specified by the left argument of `⎕WC`  You may create an instance of the newly defined class using the name you assigned to the OCXClass object as the Type property.
 
-Note that you may not create an instance of OCXClass using `⎕NEW`.
+You cannot create an instance of OCXClass using `⎕NEW`.
 
 Once you have defined a new OCXClass, the properties, events and methods it supports may be obtained from its [PropList](../properties/proplist.md), [EventList](../properties/eventlist.md) and [MethodList](../properties/methodlist.md) properties. These are the properties, events and methods defined for the OLE control by its author.
 

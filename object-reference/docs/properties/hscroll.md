@@ -2,7 +2,7 @@
 
 For most objects to which it applies, this property determines whether or not a horizontal scrollbar is provided.
 
-**HScroll may only be set when the object is created with ⎕WC and may not subsequently be changed with ⎕WS or assignment.**
+HScroll can only be set when the object is created with `⎕WC` and cannot subsequently be changed with `⎕WS` or assignment.
 
 When applied to a [Combo](../objects/combo.md), or to an [Edit](../objects/edit.md) object with [Style ](style.md)`'Single'` (that is, a single-line edit field), the value 0 inhibits scrolling, and prevents the user from entering more data when the field is full. If instead it has the value `¯2`, the field is scrollable, and the length of data that may be entered is not limited by the length of the field.
 

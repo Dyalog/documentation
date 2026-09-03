@@ -18,7 +18,7 @@ The structure of the items (that is, the parent/child relationships of the items
 
 The [HasLines](../properties/haslines.md) property is 0, 1 or 2 and determines whether or not lines are drawn that link child items to their corresponding parent item. If [HasLines](../properties/haslines.md) is 0, no lines are drawn. If [HasLines](../properties/haslines.md) is 1, lines are drawn at all except the top level, that is, the object does not link items at the root of the hierarchy. The default value for [HasLines](../properties/haslines.md) is 2 which provides lines at all levels including the root.
 
-The [HasButtons](../properties/hasbuttons.md) property determines whether or not the TreeView object has a button to the left side of each parent item. It is Boolean with a default value of 1. The user can click the button to expand or collapse the child items as an alternative to double-clicking the parent item. Note that by itself, setting [HasButtons](../properties/hasbuttons.md) to 1 does not add buttons to items at the root of the hierarchy. To achieve this you must also set [HasLines](../properties/haslines.md) to 2.
+The [HasButtons](../properties/hasbuttons.md) property determines whether or not the TreeView object has a button to the left side of each parent item. It is Boolean with a default value of 1. The user can click the button to expand or collapse the child items as an alternative to double-clicking the parent item. By itself, setting [HasButtons](../properties/hasbuttons.md) to 1 does not add buttons to items at the root of the hierarchy. To achieve this you must also set [HasLines](../properties/haslines.md) to 2.
 
 The [CheckBoxes](../properties/checkboxes.md) property specifies whether or not check boxes are displayed alongside items in a TreeView.
 
@@ -32,7 +32,7 @@ The [EditLabels](../properties/editlabels.md) is a Boolean property (default 0) 
 
 The [SelItems](../properties/selitems.md) property is a Boolean vector that indicates which of the items is currently selected and has the focus. If more items are visible than can fit within the object, a scrollbar is automatically provided. The [Index](../properties/index-property.md) property is a `⎕IO` sensitive integer that reports the index number of the first item displayed in the object and changes as the items are scrolled.
 
-!!! warning
+!!! Info "Information"
     Due to the limitations of the Win32 TreeView object, it is necessary to query the state of each item in a TreeView in order to obtain the value of the [SelItems](../properties/selitems.md) property, making it a comparatively slow operation if there are a lot of [Items](../properties/items.md).
 
 ## Application

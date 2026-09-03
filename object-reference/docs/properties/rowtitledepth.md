@@ -30,7 +30,7 @@ is 1, and so forth. For example:
 
 ![](../img/gridrt.gif)
 
-Note that the [LockRows](../methodorevents/lockrows.md) method is not
+The [LockRows](../methodorevents/lockrows.md) method is not
 supported in combination with hierarchical row titles.
 
 ## Application

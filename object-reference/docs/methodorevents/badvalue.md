@@ -2,7 +2,7 @@
 
 If enabled, this event is reported by an [Edit](../objects/edit.md) or [Spinner](../objects/spinner.md) object  when the user enters invalid data into the object and then switches focus to another control or to another application.  Data is invalid if it conflicts with the [FieldType](../properties/fieldtype.md) property, or for a [Spinner](../objects/spinner.md) if it is outside the range specified by the [Limits](../properties/limits.md) property.
 
-The default action of the event is to sound the bell (beep). You can disable this action by returning 0 from a callback function or by setting its action code to `¯1`. Note that in neither case is the [Value](../properties/value.md) property of the object updated. The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 3-element vector as follows :
+The default action of the event is to sound the bell (beep). You can disable this action by returning 0 from a callback function or by setting its action code to `¯1`. In neither case is the [Value](../properties/value.md) property of the object updated. The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 3-element vector as follows :
 
 |-----|-----------|-----------------------|
 |`[1]`|Object     |ref or character vector|

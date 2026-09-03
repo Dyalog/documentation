@@ -34,7 +34,7 @@ You may control the value of the Changed property using `⎕WS` or by calling [P
 
 ![](../img/ps2.gif)
 
-If the PropertyPage is owned by a *Wizard* [PropertySheet](propertysheet.md), its Caption property specifies the text that appears in the title bar of the [PropertySheet](propertysheet.md) window when the PropertyPage is the current page. Note that a Wizard [PropertySheet](propertysheet.md) ignores its own Caption property.
+If the PropertyPage is owned by a *Wizard* [PropertySheet](propertysheet.md), its Caption property specifies the text that appears in the title bar of the [PropertySheet](propertysheet.md) window when the PropertyPage is the current page. A Wizard [PropertySheet](propertysheet.md) ignores its own Caption property.
 
 There are effectively 3 page changing buttons on a Wizard [PropertySheet](propertysheet.md), named Back, Next and Finish. The Next and Finish buttons actually occupy the same position and are mutually exclusive. The captions on the buttons are language-dependent.
 

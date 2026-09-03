@@ -55,7 +55,7 @@ To *clear* the bold attribute for the same day:
       F.CAL1.GetDayStates 36048 36048 ⍬
 ```
 
-Note that the [Calendar](../objects/calendar.md) object will ignore any IDNs you specify that are outside the range of dates that it is currently displaying.
+The [Calendar](../objects/calendar.md) object ignores any IDNs you specify that are outside the range of dates that it is currently displaying.
 
 ## Application
 

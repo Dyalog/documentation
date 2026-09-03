@@ -32,7 +32,7 @@ The result is a nested vector with one element per event name. Each element of t
 └∊───────────────────────────────────────────────────┘
 ```
 
-Note that if the event does not produce a result, the data type of the result is reported as `'VT_VOID'`.
+If the event does not produce a result, the data type of the result is reported as `'VT_VOID'`.
 
 ## Application
 

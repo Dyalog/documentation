@@ -7,7 +7,7 @@ This object loads a Windows font into memory ready for use by another object.
 The characteristics of the font are specified by its properties as follows :
 
 |---|---|
-|[PName](../properties/pname.md)|A character vector containing the name of the font face.       The default is `'System'` . Note that       case is ignored when you specify the name, although it will be returned       correctly by [`⎕WG`](../../../language-reference-guide/system-functions/wg) .|
+|[PName](../properties/pname.md)|A character vector containing the name of the font face.       The default is `'System'`. Case is ignored when you specify the name, although it is returned correctly by [`⎕WG`](../../../language-reference-guide/system-functions/wg).|
 |[Size](../properties/size.md)|An integer that specifies the character height of the font in pixels.|
 |[Fixed](../properties/fixed.md)|A Boolean value that specifies whether the font is fixed-width (1) or       proportional (0).|
 |[Italic](../properties/italic.md)|A Boolean value that specifies whether the font is italicised (1) or not       (0).|

@@ -2,7 +2,7 @@
 
 This property determines the manner in which text is justified within the object. It is a character vector that may take the value `'Left'` (the default), `'Centre'` or `'Right'`. The keyword `'Centre'` may also be spelled `'Center'`.
 
-When applied to an [Edit](../objects/edit.md) object with [Style](style.md) `'Multi'`, a value of `'Centre'` or `'Right'` forces word-wrapping and disables horizontal scrolling. Note that Justify only applies to a multi-line edit field. If you specify a value for Justify in a 1-line edit field ([Style](style.md) `'Single'`), it will be ignored.
+When applied to an [Edit](../objects/edit.md) object with [Style](style.md) `'Multi'`, a value of `'Centre'` or `'Right'` forces word-wrapping and disables horizontal scrolling. Justify only applies to a multi-line edit field. If you specify a value for Justify in a 1-line edit field ([Style](style.md) `'Single'`), it will be ignored.
 
 For a [TabControl](../objects/tabcontrol.md), Justify may be `'Right'` (which is the default) or `'None'` or empty.
 

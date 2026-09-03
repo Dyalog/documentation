@@ -20,7 +20,7 @@ The result is a simple character vector or a vector of character vectors.
  16  2G
 ```
 
-Note that you may use GetEnvironment to obtain the values of your own arbitrary parameters given on the APL command line or specified as environment variables.
+You can use GetEnvironment to obtain the values of your own arbitrary parameters given on the APL command line or specified as environment variables.
 
 GetEnvironment is not supported by DYALOG.DLL because it does not use parameters.
 

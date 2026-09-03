@@ -4,7 +4,7 @@ If enabled, this event is reported when an instance of an [ActiveXControl](../ob
 
 An ActiveXControl also generates a [Create](./create.md) event, which occurs *after* the PreCreate event at the point when the host application requires the instance to appear visually.
 
-Note that at the time that PreCreate is generated, the [ActiveXControl](../objects/activexcontrol.md) does not have a window.
+At the time that PreCreate is generated, the [ActiveXControl](../objects/activexcontrol.md) does not have a window.
 
 This event is reported for information alone. You may not disable or nullify the event by setting the action code for the event to `¯1` or by returning 0 from a callback function.
 

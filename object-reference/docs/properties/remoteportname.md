@@ -6,7 +6,7 @@ RemotePortName may only be specified by a client [TCPSocket](../objects/tcpsocke
 
 When the specified port name has been resolved to a port number, the [TCPSocket](../objects/tcpsocket.md) will generate a [TCPGotPort](../methodorevents/tcpgotport.md) event and update the value of [RemotePort](remoteport.md) accordingly.
 
-Note that you may use *either* [RemotePort ](remoteport.md)*or* RemotePortName to identify the remote service. If you know the port number, it is normally quicker to specify [RemotePort](remoteport.md). However unless it is a *well known port number*, the use of a port name is generally more flexible. If you specify both properties, the value of RemotePortName will be ignored.
+You can use *either* [RemotePort](remoteport.md) *or* RemotePortName to identify the remote service. If you know the port number, it is normally quicker to specify [RemotePort](remoteport.md). However unless it is a *well known port number*, the use of a port name is generally more flexible. If you specify both properties, the value of RemotePortName will be ignored.
 
 For a server [TCPSocket](../objects/tcpsocket.md), you may not specify RemotePortName and `⎕WG` returns an empty character vector.
 

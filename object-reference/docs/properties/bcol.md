@@ -36,7 +36,7 @@ If BCol contains a 3-element vector, it specifies the intensity of the red,
 green and blue components of the colour as values in the range 0-255. For
 example, (255 0 0) is red and (255 255 0) is yellow.
 
-Note that the colour realised depends upon the capabilities of the display
+The colour realised depends upon the capabilities of the display
 adapter and driver, and the current Windows colour map.
 
 For a [Button](../objects/button.md), BCol is only effective if the

@@ -21,7 +21,7 @@ For example, the InchesToPoint method exported by *Excel.Application* takes a si
       EX.SetMethodInfo 'InchesToPoints' methodinfo
 ```
 
-Note that the structure of variable `methodinfo` is identical to the result of the GetMethodInfo method.
+The structure of variable `methodinfo` is identical to the result of the GetMethodInfo method.
 ```apl
       DISPLAY methodinfo
 ┌→───────────────────────────────────┐

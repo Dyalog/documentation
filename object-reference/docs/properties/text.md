@@ -6,7 +6,7 @@ In a [ButtonEdit](../objects/buttonedit.md), [Combo](../objects/combo.md), [Stat
 
 In a [RichEdit](../objects/richedit.md), a multi-line [Edit](../objects/edit.md) field or in a [MsgBox](../objects/msgbox.md), the value of Text may also be a simple matrix, or a vector of vectors. If so, "new-line" characters are appended to each row of the matrix, or to each vector in a vector of vectors, before being displayed. The user may insert or add a "new-line" character in a multi-line [Edit](../objects/edit.md) by pressing Ctrl-Enter (Enter itself is used to press [Button](../objects/button.md)s).
 
-Note that if word-wrapping is in effect in a multi-line [Edit](../objects/edit.md) object, the structure of Text does not correspond to the lines displayed.
+If word-wrapping is in effect in a multi-line [Edit](../objects/edit.md) object, the structure of Text does not correspond to the lines displayed.
 
 In a [Text](../objects/text.md) object, the value of the Text property may be a simple scalar, an enclosed vector or matrix, a simple vector, a simple matrix, or a vector of enclosed vectors or matrices.
 

@@ -16,7 +16,7 @@ The event message reported as the result of [`⎕DQ`](../../../language-referenc
 
 The value of Scroll Type is 0 (drag), 1 or `¯1` (small change) or 2 or `¯2` (large change). The sign indicates the direction.
 
-The value of Position is the new (requested) position of the thumb. Notice however that the event is generated **before** the thumb is actually moved. If your callback function returns a scalar 0, the position of the thumb will remain unaltered.
+The value of Position is the new (requested) position of the thumb. However, the event is generated **before** the thumb is actually moved. If your callback function returns a scalar 0, the position of the thumb will remain unaltered.
 
 ## Application
 

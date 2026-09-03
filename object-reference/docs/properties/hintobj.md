@@ -6,7 +6,7 @@ The following types of object can therefore be used to display Hints: [Button](.
 
 When the user moves the mouse pointer away from the object, the [Caption](caption.md) or [Text](text.md) property of the object specified by HintObj is reset to an empty vector.
 
-Note that if HintObj is empty, its value is inherited from its parent. Thus setting HintObj on a [Form](../objects/form.md) defines the default location for displaying [Hint](hint.md)s for all the controls in that [Form](../objects/form.md). Setting HintObj on [Root](../objects/root.md) defines the default location for hints for the entire application.
+If HintObj is empty, its value is inherited from its parent. Thus setting HintObj on a [Form](../objects/form.md) defines the default location for displaying [Hint](hint.md)s for all the controls in that [Form](../objects/form.md). Setting HintObj on [Root](../objects/root.md) defines the default location for hints for the entire application.
 
 ## Application
 

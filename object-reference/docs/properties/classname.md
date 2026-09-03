@@ -2,7 +2,7 @@
 
 For an [OLEClient](../objects/oleclient.md), the ClassName property specifies the name of the OLE object to which an [OLEClient](../objects/oleclient.md) object named by the left argument of `⎕WC` is to be connected.
 Similarly, for a [NetControl](../objects/netcontrol.md) the ClassName property specifies the name of the .NET class to be instantiated.
-Note that ClassName is mandatory for `⎕WC` and may not subsequently be changed using `⎕WS`.
+ClassName is mandatory for `⎕WC` and cannot subsequently be changed using `⎕WS`.
 
 For an [ActiveXControl](../objects/activexcontrol.md) or [OLEServer](../objects/oleserver.md), ClassName specifies the external name with which the object is registered, and by which it is referenced by other applications.
 

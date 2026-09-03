@@ -16,9 +16,8 @@ The result is a character vector.
 "C:\Program Files\Dyalog\Dyalog APL-64 13.2 Unicode\dyalog.exe"
 ```
 
-## Note
-
-GetCommandLine only works on Windows, and its use is deprecated in favour of [GetCommandLineArgs](getcommandlineargs.md), which works on all platforms.
+!!! Legacy "Legacy"
+    GetCommandLine only works on Microsoft Windows, and its use is deprecated in favour of [GetCommandLineArgs](getcommandlineargs.md), which works on all platforms.
 
 ## Application
 

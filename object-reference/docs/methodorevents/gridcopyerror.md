@@ -12,7 +12,7 @@ The event message reported as the result of [`⎕DQ`](../../../language-referenc
 |`[5]`|Start |A 2-column integer matrix whose rows identify the address of the first cell (row, column) of each of the selected blocks of cells.|
 |`[6]`|End   |A 2-column integer matrix whose rows identify the address of the last cell (row, column) of each of the selected blocks of cells. |
 
-Note that the values of Start and End are sensitive to the index origin, `⎕IO`.
+The values of Start and End are sensitive to the index origin, `⎕IO`.
 
 ## Application
 

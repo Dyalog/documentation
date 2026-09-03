@@ -1,6 +1,6 @@
 # <span>AddCol</span> <span>Event 153</span>
 
-If enabled, this event is reported by the [Grid](../objects/grid.md) object if the user presses the Cursor Right key, and the current cell ([CurCell](../properties/curcell.md)) is within the last column on the [Grid](../objects/grid.md). The default action is to append a new column to the contents of the [Grid](../objects/grid.md). If you attach a callback function to this event and have it return a value of 0, a new column will not be appended to the [Grid](../objects/grid.md). Note that the event will not be generated unless the second element of the [AutoExpand](../properties/autoexpand.md) property is set to 1.
+If enabled, this event is reported by the [Grid](../objects/grid.md) object if the user presses the Cursor Right key, and the current cell ([CurCell](../properties/curcell.md)) is within the last column on the [Grid](../objects/grid.md). The default action is to append a new column to the contents of the [Grid](../objects/grid.md). If you attach a callback function to this event and have it return a value of 0, a new column will not be appended to the [Grid](../objects/grid.md). The event is not generated unless the second element of the [AutoExpand](../properties/autoexpand.md) property is set to 1.
 
 The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 3-element vector as follows :
 

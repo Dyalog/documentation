@@ -31,7 +31,7 @@ horizontally or vertically according to the [Align](../properties/align.md) prop
 
 The [HScroll](../properties/hscroll.md) and [VScroll](../properties/vscroll.md) properties determine what happens when the end of the TabBar is reached. If [HScroll](../properties/hscroll.md) or [VScroll](../properties/vscroll.md) is 0 (the default) a [TabBtn](tabbtn.md) that would otherwise extend beyond the TabBar is instead positioned immediately
 above, below or alongside the first [TabBtn](tabbtn.md) in
-the TabBar, thereby starting a new row or column. Note however that the TabBar
+the TabBar, thereby starting a new row or column. However, the TabBar
 is not automatically resized vertically to accommodate a second row or column.
 If you want a multi-flight TabBar you have to set its height or width
 explicitly. If [HScroll](../properties/hscroll.md) or [VScroll](../properties/vscroll.md) is `¯1` or `¯2`,

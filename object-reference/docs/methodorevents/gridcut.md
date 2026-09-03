@@ -11,7 +11,7 @@ The event message reported as the result of [`⎕DQ`](../../../language-referenc
 |`[4]`|End|2-element integer vector or matrix containing the row, column address(es) of the bottom right cell in the selected block|
 |`[5]`|Data|2-element nested vector. The first element is a matrix containing the values of the selected block(s) of cells. This is the data that will be copied to the clipboard. The second element is a Boolean matrix containing the values of the [CellSet](../properties/cellset.md) property for the selected block(s) of cells.|
 
-Note that the values of Start and End are sensitive to the index origin, `⎕IO`.
+The values of Start and End are sensitive to the index origin, `⎕IO`.
 
 If more than one block of cells is selected, Start and End are matrices whose rows identify the start and end cells of each of the selected blocks, and Data is the contents of the selected blocks catenated along the appropriate dimension according to their relative positions in the Grid.
 

@@ -4,9 +4,9 @@ This property is used to give a 3-dimensional appearance to screen objects.
 
 This is achieved by drawing the object with a grey or white background colour
 and by drawing a border around it using various combinations of black, white and
-dark grey lines. Note that this border is drawn *outside* a control but *inside* a [Form](../objects/form.md) or [SubForm](../objects/subform.md).
+dark grey lines. This border is drawn *outside* a control but *inside* a [Form](../objects/form.md) or [SubForm](../objects/subform.md).
 
-**Note that EdgeStyle is not honoured for objects which have a natural
+**EdgeStyle is not honoured for objects which have a natural
 		built-in 3-dimensional appearance.**
 
 The value of the EdgeStyle property is a character vector chosen from the
@@ -29,7 +29,7 @@ drawn without 3-dimensional effects of any kind and the value of their EdgeStyle
 property is ignored. If EdgeStyle is `'Default'`,
 all controls are drawn using their default EdgeStyle properties.
 
-Note that [MsgBox](../objects/msgbox.md), [FileBox](../objects/filebox.md) and the set-up dialog box associated with the [Printer](../objects/printer.md) object are all drawn with 3-dimensional effects regardless of the value of
+[MsgBox](../objects/msgbox.md), [FileBox](../objects/filebox.md) and the set-up dialog box associated with the [Printer](../objects/printer.md) object are all drawn with 3-dimensional effects regardless of the value of
 EdgeStyle on [Root](../objects/root.md). These objects do not have
 their own EdgeStyle properties.
 

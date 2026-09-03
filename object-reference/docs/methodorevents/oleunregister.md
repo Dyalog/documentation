@@ -6,7 +6,7 @@ The OLEUnregister method is niladic.
 
 This method removes all traces of the object from the Windows registry and erases its Type Library file.
 
-Note that the name of the object removed from the registry is the name of the [OLEServer](../objects/oleserver.md) object prefixed by the string "dyalog."
+The name of the object removed from the registry is the name of the [OLEServer](../objects/oleserver.md) object prefixed by the string "dyalog."
 
 ## Application
 

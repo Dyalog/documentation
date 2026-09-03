@@ -10,7 +10,7 @@ If an attached callback returns no result or returns 1, the Change property is r
 
 If an attached callback function returns 0, the Changed property is not altered and remains set to 1. The object will therefore generate another Change event when the user next tries to leave it, even if the text and/or Thumb are not altered this time.
 
-Note that the object generates a Change event when it loses the focus *only* if the value of the Changed property is 1 at the time.
+The object generates a Change event when it loses the focus *only* if the value of the Changed property is 1 at the time.
 
 ## Application
 

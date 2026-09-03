@@ -10,7 +10,7 @@ The argument to TCPSendPicture is a 1 or 2-element array as follows:
 
 If *Picture format* is omitted, the default is GIF format.
 
-Note that the [Style](../properties/style.md) of the [TCPSocket](../objects/tcpsocket.md) object must be set to `'Raw'` before you execute the TCPSendPicture method.
+The [Style](../properties/style.md) of the [TCPSocket](../objects/tcpsocket.md) object must be set to `'Raw'` before you execute the TCPSendPicture method.
 
 The ([shy](../../../programming-reference-guide/introduction/results#shy-results)) result of the method is an integer that reports the number of bytes that were transmitted.
 
@@ -20,7 +20,7 @@ The ([shy](../../../programming-reference-guide/introduction/results#shy-results
 4930
 ```
 
-!!! note
+!!! Info "Information"
     Although PNG is recognised as the latest graphics standard for displaying pictures, not all Web browsers support it.
 
 See also: [MakeGIF](./makegif.md), [MakePNG](./makepng.md)

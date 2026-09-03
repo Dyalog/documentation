@@ -10,7 +10,7 @@ To do so, [ImageListObj](../properties/imagelistobj.md) specifies the name of an
 
 The [Indents](../properties/indents.md) property specifies the amount by which each of the items are indented in units of 10 pixels
 
-The appearance of the items is additionally controlled by the [EditImage](../properties/editimage.md) and [EditImageIndent](../properties/editimageindent.md) properties. These are Boolean and their effect is summarised in the table below. Notice that Images are displayed only if both these properties are set to 1 (which is the default).
+The appearance of the items is additionally controlled by the [EditImage](../properties/editimage.md) and [EditImageIndent](../properties/editimageindent.md) properties. These are Boolean and their effect is summarised in the table below. Images are displayed only if both these properties are set to 1 (which is the default).
 
 There are certain restrictions that apply to a ComboEx object with Style `'Simple'`, namely:
 

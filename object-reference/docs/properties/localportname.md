@@ -2,7 +2,7 @@
 
 The LocalPortName property is a character vector that specifies the port name of the local service that you wish to offer as a server.
 
-Note that you may use *either*[ LocalPort ](localport.md)*or* LocalPortName to identify the service. The use of LocalPortName is slightly slower but it avoids hard-coding the port number in your program and is generally more flexible. If you specify both properties, the value of LocalPortName will be ignored.
+You can use *either* [LocalPort](localport.md) *or* LocalPortName to identify the service. The use of LocalPortName is slightly slower but it avoids hard-coding the port number in your program and is generally more flexible. If you specify both properties, the value of LocalPortName will be ignored.
 
 LocalPortName may be specified only by the process that is initiating the connection (the server) and must be set by the `⎕WC` statement that creates the [TCPSocket](../objects/tcpsocket.md). LocalPortName may not subsequently be changed using `⎕WS`.
 

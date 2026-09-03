@@ -2,9 +2,8 @@
 
 This property is used to specify colours and spacing elements for a [ListView](../objects/listview.md) that is displaying its Items in groupings (see [ItemGroups](itemgroups.md)).
 
-**Note that this feature only applies if Native Look and Feel 
-
- is enabled.**
+!!! Info "Information"
+    This feature only applies if [Native Look and Feel](../miscellaneous/windows-xp-look-and-feel.md) is enabled.
 
 ItemGroupMetrics is a 3-item nested vector as follows:
 

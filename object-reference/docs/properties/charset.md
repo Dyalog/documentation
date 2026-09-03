@@ -6,7 +6,7 @@ CharSet is an integer that specifies the character encoding of the [Font](../obj
 its value typically has no effect.**
 
 The following table illustrates some of the character set encodings supported
-by Windows. Note that this set may vary according to the edition of Windows that
+by Windows. This set can vary according to the edition of Windows that
 is installed.
 
 |Language        |CharSet|
@@ -53,8 +53,7 @@ according to the value of CharSet.
       'F.E3'⎕WC'Edit'STRING(70 10)(⍬ 80)('Font' 'F.F3')('Translate' 'ANSI')
 ```
 
-!!! note
-    Setting Translate to 'ANSI' means that characters entered into the Edit fields using a corresponding  National Language keyboard (Greek and Arabic) will appear in that language as intended.
+Setting Translate to `'ANSI'` means that characters entered into the Edit fields using a corresponding National Language keyboard (Greek and Arabic) appear in that language as intended.
 
 ## Application
 

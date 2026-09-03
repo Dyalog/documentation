@@ -83,7 +83,7 @@ tab is selected. Setting [ScrollOpposite](../properties/scrollopposite.md) to 1 
 
 [Example 10](../examples/tabcontrol-example-10.md) illustrates a
 TabControl with [ScrollOpposite](../properties/scrollopposite.md) set
-to 1, after the user has clicked *Third Tab*. Notice that, in this example,
+to 1, after the user has clicked *Third Tab*. In this example,
 the SubForms have been created as children of the TabControl. This is necessary
 to ensure that they are managed correctly in this case.
 

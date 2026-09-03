@@ -43,7 +43,7 @@ From this array, you can rebuild the imported picture component by component, ei
       TEST.⎕WC/¨BIRD
 ```
 
-Notice that the co-ordinates of each of the graphical components are typically integers in a co-ordinate system that extends from 0 to 1024 in the y-direction and 0 to 2048 in the x-direction. The simplest way to draw the picture is therefore to set up the same co-ordinate system on a [Form](../objects/form.md) as in the example above.
+The co-ordinates of each of the graphical components are typically integers in a co-ordinate system that extends from 0 to 1024 in the y-direction and 0 to 2048 in the x-direction. The simplest way to draw the picture is therefore to set up the same co-ordinate system on a [Form](../objects/form.md) as in the example above.
 
 ## Application
 

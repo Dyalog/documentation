@@ -2,7 +2,7 @@
 
 This property specifies item groupings for a [ListView](../objects/listview.md) object.
 
-!!! note
+!!! Info "Information"
     This feature only applies if [Native Look and Feel](../miscellaneous/windows-xp-look-and-feel.md) is enabled.
 
 ItemGroups is a nested scalar or nested vector each of whose elements specifies a grouping. Each grouping is a 5-element vector as follows:
@@ -14,7 +14,7 @@ ItemGroups is a nested scalar or nested vector each of whose elements specifies 
 |`[4]`|State            |Integer (not yet implemented)                                                                          |
 |`[5]`|Footer text      |character vector (not yet implemented)                                                                 |
 
-Note that State and Footer text are not yet implemented by Windows.
+State and Footer text are not yet implemented by Windows.
 
 For example, the following expressions executed in the WTUTOR95 workspace will result in the display shown below.
 ```apl

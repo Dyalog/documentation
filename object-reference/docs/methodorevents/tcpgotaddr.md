@@ -10,7 +10,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |`[1]`|Object|ref or character vector|
 |`[2]`|Event |`'TCPGotAddr'` or 377  |
 
-Note that the IP address is not reported in the event message but may be obtained from [RemoteAddr](../properties/remoteaddr.md) or [LocalAddr](../properties/localaddr.md) as appropriate.
+The IP address is not reported in the event message but can be obtained from [RemoteAddr](../properties/remoteaddr.md) or [LocalAddr](../properties/localaddr.md) as appropriate.
 
 ## Application
 
