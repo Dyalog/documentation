@@ -4,7 +4,7 @@ The Session popup menu (`⎕SE.popup`) is displayed by clicking the right mouse 
 
 ![](img/session-popup-menu.png)
 
-If the mouse pointer is over a visible object name, the popup menu allows you to edit, print, delete it or view its properties. Note that the name of the pop-up menu is specified by the Popup property of `⎕SE`.
+If the mouse pointer is over a visible object name, the popup menu allows you to edit, print, delete it or view its properties. The name of the pop-up menu is specified by the Popup property of `⎕SE`.
 
 Table: Session popup menu operations
 
@@ -12,7 +12,7 @@ Table: Session popup menu operations
 |---|---|---|
 |Edit|`[Edit]`|Edits the current object|
 |Chart Wizard|`⎕SE.Dyalog.Chart.DoChart`|Opens Chart Wizard on current object|
-|Print|`[ObjPrint]`|Prints the current object. Note that if the object is being edited, the version of the object displayed in the edit window is printed.|
+|Print|`[ObjPrint]`|Prints the current object. If the object is being edited, the version of the object displayed in the edit window is printed.|
 |Delete|`[ObjDelete]`|Erases the current object|
 |Properties|`[GUIHelp]`|Displays the *Object Properties* dialog box for the current object|
 |Help|`[Help]`|Displays the help topic associated with the current object or the APL symbol under the cursor|

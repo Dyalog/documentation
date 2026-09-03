@@ -16,7 +16,7 @@ The effect of naked trace is to open the Tracer and to position the cursor on th
 
 ## Automatic Trace
 
-The third way to invoke the Tracer is to have the system do it automatically for you whenever an error occurs. This is achieved by setting the Show trace stack on error option in the *Trace/Edit* tab of the *Configuration* dialog (**Trace_on_error** parameter). When an error occurs, the system will automatically deploy the Tracer. Note that this means that when an error occurs, the Trace window will then receive the input focus and not the Session window.
+The third way to invoke the Tracer is to have the system do it automatically for you whenever an error occurs. This is achieved by setting the Show trace stack on error option in the *Trace/Edit* tab of the *Configuration* dialog (**Trace_on_error** parameter). When an error occurs, the system will automatically deploy the Tracer. This means that when an error occurs, the Trace window will then receive the input focus and not the Session window.
 
 ## Tracer Options
 
@@ -68,7 +68,7 @@ In the default layout, the *SIstack* window is displayed alongside the main Trac
 
 ## Trace Tools
 
-The Tracer may be controlled from the keyboard, or by using the *Trace Tools* which are arranged along the title bar of the Debugger window. Note that the button names are solely for reference purposes in the description that follows.
+The Tracer may be controlled from the keyboard, or by using the *Trace Tools* which are arranged along the title bar of the Debugger window. The button names are solely for reference purposes in the description that follows.
 
 |Button|Name|Key Code|Keystroke|Description|
 |---|---|---|---|---|
@@ -160,8 +160,7 @@ You can clear all breakpoints by pressing the above button in the Trace Tools wi
 
 *Inline Tracing* is an extension to the Tracer that allows you to step through the execution of individual primitives within expressions, examining intermediate results and arguments of sub-expressions. It enables an in-depth inspection of complex expressions typed directly into the session, and can be used in conjunction with the traditional tracing mode to skip over lines you're not interested in and step through primitive-by-primitive in complex expressions where required.
 
-!!! note
-    _Inline Tracing_ is tracing with the (approximate) granularity of primitives, though it does stop on non-primitives, such as user-defined functions.
+_Inline Tracing_ is tracing with the (approximate) granularity of primitives, though it does stop on non-primitives, such as user-defined functions.
 
 ### Getting started
 
@@ -237,7 +236,7 @@ Current Function  ┘     │ │ └  Previous Axis
          Previous Left  ┘ └  Previous Function
 ```
 
-!!! note 
+!!! Hint "Hints and Recommendations"
     Each of these options corresponds to a new pane in the Tracer. Having all panes enabled and visible can result in the interface becoming cluttered and information being hard to locate; Dyalog Ltd recommends enabling these on a case-by-case basis.
 
 #### Aspect Pane Options
