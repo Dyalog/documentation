@@ -8,7 +8,7 @@ Some tabs are present only in the Unicode edition or only in the Classic edition
 
 ![configuration dialog general tab](../img/configuration-dialog-general-tab.png)
 
-Table: Configuration dialog: General
+Table: Configuration dialog box – General tab
 
 |Label|Parameter|Description|
 |---|---|---|
@@ -27,20 +27,20 @@ Unicode Edition can optionally select your APL keyboard each time you start APL.
 
 ![configuration dialog unicode input tab](../img/configuration-dialog-unicode-input-tab.png)
 
-Table: Configuration dialog: Unicode Input
+Table: Configuration dialog box – Unicode Input tab
 
 |Label|Parameter|Description|
 |---|---|---|
 |Activate selected keyboard|[InitialKeyboardLayoutInUse](../configuration-parameters/initialkeyboardlayoutinuse.md)|If checked, the specified APL keyboard is activated on start-up|
 |Show keyboards for all Languages|[InitialKeyboardLayoutShowAll](../configuration-parameters/initialkeyboardlayoutshowall.md)|If checked, all installed keyboards are displayed. Otherwise, only Dyalog keyboards are shown|
 |Keyboard|[InitialKeyboardLayout](../configuration-parameters/initialkeyboardlayout.md)|The APL keyboard to be selected|
-|Configure Layout|&nbsp;|Displays the [Input Method Editor Properties](#input-method-editor-properties) dialog box|
+|Configure Layout|&nbsp;|Displays the [Input Method Editor Properties dialog box](#input-method-editor-properties-dialog-box)|
 
-### Input Method Editor Properties
+### Input Method Editor Properties Dialog Box
 
 ![IME properties](../img/ime-properties.png)
 
-Table: Dyalog Input Method Editor Properties
+Table: Configuration dialog box – Unicode Input tab (Input Method Editor Properties dialog box)
 
 |Label|Parameter|Description|
 |---|---|---|
@@ -54,18 +54,18 @@ Table: Dyalog Input Method Editor Properties
 
 ![configuration dialog input tab](../img/configuration-dialog-input-tab.png)
 
-Table: Configuration dialog: Keyboard
+Table: Configuration dialog box – Input tab
 
 |Label                  |Parameter                                           |Description|
 |-----------------------|----------------------------------------------------|------------------------------------------------------------------|
 |Input table search path|[APLKeys](../configuration-parameters/aplkeys.md)|A list of directories to be searched for the specified input table|
-|Input table file       |[APLK](../configuration-parameters/aplk.md)      |The name of the input table file (.DIN)|
+|Input table file       |[APLK](../configuration-parameters/aplk.md)      |The name of the input table file (**.DIN**)|
 
 ## Output Tab (Classic)
 
 ![configuration dialog output tab](../img/configuration-dialog-output-tab.png)
 
-Table: Configuration dialog: Output
+Table: Configuration dialog box – Output tab
 
 |Label                   |Parameter                                             |Description|
 |------------------------|------------------------------------------------------|-------------------------------------------------------------------|
@@ -80,11 +80,25 @@ To alter the keystroke associated with a particular action, simply select the ac
 
 Note that clicking on the column headings will sort on that column; shift and mouse click will sort in reverse order.
 
+## Saved Responses Tab
+
+![configuration dialog saved responses tab](../img/configuration-dialog-saved-responses-tab.png)
+
+The **Saved Responses** tab of the **Configuration** dialog is used to remove preferences that the user has previously established.
+
+In this example, the user has at some point chosen to save a text file with a `.h` extension as text in the workspace and, by checking the option **Save this response for all files with a ".h" extension**, saved this as a preference for all such text files. Similarly, the user has checked the option **Do not show this message again** when responding to the warning dialog **Saving as text will ...**.
+
+If the user wants to reverse these decisions, even temporarily, it is necessary to select the corresponding option /preference name(s) and click *Delete*. The names are intended to be self-explanatory and are not listed here.
+
+![saved responses1](../img/saved-responses1.png)
+
+![saved responses2](../img/saved-responses2.png)
+
 ## Workspace Tab
 
 ![configuration dialog workspace tab](../img/configuration-dialog-workspace-tab.png)
 
-Table: Configuration dialog: Workspace
+Table: Configuration dialog box – Workspace tab
 
 |Label                 |Parameter                                         |Description|
 |----------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------|
@@ -95,7 +109,7 @@ Table: Configuration dialog: Workspace
 
 ![configuration dialog help dmx tab](../img/configuration-dialog-help-dmx-tab.png)
 
-Table: Configuration dialog: Help/DMX
+Table: Configuration dialog box – Help/DMX tab
 
 |Label|Parameter|Description|
 |---|---|---|
@@ -107,7 +121,7 @@ Table: Configuration dialog: Help/DMX
 
 ![configuration dialog windows tab](../img/configuration-dialog-windows-tab.png)
 
-Table: Configuration dialog: Windows (Edit Windows)
+Table: Configuration dialog box – Windows tab (Edit Windows panel)
 
 |Label   |Parameter                                                       |Description|
 |--------|----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
@@ -118,7 +132,7 @@ Table: Configuration dialog: Windows (Edit Windows)
 |X Offset|[Edit_Offset_X](../configuration-parameters/edit-offset-x.md)|The initial horizontal position in characters of the second and subsequent edit windows relative to the previous one|
 |Y Offset|[Edit_Offset_Y](../configuration-parameters/edit-offset-y.md)|The initial vertical position in characters of the second and subsequent edit windows relative to the previous one|
 
-Table: Configuration dialog: Windows (Trace Windows)
+Table: Configuration dialog box – Windows tab (Trace Windows panel)
 
 |Label   |Parameter                                                         |Description|
 |--------|------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
@@ -127,18 +141,18 @@ Table: Configuration dialog: Windows (Trace Windows)
 |X Offset|[Trace_Offset_X](../configuration-parameters/trace-offset-x.md)|The initial horizontal position in characters of the second and subsequent trace windows relative to the previous one|
 |Y Offset|[Trace_Offset_Y](../configuration-parameters/trace-offset-y.md)|The initial vertical position in characters of the second and subsequent trace windows relative to the previous one|
 
-Table: Configuration dialog: Windows (QuadSM Window)
+Table: Configuration dialog box – Windows tab (QuadSM Window panel)
 
 |Label |Parameter                                           |Description|
 |------|----------------------------------------------------|--------------------------------------------|
-|Width |[SM_Cols](../configuration-parameters/sm-cols.md)|The width of the [`⎕SM`](../../../language-reference-guide/system-functions/sm) windows|
-|Height|[SM_Rows](../configuration-parameters/sm-rows.md)|The height of the `⎕SM` windows|
+|Width |[SM_Cols](../configuration-parameters/sm-cols.md)|The width of the [`⎕SM`](../../../language-reference-guide/system-functions/sm) window|
+|Height|[SM_Rows](../configuration-parameters/sm-rows.md)|The height of the `⎕SM` window|
 
 ## Session Tab
 
 ![configuration dialog session tab](../img/configuration-dialog-session-tab.png)
 
-Table: Configuration dialog: Session
+Table: Configuration dialog box – Session tab
 
 |Label|Parameter|Description|
 |---|---|---|
@@ -165,30 +179,30 @@ Note: The size-related values in the Session tab are specified as an integer val
 
 ![configuration dialog trace edit tab](../img/configuration-dialog-trace-edit-tab.png)
 
-Table: Configuration dialog: Trace/Edit
+Table: Configuration dialog box – Trace/Edit tab
 
 |Label|Parameter|Description|
 |---|---|---|
 |Allow floating edit windows|[DockableEditWindows](../configuration-parameters/dockableeditwindows.md)|Allows individual Edit windows to be undocked from (and re-docked in) the main Edit window|
-|Show status bars|[ StatusOnEdit](../configuration-parameters/statusonedit.md)|Specifies whether or not status bars are displayed along the bottom of individual Edit windows|
-|Show tool bars|[ ToolBarsOnEdit](../configuration-parameters/toolbarsonedit.md)|Specifies whether or not tool bars are displayed along the top of individual Edit windows|
-|Show trace stack on error|[Trace_On_Error](../configuration-parameters/trace-on-error.md)|Specifies whether or not the Tracer is automatically invoked when an error or stop occurs in a defined function|
-|Allow search to wrap|[ WrapSearch](../configuration-parameters/wrapsearch.md)|Specifies whether or not Search/Replace in the Editor stops at the top or bottom of the text, or continues from the start or end as appropriate|
-|Show message box if text wraps|[ WrapSearchMsgBox](../configuration-parameters/wrapsearchmsgbox.md)|Specifies whether or not a message box is displayed to inform the user when the search wraps|
+|Show status bars|[StatusOnEdit](../configuration-parameters/statusonedit.md)|Specifies whether status bars are displayed along the bottom of individual Edit windows|
+|Show tool bars|[ToolBarsOnEdit](../configuration-parameters/toolbarsonedit.md)|Specifies whether tool bars are displayed along the top of individual Edit windows|
+|Show trace stack on error|[Trace_On_Error](../configuration-parameters/trace-on-error.md)|Specifies whether the Tracer is automatically invoked when an error or stop occurs in a defined function|
+|Allow search to wrap|[WrapSearch](../configuration-parameters/wrapsearch.md)|Specifies whether Search/Replace in the Editor stops at the top or bottom of the text, or continues from the start or end as appropriate|
+|Show message box if text wraps|[WrapSearchMsgBox](../configuration-parameters/wrapsearchmsgbox.md)|Specifies whether a message box is displayed to inform the user when the search wraps|
 |Warn if trace stack bigger than|[Trace_Level_Warn](../configuration-parameters/trace-level-warn.md)|Specifies the maximum stack size for automatic deployment of the Tracer|
-|Confirm edit window close on Close|[Confirm_Close](../configuration-parameters/confirm-close.md)|Specifies whether or not a confirmation dialog is displayed if the user alters the contents of an edit window, then closes it without saving|
-|Confirm edit window close on Edit (and Fix)|[Confirm_Fix](../configuration-parameters/confirm-fix.md)|Specifies whether or not a confirmation dialog is displayed if the user alters the contents of an edit window, then saves it using **Fix** or **Exit**|
-|Confirm edit window close on Abort|[Confirm_Abort](../configuration-parameters/confirm-abort.md)|Specifies whether or not a confirmation dialog is displayed if the user alters the contents of an edit window, then aborts using|
-|Autoformat functions|[ AutoFormat](../configuration-parameters/autoformat.md)|Selects automatic indentation for Control Structures when function is opened for editing|
-|Autoindent|[ AutoIndent](../configuration-parameters/autoindent.md)|Selects semi-automatic indentation for Control Structures while editing|
-|Double-click to Edit|[ DoubleClickEdit](../configuration-parameters/doubleclickedit.md)|Specifies whether or not double-clicking  over a name invokes the editor|
-|Skip blank lines when tracing|[ SkipLines](../configuration-parameters/skiplines.md)|If enabled, this causes the Tracer to automatically skip blank lines|
-|Skip comment lines when tracing|[ SkipLines](../configuration-parameters/skiplines.md)|If enabled, this causes the Tracer to automatically skip comment lines|
-|Skip locals lines when tracing|[ SkipLines](../configuration-parameters/skiplines.md)|If enabled, this causes the Tracer to automatically skip locals lines|
+|Confirm edit window close on Close|[Confirm_Close](../configuration-parameters/confirm-close.md)|Specifies whether a confirmation dialog box is displayed if the user alters the contents of an edit window then closes it without saving|
+|Confirm edit window close on Edit (and Fix)|[Confirm_Fix](../configuration-parameters/confirm-fix.md)|Specifies whether a confirmation dialog box is displayed if the user alters the contents of an edit window then saves it using **Fix** or **Exit**|
+|Confirm edit window close on Abort|[Confirm_Abort](../configuration-parameters/confirm-abort.md)|Specifies whether a confirmation dialog box is displayed if the user alters the contents of an edit window then aborts the edit session|
+|Autoformat functions|[AutoFormat](../configuration-parameters/autoformat.md)|Selects automatic indentation for control structures when function is opened for editing|
+|Autoindent|[AutoIndent](../configuration-parameters/autoindent.md)|Selects semi-automatic indentation for control structures while editing|
+|Double-click to Edit|[DoubleClickEdit](../configuration-parameters/doubleclickedit.md)|Specifies whether double-clicking  over a name invokes the editor|
+|Skip blank lines when tracing|[SkipLines](../configuration-parameters/skiplines.md)|If enabled, this causes the Tracer to automatically skip blank lines|
+|Skip comment lines when tracing|[SkipLines](../configuration-parameters/skiplines.md)|If enabled, this causes the Tracer to automatically skip comment lines|
+|Skip locals lines when tracing|[SkipLines](../configuration-parameters/skiplines.md)|If enabled, this causes the Tracer to automatically skip locals lines|
 |Limit tracer display to current function in script|[AddClassHeaders](../configuration-parameters/addclassheaders.md)|When Tracing the execution of a function in a script, the Tracer displays either just the first line of the script and the function in question (option enabled), or the entire script (option disabled)|
-|Paste text as Unicode (Classic Edition only)|[ UnicodeToClipboard](../configuration-parameters/unicodetoclipboard.md)|Specifies whether or not text transferred to and from the Windows clipboard is to be treated as Unicode|
-|Tab stops every|[ TabStops](../configuration-parameters/tabstops.md)|The number of spaces inserted by pressing Tab in an edit window|
-|Exit and fix ...|[ InitFullScriptSusp](../configuration-parameters/initfullscriptsusp.md)|See [Fixing Scripts](#fixing-scripts)|
+|Paste text as Unicode (Classic Edition only)|[UnicodeToClipboard](../configuration-parameters/unicodetoclipboard.md)|Specifies whether text transferred to and from the Windows clipboard is to be treated as Unicode|
+|Tab stops every|[TabStops](../configuration-parameters/tabstops.md)|The number of spaces inserted by pressing <kbd>Tab</kbd> in an edit window|
+|Exit and fix ...|[InitFullScriptSusp](../configuration-parameters/initfullscriptsusp.md)|See [Fixing Scripts](#fixing-scripts)|
 |If not ...|[InitFullScriptNormal](../configuration-parameters/initfullscriptnormal.md)|See [Fixing Scripts](#fixing-scripts)|
 
 ### Fixing Scripts
@@ -210,18 +224,18 @@ The label for the corresponding items on the Editor File menu (see  Editor (The 
 
 Note: To enter values in the **OK Key** and **Cancel Key** fields, click on the field with the mouse and then press the desired keystroke.
 
-Table: Configuration dialog: Auto Complete
+Table: Configuration dialog box – Auto Complete tab
 
 |Label|Parameter|Description|
 |---|---|---|
-|Use Auto Complete|[Enabled](../configuration-parameters/autocomplete/enabled.md)|Specifies whether or not Auto Completion is enabled|
+|Use Auto Complete|[Enabled](../configuration-parameters/autocomplete/enabled.md)|Specifies whether Auto Completion is enabled|
 |Make suggestions after|[PrefixSize](../configuration-parameters/autocomplete/prefixsize.md)|Specifies the number of characters you must enter before Auto Completion begins to make suggestions|
 |Delay completion for|[KeyboardInputDelay](../configuration-parameters/keyboardinputdelay.md)|Specifies the delay in milliseconds before Auto Completion begins to make suggestions|
 |Suggest up to|[Rows](../configuration-parameters/autocomplete/rows.md)|Specifies the maximum number of rows (height) in the AutoComplete pop-up suggestions box|
 |Show up to|[Cols](../configuration-parameters/autocomplete/cols.md)|Specifies the maximum number of columns (width) in the AutoComplete pop-up suggestion box|
-|Keep History|[History](../configuration-parameters/autocomplete/history.md)|Specifies whether or not AutoComplete maintains a list of previous AutoCompletions|
+|Keep History|[History](../configuration-parameters/autocomplete/history.md)|Specifies whether AutoComplete maintains a list of previous AutoCompletions|
 |History Length|[HistorySize](../configuration-parameters/autocomplete/historysize.md)|Specifies the number of previous AutoCompletions that are maintained|
-|Include filenames|[ShowFiles](../configuration-parameters/autocomplete/showfiles.md)|Specifies whether or not AutoCompletion suggests directory and file names for `)LOAD`, `)COPY`, and `)DROP` system commands|
+|Include filenames|[ShowFiles](../configuration-parameters/autocomplete/showfiles.md)|Specifies whether AutoCompletion suggests directory and file names for `)LOAD`, `)COPY`, and `)DROP` system commands|
 |OK Key|[CompleteKey1](../configuration-parameters/autocomplete/completekey1.md) [CompleteKey2](../configuration-parameters/autocomplete/completekey2.md)|Specifies two possible keys that can be used to select the current option from the Auto Complete suggestion box|
 |Cancel Key|[CancelKey1](../configuration-parameters/autocomplete/cancelkey1.md) [CancelKey2](../configuration-parameters/autocomplete/cancelkey2.md)|Specifies two possible keys that can be used to cancel (hide) the Auto Complete suggestion box|
 |Common Key|[CommonKey1](../configuration-parameters/autocomplete/commonkey1.md)|Specifies the key that will auto-complete the *common prefix*|
@@ -232,12 +246,12 @@ SALT is the Simple APL Library Toolkit, a simple source code management system f
 
 ![configuration dialog salt tab](../img/configuration-dialog-salt-tab.png)
 
-Table: Configuration dialog: SALT
+Table: Configuration dialog box – SALT tab
 
 |Label|Parameter|Description|
 |---|---|---|
-|Enable Salt|AddSALT|Specifies whether or not SALT is enabled|
-|Compare command line:|CompareCMD|The command line for a third-party file comparison tool to be used to compare two versions of a file. See note|
+|Enable Salt|AddSALT|Specifies whether SALT is enabled|
+|Compare command line:|CompareCMD|The command line for a third-party file comparison tool to be used to compare two versions of a file|
 |Editor command line:|Editor|Name of the program to be used to edit script files (default "Notepad")|
 |Source folders:|SourceFolder|Sets the SALT working directory; a list of folders to be searched for source code. Include "." on a separate line to include source files from the current working directory|
 
@@ -245,9 +259,9 @@ Table: Configuration dialog: SALT
 
 ![configuration dialog user commands tab](../img/configuration-dialog-user-commands-tab.png)
 
-This page is used to specify and organise a list of folders that contain User-Command files. When you issue a User Command, these folders will be searched for the source of the command in the order in which they appear in this list.
+This page is used to specify and organise a list of folders that contain user command files. When you issue a user command, these folders will be searched for the source of the command in the order in which they appear in this list.
 
-Table: Configuration dialog: User Commands
+Table: Configuration dialog box – User Commands tab
 
 |Label         |Parameter         |Description|
 |--------------|------------------|---------------------------------------------------------------------------------------------|
@@ -259,24 +273,10 @@ Table: Configuration dialog: User Commands
 
 The **Object Syntax** tab of the **Configuration** dialog is used to set your *default preferences* for Object Syntax. Use **Options/Object Syntax** to change the settings for the current workspace.
 
-Table: Configuration dialog: Object Syntax
+Table: Configuration dialog box – Object Syntax tab
 
 |Label|Parameter|Description|
 |---|---|---|
 |Expose properties of GUI Namespaces|[Default_WX](../configuration-parameters/default-wx.md)|Specifies the value of `⎕WX` in a clear workspace|
-|Expose properties of Root|[PropertyExposeRoot](../configuration-parameters/propertyexposeroot.md)|Specifies whether or not the names of properties, methods and events of the Root object are exposed|
-|Expose properties of Session Namespace|[PropertyExposeSE](../configuration-parameters/propertyexposese.md)|Specifies whether or not the names of properties, methods and events of the Session object are exposed|
-
-## Saved ResponsesTab
-
-![configuration dialog saved responses tab](../img/configuration-dialog-saved-responses-tab.png)
-
-The **Saved Responses** tab of the **Configuration** dialog is used to remove preferences that the user has previously established.
-
-In this example, the user has at some point chosen to save a text file with a `.h` extension as text in the workspace and, by checking the option **Save this response for all files with a ".h" extension**, saved this as a preference for all such text files. Similarly, the user has checked the option **Do not show this message again** when responding to the warning dialog **Saving as text will ...**.
-
-If the user wants to reverse these decisions, even temporarily, it is necessary to select the corresponding option /preference name(s) and click *Delete*. The names are intended to be self-explanatory and are not listed here.
-
-![saved responses1](../img/saved-responses1.png)
-
-![saved responses2](../img/saved-responses2.png)
+|Expose properties of Root|[PropertyExposeRoot](../configuration-parameters/propertyexposeroot.md)|Specifies whether the names of properties, methods, and events of the Root object are exposed|
+|Expose properties of Session Namespace|[PropertyExposeSE](../configuration-parameters/propertyexposese.md)|Specifies whether the names of properties, methods, and events of the Session object are exposed|
