@@ -15,7 +15,7 @@ Coord may be set to one of the following values :
 
 By default, the value of Coord for the Root object is `'Prop'`. For all other objects, the default is `'Inherit'`. This means that the default co-ordinate system is a proportional one.
 
-You can change Coord from one value to another as you require. It only affects the units in which Size and Posn are currently expressed. The physical position and size are unaffected. Note that if you set Posn and/or Size in the same `⎕WC` or `⎕WS` statement as you set Coord, it is the **old** value of Coord that is applied.
+You can change Coord from one value to another as you require. It only affects the units in which Size and Posn are currently expressed. The physical position and size are unaffected. If you set Posn and/or Size in the same `⎕WC` or `⎕WS` statement as you set Coord, it is the **old** value of Coord that is applied.
 
 The co-ordinate system is also independent of the way in which objects are reconfigured when their parent is resized. This is perhaps not immediately obvious, as it might be expected that objects which are specified using Pixel co-ordinates will be unaffected when their parent is resized. This is not necessarily the case as the manner in which objects respond to their parent being resized is determined **independently** by the AutoConf and Attach properties.
 

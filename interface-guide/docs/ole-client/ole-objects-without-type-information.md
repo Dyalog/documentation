@@ -6,20 +6,20 @@ Even if an OLE Object fails to provide Type Information, either using early or l
 
 If you refer to a name inside the OLEClient namespace that would otherwise generate a `VALUE ERROR`, and there is no Type information available for that name, APL asks the COM object if it has a member (method or property) of that name.
 
-The mechanism permits APL to determine only that the member is exported; it says nothing about its type (method or property) nor its syntax. If the response from the COM object is positive, APL therefore makes the most general assumption possible, namely:
+The mechanism permits APL to determine only that the member is exported; it says nothing about its type (method or property) nor its syntax. If the response from the COM object is positive, APL, therefore, makes the most general assumption possible, namely:
 
 - That the member is a method
 - That it may take up to 16 optional arguments
 - That each argument is input/output (that is, specified via a pointer)
 - That the method returns a result.
 
-This means that if you know, from its documentation or another source, that a COM object provides a certain Method or Property, you may therefore access that member by simply calling a function of that name in the OLEClient namespace. Note that any parameters you pass will be returned in the result, because APL assumes that all parameters are input/output. Furthermore, APL will be unable to check the validity of the parameters you specify because it does not know what data types are expected.
+This means that if you know, from its documentation or another source, that a COM object provides a certain Method or Property, you can, therefore, access that member by calling a function of that name in the OLEClient namespace. Any parameters you pass will be returned in the result, because APL assumes that all parameters are input/output. Furthermore, APL will be unable to check the validity of the parameters you specify because it does not know what data types are expected.
 
 ## SetMethodInfo and SetPropertyInfo
 
 The SetMethodInfo and SetPropertyInfo methods provide a mechanism for you to precisely specify the missing Type Information for the methods and properties that you wish to use. See *Object Reference* for further details.
 
-Note that whether you use late binding or SetMethodInfo/SetPropertyInfo, any sub-object namespaces that you create by invoking the methods and properties in the top-level object, will also have no visible methods and properties. Therefore, if the Type Information is missing, Late Binding or SetMethodInfo and SetPropertyInfo must be used to access all the methods and properties that you wish to use, wherever they occur in the object hierarchy.
+Whether you use late binding or SetMethodInfo/SetPropertyInfo, any sub-object namespaces that you create by invoking the methods and properties in the top-level object, will also have no visible methods and properties. Therefore, if the Type Information is missing, Late Binding or SetMethodInfo and SetPropertyInfo must be used to access all the methods and properties that you wish to use, wherever they occur in the object hierarchy.
 
 ## Events
 

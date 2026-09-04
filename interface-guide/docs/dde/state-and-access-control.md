@@ -354,7 +354,7 @@ This is simply achieved by withholding the ACK message. Thus if APL receives a D
 
 Assuming that the second application waits for the acknowledgement before proceeding, this will cause the desired synchronisation. Naturally, this cannot be entirely guaranteed because APL has no **direct** control over a non-APL program. Indeed, when an application transmits a DATA message, it can include a flag to indicate that an acknowledgement is neither expected nor required. In these circumstances, APL is powerless to impose any access control.
 
-Note that APL does not (and cannot) have any control over successive internal references to the data by a non-APL application.
+APL does not (and cannot) have any control over successive internal references to the data by a non-APL application.
 
 The rule for establishing your partner's initial `⎕SVC` is as follows:
 

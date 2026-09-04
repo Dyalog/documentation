@@ -56,8 +56,8 @@ A Dyalog ActiveXControl uses  the dynamic-link library version of the Dyalog int
 
 For the names of these files corresponding to the version of Dyalog that you are using, see [Files and Directories](../../../windows-installation-and-configuration-guide/files-and-directories).
 
-!!!note "Start Dyalog as Administrator"
-    Under Windows 7 and later, you have to have administrator privileges to register a COM component. Therefore, you must run Dyalog as administrator. If you fail to do this, the registration process will fail. If so, you can continue the process where you left off by closing Dyalog, restarting as administrator, and reloading the workspace.
+!!! Info "Information"
+    Under Microsoft Windows 7 and later, you have to have administrator privileges to register a COM component. Therefore, you must run Dyalog as administrator. If you fail to do this, the registration process will fail. If so, you can continue the process where you left off by closing Dyalog, restarting as administrator, and reloading the workspace.
 
 ## Getting Started
 
@@ -157,7 +157,7 @@ Open the function `F.Dual.Build`. This function turns the Dual's parent namespac
 
 Run function `F.Dual.Build`. You should see a Form containing a single instance of the Dual control. Please resist any temptation to play with it at this stage; we want it to be in its default state for when we save it.
 
-Type the following expression; note that the ClassID, which uniquely identifies your control (and so will not be the same as that shown below), is allocated when you create the ActiveXControl object.
+Type the following expression; the ClassID, which uniquely identifies your control (and so will not be the same as that shown below), is allocated when you create the ActiveXControl object:
 ```apl
         F.Dual.ClassID
 {002F9614-50F7-4F3B-BB0B-FA3316964E78}
@@ -183,7 +183,7 @@ This section describes how you can test and exercise the Dual control using any 
 - Click the *Start Debugging* button.
 - Exercise the two Dual controls.
 - Click the *Stop Debugging* button.
-- Click on one of the Dual controls and scroll through its Property list. Notice that all the properties listed are standard VB ones; there are no properties (or indeed methods and events) exported. We will learn how to do this next.
+- Click on one of the Dual controls and scroll through its Property list. All the properties listed are standard VB ones; there are no properties (or indeed methods and events) exported. We will learn how to do this next.
 
 Close but **do not** save the project.
 
@@ -281,7 +281,7 @@ Change the data type for the *Result* to VT_BSTR (a text string).
 
 Check the *Prop Get* radio button to indicate that this is a *Property Get* function and enter the name of the property (`Caption1`) to which it applies.
 
-Note that it is not necessary for the property name referenced by the *Get* and *Put* functions to correspond to a variable name, although in this case it does.
+It is not necessary for the property name referenced by the *Get* and *Put* functions to correspond to a variable name, although in this case it does.
 
 The final *COM Properties* dialog box for `GetCaption1` should appear as follows. Click *OK* to save your changes.
 
@@ -419,7 +419,7 @@ From this table we can easily construct the corresponding SetFnInfo statements. 
       SetFnInfo 'GetCaption1' 'VT_BSTR' ¯1 2 'Caption1'
 ```
 
-Note that `¯1` in the 3<sup>rd</sup> element of the right argument specifies that there is no help id.
+The `¯1` in the 3rd element of the right argument specifies that there is no help id.
 
 Open the function `F.Dual.EXPORT`; this contains statements to export all the *Get* and *Put* functions we need.
 

@@ -10,7 +10,7 @@ The tree structure is specified by the RowTreeDepth property.  This is either a 
 
 Each element of RowTreeDepth specifies the depth of the corresponding row of the Grid. A value of 0 indicates that the row is a top-level row. A value of 1 indicates that the corresponding row is a child of the most recent row whose RowTreeDepth is 0; a value of 2 indicates that the corresponding row is a child of the most recent row whose RowTreeDepth is 1, and so forth.
 
-The picture below illustrates the initial appearance of a Grid with TreeView behaviour. Notice that at first only the top-level rows are displayed.
+The picture below illustrates the initial appearance of a Grid with TreeView behaviour. At first, only the top-level rows are displayed.
 
 ![](../img/grid-treeview-1.png)
 
@@ -60,7 +60,7 @@ The Grid provides a RowSetVisibleDepth method that provides *tier-level* control
 
 The value of its argument is an integer that specifies the depth of rows to be displayed. The Grid displays all rows whose RowTreeDepth values are less than or equal to this value. In the example, this method is called by items on the *View* menu.
 
-The next picture shows how the Grid is displayed after choosing *Expand Years* from the *View* menu. Notice that, as specified by `TreeGrid[6]` this menu item simply executes the RowSetVisibleDepth method with an argument of 1.
+The next picture shows how the Grid is displayed after choosing *Expand Years* from the *View* menu. As specified by `TreeGrid[6]`, this menu item simply executes the RowSetVisibleDepth method with an argument of 1.
 
 ![](../img/grid-treeview-3.png)
 
@@ -68,7 +68,7 @@ Similarly, the *Expand All item*  executes RowSetVisibleDepth 2, as specified by
 
 ![](../img/grid-treeview-4.png)
 
-Note that the *Collapse All* item executes RowSetVisibleDepth 0, which causes only the top-level rows to be displayed.
+The *Collapse All* item executes RowSetVisibleDepth 0, which causes only the top-level rows to be displayed.
 
 You may open specific nodes by invoking the Expanding event as a method.
 

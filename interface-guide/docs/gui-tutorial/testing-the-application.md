@@ -6,7 +6,7 @@ Before we test our application, it would be a good idea to `)SAVE` the workspace
 TEMP saved ...
 ```
 
-Note that the GUI objects we have created are all saved with the workspace. You don't have to re-build them every time you `)LOAD` it again.
+The GUI objects you have created are all saved with the workspace. You don't have to re-build them every time you `)LOAD` it again.
 
 If this was a Run-Time application, we would have to use `⎕DQ` to run it. However, as it is not, we can just go ahead and use it from the Session. Click on the Fahrenheit edit field and enter a number (say 212). Now click on the "F->C" button. The Temperature Converter window should look like the picture below.
 

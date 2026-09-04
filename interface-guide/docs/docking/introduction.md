@@ -20,6 +20,6 @@ For example, a top-level Form `F2` when docked in another top-level Form `F1`, b
 
 Similarly, a CoolBand named `F2.CB2.C2` when dragged from its CoolBar `F2.CB2` and dropped over the desktop, becomes a top-level Form named `C2`.
 
-Notice how the node name of the object remains the same, but its full pathname changes as it is moved from one parent object to another.
+The node name of the object remains the same, but its full pathname changes as it is moved from one parent object to another.
 
 When an object changes Type in this way, the values of all its properties for its original Type are remembered, and these are automatically restored when the object reverts back to its original Type. Since an object can change Type between Form, SubForm, and CoolBand, it follows that there are effectively 3 different sets of properties associated with the object. However, only one set of properties (the set associated with the object's current Type) is visible and accessible (to the programmer) at any one time.
