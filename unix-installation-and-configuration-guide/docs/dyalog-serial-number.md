@@ -6,7 +6,7 @@ Dyalog Ltd recommends setting the serial number either by editing a file contain
 
 In a multi-user environment it might be desirable to set the **DYALOG_SERIAL** environment variable in a system configuration file so that the serial number is held in a single location.
 
-To set your Dyalog serial number by editing the serial number file directly, edit the `$HOME/.dyalog/serial`[^1] text file so that it contains just the string `serialnumber`, where `serialnumber` is your Dyalog serial number.
+To set your Dyalog serial number by editing the serial number file directly, edit the `$HOME/.dyalog/serial` text file so that it contains just the string `serialnumber`, where `serialnumber` is your Dyalog serial number. `$HOME/.dyalog/serial` is the default location for your serial number file, but you can set the DYALOG_SERIALFILE environment variable to point to any other valid location.
 
 To set your Dyalog serial number from within a Session:
 ```apl
@@ -27,5 +27,3 @@ or
 
 !!! Warning "Warning"
     Using or entering a serial number other than the one issued to you is not permitted. Transferring the serial number to anyone else is not permitted. For the full licence terms and conditions, see: [https://www.dyalog.com/uploads/documents/Terms_and_Conditions.pdf](https://www.dyalog.com/uploads/documents/Terms_and_Conditions.pdf)
-
-[^1]: $HOME/.dyalog/serial is the default location for your serial number file but you can set the DYALOG_SERIALFILE environment variable to point to any other valid location.

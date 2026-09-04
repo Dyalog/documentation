@@ -73,7 +73,7 @@ Keycodes, their common keystrokes, and the keystrokes specific to terminal emula
 |S2     |Fix Script, Remain      |&nbsp;               |&nbsp;             |
 |SA     |Select All              |&nbsp;               |&nbsp;             |
 |SC     |Search                  |Cmd s                |&nbsp;             |
-|SR     |Redraw Screen           |Ctrl+l <sup>(1)</sup>|&nbsp;             |
+|SR     |Redraw Screen           |Ctrl+l [^1]|&nbsp;             |
 |TB     |Tab Window              |Cmd Tab              |APL+Tab            |
 |TC     |Trace                   |Cmd Enter            |Shift+APL+Enter    |
 |TG     |Tag                     |Cmd t                |APL+Numpad-*       |
@@ -84,3 +84,5 @@ Keycodes, their common keystrokes, and the keystrokes specific to terminal emula
 |UL     |Up Limit                |Ctrl+Up              |Shift+APL+PgUp     |
 |US     |Up Screen               |Shift+Up             |APL+PgUp           |
 |ZM     |Zoom                    |Cmd z                |Shift+APL+F12      |
+
+[^1]: If you are using PuTTY or another emulator that uses the Dyalog Unicode IME, it will be necessary to swap to a non-Dyalog APL keyboard before hitting Ctrl-l; hitting Ctrl-l while in a Dyalog APL keyboard will generate a Quad symbol.
