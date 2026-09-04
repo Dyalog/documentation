@@ -8,6 +8,6 @@ If undefined, WSEXT defaults to `.dws:` on Windows and macOS, and `:.dws:.DWS` o
 
 In the Windows case, this means that `)LOAD myws` will search first for a file named `myws.dws` , and then for a file named `myws` (with no extension). As file names are not case-sensitive under Windows, this will find `myws.DWS` or `MyWs.Dws` and so forth. If none are found with this extension, it will load `myws` , `MyWs` , `MYWS` etc.
 
-In the second (non-Windows) case note that `)LOAD myws` will search first for a file named `myws` , then `myws.dws` , then `myws.DWS`.
+In the second (non-Windows) case, `)LOAD myws` will search first for a file named `myws`, then `myws.dws`, then `myws.DWS`.
 
 When `)SAVE` and `⎕SAVE` is used without specifying a file extension, the first extension defined by WSEXT is applied to complete the file name. The default is therefore `.dws` in all cases.

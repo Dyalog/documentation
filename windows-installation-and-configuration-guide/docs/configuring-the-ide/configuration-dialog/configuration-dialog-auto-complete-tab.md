@@ -2,7 +2,7 @@
 
 ![configuration dialog auto complete tab](../../img/configuration-dialog-auto-complete-tab.png)
 
-Note: To enter values in the *OK Key* and *Cancel Key*fields, click on the field with the mouse and then press the desired keystroke.
+To enter values in the *OK Key* and *Cancel Key* fields, click on the field with the mouse and then press the desired keystroke.
 
 Table: Configuration dialog: Auto Complete
 

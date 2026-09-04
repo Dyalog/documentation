@@ -25,7 +25,7 @@ The parameter is a string containing the list of directory names separated by ";
 
 If DyalogStartupSE begins with the specified separator, the default list is *extended* rather than *replaced*.
 
-Note that the effective sequence of directories specified by this parameter is converted to a vector of character vectors and stored in  `⎕SE.Dyalog.StartupSession.AllPaths`.
+The effective sequence of directories specified by this parameter is converted to a vector of character vectors and stored in  `⎕SE.Dyalog.StartupSession.AllPaths`.
 
 If unset or extended (that is, starts with a : separator):
 

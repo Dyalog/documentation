@@ -8,4 +8,4 @@ If undefined, CFEXT defaults to `.dcf:` on Windows and macOS, and `.dcf:.DCF:` o
 
 In the Windows case, this means that `'myfile'⎕FTIE 0` will search first for a file named `myfile.dcf` , and then for a file named `myfile` (with no extension). As file names are not case-sensitive under Windows, this will find `myfile.DCF` or `MyFile.Dcf` and so forth. If none are found with this extension, it will load `myfile` , `MyFile` , `MYFILE` etc.
 
-In the second (non-Windows) case note that `'myfile'⎕FTIE 0` will search first for a file named `myfile` , then `myfile.dcf` , then `myfile.DCF` .
+In the second (non-Windows) case, `'myfile'⎕FTIE 0` will search first for a file named `myfile`, then `myfile.dcf`, then `myfile.DCF`.

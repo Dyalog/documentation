@@ -23,4 +23,4 @@ Table: Configuration dialog: Session
 |Use log file|[Log_File](../../configuration-parameters/log-file.md)|The full pathname of the Session log file|
 |Multiline Input|[Dyalog_LineEditor_Mode](../../configuration-parameters/dyalog-lineeditor-mode.md)|Specifies whether or not multi-line input is enabled in the Session.|
 
-Note: The value of size-related values defined in the above table is specified as an integer value followed by one of K, M, G, T, P or E. The default, where no character is included, is K (Kilobytes).
+The value of size-related values defined in the above table is specified as an integer value followed by one of K, M, G, T, P, or E. The default, where no character is included, is K (Kilobytes).

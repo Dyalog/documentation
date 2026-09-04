@@ -10,4 +10,4 @@ If **APL_COMPLEX_AS_V12** is set to any other value or is not set at all then co
 
 In addition, if **APL_COMPLEX_AS_V12** is set to 1, objects containing complex numbers cannot be transferred to or from component files, TCP/IP (CONGA), or auxiliary processors and may not be used as an argument to Serialise/Deserialise Array (`220⌶` ). Instead, a `DOMAIN ERROR` will be issued.
 
-Note that this feature is provided to simplify the transition of older code to currently supported Versions of Dyalog APL. It does not prevent the generation and use of Complex Numbers using newer features (such as explicitly specifying a Complex Number literal), and the intention is that it will be removed in a future release of Dyalog APL.
+This feature is provided to simplify the transition of older code to currently supported versions of Dyalog APL. It does not prevent the generation and use of Complex Numbers using newer features (such as explicitly specifying a Complex Number literal), and the intention is that it will be removed in a future release of Dyalog APL.

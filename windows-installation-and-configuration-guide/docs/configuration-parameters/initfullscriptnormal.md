@@ -9,6 +9,6 @@ These two actions always appear in the Editor File menu, but you can specify whi
 
 In both cases, you may select either  *Only Functions* or         *Everything*.
 
-The label for the corresponding items on the Editor File menu (see  Editor (The File Menu, editing a script)) will change according to which behaviour applies. Note that if you specify a keystroke for <S1> in the *Keyboard Shortcuts* tab, this will be associated with the unselected action.
+The label for the corresponding items on the Editor File menu (see  Editor (The File Menu, editing a script)) will change according to which behaviour applies. If you specify a keystroke for <S1> in the *Keyboard Shortcuts* tab, this will be associated with the unselected action.
 
 See also [If not ...](../configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab.md).
