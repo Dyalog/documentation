@@ -9,7 +9,7 @@ search:
 
 An element of `X` is considered identical to an element in `Y` if `X≡Y` returns 1 for those elements.
 
-`⎕CT` and `⎕DCT` are  implicit arguments of Membership.
+`⎕CT` and `⎕DCT` are  implicit arguments of _membership_.
 
 <h2 class="example">Examples</h2>
 ```apl

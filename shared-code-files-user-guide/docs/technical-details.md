@@ -2,7 +2,7 @@
 
 ## Technical Reference
 
-The operations that comprise the shared code file mechanism are implemented using three I-Beams:
+The operations that comprise the shared code file mechanism are implemented using three _I-beams_:
 
 - [`8659⌶`](../../language-reference-guide/primitive-operators/i-beam/list-shared-code-files-attached-names) – List Shared Code Files/Attached Names
 	- syntax: `{R}←{X}(8659⌶)Y`
@@ -60,7 +60,7 @@ When one or more shared code files is attached, the following rules apply:
 
 - When items with the same name exist in multiple workspaces, the one that is used in the active workspace is the first one found when going through the workspaces in the following order:
     1. the active workspace
-    2. the shared code file specified first when [attaching](../../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files#xxx)
+    2. the shared code file specified first when [attaching](../../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files/#attach-shared-code-files)
     3. the shared code file specified second when attaching, and so so
 - When the shared code files are assimilated:
     - all references to each shared code file are resolved by copying data from the shared code file to the active workspace as required.

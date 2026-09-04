@@ -11,7 +11,7 @@ The search patterns may include *Regular Expressions* so that complex searches m
 
 The transformation rules are applied to the text which matches the search patterns; they may be given as a simple character vector, numeric codes, or  a function.
 
-The two system operators, `⎕R` for replace and `⎕S` for search, are syntactically identical. With `⎕R`, the input document is examined; text which matches the search pattern is amended and the remainder is left unchanged. With `⎕S`, each match in the input document results in an item in the result whose type is dependent on the transformation specified. The operators use the Variant operator to set options.
+The two system operators, `⎕R` for replace and `⎕S` for search, are syntactically identical. With `⎕R`, the input document is examined; text which matches the search pattern is amended and the remainder is left unchanged. With `⎕S`, each match in the input document results in an item in the result whose type is dependent on the transformation specified. The operators use the _variant_ operator to set options.
 
 `A` specifies one or more search patterns, being given as a single character, a character vector, a vector of character vectors or a vector of both characters and character vectors. See search pattern following.
 
@@ -119,7 +119,7 @@ Note that the shape of the output document may be significantly different to tha
 
 If the ResultText option is specified, the output type may be forced to be a **character vector** or **vector of character vectors** as described above, regardless of the input document.
 
-With an output stream specified the text is appended to the stream. If the appended text does not end with a line ending character then the line ending character specified by the EOL option is also appended. The resulting length of the file  is returned as a shy result.
+With an output stream specified the text is appended to the stream. If the appended text does not end with a line ending character then the line ending character specified by the EOL option is also appended. The resulting length of the file  is returned as a [shy](../../../programming-reference-guide/introduction/results#shy-results) result.
 
 ## `⎕S`
 
@@ -236,7 +236,7 @@ The second match is the B in the second subpattern. Offsets is `1 ¯1 1` and Len
 
 ## Variant Options
 
-Options are specified using the Variant operator. The Principal option is IC.
+Options are specified using the _variant_ operator. The Principal option is IC.
 
 Default values are highlighted thus.
 

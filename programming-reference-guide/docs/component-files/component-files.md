@@ -12,7 +12,7 @@ To access an existing component file it must be **tied**, that is, opened for us
 
 ## Tie Numbers
 
-A file is tied by associating a **file name** with a **tie number**. Tie numbers are integers in the range 1 - 2147483647 and, you can supply one explicitly, or have the interpreter allocate the next available one by specifying 0. The system functions which tie files return the tie number as a "shy" result.
+A file is tied by associating a **file name** with a **tie number**. Tie numbers are integers in the range 1 - 2147483647; you can supply one explicitly, or have the interpreter allocate the next available one by specifying `0`. The system functions that tie files return the tie number as a [shy](../introduction/results.md#shy-results) result.
 
 ## Creating and Removing Files
 
@@ -193,7 +193,7 @@ Create a new file, giving the file name, and the number you wish to use to ident
 
 If the file already exists, or you have already used this tie number, then APL will respond with the appropriate error message.
 
-Now write the data to the file. We could write a function that loops to do this, but it is neater to take advantage of the fact that our data is a nested vector, and use each (`¨`).
+Now write the data to the file. We could write a function that loops to do this, but it is neater to take advantage of the fact that our data is a nested vector, and use _each_ (`¨`).
 ```apl
       DATA ⎕FAPPEND¨ 1
 ```

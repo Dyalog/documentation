@@ -1,33 +1,54 @@
 # Announcements
 
-<p style="color:red;">This document is currently being developed and will not be finalised until nearer the release of Dyalog v21.0.</p>
-
 Notice of new and planned additions, changes, removals, and deprecations in Dyalog v21.0 compared with Dyalog v20.0.
 
 ## Additions
 
-T.B.A.
+### Dark Mode (Microsoft Windows only)
+
+On Microsoft Windows, Dyalog v21.0 includes experimental support for dark mode. For information on how to enable dark mode and contribute to the evolution of this functionality, please send a message to [darkmode@dyalog.com](mailto:darkmode@dyalog.com) briefly describing the experiments that you would like to perform.
+
+### New APL Font
+
+The Dyalog v21.0 installation images include a preview of a new proportional font, currently called APL335. This is to APL333 as APL387 (introduced in Dyalog v20.0) is to APL385.
+
+The font can be explored within the Microsoft Windows IDE (it can be selected from the drop-down font selection list) or at [https://dyalog.github.io/APL387/335/](https://dyalog.github.io/APL387/335/).
+
+The design of APL335 has not yet been finalised, and feedback is welcome. Please email your feedback to [support@dyalog.com](mailto:support@dyalog.com) or raise issues in the APL387 GitHub project ([https://github.com/Dyalog/APL387](https://github.com/Dyalog/APL387)).
+
+!!! Info "Information"  
+    Although Dyalog Ltd has commissioned the font, we hope that it will become widely used by the APL community. It is intended to be vendor-agnostic, and we believe that it includes all the APL characters used by all APL dialects. It intentionally has, and will continue to have, an extremely permissive licence.
 
 ## Changes
 
-T.B.A.
+### APL Thread Scheduler
+
+A project is under way to improve the efficiency and "fairness" of thread scheduling; this project will extend over at least two, possibly more, releases. In Dyalog v21.0, the interpreter will perform consistency checks to verify that new algorithms (which will be implemented in Dyalog v22.0) perform correct scheduling. In the unlikely event that discrepancies are detected, the interpreter will write to the **Status** window or, if it is enabled, the log file set using [`109⌶`](https://docs.dyalog.com/21.0/language-reference-guide/primitive-operators/i-beam/log-file-for-deprecations/).
+
+If all goes well, the new scheduling algorithms will take effect in Dyalog v22.0. For well-written applications without potential race conditions, the new algorithms should not cause any issues. However, since the order in which threads are dispatched could change, this can trigger or increase the frequency of existing timing-related bugs in application code. Thorough testing of multi-threaded applications should be planned for when upgrading to Dyalog v22.0. 
 
 ## Removals (Previously Announced)
 
 ### Raspberry Pi Platform
 
-Dyalog v20.0 was the last release to be built for 32-bit Raspberry Pis; Dyalog v21.0 is only supported on 64-bit Raspberry Pis.
+Dyalog v20.0 was the last release to be built for 32-bit Raspberry Pis. To run Dyalog v21.0 on 64-bit Raspberry Pis, use Dyalog for Linux (aarch64/DEB).
 
 ## Notice of Removals in Future Releases
 
-### `43⌶` – Monadic Operator Generator  
-This I-beam has been deprecated. It is scheduled for removal in Dyalog v22.0; it could be reintroduced in a later release.
+!!! Info "Information"
+    Dyalog Ltd strongly recommends identifying and replacing deprecated functionality at the earliest opportunity; see [Deprecated Functionality](https://docs.dyalog.com/21.0/release-notes/announcements/deprecated-functionality/) for information on how to identify deprecated functionality.
+
+### `43⌶632` – Generics Operator
+`43⌶632` has been deprecated; the functionality that it provided is now available using a new `[...]` mechanism – see [Generics (.NET)](https://docs.dyalog.com/21.0/net-interface-guide/dotnet-classes/advanced-techniques/#generics) and [Generics (.NET Framework)](https://docs.dyalog.com/21.0/net-framework-interface-guide/dotnet-classes/advanced-techniques/#generics). It is scheduled for removal in Dyalog v22.0.
 
 ### `739⌶` – Temporary Directory  
-This I-beam has been deprecated. It is scheduled for removal in 2029.
+This _I-beam_ has been deprecated; the functionality that it provided is now available using [`⎕SYSTEM`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/system/). It is scheduled for removal in 2029.
+
+### `1200⌶` – Format Date-time  
+This _I-beam_ has been deprecated; the functionality that it provided is now available using [`⎕DT`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/dt/). It is scheduled for removal in 2029.
 
 ### Legacy Workspaces
-Dyalog v21.0 is the last major version that will support workspaces saved using Dyalog v11.0 or Dyalog v12.0 (workspaces saved using earlier versions are already unsupported). From Dyalog v22.0, the minimum version of a workspace that can be loaded will be v12.1.
+Dyalog v21.0 is the last major version that will support workspaces saved using Dyalog v11.0 or Dyalog v12.0 (workspaces saved using earlier versions are already unsupported). From Dyalog v22.0, the minimum version of a workspace that Dyalog will be able to load will be v12.1.
 
 To update workspaces that were saved using Dyalog v11.0 or v12.0 so that they can be loaded using a future version of Dyalog, you can use `)XLOAD` and `)SAVE` in any version of Dyalog from v12.1 to v21.0 inclusive. 
 
@@ -40,9 +61,13 @@ Dyalog v16.0 was the last major version to support creating and updating small-s
 
 ### External Variables
 
-The ability to create and update external variables will be removed in a future release (exact release to be decided, expected to be implemented by the year 2030).
+The ability to create and update external variables will be removed in a future release (exact release to be decided, expected to be implemented by the year 2029).
+
+External variables are no longer supported by default; support for external variables can be re-enabled by setting the [`DYALOG_EXTVAR_SUPPORTED`](https://docs.dyalog.com/21.0/windows-installation-and-configuration-guide/configuration-parameters/dyalog-extvar-supported/) configuration parameter to `1`.
 
 ### J0C0 Component Files
+
+Component files that have both journalling and checksum properties set to `0` can be tied and read, but cannot be created. The only amendments that are allowed to these files is to change the journalling and checksum properties using [`⎕FPROPS`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/fprops/).
 
 The ability to read component files that have both journalling and checksum properties set to `0` will be removed in a future release (exact release to be decided, expected to be implemented by the year 2040).
 
@@ -56,21 +81,21 @@ Dyalog v20.0 was announced as the last major version that would support workspac
 
 ### Documentation
 
-T.B.A.
+The process of moving documents from the [full documentation set](https://www.dyalog.com/documentation_210.htm) into an [open source GitHub project](https://github.com/Dyalog/documentation) is progressing.
+
+Documents that are included in this project are no longer available as PDF files.
 
 ## Next Dyalog Version
 
 ### Expected Supported Platforms
-The next version of Dyalog (Dyalog v22.0) is expected to be supported on the following platforms/operating systems:  
+The next version of Dyalog (Dyalog v22.0) is expected to be supported on the following platforms/operating systems, although the minimum supported versions might be increased:  
 
 - IBM AIX:
     - AIX 7.3 SP4 onwards with a POWER9 chip or higher<br />NOTE: Minimum chip level might be revised upwards to POWER10
 - Linux (including Raspberry Pi):
-    - x86_64: Built on Ubuntu 22.04
+    - x86_64: Built on Ubuntu 26.04
     - ARM64: Built on Debian GNU/Linux 13
 - macOS (Apple Silicon):
     - macOS 26.3 (Tahoe) onwards
 - Microsoft Windows:
-    - Windows 11 2H24 onwards (Windows Server 2016 onwards)
-
-This list is not definitive and is subject to change.
+    - Windows 11 25H2 onwards (Windows Server 2016 onwards)

@@ -1,8 +1,6 @@
 # <span>TabBar</span> <span>Object</span>
 
-**Purpose:** To manage a set of [TabBtn](tabbtn.md) objects.
-
-**Description**
+To manage a set of [TabBtn](tabbtn.md) objects.
 
 The TabBar object manages a group of [TabBtn](tabbtn.md) objects. These are associated with a set of [SubForm](subform.md) objects which are positioned on top of one another. When the user clicks on a [TabBtn](tabbtn.md),
 the corresponding [SubForm](subform.md) is brought to the
@@ -33,7 +31,7 @@ horizontally or vertically according to the [Align](../properties/align.md) prop
 
 The [HScroll](../properties/hscroll.md) and [VScroll](../properties/vscroll.md) properties determine what happens when the end of the TabBar is reached. If [HScroll](../properties/hscroll.md) or [VScroll](../properties/vscroll.md) is 0 (the default) a [TabBtn](tabbtn.md) that would otherwise extend beyond the TabBar is instead positioned immediately
 above, below or alongside the first [TabBtn](tabbtn.md) in
-the TabBar, thereby starting a new row or column. Note however that the TabBar
+the TabBar, thereby starting a new row or column. However, the TabBar
 is not automatically resized vertically to accommodate a second row or column.
 If you want a multi-flight TabBar you have to set its height or width
 explicitly. If [HScroll](../properties/hscroll.md) or [VScroll](../properties/vscroll.md) is `¯1` or `¯2`,
@@ -60,13 +58,15 @@ default position from the previous one. Thus if you wish to group your [TabBtn](
 together with spaces between the groups, you need only specify the position of
 the first one in each group.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [SubForm](../objects/subform.md)
 
 Children: [Circle](../objects/circle.md), [Ellipse](../objects/ellipse.md), [Font](../objects/font.md), [Marker](../objects/marker.md), [Poly](../objects/poly.md), [Rect](../objects/rect.md), [TabBtn](../objects/tabbtn.md), [Text](../objects/text.md), [Timer](../objects/timer.md)
 
-Properties: [Accelerator](../properties/accelerator.md), [AcceptFiles](../properties/acceptfiles.md), [Active](../properties/active.md), [Align](../properties/align.md), [Attach](../properties/attach.md), [AutoConf](../properties/autoconf.md), [BCol](../properties/bcol.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [CursorObj](../properties/cursorobj.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FontObj](../properties/fontobj.md), [Handle](../properties/handle.md), [Hint](../properties/hint.md), [HintObj](../properties/hintobj.md), [HScroll](../properties/hscroll.md), [IconObj](../properties/iconobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [OnTop](../properties/ontop.md), [Picture](../properties/picture.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Redraw](../properties/redraw.md), [Size](../properties/size.md), [Sizeable](../properties/sizeable.md), [TabIndex](../properties/tabindex.md), [TabObj](../properties/tabobj.md), [TextSize](../properties/textsize.md), [Tip](../properties/tip.md), [TipObj](../properties/tipobj.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [Visible](../properties/visible.md), [VScroll](../properties/vscroll.md), [XRange](../properties/xrange.md), [YRange](../properties/yrange.md)
+Properties (default order): [Type](../properties/type.md), [Posn](../properties/posn.md), [Size](../properties/size.md), [Coord](../properties/coord.md), [Align](../properties/align.md), [Active](../properties/active.md), [Visible](../properties/visible.md), [Event](../properties/event.md), [VScroll](../properties/vscroll.md), [HScroll](../properties/hscroll.md), [Sizeable](../properties/sizeable.md), [FontObj](../properties/fontobj.md), [BCol](../properties/bcol.md), [Picture](../properties/picture.md), [OnTop](../properties/ontop.md), [IconObj](../properties/iconobj.md), [CursorObj](../properties/cursorobj.md), [AutoConf](../properties/autoconf.md), [YRange](../properties/yrange.md), [XRange](../properties/xrange.md), [Data](../properties/data.md), [Attach](../properties/attach.md), [TextSize](../properties/textsize.md), [Handle](../properties/handle.md), [Hint](../properties/hint.md), [HintObj](../properties/hintobj.md), [Tip](../properties/tip.md), [TipObj](../properties/tipobj.md), [TabObj](../properties/tabobj.md), [Translate](../properties/translate.md), [Accelerator](../properties/accelerator.md), [AcceptFiles](../properties/acceptfiles.md), [KeepOnClose](../properties/keeponclose.md), [Redraw](../properties/redraw.md), [TabIndex](../properties/tabindex.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Accelerator](../properties/accelerator.md), [AcceptFiles](../properties/acceptfiles.md), [Active](../properties/active.md), [Align](../properties/align.md), [Attach](../properties/attach.md), [AutoConf](../properties/autoconf.md), [BCol](../properties/bcol.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [CursorObj](../properties/cursorobj.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FontObj](../properties/fontobj.md), [Handle](../properties/handle.md), [Hint](../properties/hint.md), [HintObj](../properties/hintobj.md), [HScroll](../properties/hscroll.md), [IconObj](../properties/iconobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [OnTop](../properties/ontop.md), [Picture](../properties/picture.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Redraw](../properties/redraw.md), [Size](../properties/size.md), [Sizeable](../properties/sizeable.md), [TabIndex](../properties/tabindex.md), [TabObj](../properties/tabobj.md), [TextSize](../properties/textsize.md), [Tip](../properties/tip.md), [TipObj](../properties/tipobj.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [Visible](../properties/visible.md), [VScroll](../properties/vscroll.md), [XRange](../properties/xrange.md), [YRange](../properties/yrange.md)
 
 Methods: [Animate](../methodorevents/animate.md), [Detach](../methodorevents/detach.md), [GetFocus](../methodorevents/getfocus.md), [GetFocusObj](../methodorevents/getfocusobj.md), [GetTextSize](../methodorevents/gettextsize.md)
 

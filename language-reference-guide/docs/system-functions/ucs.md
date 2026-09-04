@@ -13,9 +13,11 @@ The optional left argument `X` is either a simple character vector or a one- or 
 - `'UTF-16'`
 - `'UTF-32'`
 
-The second element (if present) is either `0` (the default) to consume and return byte values as positive integers or `83` to use 1-byte integers (type 83). `83` can only be used with `'UTF-8'`.
+The encoding scheme value is case-sensitive and must be specified in upper case.
 
-If `X` does not abide by the above restrictions, a `DOMAIN ERROR` is issued.
+The second element (if present) is either `0` (the default) which causes ⎕UCS to consume and return integers between 0 and 255 or `83` which causes ⎕UCS to consume and return integers between `¯128` and `+127`. `83` can only be used with `'UTF-8'`.  See [`⎕DR`](dr.md) for more information about type 83 values.
+
+If `X` is any other value, a `DOMAIN ERROR` is generated.
 
 If `X` is omitted, `Y` is a simple character or integer array, and the result `R` is a simple integer or character array with the same rank and shape as `Y`.
 
@@ -23,7 +25,7 @@ If `X` is specified, `Y` must be a simple character or integer vector, and the r
 
 ## Monadic `⎕UCS`
 
-Monadic `⎕UCS` converts any character array to a numeric array of the same shape, or any numeric array to a character array of the same shape. When doing this, characters are converted to Unicode code points and Unicode code points are converted to characters.
+Monadic `⎕UCS` converts any character array to an integer array of the same shape, or any integer array to a character array of the same shape. When doing this, characters are converted to Unicode code points and Unicode code points are converted to characters.
 
 ```apl
 
@@ -53,12 +55,18 @@ Unicode also contains the APL character set. For example:
 
 ## Dyadic `⎕UCS`
 
-Dyadic `⎕UCS` translates between vectors of Unicode characters and one of three standard Unicode encoding schemes – UTF-8, UTF-16, or UTF-32. These represent a character vector as a vector of integers. In the case of UTF-8, the integers can be specified to be unsigned (the default) or signed.
+Dyadic `⎕UCS` translates between vectors of Unicode characters and one of three standard Unicode encoding schemes – UTF-8, UTF-16, or UTF-32. These represent a character vector as a vector of integers. See the following section for details that are specific to UTF-8.
 ```apl
       'UTF-8' ⎕UCS 'ABC'
 65 66 67
+      'UTF-8' 0 ⎕UCS 'ABC'
+65 66 67
+      'UTF-8' 83 ⎕UCS 'ABC'
+65 66 67
       'UTF-8' ⎕UCS 'ABCÆØÅ'
 65 66 67 195 134 195 152 195 133
+        'UTF-8' 83 ⎕UCS 'ABCÆØÅ'
+65 66 67 ¯61 ¯122 ¯61 ¯104 ¯61 ¯123
       'UTF-8' ⎕UCS 195 134, 195 152, 195 133
 ÆØÅ
       'UTF-8' ⎕UCS 'γεια σου'
@@ -69,9 +77,9 @@ Dyadic `⎕UCS` translates between vectors of Unicode characters and one of thre
 947 949 953 945 32 963 959 965
 ```
 
-### UTF-8 Signed Integers
+### UTF-8 and Integer Ranges
 
-By default, `⎕UCS` uses unsigned integers. For UTF-8 only, if `X` is `'UTF-8' 83`, `⎕UCS` will instead use signed integers which are then represented as single bytes (type 83). For example:
+By default `⎕UCS` consumes and returns positive integers. In the case of `X` having the value `'UTF-8'` or `'UTF-8' 0`, `⎕UCS will consume and return integers in the range `0` to `255. In the case of `X` having the value `'UTF-8' 83`, `⎕UCS` will instead consume and return integers in the range `¯128` to `+127`. For example:
 
 ```apl
       'UTF-8' 83 ⎕UCS 'ABCÆØÅ'
@@ -81,7 +89,7 @@ By default, `⎕UCS` uses unsigned integers. For UTF-8 only, if `X` is `'UTF-8' 
       'UTF-8' 83 ⎕UCS 'γεια σου'
 ¯50 ¯77 ¯50 ¯75 ¯50 ¯71 ¯50 ¯79 32 ¯49 ¯125 ¯50 ¯65 ¯49 ¯123
 ```
-This facilitates storing Unicode text in native files as UTF-8. For example:
+This facilitates storing Unicode text in native files as UTF-8 or being passed to or from `⎕NA` functions and in some cases will result in less workspace being needed to hold the integer vector argument or result. For example:
 ```apl
       tn←'letters.txt' ⎕NCREATE 0
       ('UTF-8' 83 ⎕UCS 'ABCÆØÅ') ⎕NAPPEND tn

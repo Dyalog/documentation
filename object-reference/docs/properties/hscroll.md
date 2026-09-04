@@ -1,10 +1,8 @@
 # <span>HScroll</span> <span>Property</span>
 
-**Description**
-
 For most objects to which it applies, this property determines whether or not a horizontal scrollbar is provided.
 
-**HScroll may only be set when the object is created with ⎕WC and may not subsequently be changed with ⎕WS or assignment.**
+HScroll can only be set when the object is created with `⎕WC` and cannot subsequently be changed with `⎕WS` or assignment.
 
 When applied to a [Combo](../objects/combo.md), or to an [Edit](../objects/edit.md) object with [Style ](style.md)`'Single'` (that is, a single-line edit field), the value 0 inhibits scrolling, and prevents the user from entering more data when the field is full. If instead it has the value `¯2`, the field is scrollable, and the length of data that may be entered is not limited by the length of the field.
 
@@ -16,6 +14,8 @@ For a [StatusBar](../objects/statusbar.md), [TabBar](../objects/tabbar.md) or [T
 
 For a [Grid](../objects/grid.md), HScroll may be `0` (no horizontal scrollbar), `¯1` (scrollbar is displayed when required), `¯2` (same as `¯1`) or `¯3` (scrollbar is always displayed).
 
-**Application**
+For an [UpDown](../objects/updown.md) object, a value of `¯1` makes the arrows horizontal (a left arrow beside a right arrow). See also [VScroll](vscroll.md).
+
+## Application
 
 Objects: [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [Edit](../objects/edit.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [ListView](../objects/listview.md), [RichEdit](../objects/richedit.md), [Scroll](../objects/scroll.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [TabBar](../objects/tabbar.md), [ToolBar](../objects/toolbar.md), [TrackBar](../objects/trackbar.md), [UpDown](../objects/updown.md)

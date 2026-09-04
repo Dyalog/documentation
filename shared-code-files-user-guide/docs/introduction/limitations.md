@@ -59,7 +59,7 @@ A maximum of 8 virtual memory addresses are available for shared code files; the
 
 __Cannot `)SAVE` or `⎕SAVE` a workspace that has shared code files attached__
 
-It is not possible to [`)SAVE`](../../language-reference-guide/system-commands/save.md) or [`⎕SAVE`](../../language-reference-guide/system-functions/save.md) the current workspace if any shared code files are attached (they must be [assimilated](../../../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files/#assimilate-shared-code-files.md) or [detached](../../../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files/#detach-shared-code-files.md) first).
+It is not possible to [`)SAVE`](../../language-reference-guide/system-commands/save.md) or [`⎕SAVE`](../../language-reference-guide/system-functions/save.md) the current workspace if any shared code files are attached (they must be [assimilated](../../../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files/#assimilate-shared-code-files) or [detached](../../../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files/#detach-shared-code-files) first).
 
 ### Restriction 4
 

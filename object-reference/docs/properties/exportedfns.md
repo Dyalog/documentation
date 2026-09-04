@@ -1,7 +1,5 @@
 # <span>ExportedFns</span> <span>Property</span>
 
-**Description**
-
 This property specifies the functions to be exposed as methods by an [OLEServer](../objects/oleserver.md) object.
 
 ExportedFns may be set to 0 (none), 1 (all), or a vector of character vectors containing the names of the functions to be exported.
@@ -16,6 +14,6 @@ Finally, OLE does not support the concept of a dyadic function, so your exported
 
 If you wish to export a new function from your [OLEServer](../objects/oleserver.md), and ExportedFns is not 1, you must explicitly reset the value of the ExportedFns property before you re-save the workspace.
 
-**Application**
+## Application
 
 Objects: [OLEServer](../objects/oleserver.md)

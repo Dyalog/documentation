@@ -1,7 +1,5 @@
 # <span>SetMethodInfo</span> <span>Method 556</span>
 
-**Description**
-
 This method is used to redefine the arguments or data types associated with a method that is exported by a COM object. SetMethodInfo is used to override the information provided by the object's Type Library.
 
 The argument to SetMethodInfo is a 2 or 3-element array as follows:
@@ -23,7 +21,7 @@ For example, the InchesToPoint method exported by *Excel.Application* takes a si
       EX.SetMethodInfo 'InchesToPoints' methodinfo
 ```
 
-Note that the structure of variable `methodinfo` is identical to the result of the GetMethodInfo method.
+The structure of variable `methodinfo` is identical to the result of the GetMethodInfo method.
 ```apl
       DISPLAY methodinfo
 ┌→───────────────────────────────────┐
@@ -50,6 +48,6 @@ Unless you are going to call the method using the names of its arguments, these 
       EX.SetMethodInfo 'InchesToPoints' methodinfo 
 ```
 
-**Application**
+## Application
 
 Objects: [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md)

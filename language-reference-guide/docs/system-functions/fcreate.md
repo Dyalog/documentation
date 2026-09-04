@@ -21,7 +21,7 @@ search:
 
 The newly created file is tied for exclusive use.
 
-The shy result of `⎕FCREATE` is the tie number of the new file.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result of `⎕FCREATE` is the tie number of the new file.
 
 ## Automatic Tie Number Allocation
 
@@ -51,22 +51,28 @@ to:
 
 ```
 
-## File Properties
+## Variant Options
 
-`⎕FCREATE` allows you to specify properties for the newly created file via the variant operator `⍠` used with the following options:
+`⎕FCREATE` sets the properties of the newly created file through variant options, summarised in [](#variantoptionsforfcreate). These are the file properties described in [File Properties](fprops.md).
 
-- `'J'` - journaling level; a numeric value
-- `'C'` - checksum level; 0 or 1
-- `'Z'` - compression; 0 or 1
-- `'U'` - Unicode; 0 or 1
-- `'S'` - File Size (span); 64
+Table: Variant options for `⎕FCREATE` { #variantoptionsforfcreate }
 
-The Principal Option is  as follows:
+|Variant Option|Valid Values|Default|Effect|
+|---|---|---|---|
+|`'J'`|`0`, `1`, `2`, or `3`|`1`|Sets the journaling level.|
+|`'C'`|`0` or `1`|`1`|Sets the checksum level.|
+|`'Z'`|`0` or `1`|`0`|Sets compression.|
+|`'U'`|`0` or `1`|`1`|Sets Unicode support.|
+|`'S'`|`64`|`64`|Sets the file size (span).|
 
-- 0 - sets `('J' 0) ('C' 0)`
-- 1 - sets `('J' 1) ('C' 1)`
-- 2 - sets `('J' 2) ('C' 1)`
-- 3 - sets `('J' 3) ('C' 1)`
+The principal option is a number that sets journaling (`'J'`) and checksum (`'C'`) together:
+
+|Principal option|Effect|
+|---|---|
+|`0`|sets `('J' 0) ('C' 0)`, which signals a `DOMAIN ERROR` as this combination is no longer supported|
+|`1`|sets `('J' 1) ('C' 1)`|
+|`2`|sets `('J' 2) ('C' 1)`|
+|`3`|sets `('J' 3) ('C' 1)`|
 
 See also: [File Properties ](fprops.md).
 
@@ -91,7 +97,7 @@ will name a variant of `⎕FCREATE` which will create component file with level 
 ```
 
 !!! Info "Information"
-    Component files that have both journalling and checksum properties set to `0` have been deprecated; from Dyalog v21.0 it will not be possible to create files with this combination of properties. For information on how to identify code that creates component files that have both journalling and checksum properties set to `0` in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
+    Component files that have both journalling and checksum properties set to `0` have been deprecated, and it is no longer possible to create files with this combination of properties. For information on how to identify code that creates component files that have both journalling and checksum properties set to `0` in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

@@ -6,19 +6,19 @@ search:
 # <span>Key</span> `R←{X}f⌸Y`{{key}}
 
 !!! note "Classic Edition"
-    The symbol `⌸` is not available in Classic Edition, and the Key operator is instead represented by `⎕U2338`.
+    The symbol `⌸` is not available in Classic Edition, and the _key_ operator is instead represented by `⎕U2338`.
 
 `f` may be any dyadic function that returns a result.
 
-If `X` is specified, it is an array whose major cells specify keys for corresponding major cells of `Y`.  The Key operator `⌸` applies the function `f` to each unique key in `X` and the major cells of `Y` having that key.
+If `X` is specified, it is an array whose major cells specify keys for corresponding major cells of `Y`.  The _key_ operator `⌸` applies the function `f` to each unique key in `X` and the major cells of `Y` having that key.
 
-If `X` is omitted, `Y` is an array whose major cells represent keys. In this case, the Key operator applies the function `f` to each unique key in  `Y` and the  elements of `⍳≢Y` having that key.  `f⌸Y` is the same as `Y f⌸⍳≢Y`.
+If `X` is omitted, `Y` is an array whose major cells represent keys. In this case, the _key_ operator applies the function `f` to each unique key in  `Y` and the  elements of `⍳≢Y` having that key.  `f⌸Y` is the same as `Y f⌸⍳≢Y`.
 
 The elements of `R` appear in the order in which they first appear in `Y`.
 
-Key is similar to the GROUP BY clause in SQL.
+_Key_ is similar to the GROUP BY clause in SQL.
 
-`⎕CT` and `⎕DCT` are  implicit arguments of the Key operator.
+`⎕CT` and `⎕DCT` are  implicit arguments of the _key_ operator.
 
 <h2 class="example">Example</h2>
 
@@ -154,7 +154,7 @@ This example appends the data for a stock into a component file named by the sym
 
 ## Another Example
 
-Given a list of names and scores., the problem is to sum the scores for each unique name. A solution is presented first without using the Key operator, and then with the Key operator.
+Given a list of names and scores., the problem is to sum the scores for each unique name. A solution is presented first without using the _key_ operator, and then with the _key_ operator.
 ```apl
       names ⍝ 12, some repeat
  Pete  Jay  Bob  Pete  Pete  Jay  Jim  Pete  Pete  Jim

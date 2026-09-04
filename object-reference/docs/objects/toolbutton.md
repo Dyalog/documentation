@@ -1,9 +1,5 @@
 # <span>ToolButton</span> <span>Object</span>
 
-**Purpose:** The ToolButton object represents a button in a ToolControl.
-
-**Description**
-
 The ToolButton object represents a selectable button in a [ToolControl](toolcontrol.md) object.
 
 A ToolButton displays a text string, defined by its [Caption](../properties/caption.md) property, and an image defined by its [ImageIndex](../properties/imageindex.md) property. Apart from these characteristics, the appearance of a ToolButton is controlled by its parent [ToolControl](toolcontrol.md) object.
@@ -18,7 +14,7 @@ The behaviour and appearance of a ToolButton is further defined by its [Style](.
 
 Push buttons are used to generate actions and pop in and out when clicked. Radio and Check buttons are used to select options and have two states, normal (out) and selected (in). Their [State](../properties/state.md) property is 0 when the button is in its normal (unselected state) or 1 when it is selected.
 
-A group of adjacent ToolButtons with [Style ](../properties/style.md)`'Radio'` defines a set in which only one of the ToolButtons may be selected at any one time. The act of selecting one will automatically deselect any other. Note that a group of Radio buttons must be separated from Check buttons or other groups of Radio buttons by ToolButtons of another [Style](../properties/style.md).
+A group of adjacent ToolButtons with [Style ](../properties/style.md)`'Radio'` defines a set in which only one of the ToolButtons may be selected at any one time. The act of selecting one will automatically deselect any other. A group of Radio buttons must be separated from Check buttons or other groups of Radio buttons by ToolButtons of another [Style](../properties/style.md).
 
 A ToolButton with [Style ](../properties/style.md)`'Separator '`has no [Caption](../properties/caption.md) or picture, but appears as a vertical line and is used to separate groups of buttons.
 
@@ -51,13 +47,15 @@ The following example illustrates the use of DropDown buttons:
 
 ![](../img/tool9.gif)
 
-**Application**
+## Application
 
 Parents: [ToolControl](../objects/toolcontrol.md)
 
 Children: [Bitmap](../objects/bitmap.md), [Timer](../objects/timer.md)
 
-Properties: [Accelerator](../properties/accelerator.md), [Active](../properties/active.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [Hint](../properties/hint.md), [HintObj](../properties/hintobj.md), [ImageIndex](../properties/imageindex.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Popup](../properties/popup.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [State](../properties/state.md), [Style](../properties/style.md), [Tip](../properties/tip.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
+Properties (default order): [Type](../properties/type.md), [Caption](../properties/caption.md), [Posn](../properties/posn.md), [Size](../properties/size.md), [Style](../properties/style.md), [State](../properties/state.md), [Active](../properties/active.md), [Visible](../properties/visible.md), [Event](../properties/event.md), [ImageIndex](../properties/imageindex.md), [Data](../properties/data.md), [Hint](../properties/hint.md), [HintObj](../properties/hintobj.md), [Tip](../properties/tip.md), [Accelerator](../properties/accelerator.md), [Popup](../properties/popup.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Accelerator](../properties/accelerator.md), [Active](../properties/active.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [Hint](../properties/hint.md), [HintObj](../properties/hintobj.md), [ImageIndex](../properties/imageindex.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Popup](../properties/popup.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [State](../properties/state.md), [Style](../properties/style.md), [Tip](../properties/tip.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
 
 Methods: [Detach](../methodorevents/detach.md)
 

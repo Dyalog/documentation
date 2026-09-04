@@ -1,7 +1,5 @@
 # <span>SetSpinnerText</span> <span>Event 421</span>
 
-**Description**
-
 If enabled, this event is generated when the user clicks one of the spin buttons in a [Spinner](../objects/spinner.md) object. The event is reported *after* the value of the Thumb property has been updated but *before* the Text property has been changed. You may use this event to set the text in the [Spinner](../objects/spinner.md) dynamically instead of relying on it being updated automatically.
 
 The event message reported as the result of `⎕DQ`, or supplied as the right argument to your callback function, is a 4-element vector as follows :
@@ -14,6 +12,6 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 
 The SetSpinnerText event is designed to allow you to dynamically set the text in the Spinner in response to a spin button. It might be used in circumstances where the set of items you wish to present to your user is not predictable in advance.
 
-**Application**
+## Application
 
 Objects: [Spinner](../objects/spinner.md)

@@ -1,8 +1,6 @@
 # <span>CoolBar</span> <span>Object</span>
 
-**Purpose:** The CoolBar object acts as a container for CoolBand objects.
-
-**Description**
+The CoolBar object acts as a container for CoolBand objects.
 
 The CoolBar and [CoolBand](coolband.md) objects provide
 an interface to Windows *Rebar Controls*
@@ -95,20 +93,22 @@ double-click to toggle a child [CoolBand](coolband.md) between its maximised and
 The [FixedOrder](../properties/fixedorder.md) property specifies
 whether or not the CoolBar displays [CoolBands](coolband.md) in the same order. If [FixedOrder](../properties/fixedorder.md) is 1,
 the user may move bands to different rows, but the band order is static. The
-default is 0. Note that when the user moves a CoolBand within a CoolBar, its
+default is 0. When the user moves a CoolBand within a CoolBar, its
 Index and (potentially) [NewLine](../properties/newline.md) properties
-will change to reflect its new position.
+change to reflect its new position.
 
 If you wish to display pictures in one or more of the [CoolBands](coolband.md) owned by a CoolBar, you do so by setting the [ImageListObj](../properties/imagelistobj.md) property to the name of an [ImageList](imagelist.md) object
 which contains the pictures. Pictures are allocated to individual [CoolBands](coolband.md) via their ImageIndex properties.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md)
 
 Children: [CoolBand](../objects/coolband.md), [ImageList](../objects/imagelist.md), [Menu](../objects/menu.md), [Timer](../objects/timer.md)
 
-Properties: [Align](../properties/align.md), [Attach](../properties/attach.md), [BandBorders](../properties/bandborders.md), [BCol](../properties/bcol.md), [ChildList](../properties/childlist.md), [CursorObj](../properties/cursorobj.md), [Data](../properties/data.md), [DblClickToggle](../properties/dblclicktoggle.md), [DockChildren](../properties/dockchildren.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FixedOrder](../properties/fixedorder.md), [Handle](../properties/handle.md), [ImageListObj](../properties/imagelistobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Redraw](../properties/redraw.md), [Size](../properties/size.md), [Type](../properties/type.md), [VariableHeight](../properties/variableheight.md)
+Properties (default order): [Type](../properties/type.md), [Posn](../properties/posn.md), [Size](../properties/size.md), [Align](../properties/align.md), [Event](../properties/event.md), [ImageListObj](../properties/imagelistobj.md), [FCol](../properties/fcol.md), [BCol](../properties/bcol.md), [CursorObj](../properties/cursorobj.md), [Data](../properties/data.md), [Attach](../properties/attach.md), [Handle](../properties/handle.md), [KeepOnClose](../properties/keeponclose.md), [BandBorders](../properties/bandborders.md), [DblClickToggle](../properties/dblclicktoggle.md), [FixedOrder](../properties/fixedorder.md), [VariableHeight](../properties/variableheight.md), [DockChildren](../properties/dockchildren.md), [Redraw](../properties/redraw.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Align](../properties/align.md), [Attach](../properties/attach.md), [BandBorders](../properties/bandborders.md), [BCol](../properties/bcol.md), [ChildList](../properties/childlist.md), [CursorObj](../properties/cursorobj.md), [Data](../properties/data.md), [DblClickToggle](../properties/dblclicktoggle.md), [DockChildren](../properties/dockchildren.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FixedOrder](../properties/fixedorder.md), [Handle](../properties/handle.md), [ImageListObj](../properties/imagelistobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Redraw](../properties/redraw.md), [Size](../properties/size.md), [Type](../properties/type.md), [VariableHeight](../properties/variableheight.md)
 
 Methods: [Animate](../methodorevents/animate.md), [Detach](../methodorevents/detach.md), [GetFocus](../methodorevents/getfocus.md), [GetFocusObj](../methodorevents/getfocusobj.md), [GetTextSize](../methodorevents/gettextsize.md)
 

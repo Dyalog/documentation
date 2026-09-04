@@ -1,7 +1,5 @@
 # <span>MetafileObj</span> <span>Property</span>
 
-**Description**
-
 This property is used to copy graphical data to and from the Windows clipboard using the Windows Metafile format.
 
 When you set the MetafileObj property of a [Clipboard](../objects/clipboard.md) object to the name of the [Metafile](../objects/metafile.md) object using [`⎕WS`](../../../language-reference-guide/system-functions/ws) its contents are copied to the Windows clipboard in Windows Metafile format.
@@ -45,8 +43,8 @@ From this array, you can rebuild the imported picture component by component, ei
       TEST.⎕WC/¨BIRD
 ```
 
-Notice that the co-ordinates of each of the graphical components are typically integers in a co-ordinate system that extends from 0 to 1024 in the y-direction and 0 to 2048 in the x-direction. The simplest way to draw the picture is therefore to set up the same co-ordinate system on a [Form](../objects/form.md) as in the example above.
+The co-ordinates of each of the graphical components are typically integers in a co-ordinate system that extends from 0 to 1024 in the y-direction and 0 to 2048 in the x-direction. The simplest way to draw the picture is, therefore, to set up the same co-ordinate system on a [Form](../objects/form.md) as in the example above.
 
-**Application**
+## Application
 
 Objects: [Clipboard](../objects/clipboard.md)

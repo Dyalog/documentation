@@ -25,7 +25,7 @@ Dyalog may enhance `⎕DMX` in future, thus potentially altering the list of val
 
 If the first element of `Y` is an array of name/value pairs then  specifying any value for `X` will result in a `DOMAIN ERROR`.
 
-The effect of the system function is to interrupt execution.  The state indicator is cut back to exit from the function or operator containing the line that invoked `⎕SIGNAL`, or is cut back to exit the Execute (`⍎`) expression that invoked `⎕SIGNAL`. If executed within a nested dfn, the state indicator is cut back to exit from the capsule containing the line that invoked `⎕SIGNAL`. An error is then generated.
+The effect of the system function is to interrupt execution.  The state indicator is cut back to exit from the function or operator containing the line that invoked `⎕SIGNAL`, or is cut back to exit the _execute_ (`⍎`) expression that invoked `⎕SIGNAL`. If executed within a nested dfn, the state indicator is cut back to exit from the capsule containing the line that invoked `⎕SIGNAL`. An error is then generated.
 
 An error interrupt may be trapped if the system variable `⎕TRAP` is set to intercept the event.  Otherwise, the standard system action is taken (which may involve cutting back the state indicator further if there are locked functions or operators in the state indicator).  The standard event message is replaced by the text given in `X`, if present.
 

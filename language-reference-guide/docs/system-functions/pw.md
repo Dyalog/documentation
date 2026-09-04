@@ -11,7 +11,7 @@ search:
 
 If an attempt is made to display a line wider than `⎕PW`, then the display will be folded at or before the `⎕PW` width and the folded portions indented 6 spaces.  The display of a simple numeric array may be folded at a width less than `⎕PW` so that individual numbers are not split.
 
-`⎕PW` only affects [implicit output](../../../programming-reference-guide/introduction/output) and output through `⎕`.  It does not affect the result of the function Format (`⍕`), of the system function `⎕FMT`, or output through the system functions `⎕ARBOUT` and `⎕ARBIN`, or output through `⍞`.
+`⎕PW` only affects [implicit output](../../../programming-reference-guide/introduction/output) and output through `⎕`.  It does not affect the result of the function _format_ (`⍕`), of the system function `⎕FMT`, or output through the system functions `⎕ARBOUT` and `⎕ARBIN`, or output through `⍞`.
 
 Note that if the Auto_PW parameter (*Options/Configure/Session/Auto PW*) is set to 1, `⎕PW` is automatically adjusted whenever the Session window is resized. In these circumstances, a value assigned to `⎕PW` will only apply until the Session window is next resized.
 

@@ -1,8 +1,6 @@
 # <span>Menu</span> <span>Object</span>
 
-**Purpose:** This is a pop-up object which allows the user to initiate an action or         to select an option using a "menu".
-
-**Description**
+This is a pop-up object which allows the user to initiate an action or         to select an option using a "menu".
 
 For a Menu that is owned by a [MenuBar](menubar.md) or
 another Menu, the [Caption](../properties/caption.md) property
@@ -23,8 +21,8 @@ If a Menu is owned by a [MenuBar](menubar.md) or by
 another Menu, its position within its parent is also calculated automatically,
 dependent on the order in which other related objects are established. The [Posn](../properties/posn.md) property may however be used to **insert** a new Menu into an existing
 structure. For example, having defined three Menu objects as children of a [MenuBar](menubar.md),
-you can insert a fourth one between the first and the second by specifying its [Posn](../properties/posn.md) to be 2. Note that the value of [Posn](../properties/posn.md) for the
-Menus that were previously second and third will then be reset to 3 and 4
+you can insert a fourth one between the first and the second by specifying its [Posn](../properties/posn.md) to be 2. The value of [Posn](../properties/posn.md) for the
+Menus that were previously second and third is then reset to 3 and 4
 respectively.
 
 If a Menu is a child of a [MenuBar](menubar.md) which is
@@ -45,7 +43,7 @@ it is displayed **on top of** the bitmaps.
 
 If the Menu is a submenu (owned by a Menu), you may set its [EdgeStyle](../properties/edgestyle.md) property to `'Plinth'`. This causes the Menu
 to take on an appearance that is similar to a pushbutton and be raised when not
-selected and recessed when selected. Note that to enable 3-dimensional
+selected and recessed when selected. To enable 3-dimensional
 appearance, you must set [EdgeStyle](../properties/edgestyle.md) to
 something other than `'None'` for all the
 objects above the Menu in the tree.
@@ -59,13 +57,15 @@ to something other than `'None'` if you want
 its children Menu and [MenuItem](menuitem.md) objects to
 have a 3-dimensional appearance.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Calendar](../objects/calendar.md), [CoolBand](../objects/coolband.md), [CoolBar](../objects/coolbar.md), [DateTimePicker](../objects/datetimepicker.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Menu](../objects/menu.md), [MenuBar](../objects/menubar.md), [OLEServer](../objects/oleserver.md), [Root](../objects/root.md), [StatusField](../objects/statusfield.md), [SubForm](../objects/subform.md), [SysTrayItem](../objects/systrayitem.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 
 Children: [Bitmap](../objects/bitmap.md), [Menu](../objects/menu.md), [MenuItem](../objects/menuitem.md), [Separator](../objects/separator.md), [Timer](../objects/timer.md)
 
-Properties: [Accelerator](../properties/accelerator.md), [Active](../properties/active.md), [Align](../properties/align.md), [BCol](../properties/bcol.md), [BtnPix](../properties/btnpix.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FontObj](../properties/fontobj.md), [Handle](../properties/handle.md), [ImageIndex](../properties/imageindex.md), [ImageListObj](../properties/imagelistobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
+Properties (default order): [Type](../properties/type.md), [Caption](../properties/caption.md), [Posn](../properties/posn.md), [Coord](../properties/coord.md), [Align](../properties/align.md), [Active](../properties/active.md), [Event](../properties/event.md), [FontObj](../properties/fontobj.md), [FCol](../properties/fcol.md), [BCol](../properties/bcol.md), [BtnPix](../properties/btnpix.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Handle](../properties/handle.md), [Translate](../properties/translate.md), [Accelerator](../properties/accelerator.md), [KeepOnClose](../properties/keeponclose.md), [ImageListObj](../properties/imagelistobj.md), [ImageIndex](../properties/imageindex.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Accelerator](../properties/accelerator.md), [Active](../properties/active.md), [Align](../properties/align.md), [BCol](../properties/bcol.md), [BtnPix](../properties/btnpix.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FontObj](../properties/fontobj.md), [Handle](../properties/handle.md), [ImageIndex](../properties/imageindex.md), [ImageListObj](../properties/imagelistobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Translate](../properties/translate.md), [Type](../properties/type.md)
 
 Methods: [Detach](../methodorevents/detach.md), [Wait](../methodorevents/wait.md)
 

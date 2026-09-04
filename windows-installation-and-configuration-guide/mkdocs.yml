@@ -14,9 +14,6 @@ theme:
 extra_css:
   - documentation-assets/css/main.css
   - documentation-assets/css/extra.css
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 plugins:
   - privacy
   - search
@@ -40,8 +37,6 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.highlight:
       pygments_lang_class: true
-  - pymdownx.arithmatex:
-      generic: true
   - pymdownx.highlight:
       use_pygments: false
   - attr_list
@@ -97,8 +92,6 @@ nav:
       - AutoIndent: configuration-parameters/autoindent.md
       - auto_pw: configuration-parameters/auto-pw.md
       - CFEXT: configuration-parameters/cfext.md
-      - ClassicMode: configuration-parameters/classicmode.md
-      - ClassicModeSavePosition: configuration-parameters/classicmodesaveposition.md
       - CMD_PREFIX and CMD_POSTFIX: configuration-parameters/cmd-prefix-and-cmd-postfix.md
       - ConfigFile: configuration-parameters/configfile.md
       - confirm_abort: configuration-parameters/confirm-abort.md
@@ -127,6 +120,7 @@ nav:
       - DYALOG_DISCARD_FN_SOURCE: configuration-parameters/dyalog-discard-fn-source.md
       - DYALOG_EVENTLOGGINGLEVEL: configuration-parameters/dyalog-eventlogginglevel.md
       - DYALOG_EVENTLOGNAME: configuration-parameters/dyalog-eventlogname.md
+      - DYALOG_EXTVAR_SUPPORTED: configuration-parameters/dyalog-extvar-supported.md
       - DYALOG_GUTTER_ENABLE: configuration-parameters/dyalog-gutter-enable.md
       - DYALOG_INITSESSION: configuration-parameters/dyalog-initsession.md
       - Dyalog_LineEditor_Mode: configuration-parameters/dyalog-lineeditor-mode.md
@@ -155,6 +149,7 @@ nav:
       - InitialKeyboardLayoutShowAll: configuration-parameters/initialkeyboardlayoutshowall.md
       - input_size: configuration-parameters/input-size.md
       - KeyboardInputDelay: configuration-parameters/keyboardinputdelay.md
+      - LAYOUT_FILE: configuration-parameters/layout-file.md
       - Load: configuration-parameters/load.md
       - localdyalogdir: configuration-parameters/localdyalogdir.md
       - log_file: configuration-parameters/log-file.md
@@ -179,10 +174,8 @@ nav:
       - SaveLogOnExit: configuration-parameters/savelogonexit.md
       - SaveSessionOnExit: configuration-parameters/savesessiononexit.md
       - Serial: configuration-parameters/serial.md
-      - SessionOnTop: configuration-parameters/sessionontop.md
       - session_file: configuration-parameters/session-file.md
       - ShowStatusOnError: configuration-parameters/showstatusonerror.md
-      - SingleTrace: configuration-parameters/singletrace.md
       - SkipLines: configuration-parameters/skiplines.md
       - SM_Cols: configuration-parameters/sm-cols.md
       - SM_Rows: configuration-parameters/sm-rows.md

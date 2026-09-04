@@ -1,7 +1,5 @@
 # <span>GetDayStates</span> <span>Event 266</span>
 
-**Description**
-
 If enabled, this event is reported when a [Calendar](../objects/calendar.md) object requires the APL program to provide *day state* information for the range of dates it is about to display.
 
 The [Calendar](../objects/calendar.md) object displays day numbers using either the normal or the bold font attribute. However, it does not store this information beyond the month or months currently displayed.
@@ -57,8 +55,8 @@ To *clear* the bold attribute for the same day:
       F.CAL1.GetDayStates 36048 36048 ⍬
 ```
 
-Note that the [Calendar](../objects/calendar.md) object will ignore any IDNs you specify that are outside the range of dates that it is currently displaying.
+The [Calendar](../objects/calendar.md) object ignores any IDNs you specify that are outside the range of dates that it is currently displaying.
 
-**Application**
+## Application
 
 Objects: [Calendar](../objects/calendar.md)

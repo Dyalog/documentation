@@ -1,6 +1,6 @@
 # APL Exit Codes
 
-When APL or a bound executable terminates, it returns an exit code to the calling environment. If APL is started from a desktop icon, the return code is ignored. Otherwise the exit code is available and can be used to determine the course of action (if any) to follow. Additionally, APL applications can themselves return their own exit codes by calling [`⎕OFF`](../../language-reference-guide/system-functions/off) followed by an integer. The interpreter's own exit codes are:
+When APL or a bound executable terminates, it returns an exit code to the calling environment. If APL is started from a desktop icon, the return code is ignored. Otherwise the exit code is available and can be used to determine the course of action (if any) to follow. Additionally, APL applications can themselves return their own exit codes by calling [`⎕OFF`](../../language-reference-guide/system-functions/off/) followed by an integer. The interpreter's own exit codes are:
 
 |---|----------------------------------------------------------------------------------------------|
 |0  |Successful `⎕OFF`, [`)OFF`](../../language-reference-guide/system-commands/off), [`)CONTINUE`](../../language-reference-guide/system-commands/continue), graphical exit from GUI.                           |
@@ -15,8 +15,10 @@ When APL or a bound executable terminates, it returns an exit code to the callin
 |9  |Dyalog has encountered a Microsoft Windows-related error when starting and is unable to continue (for example, it cannot register clipboard formats).|
 |10 |CEF sub-process crash – something has gone unexpectedly wrong with either the HTMLRenderer or CEF sub-processes and cannot continue |
 |11 |Cannot create c-stack (macOS only)                                                             |
+|12 |APL was unable to load the HMON ([Dyalog Health Monitor](https://github.com/Dyalog/HMON)) library              |
+|13 |APL loaded the HMON (Dyalog Health Monitor) library but was unable to initialise it|
 
 Under Unix, exit codes greater than 127 indicates (127+signal number) of the untrapped signal which caused the process to terminate.
 
 !!! Hint "Hints and Recommendations"
-    APL applications can generate a custom return code by specifying an integer value to the right of `⎕OFF`. Dyalog Ltd recommends using values greater than 13 for this purpose.
+    APL applications can generate a custom return code by specifying an integer value to the right of [`⎕OFF`](../../language-reference-guide/system-functions/off/). Dyalog Ltd recommends using values greater than 13 for this purpose.

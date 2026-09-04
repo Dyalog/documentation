@@ -7,7 +7,7 @@ search:
 
 `Y` may be any array. `R` is a vector of the unique major cells of `Y` (the unique items of a vector, the unique rows of a matrix and so forth), in the order in which they first appear in `Y`.  For further information, see [Major Cells](../../../programming-reference-guide/introduction/arrays/cells-and-subarrays).
 
-`⎕CT` and `⎕DCT` are  implicit arguments of Unique.
+`⎕CT` and `⎕DCT` are  implicit arguments of _unique_.
 
 <h2 class="example">Examples</h2>
 ```apl

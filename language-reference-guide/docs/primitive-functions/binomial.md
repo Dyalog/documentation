@@ -7,7 +7,7 @@ search:
 
 `X` and `Y` may be any numbers except that if `Y` is a negative integer then `X` must be an integer. `R` is numeric. An element of `R` is integer if corresponding elements of `X` and `Y` are integers.
 
-Binomial is defined in terms of the function Factorial:
+_Binomial_ is defined in terms of the function _factorial_:
 
 ```apl
       X!Y ←→ (!Y)÷(!X)×!Y-X

@@ -1,8 +1,6 @@
 # <span>TCPSocket</span> <span>Object</span>
 
-**Purpose:** The TCPSocket object provides an interface to TCP/IP.
-
-**Description**
+The TCPSocket object provides an interface to TCP/IP.
 
 The TCPSocket object provides an event-driven mechanism to communicate with
 other programs (including Dyalog APL) via TCP sockets. Dyalog recommends that Conga is used in preference to TCPSockets in new applications.
@@ -34,13 +32,15 @@ Window handle of the socket attached to the TCPSocket object and is generally a
 read-only property. The only time that [SocketNumber](../properties/socketnumber.md) may be specified is when a server replicates (clones) a listening socket to
 which a client has just connected.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Calendar](../objects/calendar.md), [CoolBand](../objects/coolband.md), [DateTimePicker](../objects/datetimepicker.md), [Form](../objects/form.md), [NetType](../objects/nettype.md), [OLEClient](../objects/oleclient.md), [OLEServer](../objects/oleserver.md), [PropertyPage](../objects/propertypage.md), [Root](../objects/root.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md)
 
 Children: [Bitmap](../objects/bitmap.md), [BrowseBox](../objects/browsebox.md), [Clipboard](../objects/clipboard.md), [Cursor](../objects/cursor.md), [FileBox](../objects/filebox.md), [Font](../objects/font.md), [Form](../objects/form.md), [Icon](../objects/icon.md), [ImageList](../objects/imagelist.md), [Locator](../objects/locator.md), [Menu](../objects/menu.md), [Metafile](../objects/metafile.md), [MsgBox](../objects/msgbox.md), [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md), [Printer](../objects/printer.md), [PropertySheet](../objects/propertysheet.md), [TCPSocket](../objects/tcpsocket.md), [Timer](../objects/timer.md), [TipField](../objects/tipfield.md)
 
-Properties: [ChildList](../properties/childlist.md), [CurrentState](../properties/currentstate.md), [Data](../properties/data.md), [Encoding](../properties/encoding.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [KeepOnClose](../properties/keeponclose.md), [LocalAddr](../properties/localaddr.md), [LocalAddrName](../properties/localaddrname.md), [LocalPort](../properties/localport.md), [LocalPortName](../properties/localportname.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [RemoteAddr](../properties/remoteaddr.md), [RemoteAddrName](../properties/remoteaddrname.md), [RemotePort](../properties/remoteport.md), [RemotePortName](../properties/remoteportname.md), [SocketNumber](../properties/socketnumber.md), [SocketType](../properties/sockettype.md), [Style](../properties/style.md), [TargetState](../properties/targetstate.md), [Type](../properties/type.md)
+Properties (default order): [Type](../properties/type.md), [LocalAddr](../properties/localaddr.md), [LocalPort](../properties/localport.md), [RemoteAddr](../properties/remoteaddr.md), [RemotePort](../properties/remoteport.md), [Style](../properties/style.md), [Event](../properties/event.md), [LocalAddrName](../properties/localaddrname.md), [LocalPortName](../properties/localportname.md), [RemoteAddrName](../properties/remoteaddrname.md), [RemotePortName](../properties/remoteportname.md), [Data](../properties/data.md), [SocketType](../properties/sockettype.md), [SocketNumber](../properties/socketnumber.md), [CurrentState](../properties/currentstate.md), [TargetState](../properties/targetstate.md), [KeepOnClose](../properties/keeponclose.md), [Encoding](../properties/encoding.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [ChildList](../properties/childlist.md), [CurrentState](../properties/currentstate.md), [Data](../properties/data.md), [Encoding](../properties/encoding.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [KeepOnClose](../properties/keeponclose.md), [LocalAddr](../properties/localaddr.md), [LocalAddrName](../properties/localaddrname.md), [LocalPort](../properties/localport.md), [LocalPortName](../properties/localportname.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [RemoteAddr](../properties/remoteaddr.md), [RemoteAddrName](../properties/remoteaddrname.md), [RemotePort](../properties/remoteport.md), [RemotePortName](../properties/remoteportname.md), [SocketNumber](../properties/socketnumber.md), [SocketType](../properties/sockettype.md), [Style](../properties/style.md), [TargetState](../properties/targetstate.md), [Type](../properties/type.md)
 
 Methods: [Detach](../methodorevents/detach.md), [TCPGetHostID](../methodorevents/tcpgethostid.md), [TCPSend](../methodorevents/tcpsend.md), [TCPSendPicture](../methodorevents/tcpsendpicture.md), [Wait](../methodorevents/wait.md)
 

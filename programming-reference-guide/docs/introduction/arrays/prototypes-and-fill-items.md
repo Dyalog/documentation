@@ -40,6 +40,6 @@ In the last example, two distinct instances are constructed (the first by `⎕NE
 
 Fill items are used in a number of operations including:
 
-- First (`⊃` or `↑`) of an empty array
+- _First_ (`⊃` or `↑`) of an empty array
 - Fill-elements for overtake
-- For use with the Each operator on an empty array
+- For use with the _each_ operator on an empty array

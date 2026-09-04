@@ -10,7 +10,7 @@ Indexed Assignment is the Assignment function modified by the Indexing function.
 
 `Y` may be any array.  `X` may be the *name* of any array or a selection from a named array `(EXP X)[I]←Y`, see [Assignment (Selective)](assignment-selective.md).  `I` must be a valid index specification.  The shape of `Y` must conform with the shape (implied) of the indexed structure defined by `I`.  If `Y` is a scalar or a 1-element vector it will be extended to conform.  A side effect of Indexed Assignment is to change the value of the indexed elements of `X`.
 
-`R` is the value of `Y`.  If the result is not explicitly assigned or used it is suppressed.
+`R` is the value of `Y`.  If the result is not explicitly assigned or used it is [shy](../../../../programming-reference-guide/introduction/results#shy-results).
 
 `⎕IO` is an implicit argument of Indexed Assignment.
 
@@ -118,7 +118,7 @@ A scalar may be indexed by the enclosed empty vector:
 5
 ```
 
-Choose Indexed Assignment may be used very effectively in conjunction with Index Generator (`⍳`) and Structural functions in order to assign into an array:
+Choose Indexed Assignment may be used very effectively in conjunction with _index generator_ (`⍳`) and Structural functions in order to assign into an array:
 ```apl
       C
 11 12 13 14

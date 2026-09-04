@@ -1,8 +1,6 @@
 # <span>HTMLRenderer</span> <span>Object</span>
 
-**Purpose:** The HTMLRenderer Object is a cross-platform mechanism for producing Graphical User Interfaces (GUI), based on HyperText Markup Language (HTML).
-
-**Description**
+The HTMLRenderer Object is a cross-platform mechanism for producing Graphical User Interfaces (GUI), based on HyperText Markup Language (HTML).
 
 The HTMLRenderer object renders HTML in a window on the screen. It may appear as a top-level window, similar to a Form, or be displayed within another GUI object according to the value of the Boolean [AsChild](../properties/aschild.md) property which must be specified when the HTMLRenderer is created. Several HTMLRenderer objects may co-exist in the Dyalog application.
 
@@ -14,7 +12,7 @@ The HTMLRenderer is supported on the following platforms:
 
 It is not supported on the Raspberry Pi.
 
-The HTMLRenderer is implemented using the  [Chromium Embedded Framework (CEF).](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework) Note that if the  **ENABLE_CEF parameter** is set to 0 (its default value is 1) the CEF is disabled and an attempt to create an HTMLRenderer object will fail with an error message.
+The HTMLRenderer is implemented using the [Chromium Embedded Framework (CEF)](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework). If the **ENABLE_CEF** configuration parameter is set to `0` (its default value is `1`), the CEF is disabled and an attempt to create an HTMLRenderer object fails with an error message.
 
 The HTMLRenderer object can be considered as two components; a client implemented using CEF and an internal server which implements an interface from the APL workspace to the client.  The client may communicate with both the internal server and external servers on the web. Thus it can combine and display information from external and internal feeds.
 
@@ -89,13 +87,15 @@ When the HTMLRenderer is displayed in its own window, the  window caption is set
 
 For more information on the HTMLRenderer, see the [_HTMLRenderer User Guide_](../../../files/HTMLRenderer_User_Guide.pdf).
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Form](../objects/form.md), [Group](../objects/group.md), [PropertyPage](../objects/propertypage.md), [Root](../objects/root.md), [SubForm](../objects/subform.md)
 
 Children: [Timer](../objects/timer.md)
 
-Properties: [Active](../properties/active.md), [AllowContextMenu](../properties/allowcontextmenu.md), [AsChild](../properties/aschild.md), [Attach](../properties/attach.md), [Border](../properties/border.md), [Caption](../properties/caption.md), [CEFVersion](../properties/cefversion.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [HTML](../properties/html.md), [IconObj](../properties/iconobj.md), [InterceptedURLs](../properties/interceptedurls.md), [IsLoading](../properties/isloading.md), [KeepOnClose](../properties/keeponclose.md), [MaxButton](../properties/maxbutton.md), [MethodList](../properties/methodlist.md), [MinButton](../properties/minbutton.md), [Moveable](../properties/moveable.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Sizeable](../properties/sizeable.md), [SysMenu](../properties/sysmenu.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [URL](../properties/url.md), [Visible](../properties/visible.md)
+Properties (default order): [Type](../properties/type.md), [HTML](../properties/html.md), [Posn](../properties/posn.md), [Size](../properties/size.md), [URL](../properties/url.md), [Coord](../properties/coord.md), [Border](../properties/border.md), [Active](../properties/active.md), [Visible](../properties/visible.md), [Event](../properties/event.md), [Sizeable](../properties/sizeable.md), [Moveable](../properties/moveable.md), [SysMenu](../properties/sysmenu.md), [MaxButton](../properties/maxbutton.md), [MinButton](../properties/minbutton.md), [IconObj](../properties/iconobj.md), [Data](../properties/data.md), [Attach](../properties/attach.md), [Translate](../properties/translate.md), [KeepOnClose](../properties/keeponclose.md), [AsChild](../properties/aschild.md), [InterceptedURLs](../properties/interceptedurls.md), [CEFVersion](../properties/cefversion.md), [Caption](../properties/caption.md), [AllowContextMenu](../properties/allowcontextmenu.md), [IsLoading](../properties/isloading.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Active](../properties/active.md), [AllowContextMenu](../properties/allowcontextmenu.md), [AsChild](../properties/aschild.md), [Attach](../properties/attach.md), [Border](../properties/border.md), [Caption](../properties/caption.md), [CEFVersion](../properties/cefversion.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [HTML](../properties/html.md), [IconObj](../properties/iconobj.md), [InterceptedURLs](../properties/interceptedurls.md), [IsLoading](../properties/isloading.md), [KeepOnClose](../properties/keeponclose.md), [MaxButton](../properties/maxbutton.md), [MethodList](../properties/methodlist.md), [MinButton](../properties/minbutton.md), [Moveable](../properties/moveable.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Sizeable](../properties/sizeable.md), [SysMenu](../properties/sysmenu.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [URL](../properties/url.md), [Visible](../properties/visible.md)
 
 Methods: [Detach](../methodorevents/detach.md), [ExecuteJavaScript](../methodorevents/executejavascript.md), [GetZoomLevel](../methodorevents/getzoomlevel.md), [PrintToPDF](../methodorevents/printtopdf.md), [SetZoomLevel](../methodorevents/setzoomlevel.md), [ShowDevTools](../methodorevents/showdevtools.md), [Wait](../methodorevents/wait.md), [WebSocketClose](../methodorevents/websocketclose.md), [WebSocketSend](../methodorevents/websocketsend.md)
 

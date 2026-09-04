@@ -1,8 +1,6 @@
 # <span>ToolBar</span> <span>Object</span>
 
-**Purpose:** To manage a group of controls such as [Button](button.md) s.
-
-**Description**
+To manage a group of controls such as [Button](button.md) s.
 
 The ToolBar object is used to display and manage a set of controls. It is
 typically used to present a set of [Button](button.md)s
@@ -33,7 +31,7 @@ to be horizontally adjacent to one another. Whenever a control is added it is
 positioned relative to the one that immediately preceded it so that its top left
 corner meets the top right corner of the previous one. The [HScroll](../properties/hscroll.md) property determines what happens when the end of the ToolBar is reached. If [HScroll](../properties/hscroll.md) is 0 (the default) a control that would otherwise extend beyond the width of the
 ToolBar is instead positioned immediately below the first control in the
-ToolBar, thereby starting a new row. Note however that the ToolBar is not
+ToolBar, thereby starting a new row. However, the ToolBar is not
 automatically resized vertically to accommodate a second row. If you want a
 multi-row ToolBar you have to set its height explicitly. If [HScroll](../properties/hscroll.md) is `¯1` or `¯2`,
 controls continue to be added along the ToolBar even though they extend beyond
@@ -47,7 +45,7 @@ left corner is positioned against the bottom left corner of the previous
 control. The [VScroll](../properties/vscroll.md) property determines
 what happens when the bottom of the ToolBar is reached. If [VScroll](../properties/vscroll.md) is 0 (the default) a control that would otherwise extend beyond the bottom of
 the ToolBar is instead positioned immediately to the right of the first one;
-thereby starting a new column. Note however that the ToolBar is not
+thereby starting a new column. However, the ToolBar is not
 automatically resized horizontally to accommodate a second column. You must set
 the width of the ToolBar explicitly.
 
@@ -68,13 +66,15 @@ group.
 
 The ToolBar object was introduced in Dyalog APL before an appropriate standard Windows control existed. The ToolBar object should be considered as a legacy object and used only in old GUI applications. The [ToolControl](toolcontrol.md) object should be used instead.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [SubForm](../objects/subform.md)
 
 Children: [Bitmap](../objects/bitmap.md), [BrowseBox](../objects/browsebox.md), [Button](../objects/button.md), [Calendar](../objects/calendar.md), [Circle](../objects/circle.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [Cursor](../objects/cursor.md), [DateTimePicker](../objects/datetimepicker.md), [Edit](../objects/edit.md), [Ellipse](../objects/ellipse.md), [FileBox](../objects/filebox.md), [Font](../objects/font.md), [Group](../objects/group.md), [Icon](../objects/icon.md), [Image](../objects/image.md), [ImageList](../objects/imagelist.md), [Label](../objects/label.md), [List](../objects/list.md), [ListView](../objects/listview.md), [Locator](../objects/locator.md), [Marker](../objects/marker.md), [Menu](../objects/menu.md), [Metafile](../objects/metafile.md), [MsgBox](../objects/msgbox.md), [OCXClass](../objects/ocxclass.md), [Poly](../objects/poly.md), [ProgressBar](../objects/progressbar.md), [Rect](../objects/rect.md), [RichEdit](../objects/richedit.md), [Scroll](../objects/scroll.md), [SM](../objects/sm.md), [Spinner](../objects/spinner.md), [Static](../objects/static.md), [SubForm](../objects/subform.md), [Text](../objects/text.md), [Timer](../objects/timer.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)
 
-Properties: [Accelerator](../properties/accelerator.md), [AcceptFiles](../properties/acceptfiles.md), [Active](../properties/active.md), [Align](../properties/align.md), [Attach](../properties/attach.md), [AutoConf](../properties/autoconf.md), [BCol](../properties/bcol.md), [Border](../properties/border.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [CursorObj](../properties/cursorobj.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FontObj](../properties/fontobj.md), [Handle](../properties/handle.md), [Hint](../properties/hint.md), [HintObj](../properties/hintobj.md), [HScroll](../properties/hscroll.md), [IconObj](../properties/iconobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [OnTop](../properties/ontop.md), [Picture](../properties/picture.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Redraw](../properties/redraw.md), [Size](../properties/size.md), [Sizeable](../properties/sizeable.md), [TabIndex](../properties/tabindex.md), [TextSize](../properties/textsize.md), [Tip](../properties/tip.md), [TipObj](../properties/tipobj.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [Visible](../properties/visible.md), [VScroll](../properties/vscroll.md), [XRange](../properties/xrange.md), [YRange](../properties/yrange.md)
+Properties (default order): [Type](../properties/type.md), [Posn](../properties/posn.md), [Size](../properties/size.md), [Coord](../properties/coord.md), [Align](../properties/align.md), [Border](../properties/border.md), [Active](../properties/active.md), [Visible](../properties/visible.md), [Event](../properties/event.md), [VScroll](../properties/vscroll.md), [HScroll](../properties/hscroll.md), [Sizeable](../properties/sizeable.md), [FontObj](../properties/fontobj.md), [FCol](../properties/fcol.md), [BCol](../properties/bcol.md), [Picture](../properties/picture.md), [OnTop](../properties/ontop.md), [IconObj](../properties/iconobj.md), [CursorObj](../properties/cursorobj.md), [AutoConf](../properties/autoconf.md), [YRange](../properties/yrange.md), [XRange](../properties/xrange.md), [Data](../properties/data.md), [Attach](../properties/attach.md), [TextSize](../properties/textsize.md), [EdgeStyle](../properties/edgestyle.md), [Handle](../properties/handle.md), [Hint](../properties/hint.md), [HintObj](../properties/hintobj.md), [Tip](../properties/tip.md), [TipObj](../properties/tipobj.md), [Translate](../properties/translate.md), [Accelerator](../properties/accelerator.md), [AcceptFiles](../properties/acceptfiles.md), [KeepOnClose](../properties/keeponclose.md), [Redraw](../properties/redraw.md), [TabIndex](../properties/tabindex.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Accelerator](../properties/accelerator.md), [AcceptFiles](../properties/acceptfiles.md), [Active](../properties/active.md), [Align](../properties/align.md), [Attach](../properties/attach.md), [AutoConf](../properties/autoconf.md), [BCol](../properties/bcol.md), [Border](../properties/border.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [CursorObj](../properties/cursorobj.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FontObj](../properties/fontobj.md), [Handle](../properties/handle.md), [Hint](../properties/hint.md), [HintObj](../properties/hintobj.md), [HScroll](../properties/hscroll.md), [IconObj](../properties/iconobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [OnTop](../properties/ontop.md), [Picture](../properties/picture.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Redraw](../properties/redraw.md), [Size](../properties/size.md), [Sizeable](../properties/sizeable.md), [TabIndex](../properties/tabindex.md), [TextSize](../properties/textsize.md), [Tip](../properties/tip.md), [TipObj](../properties/tipobj.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [Visible](../properties/visible.md), [VScroll](../properties/vscroll.md), [XRange](../properties/xrange.md), [YRange](../properties/yrange.md)
 
 Methods: [Animate](../methodorevents/animate.md), [Detach](../methodorevents/detach.md), [GetFocus](../methodorevents/getfocus.md), [GetFocusObj](../methodorevents/getfocusobj.md), [GetTextSize](../methodorevents/gettextsize.md)
 

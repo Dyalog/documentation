@@ -11,7 +11,7 @@ search:
 
 `X` must be a valid access matrix, that is, a 3-column integer matrix with any number of rows.  The function sets access control for a set of specific users (1<sup>st</sup> column) and file operations (2<sup>nd</sup> column) with specified passnumbers ( 3<sup>rd</sup> column). Note that a 0 in the 1<sup>st</sup> column specifies **all** users, a `¯1` in the 2<sup>nd</sup> column specifies **all** file operations, and a `0` in the 3<sup>rd</sup> column specifies that **no** passnumber is required. For further details, see [File Access Control](../../../programming-reference-guide/component-files/component-files).
 
-The shy result of `⎕FSTAC` is the tie number of the file.
+The [shy](../../../programming-reference-guide/introduction/results#shy-results) result of `⎕FSTAC` is the tie number of the file.
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -25,7 +25,7 @@ The shy result of `⎕FSTAC` is the tie number of the file.
 ```
 
 !!! Info "Information"
-    Component files that have both journalling and checksum properties set to `0` have been deprecated; from Dyalog v21.0, component files with this combination of properties will be read-only. Dyalog Ltd recommends using `⎕FPROPS` to convert any such files to have different properties. For information on how to identify component files that have both journalling and checksum properties set to `0` in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
+    Component files that have both journalling and checksum properties set to `0` have been deprecated, and component files with this combination of properties are read-only. Dyalog Ltd recommends using `⎕FPROPS` to convert any such files to have different properties. For information on how to identify component files that have both journalling and checksum properties set to `0` in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

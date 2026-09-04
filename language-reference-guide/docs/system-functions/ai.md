@@ -21,7 +21,7 @@ Elements beyond 4 are not defined but reserved.
 52 7396 2924216 2814831
 ```
 
-!!! unix "Dyalog on UNIX"
+!!! unix "Dyalog on Unix"
     Under UNIX, `⎕AI[1]` is the effective UID of the account whereas [`⎕AN`](./an.md) returns the real name.
 
 !!! windows "Dyalog on Microsoft Windows"

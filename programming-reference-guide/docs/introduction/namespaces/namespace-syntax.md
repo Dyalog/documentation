@@ -10,7 +10,7 @@ sets the variable `NUMB` in namespace `X` to 88.
       88 UTIL.FOO 99
 ```
 
-calls dyadic function `FOO` in namespace `UTIL` with left and right arguments of 88 and 99 respectively.  The interpreter can distinguish between this use of `'.'` and its use as the inner product operator, because the leftmost name: `UTIL` is a (class 9) namespace, rather than a (class 3) function.
+calls dyadic function `FOO` in namespace `UTIL` with left and right arguments of 88 and 99 respectively.  The interpreter can distinguish between this use of `'.'` and its use as the _inner product_ operator, because the leftmost name: `UTIL` is a (class 9) namespace, rather than a (class 3) function.
 
 The general namespace reference syntax is:
 ```apl

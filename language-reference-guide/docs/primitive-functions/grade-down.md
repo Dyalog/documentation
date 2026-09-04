@@ -7,7 +7,7 @@ search:
 
 `Y` may be any array of rank greater than 0 but may not contain namespaces. `R` is an integer vector being the permutation of `⍳1↑⍴Y` that places the sub-arrays along the first axis in descending order. For the rules for comparing items of `Y` with one another, see [Grade Up](grade-up.md).
 
-`⎕IO` is an implicit argument of Grade Down.
+`⎕IO` is an implicit argument of _grade down_.
 
 <h2 class="example">Examples</h2>
 ```apl

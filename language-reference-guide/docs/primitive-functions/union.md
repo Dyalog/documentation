@@ -9,7 +9,7 @@ search:
 
 Items in `X` and `Y` are considered the same if `X≡Y` returns 1 for those items.
 
-`⎕CT` and `⎕DCT` are  implicit arguments of Union.
+`⎕CT` and `⎕DCT` are  implicit arguments of _union_.
 
 <h2 class="example">Examples</h2>
 ```apl

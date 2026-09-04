@@ -1,14 +1,12 @@
 # <span>StatusField</span> <span>Object</span>
 
-**Purpose:** This object is used to display information for the user.
-
-**Description**
+This object is used to display information for the user.
 
 The StatusField object provides an area for displaying context sensitive help messages, keyboard status, and other application dependent information.
 
 By default a StatusField is a recessed rectangle in which information is displayed. It has a [Caption](../properties/caption.md) and a [Text](../properties/text.md) property, which by default are empty, but either or both of which can be used to present information. The [Caption](../properties/caption.md) is left justified in the field and the [Text](../properties/text.md) is displayed immediately to its right. Typically, you would use the [Caption](../properties/caption.md) property as a title to describe the information that the StatusField displays, and the [Text](../properties/text.md) property to show its current value. However, you are not obliged to use both of them and you can achieve most effects with just one.
 
-Note that when the StatusField is used to display hints it is its [Text](../properties/text.md) property that is used.
+When the StatusField is used to display hints, it is its [Text](../properties/text.md) property that is used.
 
 A StatusField may be used to monitor the status of the keyboard and this is controlled by its [Style](../properties/style.md) property. The default value for [Style](../properties/style.md) is an empty vector. However, you can set it to monitor various keyboard states as follows :
 
@@ -27,13 +25,15 @@ If [Style](../properties/style.md) is KeyMode, the StatusField displays the name
 
 If [Style](../properties/style.md) is set to one of the above, you may still use the [Caption](../properties/caption.md) property to give the StatusField a title. You may even set the value of the [Text](../properties/text.md) property, but be aware that this value will be reset when the user next presses the key the StatusField is monitoring.
 
-**Application**
+## Application
 
 Parents: [StatusBar](../objects/statusbar.md)
 
 Children: [Menu](../objects/menu.md), [Timer](../objects/timer.md)
 
-Properties: [Accelerator](../properties/accelerator.md), [Attach](../properties/attach.md), [AutoConf](../properties/autoconf.md), [BCol](../properties/bcol.md), [Border](../properties/border.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Dragable](../properties/dragable.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FontObj](../properties/fontobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Picture](../properties/picture.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Sizeable](../properties/sizeable.md), [Style](../properties/style.md), [Text](../properties/text.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
+Properties (default order): [Type](../properties/type.md), [Caption](../properties/caption.md), [Text](../properties/text.md), [Posn](../properties/posn.md), [Size](../properties/size.md), [Style](../properties/style.md), [Coord](../properties/coord.md), [Border](../properties/border.md), [Visible](../properties/visible.md), [Event](../properties/event.md), [Sizeable](../properties/sizeable.md), [Dragable](../properties/dragable.md), [FontObj](../properties/fontobj.md), [FCol](../properties/fcol.md), [BCol](../properties/bcol.md), [Picture](../properties/picture.md), [AutoConf](../properties/autoconf.md), [Data](../properties/data.md), [Attach](../properties/attach.md), [EdgeStyle](../properties/edgestyle.md), [Translate](../properties/translate.md), [Accelerator](../properties/accelerator.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Accelerator](../properties/accelerator.md), [Attach](../properties/attach.md), [AutoConf](../properties/autoconf.md), [BCol](../properties/bcol.md), [Border](../properties/border.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Dragable](../properties/dragable.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [FCol](../properties/fcol.md), [FontObj](../properties/fontobj.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [Picture](../properties/picture.md), [Posn](../properties/posn.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Sizeable](../properties/sizeable.md), [Style](../properties/style.md), [Text](../properties/text.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
 
 Methods: [Detach](../methodorevents/detach.md)
 

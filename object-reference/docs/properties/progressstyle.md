@@ -1,7 +1,5 @@
 # <span>ProgressStyle</span> <span>Property</span>
 
-**Description**
-
 The ProgressStyle property specifies the appearance of a [ProgressBar](../objects/progressbar.md) control.
 
 ProgressStyle is a character vector that may be `'Normal'`, `'Smooth'` or `'Marquee'`. Its value is effective only when the object is created with `⎕WC`. Changing ProgressStyle with `⎕WS` has no effect on the appearance or behaviour of the [ProgressBar](../objects/progressbar.md).
@@ -12,10 +10,8 @@ If ProgressStyle is `'Smooth'`, the highlight in the centre of the [ProgressBar]
 
 If ProgressStyle is `'Marquee'`,  the highlight in the centre of the [ProgressBar](../objects/progressbar.md) is displayed as a broken bar that moves continuously from left to right. The speed is controlled by the [Interval](interval.md) Property which determines the frequency in milliseconds with which the highlight is redrawn, each time further along the [ProgressBar](../objects/progressbar.md). The special value of `¯1` causes the animation to stop.
 
-**Note that this feature only applies if Native Look and Feel 
-
- is enabled.**
- If not,  `'Marquee'` will produce the same behaviour as `'Normal'`.
+!!! Info "Information"
+    This feature only applies if [Native Look and Feel](../miscellaneous/windows-xp-look-and-feel.md) is enabled. If not, `'Marquee'` produces the same behaviour as `'Normal'`.
 
 The pictures below illustrate the appearance of the different values of ProgressStyle.
 
@@ -31,6 +27,6 @@ ProgressStyle Smooth (Windows Classic Theme only)
 
 ProgressStyle Marquee (requires Native Look and Feel)
 
-**Application**
+## Application
 
 Objects: [ProgressBar](../objects/progressbar.md)

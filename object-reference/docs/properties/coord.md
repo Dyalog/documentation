@@ -1,14 +1,12 @@
 # <span>Coord</span> <span>Property</span>
 
-**Description**
-
 This property defines an object's co-ordinate system. It is a character
 string with one of the following values; `'Inherit'`,
 `'Prop'`, `'Pixel'`,
 `'RealPixel'`, `'ScaledPixel'`, `'User'` or `'Cell'` (graphics children of a [Grid](../objects/grid.md) only).
 
 If Coord is `'Inherit'`, the co-ordinate
-system for the object is **inherited** from its parent. Note that the default
+system for the object is **inherited** from its parent. The default
 value of Coord for the system object `'.'` is `'Prop'`, so by default all objects
 created by [`⎕WC`](../../../language-reference-guide/system-functions/wc) inherit `'Prop'`.
 
@@ -24,7 +22,7 @@ along its x- and y-axes is measured in physical pixel units. The object's positi
 and size ([Posn](posn.md) and [Size](size.md) properties) are therefore reported and set in physical pixel units. If you set
 Coord on the system object to `'Pixel'`, the
 value of its [Size](size.md) property gives you the
-resolution of your screen. Note that pixels are numbered from 0
+resolution of your screen. Pixels are numbered from 0
 to (Size -1).
 
 If Coord is `'ScaledPixel'`  the number of pixels specified for [Posn](posn.md), [Size](size.md),  and other such properties will be automatically scaled by Dyalog APL according to the user's chosen display scaling factor. So if you specify an Edit object to be 80 pixels wide and 20 pixels high, and the user's scaling factor is 150%, Dyalog will automatically draw it 120 pixels wide and 30 pixels high. Dyalog will also de-scale coordinate values reported by `⎕WG` and  event messages.
@@ -39,7 +37,7 @@ object**. Each of these is a 2-element numeric vector whose elements define
 the co-ordinates of top left and bottom right interior corners of the (parent)
 object respectively.
 
-Note that if Coord is `'User'` and you
+If Coord is `'User'` and you
 change the values of [YRange](yrange.md) and/or [XRange](xrange.md) of the parent, the object (and all its siblings with Coord `'User'`)
 are redrawn (and clipped) according to the new origin and scale defined for the
 parent. The values of their [Posn](posn.md), [Size](size.md) and [Points](points.md) properties are unaffected.
@@ -75,6 +73,6 @@ you get the virtual resolution of the screen, that is:
 
 ```
 
-**Application**
+## Application
 
 Objects: [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/animation.md), [Bitmap](../objects/bitmap.md), [Button](../objects/button.md), [ButtonEdit](../objects/buttonedit.md), [Calendar](../objects/calendar.md), [Circle](../objects/circle.md), [ColorButton](../objects/colorbutton.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [DateTimePicker](../objects/datetimepicker.md), [Edit](../objects/edit.md), [Ellipse](../objects/ellipse.md), [Font](../objects/font.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [HTMLRenderer](../objects/htmlrenderer.md), [Image](../objects/image.md), [ImageList](../objects/imagelist.md), [Label](../objects/label.md), [List](../objects/list.md), [ListView](../objects/listview.md), [Locator](../objects/locator.md), [Marker](../objects/marker.md), [MDIClient](../objects/mdiclient.md), [Menu](../objects/menu.md), [Metafile](../objects/metafile.md), [Poly](../objects/poly.md), [Printer](../objects/printer.md), [ProgressBar](../objects/progressbar.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Rect](../objects/rect.md), [RichEdit](../objects/richedit.md), [Root](../objects/root.md), [Scroll](../objects/scroll.md), [SM](../objects/sm.md), [Spinner](../objects/spinner.md), [Splitter](../objects/splitter.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [StatusField](../objects/statusfield.md), [SubForm](../objects/subform.md), [TabBar](../objects/tabbar.md), [Text](../objects/text.md), [ToolBar](../objects/toolbar.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)

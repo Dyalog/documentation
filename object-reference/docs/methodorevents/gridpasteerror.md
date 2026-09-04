@@ -1,8 +1,6 @@
 # <span>GridPasteError</span> <span>Event 194</span>
 
-**Description**
-
-If enabled, this event is reported when the user presses Shift+Insert and
+If enabled, this event is reported when the user presses <kbd>Shift</kbd>+<kbd>Insert</kbd> and
 there is data in the clipboard, but the system is unable to paste the data into
 the [Grid](../objects/grid.md). This occurs if there is a currently
 selected block of cells whose shape does not match the shape of the data in the
@@ -23,6 +21,6 @@ vector as follows:
 |`[6]`|End|2-element integer vector containing the row, column address of the         bottom right cell in the selected block. If there is no selection, this         is the address of the bottom right cell of the block starting at the         current cell that will be overwritten|
 |`[7]`|Error Number|`4 (RANK ERROR)` or `5         (LENGTH ERROR)`|
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

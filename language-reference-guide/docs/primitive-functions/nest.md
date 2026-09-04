@@ -5,7 +5,7 @@ search:
 
 # <span>Nest</span> `R←⊆Y`{{key}}
 
-**Classic Edition:**  the symbol `⊆` (Left Shoe Underbar) is not available in Classic Edition, and Nest is instead represented by `⎕U2286`.
+**Classic Edition:**  the symbol `⊆` (Left Shoe Underbar) is not available in Classic Edition, and _nest_ is instead represented by `⎕U2286`.
 
 `Y` may be any array.
 

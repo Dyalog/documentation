@@ -1,7 +1,5 @@
 # <span>CalendarCols</span> <span>Property</span>
 
-**Description**
-
 The CalendarCols property specifies the colours used for various elements in the [Calendar](../objects/calendar.md) object.
 
 CalendarCols is a 6-element integer vector whose elements specify the colours as follows:
@@ -14,10 +12,14 @@ CalendarCols is a 6-element integer vector whose elements specify the colours as
 |`[5]`|Colour used to display text within the calendar's title                                                                                                                         |
 |`[6]`|Colour used to display header day and trailing day text. Header and trailing days are the days from the previous and following months that appear on the current month calendar.|
 
-Each element of CalendarCols may be 0 (which means default colour), a negative singleton that specifies a particular Windows colour, or a 3-element integer vector of RGB values.
+Each element of CalendarCols can be 0 (which means default colour), a negative singleton that specifies a particular Windows colour, or a 3-element integer vector of RGB values.
 
-Note: At the time of writing, setting the first element of CalendarCols has no effect. Dyalog believes this to be a Windows problem that may be corrected in due course.
+!!! Legacy "Legacy"
+    CalendarCols is ignored unless [Native Look and Feel](../miscellaneous/windows-xp-look-and-feel.md) is disabled, that is, unless the [**XPLookAndFeel**](../../../windows-installation-and-configuration-guide/configuration-parameters/xplookandfeel/) parameter is set to `0`. Because the default value of that parameter is `1`, the property has no effect unless you change it.
 
-**Application**
+!!! Info "Information"
+    Setting the first element of CalendarCols currently has no effect. Dyalog Ltd believes this to be a Microsoft Windows problem that might be corrected in due course.
+
+## Application
 
 Objects: [Calendar](../objects/calendar.md), [DateTimePicker](../objects/datetimepicker.md)

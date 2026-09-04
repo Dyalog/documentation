@@ -9,7 +9,7 @@ search:
 
 Non-empty arrays are identical if they have the same structure and the same values in all corresponding locations.  Empty arrays are identical if they have the same shape and the same prototype (disclosed nested structure).
 
-`⎕CT` and `⎕DCT` are  implicit arguments of Not Match.
+`⎕CT` and `⎕DCT` are  implicit arguments of _not match_.
 
 <h2 class="example">Examples</h2>
 ```apl

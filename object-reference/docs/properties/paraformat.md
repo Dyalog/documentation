@@ -1,7 +1,5 @@
 # <span>ParaFormat</span> <span>Property</span>
 
-**Description**
-
 The ParaFormat property describes the current paragraph format or the paragraph format of the currently selected text in a [RichEdit](../objects/richedit.md) object. It is a 6-element nested array structured as follows:
 
 |---|---|
@@ -16,6 +14,6 @@ If there is no text selected, ParaFormat specifies the *current* paragraph forma
 
 `(⎕WS 'ParaFormat' ...)` will set the format of the currently selected block of text. To set the format of an arbitrary block of text you must select it first using `(⎕WS 'SelText' ...)`.
 
-**Application**
+## Application
 
 Objects: [RichEdit](../objects/richedit.md)

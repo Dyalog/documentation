@@ -1,8 +1,6 @@
 # <span>MsgBox</span> <span>Object</span>
 
-**Purpose:** Provides a "modal" dialog box for displaying messages, errors, warnings and other information. The dialog box has a title, one or more lines of text, and up to three buttons.
-
-**Description**
+Provides a "modal" dialog box for displaying messages, errors, warnings and other information. The dialog box has a title, one or more lines of text, and up to three buttons.
 
 The [Caption](../properties/caption.md) property determines the text displayed in the object's title bar.
 
@@ -41,11 +39,11 @@ If any other combination is specified, [`⎕WC`](../../../language-reference-gui
 |`'Warn'` **or** `'Error'`|`'OK' 'CANCEL'`|
 |`'Query'`                |`'YES' 'NO'`   |
 
-The [Default](../properties/default.md) property may be used to determine which of the buttons is the "default" button, that is, the one which initially has the focus and is "selected" when the user presses the Enter key. It has the value 1, 2 or 3. If [Default](../properties/default.md) is not specified, the first button is the "default" button. Note that if the user switches focus to another button and presses Enter, this action selects the button with the focus.
+The [Default](../properties/default.md) property may be used to determine which of the buttons is the "default" button, that is, the one that initially has the focus and is "selected" when the user presses the <kbd>Enter</kbd> key. It has the value 1, 2 or 3. If [Default](../properties/default.md) is not specified, the first button is the "default" button. If the user switches focus to another button and presses Enter, this action selects the button with the focus.
 
 Like a pop-up (floating) [Menu](menu.md), the MsgBox object is unusual in that it is strictly modal. It is created by [`⎕WC`](../../../language-reference-guide/system-functions/wc) in the normal way, but at that stage is invisible and inactive. It is activated ONLY when [`⎕DQ`](../../../language-reference-guide/system-functions/dq) is called with the name of the MsgBox as the argument. When this is done, the MsgBox object pops up and is activated. Because there is no other object specified in the argument to [`⎕DQ`](../../../language-reference-guide/system-functions/dq), all other objects are de-activated. The only thing that the user can do (within the APL application) is to press one of the buttons in the MsgBox. When this happens, the MsgBox automatically pops down, the callback function (if any) is fired, and then [`⎕DQ`](../../../language-reference-guide/system-functions/dq) terminates.
 
-Notice that the position and size of the MsgBox are determined by Windows and are fixed, although the MsgBox may be moved by the user after it has been displayed.
+The position and size of the MsgBox are determined by Windows and are fixed, although the MsgBox can be moved by the user after it has been displayed.
 
 The MsgBox object generates one of three events; [MsgBtn1](../methodorevents/msgbtn1.md) (61), [MsgBtn2](../methodorevents/msgbtn2.md) (62), or [MsgBtn3](../methodorevents/msgbtn3.md) (63) depending upon which button is pressed.
 ```apl
@@ -73,13 +71,15 @@ The MsgBox object generates one of three events; [MsgBtn1](../methodorevents/msg
    'Msg' ⎕WC 'MsgBox' Caption Text 'Info' B ⋄ ⎕DQ 'Msg'
 ```
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Calendar](../objects/calendar.md), [CoolBand](../objects/coolband.md), [DateTimePicker](../objects/datetimepicker.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [OLEServer](../objects/oleserver.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Root](../objects/root.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 
 Children: [Timer](../objects/timer.md)
 
-Properties: [Btns](../properties/btns.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Default](../properties/default.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Style](../properties/style.md), [Text](../properties/text.md), [Type](../properties/type.md)
+Properties (default order): [Type](../properties/type.md), [Caption](../properties/caption.md), [Text](../properties/text.md), [Style](../properties/style.md), [Btns](../properties/btns.md), [Default](../properties/default.md), [Event](../properties/event.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [KeepOnClose](../properties/keeponclose.md), [ForceOnTaskbar](../properties/forceontaskbar.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Btns](../properties/btns.md), [Caption](../properties/caption.md), [ChildList](../properties/childlist.md), [Data](../properties/data.md), [Default](../properties/default.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [ForceOnTaskbar](../properties/forceontaskbar.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [Style](../properties/style.md), [Text](../properties/text.md), [Type](../properties/type.md)
 
 Methods: [Detach](../methodorevents/detach.md), [Wait](../methodorevents/wait.md)
 

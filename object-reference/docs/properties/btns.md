@@ -1,7 +1,5 @@
 # <span>Btns</span> <span>Property</span>
 
-**Description**
-
 The Btns property determines the set of buttons to be displayed in a [MsgBox](../objects/msgbox.md). It is a simple vector (one button) or a matrix with up to 3 rows, or a vector of up to 3 character vectors specifying the captions for up to 3 buttons. The buttons are arranged along the bottom of the dialog box in the order specified.
 
 Under Windows, there are restrictions on these buttons. However the property has been designed more generally to be useful under different GUIs and perhaps later revisions of Windows.
@@ -32,6 +30,6 @@ If the Btns property is not specified, it assumes a default according to [Style]
 
 If [Style](style.md) is not specified, Btns defaults to `'OK'`.
 
-**Application**
+## Application
 
 Objects: [MsgBox](../objects/msgbox.md)

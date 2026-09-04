@@ -1,7 +1,5 @@
 # <span>WebSocketUpgrade</span> <span>Event 841</span>
 
-**Description**
-
 This event is reported when the client component of an [HTMLRenderer](../objects/htmlrenderer.md) object opens a WebSocket and the requested URL matches a pattern specified by the [InterceptedURLs](../properties/interceptedurls.md) property. If there is no match, the connection request is processed as an external request by the [Chromium Embedded Framework (CEF).](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework)
 
 The event message reported as the result of `⎕DQ`, or supplied as the right argument to your callback function, is a 6-element vector as follows:
@@ -22,7 +20,7 @@ If Type is `'manual'`, a callback function for WebSocketUpgrade is mandatory and
 
 In both cases,  the WebSocket ID is subsequently required to send a message  by calling the [WebSocketSend](websocketsend.md) method or to close the connection using the   [WebSocketClose](websocketclose.md) method.
 
-Note that several WebSocket connections may be made concurrently.
+Several WebSocket connections can be made concurrently.
 
 <h2 class="example">Example</h2>
 ```apl
@@ -34,6 +32,6 @@ Note that several WebSocket connections may be made concurrently.
 
 ```
 
-**Application**
+## Application
 
 Objects: [HTMLRenderer](../objects/htmlrenderer.md)

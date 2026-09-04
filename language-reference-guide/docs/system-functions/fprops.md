@@ -33,7 +33,7 @@ The default properties for a newly created file are as follows:
 - Z = 0
 - E depends upon the computer architecture.
 
-Note that the defaults for C and J can be overridden by calling `⎕FCREATE` via the Variant operator `⍠`. For further information, see [File Properties](fcreate.md).
+Note that the defaults for C and J can be overridden by calling `⎕FCREATE` via the _variant_ operator `⍠`. For further information, see [File Properties](fcreate.md).
 
 # Journaling Levels
 
@@ -117,7 +117,7 @@ An exclusive tie is not needed to change the file property.
 Compression is not supported for files in which both Journalling and Checksum are disabled.
 
 !!! Info "Information"
-    Component files that have both journalling and checksum properties set to `0` have been deprecated; from Dyalog v21.0, component files with this combination of properties will be read-only. Dyalog Ltd recommends using `⎕FPROPS` to convert any such files to have different properties. For information on how to identify component files that have both journalling and checksum properties set to `0` in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/). Be aware that converting from non-checksummed components to checksummed components can take a significant amount of time.
+    Component files that have both journalling and checksum properties set to `0` have been deprecated, and it is no longer possible to create files with this combination of properties. Existing files with this combination are read-only, except that their properties can still be changed. Dyalog Ltd recommends using `⎕FPROPS` to convert any such files to have different properties. For information on how to identify component files that have both journalling and checksum properties set to `0` in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/). Be aware that converting from non-checksummed components to checksummed components can take a significant amount of time.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

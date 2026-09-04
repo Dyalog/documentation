@@ -24,4 +24,5 @@ If not, set the **XPLookandFeel** parameter to 0, when you run the program. For 
 dyalogrt.exe XPLookAndFeel=0 myws.dws
 ```
 
-**Note that to have effect, Native Look and Feel must also be enabled at the Windows level.**
+!!! Info "Information"
+    To have effect, Native Look and Feel must also be enabled at the Windows level.

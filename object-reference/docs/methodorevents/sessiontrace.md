@@ -9,8 +9,6 @@ search:
 
 |[Session](../../../windows-ui-guide/the-session-object/session-object)|&nbsp;|&nbsp;|||
 
-**Description**
-
 If enabled, this event is reported when an expression is executed with trace control. See [Set Trace ](../../../language-reference-guide/system-functions/set-trace). Error messages and output from system commands do not generate this event.
 
 The event message reported as the result of `⎕DQ`, or supplied as the right argument to your callback function, is a 4-element vector as follows :
@@ -23,7 +21,8 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 
 The attachment of a callback function intercepts and annuls the normal display of function name, line numbers and any value.
 
-Note that this event may be extended in future; in particular the number of elements in the event message may be increased. You should therefore allow for such extensions in any code which refers to SessionTrace.
+!!! Hint "Hints and Recommendations"
+    This event might be extended in future; in particular, the number of elements in the event message might be increased. You should, therefore, allow for such extensions in any code that refers to SessionTrace.
 
 When the event is generated, the left argument of the callback function contains the result value of the expression, if any. The callback function may display this or any other value, using [implicit output](../../../programming-reference-guide/introduction/output) or by assignment to `⎕`. If so, this output will be processed normally, without generating any SessionTrace or [SessionPrint](sessionprint.md) events. If the callback fails to explicitly display anything, nothing will appear in the Session.
 
@@ -61,6 +60,6 @@ The result (if any) of the callback function is ignored.
 
 You may not disable the event (by setting its action to `¯1`), nor generate the event using `⎕NQ`, nor call it as a method.
 
-**Application**
+## Application
 
 Objects: [Session](../../../windows-ui-guide/the-session-object/session-object)

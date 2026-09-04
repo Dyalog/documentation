@@ -19,7 +19,7 @@ Table: File Menu Operations {: #file-menu-operations }
 |Export to Memory|`[MakeMemoryAssembly]`|Creates an *in-memory* .NET Assembly|
 |Close AppDomain|`[CloseAppDomain]`|Closes .NET App Domain|
 |Drop|`[WSDrop]`|Prompts for a workspace file name, then erases it|
-|Edit Text File|`[EditTextFile]`|Displays the *Open Source File* dialog to select Dyalog script file (*.dyalog*) or an arbitrary text file to open in the Editor. See [Editing Scripts and Text Files](editing-scripts-and-text-files.md)|
+|Edit Text File|`[EditTextFile]`|Displays the *Open Source File* dialog to select Dyalog script file (*.dyalog*) or an arbitrary text file to open in the Editor. See [Editing Scripts and Text Files](editor.md#editing-scripts-and-text-files)|
 |Print|`[PrintFnsInNS]`|Prints functions and operators in current namespace|
 |Print Setup|`[PrintSetup]`|Invokes the print set-up dialog box|
 |Continue|`[Continue]`|Saves the active workspace in CONTINUE.DWS and exits APL|
@@ -163,17 +163,18 @@ Table: Threads Menu Operations {: #threads-menu-operations }
 
 ## The Layout Menu
 
-The *Layout* menu (`⎕SE.mb.layout`) provides layout options for the Debugger.
+The *Layout* menu (`⎕SE.mb.layout`) selects the layout of the Session and of the tools that are docked in it, including the Editor and the Debugger.
 
 Table: Layout Menu Operations {: #debugger-layout-menu-operations }
 
-|Item                   |Action             |Description                                        |
-|-----------------------|-------------------|---------------------------------------------------|
-|Classic                |APL callback       |Detaches the Debugger window                       |
-|Debugger at the bottom |APL callback       |Docks the Debugger at the bottom (default)         |
-|Debugger on the left   |APL callback       |Docks the Debugger on the left                     |
+|Item                                |Action      |Description                                                                                                                                              |
+|------------------------------------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Open…                               |&nbsp;      |Displays the *Open Session layout* dialog box, from which a Session layout file (*.layout*) can be selected                                                 |
+|Classic                             |&nbsp;      |Selects Classic Dyalog mode, in which the Debugger is a separate window containing the Tracer, with the Left Argument pane docked to its left and the Right Argument pane docked to its right|
+|Debugger at the bottom              |&nbsp;      |Docks the Debugger at the bottom of the Session window (default)                                                                                          |
+|Classic with Vertical Inline Tracing|&nbsp;      |As *Classic*, but with the Left Argument pane docked above the Tracer and the Right Argument pane docked below it                                          |
 
-The selected option does *not* persist if you restart the session.
+The selected layout is saved when Dyalog exits and is restored the next time it starts; see the [LAYOUT_FILE](../../windows-installation-and-configuration-guide/configuration-parameters/layout-file) parameter.
 
 ## The Help Menu
 

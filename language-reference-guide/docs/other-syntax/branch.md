@@ -5,9 +5,9 @@ search:
 
 # <span>Branch</span> `→Y`{{key}}
 
-`Y` may be a scalar or vector which, if not empty, has a simple numeric scalar as its first element.  The function has no explicit result.  It is used to modify the normal sequence of execution of expressions or to resume execution after a statement has been interrupted. Branch is not in the function domain of operators.
+`Y` may be a scalar or vector which, if not empty, has a simple numeric scalar as its first element.  The function has no explicit result.  It is used to modify the normal sequence of execution of expressions or to resume execution after a statement has been interrupted. _Branch_ is not in the function domain of operators.
 
-The following distinct usages of the branch function occur:
+The following distinct usages of the _branch_ function occur:
 
 |&nbsp; |Entered in a Statement in a Defined Function|Entered in Immediate Execution Mode                                           |
 |-------|--------------------------------------------|------------------------------------------------------------------------------|
@@ -16,9 +16,12 @@ The following distinct usages of the branch function occur:
 
 In a defined function, if `Y` is non-empty then the first element in `Y` specifies a statement line in the defined function to be executed next.  If the line does not exist, then execution of the function is terminated.  For this purpose, line 0 does not exist.  (Note that statement line numbers are independent of the index origin `⎕IO`).
 
-If `Y` is empty, the branch function has no effect.  The next expression is executed on the same line, if any, or on the next line if not.  If there is no following line, the function is terminated.
+If `Y` is empty, the _branch_ function has no effect.  The next expression is executed on the same line, if any, or on the next line if not.  If there is no following line, the function is terminated.
 
-The `:GoTo` statement may be used in place of Branch in a defined function.
+The `:GoTo` statement may be used in place of _branch_ in a defined function.
+
+!!! Info "Information"
+    _Branch_ is not available for flow control in a dfn or dop: a monadic _branch_ (`→` to a line) is not supported.
 
 <h2 class="example">Example</h2>
 ```apl
@@ -69,7 +72,7 @@ A branch expression may occur within a statement including `⋄` separators:
 
 In this example, the expressions `'A←A+1'` and `'→END'` are executed only if `TEST` returns the value 1.  Otherwise control branches to label `NEXT`.
 
-In immediate execution mode, the branch function permits execution to be continued within the most recently suspended function, if any, in the state indicator.  If the state indicator is empty, or if the argument `Y` is the empty vector, the branch expression has no effect.  If a statement line is specified which does not exist, the function is terminated.  Otherwise, execution is restarted from the beginning of the specified statement line in the most recently suspended function.
+In immediate execution mode, the _branch_ function permits execution to be continued within the most recently suspended function, if any, in the state indicator.  If the state indicator is empty, or if the argument `Y` is the empty vector, the branch expression has no effect.  If a statement line is specified which does not exist, the function is terminated.  Otherwise, execution is restarted from the beginning of the specified statement line in the most recently suspended function.
 
 <h2 class="example">Example</h2>
 ```apl

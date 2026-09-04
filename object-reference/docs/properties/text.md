@@ -1,14 +1,12 @@
 # <span>Text</span> <span>Property</span>
 
-**Description**
-
 This property is associated with the text contents of an object and is a character array.
 
 In a [ButtonEdit](../objects/buttonedit.md), [Combo](../objects/combo.md), [StatusField](../objects/statusfield.md), [Spinner](../objects/spinner.md), or a single-line [Edit](../objects/edit.md) object, Text may be a simple scalar or a simple vector.
 
 In a [RichEdit](../objects/richedit.md), a multi-line [Edit](../objects/edit.md) field or in a [MsgBox](../objects/msgbox.md), the value of Text may also be a simple matrix, or a vector of vectors. If so, "new-line" characters are appended to each row of the matrix, or to each vector in a vector of vectors, before being displayed. The user may insert or add a "new-line" character in a multi-line [Edit](../objects/edit.md) by pressing Ctrl-Enter (Enter itself is used to press [Button](../objects/button.md)s).
 
-Note that if word-wrapping is in effect in a multi-line [Edit](../objects/edit.md) object, the structure of Text does not correspond to the lines displayed.
+If word-wrapping is in effect in a multi-line [Edit](../objects/edit.md) object, the structure of Text does not correspond to the lines displayed.
 
 In a [Text](../objects/text.md) object, the value of the Text property may be a simple scalar, an enclosed vector or matrix, a simple vector, a simple matrix, or a vector of enclosed vectors or matrices.
 
@@ -18,6 +16,6 @@ You can copy text into the Windows [Clipboard](../objects/clipboard.md) by using
 
 The Text property of a [StatusField](../objects/statusfield.md) is updated automatically if its [Style](style.md) property is set to monitor the status of a key.
 
-**Application**
+## Application
 
 Objects: [ButtonEdit](../objects/buttonedit.md), [Clipboard](../objects/clipboard.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [Edit](../objects/edit.md), [MsgBox](../objects/msgbox.md), [RichEdit](../objects/richedit.md), [Spinner](../objects/spinner.md), [StatusField](../objects/statusfield.md), [Text](../objects/text.md)

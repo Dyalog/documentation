@@ -1,6 +1,4 @@
-# Miscellaneous
-
-## Running from scripts
+# Starting APL from scripts
 
 Dyalog APL can be run with input being directed from a script file, and output being redirected as well.
 
@@ -12,7 +10,7 @@ The Unicode edition by default expects that the input file has Unicode character
 
 The example below shows the same set of APL expressions as they would appear in a script file for classic and Unicode editions: it is rather easier to read the Unicode edition's input !
 
-### Classic example
+## Classic example
 ```apl
 ^O(2^NLnqK.K K^OGetBuildID^NK^O),(^NK.KLwgK^OAPLVersion^NK^O)
 ^Ovar^N[1+1 J^HC^O Check input from file: Classic
@@ -21,7 +19,7 @@ The example below shows the same set of APL expressions as they would appear in 
 ^Nloff
 ```
 
-### Unicode example
+## Unicode example
 ```apl
 (+2⎕NQ'.'  'GetBuildID'),('.'⎕WG'APLVersion')
 var←1÷1 ⍝ Check input from file: Unicode

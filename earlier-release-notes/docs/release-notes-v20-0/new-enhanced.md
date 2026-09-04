@@ -106,10 +106,10 @@ Applies the specified Unicode normalisation form to given character data.
 - [`8373⌶`](https://docs.dyalog.com/20.0/language-reference-guide/primitive-operators/i-beam/shell-process-control/) – Shell Process Control  
 Provides a way to determine the process IDs of processes started by `⎕SHELL`, as well as enabling the sending of signals to any of those processes.
 
-The following I-beams have been removed:
+The following _I-beams_ have been removed:
 
 - `819⌶` – Case Convert (introduced in Dyalog v15.0)  
-The functionality provided by this I-beam is available through the [`⎕C`](https://docs.dyalog.com/20.0/language-reference-guide/system-functions/c/) system function.
+The functionality provided by this _I-beam_ is available through the [`⎕C`](https://docs.dyalog.com/20.0/language-reference-guide/system-functions/c/) system function.
 - `8468⌶` – Hash Table Size (introduced in Dyalog v19.0)  
 Temporary functionality used for identification of potential side-effects of a change that has now been implemented. No longer relevant.
 - `8469⌶` – Lookup Table Size (introduced in Dyalog v19.0)  
